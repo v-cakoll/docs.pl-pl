@@ -14,9 +14,9 @@ ms.locfileid: "75710560"
 Zestawy węzłów to jeden z czterech podstawowych typów danych, które są zwracane z wyrażeń XPath (XML Path Language). Zestaw węzłów, który jest nieuporządkowaną kolekcją węzłów bez duplikatów, utworzonych w kolejności dokumentu, można przypisać do zmiennej w arkuszu stylów.  
   
 > [!NOTE]
-> Klasa <xref:System.Xml.Xsl.XslTransform> jest przestarzała w .NET Framework 2,0. Można wykonywać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu klasy <xref:System.Xml.Xsl.XslCompiledTransform>. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Zestawy węzłów są jednym z czterech podstawowych typów danych, które są zwracane z wyrażeń XPath. Zestaw węzłów, który jest nieuporządkowaną kolekcją węzłów bez duplikatów, utworzonych w kolejności dokumentu, można przypisać do zmiennej w arkuszu stylów. Ten zestaw węzłów, który jest wynikiem wyrażenia XPath użytego w atrybucie `select` w transformacji, ma takie samo zachowanie jak zestaw węzłów na podstawie Document Object Model XML (DOM). Można nawigować po zestawie węzłów za pomocą zestawu metod widocznych w [nawigacji zestawu węzłów za pomocą elementu XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), w przeciwieństwie do fragmentu drzewa wyników lub fragmentu drzewa wyników, który używa <xref:System.Xml.XPath.XPathNodeIterator> do nawigacji.  
+ Zestawy węzłów są jednym z czterech podstawowych typów danych, które są zwracane z wyrażeń XPath. Zestaw węzłów, który jest nieuporządkowaną kolekcją węzłów bez duplikatów, utworzonych w kolejności dokumentu, można przypisać do zmiennej w arkuszu stylów. Ten zestaw węzłów, który jest wynikiem wyrażenia XPath użytego w `select` atrybucie w transformacji, ma takie samo zachowanie jak zestaw węzłów na podstawie Document Object Model XML (dom). Można nawigować po zestawie węzłów za pomocą zestawu metod pokazanych w [nawigacji zestawu węzłów za pomocą elementu XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), w przeciwieństwie do fragmentu drzewa lub fragmentu drzewa wyników <xref:System.Xml.XPath.XPathNodeIterator> , który używa do nawigacji.  
   
  Poniższy przykład kodu pokazuje, jak wykonać iterację zestawu węzłów, gdy element `variable` lub `parameter` w arkuszu stylów jest obliczany w zestawie węzłów.  
   
@@ -72,7 +72,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

@@ -11,19 +11,19 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710963"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Edytowanie danych XML przy użyciu klasy XPathNavigator
-Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia metody umożliwiające Wstawianie, modyfikowanie i usuwanie węzłów oraz wartości z dokumentu XML zawartego w obiekcie <xref:System.Xml.XmlDocument>. Aby można było użyć dowolnej z tych metod do wstawiania, modyfikowania i usuwania węzłów i wartości, obiekt <xref:System.Xml.XPath.XPathNavigator> musi być edytowalny, oznacza to, że jego właściwość <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> musi mieć wartość true.  
+<xref:System.Xml.XPath.XPathNavigator> Klasa zawiera metody umożliwiające Wstawianie, modyfikowanie i usuwanie węzłów oraz wartości z dokumentu XML zawartego w <xref:System.Xml.XmlDocument> obiekcie. Aby można było użyć którejkolwiek z tych metod do wstawiania, modyfikowania i usuwania węzłów i wartości, <xref:System.Xml.XPath.XPathNavigator> obiekt musi być edytowalny, oznacza to, że jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi mieć wartość true.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wstawianie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- Opisuje sposób wstawiania elementów równorzędnych, podrzędnych, węzłów atrybutów i wartości w do obiektu <xref:System.Xml.XmlDocument> przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.  
+ Opisuje sposób wstawiania elementów równorzędnych, podrzędnych, węzłów atrybutów i wartości w <xref:System.Xml.XmlDocument> obiekcie do obiektu za <xref:System.Xml.XPath.XPathNavigator> pomocą klasy.  
   
  [Modyfikowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- Opisuje sposób modyfikowania węzłów i wartości w obiekcie <xref:System.Xml.XmlDocument> przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.  
+ Opisuje sposób modyfikowania węzłów i wartości w <xref:System.Xml.XmlDocument> obiekcie przy użyciu <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
  [Usuwanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
- Opisuje sposób usuwania węzłów i wartości z obiektu <xref:System.Xml.XmlDocument> przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.  
+ Opisuje sposób usuwania węzłów i wartości z <xref:System.Xml.XmlDocument> obiektu przy użyciu <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

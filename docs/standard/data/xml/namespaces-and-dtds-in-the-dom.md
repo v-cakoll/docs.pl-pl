@@ -19,11 +19,11 @@ Definicje typu dokumentu (DTD) komplikują obsługę przestrzeni nazw. Na przyk�
   
  Poniżej przedstawiono możliwe rozwiązania, jeśli ta konstrukcja jest dozwolona:  
   
-- `x:` jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks musi być rozpoznawalny przy użyciu deklaracji przestrzeni nazw `xmlns:x`, która również musi istnieć gdzieś w DTD. Wystąpił błąd podczas mapowania tego prefiksu na inny element w dokumencie wystąpienia.  
+- `x:` Jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks musi być rozpoznawalny przy użyciu `xmlns:x` deklaracji przestrzeni nazw, która również musi znajdować się gdzieś w DTD. Wystąpił błąd podczas mapowania tego prefiksu na inny element w dokumencie wystąpienia.  
   
-- `x:` jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks jest zawsze rozpoznawany w kontekście elementów wystąpienia. Oznacza to, że prefiks może być faktycznie mapowany na różne identyfikatory Uniform Resource Identifier (URI) obszaru nazw, w zależności od zakresu przestrzeni nazw, w którym pojawia się element `item`. To zachowanie jest bardziej przewidywalne niż rozdzielczość podaną we wcześniejszym punktorze, ale ma inne skomplikowane konsekwencje, ponieważ wymaga podania atrybutów domyślnych.  
+- `x:` Jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks jest zawsze rozpoznawany w kontekście elementów wystąpienia. Oznacza to, że prefiks może być faktycznie mapowany na różne identyfikatory Uniform Resource Identifier (URI) obszaru nazw, w zależności od zakresu przestrzeni `item` nazw, w którym jest wyświetlany element. To zachowanie jest bardziej przewidywalne niż rozdzielczość podaną we wcześniejszym punktorze, ale ma inne skomplikowane konsekwencje, ponieważ wymaga podania atrybutów domyślnych.  
   
-- Dwukropek jest ignorowany, ponieważ znajduje się w DTD, a nazwa atrybutu jest `x:y`, brak prefiksu i brak identyfikatora URI przestrzeni nazw.  
+- Dwukropek jest ignorowany, ponieważ znajduje się w DTD, a nazwa atrybutu to `x:y`, brak prefiksu i brak identyfikatora URI przestrzeni nazw.  
   
 - Dwukropek w atrybucie domyślnym zgłasza wyjątek, co oznacza, że dwukropek w nazwach w DTD nie są obsługiwane. Powoduje to przewidywalną zachowanie, ale oznacza, że nie można załadować wielu organizacja World Wide Web Consortium (W3C) opublikowanych elementów DTD.  
   
@@ -31,6 +31,6 @@ Definicje typu dokumentu (DTD) komplikują obsługę przestrzeni nazw. Na przyk�
   
  KOD XML w Microsoft .NET Framework implementuje drugą opcję maksymalnej zgodności W3C.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

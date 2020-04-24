@@ -29,16 +29,16 @@ Importuje przestrzenie nazw z określonego zestawu.
 |`namespaceList`|Wymagany. Rozdzielana przecinkami lista przestrzeni nazw do zaimportowania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-imports` importuje wszystkie przestrzenie nazw zdefiniowane w bieżącym zestawie plików źródłowych lub z dowolnego przywoływanego zestawu.  
+ `-imports` Opcja importuje wszystkie przestrzenie nazw zdefiniowane w bieżącym zestawie plików źródłowych lub z dowolnego zestawu, do którego się odwołuje.  
   
- Elementy członkowskie w przestrzeni nazw określonej za pomocą `-imports` są dostępne dla wszystkich plików kodu źródłowego w kompilacji. Użyj [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , aby użyć przestrzeni nazw w jednym pliku kodu źródłowego.  
+ Elementy członkowskie w przestrzeni nazw określonej za `-imports` pomocą są dostępne dla wszystkich plików kodu źródłowego w kompilacji. Użyj [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , aby użyć przestrzeni nazw w jednym pliku kodu źródłowego.  
   
 |Aby ustawić Importy w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **odwołania** .<br />3. Wprowadź nazwę przestrzeni nazw w polu obok przycisku **Dodaj użytkownika importowania** .<br />4. kliknij przycisk **Dodaj Import użytkownika** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje, gdy `-imports:system.globalization` jest określony. Bez tej opcji kompilacja powiodła się wymaga, aby instrukcja `Imports System.Globalization` była uwzględniona na początku pliku kodu źródłowego lub że właściwość jest w pełni kwalifikowana jako `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Poniższy kod kompiluje, kiedy `-imports:system.globalization` jest określony. Bez tej operacji kompilacja wymaga, aby `Imports System.Globalization` instrukcja była uwzględniona na początku pliku kodu źródłowego lub że właściwość jest w pełni kwalifikowana jako. `System.Globalization.CultureInfo.CurrentCulture.Name`
 
 ```vb
 Module Example
@@ -48,7 +48,7 @@ Module Example
 End Module
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

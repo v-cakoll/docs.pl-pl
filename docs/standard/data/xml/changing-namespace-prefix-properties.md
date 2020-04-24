@@ -62,8 +62,8 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Gdy drzewo zostało utrwalone jako ciąg w wyniku wywołania metody **doc. InnerXml**, atrybut `xmlns:a='123'` został dodany w celu zachowania przestrzeni nazw elementu `test`. Była `'123'`i pozostawała `'123'`.  
+ Gdy drzewo zostało utrwalone jako ciąg w wyniku wywołania metody **doc. InnerXml**, `xmlns:a='123'` atrybut został dodany w celu zachowania przestrzeni nazw `test` elementu. `'123'`To i pozostało `'123'`.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

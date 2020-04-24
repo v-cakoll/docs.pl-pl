@@ -11,17 +11,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710872"
 ---
 # <a name="extending-xslt-style-sheets"></a>Rozszerzanie arkuszy stylów XSLT
-W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Można dodać obiekty lub parametry rozszerzenia przy użyciu klasy <xref:System.Xml.Xsl.XsltArgumentList>. Obiekty lub parametry rozszerzenia można następnie wywołać z arkusza stylów. Ponadto można osadzić Bloki skryptów w arkuszu stylów przy użyciu elementu `msxsl:script`.  
+W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Można dodać obiekty lub parametry rozszerzenia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList> klasy. Obiekty lub parametry rozszerzenia można następnie wywołać z arkusza stylów. Ponadto można osadzić Bloki skryptów w arkuszu stylów przy użyciu `msxsl:script` elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Obiekty rozszerzeń XSLT](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
- W tym artykule omówiono użycie klasy <xref:System.Xml.Xsl.XsltArgumentList> do przetwarzania obiektów rozszerzeń XSLT.  
+ Omówienie używania <xref:System.Xml.Xsl.XsltArgumentList> klasy do przetwarzania obiektów rozszerzeń XSLT.  
   
  [Parametry XSLT](../../../../docs/standard/data/xml/xslt-parameters.md)  
- W tym artykule omówiono użycie klasy <xref:System.Xml.Xsl.XsltArgumentList> do przetwarzania parametrów XSLT.  
+ W tym artykule <xref:System.Xml.Xsl.XsltArgumentList> omówiono użycie klasy do przetwarzania parametrów XSLT.  
   
  [Bloki skryptów i element msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
- W tym artykule omówiono użycie elementu `msxsl:script`.  
+ W `msxsl:script` tym artykule omówiono użycie elementu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -19,7 +19,7 @@ Program SQLitePCLRaw udostępnia pakiety pakietów, które ułatwiają wprowadza
 
 Główny pakiet Microsoft. Data. sqlite domyślnie znajduje się w SQLitePCLRaw. bundle_e_sqlite3.
 
-Aby użyć innego pakietu, zainstaluj pakiet `Microsoft.Data.Sqlite.Core` zamiast niego wraz z pakietem pakietu, którego chcesz użyć. Pakiety są automatycznie inicjowane przez firmę Microsoft. Data. sqlite.
+Aby użyć innego pakietu, zainstaluj `Microsoft.Data.Sqlite.Core` pakiet wraz z pakietem pakietu, którego chcesz użyć. Pakiety są automatycznie inicjowane przez firmę Microsoft. Data. sqlite.
 
 | Pakiet | Opis |
 | --- | --- |
@@ -31,14 +31,14 @@ Aby użyć innego pakietu, zainstaluj pakiet `Microsoft.Data.Sqlite.Core` zamias
 
 Na przykład, aby użyć nieoficjalnej kompilacji SQLCIPHER typu open source, użyj następujących poleceń.
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[Interfejs wiersza polecenia platformy .NET Core](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite.Core
@@ -49,7 +49,7 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="sqlitepclraw-providers"></a>Dostawcy SQLitePCLRaw
 
-Możesz użyć własnej kompilacji oprogramowania SQLite, wykorzystując pakiet `SQLitePCLRaw.provider.dynamic_cdecl`. W takim przypadku użytkownik jest odpowiedzialny za wdrożenie biblioteki natywnej w aplikacji. Uwaga Szczegóły wdrażania bibliotek macierzystych w aplikacji różnią się w zależności od używanej platformy .NET i środowiska uruchomieniowego.
+Możesz użyć własnej kompilacji oprogramowania SQLite, wykorzystując `SQLitePCLRaw.provider.dynamic_cdecl` pakiet. W takim przypadku użytkownik jest odpowiedzialny za wdrożenie biblioteki natywnej w aplikacji. Uwaga Szczegóły wdrażania bibliotek macierzystych w aplikacji różnią się w zależności od używanej platformy .NET i środowiska uruchomieniowego.
 
 Najpierw musisz zaimplementować IGetFunctionPointer. Implementacja jest stosunkowo prosta w programie .NET Core.
 

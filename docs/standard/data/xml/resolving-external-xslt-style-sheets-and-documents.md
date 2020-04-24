@@ -14,41 +14,41 @@ ms.locfileid: "75710300"
 Podczas transformacji może wystąpić kilka razy, gdy konieczne jest rozwiązanie zasobów zewnętrznych.  
   
 > [!NOTE]
-> Klasa <xref:System.Xml.Xsl.XslTransform> jest przestarzała w .NET Framework 2,0. Można wykonywać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu klasy <xref:System.Xml.Xsl.XslCompiledTransform>.  
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  
   
  Podczas transformacji może wystąpić kilka razy, gdy konieczne jest rozwiązanie zasobów zewnętrznych:  
   
-- W <xref:System.Xml.Xsl.XslTransform.Load%2A>, aby zlokalizować zewnętrzny arkusz stylów.  
+- W <xref:System.Xml.Xsl.XslTransform.Load%2A> celu zlokalizowania zewnętrznego arkusza stylów.  
   
-- Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> rozpoznawania elementów `<xsl:include>` lub `<xsl:import>` znalezionych w arkuszu stylów.  
+- W <xref:System.Xml.Xsl.XslTransform.Load%2A> celu rozpoznania `<xsl:include>` `<xsl:import>` elementów znalezionych w arkuszu stylów.  
   
-- Podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> rozpoznawania jakichkolwiek funkcji `document()`.  
+- W <xref:System.Xml.Xsl.XslTransform.Transform%2A> celu rozwiązania wszelkich `document()` funkcji.  
   
 ## <a name="using-the-xmlresolver-class"></a>Korzystanie z klasy XmlResolver  
- Jeśli do uzyskania dostępu do zasobu sieciowego jest wymagane uwierzytelnianie, użyj metod <xref:System.Xml.Xsl.XslTransform.Load%2A>, które mają parametr <xref:System.Xml.XmlResolver>, aby przekazać obiekt <xref:System.Xml.XmlResolver>, który ma wymagane właściwości poświadczeń.  
+ Jeśli do uzyskania dostępu do zasobu sieciowego jest wymagane uwierzytelnianie, użyj <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które mają <xref:System.Xml.XmlResolver> parametr do przekazania <xref:System.Xml.XmlResolver> obiektu, który ma wymagane właściwości poświadczeń.  
   
- Jeśli masz niestandardowy <xref:System.Xml.XmlResolver>, którego chcesz użyć, lub jeśli chcesz określić inne poświadczenia, Poniższa tabela zawiera listę zadań wymaganych w zależności od tego, kiedy zasób zewnętrzny wymaga rozwiązania.  
+ Jeśli masz niestandardowy <xref:System.Xml.XmlResolver> , którego chcesz użyć, lub jeśli chcesz określić inne poświadczenia, w poniższej tabeli wymieniono wymagane zadanie, w zależności od tego, kiedy zasób zewnętrzny wymaga rozwiązania.  
   
 |Jaki proces wymaga rozwiązania|Zadanie wymagane|  
 |--------------------------------------|-------------------|  
-|Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> zlokalizować arkusz stylów.|Określ przeciążoną metodę <xref:System.Xml.Xsl.XslTransform.Load%2A>, która przyjmuje jako parametr <xref:System.Xml.XmlResolver>, jeśli arkusz stylów znajduje się na zasobie, który wymaga poświadczeń.|  
-|Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> rozpoznawania `<xsl:include>` lub `<xsl:import>`.|Określ przeciążoną metodę <xref:System.Xml.Xsl.XslTransform.Load%2A>, która przyjmuje jako parametr <xref:System.Xml.XmlResolver>. <xref:System.Xml.XmlResolver> służy do ładowania arkuszy stylów, do których odwołuje się instrukcje `import` lub `include`. W przypadku przekazania `null`zasoby zewnętrzne nie zostaną rozwiązane.|  
-|Podczas przekształcania, aby rozwiązać wszelkie `document()` funkcje.|Określ <xref:System.Xml.XmlResolver> podczas transformacji przy użyciu metody <xref:System.Xml.Xsl.XslTransform.Transform%2A>, która przyjmuje argument <xref:System.Xml.XmlResolver>.|  
+|W <xref:System.Xml.Xsl.XslTransform.Load%2A> celu zlokalizowania arkusza stylów.|Określ przeciążoną <xref:System.Xml.Xsl.XslTransform.Load%2A> metodę, która przyjmuje jako parametr, <xref:System.Xml.XmlResolver> Jeśli arkusz stylów znajduje się na zasobie, który wymaga poświadczeń.|  
+|Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> rozpoznawania `<xsl:include>` lub `<xsl:import>`.|Określ przeciążoną <xref:System.Xml.Xsl.XslTransform.Load%2A> metodę, która przyjmuje jako parametr <xref:System.Xml.XmlResolver>. <xref:System.Xml.XmlResolver> Służy do ładowania arkuszy stylów, do których odwołuje się `import` instrukcja `include` or. Jeśli przejdziesz `null`do programu, zasoby zewnętrzne nie zostaną rozwiązane.|  
+|Podczas przekształcania w celu rozwiązania `document()` wszelkich funkcji.|Określ <xref:System.Xml.XmlResolver> podczas transformacji przy użyciu <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody, która przyjmuje <xref:System.Xml.XmlResolver> argument.|  
   
- Funkcja `document()` pobiera inne zasoby XML z arkusza stylów, oprócz początkowych danych XML dostarczonych przez strumień wejściowy. Ponieważ ta funkcja umożliwia dołączenie danych XML, które mogą znajdować się w innym miejscu, <xref:System.Xml.XmlResolver> z `null` wartością dostarczoną do metody <xref:System.Xml.Xsl.XslTransform.Transform%2A> uniemożliwia wykonywanie funkcji `document()`. Jeśli chcesz użyć funkcji `document()`, użyj metody <xref:System.Xml.Xsl.XslTransform.Transform%2A>, która pobiera <xref:System.Xml.XmlResolver> jako parametr, oprócz posiadania odpowiedniego zestawu uprawnień.  
+ `document()` Funkcja pobiera inne zasoby XML z arkusza stylów, oprócz początkowych danych XML dostarczonych przez strumień wejściowy. Ponieważ ta funkcja umożliwia dołączenie danych XML, które mogą znajdować się w <xref:System.Xml.XmlResolver> innym miejscu `null` , a wartość dostarczona do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody `document()` uniemożliwia wykonanie funkcji. Jeśli chcesz użyć `document()` funkcji, użyj <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody, która przyjmuje <xref:System.Xml.XmlResolver> jako parametr, oprócz odpowiedniego zestawu uprawnień.  
   
- Aby uzyskać więcej informacji na temat metody <xref:System.Xml.Xsl.XslTransform.Load%2A> i jej używania <xref:System.Xml.XmlResolver>, zobacz <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji na <xref:System.Xml.Xsl.XslTransform.Load%2A> temat metody i jej używania <xref:System.Xml.XmlResolver>, zobacz. <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>  
   
- Po wywołaniu metody <xref:System.Xml.Xsl.XslTransform.Transform%2A> uprawnienia są obliczane na podstawie dowodów dostarczonych w czasie ładowania, a zestaw uprawnień jest przypisany do całego procesu transformacji. Jeśli funkcja `document()` próbuje zainicjować akcję, która wymaga uprawnień nieznalezionych w zestawie, zgłaszany jest wyjątek.  
+ Gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda jest wywoływana, uprawnienia są obliczane na podstawie dowodów dostarczonych w czasie ładowania, a zestaw uprawnień jest przypisany do całego procesu transformacji. Jeśli `document()` funkcja próbuje zainicjować akcję, która wymaga uprawnień nieznalezionych w zestawie, zgłaszany jest wyjątek.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
 - [Dane wyjściowe klasy XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)
 - [Przekształcenia XSLT w różnych magazynach](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)
 - [Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [Obsługa skryptów arkusza stylów XSLT przy użyciu \<msxsl: skrypt >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
+- [Obsługa skryptów arkusza stylów \<XSLT przy użyciu msxsl:>skryptu](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
 - [Obsługa funkcji msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)
 - [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
 - [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)

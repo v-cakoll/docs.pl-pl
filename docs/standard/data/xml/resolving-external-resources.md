@@ -41,15 +41,15 @@ Właściwość **XmlResolver** obiektu **XmlDocument** jest używana przez klas�
   
 |XmlResolver — właściwość|Funkcja|Uwagi|  
 |--------------------------|--------------|-----------|  
-|Klasa **XmlResolver** używana przez **XmlDocument** jest taka sama jak ta, która jest używana przez element **XmlReader**.|**XmlDocument** używa elementu **XmlResolver** , który został przypisany do elementu **XmlReader**.<br /><br /> Nie można ustawić właściwości **XmlDocument. resolver** , niezależnie od poziomu zaufania **XmlDocument** , ponieważ jest ona pobierana z elementu **XmlReader** **XmlResolver** . Nie można podjąć próby przesłonięcia ustawień elementu **XmlResolver xmlrozpoznawania** , ustawiając właściwość **XmlResolver** obiektu **XmlDocument**.|Element **XmlReader** może być **XmlTextReader**, walidacją <xref:System.Xml.XmlReader>lub czytnikiem niestandardowym. Jeśli używany czytnik obsługuje rozpoznawanie jednostek, jednostki zewnętrzne są rozwiązane. Jeśli czytnik programu przeszedł nie obsługuje odwołań do jednostek, odwołania do jednostek nie są rozwiązane.|  
+|Klasa **XmlResolver** używana przez **XmlDocument** jest taka sama jak ta, która jest używana przez element **XmlReader**.|**XmlDocument** używa elementu **XmlResolver** , który został przypisany do elementu **XmlReader**.<br /><br /> Nie można ustawić właściwości **XmlDocument. resolver** , niezależnie od poziomu zaufania **XmlDocument** , ponieważ jest ona pobierana z elementu **XmlReader** **XmlResolver** . Nie można podjąć próby przesłonięcia ustawień elementu **XmlReaders** **XmlResolver xmlrozpoznawania** , ustawiając właściwość **XmlResolver** obiektu **XmlDocument**.|Element **XmlReader** może być **XmlTextReader**, walidacją <xref:System.Xml.XmlReader>lub czytnikiem niestandardowym. Jeśli używany czytnik obsługuje rozpoznawanie jednostek, jednostki zewnętrzne są rozwiązane. Jeśli czytnik programu przeszedł nie obsługuje odwołań do jednostek, odwołania do jednostek nie są rozwiązane.|  
   
  Ustawienie XmlResolver w taki sposób, aby zawierało poprawne poświadczenia, umożliwia dostęp do zasobów zewnętrznych.  
   
 > [!NOTE]
-> Nie ma możliwości pobrania właściwości **XmlResolver** . Pozwala to zapobiec użyciu przez użytkownika elementu **XmlResolver** , na którym zostały ustawione poświadczenia. Ponadto jeśli **XmlTextReader** lub walidacja <xref:System.Xml.XmlReader> jest używana do załadowania **dokumentu** XmlDocument, a element **XmlDocument** ma skonfigurowany mechanizm rozwiązywania konfliktów, nie są buforowane przez **XmlDocument** po fazie **obciążenia** , ponieważ stanowi to również zagrożenie bezpieczeństwa.  
+> Nie ma możliwości pobrania właściwości **XmlResolver** . Pozwala to zapobiec użyciu przez użytkownika elementu **XmlResolver** , na którym zostały ustawione poświadczenia. Ponadto jeśli **XmlTextReader** lub Walidacja <xref:System.Xml.XmlReader> jest używana do załadowania **dokumentu** XmlDocument, a element **XmlDocument** ma skonfigurowany mechanizm rozwiązywania konfliktów, nie są buforowane przez **XmlDocument** po fazie **obciążenia** , ponieważ stanowi to również zagrożenie bezpieczeństwa.  
   
- Aby uzyskać więcej informacji, zobacz sekcję uwagi na stronie odniesienia <xref:System.Xml.XmlResolver>.  
+ Aby uzyskać więcej informacji, zobacz sekcję uwagi na stronie <xref:System.Xml.XmlResolver> referencyjnej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

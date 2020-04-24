@@ -16,18 +16,18 @@ ms.locfileid: "75709780"
 # <a name="xpath-queries-and-namespaces"></a>Zapytania XPath i przestrzenie nazw
 Zapytania XPath są świadome przestrzeni nazw w dokumencie XML i mogą używać prefiksów przestrzeni nazw do kwalifikowania nazw elementów i atrybutów. Kwalifikujące się nazwy elementów i atrybutów z prefiksem przestrzeni nazw ograniczają węzły zwracane przez zapytanie XPath tylko do tych węzłów, które należą do określonej przestrzeni nazw.  
   
- Na przykład jeśli prefiks `books` mapowany do przestrzeni nazw `http://www.contoso.com/books`, wówczas następujące zapytanie XPath `/books:books/books:book` wybiera tylko te elementy `book` w przestrzeni nazw `http://www.contoso.com/books`.  
+ Na przykład jeśli `books` prefiks mapuje do przestrzeni nazw `http://www.contoso.com/books`, następujące zapytanie `/books:books/books:book` XPath wybiera tylko te `book` elementy w przestrzeni nazw. `http://www.contoso.com/books`  
   
 ## <a name="the-xmlnamespacemanager"></a>Nazwa XmlNamespaceManager  
- Aby używać przestrzeni nazw w zapytaniu XPath, obiekt pochodny interfejsu <xref:System.Xml.IXmlNamespaceResolver>, jak Klasa <xref:System.Xml.XmlNamespaceManager>, jest konstruowany przy użyciu identyfikatora URI przestrzeni nazw i prefiksu do uwzględnienia w zapytaniu XPath.  
+ Aby używać przestrzeni nazw w zapytaniu XPath, obiekt pochodzący z <xref:System.Xml.IXmlNamespaceResolver> interfejsu, takiego <xref:System.Xml.XmlNamespaceManager> jak Klasa, jest konstruowany przy użyciu identyfikatora URI przestrzeni nazw i prefiksu do uwzględnienia w zapytaniu XPath.  
   
- Obiekt <xref:System.Xml.XmlNamespaceManager> może być używany w zapytaniu w każdym z poniższych sposobów.  
+ <xref:System.Xml.XmlNamespaceManager> Obiekt może być używany w zapytaniu w każdym z poniższych sposobów.  
   
-- Obiekt <xref:System.Xml.XmlNamespaceManager> jest skojarzony z istniejącym obiektem <xref:System.Xml.XPath.XPathExpression> za pomocą metody <xref:System.Xml.XPath.XPathExpression.SetContext%2A> obiektu <xref:System.Xml.XPath.XPathExpression>. Możesz również skompilować nowy obiekt <xref:System.Xml.XPath.XPathExpression> przy użyciu statycznej metody <xref:System.Xml.XPath.XPathExpression.Compile%2A>, która przyjmuje ciąg reprezentujący wyrażenie XPath i obiekt <xref:System.Xml.XmlNamespaceManager> jako parametry i zwraca nowy obiekt <xref:System.Xml.XPath.XPathExpression>.  
+- <xref:System.Xml.XmlNamespaceManager> Obiekt jest skojarzony z istniejącym <xref:System.Xml.XPath.XPathExpression> obiektem za pomocą <xref:System.Xml.XPath.XPathExpression.SetContext%2A> metody <xref:System.Xml.XPath.XPathExpression> obiektu. Możesz również <xref:System.Xml.XPath.XPathExpression> skompilować nowy obiekt za pomocą metody statycznej <xref:System.Xml.XPath.XPathExpression.Compile%2A> , która przyjmuje ciąg reprezentujący wyrażenie XPath i <xref:System.Xml.XmlNamespaceManager> obiekt jako parametry i zwraca nowy <xref:System.Xml.XPath.XPathExpression> obiekt.  
   
-- Sam obiekt <xref:System.Xml.XmlNamespaceManager> jest przenoszona jako parametr do metody akceptującej <xref:System.Xml.XPath.XPathNavigator> klasy wraz z ciągiem reprezentującym wyrażenie XPath.  
+- Sam <xref:System.Xml.XmlNamespaceManager> obiekt jest przekazaniem jako parametr do metody akceptującej <xref:System.Xml.XPath.XPathNavigator> klasy wraz z ciągiem reprezentującym wyrażenie XPath.  
   
- Poniżej przedstawiono metody klasy <xref:System.Xml.XPath.XPathNavigator>, które akceptują obiekt pochodny interfejsu <xref:System.Xml.IXmlNamespaceResolver> jako parametr.  
+ Poniżej przedstawiono metody <xref:System.Xml.XPath.XPathNavigator> klasy, które akceptują obiekt pochodny <xref:System.Xml.IXmlNamespaceResolver> interfejsu jako parametr.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
@@ -36,7 +36,7 @@ Zapytania XPath są świadome przestrzeni nazw w dokumencie XML i mogą używać
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Domyślna przestrzeń nazw  
- W poniższym dokumencie XML, domyślna przestrzeń nazw z pustym prefiksem jest używana do deklarowania przestrzeni nazw `http://www.contoso.com/books`.  
+ W poniższym dokumencie XML, domyślna przestrzeń nazw z pustym prefiksem jest używana do deklarowania `http://www.contoso.com/books` przestrzeni nazw.  
   
 ```xml  
 <books xmlns="http://www.contoso.com/books">  
@@ -48,13 +48,13 @@ Zapytania XPath są świadome przestrzeni nazw w dokumencie XML i mogą używać
 </books>  
 ```  
   
- Wyrażenie XPath traktuje pusty prefiks jako przestrzeń nazw `null`. Innymi słowy, tylko prefiksy mapowane na przestrzenie nazw mogą być używane w zapytaniach XPath. Oznacza to, że jeśli chcesz wykonać zapytanie względem przestrzeni nazw w dokumencie XML, nawet jeśli jest to domyślna przestrzeń nazw, musisz zdefiniować dla niej prefiks.  
+ Wyrażenie XPath traktuje pusty prefiks jako `null` przestrzeń nazw. Innymi słowy, tylko prefiksy mapowane na przestrzenie nazw mogą być używane w zapytaniach XPath. Oznacza to, że jeśli chcesz wykonać zapytanie względem przestrzeni nazw w dokumencie XML, nawet jeśli jest to domyślna przestrzeń nazw, musisz zdefiniować dla niej prefiks.  
   
- Na przykład, bez definiowania prefiksu dla dokumentu XML powyżej, zapytanie XPath `/books/book` nie zwróci żadnych wyników.  
+ Na przykład bez definiowania prefiksu dla dokumentu XML powyżej zapytanie `/books/book` XPath nie zwróci żadnych wyników.  
   
  Prefiks musi być powiązany, aby zapobiec niejednoznaczności podczas wykonywania zapytania o dokumenty z niektórymi węzłami, a niektóre w domyślnej przestrzeni nazw.  
   
- Poniższy kod definiuje prefiks domyślnej przestrzeni nazw i zaznacza wszystkie elementy `book` z przestrzeni nazw `http://www.contoso.com/books`.  
+ Poniższy kod definiuje prefiks domyślnej przestrzeni nazw i wybiera wszystkie `book` elementy z `http://www.contoso.com/books` przestrzeni nazw.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -76,7 +76,7 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

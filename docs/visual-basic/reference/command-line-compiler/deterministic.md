@@ -24,7 +24,7 @@ Powoduje, że kompilator tworzy zestaw, którego bajty w bajtach są identyczne 
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych są unikatowe, ponieważ kompilator dodaje sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczb losowych. Użyj opcji `-deterministic`, aby utworzyć *jednoznaczny zestaw*, który jest identyczny z zawartością binarną w kompilacjach, tak długo, jak dane wejściowe pozostają takie same.
+Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych są unikatowe, ponieważ kompilator dodaje sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczb losowych. Używasz `-deterministic` opcji do tworzenia *deterministycznego zestawu*, który jest identyczny z zawartością binarną w kompilacjach, tak długo, jak dane wejściowe pozostają takie same.
 
 Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
 
@@ -36,7 +36,7 @@ Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
   - Pliki źródłowe
   - Przywoływane zestawy
   - Moduły, do których istnieją odwołania
-  - Resources
+  - Zasoby
   - Plik klucza o silnej nazwie
   - pliki odpowiedzi @
   - Analizatory
@@ -50,7 +50,7 @@ Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
 
 Gdy źródła są dostępne publicznie, można użyć deterministycznej kompilacji do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Może być również przydatna w systemie ciągłej kompilacji, aby określić, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

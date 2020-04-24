@@ -69,9 +69,9 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> Atrybutu jest atrybutem najczęściej używane wywołania zwrotnego. Inne atrybuty w rodzinie są <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>i <xref:System.Runtime.Serialization.OnSerializedAttribute>. One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> Atrybutu jest atrybutem najczęściej używane wywołania zwrotnego. Inne atrybuty w rodzinie to <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, i. <xref:System.Runtime.Serialization.OnSerializedAttribute> One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
   
-4. Rozważ użycie <xref:System.Runtime.Serialization.KnownTypeAttribute> do wskazania konkretnych typów, które powinny być używane podczas deserializacji grafu złożonego obiektu.  
+4. Rozważ użycie elementu <xref:System.Runtime.Serialization.KnownTypeAttribute> do wskazania konkretnych typów, które powinny być używane podczas deserializacji grafu złożonego obiektu.  
   
      Na przykład, jeśli typ deserializowanego elementu członkowskiego danych jest reprezentowany przez klasę abstrakcyjną, serializator będzie potrzebował informacji o *znanym typie* , aby określić konkretny typ do wystąpienia i przypisać do elementu członkowskiego. Jeśli znany typ nie jest określony przy użyciu atrybutu, należy przekazać go do serializatora jawnie (można to zrobić, przekazując znane typy do konstruktora serializatora) lub trzeba go określić w pliku konfiguracji.  
   
@@ -82,9 +82,9 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
   
 5. Należy wziąć pod uwagę zgodność z poprzednimi wersjami i do przodu, podczas tworzenia lub zmiany typów możliwych do serializacji.  
   
-     Należy pamiętać, który serializowany strumieni przyszłych wersjach tego typu mogą zostać przeprowadzona deserializacja bieżącą wersję tego typu i na odwrót. Upewnij się, że rozumiesz, że członkowie danych, nawet prywatna i wewnętrzna, nie mogą zmienić swoich nazw, typów lub nawet ich kolejności w przyszłych wersjach typu, chyba że szczególna szczególna potrzeba zachowywać się w celu zachowania kontraktu przy użyciu jawnych parametrów do atrybutów kontraktu danych. . Przetestuj zgodność serializacji podczas wprowadzania zmian w możliwych do serializacji typach. Spróbuj wykonać deserializacji nowej wersji w starszej wersji i na odwrót.  
+     Należy pamiętać, który serializowany strumieni przyszłych wersjach tego typu mogą zostać przeprowadzona deserializacja bieżącą wersję tego typu i na odwrót. Upewnij się, że rozumiesz, że członkowie danych, nawet prywatna i wewnętrzna, nie mogą zmienić swoich nazw, typów, a nawet ich kolejności w przyszłych wersjach typu, chyba że szczególna ostrożność zachowuje umowę przy użyciu jawnych parametrów do atrybutów kontraktu danych. Przetestuj zgodność serializacji podczas wprowadzania zmian w możliwych do serializacji typach. Spróbuj wykonać deserializacji nowej wersji w starszej wersji i na odwrót.  
   
-6. Rozważ zaimplementowanie interfejsu <xref:System.Runtime.Serialization.IExtensibleDataObject>, aby umożliwić wykonywanie rundy między różnymi wersjami tego typu.  
+6. Rozważ zaimplementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu, aby umożliwić wykonywanie rundy między różnymi wersjami tego typu.  
   
      Interfejs umożliwia serializator upewnić się, że nie są żadne dane utracone podczas Pełna zgodnooć wersji. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> Właściwość przechowuje wszystkie dane z przyszłej wersji typu, który jest nieznany do bieżącej wersji. Gdy bieżąca wersja jest następnie serializowana i deserializowana w przyszłej wersji, dodatkowe dane będą dostępne w serializowanym strumieniu za pomocą wartości właściwości **ExtensionData —** .  
   
@@ -98,26 +98,26 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
   
 1. Należy UNIKAĆ projektowanie swój typ specjalnie dla serializacji XML, chyba że użytkownik ma bardzo duży Przyczyna do określenia kształtu XML utworzone. Ta technologia serializacji została zastąpiona przez serializacji kontrakt danych opisanych w poprzedniej sekcji.  
   
-     Innymi słowy, nie stosuj atrybutów z przestrzeni nazw <xref:System.Xml.Serialization> do nowych typów, chyba że wiadomo, że typ będzie używany z serializacji XML. Poniższy przykład pokazuje, jak **System. XML. Serialization** może służyć do kontrolowania kształtu utworzonego XML.  
+     Innymi słowy, nie stosuj atrybutów z <xref:System.Xml.Serialization> przestrzeni nazw do nowych typów, chyba że wiadomo, że typ będzie używany z serializacji XML. Poniższy przykład pokazuje, jak **System. XML. Serialization** może służyć do kontrolowania kształtu utworzonego XML.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. Rozważ zaimplementowanie interfejsu <xref:System.Xml.Serialization.IXmlSerializable>, jeśli chcesz jeszcze bardziej kontrolować kształt serializowanego kodu XML niż to, co jest oferowane przez zastosowanie atrybutów serializacji XML. Dwie metody interfejsu, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>umożliwiają pełną kontrolę serializowanego strumienia XML. Można również kontrolować schemat XML, który jest generowany dla typu przez zastosowanie atrybutu <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. Rozważ zaimplementowanie interfejsu, <xref:System.Xml.Serialization.IXmlSerializable> Jeśli chcesz jeszcze bardziej kontrolować kształt SERIALIZOWANEGO kodu XML niż to, co jest oferowane przez zastosowanie atrybutów serializacji XML. Dwie metody interfejsu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>umożliwiają pełną kontrolę serializowanego strumienia XML. Można również kontrolować schemat XML, który jest generowany dla typu przez zastosowanie <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu.  
   
 #### <a name="supporting-runtime-serialization"></a>Obsługa serializacji środowiska uruchomieniowego  
  *Serializacja środowiska uruchomieniowego* jest technologią używaną przez funkcję komunikacji zdalnej platformy .NET. Jeśli uważasz, że Twoje typy będzie transportowane przy użyciu wywołaniem funkcji zdalnych .NET, należy upewnić się, że obsługują serializacji w czasie wykonywania.  
   
- Podstawowe wsparcie dla *serializacji środowiska uruchomieniowego* można zapewnić, stosując atrybut <xref:System.SerializableAttribute> i bardziej zaawansowane scenariusze obejmują implementację prostego *wzorca serializacji środowiska uruchomieniowego* (implementacja-<xref:System.Runtime.Serialization.ISerializable> i dostarczenie konstruktora serializacji).  
+ Podstawowe wsparcie dla *serializacji środowiska uruchomieniowego* może być zapewnione przez <xref:System.SerializableAttribute> zastosowanie atrybutu, a bardziej zaawansowane scenariusze obejmują implementację prostego, *serializowanego wzorca środowiska uruchomieniowego* (implementacja<xref:System.Runtime.Serialization.ISerializable> i dostarczenie konstruktora serializacji).  
   
-1. Należy rozważyć obsługę serializacji w czasie wykonywania, jeśli Twój typy będzie używany z wywołaniem funkcji zdalnych .NET. Na przykład przestrzeń nazw <xref:System.AddIn> używa komunikacji zdalnej platformy .NET, a więc wszystkie typy wymieniane między dodatkiem **System. addin** muszą obsługiwać serializację w czasie wykonywania.  
+1. Należy rozważyć obsługę serializacji w czasie wykonywania, jeśli Twój typy będzie używany z wywołaniem funkcji zdalnych .NET. Na przykład <xref:System.AddIn> przestrzeń nazw używa komunikacji zdalnej .NET, a więc wszystkie typy wymieniane między dodatkiem **System. addin** muszą obsługiwać serializację w czasie wykonywania.  
   
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
 2. Rozważ zaimplementowanie *wzorca serializacji środowiska uruchomieniowego* , jeśli chcesz uzyskać pełną kontrolę nad procesem serializacji. Na przykład, jeśli chcesz przekształcić dane w sposób, w jaki są one serializowane lub deserializowane.  
   
-     Wzorzec jest bardzo prosty. Wszystko, co musisz zrobić, implementuje interfejs <xref:System.Runtime.Serialization.ISerializable> i udostępnia specjalny Konstruktor, który jest używany podczas deserializacji obiektu.  
+     Wzorzec jest bardzo prosty. Wszystko, co musisz zrobić, implementuje <xref:System.Runtime.Serialization.ISerializable> interfejs i udostępnia specjalny Konstruktor, który jest używany podczas deserializacji obiektu.  
   
      [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]
      [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
@@ -143,6 +143,6 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
 - [Serializator kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [Typy obsługiwane przez serializator kontraktu danych](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializacja binarna](binary-serialization.md)
-- [Komunikacja zdalna .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [Wywołaniem funkcji zdalnych .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializacja XML i SOAP](xml-and-soap-serialization.md)
-- [Zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md)
+- [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)

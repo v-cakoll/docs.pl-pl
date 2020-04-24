@@ -11,25 +11,25 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711171"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator
-Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia metody do nawigowania po węzłach, wyodrębniania danych XML i uzyskiwania dostępu do jednoznacznie wpisanych danych XML w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>.  
+Klasa udostępnia metody do nawigowania po węzłach, wyodrębniania danych XML i uzyskiwania dostępu do jednoznacznie <xref:System.Xml.XPath.XPathDocument> WPISANYCH danych XML w obiekcie lub <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathNavigator>  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- Opisuje metody nawigacji zestawu węzłów klasy <xref:System.Xml.XPath.XPathNavigator> używane do nawigowania po węzłach w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>.  
+ Opisuje metody <xref:System.Xml.XPath.XPathNavigator> nawigacji zestawu węzłów używane do nawigowania w węzłach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektach.  
   
  [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- Opisuje metody nawigacji między atrybutami i węzłami przestrzeni nazw klasy <xref:System.Xml.XPath.XPathNavigator>.  
+ Opisuje metody nawigacji między atrybutami i węzłami przestrzeni <xref:System.Xml.XPath.XPathNavigator> nazw klasy.  
   
  [Wyodrębnianie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- Opisuje różne metody wyodrębniania danych XML z obiektu <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>.  
+ Opisuje różne metody wyodrębniania danych XML z obiektu <xref:System.Xml.XPath.XPathDocument> lub. <xref:System.Xml.XmlDocument>  
   
  [Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- Opisuje dostęp do jednoznacznie wpisanych danych XML w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.  
+ Opisuje dostęp do jednoznacznie wpisanych danych XML w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
  [Funkcje i zmienne zdefiniowane przez użytkownika](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
- Opisuje implementowanie niestandardowej klasy <xref:System.Xml.Xsl.XsltContext> oraz interfejsów <xref:System.Xml.Xsl.IXsltContextFunction> i <xref:System.Xml.Xsl.IXsltContextVariable> obsługujących funkcje rozszerzenia i zmienne.  
+ Opisuje implementowanie klasy <xref:System.Xml.Xsl.XsltContext> niestandardowej wraz z interfejsami <xref:System.Xml.Xsl.IXsltContextFunction> i <xref:System.Xml.Xsl.IXsltContextVariable> obsługującymi funkcje rozszerzeń i zmienne.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

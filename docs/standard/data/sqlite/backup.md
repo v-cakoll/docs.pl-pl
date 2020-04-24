@@ -11,8 +11,8 @@ ms.locfileid: "75901284"
 ---
 # <a name="online-backup"></a>Kopia zapasowa online
 
-Program SQLite może utworzyć kopię zapasową plików bazy danych, gdy aplikacja jest uruchomiona. Ta funkcja jest dostępna w firmie Microsoft. Data. sqlite jako metoda <xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> w `SqliteConnection`.
+Program SQLite może utworzyć kopię zapasową plików bazy danych, gdy aplikacja jest uruchomiona. Ta funkcja jest dostępna w programie Microsoft. Data. sqlite jako <xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> Metoda w `SqliteConnection`systemie.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/BackupSample/Program.cs?name=snippet_Backup)]
 
-Obecnie `BackupDatabase` tworzy kopię zapasową bazy danych tak szybko, jak to możliwe, i blokuje inne połączenia z zapisu w bazie danych. Problem [#13834](https://github.com/dotnet/efcore/issues/13834) zapewnia alternatywny interfejs API do tworzenia kopii zapasowej bazy danych w tle i zezwala na inne połączenia w celu przerwania tworzenia kopii zapasowej i zapisu w bazie danych. Jeśli jesteś zainteresowanym, Prześlij opinię na temat problemu.
+`BackupDatabase` Obecnie program tworzy kopię zapasową bazy danych tak szybko, jak to możliwe, i blokuje inne połączenia z zapisu w bazie danych. Problem [#13834](https://github.com/dotnet/efcore/issues/13834) zapewnia alternatywny interfejs API do tworzenia kopii zapasowej bazy danych w tle i zezwala na inne połączenia w celu przerwania tworzenia kopii zapasowej i zapisu w bazie danych. Jeśli jesteś zainteresowanym, Prześlij opinię na temat problemu.

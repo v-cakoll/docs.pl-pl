@@ -14,7 +14,7 @@ ms.lasthandoff: 03/04/2020
 ms.locfileid: "78266745"
 ---
 # <a name="-keyfile"></a>-keyfile
-Określa plik zawierający klucz lub parę kluczy, aby nadać zestawowi silną nazwę.  
+Określa plik zawierający parę klucz lub klucz, aby nadać zestawowi silną nazwę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,25 +24,25 @@ Określa plik zawierający klucz lub parę kluczy, aby nadać zestawowi silną n
   
 ## <a name="arguments"></a>Argumenty  
  `file`  
- Wymagany. Plik zawierający klucz. Jeśli nazwa pliku zawiera spację, należy ją ująć w cudzysłów (" ").  
+ Wymagany. Plik, który zawiera klucz. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Kompilator wstawia klucz publiczny do manifestu zestawu, a następnie podpisuje końcowy zestaw za pomocą klucza prywatnego. Aby wygenerować `sn -k file` plik klucza, wpisz wiersz polecenia. Aby uzyskać więcej informacji, zobacz [Sn.exe (Narzędzie Silnej nazwy).](../../../framework/tools/sn-exe-strong-name-tool.md)  
+ Kompilator wstawia klucz publiczny do manifestu zestawu, a następnie podpisuje końcowy zestaw kluczem prywatnym. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [SN. exe (Narzędzie silnej nazwy)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- Jeśli kompilujesz `-target:module`z , nazwa pliku klucza jest utrzymywana w module i włączona do zestawu, który jest tworzony podczas kompilowania zestawu z [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ W przypadku kompilowania `-target:module`za pomocą programu nazwa pliku klucza jest przechowywana w module i włączana do zestawu, który jest tworzony podczas kompilowania zestawu za pomocą [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
- Informacje o szyfrowaniu można również przekazać do kompilatora za pomocą [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Użyj [-delaysign,](../../../visual-basic/reference/command-line-compiler/delaysign.md) jeśli chcesz częściowo podpisanyzesśmy.  
+ Możesz również przekazać informacje o szyfrowaniu do kompilatora z [kontenerem](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Użyj [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) , jeśli chcesz użyć częściowo podpisanego zestawu.  
   
- Można również określić tę opcję jako<xref:System.Reflection.AssemblyKeyFileAttribute>atrybut niestandardowy ( ) w kodzie źródłowym dla dowolnego modułu języka pośredniego firmy Microsoft.  
+ Można również określić tę opcję jako atrybut niestandardowy (<xref:System.Reflection.AssemblyKeyFileAttribute>) w kodzie źródłowym dowolnego modułu języka pośredniego firmy Microsoft.  
   
- W przypadku, gdy zarówno `-keyfile` i [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) są określone (przez opcję wiersza polecenia lub atrybutu niestandardowego) w tej samej kompilacji, kompilator najpierw próbuje kontenera klucza. Jeśli to się powiedzie, zestaw jest podpisany z informacjami w kontenerze kluczy. Jeśli kompilator nie znajdzie kontenera kluczy, `-keyfile`próbuje plik określony za pomocą pliku . Jeśli to się powiedzie, zestaw jest podpisany z informacjami w pliku klucza, a `sn -i`informacje o kluczu są instalowane w kontenerze kluczy (podobnie jak), tak aby w następnej kompilacji kontener kluczy był prawidłowy.  
+ W przypadku określenia `-keyfile` obu typów i [--kontenera](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (za pomocą opcji wiersza polecenia lub przez atrybut niestandardowy) w tej samej kompilacji kompilator próbuje najpierw kontener kluczy. Jeśli to się powiedzie, zestaw zostanie podpisany przy użyciu informacji z kontenera kluczy. Jeśli kompilator nie odnajdzie kontenera kluczy, próbuje plik określony z `-keyfile`. Jeśli to się powiedzie, zestaw zostanie podpisany przy użyciu informacji w pliku klucza, a informacje o kluczu są instalowane w kontenerze kluczy (podobnie jak `sn -i`w przypadku), więc w następnej kompilacji kontener kluczy będzie prawidłowy.  
   
- Należy zauważyć, że plik klucza może zawierać tylko klucz publiczny.  
+ Należy pamiętać, że plik klucza może zawierać tylko klucz publiczny.  
   
- Zobacz [Tworzenie i używanie zestawów o silnych nazwach, aby](../../../standard/assembly/create-use-strong-named.md) uzyskać więcej informacji na temat podpisywania zestawu.  
+ Zobacz [Tworzenie i używanie zestawów o silnych nazwach,](../../../standard/assembly/create-use-strong-named.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
   
 > [!NOTE]
-> Opcja `-keyfile` nie jest dostępna z poziomu środowiska programistycznego programu Visual Studio; jest on dostępny tylko podczas kompilowania z wiersza polecenia.
+> `-keyfile` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
 
 ## <a name="example"></a>Przykład
 
@@ -55,6 +55,6 @@ vbc -keyfile:myfile.sn input.vb
 ## <a name="see-also"></a>Zobacz też
 
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Visual Basic Kompilator wiersza polecenia](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

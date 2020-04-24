@@ -36,16 +36,16 @@ lub
 |Termin|Definicja|  
 |---|---|  
 |`symbol`|Wymagany. Symbol do zdefiniowania.|  
-|`value`|Opcjonalny. Wartość, która ma zostać przypisana `symbol`. Jeśli `value` jest ciągiem, musi być ujęta w nawiasy odwrotne lub sekwencje znaku cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli żadna wartość nie zostanie określona, jest ona prawdziwa.|  
+|`value`|Element opcjonalny. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, musi być ujęty w nawiasy odwrotne/sekwencje znaku cudzysłowu\\(") zamiast znaków cudzysłowu. Jeśli żadna wartość nie zostanie określona, jest ona prawdziwa.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-define` ma podobny efekt jak użycie dyrektywy preprocesora `#Const` w pliku źródłowym, z tą różnicą, że stałe zdefiniowane za pomocą `-define` są publiczne i są stosowane do wszystkich plików w projekcie.  
+ `-define` Opcja ma podobny efekt jak użycie `#Const` dyrektywy preprocesora w pliku źródłowym, z tą różnicą, że stałe zdefiniowane z `-define` są publiczne i stosowane do wszystkich plików w projekcie.  
   
- Możesz użyć symboli utworzonych przez tę opcję z dyrektywą `#If`...`Then`...`#Else`, aby warunkowo kompilować pliki źródłowe.  
+ Możesz użyć symboli utworzonych przez tę opcję z `#If`... `Then`... `#Else` dyrektywa w celu warunkowego kompilowania plików źródłowych.  
   
- `-d` jest krótką formą `-define`.  
+ `-d`jest krótką formą `-define`.  
   
- Można zdefiniować wiele symboli za pomocą `-define`, używając przecinka do oddzielania definicji symboli.  
+ Można zdefiniować wiele symboli `-define` za pomocą przecinka do oddzielania definicji symboli.  
   
 |Aby ustawić — Zdefiniuj w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
@@ -56,7 +56,7 @@ lub
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

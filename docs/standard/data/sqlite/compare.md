@@ -48,18 +48,18 @@ Microsoft. Data. sqlite zawiera wiele słów kluczowych [parametrów połączeni
 
 | Słowo kluczowe          | Różne                                         |
 | ---------------- | --------------------------------------------------- |
-| Rozmiar pamięci podręcznej       | Wyślij `PRAGMA cache_size = <pages>`                  |
+| Rozmiar pamięci podręcznej       | Wyślij`PRAGMA cache_size = <pages>`                  |
 | Domyślny limit czasu  | Używanie właściwości DefaultTimeout w SqliteConnection |
-| FailIfMissing    | Użyj `Mode=ReadWrite`                                |
+| FailIfMissing    | Użycie rozszerzenia `Mode=ReadWrite`                                |
 | FullUri          | Użyj słowa kluczowego źródła danych                         |
-| Tryb dziennika     | Wyślij `PRAGMA journal_mode = <mode>`                 |
-| Starszy format    | Wyślij `PRAGMA legacy_file_format = 1`                |
-| Maksymalna liczba stron   | Wyślij `PRAGMA max_page_count = <pages>`              |
-| Rozmiar strony        | Wyślij `PRAGMA page_size = <bytes>`                   |
-| Tylko do odczytu        | Użyj `Mode=ReadOnly`                                 |
-| Synchroniczny      | Wyślij `PRAGMA synchronous = <mode>`                  |
-| URI              | Użyj słowa kluczowego źródła danych                         |
-| UseUTF16Encoding | Wyślij `PRAGMA encoding = 'UTF-16'`                   |
+| Tryb dziennika     | Wyślij`PRAGMA journal_mode = <mode>`                 |
+| Starszy format    | Wyślij`PRAGMA legacy_file_format = 1`                |
+| Maksymalna liczba stron   | Wyślij`PRAGMA max_page_count = <pages>`              |
+| Rozmiar strony        | Wyślij`PRAGMA page_size = <bytes>`                   |
+| Tylko do odczytu        | Użycie rozszerzenia `Mode=ReadOnly`                                 |
+| Synchroniczny      | Wyślij`PRAGMA synchronous = <mode>`                  |
+| Adresu              | Użyj słowa kluczowego źródła danych                         |
+| UseUTF16Encoding | Wyślij`PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>Autoryzacja
 
@@ -73,10 +73,10 @@ Microsoft. Data. sqlite nie ma interfejsu API uwidaczniania powiadomień o zmian
 
 Microsoft. Data. sqlite nie ma żadnego interfejsu API do tworzenia modułów tabeli wirtualnej. Użyj [#13823](https://github.com/dotnet/efcore/issues/13823) problemu, aby przekazać opinię na temat tej funkcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Typy danych](types.md)
-* [Parametry połączenia](connection-strings.md)
+* [Parametry połączeń](connection-strings.md)
 * [Szyfrowanie](encryption.md)
 * [Ograniczenia ADO.NET](adonet-limitations.md)
 * [Ograniczenia Dapper](dapper-limitations.md)

@@ -18,11 +18,11 @@ ms.locfileid: "78155740"
   
 - XmlElement. Attributes  
   
-- XmlDocumentType.Entities  
+- XmlDocumentType. Entities  
   
-- XmlDocumentType.Notations  
+- XmlDocumentType. Notations  
   
- Na przykład właściwość **XmlDocumentType. Entities** Pobiera kolekcję węzłów **XmlEntity** zadeklarowanych w deklaracji typu dokumentu. Ta kolekcja jest zwracana jako **XmlNamedNodeMap**i można wykonać iterację kolekcji przy użyciu właściwości **Count** i wyświetlić informacje o jednostce. Aby zapoznać się z przykładem iteracji przez **XmlNamedNodeMap**, zobacz <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Na przykład właściwość **XmlDocumentType. Entities** Pobiera kolekcję węzłów **XmlEntity** zadeklarowanych w deklaracji typu dokumentu. Ta kolekcja jest zwracana jako **XmlNamedNodeMap**i można wykonać iterację kolekcji przy użyciu właściwości **Count** i wyświetlić informacje o jednostce. Przykład iteracji przez **XmlNamedNodeMap**można znaleźć w temacie <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
  **Atrybut XmlAttributeCollection** pochodzi od **XmlNamedNodeMap** i tylko atrybuty można modyfikować, a notacje i jednostki są tylko do odczytu. Korzystając z **XmlNamedNodeMap** dla atrybutów, można uzyskać węzły dla tych atrybutów na podstawie ich nazw XML. Zapewnia to łatwą metodę manipulowania kolekcją atrybutów w węźle elementu. Może to być możliwe bezpośrednio przy użyciu **XmlNodeList**, który implementuje interfejs **IEnumerable** , ale z metodą dostępu do indeksu, a nie ciągiem. Metody **RemoveNamedItem** i **SetNamedItem** są używane tylko w odniesieniu do elementu **XmlAttributeCollection**. Dodanie lub usunięcie z kolekcji atrybutów, niezależnie od tego, czy jest używana implementacja **atrybutu** lub **XmlNamedNodeMap** , modyfikuje kolekcję atrybutów w elemencie. Poniższy przykład kodu pokazuje, jak przenieść atrybut i utworzyć nowy atrybut.  
   
@@ -119,4 +119,4 @@ class test {
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

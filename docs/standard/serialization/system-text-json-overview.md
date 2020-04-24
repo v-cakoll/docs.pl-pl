@@ -1,5 +1,5 @@
 ---
-title: Serializacja i deserializacja JSON C# przy użyciu-.NET
+title: Serializowanie i deserializacja JSON przy użyciu języka C# — .NET
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -18,7 +18,7 @@ ms.locfileid: "78159549"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serializacja i deserializacja kodu JSON (kierowanie i cofanie) w programie .NET — Omówienie
 
-Przestrzeń nazw `System.Text.Json` zawiera funkcje serializowania do i deserializacji z JavaScript Object Notation (JSON).
+`System.Text.Json` Przestrzeń nazw zawiera funkcje serializacji do i deserializacji z JavaScript Object Notation (JSON).
 
 Projekt biblioteki wyróżnia wysoką wydajność i małą alokację pamięci w ramach rozbudowanego zestawu funkcji. Wbudowana obsługa UTF-8 optymalizuje proces odczytywania i pisania tekstu JSON zakodowanego w formacie UTF-8, który jest najbardziej rozpowszechnionym kodowaniem danych w sieci Web i plikach na dysku.
 
@@ -27,7 +27,7 @@ Biblioteka zawiera również klasy umożliwiające pracę z modelem DOM (Documen
 ## <a name="how-to-get-the-library"></a>Jak uzyskać bibliotekę
 
 * Biblioteka jest wbudowana w ramach platformy udostępnionej [.NET Core 3,0](https://aka.ms/netcore3download) .
-* W przypadku innych platform docelowych Zainstaluj pakiet NuGet [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) . Pakiet obsługuje:
+* W przypadku innych platform docelowych Zainstaluj pakiet [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet. Pakiet obsługuje:
   * .NET Standard 2,0 i nowsze wersje
   * .NET Framework 4.7.2 i nowsze wersje
   * .NET Core 2,0, 2,1 i 2,2
@@ -35,9 +35,9 @@ Biblioteka zawiera również klasy umożliwiające pracę z modelem DOM (Documen
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 * [Jak używać biblioteki](system-text-json-how-to.md)
-* [Jak przeprowadzić migrację z Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Jak przeprowadzić migrację zNewtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Jak pisać konwertery](system-text-json-converters-how-to.md)
-* [System.Text.Json kod źródłowy](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [Dokumentacja interfejsu API System.Text.Json](xref:System.Text.Json)
+* [System.Text.Jsonkod źródłowy](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.Text.JsonDokumentacja interfejsu API](xref:System.Text.Json)
 * [System.Text.Json. Dokumentacja interfejsu API serializacji](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

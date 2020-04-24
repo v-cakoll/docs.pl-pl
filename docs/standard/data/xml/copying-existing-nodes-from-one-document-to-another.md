@@ -21,7 +21,7 @@ Metoda **ImportNode** jest mechanizmem, za pomocą którego jest kopiowany węze
   
 |Typ węzła|parametr *głębokiego* ma wartość true|parametr *głębokiego* ma wartość false|  
 |---------------|------------------------------|-------------------------------|  
-|XmlAttribute|<xref:System.Xml.XmlAttribute.Specified%2A> jest ustawiona na **wartość true** dla elementu XmlAttribute. Elementy podrzędne źródłowego elementu **XmlAttribute** są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa.|Parametr *głębokiego* nie ma zastosowania do węzłów **XmlAttribute** , ponieważ zawsze są one umieszczane w węzłach podrzędnych podczas importowania.|  
+|XmlAttribute|Wartość <xref:System.Xml.XmlAttribute.Specified%2A> jest równa **true** dla elementu XmlAttribute. Elementy podrzędne źródłowego elementu **XmlAttribute** są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa.|Parametr *głębokiego* nie ma zastosowania do węzłów **XmlAttribute** , ponieważ zawsze są one umieszczane w węzłach podrzędnych podczas importowania.|  
 |XmlCDataSection|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
 |XmlComment|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
 |XmlDocumentFragment|Elementy podrzędne węzła źródłowego są zaimportowane cyklicznie, a utworzone węzły w celu utworzenia odpowiedniego poddrzewa.|Zostanie utworzony pusty **XmlDocumentFragment** .|  
@@ -31,13 +31,13 @@ Metoda **ImportNode** jest mechanizmem, za pomocą którego jest kopiowany węze
 |XmlProcessingInstruction|Kopiuje wartość docelową i dane z importowanego węzła.|Kopiuje wartość docelową i dane z importowanego węzła.|  
 |XmlText|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
 |XmlSignificantWhitespace|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
-|XmlWhitespace|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
+|Xmlbiałych|Kopiuje węzeł, w tym jego dane.|Kopiuje węzeł, w tym jego dane.|  
 |XmlDeclaration|Kopiuje wartość docelową i dane z importowanego węzła.|Kopiuje wartość docelową i dane z importowanego węzła.|  
 |Wszystkie inne typy węzłów|Nie można zaimportować tych typów węzłów.|Nie można zaimportować tych typów węzłów.|  
   
 > [!NOTE]
 > Chociaż węzły DocumentType można zaimportować, dokument może mieć tylko jeden DocumentType. Dlatego po zaimportowaniu typu dokumentu przed wstawieniem go do drzewa musisz upewnić się, że dokument nie zawiera żadnego typu dokumentu. Aby uzyskać informacje na temat usuwania węzłów, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -27,7 +27,7 @@ public class MyObject
 }  
 ```
 
-Jeśli to możliwe należy obiekt zawierający dane dotyczące zabezpieczeń nonserializable. Jeśli obiekt musi być serializowany, zastosuj atrybut `NonSerialized` do określonych pól, w których są przechowywane poufne dane. Jeśli nie wykluczasz tych pól z serializacji, pamiętaj, że dane, które są przechowywane, są uwidocznione w dowolnym kodzie, który ma uprawnienia do serializacji. Aby uzyskać więcej informacji na temat pisania kodu serializacji bezpiecznego, zobacz [zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md).
+Jeśli to możliwe należy obiekt zawierający dane dotyczące zabezpieczeń nonserializable. Jeśli obiekt musi być serializowany, Zastosuj `NonSerialized` atrybut do określonych pól, w których są przechowywane poufne dane. Jeśli nie wykluczasz tych pól z serializacji, pamiętaj, że dane, które są przechowywane, są uwidocznione w dowolnym kodzie, który ma uprawnienia do serializacji. Aby uzyskać więcej informacji na temat pisania kodu serializacji bezpiecznego, zobacz [zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md).
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
@@ -35,4 +35,4 @@ Jeśli to możliwe należy obiekt zawierający dane dotyczące zabezpieczeń non
 
 - [Serializacja binarna](binary-serialization.md)
 - [Serializacja XML i SOAP](xml-and-soap-serialization.md)
-- [Zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md)
+- [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)

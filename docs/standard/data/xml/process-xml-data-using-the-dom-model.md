@@ -11,13 +11,13 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710456"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Przetwarzanie danych XML przy użyciu modelu DOM
-Document Object Model XML (DOM) traktuje dane XML jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci. Przestrzeń nazw `System.Xml` zapewnia programistyczną reprezentację dokumentów XML, fragmentów, węzłów lub zestawów węzłów. Jest on oparty na organizacja World Wide Web Consortium (W3C) modelu DOM 1 rdzeń i na poziomie modelu DOM 2 rdzeni.  
+Document Object Model XML (DOM) traktuje dane XML jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci. `System.Xml` Przestrzeń nazw zapewnia programistyczną reprezentację dokumentów XML, fragmentów, węzłów lub zestawów węzłów. Jest on oparty na organizacja World Wide Web Consortium (W3C) modelu DOM 1 rdzeń i na poziomie modelu DOM 2 rdzeni.  
   
- Klasa <xref:System.Xml.XmlDocument> reprezentuje dokument XML. Obejmuje ona członków do pobierania i tworzenia wszystkich innych obiektów XML. Korzystając z <xref:System.Xml.XmlDocument>i związanych z nimi klas, można tworzyć dokumenty XML, ładować i uzyskiwać dostęp do danych, modyfikować dane i zapisywać zmiany.  
+ <xref:System.Xml.XmlDocument> Klasa reprezentuje dokument XML. Obejmuje ona członków do pobierania i tworzenia wszystkich innych obiektów XML. Korzystając z <xref:System.Xml.XmlDocument>i powiązanych z nimi klas, można tworzyć dokumenty XML, ładować i uzyskiwać dostęp do danych, modyfikować dane i zapisywać zmiany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
 - [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
@@ -57,4 +57,4 @@ Document Object Model XML (DOM) traktuje dane XML jako standardowy zestaw obiekt
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- Omawia przetwarzanie XML przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.
+ Omawia przetwarzanie XML przy użyciu <xref:System.Xml.XPath.XPathNavigator> klasy.

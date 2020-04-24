@@ -17,7 +17,7 @@ ms.lasthandoff: 03/04/2020
 ms.locfileid: "78266732"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Powoduje, że kompilator do raportowania błędów, jeśli zmienne nie są zadeklarowane przed ich użyciem.  
+Powoduje, że kompilator zgłasza błędy, jeśli zmienne nie są deklarowane przed ich użyciem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,27 +27,27 @@ Powoduje, że kompilator do raportowania błędów, jeśli zmienne nie są zadek
   
 ## <a name="arguments"></a>Argumenty  
  `+`&#124;`-`  
- Element opcjonalny. Określ, aby wymagać `-optionexplicit+` jawnej deklaracji zmiennych. Opcja `-optionexplicit+` jest domyślna i jest `-optionexplicit`taka sama jak . Opcja `-optionexplicit-` umożliwia niejawną deklarację zmiennych.  
+ Element opcjonalny. Określ `-optionexplicit+` , aby wymagać jawnej deklaracji zmiennych. `-optionexplicit+` Opcja jest wartością domyślną i jest taka sama jak `-optionexplicit`. `-optionexplicit-` Opcja włącza niejawną deklarację zmiennych.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli plik kodu źródłowego zawiera [instrukcję Option](../../../visual-basic/language-reference/statements/option-explicit-statement.md)Explicit `-optionexplicit` , instrukcja zastępuje ustawienie kompilatora wiersza polecenia.  
+ Jeśli plik kodu źródłowego zawiera [instrukcję Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), instrukcja zastępuje ustawienie kompilatora wiersza `-optionexplicit` polecenia.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Aby ustawić -optionexplicit w programie Visual Studio IDE  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Aby ustawić-optionexplicit w środowisku IDE programu Visual Studio  
   
-1. Wybierz projekt w **Eksploratorze rozwiązań**. W menu **Projekt** kliknij polecenie **Właściwości**.
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.
   
-2. Kliknij kartę **Kompilowanie.**  
+2. Kliknij kartę **kompilacja** .  
   
-3. Zmodyfikuj wartość w polu **Opcja Jawna.**  
+3. Zmodyfikuj wartość w polu **opcja Explicit** .  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje, gdy `-optionexplicit-` jest używany.  
+ Poniższy kod kompiluje, kiedy `-optionexplicit-` jest używany.  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Visual Basic Kompilator wiersza polecenia](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)

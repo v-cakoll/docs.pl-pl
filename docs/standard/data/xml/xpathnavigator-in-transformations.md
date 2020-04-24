@@ -14,15 +14,15 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709754"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Klasa XPathNavigator w przekształceniach
-Klasa <xref:System.Xml.XPath.XPathNavigator> zapewnia losowy dostęp tylko do odczytu do danych i jest przeznaczona do użycia jako dane wejściowe Extensible Stylesheet Language for Transformations (XSLT). Jest ona zaimplementowana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> jest oparty na modelu danych organizacja World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 zalecenia języka ścieżki XML (XPath).  
+<xref:System.Xml.XPath.XPathNavigator> Klasa zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczona do użycia jako dane wejściowe do Extensible Stylesheet Language for Transformations (XSLT). Jest ona zaimplementowana <xref:System.Xml.XPath.XPathDocument>w <xref:System.Xml.XmlDataDocument>,, <xref:System.Xml.XmlDocument>i. <xref:System.Xml.XPath.XPathNavigator> Jest oparty na modelu danych organizacja World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 zalecenia XML Path Language (XPath).  
   
- <xref:System.Xml.XPath.XPathNavigator> definiuje model kursorów na dowolnym sklepie i zapewnia szybkie, tylko do odczytu zapytania XPath dla każdego magazynu danych. <xref:System.Xml.XPath.XPathNavigator> jest również klasą używaną do iteracji względem fragmentów drzewa wyników.  
+ <xref:System.Xml.XPath.XPathNavigator> Definiuje model kursora na dowolnym sklepie i zapewnia szybkie, tylko do odczytu zapytania XPath w dowolnym magazynie danych. <xref:System.Xml.XPath.XPathNavigator> Jest również klasą używaną do iteracji względem fragmentów drzewa wyników.  
   
- Interfejs API umożliwia uzyskanie informacji z bieżącego węzła w sklepie i przejście do podłączonych węzłów. <xref:System.Xml.XPath.XPathNavigator> to model stylu kursora, który przeprowadza przechodzenie przez magazyn przy użyciu zestawu metod **przenoszenia** . <xref:System.Xml.XPath.XPathNavigator> jest zawsze umieszczana w węźle. Jakakolwiek metoda **przenoszenia** , która kończy się niepowodzeniem, pozostawia <xref:System.Xml.XPath.XPathNavigator> bez zmian.  
+ Interfejs API umożliwia uzyskanie informacji z bieżącego węzła w sklepie i przejście do podłączonych węzłów. <xref:System.Xml.XPath.XPathNavigator> Jest modelem stylu kursora, który przeprowadza przechodzenie przez magazyn przy użyciu zestawu metod **przenoszenia** . Element <xref:System.Xml.XPath.XPathNavigator> jest zawsze umieszczony na węźle. Wszelkie metody **przenoszenia** , które nie powiodło się, opuszczają <xref:System.Xml.XPath.XPathNavigator> niezmienione.  
   
- <xref:System.Xml.XPath.XPathNavigator> jest klasą, która ma być używana do iterowania fragmentów drzewa wyników. Poniższy przykład kodu tworzy fragment drzewa wyników w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.  
+ <xref:System.Xml.XPath.XPathNavigator> Jest klasą, która ma być używana do iterowania fragmentów drzewa wyników. Poniższy przykład kodu tworzy fragment drzewa wyników w arkuszu stylów, wywołując funkcję z parametrem, `fragment`, który zawiera kod XML.  
   
-## <a name="testxsl"></a>test.xsl  
+## <a name="testxsl"></a>Test. xsl  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -114,6 +114,6 @@ public class sample
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

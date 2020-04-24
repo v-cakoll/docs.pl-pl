@@ -18,7 +18,7 @@ ms.locfileid: "78159874"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Jak kwalifikować elementy XML i nazwy atrybutów XML
 
-Przestrzenie nazw XML zawarte w wystąpieniach klasy <xref:System.Xml.Serialization.XmlSerializerNamespaces> muszą być zgodne ze specyfikacją organizacja World Wide Web Consortium (W3C) o nazwie [przestrzenie nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/).
+Przestrzenie nazw XML zawarte w wystąpieniach <xref:System.Xml.Serialization.XmlSerializerNamespaces> klasy muszą być zgodne ze specyfikacją organizacja World Wide Web Consortium (W3C) o nazwie [przestrzenie nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/).
 
 Obszary nazw XML umożliwiają uprawniających nazwy elementów XML i atrybutów XML w dokumentach XML. Kwalifikowana nazwa składa się z prefiksu i lokalna nazwa, rozdzielone średnikiem. Prefiks działa tylko jako symbol zastępczy; jest on mapowany na identyfikator URI, który określa przestrzeń nazw. Kombinacja powszechnie zarządzanych nazw identyfikatora URI i lokalna nazwa tworzy nazwę, która może być unikatowym.
 
@@ -30,7 +30,7 @@ Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw,
 
 2. Dodaj wszystkie prefiksy i pary nazw do `XmlSerializerNamespaces`.
 
-3. Zastosuj odpowiedni atrybut `System.Xml.Serialization` do każdego elementu członkowskiego lub klasy, które <xref:System.Xml.Serialization.XmlSerializer> ma do serializacji w dokumencie XML.
+3. Zastosuj odpowiedni `System.Xml.Serialization` atrybut do każdego elementu członkowskiego lub klasy, <xref:System.Xml.Serialization.XmlSerializer> które ma zostać zserializowane w dokumencie XML.
 
     Dostępne są następujące atrybuty: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, i <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
@@ -168,7 +168,7 @@ public class Price
 - [Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 - [Klasa XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
-- [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)
+- [Atrybuty kontrolujące serializacji XML](attributes-that-control-xml-serialization.md)
 - [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
 - [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

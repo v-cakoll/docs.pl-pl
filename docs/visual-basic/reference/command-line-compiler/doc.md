@@ -32,11 +32,11 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Określenie + lub po prostu `-doc`powoduje, że kompilator generuje informacje dokumentacji i umieszcza je w pliku XML. Określenie `-` jest odpowiednikiem nieokreślenia `-doc`, co nie powoduje utworzenia informacji o dokumentacji.|  
-|`file`|Wymagane, jeśli użyto `-doc:`. Określa wyjściowy plik XML, który jest wypełniany komentarzami z plików kodu źródłowego kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
+|`+`&#124;`-`|Element opcjonalny. Określenie +, lub po `-doc`prostu powoduje, że kompilator generuje informacje dokumentacji i umieszcza je w pliku XML. Określenie `-` jest odpowiednikiem nieokreślenia `-doc`, co nie powoduje utworzenia informacji o dokumentacji.|  
+|`file`|Wymagane, `-doc:` jeśli jest używany. Określa wyjściowy plik XML, który jest wypełniany komentarzami z plików kodu źródłowego kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-doc` określa, czy kompilator generuje plik XML zawierający komentarze dokumentacji. Jeśli używasz składni `-doc:file`, parametr `file` określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, kompilator Pobiera nazwę pliku XML z pliku wykonywalnego lub biblioteki, którą tworzy kompilator. Jeśli używasz `-doc-` lub nie określisz opcji `-doc`, kompilator nie utworzy pliku XML.  
+ `-doc` Opcja określa, czy kompilator GENERUJE plik XML zawierający komentarze dokumentacji. Jeśli używasz `-doc:file` składni, `file` parametr określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, KOMPILATOR Pobiera nazwę pliku XML z pliku wykonywalnego lub biblioteki, którą tworzy kompilator. Jeśli używasz `-doc-` lub nie określisz `-doc` opcji, KOMPILATOR nie tworzy pliku XML.  
   
  W plikach kodu źródłowego Komentarze do dokumentacji mogą poprzedzać następujące definicje:  
   
@@ -46,7 +46,7 @@ lub
   
  Aby użyć wygenerowanego pliku XML z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) programu Visual Studio, Zezwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany. Upewnij się, że plik XML znajduje się w tym samym katalogu, co zestaw, aby w przypadku odwołania do zestawu w projekcie programu Visual Studio również znaleźć plik. XML. Pliki dokumentacji XML nie są wymagane, aby funkcja IntelliSense mogła korzystać z kodu w projekcie lub w obrębie projektów, do których odwołuje się projekt.  
   
- Chyba że kompilujesz za pomocą `-target:module`, plik XML zawiera Tagi `<assembly></assembly>`. Te znaczniki określają nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
+ Chyba że kompilujesz `-target:module`program, plik XML zawiera Tagi `<assembly></assembly>`. Te znaczniki określają nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
  Zobacz [Tagi komentarzy XML](../../../visual-basic/language-reference/xmldoc/index.md) , aby poznać sposoby generowania dokumentacji z komentarzy w kodzie.  
   
@@ -57,7 +57,7 @@ lub
 ## <a name="example"></a>Przykład  
  Zobacz [dokumentowanie kodu za pomocą XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) dla przykładu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Dokumentowanie kodu za pomocą XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

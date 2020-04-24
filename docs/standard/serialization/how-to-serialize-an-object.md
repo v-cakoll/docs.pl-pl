@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: serializacja obiektu'
+title: 'Instrukcje: Serializacja obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,8 +15,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159887"
 ---
-# <a name="how-to-serialize-an-object"></a>Instrukcje: serializacja obiektu
-Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci trwałej, Utwórz obiekt <xref:System.IO.FileStream>.  
+# <a name="how-to-serialize-an-object"></a>Instrukcje: Serializacja obiektu
+Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci trwałej, Utwórz <xref:System.IO.FileStream> obiekt.  
   
 > [!NOTE]
 > Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).  

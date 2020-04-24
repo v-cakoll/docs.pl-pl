@@ -13,14 +13,14 @@ ms.locfileid: "78156325"
 # <a name="xpath-namespace-navigation"></a>Nawigacja po przestrzeni nazw XPath
 Aby używać zapytań XPath z dokumentami XML, należy poprawnie adresować przestrzenie nazw XML i elementy zawarte w przestrzeni nazw. Przestrzenie nazw uniemożliwiają niejasności, które mogą wystąpić, gdy nazwy są używane w więcej niż jednym kontekście; na przykład nazwa `ID` może odnosić się do więcej niż jednego identyfikatora skojarzonego z różnymi elementami dokumentu XML. Składnia przestrzeni nazw Określa identyfikatory URI, nazwy i prefiksy odróżniające elementy dokumentu XML.  
   
- W przykładzie w tym temacie przedstawiono sposób użycia prefiksów podczas nawigowania po dokumencie XML przy użyciu <xref:System.Xml.XPath.XPathNavigator>. Aby uzyskać więcej informacji na temat przestrzeni nazw i składni, zobacz [pliki XML: Opis przestrzeni nazw XML](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
+ W przykładzie w tym temacie przedstawiono sposób użycia prefiksów w nawigowaniu po dokumencie XML za pomocą <xref:System.Xml.XPath.XPathNavigator>. Aby uzyskać więcej informacji na temat przestrzeni nazw i składni, zobacz [pliki XML: Opis przestrzeni nazw XML](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Deklaracje przestrzeni nazw  
- Deklaracje przestrzeni nazw sprawiają, że elementy dokumentu XML są odróżniane i adresowane przy użyciu wystąpienia <xref:System.Xml.XPath.XPathNavigator>. Prefiksy przestrzeni nazw zawierają krótką składnię do adresowania przestrzeni nazw.  
+ Deklaracje przestrzeni nazw sprawiają, że elementy dokumentu XML są odróżniane i adresowane podczas korzystania z <xref:System.Xml.XPath.XPathNavigator>wystąpienia. Prefiksy przestrzeni nazw zawierają krótką składnię do adresowania przestrzeni nazw.  
   
- Prefiksy są definiowane przez formularz: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` w tej składni prefiks "`e`" jest skrótem dla formalnego identyfikatora URI przestrzeni nazw. Element `Body` można zidentyfikować jako element członkowski `Envelope` przestrzeni nazw za pomocą składni: `e:Body`.  
+ Prefiksy są definiowane przez formularz: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` w tej składni prefiks "`e`" jest skrótem dla formalnego identyfikatora URI przestrzeni nazw. `Body` Element może być identyfikowany jako element członkowski `Envelope` przestrzeni nazw za pomocą składni: `e:Body`.  
   
- Następujący dokument XML zostanie przywoływany jako `response.xml` w przykładzie nawigacji w następnej sekcji.  
+ Następujący dokument XML zostanie przywoływany jak `response.xml` w przykładzie nawigacji w następnej sekcji.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -36,7 +36,7 @@ Aby używać zapytań XPath z dokumentami XML, należy poprawnie adresować prze
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>Nawigacja według prefiksu przestrzeni nazw  
- Kod w tej sekcji używa obiektów <xref:System.Xml.XPath.XPathNavigator> i <xref:System.Xml.XmlNamespaceManager> do wybierania elementu `Search` z dokumentu XML w poprzedniej sekcji. Zapytanie `xpath` zawiera prefiksy przestrzeni nazw dla każdego elementu w ścieżce. Określenie dokładnej tożsamości przestrzeni nazw, które zawierają każdy element, zapewnia poprawną nawigację do elementu `Search` przez metodę <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
+ Kod w tej sekcji używa <xref:System.Xml.XPath.XPathNavigator> obiektów i <xref:System.Xml.XmlNamespaceManager> do wybierania `Search` elementu z dokumentu XML w poprzedniej sekcji. Zapytanie `xpath` zawiera prefiksy przestrzeni nazw dla każdego elementu w ścieżce. Określenie dokładnej tożsamości przestrzeni nazw, które zawierają każdy element, zapewnia poprawną nawigację do `Search` elementu przez <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> metodę.  
   
 ```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
@@ -60,7 +60,7 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
 }  
 ```  
   
- Precyzja w pełni kwalifikujących się przestrzeni nazw i nazw jest większa niż wygoda. Niewielki eksperyment z definicją dokumentu i kodem w poprzednich przykładach sprawdzi, czy nawigacja bez w pełni kwalifikowanych nazw elementów zgłasza wyjątki. Na przykład definicja elementu: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`i zapytanie: ciąg `xpath = "/s:Envelope/s:Body/Search";` bez prefiksu przestrzeni nazw w elemencie `Search` zwraca `null` zamiast elementu `Search`.  
+ Precyzja w pełni kwalifikujących się przestrzeni nazw i nazw jest większa niż wygoda. Niewielki eksperyment z definicją dokumentu i kodem w poprzednich przykładach sprawdzi, czy nawigacja bez w pełni kwalifikowanych nazw elementów zgłasza wyjątki. Na przykład definicja elementu `<Search xmlns="http://schemas.microsoft.com/v1/Search">`:, i zapytanie: ciąg `xpath = "/s:Envelope/s:Body/Search";` bez prefiksu przestrzeni nazw w `Search` elemencie zwraca `null` zamiast `Search` elementu.  
   
 ## <a name="see-also"></a>Zobacz też
 

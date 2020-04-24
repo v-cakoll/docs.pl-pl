@@ -50,21 +50,21 @@ lub
   
  Aby kompilator rozpoznawał typ w zestawie (nie w module), musi być zmuszony do rozpoznania typu. Przykładem tego, jak można to zrobić, jest zdefiniowanie wystąpienia typu. Inne sposoby rozpoznawania nazw typów w zestawie dla kompilatora. Na przykład, jeśli dziedziczysz z typu w zestawie, nazwa typu jest nazywana kompilatorem.  
   
- Plik odpowiedzi VBC. rsp, który odwołuje się do najczęściej używanych zestawów .NET Framework, jest używany domyślnie. Użyj `-noconfig`, jeśli nie chcesz, aby kompilator używał VBC. rsp.  
+ Plik odpowiedzi VBC. rsp, który odwołuje się do najczęściej używanych zestawów .NET Framework, jest używany domyślnie. Użyj `-noconfig` , jeśli nie chcesz, aby kompilator używał VBC. rsp.  
   
- Krótka forma `-reference` jest `-r`.  
+ Krótka forma `-reference` to `-r`.  
   
 ## <a name="example"></a>Przykład  
- Poniższe polecenie kompiluje plik źródłowy `Input.vb` i zestawy referencyjne z `Metad1.dll` i `Metad2.dll`, aby utworzyć `Out.exe`.  
+ `Input.vb` Poniższe polecenie kompiluje plik źródłowy i zestawy odwołań z `Metad1.dll` i `Metad2.dll` do produkcji. `Out.exe`  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Społeczeństwo](../../../visual-basic/language-reference/modifiers/public.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

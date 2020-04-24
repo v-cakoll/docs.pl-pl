@@ -15,9 +15,9 @@ Gdy dokument XML jest odczytywany do pamięci jako drzewo węzłów, podczas two
   
 |Typ węzła DOM|Obiekt|Opis|  
 |-------------------|------------|-----------------|  
-|dokument|<xref:System.Xml.XmlDocument>|Kontener wszystkich węzłów w drzewie. Jest on również znany jako katalog główny dokumentu, który nie zawsze jest taki sam jak element główny.|  
+|Dokument|<xref:System.Xml.XmlDocument>|Kontener wszystkich węzłów w drzewie. Jest on również znany jako katalog główny dokumentu, który nie zawsze jest taki sam jak element główny.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Tymczasowy zbiór zawierający co najmniej jeden węzeł bez struktury drzewa.|  
-|DocumentType|<xref:System.Xml.XmlDocumentType>|Reprezentuje węzeł `<!DOCTYPE…>`.|  
+|DocumentType|<xref:System.Xml.XmlDocumentType>|Reprezentuje `<!DOCTYPE…>` węzeł.|  
 |Odwołanie do jednostki|<xref:System.Xml.XmlEntityReference>|Reprezentuje tekst odwołania do nierozwiniętej jednostki.|  
 |Element|<xref:System.Xml.XmlElement>|Reprezentuje węzeł elementu.|  
 |Atrybut|<xref:System.Xml.XmlAttribute>|Jest atrybutem elementu.|  
@@ -25,7 +25,7 @@ Gdy dokument XML jest odczytywany do pamięci jako drzewo węzłów, podczas two
 |Komentarz|<xref:System.Xml.XmlComment>|Węzeł komentarza.|  
 |Tekst|<xref:System.Xml.XmlText>|Tekst należący do elementu lub atrybutu.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|Reprezentuje CDATA.|  
-|Jednostka|<xref:System.Xml.XmlEntity>|Reprezentuje deklaracje `<!ENTITY…>` w dokumencie XML, z podzestawu wewnętrznej definicji typu dokumentu (DTD) lub z zewnętrznych elementów DTD i jednostek parametrów.|  
+|Jednostka|<xref:System.Xml.XmlEntity>|Reprezentuje `<!ENTITY…>` deklaracje w dokumencie XML, z podzestawu wewnętrznej definicji typu dokumentu (DTD) lub z zewnętrznych elementów DTD i jednostek parametrów.|  
 |Notacja|<xref:System.Xml.XmlNotation>|Reprezentuje notację zadeklarowaną w DTD.|  
   
  Chociaż atrybut (*ATTR*) znajduje się w sekcji W3C dom Level 1 sekcja 1,2 interfejsy podstawowe jako węzeł, nie jest traktowany jako element podrzędny żadnego węzła elementu.  
@@ -34,16 +34,16 @@ Gdy dokument XML jest odczytywany do pamięci jako drzewo węzłów, podczas two
   
 |Typ węzła|Opis|  
 |---------------|-----------------|  
-|<xref:System.Xml.XmlDeclaration>|Reprezentuje węzeł deklaracji `<?xml version="1.0"…>`.|  
+|<xref:System.Xml.XmlDeclaration>|Reprezentuje węzeł `<?xml version="1.0"…>`deklaracji.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Reprezentuje znaczący biały znak, który jest białym znakiem w zawartości mieszanej.|  
 |<xref:System.Xml.XmlWhitespace>|Reprezentuje biały znak w zawartości elementu.|  
-|EndElement|Zwracany, gdy element **XmlReader** otrzymuje koniec elementu.<br /><br /> Przykład XML: **\</item >**<br /><br /> Aby uzyskać więcej informacji, zobacz temat <xref:System.Xml.XmlNodeType>.|  
-|EndEntity|Zwracany, gdy element **XmlReader** jest pobierany na koniec zamiany jednostki w wyniku wywołania <xref:System.Xml.XmlReader.ResolveEntity%2A>. Aby uzyskać więcej informacji, zobacz temat <xref:System.Xml.XmlNodeType>.|  
+|EndElement|Zwracany, gdy element **XmlReader** otrzymuje koniec elementu.<br /><br /> Przykład XML: ** \</Item>**<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeType>.|  
+|EndEntity|Zwracany, gdy element **XmlReader** jest pobierany na koniec zamiany jednostki w wyniku wywołania metody <xref:System.Xml.XmlReader.ResolveEntity%2A>. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeType>.|  
   
  Aby wyświetlić przykład kodu, który odczytuje w języku XML i używa konstrukcji case w typach węzłów do drukowania informacji o węźle i jego zawartości, zobacz <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
   
  Aby uzyskać więcej informacji na temat hierarchii obiektów typów węzłów i ich równoważnej nazwy obiektu, zobacz [Hierarchia XML Document Object Model (dom)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Aby uzyskać więcej informacji na temat obiektów utworzonych w drzewie węzłów, zobacz [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

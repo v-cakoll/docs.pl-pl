@@ -13,9 +13,9 @@ ms.locfileid: "78156364"
 # <a name="result-tree-fragment-in-transformations"></a>Wynikowy fragment drzewa w przekształceniach
 
 > [!NOTE]
-> Klasa <xref:System.Xml.Xsl.XslTransform> jest przestarzała w .NET Framework 2,0. Można wykonywać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu klasy <xref:System.Xml.Xsl.XslCompiledTransform>. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) .
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) .
 
- Fragmenty drzewa wyników, znane także jako fragmenty drzewa wyników, nie są dłuższe niż specjalny typ zestawu węzłów. Można wykonać dowolną z nich funkcję, którą można wykonać w zestawie węzłów. Można również skonwertować fragment drzewa wynikowy do zestawu węzłów przy użyciu funkcji `node-set()`, a następnie użyć jej w dowolnym miejscu, w którym można użyć zestawu węzłów.
+ Fragmenty drzewa wyników, znane także jako fragmenty drzewa wyników, nie są dłuższe niż specjalny typ zestawu węzłów. Można wykonać dowolną z nich funkcję, którą można wykonać w zestawie węzłów. Można również skonwertować fragment drzewa wynikowy do zestawu węzłów przy użyciu `node-set()` funkcji, a następnie użyć jej w dowolnym miejscu, w którym można użyć zestawu węzłów.
 
  Fragment drzewa wynik jest tworzony w wyniku użycia elementu `<xsl:variable>` lub `<xsl:param>` w określony sposób w arkuszu stylów. Składnia dla `variable` i `parameter` elementów jest następująca:
 
@@ -29,17 +29,17 @@ ms.locfileid: "78156364"
 </xsl:variable>
 ```
 
-Dla elementu `parameter` wartość jest przypisywana do kwalifikowanej nazwy (`Qname`) na kilka sposobów. Do parametru można przypisać wartość domyślną, zwracając zawartość z wyrażenia XML Path Language (XPath) w atrybucie `select` lub przypisując jej zawartość treści szablonu.
+Dla `parameter` elementu wartość jest przypisywana do kwalifikowanej nazwy (`Qname`) na kilka sposobów. Do parametru można przypisać wartość domyślną, zwracając zawartość z wyrażenia XML Path Language (XPath) w `select` atrybucie lub przypisując jej zawartość treści szablonu.
 
-Dla elementu `variable` wartość jest również przypisywana na kilka sposobów. Można ją przypisać, zwracając zawartość z wyrażenia XPath w atrybucie `select` lub przypisując jej zawartość treści szablonu.
+Dla `variable` elementu, wartość jest również przypisywana na kilka sposobów. Można ją przypisać, zwracając zawartość z wyrażenia XPath w `select` atrybucie lub przypisując jej zawartość treści szablonu.
 
-W przypadku `parameter` i `variable` elementów, jeśli wartość jest przypisana przez wyrażenie XPath, zostanie zwrócony jeden z czterech podstawowych typów XPath: wartość logiczna, ciąg, liczba lub zestaw węzłów. Gdy wartość jest podawana przy użyciu niepustej treści szablonu, zwracany jest typ danych inny niż XPath, który będzie fragmentem drzewa wyników.
+Dla elementów `parameter` i `variable` , jeśli wartość jest przypisana przez wyrażenie XPath, zostanie zwrócony jeden z czterech podstawowych typów XPath: wartość logiczna, ciąg, liczba lub zestaw węzłów. Gdy wartość jest podawana przy użyciu niepustej treści szablonu, zwracany jest typ danych inny niż XPath, który będzie fragmentem drzewa wyników.
 
 Gdy zmienna jest powiązana z fragmentem drzewa wyników zamiast jednego z czterech podstawowych typów danych XPath, jest to jedyna godzina, o której zapytanie XPath zwraca typ, który nie jest jednym z czterech typów obiektów XPath. Fragmenty drzewa wyników i ich zachowanie zostały omówione w [specyfikacji organizacja World Wide Web Consortium (W3C)](https://www.w3.org/TR/xslt-10/), [sekcja 11,1 fragmenty drzewa wyników](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) w [sekcji 11,6 Przekazywanie parametrów do szablonów](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Ponadto w [sekcji 1](https://www.w3.org/TR/xslt-10/#section-Introduction) opisano sposób, w jaki szablony mogą zawierać elementy z przestrzeni nazw XSLT, które zwracają lub tworzą fragmenty drzewa wyników.
 
-Fragment drzewa wyników, w koncepcji, zachowuje się jak zestaw węzłów bez więcej niż jeden węzeł główny. Pozostałe zwrócone węzły są jednak węzłami podrzędnymi. Aby programowo wyświetlić węzły podrzędne, skopiuj fragment drzewa wynik do drzewa wynik przy użyciu elementu `<xsl:copy-of>`. Gdy wykonywana jest kopia, wszystkie węzły podrzędne są również kopiowane do drzewa wynik w sekwencji. Dopóki nie zostanie użyta `copy` lub `copy-of`, fragment drzewa wyników nie jest częścią drzewa wyników ani danych wyjściowych transformacji.
+Fragment drzewa wyników, w koncepcji, zachowuje się jak zestaw węzłów bez więcej niż jeden węzeł główny. Pozostałe zwrócone węzły są jednak węzłami podrzędnymi. Aby programowo wyświetlić węzły podrzędne, skopiuj fragment drzewa wynik do drzewa wynik przy użyciu `<xsl:copy-of>` elementu. Gdy wykonywana jest kopia, wszystkie węzły podrzędne są również kopiowane do drzewa wynik w sekwencji. Do `copy` momentu `copy-of` użycia lub, fragment drzewa wynik nie jest częścią drzewa wyników ani danych wyjściowych transformacji.
 
-Aby wykonać iterację w zwróconych węzłach fragmentu drzewa wyników, zostanie użyta <xref:System.Xml.XPath.XPathNavigator>. Poniższy przykład kodu pokazuje, jak utworzyć fragment drzewa wyników w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.
+Do iteracji w zwróconych węzłach fragmentu drzewa wynik <xref:System.Xml.XPath.XPathNavigator> jest używany. Poniższy przykład kodu pokazuje, jak utworzyć fragment drzewa wyników w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -67,7 +67,7 @@ Aby wykonać iterację w zwróconych węzłach fragmentu drzewa wyników, zostan
 </xsl:stylesheet>
 ```
 
-Oto kolejny przykład pokazujący zmienną, która jest w formacie tekstu sformatowanego (RTF), a tym samym typ fragmentu drzewa wyników, który nie jest konwertowany na zestaw węzłów. Zamiast tego jest przenoszona do funkcji skryptu, a <xref:System.Xml.XPath.XPathNavigator> jest używany do nawigowania po węzłach.
+Oto kolejny przykład pokazujący zmienną, która jest w formacie tekstu sformatowanego (RTF), a tym samym typ fragmentu drzewa wyników, który nie jest konwertowany na zestaw węzłów. Zamiast tego jest przenoszona do funkcji skryptu i <xref:System.Xml.XPath.XPathNavigator> służy do nawigowania po węzłach.
 
 ```xml
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -117,15 +117,15 @@ Wynik przekształcenia dowolnego kodu XML z tym arkuszem stylów jest przedstawi
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-Jak wspomniano powyżej, funkcja `node-set` umożliwia konwertowanie fragmentu drzewa wynikowego na zestaw węzłów. Węzeł z wynikiem zawsze zawiera pojedynczy węzeł, który jest węzłem głównym drzewa. W przypadku konwertowania fragmentu drzewa wyników do zestawu węzłów, można go użyć wszędzie tam, gdzie jest używany zwykły zestaw węzłów, na przykład w instrukcji for-each lub w wartości atrybutu `select`. Następujące wiersze kodu pokazują fragment konwertowany na zestaw węzłów i używany jako zestaw węzłów:
+Jak wspomniano powyżej, `node-set` funkcja umożliwia konwertowanie fragmentu drzewa wynikowego na zestaw węzłów. Węzeł z wynikiem zawsze zawiera pojedynczy węzeł, który jest węzłem głównym drzewa. W przypadku konwertowania fragmentu drzewa wynikowego na zestaw węzłów, można go użyć wszędzie tam, gdzie jest używany zwykły zestaw węzłów, na przykład w instrukcji for-each lub w wartości `select` atrybutu. Następujące wiersze kodu pokazują fragment konwertowany na zestaw węzłów i używany jako zestaw węzłów:
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 
 `<xsl:value-of select="user:func(msxsl:node-set($node-fragment))"/>`
 
-Gdy fragment jest konwertowany na zestaw węzłów, nie jest już używany <xref:System.Xml.XPath.XPathNavigator> do nawigowania po nim. W przypadku zestawu węzłów zamiast tego użyj <xref:System.Xml.XPath.XPathNodeIterator>.
+Gdy fragment jest konwertowany na zestaw węzłów, nie jest już używany <xref:System.Xml.XPath.XPathNavigator> do nawigowania nad nim. W przypadku zestawu węzłów <xref:System.Xml.XPath.XPathNodeIterator> zamiast tego należy użyć elementu.
 
-W poniższym przykładzie `$var` jest zmienną, która jest drzewem węzła w arkuszu stylów. Instrukcja for-each, w połączeniu z funkcją `node-set`, umożliwia użytkownikowi iterację w tym drzewie jako zestaw węzłów.
+W poniższym przykładzie `$var` jest to zmienna, która jest drzewem węzła w arkuszu stylów. Instrukcja for-each, w połączeniu z `node-set` funkcją, umożliwia użytkownikowi iterację w tym drzewie jako zestaw węzłów.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

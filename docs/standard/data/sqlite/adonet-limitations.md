@@ -15,9 +15,9 @@ Microsoft. Data. sqlite udostępnia implementacje wielu streszczeń ADO.NET, ale
 
 ## <a name="database-schema-information"></a>Informacje o schemacie bazy danych
 
-Metadane dotyczące wyników zapytania są dostępne za pomocą metody <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A>.
+Metadane dotyczące wyników zapytania są dostępne za pomocą <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> metody.
 
-`DbConnection.GetSchema()` nie jest zaimplementowana. Ten interfejs API nie jest dobrze zdefiniowany, dlatego zalecamy pobranie metadanych bazy danych bezpośrednio przy użyciu standardowych interfejsów API programu SQLite, takich jak tabela [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) i [TABLE_INFO](https://www.sqlite.org/pragma.html#pragma_table_info) pragma.
+`DbConnection.GetSchema()`nie zaimplementowane. Ten interfejs API nie jest dobrze zdefiniowany, dlatego zalecamy pobranie metadanych bazy danych bezpośrednio przy użyciu standardowych interfejsów API programu SQLite, takich jak tabela [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) i [TABLE_INFO](https://www.sqlite.org/pragma.html#pragma_table_info) pragma.
 
 Aby uzyskać więcej informacji, zobacz [metadane](metadata.md).
 
@@ -29,9 +29,9 @@ Prześlij opinię na temat braku obsługi dla elementu System. Transactions w pr
 
 ## <a name="data-adapters"></a>Karty danych
 
-`DbDataAdapter` nie została jeszcze zaimplementowana przez firmę Microsoft. Data. sqlite. Oznacza to, że można używać ADO.NET `DataSet` i `DataTable` do ładowania danych i ich aktualizowania.
+`DbDataAdapter`jeszcze nie zaimplementowano przez Microsoft. Data. sqlite. Oznacza to, że można używać tylko `DataSet` ADO.NET `DataTable` i ładować dane, a ich nie aktualizować.
 
-Użyj [#13838](https://github.com/dotnet/efcore/issues/13838) problemu, aby przekazać opinię na temat implementowania `DbDataAdapter`.
+Użyj [#13838](https://github.com/dotnet/efcore/issues/13838) problemu, aby przekazać opinię na `DbDataAdapter`temat wdrażania.
 
 ## <a name="output-parameters"></a>Parametry wyjściowe
 
@@ -47,9 +47,9 @@ SQLite nie obsługuje procedur składowanych.
 
 ## <a name="isolation-levels"></a>Poziomy izolacji
 
-Poziomy izolacji `Chaos` i `Snapshot` nie są obsługiwane w transakcjach oprogramowania SQLite.
+Poziomy `Chaos` izolacji `Snapshot` i nie są obsługiwane w transakcjach oprogramowania SQLite.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Ograniczenia asynchroniczne](async.md)
 * [Typy danych](types.md)

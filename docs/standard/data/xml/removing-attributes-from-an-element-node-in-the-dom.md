@@ -17,26 +17,26 @@ Istnieje wiele sposobów usuwania atrybutów. Jedną z technik jest usunięcie i
   
 2. Usuń atrybut z kolekcji atrybutów przy użyciu jednej z trzech metod:  
   
-    - Użyj <xref:System.Xml.XmlAttributeCollection.Remove%2A>, aby usunąć określony atrybut.  
+    - Służy <xref:System.Xml.XmlAttributeCollection.Remove%2A> do usuwania określonego atrybutu.  
   
-    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>, aby usunąć wszystkie atrybuty z kolekcji i pozostawić element bez atrybutów.  
+    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> , aby usunąć wszystkie atrybuty z kolekcji i pozostawić element bez atrybutów.  
   
-    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A>, aby usunąć atrybut z kolekcji atrybutów przy użyciu numeru indeksu.  
+    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> , aby usunąć atrybut z kolekcji atrybutów przy użyciu jego numeru indeksu.  
   
  Poniższe metody usuwają atrybuty z węzła elementu.  
   
-- Użyj <xref:System.Xml.XmlElement.RemoveAllAttributes%2A>, aby usunąć kolekcję atrybutów.  
+- Służy <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> do usuwania kolekcji atrybutów.  
   
-- Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A>, aby usunąć pojedynczy atrybut według nazwy z kolekcji.  
+- Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A> , aby usunąć pojedynczy atrybut według nazwy z kolekcji.  
   
-- Użyj <xref:System.Xml.XmlElement.RemoveAttributeAt%2A>, aby usunąć pojedynczy atrybut według numeru indeksu z kolekcji.  
+- Służy <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> do usuwania pojedynczego atrybutu według numeru indeksu z kolekcji.  
   
- Jedną z alternatywnych metod jest pobranie elementu, pobranie atrybutu z kolekcji atrybutów i bezpośrednie usunięcie węzła atrybutu. Aby uzyskać atrybut z kolekcji atrybutów, można użyć nazwy, `XmlAttribute attr = attrs["attr_name"];`, `XmlAttribute attr = attrs[0];`indeksu lub w pełni kwalifikującej się nazwy z przestrzenią nazw `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
+ Jedną z alternatywnych metod jest pobranie elementu, pobranie atrybutu z kolekcji atrybutów i bezpośrednie usunięcie węzła atrybutu. Aby uzyskać atrybut z kolekcji atrybutów, można użyć nazwy, `XmlAttribute attr = attrs["attr_name"];`indeksu `XmlAttribute attr = attrs[0];`lub przez pełną kwalifikację nazwy z przestrzenią nazw. `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`  
   
- Niezależnie od metody używanej do usuwania atrybutów istnieją specjalne ograniczenia dotyczące usuwania atrybutów, które są zdefiniowane jako atrybuty domyślne w definicji typu dokumentu (DTD). Atrybutów domyślnych nie można usunąć, chyba że element, do którego należą, jest usuwany. Atrybuty domyślne są zawsze obecne dla elementów, które mają zadeklarowane atrybuty domyślne. Usunięcie atrybutu domyślnego z <xref:System.Xml.XmlAttributeCollection> lub z <xref:System.Xml.XmlElement> powoduje, że atrybut zastępczy został wstawiony do <xref:System.Xml.XmlAttributeCollection> elementu, został zainicjowany do wartości domyślnej, która została zadeklarowana. Jeśli masz element zdefiniowany jako `<book att1="1" att2="2" att3="3"></book>`, wówczas masz element `book` z trzema zadeklarowanymi atrybutami domyślnymi. Implementacja XML Document Object Model (DOM) gwarantuje, że o ile ten element `book` istnieje, ma te trzy atrybuty domyślne `att1`, `att2`i `att3`.  
+ Niezależnie od metody używanej do usuwania atrybutów istnieją specjalne ograniczenia dotyczące usuwania atrybutów, które są zdefiniowane jako atrybuty domyślne w definicji typu dokumentu (DTD). Atrybutów domyślnych nie można usunąć, chyba że element, do którego należą, jest usuwany. Atrybuty domyślne są zawsze obecne dla elementów, które mają zadeklarowane atrybuty domyślne. Usunięcie atrybutu domyślnego z <xref:System.Xml.XmlAttributeCollection> lub z <xref:System.Xml.XmlElement> wyników w atrybucie zastępczym wstawionym do <xref:System.Xml.XmlAttributeCollection> elementu, który został zainicjowany do wartości domyślnej, która została zadeklarowana. Jeśli masz element zdefiniowany jako `<book att1="1" att2="2" att3="3"></book>`, masz `book` element z trzema zadeklarowanymi atrybutami domyślnymi. Implementacja XML Document Object Model (dom) gwarantuje, że tak długo, jak `book` ten element istnieje, ma trzy atrybuty domyślne `att1`, `att2`, i. `att3`  
   
- Gdy wywoływana przy użyciu <xref:System.Xml.XmlAttribute>, Metoda <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> ustawia wartość atrybutu na String. Empty, ponieważ atrybut nie może istnieć bez wartości.  
+ Gdy wywoływana z <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> Metoda ustawia wartość atrybutu na String. Empty, ponieważ atrybut nie może istnieć bez wartości.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

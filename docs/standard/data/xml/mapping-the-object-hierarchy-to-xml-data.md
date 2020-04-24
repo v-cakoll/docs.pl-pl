@@ -33,7 +33,7 @@ Gdy dokument XML znajduje się w pamięci, reprezentacja koncepcyjna jest drzewe
  ![Przykładowe drzewo węzłów](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Reprezentacja drzewa w drzewie i tytule węzła  
   
- Element `book` stanie się obiektem **XmlElement** , a następny element, `title`, również stanie się **XmlElement**, natomiast zawartość elementu stanie się obiektem **XmlText** . W przypadku metod i właściwości **elementu XmlElement** metody i właściwości są inne niż metody i właściwości dostępne w obiekcie **XmlText** . Należy więc znać typ węzła, który ma stać się znacznikiem XML, ponieważ jego typ węzła Określa akcje, które można wykonać.  
+ `book` Element stanie się obiektem **XmlElement** , następny element, `title`, również stanie się **XmlElement**, podczas gdy zawartość elementu stanie się obiektem **XmlText** . W przypadku metod i właściwości **elementu XmlElement** metody i właściwości są inne niż metody i właściwości dostępne w obiekcie **XmlText** . Należy więc znać typ węzła, który ma stać się znacznikiem XML, ponieważ jego typ węzła Określa akcje, które można wykonać.  
   
  Poniższy przykład odczytuje dane XML i zapisuje inny tekst w zależności od typu węzła. Używanie następującego pliku danych XML jako danych wejściowych, **Items. XML**:  
   
@@ -186,31 +186,31 @@ public class Sample
   
 |Dane wejściowe|Dane wyjściowe|Test typu węzła|  
 |-----------|------------|--------------------|  
-|\<? wersja XML = "1.0"? >|\<? wersja XML = "1.0"? >|XmlNodeType.XmlDeclaration|  
-|\<!--jest to przykładowy dokument XML-->|\<!--jest to przykładowy dokument XML-->|XmlNodeType.Comment|  
-|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >] >|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >]|XmlNodeType.DocumentType|  
-|\<elementy >|\<elementy >|XmlNodeType. element|  
-|Element \<>|Element \<>|XmlNodeType. element|  
-|Testowanie przy użyciu jednostki: &number;|Testowanie przy użyciu jednostki: 123|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Element \<>|Element \<>|XmNodeType. element|  
-|Testowanie przy użyciu elementu podrzędnego|Testowanie przy użyciu elementu podrzędnego|XmlNodeType.Text|  
-|\<więcej >|\<więcej >|XmlNodeType. element|  
-|rzeczy|rzeczy|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Element \<>|Element \<>|XmlNodeType. element|  
-|Testowanie za pomocą sekcji CDATA|Testowanie za pomocą sekcji CDATA|XmlTest.Text|  
-|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
-|rozdzielczości|rozdzielczości|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Element \<>|Element \<>|XmlNodeType. element|  
-|Testowanie za pomocą jednostki char: &\#65;|Testowanie za pomocą jednostki char:|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|\<!--czternaście znaków w tym elemencie.-->|\<--czternaście znaków w tym elemencie.-->|XmlNodeType.Comment|  
-|Element \<>|Element \<>|XmlNodeType. element|  
-|1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|\</Items >|\</Items >|XmlNodeType.EndElement|  
+|\<? Wersja XML = "1.0"? >|\<? Wersja XML = "1.0"? >|XmlNodeType. xmldeklaracji|  
+|\<!--To jest przykładowy dokument XML-->|\<!--To jest przykładowy dokument XML-->|XmlNodeType. Comment|  
+|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >] >|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >]|XmlNodeType. DocumentType|  
+|\<Elementy>|\<Elementy>|XmlNodeType. element|  
+|\<> elementu|\<> elementu|XmlNodeType. element|  
+|Testowanie przy użyciu jednostki:&number;|Testowanie przy użyciu jednostki: 123|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<> elementu|\<> elementu|XmNodeType. element|  
+|Testowanie przy użyciu elementu podrzędnego|Testowanie przy użyciu elementu podrzędnego|XmlNodeType. Text|  
+|\<Więcej>|\<Więcej>|XmlNodeType. element|  
+|rzeczy|rzeczy|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<> elementu|\<> elementu|XmlNodeType. element|  
+|Testowanie za pomocą sekcji CDATA|Testowanie za pomocą sekcji CDATA|Xmltest. Text|  
+|<! [CDATA [\<456>]]\>|<! [CDATA [\<456>]]\>|Xmltest. CDATA|  
+|DEF|DEF|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<> elementu|\<> elementu|XmlNodeType. element|  
+|Testowanie za pomocą jednostki char: &\#65;|Testowanie za pomocą jednostki char:|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<!--Czternaście znaków w tym elemencie.-->|\<--Czternaście znaków w tym elemencie.-->|XmlNodeType. Comment|  
+|\<> elementu|\<> elementu|XmlNodeType. element|  
+|1234567890ABCD|1234567890ABCD|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\</Items>|\</Items>|XmlNodeType. EndElement|  
   
  Musisz wiedzieć, jaki typ węzła jest przypisany, ponieważ typ węzła kontroluje, jakie rodzaje akcji są prawidłowe i jakie właściwości można ustawić i pobrać.  
   
@@ -220,4 +220,4 @@ public class Sample
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

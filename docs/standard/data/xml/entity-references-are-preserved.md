@@ -20,7 +20,7 @@ Gdy odwołanie do jednostki nie jest rozwinięte, ale zachowane, Document Object
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- DOM kompiluje węzeł **XmlEntityReference** , gdy napotka odwołanie `&publisher;`. **XmlEntityReference** zawiera węzły podrzędne skopiowane z zawartości w deklaracji jednostki. Poprzedni przykład kodu zawiera tekst w deklaracji jednostki, więc węzeł **XmlText** jest tworzony jako węzeł podrzędny węzła odwołania do jednostki.  
+ DOM kompiluje węzeł **XmlEntityReference** , gdy napotka `&publisher;` odwołanie. **XmlEntityReference** zawiera węzły podrzędne skopiowane z zawartości w deklaracji jednostki. Poprzedni przykład kodu zawiera tekst w deklaracji jednostki, więc węzeł **XmlText** jest tworzony jako węzeł podrzędny węzła odwołania do jednostki.  
   
  ![Struktura drzewa dla zachowanych odwołań do jednostek](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 Struktura drzewa dla odwołań do jednostek, które są zachowywane  
@@ -30,8 +30,8 @@ Struktura drzewa dla odwołań do jednostek, które są zachowywane
 > [!NOTE]
 > Węzły skopiowane z elementu **XmlEntity** nie zawsze są wiernie kopiowane po umieszczeniu ich w węźle odwołania do jednostki. Mogą istnieć przestrzenie nazw, które znajdują się w zakresie w węźle odwołania do jednostki i mają wpływ na ostateczną konfigurację węzłów podrzędnych.  
   
- Domyślnie obiekty ogólne, takie jak `&abc;` są zachowywane i węzły **XmlEntityReference** są zawsze tworzone.  
+ Domyślnie obiekty ogólne, takie jak `&abc;` są zachowywane, i węzły **XmlEntityReference** są zawsze tworzone.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

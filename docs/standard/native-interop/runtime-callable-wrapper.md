@@ -41,7 +41,7 @@ Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów 
   
  Otoka RCW zużywa interfejsy wymienione w poniższej tabeli, które są uwidaczniane przez obiekt, który jest zawijany.  
   
-|Interfejs|Opis|  
+|Interface|Opis|  
 |---------------|-----------------|  
 |**IDispatch**|Dla późnego wiązania do obiektów COM przy użyciu odbicia.|  
 |**IErrorInfo**|Zawiera tekstowy opis błędu, jego źródło, plik pomocy, kontekst pomocy oraz identyfikator GUID interfejsu, który definiuje błąd (zawsze **GUID_NULL** dla klas .NET).|  
@@ -50,7 +50,7 @@ Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów 
   
  Otoka (RCW) opcjonalnie wykorzystuje interfejsy wymienione w poniższej tabeli, które są udostępniane przez obiekt, który jest zawijany.  
   
-|Interfejs|Opis|  
+|Interface|Opis|  
 |---------------|-----------------|  
 |**IConnectionPoint** i **IConnectionPointContainer**|Otoka RCW Konwertuje obiekty, które uwidaczniają styl zdarzenia punktu połączenia do zdarzeń na podstawie delegowania.|  
 |**IDispatchEx** (tylko .NET Framework) |Jeśli klasa implementuje **IDispatchEx**, otoka zawiera implementację **IExpando**. Interfejs **IDispatchEx** jest rozszerzeniem interfejsu **IDispatch** , który, w przeciwieństwie do **IDispatch**, włącza Wyliczenie, Dodawanie, usuwanie i uwzględnianie wielkości liter dla elementów członkowskich.|  

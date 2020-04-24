@@ -50,7 +50,7 @@ Obiekty **węzłów** mają zestaw metod i właściwości, a także podstawowe i
 
 - Większość węzłów może mieć wiele węzłów podrzędnych, które są węzłami bezpośrednio poniżej. Poniżej znajduje się lista typów węzłów, które mogą mieć węzły podrzędne.
 
-  - **Document**
+  - **Dokumentu**
 
   - **DocumentFragment**
 
@@ -64,7 +64,7 @@ Obiekty **węzłów** mają zestaw metod i właściwości, a także podstawowe i
 
 - Węzły, które znajdują się na tym samym poziomie, reprezentowane na diagramie przez węzły **książka** i **pubinfo** , są równorzędne.
 
-Jedną z cech modelu DOM jest sposób obsługi atrybutów. Atrybuty nie są węzłami, które są częścią relacji nadrzędnej, podrzędnej i równorzędnej. Atrybuty są uważane za właściwość węzła elementu i składają się z nazwy i pary wartości. Na przykład jeśli masz dane XML zawierające `format="dollar`"skojarzone z elementem `price`, słowo `format` jest nazwą, a wartość atrybutu `format` jest `dollar`. Aby pobrać atrybut `format="dollar"` węzła **Cena** , należy wywołać metodę **GetAttribute** , gdy kursor znajduje się w węźle elementu `price`. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów w modelu dom](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
+Jedną z cech modelu DOM jest sposób obsługi atrybutów. Atrybuty nie są węzłami, które są częścią relacji nadrzędnej, podrzędnej i równorzędnej. Atrybuty są uważane za właściwość węzła elementu i składają się z nazwy i pary wartości. Na przykład, jeśli masz `format="dollar`dane XML zawierające "skojarzone z elementem `price`, słowo `format` jest nazwą, a wartość `format` atrybutu jest. `dollar` Aby pobrać `format="dollar"` atrybut węzła **Cena** , należy wywołać metodę **GetAttribute** , gdy kursor znajduje się w węźle `price` elementu. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów w modelu dom](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
 
 Ponieważ kod XML jest odczytywany w pamięci, tworzone są węzły. Jednak nie wszystkie węzły są tego samego typu. Element w kodzie XML ma różne reguły i składnię niż instrukcja przetwarzania. W związku z tym, jako że odczytywane są różne dane, do każdego węzła jest przypisany typ węzła. Ten typ węzła określa cechy i funkcje węzła.
 
@@ -74,7 +74,7 @@ Firma Microsoft rozszerzyła interfejsy API, które są dostępne w organizacja 
 
 DOM jest najbardziej przydatny do odczytywania danych XML w pamięci, aby zmienić jej strukturę, dodać lub usunąć węzły lub zmodyfikować dane przechowywane przez węzeł tak jak w tekście zawartym w elemencie. Jednak inne klasy są dostępne szybciej niż DOM w innych scenariuszach. Aby uzyskać szybki, niebuforowany dostęp do strumienia XML tylko do przodu, użyj elementu **XmlReader** i **XmlWriter**. Jeśli potrzebujesz dostępu losowego z modelem kursorów i **XPath**, użyj klasy **XPathNavigator** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

@@ -21,7 +21,7 @@ ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159250"
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
-Przestrzeń nazw <xref:System.Runtime.InteropServices> zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu COM.  
+<xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu com.  
   
  Jeśli nie znasz zadania dotyczącego stosowania atrybutów do kodu zarządzanego, zobacz [Rozszerzanie metadanych przy użyciu atrybutów](../../../docs/standard/attributes/index.md). Podobnie jak w przypadku innych atrybutów niestandardowych, można zastosować atrybuty dotyczące międzyoperacyjności do typów, metod, właściwości, parametrów, pól i innych elementów członkowskich.  
   

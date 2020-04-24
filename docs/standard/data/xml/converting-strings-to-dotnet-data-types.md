@@ -28,12 +28,12 @@ Jeśli chcesz przekonwertować ciąg na typ danych .NET Framework, użyj metody 
 |Double. PositiveInfinity|INF|  
 |Double. NegativeInfinity|"-INF"|  
 |DateTime|Format to "RRRR-MM-DDTgg: mm: sszzzzzz" i jego podzestawy.|  
-|Zakres czasu|Format to PnYnMnTnHnMnS, czyli `P2Y10M15DT10H30M20S` wynosi okres 2 lat, 10 miesięcy, 15 dni, 10 godzin, 30 minut i 20 sekund.|  
+|Zakres czasu|Format to PnYnMnTnHnMnS, `P2Y10M15DT10H30M20S` czyli okres 2 lat, 10 miesięcy, 15 dni, 10 godzin, 30 minut i 20 sekund.|  
   
 > [!NOTE]
 > W przypadku konwertowania dowolnego typu .NET Framework wymienionego w tabeli na ciąg przy użyciu metody **ToString** zwracany ciąg nie jest typem podstawowym, ale typ ciągu schematu XML (XSD).  
   
- Typ wartości **DateTime** i **TimeSpan** różni się w tym, że element **DateTime** reprezentuje chwilę w czasie, podczas gdy obiekt **TimeSpan** reprezentuje przedział czasu. Formaty **DateTime** i **TimeSpan** są określone w specyfikacji typów danych schematu XML (XSD). Na przykład:  
+ Typ wartości **DateTime** i **TimeSpan** różni się w tym, że element **DateTime** reprezentuje chwilę w czasie, podczas gdy obiekt **TimeSpan** reprezentuje przedział czasu. Formaty **DateTime** i **TimeSpan** są określone w specyfikacji typów danych schematu XML (XSD). Przykład:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -76,10 +76,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |Prawidłowy parametr wejściowy ciągu|Typ danych wyjściowych .NET Framework|  
 |----------------------------------|--------------------------------|  
-|„true”|Wartość logiczna. true|  
+|oznacza|Wartość logiczna. true|  
 |„1”|Wartość logiczna. true|  
-|„false”|Boolean.False|  
-|„0”|Boolean.False|  
+|false|Wartość logiczna. false|  
+|„0”|Wartość logiczna. false|  
   
  Na przykład, uwzględniając następujący kod XML:  
   

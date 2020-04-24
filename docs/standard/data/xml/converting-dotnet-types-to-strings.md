@@ -15,15 +15,15 @@ Jeśli chcesz skonwertować typ .NET Framework na ciąg, użyj metody **ToString
   
 |Typ programu .NET Framework|Zwrócony typ ciągu|  
 |-------------------------|--------------------------|  
-|Boolean|"true", "false"|  
+|Wartość logiczna|"true", "false"|  
 |Single. PositiveInfinity|INF|  
 |Single. NegativeInfinity|"-INF"|  
 |Double. PositiveInfinity|INF|  
 |Double. NegativeInfinity|"-INF"|  
-|DataGodzina|Format to RRRR-MM-DDTgg: mm: sszzzzzz i jego podzestawy.|  
-|Przedział czasu|Format to PnYnMnTnHnMnS, na przykład `P2Y10M15DT10H30M20S` to czas trwania wynoszący 2 lata, 10 miesięcy, 15 dni, 10hours, 30 minut i 20 sekund.|  
+|DateTime|Format to RRRR-MM-DDTgg: mm: sszzzzzz i jego podzestawy.|  
+|Zakres czasu|Format to PnYnMnTnHnMnS, na przykład, `P2Y10M15DT10H30M20S` wynosi okres 2 lat, 10 miesięcy, 15 dni, 10hours, 30 minut i 20 sekund.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konwersja typów danych XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [Konwertowanie ciągów na typy danych programu .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

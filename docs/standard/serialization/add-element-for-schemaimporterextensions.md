@@ -12,13 +12,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159939"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<dodać > elementu \<schemaImporterExtensions >
+# <a name="add-element-for-schemaimporterextensions"></a>\<Dodaj element> dla \<schemaImporterExtensions>
 Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
   
- > konfiguracji \<  
-> \<system. XML. Serialization  
-\<schemaImporterExtensions >  
-\<Dodaj >  
+ \<> konfiguracji  
+\<> system. XML. Serialization  
+\<schemaImporterExtensions>  
+\<Dodaj>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**Nazwij**|Prosta nazwa używana do znajdowania wystąpienia.|  
-|**type**|Wymagany. Określa klasę rozszerzenia schematu do dodania. Wartość atrybutu **typu** musi znajdować się w jednym wierszu i zawierać w pełni kwalifikowaną nazwę typu. Gdy zestaw znajduje się w globalnej pamięci podręcznej zestawów (GAC), musi również zawierać wersję, kulturę i token klucza publicznego podpisanego zestawu.|  
+|**Wprowadź**|Wymagany. Określa klasę rozszerzenia schematu do dodania. Wartość atrybutu **typu** musi znajdować się w jednym wierszu i zawierać w pełni kwalifikowaną nazwę typu. Gdy zestaw znajduje się w globalnej pamięci podręcznej zestawów (GAC), musi również zawierać wersję, kulturę i token klucza publicznego podpisanego zestawu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,7 +43,7 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<schemaImporterExtensions >|Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
+|\<schemaImporterExtensions>|Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu dodaje typ rozszerzenia, którego XmlSchemaImporter może używać podczas mapowania typów.  
@@ -63,5 +63,5 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<element > System. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<element > schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<schemaImporterExtensions, element>](../../../docs/standard/serialization/schemaimporterextensions-element.md)

@@ -34,14 +34,14 @@ lub
 
 |Termin|Definicja|
 |---|---|
-|`+` &#124; `-`|Opcjonalny. Określenie `+` lub `-debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam skutek, co nie określa `-debug`.|
-|`full` &#124; `pdbonly`|Opcjonalny. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie określisz `-debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączenie debugera do uruchomionego programu. Argument `pdbonly` umożliwia debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
+|`+`&#124;`-`|Element opcjonalny. Określenie `+` lub `-debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam efekt, co nie `-debug`określa.|
+|`full`&#124;`pdbonly`|Element opcjonalny. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie zostanie określona `-debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączenie debugera do uruchomionego programu. `pdbonly` Argument zezwala na Debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `-debug`, `-debug+`lub `-debug:full`, nie będzie można debugować pliku wyjściowego programu.
+Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `-debug`, `-debug+`, lub `-debug:full`, nie będziesz w stanie debugować pliku wyjściowego programu.
 
-Domyślnie informacje debugowania nie są emitowane (`-debug-`). Aby emitować informacje o debugowaniu, określ `-debug` lub `-debug+`.
+Domyślnie informacje debugowania nie są emitowane (`-debug-`). Aby emitować informacje o debugowaniu `-debug` , `-debug+`Określ lub.
 
 Informacje o sposobie konfigurowania wydajności debugowania aplikacji znajdują się w temacie [ułatwianie debugowania obrazu](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
@@ -51,13 +51,13 @@ Informacje o sposobie konfigurowania wydajności debugowania aplikacji znajdują
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład umieszcza informacje debugowania w pliku wyjściowym `App.exe`.
+Poniższy przykład umieszcza informacje o debugowaniu w pliku `App.exe`wyjściowym.
 
 ```console
 vbc -debug -out:app.exe test.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

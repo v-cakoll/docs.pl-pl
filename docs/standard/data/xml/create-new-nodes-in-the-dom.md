@@ -11,7 +11,7 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711002"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Tworzenie nowych węzłów w modelu DOM
-<xref:System.Xml.XmlDocument> ma metodę Create dla wszystkich typów węzłów. Podaj metodę o nazwie, gdy jest to wymagane, oraz zawartość lub inne parametry dla tych węzłów, które mają zawartość (na przykład węzeł tekstowy) i węzeł jest tworzony. Poniższe metody to te, które wymagają nazwy i kilku innych parametrów wypełnionych w celu utworzenia odpowiedniego węzła.  
+<xref:System.Xml.XmlDocument> Ma metodę Create dla wszystkich typów węzłów. Podaj metodę o nazwie, gdy jest to wymagane, oraz zawartość lub inne parametry dla tych węzłów, które mają zawartość (na przykład węzeł tekstowy) i węzeł jest tworzony. Poniższe metody to te, które wymagają nazwy i kilku innych parametrów wypełnionych w celu utworzenia odpowiedniego węzła.  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75711002"
   
 |Metoda|Położenie węzła|  
 |------------|--------------------|  
-|<xref:System.Xml.XmlNode.InsertBefore%2A>|Wstawiono przed węzłem referencyjnym. Na przykład, aby wstawić nowy węzeł w pozycji 5:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.InsertBefore%2A>.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|Wstawiono po węźle odwołania. Na przykład:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.InsertAfter%2A>.|  
-|<xref:System.Xml.XmlNode.AppendChild%2A>|Dodaje węzeł na końcu listy węzłów podrzędnych dla danego węzła. Jeśli dodawany węzeł jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.AppendChild%2A>.|  
-|<xref:System.Xml.XmlNode.PrependChild%2A>|Dodaje węzeł na początku listy węzłów podrzędnych danego węzła. Jeśli dodawany węzeł jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.PrependChild%2A>.|  
-|<xref:System.Xml.XmlAttributeCollection.Append%2A>|Dołącza węzeł <xref:System.Xml.XmlAttribute> do końca kolekcji atrybutów skojarzonej z elementem. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlAttributeCollection.Append%2A>.|  
+|<xref:System.Xml.XmlNode.InsertBefore%2A>|Wstawiono przed węzłem referencyjnym. Na przykład, aby wstawić nowy węzeł w pozycji 5:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.InsertBefore%2A> metodę.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|Wstawiono po węźle odwołania. Przykład:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.InsertAfter%2A> metodę.|  
+|<xref:System.Xml.XmlNode.AppendChild%2A>|Dodaje węzeł na końcu listy węzłów podrzędnych dla danego węzła. Jeśli dodawany węzeł to <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.AppendChild%2A> metodę.|  
+|<xref:System.Xml.XmlNode.PrependChild%2A>|Dodaje węzeł na początku listy węzłów podrzędnych danego węzła. Jeśli dodawany węzeł to <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.PrependChild%2A> metodę.|  
+|<xref:System.Xml.XmlAttributeCollection.Append%2A>|Dołącza <xref:System.Xml.XmlAttribute> węzeł do końca kolekcji atrybutów skojarzonej z elementem. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlAttributeCollection.Append%2A> metodę.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

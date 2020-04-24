@@ -11,9 +11,9 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709910"
 ---
 # <a name="xml-schema-object-model-som"></a>Model SOM (XML Schema Object Model)
-Schemat XML to zaawansowane i złożone narzędzie do tworzenia i weryfikowania struktury w zgodnych dokumentach XML. Podobnie jak w przypadku modelowania danych w relacyjnej bazie danych, schemat zapewnia sposób definiowania struktury dokumentów XML, określając elementy, które mogą być używane w dokumentach, a także strukturę i typy, które muszą wykonać te elementy, aby były prawidłowe dla określona t określony schemat.  
+Schemat XML to zaawansowane i złożone narzędzie do tworzenia i weryfikowania struktury w zgodnych dokumentach XML. Podobnie jak w przypadku modelowania danych w relacyjnej bazie danych, schemat zapewnia sposób definiowania struktury dokumentów XML, określając elementy, które mogą być używane w dokumentach, a także strukturę i typy, które muszą wykonać te elementy, aby były prawidłowe dla tego konkretnego schematu.  
   
- Model obiektów schematu (SOM) zawiera zestaw klas w przestrzeni nazw <xref:System.Xml.Schema?displayProperty=nameWithType>, które umożliwiają odczytywanie schematu z pliku lub programowo Tworzenie schematu w pamięci. Schemat można następnie przechodzenie, edytować, skompilować, sprawdzić poprawność lub zapisać w pliku.  
+ Model obiektów schematu (SOM) zawiera zestaw klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, które umożliwiają odczytywanie schematu z pliku lub programowo Tworzenie schematu w pamięci. Schemat można następnie przechodzenie, edytować, skompilować, sprawdzić poprawność lub zapisać w pliku.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
@@ -23,7 +23,7 @@ Schemat XML to zaawansowane i złożone narzędzie do tworzenia i weryfikowania 
  Opisuje sposób odczytywania i pisania schematów XML z plików lub innych źródeł.  
   
  [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- Opisuje sposób używania klas w przestrzeni nazw <xref:System.Xml.Schema?displayProperty=nameWithType> do kompilowania schematów XML w pamięci.  
+ Opisuje sposób używania klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw do kompilowania schematów XML w pamięci.  
   
  [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  Opisuje sposób przechodzenia schematu XML w celu uzyskania dostępu do elementów, atrybutów i typów przechowywanych w modelu SOM.  

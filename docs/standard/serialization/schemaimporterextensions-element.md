@@ -1,5 +1,5 @@
 ---
-title: <schemaImporterExtensions> Element
+title: <schemaImporterExtensions>, element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159822"
 ---
-# <a name="schemaimporterextensions-element"></a>\<element > schemaImporterExtensions
+# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions, element>
 Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> dla mapowania typów XSD do typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Składnia  
@@ -28,13 +28,13 @@ Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchema
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<dodać > elementu \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do tworzenia mapowań.|  
+|[\<Dodaj element> dla \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> program do tworzenia mapowań.|  
   
 ## <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<element > System. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Element najwyższego poziomu do sterowania serializacji XML.|  
+|[\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Element najwyższego poziomu do sterowania serializacji XML.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu ilustruje sposób dodawania typów, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> podczas mapowania typów XSD na typy .NET Framework.  
@@ -55,6 +55,6 @@ Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchema
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<element > dateTimeSerialization](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<dodać > elementu \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<element > System. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<dateTimeSerialization, element>](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<Dodaj element> dla \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)

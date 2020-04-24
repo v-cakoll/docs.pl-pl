@@ -11,8 +11,8 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710339"
 ---
 # <a name="removing-node-content-in-the-dom"></a>Usuwanie zawartości węzła z modelu DOM
-W przypadku typów węzłów, które dziedziczą z <xref:System.Xml.XmlCharacterData>, które są typami węzłów <xref:System.Xml.XmlComment>, <xref:System.Xml.XmlText>, <xref:System.Xml.XmlCDataSection>, <xref:System.Xml.XmlWhitespace>i <xref:System.Xml.XmlSignificantWhitespace>, można usunąć znaki przy użyciu metody <xref:System.Xml.XmlCharacterData.DeleteData%2A>, która usuwa zakres znaków z węzła. Jeśli chcesz całkowicie usunąć zawartość, Usuń węzeł, który zawiera zawartość. Jeśli chcesz zachować węzeł, ale zawartość jest niepoprawna, zmodyfikuj zawartość. Aby uzyskać informacje na temat modyfikowania zawartości węzła, zobacz [Modyfikowanie węzłów, zawartości i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+W przypadku typów węzłów, które <xref:System.Xml.XmlCharacterData>dziedziczą z, <xref:System.Xml.XmlComment>które <xref:System.Xml.XmlText>są <xref:System.Xml.XmlCDataSection>typami <xref:System.Xml.XmlWhitespace>węzłów, <xref:System.Xml.XmlSignificantWhitespace> ,, i, można usunąć znaki przy użyciu <xref:System.Xml.XmlCharacterData.DeleteData%2A> metody, która usuwa zakres znaków z węzła. Jeśli chcesz całkowicie usunąć zawartość, Usuń węzeł, który zawiera zawartość. Jeśli chcesz zachować węzeł, ale zawartość jest niepoprawna, zmodyfikuj zawartość. Aby uzyskać informacje na temat modyfikowania zawartości węzła, zobacz [Modyfikowanie węzłów, zawartości i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

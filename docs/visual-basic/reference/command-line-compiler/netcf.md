@@ -28,28 +28,28 @@ Ustawia kompilator jako docelowy .NET Compact Framework.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja `-netcf` powoduje, że kompilator Visual Basic ma kierować .NET Compact Framework, a nie pełną .NET Framework. Funkcja języka, która jest obecna tylko w pełnej .NET Framework jest wyłączona.
+`-netcf` Opcja powoduje, że kompilator Visual Basic ma kierować .NET Compact Framework, a nie pełną .NET Framework. Funkcja języka, która jest obecna tylko w pełnej .NET Framework jest wyłączona.
 
-Opcja `-netcf` jest przeznaczona do użycia z opcją [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka wyłączone przez `-netcf` są tymi samymi funkcjami językowymi, które nie są obecne w plikach przeznaczonych dla `-sdkpath`.
+`-netcf` Opcja jest przeznaczona do użycia z [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka wyłączone przez `-netcf` są tymi samymi funkcjami językowymi, które nie są obecne w `-sdkpath`plikach objętych usługą.
 
 > [!NOTE]
-> Opcja `-netcf` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia. Opcja `-netcf` jest ustawiana podczas ładowania projektu urządzenia Visual Basic.
+> `-netcf` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia. `-netcf` Opcja jest ustawiana podczas ładowania projektu urządzenia Visual Basic.
 
-Opcja `-netcf` zmienia następujące funkcje języka:
+`-netcf` Opcja zmienia następujące funkcje języka:
 
-- Słowo kluczowe [End \<słowo kluczowe > instrukcji](../../../visual-basic/language-reference/statements/end-keyword-statement.md) , które kończy wykonywanie programu, jest wyłączone. Następujący program kompiluje i uruchamia się bez `-netcf`, ale kończy się niepowodzeniem w czasie kompilacji z `-netcf`.
+- Słowo [kluczowe \<End Keyword> instrukcji](../../../visual-basic/language-reference/statements/end-keyword-statement.md) , które kończy wykonywanie programu, jest wyłączone. Następujący program kompiluje i uruchamia się bez `-netcf` , ale kończy się niepowodzeniem `-netcf`w czasie kompilacji z.
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- Późne wiązanie w obszarze wszystkie formularze jest wyłączone. Błędy czasu kompilacji są generowane po napotkaniu rozpoznanych scenariuszy późnego wiązania. Następujący program kompiluje i uruchamia się bez `-netcf`, ale kończy się niepowodzeniem w czasie kompilacji z `-netcf`.
+- Późne wiązanie w obszarze wszystkie formularze jest wyłączone. Błędy czasu kompilacji są generowane po napotkaniu rozpoznanych scenariuszy późnego wiązania. Następujący program kompiluje i uruchamia się bez `-netcf` , ale kończy się niepowodzeniem `-netcf`w czasie kompilacji z.
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- Modyfikatory [Auto,](../../../visual-basic/language-reference/modifiers/auto.md) [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)i [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) są wyłączone. Składnia [instrukcji DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) jest również modyfikowana do `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Poniższy kod ilustruje wpływ `-netcf` na kompilację.
+- Modyfikatory [Auto,](../../../visual-basic/language-reference/modifiers/auto.md) [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)i [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) są wyłączone. Składnia [instrukcji DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) jest również modyfikowana `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Poniższy kod przedstawia efekt `-netcf` kompilacji.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- Używanie Visual Basic 6,0 słów kluczowych, które zostały usunięte z Visual Basic generuje inny błąd, gdy `-netcf` jest używany. Ma to wpływ na komunikaty o błędach dla następujących słów kluczowych:
+- Używanie Visual Basic 6,0 słów kluczowych, które zostały usunięte z Visual Basic generuje inny błąd `-netcf` , gdy jest używany. Ma to wpływ na komunikaty o błędach dla następujących słów kluczowych:
 
   - `Open`
 
@@ -85,13 +85,13 @@ Opcja `-netcf` zmienia następujące funkcje języka:
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod kompiluje `Myfile.vb` z .NET Compact Framework przy użyciu wersji plików mscorlib. dll i Microsoft. VisualBasic. dll znajdujących się w domyślnym katalogu instalacyjnym .NET Compact Framework na dysku C. Zazwyczaj należy użyć najnowszej wersji .NET Compact Framework.
+Poniższy kod kompiluje `Myfile.vb` się z .NET Compact Framework przy użyciu wersji plików mscorlib. dll i Microsoft. VisualBasic. dll znajdujących się w domyślnym katalogu instalacyjnym .NET Compact Framework na dysku C. Zazwyczaj należy użyć najnowszej wersji .NET Compact Framework.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

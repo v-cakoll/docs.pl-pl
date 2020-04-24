@@ -15,6 +15,6 @@ Można pobrać zestaw węzłów i umieścić go w kolekcji uporządkowanej lub n
   
  Aby uzyskać informacje dotyczące kolekcji nieuporządkowanej, zobacz [nieuporządkowane pobieranie węzłów według nazwy lub indeksu](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md). Aby uzyskać informacje dotyczące kolekcji uporządkowanej, zobacz [uporządkowane pobieranie węzłów według indeksu](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

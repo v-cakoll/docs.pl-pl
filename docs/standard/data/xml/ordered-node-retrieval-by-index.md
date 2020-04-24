@@ -16,13 +16,13 @@ ms.locfileid: "78156390"
 # <a name="ordered-node-retrieval-by-index"></a>Pobieranie uporządkowanych węzłów na podstawie indeksu
 Organizacja World Wide Web Consortium (W3C) XML Document Object Model (DOM) również opisuje powstanie, który ma możliwość obsługi uporządkowanej listy węzłów, w przeciwieństwie do zestawu nieuporządkowanego obsługiwanego przez **XmlNamedNodeMap**. Powstanie w strukturze Microsoft .NET jest nazywana **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są następujące:  
   
-- XmlNode.ChildNodes  
+- XmlNode. ChildNodes  
   
-- XmlDocument.GetElementsByTagName  
+- XmlDocument. GetElementsByTagName  
   
-- XmlElement.GetElementsByTagName  
+- XmlElement. GetElementsByTagName  
   
-- XmlNode.SelectNodes  
+- XmlNode. SelectNodes  
   
  **XmlNodeList** ma właściwość **Count** , która może służyć do pisania pętli do iteracji na węzłach w **XmlNodeList**, jak pokazano w następującym przykładzie kodu:  
   
@@ -53,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- Oprócz właściwości **Count** istnieje metoda **GetEnumerator** , która zapewnia, `foreach` iteracji stylu w kolekcji węzłów w **XmlNodeList**. Poniższy przykład kodu pokazuje użycie instrukcji `foreach`.  
+ Oprócz właściwości **Count** istnieje metoda **GetEnumerator** , która udostępnia iterację `foreach` stylu w kolekcji węzłów w **XmlNodeList**. Poniższy przykład kodu pokazuje użycie `foreach` instrukcji.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -94,4 +94,4 @@ End While
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

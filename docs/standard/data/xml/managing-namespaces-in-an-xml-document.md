@@ -15,24 +15,24 @@ Przestrzenie nazw XML kojarzą nazwy elementów i atrybutów w dokumencie XML z 
   
 <a name="declare"></a>
 ## <a name="declaring-namespaces"></a>Deklarowanie przestrzeni nazw  
- Aby zadeklarować przestrzeń nazw w elemencie, należy użyć atrybutu `xmlns:`:  
+ Aby zadeklarować przestrzeń nazw dla elementu, należy użyć `xmlns:` atrybutu:  
   
  `xmlns:<name>=<"uri">`  
   
- gdzie `<name>` jest prefiks przestrzeni nazw, a `<"uri">` jest identyfikatorem URI, który identyfikuje przestrzeń nazw. Po zadeklarowaniu prefiksu można go użyć do kwalifikowania elementów i atrybutów w dokumencie XML i kojarzenia ich z identyfikatorem URI przestrzeni nazw. Ponieważ prefiks przestrzeni nazw jest używany w całym dokumencie, powinien mieć krótki czas.  
+ gdzie `<name>` jest prefiks przestrzeni nazw i `<"uri">` jest identyfikatorem URI, który identyfikuje przestrzeń nazw. Po zadeklarowaniu prefiksu można go użyć do kwalifikowania elementów i atrybutów w dokumencie XML i kojarzenia ich z identyfikatorem URI przestrzeni nazw. Ponieważ prefiks przestrzeni nazw jest używany w całym dokumencie, powinien mieć krótki czas.  
   
- Ten przykład definiuje dwa elementy `BOOK`. Pierwszy element jest kwalifikowana za pomocą prefiksu, `mybook`, a drugi element jest kwalifikowana przez prefiks, `bb`. Każdy prefiks jest skojarzony z innym identyfikatorem URI przestrzeni nazw:  
+ Ten przykład definiuje dwa `BOOK` elementy. Pierwszy element jest kwalifikowana przez prefiks, `mybook`, a drugi element jest kwalifikowana przez prefiks,. `bb` Każdy prefiks jest skojarzony z innym identyfikatorem URI przestrzeni nazw:  
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
 <bb:BOOK xmlns:bb="urn:blueyonderairlines">  
 ```  
   
- Aby wyrównać, że element jest częścią określonego obszaru nazw, Dodaj do niego prefiks przestrzeni nazw. Na przykład jeśli element `Author` należy do przestrzeni nazw `mybook`, zostanie zadeklarowany jako `<mybook:Author>`.  
+ Aby wyrównać, że element jest częścią określonego obszaru nazw, Dodaj do niego prefiks przestrzeni nazw. Na przykład jeśli `Author` element należy do `mybook` przestrzeni nazw, zostanie zadeklarowany jako. `<mybook:Author>`  
   
 <a name="scope"></a>
 ## <a name="declaration-scope"></a>Zakres deklaracji  
- Przestrzeń nazw zaczyna się od jej punktu deklaracji do końca elementu, w którym został zadeklarowany. W tym przykładzie przestrzeń nazw zdefiniowana w `BOOK` elementu nie ma zastosowania do elementów spoza elementu `BOOK`, takich jak `Publisher` elementu:  
+ Przestrzeń nazw zaczyna się od jej punktu deklaracji do końca elementu, w którym został zadeklarowany. W tym przykładzie przestrzeń nazw zdefiniowana w `BOOK` elemencie nie ma zastosowania do elementów poza `BOOK` elementem, takich jak `Publisher` element:  
   
 ```xml  
 <Author>Joe Smith</Author>  
@@ -56,26 +56,26 @@ Przestrzenie nazw XML kojarzą nazwy elementów i atrybutów w dokumencie XML z 
 ```  
   
 ## <a name="managing-namespaces"></a>Zarządzanie przestrzeniami nazw  
- Klasa <xref:System.Xml.XmlNamespaceManager> przechowuje kolekcję identyfikatorów URI przestrzeni nazw i ich prefiksów, a następnie umożliwia wyszukiwanie, Dodawanie i usuwanie przestrzeni nazw z tej kolekcji. W niektórych kontekstach Ta klasa jest wymagana w celu uzyskania lepszej wydajności przetwarzania kodu XML. Na przykład Klasa <xref:System.Xml.Xsl.XsltContext> używa <xref:System.Xml.XmlNamespaceManager> do obsługi XPath.  
+ <xref:System.Xml.XmlNamespaceManager> Klasa przechowuje kolekcję identyfikatorów URI przestrzeni nazw i ich prefiksów, a następnie umożliwia wyszukiwanie, Dodawanie i usuwanie przestrzeni nazw z tej kolekcji. W niektórych kontekstach Ta klasa jest wymagana w celu uzyskania lepszej wydajności przetwarzania kodu XML. Na przykład <xref:System.Xml.Xsl.XsltContext> Klasa używa <xref:System.Xml.XmlNamespaceManager> dla obsługi XPath.  
   
  Menedżer przestrzeni nazw nie wykonuje żadnych walidacji w przestrzeniach nazw, ale zakłada, że prefiksy i przestrzenie nazw zostały już zweryfikowane i są zgodne ze specyfikacją [przestrzeni nazw W3C](https://www.w3.org/TR/REC-xml-names/) .  
   
 > [!NOTE]
-> LINQ TO XML in [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) i [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) nie używać <xref:System.Xml.XmlNamespaceManager> do zarządzania przestrzeniami nazw. Zobacz [Praca z przestrzeniami nazwC#XML ()](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) i [Praca z przestrzeniami nazw XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) w dokumentacji LINQ, aby uzyskać informacje na temat zarządzania przestrzeniami nazw przy użyciu LINQ to XML.  
+> LINQ TO XML w [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) i [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) nie używać <xref:System.Xml.XmlNamespaceManager> do zarządzania przestrzeniami nazw. Zobacz [Praca z przestrzeniami nazw XML (C#)](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) i [Praca z przestrzeniami nazw XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) w dokumentacji LINQ, aby uzyskać informacje na temat zarządzania przestrzeniami nazw przy użyciu LINQ to XML.  
   
- Poniżej przedstawiono niektóre zadania zarządzania i wyszukiwania, które można wykonać za pomocą klasy <xref:System.Xml.XmlNamespaceManager>. Aby uzyskać więcej informacji i przykładów, postępuj zgodnie z linkami do strony odniesienia dla każdej metody lub właściwości.  
+ Poniżej przedstawiono niektóre zadania zarządzania i wyszukiwania, które można wykonać za pomocą <xref:System.Xml.XmlNamespaceManager> klasy. Aby uzyskać więcej informacji i przykładów, postępuj zgodnie z linkami do strony odniesienia dla każdej metody lub właściwości.  
   
 |Do|Użycie|  
 |--------|---------|  
-|Dodawanie przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>, Metoda|  
-|Usuwanie przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>, Metoda|  
-|Znajdź identyfikator URI dla domyślnej przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> Właściwość|  
-|Znajdź identyfikator URI dla prefiksu przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>, Metoda|  
-|Znajdź prefiks dla identyfikatora URI przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>, Metoda|  
-|Pobierz listę przestrzeni nazw w bieżącym węźle|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>, Metoda|  
-|Określanie zakresu przestrzeni nazw|Metody <xref:System.Xml.XmlNamespaceManager.PushScope%2A> i <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Sprawdź, czy prefiks jest zdefiniowany w bieżącym zakresie|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>, Metoda|  
-|Pobierz tabelę nazw służącą do wyszukiwania prefiksów i identyfikatorów URI|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> Właściwość|  
+|Dodawanie przestrzeni nazw|Metoda <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
+|Usuwanie przestrzeni nazw|Metoda <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
+|Znajdź identyfikator URI dla domyślnej przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>wartość|  
+|Znajdź identyfikator URI dla prefiksu przestrzeni nazw|Metoda <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
+|Znajdź prefiks dla identyfikatora URI przestrzeni nazw|Metoda <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
+|Pobierz listę przestrzeni nazw w bieżącym węźle|Metoda <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
+|Określanie zakresu przestrzeni nazw|<xref:System.Xml.XmlNamespaceManager.PushScope%2A>i <xref:System.Xml.XmlNamespaceManager.PopScope%2A> metody|  
+|Sprawdź, czy prefiks jest zdefiniowany w bieżącym zakresie|Metoda <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
+|Pobierz tabelę nazw służącą do wyszukiwania prefiksów i identyfikatorów URI|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>wartość|  
   
 ## <a name="see-also"></a>Zobacz też
 

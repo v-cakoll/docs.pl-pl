@@ -14,10 +14,10 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710911"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Obliczanie wyrażeń XPath przy użyciu klasy XPathNavigator
-Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia metodę <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> do obliczenia wyrażenia XPath. Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje wyrażenie XPath, oblicza go i zwraca typ W3C XPath o wartości logicznej, liczbowej, ciągu lub zestawu węzłów na podstawie wyniku wyrażenia XPath.  
+<xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metodę szacowania wyrażenia XPath. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda przyjmuje wyrażenie XPath, szacuje go i zwraca typ W3C XPath o wartości logicznej, liczb, ciągu lub zestawu węzłów na podstawie wyniku wyrażenia XPath.  
   
 ## <a name="the-evaluate-method"></a>Metoda szacowania  
- Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje wyrażenie XPath, oblicza je i zwraca typ wyniku logicznego (<xref:System.Boolean>), Number (<xref:System.Double>), ciąg (<xref:System.String>) lub zestaw węzłów (<xref:System.Xml.XPath.XPathNodeIterator>). Na przykład Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> może być użyta w metodzie matematycznej. Poniższy przykładowy kod oblicza łączną cenę wszystkich ksiąg w pliku `books.xml`.  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda przyjmuje wyrażenie XPath, oblicza go i zwraca wynik z typem Boolean<xref:System.Boolean>(), Number (<xref:System.Double>), String (<xref:System.String>) lub Set (<xref:System.Xml.XPath.XPathNodeIterator>). Na przykład <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda może być użyta w metodzie matematycznej. Poniższy przykładowy kod oblicza łączną cenę wszystkich ksiąg w `books.xml` pliku.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -42,9 +42,9 @@ Console.WriteLine(total);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="position-and-last-functions"></a>Funkcja position i Last  
- Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> jest przeciążona. Jedna z metod <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje obiekt <xref:System.Xml.XPath.XPathNodeIterator> jako parametr. Ta metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> jest taka sama jak Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>, która pobiera tylko obiekt <xref:System.Xml.XPath.XPathExpression> jako parametr, z tą różnicą, że zezwala na argument zestawu węzłów, aby określić bieżący kontekst do przeprowadzenia oceny. Ten kontekst jest wymagany dla `position()` i `last()` funkcji XPath, ponieważ odnoszą się do bieżącego węzła kontekstu. O ile nie jest używany jako predykat w kroku lokalizacji, funkcje `position()` i `last()` wymagają odwołania do zestawu węzłów, aby można je było oszacować w przeciwnym razie funkcje `position` i `last` zwracają `0`.  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda jest przeciążona. Jedna z <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metod przyjmuje <xref:System.Xml.XPath.XPathNodeIterator> obiekt jako parametr. Ta konkretna <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda jest taka sama <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> jak metoda, która przyjmuje <xref:System.Xml.XPath.XPathExpression> tylko obiekt jako parametr, z tą różnicą, że zezwala na argument zestawu węzłów, aby określić bieżący kontekst do przeprowadzenia oceny. Ten kontekst jest wymagany dla wyrażenia XPath `position()` i `last()` funkcji, ponieważ odnoszą się do bieżącego węzła kontekstu. O ile nie jest używany jako predykat w kroku lokalizacji, `position()` funkcje `last()` i wymagają odwołania do zestawu węzłów, aby można je było oszacować w przeciwnym razie funkcje `position` i `last` zwracają `0`.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

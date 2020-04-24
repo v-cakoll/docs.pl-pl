@@ -11,17 +11,17 @@ ms.locfileid: "79400457"
 ---
 # <a name="parameters"></a>Parametry
 
-Parametry są używane do ochrony przed atakami iniekcji SQL. Zamiast konkretyzować dane wejściowe użytkownika z instrukcjami SQL, należy użyć parametrów, aby upewnić się, że dane wejściowe są zawsze traktowane jako wartość literału i nigdy nie są wykonywane. W SQLite parametry są zazwyczaj dozwolone w dowolnym miejscu literału jest dozwolone w instrukcjach SQL.
+Parametry są używane do ochrony przed atakami polegającymi na iniekcji SQL. Zamiast łączyć dane wejściowe użytkownika z instrukcjami SQL, użyj parametrów, aby upewnić się, że dane wejściowe są kiedykolwiek traktowane jako wartość literału, a nigdy nie wykonane. W przypadku oprogramowania SQLite parametry są zwykle dozwolone wszędzie tam, gdzie literał jest dozwolony w instrukcjach SQL.
 
-Parametry można poprzedzać `:` `@`jednymi `$`, lub .
+Parametry mogą być poprzedzone znakiem `:`, `@`, lub `$`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_Parameter)]
 
-Zobacz [Typy danych,](types.md) aby uzyskać szczegółowe informacje o sposobie zamapowania wartości .NET na wartości SQLite.
+Aby uzyskać szczegółowe informacje o tym, jak wartości .NET są mapowane na wartości oprogramowania SQLite, zobacz [typy danych](types.md) .
 
-## <a name="truncation"></a>Obcinania
+## <a name="truncation"></a>Obcięcie
 
-Właściwość <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> służy do obcinania wartości TEXT i BLOB.
+Użyj <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> właściwości, aby obciąć wartości tekstowe i obiekty blob.
 
 ```csharp
 // Truncate name to 30 characters
@@ -30,15 +30,15 @@ command.Parameters.AddWithValue("$name", name).Length = 30;
 
 ## <a name="alternative-types"></a>Typy alternatywne
 
-Czasami możesz chcieć użyć alternatywnego typu SQLite. Należy to zrobić, ustawiając <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> właściwość.
+Czasami warto użyć alternatywnego typu oprogramowania SQLite. Aby to zrobić, należy <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> ustawić właściwość.
 
-Można użyć następujących mapowania typu alternatywnego. Aby uzyskać domyślne mapowania, zobacz [Typy danych](types.md).
+Można użyć następujących mapowań alternatywnego typu. Aby uzyskać domyślne mapowania, zobacz [typy danych](types.md).
 
-| Wartość          | Typ sqlite | Uwagi          |
+| Wartość          | Sqlitetype | Uwagi          |
 | -------------- | ---------- | ---------------- |
 | Char           | Liczba całkowita    | UTF-16           |
-| DateTime       | Rzeczywiste       | Wartość dnia juliańska |
-| Datetimeoffset | Rzeczywiste       | Wartość dnia juliańska |
+| DateTime       | Rzeczywiste       | Wartość w postaci ciągu juliańskim |
+| DateTimeOffset | Rzeczywiste       | Wartość w postaci ciągu juliańskim |
 | Guid (identyfikator GUID)           | Obiekt blob       |                  |
 | przedział_czasu       | Rzeczywiste       | W dniach          |
 
@@ -46,7 +46,7 @@ Można użyć następujących mapowania typu alternatywnego. Aby uzyskać domyś
 
 ## <a name="output-parameters"></a>Parametry wyjściowe
 
-SQLite nie obsługuje parametrów wyjściowych. Zamiast tego zwraca wartości w wynikach kwerendy.
+Produkt SQLite nie obsługuje parametrów wyjściowych. Zamiast tego Zwróć wartości w wynikach zapytania.
 
 ## <a name="see-also"></a>Zobacz też
 

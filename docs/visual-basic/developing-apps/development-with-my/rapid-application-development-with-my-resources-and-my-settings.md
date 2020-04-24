@@ -16,19 +16,19 @@ ms.locfileid: "74349268"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings (Visual Basic)
 
-Obiekt `My.Resources` zapewnia dostęp do zasobów aplikacji i umożliwia dynamiczne pobieranie zasobów dla aplikacji.  
+`My.Resources` Obiekt zapewnia dostęp do zasobów aplikacji i umożliwia dynamiczne pobieranie zasobów dla aplikacji.  
   
 ## <a name="retrieving-resources"></a>Pobieranie zasobów  
 
- Wiele zasobów, takich jak pliki audio, ikony, obrazy i ciągi, można pobrać za pomocą obiektu `My.Resources`. Można na przykład uzyskać dostęp do plików zasobów specyficznych dla kultury aplikacji. Poniższy przykład ustawia ikonę formularza na ikonę o nazwie `Form1Icon` przechowywana w pliku zasobów aplikacji.  
+ Wiele zasobów, takich jak pliki audio, ikony, obrazy i ciągi, można pobrać za pomocą `My.Resources` obiektu. Można na przykład uzyskać dostęp do plików zasobów specyficznych dla kultury aplikacji. Poniższy przykład ustawia ikonę formularza na ikonę o nazwie `Form1Icon` przechowywanej w pliku zasobów aplikacji.  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- Obiekt `My.Resources` uwidacznia tylko zasoby globalne. Nie zapewnia dostępu do plików zasobów skojarzonych z formularzami. Musisz uzyskać dostęp do zasobów formularza z formularza.  
+ `My.Resources` Obiekt uwidacznia tylko zasoby globalne. Nie zapewnia dostępu do plików zasobów skojarzonych z formularzami. Musisz uzyskać dostęp do zasobów formularza z formularza.  
   
- Podobnie obiekt `My.Settings` zapewnia dostęp do ustawień aplikacji i umożliwia dynamiczne przechowywanie i pobieranie ustawień właściwości oraz innych informacji dotyczących aplikacji. Aby uzyskać więcej informacji, zobacz [Moje obiekty Resources](../../../visual-basic/language-reference/objects/my-resources-object.md) i [My. Settings](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Podobnie `My.Settings` obiekt zapewnia dostęp do ustawień aplikacji i umożliwia dynamiczne przechowywanie i pobieranie ustawień właściwości oraz innych informacji dotyczących aplikacji. Aby uzyskać więcej informacji, zobacz [Moje obiekty Resources](../../../visual-basic/language-reference/objects/my-resources-object.md) i [My. Settings](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)

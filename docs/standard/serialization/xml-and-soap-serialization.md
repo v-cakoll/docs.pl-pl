@@ -18,9 +18,9 @@ ms.locfileid: "80588377"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializacja XML i SOAP
 
-Serializacja XML konwertuje (serializuje) pola publiczne i właściwości obiektu oraz parametry i wartości zwracane metod na strumień XML zgodny z określonym dokumentem języka XSD (XSD). Powoduje serializacji XML w silnie typizowanej klasy z właściwości publiczne i pola, które są konwertowane na format seryjny (w tym przypadku XML) do przechowywania lub transportu.
+Serializacji XML konwertuje (deserializacji) publiczne pola i właściwości obiektu oraz parametry i zwracane wartości metod do strumienia XML, który jest zgodny z konkretnym dokumentem języka definicji schematu XML (XSD). Powoduje serializacji XML w silnie typizowanej klasy z właściwości publiczne i pola, które są konwertowane na format seryjny (w tym przypadku XML) do przechowywania lub transportu.
 
-Ponieważ XML jest otwartym standardem, strumień XML może być przetwarzany przez dowolną aplikację, w razie potrzeby, niezależnie od platformy. Na przykład usługi sieci Web XML utworzone <xref:System.Xml.Serialization.XmlSerializer> przy użyciu ASP.NET używają tej klasy do tworzenia strumieni XML przekazywalanych danych między aplikacjami usługi sieci Web XML w internecie lub w intranetach. Z kolei deserializacji pobiera strumień XML i rekonstruuje obiektu.
+Ponieważ kod XML jest otwarty standard, strumień XML może być przetwarzany przez dowolną aplikację, w razie konieczności, niezależnie od platformy. Na przykład usługi sieci Web XML utworzone za pomocą ASP.NET używają <xref:System.Xml.Serialization.XmlSerializer> klasy do tworzenia strumieni XML, które przesyłają dane między aplikacjami usługi sieci Web XML w Internecie lub w intranecie. Z kolei deserializacji pobiera strumień XML i rekonstruuje obiektu.
 
 Umożliwia także serializacji XML można serializować obiektów do strumieni XML, które są zgodne ze specyfikacją protokołu SOAP. Protokołu SOAP to protokół oparte na języku XML, zaprojektowany specjalnie w celu transportu wywołań procedur za pomocą języka XML.
 
@@ -29,4 +29,4 @@ Do serializacji lub deserializacji obiekty, użyj <xref:System.Xml.Serialization
 ## <a name="see-also"></a>Zobacz też
 
 - [Serializacja binarna](binary-serialization.md)
-- [Usługi sieci Web XML utworzone przy użyciu ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))
+- [Usługi sieci Web XML utworzone za pomocą ASP.NET i klientów usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

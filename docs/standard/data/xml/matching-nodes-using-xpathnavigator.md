@@ -14,13 +14,13 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710690"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Dopasowywanie węzłów przy użyciu klasy XPathNavigator
-Klasa <xref:System.Xml.XPath.XPathNavigator> zapewnia metodę <xref:System.Xml.XPath.XPathNavigator.Matches%2A>, aby określić, czy węzeł dopasowuje wyrażenie XPath. Metoda <xref:System.Xml.XPath.XPathNavigator.Matches%2A> przyjmuje wyrażenie XPath jako dane wejściowe i zwraca <xref:System.Boolean>, które wskazuje, czy bieżący węzeł odpowiada danemu wyrażeniu XPath lub podanemu skompilowanemu obiektowi <xref:System.Xml.XPath.XPathExpression>.  
+<xref:System.Xml.XPath.XPathNavigator> Klasa zapewnia metodę, <xref:System.Xml.XPath.XPathNavigator.Matches%2A> aby określić, czy węzeł dopasowuje wyrażenie XPath. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda przyjmuje wyrażenie XPath jako dane wejściowe i zwraca wartość wskazującą <xref:System.Boolean> , czy bieżący węzeł odpowiada danemu wyrażeniu XPath lub podanemu skompilowanemu <xref:System.Xml.XPath.XPathExpression> obiektowi.  
   
 ## <a name="matching-nodes"></a>Zgodne węzły  
- Metoda <xref:System.Xml.XPath.XPathNavigator.Matches%2A> zwraca `true`, jeśli bieżący węzeł pasuje do określonego wyrażenia XPath. Na przykład w poniższym przykładzie kodu Metoda <xref:System.Xml.XPath.XPathNavigator.Matches%2A> zwróci `true`, jeśli bieżącym węzłem jest element `b`, a element `b` ma atrybut `c`.  
+ <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda zwraca `true` Jeśli bieżący węzeł pasuje do określonego wyrażenia XPath. Na przykład w <xref:System.Xml.XPath.XPathNavigator.Matches%2A> poniższym przykładzie kodu Metoda zwróci wartość, `true` Jeśli bieżącym węzłem jest element `b`, a element `b` ma atrybut. `c`  
   
 > [!NOTE]
-> Metoda <xref:System.Xml.XPath.XPathNavigator.Matches%2A> nie zmienia stanu <xref:System.Xml.XPath.XPathNavigator>.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda nie zmienia stanu <xref:System.Xml.XPath.XPathNavigator>.  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  
@@ -36,7 +36,7 @@ XPathNavigator navigator = document.CreateNavigator();
 navigator.Matches("b[@c]");  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

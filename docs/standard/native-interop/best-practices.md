@@ -1,6 +1,6 @@
 ---
-title: Najważniejsze wskazówki dotyczące współdziałania natywnej — .NET
-description: Poznaj najlepsze rozwiązania dotyczące łączenia się ze składnikami macierzystymi w .NET.
+title: Najlepsze praktyki dotyczące natywnego współdziałania — platforma .NET
+description: Poznaj najlepsze rozwiązania dotyczące współkorzystania ze składnikami macierzystymi w programie .NET.
 ms.date: 01/18/2019
 ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
 ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
@@ -9,102 +9,102 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/30/2020
 ms.locfileid: "80391224"
 ---
-# <a name="native-interoperability-best-practices"></a>Najlepsze rozwiązania dotyczące współpracy natywnej
+# <a name="native-interoperability-best-practices"></a>Najlepsze rozwiązania w zakresie współdziałania natywnego
 
-.NET oferuje wiele sposobów dostosowywania natywnego kodu współdziałania. Ten artykuł zawiera wskazówki, które zespoły platformy .NET firmy Microsoft przestrzegać dla natywnej współdziałania.
+Program .NET oferuje różne sposoby dostosowywania natywnego kodu współdziałania. Ten artykuł zawiera wskazówki, które są zgodne z zespołem .NET firmy Microsoft dotyczącym natywnej współdziałania.
 
 ## <a name="general-guidance"></a>Wskazówki ogólne
 
-Wskazówki w tej sekcji dotyczy wszystkich scenariuszy interop.
+Wskazówki zawarte w tej sekcji dotyczą wszystkich scenariuszy międzyoperacyjnych.
 
-- ✔️ DO używać tej samej nazwy i wielkich liter dla metod i parametrów, jak metoda natywna, którą chcesz wywołać.
-- ✔️ NALEŻY ROZWAŻYĆ użycie tego samego nazewnictwa i wielkich liter dla wartości stałych.
-- ✔️ do użycia typów .NET, które mapują najbliżej typu macierzystego. Na przykład w języku `uint` C#użyj, `unsigned int`gdy typem macierzystym jest .
-- ✔️ DO używać `[In]` tylko `[Out]` i atrybuty, gdy zachowanie, które chcesz różni się od zachowania domyślnego.
-- ✔️ NALEŻY ROZWAŻYĆ <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> użycie do puli buforów tablicy macierzystych.
-- ✔️ NALEŻY ROZWAŻYĆ zawijanie deklaracji P/Invoke w klasie o takiej samej nazwie i wielkich literach jak biblioteka macierzysta.
-  - Dzięki temu `[DllImport]` atrybuty do `nameof` korzystania z funkcji języka języka języka C# przekazać w nazwie biblioteki macierzystej i upewnij się, że nie błędnie nazwę biblioteki macierzystej.
+- ✔️ Użyj tej samej nazwy i wielkości liter dla metod i parametrów jako metody natywnej, którą chcesz wywołać.
+- ✔️ ROZWAŻYĆ użycie tego samego nazewnictwa i wielkich liter w przypadku wartości stałych.
+- ✔️ Użyj typów .NET, które są mapowane bliżej typu natywnego. Na przykład w języku C# Użyj `uint` , gdy typem natywnym jest `unsigned int`.
+- ✔️ SĄ używane `[In]` i `[Out]` atrybuty tylko wtedy, gdy zachowanie jest inne niż domyślne zachowanie.
+- ✔️ ROZWAŻYĆ użycie <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> usługi do puli natywnych buforów tablicowych.
+- ✔️ Rozważ zapakowanie deklaracji P/Invoke w klasie o tej samej nazwie i wielkości liter jako biblioteki natywnej.
+  - Dzięki temu `[DllImport]` atrybuty mogą korzystać z funkcji języka `nameof` C# w celu przekazania nazwy biblioteki natywnej i upewnienia się, że nie jest ona błędną nazwą biblioteki natywnej.
 
-## <a name="dllimport-attribute-settings"></a>Ustawienia atrybutu DllImport
+## <a name="dllimport-attribute-settings"></a>Ustawienia atrybutów DllImport
 
 | Ustawienie | Domyślne | Zalecenie | Szczegóły |
 |---------|---------|----------------|---------|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  zachowaj wartość domyślną  | Gdy jest jawnie ustawiona na false, nie powiodło się HRESULT zwracane wartości zostaną przekształcone w wyjątki (i zwraca wartość w definicji staje się null w wyniku).|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | zależy od API  | Ustaw to na true, jeśli interfejs API używa GetLastError i użyj Marshal.GetLastWin32Error, aby uzyskać wartość. Jeśli interfejs API ustawia warunek, który mówi, że ma błąd, pobierz błąd przed wykonaniem innych wywołań, aby uniknąć nieumyślnego jego nadania.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, który wraca `CharSet.Ansi` do zachowania  | Jawnie `CharSet.Unicode` używać `CharSet.Ansi` lub gdy ciągi lub znaki są obecne w definicji | Określa zachowanie marshaling ciągów i `ExactSpelling` co `false`robi, gdy . Należy `CharSet.Ansi` pamiętać, że jest rzeczywiście UTF8 na Unix. _W_ większości przypadków system Windows używa unicode, podczas gdy Unix używa UTF8. Zobacz więcej informacji na temat [dokumentacji znaków](./charset.md). |
-| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Ustaw tę wartość true i uzyskaj niewielką korzyść perf, ponieważ środowisko wykonawcze nie będzie szukać alternatywnych nazw funkcji z `CharSet` przyrostkiem "A" lub "W" w zależności od wartości ustawienia ("A" dla `CharSet.Ansi` i "W" dla `CharSet.Unicode`). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Zachowaj domyślne  | Jeśli ta opcja jest jawnie ustawiona na false, Niepowodzenie zwracanych wartości HRESULT spowoduje włączenie wyjątków (a wartość zwracana w definicji zmieni się na wartość null).|
+| <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | zależy od interfejsu API  | Ustaw tę wartość na true, jeśli interfejs API używa wartości GetLastError i użyj Marshal. metodę GetLastWin32Error, aby pobrać wartość. Jeśli interfejs API ustawi warunek informujący o błędzie, należy uzyskać błąd przed wywołaniem innych wywołań, aby uniknąć niezamierzonego nadpisania.|
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, która powraca do `CharSet.Ansi` zachowania  | Jawne użycie `CharSet.Unicode` lub `CharSet.Ansi` gdy ciągi lub znaki są obecne w definicji | Określa to kierowanie zachowania ciągów i to, `ExactSpelling` co robi `false`. Pamiętaj, `CharSet.Ansi` że jest to w rzeczywistości UTF8 w systemie UNIX. _Większość_ czasu Windows używa standardu Unicode, podczas gdy w systemie UNIX używa kodowania UTF8. Więcej informacji na temat zestawów [znaków](./charset.md)można znaleźć w dokumentacji. |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Ustaw tę wartość na true i uzyskaj niewielką korzyść w zakresie wydajności, ponieważ środowisko uruchomieniowe nie będzie szukać alternatywnych nazw funkcji z sufiksem "A" lub "W" w zależności od wartości `CharSet` ustawienia ("a" dla `CharSet.Ansi` i "w" dla `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parametry ciągu
 
-Gdy CharSet jest Unicode lub argument jest `[MarshalAs(UnmanagedType.LPWSTR)]` jawnie oznaczony jako _i_ ciąg jest przekazywany przez wartość (nie `ref` lub), `out`ciąg zostanie przypięty i używany bezpośrednio przez kod macierzysty (a nie kopiowane).
+Gdy zestaw znaków jest Unicode lub argument jest jawnie oznaczony jako `[MarshalAs(UnmanagedType.LPWSTR)]` _i_ ciąg jest przenoszona przez wartość (not `ref` lub `out`), ciąg zostanie przypięty i użyty bezpośrednio przez kod natywny (zamiast kopiować).
 
-Pamiętaj, aby `[DllImport]` `Charset.Unicode` oznaczyć jako, chyba że wyraźnie chcesz ANSI leczenia strun.
+Pamiętaj, `[DllImport]` aby oznaczyć element `Charset.Unicode` jako, chyba że jawnie zachodzi konieczność traktowania ciągów znaków ANSI.
 
-❌NIE używaj `[Out] string` parametrów. Parametry ciągu przekazywane przez `[Out]` wartość z atrybutem może zdestabilizować środowisko uruchomieniowe, jeśli ciąg jest ciąg internowany. Zobacz więcej informacji na temat internowania ciągów w dokumentacji dla <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌NIE należy używać `[Out] string` parametrów. Parametry ciągu przesłane przez wartość z `[Out]` atrybutem mogą destabilizację środowiska uruchomieniowego, jeśli ciąg jest ciągiem z stażystami. Zobacz więcej informacji na temat sposobu informowania o ciągach w dokumentacji dotyczącej programu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌UNIKNĄĆ `StringBuilder` parametrów. `StringBuilder`organizowanie *zawsze* tworzy natywną kopię buforu. Jako takie, może to być bardzo nieefektywne. Weź typowy scenariusz wywoływania interfejsu API systemu Windows, który przyjmuje ciąg:
+❌NALEŻY `StringBuilder` unikać parametrów. `StringBuilder`kierowanie *zawsze* tworzy natywną kopię buforu. W związku z tym może być wyjątkowo niewydajne. Zapoznaj się z typowym scenariuszem wywoływania interfejsu API systemu Windows, który pobiera ciąg:
 
-1. Tworzenie SB żądanej pojemności (przydziela zarządzaną pojemność)**{1}**
+1. Utwórz SB o żądanej pojemności (przydzieli zarządzaną pojemność)**{1}**
 2. Invoke
-   1. Przydziela bufor macierzysty**{2}**
-   2. Kopiuje zawartość, jeśli `[In]` _(domyślnie dla parametru) `StringBuilder` _
-   3. Kopiuje bufor macierzysty do nowo `[Out]` **{3}** przydzielonej tablicy zarządzanej, jeśli _(również `StringBuilder`domyślnie)_
-3. `ToString()`przydziela kolejną tablicę zarządzana**{4}**
+   1. Przydziela bufor natywny**{2}**
+   2. Kopiuje zawartość, jeśli `[In]` _(wartość domyślna `StringBuilder` parametru)_
+   3. Kopiuje bufor macierzysty do nowo przydzielonej tablicy zarządzanej, jeśli `[Out]` **{3}** _(również `StringBuilder`domyślnie dla)_
+3. `ToString()`alokuje jeszcze inną zarządzaną tablicę**{4}**
 
-To *{4}* jest alokacje, aby uzyskać ciąg z kodu macierzystego. Najlepsze, co możesz zrobić, aby ograniczyć to jest ponowne użycie `StringBuilder` w innym wywołaniu, ale to nadal zapisuje tylko *1* alokacji. Znacznie lepiej jest używać i buforować `ArrayPool`bufor znaków z — można następnie `ToString()` dostać się do tylko alokacji dla kolejnych wywołań.
+Jest to *{4}* alokacje w celu pobrania ciągu z kodu natywnego. Najlepszym rozwiązaniem jest to, aby ograniczyć to użycie w innym wywołaniu `StringBuilder` , ale nadal tylko *1* przydział. Znacznie lepiej jest używać bufora `ArrayPool`znaków i pamięci podręcznej, a następnie można przejść do przydziału dla `ToString()` kolejnych wywołań.
 
-Innym problemem `StringBuilder` jest to, że zawsze kopiuje buforu zwracanego z powrotem do pierwszej wartości null. Jeśli przekazany ciąg wstecz nie jest zakończony lub jest ciągiem zakończonym z podwójną wartością null, p/invoke jest w najlepszym wypadku niepoprawny.
+Innym problemem `StringBuilder` jest to, że zawsze kopiuje kopię zapasową buforu powrotu do pierwszej wartości null. Jeśli przeszedł ciąg zakończony nieprzerwanie lub jest ciągiem o podwójnej wartości null, element P/Invoke jest niewłaściwy.
 
-Jeśli *używasz* `StringBuilder`, jeden ostatni gotcha jest to, że pojemność **nie** zawiera ukryte null, który jest zawsze rozliczane w interop. Jest to typowe dla ludzi, aby uzyskać ten błąd, jak większość interfejsów API chcesz rozmiar buforu, *w tym* null. Może to spowodować zmarnowane/niepotrzebne alokacje. Ponadto ten gotcha uniemożliwia środowisko uruchomieniowe `StringBuilder` optymalizacji organizowania, aby zminimalizować kopie.
+W `StringBuilder`przypadku *korzystania z* programu Gotcha, że pojemność nie obejmuje ukrytych wartości null, które zawsze **są uwzględniane w** ramach międzyoperacyjności. Jest to często używane w przypadku, gdy większość interfejsów API ma rozmiar buforu, *łącznie* z wartością null. Może to spowodować marnowanie/niepotrzebne alokacje. Ponadto ta Gotcha uniemożliwia środowisko uruchomieniowe optymalizacji `StringBuilder` organizowania, aby zminimalizować kopie.
 
-✔️ ROZWAŻ użycie `char[]`s z `ArrayPool`pliku .
+✔️ ROZWAŻYĆ użycie `char[]`s z `ArrayPool`.
 
-Aby uzyskać więcej informacji na temat organizowania [ciągów, zobacz Domyślne kierowanie ciągami i](../../framework/interop/default-marshaling-for-strings.md) [dostosowywanie ciągów .](customize-parameter-marshaling.md#customizing-string-parameters)
+Aby uzyskać więcej informacji na temat organizowania ciągów, zobacz [domyślne kierowanie dla ciągów](../../framework/interop/default-marshaling-for-strings.md) i [Dostosowywanie organizowania ciągów](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Specyficzne dla systemu Windows__ W `[Out]` przypadku ciągów CLR będzie domyślnie `CoTaskMemFree` `SysStringFree` używany do wolnych `UnmanagedType.BSTR`ciągów lub ciągów, które są oznaczone jako .
-> **Dla większości interfejsów API z buforem ciągu wyjściowego:** Liczba przekazanych znaków musi zawierać wartość null. Jeśli zwracana wartość jest mniejsza niż liczba przekazanych znaków wywołanie zakończyło się pomyślnie, a wartość jest liczbą znaków *bez* końcowego null. W przeciwnym razie liczba jest wymagany rozmiar buforu, *w tym* znak null.
+> __Specyficzne dla systemu Windows__ Dla `[Out]` ciągów, które domyślnie są `CoTaskMemFree` używane przez środowisko CLR do zwalniania ciągów lub `SysStringFree` ciągów, które `UnmanagedType.BSTR`są oznaczone jako.
+> **W przypadku większości interfejsów API z buforem ciągu wyjściowego:** Liczba przesłanych znaków musi zawierać wartość null. Jeśli zwracana wartość jest mniejsza niż przekazana liczba znaków, wywołanie zakończyło się pomyślnie, a wartość jest liczbą znaków *bez* końcowej wartości null. W przeciwnym razie liczba jest wymaganym rozmiarem bufora, w *tym* znakiem null.
 >
-> - Pass in 5, get 4: Ciąg ma 4 znaki długości z końcowego null.
-> - Przekaż w 5, get 6: Ciąg ma długość 5 znaków, potrzebujesz bufora 6 znaków, aby pomieścić wartość null.
+> - Przekaż 5, Pobierz 4: ciąg zawiera 4 znaki o długości końcowej null.
+> - Przekaż 5, get 6: ciąg ma długość 5 znaków, do przechowywania wartości null potrzebny jest rozmiar buforu znaków.
 > [Typy danych systemu Windows dla ciągów](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parametry i pola logiczne
 
-Wartości logiczne są łatwe do bałaganu. Domyślnie .NET `bool` jest organizowane do `BOOL`systemu Windows , gdzie jest to wartość 4-bajtowa. Jednak , `_Bool`i `bool` typy w C i C++ są *pojedynczym* bajtem. Może to prowadzić do trudnych do wyśledzenia błędów, ponieważ połowa wartości zwracanej zostanie odrzucona, co tylko *potencjalnie* zmieni wynik. Aby uzyskać więcej informacji na `bool` temat organizowania wartości `bool` .NET do typów C lub C++, zobacz dokumentację [dotyczącą dostosowywania zasadowania pól logicznych](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
+Wartości logiczne są łatwe w obsłudze. Domyślnie środowisko .NET `bool` jest organizowane w systemie Windows `BOOL`, gdzie jest wartością 4-bajtową. Jednak `_Bool`, i `bool` typy w C i C++ są *pojedynczym* bajtem. Może to prowadzić do trudnej śledzenia błędów w postaci połowy wartości zwracanej zostanie odrzucone, co *spowoduje jedynie zmianę* wyniku. Aby uzyskać więcej informacji o kierowaniu wartości `bool` .NET do typów C lub `bool` C++, zobacz dokumentację dotyczącą [dostosowywania kierowania pól logicznych](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
-## <a name="guids"></a>Identyfikatory guid
+## <a name="guids"></a>Identyfikatory GUID
 
-Identyfikatory GUID można bezpośrednio ująć w podpisach. Wiele interfejsów API `GUID&` systemu Windows `REFIID`przyjmuje aliasy typów, takie jak . Po przejściu przez ref, mogą `ref` one być `[MarshalAs(UnmanagedType.LPStruct)]` przekazywane przez lub z atrybutem.
+Identyfikatory GUID można używać bezpośrednio w sygnaturach. Wiele interfejsów API systemu `GUID&` Windows korzysta z `REFIID`aliasów typu, takich jak. Gdy są przesyłane przez odwołanie, mogą być przesyłane przez `ref` lub z `[MarshalAs(UnmanagedType.LPStruct)]` atrybutem.
 
-| Identyfikator GUID | Identyfikator GUID przez ref |
+| Identyfikator GUID | Według-ref — identyfikator GUID |
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌NIE używaj `[MarshalAs(UnmanagedType.LPStruct)]` do `ref` niczego innego niż parametry GUID.
+❌NIE należy używać `[MarshalAs(UnmanagedType.LPStruct)]` dla elementów innych niż `ref` parametry GUID.
 
-## <a name="blittable-types"></a>Typy blittable
+## <a name="blittable-types"></a>Typy danych kopiowalnych
 
-Typy Blittable są typy, które mają taką samą reprezentację na poziomie bitowym w kodzie zarządzanym i macierzystym. W związku z tym nie muszą być konwertowane na inny format, który ma być organizowany do i z kodu macierzystego, a ponieważ zwiększa to wydajność powinny być preferowane.
+Typy danych kopiowalnych są typami, które mają taką samą reprezentację na poziomie bitowym w kodzie zarządzanym i natywnym. W związku z tym nie trzeba przekonwertowane do innego formatu, który ma być zorganizowany do i z kodu natywnego, a w miarę zwiększania wydajności powinny one być preferowane.
 
-**Typy Blittable:**
+**Typy danych kopiowalnych:**
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
-- nie zagnieżdżone jednowymiarowe tablice typów `int[]`blittable (na przykład)
-- struktury i klasy o stałym układzie, które mają tylko typy wartości blittable dla pól instancji
-  - wymaga `[StructLayout(LayoutKind.Sequential)]` lub`[StructLayout(LayoutKind.Explicit)]`
+- niezagnieżdżone tablice jednowymiarowe typów danych kopiowalnych (na przykład `int[]`)
+- struktury i klasy ze stałym układem, które mają tylko typy wartości danych kopiowalnych dla pól wystąpień
+  - układ stały wymaga `[StructLayout(LayoutKind.Sequential)]` lub`[StructLayout(LayoutKind.Explicit)]`
   - struktury są `LayoutKind.Sequential` domyślnie, klasy są`LayoutKind.Auto`
 
-**NIE blittable:**
+**NIE danych kopiowalnych:**
 
 - `bool`
 
-**CZASAMI blittable:**
+**Czasami danych kopiowalnych:**
 
 - `char`, `string`
 
-Gdy typy blittable są przekazywane przez odwołanie, są one po prostu przypięte przez marshaller zamiast kopiowane do buforu pośredniego. (Klasy są z natury przekazywane przez odwołanie, struktury są `ref` `out`przekazywane przez odwołanie, gdy są używane z lub .)
+Gdy typy danych kopiowalnych są przesyłane przez odwołanie, są one po prostu przypięte przez organizatora, zamiast kopiować do buforu pośredniego. (Klasy są z założenia przesyłane przez odwołanie, struktury są przesyłane przez odwołanie, gdy jest `ref` używany `out`z lub).
 
-`char`jest blittable w tablicy jednowymiarowej **lub** jeśli jest to część typu, `[StructLayout]` który `CharSet = CharSet.Unicode`zawiera jest jawnie oznaczone .
+`char`jest danych kopiowalnych w tablicy jednowymiarowej **lub** , jeśli jest częścią typu, który zawiera, jest jawnie oznaczona przy `[StructLayout]` użyciu. `CharSet = CharSet.Unicode`
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -114,24 +114,24 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string`jest blittable, jeśli nie jest zawarty w innym typie i jest przekazywany `[DllImport]` `CharSet = CharSet.Unicode` jako argument, który jest oznaczony `[MarshalAs(UnmanagedType.LPWStr)]` lub ma zestaw.
+`string`jest danych kopiowalnych, jeśli nie jest zawarty w innym typie i jest przenoszona jako argument, który jest oznaczony za `[MarshalAs(UnmanagedType.LPWStr)]` pomocą lub `[DllImport]` ma `CharSet = CharSet.Unicode` ustawioną wartość.
 
-Możesz sprawdzić, czy typ jest blittable, próbując `GCHandle`utworzyć przypięty . Jeśli typ nie jest ciągiem lub uważany `GCHandle.Alloc` za `ArgumentException`blittable, zrzuci .
+Możesz sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypięty `GCHandle`. Jeśli typ nie jest ciągiem lub jest traktowany jako `GCHandle.Alloc` danych kopiowalnych, zostanie `ArgumentException`zgłoszony.
 
-✔️ zrobić, aby twoje struktury blittable, gdy jest to możliwe.
+✔️, gdy to możliwe, danych kopiowalnych struktury.
 
 Aby uzyskać więcej informacji, zobacz:
 
 - [Typy kopiowalne i niekopiowalne](../../framework/interop/blittable-and-non-blittable-types.md)
-- [Typ Marshaling](type-marshaling.md)
+- [Kierowanie typów](type-marshaling.md)
 
-## <a name="keeping-managed-objects-alive"></a>Utrzymywanie obiektów zarządzanych przy życiu
+## <a name="keeping-managed-objects-alive"></a>Utrzymywanie aktywności obiektów zarządzanych
 
-`GC.KeepAlive()`zapewni, że obiekt pozostanie w zakresie, dopóki metoda KeepAlive nie zostanie trafiona.
+`GC.KeepAlive()`Upewnij się, że obiekt pozostaje w zakresie, dopóki nie zostanie osiągnięta Metoda utrzymywania aktywności.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)umożliwia marshaller zachować obiekt przy życiu na czas trwania P/Invoke. Może być używany zamiast `IntPtr` w podpisy metody. `SafeHandle`skutecznie zastępuje tę klasę i powinien być stosowany zamiast tego.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)umożliwia Organizatorowi utrzymywanie obiektu na czas trwania elementu P/Invoke. Może być używany zamiast `IntPtr` podpisów metod. `SafeHandle`efektywnie zastępuje tę klasę i powinny być używane zamiast tego.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)umożliwia przypinanie obiektu zarządzanego i uzyskanie do niego natywnego wskaźnika. Podstawowy wzór to:
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)umożliwia Przypinanie obiektu zarządzanego i uzyskanie wskaźnika natywnego do niego. Wzorzec podstawowy to:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -139,7 +139,7 @@ IntPtr ptr = handle.AddrOfPinnedObject();
 handle.Free();
 ```
 
-Przypinanie nie jest `GCHandle`ustawieniem domyślnym dla . Inny wzorzec głównych jest przekazywanie odwołania do obiektu zarządzanego za pośrednictwem kodu macierzystego i z powrotem do kodu zarządzanego, zwykle z wywołaniem zwrotnym. Oto wzór:
+Przypinanie nie jest domyślne `GCHandle`dla elementu. Inny wzorzec główny polega na przekazaniu odwołania do zarządzanego obiektu za pomocą kodu natywnego i z powrotem do kodu zarządzanego, zazwyczaj przy użyciu wywołania zwrotnego. Oto wzorzec:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj);
@@ -153,15 +153,15 @@ object managedObject = handle.Target;
 handle.Free();
 ```
 
-Nie zapominaj, `GCHandle` że musi być jawnie uwolniony, aby uniknąć przecieków pamięci.
+Nie zapomnij `GCHandle` , że musi być jawnie zwolnione, aby uniknąć przecieków pamięci.
 
 ## <a name="common-windows-data-types"></a>Typowe typy danych systemu Windows
 
-Oto lista typów danych powszechnie używanych w interfejsach API systemu Windows i typy C# do użycia podczas wywoływania kodu systemu Windows.
+Poniżej znajduje się lista typów danych używanych w interfejsach API systemu Windows, które mają być używane podczas wywoływania kodu systemu Windows.
 
-Następujące typy są tego samego rozmiaru w systemie Windows 32-bitowym i 64-bitowym, pomimo ich nazw.
+Następujące typy są takie same, jak w przypadku systemu Windows 32-bitowego i 64-bitowego, niezależnie od ich nazw.
 
-| impulsów | Windows          | C (Windows)          | C#       | Alternatywnych                          |
+| impulsów | Windows          | C (Windows)          | C#       | Różne                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -185,9 +185,9 @@ Następujące typy są tego samego rozmiaru w systemie Windows 32-bitowym i 64-b
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
-Następujące typy, będąc wskaźniki, należy wykonać szerokość platformy. `IntPtr` / Użyj `UIntPtr` do nich.
+Następujące typy, które są wskaźnikami, są zgodne z szerokością platformy. `IntPtr` / Użyj `UIntPtr` tego elementu.
 
-| Typy wskaźników `IntPtr`podpisanych (używanie) | Niepodpisane typy `UIntPtr`wskaźników (użyj) |
+| Typy wskaźników ze znakiem `IntPtr`(Użyj) | Niepodpisane typy wskaźnika ( `UIntPtr`Użyj) |
 |:------------------------------------|:---------------------------------------|
 | `HANDLE`                            | `WPARAM`                               |
 | `HWND`                              | `UINT_PTR`                             |
@@ -197,7 +197,7 @@ Następujące typy, będąc wskaźniki, należy wykonać szerokość platformy. 
 | `LONG_PTR`                          |                                        |
 | `INT_PTR`                           |                                        |
 
-System `PVOID` Windows, który `void*` jest C może `IntPtr` być `UIntPtr`organizowane `void*` jako jeden lub , ale wolą, gdy jest to możliwe.
+System Windows `PVOID` , który jest C `void*` , może być zorganizowany jako `IntPtr` lub `UIntPtr`, ale preferowany `void*` , jeśli jest to możliwe.
 
 [Typy danych systemu Windows](/windows/desktop/WinProg/windows-data-types)
 
@@ -205,25 +205,25 @@ System `PVOID` Windows, który `void*` jest C może `IntPtr` być `UIntPtr`organ
 
 ## <a name="structs"></a>Struktury
 
-Struktury zarządzane są tworzone na stosie i nie są usuwane, dopóki metoda nie zwróci. Zgodnie z definicją są one "przypięte" (nie zostaną przeniesione przez GC). Można również po prostu wziąć adres w niebezpiecznych bloków kodu, jeśli kod macierzysty nie będzie używać wskaźnika poza koniec bieżącej metody.
+Zarządzane struktury są tworzone na stosie i nie są usuwane, dopóki metoda nie zwróci metody. Według definicji są one "przypięte" (nie są przenoszone przez wykaz globalny). Można również po prostu przełączyć adres w niebezpieczny blok kodu, jeśli kod natywny nie będzie używać wskaźnika poza końcem bieżącej metody.
 
-Struktury Blittable są znacznie bardziej wydajne, ponieważ mogą być po prostu używane bezpośrednio przez warstwę organizowania. Spróbuj zrobić struktury blittable (na przykład, uniknąć `bool`). Aby uzyskać więcej informacji, zobacz [Blittable typy](#blittable-types) sekcji.
+Struktury danych kopiowalnych są znacznie bardziej wydajne, ponieważ mogą być używane bezpośrednio przez warstwę kierującą. Spróbuj utworzyć struktury danych kopiowalnych (na przykład unikać `bool`). Aby uzyskać więcej informacji, zobacz sekcję [typy danych kopiowalnych](#blittable-types) .
 
-*Jeśli* struktura jest blittable, `sizeof()` należy `Marshal.SizeOf<MyStruct>()` użyć zamiast dla lepszej wydajności. Jak wspomniano powyżej, można sprawdzić, czy typ jest blittable, próbując `GCHandle`utworzyć przypięty . Jeśli typ nie jest ciągiem lub `GCHandle.Alloc` uważany za `ArgumentException`blittable, zrzuci plik .
+*Jeśli* struktura jest danych kopiowalnych, użyj `sizeof()` zamiast niej, `Marshal.SizeOf<MyStruct>()` Aby uzyskać lepszą wydajność. Jak wspomniano powyżej, można sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypięty `GCHandle`. Jeśli typ nie jest ciągiem lub uznano za danych kopiowalnych, `GCHandle.Alloc` spowoduje to `ArgumentException`zgłoszenie.
 
-Wskaźniki do struktur w definicjach muszą być `ref` przekazywane `unsafe` przez `*`lub używać i .
+Wskaźniki do struktur w definicjach muszą być przesyłane przez `ref` lub `unsafe` i. `*`
 
-✔️ DO dopasować zarządzane struktury jak najbliżej kształtu i nazwy, które są używane w oficjalnej dokumentacji platformy lub nagłówka.
+✔️ być zgodna z zarządzaną strukturą jak najbliżej kształtu i nazw, które są używane w oficjalnej dokumentacji lub nagłówku platformy.
 
-✔️ do użycia języka C# `sizeof()` zamiast `Marshal.SizeOf<MyStruct>()` struktur blittable w celu zwiększenia wydajności.
+Aby zwiększyć wydajność, ✔️ `sizeof()` Użyj języka `Marshal.SizeOf<MyStruct>()` C# zamiast struktur danych kopiowalnych.
 
-❌UNIKAJ `System.Delegate` używania pól lub `System.MulticastDelegate` pól do reprezentowania pól wskaźnika funkcji w strukturach.
+❌UNIKAj `System.Delegate` używania `System.MulticastDelegate` lub pól do reprezentowania pól wskaźników funkcji w strukturach.
 
-Ponieważ <xref:System.Delegate?displayProperty=fullName> <xref:System.MulticastDelegate?displayProperty=fullName> i nie mają wymaganego podpisu, nie gwarantują, że pełnomocnik przeszedł będzie zgodny z podpisem kod macierzysty oczekuje. Ponadto w .NET Framework i .NET Core kierowanie struktury `System.Delegate` `System.MulticastDelegate` zawierającej lub z jego reprezentacji macierzystej do obiektu zarządzanego może zdestabilizować środowisko uruchomieniowe, jeśli wartość pola w reprezentacji macierzystej nie jest wskaźnikiem funkcji, który zawija zarządzanego delegata. W wersji .NET 5 i `System.Delegate` nowszych kierowanie lub `System.MulticastDelegate` pole z reprezentacji natywnej do obiektu zarządzanego nie jest obsługiwane. Użyj określonego typu delegata `System.Delegate` `System.MulticastDelegate`zamiast lub .
+Ponieważ <xref:System.Delegate?displayProperty=fullName> i <xref:System.MulticastDelegate?displayProperty=fullName> nie mają wymaganej sygnatury, nie gwarantujemy, że delegat przeszedł w celu dopasowania do podpisu, którego oczekuje kod natywny. Ponadto w .NET Framework i .NET Core, kierowanie struktury zawierającej `System.Delegate` lub `System.MulticastDelegate` z jej natywnej reprezentacji do obiektu zarządzanego może spowodować destabilizację środowiska uruchomieniowego, jeśli wartość pola w reprezentacji natywnej nie jest wskaźnikiem funkcji, która otacza zarządzany delegat. W programie .NET 5 i nowszych wersjach kierowanie pola `System.Delegate` lub `System.MulticastDelegate` z natywnej reprezentacji do obiektu zarządzanego nie jest obsługiwane. Użyj określonego typu delegata zamiast `System.Delegate` lub. `System.MulticastDelegate`
 
 ### <a name="fixed-buffers"></a>Stałe bufory
 
-Tablica `INT_PTR Reserved1[2]` taka jak musi być `IntPtr` zorganizowana do dwóch pól `Reserved1a` i `Reserved1b`. Gdy tablica natywna jest typem `fixed` pierwotnym, możemy użyć słowa kluczowego, aby napisać go trochę bardziej czysto. Na przykład `SYSTEM_PROCESS_INFORMATION` wygląda następująco w nagłówku macierzystym:
+Tablica, taka `INT_PTR Reserved1[2]` jak musi być organizowana do dwóch `IntPtr` pól, `Reserved1a` i `Reserved1b`. Gdy natywna tablica jest typem pierwotnym, możemy użyć `fixed` słowa kluczowego, aby napisać je nieco bardziej czysty. Na przykład `SYSTEM_PROCESS_INFORMATION` wygląda to w postaci natywnego nagłówka:
 
 ```c
 typedef struct _SYSTEM_PROCESS_INFORMATION {
@@ -235,7 +235,7 @@ typedef struct _SYSTEM_PROCESS_INFORMATION {
 } SYSTEM_PROCESS_INFORMATION
 ```
 
-W języku C# możemy napisać to w ten sposób:
+W języku C# możemy napisać następujący:
 
 ```csharp
 internal unsafe struct SYSTEM_PROCESS_INFORMATION
@@ -248,4 +248,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Istnieją jednak pewne gotchas ze stałymi buforami. Stałe bufory typów nietrwalonych nie będą poprawnie organizowane, więc tablica w miejscu musi zostać rozszerzona na wiele pojedynczych pól. Ponadto w programie .NET Framework i .NET Core przed 3.0, jeśli struktura zawierająca stałe pole buforu jest zagnieżdżona w strukturze nieduwalnej, stałe pole buforu nie zostanie poprawnie zorganizowane do kodu macierzystego.
+Istnieje jednak kilka pytania dotyczące usługi z stałymi buforami. Stałe bufory typów innych niż danych kopiowalnych nie będą poprawnie organizowane, więc tablica w miejscu musi być rozwijana do wielu pojedynczych pól. Ponadto w .NET Framework i .NET Core przed 3,0, jeśli struktura zawierająca pole stałego buforu jest zagnieżdżona w strukturze innej niż danych kopiowalnych, stałe pole buforu nie będzie poprawnie organizowane w kodzie natywnym.

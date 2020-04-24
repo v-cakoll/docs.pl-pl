@@ -1,48 +1,48 @@
 ---
-title: Typy i zmienne języka C# — przewodnik po języku Języka C#
-description: 'Dowiedz się więcej o definiowaniu typów i deklarowaniu zmiennych w języku C #'
+title: Typy i zmienne języka c# — samouczek języka C#
+description: 'Informacje na temat definiowania typów i deklarowania zmiennych w języku C #'
 ms.date: 02/25/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc80a7ea80790ef5af5218f5a608e5829d2970cc
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78159094"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135961"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
-Istnieją dwa rodzaje typów w języku C#: *typy wartości* i *typy odwołań*. Zmienne typów wartości bezpośrednio zawierają swoje dane, podczas gdy zmienne typów odwołań przechowują odwołania do ich danych, przy czym te ostatnie są znane jako obiekty. W przypadku typów odwołań możliwe jest, aby dwie zmienne odwoływały się do tego samego obiektu, a zatem możliwe, że operacje na jednej zmiennej wpływają na obiekt, do którego odwołuje się inna zmienna. W przypadku typów wartości zmienne mają własną kopię danych i nie jest możliwe, aby operacje `ref` na `out` jednym miały wpływ na inne (z wyjątkiem zmiennych parametrów i zmiennych parametrów).
+Istnieją dwa rodzaje typów w języku C#: *typy wartości* i *typy referencyjne*. Zmienne typów wartości bezpośrednio zawierają swoje dane, a zmienne typów referencyjnych przechowują odwołania do danych, które są znane jako obiekty. W przypadku typów referencyjnych istnieje możliwość, że dwie zmienne odwołują się do tego samego obiektu, w tym przypadku operacje na jednej zmiennej mają wpływ na obiekt, do którego odwołuje się inna zmienna. W przypadku typów wartości zmiennych każda z nich ma własną kopię danych i nie jest możliwe wykonywanie operacji na nich, aby wpływać na drugą (z wyjątkiem `ref` zmiennych `out` i parametrów).
 
-Typy wartości języka C#są dalej dzielone na *typy proste,* *typy wyliczenia,* *typy struktury*i *wartości nullable*. Typy odwołań języka C#są dalej dzielone na *typy klas,* *typy interfejsów,* *typy tablic*i *typy delegatów.*
+Typy wartości języka C# są dalej podzielone na *typy proste*, *typy wyliczeniowe*, *typy struktur*i *typy wartości null*. Typy odwołań języka C# są dalej podzielone na *typy klas*, *typy interfejsów*, *Typy tablic*i *typy delegatów*.
 
 Poniższy konspekt zawiera omówienie systemu typów języka C#.
 
 - [Typy wartości][ValueTypes]
   - [Typy proste][SimpleTypes]
-    - Podpisana `sbyte`integralna: , `short`, `int``long`
-    - Niepodpisana `byte`całka: , `ushort`, `uint``ulong`
+    - Całkowita część ze `sbyte`znakiem:, `short`, `int`,`long`
+    - Całka bez `byte`znaku `ushort`: `uint`,,,`ulong`
     - Znaki Unicode:`char`
     - Binarny zmiennoprzecinkowy IEEE: `float`,`double`
-    - Przestawny przecinkowy o wysokiej precyzji:`decimal`
-    - Boolean:`bool`
-  - [Typy wyliczenia][EnumTypes]
-    - Typy formularzy zdefiniowane przez użytkownika`enum E {...}`
-  - [Typy struktury][StructTypes]
-    - Typy formularzy zdefiniowane przez użytkownika`struct S {...}`
-  - [Typy wartości z możliwością null][NullableTypes]
-    - Rozszerzenia wszystkich innych typów wartości `null` o wartości
+    - Zmiennoprzecinkowa liczba dziesiętna o dużej precyzji:`decimal`
+    - Typu`bool`
+  - [Typy wyliczeniowe][EnumTypes]
+    - Typy formularza zdefiniowane przez użytkownika`enum E {...}`
+  - [Typy struktur][StructTypes]
+    - Typy formularza zdefiniowane przez użytkownika`struct S {...}`
+  - [Typy wartości dopuszczające wartość null][NullableTypes]
+    - Rozszerzenia wszystkich innych typów wartości z `null` wartością
 - [Typy odwołań][ReferenceTypes]
   - [Typy klas][ClassTypes]
-    - Ostateczna klasa podstawowa wszystkich innych typów:`object`
+    - Ostateczna Klasa bazowa dla wszystkich innych typów:`object`
     - Ciągi Unicode:`string`
-    - Typy formularzy zdefiniowane przez użytkownika`class C {...}`
+    - Typy formularza zdefiniowane przez użytkownika`class C {...}`
   - [Typy interfejsów][InterfaceTypes]
-    - Typy formularzy zdefiniowane przez użytkownika`interface I {...}`
+    - Typy formularza zdefiniowane przez użytkownika`interface I {...}`
   - [Typy tablic][ArrayTypes]
-    - Na przykład jedno- i wielowymiarowe, `int[]` oraz`int[,]`
-  - [Typy pełnomocników][DelegateTypes]
-    - Typy formularzy zdefiniowane przez użytkownika`delegate int D(...)`
+    - Pojedyncze i wielowymiarowe, na przykład `int[]` i`int[,]`
+  - [Typy delegatów][DelegateTypes]
+    - Typy formularza zdefiniowane przez użytkownika`delegate int D(...)`
 
 [ValueTypes]: ../language-reference/builtin-types/value-types.md
 [SimpleTypes]: ../language-reference/builtin-types/value-types.md#built-in-value-types
@@ -55,55 +55,55 @@ Poniższy konspekt zawiera omówienie systemu typów języka C#.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Aby uzyskać więcej informacji na temat typów liczbowych, zobacz [Typy zintegrowane](../language-reference/builtin-types/integral-numeric-types.md) i Tabela [typów zmiennoprzecinkowych](../language-reference/builtin-types/floating-point-numeric-types.md).
+Aby uzyskać więcej informacji na temat typów liczbowych, zobacz [Typy całkowite](../language-reference/builtin-types/integral-numeric-types.md) i [Tabela typów zmiennoprzecinkowych](../language-reference/builtin-types/floating-point-numeric-types.md).
 
-Typ języka `bool` C#jest używany do reprezentowania wartości `true` logicznych — wartości, które są albo . `false`
+`bool` Typ języka C# jest używany do reprezentowania wartości logicznych — wartości, które są `true` albo `false`lub.
 
-Przetwarzanie znaków i ciągów w języku C# używa kodowania Unicode. Typ `char` reprezentuje jednostkę kodu UTF-16, `string` a typ reprezentuje sekwencję jednostek kodu UTF-16.
+Przetwarzanie znaków i ciągów w języku C# używa kodowania Unicode. `char` Typ reprezentuje jednostkę kodu UTF-16, a `string` typ reprezentuje sekwencję jednostek kodu UTF-16.
 
-Programy C# używać *deklaracji typu* do tworzenia nowych typów. Deklaracja typu określa nazwę i elementy członkowskie nowego typu. Pięć kategorii typów języka C#jest definiowanych przez użytkownika: typy klas, typy struktur, typy interfejsów, typy wyliczenia i typy delegatów.
+Programy w języku C# używają *deklaracji typów* do tworzenia nowych typów. Deklaracja typu określa nazwę i składowe nowego typu. Pięć kategorii typów języka C# jest definiowanych przez użytkownika: typy klas, typy struktur, typy interfejsów, typy wyliczeniowe i typy delegatów.
 
-Typ `class` definiuje strukturę danych, która zawiera elementy członkowskie danych (pola) i elementy członkowskie funkcji (metody, właściwości i inne). Typy klas obsługują pojedyncze dziedziczenie i polimorfizm, mechanizmy, dzięki którym klasy pochodne mogą rozszerzać i specjalizować klasy podstawowe.
+`class` Typ definiuje strukturę danych, która zawiera składowe danych (pola) i składowe funkcji (metody, właściwości i inne). Typy klas obsługują pojedyncze dziedziczenie i polimorfizm, czyli mechanizmy, w których klasy pochodne mogą poszerzać i specjalizację klas bazowych.
 
-Typ `struct` jest podobny do typu klasy, ponieważ reprezentuje strukturę z członkami danych i członkami funkcji. Jednak w przeciwieństwie do klas struktury są typy wartości i zazwyczaj nie wymagają alokacji sterty. Typy struktury nie obsługują dziedziczenia określonego przez użytkownika, a wszystkie `object`typy struktury niejawnie dziedziczą z typu .
+`struct` Typ jest podobny do typu klasy w tym, że reprezentuje strukturę z składowymi danych i składowymi funkcji. Jednak w przeciwieństwie do klas, struktury są typami wartości i nie wymagają zazwyczaj alokacji sterty. Typy struktur nie obsługują dziedziczenia określonego przez użytkownika, a wszystkie typy struktur niejawnie dziedziczą po typie `object`.
 
-Typ `interface` definiuje kontrakt jako nazwany zestaw elementów członkowskich funkcji publicznych. A `class` `struct` lub implementuje `interface` implementuje implementuje implementacje elementów członkowskich funkcji interfejsu. Może `interface` dziedziczyć z wielu `class` interfejsów podstawowych i lub `struct` może implementować wiele interfejsów.
+`interface` Typ definiuje kontrakt jako nazwany zestaw elementów członkowskich funkcji publicznych. A `class` lub `struct` implementujący `interface` musi zapewniać implementacje elementów członkowskich funkcji interfejsu. `interface` Może dziedziczyć z wielu interfejsów podstawowych, a `class` lub `struct` może zaimplementować wiele interfejsów.
 
-Typ `delegate` reprezentuje odwołania do metod z określoną listą parametrów i typem zwracanym. Delegaci umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaci są analogiczne do typów funkcji dostarczanych przez języki funkcjonalne. Są one również podobne do pojęcia wskaźników funkcji znaleźć w niektórych innych językach. W przeciwieństwie do wskaźników funkcji delegatów są zorientowane obiektowe i bezpieczne dla typu.
+`delegate` Typ reprezentuje odwołania do metod z określoną listą parametrów i zwracanym typem. Delegaty umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazane jako parametry. Delegaty są analogiczne do typów funkcji zapewnianych przez Języki funkcjonalne. Są one również podobne do koncepcji wskaźników funkcji, które znajdują się w innych językach. W przeciwieństwie do wskaźników funkcji Delegaty są zorientowane obiektowo i są bezpieczne dla typów.
 
-Program `class` `struct`, `interface`, `delegate` i typy wszystkich typów ogólnych obsługi, przy czym mogą być parametryzowane z innymi typami.
+Wszystkie `class`typy `struct`, `interface`,, `delegate` i są obsługiwane przez wszystkie typy ogólne, dzięki czemu można je sparametryzowane z innymi typami.
 
-Typ `enum` jest odrębnym typem o nazwanych stałych. Każdy `enum` typ ma typ bazowy, który musi być jednym z ośmiu typów całek. Zestaw wartości `enum` typu jest taki sam jak zestaw wartości typu źródłowego.
+`enum` Typ jest typem odrębnym o nazwanych stałych. Każdy `enum` typ ma typ podstawowy, który musi być jednym z ośmiu typów całkowitych. Zestaw wartości `enum` typu jest taki sam jak zestaw wartości typu podstawowego.
 
-C# obsługuje tablice jedno- i wielowymiarowe dowolnego typu. W przeciwieństwie do typów wymienionych powyżej typy tablicnie nie muszą być zadeklarowane, zanim będą mogły być używane. Zamiast tego typy tablic są konstruowane przez następujące nazwy typu z nawiasami kwadratowymi. `int[]` Na przykład, jest jednowymiarową `int` `int[,]` tablicą , jest `int`tablicą `int[][]` dwuwymiarową , i jest jednowymiarową tablicą jednowymiarowej tablicy `int`.
+Język C# obsługuje tablice o pojedynczym i wielowymiarowym dowolnego typu. W przeciwieństwie do typów wymienionych powyżej, typy tablicy nie muszą być zadeklarowane przed użyciem. Zamiast tego typy tablic są konstruowane przez następujące nazwy typu z nawiasami kwadratowymi. Na `int[]` przykład jest tablicą jednowymiarową `int`, `int[,]` która jest tablicą dwuwymiarową `int`, i `int[][]` jest jednowymiarową tablicą jednowymiarowej tablicy. `int`
 
-Typy wartości null również nie muszą być zadeklarowane, zanim będą mogły być używane. Dla każdego typu `T`wartości niepodlegających wartości null istnieje `T?`odpowiedni typ wartości nullable , który może posiadać dodatkową wartość, `null`. Na przykład `int?` jest typem, który może pomieścić dowolną 32-bitową wartość całkowitą lub wartość `null`.
+Nie trzeba również deklarować typów wartości dopuszczających wartość null, aby można było ich używać. Dla każdego typu `T`wartości, który nie dopuszcza wartości null, istnieje odpowiedni typ `T?`wartości null, który może zawierać dodatkową wartość. `null` Na przykład `int?` jest typem, który może zawierać dowolną 32-bitową liczbę całkowitą lub wartość `null`.
 
-System typu C#jest ujednolicony w taki sposób, `object`że wartość dowolnego typu może być traktowana jako . Każdy typ w języku C# bezpośrednio `object` lub pośrednio pochodzi od typu klasy i `object` jest ostateczną klasą podstawową wszystkich typów. Wartości typów odwołań są traktowane jako obiekty `object`po prostu przez wyświetlenie wartości jako typu . Wartości typów wartości są traktowane jako obiekty, wykonując operacje *bokserskie* i *rozpakowywania*. W poniższym `int` przykładzie wartość jest `object` konwertowana na `int`i z powrotem do .
+System typów języka C# jest jednorodny tak, że wartość dowolnego typu może być traktowana jako `object`. Każdy typ w języku C# bezpośrednio lub pośrednio pochodzi od `object` typu klasy i `object` jest ostateczną klasą bazową wszystkich typów. Wartości typów referencyjnych są traktowane jako obiekty, po prostu wyświetlając wartości jako typ `object`. Wartości typów wartości są traktowane jako obiekty *przez wykonywanie* *operacji pakowania*i rozpakowywania. W poniższym przykładzie `int` wartość jest konwertowana na `object` i z powrotem do. `int`
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-Gdy wartość typu wartości jest konwertowana `object`na `object` typ , wystąpienie, nazywane również "pole", jest przydzielane do przechowywania wartości, a wartość jest kopiowana do tego pola. I odwrotnie, `object` gdy odwołanie jest rzutowane na typ wartości, `object` sprawdzasię, że odwołanie jest polem właściwego typu wartości, a jeśli sprawdzenie zakończy się pomyślnie, wartość w polu jest kopiowana.
+Gdy wartość typu wartości jest przypisana do `object` odwołania, pole "Box" jest przydzielane do przechowywania wartości. To pole jest wystąpieniem typu odwołania, a wartość jest kopiowana do tego pola. Z drugiej strony, `object` gdy odwołanie jest rzutowane na typ wartości, jest wykonywane sprawdzenie, że odwołanie `object` jest polem o poprawnym typie wartości. Jeśli sprawdzenie zakończy się powodzeniem, wartość w polu jest kopiowana do typu wartości.
 
-Ujednolicony system typów języka C#skutecznie oznacza, że typy wartości mogą stać się obiektami "na żądanie". Ze względu na unifikacji, biblioteki ogólnego przeznaczenia, które używają typu `object` mogą być używane zarówno z typami odwołań, jak i typami wartości.
+Ujednolicony system typów języka C# efektywnie oznacza, że typy wartości są `object` traktowane jako odwołania "na żądanie". Ze względu na nieujednolicenie biblioteki ogólnego przeznaczenia używające typu `object` można używać ze wszystkimi typami, które pochodzą od `object`, w tym typy odwołań i typy wartości.
 
-Istnieje kilka rodzajów *zmiennych* w języku C#, w tym pola, elementy tablicy, zmienne lokalne i parametry. Zmienne reprezentują lokalizacje magazynu, a każda zmienna ma typ, który określa, jakie wartości mogą być przechowywane w zmiennej, jak pokazano poniżej.
+W języku C# istnieje kilka rodzajów *zmiennych* , w tym pola, elementy tablicy, zmienne lokalne i parametry. Zmienne reprezentują lokalizacje przechowywania, a Każda zmienna ma typ, który określa, jakie wartości mogą być przechowywane w zmiennej, jak pokazano poniżej.
 
-- Typ wartości niezbywalnej
-  - Wartość tego typu dokładnego
-- Typ wartości z możliwością null
-  - Wartość `null` lub wartość tego typu dokładnego
+- Typ wartości niedopuszczający wartości null
+  - Wartość tego dokładnego typu
+- Typ wartości null
+  - `null` Wartość lub wartość tego dokładnego typu
 - obiekt
-  - Odwołanie, `null` odwołanie do obiektu dowolnego typu odwołania lub odwołanie do wartości pudełkowej dowolnego typu wartości
+  - `null` Odwołanie, odwołanie do obiektu dowolnego typu odwołania lub odwołanie do wartości opakowanej dowolnego typu wartości
 - Typ klasy
-  - Odwołanie, `null` odwołanie do wystąpienia tego typu klasy lub odwołanie do wystąpienia klasy pochodzącej z tego typu klasy
+  - `null` Odwołanie, odwołanie do wystąpienia tego typu klasy lub odwołanie do wystąpienia klasy pochodzącej od tego typu klasy
 - Typ interfejsu
-  - Odwołanie, `null` odwołanie do wystąpienia typu klasy, który implementuje tego typu interfejsu lub odwołanie do wartości pudełkowej typu wartości, która implementuje tego typu interfejsu
+  - `null` Odwołanie, odwołanie do wystąpienia typu klasy implementującego ten typ interfejsu lub odwołanie do wartości opakowanej typu wartości implementującej ten typ interfejsu
 - Typ tablicy
-  - Odwołanie, `null` odwołanie do wystąpienia tego typu tablicy lub odwołanie do wystąpienia zgodnego typu tablicy
-- Typ pełnomocnika
-  - Odwołanie `null` lub odwołanie do wystąpienia zgodnego typu delegata
+  - `null` Odwołanie, odwołanie do wystąpienia tego typu tablicy lub odwołanie do wystąpienia zgodnego typu tablicy
+- Typ delegata
+  - `null` Odwołanie lub odwołanie do wystąpienia zgodnego typu delegata
 
 > [!div class="step-by-step"]
 > [Poprzedni](program-structure.md)
-> [następny](expressions.md)
+> [Następny](expressions.md)

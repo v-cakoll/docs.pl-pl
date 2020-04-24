@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zastępowanie zakodowanej serializacji XML protokołu SOAP'
+title: 'Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
@@ -12,9 +12,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61922593"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Instrukcje: zastępowanie zakodowanej serializacji XML protokołu SOAP
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP
 
-Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje o zastępowanie standardowych serializacji XML, zobacz [jak: Określ nazwę elementu alternatywny Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje na temat zastępowania standardowej serializacji XML, zobacz [How to: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Aby zastąpić serializacji obiektów jako protokołu SOAP wiadomości
 
@@ -24,11 +24,11 @@ Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces 
 
 3. Utworzenie wystąpienia co najmniej jeden z atrybutów, które wpływa na serializacji XML, odpowiednio do elementu członkowskiego serializowanego. Aby uzyskać więcej informacji zobacz "Atrybuty czy kontroli kodowany protokołu SOAP serializacji".
 
-4. Ustaw właściwość odpowiednie `SoapAttributes` z atrybutem utworzony w kroku 3.
+4. Ustaw odpowiednią właściwość `SoapAttributes` dla atrybutu, który został utworzony w kroku 3.
 
 5. Add `SoapAttributes` to `SoapAttributeOverrides`.
 
-6. Utwórz `XmlTypeMapping` za pomocą `SoapAttributeOverrides`. Użyj `SoapReflectionImporter.ImportTypeMapping` metody.
+6. Utwórz `XmlTypeMapping` za pomocą `SoapAttributeOverrides`. Użyj metody `SoapReflectionImporter.ImportTypeMapping`.
 
 7. Utwórz `XmlSerializer` za pomocą `XmlTypeMapping`.
 
@@ -36,7 +36,7 @@ Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykładowy kod serializuje pliku na dwa sposoby: pierwszy, bez pomijania `XmlSerializer` zachowanie i klasy sekundę przez zastąpienie zachowania. Przykład zawiera klasę o nazwie `Group` z kilkoma składowymi. Różne atrybuty, takie jak `SoapElementAttribute`, zostały zastosowane do składowych klasy. Gdy klasa jest serializowana z `SerializeOriginal` metody atrybuty kontrolować zawartość komunikatu protokołu SOAP. Gdy `SerializeOverride` jest wywoływana metoda, zachowanie `XmlSerializer` zostanie zastąpiona przez tworzenie różnych atrybutów i ustawienie właściwości `SoapAttributes` do tych atrybutów (zgodnie z potrzebami).
+Poniższy przykład kodu serializacji plik na dwa sposoby: najpierw, bez zastępowania zachowania `XmlSerializer` klasy i sekundy, przez zastąpienie zachowania. Przykład zawiera klasę o nazwie `Group` z kilkoma elementami członkowskimi. Do elementów członkowskich klasy zastosowano `SoapElementAttribute`różne atrybuty, takie jak. Gdy klasa jest serializowana z `SerializeOriginal` metody atrybuty kontrolować zawartość komunikatu protokołu SOAP. Gdy `SerializeOverride` jest wywoływana metoda, zachowanie `XmlSerializer` zostanie zastąpiona przez tworzenie różnych atrybutów i ustawienie właściwości `SoapAttributes` do tych atrybutów (zgodnie z potrzebami).
 
 ```csharp
 using System;
@@ -278,11 +278,11 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [Atrybuty kontrolujące zakodowaną serializację protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [Serializacji XML za pomocą usług sieci Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

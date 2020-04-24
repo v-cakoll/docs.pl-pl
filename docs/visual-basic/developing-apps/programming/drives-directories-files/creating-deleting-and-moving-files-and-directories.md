@@ -31,18 +31,18 @@ ms.locfileid: "74348909"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Tworzenie, usuwanie i przenoszenie plików i katalogów w Visual Basic
 
-W tej sekcji wymieniono zadania związane z tworzeniem, usuwaniem, przenoszeniem i zmienianiem nazw plików i katalogów w języku Visual Basic.  
+Ta sekcja zawiera listę zadań związanych z tworzeniem, usuwaniem, przeniesieniem i zmianami nazw plików i katalogów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: kopiowanie plików z określonym wzorcem do katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- Pokazuje, jak kopiować pliki z określonym wzorcem nazwy pliku, na przykład tylko pliki txt, do katalogu.  
+ Pokazuje, jak kopiować pliki z określonym wzorcem nazw plików, takim jak tylko pliki txt, do katalogu.  
   
  [Instrukcje: tworzenie kopii pliku w tym samym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  Pokazuje, jak utworzyć kopię pliku w tym samym katalogu.  
   
  [Instrukcje: tworzenie kopii pliku w innym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- Pokazuje, jak skopiować plik do innego katalogu.  
+ Demonstruje sposób kopiowania pliku do innego katalogu.  
   
  [Porady: tworzenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Pokazuje, jak utworzyć plik.  
@@ -51,7 +51,7 @@ W tej sekcji wymieniono zadania związane z tworzeniem, usuwaniem, przenoszeniem
  Pokazuje, jak usunąć plik.  
   
  [Porady: znajdowanie plików z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- Pokazuje, jak wyświetlić listę tylko plików z określonym wzorcem nazwy pliku w katalogu.  
+ Pokazuje, w jaki sposób wyświetlać listę tylko plików z określonym wzorcem nazw plików w katalogu.  
   
  [Porady: przenoszenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
  Pokazuje, jak przenieść plik do innego katalogu.  
@@ -66,21 +66,21 @@ W tej sekcji wymieniono zadania związane z tworzeniem, usuwaniem, przenoszeniem
  Pokazuje, jak utworzyć katalog.  
   
  [Porady: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- Pokazuje, jak wyświetlić listę katalogów z określonym wzorcem w ich nazwie.  
+ Demonstruje sposób wyświetlania listy katalogów z określonym wzorcem w nazwie.  
   
  [Porady: pobieranie kolekcji plików z katalogu w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
  Pokazuje, jak wyświetlić listę plików w katalogu.  
   
  [Porady: pobieranie zawartości katalogu Moje dokumenty](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- Pokazuje, jak czytać ze specjalnych katalogów.  
+ Pokazuje, jak czytać z katalogów specjalnych.  
   
  [Porady: analizowanie ścieżek pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- Pokazuje, jak `My` używać metod do łączenia ścieżek plików.  
+ Demonstruje sposób używania `My` metod do łączenia ścieżek plików.  
   
 ## <a name="reference"></a>Dokumentacja  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Opisuje `My.Computer.FileSystem` obiekt i jego członków.  
+ Opisuje `My.Computer.FileSystem` obiekt i jego elementy członkowskie.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
  Opisuje `CombinePath` metodę.  

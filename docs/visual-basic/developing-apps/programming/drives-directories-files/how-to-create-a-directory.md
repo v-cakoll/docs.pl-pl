@@ -14,13 +14,13 @@ ms.locfileid: "74348810"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Porady: tworzenie katalogu w Visual Basic
 
-Użyj `CreateDirectory` metody obiektu, `My.Computer.FileSystem` aby utworzyć katalogi.  
+Użyj `CreateDirectory` metody `My.Computer.FileSystem` obiektu do tworzenia katalogów.  
   
- Jeśli katalog już istnieje, nie jest zgłaszany wyjątek.  
+ Jeśli katalog już istnieje, nie jest zgłaszany żaden wyjątek.  
   
 ### <a name="to-create-a-directory"></a>Aby utworzyć katalog  
   
-- Użyj `CreateDirectory` tej metody, określając pełną ścieżkę lokalizacji, w której ma zostać utworzony katalog. W tym przykładzie `NewDirectory` `C:\Documents and Settings\All Users\Documents`tworzy katalog w .  
+- Użyj `CreateDirectory` metody, określając pełną ścieżkę lokalizacji, w której ma zostać utworzony katalog. Ten przykład tworzy katalog `NewDirectory` w. `C:\Documents and Settings\All Users\Documents`  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
@@ -28,19 +28,19 @@ Użyj `CreateDirectory` metody obiektu, `My.Computer.FileSystem` aby utworzyć k
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa katalogu jest zniekształcona. Na przykład zawiera nielegalne znaki lub jest<xref:System.ArgumentException>tylko biały znak ( ).  
+- Nazwa katalogu jest nieprawidłowo sformułowana. Na przykład zawiera niedozwolone znaki lub jest tylko białym znakiem (<xref:System.ArgumentException>).  
   
-- Katalog nadrzędny katalogu, który ma zostać utworzony,<xref:System.IO.IOException>jest tylko do odczytu ( ).  
+- Katalog nadrzędny katalogu, który ma zostać utworzony, jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- Nazwa katalogu jest `Nothing` <xref:System.ArgumentNullException>( ).  
+- Nazwa katalogu to `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Nazwa katalogu jest za<xref:System.IO.PathTooLongException>długa ( ).  
+- Nazwa katalogu jest za długa (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa katalogu to dwukropek<xref:System.NotSupportedException>":" ( ).  
+- Nazwa katalogu jest dwukropek ":" (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma uprawnień do tworzenia<xref:System.UnauthorizedAccessException>katalogu ( ).  
+- Użytkownik nie ma uprawnienia do tworzenia katalogu (<xref:System.UnauthorizedAccessException>).  
   
-- Użytkownik nie ma uprawnień w sytuacji<xref:System.Security.SecurityException>częściowego zaufania ( ).  
+- Użytkownik nie ma uprawnień w sytuacji częściowej zaufania (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

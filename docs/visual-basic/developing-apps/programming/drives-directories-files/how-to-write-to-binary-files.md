@@ -15,33 +15,33 @@ ms.locfileid: "74334428"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Porady: zapis w plikach binarnych w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> zapisuje dane do pliku binarnego. Jeśli `append` parametr `True`jest , dołączy dane do pliku; w przeciwnym razie dane w pliku są zastępowane.
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Metoda zapisuje dane do pliku binarnego. Jeśli `append` parametr ma `True`wartość, dołączy dane do pliku; w przeciwnym razie dane w pliku są zastępowane.
 
-Jeśli określona ścieżka z wyłączeniem nazwy pliku <xref:System.IO.DirectoryNotFoundException> jest nieprawidłowa, zostanie zgłoszony wyjątek. Jeśli ścieżka jest prawidłowa, ale plik nie istnieje, zostanie utworzony plik.
+Jeśli określona ścieżka wykluczająca nazwę pliku jest nieprawidłowa, zostanie zgłoszony <xref:System.IO.DirectoryNotFoundException> wyjątek. Jeśli ścieżka jest prawidłowa, ale plik nie istnieje, plik zostanie utworzony.
 
-## <a name="to-write-to-a-binary-file"></a>Aby zapisać do pliku binarnego
+## <a name="to-write-to-a-binary-file"></a>Aby zapisać w pliku binarnym
 
-Użyj `WriteAllBytes` tej metody, podając ścieżkę pliku i nazwę oraz bajty, które mają zostać zapisane. W tym przykładzie dołącza `CustomerData` tablicę `CollectedData.dat`danych do pliku o nazwie .
+Użyj `WriteAllBytes` metody, podając ścieżkę i nazwę pliku oraz liczbę bajtów do zapisania. Ten przykład dołącza tablicę `CustomerData` danych do pliku o nazwie. `CollectedData.dat`
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
 ## <a name="robust-programming"></a>Niezawodne programowanie
 
-Następujące warunki mogą powodować wyjątek:
+Następujące warunki mogą utworzyć wyjątek:
 
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości; zawiera tylko biały znak; lub zawiera nieprawidłowe znaki. (<xref:System.ArgumentException>).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest to ciąg o zerowej długości; zawiera tylko białe znaki; lub zawiera nieprawidłowe znaki. (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- `File`wskazuje ścieżkę, która nie<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>istnieje ( lub ).
+- `File`wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).
 
-- Plik jest używany przez inny proces lub występuje błąd<xref:System.IO.IOException>we/wy ( ).
+- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).
 
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
 ## <a name="see-also"></a>Zobacz też
 

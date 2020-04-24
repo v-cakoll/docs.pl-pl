@@ -34,7 +34,7 @@ Określa, która wersja platformy środowiska uruchomieniowego języka wspólneg
 |`anycpu32bitpreferred`|Kompiluje zestaw do uruchomienia na dowolnej platformie. Aplikacja będzie działać jako aplikacja 32-bitowa na 32-bitowych i 64-bitowych wersjach systemu Windows. Ta flaga jest prawidłowa tylko dla plików wykonywalnych (. EXE) i wymaga .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj opcji `-platform`, aby określić typ procesora docelowego dla pliku wyjściowego.  
+ Użyj `-platform` opcji, aby określić typ procesora docelowego dla pliku wyjściowego.  
   
  Ogólnie rzecz biorąc, zestawy .NET Framework, które zapisały w Visual Basic, będą uruchamiane niezależnie od platformy. Jednak istnieją sytuacje, które zachowują się inaczej na różnych platformach. Te typowe przypadki są następujące:  
   
@@ -42,27 +42,27 @@ Określa, która wersja platformy środowiska uruchomieniowego języka wspólneg
   
 - Arytmetyczny wskaźnik obejmujący stałe rozmiary.  
   
-- Nieprawidłowe wywołanie platformy lub deklaracje COM, które używają `Integer` dla dojść, a nie <xref:System.IntPtr>.  
+- Nieprawidłowe wywołanie platformy lub deklaracje COM, `Integer` które są używane do <xref:System.IntPtr>obsługi zamiast.  
   
-- Rzutowanie <xref:System.IntPtr> na `Integer`.  
+- <xref:System.IntPtr> Rzutowanie `Integer`na.  
   
 - Użycie wywołania platformy lub międzyoperacyjności modelu COM ze składnikami, które nie istnieją na wszystkich platformach.  
   
- Opcja **-platform** ogranicza niektóre problemy, Jeśli wiesz, że masz założeń dotyczących architektury, w której kod będzie uruchamiany. Opracowany  
+ Opcja **-platform** ogranicza niektóre problemy, Jeśli wiesz, że masz założeń dotyczących architektury, w której kod będzie uruchamiany. Są to:  
   
 - Jeśli zdecydujesz się na użycie platformy 64-bitowej, a aplikacja jest uruchamiana na komputerze 32-bitowym, komunikat o błędzie jest bardzo wcześniejszy i jest bardziej ukierunkowany na problem niż błąd, który wystąpi bez użycia tego przełącznika.  
   
-- Jeśli ustawisz flagę `x86` dla opcji, a aplikacja zostanie uruchomiona na komputerze 64-bitowym, aplikacja zostanie uruchomiona w podsystemie WOW zamiast uruchamiać natywnie.  
+- Jeśli ustawisz `x86` flagę dla opcji, a aplikacja zostanie uruchomiona na komputerze 64-bitowym, aplikacja zostanie uruchomiona w podsystemie WOW zamiast uruchamiać natywnie.  
   
  W 64-bitowym systemie operacyjnym Windows:  
   
-- Zestawy skompilowane z `-platform:x86` będą wykonywane na 32-bitowym CLR uruchomionym w emulatorze WOW64.  
+- Zestawy skompilowane `-platform:x86` z programem będą wykonywane na 32-bitowym CLR uruchomionym w emulatorze WOW64.  
   
-- Pliki wykonywalne skompilowane z `-platform:anycpu` będą wykonywane na 64-bitowym CLR.  
+- Pliki wykonywalne skompilowane `-platform:anycpu` z użyciem zostaną wykonane na 64-bitowym środowisku CLR.  
   
-- Biblioteka DLL skompilowana z `-platform:anycpu` będzie wykonywana w tym samym środowisku CLR co proces, w którym został załadowany.  
+- Biblioteka DLL skompilowana z programem `-platform:anycpu` zostanie wykonana w tym samym środowisku CLR co proces, w którym został załadowany.  
   
-- Pliki wykonywalne, które są kompilowane przy użyciu `-platform:anycpu32bitpreferred`, zostaną wykonane na 32-bitowym środowisku CLR.  
+- Pliki wykonywalne, które są `-platform:anycpu32bitpreferred` kompilowane przy użyciu, zostaną wykonane na 32-bitowym CLR.  
   
  Aby uzyskać więcej informacji na temat sposobu tworzenia aplikacji do uruchamiania w 64-bitowej wersji systemu Windows, zobacz [64-bitowe aplikacje](../../../framework/64-bit-apps.md).  
   
@@ -75,13 +75,13 @@ Określa, która wersja platformy środowiska uruchomieniowego języka wspólneg
      Aby uzyskać więcej informacji, zobacz [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje sposób użycia opcji kompilatora `-platform`.  
+ Poniższy przykład ilustruje sposób użycia opcji `-platform` kompilatora.  
   
 ```console
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [-Target (Visual Basic)](target.md)
 - [Kompilator wiersza polecenia Visual Basic](index.md)

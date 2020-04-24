@@ -20,11 +20,11 @@ Międzyoperacyjność wyjątku kodu niezarządzanego jest obsługiwana tylko na 
 
 ## <a name="setjmplongjmp-behaviors"></a>Zachowania setjmp/longjmp
 
-Współdziałanie z funkcjami `setjmp` i `longjmp` języka C nie jest obsługiwane. Nie można użyć `longjmp`, aby pominąć ramki zarządzane.
+Funkcje Interop `setjmp` with `longjmp` i języka C nie są obsługiwane. Nie można użyć `longjmp` , aby pominąć ramki zarządzane.
 
 Aby uzyskać więcej informacji, zobacz [dokumentację longjmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyjątki](index.md)
 - [Współdziałanie z natywnymi bibliotekami](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)

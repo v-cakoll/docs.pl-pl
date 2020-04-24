@@ -15,16 +15,16 @@ ms.locfileid: "74349226"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uzyskiwanie dostępu do usług sieci Web aplikacji (Visual Basic)
 
-Obiekt `My.WebServices` udostępnia wystąpienie każdej usługi sieci Web, do którego odwołuje się bieżący projekt. Każde wystąpienie jest tworzone na żądanie. Dostęp do tych usług sieci Web `My.WebServices` można uzyskać za pośrednictwem właściwości obiektu. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, do którą uzyskuje dostęp właściwość. Każda klasa, która <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> dziedziczy z jest usługą sieci Web.
+`My.WebServices` Obiekt zawiera wystąpienie każdej usługi sieci Web, do której odwołuje się bieżący projekt. Każde wystąpienie jest tworzone na żądanie. Dostęp do tych usług sieci Web można uzyskać za pomocą właściwości `My.WebServices` obiektu. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, do której uzyskuje dostęp właściwość. Każda klasa, która dziedziczy <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> z, jest usługą sieci Web.
 
 ## <a name="tasks"></a>Zadania
 
-W poniższej tabeli wymieniono możliwe sposoby uzyskiwania dostępu do usług sieci Web, do których odwołuje się aplikacja.
+W poniższej tabeli przedstawiono możliwe sposoby uzyskiwania dostępu do usług sieci Web, do których odwołuje się aplikacja.
 
 |Do|Zobacz|
 |---|---|
 |Wywoływanie usługi sieci Web|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Wywoływanie usługi sieci Web asynchronicznie i obsługa zdarzenia po jego zakończeniu|[Instrukcje: asynchroniczne wywoływanie usługi sieci Web](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Wywołaj usługę sieci Web asynchronicznie i obsłuż zdarzenie po jego zakończeniu|[Instrukcje: asynchroniczne wywoływanie usługi sieci Web](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>Zobacz też
 

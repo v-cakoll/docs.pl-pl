@@ -1,38 +1,42 @@
 ---
-title: nazwa wyrażenia — odwołanie do języka C#
-ms.date: 07/12/2019
+title: wyrażenie nameof — odwołanie w C#
+ms.date: 04/23/2020
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 5a68161be7bb03122d2a63ccef4365c5853862b2
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507142"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135922"
 ---
-# <a name="nameof-expression-c-reference"></a>nazwa wyrażenia (odwołanie do języka C#)
+# <a name="nameof-expression-c-reference"></a>wyrażenie nameof (odwołanie w C#)
 
-Wyrażenie `nameof` tworzy nazwę zmiennej, typu lub elementu członkowskiego jako stałą ciągu:
+`nameof` Wyrażenie tworzy nazwę zmiennej, typu lub składowej jako stałą typu String:
 
 [!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
 
-Jak pokazano w poprzednim przykładzie, w przypadku typu i obszaru nazw powstała nazwa zwykle nie jest [w pełni kwalifikowana.](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)
+Jak pokazano w powyższym przykładzie, w przypadku typu i przestrzeni nazw, wygenerowana nazwa zazwyczaj nie jest w [pełni kwalifikowana](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
-Wyrażenie `nameof` jest oceniane w czasie kompilacji i nie ma wpływu w czasie wykonywania.
+W przypadku [identyfikatorów Verbatim](../tokens/verbatim.md) `@` znak nie jest częścią nazwy, jak pokazano w poniższym przykładzie:
 
-Można użyć `nameof` wyrażenia, aby kod sprawdzania argumentów był bardziej sprawny:
+[!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
+
+`nameof` Wyrażenie jest oceniane w czasie kompilacji i nie ma wpływu na czas wykonywania.
+
+Możesz użyć `nameof` wyrażenia, aby zwiększyć łatwość obsługi kodu sprawdzania argumentów:
 
 [!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
-Wyrażenie `nameof` jest dostępne w języku C# 6 i nowszych.
+`nameof` Wyrażenie jest dostępne w języku C# 6 i nowszych.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [Nameof expressions](~/_csharplang/spec/expressions.md#nameof-expressions) [w specyfikacji języka C#](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia nameof](~/_csharplang/spec/expressions.md#nameof-expressions) w [specyfikacji języka C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz też
 

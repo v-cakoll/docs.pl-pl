@@ -38,13 +38,13 @@ Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, kt�
   
  Aplikacja będzie podlegać wirtualizacji, jeśli spełniony jest jeden z następujących warunków:  
   
-1. Używasz opcji `-nowin32manifest` i nie udostępniasz manifestu w późniejszym kroku kompilacji lub jako część pliku zasobów systemu Windows (. res) przy użyciu opcji `-win32resource`.  
+1. Użyj `-nowin32manifest` opcji i nie udostępniaj manifestu w późniejszym kroku kompilacji lub jako część pliku zasobów systemu Windows (. res) przy użyciu `-win32resource` opcji.  
   
 2. Należy podać niestandardowy manifest, który nie określa żądanego poziomu wykonania.  
   
  Program Visual Studio tworzy domyślny plik. manifest i zapisuje go w katalogach debugowania i wydań obok pliku wykonywalnego. Możesz wyświetlić lub edytować domyślny plik aplikacji. manifest, klikając pozycję **Wyświetl ustawienia kontroli konta użytkownika** na karcie **aplikacja** w projektancie projektu. Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Można dostarczyć manifest aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu opcji `-nowin32manifest`. Użyj tej samej opcji, jeśli chcesz, aby aplikacja podlegała wirtualizacji plików lub rejestru w systemie Windows Vista. Uniemożliwi to kompilatorowi utworzenie i osadzenie domyślnego manifestu w pliku PE.  
+ Można dostarczyć manifest aplikacji jako niestandardowy krok po kompilacji lub jako część pliku zasobów Win32 przy użyciu `-nowin32manifest` opcji. Użyj tej samej opcji, jeśli chcesz, aby aplikacja podlegała wirtualizacji plików lub rejestru w systemie Windows Vista. Uniemożliwi to kompilatorowi utworzenie i osadzenie domyślnego manifestu w pliku PE.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje domyślny manifest, który kompilator Visual Basic wstawia do PE.  
@@ -66,7 +66,7 @@ Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, kt�
 </assembly>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

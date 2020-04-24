@@ -1,20 +1,24 @@
 ### YamlMime:Landing
 title: Dokumentacja platformy .NET
-summary: Dowiedz się więcej o .NET, platformie dewelopera typu open source do tworzenia wielu różnych typów aplikacji.
+summary: Dowiedz się więcej na temat platformy .NET — platformy deweloperskiej typu open source umożliwiającej tworzenie wielu różnych typów aplikacji.
 metadata:
   title: Dokumentacja platformy .NET
-  description: Dowiedz się więcej o .NET, platformie dewelopera typu open source do tworzenia wielu różnych typów aplikacji.
+  description: Dowiedz się więcej na temat platformy .NET — platformy deweloperskiej typu open source umożliwiającej tworzenie wielu różnych typów aplikacji.
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636081"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135818"
 landingContent:
-- title: Dowiedz się więcej o sieci .NET
+- title: Więcej informacji na temat platformy .NET
   linkLists:
+  - linkListType: download
+    links:
+    - text: Pobierz zestaw SDK dla platformy .NET
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: Przewodnik po środowisku .NET
@@ -31,11 +35,11 @@ landingContent:
       url: frameworks.md
     - text: Środowisko uruchomieniowe języka wspólnego (CLR)
       url: clr.md
-    - text: Wybierz między programem .NET Core a platformą .NET Framework dla aplikacji serwerowych
+    - text: Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
       url: choosing-core-framework-server.md
   - linkListType: whats-new
     links:
-    - text: Co nowego w umyka . NET Standard
+    - text: Co nowego na platformie .NET Standard
       url: whats-new/whats-new-in-dotnet-standard.md
     - text: Co nowego w programie .NET Core
       url: ../core/whats-new/dotnet-core-3-1.md
@@ -43,73 +47,73 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Serializowanie i deserializacja JSON
+    - text: Serializacja i deserializacja JSON
       url: serialization/system-text-json-overview.md
   - linkListType: how-to-guide
     links:
-    - text: 'Serializować i deserializować JSON przy użyciu języka C #'
+    - text: 'Serializacja i deserializacja JSON przy użyciu języka C #'
       url: serialization/system-text-json-how-to.md
-    - text: Migrowanie z newtonsoft.json do System.Text.Json
+    - text: Migrowanie z Newtonsoft. JSON do System. Text. JSON
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-    - text: Zapisywanie konwerterów niestandardowych dla serializacji JSON
+    - text: Zapisz konwertery niestandardowe na potrzeby serializacji JSON
       url: serialization/system-text-json-converters-how-to.md
   - linkListType: sample
     links:
     - text: Przykłady serializacji XML
       url: serialization/examples-of-xml-serialization.md
-- title: Formatowanie i konwertowanie dat, liczb i ciągów
+- title: Formatowanie i konwertowanie dat, cyfr i ciągów
   linkLists:
   - linkListType: concept
     links:
-    - text: Ciągi formatu numerycznego
+    - text: Ciągi formatu liczbowego
       url: base-types/standard-numeric-format-strings.md
-    - text: Ciągi formatu daty i godziny
+    - text: Ciągi formatujące datę i godzinę
       url: base-types/standard-date-and-time-format-strings.md
-    - text: Formatowanie kompozytowe
+    - text: Złożone formatowanie
       url: base-types/composite-formatting.md
     - text: Konwertowanie czasów między strefami czasowymi
       url: datetime/converting-between-time-zones.md
     - text: Przycinanie i usuwanie znaków z ciągów
       url: base-types/trimming.md
-    - text: Wyrażenia regularne w sieci .NET
+    - text: Wyrażenia regularne w programie .NET
       url: base-types/regular-expressions.md
   - linkListType: how-to-guide
     links:
-    - text: Konwertowanie ciągów na DateTime
+    - text: Konwertuj ciągi na datę i godzinę
       url: base-types/parsing-datetime.md
-    - text: Pad liczbę z zerami wiodącymi
+    - text: Uzupełnianie liczby zerami wiodącymi
       url: base-types/how-to-pad-a-number-with-leading-zeros.md
-    - text: Wyświetlanie milisekund w wartościach daty i godziny
+    - text: Wyświetlanie liczby milisekund w wartościach daty i godziny
       url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
   - linkListType: reference
     links:
-    - text: Język wyrażenia regularnego
+    - text: Język wyrażeń regularnych
       url: base-types/regular-expression-language-quick-reference.md
-- title: Klasy projektowania i biblioteki
+- title: Projektowanie klas i bibliotek
   linkLists:
   - linkListType: overview
     links:
-    - text: Wskazówki dotyczące projektowania
+    - text: Wytyczne dotyczące projektowania
       url: design-guidelines/index.md
   - linkListType: concept
     links:
     - text: Konwencje nazewnictwa
       url: design-guidelines/general-naming-conventions.md
-    - text: Konwencje kapitalizacji
+    - text: Konwencje dotyczące wielkości liter
       url: design-guidelines/capitalization-conventions.md
-- title: Używanie zdarzeń i wyjątków
+- title: Korzystanie z zdarzeń i wyjątków
   linkLists:
   - linkListType: concept
     links:
-    - text: Najważniejsze wskazówki dotyczące wyjątków
+    - text: Najlepsze rozwiązania dotyczące wyjątków
       url: exceptions/best-practices-for-exceptions.md
     - text: Obsługa i zgłaszanie zdarzeń
       url: events/index.md
   - linkListType: how-to-guide
     links:
-    - text: Używanie bloku try-catch do wychwytu wyjątków
+    - text: Używanie bloku try-catch do przechwytywania wyjątków
       url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
-    - text: Podnoszenie i używanie zdarzeń
+    - text: Wywoływanie zdarzeń i korzystanie z nich
       url: events/how-to-raise-and-consume-events.md
 - title: We/wy plików i strumieni
   linkLists:
@@ -117,27 +121,27 @@ landingContent:
     links:
     - text: We/wy plików i strumieni
       url: io/index.md
-    - text: Formaty ścieżek plików w systemie Windows
+    - text: Formaty ścieżki plików w systemie Windows
       url: io/file-path-formats.md
   - linkListType: how-to-guide
     links:
-    - text: Pisanie tekstu do pliku
+    - text: Zapisz tekst w pliku
       url: io/how-to-write-text-to-a-file.md
-    - text: Odczytywanie tekstu z pliku
+    - text: Odczytaj tekst z pliku
       url: io/how-to-read-text-from-a-file.md
     - text: Kompresowanie i wyodrębnianie plików
       url: io/how-to-compress-and-extract-files.md
-    - text: Otwieranie i dołączanie do pliku dziennika
+    - text: Otwieranie pliku dziennika i dołączanie do niego
       url: io/how-to-open-and-append-to-a-log-file.md
-- title: Zarządzanie korzystaniem z pamięci
+- title: Zarządzanie użyciem pamięci
   linkLists:
   - linkListType: concept
     links:
-    - text: Podstawowe elementy bezużyteczne
+    - text: Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
       url: garbage-collection/fundamentals.md
-    - text: Implementowanie metody dispose
+    - text: Implementacja metody Dispose
       url: garbage-collection/implementing-dispose.md
-- title: Dowiedz się więcej o programowaniu równoległym
+- title: Dowiedz się więcej na temat programowania równoległego
   linkLists:
   - linkListType: overview
     links:
@@ -153,7 +157,7 @@ landingContent:
       url: parallel-programming/task-cancellation.md
   - linkListType: how-to-guide
     links:
-    - text: Napisz prosty program równoległy za pomocą Parallel.ForEach
+    - text: Napisz prosty program równoległy używający metody Parallel. ForEach
       url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
     - text: Zwracanie wartości z zadania
       url: parallel-programming/how-to-return-a-value-from-a-task.md

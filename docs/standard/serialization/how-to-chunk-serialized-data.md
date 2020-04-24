@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Podziel zserializowane dane'
+title: 'Instrukcje: fragment serializowanych danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64602419"
 ---
-# <a name="how-to-chunk-serialized-data"></a>Porady: Podziel zserializowane dane
+# <a name="how-to-chunk-serialized-data"></a>Instrukcje: fragment serializowanych danych
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -30,22 +30,22 @@ Są dwa problemy, które występują podczas wysyłania dużych zestawach danych
   
 2. Długi przepustowości z powodu inflacji procent 33 po związanych z kodowaniem Base64.  
   
- Aby rozwiązać te problemy, należy zaimplementować <xref:System.Xml.Serialization.IXmlSerializable> interfejs do sterowania serializacji i deserializacji. W szczególności zaimplementować <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> metody służące do bryłkach danych.  
+ Aby rozwiązać te problemy, zaimplementuj <xref:System.Xml.Serialization.IXmlSerializable> interfejs w celu kontrolowania serializacji i deserializacji. Zaimplementuj metody <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> , aby rozfragmentować dane.  
   
-### <a name="to-implement-server-side-chunking"></a>Do zaimplementowania segmentu po stronie serwera  
+### <a name="to-implement-server-side-chunking"></a>Aby zaimplementować fragmentowanie po stronie serwera  
   
-1. Na komputerze z serwerem, Metoda sieci Web należy wyłączyć buforowanie ASP.NET i zwracany typ, który implementuje <xref:System.Xml.Serialization.IXmlSerializable>.  
+1. Na komputerze serwera Metoda sieci Web musi wyłączyć buforowanie ASP.NET i zwrócić typ, który implementuje <xref:System.Xml.Serialization.IXmlSerializable>.  
   
-2. Typ, który implementuje <xref:System.Xml.Serialization.IXmlSerializable> chunks dane w <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> metody.  
+2. Typ, który implementuje <xref:System.Xml.Serialization.IXmlSerializable> fragmenty danych w <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> metodzie.  
   
-### <a name="to-implement-client-side-processing"></a>Do zaimplementowania przetwarzania po stronie klienta  
+### <a name="to-implement-client-side-processing"></a>Aby zaimplementować przetwarzanie po stronie klienta  
   
-1. Zmienić metodę sieci Web na serwerze proxy klienta do zwrócenia typu, który implementuje <xref:System.Xml.Serialization.IXmlSerializable>. Możesz użyć <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> można to zrobić automatycznie, ale nie jest to pokazane w tym miejscu.  
+1. Zmień metodę sieci Web na serwerze proxy klienta, aby zwracała typ, <xref:System.Xml.Serialization.IXmlSerializable>który implementuje. Możesz użyć, <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> aby to zrobić automatycznie, ale nie jest to tutaj pokazane.  
   
-2. Implementowanie <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> metodę w celu odczytania danych podzielonego strumienia i Bajty zapisu dysku. Ta implementacja wywołuje również zdarzenia postępu, które mogą być używane przez formant graficzny, takich jak pasek postępu.  
+2. Zaimplementuj <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> metodę, aby odczytać strumień danych podzielonych i zapisać bajty na dysku. Ta implementacja podnosi także zdarzenia postępu, które mogą być używane przez formant graficzny, taki jak pasek postępu.  
   
 ## <a name="example"></a>Przykład  
-Poniższy przykład kodu przedstawia metodę sieci Web na komputerze klienckim, który powoduje wyłączenie buforowania programu ASP.NET. Zawiera również wykonania po stronie klienta <xref:System.Xml.Serialization.IXmlSerializable> interfejs, który chunks dane w <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> metody.  
+Poniższy przykład kodu przedstawia metodę sieci Web na kliencie, która wyłącza buforowanie ASP.NET. Pokazuje także implementację <xref:System.Xml.Serialization.IXmlSerializable> interfejsu po stronie klienta, który fragmentuje dane w <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> metodzie.  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]
 [!code-vb[HowToChunkSerializedData#1](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#1)]  
@@ -58,6 +58,6 @@ Poniższy przykład kodu przedstawia metodę sieci Web na komputerze klienckim, 
   
 - W kodzie za pomocą następujących przestrzeni nazw: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, i <xref:System.Xml.Schema>.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Serializacja niestandardowa](custom-serialization.md)

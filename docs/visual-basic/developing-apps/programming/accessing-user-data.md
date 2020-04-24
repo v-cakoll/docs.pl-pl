@@ -20,16 +20,16 @@ ms.locfileid: "74349215"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Uzyskiwanie dostępu do danych użytkownika (Visual Basic)
 
-Ta sekcja zawiera tematy `My.User` dotyczące obiektu i zadań, które można wykonać z nim.  
+Ta sekcja zawiera tematy dotyczące `My.User` obiektów i zadań, które można wykonać przy ich użyciu.  
   
- Obiekt `My.User` zapewnia dostęp do informacji o zalogowanym użytkowniku, zwracając obiekt, który implementuje <xref:System.Security.Principal.IPrincipal> interfejs.  
+ `My.User` Obiekt zapewnia dostęp do informacji o zalogowanym użytkowniku, zwracając obiekt implementujący <xref:System.Security.Principal.IPrincipal> interfejs.  
   
 ## <a name="tasks"></a>Zadania  
   
 |Do|Zobacz|  
 |--------|---------|  
-|Uzyskaj nazwę logowania użytkownika|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Pobierz nazwę domeny użytkownika, jeśli aplikacja używa uwierzytelniania systemu Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|Pobierz nazwę logowania użytkownika|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|Pobieranie nazwy domeny użytkownika, jeśli aplikacja używa uwierzytelniania systemu Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |Określanie roli użytkownika|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Zobacz też

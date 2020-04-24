@@ -17,29 +17,29 @@ ms.locfileid: "81389802"
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Instrukcje: Generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML
 Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML, która opisuje klasę lub do generowania klasy zdefiniowane przez schemat XML. Poniższe procedury pokazują, jak wykonywać te operacje.
 
-Narzędzie XML Schema definition (Xsd.exe) zwykle można znaleźć w następującej ścieżce:\
-_C:\\Pliki programów\\(x86)\\Zestaw\\Microsoft\\SDK Windows {version} bin\\NETFX {version} Narzędzia\\_
+Narzędzie definicji schematu XML (XSD. exe) zwykle można znaleźć w następującej ścieżce: \
+_C:\\Program Files (x86)\\Microsoft SDK\\Windows\\{Version}\\bin\\NETFX {Version} Tools\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Do generowania klasy, które są zgodne z określonego schematu  
   
 1. Otwórz wiersz polecenia.  
   
-2. Przekaż schemat XML jako argument do narzędzia Definicja schematu XML, które tworzy zestaw klas, które są dokładnie dopasowane do schematu XML, na przykład:  
+2. Przekaż schemat XML jako argument do narzędzia definicji schematu XML, które tworzy zestaw klas, które są dokładnie dopasowane do schematu XML, na przykład:  
   
     ```console  
     xsd mySchema.xsd  
     ```  
   
-     To narzędzie może przetwarzać tylko schematy, które odwołują się do specyfikacji XML konsorcjum World Wide Web 16 marca 2001. Innymi słowy, obszar nazw schematu XMLhttp://www.w3.org/2001/XMLSchemamusi być " " jak pokazano w poniższym przykładzie.  
+     To narzędzie może przetwarzać tylko schematy, które odwołują się do specyfikacji XML konsorcjum World Wide Web 16 marca 2001. Innymi słowy, przestrzeń nazw schematu XML musi być "http://www.w3.org/2001/XMLSchema", jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
-3. Modyfikuj klas, metod, właściwości lub pól, w razie potrzeby. Aby uzyskać więcej informacji na temat modyfikowania klasy z atrybutami, zobacz [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) i [atrybutów sterujących serializacją kodowanego protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+3. Modyfikuj klas, metod, właściwości lub pól, w razie potrzeby. Aby uzyskać więcej informacji na temat modyfikowania klasy z atrybutami, zobacz [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) i atrybutów kontrolujących [ZAKODOWANĄ serializację protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
- Często jest to przydatne, należy zapoznać się ze schematem strumień XML, który jest generowany, gdy są serializacji wystąpień klasy (lub klasy). Na przykład można opublikować schemat dla innych do użycia lub można porównać go do schematu, z którym próbujesz osiągnąć zgodność.  
+ Często jest to przydatne, należy zapoznać się ze schematem strumień XML, który jest generowany, gdy są serializacji wystąpień klasy (lub klasy). Na przykład można opublikować schemat do użytku przez inne osoby lub można go porównać ze schematem, z którym próbujesz osiągnąć zgodność.  
   
 #### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a>Do generowania dokumentu XML schematu z zestawu klas  
   
@@ -47,7 +47,7 @@ _C:\\Pliki programów\\(x86)\\Zestaw\\Microsoft\\SDK Windows {version} bin\\NETF
   
 2. Otwórz wiersz polecenia.  
   
-3. Przekaż bibliotekę DLL jako argument do pliku Xsd.exe, na przykład:  
+3. Przekaż plik DLL jako argument do pliku XSD. exe, na przykład:  
   
     ```console  
     xsd MyFile.dll  
@@ -60,7 +60,7 @@ _C:\\Pliki programów\\(x86)\\Zestaw\\Microsoft\\SDK Windows {version} bin\\NETF
 - <xref:System.Data.DataSet>
 - [Narzędzie definicji schematu XML i serializacja XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Narzędzie XML Do definicji schematu (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [Narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

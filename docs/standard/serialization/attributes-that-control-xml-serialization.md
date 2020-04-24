@@ -17,9 +17,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61794969"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atrybuty kontrolujące serializację XML
-Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do kontrolowania sposobu, w którym <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy. Aby dowiedzieć się, jak te atrybuty kontrolować serializacji XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
+Można zastosować atrybuty w poniższej tabeli do klas i elementów członkowskich klasy, aby kontrolować sposób, w jaki <xref:System.Xml.Serialization.XmlSerializer> Serializacja lub deserializacji wystąpienia klasy. Aby zrozumieć, jak te atrybuty kontrolują serializacji XML, zobacz [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
   
- Te atrybuty mogą również kontrolować wiadomości protokołu SOAP literału stylu generowanych przez usługi sieci Web XML. Aby uzyskać więcej informacji o zastosowaniu te atrybuty do metody usługi sieci Web XML, zobacz [serializacji XML przy użyciu usług XML sieci Web](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
+ Te atrybuty mogą również kontrolować wiadomości protokołu SOAP literału stylu generowanych przez usługi sieci Web XML. Aby uzyskać więcej informacji na temat stosowania tych atrybutów do metody usług sieci Web XML, zobacz [serializacji XML z usługami sieci Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
   
  Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../docs/standard/attributes/index.md).  
   
@@ -27,8 +27,8 @@ Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do k
 |---------------|----------------|---------------|  
 |<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|Pole publiczne, właściwość, parametru lub zwracanej wartości, która zwraca tablicę <xref:System.Xml.XmlAttribute> obiektów.|Podczas deserializacji, tablica będzie wypełniona <xref:System.Xml.XmlAttribute> obiektów, które reprezentują wszystkie atrybuty XML nieznany schematu.|  
 |<xref:System.Xml.Serialization.XmlAnyElementAttribute>|Pole publiczne, właściwość, parametru lub zwracanej wartości, która zwraca tablicę <xref:System.Xml.XmlElement> obiektów.|Podczas deserializacji, tablica jest wypełniany <xref:System.Xml.XmlElement> obiekty reprezentujące wszystkie elementy XML nieznany schematu.|  
-|<xref:System.Xml.Serialization.XmlArrayAttribute>|Pole publiczne, właściwość, parametru lub zwracanej wartości, która zwraca tablicę obiektów złożonych.|Zostanie wygenerowany tablicy elementów członkowskich jako elementy członkowskie tablicy XML.|  
-|<xref:System.Xml.Serialization.XmlArrayItemAttribute>|Pole publiczne, właściwość, parametru lub zwracanej wartości, która zwraca tablicę obiektów złożonych.|Typy pochodne, które mogą być wstawiane do tablicy. Zwykle jest stosowana w połączeniu z <xref:System.Xml.Serialization.XmlArrayAttribute>.|  
+|<xref:System.Xml.Serialization.XmlArrayAttribute>|Pole publiczne, właściwość, parametr lub wartość zwracana zwracająca tablicę obiektów złożonych.|Zostanie wygenerowany tablicy elementów członkowskich jako elementy członkowskie tablicy XML.|  
+|<xref:System.Xml.Serialization.XmlArrayItemAttribute>|Pole publiczne, właściwość, parametr lub wartość zwracana zwracająca tablicę obiektów złożonych.|Typy pochodne, które mogą być wstawiane do tablicy. Zwykle stosowana w połączeniu z <xref:System.Xml.Serialization.XmlArrayAttribute>.|  
 |<xref:System.Xml.Serialization.XmlAttributeAttribute>|Pole publiczne, właściwość, parametru lub wartości zwracanej.|Element członkowski będzie serializowana jako atrybut XML.|  
 |<xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute>|Pole publiczne, właściwość, parametru lub wartości zwracanej.|Element członkowski może dodatkowo rozróżniane przy użyciu wyliczenia.|  
 |<xref:System.Xml.Serialization.XmlElementAttribute>|Pole publiczne, właściwość, parametru lub wartości zwracanej.|Pole lub właściwość będzie serializowana jako XML element.|  
@@ -39,15 +39,15 @@ Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do k
 |<xref:System.Xml.Serialization.XmlTextAttribute>|Właściwości publiczne i pola.|Właściwości lub pól powinien zostać Zserializowany jako tekst XML.|  
 |<xref:System.Xml.Serialization.XmlTypeAttribute>|Klasa publiczna deklaracji.|Nazwa i nazw typu XML.|  
   
- Oprócz te atrybuty, które są wszystkie znalezione w <xref:System.Xml.Serialization> przestrzeni nazw, można także zastosować <xref:System.ComponentModel.DefaultValueAttribute> atrybutu do pola. **DefaultValueAttribute —** ustawia wartość, która zostanie automatycznie przypisany do elementu członkowskiego, jeśli nie określono wartości.  
+ Oprócz tych atrybutów, które znajdują się w <xref:System.Xml.Serialization> przestrzeni nazw, można także zastosować <xref:System.ComponentModel.DefaultValueAttribute> atrybut do pola. **DefaultValueAttribute —** ustawia wartość, która zostanie automatycznie przypisana do elementu członkowskiego, jeśli nie określono wartości.  
   
- Aby sterować zakodowany serializacji XML protokołu SOAP, zobacz [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+ Aby kontrolować zakodowaną serializacji XML protokołu SOAP, zobacz atrybuty kontrolujące [zakodowaną serializację protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Instrukcje: Określ nazwę elementu alternatywny Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

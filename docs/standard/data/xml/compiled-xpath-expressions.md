@@ -14,14 +14,14 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711106"
 ---
 # <a name="compiled-xpath-expressions"></a>Skompilowane wyrażenia XPath
-Obiekt <xref:System.Xml.XPath.XPathExpression> reprezentuje skompilowane zapytanie XPath zwrócone z metody static <xref:System.Xml.XPath.XPathExpression.Compile%2A> klasy <xref:System.Xml.XPath.XPathExpression> lub <xref:System.Xml.XPath.XPathNavigator.Compile%2A> metody klasy <xref:System.Xml.XPath.XPathNavigator>.  
+<xref:System.Xml.XPath.XPathExpression> <xref:System.Xml.XPath.XPathExpression.Compile%2A> Obiekt reprezentuje skompilowane zapytanie XPath zwrócone z metody statycznej <xref:System.Xml.XPath.XPathExpression> klasy lub <xref:System.Xml.XPath.XPathNavigator.Compile%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
 ## <a name="the-xpathexpression-class"></a>Klasa XPathExpression  
- Skompilowane zapytanie XPath reprezentowane przez obiekt <xref:System.Xml.XPath.XPathExpression> jest przydatne, jeśli ta sama kwerenda XPath jest używana więcej niż raz.  
+ Skompilowane zapytanie XPath reprezentowane przez <xref:System.Xml.XPath.XPathExpression> obiekt jest przydatne, jeśli ta sama kwerenda XPath jest używana więcej niż raz.  
   
- Na przykład w przypadku wywołania metody <xref:System.Xml.XPath.XPathNavigator.Select%2A> wiele razy zamiast używania ciągu reprezentującego kwerendę XPath za każdym razem użyj metody <xref:System.Xml.XPath.XPathExpression.Compile%2A> klasy <xref:System.Xml.XPath.XPathExpression> lub metody <xref:System.Xml.XPath.XPathNavigator.Compile%2A> klasy <xref:System.Xml.XPath.XPathNavigator> do kompilowania i buforowania zapytania XPath w obiekcie <xref:System.Xml.XPath.XPathExpression>, aby ponownie wykorzystać i zwiększyć wydajność.  
+ Na <xref:System.Xml.XPath.XPathNavigator.Select%2A> przykład podczas wywoływania metody wielokrotnie, zamiast używać ciągu reprezentującego kwerendę XPath za każdym razem, użyj <xref:System.Xml.XPath.XPathExpression.Compile%2A> metody <xref:System.Xml.XPath.XPathExpression> klasy lub <xref:System.Xml.XPath.XPathNavigator.Compile%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy do kompilowania i buforowania zapytania XPath w <xref:System.Xml.XPath.XPathExpression> obiekcie w celu ponownego użycia i zwiększenia wydajności.  
   
- Po skompilowaniu obiekt <xref:System.Xml.XPath.XPathExpression> może być używany jako dane wejściowe do poniższych metod klasy <xref:System.Xml.XPath.XPathNavigator> w zależności od typu zwracanego z kwerendy XPath.  
+ Po skompilowaniu <xref:System.Xml.XPath.XPathExpression> obiekt może być używany jako dane wejściowe dla następujących <xref:System.Xml.XPath.XPathNavigator> metod klasy w zależności od typu zwracanego z kwerendy XPath.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
@@ -33,7 +33,7 @@ Obiekt <xref:System.Xml.XPath.XPathExpression> reprezentuje skompilowane zapytan
   
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
- W poniższej tabeli opisano wszystkie typy zwracane w formacie W3C XPath, ich Microsoft .NET Framework equivalencies i metody, z których może korzystać obiekt <xref:System.Xml.XPath.XPathExpression>, w zależności od typu zwracanego.  
+ W poniższej tabeli opisano każdy z typów zwracanych przez konsorcjum W3C XPath, ich Microsoft .NET Framework equivalencies i metody <xref:System.Xml.XPath.XPathExpression> , z których może korzystać obiekt na podstawie zwracanego typu.  
   
 |Typ zwracany XPath W3C|Typ odpowiedni .NET Framework|Opis|Metody|  
 |---------------------------|------------------------------------|-----------------|-------------|  
@@ -43,12 +43,12 @@ Obiekt <xref:System.Xml.XPath.XPathExpression> reprezentuje skompilowane zapytan
 |`String`|<xref:System.String>|Sekwencja znaków UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
-> Metoda <xref:System.Xml.XPath.XPathNavigator.Matches%2A> akceptuje wyrażenie XPath jako parametr. Metoda <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> zwraca obiekt <xref:System.Xml.XPath.XPathNavigator>, a nie jeden z typów zwracanych w formacie xmlxpath.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda akceptuje wyrażenie XPath jako parametr. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> Metoda zwraca <xref:System.Xml.XPath.XPathNavigator> obiekt, a nie jeden z typów zwracanych w formacie XPath.  
   
 ### <a name="the-returntype-property"></a>Właściwość ReturnType  
- Po skompilowaniu zapytania XPath do obiektu <xref:System.Xml.XPath.XPathExpression> można użyć właściwości <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> obiektu <xref:System.Xml.XPath.XPathExpression>, aby określić, co zwraca zapytanie XPath.  
+ Po skompilowaniu zapytania XPath do <xref:System.Xml.XPath.XPathExpression> obiektu można użyć <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> właściwości <xref:System.Xml.XPath.XPathExpression> obiektu, aby określić, co zwraca zapytanie XPath.  
   
- Właściwość <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> zwraca jedną z następujących <xref:System.Xml.XPath.XPathResultType> wartości wyliczenia reprezentujących typy zwracane w formacie W3C XPath.  
+ <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Właściwość zwraca jedną z następujących <xref:System.Xml.XPath.XPathResultType> wartości wyliczenia reprezentujących typy zwracane W3C XPath.  
   
 - <xref:System.Xml.XPath.XPathResultType.Any>  
   
@@ -64,7 +64,7 @@ Obiekt <xref:System.Xml.XPath.XPathExpression> reprezentuje skompilowane zapytan
   
 - <xref:System.Xml.XPath.XPathResultType.String>  
   
- Poniższy przykład używa obiektu <xref:System.Xml.XPath.XPathExpression>, aby zwrócić numer i zestaw węzłów z pliku `books.xml`. Właściwość <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> każdego obiektu <xref:System.Xml.XPath.XPathExpression>, a także wyniki <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> i <xref:System.Xml.XPath.XPathNavigator.Select%2A> metody są zapisywane w konsoli programu.  
+ Poniższy przykład używa <xref:System.Xml.XPath.XPathExpression> obiektu do zwrócenia numeru i zestawu węzłów z `books.xml` pliku. <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Właściwość <xref:System.Xml.XPath.XPathExpression> każdego obiektu, <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> a także wyniki z i <xref:System.Xml.XPath.XPathNavigator.Select%2A> metody są zapisywane w konsoli programu.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -111,13 +111,13 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>Wyrażenia XPath o wyższej wydajności  
- Aby uzyskać lepszą wydajność, użyj najbardziej określonego wyrażenia XPath możliwego w zapytaniach. Na przykład, jeśli węzeł `book` jest węzłem podrzędnym węzła `bookstore`, a węzeł `bookstore` jest elementem najwyższego poziomu w dokumencie XML, użycie wyrażenia XPath `/bookstore/book` jest szybsze niż użycie `//book`. `//book` wyrażenie XPath skanuje każdy węzeł w drzewie XML, aby zidentyfikować pasujące węzły.  
+ Aby uzyskać lepszą wydajność, użyj najbardziej określonego wyrażenia XPath możliwego w zapytaniach. Na przykład, `book` Jeśli węzeł jest węzłem podrzędnym `bookstore` węzła, a `bookstore` węzeł jest elementem najwyższego poziomu w dokumencie XML, użycie wyrażenia `/bookstore/book` XPath jest szybsze niż używanie. `//book` Wyrażenie `//book` XPath skanuje każdy węzeł w drzewie XML, aby zidentyfikować pasujące węzły.  
   
- Ponadto przy użyciu metod nawigacji zestawu węzłów dostarczonych przez klasę <xref:System.Xml.XPath.XPathNavigator> może spowodować zwiększenie wydajności na podstawie metod wyboru dostarczonych przez klasę <xref:System.Xml.XPath.XPathNavigator> w przypadkach, gdy kryteria wyboru są proste. Na przykład, jeśli trzeba wybrać pierwszy element podrzędny bieżącego węzła, można użyć metody <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>ej, aby użyć `child::*[1]` wyrażenia XPath i metody <xref:System.Xml.XPath.XPathNavigator.Select%2A>.  
+ Ponadto przy użyciu metody nawigacji zestawu węzłów dostarczonej przez <xref:System.Xml.XPath.XPathNavigator> klasę mogą spowodować zwiększenie wydajności na podstawie metod wyboru dostarczonych przez <xref:System.Xml.XPath.XPathNavigator> klasę w przypadkach, gdy kryteria wyboru są proste. Na przykład, jeśli trzeba wybrać pierwszy element podrzędny bieżącego węzła, można użyć <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> metody, aby użyć wyrażenia `child::*[1]` XPath i <xref:System.Xml.XPath.XPathNavigator.Select%2A> metody.  
   
- Aby uzyskać więcej informacji na temat metod nawigacji zestawu węzłów klasy <xref:System.Xml.XPath.XPathNavigator>, zobacz [Nawigacja zestawu węzłów za pomocą elementu XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Aby uzyskać więcej informacji o metodach nawigacji zestawu węzłów <xref:System.Xml.XPath.XPathNavigator> klasy, zobacz [nawigowanie po węźle przy użyciu elementu XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

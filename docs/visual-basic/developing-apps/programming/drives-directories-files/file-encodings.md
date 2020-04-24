@@ -16,27 +16,27 @@ ms.locfileid: "74348890"
 ---
 # <a name="file-encodings-visual-basic"></a>Kodowanie pliku (Visual Basic)
 
-Kodowanie plików, znane również jako kodowanie znaków, określa sposób reprezentowania znaków podczas przetwarzania tekstu. Jedno kodowanie może być korzystne w stosunku do innego pod względem znaków języka, które może lub nie może obsłużyć, chociaż Unicode jest zwykle preferowane.
+Kodowanie plików, znane także jako kodowania znaków, określają sposób reprezentowania znaków podczas przetwarzania tekstu. Jedno kodowanie może być preferowane przez inne warunki języka, które może lub nie może obsłużyć, chociaż standard Unicode jest zazwyczaj preferowany.
 
-Podczas odczytywania lub zapisywania do plików nieprawidłowo pasujące kodowania plików może spowodować wyjątki lub nieprawidłowe wyniki.
+Podczas odczytywania z plików lub zapisywania do nich niewłaściwie dopasowane kodowania plików mogą spowodować wyjątki lub nieprawidłowe wyniki.
 
-## <a name="types-of-encodings"></a>Typy kodowania
+## <a name="types-of-encodings"></a>Typy kodowań
 
-Unicode jest preferowanym kodowaniem podczas pracy z plikami. Unicode to światowy standard kodowania znaków, który używa 16-bitowych wartości kodu do reprezentowania wszystkich znaków używanych w nowoczesnych komputerach, w tym symboli technicznych i znaków specjalnych używanych w publikowaniu.
+Unicode jest preferowanym kodowaniem podczas pracy z plikami. Unicode to ogólnoświatowy standard kodowania znaków, który używa wartości 16-bitowych kodu do reprezentowania wszystkich znaków używanych w nowoczesnych obliczeniach, w tym symboli technicznych i znaków specjalnych używanych do publikowania.
 
-Poprzednie standardy kodowania znaków składały się z tradycyjnych zestawów znaków, takich jak zestaw znaków ANSI systemu Windows, który używa 8-bitowych wartości kodu lub kombinacji wartości 8-bitowych do reprezentowania znaków używanych w określonym języku lub regionie geograficznym.
+Poprzednie standardy kodowania znaków składają się z tradycyjnych zestawów znaków, takich jak zestaw znaków ANSI systemu Windows, który używa wartości 8-bitowych lub kombinacji wartości 8-bitowych, aby reprezentować znaki używane w konkretnym języku lub regionie geograficznym.
 
 ## <a name="encoding-class"></a>Klasa kodowania
 
-Klasa <xref:System.Text.Encoding> reprezentuje kodowanie znaków. W tej tabeli wymieniono typ dostępnych kodowania i opisano każdy z nich.
+<xref:System.Text.Encoding> Klasa reprezentuje kodowanie znaków. W tej tabeli przedstawiono typ dostępnych kodowań i opisano poszczególne z nich.
 
 |Nazwa|Opis|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Reprezentuje kodowanie znaków ASCII znaków Unicode.|
 |<xref:System.Text.UnicodeEncoding>|Reprezentuje kodowanie UTF-16 znaków Unicode.|
 |<xref:System.Text.UTF32Encoding>|Reprezentuje kodowanie UTF-32 znaków Unicode.|
-|<xref:System.Text.UTF7Encoding>|Reprezentuje kodowanie ZNAKÓW Unicode w u. UTF-7.|
-|<xref:System.Text.UTF8Encoding>|Reprezentuje kodowanie ZNAKÓW Unicode w u. UTF-8.|
+|<xref:System.Text.UTF7Encoding>|Reprezentuje kodowanie UTF-7 znaków Unicode.|
+|<xref:System.Text.UTF8Encoding>|Reprezentuje kodowanie UTF-8 znaków Unicode.|
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: sprawdzanie stanu połączenia'
+title: 'Instrukcje: sprawdzanie stanu połączenia'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -16,17 +16,17 @@ ms.locfileid: "74345880"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Porady: sprawdzanie stanu połączenia w Visual Basic
 
-Właściwości <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> można użyć do określenia, czy komputer ma działającą sieć lub połączenie z Internetem.  
+<xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Właściwość może służyć do określenia, czy komputer ma działającą sieć czy połączenie internetowe.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Aby sprawdzić, czy komputer ma połączenie robocze  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Aby sprawdzić, czy komputer ma działające połączenie  
   
-- Określ, `IsAvailable` czy `True` `False`właściwość jest lub . Poniższy kod sprawdza stan właściwości i zgłasza go:  
+- Ustal, `IsAvailable` czy właściwość jest `True` lub `False`. Poniższy kod sprawdza stan właściwości i raportuje:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     W tym przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **sekcji Łączność i sieć**. Aby uzyskać więcej informacji, zobacz [Fragmenty kodu](/visualstudio/ide/code-snippets).  
+     Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajdują się one w obszarze **łączności i sieci**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>Zobacz też
 

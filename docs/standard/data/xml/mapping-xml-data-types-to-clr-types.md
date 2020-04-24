@@ -15,7 +15,7 @@ ms.locfileid: "75710664"
 W poniższej tabeli opisano domyślne mapowanie między typami danych XML a typami środowiska uruchomieniowego języka wspólnego (CLR).
 
 > [!NOTE]
-> `xs` i prefiksy `xdt` są mapowane odpowiednio do <https://www.w3.org/2001/XMLSchema> oraz identyfikatorów URI <https://www.w3.org/2003/05/xpath-datatypes> przestrzeni nazw.
+> `xs` A `xdt` prefiksy są mapowane na odpowiednio identyfikatory URI <https://www.w3.org/2001/XMLSchema> i <https://www.w3.org/2003/05/xpath-datatypes> przestrzeni nazw.
 
 |Typ XML|Typ CLR|
 |--------------|--------------|
@@ -76,6 +76,6 @@ W poniższej tabeli opisano domyślne mapowanie między typami danych XML a typa
 |Węzeł komentarza|<xref:System.Xml.XPath.XPathNavigator>|
 |Przetwarzanie węzła instrukcji|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

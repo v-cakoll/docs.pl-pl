@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ładowanie pliku'
+title: 'Instrukcje: przekazywanie pliku'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -17,35 +17,35 @@ ms.locfileid: "74345557"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Porady: ładowanie pliku w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> może służyć do przekazywania pliku i przechowywania go w lokalizacji zdalnej. Jeśli `ShowUI` parametr jest `True`ustawiony na , zostanie wyświetlone okno dialogowe, które pokazuje postęp przekazywania i umożliwia użytkownikom anulowanie operacji.  
+Metoda <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> ta umożliwia przekazanie pliku i zapisanie go w lokalizacji zdalnej. Jeśli `ShowUI` parametr jest ustawiony na `True`, wyświetlane jest okno dialogowe, które pokazuje postęp przekazywania i umożliwia użytkownikom anulowanie operacji.  
   
-### <a name="to-upload-a-file"></a>Aby przesłać plik  
+### <a name="to-upload-a-file"></a>Aby przekazać plik  
   
-- Użyj `UploadFile` metody przekazywania pliku, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI (jednolity identyfikator zasobu). W tym przykładzie `Order.txt` `http://www.cohowinery.com/uploads.aspx`przesyła plik do pliku .  
+- Za pomocą `UploadFile` metody Przekaż plik, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI (Uniform Resource Identifier). Ten przykład przekazuje plik `Order.txt` do. `http://www.cohowinery.com/uploads.aspx`  
   
      [!code-vb[VbResourceTasks#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#6)]  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Aby przesłać plik i wyświetlić postęp operacji  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Aby przekazać plik i wyświetlić postęp operacji  
   
-- Użyj `UploadFile` metody przekazywania pliku, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI. W tym przykładzie `Order.txt` `http://www.cohowinery.com/uploads.aspx` przekazuje plik bez podaniem nazwy użytkownika lub hasła, pokazuje postęp przekazywania i ma limit czasu 500 milisekund.  
+- Użyj `UploadFile` metody, aby przekazać plik, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI. Ten przykład przekazuje plik `Order.txt` do `http://www.cohowinery.com/uploads.aspx` bez podawania nazwy użytkownika lub hasła, pokazuje postęp przekazywania i ma interwał limitu czasu wynoszący 500 milisekund.  
   
      [!code-vb[VbResourceTasks#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#7)]  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Aby przekazać plik, podając nazwę użytkownika i hasło  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Aby przekazać plik, należy podać nazwę użytkownika i hasło.  
   
-- Użyj `UploadFile` metody przekazywania pliku, określania lokalizacji pliku źródłowego i lokalizacji katalogu docelowego jako ciągu lub identyfikatora URI oraz określania nazwy użytkownika i hasła. W tym przykładzie `Order.txt` `http://www.cohowinery.com/uploads.aspx`plik przesyła do `anonymous` , podając nazwę użytkownika i puste hasło.  
+- Użyj `UploadFile` metody, aby przekazać plik, określić lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI oraz określić nazwę użytkownika i hasło. Ten przykład przekazuje plik `Order.txt` do `http://www.cohowinery.com/uploads.aspx`, podając nazwę `anonymous` użytkownika i puste hasło.  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
- Następujące warunki mogą zgłaszać wyjątek:  
+ Następujące warunki mogą zgłosić wyjątek:  
   
-- Lokalna ścieżka pliku jest<xref:System.ArgumentException>nieprawidłowa ( ).  
+- Lokalna ścieżka pliku jest nieprawidłowa (<xref:System.ArgumentException>).  
   
-- Uwierzytelnianie nie<xref:System.Security.SecurityException>powiodło się ( ).  
+- Uwierzytelnianie nie powiodło się (<xref:System.Security.SecurityException>).  
   
-- Limit czasu połączenia<xref:System.TimeoutException>( ).  
+- Przekroczono limit czasu połączenia (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -115,7 +115,7 @@ public class Sample
 
 W tym przykładzie są wyświetlane następujące dane wyjściowe:
 
-**Output**
+**Dane wyjściowe**
 
 Wyświetl wszystkie atrybuty w kolekcji.
 
@@ -190,7 +190,7 @@ public class Sample
 
 ## <a name="retrieving-an-individual-attribute-node"></a>Pobieranie pojedynczego węzła atrybutu
 
-Aby pobrać pojedynczy węzeł atrybutu z elementu, używana jest metoda <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType>. Zwraca obiekt typu **XmlAttribute**. Po utworzeniu elementu **XmlAttribute**wszystkie metody i właściwości dostępne w klasie <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> są dostępne dla tego obiektu, takich jak znalezienie elementu **OwnerElement**.
+Aby pobrać pojedynczy węzeł atrybutu z elementu, używana jest <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> Metoda. Zwraca obiekt typu **XmlAttribute**. Po utworzeniu elementu **XmlAttribute**wszystkie metody i właściwości dostępne w <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> klasie są dostępne dla tego obiektu, takich jak znalezienie elementu **OwnerElement**.
 
 ```vb
 Imports System.IO
@@ -258,6 +258,6 @@ Można również jak pokazano w poprzednim przykładzie, gdzie jeden węzeł atr
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

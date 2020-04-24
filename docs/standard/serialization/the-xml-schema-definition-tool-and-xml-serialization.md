@@ -16,21 +16,21 @@ ms.locfileid: "80588388"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Narzędzie definicji schematu XML i serializacja XML
 
-Narzędzie XML Schema Definition[(XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) jest instalowane&reg; wraz z narzędziami .NET Framework w ramach zestawu Windows Software Development Kit (SDK). To narzędzie jest przeznaczony głównie do dwóch celów:  
+Narzędzie definicji schematu XML ([narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) jest instalowane wraz z narzędziami .NET Framework w ramach zestawu Software Development Kit&reg; (SDK) dla systemu Windows. To narzędzie jest przeznaczony głównie do dwóch celów:  
   
-- Aby wygenerować C# lub Visual Basic PLików klasy, które są zgodne z określonego schematu języka (XSD) definicji schematu XML. Narzędzie wykonuje schematu XML jako argument i generuje PLik, który zawiera wiele klas, gdy serializowany z <xref:System.Xml.Serialization.XmlSerializer>, zgodny ze schematem. Aby uzyskać informacje dotyczące używania narzędzia do generowania klas zgodnych z określonym schematem, zobacz [Jak: Generowanie klas i dokumentów schematu schematu XML za pomocą narzędzia XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
+- Aby wygenerować C# lub Visual Basic PLików klasy, które są zgodne z określonego schematu języka (XSD) definicji schematu XML. Narzędzie wykonuje schematu XML jako argument i generuje PLik, który zawiera wiele klas, gdy serializowany z <xref:System.Xml.Serialization.XmlSerializer>, zgodny ze schematem. Aby uzyskać informacje na temat sposobu użycia narzędzia do generowania klas, które są zgodne z określonym schematem, zobacz [How to: use a XML Schema Definition Tool to Generating Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
-- Do generowania dokumentu XML schematu z PLiku .dll lub .exe. Aby wyświetlić schemat zestaw PLiki, których zostanie utworzony lub, który został zmodyfikowany z atrybutów, należy przekazać wartość DLL lub EXE jako argument do narzędzia do generowania schematu XML. Aby uzyskać informacje dotyczące sposobu generowania dokumentu schematu XML z zestawu klas za pomocą narzędzia, zobacz [Jak: Generowanie klas i dokumentów schematu schematu XML za pomocą narzędzia](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
+- Do generowania dokumentu XML schematu z PLiku .dll lub .exe. Aby wyświetlić schemat zestaw PLiki, których zostanie utworzony lub, który został zmodyfikowany z atrybutów, należy przekazać wartość DLL lub EXE jako argument do narzędzia do generowania schematu XML. Aby uzyskać informacje o sposobach generowania dokumentu schematu XML z zestawu klas przy użyciu narzędzia, zobacz [How to: use a XML Schema Definition Tool to Generating Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
-Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz [Narzędzie XML Schema definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz [narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.DataSet>
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Narzędzie definicji schematu XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [Narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Instrukcje: Generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
-- [Obsługa wiązania schematu XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))
+- [Obsługa powiązań schematu XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

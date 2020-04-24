@@ -1,5 +1,5 @@
 ---
-title: .NET Informacje dotyczące Framework
+title: Informacje dotyczące programu .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference [Visual Basic], .NET Framework
@@ -20,10 +20,10 @@ Ten temat zawiera linki do informacji na temat sposobu pracy z biblioteką klas 
  [Wprowadzenie](../../framework/get-started/index.md)  
  Wyczerpujące omówienie programu .NET Framework i łącza do dodatkowych zasobów.  
   
- [Omówienie biblioteki klas](../../standard/class-library-overview.md)  
+ [Przegląd biblioteki klas](../../standard/class-library-overview.md)  
  Wprowadza klasy, interfejsy i typy wartości, które pomagają przyspieszyć i zoptymalizować proces opracowywania oraz zapewnić dostęp do funkcji systemu.  
   
- [Podręcznik programowania](../../framework/development-guide.md)  
+ [Przewodnik programowania](../../framework/development-guide.md)  
  Zawiera Przewodnik dotyczący wszystkich kluczowych obszarów i zadań związanych z tworzeniem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji. Ten temat zawiera również informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątkowości.  
   
  [Narzędzia](../../framework/tools/index.md)  

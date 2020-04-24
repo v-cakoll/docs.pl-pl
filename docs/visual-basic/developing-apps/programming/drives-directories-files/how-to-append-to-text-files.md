@@ -15,13 +15,13 @@ ms.locfileid: "74348869"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Porady: łączenie się plikami tekstowymi w Visual Basic
 
-Metodę <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> można użyć do dodawania do pliku tekstowego, określając, że `append` parametr jest ustawiony na `True`.  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metoda może służyć do dołączania do pliku tekstowego przez określenie, że `append` parametr jest ustawiony na `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Aby dołączyć do pliku tekstowego  
   
-- Użyj `WriteAllText` tej metody, określając plik docelowy i ciąg, `append` który `True`ma być dołączony, oraz ustawiając parametr na .  
+- Użyj `WriteAllText` metody, określając docelowy plik i ciąg do dołączenia, a następnie ustaw `append` parametr na. `True`  
   
-     W tym przykładzie `"This is a test string."` zapisuje `Testfile.txt`ciąg do pliku o nazwie .  
+     Ten przykład zapisuje ciąg `"This is a test string."` do pliku o nazwie. `Testfile.txt`  
   
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
@@ -29,19 +29,19 @@ Metodę <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> można u�
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `File`wskazuje ścieżkę, która nie<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>istnieje ( lub ).  
+- `File`wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).  
   
-- Plik jest używany przez inny proces lub występuje błąd<xref:System.IO.IOException>we/wy ( ).  
+- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).  
   
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

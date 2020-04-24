@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: przekształcanie fragmentu węzła'
+title: 'Instrukcje: Przekształcanie fragmentu węzła'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,8 +13,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710820"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Instrukcje: przekształcanie fragmentu węzła
-Gdy przekształcasz dane zawarte w obiekcie <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument>, przekształcenia XSLT mają zastosowanie do dokumentu jako całości. Innymi słowy, jeśli przejdziesz do węzła innego niż węzeł główny dokumentu, nie uniemożliwi to proces przekształcania uzyskuje dostęp do wszystkich węzłów w załadowanym dokumencie. Aby przekształcić fragment węzła, należy utworzyć oddzielny obiekt zawierający tylko fragment węzła i przekazać go do metody <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+# <a name="how-to-transform-a-node-fragment"></a>Instrukcje: Przekształcanie fragmentu węzła
+Gdy przekształcasz dane zawarte w obiekcie <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> , przekształcenia XSLT mają zastosowanie do dokumentu jako całości. Innymi słowy, jeśli przejdziesz do węzła innego niż węzeł główny dokumentu, nie uniemożliwi to proces przekształcania uzyskuje dostęp do wszystkich węzłów w załadowanym dokumencie. Aby przekształcić fragment węzła, należy utworzyć oddzielny obiekt zawierający tylko fragment węzła i przekazać ten obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="procedures"></a>Procedury  
   
@@ -26,7 +26,7 @@ Gdy przekształcasz dane zawarte w obiekcie <xref:System.Xml.XmlDocument> lub <x
   
 3. Utwórz oddzielny obiekt za pomocą tylko fragmentu węzła.  
   
-4. Przekaż fragment węzła do metody <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+4. Przekaż fragment węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przekształca fragment węzła i wyświetla wyniki w konsoli programu.  
@@ -36,7 +36,7 @@ Gdy przekształcasz dane zawarte w obiekcie <xref:System.Xml.XmlDocument> lub <x
   
 ### <a name="input"></a>Dane wejściowe  
   
-##### <a name="booksxml"></a>{1&gt;Books.XML&lt;1}  
+##### <a name="booksxml"></a>Books. XML  
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
 ##### <a name="singlexsl"></a>Single. xsl  
@@ -45,6 +45,6 @@ Gdy przekształcasz dane zawarte w obiekcie <xref:System.Xml.XmlDocument> lub <x
 ### <a name="output"></a>Dane wyjściowe  
  Tytuł książki to człowiek z zaufaniem.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

@@ -13,11 +13,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249542"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer> Element
+# <a name="xmlserializer-element"></a>\<Element XmlSerializer>
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
   
- \<> konfiguracyjne  
-\<> system.xml.serialization  
+ \<> konfiguracji  
+\<> system. XML. Serialization  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,15 +42,15 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<element> system.xml.serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
+|[\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. Jeśli taki warunek zostanie wykryty, wyjątek jest zgłaszany z następującym komunikatem: "Błąd wewnętrzny: deserializacja nie może przejść przez podstawowy strumień."  
+ Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. W przypadku wykrycia takiego warunku zostanie zgłoszony wyjątek z następującym komunikatem: "błąd wewnętrzny: deserializacja nie powiodła się przed strumieniem bazowym".  
   
- Odbieranie ten komunikat nie musi oznaczać, że typu "odmowa usługi" jest w toku. W niektórych sytuacjach szczególnych mechanizm wykrywania pętli nieskończonej tworzy fałszywego ostrzeżenia i wyjątku wiarygodnego wiadomości przychodzącej. Jeśli okaże się, że w danej aplikacji uzasadnione komunikaty są odrzucane przez tę dodatkową warstwę ochrony, ustaw **atrybut checkDeserializeAdvances** na "false".  
+ Odbieranie ten komunikat nie musi oznaczać, że typu "odmowa usługi" jest w toku. W niektórych sytuacjach szczególnych mechanizm wykrywania pętli nieskończonej tworzy fałszywego ostrzeżenia i wyjątku wiarygodnego wiadomości przychodzącej. Jeśli okaże się, że w konkretnej aplikacji legalne komunikaty są odrzucane przez tę dodatkową warstwę ochrony, ustaw atrybut **checkDeserializeAdvances** na wartość "false".  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu ustawia **checkDeserializeAdvances** atrybut "false".  
+ Poniższy przykład kodu ustawia atrybut **checkDeserializeAdvances** na wartość "false".  
   
 ```xml  
 <configuration>  
@@ -63,5 +63,5 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<element> system.xml.serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

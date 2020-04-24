@@ -1,5 +1,5 @@
 ---
-title: Tematy pomocy
+title: Dokumentacja
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -32,7 +32,7 @@ Ta sekcja zawiera linki do informacji referencyjnych na temat różnych aspektó
  [Ogólne elementy interfejsu użytkownika (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Zawiera tematy dla okien dialogowych i okien używanych w programie Visual Studio.  
   
- [Narzędzia XML w Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Narzędzia XML w programie Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Zawiera łącza do tematów dotyczących różnych narzędzi XML dostępnych w programie Visual Studio.  
   
  [Dokumentacja automatyzacji i rozszerzalności](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  

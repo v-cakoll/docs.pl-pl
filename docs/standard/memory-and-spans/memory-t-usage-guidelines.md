@@ -4,30 +4,30 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121961"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135779"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Wytyczne dotyczące użycia struktur Memory\<T > i Span\<T>
 
-.NET Core zawiera wiele typów, które reprezentują dowolny ciągły region pamięci. .NET Core 2.0 wprowadzone <xref:System.Span%601> i <xref:System.ReadOnlySpan%601>, które są lekkie bufory pamięci, które mogą być wspierane przez pamięć zarządzaną lub niezarządzaną. Ponieważ te typy mogą być przechowywane tylko na stosie, są one nieodpowiednie dla wielu scenariuszy, w tym wywołania metody asynchronicznej. .NET Core 2.1 dodaje szereg dodatkowych <xref:System.Memory%601> <xref:System.ReadOnlyMemory%601>typów, w tym , , <xref:System.Buffers.IMemoryOwner%601>, i <xref:System.Buffers.MemoryPool%601>. Podobnie <xref:System.Span%601> <xref:System.Memory%601> jak , a jego powiązane typy mogą być wspierane przez pamięć zarządzaną i niezarządzaną. W <xref:System.Span%601> <xref:System.Memory%601> przeciwieństwie do , mogą być przechowywane na zarządzanym stercie.
+Platforma .NET Core zawiera wiele typów, które reprezentują dowolny ciągły region pamięci. Wdrożono <xref:System.Span%601> program .net core <xref:System.ReadOnlySpan%601>2,0 i są to lekkie bufory pamięci, które mogą być obsługiwane przez pamięć zarządzaną lub niezarządzaną. Ponieważ te typy mogą być przechowywane na stosie, są one nieodpowiednie dla wielu scenariuszy, w tym wywołań metod asynchronicznych. Program .NET Core 2,1 dodaje wiele typów dodatkowych, takich jak <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601>i <xref:System.Buffers.MemoryPool%601>. Podobnie <xref:System.Span%601>jak <xref:System.Memory%601> w przypadku, gdy jego typy pokrewne mogą być obsługiwane przez pamięć zarządzaną i niezarządzaną. W <xref:System.Span%601>przeciwieństwie <xref:System.Memory%601> do programu, można je przechowywać na zarządzanym stosie.
 
-Oba <xref:System.Span%601> <xref:System.Memory%601> i są bufory danych strukturalnych, które mogą być używane w potokach. Oznacza to, że są one zaprojektowane tak, aby niektóre lub wszystkie dane mogą być efektywnie przekazywane do składników w potoku, które mogą je przetwarzać i opcjonalnie modyfikować buforu. Ponieważ <xref:System.Memory%601> i jego powiązanych typów są dostępne przez wiele składników lub przez wiele wątków, ważne jest, aby deweloperzy przestrzegali niektórych standardowych wytycznych użycia do tworzenia niezawodnego kodu.
+Zarówno <xref:System.Span%601> , <xref:System.Memory%601> jak i są buforami danych strukturalnych, które mogą być używane w potokach. Oznacza to, że zostały zaprojektowane tak, aby niektóre lub wszystkie dane mogły być efektywnie przesyłane do składników w potoku, które mogą je przetworzyć i opcjonalnie zmodyfikować bufor. Ze <xref:System.Memory%601> względu na to, że i powiązane z nim typy są dostępne przez wiele składników lub przez wiele wątków, ważne jest, aby deweloperzy przestrzegali niektórych standardowych wytycznych dotyczących użycia w celu utworzenia niezawodnego kodu.
 
-## <a name="owners-consumers-and-lifetime-management"></a>Właściciele, konsumenci i zarządzanie całym życiem
+## <a name="owners-consumers-and-lifetime-management"></a>Właściciele, konsumenci i zarządzanie okresem istnienia
 
-Ponieważ bufory mogą być przekazywane między interfejsami API, a ponieważ bufory są czasami dostępne z wielu wątków, należy wziąć pod uwagę zarządzanie okresem istnienia. Istnieją trzy podstawowe pojęcia:
+Ponieważ bufory mogą być przesyłane między interfejsami API, a ponieważ bufory mogą być dostępne z wielu wątków, ważne jest, aby wziąć pod uwagę zarządzanie okresem istnienia. Istnieją trzy podstawowe koncepcje:
 
-- **Własność**. Właściciel wystąpienia buforu jest odpowiedzialny za zarządzanie okresem istnienia, w tym niszczenie buforu, gdy nie jest już używany. Wszystkie bufory mają jednego właściciela. Zazwyczaj właściciel jest składnikiem, który utworzył bufor lub który odebrał bufor z fabryki. Własność może również zostać przeniesiona; **Component-A** może zrezygnować z kontroli nad buforem do **Składnik-B**, w którym to momencie **Component-A** może już nie używać buforu, a **Component-B** staje się odpowiedzialny za zniszczenie buforu, gdy nie jest już używany.
+- **Własność**. Właściciel wystąpienia buforu jest odpowiedzialny za zarządzanie okresem istnienia, w tym niszczenie bufora, gdy nie jest już używany. Wszystkie bufory mają jednego właściciela. Zazwyczaj właścicielem jest składnik, który utworzył bufor lub odebrał bufor od fabryki. Własność można także przenieść; **Składnik-a** może nawiązać kontrolę nad buforem ze **składnikiem B**, gdzie **składnik-a** nie może już korzystać z bufora, a **składnik-b** jest odpowiedzialny za niszczenie bufora, gdy nie jest już używany.
 
-- **Zużycie**. Konsument wystąpienia buforu może używać wystąpienia buforu, odczytując z niego i ewentualnie zapisując do niego. Bufory mogą mieć jednego konsumenta naraz, chyba że podano jakiś mechanizm synchronizacji zewnętrznej. Należy zauważyć, że aktywny konsument buforu niekoniecznie jest właścicielem buforu.
+- **Użycie**. Odbiorca wystąpienia buforu może używać wystąpienia buforu przez odczyt z niego i prawdopodobnie zapis. Bufory mogą mieć jednego konsumenta w danym momencie, chyba że zostanie podany zewnętrzny mechanizm synchronizacji. Należy zauważyć, że aktywny konsument buforu nie musi być właścicielem bufora.
 
-- **Leasing**. Dzierżawa to czas, przez jaki dany składnik może być konsumentem buforu.
+- **Dzierżawa**. Dzierżawa to długość czasu, przez jaki dany składnik może być odbiorcą buforu.
 
-Poniższy przykład pseudokodu ilustruje te trzy pojęcia. Zawiera `Main` metodę, która tworzy <xref:System.Memory%601> bufor typu, <xref:System.Char>wywołuje `WriteInt32ToBuffer` metodę do zapisu reprezentacji ciągu liczby całkowitej do buforu, a następnie wywołuje `DisplayBufferToConsole` metodę, aby wyświetlić wartość buforu.
+Poniższy przykład pseudo kodu ilustruje te trzy koncepcje. Zawiera `Main` <xref:System.Memory%601> metodę, która tworzy wystąpienie buforu typu <xref:System.Char>, wywołuje `WriteInt32ToBuffer` metodę w celu zapisania ciągu reprezentującego liczbę całkowitą do bufora, a następnie wywołuje `DisplayBufferToConsole` metodę, aby wyświetlić wartość buforu.
 
 ```csharp
 using System;
@@ -58,94 +58,94 @@ class Program
 }
 ```
 
-Metoda `Main` tworzy bufor (w tym <xref:System.Span%601> przypadku wystąpienie) i tak jest jego właścicielem. W `Main` związku z tym jest odpowiedzialny za zniszczenie buforu, gdy nie jest już używany. Czyni to przez wywołanie <xref:System.Span%601.Clear?displayProperty=nameWithType> metody buforu. (Metoda <xref:System.Span%601.Clear> w tym miejscu faktycznie czyści <xref:System.Span%601> pamięć buforu; struktura nie ma w rzeczywistości metody, która niszczy bufor).)
+`Main` Metoda tworzy bufor (w tym przypadku <xref:System.Span%601> wystąpienie) i dlatego jest jego właścicielem. W związku `Main` z tym, jest odpowiedzialny za niszczenie bufora, gdy nie jest już używany. Robi to przez wywołanie <xref:System.Span%601.Clear?displayProperty=nameWithType> metody buforu. (W <xref:System.Span%601.Clear> tym miejscu Metoda faktycznie czyści pamięć buforu; <xref:System.Span%601> struktura nie ma w rzeczywistości metody, która niszczy bufor).
 
-Bufor ma dwóch `WriteInt32ToBuffer` konsumentów `DisplayBufferToConsole`i . Jest tylko jeden konsument naraz `WriteInt32ToBuffer`(najpierw , potem `DisplayBufferToConsole`), a żaden z konsumentów nie jest właścicielem bufora. Należy również zauważyć, że "konsument" w tym kontekście nie oznacza widok tylko do odczytu buforu; konsumenci mogą modyfikować zawartość buforu, `WriteInt32ToBuffer` podobnie jak w przypadku widoku odczytu/zapisu buforu.
+Bufor ma dwóch użytkowników `WriteInt32ToBuffer` i. `DisplayBufferToConsole` W danym momencie istnieje tylko jeden użytkownik (pierwszy `WriteInt32ToBuffer` `DisplayBufferToConsole`), a żaden z nich nie jest właścicielem buforu. Należy zauważyć, że "konsument" w tym kontekście nie implikuje widoku tylko do odczytu buforu; Użytkownicy mogą modyfikować zawartość bufora, tak jak `WriteInt32ToBuffer` w przypadku widoku do odczytu/zapisu w buforze.
 
-Metoda `WriteInt32ToBuffer` ma dzierżawy na (może zużywać) buformiędzy rozpoczęciem wywołania metody i czas zwraca metoda. Podobnie ma `DisplayBufferToConsole` dzierżawy w buforze podczas wykonywania i dzierżawy jest zwalniany, gdy metoda rozwija. (Nie ma API do zarządzania leasingiem; "leasing" jest sprawą koncepcyjną.)
+`WriteInt32ToBuffer` Metoda ma dzierżawę (może zużywać) bufor między początkiem wywołania metody a czasem zwracanym przez metodę. Podobnie, `DisplayBufferToConsole` ma dzierżawę w buforze podczas wykonywania, a dzierżawa jest wydawana, gdy metoda zostanie rozwinięcia. (Nie ma interfejsu API do zarządzania dzierżawą; "dzierżawa" jest kwestią koncepcyjną).
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Pamięć\<T> i model właściciela/konsumenta
+## <a name="memoryt-and-the-ownerconsumer-model"></a>Pamięć\<T> i model właściciel/odbiorca
 
-Jak zauważa [sekcja Właściciele, konsumenci i zarządzanie okresem istnienia,](#owners-consumers-and-lifetime-management) bufor zawsze ma właściciela. Program .NET Core obsługuje dwa modele własności:
+W przypadku, gdy [właściciele, odbiorcy i informacje o zarządzaniu okresem istnienia](#owners-consumers-and-lifetime-management) są uwagi, bufor zawsze ma właściciela. Platforma .NET Core obsługuje dwa modele własności:
 
-- Model, który obsługuje pojedynczej własności. Bufor ma jednego właściciela przez cały okres istnienia.
+- Model, który obsługuje pojedyncze własności. Bufor ma jednego właściciela na cały okres istnienia.
 
-- Model, który obsługuje przeniesienie własności. Własność buforu może zostać przeniesiona z jego pierwotnego właściciela (jego twórcy) do innego składnika, który następnie staje się odpowiedzialny za zarządzanie okresem istnienia buforu. Ten właściciel może z kolei przenieść własność na inny składnik itd.
+- Model obsługujący przenoszenie własności. Własność buforu można przenieść z jego oryginalnego właściciela (jego twórcy) do innego składnika, który następnie jest odpowiedzialny za zarządzanie okresem istnienia bufora. Ten właściciel może zmienić własność transferu na inny składnik i tak dalej.
 
-Interfejs służy <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType> do jawnego zarządzania własnością buforu. <xref:System.Buffers.IMemoryOwner%601>obsługuje oba modele własności. Składnik, który <xref:System.Buffers.IMemoryOwner%601> ma odwołanie jest właścicielem buforu. W poniższym <xref:System.Buffers.IMemoryOwner%601?> przykładzie użyto wystąpienia <xref:System.Memory%601> w celu odzwierciedlenia własności buforu.
+<xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType> Interfejs umożliwia jawne Zarządzanie własnością bufora. <xref:System.Buffers.IMemoryOwner%601>obsługuje obydwa modele własności. Składnik zawierający <xref:System.Buffers.IMemoryOwner%601> odwołanie jest właścicielem bufora. Poniższy przykład używa <xref:System.Buffers.IMemoryOwner%601?> wystąpienia, aby odzwierciedlić własność <xref:System.Memory%601> bufora.
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Możemy również napisać ten [`using`](../../csharp/language-reference/keywords/using-statement.md)przykład z:
+Możemy również napisać ten przykład z [`using`](../../csharp/language-reference/keywords/using-statement.md):
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
 W tym kodzie:
 
-- Metoda `Main` przechowuje odwołanie do <xref:System.Buffers.IMemoryOwner%601> wystąpienia, `Main` więc metoda jest właścicielem buforu.
+- `Main` Metoda przechowuje odwołanie do <xref:System.Buffers.IMemoryOwner%601> wystąpienia, dlatego `Main` Metoda jest właścicielem buforu.
 
-- Metody `WriteInt32ToBuffer` `DisplayBufferToConsole` i zaakceptować <xref:System.Memory%601> jako publiczny interfejs API. W związku z tym są konsumentami buforu. I spożywają go tylko jeden po drugim.
+- Metody `WriteInt32ToBuffer` i `DisplayBufferToConsole` akceptują <xref:System.Memory%601> jako publiczny interfejs API. W związku z tym są użytkownikami bufora. I je zużywają jednocześnie.
 
-Mimo `WriteInt32ToBuffer` że metoda jest przeznaczona do zapisu `DisplayBufferToConsole` wartości do buforu, metoda nie jest. Aby to odzwierciedlić, mógł zaakceptować argument <xref:System.ReadOnlyMemory%601>typu . Aby uzyskać <xref:System.ReadOnlyMemory%601>dodatkowe informacje na temat , zobacz [reguła #2: Użyj\<ReadOnlySpan T> lub ReadOnlyMemory\<T>, jeśli bufor powinien być tylko do odczytu](#rule-2).
+Chociaż `WriteInt32ToBuffer` Metoda jest przeznaczona do zapisania wartości w buforze, `DisplayBufferToConsole` Metoda nie jest. W celu odzwierciedlenia tej wartości może zatwierdzić argument typu <xref:System.ReadOnlyMemory%601>. Aby uzyskać dodatkowe informacje <xref:System.ReadOnlyMemory%601>na temat, zobacz [reguła #2:\<Użyj ReadOnlySpan t>\<lub ReadOnlyMemory t>, jeśli bufor powinien być tylko do odczytu](#rule-2).
 
-### <a name="ownerless-memoryt-instances"></a>Wystąpienia> pamięci\<"Ownerless" Memory T
+### <a name="ownerless-memoryt-instances"></a>Wystąpienia "pamięć\<bezwłaściciel" T> wystąpień
 
-Można utworzyć <xref:System.Memory%601> wystąpienie bez <xref:System.Buffers.IMemoryOwner%601>użycia . W takim przypadku własność buforu jest niejawna, a nie jawna i obsługiwany jest tylko model jednego właściciela. Można to zrobić przez:
+Można utworzyć <xref:System.Memory%601> wystąpienie bez użycia <xref:System.Buffers.IMemoryOwner%601>. W takim przypadku własność buforu jest niejawna, a nie jawna, a tylko model jednego właściciela jest obsługiwany. Można to zrobić, wykonując następujące czynności:
 
-- Wywołanie jednego <xref:System.Memory%601> z konstruktorów `T[]`bezpośrednio, przekazując w , jak w poniższym przykładzie nie.
+- Wywołanie jednego z <xref:System.Memory%601> konstruktorów bezpośrednio, przekazanie w `T[]`, jak pokazano w poniższym przykładzie.
 
-- Wywołanie [String.AsMemory](xref:System.MemoryExtensions.AsMemory(System.String)) metody rozszerzenia `ReadOnlyMemory<char>` do tworzenia wystąpienia.
+- Wywoływanie metody rozszerzenia [String. AsMemory](xref:System.MemoryExtensions.AsMemory(System.String)) w celu utworzenia `ReadOnlyMemory<char>` wystąpienia.
 
 [!code-csharp[ownerless-memory](~/samples/snippets/standard/buffers/memory-t/ownerless/ownerless.cs)]
 
-Metoda, która początkowo <xref:System.Memory%601> tworzy wystąpienie jest niejawnym właścicielem buforu. Własność nie może zostać przeniesiona na <xref:System.Buffers.IMemoryOwner%601> żaden inny składnik, ponieważ nie ma żadnego przypadku ułatwiającego przeniesienie. (Alternatywnie można również sobie wyobrazić, że moduł zbierający elementy bezużyteczne w czasie wykonywania jest właścicielem buforu, a wszystkie metody po prostu zużywają bufor).
+Metoda, która początkowo tworzy <xref:System.Memory%601> wystąpienie, jest niejawnym właścicielem buforu. Własności nie można przenieść do żadnego innego składnika, ponieważ nie ma <xref:System.Buffers.IMemoryOwner%601> żadnego wystąpienia, aby ułatwić transfer. (Alternatywnie można również wyobrazić, że moduł wyrzucania elementów bezużytecznych środowiska uruchomieniowego jest właścicielem buforu, a wszystkie metody zużywają bufor).
 
-## <a name="usage-guidelines"></a>Wskazówki dotyczące użytkowania
+## <a name="usage-guidelines"></a>Zalecenia dotyczące użycia
 
-Ponieważ blok pamięci jest własnością, ale jest przeznaczony do przekazania do wielu składników, z których niektóre mogą działać <xref:System.Memory%601> na <xref:System.Span%601>określonym bloku pamięci jednocześnie, ważne jest, aby ustanowić wytyczne dotyczące korzystania z obu i .  Wytyczne są niezbędne, ponieważ:
+Ponieważ blok pamięci jest własnością, ale jest przeznaczony do przekazywania do wielu składników, a niektóre z nich mogą pracować w konkretnym bloku pamięci jednocześnie, ważne jest ustanowienie wytycznych dotyczących używania obu <xref:System.Memory%601> i. <xref:System.Span%601>  Wytyczne są niezbędne, ponieważ:
 
-- Jest możliwe dla składnika, aby zachować odwołanie do bloku pamięci po jego właściciel zwolnił go.
+- Jest możliwe, że składnik zachowuje odwołanie do bloku pamięci po jego udostępnieniu przez jego właściciela.
 
-- Jest możliwe dla składnika do pracy w buforze w tym samym czasie, że inny składnik działa na nim, w procesie uszkodzenia danych w buforze.
+- Składnik może działać w buforze w tym samym czasie, w którym działa inny składnik, w procesie uszkodzonym dane w buforze.
 
-- Podczas gdy charakter przydzielonego stosoptymalizuje <xref:System.Span%601> wydajność i sprawia, że <xref:System.Span%601> preferowany typ do pracy w bloku pamięci, podlega również <xref:System.Span%601> niektórych głównych ograniczeń. Ważne jest, aby wiedzieć, <xref:System.Span%601> kiedy i <xref:System.Memory%601>kiedy używać .
+- Chociaż przydzielony przez stos charakter <xref:System.Span%601> optymalizuje wydajność i udostępnia <xref:System.Span%601> preferowany typ dla działania w bloku pamięci, to również <xref:System.Span%601> istotne ograniczenia. Ważne jest, aby wiedzieć, kiedy należy użyć <xref:System.Span%601> i kiedy należy używać <xref:System.Memory%601>programu.
 
-Poniżej przedstawiono nasze zalecenia dotyczące <xref:System.Memory%601> pomyślnego korzystania z niego i powiązanych z nim typów. Należy pamiętać, że <xref:System.Memory%601> wskazówki, które mają zastosowanie do i <xref:System.Span%601> odnosi się również do <xref:System.ReadOnlyMemory%601> i <xref:System.ReadOnlySpan%601> chyba że wyraźnie zanotujemy inaczej.
+Poniżej przedstawiono nasze zalecenia dotyczące pomyślnego <xref:System.Memory%601> użycia i powiązanych typów. Należy zwrócić uwagę na to, <xref:System.Memory%601> że <xref:System.Span%601> wskazówki dotyczące programu <xref:System.ReadOnlyMemory%601> i <xref:System.ReadOnlySpan%601> dotyczą także i, chyba że jawnie zanotujemy inaczej.
 
-**Reguła #1: W przypadku synchronicznego\<interfejsu API\<należy użyć span T> zamiast pamięci T> jako parametr, jeśli to możliwe.**
+**Reguła #1: w przypadku synchronicznego interfejsu API należy\<użyć funkcji Span t>\<zamiast pamięci t> jako parametru, jeśli jest to możliwe.**
 
-<xref:System.Span%601>jest bardziej wszechstronny <xref:System.Memory%601> niż i może reprezentować szerszą gamę ciągłych buforów pamięci. <xref:System.Span%601>oferuje również lepszą <xref:System.Memory%601>wydajność niż . Na koniec można <xref:System.Memory%601.Span?displayProperty=nameWithType> użyć właściwości <xref:System.Memory%601> do konwersji <xref:System.Span%601>wystąpienia do\<, chociaż Span T>-to-Memory\<T> konwersja nie jest możliwe. Więc jeśli dzwoniący stało <xref:System.Memory%601> się wystąpienie, będą mogli wywołać metody <xref:System.Span%601> z parametrami i tak.
+<xref:System.Span%601>jest bardziej uniwersalny niż <xref:System.Memory%601> i może reprezentować szeroką gamę ciągłych buforów pamięci. <xref:System.Span%601>oferuje również lepszą wydajność niż <xref:System.Memory%601>. Na <xref:System.Memory%601.Span?displayProperty=nameWithType> koniec można użyć właściwości <xref:System.Memory%601> <xref:System.Span%601>, aby skonwertować wystąpienie na, chociaż\<nie jest możliwe przeprowadzenie konwersji z>> na\<pamięć. Dlatego jeśli obiekty wywołujące miały <xref:System.Memory%601> wystąpienie, będą mogły wywołać metody z <xref:System.Span%601> parametrami.
 
-Przy użyciu parametru <xref:System.Span%601> typu <xref:System.Memory%601> zamiast typu pomaga również napisać implementację metody poprawne. Automatycznie otrzymasz czeki w czasie kompilacji, aby upewnić się, że nie próbujesz uzyskać dostępu do buforu poza dzierżawą metody (więcej na ten temat później).
+Użycie parametru typu <xref:System.Span%601> zamiast typu <xref:System.Memory%601> pomaga napisać poprawną implementację metody zużywanej. Będziesz automatycznie otrzymywać sprawdzenia czasu kompilacji, aby upewnić się, że nie próbujesz uzyskać dostępu do buforu poza dzierżawą metody (więcej informacji na ten temat).
 
-Czasami trzeba będzie użyć <xref:System.Memory%601> parametru zamiast <xref:System.Span%601> parametru, nawet jeśli jesteś w pełni synchroniczny. Być może interfejs API, który <xref:System.Memory%601> zależy akceptuje tylko argumenty. Jest to w porządku, ale należy pamiętać o <xref:System.Memory%601> kompromisów związanych z korzystaniem synchronicznie.
+Czasami musisz użyć <xref:System.Memory%601> parametru zamiast <xref:System.Span%601> parametru, nawet jeśli jest w pełni synchroniczne. Być może interfejs API, który jest zależny <xref:System.Memory%601> , akceptuje tylko argumenty. Jest to dokładne, ale należy pamiętać o kompromisach, które są wykorzystywane <xref:System.Memory%601> w przypadku synchronicznego korzystania z programu.
 
 <a name="rule-2" />
 
-**Reguła #2: Użyj\<readonlySpan T\<> lub ReadOnlyMemory T>, jeśli bufor powinien być tylko do odczytu.**
+**Reguła #2: Użyj ReadOnlySpan\<t> lub ReadOnlyMemory\<> t, jeśli bufor powinien być tylko do odczytu.**
 
-We wcześniejszych przykładach `DisplayBufferToConsole` metoda odczytuje tylko z buforu; nie modyfikuje zawartości buforu. Podpis metody należy zmienić na następujący.
+We wcześniejszych przykładach `DisplayBufferToConsole` Metoda odczytuje tylko dane z buforu; nie modyfikuje zawartości buforu. Sygnaturę metody należy zmienić na następujący.
 
 ```csharp
 void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 ```
 
-W rzeczywistości, jeśli połączymy tę regułę i regułę #1, możemy zrobić jeszcze lepiej i przepisać podpis metody w następujący sposób:
+W rzeczywistości, Jeśli połączymy tę regułę i #1 reguł, możemy jeszcze bardziej ulepszyć i napisać sygnaturę metody w następujący sposób:
 
 ```csharp
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Metoda `DisplayBufferToConsole` działa teraz z praktycznie każdym `T[]`typem buforu, jaki można sobie wyobrazić: , magazyn przydzielony z [stackalloc](../../csharp/language-reference/operators/stackalloc.md)i tak dalej. Można nawet przekazać <xref:System.String> bezpośrednio do niego!
+`DisplayBufferToConsole` Metoda działa teraz z niemal każdym typem bufora urojonym: `T[]`, magazynem przydzielonym z [stackalloc](../../csharp/language-reference/operators/stackalloc.md)i tak dalej. Możesz nawet przekazać bezpośrednio do <xref:System.String> programu!
 
-**Reguła #3: Jeśli metoda\<akceptuje> `void`pamięci T i\<zwraca, nie należy używać wystąpienia> pamięci T po powrocie metody.**
+**Reguła #3: Jeśli metoda akceptuje pamięć\<t> i zwraca `void`, nie należy używać wystąpienia pamięci\<t> po powrocie metody.**
 
-Odnosi się to do wspomnianej wcześniej koncepcji "leasingu". Dzierżawa metody zwracania unieważnienia <xref:System.Memory%601> w wystąpieniu rozpoczyna się po wprowadzeniu metody i kończy się po zamknięciu metody. Należy wziąć pod uwagę `Log` następujący przykład, który wywołuje w pętli na podstawie danych wejściowych z konsoli.
+Odnosi się to do pojęcia "Lease" wymienionego wcześniej. Dzierżawa metody zwracającej wartość void w <xref:System.Memory%601> wystąpieniu rozpoczyna się po wprowadzeniu metody i kończy się po zakończeniu metody. Rozważmy poniższy przykład, który wywołuje `Log` pętlę na podstawie danych wejściowych z konsoli.
 
 [!code-csharp[void-returning](~/samples/snippets/standard/buffers/memory-t/void-returning/void-returning.cs#1)]
 
-Jeśli `Log` jest w pełni synchroniczną metodą, ten kod będzie zachowywać się zgodnie z oczekiwaniami, ponieważ istnieje tylko jeden aktywny konsument wystąpienia pamięci w danym momencie.
-Ale wyobraźcie `Log` sobie, że ma to wdrożenie.
+Jeśli `Log` jest to w pełni synchroniczna Metoda, ten kod będzie zachowywać się zgodnie z oczekiwaniami, ponieważ w danym momencie istnieje tylko jeden aktywny użytkownik wystąpienia pamięci.
+Ale Wyobraź sobie, `Log` że ta implementacja jest taka sama.
 
 ```csharp
 // !!! INCORRECT IMPLEMENTATION !!!
@@ -160,29 +160,29 @@ static void Log(ReadOnlyMemory<char> message)
 }
 ```
 
-W tej `Log` implementacji narusza jego dzierżawy, <xref:System.Memory%601> ponieważ nadal próbuje użyć wystąpienia w tle po zwróceniu oryginalnej metody. Metoda `Main` może mutować buforpodczas `Log` próby odczytu z niego, co może spowodować uszkodzenie danych.
+W tej implementacji narusza `Log` swoją dzierżawę, ponieważ nadal próbuje użyć <xref:System.Memory%601> wystąpienia w tle po zwróceniu pierwotnej metody. `Main` Metoda może być mutacją buforu podczas `Log` próby odczytu z niego, co może spowodować uszkodzenie danych.
 
 Istnieje kilka sposobów rozwiązania tego problemu:
 
-- Metoda `Log` może zwrócić <xref:System.Threading.Tasks.Task> zamiast `void`, jak wykonuje `Log` następująca implementacja metody.
+- `Log` Metoda może zwrócić <xref:System.Threading.Tasks.Task> zamiast `void`, ponieważ Poniższa implementacja `Log` metody.
 
    [!code-csharp[task-returning](~/samples/snippets/standard/buffers/memory-t/task-returning2/task-returning2.cs#1)]
 
-- `Log`zamiast tego można zaimplementować w następujący sposób:
+- `Log`Zamiast tego można zaimplementować w następujący sposób:
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 
-**Reguła #4: Jeśli metoda\<akceptuje> pamięci T i zwraca zadanie, nie można używać wystąpienia> pamięci\<T po przejściu zadania do stanu terminala.**
+**Reguła #4: Jeśli metoda akceptuje pamięć\<t> i zwraca zadanie, nie należy używać wystąpienia pamięci\<t> po przejściu zadań do stanu terminalu.**
 
-To tylko asynchroniczne warianty reguły #3. Metoda `Log` z wcześniejszego przykładu może być napisana w następujący sposób, aby zachować zgodność z tą regułą:
+Jest to tylko asynchroniczny wariant reguły #3. `Log` Metodę z wcześniejszego przykładu można napisać w następujący sposób, aby zachować zgodność z tą regułą:
 
 [!code-csharp[task-returning-async](~/samples/snippets/standard/buffers/memory-t/void-returning-async/void-returning-async.cs#1)]
 
-W tym miejscu "stan terminala" oznacza, że zadanie przechodzi do stanu ukończonego, uszkodzonego lub anulowanego. Innymi słowy,"stan końcowy" oznacza "wszystko, co spowodowałoby oczekiwanie na rzut lub kontynuowanie egzekucji".
+W tym miejscu "stan terminalu" oznacza, że zadanie przechodzi do stanu ukończone, Niepowodzenie lub anulowane. Innymi słowy "stan terminalu" oznacza "wszystkie elementy, które mogłyby spowodować, że oczekujące na zgłoszenie lub kontynuowanie wykonywania".
 
-Niniejsze wskazówki dotyczą metod, <xref:System.Threading.Tasks.Task>które <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.ValueTask%601>zwracają , , lub podobnego typu.
+Te wskazówki dotyczą metod, które zwracają <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask%601>lub mają podobny typ.
 
-**Reguła #5: Jeśli konstruktor akceptuje pamięć\<T> jako parametr, metody wystąpienia na\<skonstruowanym obiekcie są uważane za konsumentów wystąpienia> pamięci T.**
+**Reguła #5: Jeśli Konstruktor akceptuje> pamięci\<jako parametr, zakłada się, że metody wystąpienia na skonstruowanym obiekcie są traktowane jako konsumenci z wystąpienia pamięci\<t>.**
 
 Rozważmy następujący przykład:
 
@@ -203,13 +203,13 @@ void PrintAllOddValues(ReadOnlyMemory<int> input)
 }
 ```
 
-W tym `OddValueExtractor` miejscu konstruktor akceptuje `ReadOnlyMemory<int>` jako parametr konstruktora, więc `ReadOnlyMemory<int>` sam konstruktor jest konsumentem wystąpienia, a `ReadOnlyMemory<int>` wszystkie metody wystąpienia zwracanej wartości są również konsumentami oryginalnego wystąpienia. Oznacza to, `TryReadNextOddValue` że `ReadOnlyMemory<int>` zużywa wystąpienie, mimo że wystąpienie `TryReadNextOddValue` nie jest przekazywane bezpośrednio do metody.
+W tym miejscu `OddValueExtractor` Konstruktor akceptuje `ReadOnlyMemory<int>` jako parametr konstruktora, więc Konstruktor jest odbiorcą `ReadOnlyMemory<int>` wystąpienia, a wszystkie metody wystąpienia w zwracanej wartości są również odbiorcami oryginalnego `ReadOnlyMemory<int>` wystąpienia. Oznacza to, `TryReadNextOddValue` że zużywa `ReadOnlyMemory<int>` wystąpienie, mimo że wystąpienie nie jest bezpośrednio przesyłane do `TryReadNextOddValue` metody.
 
-**Reguła #6: Jeśli masz\<właściwość typu> typu ddefiniowaną pamięć T (lub równoważną metodę wystąpienia) na typie, metody wystąpienia tego obiektu są uważane za konsumentów wystąpienia> memory\<T.**
+**Reguła #6: Jeśli w danym typie istnieje Właściwość Set> Table\<(lub równoważna metoda wystąpienia) dla tego obiektu, zakłada się, że metody wystąpień na tym obiekcie są klientami z wystąpienia pamięci\<T>.**
 
-To jest naprawdę tylko wariant zasady #5. Ta reguła istnieje, ponieważ ustawiaczy właściwości lub równoważne metody są zakładane do przechwytywania i utrwalić swoje dane wejściowe, więc metody wystąpienia na tym samym obiekcie może korzystać ze stanu przechwyconego.
+Jest to tylko wariant reguły #5. Ta reguła istnieje, ponieważ przyjmuje się, że metody ustawiające właściwości lub równoważne metody przechwytują i utrzymują dane wejściowe
 
-W poniższym przykładzie wyzwoliono następującą regułę:
+Poniższy przykład wyzwala tę regułę:
 
 ```csharp
 class Person
@@ -225,26 +225,26 @@ class Person
 }
 ```
 
-**Reguła #7: Jeśli masz\<iMemoryOwner T> odwołania, należy w pewnym momencie usunąć go lub przenieść jego własności (ale nie oba).**
+**#7 reguły: Jeśli masz odwołanie IMemoryOwner\<T>, musisz mieć w pewnym momencie usunąć lub przenieść jego własność (ale nie oba).**
 
-Ponieważ <xref:System.Memory%601> wystąpienie może być wspierane przez pamięć zarządzaną lub <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> niezarządzaną, właściciel <xref:System.Memory%601> musi wywołać po zakończeniu pracy wykonywanej w wystąpieniu. Alternatywnie właściciel może przenieść własność <xref:System.Buffers.IMemoryOwner%601> wystąpienia na inny składnik, w którym to momencie <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> składnik przejmujący staje się odpowiedzialny za wywołanie w odpowiednim czasie (więcej na ten temat później).
+Ponieważ <xref:System.Memory%601> wystąpienie może być obsługiwane przez pamięć zarządzaną lub niezarządzaną, właściciel musi wywołać <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> , gdy działanie wykonane w <xref:System.Memory%601> wystąpieniu zostało zakończone. Alternatywnie właściciel może przenieść własność <xref:System.Buffers.IMemoryOwner%601> wystąpienia do innego składnika, w tym momencie składnik pozyskiwania będzie odpowiedzialny za wywoływanie <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> w odpowiednim czasie (więcej informacji na ten temat).
 
-Niepowodzenie wywołania <xref:System.Buffers.MemoryPool%601.Dispose%2A> metody może prowadzić do przecieków pamięci niezarządzanej lub pogorszenia wydajności.
+Niepowodzenie wywołania <xref:System.Buffers.MemoryPool%601.Dispose%2A> metody może prowadzić do niezarządzanych przecieków pamięci lub obniżenia wydajności.
 
-Ta reguła ma również zastosowanie do <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType>kodu, który wywołuje metody fabryczne, takie jak . Obiekt wywołujący staje się właścicielem <xref:System.Buffers.IMemoryOwner%601> zwróconego i jest odpowiedzialny za usuwanie wystąpienia po zakończeniu.
+Ta reguła dotyczy również kodu, który wywołuje metody fabryki, <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType>takie jak. Obiekt wywołujący zostaje właścicielem zwróconego <xref:System.Buffers.IMemoryOwner%601> i jest odpowiedzialny za likwidację wystąpienia po zakończeniu.
 
-**Reguła #8: Jeśli masz\<parametr IMemoryOwner T> na powierzchni interfejsu API, akceptujesz własność tego wystąpienia.**
+**Reguła #8: Jeśli masz parametr IMemoryOwner\<T> na powierzchni interfejsu API, akceptujesz własność tego wystąpienia.**
 
-Zaakceptowanie wystąpienia tego typu sygnalizuje, że składnik zamierza przejąć na własność to wystąpienie. Twój składnik staje się odpowiedzialny za prawidłowe usuwanie zgodnie z zasadą #7.
+Zaakceptowanie wystąpienia tego typu sygnalizuje, że składnik zamierza przejąć własność tego wystąpienia. Składnik jest odpowiedzialny za poprawność usuwania zgodnie z regułą #7.
 
-Każdy składnik, który <xref:System.Buffers.IMemoryOwner%601> przenosi własność wystąpienia do innego składnika nie należy już używać tego wystąpienia po zakończeniu wywołania metody.
+Każdy składnik, który przenosi własność <xref:System.Buffers.IMemoryOwner%601> wystąpienia na inny składnik, nie powinien już korzystać z tego wystąpienia po zakończeniu wywołania metody.
 
 > [!IMPORTANT]
-> Jeśli konstruktor <xref:System.Buffers.IMemoryOwner%601> akceptuje jako parametr, <xref:System.IDisposable>jego typ <xref:System.IDisposable.Dispose%2A> powinien <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>implementować , a metoda powinna wywołać .
+> Jeśli <xref:System.Buffers.IMemoryOwner%601> Konstruktor akceptuje jako parametr, jego typ powinien implementować <xref:System.IDisposable>, a <xref:System.IDisposable.Dispose%2A> Metoda powinna wywołać. <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>
 
-**Reguła #9: Jeśli zawijasz synchroniczną metodę p/invoke, interfejs API powinien zaakceptować> Span\<T jako parametr.**
+**#9 reguły: w przypadku pakowania synchronicznej metody p/Invoke interfejs API powinien akceptować zakres\<T> jako parametr.**
 
-Zgodnie z regułą #1, <xref:System.Span%601> jest zazwyczaj poprawny typ do użycia dla synchronicznych interfejsów API. Wystąpienia można <xref:System.Span%601> przypiąć za pomocą słowa kluczowego, [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) jak w poniższym przykładzie.
+Zgodnie z regułą #1, <xref:System.Span%601> jest zazwyczaj prawidłowym typem używanym do synchronicznych interfejsów API. Można przypiąć <xref:System.Span%601> wystąpienia za pomocą [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) słowa kluczowego, jak w poniższym przykładzie.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -265,7 +265,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-W poprzednim przykładzie `pbData` może być null, jeśli na przykład zakres wejściowy jest pusty. Jeśli wyeksportowana metoda `pbData` absolutnie wymaga, aby `cbData` być non-null, nawet jeśli jest 0, metoda może być zaimplementowana w następujący sposób:
+W poprzednim przykładzie `pbData` może mieć wartość null, jeśli na przykład zakres wejściowy jest pusty. Jeśli wyeksportowana Metoda absolutnie wymaga `pbData` , aby nie mieć wartości null, `cbData` nawet jeśli jest równa 0, Metoda może być implementowana w następujący sposób:
 
 ```csharp
 public unsafe int ManagedWrapper(Span<byte> data)
@@ -282,9 +282,9 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-**Reguła #10: Jeśli zawijasz metodę asynchroniczną p/invoke, interfejs API powinien akceptować> pamięci\<T jako parametr.**
+**#10 reguły: w przypadku zawijania asynchronicznej metody p/Invoke interfejs API powinien akceptować>\<pamięci jako parametr.**
 
-Ponieważ nie można [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) użyć słowa kluczowego w operacjach asynchronicznych, należy użyć <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> metody do przypinania <xref:System.Memory%601> wystąpień, niezależnie od rodzaju ciągłej pamięci, którą reprezentuje wystąpienie. W poniższym przykładzie pokazano, jak używać tego interfejsu API do wykonywania asynchronicznego wywołania p/invoke.
+Ponieważ nie można użyć [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) słowa kluczowego w operacjach asynchronicznych, <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> należy użyć metody <xref:System.Memory%601> , aby przypiąć wystąpienia, niezależnie od rodzaju ciągłej pamięci reprezentowanej przez wystąpienie. Poniższy przykład pokazuje, jak używać tego interfejsu API do wykonywania asynchronicznego wywołania p/Invoke.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

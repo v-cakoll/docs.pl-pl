@@ -16,29 +16,29 @@ ms.locfileid: "74348852"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Porady: kopiowanie plików z określonym wzorcem do katalogu w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> zwraca kolekcję tylko do odczytu ciągów reprezentujących nazwy ścieżek dla plików. Za pomocą `wildCards` parametru można określić określony wzorzec.  
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Metoda zwraca kolekcję ciągów służących tylko do odczytu, reprezentującą nazwy ścieżek dla plików. Możesz użyć parametru, `wildCards` aby określić konkretny wzorzec.  
   
- Pusta kolekcja jest zwracana, jeśli nie zostaną znalezione pasujące pliki.  
+ Po znalezieniu pasujących plików zwracana jest pusta kolekcja.  
   
- Można użyć <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> metody kopiowania plików do katalogu.  
+ Możesz użyć metody, <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> aby skopiować pliki do katalogu.  
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Aby skopiować pliki z określonym wzorcem do katalogu  
   
-1. Użyj `GetFiles` metody, aby zwrócić listę plików. W tym przykładzie zwraca wszystkie pliki rtf w określonym katalogu.  
+1. Użyj metody `GetFiles` , aby zwrócić listę plików. Ten przykład zwraca wszystkie pliki. rtf w określonym katalogu.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2. Użyj `CopyFile` metody, aby skopiować pliki. W tym przykładzie kopiuje `testdirectory`pliki do katalogu o nazwie .  
+2. Użyj metody `CopyFile` , aby skopiować pliki. W tym przykładzie pliki są kopiowane do katalogu o `testdirectory`nazwie.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3. Zamknij `For` instrukcję `Next` za pomocą instrukcji.  
+3. Zamknij `For` instrukcję z `Next` instrukcją.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
 ## <a name="example"></a>Przykład  
 
- Poniższy przykład, który przedstawia powyższe fragmenty w pełnej formie, kopiuje wszystkie pliki rtf `testdirectory`w określonym katalogu do katalogu o nazwie .  
+ Poniższy przykład przedstawiający powyższe fragmenty kodu w kompletnym formularzu kopiuje wszystkie pliki. rtf w określonym katalogu do katalogu o nazwie `testdirectory`.  
   
  [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
@@ -46,19 +46,19 @@ Metoda <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> zwrac
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
 - Katalog nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
-- Katalog wskazuje istniejący plik<xref:System.IO.IOException>( ).  
+- Katalog wskazuje istniejący plik (<xref:System.IO.IOException>).  
   
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ). Użytkownik nie ma niezbędnych<xref:System.UnauthorizedAccessException>uprawnień ( ).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>). Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

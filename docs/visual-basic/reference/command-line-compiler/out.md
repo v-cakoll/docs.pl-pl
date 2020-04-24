@@ -26,25 +26,25 @@ Określa nazwę pliku wyjściowego.
   
 |Termin|Definicja|  
 |---|---|  
-|`filename`|Wymagana. Nazwa pliku wyjściowego tworzonego przez kompilator. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
+|`filename`|Wymagany. Nazwa pliku wyjściowego tworzonego przez kompilator. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- Określ pełną nazwę i rozszerzenie pliku do utworzenia. W przeciwnym razie plik. exe przyjmuje swoją nazwę z pliku kodu źródłowego zawierającego procedurę `Sub Main`, a plik. dll przyjmuje swoją nazwę z pierwszego pliku kodu źródłowego.  
+ Określ pełną nazwę i rozszerzenie pliku do utworzenia. W przeciwnym razie plik. exe przyjmuje swoją nazwę z pliku kodu źródłowego zawierającego `Sub Main` procedurę, a plik. dll przyjmuje jego nazwę z pierwszego pliku kodu źródłowego.  
   
- Jeśli określisz nazwę pliku bez rozszerzenia exe lub dll, kompilator automatycznie doda rozszerzenie dla Ciebie, w zależności od wartości określonej dla opcji kompilatora `-target`.  
+ Jeśli określisz nazwę pliku bez rozszerzenia exe lub dll, kompilator automatycznie doda rozszerzenie dla Ciebie, w zależności od wartości określonej dla opcji `-target` kompilatora.  
   
 |Aby skonfigurować w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **Nazwa zestawu** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i tworzy `T2.exe`pliku wyjściowego.  
+ Poniższy kod kompiluje `T2.vb` i tworzy plik `T2.exe`wyjściowy.  
   
 ```console
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

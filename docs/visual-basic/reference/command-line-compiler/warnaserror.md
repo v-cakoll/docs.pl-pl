@@ -26,18 +26,18 @@ Powoduje, że kompilator traktuje pierwsze wystąpienie ostrzeżenia jako błąd
   
 |Termin|Definicja|  
 |---|---|  
-|+ &#124; -|Opcjonalna. Domyślnie `-warnaserror-` jest w efekcie; ostrzeżenia nie uniemożliwiają kompilatorowi tworzenia pliku wyjściowego. Opcja `-warnaserror`, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.|  
-|`numberList`|Opcjonalna. Rozdzielana przecinkami lista numerów IDENTYFIKACYJNych ostrzeżeń, których dotyczy opcja `-warnaserror`. Jeśli nie określono identyfikatora ostrzeżenia, opcja `-warnaserror` dotyczy wszystkich ostrzeżeń.|  
+|+ &#124;-|Element opcjonalny. Domyślnie `-warnaserror-` obowiązuje; ostrzeżenia nie uniemożliwiają kompilatorowi tworzenia pliku wyjściowego. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.|  
+|`numberList`|Element opcjonalny. Rozdzielana przecinkami lista numerów IDENTYFIKACYJNych ostrzeżeń, do których zostanie `-warnaserror` zastosowana opcja. Jeśli nie określono identyfikatora ostrzeżenia, `-warnaserror` opcja ma zastosowanie do wszystkich ostrzeżeń.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-warnaserror` traktuje wszystkie ostrzeżenia jako błędy. Wszystkie komunikaty, które zwykle są raportowane jako ostrzeżenia, są raportowane jako błędy. Kompilator raportuje kolejne wystąpienia tego samego ostrzeżenia co ostrzeżenia.  
+ `-warnaserror` Opcja traktuje wszystkie ostrzeżenia jako błędy. Wszystkie komunikaty, które zwykle są raportowane jako ostrzeżenia, są raportowane jako błędy. Kompilator raportuje kolejne wystąpienia tego samego ostrzeżenia co ostrzeżenia.  
   
- Domyślnie `-warnaserror-` jest włączona, co powoduje, że ostrzeżenia są tylko informacyjne. Opcja `-warnaserror`, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.  
+ Domyślnie `-warnaserror-` obowiązuje, co powoduje, że ostrzeżenia są tylko informacyjne. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.  
   
  Jeśli chcesz, aby tylko kilka określonych ostrzeżeń była traktowana jak błędy, możesz określić rozdzieloną przecinkami listę numerów ostrzeżeń, które mają być traktowane jako błędy.  
   
 > [!NOTE]
-> Opcja `-warnaserror` nie kontroluje sposobu wyświetlania ostrzeżeń. Użyj opcji [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) , aby wyłączyć ostrzeżenia.  
+> `-warnaserror` Opcja nie kontroluje sposobu wyświetlania ostrzeżeń. Użyj opcji [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) , aby wyłączyć ostrzeżenia.  
   
 |Aby ustawić-warnaserror — wszystkie ostrzeżenia jako błędy w środowisku IDE programu Visual Studio|  
 |---|  
@@ -48,20 +48,20 @@ Powoduje, że kompilator traktuje pierwsze wystąpienie ostrzeżenia jako błąd
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.<br />2. Kliknij kartę **kompilacja** .<br />3. Upewnij się, że pole wyboru **Wyłącz wszystkie ostrzeżenia** nie jest zaznaczone.<br />4. Upewnij się, że pole wyboru **Traktuj wszystkie ostrzeżenia jako błędy** nie jest zaznaczone.<br />5. Wybierz **błąd** z kolumny **powiadomień** sąsiadującej z ostrzeżeniem, które ma być traktowane jako błąd.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i nakazuje kompilatorowi wyświetlenie błędu pierwszego wystąpienia każdego ostrzeżenia, które znajdzie.  
+ Poniższy kod kompiluje `In.vb` i kieruje kompilator w celu wyświetlenia błędu pierwszego wystąpienia każdego ostrzeżenia, które znajdzie.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i traktuje tylko ostrzeżenia dla nieużywanych zmiennych lokalnych (42024) jako błąd.  
+ Poniższy kod kompiluje `T2.vb` i traktuje tylko Ostrzeżenie dla nieużywanych zmiennych lokalnych (42024) jako błąd.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

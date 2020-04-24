@@ -17,24 +17,24 @@ ms.locfileid: "74352138"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Zapisywanie w plikach w Visual Basic
 
-W tej sekcji wyjaśniono, jak wykonywać zadania, które obejmują zapisywanie do plików.  
+W tej sekcji wyjaśniono, jak wykonywać zadania, które wymagają zapisu w plikach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: zapisywanie tekstu w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- Pokazuje, jak pisać do plików tekstowych.  
+ Pokazuje, jak zapisywać w plikach tekstowych.  
   
  [Porady: łączenie się plikami tekstowymi](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- Pokazuje, jak dołączyć tekst do pliku tekstowego.  
+ Demonstruje sposób dołączania tekstu do pliku tekstowego.  
   
  [Porady: zapis w plikach binarnych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
  Pokazuje, jak zapisywać do pliku binarnego.  
   
  [Porady: zapisywanie tekstu do plików w katalogu Moje dokumenty](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- Pokazuje, jak tworzyć i zapisywać do nowego pliku tekstowego w katalogu **Moje dokumenty.**  
+ Pokazuje, jak utworzyć nowy plik tekstowy w katalogu **Moje dokumenty** i zapisać w nim.  
   
  [Porady: zapisywanie tekstu do plików za pomocą StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Pokazuje, jak zapisywać do <xref:System.IO.StreamWriter?displayProperty=nameWithType> pliku za pomocą obiektu.  
+ Demonstruje sposób zapisu do pliku z <xref:System.IO.StreamWriter?displayProperty=nameWithType> obiektem.  
   
 ## <a name="reference"></a>Dokumentacja  
 
@@ -53,13 +53,13 @@ W tej sekcji wyjaśniono, jak wykonywać zadania, które obejmują zapisywanie d
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- W tym artykule wyjaśniono, jak wykonywać zadania, które obejmują odczyt z plików.  
+ Wyjaśnia, jak wykonywać zadania, które obejmują odczyt z plików.  
   
  [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- W tym artykule wyjaśniono, jak wykonywać zadania, które obejmują tworzenie, usuwanie, przenoszenie i zmienianie nazwy plików i katalogów.  
+ Wyjaśnia, jak wykonywać zadania, które obejmują tworzenie, usuwanie, przechodzenie i zmienianie nazw plików i katalogów.  
   
  [Zapisywanie danych w schowku i odczytywanie ich z niego](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- W tym artykule wyjaśniono, `My.Computer.Clipboard`jak wykonywać zadania skojarzone z danymi, takie jak odczytywanie danych ze schowka lub zapisywanie danych.  
+ Wyjaśnia, jak wykonywać zadania skojarzone z `My.Computer.Clipboard`, takie jak odczytywanie danych z lub zapisywanie danych w Schowku.  
   
  [Kodowanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Zawiera omówienie kodowania plików.

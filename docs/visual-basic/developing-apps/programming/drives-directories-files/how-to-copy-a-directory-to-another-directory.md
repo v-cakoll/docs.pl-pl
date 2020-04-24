@@ -16,51 +16,51 @@ ms.locfileid: "74348863"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Porady: kopiowanie katalogu do innego katalogu w Visual Basic
 
-Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> tej metody, aby skopiować katalog do innego katalogu. Ta metoda kopiuje zawartość katalogu, a także samego katalogu. Jeśli katalog docelowy nie istnieje, zostanie utworzony. Jeśli katalog o tej samej nazwie istnieje `overwrite` w lokalizacji `False`docelowej i jest ustawiony na , zawartość dwóch katalogów zostanie scalona. Można określić nową nazwę katalogu podczas operacji.
+Użyj metody <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> , aby skopiować katalog do innego katalogu. Ta metoda kopiuje zawartość katalogu oraz sam katalog. Jeśli katalog docelowy nie istnieje, zostanie utworzony. Jeśli katalog o tej samej nazwie istnieje w lokalizacji docelowej i `overwrite` ma ustawioną wartość `False`, zawartość tych dwóch katalogów zostanie scalona. Podczas operacji można określić nową nazwę katalogu.
 
-Podczas kopiowania plików w katalogu mogą być generowane wyjątki, które są spowodowane przez określony `overwrite` plik, `False`na przykład plik istniejący podczas scalania, gdy jest ustawiony na . Gdy takie wyjątki są zgłaszane, są one `Data` konsolidowane w jeden wyjątek, którego właściwość zawiera wpisy, w których kluczem jest plik lub ścieżka katalogu, a określony komunikat wyjątku znajduje się w odpowiedniej wartości.
+Podczas kopiowania plików w katalogu mogą zostać zgłoszone wyjątki, które są spowodowane przez określony plik, taki jak plik istniejący podczas scalania, gdy `overwrite` jest ustawiony na. `False` Gdy takie wyjątki są zgłaszane, są one konsolidowane w jednym wyjątku, którego `Data` Właściwość zawiera wpisy, w których plik lub ścieżka katalogu jest kluczem, a określony komunikat wyjątku jest zawarty w odpowiedniej wartości.
 
 ## <a name="to-copy-a-directory-to-another-directory"></a>Aby skopiować katalog do innego katalogu
 
-- Użyj `CopyDirectory` metody, określając nazwy katalogów źródłowych i docelowych. Poniższy przykład kopiuje `TestDirectory1` katalog `TestDirectory2`nazwany na , zastępowanie istniejących plików.
+- Użyj `CopyDirectory` metody, określając źródłową i docelową nazwę katalogu. Poniższy przykład kopiuje katalog o nazwie `TestDirectory1` do `TestDirectory2`, zastępując istniejące pliki.
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    W tym przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **systemie plików — przetwarzanie dysków, folderów i plików**. Aby uzyskać więcej informacji, zobacz [Fragmenty kodu](/visualstudio/ide/code-snippets).
+    Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **systemie plików — dyski, foldery i pliki**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Niezawodne programowanie
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Nowa nazwa określona dla katalogu zawiera dwukropek (:) lub ukośnik (\ lub /) (<xref:System.ArgumentException>).
+- Nowa nazwa określona dla katalogu zawiera dwukropek (:) lub ukośnik (\ lub/) (<xref:System.ArgumentException>).
 
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- `destinationDirectoryName`jest `Nothing` lub pustym<xref:System.ArgumentNullException>ciągiem ( )
+- `destinationDirectoryName`jest `Nothing` lub ciągiem pustym (<xref:System.ArgumentNullException>)
 
-- Katalog źródłowy nie istnieje<xref:System.IO.DirectoryNotFoundException>( ).
+- Katalog źródłowy nie istnieje (<xref:System.IO.DirectoryNotFoundException>).
 
-- Katalog źródłowy jest katalogiem<xref:System.IO.IOException>głównym ( ).
+- Katalog źródłowy jest katalogiem głównym (<xref:System.IO.IOException>).
 
-- Połączona ścieżka wskazuje istniejący<xref:System.IO.IOException>plik ( ).
+- Połączona ścieżka wskazuje istniejący plik (<xref:System.IO.IOException>).
 
-- Ścieżka źródłowa i ścieżka<xref:System.IO.IOException>docelowa są takie same ( ).
+- Ścieżka źródłowa i ścieżka docelowa są takie<xref:System.IO.IOException>same ().
 
-- `ShowUI`jest ustawiona, `UIOption.AllDialogs` a użytkownik anuluje operację lub nie można skopiować<xref:System.OperationCanceledException>jednego lub więcej plików w katalogu ( ).
+- `ShowUI`jest ustawiona na `UIOption.AllDialogs` , a użytkownik anuluje operację lub nie można skopiować co najmniej jednego pliku w katalogu (<xref:System.OperationCanceledException>).
 
-- Operacja jest cykliczna<xref:System.InvalidOperationException>( ).
+- Operacja jest cykliczna (<xref:System.InvalidOperationException>).
 
 - Ścieżka zawiera dwukropek (:) (<xref:System.NotSupportedException>).
 
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
-- Plik docelowy istnieje, ale nie<xref:System.UnauthorizedAccessException>można uzyskać do niego dostępu ( ).
+- Plik docelowy istnieje, ale nie można uzyskać do<xref:System.UnauthorizedAccessException>niego dostępu ().
 
 ## <a name="see-also"></a>Zobacz też
 

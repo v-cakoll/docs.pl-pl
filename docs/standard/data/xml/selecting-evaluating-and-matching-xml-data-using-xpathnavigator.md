@@ -11,17 +11,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710144"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator
-Klasa <xref:System.Xml.XPath.XPathNavigator> dostarcza metody do wybierania węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu zapytania XPath, ocenia i bada wyniki wyrażenia XPath i określa, czy węzeł w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> pasuje do danego wyrażenia XPath. Te i inne pojęcia, które odnoszą się do wybierania, oceniania i dopasowywania węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>, są opisane w następujących tematach.  
+<xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do wybierania węzłów w <xref:System.Xml.XPath.XPathDocument> obiekcie lub <xref:System.Xml.XmlDocument> przy użyciu kwerendy XPath, ocenia i bada wyniki wyrażenia XPath i określa, czy węzeł w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> odpowiada danemu wyrażeniu XPath. Te i inne pojęcia, które odnoszą się do wybierania, oceniania i dopasowywania węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> są opisane w poniższych tematach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wybieranie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- Opisuje zestaw metod klasy <xref:System.Xml.XPath.XPathNavigator> używanych do wybierania zestawu węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> za pomocą wyrażenia XPath.  
+ Opisuje zestaw metod <xref:System.Xml.XPath.XPathNavigator> klasy używanych do wybierania zestawu węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu wyrażenia XPath.  
   
  [Obliczanie wyrażeń XPath przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- Opisuje metodę <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> klasy <xref:System.Xml.XPath.XPathNavigator> służącą do obliczania wyrażenia XPath.  
+ Opisuje <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metodę <xref:System.Xml.XPath.XPathNavigator> klasy używanej do obliczania wyrażenia XPath.  
   
  [Dopasowywanie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- Opisuje metodę <xref:System.Xml.XPath.XPathNavigator.Matches%2A> klasy <xref:System.Xml.XPath.XPathNavigator> służącą do określenia, czy węzeł dopasowuje wyrażenie XPath.  
+ Opisuje <xref:System.Xml.XPath.XPathNavigator.Matches%2A> metodę <xref:System.Xml.XPath.XPathNavigator> klasy służącą do określenia, czy węzeł dopasowuje wyrażenie XPath.  
   
  [Typy węzłów rozpoznawanych w zapytaniach XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  Opisuje typy węzłów rozpoznawane w zapytaniu XPath.  
@@ -30,9 +30,9 @@ Klasa <xref:System.Xml.XPath.XPathNavigator> dostarcza metody do wybierania węz
  Opisuje użycie przestrzeni nazw w zapytaniu XPath.  
   
  [Skompilowane wyrażenia XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
- Opisuje klasę <xref:System.Xml.XPath.XPathExpression>, która reprezentuje skompilowane zapytanie XPath.  
+ Opisuje <xref:System.Xml.XPath.XPathExpression> klasę, która reprezentuje skompilowane zapytanie XPath.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

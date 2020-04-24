@@ -18,51 +18,51 @@ ms.locfileid: "74348824"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Porady: tworzenie kopii pliku w tym samym katalogu w Visual Basic
 
-Użyj `My.Computer.FileSystem.CopyFile` metody kopiowania plików. Parametry umożliwiają zastąpienie istniejących plików, zmianę nazwy pliku, wyświetlenie postępu operacji i umożliwienie użytkownikowi anulowania operacji.  
+Użyj metody `My.Computer.FileSystem.CopyFile` , aby skopiować pliki. Parametry umożliwiają zastąpienie istniejących plików, zmiana nazwy pliku, wyświetlenie postępu operacji i umożliwienie użytkownikowi anulowania operacji.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Aby utworzyć kopię pliku w tym samym folderze  
   
-- Użyj `CopyFile` metody, podając plik docelowy i lokalizację. Poniższy przykład tworzy `test.txt` kopię `test2.txt`wywoływanego .  
+- Użyj `CopyFile` metody, dostarczając plik docelowy i lokalizację. Poniższy przykład tworzy kopię o `test.txt` nazwie. `test2.txt`  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Aby utworzyć kopię pliku w tym samym folderze, zastępowanie istniejących plików  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Aby utworzyć kopię pliku w tym samym folderze, zastępując istniejące pliki  
   
-- Użyj `CopyFile` metody, podając plik docelowy i `overwrite` `True`lokalizację oraz ustawiając na . Poniższy przykład tworzy `test.txt` kopię `test2.txt` wywoływane i zastępuje wszystkie istniejące pliki o tej nazwie.  
+- Użyj `CopyFile` metody, podając docelowy plik i lokalizację, a następnie ustaw `overwrite` wartość. `True` Poniższy przykład tworzy kopię o `test.txt` nazwie `test2.txt` i zastępuje wszystkie istniejące pliki o tej nazwie.  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
- Następujące warunki mogą powodować wyjątek:  
+ Następujące warunki mogą spowodować zgłoszenie wyjątku:  
   
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
-- System nie może pobrać ścieżki<xref:System.ArgumentException>bezwzględnej ( ).  
+- System nie może pobrać ścieżki bezwzględnej (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Plik źródłowy jest nieprawidłowy lub<xref:System.IO.FileNotFoundException>nie istnieje ( ).  
+- Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- Połączona ścieżka wskazuje istniejący<xref:System.IO.IOException>katalog ( ).  
+- Połączona ścieżka wskazuje istniejący katalog (<xref:System.IO.IOException>).  
   
-- Plik docelowy istnieje `overwrite` i `False` jest<xref:System.IO.IOException>ustawiony na ( ).  
+- Plik docelowy istnieje i `overwrite` ma ustawioną wartość `False` (<xref:System.IO.IOException>).  
   
-- Użytkownik nie ma wystarczających uprawnień dostępu<xref:System.IO.IOException>do pliku ( ).  
+- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.IO.IOException>).  
   
-- Plik w folderze docelowym o tej<xref:System.IO.IOException>samej nazwie jest używany ( ).  
+- Plik w folderze docelowym o tej samej nazwie jest używany (<xref:System.IO.IOException>).  
   
-- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- `ShowUI`jest `True`ustawiona `onUserCancel` na `ThrowException`, a użytkownik anulował operację<xref:System.OperationCanceledException>( ).  
+- `ShowUI`jest ustawiona na `True`, `onUserCancel` jest ustawiona na `ThrowException`, a użytkownik anulował operację (<xref:System.OperationCanceledException>).  
   
-- `ShowUI`jest `True`ustawiona `onUserCancel` na `ThrowException`, i występuje nieokreślony błąd we/wy (<xref:System.OperationCanceledException>).  
+- `ShowUI`jest ustawiona na `True`, `onUserCancel` jest ustawiona na `ThrowException`, i Wystąpił nieokreślony błąd we/wy (<xref:System.OperationCanceledException>).  
   
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- Użytkownik nie ma wymaganych<xref:System.UnauthorizedAccessException>uprawnień ( ).  
+- Użytkownik nie ma wymaganego uprawnienia (<xref:System.UnauthorizedAccessException>).  
   
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -7,4 +7,4 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "65639125"
 ---
 > [!WARNING]
-> Serializacja binarna może być niebezpieczna. Nigdy nie deserializuj danych z niezaufanego źródła i nigdy w obie strony serializowanych danych do systemów, które nie są pod kontrolą użytkownika.
+> Serializacja binarna może być niebezpieczna. Nigdy nie należy deserializować danych z niezaufanego źródła i nigdy nie przeprowadzenia serializacji danych serializowanych do systemów, które nie są pod kontrolą.

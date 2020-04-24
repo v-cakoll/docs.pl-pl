@@ -14,17 +14,17 @@ ms.locfileid: "74335335"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Porady: pobieranie kolekcji plików z katalogu w Visual Basic
 
-Przeciążenia <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> metody zwracają kolekcję tylko do odczytu ciągów reprezentujących nazwy plików w katalogu:  
+Przeciążenia <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> metody zwracają kolekcję ciągów reprezentujących tylko do odczytu, które reprezentują nazwy plików w katalogu:  
   
-- Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> przeciążenia dla prostego wyszukiwania plików w określonym katalogu, bez przeszukiwania podkatalogów.  
+- Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> przeciążenia dla prostego wyszukiwania plików w określonym katalogu bez przeszukiwania podkatalogów.  
   
-- Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> przeciążenia, aby określić dodatkowe opcje wyszukiwania. Za pomocą `wildCards` parametru można określić wzorzec wyszukiwania. Aby uwzględnić podkatalogi w `searchType` wyszukiwaniu, ustaw parametr na <xref:Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories?displayProperty=nameWithType>.  
+- Użyj przeciążenia <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> , aby określić dodatkowe opcje dla wyszukiwania. Możesz użyć parametru, `wildCards` aby określić wzorzec wyszukiwania. Aby uwzględnić podkatalogi w wyszukiwaniu, ustaw `searchType` parametr na <xref:Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories?displayProperty=nameWithType>.  
   
- Pusta kolekcja jest zwracana, jeśli nie zostaną znalezione żadne pliki pasujące do określonego wzorca.  
+ Pusta kolekcja jest zwracana, jeśli nie znaleziono plików zgodnych z określonym wzorcem.  
   
 ### <a name="to-list-files-in-a-directory"></a>Aby wyświetlić listę plików w katalogu  
   
-- Użyj jednego <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> z przeciążeń metody, podając nazwę i ścieżkę `directory` katalogu do wyszukiwania w parametrze. Poniższy przykład zwraca wszystkie pliki w katalogu `ListBox1`i dodaje je do .  
+- Użyj jednego z przeciążeń <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> metody, podając nazwę i ścieżkę katalogu do wyszukania w `directory` parametrze. Poniższy przykład zwraca wszystkie pliki w katalogu i dodaje je do `ListBox1`.  
   
      [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
@@ -32,21 +32,21 @@ Przeciążenia <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?display
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `directory`nie istnieje<xref:System.IO.DirectoryNotFoundException>( ).  
+- `directory`nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory`wskazuje istniejący plik<xref:System.IO.IOException>( ).  
+- `directory`wskazuje istniejący plik (<xref:System.IO.IOException>).  
   
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
-- Użytkownik nie ma niezbędnych<xref:System.UnauthorizedAccessException>uprawnień ( ).  
+- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz też
 

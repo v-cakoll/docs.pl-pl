@@ -23,7 +23,7 @@ Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzo
 
 1. Budowy <xref:System.Xml.Serialization.XmlSerializer> przy użyciu typu obiektu do deserializacji.
 
-1. Wywołaj metodę <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, aby utworzyć replikę obiektu. Podczas deserializacji należy rzutować zwracany obiekt na typ oryginału, jak pokazano w poniższym przykładzie, który deserializacji obiekt z pliku (mimo że można go również zdeserializować ze strumienia).
+1. Wywołaj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metodę, aby utworzyć replikę obiektu. Podczas deserializacji należy rzutować zwracany obiekt na typ oryginału, jak pokazano w poniższym przykładzie, który deserializacji obiekt z pliku (mimo że można go również zdeserializować ze strumienia).
 
     ```vb
     ' Construct an instance of the XmlSerializer with the type
@@ -46,7 +46,7 @@ Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzo
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: utrwalanie ustawień użytkownika'
+title: 'Instrukcje: Utrwalanie ustawień użytkownika'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
@@ -15,22 +15,22 @@ ms.locfileid: "74329640"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Porady: utrwalanie ustawień użytkownika w Visual Basic
 
-Za pomocą `My.Settings.Save` tej metody można utrwalić zmiany w ustawieniach użytkownika.  
+Możesz użyć metody, `My.Settings.Save` aby zachować zmiany ustawień użytkownika.  
   
- Zazwyczaj aplikacje są przeznaczone do utrwalania zmian w ustawieniach użytkownika, gdy aplikacja zostanie zamknięta. Dzieje się tak dlatego, że zapisanie ustawień może potrwać, w zależności od kilku czynników, kilka sekund.  
+ Zazwyczaj aplikacje są przeznaczone do utrwalania zmian ustawień użytkownika po zamknięciu aplikacji. Wynika to z faktu, że zapisywanie ustawień może zająć, w zależności od kilku czynników, kilka sekund.  
   
- Aby uzyskać więcej informacji, zobacz [Obiekt My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Chociaż można zmienić i zapisać wartości ustawień zakresu użytkownika w czasie wykonywania, ustawienia zakresu aplikacji są tylko do odczytu i nie można zmienić programowo. Ustawienia zakresu aplikacji można zmienić podczas tworzenia aplikacji za pośrednictwem **projektanta projektu**lub edytowania pliku konfiguracyjnego aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Chociaż można zmienić i zapisać wartości ustawień zakresu użytkownika w czasie wykonywania, ustawienia zakresu aplikacji są tylko do odczytu i nie można ich programowo zmienić. Ustawienia zakresu aplikacji można zmienić podczas tworzenia aplikacji, za pomocą **projektanta projektu**lub edytując plik konfiguracji aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Przykład  
 
- W tym przykładzie `LastChanged` zmienia wartość ustawienia użytkownika i `My.Settings.Save` zapisuje tę zmianę, wywołując metodę.  
+ Ten przykład zmienia wartość ustawienia `LastChanged` użytkownika i zapisuje tę zmianę przez wywołanie `My.Settings.Save` metody.  
   
  [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
- W tym przykładzie do pracy `LastChanged` aplikacja musi mieć `Date`ustawienie użytkownika, typu . Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Aby ten przykład działał, aplikacja musi mieć ustawienie `LastChanged` użytkownika o typie. `Date` Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Zobacz też
 

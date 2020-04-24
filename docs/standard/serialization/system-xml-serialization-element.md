@@ -13,44 +13,44 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67410545"
 ---
-# <a name="systemxmlserialization-element"></a><span data-ttu-id="12387-102">\<system.xml.serialization> Element</span><span class="sxs-lookup"><span data-stu-id="12387-102">\<system.xml.serialization> Element</span></span>
+# <a name="systemxmlserialization-element"></a><span data-ttu-id="1e0c1-102">\<Element> system. XML. Serialization</span><span class="sxs-lookup"><span data-stu-id="1e0c1-102">\<system.xml.serialization> Element</span></span>
 
-<span data-ttu-id="12387-103">Element najwyższego poziomu do sterowania serializacji XML.</span><span class="sxs-lookup"><span data-stu-id="12387-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="12387-104">Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="12387-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>
+<span data-ttu-id="1e0c1-103">Element najwyższego poziomu do sterowania serializacji XML.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="1e0c1-104">Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="1e0c1-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>
 
-<span data-ttu-id="12387-105">\<Konfiguracja > </span><span class="sxs-lookup"><span data-stu-id="12387-105">\<configuration></span></span>\
-<span data-ttu-id="12387-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="12387-106">\<system.xml.serialization></span></span>
+<span data-ttu-id="1e0c1-105">\<> konfiguracji </span><span class="sxs-lookup"><span data-stu-id="1e0c1-105">\<configuration></span></span>\
+<span data-ttu-id="1e0c1-106">\<> system. XML. Serialization</span><span class="sxs-lookup"><span data-stu-id="1e0c1-106">\<system.xml.serialization></span></span>
 
-## <a name="syntax"></a><span data-ttu-id="12387-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="12387-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1e0c1-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="1e0c1-107">Syntax</span></span>
 
 ```xml
 <system.xml.serialization>
 </system.xml.serialization>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="12387-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="12387-108">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="1e0c1-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="1e0c1-108">Attributes and Elements</span></span>
 
-<span data-ttu-id="12387-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="12387-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="1e0c1-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="12387-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="12387-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="1e0c1-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="1e0c1-110">Attributes</span></span>
 
-<span data-ttu-id="12387-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="12387-111">None.</span></span>
+<span data-ttu-id="1e0c1-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-111">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="12387-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="12387-112">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="1e0c1-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="1e0c1-112">Child Elements</span></span>
 
-|<span data-ttu-id="12387-113">Element</span><span class="sxs-lookup"><span data-stu-id="12387-113">Element</span></span>|<span data-ttu-id="12387-114">Opis</span><span class="sxs-lookup"><span data-stu-id="12387-114">Description</span></span>|
+|<span data-ttu-id="1e0c1-113">Element</span><span class="sxs-lookup"><span data-stu-id="1e0c1-113">Element</span></span>|<span data-ttu-id="1e0c1-114">Opis</span><span class="sxs-lookup"><span data-stu-id="1e0c1-114">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="12387-115">\<dateTimeSerialization> Element</span><span class="sxs-lookup"><span data-stu-id="12387-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="12387-116">Określa tryb serializacji <xref:System.DateTime> obiektów.</span><span class="sxs-lookup"><span data-stu-id="12387-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|
-|[<span data-ttu-id="12387-117">\<schemaImporterExtensions> Element</span><span class="sxs-lookup"><span data-stu-id="12387-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="12387-118">Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> dla mapowania typów XSD do typów programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="12387-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|
+|[<span data-ttu-id="1e0c1-115">\<dateTimeSerialization, element></span><span class="sxs-lookup"><span data-stu-id="1e0c1-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="1e0c1-116">Określa tryb serializacji <xref:System.DateTime> obiektów.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|
+|[<span data-ttu-id="1e0c1-117">\<schemaImporterExtensions, element></span><span class="sxs-lookup"><span data-stu-id="1e0c1-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="1e0c1-118">Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> dla mapowania typów XSD do typów programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="12387-119">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="12387-119">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="1e0c1-119">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="1e0c1-119">Parent Elements</span></span>
 
-|<span data-ttu-id="12387-120">Element</span><span class="sxs-lookup"><span data-stu-id="12387-120">Element</span></span>|<span data-ttu-id="12387-121">Opis</span><span class="sxs-lookup"><span data-stu-id="12387-121">Description</span></span>|
+|<span data-ttu-id="1e0c1-120">Element</span><span class="sxs-lookup"><span data-stu-id="1e0c1-120">Element</span></span>|<span data-ttu-id="1e0c1-121">Opis</span><span class="sxs-lookup"><span data-stu-id="1e0c1-121">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="12387-122">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="12387-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="12387-123">Element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="12387-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|
+|[<span data-ttu-id="1e0c1-122">\<> elementu konfiguracji</span><span class="sxs-lookup"><span data-stu-id="1e0c1-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="1e0c1-123">Element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|
 
-## <a name="example"></a><span data-ttu-id="12387-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="12387-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1e0c1-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="1e0c1-124">Example</span></span>
 
-<span data-ttu-id="12387-125">Poniższy przykład kodu przedstawia sposób określić tryb serializacji <xref:System.DateTime> obiektu i dodatkowych, używany przez <xref:System.Xml.Serialization.XmlSchemaImporter> podczas mapowania typów XSD do typów programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="12387-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>
+<span data-ttu-id="1e0c1-125">Poniższy przykład kodu ilustruje sposób określania trybu serializacji <xref:System.DateTime> obiektu i dodawania typów używanych przez <xref:System.Xml.Serialization.XmlSchemaImporter> podczas mapowania typów XSD na typy .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1e0c1-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>
 
 ```xml
 <system.xml.serialization>
@@ -66,11 +66,11 @@ ms.locfileid: "67410545"
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="12387-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="12387-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e0c1-126">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1e0c1-126">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [<span data-ttu-id="12387-127">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="12387-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="12387-128">\<dateTimeSerialization> Element</span><span class="sxs-lookup"><span data-stu-id="12387-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [<span data-ttu-id="12387-129">\<schemaImporterExtensions> Element</span><span class="sxs-lookup"><span data-stu-id="12387-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [<span data-ttu-id="12387-130">\<add> Element for \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="12387-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [<span data-ttu-id="1e0c1-127">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="1e0c1-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="1e0c1-128">\<dateTimeSerialization, element></span><span class="sxs-lookup"><span data-stu-id="1e0c1-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [<span data-ttu-id="1e0c1-129">\<schemaImporterExtensions, element></span><span class="sxs-lookup"><span data-stu-id="1e0c1-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [<span data-ttu-id="1e0c1-130">\<Dodaj element> dla \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="1e0c1-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

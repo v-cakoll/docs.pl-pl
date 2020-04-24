@@ -6,9 +6,9 @@
       items:
         - name: Importowanie biblioteki typów jako zestawu
           href: importing-a-type-library-as-an-assembly.md
-        - name: 'Porady: dodawanie odwołań do bibliotek typów'
+        - name: 'Instrukcje: Dodawanie odwołań do bibliotek typów'
           href: how-to-add-references-to-type-libraries.md
-        - name: 'Porada: generowanie zestawów międzyoperacyjnych z bibliotek typów'
+        - name: 'Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów'
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: Kompilowanie projektu międzyoperacyjnego
           href: compiling-an-interop-project.md
@@ -23,9 +23,9 @@
           href: packaging-an-assembly-for-com.md
         - name: Rejestrowanie zestawów do użycia z modelem COM
           href: registering-assemblies-with-com.md
-        - name: 'Porady: odwołania do typów .NET z modelu COM'
+        - name: 'Instrukcje: Odwołania do typów .NET z modelu COM'
           href: how-to-reference-net-types-from-com.md
-        - name: 'Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET'
+        - name: 'Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET'
           href: com-interop-sample-com-client-and-net-server.md
     - name: Wykorzystywanie niezarządzanych funkcji DLL
       href: consuming-unmanaged-dll-functions.md
@@ -50,7 +50,7 @@
               href: passing-structures.md
             - name: Funkcje wywołania zwrotnego
               href: callback-functions.md
-            - name: 'Porady: implementowanie funkcji wywołania zwrotnego'
+            - name: 'Instrukcje: Implementowanie funkcji wywołania zwrotnego'
               href: how-to-implement-callback-functions.md
     - name: Organizowanie międzyoperacyjne
       href: interop-marshaling.md
@@ -84,21 +84,21 @@
         - name: Organizowanie danych za pomocą modelu COM
           href: marshaling-data-with-com-interop.md
           items:
-            - name: 'Porady: ręczne tworzenie otok'
+            - name: 'Instrukcje: Ręczne tworzenie otok'
               href: how-to-create-wrappers-manually.md
-            - name: 'Instrukcje: migrowanie zarządzanego kodu DCOM do WCF'
+            - name: 'Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF'
               href: how-to-migrate-managed-code-dcom-to-wcf.md
-    - name: 'Porady: mapowanie wyników HRESULT i wyjątków'
+    - name: 'Instrukcje: Mapowanie wyników HRESULT i wyjątków'
       href: how-to-map-hresults-and-exceptions.md
-    - name: 'Porady: tworzenie otok COM'
+    - name: 'Instrukcje: Tworzenie otok COM'
       href: how-to-create-com-wrappers.md
     - name: Równoważność typów i osadzone typy międzyoperacyjne
       href: type-equivalence-and-embedded-interop-types.md
-    - name: 'Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
+    - name: 'Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
       href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-    - name: 'Porady: rejestrowanie podstawowych zestawów międzyoperacyjnych'
+    - name: 'Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych'
       href: how-to-register-primary-interop-assemblies.md
     - name: Współdziałanie z modelem COM bez rejestrowania
       href: registration-free-com-interop.md
-    - name: 'Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
+    - name: 'Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
       href: configure-net-framework-based-com-components-for-reg.md

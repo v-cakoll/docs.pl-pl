@@ -1,42 +1,42 @@
 ---
-ms.openlocfilehash: 843c78bb4e4f88d9ac58308a91ab8278364c9580
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: becae23cd810623bbb33c693b707c2d4735aeece
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021583"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158484"
 ---
-### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>Program .NET Core 3.0 jest zgodny z najlepszymi rozwiązaniami firmy Unicode podczas zastępowania źle sformułowanych sekwencji bajtów UTF-8
+### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>Zastępowanie źle sformułowanych sekwencji bajtów w formacie UTF-8 następuje po wskazówkach dotyczących standardu Unicode
 
-Gdy <xref:System.Text.UTF8Encoding> klasa napotka źle sformułowaną sekwencję bajtów UTF-8 podczas operacji transkodowania bajt-znak, zastąpi tę sekwencję znakiem ' ' (U+ FFFD REPLACEMENT CHARACTER) w ciągu wyjściowym. Program .NET Core 3.0 różni się od poprzednich wersji programu .NET Core i programu .NET Framework, postępując zgodnie z najlepszą praktyką unicode dla wykonywania tej wymiany podczas operacji transkodowania.
+Gdy <xref:System.Text.UTF8Encoding> Klasa napotka niewłaściwie sformułowaną sekwencję bajtów UTF-8 podczas operacji transkodowania typu "Byte do znaku", zastępuje tę sekwencję znakiem "" (U + znak zastępczy FFFD) w ciągu danych wyjściowych. Program .NET Core 3,0 różni się od poprzednich wersji programu .NET Core i .NET Framework, zgodnie z najlepszymi rozwiązaniami Unicode dotyczącymi wykonywania tego zastąpienia podczas operacji transkodowania.
 
-Jest to część większego wysiłku, aby poprawić utf-8 obsługi <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> w <xref:System.Text.Rune?displayProperty=nameWithType> całej .NET, w tym przez nowe i typy. Typ <xref:System.Text.UTF8Encoding> został ulepszony mechanika obsługi błędów, tak aby produkować dane wyjściowe zgodne z nowo wprowadzonych typów.
+Jest to część większego nakładu pracy w celu poprawienia obsługi UTF-8 w całym środowisku .NET <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> , <xref:System.Text.Rune?displayProperty=nameWithType> w tym w przypadku nowych i typów. <xref:System.Text.UTF8Encoding> Typ został osiągnięty Ulepszona obsługa błędów Mechanics, tak aby dane wyjściowe były spójne z nowo wprowadzonymi typami.
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Core 3.0, podczas transkodowania bajtów do znaków, <xref:System.Text.UTF8Encoding> klasa wykonuje podstawienie znaków na podstawie najlepszych rozwiązań Unicode. Stosowany mechanizm zastępowania jest opisany przez [Standard Unicode, wersja 12.0, sek.](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) _U+FFFD Substitution of Maximal Subparts_
+Począwszy od platformy .NET Core 3,0, podczas transkodowania bajtów do znaków, <xref:System.Text.UTF8Encoding> Klasa wykonuje podstawienie znaków na podstawie najlepszych rozwiązań w formacie Unicode. Używany mechanizm podstawiania jest opisany w [standardzie Unicode, w wersji 12,0, sek. 3,9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) w nagłówku zatytułowanym _U + FFFD podstawianie z maksymalną częścią_.
 
-To zachowanie ma zastosowanie _tylko_ wtedy, gdy sekwencja bajtów wejściowych zawiera źle sformułowane dane UTF-8. <xref:System.Text.UTF8Encoding> Ponadto jeśli wystąpienie zostało skonstruowane `throwOnInvalidBytes: true` za pomocą (zobacz [UTF8Wcoding<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>konstruktora dokumentacji]( , `UTF8Encoding` wystąpienie będzie nadal rzucać na nieprawidłowe dane wejściowe, a nie wykonać zastąpienie U + FFFD.
+To zachowanie ma zastosowanie _tylko_ wtedy, gdy sekwencja bajtów wejściowych zawiera źle sformułowane dane UTF-8. Ponadto jeśli <xref:System.Text.UTF8Encoding> wystąpienie zostało skonstruowane z `throwOnInvalidBytes: true`, `UTF8Encoding` wystąpienie będzie nadal zgłaszać nieprawidłowe dane wejściowe zamiast wykonywać zamianę U + FFFD. Aby uzyskać więcej informacji na `UTF8Encoding` temat konstruktora, <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>Zobacz.
 
-Poniżej przedstawiono wpływ tej zmiany z nieprawidłowym wejściem 3-bajtowym:
+W poniższej tabeli przedstawiono wpływ tej zmiany z nieprawidłowymi danymi wejściowymi 3-bajtowymi:
 
-|Źle sformułowane wejście 3-bajtowe|Wyjście przed .NET Core 3.0|Wyjście zaczynające się od .NET Core 3.0|
-|---|---|---|
-| `[ ED A0 90 ]` | `[ FFFD FFFD ]`(wyjście 2-znakowe)| `[ FFFD FFFD FFFD ]`(wyjście 3-znakowe)|
+| Niewłaściwie sformułowane dane wejściowe 3-bajtowe | Dane wyjściowe przed platformą .NET Core 3,0          | Dane wyjściowe rozpoczynające się od platformy .NET Core 3,0        |
+|-------------------------|--------------------------------------|-------------------------------------------|
+| `[ ED A0 90 ]`          | `[ FFFD FFFD ]`(2-znakowe dane wyjściowe) | `[ FFFD FFFD FFFD ]`(3 znaki wyjściowe) |
 
-To wyjście 3-char jest preferowanym wyjściem, zgodnie z _tabelą 3-9_ wcześniej połączonego standardu Unicode PDF.
+3-znakowe dane wyjściowe to preferowane dane wyjściowe, zgodnie z _tabelą 3-9_ poprzednio połączonego pliku PDF w standardzie Unicode.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Nie jest wymagana żadna akcja ze strony dewelopera.
+W części dewelopera nie jest wymagana żadna akcja.
 
 #### <a name="category"></a>Kategoria
 
-Podstawowe biblioteki .NET
+Podstawowe biblioteki platformy .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

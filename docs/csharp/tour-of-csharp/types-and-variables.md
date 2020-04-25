@@ -1,14 +1,14 @@
 ---
 title: Typy i zmienne języka c# — samouczek języka C#
 description: 'Informacje na temat definiowania typów i deklarowania zmiennych w języku C #'
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: dc80a7ea80790ef5af5218f5a608e5829d2970cc
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135961"
+ms.locfileid: "82141008"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -30,8 +30,10 @@ Poniższy konspekt zawiera omówienie systemu typów języka C#.
     - Typy formularza zdefiniowane przez użytkownika`enum E {...}`
   - [Typy struktur][StructTypes]
     - Typy formularza zdefiniowane przez użytkownika`struct S {...}`
-  - [Typy wartości dopuszczające wartość null][NullableTypes]
+  - [Typy wartości null][NullableTypes]
     - Rozszerzenia wszystkich innych typów wartości z `null` wartością
+  - [Typy wartości krotki][TupleTypes]
+    - Typy formularza zdefiniowane przez użytkownika`(T1, T2, ...)`
 - [Typy odwołań][ReferenceTypes]
   - [Typy klas][ClassTypes]
     - Ostateczna Klasa bazowa dla wszystkich innych typów:`object`
@@ -49,6 +51,7 @@ Poniższy konspekt zawiera omówienie systemu typów języka C#.
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md

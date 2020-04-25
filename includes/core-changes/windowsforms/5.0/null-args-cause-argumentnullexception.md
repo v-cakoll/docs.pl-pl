@@ -1,29 +1,29 @@
 ---
-ms.openlocfilehash: fc0eec26073c299887b4748d0ad37e21c7294e84
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275498"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158406"
 ---
-### <a name="winforms-apis-now-throw-argumentnullexception"></a>Interfejsy API WinForms teraz rzucać ArgumentNullException
+### <a name="winforms-methods-now-throw-argumentnullexception"></a>Metody WinForms teraz generują ArgumentNullException
 
-Niektóre metody windows forms <xref:System.ArgumentNullException> teraz rzucać dla null <xref:System.NullReferenceException>argumenty, gdzie wcześniej wrzucili .
+Niektóre metody Windows Forms teraz throw <xref:System.ArgumentNullException> dla argumentów o wartości null, w których wcześniej wywołały. <xref:System.NullReferenceException>
 
 #### <a name="change-description"></a>Zmień opis
 
-Wcześniej niektóre metody windows forms <xref:System.NullReferenceException> rzucił if przeszedł argument, który był null. Począwszy od .NET 5.0, <xref:System.ArgumentNullException> te metody teraz rzut dla argumentów null zamiast.
+Wcześniej niektóre metody Windows Forms zgłosiły, <xref:System.NullReferenceException> Jeśli przekazano argument, który miał wartość null. Począwszy od platformy .NET 5,0, metody te teraz <xref:System.ArgumentNullException> zgłaszają zamiast argumentów wartości null.
 
-Zgłaszanie <xref:System.ArgumentNullException> jest zgodne z zachowaniem środowiska wykonawczego platformy .NET. Poprawia również środowisko debugowania, wyraźnie informując, że argument jest null i który argument jest.
+Zgłaszanie <xref:System.ArgumentNullException> jest zgodne z zachowaniem środowiska uruchomieniowego .NET. Usprawnia to również środowisko debugowania przez wyraźne poinformowanie, że argument ma wartość null i który argument jest.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
-.NET 5.0 Wersja zapoznawcza 1\
-.NET 5.0 Wersja zapoznawcza 2
+.NET 5,0 — wersja zapoznawcza 1 \
+.NET 5,0 (wersja zapoznawcza 2)
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli wywołasz dowolną z tych metod, a <xref:System.NullReferenceException> kod obecnie połowy <xref:System.ArgumentNullException> dla argumentów null, złapać zamiast tego. Ponadto należy rozważyć zaktualizowanie kodu, aby zapobiec przekazywaniu argumentów null do wymienionych metod.
+Jeśli wywołasz dowolną z tych metod, a kod aktualnie przechwytuje <xref:System.NullReferenceException> dla argumentów o wartości null, <xref:System.ArgumentNullException> Przechwyć zamiast tego. Ponadto należy rozważyć zaktualizowanie kodu, aby uniemożliwić przekazywanie argumentów o wartości null do wymienionych metod.
 
 #### <a name="category"></a>Kategoria
 
@@ -31,7 +31,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-Począwszy od wersji .NET 5.0 Wersja zapoznawcza 1:
+Począwszy od wersji zapoznawczej programu .NET 5,0 1:
 
 - <xref:System.Windows.Forms.Control.ControlCollection.%23ctor(System.Windows.Forms.Control)>
 - <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=nameWithType>
@@ -42,10 +42,10 @@ Począwszy od wersji .NET 5.0 Wersja zapoznawcza 1:
 - <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs)?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripRenderer.OnRenderStatusStripSizingGrip(System.Windows.Forms.ToolStripRenderEventArgs)?displayProperty=nameWithType>
 
-Począwszy od wersji .NET 5.0 Preview 2:
+Począwszy od programu .NET 5,0 w wersji zapoznawczej 2:
 
 - <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(tylko <xref:System.IO.Stream> dla parametru)
+- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(tylko dla <xref:System.IO.Stream> parametru)
 
 <!-- 
 

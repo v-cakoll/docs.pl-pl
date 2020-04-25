@@ -4,12 +4,12 @@ description: Dowiedz się bezserwerowo, korzystając z praktycznego podejścia, 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/17/2020
-ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135662"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158453"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
 
@@ -93,13 +93,13 @@ Ten przykład to funkcja generyczna (`.csx` plik), która może służyć do kon
 
 ## <a name="serverless-for-mobile"></a>Bezserwerowy dla urządzeń przenośnych
 
-Azure Functions można łatwo zaimplementować i zachować i uzyskać dostęp za pośrednictwem protokołu HTTP. Są one doskonałym sposobem implementacji interfejsu API dla aplikacji mobilnej. Firma Microsoft oferuje wspaniałe narzędzia dla wielu platform dla systemów iOS, Android i Windows za pomocą platformy Xamarin. W związku z tym platformy Xamarin i Azure Functions działają doskonale. W tym artykule pokazano, jak wdrożyć funkcję platformy Azure w portalu internetowym platformy Azure lub w programie Visual Studio w pierwszej kolejności oraz utworzyć klienta międzyplatformowego za pomocą interfejsu Xamarin. Forms działającego w systemach Android, iOS i Windows.
+Azure Functions można łatwo zaimplementować i zachować i uzyskać dostęp za pośrednictwem protokołu HTTP. Są one doskonałym sposobem implementacji interfejsu API dla aplikacji mobilnej. Firma Microsoft oferuje wspaniałe narzędzia dla wielu platform dla systemów iOS, Android i Windows za pomocą platformy Xamarin. W związku z tym platformy Xamarin i Azure Functions działają doskonale. W tym artykule pokazano, jak wdrożyć funkcję platformy Azure w Azure Portal lub w programie Visual Studio w pierwszej kolejności i utworzyć klienta międzyplatformowego za pomocą interfejsu Xamarin. Forms działającego w systemach Android, iOS i Windows.
 
 [Implementowanie prostej funkcji platformy Azure przy użyciu klienta Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 
 ## <a name="serverless-messaging"></a>Obsługa komunikatów bezserwerowych
 
-Ten przykład pokazuje, jak użyć wzorca wentylatorów Durable Functions "do załadowania dowolnej liczby komunikatów na dowolną liczbę sesji/partycji. Jest ona przeznaczona dla kolejek Service Bus, Event Hubs lub magazynu. Przykład dodaje również możliwość korzystania z tych komunikatów z inną funkcją platformy Azure i ładowania powstających danych o chronometrażu w innym centrum zdarzeń. Dane są następnie pozyskiwane na usługi analizy, takie jak Azure Eksplorator danych.
+Ten przykład pokazuje, jak używać wzorca wentylatorów Durable Functions "w celu załadowania dowolnej liczby komunikatów na dowolną liczbę sesji/partycji. Jest ona przeznaczona dla kolejek Service Bus, Event Hubs lub magazynu. Przykład dodaje również możliwość korzystania z tych komunikatów z inną funkcją platformy Azure i ładowania powstających danych o chronometrażu w innym centrum zdarzeń. Dane są następnie pozyskiwane na usługi analizy, takie jak Azure Eksplorator danych.
 
 [Tworzenie i używanie komunikatów za pomocą kolejek Service Bus, Event Hubs i magazynu przy użyciu Azure Functions](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 

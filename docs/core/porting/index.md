@@ -3,12 +3,12 @@ title: Przenoszenie z programu .NET Framework na platformę .NET Core
 description: Poznaj proces przenoszenia i odnajdywanie narzędzi, które mogą okazać się przydatne podczas przenoszenia projektu .NET Framework do programu .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 499632791e85f4ede87668775ad48407c6988095
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135584"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158291"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Przegląd portów z .NET Framework do platformy .NET Core
 
@@ -46,7 +46,7 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 
 1. Przekonwertuj wszystkie `packages.config` zależności na format [PackageReference](/nuget/consume-packages/package-references-in-project-files) za pomocą [narzędzia konwersji w programie Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
-   Ten krok obejmuje przekonwertowanie zależności z starszego `packages.config` formatu. `packages.config`nie działa w programie .NET Core, dlatego ta konwersja jest wymagana, jeśli masz zależności pakietu. Również wymaga tylko zależności, które są bezpośrednio używane w projekcie, co umożliwi łatwiejsze podejmowanie dalszych kroków przez zmniejszenie liczby zależności, którymi trzeba zarządzać.
+   Ten krok obejmuje przekonwertowanie zależności z starszego `packages.config` formatu. `packages.config`nie działa w programie .NET Core, dlatego ta konwersja jest wymagana, jeśli masz zależności pakietu. Wymaga również tylko zależności, które są bezpośrednio używane w projekcie, co sprawia, że dalsze kroki są łatwiejsze poprzez zmniejszenie liczby zależności, którymi należy zarządzać.
 
 1. Przekonwertuj plik projektu na nową strukturę plików stylu zestawu SDK. Można tworzyć nowe projekty dla platformy .NET Core i kopiować je na pliki źródłowe lub próbować skonwertować istniejący plik projektu za pomocą narzędzia.
 
@@ -66,7 +66,7 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 
    Podczas odczytywania raportów wygenerowanych przez analizatora ważne informacje to rzeczywiste interfejsy API, które są używane, a nie musi to być procent obsługi platformy docelowej. Wiele interfejsów API ma równoważne opcje w .NET Standard/Core i dlatego zrozumienie scenariuszy, w których biblioteka lub aplikacja potrzebuje interfejsu API, aby pomóc w ustaleniu implikacji przenoszenia.
 
-   Istnieją przypadki, w których interfejsy API nie są równoważne i należy wykonać pewne dyrektywy preprocesora kompilatora (tj. `#if NET45`), aby specjalne przypadki platform. W tym momencie projekt będzie nadal ukierunkowany na .NET Framework. W przypadku każdego z tych celów zaleca się użycie dobrze znanych warunków, które można zrozumieć jako scenariusz.  Na przykład obsługa AppDomain w programie .NET Core jest ograniczona, ale w przypadku scenariusza ładowania i zwalniania zestawów istnieje nowy interfejs API, który nie jest dostępny w programie .NET Core. Typowy sposób obsługi tego kodu w kodzie będzie wyglądać następująco:
+   Istnieją sytuacje, w których interfejsy API nie są równoważne i należy wykonać niektóre dyrektywy preprocesora kompilatora (czyli), `#if NET45`w specjalnym przypadku platform. W tym momencie projekt nadal będzie ukierunkowany na .NET Framework. W przypadku każdego z tych celów zaleca się użycie dobrze znanych warunków, które można zrozumieć jako scenariusz.  Na przykład obsługa AppDomain w programie .NET Core jest ograniczona, ale w przypadku scenariusza ładowania i zwalniania zestawów istnieje nowy interfejs API, który jest niedostępny w programie .NET Core. Typowy sposób obsługi tego kodu w kodzie będzie wyglądać następująco:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -84,7 +84,7 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 
 1. W tym momencie można przełączyć się na kierowanie .NET Core (ogólnie dla aplikacji) lub .NET Standard (dla bibliotek).
 
-   Wybór między platformą .NET Core i .NET Standard jest w dużym stopniu zależny od tego, gdzie projekt zostanie uruchomiony. Jeśli jest to biblioteka, która będzie używana przez inne aplikacje lub dystrybuowana za pośrednictwem programu NuGet, preferencją jest zwykle docelowa .NET Standard. Jednak mogą istnieć interfejsy API, które są dostępne tylko na platformie .NET Core w celu uzyskania wydajności lub innych przyczyn. w takim przypadku platforma .NET Core powinna być przeznaczona dla potencjalnie .NET Standard kompilacji, a także z ograniczoną wydajnością lub funkcjonalności. Według .NET Standard, projekt będzie gotowy do uruchomienia na nowych platformach (takich jak webassembly). Jeśli projekt ma zależności od określonych platform aplikacji (takich jak ASP.NET Core), wartość docelowa będzie ograniczona przez obsługiwane zależności.
+   Wybór między platformą .NET Core i .NET Standard jest w dużym stopniu zależny od tego, gdzie projekt zostanie uruchomiony. Jeśli jest to biblioteka, która będzie używana przez inne aplikacje lub dystrybuowana za pośrednictwem programu NuGet, preferencją jest zwykle docelowa .NET Standard. Jednak mogą istnieć interfejsy API, które są dostępne tylko na platformie .NET Core w celu uzyskania wydajności lub innych przyczyn. w takim przypadku platforma .NET Core powinna być przeznaczona do użycia z potencjalnie .NET Standard kompilacją, a także z ograniczoną wydajnością lub funkcjonalnością. Według .NET Standard, projekt będzie gotowy do uruchomienia na nowych platformach (takich jak webassembly). Jeśli projekt ma zależności od określonych platform aplikacji (takich jak ASP.NET Core), wartość docelowa będzie ograniczona przez obsługiwane zależności.
 
    Jeśli nie istnieją dyrektywy preprocesora do warunkowego kompilowania kodu dla .NET Framework lub .NET Standard, będzie to tak proste, jak znalezienie następujących w pliku projektu:
 
@@ -98,17 +98,17 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
    <TargetFramework>netcoreapp3.1</TargetFramework>
    ```
 
-   Jeśli jednak jest to biblioteka, która ma być kontynuowana, .NET Framework konkretne kompilacje z jakiegoś powodu [, można je zastąpić, zastępując](../../standard/library-guidance/cross-platform-targeting.md) następujące polecenie:
+   Jeśli jednak jest to biblioteka, dla której chcesz kontynuować obsługę kompilacji specyficznych dla .NET Framework [, możesz ją](../../standard/library-guidance/cross-platform-targeting.md) zastąpić, zastępując ją następującym:
 
    ```xml
    <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
    ```
 
-   Jeśli używasz interfejsów API specyficznych dla systemu Windows (takich jak dostęp do rejestru), należy zainstalować [pakiet zgodności systemu Windows](./windows-compat-pack.md).
+   Jeśli używasz interfejsów API specyficznych dla systemu Windows (takich jak dostęp do rejestru), zainstaluj [pakiet zgodności systemu Windows](./windows-compat-pack.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
->[!div class="nextstepaction"]
->[Analizowanie](third-party-deps.md)
->
->[pakietu NuGet pakietu](../deploying/creating-nuget-packages.md)[programu zależności ASP.NET do migracji ASP.NET Core](/aspnet/core/migration/proper-to-2x)
+> [!div class="nextstepaction"]
+> [Analizowanie](third-party-deps.md)
+> 
+> [pakietu NuGet pakietu](../deploying/creating-nuget-packages.md)[programu zależności ASP.NET do migracji ASP.NET Core](/aspnet/core/migration/proper-to-2x)

@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135779"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158596"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Wytyczne dotyczące użycia struktur Memory\<T > i Span\<T>
 
@@ -23,7 +23,7 @@ Ponieważ bufory mogą być przesyłane między interfejsami API, a ponieważ bu
 
 - **Własność**. Właściciel wystąpienia buforu jest odpowiedzialny za zarządzanie okresem istnienia, w tym niszczenie bufora, gdy nie jest już używany. Wszystkie bufory mają jednego właściciela. Zazwyczaj właścicielem jest składnik, który utworzył bufor lub odebrał bufor od fabryki. Własność można także przenieść; **Składnik-a** może nawiązać kontrolę nad buforem ze **składnikiem B**, gdzie **składnik-a** nie może już korzystać z bufora, a **składnik-b** jest odpowiedzialny za niszczenie bufora, gdy nie jest już używany.
 
-- **Użycie**. Odbiorca wystąpienia buforu może używać wystąpienia buforu przez odczyt z niego i prawdopodobnie zapis. Bufory mogą mieć jednego konsumenta w danym momencie, chyba że zostanie podany zewnętrzny mechanizm synchronizacji. Należy zauważyć, że aktywny konsument buforu nie musi być właścicielem bufora.
+- **Użycie**. Odbiorca wystąpienia buforu może używać wystąpienia buforu przez odczyt z niego i prawdopodobnie zapis. Bufory mogą mieć jednego konsumenta w danym momencie, chyba że zostanie podany zewnętrzny mechanizm synchronizacji. Aktywny konsument buforu nie musi być właścicielem bufora.
 
 - **Dzierżawa**. Dzierżawa to długość czasu, przez jaki dany składnik może być odbiorcą buforu.
 
@@ -86,7 +86,7 @@ W tym kodzie:
 
 - Metody `WriteInt32ToBuffer` i `DisplayBufferToConsole` akceptują <xref:System.Memory%601> jako publiczny interfejs API. W związku z tym są użytkownikami bufora. I je zużywają jednocześnie.
 
-Chociaż `WriteInt32ToBuffer` Metoda jest przeznaczona do zapisania wartości w buforze, `DisplayBufferToConsole` Metoda nie jest. W celu odzwierciedlenia tej wartości może zatwierdzić argument typu <xref:System.ReadOnlyMemory%601>. Aby uzyskać dodatkowe informacje <xref:System.ReadOnlyMemory%601>na temat, zobacz [reguła #2:\<Użyj ReadOnlySpan t>\<lub ReadOnlyMemory t>, jeśli bufor powinien być tylko do odczytu](#rule-2).
+Chociaż `WriteInt32ToBuffer` Metoda jest przeznaczona do zapisania wartości w buforze, `DisplayBufferToConsole` Metoda nie jest. W celu odzwierciedlenia tej wartości może zatwierdzić argument typu <xref:System.ReadOnlyMemory%601>. Aby uzyskać więcej informacji <xref:System.ReadOnlyMemory%601>na temat, zobacz temat [Rule #2\<: Użyj ReadOnlySpan t\<> lub ReadOnlyMemory t>, jeśli bufor powinien być tylko do odczytu](#rule-2).
 
 ### <a name="ownerless-memoryt-instances"></a>Wystąpienia "pamięć\<bezwłaściciel" T> wystąpień
 
@@ -110,7 +110,7 @@ Ponieważ blok pamięci jest własnością, ale jest przeznaczony do przekazywan
 
 - Chociaż przydzielony przez stos charakter <xref:System.Span%601> optymalizuje wydajność i udostępnia <xref:System.Span%601> preferowany typ dla działania w bloku pamięci, to również <xref:System.Span%601> istotne ograniczenia. Ważne jest, aby wiedzieć, kiedy należy użyć <xref:System.Span%601> i kiedy należy używać <xref:System.Memory%601>programu.
 
-Poniżej przedstawiono nasze zalecenia dotyczące pomyślnego <xref:System.Memory%601> użycia i powiązanych typów. Należy zwrócić uwagę na to, <xref:System.Memory%601> że <xref:System.Span%601> wskazówki dotyczące programu <xref:System.ReadOnlyMemory%601> i <xref:System.ReadOnlySpan%601> dotyczą także i, chyba że jawnie zanotujemy inaczej.
+Poniżej przedstawiono nasze zalecenia dotyczące pomyślnego <xref:System.Memory%601> użycia i powiązanych typów. Wskazówki odnoszące <xref:System.Memory%601> się <xref:System.Span%601> do programu i <xref:System.ReadOnlyMemory%601> dotyczą <xref:System.ReadOnlySpan%601> także i, chyba że jawnie zanotujemy inaczej.
 
 **Reguła #1: w przypadku synchronicznego interfejsu API należy\<użyć funkcji Span t>\<zamiast pamięci t> jako parametru, jeśli jest to możliwe.**
 

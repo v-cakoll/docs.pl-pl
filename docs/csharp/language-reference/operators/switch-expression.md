@@ -1,57 +1,57 @@
 ---
-title: wyrażenie switch - odwołanie do języka C#
-description: Dowiedz się, jak używać wyrażenia przełącznika C# do dopasowywania wzorców i introspekcji innych danych
+title: wyrażenie Switch — odwołanie w C#
+description: Dowiedz się, jak używać wyrażenia przełącznika C# na potrzeby dopasowywania wzorców i innych danych introspekcji
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249789"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140664"
 ---
-# <a name="switch-expression-c-reference"></a>wyrażenie switch (odwołanie do języka C#)
+# <a name="switch-expression-c-reference"></a>Switch — wyrażenie (odwołanie w C#)
 
-W tym `switch` artykule opisano wyrażenie wprowadzone w języku C# 8.0. Aby uzyskać `switch` informacje na temat instrukcji, zobacz artykuł na [ `switch` instrukcji](../keywords/switch.md) w sekcji [instrukcji.](../keywords/index.md)
+W tym artykule opisano `switch` wyrażenie wprowadzone w języku C# 8,0. Aby uzyskać informacje na `switch` temat instrukcji, zobacz artykuł w [ `switch` instrukcji](../keywords/switch.md) w sekcji [instrukcje](../keywords/index.md) .
 
 ## <a name="basic-example"></a>Przykład podstawowy
 
-Wyrażenie `switch` zawiera `switch`semantyka -like w kontekście wyrażenia. Zapewnia zwięzłą składnię, gdy ramiona przełącznika wytwarzają wartość. W poniższym przykładzie przedstawiono strukturę wyrażenia przełącznika. Tłumaczy wartości z `enum` reprezentujących kierunków wizualnych na mapie online do odpowiedniego kierunku kardynalnego:
+`switch` Wyrażenie zapewnia `switch`semantykę podobną w kontekście wyrażenia. Zapewnia zwięzłą składnię, gdy broń przełączania wygenerowała wartość. Poniższy przykład pokazuje strukturę wyrażenia przełącznika. Tłumaczy wartości z `enum` reprezentujących kierunków wizualizacji w mapie online na odpowiedni kierunek kardynalny:
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetBasicStructure":::
 
-W poprzednim przykładzie przedstawiono podstawowe elementy wyrażenia switch:
+Powyższy przykład pokazuje podstawowe elementy wyrażenia przełącznika:
 
-- Wyrażenie *zakresu*: W poprzednim przykładzie `direction` użyto zmiennej jako wyrażenia zakresu.
-- Ramiona *wyrażenia przełącznika*: Każde ramię wyrażenia przełącznika zawiera `=>` *wzorzec,* opcjonalną *osłonę przypadków,* token i *wyrażenie.*
+- *Wyrażenie zakresu*: w poprzednim przykładzie użyta jest zmienna `direction` jako wyrażenie zakresu.
+- *Broń wyrażenia przełącznika*: każde wyrażenie Switch ARM zawiera *wzorzec*, opcjonalną ochronę przed *przypadkami*, `=>` token i *wyrażenie*.
 
-Wynikiem wyrażenia *switch* jest wartość wyrażenia pierwszego *ramienia wyrażenia przełącznika,* którego `true` *wzorzec* pasuje do *wyrażenia zakresu* i którego *przyczyna jest chronina*, jeśli jest obecna, ocenia . *Wyrażenie* po prawej stronie `=>` tokenu nie może być instrukcją wyrażenia.
+Wynik *wyrażenia Switch* jest wartością wyrażenia pierwszego *przełącznika ARM* , którego *wzorzec* dopasowuje *wyrażenie zakresu* i którego funkcja *Case Guard*(jeśli jest obecna) zwraca wartość `true`. *Wyrażenie* po prawej stronie `=>` tokenu nie może być instrukcją wyrażenia.
 
-*Ramiona wyrażenia przełącznika* są oceniane w kolejności tekstowej. Kompilator generuje błąd, gdy nie można wybrać *dolnego ramienia wyrażenia przełącznika,* ponieważ wyższe *ramię wyrażenia przełącznika* pasuje do wszystkich jego wartości.
+*Poręcze wyrażeń przełącznika* są oceniane w kolejności tekstu. Kompilator generuje błąd, gdy nie można wybrać dolnego *wyrażenia Switch ARM* , ponieważ wyższe *wyrażenie Switch ARM* dopasowuje wszystkie jego wartości.
 
-## <a name="patterns-and-case-guards"></a>Wzory i osłony etui
+## <a name="patterns-and-case-guards"></a>Wzorce i osłony przypadków
 
-Wiele wzorców są obsługiwane w ramionach wyrażenia przełącznika. W poprzednim przykładzie użyto *wzorca wartości*. *Wzorzec wartości* porównuje wyrażenie zakresu z wartością. Ta wartość musi być stałą czasu kompilacji. *Wzorzec typu* porównuje wyrażenie zakresu do znanego typu. Poniższy przykład pobiera trzeci element z sekwencji. Wykorzystuje różne metody w oparciu o typ sekwencji:
+Wiele wzorców jest obsługiwanych w przypadku zamiany wyrazów wyrażeń. W poprzednim przykładzie użyto *wzorca wartości*. *Wzorzec wartości* porównuje wyrażenie zakresu z wartością. Ta wartość musi być stałą czasu kompilacji. *Wzorzec typu* porównuje wyrażenie zakresu z znanym typem. Poniższy przykład pobiera trzeci element z sekwencji. Używa różnych metod opartych na typie sekwencji:
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetTypePattern":::
 
-Wzorce mogą być cykliczne, gdzie wzorzec testuje typ, a jeśli ten typ pasuje, wzorzec pasuje do jednej lub więcej wartości właściwości w wyrażeniu zakresu. Można użyć wzorców cyklicznych, aby rozszerzyć poprzedni przykład. Dodano ramiona wyrażenia przełącznika dla tablic, które mają mniej niż 3 elementy. Wzorce cykliczne są pokazane w poniższym przykładzie:
+Wzorce mogą być cykliczne, gdzie wzorzec testuje typ, a jeśli ten typ pasuje, wzorzec dopasowuje co najmniej jedną wartość właściwości w wyrażeniu zakresu. Możesz użyć wzorców cyklicznych, aby zwiększyć poprzedni przykład. Należy dodać broń wyrażenia przełącznika dla tablic, które mają mniej niż 3 elementy. Wzorce cykliczne są wyświetlane w następującym przykładzie:
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetRecursivePattern":::
 
-Wzorce cykliczne można zbadać właściwości wyrażenia zakresu, ale nie można wykonać dowolny kod. Można użyć *ochrony spraw*, `when` określone w klauzuli, aby zapewnić podobne kontrole dla innych typów sekwencji:
+Wzorce cykliczne mogą przebadać właściwości wyrażenia zakresu, ale nie mogą wykonać dowolnego kodu. Aby zapewnić podobne sprawdzenia *case guard*dla innych typów sekwencji, można `when` użyć funkcji Case, określonej w klauzuli.
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetGuardCase":::
 
-Na koniec można dodać `_` wzorzec i `null` wzorzec, aby złapać argumenty, które nie są przetwarzane przez inne ramię wyrażenia przełącznika. To sprawia, że wyrażenie switch *jest wyczerpujące,* co oznacza, że obsługiwana jest dowolna możliwa wartość wyrażenia zakresu. W poniższym przykładzie dodano te ramiona wyrażenia:
+Na koniec można dodać `_` wzorzec i `null` wzorzec do przechwytywania argumentów, które nie są przetwarzane przez żadną inną pozycję wyrażenia Switch ARM. Powoduje to, że wyrażenie Switch jest *wyczerpujące*, co oznacza, że jest obsługiwana jakakolwiek możliwa wartość wyrażenia zakresu. Poniższy przykład dodaje te broń dla wyrażeń:
 
 :::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetExhaustive":::
 
-W poprzednim przykładzie `null` dodaje wzorzec i zmienia wzorzec `IEnumerable<T>` typu na szyk. `_` Wzorzec `null` zapewnia sprawdzenie wartości null jako ramię wyrażenia przełącznika. Wyrażenie dla tego ramienia <xref:System.ArgumentNullException>rzuca . Wzorzec `_` pasuje do wszystkich danych wejściowych, które nie zostały dopasowane przez poprzednie ramiona. Musi przyjść po `null` czeku lub `null` będzie pasować do danych wejściowych.
+Poprzedni przykład dodaje `null` wzorzec i zmienia wzorzec `IEnumerable<T>` typu do `_` wzorca. `null` Wzorzec zawiera sprawdzanie wartości null jako rolę Switch ARM. Wyrażenie dla tego ARM zgłasza <xref:System.ArgumentNullException>. `_` Wzorzec dopasowuje wszystkie dane wejściowe, które nie zostały dopasowane przez poprzednie poręcze. Musi występować po sprawdzeniu `null` lub będzie pasować `null` do danych wejściowych.
 
-Możesz przeczytać więcej w propozycji specyfikacji języka C# dla [wzorców cyklicznych](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression).
+Więcej informacji można znaleźć w temacie Specyfikacja języka C# dla [wzorców cyklicznych](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression).
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Dopasowanie do wzorca](../../pattern-matching.md)
+- [Dopasowanie wzorca](../../pattern-matching.md)

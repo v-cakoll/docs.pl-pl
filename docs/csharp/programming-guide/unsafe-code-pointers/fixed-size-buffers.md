@@ -1,20 +1,20 @@
 ---
-title: Bufory o stałym rozmiarze — przewodnik programowania C#
-ms.date: 04/20/2018
+title: Bufory o ustalonym rozmiarze — Przewodnik programowania w języku C#
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157029"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140546"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
-W języku C#, można użyć [stałej](../../language-reference/keywords/fixed-statement.md) instrukcji, aby utworzyć bufor z tablicą o stałym rozmiarze w strukturze danych. Bufory o stałym rozmiarze są przydatne podczas pisania metod, które współgrają ze źródłami danych z innych języków lub platform. Tablica stała może przyjmować dowolne atrybuty lub modyfikatory, które są dozwolone dla zwykłych elementów członkowskich struktury. Jedynym ograniczeniem jest to, `bool`że `byte` `char`typ `short` `int`tablicy `sbyte` `ushort`musi `uint` `ulong`być `float`, `double`, , `long`, , , , , lub .
+W języku C# można użyć instrukcji [FIXED](../../language-reference/keywords/fixed-statement.md) do utworzenia buforu z tablicą o stałym rozmiarze w strukturze danych. Bufory o ustalonym rozmiarze są przydatne podczas pisania metod, które współdziałają ze źródłami danych z innych języków lub platform. Stała tablica może przyjmować wszelkie atrybuty lub modyfikatory, które są dozwolone dla zwykłych elementów członkowskich struktury. Jedynym ograniczeniem jest to, że typem tablicy musi `bool`być `byte`, `char`, `short` `int` `long`,,, `sbyte`, `ushort`, `uint` `ulong` `float`,,, lub `double`.
 
 ```csharp
 private fixed char name[30];
@@ -22,35 +22,59 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Uwagi
 
-W bezpiecznym kodzie struktury C#, który zawiera tablicę nie zawiera elementów tablicy. Zamiast tego struktury zawiera odwołanie do elementów. Tablicę o stałym rozmiarze można osadzić w [strukturze,](../../language-reference/builtin-types/struct.md) gdy jest używana w [bloku kodu niebezpiecznego.](../../language-reference/keywords/unsafe.md)
+W bezpiecznym kodzie struktura języka C#, która zawiera tablicę, nie zawiera elementów tablicy. Zamiast tego, struktura zawiera odwołanie do elementów. Można osadzić tablicę o stałym rozmiarze w [strukturze](../../language-reference/builtin-types/struct.md) , gdy jest ona używana w [niebezpiecznym](../../language-reference/keywords/unsafe.md) bloku kodu.
 
-Rozmiar następujących `struct` nie zależy od liczby elementów w tablicy, ponieważ `pathName` jest odwołanie:
+Poniższe `struct` rozmiary nie zależą od liczby elementów w tablicy, ponieważ `pathName` jest odwołaniem:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
-A `struct` może zawierać osadzoną tablicę w niebezpiecznym kodzie. W poniższym przykładzie `fixedBuffer` tablica ma stały rozmiar. Instrukcja `fixed` służy do ustanawiania wskaźnika do pierwszego elementu. Dostęp do elementów tablicy za pośrednictwem tego wskaźnika. Instrukcja `fixed` przypina `fixedBuffer` pole wystąpienia do określonej lokalizacji w pamięci.
+`struct` Może zawierać osadzoną tablicę w niebezpiecznym kodzie. W poniższym przykładzie `fixedBuffer` tablica ma stały rozmiar. Używasz `fixed` instrukcji, aby nawiązać wskaźnik do pierwszego elementu. Dostęp do elementów tablicy można uzyskać za pomocą tego wskaźnika. `fixed` Instrukcja przypina pole `fixedBuffer` wystąpienia do określonej lokalizacji w pamięci.
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-Rozmiar tablicy 128 `char` elementów wynosi 256 bajtów. Bufory [znaków](../../language-reference/builtin-types/char.md) o stałym rozmiarze zawsze przyjmują dwa bajty na znak, niezależnie od kodowania. Jest to prawdą nawet wtedy, gdy bufory char są organizowane `CharSet = CharSet.Auto` `CharSet = CharSet.Ansi`do metod interfejsu API lub struktur z lub . Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.CharSet>.
+Rozmiar tablicy elementów `char` 128 wynosi 256 bajtów. Bufory [znaków](../../language-reference/builtin-types/char.md) o stałym rozmiarze zawsze pobierają dwa bajty na znak, niezależnie od kodowania. Jest to prawdziwe nawet wtedy, gdy bufory char są organizowane do metod interfejsu API lub `CharSet = CharSet.Auto` struktur `CharSet = CharSet.Ansi`z lub. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.CharSet>.
 
-W poprzednim przykładzie przedstawiono `fixed` dostęp do pól bez przypinania, który jest dostępny począwszy od Języka C# 7.3.
+W poprzednim przykładzie pokazano dostęp `fixed` do pól bez przypinania, które są dostępne od języka C# 7,3.
 
-Inną wspólną tablicą o stałym rozmiarze jest tablica [bool.](../../language-reference/builtin-types/bool.md) Elementy w `bool` tablicy są zawsze jeden bajt w rozmiarze. `bool`tablice nie są odpowiednie do tworzenia tablic bitowych lub buforów.
+Inna wspólna tablica o stałym rozmiarze jest tablicą [logiczną](../../language-reference/builtin-types/bool.md) . Elementy w `bool` tablicy mają zawsze jeden bajt w rozmiarze. `bool`Tablice nie są odpowiednie do tworzenia tablic bitowych lub buforów.
 
-> [!NOTE]
-> Z wyjątkiem pamięci utworzonej przy użyciu [stackalloc](../../language-reference/operators/stackalloc.md), kompilator C# i wywoływania języka wspólnego (CLR) nie wykonują żadnych kontroli przepełnienia buforu zabezpieczeń. Podobnie jak w każdym niebezpiecznym kodzie, należy zachować ostrożność.
+Bufory o ustalonym rozmiarze są <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>kompilowane przy użyciu, który instruuje środowisko uruchomieniowe języka wspólnego (CLR), że typ zawiera niezarządzaną tablicę, która może być przepełnienia. Jest to podobne do pamięci utworzonej za pomocą [stackalloc](../../language-reference/operators/stackalloc.md), co powoduje automatyczne włączenie funkcji wykrywania przepełnienia buforu w środowisku CLR. W poprzednim przykładzie pokazano, jak bufor o `unsafe struct`ustalonym rozmiarze może istnieć w.
 
-Niebezpieczne bufory różnią się od zwykłych tablic w następujący sposób:
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- Można używać tylko niebezpieczne bufory w kontekście niebezpieczne.
-- Niebezpieczne bufory są zawsze wektorami lub tablicami jednowymiarowymi.
-- Deklaracja tablicy powinna zawierać liczbę, `char id[8]`taką jak . Nie można `char id[]`użyć .
-- Niebezpieczne bufory mogą być tylko pola wystąpienia struktur w niebezpiecznym kontekście.
+Kompilator wygenerował C# dla `Buffer`, ma następujący atrybut:
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+Bufory o ustalonym rozmiarze różnią się od zwykłych tablic w następujący sposób:
+
+- Może być używany tylko w [niebezpiecznym](../../language-reference/keywords/unsafe.md) kontekście.
+- Mogą to być tylko pola struktur.
+- Są one zawsze wektorami lub tablic jednowymiarowych.
+- Deklaracja powinna zawierać długość, taką jak `fixed char id[8]`. Nie można użyć `fixed char id[]`.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Niebezpieczny kod i wskaźniki](index.md)
 - [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)
 - [Współdziałanie](../interop/index.md)

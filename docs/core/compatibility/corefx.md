@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w bibliotece klas podstawowych
 description: Wyświetla istotne zmiany w podstawowych bibliotekach programu .NET.
 ms.date: 09/20/2019
-ms.openlocfilehash: 841003fdb114042466cc15b4846e133cf37de85c
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: bc80f27a8a98890a93ad3b99e09ea7ea380d506c
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135649"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158486"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Podstawowe zmiany w bibliotekach .NET
 
@@ -22,7 +22,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 | [Zmiany zachowań formatowania zmiennoprzecinkowego i analizowania](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
 | [Operacje analizowania zmiennoprzecinkowe nie będą już kończyć się niepowodzeniem lub nie generują wyjątku overflow](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
 | [InvalidAsynchronousStateException — przeniesiony do innego zestawu](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [.NET Core 3,0 stosuje się do najlepszych rozwiązań Unicode podczas zamiany nieprawidłowo sformułowanych sekwencji bajtów UTF-8](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [Zastępowanie źle sformułowanych sekwencji bajtów w formacie UTF-8 następuje po wskazówkach dotyczących standardu Unicode](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute przeniesiony do innego zestawu](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [Element ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wpisów](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
 | [Typ wyjątku serializatora JSON został zmieniony z elementu Jsonexception na NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |

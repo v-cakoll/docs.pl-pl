@@ -1,44 +1,44 @@
 ---
-title: Struktura programu C# — zwiedzanie języka Języka C#
-description: Poznaj podstawowe elementy konstrukcyjne programu C#
+title: Struktura programu w języku c# — Przewodnik po języku C#
+description: Zapoznaj się z podstawowymi blokami konstrukcyjnymi programu C#
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156834"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141012"
 ---
 # <a name="program-structure"></a>Struktura programu
 
-Kluczowe pojęcia organizacyjne w języku C# to ***programy,*** ***przestrzenie nazw,*** ***typy,*** ***elementy członkowskie***i ***zestawy.*** Programy C# składają się z jednego lub więcej plików źródłowych. Programy deklarują typy, które zawierają elementy członkowskie i mogą być zorganizowane w przestrzenie nazw. Klasy i interfejsy są przykładami typów. Pola, metody, właściwości i zdarzenia są przykładami elementów członkowskich. Gdy programy C# są kompilowane, są fizycznie pakowane do zestawów. Zestawy zazwyczaj mają rozszerzenie `.exe` `.dll`pliku lub , w zależności od tego, czy implementują ***aplikacje*** lub ***biblioteki***, odpowiednio.
+Kluczowe koncepcje organizacyjne w języku C# to ***programy***, ***przestrzenie nazw***, ***typy***, ***elementy członkowskie***i ***zestawy***. Programy w języku C# składają się z co najmniej jednego pliku źródłowego. Programy deklarują typy, które zawierają składowe i mogą być zorganizowane w przestrzenie nazw. Klasy i interfejsy są przykładami typów. Pola, metody, właściwości i zdarzenia są przykładami elementów członkowskich. Po skompilowaniu programów C# są one fizycznie spakowane w zestawy. Zestawy zazwyczaj `.exe` mają rozszerzenie pliku lub `.dll`, w zależności od tego, czy implementują odpowiednio ***aplikacje*** lub ***biblioteki***.
 
-Za pomocą `dotnet new` polecenia można utworzyć projekt biblioteki o nazwie *acme:*
+Można utworzyć projekt biblioteki o nazwie *Acme* przy użyciu `dotnet new` polecenia:
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
-W tym projekcie deklaruj klasę o nazwie `Stack` w obszarze nazw o nazwie: `Acme.Collections`
+W tym projekcie Zadeklaruj klasę o nazwie `Stack` w przestrzeni nazw o `Acme.Collections`nazwie:
 
 [!code-csharp[Stack](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
 
-W pełni kwalifikowaną nazwą `Acme.Collections.Stack`tej klasy jest . Klasa zawiera kilka elementów członkowskich: pole `top`o `Push` `Pop`nazwie , dwie metody `Entry`o nazwie i , i zagnieżdżonych klasy o nazwie . Klasa `Entry` zawiera dalej trzy elementy `next`członkowskie: pole `data`o nazwie , pole o nazwie i konstruktora. Polecenie:
+W pełni kwalifikowana nazwa tej klasy to `Acme.Collections.Stack`. Klasa zawiera kilka elementów członkowskich: pole o nazwie `top`, dwie metody o `Push` nazwie `Pop`i i zagnieżdżoną klasę o `Entry`nazwie. `Entry` Klasa dodatkowo zawiera trzy elementy członkowskie: pole o nazwie `next`, pole o nazwie `data`i Konstruktor. Polecenie:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
-kompiluje przykład jako bibliotekę `Main` (kod bez punktu wejścia) `acme.dll`i tworzy zestaw o nazwie .
+kompiluje przykład jako bibliotekę (kod bez punktu `Main` wejścia) i tworzy zestaw o nazwie. `acme.dll`
 
-Zestawy zawierają kod wykonywalny w postaci instrukcji il (Intermediate Language) i symboliczne informacje w postaci metadanych. Przed jego wykonaniem kompilator Just-In-Time (JIT) programu .NET Common Language Runtime konwertuje kod IL w zestawie na kod specyficzny dla procesora.
+Zestawy zawierają kod wykonywalny w postaci instrukcji języka pośredniego (IL) i informacji symbolicznych w formie metadanych. Przed wykonaniem, kompilator just-in-Time (JIT) środowiska uruchomieniowego języka wspólnego .NET konwertuje kod IL w zestawie na kod specyficzny dla procesora.
 
-Ponieważ zestaw jest samoopisującą się jednostką funkcji zawierającą zarówno kod, jak `#include` i metadane, nie ma potrzeby stosowania dyrektyw i plików nagłówkowych w języku C#. Typy publiczne i elementy członkowskie zawarte w określonym zestawie są udostępniane w programie C# po prostu odwołując się do tego zestawu podczas kompilowania programu. Na przykład ten program `Acme.Collections.Stack` używa `acme.dll` klasy z zestawu:
+Ponieważ zestaw jest samoopisującą się jednostką funkcji obejmujących zarówno kod, jak i metadane, nie ma potrzeby `#include` stosowania dyrektyw i plików nagłówkowych w języku C#. Typy publiczne i składowe zawarte w określonym zestawie są udostępniane w programie C# po prostu przez odwołanie się do tego zestawu podczas kompilowania programu. Na przykład ten program używa `Acme.Collections.Stack` klasy z `acme.dll` zestawu:
 
 [!code-csharp[UsingStack](../../../samples/snippets/csharp/tour/program-structure/Program.cs#L38-L52)]
 
-Plik *csproj* dla projektu poprzedniego programu musi zawierać węzeł odniesienia dla kompilatora C#, `acme.dll` aby rozpoznać odwołania do klas w zestawie:
+Plik *csproj* dla projektu poprzedniego programu musi zawierać węzeł odniesienia dla kompilatora C# w celu rozpoznania odwołań do klas w `acme.dll` zestawie:
 
 ```xml
   <ItemGroup>
@@ -46,16 +46,16 @@ Plik *csproj* dla projektu poprzedniego programu musi zawierać węzeł odniesie
   </ItemGroup>
 ```
 
-Po tym `dotnet build` dodaniu tworzy zestaw `example.exe`wykonywalny o nazwie , który po uruchomieniu generuje dane wyjściowe:
+Po tym dodaniu `dotnet build` program tworzy zestaw wykonywalny `example.exe`o nazwie, który po uruchomieniu generuje dane wyjściowe:
 
-```console
+```dotnetcli
 100
 10
 1
 ```
 
-C# umożliwia tekst źródłowy programu mają być przechowywane w kilku plikach źródłowych. Gdy program C# z wieloma plikami jest skompilowany, wszystkie pliki źródłowe są przetwarzane razem, a pliki źródłowe mogą swobodnie odwoływać się do siebie — koncepcyjnie, to tak, jakby wszystkie pliki źródłowe zostały połączone w jeden duży plik przed przetworzeniem. Deklaracje do przodu nigdy nie są potrzebne w języku C#, ponieważ z nielicznymi wyjątkami kolejność deklaracji jest nieistotna. C# nie ogranicza pliku źródłowego do deklarowania tylko jednego typu publicznego ani nie wymaga nazwy pliku źródłowego, aby dopasować typ zadeklarowany w pliku źródłowym.
+Język C# umożliwia przechowywanie tekstu źródłowego programu w kilku plikach źródłowych. Podczas kompilowania wieloplikowego programu w języku C# wszystkie pliki źródłowe są przetwarzane razem, a pliki źródłowe mogą swobodnie odwoływać się do siebie nawzajem — jest to tak samo, jakby wszystkie pliki źródłowe zostały połączone w jeden duży plik przed przetworzeniem. Deklaracje przesyłania dalej nie są nigdy konieczne w języku C#, ponieważ z kilkoma wyjątkami porządek deklaracji jest nieważny. Język C# nie ogranicza pliku źródłowego do deklarowania tylko jednego typu publicznego ani nie wymaga, aby nazwa pliku źródłowego była zgodna z typem zadeklarowanym w pliku źródłowym.
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[następny](types-and-variables.md)
+>[Następny](types-and-variables.md)

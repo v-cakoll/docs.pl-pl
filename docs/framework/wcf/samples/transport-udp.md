@@ -2,129 +2,129 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 3fd16ccd634b6875eae1e87547c35c6cba79c857
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3eb7116199cfb23d965918247b74af04d671e79b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143775"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141144"
 ---
 # <a name="transport-udp"></a>Transport: UDP
-Przykład transportu UDP pokazuje, jak zaimplementować emisję pojedynczą udp i multiemisji jako niestandardowy transport fundacji komunikacji systemu Windows (WCF). W przykładzie opisano zalecaną procedurę tworzenia transportu niestandardowego w WCF, przy użyciu struktury kanału i po WCF najlepszych rozwiązań. Kroki tworzenia transportu niestandardowego są następujące:  
+Przykład transportu UDP ilustruje sposób implementacji protokołu UDP emisji pojedynczej i multiemisji jako niestandardowego transportu Windows Communication Foundation (WCF). W przykładzie opisano zalecaną procedurę tworzenia niestandardowego transportu w programie WCF przy użyciu struktury kanału i poniższych najlepszych rozwiązań w zakresie usług WCF. Poniżej przedstawiono procedurę tworzenia transportu niestandardowego:  
   
-1. Zdecyduj, który z wzorców [wymiany wiadomości](#MessageExchangePatterns) kanału (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel lub IReplyChannel) będzie obsługiwać channelfactory i ChannelListener. Następnie zdecyduj, czy będzie obsługiwać sesyjne odmiany tych interfejsów.  
+1. Podjęcie decyzji o tym, które z [komunikatów](#MessageExchangePatterns) kanału (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel lub IReplyChannel) będą obsługiwane przez obiekt ChannelFactory i ChannelListener. Następnie zdecyduj, czy będą obsługiwane zmiany w sesji dla tych interfejsów.  
   
-2. Utwórz fabrykę kanałów i odbiornika, które obsługują wzorzec wymiany wiadomości.  
+2. Utwórz fabrykę kanałów i odbiornik obsługujący wzorzec wymiany komunikatów.  
   
-3. Upewnij się, że wszelkie wyjątki specyficzne dla sieci <xref:System.ServiceModel.CommunicationException>są znormalizowane do odpowiedniej klasy pochodnej .  
+3. Upewnij się, że wszystkie wyjątki specyficzne dla sieci są znormalizowane do odpowiedniej klasy pochodnej <xref:System.ServiceModel.CommunicationException>.  
   
-4. Dodaj element [ \<>powiązania,](../../configure-apps/file-schema/wcf/bindings.md) który dodaje niestandardowy transport do stosu kanałów. Aby uzyskać więcej informacji, zobacz [Dodawanie elementu wiązania](#AddingABindingElement).  
+4. Dodaj element [ \<>powiązania](../../configure-apps/file-schema/wcf/bindings.md) , który dodaje niestandardowy transport do stosu kanału. Aby uzyskać więcej informacji, zobacz [Dodawanie elementu powiązania](#AddingABindingElement).  
   
-5. Dodaj sekcję rozszerzenia elementu wiązania, aby udostępnić nowy element wiązania do systemu konfiguracji.  
+5. Dodaj sekcję rozszerzenie elementu powiązania, aby udostępnić nowy element powiązania do systemu konfiguracji.  
   
-6. Dodaj rozszerzenia metadanych, aby komunikować możliwości do innych punktów końcowych.  
+6. Dodaj rozszerzenia metadanych, aby komunikować możliwości z innymi punktami końcowymi.  
   
-7. Dodaj powiązanie, które wstępnie konfiguruje stos elementów wiązania zgodnie z dobrze zdefiniowanym profilem. Aby uzyskać więcej informacji, zobacz [Dodawanie powiązania standardowego](#AddingAStandardBinding).  
+7. Dodaj powiązanie, które wstępnie konfiguruje stos elementów powiązania zgodnie z dobrze zdefiniowanym profilem. Aby uzyskać więcej informacji, zobacz [Dodawanie standardowego powiązania](#AddingAStandardBinding).  
   
-8. Dodaj sekcję powiązania i element konfiguracji powiązania, aby udostępnić powiązanie do systemu konfiguracji. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi konfiguracji](#AddingConfigurationSupport).  
+8. Dodaj sekcję powiązania i element konfiguracji powiązania, aby uwidocznić powiązanie z systemem konfiguracji. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi konfiguracji](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>
-## <a name="message-exchange-patterns"></a>Wzorce wymiany wiadomości  
- Pierwszym krokiem w pisaniu transportu niestandardowego jest podjęcie decyzji, które wzorce wymiany komunikatów (MEP) są wymagane dla transportu. Do wyboru jest trzech posłów do PE:  
+## <a name="message-exchange-patterns"></a>Wzorce wymiany komunikatów  
+ Pierwszym krokiem w przypadku pisania niestandardowego transportu jest podjęcie decyzji, które wzorce wymiany komunikatów (MEPs) są wymagane do transportu. Istnieją trzy MEPs do wyboru:  
   
 - Datagram (IInputChannel/IOutputChannel)  
   
-     Podczas korzystania z datagramu PO, klient wysyła wiadomość za pomocą "ogień i zapomnij" wymiany. Wymiana ognia i zapomnij jest taki, który wymaga out-of-band potwierdzenie pomyślnej dostawy. Wiadomość może zostać utracona podczas przesyłania i nigdy nie dotrze do usługi. Jeśli operacja wysyłania zakończy się pomyślnie na końcu klienta, nie gwarantuje, że zdalny punkt końcowy odebrał wiadomość. Datagram jest podstawowym elementem konstrukcyjnym dla wiadomości, ponieważ można tworzyć własne protokoły na nim , w tym niezawodne protokoły i bezpieczne protokoły. Kanały datagramu <xref:System.ServiceModel.Channels.IOutputChannel> klienta implementują interfejs <xref:System.ServiceModel.Channels.IInputChannel> i kanały datagramu usługi implementują interfejs.  
+     W przypadku korzystania z unikatowy MEP datagramu klient wysyła komunikat przy użyciu wymiany "pożar i zapomnij". Usługa Fire i zapomnij wymiany jest taka, która wymaga potwierdzenia pomyślnego dostarczenia poza pasmem. Komunikat może zostać utracony podczas przesyłania i nigdy nie docierał do usługi. Jeśli operacja wysyłania zostanie zakończona pomyślnie na końcu klienta, nie gwarantuje to, że zdalny punkt końcowy odebrał komunikat. Datagram jest podstawowym blokiem konstrukcyjnym do obsługi komunikatów, ponieważ można tworzyć własne protokoły na jego podstawie — w tym niezawodne protokoły i bezpieczne protokoły. Kanały datagramów klienta <xref:System.ServiceModel.Channels.IOutputChannel> implementują interfejs i kanały datadatagramu usługi implementują <xref:System.ServiceModel.Channels.IInputChannel> interfejsy.  
   
-- Odpowiedź na żądanie (IRequestChannel/IReplyChannel)  
+- Żądanie-odpowiedź (IRequestChannel/IReplyChannel)  
   
-     W tym posłie do PE wysyłana jest wiadomość i odbierana jest odpowiedź. Wzorzec składa się z par żądanie odpowiedź. Przykładami wywołań żądanie-odpowiedź są zdalne wywołania procedury (RPC) i kontrolery WIRT przeglądarki. Ten wzorzec jest również znany jako Półdupleks. W tym mep, <xref:System.ServiceModel.Channels.IRequestChannel> kanały klienta <xref:System.ServiceModel.Channels.IReplyChannel>implementowania i kanały usług implementować .  
+     W tym unikatowy MEP komunikat jest wysyłany, a odpowiedź zostanie odebrana. Wzorzec składa się z par żądanie-odpowiedź. Przykłady wywołań żądania-odpowiedź to zdalne wywołania procedur (RPC) i przeglądarka. Ten wzorzec jest również znany jako półdupleks. W tym unikatowy MEP zaimplementowano kanały <xref:System.ServiceModel.Channels.IRequestChannel> klienta i zaimplementowano <xref:System.ServiceModel.Channels.IReplyChannel>kanały usług.  
   
 - Dupleks (IDuplexChannel)  
   
-     Dupleksowy poseł do PE umożliwia dowolną liczbę wiadomości, które mają być wysyłane przez klienta i odbierane w dowolnej kolejności. Dupleksowy poseł do PE jest jak rozmowa telefoniczna, gdzie każde wypowiadane słowo jest wiadomością. Ponieważ obie strony mogą wysyłać i odbierać w tym mep, <xref:System.ServiceModel.Channels.IDuplexChannel>interfejs zaimplementowany przez kanały klienta i usługi jest .  
+     UNIKATOWY MEP dupleks umożliwia wysyłanie dowolnej liczby komunikatów przez klienta i odbieranie ich w dowolnej kolejności. UNIKATOWY MEP dupleks jest taka sama jak rozmowa telefoniczna, gdzie każdy wypowiadany wyraz jest komunikatem. Ponieważ obie strony mogą wysyłać i odbierać dane w tym unikatowy MEP, interfejs zaimplementowany przez klienta i kanały usług to <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- Każdy z tych posłów do PE może również poprzeć sesje. Dodatkową funkcją zapewnianą przez kanał obsługujący sesję jest to, że koreluje wszystkie wiadomości wysyłane i odbierane na kanale. Wzorzec request-response jest autonomiczną sesją dwóch wiadomości, ponieważ żądanie i odpowiedź są skorelowane. Z drugiej strony wzorzec request-response, który obsługuje sesje oznacza, że wszystkie pary żądania/odpowiedzi na tym kanale są ze sobą skorelowane. Daje to łącznie sześciu posłów do PE — Datagram, Żądanie odpowiedzi, Dupleks, Datagram z sesjami, Żądanie-Odpowiedź z sesjami i Dupleks z sesjami — do wyboru.  
+ Każdy z tych MEPs może również obsługiwać sesje. Dodatkowe funkcje udostępniane przez kanał obsługujący sesje polegają na tym, że są skorelowane wszystkie komunikaty wysyłane i odbierane w kanale. Wzorzec żądanie-odpowiedź jest autonomiczną sesją dwustronicową, ponieważ żądanie i odpowiedź są skorelowane. Z kolei wzorzec żądanie-odpowiedź, który obsługuje sesje, oznacza, że wszystkie pary żądanie/odpowiedź w tym kanale są skorelowane ze sobą. Dzięki temu można uzyskać łącznie sześć MEPs — datagram, żądanie-odpowiedź, dupleks, datagram z sesjami, żądanie-odpowiedź z sesjami i dupleks z sesjami — do wyboru.  
   
 > [!NOTE]
-> W przypadku transportu UDP jedynym posłem do PE, który jest obsługiwany, jest Datagram, ponieważ UDP jest z natury protokołem "ogień i zapomnij".  
+> W przypadku transportu UDP jedyną obsługiwaną unikatowy MEPą jest datagram, ponieważ protokół UDP jest z natury "pożar i zapomnij".  
   
-### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject i cykl życia obiektu WCF  
- WCF ma wspólną maszynę stanu, która jest używana <xref:System.ServiceModel.Channels.IChannel> <xref:System.ServiceModel.Channels.IChannelFactory>do <xref:System.ServiceModel.Channels.IChannelListener> zarządzania cyklem życia obiektów, takich jak , i które są używane do komunikacji. Istnieje pięć stanów, w których te obiekty komunikacji mogą istnieć. Te stany są reprezentowane przez wyliczenie <xref:System.ServiceModel.CommunicationState> i są następujące:  
+### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Interfejs ICommunicationObject i cykl życia obiektów WCF  
+ Program WCF ma wspólny komputer stanu używany do zarządzania cyklem życia obiektów, takich jak <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>i <xref:System.ServiceModel.Channels.IChannelListener> które są używane do komunikacji. Istnieje pięć Stanów, w których te obiekty komunikacyjne mogą istnieć. Te Stany są reprezentowane przez <xref:System.ServiceModel.CommunicationState> Wyliczenie i są następujące:  
   
-- Utworzone: Jest to <xref:System.ServiceModel.ICommunicationObject> stan, kiedy jest po raz pierwszy wystąpienia. W tym stanie nie występuje wejście/wyjście (We/Wy).  
+- Utworzone: jest to stan, <xref:System.ServiceModel.ICommunicationObject> gdy jest on po raz pierwszy. W tym stanie nie ma danych wejściowych/wyjściowych (we/wy).  
   
-- Otwieranie: Obiekty przejście <xref:System.ServiceModel.ICommunicationObject.Open%2A> do tego stanu, gdy jest wywoływana. W tym momencie właściwości są niezmienne i można rozpocząć wejście/wyjście. To przejście jest prawidłowe tylko ze stanu Utworzone.  
+- Otwieranie: obiekty są przenoszone do tego <xref:System.ServiceModel.ICommunicationObject.Open%2A> stanu po wywołaniu. W tym punkcie właściwości są niezmienne, a wejście/wyjście może zacząć. To przejście jest prawidłowe tylko ze stanu utworzonego.  
   
-- Otwarte: Obiekty przejście do tego stanu po zakończeniu otwartego procesu. To przejście jest prawidłowe tylko ze stanu Otwieranie. W tym momencie obiekt jest w pełni użyteczny do transferu.  
+- Otwarte: obiekty są przenoszone do tego stanu po zakończeniu procesu otwierania. To przejście jest prawidłowe tylko w stanie otwarcia. W tym momencie obiekt jest w pełni przydatny do przeniesienia.  
   
-- Zamknięcie: Obiekty przejścia do <xref:System.ServiceModel.ICommunicationObject.Close%2A> tego stanu, gdy jest wywoływana dla bezpiecznego zamknięcia. To przejście jest prawidłowe tylko ze stanu Otwarty.  
+- Zamykanie: obiekty są przenoszone do tego <xref:System.ServiceModel.ICommunicationObject.Close%2A> stanu, gdy jest wywoływana w celu bezpiecznego zamknięcia. To przejście jest prawidłowe tylko w stanie otwartym.  
   
-- Zamknięte: W stanie zamknięte obiekty nie nadają się już do użytku. Ogólnie rzecz biorąc większość konfiguracji jest nadal dostępna do inspekcji, ale nie może nastąpić żadna komunikacja. Ten stan jest odpowiednikiem unieszkodliwiwania.  
+- Zamknięte: w obiektach stanu zamkniętego nie można już używać. Ogólnie rzecz biorąc, większość konfiguracji jest nadal dostępna do inspekcji, ale nie można przeprowadzić komunikacji. Ten stan jest równoważny do usunięcia.  
   
-- Uszkodzony: W stanie Faulted obiekty są dostępne do inspekcji, ale nie są już użyteczne. Po wystąpieniu nieodwracalnego błędu obiekt przechodzi do tego stanu. Jedynym prawidłowym przejściem z `Closed` tego stanu jest do stanu.  
+- Błąd: w stanie błędu, obiekty są dostępne do inspekcji, ale nie są już użyteczne. Gdy wystąpi błąd nieodwracalny, obiekt przechodzi do tego stanu. Jedyne prawidłowe przejście z tego stanu jest w `Closed` stanie.  
   
- Istnieją zdarzenia, które uruchamiają dla każdego przejścia stanu. Metoda <xref:System.ServiceModel.ICommunicationObject.Abort%2A> może być wywoływana w dowolnym momencie i powoduje, że obiekt do przejścia natychmiast z jego bieżącego stanu do zamkniętego stanu. Wywołanie <xref:System.ServiceModel.ICommunicationObject.Abort%2A> kończy niedokończoną pracę.  
+ Istnieją zdarzenia wyzwalane dla każdego przejścia stanu. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Metoda może być wywoływana w dowolnym momencie i powoduje, że obiekt natychmiast przechodzi od bieżącego stanu do stanu zamkniętego. Wywołanie <xref:System.ServiceModel.ICommunicationObject.Abort%2A> kończy wszystkie nieukończone zadania.  
   
 <a name="ChannelAndChannelListener"></a>
-## <a name="channel-factory-and-channel-listener"></a>Fabryka kanałów i odbiornik kanałów  
- Następnym krokiem w pisaniu transportu niestandardowego <xref:System.ServiceModel.Channels.IChannelFactory> jest utworzenie <xref:System.ServiceModel.Channels.IChannelListener> implementacji dla kanałów klienta i dla kanałów usług. Warstwa kanału używa wzorca fabrycznego do konstruowania kanałów. WCF zapewnia pomocników klasy podstawowej dla tego procesu.  
+## <a name="channel-factory-and-channel-listener"></a>Odbiornik kanałów i kanałów  
+ Następnym krokiem podczas pisania niestandardowego transportu jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta i <xref:System.ServiceModel.Channels.IChannelListener> kanałów usługi. Warstwa kanału używa wzorca fabryki do konstruowania kanałów. Funkcja WCF udostępnia pomocników klasy bazowej dla tego procesu.  
   
-- Klasa <xref:System.ServiceModel.Channels.CommunicationObject> implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza maszynę stanu wcześniej opisane w kroku 2.
+- <xref:System.ServiceModel.Channels.CommunicationObject> Klasa implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza komputer stanu opisany wcześniej w kroku 2.
 
-- Klasa <xref:System.ServiceModel.Channels.ChannelManagerBase> implementuje <xref:System.ServiceModel.Channels.CommunicationObject> i zapewnia ujednoliconą klasę podstawową dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. Klasa <xref:System.ServiceModel.Channels.ChannelManagerBase> działa w <xref:System.ServiceModel.Channels.ChannelBase>połączeniu z , który jest <xref:System.ServiceModel.Channels.IChannel>klasą podstawową, która implementuje .  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasa <xref:System.ServiceModel.Channels.CommunicationObject> implementuje i udostępnia ujednoliconą klasę bazową dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasa działa w połączeniu z <xref:System.ServiceModel.Channels.ChannelBase>, która jest klasą bazową implementującą <xref:System.ServiceModel.Channels.IChannel>.  
   
-- Klasa <xref:System.ServiceModel.Channels.ChannelFactoryBase> implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> <xref:System.ServiceModel.Channels.IChannelFactory> i konsoliduje `CreateChannel` przeciążenia `OnCreateChannel` w jedną metodę abstrakcyjną.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Klasa implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> i <xref:System.ServiceModel.Channels.IChannelFactory> konsoliduje `CreateChannel` przeciążenia w jedną `OnCreateChannel` metodę abstrakcyjną.  
   
-- Klasa <xref:System.ServiceModel.Channels.ChannelListenerBase> implementuje <xref:System.ServiceModel.Channels.IChannelListener>. Zajmuje się podstawowym zarządzaniem państwem.  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Klasa implementuje <xref:System.ServiceModel.Channels.IChannelListener>. Dział IT zajmuje się podstawowym zarządzaniem stanem.  
   
- W tym przykładzie implementacji fabryki znajduje się w UdpChannelFactory.cs i implementacji odbiornika jest zawarty w UdpChannelListener.cs. Implementacje <xref:System.ServiceModel.Channels.IChannel> są w UdpOutputChannel.cs i UdpInputChannel.cs.  
+ W tym przykładzie implementacja fabryki jest zawarta w UdpChannelFactory.cs, a implementacja odbiornika jest zawarta w UdpChannelListener.cs. <xref:System.ServiceModel.Channels.IChannel> Implementacje znajdują się w UdpOutputChannel.cs i UdpInputChannel.cs.  
   
 ### <a name="the-udp-channel-factory"></a>Fabryka kanałów UDP  
- Pochodzi `UdpChannelFactory` z <xref:System.ServiceModel.Channels.ChannelFactoryBase>. Przykładowe <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> zastąpienia, aby zapewnić dostęp do wersji wiadomości kodera wiadomości. Przykład również <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> zastępuje, dzięki czemu możemy zniszczyć <xref:System.ServiceModel.Channels.BufferManager> nasze wystąpienie, gdy przechodzi maszyny stanu.  
+ `UdpChannelFactory` Pochodzi od <xref:System.ServiceModel.Channels.ChannelFactoryBase>. Przykłady zastąpień <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> w celu zapewnienia dostępu do wersji komunikatu kodera wiadomości. Przykład przesłania <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> również w taki sposób, aby możliwe było rozerwanie naszego <xref:System.ServiceModel.Channels.BufferManager> wystąpienia po przeniesieniu automatu Stanów.  
   
 #### <a name="the-udp-output-channel"></a>Kanał wyjściowy UDP  
- Implements `UdpOutputChannel` <xref:System.ServiceModel.Channels.IOutputChannel>. Konstruktor sprawdza poprawność argumentów <xref:System.Net.EndPoint> i konstruuje obiekt docelowy na podstawie <xref:System.ServiceModel.EndpointAddress> tego, który jest przekazywany w.  
+ `UdpOutputChannel` Implementacja <xref:System.ServiceModel.Channels.IOutputChannel>. Konstruktor sprawdza poprawność argumentów i konstruuje obiekt <xref:System.Net.EndPoint> docelowy na podstawie <xref:System.ServiceModel.EndpointAddress> przekazanego elementu.  
   
 ```csharp
 this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
- Kanał można zamknąć z gracją lub bezgrawych. Jeśli kanał jest zamknięty bezpiecznie gniazdo jest zamknięty i wywołanie `OnClose` metody klasy podstawowej. Jeśli to zgłasza wyjątek, `Abort` infrastruktury wywołuje, aby upewnić się, że kanał jest czyszczone.  
+ Kanał może być zamknięty bezpiecznie lub bezproblemowo. Jeśli kanał zostanie zamknięty bezpiecznie, gniazdo jest zamknięte i zostanie wykonane wywołanie metody klasy `OnClose` bazowej. W przypadku zgłaszania wyjątku, infrastruktura wywołuje `Abort` , aby upewnić się, że kanał jest czyszczony.  
   
 ```csharp
 this.socket.Close(0);  
 ```  
   
- Następnie `Send()` wdrażamy `BeginSend()` / `EndSend()`i . To dzieli się na dwie główne sekcje. Najpierw serializujemy wiadomość do tablicy bajtów.  
+ Następnie implementujemy `Send()` i `BeginSend()` / `EndSend()`. Ten podział jest podzielony na dwie główne sekcje. Najpierw serializowaćmy komunikat do tablicy bajtów.  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
 ```  
   
- Następnie wysyłamy uzyskane dane na drucie.  
+ Następnie wysyłamy dane uzyskane w sieci.  
   
 ```csharp
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
-### <a name="the-udpchannellistener"></a>The UdpChannelListener  
- Implementuje `UdpChannelListener` próbki pochodzi z <xref:System.ServiceModel.Channels.ChannelListenerBase> klasy. Używa jednego gniazda UDP do odbierania datagramów. Metoda `OnOpen` odbiera dane przy użyciu gniazda UDP w pętli asynchroniczne. Dane są następnie konwertowane na wiadomości przy użyciu struktury kodowania wiadomości.  
+### <a name="the-udpchannellistener"></a>UdpChannelListener  
+ To `UdpChannelListener` , że Przykładowa implementacja jest pochodną <xref:System.ServiceModel.Channels.ChannelListenerBase> klasy. Do odbierania datagramów jest stosowane pojedyncze gniazdo UDP. `OnOpen` Metoda odbiera dane przy użyciu gniazda UDP w pętli asynchronicznej. Dane są następnie konwertowane na komunikaty przy użyciu struktury kodowania komunikatów.  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Ponieważ ten sam kanał datagramu reprezentuje komunikaty, `UdpChannelListener` które pochodzą z wielu źródeł, jest detektor singleton. Jest co najwyżej jeden <xref:System.ServiceModel.Channels.IChannel> aktywny związany z tym odbiornikiem naraz. Próbka generuje inny tylko wtedy, gdy kanał, który jest zwracany przez `AcceptChannel` metodę jest następnie usuwane. Po odebraniu wiadomości jest ona likżdowana w tej pojedynczej wiadomości.  
+ Ponieważ ten sam kanał datagramu reprezentuje komunikaty, które docierają do różnych źródeł `UdpChannelListener` , jest to pojedynczy odbiornik. Istnieje najwyżej jedna aktywna <xref:System.ServiceModel.Channels.IChannel> skojarzona z tym odbiornikiem. Przykład generuje inny, tylko wtedy, gdy kanał, który jest zwracany przez `AcceptChannel` metodę, zostaje następnie usunięty. Po odebraniu komunikatu jest on dodawany do kolejki pojedynczego tego kanału.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
- Klasa `UdpInputChannel` implementuje `IInputChannel`. Składa się z kolejki wiadomości przychodzących, `UdpChannelListener`który jest wypełniany przez gniazdo 's. Te komunikaty są usuwane `IInputChannel.Receive` w kolejce przez metodę.  
+ `UdpInputChannel` Klasa implementuje `IInputChannel`. Składa się z kolejki komunikatów przychodzących wypełnianych przez `UdpChannelListener`gniazdo. Te komunikaty są dekolejkowane przez `IInputChannel.Receive` metodę.  
   
 <a name="AddingABindingElement"></a>
-## <a name="adding-a-binding-element"></a>Dodawanie elementu wiązania  
- Teraz, gdy fabryki i kanały są budowane, musimy udostępnić je do środowiska uruchomieniowego ServiceModel za pośrednictwem powiązania. Powiązanie jest kolekcją elementów wiązania, który reprezentuje stos komunikacji skojarzony z adresem usługi. Każdy element w stosie jest reprezentowany przez [ \<element wiązania>.](../../configure-apps/file-schema/wcf/bindings.md)  
+## <a name="adding-a-binding-element"></a>Dodawanie elementu powiązania  
+ Teraz, gdy fabryki i kanały są kompilowane, muszą uwidocznić je w środowisku uruchomieniowym ServiceModel za pomocą powiązania. Powiązanie to kolekcja elementów powiązania, które reprezentują stos komunikacji skojarzony z adresem usługi. Każdy element w stosie jest reprezentowany przez [ \<powiązanie>](../../configure-apps/file-schema/wcf/bindings.md) elementu.  
   
- W próbce element wiązania `UdpTransportBindingElement`jest , <xref:System.ServiceModel.Channels.TransportBindingElement>który pochodzi z . Zastępuje następujące metody tworzenia fabryk skojarzonych z naszym powiązaniem.  
+ W przykładzie element Binding ma wartość `UdpTransportBindingElement`, która pochodzi od. <xref:System.ServiceModel.Channels.TransportBindingElement> Zastępuje on następujące metody tworzenia fabryk skojarzonych z naszymi powiązaniami.  
   
 ```csharp
 public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)  
@@ -138,16 +138,16 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 }  
 ```  
   
- Zawiera również członków do `BindingElement` klonowania i powrotu naszego programu (soap.udp).  
+ Zawiera również elementy członkowskie do klonowania `BindingElement` i zwracania naszego schematu (SOAP. UDP).  
   
-## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Dodawanie obsługi metadanych dla elementu wiązania transportu  
- Aby zintegrować nasz transport z systemem metadanych, musimy wspierać zarówno import, jak i eksport polityki. Pozwala nam to na generowanie klientów naszego powiązania za pośrednictwem [narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe).](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Dodawanie obsługi metadanych dla elementu powiązania transportowego  
+ Aby zintegrować transport w systemie metadanych, musimy obsługiwać import i eksport zasad. Dzięki temu można generować klientów naszego powiązania za pomocą [narzędzia Svcutil. exe (narzędzie do przesyłania metadanych)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Dodawanie obsługi WSDL  
- Element wiązania transportu w powiązaniu jest odpowiedzialny za eksportowanie i importowanie informacji adresowych w metadanych. Podczas korzystania z powiązania SOAP element wiązania transportu należy również wyeksportować poprawny identyfikator URI transportu w metadanych.  
+ Element powiązania transportu w powiązaniu jest odpowiedzialny za eksportowanie i importowanie informacji dotyczących adresowania w metadanych. W przypadku korzystania z powiązania SOAP element powiązania transportu powinien również eksportować prawidłowy identyfikator URI transportu w metadanych.  
   
 #### <a name="wsdl-export"></a>Eksport WSDL  
- Aby wyeksportować informacje adresowe implementuje `UdpTransportBindingElement` `IWsdlExportExtension` interfejs. Metoda `ExportEndpoint` dodaje poprawne informacje adresowe do portu WSDL.  
+ Aby wyeksportować informacje dotyczące adresowania `UdpTransportBindingElement` , `IWsdlExportExtension` implementuje interfejs. `ExportEndpoint` Metoda dodaje do portu WSDL prawidłowe informacje dotyczące adresowania.  
   
 ```csharp
 if (context.WsdlPort != null)  
@@ -156,7 +156,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- Implementacja `UdpTransportBindingElement` `ExportEndpoint` metody eksportuje również transportowy identyfikator URI, gdy punkt końcowy używa powiązania SOAP.  
+ `UdpTransportBindingElement` Implementacja `ExportEndpoint` metody także eksportuje identyfikator URI transportu, gdy punkt końcowy używa powiązania SOAP.  
   
 ```csharp
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -166,70 +166,8 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>WSDL Import  
- Aby rozszerzyć system importowania WSDL do obsługi importowania adresów, musimy dodać następującą konfigurację do pliku konfiguracyjnego dla pliku Svcutil.exe, jak pokazano w pliku Svcutil.exe.config.  
-  
-```xml
-<configuration>  
-  <system.serviceModel>  
-    <client>  
-      <metadata>  
-        <wsdlImporters>  
-          <extension type=" Microsoft.ServiceModel.Samples.UdpBindingElementImporter, UdpTransport" />  
-        </policyImporters>  
-      </metadata>  
-    </client>  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
- Podczas uruchamiania programu Svcutil.exe dostępne są dwie opcje ładowania rozszerzenia importu WSDL przez program Svcutil.exe:  
-  
-1. Punkt Svcutil.exe do naszego pliku konfiguracyjnego za\<pomocą pliku /SvcutilConfig:>.  
-  
-2. Dodaj sekcję konfiguracji do pliku Svcutil.exe.config w tym samym katalogu co program Svcutil.exe.  
-  
- Typ `UdpBindingElementImporter` implementuje `IWsdlImportExtension` interfejs. Metoda `ImportEndpoint` importuje adres z portu WSDL.  
-  
-```csharp
-BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
-TransportBindingElement transportBindingElement = bindingElements.Find<TransportBindingElement>();  
-if (transportBindingElement is UdpTransportBindingElement)  
-{  
-    ImportAddress(context);  
-}  
-```  
-  
-### <a name="adding-policy-support"></a>Dodawanie obsługi zasad  
- Element wiązania niestandardowego można eksportować potwierdzeń zasad w powiązanie WSDL dla punktu końcowego usługi do wyrażania możliwości tego elementu wiązania.  
-  
-#### <a name="policy-export"></a>Eksport zasad  
- Typ `UdpTransportBindingElement` implementuje, `IPolicyExportExtension` aby dodać obsługę zasad eksportowania. W rezultacie `System.ServiceModel.MetadataExporter` obejmuje `UdpTransportBindingElement` w generowaniu zasad dla dowolnego powiązania, które go zawiera.  
-  
- W `IPolicyExportExtension.ExportPolicy`, dodajemy potwierdzenia dla UDP i innego potwierdzenia, jeśli jesteśmy w trybie multiemisji. Jest tak, ponieważ tryb multiemisji wpływa na sposób konstruowania stosu komunikacji, a zatem musi być skoordynowane między obiema stronami.  
-  
-```csharp
-ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
-XmlDocument xmlDocument = new XmlDocument();  
-bindingAssertions.Add(xmlDocument.CreateElement(  
-UdpPolicyStrings.Prefix, UdpPolicyStrings.TransportAssertion, UdpPolicyStrings.UdpNamespace));  
-if (Multicast)  
-{  
-    bindingAssertions.Add(xmlDocument.CreateElement(
-        UdpPolicyStrings.Prefix,
-        UdpPolicyStrings.MulticastAssertion,
-        UdpPolicyStrings.UdpNamespace));  
-}  
-```  
-  
- Ponieważ niestandardowe elementy wiązania transportu są `IPolicyExportExtension` odpowiedzialne za `UdpTransportBindingElement` obsługę adresowania, implementacja na musi również obsługiwać eksportowanie odpowiednich potwierdzeń zasad adresowania WS, aby wskazać wersję używanego adresowania WS.  
-  
-```csharp
-AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
-```  
-  
-#### <a name="policy-import"></a>Import zasad  
- Aby rozszerzyć system importu zasad, musimy dodać następującą konfigurację do pliku konfiguracyjnego dla pliku Svcutil.exe, jak pokazano w pliku Svcutil.exe.config.  
+#### <a name="wsdl-import"></a>Import WSDL  
+ Aby zwiększyć system importowania WSDL do obsługi importowania adresów, należy dodać następującą konfigurację do pliku konfiguracji programu Svcutil. exe, jak pokazano w pliku Svcutil. exe. config.  
   
 ```xml
 <configuration>  
@@ -245,21 +183,83 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Następnie wdrażamy `IPolicyImporterExtension` z naszej`UdpBindingElementImporter`zarejestrowanej klasy ( ). W `ImportPolicy()`, możemy przeglądać potwierdzenia w naszej przestrzeni nazw i przetwarzać te do generowania transportu i sprawdzić, czy jest multiemisji. Musimy również usunąć potwierdzenia, które obsługujemy z listy potwierdzeń wiązania. Ponownie, podczas uruchamiania programu Svcutil.exe dostępne są dwie opcje integracji:  
+ Podczas uruchamiania programu Svcutil. exe dostępne są dwie opcje pobrania pliku Svcutil. exe w celu załadowania rozszerzeń WSDL:  
   
-1. Punkt Svcutil.exe do naszego pliku konfiguracyjnego za\<pomocą pliku /SvcutilConfig:>.  
+1. Wskaż plik konfiguracyjny Svcutil. exe przy użyciu pliku/SvcutilConfig:\<>.  
   
-2. Dodaj sekcję konfiguracji do pliku Svcutil.exe.config w tym samym katalogu co program Svcutil.exe.  
+2. Dodaj sekcję konfiguracji do pliku Svcutil. exe. config w tym samym katalogu, w którym znajduje się Svcutil. exe.  
+  
+ `UdpBindingElementImporter` Typ implementuje `IWsdlImportExtension` interfejs. `ImportEndpoint` Metoda importuje adres z portu WSDL.  
+  
+```csharp
+BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
+TransportBindingElement transportBindingElement = bindingElements.Find<TransportBindingElement>();  
+if (transportBindingElement is UdpTransportBindingElement)  
+{  
+    ImportAddress(context);  
+}  
+```  
+  
+### <a name="adding-policy-support"></a>Dodawanie obsługi zasad  
+ Niestandardowy element powiązania może eksportować potwierdzenia zasad w powiązaniu WSDL dla punktu końcowego usługi, aby przedstawić możliwości tego elementu powiązania.  
+  
+#### <a name="policy-export"></a>Eksport zasad  
+ Typ `UdpTransportBindingElement` implementuje `IPolicyExportExtension` , aby dodać obsługę eksportowania zasad. W efekcie `System.ServiceModel.MetadataExporter` obejmuje `UdpTransportBindingElement` generowanie zasad dla dowolnego powiązania, które zawiera.  
+  
+ W `IPolicyExportExtension.ExportPolicy`programie dodamy potwierdzenie protokołu UDP i inne potwierdzenie w przypadku trybu multiemisji. Jest to spowodowane tym, że tryb multiemisji wpływa na sposób konstruowania stosu komunikacji i w związku z tym musi być koordynowany między stronami.  
+  
+```csharp
+ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
+XmlDocument xmlDocument = new XmlDocument();  
+bindingAssertions.Add(xmlDocument.CreateElement(  
+UdpPolicyStrings.Prefix, UdpPolicyStrings.TransportAssertion, UdpPolicyStrings.UdpNamespace));  
+if (Multicast)  
+{  
+    bindingAssertions.Add(xmlDocument.CreateElement(
+        UdpPolicyStrings.Prefix,
+        UdpPolicyStrings.MulticastAssertion,
+        UdpPolicyStrings.UdpNamespace));  
+}  
+```  
+  
+ Ponieważ niestandardowe elementy powiązania transportu są odpowiedzialne za obsługę adresowania `IPolicyExportExtension` , implementacja na `UdpTransportBindingElement` serwerze musi również obsługiwać eksportowanie odpowiednich potwierdzeń zasad WS-Addressing w celu wskazania używanej wersji WS-Addressing.  
+  
+```csharp
+AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
+```  
+  
+#### <a name="policy-import"></a>Importowanie zasad  
+ Aby można było zwiększyć system importowania zasad, należy dodać następującą konfigurację do pliku konfiguracji programu Svcutil. exe, jak pokazano w pliku Svcutil. exe. config.  
+  
+```xml
+<configuration>  
+  <system.serviceModel>  
+    <client>  
+      <metadata>  
+        <policyImporters>  
+          <extension type=" Microsoft.ServiceModel.Samples.UdpBindingElementImporter, UdpTransport" />  
+        </policyImporters>  
+      </metadata>  
+    </client>  
+  </system.serviceModel>  
+</configuration>  
+```  
+  
+ Następnie implementujemy `IPolicyImporterExtension` nasze zarejestrowanej klasy`UdpBindingElementImporter`(). W `ImportPolicy()`programie przeszukamy potwierdzenia w naszym obszarze nazw i przetworzymy je w celu wygenerowania transportu i sprawdzenia, czy jest to multiemisja. Należy również usunąć z listy potwierdzeń powiązań. Po uruchomieniu programu Svcutil. exe dostępne są dwie opcje integracji:  
+  
+1. Wskaż plik konfiguracyjny Svcutil. exe przy użyciu pliku/SvcutilConfig:\<>.  
+  
+2. Dodaj sekcję konfiguracji do pliku Svcutil. exe. config w tym samym katalogu, w którym znajduje się Svcutil. exe.  
   
 <a name="AddingAStandardBinding"></a>
-## <a name="adding-a-standard-binding"></a>Dodawanie standardowego powiązania  
- Nasz element wiązania może być używany na dwa sposoby:  
+## <a name="adding-a-standard-binding"></a>Dodawanie powiązania standardowego  
+ Nasz element powiązania może być używany na dwa sposoby:  
   
-- Za pośrednictwem niestandardowego powiązania: Niestandardowe powiązanie umożliwia użytkownikowi tworzenie własnego powiązania na podstawie dowolnego zestawu elementów wiązania.  
+- Za pośrednictwem niestandardowego powiązania: niestandardowe powiązanie umożliwia użytkownikowi tworzenie własnych powiązań na podstawie dowolnego zestawu elementów powiązania.  
   
-- Za pomocą powiązania dostarczonego przez system, który zawiera nasz element wiązania. WCF udostępnia szereg tych powiązań zdefiniowanych `BasicHttpBinding`przez `NetTcpBinding`system, takich jak , i `WsHttpBinding`. Każde z tych powiązań jest skojarzone z dobrze zdefiniowanym profilem.  
+- Za pomocą podanego w systemie powiązania, które zawiera nasz element powiązania. Funkcja WCF udostępnia wiele z tych zdefiniowanych przez system powiązań, takich jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Wszystkie te powiązania są skojarzone ze zdefiniowanym profilem.  
   
- Przykład implementuje powiązanie `SampleProfileUdpBinding`profilu w <xref:System.ServiceModel.Channels.Binding>, który pochodzi od . Zawiera `SampleProfileUdpBinding` do czterech elementów wiązania `UdpTransportBindingElement` `TextMessageEncodingBindingElement CompositeDuplexBindingElement`w `ReliableSessionBindingElement`nim: , , i .  
+ Przykład implementuje powiązanie profilu w `SampleProfileUdpBinding`, który pochodzi od. <xref:System.ServiceModel.Channels.Binding> `SampleProfileUdpBinding` Zawiera maksymalnie cztery elementy powiązań w obrębie siebie: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, i `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -276,10 +276,10 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-### <a name="adding-a-custom-standard-binding-importer"></a>Dodawanie niestandardowego importera wiązania standardowego  
- Program Svcutil.exe `WsdlImporter` i typ domyślnie rozpoznają i importują powiązania zdefiniowane przez system. W przeciwnym razie powiązanie `CustomBinding` zostanie zaimportowane jako wystąpienie. Aby włączyć Svcutil.exe `WsdlImporter` i `SampleProfileUdpBinding` importować `UdpBindingElementImporter` również działa jako importer wiązania standard niestandardowy.  
+### <a name="adding-a-custom-standard-binding-importer"></a>Dodawanie niestandardowego importera powiązań standardowych  
+ Svcutil. exe i `WsdlImporter` typ domyślnie rozpoznaje i importuje powiązania zdefiniowane przez system. W przeciwnym razie powiązanie zostanie zaimportowane jako `CustomBinding` wystąpienie. Aby umożliwić programowi Svcutil. exe `WsdlImporter` i zaimportować `SampleProfileUdpBinding` go `UdpBindingElementImporter` również jako niestandardowego importera powiązań standardowych.  
   
- Importer wiązania niestandardowego standard `ImportEndpoint` implementuje `IWsdlImportExtension` metodę w `CustomBinding` interfejsie, aby sprawdzić wystąpienie importowane z metadanych, aby zobaczyć, czy mogło zostać wygenerowane przez określone powiązanie standardowe.  
+ Niestandardowy importer powiązań standardowych implementuje `ImportEndpoint` metodę w `IWsdlImportExtension` interfejsie, aby sprawdzić `CustomBinding` wystąpienie zaimportowane z metadanych, aby sprawdzić, czy mogło zostać wygenerowane przez określone powiązanie standardowe.  
   
 ```csharp
 if (context.Endpoint.Binding is CustomBinding)  
@@ -299,28 +299,28 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Ogólnie rzecz biorąc implementowanie importera wiązania niestandardowego standard polega na sprawdzeniu właściwości importowanych elementów wiązania, aby sprawdzić, czy tylko właściwości, które mogły zostać ustawione przez standardowe powiązanie zostały zmienione i wszystkie inne właściwości są ich wartościami domyślnymi. Podstawową strategią wdrażania standardowego importera wiązania jest utworzenie wystąpienia standardowego powiązania, propagowanie właściwości z elementów wiązania do standardowego wystąpienia wiązania, które obsługuje standardowe powiązanie, oraz porównywanie powiązania elementy ze standardowego powiązania z importowanymi elementami wiązania.  
+ Ogólnie rzecz biorąc, implementacja niestandardowego importera powiązań standardowych polega na sprawdzeniu właściwości zaimportowanych elementów powiązania, aby sprawdzić, czy zmieniono tylko właściwości, które mogły zostać ustawione przez powiązanie standardowe, a wszystkie inne właściwości są ich domyślnymi. Podstawową strategią wdrażania importera powiązań standardowych jest utworzenie wystąpienia standardowego powiązania, propagowanie właściwości z elementów powiązania do standardowego wystąpienia powiązania, które obsługuje powiązanie standardowe, oraz porównanie elementów powiązania ze standardowego powiązania z zaimportowanymi elementami powiązania.  
   
 <a name="AddingConfigurationSupport"></a>
 ## <a name="adding-configuration-support"></a>Dodawanie obsługi konfiguracji  
- Aby udostępnić nasz transport za pomocą konfiguracji, musimy wdrożyć dwie sekcje konfiguracji. Pierwszy to `BindingElementExtensionElement` dla `UdpTransportBindingElement`. Jest to `CustomBinding` tak, że implementacje można odwołać się do naszego elementu wiązania. Drugi jest `Configuration` dla `SampleProfileUdpBinding`naszych .  
+ Aby udostępnić nasze transporty w konfiguracji, należy zaimplementować dwie sekcje konfiguracyjne. Pierwszy to a `BindingElementExtensionElement` dla `UdpTransportBindingElement`. Jest tak dlatego, `CustomBinding` że implementacje mogą odwoływać się do naszego elementu powiązania. Druga to `Configuration` dla nas `SampleProfileUdpBinding`.  
   
-### <a name="binding-element-extension-element"></a>Element rozszerzenia elementu wiązania  
- Sekcja `UdpTransportElement` `BindingElementExtensionElement` jest, która `UdpTransportBindingElement` udostępnia do systemu konfiguracji. Za pomocą kilku podstawowych przesłomów definiujemy naszą nazwę sekcji konfiguracji, typ naszego elementu wiązania i sposób tworzenia naszego elementu wiązania. Następnie możemy zarejestrować naszą sekcję rozszerzenia w pliku konfiguracyjnym, jak pokazano w poniższym kodzie.  
+### <a name="binding-element-extension-element"></a>Element rozszerzenia elementu powiązania  
+ Sekcja `UdpTransportElement` jest `BindingElementExtensionElement` udostępniana `UdpTransportBindingElement` systemowi konfiguracyjnemu. Za pomocą kilku podstawowych zastąpień definiujemy nazwę sekcji konfiguracji, typ naszego elementu powiązania oraz sposób tworzenia naszego elementu powiązania. Następnie możemy zarejestrować naszą sekcję rozszerzenia w pliku konfiguracji, jak pokazano w poniższym kodzie.  
   
 ```xml
 <configuration>  
   <system.serviceModel>  
     <extensions>  
       <bindingElementExtensions>  
-        <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportElement, UdpTransport />  
+        <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportElement, UdpTransport" />  
       </bindingElementExtensions>  
     </extensions>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
- Rozszerzenie można odwoływać się od niestandardowych powiązań do korzystania z protokołu UDP jako transportu.  
+ Do rozszerzenia można odwoływać się z niestandardowych powiązań, aby użyć protokołu UDP jako transportu.  
   
 ```xml
 <configuration>  
@@ -336,8 +336,8 @@ if (context.Endpoint.Binding is CustomBinding)
 </configuration>  
 ```  
   
-### <a name="binding-section"></a>Sekcja wiązania  
- Sekcja `SampleProfileUdpBindingCollectionElement` `StandardBindingCollectionElement` jest, która `SampleProfileUdpBinding` udostępnia do systemu konfiguracji. Większość implementacji jest delegowana `SampleProfileUdpBindingConfigurationElement`do , który `StandardBindingElement`pochodzi z . Ma `SampleProfileUdpBindingConfigurationElement` właściwości, które odpowiadają właściwości `SampleProfileUdpBinding`na , i funkcje do mapowania z `ConfigurationElement` powiązania. Na koniec należy zastąpić `OnApplyConfiguration` metodę `SampleProfileUdpBinding`w naszym , jak pokazano w poniższym przykładowym kodzie.  
+### <a name="binding-section"></a>Sekcja powiązania  
+ Sekcja `SampleProfileUdpBindingCollectionElement` jest `StandardBindingCollectionElement` udostępniana `SampleProfileUdpBinding` systemowi konfiguracyjnemu. Zbiorcza implementacja jest delegowana do elementu `SampleProfileUdpBindingConfigurationElement`, który pochodzi od. `StandardBindingElement` `SampleProfileUdpBindingConfigurationElement` Zawiera właściwości, które odpowiadają właściwościom w `SampleProfileUdpBinding`, i funkcji, które mają być `ConfigurationElement` mapowane na podstawie powiązania. Na koniec Zastąp `OnApplyConfiguration` metodę w naszym `SampleProfileUdpBinding`, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -362,21 +362,21 @@ protected override void OnApplyConfiguration(string configurationName)
 }
 ```  
   
- Aby zarejestrować ten program obsługi w systemie konfiguracji, dodajemy następującą sekcję do odpowiedniego pliku konfiguracyjnego.  
+ Aby zarejestrować ten program obsługi przy użyciu systemu konfiguracji, należy dodać następującą sekcję do odpowiedniego pliku konfiguracji.  
   
 ```xml
 <configuration>  
   <configSections>  
      <sectionGroup name="system.serviceModel">  
         <sectionGroup name="bindings">  
-          <section name="sampleProfileUdpBinding" type="Microsoft.ServiceModel.Samples.SampleProfileUdpBindingCollectionElement, UdpTransport />  
+          <section name="sampleProfileUdpBinding" type="Microsoft.ServiceModel.Samples.SampleProfileUdpBindingCollectionElement, UdpTransport" />  
         </sectionGroup>  
      </sectionGroup>  
   </configSections>  
 </configuration>  
 ```  
   
- Następnie można odwoływać się z serviceModel sekcji konfiguracji.  
+ Następnie można się do niego odwoływać z sekcji konfiguracji serviceModel.  
   
 ```xml
 <configuration>  
@@ -393,10 +393,10 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
-## <a name="the-udp-test-service-and-client"></a>Usługa testowa UDP i klient  
- Kod testowy do korzystania z tego przykładowego transportu jest dostępny w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test konfiguruje powiązania i punkty końcowe z kodu, a drugi robi to za pośrednictwem konfiguracji. Oba testy używają dwóch punktów końcowych. Jeden punkt końcowy `SampleUdpProfileBinding` używa [ \<z reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `true`ustawiona na . Drugi punkt końcowy używa niestandardowego `UdpTransportBindingElement`powiązania z programem . Jest to równoważne użyciu `SampleUdpProfileBinding` z `false` [ \<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) ustawiona na . Oba testy tworzą usługę, dodają punkt końcowy dla każdego powiązania, otwierają usługę, a następnie czekają, aż użytkownik trafi enter przed zamknięciem usługi.  
+## <a name="the-udp-test-service-and-client"></a>Usługa i klient testowy UDP  
+ Kod testowy służący do korzystania z tego przykładowego transportu jest dostępny w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test konfiguruje powiązania i punkty końcowe z kodu, a drugi robi to za pośrednictwem konfiguracji. Oba testy używają dwóch punktów końcowych. Jeden punkt końcowy używa `SampleUdpProfileBinding` [ \<>ReliableSession](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) with z ustawioną na. `true` Drugi punkt końcowy używa niestandardowego powiązania z `UdpTransportBindingElement`. Jest to równoważne użyciu `SampleUdpProfileBinding` z [ \<ReliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) ustawionym na. `false` Oba testy umożliwiają utworzenie usługi, dodanie punktu końcowego dla każdego powiązania, otwarcie usługi i oczekiwanie na naciśnięcie klawisza ENTER przed zamknięciem usługi.  
   
- Po uruchomieniu aplikacji testowej usługi powinny zostać wyświetlenia następujących danych wyjściowych.  
+ Po uruchomieniu aplikacji testowej usługi powinny zostać wyświetlone następujące dane wyjściowe.  
   
 ```console
 Testing Udp From Code.  
@@ -404,7 +404,7 @@ Service is started from code...
 Press <ENTER> to terminate the service and start service from config...  
 ```  
   
- Następnie można uruchomić aplikację klienta testowego względem opublikowanych punktów końcowych. Aplikacja testowa klienta tworzy klienta dla każdego punktu końcowego i wysyła pięć komunikatów do każdego punktu końcowego. Następujące dane wyjściowe znajduje się na kliencie.  
+ Następnie możesz uruchomić testową aplikację kliencką dla opublikowanych punktów końcowych. Aplikacja testowa klienta tworzy klienta dla każdego punktu końcowego i wysyła pięć komunikatów do każdego punktu końcowego. Następujące dane wyjściowe są na komputerze klienckim.  
   
 ```console
 Testing Udp From Imported Files Generated By SvcUtil.  
@@ -416,7 +416,7 @@ Testing Udp From Imported Files Generated By SvcUtil.
 Press <ENTER> to complete test.  
 ```  
   
- Poniżej przedstawiono pełne dane wyjściowe w usłudze.  
+ Poniżej przedstawiono pełne dane wyjściowe usługi.  
   
 ```console
 Service is started from code...  
@@ -433,7 +433,7 @@ Hello, world!
    adding 4 + 8  
 ```  
   
- Aby uruchomić aplikację kliencką względem punktów końcowych opublikowanych przy użyciu konfiguracji, naciśnij enter w usłudze, a następnie uruchom ponownie klienta testowego. W usłudze powinny zostać wyświetlenia następujące dane wyjściowe.  
+ Aby uruchomić aplikację kliencką dla punktów końcowych publikowanych za pomocą konfiguracji, naciśnij klawisz ENTER w usłudze, a następnie ponownie uruchom klienta testowego. W usłudze powinny zostać wyświetlone następujące dane wyjściowe.  
   
 ```console
 Testing Udp From Config.  
@@ -441,15 +441,15 @@ Service is started from config...
 Press <ENTER> to terminate the service and exit...  
 ```  
   
- Uruchamianie klienta ponownie daje takie same jak poprzednie wyniki.  
+ Uruchomienie klienta ponownie daje takie samo, jak poprzednie wyniki.  
   
- Aby ponownie wygenerować kod klienta i konfigurację przy użyciu pliku Svcutil.exe, uruchom aplikację usługi, a następnie uruchom następujący program Svcutil.exe z katalogu głównego próbki.  
+ Aby ponownie wygenerować kod i konfigurację klienta przy użyciu programu Svcutil. exe, uruchom aplikację usługi, a następnie uruchom następujący plik Svcutil. exe z katalogu głównego przykładu.  
   
 ```console
 svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
- Należy zauważyć, że program Svcutil.exe nie `SampleProfileUdpBinding`generuje konfiguracji rozszerzenia powiązania dla programu , dlatego należy dodać ją ręcznie.  
+ Należy pamiętać, że Svcutil. exe nie generuje konfiguracji rozszerzenia powiązania dla `SampleProfileUdpBinding`, dlatego należy dodać ją ręcznie.  
   
 ```xml
 <configuration>  
@@ -464,19 +464,19 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 </configuration>  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3. Zapoznaj się z poprzednią sekcją "Usługa testowa I klient UDP".  
+3. Zapoznaj się z poprzednią sekcją "usługa testowa i klient usługi UDP".  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

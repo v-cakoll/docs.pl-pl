@@ -1,5 +1,5 @@
 - name: 'Przetwarzanie dysków, katalogów i plików'
-  href: processing.md
+  href: index.md
   items:
     - name: Dostęp do plików za pomocą Visual Basic
       href: file-access.md

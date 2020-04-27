@@ -232,6 +232,10 @@
           displayName: garbage collection
         - name: Podstawy
           href: garbage-collection/fundamentals.md
+        - name: Odzyskiwanie pamięci stacji roboczej i serwera
+          href: garbage-collection/workstation-server-gc.md
+        - name: Odzyskiwanie pamięci w tle
+          href: garbage-collection/background-gc.md
         - name: Sterta obiektów wielkich
           href: garbage-collection/large-object-heap.md
         - name: Odzyskiwanie pamięci i wydajność
@@ -748,8 +752,8 @@
           href: serialization/how-to-chunk-serialized-data.md
         - name: 'Instrukcje: ustalanie, czy obiekt standardowy .NET można poddać serializacji'
           href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
-        - name: Przykłady
-          href: serialization/samples-binary.md
+        - name: Przykład
+          href: serialization/basic-serialization-technology-sample.md
     - name: Serializacja XML i SOAP
       items:
         - name: Omówienie
@@ -804,8 +808,6 @@
               href: serialization/xml-serializer-generator-tool-sgen-exe.md
             - name: Narzędzie definicji schematu XML (Xsd.exe)
               href: serialization/xml-schema-definition-tool-xsd-exe.md
-        - name: Przykłady
-          href: serialization/samples-xml.md
 - name: Tworzenie aplikacji dla wielu platform
   items:
     - name: Omówienie

@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: Typy referencyjne dopuszczające wartość null
       href: nullable-references.md
-    - name: Aktualizowanie podpisów interfejsu API na potrzeby odwołań dopuszczających wartość null
-      href: nullable-attributes.md
+    - name: Wybieranie strategii włączania typów referencyjnych dopuszczających wartość null
+      href: nullable-migration-strategies.md
     - name: Namespaces
       href: programming-guide/namespaces/index.md
     - name: Typy podstawowe
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>

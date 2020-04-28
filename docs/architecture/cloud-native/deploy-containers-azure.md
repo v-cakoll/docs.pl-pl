@@ -1,28 +1,35 @@
 ---
 title: Wdrażanie kontenerów na platformie Azure
 description: Wdrażanie kontenerów na platformie Azure przy użyciu Azure Container Registry, usługi Azure Kubernetes i Azure Dev Spaces.
-ms.date: 06/30/2019
-ms.openlocfilehash: 6d95db26b6a45dd6825c88693308ffe90d1ed071
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 04/13/2020
+ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183267"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199563"
 ---
 # <a name="deploying-containers-in-azure"></a>Wdrażanie kontenerów na platformie Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Kontenery zapewniają wiele korzyści, z których jeden jest przenośności. Można z łatwością korzystać z tego samego kontenera, który został wcześniej opracowany i przetestowany, i wdrożyć go na platformie Azure, gdzie może uruchamiać aplikację w środowiskach przejściowych i produkcyjnych. Platforma Azure udostępnia wiele opcji hostingu aplikacji opartych na kontenerach, a także obsługuje kilka różnych metod wdrażania. Najbardziej typowym i najbardziej elastycznym podejściem jest wdrożenie kontenerów do Azure Container Registry (ACR), gdzie są one dostępne dla usług, które mają być używane do ich hostowania. Usługa Azure Web App for Containers, usługa Azure Kubernetes Services (AKS) i usługa Azure Container Instance (ACI) mogą uzyskać dostęp do obrazów kontenerów, które zostały wypchnięte do programu ACR.
+W tym rozdziale omówiono kontenery oraz rozdział 1. Wiemy, że kontenery oferują wiele korzyści dla aplikacji natywnych w chmurze, w tym przenośność. W chmurze platformy Azure można wdrożyć te same usługi kontenerów w środowiskach przejściowych i produkcyjnych. Platforma Azure oferuje kilka opcji hostowania obciążeń kontenerowych:
+
+- Usługi Azure Kubernetes Services (AKS)
+- Wystąpienie kontenera platformy Azure (ACI)
+- Web Apps platformy Azure dla kontenerów
 
 ## <a name="azure-container-registry"></a>Azure Container Registry
 
-Azure Container Registry (ACR) umożliwia tworzenie i przechowywanie obrazów we wszystkich wdrożeniach kontenerów oraz zarządzanie nimi. Istnieją inne rejestry kontenerów — zarówno publiczne, jak i prywatne, do których można wdrożyć kontenery. Zaletą ACR nad innymi opcjami jest możliwość przechowywania obrazów blisko środowiska produkcyjnego, poprawiania czasu kompilowania i wdrażania. Można je również zabezpieczyć przy użyciu tych samych procedur zabezpieczeń, które są używane w pozostałej części zasobów platformy Azure, co zwiększa bezpieczeństwo i zmniejsza nakłady pracy związane z zarządzaniem zasobami.
+Podczas konteneryzowania mikrousługi, najpierw należy utworzyć kontener "Image". Obraz to binarna reprezentacja kodu usługi, zależności i środowiska uruchomieniowego. Mimo że można ręcznie utworzyć obraz przy użyciu `Docker Build` polecenia z interfejsu API platformy Docker, lepszym rozwiązaniem jest utworzenie go w ramach zautomatyzowanego procesu kompilacji.
 
-Można [utworzyć rejestr kontenerów za pomocą witryny Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) lub [za pomocą interfejsu wiersza polecenia platformy Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) lub [narzędzi programu PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Utworzenie nowego rejestru kontenerów wymaga jedynie subskrypcji platformy Azure, grupy zasobów i unikatowej nazwy. Na rysunku 3-11 przedstawiono podstawowe opcje tworzenia rejestru, które będą hostowane w *rejestrzename*. azurecr.IO.
+Po utworzeniu obrazy kontenerów są przechowywane w rejestrach kontenerów. Umożliwiają one tworzenie i przechowywanie obrazów kontenerów oraz zarządzanie nimi. Istnieje wiele dostępnych rejestrów — zarówno publicznych, jak i prywatnych. Azure Container Registry (ACR) to w pełni zarządzana usługa rejestru kontenerów w chmurze platformy Azure. Obrazy są utrwalane w sieci platformy Azure, co skraca czas wdrażania ich na hostach kontenerów platformy Azure. Można je również zabezpieczyć przy użyciu tych samych procedur zabezpieczeń i tożsamości, które są używane dla innych zasobów platformy Azure.
 
-![Utwórz rejestr kontenerów](./media/create-container-registry.png)
-**rysunek 3-11**. Utwórz rejestr kontenerów
+Azure Container Registry można utworzyć przy użyciu [Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [interfejsu wiersza polecenia platformy Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)lub [narzędzi programu PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Tworzenie rejestru na platformie Azure jest proste. Wymaga subskrypcji platformy Azure, grupy zasobów i unikatowej nazwy. Na rysunku 3-11 przedstawiono podstawowe opcje tworzenia rejestru, które będą obsługiwane w `registryname.azurecr.io`programie.
+
+![Tworzenie rejestru kontenerów](./media/create-container-registry.png)
+
+**Rysunek 3-11**. Tworzenie rejestru kontenerów
 
 Po utworzeniu rejestru należy przeprowadzić jego uwierzytelnienie przed użyciem. Zazwyczaj należy zalogować się do rejestru przy użyciu polecenia interfejsu CLI platformy Azure:
 
@@ -30,13 +37,13 @@ Po utworzeniu rejestru należy przeprowadzić jego uwierzytelnienie przed użyci
 az acr login --name *registryname*
 ```
 
-Po utworzeniu rejestru w Azure Container Registry można użyć poleceń platformy Docker do wypychania do niego obrazów kontenerów. Przed wykonaniem tej czynności należy jednak najpierw oznaczyć obraz za pomocą w pełni kwalifikowanej nazwy (URL) serwera logowania ACR. Będzie to miał format *registryname*. azurecr.IO.
+Po uwierzytelnieniu można użyć poleceń platformy Docker do wypychania do niego obrazów kontenerów. Przed wykonaniem tej czynności należy jednak oznaczyć obraz za pomocą w pełni kwalifikowanej nazwy (URL) serwera logowania ACR. Będzie on miał format *registryname*. azurecr.IO.
 
 ```console
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Po oznakowaniu obrazu Użyj polecenia `docker push`, aby wypchnąć obraz do wystąpienia ACR.
+Po oznakowaniu obrazu Użyj `docker push` polecenia, aby wypchnąć obraz do wystąpienia ACR.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -48,13 +55,31 @@ Po wypchnięciu obrazu do rejestru dobrym pomysłem jest usunięcie obrazu z lok
 docker rmi myregistry.azurecr.io/mycontainer:v1
 ```
 
-Deweloperzy muszą rzadko wypychane bezpośrednio z maszyn do rejestru kontenerów. Zamiast tego potoku kompilacji zdefiniowany w narzędziu, takim jak Azure DevOps, powinny być odpowiedzialne za ten proces. Więcej informacji znajduje się w [rozdziale DevOps Native Cloud](devops.md).
+Najlepszym rozwiązaniem jest, aby deweloperzy nie mogli ręcznie wypychania obrazów do rejestru kontenerów. W zamian potok kompilacji zdefiniowany w narzędziu, takim jak GitHub lub Azure DevOps, powinien być odpowiedzialny za ten proces. Więcej informacji znajduje się w [rozdziale DevOps Native Cloud](devops.md).
+
+## <a name="acr-tasks"></a>Zadania usługi ACR
+
+[ACR Tasks](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) to zestaw funkcji dostępnych w Azure Container Registry. Rozszerza [cykl programowania w pętli wewnętrznej](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) przez tworzenie obrazów kontenerów i zarządzanie nimi w chmurze platformy Azure. Zamiast wywoływania a `docker build` i `docker push` lokalnie na komputerze deweloperskim, są one automatycznie obsługiwane przez zadania ACR w chmurze.
+
+Następujące polecenie AZ CLI/kompiluje obraz kontenera i wypchnięcie go do ACR:
+
+```azurecli
+# create a container registry
+az acr create --resource-group myResourceGroup --name myContainerRegistry008 --sku Basic
+
+# build container image in ACR and push it into your container regsitry
+az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --file Dockerfile .
+```
+
+Jak widać w poprzednim bloku poleceń, nie ma potrzeby instalowania pulpitu platformy Docker na komputerze deweloperskim. Ponadto można skonfigurować Wyzwalacze zadań ACR w celu odbudowania obrazów kontenerów zarówno w kodzie źródłowym, jak i na podstawowych aktualizacjach obrazu.
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-Jeśli aplikacja oparta na kontenerach obejmuje wiele kontenerów, najprawdopodobniej chcesz zdefiniować interakcje między kontenerami i zarządzać nimi, korzystając z programu *Orchestrator* , takiego jak Kubernetes. Po wdrożeniu obrazów kontenerów w usłudze ACR można łatwo skonfigurować usługi Azure Kubernetes, aby automatycznie wdrażać zaktualizowane obrazy z usługi ACR. Mając pełny potok ciągłej integracji/ciągłego wdrażania, można skonfigurować strategię [wydania](https://martinfowler.com/bliki/CanaryRelease.html) w systemie Kanaryjskie, aby zminimalizować ryzyko związane z szybkim wdrażaniem aktualizacji. Nowa wersja aplikacji została wstępnie skonfigurowana w środowisku produkcyjnym, w której nie są kierowane żadne ruchy, a następnie niewielka liczba użytkowników jest kierowana do nowo wdrożonej wersji aplikacji. Gdy zespół uzyska zaufanie do nowej wersji oprogramowania, zostaną wdrożone więcej wystąpień nowej wersji, a wystąpienia poprzedniej wersji zostaną wycofane. AKS łatwo obsługuje ten styl wdrożenia.
+W tym rozdziale omówiono usługę Azure Kubernetes Service (AKS). Wiemy, że jest to niefaktyczny koordynator kontenerów zarządzania kontenerami aplikacji natywnych w chmurze.
 
-Tak jak w przypadku większości zasobów platformy Azure, możesz tworzyć klastry usługi Azure Kubernetes za pomocą portalu lub narzędzi wiersza polecenia lub narzędzi do automatyzacji infrastruktury, takich jak Helm lub Terraform. Aby rozpocząć pracę z nowym klastrem, należy podać następujące informacje:
+Po wdrożeniu obrazu do rejestru, takiego jak ACR, można skonfigurować AKS do automatycznego ściągania i wdrażania. W przypadku potoku ciągłej integracji i ciągłego wdrażania można skonfigurować strategię wydania w systemie [Kanaryjskie](https://martinfowler.com/bliki/CanaryRelease.html) , aby zminimalizować ryzyko związane z szybkim wdrażaniem aktualizacji. Nowa wersja aplikacji jest początkowo konfigurowana w środowisku produkcyjnym bez ruchu kierowanego do niego. Następnie system będzie kierować niewielki procent użytkowników do nowo wdrożonej wersji. Gdy zespół uzyska zaufanie do nowej wersji, może wycofać więcej wystąpień i wycofać stary. AKS łatwo obsługuje ten styl wdrożenia.
+
+Podobnie jak w przypadku większości zasobów platformy Azure, można utworzyć klaster usługi Azure Kubernetes Service przy użyciu portalu, wiersza polecenia lub narzędzi do automatyzacji, takich jak Helm lub Terraform. Aby rozpocząć pracę z nowym klastrem, należy podać następujące informacje:
 
 - Subskrypcja platformy Azure
 - Grupa zasobów
@@ -65,11 +90,11 @@ Tak jak w przypadku większości zasobów platformy Azure, możesz tworzyć klas
 - Rozmiar węzła
 - Liczba węzłów
 
-Te informacje są wystarczające, aby rozpocząć pracę. W ramach procesu tworzenia w witrynie Azure Portal można także skonfigurować opcje następujących funkcji klastra:
+Te informacje są wystarczające, aby rozpocząć pracę. W ramach procesu tworzenia w Azure Portal można również skonfigurować opcje następujących funkcji klastra:
 
 - Skalowanie
 - Uwierzytelnianie
-- Obsługa sieci
+- Networking
 - Monitorowanie
 - Tagi
 
@@ -77,13 +102,14 @@ Ten [Przewodnik Szybki Start przeprowadzi Cię przez proces wdrażania klastra A
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
-Złożone klastry Kubernetes mogą wymagać znaczących zasobów do hostowania, co może utrudnić deweloperom uruchamianie całej aplikacji na jednej maszynie (szczególnie w przypadku laptopu). Azure Dev Spaces rozwiązanie tego problemu, dzięki czemu deweloperzy mogą współpracować z własnymi wersjami klastrów usługi Azure Kubernetes hostowanych na platformie Azure. Azure Dev Spaces zaprojektowano w celu ułatwienia tworzenia aplikacji opartych na mikrousługach przy użyciu AKS.
+Aplikacje natywne w chmurze mogą szybko rozwijać duże i złożone, co wymaga znaczących zasobów obliczeniowych. W tych scenariuszach cała aplikacja nie może być hostowana na maszynie deweloperskiej (szczególnie w przypadku laptopu). Azure Dev Spaces zaprojektowano w celu rozwiązania tego problemu przy użyciu AKS. Pozwala to deweloperom na współdziałanie z lokalną wersją swoich usług przy jednoczesnym obsługiwaniu reszty aplikacji w klastrze projektowym AKS.
+
+Deweloperzy mogą korzystać z działającego wystąpienia (Programowanie) w klastrze AKS zawierającym całą zaprojektowaną aplikację. Ale korzystają z miejsc osobistych skonfigurowanych na ich maszynach do lokalnego tworzenia usług. Gdy wszystko będzie gotowe, testuje od końca do końca w klastrze AKS — bez replikowania zależności. Azure Dev Spaces Scala kod z komputera lokalnego z usługami w AKS. Deweloperzy mogą szybko iterować i debugować kod bezpośrednio w Kubernetes przy użyciu programu Visual Studio lub Visual Studio Code.
 
 Aby zrozumieć wartość Azure Dev Spaces, pozwól mi udostępnić tę ofertę z Gabe Monroy, wyprowadzać kontenery w Microsoft Azure:
 
-"Załóżmy, że jesteś nowym pracownikiem próbującym naprawić usterkę w złożonej aplikacji mikrousług składającej się z dziesiątek składników, z których każda korzysta z własnych konfiguracji i usług zapasowych. Aby rozpocząć, musisz skonfigurować lokalne środowisko programistyczne, aby można było naśladować produkcję produkcyjną, w tym Konfigurowanie środowiska IDE, łańcucha narzędzi do tworzenia kontenerów, opartych na kontenerach zależności usługi, lokalne środowisko Kubernetes, imitacje usług zapasowych i wiele innych. Za każdym razem, gdy zajmujesz się skonfigurowaniem środowiska programistycznego, naprawianie, że pierwsza usterka może zająć dni.
-
-> Można też użyć funkcji Spaces i AKS ".
+> Wyobraź sobie, że jesteś nowym pracownikiem próbującym naprawić usterkę w złożonej aplikacji mikrousług składającej się z dziesiątek składników, z których każda korzysta z własnych konfiguracji i usług zapasowych. Aby rozpocząć, musisz skonfigurować lokalne środowisko programistyczne, aby można było naśladować produkcję produkcyjną, w tym Konfigurowanie środowiska IDE, łańcucha narzędzi do tworzenia kontenerów, opartych na kontenerach zależności usługi, lokalne środowisko Kubernetes, imitacje usług zapasowych i wiele innych. Za każdym razem, gdy zajmujesz się skonfigurowaniem środowiska programistycznego, naprawianie, że pierwsza usterka może zająć dni.
+> Można też użyć funkcji Spaces i AKS.
 
 Proces pracy z Azure Dev Spaces obejmuje następujące kroki:
 
@@ -92,22 +118,16 @@ Proces pracy z Azure Dev Spaces obejmuje następujące kroki:
 3. Skonfiguruj podrzędną przestrzeń programistyczną (dla własnej wersji systemu).
 4. Nawiąż połączenie z obszarem dev.
 
-Wszystkie te kroki można wykonać przy użyciu interfejsu wiersza polecenia platformy Azure i narzędzi `azds`. Na przykład, aby utworzyć nowe miejsce dla deweloperów platformy Azure dla danego klastra Kubernetes, użyj polecenia takiego jak ten:
+Wszystkie te kroki można wykonać przy użyciu interfejsu wiersza polecenia platformy Azure i `azds` nowych narzędzi wiersza poleceń. Na przykład, aby utworzyć nowe miejsce dla deweloperów platformy Azure dla danego klastra Kubernetes, użyj polecenia takiego jak ten:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Następnie można użyć polecenia `azds prep`, aby wygenerować niezbędne zasoby platformy Docker i Helm na potrzeby uruchamiania aplikacji. Następnie możesz uruchomić swój kod w AKS przy użyciu `azds up`. Przy pierwszym uruchomieniu tego polecenia Wykres Helm zostanie zainstalowany, a kontenery zostaną skompilowane i wdrożone zgodnie z instrukcjami. Wykonanie tej operacji może potrwać kilka minut po raz pierwszy. Jednak po wprowadzeniu zmian można nawiązać połączenie z własnym podrzędnym miejscem deweloperskim przy użyciu `azds space select`, a następnie wdrożyć i debugować aktualizacje w izolowanym miejscu potomnym. Po umieszczeniu miejsca na dev i uruchomieniu programu można wysłać do niego aktualizacje, ponownie wykonując polecenie `azds up` lub można użyć wbudowanych narzędzi w programie Visual Studio lub Visual Studio Code. Za pomocą VS Code używasz palety poleceń do łączenia się z obszarem deweloperskim. Rysunek 3-12 pokazuje, jak uruchomić aplikację sieci Web przy użyciu Azure Dev Spaces w programie Visual Studio.
+Następnie można użyć `azds prep` polecenia, aby wygenerować niezbędne zasoby platformy Docker i Helm na potrzeby uruchamiania aplikacji. Następnie uruchamiasz kod w AKS przy użyciu `azds up`. Przy pierwszym uruchomieniu tego polecenia zostanie zainstalowany wykres Helm. Kontenery zostaną skompilowane i wdrożone zgodnie z instrukcjami. To zadanie może potrwać kilka minut podczas pierwszego uruchomienia. Jednak po wprowadzeniu zmian można nawiązać połączenie z własnym podrzędnym miejscem deweloperskim przy użyciu `azds space select` programu, a następnie wdrożyć i debugować aktualizacje w izolowanym obszarze podrzędnym. Po umieszczeniu miejsca na dev i uruchomieniu programu można wysłać do niego aktualizacje, ponownie wydając `azds up` polecenie lub korzystając z wbudowanych narzędzi w programie Visual Studio lub Visual Studio Code. Za pomocą VS Code używasz palety poleceń do łączenia się z obszarem deweloperskim. Rysunek 3-12 pokazuje, jak uruchomić aplikację sieci Web przy użyciu Azure Dev Spaces w programie Visual Studio.
 
-![połączyć się z Azure Dev Spaces w programie Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**rysunek 3-12**. Nawiązywanie połączenia z Azure Dev Spaces w programie Visual Studio
-
-## <a name="references"></a>Odwołania
-
-- [Wersja Kanaryjskie](https://martinfowler.com/bliki/CanaryRelease.html)
-- [Azure Dev Spaces z VS Code](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)
-- [Azure Dev Spaces z programem Visual Studio](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio)
+![Połącz się z Azure dev Spaces w programie](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+Visual Studio**rysunek 3-12**. Nawiązywanie połączenia z Azure Dev Spaces w programie Visual Studio
 
 >[!div class="step-by-step"]
 >[Poprzedni](combine-containers-serverless-approaches.md)

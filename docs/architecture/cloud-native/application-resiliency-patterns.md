@@ -2,12 +2,12 @@
 title: Wzorce odporności aplikacji
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Wzorce odporności aplikacji
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087759"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199693"
 ---
 # <a name="application-resiliency-patterns"></a>Wzorce odporności aplikacji
 
@@ -54,9 +54,9 @@ Ważne jest, aby zwiększyć okres wycofywania przed ponowną próbą wywołania
 
 ## <a name="circuit-breaker-pattern"></a>Wzorzec wyłącznika
 
-Chociaż wzorzec ponawiania może pomóc w odzyskaniu żądania Entangled w częściowej awarii, istnieją sytuacje, w których awarie mogą być spowodowane nieoczekiwanymi zdarzeniami, które będą wymagały dłuższych okresów czasu na rozwiązanie. Te błędy mogą mieć różne wagi od częściowej utraty łączności z pełną awarią usługi. W takich sytuacjach nie jest możliwe, aby aplikacja stale ponawiać próbę wykonania operacji, która prawdopodobnie nie powiedzie się.
+Chociaż wzorzec ponawiania może pomóc w odzyskaniu żądania Entangled w częściowej awarii, istnieją sytuacje, w których awarie mogą być spowodowane nieoczekiwanymi zdarzeniami, które będą wymagały dłuższych okresów czasu na rozwiązanie. Takie błędy mogą mieć różny stopień ważności — od częściowej utraty łączności do całkowitej awarii usługi. W takich sytuacjach nie jest możliwe, aby aplikacja stale ponawiać próbę wykonania operacji, która prawdopodobnie nie powiedzie się.
 
-Aby zapewnić, że wykonywanie operacji ciągłego ponawiania w usłudze, która nie odpowiada, może przejść do samodzielnego scenariusza odmowy usługi, w którym usługa jest zalewana przez ciągłe wywoływanie zasobów, takich jak pamięć, wątki i baza danych. połączenia, powodując niepowodzenie niepowiązanych części systemu wykorzystujących te same zasoby.
+Aby zapewnić, że wykonywanie ciągle powtarzających się operacji w usłudze bez odpowiedzi może przeniesieć użytkownika do samodzielnego scenariusza odmowy usługi, w którym usługa jest zastosowana do ciągłego wywoływania zasobów, takich jak pamięć, wątki i połączenia bazy danych, powodując awarię niepowiązanych części systemu, które korzystają z tych samych zasobów.
 
 W takich sytuacjach lepszym rozwiązaniem może być niepowodzenie operacji natychmiastowego i próba wywołania usługi w przypadku, gdy będzie to możliwe.
 

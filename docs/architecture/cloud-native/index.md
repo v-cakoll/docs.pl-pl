@@ -1,16 +1,16 @@
 ---
-title: Projektowanie aplikacji platformy .NET natywnych dla chmury dla platformy Azure
-description: Przewodnik do tworzenia aplikacji natywnych dla chmury, wykorzystując kontenery, mikrousług i bezserwerowych funkcji platformy Azure.
+title: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
+description: Przewodnik tworzenia aplikacji natywnych w chmurze wykorzystujących kontenery, mikrousługi i funkcje bezserwerowe platformy Azure.
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: ebef97fb355cbf682b37ee441a19fbbfdd2d0dc3
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989067"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199823"
 ---
-# <a name="architecting-cloud-native-net-applications-for-azure"></a>Projektowanie aplikacji platformy .NET natywnych dla chmury dla platformy Azure
+# <a name="architecting-cloud-native-net-applications-for-azure"></a>Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -18,65 +18,71 @@ ms.locfileid: "80989067"
 
 OPUBLIKOWANA PRZEZ
 
-Zespoły produktów Microsoft Developer Division, .NET i Visual Studio
+Zespoły deweloperów firmy Microsoft, .NET i Visual Studio
 
-Oddział firmy Microsoft Corporation
+Dział firmy Microsoft Corporation
 
 One Microsoft Way
 
 Redmond, Waszyngton 98052-6399
 
-Prawa &copy; autorskie 2019 firmy Microsoft Corporation
+Copyright &copy; 2019 od firmy Microsoft Corporation
 
-Wszelkie prawa zastrzeżone. Żadna część zawartości tej książki nie może być powielana ani przekazywana w jakiejkolwiek formie lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
+Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
-Książka ta jest dostarczana "tak jak jest" i wyraża poglądy i opinie autora. Poglądy, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odniesienia do stron internetowych, mogą ulec zmianie bez powiadomienia.
+Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
 
 Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki https://www.microsoft.com towarowe wymienione na stronie internetowej "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Mac i macOS są znakami towarowymi firmy Apple Inc.
+Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Logo docker wielorybów jest zastrzeżonym znakiem towarowym firmy Docker, Inc. Używany za zgodą.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
-Wszystkie inne znaki i logo są własnością ich odpowiednich właścicieli.
+Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
-Autorów:
+Autorów
 
-> **Steve "ardalis" Smith** - Architekt oprogramowania i trener - [Ardalis.com](https://ardalis.com)
+> **Rob Vettor**, główny architekt systemu w chmurze/IP architekt- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/), Microsoft
 >
-> **Rob Vettor** - Microsoft - Główny architekt systemu chmury/architekt IP - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve "ardalis" Smith**, architekt oprogramowania i Trainer- [Ardalis.com](https://ardalis.com)
 
 Uczestnicy i recenzenci:
 
-> **Cesar De la Torre**, Główny Menedżer Programu, zespół .NET, Microsoft
+> **Cesar de La Torre**, główny Menedżer programu, zespół .NET, Microsoft
 >
-> **Nish Anil**, Sr. Program Manager, zespół .NET, Microsoft
+> **Nish Anil**, starszy kierownik ds. programów, .NET Team, Microsoft
+>
+> **Jeremy Likeness**, starszy kierownik ds. programów, .NET Team, Microsoft
+>
+> **Cecil Phillip**, starszy ambasador w chmurze, Microsoft
 
-Edytory:
+Dowiedz się więcej o eShopOnContainers
 
-> **Maira Wenzel**, Sr. Content Developer, zespół .NET, Microsoft
+Edytory
+
+> **Maira Wenzel**, Menedżer programów, .NET Team, Microsoft
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
 
-Odbiorcami tego przewodnika są głównie deweloperzy, potencjalni klienci programiści i architekci, którzy są zainteresowani nauką tworzenia aplikacji zaprojektowanych dla chmury.
+Odbiorcy tego przewodnika są głównie deweloperzy, potencjalni klienci programistyczni i architektzy, którzy interesują się tworzeniem aplikacji przeznaczonych dla chmury.
 
-Dodatkową grupą odbiorców są decydenci techniczni, którzy planują wybrać, czy mają tworzyć swoje aplikacje przy użyciu podejścia natywnego dla chmury.
+Dodatkowymi odbiorcami są, którzy decydują o wyborze, czy kompilować aplikacje przy użyciu podejścia natywnego w chmurze.
 
-## <a name="how-you-can-use-this-guide"></a>Jak można korzystać z tego przewodnika
+## <a name="how-you-can-use-this-guide"></a>Jak można użyć tego przewodnika
 
-Ten przewodnik rozpoczyna się od zdefiniowania natywnego chmury i wprowadzenia aplikacji referencyjnej utworzonej przy użyciu natywnych dla chmury zasad i technologii. Poza tymi dwoma pierwszymi rozdziałami, reszta książki jest podzielona na konkretne rozdziały, koncentrujące się na tematach wspólnych dla większości aplikacji natywnych dla chmury. Możesz przejść do dowolnego z tych rozdziałów, aby dowiedzieć się więcej o podejściach natywnych dla chmury:
+Ten przewodnik rozpoczyna się od zdefiniowania natywnej chmury i wprowadzenia aplikacji referencyjnej skompilowanej przy użyciu zasad i technologii natywnych w chmurze. Oprócz tych pierwszych dwóch rozdziałów pozostała część książki jest dzielona do określonych rozdziałów ukierunkowanych na tematy wspólne dla większości aplikacji natywnych w chmurze. Możesz przejść do dowolnego z tych rozdziałów, aby dowiedzieć się więcej na temat podejścia natywnego w chmurze:
 
 - Dostęp do danych i danych
 - Wzorce komunikacji
 - Skalowanie i skalowalność
 - Odporność aplikacji
 - Monitorowanie i kondycja
-- Tożsamość i bezpieczeństwo
+- Tożsamość i zabezpieczenia
 - DevOps
 
-Ten przewodnik jest dostępny zarówno w formacie PDF, jak i online. Możesz przesłać ten dokument lub łącza do jego wersji online do swojego zespołu, aby zapewnić wspólne zrozumienie tych tematów. Większość z tych tematów korzysta ze spójnego zrozumienia podstawowych zasad i wzorców, a także kompromisów związanych z decyzjami związanymi z tymi tematami. Naszym celem w tym dokumencie jest wyposażenie zespołów i ich liderów w informacje potrzebne do podejmowania świadomych decyzji dotyczących architektury, rozwoju i hostingu ich aplikacji.
+Ten przewodnik jest dostępny zarówno w formacie PDF, jak i w trybie online. Możesz przesłać dalej ten dokument lub linki do swojej wersji online swojego zespołu, aby pomóc w zapewnieniu powszechnego poznania się z tymi tematami. Większość z tych tematów korzysta ze spójnych zasad i wzorców, a także tych, których dotyczą decyzje związane z tymi tematami. Naszym celem tego dokumentu jest wyposażenie zespołów i ich liderów z informacjami potrzebnymi do podejmowania świadomych decyzji o architekturze, programowaniu i hostingu aplikacji.
 
 >[!div class="step-by-step"]
 >[Dalej](introduction.md)

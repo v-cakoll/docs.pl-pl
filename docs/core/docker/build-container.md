@@ -1,21 +1,21 @@
 ---
 title: Konteneryzowanie aplikacji przy użyciu samouczka platformy Docker
 description: W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET Core z platformą Docker.
-ms.date: 01/09/2020
+ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 03c0d8824eefd5956b43bc0b812abb0d5b7688ed
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: c5e6648539af45f3ce615bfc183e6f95a62b085a
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140818"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200031"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
-W tym samouczku przedstawiono sposób tworzenia obrazu platformy Docker, który zawiera aplikację platformy .NET Core. Obraz może służyć do tworzenia kontenerów dla lokalnego środowiska projektowego, chmury prywatnej lub chmury publicznej.
+W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET Core z platformą Docker. Kontenery mają wiele funkcji i korzyści, takie jak niezmienne infrastruktury, zapewniające przenośną architekturę i umożliwiające skalowalność. Obraz może służyć do tworzenia kontenerów dla lokalnego środowiska projektowego, chmury prywatnej lub chmury publicznej.
 
-Dowiesz się:
+W tym samouczku zostały wykonane następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -26,8 +26,8 @@ Dowiesz się:
 
 Zapoznaj się z tematem tworzenie i wdrażanie kontenerów platformy Docker dla aplikacji platformy .NET Core. *Platforma Docker* korzysta z *aparatu platformy Docker* , aby szybko kompilować i spakować aplikacje jako *obrazy platformy Docker*. Te obrazy są zapisywane w formacie *pliku dockerfile* , który ma zostać wdrożony i uruchomiony w kontenerze warstwowym.
 
-> [!WARNING]
-> **Ten samouczek nie jest przeznaczony dla aplikacji ASP.NET Core.** Jeśli używasz ASP.NET Core, zapoznaj się z samouczkiem [uczenie się, jak konteneryzowanie aplikacji ASP.NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images) .
+> [!NOTE]
+> Ten samouczek **nie dotyczy** aplikacji ASP.NET Core. Jeśli używasz ASP.NET Core, zapoznaj się z samouczkiem [uczenie się, jak konteneryzowanie aplikacji ASP.NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images) .
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -35,9 +35,7 @@ Zainstaluj następujące wymagania wstępne:
 
 - [Zestaw SDK platformy .NET Core 3,1](https://dotnet.microsoft.com/download)\
 Jeśli masz zainstalowany program .NET Core, użyj polecenia `dotnet --info` , aby określić, którego zestawu SDK używasz.
-
 - [Platforma Docker Community Edition](https://www.docker.com/products/docker-desktop)
-
 - Tymczasowy folder roboczy dla przykładowej aplikacji *pliku dockerfile* i .NET Core. W tym samouczku Nazwa programu *Docker Work* jest używana jako folder roboczy.
 
 ## <a name="create-net-core-app"></a>Tworzenie aplikacji .NET Core
@@ -45,39 +43,48 @@ Jeśli masz zainstalowany program .NET Core, użyj polecenia `dotnet --info` , a
 Potrzebna jest aplikacja .NET Core, którą zostanie uruchomiony kontener platformy Docker. Otwórz Terminal, Utwórz folder roboczy, jeśli jeszcze tego nie zrobiono, a następnie wprowadź go. W folderze roboczym Uruchom następujące polecenie, aby utworzyć nowy projekt w podkatalogu o nazwie *App*:
 
 ```dotnetcli
-dotnet new console -o app -n myapp
+dotnet new console -o App -n NetCore.Docker
 ```
 
 Drzewo folderów będzie wyglądać następująco:
 
 ```
 docker-working
-│
-└───app
-    │   myapp.csproj
-    │   Program.cs
-    │
-    └───obj
-            myapp.csproj.nuget.cache
-            myapp.csproj.nuget.dgspec.json
-            myapp.csproj.nuget.g.props
-            myapp.csproj.nuget.g.targets
-            project.assets.json
+    └──App
+        ├──NetCore.Docker.csproj
+        ├──Program.cs
+        └──obj
+            ├──NetCore.Docker.csproj.nuget.dgspec.json
+            ├──NetCore.Docker.csproj.nuget.g.props
+            ├──NetCore.Docker.csproj.nuget.g.targets
+            ├──project.assets.json
+            └──project.nuget.cache
 ```
 
-`dotnet new` Polecenie tworzy nowy folder o nazwie *App* i generuje aplikację "Hello World". Wprowadź folder *App* , a następnie uruchom polecenie `dotnet run`. Zobaczysz następujące dane wyjściowe:
+`dotnet new` Polecenie tworzy nowy folder o nazwie *App* i generuje aplikację konsolową "Hello World". Zmień katalogi i przejdź do folderu *aplikacji* z sesji terminala. Użyj `dotnet run` polecenia, aby uruchomić aplikację. Aplikacja zostanie uruchomiona i wydrukowana `Hello World!` poniżej polecenia:
 
-```console
-> dotnet run
+```dotnetcli
+dotnet run
 Hello World!
 ```
 
-Szablon domyślny tworzy aplikację, która drukuje do terminalu, a następnie kończy pracę. Na potrzeby tego samouczka będziesz używać aplikacji, która nieskończonie pętli. Otwórz plik *program.cs* w edytorze tekstu. Powinien wyglądać podobnie do następującego kodu:
+Szablon domyślny tworzy aplikację, która drukuje do terminalu, a następnie natychmiast kończy pracę. Na potrzeby tego samouczka będziesz używać aplikacji, która nieskończonie pętli. Otwórz plik *program.cs* w edytorze tekstu.
+
+> [!TIP]
+> Jeśli używasz Visual Studio Code, w poprzedniej sesji terminala wpisz następujące polecenie:
+>
+> ```
+> code .
+> ```
+>
+> Spowoduje to otwarcie folderu *aplikacji* zawierającego projekt w Visual Studio Code.
+
+*Program.cs* powinien wyglądać podobnie do następującego kodu w języku C#:
 
 ```csharp
 using System;
 
-namespace myapp
+namespace NetCore.Docker
 {
     class Program
     {
@@ -93,30 +100,30 @@ Zastąp plik następującym kodem, który zlicza liczby w każdej sekundzie:
 
 ```csharp
 using System;
+using System.Threading.Tasks;
 
-namespace myapp
+namespace NetCore.Docker
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
             while (max == -1 || counter < max)
             {
-                counter++;
-                Console.WriteLine($"Counter: {counter}");
-                System.Threading.Tasks.Task.Delay(1000).Wait();
+                Console.WriteLine($"Counter: {++counter}");
+                await Task.Delay(1000);
             }
         }
     }
 }
 ```
 
-Zapisz plik i ponownie przetestuj program przy użyciu `dotnet run`programu. Należy pamiętać, że ta aplikacja jest uruchamiana w nieskończoność. Za pomocą polecenia Cancel <kbd>naciśnij klawisz Ctrl</kbd>+<kbd>, aby go</kbd> zatrzymać. Zobaczysz następujące dane wyjściowe:
+Zapisz plik i ponownie przetestuj program przy użyciu `dotnet run`programu. Należy pamiętać, że ta aplikacja jest uruchamiana w nieskończoność. Aby zatrzymać, użyj polecenia Cancel <kbd>Ctrl + C</kbd> . Oto przykładowe dane wyjściowe:
 
-```console
-> dotnet run
+```dotnetcli
+dotnet run
 Counter: 1
 Counter: 2
 Counter: 3
@@ -126,110 +133,105 @@ Counter: 4
 
 Jeśli przekażesz liczbę w wierszu polecenia do aplikacji, będzie ona liczyć tylko do tej wartości, a następnie zostanie zakończona. Wypróbuj go, `dotnet run -- 5` aby liczyć do pięciu.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Wszystkie parametry po `--` nie są przenoszone do `dotnet run` polecenia i zamiast tego są przesyłane do aplikacji.
 
 ## <a name="publish-net-core-app"></a>Publikowanie aplikacji platformy .NET Core
 
-Przed dodaniem aplikacji .NET Core do obrazu platformy Docker należy opublikować ją. Upewnij się, że kontener uruchamia opublikowaną wersję aplikacji po jej uruchomieniu.
-
-W folderze roboczym wprowadź folder *App* z przykładowym kodem źródłowym i uruchom następujące polecenie:
+Przed dodaniem aplikacji .NET Core do obrazu platformy Docker należy najpierw ją opublikować. Najlepszym rozwiązaniem jest uruchomienie przez kontener opublikowanej wersji aplikacji. Aby opublikować aplikację, uruchom następujące polecenie:
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-To polecenie kompiluje aplikację do folderu *Publikowanie* . Ścieżka do folderu *publikowania* z folderu roboczego powinna być`.\app\bin\Release\netcoreapp3.1\publish\`
+To polecenie kompiluje aplikację do folderu *Publikowanie* . Ścieżka do folderu *publikowania* z folderu roboczego powinna być`.\App\bin\Release\netcoreapp3.1\publish\`
 
-Aby sprawdzić, czy plik *MojaApl. dll* został utworzony, w folderze *App* należy uzyskać listę katalogów folderu publikacji.
+#### <a name="windows"></a>[Windows](#tab/windows)
 
-```console
-> dir bin\Release\netcoreapp3.1\publish
+W folderze *App (aplikacja* ) Pobierz listę katalogów folderu publikowania, aby sprawdzić, czy został utworzony plik z systemem. *Docker. dll* .
 
-    Directory:  C:\docker-working\app\bin\Release\netcoreapp3.1\publish
+```powershell
+dir .\bin\Release\netcoreapp3.1\publish\
 
-01/09/2020  11:41 AM    <DIR>          .
-01/09/2020  11:41 AM    <DIR>          ..
-01/09/2020  11:41 AM               407 myapp.deps.json
-01/09/2020  12:15 PM             4,608 myapp.dll
-01/09/2020  12:15 PM           169,984 myapp.exe
-01/09/2020  12:15 PM               736 myapp.pdb
-01/09/2020  11:41 AM               154 myapp.runtimeconfig.json
+    Directory: C:\Users\dapine\App\bin\Release\netcoreapp3.1\publish
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/27/2020   8:27 AM            434 NetCore.Docker.deps.json
+-a----        4/27/2020   8:27 AM           6144 NetCore.Docker.dll
+-a----        4/27/2020   8:27 AM         171520 NetCore.Docker.exe
+-a----        4/27/2020   8:27 AM            860 NetCore.Docker.pdb
+-a----        4/27/2020   8:27 AM            154 NetCore.Docker.runtimeconfig.json
 ```
 
-Jeśli używasz systemu Linux lub macOS, użyj `ls` polecenia w celu uzyskania listy katalogów i sprawdź, czy plik *MojaApl. dll* został utworzony.
+#### <a name="linux"></a>[Linux](#tab/linux)
+
+Użyj `ls` polecenia, aby uzyskać listę katalogów i sprawdzić, czy plik. *Docker. dll* został utworzony.
 
 ```bash
 me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
-myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
+NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
+
+---
 
 ## <a name="create-the-dockerfile"></a>Tworzenie pliku dockerfile
 
 Plik *pliku dockerfile* jest używany przez `docker build` polecenie do tworzenia obrazu kontenera. Ten plik jest plikiem tekstowym o nazwie *pliku dockerfile* , który nie ma rozszerzenia.
 
-W terminalu przejdź z powrotem do folderu roboczego utworzonego na początku. Utwórz plik o nazwie *pliku dockerfile* w folderze roboczym i otwórz go w edytorze tekstu. W zależności od typu aplikacji, która ma zostać konteneryzowanie, należy wybrać środowisko uruchomieniowe ASP.NET Core lub środowisko uruchomieniowe platformy .NET Core. W razie wątpliwości Wybierz środowisko uruchomieniowe ASP.NET Core, które obejmuje środowisko uruchomieniowe platformy .NET Core. W tym samouczku zostanie użyty obraz środowiska uruchomieniowego ASP.NET Core, ale aplikacja utworzona w poprzednich sekcjach jest aplikacją platformy .NET Core.
+Utwórz plik o nazwie *pliku dockerfile* w katalogu zawierającym element *. csproj* i otwórz go w edytorze tekstu. W tym samouczku zostanie użyty obraz środowiska uruchomieniowego ASP.NET Core (zawierający obraz środowiska uruchomieniowego programu .NET Core), który odpowiada aplikacji konsolowej programu .NET Core.
 
-- Środowisko uruchomieniowe ASP.NET Core
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+```
 
-  ```dockerfile
-  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-  ```
+> [!NOTE]
+> Obraz środowiska uruchomieniowego ASP.NET Core jest używany w sposób celowy, `mcr.microsoft.com/dotnet/core/runtime:3.1` chociaż można było użyć obrazu.
 
-- Środowisko uruchomieniowe platformy .NET Core
+`FROM` Słowo kluczowe wymaga w pełni kwalifikowanej nazwy obrazu kontenera Docker. Microsoft Container Registry (MCR, mcr.microsoft.com) to zespolone centrum Docker, które hostuje dostępne publicznie kontenery. `dotnet/core` Segment jest repozytorium kontenera, gdzie jako `aspnet` segment jest nazwą obrazu kontenera. Obraz jest otagowany przy `3.1`użyciu, który jest używany do przechowywania wersji. `mcr.microsoft.com/dotnet/core/aspnet:3.1` W tym przypadku środowisko uruchomieniowe programu .net Core 3,1. Upewnij się, że korzystasz z wersji środowiska uruchomieniowego, która pasuje do środowiska uruchomieniowego wskazywanego przez zestaw SDK. Na przykład aplikacja utworzona w poprzedniej sekcji używa zestawu .NET Core 3,1 SDK i obrazu podstawowego, do którego odwołuje się w *pliku dockerfile* , jest oznaczona jako **3,1**.
 
-  ```dockerfile
-  FROM mcr.microsoft.com/dotnet/core/runtime:3.1
-  ```
-
-`FROM` Polecenie instruuje platformę Docker w celu ściągnięcia obrazu oznaczonego **3,1** z określonego repozytorium. Upewnij się, że korzystasz z wersji środowiska uruchomieniowego, która pasuje do środowiska uruchomieniowego wskazywanego przez zestaw SDK. Na przykład aplikacja utworzona w poprzedniej sekcji używa zestawu .NET Core 3,1 SDK i obrazu podstawowego, do którego odwołuje się w *pliku dockerfile* , jest oznaczona jako **3,1**.
-
-Zapisz plik *pliku dockerfile* . Struktura katalogów folderu roboczego powinna wyglądać następująco. Niektóre pliki i foldery z bardziej szczegółowymi poziomami zostały wycięte w celu zaoszczędzenia miejsca w artykule:
+Zapisz plik *pliku dockerfile* . Struktura katalogów folderu roboczego powinna wyglądać następująco. Niektóre pliki i foldery bardziej szczegółowe zostały pominięte w celu zaoszczędzenia miejsca w artykule:
 
 ```
 docker-working
-│   Dockerfile
-│
-└───app
-    │   myapp.csproj
-    │   Program.cs
-    │
-    ├───bin
-    │   └───Release
-    │       └───netcoreapp3.1
-    │           └───publish
-    │                   myapp.deps.json
-    │                   myapp.exe
-    │                   myapp.dll
-    │                   myapp.pdb
-    │                   myapp.runtimeconfig.json
-    │
-    └───obj
+    └──App
+        ├──Dockerfile
+        ├──NetCore.Docker.csproj
+        ├──Program.cs
+        ├──bin
+        │   └──Release
+        │       └──netcoreapp3.1
+        │           └──publish
+        │               ├──NetCore.Docker.deps.json
+        │               ├──NetCore.Docker.exe
+        │               ├──NetCore.Docker.dll
+        │               ├──NetCore.Docker.pdb
+        │               └──NetCore.Docker.runtimeconfig.json
+        └──obj
+            └──...
 ```
 
 W terminalu uruchom następujące polecenie:
 
-```console
-docker build -t myimage -f Dockerfile .
+```Docker
+docker build -t counter-image -f Dockerfile .
 ```
 
-Platforma Docker będzie przetwarzać każdy wiersz w *pliku dockerfile*. W poleceniu polecenie instruuje platformę Docker, aby użyć bieżącego folderu do znalezienia *pliku dockerfile.* `.` `docker build` To polecenie kompiluje obraz i tworzy lokalne repozytorium o nazwie **obraz** , który wskazuje na ten obraz. Po zakończeniu tego polecenia Uruchom `docker images` polecenie, aby wyświetlić listę zainstalowanych obrazów:
+Platforma Docker będzie przetwarzać każdy wiersz w *pliku dockerfile*. W poleceniu polecenie instruuje platformę Docker, aby użyć bieżącego folderu do znalezienia *pliku dockerfile.* `.` `docker build` To polecenie kompiluje obraz i tworzy lokalne repozytorium o nazwie **Counter-Image** , które wskazuje na ten obraz. Po zakończeniu tego polecenia Uruchom `docker images` polecenie, aby wyświetlić listę zainstalowanych obrazów:
 
-```console
-> docker images
+```Docker
+docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              54240314fe71        4 weeks ago         346MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 54240314fe71        4 weeks ago         346MB
+counter-image                           latest              e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-Zwróć uwagę, że te dwa obrazy mają tę samą wartość **identyfikatora obrazu** . Wartość jest taka sama między obu obrazów, ponieważ jedyne polecenie w *pliku dockerfile* było podstawą nowego obrazu na istniejącym obrazie. Dodajmy dwa polecenia do *pliku dockerfile*. Każde polecenie tworzy nową warstwę obrazu z końcowym poleceniem reprezentującym obraz wskazujący na wpis repozytorium **obrazu** .
+Zwróć uwagę, że te dwa obrazy mają tę samą wartość **identyfikatora obrazu** . Wartość jest taka sama między obu obrazów, ponieważ jedyne polecenie w *pliku dockerfile* było podstawą nowego obrazu na istniejącym obrazie. Dodajmy trzy polecenia do *pliku dockerfile*. Każde polecenie tworzy nową warstwę obrazu z końcowym poleceniem reprezentującym punkty wejścia repozytorium **obrazu licznika** do.
 
 ```dockerfile
-COPY app/bin/Release/netcoreapp3.1/publish/ app/
-
-WORKDIR /app
-
-ENTRYPOINT ["dotnet", "myapp.dll"]
+COPY bin/Release/netcoreapp3.1/publish/ App/
+WORKDIR /App
+ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
 
 `COPY` Polecenie instruuje platformę Docker, aby skopiował określony folder na komputerze do folderu w kontenerze. W tym przykładzie folder *publikacji* jest kopiowany do folderu o nazwie *aplikacja* w kontenerze.
@@ -238,93 +240,91 @@ ENTRYPOINT ["dotnet", "myapp.dll"]
 
 Następne polecenie,, `ENTRYPOINT`instruuje platformę Docker, aby skonfigurować kontener do uruchamiania jako plik wykonywalny. Po uruchomieniu kontenera `ENTRYPOINT` polecenie zostanie uruchomione. Po zakończeniu tego polecenia kontener zostanie automatycznie zatrzymany.
 
-W terminalu uruchom `docker build -t myimage -f Dockerfile .` polecenie i po zakończeniu wykonywania `docker images`polecenia.
+W terminalu uruchom `docker build -t counter-image -f Dockerfile .` polecenie i po zakończeniu wykonywania `docker images`polecenia.
 
-```console
-> docker build -t myimage -f Dockerfile .
-Sending build context to Docker daemon  1.121MB
+```Docker
+docker build -t counter-image -f Dockerfile .
+Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
- ---> 54240314fe71
-Step 2/4 : COPY app/bin/Release/netcoreapp3.1/publish/ app/
- ---> 1e05ea8b3ef5
-Step 3/4 : WORKDIR /app
- ---> Running in 8c8f710e6292
-Removing intermediate container 8c8f710e6292
- ---> 31575599f7dc
-Step 4/4 : ENTRYPOINT ["dotnet", "myapp.dll"]
- ---> Running in 93851322fb76
-Removing intermediate container 93851322fb76
- ---> e496e8b22d02
-Successfully built e496e8b22d02
-Successfully tagged myimage:latest
+ ---> e6780479db63
+Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
+ ---> d1732740eed2
+Step 3/4 : WORKDIR /App
+ ---> Running in b1701a42f3ff
+Removing intermediate container b1701a42f3ff
+ ---> 919aab5b95e3
+Step 4/4 : ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
+ ---> Running in c12aebd26ced
+Removing intermediate container c12aebd26ced
+ ---> cd11c3df9b19
+Successfully built cd11c3df9b19
+Successfully tagged counter-image:latest
 
-> docker images
+docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              e496e8b22d02        4 seconds ago       346MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 54240314fe71        4 weeks ago         346MB
+counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-Każde polecenie w *pliku dockerfile* wygenerowało warstwę i utworzyła **Identyfikator obrazu**. Końcowy **Identyfikator obrazu** (będzie inny) to **ddcc6646461b** , a następnie utworzysz kontener oparty na tym obrazie.
+Każde polecenie w *pliku dockerfile* wygenerowało warstwę i utworzyła **Identyfikator obrazu**. Końcowy **Identyfikator obrazu** (będzie inny) to **cd11c3df9b19** , a następnie utworzysz kontener oparty na tym obrazie.
 
 ## <a name="create-a-container"></a>Tworzenie kontenera
 
 Teraz, gdy masz obraz zawierający aplikację, możesz utworzyć kontener. Kontener można utworzyć na dwa sposoby. Najpierw utwórz nowy kontener, który został zatrzymany.
 
-```console
-> docker create myimage
-9222af24353f42bab6c13e01a0a64ef2c915cad27bdc46ffa32380581de11e91
+```Docker
+docker create --name core-counter counter-image
+0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
-Powyższe `docker create` polecenie spowoduje utworzenie kontenera opartego na obrazie **obrazu** . Dane wyjściowe tego polecenia pokazują, że **Identyfikator kontenera** (zostanie inaczej) utworzonego kontenera. Aby wyświetlić listę *wszystkich* kontenerów, użyj `docker ps -a` polecenia:
+Powyższe `docker create` polecenie spowoduje utworzenie kontenera na podstawie obrazu **licznika** . Dane wyjściowe tego polecenia pokazują, że **Identyfikator kontenera** (zostanie inaczej) utworzonego kontenera. Aby wyświetlić listę *wszystkich* kontenerów, użyj `docker ps -a` polecenia:
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS        PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   4 seconds ago       Created               gallant_lehmann
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE            COMMAND                   CREATED           STATUS     PORTS    NAMES
+0f281cb3af99    counter-image    "dotnet NetCore.Dock…"    40 seconds ago    Created             core-counter
 ```
 
 ### <a name="manage-the-container"></a>Zarządzanie kontenerem
 
-Do każdego kontenera jest przypisywana nazwa Losowa, której można użyć do odwoływania się do tego wystąpienia kontenera. Na przykład kontener, który został utworzony automatycznie wybiera nazwę **gallant_lehmann** (będzie się różnić), a ta nazwa może być używana do uruchamiania kontenera. Nazwa automatyczna jest zastępowana określonym przez użycie `docker create --name` parametru.
+Kontener został utworzony z określoną nazwą `core-counter`. Ta nazwa jest używana do zarządzania kontenerem. Poniższy przykład używa `docker start` polecenia do uruchomienia kontenera, a następnie używa `docker ps` polecenia do wyświetlania tylko kontenerów, które są uruchomione:
 
-Poniższy przykład używa `docker start` polecenia do uruchomienia kontenera, a następnie używa `docker ps` polecenia do wyświetlania tylko kontenerów, które są uruchomione:
+```Docker
+docker start core-counter
+core-counter
 
-```console
-> docker start gallant_lehmann
-gallant_lehmann
-
-> docker ps
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS         PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   7 minutes ago       Up 8 seconds           gallant_lehmann
+docker ps
+CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS          PORTS    NAMES
+2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    2 minutes ago    Up 11 seconds            core-counter
 ```
 
 Podobnie `docker stop` polecenie spowoduje zatrzymanie kontenera. Poniższy przykład używa `docker stop` polecenia do zatrzymania kontenera, a następnie używa `docker ps` polecenia, aby pokazać, że żaden kontener nie jest uruchomiony:
 
-```console
-> docker stop gallant_lehmann
-gallant_lehmann
+```Docker
+docker stop core-counter
+core-counter
 
-> docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS   NAMES
+docker ps
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
 
 ### <a name="connect-to-a-container"></a>Nawiązywanie połączenia z kontenerem
 
-Po uruchomieniu kontenera można nawiązać z nim połączenie, aby wyświetlić dane wyjściowe. Użyj poleceń `docker start` i `docker attach` , aby uruchomić kontener i wgląd do strumienia wyjściowego. W tym przykładzie naciśnięcie klawiszy <kbd>Ctrl + C</kbd> jest używane do odłączenia od uruchomionego kontenera. To naciśnięcie klawisza może ostatecznie zakończyć proces w kontenerze, co spowoduje zatrzymanie kontenera. `--sig-proxy=false` Parametr zapewnia, że <kbd>naciśnięcie klawiszy CTRL + C</kbd> nie spowoduje zatrzymania procesu w kontenerze.
+Po uruchomieniu kontenera można nawiązać z nim połączenie, aby wyświetlić dane wyjściowe. Użyj poleceń `docker start` i `docker attach` , aby uruchomić kontener i wgląd do strumienia wyjściowego. W tym przykładzie naciśnięcie klawiszy <kbd>Ctrl + C</kbd> jest używane do odłączenia od uruchomionego kontenera. Naciśnięcie klawisza spowoduje zakończenie procesu w kontenerze, o ile nie określono inaczej, co spowodowałoby zatrzymanie kontenera. `--sig-proxy=false` Parametr zapewnia, że <kbd>naciśnięcie klawiszy CTRL + C</kbd> nie spowoduje zatrzymania procesu w kontenerze.
 
 Po odłączeniu od kontenera ponownie Dołącz, aby upewnić się, że nadal działa i zlicza.
 
-```console
-> docker start gallant_lehmann
-gallant_lehmann
+```Docker
+docker start core-counter
+core-counter
 
-> docker attach --sig-proxy=false gallant_lehmann
+docker attach --sig-proxy=false core-counter
 Counter: 7
 Counter: 8
 Counter: 9
 ^C
 
-> docker attach --sig-proxy=false gallant_lehmann
+docker attach --sig-proxy=false core-counter
 Counter: 17
 Counter: 18
 Counter: 19
@@ -335,30 +335,30 @@ Counter: 19
 
 Na potrzeby tego artykułu nie ma potrzeby, aby kontenery zostały jedynie obsunięte. Usuń kontener, który został wcześniej utworzony. Jeśli kontener jest uruchomiony, Zatrzymaj go.
 
-```console
-> docker stop gallant_lehmann
+```Docker
+docker stop core-counter
 ```
 
 Poniższy przykład wyświetla listę wszystkich kontenerów. Następnie używa `docker rm` polecenia do usuwania kontenera, a następnie sprawdza drugi czas dla wszystkich uruchomionych kontenerów.
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS     PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   19 minutes ago      Exited             gallant_lehmann
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS                        PORTS    NAMES
+2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    7 minutes ago    Exited (143) 20 seconds ago            core-counter
 
-> docker rm gallant_lehmann
-gallant_lehmann
+docker rm core-counter
+core-counter
 
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS    NAMES
+docker ps -a
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
 
 ### <a name="single-run"></a>Pojedynczy przebieg
 
 Docker udostępnia `docker run` polecenie do tworzenia i uruchamiania kontenera jako pojedyncze polecenie. To polecenie eliminuje konieczność uruchomienia `docker create` , a następnie `docker start`. Możesz również ustawić to polecenie, aby automatycznie usuwać kontener po zatrzymaniu kontenera. Na przykład użyj `docker run -it --rm` do dwóch rzeczy, najpierw automatycznie Użyj bieżącego terminalu do łączenia się z kontenerem, a następnie usuń go:
 
-```console
-> docker run -it --rm myimage
+```Docker
+docker run -it --rm counter-image
 Counter: 1
 Counter: 2
 Counter: 3
@@ -367,23 +367,32 @@ Counter: 5
 ^C
 ```
 
+Kontener przekazuje również parametry do wykonywania aplikacji .NET Core. Aby nakazać aplikacji .NET Core zliczanie tylko do 3 przebiegów 3.
+
+```Docker
+docker run -it --rm counter-image 3
+Counter: 1
+Counter: 2
+Counter: 3
+```
+
 W `docker run -it`programie <kbd>naciśnięcie polecenia CTRL + C</kbd> spowoduje zatrzymanie procesu, który jest uruchomiony w kontenerze, co z kolei powoduje zatrzymanie kontenera. Ponieważ `--rm` parametr został dostarczony, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
 
 ### <a name="change-the-entrypoint"></a>Zmień punkt wejścia
 
 `docker run` Polecenie umożliwia również modyfikowanie `ENTRYPOINT` polecenia z *pliku dockerfile* i uruchamianie czegoś innego, ale tylko dla tego kontenera. Na przykład użyj poniższego polecenia, aby uruchomić `bash` polecenie `cmd.exe`lub. W razie potrzeby zmodyfikuj polecenie.
 
-#### <a name="windows"></a>Windows
+#### <a name="windows"></a>[Windows](#tab/windows)
 
-W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Naciśnij klawisz Ctrl</kbd>+<kbd>C</kbd> , aby zakończyć proces i zatrzymać kontener.
+W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Ctrl + C</kbd> jest wciśnięty, aby zakończyć proces i zatrzymać kontener.
 
-```console
-> docker run -it --rm --entrypoint "cmd.exe" myimage
+```Docker
+docker run -it --rm --entrypoint "cmd.exe" counter-image
 
 Microsoft Windows [Version 10.0.17763.379]
 (c) 2018 Microsoft Corporation. All rights reserved.
@@ -405,21 +414,27 @@ C:\>dir
 C:\>^C
 ```
 
-#### <a name="linux"></a>Linux
+#### <a name="linux"></a>[Linux](#tab/linux)
 
-W tym przykładzie `ENTRYPOINT` został zmieniony na `bash`. `quit` Polecenie jest uruchamiane, które zakończy proces i Zatrzymaj kontener.
+W tym przykładzie `ENTRYPOINT` został zmieniony na `bash`. `exit` Polecenie jest uruchamiane, które zakończy proces i Zatrzymaj kontener.
 
 ```bash
-root@user:~# docker run -it --rm --entrypoint "bash" myimage
-root@8515e897c893:/# ls app
-myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
-root@8515e897c893:/# exit
+docker run -it --rm --entrypoint "bash" counter-image
+root@b735b9799abf:/App# ls
+NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.exe  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
+root@b735b9799abf:/App# dotnet NetCore.Docker.dll 3
+Counter: 1
+Counter: 2
+Counter: 3
+root@b735b9799abf:/App# exit
 exit
 ```
 
+---
+
 ## <a name="essential-commands"></a>Najważniejsze polecenia
 
-Platforma Docker ma wiele różnych poleceń, które obejmują, co chcesz zrobić z kontenerem i obrazami. Te polecenia platformy Docker mają kluczowe znaczenie dla zarządzania kontenerami:
+Platforma Docker ma wiele różnych poleceń, które tworzą i obsługują kontenery i obrazy oraz zarządzają nimi. Te polecenia platformy Docker mają kluczowe znaczenie dla zarządzania kontenerami:
 
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - [uruchomienie platformy Docker](https://docs.docker.com/engine/reference/commandline/run/)
@@ -435,32 +450,32 @@ W tym samouczku utworzono kontenery i obrazy. Jeśli chcesz, usuń te zasoby. U�
 
 01. Wyświetl listę wszystkich kontenerów
 
-    ```console
-    > docker ps -a
+    ```Docker
+    docker ps -a
     ```
 
-02. Zatrzymaj uruchomione kontenery. `CONTAINER_NAME` Reprezentuje nazwę, która jest automatycznie przypisywana do kontenera.
+02. Zatrzymaj kontenery uruchomione przez ich nazwę.
 
-    ```console
-    > docker stop CONTAINER_NAME
+    ```Docker
+    docker stop counter-image
     ```
 
 03. Usuwanie kontenera
 
-    ```console
-    > docker rm CONTAINER_NAME
+    ```Docker
+    docker rm counter-image
     ```
 
 Następnie usuń wszystkie obrazy, które nie są już potrzebne na komputerze. Usuń obraz utworzony przez *pliku dockerfile* , a następnie Usuń obraz platformy .NET Core, na którym oparto *pliku dockerfile* . Możesz użyć **identyfikatora obrazu** lub ciągu sformatowanego jako **tag** .
 
-```console
-docker rmi myimage:latest
+```Docker
+docker rmi counter-image:latest
 docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
 Użyj polecenia `docker images` , aby wyświetlić listę zainstalowanych obrazów.
 
-> [!NOTE]
+> [!TIP]
 > Pliki obrazów mogą być duże. Zazwyczaj można usunąć kontenery tymczasowe, które zostały utworzone podczas testowania i opracowywania aplikacji. Obrazy podstawowe z zainstalowanym środowiskiem uruchomieniowym zwykle są zachowywane, jeśli planujesz tworzenie innych obrazów na podstawie tego środowiska uruchomieniowego.
 
 ## <a name="next-steps"></a>Następne kroki

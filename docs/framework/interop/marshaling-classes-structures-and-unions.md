@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960006"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200018"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 
@@ -42,6 +42,7 @@ W poniższej tabeli wymieniono opcje organizowania klas, struktur i Unii; opisuj
 |Tablica struktur z liczbami całkowitymi i ciągami przez odwołanie.|Przekazuje tablicę struktur, które zawierają liczby całkowite i ciągi jako parametr out. Wywołana funkcja przydziela pamięć tablicy.|[OutArrayOfStructs — Przykład](#outarrayofstructs-sample)|
 |Unii z typami wartości.|Przekazuje Unię z typami wartości (integer i Double).|[przykład unii](#unions-sample)|
 |Unii z typami mieszanymi.|Przekazuje Unii z typami mieszanymi (liczbami całkowitymi i ciągami).|[przykład unii](#unions-sample)|
+|Struktura z układem specyficznym dla platformy.|Przekazuje typ z natywnymi definicjami pakowania.|[Przykład platformy](#platform-sample)|
 |Wartości null w strukturze.|Przekazuje odwołanie o wartości null (**Nothing** w Visual Basic) zamiast odwołania do typu wartości.|[HandleRef — przykład](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Przykłady struktur
@@ -222,6 +223,85 @@ W kodzie zarządzanym Unii są zdefiniowane jako struktury. `MyUnion` Struktura 
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
 
+## <a name="platform-sample"></a>Przykład platformy
+
+W niektórych scenariuszach `struct` i `union` układy mogą się różnić w zależności od platformy dostosowanej. Rozważmy na przykład typ [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) , który jest zdefiniowany w scenariuszu com:
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+Powyższe `struct` jest zadeklarowane z nagłówkami systemu Windows, które mają wpływ na układ pamięci typu. W przypadku zdefiniowania w środowisku zarządzanym te szczegóły układu są konieczne do prawidłowego współdziałania z kodem natywnym.
+
+Poprawną zarządzaną definicję tego typu w procesie 32-bitowym jest:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+W procesie 64-bitowym, przesunięcie rozmiaru *i* pola są różne. Prawidłowy układ to:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+Niepowodzenie poprawnego rozważenia układu natywnego w scenariuszu międzyoperacyjnym może spowodować losowe awarie i gorszenie nieprawidłowych obliczeń.
+
+Domyślnie zestawy .NET mogą działać w wersji 32-bitowej i 64-bitowej środowiska uruchomieniowego .NET. Aplikacja musi czekać do momentu uruchomienia, aby zdecydować, które z poprzednich definicji mają być używane.
+
+Poniższy fragment kodu przedstawia przykład sposobu wyboru między definicją 32-bitową i 64-bitową w czasie wykonywania.
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
+
 ## <a name="systime-sample"></a>SysTime — przykład
 
 Ten przykład pokazuje, jak przekazać wskaźnik do klasy do niezarządzanej funkcji, która oczekuje wskaźnika do struktury.
@@ -301,7 +381,7 @@ Jak wspomniano wcześniej, język C# zezwala na niebezpieczny kod i Visual Basic
 [!code-csharp[Conceptual.Interop.Marshaling#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
 [!code-vb[Conceptual.Interop.Marshaling#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
 - [Organizowanie ciągów](marshaling-strings.md)

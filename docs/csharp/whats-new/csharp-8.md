@@ -1,49 +1,49 @@
 ---
-title: Co nowego w C# 8.0 - C# Przewodnik
-description: Zapoznaj się z omówieniem nowych funkcji dostępnych w języku C# 8.0.
+title: Co nowego w języku C# 8,0 — przewodnik w języku C#
+description: Zapoznaj się z omówieniem nowych funkcji dostępnych w języku C# 8,0.
 ms.date: 04/07/2020
-ms.openlocfilehash: fcba0526fbcbe46a02cef167822c219f9db2eb63
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738165"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200083"
 ---
-# <a name="whats-new-in-c-80"></a>Co nowego w języku C# 8.0
+# <a name="whats-new-in-c-80"></a>Co nowego w języku C# 8,0
 
-C# 8.0 dodaje następujące funkcje i ulepszenia do języka C#:
+W języku c# 8,0 dodano następujące funkcje i ulepszenia języka C#:
 
-- [Czytaj tylko członków](#readonly-members)
+- [Elementy członkowskie tylko do odczytu](#readonly-members)
 - [Domyślne metody interfejsu](#default-interface-methods)
-- [Ulepszenia dopasowywania wzorców:](#more-patterns-in-more-places)
-  - [Przełączanie wyrażeń](#switch-expressions)
+- [Ulepszenia dopasowania wzorców](#more-patterns-in-more-places):
+  - [Przełącz wyrażenia](#switch-expressions)
   - [Wzorce właściwości](#property-patterns)
-  - [Wzory krotki](#tuple-patterns)
-  - [Wzory pozycyjne](#positional-patterns)
-- [Używanie deklaracji](#using-declarations)
+  - [Wzorce krotek](#tuple-patterns)
+  - [Wzorce pozycyjne](#positional-patterns)
+- [Korzystanie z deklaracji](#using-declarations)
 - [Statyczne funkcje lokalne](#static-local-functions)
-- [Jednorazowe struktury ref](#disposable-ref-structs)
+- [Nierozporządzalne struktury ref](#disposable-ref-structs)
 - [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
 - [Strumienie asynchroniczne](#asynchronous-streams)
 - [Asynchroniczne jednorazowe](#asynchronous-disposable)
 - [Indeksy i zakresy](#indices-and-ranges)
-- [Przypisanie scalania wartości null](#null-coalescing-assignment)
+- [Przypisanie do łączenia o wartości null](#null-coalescing-assignment)
 - [Niezarządzane typy skonstruowane](#unmanaged-constructed-types)
 - [Stackalloc w wyrażeniach zagnieżdżonych](#stackalloc-in-nested-expressions)
-- [Wzmocnienie interpolowanych ciągów dosłownie](#enhancement-of-interpolated-verbatim-strings)
+- [Ulepszenie interpolowanych ciągów Verbatim](#enhancement-of-interpolated-verbatim-strings)
 
-C# 8.0 jest obsługiwany w **.NET Core 3.x** i **.NET Standard 2.1**. Aby uzyskać więcej informacji, zobacz [wersja językowa języka C #](../language-reference/configure-language-version.md).
+Język C# 8,0 jest obsługiwany w **programie .NET Core 3. x** i **.NET Standard 2,1**. Aby uzyskać więcej informacji, zobacz [wersja języka C#](../language-reference/configure-language-version.md).
 
-Poniżej dalsza część artykułu Pokrótce opisano te funkcje. Tam, gdzie dostępne są szczegółowe artykuły, znajdują się łącza do tych samouczków i przeglądów. Za pomocą narzędzia globalnego można `dotnet try` eksplorować te funkcje w swoim środowisku:
+W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są dostępne szczegółowe artykuły, znajdują się linki do samouczków i przeglądów. Te funkcje można eksplorować w środowisku za pomocą narzędzia `dotnet try` globalnego:
 
-1. Zainstaluj narzędzie globalne [dotnet-try.](https://github.com/dotnet/try/blob/master/README.md#setup)
-1. Sklonuj repozytorium [dotnet/try-samples.](https://github.com/dotnet/try-samples)
-1. Ustaw bieżący katalog na podkatalog *csharp8* dla repozytorium *try-samples.*
+1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
+1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
+1. Ustaw bieżący katalog na podkatalog *csharp8* dla repozytorium *try-Samples* .
 1. Uruchom polecenie `dotnet try`.
 
-## <a name="readonly-members"></a>Czytaj tylko członków
+## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
 
-`readonly` Modyfikator można zastosować do elementów członkowskich struktury. Wskazuje, że element członkowski nie modyfikuje stanu. Jest bardziej szczegółowe niż stosowanie `readonly` modyfikatora `struct` do deklaracji.  Należy wziąć pod uwagę następujące modyfikowalne struktury:
+Można zastosować `readonly` modyfikator do elementów członkowskich struktury. Wskazuje, że element członkowski nie modyfikuje stanu. Jest to bardziej szczegółowe niż stosowanie `readonly` modyfikatora do `struct` deklaracji.  Weź pod uwagę następującą niemodyfikowalną strukturę:
 
 ```csharp
 public struct Point
@@ -57,28 +57,28 @@ public struct Point
 }
 ```
 
-Podobnie jak większość struktur, `ToString()` metoda nie modyfikuje stanu. Można wskazać, że `readonly` dodając modyfikator `ToString()`do deklaracji:
+Podobnie jak większość struktur, `ToString()` Metoda nie modyfikuje stanu. Można wskazać, że dodając `readonly` modyfikator do deklaracji: `ToString()`
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-Poprzednia zmiana generuje ostrzeżenie kompilatora, `ToString` `Distance` ponieważ uzyskuje dostęp do `readonly`właściwości, która nie jest oznaczona:
+Poprzednia zmiana generuje ostrzeżenie kompilatora, ponieważ `ToString` uzyskuje dostęp `Distance` do właściwości, która nie `readonly`jest oznaczona:
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Kompilator ostrzega, gdy trzeba utworzyć kopię obronną.  Właściwość `Distance` nie zmienia stanu, więc można naprawić to `readonly` ostrzeżenie, dodając modyfikator do deklaracji:
+Kompilator ostrzega o tym, gdy musi utworzyć kopię obronną.  `Distance` Właściwość nie zmienia stanu, więc możesz naprawić to ostrzeżenie, dodając `readonly` modyfikator do deklaracji:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Należy zauważyć, że `readonly` modyfikator jest konieczne we właściwości tylko do odczytu. Kompilator nie zakłada, że `get` akcesory nie modyfikują stanu; należy zadeklarować `readonly` jawnie. Automatycznie implementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie automatycznie implementowane `readonly`getters jako , więc `readonly` tutaj nie `X` ma `Y` potrzeby, aby dodać modyfikator do i właściwości.
+Należy zauważyć, `readonly` że modyfikator jest konieczny dla właściwości tylko do odczytu. Kompilator nie zakłada, `get` że metody dostępu nie modyfikują stanu; należy zadeklarować `readonly` jawnie. Zaimplementowane właściwości są wyjątkiem; kompilator będzie `readonly`traktować wszystkie zaimplementowane metody pobierające jako, dlatego nie trzeba dodawać `readonly` modyfikatora do właściwości `X` i. `Y`
 
-Kompilator wymusza `readonly` regułę, że członkowie nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że usuniesz `readonly` modyfikator:
+Kompilator wymusza zasadę, której `readonly` elementy członkowskie nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że usuniesz `readonly` modyfikator:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -88,27 +88,27 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Ta funkcja umożliwia określenie intencji projektu, dzięki czemu kompilator może wymusić go i dokonać optymalizacji na podstawie tej intencji.
+Ta funkcja umożliwia określenie zamierzonego projektu, aby kompilator mógł go wymusić i dokonać optymalizacji na podstawie tego zamiaru.
 
-Aby uzyskać więcej [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) informacji, zobacz sekcję członków wystąpienia w artykule [Typy struktury.](../language-reference/builtin-types/struct.md)
+Aby uzyskać więcej informacji, zobacz sekcję [ `readonly` elementy członkowskie wystąpienia](../language-reference/builtin-types/struct.md#readonly-instance-members) w artykule [typy struktury](../language-reference/builtin-types/struct.md) .
 
 ## <a name="default-interface-methods"></a>Domyślne metody interfejsu
 
-Teraz można dodać członków do interfejsów i zapewnić implementację dla tych elementów członkowskich. Ta funkcja języka umożliwia autorom interfejsu API dodawanie metod do interfejsu w nowszych wersjach bez przerywania zgodności źródłowej lub binarnej z istniejącymi implementacjami tego interfejsu. Istniejące implementacje *dziedziczą* domyślną implementację. Ta funkcja umożliwia również C# do współpracy z interfejsami API, które są przeznaczone dla systemu Android lub Swift, które obsługują podobne funkcje. Domyślne metody interfejsu umożliwiają również scenariusze podobne do funkcji języka "cechy".
+Teraz można dodawać członków do interfejsów i dostarczać implementację dla tych członków. Ta funkcja języka umożliwia autorom interfejsu API dodawanie metod do interfejsu w nowszych wersjach, bez podzielenia zgodności źródłowej lub binarnej z istniejącymi implementacjami tego interfejsu. Istniejące implementacje *dziedziczą* implementację domyślną. Ta funkcja umożliwia również współdziałanie języka C# z interfejsami API przeznaczonymi dla systemu Android lub SWIFT, które obsługują podobne funkcje. Domyślne metody interfejsu zapewniają również scenariusze podobne do funkcji języka "cechy".
 
-Domyślne metody interfejsu wpływa na wiele scenariuszy i elementów języka. Nasz pierwszy samouczek obejmuje [aktualizowanie interfejsu z domyślnymi implementacjami](../tutorials/default-interface-methods-versions.md). Inne samouczki i aktualizacje odwołań nadchodzą w czasie do wydania ogólnego.
+Domyślne metody interfejsu mają wpływ na wiele scenariuszy i elementów języka. W pierwszym samouczku omówiono [aktualizowanie interfejsu przy użyciu domyślnych implementacji](../tutorials/default-interface-methods-versions.md). Inne samouczki i aktualizacje referencyjne są dostępne w czasie do wydania ogólnego.
 
-## <a name="more-patterns-in-more-places"></a>Więcej wzorów w większej liczbie miejsc
+## <a name="more-patterns-in-more-places"></a>Więcej wzorców w większej liczbie miejsc
 
-**Dopasowywanie wzorców** daje narzędzia, aby zapewnić funkcje zależne od kształtu w pokrewnych, ale różnych rodzajów danych. C# 7.0 wprowadzono składni dla wzorców typów i [`is`](../language-reference/keywords/is.md) wzorców stałych [`switch`](../language-reference/keywords/switch.md) przy użyciu wyrażenia i instrukcji. Te funkcje stanowiły pierwsze wstępne kroki w kierunku obsługi paradygmatów programowania, w których dane i funkcje żyją osobno. W miarę jak branża przechodzi w kierunku większej liczby mikrousług i innych architektur opartych na chmurze, potrzebne są inne narzędzia językowe.
+**Dopasowanie wzorców** oferuje narzędzia do zapewniania funkcji zależnych od kształtu między powiązanymi, ale różnymi rodzajami danych. W języku C# 7,0 wprowadzono składnię wzorców typów i wzorców stałych przy [`is`](../language-reference/keywords/is.md) użyciu wyrażenia i [`switch`](../language-reference/keywords/switch.md) instrukcji. Te funkcje przedstawiają pierwsze wstępnie wymagane kroki w kierunku obsługi odmian programistycznych, w których dane i funkcje są aktywne. Gdy branża jest przenoszona do większej liczby mikrousług i architektur opartych na chmurze, inne narzędzia języka są zbędne.
 
-C# 8.0 rozszerza to słownictwo, dzięki czemu można użyć więcej wyrażeń wzorca w większej liczbie miejsc w kodzie. Należy wziąć pod uwagę te funkcje, gdy dane i funkcje są oddzielne. Należy wziąć pod uwagę dopasowanie wzorca, gdy algorytmy zależą od faktu innego niż typ środowiska wykonawczego obiektu. Techniki te zapewniają inny sposób wyrażania projektów.
+Język C# 8,0 rozszerza ten słownik, aby można było używać więcej wyrażeń wzorca w większej liczbie miejsc w kodzie. Te funkcje należy wziąć pod uwagę, gdy dane i funkcje są osobne. Rozważ dopasowanie wzorców, gdy algorytmy zależą od faktu innego niż typ środowiska uruchomieniowego obiektu. Techniki te zapewniają inny sposób tworzenia projektów.
 
-Oprócz nowych wzorców w nowych miejscach, C# 8.0 dodaje **wzorce cykliczne**. Wynikiem dowolnego wyrażenia wzorca jest wyrażenie. Wzorzec cykliczny jest po prostu wyrażeniem wzorca zastosowanym do danych wyjściowych innego wyrażenia wzorca.
+Oprócz nowych wzorców w nowych miejscach, C# 8,0 dodaje **cykliczne wzorce**. Wynikiem dowolnego wyrażenia wzorca jest wyrażenie. Wzorzec cykliczny jest po prostu wyrażeniem wzorca zastosowanym do danych wyjściowych innego wyrażenia wzorca.
 
-### <a name="switch-expressions"></a>Przełączanie wyrażeń
+### <a name="switch-expressions"></a>Przełącz wyrażenia
 
-Często instrukcja [`switch`](../language-reference/keywords/switch.md) tworzy wartość w każdym `case` z jego bloków. **Wyrażenia przełączania** umożliwiają użycie bardziej zwięzłej składni wyrażeń. Jest mniej powtarzających `case` się `break` i słów kluczowych, a mniej nawiasów klamrowych.  Na przykład należy wziąć pod uwagę następujące wyliczenia, które zawiera listę kolorów tęczy:
+Często [`switch`](../language-reference/keywords/switch.md) instrukcja generuje wartość w każdym z jego `case` bloków. **Wyrażenia Switch** umożliwiają użycie bardziej zwięzłej składni wyrażeń. Jest mniej powtarzające `case` się `break` i słowa kluczowe i mniej nawiasów klamrowych.  Na przykład rozważmy następujące Wyliczenie, które zawiera listę kolorów tęczu:
 
 ```csharp
 public enum Rainbow
@@ -123,7 +123,7 @@ public enum Rainbow
 }
 ```
 
-Jeśli aplikacja zdefiniowała `RGBColor` typ, który `R`jest `G` `B` skonstruowany z programu `Rainbow` , i składników, można przekonwertować wartość na jego wartości RGB przy użyciu następującej metody zawierającej wyrażenie przełącznika:
+Jeśli aplikacja definiuje `RGBColor` typ, który jest zbudowany ze składników `R`, `G` i `B` , można skonwertować `Rainbow` wartość na wartości RGB przy użyciu następującej metody zawierającej wyrażenie Switch:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -140,14 +140,14 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
     };
 ```
 
-Istnieje kilka ulepszeń składni w tym miejscu:
+Poniżej przedstawiono kilka ulepszeń składni:
 
-- Zmienna jest `switch` przed słowem kluczowym. Różne kolejność sprawia, że wizualnie łatwo odróżnić wyrażenie przełącznika od instrukcji switch.
-- Elementy `case` `:` i elementy `=>`są zastępowane . Jest bardziej zwięzły i intuicyjny.
-- Obudowa `default` jest `_` zastępowana odrzutem.
-- Obiekty są wyrażeniami, a nie instrukcjami.
+- Zmienna jest wcześniejsza niż `switch` słowo kluczowe. Inna kolejność ułatwia odróżnienie wyrażenia Switch od instrukcji switch.
+- Elementy `case` i `:` są zamieniane na `=>`. Jest to bardziej zwięzłe i intuicyjne.
+- `default` Przypadek jest zastępowany `_` odrzuceniem.
+- Treść to wyrażenia, a nie instrukcje.
 
-Kontrast, że z równoważnym `switch` kodem przy użyciu instrukcji klasycznej:
+Kontrast, który ma odpowiedni kod przy użyciu instrukcji `switch` klasycznej:
 
 ```csharp
 public static RGBColor FromRainbowClassic(Rainbow colorBand)
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Wzorce właściwości
 
-**Wzorzec właściwości** umożliwia dopasowanie właściwości badanego obiektu. Rozważmy witrynę eCommerce, która musi obliczyć podatek na podstawie adresu kupującego. To obliczenie nie jest podstawową `Address` odpowiedzialnością klasy. Będzie się zmieniać w czasie, prawdopodobnie częściej niż zmiany formatu adresu. Kwota podatku zależy od `State` właściwości adresu. Następująca metoda używa wzorca właściwości do obliczenia podatku na podstawie adresu i ceny:
+**Wzorzec właściwości** pozwala dopasować się do właściwości badanego obiektu. Rozważmy witrynę handlu elektronicznego, która musi obliczać podatek od sprzedaży na podstawie adresu kupującego. To obliczenie nie jest zasadniczą odpowiedzialnością `Address` klasy. Zostanie ona zmieniona z upływem czasu, co prawdopodobnie częściej niż zmienia format adresu. Podatek od sprzedaży zależy od `State` właściwości adresu. Poniższa metoda używa wzorca właściwości do obliczania podatku od adresu i ceny:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -190,11 +190,11 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
     };
 ```
 
-Dopasowywanie wzorców tworzy zwięzłą składnię do wyrażania tego algorytmu.
+Dopasowanie wzorca tworzy zwięzłą składnię do wyrażania tego algorytmu.
 
-### <a name="tuple-patterns"></a>Wzory krotki
+### <a name="tuple-patterns"></a>Wzorce krotek
 
-Niektóre algorytmy zależą od wielu danych wejściowych. **Wzory krotki** umożliwiają przełączanie na podstawie wielu wartości wyrażonych jako [krotka.](../tuples.md)  Poniższy kod pokazuje wyrażenie przełączania dla *gry rock, papier, nożyczki:*
+Niektóre algorytmy zależą od wielu danych wejściowych. **Wzorce krotek** umożliwiają przełączanie na podstawie wielu wartości wyrażonych jako [krotka](../tuples.md).  Poniższy kod przedstawia wyrażenie Switch dla *skały, papieru, nożyczków*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -210,11 +210,11 @@ public static string RockPaperScissors(string first, string second)
     };
 ```
 
-Wiadomości wskazują zwycięzcę. Przypadek odrzucenia reprezentuje trzy kombinacje dla powiązań lub innych danych wejściowych tekstu.
+Komunikaty wskazują zwycięzcę. Przypadek odrzucania reprezentuje trzy kombinacje powiązań lub inne dane wejściowe tekstu.
 
-### <a name="positional-patterns"></a>Wzory pozycyjne
+### <a name="positional-patterns"></a>Wzorce pozycyjne
 
-Niektóre typy `Deconstruct` zawierają metodę, która dekonstruuje swoje właściwości na zmienne dyskretne. Gdy `Deconstruct` metoda jest dostępna, można użyć **wzorców pozycyjnych** do sprawdzania właściwości obiektu i używać tych właściwości dla wzorca.  Należy wziąć `Point` pod uwagę `Deconstruct` następującą klasę, która `X` zawiera `Y`metodę tworzenia zmiennych dyskretnych dla i:
+Niektóre typy obejmują `Deconstruct` metodę, która dekonstrukcjauje swoje właściwości do zmiennych dyskretnych. Gdy `Deconstruct` Metoda jest dostępna, można użyć **wzorców pozycyjnych** do inspekcji właściwości obiektu i używania tych właściwości dla wzorca.  Rozważmy następujące `Point` klasy, które obejmują `Deconstruct` metodę tworzenia zmiennych dyskretnych dla `X` i `Y`:
 
 ```csharp
 public class Point
@@ -229,7 +229,7 @@ public class Point
 }
 ```
 
-Ponadto należy wziąć pod uwagę następujące wyliczenia, który reprezentuje różne pozycje kwadrantu:
+Dodatkowo Rozważmy następujące Wyliczenie, które reprezentuje różne położenia ćwiartki:
 
 ```csharp
 public enum Quadrant
@@ -244,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-Poniższa metoda używa **wzorca pozycyjnego** do wyodrębnienia wartości `x` i `y`. Następnie używa `when` klauzuli do określenia `Quadrant` punktu:
+Poniższa metoda używa **wzorca pozycyjnego** do wyodrębnienia wartości `x` i. `y` Następnie używa `when` klauzuli do określenia `Quadrant` punktu:
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -259,13 +259,13 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-Wzorzec odrzucenia w poprzednim przełączniku pasuje, gdy albo `x` jest 0, `y` ale nie oba. Wyrażenie switch musi albo utworzyć wartość lub zgłosić wyjątek. Jeśli żaden z przypadków nie jest zgodny, wyrażenie switch zgłasza wyjątek. Kompilator generuje ostrzeżenie dla Ciebie, jeśli nie obejmuje wszystkich możliwych przypadków w wyrażeniu przełącznika.
+Odrzuć wzorzec w poprzednim przełączniku dopasowuje się `x` , `y` gdy lub ma wartość 0, ale nie oba. Wyrażenie Switch musi utworzyć wartość lub zgłosić wyjątek. Jeśli żaden z przypadków nie jest zgodny, wyrażenie Switch zgłasza wyjątek. Kompilator generuje ostrzeżenie, jeśli nie obejmują wszystkich możliwych przypadków w wyrażeniu Switch.
 
-Można zbadać techniki dopasowywania wzorców w tym [zaawansowanym samouczku na temat dopasowywania wzorców](../tutorials/pattern-matching.md).
+Techniki dopasowania wzorców można eksplorować w tym [zaawansowanym samouczku dotyczącym dopasowania wzorców](../tutorials/pattern-matching.md).
 
-## <a name="using-declarations"></a>Używanie deklaracji
+## <a name="using-declarations"></a>Korzystanie z deklaracji
 
-**Using declaration** jest deklaracją zmiennej `using` poprzedzoną słowem kluczowym. Informuje kompilator, że zmienna jest zadeklarowana powinny być usuwane na końcu otaczającego zakresu. Rozważmy na przykład następujący kod, który zapisuje plik tekstowy:
+**Deklaracja using** jest deklaracją zmiennej poprzedzoną `using` słowem kluczowym. Informuje kompilator, że zadeklarowana zmienna powinna zostać usunięta na końcu otaczającego zakresu. Rozważmy na przykład następujący kod, który zapisuje plik tekstowy:
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -290,7 +290,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-W poprzednim przykładzie plik jest usuwany po osiągnięciu nawiasu klamrowego dla metody. To koniec zakresu, w którym `file` jest zadeklarowany. Powyższy kod jest odpowiednikiem następującego kodu, który używa klasycznego [using instrukcji:](../language-reference/keywords/using-statement.md)
+W poprzednim przykładzie plik jest usuwany po osiągnięciu zamykającego nawiasu klamrowego dla metody. To koniec zakresu, w którym `file` jest zadeklarowany. Poprzedni kod jest odpowiednikiem poniższego kodu, który używa klasycznej [instrukcji using](../language-reference/keywords/using-statement.md):
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -316,15 +316,15 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-W poprzednim przykładzie plik jest usuwany po osiągnięciu nawiasu `using` klamrowego zamknięcia skojarzonego z instrukcją.
+W poprzednim przykładzie plik jest usuwany po osiągnięciu zamykającego nawiasu klamrowego skojarzonego `using` z instrukcją.
 
-W obu przypadkach kompilator generuje `Dispose()`wywołanie . Kompilator generuje błąd, jeśli wyrażenie `using` w instrukcji nie jest jednorazowe.
+W obu przypadkach kompilator generuje wywołanie `Dispose()`. Kompilator generuje błąd, jeśli wyrażenie w `using` instrukcji nie jest jednorazowe.
 
 ## <a name="static-local-functions"></a>Statyczne funkcje lokalne
 
-Teraz można dodać `static` modyfikator do funkcji lokalnych, aby upewnić się, że funkcja lokalna nie przechwytuje (odwołuje się) żadnych zmiennych z zakresu otaczającego. W ten `CS8421`sposób generuje , "Statyczna funkcja lokalna \<nie może zawierać odwołania do zmiennej>."
+Teraz można dodać `static` modyfikator do funkcji lokalnych, aby upewnić się, że funkcja lokalna nie przechwytuje (nie dotyczy) żadnych zmiennych z zakresu otaczającego. Spowoduje to wygenerowanie `CS8421`, "statyczna funkcja lokalna nie może zawierać odwołania \<do zmiennej>".
 
-Należy wziąć pod uwagę następujący kod. Funkcja `LocalFunction` lokalna uzyskuje `y`dostęp do zmiennej, zadeklarowanej `M`w otaczającym zakresie (metoda). W związku `LocalFunction` z tym nie `static` można zadeklarować za pomocą modyfikatora:
+Rozważmy następujący kod. Funkcja `LocalFunction` lokalna uzyskuje dostęp do zmiennej `y`zadeklarowanej w zakresie otaczającym (Metoda `M`). W związku `LocalFunction` z tym nie można zadeklarować z `static` modyfikatorem:
 
 ```csharp
 int M()
@@ -337,7 +337,7 @@ int M()
 }
 ```
 
-Poniższy kod zawiera statyczną funkcję lokalną. Może być statyczny, ponieważ nie ma dostępu do żadnych zmiennych w otaczającym zakresie:
+Poniższy kod zawiera statyczną funkcję lokalną. Może być statyczny, ponieważ nie uzyskuje dostępu do żadnych zmiennych w otaczającym zakresie:
 
 ```csharp
 int M()
@@ -350,29 +350,29 @@ int M()
 }
 ```
 
-## <a name="disposable-ref-structs"></a>Jednorazowe struktury ref
+## <a name="disposable-ref-structs"></a>Nierozporządzalne struktury ref
 
-Zadeklarowany `struct` z `ref` modyfikatorem może nie implementować żadnych <xref:System.IDisposable>interfejsów i dlatego nie można zaimplementować . W związku z `ref struct` tym, aby umożliwić a do `void Dispose()` usunięcia, musi mieć metodę dostępną. Ta funkcja dotyczy `readonly ref struct` również deklaracji.
+`struct` Deklaracja z `ref` modyfikatorem nie może implementować żadnych interfejsów i dlatego nie może <xref:System.IDisposable>implementować. W związku z tym, `ref struct` aby można było usunąć element, musi on mieć `void Dispose()` dostępną metodę. Ta funkcja dotyczy również `readonly ref struct` deklaracji.
 
 ## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
-Wewnątrz kontekstu adnotacji możliwej do unieważnienia każda zmienna typu odwołania jest uważana za **niesytrzalną typ odwołania.** Jeśli chcesz wskazać, że zmienna może mieć wartość null, `?` należy dołączyć nazwę typu z nazwą, aby zadeklarować zmienną jako **typ odwołania z dopuszczalną wartością null.**
+Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za **typ referencyjny, który nie ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z, `?` aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
 
-W przypadku typów odwołań nieobjawialnych kompilator używa analizy przepływu, aby upewnić się, że zmienne lokalne są inicjowane do wartości innej niż null po zadeklarowaniu. Pola muszą być inicjowane podczas budowy. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiona przez wywołanie dowolnego z dostępnych konstruktorów lub przez inicjatora. Ponadto nie można przypisać typów odwołań nieskłocyjnych.
+W przypadku typów referencyjnych, które nie mają wartości null, kompilator używa analizy przepływu, aby upewnić się, że zmienne lokalne są inicjowane do wartości innej niż null, gdy zostanie zadeklarowana. Pola muszą być inicjowane podczas konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiana przez wywołanie do któregokolwiek z dostępnych konstruktorów lub inicjatora. Ponadto nie można przypisać wartości, która może mieć wartość null.
 
-Typy odwołań nullable nie są sprawdzane, aby upewnić się, że nie są przypisane lub zainicjowane do wartości null. Jednak kompilator używa analizy przepływu, aby upewnić się, że każda zmienna typu odwołania nullable jest sprawdzana względem null przed uzyskaniam dostępu lub przypisaniem do nieskrójnego typu odwołania.
+Typy odwołań dopuszczających wartość null nie są sprawdzane w celu zapewnienia, że nie są przypisane ani zainicjowane do wartości null. Jednak kompilator używa analizy przepływu, aby upewnić się, że jakakolwiek zmienna typu referencyjnego null jest sprawdzana pod kątem wartości null przed uzyskaniem dostępu lub przypisaniem do niezerowego typu odwołania.
 
-Więcej informacji na temat tej funkcji można znaleźć w przeglądzie [typów odwołań podlegającym wartości null.](../nullable-references.md) Spróbuj sam w nowej aplikacji w tym [nullable typy odwołań samouczek](../tutorials/nullable-reference-types.md). Dowiedz się więcej o krokach migracji istniejącej bazy kodu w celu wykorzystania typów odwołań do nullable w [migracji aplikacji do korzystania z samouczka typów odwołań nullable](../tutorials/upgrade-to-nullable-references.md).
+Więcej informacji na temat funkcji można znaleźć w omówieniu [typów referencyjnych dopuszczających wartość null](../nullable-references.md). Wypróbuj go samodzielnie w nowej aplikacji w tym [samouczku typów odwołań dopuszczających wartość null](../tutorials/nullable-reference-types.md). Zapoznaj się z instrukcjami dotyczącymi migracji istniejącej bazy kodu w celu użycia w [samouczku Migrowanie aplikacji do korzystania](../tutorials/upgrade-to-nullable-references.md)z typów odwołań dopuszczających wartość null.
 
 ## <a name="asynchronous-streams"></a>Strumienie asynchroniczne
 
-Począwszy od języka C# 8.0, można tworzyć i zużywać strumienie asynchronicznie. Metoda zwraca strumień asynchroniczne ma trzy właściwości:
+Począwszy od języka C# 8,0, można tworzyć strumienie i korzystać z nich asynchronicznie. Metoda zwracająca strumień asynchroniczny ma trzy właściwości:
 
-1. Jest zadeklarowany za `async` pomocą modyfikatora.
+1. Jest on zadeklarowany z `async` modyfikatorem.
 1. Zwraca wartość <xref:System.Collections.Generic.IAsyncEnumerable%601>.
-1. Metoda zawiera `yield return` instrukcje do zwracania kolejnych elementów w strumieniu asynchroniczne.
+1. Metoda zawiera `yield return` instrukcje do zwrócenia kolejnych elementów w strumieniu asynchronicznym.
 
-Korzystanie ze strumienia asynchroniiowego `await` wymaga dodania słowa kluczowego przed `foreach` słowem kluczowym podczas wyliczania elementów strumienia. Dodawanie `await` słowa kluczowego wymaga metody, która wylicza strumień asynchroniczne, które mają być zadeklarowane za pomocą `async` modyfikatora i zwrócić typ dozwolony `async` dla metody. Zazwyczaj oznacza to powrót <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>lub . Może to być <xref:System.Threading.Tasks.ValueTask> <xref:System.Threading.Tasks.ValueTask%601>również lub . Metoda może zarówno zużywać, jak i wytwarzać strumień asynchroniczne, co oznacza, że zwróci . <xref:System.Collections.Generic.IAsyncEnumerable%601> Poniższy kod generuje sekwencję od 0 do 19, oczekiwanie 100 ms między generowania każdej liczby:
+Użycie strumienia asynchronicznego wymaga dodania `await` słowa kluczowego przed `foreach` słowem kluczowym podczas wyliczania elementów strumienia. Dodanie `await` słowa kluczowego wymaga metody, która wylicza strumień asynchroniczny, który ma zostać zadeklarowany z `async` modyfikatorem i zwraca typ dozwolony dla `async` metody. Zwykle oznacza to zwrócenie <xref:System.Threading.Tasks.Task> lub. <xref:System.Threading.Tasks.Task%601> Może być również <xref:System.Threading.Tasks.ValueTask> lub <xref:System.Threading.Tasks.ValueTask%601>. Metoda może jednocześnie zużywać i generować strumień asynchroniczny, co oznacza, że zwróci <xref:System.Collections.Generic.IAsyncEnumerable%601>. Poniższy kod generuje sekwencję z przedziału od 0 do 19, oczekującą 100 ms między generowaniem każdej liczby:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -385,7 +385,7 @@ public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSeq
 }
 ```
 
-Sekwencja należy wyliczyć `await foreach` za pomocą instrukcji:
+Sekwencję można wyliczyć przy użyciu `await foreach` instrukcji:
 
 ```csharp
 await foreach (var number in GenerateSequence())
@@ -394,28 +394,28 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-Możesz spróbować strumieni asynchronicznych samodzielnie w naszym tutorialu na [temat tworzenia i spożywania strumieni asynchnc](../tutorials/generate-consume-asynchronous-stream.md). Domyślnie elementy strumienia są przetwarzane w kontekście przechwycone. Jeśli chcesz wyłączyć przechwytywanie kontekstu, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> użyj metody rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [korzystania z wzorca asynchronicznego opartego](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)na zadaniach .
+Możesz samodzielnie wypróbować strumienie asynchroniczne w naszym samouczku dotyczącym [tworzenia i używania strumieni asynchronicznych](../tutorials/generate-consume-asynchronous-stream.md). Domyślnie elementy strumienia są przetwarzane w przechwyconym kontekście. Jeśli chcesz wyłączyć przechwytywanie kontekstu, użyj metody <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [konsumowania wzorca asynchronicznego opartego na zadaniach](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="asynchronous-disposable"></a>Asynchroniczne jednorazowe
 
-Począwszy od języka C# 8.0, język obsługuje asynchroniczne jednorazowe typy, które implementują <xref:System.IAsyncDisposable?displayProperty=nameWithType> interfejs. Operand `using` wyrażenia można zaimplementować albo <xref:System.IDisposable> lub <xref:System.IAsyncDisposable>. W przypadku `IAsyncDisposable`kompilator generuje kod `await` do <xref:System.Threading.Tasks.Task> zwracanego z <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [ `using` instrukcję](../language-reference/keywords/using-statement.md).
+Począwszy od języka C# 8,0, język obsługuje asynchroniczne typy jednorazowe, które <xref:System.IAsyncDisposable?displayProperty=nameWithType> implementują interfejs. Operand `using` wyrażenia może implementować jedną <xref:System.IDisposable> lub. <xref:System.IAsyncDisposable> W przypadku `IAsyncDisposable`, kompilator generuje kod do `await` <xref:System.Threading.Tasks.Task> zwróconych z. <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> Aby uzyskać więcej informacji, zobacz [ `using` instrukcję](../language-reference/keywords/using-statement.md).
 
 ## <a name="indices-and-ranges"></a>Indeksy i zakresy
 
-Indeksy i zakresy zapewniają zwięzłą składnię dostępu do pojedynczych elementów lub zakresów w sekwencji.
+Indeksy i zakresy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w sekwencji.
 
-Ta obsługa języka opiera się na dwóch nowych typach i dwóch nowych operatorach:
+Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 
 - <xref:System.Index?displayProperty=nameWithType>reprezentuje indeks w sekwencji.
-- Indeks z operatora `^`końcowego , który określa, że indeks jest względem końca sekwencji.
-- <xref:System.Range?displayProperty=nameWithType>reprezentuje podzakres sekwencji.
-- Operator `..`zakresu , który określa początek i koniec zakresu jako jego operandy.
+- Indeks od operatora `^`końcowego, który określa, że indeks jest względem końca sekwencji.
+- <xref:System.Range?displayProperty=nameWithType>reprezentuje Podzakres sekwencji.
+- Operator `..`zakresu, który określa początek i koniec zakresu jako jego operandy.
 
-Zacznijmy od reguł dla indeksów. Należy wziąć `sequence`pod uwagę tablicę . Indeks `0` jest taki `sequence[0]`sam jak . Indeks `^0` jest taki `sequence[sequence.Length]`sam jak . Należy `sequence[^0]` zauważyć, że zgłasza `sequence[sequence.Length]` wyjątek, podobnie jak robi. Dla dowolnej `n`liczby `^n` indeks jest `sequence.Length - n`taki sam jak .
+Zacznijmy od reguł dotyczących indeksów. Weź pod uwagę `sequence`tablicę. `0` Indeks jest taki sam jak `sequence[0]`. `^0` Indeks jest taki sam jak `sequence[sequence.Length]`. Należy pamiętać `sequence[^0]` , że generuje wyjątek, podobnie jak `sequence[sequence.Length]` . Dla dowolnej liczby `n`indeks `^n` jest taki sam jak `sequence.Length - n`.
 
-Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włącznie, ale koniec zakresu jest wyłączny, co oznacza, że *początek* jest uwzględniony w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, `[0..sequence.Length]` podobnie jak reprezentuje cały zakres.
+Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *końcowy* nie należy do zakresu. Zakres `[0..^0]` reprezentuje cały zakres, tak jak `[0..sequence.Length]` reprezentuje cały zakres.
 
-Oto kilka przykładów. Należy wziąć pod uwagę następującą tablicę, z adnotacjami z indeksem od początku i od końca:
+Oto kilka przykładów. Rozważmy następującą tablicę zawierającą adnotację z jej indeksem od początku i od końca:
 
 ```csharp
 var words = new string[]
@@ -433,26 +433,26 @@ var words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-Ostatnie słowo można pobrać za `^1` pomocą indeksu:
+Możesz pobrać ostatni wyraz z `^1` indeksem:
 
 ```csharp
 Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Poniższy kod tworzy podzakład z napisami "quick", "brown" i "fox". Obejmuje `words[1]` ona `words[3]`poprzez . Element `words[4]` nie jest w zakresie.
+Poniższy kod tworzy Podzakres słowami "Quick", "brązowy" i "Fox". Zawiera `words[1]` `words[3]`. Element `words[4]` nie należy do zakresu.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-Poniższy kod tworzy podzakład z "leniwy" i "pies". Obejmuje `words[^2]` ona `words[^1]`i . Indeks `words[^0]` końcowy nie jest uwzględniony:
+Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Obejmuje `words[^2]` i `words[^1]`. Indeks `words[^0]` końcowy nie jest uwzględniony:
 
 ```csharp
 var lazyDog = words[^2..^0];
 ```
 
-Poniższe przykłady tworzą zakresy, które są otwarte dla początku, końca lub obu:
+W poniższych przykładach zostały utworzone zakresy, które są otwarte dla początku, końca lub obu:
 
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
@@ -460,25 +460,25 @@ var firstPhrase = words[..4]; // contains "The" through "fox"
 var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
-Zakresy można również deklarować jako zmienne:
+Można również zadeklarować zakresy jako zmienne:
 
 ```csharp
 Range phrase = 1..4;
 ```
 
-Zakres może być następnie `[` używany `]` wewnątrz znaków i:
+Zakres może być następnie używany wewnątrz znaków `[` i: `]`
 
 ```csharp
 var text = words[phrase];
 ```
 
-Nie tylko macierze obsługują indeksy i zakresy. Można również użyć indeksów i zakresów <xref:System.Span%601>z <xref:System.ReadOnlySpan%601> [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), lub . Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Nie tylko tablice obsługują indeksy i zakresy. Można również użyć indeksów i zakresów z [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>. Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
-Możesz dowiedzieć się więcej o indeksach i zakresach w samouczku na temat [indeksów i zakresów](../tutorials/ranges-indexes.md).
+Więcej informacji o indeksach i zakresach można dowiedzieć się w samouczku dotyczącym [indeksów i zakresów](../tutorials/ranges-indexes.md).
 
-## <a name="null-coalescing-assignment"></a>Przypisanie scalania wartości null
+## <a name="null-coalescing-assignment"></a>Przypisanie do łączenia o wartości null
 
-C# 8.0 wprowadza operatora `??=`przypisania scalania wartości null . `??=` Za pomocą operatora można przypisać wartość jego prawej opery do jego lewej operndu tylko wtedy, `null`gdy leworęczny operand ocenia .
+W języku C# 8,0 wprowadzono operator `??=`przypisania łączenia wartości null. `??=` Operatora można używać do przypisywania wartości operandu po prawej stronie do jego operandu po lewej stronie tylko wtedy, gdy argument operacji po lewej stronie jest obliczany `null`.
 
 ```csharp
 List<int> numbers = null;
@@ -492,13 +492,13 @@ Console.WriteLine(string.Join(" ", numbers));  // output: 17 17
 Console.WriteLine(i);  // output: 17
 ```
 
-Aby uzyskać więcej informacji, zobacz [?? i ?? = artykuł operatorów.](../language-reference/operators/null-coalescing-operator.md)
+Aby uzyskać więcej informacji, zobacz [? =](../language-reference/operators/null-coalescing-operator.md) — artykuł.
 
 ## <a name="unmanaged-constructed-types"></a>Niezarządzane typy skonstruowane
 
-W języku C# 7.3 i wcześniejszych typu konstruowanego (typu zawierającego co najmniej jeden argument typu) nie może być [typem niezarządzanym.](../language-reference/builtin-types/unmanaged-types.md) Począwszy od języka C# 8.0, skonstruowany typ wartości jest niezarządzane, jeśli zawiera pola typu niezarządzanego tylko.
+W języku C# 7,3 i starszych, typ skonstruowany (typ, który zawiera co najmniej jeden argument typu) nie może być [typem niezarządzanym](../language-reference/builtin-types/unmanaged-types.md). Począwszy od języka C# 8,0, skonstruowany typ wartości jest niezarządzany, jeśli zawiera pola tylko typów niezarządzanych.
 
-Na przykład, biorąc pod uwagę `Coords<T>` następującą definicję typu ogólnego:
+Na przykład, uwzględniając następującą definicję typu ogólnego `Coords<T>` :
 
 ```csharp
 public struct Coords<T>
@@ -508,7 +508,7 @@ public struct Coords<T>
 }
 ```
 
-`Coords<int>` typ jest typem niezarządzanym w języku C# 8.0 i nowszym. Podobnie jak w przypadku dowolnego typu niezarządzanego, można utworzyć wskaźnik do zmiennej tego typu lub [przydzielić blok pamięci na stosie](../language-reference/operators/stackalloc.md) dla wystąpień tego typu:
+`Coords<int>` typ jest typem niezarządzanym w języku C# 8,0 i nowszych. Podobnie jak w przypadku dowolnego typu niezarządzanego, można utworzyć wskaźnik do zmiennej tego typu lub [przydzielić blok pamięci na stosie](../language-reference/operators/stackalloc.md) dla wystąpień tego typu:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -519,18 +519,18 @@ Span<Coords<int>> coordinates = stackalloc[]
 };
 ```
 
-Aby uzyskać więcej informacji, zobacz [Typy niezarządzane](../language-reference/builtin-types/unmanaged-types.md).
+Aby uzyskać więcej informacji, zobacz [typy niezarządzane](../language-reference/builtin-types/unmanaged-types.md).
 
 ## <a name="stackalloc-in-nested-expressions"></a>Stackalloc w wyrażeniach zagnieżdżonych
 
-Począwszy od języka C# 8.0, jeśli wynik wyrażenia <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> [stackalloc](../language-reference/operators/stackalloc.md) jest `stackalloc` typu lub, można użyć wyrażenia w innych wyrażeniach:
+Począwszy od języka C# 8,0, jeśli wynik wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) jest typu <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> , można użyć `stackalloc` wyrażenia w innych wyrażeniach:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 
-## <a name="enhancement-of-interpolated-verbatim-strings"></a>Wzmocnienie interpolowanych ciągów dosłownie
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ulepszenie interpolowanych ciągów Verbatim
 
-Kolejność `$` i `@` tokeny w [interpolowanych](../language-reference/tokens/interpolated.md) ciągów dosłownie może `$@"..."` być `@$"..."` dowolny: oba i są prawidłowe interpolowane dosłownie ciągi. We wcześniejszych wersjach `$` języka C# `@` token musi pojawić się przed tokenem.
+Kolejność tokenów `$` i `@` w [interpolowanych](../language-reference/tokens/interpolated.md) ciągach Verbatim może być dowolna: `$@"..."` oba `@$"..."` i są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych wersjach języka C# `$` token musi znajdować się przed `@` tokenem.

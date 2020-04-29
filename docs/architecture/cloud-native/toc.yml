@@ -44,7 +44,7 @@
         - name: Infrastruktura komunikacji z siatką usług
           href: service-mesh-communication-infrastructure.md
     - name: Rozproszone dane
-      href: database-per-microservice.md
+      href: distributed-data.md
       items:
         - name: Dane relacyjne a NoSQL
           href: relational-vs-nosql-data.md

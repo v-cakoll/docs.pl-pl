@@ -1,32 +1,32 @@
 ---
 title: Ustawienia konfiguracji globalizacji
-description: Dowiedz się więcej o ustawieniach w czasie wykonywania, które konfigurują aspekty globalizacji aplikacji .NET Core, na przykład o tym, jak analizuje daty japońskie.
+description: Dowiedz się więcej o ustawieniach czasu wykonywania, które konfigurują aspekty globalizacji aplikacji .NET Core, na przykład analizując daty w języku japońskim.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7668c345181d7c08cfca9c5cb76b8addd76223ec
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733453"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506808"
 ---
-# <a name="run-time-configuration-options-for-globalization"></a>Opcje konfiguracji w czasie wykonywania dla globalizacji
+# <a name="run-time-configuration-options-for-globalization"></a>Opcje konfiguracji czasu wykonywania dla globalizacji
 
 ## <a name="invariant-mode"></a>Tryb niezmienny
 
-- Określa, czy aplikacja .NET Core działa w trybie niewariantnym globalizacji bez dostępu do danych i zachowania specyficznych dla kultury, czy też ma dostęp do danych kulturowych.
-- Domyślnie: uruchom aplikację z dostępem do danych kulturowych (`false`).
-- Aby uzyskać więcej informacji, zobacz [tryb niezmienny globalizacji .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+- Określa, czy aplikacja .NET Core działa w trybie globalizacji-niezmiennym bez dostępu do danych i zachowań specyficznych dla kultury.
+- Wartość domyślna: Uruchom aplikację z dostępem do danych kultury (`false`).
+- Aby uzyskać więcej informacji, zobacz [tryb niezmienny globalizacji platformy .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig.json** | `System.Globalization.Invariant` | `false`- dostęp do danych dotyczących kultury<br/>`true`- uruchomić w trybie niezmiennym |
-| **MSBuild, właściwość** | `InvariantGlobalization` | `false`- dostęp do danych dotyczących kultury<br/>`true`- uruchomić w trybie niezmiennym |
-| **Zmienna środowiskowa** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0`- dostęp do danych dotyczących kultury<br/>`1`- uruchomić w trybie niezmiennym |
+| **runtimeconfig. JSON** | `System.Globalization.Invariant` | `false`— dostęp do danych kultury<br/>`true`-Uruchom w trybie niezmiennym |
+| **Właściwość programu MSBuild** | `InvariantGlobalization` | `false`— dostęp do danych kultury<br/>`true`-Uruchom w trybie niezmiennym |
+| **Zmienna środowiskowa** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0`— dostęp do danych kultury<br/>`1`-Uruchom w trybie niezmiennym |
 
 ### <a name="examples"></a>Przykłady
 
-*plik runtimeconfig.json:*
+plik *runtimeconfig. JSON* :
 
 ```json
 {
@@ -50,35 +50,35 @@ Plik projektu:
 </Project>
 ```
 
-## <a name="era-year-ranges"></a>Zakresy roku era
+## <a name="era-year-ranges"></a>Zakresy lat era
 
-- Określa, czy kontrole zakresu dla kalendarzy obsługujących wiele epok są złagodzone, <xref:System.ArgumentOutOfRangeException>czy daty przepełniające zakres dat ery wyrzucające .
-- Domyślnie: Kontrole zakresu`false`są złagodzone ( ).
-- Aby uzyskać więcej informacji, zobacz [Kalendarze, eby i zakresy dat: kontrole zakresu złagodzonego](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks).
+- Określa, <xref:System.ArgumentOutOfRangeException>czy zakres sprawdza, czy kalendarze obsługujące wiele operacji wymazywania są swobodne, czy też wskazuje, czy daty, które przepełnią zakres dat ERA.
+- Domyślne: Sprawdzanie zakresu jest swobodne`false`().
+- Aby uzyskać więcej informacji, zobacz [kalendarze, wymazywane i zakres dat: kontrole swobodnego zakresu](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig.json** | `Switch.System.Globalization.EnforceJapaneseEraYearRanges` | `false`- rozluźnione kontrole zasięgu<br/>`true`- przelewy powodują wyjątek |
+| **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceJapaneseEraYearRanges` | `false`-swobodne kontrole zakresu<br/>`true`-nadprzepływy powodują wyjątek |
 | **Zmienna środowiskowa** | Nie dotyczy | Nie dotyczy |
 
-## <a name="japanese-date-parsing"></a>Japońskie analizowanie dat
+## <a name="japanese-date-parsing"></a>Japońska analiza daty
 
-- Określa, czy ciąg zawierający "1" lub "Gannen" jako rok analizuje pomyślnie lub czy tylko "1" jest obsługiwana.
-- Domyślnie: Parse ciągi, które zawierają "1" lub`false`"Gannen" jako rok ( ).
-- Aby uzyskać więcej informacji, zobacz [Reprezentowanie dat w kalendarzach z wieloma epokami](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
+- Określa, czy ciąg, który zawiera "1" lub "Gannen", jest analizowany pomyślnie, czy jest obsługiwany tylko "1".
+- Domyślnie: Przeanalizuj ciągi, które zawierają "1" lub "Gannen" jako rok (`false`).
+- Aby uzyskać więcej informacji, zobacz [przedstawianie dat w kalendarzach z wieloma wymazywanymi](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig.json** | `Switch.System.Globalization.EnforceLegacyJapaneseDateParsing` | `false`- "Gannen" lub "1" jest obsługiwany<br/>`true`- obsługiwane jest tylko "1" |
+| **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceLegacyJapaneseDateParsing` | `false`-Jest obsługiwana wartość "Gannen" lub "1"<br/>`true`-tylko "1" jest obsługiwana |
 | **Zmienna środowiskowa** | Nie dotyczy | Nie dotyczy |
 
-## <a name="japanese-year-format"></a>Japoński format roku
+## <a name="japanese-year-format"></a>Japoński rok
 
-- Określa, czy pierwszy rok ery kalendarza japońskiego jest sformatowany jako "Gannen" czy jako liczba.
-- Domyślnie: Formatuj pierwszy rok`false`jako "Gannen" ( ).
-- Aby uzyskać więcej informacji, zobacz [Reprezentowanie dat w kalendarzach z wieloma epokami](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
+- Określa, czy pierwszy rok dla ery w kalendarzu japońskim jest sformatowany jako "Gannen", czy jako liczba.
+- Domyślnie: Formatuj pierwszy rok jako "Gannen" (`false`).
+- Aby uzyskać więcej informacji, zobacz [przedstawianie dat w kalendarzach z wieloma wymazywanymi](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig.json** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`- format jako "Gannen"<br/>`true`- format jako liczba |
+| **runtimeconfig. JSON** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`-Format jako "Gannen"<br/>`true`-formatowanie jako liczba |
 | **Zmienna środowiskowa** | Nie dotyczy | Nie dotyczy |

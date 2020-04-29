@@ -1,86 +1,101 @@
 ---
-title: ASP.NET Kluczowe zmiany w zerwaniu
+title: ASP.NET Core istotne zmiany
 titleSuffix: ''
-description: Wyświetla listę przełomowych zmian w ASP.NET Core.
-ms.date: 03/27/2020
+description: Wyświetla listę istotnych zmian w ASP.NET Core.
+ms.date: 04/28/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 454735028f8c0923b99e85ade30f498f13dd6cab
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391250"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507159"
 ---
-# <a name="aspnet-core-breaking-changes"></a>ASP.NET Kluczowe zmiany w zerwaniu
+# <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
-ASP.NET Core udostępnia funkcje tworzenia aplikacji sieci web używane przez program .NET Core.
+ASP.NET Core udostępnia funkcje deweloperskie aplikacji sieci Web używane przez platformę .NET Core.
 
-Na tej stronie są udokumentowane następujące zmiany podziału:
+Następujące istotne zmiany zostały udokumentowane na tej stronie:
 
-- [Usunięto przestarzałe interfejsy API antiforgery, CORS, Diagnostics, MVC i Routing](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
-- [Uwierzytelnianie: wycofanie google+](#authentication-google-deprecated-and-replaced)
-- [Uwierzytelnianie: httpContext.Authentication właściwość usunięta](#authentication-httpcontextauthentication-property-removed)
-- [Uwierzytelnianie: zastąpiono typy Newtonsoft.Json](#authentication-newtonsoftjson-types-replaced)
-- [Uwierzytelnianie: Zmieniono podpis Programu ExchangeCodeAsync usługi OAuthHandler](#authentication-oauthhandler-exchangecodeasync-signature-changed)
-- [Autoryzacja: Przeciążenie addAutoryzacja przeniesione do innego zestawu](#authorization-addauthorization-overload-moved-to-different-assembly)
-- [Autoryzacja: IAllowAnonymous usunięte z AuthorizationFilterContext.Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
-- [Autoryzacja: Implementacje IAuthorizationPolicyProvider wymagają nowej metody](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
-- [Platforma Azure: usunięto pakiety integracji platformy Azure z prefiksem platformy Microsoft](#azure-microsoft-prefixed-azure-integration-packages-removed)
-- [Buforowanie: Usunięto właściwość CompactOnMemoryPressure](#caching-compactonmemorypressure-property-removed)
-- [Buforowanie: Microsoft.Extensions.Caching.SqlServer używa nowego pakietu SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
-- [Buforowanie: ResponseCaching "pubternal" typy zmienione na wewnętrzne](#caching-responsecaching-pubternal-types-changed-to-internal)
-- [Ochrona danych: DataProtection.AzureStorage używa nowych interfejsów API usługi Azure Storage](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
-- [Hosting: AspNetCoreModule V1 usunięty z pakietu hostingu systemu Windows](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
-- [Hosting: ogólny host ogranicza iniekcję konstruktora uruchamiania](#hosting-generic-host-restricts-startup-constructor-injection)
-- [Hosting: przekierowanie HTTPS włączone dla aplikacji poza procesem usług IIS](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
-- [Hosting: IHostingEnvironment i IApplicationLifetime typy zastąpione](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
-- [Hosting: ObjectPoolProvider usunięty z zależności WebHostBuilder](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
-- [HTTP: Zmiany w przeglądarce SameSite wpływają na uwierzytelnianie](#http-browser-samesite-changes-impact-authentication)
-- [HTTP: Usunięto domyślną rozszerzalność protokołuHttpContext](#http-defaulthttpcontext-extensibility-removed)
-- [HTTP: Pola nazwy nagłówków zmienione na statyczne tylko do odczytu](#http-headernames-constants-changed-to-static-readonly)
-- [HTTP: Zmiany w infrastrukturze treści odpowiedzi](#http-response-body-infrastructure-changes)
-- [HTTP: Zmieniono niektóre domyślne wartości cookie SameSite](#http-some-cookie-samesite-defaults-changed-to-none)
-- [HTTP: Synchroniczne we/wy domyślnie wyłączone](#http-synchronous-io-disabled-in-all-servers)
-- [Tożsamość: Usunięto przeciążenie metody AddDefaultUI](#identity-adddefaultui-method-overload-removed)
-- [Tożsamość: Zmiana wersji interfejsu użytkownika Bootstrap](#identity-default-bootstrap-version-of-ui-changed)
-- [Tożsamość: SignInAsync zgłasza wyjątek dla nieuwierzytezowanej tożsamości](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [Usunięto przestarzałe interfejsy API "antysfałszowane", "CORS, Diagnostics, MVC i Routing"](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [Uwierzytelnianie: Google + zaniechana](#authentication-google-deprecated-and-replaced)
+- [Uwierzytelnianie: Właściwość HttpContext. Authentication została usunięta](#authentication-httpcontextauthentication-property-removed)
+- [Uwierzytelnianie: zamieniono typy Newtonsoft. JSON](#authentication-newtonsoftjson-types-replaced)
+- [Uwierzytelnianie: OAuthHandler ExchangeCodeAsync zmieniono sygnaturę](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [Autoryzacja: Przeciążenie metody addauthorization przeniesiono do innego zestawu](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [Autoryzacja: Usunięto IAllowAnonymous z AuthorizationFilterContext. filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [Autoryzacja: implementacje IAuthorizationPolicyProvider wymagają nowej metody](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure: Usunięto wstępnie ustalone pakiety integracji platformy Azure](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [Buforowanie: Usunięto Właściwość CompactOnMemoryPressure](#caching-compactonmemorypressure-property-removed)
+- [Buforowanie: Microsoft. Extensions. buforowanie. SqlServer używa nowego pakietu SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [Buforowanie: typy ResponseCaching "pubternal" zostały zmienione na wewnętrzne](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [Ochrona danych: usługa dataprotection. AzureStorage używa nowych interfejsów API usługi Azure Storage](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [Rozszerzenia: zmiany odwołania do pakietów wpływające na niektóre pakiety NuGet](#extensions-package-reference-changes-affecting-some-nuget-packages)
+- [Hosting: AspNetCoreModule V1 został usunięty z pakietu hostingu systemu Windows](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [Hosting: Host ogólny ogranicza iniekcję konstruktora startowego](#hosting-generic-host-restricts-startup-constructor-injection)
+- [Hosting: włączono przekierowywanie protokołu HTTPS dla aplikacji pozaprocesowych usług IIS](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [Hosting: zamieniono typy IHostingEnvironment i IApplicationLifetime](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [Hosting: ObjectPoolProvider usunięte z zależności WebHostBuilder](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: Kestrel i IIS BadHttpRequestException typy oznaczone jako przestarzałe i zastąpione](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
+- [HTTP: zmiana SameSite w przeglądarce wpływa na uwierzytelnianie](#http-browser-samesite-changes-impact-authentication)
+- [HTTP: Usunięto rozszerzalność DefaultHttpContext](#http-defaulthttpcontext-extensibility-removed)
+- [HTTP: pola HeaderNames zostały zmienione na statyczny tylko do odczytu](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: zmiany infrastruktury treści odpowiedzi](#http-response-body-infrastructure-changes)
+- [HTTP: zmieniono domyślne wartości SameSite w pliku cookie](#http-some-cookie-samesite-defaults-changed-to-none)
+- [HTTP: synchroniczne operacje we/wy są wyłączone domyślnie](#http-synchronous-io-disabled-in-all-servers)
+- [Tożsamość: Usunięto Przeciążenie metody AddDefaultUI](#identity-adddefaultui-method-overload-removed)
+- [Tożsamość: zmiana wersji ładowania początkowego interfejsu użytkownika](#identity-default-bootstrap-version-of-ui-changed)
+- [Tożsamość: SignInAsync zgłasza wyjątek dla nieuwierzytelnionej tożsamości](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Tożsamość: Konstruktor SignInManager akceptuje nowy parametr](#identity-signinmanager-constructor-accepts-new-parameter)
-- [Tożsamość: interfejs użytkownika używa funkcji statycznych zasobów internetowych](#identity-ui-uses-static-web-assets-feature)
-- [Pustułka: Usunięte adaptery przyłączeniowe](#kestrel-connection-adapters-removed)
-- [Pustułka: Pusty zestaw HTTPS usunięty](#kestrel-empty-https-assembly-removed)
-- [Pustułka: Prośba o przeniesienie nagłówków zwiastuna do nowej kolekcji](#kestrel-request-trailer-headers-moved-to-new-collection)
-- [Pustułka: Zmiany warstwy abstrakcji transportu](#kestrel-transport-abstractions-removed-and-made-public)
+- [Tożsamość: interfejs użytkownika używa funkcji statyczne zasoby sieci Web](#identity-ui-uses-static-web-assets-feature)
+- [Kestrel: Usunięto karty połączeń](#kestrel-connection-adapters-removed)
+- [Kestrel: Usunięto pusty zestaw HTTPS](#kestrel-empty-https-assembly-removed)
+- [Kestrel: przeniesiono nagłówki przyczepki do nowej kolekcji](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [Kestrel: transportowe zmiany warstwy abstrakcji](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalizacja: interfejsy API oznaczone jako przestarzałe](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
-- [Rejestrowanie: DebugLogger klasy wykonane wewnętrzne](#logging-debuglogger-class-made-internal)
-- [MVC: Usunięto sufiks asynchronii asynchronii](#mvc-async-suffix-trimmed-from-controller-action-names)
-- [MVC: JsonResult przeniesiony do Microsoft.AspNetCore.Mvc.Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
-- [MVC: Narzędzie do wstępnej kompilacji przestarzałe](#mvc-precompilation-tool-deprecated)
-- [MVC: Typy zmienione na wewnętrzne](#mvc-pubternal-types-changed-to-internal)
-- [MVC: Usunięto podkładkę zgodności interfejsu API sieci Web](#mvc-web-api-compatibility-shim-removed)
-- [Razor: Kompilacja środowiska uruchomieniowego przeniesiona do pakietu](#razor-runtime-compilation-moved-to-a-package)
-- [Stan sesji: przestarzałe interfejsy API usunięte](#session-state-obsolete-apis-removed)
-- [Współużytkowana struktura: usuwanie zestawu z pliku Microsoft.AspNetCore.App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
-- [Współużytkowana struktura: Microsoft.AspNetCore.All usunięte](#shared-framework-removed-microsoftaspnetcoreall)
-- [SignalR: HandshakeProtocol.SuccessHandshakeData zastąpiony](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
-- [SignalR: Metody HubConnection usunięte](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
-- [SignalR: HubConnectionContext konstruktory zmienione](#signalr-hubconnectioncontext-constructors-changed)
-- [SignalR: Zmiana nazwy pakietu klienta JavaScript](#signalr-javascript-client-package-name-changed)
-- [SignalR: MessagePack Hub Protocol przeniesiony do pakietu MessagePack 2.x](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
-- [SignalR: Przestarzałe interfejsy API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [SignalR: UseSignalR i UseConnections metody usunięte](#signalr-usesignalr-and-useconnections-methods-removed)
-- [OSO: SpaServices i NodeServices logger rezerwowy domyślnej zmiany](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
-- [OSO: Usługi Spaservices i NodeServices oznaczone jako przestarzałe](#spas-spaservices-and-nodeservices-marked-obsolete)
-- [Pliki statyczne: typ zawartości CSV zmieniony na zgodny ze standardami](#static-files-csv-content-type-changed-to-standards-compliant)
-- [Struktura docelowa: .NET Framework nie jest obsługiwana](#target-framework-net-framework-support-dropped)
+- [Rejestrowanie: Klasa DebugLogger wykonana wewnętrznie](#logging-debuglogger-class-made-internal)
+- [MVC: Usunięto sufiks asynchroniczny akcji kontrolera](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [MVC: JsonResult przeniesiony do Microsoft. AspNetCore. MVC. Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [MVC: Narzędzie wstępnej kompilacji zostało zaniechane](#mvc-precompilation-tool-deprecated)
+- [MVC: zmieniono typy na wewnętrzne](#mvc-pubternal-types-changed-to-internal)
+- [MVC: Usunięto podkładkę zgodności z interfejsem API sieci Web](#mvc-web-api-compatibility-shim-removed)
+- [Razor: Kompilacja środowiska uruchomieniowego została przeniesiona do pakietu](#razor-runtime-compilation-moved-to-a-package)
+- [Stan sesji: Usunięto przestarzałe interfejsy API](#session-state-obsolete-apis-removed)
+- [Współdzielona struktura: usuwanie zestawu z Microsoft. AspNetCore. App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [Współdzielona struktura: Microsoft. AspNetCore. All usunięte](#shared-framework-removed-microsoftaspnetcoreall)
+- [Sygnalizujący: HandshakeProtocol. SuccessHandshakeData został zastąpiony](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [Sygnalizacja: Usunięto metody HubConnection](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
+- [Sygnalizacja: zmieniono konstruktory HubConnectionContext](#signalr-hubconnectioncontext-constructors-changed)
+- [Sygnalizacja: zmiana nazwy pakietu klienta języka JavaScript](#signalr-javascript-client-package-name-changed)
+- [Sygnalizacja: przeniesiono protokół MessagePack Hub do pakietu MessagePack 2. x](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [Sygnalizacja: Zmieniono typ opcji protokołu MessagePack Hub](#signalr-messagepack-hub-protocol-options-type-changed)
+- [Sygnalizujący: przestarzałe interfejsy API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [Sygnalizacja: Usunięto metody UseSignalR i UseConnections](#signalr-usesignalr-and-useconnections-methods-removed)
+- [Aplikacji jednostronicowych: SpaServices i NodeServices domyślna zmiana ustawień rejestru](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [Aplikacji jednostronicowych: SpaServices i NodeServices oznaczone jako przestarzałe](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [Pliki statyczne: typ zawartości CSV został zmieniony na zgodny ze standardami](#static-files-csv-content-type-changed-to-standards-compliant)
+- [Platforma docelowa: nie .NET Framework obsługiwana](#target-framework-net-framework-support-dropped)
 
-## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
+## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 
@@ -92,13 +107,13 @@ Na tej stronie są udokumentowane następujące zmiany podziału:
 
 ***
 
-## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
+## <a name="aspnet-core-31"></a>ASP.NET Core 3,1
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ***
 
-## <a name="aspnet-core-30"></a>ASP.NET Core 3.0
+## <a name="aspnet-core-30"></a>ASP.NET Core 3,0
 
 [!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 

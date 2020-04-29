@@ -1,54 +1,58 @@
 ---
 title: Terminologia platformy Docker
-description: Podczas pracy z platformą Docker naucz się podstawowej terminologii używanej codziennie.
-ms.date: 02/15/2019
-ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Poznaj podstawową terminologię używaną codziennie podczas pracy z platformą Docker.
+ms.date: 04/16/2020
+ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70295679"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507328"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy Docker
 
-W tej sekcji wymieniono terminy i definicje, które należy zapoznać się z przed zagłębieniem się w platformę Docker. Aby uzyskać dalsze definicje, zobacz obszerny [słownik](https://docs.docker.com/glossary/) dostarczony przez platformę Docker.
+W tej sekcji przedstawiono terminy i definicje, z którymi należy zapoznać się przed zagłębieniem się w platformę Docker. Aby uzyskać więcej definicji, zobacz obszerny [słownik](https://docs.docker.com/glossary/) udostępniany przez platformę Docker.
 
-**Obraz kontenera:** Pakiet ze wszystkimi zależnościami i informacjami potrzebnymi do utworzenia kontenera. Obraz zawiera wszystkie zależności (takie jak struktury) oraz konfiguracji wdrażania i wykonywania, które mają być używane przez program wykonawczy kontenera. Zazwyczaj obraz pochodzi z wielu obrazów bazowych, które są warstwami ułożonymi jeden na drugim, tworząc system plików kontenera. Obraz jest niezmienny po jego utworzeniu.
+**Obraz kontenera**: pakiet ze wszystkimi zależnościami i informacjami wymaganymi do utworzenia kontenera. Obraz zawiera wszystkie zależności (takie jak struktury) oraz konfigurację wdrażania i wykonywania, które mają być używane przez środowisko uruchomieniowe kontenera. Zazwyczaj obraz pochodzi z wielu obrazów podstawowych, które są warstwowo ułożone na siebie, aby utworzyć system plików kontenera. Obraz jest niezmienny, gdy zostanie utworzony.
 
-**Plik dokacji:** plik tekstowy zawierający instrukcje dotyczące tworzenia obrazu platformy Docker. To jak skrypt wsadowy, pierwszy wiersz określa obraz podstawowy na początek, a następnie postępuj zgodnie z instrukcjami, aby zainstalować wymagane programy, skopiować pliki i tak dalej, aż pojawi się środowisko pracy, którego potrzebujesz.
+**Pliku dockerfile**: plik tekstowy zawierający instrukcje dotyczące tworzenia obrazu platformy Docker. Podobnie jak skrypt wsadowy, pierwszy wiersz określa podstawowy obraz, a następnie postępuje zgodnie z instrukcjami, aby zainstalować wymagane programy, skopiować pliki i tak dalej, aż do momentu uzyskania potrzebnego środowiska roboczego.
 
-**Kompilacja:** Akcja tworzenia obrazu kontenera na podstawie informacji i kontekstu dostarczonych przez jego Plik Dockerfile, a także dodatkowe pliki w folderze, w którym jest zbudowany obraz. Obrazy można tworzyć za **`docker build`** pomocą polecenia Docker.
+**Kompilacja**: Akcja tworzenia obrazu kontenera na podstawie informacji i kontekstu dostarczonych przez jego pliku dockerfile oraz dodatkowych plików w folderze, w którym utworzono obraz. Możesz tworzyć obrazy za pomocą następującego polecenia platformy Docker:
 
-**Kontener:** Wystąpienie obrazu platformy Docker. Kontener reprezentuje wykonanie pojedynczej aplikacji, procesu lub usługi. Składa się z zawartości obrazu platformy Docker, środowiska wykonywania i standardowy zestaw instrukcji. Podczas skalowania usługi, można utworzyć wiele wystąpień kontenera z tego samego obrazu. Lub zadanie wsadowe można utworzyć wiele kontenerów z tego samego obrazu, przekazując różne parametry do każdego wystąpienia.
+```bash
+docker build
+```
 
-**Woluminy:** Zaoferuj zapisywalny system plików, z którego może korzystać kontener. Ponieważ obrazy są tylko do odczytu, ale większość programów musi zapisywać do systemu plików, woluminy dodać zapisywalną warstwę, na górze obrazu kontenera, więc programy mają dostęp do zapisywalny system plików. Program nie wie, że uzyskuje dostęp do warstwowego systemu plików, to tylko system plików jak zwykle. Woluminy są aktywne w systemie hosta i są zarządzane przez platformę Docker.
+**Container**: wystąpienie obrazu platformy Docker. Kontener reprezentuje wykonywanie pojedynczej aplikacji, procesu lub usługi. Składa się z zawartości obrazu platformy Docker, środowiska wykonawczego i standardowego zestawu instrukcji. W przypadku skalowania usługi należy utworzyć wiele wystąpień kontenera z tego samego obrazu. Lub zadanie usługi Batch może utworzyć wiele kontenerów z tego samego obrazu, przekazując różne parametry do każdego wystąpienia.
 
-**Znacznik:** Znak lub etykietę, którą można zastosować do obrazów, tak aby można było zidentyfikować różne obrazy lub wersje tego samego obrazu (w zależności od numeru wersji lub środowiska docelowego).
+**Woluminy**: udostępniają zapisywalny system plików, który może być używany przez kontener. Ponieważ obrazy są dostępne tylko do odczytu, ale większość programów musi zapisywać w systemie plików, woluminy dodają warstwę zapisywalną na podstawie obrazu kontenera, dzięki czemu programy mają dostęp do systemu plików zapisywalnych. Program nie wie, że uzyskuje dostęp do warstwowego systemu plików, jest to tylko system plików w zwykły sposób. Woluminy na żywo w systemie hosta i zarządzane przez platformę Docker.
 
-**Kompilacja wieloetapowa:** Jest funkcją, ponieważ docker 17.05 lub nowszej, który pomaga zmniejszyć rozmiar obrazów końcowych. W kilku zdaniach, za pomocą kompilacji wieloetapowej, można użyć na przykład dużego obrazu podstawowego zawierającego zestaw SDK do kompilowania i publikowania aplikacji, a następnie do korzystania z folderu publikowania z małym obrazem podstawowym tylko w czasie wykonywania, aby uzyskać znacznie mniejszy obraz końcowy
+**Tag**: znacznik lub etykieta, które można zastosować do obrazów w taki sposób, aby można było zidentyfikować różne obrazy lub wersje tego samego obrazu (w zależności od numeru wersji lub środowiska docelowego).
 
-**Repozytorium (repozytorium):** Kolekcja powiązanych obrazów platformy Docker, oznaczonych tagiem wskazującym wersję obrazu. Niektóre reppo zawierają wiele wariantów określonego obrazu, takich jak obraz zawierający zestawy SDK (cięższe), obraz zawierający tylko czas wykonywania (lżejszy) itp. Te warianty mogą być oznaczone tagami. Pojedyncze reppo może zawierać warianty platformy, takie jak obraz systemu Linux i obraz systemu Windows.
+**Kompilacja wieloetapowa**: jest funkcją, ponieważ platforma docker 17,05 lub nowsza, która pomaga zmniejszyć rozmiar obrazów końcowych. W kilku zdaniach z Wieloetapową kompilacją można użyć, na przykład, dużego obrazu podstawowego, zawierającego zestaw SDK, do kompilowania i publikowania aplikacji, a następnie przy użyciu folderu publikacji z małym obrazem podstawowym tylko środowiska uruchomieniowego, w celu utworzenia znacznie mniejszego obrazu końcowego.
 
-**Rejestr:** Usługa zapewniająca dostęp do repozytoriów. Domyślnym rejestrem większości obrazów publicznych jest [centrum docker hub](https://hub.docker.com/) (należące do platformy Docker jako organizacji). Rejestr zwykle zawiera repozytoria z wielu zespołów. Firmy często mają prywatne rejestry do przechowywania i zarządzania utworzonymi przez nie obrazami. Rejestr kontenerów platformy Azure jest kolejnym przykładem.
+**Repozytorium (repozytorium)**: Kolekcja powiązanych obrazów platformy Docker oznaczona tagami z tagiem wskazującym wersję obrazu. Niektóre repozytoria zawierają wiele wariantów określonego obrazu, takich jak obraz zawierający zestawy SDK (grubszy), obraz zawierający tylko środowiska uruchomieniowe (jaśniejszy) itp. Te warianty mogą być oznaczone tagami. Pojedyncze repozytorium może zawierać warianty platformy, takie jak obraz systemu Linux i obraz Windows.
 
-**Obraz wielołukowy:** Dla wielu architektury, jest funkcją, która upraszcza wybór odpowiedniego obrazu, w zależności od platformy, na **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** której działa docker, na przykład, gdy Plik Dockerfile żąda obrazu podstawowego z rejestru, **`2.2-nanoserver-1709`** który faktycznie dostaje **`2.2-nanoserver-1803`**, **`2.2-nanoserver-1809`** lub **`2.2-stretch`**, w zależności od systemu operacyjnego i wersji, w której działa platforma Docker.
+**Rejestr**: usługa, która zapewnia dostęp do repozytoriów. Domyślnym rejestrem większości obrazów publicznych jest [centrum platformy Docker](https://hub.docker.com/) (należące do platformy Docker jako organizacja). Rejestr zawiera zwykle repozytoria z wielu zespołów. Firmy często mają prywatne rejestry do przechowywania utworzonych przez siebie obrazów i zarządzania nimi. Azure Container Registry jest kolejnym przykładem.
 
-**Docker Hub**: Rejestr publiczny do przekazywania obrazów i pracy z nimi. Docker Hub zapewnia hosting obrazów platformy Docker, rejestry publiczne lub prywatne, wyzwalacze kompilacji i haki internetowe oraz integrację z usługami GitHub i Bitbucket.
+**Obraz**z obsługą wielu rozwiązań: w przypadku wielu architektur jest to funkcja, która upraszcza wybór odpowiedniego obrazu, zgodnie z platformą, na której działa platforma Docker. Na przykład gdy pliku dockerfile żąda obrazu podstawowego **z MCR.Microsoft.com/dotnet/Core/SDK:3.1** z rejestru, faktycznie otrzymuje **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** lub **3,1-SDK-Buster-Slim**, w zależności od systemu operacyjnego i wersji, w której działa program Docker.
 
-**Rejestr kontenerów platformy Azure:** zasób publiczny do pracy z obrazami platformy Docker i jego składnikami na platformie Azure. Zapewnia to rejestr, który jest blisko wdrożeń na platformie Azure i który zapewnia kontrolę nad dostępem, umożliwiając korzystanie z grup i uprawnień usługi Azure Active Directory.
+**Centrum platformy Docker**: Rejestr publiczny służący do przekazywania obrazów i pracy z nimi. Centrum platformy Docker zapewnia hosting obrazów platformy Docker, rejestry publiczne lub prywatne, wyzwalacze kompilacji i elementy webhook oraz integrację z usługą GitHub i Bitbucket.
 
-**Docker Trusted Registry (DTR):** Usługa rejestru platformy Docker (z platformy Docker), która może być instalowana lokalnie, dzięki czemu znajduje się w centrum danych i sieci organizacji. Jest to wygodne dla prywatnych obrazów, które powinny być zarządzane w przedsiębiorstwie. Rejestr zaufany docker jest uwzględniony jako część produktu docker Datacenter. Aby uzyskać więcej informacji, zobacz [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Azure Container Registry**: zasób publiczny służący do pracy z obrazami platformy Docker i jej składnikami na platformie Azure. Dzięki temu rejestr znajduje się blisko wdrożeń na platformie Azure i zapewnia kontrolę nad dostępem, dzięki czemu można korzystać z Azure Active Directory grup i uprawnień.
 
-**Docker Community Edition (CE)**: Narzędzia programistyczne dla systemu Windows i macOS do lokalnego tworzenia, uruchamiania i testowania kontenerów. Platforma Docker CE dla systemu Windows udostępnia środowiska programistyczne dla kontenerów systemu Linux i Windows. Host platformy Docker systemu Linux w systemie Windows jest oparty na maszynie wirtualnej [funkcji Hyper-V.](https://www.microsoft.com/cloud-platform/server-virtualization) Host kontenerów systemu Windows jest bezpośrednio oparty na systemie Windows. Docker CE dla komputerów Mac jest oparty na platformie Hypervisor firmy Apple i [hipernadzorcy xhyve,](https://github.com/mist64/xhyve)która zapewnia maszynę wirtualną hosta Linux Docker w systemie Mac OS X. Docker CE dla Windows i dla komputerów Mac zastępuje Docker Toolbox, który został oparty na Oracle VirtualBox.
+**Zaufany rejestr platformy Docker (DTR)**: usługa rejestru platformy Docker (z platformy Docker), którą można zainstalować lokalnie, tak aby była w centrum danych i sieci organizacji. Jest to wygodne w przypadku obrazów prywatnych, które powinny być zarządzane w przedsiębiorstwie. Zaufany rejestr platformy Docker jest dołączony jako część produktu centrum danych platformy Docker. Aby uzyskać więcej informacji, zobacz artykuł [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker Enterprise Edition (EE)**: wersja narzędzi docker w skali przedsiębiorstwa dla tworzenia systemów Linux i Windows.
+**Docker Community Edition (CE)**: narzędzia deweloperskie dla systemu Windows i macOS do tworzenia, uruchamiania i testowania kontenerów lokalnie. Docker CE for Windows zapewnia środowiska deweloperskie dla kontenerów systemu Linux i Windows. Host platformy Docker systemu Linux w systemie Windows jest oparty na maszynie wirtualnej [funkcji Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) . Host dla kontenerów systemu Windows jest bezpośrednio oparty na systemie Windows. Program Docker CE dla komputerów Mac jest oparty na strukturze funkcji hypervisor firmy Apple i [funkcji hypervisor xhyve](https://github.com/mist64/xhyve), która udostępnia maszynę wirtualną hosta platformy Docker systemu Linux na Mac OS X. Docker CE for Windows i dla komputerów Mac zastępuje Przybornik platformy Docker, który został oparty na bazie danych Oracle VirtualBox.
 
-**Redagowanie:** narzędzie wiersza polecenia i format pliku YAML z metadanymi do definiowania i uruchamiania aplikacji wielokontenerowych. Pojedynczą aplikację można zdefiniować na podstawie wielu obrazów z co najmniej jednym plikiem .yml, które mogą zastąpić wartości w zależności od środowiska. Po utworzeniu definicji można wdrożyć całą aplikację wielokontenerową za pomocą jednego polecenia (docker-compose up), które tworzy kontener na obraz na hoście platformy Docker.
+**Docker Enterprise Edition (EE)**: skalowanie w poziomie korporacyjnym narzędzi platformy Docker dla systemów Linux i Windows.
 
-**Klaster:** Kolekcja hostów platformy Docker uwidacznianych tak, jakby była pojedynczym wirtualnym hostem platformy Docker, dzięki czemu aplikacja może być skalowana do wielu wystąpień usług rozmieszczonych na wielu hostach w klastrze. Klastry platformy Docker można tworzyć za pomocą platformy Kubernetes, sieci szkieletowej usług Azure, roju platformy Docker i mezosfery DC/OS.
+**Redaguj**: Narzędzie wiersza polecenia i format pliku YAML z metadanymi do definiowania i uruchamiania aplikacji wielokontenerowych. Należy zdefiniować pojedynczą aplikację na podstawie wielu obrazów z co najmniej jednym plikami. yml, która może zastąpić wartości w zależności od środowiska. Po utworzeniu definicji można wdrożyć całą aplikację obejmującą wiele kontenerów za pomocą jednego polecenia (Docker-Zredaguj), które tworzy kontener na obraz na hoście platformy Docker.
 
-**Orchestrator**: Narzędzie, które upraszcza zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie ich obrazów, kontenerów i hostów za pośrednictwem interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać siecią kontenerów, konfiguracjami, równoważeniem obciążenia, odnajdowaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i nie tylko. Koordynator jest odpowiedzialny za uruchamianie, dystrybucji, skalowanie i uzdrawiania obciążeń w kolekcji węzłów. Zazwyczaj produkty koordynatora są te same produkty, które zapewniają infrastrukturę klastra, takich jak Kubernetes i sieci szkieletowej usług Azure, wśród innych ofert na rynku.
+**Klaster**: Kolekcja hostów platformy Docker uwidoczniona tak, jakby była jednym wirtualnym hostem platformy Docker, dzięki czemu aplikacja może być skalowana do wielu wystąpień usług rozmieszczonych na wielu hostach w klastrze. Klastry platformy Docker można tworzyć za pomocą Kubernetes, Azure Service Fabric, Docker Swarm i mesosphere DC/OS.
+
+**Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku.
 
 >[!div class="step-by-step"]
 >[Poprzedni](what-is-docker.md)
->[następny](docker-containers-images-and-registries.md)
+>[Następny](docker-containers-images-and-registries.md)

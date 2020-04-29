@@ -1,96 +1,96 @@
 ---
 title: Kontenery jako podstawa współpracy w metodyce DevOps
-description: Zrozumienie kluczowej roli kontenerów w celu usprawnienia devops.
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Poznaj kluczową rolę kontenerów w celu usprawnienia DevOps.
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094497"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507350"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Kontenery jako podstawa współpracy w metodyce DevOps
 
-Ze względu na sam charakter kontenerów i technologii Platformy Docker deweloperzy mogą łatwo udostępniać swoje oprogramowanie i zależności z operacjami IT i środowiskami produkcyjnymi, eliminując jednocześnie typową wymówkę "działa na mojej maszynie". Kontenery rozwiązują konflikty aplikacji między różnymi środowiskami. Pośrednio kontenery i platformy Docker zbliżają deweloperów i operacje IT do siebie, ułatwiając im efektywną współpracę. Przyjęcie przepływu pracy kontenera zapewnia wielu klientom ciągłość DevOps, którą szukali, ale wcześniej musieli zaimplementować za pomocą bardziej złożonej konfiguracji dla potoków wydania i kompilacji. Kontenery upraszczają kompilacji/testowania/wdrażania potoków w DevOps.
+Za pomocą bardzo dużej natury kontenerów i technologii platformy Docker deweloperzy mogą łatwo udostępniać swoje oprogramowanie i zależności przy użyciu operacji IT i środowisk produkcyjnych, jednocześnie eliminując typowy "działający na mojej maszynie" wymówką. Kontenery rozwiązują konflikty aplikacji między różnymi środowiskami. Pośrednie, kontenery i platforma Docker umożliwiają deweloperom i pracę nad nimi bliżej siebie, co ułatwia ich efektywne współdziałanie. Wdrożenie przepływu pracy kontenera zapewnia wielu klientom nieprzerwane DevOps, które wcześniej wymagały wdrożenia przy użyciu bardziej złożonej konfiguracji dla potoków wydania i kompilacji. Kontenery upraszczają potoki kompilowania/testowania/wdrażania w DevOps.
 
 ![Diagram przedstawiający własność cyklu życia aplikacji platformy Docker.](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
-**Rysunek 2-1.** Główne obciążenia na "persony" w cyklu życia dla konteneryzowanych aplikacji platformy Docker
+**Rysunek 2-1.** Główne obciążenia na "osób" w cyklu życia dla kontenerów aplikacji platformy Docker
 
-Z kontenerów platformy Docker deweloperzy są właścicielami tego, co znajduje się w kontenerze (aplikacji i usługi i zależności do struktur i składników) i jak kontenery i usługi zachowują się razem jako aplikacja składa się z kolekcji usług. Współzależności wielu kontenerów są zdefiniowane w `docker-compose.yml` pliku lub co można nazwać *manifestem wdrażania.* Tymczasem zespoły operacyjne IT (it specjalistów i zarządzania) może skupić się na zarządzaniu środowiskami produkcyjnymi; infrastruktury; skalowalność; monitorowanie; i, ostatecznie, zapewnienie, że aplikacje są dostarczane prawidłowo dla użytkowników końcowych, bez konieczności poznania zawartości różnych kontenerów. Stąd nazwa "kontener", przypominając analogię do rzeczywistych kontenerów wysyłkowych. W związku z tym właściciele zawartości kontenera nie muszą zajmować się tym, w jaki sposób kontener zostanie wysłany, a firma spedycyjna przewozi kontener z miejsca jego pochodzenia do miejsca przeznaczenia, nie znając ani nie dbając o zawartość. W podobny sposób deweloperzy mogą tworzyć i posiadać zawartość w kontenerze platformy Docker bez konieczności zajmowania się mechanizmami "transport".
+W przypadku kontenerów platformy Docker deweloperzy są własnością tego, co znajduje się w kontenerze (aplikacji i usługi, oraz zależności od struktur i składników) oraz jak kontenery i usługi działają razem jako aplikacja składająca się z kolekcji usług. Wzajemne zależności wielu kontenerów są zdefiniowane w `docker-compose.yml` pliku lub co może być nazywane *manifestem wdrożenia*. Tymczasem zespoły operacyjne IT (specjaliści IT i zarządzanie) mogą skupić się na zarządzaniu środowiskami produkcyjnymi. pozostając względem kontrolą i ostatecznie, dzięki czemu aplikacje są dostarczane prawidłowo dla użytkowników końcowych, bez konieczności znajomości zawartości różnych kontenerów. W związku z tym nazwa "kontener" polega na odproszeniu analogowego do rzeczywistych kontenerów wysyłkowych. W ten sposób właściciele zawartości kontenera nie muszą odnosi się do sposobu dostarczania kontenera, a firma żeglugi transportuje kontener z punktu pochodzenia do miejsca docelowego bez znajomości lub Caring o zawartości. W podobny sposób deweloperzy mogą tworzyć i własnością zawartość w kontenerze platformy Docker bez konieczności zapoznania się z mechanizmami "transport".
 
-W filarze po lewej stronie rysunku 2-1 deweloperzy zapisują i uruchamiają kod lokalnie w kontenerach platformy Docker przy użyciu platformy Docker dla systemu Windows lub Mac. Definiują one środowisko operacyjne dla kodu przy użyciu pliku Dockerfile, który określa podstawowy system operacyjny do uruchomienia, a także kroki kompilacji do tworzenia kodu w obrazplatformie Docker. Deweloperzy definiują, jak jeden lub więcej obrazów będzie `docker-compose.yml` współdziałać przy użyciu wyżej wymienionego manifestu wdrażania plików. Po zakończeniu lokalnego rozwoju wypychają swój kod aplikacji oraz pliki konfiguracyjne platformy Docker do wybranego repozytorium kodu (czyli repozytorium Git).
+W filarzie po lewej stronie rysunku 2-1 deweloperzy zapisują i uruchamiają kod lokalnie w kontenerach platformy Docker przy użyciu Docker for Windows lub Mac. Definiują one środowisko operacyjne dla kodu przy użyciu pliku dockerfile, który określa podstawowy system operacyjny do uruchomienia, a także kroki kompilacji do kompilowania kodu do obrazu platformy Docker. Deweloperzy definiują sposób, w jaki jeden lub więcej obrazów będzie współdziałać z zastosowaniem wymienionego wyżej `docker-compose.yml` manifestu wdrażania plików. Gdy ukończyją swoje lokalne programowanie, wypychanie kodu aplikacji oraz plików konfiguracji platformy Docker do wybranego przez siebie repozytorium kodu (to jest repozytorium Git).
 
-DevOps filar definiuje kompilacji ciągłej integracji (CI) potoków przy użyciu pliku Dockerfile dostarczone w repozytorium kodu. System ci pobiera obrazy kontenera podstawowego z wybranego rejestru platformy Docker i tworzy niestandardowe obrazy platformy Docker dla aplikacji. Obrazy są następnie sprawdzane i wypychane do rejestru platformy Docker używanego do wdrożeń w wielu środowiskach.
+Filar DevOps definiuje potok kompilacji — ciągłej integracji (CI) przy użyciu pliku dockerfile w repozytorium kodu. System CI pobiera podstawowe obrazy kontenerów z wybranego rejestru platformy Docker i tworzy niestandardowe obrazy platformy Docker dla aplikacji. Obrazy są następnie weryfikowane i wypychane do rejestru platformy Docker używanego do wdrożeń w wielu środowiskach.
 
-W filarze po prawej stronie zespoły operacyjne zarządzają wdrożonymi aplikacjami i infrastrukturą w środowisku produkcyjnym, jednocześnie monitorując środowisko i aplikacje, dzięki czemu mogą przekazywać informacje zwrotne i szczegółowe informacje dla zespołu programistów na temat tego, jak aplikacja może być Poprawa. Aplikacje kontenerów są zazwyczaj uruchamiane w środowisku produkcyjnym przy użyciu koordynatorów kontenerów.
+W filarzie po prawej stronie zespoły ds. operacji zarządzają wdrożonymi aplikacjami i infrastrukturą w środowisku produkcyjnym, podczas gdy monitorują środowisko i aplikacje, dzięki czemu mogą one dostarczać Opinie i szczegółowe informacje dotyczące zespołu deweloperów, w jaki sposób można ulepszyć aplikację. Aplikacje kontenera są zwykle uruchamiane w środowisku produkcyjnym przy użyciu koordynatorów kontenerów, takich jak [Kubernetes](https://kubernetes.io/), gdzie zazwyczaj [wykresy Helm](https://helm.sh/) są używane do konfigurowania jednostek wdrożenia, a nie plików do redagowania oprogramowania Docker.
 
-Oba zespoły współpracują za pośrednictwem platformy fundamentalnej (kontenery platformy Docker), która zapewnia oddzielenie problemów jako umowy, a jednocześnie znacznie poprawia współpracę obu zespołów w cyklu życia aplikacji. Deweloperzy są właścicielami zawartości kontenera, jego środowiska operacyjnego i współzależności kontenerów, podczas gdy zespoły operacyjne przyjmują zbudowane obrazy wraz z manifestem i uruchamiaje je w systemie aranżacji.
+Dwa zespoły współpracują za pośrednictwem podstawowej platformy (kontenerów platformy Docker), która zapewnia oddzielenie problemów jako kontraktu, a jednocześnie znacznie ulepsza współpracę obu zespołów w cyklu życia aplikacji. Deweloperzy są właścicielami zawartości kontenera, jego środowiska operacyjnego oraz współzależności między kontenerami, podczas gdy zespoły operacji pobierają utworzone obrazy wraz z manifestem i uruchamiają je w systemie aranżacji.
 
-## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Wyzwania w cyklu życia aplikacji podczas korzystania z platformy Docker.
+## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Wyzwania związane z cyklem życia aplikacji podczas korzystania z platformy Docker.
 
-Istnieje wiele powodów, które zwiększą liczbę konteneryzowanych aplikacji w nadchodzących latach, a jednym z tych powodów jest tworzenie aplikacji opartych na mikrousługach.
+Istnieje wiele przyczyn, które spowodują zwiększenie liczby aplikacji kontenerowych w nadchodzących latach, a jednym z tych powodów jest tworzenie aplikacji na podstawie mikrousług.
 
-W ciągu ostatnich 15 lat korzystanie z usług sieci web było podstawą tysięcy aplikacji i prawdopodobnie po kilku latach znajdziemy taką samą sytuację z aplikacjami opartymi na mikrousługach uruchomionymi na kontenerach platformy Docker.
+W ciągu ostatnich 15 lat korzystanie z usług sieci Web była podstawą tysięcy aplikacji i prawdopodobnie po kilku latach będzie można znaleźć taką samą sytuację w przypadku aplikacji opartych na mikrousługach działających w kontenerach platformy Docker.
 
-Warto również wspomnieć, że można również używać kontenerów Platformy Docker do zastosowań monolitycznych i nadal uzyskać większość korzyści z platformy Docker. Kontenery nie są przeznaczone tylko mikrousług.
+Należy również zauważyć, że można również użyć kontenerów platformy Docker dla aplikacji monolitycznych, a mimo to uzyskać większość zalet platformy Docker. Kontenery nie mają tylko mikrousług.
 
-Korzystanie z konteneryzacji platformy Docker i mikrousług powoduje nowe wyzwania w procesie rozwoju organizacji i w związku z tym trzeba solidną strategię, aby utrzymać wiele kontenerów i mikrousług uruchomionych w systemach produkcyjnych. Po pewnym czasie aplikacje dla przedsiębiorstw będą miały setki lub tysiące kontenerów/wystąpień działających w środowisku produkcyjnym.
+Korzystanie z rozwiązań Docker kontenerach i mikrousług powoduje nowe wyzwania w procesie opracowywania organizacji, dlatego potrzebna jest jednolita strategia do obsługi wielu kontenerów i mikrousług działających w systemach produkcyjnych. Ostatecznie aplikacje dla przedsiębiorstw będą mieć setki lub tysiące kontenerów/wystąpień działających w środowisku produkcyjnym.
 
-Te wyzwania tworzą nowe wymagania podczas korzystania z narzędzi DevOps, więc będziesz musiał zdefiniować nowe procesy w działaniach DevOps i znaleźć odpowiedzi na tego typu pytania:
+Te wyzwania pozwalają utworzyć nowe wymagania w przypadku korzystania z narzędzi DevOps, aby móc definiować nowe procesy w działaniach DevOps i znajdować odpowiedzi na pytania tego typu:
 
-- Jakich narzędzi mogę używać do rozwoju, do CI/CD, zarządzania i operacji?
+- Których narzędzi można używać do programowania, w przypadku ciągłej integracji/ciągłego wdrażania, zarządzania i operacji?
 
 - Jak moja firma może zarządzać błędami w kontenerach podczas pracy w środowisku produkcyjnym?
 
-- Jak możemy zmienić części naszego oprogramowania w produkcji przy minimalnych przestojach?
+- Jak można zmienić fragmenty naszego oprogramowania w środowisku produkcyjnym z minimalnym czasem przestoju?
 
-- Jak możemy skalować i jak możemy monitorować nasz system produkcji?
+- Jak możemy skalować i jak można monitorować nasz system produkcyjny?
 
 - Jak możemy uwzględnić testowanie i wdrażanie kontenerów w naszym potoku wydania?
 
-- Jak możemy używać narzędzi/platform Open Source dla kontenerów na platformie Microsoft Azure?
+- Jak można używać narzędzi/platform Open Source dla kontenerów w Microsoft Azure?
 
-Jeśli możesz odpowiedzieć na wszystkie te pytania, będziesz lepiej przygotowany do przenoszenia aplikacji (istniejących lub nowych aplikacji) do kontenerów platformy Docker.
+Jeśli możesz odpowiedzieć na wszystkie pytania, możesz lepiej przystąpić do przenoszenia aplikacji (istniejących lub nowych aplikacji) do kontenerów platformy Docker.
 
-## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Wprowadzenie do ogólnego przepływu pracy cyklu życia aplikacji dokowania typu end-to-end
+## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Wprowadzenie do ogólnego przepływu pracy cyklu życia aplikacji platformy Docker
 
-Rysunek 2-2 przedstawia bardziej szczegółowy przepływ pracy dla cyklu życia aplikacji platformy Docker, koncentrując się w tym wystąpieniu na określonych działaniach i zasobach DevOps.
+Rysunek 2-2 przedstawia bardziej szczegółowy przepływ pracy dla cyklu życia aplikacji platformy Docker, koncentrując się na tym wystąpieniu w określonych działaniach i zasobach DevOps.
 
-![Diagram przedstawiający ogólny cykl życia typu end-to-end aplikacji platformy Docker.](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
+![Diagram przedstawiający ogólny cykl życiowy aplikacji platformy Docker.](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
-**Rysunek 2-2.** Wysokopoziomowy przepływ pracy dla cyklu życia aplikacji konteneryzowanej platformą Docker
+**Rysunek 2-2.** Przepływ pracy wysokiego poziomu dla cyklu życia aplikacji kontenera platformy Docker
 
-Wszystko zaczyna się od dewelopera, który rozpoczyna pisanie kodu w przepływie pracy w pętli wewnętrznej. Etap pętli wewnętrznej jest, gdzie deweloperzy definiują wszystko, co dzieje się przed wypchnięciem kodu do repozytorium kodu (na przykład system kontroli źródła, takich jak Git). Po jego zatwierdzono repozytorium wyzwala ciągłą integrację (CI) i pozostałej części przepływu pracy.
+Wszystko zaczyna się od programisty, który rozpoczyna pisanie kodu w przepływie pracy z pętlą wewnętrzną. Etap wewnętrznej pętli polega na tym, że deweloperzy definiują wszystkie elementy, które są wykonywane przed wypchnięciem kodu do repozytorium kodu (na przykład system kontroli źródła, taki jak Git). Po jego zatwierdzeniu repozytorium wyzwala ciągłą integrację (CI) i resztę przepływu pracy.
 
-Pętla wewnętrzna zasadniczo składa się z typowych kroków, takich jak "kod", "uruchom", "test" i "debugowanie", a także dodatkowych kroków potrzebnych tuż przed uruchomieniem aplikacji lokalnie. Jest to proces dewelopera, aby uruchomić i przetestować aplikację jako kontener platformy Docker. Przepływ pracy w pętli wewnętrznej zostaną wyjaśnione w sekcjach, które należy wykonać.
+Pętla wewnętrzna zasadniczo składa się z typowych kroków, takich jak "Code", "Run" "test" i "debug" oraz dodatkowe czynności wymagane bezpośrednio przed uruchomieniem aplikacji lokalnie. Jest to proces programisty służący do uruchamiania i testowania aplikacji jako kontenera Docker. Przepływ pracy w pętli wewnętrznej zostanie wyjaśniony w poniższych sekcjach.
 
-Krok wstecz, aby spojrzeć na przepływ pracy end-to-end, devops przepływu pracy jest czymś więcej niż technologii lub zestawu narzędzi: jest to sposób myślenia, który wymaga ewolucji kulturowej. To ludzie, procesy i odpowiednie narzędzia, aby przyspieszyć i przewidywalność cyklu życia aplikacji. Przedsiębiorstwa, które przyjmują konteneryzowany przepływ pracy zazwyczaj restrukturyzacji swoich organizacji do reprezentowania osób i procesów, które pasują do konteneryzowanego przepływu pracy.
+Po przełączeniu się z powrotem do końca przepływu pracy DevOps przepływ pracy jest większy niż technologia lub zestaw narzędzi: jest to sposób myślenia, który wymaga ewolucji kulturowej. Są one osobami, procesami i odpowiednimi narzędziami, dzięki którym cykl życia aplikacji jest szybszy i bardziej przewidywalny. Przedsiębiorstwa, które przyjmują kontenerowy przepływ pracy, zwykle restrukturyzacją organizacji w celu reprezentowania osób i procesów, które pasują do kontenera przepływu pracy.
 
-Ćwiczenie devops może pomóc zespołom szybciej reagować razem na presję konkurencyjną, zastępując podatne na błędy procesy ręczne automatyzacją, co skutkuje lepszą identyfikowalnością i powtarzalnymi przepływami pracy. Organizacje mogą również wydajniej zarządzać środowiskami i osiągać oszczędności kosztów dzięki połączeniu zasobów lokalnych i w chmurze, a także ściśle zintegrowanym oprzyrządowaniu.
+Praktyczne DevOpse mogą pomóc zespołom szybciej reagować wraz z naciskiem na konkurencyjność, zastępując procesy ręczne podatne na błędy dzięki automatyzacji, co pozwala na ulepszone śledzenie i powtarzalne przepływy pracy. Organizacje mogą również bardziej wydajnie zarządzać środowiskami i zwiększać oszczędności kosztów dzięki połączeniu zasobów lokalnych i w chmurze oraz ściśle zintegrowanych narzędzi.
 
-Podczas implementowania przepływu pracy DevOps dla aplikacji platformy Docker, zobaczysz, że technologie platformy Docker są obecne na prawie każdym etapie przepływu pracy, z pola rozwoju podczas pracy w pętli wewnętrznej (kod, uruchom, debugowania), fazy kompilacji test-CI i, na koniec wdrożenie tych kontenerów do środowisk przejściowych i produkcyjnych.
+Podczas implementowania przepływu pracy DevOps dla aplikacji platformy Docker zobaczysz, że technologie platformy Docker są obecne na prawie każdym etapie przepływu pracy, z poziomu pola deweloperskiego podczas pracy w pętli wewnętrznej (kod, uruchamianie, debugowanie), faza Build-test-CI, a wreszcie wdrożenie tych kontenerów w środowiskach przejściowych i produkcyjnych.
 
-Poprawa jakości praktyk pomaga zidentyfikować wady na wczesnym etapie cyklu rozwoju, co zmniejsza koszty ich naprawy. Dołączając środowisko i zależności w obrazie i przyjmując filozofię wdrażania tego samego obrazu w wielu środowiskach, promujesz dyscyplinę wyodrębniania konfiguracji specyficznych dla środowiska, dzięki czemu wdrożenia są bardziej niezawodne.
+Poprawa praktyk dotyczących jakości pomaga identyfikować wady przed wczesnym cyklem rozwoju, co zmniejsza koszt ich rozwiązania. Dzięki dołączeniu środowiska i zależności w obrazie i przyjęciu informacji o wdrażaniu tego samego obrazu w wielu środowiskach podwyższasz dyscyplinę wyodrębniania konfiguracji specyficznych dla środowiska, co sprawia, że wdrożenia są bardziej niezawodne.
 
-Bogate dane uzyskane dzięki skutecznemu instrumentacji (monitorowaniu i diagnostyce) zapewniają wgląd w problemy z wydajnością i zachowanie użytkownika, aby kierować przyszłymi priorytetami i inwestycjami.
+Bogate dane uzyskane za poorednictwem efektywnej Instrumentacji (monitorowanie i Diagnostyka) zapewniają wgląd w problemy z wydajnością i zachowanie użytkowników w celu zaplanowania przyszłych priorytetów i inwestycji.
 
-DevOps należy uznać za podróż, a nie miejsce docelowe. Powinien być wdrażany stopniowo za pomocą odpowiednio ookreślonym zakresem projektów, z których można wykazać sukces, uczyć się i ewoluować.
+DevOps powinna być uważana za podróż, a nie miejsce docelowe. Powinien być wdrażany przyrostowo za pośrednictwem odpowiednich projektów o określonym zakresie, z których można przedstawić sukces, uczyć się i rozwijać.
 
-## <a name="benefits-of-devops-for-containerized-applications"></a>Korzyści z DevOps dla aplikacji konteneryzowanych
+## <a name="benefits-of-devops-for-containerized-applications"></a>Zalety DevOps dla aplikacji kontenerowych
 
-Oto niektóre z najważniejszych korzyści zapewnianych przez solidny przepływ pracy DevOps:
+Poniżej przedstawiono niektóre z najważniejszych korzyści zapewnianych przez pełny przepływ pracy DevOps:
 
-- Dostarczaj oprogramowanie lepszej jakości, szybciej i z lepszą zgodnością.
+- Zapewniaj lepszą jakość oprogramowania, szybsze i bardziej zgodne.
 
-- Napędzaj ciągłe doskonalenie i regulacje wcześniej i bardziej ekonomicznie.
+- Ciągłe ulepszanie i wprowadzanie zmian w sposób ciągły i bardziej ekonomiczny.
 
-- Zwiększenie przejrzystości i współpracy między zainteresowanymi stronami zaangażowanymi w dostarczanie i obsługę oprogramowania.
+- Zwiększ przejrzystość i współpracę między uczestnikami zaangażowanymi w dostarczanie i oprogramowanie operacyjne.
 
-- Kontroluj koszty i efektywniej korzystaj z aprowizowanego zasobu, minimalizując jednocześnie zagrożenia bezpieczeństwa.
+- Kontroluj koszty i wydajniej Wykorzystuj zasoby z obsługą administracyjną, jednocześnie minimalizując zagrożenia bezpieczeństwa.
 
-- Podłącz i dobrze grać z wielu istniejących inwestycji DevOps, w tym inwestycje w open-source.
+- Usługa Plug and Play z wieloma istniejącymi inwestycjami DevOps, w tym inwestycje w funkcję Open Source.
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[następny](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Następny](../Microsoft-platform-tools-containerized-apps/index.md)

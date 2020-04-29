@@ -3,12 +3,12 @@ title: Dane relacyjne a NoSQL
 description: Informacje o relacyjnych i NoSQL danych w aplikacjach natywnych w chmurze
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199989"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507367"
 ---
 # <a name="relational-vs-nosql-data"></a>Dane relacyjne a NoSQL
 
@@ -226,7 +226,7 @@ Azure Cosmos DB oferuje pięć dobrze zdefiniowanych [modeli spójności](https:
 
 **Rysunek 5-16**: Cosmos DB opis poziomu spójności
 
-W artykule w odnoszącym [się do 9-piłkę: Cosmos DB poziomów spójności wyjaśnione](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)Microsoft Cloud, że deweloperzy rozwiązań deweloperskich Jeremy Likeness zapewnia doskonałe wyjaśnienie pięciu modeli.
+W artykule, w którym znajdują [się za 9-piłką: Cosmos DB poziomów spójności wyjaśniono](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), program Microsoft Program Manager Jeremy Likness zapewnia doskonałe wyjaśnienie pięciu modeli.
 
 ### <a name="partitioning"></a>Partycjonowanie
 

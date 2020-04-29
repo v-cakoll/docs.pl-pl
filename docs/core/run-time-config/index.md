@@ -1,45 +1,45 @@
 ---
-title: Opcje konfiguracji w czasie wykonywania
-description: Dowiedz się, jak skonfigurować aplikacje .NET Core przy użyciu ustawień konfiguracji w czasie wykonywania.
+title: Opcje konfiguracji czasu wykonywania
+description: Dowiedz się, jak skonfigurować aplikacje platformy .NET Core za pomocą ustawień konfiguracji czasu wykonywania.
 ms.date: 01/21/2020
-ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399162"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506788"
 ---
-# <a name="net-core-run-time-configuration-settings"></a>Ustawienia konfiguracji środowiska .NET Core w czasie wykonywania
+# <a name="net-core-run-time-configuration-settings"></a>Ustawienia konfiguracji środowiska uruchomieniowego .NET Core
 
-Program .NET Core obsługuje używanie plików konfiguracyjnych i zmiennych środowiskowych w celu skonfigurowania zachowania aplikacji .NET Core w czasie wykonywania. Konfiguracja w czasie wykonywania jest atrakcyjną opcją, jeśli:
+Platforma .NET Core obsługuje używanie plików konfiguracji i zmiennych środowiskowych w celu skonfigurowania zachowania aplikacji .NET Core w czasie wykonywania. Konfiguracja czasu wykonywania jest atrakcyjną opcją, jeśli:
 
-- Nie jesteś właścicielem lub kontrolować kod źródłowy dla aplikacji i dlatego nie można skonfigurować go programowo.
+- Nie jesteś własnością ani nie kontrolujesz kodu źródłowego dla aplikacji, dlatego nie można programowo skonfigurować go.
 
-- Wiele wystąpień aplikacji uruchamia się w tym samym czasie w jednym systemie i chcesz skonfigurować każdy dla optymalnej wydajności.
+- Wiele wystąpień aplikacji jest wykonywanych w tym samym czasie w pojedynczym systemie i chcesz skonfigurować każdą z nich w celu uzyskania optymalnej wydajności.
 
 > [!NOTE]
-> Ta dokumentacja jest w toku. Jeśli zauważysz, że przedstawione tutaj informacje są niekompletne lub niedokładne, [otwórz problem,](https://github.com/dotnet/docs/issues) aby poinformować nas o tym, albo [prześlij żądanie ściągnięcia,](https://github.com/dotnet/docs/pulls) aby rozwiązać problem. Aby uzyskać informacje na temat przesyłania żądań ściągnięcia dla repozytorium dotnet/docs, zobacz [przewodnik współautora](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> Ta dokumentacja jest w toku. Jeśli zauważysz, że informacje przedstawione w tym miejscu są niekompletne lub niedokładne, należy [otworzyć problem](https://github.com/dotnet/docs/issues) , aby poinformować nas o tym lub [przesłać żądanie ściągnięcia](https://github.com/dotnet/docs/pulls) w celu rozwiązania problemu. Informacje o przesyłaniu żądań ściągnięcia dla repozytorium dotnet/docs można znaleźć w [przewodniku współautora](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-Program .NET Core udostępnia następujące mechanizmy konfigurowania zachowania aplikacji w czasie wykonywania:
+Platforma .NET Core udostępnia następujące mechanizmy konfigurowania zachowania aplikacji w czasie wykonywania:
 
-- [Plik runtimeconfig.json](#runtimeconfigjson)
+- [Plik runtimeconfig. JSON](#runtimeconfigjson)
 
-- [MsBuild właściwości](#msbuild-properties)
+- [Właściwości programu MSBuild](#msbuild-properties)
 
 - [Zmienne środowiskowe](#environment-variables)
 
 Niektóre wartości konfiguracji można również ustawić programowo, wywołując <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metodę.
 
-Artykuły w tej sekcji dokumentacji są zorganizowane według kategorii, na przykład [debugowania](debugging-profiling.md) i [wyrzucania elementów bezużytecznych](garbage-collector.md). W stosownych przypadkach opcje konfiguracji są wyświetlane dla plików *runtimeconfig.json,* właściwości MSBuild, zmiennych środowiskowych i, dla odsyłacza, plików *app.config* dla projektów .NET Framework.
+Artykuły w tej sekcji dokumentacji są zorganizowane według kategorii, na przykład [debugowania](debugging-profiling.md) i [wyrzucania elementów bezużytecznych](garbage-collector.md). W stosownych przypadkach opcje konfiguracji są wyświetlane dla plików *runtimeconfig. JSON* , właściwości programu MSBuild, zmiennych środowiskowych i, w przypadku plików z odsyłaczem, *pliku App. config* dla projektów .NET Framework.
 
-## <a name="runtimeconfigjson"></a>runtimeconfig.json
+## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
 
-Po [skonstruowaniu](../tools/dotnet-build.md)projektu w katalogu wyjściowym generowany jest plik *[nazwa_aplikacji].runtimeconfig.json.* Jeśli plik *runtimeconfig.template.json* istnieje w tym samym folderze co plik projektu, wszystkie opcje konfiguracji, które zawiera, są scalane z *plikiem [nazwa_aplikacji].runtimeconfig.json.* Jeśli samodzielnie budujesz aplikację, umieść dowolne opcje konfiguracji w pliku *runtimeconfig.template.json.* Jeśli po prostu używasz aplikacji, wstaw je bezpośrednio do pliku *[nazwa aplikacji].runtimeconfig.json.*
+Po [skompilowaniu](../tools/dotnet-build.md)projektu w katalogu wyjściowym zostanie wygenerowany plik *[nazwa_aplikacji]. runtimeconfig. JSON* . Jeśli plik *runtimeconfig. Template. JSON* istnieje w tym samym folderze co plik projektu, wszystkie opcje konfiguracji, które zawiera, są scalane w pliku *[nazwa_aplikacji]. runtimeconfig. JSON* . Jeśli tworzysz aplikację samodzielnie, umieść wszystkie opcje konfiguracji w pliku *runtimeconfig. Template. JSON* . Jeśli właśnie uruchamiasz aplikację, Wstaw ją bezpośrednio do pliku *[nazwa_aplikacji]. runtimeconfig. JSON* .
 
 > [!NOTE]
-> Plik *[nazwa aplikacji].runtimeconfig.json* zostanie zastąpiony na kolejnych kompilacjach.
+> Plik *[nazwa_aplikacji]. runtimeconfig. JSON* zostanie nadpisany po kolejnych kompilacjach.
 
-Określ opcje konfiguracji w czasie wykonywania w sekcji **configProperties** plików *runtimeconfig.json.* Ta sekcja ma formularz:
+Określ opcje konfiguracji czasu wykonywania w sekcji **configProperties** plików *runtimeconfig. JSON* . Ta sekcja ma postać:
 
 ```json
 "configProperties": {
@@ -48,9 +48,9 @@ Określ opcje konfiguracji w czasie wykonywania w sekcji **configProperties** pl
 }
 ```
 
-### <a name="example-appnameruntimeconfigjson-file"></a>Przykładowy plik [nazwa aplikacji].runtimeconfig.json file
+### <a name="example-appnameruntimeconfigjson-file"></a>Przykład [nazwa_aplikacji]. runtimeconfig. JSON
 
-Jeśli umieszczasz opcje w wyjściowym pliku JSON, `runtimeOptions` zagnieździć je pod właściwością.
+Jeśli umieszczasz opcje w wyjściowym pliku JSON, zastąp je `runtimeOptions` właściwością.
 
 ```json
 {
@@ -69,9 +69,9 @@ Jeśli umieszczasz opcje w wyjściowym pliku JSON, `runtimeOptions` zagnieździ�
 }
 ```
 
-### <a name="example-runtimeconfigtemplatejson-file"></a>Przykładowy plik runtimeconfig.template.json
+### <a name="example-runtimeconfigtemplatejson-file"></a>Przykład pliku runtimeconfig. Template. JSON
 
-Jeśli umieszczasz opcje w pliku JSON szablonu, pomiń właściwość. `runtimeOptions`
+Jeśli umieszczasz opcje w pliku JSON szablonu, Pomiń `runtimeOptions` właściwość.
 
 ```json
 {
@@ -85,9 +85,9 @@ Jeśli umieszczasz opcje w pliku JSON szablonu, pomiń właściwość. `runtimeO
 
 ## <a name="msbuild-properties"></a>właściwości programu MSBuild
 
-Niektóre opcje konfiguracji w czasie wykonywania można ustawić przy użyciu właściwości MSBuild w pliku *csproj* lub *.vbproj* projektów .NET Core w stylu zestawu SDK. Właściwości MSBuild mają pierwszeństwo przed opcjami ustawionymi w pliku *runtimeconfig.template.json.* Zastępują one również wszystkie opcje ustawione w pliku *[nazwa_aplikacji].runtimeconfig.json* w czasie kompilacji.
+Niektóre opcje konfiguracji czasu wykonywania można ustawić przy użyciu właściwości programu MSBuild w pliku *. csproj* lub *. vbproj* projektów .NET Core w stylu zestawu SDK. Właściwości programu MSBuild mają pierwszeństwo przed opcjami ustawionymi w pliku *runtimeconfig. Template. JSON* . Zastąpią także wszystkie opcje ustawione w pliku *[nazwa_aplikacji]. runtimeconfig. JSON* w czasie kompilacji.
 
-Oto przykładowy plik projektu w stylu SDK z właściwościami MSBuild do konfigurowania zachowania w czasie wykonywania:
+Oto przykładowy plik projektu w stylu zestawu SDK z właściwościami MSBuild służący do konfigurowania zachowania w czasie wykonywania:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -106,15 +106,15 @@ Oto przykładowy plik projektu w stylu SDK z właściwościami MSBuild do konfig
 </Project>
 ```
 
-MsBuild właściwości do konfigurowania zachowania w czasie wykonywania są odnotowane w poszczególnych artykułów dla każdego obszaru, na przykład [wyrzucania elementów bezużytecznych](garbage-collector.md).
+Właściwości programu MSBuild służące do konfigurowania zachowania w czasie wykonywania są zanotowane w poszczególnych artykułach dla każdego obszaru, na przykład na [wyrzucaniu elementów bezużytecznych](garbage-collector.md).
 
 ## <a name="environment-variables"></a>Zmienne środowiskowe
 
-Zmiennych środowiskowych może służyć do dostarczania niektórych informacji o konfiguracji w czasie wykonywania. Pokrętła konfiguracji określone jako zmienne środowiskowe mają zazwyczaj prefiks **COMPlus_**.
+Zmienne środowiskowe mogą służyć do dostarczania niektórych informacji o konfiguracji czasu wykonywania. Pokrętła konfiguracji określone jako zmienne środowiskowe zwykle mają prefiks **COMPlus_**.
 
-Zmienne środowiskowe można definiować z Panelu sterowania systemu Windows, w <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> wierszu polecenia lub programowo, wywołując metodę zarówno w systemach Windows, jak i Unix.
+Zmienne środowiskowe można definiować w panelu sterowania systemu Windows, w wierszu polecenia lub programowo poprzez wywołanie <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> metody w systemach Windows i UNIX.
 
-W poniższych przykładach przedstawiono sposób ustawiania zmiennej środowiskowej w wierszu polecenia:
+W poniższych przykładach pokazano, jak ustawić zmienną środowiskową w wierszu polecenia:
 
 ```shell
 # Windows

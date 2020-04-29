@@ -1,78 +1,78 @@
 ---
-title: Analizator przenośności .NET - .NET
-description: Dowiedz się, jak używać narzędzia .NET Portability Analyzer do oceny, jak przenośny kod znajduje się wśród różnych implementacji platformy .NET, w tym .NET Core, .NET Standard, platformy uniwersalnej systemu Windows i platformy Xamarin.
+title: Analizator przenośności .NET — .NET
+description: Dowiedz się, jak używać narzędzia analizatora przenośności platformy .NET do oceniania sposobu, w jaki przenośny kod znajduje się wśród różnych implementacji platformy .NET, w tym .NET Core, .NET Standard, platformy UWP i Xamarin.
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344311"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507536"
 ---
-# <a name="the-net-portability-analyzer"></a>Analizator przenośności .NET
+# <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
-Chcesz, aby Twoje biblioteki obsługiwać wiele platform? Chcesz zobaczyć, ile pracy jest wymagane, aby aplikacja .NET Framework działała na programie .NET Core? [Analizator przenośności platformy .NET](https://github.com/microsoft/dotnet-apiport) jest narzędziem, które analizuje zestawy i udostępnia szczegółowy raport na temat interfejsów API platformy .NET, których brakuje dla aplikacji lub bibliotek, które mają być przenośne na określonych platformach docelowych .NET. Analizator przenośności jest oferowany jako [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), które analizuje jeden zestaw na projekt i jako aplikacja konsoli [ApiPort](https://aka.ms/apiportdownload), która analizuje zestawy przez określone pliki lub katalog.
+Czy chcesz, aby biblioteki obsługiwały wiele platform? Chcesz sprawdzić, ile pracy jest wymagane do uruchomienia aplikacji .NET Framework na platformie .NET Core? [Analizator przenośności .NET](https://github.com/microsoft/dotnet-apiport) to narzędzie, które analizuje zestawy i udostępnia szczegółowy raport dotyczący interfejsów API platformy .NET, których brakuje w przypadku aplikacji lub bibliotek, które mają być przenośne na określonych przeznaczonych dla Ciebie platformach platformy .NET. Analizator przenośności jest oferowany jako [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), które analizuje jeden zestaw na każdy projekt i jako [aplikację konsolową ApiPort](https://aka.ms/apiportdownload), która analizuje zestawy według określonych plików lub katalogów.
 
-Po przekonwertowaniu projektu na nową platformę, taką jak .NET Core, można użyć [narzędzia analizatora interfejsu API](api-analyzer.md) opartego na roslyn do identyfikowania interfejsów API zgłaszających <xref:System.PlatformNotSupportedException> wyjątki i inne problemy ze zgodnością.
+Po przeprowadzeniu konwersji projektu na nową platformę, taką jak .NET Core, można użyć [Narzędzia analizatora interfejsów API](api-analyzer.md) Roslyn, aby identyfikować interfejsy API <xref:System.PlatformNotSupportedException> zgłaszające wyjątki i inne problemy ze zgodnością.
 
-## <a name="common-targets"></a>Wspólne cele
+## <a name="common-targets"></a>Wspólne elementy docelowe
 
-- [.NET Core:](../../core/index.yml)Ma modułową konstrukcję, wykorzystuje side-by-side i cele scenariuszy między platformami. Side-by-side umożliwia przyjęcie nowych wersji .NET Core bez przerywania innych aplikacji. Jeśli twoim celem jest przeniesienie aplikacji do platformy .NET Core obsługującej między platformami, jest to zalecany obiekt docelowy.
-- . [Standard NET:](../../standard/net-standard.md)Zawiera standardowe interfejsy API platformy .NET dostępne we wszystkich implementacjach platformy .NET. Jeśli twoim celem jest, aby biblioteka do uruchomienia na wszystkich platformach obsługiwanych przez platformy .NET, jest to zalecane miejsce docelowe.
-- [ASP.NET Core:](/aspnet/core)Nowoczesna struktura internetowa oparta na programie .NET Core. Jeśli twoim celem jest przeniesienie aplikacji sieci web do platformy .NET Core do obsługi wielu platform, jest to zalecany obiekt docelowy.
-- .NET Core + [Rozszerzenia platformy:](../../core/porting/windows-compat-pack.md)Zawiera interfejsy API .NET Core oprócz pakietu zgodności systemu Windows, który zapewnia wiele dostępnych technologii programu .NET Framework. Jest to zalecany obiekt docelowy przenoszenia aplikacji z programu .NET Framework do platformy .NET Core w systemie Windows.
-- .NET Standard + [Rozszerzenia platformy:](../../core/porting/windows-compat-pack.md)Zawiera interfejsy API .NET Standard oprócz pakietu zgodności systemu Windows, który zapewnia wiele dostępnych technologii programu .NET Framework. Jest to zalecany cel przenoszenia biblioteki z programu .NET Framework do platformy .NET Core w systemie Windows.
+- [.NET Core](../../core/index.yml): ma model modularny, wykorzystuje równolegle i ukierunkowane scenariusze Międzyplatformowe. Obok siebie można zastosować nowe wersje platformy .NET Core bez przerywania innych aplikacji. Jeśli chcesz przenieść aplikację do platformy .NET Core obsługującej wiele platform, jest to zalecany element docelowy.
+- . [Net Standard](../../standard/net-standard.md): zawiera interfejsy API .NET Standard dostępne we wszystkich implementacjach platformy .NET. Jeśli chcesz, aby Twoja biblioteka działała na wszystkich platformach obsługiwanych przez platformę .NET, jest to zalecane.
+- [ASP.NET Core](/aspnet/core): nowoczesne środowisko sieci Web oparte na platformie .NET Core. Jeśli chcesz przenieść aplikację sieci Web do programu .NET Core w celu obsługi wielu platform, jest to zalecane miejsce docelowe.
+- Rozszerzenia platformy .NET Core + [platform](../../core/porting/windows-compat-pack.md): zawierają interfejsy API platformy .NET Core oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia aplikacji z .NET Framework do platformy .NET Core w systemie Windows.
+- Rozszerzenia .NET Standard i [platformy](../../core/porting/windows-compat-pack.md): zawierają interfejsy API .NET Standard oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia biblioteki z .NET Framework do platformy .NET Core w systemie Windows.
 
-## <a name="how-to-use-the-net-portability-analyzer"></a>Jak korzystać z analizatora przenośności .NET
+## <a name="how-to-use-the-net-portability-analyzer"></a>Jak używać analizatora przenośności platformy .NET
 
-Aby rozpocząć korzystanie z analizatora przenoszenia .NET w programie Visual Studio, należy najpierw pobrać i zainstalować rozszerzenie z [programu Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa na programie Visual Studio 2017 i nowszych wersjach. Można go skonfigurować w programie Visual Studio za pomocą **analizy** > **ustawienia analizowania przenośności** i wybierz platformy docelowe, który jest platform .NET/wersje, które chcesz ocenić luki w przenośni w porównaniu z platform/wersji, które bieżącego zestawu jest zbudowany z.
+Aby rozpocząć korzystanie z analizatora przenośności platformy .NET w programie Visual Studio, należy najpierw pobrać i zainstalować rozszerzenie z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa on w programie Visual Studio 2017 i nowszych wersjach. Można ją skonfigurować w programie Visual Studio za pomocą funkcji **Analizuj** > **Ustawienia analizatora przenośności** i wybrać Platformy docelowe, czyli platformy .NET/wersje, które mają oszacować przerwy w korzystaniu z platformy/wersji, z których korzysta bieżący zestaw.
 
-![Zrzut ekranu przedstawiający analizator przenośności.](./media/portability-analyzer/portability-screenshot.png)
+![Zrzut ekranu analizatora przenośności.](./media/portability-analyzer/portability-screenshot.png)
 
-Możesz również użyć aplikacji konsoli ApiPort, pobrać ją z [repozytorium ApiPort](https://aka.ms/apiportdownload). Można użyć `listTargets` opcji polecenia, aby wyświetlić dostępną listę `-t` docelową, a następnie wybrać platformy docelowe, określając lub `--target` polecając opcję.
+Możesz również użyć aplikacji konsolowej ApiPort, pobrać ją z [repozytorium ApiPort](https://aka.ms/apiportdownload). Można użyć `listTargets` opcji polecenia, aby wyświetlić listę dostępnych obiektów docelowych, a następnie wybrać Platformy docelowe przez `-t` określenie `--target` lub opcję polecenia.
 
-### <a name="analyze-portability"></a>Analizowanie przenośności
-Aby przeanalizować cały projekt w programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz pozycję **Analizuj przenośność zestawu**. W przeciwnym razie przejdź do menu **Analizuj** i wybierz polecenie **Analizuj przenośność złożenia**. W tym miejscu wybierz plik wykonywalny lub bibliotekę DLL projektu.
+### <a name="analyze-portability"></a>Analiza przenośności
+Aby analizować cały projekt w programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz pozycję **Analizuj przenośność zestawu**. W przeciwnym razie przejdź do menu **Analizuj** i wybierz pozycję **Analizuj przenośność zestawu**. Z tego miejsca wybierz plik wykonywalny lub DLL projektu.
 
-![Zrzut ekranu przedstawiający analizator przenośności z Eksploratora rozwiązań.](./media/portability-analyzer/portability-solution-explorer.png)
+![Zrzut ekranu analizatora przenośności z Eksplorator rozwiązań.](./media/portability-analyzer/portability-solution-explorer.png)
 
-Można również użyć [aplikacji konsoli ApiPort](https://aka.ms/apiportdownload).
+Możesz również użyć [aplikacji konsolowej ApiPort](https://aka.ms/apiportdownload).
 
 - Wpisz następujące polecenie, aby przeanalizować bieżący katalog:`ApiPort.exe analyze -f .`
-- Aby przeanalizować określoną listę plików dll, wpisz następujące polecenie:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-- Biegnij, `ApiPort.exe -?` aby uzyskać więcej pomocy
+- Aby przeanalizować określoną listę plików DLL, wpisz następujące polecenie:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Uruchom `ApiPort.exe -?` , aby uzyskać więcej pomocy
 
-Zaleca się uwzględnienie wszystkich powiązanych plików exe i dll, które są własnością i chcesz port, i wykluczyć pliki, które zależy od aplikacji, ale nie jesteś właścicielem i nie można port. To daje najbardziej odpowiedni raport przenoszenia.
+Zaleca się zawrzeć wszystkie powiązane pliki exe i dll, które mają być używane, i które mają być używane do portów, a także wykluczenie plików, od których zależy aplikacja, ale nie do portów. Zapewni to najbardziej odpowiedni raport dotyczący przenośności.
 
-### <a name="view-and-interpret-portability-result"></a>Wyświetlanie i interpretowanie wyniku przenoszenia
+### <a name="view-and-interpret-portability-result"></a>Wyświetl i Interpretuj wyniki przenośności
 
-Tylko interfejsy API, które nie są obsługiwane przez platformę docelową są wyświetlane w raporcie.
-Po uruchomieniu analizy w programie Visual Studio zostanie wyświetlene łącze do pliku raportu o przenośności .NET. Jeśli używano [aplikacji konsoli ApiPort,](https://aka.ms/apiportdownload)raport .NET Portability jest zapisywany jako plik w określonym formacie. Wartość domyślna znajduje się w pliku programu Excel (*xlsx*) w bieżącym katalogu.
+W raporcie są wyświetlane tylko interfejsy API, które nie są obsługiwane przez platformę docelową.
+Po uruchomieniu analizy w programie Visual Studio zostanie wyświetlony link do pliku raportu przenośności platformy .NET. Jeśli użyto [aplikacji konsolowej ApiPort](https://aka.ms/apiportdownload), raport dotyczący przenośności platformy .NET jest zapisywany jako plik w określonym formacie. Wartość domyślna to w pliku programu Excel (*xlsx*) w bieżącym katalogu.
 
-#### <a name="portability-summary"></a>Podsumowanie przenoszenia
+#### <a name="portability-summary"></a>Podsumowanie przenośności
 
 ![Zrzut ekranu przedstawiający podsumowanie przenośności.](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
-Sekcja Podsumowanie przenoszenia raportu pokazuje procent przenoszenia dla każdego zestawu uwzględnionego w przebiegu. W poprzednim przykładzie 71,24% interfejsów API programu .NET Framework używanych w `svcutil` aplikacji są dostępne w .NET Core + rozszerzenia platformy. Po uruchomieniu narzędzia .NET Analizator przenośności dla wielu zestawów, każdy zestaw powinien mieć wiersz w raporcie Podsumowanie przenoszenia.
+Sekcja podsumowania przenośności raportu przedstawia wartość procentową przenośności każdego zestawu zawartego w przebiegu. W poprzednim przykładzie 71,24% interfejsów API .NET Framework używanych w `svcutil` aplikacji są dostępne w rozszerzeniach platformy .NET Core + platform. Po uruchomieniu narzędzia analizatora przenośności platformy .NET dla wielu zestawów każdy zestaw powinien mieć wiersz w raporcie podsumowującym przenośność.
 
 #### <a name="details"></a>Szczegóły
 
-![Zrzut ekranu przedstawiający szczegóły przenoszenia.](./media/portability-analyzer/api-catalog-portablility-details.png)
+![Zrzut ekranu przedstawiający szczegóły dotyczące przenośności.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-Sekcja **Szczegóły** raportu zawiera listę interfejsów API, których brakuje w dowolnej z wybranych **platform docelowych**.
+Sekcja **szczegóły** raportu zawiera listę interfejsów API, których brakuje na żadnej z wybranych **platform**.
 
-- Typ obiektu docelowego: typ ma brak interfejsu API z platformy docelowej
-- Element członkowski docelowy: brakuje metody na platformie docelowej
-- Nazwa zestawu: .NET Framework zestawu, w których mieszka brakujący interfejs API.
-- Każda z wybranych platform docelowych jest jedna kolumna, takich jak ".NET Core": "Nie obsługiwane" wartość oznacza, że interfejs API nie jest obsługiwany na tej platformie docelowej.
-- Zalecane zmiany: zalecany interfejs API lub technologia do zmiany. Obecnie to pole jest puste lub nieaktualne dla wielu interfejsów API. Ze względu na dużą liczbę interfejsów API, mamy duże wyzwanie, aby go utrzymać. Szukamy alternatywnych rozwiązań, aby zapewnić klientom pomocne informacje.
+- Typ docelowy: typ ma brakujący interfejs API z platformy docelowej
+- Docelowy element członkowski: brak metody z platformy docelowej
+- Nazwa zestawu: zestaw .NET Framework, w którym znajduje się brakujący interfejs API.
+- Każda z wybranych platform docelowych jest jedną kolumną, taką jak ".NET Core": "nieobsługiwana" oznacza, że interfejs API nie jest obsługiwany na tej platformie docelowej.
+- Zalecane zmiany: zalecany interfejs API lub technologia do zmiany. Obecnie to pole jest puste lub nieaktualne z dużą ilością interfejsów API. Ze względu na dużą liczbę interfejsów API mamy do nich duże wyzwanie. Przeglądamy alternatywne rozwiązania, aby zapewnić klientom przydatne informacje.
 
-#### <a name="missing-assemblies"></a>Brakujące złoża
+#### <a name="missing-assemblies"></a>Brakujące Zestawy
 
 ![Zrzut ekranu przedstawiający brakujące zestawy.](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-W raporcie może znajdować się sekcja Brakujące zestawy. Informuje, że ta lista zestawów odwołuje się do analizowanych zestawów i nie zostały przeanalizowane. Jeśli jest to zestaw, który jesteś właścicielem, dołącz go w analizatora przenoszenia interfejsu API, aby uzyskać szczegółowy raport przenośności na poziomie interfejsu API. Jeśli jest to biblioteka innej firmy, wyszukuje, czy mają nowszą wersję obsługującą platformę docelową. Jeśli tak, rozważ przejście do nowszej wersji. Po pewnym czasie można oczekiwać, że ta lista zawiera wszystkie zestawy innych firm, które zależy od aplikacji i potwierdził, że mają wersję obsługującą platformę docelową.
+W raporcie można znaleźć sekcję brakujące zestawy. Ta sekcja zawiera listę zestawów, do których odwołują się analizowane zestawy i które nie zostały przeanalizowane. Jeśli jest to zestaw, którego jesteś własnym, dołącz go do przebiegu analizatora przenośności interfejsu API, dzięki czemu możesz uzyskać szczegółowy raport dla tego poziomu interfejsu API. Jeśli jest to biblioteka innych firm, sprawdź, czy jest dostępna nowsza wersja, która obsługuje platformę docelową, i rozważ przejście do nowszej wersji. Ostatecznie lista powinna obejmować wszystkie zestawy innych firm, od których zależy aplikacja, która ma wersję obsługującą platformę docelową.
 
-Aby uzyskać więcej informacji na temat analizatora przenoszenia .NET, odwiedź [dokumentację usługi GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) i krótkie spojrzenie na wideo [.NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) Channel 9.
+Aby uzyskać więcej informacji na temat analizatora przenośności platformy .NET, zapoznaj się z [dokumentacją dotyczącą usługi GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) i zapoznaj się z tematem wideo dotyczącego kanału 9 usługi [.NET przenośności](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) .

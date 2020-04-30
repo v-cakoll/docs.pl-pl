@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Hello World - Wprowadzenie do C# interaktywny c# samouczek
+title: Hello world — wprowadzenie do interaktywnego samouczka c#
 metadata:
-  title: Hello World - Wprowadzenie do C# interaktywny c# samouczek
-  description: W tym samouczku użyjesz przeglądarki, aby interaktywnie nauczyć się języka C#. Możesz pisać kod w języku C# i zobaczyć wyniki kompilacji oraz uruchomienia kodu bezpośrednio w przeglądarce.
+  title: Hello world — wprowadzenie do interaktywnego samouczka c#
+  description: W tym samouczku użyjesz przeglądarki, aby poznać język C# interaktywnie. Możesz pisać kod w języku C# i zobaczyć wyniki kompilacji oraz uruchomienia kodu bezpośrednio w przeglądarce.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2018
@@ -11,20 +11,20 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
+  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507012"
+  ms.lasthandoff: 04/30/2020
+  ms.locfileid: "82595913"
 items:
 - durationInMinutes: 1
   content: >
-    Ten samouczek uczy C# interaktywnie, za pomocą przeglądarki do pisania języka C# i zobacz wyniki kompilacji i uruchamiania kodu. Przewodnik zawiera serię lekcji, które rozpoczynają się od programu „Hello World”. Te lekcje umożliwiają poznanie podstaw języka C#.
+    W tym samouczku przedstawiono interaktywnie korzystanie z języka C# przy użyciu przeglądarki do pisania języka C# i wyświetlania wyników kompilowania i uruchamiania kodu. Przewodnik zawiera serię lekcji, które rozpoczynają się od programu „Hello World”. Te lekcje umożliwiają poznanie podstaw języka C#.
 - title: Uruchamianie pierwszego programu w języku C#
   durationInMinutes: 2
   content: >
-    Uruchom poniższy kod w oknie interaktywnym. Wybierz przycisk **Wprowadź tryb ostrości.** Następnie wpisz następujący blok kodu w oknie interaktywnym i wybierz przycisk **Uruchom:**
+    Uruchom poniższy kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym i wybierz polecenie **Uruchom**:
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    Wybierz **pozycję Uruchom** ponownie, aby wyświetlić wyniki.
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki.
 
 
-    Używasz `+` do tworzenia ciągów ze **zmiennych** i **ciągów stałych.** Jest lepszy sposób.
+    Użyto `+` do kompilowania ciągów ze **zmiennych** i **stałych** ciągów. Istnieje lepszy sposób.
 
-    Można umieścić zmienną `{` `}` między i znaków, aby powiedzieć C#, aby zastąpić ten tekst wartością zmiennej.
-
-
-    Nazywa się to [interpolacją ciągów](../../language-reference/tokens/interpolated.md).
+    Można umieścić zmienną między `{` i `}` znakami, aby powiedzieć C#, aby zamienić ten tekst na wartość zmiennej.
 
 
-    Jeśli dodasz `$` przed cytatem otwierającym ciąg, można następnie `aFriend`dołączyć zmienne, takie jak , wewnątrz ciągu między nawiasami klamrowymi. Spróbuj:
+    Jest to nazywane [interpolacją ciągu](../../language-reference/tokens/interpolated.md).
+
+
+    Jeśli dodasz `$` przed cudzysłowem otwierającym ciąg, możesz dołączyć zmienne, takie jak `aFriend`w ciągu między nawiasami klamrowymi. Wypróbuj:
 
 
 
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Wybierz **pozycję Uruchom** ponownie, aby wyświetlić wyniki. Zamiast "Hello {aFriend}" komunikat powinien brzmieć "Hello Maira".
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki. Zamiast "Hello {aFriend}" komunikat powinien mieć wartość "Hello Maira".
 
 
     > [!NOTE]
@@ -130,7 +130,7 @@ items:
     Twoja ostatnia edycja była pierwszym podejściem do tego, co można zrobić z ciągami. Dowiedzmy się więcej.
 
 
-    Nie jesteś ograniczony do pojedynczej zmiennej między nawiasami klamrowymi. Spróbuj tego:
+    Nie ograniczono do pojedynczej zmiennej między nawiasami klamrowymi. Spróbuj tego:
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    Jak eksplorować więcej z ciągów, przekonasz się, że ciągi są więcej niż zbiór listów. Długość ciągu można znaleźć za `Length`pomocą programu . `Length` jest **właściwością** ciągu, która zwraca liczbę znaków w tym ciągu. Dodaj następujący kod u dołu okna interaktywnego:
+    W miarę eksplorowania ciągów można znaleźć, że ciągi są więcej niż kolekcją liter. Można znaleźć długość ciągu przy użyciu `Length`. `Length` jest **właściwością** ciągu, która zwraca liczbę znaków w tym ciągu. Dodaj następujący kod u dołu okna interaktywnego:
 
 
     ```csharp
@@ -158,7 +158,7 @@ items:
 
     > [!TIP]
 
-    > Jest to dobry moment, aby rozejrzeć się samodzielnie. Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie. Wiesz też, jak deklarować zmienne i łączyć ciągi. Poeksperymentuj w oknie interaktywnym. Okno ma funkcję o nazwie **IntelliSense,** która sprawia, że sugestie, co można zrobić. Wpisz `.` a `d` po `firstFriend`w . Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.
+    > Jest to dobry moment, aby rozejrzeć się samodzielnie. Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie. Wiesz też, jak deklarować zmienne i łączyć ciągi. Poeksperymentuj w oknie interaktywnym. Okno zawiera funkcję **IntelliSense** , która udostępnia sugestie dotyczące tego, co można zrobić. Wpisz a `.` po `d` `firstFriend`. Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.
 
 
     > [!NOTE]
@@ -167,12 +167,12 @@ items:
 - title: Więcej zadań z ciągami
   durationInMinutes: 5
   content: >
-    Używasz **metody**, , <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>do drukowania wiadomości. **Metoda** to blok kodu, który implementuje pewne działanie. Ma swoją nazwę, więc możesz uzyskać do niej dostęp.
+    Używasz **metody**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby drukować wiadomości. **Metoda** to blok kodu, który implementuje pewne działanie. Ma swoją nazwę, więc możesz uzyskać do niej dostęp.
 
 
-    Załóżmy, że ciągi mają spacje wiodące lub końcowe, których nie chcesz wyświetlać. Chcesz **przyciąć** spacje z ciągów.
+    Załóżmy, że ciągi zawierają początkowe lub końcowe spacje, które nie mają być wyświetlane. Chcesz **przyciąć** spacje z ciągów.
 
-    Metoda <xref:System.String.Trim%2A> i powiązane <xref:System.String.TrimStart%2A> <xref:System.String.TrimEnd%2A> metody i wykonać tę pracę. Można po prostu użyć tych metod, aby usunąć spacje wiodące i końcowe. Wypróbuj poniższy kod:
+    <xref:System.String.Trim%2A> Metody i powiązane metody <xref:System.String.TrimStart%2A> i <xref:System.String.TrimEnd%2A> wykonują tę czynność. Możesz użyć tych metod, aby usunąć spacje wiodące i końcowe. Wypróbuj poniższy kod:
 
 
     ```csharp
@@ -199,10 +199,13 @@ items:
     ```
 
 
-    Ten przykład wzmacnia kilka ważnych konceptów związanych z pracą z ciągami. Metody manipulujące ciągami zwracają nowe obiekty ciągów zamiast wprowadzać modyfikacje w ciągach źródłowych. Widać, że każde wywołanie `Trim` dowolnej z metod zwraca nowy ciąg, ale nie zmienia oryginalnej wiadomości.
+    Nawiasy `[` kwadratowe `]` i ułatwiają wizualizację `Trim`działań `TrimStart` i `TrimEnd` metod. Nawiasy pokazują, gdzie zaczyna się i kończą się odstępy.
 
 
-    Istnieją inne metody umożliwiające pracę z ciągami. Na przykład prawdopodobnie wcześniej używano polecenia wyszukiwania i zastępowania w edytorze lub edytorze tekstu. Metoda <xref:System.String.Replace%2A> robi coś podobnego w ciągu. Wyszukuje podciąg i zastępuje go innym tekstem. Metoda <xref:System.String.Replace%2A> przyjmuje dwa **parametry**. Są to ciągi pomiędzy nawiasami. Pierwszy ciąg to tekst, który zostanie wyszukany. Drugi ciąg to tekst, którym zostanie zastąpiony wyszukany tekst. Wypróbuj to samodzielnie. Dodaj ten kod. Wpisz go, aby zobaczyć wskazówki, `.Re` jak `sayHello` zacząć wpisywać po zmiennej:
+    Ten przykład wzmacnia kilka ważnych konceptów związanych z pracą z ciągami. Metody manipulujące ciągami zwracają nowe obiekty ciągów zamiast wprowadzać modyfikacje w ciągach źródłowych. Można zobaczyć, że każde wywołanie `Trim` metody zwraca nowy ciąg, ale nie zmienia oryginalnego komunikatu.
+
+
+    Istnieją inne metody umożliwiające pracę z ciągami. Można na przykład użyć polecenia Wyszukaj i Zastąp w edytorze lub Edytor tekstów przed. <xref:System.String.Replace%2A> Metoda wykonuje coś podobnego w ciągu. Wyszukuje podciąg i zastępuje go innym tekstem. Metoda <xref:System.String.Replace%2A> przyjmuje dwa **parametry**. Są to ciągi pomiędzy nawiasami. Pierwszy ciąg to tekst, który zostanie wyszukany. Drugi ciąg to tekst, którym zostanie zastąpiony wyszukany tekst. Wypróbuj to samodzielnie. Dodaj ten kod. Wpisz je w, aby wyświetlić wskazówki po rozpoczęciu `.Re` wpisywania `sayHello` po zmiennej:
 
 
     ```csharp
@@ -218,7 +221,7 @@ items:
     ```
 
 
-    Dwie inne użyteczne metody zmieniają ciąg na WSZYSTKO WIELKIMI LITERAMI lub wszystko małymi literami. Spróbuj użyć następującego kodu. Wpisz go, aby zobaczyć, jak **IntelliSense** zawiera `To`wskazówki, jak zacząć pisać:
+    Dwie inne użyteczne metody zmieniają ciąg na WSZYSTKO WIELKIMI LITERAMI lub wszystko małymi literami. Wypróbuj następujący kod. Wpisz go, aby zobaczyć, w jaki sposób **technologia IntelliSense** udostępnia wskazówki podczas `To`uruchamiania, aby wpisać:
 
 
     ```csharp
@@ -250,7 +253,7 @@ items:
     ```
 
 
-    Metoda <xref:System.String.Contains%2A> zwraca **wartość logiczną**, która informuje o tym, czy wyszukiwany ciąg został odnaleziony. **Wartość logiczna** przechowuje wartość `true` lub `false`. Są one wyświetlane jako dane wyjściowe `True` `False`tekstu, odpowiednio: i , odpowiednio. O **wartościach logicznych** dowiesz się więcej z późniejszej lekcji.
+    Metoda <xref:System.String.Contains%2A> zwraca **wartość logiczną**, która informuje o tym, czy wyszukiwany ciąg został odnaleziony. **Wartość logiczna** przechowuje wartość `true` lub `false`. Gdy są wyświetlane jako dane wyjściowe tekstu, są pisane wielkimi literami: `True` i `False`, odpowiednio. O **wartościach logicznych** dowiesz się więcej z późniejszej lekcji.
 
 
     ***Wyzwanie***
@@ -296,11 +299,11 @@ items:
 
     > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ukończono wprowadzenie "Hello C#" do samouczka języka C#. Możesz wybrać **łącze Numery w języku C#** poniżej, aby rozpocząć następny interaktywny samouczek, lub odwiedź [witrynę platformy .NET,](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) aby pobrać zestaw SDK .NET Core, utworzyć projekt na komputerze i zachować kodowanie. Sekcja "Następne kroki" przenosi cię z powrotem do tych samouczków.
+    Ukończono samouczek "Hello C#" w samouczku do języka C#. Aby uruchomić następny Interaktywny samouczek, możesz wybrać poniższe **numery w języku C#** lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
-    Do dalszej `string` lektury na temat typu:
+    Aby uzyskać więcej informacji na `string` temat typu:
 
-    - [C# Przewodnik programowania temat](../../programming-guide/index.md) [ciągów](../../programming-guide/strings/index.md).
+    - Temat [Przewodnik programowania w języku C#](../../programming-guide/index.md) na [ciągach](../../programming-guide/strings/index.md).
 
-    - [Jak wskazówki dotyczące pracy z ciągami](../../how-to/index.md#working-with-strings).
+    - [Porady dotyczące pracy z ciągami](../../how-to/index.md#working-with-strings).

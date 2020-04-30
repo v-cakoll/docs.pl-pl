@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w bibliotece klas podstawowych
 description: Wyświetla istotne zmiany w podstawowych bibliotekach programu .NET.
 ms.date: 09/20/2019
-ms.openlocfilehash: bc80f27a8a98890a93ad3b99e09ea7ea380d506c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 3356017ee49e7cd42e40234ea2c637fe85db7d71
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158486"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595689"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Podstawowe zmiany w bibliotekach .NET
 
@@ -36,6 +36,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 | [Wersje OpenSSL na macOS](#openssl-versions-on-macos) | 2.1 |
 | [UnauthorizedAccessException zgłoszone przez FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 | [Obsługa wyjątków uszkodzonego stanu procesu nie jest obsługiwana](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
+| [Właściwości UriBuilder nie dołączają już znaków wiodących](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -116,5 +117,9 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***

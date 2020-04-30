@@ -1,59 +1,65 @@
 ---
-title: Zainstaluj .NET Core na SLES 15 - menedżer pakietów - .NET Core
-description: Użyj menedżera pakietów, aby zainstalować pakiet .NET Core SDK i środowisko wykonawcze w sles 15.
+title: Instalowanie programu .NET Core w systemie SLES 15 — Menedżer pakietów — .NET Core
+description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe na SLES 15 przy użyciu Menedżera pakietów.
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 608229447ef8814130c2a42edfc1c11c35ca156c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: be5a21db8c3942bfe8827dfbce41bcf88aec342a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645629"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595664"
 ---
-# <a name="sles-15-package-manager---install-net-core"></a>Menedżer pakietów SLES 15 — instalowanie programu .NET Core
+# <a name="sles-15-package-manager---install-net-core"></a>SLES 15 Package Manager — Instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-W tym artykule opisano sposób instalowania programu .NET Core w sles 15 za pomocą menedżera pakietów.
+W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie SLES 15.
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="add-microsoft-repository-key-and-feed"></a>Dodawanie klucza repozytorium firmy Microsoft i kanału informacyjnego
+## <a name="add-microsoft-repository-key-and-feed"></a>Dodaj klucz i źródło danych repozytorium Microsoft
 
-Przed zainstalowaniem platformy .NET należy:
+Przed zainstalowaniem programu .NET należy:
 
-- Dodaj klucz podpisywania pakietu firmy Microsoft do listy zaufanych kluczy.
-- Dodaj repozytorium do menedżera pakietów.
+- Dodaj klucz podpisywania pakietu Microsoft do listy zaufanych kluczy.
+- Dodaj repozytorium do Menedżera pakietów.
 - Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 
-Otwórz terminal i uruchom następujące polecenie.
+Otwórz Terminal i uruchom następujące polecenie.
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
 ```
 
+Obecnie pakiet instalacyjny usługi Microsoft Repository SLES 15 zainstaluje plik *Microsoft-prod.* Repository w niewłaściwym katalogu, uniemożliwiając użyciu narzędzia zypper znalezienie pakietów .NET Core. Aby rozwiązać ten problem, Utwórz link symboliczny w poprawnym katalogu.
+
+```bash
+sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
+```
+
 ## <a name="install-the-net-core-sdk"></a>Zainstalowany zestaw .NET Core SDK
 
-Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj zestaw SDK .NET Core. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Instalowanie ASP.NET core środowiska uruchomieniowego
+## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
 
-Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj ASP.NET środowisko wykonawcze. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe ASP.NET. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska wykonawczego .NET Core
+## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
 
-Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj środowisko uruchomieniowe .NET Core. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install dotnet-runtime-3.1
@@ -65,7 +71,7 @@ sudo zypper install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
 
-Ta sekcja zawiera informacje na temat typowych błędów, które można uzyskać podczas instalowania programu .NET Core za pomocą menedżera pakietów.
+Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
 
 ### <a name="failed-to-fetch"></a>Nie można pobrać
 

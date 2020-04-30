@@ -1,56 +1,59 @@
 ---
-title: '! (null-wyrozumiały) operator - odwołanie C#'
+title: '! operator (null-łagodniejszej) — odwołanie w C#'
 ms.date: 10/11/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: f3d06dec42ba117cd30dbf4d05fa4a6f594e57e5
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101981"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595952"
 ---
-# <a name="-null-forgiving-operator-c-reference"></a>! (zero-wyrozumiały) operator (odwołanie C#)
+# <a name="-null-forgiving-operator-c-reference"></a>! (null-łagodniejszej) — operator (odwołanie w C#)
 
-Dostępne w języku C# 8.0 i `!` nowszych, operator poprawek bezwysyłkowych jest operatorem wyrozumiałości zerowej. W włączonym [kontekście adnotacji z możliwością null,](../../nullable-references.md#nullable-annotation-context)operator wyrozumiały o wartości null, aby zadeklarować, że wyrażenie `x` typu odwołania nie `null`jest : `x!`. Operator prefiksu dwuobrodczego `!` jest [operatorem logicznego negacji](boolean-logical-operators.md#logical-negation-operator-).
+Dostępne w języku C# 8,0 i nowszych, jednoargumentowy operator przyrostkowy `!` jest operatorem łagodniejszej o wartości null. W włączonym [kontekście dopuszczającym wartość null](../../nullable-references.md#nullable-annotation-context)należy użyć operatora null-łagodniejszej, aby zadeklarować wyrażenie `x` typu referencyjnego `null`nie `x!`jest:. Jednoargumentowy `!` operator prefiksu jest [logicznym operatorem negacji](boolean-logical-operators.md#logical-negation-operator-).
 
-Operator wyrozumiały null nie ma wpływu w czasie wykonywania. Wpływa tylko na analizę przepływu statycznego kompilatora, zmieniając stan zerowy wyrażenia. W czasie wykonywania `x!` wyrażenie ocenia wynik wyrażenia `x`źródłowego .
+Operator null-łagodniejszej nie ma wpływu w czasie wykonywania. Ma wpływ tylko na analizę przepływu statycznego kompilatora przez zmianę stanu null wyrażenia. W czasie wykonywania wyrażenie `x!` oblicza wynik wyrażenia `x`bazowego.
 
-Aby uzyskać więcej informacji na temat funkcji typy odwołań z dopuszczalną wartością null, zobacz [Typy odwołań możliwe do wartości null](../builtin-types/nullable-reference-types.md).
+> [!NOTE]
+> W języku C# 8 operator łagodniejszej ma współdziałanie z [operatorami warunkowymi o wartości null](member-access-operators.md#null-conditional-operators--and-) w nieoczekiwany sposób. Wyrażenie `x?.y!.z` jest analizowane jako `(x?.y)!.z`. Ze względu na `z` to interpretację można `x` ocenić `null`nawet wtedy, gdy jest to <xref:System.NullReferenceException>, co może skutkować.
+
+Aby uzyskać więcej informacji na temat funkcji typów referencyjnych dopuszczających wartość null, zobacz [typy referencyjne dopuszczające wartość null](../builtin-types/nullable-reference-types.md).
 
 ## <a name="examples"></a>Przykłady
 
-Jednym z przypadków użycia operatora null-forgiving jest w testowaniu logiki sprawdzania poprawności argumentu. Rozważmy na przykład następującą klasę:
+Jednym z przypadków użycia operatora null-łagodniejszej jest Testowanie logiki walidacji argumentów. Rozważmy na przykład następujące klasy:
 
 [!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
 
-Za pomocą [mstest test framework](../../../core/testing/unit-testing-with-mstest.md), można utworzyć następujący test dla logiki sprawdzania poprawności w konstruktorze:
+Używając [platformy testów MSTest](../../../core/testing/unit-testing-with-mstest.md), można utworzyć następujący test dla logiki walidacji w konstruktorze:
 
 [!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
 
-Bez operatora wyrozumiałości zerowej kompilator generuje następujące `Warning CS8625: Cannot convert null literal to non-nullable reference type`ostrzeżenie dla poprzedniego kodu: . Za pomocą operatora null-wyrozumiały, `null` informujesz kompilator, że przekazywanie jest oczekiwane i nie powinny być ostrzegane o.
+Bez operatora null łagodniejszej kompilator generuje następujące ostrzeżenie dla poprzedniego kodu: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Za pomocą operatora null-łagodniejszej, należy poinformować kompilator, że oczekiwano `null` , i nie powinien być ostrzegany o.
 
-Można również użyć operatora wyrozumiałości zerowej, `null` gdy na pewno wiadomo, że wyrażenie nie może być, ale kompilator nie zarządza rozpoznać. W poniższym przykładzie, jeśli `IsValid` metoda zwraca `true`, jej argument nie `null` jest i można bezpiecznie wyłuskać go:
+Można również użyć operatora o wartości null-łagodniejszej, gdy wiadomo, że wyrażenie nie może być `null` , ale kompilator nie rozpoznaje tego elementu. W poniższym przykładzie, jeśli metoda zwraca `IsValid` `true`, jego argument nie `null` jest i można bezpiecznie odwoływać się do niego:
 
 [!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 
-Bez operatora wyrozumiałości zerowej kompilator `p.Name` generuje `Warning CS8602: Dereference of a possibly null reference`następujące ostrzeżenie dla kodu: .
+Bez operatora null łagodniejszej kompilator generuje następujące ostrzeżenie dla `p.Name` kodu:. `Warning CS8602: Dereference of a possibly null reference`
 
-Jeśli można `IsValid` zmodyfikować metodę, można użyć [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) atrybut poinformować kompilator, że argument `IsValid` metody nie może być, `null` gdy metoda zwraca: `true`
+`IsValid` Jeśli można zmodyfikować metodę, można użyć atrybutu [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) do informowania kompilatora, że `IsValid` argument metody nie może być `null` , gdy metoda zwraca: `true`
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-W poprzednim przykładzie nie trzeba używać operatora wyrozumiałości zerowej, ponieważ kompilator ma wystarczająco dużo informacji, aby dowiedzieć się, że `p` nie może znajdować `null` się wewnątrz `if` instrukcji. Aby uzyskać więcej informacji na temat atrybutów, które umożliwiają dostarczenie dodatkowych informacji o stanie zerowym zmiennej, zobacz [Uaktualnianie interfejsów API z atrybutami definiuuuujymicy oczekiwania zerowe](../attributes/nullable-analysis.md).
+W poprzednim przykładzie nie trzeba używać operatora o wartości null-łagodniejszej, ponieważ kompilator ma wystarczającą ilość informacji, aby dowiedzieć się, `p` że nie `null` może znajdować się wewnątrz `if` instrukcji. Aby uzyskać więcej informacji o atrybutach, które umożliwiają podanie dodatkowych informacji o stanie null zmiennej, zobacz [uaktualnianie interfejsów API z atrybutami w celu zdefiniowania oczekiwań o wartości null](../attributes/nullable-analysis.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [sekcję operatora z wyrozumiałym o wartości null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) [w wersji roboczej specyfikacji typów odwołań, których nie można unieważnić.](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+Aby uzyskać więcej informacji, zobacz sekcję [operator null-łagodniejszej](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) w [wersji roboczej specyfikacji typów odwołań dopuszczających wartość null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Samouczek: Projektowanie z typami odwołań z dopuszczalnymi do wartości null](../../tutorials/nullable-reference-types.md)
+- [Samouczek: Projektowanie przy użyciu typów referencyjnych dopuszczających wartość null](../../tutorials/nullable-reference-types.md)

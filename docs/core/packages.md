@@ -1,44 +1,44 @@
 ---
-title: Pakiety, metapakiety i struktury — .NET Core
-description: Naucz się terminologii dla pakietów, metapakietów i struktur.
+title: Pakiety, aplikacje i struktury — .NET Core
+description: Poznaj terminologię dotyczącą pakietów, pakietów i struktur.
 author: richlander
-ms.date: 06/20/2016
-ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: a6575226feb71b96f1fe5070406c118081a8cbf0
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398980"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595588"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapakiety i struktury
 
-.NET Core to platforma sofna z pakietów NuGet. Niektóre doświadczenia produktu korzystają z drobnoziarnistej definicji opakowań, podczas gdy inne z gruboziarnistych. Aby pomieścić tę dwoistość, .NET Core jest rozprowadzany jako szczegółowy zestaw pakietów i w grubszych fragmentach z typem pakietu nieformalnie nazywanym [metapakietem.](#metapackages)
+.NET Core to platforma przeprowadzona przez pakiety NuGet. Niektóre z nich korzystają z szczegółowej definicji pakietów, a inne z nich są bardzo duże. Aby zapewnić tę podwójność, program .NET Core jest dystrybuowany jako szczegółowy zestaw pakietów i w grubszych fragmentach z typem pakietu nieformalnie nazywanym [pakietem](#metapackages).
 
-Każdy z pakietów .NET Core obsługuje uruchamianie na wielu implementacjach platformy .NET, reprezentowanych jako struktury. Niektóre z tych struktur są tradycyjne `net46`struktury, jak , który reprezentuje .NET Framework. Innym zestawem są nowe ramy, które można traktować jako "ramy oparte na pakiecie", które ustanawiają nowy model definiowania struktur. Te struktury oparte na pakiecie są w całości tworzone i definiowane jako pakiety, tworząc silną relację między pakietami i strukturami.
+Każdy pakiet .NET Core obsługuje uruchamianie w wielu implementacjach platformy .NET, które są reprezentowane jako struktury. Niektóre z tych platform to tradycyjne struktury, takie jak `net46`, które reprezentują .NET Framework. Innym zestawem są nowe struktury, które mogą być uważane za "struktury oparte na pakietach", które tworzą nowy model do definiowania struktur. Te platformy oparte na pakietach są całkowicie tworzone i definiowane jako pakiety, tworząc silną relację między pakietami i strukturami.
 
 ## <a name="packages"></a>Pakiety
 
-.NET Core jest podzielony na zestaw pakietów, które zapewniają podstawowe, typy danych wyższego poziomu, typy kompozycji aplikacji i typowe narzędzia. Każdy z tych pakietów reprezentuje pojedynczy zestaw o tej samej nazwie. Na przykład [pakiet System.Runtime](https://www.nuget.org/packages/System.Runtime) zawiera system.runtime.dll.
+Platforma .NET Core jest podzielona na zestaw pakietów, które udostępniają elementy pierwotne, typy danych wyższego poziomu, typy kompozycji aplikacji i typowe narzędzia. Każdy z tych pakietów reprezentuje pojedynczy zestaw o tej samej nazwie. Na przykład [pakiet System. Runtime](https://www.nuget.org/packages/System.Runtime) zawiera system. Runtime. dll.
 
-Istnieją zalety definiowania opakowań w sposób szczegółowy:
+Istnieją zalety definiowania pakietów w sposób szczegółowy:
 
-- Opakowania drobnoziarniste mogą być wysyłane zgodnie z własnym harmonogramem przy stosunkowo ograniczonym testowaniu innych opakowań.
-- Pakiety szczegółowe mogą zapewniać różne wsparcie systemu operacyjnego i procesora CPU.
+- Szczegółowe pakiety mogą być dostarczane zgodnie z ich własnymi harmonogramami przy stosunkowo ograniczonym testowaniu innych pakietów.
+- Szczegółowe pakiety mogą zapewnić różne wsparcie dla systemu operacyjnego i procesora CPU.
 - Pakiety szczegółowe mogą mieć zależności specyficzne tylko dla jednej biblioteki.
-- Aplikacje są mniejsze, ponieważ pakiety bez odwołań nie stają się częścią dystrybucji aplikacji.
+- Aplikacje są mniejsze, ponieważ odwołania do pakietów nie staną się częścią dystrybucji aplikacji.
 
-Niektóre z tych korzyści są używane tylko w pewnych okolicznościach. Na przykład pakiety NET Core zazwyczaj będą wysyłane według tego samego harmonogramu z tą samą obsługą platformy. W przypadku obsługi poprawki mogą być dystrybuowane i instalowane jako małe aktualizacje pojedynczego pakietu. Ze względu na wąski zakres zmian, sprawdzania poprawności i czas, aby udostępnić poprawkę jest ograniczona do tego, co jest potrzebne dla jednej biblioteki.
+Niektóre z tych korzyści są używane tylko w pewnych okolicznościach. Na przykład pakiety .NET Core są zwykle dostarczane według tego samego harmonogramu z tą samą obsługą platformy. W przypadku obsługi poprawki mogą być dystrybuowane i instalowane jako małe aktualizacje pojedynczego pakietu. Ze względu na wąski zakres zmian weryfikacja i czas, w którym ma być dostępna poprawka, są ograniczone do tego, co jest potrzebne dla jednej biblioteki.
 
-Poniżej znajduje się lista kluczowych pakietów NuGet dla .NET Core:
+Poniżej znajduje się lista pakietów NuGet klucza dla programu .NET Core:
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - Najbardziej podstawowy pakiet .NET <xref:System.String> <xref:System.Array>Core, w tym <xref:System.Action> <xref:System.Object>, , , i <xref:System.Collections.Generic.IList%601>.
-- [System.Collections](https://www.nuget.org/packages/System.Collections) — zestaw (przede wszystkim) kolekcji <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602>ogólnych, w tym i .
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - Zestaw typów komunikacji sieciowej <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpResponseMessage>HTTP, w tym i .
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - Zestaw typów do odczytu i zapisu do lokalnej <xref:System.IO.File> <xref:System.IO.Directory>lub sieciowej pamięci masowej na dysku, w tym i .
-- [System.Linq](https://www.nuget.org/packages/System.Linq) — zestaw typów do wykonywania `Enumerable` <xref:System.Linq.ILookup%602>zapytań obiektów, w tym i .
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - Zestaw typów do ładowania, sprawdzania i aktywowania <xref:System.Reflection.TypeInfo> <xref:System.Reflection.MethodInfo>typów, w tym <xref:System.Reflection.Assembly>, i .
+- [System. Runtime](https://www.nuget.org/packages/System.Runtime) — najbardziej podstawowy pakiet .NET Core, w tym <xref:System.Object>, <xref:System.String> <xref:System.Array>,, <xref:System.Action>, i <xref:System.Collections.Generic.IList%601>.
+- [System. Collections](https://www.nuget.org/packages/System.Collections) — zestaw ogólnych kolekcji (głównie), w tym <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602>.
+- [System .NET. http](https://www.nuget.org/packages/System.Net.Http) — zestaw typów dla komunikacji sieciowej http, w tym <xref:System.Net.Http.HttpClient> i. <xref:System.Net.Http.HttpResponseMessage>
+- [System. IO. FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) -zestaw typów do odczytu i zapisu do lokalnego lub w sieci magazynu opartego na dyskach, w tym <xref:System.IO.File> i <xref:System.IO.Directory>.
+- [System. LINQ](https://www.nuget.org/packages/System.Linq) — zestaw typów do wykonywania zapytań dotyczących obiektów, w tym `Enumerable` i <xref:System.Linq.ILookup%602>.
+- [System. odbicie](https://www.nuget.org/packages/System.Reflection) — zestaw typów do ładowania, sprawdzania i uaktywniania typów, w tym <xref:System.Reflection.Assembly> <xref:System.Reflection.TypeInfo> i. <xref:System.Reflection.MethodInfo>
 
-Zazwyczaj, zamiast uwzględniać każdy pakiet, łatwiej i bardziej niezawodne jest dołączenie [metapakietu.](#metapackages) Jednak gdy potrzebujesz jednego pakietu, można dołączyć go jak w poniższym przykładzie, który odwołuje się do [pakietu System.Runtime.](https://www.nuget.org/packages/System.Runtime/)
+Zwykle, zamiast dołączania każdego pakietu, jest prostsze i bardziej niezawodne, aby uwzględnić [pakiet](#metapackages). Jeśli jednak potrzebujesz pojedynczego pakietu, możesz dołączyć go tak jak w poniższym przykładzie, który odwołuje się do pakietu [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -53,64 +53,64 @@ Zazwyczaj, zamiast uwzględniać każdy pakiet, łatwiej i bardziej niezawodne j
 
 ## <a name="metapackages"></a>Metapakiety
 
-Metapackage jest konwencją pakietu NuGet do opisywania zestawu pakietów, które mają znaczenie razem. Metapakiet reprezentuje ten zestaw pakietów, czyniąc je zależnościami. Metapackage można opcjonalnie ustanowić ramy dla zestawu pakietów, określając struktury.
+Pakiet jest konwencją pakietu NuGet opisującą zestaw pakietów, które są ze sobą zrozumiałe. Pakietbinding reprezentuje ten zestaw pakietów, tworząc ich zależności. Pakiet może opcjonalnie ustanowić strukturę zestawu pakietów przez określenie struktury.
 
-Poprzednie wersje narzędzi .NET Core (zarówno project.json, jak i csproj-based tools) domyślnie określały zarówno strukturę, jak i metapakiet. Obecnie jednak metapakiet jest niejawnie odwołuje się do platformy docelowej, tak aby każdy metapakiet jest powiązany z platformą docelową. Na przykład `netstandard1.6` framework odwołuje się do metapakietu NetStandard.Library w wersji 1.6.0. Podobnie `netcoreapp2.1` struktura odwołuje się do metapakietu Microsoft.NETCore.App w wersji 2.1.0. Aby uzyskać więcej informacji, zobacz [niejawny pakiet metapakietów niejawnych w sdku .NET Core .](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)
+Poprzednie wersje narzędzi platformy .NET Core (narzędzia oparte na elementach *Project. JSON* i * \*. csproj* ) domyślnie są określane jako struktura i pakiet. Obecnie jest to jednak niejawnie przywoływane przez platformę docelową, dzięki czemu każdy pakiet jest powiązany z platformą docelową. Na przykład `netstandard1.6` struktura odwołuje się do pakietu 1.6.0 w wersji Standard. Library. Podobnie, `netcoreapp2.1` struktura odwołuje się do pakietu Microsoft. servicecore. App Version 2.1.0. Aby uzyskać więcej informacji, zobacz [niejawne odwołanie do pakietu w zestaw .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
-Kierowanie na ramach i niejawnie odwołując się do metapakietu oznacza, że w efekcie dodajesz odwołanie do każdego z jego pakietów zależnych jako pojedynczy gest. Dzięki temu wszystkie biblioteki w tych pakietach są dostępne dla intelliSense (lub podobnego środowiska) i do publikowania aplikacji.
+Kierowanie do struktury i niejawne odwołanie do pakietu oznacza, że w efekcie dodawane jest odwołanie do każdego z jego zależnych pakietów jako jednego gestu. Dzięki temu wszystkie biblioteki w tych pakietach są dostępne dla technologii IntelliSense (lub podobnego środowiska) i do publikowania aplikacji.
 
-Korzystanie z metapakietów ma zalety:
+Istnieją zalety korzystania z pakietów:
 
-- Zapewnia wygodne środowisko użytkownika do odwoływania się do dużego zestawu pakietów drobnoziarnistych.
-- Definiuje zestaw pakietów (w tym określonych wersji), które są testowane i dobrze ze sobą współpracują.
+- Oferuje wygodne środowisko użytkownika umożliwiające odwoływanie się do dużego zestawu szczegółowych pakietów.
+- Definiuje zestaw pakietów (w tym określonych wersji), które są testowane i współdziałające ze sobą.
 
-Metapakiet .NET Standard to:
+Pakiet .NET Standard:
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) — opisuje biblioteki, które są częścią .NET Standard. Dotyczy wszystkich implementacji .NET obsługujących standard .NET (na przykład .NET Framework, .NET Core i Mono). Ustanawia `netstandard` ramy.
+- [Standardowa. Library](https://www.nuget.org/packages/NETStandard.Library) — zawiera opis bibliotek, które są częścią .NET Standard. Dotyczy wszystkich implementacji platformy .NET, które obsługują .NET Standard (na przykład .NET Framework, .NET Core i mono). Ustanawia `netstandard` strukturę.
 
-Klucz .NET Core metapackages są:
+Najważniejsze pakiety podstawowe platformy .NET:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — opisuje biblioteki, które są częścią dystrybucji .NET Core. Ustanawia `.NETCoreApp` ramy. Zależy od mniejszych `NETStandard.Library`.
-- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) — zawiera wszystkie obsługiwane pakiety z ASP.NET Core i Entity Framework Core, z wyjątkiem tych, które zawierają zależności innych firm. Aby uzyskać więcej [informacji, zobacz pakiet metapackage microsoft.AspNetCore.App dla ASP.NET Core.](/aspnet/core/fundamentals/metapackage-app)
-- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) — zawiera wszystkie obsługiwane pakiety z ASP.NET Core, Entity Framework Core oraz zależności wewnętrznych i innych firm używanych przez ASP.NET Core i Entity Framework Core. Zobacz [Microsoft.AspNetCore.All metapackage dla ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage) aby uzyskać więcej informacji.
-- [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — zestaw fasad zgodności, które umożliwiają uruchamianie przenośnych bibliotek klas (PCLs) opartych na mscorlib na komputerze .NET Core.
+- [Microsoft. WebCore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) — zawiera opis bibliotek, które są częścią dystrybucji programu .NET Core. Ustanawia `.NETCoreApp` strukturę. Zależy od mniejszej `NETStandard.Library`liczby.
+- [Microsoft. AspNetCore. app](https://www.nuget.org/packages/Microsoft.AspNetCore.App) — obejmuje wszystkie obsługiwane pakiety z ASP.NET Core i Entity Framework Core z wyjątkiem tych, które zawierają zależności innych firm. Aby uzyskać więcej informacji, zobacz [Microsoft. AspNetCore. App Package for ASP.NET Core](/aspnet/core/fundamentals/metapackage-app) .
+- [Microsoft. AspNetCore. All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) — obejmuje wszystkie obsługiwane pakiety z ASP.NET Core, Entity Framework Core i wewnętrznych i innych zależności używanych przez ASP.NET Core i Entity Framework Core. Aby uzyskać więcej informacji, zobacz [Microsoft. AspNetCore. allbinding dla ASP.NET Core 2. x](/aspnet/core/fundamentals/metapackage) .
+- [Microsoft. rdzeń. Portable. Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — zestaw fasad zgodności, który umożliwia uruchamianie na platformie .NET Core bibliotek klas przenośnych opartych na bibliotece Mscorlib (PCLs).
 
 ## <a name="frameworks"></a>Struktury
 
-Pakiety .NET Core obsługują zestaw struktur czasu wykonywania. Struktury opisują dostępny zestaw interfejsu API (i potencjalnie inne cechy), na których można polegać podczas kierowania danej struktury. Są one wersjonowane w miarę dodawania nowych interfejsów API.
+Pakiety .NET Core każda obsługują zestaw platform środowiska uruchomieniowego. Struktury opisują dostępny zestaw interfejsów API (i potencjalnie inne cechy), na których można polegać podczas określania docelowej danej struktury. Są one w wersji, gdy dodawane są nowe interfejsy API.
 
-Na przykład [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) obsługuje następujące struktury:
+Na przykład [System. IO. FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) obsługuje następujące struktury:
 
-- . NETFramework,Wersja=4.6
-- . NETStandard,Wersja=1.3
+- . NETFramework, Version = 4.6
+- . Standard, Version = 1.3
 - 6 platform Xamarin (na przykład xamarinios10)
 
-Warto kontrastować pierwsze dwa z tych struktur, ponieważ są one przykładami dwóch różnych sposobów definiowania struktur:
+Warto odróżnić pierwsze dwa z tych platform, ponieważ są to przykłady dwóch różnych sposobów definiowania struktur:
 
-- Struktura `.NETFramework,Version=4.6` reprezentuje dostępne interfejsy API w .NET Framework 4.6. Można utworzyć biblioteki skompilowane z zestawami referencyjnymi .NET Framework 4.6, a następnie rozpowszechniać te biblioteki w pakietach NuGet w folderze lib net46. Będzie on używany dla aplikacji, które są przeznaczone dla .NET Framework 4.6 lub które są zgodne z nim. Tak tradycyjnie działały wszystkie struktury.
+- `.NETFramework,Version=4.6` Struktura reprezentuje dostępne interfejsy api w .NET Framework 4,6. Można utworzyć biblioteki skompilowane z zestawami odwołań .NET Framework 4,6, a następnie dystrybuować te biblioteki w pakietach NuGet w folderze net46 lib. Zostanie ona użyta w przypadku aplikacji, które są przeznaczone dla .NET Framework 4,6 lub są zgodne. Jest to sposób, w jaki wszystkie struktury mają tradycyjną pracował.
 
-- Ramy `.NETStandard,Version=1.3` te są ramami opartymi na pakiecie. Opiera się na pakietach, które są przeznaczone dla struktury, aby zdefiniować i udostępnić interfejsy API w zakresie struktury.
+- `.NETStandard,Version=1.3` Struktura jest platformą opartą na pakiecie. Opiera się na pakietach przeznaczonych dla platformy w celu definiowania i uwidaczniania interfejsów API w ramach struktury.
 
-## <a name="package-based-frameworks"></a>Ramy oparte na pakietach
+## <a name="package-based-frameworks"></a>Struktury oparte na pakietach
 
-Istnieje dwukierunkowa relacja między ramami i pakietami. Pierwsza część jest definiowanie interfejsów API dostępnych `netstandard1.3`dla danej struktury, na przykład . Pakiety, `netstandard1.3` które są przeznaczone dla `netstandard1.0`(lub zgodnych `netstandard1.3`struktur, takich jak ) definiują interfejsy API dostępne dla . To może brzmieć jak okrągła definicja, ale tak nie jest. Ze względu na "oparte na pakiecie", definicja interfejsu API dla struktury pochodzi z pakietów. Sama struktura nie definiuje żadnych interfejsów API.
+Istnieje Dwukierunkowa relacja między strukturami i pakietami. Pierwsza część definiuje interfejsy API dostępne dla danej platformy, na przykład `netstandard1.3`. Pakiety docelowe `netstandard1.3` (lub zgodne platformy, takie jak `netstandard1.0`) definiują interfejsy API dostępne dla `netstandard1.3`programu. Może to być tak samo jak w przypadku definicji cyklicznej, ale nie jest to możliwe. Zgodnie z ich definicją interfejsu API dla struktury pochodzi z pakietów. Sama struktura nie definiuje żadnych interfejsów API.
 
-Druga część relacji to wybór zasobu. Pakiety mogą zawierać zasoby dla wielu struktur. Biorąc pod uwagę odwołanie do zestawu pakietów i/lub metapakietów, ramy są potrzebne do `net46` `netstandard1.3`określenia, który składnik aktywów powinien zostać wybrany, na przykład lub . Ważne jest, aby wybrać odpowiedni zasób. Na przykład `net46` zasób prawdopodobnie nie będzie zgodny z .NET Framework 4.0 lub .NET Core 1.0.
+Drugą częścią relacji jest wybór zasobów. Pakiety mogą zawierać zasoby dla wielu struktur. Mając odwołanie do zestawu pakietów i/lub pakietów trwałych, struktura jest niezbędna do określenia, który zasób powinien być wybrany, na przykład `net46` lub. `netstandard1.3` Ważne jest, aby wybrać odpowiedni element zawartości. Na przykład element `net46` zawartości nie może być zgodny z .NET Framework 4,0 lub .net Core 1,0.
 
-Możesz zobaczyć tę relację na poniższej ilustracji. Interfejs *API* jest przeznaczony dla celów i definiuje *ramy*. *Struktura* jest używana do *wyboru zasobów*. *Zasób* zapewnia interfejs API.
+Tę relację można zobaczyć na poniższej ilustracji. Obiekt docelowy *interfejsu API* i definiuje *strukturę*. *Struktura* jest używana do *wyboru elementu zawartości*. Element *zawartości* udostępnia interfejs API.
 
-![Skład ramowy oparty na pakiecie](./media/packages/package-framework.png)
+![Tworzenie struktury opartej na pakiecie](./media/packages/package-framework.png)
 
-Dwie podstawowe struktury oparte na pakiecie używane z .NET Core to:
+Dwie podstawowe struktury oparte na pakietach używane z platformą .NET Core to:
 
 - `netstandard`
 - `netcoreapp`
 
 ### <a name="net-standard"></a>.NET Standard
 
-Struktura .NET Standard[(Target Framework Moniker](../standard/frameworks.md): `netstandard`) reprezentuje interfejsy API zdefiniowane przez i zbudowane na wierzchu [.NET Standard](../standard/net-standard.md). Biblioteki, które są przeznaczone do uruchamiania w wielu programach wykonywania powinny być przeznaczone dla tej struktury. Będą one obsługiwane w dowolnym czasie wykonywania zgodnym ze standardami .NET, takim jak .NET Core, .NET Framework i Mono/Xamarin. Każdy z tych uruchomień obsługuje zestaw wersji .NET Standard, w zależności od tego, które interfejsy API implementują.
+.NET Standard ([moniker struktury docelowej](../standard/frameworks.md): `netstandard`) reprezentuje interfejsy API zdefiniowane przez i utworzone w oparciu o [.NET Standard](../standard/net-standard.md). Biblioteki przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych powinny wskazywać tę strukturę. Będą one obsługiwane w przypadku środowiska uruchomieniowego zgodnego z .NET Standard, takiego jak .NET Core, .NET Framework i mono/Xamarin. Każdy z tych środowisk uruchomieniowych obsługuje zestaw wersji .NET Standard, w zależności od tego, które interfejsy API implementują.
 
-Struktura `netstandard` niejawnie [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) odwołuje się do metapakietu. Na przykład następujący plik projektu MSBuild wskazuje, że obiekt docelowy `netstandard1.6`projektu , który odwołuje się do [ `NETStandard.Library` metapakietu w wersji 1.6.](https://www.nuget.org/packages/NETStandard.Library/1.6.0)
+`netstandard` Struktura niejawnie odwołuje [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) się do pakietu. Na przykład następujący plik projektu MSBuild wskazuje, że obiekty docelowe `netstandard1.6`projektu, które odwołują się do [ `NETStandard.Library` pakietu "wersja 1,6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -120,7 +120,7 @@ Struktura `netstandard` niejawnie [`NETStandard.Library`](https://www.nuget.org/
 </Project>
 ```
 
-Jednak framework i metapackage odwołania w pliku projektu nie trzeba dopasować `<NetStandardImplicitPackageVersion>` i można użyć elementu w pliku projektu, aby określić wersję struktury, która jest niższa niż wersja metapackage. Na przykład następujący plik projektu jest prawidłowy.
+Przez dodanie `<NetStandardImplicitPackageVersion>` elementu do pliku projektu, który niejawnie określa wersję pakietu, można określić wersję platformy, która jest starsza niż wersja pakietu. Element `<NetStandardImplicitPackageVersion>` jest stosowany tylko w przypadku określania wartości docelowej .NET Core i .NET Standard. Na przykład następujący plik projektu jest prawidłowy.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -131,14 +131,14 @@ Jednak framework i metapackage odwołania w pliku projektu nie trzeba dopasować
 </Project>
 ```
 
-To może wydawać `netstandard1.3` się dziwne do celu, ale `NETStandard.Library`użyj wersji 1.6.0 . Jest to prawidłowy przypadek użycia, ponieważ metapakiet `netstandard` utrzymuje obsługę starszych wersji. Może to być przypadek, w którym został znormalizowany w wersji 1.6.0 metapakietu i używać `netstandard` go do wszystkich bibliotek, które są przeznaczone dla różnych wersji. Dzięki takiemu podejściu wystarczy `NETStandard.Library` przywrócić 1.6.0, a nie wcześniejsze wersje.
+Być może wydaje się, że `netstandard1.3` jest on niedziwny, `NETStandard.Library`ale używa wersji 1.6.0. Jest to prawidłowy przypadek użycia, ponieważ pakiet, który obsługuje starsze `netstandard` wersje. Może się tak zdarzyć w przypadku, gdy nastąpi standaryzacja wersja 1.6.0 pakietu, i użycie jej dla wszystkich bibliotek przeznaczonych dla różnych `netstandard` wersji. W tym podejściu należy tylko przywrócić `NETStandard.Library` 1.6.0 i nie starsze wersje.
 
-Odwrotna nie będzie prawidłowa: kierowanie `netstandard1.6` z wersją `NETStandard.Library`1.3.0 . Nie można kierować wyższy framework z niższym metapackage, ponieważ metapakiet niższej wersji nie będzie uwidaczniać żadnych zasobów dla tej wyższej struktury. Schemat wersji metapakietów potwierdza, że metapakiety są zgodne z najwyższą wersją struktury, którą opisują. Na mocy schematu wersji, pierwsza `NETStandard.Library` wersja jest v1.6.0, `netstandard1.6` biorąc pod uwagę, że zawiera aktywa. (W przypadku symetrii w poprzednim przykładzie w tym miejscu jest używany v1.3.0, ale w rzeczywistości nie istnieje).
+Cofnięcie jest nieprawidłowe: Określanie wartości docelowej `netstandard1.6` dla 1.3.0 wersji programu `NETStandard.Library`. Nie można wyprowadzić wyższej struktury z niższym pakietem, ponieważ dolny pakiet wersji nie ujawnia żadnych zasobów dla tej wyższej struktury. Schemat obsługi wersji dla pakietów webpackages potwierdza, że pakiety są zgodne z najwyższą wersją opisywanej platformy. Zgodnie ze schematem przechowywania wersji pierwsza wersja programu `NETStandard.Library` ma wartość v 1.6.0, ponieważ zawiera `netstandard1.6` ona zasoby. (W przypadku symetrii z poprzednim przykładem w tym miejscu jest używana 1.3.0 v, ale nie istnieje.)
 
 ### <a name="net-core-application"></a>Aplikacja .NET Core
 
-Struktura .NET Core[(Target Framework Moniker](../standard/frameworks.md): `netcoreapp`) reprezentuje pakiety i skojarzone interfejsy API, które są dostępne z dystrybucją .NET Core i model aplikacji konsoli, który zapewnia. Aplikacje .NET Core muszą używać tej struktury ze względu na kierowanie na model aplikacji konsoli, podobnie jak biblioteki, które mają być uruchamiane tylko w usłudze .NET Core. Korzystanie z tej struktury ogranicza aplikacje i biblioteki do uruchamiania tylko w platformie .NET Core.
+Platforma .NET Core ([moniker struktury docelowej](../standard/frameworks.md): `netcoreapp`) reprezentuje pakiety i skojarzone interfejsy API, które są dostarczane z dystrybucją .NET Core oraz modelem aplikacji konsoli, który zapewnia. Aplikacje platformy .NET Core muszą używać tej struktury, ze względu na model aplikacji konsoli, jako że biblioteki, które mają być uruchamiane tylko na platformie .NET Core. Użycie tej struktury ogranicza aplikacje i biblioteki do uruchamiania tylko na platformie .NET Core.
 
-Metapakiet `Microsoft.NETCore.App` jest `netcoreapp` przeznaczony dla struktury. Zapewnia dostęp do ~ 60 bibliotek, ~ `NETStandard.Library` 40 dostarczonych przez pakiet i ~ 20 więcej dodatkowo. Można odwoływać się do `netcoreapp` dodatkowych bibliotek, które `netstandard`są przeznaczone dla platform docelowych lub zgodnych, takich jak , aby uzyskać dostęp do dodatkowych interfejsów API.
+Pakiet `Microsoft.NETCore.App` jest przeznaczony dla `netcoreapp` struktury. Zapewnia dostęp do bibliotek ~ 60, ~ 40 dostarczonych przez `NETStandard.Library` pakiet i ~ 20 dodatkowych. W celu uzyskania dostępu do dodatkowych interfejsów `netcoreapp` API można odwoływać się do dodatkowych `netstandard`bibliotek, które są przeznaczone dla platform docelowych lub zgodnych.
 
-Większość dodatkowych bibliotek dostarczonych `Microsoft.NETCore.App` przez `netstandard` również miejsce docelowe, biorąc `netstandard` pod uwagę, że ich zależności są spełnione przez inne biblioteki. Oznacza to, że `netstandard` biblioteki mogą również odwoływać się do tych pakietów jako zależności.
+Większość dodatkowych bibliotek dostarczanych przez `Microsoft.NETCore.App` program jest również `netstandard` ukierunkowana na to, że ich zależności `netstandard` są spełnione przez inne biblioteki. Oznacza to, `netstandard` że biblioteki mogą również odwoływać się do tych pakietów jako zależności.

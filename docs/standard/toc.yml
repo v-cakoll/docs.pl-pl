@@ -488,7 +488,11 @@
     - name: Kolekcje bezpieczne wątkowo
       href: collections/thread-safe/
 - name: Wartości numeryczne na platformie .NET
-  href: numerics.md
+  items:
+    - name: Omówienie
+      href: numerics.md
+    - name: Typy obsługujące technikę SIMD
+      href: simd.md
 - name: 'Daty, godziny i strefy czasowe'
   href: datetime/
 - name: Zdarzenia

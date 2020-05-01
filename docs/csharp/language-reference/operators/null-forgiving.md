@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595952"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624881"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-łagodniejszej) — operator (odwołanie w C#)
 
@@ -20,7 +20,7 @@ Dostępne w języku C# 8,0 i nowszych, jednoargumentowy operator przyrostkowy `!
 Operator null-łagodniejszej nie ma wpływu w czasie wykonywania. Ma wpływ tylko na analizę przepływu statycznego kompilatora przez zmianę stanu null wyrażenia. W czasie wykonywania wyrażenie `x!` oblicza wynik wyrażenia `x`bazowego.
 
 > [!NOTE]
-> W języku C# 8 operator łagodniejszej ma współdziałanie z [operatorami warunkowymi o wartości null](member-access-operators.md#null-conditional-operators--and-) w nieoczekiwany sposób. Wyrażenie `x?.y!.z` jest analizowane jako `(x?.y)!.z`. Ze względu na `z` to interpretację można `x` ocenić `null`nawet wtedy, gdy jest to <xref:System.NullReferenceException>, co może skutkować.
+> W języku C# 8 operator łagodniejszej o wartości null kończy listę poprzednich operacji [warunkowych o wartości null](member-access-operators.md#null-conditional-operators--and-) . Na przykład wyrażenie `x?.y!.z` jest analizowane jako `(x?.y)!.z`. Ze względu na tę `z` interpretację, jest `x` oceniane `null`, nawet jeśli jest, co <xref:System.NullReferenceException>może skutkować.
 
 Aby uzyskać więcej informacji na temat funkcji typów referencyjnych dopuszczających wartość null, zobacz [typy referencyjne dopuszczające wartość null](../builtin-types/nullable-reference-types.md).
 

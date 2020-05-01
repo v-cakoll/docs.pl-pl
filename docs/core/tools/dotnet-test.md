@@ -1,21 +1,21 @@
 ---
 title: polecenie testu dotnet
-description: Polecenie testu dotnet służy do wykonywania testów jednostkowych w danym projekcie.
-ms.date: 02/27/2020
-ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+description: Polecenie Test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102749"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624894"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**Ten artykuł dotyczy:** ✔️.NET Core 2.1 SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
-`dotnet test`- Sterownik testowy .NET używany do wykonywania testów jednostkowych.
+`dotnet test`— Sterownik testowy .NET używany do wykonywania testów jednostkowych.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -37,13 +37,13 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet test` jest używane do wykonywania testów jednostkowych w danym projekcie. Polecenie `dotnet test` uruchamia aplikację konsoli testowej aplikacji dla programu runner określoną dla projektu. Test runner wykonuje testy zdefiniowane dla struktury testów jednostkowych (na przykład MSTest, NUnit lub xUnit) i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, test runner zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca wartość 1. Program testowy i biblioteka testów jednostkowych są pakowane jako pakiety NuGet i są przywracane jako zwykłe zależności dla projektu.
+`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. `dotnet test` Polecenie uruchamia aplikację konsolową Test Runner określoną dla projektu. Moduł uruchamiający testy wykonuje testy zdefiniowane dla struktury testów jednostkowych (na przykład MSTest, NUnit lub xUnit) i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1. W przypadku projektów wielowymiarowych testy są uruchamiane dla każdej platformy dostosowanej. Moduł uruchamiający testy i Biblioteka testów jednostkowych są spakowane jako pakiety NuGet i są przywracane jako zwykłe zależności projektu.
 
-Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwykłego elementu, jak widać w poniższym przykładowym pliku projektu:
+Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReference>` elementu, jak pokazano w poniższym przykładowym pliku projektu:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-### <a name="implicit-restore"></a>Niejawne przywracanie
+### <a name="implicit-restore"></a>Przywracanie niejawne
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
@@ -51,25 +51,25 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`PROJECT | SOLUTION`**
 
-  Ścieżka do projektu testowego lub rozwiązania. Jeśli nie zostanie określony, domyślnie jest to bieżący katalog.
+  Ścieżka do projektu testowego lub rozwiązania. Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
 
 ## <a name="options"></a>Opcje
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Użyj niestandardowych kart testowych z określonej ścieżki w przebiegu testu.
+  Użyj niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
 
 - **`--blame`**
 
-  Uruchamia testy w trybie winy. Ta opcja jest przydatna w izolowaniu problematycznych testów, które powodują awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence.xml,* który przechwytuje kolejność wykonywania testów przed awarią.
+  Uruchamia testy w trybie polecenia Blame. Ta opcja jest przydatna do izolowania problematycznych testów, które powodują awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence. XML* , który przechwytuje kolejność testów przed awarią.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`, ale konfiguracja projektu może zastąpić to domyślne ustawienie SDK.
+  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
 
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-  Włącza moduł zbierający dane dla przebiegu testowego. Aby uzyskać więcej informacji, zobacz [Monitorowanie i analizowanie przebiegu testowego](https://aka.ms/vstest-collect).
+  Włącza moduł zbierający dane dla przebiegu testu. Aby uzyskać więcej informacji, zobacz [monitorowanie i analizowanie przebiegu testowego](https://aka.ms/vstest-collect).
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
@@ -77,11 +77,11 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Wyszukuje pliki binarne testów dla określonej [struktury](../../standard/frameworks.md).
+  Wyszukuje pliki binarne testów dla konkretnej [struktury](../../standard/frameworks.md).
 
 - **`--filter <EXPRESSION>`**
 
-  Odfiltrowywają testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [Szczegóły opcji filtru.](#filter-option-details) Aby uzyskać więcej informacji i przykładów dotyczących używania selektywnego filtrowania jednostek, zobacz [Uruchamianie testów jednostkowych selektywnych](../testing/selective-unit-tests.md).
+  Filtruje testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [szczegóły opcji filtrowania](#filter-option-details) . Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
 - **`-h|--help`**
 
@@ -89,39 +89,42 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`--interactive`**
 
-  Umożliwia zatrzymywania polecenia i oczekiwania na dane wejściowe lub akcję użytkownika. Na przykład, aby zakończyć uwierzytelnianie. Dostępne od .NET Core 3.0 SDK.
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję. Na przykład, aby ukończyć uwierzytelnianie. Dostępne od wersji .NET Core 3,0 SDK.
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Określa rejestrator dla wyników testów. W przeciwieństwie do MSBuild, test dotnet nie akceptuje `-l "console;v=d"` skrótów: zamiast używać `-l "console;verbosity=detailed"`.
+  Określa Rejestrator dla wyników testu. W przeciwieństwie do programu MSBuild, test dotnet nie akceptuje skrótów: `-l "console;v=d"` zamiast `-l "console;verbosity=detailed"`używać.
 
 - **`--no-build`**
 
-  Nie tworzy projektu testowego przed jego uruchomieniem. Również niejawnie ustawia `--no-restore` - flaga.
+  Nie kompiluje projektu testowego przed jego uruchomieniem. Również niejawnie ustawia `--no-restore` flagę.
 
 - **`--nologo`**
 
-  Uruchom testy bez wyświetlania banera Microsoft TestPlatform. Dostępne od .NET Core 3.0 SDK.
+  Uruchom testy bez wyświetlania transparentu Microsoft TestPlatform. Dostępne od wersji .NET Core 3,0 SDK.
 
 - **`--no-restore`**
 
-  Nie wykonuje niejawnego przywracania podczas uruchamiania polecenia.
+  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w którym można znaleźć pliki binarne do uruchomienia. Jeśli nie zostanie określona, domyślną ścieżką jest `./bin/<configuration>/<framework>/`.  W przypadku projektów z wieloma `TargetFrameworks` strukturami docelowymi (za pośrednictwem właściwości) należy również zdefiniować `--framework` podczas określania tej opcji.
+  Katalog, w którym można znaleźć pliki binarne do uruchomienia. Jeśli nie zostanie określony, ścieżka domyślna to `./bin/<configuration>/<framework>/`.  W przypadku projektów z wieloma platformami docelowymi ( `TargetFrameworks` za pośrednictwem właściwości) należy również zdefiniować `--framework` , kiedy należy określić tę opcję. `dotnet test`Zawsze uruchamiaj testy z katalogu wyjściowego. Można użyć <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> do korzystania z zasobów testowych w katalogu wyjściowym.
 
 - **`-r|--results-directory <PATH>`**
 
-  Katalog, w którym zostaną umieszczone wyniki testów. Jeśli określony katalog nie istnieje, jest tworzony. Wartość domyślna znajduje `TestResults` się w katalogu zawierającym plik projektu.
+  Katalog, w którym zostaną umieszczone wyniki testu. Jeśli określony katalog nie istnieje, zostanie utworzony. Wartość domyślna znajduje `TestResults` się w katalogu, który zawiera plik projektu.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Docelowy czas wykonywania do przetestowania.
+  Docelowy środowisko uruchomieniowe do przetestowania.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Plik `.runsettings` do użycia do uruchamiania testów. [Konfigurowanie testów jednostkowych `.runsettings` przy użyciu pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  Plik `.runsettings` , który ma być używany do uruchamiania testów. Należy zauważyć, `TargetPlatform` że element (x86 | x64) nie ma wpływu `dotnet test`na. Aby uruchomić testy, które są przeznaczone dla architektury x86, Zainstaluj wersję x86 programu .NET Core. Liczba bitów programu *dotnet. exe* , która znajduje się na ścieżce, będzie używana do uruchamiania testów. Aby uzyskać więcej informacji, zobacz następujące zasoby:
+
+  - [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [Konfigurowanie przebiegu testowego](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -129,15 +132,15 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i . Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- **`RunSettings`** Argumenty
+- **`RunSettings`** argumentu
 
-  Argumenty są `RunSettings` przekazywane jako konfiguracje dla testu. Argumenty są `[name]=[value]` określane jako pary po "-- " (zwróć uwagę na spację po --). Spacja służy do `[name]=[value]` oddzielania wielu par.
+  Argumenty są przekazane jako `RunSettings` konfiguracje dla testu. Argumenty są określane jako `[name]=[value]` pary po "--" (należy zwrócić uwagę na spację po--). Spacja jest używana do rozdzielania wielu `[name]=[value]` par.
 
   Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Aby uzyskać więcej informacji, zobacz [Przekazywanie argumentów RunSettings za pośrednictwem wiersza polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów runsettings przy użyciu wiersza polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Przykłady
 
@@ -153,13 +156,13 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Uruchom testy w projekcie w bieżącym katalogu i wygeneruj plik wyników testu w formacie trx:
+- Uruchom testy w projekcie w bieżącym katalogu i wygeneruj plik wyników testu w formacie TRX:
 
   ```dotnetcli
   dotnet test --logger trx
   ```
 
-- Uruchom testy w projekcie w bieżącym katalogu i zaloguj ze szczegółową szczegółowością do konsoli:
+- Uruchom testy w projekcie w bieżącym katalogu i zaloguj się ze szczegółowymi informacjami o konsoli programu:
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
@@ -171,39 +174,39 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 `<Expression>`ma format `<property><operator><value>[|&<Expression>]`.
 
-`<property>`jest atrybutem `Test Case`. Poniżej przedstawiono właściwości obsługiwane przez popularne struktury testów jednostkowych:
+`<property>`jest atrybutem klasy `Test Case`. Poniżej przedstawiono właściwości obsługiwane przez popularne struktury testów jednostkowych:
 
-| Struktura testów | Obsługiwane właściwości                                                                                      |
+| Platforma testowa | Obsługiwane właściwości                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>Pełna w pełni zakwalifikowanananana nazwa</li><li>Nazwa</li><li>ClassName</li><li>Priorytet</li><li>Kategoria testowa</li></ul> |
-| Xunit          | <ul><li>Pełna w pełni zakwalifikowanananana nazwa</li><li>DisplayName</li><li>Cechy</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>ClassName</li><li>Priorytet</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cech</li></ul>                                   |
 
-Opisuje `<operator>` relację między właściwością a wartością:
+`<operator>` Opisuje relację między właściwością a wartością:
 
 | Operator | Funkcja        |
 | :------: | --------------- |
 | `=`      | Pełna zgodność     |
-| `!=`     | Nie dokładne dopasowanie |
+| `!=`     | Niedokładne dopasowanie |
 | `~`      | Contains        |
 | `!~`     | Nie zawiera    |
 
-`<value>`jest ciągiem. Wszystkie wyszukiwania są niewrażliwe na wielkości liter.
+`<value>`jest ciągiem. Wszystkie wyszukiwania są rozróżniane wielkości liter.
 
-Wyrażenie bez `<operator>` jest automatycznie traktowane `contains` jako `FullyQualifiedName` właściwość na `dotnet test --filter xyz` (na `dotnet test --filter FullyQualifiedName~xyz`przykład jest taka sama jak ).
+Wyrażenie bez `<operator>` elementu jest automatycznie uznawane za Właściwość `contains` on `FullyQualifiedName` (na przykład `dotnet test --filter xyz` jest takie samo jak `dotnet test --filter FullyQualifiedName~xyz`).
 
-Wyrażenia można łączyć z operatorami warunkowymi:
+Wyrażenia mogą być dołączane za pomocą operatorów warunkowych:
 
 | Operator            | Funkcja |
 | ------------------- | -------- |
 | <code>&#124;</code> | LUB       |
 | `&`                 | AND      |
 
-Wyrażenia można ująć w nawiasy podczas korzystania z `(Name~TestMethod1) | (Name~TestMethod2)`operatorów warunkowych (na przykład ).
+Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na przykład `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Aby uzyskać więcej informacji i przykładów dotyczących używania selektywnego filtrowania jednostek, zobacz [Uruchamianie testów jednostkowych selektywnych](../testing/selective-unit-tests.md).
+Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Ramy i cele](../../standard/frameworks.md)
-- [Katalog identyfikatora IDentifier (RID) programu .NET Core](../rid-catalog.md)
-- [Przekazywanie argumentów runsettings za pomocą polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)
+- [Struktury i elementy docelowe](../../standard/frameworks.md)
+- [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)
+- [Przekazywanie argumentów runsettings za poorednictwem wiersza polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

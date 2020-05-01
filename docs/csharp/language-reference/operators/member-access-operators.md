@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 86c8cce79e447bee638e1c5c7cb2fdbc64f630f3
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595900"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624868"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatory i wyrażenia dostępu do składowych (odwołanie w C#)
 
@@ -139,7 +139,7 @@ W powyższym przykładzie, `??` Jeśli nie używasz operatora, `numbers?.Length 
 Operator `?.` dostępu warunkowego o wartości null jest również znany jako operator Elvis.
 
 > [!NOTE]
-> W języku C# 8 operatory warunkowe o wartości null współdziałają z [operatorem łagodniejszej o wartości null](null-forgiving.md) w nieoczekiwany sposób. Na przykład wyrażenie `x?.y!.z` jest analizowane jako `(x?.y)!.z`. Ze względu na tę `z` interpretację, jest `x` oceniane `null`, nawet jeśli jest, co <xref:System.NullReferenceException>może skutkować.
+> W języku C# 8 [operator łagodniejszej o wartości](null-forgiving.md) null kończy listę poprzednich operacji warunkowych o wartości null. Na przykład wyrażenie `x?.y!.z` jest analizowane jako `(x?.y)!.z`. Ze względu na tę `z` interpretację, jest `x` oceniane `null`, nawet jeśli jest, co <xref:System.NullReferenceException>może skutkować.
 
 ### <a name="thread-safe-delegate-invocation"></a>Wywołanie delegowania bezpiecznego wątku
 

@@ -1,22 +1,29 @@
 ---
 title: Uruchamianie selektywnych testów jednostkowych
-description: Jak używać wyrażenia filtru do uruchamiania testów jednostek selektywnych za pomocą polecenia testu dotnet w .NET Core.
+description: Jak używać wyrażenia filtru do uruchamiania selektywnych testów jednostkowych za pomocą polecenia Test dotnet w programie .NET Core.
 author: smadala
-ms.date: 03/22/2017
-ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: e66455b5ac012114c45d998fae11da7ee769fbe2
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543511"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624920"
 ---
 # <a name="running-selective-unit-tests"></a>Uruchamianie selektywnych testów jednostkowych
 
-Za `dotnet test` pomocą polecenia w .NET Core można użyć wyrażenia filtru do uruchamiania testów selektywnych. W tym artykule pokazano, jak filtrować, które testy są uruchamiane. W poniższych `dotnet test`przykładach używa się . Jeśli używasz `vstest.console.exe`, zamień `--filter` na `--testcasefilter:`.
+Za pomocą `dotnet test` polecenia w programie .NET Core można używać wyrażenia filtru do uruchamiania selektywnych testów. W tym artykule pokazano, jak odfiltrować, który test jest uruchamiany. W poniższych przykładach `dotnet test`użyto. Jeśli używasz programu `vstest.console.exe`, Zamień `--filter` na. `--testcasefilter:`
 
-> [!NOTE]
-> Korzystanie z filtrów, które zawierają `*nix` wykrzyknik (!) na wymaga ucieczki, ponieważ `!` jest zarezerwowany. Na przykład ten filtr pomija wszystkie testy, jeśli `dotnet test --filter FullyQualifiedName\!~IntegrationTests`obszar nazw zawiera IntegrationTests: .
-> Zwróć uwagę na ukośnik odwrotny, który poprzedza wykrzyknik.
+## <a name="character-escaping"></a>Znak ucieczki
+
+Użycie filtrów, które zawierają znak wykrzyknika (! `*nix` ), wymaga ucieczki, ponieważ `!` jest zarezerwowany. Na przykład ten filtr pomija wszystkie testy, jeśli przestrzeń nazw zawiera IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+Zwróć uwagę na ukośnik odwrotny poprzedzający wykrzyknik.
+
+Dla `FullyQualifiedName` wartości, które zawierają przecinek dla parametrów typu generycznego, wpisz przecinek `%2C`. Przykład:
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName=MyNamespace.MyTestsClass<ParameterType1%2CParameterType2>.MyTestMethod"
+```
 
 ## <a name="mstest"></a>MSTest
 
@@ -46,22 +53,22 @@ namespace MSTestNamespace
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| `dotnet test --filter Method` | Uruchamia testy, których `FullyQualifiedName` zawiera `Method`. Dostępne `vstest 15.1+`w . |
-| `dotnet test --filter Name~TestMethod1` | Uruchamia testy, `TestMethod1`których nazwa zawiera . |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Uruchamia testy, które `MSTestNamespace.UnitTest1`są w klasie .<br>**Uwaga:** Wartość `ClassName` powinna mieć obszar nazw, więc `ClassName=UnitTest1` nie będzie działać. |
-| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Uruchamia wszystkie `MSTestNamespace.UnitTest1.TestMethod1`testy z wyjątkiem . |
-| `dotnet test --filter TestCategory=CategoryA` | Uruchamia testy, które są `[TestCategory("CategoryA")]`z adnotatorem . |
-| `dotnet test --filter Priority=2` | Uruchamia testy, które są `[Priority(2)]`z adnotatorem .<br>
+| `dotnet test --filter Method` | Uruchamia testy, `FullyQualifiedName` których `Method`zawiera. Dostępne w `vstest 15.1+`. |
+| `dotnet test --filter Name~TestMethod1` | Uruchamia testy, których nazwa `TestMethod1`zawiera. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Uruchamia testy, które znajdują `MSTestNamespace.UnitTest1`się w klasie.<br>**Uwaga:** `ClassName` Wartość powinna mieć przestrzeń nazw, dlatego `ClassName=UnitTest1` nie będzie działała. |
+| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Uruchamia wszystkie testy z `MSTestNamespace.UnitTest1.TestMethod1`wyjątkiem. |
+| `dotnet test --filter TestCategory=CategoryA` | Uruchamia testy, które są opatrzone `[TestCategory("CategoryA")]`adnotacją. |
+| `dotnet test --filter Priority=2` | Uruchamia testy, które są opatrzone `[Priority(2)]`adnotacją.<br>
 
-**Korzystanie z operatorów warunkowych | I&amp;**
+**Używanie operatorów warunkowych | lub&amp;**
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Uruchamia testy, `UnitTest1` `FullyQualifiedName` które `CategoryA`mają **lub** `TestCategory` są . |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Uruchamia testy, `UnitTest1` `FullyQualifiedName` które `CategoryA`mają **i** `TestCategory` jest . |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, `FullyQualifiedName` które `UnitTest1` zawierają `CategoryA` **i** `TestCategory` jest **lub** `Priority` jest 1. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Uruchamia testy, które `UnitTest1` mają `FullyQualifiedName` **lub** `TestCategory` są `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Uruchamia testy, które `UnitTest1` znajdują się w `FullyQualifiedName` **i** `TestCategory` są `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, które zawierają `FullyQualifiedName` `UnitTest1` **i** `TestCategory` is `CategoryA` **lub** `Priority` są 1. |
 
-## <a name="xunit"></a>Xunit
+## <a name="xunit"></a>xUnit
 
 ```csharp
 using Xunit;
@@ -88,26 +95,26 @@ namespace XUnitNamespace
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Uruchamia tylko jeden `XUnitNamespace.TestClass1.Test1`test, . |
-| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Uruchamia wszystkie `XUnitNamespace.TestClass1.Test1`testy z wyjątkiem . |
-| `dotnet test --filter DisplayName~TestClass1` | Uruchamia testy, których `TestClass1`nazwa wyświetlana zawiera . |
+| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Uruchamia tylko jeden test, `XUnitNamespace.TestClass1.Test1`. |
+| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Uruchamia wszystkie testy z `XUnitNamespace.TestClass1.Test1`wyjątkiem. |
+| `dotnet test --filter DisplayName~TestClass1` | Uruchamia testy, których nazwa wyświetlana `TestClass1`zawiera. |
 
-W przykładzie kodu zdefiniowane cechy z `Category` `Priority` kluczami i mogą być używane do filtrowania.
-
-| Wyrażenie | Wynik |
-| ---------- | ------ |
-| `dotnet test --filter XUnit` | Uruchamia testy, których `FullyQualifiedName` zawiera `XUnit`.  Dostępne `vstest 15.1+`w . |
-| `dotnet test --filter Category=CategoryA` | Uruchamia testy, `[Trait("Category", "CategoryA")]`które mają . |
-
-**Korzystanie z operatorów warunkowych | I&amp;**
+W przykładzie kodu, zdefiniowane cechy z kluczami `Category` i `Priority` mogą być używane do filtrowania.
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Uruchamia testy, `TestClass1` `FullyQualifiedName` które `CategoryA`mają **lub** `Category` są . |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Uruchamia testy, `TestClass1` `FullyQualifiedName` które `CategoryA`ma **i** `Category` jest . |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, `FullyQualifiedName` które `TestClass1` zawierają `CategoryA` **i** `Category` jest **lub** `Priority` jest 1. |
+| `dotnet test --filter XUnit` | Uruchamia testy, `FullyQualifiedName` których `XUnit`zawiera.  Dostępne w `vstest 15.1+`. |
+| `dotnet test --filter Category=CategoryA` | Uruchamia testy, które `[Trait("Category", "CategoryA")]`mają. |
 
-## <a name="nunit"></a>Nunit
+**Używanie operatorów warunkowych | lub&amp;**
+
+| Wyrażenie | Wynik |
+| ---------- | ------ |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Uruchamia testy, które `TestClass1` znajdują się w `FullyQualifiedName` **lub** `Category` są `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Uruchamia testy, które `TestClass1` znajdują się w `FullyQualifiedName` **i** `Category` są `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, które zawierają `FullyQualifiedName` `TestClass1` **i** `Category` is `CategoryA` **lub** `Priority` są 1. |
+
+## <a name="nunit"></a>NUnit
 
 ```csharp
 using NUnit.Framework;
@@ -134,17 +141,19 @@ namespace NUnitNamespace
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| `dotnet test --filter Method` | Uruchamia testy, których `FullyQualifiedName` zawiera `Method`. Dostępne `vstest 15.1+`w . |
-| `dotnet test --filter Name~TestMethod1` | Uruchamia testy, `TestMethod1`których nazwa zawiera . |
-| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | Uruchamia testy, które `NUnitNamespace.UnitTest1`są w klasie .<br>
-| `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | Uruchamia wszystkie `NUnitNamespace.UnitTest1.TestMethod1`testy z wyjątkiem . |
-| `dotnet test --filter TestCategory=CategoryA` | Uruchamia testy, które są `[Category("CategoryA")]`z adnotatorem . |
-| `dotnet test --filter Priority=2` | Uruchamia testy, które są `[Priority(2)]`z adnotatorem .<br>
+| `dotnet test --filter Method` | Uruchamia testy, `FullyQualifiedName` których `Method`zawiera. Dostępne w `vstest 15.1+`. |
+| `dotnet test --filter Name~TestMethod1` | Uruchamia testy, których nazwa `TestMethod1`zawiera. |
+| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | Uruchamia testy, które znajdują `NUnitNamespace.UnitTest1`się w klasie.<br>
+| `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | Uruchamia wszystkie testy z `NUnitNamespace.UnitTest1.TestMethod1`wyjątkiem. |
+| `dotnet test --filter TestCategory=CategoryA` | Uruchamia testy, które są opatrzone `[Category("CategoryA")]`adnotacją. |
+| `dotnet test --filter Priority=2` | Uruchamia testy, które są opatrzone `[Priority(2)]`adnotacją.<br>
 
-**Korzystanie z operatorów warunkowych | I&amp;**
+**Używanie operatorów warunkowych | lub&amp;**
 
 | Wyrażenie | Wynik |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Uruchamia testy, `UnitTest1` `FullyQualifiedName` które `CategoryA`mają **lub** `TestCategory` są . |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Uruchamia testy, `UnitTest1` `FullyQualifiedName` które `CategoryA`mają **i** `TestCategory` jest . |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, `FullyQualifiedName` które `UnitTest1` zawierają `CategoryA` **i** `TestCategory` jest **lub** `Priority` jest 1. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Uruchamia testy, które `UnitTest1` mają `FullyQualifiedName` **lub** `TestCategory` są `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Uruchamia testy, które `UnitTest1` znajdują się w `FullyQualifiedName` **i** `TestCategory` są `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Uruchamia testy, które zawierają `FullyQualifiedName` `UnitTest1` **i** `TestCategory` is `CategoryA` **lub** `Priority` są 1. |
+
+Aby uzyskać więcej informacji, zobacz [przypadku testowego Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).

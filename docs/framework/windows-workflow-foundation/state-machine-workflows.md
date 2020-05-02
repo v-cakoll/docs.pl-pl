@@ -2,12 +2,12 @@
 title: Przepływy pracy automatu stanów
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 12f6383a52c7eaf0d66ce6680f66a5df0b314dfd
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 349d7e00616a1c12dac45f24b1c39c1899d8f824
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595939"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728210"
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanym modelem do tworzenia programów. <xref:System.Activities.Statements.StateMachine> Działania, a także <xref:System.Activities.Statements.State> <xref:System.Activities.Statements.Transition>inne działania mogą służyć do kompilowania programów przepływu pracy automatu Stanów. Ten temat zawiera omówienie tworzenia przepływów pracy automatu Stanów.  
@@ -47,7 +47,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. <xref:System.
   
  <xref:System.Activities.Statements.State> Aby dodać i utworzyć przejście w jednym kroku, przeciągnij działanie **stanu** z sekcji **stan automatu** **przybornika** i umieść je w innym stanie w Projektancie przepływu pracy. Gdy przeciągany <xref:System.Activities.Statements.State> jest nad innym <xref:System.Activities.Statements.State>, cztery Trójkąty będą widoczne wokół siebie. <xref:System.Activities.Statements.State> Jeśli <xref:System.Activities.Statements.State> zostanie porzucone na jeden z czterech trójkątów, zostanie dodany do komputera stanu i zostanie utworzone przejście z lokalizacji źródłowej <xref:System.Activities.Statements.State> do porzuconego miejsca docelowego. <xref:System.Activities.Statements.State> Aby uzyskać więcej informacji, zobacz [Projektant działań przejścia](/visualstudio/workflow-designer/transition-activity-designer).  
   
- Aby utworzyć przejście po dodaniu stanu, dostępne są dwie opcje. Pierwsza opcja polega na przeciągnięciu stanu z powierzchni projektanta przepływu pracy i umieszczeniu go na istniejącym stanie i porzucenie go na jednym z punktów upuszczania. Jest to bardzo podobne do metody opisanej w poprzedniej sekcji. Możesz również ustawić wskaźnik myszy nad żądanym stanem źródłowym i przeciągnąć linię do żądanego stanu docelowego.  
+ Aby utworzyć przejście po dodaniu stanu, dostępne są dwie opcje. Pierwsza opcja polega na przeciągnięciu stanu z powierzchni projektanta przepływu pracy i umieszczeniu go na istniejącym stanie i porzucenie go na jednym z punktów upuszczania. Jest to podobne do metody opisanej w poprzedniej sekcji. Możesz również ustawić wskaźnik myszy nad żądanym stanem źródłowym i przeciągnąć linię do żądanego stanu docelowego.  
   
 > [!NOTE]
 > Pojedynczy stan na komputerze stanu może obejmować maksymalnie 76 przejść utworzonych przy użyciu projektanta przepływu pracy. Limit przejść dla stanu dla przepływów pracy utworzonych poza projektantem jest ograniczony tylko przez zasoby systemowe.  
@@ -74,7 +74,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. <xref:System.
  Działanie wykonywane podczas kończenia stanu  
   
  Transition  
- Bezpośrednia relacja między dwoma stanami, która reprezentuje pełną odpowiedź komputera stanu do wystąpienia zdarzenia określonego typu.  
+ Relacja skierowana między dwoma stanami, która reprezentuje pełną odpowiedź komputera stanu do wystąpienia zdarzenia określonego typu.  
   
  Przejście udostępnione  
  Przejście, które udostępnia stan źródłowy i wyzwalacz z co najmniej jednym przejściem, ale ma unikatowy warunek i akcję.  
@@ -83,7 +83,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. <xref:System.
  Działanie wyzwalające, które powoduje wystąpienie przejścia.  
   
  Warunek  
- Ograniczenie, które musi zostać `true` oszacowane po wystąpieniu wyzwalacza, aby można było ukończyć przejście.  
+ Ograniczenie, które musi zostać `true` oszacowane po wystąpieniu wyzwalacza w celu zakończenia przejścia.  
   
  Akcja przejścia  
  Działanie, które jest wykonywane podczas wykonywania pewnego przejścia.  
@@ -98,7 +98,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. <xref:System.
  Stan, który reprezentuje punkt początkowy automatu Stanów.  
   
  Stan końcowy  
- Stan, który reprezentuje zakończenie automatu Stanów.  
+ Stan, który reprezentuje ukończenie automatu Stanów.  
   
 ## <a name="see-also"></a>Zobacz także
 

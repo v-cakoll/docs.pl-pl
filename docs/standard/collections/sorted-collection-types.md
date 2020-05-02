@@ -1,6 +1,6 @@
 ---
 title: Sortowane typów kolekcji
-ms.date: 03/30/2017
+ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - SortedDictionary collection type
@@ -9,44 +9,45 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c948c70a06931f5f93a6f4235585cf7ac94e8533
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711340"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728367"
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
-Klasa, <xref:System.Collections.SortedList?displayProperty=nameWithType> klasa <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> ogólna i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> klasa ogólna <xref:System.Collections.Hashtable> są podobne <xref:System.Collections.Generic.Dictionary%602> do klasy i <xref:System.Collections.IDictionary> klasy ogólnej w tym, że implementują interfejs, ale zachowują swoje elementy w kolejności sortowania według klucza i nie mają o(1) wstawiania i pobierania charakterystyczne tabel mieszania. Trzy klasy mają kilka cech wspólnych:  
-  
-- Wszystkie trzy klasy <xref:System.Collections.IDictionary?displayProperty=nameWithType> implementują interfejs. Dwie klasy ogólne również <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> zaimplementować interfejs ogólny.  
-  
-- Każdy element jest parą klucz/wartość do celów wyliczenia.  
-  
-    > [!NOTE]
-    > Klasa <xref:System.Collections.SortedList> nierodzajowa <xref:System.Collections.DictionaryEntry> zwraca obiekty po wyliczeniu, <xref:System.Collections.Generic.KeyValuePair%602> chociaż dwa typy ogólne zwracają obiekty.  
-  
-- Elementy są sortowane <xref:System.Collections.IComparer?displayProperty=nameWithType> zgodnie z implementacją (dla nieogólnych) <xref:System.Collections.SortedList>lub implementacją <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (dla dwóch klas ogólnych).  
-  
-- Każda klasa zawiera właściwości, które zwracają kolekcje zawierające tylko klucze lub tylko wartości.  
-  
- W poniższej tabeli wymieniono niektóre różnice między dwiema klasami posortowanych list a klasą. <xref:System.Collections.Generic.SortedDictionary%602>  
-  
-|<xref:System.Collections.SortedList>klasa nieogólna i <xref:System.Collections.Generic.SortedList%602> klasa ogólna|<xref:System.Collections.Generic.SortedDictionary%602>klasa ogólna|  
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|Właściwości, które zwracają klucze i wartości są indeksowane, umożliwiając wydajne pobieranie indeksowane.|Brak pobierania indeksowane.|  
-|Pobieranie jest O(log). `n`|Pobieranie jest O(log). `n`|  
-|Wstawianie i usuwanie są`n`na ogół O( ); jednak wstawianie jest O(log) `n`dla danych, które są już w kolejności sortowania, tak aby każdy element jest dodawany na końcu listy. (Zakłada się, że rozmiar nie jest wymagany).)|Wstawianie i usuwanie są `n`O(log).|  
-|Zużywa mniej <xref:System.Collections.Generic.SortedDictionary%602>pamięci niż .|Używa więcej pamięci <xref:System.Collections.SortedList> niż klasy <xref:System.Collections.Generic.SortedList%602> nierodzajowej i klasy ogólnej.|  
-  
- W przypadku posortowanych list lub słowników, które muszą być dostępne jednocześnie z wielu wątków, można dodać logikę sortowania do klasy, która pochodzi od <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
-  
+
+<xref:System.Collections.SortedList?displayProperty=nameWithType> Klasa, Klasa <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> ogólna i Klasa <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> generyczna są podobne do <xref:System.Collections.Hashtable> klasy i klasy <xref:System.Collections.Generic.Dictionary%602> generycznej w tym, że implementują <xref:System.Collections.IDictionary> interfejs, ale zachowują swoje elementy w kolejności sortowania według klucza i nie mają cech o (1) wstawiania i pobierania tabel skrótów. Trzy klasy mają kilka cech wspólnych:
+
+- Wszystkie trzy klasy implementują <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejs. Te dwie klasy ogólne implementują również <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> interfejs ogólny.
+
+- Każdy element jest parą klucz/wartość na potrzeby wyliczenia.
+
+   > [!NOTE]
+   > Klasa niegeneryczna <xref:System.Collections.SortedList> zwraca <xref:System.Collections.DictionaryEntry> obiekty po wyliczeniu, chociaż dwa typy ogólne zwracają <xref:System.Collections.Generic.KeyValuePair%602> obiekty.
+
+- Elementy są sortowane zgodnie z <xref:System.Collections.IComparer?displayProperty=nameWithType> implementacją (niegeneryczną <xref:System.Collections.SortedList>) lub <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementacją (dla dwóch klas ogólnych).
+
+- Każda Klasa zawiera właściwości, które zwracają Kolekcje zawierające tylko te klucze, lub tylko wartości.
+
+W poniższej tabeli wymieniono niektóre różnice między dwiema posortowanymi klasami listy a <xref:System.Collections.Generic.SortedDictionary%602> klasą.
+
+| <xref:System.Collections.SortedList>Klasa niegeneryczna <xref:System.Collections.Generic.SortedList%602> i Klasa ogólna | <xref:System.Collections.Generic.SortedDictionary%602>Klasa ogólna |
+|--|--|
+| Właściwości, które zwracają klucze i wartości są indeksowane, umożliwiając wydajne pobieranie indeksowane. | Brak indeksowanego pobierania. |
+| Pobieranie: O (log `n`). | Pobieranie: O (log `n`). |
+| Wstawianie i usuwanie jest ogólnie O (`n`); jednak wstawianie ma wartość O (log `n`) dla danych, które są już w kolejności sortowania, dzięki czemu każdy element zostanie dodany na końcu listy. (Przyjęto założenie, że zmiana rozmiaru nie jest wymagana). | Wstawianie i usuwanie to O (log `n`). |
+| Używa mniejszej ilości pamięci <xref:System.Collections.Generic.SortedDictionary%602>niż. | Używa większej ilości pamięci niż <xref:System.Collections.SortedList> Klasa nieogólna i Klasa <xref:System.Collections.Generic.SortedList%602> ogólna. |
+
+W przypadku posortowanych list lub słowników, które muszą być dostępne jednocześnie z wielu wątków, można dodać logikę sortowania do klasy, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>która pochodzi od. Podczas rozważania niezmienności, następujące zmienne typy są zgodne z podobną semantyką <xref:System.Collections.Immutable.ImmutableSortedSet%601> sortowania <xref:System.Collections.Immutable.ImmutableSortedDictionary%602>: i.
+
 > [!NOTE]
-> W przypadku wartości, które zawierają własne klucze (na przykład rekordy pracowników, które zawierają numer imion pracownika), można utworzyć kolekcję kluczy, która ma pewne cechy listy i niektóre cechy słownika, wywodząc się z klasy <xref:System.Collections.ObjectModel.KeyedCollection%602> ogólnej.  
-  
- Począwszy od .NET Framework <xref:System.Collections.Generic.SortedSet%601> 4, klasa zapewnia drzewa samorównoważenia, który przechowuje dane w posortowane posortowaniu po wstawienia, usunięcia i wyszukiwania. Ta klasa <xref:System.Collections.Generic.HashSet%601> i klasa <xref:System.Collections.Generic.ISet%601> implementują interfejs.  
-  
-## <a name="see-also"></a>Zobacz też
+> W przypadku wartości, które zawierają własne klucze (na przykład rekordy pracowników, które zawierają numer IDENTYFIKACYJNy pracownika), można utworzyć utworzoną kolekcję, która ma pewne cechy listy i pewne cechy słownika, pobierając z klasy <xref:System.Collections.ObjectModel.KeyedCollection%602> generycznej.
+
+Począwszy od .NET Framework 4, <xref:System.Collections.Generic.SortedSet%601> Klasa udostępnia drzewo z własnym bilansem, które przechowuje dane w kolejności posortowanej po wstawieniu, usunięciu i wyszukiwaniach. Ta klasa i <xref:System.Collections.Generic.HashSet%601> Klasa implementują <xref:System.Collections.Generic.ISet%601> interfejs.
+
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

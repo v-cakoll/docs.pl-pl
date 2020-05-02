@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141156"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728421"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 
@@ -16,7 +16,7 @@ Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w
  Niestandardowy kanał jest stosowany na podstawie istniejącego stosu kanału w celu odnajdywania i punktów końcowych anonsów. W ten sposób nagłówek podpisu jest stosowany dla każdej wysyłanej wiadomości. Podpis jest weryfikowany dla odebranych komunikatów i niezgodnych lub gdy komunikaty nie mają podpisu, komunikaty są usuwane. Aby podpisać i zweryfikować komunikaty, przykład używa certyfikatów.  
   
 ## <a name="discussion"></a>Dyskusji  
- Funkcja WCF jest bardzo rozszerzalna i umożliwia użytkownikom dostosowanie kanałów zgodnie z potrzebami. Przykład implementuje element funkcji odnajdywania bezpiecznego powiązania, który kompiluje bezpieczne kanały. Bezpieczne kanały stosują i weryfikują podpisy komunikatów i są stosowane na podstawie bieżącego stosu.  
+ Funkcja WCF jest rozszerzalna i umożliwia użytkownikom dostosowanie kanałów zgodnie z potrzebami. Przykład implementuje element funkcji odnajdywania bezpiecznego powiązania, który kompiluje bezpieczne kanały. Bezpieczne kanały stosują i weryfikują podpisy komunikatów i są stosowane na podstawie bieżącego stosu.  
   
  Element bezpiecznego powiązania kompiluje bezpieczne fabryki kanałów i odbiorniki kanałów.  
   

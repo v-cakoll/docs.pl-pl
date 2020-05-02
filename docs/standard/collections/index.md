@@ -1,6 +1,6 @@
 ---
 title: Kolekcje i struktury danych
-ms.date: 03/30/2017
+ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
@@ -10,85 +10,109 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 1bc632a7cfdb96967c7fc508e22ca93c1ed9318f
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588649"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728495"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
-Podobne dane często mogą być obsługiwane bardziej efektywnie, gdy przechowywane i manipulowane jako kolekcja. Klasy <xref:System.Array?displayProperty=nameWithType> lub klasy w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Niezmienne przestrzenie nazw, aby dodać, usunąć i zmodyfikować poszczególne elementy lub zakres elementów w kolekcji.  
-  
- Istnieją dwa główne rodzaje kolekcji; kolekcje ogólne i kolekcje nierodowe. Kolekcje ogólne zostały dodane w .NET Framework 2.0 i zapewniają kolekcje, które są bezpieczne dla typu w czasie kompilacji. Z tego powodu kolekcje ogólne zazwyczaj oferują lepszą wydajność. Kolekcje ogólne akceptować parametr typu, gdy są one konstruowane <xref:System.Object> i nie wymagają, aby rzutowane do i z typu podczas dodawania lub usuwania elementów z kolekcji.  Ponadto większość kolekcji ogólnych są obsługiwane w aplikacjach ze Sklepu Windows. Nierodzych kolekcji <xref:System.Object>przechowywania elementów jako , wymagają rzutowania, a większość z tych nie są obsługiwane dla tworzenia aplikacji ze Sklepu Windows. Jednak w starszym kodzie mogą być widoczne kolekcje niegeneralne.  
-  
- Począwszy od .NET Framework 4, <xref:System.Collections.Concurrent> kolekcje w obszarze nazw zapewniają wydajne operacje bezpieczne dla wątków do uzyskiwania dostępu do elementów kolekcji z wielu wątków. Klasy kolekcji niezmienne w System.Collections.Immutable namespace ([Pakiet NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) są z natury wątku bezpieczne, ponieważ operacje są wykonywane na kopii oryginalnej kolekcji i oryginalnej kolekcji nie można modyfikować.  
+
+Podobne dane często można obsługiwać wydajniej, gdy są przechowywane i przetwarzane jako kolekcja. Można <xref:System.Array?displayProperty=nameWithType> użyć klasy lub klas <xref:System.Collections>w,, <xref:System.Collections.Generic> <xref:System.Collections.Concurrent>, i <xref:System.Collections.Immutable> przestrzeni nazw, aby dodawać, usuwać i modyfikować pojedyncze elementy lub zakres elementów w kolekcji.
+
+Istnieją dwa główne typy kolekcji: Kolekcje ogólne i kolekcje inne niż ogólne. Kolekcje ogólne zostały dodane w .NET Framework 2,0 i zapewniają kolekcje, które są bezpieczne dla typów w czasie kompilacji. Z tego względu kolekcje ogólne zazwyczaj oferują lepszą wydajność. Kolekcje ogólne akceptują parametr typu podczas jego konstruowania i nie wymagają rzutowania na <xref:System.Object> typ i z tego typu po dodaniu lub usunięciu elementów z kolekcji.  Ponadto większość ogólnych kolekcji jest obsługiwana w aplikacjach ze sklepu Windows. Kolekcje inne niż ogólne przechowują elementy <xref:System.Object>jako, wymagają rzutowania i większość nie są obsługiwane w przypadku tworzenia aplikacji do sklepu Windows. Nieogólne kolekcje mogą jednak być widoczne w starszym kodzie.
+
+Począwszy od .NET Framework 4, kolekcje w <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają wydajne bezpieczne dla wątków operacje umożliwiające dostęp do elementów kolekcji z wielu wątków. Niezmienne klasy kolekcji w <xref:System.Collections.Immutable> przestrzeni nazw ([pakiet NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) są z natury bezpieczny wątkowo, ponieważ operacje są wykonywane w odniesieniu do kopii oryginalnej kolekcji, a oryginalna kolekcja nie może być modyfikowana.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
-## <a name="common-collection-features"></a>Typowe funkcje kolekcji  
- Wszystkie kolekcje zapewniają metody dodawania, usuwania lub znajdowania elementów w kolekcji. Ponadto wszystkie kolekcje, które bezpośrednio lub <xref:System.Collections.ICollection> pośrednio <xref:System.Collections.Generic.ICollection%601> implementują interfejs lub interfejs współużytkują następujące funkcje:  
-  
-- **Możliwość wyliczenia kolekcji**  
-  
-     .NET Framework kolekcje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zaimplementować lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> włączyć kolekcji do iteracji za pośrednictwem. Wyliczacz można traktować jako ruchomy wskaźnik do dowolnego elementu w kolekcji. [Foreach, w](../../csharp/language-reference/keywords/foreach-in.md) oświadczeniu i [Dla każdego ... Następna instrukcja](../../visual-basic/language-reference/statements/for-each-next-statement.md) użyć modułu <xref:System.Collections.IEnumerable.GetEnumerator%2A> wyliczającego uwidacznianego przez metodę i ukryć złożoność manipulowania moduł wyliczający. Ponadto każda kolekcja, która <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementuje jest uważany za *typ queryable* i mogą być wyszukiwane z LINQ. Zapytania LINQ zapewniają typowy wzorzec dostępu do danych. Są one zazwyczaj bardziej zwięzłe i czytelne niż standardowe `foreach` pętle i zapewniają możliwości filtrowania, zamawiania i grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ do obiektów (Visual Basic),](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [Wprowadzenie do zapytań LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)i [Podstawowe operacje kwerend (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
-  
-- **Możliwość kopiowania zawartości kolekcji do tablicy**  
-  
-     Wszystkie kolekcje mogą być kopiowane do tablicy przy użyciu **CopyTo** metody; jednak kolejność elementów w nowej tablicy opiera się na sekwencji, w której wyliczacz zwraca je. Wynikowa tablica jest zawsze jednowymiarowa z dolną granicą zero.  
-  
- Ponadto wiele klas kolekcji zawiera następujące funkcje:  
-  
-- **Właściwości pojemność i liczba**  
-  
-     Pojemność kolekcji jest liczba elementów może zawierać. Liczba kolekcji jest liczba elementów, które faktycznie zawiera. Niektóre kolekcje ukryć pojemność lub liczbę lub obu.  
-  
-     Większość kolekcji automatycznie rozszerza się w pojemności po osiągnięciu bieżącej pojemności. Pamięć jest ponownie przydzielana, a elementy są kopiowane ze starej kolekcji do nowej. Zmniejsza to kod wymagany do użycia kolekcji; jednak wydajność kolekcji może mieć negatywny wpływ. Na przykład <xref:System.Collections.Generic.List%601>dla <xref:System.Collections.Generic.List%601.Count%2A> , Jeśli <xref:System.Collections.Generic.List%601.Capacity%2A>jest mniejsza niż , dodanie elementu jest operacją O(1). Jeśli pojemność wymaga zwiększenia, aby pomieścić nowy element, dodanie elementu staje się operacją O(n), gdzie n jest <xref:System.Collections.Generic.List%601.Count%2A>. Najlepszym sposobem uniknięcia niskiej wydajności spowodowanej przez wiele ponownych alokacji jest ustawienie początkowej pojemności do szacowanego rozmiaru kolekcji.  
-  
-     A <xref:System.Collections.BitArray> jest szczególnym przypadkiem; jego pojemność jest taka sama jak jego długość, która jest taka sama jak jego liczba.  
-  
-- **Spójna dolna granica**  
-  
-     Dolna granica kolekcji jest indeks jego pierwszy element. Wszystkie indeksowane kolekcje <xref:System.Collections> w przestrzeniach nazw mają dolną granicę zero, co oznacza, że są indeksowane 0. <xref:System.Array>domyślnie ma dolną granicę zera, ale podczas tworzenia wystąpienia klasy **Array** przy <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>użyciu programu .  
-  
-- **Synchronizacja dostępu z wielu wątków** (tylko<xref:System.Collections> klasy).  
-  
-     Niegeneralne typy <xref:System.Collections> kolekcji w obszarze nazw zapewniają pewne bezpieczeństwo wątków z synchronizacją; zazwyczaj narażone przez <xref:System.Collections.ICollection.SyncRoot%2A> <xref:System.Collections.ICollection.IsSynchronized%2A> i członków. Te kolekcje nie są domyślnie bezpieczne dla wątków. Jeśli potrzebujesz skalowalnego i wydajnego dostępu wielowątkowego do <xref:System.Collections.Concurrent> kolekcji, użyj jednej z klas w obszarze nazw lub rozważ użycie kolekcji niezmienne. Aby uzyskać więcej informacji, zobacz [Kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md).  
-  
-<a name="BKMK_Choosingacollection"></a>
-## <a name="choosing-a-collection"></a>Wybór kolekcji  
- Ogólnie rzecz biorąc należy użyć kolekcji ogólnych. W poniższej tabeli opisano niektóre typowe scenariusze kolekcji i klasy kolekcji, których można użyć w tych scenariuszach. Jeśli jesteś nowy w kolekcji ogólnych, ta tabela pomoże Ci wybrać kolekcji ogólnej, która działa najlepiej dla twojego zadania.  
+## <a name="common-collection-features"></a>Wspólne funkcje kolekcji
 
-|Chcę...|Ogólne opcje zbierania|Niegeneryczne opcje zbierania|Bezpieczne dla wątków lub niezmienne opcje zbierania|  
-|-|-|-|-|  
-|Przechowuj towary jako pary klucz/wartość, aby szybko wyszukać według klucza|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Kolekcja par klucz/wartość, które są zorganizowane na podstawie kodu skrótu klucza.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
-|Dostęp do elementów według indeksu|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
-|Używanie elementów typu "pierwszy w pierwszym na wyjęciem" (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
-|Użyj danych Last-In-First-Out (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
-|Dostęp do elementów sekwencyjnie|<xref:System.Collections.Generic.LinkedList%601>|Brak rekomendacji|Brak rekomendacji|  
-|Otrzymuj powiadomienia, gdy elementy zostaną usunięte lub dodane do kolekcji. (implementi <xref:System.ComponentModel.INotifyPropertyChanged> <xref:System.Collections.Specialized.INotifyCollectionChanged>i)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Brak rekomendacji|Brak rekomendacji|  
-|Posortowana kolekcja|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
-|Zestaw funkcji matematycznych|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Brak rekomendacji|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
-  
+Wszystkie kolekcje zapewniają metody dodawania, usuwania lub znajdowania elementów w kolekcji. Ponadto wszystkie kolekcje, które bezpośrednio lub pośrednio implementują <xref:System.Collections.ICollection> interfejs lub <xref:System.Collections.Generic.ICollection%601> interfejs udostępniają te funkcje:
+
+- **Możliwość wyliczenia kolekcji**
+
+    Kolekcje .NET Framework implementują <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> , aby umożliwić iterację kolekcji. Moduł wyliczający może być uważany za przenośny wskaźnik do dowolnego elementu w kolekcji. Instrukcja [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) i [for each... Następna instrukcja](../../visual-basic/language-reference/statements/for-each-next-statement.md) wykorzystuje moduł wyliczający uwidoczniony <xref:System.Collections.IEnumerable.GetEnumerator%2A> przez metodę i ukrywając złożoność manipulowania modułem wyliczającym. Ponadto każda kolekcja, która implementuje <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uznawana za *Typ Queryable* i może być zbadana przy użyciu LINQ. Zapytania LINQ zapewniają wspólny wzorzec uzyskiwania dostępu do danych. Są one zazwyczaj bardziej zwięzłe i czytelne `foreach` niż standardowe pętle oraz umożliwiają filtrowanie, porządkowanie i grupowanie. Zapytania LINQ mogą również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [Introduction to LINQ querys (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)i [podstawowe operacje zapytań (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+
+- **Możliwość kopiowania zawartości kolekcji do tablicy**
+
+    Wszystkie kolekcje można skopiować do tablicy przy użyciu metody **CopyTo** ; Jednak kolejność elementów w nowej tablicy zależy od kolejności, w której moduł wyliczający zwraca te elementy. Tablica wyników jest zawsze jednowymiarowa z dolną granicą zero.
+
+Ponadto wiele klas kolekcji zawiera następujące funkcje:
+
+- **Właściwości pojemności i liczby**
+
+    Pojemność kolekcji to liczba elementów, które może zawierać. Liczba kolekcji to liczba elementów, które faktycznie zawiera. Niektóre kolekcje ukrywają pojemność lub liczbę lub oba te elementy.
+
+    Większość kolekcji zostanie automatycznie rozszerzona o pojemności, gdy osiągnięto bieżącą pojemność. Pamięć zostanie ponownie przyalokowana, a elementy są kopiowane ze starej kolekcji do nowej. Zmniejsza to kod wymagany do korzystania z kolekcji; Jednak może to mieć negatywny wpływ na wydajność kolekcji. Na przykład <xref:System.Collections.Generic.List%601>, jeśli <xref:System.Collections.Generic.List%601.Count%2A> jest mniejsza niż <xref:System.Collections.Generic.List%601.Capacity%2A>, Dodawanie elementu jest operacją o (1). Jeśli pojemność musi zostać zwiększona w celu uwzględnienia nowego elementu, dodanie elementu jest operacją O (`n`), gdzie `n` is. <xref:System.Collections.Generic.List%601.Count%2A> Najlepszym sposobem, aby uniknąć niskiej wydajności spowodowanej przez wiele ponownych alokacji, jest ustawienie początkowej pojemności do szacowanego rozmiaru kolekcji.
+
+    A <xref:System.Collections.BitArray> jest szczególnym przypadkiem; jego pojemność jest taka sama jak jej długość, która jest taka sama jak liczba.
+
+- **Spójna Dolna granica**
+
+    Dolna granica kolekcji jest indeksem jego pierwszego elementu. Wszystkie indeksowane kolekcje w <xref:System.Collections> przestrzeniach nazw mają dolną granicę równą zero, co oznacza, że są one indeksowane. <xref:System.Array>Domyślnie ma dolną granicę równą zero, ale podczas tworzenia wystąpienia klasy **Array** przy użyciu <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>elementu można zdefiniować inną dolną granicę.
+
+- **Synchronizacja w celu uzyskania dostępu z wielu wątków** (<xref:System.Collections> tylko klasy).
+
+    Typy kolekcji nieogólnej w <xref:System.Collections> przestrzeni nazw zapewniają bezpieczeństwo wątku z synchronizacją; zwykle uwidaczniane za <xref:System.Collections.ICollection.SyncRoot%2A> pomocą <xref:System.Collections.ICollection.IsSynchronized%2A> elementów i. Kolekcje te nie są domyślnie bezpieczne dla wątków. Jeśli jest wymagany skalowalny i wydajny dostęp wielowątkowy do kolekcji, użyj jednej z klas w <xref:System.Collections.Concurrent> przestrzeni nazw lub Rozważ użycie niezmiennej kolekcji. Aby uzyskać więcej informacji, zobacz [kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md).
+
+<a name="BKMK_Choosingacollection"></a>
+## <a name="choose-a-collection"></a>Wybierz kolekcję
+
+Ogólnie rzecz biorąc, należy używać kolekcji ogólnych. W poniższej tabeli opisano niektóre typowe scenariusze zbierania danych oraz klasy kolekcji, których można użyć w tych scenariuszach. Jeśli dopiero zaczynasz kolekcje ogólne, ta tabela ułatwi wybór ogólnej kolekcji, która działa najlepiej dla danego zadania.
+
+|Chcę...|Ogólne opcje kolekcji|Opcje kolekcji inne niż ogólne|Opcje kolekcji bezpieczne dla wątków lub niemodyfikowalne|
+|-|-|-|-|
+|Przechowywanie elementów jako par klucz/wartość na potrzeby szybkiego wyszukiwania według klucza|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Kolekcja par klucz/wartość, które są zorganizowane na podstawie kodu skrótu klucza).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|
+|Dostęp do elementów według indeksu|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|
+|Korzystanie z elementów First-In-First-Out (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|
+|Korzystanie z danych — Data ostatniej realizacji (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|
+|Uzyskuj dostęp do elementów sekwencyjnie|<xref:System.Collections.Generic.LinkedList%601>|Brak rekomendacji|Brak rekomendacji|
+|Otrzymuj powiadomienia, gdy elementy są usuwane lub dodawane do kolekcji. (implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Brak rekomendacji|Brak rekomendacji|
+|Posortowana kolekcja|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|
+|Zestaw funkcji matematycznych|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Brak rekomendacji|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|
+
+### <a name="algorithmic-complexity-of-collections"></a>Złożoność algorytmu kolekcji
+
+W przypadku wybrania [klasy kolekcji](selecting-a-collection-class.md)warto rozważać potencjalne wady wydajności. Skorzystaj z poniższej tabeli, aby odwołać się do różnych modyfikowalnych typów kolekcji, porównując w złożoność algorytmu z odpowiadającymi im niezmiennymi odpowiednikami. Często niezmienne typy kolekcji są mniej wydajne, ale zapewniają niezmienności, która jest często ważną korzyścią porównawczą.
+
+| Modyfikowalny                   | Amortyzowany  | Najgorszy przypadek                | Immutable                          | Złożoność |
+|---------------------------|------------|---------------------------|------------------------------------|------------|
+| `Stack<T>.Push`           | O (1)       | O (`n`)                    | `ImmutableStack<T>.Push`           | O (1)       |
+| `Queue<T>.Enqueue`        | O (1)       | O (`n`)                    | `ImmutableQueue<T>.Enqueue`        | O (1)       |
+| `List<T>.Add`             | O (1)       | O (`n`)                    | `ImmutableList<T>.Add`             | O (dziennik `n`) |
+| `List<T>.Item[Int32]`     | O (1)       | O (1)                      | `ImmutableList<T>.Item[Int32]`     | O (dziennik `n`) |
+| `List<T>.Enumerator`      | O (`n`)     | O (`n`)                    | `ImmutableList<T>.Enumerator`      | O (`n`)     |
+| `HashSet<T>.Add`, odnośnik  | O (1)       | O (`n`)                    | `ImmutableHashSet<T>.Add`          | O (dziennik `n`) |
+| `SortedSet<T>.Add`        | O (dziennik `n`) | O (`n`)                    | `ImmutableSortedSet<T>.Add`        | O (dziennik `n`) |
+| `Dictionary<T>.Add`       | O (1)       | O (`n`)                    | `ImmutableDictionary<T>.Add`       | O (dziennik `n`) |
+| `Dictionary<T>`wyszukiwania    | O (1)       | O (1) — lub absolutnie O (`n`) | `ImmutableDictionary<T>`wyszukiwania    | O (dziennik `n`) |
+| `SortedDictionary<T>.Add` | O (dziennik `n`) | O (`n` dziennik `n`)            | `ImmutableSortedDictionary<T>.Add` | O (dziennik `n`) |
+
+A `List<T>` może być efektywnie wyliczany przy użyciu `for` pętli lub `foreach` pętli. `ImmutableList<T>`Jednak program wykonuje niezadowalające zadanie wewnątrz `for` pętli ze względu na czas o (log `n`) dla indeksatora. Wyliczanie `ImmutableList<T>` `foreach` pętli using jest wydajne, ponieważ `ImmutableList<T>` używa drzewa binarnego do przechowywania danych zamiast prostej tablicy, która jest `List<T>` używana. Tablica może być bardzo szybko indeksowana do, natomiast drzewo binarne musi być przewidziane do momentu znalezienia węzła z żądanym indeksem.
+
+Ponadto `SortedSet<T>` ma taką samą złożoność jak `ImmutableSortedSet<T>`. Dzieje się tak, ponieważ oba używają drzew binarnych. Istotną różnicą jest oczywiście `ImmutableSortedSet<T>` użycie niezmiennego drzewa binarnego. Ponieważ `ImmutableSortedSet<T>` oferuje również <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> klasę, która umożliwia mutację, można mieć zarówno niezmienności, jak i wydajność.
+
 <a name="BKMK_RelatedTopics"></a>
-## <a name="related-topics"></a>Tematy pokrewne  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Wybieranie klasy kolekcji](../../../docs/standard/collections/selecting-a-collection-class.md)|W tym artykule opisano różne kolekcje i pomaga wybrać jeden dla scenariusza.|  
-|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Opisuje często używane typy zbierania ogólnego <xref:System.Array?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>nierodzajowego, takie jak , i .|  
-|[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule omówiono użycie typów kolekcji rodzajowych.|  
-|[Porównywanie i sortowanie w kolekcjach](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono użycie porównań równości i porównania sortowania w kolekcjach.|  
-|[Sortowane typów kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje wydajność i charakterystykę posortowanych kolekcji|  
-|[Typy kolekcji tablic wartości funkcji mieszającej i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|W tym artykule opisano funkcje ogólnych i niegenerycznych typów słowników opartych na skrótach.|  
-|[Kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md)|W tym artykule opisano typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> które obsługują bezpieczny i wydajny równoczesny dostęp z wielu wątków.|  
-|System.Collections.Niezmienne|Wprowadza kolekcje niezmienne i zawiera łącza do typów kolekcji.|  
-  
+## <a name="related-topics"></a>Tematy pokrewne
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Wybieranie klasy kolekcji](../../../docs/standard/collections/selecting-a-collection-class.md)|Opisuje różne kolekcje i pomaga wybrać jedną z nich dla danego scenariusza.|
+|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Opisuje powszechnie używane typy ogólnej i nieogólnej kolekcji, <xref:System.Array?displayProperty=nameWithType>takie <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>jak, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, i.|
+|[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|Omawia użycie rodzajowych typów kolekcji.|
+|[Porównania i sortowania w kolekcjach](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Omawia użycie porównania równości i sortowania w kolekcjach.|
+|[Posortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje informacje o wydajności i cechach posortowanych kolekcji|
+|[Typy kolekcji tablic wartości funkcji mieszającej i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje rodzajowych i nieogólnych typów słowników opartych na skrótach.|
+|[Kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> jak <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> i obsługujące bezpieczny i wydajny dostęp współbieżny z wielu wątków.|
+|System. Collections. unzmienna|Wprowadza Niezmienne kolekcje i oferuje linki do typów kolekcji.|
+
 <a name="BKMK_Reference"></a>
-## <a name="reference"></a>Tematy pomocy  
- <xref:System.Array?displayProperty=nameWithType>  
- <xref:System.Collections?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.Specialized?displayProperty=nameWithType>  
- <xref:System.Linq?displayProperty=nameWithType>  
- <xref:System.Collections.Immutable>
+## <a name="reference"></a>Dokumentacja
+<xref:System.Array?displayProperty=nameWithType>
+<xref:System.Collections?displayProperty=nameWithType>
+<xref:System.Collections.Concurrent?displayProperty=nameWithType>
+<xref:System.Collections.Generic?displayProperty=nameWithType>
+<xref:System.Collections.Specialized?displayProperty=nameWithType>
+<xref:System.Linq?displayProperty=nameWithType>
+<xref:System.Collections.Immutable>

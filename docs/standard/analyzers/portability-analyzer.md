@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać narzędzia analizatora przenośności pl
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507536"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728443"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
@@ -27,7 +27,7 @@ Po przeprowadzeniu konwersji projektu na nową platformę, taką jak .NET Core, 
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Jak używać analizatora przenośności platformy .NET
 
-Aby rozpocząć korzystanie z analizatora przenośności platformy .NET w programie Visual Studio, należy najpierw pobrać i zainstalować rozszerzenie z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa on w programie Visual Studio 2017 i nowszych wersjach. Można ją skonfigurować w programie Visual Studio za pomocą funkcji **Analizuj** > **Ustawienia analizatora przenośności** i wybrać Platformy docelowe, czyli platformy .NET/wersje, które mają oszacować przerwy w korzystaniu z platformy/wersji, z których korzysta bieżący zestaw.
+Aby rozpocząć korzystanie z analizatora przenośności platformy .NET w programie Visual Studio, należy najpierw pobrać i zainstalować rozszerzenie z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa on w programie Visual Studio 2017 i nowszych wersjach. Skonfiguruj je w programie Visual Studio za pomocą funkcji **Analizuj** > **Ustawienia analizatora przenośności** i wybierz Platformy docelowe, które są platformami/wersjami platformy .NET, które mają oszacować przerwy w przenośności porównujące z platformą/wersją, z których korzysta bieżący zestaw.
 
 ![Zrzut ekranu analizatora przenośności.](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,7 +67,7 @@ Sekcja **szczegóły** raportu zawiera listę interfejsów API, których brakuje
 - Docelowy element członkowski: brak metody z platformy docelowej
 - Nazwa zestawu: zestaw .NET Framework, w którym znajduje się brakujący interfejs API.
 - Każda z wybranych platform docelowych jest jedną kolumną, taką jak ".NET Core": "nieobsługiwana" oznacza, że interfejs API nie jest obsługiwany na tej platformie docelowej.
-- Zalecane zmiany: zalecany interfejs API lub technologia do zmiany. Obecnie to pole jest puste lub nieaktualne z dużą ilością interfejsów API. Ze względu na dużą liczbę interfejsów API mamy do nich duże wyzwanie. Przeglądamy alternatywne rozwiązania, aby zapewnić klientom przydatne informacje.
+- Zalecane zmiany: zalecany interfejs API lub technologia do zmiany. Obecnie to pole jest puste lub nieaktualne w przypadku wielu interfejsów API. Ze względu na dużą liczbę interfejsów API mamy duże wyzwanie, aby zachować jego aktualność. Przeglądamy alternatywne rozwiązania, aby zapewnić klientom przydatne informacje.
 
 #### <a name="missing-assemblies"></a>Brakujące Zestawy
 

@@ -6,64 +6,64 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "79549597"
 ---
-### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Współużytkowana struktura: zestawy usunięte z pliku Microsoft.AspNetCore.App
+### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Udostępnione środowisko: zestawy usunięte z Microsoft. AspNetCore. App
 
-Począwszy od ASP.NET Core 3.0, ASP.NET Core shared`Microsoft.AspNetCore.App`framework ( ) zawiera tylko zestawy innych firm, które są w pełni opracowane, obsługiwane i obsługiwane przez firmę Microsoft.
+Począwszy od ASP.NET Core 3,0, ASP.NET Core Shared Framework (`Microsoft.AspNetCore.App`) zawiera tylko zestawy pierwszej jednostki, które są w pełni opracowane, obsługiwane i udostępniane przez firmę Microsoft.
 
 #### <a name="change-description"></a>Zmień opis
 
-Pomyśl o zmianie jako o przedefiniowaniu granic dla ASP.NET Core "platformy". Współużytkowana struktura będzie [można utworzyć ze źródła przez nikogo za pośrednictwem usługi GitHub](https://github.com/dotnet/source-build) i będzie nadal oferować istniejące korzyści z platform współużytkowych .NET Core dla aplikacji. Niektóre korzyści obejmują mniejszy rozmiar wdrożenia, scentralizowane poprawki i krótszy czas uruchamiania.
+Należy zastanowić się nad zmianą podczas ponownego definiowania granic dla ASP.NET Core "platformy". Udostępniona platforma będzie [budować Źródło przez każdy za pośrednictwem usługi GitHub](https://github.com/dotnet/source-build) i będzie w dalszym ciągu oferować istniejące zalety platformy .NET Core dla aplikacji. Niektóre korzyści obejmują mniejszy rozmiar wdrożenia, scentralizowaną poprawkę i krótszy czas uruchamiania.
 
-W ramach zmiany wprowadza się kilka znaczących istotnych zmian w `Microsoft.AspNetCore.App`.
+W ramach zmiany niektóre istotne zmiany są wprowadzane w `Microsoft.AspNetCore.App`.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Projekty, `Microsoft.AspNetCore.App` do `<PackageReference>` których odwołuje się element w pliku projektu.
+Projekty, `Microsoft.AspNetCore.App` `<PackageReference>` do których odwołuje się element w pliku projektu.
 
-`Microsoft.AspNetCore.App` Dodatkowo, zawarte następujące podskładnik:
+Ponadto `Microsoft.AspNetCore.App` zawarte są następujące podskładniki:
 
 - Json.NET (`Newtonsoft.Json`)
-- Core framework jednostki (zestawy `Microsoft.EntityFrameworkCore.`poprzedzone)
-- Roslyn`Microsoft.CodeAnalysis`( )
+- Entity Framework Core (zestawy poprzedzone prefiksem `Microsoft.EntityFrameworkCore.`)
+- Roslyn (`Microsoft.CodeAnalysis`)
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Odwołanie do `Microsoft.AspNetCore.App` nie wymaga `<PackageReference>` już elementu w pliku projektu. Zestaw SDK .NET Core obsługuje `<FrameworkReference>`nowy element o `<PackageReference>`nazwie , który zastępuje użycie programu .
+Odwołanie do `Microsoft.AspNetCore.App` nie wymaga już `<PackageReference>` elementu w pliku projektu. Zestaw .NET Core SDK obsługuje nowy element o nazwie `<FrameworkReference>`, który zastępuje użycie. `<PackageReference>`
 
-Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
+Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core jest dostarczany jako pakiety NuGet. Ta zmiana wyrównuje model wysyłki ze wszystkimi innymi bibliotekami dostępu do danych w programie .NET. Zapewnia Entity Framework Core najprostszą ścieżkę do kontynuowania innowacji podczas obsługi różnych platform .NET. Przeniesienie entity framework core z udostępnionej struktury nie ma wpływu na jego stan jako biblioteki opracowanej, obsługiwanej i zbywalnej przez firmę Microsoft. [Zasady pomocy technicznej .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) nadal go obejmują.
+Entity Framework Core są dostarczane jako pakiety NuGet. Ta zmiana powoduje wyrównanie modelu wysyłki do wszystkich innych bibliotek dostępu do danych w programie .NET. Zapewnia Entity Framework Core najprostszą ścieżkę, aby kontynuować innowacje, jednocześnie obsługując różne platformy .NET. Przenoszenie Entity Framework Core z platformy udostępnionej nie ma wpływu na jego stan jako biblioteka opracowana przez firmę Microsoft, którą można obsługiwać. [Zasady pomocy technicznej platformy .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) w dalszym ciągu pokrywają się z nią.
 
-Json.NET i Entity Framework Core nadal współpracują z ASP.NET Core. Nie zostaną one jednak uwzględnione we wspólnych ramach.
+Json.NET i Entity Framework Core Kontynuuj pracę z ASP.NET Core. Nie będą jednak uwzględniane w strukturze udostępnionej.
 
-Aby uzyskać więcej informacji, zobacz [Przyszłość JSON w .NET Core 3.0](https://github.com/dotnet/announcements/issues/90). Zobacz też [pełną listę plików binarnych usuniętych](https://github.com/dotnet/aspnetcore/issues/3755) z udostępnionej struktury.
+Aby uzyskać więcej informacji, zobacz [przyszłość JSON w programie .NET Core 3,0](https://github.com/dotnet/announcements/issues/90). Zapoznaj [się również z pełną listą plików binarnych](https://github.com/dotnet/aspnetcore/issues/3755) usuniętych z udostępnionej platformy.
 
-#### <a name="reason-for-change"></a>Powód zmiany
+#### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana upraszcza `Microsoft.AspNetCore.App` zużycie i zmniejsza powielanie między pakietami NuGet i udostępnionych struktur.
+Ta zmiana upraszcza użycie `Microsoft.AspNetCore.App` i zmniejsza duplikowanie między pakietami NuGet i współdzielonymi strukturami.
 
-Aby uzyskać więcej informacji na temat motywacji do tej zmiany, zobacz [ten wpis w blogu](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
+Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [ten wpis w blogu](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Nie będzie konieczne dla projektów do korzystania `Microsoft.AspNetCore.App` z zestawów w pakietach NuGet. Aby uprościć kierowanie i korzystanie z platformy udostępnionej ASP.NET Core, wiele pakietów NuGet wysłanych od ASP.NET Core 1.0 nie są już produkowane. Interfejsy API, które zapewniają te pakiety, `<FrameworkReference>` `Microsoft.AspNetCore.App`są nadal dostępne dla aplikacji przy użyciu przycisku do . Typowe przykłady interfejsu API obejmują Kestrel, MVC i Razor.
+Nie jest konieczne, aby projekty korzystały z zestawów `Microsoft.AspNetCore.App` w programie jako pakiety NuGet. Aby uprościć Określanie elementów docelowych i użycie ASP.NET Core udostępnionej platformy, wiele pakietów NuGet dostarczonych od ASP.NET Core 1,0 nie jest już generowanych. Interfejsy API udostępniane przez te pakiety są nadal dostępne dla aplikacji za pomocą `<FrameworkReference>` programu `Microsoft.AspNetCore.App`do. Typowe przykłady interfejsów API to Kestrel, MVC i Razor.
 
-Ta zmiana nie ma zastosowania do wszystkich `Microsoft.AspNetCore.App` plików binarnych, do których odwołuje się ASP.NET Core 2.x. Godne uwagi wyjątki obejmują:
+Ta zmiana nie ma zastosowania do wszystkich plików binarnych, do których odwołuje się `Microsoft.AspNetCore.App` w ASP.NET Core 2. x. Do istotnych wyjątków należą:
 
-- `Microsoft.Extensions`biblioteki, które nadal są przeznaczone dla platformy .NET https://github.com/dotnet/extensions)Standard, będą dostępne jako pakiety NuGet (zobacz .
-- Interfejsy API produkowane przez zespół ASP.NET Core, które `Microsoft.AspNetCore.App`nie są częścią . Na przykład następujące składniki są dostępne jako pakiety NuGet:
+- `Microsoft.Extensions`biblioteki, które przejdźą do .NET Standard będą dostępne jako pakiety NuGet (patrz https://github.com/dotnet/extensions).
+- Interfejsy API produkowane przez zespół ASP.NET Core, które nie są `Microsoft.AspNetCore.App`częścią programu. Na przykład następujące składniki są dostępne jako pakiety NuGet:
   - Entity Framework Core
-  - Interfejsy API zapewniające integrację z osobami zewnętrznymi
+  - Interfejsy API zapewniające integrację innych firm
   - Funkcje eksperymentalne
-  - Interfejsy API z zależnościami, które nie mogą [spełniać wymagań, które mają być w ramach udostępnionych](https://github.com/dotnet/aspnetcore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md)
-- Rozszerzenia do MVC, które utrzymują obsługę Json.NET. Interfejs API zostanie dostarczony jako pakiet NuGet do obsługi przy użyciu Json.NET i MVC.
-- Klient SignalR .NET będzie nadal obsługiwać .NET Standard i wysyłać jako pakiet NuGet. Jest przeznaczony do użytku w wielu środowiskach uruchomieniowych platformy .NET, takich jak platformy Xamarin i platformy uniwersalnej systemu wyurzcie.It's intended for use on many .NET runtimes, such as Xamarin and UWP.
+  - Interfejsy API z zależnościami, które nie mogą [spełnić wymagań, które mają być zawarte w strukturze udostępnionej](https://github.com/dotnet/aspnetcore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md)
+- Rozszerzenia MVC obsługujące obsługę Json.NET. Interfejs API zostanie dostarczony jako pakiet NuGet do obsługi Json.NET i MVC.
+- Klient platformy .NET sygnalizujący będzie nadal obsługiwał .NET Standard i dostarczać jako pakiet NuGet. Jest ona przeznaczona do użycia w wielu środowiskach uruchomieniowych platformy .NET, takich jak Xamarin i platformy UWP.
 
-Aby uzyskać więcej informacji, zobacz [Zaprzestanie tworzenia pakietów dla zestawów współużytkowanych struktur w 3.0](https://github.com/dotnet/aspnetcore/issues/3756). Aby do dyskusji, zobacz [dotnet/aspnetcore#3757](https://github.com/dotnet/aspnetcore/issues/3757).
+Aby uzyskać więcej informacji, zobacz sekcję [Zatrzymaj tworzenie pakietów dla zestawów udostępnionych struktur w 3,0](https://github.com/dotnet/aspnetcore/issues/3756). Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 3757](https://github.com/dotnet/aspnetcore/issues/3757).
 
 #### <a name="category"></a>Kategoria
 

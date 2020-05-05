@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449227"
 ---
-### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Lepsza weryfikacja argumentu w konstruktorze Pkcs8PrivateKeyInfo
+### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Lepsza weryfikacja argumentów w konstruktorze Pkcs8PrivateKeyInfo
 
-Począwszy od .NET Core 3.0 Preview 9, `Pkcs8PrivateKeyInfo` konstruktor sprawdza poprawność parametru `algorithmParameters` jako pojedynczą wartość zakodowaną przez BER.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9 `Pkcs8PrivateKeyInfo` , `algorithmParameters` Konstruktor sprawdza poprawność parametru jako pojedynczej wartości zakodowanej przez funkcję.
 
 #### <a name="change-description"></a>Zmień opis
 
-Przed .NET Core 3.0 Preview 9 [ `Pkcs8PrivateKeyInfo` konstruktor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) nie sprawdzał poprawności argumentu. `algorithmParameters`  Gdy ten argument reprezentował nieprawidłową wartość, konstruktor zakończy się <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>pomyślnie, ale wywołanie dowolnej z , , lub <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A> <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> metod będzie rzucać <xref:System.ArgumentException> za argument, którego nie zaakceptował (`preEncodedValue`) lub . <xref:System.Security.Cryptography.CryptographicException>
+Przed uruchomieniem programu .NET Core 3,0 w wersji zapoznawczej 9 `algorithmParameters` [ `Pkcs8PrivateKeyInfo` Konstruktor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) nie sprawdza poprawności argumentu.  Gdy ten argument reprezentuje nieprawidłową wartość, Konstruktor powiedzie się <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, ale wywołanie dowolnych metod,, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A> <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>lub <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> może zgłosić <xref:System.ArgumentException> dla argumentu, który nie zaakceptował (`preEncodedValue`) lub. <xref:System.Security.Cryptography.CryptographicException>
 
-Jeśli uruchom z .NET Core 3.0 przed podglądem 9, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> następujący kod zgłasza wyjątek tylko wtedy, gdy metoda jest wywoływana:
+W przypadku uruchomienia z programem .NET Core 3,0 przed zainstalowaniem wersji zapoznawczej 9 Poniższy kod <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> zgłasza wyjątek tylko wtedy, gdy metoda jest wywoływana:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-Począwszy od .NET Core 3.0 Preview 9, argument jest sprawdzany w konstruktorze, <xref:System.Security.Cryptography.CryptographicException>a nieprawidłowa wartość powoduje metodę wyrzucającą . Ta zmiana przenosi wyjątek bliżej źródła błędu danych. Przykład:
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9, argument jest weryfikowany w konstruktorze, a nieprawidłowa wartość powoduje, <xref:System.Security.Cryptography.CryptographicException>że metoda zgłasza. Ta zmiana przenosi wyjątek bliżej źródła błędu danych. Przykład:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -35,11 +35,11 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Upewnij się, `algorithmParameters` że podano tylko prawidłowe `Pkcs8PrivateKeyInfo` wartości lub że <xref:System.ArgumentException> <xref:System.Security.Cryptography.CryptographicException> wywołuje test konstruktora dla obu i jeśli obsługa wyjątków jest pożądane.
+Upewnij się, że `algorithmParameters` podane są tylko prawidłowe wartości lub że wywołania testu `Pkcs8PrivateKeyInfo` konstruktora dla obu <xref:System.ArgumentException> i <xref:System.Security.Cryptography.CryptographicException> w razie potrzeby obsługi wyjątków.
 
 ### <a name="category"></a>Kategoria
 

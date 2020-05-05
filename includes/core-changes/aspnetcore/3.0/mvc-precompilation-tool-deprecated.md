@@ -6,11 +6,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901832"
 ---
-### <a name="mvc-precompilation-tool-deprecated"></a>MVC: Przestarzałe narzędzie kompilacji wstępnej
+### <a name="mvc-precompilation-tool-deprecated"></a>MVC: Narzędzie wstępnej kompilacji zostało zaniechane
 
-W ASP.NET Core 1.1 wprowadzono pakiet `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` (narzędzie do wstępnej kompilacji MVC), aby dodać obsługę kompilacji plików Razor w czasie publikacji (plików*cshtml).* W ASP.NET Core 2.1, [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-2.1) został wprowadzony w celu rozszerzenia na funkcje narzędzia wstępnej kompilacji. Zestaw Razor SDK dodał obsługę kompilacji i publikowania w czasie kompilacji plików Razor. Zestaw SDK sprawdza poprawność plików *cshtml w* czasie kompilacji, jednocześnie poprawiając czas uruchamiania aplikacji. Zestaw SDK razor jest domyślnie włączony i nie jest wymagany gest, aby zacząć go używać.
+W ASP.NET Core 1,1 został wprowadzony `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` pakiet (Narzędzie prekompilacji MVC) w celu dodania obsługi kompilacji plików Razor (plików *. cshtml* ) w czasie publikowania. W ASP.NET Core 2,1 został wprowadzony [zestaw SDK Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-2.1) do rozwinięcia przy użyciu funkcji narzędzia prekompilacji. Zestaw SDK Razor dodaliśmy obsługę kompilacji i kompilowania plików Razor w czasie kompilowania i publikowania. Zestaw SDK sprawdza poprawność plików *. cshtml* w czasie kompilacji podczas poprawiania czasu uruchamiania aplikacji. Zestaw SDK Razor jest domyślnie włączony i żaden gest nie jest wymagany do rozpoczęcia korzystania z niego.
 
-W ASP.NET Core 3.0 usunięto narzędzie ASP.NET Core 1.1-era MVC prekompilacji. Wcześniejsze wersje pakietów będą nadal otrzymywać ważne poprawki błędów i zabezpieczeń w wydaniu poprawki.
+W ASP.NET Core 3,0 zostało usunięte narzędzie wstępnej kompilacji MVC ASP.NET Core 1,1. Wcześniejsze wersje pakietu będą nadal otrzymywać ważne poprawki błędów i zabezpieczeń w wersji poprawki.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,19 +18,19 @@ W ASP.NET Core 3.0 usunięto narzędzie ASP.NET Core 1.1-era MVC prekompilacji. 
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Pakiet `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` został użyty do wstępnej kompilacji widoków MVC Razor.
+`Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` Pakiet został użyty do wstępnego skompilowania widoków Razor MVC.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Zestaw SDK Razor natywnie obsługuje tę funkcję. Pakiet `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` nie jest już aktualizowany.
+Zestaw Razor SDK natywnie obsługuje tę funkcję. `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` Pakiet nie jest już aktualizowany.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zestaw SDK Razor zapewnia więcej funkcjonalności i weryfikuje poprawność plików *cshtml* w czasie kompilacji. Zestaw SDK poprawia również czas uruchamiania aplikacji.
+Zestaw SDK Razor oferuje większą funkcjonalność i sprawdza poprawność plików *. cshtml* w czasie kompilacji. Zestaw SDK poprawia również czas uruchamiania aplikacji.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Dla użytkowników ASP.NET Core 2.1 lub nowszej, zaktualizuj, aby użyć natywnej obsługi wstępnej kompilacji w [zestawie Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Jeśli błędy lub brakujące funkcje uniemożliwiają migrację do zestaw SDK Razor, otwórz problem w [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues).
+W przypadku użytkowników ASP.NET Core 2,1 lub nowszych należy zaktualizować do korzystania z natywnej obsługi wstępnej kompilacji w [zestawie Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Jeśli błędy lub brakujące funkcje uniemożliwiają migrację do zestawu Razor SDK, Otwórz problem w programie [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues).
 
 #### <a name="category"></a>Kategoria
 

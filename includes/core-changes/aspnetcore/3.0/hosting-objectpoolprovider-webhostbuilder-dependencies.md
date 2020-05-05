@@ -6,11 +6,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901616"
 ---
-### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider usunięty z zależności WebHostBuilder
+### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider usunięte z zależności WebHostBuilder
 
-W ramach dokonywania ASP.NET Core więcej `ObjectPoolProvider` zapłacić za grę, został usunięty z głównego zestawu zależności. Konkretne składniki, `ObjectPoolProvider` na których polegasz, teraz same je dodają.
+W ramach wprowadzania ASP.NET Core więcej opłat za odtwarzanie, `ObjectPoolProvider` została usunięta z głównego zestawu zależności. Zależne składniki są teraz `ObjectPoolProvider` dodawane do siebie.
 
-Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,19 +18,19 @@ Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#5944](https://github.com/dot
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`WebHostBuilder``ObjectPoolProvider` domyślnie w kontenerze DI.
+`WebHostBuilder`Domyślnie `ObjectPoolProvider` jest dostępna w kontenerze di.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`WebHostBuilder`nie jest `ObjectPoolProvider` już domyślnie udostępnia w kontenerze DI.
+`WebHostBuilder`nie zapewnia `ObjectPoolProvider` już domyślnego ustawienia w kontenerze di.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana została winna, aby ASP.NET Core więcej płacić za grę.
+Ta zmiana została wprowadzona, aby ASP.NET Core więcej opłat za odtwarzanie.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli składnik `ObjectPoolProvider`wymaga, musi zostać dodany do `IServiceCollection`zależności za pośrednictwem pliku .
+Jeśli dany składnik wymaga `ObjectPoolProvider`programu, należy go dodać do swoich zależności za pośrednictwem `IServiceCollection`.
 
 #### <a name="category"></a>Kategoria
 

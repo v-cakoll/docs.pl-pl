@@ -6,21 +6,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81637200"
 ---
-### <a name="identity-adddefaultui-method-overload-removed"></a>Tożsamość: Usunięto przeciążenie metody AddDefaultUI
+### <a name="identity-adddefaultui-method-overload-removed"></a>Tożsamość: Usunięto Przeciążenie metody AddDefaultUI
 
-Począwszy od ASP.NET Core 3.0, przeciążenie metody [IdentityBuilderUIExtensions.AddDefaultUI(IdentityBuilder,UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_) nie istnieje już.
+Począwszy od ASP.NET Core 3,0, Przeciążenie metody [IdentityBuilderUIExtensions. AddDefaultUI (IdentityBuilder, UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_) już nie istnieje.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
-#### <a name="reason-for-change"></a>Powód zmiany
+#### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zmiana ta była wynikiem przyjęcia statycznej funkcji zasobów internetowych.
+Ta zmiana była wynikiem przyjęcia funkcji statyczne elementy zawartości sieci Web.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wywołanie <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> zamiast przeciążenia, które ma dwa argumenty. Jeśli używasz Bootstrap 3, dodaj również następujący `<PropertyGroup>` wiersz do elementu w pliku projektu:
+Wywołanie <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> zamiast przeciążenia, które przyjmuje dwa argumenty. Jeśli używasz narzędzia Bootstrap 3, Dodaj również następujący wiersz do `<PropertyGroup>` elementu w pliku projektu:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>

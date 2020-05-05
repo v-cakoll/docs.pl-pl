@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 9af265144c9e38ffe132c16a318c374b08a920e3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778253"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795719"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister — Wyliczenie
 Określa rejestry skojarzone z daną architekturą procesora.  
@@ -114,7 +114,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|Zarejestrowano wskaźnik instrukcji na dowolnym procesorze.|  
 |`REGISTER_STACK_POINTER`|Zarejestrowano Wskaźnik stosu na dowolnym procesorze.|  
@@ -190,23 +190,23 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_LR`|Rejestracja linku (R14) na procesorze ARM.|  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieją 128 rejestrów danych ogólnego przeznaczenia i 128 rejestrów danych zmiennoprzecinkowych w procesorze IA-64, ale podano tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0`. Inne wartości można określić w następujący sposób:  
+ Istnieją 128 rejestrów danych ogólnego przeznaczenia i 128 rejestrów danych zmiennoprzecinkowych na procesorach IA-64, ale tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0` są dostępne. Inne wartości można określić w następujący sposób:  
   
-- Dodaj numer rejestru do `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pomocą `REGISTER_IA64_R127`, który odpowiada #1 rejestru danych przez #127 rejestru danych w procesorze IA-64.  
+- Dodaj numer rejestru do `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pomocą `REGISTER_IA64_R127`, które odpowiadają #1 rejestru danych za pomocą #127 rejestru danych w procesorze IA-64.  
   
-- Dodaj numer rejestru do `REGISTER_IA64_F0` dla wartości `REGISTER_IA64_F1` za pomocą `REGISTER_IA64_F127`, który odpowiada rejestrowi danych z #1 FP za pomocą rejestru #127 FP w ramach procesora IA-64.  
+- Dodaj numer rejestru do `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pomocą `REGISTER_IA64_F127`, które odpowiadają rejestrowi danych fp #1, za pomocą rejestru #127 fp w ramach procesora IA-64.  
   
- Na przykład, jeśli konieczne jest określenie #83 rejestru danych w procesorze IA-64, należy użyć `REGISTER_IA64_R0` + 83.  
+ Jeśli na przykład chcesz określić #83 rejestru danych w procesorze IA-64, użyj `REGISTER_IA64_R0` + 83.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

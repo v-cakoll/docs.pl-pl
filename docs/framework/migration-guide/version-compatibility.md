@@ -1,5 +1,5 @@
 ---
-title: Zgodność wersji w ramach .NET Framework
+title: Zgodność wersji w .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102986"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796005"
 ---
 # <a name="version-compatibility"></a>Zgodność wersji
 
-Zgodność wsteczna oznacza, że aplikacja, która została opracowana dla określonej wersji platformy będzie działać na nowszych wersjach tej platformy. Program .NET Framework próbuje zmaksymalizować zgodność z powrotem: kod źródłowy napisany dla jednej wersji programu .NET Framework powinien być kompilowany w nowszych wersjach programu .NET Framework, a pliki binarne uruchamiane w jednej wersji programu .NET Framework powinny zachowywać się identycznie w nowszych wersjach programu .NET Framework.
+Zgodność z poprzednimi wersjami oznacza, że aplikacja opracowana dla konkretnej wersji platformy będzie działać w nowszych wersjach tej platformy. .NET Framework próbuje zmaksymalizować zgodność z poprzednimi wersjami: kod źródłowy zapisany dla jednej wersji .NET Framework powinien zostać skompilowany w nowszych wersjach .NET Framework, a pliki binarne, które działają w jednej wersji .NET Framework, powinny zachowywać się identycznie w nowszych wersjach .NET Framework.
 
-## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>Zgodność wersji dla aplikacji
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>Zgodność wersji aplikacji
 
-Domyślnie aplikacja jest uruchamiana w wersji programu .NET Framework, dla których została zbudowana. Jeśli tej wersji nie ma i plik konfiguracji aplikacji nie definiuje obsługiwanych wersji, może wystąpić błąd inicjowania programu .NET Framework. W takim przypadku próba uruchomienia aplikacji zakończy się niepowodzeniem.
+Domyślnie aplikacja jest uruchamiana w wersji .NET Framework, dla której została skompilowana. Jeśli ta wersja nie jest obecna, a plik konfiguracji aplikacji nie definiuje obsługiwanych wersji, może wystąpić błąd inicjalizacji .NET Framework. W takim przypadku próba uruchomienia aplikacji nie powiedzie się.
 
-Aby zdefiniować określone wersje, na których działa aplikacja, dodaj jeden lub więcej [ \<obsługiwanychruntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) elementów do pliku konfiguracji aplikacji. Każdy `<supportedRuntime>` element zawiera listę obsługiwanej wersji środowiska wykonawczego, z pierwszym określania najbardziej preferowanej wersji i ostatni określania najmniej preferowanej wersji.
+Aby zdefiniować konkretne wersje, na których działa aplikacja, Dodaj co najmniej jeden [ \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) do pliku konfiguracji aplikacji. Każdy `<supportedRuntime>` element zawiera obsługiwaną wersję środowiska uruchomieniowego, z pierwszym określeniem najbardziej preferowanej wersji i ostatnim określeniem najmniejszej wersji.
 
 ```xml
 <configuration>
@@ -33,44 +33,44 @@ Aby zdefiniować określone wersje, na których działa aplikacja, dodaj jeden l
 </configuration>
 ```
 
-Aby uzyskać więcej informacji, zobacz [Jak: Konfigurowanie aplikacji do obsługi programu .NET Framework 4 lub 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Aby uzyskać więcej informacji, zobacz [How to: Configure a App to Support .NET Framework 4 lub 4. x](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
-## <a name="version-compatibility-for-components"></a>Zgodność wersji dla komponentów
+## <a name="version-compatibility-for-components"></a>Zgodność wersji składników
 
-Aplikacja może kontrolować wersję programu .NET Framework, na której jest uruchamiana, ale składnik nie może. Składniki i biblioteki klas są ładowane w kontekście określonej aplikacji i dlatego są automatycznie uruchamiane w wersji programu .NET Framework, na których działa aplikacja.
+Aplikacja może kontrolować wersję .NET Framework, na którym działa, ale składnik nie może. Składniki i biblioteki klas są ładowane w kontekście określonej aplikacji i dlatego automatycznie są uruchamiane w wersji .NET Framework, na której działa aplikacja.
 
-Z powodu tego ograniczenia gwarancje zgodności są szczególnie ważne dla składników. Począwszy od programu .NET Framework 4, można określić stopień, w jakim składnik <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> ma pozostać zgodny w wielu wersjach, stosując atrybut do tego składnika. Narzędzia mogą używać tego atrybutu do wykrywania potencjalnych naruszeń gwarancji zgodności w przyszłych wersjach składnika.
+Z powodu tego ograniczenia gwarancje zgodności są szczególnie ważne dla składników. Począwszy od .NET Framework 4, można określić stopień, w jakim składnik powinien być zgodny w wielu wersjach, stosując <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> atrybut do tego składnika. Za pomocą tego atrybutu narzędzia mogą wykrywać potencjalne naruszenia gwarancji zgodności w przyszłych wersjach składnika.
 
 ## <a name="backward-compatibility"></a>Zgodność ze starszymi wersjami
 
-.NET Framework 4.5 i nowsze wersje są wstecznie zgodne z aplikacjami, które zostały utworzone we wcześniejszych wersjach programu .NET Framework. Innymi słowy aplikacje i składniki utworzone z poprzednich wersji będzie działać bez modyfikacji w .NET Framework 4.5 i nowszych wersjach. Jednak domyślnie aplikacje są uruchamiane w wersji środowiska wykonawczego języka wspólnego, dla którego zostały opracowane, więc może być wymagane podanie pliku konfiguracji, aby umożliwić uruchamianie aplikacji w wersjach .NET Framework 4.5 lub nowszych. Aby uzyskać więcej informacji, zobacz [zgodność wersji dla aplikacji](#Apps) sekcji wcześniej w tym artykule.
+.NET Framework 4,5 i nowsze wersje są zgodne wstecz z aplikacjami, które zostały skompilowane ze starszymi wersjami .NET Framework. Innymi słowy aplikacje i składniki utworzone przy użyciu poprzednich wersji będą działały bez modyfikacji w .NET Framework 4,5 i nowszych wersjach. Jednak domyślnie aplikacje są uruchamiane w wersji środowiska uruchomieniowego języka wspólnego, dla którego zostały opracowane, więc może być konieczne dostarczenie pliku konfiguracji w celu umożliwienia uruchomienia aplikacji w .NET Framework 4,5 lub nowszych. Aby uzyskać więcej informacji, zobacz sekcję [zgodność wersji dla aplikacji](#Apps) wcześniej w tym artykule.
 
-W praktyce ta zgodność może być przerwana przez pozornie nieistotne zmiany w programie .NET Framework i zmiany w technikach programowania. Na przykład ulepszenia wydajności w programie .NET Framework 4.5 może uwidaczniać stan wyścigu, który nie wystąpił we wcześniejszych wersjach. Podobnie przy użyciu ścieżki zakodowane do .NET Framework zestawów, wykonywanie porównania równości z określonej wersji .NET Framework i uzyskanie wartości pola prywatnego przy użyciu odbicia nie są wstecznie zgodne praktyki. Ponadto każda wersja programu .NET Framework zawiera poprawki błędów i zmiany związane z zabezpieczeniami, które mogą mieć wpływ na zgodność niektórych aplikacji i składników.
+W tym celu zgodność może być uszkodzona przez pozornie zmiany w .NET Framework i zmiany w technikach programowania. Na przykład ulepszenia wydajności w .NET Framework 4,5 mogą uwidaczniać sytuację wyścigu, która nie miała miejsca we wcześniejszych wersjach. Podobnie przy użyciu zakodowanej ścieżki do .NET Framework zestawów, wykonywanie porównania równości z określoną wersją .NET Framework i pobieranie wartości pola prywatnego przy użyciu odbicia nie jest zgodne z poprzednimi wersjami. Ponadto każda wersja .NET Framework zawiera poprawki błędów i zmiany dotyczące zabezpieczeń, które mogą wpływać na zgodność niektórych aplikacji i składników.
 
-Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w programie .NET Framework 4.5 (w tym w punktach, w .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 lub 4.8), należy użyć następujących list kontrolnych:
+Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w .NET Framework 4,5 (łącznie z wersjami punktów, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 lub 4,8), użyj następujących list kontrolnych:
 
-- Jeśli aplikacja została opracowana do uruchamiania w dowolnej wersji programu .NET Framework, począwszy od programu .NET Framework 4.0, zobacz Zgodność aplikacji, aby [wygenerować](application-compatibility.md) listy zmian między docelową wersją programu .NET Framework a wersją, na której jest uruchomiona aplikacja.
+- Jeśli aplikacja została opracowana tak, aby była uruchamiana w dowolnej wersji .NET Framework począwszy od .NET Framework 4,0, zobacz [zgodność aplikacji](application-compatibility.md) , aby wygenerować listy zmian między dodaną wersją .NET Framework i wersją, w której uruchomiona jest aplikacja.
 
-- Jeśli masz aplikację .NET Framework 3.5, zobacz też [problemy z migracją programu .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
+- Jeśli masz aplikację .NET Framework 3,5, zobacz również problemy z [migracją .NET Framework 4](net-framework-4-migration-issues.md).
 
-- Jeśli masz aplikację .NET Framework 2.0, zobacz także [Zmiany w systemie .NET Framework 3.5 z dodatkiem SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
+- Jeśli masz aplikację .NET Framework 2,0, zobacz również [zmiany w programie .NET Framework 3,5 z dodatkiem SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Jeśli masz aplikację .NET Framework 1.1, zobacz także [Zmiany w .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
+- Jeśli masz aplikację .NET Framework 1,1, zobacz również [zmiany w .NET Framework 2,0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
 
-- Jeśli ponownie komponujesz istniejący kod źródłowy do uruchomienia w programie .NET Framework 4.5 lub jego wersjach punktowych lub jeśli tworzysz nową wersję aplikacji lub składnika przeznaczonego dla programu .NET Framework 4.5 lub jego wersji punktowych z istniejącej bazy kodu źródłowego, sprawdź, [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md) dla przestarzałych typów i elementów członkowskich, i zastosuj opisane obejście. (Wcześniej skompilowany kod będzie nadal działać przeciwko typom i członkom, które zostały oznaczone jako przestarzałe).
+- Jeśli ponownie kompilujesz istniejący kod źródłowy do uruchamiania na .NET Framework 4,5 lub w jego wersjach, lub jeśli tworzysz nową wersję aplikacji lub składnika, który jest przeznaczony dla wersji .NET Framework 4,5 lub jej punktów z istniejącej bazy kodu źródłowego, sprawdź, [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md) dla przestarzałych typów i członków, i zastosuj opisane obejście. (Poprzednio skompilowany kod będzie kontynuował pracę względem typów i elementów członkowskich, które zostały oznaczone jako przestarzałe.)
 
-- Jeśli okaże się, że zmiana w .NET Framework 4.5 została przerwana aplikacji, sprawdź [schemat ustawień środowiska wykonawczego](../configure-apps/file-schema/runtime/index.md), a zwłaszcza [ \<AppContextSwitchOverrides> Element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), aby ustalić, czy można użyć ustawienia środowiska uruchomieniowego w pliku konfiguracyjnym aplikacji, aby przywrócić poprzednie zachowanie.
+- Jeśli określisz, że zmiana w .NET Framework 4,5 spowodowała uszkodzenie aplikacji, sprawdź [Schemat ustawień środowiska uruchomieniowego](../configure-apps/file-schema/runtime/index.md), a szczególnie [ \<element AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), aby określić, czy można użyć ustawienia środowiska uruchomieniowego w pliku konfiguracyjnym aplikacji, aby przywrócić poprzednie zachowanie.
 
-- Jeśli natkniesz się na problem, który nie jest udokumentowany, otwórz problem w [witrynie społeczności deweloperów dla platformy .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) lub otwórz problem w [repozytorium Microsoft/dotnet GitHub](https://github.com/microsoft/dotnet/issues).
+- Jeśli występują problemy, które nie są udokumentowane, Otwórz problem w [witrynie społeczności deweloperów dla platformy .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) lub Otwórz problem w [repozytorium GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 
 ## <a name="side-by-side-execution"></a>Wykonywanie równoczesne
 
-Jeśli nie możesz znaleźć odpowiedniego rozwiązania problemu, pamiętaj, że .NET Framework 4.5 (lub jeden z jego wersji punktowych) jest uruchamiany obok wersji 1.1, 2.0 i 3.5 i jest aktualizacją w miejscu, która zastępuje wersję 4. W przypadku aplikacji docelowych w wersjach 1.1, 2.0 i 3.5 można zainstalować odpowiednią wersję programu .NET Framework na komputerze docelowym, aby uruchomić aplikację w najlepszym środowisku. Aby uzyskać więcej informacji na temat wykonywania obok siebie, zobacz [Wykonanie side-by-Side](../deployment/side-by-side-execution.md).
+Jeśli nie możesz znaleźć odpowiedniego obejścia problemu, pamiętaj, że .NET Framework 4,5 (lub jeden z jego wydań punktów) działa równolegle z wersjami 1,1, 2,0 i 3,5, i jest aktualizacją w miejscu, która zastępuje wersję 4. W przypadku aplikacji przeznaczonych dla wersji 1,1, 2,0 i 3,5 można zainstalować odpowiednią wersję .NET Framework na komputerze docelowym, aby uruchomić aplikację w jej najlepszym środowisku. Aby uzyskać więcej informacji na temat wykonywania równoczesnego, zobacz [Wykonywanie równoczesne](../deployment/side-by-side-execution.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Co nowego](../whats-new/index.md)
 - [Przestarzałe elementy w ułatwieniach dostępu](../whats-new/whats-obsolete.md)
-- [Zgodność aplikacji](../migration-guide/application-compatibility.md)
-- [Oficjalna polityka wsparcia .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
-- [Problemy z migracją programu .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)
+- [Zgodność aplikacji](application-compatibility.md)
+- [.NET Framework oficjalne zasady pomocy technicznej](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [Problemy z migracją .NET Framework 4](net-framework-4-migration-issues.md)

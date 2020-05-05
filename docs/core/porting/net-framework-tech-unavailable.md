@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Informacje na temat technologii .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: b75d946b9436b1075a068494b941fbdea5970e42
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506834"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795602"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework niedostępne w programie .NET Core
 
@@ -49,4 +49,4 @@ System. EnterpriseServices (COM+) nie jest obsługiwany przez platformę .NET Co
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd portów z .NET Framework do platformy .NET Core](../porting/index.md)
+- [Przegląd portów z .NET Framework do platformy .NET Core](index.md)

@@ -1,40 +1,40 @@
 ---
-title: Ograniczenia dotyczące korzystania z poziomów ułatwień dostępu — odwołanie do języka C#
+title: Ograniczenia dotyczące używania poziomów ułatwień dostępu — Dokumentacja języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173539"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795160"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące korzystania z poziomów ułatwień dostępu (odwołanie do języka C#)
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
 
-Po określeniu typu w deklaracji, sprawdź, czy poziom ułatwień dostępu typu zależy od poziomu ułatwień dostępu elementu członkowskiego lub innego typu. Na przykład klasa podstawowa bezpośrednia musi być co najmniej tak samo dostępna jak klasa pochodna. Następujące deklaracje powodują błąd kompilatora, ponieważ klasa `BaseClass` podstawowa jest mniej dostępna niż: `MyClass`
+Po określeniu typu w deklaracji Sprawdź, czy poziom dostępności tego typu jest zależny od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład bezpośrednia klasa bazowa musi być co najmniej równa dostępności jako Klasa pochodna. Następujące deklaracje powodują wystąpienie błędu kompilatora, ponieważ Klasa `BaseClass` bazowa jest mniej dostępna niż `MyClass`:
 
 ```csharp
 class BaseClass {...}
 public class MyClass: BaseClass {...} // Error
 ```
 
-W poniższej tabeli podsumowano ograniczenia dotyczące zadeklarowanych poziomów ułatwień dostępu.
+Poniższa tabela zawiera podsumowanie ograniczeń dotyczących deklarowanych poziomów dostępności.
 
 |Kontekst|Uwagi|
 |-------------|-------------|
-|[Klasy](../../programming-guide/classes-and-structs/classes.md)|Bezpośrednia klasa podstawowa typu klasy musi być co najmniej tak samo dostępna jak sam typ klasy.|
-|[Interfejsy](../../programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu muszą być co najmniej tak samo dostępne, jak sam typ interfejsu.|
-|[Delegaty](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegata muszą być co najmniej tak samo dostępne, jak sam typ delegata.|
-|[Stałe](../../programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo dostępny jak sama stała.|
-|[Pola](../../programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo dostępny jak samo pole.|
-|[Metody](../../programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo dostępne jak sama metoda.|
-|[Właściwości](../../programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej tak samo dostępny jak sama właściwość.|
-|[Zdarzenia](../../programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej tak samo dostępne, jak samo zdarzenie.|
-|[Indexers](../../programming-guide/indexers/index.md) (Indeksatory)|The type and parameter types of an indexer must be at least as accessible as the indexer itself.|
-|[Operatory](../operators/index.md)|Typ zwracany i typy parametrów operatora muszą być co najmniej tak samo dostępne jak sam operator.|
-|[Konstruktory](../../programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora musi być co najmniej tak samo dostępne jak sam konstruktor.|
+|[Klasy](../../programming-guide/classes-and-structs/classes.md)|Bezpośrednia klasa bazowa typu klasy musi być co najmniej równa dostępności jako samego typu klasy.|
+|[Interfejsy](../../programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu muszą być co najmniej takie same jak typ interfejsu.|
+|[Delegaty](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegata muszą być co najmniej tak samo jak typ delegata.|
+|[Stałe](../../programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo jak jako stała.|
+|[Pola](../../programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo jak w przypadku samego pola.|
+|[Metody](../../programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo samo jak metoda.|
+|[Właściwości](../../programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej taki sam jak wartość właściwości.|
+|[Zdarzenia](../../programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej tak samo jak w przypadku samego zdarzenia.|
+|[Indeksatory](../../programming-guide/indexers/index.md)|Typ i typy parametrów indeksatora muszą być co najmniej tak samo dostępne jak indeksator.|
+|[Operatory](../operators/index.md)|Typ zwracany i typy parametrów operatora muszą być co najmniej takie same jak dla samego operatora.|
+|[Konstruktorów](../../programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora muszą być co najmniej tak samo samo jak Konstruktor.|
 
 ## <a name="example"></a>Przykład
 
@@ -107,16 +107,16 @@ public class A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka C#](../../language-reference/index.md)
-- [Przewodnik programowania języka C#](../../programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../language-reference/keywords/index.md)
-- [Modyfikatory dostępu](../../language-reference/keywords/access-modifiers.md)
-- [Domena dostępności](../../language-reference/keywords/accessibility-domain.md)
-- [Poziomy ułatwień dostępu](../../language-reference/keywords/accessibility-levels.md)
+- [Odwołanie w C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Modyfikatory dostępu](access-modifiers.md)
+- [Domena ułatwień dostępu](accessibility-domain.md)
+- [Poziomy ułatwień dostępu](accessibility-levels.md)
 - [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [Publicznego](../../language-reference/keywords/public.md)
-- [Prywatny](../../language-reference/keywords/private.md)
-- [protected](../../language-reference/keywords/protected.md)
-- [Wewnętrznego](../../language-reference/keywords/internal.md)
+- [public](public.md)
+- [private](private.md)
+- [protected](protected.md)
+- [internal](internal.md)

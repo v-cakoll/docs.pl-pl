@@ -6,30 +6,30 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901584"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: Synchroniczne we/wy wyłączone na wszystkich serwerach
+### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: synchroniczna operacja we/wy wyłączona na wszystkich serwerach
 
-Począwszy od ASP.NET Core 3.0, synchroniczne operacje serwera są domyślnie wyłączone.
+Począwszy od ASP.NET Core 3,0, operacje serwera synchronicznego są domyślnie wyłączone.
 
 #### <a name="change-description"></a>Zmień opis
 
-`AllowSynchronousIO`jest opcją na każdym serwerze, która włącza lub `HttpRequest.Body.Read`wyłącza `HttpResponse.Body.Write`synchroniczne interfejsy API We/Wy, takie jak , i `Stream.Flush`. Te interfejsy API od dawna źródłem głodu wątku i aplikacji zawiesza. Począwszy od ASP.NET Core 3.0 Preview 3, te operacje synchroniczne są domyślnie wyłączone.
+`AllowSynchronousIO`jest opcją na każdym serwerze, który włącza lub wyłącza synchroniczne interfejsy API we `HttpRequest.Body.Read`/ `HttpResponse.Body.Write`wy, `Stream.Flush`takie jak, i. Te interfejsy API były źródłem zawieszania wątków i zawieszenia aplikacji. Począwszy od ASP.NET Core 3,0 wersji zapoznawczej 3, te operacje synchroniczne są domyślnie wyłączone.
 
-Serwery, których dotyczy problem:
+Narażone serwery:
 
 - Kestrel
-- HttpSys (HttpSys)
-- Przetwarzanie iIS
-- Testserver
+- HttpSys
+- Usługi IIS w procesie
+- TestServer
 
-Spodziewaj się błędów podobnych do:
+Oczekiwane błędy są podobne do:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-Każdy serwer `AllowSynchronousIO` ma opcję, która kontroluje to zachowanie i `false`domyślnie dla wszystkich z nich jest teraz .
+Każdy serwer ma `AllowSynchronousIO` opcję, która steruje tym zachowaniem i domyślnie dla wszystkich z nich jest `false`teraz.
 
-Zachowanie można również zastąpić na podstawie na żądanie jako tymczasowe środki zaradcze. Przykład:
+Zachowanie może być również zastąpione dla każdego żądania jako tymczasowe środki zaradcze. Przykład:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,9 +39,9 @@ if (syncIOFeature != null)
 }
 ```
 
-Jeśli masz problemy `TextWriter` z lub innego strumienia wywołując `Dispose`synchroniczne `DisposeAsync` interfejsu API w , wywołać nowy interfejs API zamiast.
+Jeśli masz problemy z `TextWriter` lub innym strumieniem wywołującym synchroniczny interfejs API `Dispose`w programie, wywołaj zamiast niego nowy `DisposeAsync` interfejs API.
 
-Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -55,7 +55,7 @@ Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#7644](https://github.com/dot
 
 Te synchroniczne interfejsy API są domyślnie niedozwolone:
 
-Spodziewaj się błędów podobnych do:
+Oczekiwane błędy są podobne do:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
@@ -63,11 +63,11 @@ Spodziewaj się błędów podobnych do:
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Te synchroniczne interfejsy API od dawna źródłem głodu wątków i aplikacji zawiesza. Począwszy od ASP.NET Core 3.0 Preview 3, operacje synchroniczne są domyślnie wyłączone.
+Te synchroniczne interfejsy API były źródłem przetrzymania wątku i zawieszenia aplikacji. Począwszy od ASP.NET Core 3,0 wersja zapoznawcza 3 operacje synchroniczne są domyślnie wyłączone.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Użyj asynchronicznych wersji metod. Zachowanie można również zastąpić na podstawie na żądanie jako tymczasowe środki zaradcze.
+Używaj asynchronicznych wersji metod. Zachowanie może być również zastąpione dla każdego żądania jako tymczasowe środki zaradcze.
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();

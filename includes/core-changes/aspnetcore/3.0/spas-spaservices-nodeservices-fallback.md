@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522655"
 ---
-### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>Umowy O SPA: SpaServices i NodeServices nie wracają już do rejestratora konsoli
+### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>Aplikacji jednostronicowych: SpaServices i NodeServices nie są już z powrotem do rejestratora konsoli
 
-<xref:Microsoft.AspNetCore.SpaServices?displayProperty=nameWithType>i <xref:Microsoft.AspNetCore.NodeServices?displayProperty=nameWithType> nie będą wyświetlać dzienników konsoli, chyba że rejestrowanie jest skonfigurowane.
+<xref:Microsoft.AspNetCore.SpaServices?displayProperty=nameWithType>nie <xref:Microsoft.AspNetCore.NodeServices?displayProperty=nameWithType> będą wyświetlane dzienniki konsoli, chyba że skonfigurowano rejestrowanie.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ ms.locfileid: "72522655"
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`Microsoft.AspNetCore.SpaServices`i `Microsoft.AspNetCore.NodeServices` służy do automatycznego tworzenia rejestratora konsoli, gdy rejestrowanie nie jest skonfigurowane.
+`Microsoft.AspNetCore.SpaServices`służy `Microsoft.AspNetCore.NodeServices` do automatycznego tworzenia rejestratora konsoli, gdy rejestrowanie nie jest skonfigurowane.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`Microsoft.AspNetCore.SpaServices`i `Microsoft.AspNetCore.NodeServices` nie będą wyświetlać dzienników konsoli, chyba że rejestrowanie jest skonfigurowane.
+`Microsoft.AspNetCore.SpaServices`nie `Microsoft.AspNetCore.NodeServices` będą wyświetlane dzienniki konsoli, chyba że skonfigurowano rejestrowanie.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Istnieje potrzeba dostosowania do sposobu, w jaki inne ASP.NET pakiety Core implementują rejestrowanie.
+Istnieje potrzeba dopasowania metody rejestrowania w innych pakietach ASP.NET Core.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli wymagane jest stare zachowanie, aby skonfigurować `services.AddLogging(builder => builder.AddConsole())` rejestrowanie konsoli, dodaj do metody. `Setup.ConfigureServices`
+Jeśli stare zachowanie jest wymagane, aby skonfigurować rejestrowanie konsoli, Dodaj `services.AddLogging(builder => builder.AddConsole())` do `Setup.ConfigureServices` metody.
 
 #### <a name="category"></a>Kategoria
 

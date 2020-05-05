@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: 317dc2fe8403ae25949410423f1a28ad365caf6a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a7a450e85f7eaa765766ffa985d7c01538e2669c
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789311"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795797"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult — Wyliczenie
 Zawiera szczegółowe informacje o sposobie uzyskiwania wartości wskaźnika instrukcji (IP).  
@@ -39,7 +39,7 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|Kod natywny znajduje się w prologu, więc wartość adresu IP wynosi 0.|  
 |`MAPPING_EPILOG`|Kod natywny znajduje się w epilogu, więc wartość adresu IP jest adresem ostatniej instrukcji metody.|  
@@ -52,14 +52,14 @@ typedef enum CorDebugMappingResult {
  Aby uzyskać wartość wskaźnika instrukcji, można użyć metody [ICorDebugILFrame:: GetIP —](icordebugilframe-getip-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

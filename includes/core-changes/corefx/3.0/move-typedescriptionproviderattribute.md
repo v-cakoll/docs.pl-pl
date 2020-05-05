@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79147539"
 ---
-### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>Atrybut TypeDescriptionProviderAttribute przeniesiony do innego zestawu
+### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute przeniesiony do innego zestawu
 
-Klasa <xref:System.ComponentModel.TypeDescriptionProviderAttribute> została przeniesiona.
+<xref:System.ComponentModel.TypeDescriptionProviderAttribute> Klasa została przeniesiona.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Core 2.2 i <xref:System.ComponentModel.TypeDescriptionProviderAttribute> wcześniejszych wersjach Klasa znajduje się w assembly *System.ComponentModel.TypeConverter.*
+W programie .NET Core 2,2 i starszych wersjach <xref:System.ComponentModel.TypeDescriptionProviderAttribute> Klasa jest dostępna w zestawie *System. ComponentModel. TypeConverter* .
 
-Począwszy od .NET Core 3.0, znajduje się w zestawie *System.ObjectModel.*
+Począwszy od platformy .NET Core 3,0, znajduje się on w zestawie *System. ObjectModel* .
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,7 +22,7 @@ Począwszy od .NET Core 3.0, znajduje się w zestawie *System.ObjectModel.*
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Ta zmiana dotyczy tylko aplikacji, które <xref:System.ComponentModel.TypeDescriptionProviderAttribute> używają odbicia do <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ładowania typu przez <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> wywołanie metody, takich jak lub przeciążenie, które zakłada, że typ znajduje się w określonym zestawie. W takim przypadku zestaw, do którego odwołuje się wywołanie metody, powinien zostać zaktualizowany w celu odzwierciedlenia nowej lokalizacji zestawu typu.
+Ta zmiana dotyczy tylko aplikacji, które używają odbicia do <xref:System.ComponentModel.TypeDescriptionProviderAttribute> ładowania typu przez wywołanie metody, takiej <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> jak lub przeciążenia <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> , która zakłada, że typ znajduje się w określonym zestawie. W takim przypadku zestaw, do którego odwołuje się wywołanie metody, powinien zostać zaktualizowany w celu odzwierciedlenia nowej lokalizacji zestawu.
 
 #### <a name="category"></a>Kategoria
 

@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394122"
 ---
-### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: Abstrakcje transportowe usunięte i upublicznione
+### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: skróty transportowe zostały usunięte i utworzone publicznie
 
-W ramach odejścia od "pubternal" interfejsów API, interfejsy API warstwy transportu `Microsoft.AspNetCore.Connections.Abstractions` kestrel są udostępniane jako interfejs publiczny w bibliotece.
+W ramach przenoszenia z interfejsów API "pubternal" interfejsy API warstwy transportu Kestrel są udostępniane jako interfejs publiczny w `Microsoft.AspNetCore.Connections.Abstractions` bibliotece.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,18 +16,18 @@ W ramach odejścia od "pubternal" interfejsów API, interfejsy API warstwy trans
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-- Abstrakcje związane z transportem `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` były dostępne w bibliotece.
-- Obiekt `ListenOptions.NoDelay` był dostępny.
+- Abstrakcje związane z transportem były dostępne `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` w bibliotece.
+- `ListenOptions.NoDelay` Właściwość była dostępna.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-- Interfejs `IConnectionListener` został wprowadzony `Microsoft.AspNetCore.Connections.Abstractions` w bibliotece, aby udostępnić `...Transport.Abstractions` najczęściej używane funkcje z biblioteki.
-- Jest `NoDelay` teraz dostępna w`LibuvTransportOptions` opcjach transportu ( i `SocketTransportOptions`).
-- `SchedulingMode`nie jest już dostępna.
+- `IConnectionListener` Interfejs został wprowadzony w bibliotece, `Microsoft.AspNetCore.Connections.Abstractions` aby udostępnić najbardziej używane funkcje z `...Transport.Abstractions` biblioteki.
+- `NoDelay` Jest teraz dostępna w opcjach transportu (`LibuvTransportOptions` i `SocketTransportOptions`).
+- `SchedulingMode`nie jest już dostępny.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-ASP.NET Core 3.0 odsunął się od interfejsów API "pubternal".
+ASP.NET Core 3,0 został przeniesiony poza interfejsy API "pubternal".
 
 #### <a name="recommended-action"></a>Zalecana akcja
 

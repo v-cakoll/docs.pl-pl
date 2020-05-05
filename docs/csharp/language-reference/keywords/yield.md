@@ -1,5 +1,5 @@
 ---
-title: yield contextual — odwołanie do języka C#
+title: Yield kontekstowego słowa kluczowego — odwołanie w C#
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712783"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794419"
 ---
 # <a name="yield-c-reference"></a>yield (odwołanie w C#)
 
-Korzystając z `yield` [kontekstowe słowo kluczowe](index.md#contextual-keywords) w instrukcji, należy wskazać, `get` że metoda, operator lub akcesor, w którym pojawia się jest iteratorem. Za `yield` pomocą do definiowania iterator eliminuje potrzebę jawne klasy dodatkowej (klasa, <xref:System.Collections.Generic.IEnumerator%601> która przechowuje stan dla <xref:System.Collections.IEnumerable> wyliczenia, zobacz na przykład) podczas implementowania i <xref:System.Collections.IEnumerator> wzorzec dla typu kolekcji niestandardowej.
+W przypadku użycia `yield` [kontekstowego słowa kluczowego](index.md#contextual-keywords) w instrukcji wskazuje, że metoda, operator lub `get` akcesor, w którym występuje, jest iteratorem. Użycie `yield` do zdefiniowania iteratora eliminuje potrzebę jawnej dodatkowej klasy (klasy, która przechowuje stan wyliczenia, zobacz <xref:System.Collections.Generic.IEnumerator%601> na przykład) podczas implementowania wzorca <xref:System.Collections.IEnumerable> i <xref:System.Collections.IEnumerator> dla niestandardowego typu kolekcji.
 
-W poniższym przykładzie przedstawiono `yield` dwie formy instrukcji.
+Poniższy przykład pokazuje dwie formy `yield` instrukcji.
 
 ```csharp
 yield return <expression>;
@@ -27,41 +27,41 @@ yield break;
 
 ## <a name="remarks"></a>Uwagi
 
-Instrukcja `yield return` służy do zwracania każdego elementu po jednym naraz.
+Używasz `yield return` instrukcji, aby zwrócić każdy element po jednym naraz.
 
-Sekwencja zwrócona z metody iteratora mogą być używane przy użyciu [foreach](foreach-in.md) instrukcji lub kwerendy LINQ. Każda iteracja `foreach` pętli wywołuje metodę iterator. Po `yield return` osiągnięciu instrukcji w metodzie iterator, `expression` jest zwracany, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.
+Sekwencja zwrócona przez metodę iteratora może być używana przy użyciu instrukcji [foreach](foreach-in.md) lub zapytania LINQ. Każda iteracja `foreach` pętli wywołuje metodę iteratora. Gdy `yield return` instrukcja zostanie osiągnięta w metodzie iteratora `expression` , jest zwracana, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.
 
-Można użyć `yield break` instrukcji, aby zakończyć iterację.
+Możesz użyć `yield break` instrukcji, aby zakończyć iterację.
 
-Aby uzyskać więcej informacji na temat iteratorów, zobacz [Iterytory](../../iterators.md).
+Aby uzyskać więcej informacji na temat iteratorów, zobacz [Iteratory](../../iterators.md).
 
-## <a name="iterator-methods-and-get-accessors"></a>Metody iteratori i uzyskać akcesory
+## <a name="iterator-methods-and-get-accessors"></a>Metody iteratorów i uzyskiwania dostępu
 
 Deklaracja iteratora musi spełniać następujące wymagania:
 
-- Typ powrotu <xref:System.Collections.IEnumerable>musi <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerator>być <xref:System.Collections.Generic.IEnumerator%601>, , , lub .
+- Typem zwracanym musi być <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, lub <xref:System.Collections.Generic.IEnumerator%601>.
 
-- Deklaracja nie może mieć żadnych [parametrów](in-parameter-modifier.md) [ref](ref.md) lub [out.](out-parameter-modifier.md)
+- Deklaracja nie może [zawierać żadnych parametrów](in-parameter-modifier.md) [ref](ref.md) ani [out](out-parameter-modifier.md) .
 
-Typ `yield` iterator, który <xref:System.Collections.IEnumerable> zwraca <xref:System.Collections.IEnumerator> `object`lub jest .  Jeśli iterator <xref:System.Collections.Generic.IEnumerable%601> zwraca <xref:System.Collections.Generic.IEnumerator%601>lub , musi istnieć niejawna konwersja z typu wyrażenia w `yield return` instrukcji do parametru typu ogólnego .
+`yield` Typ iteratora, który zwraca <xref:System.Collections.IEnumerable> lub <xref:System.Collections.IEnumerator> jest `object`.  Jeśli iterator zwraca <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.Generic.IEnumerator%601>, musi istnieć niejawna konwersja z typu wyrażenia w `yield return` instrukcji do parametru typu ogólnego.
 
-Nie można dołączyć `yield return` ani `yield break` oświadczenia w:
+Nie można uwzględnić instrukcji `yield return` or `yield break` w:
 
-- [Wyrażenia Lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) i [metody anonimowe](../operators/delegate-operator.md).
+- [Wyrażenia lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) i [metody anonimowe](../operators/delegate-operator.md).
 
-- Metody, które zawierają bloki ze słowem kluczowym unsafe. Aby uzyskać więcej informacji, zobacz [niebezpieczne](unsafe.md).
+- Metody, które zawierają bloki ze słowem kluczowym unsafe. Aby uzyskać więcej informacji, zobacz artykuł [niebezpieczny](unsafe.md).
 
 ## <a name="exception-handling"></a>Obsługa wyjątków
 
-Instrukcji `yield return` nie można zlokalizować w bloku try-catch. Instrukcja `yield return` może znajdować się w bloku try instrukcji try-finally.
+`yield return` Instrukcja nie może znajdować się w bloku try-catch. `yield return` Instrukcja może znajdować się w bloku try instrukcji try-finally.
 
-Instrukcja `yield break` może znajdować się w bloku try lub catch bloku, ale nie finally bloku.
+`yield break` Instrukcja może znajdować się w bloku try lub bloku catch, ale nie w bloku finally.
 
-Jeśli `foreach` treść (poza metody iterator) zgłasza wyjątek, `finally` blok w metodzie iteratorem jest wykonywany.
+Jeśli `foreach` treść (poza metodą iteratora) zgłasza wyjątek, zostaje wykonany `finally` blok w metodzie iteratora.
 
-## <a name="technical-implementation"></a>Wdrożenie techniczne
+## <a name="technical-implementation"></a>Implementacja techniczna
 
-Poniższy kod zwraca `IEnumerable<string>` z metody iterator, a następnie iteruje za pośrednictwem jego elementów.
+Poniższy kod zwraca metodę `IEnumerable<string>` z metody iteratora, a następnie wykonuje iterację za pośrednictwem jej elementów.
 
 ```csharp
 IEnumerable<string> elements = MyIteratorMethod();
@@ -71,23 +71,23 @@ foreach (string element in elements)
 }
 ```
 
-Wywołanie `MyIteratorMethod` nie wykonuje treści metody. Zamiast tego wywołanie zwraca do `IEnumerable<string>` zmiennej. `elements`
+Wywołanie `MyIteratorMethod` nie wykonuje treści metody. Zamiast tego wywołanie zwraca `IEnumerable<string>` `elements` zmienną.
 
-W iteracji `foreach` pętli <xref:System.Collections.IEnumerator.MoveNext%2A> metoda jest wywoływana `elements`dla . To wywołanie wykonuje `MyIteratorMethod` treść aż `yield return` do osiągnięcia następnej instrukcji. Wyrażenie zwracane przez `yield return` instrukcję określa nie tylko `element` wartość zmiennej do zużycia <xref:System.Collections.Generic.IEnumerator%601.Current%2A> przez `elements`treść pętli, ale także właściwość , która jest . `IEnumerable<string>`
+W iteracji `foreach` pętli <xref:System.Collections.IEnumerator.MoveNext%2A> Metoda jest wywoływana dla. `elements` To wywołanie wykonuje treść `MyIteratorMethod` przed osiągnięciem następnej `yield return` instrukcji. `yield return` Wyrażenie zwrócone przez instrukcję określa nie tylko wartość `element` zmiennej do użycia przez treść pętli <xref:System.Collections.Generic.IEnumerator%601.Current%2A> `elements`, ale również właściwość, która jest. `IEnumerable<string>`
 
-Przy każdej kolejnej `foreach` iteracji pętli wykonanie treści iteratora jest kontynuowane od miejsca, w `yield return` którym zostało wyłączone, ponownie zatrzymując się, gdy osiągnie oświadczenie. Pętla `foreach` kończy się po osiągnięciu końca metody iterator lub `yield break` instrukcji.
+W każdej kolejnej iteracji `foreach` pętli wykonywanie treści iteratora jest kontynuowane od miejsca, w którym została pozostawiona, po osiągnięciu `yield return` instrukcji. `foreach` Pętla kończy się, gdy zostanie osiągnięty koniec metody iteratora lub `yield break` instrukcji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ma `yield return` instrukcję, która `for` znajduje się wewnątrz pętli. Każda iteracja `foreach` treści instrukcji `Main` w metodzie tworzy `Power` wywołanie funkcji iterator. Każde wywołanie funkcji iterator przechodzi do następnego wykonania `yield return` instrukcji, która występuje podczas `for` następnej iteracji pętli.
+Poniższy przykład zawiera `yield return` instrukcję, która znajduje się wewnątrz `for` pętli. Każda iteracja treści `foreach` instrukcji w `Main` metodzie tworzy wywołanie funkcji `Power` iteratora. Każde wywołanie funkcji iteratora przechodzi do następnego wykonania `yield return` instrukcji, która występuje w następnej iteracji `for` pętli.
 
-Zwracany typ metody iteratorem jest <xref:System.Collections.IEnumerable>, który jest typem interfejsu iteratorego. Kiedy metoda iteratora jest wywoływana, zwraca obiekt wyliczeniowy, który zawiera potęgi liczb.
+Zwracanym typem metody iteratora jest <xref:System.Collections.IEnumerable>, który jest typem interfejsu iteratora. Kiedy metoda iteratora jest wywoływana, zwraca obiekt wyliczeniowy, który zawiera potęgi liczb.
 
 [!code-csharp[csrefKeywordsContextual#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#5)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym `get` przykładzie przedstawiono akcesor, który jest iteratorem. W przykładzie każda `yield return` instrukcja zwraca wystąpienie klasy zdefiniowanej przez użytkownika.
+Poniższy przykład ilustruje `get` metodę dostępu, która jest iteratorem. W przykładzie każda `yield return` instrukcja zwraca wystąpienie klasy zdefiniowanej przez użytkownika.
 
 [!code-csharp[csrefKeywordsContextual#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#21)]
 
@@ -95,9 +95,9 @@ W poniższym `get` przykładzie przedstawiono akcesor, który jest iteratorem. W
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka C#](../../language-reference/index.md)
-- [Przewodnik programowania języka C#](../../programming-guide/index.md)
+- [Odwołanie w C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [foreach, in](foreach-in.md)
 - [Iteratory](../../iterators.md)

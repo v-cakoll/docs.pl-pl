@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902059"
 ---
-### <a name="authentication-httpcontextauthentication-property-removed"></a>Uwierzytelnianie: usunięto właściwość HttpContext.Authentication
+### <a name="authentication-httpcontextauthentication-property-removed"></a>Uwierzytelnianie: Właściwość HttpContext. Authentication została usunięta
 
-Przestarzałe `Authentication` właściwości na `HttpContext` został usunięty.
+`Authentication` Właściwość zaniechana `HttpContext` została usunięta.
 
 #### <a name="change-description"></a>Zmień opis
 
-W ramach [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504)usunięto wycofaną `Authentication` `HttpContext` właściwość. Obiekt `Authentication` został przestarzały od 2.0. [Przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) został opublikowany w celu migracji kodu przy użyciu tej przestarzałej właściwości do nowych zastępczych interfejsów API. Pozostałe nieużywane klasy / interfejsy API związane ze starym ASP.NET [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)stosie uwierzytelniania Core 1.x zostały usunięte w zatwierdzeniu .
+W ramach programu [dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504) `Authentication` Właściwość zaniechana `HttpContext` została usunięta. `Authentication` Właściwość została zaniechana od 2,0. Opublikowano [Przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) w celu migrowania kodu przy użyciu tej przestarzałej właściwości do nowych interfejsów API wymiany. Pozostałe nieużywane klasy/interfejsy API powiązane ze starym stosem uwierzytelniania ASP.NET Core 1. x zostały usunięte [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)podczas zatwierdzania.
 
-Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 6533](https://github.com/dotnet/aspnetcore/issues/6533).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,11 +22,11 @@ Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#6533](https://github.com/dot
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-ASP.NET interfejsy API Core 1.0 zostały <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>zastąpione metodami rozszerzenia w pliku .
+Interfejsy API ASP.NET Core 1,0 zostały zastąpione metodami rozszerzającymi w <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>temacie.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zobacz [przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).
+Zapoznaj się z [przewodnikiem migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).
 
 #### <a name="category"></a>Kategoria
 

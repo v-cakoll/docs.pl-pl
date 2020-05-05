@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901808"
 ---
-### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR: Usunięto metody Resetowania i resetowania czasu usługi HubConnection ResetSendPing i Resettimeout
+### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>Sygnalizujący: HubConnection ResetSendPing i ResetTimeout metod
 
-I `ResetSendPing` `ResetTimeout` metody zostały usunięte z `HubConnection` interfejsu API SignalR. Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały upublicznione w ASP.NET Core 2.2. Te metody nie będą dostępne począwszy od wersji ASP.NET Core 3.0 Preview 4. Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#8543](https://github.com/dotnet/aspnetcore/issues/8543).
+Metody `ResetSendPing` i `ResetTimeout` zostały usunięte z `HubConnection` interfejsu API sygnalizującego. Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały udostępnione w ASP.NET Core 2,2. Te metody nie będą dostępne od momentu wydania w ASP.NET Core 3,0 wersja zapoznawcza 4. Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 8543](https://github.com/dotnet/aspnetcore/issues/8543).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ I `ResetSendPing` `ResetTimeout` metody zostały usunięte z `HubConnection` int
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Interfejsy API były dostępne.
+Dostępne interfejsy API.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
@@ -24,11 +24,11 @@ Interfejsy API są usuwane.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały upublicznione w ASP.NET Core 2.2.
+Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały udostępnione w ASP.NET Core 2,2.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Nie należy używać tych metod.
+Nie używaj tych metod.
 
 #### <a name="category"></a>Kategoria
 

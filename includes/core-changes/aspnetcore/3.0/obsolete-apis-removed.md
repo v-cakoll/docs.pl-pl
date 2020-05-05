@@ -30,7 +30,7 @@ ASP.NET Core
 
 Następujące typy i elementy członkowskie zostały oznaczone jako przestarzałe dla ASP.NET Core 2,1 i 2,2:
 
-**Types**
+**Typy**
 
 - `Microsoft.AspNetCore.Diagnostics.Views.WelcomePage`
 - `Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue`

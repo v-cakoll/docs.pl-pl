@@ -64,6 +64,6 @@ typedef enum {
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Profilowanie — wyliczenia](profiling-enumerations.md)

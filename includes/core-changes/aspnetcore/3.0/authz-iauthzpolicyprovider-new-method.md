@@ -6,11 +6,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901631"
 ---
-### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Autoryzacja: Implementacje IAuthorizationPolicyProvider wymagają nowej metody
+### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Autoryzacja: implementacje IAuthorizationPolicyProvider wymagają nowej metody
 
-W ASP.NET Core 3.0 `GetFallbackPolicyAsync` dodano nową `IAuthorizationPolicyProvider`metodę do . Ta rezerwowa zasada jest używana przez program pośredniczy autoryzacji, gdy nie określono żadnych zasad.
+W ASP.NET Core 3,0 dodano nową `GetFallbackPolicyAsync` metodę do. `IAuthorizationPolicyProvider` Te zasady powrotu są używane przez oprogramowanie pośredniczące autoryzacji, gdy nie określono zasad.
 
-Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#9759](https://github.com/dotnet/aspnetcore/pull/9759).
+Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 9759](https://github.com/dotnet/aspnetcore/pull/9759).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,7 +18,7 @@ Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#9759](https://github.
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Implementacje `IAuthorizationPolicyProvider` nie wymaga `GetFallbackPolicyAsync` metody.
+Implementacje `IAuthorizationPolicyProvider` nie wymagały `GetFallbackPolicyAsync` metody.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
@@ -26,11 +26,11 @@ Implementacje `IAuthorizationPolicyProvider` wymagają `GetFallbackPolicyAsync` 
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Nowa metoda była potrzebna `AuthorizationMiddleware` do nowego do użycia, gdy nie określono żadnych zasad.
+Nowa metoda była wymagana do użycia w przypadku `AuthorizationMiddleware` , gdy nie określono żadnych zasad.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Dodaj `GetFallbackPolicyAsync` metodę do implementacji `IAuthorizationPolicyProvider`.
+Dodaj `GetFallbackPolicyAsync` metodę do implementacji programu `IAuthorizationPolicyProvider`.
 
 #### <a name="category"></a>Kategoria
 

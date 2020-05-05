@@ -6,27 +6,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82021592"
 ---
-### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Zmieniono formatowanie zmiennoprzecinowe i analizowanie
+### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Zmieniono formatowanie zmiennoprzecinkowe i zachowanie analizy
 
-Zmiennoprzecinające się parsowanie <xref:System.Double> i <xref:System.Single> formatowanie zachowanie (przez i typów) są teraz zgodne ze standardem IEEE.
+Sposób analizowania i formatowania liczby zmiennoprzecinkowej (według <xref:System.Double> typów <xref:System.Single> i) są teraz zgodne ze standardem IEEE.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Core 2.2 i wcześniejszych <xref:System.Double.ToString%2A?displayProperty=nameWithType> <xref:System.Single.ToString%2A?displayProperty=nameWithType>wersjach formatowanie <xref:System.Double.Parse%2A?displayProperty=nameWithType>z <xref:System.Double.TryParse%2A?displayProperty=nameWithType> <xref:System.Single.Parse%2A?displayProperty=nameWithType>i <xref:System.Single.TryParse%2A?displayProperty=nameWithType> , i analizowanie z , , i nie są zgodne ze standardem IEEE. W rezultacie nie można zagwarantować, że wartość będzie w obie strony z dowolnym obsługiwanym ciągiem w formacie standardowym lub niestandardowym. W przypadku niektórych danych wejściowych próba przeanalizowania sformatowanej wartości może zakończyć się niepowodzeniem, a w przypadku innych wartość analizowana nie jest równa wartości oryginalnej.
+W programie .NET Core 2,2 i starszych wersjach formatowanie z <xref:System.Double.ToString%2A?displayProperty=nameWithType> i <xref:System.Single.ToString%2A?displayProperty=nameWithType>i analizowanie za pomocą <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType> <xref:System.Single.Parse%2A?displayProperty=nameWithType>, i nie <xref:System.Single.TryParse%2A?displayProperty=nameWithType> jest zgodne ze standardem IEEE. W związku z tym nie jest możliwe zagwarantowanie, że wartość będzie w sposób roundtrip obsługiwany przy użyciu dowolnego obsługiwanego ciągu formatu standardowego lub niestandardowego. W przypadku niektórych danych wejściowych próba przeanalizowania sformatowanej wartości może zakończyć się niepowodzeniem, a dla innych, przeanalizowana wartość nie jest równa oryginalnej wartości.
 
-Począwszy od platformy .NET Core 3.0, operacje analizowania i formatowania są zgodne ze standardem IEEE 754. Gwarantuje to, że zachowanie typów zmiennoprzecinkowych w .NET odpowiada językom zgodnym z IEEE, takim jak C#. Aby uzyskać więcej informacji, zobacz [zmiennoprzecinające analizy i formatowanie ulepszenia w programie .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) wpis w blogu.
+Począwszy od platformy .NET Core 3,0, operacje analizowania i formatowania są zgodne ze standardem IEEE 754. Dzięki temu zachowanie typów zmiennoprzecinkowych w programie .NET pasuje do języków zgodnych ze standardem IEEE, takich jak C#. Aby uzyskać więcej informacji, zobacz Wprowadzenie do [analizy zmiennoprzecinkowej i ulepszenia formatowania w blogu platformy .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Sekcja "Potencjalny wpływ na istniejący kod" w sekcji [Analizowanie zmiennoprzecinkowe i formatowanie ulepszeń w blogu .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) sugeruje zmiany w kodzie, jeśli zauważysz zmianę zachowania w porównaniu do aplikacji .NET Core 2.2 Ogólnie rzecz biorąc, wiąże się to z użyciem innego ciągu standardowego lub niestandardowego formatu w celu wymuszenia żądanego zachowania. Niektóre wyniki mogą nie mieć obejścia, jeśli były wcześniej niepoprawne.
+Sekcja "potencjalny wpływ na istniejący kod" [w temacie analiza zmiennoprzecinkowa i ulepszenia formatowania w blogu programu .net core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) sugeruje zmiany w kodzie w przypadku zmiany zachowania w porównaniu do aplikacji platformy .net Core 2,2. obejmuje to użycie innego standardowego lub niestandardowego ciągu formatu w celu wymuszenia żądanego zachowania. Niektóre wyniki mogą nie mieć obejścia, jeśli były wcześniej nieprawidłowe.
 
 #### <a name="category"></a>Kategoria
 
-Podstawowe biblioteki .NET
+Podstawowe biblioteki platformy .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

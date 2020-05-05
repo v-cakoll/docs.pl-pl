@@ -6,17 +6,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393908"
 ---
-### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: Prośba nagłówków przyczepy przeniesiony do nowej kolekcji
+### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: przeniesiono nagłówki przyczepki do nowej kolekcji
 
-W poprzednich wersjach Kestrel dodał http/1.1 fragmentowane nagłówki przyczepy do kolekcji nagłówków żądań, gdy treść żądania została odczytana do końca. To zachowanie wywołało obawy o niejednoznaczność między nagłówkami i przyczepami. Podjęto decyzję o przeniesieniu przyczep do nowej kolekcji.
+We wcześniejszych wersjach Kestrel dodaliśmy nagłówki podzielonych punktów protokołu HTTP/1.1 do kolekcji nagłówków żądań, gdy treść żądania została odczytana na końcu. Takie zachowanie powodowało obawy dotyczące niejednoznaczności między nagłówkami i przyczepami. Podjęto decyzję o przeniesieniu przyczep do nowej kolekcji.
 
-Zwiastuny z prośbami HTTP/2 były niedostępne w ASP.NET Core 2.2, ale teraz są również dostępne w tej nowej kolekcji w ASP.NET Core 3.0.
+W ASP.NET Core 2,2 są niedostępne Wszystkie przyczepy z żądaniami HTTP/2, ale są teraz również dostępne w tej nowej kolekcji w ASP.NET Core 3,0.
 
-Dodano nowe metody rozszerzania żądań, aby uzyskać dostęp do tych przyczep.
+Dodano nowe metody rozszerzenia żądania w celu uzyskania dostępu do tych przyczep.
 
-Przyczepy HTTP/1.1 są dostępne po przeczytaniu całego korpusu wniosku.
+Przyczepy protokołu HTTP/1.1 są dostępne po odczytaniu całej treści żądania.
 
-Przyczepy HTTP/2 są dostępne po otrzymaniu ich od klienta. Klient nie wyśle zwiastunów, dopóki cała treść żądania nie zostanie przynajmniej buforowana przez serwer. Może być konieczne odczytanie treści żądania, aby zwolnić miejsce w buforze. Przyczepy są zawsze dostępne, jeśli czytasz ciało wniosku do końca. Przyczepy oznaczają koniec nadwozia.
+Przyczepy protokołu HTTP/2 są dostępne po odebraniu ich od klienta. Klient nie wyśle przyczep do momentu, gdy cała treść żądania nie będzie co najmniej buforowana przez serwer. Może być konieczne odczytanie treści żądania w celu zwolnienia miejsca w buforze. Przyczepy są zawsze dostępne w przypadku odczytywania treści żądania na końcu. Przyczepy oznaczają koniec treści.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -24,24 +24,24 @@ Przyczepy HTTP/2 są dostępne po otrzymaniu ich od klienta. Klient nie wyśle z
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Nagłówki zwiastuna żądania zostaną `HttpRequest.Headers` dodane do kolekcji.
+Nagłówki przyczepy z żądaniem zostaną dodane do `HttpRequest.Headers` kolekcji.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Nagłówki zwiastunów żądania nie są `HttpRequest.Headers` **obecne** w kolekcji. Aby uzyskać do `HttpRequest` nich dostęp, użyj następujących metod rozszerzenia:
+Nagłówki przyczepy z żądaniem **nie znajdują** się w `HttpRequest.Headers` kolekcji. Użyj następujących metod rozszerzenia w `HttpRequest` celu uzyskania dostępu do nich:
 
-- `GetDeclaredTrailers()`- Pobiera żądanie "Trailer" nagłówek, który wyświetla, które przyczepy oczekiwać po ciele.
-- `SupportsTrailers()`- Wskazuje, czy żądanie obsługuje odbieranie nagłówków przyczepy.
-- `CheckTrailersAvailable()`- Określa, czy żądanie obsługuje przyczepy i czy są one dostępne do odczytu.
-- `GetTrailer(string trailerName)`- Pobiera żądanego końcowego nagłówka z odpowiedzi.
+- `GetDeclaredTrailers()`— Pobiera nagłówek "Przyczepka" z listą, do których przyczep powinien oczekiwać po treści.
+- `SupportsTrailers()`-Wskazuje, czy żądanie obsługuje nagłówki przyczepy.
+- `CheckTrailersAvailable()`-Określa, czy żądanie obsługuje przyczepy i czy są dostępne do odczytu.
+- `GetTrailer(string trailerName)`-Pobiera żądany końcowy nagłówek z odpowiedzi.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Przyczepy są kluczową cechą w scenariuszach takich jak gRPC. Scalanie przyczep w celu żądania nagłówków było mylące dla użytkowników.
+Przyczepy są kluczową funkcją w scenariuszach takich jak gRPC. Scalanie przyczep w programie w celu utworzenia nagłówków żądań było mylące dla użytkowników.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Użyj metod rozszerzenia związanych z `HttpRequest` przyczepą, aby uzyskać dostęp do przyczep.
+Użyj metod rozszerzenia związanych z przyczepą w `HttpRequest` celu uzyskania dostępu do przyczep.
 
 #### <a name="category"></a>Kategoria
 

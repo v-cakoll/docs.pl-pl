@@ -6,34 +6,34 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82021631"
 ---
-### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Typ wyjątku serializatora `JsonException` Json zmieniono z na`NotSupportedException`
+### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Typ wyjątku serializatora JSON został `JsonException` zmieniony z na`NotSupportedException`
 
-W .NET Core 3.0 Preview 6 do 8 <xref:System.Text.Json.JsonException> serializator będzie zgłosić, gdy napotkał nieobsługiwane typ kolekcji pochodnej. Począwszy od .NET Core 3.0 Preview 9, serializator zgłasza <xref:System.NotSupportedException> zamiast tego.
+W programie .NET Core 3,0 w wersji zapoznawczej 6 do 8, <xref:System.Text.Json.JsonException> serializator zostałby zgłosić, gdy napotka nieobsługiwany typ kolekcji pochodnej. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9 <xref:System.NotSupportedException> , serializator zgłasza zamiast.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Core 3.0 Preview 6 do podglądu <xref:System.Text.Json.JsonException> 8 serializator będzie zgłosić, gdy napotkał nieobsługiwane typ kolekcji pochodnej. *Nieobsługiwany typ kolekcji pochodnej* to dowolny typ kolekcji, którego nie można przypisać do jednego z następujących typów:
+W programie .NET Core 3,0 w wersji zapoznawczej 6 do wersji zapoznawczej 8, serializator zgłosi błąd, <xref:System.Text.Json.JsonException> gdy napotka nieobsługiwany typ kolekcji pochodnej. *Nieobsługiwany typ kolekcji pochodnej* jest dowolnym typem kolekcji, którego nie można przypisać do jednego z następujących typów:
 
 - <xref:System.Collections.IList>
 - <xref:System.Collections.Generic.ICollection%601>
 - <xref:System.Collections.Generic.Stack%601>
 - <xref:System.Collections.Generic.Queue%601>
 - <xref:System.Collections.IDictionary>
-- [Ciąg IDictionary,T\<>](xref:System.Collections.Generic.IDictionary%602)
+- [Ciąg\<IDictionary, T>](xref:System.Collections.Generic.IDictionary%602)
 
-Począwszy od .NET Core 3.0 Preview 9, serializator zgłasza <xref:System.NotSupportedException> When napotkania nieobsługiwał typu kolekcji. Nowy typ wyjątku lepiej odzwierciedla, dlaczego operacja deserializacji nie działa.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9 <xref:System.NotSupportedException> , serializator zgłasza nieobsługiwany typ kolekcji. Nowy typ wyjątku lepiej odzwierciedla dlaczego operacja deserializacji kończy się niepowodzeniem.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli łapiesz <xref:System.Text.Json.JsonException> podczas deserializacji, warto rozważyć <xref:System.NotSupportedException>również połowu .
+Jeśli są przechwytywane <xref:System.Text.Json.JsonException> podczas deserializacji, warto rozważyć również przechwycenie <xref:System.NotSupportedException>.
 
 #### <a name="category"></a>Kategoria
 
-Podstawowe biblioteki .NET
+Podstawowe biblioteki platformy .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

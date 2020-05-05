@@ -10,12 +10,12 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: da3a100bd552eaa3233642b006e0265adbcac1ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90ddd27834e7614c1827d606a9955b4d6c53127
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795979"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>Wyliczenie CorDebugDecodeEventFlagsWindows
 Zawiera dodatkowe informacje na temat zdarzeń debugowania na platformie Windows.  
@@ -30,25 +30,25 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|Wskazuje, że zdarzenie debugowania jest wyjątkiem pierwszej szansy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda [Metoda ICorDebugProcess6::D ecodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) zawiera parametr `dwFlags`, który zapewnia dodatkowe informacje na temat zdarzenia debugowania i którego wartość zależy od architektury docelowej. Wyliczenie `CorDebugDecodeEventFlagsWindows` może być używane z zdarzeniami debugowania na platformie Windows.  
+ Metoda [Metoda ICorDebugProcess6::D ecodeevent](icordebugprocess6-decodeevent-method.md) zawiera `dwFlags` parametr, który dostarcza dodatkowych informacji na temat zdarzenia debugowania i którego wartość zależy od architektury docelowej. `CorDebugDecodeEventFlagsWindows` Wyliczenie może być używane z zdarzeniami debugowania na platformie Windows.  
   
 > [!NOTE]
 > To wyliczenie jest przeznaczone do użycia tylko w scenariuszach debugowania .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

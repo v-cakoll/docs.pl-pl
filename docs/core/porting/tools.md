@@ -1,25 +1,21 @@
 ---
 title: Narzędzia do przenoszenia do platformy .NET Core
-description: Dowiedz się więcej o narzędziach, za pomocą których można portować do platformy .NET Core
+description: Dowiedz się więcej na temat niektórych narzędzi, których można użyć do przenoszenia do programu .NET Core
 author: cartermp
-ms.date: 12/07/2018
-ms.openlocfilehash: 64bad7600d8e17ada83d4bd8bc56762fd1789f43
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 05/03/2020
+ms.openlocfilehash: d0cf0abf206950beb34556ca3ba7243d8cad241e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795589"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Narzędzia pomagające przenosić kod na platformę .NET Core
 
 Narzędzia wymienione w tym artykule mogą okazać się przydatne podczas przenoszenia:
 
-- [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) — toolchain, który może wygenerować raport, jak przenośny kod jest między .NET Framework i .NET Core:
-  - Jako [narzędzie wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases)
+- [Analizator przenośności .NET](../../standard/analyzers/portability-analyzer.md) — łańcucha narzędzi, który może generować raport dotyczący sposobu, w jaki przenośny kod jest między .NET Framework i .NET Core:
+  - Jako [Narzędzie wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases)
   - Jako [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
-- [Analizator interfejsu API platformy .NET](../../standard/analyzers/api-analyzer.md) — analizator Roslyn, który wykrywa potencjalne zagrożenia zgodności dla interfejsów API języka C# na różnych platformach i wykrywa wywołania przestarzałych interfejsów API.
-
-Ponadto można spróbować przenieść mniejsze rozwiązania lub poszczególne projekty do formatu pliku projektu .NET Core za pomocą narzędzia [CsprojToVs2017.](https://github.com/hvanbakel/CsprojToVs2017)
-
-> [!WARNING]
-> CsprojToVs2017 jest narzędziem innej firmy. Nie ma żadnej gwarancji, że będzie działać dla wszystkich projektów i może spowodować subtelne zmiany w zachowaniu, które zależą od. CsprojToVs2017 powinny być używane jako _punkt wyjścia,_ który automatyzuje podstawowe rzeczy, które mogą być zautomatyzowane. Nie jest to gwarantowane rozwiązanie do migracji formatów plików projektu.
+- Analizator [interfejsu API platformy .NET](../../standard/analyzers/api-analyzer.md) — Roslyn, który wykrywa potencjalne zagrożenia ze zgodnością dla interfejsów API języka C# na różnych platformach i wykrywa wywołania przestarzałych interfejsów API.
+- [try-Convert](https://www.nuget.org/packages/try-convert/) -narzędzie globalne platformy .NET Core, które może przekonwertować projekt lub całe rozwiązanie do zestawu .NET SDK, w tym przenieść aplikacje klasyczne do platformy .NET Core. Nie jest to zalecane, jeśli istnieje bardziej skomplikowana kompilacja (na przykład zadania niestandardowe, obiekty docelowe lub Importy), która odrzuca wiele typów projektów niezgodnych z platformą .NET Core.

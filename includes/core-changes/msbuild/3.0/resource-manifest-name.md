@@ -8,7 +8,7 @@ ms.locfileid: "78968139"
 ---
 ### <a name="resource-manifest-file-names"></a>Nazwy plików manifestu zasobów
 
-Począwszy od .NET Core 3.0, nazwa pliku manifestu wygenerowanego zasobu została zmieniona.
+Począwszy od platformy .NET Core 3,0, wygenerowana nazwa pliku manifestu zasobu została zmieniona.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,11 +16,11 @@ Począwszy od .NET Core 3.0, nazwa pliku manifestu wygenerowanego zasobu został
 
 #### <a name="change-description"></a>Zmień opis
 
-Przed .NET Core 3.0, gdy w pliku projektu MSBuild ustawiono metadane [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) dla pliku zasobu *(.resx),* wygenerowaną nazwą manifestu była *namespace.Classname.resources*. Gdy nie ustawiono [dependentUpon,](/visualstudio/msbuild/common-msbuild-project-items#compile) wygenerowaną nazwą manifestu był *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.
+Przed platformą .NET Core 3,0, gdy [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) metadane zostały ustawione dla pliku zasobu (*. resx*) w pliku projektu MSBuild, wygenerowana nazwa manifestu to *Namespace. ClassName. resources*. Gdy [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) nie została ustawiona, wygenerowana nazwa manifestu to *Namespace. ClassName. FolderPathRelativeToRoot. Culture. resources*.
 
-Począwszy od .NET Core 3.0, gdy plik *.resx* jest współlokowane z plikiem źródłowym o tej samej nazwie, na przykład w aplikacjach Formularzy systemu Windows, nazwa manifestu zasobu jest generowany na podstawie pełnej nazwy pierwszego typu w pliku źródłowym. Na przykład jeśli *Type.cs* jest zlokalizowany z *Type.resx*, wygenerowana nazwa manifestu to *Namespace.Classname.resources*. Jeśli jednak zmodyfikujesz którykolwiek `EmbeddedResource` z atrybutów właściwości pliku *.resx,* wygenerowana nazwa pliku manifestu może być inna:
+Począwszy od platformy .NET Core 3,0, gdy plik *. resx* znajduje się w pliku źródłowym o tej samej nazwie, na przykład w aplikacjach Windows Forms, nazwa manifestu zasobu jest generowana na podstawie pełnej nazwy pierwszego typu w pliku źródłowym. Na przykład, jeśli *Type.cs* jest wspólnie z *typem Type. resx*, wygenerowana nazwa manifestu to *Namespace. ClassName. resources*. Jednak w przypadku zmodyfikowania dowolnego atrybutu `EmbeddedResource` właściwości pliku *resx* wygenerowana nazwa pliku manifestu może być różna:
 
-- Jeśli `LogicalName` atrybut we `EmbeddedResource` właściwości jest ustawiony, ta wartość jest używana jako nazwa pliku manifestu zasobu.
+- Jeśli `LogicalName` atrybut `EmbeddedResource` właściwości jest ustawiony, ta wartość jest używana jako nazwa pliku manifestu zasobu.
 
   Przykłady:
 
@@ -30,9 +30,9 @@ Począwszy od .NET Core 3.0, gdy plik *.resx* jest współlokowane z plikiem źr
   <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
   ```
 
-  **Nazwa pliku manifestu wygenerowanego zasobu**: *SomeName.resources* (niezależnie od nazwy pliku *.resx* lub kultury lub innych metadanych).
+  **Wygenerowana nazwa pliku manifestu zasobu**: *częśćname. resources* (niezależnie od nazwy pliku *resx* lub kultury lub innych metadanych).
 
-- Jeśli `LogicalName` nie jest ustawiona, `ManifestResourceName` ale `EmbeddedResource` atrybut we właściwości jest ustawiona, jego wartość, w połączeniu z rozszerzeniem pliku *.resources*, jest używany jako nazwa pliku manifestu zasobu.
+- Jeśli `LogicalName` nie jest ustawiona, ale `ManifestResourceName` atrybut we `EmbeddedResource` właściwości jest ustawiony, jego wartość jest połączona z rozszerzeniem pliku *. resources*jest używana jako nazwa pliku manifestu zasobu.
 
   Przykłady:
 
@@ -42,9 +42,9 @@ Począwszy od .NET Core 3.0, gdy plik *.resx* jest współlokowane z plikiem źr
   <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
   ```
 
-  **Nazwa pliku manifestu wygenerowanego zasobu:** *SomeName.resources* lub *SomeName.fr-FR.resources*.
+  **Wygenerowana nazwa pliku manifestu zasobu**: *częśćname. resources* lub *SomeName.fr-fr. resources*.
 
-- Jeśli poprzednie reguły nie mają zastosowania, `DependentUpon` a `EmbeddedResource` atrybut elementu jest ustawiony na plik źródłowy, nazwa typu pierwszej klasy w pliku źródłowym jest używana w nazwie pliku manifestu zasobu. Dokładniej, wygenerowana nazwa pliku to *\[Namespace.Classname . Kultura].zasoby*.
+- Jeśli poprzednie reguły nie mają zastosowania, a `DependentUpon` atrybut w `EmbeddedResource` elemencie jest ustawiony na plik źródłowy, nazwa typu pierwszej klasy w pliku źródłowym jest używana w nazwie pliku manifestu zasobu. Dokładniej mówiąc, wygenerowana nazwa pliku to *Namespace. ClassName\[. Culture]. resources*.
 
   Przykłady:
 
@@ -54,32 +54,32 @@ Począwszy od .NET Core 3.0, gdy plik *.resx* jest współlokowane z plikiem źr
   <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
   ```
 
-  **Nazwa pliku manifestu wygenerowanego zasobu**: *Namespace.Classname.resources* lub *Namespace.Classname.fr-FR.resources* (gdzie `Namespace.Classname` jest nazwą pierwszej klasy w *MyTypes.cs).*
+  **Wygenerowana nazwa pliku manifestu zasobu**: *Namespace. ClassName. resources* lub *Namespace.ClassName.fr-fr. resources* (gdzie `Namespace.Classname` to nazwa pierwszej klasy w *MyTypes.cs*).
 
-- Jeśli poprzednie reguły nie mają `EmbeddedResourceUseDependentUponConvention` `true` zastosowania, jest (domyślnie dla .NET Core) i istnieje plik źródłowy colocated z plikiem *.resx,* który ma tę samą nazwę pliku podstawowego, plik *.resx* jest zależny od pasującego pliku źródłowego, a wygenerowana nazwa jest taka sama jak w poprzedniej regule. Jest to reguła "ustawień domyślnych" dla projektów .NET Core.
+- Jeśli poprzednie reguły nie mają zastosowania, `EmbeddedResourceUseDependentUponConvention` jest `true` (domyślnie dla platformy .NET Core) i istnieje plik źródłowy, który zawiera plik *. resx* o tej samej nazwie pliku podstawowego, plik *. resx* jest zależny od pasującego pliku źródłowego, a wygenerowana nazwa jest taka sama jak w poprzedniej regule. To jest reguła "ustawienia domyślne" dla projektów .NET Core.
   
   Przykłady:
   
-  Pliki *MyTypes.cs* i *MyTypes.resx* lub *MyTypes.fr-FR.resx* istnieją w tym samym folderze.
+  Pliki *MyTypes.cs* i *MyTypes.fr-fr. resx* istnieją w tym samym *folderze.*
   
-  **Nazwa pliku manifestu wygenerowanego zasobu**: *Namespace.Classname.resources* lub *Namespace.Classname.fr-FR.resources* (gdzie `Namespace.Classname` jest nazwą pierwszej klasy w *MyTypes.cs).*
+  **Wygenerowana nazwa pliku manifestu zasobu**: *Namespace. ClassName. resources* lub *Namespace.ClassName.fr-fr. resources* (gdzie `Namespace.Classname` to nazwa pierwszej klasy w *MyTypes.cs*).
 
-- Jeśli żadna z poprzednich reguł nie ma zastosowania, wygenerowaną nazwą pliku manifestu zasobu jest *RootNamespace.RelativePathWithDotsForSlashes.\[ Kultura.] zasobów*. Ścieżka względna jest `Link` wartością `EmbeddedResource` atrybutu elementu, jeśli jest ustawiona. W przeciwnym razie ścieżka względna jest wartością `Identity` atrybutu `EmbeddedResource` elementu. W programie Visual Studio jest to ścieżka od katalogu głównego projektu do pliku w Eksploratorze rozwiązań.
+- Jeśli żadna z poprzednich reguł nie zostanie zastosowana, wygenerowana nazwa pliku manifestu zasobu to *RootNamespace.\[ RelativePathWithDotsForSlashes. Kultura] zasoby*. Ścieżka względna jest wartością `Link` atrybutu elementu, `EmbeddedResource` jeśli jest ustawiony. W przeciwnym razie ścieżka względna jest wartością `Identity` atrybutu `EmbeddedResource` elementu. W programie Visual Studio jest to ścieżka z katalogu głównego projektu do pliku w Eksplorator rozwiązań.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli nie jesteś zadowolony z wygenerowanych nazw manifestów, możesz:
+Jeśli wygenerowane nazwy manifestów nie są zadowalające, można:
 
-- Zmodyfikuj metadane pliku zasobów zgodnie z jedną z wcześniej opisanych reguł nazewnictwa.
+- Zmodyfikuj metadane pliku zasobów zgodnie z jedną z wcześniej opisanymi regułami nazewnictwa.
 
-- Ustaw `EmbeddedResourceUseDependentUponConvention` `false` w pliku projektu, aby całkowicie zrezygnować z nowej konwencji:
+- Ustaw `EmbeddedResourceUseDependentUponConvention` wartość `false` w pliku projektu, aby zrezygnować z nowej konwencji w całości:
 
    ```xml
    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
    ```
 
    > [!NOTE]
-   > Jeśli `LogicalName` lub `ManifestResourceName` atrybuty są obecne, ich wartości będą nadal używane dla wygenerowanej nazwy pliku.
+   > Jeśli istnieją `LogicalName` atrybuty `ManifestResourceName` lub, ich wartości będą nadal używane dla wygenerowanej nazwy pliku.
 
 #### <a name="category"></a>Kategoria
 
@@ -87,4 +87,4 @@ MSBuild
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-Nie dotyczy
+Brak

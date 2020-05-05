@@ -8,7 +8,7 @@ ms.locfileid: "72394230"
 ---
 ### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Tożsamość: SignInAsync zgłasza wyjątek dla nieuwierzytelnionej tożsamości
 
-Domyślnie `SignInAsync` zgłasza wyjątek dla podmiotów /tożsamości, `IsAuthenticated` w `false`których jest .
+Domyślnie program `SignInAsync` zgłasza wyjątek dla podmiotów zabezpieczeń/tożsamości, w których `IsAuthenticated` jest. `false`
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ Domyślnie `SignInAsync` zgłasza wyjątek dla podmiotów /tożsamości, `IsAuth
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`SignInAsync`akceptuje wszelkie podmioty/tożsamości, w tym `IsAuthenticated` tożsamości, w których jest `false`.
+`SignInAsync`akceptuje wszelkie podmioty zabezpieczeń/tożsamości, w tym tożsamości, `IsAuthenticated` w `false`których jest.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Domyślnie `SignInAsync` zgłasza wyjątek dla podmiotów /tożsamości, `IsAuthenticated` w `false`których jest . Istnieje nowa flaga, aby pominąć to zachowanie, ale domyślne zachowanie uległo zmianie.
+Domyślnie program `SignInAsync` zgłasza wyjątek dla podmiotów zabezpieczeń/tożsamości, w których `IsAuthenticated` jest. `false` Istnieje nowa flaga, która pozwala pominąć to zachowanie, ale zachowanie domyślne zostało zmienione.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Stare zachowanie było problematyczne, ponieważ domyślnie podmioty `[Authorize]`  /  `RequireAuthenticatedUser()`te zostały odrzucone przez .
+Stare zachowanie było przyczyną problemów, ponieważ domyślnie te podmioty zabezpieczeń zostały odrzucone przez `[Authorize]`  /  `RequireAuthenticatedUser()`.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-W ASP.NET Core 3.0 Preview 6 `RequireAuthenticatedSignIn` jest `AuthenticationOptions` `true` domyślnie flaga. Ustaw tę `false` flagę, aby przywrócić stare zachowanie.
+W ASP.NET Core 3,0 w wersji zapoznawczej 6 `RequireAuthenticatedSignIn` znajduje się `AuthenticationOptions` flaga, `true` która jest domyślnie. Ustaw tę flagę `false` na, aby przywrócić stare zachowanie.
 
 #### <a name="category"></a>Kategoria
 

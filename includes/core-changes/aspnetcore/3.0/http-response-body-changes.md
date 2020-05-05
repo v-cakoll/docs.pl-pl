@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198526"
 ---
-### <a name="http-response-body-infrastructure-changes"></a>HTTP: Zmiany infrastruktury treści odpowiedzi
+### <a name="http-response-body-infrastructure-changes"></a>HTTP: zmiany infrastruktury treści odpowiedzi
 
-Infrastruktura kopii treści odpowiedzi HTTP została zmieniona. Jeśli używasz `HttpResponse` bezpośrednio, nie należy wprowadzać żadnych zmian kodu. Czytaj dalej, jeśli zapakujesz `HttpResponse.Body` lub `HttpContext.Features`zastępujesz lub uzyskujesz dostęp .
+Infrastruktura do tworzenia kopii zapasowych treści odpowiedzi HTTP została zmieniona. Jeśli używasz `HttpResponse` bezpośrednio, nie musisz wprowadzać żadnych zmian w kodzie. Przeczytaj więcej w przypadku zawijania lub zamieniania `HttpResponse.Body` lub `HttpContext.Features`uzyskiwania dostępu do.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ Infrastruktura kopii treści odpowiedzi HTTP została zmieniona. Jeśli używasz
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Z treścią odpowiedzi HTTP skojarzono trzy interfejsy API:
+Z treścią odpowiedzi HTTP są skojarzone trzy interfejsy API:
 
 - `IHttpResponseFeature.Body`
 - `IHttpSendFileFeature.SendFileAsync`
@@ -24,15 +24,15 @@ Z treścią odpowiedzi HTTP skojarzono trzy interfejsy API:
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Jeśli zastąpisz, `HttpResponse.Body`zastępuje `IHttpResponseBodyFeature` całość otoką wokół `StreamResponseBodyFeature` danego strumienia, używając domyślnych implementacji dla wszystkich oczekiwanych interfejsów API. Ustawienie oryginalnego strumienia przywraca tę zmianę.
+Jeśli zastąpisz `HttpResponse.Body`, zastępuje cały `IHttpResponseBodyFeature` element otoką wokół danego strumienia przy użyciu `StreamResponseBodyFeature` , aby zapewnić domyślne implementacje dla wszystkich oczekiwanych interfejsów API. Ustawienie Przywróć oryginalny strumień przywraca tę zmianę.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Motywacją jest połączenie interfejsów API treści odpowiedzi w jeden nowy interfejs funkcji.
+Motywacja polega na połączeniu interfejsów API treści odpowiedzi w jeden nowy interfejs funkcji.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Użyj `IHttpResponseBodyFeature` miejsca, w `IHttpResponseFeature.Body` `IHttpSendFileFeature`którym `IHttpBufferingFeature`wcześniej korzystano , lub .
+Użyj `IHttpResponseBodyFeature` tam, gdzie wcześniej `IHttpResponseFeature.Body`korzystano `IHttpSendFileFeature`z, `IHttpBufferingFeature`lub.
 
 #### <a name="category"></a>Kategoria
 

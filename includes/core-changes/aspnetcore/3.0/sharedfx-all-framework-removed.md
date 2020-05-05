@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394440"
 ---
-### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Struktura udostępniona: usunięto microsoft.aspNetcore.All
+### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Udostępnione środowisko: Usunięto Microsoft. AspNetCore. All
 
-Począwszy od ASP.NET Core `Microsoft.AspNetCore.All` 3.0, `Microsoft.AspNetCore.All` metapackage i pasujące udostępnione juz nie są już produkowane. Ten pakiet jest dostępny w ASP.NET Core 2.2 i będzie nadal otrzymywać aktualizacje obsługi w ASP.NET Core 2.1.
+Począwszy od ASP.NET Core 3,0, `Microsoft.AspNetCore.All` nie jest już tworzony pakiet i `Microsoft.AspNetCore.All` zgodna struktura współdzielona. Ten pakiet jest dostępny w ASP.NET Core 2,2 i nadal będzie otrzymywać aktualizacje obsługi w programie ASP.NET Core 2,1.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ Począwszy od ASP.NET Core `Microsoft.AspNetCore.All` 3.0, `Microsoft.AspNetCore
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Aplikacje mogą `Microsoft.AspNetCore.All` używać metapakietu `Microsoft.AspNetCore.All` do kierowania udostępnionej struktury na .NET Core.
+Aplikacje mogą używać `Microsoft.AspNetCore.All` pakietu dla platformy `Microsoft.AspNetCore.All` udostępnionej w programie .NET Core.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-.NET Core 3.0 nie `Microsoft.AspNetCore.All` zawiera udostępnionej struktury.
+Platforma .NET Core 3,0 nie obejmuje `Microsoft.AspNetCore.All` współdzielonej struktury.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-`Microsoft.AspNetCore.All` Metapakiet zawiera dużą liczbę zależności zewnętrznych.
+`Microsoft.AspNetCore.All` Pakietbinding zawiera dużą liczbę zależności zewnętrznych.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Migracja projektu do korzystania `Microsoft.AspNetCore.App` z platformy. Składniki, które były `Microsoft.AspNetCore.All` wcześniej dostępne w są nadal dostępne na NuGet. Te składniki są teraz wdrażane z aplikacją, a nie są uwzględniane w udostępnionej strukturze.
+Migruj projekt, aby użyć `Microsoft.AspNetCore.App` struktury. Składniki, które wcześniej były dostępne `Microsoft.AspNetCore.All` w programie, są nadal dostępne w programie NuGet. Te składniki są teraz wdrażane wraz z aplikacją, a nie uwzględniane w strukturze udostępnionej.
 
 #### <a name="category"></a>Kategoria
 

@@ -6,23 +6,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116343"
 ---
-### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Typy w obszarze nazw Microsoft.VisualBasic.Devices niedostępne
+### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Typy w przestrzeni nazw Microsoft. VisualBasic. Devices są niedostępne
 
-Typy w <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> obszarze nazw nie są dostępne.
+Typy w <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> przestrzeni nazw są niedostępne.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-Podgląd .NET Core 3.0 8
+.NET Core 3,0 (wersja zapoznawcza 8)
 
 #### <a name="change-description"></a>Zmień opis
 
-Typy w <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> obszarze nazw były dostępne w niektórych wersjach podglądu programu .NET Core 3.0. Nie są już dostępne od wersji .NET Core 3.0 Preview 9.
+Typy w <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> przestrzeni nazw były dostępne w niektórych wersjach programu .net Core 3,0 w wersji zapoznawczej. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
 
-Typy zostały usunięte, aby uniknąć niepotrzebnych zależności zestawu lub zerwania zmian w kolejnych wersjach.
+Typy zostały usunięte, aby uniknąć niepotrzebnych zależności zestawów lub istotne zmiany w kolejnych wersjach.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli kod zależy od <xref:Microsoft.VisualBasic.Devices> użycia typów i ich elementów członkowskich, można użyć odpowiedniego typu lub elementu członkowskiego w bibliotece klas .NET. Na przykład równoważne funkcje <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> do klasy <xref:System.DateTime?displayProperty=nameWithType> jest <xref:System.Environment?displayProperty=nameWithType> dostarczany przez i typów <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> i równoważne funkcje <xref:System.IO.Ports?displayProperty=nameWithType> do klasy jest dostarczany przez typy w przestrzeni nazw.
+Jeśli kod zależy od użycia <xref:Microsoft.VisualBasic.Devices> typów i ich członków, może być możliwe użycie odpowiedniego typu lub elementu członkowskiego w bibliotece klas .NET. Na przykład <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> równoważne funkcje klasy są dostarczane przez typy <xref:System.DateTime?displayProperty=nameWithType> i <xref:System.Environment?displayProperty=nameWithType> i równoważne funkcje <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> klasy są udostępniane przez typy w <xref:System.IO.Ports?displayProperty=nameWithType> przestrzeni nazw.
 
 #### <a name="category"></a>Kategoria
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794393"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów na dane XML
 Gdy dokument XML znajduje się w pamięci, reprezentacja koncepcyjna jest drzewem. W przypadku programowania istnieje hierarchia obiektów do uzyskiwania dostępu do węzłów drzewa. W poniższym przykładzie pokazano, jak zawartość XML staną się węzłami.  
@@ -179,7 +179,7 @@ public class Sample
  **Dane wyjściowe**  
   
 ```xml  
-<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
+<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>
 ```  
   
  Po wprowadzeniu jednego wiersza i użyciu danych wyjściowych generowanych na podstawie kodu można użyć poniższej tabeli, aby przeanalizować, który test węzła wygenerował te wiersze danych wyjściowych, a tym samym zrozumieć, jakie dane XML stały się typem węzła.  
@@ -218,6 +218,6 @@ public class Sample
   
  Aby dodać nowe węzły do modelu DOM, zobacz [Wstawianie węzłów do dokumentu XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Aby usunąć węzły z modelu DOM, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Aby zmodyfikować zawartość węzłów w modelu DOM, zobacz [Modyfikowanie węzłów, zawartości i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

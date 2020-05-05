@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394112"
 ---
-### <a name="logging-debuglogger-class-made-internal"></a>Rejestrowanie: DebugLogger klasy wykonane wewnętrzne
+### <a name="logging-debuglogger-class-made-internal"></a>Rejestrowanie: Klasa DebugLogger wykonana wewnętrznie
 
-Przed ASP.NET Core 3.0 `DebugLogger`modyfikator `public`dostępu był . W ASP.NET Core 3.0 modyfikator dostępu został zmieniony na `internal`.
+Przed ASP.NET Core 3,0, `DebugLogger`modyfikator dostępu był. `public` W ASP.NET Core 3,0 modyfikator dostępu został zmieniony na `internal`.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,14 +16,14 @@ Przed ASP.NET Core 3.0 `DebugLogger`modyfikator `public`dostępu był . W ASP.NE
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zmiana jest dokonywana w celu:
+Trwa zmiana:
 
-* Wymuszanie spójności z innymi implementacjami rejestratora, takimi jak `ConsoleLogger`.
+* Wymuś spójność z innymi implementacjami rejestratora, takimi jak `ConsoleLogger`.
 * Zmniejsz powierzchnię interfejsu API.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Użyj <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` metody rozszerzenia, aby włączyć rejestrowanie debugowania. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider>jest również `public` nadal w przypadku, gdy usługa musi być zarejestrowana ręcznie.
+Użyj metody <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` rozszerzenia, aby włączyć rejestrowanie debugowania. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider>jest również nadal `public` w przypadku, gdy usługa musi zostać zarejestrowana ręcznie.
 
 #### <a name="category"></a>Kategoria
 

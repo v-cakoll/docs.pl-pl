@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451897"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Wartość domyślna httprequestmessage.version zmieniono na 1.1
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Wartość domyślna HttpRequestMessage. Version została zmieniona na 1,1
 
-Wartość domyślna <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwości została zmieniona z 2.0 na 1.1.
+Wartość domyślna <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwości została zmieniona z 2,0 na 1,1.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,13 +16,13 @@ Wartość domyślna <xref:System.Net.Http.HttpRequestMessage.Version?displayProp
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Core 1.0 do 2.0 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> domyślną wartością właściwości jest 1.1. Począwszy od .NET Core 2.1, został zmieniony na 2.1.
+W przypadku platformy .NET Core 1,0 do 2,0 wartość domyślna <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwości to 1,1. Począwszy od platformy .NET Core 2,1, zmieniono ją na 2,1.
 
-Począwszy od .NET Core 3.0, domyślny <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> numer wersji zwrócony przez właściwość jest ponownie 1.1.
+Począwszy od platformy .NET Core 3,0, domyślny numer wersji zwracany przez <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwość jest ponownie 1,1.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zaktualizuj kod, jeśli <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> zależy od właściwości zwracającej domyślną wartość 2.0.
+Zaktualizuj swój kod, jeśli zależy od <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwości zwracającej wartość domyślną 2,0.
 
 #### <a name="category"></a>Kategoria
 

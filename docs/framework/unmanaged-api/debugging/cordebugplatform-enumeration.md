@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 2ed32449c4a133e6e72ec44f9cb57f49de22164a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fdb03b9244d3cb351735f5f2214248a08a399188
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795745"
 ---
 # <a name="cordebugplatform-enumeration"></a>Wyliczenie CorDebugPlatform
 Zapewnia wartości platformy docelowej, które są używane przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) .  
@@ -41,7 +41,7 @@ typedef enum CorDebugPlatform
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|Platforma docelowa to system Windows działający na sprzęcie Intel x86.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|Platforma docelowa to 64 bitowego systemu Windows działającego na sprzęcie AMD64 lub Intel EM64T.|  
@@ -52,16 +52,16 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_MAC_AMD64|Platforma docelowa to system operacyjny Macintosh działający na sprzęcie AMD64.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
- `CORDB_PLATFORM_WINDOWS_ARM` i `CORDB_PLATFORM_MAC_AMD64` elementy członkowskie są dostępne w .NET Framework 4.5.2 i nowszych wersjach.  
+ Elementy `CORDB_PLATFORM_WINDOWS_ARM` i `CORDB_PLATFORM_MAC_AMD64` są dostępne w .NET Framework 4.5.2 i nowszych wersjach.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

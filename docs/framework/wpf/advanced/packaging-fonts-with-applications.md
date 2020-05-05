@@ -170,7 +170,7 @@ Ten temat zawiera omówienie sposobu tworzenia pakietów czcionek w [!INCLUDE[TL
   
 - W przypadkach, gdy występuje nieprawidłowe odwołanie, aplikacja powraca do korzystania z dostępnej czcionki.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>

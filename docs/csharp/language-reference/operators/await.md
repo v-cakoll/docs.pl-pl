@@ -45,11 +45,11 @@ Począwszy od języka C# 7,1, [ `Main` Metoda](../../programming-guide/main-and-
 
 Aby uzyskać więcej informacji, zobacz sekcję [await Expressions](~/_csharplang/spec/expressions.md#await-expressions) w [specyfikacji języka C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [asynchroniczne](../keywords/async.md)
+- [async](../keywords/async.md)
 - [Model programowania asynchronicznego zadań (APM)](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Programowanie asynchroniczne](../../async.md)
 - [Na poziomie Async](../../../standard/async-in-depth.md)

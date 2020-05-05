@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: Przekształcanie kształtu drzewa XML'
+title: 'Instrukcje: przekształcanie kształtu drzewa XML'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332419"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796109"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Instrukcje: Przekształcanie kształtu drzewa XML (Visual Basic)
 *Kształt* dokumentu XML odwołuje się do jego nazw elementów, nazw atrybutów i cech hierarchii.  
@@ -21,7 +21,7 @@ ms.locfileid: "74332419"
 ## <a name="example"></a>Przykład  
  Poniższy kod zmienia kształt pliku XML przy użyciu osadzonych wyrażeń zapytań.  
   
- Źródłowy dokument XML w tym przykładzie zawiera element `Customers` w elemencie `Root`, który zawiera wszystkich klientów. Zawiera również element `Orders` w elemencie `Root`, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta znajdują się w `Orders` elementu w ramach elementu `Customer`. Oryginalny dokument zawiera również element `CustomerID` w elemencie `Order`; Ten element zostanie usunięty z dokumentu, który można zmienić.  
+ Źródłowy dokument XML w tym przykładzie zawiera `Customers` element w obszarze `Root` elementu, który zawiera wszystkich klientów. Zawiera również `Orders` element w obszarze `Root` elementu, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta są zawarte w `Orders` elemencie w `Customer` elemencie. Oryginalny dokument zawiera również `CustomerID` element w `Order` elemencie; Ten element zostanie usunięty z dokumentu, który można zmienić.  
   
  W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  Ten kod generuje następujące dane wyjściowe:  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,13 +86,14 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>Przykład  
  Ten przykład zmienia nazwę niektórych elementów i konwertuje niektóre atrybuty do elementów.  
   
- Kod wywołuje `ConvertAddress`, który zwraca listę obiektów <xref:System.Xml.Linq.XElement>. Argument metody jest zapytanie, które określa `Address` element złożony, gdzie atrybut `Type` ma wartość `"Shipping"`.  
+ Kod wywołuje `ConvertAddress`metodę, która zwraca listę <xref:System.Xml.Linq.XElement> obiektów. Argument metody jest zapytanie, które określa element `Address` złożony, gdzie `Type` atrybut ma wartość. `"Shipping"`  
   
  W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   

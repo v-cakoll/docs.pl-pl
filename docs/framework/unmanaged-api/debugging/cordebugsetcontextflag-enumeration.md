@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a3214fc4e52918716f183720c7c616b1fff74bdb
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789270"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795680"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag — Wyliczenie
 Wskazuje, czy kontekst pochodzi z aktywnej ramki (lub liściowej) na stosie czy został obliczony przez odróżnienie od innej ramki.  
@@ -36,24 +36,24 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|Kontekst jest aktywnym kontekstem wątku.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|Kontekst został obliczony przez odwinięcia z innej ramki.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CorDebugSetContextFlag` zawiera wartości, które są używane przez metodę [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) .  
+ `CorDebugSetContextFlag`dostarcza wartości, które są używane przez metodę [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)
 - [Debugowanie](index.md)

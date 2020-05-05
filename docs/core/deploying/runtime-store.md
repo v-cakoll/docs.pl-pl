@@ -143,7 +143,7 @@ Podczas wdrażania aplikacji [wdrożenia zależnej od środowiska uruchomieniowe
 > [!NOTE]
 > W przypadku aplikacji do [samodzielnego wdrażania](index.md#publish-self-contained) zakłada się, że system docelowy nie musi zawierać wymaganych pakietów manifestu. W związku z tym ** \<PublishWithAspNetCoreTargetManifest>** nie można `true` ustawić na dla aplikacji samodzielnej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [dotnet — publikowanie](../tools/dotnet-publish.md)
 - [dotnet — sklep](../tools/dotnet-store.md)

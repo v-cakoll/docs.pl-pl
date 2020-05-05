@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1770eb08055fd244bd0f220fed6d1641c35174fd
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710638"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794354"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modyfikowanie danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa zawiera zestaw metod służących do modyfikowania węzłów i wartości w dokumencie XML. Aby można było korzystać z tych metod, <xref:System.Xml.XPath.XPathNavigator> obiekt musi być edytowalny, oznacza to, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> że jego właściwość `true`musi być.  
@@ -28,7 +28,7 @@ ms.locfileid: "75710638"
   
 |<xref:System.Xml.XPath.XPathNodeType>|Zmieniono dane|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Bez pomocy technicznej.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Nieobsługiwane.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|Zawartość elementu.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|Wartość atrybutu.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|Zawartość tekstowa.|  
@@ -225,7 +225,7 @@ Console.WriteLine(navigator.OuterXml);
 ```xml  
 <root xmlns:a="http://www.contoso.com">  
     <parent a:parent-id="1234" xmlns:a="http://www.contoso.com/parent-id">  
-        <a:child xmlns:a="http://www.contoso.com/">  
+        <a:child xmlns:a="http://www.contoso.com/" />  
     </parent>  
 </root>  
 ```  
@@ -246,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>Zapisywanie dokumentu XML  
  Zapisywanie zmian wprowadzonych w <xref:System.Xml.XmlDocument> obiekcie w wyniku metod edycji opisanych w tym temacie jest wykonywane przy użyciu metod <xref:System.Xml.XmlDocument> klasy. Aby uzyskać więcej informacji na temat zapisywania zmian wprowadzonych w <xref:System.Xml.XmlDocument> obiekcie, zobacz [Zapisywanie i pisanie dokumentu](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

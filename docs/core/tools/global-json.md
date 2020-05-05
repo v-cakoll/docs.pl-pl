@@ -1,93 +1,99 @@
 ---
 title: global.json — omówienie
-description: Dowiedz się, jak ustawić wersję zestawu .NET Core SDK za pomocą pliku global.json podczas uruchamiania poleceń interfejsu wiersza polecenia .NET Core.
-ms.date: 04/21/2020
+description: Dowiedz się, jak używać pliku Global. JSON do ustawiania wersji zestaw .NET Core SDK podczas uruchamiania poleceń interfejs wiersza polecenia platformy .NET Core.
+ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 15d8e6191394b9ba67b1e5eb5e8ae54ebaf61bef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021349"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795511"
 ---
 # <a name="globaljson-overview"></a>global.json — omówienie
 
-**Ten artykuł dotyczy:** ✔️.NET Core 2.0 SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,0 SDK i nowszych wersjach
 
-Plik *global.json* umożliwia zdefiniowanie, która wersja .NET Core SDK jest używana podczas uruchamiania poleceń .NET Core CLI. Wybranie .NET Core SDK jest niezależne od określania środowiska uruchomieniowego docelowego projektu. Wersja .NET Core SDK wskazuje, które wersje interfejsu wiersza polecenia .NET Core jest używany.
+Plik *Global. JSON* pozwala określić, która wersja zestaw .NET Core SDK jest używana podczas uruchamiania poleceń interfejs wiersza polecenia platformy .NET Core. Wybór zestaw .NET Core SDK jest niezależny od określania środowiska uruchomieniowego projektu. Wersja zestaw .NET Core SDK wskazuje, które wersje interfejs wiersza polecenia platformy .NET Core są używane.
 
-Ogólnie rzecz biorąc, chcesz użyć najnowszej wersji narzędzi zestawu SDK, więc nie jest potrzebny plik *global.json.* W niektórych zaawansowanych scenariuszach można kontrolować wersję narzędzi zestawu SDK, a w tym artykule wyjaśniono, jak to zrobić.
+Ogólnie rzecz biorąc, chcesz użyć najnowszej wersji narzędzi zestawu SDK, więc nie jest potrzebny plik *Global. JSON* . W niektórych zaawansowanych scenariuszach możesz chcieć kontrolować wersję narzędzi zestawu SDK, a w tym artykule wyjaśniono, jak to zrobić.
 
-Aby uzyskać więcej informacji na temat określania środowiska uruchomieniowego zamiast tego, zobacz [struktury docelowe](../../standard/frameworks.md).
+Aby uzyskać więcej informacji na temat określania środowiska uruchomieniowego, zobacz [platforme docelowe](../../standard/frameworks.md).
 
-.NET Core SDK wyszukuje plik *global.json* w bieżącym katalogu roboczym (który niekoniecznie jest taki sam jak katalog projektu) lub jeden z jego katalogów nadrzędnych.
+Zestaw .NET Core SDK szuka pliku *Global. JSON* w bieżącym katalogu roboczym (który nie musi być taki sam jak katalog projektu) lub jednego z jego katalogów nadrzędnych.
 
-## <a name="globaljson-schema"></a>schemat global.json
+## <a name="globaljson-schema"></a>Global. JSON — schemat
 
 ### <a name="sdk"></a>sdk
 
-Typu:`object`
+Wprowadź`object`
 
-Określa informacje o sdk .NET Core do wyboru.
+Określa informacje o zestaw .NET Core SDK do wybrania.
 
-#### <a name="version"></a>version
+#### <a name="version"></a>Wersja
 
-- Typu:`string`
+- Wprowadź`string`
 
-- Dostępne od: .NET Core 1.0 SDK.
+- Dostępne od: .NET Core 1,0 SDK.
 
-Wersja .NET Core SDK do użycia.
+Wersja zestaw .NET Core SDK do użycia.
 
 To pole:
 
-- Nie ma obsługi symboli wieloznacznych, oznacza to, że należy określić pełny numer wersji.
+- Nie ma obsługi symboli wieloznacznych, czyli należy określić pełny numer wersji.
 - Nie obsługuje zakresów wersji.
 
 #### <a name="allowprerelease"></a>allowPrerelease
 
-- Typu:`boolean`
+- Wprowadź`boolean`
 
-- Dostępne od: .NET Core 3.0 SDK.
+- Dostępne od: .NET Core 3,0 SDK.
 
-Wskazuje, czy program rozpoznawania nazw SDK należy wziąć pod uwagę wersje wersji wstępnej podczas wybierania wersji SDK do użycia.
+Wskazuje, czy program rozpoznawania SDK powinien wziąć pod uwagę wersje wstępne podczas wybierania wersji zestawu SDK do użycia.
 
-Jeśli ta wartość nie zostanie jawnie ustawiona, wartość domyślna zależy od tego, czy jest uruchomiony program Visual Studio:
+Jeśli ta wartość nie zostanie jawnie ustawiona, wartość domyślna zależy od tego, czy korzystasz z programu Visual Studio:
 
-- Jeśli **nie** jesteś w programie Visual Studio, wartością domyślną jest `true`.
-- Jeśli jesteś w programie Visual Studio, używa żądanego stanu wstępnego. Oznacza to, że jeśli używasz wersji zapoznawczej programu Visual Studio lub ustaw **opcję Użyj podglądu zestawu SDK .NET Core** (w obszarze**Funkcje podglądu****środowiska opcje** > **Environment** >  **narzędzi),** > domyślną wartością jest `true`; w `false`przeciwnym razie , .
+- Jeśli **nie** Jesteś w programie Visual Studio, wartość domyślna to `true`.
+- Jeśli używasz programu Visual Studio, zostanie użyty żądany stan wersji wstępnej. Oznacza to, że w przypadku korzystania z wersji zapoznawczej programu Visual Studio lub ustawienia **Użyj** podglądu opcji zestaw .NET Core SDK (w obszarze **Narzędzia** > **Opcje** > **środowiska** > w**wersji zapoznawczej**) wartość domyślna to `true`; w przeciwnym `false`razie.
 
-#### <a name="rollforward"></a>rollForward (do tyłu)
+#### <a name="rollforward"></a>Przeniesienia
 
-- Typu:`string`
+- Wprowadź`string`
 
-- Dostępne od: .NET Core 3.0 SDK.
+- Dostępne od: .NET Core 3,0 SDK.
 
-Zasady do przekazywania rolowania do użycia podczas wybierania wersji SDK, jako rezerwowy, gdy brakuje określonej wersji SDK lub jako dyrektywy do korzystania z wyższej wersji. [Wersja](#version) musi być określona z wartością, `rollForward` chyba `latestMajor`że ustawiasz ją na .
+Zasady przyciągania do przodu, które mają być używane podczas wybierania wersji zestawu SDK, jako rezerwy w przypadku braku określonej wersji zestawu SDK lub jako dyrektywy do korzystania z nowszej wersji. Należy określić [wersję](#version) o `rollForward` wartości, chyba że jest ona ustawiana na. `latestMajor`
 
-Aby zrozumieć dostępne zasady i ich zachowanie, należy wziąć pod uwagę `x.y.znn`następujące definicje dla wersji SDK w formacie:
+Aby zrozumieć dostępne zasady i ich zachowanie, należy wziąć pod uwagę następujące definicje wersji zestawu SDK w formacie `x.y.znn`:
 
-- `x`jest główną wersją.
+- `x`jest wersją główną.
 - `y`jest wersją pomocniczą.
-- `z`jest pasmem fabularnym.
+- `z`jest paskiem funkcji.
 - `nn`jest wersją poprawki.
 
-W poniższej tabeli przedstawiono możliwe wartości klucza: `rollForward`
+W poniższej tabeli przedstawiono możliwe wartości `rollForward` klucza:
 
 | Wartość         | Zachowanie |
 | ------------- | ---------- |
-| `patch`       | Używa określonej wersji. <br> Jeśli nie zostanie znaleziony, przesunie się do najnowszego poziomu poprawki. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. <br><br> Ta wartość jest starsze zachowanie z wcześniejszych wersji SDK. |
-| `feature`     | Używa najnowszego poziomu poprawki dla określonego zespołu głównych, pomocniczych i pasma funkcji. <br> Jeśli nie zostanie znaleziony, przesunie się do następnego wyższego pasma funkcji w obrębie tego samego dużego/pomocniczego i użyje najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `minor`       | Używa najnowszego poziomu poprawki dla określonego zespołu głównych, pomocniczych i pasma funkcji. <br> Jeśli nie zostanie znaleziony, przeskakuje do następnego wyższego pasma funkcji w tej samej wersji głównej/pomocniczej i używa najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, przesunie się do następnego wyższego zespołu pomocniczego i pasma funkcji w obrębie tego samego majora i używa najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `major`       | Używa najnowszego poziomu poprawki dla określonego zespołu głównych, pomocniczych i pasma funkcji. <br> Jeśli nie zostanie znaleziony, przeskakuje do następnego wyższego pasma funkcji w tej samej wersji głównej/pomocniczej i używa najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, przesunie się do następnego wyższego zespołu pomocniczego i pasma funkcji w obrębie tego samego majora i używa najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, przesunie się do następnego wyższego zespołu głównego, pomocniczego i pasma funkcji i użyje najnowszego poziomu poprawki dla tego pasma funkcji. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `latestPatch` | Używa najnowszego zainstalowanego poziomu poprawki, który pasuje do żądanego zespołu głównych, pomocniczych i funkcji z poziomem poprawki i który jest większy lub równy określonej wartości. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `latestFeature` | Używa najwyższego zainstalowanego pasma operacji i poziomu poprawek, który pasuje do żądanego dużego i pomocniczego z pasmem funkcji, który jest większy lub równy określonej wartości. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `latestMinor` | Używa najwyższego zainstalowanego pomocniczego, pasma funkcji i poziomu poprawki, który pasuje do żądanego majora z pomocniczym, który jest większy lub równy określonej wartości. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `latestMajor` | Używa najwyższego zainstalowanego sdk .NET Core z głównym, który jest większy lub równy z określoną wartością. <br> Jeśli nie zostanie znaleziony, nie powiedzie się. |
-| `disable`     | Nie toczy się do przodu. Wymagane dopasowanie ścisłe. |
+| `patch`       | Używa określonej wersji. <br> Jeśli nie zostanie znaleziony, przenosi do przodu do najnowszego poziomu poprawki. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. <br><br> Ta wartość to starsze zachowanie z wcześniejszych wersji zestawu SDK. |
+| `feature`     | Używa najnowszego poziomu poprawek dla określonych głównych, pomocniczych i grup funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do kolejnej wyższej grupy funkcji w ramach tego samego elementu głównego/pomocniczego i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `minor`       | Używa najnowszego poziomu poprawek dla określonych głównych, pomocniczych i grup funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do kolejnej wyższej grupy funkcji w tej samej wersji głównej/pomocniczej i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do następnego wyższego elementu pomocniczego i grupy funkcji w ramach tego samego elementu głównego i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `major`       | Używa najnowszego poziomu poprawek dla określonych głównych, pomocniczych i grup funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do kolejnej wyższej grupy funkcji w tej samej wersji głównej/pomocniczej i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do następnego wyższego elementu pomocniczego i grupy funkcji w ramach tego samego elementu głównego i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, przenosi dalej do następnej wyższej, pomocniczej i funkcjonalnej grupy i używa najnowszego poziomu poprawek dla tej grupy funkcji. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `latestPatch` | Używa najnowszego zainstalowanego poziomu poprawek, który jest zgodny z żądanym głównym, pomocniczym i grupą funkcji z poziomem poprawek, który jest większy lub równy określonej wartości. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `latestFeature` | Używa najwyższej zainstalowanej grupy funkcji i poziomu poprawek, które pasują do żądanego elementu głównego i pomocniczego za pomocą pasma funkcji, która jest większa lub równa określonej wartości. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `latestMinor` | Używa najwyższej zainstalowanej pomocniczej, pasma funkcji i poziomu poprawek, który jest zgodny z zażądaną główną wartością pomocniczą, która jest większa lub równa określonej wartości. <br> Jeśli nie zostanie znaleziony, kończy się niepowodzeniem. |
+| `latestMajor` | Używa największej zainstalowanej zestaw .NET Core SDK, która jest większa lub równa określonej wartości. <br> Jeśli nie zostanie znaleziona, kończy się niepowodzeniem. |
+| `disable`     | Nie jest rzutowany do przodu. Dokładne dopasowanie jest wymagane. |
+
+### <a name="msbuild-sdks"></a>MSBuild — zestawy SDK
+
+Wprowadź`object`
+
+Pozwala kontrolować wersję zestawu SDK projektu w jednym miejscu, a nie w każdym projekcie. Aby uzyskać więcej informacji, zobacz [jak są rozpoznawane zestawy SDK projektu](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved).
 
 ## <a name="examples"></a>Przykłady
 
-W poniższym przykładzie pokazano, jak nie używać wersji wstępnej:
+Poniższy przykład pokazuje, jak nie używać wersji wstępnych:
 
 ```json
 {
@@ -97,18 +103,18 @@ W poniższym przykładzie pokazano, jak nie używać wersji wstępnej:
 }
 ```
 
-W poniższym przykładzie pokazano, jak używać zainstalowanej najwyższej wersji, która jest większa lub równa określonej wersji:
+Poniższy przykład pokazuje, jak używać zainstalowanej najwyższej wersji, która jest większa lub równa określonej wersji. W pokazanym kodzie JSON nie jest dozwolony żaden zestaw SDK wcześniejszy niż 2.2.200 i umożliwia 2.2.200 lub dowolną nowszą wersję, w tym 3.0.xxx i 3.1.xxx.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "2.2.200",
     "rollForward": "latestMajor"
   }
 }
 ```
 
-W poniższym przykładzie pokazano, jak używać dokładnie określonej wersji:
+Poniższy przykład pokazuje, jak używać dokładnej wersji:
 
 ```json
 {
@@ -119,94 +125,94 @@ W poniższym przykładzie pokazano, jak używać dokładnie określonej wersji:
 }
 ```
 
-W poniższym przykładzie pokazano, jak używać najnowszej wersji pasma funkcji i poprawek zainstalowanych w określonej wersji głównej i pomocniczej:
+Poniższy przykład pokazuje, jak używać najnowszej wersji i zainstalowanej wersji poprawki dla określonej głównej i pomocniczej. W pokazanym kodzie JSON nie jest dozwolony żaden zestaw SDK wcześniejszy niż 3.1.102 i umożliwia 3.1.102 lub dowolną nowszą wersję 3.1.xxx, taką jak 3.1.103 lub 3.1.200.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.000",
+    "version": "3.1.102",
     "rollForward": "latestFeature"
   }
 }
 ```
 
-Poniższy przykład pokazuje, jak używać najwyższej wersji poprawki zainstalowanej określonej wersji (w formularzu 3.1.1xx):
+Poniższy przykład pokazuje, jak używać najnowszej wersji poprawki zainstalowanej w określonej wersji. W pokazanym kodzie JSON nie jest dozwolony żaden zestaw SDK wcześniejszy niż 3.1.102 i umożliwia 3.1.102 lub jakąkolwiek nowszą wersję 3.1.1 XX, taką jak 3.1.103 lub 3.1.199.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "3.1.102",
     "rollForward": "latestPatch"
   }
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json i .NET Core CLI
+## <a name="globaljson-and-the-net-core-cli"></a>Global. JSON i interfejs wiersza polecenia platformy .NET Core
 
-Warto wiedzieć, które wersje zestawu SDK są zainstalowane na komputerze, aby ustawić jedną z nich w pliku *global.json.* Aby uzyskać więcej informacji na temat tego, jak to zrobić, zobacz [Jak sprawdzić, czy program .NET Core jest już zainstalowany.](../install/how-to-detect-installed-versions.md#check-sdk-versions)
+Warto wiedzieć, które wersje zestawu SDK są zainstalowane na maszynie, aby ustawić je w pliku *Global. JSON* . Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [Jak sprawdzić, czy program .NET Core jest już zainstalowany](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
-Aby zainstalować na komputerze dodatkowe wersje pakietu .NET Core SDK, odwiedź stronę [Pobierz program .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+Aby zainstalować dodatkowe zestaw .NET Core SDK wersje na komputerze, odwiedź stronę [pobieranie platformy .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
 
-Nowy plik *global.json* można utworzyć w bieżącym katalogu, wykonując nowe polecenie [dotnet,](dotnet-new.md) podobnie jak w poniższym przykładzie:
+Nowy plik *Global. JSON* można utworzyć w bieżącym katalogu, wykonując polecenie [dotnet New](dotnet-new.md) , podobnie jak w poniższym przykładzie:
 
 ```dotnetcli
 dotnet new globaljson --sdk-version 3.0.100
 ```
 
-## <a name="matching-rules"></a>Reguły dopasowywania
+## <a name="matching-rules"></a>Reguły dopasowania
 
 > [!NOTE]
-> Reguły dopasowywania `dotnet.exe` są regulowane przez punkt wejścia, który jest wspólny dla wszystkich zainstalowanych uruchomień zainstalowanych .NET Core. Reguły dopasowywania dla najnowszej zainstalowanej wersji środowiska uruchomieniowego .NET Core są używane, gdy masz zainstalowane wiele uruchomień obok siebie.
+> Reguły dopasowania podlegają punktowi `dotnet.exe` wejścia, który jest wspólny dla wszystkich zainstalowanych środowiska uruchomieniowego platformy .NET Core. Reguły dopasowania dla najnowszej zainstalowanej wersji środowiska uruchomieniowego .NET Core są używane w przypadku, gdy wiele programów uruchomieniowych jest zainstalowanych równolegle.
 
-## <a name="net-core-3x"></a>[.NET Rdzeń 3.x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3. x](#tab/netcore3x)
 
-Począwszy od .NET Core 3.0, przy określaniu, która wersja sdk ma być używana, mają być stosowane następujące reguły:
+Począwszy od platformy .NET Core 3,0, stosowane są następujące reguły podczas określania, która wersja zestawu SDK ma być używana:
 
-- Jeśli nie zostanie znaleziony żaden plik *global.json* lub *global.json* nie `allowPrerelease` określi wersji SDK ani wartości, używana `rollForward` jest `latestMajor`najwyższa zainstalowana wersja SDK (odpowiednik ustawienia ). Czy wersje SDK wersji wstępnej są `dotnet` brane pod uwagę zależy od sposobu wywoływania.
-  - Jeśli **nie** jesteś w programie Visual Studio, wersje wersji wstępnej są brane pod uwagę.
-  - Jeśli jesteś w programie Visual Studio, używa żądanego stanu wstępnego. Oznacza to, że jeśli używasz wersji preview programu Visual Studio lub ustaw **podglądy .NET Core SDK** opcji (w obszarze**Funkcje** > **podglądu****środowiska** > opcje **narzędzi),** > wersje wersji wstępnej są brane pod uwagę; w przeciwnym razie uwzględniane są tylko wersje wydania.
-- Jeśli zostanie znaleziony plik *global.json,* który nie określa wersji SDK, ale określa wartość, używana jest najwyższa `allowPrerelease` zainstalowana wersja SDK (odpowiednik ustawienia `rollForward` `latestMajor`). To, czy najnowsza wersja SDK może zostać wydana, czy wstępna, zależy od wartości pliku `allowPrerelease`. `true`wskazuje, że wersje wstępne są brane pod uwagę; `false` wskazuje, że uwzględniane są tylko wersje wydania.
-- Jeśli zostanie znaleziony plik *global.json* i określa wersję SDK:
+- Jeśli nie odnaleziono pliku *Global. JSON* lub plik *Global. JSON* nie określa wersji zestawu SDK ani `allowPrerelease` wartości, używana jest najwyższa zainstalowana wersja zestawu SDK (odpowiednik ustawienia `rollForward` do `latestMajor`). Czy wersje wstępne zestawu SDK są brane pod uwagę, zależy `dotnet` od tego, jak są wywoływane.
+  - Jeśli **nie** Jesteś w programie Visual Studio, są brane pod uwagę wersje wstępne.
+  - Jeśli używasz programu Visual Studio, zostanie użyty żądany stan wersji wstępnej. Oznacza to, że jeśli korzystasz z wersji zapoznawczej programu Visual Studio lub ustawisz opcję **Użyj** podglądu opcji zestaw .NET Core SDK (w obszarze **Narzędzia** > **Opcje** > **środowiska** > w**wersji zapoznawczej**), są uwzględniane wersje wstępne. w przeciwnym razie są brane pod uwagę tylko wersje wydań.
+- Jeśli zostanie znaleziony plik *Global. JSON* , który nie określa wersji zestawu SDK, ale określa `allowPrerelease` wartość, używana jest najwyższa zainstalowana wersja zestawu SDK (odpowiednik ustawienia `rollForward` do `latestMajor`). Czy Najnowsza wersja zestawu SDK może być wykorzystana lub wersja wstępna zależy od wartości `allowPrerelease`. `true`wskazuje wersje wstępne są brane pod uwagę; `false` wskazuje, że są brane pod uwagę tylko wersje wydań.
+- Jeśli zostanie znaleziony plik *Global. JSON* i określi on wersję zestawu SDK:
 
-  - Jeśli `rollFoward` żadna wartość nie `latestPatch` jest ustawiona, używa jako zasady domyślnej. `rollForward` W przeciwnym razie sprawdź każdą wartość i ich zachowanie w sekcji [rollForward.](#rollforward)
-  - Czy wersje wersji wstępnej są brane pod `allowPrerelease` uwagę i jakie jest zachowanie domyślne, gdy nie jest ustawiona jest opisana w [allowPrerelease](#allowprerelease) sekcji.
+  - Jeśli wartość `rollFoward` nie jest ustawiona, zostanie użyta `latestPatch` jako zasady `rollForward` domyślne. W przeciwnym razie Sprawdź każdą wartość i ich zachowanie w sekcji [przeniesienia](#rollforward) .
+  - Określa, czy wersje wstępne są brane pod uwagę, co jest zachowaniem domyślnym, gdy `allowPrerelease` nie jest ustawione, w sekcji [allowPrerelease](#allowprerelease) .
 
-## <a name="net-core-2x"></a>[.NET Rdzeń 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
-W pliku .NET Core 2.x SDK przy określaniu, która wersja sdk ma być używana, mają być stosowane następujące reguły:
+W przypadku zestawu SDK platformy .NET Core 2. x następujące reguły są stosowane podczas określania, która wersja zestawu SDK ma być używana:
 
-- Jeśli nie zostanie znaleziony żaden plik *global.json* lub *global.json* nie określi wersji SDK, używana jest najnowsza zainstalowana wersja SDK. Najnowsza wersja zestawu SDK może być wydana lub wstępna — wygrywana jest najwyższa liczba wersji.
-- Jeśli *plik global.json* określa wersję SDK:
-  - Jeśli określona wersja SDK znajduje się na komputerze, ta dokładna wersja jest używana.
-  - Jeśli nie można znaleźć określonej wersji SDK na komputerze, używana jest najnowsza zainstalowana **wersja poprawki** SDK tej wersji. Najnowsza zainstalowana **wersja poprawki** SDK może być wydana lub wstępna — wygrywa najwyższy numer wersji. W .NET Core 2.1 i **nowszych wersjach poprawek niższych** niż **określona wersja poprawki** są ignorowane w wyborze SDK.
-  - Jeśli nie można odnaleźć określonej wersji SDK i odpowiedniej **wersji poprawki** SDK, zostanie wyświetlony błąd.
+- Jeśli nie odnaleziono pliku *Global. JSON* lub plik *Global. JSON* nie określa wersji zestawu SDK, zostanie użyta Najnowsza zainstalowana wersja zestawu SDK. Najnowsza wersja zestawu SDK może być wydaniem lub w wersji wstępnej — najwyższa wersja usługi WINS.
+- Jeśli *Global. JSON* określi wersję zestawu SDK:
+  - Jeśli określona wersja zestawu SDK zostanie znaleziona na komputerze, używana jest dokładna wersja.
+  - Jeśli na maszynie nie można znaleźć określonej wersji zestawu SDK, zostanie użyta Najnowsza zainstalowana **wersja poprawki** zestawu SDK. Najnowsza zainstalowana **wersja poprawki** zestawu SDK może być wydaniem lub w wersji wstępnej — najwyższa wersja usługi WINS. W przypadku programu .NET Core 2,1 lub nowszego **wersje poprawek** niższe niż określona **wersja poprawki** są ignorowane w wyborze zestawu SDK.
+  - Jeśli nie można znaleźć określonej wersji zestawu SDK i odpowiedniej **wersji poprawki** zestawu SDK, zostanie zgłoszony błąd.
 
-Wersja SDK składa się z następujących części:
+Wersja zestawu SDK składa się z następujących części:
 
 `[.NET Core major version].[.NET Core minor version].[xyz][-optional preview name]`
 
-**Wersja funkcji** zestawu .NET Core SDK jest reprezentowana`x`przez pierwszą cyfrę`xyz`( ) w ostatniej części liczby ( ) dla zestawu SDK w wersji 2.1.100 i nowszej. Ogólnie rzecz biorąc. .NET Core SDK ma szybszy cykl wydania niż .NET Core.
+**Wersja funkcji** zestaw .NET Core SDK jest reprezentowana przez pierwszą cyfrę (`x`) w ostatniej części cyfry (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. Ogólnie rzecz biorąc zestaw .NET Core SDK ma szybszy cykl wydawniczy niż .NET Core.
 
-**Wersja poprawki** jest definiowana przez dwie`yz`ostatnie cyfry ( )`xyz`w ostatniej części liczby ( ) dla zestawu SDK w wersji 2.1.100 i nowszej. Na przykład, jeśli `2.1.300` określisz jako wersję SDK, wybór `2.1.399` `2.1.400` SDK znajdzie do `2.1.300`wersji poprawki, ale nie jest uważany za wersję poprawki dla .
+**Wersja poprawki** jest definiowana przez ostatnie dwie cyfry (`yz`) w ostatniej części cyfry (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. Na `2.1.300` przykład jeśli określisz jako wersję zestawu SDK, wybór zestawu SDK znajdzie się do `2.1.399` , `2.1.400` ale nie jest traktowany jako `2.1.300`wersja poprawki dla programu.
 
-Wersje `2.1.100` zestawu SDK `2.1.201` .NET Core zostały wydane podczas przejścia między schematami `xyz` numerów wersji i nie obsługują poprawnie notacji. Zdecydowanie zaleca się, jeśli określisz te wersje w pliku *global.json,* upewnij się, że określone wersje znajdują się na komputerach docelowych.
+Wersje `2.1.100` zestaw .NET Core SDK za `2.1.201` pomocą zostały wydane podczas przejścia między schematami numerów wersji i nie obsługują poprawnie `xyz` notacji. Zdecydowanie zalecamy, aby określić te wersje w pliku *Global. JSON* , że określone wersje znajdują się na komputerach docelowych.
 
 ---
 
-## <a name="troubleshoot-build-warnings"></a>Rozwiązywanie problemów z ostrzeżeniami dotyczącymi kompilacji
+## <a name="troubleshoot-build-warnings"></a>Rozwiązywanie problemów z ostrzeżeniami kompilacji
 
-* Następujące ostrzeżenie wskazuje, że projekt został skompilowany przy użyciu wersji wstępnej sdk .NET Core:
+* Poniższe ostrzeżenie wskazuje, że projekt został skompilowany przy użyciu wstępnej wersji zestaw .NET Core SDK:
 
-  > Pracujesz z wersją zapoznawczą sdk .NET Core. Wersję SDK można zdefiniować za pomocą pliku global.json w bieżącym projekcie. Więcej <https://go.microsoft.com/fwlink/?linkid=869452>na .
+  > Pracujesz z wersją zapoznawczą zestaw .NET Core SDK. Możesz zdefiniować wersję zestawu SDK za pośrednictwem pliku Global. JSON w bieżącym projekcie. Więcej o <https://go.microsoft.com/fwlink/?linkid=869452>.
 
-  Wersje .NET Core SDK mają historię i zobowiązanie do wysokiej jakości. Jeśli jednak nie chcesz używać wersji wstępnej, sprawdź różne strategie, których możesz użyć z sdk .NET Core 3.0 lub nowszą wersją w sekcji [allowPrerelease.](#allowprerelease) W przypadku maszyn, które nigdy nie miały zainstalowanego środowiska uruchomieniowego .NET Core 3.0 lub sdk, należy utworzyć plik *global.json* i określić dokładną wersję, której chcesz użyć.
+  Wersje zestaw .NET Core SDK mają historię i zobowiązanie o wysokiej jakości. Jeśli jednak nie chcesz używać wersji wstępnej, Sprawdź różne strategie, których można użyć z zestawem SDK .NET Core 3,0 lub nowszą wersją w sekcji [allowPrerelease](#allowprerelease) . W przypadku maszyn, na których nigdy nie zainstalowano platformy .NET Core 3,0 lub nowszego lub zestawu SDK, należy utworzyć plik *Global. JSON* i określić dokładną wersję, która ma być używana.
 
-* Następujące ostrzeżenie wskazuje, że projekt jest przeznaczony dla ef core 1.0 lub 1.1, który nie jest zgodny z .NET Core 2.1 SDK i nowszych wersjach:
+* Poniższe ostrzeżenie wskazuje, że projekt jest ukierunkowany na EF Core 1,0 lub 1,1, co nie jest zgodne z zestawem SDK .NET Core 2,1 i nowszymi wersjami:
 
-  > Projekt startowy "{startupProject}" jest przeznaczony dla struktury ". Wersja NETCoreApp '{targetFrameworkVersion}'. Ta wersja narzędzia wiersza polecenia Core .NET programu Entity Framework obsługuje tylko wersję 2.0 lub nowszą. Aby uzyskać informacje na temat używania starszych wersji narzędzi, zobacz <https://go.microsoft.com/fwlink/?linkid=871254>.
+  > Projekt startowy "{startupProject}" wskazuje platformę ". NETCoreApp "wersja" {targetFrameworkVersion} ". Ta wersja narzędzi wiersza polecenia Entity Framework Core .NET obsługuje tylko wersję 2,0 lub nowszą. Aby uzyskać informacje na temat używania starszych wersji narzędzi, zobacz <https://go.microsoft.com/fwlink/?linkid=871254>.
 
-  Począwszy od .NET Core 2.1 SDK (wersja 2.1.300), `dotnet ef` polecenie jest zawarte w zestawie SDK. Aby skompilować projekt, zainstaluj zestaw SDK programu .NET Core 2.0 (wersja 2.1.201) lub wcześniejszy na komputerze i zdefiniuj żądaną wersję SDK przy użyciu pliku *global.json.* Aby uzyskać więcej `dotnet ef` informacji na temat polecenia, zobacz [Narzędzia wiersza polecenia EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+  Począwszy od zestawu SDK programu .NET Core 2,1 (wersja 2.1.300) `dotnet ef` , polecenie znajduje się w zestawie SDK. Aby skompilować projekt, zainstaluj na komputerze zestaw SDK programu .NET Core 2,0 (wersja 2.1.201) lub wcześniejszy i zdefiniuj żądaną wersję zestawu SDK przy użyciu pliku *Global. JSON* . Aby uzyskać więcej informacji na `dotnet ef` temat tego polecenia, zobacz [EF Core narzędzia wiersza polecenia programu .NET](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Jak rozwiązywane są rozwiązania dotyczące skusi SDK projektów](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Jak są rozwiązywane zestawy SDK projektu](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

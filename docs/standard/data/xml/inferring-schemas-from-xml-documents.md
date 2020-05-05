@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710755"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796174"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Wnioskowanie schematów na podstawie dokumentów XML
 W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference> klasy do wywnioskowania schematu języka definicji schematu XML (XSD) ze struktury dokumentu XML.  
@@ -29,7 +29,7 @@ W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  W powyższym przykładzie, gdy `attribute1` atrybut zostanie napotkany `6` przez wartość przez <xref:System.Xml.Schema.XmlSchemaInference> proces, przyjmuje się, że jest typu. `xs:unsignedByte` Gdy drugi `parent` element zostanie napotkany przez <xref:System.Xml.Schema.XmlSchemaInference> proces, ograniczenie jest ograniczane przez modyfikację typu do `xs:string` , ponieważ wartość `attribute1` atrybutu jest teraz. `A` Podobnie `minOccurs` atrybut dla wszystkich elementów, `child` które `minOccurs="0"` zostały wywnioskowane w schemacie, jest przyznany, ponieważ drugi element nadrzędny nie ma elementów podrzędnych.  
@@ -80,7 +80,7 @@ W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference
 ## <a name="schemas-that-cannot-be-refined"></a>Schematy, które nie mogą zostać ulepszone  
  Istnieją konstrukcje schematu W3C XML, które nie mogą obsłużyć procesu schematu <xref:System.Xml.Schema.XmlSchemaInference> języka definicji schematu XML (XSD), jeśli podano typ do uściślenia i spowoduje zgłoszenie wyjątku. Takie jak typ złożony, którego compositor najwyższego poziomu jest coś innego niż sekwencja. W modelu Object Model (SOM) odnosi się do obiektu <xref:System.Xml.Schema.XmlSchemaComplexType> , którego <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> właściwość nie jest wystąpieniem. <xref:System.Xml.Schema.XmlSchemaSequence>  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

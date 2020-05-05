@@ -6,25 +6,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116367"
 ---
-### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine jest przestarzały
+### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft. VisualBasic. Stałychs. vbNewLine jest przestarzała
 
-Stała <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> jest oznaczona jako [ \[przestarzała,\] ](xref:System.ObsoleteAttribute) zaczynając od wersji .NET Core 3.0 Preview 8.
+Stała jest oznaczona jako [ \[przestarzała\] ](xref:System.ObsoleteAttribute) , począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8. <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 8
+3,0 wersja zapoznawcza 8
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Core 3.0 Preview 8, [Atrybut](xref:System.ObsoleteAttribute) Przestarzałe <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> został zastosowany do stałej. Użycie stałej tworzy ostrzeżenie kompilatora. W .NET Framework i poprzednich wersjach programu .NET Core nie został oznaczony jako przestarzały.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, [przestarzały](xref:System.ObsoleteAttribute) atrybut <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> został zastosowany do stałej. Użycie stałej powoduje wygenerowanie ostrzeżenia kompilatora. W .NET Framework i poprzednich wersjach programu .NET Core nie została oznaczona jako przestarzała.
 
-Ta zmiana została wmazana w celu obsługi języka Visual Basic jako języka dla tworzenia wielu platform. Stała <xref:Microsoft.VisualBasic.Constants.vbNewLine> jest odpowiednikiem `\r\n`sekwencji znaków nowej linii w systemie Windows. W systemach uniksowych nowy `\n`znak linii to .
+Ta zmiana została wprowadzona w celu obsługi Visual Basic jako języka dla tworzenia wielu platform. <xref:Microsoft.VisualBasic.Constants.vbNewLine> Stała jest równoznaczna z `\r\n`sekwencją znaków nowego wiersza w systemie Windows. W systemach opartych na systemie UNIX znak nowego wiersza `\n`to.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Komunikat atrybutu [Przestarzałe](xref:System.ObsoleteAttribute) <xref:Microsoft.VisualBasic.Constants.vbNewLine> zawiera następujące zalecenie:
+Komunikat o [przestarzałym](xref:System.ObsoleteAttribute) atrybucie <xref:Microsoft.VisualBasic.Constants.vbNewLine> dla programu zawiera następujące zalecenia:
 
-W przypadku powrotu karetki <xref:Microsoft.VisualBasic.Constants.vbCrLf>i wysuwu linii użyj . Aby uzyskać nową linię bieżącej <xref:System.Environment.NewLine?displayProperty=nameWithType>platformy, użyj .
+W przypadku powrotu karetki i wysuwu wiersza Użyj <xref:Microsoft.VisualBasic.Constants.vbCrLf>. W przypadku wiersza dla bieżącej platformy Użyj <xref:System.Environment.NewLine?displayProperty=nameWithType>.
 
 #### <a name="category"></a>Kategoria
 

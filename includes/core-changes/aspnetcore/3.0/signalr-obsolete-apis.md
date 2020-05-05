@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394062"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: UseSignalR i UseConnections metody oznaczone jako przestarzałe
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>Sygnalizujący: metody UseSignalR i UseConnections oznaczone jako przestarzałe
 
-Metody `UseConnections` i `UseSignalR` klasy `ConnectionsRouteBuilder` i `HubRouteBuilder` są oznaczone jako przestarzałe w ASP.NET Core 3.0.
+Metody `UseConnections` i `UseSignalR` i klasy `ConnectionsRouteBuilder` i `HubRouteBuilder` są oznaczone jako przestarzałe w ASP.NET Core 3,0.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ Metody `UseConnections` i `UseSignalR` klasy `ConnectionsRouteBuilder` i `HubRou
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Routing koncentratora SignalR `UseSignalR` `UseConnections`został skonfigurowany przy użyciu lub .
+Routing centrum sygnałów został skonfigurowany przy użyciu `UseSignalR` lub `UseConnections`.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Stary sposób konfigurowania routingu został przestarzały i zastąpiony routingiem punktów końcowych.
+Stary sposób konfigurowania routingu został przestarzały i zastąpiony przez Routing punktów końcowych.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Oprogramowanie pośredniczą jest przenoszone do nowego systemu routingu punktów końcowych. Stary sposób dodawania pośredniczy jest przestarzały.
+Oprogramowanie pośredniczące jest przenoszone do nowego systemu routingu punktu końcowego. Stary sposób dodawania oprogramowania pośredniczącego jest przestarzały.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zamień na: `UseSignalR` `UseEndpoints`
+Zamień `UseSignalR` na `UseEndpoints`:
 
 **Stary kod:**
 

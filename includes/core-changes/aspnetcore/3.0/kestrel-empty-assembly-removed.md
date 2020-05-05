@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394240"
 ---
-### <a name="kestrel-empty-https-assembly-removed"></a>Pusstrel: Usunięto pusty zespół HTTPS
+### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel: Usunięto pusty zestaw HTTPS
 
-Zespół <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> został usunięty.
+Zestaw <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> został usunięty.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,12 +16,12 @@ Zespół <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullNam
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-W ASP.NET Core 2.1 zawartość `Microsoft.AspNetCore.Server.Kestrel.Https` została <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName>przeniesiona do . Ta zmiana została wykonana w sposób `[TypeForwardedTo]` nieprzerywany przy użyciu atrybutów.
+W ASP.NET Core 2,1 zawartość `Microsoft.AspNetCore.Server.Kestrel.Https` została przeniesiona do <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName>lokalizacji. Ta zmiana została wykonana w sposób rozdzielny przy `[TypeForwardedTo]` użyciu atrybutów.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-- Biblioteki odwołujące `Microsoft.AspNetCore.Server.Kestrel.Https` się do wersji 2.0 powinny zaktualizować wszystkie ASP.NET zależności rdzenia do wersji 2.1 lub nowszej. W przeciwnym razie mogą się zepsuć po załadowaniu do ASP.NET aplikacji Core 3.0.
-- Aplikacje i biblioteki przeznaczone ASP.NET Core 2.1 i `Microsoft.AspNetCore.Server.Kestrel.Https` nowszej powinny usunąć wszelkie bezpośrednie odwołania do pakietu NuGet.
+- Biblioteki, `Microsoft.AspNetCore.Server.Kestrel.Https` do których odwołuje się 2,0, powinny aktualizować wszystkie zależności ASP.NET Core do 2,1 lub nowszych. W przeciwnym razie mogą wystąpić przerwy w przypadku załadowania do aplikacji ASP.NET Core 3,0.
+- Aplikacje i biblioteki ukierunkowane na ASP.NET Core 2,1 i nowsze powinny usunąć wszystkie bezpośrednie odwołania `Microsoft.AspNetCore.Server.Kestrel.Https` do pakietu NuGet.
 
 #### <a name="category"></a>Kategoria
 

@@ -6,11 +6,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902006"
 ---
-### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: NagłówkiNames stałych zmienionych na statyczne tylko do odczytu
+### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: stałe HeaderNames zmienione do statycznego tylko do odczytu
 
-Począwszy od wersji ASP.NET Core 3.0 `const` Preview `static readonly`5, pola w zmienionym <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> stosunku do .
+Począwszy od ASP.NET Core 3,0 wersja zapoznawcza 5, <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> pola w `const` obszarze `static readonly`zmieniono z na.
 
-Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,28 +18,28 @@ Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#9514](https://github.com/dot
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Pola te były `const`kiedyś .
+Te pola, które są `const`używane.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Te pola `static readonly`są teraz .
+Te pola są teraz `static readonly`.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
 Zmiana:
 
-* Zapobiega osadzaniu wartości przez granice złożenia, co pozwala na korekty wartości zgodnie z potrzebami.
+* Zapobiega osadzaniu wartości między granicami zestawów, umożliwiając korektę wartości zgodnie z wymaganiami.
 * Umożliwia szybsze sprawdzanie równości odwołań.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Ponownie skompilować przeciwko 3.0. Kod źródłowy używający tych pól w następujący sposób nie może już tego zrobić:
+Kompiluj ponownie z 3,0. Kod źródłowy korzystający z tych pól w następujących sposobach nie może już być taki:
 
 * Jako argument atrybutu
-* Jako `case` w `switch` oświadczeniu
-* Przy definiowaniu innego`const`
+* Jako `switch` instrukcja `case` w instrukcji
+* Podczas definiowania innego`const`
 
-Aby obejść zmianę podziału, przełącz się na używanie samodzielnie zdefiniowanych stałych nazw nagłówka lub literałów ciągów.
+Aby obejść istotną zmianę, należy przełączyć się do użycia samodzielnych stałych nazw nagłówka lub literałów ciągów.
 
 #### <a name="category"></a>Kategoria
 

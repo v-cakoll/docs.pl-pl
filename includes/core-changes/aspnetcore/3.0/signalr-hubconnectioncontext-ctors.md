@@ -6,17 +6,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81274776"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext konstruktory zmienione
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>Sygnalizacja: zmieniono konstruktory HubConnectionContext
 
-`HubConnectionContext` Konstruktory SignalR zmienił się zaakceptować typ opcji, a nie wiele parametrów, do przyszłości opcje dodawania. Ta zmiana zastępuje dwa konstruktory z jednego konstruktora, który akceptuje typ opcji.
+`HubConnectionContext` Konstruktory sygnalizujące uległy zmianie w celu zaakceptowania typu opcji, a nie wielu parametrów, do dalszego dodawania opcji. Ta zmiana zastępuje dwa konstruktory z pojedynczym konstruktorem akceptującym typ opcji.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`HubConnectionContext`posiada dwa konstruktory:
+`HubConnectionContext`ma dwa konstruktory:
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -31,13 +31,13 @@ Dwa konstruktory zostały usunięte i zastąpione jednym konstruktorem:
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
 ```
 
-#### <a name="reason-for-change"></a>Powód zmiany
+#### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Nowy konstruktor używa nowego obiektu opcji. W związku z `HubConnectionContext` tym funkcje mogą być rozszerzane w przyszłości bez wprowadzania większej liczby konstruktorów i wprowadzania zmian.
+Nowy Konstruktor używa nowego obiektu options. W związku z tym funkcje programu `HubConnectionContext` mogą być rozwijane w przyszłości bez tworzenia większej liczby konstruktorów i zmieniania zmian.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zamiast używać następującego konstruktora:
+Zamiast korzystać z następującego konstruktora:
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(

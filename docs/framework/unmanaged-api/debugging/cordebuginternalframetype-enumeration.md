@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778365"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795836"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType — Wyliczenie
 Identyfikuje typ ramki stosu. To wyliczenie jest używane przez metodę [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) .  
@@ -45,9 +45,9 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Wartość null. Metoda `ICorDebugInternalFrame::GetFrameType` nigdy nie zwraca tej wartości.|  
+|`STUBFRAME_NONE`|Wartość null. `ICorDebugInternalFrame::GetFrameType` Metoda nigdy nie zwraca tej wartości.|  
 |`STUBFRAME_M2U`|Ramka klasy zarządzanej do niezarządzanej.|  
 |`STUBFRAME_U2M`|Niezarządzana ramka zastępcza niezarządzana.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Przejście między domenami aplikacji.|  
@@ -60,14 +60,14 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|Środowisko uruchomieniowe to JIT-kompiluje metodę.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

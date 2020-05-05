@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568126"
 ---
-### <a name="jsonelement-api-changes"></a>Zmiany interfejsu API JsonElement
+### <a name="jsonelement-api-changes"></a>Zmiany interfejsu API jsonelement
 
-Począwszy od .NET Core 3.0 Preview 7, niektóre <xref:System.Text.Json.JsonElement> interfejsy API zostały zmienione, aby umożliwić łatwiejsze odnajdowanie i większą użyteczność.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 7, niektóre <xref:System.Text.Json.JsonElement> interfejsy API zostały zmienione w celu łatwiejszego odnajdowania i zwiększenia użyteczności.
 
 #### <a name="change-description"></a>Zmień opis
 
-W wersji .NET Core 3.0 Preview 7 interfejsy API zostały zmienione w następujący sposób, <xref:System.Text.Json.JsonElement> aby umożliwić łatwiejsze odnajdowanie i większą użyteczność.
+W programie .NET Core 3,0 w wersji <xref:System.Text.Json.JsonElement> zapoznawczej 7 interfejsy API zostały zmienione w następujący sposób, aby umożliwić łatwiejsze odnajdywanie i większą użyteczność.
 
-1. Wszystkie `WriteProperty` przeciążenia metody <xref:System.Text.Json.JsonElement>zostały usunięte z . Ma to wpływ na kod, taki jak:
+1. Wszystkie `WriteProperty` przeciążenia metod zostały usunięte z <xref:System.Text.Json.JsonElement>. Ma to wpływ na kod, taki jak następujące:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -31,7 +31,7 @@ W wersji .NET Core 3.0 Preview 7 interfejsy API zostały zmienione w następują
    }
    ```
 
-1. `WriteValue`zmieniono nazwę <xref:System.Text.Json.JsonElement.WriteTo%2A>na . Ma to wpływ na kod, taki jak:
+1. `WriteValue`Zmieniono nazwę na <xref:System.Text.Json.JsonElement.WriteTo%2A>. Ma to wpływ na kod, taki jak następujące:
 
    ```csharp
     using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -41,17 +41,17 @@ W wersji .NET Core 3.0 Preview 7 interfejsy API zostały zmienione w następują
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A>teraz wyrzuca, <xref:System.ArgumentNullException> gdy `null`jego parametr metody jest .
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A>teraz zgłasza, <xref:System.ArgumentNullException> gdy parametr metody jest `null`.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 7
+3,0 wersja zapoznawcza 7
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli te zmiany mają wpływ na kod, można wykonać następujące czynności:
+Jeśli te zmiany wpływają na kod, możesz wykonać następujące czynności:
 
-- Nie ma zastępczego interfejsu `WriteProperty` API <xref:System.Text.Json.JsonElement>dla przeciążeń w . Zamiast tego można wywołać <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> jeden z <xref:System.Text.Json.JsonElement.WriteTo%2A> przeciążeń wraz z metodą, aby osiągnąć ten sam wynik. Przykład:
+- Nie istnieje zastępczy interfejs API dla `WriteProperty` przeciążenia w <xref:System.Text.Json.JsonElement>programie. Zamiast tego można wywołać jedno z <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> przeciążeń wraz z <xref:System.Text.Json.JsonElement.WriteTo%2A> metodą, aby osiągnąć ten sam wynik. Przykład:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -62,7 +62,7 @@ Jeśli te zmiany mają wpływ na kod, można wykonać następujące czynności:
    }
    ```
 
-- Zmień nazwę `WriteValue` metody <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>na . Parametr metody pozostaje niezmieniony. Na przykład poprzedni kod powinien zostać zmieniony na następujący:
+- Zmień nazwę `WriteValue` metody na <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>. Parametr metody pozostaje niezmieniony. Na przykład poprzedni kod powinien zostać zmieniony na następujący:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ Jeśli te zmiany mają wpływ na kod, można wykonać następujące czynności:
    }
    ```
 
-- Obsługa <xref:System.ArgumentNullException> wywołań in <xref:System.Text.Json.JsonElement.WriteTo%2A> do metody.
+- <xref:System.ArgumentNullException> Obsługuj wywołania <xref:System.Text.Json.JsonElement.WriteTo%2A> metody.
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

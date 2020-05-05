@@ -1,61 +1,61 @@
 ---
-title: 'Instruktaż: Utrwalanie obiektu przy użyciu C #'
+title: 'Przewodnik: utrwalanie obiektu przy użyciu języka C #'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796070"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>Instruktaż: utrwalanie obiektu przy użyciu C\#
+# <a name="walkthrough-persisting-an-object-using-c"></a>Przewodnik: utrwalanie obiektu przy użyciu języka C\#
 
-Serializacji można użyć do utrwalenia danych obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobieranie ich przy następnym wystąpieniu obiektu.
+Możesz użyć serializacji, aby zachować dane obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobieranie ich przy następnym utworzeniu wystąpienia obiektu.
 
-W tym instruktażu `Loan` utworzysz obiekt podstawowy i utrwalisz jego dane do pliku. Dane zostaną pobrane z pliku podczas ponownego tworzenia obiektu.
-
-> [!IMPORTANT]
-> W tym przykładzie tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta `Create` aplikacja musi mieć uprawnienia do folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja `Write` wymaga tylko uprawnień, mniejsze uprawnienia. Jeśli to możliwe, bezpieczniej jest utworzyć plik podczas `Read` wdrażania i przyznać uprawnienia tylko jednemu plikowi (zamiast utwórz uprawnienia dla folderu). Ponadto bezpieczniej jest zapisywać dane w folderach użytkowników niż w folderze głównym lub folderze Pliki programów.
+W tym instruktażu utworzysz obiekt podstawowy `Loan` i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.
 
 > [!IMPORTANT]
-> W tym przykładzie przechowuje dane w pliku w formacie binarnym. Formaty te nie powinny być używane w odniesieniu do poufnych danych, takich jak hasła lub informacje o karcie kredytowej.
+> Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi mieć `Create` uprawnienie do tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` uprawnień, ale jest to małe uprawnienie. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` uprawnień tylko jednemu plikowi (zamiast tworzenia uprawnień dla folderu). Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.
+
+> [!IMPORTANT]
+> Ten przykład zapisuje dane w pliku formatu binarnego. Tych formatów nie należy używać w przypadku poufnych danych, takich jak hasła lub informacje o kartach kredytowych.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Aby utworzyć i uruchomić, zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
+- Aby skompilować i uruchomić, zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 
-- Zainstaluj swój ulubiony edytor kodu, jeśli jeszcze tego nie zrobiłeś.
+- Zainstaluj swój ulubiony Edytor kodu, jeśli jeszcze tego nie zrobiono.
 
 > [!TIP]
-> Chcesz zainstalować edytor kodów? [Wypróbuj program Visual Studio!](https://visualstudio.com/downloads)
+> Musisz zainstalować Edytor kodu? Wypróbuj [program Visual Studio](https://visualstudio.com/downloads)!
 
-- Przykład wymaga Języka C# 7.3. Zobacz [Wybieranie wersji językowej języka Języka C#](../../../language-reference/configure-language-version.md)
+- Przykład wymaga języka C# 7,3. Zobacz [Wybieranie wersji języka C#](../../../language-reference/configure-language-version.md)
 
-Przykładowy kod można sprawdzić w trybie online [w repozytorium github .NET .](https://github.com/dotnet/samples/tree/master/csharp/serialization)
+Przykładowy kod można przeanalizować w trybie online [w repozytorium usługi GitHub dla platformy .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 
-## <a name="creating-the-loan-object"></a>Tworzenie obiektu pożyczki
+## <a name="creating-the-loan-object"></a>Tworzenie obiektu pożyczek
 
-Pierwszym krokiem jest `Loan` utworzenie klasy i aplikacji konsoli, która używa klasy:
+Pierwszym krokiem jest utworzenie `Loan` klasy i aplikacji konsolowej, która używa klasy:
 
-1. Utwórz nową aplikację. Wpisz, `dotnet new console -o serialization` aby utworzyć nową aplikację `serialization`konsoli w podkatalogu o nazwie .
-1. Otwórz aplikację w edytorze i dodaj `Loan.cs`nową klasę o nazwie .
-1. Dodaj następujący kod `Loan` do swojej klasy:
+1. Utwórz nową aplikację. Wpisz `dotnet new console -o serialization` , aby utworzyć nową aplikację konsolową w podkatalogu o `serialization`nazwie.
+1. Otwórz aplikację w edytorze i Dodaj nową klasę o nazwie `Loan.cs`.
+1. Dodaj następujący kod do `Loan` klasy:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
-Należy również utworzyć aplikację, która `Loan` używa klasy.
+Należy również utworzyć aplikację, która używa `Loan` klasy.
 
-## <a name="serialize-the-loan-object"></a>Serializacja obiektu pożyczki
+## <a name="serialize-the-loan-object"></a>Serializacja obiektu pożyczek
 
 1. Otwórz plik `Program.cs`. Dodaj następujący kod:
 
 [!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
-Dodaj program obsługi `PropertyChanged` zdarzeń dla zdarzenia i `Loan` kilka wierszy, aby zmodyfikować obiekt i wyświetlić zmiany. Możesz zobaczyć dodatki w następującym kodzie:
+Dodaj program obsługi zdarzeń dla `PropertyChanged` zdarzenia, a kilka wierszy, aby zmodyfikować `Loan` obiekt i wyświetlić zmiany. Można zobaczyć dodatki w następującym kodzie:
 
 [!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
-W tym momencie można uruchomić kod i zobaczyć bieżące dane wyjściowe:
+W tym momencie można uruchomić kod i wyświetlić bieżące dane wyjściowe:
 
 ```console
 New customer value: Henry Clay
@@ -63,43 +63,43 @@ New customer value: Henry Clay
 7.1
 ```
 
-Uruchamianie tej aplikacji wielokrotnie zawsze zapisuje te same wartości. Nowy obiekt Pożyczka jest tworzony przy każdym uruchomieniu programu. W świecie rzeczywistym stopy procentowe zmieniają się okresowo, ale niekoniecznie za każdym razem, gdy aplikacja jest uruchamiana. Kod serializacji oznacza zachowanie najnowszej stopy procentowej między wystąpieniami aplikacji. W następnym kroku zrobisz tylko, że dodając serializacji do Pożyczki klasy.
+Aplikacja wielokrotnie uruchamiana zawsze zapisuje te same wartości. Nowy obiekt pożyczek jest tworzony za każdym razem, gdy uruchamiasz program. W świecie rzeczywistym stawki odsetek zmieniają się okresowo, ale nie zawsze, gdy aplikacja jest uruchomiona. Kod serializacji oznacza zachowywanie najnowszej stopy odsetek między wystąpieniami aplikacji. W następnym kroku wystarczy dodać serializację do klasy pożyczek.
 
-## <a name="using-serialization-to-persist-the-object"></a>Używanie serializacji do utrwalania obiektu
+## <a name="using-serialization-to-persist-the-object"></a>Utrwalanie obiektu przy użyciu serializacji
 
-Aby utrwalić wartości dla Klasy Pożyczki, należy `Serializable` najpierw oznaczyć klasę atrybutem. Dodaj następujący kod powyżej definicji klasy pożyczki:
+Aby zachować wartości dla klasy pożyczek, należy najpierw oznaczyć klasę `Serializable` atrybutem. Dodaj następujący kod powyżej definicji klasy pożyczek:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
-Informuje <xref:System.SerializableAttribute> kompilator, że wszystko w klasie można utrwalić do pliku. Ponieważ `PropertyChanged` zdarzenie nie reprezentuje część wykresu obiektu, które powinny być przechowywane, nie powinny być serializowane. W ten sposób można serializować wszystkie obiekty, które są dołączone do tego zdarzenia. Można dodać <xref:System.NonSerializedAttribute> do deklaracji pola `PropertyChanged` dla programu obsługi zdarzeń.
+<xref:System.SerializableAttribute> Informuje kompilator, że wszystko w klasie może być utrwalone w pliku. Ponieważ `PropertyChanged` zdarzenie nie reprezentuje części grafu obiektów, która powinna być przechowywana, nie powinno być serializowane. Dzięki temu można serializować wszystkie obiekty, które są dołączone do tego zdarzenia. Można dodać <xref:System.NonSerializedAttribute> do deklaracji pola dla programu obsługi `PropertyChanged` zdarzeń.
 
 [!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
-Począwszy od Języka C# 7.3, można dołączyć atrybuty do pola `field` zapasowego właściwości auto implementowane przy użyciu wartości docelowej. Poniższy kod dodaje `TimeLastLoaded` właściwość i oznacza ją jako nieserializowalną:
+Począwszy od języka C# 7,3, można dołączyć atrybuty do pola zapasowego właściwości automatycznie zaimplementowane przy użyciu wartości `field` docelowej. Poniższy kod dodaje `TimeLastLoaded` Właściwość i oznacza ją jako niemożliwy do serializacji:
 
 [!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
-Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją do pliku, <xref:System.IO> należy <xref:System.Runtime.Serialization.Formatters.Binary> użyć i przestrzeni nazw. Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych obszarów nazw, jak pokazano w poniższym kodzie:
+Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją w pliku, należy użyć przestrzeni nazw <xref:System.IO> i. <xref:System.Runtime.Serialization.Formatters.Binary> Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych przestrzeni nazw, jak pokazano w poniższym kodzie:
 
 [!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
-Następnym krokiem jest dodanie kodu do deserializacji obiektu z pliku podczas tworzenia obiektu. Dodaj stałą do klasy dla nazwy pliku danych serializowanych, jak pokazano w poniższym kodzie:
+Następnym krokiem jest dodanie kodu w celu deserializacji obiektu z pliku po utworzeniu obiektu. Dodaj stałą do klasy dla nazwy pliku serializowanej danych, jak pokazano w poniższym kodzie:
 
 [!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
-Następnie dodaj następujący kod po wierszu, który tworzy `TestLoan` obiekt:
+Następnie Dodaj następujący kod po wierszu, który tworzy `TestLoan` obiekt:
 
 [!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
-Najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, utwórz <xref:System.IO.Stream> klasę do odczytu <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> pliku binarnego i klasę, aby przetłumaczyć plik. Należy również przekonwertować z typu strumienia do typu Pożyczka typu obiektu.
+Najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz <xref:System.IO.Stream> klasę, aby odczytać plik binarny i <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> klasę, aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.
 
-Następnie należy dodać kod do serializacji klasy do pliku. Dodaj następujący kod po istniejącym `Main` kodzie w metodzie:
+Następnie musisz dodać kod, aby serializować klasę do pliku. Dodaj następujący kod po istniejącym kodzie w `Main` metodzie:
 
 [!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
-W tym momencie można ponownie utworzyć i uruchomić aplikację. Po raz pierwszy działa, należy zauważyć, że stopy procentowe zaczynają się od 7,5, a następnie zmienia się na 7,1. Zamknij aplikację, a następnie uruchom ją ponownie. Teraz aplikacja drukuje komunikat, że przeczytał zapisany plik, a stopa procentowa wynosi 7,1 jeszcze przed kodem, który go zmienia.
+W tym momencie możesz ponownie skompilować i uruchomić aplikację. Przy pierwszym uruchomieniu należy zauważyć, że stawki odsetek zaczynają się od 7,5, a następnie zmieniają się na 7,1. Zamknij aplikację, a następnie uruchom ją ponownie. Teraz aplikacja drukuje wiadomość, która odczytała zapisany plik, a oprocentowanie to 7,1 nawet przed kodem, który go zmieni.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Serializacja (C#)](index.md)
-- [Przewodnik programowania języka C#](../..//index.md)
+- [Przewodnik programowania w języku C#](../../index.md)

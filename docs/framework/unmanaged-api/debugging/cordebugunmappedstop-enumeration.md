@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: 23e168b0f322a580917c3fcfcb767a7d4d4628f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 772f1f0dee260ad3752b2f89e5fbe0d6bc27b87b
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793885"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795654"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop — Wyliczenie
 Określa typ niezamapowanego kodu, który może wyzwolić zatrzymanie w wykonaniu kodu przez stepper.  
@@ -40,7 +40,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`STOP_NONE`|Nie należy Zatrzymywać w żadnym typie niezamapowanego kodu.|  
 |`STOP_PROLOG`|Zatrzymaj w kodzie prologu.|  
@@ -54,14 +54,14 @@ typedef enum CorDebugUnmappedStop {
  Użyj metody [ICorDebugStepper:: SetUnmappedStopMask —](icordebugstepper-setunmappedstopmask-method.md) , aby ustawić flagi określające niezamapowany kod, w którym zostanie zatrzymany stepper.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179095"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860502"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
-Zapisuje dane z określonego buforu na określony adres pamięci wirtualnej.  
+Zapisuje dane z określonego buforu na określonym adresie pamięci wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +39,26 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [w] CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
+ podczas CLRDATA_ADDRESS, w którym jest przechowywany adres pamięci wirtualnej.  
   
  `buffer`  
- [w] Wskaźnik do buforu, który przechowuje dane do zapisania.  
+ podczas Wskaźnik do buforu, który przechowuje dane do zapisania.  
   
  `bytesRequested`  
- [w] Liczba bajtów do zapisania.  
+ podczas Liczba bajtów do zapisania.  
   
  `bytesWritten`  
- [na zewnątrz] Wskaźnik do rzeczywistej liczby bajtów, które zostały zapisane.  
+ określoną Wskaźnik do rzeczywistej liczby zapisanych bajtów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)
+- [ICLRDataTarget — Interfejs](iclrdatatarget-interface.md)

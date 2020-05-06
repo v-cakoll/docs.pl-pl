@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3377dcd5d45ca8e31a57a75bd81366d41837c12c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122953"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860714"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent — Funkcja
 Tworzy lub otwiera dojście zdarzenia, które będzie sygnalizowane przez środowisko uruchomieniowe języka wspólnego (CLR) ładowane w określonym procesie docelowym.  
@@ -48,7 +48,7 @@ HRESULT GetStartupNotificationEvent
  Pomyślnie uzyskano dojście do zdarzenia powiadomienia uruchomienia.  
   
  E_INVALIDARG  
- `phStartupEvent` ma wartość null lub `debuggeePID` nie odwołuje się do procesu, który jest obecnie uruchomiony.  
+ `phStartupEvent`ma wartość null `debuggeePID` lub nie odwołuje się do procesu, który jest obecnie uruchomiony.  
   
  E_FAIL (lub inne kody powrotne E_)  
  Nie można uzyskać dojścia do zdarzenia powiadomienia uruchomienia.  
@@ -59,7 +59,7 @@ HRESULT GetStartupNotificationEvent
  Zdarzenie jest sygnalizowane przed wykonaniem kodu zarządzanego przez środowisko CLR sygnalizujące zdarzenie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim. h  
   

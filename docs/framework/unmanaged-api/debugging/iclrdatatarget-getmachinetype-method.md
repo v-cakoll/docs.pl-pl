@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 50ea9caf08b2ffb689760da95af4e5c3fdd77301
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9d86b23b91702929a86334f557a8d647e19861a4
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793741"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860588"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType — Metoda
 Pobiera identyfikator rodzaju instrukcji, która jest używana przez proces docelowy.  
@@ -35,17 +35,17 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>Parametry  
  `machineType`  
- określoną Wskaźnik do wartości, która wskazuje zestaw instrukcji używany przez proces docelowy. Zwrócony `machineType` jest jedną ze stałych IMAGE_FILE_MACHINE, które są zdefiniowane w pliku nagłówkowym WinNT. h.  
+ określoną Wskaźnik do wartości, która wskazuje zestaw instrukcji używany przez proces docelowy. Zwracana `machineType` jest jedna ze stałych IMAGE_FILE_MACHINE, które są zdefiniowane w pliku nagłówkowym Winnt. h.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData. idl, ClrData. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)
+- [ICLRDataTarget — Interfejs](iclrdatatarget-interface.md)

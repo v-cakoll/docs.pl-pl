@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793829"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860868"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion — Funkcja programu Silverlight
 Akceptuje ciąg wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest zwracany przez [funkcję CreateVersionStringFromModule —](createversionstringfrommodule-function.md)i zwraca odpowiedni interfejs debugera (zazwyczaj [ICorDebug](icordebug-interface.md)).  
@@ -34,12 +34,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  `ppCordb`  
  określoną Wskaźnik na wskaźnik do obiektu COM (`IUnknown`). Ten obiekt będzie rzutowany na obiekt [ICorDebug](icordebug-interface.md) przed jego zwróceniem.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- `ppCordb` odwołuje się do prawidłowego obiektu, który implementuje interfejs [interfejsu ICorDebug](icordebug-interface.md) .  
+ `ppCordb`odwołuje się do prawidłowego obiektu, który implementuje interfejs [interfejsu ICorDebug](icordebug-interface.md) .  
   
  E_INVALIDARG  
- `szDebuggeeVersion` lub `ppCordb` ma wartość null.  
+ `szDebuggeeVersion` Albo `ppCordb` ma wartość null.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
  Nie można zlokalizować składnika, który jest niezbędny do debugowania CLR. Oznacza to, że plik mscordbi. dll lub mscordaccore. dll nie został odnaleziony w tym samym katalogu co element docelowy CoreCLR. dll.  
@@ -54,7 +54,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  Interfejs, który jest zwracany, udostępnia funkcje do dołączania do środowiska CLR w procesie docelowym i debugowania kodu zarządzanego, który działa środowisko CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim. h  
   

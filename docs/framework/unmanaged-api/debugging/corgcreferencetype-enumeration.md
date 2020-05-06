@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793876"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860919"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType — Wyliczenie
 Określa źródło obiektu, które ma zostać pobrane jako elementy bezużyteczne.  
@@ -65,21 +65,21 @@ typedef enum {
 |`CorHandleAll`|Zwróć wszystkie odwołania z tabeli uchwytów. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) .|  
   
 ## <a name="remarks"></a>Uwagi  
- Wyliczenie `CorGCReferenceType` jest używane w następujący sposób:  
+ `CorGCReferenceType` Wyliczenie jest używane w następujący sposób:  
   
-- Jako wartość pola `type` struktury [COR_GC_REFERENCE](cor-gc-reference-structure.md) , wskazuje on źródło odwołania lub dojścia.  
+- Jako wartość `type` pola struktury [COR_GC_REFERENCE](cor-gc-reference-structure.md) wskazuje Źródło odwołania lub dojścia.  
   
-- Jako argument `types` metody [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) określa typy dojść do uwzględnienia w wyliczeniu.  
+- Jako `types` argument metody [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) określa typy dojść do uwzględnienia w wyliczeniu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

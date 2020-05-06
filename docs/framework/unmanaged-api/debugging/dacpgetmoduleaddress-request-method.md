@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress::Metoda żądania
+title: DacpGetModuleAddress::Request, metoda
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102910"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860835"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Metoda żądania
+# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request, metoda
 
-Wykonuje żądanie, aby wypełnić strukturę z danej struktury środowiska wykonawczego.
+Wykonuje żądanie wypełnienia struktury z danej struktury środowiska uruchomieniowego.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,22 +39,22 @@ HRESULT Request(
 ## <a name="parameters"></a>Parametry
 
 `pDataModule`\
-[w] Wskaźnik do modułu danych źródłowych.
+podczas Wskaźnik do modułu danych inicjatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura znajduje się wewnątrz środowiska wykonawczego i nie jest narażona za pośrednictwem żadnych nagłówków lub plików biblioteki. Aby go użyć, najprostszym sposobem jest naśladowanie implementacji:
+Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, najprostszym sposobem jest naśladowanie implementacji:
 
-- Zwraca wartość uzyskaną `Request` z wywołania metody na parametr z `IXCLRDataModule*` następującymi parametrami:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Zwróć wartość uzyskaną z wywołania `Request` metody dla `IXCLRDataModule*` parametru o następujących parametrach:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md)\
-**Nagłówek:** Brak\
-**Biblioteka:** Brak\
-**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md)\
+**Nagłówek:** Dawaj
+**Biblioteka:** Dawaj
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Debugowanie](index.md)
-- [Struktura DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)
+- [DacpGetModuleAddress, struktura](dacpgetmoduleaddress-structure.md)

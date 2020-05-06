@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-ms.openlocfilehash: bdc8378a129dd5bb1d9fdcb080c7b5cd53d34091
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6b2700b2f12e312f06640a06e5ec82fbc58f2ca9
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789074"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860460"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 — Interfejs
 Podklasa elementu [ICLRDataTarget](iclrdatatarget-interface.md) , która jest używana przez warstwę usług dostępu do danych do manipulowania regionami pamięci wirtualnej w procesie docelowym.  
@@ -35,15 +35,15 @@ Podklasa elementu [ICLRDataTarget](iclrdatatarget-interface.md) , która jest u�
  Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład żywy proces miałby inną implementację od tej ze zrzutu pamięci. Cel może nie obsługiwać modyfikacji regionów pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData. idl, ClrData. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICLRDataTarget — Interfejs](iclrdatatarget-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

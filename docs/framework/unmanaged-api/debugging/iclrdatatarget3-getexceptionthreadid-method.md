@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 961e74551ae7fc170e443c632ca11598f1494a39
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 63c92e3f34527f895552f45d43f332f778470b13
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785204"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860421"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>Metoda ICLRDataTarget3::GetExceptionThreadID
 Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR), aby uzyskać identyfikator wątku, który wywołał wyjątek.  
@@ -34,8 +34,8 @@ HRESULT GetExceptionThreadID(
  `threadID`  
  określoną Identyfikator wątku, który wywołał wyjątek.  
   
-## <a name="return-value"></a>Wartość zwrócona  
- Wartość zwracana jest `S_OK` w przypadku sukcesu lub niepowodzenie `HRESULT` kod w przypadku niepowodzenia. Kody `HRESULT` mogą zawierać, ale nie są ograniczone do następujących:  
+## <a name="return-value"></a>Wartość zwracana  
+ Wartość zwracana jest `S_OK` w przypadku powodzenia lub kod błędu `HRESULT` w przypadku niepowodzenia. `HRESULT` Kody mogą zawierać, ale nie są ograniczone do następujących:  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -46,16 +46,16 @@ HRESULT GetExceptionThreadID(
  Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData. idl, ClrData. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **.NET Framework wersje:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget3, interfejs](iclrdatatarget3-interface.md)
+- [ICLRDataTarget3 — Interfejs](iclrdatatarget3-interface.md)
 - [GetExceptionContextRecord, metoda](iclrdatatarget3-getexceptioncontextrecord-method.md)
 - [GetExceptionRecord, metoda](iclrdatatarget3-getexceptionrecord-method.md)

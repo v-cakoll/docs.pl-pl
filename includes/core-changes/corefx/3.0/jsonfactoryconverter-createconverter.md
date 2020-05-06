@@ -6,13 +6,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79147565"
 ---
-### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a><span data-ttu-id="2d21f-101">Zmieniono podpis JsonFactoryConverter.CreateConverter</span><span class="sxs-lookup"><span data-stu-id="2d21f-101">JsonFactoryConverter.CreateConverter signature changed</span></span>
+### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a><span data-ttu-id="016d1-101">Zmieniono sygnaturę JsonFactoryConverter. isconverter</span><span class="sxs-lookup"><span data-stu-id="016d1-101">JsonFactoryConverter.CreateConverter signature changed</span></span>
 
-<span data-ttu-id="2d21f-102">Aby ułatwić skład <xref:System.Text.Json.Serialization.JsonConverterFactory> klas, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> metoda została upubliczniona i biorąc <xref:System.Text.Json.JsonSerializerOptions>pod uwagę drugi argument typu .</span><span class="sxs-lookup"><span data-stu-id="2d21f-102">To facilitate the composition of <xref:System.Text.Json.Serialization.JsonConverterFactory> classes, the <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> method has been made public and given a second argument of type <xref:System.Text.Json.JsonSerializerOptions>.</span></span>
+<span data-ttu-id="016d1-102">Aby ułatwić składanie <xref:System.Text.Json.Serialization.JsonConverterFactory> klas, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> Metoda została udostępniona jako publiczna i podano drugi argument typu. <xref:System.Text.Json.JsonSerializerOptions></span><span class="sxs-lookup"><span data-stu-id="016d1-102">To facilitate the composition of <xref:System.Text.Json.Serialization.JsonConverterFactory> classes, the <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> method has been made public and given a second argument of type <xref:System.Text.Json.JsonSerializerOptions>.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="2d21f-103">Zmień opis</span><span class="sxs-lookup"><span data-stu-id="2d21f-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="016d1-103">Zmień opis</span><span class="sxs-lookup"><span data-stu-id="016d1-103">Change description</span></span>
 
-<span data-ttu-id="2d21f-104">Podpis metody `CreateConverter` w .NET Core przed wersją wersji 3.0 Preview 8 był:</span><span class="sxs-lookup"><span data-stu-id="2d21f-104">The signature of the `CreateConverter` method in .NET Core prior to version 3.0 Preview 8 was:</span></span>
+<span data-ttu-id="016d1-104">Sygnatura `CreateConverter` metody w programie .NET Core wcześniejsza niż wersja 3,0 Preview 8 była:</span><span class="sxs-lookup"><span data-stu-id="016d1-104">The signature of the `CreateConverter` method in .NET Core prior to version 3.0 Preview 8 was:</span></span>
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -24,7 +24,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-<span data-ttu-id="2d21f-105">W wersji .NET Core 3.0 Preview 8 i nowszych jest:</span><span class="sxs-lookup"><span data-stu-id="2d21f-105">In .NET Core 3.0 Preview 8 and later versions, it is:</span></span>
+<span data-ttu-id="016d1-105">W programie .NET Core 3,0 w wersji zapoznawczej 8 i nowszych wersjach:</span><span class="sxs-lookup"><span data-stu-id="016d1-105">In .NET Core 3.0 Preview 8 and later versions, it is:</span></span>
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,17 +36,17 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-<span data-ttu-id="2d21f-106">Przed tą zmianą trudno było skomponować zapieczętowane konwertery fabryczne, ponieważ nie było łatwego <xref:System.Text.Json.Serialization.JsonConverter%601> sposobu na uzyskanie z niego.</span><span class="sxs-lookup"><span data-stu-id="2d21f-106">Before this change, it was difficult to compose sealed factory converters, since there was no easy way to get the <xref:System.Text.Json.Serialization.JsonConverter%601> from it.</span></span> <span data-ttu-id="2d21f-107">Publiczne upublicznienie metody fabrycznej, a także przekazywanie prądu <xref:System.Text.Json.JsonSerializerOptions> pozwala na znacznie bardziej elastyczny skład.</span><span class="sxs-lookup"><span data-stu-id="2d21f-107">Making the factory method public and also passing the current <xref:System.Text.Json.JsonSerializerOptions> allow for much more flexible composition.</span></span>
+<span data-ttu-id="016d1-106">Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było to łatwe w <xref:System.Text.Json.Serialization.JsonConverter%601> użyciu.</span><span class="sxs-lookup"><span data-stu-id="016d1-106">Before this change, it was difficult to compose sealed factory converters, since there was no easy way to get the <xref:System.Text.Json.Serialization.JsonConverter%601> from it.</span></span> <span data-ttu-id="016d1-107">Uczynienie metody fabryki jako publiczną, a także <xref:System.Text.Json.JsonSerializerOptions> przekazanie bieżącego zezwolenia na znacznie bardziej elastyczne składanie.</span><span class="sxs-lookup"><span data-stu-id="016d1-107">Making the factory method public and also passing the current <xref:System.Text.Json.JsonSerializerOptions> allow for much more flexible composition.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="2d21f-108">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="2d21f-108">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="016d1-108">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="016d1-108">Version introduced</span></span>
 
-<span data-ttu-id="2d21f-109">3.0 Podgląd 8</span><span class="sxs-lookup"><span data-stu-id="2d21f-109">3.0 Preview 8</span></span>
+<span data-ttu-id="016d1-109">3,0 wersja zapoznawcza 8</span><span class="sxs-lookup"><span data-stu-id="016d1-109">3.0 Preview 8</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="2d21f-110">Zalecana akcja</span><span class="sxs-lookup"><span data-stu-id="2d21f-110">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="016d1-110">Zalecana akcja</span><span class="sxs-lookup"><span data-stu-id="016d1-110">Recommended action</span></span>
 
-<span data-ttu-id="2d21f-111">Klasy pochodne muszą zostać zaktualizowane i ponownie skompilowane.</span><span class="sxs-lookup"><span data-stu-id="2d21f-111">Derived classes need to be updated and recompiled.</span></span>
+<span data-ttu-id="016d1-111">Klasy pochodne muszą zostać zaktualizowane i ponownie skompilowane.</span><span class="sxs-lookup"><span data-stu-id="016d1-111">Derived classes need to be updated and recompiled.</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="2d21f-112">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="2d21f-112">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="016d1-112">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="016d1-112">Affected APIs</span></span>
 
 - <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>
 

@@ -6,21 +6,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198527"
 ---
-### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="cccf1-101">Stan sesji: usunięto przestarzałe interfejsy API</span><span class="sxs-lookup"><span data-stu-id="cccf1-101">Session state: Obsolete APIs removed</span></span>
+### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="e4db4-101">Stan sesji: Usunięto przestarzałe interfejsy API</span><span class="sxs-lookup"><span data-stu-id="e4db4-101">Session state: Obsolete APIs removed</span></span>
 
-<span data-ttu-id="cccf1-102">Usunięto przestarzałe interfejsy API do konfigurowania plików cookie sesji.</span><span class="sxs-lookup"><span data-stu-id="cccf1-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="cccf1-103">Aby uzyskać więcej informacji, zobacz [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span><span class="sxs-lookup"><span data-stu-id="cccf1-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
+<span data-ttu-id="e4db4-102">Usunięto przestarzałe interfejsy API służące do konfigurowania plików cookie sesji.</span><span class="sxs-lookup"><span data-stu-id="e4db4-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="e4db4-103">Aby uzyskać więcej informacji, zobacz [ASPNET/anonse # 257](https://github.com/aspnet/Announcements/issues/257).</span><span class="sxs-lookup"><span data-stu-id="e4db4-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="cccf1-104">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="cccf1-104">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="e4db4-104">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="e4db4-104">Version introduced</span></span>
 
-<span data-ttu-id="cccf1-105">3.0</span><span class="sxs-lookup"><span data-stu-id="cccf1-105">3.0</span></span>
+<span data-ttu-id="e4db4-105">3.0</span><span class="sxs-lookup"><span data-stu-id="e4db4-105">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="cccf1-106">Przyczyna zmiany</span><span class="sxs-lookup"><span data-stu-id="cccf1-106">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="e4db4-106">Przyczyna zmiany</span><span class="sxs-lookup"><span data-stu-id="e4db4-106">Reason for change</span></span>
 
-<span data-ttu-id="cccf1-107">Ta zmiana wymusza spójność między interfejsami API do konfigurowania funkcji korzystających z plików cookie.</span><span class="sxs-lookup"><span data-stu-id="cccf1-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
+<span data-ttu-id="e4db4-107">Ta zmiana wymusza spójność interfejsów API w celu konfigurowania funkcji używających plików cookie.</span><span class="sxs-lookup"><span data-stu-id="e4db4-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="cccf1-108">Zalecana akcja</span><span class="sxs-lookup"><span data-stu-id="cccf1-108">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="e4db4-108">Zalecana akcja</span><span class="sxs-lookup"><span data-stu-id="e4db4-108">Recommended action</span></span>
 
-<span data-ttu-id="cccf1-109">Migracja użycia usuniętych interfejsów API do ich nowszych zamienników.</span><span class="sxs-lookup"><span data-stu-id="cccf1-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="cccf1-110">Rozważmy następujący `Startup.ConfigureServices`przykład w:</span><span class="sxs-lookup"><span data-stu-id="cccf1-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
+<span data-ttu-id="e4db4-109">Migruj użycie usuniętych interfejsów API do ich nowszych zamian.</span><span class="sxs-lookup"><span data-stu-id="e4db4-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="e4db4-110">Rozważmy następujący przykład w `Startup.ConfigureServices`:</span><span class="sxs-lookup"><span data-stu-id="e4db4-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)
@@ -44,11 +44,11 @@ public void ConfigureServices(ServiceCollection services)
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="cccf1-111">Kategoria</span><span class="sxs-lookup"><span data-stu-id="cccf1-111">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="e4db4-111">Kategoria</span><span class="sxs-lookup"><span data-stu-id="e4db4-111">Category</span></span>
 
-<span data-ttu-id="cccf1-112">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="cccf1-112">ASP.NET Core</span></span>
+<span data-ttu-id="e4db4-112">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="e4db4-112">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="cccf1-113">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="cccf1-113">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="e4db4-113">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="e4db4-113">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieHttpOnly?displayProperty=fullName>

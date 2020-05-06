@@ -6,13 +6,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79147565"
 ---
-### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Zmieniono podpis JsonFactoryConverter.CreateConverter
+### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Zmieniono sygnaturę JsonFactoryConverter. isconverter
 
-Aby ułatwić skład <xref:System.Text.Json.Serialization.JsonConverterFactory> klas, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> metoda została upubliczniona i biorąc <xref:System.Text.Json.JsonSerializerOptions>pod uwagę drugi argument typu .
+Aby ułatwić składanie <xref:System.Text.Json.Serialization.JsonConverterFactory> klas, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> Metoda została udostępniona jako publiczna i podano drugi argument typu. <xref:System.Text.Json.JsonSerializerOptions>
 
 #### <a name="change-description"></a>Zmień opis
 
-Podpis metody `CreateConverter` w .NET Core przed wersją wersji 3.0 Preview 8 był:
+Sygnatura `CreateConverter` metody w programie .NET Core wcześniejsza niż wersja 3,0 Preview 8 była:
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -24,7 +24,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-W wersji .NET Core 3.0 Preview 8 i nowszych jest:
+W programie .NET Core 3,0 w wersji zapoznawczej 8 i nowszych wersjach:
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,11 +36,11 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Przed tą zmianą trudno było skomponować zapieczętowane konwertery fabryczne, ponieważ nie było łatwego <xref:System.Text.Json.Serialization.JsonConverter%601> sposobu na uzyskanie z niego. Publiczne upublicznienie metody fabrycznej, a także przekazywanie prądu <xref:System.Text.Json.JsonSerializerOptions> pozwala na znacznie bardziej elastyczny skład.
+Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było to łatwe w <xref:System.Text.Json.Serialization.JsonConverter%601> użyciu. Uczynienie metody fabryki jako publiczną, a także <xref:System.Text.Json.JsonSerializerOptions> przekazanie bieżącego zezwolenia na znacznie bardziej elastyczne składanie.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 8
+3,0 wersja zapoznawcza 8
 
 #### <a name="recommended-action"></a>Zalecana akcja
 

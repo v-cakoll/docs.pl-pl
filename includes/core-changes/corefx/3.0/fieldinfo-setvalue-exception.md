@@ -6,32 +6,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82021658"
 ---
-### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue zgłasza wyjątek dla pól statycznych, tylko init
+### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>Element FieldInfo. SetValue zgłasza wyjątek dla pól static, tylko init
 
-Począwszy od .NET Core 3.0, wyjątek jest zgłaszany podczas <xref:System.Reflection.FieldAttributes.InitOnly> próby ustawiania wartości na statycznym polu przez wywołanie <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>.
+Począwszy od platformy .NET Core 3,0, wyjątek jest zgłaszany podczas próby ustawienia wartości statycznego <xref:System.Reflection.FieldAttributes.InitOnly> pola przez wywołanie. <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>
 
 #### <a name="change-description"></a>Zmień opis
 
-W programach .NET Framework i wersjach programu .NET Core przed wersją 3.0 można ustawić wartość pola statycznego, które <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>jest stałe po jego zainicjowaniu[(odczytanym tylko w języku C#),](~/docs/csharp/language-reference/keywords/readonly.md)wywołując program . Jednak ustawienie takiego pola w ten sposób spowodowało nieprzewidywalne zachowanie na podstawie struktury docelowej i ustawień optymalizacji.
+W .NET Framework i wersje programu .NET Core przed 3,0, można ustawić wartość pola statycznego, które jest stałe po zainicjowaniu ([ReadOnly w języku C#](~/docs/csharp/language-reference/keywords/readonly.md)) przez wywołanie metody <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>. Jednak ustawienie takiego pola w ten sposób skutkuje nieprzewidywalnym zachowaniem na podstawie ustawień platformy docelowej i optymalizacji.
 
-W .NET Core 3.0 i nowszych wersjach, po wywołaniu <xref:System.Reflection.FieldInfo.SetValue%2A> na statyczne, <xref:System.Reflection.FieldAttributes.InitOnly> pole, <xref:System.FieldAccessException?displayProperty=nameWithType> wyjątek.
+W przypadku programu .NET Core 3,0 i jego nowszych wersji, <xref:System.Reflection.FieldInfo.SetValue%2A> gdy wywoływana jest wartość <xref:System.Reflection.FieldAttributes.InitOnly> statyczna, <xref:System.FieldAccessException?displayProperty=nameWithType> zostanie zgłoszony wyjątek.
 
 > [!TIP]
-> Pole <xref:System.Reflection.FieldAttributes.InitOnly> jest takie, które można ustawić tylko w momencie jego deklarowania lub w konstruktorze dla klasy zawierającej. Innymi słowy, jest stała po zainicjowaniu.
+> <xref:System.Reflection.FieldAttributes.InitOnly> Pole to takie, które można ustawić tylko w czasie, gdy jest zadeklarowany, lub w konstruktorze dla klasy zawierającej. Innymi słowy, jest ona stała po zainicjowaniu.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Inicjuj <xref:System.Reflection.FieldAttributes.InitOnly> statyczne pola w konstruktorze statycznym. Dotyczy to zarówno typów dynamicznych, jak i niedynamikowych.
+Inicjuj statyczne <xref:System.Reflection.FieldAttributes.InitOnly> pola w konstruktorze statycznym. Dotyczy to zarówno typów dynamicznych, jak i niedynamicznych.
 
-Alternatywnie można usunąć <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> atrybut z pola, a <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>następnie wywołać .
+Alternatywnie możesz usunąć <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> atrybut z pola, a następnie wywołać metodę <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>.
 
 #### <a name="category"></a>Kategoria
 
-Podstawowe biblioteki .NET
+Podstawowe biblioteki platformy .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

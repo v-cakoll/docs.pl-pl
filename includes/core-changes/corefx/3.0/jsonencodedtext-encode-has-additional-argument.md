@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82021678"
 ---
-### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>Metody JsonEncodedText.Encode mają dodatkowy argument JavaScriptEncoder
+### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>Metody JsonEncodedText. Encode mają dodatkowy argument JavaScriptEncoder
 
-Począwszy od .NET Core 3.0 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> Preview 8, metody zawierają opcjonalny <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> , <xref:System.Text.Encodings.Web.JavaScriptEncoder> metody zawierają opcjonalny argument.
 
 #### <a name="change-description"></a>Zmień opis
 
-Program .NET Core 3.0 zawiera nowy typ, odnośnik xref:System.Text.JsonEncodedText.Encode%2A?displayProperty=nameWithType>. Począwszy od .NET Core 3.0 Preview <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 8, podpis wszystkich przeciążeń metody został zmieniony, aby uwzględnić parametr opcjonalny. <xref:System.Text.Encodings.Web.JavaScriptEncoder> Ta zmiana została wyzwolona w celu umożliwienia innego lub niestandardowego kodera.
+Program .NET Core 3,0 zawiera nowy typ linki XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType>. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> , sygnatura wszystkich przeciążeń metody <xref:System.Text.Encodings.Web.JavaScriptEncoder> została zmieniona w celu uwzględnienia opcjonalnego parametru. Ta zmiana została wprowadzona w celu zezwalania na inny lub niestandardowy koder.
 
-Podpis metod `Encode` w .NET Core 3.0 Preview 7 jest:
+Sygnatura `Encode` metod w programie .net Core 3,0 Preview 7 to:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-Podpis tych samych `Encode` metod w wersji .NET Core 3.0 Preview 8 i nowszych jest:
+Podpis tych samych `Encode` metod w programie .net Core 3,0 w wersji zapoznawczej 8 i nowszych to:
 
 ```csharp
 namespace System.Text.Json
@@ -42,17 +42,17 @@ namespace System.Text.Json
 }
 ```
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
-.NET Core 3.0 Wersja zapoznawcza 8
+.NET Core 3,0 (wersja zapoznawcza 8)
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jest to tylko zmiana podziału binarnego; ponowna kompilacja względem platformy .NET Core 3.0 Preview 8 lub nowszej wersji rozwiąże wszelkie problemy ze środowiska uruchomieniowego.
+Jest to tylko zmiana w postaci binarnej. ponowna kompilacja względem programu .NET Core 3,0 w wersji zapoznawczej 8 lub nowszej spowoduje rozwiązanie wszelkich problemów w czasie wykonywania.
 
 #### <a name="category"></a>Kategoria
 
-Podstawowe biblioteki .NET
+Podstawowe biblioteki platformy .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

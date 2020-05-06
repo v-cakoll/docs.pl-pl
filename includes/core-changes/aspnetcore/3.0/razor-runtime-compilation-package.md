@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344319"
 ---
-### <a name="razor-runtime-compilation-moved-to-a-package"></a>Brzytwa: Kompilacja runtime przeniesiona do pakietu
+### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor: Kompilacja środowiska uruchomieniowego została przeniesiona do pakietu
 
-Obsługa kompilacji w czasie wykonywania widoków Razor i Stron Razor została przeniesiona do oddzielnego pakietu.
+Obsługa kompilacji w czasie wykonywania widoków Razor i Razor Pages została przeniesiona do oddzielnego pakietu.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,29 +16,29 @@ Obsługa kompilacji w czasie wykonywania widoków Razor i Stron Razor została p
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Kompilacja w czasie wykonywania jest dostępna bez konieczności dodatkowych pakietów.
+Kompilacja środowiska uruchomieniowego jest dostępna bez dodatkowych pakietów.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Funkcja została przeniesiona do pakietu [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/)
+Funkcja została przeniesiona do pakietu [Microsoft. AspNetCore. MVC. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) .
 
-Następujące interfejsy API `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` były wcześniej dostępne w celu obsługi kompilacji w czasie wykonywania. Interfejsy API są `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`teraz dostępne za pośrednictwem .
+Poniższe interfejsy API były wcześniej dostępne w `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` programie w celu obsługi kompilacji w czasie wykonywania. Interfejsy API są teraz dostępne za `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`pośrednictwem programu.
 
 - `RazorViewEngineOptions.FileProviders`jest teraz`MvcRazorRuntimeCompilationOptions.FileProviders`
 - `RazorViewEngineOptions.AdditionalCompilationReferences`jest teraz`MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
 
-Ponadto `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` został usunięty. Ponowna kompilacja zmian plików jest domyślnie `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` włączona, odwołując się do pakietu.
+Ponadto program `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` został usunięty. Ponowna kompilacja zmian w pliku jest domyślnie włączona przez odwołanie do `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` pakietu.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana była konieczna, aby usunąć zależność ASP.NET core współużytkowane struktury na Roslyn.
+Ta zmiana była niezbędna do usunięcia ASP.NET Core zależności współdzielona struktura w programie Roslyn.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Aplikacje, które wymagają kompilacji w czasie wykonywania lub ponownej kompilacji plików Razor powinny wykonać następujące kroki:
+Aplikacje wymagające kompilacji lub ponownej kompilacji plików Razor powinny wykonać następujące czynności:
 
 1. Dodaj odwołanie do `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` pakietu.
-1. Zaktualizuj `Startup.ConfigureServices` metodę projektu, aby uwzględnić `AddRazorRuntimeCompilation`wywołanie . Przykład:
+1. Zaktualizuj `Startup.ConfigureServices` metodę projektu w celu dołączenia wywołania do `AddRazorRuntimeCompilation`. Przykład:
 
     ```csharp
     services.AddMvc()

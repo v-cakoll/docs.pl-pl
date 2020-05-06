@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394104"
 ---
-### <a name="identity-default-bootstrap-version-of-ui-changed"></a>Tożsamość: Domyślna wersja Bootstrap interfejsu użytkownika zmieniona
+### <a name="identity-default-bootstrap-version-of-ui-changed"></a>Tożsamość: domyślna wersja użytkownika Bootstrap została zmieniona
 
-Począwszy od ASP.NET Core 3.0, interfejsu tożsamości domyślnie przy użyciu wersji 4 Bootstrap.
+Począwszy od ASP.NET Core 3,0, interfejs użytkownika tożsamości jest domyślnie używany w wersji 4 programu Bootstrap.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,15 +20,15 @@ Wywołanie `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` metody 
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Wywołanie `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` metody jest takie samo jak wywołanie metody`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
+Wywołanie `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` metody jest takie samo jak`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Bootstrap 4 został wydany podczas ASP.NET Core 3.0.
+Uruchomienie Bootstrap 4 zostało wydane w okresie ASP.NET Core 3,0.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Ta zmiana ma wpływ, jeśli używasz domyślnego interfejsu tożsamości i `Startup.ConfigureServices` dodano go w sposób pokazany w poniższym przykładzie:
+Ta zmiana jest zależna od tego, czy używany jest domyślny interfejs użytkownika tożsamości i czy został on `Startup.ConfigureServices` dodany w programie, jak pokazano w następującym przykładzie:
 
 ```csharp
 services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
@@ -36,8 +36,8 @@ services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
 
 Wykonaj jedno z następujących działań:
 
-- Migruj aplikację, aby używać aplikacji Bootstrap 4, korzystając z [przewodnika migracji.](https://getbootstrap.com/docs/4.0/migration)
-- Aktualizacja, `Startup.ConfigureServices` aby wymusić użycie Bootstrap 3. Przykład:
+- Przeprowadź migrację aplikacji, aby użyć ładowania początkowego 4 przy użyciu ich [przewodnika migracji](https://getbootstrap.com/docs/4.0/migration).
+- Aktualizacja `Startup.ConfigureServices` w celu wymuszenia użycia programu Bootstrap 3. Przykład:
 
     ```csharp
     services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);

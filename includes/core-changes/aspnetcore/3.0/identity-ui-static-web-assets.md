@@ -6,16 +6,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041662"
 ---
-### <a name="identity-ui-uses-static-web-assets-feature"></a>Tożsamość: interfejs użytkowników interfejsu używa funkcji statycznych zasobów sieci Web
+### <a name="identity-ui-uses-static-web-assets-feature"></a>Tożsamość: interfejs użytkownika używa funkcji statyczne zasoby sieci Web
 
-ASP.NET Core 3.0 wprowadziła funkcję statycznych zasobów sieci web, a interfejs tożsamości ją przyjął.
+W ASP.NET Core 3,0 wprowadzono statyczną funkcję zasobów sieci Web i została ona przyjęta przez interfejs użytkownika tożsamości.
 
 #### <a name="change-description"></a>Zmień opis
 
-W wyniku interfejsu tożsamości przyjęcia funkcji statycznych zasobów sieci web:
+W związku z tym interfejs użytkownika tożsamości przyjmuje funkcję statyczne elementy zawartości sieci Web:
 
-- Wybór struktury odbywa się `IdentityUIFrameworkVersion` przy użyciu właściwości w pliku projektu.
-- Bootstrap 4 jest domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości. Bootstrap 3 osiągnął koniec życia i należy rozważyć migrację do obsługiwanej wersji.
+- Wybór struktury jest realizowany przy użyciu `IdentityUIFrameworkVersion` właściwości w pliku projektu.
+- Bootstrap 4 jest domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości. Program ładowania początkowego 3 osiągnął koniec okresu istnienia i należy rozważyć migrację do obsługiwanej wersji.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -23,19 +23,19 @@ W wyniku interfejsu tożsamości przyjęcia funkcji statycznych zasobów sieci w
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości był **Bootstrap 3**. Platformę interfejsu użytkownika można skonfigurować przy `AddDefaultUI` użyciu parametru do wywołania metody w . `Startup.ConfigureServices`
+Domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości był **Bootstrap 3**. Strukturę interfejsu użytkownika można skonfigurować przy użyciu parametru do wywołania `AddDefaultUI` metody w. `Startup.ConfigureServices`
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości jest **Bootstrap 4**. Struktura interfejsu użytkownika musi być skonfigurowana w pliku `AddDefaultUI` projektu, a nie w wywołaniu metody.
+Domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości jest **Bootstrap 4**. Struktura interfejsu użytkownika musi być skonfigurowana w pliku projektu, a nie w wywołaniu `AddDefaultUI` metody.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Przyjęcie funkcji statycznych zasobów sieci web wymagane, że konfiguracja struktury interfejsu użytkownika przenieść do MSBuild. Decyzja, które ramy do osadzenie jest decyzja w czasie kompilacji, a nie decyzji runtime.
+Zastosowanie statycznej funkcji zasobów sieci Web wymaga, aby konfiguracja struktury interfejsu użytkownika była przenoszona do programu MSBuild. Podjęcie decyzji dotyczącej struktury osadzania to decyzja w czasie kompilacji, a nie decyzja dotycząca środowiska uruchomieniowego.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Przejrzyj swój ui witryny, aby upewnić się, że nowe składniki Bootstrap 4 są kompatybilne. W razie potrzeby `IdentityUIFrameworkVersion` użyj MSBuild właściwości, aby powrócić do Bootstrap 3. Dodaj właściwość do `<PropertyGroup>` elementu w pliku projektu:
+Przejrzyj interfejs użytkownika witryny, aby upewnić się, że nowe składniki ładowania początkowego 4 są zgodne. W razie potrzeby użyj właściwości `IdentityUIFrameworkVersion` programu MSBuild, aby przywrócić wartość Bootstrap 3. Dodaj właściwość do `<PropertyGroup>` elementu w pliku projektu:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>

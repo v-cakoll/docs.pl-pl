@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394332"
 ---
-### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hosting: Typy IHostingEnvironment i IApplicationLifetime oznaczone jako przestarzałe i zastąpione
+### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hosting: typy IHostingEnvironment i IApplicationLifetime oznaczone jako przestarzałe i zastąpione
 
-Wprowadzono nowe typy, aby `IHostingEnvironment` `IApplicationLifetime` zastąpić istniejące i typy.
+Wprowadzono nowe typy do zastępowania istniejących `IHostingEnvironment` i `IApplicationLifetime` typów.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ Wprowadzono nowe typy, aby `IHostingEnvironment` `IApplicationLifetime` zastąpi
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Były dwa `IHostingEnvironment` różne `IApplicationLifetime` i `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting`typy z i .
+`IHostingEnvironment` Istnieją dwa różne `IApplicationLifetime` i typy z `Microsoft.Extensions.Hosting` i. `Microsoft.AspNetCore.Hosting`
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
@@ -24,11 +24,11 @@ Stare typy zostały oznaczone jako przestarzałe i zastąpione nowymi typami.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Kiedy `Microsoft.Extensions.Hosting` został wprowadzony w ASP.NET Core 2.1, niektóre typy jak `IHostingEnvironment` i `IApplicationLifetime` zostały skopiowane z `Microsoft.AspNetCore.Hosting`. Niektóre zmiany ASP.NET Core 3.0 powodują, że aplikacje zawierają zarówno przestrzenie nazw, `Microsoft.Extensions.Hosting` jak i `Microsoft.AspNetCore.Hosting` przestrzenie nazw. Każde użycie tych typów duplikatów powoduje błąd kompilatora "niejednoznaczne odwołanie", gdy oba obszary nazw są przywoływani.
+Kiedy `Microsoft.Extensions.Hosting` został wprowadzony w ASP.NET Core 2,1, niektóre typy takie `IHostingEnvironment` jak `IApplicationLifetime` i zostały skopiowane z `Microsoft.AspNetCore.Hosting`. Niektóre zmiany w ASP.NET Core 3,0 powodują, `Microsoft.Extensions.Hosting` że aplikacje zawierają zarówno `Microsoft.AspNetCore.Hosting` przestrzeń nazw, jak i. Każde użycie tych zduplikowanych typów powoduje błąd kompilatora "niejednoznaczne odwołanie", gdy następuje odwołanie do obu przestrzeni nazw.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zastąpiono wszystkie zastosowania starych typów nowo wprowadzonymi typami, jak poniżej:
+Zamieniono wszystkie użycia starych typów na nowo wprowadzone typy w następujący sposób:
 
 **Przestarzałe typy (ostrzeżenie):**
 
@@ -46,7 +46,7 @@ Zastąpiono wszystkie zastosowania starych typów nowo wprowadzonymi typami, jak
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-Nowe `IHostEnvironment` `IsDevelopment` metody `IsProduction` i rozszerzenia znajdują `Microsoft.Extensions.Hosting` się w obszarze nazw. Ten obszar nazw może wymagać dodania do projektu.
+Nowe `IHostEnvironment` `IsDevelopment` i `IsProduction` rozszerzenie metody znajdują się w `Microsoft.Extensions.Hosting` przestrzeni nazw. Ta przestrzeń nazw może być konieczna do dodania do projektu.
 
 #### <a name="category"></a>Kategoria
 

@@ -6,13 +6,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901987"
 ---
-### <a name="caching-compactonmemorypressure-property-removed"></a>Buforowanie: Usunięto właściwość CompactOnMemoryPressure
+### <a name="caching-compactonmemorypressure-property-removed"></a>Buforowanie: Usunięto Właściwość CompactOnMemoryPressure
 
-Wersja ASP.NET Core 3.0 usunęła [przestarzałe interfejsy API MemoryCacheOptions](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
+W wersji ASP.NET Core 3,0 usunięto [przestarzałe interfejsy API MemoryCacheOptions](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
 
 #### <a name="change-description"></a>Zmień opis
 
-Ta zmiana jest kontynuacją [aspnet/caching#221](https://github.com/aspnet/Caching/issues/221). Aby uzyskać dyskusję, zobacz [dotnet/extensions#1062](https://github.com/dotnet/extensions/issues/1062).
+Ta zmiana to kontynuacja dla elementu [ASPNET/buforowanie # 221](https://github.com/aspnet/Caching/issues/221). Aby zapoznać się z omówieniem, zobacz [dotnet/Extensions # 1062](https://github.com/dotnet/extensions/issues/1062).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,19 +20,19 @@ Ta zmiana jest kontynuacją [aspnet/caching#221](https://github.com/aspnet/Cachi
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`MemoryCacheOptions.CompactOnMemoryPressure`nieruchomości.
+`MemoryCacheOptions.CompactOnMemoryPressure`Właściwość była dostępna.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Obiekt `MemoryCacheOptions.CompactOnMemoryPressure` został usunięty.
+`MemoryCacheOptions.CompactOnMemoryPressure` Właściwość została usunięta.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Automatyczne kompaktowanie pamięci podręcznej spowodowało problemy. Aby uniknąć nieoczekiwanego zachowania, pamięć podręczna powinna być skompaktowana tylko wtedy, gdy jest to potrzebne.
+Automatyczne kompaktowanie pamięci podręcznej powodowało problemy. Aby uniknąć nieoczekiwanego zachowania, pamięć podręczna powinna być kompaktowana tylko wtedy, gdy jest to konieczne.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Aby skompaktować pamięć `MemoryCache` podręczną, w razie potrzeby należy smisjać i wywołać połączenie. `Compact`
+Aby skompaktować pamięć podręczną, `MemoryCache` downcast do `Compact` i Wywołaj w razie potrzeby.
 
 #### <a name="category"></a>Kategoria
 

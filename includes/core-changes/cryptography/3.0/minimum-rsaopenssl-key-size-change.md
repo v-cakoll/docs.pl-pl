@@ -6,28 +6,28 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81275209"
 ---
-### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Minimalny rozmiar generowania kluczy RSAOpenSsl wzrósł
+### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Zwiększono minimalny rozmiar generowania klucza RSAOpenSsl
 
-Minimalny rozmiar generowania nowych kluczy RSA w systemie Linux wzrósł z 384-bitowych do 512-bitowych.
+Minimalny rozmiar generowania nowych kluczy RSA w systemie Linux wzrósł z 384-bitowego do 512-bitowego.
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Core 3.0, minimalny `LegalKeySizes` rozmiar klucza prawnego <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>zgłoszony <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>przez <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> właściwość w wystąpieniach RSA z , a na Linuksie wzrósł z 384 do 512.
+Począwszy od platformy .NET Core 3,0, minimalny rozmiar klucza prawnego raportowany przez `LegalKeySizes` właściwość w wystąpieniach RSA <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>z <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>, i <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> w systemie Linux wzrósł od 384 do 512.
 
-W rezultacie w .NET Core 2.2 i wcześniejszych wersjach wywołanie metody, takie jak `RSA.Create(384)` powiedzie się. W .NET Core 3.0 i nowszych wersjach wywołanie `RSA.Create(384)` metody zgłasza wyjątek wskazujący rozmiar jest zbyt mały.
+W związku z tym w programie .NET Core 2,2 i starszych wersjach metoda wywołuje takie jak `RSA.Create(384)` pomyślne. W programie .NET Core 3,0 i jego nowszych wersjach wywołanie `RSA.Create(384)` metody zgłasza wyjątek wskazujący, że rozmiar jest zbyt mały.
 
-Ta zmiana została wniesiona, ponieważ OpenSSL, który wykonuje operacje kryptograficzne w systemie Linux, podniósł swoje minimum między wersjami 1.0.2 i 1.1.0. .NET Core 3.0 preferuje OpenSSL 1.1.x do 1.0.x, a minimalna zgłoszona wersja została podniesiona w celu odzwierciedlenia tego nowego wyższego ograniczenia zależności.
+Ta zmiana została wprowadzona, ponieważ OpenSSL, która wykonuje operacje kryptograficzne w systemie Linux, wygenerowała jej minimum między wersjami 1.0.2 i 1.1.0. Platforma .NET Core 3,0 preferuje OpenSSL 1.1. x do 1.0. x, a zgłoszono minimalną wersję raportowaną w celu odzwierciedlenia tego nowego ograniczenia zależności.
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli wywołasz którykolwiek z interfejsów API, których dotyczy problem, upewnij się, że rozmiar wszystkich wygenerowanych kluczy jest nie mniejszy niż minimum dostawcy.
+Jeśli wywołasz dowolne z tych interfejsów API, upewnij się, że rozmiar wszystkich wygenerowanych kluczy nie jest mniejszy niż minimalny dostawca.
 
 > [!NOTE]
-> 384-bitowy RSA jest już uważany za niebezpieczny (podobnie jak 512-bitowy RSA). Nowoczesne zalecenia, takie jak [publikacja specjalna NIST 800-57 Część 1 Wersja 4,](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf)sugerują 2048-bit jako minimalny rozmiar dla nowo wygenerowanych kluczy.
+> 384-bitowy klucz RSA jest już uznawany za niezabezpieczony (AS 512-bitowy klucz RSA). Nowoczesne zalecenia, takie jak [Publikacje specjalne NIST 800-57 część 1 Poprawka 4](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf), Sugeruj 2048-bitowy jako minimalny rozmiar nowo wygenerowanych kluczy.
 
 #### <a name="category"></a>Kategoria
 

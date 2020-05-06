@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198527"
 ---
-### <a name="session-state-obsolete-apis-removed"></a>Stan sesji: usunięto przestarzałe interfejsy API
+### <a name="session-state-obsolete-apis-removed"></a>Stan sesji: Usunięto przestarzałe interfejsy API
 
-Usunięto przestarzałe interfejsy API do konfigurowania plików cookie sesji. Aby uzyskać więcej informacji, zobacz [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).
+Usunięto przestarzałe interfejsy API służące do konfigurowania plików cookie sesji. Aby uzyskać więcej informacji, zobacz [ASPNET/anonse # 257](https://github.com/aspnet/Announcements/issues/257).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,11 +16,11 @@ Usunięto przestarzałe interfejsy API do konfigurowania plików cookie sesji. A
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana wymusza spójność między interfejsami API do konfigurowania funkcji korzystających z plików cookie.
+Ta zmiana wymusza spójność interfejsów API w celu konfigurowania funkcji używających plików cookie.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Migracja użycia usuniętych interfejsów API do ich nowszych zamienników. Rozważmy następujący `Startup.ConfigureServices`przykład w:
+Migruj użycie usuniętych interfejsów API do ich nowszych zamian. Rozważmy następujący przykład w `Startup.ConfigureServices`:
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)

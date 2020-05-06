@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394168"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Buforowanie: ResponseCaching "pubternal" typy zmienione na wewnętrzne
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Buforowanie: typy ResponseCaching "pubternal" zostały zmienione na wewnętrzne
 
-W ASP.NET Core 3.0 typy "pubternal" `ResponseCaching` `internal`zostały zmienione na .
+W ASP.NET Core 3,0 typy "pubternal" w `ResponseCaching` zostały zmienione na. `internal`
 
-Ponadto implementacje domyślne `IResponseCachingPolicyProvider` `IResponseCachingKeyProvider` i nie są już dodawane `AddResponseCaching` do usług jako część metody.
+Ponadto domyślne implementacje `IResponseCachingPolicyProvider` i `IResponseCachingKeyProvider` nie są już dodawane do usług w ramach `AddResponseCaching` metody.
 
 #### <a name="change-description"></a>Zmień opis
 
-W ASP.NET Core typy "pubternal" `public` są deklarowane jako, ale `.Internal`znajdują się w przestrzeni nazw sufiksu. Chociaż te typy są publiczne, nie mają zasad wsparcia i podlegają zmianom powoduniam. Niestety, przypadkowe użycie tych typów było powszechne, co spowodowało przełomowe zmiany w tych projektach i ograniczyło możliwość utrzymania struktury.
+W ASP.NET Core typy "pubternal" są zadeklarowane jako `public` , ale znajdują się w przestrzeni nazw z `.Internal`sufiksem. Chociaż te typy są publiczne, nie mają żadnych zasad pomocy technicznej i podlegają nieprzerwanym zmianom. Niestety, przypadkowe użycie tych typów było wspólne, co spowodowało istotne zmiany w tych projektach i ograniczenie możliwości utrzymania struktury.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,19 +22,19 @@ W ASP.NET Core typy "pubternal" `public` są deklarowane jako, ale `.Internal`zn
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Te typy były publicznie widoczne, ale nieobsługiwane.
+Te typy były widoczne publicznie, ale nie są obsługiwane.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Te typy `internal`są teraz .
+Te typy są teraz `internal`.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zakres `internal` lepiej odzwierciedla nieobsługiwane zasady.
+`internal` Zakres lepiej odzwierciedla nieobsługiwane zasady.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Kopiuj typy używane przez aplikację lub bibliotekę.
+Kopiowanie typów, które są używane przez aplikację lub bibliotekę.
 
 #### <a name="category"></a>Kategoria
 

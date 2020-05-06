@@ -1,5 +1,5 @@
 ---
-title: klauzula let - Odwołanie do języka C#
+title: klauzula Let — odwołanie w C#
 ms.date: 07/20/2015
 f1_keywords:
 - let_CSharpKeyword
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173591"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795368"
 ---
 # <a name="let-clause-c-reference"></a>Klauzula Let (odwołanie w C#)
 
-W wyrażeniu kwerendy czasami jest przydatne do przechowywania wyniku wyrażenia podrzędnego w celu użycia go w kolejnych klauzul. Można to zrobić `let` za pomocą słowa kluczowego, który tworzy nową zmienną zakresu i inicjuje go z wynikiem wyrażenia, które podajesz. Po zainicjowania z wartością zmiennej zakresu nie można użyć do przechowywania innej wartości. Jednak jeśli zmienna zakresu zawiera typ zapytań, można go zbadać.
+W wyrażeniu zapytania czasami warto przechowywać wynik wyrażenia podrzędnego w celu użycia go w kolejnych klauzulach. Można to zrobić za pomocą `let` słowa kluczowego, które tworzy nową zmienną zakresu i inicjuje ją z wynikiem podania wyrażenia. Po zainicjowaniu z wartością zmienna zakresu nie może być używana do przechowywania innej wartości. Jeśli jednak zmienna zakresu zawiera typ queryable, może to być zapytanie.
 
 ## <a name="example"></a>Przykład
 
-W poniższym `let` przykładzie jest używany na dwa sposoby:
+W poniższym przykładzie `let` jest używany na dwa sposoby:
 
-1. Aby utworzyć typ wyliczany, który sam może być przeszukiwany.
+1. Aby utworzyć wyliczalny typ, który może być badany.
 
-2. Aby włączyć kwerendę `ToLower` do wywołania tylko `word`jeden raz na zmiennej zakresu . Bez `let`użycia , trzeba `ToLower` by wywołać w każdym `where` predykatu w klauzuli.
+2. Aby włączyć wywoływanie `ToLower` zapytania tylko raz dla zmiennej `word`zakresu. Bez użycia `let`, należy wywołać `ToLower` każdy predykat w `where` klauzuli.
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka C#](../../language-reference/index.md)
+- [Odwołanie w C#](../index.md)
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
 - [LINQ w C#](../../linq/index.md)
 - [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

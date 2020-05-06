@@ -6,9 +6,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198530"
 ---
-### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Buforowanie: Program Microsoft.Extensions.Caching.SqlServer używa nowego pakietu SqlClient
+### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Buforowanie: Microsoft. Extensions. buforowanie. SqlServer używa nowego pakietu SqlClient
 
-Pakiet `Microsoft.Extensions.Caching.SqlServer` użyje nowego `Microsoft.Data.SqlClient` pakietu `System.Data.SqlClient` zamiast pakietu. Ta zmiana może spowodować niewielkie zmiany zachowań łamanie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do nowego klienta Microsoft.Data.SqlClient](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/).
+`Microsoft.Extensions.Caching.SqlServer` Pakiet będzie używać nowego `Microsoft.Data.SqlClient` pakietu zamiast `System.Data.SqlClient` pakietu. Ta zmiana może spowodować drobne zmiany zachowań. Aby uzyskać więcej informacji, zobacz [wprowadzenie do nowego elementu Microsoft. Data. SqlClient](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ Pakiet `Microsoft.Extensions.Caching.SqlServer` użyje nowego `Microsoft.Data.Sq
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Pakiet `Microsoft.Extensions.Caching.SqlServer` użył `System.Data.SqlClient` pakietu.
+`Microsoft.Extensions.Caching.SqlServer` Pakiet użył `System.Data.SqlClient` pakietu.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`Microsoft.Extensions.Caching.SqlServer`używa teraz `Microsoft.Data.SqlClient` pakietu.
+`Microsoft.Extensions.Caching.SqlServer`Program korzysta teraz z `Microsoft.Data.SqlClient` pakietu.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-`Microsoft.Data.SqlClient`to nowy pakiet, który `System.Data.SqlClient`jest zbudowany z . To miejsce, w którym wszystkie nowe funkcje będą wykonywane od teraz.
+`Microsoft.Data.SqlClient`jest nowym pakietem, który jest zbudowany z `System.Data.SqlClient`. Jest to miejsce, w którym wszystkie nowe funkcje będą wykonywane od teraz.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Klienci nie powinni się martwić o tę przełomową zmianę, `Microsoft.Extensions.Caching.SqlServer` chyba że używali `System.Data.SqlClient` typów zwracanych przez pakiet i przesyłania ich do typów. Na przykład jeśli ktoś `DbConnection` był rzutowanie do [starego typu SqlConnection](xref:System.Data.SqlClient.SqlConnection), musieliby zmienić rzutowania na nowy `Microsoft.Data.SqlClient.SqlConnection` typ.
+Klienci nie muszą martwić się o tę zmianę, chyba że używali typów zwracanych `Microsoft.Extensions.Caching.SqlServer` przez pakiet i rzutowania `System.Data.SqlClient` ich na typy. Na przykład jeśli ktoś wyrzutuje `DbConnection` do [starego typu SqlConnection](xref:System.Data.SqlClient.SqlConnection), musi zmienić rzutowanie na nowy `Microsoft.Data.SqlClient.SqlConnection` typ.
 
 #### <a name="category"></a>Kategoria
 

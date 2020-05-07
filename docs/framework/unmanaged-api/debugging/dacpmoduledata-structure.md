@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179189"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860802"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData, struktura
 
-Definiuje bufor transportu dla informacji o czasie wykonywania modułu.
+Definiuje bufor transportu dla informacji o środowisku uruchomieniowym modułu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -47,19 +47,19 @@ struct DacpModuleData
 | `Address` | Adres obiektu modułu.                                           |
 | `File`    | Wskaźnik do przenośnego pliku wykonywalnego (PE).                       |
 | `ilBase`  | Adres bazy załadowanego obrazu.                                 |
-| `payLoad` | Bufor ładunku dla dodatkowych informacji o module używanym przez środowisko wykonawcze. |
+| `payLoad` | Bufor ładunku dla dodatkowych informacji modułu używanych przez środowisko uruchomieniowe. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura znajduje się wewnątrz środowiska wykonawczego i nie jest narażona za pośrednictwem żadnych nagłówków lub plików biblioteki. Aby go użyć, należy zdefiniować strukturę, jak określono powyżej.
+Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem.
 
 ## <a name="requirements"></a>Wymagania
-**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Debugging](index.md)
+- [Debugowanie](index.md)
 - [Struktury debugowania](debugging-structures.md)

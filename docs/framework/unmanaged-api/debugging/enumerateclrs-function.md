@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789128"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860727"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs — Funkcja
 Zapewnia mechanizm wyliczania CLRs w procesie.  
@@ -42,20 +42,20 @@ HRESULT EnumerateCLRs (
  podczas Identyfikator procesu, z którego jest wyliczany załadowany CLRs.  
   
  `ppHandleArrayOut`  
- określoną Wskaźnik do tablicy zawierającej uchwyty zdarzeń, które są używane do kontynuowania uruchamiania CLR. Nie ma gwarancji, że każdy uchwyt w tablicy jest prawidłowy. Jeśli jest prawidłowy, dojście ma być używane jako zdarzenie kontynuacji dla odpowiedniego środowiska uruchomieniowego znajdujące się w tym samym indeksie `ppStringArrayOut`.  
+ określoną Wskaźnik do tablicy zawierającej uchwyty zdarzeń, które są używane do kontynuowania uruchamiania CLR. Nie ma gwarancji, że każdy uchwyt w tablicy jest prawidłowy. Jeśli jest prawidłowy, dojście ma być używane jako zdarzenie kontynuacji uruchamiania dla odpowiedniego środowiska uruchomieniowego, które znajduje się w tym `ppStringArrayOut`samym indeksie.  
   
  `ppStringArrayOut`  
  określoną Wskaźnik do tablicy ciągów, które określają pełne ścieżki do CLRs załadowane w procesie.  
   
  `pdwArrayLengthOut`  
- określoną Wskaźnik do typu DWORD, który zawiera długość równomiernie dopasowane `ppHandleArrayOut` i `pdwArrayLengthOut`.  
+ określoną Wskaźnik na wartość typu DWORD, która zawiera długość równomiernie `ppHandleArrayOut` dopasowanego `pdwArrayLengthOut`rozmiaru i.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Liczba CLRs w procesie została pomyślnie określona, a odpowiednie tablice uchwytów i ścieżek zostały prawidłowo wypełnione.  
   
  E_INVALIDARG  
- `ppHandleArrayOut` lub `ppStringArrayOut` ma wartość null lub `pdwArrayLengthOut` ma wartość null.  
+ Albo ma wartość null lub `pdwArrayLengthOut` ma wartość null. `ppHandleArrayOut` `ppStringArrayOut`  
   
  E_OUTOFMEMORY  
  Funkcja nie może przydzielić wystarczającej ilości pamięci dla tablic uchwytu i ścieżki.  
@@ -64,7 +64,7 @@ HRESULT EnumerateCLRs (
  Nie można wyliczyć załadowanych CLRs.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla procesu docelowego, który jest identyfikowany przez `debuggeePID`, funkcja zwraca tablicę ścieżek, `ppStringArrayOut`, aby CLRs załadować w procesie; Tablica dojść do zdarzeń, `ppHandleArrayOut`, która może zawierać zdarzenie kontynuacji uruchamiania dla środowiska CLR w tym samym indeksie; i rozmiar tablic, `pdwArrayLengthOut`, który określa liczbę załadowanych CLRs.  
+ Dla procesu docelowego, który jest identyfikowany `debuggeePID`przez, funkcja zwraca tablicę ścieżek, `ppStringArrayOut`do CLRs załadowane w procesie; Tablica dojść do zdarzeń, `ppHandleArrayOut`która może zawierać zdarzenie kontynuacji uruchamiania dla środowiska CLR w tym samym indeksie; i wielkość tablic `pdwArrayLengthOut`, która określa liczbę CLRs ładowanych.  
   
  W systemie operacyjnym Windows `debuggeePID` mapuje na identyfikator procesu systemu operacyjnego.  
   
@@ -73,7 +73,7 @@ HRESULT EnumerateCLRs (
  Tę funkcję można wywołać z parametrami tablicy ustawionymi na wartość null, aby można było zwrócić liczbę CLRs w procesie docelowym. Z tego licznika obiekt wywołujący może wnioskować o rozmiar buforu, który zostanie utworzony: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim. h  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2271611b5cbbfe487e5798be0429ed94c227a67f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179218"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860881"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget — Funkcja
-Tworzy połączenie z serwerem proxy debugera, który jest uruchomiony na komputerze zdalnym i zwraca [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) obiektu, który może służyć do wykonywania zapytań uruchomionych procesów i załadowanych runtimes na komputerze zdalnym.  
+Tworzy połączenie z serwerem proxy debugera, który jest uruchomiony na komputerze zdalnym i zwraca obiekt [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , który może służyć do wykonywania zapytań dotyczących uruchomionych procesów i załadowanych środowiska uruchomieniowego na komputerze zdalnym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,26 +37,26 @@ HRESULT CreateCoreClrDebugTarget (
   
 ## <a name="parameters"></a>Parametry  
  `dwAddress`  
- [w] adres IPv4 zdalnego komputera docelowego.  
+ podczas Adres IPv4 zdalnej maszyny docelowej.  
   
  `ppTarget`  
- [na zewnątrz] Wskaźnik do wskaźnika do [obiektu ICoreClrDebugTarget,](icoreclrdebugtarget-interface.md) który zostanie utworzony.  
+ określoną Wskaźnik do wskaźnika do obiektu [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , który zostanie utworzony.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Liczba clr w procesie została pomyślnie określona, a odpowiednie tablice dojścia i ścieżki zostały poprawnie wypełnione.  
+ Liczba CLRs w procesie została pomyślnie określona, a odpowiednie tablice uchwytów i ścieżek zostały prawidłowo wypełnione.  
   
- E_outofmemory  
- Nie można przydzielić `ppTarget`wystarczającej ilości pamięci dla pliku .  
+ E_OUTOFMEMORY  
+ Nie można przydzielić wystarczającej `ppTarget`ilości pamięci dla.  
   
- E_FAIL (lub inne E_ kody zwrotne)  
- Inne awarie.  
+ E_FAIL (lub inne kody powrotne E_)  
+ Inne błędy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteka:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86. dll  
   
- **Wersje .NET Framework:** 3.5 SP1
+ **.NET Framework wersje:** 3,5 SP1

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 51c06a7f8ea22fc73236131954781d8755274041
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 20b73549d30fe210e4d44902d2f459ea9c682360
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789088"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860491"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual — Metoda
 Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do przydzielania pamięci w przestrzeni adresowej tego procesu docelowego.  
@@ -39,35 +39,35 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Parametry  
  `addr`  
- podczas Wartość `CLRDATA_ADDRESS`, która określa żądany adres początkowy pamięci do przydzielenia.  
+ podczas `CLRDATA_ADDRESS` Wartość określająca żądany adres początkowy pamięci do przydzielenia.  
   
  `size`  
  podczas Rozmiar pamięci do przydzielenia w bajtach.  
   
  `typeFlags`  
- podczas Flagi kontrolujące przydział pamięci. Zobacz funkcję Win32 `VirtualAlloc`.  
+ podczas Flagi kontrolujące przydział pamięci. Zobacz funkcję Win32 `VirtualAlloc` .  
   
  `protectFlags`  
- podczas Atrybuty ochrony przydzieloną pamięć. Zobacz funkcję Win32 `VirtualAlloc`.  
+ podczas Atrybuty ochrony przydzieloną pamięć. Zobacz funkcję Win32 `VirtualAlloc` .  
   
  `virt`  
- określoną Wskaźnik do wartości `CLRDATA_ADDRESS`, który określa rzeczywisty adres początkowy przydzieloną pamięć.  
+ określoną Wskaźnik do `CLRDATA_ADDRESS` wartości, która określa rzeczywisty adres początkowy przydzieloną pamięć.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `AllocVirtual` służy jako otoka logiczna dla funkcji Win32 `VirtualAlloc`.  
+ `AllocVirtual` Metoda służy jako otoka logiczna dla funkcji Win32 `VirtualAlloc` .  
   
  Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData. idl, ClrData. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget2, interfejs](iclrdatatarget2-interface.md)
+- [ICLRDataTarget2 — Interfejs](iclrdatatarget2-interface.md)
 - [FreeVirtual, metoda](iclrdatatarget2-freevirtual-method.md)

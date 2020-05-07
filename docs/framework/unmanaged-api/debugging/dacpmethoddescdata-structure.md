@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793844"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860818"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData, struktura
 
@@ -54,7 +54,7 @@ struct DacpMethodDescData
 
 ## <a name="members"></a>Elementy członkowskie
 
-| Element członkowski                       | Opis                                                                                     |
+| Członek                       | Opis                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Wskazuje, czy środowisko uruchomieniowe ma kod natywny dla danego wystąpienia metody. |
 | `bIsDynamic`                 | Wskazuje, czy metoda jest generowana dynamicznie przy użyciu uproszczonego generowania kodu.           |
@@ -78,13 +78,13 @@ struct DacpMethodDescData
 Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem.
 
 ## <a name="requirements"></a>Wymagania
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
 **Nagłówek:** Dawaj  
 **Biblioteka:** Dawaj  
-**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Debugowanie](index.md)
 - [Struktury debugowania](debugging-structures.md)
-- [Standardowe typy danych](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [Standardowe typy danych](../common-data-types-unmanaged-api-reference.md)

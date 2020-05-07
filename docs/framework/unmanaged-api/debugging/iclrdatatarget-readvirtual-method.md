@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179156"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860556"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual — Metoda
 Odczytuje dane z określonego adresu pamięci wirtualnej do określonego buforu.  
@@ -39,26 +39,26 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [w] CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
+ podczas CLRDATA_ADDRESS, w którym jest przechowywany adres pamięci wirtualnej.  
   
  `buffer`  
- [na zewnątrz] Wskaźnik do buforu, który odbiera dane.  
+ określoną Wskaźnik do buforu, który odbiera dane.  
   
  `bytesRequested`  
- [w] Długość buforu.  
+ podczas Długość buforu.  
   
  `bytesRead`  
- [na zewnątrz] Wskaźnik do liczby zwracanych bajtów.  
+ określoną Wskaźnik do liczby zwracanych bajtów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)
+- [ICLRDataTarget — Interfejs](iclrdatatarget-interface.md)

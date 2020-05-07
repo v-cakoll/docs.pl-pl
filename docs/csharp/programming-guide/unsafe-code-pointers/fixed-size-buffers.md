@@ -72,7 +72,7 @@ Bufory o ustalonym rozmiarze różnią się od zwykłych tablic w następujący 
 - Są one zawsze wektorami lub tablic jednowymiarowych.
 - Deklaracja powinna zawierać długość, taką jak `fixed char id[8]`. Nie można użyć `fixed char id[]`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Niebezpieczny kod i wskaźniki](index.md)

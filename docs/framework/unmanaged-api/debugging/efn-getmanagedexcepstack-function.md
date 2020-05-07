@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c50fe09648793ba7340960654811ff31187269d8
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789154"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860788"
 ---
-# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack Function
+# <a name="_efn_getmanagedexcepstack-function"></a>\_Funkcja\_EFN GetManagedExcepStack
 Dany adres obiektu wyjątku zarządzanego zwraca wersję ciągu śledzenia stosu zawartych wewnątrz.  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,7 +40,7 @@ HRESULT _EFN_GetManagedExcepStack(
  podczas Debugowany klient.  
   
  `StackObjAddr`  
- podczas Wskaźnik obiektu zarządzanego pochodzący z <xref:System.Exception>.  
+ podczas Wskaźnik obiektu zarządzanego, pochodzący z <xref:System.Exception>.  
   
  szStackString  
  określoną Zwrócony ciąg.  
@@ -52,12 +52,12 @@ HRESULT _EFN_GetManagedExcepStack(
  W przypadku braku kodu zarządzanego w wątku, który jest obecnie w kontekście, funkcja zwraca wartość HRESULT SOS_E_NOMANAGEDCODE z wartością instrumentu 0xa0 i kodem błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** SOS_Stacktrace. h  
   
- **Wersja .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersja .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Debugowanie statycznych funkcji globalnych](debugging-global-static-functions.md)

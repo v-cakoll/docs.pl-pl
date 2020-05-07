@@ -1,28 +1,28 @@
 ### YamlMime:Tutorial
-title: Dowiedz się, jak zarządzać zbiorami danych przy użyciu ogólnego typu listy
+title: Dowiedz się, jak zarządzać kolekcjami danych przy użyciu typu listy ogólnej
 metadata:
-  title: Kolekcje danych — wprowadzenie do interaktywnego samouczka języka C#
-  description: W tym samouczku użyjesz przeglądarki, aby interaktywnie nauczyć się języka C#. Możesz pisać kod w języku C# i zobaczyć wyniki kompilacji oraz uruchomienia kodu bezpośrednio w przeglądarce.
+  title: Kolekcje danych — wprowadzenie do samouczka interaktywnego języka C#
+  description: W tym samouczku użyjesz przeglądarki, aby poznać język C# interaktywnie. Możesz pisać kod w języku C# i zobaczyć wyniki kompilacji oraz uruchomienia kodu bezpośrednio w przeglądarce.
   audience: Developer
   ms.custom: mvc
   ms.date: 10/23/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 03f12cbdd8f9c088a5f279efcadef64c2848fa13
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969392"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860957"
 items:
 - durationInMinutes: 1
   content: >
-    Ten samouczek uczy c# interaktywnie, za pomocą przeglądarki do pisania kodu C# i zobaczyć wyniki kompilowania i uruchamiania kodu. Zawiera serię lekcji, które tworzą, modyfikują i eksplorują kolekcje i tablice.
+    W tym samouczku przedstawiono interaktywnie korzystanie z języka C# przy użyciu przeglądarki do pisania kodu w języku C# i wyświetlania wyników kompilowania i uruchamiania kodu. Zawiera serię lekcji, które tworzą, modyfikują i eksplorują kolekcje i tablice.
 - title: Tworzenie list
   durationInMinutes: 2
   content: >
-    Uruchom poniższy kod w oknie interaktywnym. Wybierz przycisk **Wprowadź tryb ustawiania ostrości.** Następnie wpisz następujący blok kodu w `<name>` interaktywnym oknie (zamień na swoją nazwę) i wybierz **pozycję Uruchom:**
+    Uruchom poniższy kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym (Zamień `<name>` na nazwę) i wybierz pozycję **Uruchom**:
 
 
     ```csharp
@@ -38,28 +38,23 @@ items:
     ```
 
 
-    Jeśli używasz tego w środowisku, należy postępować zgodnie z instrukcjami dla [wersji lokalnej](arrays-and-collections.md) zamiast tego.
+    Jeśli używasz tego środowiska w środowisku, należy postępować zgodnie z instrukcjami dotyczącymi [wersji lokalnej](arrays-and-collections.md) .
 
 
-    Utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowano nazwy we wszystkich wersalikach. Używasz pojęć, które zostały nauczone we wcześniejszych samouczkach do pętli za pośrednictwem listy.
+    Utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowanych nazw we wszystkich WERSALIKach. Są używane koncepcje, które zostały uzyskane we wcześniejszych samouczkach, aby przepętlać listę.
 
 
-    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów.](../../language-reference/tokens/interpolated.md) Poprzedzić `string` znak, `$` można osadzić kod C# w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten kod C# wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy, konwertowane na wielkie <xref:System.String.ToUpper%2A?displayProperty=nameWithType> litery, ponieważ nazywa się metodę.
+    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) . Gdy poprzedzasz `string` `$` znak, możesz osadzić kod w języku C# w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten kod C# wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` on każdą nazwę, przekonwertowane na wielkie litery, ponieważ wywołano <xref:System.String.ToUpper%2A?displayProperty=nameWithType> metodę.
 
 
-    Badajmy dalej.
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Modyfikowanie zawartości listy
+    Kontynuujmy Eksplorowanie.
+- title: Modyfikuj zawartość listy
   durationInMinutes: 3
   content: >
-    Kolekcja, którą utworzyłeś <xref:System.Collections.Generic.List%601> używa tego typu. Ten typ przechowuje sekwencje elementów. Typ elementów między nawiasami kątowymi.
+    Utworzona kolekcja używa <xref:System.Collections.Generic.List%601> typu. Ten typ przechowuje sekwencje elementów. Należy określić typ elementów między nawiasami kątowymi.
 
 
-    Jednym z ważnych <xref:System.Collections.Generic.List%601> aspektów tego typu jest to, że można go rozwijać lub zmniejszać, umożliwiając dodawanie lub usuwanie elementów. Wyniki można wyświetlić, modyfikując zawartość po wyświetleniu jej zawartości. Dodaj poniżej kod, który już napisałeś (poniżej pętli, która drukuje zawartość):
+    Jednym z ważnych aspektów <xref:System.Collections.Generic.List%601> tego typu jest to, że można go zwiększyć lub zmniejszyć, umożliwiając dodawanie lub usuwanie elementów. Wyniki można zobaczyć, modyfikując zawartość po wyświetleniu jej zawartości. Dodaj następujący kod poniżej kodu, który został już zapisany (poniżej pętli, która drukuje zawartość):
 
 
     ```csharp
@@ -81,10 +76,10 @@ items:
     ```
 
 
-    Na końcu listy dodano jeszcze dwie nazwy. Usunięto również jeden. Dane wyjściowe z tego bloku kodu pokazuje zawartość początkową, a następnie drukuje pusty wiersz i nową zawartość.
+    Dodano dwie więcej nazw na końcu listy. Również został także usunięty. Dane wyjściowe z tego bloku kodu pokazują zawartość początkową, a następnie drukuje pusty wiersz i nową zawartość.
 
 
-    Umożliwia <xref:System.Collections.Generic.List%601> odwoływanie się do poszczególnych elementów przez **indeks,** jak również. Dostęp do elementów `[` `]` przy użyciu i tokenów. Poniżej dodaj poniżej poniższy kod i spróbuj:
+    Umożliwia także odwoływanie się do poszczególnych elementów według **indeksu.** <xref:System.Collections.Generic.List%601> Masz dostęp do elementów przy `[` użyciu `]` tokenów i. Dodaj poniższy kod poniżej tego, co zostało już zrobione, i wypróbuj go:
 
 
     ```csharp
@@ -96,7 +91,7 @@ items:
     ```
 
 
-    Nie możesz uzyskać dostępu po końcu listy. Można sprawdzić, jak długo lista <xref:System.Collections.Generic.List%601.Count%2A> jest przy użyciu właściwości. Dodaj następujący kod, aby spróbować:
+    Nie masz zezwolenia na dostęp poza końcem listy. Możesz sprawdzić, jak długo lista używa <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod, aby go wypróbować:
 
 
     ```csharp
@@ -106,16 +101,11 @@ items:
     ```
 
 
-    Wybierz **uruchom** ponownie, aby zobaczyć wyniki. W języku C#indeksy zaczynają się od 0, więc największy prawidłowy indeks jest o jeden mniejszy niż liczba elementów na liście.
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki. W języku C# indeksy zaczynają się od 0, więc największy prawidłowy indeks jest mniejszy od liczby elementów na liście.
 - title: Wyszukiwanie i sortowanie list
   durationInMinutes: 5
   content: >
-    Nasze przykłady używają stosunkowo małych list, ale aplikacje często mogą tworzyć listy z wieloma innymi elementami, czasami numerowane w tysiącach. Aby znaleźć elementy w tych większych kolekcji, należy wyszukać listę różnych elementów. Metoda <xref:System.Collections.Generic.List%601.IndexOf%2A> wyszukuje element i zwraca indeks elementu. Spróbuj zobaczyć, jak to działa.  Poniżej dodaj poniżej to, co napisałeś do tej pory:
+    Nasze przykłady używają stosunkowo małych list, ale aplikacje mogą często tworzyć listy z wieloma elementami, czasami numerowania w tysiącach. Aby znaleźć elementy w tych większych kolekcjach, należy przeszukać listę pod kątem różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda wyszukuje element i zwraca indeks elementu. Wypróbuj go, aby zobaczyć, jak to działa.  Dodaj poniższy kod poniżej tego, co zostało wcześniej zrobione:
 
 
     ```csharp
@@ -130,10 +120,10 @@ items:
     ```
 
 
-    Możesz nie wiedzieć, czy element znajduje się na liście, więc <xref:System.Collections.Generic.List%601.IndexOf%2A>zawsze powinieneś sprawdzić indeks zwrócony przez . Jeśli jest to -1, nie znaleziono elementu.
+    Użytkownik może nie wiedzieć, czy element znajduje się na liście, więc zawsze należy sprawdzać indeks zwracany przez <xref:System.Collections.Generic.List%601.IndexOf%2A>. Jeśli wartość to-1, element nie został znaleziony.
 
 
-    Elementy na liście można również sortować. Metoda <xref:System.Collections.Generic.List%601.Sort%2A> sortuje wszystkie elementy na liście w normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod i uruchom ponownie:
+    Elementy na liście można także sortować. <xref:System.Collections.Generic.List%601.Sort%2A> Metoda sortuje wszystkie elementy na liście w ich normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod i uruchom ponownie:
 
 
     ```csharp
@@ -147,15 +137,10 @@ items:
     }
 
     ```
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Listy innych typów
   durationInMinutes: 5
   content: >
-    Do tej pory `string` używano tego typu na listach. Zróbmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Zbudujmy zestaw liczb. Usuń kod, który napisałeś do tej pory, i zastąp go następującym kodem:
+    Używasz `string` typu na listach do tej pory. <xref:System.Collections.Generic.List%601> Użyjmy innego typu. Utwórzmy zestaw numerów. Usuń kod, który zapisano do tej pory, i zastąp go następującym kodem:
 
 
     ```csharp
@@ -165,7 +150,7 @@ items:
     ```
 
 
-    Spowoduje to utworzenie listy liczb całkowitych i ustawienie pierwszych dwóch liczb całkowitych na wartość 1. *Sekwencja Fibonacciego*, sekwencja liczb, zaczyna się od dwóch jedenastek. Każdy następny numer Fibonacciego znajduje się, biorąc sumę poprzednich dwóch liczb. Dodaj ten kod:
+    Tworzy listę liczb całkowitych i ustawia pierwsze dwie liczby całkowite na wartość 1. *Sekwencja Fibonacci*, sekwencja liczb, rozpoczyna się od dwóch 1. Każdy kolejny numer Fibonacci można znaleźć, pobierając sumę poprzednich dwóch liczb. Dodaj ten kod:
 
 
     ```csharp
@@ -183,21 +168,11 @@ items:
     ```
 
 
-    Naciśnij **przycisk Uruchom,** aby zobaczyć wyniki;
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    Naciśnij przycisk **Run (Uruchom** ), aby zobaczyć wyniki.
 - title: Wyzwanie
   durationInMinutes: 10
   content: >
-    Zobacz, czy możesz połączyć niektóre koncepcje z tej i wcześniejszych lekcji. Rozwiń to, co zbudowałeś do tej pory dzięki numerom Fibonacciego. Spróbuj napisać kod, aby wygenerować pierwsze 20 liczb w sekwencji. (Jako wskazówkę, 20 numer Fibonacciego jest 6765.)
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    Sprawdź, czy możesz połączyć niektóre koncepcje z tej i wcześniejszych lekcji. Rozwiń elementy, które zostały już skompilowane z użyciem numerów Fibonacci. Spróbuj napisać kod w celu wygenerowania pierwszych 20 cyfr w sekwencji. (Jako wskazówkę 20 Fibonacci numer jest 6765).
 - title: Ukończenie wyzwania
   durationInMinutes: 3
   content: >
@@ -223,20 +198,15 @@ items:
     ```
 
 
-    Przy każdej iteracji pętli przyjmujesz dwie ostatnie liczby całkowite na liście, sumując je i dodając tę wartość do listy. Pętla jest powtarzana, dopóki nie dodasz 20 elementów do listy.
-
-
-    > [!NOTE]
-
-    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    Każda iteracja pętli polega na wykorzystaniu ostatnich dwóch liczb całkowitych na liście, sumowaniu ich i dodawania tej wartości do listy. Pętla jest powtarzana do momentu dodania 20 elementów do listy.
 - content: >-
-    Ukończono interaktywny samouczek listy. To jest ostateczne wprowadzenie do interaktywnego samouczka języka C#. Możesz odwiedzić [witrynę .NET,](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) aby pobrać zestaw SDK .NET Core, utworzyć projekt na komputerze i zachować kodowanie. Sekcja "Następne kroki" przywraca do tych samouczków.
+    Ukończono Samouczek interaktywny listy. To jest ostateczne wprowadzenie do interaktywnego samouczka języka C#. Możesz odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
-    Więcej informacji na temat [kolekcji .NET](../../../standard/collections/index.md) można uzyskać w następujących artykułach:
+    Więcej informacji na temat [kolekcji .NET](../../../standard/collections/index.md) można znaleźć w następujących artykułach:
 
     - [Wybieranie typu kolekcji](../../../standard/collections/selecting-a-collection-class.md)
 
     - [Często używane typy kolekcji](../../../standard/collections/commonly-used-collection-types.md)
 
-    - [Kiedy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)
+    - [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

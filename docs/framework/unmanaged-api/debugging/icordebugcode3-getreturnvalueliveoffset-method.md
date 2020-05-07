@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 34d543dd76de05bdf55d8187cf192455d1387a9f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cb4c79601061ab8473d6d7ca50c4ed2f92b01c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178940"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893427"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset — Metoda
-Dla określonego przesunięcia IL pobiera natywne przesunięcia, gdzie punkt przerwania powinny być umieszczone tak, aby debuger można uzyskać wartość zwracaną z funkcji.  
+W przypadku określonego przesunięcia IL pobiera natywne przesunięcia, w których powinien być umieszczony punkt przerwania, aby debuger mógł uzyskać wartość zwracaną z funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,43 +40,43 @@ HRESULT GetReturnValueLiveOffset(
   
 ## <a name="parameters"></a>Parametry  
  `ILoffset`  
- Przesunięcie IL. Musi to być lokacja wywołania funkcji lub wywołanie funkcji zakończy się niepowodzeniem.  
+ Przesunięcie IL. Musi to być witryna wywołania funkcji lub wywołanie funkcji zakończy się niepowodzeniem.  
   
  `bufferSize`  
- Liczba bajtów dostępnych `pOffsets`do zapisania .  
+ Liczba bajtów dostępnych do przechowywania `pOffsets`.  
   
  `pFetched`  
- Wskaźnik do liczby przesunięć faktycznie zwrócone. Zazwyczaj jego wartość wynosi 1, ale pojedyncza instrukcja IL można mapować do wielu `CALL` instrukcji zestawu.  
+ Wskaźnik do liczby zwróconych przesunięć. Zazwyczaj jego wartość wynosi 1, ale Pojedyncza instrukcja IL może mapować na wiele `CALL` instrukcji zestawu.  
   
  `pOffsets`  
- Tablica natywnych przesunięć. Zazwyczaj `pOffsets` zawiera pojedyncze przesunięcie, chociaż pojedyncza instrukcja IL `CALL` można mapować do wielu map do wielu instrukcji zestawu.  
+ Tablica przesunięć natywnych. Zwykle `pOffsets` zawiera pojedyncze przesunięcie, chociaż Pojedyncza instrukcja Il może mapować na wiele mapowań do wielu `CALL` instrukcji zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest używana wraz z [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) metody, aby uzyskać wartość zwracaną metody, która zwraca typ odwołania. Przekazywanie przesunięcia IL do lokacji wywołania funkcji do tej metody zwraca jedno lub więcej natywnych przesunięć. Debuger można następnie ustawić punkty przerwania na tych przesunięciach natywnych w funkcji. Gdy debuger trafi jeden z punktów przerwania, można następnie przekazać to samo przesunięcie IL, które zostało przekazane do tej metody do [metody ICorDebugILFrame3::GetReturnValueForILOffset,](icordebugilframe3-getreturnvalueforiloffset-method.md) aby uzyskać wartość zwracaną. Debuger powinien następnie wyczyścić wszystkie punkty przerwania, które go ustawić.  
+ Ta metoda jest używana razem z metodą [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) w celu uzyskania wartości zwracanej przez metodę zwracającą typ referencyjny. Przekazywanie przesunięcia IL do witryny wywołania funkcji do tej metody zwraca jedno lub więcej natywnych przesunięć. Debuger może następnie ustawić punkty przerwania dla tych natywnych przesunięć w funkcji. Gdy debuger trafi jeden z punktów przerwania, można następnie przekazać to samo przesunięcie IL przekazane do tej metody do metody [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) w celu uzyskania wartości zwracanej. Debuger powinien następnie wyczyścić wszystkie ustawione punkty przerwania.  
   
 > [!WARNING]
-> I `ICorDebugCode3::GetReturnValueLiveOffset` [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) metody pozwalają uzyskać informacje o wartości zwracanej tylko dla typów odwołań. Pobieranie informacji o wartości zwracanej z typów wartości (czyli wszystkich typów, które wynikają z <xref:System.ValueType>) nie jest obsługiwane.  
+> Metody `ICorDebugCode3::GetReturnValueLiveOffset` i [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) umożliwiają uzyskanie informacji o wartości zwracanej tylko dla typów referencyjnych. Pobieranie informacji o wartości zwracanej z typów wartości (to oznacza, że wszystkie typy <xref:System.ValueType>pochodne od) nie są obsługiwane.  
   
  Funkcja zwraca `HRESULT` wartości pokazane w poniższej tabeli.  
   
-|`HRESULT`Wartość|Opis|  
+|`HRESULT`wartościami|Opis|  
 |---------------------|-----------------|  
 |`S_OK`|Powodzenie.|  
-|`CORDBG_E_INVALID_OPCODE`|Dana witryna przesunięcia IL nie jest `void`instrukcją wywołania lub funkcja zwraca .|  
-|`CORDBG_E_UNSUPPORTED`|Podane przesunięcie IL jest prawidłowym wywołaniem, ale typ zwracany nie jest obsługiwane dla uzyskania wartości zwracanej.|  
+|`CORDBG_E_INVALID_OPCODE`|Dana witryna przesunięcia IL nie jest instrukcją wywołania lub funkcja zwraca wartość `void`.|  
+|`CORDBG_E_UNSUPPORTED`|Określone przesunięcie IL jest właściwym wywołaniem, ale zwracany typ nie jest obsługiwany przez pobranie wartości zwracanej.|  
   
- Metoda `ICorDebugCode3::GetReturnValueLiveOffset` jest dostępna tylko w systemach opartych na architekturze x86 i AMD64.  
+ Ta `ICorDebugCode3::GetReturnValueLiveOffset` Metoda jest dostępna tylko w systemach opartych na architekturze x86 i amd64.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
 - [GetReturnValueForILOffset, metoda](icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3, interfejs](icordebugcode3-interface.md)
+- [ICorDebugCode3 — Interfejs](icordebugcode3-interface.md)

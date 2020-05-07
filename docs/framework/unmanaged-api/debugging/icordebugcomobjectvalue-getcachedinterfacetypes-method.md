@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: f720b06581ac60c8bd68dc5e85f15843fd9425f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788906"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892832"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes — Metoda
 Dostarcza moduł wyliczający dla typów interfejsów, do których rzutuje bieżący obiekt lub którego używał.  
@@ -33,23 +33,23 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>Parametry  
  `bIInspectableOnly`  
- podczas Wartość wskazująca, czy metoda zwraca tylko interfejsy środowisko wykonawcze systemu Windows (interfejsy`IInspectable`) lub wszystkie interfejsy COM buforowane przez otokę, która umożliwia wywoływanie (OTOKa) środowiska uruchomieniowego.  
+ podczas Wartość wskazująca, czy metoda zwraca tylko środowisko wykonawcze systemu Windows interfejsy (`IInspectable` interfejsy) czy wszystkie interfejsy com buforowane przez otokę, która umożliwia wywoływanie (RCW) środowiska uruchomieniowego.  
   
  `ppInterfacesEnum`  
- określoną Wskaźnik do adresu modułu wyliczającego ICorDebugTypeEnum, który zapewnia dostęp do obiektów ICorDebugType, które reprezentują buforowane typy interfejsów filtrowane według `bIInspectableOnly`.  
+ określoną Wskaźnik do adresu modułu wyliczającego ICorDebugTypeEnum, który zapewnia dostęp do obiektów ICorDebugType, które reprezentują buforowane typy interfejsów filtrowane zgodnie z `bIInspectableOnly`parametrem.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugComObjectValue, interfejs](icordebugcomobjectvalue-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugComObjectValue — Interfejs](icordebugcomobjectvalue-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

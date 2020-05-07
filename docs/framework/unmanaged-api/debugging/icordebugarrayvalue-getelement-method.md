@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179008"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895036"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement — Metoda
 Pobiera wartość danego elementu tablicy.  
@@ -38,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parametry  
  `cdim`  
- [w] Liczba wymiarów tego `ICorDebugArrayValue` obiektu.  
+ podczas Liczba wymiarów tego `ICorDebugArrayValue` obiektu.  
   
- Ta wartość jest również `indices` rozmiar tablicy, ponieważ jej rozmiar jest `ICorDebugArrayValue` równy liczbie wymiarów obiektu.  
+ Ta wartość jest również rozmiarem `indices` tablicy, ponieważ jej rozmiar jest równy liczbie wymiarów `ICorDebugArrayValue` obiektu.  
   
  `indices`  
- [w] Tablica wartości indeksu, z których każda określa pozycję `ICorDebugArrayValue` w wymiarze obiektu.  
+ podczas Tablica wartości indeksu, z których każdy określa pozycję w wymiarze `ICorDebugArrayValue` obiektu.  
   
- Ta wartość nie może być null.  
+ Ta wartość nie może być równa null.  
   
  `ppValue`  
- [na zewnątrz] Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość określonego elementu.  
+ określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość określonego elementu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

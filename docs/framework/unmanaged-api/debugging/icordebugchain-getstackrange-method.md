@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894455"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange — Metoda
 Pobiera zakres adresów segmentu stosu dla tego łańcucha.  
@@ -36,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametry  
  `pStart`  
- [na zewnątrz] Wskaźnik do `CORDB_ADDRESS` wartości, która jest adresem początkowym segmentu stosu.  
+ określoną Wskaźnik do `CORDB_ADDRESS` wartości, która jest adresem początkowym segmentu stosu.  
   
  `pEnd`  
- [na zewnątrz] Wskaźnik do `CORDB_ADDRESS` wartości, która jest adresem końcowym segmentu stosu.  
+ określoną Wskaźnik do `CORDB_ADDRESS` wartości, która jest adresem końcowym segmentu stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres liczbowy ma znaczenie tylko dla porównania lokalizacji ramki stosu. Nie można wprowadzać żadnych założeń dotyczących tego, co jest faktycznie przechowywane na stosie.  
+ Zakres liczbowy jest zrozumiały tylko dla porównania lokalizacji ramek stosu. Nie można wykonać żadnych założeń dotyczących tego, co jest rzeczywiście przechowywane na stosie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

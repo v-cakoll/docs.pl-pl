@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1d6d2f506086dd3204053b0b635da2e7cdc87e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892809"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers — Metoda
 Pobiera pierwotne wskaźniki interfejsu w pamięci podręcznej dla bieżącej otoki (RCW) w czasie wykonywania.  
@@ -35,29 +35,29 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parametry  
  `bIInspectableOnly`  
- podczas Wartość wskazująca, czy metoda zwróci tylko środowisko wykonawcze systemu Windows interfejsy (`IInspectable` Interfaces) czy wszystkie interfejsy COM, które są buforowane przez otokę wywoływaną przez środowisko uruchomieniowe (OTOKa).  
+ podczas Wartość wskazująca, czy metoda zwróci tylko środowisko wykonawcze systemu Windows interfejsy (`IInspectable` interfejsy) czy wszystkie interfejsy com, które są buforowane przez otokę wywoływaną przez środowisko uruchomieniowe (otoka).  
   
  `celt`  
  podczas Liczba obiektów, których adresy mają zostać pobrane.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby wartości `CORDB_ADDRESS` faktycznie zwróconych w `ptrs`.  
+ określoną Wskaźnik do liczby `CORDB_ADDRESS` wartości faktycznie zwracanych w `ptrs`.  
   
  `ptrs`  
- Wskaźnik do adresu początkowego tablicy wartości `CORDB_ADDRESS`, które zawierają adresy buforowanych obiektów interfejsu.  
+ Wskaźnik na adres początkowy tablicy `CORDB_ADDRESS` wartości zawierającej adresy buforowanych obiektów interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugComObjectValue, interfejs](icordebugcomobjectvalue-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugComObjectValue — Interfejs](icordebugcomobjectvalue-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

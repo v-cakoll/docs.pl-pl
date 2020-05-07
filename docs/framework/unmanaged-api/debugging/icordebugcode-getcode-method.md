@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178997"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893649"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode — Metoda
-Pobiera cały kod dla określonej funkcji, sformatowany do demontażu. Ta metoda została przestarzała w .NET Framework w wersji 2.0. Zamiast tego użyj [funkcji ICorDebugCode2::GetCodeChunks.](icordebugcode2-getcodechunks-method.md)  
+Pobiera cały kod dla określonej funkcji, sformatowany pod kątem demontażu. Ta metoda jest przestarzała w .NET Framework w wersji 2,0. Zamiast tego użyj [ICorDebugCode2:: GetCodeChunks —](icordebugcode2-getcodechunks-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametry  
  `startOffset`  
- [w] Przesunięcie początku funkcji.  
+ podczas Przesunięcie początku funkcji.  
   
  `endOffset`  
- [w] Przesunięcie końca funkcji.  
+ podczas Przesunięcie końca funkcji.  
   
  `cBufferAlloc`  
- [w] Rozmiar tablicy, `buffer` do której zostanie zwrócony kod.  
+ podczas Rozmiar `buffer` tablicy, do której zostanie zwrócony kod.  
   
  `buffer`  
- [na zewnątrz] Tablica, do której zostanie zwrócony kod.  
+ określoną Tablica, do której zostanie zwrócony kod.  
   
  `pcBufferSize`  
- [na zewnątrz] Liczba zwracanych bajtów.  
+ określoną Liczba zwróconych bajtów.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli kod funkcji został podzielony na wiele fragmentów, są one łączone w kolejności zwiększania natywnego odsunięcia. Granice instrukcji nie są sprawdzane.  
+ Jeśli kod funkcji został podzielony na wiele fragmentów, są one łączone w kolejności rosnącego przesunięcia natywnego. Granice instrukcji nie są zaznaczone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz też
 

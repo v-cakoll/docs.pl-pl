@@ -1,113 +1,113 @@
 ---
-title: 'Samouczek: Napisz swój pierwszy analizator i naprawić kod'
-description: Ten samouczek zawiera instrukcje krok po kroku do tworzenia analizatora i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (Roslyn API).
+title: 'Samouczek: Napisz pierwszy Analizator i poprawkę kodu'
+description: Ten samouczek zawiera instrukcje krok po kroku dotyczące kompilowania analizatora i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240553"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895449"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Napisz swój pierwszy analizator i naprawić kod
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Napisz pierwszy Analizator i poprawkę kodu
 
-Zestaw SDK platformy kompilatora .NET udostępnia narzędzia potrzebne do tworzenia niestandardowych ostrzeżeń docelowych kodu C# lub Visual Basic. **Analizator** zawiera kod, który rozpoznaje naruszenia reguły. **Poprawka kodu** zawiera kod, który rozwiązuje naruszenie. Implementowane reguły mogą być doczdą się od struktury kodu do stylu kodowania do konwencji nazewnictwa i nie tylko. Platforma kompilatora .NET zapewnia platformę do uruchamiania analizy, ponieważ deweloperzy piszą kod, a wszystkie funkcje interfejsu użytkownika programu Visual Studio do naprawiania kodu: wyświetlanie squiggles w edytorze, wypełnianie listy błędów programu Visual Studio, tworzenie "żarówki" sugestie i pokazujący bogaty podgląd sugerowanych poprawek.
+Zestaw SDK .NET Compiler Platform zawiera narzędzia potrzebne do tworzenia niestandardowych ostrzeżeń, które są przeznaczone dla kodu w języku C# lub Visual Basic. **Analizator** zawiera kod, który rozpoznaje naruszenia reguły. **Poprawka kodu** zawiera kod, który naprawia naruszenie. Implementowane reguły mogą być dowolne od struktury kodu do stylu kodowania do konwencji nazewnictwa i nie tylko. .NET Compiler Platform zapewnia strukturę do uruchamiania analizy, ponieważ deweloperzy piszą kod i wszystkie funkcje interfejsu użytkownika programu Visual Studio umożliwiające naprawianie kodu: wyświetlanie zygzaków w edytorze, zapełnianie Lista błędów programu Visual Studio, tworzenie sugestii "żarówki" i wyświetlanie bogatej wersji zapoznawczej sugerowanych poprawek.
 
-W tym samouczku przejrzysz tworzenie **analizatora** i towarzyszącej mu **poprawki kodu** przy użyciu interfejsów API Roslyn. Analizator jest sposobem na przeprowadzenie analizy kodu źródłowego i zgłoszenie problemu użytkownikowi. Opcjonalnie analizator może również podać poprawkę kodu, która reprezentuje modyfikację kodu źródłowego użytkownika. Ten samouczek tworzy analizator, który znajduje deklaracje zmiennych lokalnych, które mogą być zadeklarowane przy użyciu modyfikatora, `const` ale nie są. Załączony kod fix modyfikuje te deklaracje, `const` aby dodać modyfikator.
+W tym samouczku przedstawiono tworzenie **analizatora** i dołączoną **poprawkę kodu** przy użyciu interfejsów API Roslyn. Analizator jest sposobem przeprowadzenia analizy kodu źródłowego i zgłoszenia problemu do użytkownika. Opcjonalnie Analizator może również dostarczyć poprawkę kodu, która reprezentuje modyfikację kodu źródłowego użytkownika. Ten samouczek tworzy Analizator, który wyszukuje deklaracje zmiennych lokalnych, które mogą być `const` deklarowane przy użyciu modyfikatora, ale nie są. Poprawka kodu towarzyszącego modyfikuje te deklaracje w `const` celu dodania modyfikatora.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Studio wizualne 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Musisz zainstalować zestaw **SDK platformy kompilatora .NET** za pośrednictwem Instalatora programu Visual Studio:
+Musisz zainstalować **zestaw SDK .NET compiler platform** za pomocą Instalator programu Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-Istnieje kilka kroków do tworzenia i sprawdzania poprawności analizatora:
+Istnieje kilka kroków, które należy wykonać, aby utworzyć i zweryfikować analizator:
 
 1. Utwórz rozwiązanie.
 1. Zarejestruj nazwę i opis analizatora.
-1. Zgłoś ostrzeżenia i zalecenia analizatora.
-1. Zaimplementuj poprawkę kodu, aby zaakceptować zalecenia.
-1. Usprawnij analizę za pomocą testów jednostkowych.
+1. Ostrzeżenia i zalecenia analizatora raportów.
+1. Zaimplementuj poprawkę kodu, aby akceptować zalecenia.
+1. Popraw analizę poprzez testy jednostkowe.
 
-## <a name="explore-the-analyzer-template"></a>Poznaj szablon analizatora
+## <a name="explore-the-analyzer-template"></a>Eksplorowanie szablonu analizatora
 
-Analizator raporty do użytkownika wszelkich deklaracji zmiennych lokalnych, które mogą być konwertowane na stałe lokalne. Rozważmy na przykład następujący kod:
+Analizator raportuje do użytkownika wszystkie deklaracje zmiennych lokalnych, które mogą być konwertowane na stałe lokalne. Rozważmy na przykład następujący kod:
 
 ```csharp
 int x = 0;
 Console.WriteLine(x);
 ```
 
-W powyższym `x` kodzie jest przypisany wartość stała i nigdy nie jest modyfikowany. Można go zadeklarować `const` za pomocą modyfikatora:
+W powyższym kodzie `x` jest przypisana stała wartość i nigdy nie jest modyfikowana. Można go zadeklarować przy użyciu `const` modyfikatora:
 
 ```csharp
 const int x = 0;
 Console.WriteLine(x);
 ```
 
-Analiza w celu ustalenia, czy zmienna może być stała, wymaga analizy składniowej, stałej analizy wyrażenia inicjatora i analizy przepływu danych w celu zapewnienia, że zmienna nigdy nie jest zapisywana. Platforma kompilatora .NET udostępnia interfejsy API, które ułatwiają wykonywanie tej analizy. Pierwszym krokiem jest utworzenie nowego analizatora Języka C# **z projektem poprawki kodu.**
+Analiza umożliwiająca ustalenie, czy zmienna może być stałą, jest uwzględniana, wymagająca analizy składniowej, stałej analizie wyrażenia inicjatora i analizy przepływu danych, aby upewnić się, że zmienna nigdy nie jest zapisywana. .NET Compiler Platform udostępnia interfejsy API, które ułatwiają wykonywanie tej analizy. Pierwszym krokiem jest utworzenie nowego **analizatora C# z rozwiązaniem kodu** Project.
 
-- W programie Visual Studio wybierz pozycję **Plik > Nowy > Project...** aby wyświetlić okno dialogowe Nowy projekt.
-- W **obszarze Visual C# > rozszerzalność**wybierz pozycję **Analizator z poprawką kodu (.NET Standard).**
-- Nazwij swój projekt "**MakeConst**" i kliknij przycisk OK.
+- W programie Visual Studio wybierz kolejno pozycje **plik > nowy > projekt...** , aby wyświetlić okno dialogowe Nowy projekt.
+- W obszarze **rozszerzalność > Visual C#** wybierz opcję **Analizator z poprawkami kodu (.NET standard)**.
+- Nadaj projektowi nazwę "**MakeConst**" i kliknij przycisk OK.
 
-Analizator z szablonem poprawki kodu tworzy trzy projekty: jeden zawiera analizator i poprawkę kodu, drugi jest projektem testu jednostkowego, a trzeci to projekt VSIX. Domyślnym projektem startowym jest projekt VSIX. Naciśnij **klawisz F5,** aby rozpocząć projekt VSIX. Spowoduje to uruchomienie drugiego wystąpienia programu Visual Studio, który załadował nowy analizator.
-
-> [!TIP]
-> Po uruchomieniu analizatora należy uruchomić drugą kopię programu Visual Studio. Ta druga kopia używa innej gałęzi rejestru do przechowywania ustawień. Umożliwia to odróżnienie ustawień wizualnych w dwóch kopiach programu Visual Studio. Możesz wybrać inny motyw eksperymentalnego przebiegu programu Visual Studio. Ponadto nie wędruj w ustawieniach ani nie loguj się do konta programu Visual Studio przy użyciu eksperymentalnego przebiegu programu Visual Studio. To sprawia, że ustawienia są różne.
-
-W drugim wystąpieniu programu Visual Studio, które właśnie zostało uruchomione, utwórz nowy projekt aplikacji konsoli C# (projekt .NET Core lub .NET Framework będzie działać — analizatory działają na poziomie źródłowym). Umieść wskaźnik myszy na tokenie z falistym podkreśleniem, a zostanie wyświetlony tekst ostrzegawczy dostarczony przez analizator.
-
-Szablon tworzy analizator, który zgłasza ostrzeżenie na każdej deklaracji typu, gdzie nazwa typu zawiera małe litery, jak pokazano na poniższym rysunku:
-
-![Ostrzeżenie o raportowaniu analizatora](media/how-to-write-csharp-analyzer-code-fix/report-warning.png)
-
-Szablon zawiera również poprawkę kodu, która zmienia dowolną nazwę typu zawierającą małe litery na wszystkie wielkie litery. Możesz kliknąć na żarówkę wyświetlaną z ostrzeżeniem, aby zobaczyć sugerowane zmiany. Zaakceptowanie sugerowanych zmian aktualizuje nazwę typu i wszystkie odwołania do tego typu w rozwiązaniu. Teraz, gdy widzisz wstępnego analizatora w akcji, zamknij drugie wystąpienie programu Visual Studio i powrót do projektu analizatora.
-
-Nie trzeba uruchomić drugą kopię programu Visual Studio i utworzyć nowy kod, aby przetestować każdą zmianę w analizatorze. Szablon tworzy również projekt testu jednostkowego dla Ciebie. Ten projekt zawiera dwa testy. `TestMethod1`pokazuje typowy format testu, który analizuje kod bez wyzwalania diagnostyki. `TestMethod2`pokazuje format testu, który wyzwala diagnostyki, a następnie stosuje sugerowaną poprawkę kodu. Podczas tworzenia analizatora i poprawki kodu, napiszesz testy dla różnych struktur kodu, aby zweryfikować swoją pracę. Testy jednostkowe analizatorów są znacznie szybsze niż testowanie ich interaktywnie za pomocą programu Visual Studio.
+Analizator z szablonem poprawki kodu tworzy trzy projekty: jeden zawiera Analizator i poprawkę kodu, drugi jest projektem testu jednostkowego, a trzeci jest projektem VSIX. Domyślny projekt startowy jest projektem VSIX. Naciśnij klawisz **F5** , aby uruchomić projekt VSIX. Spowoduje to uruchomienie drugiego wystąpienia programu Visual Studio, które załadowało nowy Analizator.
 
 > [!TIP]
-> Testy jednostkowe analizatora są doskonałym narzędziem, gdy wiesz, jakie konstrukcje kodu powinny i nie powinny wyzwalać analizatora. Ładowanie analizatora w innej kopii programu Visual Studio jest doskonałym narzędziem do eksplorowania i znajdowania konstrukcji, o których jeszcze nie myślałeś.
+> Po uruchomieniu analizatora zostanie rozpoczęta druga kopia programu Visual Studio. Druga kopia używa innej gałęzi rejestru do przechowywania ustawień. Pozwala to na odróżnienie ustawień wizualizacji w dwóch kopiach programu Visual Studio. Możesz wybrać inny motyw dla eksperymentalnego przebiegu programu Visual Studio. Ponadto nie należy przeroamingować ustawień ani zalogować się do konta programu Visual Studio przy użyciu eksperymentalnego przebiegu programu Visual Studio. Te ustawienia są inne.
+
+W drugim wystąpieniu programu Visual Studio, które właśnie zostało uruchomione, Utwórz nowy projekt aplikacji konsolowej w języku C# (projekt platformy .NET Core lub .NET Framework będzie działać — analizatory pracują na poziomie źródła). Umieść kursor nad tokenem podkreślonym linią falistą i pojawi się tekst ostrzegawczy podany przez analizator.
+
+Szablon tworzy Analizator, który raportuje Ostrzeżenie dla każdej deklaracji typu, gdzie nazwa typu zawiera małe litery, jak pokazano na poniższym rysunku:
+
+![Ostrzeżenie dotyczące raportowania analizatora](media/how-to-write-csharp-analyzer-code-fix/report-warning.png)
+
+Szablon zawiera również poprawkę kodu, która zmienia nazwę dowolnego typu zawierającego małe litery na wielkie litery. Możesz kliknąć ikonę żarówki wyświetlaną z ostrzeżeniem, aby zobaczyć sugerowane zmiany. Zaakceptowanie sugerowanych zmian aktualizuje nazwę typu i wszystkie odwołania do tego typu w rozwiązaniu. Teraz, gdy już widzisz początkową analizator w działaniu, Zamknij drugie wystąpienie programu Visual Studio i wróć do projektu analizatora.
+
+Nie trzeba rozpoczynać drugiej kopii programu Visual Studio i utworzyć nowego kodu do testowania każdej zmiany w analizatorze. Szablon tworzy również projekt testu jednostkowego. Ten projekt zawiera dwa testy. `TestMethod1`pokazuje typowy format testu, który analizuje kod bez wyzwalania diagnostyki. `TestMethod2`pokazuje format testu, który wyzwala diagnostykę, a następnie stosuje sugerowaną poprawkę kodu. Podczas kompilowania analizatora i poprawki kodu należy napisać testy dla różnych struktur kodu w celu zweryfikowania pracy. Testy jednostkowe dla analizatorów są znacznie szybsze niż testowanie ich interaktywnie przy użyciu programu Visual Studio.
+
+> [!TIP]
+> Testy jednostkowe analizatora są doskonałym narzędziem, gdy wiesz, jakie konstrukcje kodu powinny być i nie powinny wyzwalać analizatora. Ładowanie analizatora w innej kopii programu Visual Studio to doskonałe narzędzie do eksplorowania i znajdowania konstrukcji, które nie zostały jeszcze przemyślane.
 
 ## <a name="create-analyzer-registrations"></a>Tworzenie rejestracji analizatora
 
-Szablon tworzy klasę `DiagnosticAnalyzer` początkową w **pliku MakeConstAnalyzer.cs.** Ten wyjmator początkowy pokazuje dwie ważne właściwości każdego analizatora.
+Szablon tworzy klasę początkową `DiagnosticAnalyzer` w pliku **MakeConstAnalyzer.cs** . Ta początkowa Analizator przedstawia dwie ważne właściwości każdej analizatora.
 
-- Każdy analizator diagnostyczny musi zawierać atrybut opisujący `[DiagnosticAnalyzer]` język, na który działa.
-- Każdy analizator diagnostyczny <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> musi pochodzić z klasy.
+- Każdy Analizator diagnostyki musi dostarczyć `[DiagnosticAnalyzer]` atrybut opisujący język, w którym działa.
+- Każdy Analizator diagnostyki musi być pochodną <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> klasy.
 
-Szablon pokazuje również podstawowe funkcje, które są częścią dowolnego analizatora:
+Szablon zawiera również podstawowe funkcje, które są częścią dowolnego analizatora:
 
-1. Rejestrowanie akcji. Akcje reprezentują zmiany kodu, które powinny wyzwolić analizator, aby zbadać kod pod kątem naruszeń. Gdy program Visual Studio wykryje zmiany kodu, które pasują do zarejestrowanej akcji, wywołuje zarejestrowaną metodę analizatora.
-1. Tworzenie diagnostyki. Gdy analizator wykryje naruszenie, tworzy obiekt diagnostyczny, który używa programu Visual Studio do powiadamiania użytkownika o naruszeniu.
+1. Rejestrowanie akcji. Akcje reprezentują zmiany kodu, które powinny spowodować, że analizator sprawdzi kod pod kątem naruszeń. Gdy program Visual Studio wykrywa edycje kodu pasujące do zarejestrowanej akcji, wywołuje zarejestrowaną metodę analizatora.
+1. Tworzenie diagnostyki. Po wykryciu naruszenia przez analizatora powstaje obiekt diagnostyczny używany przez program Visual Studio do powiadamiania użytkownika o naruszeniu.
 
-Rejestrujesz akcje w <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> zastąpiosz metodę. W tym samouczku odwiedzisz **węzły składni** w poszukiwaniu deklaracji lokalnych i zobaczysz, które z nich mają stałe wartości. Jeśli deklaracja może być stała, analizator utworzy i zgłosi diagnostykę.
+Akcje można rejestrować w zastąpieniu <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> metody. W tym samouczku zostaną odwiedzane **węzły składni** szukające lokalnych deklaracji i zobacz, które z nich mają stałe wartości. Jeśli deklaracja może być stała, Analizator utworzy i zgłosi diagnostykę.
 
-Pierwszym krokiem jest zaktualizowanie stałych `Initialize` rejestracji i metody, dzięki czemu te stałe wskazują analizator "Make Const". Większość stałych ciągu są zdefiniowane w pliku zasobu ciągu. Należy postępować zgodnie z tą praktyką, aby ułatwić lokalizację. Otwórz plik **Resources.resx** dla projektu analizatora **MakeConst.** Spowoduje to wyświetlenie edytora zasobów. Zaktualizuj zasoby ciągu w następujący sposób:
+Pierwszym krokiem jest zaktualizowanie stałych rejestracji i `Initialize` metody, aby te stałe wskazywały Analizator "Make const". Większość stałych ciągów jest zdefiniowana w pliku zasobów ciągu. Należy postępować zgodnie z tym rozwiązaniem, aby ułatwić lokalizację. Otwórz plik **resources. resx** dla projektu analizatora **MakeConst** . Spowoduje to wyświetlenie edytora zasobów. Zaktualizuj zasoby ciągu w następujący sposób:
 
-- Zmień `AnalyzerTitle` na "Zmienna może być stała".
-- Zmień `AnalyzerMessageFormat` na "Może być stała".
-- Zmień `AnalyzerDescription` na "Make Constant".
+- Zmiana `AnalyzerTitle` na "zmienna może być stała".
+- Zmień `AnalyzerMessageFormat` na "może to być stała".
+- Zmień `AnalyzerDescription` na "Ustaw stałą".
 
-Ponadto zmień **modyfikator dostępu** `public`rozwijanego do . Ułatwia to używanie tych stałych w testach jednostkowych. Po zakończeniu edytor zasobów powinien być wyświetlany na rysunku w następujący sposób:
+Ponadto Zmień listę rozwijaną **modyfikator dostępu** na `public`. Ułatwia to korzystanie z tych stałych w testach jednostkowych. Po zakończeniu Edytor zasobów powinien wyglądać tak, jak pokazano na ilustracji:
 
-![Aktualizowanie zasobów ciągu](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
+![Aktualizowanie zasobów ciągów](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
-Pozostałe zmiany znajdują się w pliku analizatora. Otwórz **MakeConstAnalyzer.cs** w programie Visual Studio. Zmień zarejestrowaną akcję z akcji, która działa na symbole, na jedną, która działa na składnię. W `MakeConstAnalyzerAnalyzer.Initialize` metodzie znajdź wiersz, który rejestruje akcję na symbolach:
+Pozostałe zmiany znajdują się w pliku analizatora. Otwórz **MakeConstAnalyzer.cs** w programie Visual Studio. Zmień zarejestrowanej akcji z jednej, która działa w symbolach na jeden, który działa w składni. W `MakeConstAnalyzerAnalyzer.Initialize` metodzie Znajdź wiersz, który rejestruje akcję na symbole:
 
 ```csharp
 context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
 ```
 
-Zamień go na następujący wiersz:
+Zastąp go następującym wierszem:
 
 [!code-csharp[Register the node action](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
 
-Po tej zmianie można `AnalyzeSymbol` usunąć metodę. Ten analizator <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.LocalDeclarationStatement?displayProperty=nameWithType>bada <xref:Microsoft.CodeAnalysis.SymbolKind.NamedType?displayProperty=nameWithType> , nie oświadczenia. Zauważ, `AnalyzeNode` że ma czerwone squiggles pod nim. Kod, który właśnie `AnalyzeNode` dodał, odwołuje się do metody, która nie została zadeklarowana. Deklaruj tę metodę przy użyciu następującego kodu:
+Po tej zmianie można usunąć `AnalyzeSymbol` metodę. Ten Analizator analizuje <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.LocalDeclarationStatement?displayProperty=nameWithType>, nie <xref:Microsoft.CodeAnalysis.SymbolKind.NamedType?displayProperty=nameWithType> instrukcje. Zwróć uwagę `AnalyzeNode` , że w tym kolorze czerwona jest zygzakowata. Właśnie dodany kod odwołuje się `AnalyzeNode` do metody, która nie została zadeklarowana. Zadeklaruj tę metodę przy użyciu następującego kodu:
 
 ```csharp
 private void AnalyzeNode(SyntaxNodeAnalysisContext context)
@@ -115,28 +115,28 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-Zmień `Category` na "Użycie" w **MakeConstAnalyzer.cs,** jak pokazano w poniższym kodzie:
+Zmień `Category` na "użycie" w **MakeConstAnalyzer.cs** , jak pokazano w poniższym kodzie:
 
 ```csharp
 private const string Category = "Usage";
 ```
 
-## <a name="find-local-declarations-that-could-be-const"></a>Znajdź deklaracje lokalne, które mogą być const
+## <a name="find-local-declarations-that-could-be-const"></a>Znajdowanie lokalnych deklaracji, które mogą być stałe
 
-Nadszedł czas, aby napisać pierwszą wersję `AnalyzeNode` metody. Należy szukać jednej deklaracji lokalnej, `const` która może być, ale nie jest, jak następujący kod:
+Czas zapisywania pierwszej wersji `AnalyzeNode` metody. Należy szukać pojedynczej deklaracji lokalnej, która może być `const` , ale nie jest, jak w poniższym kodzie:
 
 ```csharp
 int x = 0;
 Console.WriteLine(x);
 ```
 
-Pierwszym krokiem jest znalezienie deklaracji lokalnych. Dodaj następujący kod `AnalyzeNode` do **MakeConstAnalyzer.cs:**
+Pierwszym krokiem jest znalezienie lokalnych deklaracji. Dodaj następujący kod do `AnalyzeNode` programu w programie **MakeConstAnalyzer.cs**:
 
 ```csharp
 var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
 ```
 
-Ta rzutowanie zawsze powiedzie się, ponieważ analizator zarejestrowany chwalenie dla zmian deklaracji lokalnych i tylko deklaracje lokalne. Żaden inny typ węzła wyzwala `AnalyzeNode` wywołanie metody. Następnie sprawdź deklarację dla `const` wszystkich modyfikatorów. Jeśli je znajdziesz, natychmiast wróć. Poniższy kod wyszbędzie żadnych `const` modyfikatorów deklaracji lokalnej:
+To rzutowanie zawsze powiedzie się, ponieważ Analizator zarejestrował się pod kątem zmian lokalnych deklaracji i tylko deklaracji lokalnych. Żaden inny typ węzła nie wyzwala wywołania `AnalyzeNode` metody. Następnie sprawdź, czy deklaracja ma dowolne `const` modyfikatory. Jeśli je znajdziesz, zwróć natychmiast. Poniższy kod szuka `const` modyfikatorów w deklaracji lokalnej:
 
 ```csharp
 // make sure the declaration isn't already const:
@@ -146,9 +146,9 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 }
 ```
 
-Na koniec należy sprawdzić, czy `const`zmienna może być . Oznacza to upewnienie się, że nigdy nie jest przypisany po jego zainicjowaniu.
+Na koniec należy sprawdzić, czy zmienna może być `const`. Oznacza to, że nigdy nie jest przypisywany po zainicjowaniu.
 
-Wykonasz analizę semantyczną <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>za pomocą pliku . Argument służy `context` do określenia, czy można złożyć `const`deklarację zmiennej lokalnej . A <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> reprezentuje wszystkie informacje semantyczne w jednym pliku źródłowym. Możesz dowiedzieć się więcej w artykule, który obejmuje [modele semantyczne](../work-with-semantics.md). Użyjesz <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> do wykonania analizy przepływu danych w instrukcji deklaracji lokalnej. Następnie należy użyć wyników tej analizy przepływu danych, aby upewnić się, że zmienna lokalna nie jest zapisywana z nową wartością nigdzie indziej. Wywołać <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> metodę rozszerzenia, <xref:Microsoft.CodeAnalysis.ILocalSymbol> aby pobrać dla zmiennej i sprawdzić, <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> czy nie jest zawarty z kolekcji analizy przepływu danych. Dodaj następujący kod na końcu `AnalyzeNode` metody:
+Przeprowadzasz analizę semantyki przy użyciu <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Użyj argumentu, `context` aby określić, czy można wykonać `const`deklarację zmiennej lokalnej. <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> Reprezentuje wszystkie informacje semantyczne w jednym pliku źródłowym. Więcej informacji można znaleźć w artykule obejmującym [modele semantyczne](../work-with-semantics.md). Będziesz używać <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> do przeprowadzania analizy przepływu danych w lokalnej instrukcji deklaracji. Następnie użyj wyników tej analizy przepływu danych, aby upewnić się, że zmienna lokalna nie jest zapisywana z nową wartością w innym miejscu. Wywołaj <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> metodę rozszerzenia, aby pobrać <xref:Microsoft.CodeAnalysis.ILocalSymbol> dla zmiennej i sprawdź, czy nie jest ona zawarta w <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> kolekcji analizy przepływu danych. Dodaj następujący kod na końcu `AnalyzeNode` metody:
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -164,47 +164,47 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 }
 ```
 
-Właśnie dodany kod zapewnia, że zmienna nie jest `const`modyfikowana i dlatego może być wykonana . Nadszedł czas, aby podnieść diagnostyki. Dodaj następujący kod jako ostatni `AnalyzeNode`wiersz w:
+Właśnie dodany kod gwarantuje, że zmienna nie jest modyfikowana i w związku z tym `const`może zostać wykonana. Czas na podniesienie poziomu diagnostyki. Dodaj następujący kod jako ostatni wiersz w `AnalyzeNode`:
 
 ```csharp
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-Możesz sprawdzić swoje postępy, naciskając **klawisz F5,** aby uruchomić analizator. Można załadować aplikację konsoli utworzoną wcześniej, a następnie dodać następujący kod testu:
+Możesz sprawdzić postęp, naciskając klawisz **F5** , aby uruchomić Analizator. Możesz załadować utworzoną wcześniej aplikację konsolową, a następnie dodać następujący kod testu:
 
 ```csharp
 int x = 0;
 Console.WriteLine(x);
 ```
 
-Żarówka powinna pojawić się, a analizator powinien zgłosić diagnostykę. Jednak żarówka nadal używa szablonu wygenerowanego kodu naprawić i informuje, że może być wykonane wielkie litery. W następnej sekcji wyjaśniono, jak napisać poprawkę kodu.
+Powinna zostać wyświetlona Żarówka, a Analizator powinien zgłosić diagnostykę. Jednak żarówka nadal korzysta z wygenerowanej przez szablon poprawki kodu i informuje o tym, że można ją wielką literą. W następnej sekcji wyjaśniono, jak napisać poprawkę kodu.
 
 ## <a name="write-the-code-fix"></a>Napisz poprawkę kodu
 
-Analizator może dostarczyć jedną lub więcej poprawek kodu. Poprawka kodu definiuje emisję, która rozwiązuje zgłoszony problem. Dla analizatora, który został utworzony, można podać poprawkę kodu, która wstawia const słowa kluczowego:
+Analizator może dostarczyć co najmniej jedną poprawkę kodu. Poprawka kodu definiuje edycję, która dotyczy zgłoszonego problemu. Dla utworzonej analizatora można podać poprawkę kodu, która wstawia słowo kluczowe const:
 
 ```csharp
 const int x = 0;
 Console.WriteLine(x);
 ```
 
-Użytkownik wybiera go z interfejsu użytkownika żarówki w edytorze i Visual Studio zmienia kod.
+Użytkownik wybiera go z poziomu interfejsu użytkownika żarówki w edytorze, a program Visual Studio zmieni kod.
 
-Otwórz plik **MakeConstCodeFixProvider.cs** dodany przez szablon.  Ta poprawka kodu jest już podłączona do identyfikatora diagnostycznego utworzonego przez analizator diagnostyczny, ale nie implementuje jeszcze przekształcenia odpowiedniego kodu. Najpierw należy usunąć niektóre z kodu szablonu. Zmień ciąg tytułu na "Make constant":
+Otwórz plik **MakeConstCodeFixProvider.cs** dodany przez szablon.  Ta poprawka kodu jest już przewodowa do identyfikatora diagnostyki utworzonego przez analizatora diagnostycznego, ale nie implementuje jeszcze odpowiedniego przekształcenia kodu. Najpierw należy usunąć część kodu szablonu. Zmień ciąg tytułu na "Ustaw stałą":
 
 [!code-csharp[Update the CodeFix title](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
 
-Następnie usuń `MakeUppercaseAsync` metodę. To już nie ma zastosowania.
+Następnie usuń `MakeUppercaseAsync` metodę. Nie ma już zastosowania.
 
-Wszyscy dostawcy poprawek kodu <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>pochodzą od . Wszystkie one <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> zastąpić do raportu dostępne poprawki kodu. W `RegisterCodeFixesAsync`przypadku zmiany typu węzła przodka, którego <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> szukasz, na wartość diagnostyczną:
+Wszyscy dostawcy poprawek kodu pochodzą z <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Wszystkie przesłonięcia <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> w celu zgłaszania poprawek kodu są dostępne. W `RegisterCodeFixesAsync`programie Zmień typ węzła nadrzędnego, który jest wyszukiwany <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> , aby dopasować go do diagnostyki:
 
 [!code-csharp[Find local declaration node](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-Następnie zmień ostatni wiersz, aby zarejestrować poprawkę kodu. Poprawka utworzy nowy dokument, który `const` wynika z dodawania modyfikatora do istniejącej deklaracji:
+Następnie zmień ostatni wiersz, aby zarejestrować poprawkę kodu. Poprawka spowoduje utworzenie nowego dokumentu, który skutkuje dodaniem `const` modyfikatora do istniejącej deklaracji:
 
 [!code-csharp[Register the new code fix](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
-Zauważysz czerwone squiggles w kodzie, `MakeConstAsync`który właśnie dodał na symbolu . Dodaj deklarację `MakeConstAsync` dla podobnych, podobnych kodów:
+Zobaczysz czerwony zygzak w kodzie, który właśnie został dodany do symbolu `MakeConstAsync`. Dodaj deklarację dla `MakeConstAsync` następującego kodu:
 
 ```csharp
 private async Task<Document> MakeConstAsync(Document document,
@@ -214,13 +214,13 @@ private async Task<Document> MakeConstAsync(Document document,
 }
 ```
 
-Nowa `MakeConstAsync` metoda przekształci <xref:Microsoft.CodeAnalysis.Document> reprezentujący plik źródłowy użytkownika <xref:Microsoft.CodeAnalysis.Document> w nowy, `const` który teraz zawiera deklarację.
+Nowa `MakeConstAsync` Metoda przekształca <xref:Microsoft.CodeAnalysis.Document> plik źródłowy użytkownika w nową <xref:Microsoft.CodeAnalysis.Document> , która teraz zawiera `const` deklarację.
 
-Utwórz nowy `const` token słów kluczowych, aby wstawić z przodu instrukcji deklaracji. Należy uważać, aby najpierw usunąć wszelkie wiodące ciekawostki z `const` pierwszego tokenu deklaracji instrukcji i dołączyć go do tokenu. Dodaj następujący kod do metody `MakeConstAsync`:
+Należy utworzyć nowy `const` token słowa kluczowego do wstawienia na początku instrukcji deklaracji. Należy zachować ostrożność, aby najpierw usunąć wszystkie wiodące kwizy z pierwszego tokenu instrukcji deklaracji i dołączyć je do `const` tokenu. Dodaj następujący kod do metody `MakeConstAsync`:
 
 [!code-csharp[Create a new const keyword token](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
-Następnie dodaj `const` token do deklaracji przy użyciu następującego kodu:
+Następnie Dodaj `const` token do deklaracji przy użyciu następującego kodu:
 
 ```csharp
 // Insert the const token into the modifiers list, creating a new modifiers list.
@@ -231,41 +231,41 @@ var newLocal = trimmedLocal
     .WithDeclaration(localDeclaration.Declaration);
 ```
 
-Następnie sformatuj nową deklarację, aby dopasować reguły formatowania Języka C#. Formatowanie zmian w celu dopasowania istniejącego kodu zapewnia lepsze środowisko. Dodaj następującą instrukcję bezpośrednio po istniejącym kodzie:
+Następnie sformatuj nową deklarację pod kątem zgodności z regułami formatowania języka C#. Formatowanie zmian pod kątem zgodności z istniejącym kodem powoduje utworzenie lepszego środowiska. Dodaj następującą instrukcję bezpośrednio po istniejącym kodzie:
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-Dla tego kodu wymagany jest nowy obszar nazw. Dodaj następującą `using` instrukcję do górnej części pliku:
+Dla tego kodu jest wymagana Nowa przestrzeń nazw. Dodaj następującą `using` instrukcję na początku pliku:
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
 ```
 
-Ostatnim krokiem jest dokonanie edytowania. Istnieją trzy kroki tego procesu:
+Ostatnim krokiem jest dokonanie edycji. Ten proces obejmuje trzy kroki:
 
-1. Uzyskaj uchwyt do istniejącego dokumentu.
-1. Utwórz nowy dokument, zastępując istniejącą deklarację nową deklaracją.
+1. Pobierz uchwyt do istniejącego dokumentu.
+1. Utwórz nowy dokument przez zastąpienie istniejącej deklaracji nową deklaracją.
 1. Zwróć nowy dokument.
 
 Dodaj następujący kod na końcu `MakeConstAsync` metody:
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-Poprawka kodu jest gotowa do wypróbowania.  Naciśnij klawisz F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio. W drugim wystąpieniu programu Visual Studio utwórz nowy projekt aplikacji konsoli Języka C# i dodaj kilka deklaracji zmiennych lokalnych zainicjowanych z wartościami stałymi do Metody głównej. Zobaczysz, że są one zgłaszane jako ostrzeżenia, jak poniżej.
+Poprawka kodu jest gotowa do wypróbowania.  Naciśnij klawisz F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio. W drugim wystąpieniu programu Visual Studio Utwórz nowy projekt aplikacji konsolowej C# i Dodaj kilka lokalnych deklaracji zmiennych, które zostały zainicjowane z użyciem wartości stałych do metody Main. Zobaczysz, że są one raportowane jako ostrzeżenia poniżej.
 
-![Może tworzyć ostrzeżenia const](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
+![Może wprowadzać ostrzeżenia const](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-Zrobiłeś duży postęp. Istnieją squiggles pod deklaracjami, które `const`mogą być wykonane . Ale jest jeszcze wiele do zrobienia. To działa dobrze, `const` jeśli dodać do `i`deklaracji, począwszy od , następnie `j` i na koniec `k`. Ale jeśli dodasz `const` modyfikator w innej `k`kolejności, począwszy `k` od , analizator tworzy błędy: `const`nie można zadeklarować , `i` chyba że i `j` są już `const`. Musisz zrobić więcej analizy, aby upewnić się, że obsługuje różne sposoby zmienne mogą być deklarowane i inicjowane.
+Wykonano wiele postępów. W deklaracji, które mogą zostać wykonane `const`, znajdują się tutaj. Jednak nadal działa. Jest to dobre rozwiązanie, jeśli `const` dodasz do deklaracji zaczynających `i`się `j` od, `k`then i finally. Ale w przypadku dodania `const` modyfikatora w innej kolejności, rozpoczynając od `k`, Analizator tworzy błędy: `k` nie można zadeklarować `const`, chyba że `i` i `j` są one jednocześnie. `const` W celu zapewnienia obsługi różnych zmiennych można zadeklarować i zainicjować więcej możliwości analizy.
 
 ## <a name="build-data-driven-tests"></a>Tworzenie testów opartych na danych
 
-Analizator i kod naprawić pracy na prostym przypadku pojedynczej deklaracji, które mogą być wykonane const. Istnieje wiele możliwych deklaracji oświadczenia, gdzie ta implementacja popełnia błędy. Te przypadki zostaną zaadresować, współpracując z biblioteką testów jednostkowych napisaną przez szablon. Jest znacznie szybszy niż wielokrotne otwieranie drugiej kopii programu Visual Studio.
+Analizator i poprawka kodu działają w prostym przypadku pojedynczej deklaracji, która może być poddana stałej. Istnieje wiele możliwych instrukcji deklaracji, w których ta implementacja wprowadza błędy. Te przypadki są rozwiązywane przez pracę z biblioteką testów jednostkowych zapisaną przez szablon. Jest to znacznie szybsze niż Wielokrotne otwieranie drugiej kopii programu Visual Studio.
 
-Otwórz plik **MakeConstUnitTests.cs** w projekcie testu jednostkowego. Szablon utworzyli dwa testy, które są zgodne z dwoma typowymi wzorcami dla testu jednostkowego analizatora i kodu. `TestMethod1`pokazuje wzorzec dla testu, który zapewnia analizator nie zgłasza diagnostyki, gdy nie powinien. `TestMethod2`pokazuje wzorzec raportowania diagnostyki i uruchamiania poprawki kodu.
+Otwórz plik **MakeConstUnitTests.cs** w projekcie testów jednostkowych. Szablon utworzył dwa testy, które są zgodne z dwoma typowymi wzorcami w celu sprawdzenia, czy kod naprawi test jednostkowy. `TestMethod1`pokazuje wzorzec dla testu, który gwarantuje, że analizator nie raportuje diagnostyki, gdy nie powinien. `TestMethod2`pokazuje wzorzec zgłaszania diagnostyki i uruchamiania poprawki kodu.
 
-Kod dla prawie każdego testu analizatora następuje jeden z tych dwóch wzorców. W pierwszym kroku można przetworzyć te testy jako testy oparte na danych. Następnie będzie łatwo utworzyć nowe testy, dodając nowe stałe ciągu do reprezentowania różnych danych wejściowych testu.
+Kod prawie każdego testu dla analizatora jest zgodny z jednym z tych dwóch wzorców. W pierwszym kroku można wykonać te testy jako testy oparte na danych. Następnie można łatwo utworzyć nowe testy przez dodanie nowych stałych ciągów, aby reprezentować różne dane wejściowe testu.
 
-Dla wydajności pierwszym krokiem jest refaktoryzacja dwóch testów do testów opartych na danych. Następnie należy zdefiniować tylko kilka stałych ciągu dla każdego nowego testu. Podczas refaktoryzacji, zmień nazwę obu metod na lepsze nazwy. Zamień `TestMethod1` na ten test, który zapewnia, że nie jest wywoływana żadna diagnostyka:
+W celu uzyskania skuteczności pierwszy krok polega na refaktoryzacji dwóch testów w testach opartych na danych. Następnie wystarczy zdefiniować tylko kilka ciągów stałych dla każdego nowego testu. Podczas refaktoryzacji Zmień nazwy obu tych metod na lepsze. Zamień `TestMethod1` na ten test, który gwarantuje, że nie zostanie zgłoszona żadna Diagnostyka:
 
 ```csharp
 [DataTestMethod]
@@ -276,9 +276,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-Można utworzyć nowy wiersz danych dla tego testu, definiując dowolny fragment kodu, który nie powinien powodować diagnostyki wyzwolić ostrzeżenie. To przeciążenie przebiegów, `VerifyCSharpDiagnostic` gdy nie ma diagnostyki wyzwalane dla fragmentu kodu źródłowego.
+Można utworzyć nowy wiersz danych dla tego testu przez zdefiniowanie dowolnego fragmentu kodu, który nie powinien powodować wyzwalania ostrzeżenia przez diagnostykę. To Przeciążenie `VerifyCSharpDiagnostic` przebiega w przypadku braku wyzwalanej diagnostyki dla fragmentu kodu źródłowego.
 
-Następnie zastąp `TestMethod2` ten test, który zapewnia, że diagnostyka jest wywoływana i poprawka kodu zastosowana dla fragmentu kodu źródłowego:
+Następnie zastąp `TestMethod2` ciąg tym testem, który zapewnia podniesienie poziomu diagnostyki i zastosowanie poprawki kodu do fragmentu kodu źródłowego:
 
 ```csharp
 [DataTestMethod]
@@ -306,19 +306,19 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 }
 ```
 
-Poprzedni kod również kilka zmian w kodzie, który tworzy oczekiwany wynik diagnostyczny. Używa stałych publicznych zarejestrowanych `MakeConst` w analizatorze. Ponadto używa dwóch stałych ciągu dla źródła wejściowego i stałego. Dodaj następujące stałe ciągu `UnitTest` do klasy:
+Poprzedni kod również wprowadził kilka zmian w kodzie, który kompiluje oczekiwany wynik diagnostyki. Używa on publicznych stałych zarejestrowanych w `MakeConst` analizatorze. Ponadto używa dwóch stałych ciągów dla źródła danych wejściowych i stałych. Dodaj następujące stałe ciągów do `UnitTest` klasy:
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Uruchom te dwa testy, aby upewnić się, że przejdą. W programie Visual Studio otwórz **Eksploratora testów,** wybierając pozycję > **Eksplorator testów****systemu Windows** > . **Test**  Naciśnij łącze **Uruchom wszystko.**
+Uruchom te dwa testy, aby upewnić się, że są one przekazywane. W programie Visual Studio Otwórz **Eksploratora testów** , wybierając kolejno pozycje **Testuj** > **Eksplorator**testów**systemu Windows** > .  Naciśnij link **Uruchom wszystko** .
 
-## <a name="create-tests-for-valid-declarations"></a>Tworzenie testów dla prawidłowych deklaracji
+## <a name="create-tests-for-valid-declarations"></a>Utwórz testy dla prawidłowych deklaracji
 
-Co do zasady analizatory powinny zakończyć pracę tak szybko, jak to możliwe, wykonując minimalną pracę. Visual Studio wywołuje zarejestrowane analizatory jako kod zmiany użytkownika. Czas reakcji jest kluczowym wymogiem. Istnieje kilka przypadków testowych dla kodu, który nie powinien podnieść diagnostyki. Analizator już obsługuje jeden z tych testów, w przypadku, gdy zmienna jest przypisana po zainicjowaniu. Dodaj następującą stałą ciągu do testów, aby reprezentować tę sprawę:
+Zgodnie z ogólną zasadą analizatory powinny zakończyć się tak szybko, jak to możliwe, wykonując minimalną pracę. Program Visual Studio wywołuje zarejestrowane analizatory, gdy użytkownik edytuje kod. Czas odpowiedzi jest wymaganym kluczem. Istnieje kilka przypadków testowych dla kodu, który nie powinien podnieść danych diagnostycznych. Analizator już obsługuje jeden z tych testów, przypadek, w którym zmienna jest przypisywana po zainicjowaniu. Dodaj następującą stałą ciągu do testów, aby reprezentować ten przypadek:
 
 [!code-csharp[variable assigned](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
 
-Następnie dodaj wiersz danych dla tego testu, jak pokazano w poniższym fragmencie kodu:
+Następnie Dodaj wiersz danych dla tego testu, jak pokazano w poniższym fragmencie kodu:
 
 ```csharp
 [DataTestMethod]
@@ -327,25 +327,25 @@ Następnie dodaj wiersz danych dla tego testu, jak pokazano w poniższym fragmen
 public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 ```
 
-Ten test również zaakkuje. Następnie dodaj stałe dla warunków, które jeszcze nie zostały obsłużonych:
+Ten test również kończy się powodzeniem. Następnie Dodaj stałe dla warunków, które nie zostały jeszcze obsłużone:
 
-- Deklaracje, które `const`są już , ponieważ są one już const:
+- Deklaracje, które `const`są już stałe:
 
    [!code-csharp[already const declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-- Deklaracje, które nie mają inicjatora, ponieważ nie ma żadnej wartości do użycia:
+- Deklaracje, które nie mają inicjatora, ponieważ nie ma wartości do użycia:
 
    [!code-csharp[declarations that have no initializer](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-- Deklaracje, w których inicjator nie jest stałą, ponieważ nie mogą być stałymi czaskompilacji:
+- Deklaracje, w których inicjator nie jest stałą, ponieważ nie mogą być stałymi czasu kompilacji:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
-Może to być jeszcze bardziej skomplikowane, ponieważ C# umożliwia wiele deklaracji jako jedną instrukcję. Należy wziąć pod uwagę następujące stałej ciągu przypadku testowego:
+Może być jeszcze bardziej skomplikowany, ponieważ C# umożliwia stosowanie wielu deklaracji jako jednej instrukcji. Rozważmy następującą stałą ciągu przypadku testowego:
 
 [!code-csharp[multiple initializers](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
 
-Zmienna `i` może być stała, `j` ale zmienna nie może. W związku z tym oświadczenie to nie może być deklaracją const. Dodaj `DataRow` deklaracje dla wszystkich tych testów:
+Zmienna `i` może być stałą, ale zmienna `j` nie może. W związku z tym nie można wykonać tej instrukcji jako deklaracji const. Dodaj `DataRow` deklaracje dla wszystkich tych testów:
 
 ```csharp
 [DataTestMethod]
@@ -358,17 +358,17 @@ Zmienna `i` może być stała, `j` ale zmienna nie może. W związku z tym oświ
 public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 ```
 
-Uruchom testy ponownie, a zobaczysz te nowe przypadki testowe nie powiedzie się.
+Uruchom testy ponownie i zobaczysz, że te nowe przypadki testowe zakończą się niepowodzeniem.
 
-## <a name="update-your-analyzer-to-ignore-correct-declarations"></a>Aktualizowanie analizatora w celu zignorowania poprawnych deklaracji
+## <a name="update-your-analyzer-to-ignore-correct-declarations"></a>Aktualizowanie analizatora w celu ignorowania prawidłowych deklaracji
 
-Potrzebujesz pewnych ulepszeń `AnalyzeNode` metody analizatora, aby odfiltrować kod, który pasuje do tych warunków. Są to wszystkie warunki pokrewne, więc podobne zmiany naprawią wszystkie te warunki. Wymiń `AnalyzeNode`następujące zmiany w :
+Aby odfiltrować kod, który spełnia `AnalyzeNode` te warunki, potrzebne są pewne ulepszenia metody analizatora. Są to wszystkie powiązane warunki, więc podobne zmiany spowodują naprawienie wszystkich tych warunków. Wprowadź następujące zmiany `AnalyzeNode`:
 
-- Analiza semantyczna zbadała pojedynczą deklarację zmiennej. Ten kod musi znajdować `foreach` się w pętli, która sprawdza wszystkie zmienne zadeklarowane w tej samej instrukcji.
-- Każda zadeklarowana zmienna musi mieć inicjatora.
-- Inicjator każdej zadeklarowanej zmiennej musi być stałą w czasie kompilacji.
+- Analiza semantyczna zbadała deklarację pojedynczej zmiennej. Ten kod musi znajdować się w `foreach` pętli, która bada wszystkie zmienne zadeklarowane w tej samej instrukcji.
+- Każda zadeklarowana zmienna musi mieć inicjator.
+- Każdy zadeklarowany inicjator zmiennej musi być stałą czasu kompilacji.
 
-W `AnalyzeNode` metodzie zastąp oryginalną analizę semantyczną:
+W `AnalyzeNode` metodzie Zastąp pierwotną analizę semantyczną:
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -384,7 +384,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 }
 ```
 
-z następującym fragmentem kodu:
+z poniższym fragmentem kodu:
 
 ```csharp
 // Ensure that all variables in the local declaration have initializers that
@@ -419,40 +419,40 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 }
 ```
 
-Pierwsza `foreach` pętla sprawdza każdą deklarację zmiennej przy użyciu analizy składni. Pierwszy czek gwarantuje, że zmienna ma inicjatora. Drugi czek gwarantuje, że inicjator jest stałą. Druga pętla ma oryginalną analizę semantyczną. Kontrole semantyczne są w oddzielnej pętli, ponieważ ma większy wpływ na wydajność. Uruchom testy ponownie, a powinny zobaczyć je wszystkie przejść.
+Pierwsza `foreach` pętla analizuje każdą deklarację zmiennej przy użyciu analizy składni. Pierwsze sprawdzenie gwarantuje, że zmienna ma inicjator. Druga kontrola gwarantuje, że inicjator jest stałą. Druga pętla ma pierwotną analizę semantyczną. Testy semantyczne znajdują się w osobnej pętli, ponieważ ma ona większy wpływ na wydajność. Uruchom testy ponownie, a wszystkie powinny być widoczne.
 
-## <a name="add-the-final-polish"></a>Dodaj ostateczną polską
+## <a name="add-the-final-polish"></a>Dodaj końcowy Polski
 
-To już prawie koniec. Istnieje kilka innych warunków do obsługi analizatora. Visual Studio wywołuje analizatory, gdy użytkownik pisze kod. Często jest tak, że analizator zostanie wywołany dla kodu, który nie jest kompilowany. Metoda analizatora `AnalyzeNode` diagnostycznego nie sprawdza, czy wartość stała jest konwertowalna na typ zmiennej. Tak więc bieżąca implementacja będzie szczęśliwie konwertować niepoprawną deklarację, taką jak int i = "abc"' na stałą lokalną. Dodaj stałą ciągu źródłowego dla tego warunku:
+To już prawie koniec. Aby Analizator mógł obsłużyć kilka dodatkowych warunków. Program Visual Studio wywołuje analizatory podczas pisania kodu. Często zdarza się, że analizator zostanie wywołany dla kodu, który nie kompiluje. `AnalyzeNode` Metoda analizatora diagnostyki nie sprawdza, czy wartość stała jest możliwa do przekonwertowania na typ zmiennej. Dlatego bieżąca implementacja Happily konwersję niepoprawnej deklaracji, takiej jak int i = "ABC", na stałą lokalną. Dodaj stałą wartość ciągu źródłowego dla tego warunku:
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Ponadto typy odwołań nie są obsługiwane prawidłowo. Jedyną stałą wartością dozwoloną dla typu odwołania jest `null`, z wyjątkiem tego przypadku <xref:System.String?displayProperty=nameWithType>, co pozwala na literały ciągów. Innymi słowy, `const string s = "abc"` jest legalne, ale `const object s = "abc"` nie jest. Ten fragment kodu sprawdza ten warunek:
+Ponadto typy odwołań nie są prawidłowo obsługiwane. Jedyną wartością stałą dozwoloną dla typu referencyjnego jest `null`, z wyjątkiem tego <xref:System.String?displayProperty=nameWithType>, który umożliwia literały ciągu. Innymi słowy, `const string s = "abc"` jest to dozwolone, ale `const object s = "abc"` nie jest. Ten fragment kodu weryfikuje ten warunek:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
-Aby być dokładne, należy dodać kolejny test, aby upewnić się, że można utworzyć stałą deklarację dla ciągu. Poniższy fragment kodu definiuje zarówno kod, który podnosi diagnostyczne, jak i kod po zastosowaniu poprawki:
+Aby upewnić się, że musisz dodać kolejny test, aby mieć pewność, że można utworzyć deklarację stałą dla ciągu. Poniższy fragment kodu definiuje kod, który wywołuje diagnostykę, i kod po zastosowaniu poprawki:
 
 [!code-csharp[string reference types raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
 
-Na koniec jeśli zmienna `var` jest zadeklarowana za pomocą słowa kluczowego, poprawka kodu wykonuje niewłaściwą `const var` rzecz i generuje deklarację, która nie jest obsługiwana przez język C#. Aby naprawić ten błąd, poprawka `var` kodu musi zastąpić słowo kluczowe nazwą wywnioskowanego typu:
+Na koniec Jeśli zmienna jest zadeklarowana za pomocą `var` słowa kluczowego, Poprawka kodu robi niewłaściwe i generuje `const var` deklarację, która nie jest obsługiwana przez język C#. Aby naprawić ten błąd, Poprawka kodu musi zastąpić `var` słowo kluczowe nazwą wywnioskowanego typu:
 
 [!code-csharp[var references need to use the inferred types](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
 
-Te zmiany aktualizują deklaracje wierszy danych dla obu testów. Poniższy kod przedstawia te testy ze wszystkimi atrybutami wiersza danych:
+Te zmiany aktualizują deklaracje wiersza danych dla obu testów. Poniższy kod przedstawia te testy ze wszystkimi atrybutami wiersza danych:
 
 [!code-csharp[The finished tests](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
 
-Na szczęście wszystkie powyższe błędy można rozwiązać przy użyciu tych samych technik, których właśnie się nauczyłeś.
+Na szczęście wszystkie powyższe usterki mogą być rozwiązywane przy użyciu tych samych metod, które zostały już zapamiętane.
 
-Aby naprawić pierwszy błąd, najpierw otwórz **DiagnosticAnalyzer.cs** i zlokalizuj pętlę foreach, w której sprawdzane są każdego z inicjatorów deklaracji lokalnej, aby upewnić się, że są one przypisane ze stałymi wartościami. Bezpośrednio _przed_ pierwszą pętlą `context.SemanticModel.GetTypeInfo()` foreach wywołaj, aby pobrać szczegółowe informacje o zadeklarowanym typie deklaracji lokalnej:
+Aby naprawić pierwszy błąd, najpierw Otwórz **DiagnosticAnalyzer.cs** i Znajdź pętlę Foreach, w której jest sprawdzana każda z inicjatorów deklaracji lokalnej, aby upewnić się, że są one przypisane do wartości stałych. Bezpośrednio _przed_ pierwszą pętlą foreach należy wywołać `context.SemanticModel.GetTypeInfo()` , aby uzyskać szczegółowe informacje na temat zadeklarowanego typu deklaracji lokalnej:
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
 var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
 ```
 
-Następnie w `foreach` pętli sprawdź każdy inicjator, aby upewnić się, że jest konwertowalny na typ zmiennej. Dodaj następujące sprawdzanie po upewnieniu się, że inicjator jest stałą:
+Następnie w `foreach` pętli Sprawdź każdy inicjator, aby upewnić się, że jest on konwertowany na typ zmiennej. Po upewnieniu się, że inicjator jest stałą, należy dodać następujące sprawdzenie:
 
 ```csharp
 // Ensure that the initializer value can be converted to the type of the
@@ -464,7 +464,7 @@ if (!conversion.Exists || conversion.IsUserDefined)
 }
 ```
 
-Następna zmiana opiera się na ostatniej. Przed zamknięciem nawias klamrowy nawias u pierwszy foreach pętli, dodać następujący kod, aby sprawdzić typ deklaracji lokalnej, gdy stała jest ciąg lub null.
+Następna zmiana jest oparta na ostatnim. Przed zamykającym nawiasem klamrowym pierwszej pętli Foreach Dodaj następujący kod, aby sprawdzić typ deklaracji lokalnej, gdy stała jest ciągiem lub wartością null.
 
 ```csharp
 // Special cases:
@@ -485,32 +485,32 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-Musisz napisać nieco więcej kodu w dostawcy poprawki kodu, aby zastąpić var' słowo kluczowe z poprawną nazwą typu. Wróć do **CodeFixProvider.cs**. Kod, który dodasz, wykonuje następujące kroki:
+Aby zamienić słowo kluczowe var na poprawną nazwę typu, należy napisać nieco więcej kodu w ramach dostawcy poprawek kodu. Wróć do **CodeFixProvider.cs**. Kod, który dodasz, wykonuje następujące czynności:
 
-- Sprawdź, czy deklaracja jest deklaracją `var` i czy jest:
-- Utwórz nowy typ dla typu wywnioskowanego.
-- Upewnij się, że deklaracja typu nie jest aliasem. Jeśli tak, to jest `const var`legalne, aby zadeklarować .
-- Upewnij się, że `var` nie jest to nazwa typu w tym programie. (Jeśli tak, `const var` to jest legalne).
+- Sprawdź, czy deklaracja jest `var` deklaracją, a jeśli jest:
+- Utwórz nowy typ dla wnioskowanego typu.
+- Upewnij się, że deklaracja typu nie jest aliasem. Jeśli tak, można zadeklarować `const var`.
+- Upewnij się, `var` że nie jest to nazwa typu w tym programie. (Jeśli tak, `const var` jest to dozwolone).
 - Uprość pełną nazwę typu
 
-To brzmi jak dużo kodu. Tak nie jest. Zamień wiersz, który deklaruje `newLocal` i inicjuje następującykod. Idzie natychmiast po inicjalizacji: `newModifiers`
+Dźwięki takie jak wiele kodu. Nie jest. Zastąp wiersz, który deklaruje `newLocal` i inicjuje z poniższym kodem. Przechodzi natychmiast po zainicjowaniu `newModifiers`:
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-Aby użyć tego typu, należy dodać jedną `using` instrukcję: <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>
+Musisz dodać jedną `using` instrukcję, <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> aby użyć typu:
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Uruchom testy, a wszystkie powinny przejść. Pogratuluj sobie, uruchamiając gotowy analizator. Naciśnij klawisze Ctrl+F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio z załadowanym rozszerzeniem Roslyn Preview.
+Uruchom testy i wszystkie powinny być przekazywane. Congratulate siebie, uruchamiając gotowy Analizator. Naciśnij kombinację klawiszy CTRL + F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio z załadowanym rozszerzeniem Roslyn Preview.
 
-- W drugim wystąpieniu programu Visual Studio utwórz nowy `int x = "abc";` projekt aplikacji konsoli Języka C# i dodaj do Metody głównej. Dzięki pierwszej poprawce błędu nie należy zgłaszać żadnego ostrzeżenia dla tej deklaracji zmiennej lokalnej (chociaż zgodnie z oczekiwaniami występuje błąd kompilatora).
-- Następnie dodaj `object s = "abc";` do Main metody. Ze względu na drugą poprawkę błędu nie należy zgłaszać żadnego ostrzeżenia.
-- Na koniec dodaj inną zmienną lokalną, która używa słowa kluczowego. `var` Zobaczysz, że ostrzeżenie jest zgłaszane, a pod po lewej stronie pojawi się sugestia.
-- Przesuń opiekuna edytora nad falistą podkreśleniem i naciśnij klawisze Ctrl+. , aby wyświetlić sugerowaną poprawkę kodu. Po wybraniu poprawki kodu należy pamiętać, że słowo kluczowe var jest teraz obsługiwane poprawnie.
+- W drugim wystąpieniu programu Visual Studio Utwórz nowy projekt aplikacji konsolowej C# i Dodaj `int x = "abc";` go do metody Main. Z powodu pierwszej poprawki błędów nie należy podawać ostrzeżenia dla tej deklaracji zmiennej lokalnej (chociaż występuje błąd kompilatora w oczekiwany sposób).
+- Następnie Dodaj `object s = "abc";` do metody Main. Ze względu na drugą poprawkę błędu nie należy podawać ostrzeżenia.
+- Na `var` koniec Dodaj kolejną zmienną lokalną, która używa słowa kluczowego. Zobaczysz, że zostało zgłoszone ostrzeżenie i pojawi się sugestia poniżej lewej strony.
+- Przenieś karetkę edytora na falistej podkreślenie i naciśnij klawisze CTRL +. Aby wyświetlić sugerowaną poprawkę kodu. Po wybraniu poprawki kodu należy zauważyć, że słowo kluczowe var jest teraz prawidłowo obsługiwane.
 
-Na koniec dodaj następujący kod:
+Na koniec Dodaj następujący kod:
 
 ```csharp
 int i = 2;
@@ -518,9 +518,9 @@ int j = 32;
 int k = i + j;
 ```
 
-Po tych zmianach, masz czerwone squiggles tylko na pierwszych dwóch zmiennych. Dodaj `const` do `i` `j`obu i , i `k` pojawi się nowe `const`ostrzeżenie, ponieważ może być teraz .
+Po wprowadzeniu tych zmian otrzymujesz czerwoną literę tylko dla pierwszych dwóch zmiennych. Dodaj `const` do obu `i` i `j`i otrzymuj nowe ostrzeżenie, `k` ponieważ teraz może być. `const`
 
-Gratulacje! Utworzono pierwsze rozszerzenie platformy kompilatora .NET, które wykonuje analizę kodu w locie w celu wykrycia problemu i zapewnia szybką poprawkę, aby go poprawić. Po drodze nauczysz się wielu interfejsów API kodu, które są częścią sdk platformy kompilatora .NET (Roslyn Interfejsów API). Możesz sprawdzić swoją pracę na [ukończonym przykładzie](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) w naszym repozytorium GitHub.
+Gratulacje! Zostało utworzone pierwsze rozszerzenie .NET Compiler Platform, które wykonuje analizę kodu na bieżąco w celu wykrywania problemu i zawiera szybką poprawkę, aby rozwiązać ten problem. W ten sposób poznasz wiele interfejsów API kodu, które są częścią zestawu SDK .NET Compiler Platform (Roslyn interfejsy API). Możesz sprawdzić, czy pracujesz z [ukończonym przykładem](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) w naszym repozytorium GitHub.
 
 ## <a name="other-resources"></a>Inne zasoby
 

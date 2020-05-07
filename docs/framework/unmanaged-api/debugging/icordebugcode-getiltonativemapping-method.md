@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893538"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping — Metoda
 Pobiera tablicę wystąpień "COR_DEBUG_IL_TO_NATIVE_MAP", które reprezentują mapowania z przesunięcia języka pośredniego firmy Microsoft (MSIL) do natywnych przesunięć.  
@@ -38,28 +38,28 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="parameters"></a>Parametry  
  `cMap`  
- podczas Rozmiar tablicy `map`.  
+ podczas Rozmiar `map` tablicy.  
   
  `pcMap`  
- określoną Wskaźnik do rzeczywistej liczby elementów zwracanych w tablicy `map`.  
+ określoną Wskaźnik do rzeczywistej liczby elementów zwracanych w `map` tablicy.  
   
  `map`  
- określoną Tablica struktur `COR_DEBUG_IL_TO_NATIVE_MAP`, z których każdy reprezentuje mapowanie z przesunięcia MSIL do natywnego przesunięcia.  
+ określoną Tablica `COR_DEBUG_IL_TO_NATIVE_MAP` struktur, z których każdy reprezentuje mapowanie z przesunięcia MSIL do natywnego przesunięcia.  
   
  Nie istnieje porządkowanie do tablicy zwracanych elementów.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetILToNativeMapping` zwraca znaczące wyniki tylko wtedy, gdy to wystąpienie "ICorDebugCode" reprezentuje kod natywny, który był wcześniej (JIT) skompilowany na podstawie kodu MSIL.  
+ `GetILToNativeMapping` Metoda zwraca znaczące wyniki tylko wtedy, gdy to wystąpienie "ICorDebugCode" reprezentuje kod natywny, który był wcześniej (JIT) skompilowany na podstawie kodu MSIL.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugCode, interfejs](icordebugcode-interface1.md)

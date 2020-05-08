@@ -3,12 +3,12 @@ title: polecenia wypychania NuGet dotnet
 description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728352"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895458"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -152,5 +152,4 @@ Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, 
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  To polecenie nie przechowuje pakietów w hierarchicznej strukturze folderów, co jest zalecane w celu zoptymalizowania wydajności. Aby uzyskać więcej informacji, zobacz [lokalne źródła danych](//nuget/hosting-packages/local-feeds).
-  
+  To polecenie nie przechowuje pakietów w hierarchicznej strukturze folderów, co jest zalecane w celu zoptymalizowania wydajności. Aby uzyskać więcej informacji, zobacz [lokalne źródła danych](/nuget/hosting-packages/local-feeds).  

@@ -3,12 +3,12 @@ title: Wzorce komunikacji rozwiązań natywnych dla chmury
 description: Informacje o problemach z łącznością usług w aplikacjach natywnych w chmurze
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895630"
 ---
 # <a name="cloud-native-communication-patterns"></a>Wzorce komunikacji rozwiązań natywnych dla chmury
 
@@ -44,7 +44,7 @@ Chociaż zapewniają wiele korzyści, mikrousługi nie są bezpłatnymi obiadami
 
 - Szyfrowanie lub odszyfrowywanie wiadomości jest ważne.
 
-Usługa Książka oparta na [platformie .NET: architektura dla kontenerów aplikacji platformy .NET](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), dostępna bezpłatnie od firmy Microsoft, zapewnia szczegółowe pokrycie wzorców komunikacji dla aplikacji mikrousług. W tym rozdziale udostępniamy ogólne omówienie tych wzorców wraz z opcjami implementacji dostępnymi w chmurze platformy Azure.
+Usługa Książka oparta na [platformie .NET: architektura dla kontenerów aplikacji platformy .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook), dostępna bezpłatnie od firmy Microsoft, zapewnia szczegółowe pokrycie wzorców komunikacji dla aplikacji mikrousług. W tym rozdziale udostępniamy ogólne omówienie tych wzorców wraz z opcjami implementacji dostępnymi w chmurze platformy Azure.
 
 W tym rozdziale będziemy najpierw rozwiązywać komunikaty między aplikacjami frontonu a mikrousługami zaplecza. Następnie będziemy informować o mikrousługach zaplecza. Będziemy poznać technologię komunikacji w górę i w gRPC. Na koniec będziemy szukać nowych innowacyjnych wzorców komunikacji przy użyciu technologii siatki usług. Zobaczymy również, w jaki sposób usługa Azure Cloud oferuje różne rodzaje *usług zapasowych* w celu obsługi komunikacji natywnej w chmurze.
 

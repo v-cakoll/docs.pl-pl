@@ -2,12 +2,12 @@
 title: Wdrażanie kontenerów na platformie Azure
 description: Wdrażanie kontenerów na platformie Azure przy użyciu Azure Container Registry, usługi Azure Kubernetes i Azure Dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895602"
 ---
 # <a name="deploying-containers-in-azure"></a>Wdrażanie kontenerów na platformie Azure
 
@@ -93,7 +93,7 @@ Podobnie jak w przypadku większości zasobów platformy Azure, można utworzyć
 Te informacje są wystarczające, aby rozpocząć pracę. W ramach procesu tworzenia w Azure Portal można również skonfigurować opcje następujących funkcji klastra:
 
 - Skalowanie
-- Uwierzytelnianie
+- Authentication
 - Networking
 - Monitorowanie
 - Tagi
@@ -108,8 +108,8 @@ Deweloperzy mogą korzystać z działającego wystąpienia (Programowanie) w kla
 
 Aby zrozumieć wartość Azure Dev Spaces, pozwól mi udostępnić tę ofertę z Gabe Monroy, wyprowadzać kontenery w Microsoft Azure:
 
-> Wyobraź sobie, że jesteś nowym pracownikiem próbującym naprawić usterkę w złożonej aplikacji mikrousług składającej się z dziesiątek składników, z których każda korzysta z własnych konfiguracji i usług zapasowych. Aby rozpocząć, musisz skonfigurować lokalne środowisko programistyczne, aby można było naśladować produkcję produkcyjną, w tym Konfigurowanie środowiska IDE, łańcucha narzędzi do tworzenia kontenerów, opartych na kontenerach zależności usługi, lokalne środowisko Kubernetes, imitacje usług zapasowych i wiele innych. Za każdym razem, gdy zajmujesz się skonfigurowaniem środowiska programistycznego, naprawianie, że pierwsza usterka może zająć dni.
-> Można też użyć funkcji Spaces i AKS.
+> "Załóżmy, że jesteś nowym pracownikiem próbującym naprawić usterkę w złożonej aplikacji mikrousług składającej się z dziesiątek składników, z których każda korzysta z własnych konfiguracji i usług zapasowych. Aby rozpocząć, musisz skonfigurować lokalne środowisko programistyczne, aby można było naśladować produkcję produkcyjną, w tym Konfigurowanie środowiska IDE, łańcucha narzędzi do tworzenia kontenerów, opartych na kontenerach zależności usługi, lokalne środowisko Kubernetes, imitacje usług zapasowych i wiele innych. Za każdym razem, gdy zajmujesz się skonfigurowaniem środowiska programistycznego, naprawianie, że pierwsza usterka może zająć dni.
+> Można też użyć funkcji Spaces i AKS ".
 
 Proces pracy z Azure Dev Spaces obejmuje następujące kroki:
 

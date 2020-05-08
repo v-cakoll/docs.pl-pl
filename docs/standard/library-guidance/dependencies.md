@@ -1,48 +1,48 @@
 ---
 title: Zależności i biblioteki .NET
-description: Najlepsze zalecenia dotyczące zarządzania zależnościami NuGet w bibliotekach .NET.
+description: Zalecenia dotyczące najlepszych rozwiązań związanych z zarządzaniem zależnościami NuGet w bibliotekach platformy .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731482"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895704"
 ---
 # <a name="dependencies"></a>Zależności
 
-Podstawowym sposobem dodawania zależności do biblioteki .NET jest odwoływanie się do pakietów NuGet. Odwołania do pakietu NuGet umożliwiają szybkie ponowne użycie i wykorzystanie już zapisanych funkcji, ale są one częstym źródłem tarcia dla deweloperów platformy .NET. Poprawne zarządzanie zależnościami jest ważne, aby zapobiec wprowadzaniu zmian w innych bibliotekach .NET przed przerwaniem biblioteki .NET i odwrotnie!
+Podstawowym sposobem dodawania zależności do biblioteki .NET jest odwoływanie się do pakietów NuGet. Odwołania do pakietów NuGet umożliwiają szybkie ponowne użycie i wykorzystanie już wykorzystanych funkcji, ale są one typowym źródłem tarcia dla deweloperów platformy .NET. Prawidłowe zarządzanie zależnościami jest ważne, aby zapobiec utracie zmian w innych bibliotekach platformy .NET, a na odwrót.
 
-## <a name="diamond-dependencies"></a>Zależności diamentów
+## <a name="diamond-dependencies"></a>Zależności rombów
 
-Jest to częsta sytuacja dla projektu .NET mieć wiele wersji pakietu w jego drzewa zależności. Na przykład aplikacja zależy od dwóch pakietów NuGet, z których każdy zależy od różnych wersji tego samego pakietu. Zależność od diamentów istnieje teraz na wykresie zależności aplikacji.
+Jest to typowa sytuacja, w której projekt .NET ma wiele wersji pakietu w jego drzewie zależności. Na przykład aplikacja zależy od dwóch pakietów NuGet, z których każda jest zależna od różnych wersji tego samego pakietu. Zależność Diamond już istnieje w grafie zależności aplikacji.
 
-![Zależność od diamentów](./media/dependencies/diamond-dependency.png "Zależność od diamentów")
+![Zależność Diamond](./media/dependencies/diamond-dependency.png "Zależność Diamond")
 
-W czasie kompilacji NuGet analizuje wszystkie pakiety, od których zależy projekt, w tym zależności zależności. Po wykryciu wielu wersji pakietu reguły są oceniane, aby wybrać jedną. Ujednolicenie pakietów jest konieczne, ponieważ uruchamianie wersji obok siebie zestawu w tej samej aplikacji jest problematyczne w .NET.
+W czasie kompilacji NuGet analizuje wszystkie pakiety, od których zależy projekt, w tym zależności zależności. W przypadku wykrycia wielu wersji pakietu reguły są oceniane w celu wybrania jednej z nich. Ujednolicenie pakietów jest konieczne, ponieważ uruchomione obok siebie wersje zestawu w tej samej aplikacji są problematyczne w programie .NET.
 
-Większość zależności diamentów są łatwo rozwiązane; mogą one jednak powodować problemy w pewnych okolicznościach:
+Większość zależności diamentów jest łatwo rozwiązywana; mogą jednak tworzyć problemy w pewnych okolicznościach:
 
-1. **Konflikt odwołania nuget pakiet** zapobiec wersji z rozwiązania podczas przywracania pakietu.
-2. **Łamanie zmian między wersjami** powoduje błędy i wyjątki w czasie wykonywania.
-3. **Zestaw pakietu jest silny o nazwie,** wersja zestawu zmieniona, a aplikacja jest uruchomiona na .NET Framework. Wymagane są przekierowania wiązania zestawu.
+1. **Sprzeczne odwołania do pakietów NuGet** uniemożliwiają rozpoznanie wersji podczas przywracania pakietu.
+2. Istotne **zmiany między wersjami** powodują błędy i wyjątki w czasie wykonywania.
+3. **Zestaw pakietu ma silną nazwę**, wersja zestawu została zmieniona, a aplikacja jest uruchomiona na .NET Framework. Przekierowania powiązań zestawu są wymagane.
 
-Nie można wiedzieć, jakie pakiety będą używane obok własnych. Dobrym sposobem, aby zmniejszyć prawdopodobieństwo podziału zależności diamentbiblioteki jest zminimalizowanie liczby pakietów, od których zależy.
+Nie jest możliwe, aby wiedzieć, które pakiety będą używane razem ze swoimi zadaniami. Dobrym sposobem na zmniejszenie prawdopodobieństwa, że oddzielenie zależności od rombu w bibliotece polega na zminimalizowaniu liczby pakietów, od których zależą.
 
-✔️ do przeglądu biblioteki .NET dla niepotrzebnych zależności.
+✔️ PRZEPROWADZIĆ przegląd niepotrzebnych zależności w bibliotece platformy .NET.
 
 ## <a name="nuget-dependency-version-ranges"></a>Zakresy wersji zależności NuGet
 
-Odwołanie do pakietu określa zakres prawidłowych pakietów, na które zezwala. Zazwyczaj wersja referencyjna pakietu w pliku projektu jest wersją minimalną i nie ma maksymalnej.
+Odwołanie do pakietu określa zakres prawidłowych pakietów, na które zezwala. Zazwyczaj wersja odwołania do pakietu w pliku projektu jest minimalną wersją i nie ma wartości maksymalnej.
 
 ```xml
 <!-- Accepts any version 1.0 and above. -->
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-Reguły, które NuGet używa podczas rozwiązywania zależności są [złożone,](/nuget/consume-packages/dependency-resolution)ale NuGet zawsze szuka najniższej wersji odpowiednie. NuGet preferuje najniższą odpowiednią wersję niż przy użyciu najwyższej dostępnej, ponieważ najniższy będzie miał najmniej problemów ze zgodnością.
+Reguły używane przez narzędzia NuGet podczas rozpoznawania zależności są [złożone](/nuget/consume-packages/dependency-resolution), ale [pakiet NuGet domyślnie](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) wyszukuje najniższą odpowiednią wersję. Pakiet NuGet preferuje najniższą odpowiednią wersję w porównaniu z użyciem najwyższej dostępnej, ponieważ najniższa będzie zawierać najmniej problemów ze zgodnością.
 
-Ze względu na nuget najniższy chorąży reguły wersji, nie jest konieczne umieszczenie górnej wersji lub dokładny zakres na odwołania do pakietu, aby uniknąć uzyskania najnowszej wersji. NuGet już próbuje znaleźć najniższą, najbardziej kompatybilną wersję dla Ciebie.
+Ze względu na najmniejszą odpowiednią regułę wersji programu NuGet nie trzeba umieszczać w odwołaniach do pakietów górnej wersji ani dokładnego zakresu, aby uniknąć pobierania najnowszej wersji. Pakiet NuGet próbuje już znaleźć najmniejszą, najbardziej zgodną wersję.
 
 ```xml
 <!-- Accepts 1.0 up to 1.x, but not 2.0 and higher. -->
@@ -52,21 +52,21 @@ Ze względu na nuget najniższy chorąży reguły wersji, nie jest konieczne umi
 <PackageReference Include="ExamplePackage" Version="[1.0]" />
 ```
 
-Górne limity wersji spowoduje NuGet nie powiedzie się, jeśli istnieje konflikt. Na przykład jedna biblioteka akceptuje dokładnie 1.0, podczas gdy inna biblioteka wymaga 2.0 lub wyższej. Podczas wprowadzania zmian w wersji 2.0, ścisła lub górna zależność wersji limitu gwarantuje błąd.
+Górne ograniczenia wersji spowodują niepowodzenie NuGet w przypadku wystąpienia konfliktu. Na przykład jedna biblioteka akceptuje dokładnie 1,0, a inna biblioteka wymaga 2,0 lub wyższej. W przypadku wprowadzenia zmian w wersji 2,0, ścisła lub górna zależność wersji gwarantuje błąd.
 
-![Konflikt zależności diamentów](./media/dependencies/diamond-dependency-conflict.png "Konflikt zależności diamentów")
+![Konflikt zależności rombu](./media/dependencies/diamond-dependency-conflict.png "Konflikt zależności rombu")
 
-❌NIE mają odwołania nuget pakietu bez minimalnej wersji.
+❌NIE mają odwołań do pakietów NuGet bez minimalnej wersji.
 
-❌UNIKAJ nuget odwołań do pakietu, które wymagają dokładnej wersji.
+❌UNIKAj odwołań do pakietów NuGet, które wymagają dokładnej wersji.
 
-❌UNIKAJ odwołania do pakietu NuGet z górną granicą wersji.
+❌UNIKAj odwołań pakietów NuGet z górnym limitem wersji.
 
-## <a name="nuget-shared-source-packages"></a>NuGet udostępnione pakiety źródłowe
+## <a name="nuget-shared-source-packages"></a>Pakiety udostępnione dla narzędzia NuGet
 
-Jednym ze sposobów zmniejszenia zewnętrznych zależności pakietów NuGet jest odwołanie się do udostępnionych pakietów źródłowych. Udostępniony pakiet źródłowy zawiera [pliki kodu źródłowego,](/nuget/reference/nuspec#including-content-files) które są zawarte w projekcie, gdy odwołuje się. Ponieważ po prostu w zestawie plików kodu źródłowego, które są kompilowane z resztą projektu, nie ma żadnych zależności zewnętrznych i prawdopodobieństwo konfliktu.
+Jednym ze sposobów zredukowania zewnętrznych zależności pakietów NuGet jest odwołanie do udostępnionych pakietów źródłowych. Udostępniony pakiet źródłowy zawiera [pliki kodu źródłowego](/nuget/reference/nuspec#including-content-files) , które są zawarte w projekcie, gdy istnieje odwołanie. Ponieważ właśnie umieszczasz pliki kodu źródłowego, które są kompilowane w pozostałej części projektu, nie istnieje zewnętrzna zależność i szansa konfliktu.
 
-Udostępnione pakiety źródłowe są idealne do włączenia małych elementów funkcjonalności. Na przykład udostępniony pakiet źródłowy metod pomocnika do wykonywania wywołań HTTP.
+Udostępnione pakiety źródłowe doskonale nadaje się do uwzględnienia małych fragmentów funkcjonalności. Na przykład udostępniony pakiet źródłowy metod pomocników do wykonywania wywołań HTTP.
 
 ![Udostępniony pakiet źródłowy](./media/dependencies/shared-source-package.png "Udostępniony pakiet źródłowy")
 
@@ -76,26 +76,26 @@ Udostępnione pakiety źródłowe są idealne do włączenia małych elementów 
 
 ![Udostępniony projekt źródłowy](./media/dependencies/shared-source-project.png "Udostępniony projekt źródłowy")
 
-Udostępnione pakiety źródłowe mają pewne ograniczenia. Mogą się do których `PackageReference`odwoływać `packages.config` tylko starsze projekty, więc starsze projekty są wykluczone. Również udostępnione pakiety źródłowe są używane tylko przez projekty o tym samym typie języka. Ze względu na te ograniczenia udostępnione pakiety źródłowe najlepiej są używane do udostępniania funkcji w projekcie open source.
+Udostępnione pakiety źródłowe mają pewne ograniczenia. Można do nich odwoływać się `PackageReference`tylko, dlatego `packages.config` starsze projekty są wykluczone. Współużytkowane pakiety źródłowe są również używane tylko przez projekty o tym samym typie języka. Ze względu na to, że udostępnione pakiety źródłowe najlepiej wykorzystać do udostępniania funkcjonalności w ramach projektu typu open source.
 
-✔️ ROZWAŻ odwoływanie się do udostępnionych pakietów źródłowych dla małych, wewnętrznych elementów funkcjonalności.
+✔️ ROZWAŻYĆ odwołujące się do udostępnionych pakietów źródłowych dla małych, wewnętrznych fragmentów funkcjonalności.
 
-✔️ ROZWAŻ uczynienie pakietu udostępnionym pakietem źródłowym, jeśli zapewnia on małe, wewnętrzne elementy funkcjonalności.
+✔️ Rozważ, aby pakiet był udostępnionym pakietem źródłowym, jeśli udostępnia małe, wewnętrzne elementy funkcjonalności.
 
-✔️ do odwoływania `PrivateAssets="All"`się do udostępnionych pakietów źródłowych z .
+✔️ NALEŻY odwoływać się do udostępnionych `PrivateAssets="All"`pakietów źródłowych za pomocą programu.
 
-> To ustawienie informuje NuGet pakiet ma być używany tylko w czasie rozwoju i nie powinny być udostępniane jako zależności publicznej.
+> To ustawienie informuje program NuGet, że pakiet jest używany tylko w czasie projektowania i nie powinien być ujawniony jako zależność publiczna.
 
-❌NIE mają współużytkowanych typów pakietów źródłowych w publicznym interfejsie API.
+❌W publicznym interfejsie API nie ma udostępnionych typów pakietów źródłowych.
 
-> Udostępnione typy źródeł są kompilowane do zestawu odwołań i nie mogą być wymieniane przez granice zestawu. Na przykład typu udostępnionego źródła `IRepository` w jednym projekcie jest oddzielnytyp `IRepository` z tego samego źródła udostępnionego w innym projekcie. Typy w udostępnionych pakietach źródłowych `internal` powinny mieć widoczność.
+> Współużytkowane typy źródeł są kompilowane do zestawu, do którego się odwołuje, i nie mogą być wymieniane między granicami zestawu. Na przykład typ źródła `IRepository` udostępnionego w jednym projekcie jest osobnym typem z tego samego udostępnionego źródła `IRepository` w innym projekcie. Typy w udostępnionych pakietach źródłowych powinny mieć `internal` widoczność.
 
-❌NIE publikuj udostępnionych pakietów źródłowych w celu NuGet.org.
+❌NIE Publikuj udostępnionych pakietów źródłowych do NuGet.org.
 
-> Udostępnione pakiety źródłowe zawierają kod źródłowy i mogą być używane tylko przez projekty o tym samym typie języka. Na przykład pakiet źródłowy współużytkowane C# nie może być używany przez aplikację F#.
+> Udostępnione pakiety źródłowe zawierają kod źródłowy i mogą być używane tylko przez projekty o tym samym typie języka. Na przykład nie można użyć pakietu udostępnionego dla języka C# w aplikacji języka F #.
 >
-> Publikowanie udostępnionych pakietów źródłowych w [lokalnym źródle danych lub MyGet,](./publish-nuget-package.md) aby zużywać je wewnętrznie w projekcie.
+> Publikuj udostępnione pakiety źródłowe w [lokalnym kanale informacyjnym lub MyGet](./publish-nuget-package.md) , aby wykorzystać je wewnętrznie w ramach projektu.
 
 >[!div class="step-by-step"]
 >[Poprzedni](nuget.md)
->[następny](sourcelink.md)
+>[Następny](sourcelink.md)

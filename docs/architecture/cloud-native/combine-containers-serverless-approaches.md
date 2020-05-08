@@ -2,12 +2,12 @@
 title: Łączenie kontenerów oraz metod bezserwerowych dla usług natywnych w chmurze
 description: Łączenie kontenerów i Kubernetes za pomocą podejścia bezserwerowego
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199667"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895640"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>Łączenie kontenerów i rozwiązań bezserwerowych
 
@@ -35,7 +35,11 @@ Po utworzeniu projektu będzie on zawierał pliku dockerfile i środowisko uruch
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>Łączenie bezserwerowe i Kubernetes z KEDA
 
-Usługa Azure Functions jest skalowana automatycznie, aby zaspokoić zapotrzebowanie na podstawie liczby zdarzeń docelowych. Zawsze możesz korzystać z AKS, aby hostować funkcje i korzystać z funkcji automatycznego skalowania opartego na zdarzeniach Kubernetes lub KEDA. Gdy nie są wykonywane żadne zdarzenia, KEDA może skalować w dół do zero wystąpień. [Dowiedz się więcej na temat skalowania usługi Azure Functions za pomocą KEDA](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda).
+W tym rozdziale zaobserwowano, że platforma Azure Functions "automatycznie skaluje się w celu spełnienia wymagań. W przypadku wdrażania funkcji kontenera w programie AKS jednak tracisz wbudowaną funkcję skalowania. Do ratowania jest [oparta Kubernetes zdarzeń (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda). Umożliwia precyzyjne Skalowanie automatyczne w celu `event-driven Kubernetes workloads,` uwzględnienia funkcji kontenerów.
+
+KEDA zapewnia funkcję skalowania sterowaną zdarzeniami do środowiska uruchomieniowego Functions w kontenerze platformy Docker. KEDA można skalować od zero wystąpień (gdy nie są wykonywane `n instances`żadne zdarzenia) na podstawie obciążenia. Umożliwia automatyczne skalowanie przez udostępnienie metryk niestandardowych do skalowania automatycznego (Kubernetes). Używanie kontenerów funkcji z KEDA umożliwia replikowanie funkcji bezserwerowych w dowolnym klastrze Kubernetes.
+
+Warto zauważyć, że projekt KEDA jest teraz zarządzany przez natywną fundament w chmurze (CNCF).
 
 >[!div class="step-by-step"]
 >[Poprzedni](leverage-serverless-functions.md)

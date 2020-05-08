@@ -3,12 +3,12 @@ title: Definiowanie rozwiązań natywnych dla chmury
 description: Poznaj filary podstawowe, które zapewniają nimi dla systemów natywnych w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895615"
 ---
 # <a name="defining-cloud-native"></a>Definiowanie natywnego chmury
 
@@ -35,8 +35,8 @@ Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczno�
 | Firma | Środowisko użytkownika |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Ma ponad 600 usług w środowisku produkcyjnym. Wdraża setki razy dziennie. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Obejmuje 300 usług w środowisku produkcyjnym. Wykonuje niemal 1 000 zmian dziennie. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług w środowisku produkcyjnym. Wdraża kilka tysięcy razy w każdym tygodniu. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Obejmuje 300 usług w środowisku produkcyjnym. Wdraża 1 000 razy dziennie. |
 
 Jak widzisz, Netflix, Uber i WeChat uwidaczniają systemy, które składają się z setek niezależnych mikrousług. Ten styl architektoniczny umożliwia im szybkie reagowanie na warunki rynkowe. Mogą natychmiast aktualizować małe obszary aplikacji działającej na żywo, złożonej i indywidualnie skalować te obszary zgodnie z wymaganiami.
 
@@ -95,7 +95,7 @@ W książce [poza aplikacją 12-składnikową](https://content.pivotal.io/blog/
 
 |    |  Nowy czynnik | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
-| 13 | Najpierw interfejs API | Utwórz wszystko jako usługę. Załóżmy, że kod będzie używany przez klienta frontonu, bramę lub inną usługę. |
+| 13 | Priorytetyzowanie interfejsu API | Utwórz wszystko jako usługę. Załóżmy, że kod będzie używany przez klienta frontonu, bramę lub inną usługę. |
 | 14 | Telemetria | Na stacji roboczej masz wgląd w aplikację i jej zachowanie. W chmurze nie masz. Upewnij się, że projekt zawiera kolekcję monitorowanie, specyficzne dla domeny i kondycję/dane systemowe. |
 | 15 | Uwierzytelnianie/autoryzacja  | Zaimplementuj tożsamość z poziomu uruchomienia. Zapoznaj się z funkcjami [RBAC (kontrola dostępu opartą na rolach)](https://docs.microsoft.com/azure/role-based-access-control/overview) dostępnymi w chmurach publicznych.  |
 
@@ -167,7 +167,7 @@ Wcześniej w rozdziale porównano aplikację handlu elektronicznego utworzoną j
 
 - Każda mikrousługa może być skalowana niezależnie. Zamiast skalować całą aplikację jako pojedynczą jednostkę, można skalować tylko te usługi, które wymagają większej mocy obliczeniowej lub przepustowości sieci. To precyzyjne podejście do skalowania zapewnia większą kontrolę nad systemem i pomaga w zmniejszeniu kosztów ogólnych podczas skalowania części systemu, a nie wszystkich.
 
-Doskonały przewodnik dotyczący znajomości mikrousług to [.NET mikrousługi: architektura dla kontenerów aplikacji .NET](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Książka omówieniach głębokie projektowanie i architektura mikrousług. Jest to pomocnik dla [architektury referencyjnej mikrousług](https://github.com/dotnet-architecture/eShopOnContainers) , dostępnej bezpłatnie do pobrania od firmy Microsoft.
+Doskonały przewodnik dotyczący znajomości mikrousług to [.NET mikrousługi: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). Książka omówieniach głębokie projektowanie i architektura mikrousług. Jest to pomocnik dla [architektury referencyjnej mikrousług](https://github.com/dotnet-architecture/eShopOnContainers) , dostępnej bezpłatnie do pobrania od firmy Microsoft.
 
 ### <a name="developing-microservices"></a>Tworzenie mikrousług
 

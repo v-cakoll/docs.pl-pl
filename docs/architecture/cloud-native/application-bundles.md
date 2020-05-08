@@ -1,15 +1,15 @@
 ---
-title: Zbiory natywnych aplikacji w chmurze
+title: Pakiety aplikacji natywnych dla chmury
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Zbiory natywnych aplikacji w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183715"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895681"
 ---
-# <a name="cloud-native-application-bundles"></a>Zbiory natywnych aplikacji w chmurze
+# <a name="cloud-native-application-bundles"></a>Pakiety aplikacji natywnych dla chmury
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -78,7 +78,8 @@ Format CNAB jest również elastyczny, dzięki czemu można go używać z dowoln
 
 ## <a name="devops-decisions"></a>DevOps decyzje
 
-Istnieje wiele doskonałych narzędzi w przestrzeni DevOps w ciągu kilku dni i jeszcze bardziej fantastyczniee książki i dokumenty dotyczące sukcesu. Ulubiona Książka do rozpoczęcia podróży DevOps jest [projektem w Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), który następuje po przekształceniu fikcyjnej firmy od NoOps do DevOps. Jedną z rzeczy jest dla niektórych: DevOps nie jest już "świetny" podczas wdrażania złożonych, natywnych aplikacji w chmurze. Jest to wymagane i powinny być planowane dla i zamierzone na początku każdego projektu.
+Istnieje wiele doskonałych narzędzi w przestrzeni DevOps w ciągu kilku dni i jeszcze bardziej fantastyczniee książki i dokumenty dotyczące sukcesu. Ulubiona Książka do rozpoczęcia podróży DevOps jest [projektem w Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), który następuje po przekształceniu fikcyjnej firmy od NoOps do DevOps. Jedną z rzeczy jest dla niektórych: DevOps nie jest już "całkiem" w przypadku wdrażania złożonych, natywnych aplikacji w chmurze. Jest to wymagane i powinny być planowane dla i zamierzone na początku każdego projektu.
 
 >[!div class="step-by-step"]
->[Poprzednie](infrastructure-as-code.md)
+>[Poprzedni](infrastructure-as-code.md)
+>[Następny](summary.md)

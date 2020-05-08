@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie Test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624894"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975436"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624894"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. `dotnet test` Polecenie uruchamia aplikację konsolową Test Runner określoną dla projektu. Moduł uruchamiający testy wykonuje testy zdefiniowane dla struktury testów jednostkowych (na przykład MSTest, NUnit lub xUnit) i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1. W przypadku projektów wielowymiarowych testy są uruchamiane dla każdej platformy dostosowanej. Moduł uruchamiający testy i Biblioteka testów jednostkowych są spakowane jako pakiety NuGet i są przywracane jako zwykłe zależności projektu.
+`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym rozwiązaniu. `dotnet test` Polecenie kompiluje rozwiązanie i uruchamia test aplikacji hosta dla każdego projektu testowego w rozwiązaniu. Host testowy wykonuje testy w danym projekcie przy użyciu struktury testowej, na przykład: MSTest, NUnit lub xUnit, i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1.
+
+W przypadku projektów wielowymiarowych testy są uruchamiane dla każdej platformy dostosowanej. Hosta testowego i struktury testów jednostkowych są spakowane jako pakiety NuGet i są przywracane jako zwykłe zależności projektu.
 
 Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReference>` elementu, jak pokazano w poniższym przykładowym pliku projektu:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma testowa. I `xunit.runner.visualstudio` jest adapterem testowym, który pozwala platformie xUnit na współdziałanie z hostem testowym.
 
 ### <a name="implicit-restore"></a>Przywracanie niejawne
 
@@ -49,19 +53,24 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
 ## <a name="arguments"></a>Argumenty
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  Ścieżka do projektu testowego lub rozwiązania. Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
+  - Ścieżka do projektu testowego.
+  - Ścieżka do rozwiązania.
+  - Ścieżka do katalogu, który zawiera projekt lub rozwiązanie.
+  - Ścieżka do pliku projektu testowego. *dll* .
+
+  Jeśli nie zostanie określony, wyszukuje projekt lub rozwiązanie w bieżącym katalogu.
 
 ## <a name="options"></a>Opcje
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Użyj niestandardowych adapterów testowych z określonej ścieżki w przebiegu testu.
+  Ścieżka do katalogu, który ma być przeszukiwany dla dodatkowych adapterów testowych. Sprawdzane są tylko pliki *. dll* z sufiksem `.TestAdapter.dll` . Jeśli nie zostanie określony, zostanie przeszukany katalog test *. dll* .
 
 - **`--blame`**
 
-  Uruchamia testy w trybie polecenia Blame. Ta opcja jest przydatna do izolowania problematycznych testów, które powodują awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence. XML* , który przechwytuje kolejność testów przed awarią.
+  Uruchamia testy w trybie polecenia Blame. Ta opcja jest przydatna do izolowania problematycznych testów, które powodują awarię hosta testowego. Gdy zostanie wykryta awaria, tworzy plik sekwencji w programie `TestResults/<Guid>/<Guid>_Sequence.xml` , który przechwytuje kolejność testów, które zostały uruchomione przed awarią.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku.
+  Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku oraz do plików obok niego. Proces rejestrowania komunikatów określa, które pliki są tworzone, takie jak `*.host_<date>.txt` dziennik hosta testowego i `*.datacollector_<date>.txt` dziennik modułu zbierającego dane.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Wyszukuje pliki binarne testów dla konkretnej [struktury](../../standard/frameworks.md).
+  Wymusza użycie `dotnet` lub .NET Framework hosta testowego dla plików binarnych testu. Ta opcja określa tylko typ hosta, który ma być używany. Rzeczywista wersja platformy, która ma zostać użyta, jest określana przez *runtimeconfig. JSON* projektu testowego. Gdy nie zostanie określony, [atrybut zestawu TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) jest używany do określenia typu hosta. Gdy ten atrybut jest usuwany z *biblioteki DLL*, używany jest host .NET Framework.
 
 - **`--filter <EXPRESSION>`**
 
@@ -121,7 +130,7 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Plik `.runsettings` , który ma być używany do uruchamiania testów. Należy zauważyć, `TargetPlatform` że element (x86 | x64) nie ma wpływu `dotnet test`na. Aby uruchomić testy, które są przeznaczone dla architektury x86, Zainstaluj wersję x86 programu .NET Core. Liczba bitów programu *dotnet. exe* , która znajduje się na ścieżce, będzie używana do uruchamiania testów. Aby uzyskać więcej informacji, zobacz następujące zasoby:
+  Plik `.runsettings` , który ma być używany do uruchamiania testów. Należy zauważyć, `TargetPlatform` że element (x86 | x64) nie ma wpływu `dotnet test`na. Aby uruchomić testy, które są przeznaczone dla architektury x86, Zainstaluj wersję x86 programu .NET Core. Liczba bitów programu *dotnet. exe* , która znajduje się na ścieżce, będzie używana do uruchamiania testów. Więcej informacji zawierają następujące zasoby:
 
   - [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Konfigurowanie przebiegu testowego](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -136,7 +145,7 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
 - **`RunSettings`** argumentu
 
-  Argumenty są przekazane jako `RunSettings` konfiguracje dla testu. Argumenty są określane jako `[name]=[value]` pary po "--" (należy zwrócić uwagę na spację po--). Spacja jest używana do rozdzielania wielu `[name]=[value]` par.
+ Wbudowane `RunSettings` są przekazane jako ostatni argument w wierszu polecenia po "--" (należy pamiętać, że spacja jest późniejsza niż--). Wbudowane `RunSettings` są określone jako `[name]=[value]` pary. Spacja jest używana do rozdzielania wielu `[name]=[value]` par.
 
   Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - Uruchom testy w projekcie w bieżącym katalogu i Raportuj testy, które były w toku w przypadku awarii hosta testowego:
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>Szczegóły opcji filtrowania
@@ -205,7 +220,7 @@ Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na prz
 
 Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Struktury i elementy docelowe](../../standard/frameworks.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

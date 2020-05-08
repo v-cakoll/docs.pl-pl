@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-ms.openlocfilehash: 45efa1939813a319e996a72fef62ada167b877c2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d41216eb7da57d29d67ce17372f746328204649e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788702"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976177"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor — Metoda
 Przydziela nowe wystąpienie obiektu określonego typu, bez próby wywołania metody konstruktora.  
@@ -40,7 +40,7 @@ HRESULT NewObjectNoConstructor (
  podczas Wskaźnik do obiektu ICorDebugClass, który reprezentuje typ obiektu do wystąpienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
@@ -48,6 +48,6 @@ HRESULT NewObjectNoConstructor (
   
  **.NET Framework wersje:** 1,1, 1,0  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [NewParameterizedObjectNoConstructor, metoda](icordebugeval2-newparameterizedobjectnoconstructor-method.md)

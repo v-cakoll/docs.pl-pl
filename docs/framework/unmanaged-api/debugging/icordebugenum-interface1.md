@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783009"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976333"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum, interfejs
 
@@ -29,10 +29,10 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](icordebugenum-clone-method.md)|Tworzy kopię tego obiektu `ICorDebugEnum`.|  
-|[GetCount, metoda](icordebugenum-getcount-method.md)|Pobiera liczbę elementów w wyliczeniu.|  
-|[Reset, metoda](icordebugenum-reset-method.md)|Przenosi kursor do początku wyliczenia.|  
-|[Skip, metoda](icordebugenum-skip-method.md)|Przenosi kursor do przodu w wyliczeniu o określoną liczbę elementów.|  
+|[Clone — Metoda](icordebugenum-clone-method.md)|Tworzy kopię tego `ICorDebugEnum` obiektu.|  
+|[GetCount — Metoda](icordebugenum-getcount-method.md)|Pobiera liczbę elementów w wyliczeniu.|  
+|[Reset — Metoda](icordebugenum-reset-method.md)|Przenosi kursor do początku wyliczenia.|  
+|[Skip — Metoda](icordebugenum-skip-method.md)|Przenosi kursor do przodu w wyliczeniu o określoną liczbę elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Następujące moduły wyliczające pochodzą z `ICorDebugEnum`:  
@@ -53,7 +53,7 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
   
 - [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
-- "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
 - [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
@@ -83,14 +83,14 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

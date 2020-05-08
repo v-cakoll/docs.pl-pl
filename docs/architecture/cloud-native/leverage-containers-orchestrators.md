@@ -2,12 +2,12 @@
 title: Korzystanie z kontenerów i orkiestratorów
 description: Korzystanie z kontenerów platformy Docker i koordynatorów Kubernetes na platformie Azure
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199836"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895548"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Korzystanie z kontenerów i orkiestratorów
 
@@ -55,10 +55,29 @@ Kontenery są definiowane przez proste pliki tekstowe, które stają się artefa
 
 Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzyć i uruchomić w ten sam sposób. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji są rozmieszczone inaczej niż inne, dlaczego należy ponownie wdrożyć całą aplikację, gdy wystarczy wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
 
+Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzyć i uruchomić w ten sam sposób. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji są rozmieszczone inaczej niż inne, dlaczego należy ponownie wdrożyć całą aplikację, gdy wystarczy wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
+
 ![Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu. ](./media/breaking-up-monolith-with-backend-microservices.png)
  **Rysunek 3-2**. Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu.
 
 Każda usługa w chmurze została skompilowana i wdrożona w osobnym kontenerze. Każda z nich może być aktualizowana w razie konieczności. Poszczególne usługi mogą być hostowane na węzłach mających zasoby odpowiednie dla każdej usługi. Środowisko, w którym działa każda usługa, jest niezmienne, współużytkowane przez środowisko deweloperskie, testowe i produkcyjne oraz w łatwy sposób. Sprzęganie różnych obszarów aplikacji występuje jawnie jako wywołania lub komunikaty między usługami, a nie zależności czasu kompilacji w ramach monolitu. Możesz również wybrać technologię, która najlepiej spełnia daną możliwość, bez konieczności wprowadzania zmian w pozostałej części aplikacji.
+
+Usługi kontenerowe wymagają zautomatyzowanego zarządzania. Nie byłoby możliwe ręczne administrowanie dużym zestawem niezależnie wdrożonych kontenerów. Rozważmy na przykład następujące zadania:
+
+- Jak będą obsługiwane wystąpienia kontenerów w klastrze wielu maszyn?
+- Po wdrożeniu, w jaki sposób kontenery będą odnajdywane i komunikować się ze sobą?
+- Jak można skalować kontenery w poziomie lub na żądanie?
+- Jak monitorować kondycję każdego kontenera?
+- Jak chronić kontener przed awariami sprzętu i oprogramowania?
+- Jak należy uaktualnić kontenery dla działającej aplikacji bez przestoju?
+
+Koordynatory kontenerów i automatyzują te i inne zagadnienia.
+
+W natywnym systemie ekonomicznym w chmurze Kubernetes stał się de facto koordynatorem kontenerów. Jest to platforma "open source" zarządzana przez natywną platformę obliczeniową w chmurze (CNCF). Kubernetes automatyzuje wdrażanie, skalowanie i problemy operacyjne obciążeń kontenerów w ramach klastra maszynowego. Jednak Instalowanie Kubernetes i zarządzanie nim jest wielowątkowy bardzo złożone.
+
+Znacznie lepszym rozwiązaniem jest wykorzystanie Kubernetes jako usługi zarządzanej od dostawcy chmury. Usługa Azure Cloud oferuje w pełni zarządzaną platformę Kubernetes uprawnioną do [usługi Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS abstrakcje złożoności i obciążenia operacyjnego związane z zarządzaniem Kubernetes. Korzystasz z Kubernetes jako usługi w chmurze; Firma Microsoft ponosi odpowiedzialność za zarządzanie i obsługę. AKS także ścisłą integrację z innymi usługami platformy Azure i narzędziami deweloperskimi.
+
+AKS jest technologią opartą na klastrze. Pula federacyjnych maszyn wirtualnych lub węzłów jest wdrażana w chmurze platformy Azure. Razem tworzą one środowisko o wysokiej dostępności lub klaster. Klaster jest wyświetlany jako bezproblemową, pojedynczą jednostkę w aplikacji natywnej w chmurze. W obszarze okapu AKS wdraża usługi kontenerów w tych węzłach zgodnie ze wstępnie zdefiniowaną strategią, która równomiernie dystrybuuje obciążenie.
 
 Usługi kontenerowe wymagają zautomatyzowanego zarządzania. Nie byłoby możliwe ręczne administrowanie dużym zestawem niezależnie wdrożonych kontenerów. Rozważmy na przykład następujące zadania:
 
@@ -144,7 +163,7 @@ Jeśli nie możesz skompilować aplikacji przy użyciu zasad aplikacji 12-skład
 
 ## <a name="development-resources"></a>Zasoby programistyczne
 
-Ta sekcja zawiera krótką listę zasobów programistycznych, które mogą pomóc rozpocząć korzystanie z kontenerów i Orchestrator dla następnej aplikacji. Jeśli szukasz wskazówek dotyczących projektowania aplikacji architektury mikrousług natywnych dla chmury, przeczytaj pomocnika tej książki, [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://aka.ms/microservicesebook).
+Ta sekcja zawiera krótką listę zasobów programistycznych, które mogą pomóc rozpocząć korzystanie z kontenerów i Orchestrator dla następnej aplikacji. Jeśli szukasz wskazówek dotyczących projektowania aplikacji architektury mikrousług natywnych dla chmury, przeczytaj pomocnika tej książki, [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 ### <a name="local-kubernetes-development"></a>Lokalne programowanie Kubernetes
 
@@ -219,15 +238,19 @@ Poza programowaniem lokalnym [Azure dev Spaces](https://docs.microsoft.com/azure
 
 Ponadto w dowolnym momencie można dodać obsługę platformy Docker do istniejącej aplikacji ASP.NET Core. W programie Visual Studio Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i **Dodaj** > **obsługę platformy Docker**, jak pokazano na rysunku 3-8.
 
-![Dodawanie obsługi platformy Docker w programie Visual Studio](./media/visual-studio-add-docker-support.png)
-
-**Rysunek 3-8**. Dodawanie obsługi platformy Docker w programie Visual Studio
+**Rysunek 3-8**. Dodawanie obsługi platformy Docker do programu Visual Studio
 
 Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i zostanie dodany `charts` folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
 
-![Obsługa programu Visual Studio Add Orchestrator](./media/visual-studio-add-orchestrator-support.png)
+Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i zostanie dodany `charts` folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
 
-**Rysunek 3-9**. Obsługa programu Visual Studio Add Orchestrator
+**Rysunek 3-9**. Dodawanie obsługi aranżacji do programu Visual Studio
+
+### <a name="visual-studio-code-docker-tooling"></a>Visual Studio Code narzędzia platformy Docker
+
+Istnieje wiele rozszerzeń dostępnych dla Visual Studio Code obsługujących programowanie platformy Docker.
+
+Firma Microsoft udostępnia [platformę Docker dla Visual Studio Code rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). To rozszerzenie upraszcza proces dodawania obsługi kontenera do aplikacji. Szkieletuje wymagane pliki, tworzy obrazy platformy Docker i umożliwia debugowanie aplikacji w kontenerze. Rozszerzenie zawiera program Visual Explorer, który ułatwia podejmowanie działań na kontenerach i obrazach, takich jak uruchamianie, zatrzymywanie, inspekcja, usuwanie i nie tylko. Rozszerzenie obsługuje również Docker Compose umożliwiające zarządzanie wieloma uruchomionymi kontenerami jako pojedynczą jednostką.
 
 >[!div class="step-by-step"]
 >[Poprzedni](scale-applications.md)

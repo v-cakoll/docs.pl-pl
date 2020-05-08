@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9aadbe7c6f18c6b15350267d1f9ecaa3a23cdd20
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895070"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies — Metoda
-Pobiera indeks podstawowy każdego wymiaru w tablicy.  
+Pobiera podstawowy indeks każdego wymiaru w tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +37,16 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>Parametry  
  `cdim`  
- [w] Liczba wymiarów tego `ICorDebugArrayValue` obiektu. Ta wartość jest również `indicies` rozmiar tablicy, ponieważ jej rozmiar jest `ICorDebugArrayValue` równy liczbie wymiarów obiektu.  
+ podczas Liczba wymiarów tego `ICorDebugArrayValue` obiektu. Ta wartość jest również rozmiarem `indicies` tablicy, ponieważ jej rozmiar jest równy liczbie wymiarów `ICorDebugArrayValue` obiektu.  
   
  `indicies`  
- [na zewnątrz] Tablica liczby całkowitych, z których każda jest indeksem bazowym (czyli indeksem `ICorDebugArrayValue` początkowym) wymiaru tego obiektu.  
+ określoną Tablica liczb całkowitych, z których każdy jest indeksem podstawowym (czyli indeksem początkowym) wymiaru tego `ICorDebugArrayValue` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

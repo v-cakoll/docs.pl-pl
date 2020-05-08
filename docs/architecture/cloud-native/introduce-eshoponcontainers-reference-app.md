@@ -2,12 +2,12 @@
 title: Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 description: Wprowadzenie do aplikacji referencyjnej dla mikrousług eShopOnContainers Cloud Native dla ASP.NET Core i platformy Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087253"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895540"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 
@@ -30,9 +30,9 @@ Zacznijmy od przejrzenia funkcji i wymagań aplikacji. Aplikacja eShopOnContaine
 - Filtruj elementy według marki
 - Dodawanie elementów do koszyka zakupów
 - Edytuj lub Usuń elementy z koszyka
-- Realizacji
+- Checkout
 - Rejestrowanie konta
-- Logowanie
+- Zaloguj się
 - Wyloguj
 - Przejrzyj zamówienia
 
@@ -70,7 +70,7 @@ Kod jest zorganizowany do obsługi różnych mikrousług, a w każdej mikrousłu
 
 ## <a name="understanding-microservices"></a>Informacje o mikrousługach
 
-Ta książka koncentruje się na aplikacjach natywnych w chmurze utworzonych przy użyciu technologii platformy Azure. Aby dowiedzieć się więcej o najlepszych rozwiązaniach mikrousług i sposobach tworzenia architektury aplikacji opartych na mikrousługach, przeczytaj książkę pomocniczą i [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture). Książka jest dostępna w trybie online, w formatach PDF lub eReader.
+Ta książka koncentruje się na aplikacjach natywnych w chmurze utworzonych przy użyciu technologii platformy Azure. Aby dowiedzieć się więcej o najlepszych rozwiązaniach mikrousług i sposobach tworzenia architektury aplikacji opartych na mikrousługach, przeczytaj książkę pomocniczą i [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 >[!div class="step-by-step"]
 >[Poprzedni](candidate-apps.md)

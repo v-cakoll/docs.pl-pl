@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a57e73495ac22a25a5f13c06d4c75dee7dde41e0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894631"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious — Metoda
 Pobiera poprzedni łańcuch ramek dla wątku.  
@@ -38,10 +38,10 @@ HRESULT GetPrevious (
  określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje poprzedni łańcuch ramek dla tego wątku. Jeśli ten łańcuch jest pierwszym łańcuchem, `ppChain` ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

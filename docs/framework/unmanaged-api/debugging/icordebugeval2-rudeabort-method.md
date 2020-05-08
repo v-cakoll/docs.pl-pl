@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e901c65824ee8d6949c79c7778944148c0d9eb28
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084797"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976060"
 ---
-# <a name="icordebugeval2rudeabort-method"></a><span data-ttu-id="0ae6f-102">ICorDebugEval2::RudeAbort — Metoda</span><span class="sxs-lookup"><span data-stu-id="0ae6f-102">ICorDebugEval2::RudeAbort Method</span></span>
-<span data-ttu-id="0ae6f-103">Przerywa Obliczanie wykonywane przez tę `ICorDebugEval2`.</span><span class="sxs-lookup"><span data-stu-id="0ae6f-103">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>  
+# <a name="icordebugeval2rudeabort-method"></a><span data-ttu-id="1c6df-102">ICorDebugEval2::RudeAbort — Metoda</span><span class="sxs-lookup"><span data-stu-id="1c6df-102">ICorDebugEval2::RudeAbort Method</span></span>
+<span data-ttu-id="1c6df-103">Przerywa obliczenia, które `ICorDebugEval2` jest aktualnie wykonywane.</span><span class="sxs-lookup"><span data-stu-id="1c6df-103">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ae6f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0ae6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c6df-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1c6df-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RudeAbort ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0ae6f-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0ae6f-105">Remarks</span></span>  
- <span data-ttu-id="0ae6f-106">`RudeAbort` nie zwolni żadnych blokad, które są przechowywane przez ewaluatora, więc pozostawia sesję debugowania w stanie niebezpiecznym.</span><span class="sxs-lookup"><span data-stu-id="0ae6f-106">`RudeAbort` does not release any locks that the evaluator holds, so it leaves the debugging session in an unsafe state.</span></span> <span data-ttu-id="0ae6f-107">Wywołaj tę metodę z największą ostrożnością.</span><span class="sxs-lookup"><span data-stu-id="0ae6f-107">Call this method with extreme caution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c6df-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1c6df-105">Remarks</span></span>  
+ <span data-ttu-id="1c6df-106">`RudeAbort`nie zwalnia żadnych blokad, które są przechowywane przez ewaluatora, dlatego sesja debugowania jest pozostawiana w stanie niebezpiecznym.</span><span class="sxs-lookup"><span data-stu-id="1c6df-106">`RudeAbort` does not release any locks that the evaluator holds, so it leaves the debugging session in an unsafe state.</span></span> <span data-ttu-id="1c6df-107">Wywołaj tę metodę z największą ostrożnością.</span><span class="sxs-lookup"><span data-stu-id="1c6df-107">Call this method with extreme caution.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ae6f-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0ae6f-108">Requirements</span></span>  
- <span data-ttu-id="0ae6f-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ae6f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c6df-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1c6df-108">Requirements</span></span>  
+ <span data-ttu-id="1c6df-109">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c6df-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ae6f-110">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="0ae6f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1c6df-110">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="1c6df-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0ae6f-111">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="0ae6f-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c6df-111">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="1c6df-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ae6f-112">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ae6f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="1c6df-112">**.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c6df-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

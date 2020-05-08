@@ -93,3 +93,5 @@
           href: infrastructure-as-code.md
         - name: Pakiety aplikacji natywnych dla chmury
           href: application-bundles.md
+    - name: Podsumowanie
+      href: summary.md

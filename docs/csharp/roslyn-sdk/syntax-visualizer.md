@@ -1,113 +1,113 @@
 ---
-title: Eksploruj kod za pomocą wizualizatora składni Roslyn w programie Visual Studio
-description: Wizualizator składni zapewnia narzędzie wizualne do eksplorowania modeli zestawu SDK platformy kompilatora .NET generuje dla kodu.
+title: Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
+description: Wizualizator składni zawiera narzędzie wizualne umożliwiające Eksplorowanie modeli, które zestaw .NET Compiler Platform SDK generuje dla kodu.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156990"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975930"
 ---
-# <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksploruj kod za pomocą wizualizatora składni Roslyn w programie Visual Studio
+# <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
 
-Ten artykuł zawiera omówienie narzędzia wizualizatora składni, które jest dostarczane jako część zestawu SDK platformy kompilatora .NET ("Roslyn"). Wizualizator składni to okno narzędzia, które pomaga sprawdzać i eksplorować drzewa składni. Jest to niezbędne narzędzie do zrozumienia modeli kodu, który chcesz przeanalizować. Jest to również pomoc debugowania podczas tworzenia własnych aplikacji przy użyciu platformy .NET kompilatora ("Roslyn") SDK. Otwórz to narzędzie podczas tworzenia pierwszych analizatorów. Wizualizator pomaga zrozumieć modele używane przez interfejsy API. Można również użyć narzędzi, takich jak [SharpLab](https://sharplab.io) lub [LINQPad,](https://www.linqpad.net/) aby sprawdzić kod i zrozumieć drzewa składni.
+Ten artykuł zawiera omówienie narzędzia Syntax Visualizer, które jest dostarczane jako część .NET Compiler Platform ("Roslyn") SDK. Syntax Visualizer jest oknem narzędzi, które ułatwia sprawdzanie i eksplorowanie drzew składni. Jest to podstawowe narzędzie do zrozumienia modeli dla kodu, który ma zostać przeanalizowany. Jest to również pomoc dla debugowania podczas tworzenia własnych aplikacji przy użyciu zestawu SDK .NET Compiler Platform ("Roslyn"). Otwórz to narzędzie podczas tworzenia pierwszych analizatorów. Wizualizator pomaga zrozumieć modele używane przez interfejsy API. Możesz również użyć narzędzi, takich jak [SharpLab](https://sharplab.io) lub [LINQPad](https://www.linqpad.net/) , aby sprawdzić kod i zrozumieć drzewa składniowe.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-Zapoznaj się z pojęciami używanymi w zestawie SDK platformy kompilatora .NET, czytając artykuł [oprzeglądowy.](compiler-api-model.md) Zawiera wprowadzenie do drzewa składni, węzłów, tokenów i ciekawostki.
+Zapoznaj się z pojęciami użytymi w zestawie SDK .NET Compiler Platform, odczytując artykuł z [omówieniem](compiler-api-model.md) . Zawiera wprowadzenie do drzew składni, węzłów, tokenów i kwizy.
 
-## <a name="syntax-visualizer"></a>Wizualizator składni
+## <a name="syntax-visualizer"></a>Syntax Visualizer
 
-**Wizualizator składni** umożliwia inspekcję drzewa składni dla pliku kodu Języka C# lub Visual Basic w bieżącym oknie edytora aktywnego w ideprogramu Visual Studio. Wizualizator można uruchomić, klikając przycisk **Zobacz** > inne**wizualizacje składni****systemu Windows** > .  Możesz również użyć paska narzędzi **Szybkie uruchamianie** w prawym górnym rogu. Należy wpisać "składnia", a polecenie otwarcia **wizualizatora składni** powinno zostać wyświetlone.
+**Syntax Visualizer** umożliwia inspekcję drzewa składni dla pliku kodu C# lub Visual Basic w bieżącym aktywnym oknie edytora w środowisku IDE programu Visual Studio. Wizualizator można uruchomić, klikając pozycję **Wyświetl** > **inne okna** > **Syntax Visualizer**.  Możesz również użyć paska narzędzi **Szybkie uruchamianie** w prawym górnym rogu. Wpisz "składnia" i polecenie, aby otworzyć **Syntax Visualizer** powinna zostać wyświetlona.
 
-To polecenie otwiera visualizer składni jako okno narzędzia przestawnego. Jeśli nie masz otwartego okna edytora kodu, wyświetlacz jest pusty, jak pokazano na poniższej rysunku.
+To polecenie otwiera Syntax Visualizer jako okno narzędzi zmiennoprzecinkowych. Jeśli nie masz otwartego okna edytora kodu, ekran jest pusty, jak pokazano na poniższej ilustracji.
 
-![Okno narzędzia Wizualizator składni](media/syntax-visualizer/syntax-visualizer.png)
+![Okno narzędzia Syntax Visualizer](media/syntax-visualizer/syntax-visualizer.png)
 
-Zadokuj to okno narzędzia w dogodnym miejscu w programie Visual Studio, takim jak lewa strona. Wizualizator pokazuje informacje o bieżącym pliku kodu.
+Zadokuj to okno narzędzia w wygodnej lokalizacji wewnątrz programu Visual Studio, na przykład po lewej stronie. Wizualizator pokazuje informacje o bieżącym pliku kodu.
 
-Utwórz nowy projekt przy użyciu polecenia **Plik** > **nowy projekt.** Można utworzyć projekt języka Visual Basic lub C#. Gdy program Visual Studio otwiera główny plik kodu dla tego projektu, wizualizator wyświetla dla niego drzewo składni. W tym wystąpieniu programu Visual Studio można otworzyć dowolny istniejący plik języka C# / Visual Basic, a wizualizator wyświetli drzewo składni tego pliku. Jeśli w programie Visual Studio jest otwartych wiele plików kodu, wizualizator wyświetla drzewo składni aktualnie aktywnego pliku kodu (plik kodu z fokusem klawiatury).
+Utwórz nowy projekt za pomocą polecenia **plik** > **Nowy projekt** . Można utworzyć projekt Visual Basic lub C#. Gdy program Visual Studio otwiera główny plik kodu dla tego projektu, wizualizator Wyświetla drzewo składni. Można otworzyć dowolny istniejący plik C#/Visual Basic w tym wystąpieniu programu Visual Studio, a wizualizator Wyświetla drzewo składni tego pliku. Jeśli masz otwartych wiele plików kodu w programie Visual Studio, wizualizatorer Wyświetla drzewo składni dla aktualnie aktywnego pliku kodu (plik kodu z fokusem klawiatury).
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="c"></a>[C #](#tab/csharp)
-![Wizualizacja drzewa składni Języka C#](media/syntax-visualizer/visualize-csharp.png)
+# <a name="c"></a>[S #](#tab/csharp)
+![Wizualizowanie drzewa składni języka C#](media/syntax-visualizer/visualize-csharp.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
-![Wizualizacja drzewa składni języka Visual Basic](media/syntax-visualizer/visualize-visual-basic.png)
+![Wizualizowanie drzewa składni Visual Basic](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
-Jak pokazano na poprzednich obrazach, w oknie narzędzia wizualizatora jest wyświetlane drzewo składni u góry i siatka właściwości u dołu. Siatka właściwości wyświetla właściwości elementu, który jest aktualnie zaznaczony w drzewie, w tym *typ* .NET i *rodzaj* (Składnia) elementu.
+Jak pokazano na powyższym obrazie, okno narzędzia wizualizatora Wyświetla drzewo składni u góry i siatkę właściwości u dołu. Siatka właściwości zawiera właściwości elementu, który jest aktualnie wybrany w drzewie, w tym *Typ* .NET i *rodzaj* (elementem syntaxkind) elementu.
 
-Drzewa składni składają się z trzech typów elementów — *węzłów,* *tokenów*i *ciekawostek.* Więcej informacji na temat tych typów można przeczytać w artykule [Praca ze składnią.](work-with-syntax.md) Elementy każdego typu są reprezentowane przy użyciu innego koloru. Kliknij przycisk "Legenda", aby zapoznać się z używanymi kolorami.
+Drzewa składni składają się z trzech typów elementów — *węzłów*, *tokenów*i *kwizy*. Więcej informacji na temat tych typów można znaleźć w artykule dotyczącym [składni](work-with-syntax.md) . Elementy każdego typu są reprezentowane przy użyciu innego koloru. Kliknij przycisk "Legenda", aby zapoznać się z omówieniem użytych kolorów.
 
-Każdy element w drzewie wyświetla również swój własny **zakres**. Zakres **jest** indeksy (pozycja początkowa i końcowa) tego węzła w pliku tekstowym.  W poprzednim przykładzie C# wybrany token "UsingKeyword [0..5)" ma **span,** który ma pięć znaków szerokości [0..5). Notacja "[..)" oznacza, że indeks początkowy jest częścią przedziału, ale indeks końcowy nie jest.
+Każdy element w drzewie również Wyświetla własny **zakres**. **Zakres** jest indeksem (położenie początkowe i końcowe) tego węzła w pliku tekstowym.  W poprzednim przykładzie w języku C# wybrany token "UsingKeyword [0.. 5)" ma **zakres** o długości pięciu znaków, [0.. 5). Notacja "[...)" oznacza, że indeks początkowy jest częścią zakresu, ale końcowym indeksem nie jest.
 
-Istnieją dwa sposoby poruszania się po drzewie:
+Istnieją dwa sposoby nawigowania po drzewie:
 
-* Rozwiń lub kliknij na elementy w drzewie. Wizualizator automatycznie wybiera tekst odpowiadający zakresowi tego elementu w edytorze kodu.
-* Kliknij lub zaznacz tekst w edytorze kodu. W poprzednim przykładzie języka Visual Basic po wybraniu wiersza zawierającego "Module Module1" w edytorze kodu wizualizator automatycznie przechodzi do odpowiedniego węzła ModuleStatement w drzewie.
+* Rozwiń lub kliknij elementy w drzewie. Wizualizator automatycznie zaznaczy tekst odpowiadający zakresowi tego elementu w edytorze kodu.
+* Kliknij lub zaznacz tekst w edytorze kodu. W powyższym przykładzie Visual Basic w przypadku wybrania w edytorze kodu wiersza zawierającego "module Module1" wizualizator automatycznie nawiguje do odpowiedniego węzła ModuleStatement w drzewie.
 
-Wizualizator wyróżnia element w drzewie, którego zakres najlepiej pasuje do zakres tekstu zaznaczonego w edytorze.
+Wizualizator podświetla element w drzewie, którego zakres najlepiej pasuje do zakresu tekstu zaznaczonego w edytorze.
 
-Wizualizator odświeża drzewo, aby dopasować modyfikacje w aktywnym pliku kodu. Dodaj połączenie `Console.WriteLine()` do `Main()`środka . Podczas pisania wizualizator odświeża drzewo.
+Wizualizator odświeża drzewo, aby dopasować modyfikacje w aktywnym pliku kodu. Dodaj wywołanie do `Console.WriteLine()` wewnątrz `Main()`. Podczas wpisywania, wizualizator odświeża drzewo.
 
-Po wpisaniu wstrzymaj wpisywanie `Console.`tekstu . Drzewo ma kilka przedmiotów w kolorze różowym. W tym momencie występują błędy (określane również jako "Diagnostyka") w wpisanych kodu. Błędy te są dołączone do węzłów, tokenów i ciekawostek w drzewie składni. Wizualizator pokazuje, które elementy mają błędy dołączone do nich podświetlając tło na różowo. Możesz sprawdzić błędy na dowolnym elemencie w kolorze różowym, najeżdżając kursorem na element. Wizualizator wyświetla tylko błędy składni (te błędy związane ze składnią wpisanego kodu); nie wyświetla żadnych błędów semantycznych.
+Wstrzymaj wpisywanie po wpisaniu `Console.`. Drzewo ma pewne elementy kolorowe w kolorze różowym. W tym momencie istnieją błędy (nazywane również "diagnostyką") w określonym kodzie. Te błędy są dołączone do węzłów, tokenów i kwizy w drzewie składni. Wizualizator pokazuje, które elementy zawierają błędy dołączone do nich, podkreślając tło w kolorze różowym. Błędy w dowolnym elemencie można sprawdzić kolorem różowym, umieszczając kursor na elemencie. Wizualizator wyświetla tylko błędy składni (te błędy związane ze składnią wpisanego kodu); nie są wyświetlane żadne błędy semantyczne.
 
-## <a name="syntax-graphs"></a>Wykresy składni
+## <a name="syntax-graphs"></a>Wykresy składniowe
 
-Kliknij prawym przyciskiem myszy dowolny element w drzewie i kliknij **polecenie Wyświetl wykres składni bezpośredniej**.
+Kliknij prawym przyciskiem myszy dowolny element w drzewie, a następnie kliknij polecenie **Wyświetl wykres Pokierowanej składni**.
 
-# <a name="c"></a>[C #](#tab/csharp)
+# <a name="c"></a>[S #](#tab/csharp)
 
-Wizualizator wyświetla graficzną reprezentację poddrzewa zakorzenionego w wybranym elemencie. Spróbuj wykonać te kroki dla węzła `Main()` **MethodDeclaration** odpowiadającego metodzie w przykładzie C#. Wizualizator wyświetla wykres składni, który wygląda następująco:
+Wizualizator Wyświetla graficzną reprezentację poddrzewa osadzonego na wybranym elemencie. Spróbuj wykonać następujące kroki dla węzła **MethodDeclaration** odpowiadającego `Main()` metodzie w przykładzie w języku C#. Wizualizator wyświetla wykres składni, który wygląda następująco:
 
-![Wyświetlanie wykresu składni języka C#](media/syntax-visualizer/csharp-syntax-graph.png)
+![Wyświetlanie grafu składni języka C#](media/syntax-visualizer/csharp-syntax-graph.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-Spróbuj tego samego dla węzła **SubBlock** odpowiadającego metodzie `Main()` w poprzednim przykładzie języka Visual Basic. Wizualizator wyświetla wykres składni, który wygląda następująco:
+Wypróbuj te same dla węzła **bloku** podrzędnego odpowiadającego `Main()` metodzie w poprzednim przykładzie Visual Basic. Wizualizator wyświetla wykres składni, który wygląda następująco:
 
-![Wyświetlanie wykresu składni języka Visual Basic](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![Wyświetlanie wykresu składni Visual Basic](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
-Przeglądarka wykresów składni ma opcję wyświetlania legendy jej schemat ubarwiania. Można również najechać kursorem na poszczególne elementy na wykresie składni za pomocą myszy, aby wyświetlić właściwości odpowiadające tej pozycji.
+Przeglądarka grafu składni zawiera opcję wyświetlania legendy dla schematu kolorowania. Możesz również umieścić wskaźnik myszy nad poszczególnymi elementami na wykresie składni, aby wyświetlić właściwości odpowiadające temu elementowi.
 
-Wykresy składni dla różnych elementów w drzewie można wielokrotnie wyświetlać, a wykresy będą zawsze wyświetlane w tym samym oknie wewnątrz programu Visual Studio. To okno można zadokować w dogodnej lokalizacji w programie Visual Studio, dzięki czemu nie trzeba przełączać się między kartami, aby wyświetlić nowy wykres składni. Na dole, poniżej okien edytora kodu, jest często wygodne.
+Wykresy składniowe można wyświetlać wielokrotnie dla różnych elementów w drzewie, a wykresy będą zawsze wyświetlane w tym samym oknie w programie Visual Studio. To okno można zadokować w wygodnej lokalizacji wewnątrz programu Visual Studio, aby nie trzeba było przełączać się między kartami, aby wyświetlić nowy wykres składni. Dolna, poniżej okna edytora kodu, jest często wygodna.
 
-Oto układ dokowania do użycia z okna narzędzia wizualizatora i okna wykresu składni:
+Poniżej znajduje się układ dokowania, który ma być używany z oknem narzędzia wizualizatora oraz oknem grafu składni:
 
-![Jeden układ dokowania okna wykresu wizualizatora i składni](media/syntax-visualizer/docking-layout.png)
+![Jeden układ dokowania dla wizualizatora i okna wykresu składniowego](media/syntax-visualizer/docking-layout.png)
 
-Inną opcją jest umieszczenie okna wykresu składni na drugim monitorze, w konfiguracji z dwoma monitorami.
+Innym rozwiązaniem jest umieszczenie okna wykresu składniowego na drugim monitorze w konfiguracji podwójnego monitora.
 
-## <a name="inspecting-semantics"></a>Kontrola semantyki
+## <a name="inspecting-semantics"></a>Sprawdzanie semantyki
 
-Wizualizator składni umożliwia podstawową inspekcję symboli i informacji semantycznych. Wpisz `double x = 1 + 1;` wewnątrz Main() w przykładzie C#. Następnie wybierz wyrażenie `1 + 1` w oknie edytora kodu. Wizualizator wyróżnia węzeł **AddExpression** w wizualizatorze. Kliknij prawym przyciskiem myszy ten **AddExpression** i kliknij **na Wyświetl symbol (jeśli istnieje)**. Należy zauważyć, że większość elementów menu ma kwalifikator "jeśli istnieje". Dewizual składni sprawdza właściwości węzła, w tym właściwości, które mogą nie być obecne dla wszystkich węzłów.
+Syntax Visualizer umożliwia inspekcję podstawowe symboli i informacji semantycznych. Wpisz `double x = 1 + 1;` wewnątrz Main () w przykładzie w języku C#. Następnie wybierz wyrażenie `1 + 1` w oknie Edytor kodu. Wizualizator podświetla węzeł **AddExpression** w wizualizatorze. Kliknij prawym przyciskiem myszy to polecenie **AddExpression** i kliknij pozycję **Wyświetl symbol (jeśli istnieje)**. Należy zauważyć, że większość elementów menu ma kwalifikator "Jeśli any". Syntax Visualizer sprawdza właściwości węzła, w tym właściwości, które mogą nie być obecne dla wszystkich węzłów.
 
-Siatka właściwości w wizualizatorze aktualizuje się, jak pokazano na poniższej rysunku: Symbol wyrażenia jest **SynthesizedIntrinsicOperatorSymbol** z **Kind = Method**.
+Siatka właściwości w ramach aktualizacji wizualizatora, jak pokazano na poniższej ilustracji: symbol wyrażenia jest **SynthesizedIntrinsicOperatorSymbol** z **typem = Method**.
 
 ![Właściwości symbolu](media/syntax-visualizer/symbol-properties.png)
 
-**Wypróbuj widok TypeSymbol (jeśli istnieje)** dla tego samego **węzła AddExpression.** Siatka właściwości w wizualizatorze zostanie zaktualizowana, jak pokazano na `Int32`poniższym rysunku, wskazując, że typem wybranego wyrażenia jest .
+Spróbuj **wyświetlić TypeSymbol (jeśli istnieje)** dla tego samego węzła **AddExpression** . Siatka właściwości na stronie wizualizatora aktualizuje, jak pokazano na poniższej ilustracji, co oznacza, że typ wybranego wyrażenia to `Int32`.
 
 ![Właściwości TypeSymbol](media/syntax-visualizer/type-symbol-properties.png)
 
-**Wypróbuj widok Przekonwertowany symbol typesymbol (jeśli istnieje)** dla tego samego **węzła AddExpression.** Siatka właściwości jest aktualizowana wskazując, że `Int32`chociaż typem wyrażenia jest `Double` , przekonwertowany typ wyrażenia jest jak pokazano na poniższym rysunku. Ten węzeł zawiera informacje o symbolu konwersji typu, ponieważ `Int32` wyrażenie występuje `Double`w kontekście, w którym musi zostać przekonwertowane na . Ta konwersja `Double` spełnia typ określony `x` dla zmiennej po lewej stronie operatora przypisania.
+Spróbuj **wyświetlić przekonwertowane TypeSymbol (jeśli istnieje)** dla tego samego węzła **AddExpression** . Aktualizacja siatki właściwości wskazująca, że chociaż typ wyrażenia to `Int32`, przekonwertowanego typu wyrażenia jest `Double` tak jak pokazano na poniższym rysunku. Ten węzeł zawiera informacje o symbolach konwersji, `Int32` ponieważ wyrażenie występuje w kontekście, w którym musi zostać przekonwertowane `Double`na. Ta konwersja spełnia `Double` typ określony dla zmiennej `x` po lewej stronie operatora przypisania.
 
-![Właściwości Konwertowane typesymbol](media/syntax-visualizer/converted-type-symbol-properties.png)
+![Skonwertowane właściwości TypeSymbol](media/syntax-visualizer/converted-type-symbol-properties.png)
 
-Na koniec spróbuj **wyświetl wartość stałą (jeśli istnieje)** dla tego samego **węzła AddExpression.** Siatka właściwości pokazuje, że wartość wyrażenia jest stałą `2`czasu kompilacji z wartością .
+Na koniec spróbuj **wyświetlić wartość stałą (jeśli istnieje)** dla tego samego węzła **AddExpression** . Siatka właściwości pokazuje, że wartość wyrażenia jest stałą czasu kompilacji o wartości `2`.
 
 ![Stała wartość](media/syntax-visualizer/constant-value.png)
 
-Poprzedni przykład można również replikować w języku Visual Basic. Wpisz `Dim x As Double = 1 + 1` plik języka Visual Basic. Wybierz wyrażenie `1 + 1` w oknie edytora kodu. Wizualizator wyróżnia odpowiedni węzeł **AddExpression** w wizualizatorze. Powtórz poprzednie kroki dla tego **AddExpression** i powinny być widoczne identyczne wyniki.
+Poprzedni przykład można także zreplikować w Visual Basic. Wpisz `Dim x As Double = 1 + 1` plik w Visual Basic. Wybierz wyrażenie `1 + 1` w oknie Edytor kodu. Wizualizator podświetla odpowiadający jej węzeł **AddExpression** w wizualizatorze. Powtórz powyższe kroki dla tego **AddExpression** i powinny być widoczne identyczne wyniki.
 
-Sprawdź więcej kodu w języku Visual Basic. Zaktualizuj główny plik języka Visual Basic za pomocą następującego kodu:
+Przejrzyj więcej kodu w Visual Basic. Zaktualizuj główny plik Visual Basic przy użyciu następującego kodu:
 
 ```vb
 Imports C = System.Console
@@ -119,24 +119,24 @@ Module Program
 End Module
 ```
 
-Ten kod wprowadza alias `C` o nazwie, `System.Console` który mapuje na typ u `Main()`góry pliku i używa tego aliasu wewnątrz . Wybierz użycie tego aliasu, in `C` `C.WriteLine()` `Main()` , wewnątrz metody. Wizualizator wybiera odpowiedni węzeł **IdentifierName** w wizualizatorze. Kliknij prawym przyciskiem myszy ten węzeł i kliknij polecenie **Wyświetl symbol (jeśli istnieje).** Siatka właściwości wskazuje, że ten identyfikator `System.Console` jest powiązany z typem, jak pokazano na poniższym rysunku:
+Ten kod wprowadza alias o nazwie `C` , który jest mapowany na `System.Console` typ w górnej części pliku i używa tego aliasu wewnątrz `Main()`. Wybierz użycie tego aliasu `C` w `C.WriteLine()`, wewnątrz `Main()` metody. Wizualizator wybiera odpowiedni węzeł **identyfikatorname** w wizualizatorze. Kliknij prawym przyciskiem myszy ten węzeł i kliknij pozycję **Wyświetl symbol (jeśli istnieje)**. Siatka właściwości wskazuje, że ten identyfikator jest powiązany z typem `System.Console` , jak pokazano na poniższym rysunku:
 
 ![Właściwości symbolu](media/syntax-visualizer/symbol-visual-basic.png)
 
-**Wypróbuj wyświetl aliassymbol (jeśli istnieje)** dla tego samego **węzła IdentifierName.** Siatka właściwości wskazuje, że identyfikator jest `C` aliasem `System.Console` o nazwie powiązanej z obiektem docelowym. Innymi słowy siatka właściwości zawiera informacje dotyczące **AliasSymbol** `C`odpowiadające identyfikatorowi .
+Spróbuj **wyświetlić AliasSymbol (jeśli istnieje)** dla tego samego węzła **identyfikatoraname** . Siatka właściwości wskazuje, że identyfikator jest alias o nazwie `C` , która jest powiązana z `System.Console` obiektem docelowym. Innymi słowy, Siatka właściwości zawiera informacje dotyczące **AliasSymbol** odpowiadającego identyfikatorowi `C`.
 
 ![Właściwości AliasSymbol](media/syntax-visualizer/alias-symbol.png)
 
-Sprawdź symbol odpowiadający dowolnemu typowi zadeklarowanemu, metodzie, właściwości. Wybierz odpowiedni węzeł w wizualizatorze i kliknij **na Wyświetl symbol (jeśli istnieje)**. Wybierz metodę `Sub Main()`, w tym treść metody. Kliknij **na Wyświetl symbol (jeśli istnieje)** dla odpowiedniego **węzła SubBlock** w wizualizatorze. Siatka właściwości pokazuje **MethodSymbol** dla tego `Main` **podbloku** ma nazwę z typem `Void`zwracania .
+Zbadaj Symbol odpowiadający każdemu zadeklarowanemu typowi, metodzie, właściwości. Wybierz odpowiedni węzeł w wizualizatorze i kliknij pozycję **Wyświetl symbol (jeśli istnieje)**. Wybierz metodę `Sub Main()`, łącznie z treścią metody. Kliknij pozycję **Wyświetl symbol (jeśli istnieje)** **dla odpowiedniego węzła** podrzędnego w wizualizatorze. Siatka właściwości pokazuje **MethodSymbol** dla tego **podbloku** ma nazwę `Main` z typem `Void`zwracanym.
 
-![Wyświetlanie symbolu deklaracji metody](media/syntax-visualizer/method-symbol.png)
+![Wyświetlanie symbolu dla deklaracji metody](media/syntax-visualizer/method-symbol.png)
 
-Powyższe przykłady języka Visual Basic można łatwo replikować w języku C#. Wpisz `using C = System.Console;` w `Imports C = System.Console` miejsce aliasu. Poprzednie kroki w języku C# dają identyczne wyniki w oknie wizualizatora.
+Powyższe Visual Basic przykłady można łatwo zreplikować w języku C#. Wpisz `using C = System.Console;` miejsce `Imports C = System.Console` dla aliasu. Powyższe kroki w języku C# dają takie same wyniki w oknie wizualizatora.
 
-Operacje inspekcji semantycznej są dostępne tylko w węzłach. Nie są one dostępne na tokenach ani ciekawostkach. Nie wszystkie węzły mają interesujące informacje semantyczne do sprawdzenia. Jeśli węzeł nie zawiera interesujących informacji semantycznych, kliknięcie **symbolu widoku \* (jeśli istnieje)** pokazuje pustą siatkę właściwości.
+Operacje inspekcji semantycznej są dostępne tylko w węzłach. Nie są one dostępne w tokenach ani kwizy. Nie wszystkie węzły mają interesujące informacje semantyczne do sprawdzenia. Gdy węzeł nie ma interesujących informacji semantycznych, kliknięcie **pozycji \* Wyświetl symbol (jeśli istnieje)** powoduje wyświetlenie pustej siatki właściwości.
 
-Więcej informacji na temat interfejsów API do wykonywania analizy semantycznej można przeczytać w dokumencie przegląd pracy [z semantyką.](work-with-semantics.md)
+Więcej informacji na temat interfejsów API do wykonywania analizy semantycznej można znaleźć w dokumencie przegląd [pracy z semantyką](work-with-semantics.md) .
 
 ## <a name="closing-the-syntax-visualizer"></a>Zamykanie wizualizatora składni
 
-Okno wizualizatora można zamknąć, gdy nie używasz go do badania kodu źródłowego. Wizualizator składni aktualizuje jego wyświetlanie podczas poruszania się po kodzie, edytowaniu i zmienianiu źródła. Może się rozpraszać, gdy go nie używasz.
+Okno wizualizatorer można zamknąć, gdy nie jest używane do badania kodu źródłowego. Wizualizator składni aktualizuje swój ekran podczas poruszania się po kodzie, edytowania i zmieniania źródła. Może to odwrócić, gdy nie jest używany.

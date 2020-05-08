@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793468"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976190"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject — Metoda
 Przydziela nowe wystąpienie obiektu i wywołuje określoną metodę konstruktora.  
@@ -42,13 +42,13 @@ HRESULT NewObject (
  podczas Konstruktor, który ma zostać wywołany.  
   
  `nArgs`  
- podczas Rozmiar tablicy `ppArgs`.  
+ podczas Rozmiar `ppArgs` tablicy.  
   
  `ppArgs`  
  podczas Tablica obiektów ICorDebugValue, z których każdy reprezentuje argument, który ma zostać przesłany do konstruktora.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
@@ -56,6 +56,6 @@ HRESULT NewObject (
   
  **.NET Framework wersje:** 1,1, 1,0  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [NewParameterizedObject, metoda](icordebugeval2-newparameterizedobject-method.md)

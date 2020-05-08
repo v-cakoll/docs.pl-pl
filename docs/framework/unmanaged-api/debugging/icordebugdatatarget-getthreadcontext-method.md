@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 3eace2d91b3bb6e637a659b8b49a31450ebc2c42
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 79708aa5a2abcb8d7465f82a8beb918484c193b9
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783730"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976554"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext — Metoda
 Zwraca bieżący kontekst wątku dla określonego wątku.  
@@ -49,19 +49,19 @@ HRESULT GetThreadContext(
  określoną Bufor, w którym będzie przechowywany kontekst wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Na platformach Windows `pContext` musi być strukturą `CONTEXT` (zdefiniowaną w WinNT. h), która jest odpowiednia dla typu maszyny określonego przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) . `contextFlags` muszą mieć te same wartości, co pole `ContextFlags` struktury `CONTEXT`. Struktura `CONTEXT` jest specyficzna dla procesora; Szczegóły można znaleźć w pliku WinNT. h.  
+ Na platformach Windows `pContext` musi być `CONTEXT` strukturą (zdefiniowaną w Winnt. h), która jest odpowiednia dla typu maszyny określonego przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) . `contextFlags`musi mieć te same wartości co `ContextFlags` pole `CONTEXT` struktury. `CONTEXT` Struktura jest specyficzna dla procesora; Szczegóły można znaleźć w pliku WinNT. h.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugDataTarget, interfejs](icordebugdatatarget-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugDataTarget — Interfejs](icordebugdatatarget-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

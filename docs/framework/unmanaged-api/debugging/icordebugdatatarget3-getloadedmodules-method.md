@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules — metoda
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: d4c22146422085daa4dc9d90ae5b3735a12500c2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793557"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976424"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules — metoda
 Pobiera listę modułów, które zostały wcześniej załadowane.  
@@ -38,15 +38,15 @@ HRESULT GetLoadedModules(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugDataTarget3, interfejs](icordebugdatatarget3-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugDataTarget3 — interfejs](icordebugdatatarget3-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

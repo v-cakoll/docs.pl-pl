@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085157"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976242"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction — Metoda
 
@@ -55,7 +55,7 @@ Jeśli funkcja jest wirtualna, `CallFunction` przeprowadzi wirtualną wysyłkę.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorDebug. idl, CorDebug. h
 
@@ -63,6 +63,6 @@ Jeśli funkcja jest wirtualna, `CallFunction` przeprowadzi wirtualną wysyłkę.
 
 **.NET Framework wersje:** 1,1, 1,0
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [CallParameterizedFunction, metoda](icordebugeval2-callparameterizedfunction-method.md)

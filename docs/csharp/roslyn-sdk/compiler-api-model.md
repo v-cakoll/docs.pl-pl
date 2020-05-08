@@ -1,60 +1,60 @@
 ---
-title: Pojęcia sdk platformy kompilatora .NET i model obiektu
-description: Ten przegląd zapewnia tło, które należy skutecznie pracować z zestawem SDK kompilatora .NET. Dowiesz się warstwy interfejsu API, główne typy zaangażowanych i ogólny model obiektów.
+title: Koncepcje i model obiektów .NET Compiler Platform SDK
+description: To omówienie zapewnia efektywność pracy z zestawem SDK kompilatora platformy .NET. Poznasz warstwy interfejsu API, typy główne i ogólny model obiektów.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156964"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975943"
 ---
-# <a name="understand-the-net-compiler-platform-sdk-model"></a>Opis modelu sdk platformy kompilatora .NET
+# <a name="understand-the-net-compiler-platform-sdk-model"></a>Poznaj model zestawu SDK .NET Compiler Platform
 
-Kompilatory przetwarzają kod, który piszesz, zgodnie z regułami strukturalnymi, które często różnią się od sposobu, w jaki ludzie czytają i rozumieją kod. Podstawowa wiedza na temat modelu używanego przez kompilatory jest niezbędna do zrozumienia interfejsów API używanych podczas tworzenia narzędzi opartych na Roslyn.
+Kompilator przetwarza kod napisany przy użyciu reguł strukturalnych, które często różnią się od sposobu, w jaki ludzie czytają i wiedzą kod. Podstawowe informacje o modelu używanym przez kompilatory są niezbędne do poznania interfejsów API używanych podczas tworzenia narzędzi opartych na Roslyn.
 
 ## <a name="compiler-pipeline-functional-areas"></a>Obszary funkcjonalne potoku kompilatora
 
-Zestaw SDK platformy kompilatora .NET udostępnia analizę kodu kompilatora C# i Visual Basic jako konsumenta, udostępniając warstwę interfejsu API, która odzwierciedla tradycyjny potok kompilatora.
+Zestaw .NET Compiler Platform SDK uwidacznia analizę kodu w języku C# i Visual Basic kompilatory jako konsumenta, dostarczając warstwę interfejsu API, która odzwierciedla tradycyjny potok kompilatora.
 
-![kroki przetwarzania kodu źródłowego potoku kompilatora do kodu obiektu](media/compiler-api-model/compiler-pipeline.png)
+![kroki kompilatora przetwarzające kod źródłowy do kodu obiektu](media/compiler-api-model/compiler-pipeline.png)
 
-Każda faza tego potoku jest oddzielnym składnikiem. Po pierwsze, analiza fazy tokenizes i analizuje tekst źródłowy do składni, która następuje gramatyki językowej. Po drugie faza deklaracji analizuje źródło i importowane metadane w celu utworzenia nazwanych symboli. Następnie faza powiązania dopasowuje identyfikatory w kodzie do symboli. Na koniec fazy emituj emituje zestaw ze wszystkimi informacjami utworzonymi przez kompilator.
+Każda faza tego potoku jest osobnym składnikiem. Najpierw etap analizy tokenizes i analizuje tekst źródłowy do składni, która następuje po gramatyce języka. Druga faza deklaracji analizuje źródłowe i zaimportowane metadane do postaci nazwanych symboli. Następnie faza powiązania dopasowuje identyfikatory w kodzie do symboli. Na koniec etap emisji emituje zestaw ze wszystkimi informacjami skompilowanymi przez kompilator.
 
-![interfejs api potoku kompilatora zapewnia dostęp do każdego kroku, który jest częścią potoku kompilatora](media/compiler-api-model/compiler-pipeline-api.png)
+![Interfejs API potoku kompilatora zapewnia dostęp do każdego kroku, który jest częścią potoku kompilatora](media/compiler-api-model/compiler-pipeline-api.png)
 
-Odpowiadająca każdej z tych faz zestaw SDK platformy kompilatora .NET udostępnia model obiektu, który umożliwia dostęp do informacji na tej fazie. Faza analizy udostępnia drzewo składni, faza deklaracji udostępnia hierarchiczną tabelę symboli, faza wiązania udostępnia wynik analizy semantycznej kompilatora, a faza emitowania jest interfejsem API, który tworzy kody bajtów IL.
+Dla każdego z tych faz zestaw SDK .NET Compiler Platform uwidacznia model obiektów, który umożliwia dostęp do informacji w tej fazie. Etap analizy uwidacznia drzewo składni, ale faza deklaracji uwidacznia hierarchiczną tabelę symboli, faza powiązania ujawnia wynik analizy semantycznej kompilatora, a faza emisji jest interfejsem API, który tworzy kody bajtów IL.
 
-![usługi językowe dostępne z interfejsu api kompilatora na każdym etapie potoku kompilatora](media/compiler-api-model/compiler-pipeline-lang-svc.png)
+![usługi językowe dostępne z interfejsu API kompilatora na każdym etapie potoku kompilatora](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
-Każdy kompilator łączy te składniki razem jako pojedynczą całość end-to-end.
+Każdy kompilator łączy te składniki razem z pojedynczym kompleksem.
 
-Te interfejsy API są te same używane przez program Visual Studio. Na przykład funkcje konspektu i formatowania kodu używają drzew składni, przeglądarka obiektów i funkcje nawigacji używają tabeli symboli, refaktoryzacji i przejdź do definicji, a model semantyczny i Edit i Continue używają wszystkich tych elementów, w tym interfejsu API emitowania.
+Te interfejsy API są takie same, jak w programie Visual Studio. Na przykład funkcje tworzenia konspektu kodu i formatowania używają drzew składni, a funkcje Przeglądarka obiektów i nawigacji używają tabeli symboli, refaktoryzacji i przechodzenia do definicji używają modelu semantycznego, a Edycja i kontynuowanie korzysta ze wszystkich tych elementów, w tym interfejsu API emisji.
 
 ## <a name="api-layers"></a>Warstwy interfejsu API
 
 Zestaw SDK kompilatora .NET składa się z dwóch głównych warstw interfejsów API: interfejsów API kompilatora i interfejsów API obszarów roboczych.
 
-![warstwy interfejsu api reprezentowane przez potok kompilatora apis](media/compiler-api-model/api-layers.png)
+![warstwy interfejsu API reprezentowane przez interfejsy API potoku kompilatora](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>Interfejsy API kompilatora
 
-Warstwa kompilatora zawiera modele obiektów, które odpowiadają informacji uwyponych w każdej fazie potoku kompilatora, zarówno składnii i semantyczne. Warstwa kompilatora zawiera również niezmienną migawkę pojedynczego wywołania kompilatora, w tym odwołań do zestawu, opcji kompilatora i plików kodu źródłowego. Istnieją dwa różne interfejsy API, które reprezentują język Języka C# i języka Języka Visual Basic. Te dwa interfejsy API mają podobny kształt, ale dostosowane do wysokiej wierności do każdego języka. Ta warstwa nie ma zależności od składników programu Visual Studio.
+Warstwa kompilatora zawiera modele obiektów, które odnoszą się do informacji uwidocznionych w każdej fazie potoku kompilatora, składni i semantyki. Warstwa kompilatora zawiera również niemodyfikowalną migawkę pojedynczego wywołania kompilatora, w tym odwołania do zestawów, opcje kompilatora i pliki kodu źródłowego. Istnieją dwa różne interfejsy API, które reprezentują język C# i język Visual Basic. Te dwa interfejsy API są podobne do kształtu, ale są dostosowane do poszczególnych języków. Ta warstwa nie ma żadnych zależności w składnikach programu Visual Studio.
 
-### <a name="diagnostic-apis"></a>Interfejsy API diagnostyki
+### <a name="diagnostic-apis"></a>Diagnostyczne interfejsy API
 
-W ramach analizy kompilator może wygenerować zestaw diagnostyki obejmujących wszystko, od składni, semantyczne i określone błędy przypisania do różnych ostrzeżeń i diagnostyki informacyjnej. Warstwa interfejsu API kompilatora udostępnia diagnostyki za pośrednictwem rozszerzalnego interfejsu API, który umożliwia analizatory zdefiniowane przez użytkownika, które mają być podłączone do procesu kompilacji. Umożliwia diagnostyki zdefiniowaneprzez użytkownika, takich jak te produkowane przez narzędzia, takie jak StyleCop lub FxCop, które mają być produkowane obok diagnostyki zdefiniowanej przez kompilator. Tworzenie diagnostyki w ten sposób ma tę zaletę integracji naturalnie z narzędziami, takimi jak MSBuild i Visual Studio, które zależą od diagnostyki dla doświadczeń, takich jak zatrzymanie kompilacji opartej na zasadach i wyświetlanie squiggles na żywo w edytorze i sugerowanie kodu Poprawki.
+W ramach analizy kompilator może utworzyć zestaw danych diagnostycznych obejmujących wszystkie elementy składni, semantyki i błędy przypisania do różnych ostrzeżeń i diagnostyki informacyjnej. Warstwa interfejsu API kompilatora udostępnia diagnostykę za pomocą rozszerzalnego interfejsu API, który umożliwia przełączenie analizatorów zdefiniowanych przez użytkownika do procesu kompilacji. Umożliwia ona wytwarzanie przez użytkownika diagnostyki, takich jak te, które są tworzone przez narzędzia takie jak StyleCop lub FxCop, do wygenerowania w ramach diagnostyki zdefiniowanej przez kompilator. Zapewnianie diagnostyki w ten sposób pozwala na integrację naturalnie z narzędziami, takimi jak MSBuild i Visual Studio, które są zależne od diagnostyki dla takich środowisk, jak zatrzymanie kompilowania na podstawie zasad i wyświetlanie w edytorze i sugerowanie poprawek w kodzie.
 
-### <a name="scripting-apis"></a>Interfejsy API skryptów
+### <a name="scripting-apis"></a>Interfejsy API obsługi skryptów
 
-Interfejsy API hostingu i skryptów są częścią warstwy kompilatora. Można ich używać do wykonywania fragmentów kodu i gromadzenia kontekstu wykonywania w czasie wykonywania.
-C# interaktywne REPL (Odczyt-Ocena-Print Loop) używa tych interfejsów API. REPL umożliwia używanie języka C# jako języka skryptów, interakcyjnie wykonując kod podczas pisania.
+Interfejsy API hostingu i skryptów są częścią warstwy kompilatora. Można ich używać do wykonywania fragmentów kodu i gromadzenia kontekstu wykonywania środowiska uruchomieniowego.
+W języku C# Interactive REPL (pętla odczytu-Szacuj-Print) używa tych interfejsów API. REPL umożliwia używanie języka C# w języku skryptowym, wykonywanie kodu w sposób interaktywny podczas pisania.
 
 ### <a name="workspaces-apis"></a>Interfejsy API obszarów roboczych
 
-Warstwa Obszary robocze zawiera interfejs API obszaru roboczego, który jest punktem wyjścia do analizy kodu i refaktoryzacji w całych rozwiązaniach. Pomaga w organizowaniu wszystkich informacji o projektach w rozwiązaniu w model jednego obiektu, oferując bezpośredni dostęp do modeli obiektów warstwy kompilatora bez konieczności analizowania plików, konfigurowania opcji lub zarządzania zależnościami projektu do projektu .
+Warstwa obszary robocze zawiera interfejs API obszaru roboczego, który jest punktem wyjścia do przeprowadzania analizy kodu i refaktoryzacji całego rozwiązania. Pomaga to w organizowaniu wszystkich informacji o projektach w rozwiązaniu w jednym modelu obiektów, co zapewnia bezpośredni dostęp do modeli obiektów warstwy kompilatora bez potrzeby analizowania plików, konfigurowania opcji i zarządzania zależnościami między projektami.
 
-Ponadto warstwy workspaces powierzchnizestaw interfejsów API używane podczas implementowania analizy kodu i refaktoryzacji narzędzi, które działają w środowisku hosta, takich jak Visual Studio IDE. Przykłady obejmują znajdź wszystkie odwołania, formatowanie i interfejsy API generowania kodu.
+Ponadto warstwa obszarów roboczych ma zestaw interfejsów API używanych podczas implementowania analizy kodu i narzędzi refaktoryzacji, które działają w środowisku hosta, takim jak środowisko IDE programu Visual Studio. Przykłady obejmują interfejsy API Znajdź wszystkie odwołania, formatowanie i generowanie kodu.
 
-Ta warstwa nie ma zależności od składników programu Visual Studio.
+Ta warstwa nie ma żadnych zależności w składnikach programu Visual Studio.

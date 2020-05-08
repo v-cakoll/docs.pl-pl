@@ -2,12 +2,12 @@
 title: Metoda ICorDebugDataTarget2::EnumerateThreadIDs
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: 120a970aac33b1ab06ae47335a959d2791f893ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a65b76f384cdad68cba75af524dbe672c309624
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178979"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976489"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>Metoda ICorDebugDataTarget2::EnumerateThreadIDs
 Zwraca listę aktywnych identyfikatorów wątków.  
@@ -24,27 +24,27 @@ HRESULT EnumerateThreadIDs(
   
 ## <a name="parameters"></a>Parametry  
  cThreadIDs  
- [w] Maksymalna liczba wątków, których identyfikatory mogą być zwracane.  
+ podczas Maksymalna liczba wątków, których identyfikatory można zwrócić.  
   
- pcThreadIds (Nieujmi.  
- [na zewnątrz] Wskaźnik `ULONG32` do, który wskazuje rzeczywistą liczbę identyfikatorów wątku `pThreadIds` zapisane w tablicy.  
+ pcThreadIds  
+ określoną Wskaźnik `ULONG32` wskazujący rzeczywistą liczbę identyfikatorów wątków zapisaną w `pThreadIds` tablicy.  
   
- pThreadIDs (Psż.  
+ pThreadIDs  
  Tablica identyfikatorów wątków.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md). **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md). **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugDataTarget2, interfejs](icordebugdatatarget2-interface.md)
+- [Interfejs ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
 - [Debugowanie — Interfejsy](debugging-interfaces.md)

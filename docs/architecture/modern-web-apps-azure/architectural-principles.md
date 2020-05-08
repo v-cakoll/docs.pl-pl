@@ -1,109 +1,109 @@
 ---
 title: Zasady dotyczące architektury
-description: Architekt nowoczesne aplikacje internetowe z ASP.NET Core i Azure | Zasady architektury
+description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Zasady architektury
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450274"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975410"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
-> "Gdyby budowniczowie budowali budynki tak, jak programiści pisali programy, to pierwszy dzięcioł, który przyszedł, zniszczyłby cywilizację."  
+> "Jeśli konstruktory skompilowane przez programistów w sposób, w jaki programiści zapisały programy, to pierwszy Woodpecker, który miał być zniszczony Civilization".  
 > _\-Gerald Weinberg_
 
-Należy architekti i projektowania rozwiązań programowych z myślą o łatwości konserwacji. Zasady opisane w tej sekcji mogą pomóc w poprowadzeniu cię w kierunku decyzji architektonicznych, które spowodują czyste, możliwe do utrzymania aplikacje. Ogólnie rzecz biorąc te zasady poprowadzi Cię w kierunku tworzenia aplikacji z dyskretnych składników, które nie są ściśle powiązane z innymi częściami aplikacji, ale raczej komunikować się za pośrednictwem jawnych interfejsów lub systemów obsługi wiadomości.
+Należy wziąć pod uwagę możliwość tworzenia i projektowania rozwiązań programistycznych. Zasady przedstawione w tej sekcji mogą ułatwić podejmowanie decyzji dotyczących architektury, które będą powodowały czyste i utrzymywane w obsłudze aplikacje. Ogólnie rzecz biorąc, te zasady przeprowadzą Cię przez proces tworzenia aplikacji poza dyskretnymi składnikami, które nie są ściśle powiązane z innymi częściami aplikacji, ale raczej komunikują się przez jawne interfejsy lub systemy obsługi komunikatów.
 
-## <a name="common-design-principles"></a>Wspólne zasady projektowania
+## <a name="common-design-principles"></a>Typowe zasady projektowania
 
-### <a name="separation-of-concerns"></a>Rozdzielenie obaw
+### <a name="separation-of-concerns"></a>Rozdzielenie problemów
 
-Zasadą przewodnią przy opracowywaniu jest **separacja obaw**. Zasada ta stanowi, że oprogramowanie powinno być oddzielone w oparciu o rodzaje pracy, którą wykonuje. Na przykład należy wziąć pod uwagę aplikację, która zawiera logikę do identyfikowania godnych uwagi elementów do wyświetlenia użytkownikowi i który formatuje takie elementy w określony sposób, aby uczynić je bardziej zauważalne. Zachowanie odpowiedzialne za wybór elementów do formatowania powinny być oddzielone od zachowania odpowiedzialnego za formatowanie elementów, ponieważ są to oddzielne problemy, które są przypadkowo powiązane ze sobą.
+Zasada identyfikatora GUID podczas opracowywania polega na **rozdzieleniu obaw**. Ta zasada potwierdza, że oprogramowanie powinno być oddzielone w zależności od rodzaju wykonywanych przez niego zadań. Rozważmy na przykład aplikację, która zawiera logikę do identyfikowania wartych elementów do wyświetlenia użytkownikowi, a także formatuje takie elementy w określony sposób, aby były bardziej zauważalne. Zachowanie odpowiedzialne za wybór, które elementy mają być sformatowane, powinny być przechowywane niezależnie od zachowań odpowiedzialnych za formatowanie elementów, ponieważ są to osobne wątpliwości, które są tylko ze sobą powiązane ze sobą.
 
-Architektonicznie aplikacje mogą być logicznie skonstruowane, aby postępować zgodnie z tą zasadą, oddzielając podstawowe zachowanie biznesowe od logiki infrastruktury i interfejsu użytkownika. W idealnym przypadku reguły biznesowe i logika powinny znajdować się w oddzielnym projekcie, który nie powinien zależeć od innych projektów w aplikacji. Pomaga to zapewnić, że model biznesowy jest łatwy do przetestowania i może ewoluować bez ścisłego sprzężenia z szczegółami implementacji niskiego poziomu. Oddzielenie problemów jest kluczowym czynnikiem za korzystanie z warstw w architekturach aplikacji.
+Architektura aplikacji może być logicznie skompilowana, aby przestrzegać tej zasady, oddzielając podstawowe zachowanie biznesowe od infrastruktury i logiki interfejsu użytkownika. W idealnym przypadku reguły biznesowe i logika powinny znajdować się w osobnym projekcie, który nie powinien zależeć od innych projektów w aplikacji. Pozwala to zagwarantować, że model biznesowy jest łatwy do testowania i może zostać rozmieszczony bez ścisłej współpracy z szczegółami implementacji niskiego poziomu. Rozdzielenie problemów jest najważniejszym zagadnieniem związanym z użyciem warstw w architekturze aplikacji.
 
-### <a name="encapsulation"></a>Hermetyzacja
+### <a name="encapsulation"></a>Encapsulation
 
-Różne części aplikacji powinny używać **hermetyzacji,** aby odizolować je od innych części aplikacji. Składniki aplikacji i warstwy powinny być w stanie dostosować ich wewnętrznej implementacji bez przerywania ich współpracowników tak długo, jak kontrakty zewnętrzne nie są naruszane. Prawidłowe stosowanie hermetyzacji pomaga osiągnąć luźne sprzężenie i modułowość w projektach aplikacji, ponieważ obiekty i pakiety można zastąpić alternatywnymi implementacjami, o ile ten sam interfejs jest utrzymywany.
+Różne części aplikacji powinny używać **hermetyzacji** do izolowania ich od innych części aplikacji. Składniki aplikacji i warstwy powinny mieć możliwość dostosowania ich wewnętrznej implementacji bez przerywania współpracowników, tak długo, jak kontrakty zewnętrzne nie zostały naruszone. Odpowiednie użycie hermetyzacji pomaga osiągnąć swobodny sprzężenie i modułowość w projektach aplikacji, ponieważ obiekty i pakiety można zamienić na alternatywne implementacje, o ile ten sam interfejs jest obsługiwany.
 
-W klasach hermetyzacji jest osiągana przez ograniczenie dostępu z zewnątrz do stanu wewnętrznego klasy. Jeśli podmiot zewnętrzny chce manipulować stanem obiektu, powinien to zrobić za pośrednictwem dobrze zdefiniowanej funkcji (lub metody ustawiania właściwości), zamiast mieć bezpośredni dostęp do stanu prywatnego obiektu. Podobnie składniki aplikacji i same aplikacje powinny uwidaczniać dobrze zdefiniowane interfejsy dla swoich współpracowników do użycia, a nie pozwalając ich stan do bezpośredniej modyfikacji. Dzięki temu wewnętrzny projekt aplikacji ewoluuje wraz z urazem, nie martwiąc się, że spowoduje to przerwanie współpracy, o ile umowy publiczne zostaną utrzymane.
+W klasach hermetyzacja jest realizowana przez ograniczenie poza dostępem do stanu wewnętrznego klasy. Jeśli aktor zewnętrzny chce manipulować stanem obiektu, należy to zrobić za pośrednictwem dobrze zdefiniowanej funkcji (lub metody ustawiającej właściwości), a nie bezpośredniego dostępu do stanu prywatnego obiektu. Podobnie składniki aplikacji i aplikacje powinny ujawniać dobrze zdefiniowane interfejsy dla współpracowników, zamiast zezwalać na bezpośrednie modyfikowanie ich stanu. Pozwala to na rozbicie projektu wewnętrznego aplikacji na czas bez obaw, że takie działanie spowoduje przerwanie współpracowników, dopóki są utrzymywane umowy publiczne.
 
-### <a name="dependency-inversion"></a>Odwrócenie zależności
+### <a name="dependency-inversion"></a>Niewersja zależności
 
-Kierunek zależności w aplikacji powinien być w kierunku abstrakcji, a nie szczegóły implementacji. Większość aplikacji są zapisywane w taki sposób, że zależność w czasie kompilacji przepływy w kierunku wykonywania wykonawczego. Spowoduje to wygenerowanie wykresu zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, który będzie zależeć od C, jak pokazano na rysunku 4-1.
+Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szczegóły implementacji. Większość aplikacji jest zapisywana w taki sposób, że przepływy zależności czasu kompilacji w kierunku wykonywania środowiska uruchomieniowego. Spowoduje to utworzenie grafu zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, która będzie zależeć od C, jak pokazano na rysunku 4-1.
 
 ![Wykres zależności bezpośredniej](./media/image4-1.png)
 
 **Rysunek 4-1.** Wykres zależności bezpośredniej.
 
-Zastosowanie zasady inwersji zależności umożliwia A wywołanie metod abstrakcji, które implementuje B, umożliwiając A wywołanie B w czasie wykonywania, ale dla B zależy od interfejsu kontrolowanego przez A w czasie kompilacji *(w* związku z tym odwrócenie typowej zależności w czasie kompilacji). W czasie wykonywania przepływu wykonywania programu pozostaje niezmieniona, ale wprowadzenie interfejsów oznacza, że różne implementacje tych interfejsów można łatwo podłączyć.
+Zastosowanie zasady odróżniania zależności umożliwia wywoływanie metod w ramach abstrakcji, które B implementuje, dzięki czemu można wywołać B w czasie wykonywania, ale dla B, aby zależały od interfejsu kontrolowanego przez w czasie kompilacji (w rezultacie *odwrócić* typowy zależność czasu kompilacji). W czasie wykonywania przepływ wykonywania programu pozostaje niezmieniony, ale wprowadzenie interfejsów oznacza, że można łatwo podłączyć różne implementacje tych interfejsów.
 
 ![Wykres odwróconej zależności](./media/image4-2.png)
 
 **Rysunek 4-2.** Odwrócony wykres zależności.
 
-**Inwersja zależności** jest kluczową częścią tworzenia luźno powiązanych aplikacji, ponieważ szczegóły implementacji mogą być zapisywane w zależności i implementacji abstrakcji wyższego poziomu, a nie na odwrót. Powstałe aplikacje są bardziej sprawdzalne, modułowe i możliwe do utrzymania w wyniku. Praktyka *wstrzykiwania zależności* jest możliwe poprzez przestrzeganie zasady inwersji zależności.
+**Wersja zależności** jest kluczową częścią tworzenia luźno powiązanych aplikacji, ponieważ szczegóły implementacji można napisać, aby zależały od i wdrożyć abstrakcje wyższego poziomu, a nie inne sposoby. Aplikacje wynikowe są bardziej weryfikowalne, modularne i utrzymywane w wyniku. Zaleca się *iniekcję zależności* , postępując zgodnie z zasadą Inwersja zależności.
 
 ### <a name="explicit-dependencies"></a>Jawne zależności
 
-**Metody i klasy powinny jawnie wymagać wszelkich współpracujących obiektów, których potrzebują, aby działać poprawnie.** Konstruktory klas zapewniają możliwość dla klas, aby zidentyfikować rzeczy, których potrzebują, aby być w prawidłowym stanie i działać poprawnie. Jeśli zdefiniujesz klasy, które mogą być konstruowane i wywoływane, ale będzie działać poprawnie tylko wtedy, gdy pewne składniki globalne lub infrastruktury są w miejscu, te klasy są *nieuczciwe* z ich klientów. Kontrakt konstruktora mówi klientowi, że potrzebuje tylko określonych rzeczy (prawdopodobnie nic, jeśli klasa jest po prostu przy użyciu konstruktora bezparametrów), ale następnie w czasie wykonywania okazuje się, że obiekt naprawdę potrzebował czegoś innego.
+**Metody i klasy powinny jawnie wymagać wszelkich obiektów współpracy, które są potrzebne do poprawnego działania.** Konstruktory klas zapewniają szansę dla klas, aby identyfikować elementy, których potrzebują, aby były w prawidłowym stanie i działać prawidłowo. W przypadku zdefiniowania klas, które mogą być skonstruowane i wywoływane, ale które będą działać prawidłowo tylko wtedy, gdy są używane pewne składniki globalne lub infrastruktury, te klasy są *DISHONEST* z klientami. Kontrakt konstruktora mówi klientowi, że potrzebuje tylko określonych elementów (prawdopodobnie nic nie tylko wtedy, gdy Klasa korzysta tylko z konstruktora bez parametrów), ale w czasie wykonywania obiekt naprawdę nie wymaga czegoś innego.
 
-Postępując zgodnie z zasadą jawne zależności, klas i metod są uczciwi ze swoimi klientami o tym, czego potrzebują, aby funkcjonować. Dzięki temu kod jest bardziej samodokumentujący, a kontrakty kodowania są bardziej przyjazne dla użytkownika, ponieważ użytkownicy będą mieli pewność, że tak długo, jak zapewniają to, co jest wymagane w postaci parametrów metody lub konstruktora, obiekty, z którymi pracują, będą się zachowywać poprawnie w czasie wykonywania.
+Zgodnie z zasadą jawnych zależności, klasy i metody są uczciwie związane z klientami na temat tego, czego potrzebują do działania. Dzięki temu kod może być bardziej czytelny, a kontrakty związane z kodowaniem są bardziej przyjazne dla użytkownika, ponieważ użytkownicy będą musieli ufać, o ile są one wymagane w formie parametrów metody lub konstruktora, obiekty, z którymi pracują, działają poprawnie w czasie wykonywania.
 
 ### <a name="single-responsibility"></a>Pojedyncza odpowiedzialność
 
-Zasada jednolitej odpowiedzialności ma zastosowanie do projektowania obiektowego, ale może być również uważana za zasadę architektoniczną podobną do rozdziału obaw. Stwierdza się w nim, że przedmioty powinny ponoszą tylko jedną odpowiedzialność i że powinny mieć tylko jeden powód do zmiany. W szczególności jedyną sytuacją, w której obiekt powinien ulec zmianie, jest, jeśli sposób, w jaki wykonuje swoją jedną odpowiedzialność, musi zostać zaktualizowany. Zgodnie z tą zasadą pomaga produkować bardziej luźno sprzężone i modułowe systemy, ponieważ wiele rodzajów nowych zachowań można zaimplementować jako nowe klasy, a nie przez dodanie dodatkowej odpowiedzialności do istniejących klas. Dodawanie nowych klas jest zawsze bezpieczniejsze niż zmiana istniejących klas, ponieważ żaden kod nie zależy jeszcze od nowych klas.
+Zasada pojedynczej odpowiedzialności dotyczy projektowania zorientowanego obiektowo, ale można ją również traktować jako zasadę architektoniczną podobną do rozdzielenia obaw. Pozwala to na to, że obiekty powinny mieć tylko jedną odpowiedzialność i mieć tylko jedną przyczynę do zmiany. Jedyną sytuacją, w której obiekt powinien zostać zmieniony, jest to, że w sposób, w jaki wykonuje swoją odpowiedzialność, należy zaktualizować. Zgodnie z tą zasadą, można utworzyć bardziej luźno powiązane systemy i moduły, ponieważ wiele rodzajów nowych zachowań może być implementowane jako nowe klasy, a nie przez dodanie dodatkowej odpowiedzialności do istniejących klas. Dodawanie nowych klas jest zawsze bezpieczniejsze niż zmiana istniejących klas, ponieważ żaden kod nie zależy jeszcze od nowych klas.
 
-W monolitycznym zastosowaniu możemy zastosować zasadę pojedynczej odpowiedzialności na wysokim poziomie do warstw w aplikacji. Odpowiedzialność za prezentację powinna pozostać w projekcie interfejsu i usług, podczas gdy odpowiedzialność za dostęp do danych powinna być utrzymywana w projekcie infrastruktury. Logika biznesowa powinna być przechowywana w projekcie podstawowym aplikacji, gdzie można go łatwo przetestować i ewoluować niezależnie od innych obowiązków.
+W aplikacji monolitycznej możemy zastosować pojedynczą regułę odpowiedzialności na wysokim poziomie do warstw w aplikacji. Odpowiedzialność za prezentację powinna pozostawać w projekcie interfejsu użytkownika, a odpowiedzialność za dostęp do danych powinna być przechowywana w ramach projektu infrastruktury. Logika biznesowa powinna być przechowywana w podstawowym projekcie aplikacji, w którym można ją łatwo przetestować i może się rozwijać niezależnie od innych obowiązków.
 
-Gdy ta zasada jest stosowana do architektury aplikacji i podjęte do logicznego punktu końcowego, otrzymasz mikrousług. Danej mikrousługi powinny mieć jedną odpowiedzialność. Jeśli trzeba rozszerzyć zachowanie systemu, zwykle lepiej to zrobić przez dodanie dodatkowych mikrousług, a nie przez dodanie odpowiedzialności do istniejącego.
+Gdy ta zasada jest stosowana do architektury aplikacji i została przełączona do jej logicznego punktu końcowego, uzyskasz mikrousługi. Dana mikrousługa powinna mieć jedną odpowiedzialność. Jeśli musisz zwiększyć zachowanie systemu, zazwyczaj lepiej jest to zrobić poprzez dodanie dodatkowych mikrousług, a nie przez dodanie odpowiedzialności do istniejącej usługi.
 
 [Dowiedz się więcej o architekturze mikrousług](https://aka.ms/MicroservicesEbook)
 
-### <a name="dont-repeat-yourself-dry"></a>Nie powtarzaj się (DRY)
+### <a name="dont-repeat-yourself-dry"></a>Nie powtarzaj siebie (SUCHa)
 
-Aplikacja powinna unikać określania zachowania związanego z określonym pojęciem w wielu miejscach, ponieważ jest to częste źródło błędów. W pewnym momencie zmiana wymagań będzie wymagać zmiany tego zachowania i prawdopodobieństwo, że co najmniej jedno wystąpienie zachowania nie zostanie zaktualizowane spowoduje niespójne zachowanie systemu.
+Aplikacja powinna unikać określania zachowania związanego z konkretną koncepcją w wielu miejscach, ponieważ jest to częste źródło błędów. W pewnym momencie zmiana wymagań będzie wymagała zmiany tego zachowania. Prawdopodobnie nie będzie można zaktualizować co najmniej jednego wystąpienia zachowania, co spowoduje niespójne zachowanie systemu.
 
-Zamiast powielania logiki, hermetyzować go w konstrukcji programowania. Należy wykonać tę konstrukcję pojedynczego uprawnienia nad tym zachowaniem i mieć dowolną inną część aplikacji, która wymaga tego zachowania użyć nowej konstrukcji.
+Zamiast duplikowania logiki należy hermetyzować ją w konstrukcji programistycznej. Uczyń ten konstrukcja pojedynczym urzędem w tym zachowaniu i w każdej innej części aplikacji, która wymaga tego zachowania, użyj nowej konstrukcji.
 
 > [!NOTE]
-> Należy unikać wiązania razem zachowanie, które jest tylko przypadkowo powtarzalne. Na przykład tylko dlatego, że dwie różne stałe mają tę samą wartość, nie oznacza to, że powinieneś mieć tylko jedną stałą, jeśli koncepcyjnie odnoszą się do różnych rzeczy.
+> Unikaj powiązań wspólnie z zachowaniem, które jest jedynym przypadkiem powtarzające się. Na przykład, tylko ponieważ dwie różne stałe mają tę samą wartość, nie oznacza to, że powinna istnieć tylko jedna stała, jeśli koncepcyjnie odwołują się do różnych rzeczy.
 
-### <a name="persistence-ignorance"></a>Niewiedza o trwałości
+### <a name="persistence-ignorance"></a>Ignorujących trwałości
 
-**Nieznajomość trwałości** (PI) odnosi się do typów, które muszą być utrwaliłe, ale których kod nie ma wpływu na wybór technologii trwałości. Takie typy w .NET są czasami określane jako zwykły starych obiektów CLR (POC), ponieważ nie trzeba dziedziczyć z określonej klasy podstawowej lub implementować określonego interfejsu. Nieznajomość trwałości jest cenne, ponieważ pozwala na ten sam model biznesowy, które mają być utrwalić na wiele sposobów, oferując dodatkową elastyczność do aplikacji. Opcje trwałości może się zmieniać wraz z uchwycenia, z jednej technologii bazy danych do innej lub dodatkowe formy trwałości może być wymagane oprócz niezależnie od aplikacji rozpoczęte z (na przykład przy użyciu pamięci podręcznej Redis lub usługi Azure Cosmos DB oprócz relacyjnej bazy danych).
+**Ignorujących trwałości** (PI) odnosi się do typów, które muszą być utrwalane, ale których kod nie ma wpływać na wybór technologii trwałości. Takie typy w programie .NET są czasami określane jako zwykłe stare obiekty CLR (POCOs), ponieważ nie muszą dziedziczyć z określonej klasy bazowej ani implementować określonego interfejsu. Trwałość ignorujących jest cenna, ponieważ pozwala na utrwalenie tego samego modelu biznesowego na wiele sposobów, oferując dodatkową elastyczność aplikacji. Opcje trwałości mogą ulec zmianie z upływem czasu, z jednej technologii bazy danych na inną, a oprócz tego mogą być wymagane dodatkowe formy trwałości (na przykład użycie pamięci podręcznej Redis lub Azure Cosmos DB oprócz relacyjnej bazy danych).
 
-Oto kilka przykładów naruszeń tej zasady:
+Niektóre przykłady naruszeń tej zasady obejmują:
 
-- Wymagana klasa podstawowa.
+- Wymagana Klasa bazowa.
 
 - Wymagana implementacja interfejsu.
 
-- Klasy odpowiedzialne za zapisywanie się (takie jak wzorzec rekordu aktywnego).
+- Klasy odpowiedzialne za zapisywanie siebie (na przykład wzorzec rekordu aktywnego).
 
-- Wymagany konstruktor bezparametrów.
+- Wymagany Konstruktor bez parametrów.
 
-- Właściwości wymagające wirtualnego słowa kluczowego.
+- Właściwości wymagające słowa kluczowego Virtual.
 
-- Atrybuty wymagane do swoistego dla trwałości.
+- Wymagane atrybuty dotyczące trwałości.
 
-Wymóg, że klasy mają dowolną z powyższych funkcji lub zachowań dodaje sprzężenia między typami, które mają być utrwalić i wybór technologii trwałości, co utrudnia przyjęcie nowych strategii dostępu do danych w przyszłości.
+Wymaganie, aby klasy miały dowolne z powyższych funkcji lub zachowań, dodaje sprzężenie między typami, które mają być utrwalane i wybór technologii trwałości, utrudniając w przyszłości nowe strategie dostępu do danych.
 
-### <a name="bounded-contexts"></a>Ograniczone konteksty
+### <a name="bounded-contexts"></a>Powiązane konteksty
 
-**Ograniczone konteksty** są centralnym wzorcem w projekcie opartym na domenie. Zapewniają one sposób radzenia sobie ze złożonością w dużych aplikacjach lub organizacjach, rozbijając ją na oddzielne moduły koncepcyjne. Każdy moduł koncepcyjny reprezentuje kontekst, który jest oddzielony od innych kontekstów (stąd, ograniczone) i może ewoluować niezależnie. Każdy ograniczony kontekst powinien idealnie mieć swobodę wyboru własnych nazw dla pojęć w nim i powinien mieć wyłączny dostęp do własnego magazynu trwałości.
+**Powiązane konteksty** są głównym wzorcem w projekcie opartym na domenie. Zapewniają one sposób działania złożoności w dużych aplikacjach lub organizacjach, dzieląc je na osobne moduły koncepcyjne. Każdy moduł koncepcyjny reprezentuje kontekst, który jest oddzielony od innych kontekstów (w związku z czym jest ograniczony) i może się niezależnie rozwijać. Każdy związany kontekst powinien być bezpłatny, aby można było wybrać własne nazwy dla koncepcji w nim i powinien mieć wyłączny dostęp do własnego magazynu trwałości.
 
-Co najmniej poszczególnych aplikacji sieci web należy dążyć do własnego kontekstu ograniczone, z własnego magazynu trwałości dla ich modelu biznesowego, a nie udostępnianie bazy danych z innymi aplikacjami. Komunikacja między kontekstami ograniczonymi odbywa się za pośrednictwem interfejsów programowych, a nie za pośrednictwem udostępnionej bazy danych, co pozwala na logikę biznesową i zdarzenia, które mają miejsce w odpowiedzi na zmiany, które mają miejsce. Ograniczone konteksty map ściśle do mikrousług, które również są idealnie zaimplementowane jako własne indywidualne ograniczone konteksty.
+Co najmniej poszczególne aplikacje sieci Web powinny dążyć do własnego kontekstu, z własnym magazynem trwałości dla ich modelu biznesowego, a nie do udostępniania bazy danych innym aplikacjom. Komunikacja między kontekstami ograniczonymi odbywa się za pomocą interfejsów programistycznych, a nie za pomocą udostępnionej bazy danych, która umożliwia wykonywanie logiki biznesowej i zdarzeń w odpowiedzi na zmiany, które mają miejsce. Powiązane konteksty są ściśle mapowane na mikrousługi, które są również idealnie zaimplementowane jako własne powiązane konteksty.
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- [Wzory projektowania JAVA: Zasady](https://java-design-patterns.com/principles/)
+- [Wzorce projektowe JAVA: zasady](https://java-design-patterns.com/principles/)
 - [Ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)
->[następny](common-web-application-architectures.md)
+>[Następny](common-web-application-architectures.md)

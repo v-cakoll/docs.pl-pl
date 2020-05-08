@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: 8632799b68ae8f92835d1774472bc1432d886f3b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fd7acaa8bcb4d53893855bcd25ff68cf26e30354
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793481"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976164"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType — Metoda
 Pobiera wskaźnik do nowego ICorDebugValue określonego typu z początkową wartością zero lub null.  
@@ -42,15 +42,15 @@ HRESULT CreateValueForType (
  określoną Wskaźnik na adres `ICorDebugValue` obiektu, który reprezentuje wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateValueForType` generalizes [:: SetValue](icordebugeval-createvalue-method.md) , umożliwiając określenie dowolnego typu obiektu, w tym typów skonstruowanych, takich jak `List<int>`. Jedynym celem tej metody jest wygenerowanie wartości, która może zostać przeniesiona do oceny funkcji.  
+ `CreateValueForType`generalizes [ICorDebugEval:: SetValue](icordebugeval-createvalue-method.md) , umożliwiając określenie dowolnego typu obiektu, w tym konstruowanych typów, takich jak `List<int>`. Jedynym celem tej metody jest wygenerowanie wartości, która może zostać przeniesiona do oceny funkcji.  
   
  Typ musi być klasą lub typem wartości. Nie można użyć tej metody do tworzenia wartości tablicy lub wartości ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

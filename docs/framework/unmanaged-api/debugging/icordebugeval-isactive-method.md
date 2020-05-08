@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ee055812eb8dce2dc86f834dde92d7de5e1fdf9
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085021"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976216"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive — Metoda
 Pobiera wartość wskazującą, czy ten obiekt ICorDebugEval jest aktualnie wykonywany.  
@@ -38,10 +38,10 @@ HRESULT IsActive (
  określoną Wskaźnik na wartość wskazującą, czy ta Ocena jest aktywna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-ms.openlocfilehash: d552b694787b5d9f0d5adc399eda6f75df93c385
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ca3adf30ad633fcfb10a4b43a435698d2899597
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793024"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213533"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>ICorDebugModule::EnableClassLoadCallbacks — Metoda
 Określa, czy wywołania zwrotne [ICorDebugManagedCallback:: LoadClass —](icordebugmanagedcallback-loadclass-method.md) i [ICorDebugManagedCallback:: UnloadClass —](icordebugmanagedcallback-unloadclass-method.md) są wywoływane dla tego modułu.  
@@ -35,20 +35,20 @@ HRESULT EnableClassLoadCallbacks(
   
 ## <a name="parameters"></a>Parametry  
  `bClassLoadCallbacks`  
- podczas Ustaw tę wartość na `true`, aby umożliwić programowi uruchomieniowemu języka wspólnego (CLR) wywoływanie metod `ICorDebugManagedCallback::LoadClass` i `ICorDebugManagedCallback::UnloadClass` w przypadku wystąpienia skojarzonych z nimi zdarzeń.  
+ podczas Ustaw tę wartość, aby umożliwić programowi `true` uruchomieniowemu języka wspólnego (CLR) wywoływanie `ICorDebugManagedCallback::LoadClass` metod i w `ICorDebugManagedCallback::UnloadClass` przypadku wystąpienia skojarzonych ze zdarzeniami zdarzeń.  
   
- Wartość domyślna to `false` modułów niedynamicznych. Wartość jest zawsze `true` dla modułów dynamicznych i nie można jej zmienić.  
+ Wartość domyślna to `false` dla modułów niedynamicznych. Wartość jest zawsze `true` dla modułów dynamicznych i nie można jej zmienić.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania zwrotne `ICorDebugManagedCallback::LoadClass` i `ICorDebugManagedCallback::UnloadClass` są zawsze włączone dla modułów dynamicznych i nie można ich wyłączyć.  
+ `ICorDebugManagedCallback::LoadClass` `ICorDebugManagedCallback::UnloadClass` Wywołania zwrotne i są zawsze włączone dla modułów dynamicznych i nie można ich wyłączyć.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też

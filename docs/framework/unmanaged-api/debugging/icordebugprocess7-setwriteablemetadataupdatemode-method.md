@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6de75e1e27660ac91bd6320a501db47f3b055fb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792180"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212259"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>Metoda ICorDebugProcess7::SetWriteableMetadataUpdateMode
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -34,21 +34,21 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>Parametry  
  `flags`  
- Wartość wyliczenia [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) określająca, czy aktualizacje w pamięci dla metadanych w procesie docelowym są widoczne (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) lub niewidoczne (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) do debugera.  
+ Wartość wyliczenia [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) określająca, czy aktualizacje w pamięci dla metadanych w procesie docelowym są widoczne ( `WriteableMetadataUpdateMode::AlwaysShowUpdates` ) lub niewidoczne () w `WriteableMetadataUpdateMode::LegacyCompatPolicy` debugerze.  
   
 ## <a name="remarks"></a>Uwagi  
- Aktualizacje metadanych procesu docelowego mogą pochodzić z narzędzia Edytuj i Kontynuuj, profilera lub <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Aktualizacje metadanych procesu docelowego mogą pochodzić z narzędzia Edytuj i Kontynuuj, profilera lub <xref:System.Reflection.Emit?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugProcess7, interfejs](icordebugprocess7-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Interfejs ICorDebugProcess7](icordebugprocess7-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: ba0e0b1b2bac785e28f41e09dda74841121a748d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794503"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213247"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction, interfejs
 
@@ -29,36 +29,36 @@ Reprezentuje zarządzaną funkcję lub metodę.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateBreakpoint, metoda](icordebugfunction-createbreakpoint-method.md)|Tworzy punkt przerwania na początku tej funkcji.|  
+|[CreateBreakpoint — Metoda](icordebugfunction-createbreakpoint-method.md)|Tworzy punkt przerwania na początku tej funkcji.|  
 |[GetClass, metoda](icordebugfunction-getclass-method.md)|Pobiera obiekt ICorDebugClass, który reprezentuje klasę, do której należy ta funkcja.|  
 |[GetCurrentVersionNumber, metoda](icordebugfunction-getcurrentversionnumber-method.md)|Pobiera numer wersji najnowszej edycji wykonanej w tej funkcji.|  
 |[GetILCode, metoda](icordebugfunction-getilcode-method.md)|Pobiera kod języka pośredniego firmy Microsoft (MSIL) dla tej funkcji.|  
-|[GetLocalVarSigToken, metoda](icordebugfunction-getlocalvarsigtoken-method.md)|Pobiera token metadanych dla zmiennej lokalnej sygnatury funkcji reprezentowanej przez to wystąpienie `ICorDebugFunction`.|  
-|[GetModule, metoda](icordebugfunction-getmodule-method.md)|Pobiera moduł, w którym ta funkcja jest zdefiniowana.|  
+|[GetLocalVarSigToken — Metoda](icordebugfunction-getlocalvarsigtoken-method.md)|Pobiera token metadanych dla zmiennej lokalnej sygnatury funkcji reprezentowanej przez to `ICorDebugFunction` wystąpienie.|  
+|[GetModule — Metoda](icordebugfunction-getmodule-method.md)|Pobiera moduł, w którym ta funkcja jest zdefiniowana.|  
 |[GetNativeCode, metoda](icordebugfunction-getnativecode-method.md)|Pobiera kod natywny dla tej funkcji.|  
-|[GetToken, metoda](icordebugfunction-gettoken-method.md)|Pobiera token metadanych dla tej funkcji.|  
+|[GetToken — Metoda](icordebugfunction-gettoken-method.md)|Pobiera token metadanych dla tej funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs `ICorDebugFunction` nie reprezentuje funkcji z parametrami typu ogólnego. Na przykład wystąpienie `ICorDebugFunction` reprezentuje `Func<T>`, ale nie `Func<string>`. Wywołaj metodę [ICorDebugILFrame2:: EnumerateTypeParameters —](icordebugilframe2-enumeratetypeparameters-method.md) w celu pobrania parametrów typu ogólnego.  
+ `ICorDebugFunction`Interfejs nie reprezentuje funkcji z parametrami typu ogólnego. Na przykład `ICorDebugFunction` wystąpienie może reprezentować, `Func<T>` ale nie `Func<string>` . Wywołaj metodę [ICorDebugILFrame2:: EnumerateTypeParameters —](icordebugilframe2-enumeratetypeparameters-method.md) w celu pobrania parametrów typu ogólnego.  
   
- Relacja między tokenem metadanych metody, `mdMethodDef`i obiektem `ICorDebugFunction` metody jest zależna od tego, czy funkcja Edytuj i Kontynuuj jest dozwolona dla funkcji:  
+ Relacja między tokenem metadanych metody `mdMethodDef` a `ICorDebugFunction` obiektem metody jest zależna od tego, czy funkcja Edytuj i Kontynuuj jest dozwolona dla funkcji:  
   
-- Jeśli funkcja Edytuj i Kontynuuj nie jest dozwolona w funkcji, istnieje relacja jeden do jednego między obiektem `ICorDebugFunction` a tokenem `mdMethodDef`. Oznacza to, że funkcja ma jeden `ICorDebugFunction` obiektu i jeden token `mdMethodDef`.  
+- Jeśli funkcja Edytuj i Kontynuuj nie jest dozwolona w funkcji, istnieje relacja jeden do jednego między `ICorDebugFunction` obiektem a `mdMethodDef` tokenem. Oznacza to, że funkcja ma jeden `ICorDebugFunction` obiekt i jeden `mdMethodDef` token.  
   
-- Jeśli funkcja Edytuj i Kontynuuj jest dozwolona w funkcji, istnieje relacja wiele-do-jednego między obiektem `ICorDebugFunction` a tokenem `mdMethodDef`. Oznacza to, że funkcja może mieć wiele wystąpień `ICorDebugFunction`, jeden dla każdej wersji funkcji, ale tylko jeden token `mdMethodDef`.  
+- Jeśli funkcja Edytuj i Kontynuuj jest dozwolona w funkcji, istnieje relacja wiele-do-jednego między `ICorDebugFunction` obiektem a `mdMethodDef` tokenem. Oznacza to, że funkcja może mieć wiele wystąpień `ICorDebugFunction` , jeden dla każdej wersji funkcji, ale tylko jeden `mdMethodDef` token.  
   
 > [!NOTE]
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:**  CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

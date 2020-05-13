@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: e2aaf902afd71a4a81f7d64ef3fec046aacc91fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792530"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212494"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint — Metoda
 Usuwa poprzednio ustawiony punkt przerwania pod podanym adresem.  
@@ -35,20 +35,20 @@ HRESULT ClearUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- podczas Wartość `CORDB_ADDRESS`, która określa adres, pod którym został ustawiony punkt przerwania.  
+ podczas `CORDB_ADDRESS`Wartość określająca adres, pod którym został ustawiony punkt przerwania.  
   
 ## <a name="remarks"></a>Uwagi  
  Określony punkt przerwania zostałby wcześniej ustawiony przez wcześniejsze wywołanie [ICorDebugProcess2:: SetUnmanagedBreakpoint —](icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Metodę `ClearUnmanagedBreakpoint` można wywołać, gdy debugowany proces jest uruchomiony.  
+ `ClearUnmanagedBreakpoint`Metodę można wywołać, gdy debugowany proces jest uruchomiony.  
   
- Metoda `ClearUnmanagedBreakpoint` zwraca kod błędu, Jeśli debuger jest dołączony w trybie tylko zarządzanym lub jeśli punkt przerwania nie istnieje pod podanym adresem.  
+ `ClearUnmanagedBreakpoint`Metoda zwraca kod błędu, Jeśli debuger jest dołączony w trybie tylko zarządzanym lub jeśli punkt przerwania nie istnieje pod podanym adresem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

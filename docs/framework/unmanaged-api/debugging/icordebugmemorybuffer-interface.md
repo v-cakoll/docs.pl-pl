@@ -2,12 +2,12 @@
 title: ICorDebugMemoryBuffer, interfejs
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: fa1bbca1e771cbc2b3475891862875b97b9e7f90
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 60f3b0c3230c524ca7d308d3cb80e50b0693715d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793142"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212337"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer, interfejs
 Reprezentuje bufor w pamięci.  
@@ -16,7 +16,7 @@ Reprezentuje bufor w pamięci.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSize, metoda](icordebugmemorybuffer-getsize-method.md)|Pobiera rozmiar buforu pamięci w bajtach.|  
+|[GetSize — Metoda](icordebugmemorybuffer-getsize-method.md)|Pobiera rozmiar buforu pamięci w bajtach.|  
 |[GetStartAddress, metoda](icordebugmemorybuffer-getstartaddress-method.md)|Pobiera początkowy adres bufora pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -25,15 +25,15 @@ Reprezentuje bufor w pamięci.
 > Ten interfejs jest dostępny tylko dla .NET Native. W przypadku zaimplementowania tego interfejsu dla scenariuszy ICorDebug poza .NET Native, środowisko uruchomieniowe języka wspólnego zignoruje ten interfejs.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

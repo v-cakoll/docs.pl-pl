@@ -1,43 +1,47 @@
 ---
-title: Łącze źródłowe i biblioteki .NET
-description: Najlepsze zalecenia dotyczące używania łącza źródłowego w celu poprawy debugowania bibliotek .NET.
+title: Link źródłowy i biblioteki .NET
+description: Zalecenia dotyczące najlepszych rozwiązań dotyczących używania linku źródłowego w celu usprawnienia debugowania bibliotek platformy .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744542"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212428"
 ---
 # <a name="source-link"></a>Link do źródła
 
-Source Link to technologia, która umożliwia debugowanie kodu źródłowego zestawów .NET z NuGet przez deweloperów. Łącze źródłowe jest wykonywane podczas tworzenia pakietu NuGet i osadza metadane kontroli źródła wewnątrz zestawów i pakietu. Deweloperzy, którzy pobierają pakiet i mają łącze źródłowe włączone w programie Visual Studio, mogą wkroczyć do jego kodu źródłowego. Łącze źródłowe udostępnia metadane kontroli źródła, aby utworzyć doskonałe środowisko debugowania.
+Link źródłowy to technologia, która umożliwia debugowanie kodu źródłowego zestawów .NET z narzędzia NuGet przez deweloperów. Łącze źródłowe jest wykonywane podczas tworzenia pakietu NuGet i osadza metadane kontroli źródła wewnątrz zestawów i pakietu. Deweloperzy, którzy pobierają pakiet i łącze do źródła włączone w programie Visual Studio, mogą przejść do jego kodu źródłowego. Link źródłowy udostępnia metadane kontroli źródła w celu utworzenia doskonałego środowiska debugowania.
 
-## <a name="source-link-demo"></a>Wersja demonstracyjna Source Link
+## <a name="source-link-demo"></a>Pokaz linku źródłowego
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-source-link"></a>Korzystanie z łącza źródłowego
+## <a name="using-source-link"></a>Używanie linku źródłowego
 
-Instrukcje dotyczące korzystania z łącza źródłowego można znaleźć w repozytorium GitHub [dotnet/sourcelink.](https://github.com/dotnet/sourcelink/blob/master/README.md)
+Instrukcje dotyczące korzystania z linku źródłowego znajdują się w repozytorium [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) w witrynie GitHub.
 
-Można użyć [NuGet Package Explorer,](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) aby potwierdzić, że metadane łącza źródłowego został pomyślnie osadzony w pakiecie. Sprawdź, `Repository` czy metadane są obecne z identyfikatorem zatwierdzenia i czy pliki .pdb znajdują się z dll każdego obiektu docelowego.
+Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) , aby potwierdzić, że metadane linku źródłowego zostały pomyślnie osadzone w pakiecie. Sprawdź, czy `Repository` metadane są obecne z identyfikatorem zatwierdzenia i czy pliki. pdb znajdują się w pliku. dll każdego elementu docelowego.
 
-![Łącze źródłowe w Eksploratorze pakietów NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Łącze źródłowe w Eksploratorze pakietów NuGet")
+![Link źródłowy w Eksploratorze pakietów NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Link źródłowy w Eksploratorze pakietów NuGet")
 
-✔️ ZAPOMOCĄ łącza źródłowego, aby dodać metadane kontroli źródła do zestawów i pakietów NuGet.
+✔️ ROZWAŻYĆ użycie linku źródłowego w celu dodania metadanych kontroli źródła do zestawów i pakietów NuGet.
 
 > [!TIP]
-> Można dodatkowo zwiększyć środowisko debugowania dewelopera, dodając atrybuty debugera do swoich typów.
+> Możesz bardziej usprawnić środowisko debugowania dewelopera, dodając do swoich typów atrybuty debugera.
 >
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute>można dostosować sposób wyświetlania klasy lub pola w oknach zmiennych debugera.
-> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>instruuje debugera, aby krok po kroku kodu zamiast przechodzenia do kodu.
-> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>określa, czy element członkowski jest wyświetlany w oknach zmiennej debugera.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>nakazuje debugerowi przechodzenie przez kod, a nie krokowe przechodzenie do kodu.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>Określa, czy element członkowski jest wyświetlany w oknach zmiennych debugera.
 
-✔️ ROZWAŻ OPUBLIKOWANIE`*.pdb`plików symboli ( ).
+✔️ Rozważ opublikowanie plików symboli ( `*.pdb` ).
 
-> Aby uzyskać najlepsze środowisko debugowania, biblioteka powinna publikować pliki symboli, a także używać łącza źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakietów symboli, zobacz [Pakiety symboli](./nuget.md#symbol-packages).
+> W celu uzyskania najlepszego środowiska debugowania biblioteka powinna publikować pliki symboli, a także używać linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakietów symboli, zobacz [pakiety symboli](./nuget.md#symbol-packages).
+
+✔️ ROZWAŻYĆ włączenie kompilacji deterministycznych.
+
+> Deterministyczne kompilacje umożliwiają zweryfikowanie, że wynikowy plik binarny został skompilowany z określonego źródła i zapewnia możliwość śledzenia. Aby uzyskać więcej informacji na temat deterministycznych kompilacji i instrukcje włączania ich, zobacz [deterministyczne kompilacje](https://github.com/clairernovotny/DeterministicBuilds).
 
 >[!div class="step-by-step"]
->[Poprzedni](dependencies.md)
->[następny](publish-nuget-package.md)
+>[Poprzedni](dependencies.md) 
+> [Dalej](publish-nuget-package.md)

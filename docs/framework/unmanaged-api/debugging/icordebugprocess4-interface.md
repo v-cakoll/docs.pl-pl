@@ -15,38 +15,38 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf725ea98fa4351e72cf592f92968ee2233ecb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948810"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213585"
 ---
 # <a name="icordebugprocess4-interface"></a>ICorDebugProcess4, interfejs
 
-Zapewnia obsługę poza Kontrola wykonywania procesu.
+Zapewnia obsługę kontroli wykonywania poza procesem.
 
 ## <a name="methods"></a>Metody
 
 | Metoda                                                                 | Opis                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Powiadamia potoku ICorDebug, poza debugera proces kontynuuje wykonywanie debugee. |
+| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Powiadamia potok ICorDebug, że debuger out of process kontynuuje wykonywanie operacji debugee. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Jednak jest interfejsem COM, która pochodzi od klasy `IUnknown` o identyfikatorze GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` , można uzyskać za pośrednictwem zwykłych mechanizmów COM.
+Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM pochodzący z `IUnknown` identyfikatora GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` , który można uzyskać za pomocą zwykłych mechanizmów com.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówek:** Brak
+**Nagłówek:** Dawaj
 
-**Biblioteka:** Brak
+**Biblioteka:** Dawaj
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

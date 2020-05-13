@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 13258ac6-f4e4-4f66-8fc3-f1244417a3c3
 topic_type:
 - apiref
-ms.openlocfilehash: d266ec7f82d7d4c7c66f137aafc1c8865d6f8889
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 21890f8130ec677cb88f2f5d7ef648aa19e67e71
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792805"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213065"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP — Metoda
 Pobiera wartość HRESULT, która wskazuje, czy można bezpiecznie ustawić wskaźnik instrukcji (IP) na określoną lokalizację przesunięcia w kodzie natywnym.  
@@ -38,15 +38,15 @@ HRESULT CanSetIP (
  podczas Odpowiednie ustawienie wskaźnika instrukcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Przed wywołaniem metody [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md) użyj metody `CanSetIP`. Jeśli `CanSetIP` zwraca wszystkie HRESULT inne niż S_OK, można nadal wywoływać `ICorDebugNativeFrame::SetIP`, ale nie ma żadnej gwarancji, że debuger będzie kontynuował bezpieczne i prawidłowe wykonywanie debugowanego kodu.  
+ Użyj `CanSetIP` metody przed wywołaniem metody [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md) . Jeśli `CanSetIP` zwraca wartość HRESULT inną niż S_OK, można nadal wywołać `ICorDebugNativeFrame::SetIP` , ale nie ma gwarancji, że debuger będzie kontynuował bezpieczne i poprawia wykonywanie debugowanego kodu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8c7be2d48a30a9f649c6d86e4edbc10085195b68
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137909"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213624"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode — Metoda
 Pobiera wystąpienie ICorDebugCode, które reprezentuje kod języka pośredniego firmy Microsoft (MSIL) skojarzony z tym obiektem ICorDebugFunction.  
@@ -35,16 +35,16 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parametry  
  `ppCode`  
- określoną Wskaźnik do wystąpienia `ICorDebugCode` lub wartość null, jeśli funkcja nie została skompilowana do MSIL.  
+ określoną Wskaźnik do `ICorDebugCode` wystąpienia lub wartość null, jeśli funkcja nie została skompilowana do MSIL.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli funkcja Edytuj i Kontynuuj jest dozwolona dla tej funkcji, Metoda `GetILCode` pobierze kod MSIL odpowiadający edytowanej wersji kodu w środowisku uruchomieniowym języka wspólnego (CLR).  
+ Jeśli funkcja Edytuj i Kontynuuj jest dozwolona dla tej funkcji, `GetILCode` metoda pobierze kod MSIL odpowiadający edytowanej wersji kodu w środowisku uruchomieniowym języka wspólnego (CLR).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

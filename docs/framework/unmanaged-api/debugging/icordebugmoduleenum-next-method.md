@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7ad4a6b25fe6d53ab0b21066345451ae7c22c16
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096928"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213325"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next — Metoda
-Pobiera liczbę wystąpień "ICorDebugModule" określonych przez `celt` z wyliczenia, rozpoczynając od bieżącego położenia.  
+Pobiera liczbę wystąpień "ICorDebugModule" określonych przez `celt` Wyliczenie z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba wystąpień `ICorDebugModule` do pobrania.  
+ podczas Liczba `ICorDebugModule` wystąpień do pobrania.  
   
  `modules`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugModule`.  
+ określoną Tablica wskaźników, z których każdy wskazuje `ICorDebugModule` obiekt.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugModule`. Ta wartość może być równa null, jeśli `celt` to jeden.  
+ określoną Wskaźnik do liczby `ICorDebugModule` faktycznie zwróconych wystąpień. Ta wartość może być równa null, jeśli `celt` jest taka.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też

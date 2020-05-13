@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-ms.openlocfilehash: 9f62d94d30c8c4f23073895b8ff0f7afa2dbad6b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 366a48e5f6abd92f0c6f796f40bdd263181da4a8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792497"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213481"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags — Metoda
 Ustawia flagi, które muszą być osadzone we wstępnie skompilowanym obrazie, aby środowisko uruchomieniowe ładowało ten obraz do bieżącego procesu.  
@@ -38,22 +38,22 @@ HRESULT SetDesiredNGENCompilerFlags (
  podczas Wartość wyliczenia [CorDebugJITCompilerFlags —](cordebugjitcompilerflags-enumeration.md) , która określa flagi kompilatora używane do wybierania poprawnego prekompilowanego obrazu.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `SetDesiredNGENCompilerFlags` określa flagi, które muszą być osadzone we wstępnie skompilowanym obrazie, aby środowisko uruchomieniowe załadowało ten obraz do tego procesu. Flagi ustawione za pomocą tej metody są używane tylko do wybierania poprawnego prekompilowanego obrazu. Jeśli taki obraz nie istnieje, środowisko uruchomieniowe załaduje obraz języka pośredniego firmy Microsoft (MSIL) oraz kompilator just-in-Time (JIT). W takim przypadku debuger musi nadal używać metody [ICorDebugModule2:: SetJITCompilerFlags —](icordebugmodule2-setjitcompilerflags-method.md) , aby ustawić flagi zgodnie z potrzebami kompilacji JIT.  
+ `SetDesiredNGENCompilerFlags`Metoda określa flagi, które muszą być osadzone we wstępnie skompilowanym obrazie, aby środowisko uruchomieniowe załadowało ten obraz do tego procesu. Flagi ustawione za pomocą tej metody są używane tylko do wybierania poprawnego prekompilowanego obrazu. Jeśli taki obraz nie istnieje, środowisko uruchomieniowe załaduje obraz języka pośredniego firmy Microsoft (MSIL) oraz kompilator just-in-Time (JIT). W takim przypadku debuger musi nadal używać metody [ICorDebugModule2:: SetJITCompilerFlags —](icordebugmodule2-setjitcompilerflags-method.md) , aby ustawić flagi zgodnie z potrzebami kompilacji JIT.  
   
- Jeśli obraz jest ładowany, ale niektóre kompilacje JIT muszą mieć miejsce dla tego obrazu (w przypadku, gdy obraz zawiera ogólne), flagi kompilatora określone przez metodę `SetDesiredNGENCompilerFlags` będą stosowane do kompilacji dodatkowej JIT.  
+ Jeśli obraz jest ładowany, ale niektóre kompilacje JIT muszą mieć miejsce dla tego obrazu (w przypadku, gdy obraz zawiera ogólne) flagi kompilatora określone przez `SetDesiredNGENCompilerFlags` metodę zostaną zastosowane do kompilacji dodatkowej JIT.  
   
- Metoda `SetDesiredNGENCompilerFlags` musi być wywoływana podczas wywołania zwrotnego [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) . Próbuje wywołać metodę `SetDesiredNGENCompilerFlags` później zakończy się niepowodzeniem. Ponadto program próbuje ustawić flagi, które nie są zdefiniowane w wyliczeniu `CorDebugJITCompilerFlags` lub które nie są dozwolone dla danego procesu, zakończą się niepowodzeniem.  
+ `SetDesiredNGENCompilerFlags`Metoda musi być wywoływana podczas wywołania zwrotnego [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) . Próby wywołania `SetDesiredNGENCompilerFlags` metody później zakończą się niepowodzeniem. Ponadto program próbuje ustawić flagi, które nie są zdefiniowane w `CorDebugJITCompilerFlags` wyliczeniu lub które nie są dozwolone dla danego procesu, zakończą się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebug, interfejs](icordebug-interface.md)
-- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)
+- [ICorDebug — Interfejs](icordebug-interface.md)
+- [ICorDebugManagedCallback — Interfejs](icordebugmanagedcallback-interface.md)

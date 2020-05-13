@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: 9497bea9b7cc5eb98876c923858dbcbc6adf9d07
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792450"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212805"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy — Metoda
 Ustawia wartość określającą sposób ładowania obrazów natywnych przez aplikację podczas działania w ramach zarządzanego debugera.  
@@ -38,21 +38,21 @@ HRESULT EnableNGENPolicy(
  podczas Stała [CorDebugNGenPolicy —](cordebugngenpolicy-enumeration.md) , która określa, w jaki sposób aplikacja ładuje obrazy natywne podczas działania w zarządzanym debugerze.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli zasady zostały ustawione pomyślnie, metoda zwraca `S_OK`. Jeśli `ePolicy` znajduje się poza zakresem wartości wyliczanych zdefiniowanych przez [CorDebugNGenPolicy —](cordebugngenpolicy-enumeration.md), metoda zwraca `E_INVALIDARG` i wywołanie metody nie ma żadnego wpływu. Jeśli nie można zaktualizować zasad generatora obrazów natywnych (Ngen. exe), metoda zwraca `E_FAIL`.  
+ Jeśli zasady zostały ustawione pomyślnie, metoda zwraca `S_OK` . Jeśli `ePolicy` znajduje się poza zakresem wartości wyliczanych zdefiniowanych przez [CorDebugNGenPolicy —](cordebugngenpolicy-enumeration.md), metoda zwraca `E_INVALIDARG` i wywołanie metody nie ma żadnego wpływu. Jeśli nie można zaktualizować zasad generatora obrazów natywnych (Ngen. exe), metoda zwraca wartość `E_FAIL` .  
   
- Metodę `ICorDebugProcess5::EnableNGenPolicy` można wywołać w dowolnym momencie w okresie istnienia procesu. Zasady obowiązują dla wszystkich modułów, które są ładowane po ustawieniu zasad.  
+ `ICorDebugProcess5::EnableNGenPolicy`Metodę można wywołać w dowolnym momencie w okresie istnienia procesu. Zasady obowiązują dla wszystkich modułów, które są ładowane po ustawieniu zasad.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugProcess5, interfejs](icordebugprocess5-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugProcess5 — Interfejs](icordebugprocess5-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

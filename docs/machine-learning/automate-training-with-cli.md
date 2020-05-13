@@ -1,42 +1,42 @@
 ---
-title: Automatyzacja szkolenia modelu z ML.NET CLI
-description: Dowiedz się, jak używać narzędzia ML.NET CLI do automatycznego uczenia najlepszego modelu z wiersza polecenia.
+title: Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET
+description: Dowiedz się, jak za pomocą narzędzia interfejsu wiersza polecenia ML.NET automatycznie uczenie najlepszego modelu z wiersza poleceń.
 ms.date: 12/17/2019
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185880"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212415"
 ---
-# <a name="automate-model-training-with-the-mlnet-cli"></a>Automatyzacja szkolenia modelu z ML.NET CLI
+# <a name="automate-model-training-with-the-mlnet-cli"></a>Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET
 
-ML.NET CLI automatyzuje generowanie modelu dla deweloperów .NET.
+Interfejs wiersza polecenia ML.NET automatyzuje Generowanie modeli dla deweloperów platformy .NET.
 
-Aby korzystać z ML.NET interfejsu API samodzielnie (bez interfejsu ML.NET interfejsu i interfejsów funkcji automl) należy wybrać trenera (implementacja algorytmu uczenia maszynowego dla określonego zadania) i zestaw przekształceń danych (inżynieria funkcji) do zastosowania do danych. Optymalny potok będzie się różnić dla każdego zestawu danych i wybierając optymalny algorytm ze wszystkich wyborów dodaje do złożoności. Co więcej, każdy algorytm ma zestaw hiperparametrów do dostrojenia. W związku z tym można spędzić tygodnie, a czasem miesiące na optymalizacji modelu uczenia maszynowego próbuje znaleźć najlepsze kombinacje inżynierii funkcji, algorytmów uczenia się i hiperparametrów.
+Aby korzystać z interfejsu API ML.NET, (bez interfejsu wiersza polecenia ML.NET AutoML), należy wybrać Trainer (implementację algorytmu uczenia maszynowego dla określonego zadania) i zestaw przekształceń danych (inżynieria funkcji) do zastosowania do danych. Optymalny potok będzie różny dla każdego zestawu danych i wybranie optymalnego algorytmu ze wszystkich opcji zwiększa stopień złożoności. Jeszcze więcej, każdy algorytm ma zestaw parametrów, które mają być dostrojone. W związku z tym możesz spędzać tygodnie i czasami miesiące w optymalizacji modelu uczenia maszynowego, próbując znaleźć najlepsze kombinacje funkcji inżynierii, algorytmy uczenia i parametry.
 
-ML.NET CLI upraszcza ten proces przy użyciu automatycznego uczenia maszynowego (AutoML).
+Interfejs wiersza polecenia ML.NET upraszcza ten proces przy użyciu funkcji automatycznego uczenia maszynowego (AutoML).
 
 > [!NOTE]
-> Ten temat odnosi się do ML.NET **CLI** i ML.NET **AutoML**, które są obecnie w wersji zapoznawczej, a materiał może ulec zmianie.
+> Ten temat dotyczy ML.NET **interfejsu wiersza polecenia** i ml.NET **AutoML**, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
 
-## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Co to jest interfejs wiersza polecenia ML.NET??'em ?
+## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Co to jest interfejs wiersza polecenia ML.NET (CLI)?
 
-ML.NET CLI jest [narzędziem .NET Core](../core/tools/global-tools.md). Po zainstalowaniu nadać mu zadanie uczenia maszynowego i zestaw danych szkoleniowych i generuje model ML.NET, a także kod C# do uruchomienia w celu użycia modelu w aplikacji.
+Interfejs wiersza polecenia ML.NET jest [narzędziem platformy .NET Core](../core/tools/global-tools.md). Po zainstalowaniu należy nadać mu zadanie uczenia maszynowego i zestaw danych szkoleniowych oraz generować model ML.NET, a także kod C# do uruchomienia w celu użycia modelu w aplikacji.
 
-Jak pokazano na poniższej rysunku, jest proste do generowania wysokiej jakości modelu ML.NET (serializowany model .zip file) oraz przykładowy kod C# do uruchomienia/ocena tego modelu. Ponadto kod C# do tworzenia/uczenia tego modelu jest również generowany, dzięki czemu można badać i itetenować algorytm i ustawienia używane dla tego wygenerowanego "najlepszy model".
+Jak pokazano na poniższej ilustracji, można wygenerować model ML.NET o wysokiej jakości (serializowany model. zip) oraz przykładowy kod w języku C# do uruchamiania/oceny modelu. Ponadto kod języka C# do tworzenia/uczenia modelu jest również generowany, aby można było zbadać algorytm i ustawienia używane dla tego wygenerowanego "najlepszego modelu".
 
-![Obrazu](media/automate-training-with-cli/cli-high-level-process.png "Silnik AutoML pracujący wewnątrz ML.NET CLI")
+![Image](media/automate-training-with-cli/cli-high-level-process.png "Aparat AutoML pracuje wewnątrz interfejsu wiersza polecenia ML.NET")
 
-Możesz wygenerować te zasoby z własnych zestawów danych bez samodzielnego kodowania, więc zwiększa to również wydajność, nawet jeśli wiesz, ML.NET.
+Można generować te zasoby z własnych zestawów danych bez konieczności pisania ich przez siebie, dzięki czemu zwiększa się produktywność nawet wtedy, gdy znasz już ML.NET.
 
-Obecnie zadania ML obsługiwane przez ML.NET CLI to:
+Obecnie zadania w ML obsługiwane przez interfejs wiersza polecenia ML.NET są następujące:
 
 - `binary-classification`
 - `multiclass-classification`
 - `regression`
-- Przyszłość: inne zadania `recommendation`uczenia `ranking` `anomaly-detection`maszynowego, takie jak , ,`clustering`
+- Przyszłość: inne zadania uczenia maszynowego `recommendation` , takie jak,, `ranking` `anomaly-detection` ,`clustering`
 
 Przykład użycia:
 
@@ -46,59 +46,59 @@ mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" 
 
 ![image](media/automate-training-with-cli/cli-model-generation.gif)
 
-Można go uruchomić w ten sam sposób na *Windows PowerShell*, * macOS / Linux bash lub *Windows CMD*. Jednak tabelaryczne automatyczne uzupełnianie (sugestie parametrów) nie będzie działać na *CMD systemu Windows*.
+Można uruchomić je w taki sam sposób w programie *Windows PowerShell*, *macOS/Linux bash*lub *Windows cmd*. Jednak funkcja automatycznego uzupełniania tabelarycznego (sugestie parametryczne) nie będzie działała w programie *Windows cmd*.
 
-## <a name="output-assets-generated"></a>Wygenerowane aktywa wyjściowe
+## <a name="output-assets-generated"></a>Wygenerowane zasoby wyjściowe
 
-Polecenie WIERSZA POLECENIA `auto-train` generuje następujące zasoby w folderze wyjściowym:
+Polecenie interfejsu wiersza `auto-train` polecenia generuje następujące zasoby w folderze wyjściowym:
 
-- Serializowany model .zip ("najlepszy model") gotowy do użycia do uruchamiania prognoz.
+- Serializowany model. zip ("najlepszy model") gotowy do użycia do uruchamiania prognoz.
 - Rozwiązanie C# z:
-  - Kod języka C# do uruchamiania/oceniania, który wygenerował model (do prognozowania w aplikacjach użytkownika końcowego z tego modelu).
-  - Kod języka C# z kodem szkolenia używanym do generowania tego modelu (do celów uczenia się lub ponownego szkolenia modelu).
-- Plik dziennika z informacjami o wszystkich iteracjach/wyciągnięciach po ścieżce w wielu ocenianych algorytmach, w tym o ich szczegółowej konfiguracji/potoku.
+  - Kod w języku C# do uruchomienia/oceny, który wygenerował model (aby dokonać prognoz w aplikacjach użytkowników końcowych z tym modelem).
+  - Kod C# z kodem szkoleniowym używanym do generowania tego modelu (na potrzeby uczenia lub ponownego szkolenia modelu).
+- Plik dziennika zawierający informacje o wszystkich iteracjach/odchyleniach, które są oceniane przez wiele algorytmów, łącznie z ich szczegółową konfiguracją/potoku.
 
-Pierwsze dwa zasoby mogą być bezpośrednio używane w aplikacjach użytkownika końcowego (ASP.NET core aplikacji sieci web, usług, aplikacji klasycznej, itp.) do prognozowania z tego wygenerowanego modelu ML.
+Pierwsze dwa zasoby mogą być bezpośrednio używane w aplikacjach użytkowników końcowych (ASP.NET Core aplikacji sieci Web, usług, aplikacji klasycznej itp.) w celu utworzenia prognoz dla tego wygenerowanego modelu ML.
 
-Trzeci zasób, kod szkolenia, pokazuje, co ML.NET kod interfejsu API został użyty przez interfejs użytkownika do uczenia wygenerowanego modelu, dzięki czemu można ponownie trenować modelu i zbadać i iterować, na których określony trener/algorytm i hiperparametry zostały wybrane przez interfejs ów i automl pod przykrywką.
+Trzeci element zawartości, kod szkoleniowy, pokazuje, jaki kod interfejsu API ML.NET był używany przez interfejs wiersza polecenia do uczenia wygenerowanego modelu, dzięki czemu można przeszkolić model i zbadać i wykonać iterację określonych Trainer/algorytmów i parametrów, które zostały wybrane przez interfejs wiersza polecenia i AutoML w ramach okładek.
 
-## <a name="understanding-the-quality-of-the-model"></a>Zrozumienie jakości modelu
+## <a name="understanding-the-quality-of-the-model"></a>Omówienie jakości modelu
 
-Podczas generowania "najlepszego modelu" za pomocą narzędzia CLI zobaczysz metryki jakości (takie jak dokładność i R-Kwadrat) jako odpowiednie dla zadania ml, na które kierujesz reklamy.
+Po wygenerowaniu "najlepszego modelu" przy użyciu narzędzia interfejsu wiersza polecenia są wyświetlane metryki jakości (takie jak dokładność i R-kwadrat) odpowiednie dla zażądanego zadania ML.
 
-Tutaj te metryki są sumowane pogrupowane według zadania ML, dzięki czemu można zrozumieć jakość automatycznie generowanego "najlepszego modelu".
+W tym miejscu są podsumowywane pogrupowane według zadania ML, dzięki czemu można zrozumieć jakość automatycznie generowanego najlepszego modelu.
 
-### <a name="metrics-for-binary-classification-models"></a>Metryki dla modeli klasyfikacji binarnej
+### <a name="metrics-for-binary-classification-models"></a>Metryki dla binarnych modeli klasyfikacji
 
-Poniżej przedstawiono listę metryk zadań ml klasyfikacji binarnej dla pięciu najlepszych modeli znalezionych przez cli:
+Poniżej przedstawiono listę metryk zadań w klasyfikacji binarnej ML dla pierwszych pięciu modeli znalezionych w interfejsie wiersza polecenia:
 
 ![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
-Dokładność jest popularną metryką dla problemów z klasyfikacją, jednak dokładność nie zawsze jest najlepszą metryką, aby wybrać najlepszy model, jak wyjaśniono w poniższych odwołaniach. Istnieją przypadki, w których należy ocenić jakość modelu z dodatkowych metryk.
+Dokładność jest popularną metryką dla problemów klasyfikacji, jednak dokładność nie zawsze jest najlepszą metryką, aby wybrać najlepszy model, z wyjaśnienia w poniższych odwołaniach. Istnieją przypadki, w których należy oszacować jakość modelu z dodatkowymi metrykami.
 
-Aby zbadać i zrozumieć metryki, które są dane wyjściowe przez identyfikator y, zobacz [Metryki oceny dla klasyfikacji binarnej](resources/metrics.md#evaluation-metrics-for-binary-classification).
+Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla klasyfikacji binarnej](resources/metrics.md#evaluation-metrics-for-binary-classification).
 
 ### <a name="metrics-for-multi-class-classification-models"></a>Metryki dla modeli klasyfikacji wieloklasowej
 
-Poniżej przedstawiono wieloklasową listę metryk zadań ml klasyfikacji dla pięciu najlepszych modeli znalezionych przez wiersz wiersza wiersza:
+Poniżej przedstawiono listę metryk zadań klasyfikacji wieloklasowych dla pierwszych pięciu modeli znalezionych przez interfejs wiersza polecenia:
 
 ![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Aby zbadać i zrozumieć metryki, które są dane wyjściowe przez wiersz wiersza wiersza wiersza, zobacz [Metryki oceny dla klasyfikacji wieloklasowej](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla klasyfikacji wieloklasowej](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Metryki dla modeli regresji i rekomendacji
 
-Model regresji dobrze pasuje do danych, jeśli różnice między obserwowanymi wartościami a przewidywanymi wartościami modelu są małe i bezstronne. Regresja można ocenić za pomocą niektórych metryk.
+Model regresji dopasowuje się do danych, jeśli różnice między obserwowanymi wartościami i wartościami przewidywanymi przez model są małe i nieobciążone. Regresję można ocenić przy użyciu określonych metryk.
 
-Zobaczysz podobną listę danych dla najlepszych pięciu modeli jakości znalezionych przez cli. W tym konkretnym przypadku związane z zadaniem regresji ML:
+Zostanie wyświetlona podobna lista metryk dla najlepiej najlepszych pięciu modeli jakości dostępnych w interfejsie wiersza polecenia. W tym konkretnym przypadku związanego z zadaniem regresji ML:
 
 ![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
-Aby zbadać i zrozumieć metryki, które są dane wyjściowe przez linie cli, zobacz [Metryki oceny regresji](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
+Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla regresji](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Jak zainstalować narzędzie ML.NET CLI](how-to-guides/install-ml-net-cli.md)
-- [Samouczek: Analizowanie tonacji przy użyciu interfejsu ML.NET interfejsu i funkcji interfejsu i analizy](tutorials/sentiment-analysis-cli.md)
-- [ML.NET odwołanie do polecenia CLI](reference/ml-net-cli-reference.md)
-- [Telemetria w ML.NET CLI](resources/ml-net-cli-telemetry.md)
+- [Jak zainstalować narzędzie interfejsu wiersza polecenia ML.NET](how-to-guides/install-ml-net-cli.md)
+- [Samouczek: analizowanie tonacji przy użyciu interfejsu wiersza polecenia ML.NET](tutorials/sentiment-analysis-cli.md)
+- [Dokumentacja poleceń interfejsu wiersza polecenia ML.NET](reference/ml-net-cli-reference.md)
+- [Dane telemetryczne w interfejsie wiersza polecenia ML.NET](resources/ml-net-cli-telemetry.md)

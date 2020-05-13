@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 43f3c1dd866b98bff51b375a11e28727e41d3ead
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d9269339e8e2ae8d00da701b015aa30cd51cbef3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793049"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213377"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData — Metoda
 Prosi debugera o zwrócenie pełnej ścieżki do modułu, którego metadane są wymagane do ukończenia operacji wymaganej przez debuger.  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>Parametry  
  `wszImagePath`  
- podczas Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku. Jeśli pełna ścieżka nie jest dostępna, nazwa i rozszerzenie pliku (*filename*. *rozszerzenie*).  
+ podczas Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku. Jeśli pełna ścieżka nie jest dostępna, nazwa i rozszerzenie pliku (*filename*.* rozszerzenie*).  
   
  `dwImageTimeStamp`  
  podczas Sygnatura czasowa z nagłówków pliku PE obrazu. Ten parametr może być potencjalnie używany dla wyszukiwania serwera symboli ([SymSrv](/windows/desktop/debug/using-symsrv)).  
@@ -50,40 +50,40 @@ HRESULT GetMetaData(
  podczas Rozmiar obrazu z nagłówków pliku PE. Ten parametr może być potencjalnie używany dla wyszukiwania SymSrv.  
   
  `cchPathBuffer`  
- podczas Liczba znaków w `wszPathBuffer`.  
+ podczas Liczba znaków w `wszPathBuffer` .  
   
  `pcchPathBuffer`  
- określoną Liczba `WCHAR`s zapisywana do `wszPathBuffer`.  
+ określoną Liczba `WCHAR` s zapisywana w `wszPathBuffer` .  
   
- Jeśli metoda zwraca E_NOT_SUFFICIENT_BUFFER, zawiera liczbę `WCHAR`s wymaganych do przechowania ścieżki.  
+ Jeśli metoda zwraca E_NOT_SUFFICIENT_BUFFER, zawiera liczbę elementów `WCHAR` wymaganych do przechowania ścieżki.  
   
  `wszPathBuffer`  
  określoną Wskaźnik do buforu, do którego debuger skopiuje pełną ścieżkę pliku zawierającego żądane metadane.  
   
- Flaga `ofReadOnly` z wyliczenia [CorOpenFlags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) jest używana do żądania dostępu tylko do odczytu do metadanych w tym pliku.  
+ `ofReadOnly`Flaga z wyliczenia [CorOpenFlags —](../metadata/coropenflags-enumeration.md) jest używana do żądania dostępu tylko do odczytu do metadanych w tym pliku.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody. Wszystkie inne błędy HRESULT wskazują, że plik nie jest możliwy do pobierania.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zakończony znakiem null.|  
-|E_NOT_SUFFICIENT_BUFFER|Bieżący rozmiar `wszPathBuffer` nie jest wystarczający, aby pomieścić pełną ścieżkę. W tym przypadku `pcchPathBuffer` zawiera wymaganą liczbę `WCHAR`s, w tym kończący znak null, a `GetMetaData` jest wywoływana po raz drugi z żądanym rozmiarem buforu.|  
+|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer`zawiera pełną ścieżkę do pliku i jest zakończony znakiem null.|  
+|E_NOT_SUFFICIENT_BUFFER|Bieżący rozmiar `wszPathBuffer` nie jest wystarczający do przechowywania pełnej ścieżki. W tym przypadku `pcchPathBuffer` zawiera wymaganą liczbę `WCHAR` s, w tym kończący znak null, i `GetMetaData` jest wywoływana po raz drugi z żądanym rozmiarem buforu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli `wszImagePath` zawiera pełną ścieżkę do modułu ze zrzutu, określa ścieżkę do komputera, na którym został zebrany zrzut. Plik może nie istnieć w tej lokalizacji lub w ścieżce może być przechowywany nieprawidłowy plik o takiej samej nazwie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugThread4, interfejs](icordebugthread4-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugThread4 — Interfejs](icordebugthread4-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

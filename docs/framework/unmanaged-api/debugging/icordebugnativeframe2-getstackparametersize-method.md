@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: ca742ba9e89e1d189cfa38dead314df0d8b4e9d1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b88b3907eb555050de93f35411629b2bd30c7375
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792759"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212948"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize — Metoda
 Zwraca skumulowany rozmiar parametrów na stosie w systemach operacyjnych x86.  
@@ -35,32 +35,32 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
  `pSize`  
  określoną Wskaźnik do skumulowanego rozmiaru parametrów na stosie.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Rozmiar stosu został pomyślnie zwrócony.|  
-|S_FALSE|`GetStackParameterSize` został wywołany na platformie innej niż x86.|  
+|S_FALSE|`GetStackParameterSize`została wywołana na platformie innej niż x86.|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize` jest `null`.|  
+|E_INVALIDARG|`pSize`Jest `null` .|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Metody [ICorDebugStackWalk](icordebugstackwalk-interface.md) nie dostosowują wskaźnika stosu dla parametrów, które są wypychane na stosie. Zamiast tego można użyć wartości zwracanej przez `GetStackParameterSize`, aby dostosować Wskaźnik stosu do inicjatora natywnego, który dostosowuje parametry.  
+ Metody [ICorDebugStackWalk](icordebugstackwalk-interface.md) nie dostosowują wskaźnika stosu dla parametrów, które są wypychane na stosie. Zamiast tego można użyć wartości zwracanej przez, `GetStackParameterSize` Aby dostosować Wskaźnik stosu do natywnego odwinięcia, który dostosowuje parametry.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugNativeFrame2, interfejs](icordebugnativeframe2-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugNativeFrame2 — Interfejs](icordebugnativeframe2-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

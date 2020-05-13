@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 9153503fc114b0e4052265fca7c9399510d687ef
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 499e1fd859a66bb6992c6d02a46e38c514503bd8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792317"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205586"
 ---
-# <a name="icordebugprocess5gettypeid-method"></a><span data-ttu-id="2e3d1-102">ICorDebugProcess5::GetTypeID — Metoda</span><span class="sxs-lookup"><span data-stu-id="2e3d1-102">ICorDebugProcess5::GetTypeID Method</span></span>
-<span data-ttu-id="2e3d1-103">Konwertuje adres obiektu na identyfikator [COR_TYPEID](cor-typeid-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="2e3d1-103">Converts an object address to a [COR_TYPEID](cor-typeid-structure.md) identifier.</span></span>  
+# <a name="icordebugprocess5gettypeid-method"></a><span data-ttu-id="2b8b8-102">ICorDebugProcess5::GetTypeID — Metoda</span><span class="sxs-lookup"><span data-stu-id="2b8b8-102">ICorDebugProcess5::GetTypeID Method</span></span>
+<span data-ttu-id="2b8b8-103">Konwertuje adres obiektu na identyfikator [COR_TYPEID](cor-typeid-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="2b8b8-103">Converts an object address to a [COR_TYPEID](cor-typeid-structure.md) identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e3d1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2e3d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b8b8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2b8b8-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetTypeID(  
@@ -36,25 +36,25 @@ HRESULT GetTypeID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e3d1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2e3d1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2b8b8-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2b8b8-105">Parameters</span></span>  
  `obj`  
- <span data-ttu-id="2e3d1-106">podczas Adres obiektu.</span><span class="sxs-lookup"><span data-stu-id="2e3d1-106">[in] The object address.</span></span>  
+ <span data-ttu-id="2b8b8-106">podczas Adres obiektu.</span><span class="sxs-lookup"><span data-stu-id="2b8b8-106">[in] The object address.</span></span>  
   
  `pId`  
- <span data-ttu-id="2e3d1-107">Wskaźnik do wartości [COR_TYPEID](cor-typeid-structure.md) , która identyfikuje obiekt.</span><span class="sxs-lookup"><span data-stu-id="2e3d1-107">A pointer to the [COR_TYPEID](cor-typeid-structure.md) value that identifies the object.</span></span>  
+ <span data-ttu-id="2b8b8-107">Wskaźnik do wartości [COR_TYPEID](cor-typeid-structure.md) , która identyfikuje obiekt.</span><span class="sxs-lookup"><span data-stu-id="2b8b8-107">A pointer to the [COR_TYPEID](cor-typeid-structure.md) value that identifies the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2e3d1-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2e3d1-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b8b8-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2b8b8-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e3d1-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2e3d1-109">Requirements</span></span>  
- <span data-ttu-id="2e3d1-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e3d1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b8b8-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2b8b8-109">Requirements</span></span>  
+ <span data-ttu-id="2b8b8-110">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b8b8-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e3d1-111">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="2e3d1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2b8b8-111">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="2b8b8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2e3d1-112">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="2e3d1-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b8b8-112">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="2b8b8-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e3d1-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e3d1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="2b8b8-113">**.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b8b8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e3d1-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2e3d1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b8b8-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2b8b8-114">See also</span></span>
 
-- [<span data-ttu-id="2e3d1-115">ICorDebugProcess5, interfejs</span><span class="sxs-lookup"><span data-stu-id="2e3d1-115">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
-- [<span data-ttu-id="2e3d1-116">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="2e3d1-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="2b8b8-115">ICorDebugProcess5 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="2b8b8-115">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="2b8b8-116">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="2b8b8-116">Debugging Interfaces</span></span>](debugging-interfaces.md)

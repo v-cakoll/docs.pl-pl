@@ -6,26 +6,26 @@ no-loc:
 - dotnet remove package
 - dotnet list package
 ms.date: 02/25/2020
-ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b77acc7d4f03a45784f753d3daaa9810f110a6ac
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795550"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205952"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Zarządzanie zależnościami w aplikacjach .NET Core
 
 W tym artykule wyjaśniono, jak dodawać i usuwać zależności, edytując plik projektu lub korzystając z interfejsu wiersza polecenia.
 
-## <a name="the-packagereference-element"></a>Element \<> PackageReference
+## <a name="the-packagereference-element"></a>\<Element> PackageReference
 
-Element `<PackageReference>` pliku projektu ma następującą strukturę:
+`<PackageReference>`Element pliku projektu ma następującą strukturę:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Ten `Include` ATRYBUT określa identyfikator pakietu, który ma zostać dodany do projektu. Ten `Version` atrybut określa wersję do pobrania. Wersje są określone jako [reguły wersji programu NuGet](/nuget/create-packages/dependency-versions#version-ranges).
+Ten `Include` atrybut określa identyfikator pakietu, który ma zostać dodany do projektu. Ten `Version` atrybut określa wersję do pobrania. Wersje są określone jako [reguły wersji programu NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
 > Jeśli nie znasz składni pliku projektu, zapoznaj się z dokumentacją [projektu programu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) , aby uzyskać więcej informacji.
@@ -36,11 +36,11 @@ Użyj warunków, aby dodać zależność, która jest dostępna tylko w konkretn
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Zależność w poprzednim przykładzie będzie prawidłowa tylko wtedy, gdy kompilacja ma miejsce dla danego elementu docelowego. `$(TargetFramework)` W warunku jest właściwość programu MSBuild, która jest ustawiana w projekcie. W przypadku najczęściej używanych aplikacji platformy .NET Core nie trzeba tego robić.
+Zależność w poprzednim przykładzie będzie prawidłowa tylko wtedy, gdy kompilacja ma miejsce dla danego elementu docelowego. `$(TargetFramework)`W warunku jest właściwość programu MSBuild, która jest ustawiana w projekcie. W przypadku najczęściej używanych aplikacji platformy .NET Core nie trzeba tego robić.
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>Dodaj zależność, edytując plik projektu
 
-Aby dodać zależność, Dodaj `<PackageReference>` element wewnątrz `<ItemGroup>` elementu. Można dodać do istniejącej `<ItemGroup>` lub utworzyć nową. W poniższym przykładzie zastosowano domyślny projekt aplikacji konsolowej utworzony przez `dotnet new console`:
+Aby dodać zależność, Dodaj `<PackageReference>` element wewnątrz `<ItemGroup>` elementu. Można dodać do istniejącej `<ItemGroup>` lub utworzyć nową. W poniższym przykładzie zastosowano domyślny projekt aplikacji konsolowej utworzony przez `dotnet new console` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -76,7 +76,7 @@ Aby usunąć zależność, uruchom [dotnet remove package](dotnet-remove-package
 dotnet remove package Microsoft.EntityFrameworkCore
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-* [Odwołania do pakietu w plikach projektu](../project-sdk/msbuild-props.md#reference-properties)
+* [Odwołania do pakietu w plikach projektu](../project-sdk/msbuild-props.md#reference-properties-and-items)
 * [dotnet list packagedotyczące](dotnet-remove-package.md)

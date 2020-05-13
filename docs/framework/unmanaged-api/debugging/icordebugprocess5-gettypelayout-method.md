@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-ms.openlocfilehash: 306d881c05c2fcdb15a53a439bfce6eff3afffa8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 861af4ba9c6f4d4bdb16abb9d4e1fd79debac59b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792314"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205577"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout — Metoda
 Pobiera informacje o układzie obiektu w pamięci na podstawie jego identyfikatora typu.  
@@ -39,19 +39,19 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
  określoną Wskaźnik do struktury [COR_TYPE_LAYOUT](cor-type-layout-structure.md) , która zawiera informacje o układzie obiektu w pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `ICorDebugProcess5::GetTypeLayout` zapewnia informacje o obiekcie na podstawie jego [COR_TYPEID](cor-typeid-structure.md), który jest zwracany przez wiele innych metod [ICorDebugProcess5](icordebugprocess5-interface.md) . Informacje są dostarczane przez strukturę [COR_TYPE_LAYOUT](cor-type-layout-structure.md) , która jest wypełniana przez metodę.  
+ `ICorDebugProcess5::GetTypeLayout`Metoda zawiera informacje o obiekcie w oparciu o [COR_TYPEID](cor-typeid-structure.md), który jest zwracany przez wiele innych metod [ICorDebugProcess5](icordebugprocess5-interface.md) . Informacje są dostarczane przez strukturę [COR_TYPE_LAYOUT](cor-type-layout-structure.md) , która jest wypełniana przez metodę.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [COR_TYPE_LAYOUT, struktura](cor-type-layout-structure.md)
-- [ICorDebugProcess5, interfejs](icordebugprocess5-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [COR_TYPE_LAYOUT — Struktura](cor-type-layout-structure.md)
+- [ICorDebugProcess5 — Interfejs](icordebugprocess5-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

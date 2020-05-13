@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-ms.openlocfilehash: 0c3059697014cea33081f6cb81b9d93c7d028c2e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0e9ed8054711297173e880c9eecb12c3f5bd0a68
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777467"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207137"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess — Metoda
 Powiadamia debuger, gdy proces został dołączony lub uruchomiony po raz pierwszy.  
@@ -38,17 +38,17 @@ HRESULT CreateProcess (
  podczas Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, który został dołączony lub uruchomiony.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda nie jest wywoływana do momentu zainicjowania środowiska uruchomieniowego języka wspólnego. Większość metod [ICorDebug](icordebug-interface.md) zwróci CORDBG_E_NOTREADY przed wywołaniem zwrotnym `CreateProcess`.  
+ Ta metoda nie jest wywoływana do momentu zainicjowania środowiska uruchomieniowego języka wspólnego. Większość metod [ICorDebug](icordebug-interface.md) zwróci wartość CORDBG_E_NOTREADY przed `CreateProcess` wywołaniem zwrotnym.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback — Interfejs](icordebugmanagedcallback-interface.md)

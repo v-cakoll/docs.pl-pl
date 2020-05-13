@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-ms.openlocfilehash: cd1882bdfca1258889514a041726a59435e126b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 219aa27296dffa525bf3e2b836825437a8ce77b0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793206"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207653"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML — Metoda
 Pobiera pełny strumień XML skojarzony z zarządzanym asystentem debugowania (MDA) reprezentowany przez [ICorDebugMDA](icordebugmda-interface.md).  
@@ -38,7 +38,7 @@ HRESULT GetXML (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- podczas Rozmiar tablicy `szName`.  
+ podczas Rozmiar `szName` tablicy.  
   
  `pcchName`  
  określoną Wskaźnik do długości strumienia XML.  
@@ -47,18 +47,18 @@ HRESULT GetXML (
  określoną Tablica, w której ma być przechowywany strumień XML. Tablica może być pusta.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetXML` może mieć wpływ na wydajność, w zależności od rozmiaru skojarzonego strumienia XML.  
+ `GetXML`Metoda może potencjalnie wpłynąć na wydajność, w zależności od rozmiaru skojarzonego strumienia XML.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugMDA, interfejs](icordebugmda-interface.md)
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugMDA — Interfejs](icordebugmda-interface.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -17,29 +17,30 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff40e8759b1732d4ad228b1414f96f9c37e5ac5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180599"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209776"
 ---
-# <a name="using-udp-services"></a>Stosowanie usług UDP
-Klasa <xref:System.Net.Sockets.UdpClient> komunikuje się z usługami sieciowymi przy użyciu protokołu UDP. Właściwości i metody <xref:System.Net.Sockets.UdpClient> klasy abstrakcyjne szczegóły tworzenia <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu UDP.
+# <a name="use-udp-services"></a>Korzystanie z usług UDP
 
-User Datagram Protocol (UDP) to prosty protokół, który dokłada wszelkich starań, aby dostarczać dane do zdalnego hosta. Jednak ponieważ protokół UDP jest protokołem bezłączenia, datagramy UDP wysyłane do zdalnego punktu końcowego nie są gwarantowane do przybycia, ani nie są gwarantowane, aby dotrzeć w tej samej kolejności, w której są wysyłane. Aplikacje korzystające z protokołu UDP muszą być przygotowane do obsługi brakujących, duplikatów i datagramów pozasekwowania.
+<xref:System.Net.Sockets.UdpClient>Klasa komunikuje się z usługami sieciowymi przy użyciu protokołu UDP. Właściwości i metody <xref:System.Net.Sockets.UdpClient> klasy są abstrakcyjne Szczegóły tworzenia <xref:System.Net.Sockets.Socket> żądania i otrzymywania danych przy użyciu protokołu UDP.
 
-Aby wysłać datagram przy użyciu protokołu UDP, musisz znać adres sieciowy urządzenia sieciowego obsługującego usługę, której potrzebujesz, oraz numer portu UDP używany do komunikowania się przez usługę. Urząd numerów przypisanych do Internetu (Iana) definiuje numery portów dla usług wspólnych (patrz [Nazwa usługi i Rejestr numerów portów protokołu transportu).](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) Usługi nienajmowe na liście Iana mogą mieć numery portów w zakresie od 1024 do 65 535.
+UDP (User Datagram Protocol) to prosty protokół, który najlepiej nadaje się do dostarczania danych do hosta zdalnego. Ponieważ jednak protokół UDP jest protokołem bezpołączeni, datagramy UDP wysyłane do zdalnego punktu końcowego nie są gwarantowane, ani nie są gwarantowane w takiej samej kolejności, w jakiej zostały wysłane. Aplikacje korzystające z protokołu UDP muszą być przygotowane do obsługi brakujących, zduplikowanych i nieaktualnych datagramów.
 
-Specjalne adresy sieciowe są używane do obsługi komunikatów emisji UDP w sieciach opartych na protokãoła IP. W poniższej dyskusji użyto rodziny adresów IP w wersji 4 używanej w Internecie jako przykładu.
+Aby wysłać datagram przy użyciu protokołu UDP, musisz znać adres sieciowy urządzenia sieciowego obsługującego potrzebną usługę oraz numer portu UDP, którego usługa używa do komunikacji. Organizacja Internet Assigned Numbers Authority (IANA) definiuje numery portów dla typowych usług (patrz [nazwa usługi i rejestr numeru portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Usługi, które nie znajdują się na liście IANA, mogą mieć numery portów z zakresu od 1 024 do 65 535.
 
-Adresy IP w wersji 4 używają 32 bitów do określania adresu sieciowego. W przypadku adresów klasy C przy użyciu maski sieciowej 255.255.255.0 bity te są podzielone na cztery oktety. Wyrażone w przecinku cztery oktety tworzą znaną notację kropkowana-quad, taką jak 192.168.100.2. Pierwsze dwa oktety (192.168 w tym przykładzie) tworzą numer sieci, trzeci oktet (100) definiuje podsieć, a końcowy oktet (2) jest identyfikatorem hosta.
+Specjalne adresy sieciowe są używane do obsługi komunikatów emisji UDP w sieciach opartych na protokole IP. W poniższej dyskusji użyto rodziny adresów IP w wersji 4 używanej w Internecie jako przykładu.
 
-Ustawienie wszystkich bitów adresu IP na jeden lub 255.255.255.255, tworzy ograniczony adres emisji. Wysłanie datagramu UDP na ten adres dostarcza wiadomość do dowolnego hosta w segmencie sieci lokalnej. Ponieważ routery nigdy nie przesyłają dalej wiadomości wysyłanych na ten adres, tylko hosty w segmencie sieci odbierają komunikat emisji.
+Adresy IP w wersji 4 używają 32 bitów do określenia adresu sieciowego. W przypadku adresów klasy C przy użyciu maski sieci 255.255.255.0 te bity są rozdzielone na cztery oktety. W przypadku wartości wyrażonej w postaci dziesiętnej Cztery oktety tworzą dobrze znaną notację kropkowaną, taką jak 192.168.100.2. Pierwsze dwa oktety (192,168 w tym przykładzie) tworzą numer sieci, Trzeci oktet (100) definiuje podsieć, a końcowy oktet (2) jest identyfikatorem hosta.
 
-Emisje można kierować do określonych części sieci, ustawiając wszystkie bity identyfikatora hosta. Na przykład, aby wysłać emisję do wszystkich hostów w sieci identyfikowanych przez adresy IP zaczynające się od 192.168.1, użyj adresu 192.168.1.255.
+Ustawienie wszystkich bitów adresu IP na jeden lub 255.255.255.255 powoduje ograniczenie adresu emisji. Wysyłanie datagramu UDP na ten adres zawiera komunikat do dowolnego hosta w segmencie sieci lokalnej. Ponieważ routery nigdy nie przesyłają dalej komunikatów wysyłanych do tego adresu, tylko hosty w segmencie sieci odbierają komunikat emisji.
 
-Poniższy przykład kodu <xref:System.Net.Sockets.UdpClient> używa do nasłuchiwać datagramów UDP na porcie 11,000. Klient odbiera ciąg wiadomości i zapisuje wiadomość do konsoli.
+Emisje mogą być kierowane do określonych części sieci, ustawiając wszystkie bity identyfikatora hosta. Na przykład aby wysłać emisję do wszystkich hostów w sieci identyfikowanych przez adresy IP zaczynające się od 192.168.1, użyj adresu 192.168.1.255.
+
+Poniższy przykład kodu używa metody, <xref:System.Net.Sockets.UdpClient> aby nasłuchiwać datagramów UDP na porcie 11 000. Klient odbiera ciąg komunikatu i zapisuje komunikat w konsoli programu.
 
 ```vb
 Imports System.Net
@@ -115,7 +116,7 @@ public class UDPListener
 }
 ```
 
-Poniższy przykład kodu <xref:System.Net.Sockets.Socket> używa do wysyłania datagramów UDP do adresu emisji kierowanej 192.168.1.255 przy użyciu portu 11,000. Klient wysyła ciąg komunikatu określony w wierszu polecenia.
+Poniższy przykład kodu używa <xref:System.Net.Sockets.Socket> do wysyłania datagramów UDP do bezpośredniego adresu emisji 192.168.1.255, przy użyciu portu 11 000. Klient wysyła ciąg komunikatu określony w wierszu polecenia.
 
 ```vb
 Imports System.Net

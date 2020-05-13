@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125305"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210041"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly — Metoda
 
@@ -38,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parametry
 
 `tkAssemblyRef`\
-podczas Wartość `mdToken`, która odwołuje się do zestawu.
+podczas `mdToken`Wartość, która odwołuje się do zestawu.
 
 `ppAssembly`\
 określoną Wskaźnik do adresu obiektu ICorDebugAssembly, który reprezentuje zestaw.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli zestaw nie jest już załadowany po wywołaniu `ResolveAssembly`, zwracana jest wartość HRESULT elementu CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+Jeśli zestaw nie jest już załadowany, gdy `ResolveAssembly` jest wywoływana, zwracana jest wartość HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorDebug. idl, CorDebug. h
 
 **Biblioteka:** CorGuids. lib
 
-**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

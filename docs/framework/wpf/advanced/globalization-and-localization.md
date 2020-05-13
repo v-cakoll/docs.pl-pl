@@ -11,31 +11,31 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: d5e51e86c4c37c882c8a061e60d2d21587d0d3d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559425"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212207"
 ---
 # <a name="globalization-and-localization"></a>Lokalizacja i globalizacja
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia szeroką pomoc techniczną dla opracowywania aplikacji gotowych do użycia na całym świecie.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia szeroką pomoc techniczną dla opracowywania aplikacji gotowych do użycia na całym świecie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)  
+ [Przegląd Lokalizacja i globalizacja WPF](wpf-globalization-and-localization-overview.md)  
  [Globalizacja dla WPF](globalization-for-wpf.md)  
- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)  
- [Atrybuty lokalizacji i komentarze](localization-attributes-and-comments.md)  
- [Przegląd dwukierunkowych funkcji WPF](bidirectional-features-in-wpf-overview.md)  
- [Tematy z instrukcjami](globalization-and-localization-how-to-topics.md)  
+ [Przegląd Użyj automatycznego układu](use-automatic-layout-overview.md)  
+ [Lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md)  
+ [Przegląd Dwukierunkowe funkcje WPF](bidirectional-features-in-wpf-overview.md)  
+ [— Tematy porad](how-to-localize-an-application.md)  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [xml:lang, obsługa w XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
+ [xml:lang — Obsługa w XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne

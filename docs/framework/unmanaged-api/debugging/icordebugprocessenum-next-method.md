@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ac7077c-8d88-49c4-b360-b3af0c541c63
 topic_type:
 - apiref
-ms.openlocfilehash: 0666becb5a34688d3f4cf5bddd1e2fa71785b38a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d00a5f71ac7e47d78deebca0e46350e465964c72
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139787"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210101"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next — Metoda
 Pobiera określoną liczbę wystąpień ICorDebugProcess z wyliczenia, rozpoczynając od bieżącego położenia.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba wystąpień `ICorDebugProcess` do pobrania.  
+ podczas Liczba `ICorDebugProcess` wystąpień do pobrania.  
   
  `processes`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugProcess`, który reprezentuje proces.  
+ określoną Tablica wskaźników, z których każdy wskazuje `ICorDebugProcess` obiekt, który reprezentuje proces.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugProcess`. Ta wartość może być równa null, jeśli `celt` to jeden.  
+ określoną Wskaźnik do liczby `ICorDebugProcess` faktycznie zwróconych wystąpień. Ta wartość może być równa null, jeśli `celt` jest taka.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

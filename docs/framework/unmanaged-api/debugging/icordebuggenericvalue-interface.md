@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794470"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209789"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue, interfejs
 
@@ -29,11 +29,11 @@ Podklasa elementu "ICorDebugValue", która odnosi się do wszystkich wartości. 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetValue, metoda](icordebuggenericvalue-getvalue-method.md)|Kopiuje wartość do określonego buforu.|  
-|[SetValue, metoda](icordebuggenericvalue-setvalue-method.md)|Kopiuje nową wartość z określonego buforu.|  
+|[GetValue — Metoda](icordebuggenericvalue-getvalue-method.md)|Kopiuje wartość do określonego buforu.|  
+|[SetValue — Metoda](icordebuggenericvalue-setvalue-method.md)|Kopiuje nową wartość z określonego buforu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugGenericValue` jest interfejsem podrzędnym, ponieważ nie jest zdalnie.  
+ `ICorDebugGenericValue`jest interfejsem podrzędnym, ponieważ nie jest zdalnie.  
   
  W przypadku typów referencyjnych wartością jest odwołanie, a nie zawartość odwołania.  
   
@@ -43,14 +43,14 @@ Podklasa elementu "ICorDebugValue", która odnosi się do wszystkich wartości. 
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

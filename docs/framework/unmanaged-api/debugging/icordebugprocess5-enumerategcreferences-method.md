@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178620"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209698"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences — Metoda
-Pobiera moduł wyliczania dla wszystkich obiektów, które mają być zbierane śmieci w procesie.  
+Pobiera moduł wyliczający dla wszystkich obiektów, które mają być zbierane jako elementy bezużyteczne w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +36,24 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Parametry  
  `enumerateWeakReferences`  
- [w] Wartość logiczna, która wskazuje, czy słabe odwołania mają być również wyliczone. Jeśli `enumerateWeakReferences` `true`jest `ppEnum` , wyliczacz zawiera zarówno silne odwołania i słabe odwołania. Jeśli `enumerateWeakReferences` `false`jest , wyliczacz zawiera tylko silne odwołania.  
+ podczas Wartość logiczna wskazująca, czy słabe odwołania są również wyliczane. Jeśli `enumerateWeakReferences` ma wartość `true` , `ppEnum` moduł wyliczający zawiera zarówno silne odwołania, jak i słabe odwołania. Jeśli `enumerateWeakReferences` ma wartość `false` , moduł wyliczający zawiera tylko silne odwołania.  
   
  `ppEnum`  
- [na zewnątrz] Wskaźnik do adresu [ICorDebugGCReferenceEnum,](icordebuggcreferenceenum-interface.md) który jest modułem wyliczacza dla obiektów, które mają być zbierane przez śmieci.  
+ określoną Wskaźnik na adres elementu [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) , który jest modułem wyliczającym dla obiektów, które mają być zbierane jako elementy bezużyteczne.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia określenie pełnego łańcucha rootowania dla dowolnego obiektu zarządzanego w procesie i może służyć do określenia, dlaczego obiekt jest nadal żywy.  
+ Ta metoda umożliwia określenie pełnego łańcucha katalogów głównych dla dowolnego obiektu zarządzanego w procesie i może służyć do określenia, dlaczego obiekt jest nadal aktywny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugProcess5, interfejs](icordebugprocess5-interface.md)
+- [ICorDebugProcess5 — Interfejs](icordebugprocess5-interface.md)
 - [Debugowanie — Interfejsy](debugging-interfaces.md)

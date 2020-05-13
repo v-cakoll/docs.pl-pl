@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2e0f284625e99215900c6aaab94e4eae611787ed
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788542"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212103"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2, interfejs
 
@@ -29,7 +29,7 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateTypeParameters, metoda](icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum, który zawiera <xref:System.Type> parametry w tej ramce.|  
+|[EnumerateTypeParameters, metoda](icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum, który zawiera <xref:System.Type> Parametry w tej ramce.|  
 |[RemapFunction, metoda](icordebugilframe2-remapfunction-method.md)|Ponownie mapuje edytowaną funkcję przez określenie nowego przesunięcia MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -38,14 +38,14 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

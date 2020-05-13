@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d715f5842bb7f75da5311d34bf7d4596f0801a92
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131021"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210283"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument — Metoda
 Pobiera wartość określonego argumentu w ramce stosu języka pośredniego (MSIL) firmy Microsoft.  
@@ -42,13 +42,13 @@ HRESULT GetArgument (
  określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje pobraną wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- Metody `GetArgument` można użyć w ramce stosu MSIL lub w ramce skompilowanej just-in-Time (JIT).  
+ `GetArgument`Metoda może być używana w ramce stosu MSIL lub w ramce skompilowanej just-in-Time (JIT).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

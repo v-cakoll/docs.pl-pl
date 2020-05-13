@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 660bc13e8109994f59444c0adebbc97f54de0b43
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095878"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207592"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue — Metoda
 Pobiera wartość określonego pola określonej klasy dla tej wartości obiektu.  
@@ -40,23 +40,23 @@ HRESULT GetFieldValue (
  podczas Wskaźnik do obiektu "ICorDebugClass", który reprezentuje klasę, dla której ma zostać pobrana wartość pola.  
   
  `fieldDef`  
- podczas Token `mdFieldDef`, który odwołuje się do metadanych opisujących pole.  
+ podczas `mdFieldDef`Token, który odwołuje się do metadanych opisujących pole.  
   
  `ppValue`  
  określoną Wskaźnik do obiektu "ICorDebugValue", który reprezentuje wartość określonego pola.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa określona w parametrze `pClass` musi znajdować się w hierarchii klasy wartości obiektu, a pole musi być polem tej klasy.  
+ Klasa określona w `pClass` parametrze musi znajdować się w hierarchii klasy wartości obiektu, a pole musi być polem tej klasy.  
   
- Metoda `GetFieldValue` nadal powiedzie się dla obiektów ogólnych i klas ogólnych. Na przykład, jeśli program webdictionary\<V > dziedziczy ze słownika\<String, V >, a wartość obiektu to typu webdictionary\<Int32 >, przekazanie obiektu `ICorDebugClass` dla słownika\<K, >\<słownika, ciąg Int32 >.  
+ `GetFieldValue`Metoda będzie nadal powiodła się dla obiektów ogólnych i klas ogólnych. Na przykład jeśli program webdictionary \<> dziedziczy od ciągu słownika \< ,> v, a wartość obiektu jest typu, \< Int32 słownika>, przekazanie `ICorDebugClass` obiektu dla słownika \< K, a program V> pomyślnie pobierze pole \< ciągu słownika, Int32>.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cacdccf5c27cd1d115134d49e754b4ace2870b72
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178910"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205161"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange — Metoda
 Pobiera bezwzględny zakres adresów tej ramki stosu.  
@@ -36,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametry  
  `pStart`  
- [na zewnątrz] Wskaźnik do, `CORDB_ADDRESS` który określa adres początkowy ramki stosu `ICorDebugFrame` reprezentowanej przez ten obiekt.  
+ określoną Wskaźnik do `CORDB_ADDRESS` obiektu, który określa adres początkowy ramki stosu reprezentowanej przez ten `ICorDebugFrame` obiekt.  
   
  `pEnd`  
- [na zewnątrz] Wskaźnik do, `CORDB_ADDRESS` który określa adres końcowy ramki stosu `ICorDebugFrame` reprezentowanej przez ten obiekt.  
+ określoną Wskaźnik do `CORDB_ADDRESS` obiektu, który określa adres końcowy ramki stosu reprezentowanej przez ten `ICorDebugFrame` obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres adresów stosu jest przydatne do piecing razem przeplotem ślady stosu zebrane z wielu aparatów debugowania. Zakres liczbowy nie zawiera żadnych informacji o zawartości ramki stosu. Ma znaczenie tylko dla porównania lokalizacji ramki stosu.  
+ Zakres adresów stosu jest przydatny do zszywania razem z przeplotem śladów stosu zebranych z wielu aparatów debugowania. Zakres liczbowy nie zawiera żadnych informacji o zawartości ramki stosu. Jest to zrozumiałe tylko dla porównania lokalizacji ramek stosu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

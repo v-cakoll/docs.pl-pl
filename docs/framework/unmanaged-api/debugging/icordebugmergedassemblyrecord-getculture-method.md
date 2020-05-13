@@ -1,15 +1,15 @@
 ---
-title: ICorDebugMergedAssemblyRecord::Metoda GetCulture
+title: 'ICorDebugMergedAssemblyRecord:: getculture — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: ad54a93b16e803170987dd56d8063669f7e67f94
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f73aac169cc048a87aca3bfc325cf8c6243012e9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178754"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207858"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::Metoda GetCulture
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: getculture — Metoda
 Pobiera ciąg nazwy kultury zestawu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -24,28 +24,28 @@ HRESULT GetCulture(
   
 ## <a name="parameters"></a>Parametry  
  `cchCulture`  
- [w] Liczba znaków w `szCulture` buforze.  
+ podczas Liczba znaków w `szCulture` buforze.  
   
  `pcchCulture`  
- [na zewnątrz] Liczba znaków faktycznie zapisanych `szCulture` w buforze.  
+ określoną Liczba znaków rzeczywiście zapisywana w `szCulture` buforze.  
   
  `szCulture`  
- [na zewnątrz] Tablica znaków zawierająca nazwę kultury.  
+ określoną Tablica znaków, która zawiera nazwę kultury.  
   
 ## <a name="remarks"></a>Uwagi  
- Nazwa kultury jest unikatowy ciąg, który identyfikuje kultury, takich jak "en-US" (dla kultury angielski (Stany Zjednoczone) lub "neutralny" (dla kultury neutralnej).  
+ Nazwa kultury jest unikatowym ciągiem, który identyfikuje kulturę, na przykład "en-US" (dla kultury angielskiej (Stany Zjednoczone)) lub "neutralną" (dla kultury neutralnej).  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 

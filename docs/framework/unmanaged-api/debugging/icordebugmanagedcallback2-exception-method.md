@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781532"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210205"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception — Metoda
 Powiadamia debugera o rozpoczęciu wyszukiwania programu obsługi wyjątków.  
@@ -46,10 +46,10 @@ HRESULT Exception (
  podczas Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, w którym został zgłoszony wyjątek.  
   
  `pFrame`  
- podczas Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę określoną przez parametr `dwEventType`. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
+ podczas Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę określoną przez `dwEventType` parametr. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
   
  `nOffset`  
- podczas Liczba całkowita, która określa przesunięcie, zgodnie z parametrem `dwEventType`. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
+ podczas Liczba całkowita, która określa przesunięcie, zgodnie z `dwEventType` parametrem. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
   
  `dwEventType`  
  podczas Wartość wyliczenia CorDebugExceptionCallbackType —, która określa typ tego wywołania zwrotnego wyjątku.  
@@ -58,13 +58,13 @@ HRESULT Exception (
  podczas Wartość wyliczenia [CorDebugExceptionFlags —](cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie zwrotne `Exception` jest wywoływane w różnych punktach w fazie wyszukiwania procesu obsługi wyjątków. Oznacza to, że może być wywoływana więcej niż jeden raz podczas odwinięcia wyjątku.  
+ `Exception`Wywołanie zwrotne jest wywoływane w różnych punktach w fazie wyszukiwania procesu obsługi wyjątków. Oznacza to, że może być wywoływana więcej niż jeden raz podczas odwinięcia wyjątku.  
   
- Przetwarzany wyjątek można pobrać z obiektu ICorDebugThread, do którego odwołuje się parametr `pThread`.  
+ Przetwarzany wyjątek można pobrać z obiektu ICorDebugThread, do którego odwołuje się `pThread` parametr.  
   
- Konkretna ramka i przesunięcie są określane przez parametr `dwEventType` w następujący sposób:  
+ Konkretna ramka i przesunięcie są określane przez `dwEventType` parametr w następujący sposób:  
   
-|Wartość `dwEventType`|Wartość `pFrame`|Wartość `nOffset`|  
+|Wartość`dwEventType`|Wartość`pFrame`|Wartość`nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Ramka, która wywołała wyjątek.|Wskaźnik instrukcji w ramce.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Ramka kodu użytkownika najbliżej punktu zgłoszonego wyjątku.|Wskaźnik instrukcji w ramce.|  
@@ -72,15 +72,15 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Definicji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugManagedCallback2, interfejs](icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 — Interfejs](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback — Interfejs](icordebugmanagedcallback-interface.md)

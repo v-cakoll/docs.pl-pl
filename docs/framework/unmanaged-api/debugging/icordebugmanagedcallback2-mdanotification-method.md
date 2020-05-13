@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793295"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208528"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification — Metoda
 Zapewnia powiadomienie, że wykonanie kodu napotkało asystenta zarządzanego debugowania (MDA) w debugowanej aplikacji.  
@@ -58,19 +58,19 @@ HRESULT MDANotification(
   
  MDA może zostać umieszczona w kolejce i wyzwolona wkrótce po wystąpieniu MDA. Taka sytuacja może wystąpić, jeśli środowisko uruchomieniowe musi czekać, aż osiągnie bezpieczny punkt do uruchomienia MDA, zamiast wyzwalać zdarzenie MDA po jego napotkaniu. Oznacza to również, że środowisko uruchomieniowe może uruchamiać wiele MDA w jednym zestawie wywołań zwrotnych umieszczonych w kolejce (podobnie jak w przypadku operacji "Attach").  
   
- Debuger powinien zwolnić odwołanie do wystąpienia `ICorDebugMDA` natychmiast po powrocie z wywołania zwrotnego `MDANotification`, aby umożliwić środowisku CLR odtwarzanie pamięci używanej przez zdarzenie MDA. Zwolnienie wystąpienia może zwiększyć wydajność w przypadku uruchamiania wielu MDA.  
+ Debuger powinien zwolnić odwołanie do `ICorDebugMDA` wystąpienia natychmiast po powrocie z `MDANotification` wywołania zwrotnego, aby umożliwić środowisku CLR odtwarzanie pamięci używanej przez zdarzenie MDA. Zwolnienie wystąpienia może zwiększyć wydajność w przypadku uruchamiania wielu MDA.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [ICorDebugManagedCallback2, interfejs](icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 — Interfejs](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback — Interfejs](icordebugmanagedcallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792571"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210465"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext — Metoda
 Ustawia kontekst dla danego wątku w tym procesie.  
@@ -40,7 +40,7 @@ HRESULT SetThreadContext(
  podczas Identyfikator wątku, dla którego ma zostać ustawiony kontekst.  
   
  `contextSize`  
- podczas Rozmiar tablicy `context`.  
+ podczas Rozmiar `context` tablicy.  
   
  `context`  
  podczas Tablica bajtów opisująca kontekst wątku.  
@@ -48,17 +48,17 @@ HRESULT SetThreadContext(
  Kontekst określa architekturę procesora, w którym wykonywany jest wątek.  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger powinien wywołać tę metodę, a nie funkcję Win32 `SetThreadContext`, ponieważ wątek może być w stanie "przejęte", w którym jego kontekst został tymczasowo zmieniony. Ta metoda powinna być używana tylko wtedy, gdy wątek znajduje się w kodzie natywnym. Użyj [ICorDebugRegisterSet](icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym. Nie trzeba zmieniać kontekstu wątku podczas zdarzenia debugowania poza pasmem (OOB).  
+ Debuger powinien wywołać tę metodę, a nie funkcję Win32 `SetThreadContext` , ponieważ wątek może być w stanie "przejęte", w którym jego kontekst został tymczasowo zmieniony. Ta metoda powinna być używana tylko wtedy, gdy wątek znajduje się w kodzie natywnym. Użyj [ICorDebugRegisterSet](icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym. Nie trzeba zmieniać kontekstu wątku podczas zdarzenia debugowania poza pasmem (OOB).  
   
  Przesyłane dane muszą być strukturą kontekstu dla bieżącej platformy.  
   
  Ta metoda może uszkodzić środowisko uruchomieniowe, jeśli jest używane nieprawidłowo.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

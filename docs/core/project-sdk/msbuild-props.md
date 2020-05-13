@@ -1,18 +1,18 @@
 ---
 title: Właściwości programu MSBuild dla Microsoft. NET. Sdk
-description: Odwołanie do właściwości programu MSBuild, które są zrozumiałe dla zestaw .NET Core SDK.
+description: Odwołanie do właściwości i elementów programu MSBuild, które są zrozumiałe dla zestaw .NET Core SDK.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795576"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206109"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>Właściwości programu MSBuild dla projektów zestaw .NET Core SDK
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>Dokumentacja programu MSBuild dla projektów zestaw .NET Core SDK
 
-Na tej stronie opisano właściwości programu MSBuild służące do konfigurowania projektów platformy .NET Core. Można określić *metadane* dla każdej właściwości jako elementy podrzędne właściwości.
+Ta strona jest odwołaniem do właściwości i elementów programu MSBuild, których można użyć do konfigurowania projektów platformy .NET Core.
 
 > [!NOTE]
 > Ta strona jest w toku i nie wyświetla wszystkich przydatnych właściwości programu MSBuild dla zestaw .NET Core SDK. Aby zapoznać się z listą typowych właściwości programu MSBuild, zobacz [typowe właściwości programu MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -25,7 +25,7 @@ Na tej stronie opisano właściwości programu MSBuild służące do konfigurowa
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework` Właściwość określa wersję platformy docelowej dla aplikacji, która niejawnie odwołuje się do [pakietu](../packages.md#metapackages). Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
+`TargetFramework`Właściwość określa wersję platformy docelowej dla aplikacji, która niejawnie odwołuje się do [pakietu](../packages.md#metapackages). Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -37,10 +37,10 @@ Aby uzyskać więcej informacji, zobacz [Platformy docelowe w projektach w stylu
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Użyj właściwości `TargetFrameworks` , jeśli chcesz, aby aplikacja była przeznaczona dla wielu platform. Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
+Użyj `TargetFrameworks` właściwości, jeśli chcesz, aby aplikacja była przeznaczona dla wielu platform. Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 > [!NOTE]
-> Ta właściwość jest ignorowana `TargetFramework` , jeśli określono (pojedynczo).
+> Ta właściwość jest ignorowana, jeśli `TargetFramework` określono (pojedynczo).
 
 ```xml
 <PropertyGroup>
@@ -53,9 +53,9 @@ Aby uzyskać więcej informacji, zobacz [Platformy docelowe w projektach w stylu
 ### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
 
 > [!NOTE]
-> Ta właściwość ma zastosowanie tylko do projektów `netstandard1.x`korzystających z programu. Nie dotyczy to projektów, które używają `netstandard2.x`.
+> Ta właściwość ma zastosowanie tylko do projektów korzystających z programu `netstandard1.x` . Nie dotyczy to projektów, które używają `netstandard2.x` .
 
-Użyj `NetStandardImplicitPackageVersion` właściwości, aby określić wersję platformy, która jest starsza niż wersja [pakietu](../packages.md#metapackages) . Plik projektu w poniższym przykładzie docelowym `netstandard1.3` , ale używa wersji 1.6.0. `NETStandard.Library`
+Użyj `NetStandardImplicitPackageVersion` właściwości, aby określić wersję platformy, która jest starsza niż wersja [pakietu](../packages.md#metapackages) . Plik projektu w poniższym przykładzie docelowym `netstandard1.3` , ale używa wersji 1.6.0 `NETStandard.Library` .
 
 ```xml
 <PropertyGroup>
@@ -66,7 +66,7 @@ Użyj `NetStandardImplicitPackageVersion` właściwości, aby określić wersję
 
 ## <a name="package-properties"></a>Właściwości pakietu
 
-Można określić właściwości, takie jak `PackageId`, `PackageVersion` `PackageIcon`,, `Title`i `Description` , aby opisać pakiet, który zostanie utworzony na podstawie projektu. Aby uzyskać informacje o tych i innych właściwościach, zobacz [pakiet Target](/nuget/reference/msbuild-targets#pack-target).
+Można określić właściwości, takie jak `PackageId` ,,, `PackageVersion` `PackageIcon` `Title` i, `Description` aby opisać pakiet, który zostanie utworzony na podstawie projektu. Aby uzyskać informacje o tych i innych właściwościach, zobacz [pakiet Target](/nuget/reference/msbuild-targets#pack-target).
 
 ```xml
 <PropertyGroup>
@@ -78,7 +78,7 @@ Można określić właściwości, takie jak `PackageId`, `PackageVersion` `Packa
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>Właściwości publikowania
+## <a name="publish-properties-and-items"></a>Publikowanie właściwości i elementów
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -87,7 +87,7 @@ Można określić właściwości, takie jak `PackageId`, `PackageVersion` `Packa
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
-`RuntimeIdentifier` Właściwość umożliwia określenie pojedynczego [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Identyfikator RID umożliwia publikowanie samodzielnego wdrożenia.
+`RuntimeIdentifier`Właściwość umożliwia określenie pojedynczego [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Identyfikator RID umożliwia publikowanie samodzielnego wdrożenia.
 
 ```xml
 <PropertyGroup>
@@ -97,7 +97,7 @@ Można określić właściwości, takie jak `PackageId`, `PackageVersion` `Packa
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
-`RuntimeIdentifiers` Właściwość pozwala określić rozdzielaną średnikami listę [identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Użyj tej właściwości, jeśli chcesz opublikować dla wielu środowisk uruchomieniowych. `RuntimeIdentifiers`jest używany podczas przywracania, aby upewnić się, że odpowiednie zasoby znajdują się na wykresie.
+`RuntimeIdentifiers`Właściwość pozwala określić rozdzielaną średnikami listę [identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Użyj tej właściwości, jeśli chcesz opublikować dla wielu środowisk uruchomieniowych. `RuntimeIdentifiers`jest używany podczas przywracania, aby upewnić się, że odpowiednie zasoby znajdują się na wykresie.
 
 > [!TIP]
 > `RuntimeIdentifier`(pojedyncze) może zapewnić szybsze kompilacje, gdy wymagane jest tylko jedno środowisko uruchomieniowe.
@@ -110,7 +110,7 @@ Można określić właściwości, takie jak `PackageId`, `PackageVersion` `Packa
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-`TrimmerRootAssembly` Element umożliwia wykluczenie zestawu z [*przycinania*](../deploying/trim-self-contained.md). Przycinanie jest procesem usuwania nieużywanych części środowiska uruchomieniowego z spakowanej aplikacji. W niektórych przypadkach przycinanie może niepoprawnie usunąć wymagane odwołania.
+`TrimmerRootAssembly`Element umożliwia wykluczenie zestawu z [*przycinania*](../deploying/trim-self-contained.md). Przycinanie jest procesem usuwania nieużywanych części środowiska uruchomieniowego z spakowanej aplikacji. W niektórych przypadkach przycinanie może niepoprawnie usunąć wymagane odwołania.
 
 Poniższy kod XML wyklucza `System.Security` zestaw z przycinania.
 
@@ -122,9 +122,9 @@ Poniższy kod XML wyklucza `System.Security` zestaw z przycinania.
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` Właściwość została wprowadzona w wersji 2.1.400 zestaw .NET Core SDK. Określa, czy dla wdrożenia jest tworzony natywny plik wykonywalny. Natywny plik wykonywalny jest wymagany w przypadku wdrożeń samodzielnych.
+`UseAppHost`Właściwość została wprowadzona w wersji 2.1.400 zestaw .NET Core SDK. Określa, czy dla wdrożenia jest tworzony natywny plik wykonywalny. Natywny plik wykonywalny jest wymagany w przypadku wdrożeń samodzielnych.
 
-W programie .NET Core 3,0 i jego nowszych wersjach domyślnie tworzony jest plik wykonywalny zależny od platformy. Ustaw `UseAppHost` właściwość na `false` , aby wyłączyć generowanie pliku wykonywalnego.
+W programie .NET Core 3,0 i jego nowszych wersjach domyślnie tworzony jest plik wykonywalny zależny od platformy. Ustaw `UseAppHost` Właściwość na `false` , aby wyłączyć generowanie pliku wykonywalnego.
 
 ```xml
 <PropertyGroup>
@@ -136,11 +136,27 @@ Aby uzyskać więcej informacji na temat wdrażania, zobacz [wdrażanie aplikacj
 
 ## <a name="compile-properties"></a>Kompiluj właściwości
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+`EmbeddedResourceUseDependentUponConvention`Właściwość określa, czy nazwy plików manifestu zasobów są generowane na podstawie informacji o typie w plikach źródłowych, które znajdują się w plikach zasobów. Na przykład jeśli *Form1. resx* znajduje się w tym samym folderze co *Form1.cs*i `EmbeddedResourceUseDependentUponConvention` jest ustawiona na `true` , wygenerowany plik *resources* przyjmuje swoją nazwę z pierwszego typu zdefiniowanego w *Form1.cs*. Na przykład, jeśli `MyNamespace.Form1` jest pierwszym typem zdefiniowanym w *Form1.cs*, wygenerowana nazwa pliku ma *nazwę. Form1. resources*.
+
+> [!NOTE]
+> Jeśli `LogicalName` `ManifestResourceName` `DependentUpon` dla elementu określono wartość, lub lub metadanych `EmbeddedResource` , wygenerowana nazwa pliku manifestu dla tego pliku zasobów jest oparta na tym metadanych.
+
+Domyślnie w nowym projekcie .NET Core Właściwość ta ma ustawioną wartość `true` . Jeśli `false` `LogicalName` `ManifestResourceName` dla elementu w pliku projektu zostanie ustawiona wartość, i nie, lub `DependentUpon` dla tego parametru, `EmbeddedResource` Nazwa pliku manifestu zasobu jest oparta na głównej przestrzeni nazw projektu i względnej ścieżce pliku do pliku *resx* . Aby uzyskać więcej informacji, zobacz [jak nazywa się plik manifestu zasobu](../resources/manifest-file-names.md).
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
-`LangVersion` Właściwość umożliwia określenie konkretnej wersji języka programowania. Na przykład jeśli chcesz uzyskać dostęp do funkcji wersji zapoznawczej języka `LangVersion` C# `preview`, ustaw wartość.
+`LangVersion`Właściwość umożliwia określenie konkretnej wersji języka programowania. Na przykład jeśli chcesz uzyskać dostęp do funkcji wersji zapoznawczej języka C#, ustaw wartość `LangVersion` `preview` .
 
 ```xml
 <PropertyGroup>
@@ -166,7 +182,7 @@ Niektóre zachowania w czasie wykonywania można skonfigurować, określając w�
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-Właściwość `ConcurrentGarbageCollection` określa, czy jest włączone [wyrzucanie elementów bezużytecznych w tle](../../standard/garbage-collection/background-gc.md) . Ustaw wartość na `false` , aby wyłączyć wyrzucanie elementów bezużytecznych w tle. Aby uzyskać więcej informacji, zobacz [System. GC. współbieżne/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
+`ConcurrentGarbageCollection`Właściwość określa, czy jest włączone [wyrzucanie elementów bezużytecznych w tle](../../standard/garbage-collection/background-gc.md) . Ustaw wartość na `false` , aby wyłączyć wyrzucanie elementów bezużytecznych w tle. Aby uzyskać więcej informacji, zobacz [System. GC. współbieżne/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
 
 ```xml
 <PropertyGroup>
@@ -176,7 +192,7 @@ Właściwość `ConcurrentGarbageCollection` określa, czy jest włączone [wyrz
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
 
-`InvariantGlobalization` Właściwość określa, czy aplikacja jest uruchamiana w trybie *globalizacji-niezmiennym* , co oznacza, że nie ma dostępu do danych specyficznych dla kultury. Ustaw wartość tak, `true` aby była uruchamiana w trybie niezmiennym globalizacji. Aby uzyskać więcej informacji, zobacz [tryb niezmienny](../run-time-config/globalization.md#invariant-mode).
+`InvariantGlobalization`Właściwość określa, czy aplikacja jest uruchamiana w trybie *globalizacji-niezmiennym* , co oznacza, że nie ma dostępu do danych specyficznych dla kultury. Ustaw wartość tak, aby była `true` uruchamiana w trybie niezmiennym globalizacji. Aby uzyskać więcej informacji, zobacz [tryb niezmienny](../run-time-config/globalization.md#invariant-mode).
 
 ```xml
 <PropertyGroup>
@@ -186,7 +202,7 @@ Właściwość `ConcurrentGarbageCollection` określa, czy jest włączone [wyrz
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-`RetainVMGarbageCollection` Właściwość konfiguruje moduł wyrzucania elementów bezużytecznych w celu umieszczenia usuniętych segmentów pamięci na liście gotowości do użycia w przyszłości lub zwolnienia. Ustawienie wartości `true` informującej Moduł wyrzucania elementów bezużytecznych w celu umieszczenia segmentów na liście gotowości. Aby uzyskać więcej informacji, zobacz [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
+`RetainVMGarbageCollection`Właściwość konfiguruje moduł wyrzucania elementów bezużytecznych w celu umieszczenia usuniętych segmentów pamięci na liście gotowości do użycia w przyszłości lub zwolnienia. Ustawienie wartości `true` informującej Moduł wyrzucania elementów bezużytecznych w celu umieszczenia segmentów na liście gotowości. Aby uzyskać więcej informacji, zobacz [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
 
 ```xml
 <PropertyGroup>
@@ -196,7 +212,7 @@ Właściwość `ConcurrentGarbageCollection` określa, czy jest włączone [wyrz
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzucania elementów bezużytecznych stacji roboczej lub odzyskiwania pamięci serwera](../../standard/garbage-collection/workstation-server-gc.md). Ustaw wartość `true` na, aby użyć wyrzucania elementów bezużytecznych serwera. Aby uzyskać więcej informacji, zobacz [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+`ServerGarbageCollection`Właściwość określa, czy aplikacja używa [wyrzucania elementów bezużytecznych stacji roboczej lub odzyskiwania pamięci serwera](../../standard/garbage-collection/workstation-server-gc.md). Ustaw wartość na, aby `true` użyć wyrzucania elementów bezużytecznych serwera. Aby uzyskać więcej informacji, zobacz [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 ```xml
 <PropertyGroup>
@@ -206,7 +222,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
 
-`ThreadPoolMaxThreads` Właściwość określa maksymalną liczbę wątków dla puli wątków roboczych. Aby uzyskać więcej informacji, zobacz [maksymalne wątki](../run-time-config/threading.md#maximum-threads).
+`ThreadPoolMaxThreads`Właściwość określa maksymalną liczbę wątków dla puli wątków roboczych. Aby uzyskać więcej informacji, zobacz [maksymalne wątki](../run-time-config/threading.md#maximum-threads).
 
 ```xml
 <PropertyGroup>
@@ -216,7 +232,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
 
-`ThreadPoolMinThreads` Właściwość konfiguruje minimalną liczbę wątków dla puli wątków roboczych. Aby uzyskać więcej informacji, zobacz [minimalna liczba wątków](../run-time-config/threading.md#minimum-threads).
+`ThreadPoolMinThreads`Właściwość konfiguruje minimalną liczbę wątków dla puli wątków roboczych. Aby uzyskać więcej informacji, zobacz [minimalna liczba wątków](../run-time-config/threading.md#minimum-threads).
 
 ```xml
 <PropertyGroup>
@@ -226,7 +242,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="tieredcompilation"></a>TieredCompilation
 
-`TieredCompilation` Właściwość określa, czy kompilator just in Time (JIT) używa [kompilacji warstwowej](../whats-new/dotnet-core-3-0.md#tiered-compilation). Ustaw wartość `false` na, aby wyłączyć kompilację warstwową. Aby uzyskać więcej informacji, zobacz temat [kompilacja warstwowa](../run-time-config/compilation.md#tiered-compilation).
+`TieredCompilation`Właściwość określa, czy kompilator just in Time (JIT) używa [kompilacji warstwowej](../whats-new/dotnet-core-3-0.md#tiered-compilation). Ustaw wartość na, aby `false` wyłączyć kompilację warstwową. Aby uzyskać więcej informacji, zobacz temat [kompilacja warstwowa](../run-time-config/compilation.md#tiered-compilation).
 
 ```xml
 <PropertyGroup>
@@ -236,7 +252,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
 
-`TieredCompilationQuickJit` Właściwość określa, czy kompilator JIT używa szybkiej JIT. Ustaw wartość na `false` , aby wyłączyć szybkie JIT. Aby uzyskać więcej informacji, zobacz [szybkie JIT](../run-time-config/compilation.md#quick-jit).
+`TieredCompilationQuickJit`Właściwość określa, czy KOMPILATOR JIT używa szybkiej JIT. Ustaw wartość na `false` , aby wyłączyć szybkie JIT. Aby uzyskać więcej informacji, zobacz [szybkie JIT](../run-time-config/compilation.md#quick-jit).
 
 ```xml
 <PropertyGroup>
@@ -246,7 +262,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
 
-`TieredCompilationQuickJitForLoops` Właściwość określa, czy kompilator JIT używa szybkiej JIT metod, które zawierają pętle. Ustaw wartość `true` na, aby włączyć funkcję szybkiego JIT dla metod, które zawierają pętle. Aby uzyskać więcej informacji, zobacz [szybkie JIT dla pętli](../run-time-config/compilation.md#quick-jit-for-loops).
+`TieredCompilationQuickJitForLoops`Właściwość określa, czy KOMPILATOR JIT używa szybkiej JIT metod, które zawierają pętle. Ustaw wartość na, aby `true` włączyć funkcję szybkiego JIT dla metod, które zawierają pętle. Aby uzyskać więcej informacji, zobacz [szybkie JIT dla pętli](../run-time-config/compilation.md#quick-jit-for-loops).
 
 ```xml
 <PropertyGroup>
@@ -254,7 +270,7 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>Właściwości odwołania
+## <a name="reference-properties-and-items"></a>Właściwości odwołania i elementy
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -264,9 +280,9 @@ Właściwość `ServerGarbageCollection` określa, czy aplikacja używa [wyrzuca
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` Właściwość pozwala określić dodatkowe zgodne wersje architektury dla odwołań do projektu i pakietów NuGet. Na przykład, jeśli określisz zależność pakietu przy użyciu `PackageReference` programu `TargetFramework`, ale ten pakiet nie zawiera zasobów, które są zgodne z projektem, `AssetTargetFallback` właściwość jest dostępna. Zgodność przywoływanego pakietu jest ponownie sprawdzana przy użyciu każdej platformy docelowej określonej w `AssetTargetFallback`.
+`AssetTargetFallback`Właściwość pozwala określić dodatkowe zgodne wersje architektury dla odwołań do projektu i pakietów NuGet. Na przykład, jeśli określisz zależność pakietu przy użyciu programu `PackageReference` , ale ten pakiet nie zawiera zasobów, które są zgodne z projektem `TargetFramework` , `AssetTargetFallback` Właściwość jest dostępna. Zgodność przywoływanego pakietu jest ponownie sprawdzana przy użyciu każdej platformy docelowej określonej w `AssetTargetFallback` .
 
-Można ustawić `AssetTargetFallback` właściwość na co najmniej jedną [docelową wersję platformy](../../standard/frameworks.md#supported-target-framework-versions).
+Można ustawić `AssetTargetFallback` Właściwość na co najmniej jedną [docelową wersję platformy](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -276,9 +292,9 @@ Można ustawić `AssetTargetFallback` właściwość na co najmniej jedną [doce
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference` Definiuje odwołanie do pakietu NuGet. Na przykład możesz chcieć odwołać się do pojedynczego pakietu zamiast [pakietu](../packages.md#metapackages).
+`PackageReference`Element definiuje odwołanie do pakietu NuGet. Na przykład możesz chcieć odwołać się do pojedynczego pakietu zamiast [pakietu](../packages.md#metapackages).
 
-Ten `Include` ATRYBUT określa identyfikator pakietu. Ten `Version` atrybut określa wersję lub zakres wersji. Aby uzyskać informacje na temat określania minimalnej wersji, maksymalnej wersji, zakresu lub dokładnego dopasowania, zobacz [zakres wersji](/nuget/concepts/package-versioning#version-ranges). Można również dodać następujące metadane do odwołania do projektu: `IncludeAssets`, `ExcludeAssets`, i. `PrivateAssets`
+Ten `Include` atrybut określa identyfikator pakietu. Ten `Version` atrybut określa wersję lub zakres wersji. Aby uzyskać informacje na temat określania minimalnej wersji, maksymalnej wersji, zakresu lub dokładnego dopasowania, zobacz [zakres wersji](/nuget/concepts/package-versioning#version-ranges). Można również dodać następujące metadane do odwołania do projektu: `IncludeAssets` , `ExcludeAssets` , i `PrivateAssets` .
 
 Fragment pliku projektu w poniższym przykładzie odwołuje się do pakietu [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
 
@@ -292,11 +308,11 @@ Aby uzyskać więcej informacji, zobacz [odwołania do pakietów w plikach proje
 
 ### <a name="projectreference"></a>Elementu ProjectReference
 
-`ProjectReference` Element definiuje odwołanie do innego projektu. Przywoływany projekt jest dodawany jako zależność pakietu NuGet, czyli jest traktowany tak samo jak `PackageReference`.
+`ProjectReference`Element definiuje odwołanie do innego projektu. Przywoływany projekt jest dodawany jako zależność pakietu NuGet, czyli jest traktowany tak samo jak `PackageReference` .
 
-Ten `Include` atrybut określa ścieżkę do projektu. Można również dodać następujące metadane do odwołania do projektu: `IncludeAssets`, `ExcludeAssets`, i. `PrivateAssets`
+Ten `Include` atrybut określa ścieżkę do projektu. Można również dodać następujące metadane do odwołania do projektu: `IncludeAssets` , `ExcludeAssets` , i `PrivateAssets` .
 
-Fragment pliku projektu w poniższym przykładzie odwołuje się do projektu o `Project2`nazwie.
+Fragment pliku projektu w poniższym przykładzie odwołuje się do projektu o nazwie `Project2` .
 
 ```xml
 <ItemGroup>
@@ -306,9 +322,9 @@ Fragment pliku projektu w poniższym przykładzie odwołuje się do projektu o `
 
 ### <a name="reference"></a>Dokumentacja
 
-`Reference` Element definiuje odwołanie do pliku zestawu.
+`Reference`Element definiuje odwołanie do pliku zestawu.
 
-`Include` Atrybut określa nazwę pliku, a element `HintPath` podrzędny określa ścieżkę do zestawu.
+`Include`Atrybut określa nazwę pliku, a `HintPath` metadane określa ścieżkę do zestawu.
 
 ```xml
 <ItemGroup>
@@ -320,7 +336,7 @@ Fragment pliku projektu w poniższym przykładzie odwołuje się do projektu o `
 
 ### <a name="restore-properties"></a>Właściwości przywracania
 
-Przywracanie przywoływanego pakietu instaluje wszystkie jego bezpośrednie zależności i wszystkie zależności tych zależności. Przywracanie pakietu można dostosować, określając właściwości, takie jak `RestorePackagesPath` i `RestoreIgnoreFailedSources`. Aby uzyskać więcej informacji na temat tych i innych właściwości, zobacz [Restore Target](/nuget/reference/msbuild-targets#restore-target).
+Przywracanie przywoływanego pakietu instaluje wszystkie jego bezpośrednie zależności i wszystkie zależności tych zależności. Przywracanie pakietu można dostosować, określając właściwości, takie jak `RestorePackagesPath` i `RestoreIgnoreFailedSources` . Aby uzyskać więcej informacji na temat tych i innych właściwości, zobacz [Restore Target](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
@@ -328,7 +344,7 @@ Przywracanie przywoływanego pakietu instaluje wszystkie jego bezpośrednie zale
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie do schematu programu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Typowe właściwości programu MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

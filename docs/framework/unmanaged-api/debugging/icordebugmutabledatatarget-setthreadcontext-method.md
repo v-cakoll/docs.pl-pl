@@ -2,12 +2,12 @@
 title: 'ICorDebugMutableDataTarget:: SetThreadContext —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 063c7954543174caece6f3dcbe005a4b2d059c64
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6df6bf030ad339f5d02b95cd191b30db60aa167
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792846"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210153"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget:: SetThreadContext —, Metoda
 Ustawia kontekst (wartości rejestru) dla wątku.  
@@ -25,24 +25,24 @@ HRESULT SetThreadContext(
  podczas Identyfikator wątku zdefiniowanego przez system operacyjny.  
   
  `contextSize`  
- podczas Rozmiar bufora `pContext`, który ma zostać zapisany.  
+ podczas Rozmiar `pContext` buforu, który ma zostać zapisany.  
   
  `pContext`  
  podczas Wskaźnik do bajtów do zapisania.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `SetThreadContext` aktualizuje bieżący kontekst dla wątku określonego przez argument `dwThreadID` zdefiniowanego przez system operacyjny. Format rekordu kontekstu jest określany przez platformę wskazywaną przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) . W systemie Windows jest to struktura [kontekstu](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
+ `SetThreadContext`Metoda aktualizuje bieżący kontekst dla wątku określonego przez argument zdefiniowany przez system operacyjny `dwThreadID` . Format rekordu kontekstu jest określany przez platformę wskazywaną przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) . W systemie Windows jest to struktura [kontekstu](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugMutableDataTarget, interfejs](icordebugmutabledatatarget-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

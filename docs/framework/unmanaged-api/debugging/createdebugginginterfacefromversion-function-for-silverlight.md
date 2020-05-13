@@ -8,14 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f40345b09cae164660711b987f62130518736518
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860868"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208627"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion — Funkcja programu Silverlight
+
 Akceptuje ciąg wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest zwracany przez [funkcję CreateVersionStringFromModule —](createversionstringfrommodule-function.md)i zwraca odpowiedni interfejs debugera (zazwyczaj [ICorDebug](icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Składnia  
@@ -28,32 +29,36 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `szDebuggeeVersion`  
+
+ `szDebuggeeVersion`\
  podczas Ciąg wersji środowiska CLR w docelowym debugowanego obiektu, który jest zwracany przez [funkcję CreateVersionStringFromModule —](createversionstringfrommodule-function.md).  
   
- `ppCordb`  
- określoną Wskaźnik na wskaźnik do obiektu COM (`IUnknown`). Ten obiekt będzie rzutowany na obiekt [ICorDebug](icordebug-interface.md) przed jego zwróceniem.  
+ `ppCordb`\
+ określoną Wskaźnik na wskaźnik do obiektu COM ( `IUnknown` ). Ten obiekt będzie rzutowany na obiekt [ICorDebug](icordebug-interface.md) przed jego zwróceniem.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK  
+## <a name="return-value"></a>Wartość zwracana
+
+ `S_OK`\
  `ppCordb`odwołuje się do prawidłowego obiektu, który implementuje interfejs [interfejsu ICorDebug](icordebug-interface.md) .  
   
- E_INVALIDARG  
- `szDebuggeeVersion` Albo `ppCordb` ma wartość null.  
+ `E_INVALIDARG`\
+ Albo `szDebuggeeVersion` `ppCordb` ma wartość null.  
   
- CORDBG_E_DEBUG_COMPONENT_MISSING  
- Nie można zlokalizować składnika, który jest niezbędny do debugowania CLR. Oznacza to, że plik mscordbi. dll lub mscordaccore. dll nie został odnaleziony w tym samym katalogu co element docelowy CoreCLR. dll.  
+ `CORDBG_E_DEBUG_COMPONENT_MISSING`\
+ Nie można zlokalizować składnika, który jest niezbędny do debugowania CLR. Nie znaleziono _mscordbi. dll_ lub _mscordaccore. dll_ w tym samym katalogu, co docelowy plik CoreCLR. dll.  
   
- CORDBG_E_INCOMPATIBLE_PROTOCOL  
+ `CORDBG_E_INCOMPATIBLE_PROTOCOL`\
  Mscordbi. dll lub mscordaccore. dll nie jest taka sama jak wersja elementu docelowego CoreCLR. dll.  
   
- E_FAIL (lub inne kody powrotne E_)  
+ `E_FAIL`(lub inne `E_` kody powrotne) \
  Nie można zwrócić [interfejsu ICorDebug](icordebug-interface.md).  
   
-## <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi
+
  Interfejs, który jest zwracany, udostępnia funkcje do dołączania do środowiska CLR w procesie docelowym i debugowania kodu zarządzanego, który działa środowisko CLR.  
   
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
+
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim. h  

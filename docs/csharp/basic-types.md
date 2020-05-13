@@ -1,91 +1,91 @@
 ---
-title: Typy podstawowe — przewodnik po językach C#
-description: Dowiedz się więcej o typach podstawowych (numerach, ciągach i obiektach) we wszystkich programach języka C#
+title: Typy podstawowe — Przewodnik C#
+description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach) we wszystkich programach C#
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673267"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205808"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
-C# jest językiem silnie typizowany. Każda zmienna i stała ma typ, podobnie jak każde wyrażenie, które oblicza wartość. Każdy podpis metody określa typ dla każdego parametru wejściowego i dla wartości zwracanej. Biblioteka klas .NET Framework definiuje zestaw wbudowanych typów numerycznych, a także bardziej złożonych typów reprezentujących szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów i dat. Typowy program C# używa typów z biblioteki klas, a także typów zdefiniowanych przez użytkownika, które modelują pojęcia specyficzne dla domeny problemowej programu.  
+C# jest językiem o jednoznacznie określonym typie. Każda zmienna i stała ma typ, tak jak każde wyrażenie, którego wynikiem jest wartość. Każdy podpis metody Określa typ dla każdego parametru wejściowego i dla zwracanej wartości. Biblioteka klas .NET Framework definiuje zestaw wbudowanych typów liczbowych, a także bardziej złożone typy, które reprezentują szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów oraz daty. Typowy program C# używa typów z biblioteki klas, a także typów zdefiniowanych przez użytkownika, które są modelami koncepcji specyficznych dla domeny problemu programu.  
   
-Informacje przechowywane w typie mogą zawierać następujące elementy:  
+Informacje przechowywane w typie mogą obejmować następujące elementy:  
   
-- Miejsce do magazynowania, które wymaga zmiennej typu.  
+- Miejsce do magazynowania, którego wymagana jest zmienna typu.  
   
 - Wartości maksymalne i minimalne, które może reprezentować.  
   
 - Elementy członkowskie (metody, pola, zdarzenia itd.), które zawiera.  
   
-- Typ podstawowy, z który dziedziczy.  
+- Typ podstawowy, z którego dziedziczy.  
   
-- Lokalizacja, w której pamięć dla zmiennych zostanie przydzielona w czasie wykonywania.  
+- Lokalizacja, w której zostanie przypisana pamięć dla zmiennych w czasie wykonywania.  
   
 - Rodzaje operacji, które są dozwolone.  
   
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczne typu*. Na przykład jeśli zadeklarować zmienną typu [int](language-reference/builtin-types/integral-numeric-types.md), kompilator umożliwia użycie zmiennej w dodatkowo i operacji odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej [typu bool](language-reference/builtin-types/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:  
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](language-reference/builtin-types/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> Deweloperzy C i C++ należy zauważyć, że w języku C#, [bool](language-reference/builtin-types/bool.md) nie jest konwertowalny na [int](language-reference/builtin-types/integral-numeric-types.md).  
+> Deweloperzy C i C++, Zauważ, że w języku C#, [bool](language-reference/builtin-types/bool.md) nie jest konwertowany na [int](language-reference/builtin-types/integral-numeric-types.md).  
   
-Kompilator osadza informacje o typie w pliku wykonywalnym jako metadane. Czas wykonywania języka wspólnego (CLR) używa tych metadanych w czasie wykonywania do dalszego zagwarantowania bezpieczeństwa typów, gdy przydziela i odzyskuje pamięć.  
+Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania, aby zapewnić bezpieczeństwo typów podczas przydzielania i odzyskania pamięci.  
 
 ## <a name="specifying-types-in-variable-declarations"></a>Określanie typów w deklaracjach zmiennych
 
-Podczas deklarowania zmiennej lub stałej w programie, należy określić jego typ lub użyć [var](language-reference/keywords/var.md) słowa kluczowego, aby umożliwić kompilatorowi wywnioskować typ. W poniższym przykładzie przedstawiono niektóre deklaracje zmiennych, które używają zarówno wbudowanych typów numerycznych, jak i złożonych typów zdefiniowanych przez użytkownika:  
+W przypadku deklarowania zmiennej lub stałej w programie należy określić jej typ lub użyć słowa kluczowego [var](language-reference/keywords/var.md) , aby zezwolić kompilatorowi na wnioskowanie typu. W poniższym przykładzie przedstawiono niektóre deklaracje zmiennych, które używają wbudowanych typów liczbowych i złożonych typów zdefiniowanych przez użytkownika:  
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-Typy parametrów metody i wartości zwracane są określone w podpisie metody. Następujący podpis pokazuje metodę, która wymaga [int](language-reference/builtin-types/integral-numeric-types.md) jako argument wejściowy i zwraca ciąg:  
+Typy parametrów metod i zwracanych wartości są określone w podpisie metody. Następujący podpis przedstawia metodę, która wymaga [int](language-reference/builtin-types/integral-numeric-types.md) jako argumentu wejściowego i zwraca ciąg:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy nowym typie i nie można jej przypisać wartości, która nie jest zgodna z jej zadeklarowanym typem. Na przykład nie można zadeklarować [int,](language-reference/builtin-types/integral-numeric-types.md) a następnie `true`przypisać mu wartość logiczną . Jednak wartości mogą być konwertowane na inne typy, na przykład, gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty metody. *Konwersja typu,* która nie powoduje utraty danych jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych wymaga *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować [int](language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać mu wartości logicznej `true` . Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
-Aby uzyskać więcej informacji, zobacz [Konwersje rzutowania i typu](programming-guide/types/casting-and-type-conversions.md).
+Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, wartości zmiennoprzecinkowych, wyrażeń logicznych, znaków tekstowych, wartości dziesiętnych i innych typów danych. Istnieją również wbudowane **typy ciągów** i **obiektów.** Są one dostępne do użycia w dowolnym programie C#. Aby uzyskać pełną listę wbudowanych typów, zobacz [Typy wbudowane](language-reference/builtin-types/built-in-types.md).
+Język C# zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją również wbudowane typy **ciągów** i **obiektów** . Są one dostępne do użycia w dowolnym programie w języku C#. Aby zapoznać się z pełną listą typów wbudowanych, zobacz [typy wbudowane](language-reference/builtin-types/built-in-types.md).
   
 ## <a name="custom-types"></a>Typy niestandardowe
 
-Do tworzenia własnych typów niestandardowych należy użyć konstrukcji [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md)i [enum.](language-reference/builtin-types/enum.md) Biblioteka klas .NET Framework sama w sobie jest zbiorem typów niestandardowych dostarczonych przez firmę Microsoft, których można używać we własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym programie C#. Inne stają się dostępne tylko wtedy, gdy jawnie dodać odwołanie do projektu do zestawu, w którym są zdefiniowane. Po kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym.
+Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](language-reference/builtin-types/struct.md), [Class](language-reference/keywords/class.md), [Interface](language-reference/keywords/interface.md)i [enum](language-reference/builtin-types/enum.md) . Sama Biblioteka klas .NET Framework jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać we własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym programie w języku C#. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym.
   
 ## <a name="generic-types"></a>Typy ogólne
 
-Typ może być zadeklarowany z co najmniej jeden *parametr typu,* które służą jako symbol zastępczy dla rzeczywistego typu *(typ betonu),* który kod klienta zapewni podczas tworzenia wystąpienia typu. Takie typy są nazywane *typami rodzajowymi*. Na przykład typ <xref:System.Collections.Generic.List%601> .NET Framework ma jeden parametr typu, który zgodnie z konwencją otrzymuje nazwę *T*. Podczas tworzenia wystąpienia typu należy określić typ obiektów, które będzie zawierać na przykład ciąg:  
+Typ może być zadeklarowany z co najmniej jednym *parametrem typu* , który służy jako symbol zastępczy dla rzeczywistego typu ( *konkretny typ*), który będzie używany przez kod klienta podczas tworzenia wystąpienia typu. Takie typy są nazywane *typami ogólnymi*. Na przykład typ .NET Framework <xref:System.Collections.Generic.List%601> ma jeden parametr typu, który zgodnie z Konwencją otrzymuje nazwę *T*. Podczas tworzenia wystąpienia typu należy określić typ obiektów, które będzie zawierać lista, na przykład ciąg:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Użycie parametru type umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt.](language-reference/builtin-types/reference-types.md#the-object-type) Ogólne klasy kolekcji są nazywane *kolekcje silnie typizowane,* ponieważ kompilator zna określony typ elementów kolekcji i może wywołać błąd w `strings` czasie kompilacji, jeśli na przykład spróbujesz dodać liczbę całkowitą do obiektu w poprzednim przykładzie. Aby uzyskać więcej informacji, zobacz [Generyk .](programming-guide/generics/index.md)
+Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](language-reference/builtin-types/reference-types.md#the-object-type). Klasy kolekcji generycznej są nazywane *kolekcjami silnie określonymi* , ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do `strings` obiektu w poprzednim przykładzie. Aby uzyskać więcej informacji, zobacz [Ogólne](programming-guide/generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Typy niejawne, typy anonimowe i typy krotki
+## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Typy niejawne, typy anonimowe i typy krotek
 
-Jak wspomniano wcześniej, można niejawnie wpisywać zmienną lokalną (ale nie członków klasy) za pomocą [var](language-reference/keywords/var.md) słowa kluczowego. Zmienna nadal odbiera typ w czasie kompilacji, ale typ jest dostarczany przez kompilator. Aby uzyskać więcej informacji, zobacz [Niejawnie wpisane zmienne lokalne](programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+Jak wspomniano wcześniej, można niejawnie wpisać zmienną lokalną (ale nie składową klasy) za pomocą słowa kluczowego [var](language-reference/keywords/var.md) . Zmienna nadal otrzymuje typ w czasie kompilacji, ale typ jest dostarczany przez kompilator. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-W niektórych przypadkach jest niewygodne, aby utworzyć nazwany typ dla prostych zestawów powiązanych wartości, które nie mają zamiaru przechowywać lub przekazać poza granicami metody. W tym celu można utworzyć *typy anonimowe.* Aby uzyskać więcej informacji, zobacz [Typy anonimowe](programming-guide/classes-and-structs/anonymous-types.md).
+W niektórych przypadkach nie jest wygodne tworzenie nazwanego typu dla prostych zestawów powiązanych wartości, które nie mają być przechowywane ani przekazywane poza granicami metod. W tym celu można utworzyć *Typy anonimowe* . Aby uzyskać więcej informacji, zobacz [Typy anonimowe](programming-guide/classes-and-structs/anonymous-types.md).
 
-Często chcesz zwrócić więcej niż jedną wartość z metody. Można utworzyć *typy krotki,* które zwracają wiele wartości w wywołaniu jednej metody. Aby uzyskać więcej informacji, zobacz [Krotek](tuples.md).
+Często należy zwrócić więcej niż jedną wartość z metody. Można tworzyć *typy krotek* , które zwracają wiele wartości w jednym wywołaniu metody. Aby uzyskać więcej informacji, zobacz [krotki](tuples.md).
 
-## <a name="the-common-type-system"></a>Wspólny system typu
+## <a name="the-common-type-system"></a>Wspólny system typów
 
-Ważne jest, aby zrozumieć dwa podstawowe punkty dotyczące systemu typów w .NET Framework:  
+Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Framework:  
   
-- Popiera zasadę dziedziczenia. Typy mogą pochodzić od innych typów, *zwanych typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może z kolei pochodzić z innego typu, w którym to przypadku typu pochodnego dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy <xref:System.Int32> liczbowe, `int`takie jak (C# keyword: ), <xref:System.Object> pochodzą ostatecznie `object`z jednego typu podstawowego, który jest (c# słowo kluczowe: ). Ta ujednolicona hierarchia typów jest nazywana [wspólnym systemem typów](../standard/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat dziedziczenia w języku C#, zobacz [Dziedziczenie](programming-guide/classes-and-structs/inheritance.md).  
+- Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów, nazywanych *typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może być pochodny od innego typu, w tym przypadku typ pochodny dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32> (słowo kluczowe języka c#: `int` ), uzyskują się ostatecznie z jednego typu podstawowego, który jest <xref:System.Object> (słowo kluczowe języka c#: `object` ). Ta ujednolicona hierarchia typów jest nazywana [systemem common Type System](../standard/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat dziedziczenia w języku C#, zobacz [dziedziczenie](programming-guide/classes-and-structs/inheritance.md).  
   
-- Każdy typ w CTS jest zdefiniowany jako *typ wartości* lub *typ odwołania*. Obejmuje to wszystkie typy niestandardowe w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane przy użyciu `struct` `enum` słowa kluczowego lub są typami wartości. Aby uzyskać więcej informacji na temat typów wartości, zobacz [Typy wartości](language-reference/builtin-types/value-types.md). Typy zdefiniowane przy użyciu słowa kluczowego [klasy](language-reference/keywords/class.md) są typami odwołań. Aby uzyskać więcej informacji na temat typów odwołań, zobacz [Klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i różne zachowanie w czasie wykonywania.
+- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy, które definiujesz za pomocą `struct` `enum` słowa kluczowego or, są typami wartości. Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](language-reference/builtin-types/value-types.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Typy konstrukcji](language-reference/builtin-types/struct.md)
-- [Typy wyliczania](language-reference/builtin-types/enum.md)
+- [Typy struktur](language-reference/builtin-types/struct.md)
+- [Typów wyliczeniowych](language-reference/builtin-types/enum.md)
 - [Klasy](programming-guide/classes-and-structs/classes.md)

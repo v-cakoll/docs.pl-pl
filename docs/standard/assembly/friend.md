@@ -1,31 +1,32 @@
 ---
 title: Przyjazne zestawy
+description: Zestaw zaprzyjaźniony jest zestawem .NET, który ma dostęp do wewnętrznych typów i elementów członkowskich innego zestawu (C#) lub zaprzyjaźnionych (Visual Basic).
 ms.date: 08/20/2019
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 105621da2bd418c6294fa2bbec474809599cb6a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348176"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378936"
 ---
 # <a name="friend-assemblies"></a>Przyjazne zestawy
 
-*Zestaw znajomego* jest zestaw, który może uzyskać dostęp do [wewnętrznego](../../csharp/language-reference/keywords/internal.md) innego zestawu (C#) lub [Friend](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) typów i elementów członkowskich. Jeśli zidentyfikujesz zestaw jako zestaw znajomego, nie trzeba już oznaczać typy i elementy członkowskie jako publiczne, aby były dostępne dla nich przez inne zestawy. Jest to szczególnie wygodne w następujących scenariuszach:
+*Zestaw zaprzyjaźniony* jest zestawem, który ma dostęp do [wewnętrznych](../../csharp/language-reference/keywords/internal.md) typów i elementów członkowskich innego zestawu (C#) lub [zaprzyjaźnionych](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic). Jeśli zestaw jest identyfikowany jako zestaw zaprzyjaźniony, nie trzeba już oznaczać typów i składowych jako publicznych, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:
 
-- Podczas testowania jednostkowego, gdy kod testu jest uruchamiany w oddzielnym zestawie, `internal` ale wymaga `Friend` dostępu do elementów członkowskich w testowanym zestawie, które są oznaczone jako c# lub w języku Visual Basic.
+- Podczas testowania jednostkowego, gdy kod testowy jest uruchamiany w osobnym zestawie, ale wymaga dostępu do elementów członkowskich w testowanym zestawie, które są oznaczone jako `internal` w języku C# lub `Friend` w Visual Basic.
 
-- Podczas opracowywania biblioteki klas i dodatki do biblioteki są zawarte w oddzielnych zestawów, ale wymagają `internal` dostępu do `Friend` elementów członkowskich w istniejących zestawów, które są oznaczone jako w języku C# lub w języku Visual Basic.
+- Podczas tworzenia biblioteki klas i dodania do biblioteki są zawarte w oddzielnych zestawach, ale wymagają dostępu do elementów członkowskich w istniejących zestawach, które są oznaczone jako `internal` w języku C# lub `Friend` w Visual Basic.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut użyje <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> do zidentyfikowania jednego lub więcej zestawów znajomych dla danego zestawu. W poniższym <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> przykładzie użyto atrybutu w *zestawie A* i określa zestaw *AssemblyB* jako zestaw znajomego. Daje to *assemblyAssemblyB* dostęp do wszystkich typów i `internal` elementów członkowskich `Friend` w *zestawie A,* które są oznaczone jako c# lub w języku Visual Basic.
+Możesz użyć atrybutu, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Aby zidentyfikować jeden lub więcej zaprzyjaźnionych zestawów dla danego zestawu. W poniższym przykładzie zastosowano <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut w *zestawie* a i określa Assembly *AssemblyB* jako zestaw zaprzyjaźniony. Daje to zestawowi *AssemblyB* dostęp do wszystkich typów i członków w *zestawie a* , które są oznaczone jako `internal` w języku C# lub `Friend` w Visual Basic.
 
 > [!NOTE]
-> Podczas kompilowania zestawu, takiego jak *AssemblyB,* który będzie uzyskiwał dostęp do wewnętrznych typów lub wewnętrznych elementów członkowskich innego zestawu, takiego jak *zestaw A,* należy jawnie określić nazwę pliku wyjściowego *(exe* lub *dll)* za pomocą opcji **kompilatora -out.** Jest to wymagane, ponieważ kompilator nie wygenerował jeszcze nazwę zestawu, który tworzy w czasie jest powiązany z odwołaniami zewnętrznymi. Aby uzyskać więcej informacji, zobacz [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> Podczas kompilowania zestawu, takiego jak *AssemblyB* , który będzie uzyskiwać dostęp do typów wewnętrznych lub wewnętrznych elementów członkowskich innego zestawu, takiego jak *zestaw A*, należy jawnie określić nazwę pliku wyjściowego (*exe* lub *. dll*) przy użyciu opcji kompilatora **-out** . Jest to wymagane, ponieważ kompilator nie wygenerował jeszcze nazwy dla zestawu, który jest tworzony w momencie powiązania z odwołaniami zewnętrznymi. Aby uzyskać więcej informacji, zobacz sekcję [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -72,34 +73,34 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-Tylko zestawy, które jawnie określić `internal` jako znajomi `Friend` mogą uzyskać dostęp (C#) lub (Visual Basic) typy i elementy członkowskie. Na przykład jeśli *AssemblyB* jest przyjacielem *zestawu A* i *zestawu C* odwołuje się do *AssemblyB,* *zestaw C* nie ma dostępu `internal` do (C#) lub `Friend` (Visual Basic) typów w zestawie *A*.
+Tylko zestawy, które można jawnie określić jako znajomi mogą uzyskać dostęp do `internal` `Friend` typów i składowych (C#) lub (Visual Basic). Na przykład, jeśli *AssemblyB* jest znajomością *zestawu* a i *zestawu c* References *AssemblyB*, *zestaw c* nie ma dostępu do `internal` typów (C#) lub `Friend` (Visual Basic) w *zestawie a*.
 
-Kompilator wykonuje podstawowe sprawdzanie poprawności nazwy <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> zestawu znajomego przekazany do atrybutu. Jeśli *zestaw A* deklaruje *AssemblyB* jako zestaw przyjaciela, reguły sprawdzania poprawności są następujące:
+Kompilator wykonuje pewne podstawowe walidacje nazwy zestawu zaprzyjaźnionego przekazaną do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Jeśli *zestaw A* deklaruje *AssemblyB* jako zestaw zaprzyjaźniony, reguły walidacji są następujące:
 
-- Jeśli *zestaw A* jest silny *nazwie, AssemblyB* musi być również silne ja. Nazwa zestawu znajomego, która jest przekazywana do atrybutu musi składać się z nazwy zestawu i klucza publicznego klucza silnej nazwy, który jest używany do podpisania *AssemblyB*.
+- Jeśli *zestaw A* ma silną nazwę, *AssemblyB* musi być również silną nazwą. Nazwa zestawu zaprzyjaźnionego, który jest przesyłany do atrybutu, musi zawierać nazwę zestawu i klucz publiczny klucza o silnej nazwie, który jest używany do podpisywania *AssemblyB*.
 
-     Nazwa zestawu znajomego, która <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> jest przekazywana do atrybutu, nie może być silną nazwą *AssemblyB*. Nie należy dołączać wersji zestawu, kultury, architektury ani tokenu klucza publicznego.
+     Nazwa zestawu zaprzyjaźnionego, która jest przenoszona do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, nie może być silną nazwą *AssemblyB*. Nie dołączaj wersji zestawu, kultury, architektury lub tokenu klucza publicznego.
 
-- Jeśli *zestaw A* nie jest silny nazwie, nazwa zestawu znajomego powinna składać się tylko z nazwy zestawu. Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie niepodpisanych zestawów znajomych](create-unsigned-friend.md).
+- Jeśli *zestaw A* nie ma silnej nazwy, nazwa zestawu zaprzyjaźnionego powinna zawierać tylko nazwę zestawu. Aby uzyskać więcej informacji, zobacz [How to: Create unsigned zaprzyjaźnione zestawy](create-unsigned-friend.md).
 
-- Jeśli *AssemblyB* jest silny o nazwie, należy określić klucz silnej nazwy *dla AssemblyB* przy użyciu ustawienia projektu lub opcji kompilatora wiersza `/keyfile` polecenia. Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie podpisanych zestawów znajomych](create-signed-friend.md).
+- Jeśli *AssemblyB* ma silną nazwę, należy określić klucz silnej nazwy dla *AssemblyB* przy użyciu ustawienia projektu lub `/keyfile` opcji kompilatora wiersza polecenia. Aby uzyskać więcej informacji, zobacz [How to: Create podpisane zaprzyjaźnione zestawy](create-signed-friend.md).
 
- Klasa <xref:System.Security.Permissions.StrongNameIdentityPermission> zapewnia również możliwość udostępniania typów, z następującymi różnicami:
+ <xref:System.Security.Permissions.StrongNameIdentityPermission>Klasa oferuje również możliwość udostępniania typów z następującymi różnicami:
 
-- <xref:System.Security.Permissions.StrongNameIdentityPermission>dotyczy pojedynczego typu, podczas gdy zespół znajomego ma zastosowanie do całego złożenia.
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>dotyczy pojedynczego typu, podczas gdy zestaw zaprzyjaźniony ma zastosowanie do całego zestawu.
 
-- Jeśli w *zestawie A* istnieją setki typów, które chcesz udostępnić <xref:System.Security.Permissions.StrongNameIdentityPermission> *zestawowi B,* należy dodać je wszystkie. Jeśli używasz zestawu znajomych, wystarczy zadeklarować relację przyjaciela tylko raz.
+- Jeśli istnieją setki typów w *zestawie A* , które chcesz udostępnić w *AssemblyB*, musisz dodać <xref:System.Security.Permissions.StrongNameIdentityPermission> je do wszystkich. Jeśli używasz zestawu zaprzyjaźnionego, musisz tylko raz zadeklarować relację zaprzyjaźnioną.
 
-- Jeśli używasz, <xref:System.Security.Permissions.StrongNameIdentityPermission>typy, które chcesz udostępnić muszą być zadeklarowane jako publiczne. Jeśli używasz zestawu znajomego, typy udostępnione `internal` są deklarowane `Friend` jako (C#) lub (Visual Basic).
+- Jeśli używasz <xref:System.Security.Permissions.StrongNameIdentityPermission> , typy, które chcesz udostępnić, muszą być zadeklarowane jako publiczne. Jeśli używasz zestawu zaprzyjaźnionego, typy udostępnione są zadeklarowane jako `internal` (C#) lub `Friend` (Visual Basic).
 
-Aby uzyskać informacje dotyczące uzyskiwania `internal` dostępu do `Friend` typów i metod zestawu (C#) lub (Visual Basic) z pliku modułu (pliku z rozszerzeniem *.netmodule),* zobacz [-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) lub [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Aby uzyskać informacje na temat sposobu uzyskiwania dostępu do `internal` typów i metod zestawu (C#) lub `Friend` (Visual Basic) z pliku modułu (pliku z rozszerzeniem *. webmodule* ), zobacz [-moduleassemblyname — (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) lub [-moduleassemblyname — (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [Jak: Tworzenie niepodpisanych zestawów znajomych](create-unsigned-friend.md)
-- [Jak: Tworzenie podpisanych zestawów znajomych](create-signed-friend.md)
+- [Instrukcje: Tworzenie nieoznaczonych zaprzyjaźnionych zestawów](create-unsigned-friend.md)
+- [Instrukcje: Tworzenie podpisanych zestawów zaprzyjaźnionych](create-signed-friend.md)
 - [Zestawy w środowisku .NET](index.md)
 - [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)
 - [Koncepcje programowania (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

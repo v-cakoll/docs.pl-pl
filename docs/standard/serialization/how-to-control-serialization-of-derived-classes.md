@@ -1,16 +1,17 @@
 ---
 title: 'Instrukcje: Kontrola serializacji klas pochodnych'
+description: Można dostosować strumień XML, wprowadzając klasę z istniejącej klasy i instruując wystąpienie XmlSerializer, jak serializować nową klasę.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b9a8bd52b7dfe7a9bf43061d8f44747b3a847c68
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159926"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379126"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Instrukcje: Kontrola serializacji klas pochodnych
 Zmiana nazwy elementu XML przy użyciu atrybutu **parametrze XmlElementAttribute** nie jest jedynym sposobem dostosowywania serializacji obiektu. Można również dostosować strumień XML wynikających z istniejącej klasy, a jeśli <xref:System.Xml.Serialization.XmlSerializer> wystąpienia jak do serializacji nowej klasy.  

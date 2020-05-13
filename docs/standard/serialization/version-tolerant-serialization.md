@@ -1,5 +1,6 @@
 ---
 title: Serializacja odporna na wersje
+description: .NET Framework 2,0 wprowadza serializacji odpornej na wersje, zestaw funkcji, które ułatwiają Modyfikowanie typów możliwych do serializacji.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 87bdc0f0328e7a75477672432c0944818dbef244
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348435"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380093"
 ---
 # <a name="version-tolerant-serialization"></a>Serializacja odporna na wersje
 
@@ -27,7 +28,7 @@ W wersji 1,0 i 1,1 .NET Framework, tworzenie możliwych do przetworzenia typów,
 - Starsze wersje aplikacji mogą generować wyjątki, gdy zostanie wyświetlony monit o deserializacja nowych wersji starego typu.
 - Nowsze wersje aplikacji spowodują wygenerowanie wyjątków podczas deserializacji starszych wersji typu z brakującymi danymi.
 
-Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których zastosowano <xref:System.SerializableAttribute> atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](version-tolerant-serialization-technology-sample.md).
+Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których <xref:System.SerializableAttribute> zastosowano atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](version-tolerant-serialization-technology-sample.md).
 
 Funkcje SRS są włączone, korzystając z <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ponadto wszystkie funkcje, z wyjątkiem tolerancja nadmiarowe dane są również włączone podczas korzystania z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Aby uzyskać więcej informacji o używaniu tych klas do serializacji, zobacz [Serializacja binarna](binary-serialization.md).
 
@@ -151,7 +152,7 @@ End Sub
 
 Przeznaczeniem z tych metod jest przechowywania wersji. Podczas deserializacji to opcjonalne pole może nie być poprawnie zainicjować w przypadku braku danych dla tego pola. Można to naprawić, tworząc metodę, która przypisuje poprawną wartość, a następnie stosując do metody atrybut **OnDeserializingAttribute** lub **OnDeserializedAttribute** .
 
-Poniższy przykład przedstawia metodę w kontekście typu. Jeśli wcześniejsza wersja aplikacji wysyła wystąpienie `Address` klasy do nowszej wersji aplikacji, Brak danych `CountryField` pola. Jednak po deserializacji pole zostanie ustawione na wartość domyślną "Japonia".
+Poniższy przykład przedstawia metodę w kontekście typu. Jeśli wcześniejsza wersja aplikacji wysyła wystąpienie `Address` klasy do nowszej wersji aplikacji, `CountryField` Brak danych pola. Jednak po deserializacji pole zostanie ustawione na wartość domyślną "Japonia".
 
 ```csharp
 [Serializable]

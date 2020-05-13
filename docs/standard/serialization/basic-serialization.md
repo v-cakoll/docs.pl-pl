@@ -1,5 +1,6 @@
 ---
 title: Serializacja podstawowa
+description: W tym artykule przedstawiono sposób serializacji klasy z SerializableAttribute i zawiera przykłady serializacji i deserializacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248033"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378430"
 ---
 # <a name="basic-serialization"></a>Serializacja podstawowa
 
@@ -42,9 +43,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-W tym przykładzie zastosowano binarny plik formatujący do serializacji. Wszystko, co należy zrobić, to utworzenie wystąpienia strumienia i programu formatującego, którego zamierzasz użyć, a następnie Wywołaj metodę **serializacji** w programie formatującego. Strumień i do serializacji obiektu są dostarczane jako parametry do tego połączenia. Chociaż nie jest to jawnie zademonstrowane w tym przykładzie, wszystkie zmienne składowe klasy będą serializowane — nawet zmienne oznaczone jako prywatne. W tym aspekcie Serializacja binarna różni się <xref:System.Xml.Serialization.XmlSerializer> od klasy, która tylko serializować pola publiczne. Aby uzyskać informacje na temat wykluczania zmiennych członkowskich z serializacji binarnej, zobacz [selektywne serializacji](selective-serialization.md).  
+W tym przykładzie zastosowano binarny plik formatujący do serializacji. Wszystko, co należy zrobić, to utworzenie wystąpienia strumienia i programu formatującego, którego zamierzasz użyć, a następnie Wywołaj metodę **serializacji** w programie formatującego. Strumień i do serializacji obiektu są dostarczane jako parametry do tego połączenia. Chociaż nie jest to jawnie zademonstrowane w tym przykładzie, wszystkie zmienne składowe klasy będą serializowane — nawet zmienne oznaczone jako prywatne. W tym aspekcie Serializacja binarna różni się od <xref:System.Xml.Serialization.XmlSerializer> klasy, która tylko serializować pola publiczne. Aby uzyskać informacje na temat wykluczania zmiennych członkowskich z serializacji binarnej, zobacz [selektywne serializacji](selective-serialization.md).  
   
-Przywracanie poprzedni stan obiektu jest równie proste. Najpierw utwórz strumień do odczytu i a <xref:System.Runtime.Serialization.Formatter>, a następnie nakazuje programowi formatującego deserializacji obiektu. W poniższym przykładzie kodu pokazano, jak to zrobić.  
+Przywracanie poprzedni stan obiektu jest równie proste. Najpierw utwórz strumień do odczytu i a <xref:System.Runtime.Serialization.Formatter> , a następnie nakazuje programowi formatującego deserializacji obiektu. W poniższym przykładzie kodu pokazano, jak to zrobić.  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -58,7 +59,7 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Użyte powyżej jest bardzo wydajne i tworzy strumień bajtów kompaktowych. Dla wszystkich obiektów z tego programu formatującego również może być zdeserializowany z nim, dzięki czemu idealne narzędzie serializacji obiektów, które zostanie przeprowadzona na programie .NET Framework. Należy pamiętać, że konstruktorów nie są wywoływane, gdy deserializowany jest obiekt. To ograniczenie jest umieszczane na deserializacji ze względu na wydajność. Jednak narusza niektórych zwykłym umów przez środowisko uruchomieniowe z modułu zapisywania obiektu i deweloperów należy upewnić się, że zrozumieć zagadnienia, kiedy oznaczanie jako możliwy do serializacji obiektu.  
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Użyte powyżej jest bardzo wydajne i tworzy strumień bajtów kompaktowych. Dla wszystkich obiektów z tego programu formatującego również może być zdeserializowany z nim, dzięki czemu idealne narzędzie serializacji obiektów, które zostanie przeprowadzona na programie .NET Framework. Należy pamiętać, że konstruktorów nie są wywoływane, gdy deserializowany jest obiekt. To ograniczenie jest umieszczane na deserializacji ze względu na wydajność. Jednak narusza niektórych zwykłym umów przez środowisko uruchomieniowe z modułu zapisywania obiektu i deweloperów należy upewnić się, że zrozumieć zagadnienia, kiedy oznaczanie jako możliwy do serializacji obiektu.  
   
 Jeśli przenośność jest wymagana, użyj <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> zamiast niego. Po prostu Zastąp **BinaryFormatter** w powyższym kodzie z **SoapFormatter,** a następnie Wywołaj **Serializacja** i **deserializacja** jako poprzednio. Ten program formatujący tworzy następujące dane wyjściowe dla przykładu użytego powyżej.  
   
@@ -81,7 +82,7 @@ Jeśli przenośność jest wymagana, użyj <xref:System.Runtime.Serialization.Fo
 </SOAP-ENV:Envelope>  
 ```  
   
-Należy pamiętać, że atrybut możliwy do [serializacji](xref:System.SerializableAttribute) nie może być dziedziczony. Jeśli klasa nowe z `MyObject`, Nowa klasa musi być oznaczona atrybutem także lub nie może być serializowany. Na przykład podczas próby serializacji wystąpienia klasy poniżej zostanie wyświetlony komunikat <xref:System.Runtime.Serialization.SerializationException> informujący o tym, że typ nie jest oznaczony jako możliwy do `MyStuff` serializacji.  
+Należy pamiętać, że atrybut możliwy do [serializacji](xref:System.SerializableAttribute) nie może być dziedziczony. Jeśli klasa nowe z `MyObject`, Nowa klasa musi być oznaczona atrybutem także lub nie może być serializowany. Na przykład podczas próby serializacji wystąpienia klasy poniżej zostanie wyświetlony komunikat <xref:System.Runtime.Serialization.SerializationException> informujący o tym, że `MyStuff` Typ nie jest oznaczony jako możliwy do serializacji.  
   
 ```csharp  
 public class MyStuff : MyObject

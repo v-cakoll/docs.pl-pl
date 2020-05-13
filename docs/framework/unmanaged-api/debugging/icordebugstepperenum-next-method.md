@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 293d1a9cd93b5ce45105427e7df864ad8bfbe77a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138991"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379195"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next — Metoda
 Pobiera określoną liczbę wystąpień ICorDebugStepper z wyliczenia, rozpoczynając od bieżącego położenia.  
@@ -38,19 +38,19 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba wystąpień `ICorDebugStepper` do pobrania.  
+ podczas Liczba `ICorDebugStepper` wystąpień do pobrania.  
   
  `steppers`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugStepper`.  
+ określoną Tablica wskaźników, z których każdy wskazuje `ICorDebugStepper` obiekt.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugStepper`. Ta wartość może być równa null, jeśli `celt` to jeden.  
+ określoną Wskaźnik do liczby `ICorDebugStepper` faktycznie zwróconych wystąpień. Ta wartość może być równa null, jeśli `celt` jest taka.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

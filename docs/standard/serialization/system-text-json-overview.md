@@ -1,5 +1,6 @@
 ---
 title: Serializowanie i deserializacja JSON przy użyciu języka C# — .NET
+description: To omówienie zawiera opis System.Text.Json funkcji przestrzeni nazw do serializacji do i deserializacji z JSON w programie .NET.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159549"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380125"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serializacja i deserializacja kodu JSON (kierowanie i cofanie) w programie .NET — Omówienie
 
-`System.Text.Json` Przestrzeń nazw zawiera funkcje serializacji do i deserializacji z JavaScript Object Notation (JSON).
+`System.Text.Json`Przestrzeń nazw zawiera funkcje serializacji do i deserializacji z JavaScript Object Notation (JSON).
 
 Projekt biblioteki wyróżnia wysoką wydajność i małą alokację pamięci w ramach rozbudowanego zestawu funkcji. Wbudowana obsługa UTF-8 optymalizuje proces odczytywania i pisania tekstu JSON zakodowanego w formacie UTF-8, który jest najbardziej rozpowszechnionym kodowaniem danych w sieci Web i plikach na dysku.
 
@@ -27,7 +28,7 @@ Biblioteka zawiera również klasy umożliwiające pracę z modelem DOM (Documen
 ## <a name="how-to-get-the-library"></a>Jak uzyskać bibliotekę
 
 * Biblioteka jest wbudowana w ramach platformy udostępnionej [.NET Core 3,0](https://aka.ms/netcore3download) .
-* W przypadku innych platform docelowych Zainstaluj pakiet [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet. Pakiet obsługuje:
+* W przypadku innych platform docelowych zainstaluj [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) pakiet NuGet. Pakiet obsługuje:
   * .NET Standard 2,0 i nowsze wersje
   * .NET Framework 4.7.2 i nowsze wersje
   * .NET Core 2,0, 2,1 i 2,2

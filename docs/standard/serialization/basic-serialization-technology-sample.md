@@ -1,19 +1,20 @@
 ---
 title: Przykład technologii serializacji podstawowej
+description: Ten przykład ilustruje możliwość wykonywania serializacji grafu obiektów w pamięci do strumienia. Ten przykład może używać SoapFormatter lub BinaryFormatter.
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353142"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378443"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
 
 [Pobieranie próbki](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
 
-Ten przykład pokazuje możliwości środowiska uruchomieniowego języka wspólnego do serializacji grafu obiektów w pamięci do strumienia. Ten przykład może korzystać z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, aby zobaczyć wyniki. Połączona lista jest typu `LinkedList`, typu zdefiniowanego przez ten przykład.
+Ten przykład pokazuje możliwości środowiska uruchomieniowego języka wspólnego do serializacji grafu obiektów w pamięci do strumienia. Ten przykład może korzystać z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, aby zobaczyć wyniki. Połączona lista jest typu `LinkedList` , typu zdefiniowanego przez ten przykład.
 
 Komentarzy w PLikach źródłowych kodu i build.proj uzyskać więcej informacji o serializacji.
 
@@ -72,7 +73,7 @@ Poniższe punktory krótko opisują klasy i technologie używane w tym przykład
 
 - Środowisko wykonawcze serializacji
 
-  - <xref:System.Runtime.Serialization.IFormatter>Służy do odwoływania się do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> obiektu lub.
+  - <xref:System.Runtime.Serialization.IFormatter>Służy do odwoływania się do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> obiektu lub <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> .
 
   - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Służy do serializacji połączonej listy w strumieniu w formacie binarnym. Binarny program formatujący używa formatu tylko <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> rozumie typu. Jednak dane są zwięzły.
 
@@ -80,7 +81,7 @@ Poniższe punktory krótko opisują klasy i technologie używane w tym przykład
 
 - We/Wy strumienia
 
-  - <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typem określonego strumienia użytym w tym przykładzie jest <xref:System.IO.FileStream> typ. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.
+  - <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typem określonego strumienia użytym w tym przykładzie jest <xref:System.IO.FileStream> Typ. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.
 
   - <xref:System.IO.File>Służy do tworzenia <xref:System.IO.FileStream> obiektów do odczytu i tworzenia plików na dysku.
 

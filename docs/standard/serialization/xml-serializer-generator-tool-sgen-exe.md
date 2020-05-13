@@ -1,13 +1,14 @@
 ---
 title: Narzędzie generatora serializatora XML (Sgen.exe)
+description: Generator serializatora XML tworzy zestaw serializacji XML dla typów w zestawie, który zwiększa wydajność uruchamiania XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: bc1a0abaeef9a9244aa83941e590063c7ef167d1
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588365"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380043"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generatora serializatora XML (Sgen.exe)
 
@@ -22,25 +23,25 @@ sgen [options]
 ```
   
 > [!TIP]
-> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić zmienne `Path`środowiskowe `Include`, `Lib` i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się \<w katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
+> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \< katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
   
 ## <a name="parameters"></a>Parametry  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/a\[ssembly\]:**_filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
-|**/c\[ompiler\]:**_Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
-|**/d\[ebug\]**|Generuje obrazu, który może być używany z debugera.|  
-|**/f\[Orce\]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
+|**/a \[ ssembly \] :**_filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
+|**/c \[ ompiler \] :**_Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
+|**/d \[ ebug\]**|Generuje obrazu, który może być używany z debugera.|  
+|**/f \[ Orce\]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
 |**/help lub/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/k\[achowaj\]**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
-|**/n\[ologo\]**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**/o\[UT\]:**_ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
-|**/p\[roxytypes\]**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
-|**/r\[eference\]:**_assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
-|**/s\[ilent\]**|Pomija wyświetlanie komunikatów o sukcesie.|  
-|**/t\[typ\]:**_Typ_|Generuje kod serializacji tylko dla określonego typu.|  
-|**/v\[erbose\]**|Wyświetla pełne dane wyjściowe dla debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k \[ achowaj\]**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
+|**/n \[ ologo\]**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/o \[ UT \] :**_ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
+|**/p \[ roxytypes\]**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
+|**/r \[ eference \] :**_assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
+|**/s \[ ilent\]**|Pomija wyświetlanie komunikatów o sukcesie.|  
+|**/t \[ Typ \] :**_Typ_|Generuje kod serializacji tylko dla określonego typu.|  
+|**/v \[ erbose\]**|Wyświetla pełne dane wyjściowe dla debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -63,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Narzędzia](../../../docs/framework/tools/index.md)
+- [narzędzia](../../../docs/framework/tools/index.md)
 - [Wiersze poleceń](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

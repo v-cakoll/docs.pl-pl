@@ -1,5 +1,6 @@
 ---
 title: Narzędzie definicji schematu XML i serializacja XML
+description: Narzędzie definicji schematu XML generuje pliki klasy C# lub Visual Basic dla schematu XSD i generuje schemat XML z biblioteki lub pliku wykonywalnego.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Xsd.exe
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: b51b9a0112893d9a7838155f4af051e7079c8cdd
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 258e66643dae64aec7280419911f5ac9193a2ada
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588388"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380103"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Narzędzie definicji schematu XML i serializacja XML
 
-Narzędzie definicji schematu XML ([narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) jest instalowane wraz z narzędziami .NET Framework w ramach zestawu Software Development Kit&reg; (SDK) dla systemu Windows. To narzędzie jest przeznaczony głównie do dwóch celów:  
+Narzędzie definicji schematu XML ([narzędzie definicji schematu XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) jest instalowane wraz z narzędziami .NET Framework w ramach &reg; zestawu Software Development Kit (SDK) dla systemu Windows. To narzędzie jest przeznaczony głównie do dwóch celów:  
   
 - Aby wygenerować C# lub Visual Basic PLików klasy, które są zgodne z określonego schematu języka (XSD) definicji schematu XML. Narzędzie wykonuje schematu XML jako argument i generuje PLik, który zawiera wiele klas, gdy serializowany z <xref:System.Xml.Serialization.XmlSerializer>, zgodny ze schematem. Aby uzyskać informacje na temat sposobu użycia narzędzia do generowania klas, które są zgodne z określonym schematem, zobacz [How to: use a XML Schema Definition Tool to Generating Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   

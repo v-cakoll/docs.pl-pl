@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: 48d2af96b50bf77347256b3d5860405e460a09d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d01936481ec139757566d5b96cb95ea887cb8c20
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133449"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378056"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID — Metoda
 Pobiera bieżący identyfikator systemu operacyjnego aktywnej części tego ICorDebugThread.  
@@ -41,10 +41,10 @@ HRESULT GetID (
  Identyfikator systemu operacyjnego może ulec zmianie podczas wykonywania procesu i może być inną wartością dla różnych części wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

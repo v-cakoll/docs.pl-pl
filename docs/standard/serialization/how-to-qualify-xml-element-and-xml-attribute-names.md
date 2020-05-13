@@ -1,5 +1,6 @@
 ---
 title: Jak kwalifikować elementy XML i nazwy atrybutów XML
+description: W tym artykule opisano, jak zakwalifikować nazwy elementów XML i atrybutów XML w dokumentach XML.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6c29e03d9ce28e5b0abc68a5d7e8d82f4485ac93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159874"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378412"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Jak kwalifikować elementy XML i nazwy atrybutów XML
 
@@ -30,7 +31,7 @@ Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw,
 
 2. Dodaj wszystkie prefiksy i pary nazw do `XmlSerializerNamespaces`.
 
-3. Zastosuj odpowiedni `System.Xml.Serialization` atrybut do każdego elementu członkowskiego lub klasy, <xref:System.Xml.Serialization.XmlSerializer> które ma zostać zserializowane w dokumencie XML.
+3. Zastosuj odpowiedni `System.Xml.Serialization` atrybut do każdego elementu członkowskiego lub klasy, które <xref:System.Xml.Serialization.XmlSerializer> ma zostać zserializowane w dokumencie XML.
 
     Dostępne są następujące atrybuty: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, i <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
@@ -40,7 +41,7 @@ Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw,
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy `XmlSerializerNamespaces`i dodaje dwa pary prefiksów i przestrzeni nazw do obiektu. Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy. Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.
+Poniższy przykład tworzy `XmlSerializerNamespaces` i dodaje dwa pary prefiksów i przestrzeni nazw do obiektu. Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy. Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.
 
 ```vb
 Imports System.IO

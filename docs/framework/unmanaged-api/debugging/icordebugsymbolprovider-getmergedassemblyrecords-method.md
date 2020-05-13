@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMergedAssemblyRecords, Metoda'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7d26fa80a7a8ebe7b4606b914c8cd09c52df1e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791627"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379624"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider:: GetMergedAssemblyRecords, Metoda
 Pobiera rekordy symboli dla wszystkich scalonych zestawów.  
@@ -38,15 +38,15 @@ HRESULT GetMergedAssemblyRecords(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

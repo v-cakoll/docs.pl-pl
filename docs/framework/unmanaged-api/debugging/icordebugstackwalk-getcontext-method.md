@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 743b0c8016ca5c0401046166a770d857215429a3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791906"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379218"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext — Metoda
 Zwraca kontekst dla bieżącej ramki w obiekcie [ICorDebugStackWalk](icordebugstackwalk-interface.md) .  
@@ -47,7 +47,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  `contextBuf`  
  określoną Bufor kontekstu.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
@@ -63,15 +63,15 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  Ponieważ rozwinięcia powoduje przywrócenie tylko podzbioru rejestrów, takich jak rejestry nietrwałe, kontekst może nie być dokładnie zgodny z stanem rejestru w momencie wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

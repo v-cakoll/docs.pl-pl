@@ -1,25 +1,25 @@
 ---
-title: dotnet, polecenie
-description: Dowiedz się więcej o poleceniu dotnet (ogólnym sterowniku interfejsu wiersza polecenia .NET Core) i jego użyciu.
+title: dotnet — polecenie
+description: Dowiedz się więcej na temat polecenia dotnet (sterownika generycznego dla interfejs wiersza polecenia platformy .NET Core) i jego użycia.
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739080"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378841"
 ---
-# <a name="dotnet-command"></a>dotnet, polecenie
+# <a name="dotnet-command"></a>dotnet — polecenie
 
-**Ten artykuł dotyczy:** ✔️.NET Core 2.1 SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
-`dotnet`- Ogólny sterownik dla interfejsu wiersza polecenia .NET Core.
+`dotnet`— Sterownik generyczny dla interfejs wiersza polecenia platformy .NET Core.
 
 ## <a name="synopsis"></a>Streszczenie
 
-Aby uzyskać informacje o dostępnych poleceniach i środowisku:
+Aby uzyskać informacje na temat dostępnych poleceń i środowiska:
 
 ```dotnetcli
 dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
@@ -27,7 +27,7 @@ dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
 dotnet -h|--help
 ```
 
-Aby uruchomić polecenie (wymaga instalacji SDK):
+Aby uruchomić polecenie (wymaga instalacji zestawu SDK):
 
 ```dotnetcli
 dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
@@ -46,112 +46,120 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
-`--roll-forward`jest dostępna od platformy .NET Core 3.x. Użyj `--roll-forward-on-no-candidate-fx` dla .NET Core 2.x.
+`--roll-forward`jest dostępny od wersji .NET Core 3. x. Używany `--roll-forward-on-no-candidate-fx` dla platformy .NET Core 2. x.
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet` ma dwie funkcje:
+`dotnet`Polecenie ma dwie funkcje:
 
-- Zapewnia polecenia do pracy z projektami .NET Core.
+- Zawiera polecenia umożliwiające pracę z projektami .NET Core.
 
-  Na przykład [`dotnet build`](dotnet-build.md) tworzy projekt. Każde polecenie definiuje własne opcje i argumenty. Wszystkie polecenia obsługują `--help` opcję drukowania krótkiej dokumentacji dotyczącej sposobu korzystania z polecenia.
+  Na przykład [`dotnet build`](dotnet-build.md) kompiluje projekt. Każde polecenie definiuje własne opcje i argumenty. Wszystkie polecenia obsługują `--help` opcję drukowania krótkiej dokumentacji dotyczącej sposobu korzystania z polecenia.
 
-- Uruchamia aplikacje .NET Core.
+- Uruchamia aplikacje platformy .NET Core.
 
-  Można określić ścieżkę `.dll` do pliku aplikacji, aby uruchomić aplikację.  Aby uruchomić aplikację oznacza, aby znaleźć i wykonać punkt wejścia, `Main` który w przypadku aplikacji konsoli jest metodą. Na przykład `dotnet myapp.dll` uruchamia `myapp` aplikację. Zobacz [wdrożenie aplikacji .NET Core,](../deploying/index.md) aby dowiedzieć się więcej o opcjach wdrażania.
+  Należy określić ścieżkę do pliku aplikacji, `.dll` Aby uruchomić aplikację.  Aby uruchomić aplikację, należy znaleźć i wykonać punkt wejścia, który w przypadku aplikacji konsolowych jest `Main` metodą. Na przykład `dotnet myapp.dll` uruchamia `myapp` aplikację. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) , aby dowiedzieć się więcej na temat opcji wdrażania.
 
 ## <a name="options"></a>Opcje
 
-Różne opcje są `dotnet` dostępne dla siebie, do uruchamiania polecenia i uruchamiania aplikacji.
+Różne opcje są dostępne dla `dotnet` siebie, na potrzeby uruchamiania polecenia i uruchamiania aplikacji.
 
-### <a name="options-for-dotnet-by-itself"></a>Opcje dla dotnet sam
+### <a name="options-for-dotnet-by-itself"></a>Opcje dla dotnet
 
-Następujące opcje są `dotnet` dla siebie. Na przykład `dotnet --info`. Drukują informacje o środowisku.
+Poniższe opcje są odpowiednie dla `dotnet` siebie. Na przykład `dotnet --info`. Drukują informacje o środowisku.
 
 - **`--info`**
 
-  Drukuje szczegółowe informacje o instalacji .NET Core i środowisku komputera, takich jak bieżący system operacyjny, i zatwierdza sha wersji .NET Core.
+  Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środowiska maszynowego, takiego jak bieżący system operacyjny, i zatwierdzania SHA dla wersji .NET Core.
 
 - **`--version`**
 
-  Drukuje używany plik.
+  Drukuje używaną wersję zestaw .NET Core SDK.
 
 - **`--list-runtimes`**
 
-  Drukuje listę zainstalowanych runtimes .NET Core. Wersja x86 SDK zawiera tylko środowiska wykonawcze x86, a wersja x64 SDK wyświetla tylko środowiska wykonawcze x64.
+  Drukuje listę zainstalowanych środowiska uruchomieniowego platformy .NET Core. Wersja x86 zestawu SDK zawiera tylko środowiska uruchomieniowe x86, a wersja x64 zestawu SDK zawiera tylko środowiska uruchomieniowe x64.
 
 - **`--list-sdks`**
 
-  Drukuje listę zainstalowanych pakietów SDK .NET Core.
+  Drukuje listę zainstalowanych zestawów SDK platformy .NET Core.
 
 - **`-h|--help`**
 
   Drukuje listę dostępnych poleceń.
 
-### <a name="sdk-options-for-running-a-command"></a>Opcje SDK do uruchamiania polecenia
+### <a name="sdk-options-for-running-a-command"></a>Opcje zestawu SDK do uruchamiania polecenia
 
-Następujące opcje są `dotnet` dla z polecenia. Na przykład `dotnet build --help`.
+Następujące opcje są przeznaczone dla `dotnet` polecenia. Na przykład `dotnet build --help`.
 
 - **`-d|--diagnostics`**
 
-  Umożliwia wyjście diagnostyczne.
+  Włącza diagnostykę danych wyjściowych.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i . Nie jest obsługiwany w każdym poleceniu. Zobacz określoną stronę polecenia, aby ustalić, czy ta opcja jest dostępna.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Nieobsługiwane w każdym poleceniu. Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 - **`-h|--help`**
 
-  Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`.
+  Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help` .
 
 - **`command options`**
 
-  Każde polecenie definiuje opcje specyficzne dla tego polecenia. Zobacz stronę poleceń, aby uzyskać listę dostępnych opcji.
+  Każde polecenie definiuje opcje specyficzne dla tego polecenia. Listę dostępnych opcji można znaleźć na stronie z konkretnym poleceniem.
 
-### <a name="runtime-options"></a>Opcje środowiska wykonawczego
+### <a name="runtime-options"></a>Opcje środowiska uruchomieniowego
 
-Następujące opcje są `dotnet` dostępne podczas uruchamiania aplikacji. Na przykład `dotnet myapp.dll --fx-version 3.1.1`.
+Poniższe opcje są dostępne podczas `dotnet` uruchamiania aplikacji. Na przykład `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
-  Ścieżka zawierająca zasady sondowania i zestawy do sondowania.
+  Ścieżka zawierająca zasady i zestawy do sondowania.
 
 - **`--additional-deps <PATH>`**
 
-  Ścieżka do dodatkowego pliku *deps.json.* Plik *deps.json* zawiera listę zależności, zależności kompilacji i informacje o wersji używane do rozwiązywania konfliktów zestawu. Aby uzyskać więcej informacji, zobacz [Pliki konfiguracji środowiska wykonawczego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) w usłudze GitHub.
+  Ścieżka do dodatkowego pliku *. deps. JSON* . Plik *deps. JSON* zawiera listę zależności, zależności kompilacji i informacje o wersji używane do rozwiązywania konfliktów zestawów. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) w serwisie GitHub.
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  Wersja środowiska uruchomieniowego .NET Core do uruchomienia aplikacji.
+  Ścieżka do pliku *deps. JSON* . Plik *deps. JSON* to plik konfiguracji, który zawiera informacje o zależnościach niezbędnych do uruchomienia aplikacji. Ten plik jest generowany przez zestaw .NET Core SDK.
 
 - **`--runtimeconfig`**
 
-  Ścieżka do pliku *runtimeconfig.json.* Plik *runtimeconfig.json* jest plikiem konfiguracyjnym zawierającym ustawienia czasu wykonywania. Aby uzyskać więcej informacji, zobacz [.NET Core ustawienia konfiguracji w czasie wykonywania](../run-time-config/index.md#runtimeconfigjson).
+  Ścieżka do pliku *runtimeconfig. JSON* . Plik *runtimeconfig. JSON* to plik konfiguracji, który zawiera ustawienia czasu wykonywania. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
-- **`--roll-forward-on-no-candidate-fx <N>`****Dostępne w pliku .NET Core 2.x SDK.**
+- **`--roll-forward <SETTING>`****Dostępne począwszy od zestaw .NET Core SDK 3,0.**
 
-  Definiuje zachowanie, gdy wymagana współużytkowana struktura nie jest dostępna. `N`może to być:
+  Kontroluje sposób, w jaki do aplikacji jest stosowane przewinięcie do przodu. `SETTING`Może to być jedna z następujących wartości. Jeśli nie zostanie określony, `Minor` jest wartością domyślną.
 
-  - `0`- Wyłącz nawet wersję pomocniczą rolki do przodu.
-  - `1`- Roll forward w wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
-  - `2`- Roll forward w wersji pomocniczej i głównej.
+  - `LatestPatch`— Przewinięcie do najwyższej wersji poprawki. Spowoduje to wyłączenie wycofywania wersji pomocniczej.
+  - `Minor`— Przewinięcie do najmniejszej wyższej wersji pomocniczej, jeśli brakuje wymaganej wersji pomocniczej. Jeśli jest obecna żądana wersja pomocnicza, zostaną użyte zasady LatestPatch.
+  - `Major`-Przewinięcie do najmniejszej wyższej wersji głównej i najniższej wersji pomocniczej, jeśli brakuje wersji głównej. Jeśli jest obecna żądana wersja główna, są używane zasady pomocnicze.
+  - `LatestMinor`— Przewinięcie do najnowszej wersji pomocniczej, nawet jeśli jest obecna żądana wersja pomocnicza. Przeznaczone do scenariuszy hostingu składników.
+  - `LatestMajor`— Przewinięcie do przodu do najwyższej głównej i najwyższej wersji pomocniczej, nawet jeśli zażądano obecności głównej. Przeznaczone do scenariuszy hostingu składników.
+  - `Disable`— Nie przetaczaj dalej. Powiąż tylko z określoną wersją. Te zasady nie są zalecane do użytku ogólnego, ponieważ uniemożliwiają one przekazanie do najnowszych poprawek. Ta wartość jest zalecana tylko do celów testowych.
 
-   Aby uzyskać więcej informacji, zobacz [Przewij do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+  Z wyjątkiem programu `Disable` , wszystkie ustawienia będą używać najwyższej dostępnej wersji poprawki.
 
-- **`--roll-forward <SETTING>`****Dostępne począwszy od .NET Core SDK 3.0.**
+  Zachowanie przewinięcie do przodu można także skonfigurować we właściwościach pliku projektu, właściwości pliku konfiguracji czasu wykonywania i zmiennej środowiskowej. Aby uzyskać więcej informacji, zobacz [wersja główna środowiska uruchomieniowego do przodu](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
 
-  Określa sposób przekazywania do przodu jest stosowany do aplikacji. `SETTING` Może to być jedna z następujących wartości. Jeśli nie `Minor` zostanie określony, jest wartością domyślną.
+- **`--roll-forward-on-no-candidate-fx <N>`****Dostępne w zestawie SDK platformy .NET Core 2. x.**
 
-  - `LatestPatch`- Przewiń do przodu do najwyższej wersji poprawki. Spowoduje to wyłączenie wersji pomocniczej do przodu.
-  - `Minor`- Przewiń do przodu do najniższej wyższej wersji pomocniczej, jeśli brakuje żądanej wersji pomocniczej. Jeśli żądana wersja pomocnicza jest obecna, używana jest zasada LatestPatch.
-  - `Major`- Przewiń do przodu do najniższej wyższej wersji głównej i najniższej wersji pomocniczej, jeśli brakuje żądanej wersji głównej. Jeśli żądana wersja główna jest obecny, a następnie drobne zasady są używane.
-  - `LatestMinor`- Przewiń do przodu do najwyższej wersji pomocniczej, nawet jeśli wymagana wersja pomocnicza jest obecna. Przeznaczone do scenariuszy hostingu składników.
-  - `LatestMajor`- Roll forward do najwyższej wersji głównej i najwyższej wersji pomocniczej, nawet jeśli wymagane major jest obecny. Przeznaczone do scenariuszy hostingu składników.
-  - `Disable`- Nie tocz do przodu. Tylko powiązanie z określoną wersją. Ta zasada nie jest zalecana do ogólnego użytku, ponieważ wyłącza możliwość przekazywania do najnowszych poprawek. Ta wartość jest zalecana tylko do testowania.
+  Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna. `N`może to być:
 
-Z wyjątkiem `Disable`, wszystkie ustawienia będą korzystać z najwyższej dostępnej wersji poprawki.
+  - `0`-Wyłącz parzystą wersję pomocniczą do przodu.
+  - `1`— Przewinięcie do wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
+  - `2`— Przewinięcie do przodu w wersjach pomocniczych i głównych.
 
-Zachowanie przewijania do przodu można również skonfigurować we właściwości pliku projektu, właściwości pliku konfiguracji w czasie wykonywania i zmiennej środowiskowej. Aby uzyskać więcej informacji, zobacz [Główne wersje runtime roll do przodu](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+  Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  Począwszy od platformy .NET Core 3,0, ta opcja jest zastępowana przez `--roll-forward` , a ta opcja powinna być używana zamiast tego.
+
+- **`--fx-version <VERSION>`**
+
+  Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu uruchomienia aplikacji.
+
+  Ta opcja zastępuje wersję pierwszego odniesienia struktury w `.runtimeconfig.json` pliku aplikacji. Oznacza to, że działa tylko zgodnie z oczekiwaniami, jeśli istnieje tylko jedno odwołanie do struktury. Jeśli aplikacja ma więcej niż jedno odwołanie do platformy, użycie tej opcji może spowodować błędy.
 
 ## <a name="dotnet-commands"></a>Polecenia dotnet
 
@@ -159,20 +167,20 @@ Zachowanie przewijania do przodu można również skonfigurować we właściwoś
 
 | Polecenie                                       | Funkcja                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | Tworzy aplikację .NET Core.                                     |
+| [dotnet build](dotnet-build.md)               | Kompiluje aplikację platformy .NET Core.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Współdziała z serwerami uruchomionymi przez kompilację.                          |
-| [dotnet clean](dotnet-clean.md)               | Czyste wyjścia kompilacji.                                                |
-| [dotnet help](dotnet-help.md)                 | Pokazuje bardziej szczegółową dokumentację dla polecenia.           |
-| [dotnet migrate](dotnet-migrate.md)           | Migruje prawidłowy projekt w wersji zapoznawczej 2 do projektu .NET Core SDK 1.0.  |
-| [dotnet msbuild](dotnet-msbuild.md)           | Zapewnia dostęp do wiersza polecenia MSBuild.                        |
-| [dotnet new](dotnet-new.md)                   | Inicjuje projekt C# lub F# dla danego szablonu.                |
+| [dotnet clean](dotnet-clean.md)               | Czyste dane wyjściowe kompilacji.                                                |
+| [dotnet help](dotnet-help.md)                 | Przedstawia bardziej szczegółową dokumentację dla polecenia w trybie online.           |
+| [dotnet migrate](dotnet-migrate.md)           | Migruje prawidłowy projekt w wersji zapoznawczej 2 do projektu zestaw .NET Core SDK 1,0.  |
+| [dotnet msbuild](dotnet-msbuild.md)           | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
+| [dotnet new](dotnet-new.md)                   | Inicjuje projekt C# lub F # dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)                 | Tworzy pakiet NuGet kodu.                               |
-| [dotnet publish](dotnet-publish.md)           | Publikuje aplikację zależną od struktury .NET lub niezależną. |
+| [dotnet publish](dotnet-publish.md)           | Publikuje zależne od programu .NET Framework lub samodzielną aplikację. |
 | [dotnet restore](dotnet-restore.md)           | Przywraca zależności dla danej aplikacji.                  |
 | [dotnet run](dotnet-run.md)                   | Uruchamia aplikację ze źródła.                                   |
-| [dotnet sln](dotnet-sln.md)                   | Opcje dodawania, usuwania i listy projektów w pliku rozwiązania.       |
-| [dotnet store](dotnet-store.md)               | Przechowuje zestawy w magazynie pakietów środowiska wykonawczego.                     |
-| [dotnet test](dotnet-test.md)                 | Uruchamia testy przy użyciu testowej próby.                                     |
+| [dotnet sln](dotnet-sln.md)                   | Opcje dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.       |
+| [dotnet store](dotnet-store.md)               | Przechowuje zestawy w magazynie pakietów środowiska uruchomieniowego.                     |
+| [dotnet test](dotnet-test.md)                 | Uruchamia testy przy użyciu modułu uruchamiającego testy.                                     |
 
 ### <a name="project-references"></a>Odwołania projektu
 
@@ -193,56 +201,56 @@ Polecenie | Funkcja
 
 Polecenie | Funkcja
 --- | ---
-[dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa lub usuwa listę pakiet z serwera.
-[dotnet nuget push](dotnet-nuget-push.md) | Wypycha pakiet do serwera i publikuje go.
-[dotnet nuget locals](dotnet-nuget-locals.md) | Czyści lub wyświetla lokalne zasoby NuGet, takie jak pamięć podręczna żądań http, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całej maszyny.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa pakiet z serwera lub go wystawia.
+[dotnet nuget push](dotnet-nuget-push.md) | Wypchnij pakiet na serwer i opublikuje go.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Czyści lub wyświetla lokalne zasoby NuGet, takie jak pamięć podręczna żądań HTTP, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całego komputera.
 [dotnet nuget add source](dotnet-nuget-add-source.md) | Dodaje źródło NuGet.
-[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Wyłącza źródło NuGet.
-[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Włącza źródło NuGet.
-[dotnet nuget list source](dotnet-nuget-list-source.md) | Wyświetla listę wszystkich skonfigurowanych źródeł NuGet.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Wyłącza Źródło NuGet.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Włącza Źródło NuGet.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Wyświetla wszystkie skonfigurowane źródła NuGet.
 [dotnet nuget remove source](dotnet-nuget-remove-source.md) | Usuwa źródło NuGet.
-[dotnet nuget update source](dotnet-nuget-update-source.md) | Aktualizuje źródło NuGet.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | Aktualizuje źródło narzędzia NuGet.
 
-### <a name="global-tool-path-and-local-tools-commands"></a>Polecenia narzędzi globalnych, ścieżki narzędzi i narzędzi lokalnych
+### <a name="global-tool-path-and-local-tools-commands"></a>Globalne, ścieżki narzędziowe i polecenia narzędzi lokalnych
 
-Narzędzia są aplikacje konsoli, które są instalowane z pakietów NuGet i są wywoływane z wiersza polecenia. Możesz samodzielnie napisać narzędzia lub zainstalować narzędzia napisane przez osoby trzecie. Narzędzia są również nazywane narzędziami globalnymi, narzędziami ścieżki narzędzi i narzędziami lokalnymi. Aby uzyskać więcej informacji, zobacz [omówienie narzędzi .NET Core](global-tools.md). Globalne i narzędzia ścieżki narzędzi są dostępne począwszy od .NET Core SDK 2.1. Narzędzia lokalne są dostępne począwszy od .NET Core SDK 3.0.
+Narzędzia są aplikacjami konsolowymi, które są instalowane z pakietów NuGet i są wywoływane z wiersza polecenia. Narzędzia można pisać samodzielnie lub instalować Narzędzia zapisane przez inne firmy. Narzędzia są również nazywane narzędziami globalnymi, narzędziami ścieżki narzędzi i narzędziami lokalnymi. Aby uzyskać więcej informacji, zobacz [Narzędzia platformy .NET Core — Omówienie](global-tools.md). Narzędzia globalne i ścieżki narzędzi są dostępne począwszy od zestaw .NET Core SDK 2,1. Narzędzia lokalne są dostępne począwszy od zestaw .NET Core SDK 3,0.
 
 Polecenie | Funkcja
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instaluje narzędzie na komputerze.
-[dotnet tool list](dotnet-tool-list.md) | Wyświetla listę wszystkich narzędzi globalnych, ścieżki narzędzi lub narzędzi lokalnych aktualnie zainstalowanych na komputerze.
+[dotnet tool list](dotnet-tool-list.md) | Wyświetla listę wszystkich globalnych narzędzi, ścieżek narzędziowych lub lokalnych zainstalowanych obecnie na komputerze.
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Odinstalowuje narzędzie z komputera.
 [dotnet tool update](dotnet-tool-update.md) | Aktualizuje narzędzie zainstalowane na komputerze.
 
 ### <a name="additional-tools"></a>Dodatkowe narzędzia
 
-Począwszy od zestawu .NET Core SDK 2.1.300, wiele narzędzi, `DotnetCliToolReference` które były dostępne tylko na podstawie projektu, są teraz dostępne jako część zestawu .NET Core SDK. Narzędzia te są wymienione w poniższej tabeli:
+Począwszy od zestaw .NET Core SDK 2.1.300, wiele narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu, `DotnetCliToolReference` jest teraz dostępne jako część zestaw .NET Core SDK. Te narzędzia są wymienione w poniższej tabeli:
 
 | Narzędzie                                              | Funkcja                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| dev-certs                                         | Tworzy certyfikaty deweloperów i zarządza nimi.                |
-| [Ef](/ef/core/miscellaneous/cli/dotnet)           | Narzędzia wiersza polecenia Core entity framework.                    |
-| sql-cache                                         | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
-| [tajemnice użytkownika](/aspnet/core/security/app-secrets) | Zarządza wpisami tajnymi użytkowników deweloperów.                            |
-| [Oglądać](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora plików, który uruchamia polecenie po zmianie plików. |
+| dev-certs                                         | Tworzy i zarządza certyfikatami deweloperskimi.                |
+| [bieżąco](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core narzędzia wiersza polecenia.                    |
+| SQL-pamięć podręczna                                         | SQL Server narzędzia wiersza polecenia pamięci podręcznej.                         |
+| [wpisy tajne użytkownika](/aspnet/core/security/app-secrets) | Zarządza kluczami tajnymi użytkowników deweloperskich.                            |
+| [Obejrzyj](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora plików, który uruchamia polecenie, gdy pliki zmienią się. |
 
-Aby uzyskać więcej informacji `dotnet <tool-name> --help`o każdym narzędziu, wpisz .
+Aby uzyskać więcej informacji na temat każdego narzędzia, wpisz `dotnet <tool-name> --help` .
 
 ## <a name="examples"></a>Przykłady
 
-Utwórz nową aplikację konsoli .NET Core:
+Utwórz nową aplikację konsolową platformy .NET Core:
 
 ```dotnetcli
 dotnet new console
 ```
 
-Tworzenie projektu i jego zależności w danym katalogu:
+Kompiluj projekt i jego zależności w danym katalogu:
 
 ```dotnetcli
 dotnet build
 ```
 
-Uruchamianie aplikacji:
+Uruchom aplikację:
 
 ```dotnetcli
 dotnet myapp.dll
@@ -252,65 +260,89 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  Określa lokalizację środowiska uruchomień .NET Core, jeśli nie są zainstalowane w lokalizacji domyślnej. Domyślną lokalizacją `C:\Program Files\dotnet`w systemie Windows jest . Domyślną lokalizacją w systemach Linux i macOS jest `/usr/share/dotnet`. Ta zmienna środowiskowa jest używana tylko podczas uruchamiania aplikacji za pośrednictwem wygenerowanych plików wykonywalnych (apphosts). `DOTNET_ROOT(x86)`jest używany podczas uruchamiania 32-bitowego pliku wykonywalnego na 64-bitowym os.
+  Określa lokalizację środowiska uruchomieniowego programu .NET Core, jeśli nie są one zainstalowane w domyślnej lokalizacji. Domyślna lokalizacja w systemie Windows to `C:\Program Files\dotnet` . Domyślną lokalizacją w systemie Linux i macOS jest `/usr/share/dotnet` . Ta zmienna środowiskowa jest używana tylko w przypadku uruchamiania aplikacji za pośrednictwem wygenerowanych plików wykonywalnych (apphosts). `DOTNET_ROOT(x86)`jest używany zamiast w przypadku uruchamiania 32-bitowego pliku wykonywalnego w 64-bitowym systemie operacyjnym.
 
 - `DOTNET_PACKAGES`
 
-  Folder pakietów globalnych. Jeśli nie jest ustawiona, domyślnie jest to `~/.nuget/packages` w systemie Unix lub `%userprofile%\.nuget\packages` Windows.
+  Folder pakiety globalne. Jeśli nie jest ustawiona, zostanie ona domyślnie `~/.nuget/packages` włączona w systemie UNIX lub `%userprofile%\.nuget\packages` w systemie Windows.
 
 - `DOTNET_SERVICING`
 
-  Określa lokalizację indeksu obsługi do użycia przez hosta udostępnionego podczas ładowania środowiska wykonawczego.
+  Określa lokalizację indeksu obsługi, który ma być używany przez host udostępniony podczas ładowania środowiska uruchomieniowego.
 
 - `DOTNET_NOLOGO`
 
-  Określa, czy komunikaty powitalne .NET Core i telemetryczne są wyświetlane przy pierwszym uruchomieniu. Ustaw, `true` aby wyciszyć `true`te `1`komunikaty `yes` (wartości , `false` lub zaakceptowane) lub ustawić, aby zezwolić (wartości `false`, `0`, lub `no` akceptowane). Jeśli nie jest ustawiona, domyślna jest `false` i komunikaty będą wyświetlane przy pierwszym uruchomieniu. Ta flaga nie ma wpływu `DOTNET_CLI_TELEMETRY_OPTOUT` na dane telemetryczne (zobacz rezygnacji z wysyłania danych telemetrycznych).
+  Określa, czy podczas pierwszego uruchomienia są wyświetlane komunikaty telemetryczne programu .NET Core i telemetrii. Ustaw, aby `true` wyciszyć te komunikaty (wartości `true` , `1` lub `yes` zaakceptować) lub ustawić na wartość `false` Zezwalaj (wartości `false` , `0` lub `no` zaakceptować). Jeśli nie zostanie ustawiona, wartość domyślna to, `false` a komunikaty będą wyświetlane po pierwszym uruchomieniu. Ta flaga nie ma wpływu na dane telemetryczne (Zobacz, `DOTNET_CLI_TELEMETRY_OPTOUT` Aby zrezygnować z wysyłania danych telemetrycznych).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw `true` opcję rezygnacji z funkcji telemetrii (wartości `true`lub `1` `yes` zaakceptowane). W przeciwnym `false` razie należy ustawić opcję wyboru `false` `0`funkcji `no` telemetrycznych (wartości lub zaakceptowanych). Jeśli nie jest ustawiona, ustawieniem domyślnym jest `false` funkcja telemetrii.
+  Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw `true` , aby zrezygnować z funkcji telemetrii (wartości `true` , `1` lub `yes` zaakceptować). W przeciwnym razie ustaw opcję, aby `false` można było wybrać funkcje telemetrii (wartości `false` , `0` lub `no` zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna to `false` i aktywna funkcja telemetrii.
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  Określa, czy środowisko uruchomieniowe .NET Core, współużytkowana struktura lub SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie jest ustawiona, domyślnie `true`jest to 1 (logiczne ). Ustaw wartość 0 `false`(logiczna), aby nie rozwiązać problemu z lokalizacji globalnej i mieć izolowane instalacje .NET Core. Aby uzyskać więcej informacji na temat wyszukiwania wielopoziomowego, zobacz [Wielopoziomowe wyszukiwanie SharedFX](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+  Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, wartość domyślna to 1 (logiczna `true` ). Ustawienie wartości 0 (logiczne `false` ) nie jest rozpoznawane z lokalizacji globalnej i ma wyizolowane instalacje .NET Core. Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-- `DOTNET_ROLL_FORWARD`**Dostępne począwszy od .NET Core 3.x SDK.**
+- `DOTNET_ROLL_FORWARD`**Dostępne począwszy od platformy .NET Core 3. x.**
 
-  Określa zachowanie przewijania do przodu. Aby uzyskać więcej `--roll-forward` informacji, zobacz opcję wcześniej w tym artykule.
+  Określa zachowanie funkcji przyciągania do przodu. Aby uzyskać więcej informacji, zobacz `--roll-forward` opcję wcześniejszą w tym artykule.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`**Dostępne w pliku .NET Core 2.x SDK.**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE`**Dostępne począwszy od platformy .NET Core 3. x.**
 
-  Wyłącza wersję pomocniczą do `0`przodu, jeśli jest ustawiona na . Aby uzyskać więcej informacji, zobacz [Przewij do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+  Jeśli jest ustawiona na `1` (Enabled), umożliwia przewracanie do wersji wstępnej z wersji Release. Domyślnie ( `0` -Disabled), gdy wymagana jest wydana wersja środowiska uruchomieniowego programu .NET Core, przewinięcie do przodu spowoduje uwzględnienie tylko zainstalowanych wersji.
+
+  Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`**Dostępne w programie .NET Core 2. x.**
+
+  Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona na `0` . Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  To ustawienie jest zastępowane w programie .NET Core 3,0 przez program `DOTNET_ROLL_FORWARD` . Zamiast tego należy użyć nowych ustawień.
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  Ustawia język interfejsu użytkownika interfejsu wiersza polecenia `en-us`przy użyciu wartości ustawień regionalnych, takich jak . Obsługiwane wartości są takie same jak w programie Visual Studio. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą zmieniania języka instalatora w [dokumentacji instalacji programu Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019). Zasady Menedżera zasobów .NET mają zastosowanie, więc nie trzeba&mdash;wybierać dopasowania dokładnego, które można również wybrać elementy podrzędne w `CultureInfo` drzewie. Na przykład, jeśli ustawisz go na `fr-CA`, `fr` CLI znajdzie i użyje tłumaczeń. Jeśli ustawisz go na język, który nie jest obsługiwany, cli powróci do języka angielskiego.
+  Ustawia język interfejsu użytkownika CLI przy użyciu wartości ustawień regionalnych, takich jak `en-us` . Obsługiwane wartości są takie same jak w przypadku programu Visual Studio. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą zmiany języka Instalatora w [dokumentacji instalacyjnej programu Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019). Reguły Menedżera zasobów platformy .NET mają zastosowanie, więc nie trzeba wybierać dokładnego dopasowania, &mdash; które można również wybrać w `CultureInfo` drzewie. Jeśli na przykład ustawisz ją na `fr-CA` , interfejs wiersza polecenia znajdzie i użyje `fr` tłumaczeń. Jeśli ustawisz go na język, który nie jest obsługiwany, interfejs wiersza polecenia powróci do języka angielskiego.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
-  W przypadku generowanych plików wykonywalnych z funkcją GUI — wyłącza okno dialogowe, które zwykle jest wyświetlane dla niektórych klas błędów. To tylko zapisuje `stderr` i kończy się w tych przypadkach.
+  W przypadku plików wykonywalnych z obsługą graficznego interfejsu użytkownika — wyłącza okno podręczne, które jest zwykle wyświetlane dla niektórych klas błędów. Tylko zapisuje `stderr` i opuszcza te przypadki.
   
 - `DOTNET_ADDITIONAL_DEPS`
 
-  Odpowiednik opcji `--additional-deps`interfejsu wiersza polecenia .
+  Odpowiednik opcji interfejsu wiersza polecenia `--additional-deps` .
 
 - `DOTNET_RUNTIME_ID`
 
-  Zastępuje wykryty identyfikator RID.
+  Zastępuje wykrytego identyfikatora RID.
 
 - `DOTNET_SHARED_STORE`
 
-  Lokalizacja "magazynu udostępnionego", do którego rozdzielczość zestawu powraca w niektórych przypadkach.
+  Lokalizacja "udostępnionego magazynu", do którego w niektórych przypadkach jest powracana rozdzielczość zestawu.
 
 - `DOTNET_STARTUP_HOOKS`
 
-  Lista zestawów do załadowania i wykonania haków startowych.
+  Lista zestawów, z których mają zostać załadowane i wykonane uruchomienia.
+
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR`**Dostępne począwszy od platformy .NET Core 3. x.**
+
+  Określa katalog, do którego zostanie wyodrębniona aplikacja Jednoplikowa przed wykonaniem.
+
+  Aby uzyskać więcej informacji, zobacz [pliki wykonywalne pojedynczego pliku](../whats-new/dotnet-core-3-0.md#single-file-executables).
 
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
-  Steruje śledzeniem diagnostyki ze składników `dotnet.exe` `hostfxr`hostingu, takich jak , i `hostpolicy`.
+  Steruje śledzeniem diagnostyki ze składników hostingowych, takich jak `dotnet.exe` , `hostfxr` , i `hostpolicy` .
+
+  * `COREHOST_TRACE=[0/1]`-Domyślnie `0` — śledzenie jest wyłączone. Jeśli jest ustawiona na `1` , śledzenie diagnostyki jest włączone.
+  * `COREHOST_TRACEFILE=<file path>`-działa tylko wtedy, gdy śledzenie jest włączone za pośrednictwem `COREHOST_TRACE=1` . Po ustawieniu informacje o śledzeniu są zapisywane w określonym pliku, w przeciwnym razie informacje o śledzeniu są zapisywane w `stderr` . **Dostępne począwszy od platformy .NET Core 3. x.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]`-wartość domyślna to `4` . To ustawienie jest używane tylko wtedy, gdy śledzenie jest włączone za pośrednictwem `COREHOST_TRACE=1` . **Dostępne począwszy od platformy .NET Core 3. x.**
+    * `4`— wszystkie informacje o śledzeniu są zapisywane
+    * `3`-tylko komunikaty informacyjne, ostrzegawcze i błędów są zapisywane
+    * `2`-tylko ostrzeżenia i komunikaty o błędach są zapisywane
+    * `1`tylko komunikaty o błędach są zapisywane
+
+  Typowym sposobem uzyskania szczegółowych informacji śledzenia dotyczących uruchamiania aplikacji jest ustawienie `COREHOST_TRACE=1` i `COREHOST_TRACEFILE=host_trace.txt` uruchomienie aplikacji. Nowy plik `host_trace.txt` zostanie utworzony w bieżącym katalogu ze szczegółowymi informacjami.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Pliki konfiguracji środowiska wykonawczego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
-- [Ustawienia konfiguracji w czasie wykonywania rdzenia .NET](../run-time-config/index.md)
+- [Pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md)

@@ -1,16 +1,16 @@
 ---
-title: ICorDebugSymbolProvider::Metoda GetAssemblyImageBytes
+title: 'ICorDebugSymbolProvider:: GetAssemblyImageBytes, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 6361b12802876ef480acbe1cc13f32b77ba0be49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178494"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376120"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::Metoda GetAssemblyImageBytes
-Odczytuje dane z scalonego zestawu o względnym adresie wirtualnym (RVA) w scalonym zestawie.  
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider:: GetAssemblyImageBytes, Metoda
+Odczytuje dane z scalonego zestawu, uwzględniając względny adres wirtualny (RVA) w scalonym zestawie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,27 +24,27 @@ HRESULT GetAssemblyImageBytes(
   
 ## <a name="parameters"></a>Parametry  
  `rva`  
- [w] Względny adres wirtualny (RVA) w scalonym zestawie.  
+ podczas Względny adres wirtualny (RVA) w scalonym zestawie.  
   
  `length`  
- Liczba bajtów do odczytania z scalonego zestawu.  
+ Liczba bajtów do odczytania ze scalonego zestawu.  
   
  `ppMemoryBuffer`  
- Wskaźnik do adresu obiektu [ICorDebugMemoryBuffer,](icordebugmemorybuffer-interface.md) który zawiera informacje o buforze pamięci z scalonymi metadanymi zestawu.  
+ Wskaźnik do adresu obiektu [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) , który zawiera informacje o buforze pamięci ze scalonymi metadanymi zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 

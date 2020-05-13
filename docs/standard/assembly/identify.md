@@ -1,37 +1,38 @@
 ---
-title: 'Jak: Określić, czy plik jest złożeniem'
+title: 'Instrukcje: ustalanie, czy plik jest zestawem'
+description: W tym artykule opisano, jak określić, czy plik jest zestawem .NET, zarówno ręcznie, jak i programowo.
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159510"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380146"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Jak: Określić, czy plik jest złożeniem
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Instrukcje: ustalanie, czy plik jest zestawem
 
-Plik jest zestawem, jeśli i tylko wtedy, gdy jest zarządzany i zawiera wpis zestawu w swoich metadanych. Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz [Manifest zestawu](manifest.md).  
+Plik jest zestawem, jeśli i tylko wtedy, gdy jest zarządzany, i zawiera wpis zestawu w jego metadanych. Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz [manifest zestawu](manifest.md).  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Jak ręcznie określić, czy plik jest złożeniem  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Jak ręcznie określić, czy plik jest zestawem  
   
-1. Uruchom [program Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md).  
+1. Uruchom [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md).  
   
 2. Załaduj plik, który chcesz przetestować.  
   
-3. Jeśli **ILDASM** zgłasza, że plik nie jest przenośnyplik wykonywalny (PE), to nie jest to zestaw. Aby uzyskać więcej informacji, zobacz temat [Jak: Wyświetlanie zawartości zestawu](view-contents.md).  
+3. Jeśli **Ildasm** zgłasza, że plik nie jest przenośnym plikiem wykonywalnym (PE), to nie jest zestawem. Aby uzyskać więcej informacji, zobacz temat [jak: wyświetlanie zawartości zestawu](view-contents.md).  
   
-## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Jak programowo określić, czy plik jest złożeniem  
+## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Jak programowo określić, czy plik jest zestawem  
   
-1. Wywołaj <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> metodę, przekazując pełną ścieżkę pliku i nazwę testowego pliku.  
+1. Wywołaj <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> metodę, przekazując pełną ścieżkę pliku i nazwę testowanego pliku.  
   
-2. Jeśli <xref:System.BadImageFormatException> wyjątek zostanie zgłoszony, plik nie jest zestawem.  
+2. Jeśli <xref:System.BadImageFormatException> wystąpi wyjątek, plik nie jest zestawem.  
   
 ## <a name="example"></a>Przykład  
-W tym przykładzie testów dll, aby sprawdzić, czy jest to zestaw.  
+Ten przykład testuje DLL, aby sprawdzić, czy jest to zestaw.  
 
 ```csharp
 class TestAssembly  
@@ -89,7 +90,7 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
 
-Metoda <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> ładuje plik testowy, a następnie zwalnia go po odczytaniu informacji.  
+<xref:System.Reflection.AssemblyName.GetAssemblyName%2A>Metoda ładuje plik testowy, a następnie zwalnia go po odczytaniu informacji.  
   
 ## <a name="see-also"></a>Zobacz też
 

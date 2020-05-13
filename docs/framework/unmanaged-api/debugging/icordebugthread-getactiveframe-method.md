@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-ms.openlocfilehash: d623893bd77e46832b0bd823ed60c23e4eee29ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 843c6df1ef41fdd3227b92275182432ad4cc43b1
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133537"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379726"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame — Metoda
 Pobiera wskaźnik interfejsu do aktywnej (najnowszej) ramki tego obiektu ICorDebugThread.  
@@ -38,13 +38,13 @@ HRESULT GetActiveFrame (
  określoną Wskaźnik do adresu obiektu interfejsu ICorDebugFrame, który reprezentuje ramkę.  
   
 ## <a name="remarks"></a>Uwagi  
- Parametr `ppFrame` ma wartość null, jeśli żadna ramka nie jest obecnie aktywna.  
+ `ppFrame`Parametr ma wartość null, jeśli żadna ramka nie jest obecnie aktywna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

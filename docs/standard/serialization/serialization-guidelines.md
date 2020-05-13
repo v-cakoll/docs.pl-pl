@@ -1,5 +1,6 @@
 ---
 title: Wskazówki dotyczące serializacji
+description: Ten dokument zawiera wskazówki, które należy wziąć pod uwagę podczas projektowania interfejsu API do serializacji, oraz podsumowanie trzech głównych oferowanych przez platformę .NET technologii serializacji.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159796"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378388"
 ---
 # <a name="serialization-guidelines"></a>Wskazówki dotyczące serializacji
 Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podczas projektowania interfejs API serializacji.  
@@ -24,7 +25,7 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
   
 |Technologia|Odpowiednich klas|Uwagi|  
 |----------------|----------------------|-----------|  
-|Serializacja kontrakt danych|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|Trwałość ogólne<br /><br /> Usługi internetowe<br /><br /> JSON|  
+|Serializacja kontrakt danych|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|Trwałość ogólne<br /><br /> Usługi sieci Web<br /><br /> JSON|  
 |Serializacji XML|<xref:System.Xml.Serialization.XmlSerializer>|XML format <br />z pełną kontrolę|  
 |Środowisko wykonawcze-serializacji (binarnych i protokołu SOAP)|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Wywołaniem funkcji zdalnych .NET|  
   
@@ -69,7 +70,7 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> Atrybutu jest atrybutem najczęściej używane wywołania zwrotnego. Inne atrybuty w rodzinie to <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, i. <xref:System.Runtime.Serialization.OnSerializedAttribute> One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> Atrybutu jest atrybutem najczęściej używane wywołania zwrotnego. Inne atrybuty w rodzinie to <xref:System.Runtime.Serialization.OnDeserializingAttribute> , <xref:System.Runtime.Serialization.OnSerializingAttribute> , i <xref:System.Runtime.Serialization.OnSerializedAttribute> . One służy do oznaczania wywołania zwrotne, które są wykonywane przed deserializacji, przed serializacji, a na końcu po serializacji, odpowiednio.  
   
 4. Rozważ użycie elementu <xref:System.Runtime.Serialization.KnownTypeAttribute> do wskazania konkretnych typów, które powinny być używane podczas deserializacji grafu złożonego obiektu.  
   
@@ -103,12 +104,12 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. Rozważ zaimplementowanie interfejsu, <xref:System.Xml.Serialization.IXmlSerializable> Jeśli chcesz jeszcze bardziej kontrolować kształt SERIALIZOWANEGO kodu XML niż to, co jest oferowane przez zastosowanie atrybutów serializacji XML. Dwie metody interfejsu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>umożliwiają pełną kontrolę serializowanego strumienia XML. Można również kontrolować schemat XML, który jest generowany dla typu przez zastosowanie <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu.  
+2. Rozważ zaimplementowanie <xref:System.Xml.Serialization.IXmlSerializable> interfejsu, jeśli chcesz jeszcze bardziej kontrolować kształt serializowanego kodu XML niż to, co jest oferowane przez zastosowanie atrybutów serializacji XML. Dwie metody interfejsu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> i <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> umożliwiają pełną kontrolę serializowanego strumienia XML. Można również kontrolować schemat XML, który jest generowany dla typu przez zastosowanie <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu.  
   
 #### <a name="supporting-runtime-serialization"></a>Obsługa serializacji środowiska uruchomieniowego  
  *Serializacja środowiska uruchomieniowego* jest technologią używaną przez funkcję komunikacji zdalnej platformy .NET. Jeśli uważasz, że Twoje typy będzie transportowane przy użyciu wywołaniem funkcji zdalnych .NET, należy upewnić się, że obsługują serializacji w czasie wykonywania.  
   
- Podstawowe wsparcie dla *serializacji środowiska uruchomieniowego* może być zapewnione przez <xref:System.SerializableAttribute> zastosowanie atrybutu, a bardziej zaawansowane scenariusze obejmują implementację prostego, *serializowanego wzorca środowiska uruchomieniowego* (implementacja<xref:System.Runtime.Serialization.ISerializable> i dostarczenie konstruktora serializacji).  
+ Podstawowe wsparcie dla *serializacji środowiska uruchomieniowego* może być zapewnione przez zastosowanie <xref:System.SerializableAttribute> atrybutu, a bardziej zaawansowane scenariusze obejmują implementację prostego, *serializowanego wzorca środowiska uruchomieniowego* (implementacja <xref:System.Runtime.Serialization.ISerializable> i dostarczenie konstruktora serializacji).  
   
 1. Należy rozważyć obsługę serializacji w czasie wykonywania, jeśli Twój typy będzie używany z wywołaniem funkcji zdalnych .NET. Na przykład <xref:System.AddIn> przestrzeń nazw używa komunikacji zdalnej .NET, a więc wszystkie typy wymieniane między dodatkiem **System. addin** muszą obsługiwać serializację w czasie wykonywania.  
   

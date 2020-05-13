@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f66ef88646c314502dcb610cec8ce822cab1fca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133618"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379285"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval — Metoda
 Tworzy obiekt ICorDebugEval, który zbiera i udostępnia funkcje tego ICorDebugThread.  
@@ -35,16 +35,16 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parametry  
  `ppEval`  
- określoną Wskaźnik do adresu obiektu `ICorDebugEval`, który zbiera i udostępnia funkcje tego wątku.  
+ określoną Wskaźnik do adresu `ICorDebugEval` obiektu, który zbiera i udostępnia funkcjonalność tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
  Obiekt oceny wypycha nowy łańcuch w wątku przed wykonaniem jego obliczenia. Spowoduje to przerwanie obliczeń aktualnie wykonywanych na wątku do momentu zakończenia szacowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

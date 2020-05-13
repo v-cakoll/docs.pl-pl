@@ -2,12 +2,12 @@
 title: 'ICorDebugStaticFieldSymbol:: GetSize — metoda'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: deeb887dad38417e3ebb980f5ef2f89392388d65
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e36c94bf411e75f915cca86aee74cdf161674d25
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791817"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379413"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol:: GetSize — metoda
 Pobiera rozmiar w bajtach pola statycznego.  
@@ -30,15 +30,15 @@ HRESULT GetSize(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugStaticFieldSymbol, interfejs](icordebugstaticfieldsymbol-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

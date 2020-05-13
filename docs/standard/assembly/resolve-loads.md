@@ -1,5 +1,6 @@
 ---
 title: Rozwiązywanie załadowań zestawów
+description: W tym artykule opisano zdarzenie .NET AppDomain. AssemblyResolve. Użyj tego zdarzenia dla aplikacji, które wymagają kontroli nad ładowaniem zestawu.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], resolving loads
@@ -12,67 +13,67 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36f36b60a3a113c6b020cc1042c786c4091e567b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156442"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378667"
 ---
 # <a name="resolve-assembly-loads"></a>Rozwiązywanie załadowań zestawów
-.NET udostępnia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie dla aplikacji, które wymagają większej kontroli nad ładowaniem zestawu. Obsługując to zdarzenie, aplikacja może załadować zestaw do kontekstu obciążenia spoza normalnych ścieżek sondowania, wybrać, która z kilku wersji zestawu do załadowania, emitują zestaw dynamiczny i zwracają go i tak dalej. W tym temacie przedstawiono <xref:System.AppDomain.AssemblyResolve> wskazówki dotyczące obsługi zdarzenia.  
+Platforma .NET udostępnia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie dla aplikacji, które wymagają większej kontroli nad ładowaniem zestawu. Dzięki obsłudze tego zdarzenia aplikacja może załadować zestaw do kontekstu obciążenia spoza normalnej ścieżki sondowania, wybrać kilka wersji zestawu do załadowania, emitować zestaw dynamiczny i zwrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzenia.  
   
 > [!NOTE]
-> Do rozpoznawania obciążeń złożenia w kontekście <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> tylko do odbicia, należy użyć zdarzenia zamiast tego.  
+> W celu rozpoznawania obciążeń zestawów w kontekście tylko odbicia należy <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> zamiast tego użyć zdarzenia.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Jak działa zdarzenie AssemblyResolve  
- Podczas rejestrowania programu <xref:System.AppDomain.AssemblyResolve> obsługi dla zdarzenia, program obsługi jest wywoływany za każdym razem, gdy czas wykonywania nie powiedzie się powiązać z zestawem według nazwy. Na przykład wywołanie następujących metod z kodu <xref:System.AppDomain.AssemblyResolve> użytkownika może spowodować zdarzenie, które mają być wywoływane:  
+ Po zarejestrowaniu procedury obsługi dla <xref:System.AppDomain.AssemblyResolve> zdarzenia program obsługi jest wywoływany za każdym razem, gdy środowisko uruchomieniowe nie zostanie powiązane z zestawem według nazwy. Na przykład wywoływanie następujących metod z kodu użytkownika może spowodować <xref:System.AppDomain.AssemblyResolve> podniesienie poziomu zdarzenia:  
   
-- Przeciążenie <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub przeciążenie metody, którego pierwszy argument jest ciągiem reprezentującym nazwę wyświetlaną zestawu <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> do załadowania (czyli ciąg zwrócony przez właściwość).  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>Przeciążenie metody lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Przeciążenie metody, których pierwszy argument jest ciągiem, który reprezentuje nazwę wyświetlaną zestawu do załadowania (czyli ciąg zwracany przez <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> Właściwość).  
   
-- Przeciążenie <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub przeciążenie metody, którego pierwszy argument jest obiektem identyfikującym <xref:System.Reflection.AssemblyName> zestaw do załadowania.  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>Przeciążenie metody lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Przeciążenie metody, których pierwszy argument jest <xref:System.Reflection.AssemblyName> obiektem, który identyfikuje zestaw do załadowania.  
   
-- Przeciążenie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> metody.  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>Przeciążenie metody.  
   
-- Przeciążenie <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> metoda, która tworzy obiekt w innej domenie aplikacji.  
+- <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> Przeciążenie metody lub, które tworzy wystąpienie obiektu w innej domenie aplikacji.  
   
-### <a name="what-the-event-handler-does"></a>Co robi program obsługi zdarzeń  
- Program obsługi <xref:System.AppDomain.AssemblyResolve> zdarzenia odbiera nazwę wyświetlana zestawu, który <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> ma zostać załadowany we właściwości. Jeśli program obsługi nie rozpoznaje nazwy `null` zestawu, zwraca `Nothing` (C#), `nullptr` (Visual Basic) lub (Visual C++).  
+### <a name="what-the-event-handler-does"></a>Działanie programu obsługi zdarzeń  
+ Procedura obsługi dla <xref:System.AppDomain.AssemblyResolve> zdarzenia otrzymuje nazwę wyświetlaną zestawu, który ma zostać załadowany we <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> właściwości. Jeśli program obsługi nie rozpoznaje nazwy zestawu, zwraca `null` (C#), `Nothing` (Visual Basic) lub `nullptr` (Visual C++).  
   
- Jeśli program obsługi rozpoznaje nazwę zestawu, można załadować i zwrócić zestaw, który spełnia żądanie. Na poniższej liście opisano niektóre przykładowe scenariusze.  
+ Jeśli program obsługi rozpoznaje nazwę zestawu, może ładować i zwracać zestaw, który spełnia żądanie. Na poniższej liście opisano kilka przykładowych scenariuszy.  
   
-- Jeśli program obsługi zna lokalizację wersji zestawu, można załadować <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> zestawu przy użyciu lub metody i może zwrócić załadowany zestaw, jeśli zakończy się pomyślnie.  
+- Jeśli program obsługi wie lokalizację wersji zestawu, może załadować zestaw za pomocą <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> metody lub i może zwrócić załadowany zestaw, jeśli zakończono pomyślnie.  
   
-- Jeśli program obsługi ma dostęp do bazy danych zestawów przechowywanych jako tablice bajtów, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> można załadować tablicy bajtów przy użyciu jednego z przeciążeń metody, które przyjmują tablicy bajtów.  
+- Jeśli program obsługi ma dostęp do bazy danych zestawów przechowywanych jako tablice bajtowe, może załadować tablicę bajtową przy użyciu jednego z <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> przeciążeń metody przyjmujących tablicę bajtów.  
   
 - Program obsługi może wygenerować zestaw dynamiczny i zwrócić go.  
   
 > [!NOTE]
-> Program obsługi musi załadować zestaw do kontekstu obciążenia z kontekstu, do kontekstu obciążenia lub bez kontekstu. Jeśli program obsługi ładuje zestaw do kontekstu <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> tylko <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> do odbicia przy użyciu <xref:System.AppDomain.AssemblyResolve> lub metody, próba obciążenia, który wywołał zdarzenie nie powiedzie się.  
+> Program obsługi musi załadować zestaw do kontekstu ładowania z w kontekście ładowania lub bez kontekstu. Jeśli program obsługi ładuje zestaw do kontekstu "tylko odbicie" przy użyciu <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> metody lub, próba załadowania, która wywołała <xref:System.AppDomain.AssemblyResolve> zdarzenie, kończy się niepowodzeniem.  
   
- Jest odpowiedzialny za program obsługi zdarzeń, aby zwrócić odpowiedni zestaw. Program obsługi można przeanalizować nazwę wyświetlaną żądanego <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> zestawu, przekazując wartość właściwości do <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> konstruktora. Począwszy od .NET Framework 4, <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> program obsługi można użyć właściwości, aby ustalić, czy bieżące żądanie jest zależność innego zestawu. Te informacje mogą pomóc zidentyfikować zestaw, który spełni zależność.  
+ Do zwrócenia odpowiedniego zestawu jest odpowiedzialna procedura obsługi zdarzeń. Program obsługi może przeanalizować nazwę wyświetlaną żądanego zestawu, przekazując <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> wartość właściwości do <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> konstruktora. Począwszy od .NET Framework 4, program obsługi może użyć właściwości, <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> Aby określić, czy bieżące żądanie jest zależne od innego zestawu. Te informacje mogą ułatwić zidentyfikowanie zestawu, który będzie spełniał zależność.  
   
  Program obsługi zdarzeń może zwrócić inną wersję zestawu niż żądana wersja.  
   
- W większości przypadków zestawu, który jest zwracany przez program obsługi pojawia się w kontekście obciążenia, niezależnie od kontekstu obsługi ładuje go do. Na przykład jeśli program <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> obsługi używa metody do ładowania zestawu do kontekstu obciążenia z, zestaw pojawia się w kontekście obciążenia, gdy program obsługi zwraca go. Jednak w następującym przypadku zestaw pojawia się bez kontekstu, gdy program obsługi zwraca go:  
+ W większości przypadków zestaw, który jest zwracany przez program obsługi, pojawia się w kontekście ładowania, niezależnie od kontekstu, w którym program obsługi ładuje go do. Jeśli na przykład program obsługi używa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody do załadowania zestawu do kontekstu ładowania z, zestaw pojawia się w kontekście ładowania, gdy program obsługi zwróci go. Jednak w poniższym przypadku zestaw pojawia się bez kontekstu, gdy program obsługi zwróci go:  
   
-- Program obsługi ładuje zestaw bez kontekstu.  
+- Procedura obsługi ładuje zestaw bez kontekstu.  
   
-- Właściwość <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> nie jest null.  
+- <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>Właściwość nie ma wartości null.  
   
-- Żądający zestaw (czyli zestaw, który jest zwracany przez <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> właściwość) został załadowany bez kontekstu.  
+- Zestaw żądający (czyli zestaw, który jest zwracany przez <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> Właściwość) został załadowany bez kontekstu.  
   
- Aby uzyskać informacje o <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> kontekstach, zobacz przeciążenie metody.  
+ Aby uzyskać informacje na temat kontekstów, zobacz <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> Przeciążenie metody.  
   
- Wiele wersji tego samego zestawu można załadować do tej samej domeny aplikacji. Ta praktyka nie jest zalecana, ponieważ może prowadzić do problemów z przypisaniem typu. Zobacz [Najważniejsze wskazówki dotyczące ładowania zestawu](../../framework/deployment/best-practices-for-assembly-loading.md).  
+ Wiele wersji tego samego zestawu może być załadowanych do tej samej domeny aplikacji. Ta metoda nie jest zalecana, ponieważ może to prowadzić do problemów z przypisaniem. Zapoznaj się z [najlepszymi rozwiązaniami dotyczącymi ładowania zestawu](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
-### <a name="what-the-event-handler-should-not-do"></a>Czego program obsługi zdarzeń nie powinien robić  
-Podstawową regułą <xref:System.AppDomain.AssemblyResolve> obsługi zdarzenia jest, że nie należy próbować zwrócić zestawu, który nie rozpoznaje. Podczas pisania programu obsługi, należy wiedzieć, które zestawy mogą spowodować zdarzenie, które mają być wywoływane. Program obsługi powinien zwracać null dla innych zestawów.  
+### <a name="what-the-event-handler-should-not-do"></a>Czego nie powinien wykonać program obsługi zdarzeń  
+Podstawową regułą obsługi <xref:System.AppDomain.AssemblyResolve> zdarzenia jest to, że nie należy próbować zwrócić zestawu, który nie jest rozpoznawany. Podczas pisania procedury obsługi należy wiedzieć, które zestawy mogą spowodować podniesienie poziomu zdarzenia. Program obsługi powinien zwrócić wartość null dla innych zestawów.  
 
 > [!IMPORTANT]
-> Począwszy od .NET Framework <xref:System.AppDomain.AssemblyResolve> 4, zdarzenie jest wywoływane dla zestawów satelickich. Ta zmiana ma wpływ na program obsługi zdarzeń, który został napisany dla starszej wersji programu .NET Framework, jeśli program obsługi próbuje rozwiązać wszystkie żądania ładowania zestawu. Programy obsługi zdarzeń, które ignorują zestawy, których nie rozpoznają, nie mają wpływu na tę zmianę: zwracają wartość null i przestrzegane są normalne mechanizmy rezerwowe.  
+> Począwszy od .NET Framework 4, <xref:System.AppDomain.AssemblyResolve> zdarzenie jest zgłaszane dla zestawów satelickich. Ta zmiana ma wpływ na procedurę obsługi zdarzeń, która została zapisywana dla starszej wersji .NET Framework, jeśli program obsługi podejmie próbę rozpoznania wszystkich żądań ładowania zestawu. Procedury obsługi zdarzeń, które ignorują zestawy, które nie są rozpoznawane, nie mają wpływ na tę zmianę: zwracają wartości null i są stosowane normalne mechanizmy powrotu.  
 
-Podczas ładowania zestawu, program obsługi zdarzeń <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> nie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> może używać żadnych <xref:System.AppDomain.AssemblyResolve> przeciążeń lub metody, które mogą spowodować zdarzenie, które mają być wywoływane cyklicznie, ponieważ może to prowadzić do przepełnienia stosu. (Zobacz listę podanych wcześniej w tym temacie). Dzieje się tak, nawet jeśli podasz obsługę wyjątków dla żądania obciążenia, ponieważ nie wyjątek, dopóki nie zostaną zwrócone wszystkie programy obsługi zdarzeń. W związku z tym następujący kod `MyAssembly` powoduje przepełnienie stosu, jeśli nie zostanie znaleziony:  
+Podczas ładowania zestawu procedura obsługi zdarzeń nie może używać żadnych <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> przeciążeń lub metod, które mogą spowodować <xref:System.AppDomain.AssemblyResolve> rekursywne zdarzenie, ponieważ może to prowadzić do przepełnienia stosu. (Zobacz listę znajdującą się wcześniej w tym temacie). Dzieje się tak nawet wtedy, gdy podajesz obsługę wyjątków dla żądania ładowania, ponieważ żaden wyjątek nie jest zgłaszany do momentu zwrócenia wszystkich programów obsługi zdarzeń. W rezultacie następujący kod powoduje przepełnienie stosu, jeśli `MyAssembly` nie zostanie znaleziony:  
 
 ```cpp
 using namespace System;
@@ -198,5 +199,5 @@ End Class
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Najważniejsze wskazówki dotyczące ładowania zestawu](../../framework/deployment/best-practices-for-assembly-loading.md)
+- [Najlepsze rozwiązania dotyczące ładowania zestawów](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [Korzystanie z domen aplikacji](../../framework/app-domains/use.md)

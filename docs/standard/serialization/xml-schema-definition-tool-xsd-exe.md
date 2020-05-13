@@ -1,20 +1,21 @@
 ---
 title: Narzędzie definicji schematu XML (Xsd.exe)
+description: Generator serializatora XML tworzy zestaw serializacji XML dla typów w określonym zestawie, co zwiększa wydajność uruchamiania elementu XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389773"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380054"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.
 
 Narzędzie definicji schematu XML (XSD. exe) zwykle można znaleźć w następującej ścieżce: \
-_C:\\Program Files (x86)\\Microsoft SDK\\Windows\\{Version}\\bin\\NETFX {Version} Tools\\_
+_C: \\ Program Files (x86) \\ Microsoft SDK \\ Windows \\ {Version} \\ bin \\ NETFX {Version} Tools\\_
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,51 +32,51 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić zmienne `Path`środowiskowe `Include`, `Lib` i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się \<w katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
+> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \< katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
 
 ## <a name="argument"></a>Argument
 
 |Argument|Opis|
 |--------------|-----------------|
-|*plik. rozszerzenie*|Określa PLik wejściowy można przekonwertować. Należy określić rozszerzenie jako jedno z następujących:. XDR,. XML,. xsd,. dll lub. exe.<br /><br /> Jeśli określono PLik schematu XDR (rozszerzenie .xdr), Xsd.exe konwertuje schematu XDR schematu XSD. PLik wyjściowy ma taką samą nazwę schematu XDR, ale z rozszerzeniem xsd.<br /><br /> Jeśli określono PLik XML (rozszerzenie .xml), Xsd.exe wymaga schematu z danych w PLiku i tworzy schematu XSD. PLik wyjściowy ma taką samą nazwę jak PLik XML, ale z rozszerzeniem xsd.<br /><br /> Jeśli określono PLik schematu XML (XSD rozszerzenia), Xsd.exe generuje kod źródłowy środowiska wykonawczego obiektów, które odpowiadają schematu XML.<br /><br /> Jeśli określono PLik zestawu runtime (z rozszerzeniem .exe lub .dll), Xsd.exe generuje schematów dla co najmniej jeden typ w tym zestawie. Można użyć `/type` opcję, aby określić typy, dla których mają być generowanie schematów. Schematy dane wyjściowe są nazywane schema0.xsd, schema1.xsd i tak dalej. XSD. exe tworzy wiele schematów tylko wtedy, gdy podane typy określają przestrzeń nazw przy `XMLRoot` użyciu atrybutu niestandardowego.|
+|*plik. rozszerzenie*|Określa PLik wejściowy można przekonwertować. Należy określić rozszerzenie jako jedno z następujących:. XDR,. XML,. xsd,. dll lub. exe.<br /><br /> Jeśli określono PLik schematu XDR (rozszerzenie .xdr), Xsd.exe konwertuje schematu XDR schematu XSD. PLik wyjściowy ma taką samą nazwę schematu XDR, ale z rozszerzeniem xsd.<br /><br /> Jeśli określono PLik XML (rozszerzenie .xml), Xsd.exe wymaga schematu z danych w PLiku i tworzy schematu XSD. PLik wyjściowy ma taką samą nazwę jak PLik XML, ale z rozszerzeniem xsd.<br /><br /> Jeśli określono PLik schematu XML (XSD rozszerzenia), Xsd.exe generuje kod źródłowy środowiska wykonawczego obiektów, które odpowiadają schematu XML.<br /><br /> Jeśli określono PLik zestawu runtime (z rozszerzeniem .exe lub .dll), Xsd.exe generuje schematów dla co najmniej jeden typ w tym zestawie. Można użyć `/type` opcję, aby określić typy, dla których mają być generowanie schematów. Schematy dane wyjściowe są nazywane schema0.xsd, schema1.xsd i tak dalej. XSD. exe tworzy wiele schematów tylko wtedy, gdy podane typy określają przestrzeń nazw przy użyciu `XMLRoot` atrybutu niestandardowego.|
 
 ## <a name="general-options"></a>Opcje ogólne
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/h\[ELP\]**|Wyświetla składnię polecenia i opcje narzędzia.|
-|**/o\[utputdir\]:**_katalog_|Określa katalog danych dla PLików danych wyjściowych. Ten argument może wystąpić tylko raz. Ustawieniem domyślnym jest bieżący katalog.|
+|**/h \[ ELP\]**|Wyświetla składnię polecenia i opcje narzędzia.|
+|**/o \[ utputdir \] :**_katalog_|Określa katalog danych dla PLików danych wyjściowych. Ten argument może wystąpić tylko raz. Ustawieniem domyślnym jest bieżący katalog.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
-|**/p\[arameters\]:**_plik. XML_|Opcje dla różnych trybach operacji odczytu z PLiku .xml określony. Krótka forma to `/p:`. Aby uzyskać więcej informacji, zobacz sekcję [uwagi](#remarks) .|
+|**/p \[ arameters \] :**_plik. XML_|Opcje dla różnych trybach operacji odczytu z PLiku .xml określony. Krótka forma to `/p:` . Aby uzyskać więcej informacji, zobacz sekcję [uwagi](#remarks) .|
 
 ## <a name="xsd-file-options"></a>Opcje PLiku XSD
  Należy określić tylko jedną z poniższych opcji dotyczących XSD PLików.
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/c\[Lasses\]**|Generuje klasy, które odpowiadają określony schemat. Aby odczytać dane XML do obiektu, użyj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> metody.|
-|**/d\[anych\]**|Generuje klasę pochodną <xref:System.Data.DataSet> , który odpowiada określony schemat. Aby odczytać dane XML w klasie pochodnej, użyj <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> metody.|
+|**/c \[ Lasses\]**|Generuje klasy, które odpowiadają określony schemat. Aby odczytać dane XML do obiektu, użyj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> metody.|
+|**/d \[ anych\]**|Generuje klasę pochodną <xref:System.Data.DataSet> , który odpowiada określony schemat. Aby odczytać dane XML w klasie pochodnej, użyj <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> metody.|
 
  Można również określić jedną z poniższych opcji dotyczących XSD PLików.
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/e\[lementuj\]:**_element_|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|
-|**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejs na wszystkich wygenerowanych typach, aby włączyć powiązanie danych. Krótka forma to `/edb`.|
-|**/enableLinqDataSet**|(Krótka wersja `/eld`:.) Określa, że wygenerowany zestaw danych może być badany przy użyciu LINQ to DataSet. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet przegląd](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [wykonywanie zapytań dotyczących wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [Language-Integrated Query (LINQ) — C#](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (linq) — Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
-|**/f\[ields\]**|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|
-|**/l\[anguage\]:**_Język_|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy implementującej<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
-|**/n\[amespace\]:**_przestrzeń nazw_|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|
+|**/e \[ lementuj \] :**_element_|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|
+|**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejs na wszystkich wygenerowanych typach, aby włączyć powiązanie danych. Krótka forma to `/edb` .|
+|**/enableLinqDataSet**|(Krótka wersja: `/eld` .) Określa, że wygenerowany zestaw danych może być badany przy użyciu LINQ to DataSet. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet przegląd](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [wykonywanie zapytań dotyczących wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [Language-Integrated Query (LINQ) — C#](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (linq) — Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/f \[ ields\]**|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|
+|**/l \[ anguage \] :**_Język_|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy implementującej<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
+|**/n \[ amespace \] :**_przestrzeń nazw_|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|
 |**/nologo**|Pomija transparentu.|
 |**/Order**|Generuje jawne identyfikatory kolejności dla wszystkich elementów członkowskich cząsteczek.|
-|**/o\[UT\]:**_DirectoryName_|Określa katalog wyjściowy, w którym mają zostać umieszczone pliki. Ustawieniem domyślnym jest bieżący katalog.|
-|**/u\[RI\]:**_URI_|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli istnieje, ma zastosowanie do wszystkich elementów określonych `/element` przy użyciu opcji.|
+|**/o \[ UT \] :**_DirectoryName_|Określa katalog wyjściowy, w którym mają zostać umieszczone pliki. Ustawieniem domyślnym jest bieżący katalog.|
+|**/u \[ RI \] :**_URI_|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli istnieje, ma zastosowanie do wszystkich elementów określonych przy użyciu `/element` opcji.|
 
 ## <a name="dll-and-exe-file-options"></a>Biblioteka DLL i opcje PLiku EXE
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/t\[typ\]:**_TypeName_|Określa nazwę typu można utworzyć schemat. Można określić wiele argumentów typu. Jeśli *Właściwość TypeName* nie określa przestrzeni nazw, XSD. exe dopasowuje wszystkie typy w zestawie o określonym typie. Jeśli *Właściwość TypeName* określa przestrzeń nazw, tylko ten typ jest dopasowany. Jeśli parametr *TypeName* jest zakończony znakiem gwiazdki\*(), narzędzie dopasowuje wszystkie typy, które zaczynają się od \*ciągu poprzedzającego. W przypadku pominięcia `/type` opcji Xsd.exe generuje schematów dla wszystkich typów w zestawie.|
+|**/t \[ Typ \] :**_TypeName_|Określa nazwę typu można utworzyć schemat. Można określić wiele argumentów typu. Jeśli *Właściwość TypeName* nie określa przestrzeni nazw, XSD. exe dopasowuje wszystkie typy w zestawie o określonym typie. Jeśli *Właściwość TypeName* określa przestrzeń nazw, tylko ten typ jest dopasowany. Jeśli parametr *TypeName* jest zakończony znakiem gwiazdki ( \* ), narzędzie dopasowuje wszystkie typy, które zaczynają się od ciągu poprzedzającego \* . W przypadku pominięcia `/type` opcji Xsd.exe generuje schematów dla wszystkich typów w zestawie.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -87,9 +88,9 @@ W poniższej tabeli przedstawiono operacje, że Xsd.exe wykonuje.
 |XML do XSD|Generuje schematu XML z PLiku XML.|
 |XSD do zestawu danych|Generuje aparatu PLików wykonywalnych języka wspólnego <xref:System.Data.DataSet> klasy z PLiku schematu XSD. Wygenerowany klasy zapewnić model obiektu sformatowanego regularnych danych XML.|
 |XSD do klasy|Generuje klasy środowiska wykonawczego na podstawie PLiku schematu XSD. Wygenerowany klasy mogą być używane w połączeniu z <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> do odczytu i zapisu kod XML, który jest zgodna z schemat.|
-|Klasy do XSD| Generuje schematu XML na podstawie typ lub typy w PLiku zestawu czasu wykonywania. Wygenerowany schemat definiuje format XML używany przez <xref:System.Xml.Serialization.XmlSerializer>.|
+|Klasy do XSD| Generuje schematu XML na podstawie typ lub typy w PLiku zestawu czasu wykonywania. Wygenerowany schemat definiuje format XML używany przez <xref:System.Xml.Serialization.XmlSerializer> .|
 
- XSD.exe służy tylko do modyfikowania schematów XML, które podlegają języka definicji schematu XML (XSD) proponowanych przez konsorcjum World Wide Web (W3C). Aby uzyskać więcej informacji na temat propozycji definicji schematu XML lub standardu XML <https://w3.org>, zobacz.
+ XSD.exe służy tylko do modyfikowania schematów XML, które podlegają języka definicji schematu XML (XSD) proponowanych przez konsorcjum World Wide Web (W3C). Aby uzyskać więcej informacji na temat propozycji definicji schematu XML lub standardu XML, zobacz <https://w3.org> .
 
 ## <a name="setting-options-with-an-xml-file"></a>Ustawianie opcji z PLiku XML
 
@@ -104,7 +105,7 @@ Za pomocą `/parameters` przełącznika można określić pojedynczy plik XML, k
 </xsd>
 ```
 
-Jeśli poprzedni kod XML jest zawarty w pliku o nazwie GenerateSchemas. XML, użyj `/parameters` przełącznika, wpisując następujące polecenie w wierszu polecenia i naciskając klawisz **Enter**:
+Jeśli poprzedni kod XML jest zawarty w pliku o nazwie GenerateSchemas. XML, użyj przełącznika, `/parameters` wpisując następujące polecenie w wierszu polecenia i naciskając klawisz **Enter**:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -152,15 +153,15 @@ Aby wygenerować PLik kodu, należy użyć `<generateClasses>` elementu. Poniżs
 |-------------|-----------------|
 |\<> elementu|Określa PLik XSD do generowania kodu dla elementu.|
 |\<schemaImporterExtensions>|Określa typ pochodzący od <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> klasy.|
-|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \<elementów> schematu.|
+|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \< elementów> schematu.|
 
 Poniższa tabela zawiera atrybuty, które umożliwia także z `<generateClasses>` elementu.
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|language|Określa język programowania. Wybierz z `CS` (C#, wartość domyślna), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę dla klasy implementującej <xref:System.CodeDom.Compiler.CodeDomProvider>.|
+|language|Określa język programowania. Wybierz z `CS` (C#, wartość domyślna), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę dla klasy implementującej <xref:System.CodeDom.Compiler.CodeDomProvider> .|
 |namespace|Określa przestrzeń nazw dla wygenerowanego kodu. Przestrzeń nazw musi być zgodna ze standardami CLR (na przykład bez spacji lub ukośników odwrotnych).|
-|opcje|`none`Jedna z następujących wartości:, `properties` (generuje właściwości zamiast pól publicznych), `order`lub `enableDataBinding` (zobacz `/order` i `/enableDataBinding` przełączniki w poprzedniej sekcji opcji pliku XSD.|
+|opcje|Jedna z następujących wartości: `none` , `properties` (generuje właściwości zamiast pól publicznych), `order` lub `enableDataBinding` (zobacz `/order` i `/enableDataBinding` przełączniki w poprzedniej sekcji opcji pliku XSD.|
 
  Można także kontrolować sposób `DataSet` kod został wygenerowany za pomocą `<generateDataSet>` elementu. Poniższe XML określa, że wygenerowany kod używa `DataSet` struktur (takich jak <xref:System.Data.DataTable> Klasa) do tworzenia kodu Visual Basic określonego elementu. Wygenerowany struktur zestawu danych będzie obsługiwać zapytań LINQ.
 
@@ -175,14 +176,14 @@ Można ustawić dla opcji `<generateDataSet>` obejmują elementu.
 
 |Element|Opis|
 |-------------|-----------------|
-|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \<elementów> schematu.|
+|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \< elementów> schematu.|
 
  Poniższa tabela zawiera atrybuty, które mogą być używane z `<generateDataSet>` elementu.
 
 |Atrybut|Opis|
 |---------------|-----------------|
 |enableLinqDataSet|Określa, że wygenerowanego zestawu danych mogą być wyszukiwane względem przy użyciu LINQ do zestawu danych. Wartość domyślna to false.|
-|language|Określa język programowania. Wybierz z `CS` (C#, wartość domyślna), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę dla klasy implementującej <xref:System.CodeDom.Compiler.CodeDomProvider>.|
+|language|Określa język programowania. Wybierz z `CS` (C#, wartość domyślna), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę dla klasy implementującej <xref:System.CodeDom.Compiler.CodeDomProvider> .|
 |namespace|Określa przestrzeń nazw dla wygenerowanego kodu. Przestrzeń nazw musi być zgodna ze standardami CLR (na przykład bez spacji lub ukośników odwrotnych).|
 
  Atrybuty, które mogą być ustawione na najwyższym poziomie są `<xsd>` elementu. Te opcje można użyć z żadnego z elementów podrzędnych (`<generateSchemas>`, `<generateClasses>` lub `<generateDataSet>`). Poniższy kod XML generuje kod dla elementu o nazwie "IDItems" w katalogu wyjściowego o nazwie "MyOutputDirectory".
@@ -232,7 +233,7 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [Narzędzia](../../../docs/framework/tools/index.md)
+- [narzędzia](../../../docs/framework/tools/index.md)
 - [Wiersze poleceń](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Wykonywanie zapytania do typizowanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)

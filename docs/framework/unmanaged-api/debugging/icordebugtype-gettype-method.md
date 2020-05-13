@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-ms.openlocfilehash: 25ffbf73fbefbb3c584450283c3080dfc11ee598
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ac42c6254182ea775377a448a54d527b234c97dc
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791241"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379924"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType — Metoda
-Pobiera wartość CorElementType —, która opisuje typ natywny środowiska uruchomieniowego języka wspólnego (CLR) <xref:System.Type> reprezentowane przez ten ICorDebugType.  
+Pobiera wartość CorElementType —, która opisuje typ natywny środowiska uruchomieniowego języka wspólnego (CLR) <xref:System.Type> reprezentowanego przez ten ICorDebugType.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,16 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Parametry  
  `ty`  
- określoną Wskaźnik do wartości wyliczenia `CorElementType`, który wskazuje <xref:System.Type> CLR, który reprezentuje `ICorDebugType`.  
+ określoną Wskaźnik do wartości `CorElementType` wyliczenia wskazującej, że środowisko CLR <xref:System.Type> `ICorDebugType` reprezentuje.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wartość `ty` jest ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, Metoda [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) może zostać wywołana w celu pobrania typu niewystąpienia dla typu ogólnego; w przeciwnym razie nie wywołuj `ICorDebugType::GetClass`.  
+ Jeśli wartość `ty` jest ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, Metoda [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) może zostać wywołana w celu pobrania niewystąpienia typu dla typu ogólnego; w przeciwnym razie nie należy wywoływać `ICorDebugType::GetClass` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

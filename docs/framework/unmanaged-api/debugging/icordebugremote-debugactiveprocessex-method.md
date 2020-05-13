@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791973"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379059"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx — Metoda
 Uruchamia proces na maszynie zdalnej pod debugerem.  
@@ -44,12 +44,12 @@ HRESULT DebugActiveProcessEx (
  podczas Identyfikator procesu, do którego ma zostać dołączony debuger.  
   
  `win32Attach`  
- [in] `true`, Jeśli debuger powinien zachowywać się jako debuger Win32 dla procesu i wysyłał niezarządzane wywołania zwrotne; w przeciwnym razie `false`.  
+ [w] `true` Jeśli debuger powinien działać jako debuger Win32 dla procesu i wysyłać niezarządzane wywołania zwrotne; w przeciwnym razie `false` .  
   
  `ppProcess`  
  określoną Wskaźnik do adresu obiektu "ICorDebugProcess", który reprezentuje proces, do którego został podłączony debuger.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Pomyślnie dołączono do procesu na komputerze zdalnym.  
   
@@ -60,7 +60,7 @@ HRESULT DebugActiveProcessEx (
  Debugowanie w trybie mieszanym nie jest obsługiwane w programie Silverlight.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
@@ -68,9 +68,9 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework wersje:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugRemote, interfejs](icordebugremote-interface.md)
-- [ICorDebug, interfejs](icordebug-interface.md)
+- [ICorDebugRemote — Interfejs](icordebugremote-interface.md)
+- [ICorDebug — Interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

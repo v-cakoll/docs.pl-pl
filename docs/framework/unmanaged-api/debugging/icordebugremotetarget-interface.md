@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791939"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379232"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget — Interfejs
 Dostarcza metody, które umożliwiają deweloperom debugowanie aplikacji opartych na technologii Silverlight w środowisku środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -43,13 +43,13 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName, metoda](icordebugremotetarget-gethostname-method.md)|Zwraca nazwę hosta lub adres IP komputera zdalnego.|  
+|[ICorDebugRemoteTarget::GetHostName — Metoda](icordebugremotetarget-gethostname-method.md)|Zwraca nazwę hosta lub adres IP komputera zdalnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Debugowanie w trybie mieszanym (czyli kod zarządzany i natywny) nie jest obsługiwane w systemach Windows 95, Windows 98 lub Windows ME ani na platformach innych niż x86 (takich jak IA-64 i AMD64).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl  
   
@@ -57,8 +57,8 @@ interface ICorDebugRemoteTarget  : IUnknown
   
  **.NET Framework wersje:** 3,5 SP1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugRemote, interfejs](icordebugremote-interface.md)
-- [ICorDebug, interfejs](icordebug-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugRemote — Interfejs](icordebugremote-interface.md)
+- [ICorDebug — Interfejs](icordebug-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

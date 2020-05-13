@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79fb2338a981389c3750e884ce6606351c84738a
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506769"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378318"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -28,7 +28,7 @@ Blazor obsługuje także hermetyzację interfejsu użytkownika za poorednictwem 
 
 Razor to lekki język tworzenia szablonów znaczników oparty na języku HTML i C#. Przy użyciu Razor można bezproblemowo przechodzić między znacznikami i kodem C# w celu zdefiniowania logiki renderowania składników. Po skompilowaniu pliku *Razor* logika renderowania jest przechwytywana w sposób uporządkowany w klasie .NET. Nazwa skompilowanej klasy jest pobierana z nazwy pliku *Razor* . Przestrzeń nazw jest pobierana z domyślnej przestrzeni nazw dla projektu i ścieżki folderu, lub można jawnie określić przestrzeń nazw za pomocą `@namespace` dyrektywy (więcej informacji na temat poniższych dyrektyw Razor).
 
-Logika renderowania składnika jest utworzona przy użyciu standardowego znacznika HTML z dynamiczną logiką dodaną przy użyciu języka C#. `@` Znak jest używany do przejścia do języka C#. Razor jest zazwyczaj inteligentnym sposobem na ustalenie, kiedy przełączono z powrotem do formatu HTML. Na przykład poniższy składnik renderuje `<p>` tag z bieżącym czasem:
+Logika renderowania składnika jest utworzona przy użyciu standardowego znacznika HTML z dynamiczną logiką dodaną przy użyciu języka C#. `@`Znak jest używany do przejścia do języka C#. Razor jest zazwyczaj inteligentnym sposobem na ustalenie, kiedy przełączono z powrotem do formatu HTML. Na przykład poniższy składnik renderuje `<p>` tag z bieżącym czasem:
 
 ```razor
 <p>@DateTime.Now</p>
@@ -69,7 +69,7 @@ Dyrektywy Razor, podobnie jak dyrektywy w ASP.NET Web Forms, kontrolują wiele a
 - Zaimportowane przestrzenie nazw
 - Trasy
 
-Dyrektywy Razor zaczynają się `@` od znaku i są zwykle używane na początku nowego wiersza na początku pliku. Na przykład `@namespace` dyrektywa definiuje przestrzeń nazw składnika:
+Dyrektywy Razor zaczynają się od `@` znaku i są zwykle używane na początku nowego wiersza na początku pliku. Na przykład `@namespace` dyrektywa definiuje przestrzeń nazw składnika:
 
 ```razor
 @namespace MyComponentNamespace
@@ -106,7 +106,7 @@ Poniższa tabela zawiera podsumowanie różnych atrybutów dyrektyw Razor używa
 |`@key`       |Określa klucz, który ma być używany przez algorytm porównujący do zachowywania elementów w kolekcji|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Przechwytuje odwołanie do składnika lub elementu HTML|`<MyDialog @ref="myDialog" />`|
 
-Różne atrybuty dyrektywy używane przez Blazor (`@onclick`, `@bind`, `@ref`, i tak dalej) zostały omówione w poniższych sekcjach i w dalszej części rozdziału.
+Różne atrybuty dyrektywy używane przez Blazor ( `@onclick` , `@bind` ,, `@ref` i tak dalej) zostały omówione w poniższych sekcjach i w dalszej części rozdziału.
 
 Wiele składni używanych w plikach *. aspx* i *. ascx* ma składnie równoległe w Razor. Poniżej znajduje się proste porównanie składni dla ASP.NET Web Forms i Razor.
 
@@ -145,7 +145,7 @@ Oprócz normalnego HTML składniki mogą również używać innych składników 
 
 W przeciwieństwie do ASP.NET formularzy sieci Web, składników w Blazor:
 
-- Nie używaj prefiksu elementu (na przykład `asp:`).
+- Nie używaj prefiksu elementu (na przykład `asp:` ).
 - Nie wymagaj rejestracji na stronie lub w *pliku Web. config*.
 
 Należy wziąć pod uwagę składniki Razor, takie jak typy .NET, ponieważ dokładnie te elementy są. Jeśli zestaw zawierający składnik jest przywoływany, składnik jest dostępny do użycia. Aby przenieść przestrzeń nazw składnika do zakresu, Zastosuj `@using` dyrektywę:
@@ -168,7 +168,7 @@ Jeśli przestrzeń nazw składnika nie znajduje się w zakresie, można określi
 
 W formularzach sieci Web ASP.NET można przepływać parametry i dane do kontrolek przy użyciu właściwości publicznych. Te właściwości można ustawić w znacznikach przy użyciu atrybutów lub ustawionych bezpośrednio w kodzie. Składniki Blazor działają w podobny sposób, chociaż właściwości składnika również muszą być oznaczone `[Parameter]` atrybutem, który ma być traktowany jako parametry składnika.
 
-Poniższy `Counter` składnik definiuje parametr składnika o nazwie `IncrementAmount` , który może służyć do określenia kwoty, którą należy zwiększyć `Counter` przy każdym kliknięciu przycisku.
+Poniższy `Counter` składnik definiuje parametr składnika o nazwie `IncrementAmount` , który może służyć do określenia kwoty, którą `Counter` należy zwiększyć przy każdym kliknięciu przycisku.
 
 ```razor
 <h1>Counter</h1>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-W programie Blazor można rejestrować procedury obsługi zdarzeń interfejsu użytkownika DOM bezpośrednio przy użyciu atrybutów dyrektywy formularza `@on{event}`. `{event}` Symbol zastępczy reprezentuje nazwę zdarzenia. Na przykład można nasłuchiwać przycisku w następujący sposób:
+W programie Blazor można rejestrować procedury obsługi zdarzeń interfejsu użytkownika DOM bezpośrednio przy użyciu atrybutów dyrektywy formularza `@on{event}` . `{event}`Symbol zastępczy reprezentuje nazwę zdarzenia. Na przykład można nasłuchiwać przycisku w następujący sposób:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -266,7 +266,7 @@ Procedury obsługi zdarzeń mogą być wykonywane synchronicznie lub asynchronic
 }
 ```
 
-Po obsłudze zdarzenia składnik jest renderowany w celu uwzględnienia zmian stanu składnika. W przypadku obsługi zdarzeń asynchronicznych składnik jest renderowany natychmiast po zakończeniu wykonywania procedury obsługi. Składnik jest renderowany *ponownie* po asynchronicznym `Task` zakończeniu. Ten asynchroniczny tryb wykonywania umożliwia renderowanie niektórych odpowiednich interfejsów użytkownika, podczas gdy `Task` asynchroniczne jest nadal w toku.
+Po obsłudze zdarzenia składnik jest renderowany w celu uwzględnienia zmian stanu składnika. W przypadku obsługi zdarzeń asynchronicznych składnik jest renderowany natychmiast po zakończeniu wykonywania procedury obsługi. Składnik jest renderowany *ponownie* po asynchronicznym `Task` zakończeniu. Ten asynchroniczny tryb wykonywania umożliwia renderowanie niektórych odpowiednich interfejsów użytkownika, podczas gdy asynchroniczne `Task` jest nadal w toku.
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -296,7 +296,7 @@ Po obsłudze zdarzenia składnik jest renderowany w celu uwzględnienia zmian st
 }
 ```
 
-Składniki mogą także definiować własne zdarzenia przez zdefiniowanie parametru składnika typu `EventCallback<TValue>`. Wywołania zwrotne zdarzeń obsługują wszystkie odmiany programów obsługi zdarzeń interfejsu użytkownika DOM: argumenty opcjonalne, synchroniczne lub asynchroniczne, grupy metod lub wyrażenia lambda.
+Składniki mogą także definiować własne zdarzenia przez zdefiniowanie parametru składnika typu `EventCallback<TValue>` . Wywołania zwrotne zdarzeń obsługują wszystkie odmiany programów obsługi zdarzeń interfejsu użytkownika DOM: argumenty opcjonalne, synchroniczne lub asynchroniczne, grupy metod lub wyrażenia lambda.
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -311,7 +311,7 @@ Składniki mogą także definiować własne zdarzenia przez zdefiniowanie parame
 
 Blazor zapewnia prosty mechanizm wiązania danych ze składnika interfejsu użytkownika ze stanem składnika. Takie podejście różni się od funkcji w formularzach sieci Web ASP.NET w celu powiązania danych ze źródeł danych z kontrolkami interfejsu użytkownika. Będziemy odkrywać dane obsługi z różnych źródeł danych w sekcji [dotyczącej danych](data.md) .
 
-Aby utworzyć dwukierunkowe powiązanie danych ze składnika interfejsu użytkownika ze stanem składnika, Użyj atrybutu `@bind` dyrektywy. W poniższym przykładzie wartość pola wyboru jest powiązana z `isChecked` polem.
+Aby utworzyć dwukierunkowe powiązanie danych ze składnika interfejsu użytkownika ze stanem składnika, użyj `@bind` atrybutu dyrektywy. W poniższym przykładzie wartość pola wyboru jest powiązana z `isChecked` polem.
 
 ```razor
 <input type="checkbox" @bind="isChecked" />
@@ -321,7 +321,7 @@ Aby utworzyć dwukierunkowe powiązanie danych ze składnika interfejsu użytkow
 }
 ```
 
-Gdy składnik jest renderowany, wartość pola wyboru jest ustawiana na wartość w `isChecked` polu. Gdy użytkownik przełącza pole wyboru, `onchange` zdarzenie jest wywoływane, a `isChecked` pole jest ustawione na nową wartość. `@bind` Składnia w tym przypadku jest równoważna następującym znacznikiem:
+Gdy składnik jest renderowany, wartość pola wyboru jest ustawiana na wartość w `isChecked` polu. Gdy użytkownik przełącza pole wyboru, `onchange` zdarzenie jest wywoływane, a `isChecked` pole jest ustawione na nową wartość. `@bind`Składnia w tym przypadku jest równoważna następującym znacznikiem:
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
@@ -395,7 +395,7 @@ public class AppState
 
     public void UpdateMessage(string message)
     {
-        shortlist.Add(itinerary);
+        Message = message;
         NotifyStateChanged();
     }
 
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>Cykl życia składnika
 
-Struktura formularzy sieci Web ASP.NET ma dobrze zdefiniowane metody cyklu życia dla modułów, stron i kontrolek. Na przykład poniższy formant implementuje programy obsługi zdarzeń dla zdarzeń `Init`, `Load`i `UnLoad` cyklu życia:
+Struktura formularzy sieci Web ASP.NET ma dobrze zdefiniowane metody cyklu życia dla modułów, stron i kontrolek. Na przykład poniższy formant implementuje programy obsługi zdarzeń dla `Init` `Load` zdarzeń, i `UnLoad` cyklu życia:
 
 *Counter.ascx.cs*
 
@@ -433,11 +433,11 @@ public partial class Counter : System.Web.UI.UserControl
 
 Składniki Blazor mają również dobrze zdefiniowany cykl życia. Cykl życia składnika może służyć do inicjowania stanu składnika i implementowania zaawansowanych zachowań składników.
 
-Wszystkie metody cyklu życia składnika Blazor mają wersje synchroniczne i asynchroniczne. Renderowanie składnika jest synchroniczne. Nie można uruchomić logiki asynchronicznej jako części renderowania składnika. Wszystkie logiki asynchroniczne muszą zostać wykonane w ramach metody `async` cyklu życia.
+Wszystkie metody cyklu życia składnika Blazor mają wersje synchroniczne i asynchroniczne. Renderowanie składnika jest synchroniczne. Nie można uruchomić logiki asynchronicznej jako części renderowania składnika. Wszystkie logiki asynchroniczne muszą zostać wykonane w ramach `async` metody cyklu życia.
 
 ### <a name="oninitialized"></a>OnInitialized
 
-Metody `OnInitialized` i `OnInitializedAsync` są używane do inicjowania składnika. Składnik jest zazwyczaj inicjowany po pierwszym renderowaniu. Po zainicjowaniu składnika można go renderować wiele razy, zanim zostanie ostatecznie usunięty. `OnInitialized` Metoda jest podobna do `Page_Load` zdarzenia na stronach i formantach formularzy sieci Web ASP.NET.
+`OnInitialized`Metody i `OnInitializedAsync` są używane do inicjowania składnika. Składnik jest zazwyczaj inicjowany po pierwszym renderowaniu. Po zainicjowaniu składnika można go renderować wiele razy, zanim zostanie ostatecznie usunięty. `OnInitialized`Metoda jest podobna do `Page_Load` zdarzenia na stronach i formantach formularzy sieci Web ASP.NET.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-Metody `OnParametersSet` i `OnParametersSetAsync` są wywoływane, gdy składnik otrzymał parametry z jego elementu nadrzędnego, a wartość jest przypisana do właściwości. Te metody są wykonywane po zainicjowaniu składnika i za *każdym razem, gdy składnik jest renderowany*.
+`OnParametersSet`Metody i `OnParametersSetAsync` są wywoływane, gdy składnik otrzymał parametry z jego elementu nadrzędnego, a wartość jest przypisana do właściwości. Te metody są wykonywane po zainicjowaniu składnika i za *każdym razem, gdy składnik jest renderowany*.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-Metody `OnAfterRender` i `OnAfterRenderAsync` są wywoływane po zakończeniu renderowania składnika. Odwołania do elementów i składników są wypełniane w tym punkcie (więcej informacji znajduje się poniżej). W tym momencie jest włączona funkcja interaktywność z przeglądarką. Interakcje z obsługą DOM i wykonanie kodu JavaScript mogą być bezpiecznie wykonywane.
+`OnAfterRender`Metody i `OnAfterRenderAsync` są wywoływane po zakończeniu renderowania składnika. Odwołania do elementów i składników są wypełniane w tym punkcie (więcej informacji znajduje się poniżej). W tym momencie jest włączona funkcja interaktywność z przeglądarką. Interakcje z obsługą DOM i wykonanie kodu JavaScript mogą być bezpiecznie wykonywane.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -476,11 +476,11 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 `OnAfterRender`i `OnAfterRenderAsync` *nie są wywoływane podczas renderowania na serwerze*.
 
-`firstRender` Parametr jest `true` pierwszy raz, gdy składnik jest renderowany; w przeciwnym razie jego wartość `false`to.
+`firstRender`Parametr jest `true` przy pierwszym renderowaniu składnika; w przeciwnym razie jego wartość to `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-Składniki Blazor można zaimplementować `IDisposable` do usuwania zasobów, gdy składnik zostanie usunięty z interfejsu użytkownika. Składnik Razor można zaimplementować `IDispose` przy użyciu `@implements` dyrektywy:
+Składniki Blazor można zaimplementować `IDisposable` do usuwania zasobów, gdy składnik zostanie usunięty z interfejsu użytkownika. Składnik Razor można zaimplementować przy `IDispose` użyciu `@implements` dyrektywy:
 
 ```razor
 @using System
@@ -500,7 +500,7 @@ Składniki Blazor można zaimplementować `IDisposable` do usuwania zasobów, gd
 
 W programie ASP.NET Web Forms często można manipulować wystąpieniem formantu bezpośrednio w kodzie, odwołując się do jego identyfikatora. W Blazor jest również możliwe przechwycenie i manipulowanie odwołaniem do składnika, chociaż jest to znacznie mniej typowe.
 
-Aby przechwycić odwołanie do składnika w Blazor, należy `@ref` użyć atrybutu dyrektywy. Wartość atrybutu powinna być zgodna z nazwą pola settable o tym samym typie co składnik, do którego się odwołuje.
+Aby przechwycić odwołanie do składnika w Blazor, należy użyć `@ref` atrybutu dyrektywy. Wartość atrybutu powinna być zgodna z nazwą pola settable o tym samym typie co składnik, do którego się odwołuje.
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -525,13 +525,13 @@ Składniki Blazor mogą przechwytywać odwołania do elementu. W przeciwieństwi
 
 ## <a name="templated-components"></a>Składniki z szablonami
 
-W formularzach sieci Web ASP.NET można tworzyć *kontrolki z szablonami*. Kontrolki z szablonami umożliwiają deweloperowi określenie fragmentu kodu HTML służącego do renderowania kontrolki kontenera. Mechanics kompilowania formantów serwera są złożone, ale zapewniają zaawansowane scenariusze renderowania danych w sposób dostosowywalny przez użytkownika. Przykłady formantów z szablonami obejmują `Repeater` i `DataList`.
+W formularzach sieci Web ASP.NET można tworzyć *kontrolki z szablonami*. Kontrolki z szablonami umożliwiają deweloperowi określenie fragmentu kodu HTML służącego do renderowania kontrolki kontenera. Mechanics kompilowania formantów serwera są złożone, ale zapewniają zaawansowane scenariusze renderowania danych w sposób dostosowywalny przez użytkownika. Przykłady formantów z szablonami obejmują `Repeater` i `DataList` .
 
-Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub. `RenderFragment<T>` `RenderFragment` Reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. A `RenderFragment<T>` to fragment znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
+Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub `RenderFragment<T>` . `RenderFragment`Reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. A `RenderFragment<T>` to fragment znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
 
 ### <a name="child-content"></a>Zawartość podrzędna
 
-Składniki Blazor mogą przechwytywać zawartość podrzędną jako `RenderFragment` i renderować tę zawartość w ramach renderowania składników. Aby przechwycić zawartość podrzędną, zdefiniuj parametr składnika typu `RenderFragment` i nadaj mu `ChildContent`nazwę.
+Składniki Blazor mogą przechwytywać zawartość podrzędną jako `RenderFragment` i renderować tę zawartość w ramach renderowania składników. Aby przechwycić zawartość podrzędną, zdefiniuj parametr składnika typu `RenderFragment` i nadaj mu nazwę `ChildContent` .
 
 *ChildContentComponent. Razor*
 
@@ -556,7 +556,7 @@ Składnik nadrzędny może następnie dostarczyć zawartość podrzędną przy u
 
 ### <a name="template-parameters"></a>Parametry szablonu
 
-Składnik Blazor z szablonem może również definiować wiele parametrów składnika typu `RenderFragment` lub. `RenderFragment<T>` Parametr dla elementu `RenderFragment<T>` można określić, gdy jest wywoływany. Aby określić parametr typu ogólnego dla składnika, użyj dyrektywy `@typeparam` Razor.
+Składnik Blazor z szablonem może również definiować wiele parametrów składnika typu `RenderFragment` lub `RenderFragment<T>` . Parametr dla elementu `RenderFragment<T>` można określić, gdy jest wywoływany. Aby określić parametr typu ogólnego dla składnika, użyj `@typeparam` dyrektywy Razor.
 
 *SimpleListView. Razor*
 
@@ -584,7 +584,7 @@ Składnik Blazor z szablonem może również definiować wiele parametrów skła
 }
 ```
 
-W przypadku korzystania z składnika z szablonem parametry szablonu można określić za pomocą elementów podrzędnych, które pasują do nazw parametrów. Argumenty składnika typu `RenderFragment<T>` przekazane jako elementy mają niejawny parametr o `context`nazwie. Nazwę tego parametru implementacji można zmienić przy użyciu `Context` atrybutu elementu podrzędnego. Wszystkie parametry typu ogólnego można określić przy użyciu atrybutu, który jest zgodny z nazwą parametru typu. Parametr typu zostanie wywnioskowany, jeśli jest to możliwe:
+W przypadku korzystania z składnika z szablonem parametry szablonu można określić za pomocą elementów podrzędnych, które pasują do nazw parametrów. Argumenty składnika typu `RenderFragment<T>` przekazane jako elementy mają niejawny parametr o nazwie `context` . Nazwę tego parametru implementacji można zmienić przy użyciu `Context` atrybutu elementu podrzędnego. Wszystkie parametry typu ogólnego można określić przy użyciu atrybutu, który jest zgodny z nazwą parametru typu. Parametr typu zostanie wywnioskowany, jeśli jest to możliwe:
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
@@ -609,7 +609,7 @@ Dane wyjściowe tego składnika wyglądają następująco:
 
 ## <a name="code-behind"></a>Związane z kodem
 
-Składnik Blazor jest zwykle tworzony w pojedynczym pliku *Razor* . Można jednak również oddzielić kod i znaczniki przy użyciu pliku związanego z kodem. Aby użyć pliku składnika, Dodaj plik C#, który jest zgodny z nazwą pliku składnika, ale z dodaniem rozszerzenia *CS* (*Counter.Razor.cs*). Użyj pliku C#, aby zdefiniować klasę bazową dla składnika. Można nazwać klasę bazową w dowolnym celu, ale jest ona wspólna dla nazwy klasy, która jest taka sama jak Klasa składnika, ale z dodanym `Base` rozszerzeniem (`CounterBase`). Klasa oparta na składnikach musi również pochodzić od `ComponentBase`. Następnie w pliku składnika Razor Dodaj `@inherits` dyrektywę, aby określić klasę bazową składnika (`@inherits CounterBase`).
+Składnik Blazor jest zwykle tworzony w pojedynczym pliku *Razor* . Można jednak również oddzielić kod i znaczniki przy użyciu pliku związanego z kodem. Aby użyć pliku składnika, Dodaj plik C#, który jest zgodny z nazwą pliku składnika, ale z dodaniem rozszerzenia *CS* (*Counter.Razor.cs*). Użyj pliku C#, aby zdefiniować klasę bazową dla składnika. Można nazwać klasę bazową w dowolnym celu, ale jest ona wspólna dla nazwy klasy, która jest taka sama jak Klasa składnika, ale z `Base` dodanym rozszerzeniem ( `CounterBase` ). Klasa oparta na składnikach musi również pochodzić od `ComponentBase` . Następnie w pliku składnika Razor Dodaj `@inherits` dyrektywę, aby określić klasę bazową składnika ( `@inherits CounterBase` ).
 
 *Counter. Razor*
 
@@ -644,5 +644,5 @@ Widoczność elementów członkowskich składnika w klasie bazowej musi być `pr
 Powyższe nie jest wyczerpujące dla wszystkich aspektów składników Blazor. Aby uzyskać więcej informacji na temat [tworzenia i używania ASP.NET Core składników Razor](/aspnet/core/blazor/components), zapoznaj się z dokumentacją Blazor.
 
 >[!div class="step-by-step"]
->[Poprzedni](app-startup.md)
->[Następny](pages-routing-layouts.md)
+>[Poprzedni](app-startup.md) 
+> [Dalej](pages-routing-layouts.md)

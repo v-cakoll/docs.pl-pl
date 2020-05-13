@@ -1,5 +1,6 @@
 ---
 title: Przykłady serializacji XML
+description: Te przykłady kodu pokazują zaawansowane scenariusze, w tym sposób używania serializacji XML do generowania strumienia XML, który jest zgodny z dokumentem schematu XML.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349773"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379177"
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 
@@ -74,7 +75,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serializacji elementu XmlElement i XmlNode
 
-Można również serializować wystąpienia klasy <xref:System.Xml.XmlElement> lub <xref:System.Xml.XmlNode> , jak pokazano w poniższym przykładzie kodu.
+Można również serializować wystąpienia <xref:System.Xml.XmlElement> <xref:System.Xml.XmlNode> klasy lub, jak pokazano w poniższym przykładzie kodu.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -203,7 +204,7 @@ Wystąpienie klasy Zserializowany może wyglądać następujące polecenie, jeś
 
 ## <a name="serializing-a-class-that-implements-the-icollection-interface"></a>Serializowanie klasy implementującej interfejs ICollection
 
-Możesz utworzyć własne klasy kolekcji, implementując <xref:System.Collections.ICollection> interfejs, i używając <xref:System.Xml.Serialization.XmlSerializer> do serializacji wystąpień tych klas. Należy pamiętać, że gdy klasa implementuje <xref:System.Collections.ICollection> interfejs, tylko kolekcja znajdująca się w klasie jest serializowana. Wszystkie właściwości publiczne lub pola dodane do tej klasy nie można serializować. Klasa musi zawierać metodę **Add** i Właściwość **Item** (C# indeksator) do serializacji.
+Możesz utworzyć własne klasy kolekcji <xref:System.Collections.ICollection> , implementując interfejs, i używając <xref:System.Xml.Serialization.XmlSerializer> do serializacji wystąpień tych klas. Należy pamiętać, że gdy klasa implementuje <xref:System.Collections.ICollection> interfejs, tylko kolekcja znajdująca się w klasie jest serializowana. Wszystkie właściwości publiczne lub pola dodane do tej klasy nie można serializować. Klasa musi zawierać metodę **Add** i Właściwość **Item** (C# indeksator) do serializacji.
 
 ```vb
 Imports System.Collections
@@ -363,13 +364,13 @@ public class Employee {
 
 Następujący przykładowy kod można wyciąć i wkleić do pliku tekstowego z rozszerzeniem nazwy pliku. cs lub. vb. Kompilowanie PLiku za pomocą kompilatora C# lub Visual Basic. Następnie uruchom go przy użyciu nazwy PLiku wykonywalnego.
 
-W tym przykładzie użyto prostego scenariusza, aby zademonstrować, jak wystąpienie obiektu jest tworzone i serializowane do strumienia plików przy <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> użyciu metody. Strumień XML jest zapisywana do PLiku, a następnie odczytywania i odtworzone na kopię oryginalnego obiektu przy użyciu tego samego PLiku <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody.
+W tym przykładzie użyto prostego scenariusza, aby zademonstrować, jak wystąpienie obiektu jest tworzone i serializowane do strumienia plików przy użyciu <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> metody. Strumień XML jest zapisywana do PLiku, a następnie odczytywania i odtworzone na kopię oryginalnego obiektu przy użyciu tego samego PLiku <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody.
 
 W tym przykładzie Klasa o nazwie `PurchaseOrder` jest serializowana, a następnie deserializowana. Klasa sekundę o nazwie `Address` jest również uwzględniony, ponieważ publiczne pole o nazwie `ShipTo` musi być ustawiona wartość `Address`. Podobnie `OrderedItem` klasy jest uwzględniony, ponieważ tablica `OrderedItem` obiektów musi być ustawiona wartość `OrderedItems` pola. Na koniec klasę o nazwie `Test` zawiera kod, który serializuje i deserializuje klasy.
 
 `CreatePO` Metoda tworzy `PurchaseOrder`, `Address`, i `OrderedItem` obiektów klasy i ustawia wartości pól publiczne. Metoda również tworzy wystąpienie klasy <xref:System.Xml.Serialization.XmlSerializer> klasa, która służy do serializacji i deserializacji `PurchaseOrder`. Należy zauważyć, że kod przekazuje typ klasy, który będzie serializowany do konstruktora. Kod tworzy również `FileStream` , który jest używany do zapisywania strumienia XML w dokumencie XML.
 
-`ReadPo` Metoda jest nieco prostsze. Po prostu tworzy obiekty do deserializacji i odczytuje się ich wartości. Podobnie jak w `CreatePo` przypadku metody, należy najpierw skonstruować <xref:System.Xml.Serialization.XmlSerializer>, przekazując typ klasy do deserializacji do konstruktora. Ponadto <xref:System.IO.FileStream> jest wymagany do odczytu dokumentu XML. Do deserializacji obiekty, należy wywołać <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody z <xref:System.IO.FileStream> jako argumentu. Zdeserializowany obiekt musi być rzutowany zmienną obiektu typu `PurchaseOrder`. Kod następnie odczytuje wartości zdeserializowany `PurchaseOrder`. Należy zauważyć, że można również przeczytać PLik PO.xml, który jest tworzony wyświetlić rzeczywiste XML danych wyjściowych.
+`ReadPo`Metoda jest nieco prostsze. Po prostu tworzy obiekty do deserializacji i odczytuje się ich wartości. Podobnie jak w przypadku `CreatePo` metody, należy najpierw skonstruować <xref:System.Xml.Serialization.XmlSerializer> , przekazując typ klasy do deserializacji do konstruktora. Ponadto <xref:System.IO.FileStream> jest wymagany do odczytu dokumentu XML. Do deserializacji obiekty, należy wywołać <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody z <xref:System.IO.FileStream> jako argumentu. Zdeserializowany obiekt musi być rzutowany zmienną obiektu typu `PurchaseOrder`. Kod następnie odczytuje wartości zdeserializowany `PurchaseOrder`. Należy zauważyć, że można również przeczytać PLik PO.xml, który jest tworzony wyświetlić rzeczywiste XML danych wyjściowych.
 
 ```vb
 Imports System.IO

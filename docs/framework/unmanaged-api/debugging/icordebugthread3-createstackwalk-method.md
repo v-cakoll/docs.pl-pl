@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791416"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375853"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk — Metoda
 Tworzy obiekt [ICorDebugStackWalk](icordebugstackwalk-interface.md) dla wątku, którego stos ma zostać rozwinięcia.  
@@ -35,29 +35,29 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
  `ppStackWalk`  
  określoną Wskaźnik do adresu obiektu [ICorDebugStackWalk](icordebugstackwalk-interface.md) dla wątku, którego stos ma zostać rozwinięcia.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Obiekt `ICorDebugStackWalk` został pomyślnie utworzony.|  
-|E_FAIL|Obiekt `ICorDebugStackWalk` nie został utworzony.|  
+|S_OK|`ICorDebugStackWalk`Obiekt został pomyślnie utworzony.|  
+|E_FAIL|`ICorDebugStackWalk`Obiekt nie został utworzony.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda `CreateStackWalk` powiedzie się, zostanie ustawiony kontekst zwróconego obiektu `ICorDebugStackWalk` dla bieżącego kontekstu wątku.  
+ Jeśli `CreateStackWalk` Metoda zakończy się pomyślnie, kontekst zwróconego `ICorDebugStackWalk` obiektu jest ustawiony na bieżący kontekst wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [Debugowanie](index.md)

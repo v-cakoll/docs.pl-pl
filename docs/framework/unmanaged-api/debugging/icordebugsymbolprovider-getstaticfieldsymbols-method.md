@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetStaticFieldSymbols, Metoda'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 02cc62a421058f83e28ce945ae9e76745f768988
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2428521b9b08060fd147a7c9b9054239bf957f69
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791555"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379374"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider:: GetStaticFieldSymbols, Metoda
 Pobiera symbole pól statycznych, które odpowiadają sygnaturze elementu TypeSpec.  
@@ -26,10 +26,10 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parametry  
  `cbSignature`  
- podczas Liczba bajtów w tablicy `typeSig`.  
+ podczas Liczba bajtów w `typeSig` tablicy.  
   
  `typeSig`  
- podczas Tablica bajtów, która zawiera sygnaturę `typespec`.  
+ podczas Tablica bajtów, która zawiera `typespec` sygnaturę.  
   
  `cRequestedSymbols`  
  podczas Żądana liczba symboli.  
@@ -46,16 +46,16 @@ HRESULT GetStaticFieldSymbols(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [GetInstanceFieldSymbols, metoda](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
 - [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-ms.openlocfilehash: b3153a88867d249aad8365bb774348fb8c9d57d5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7fadffaab6eee5beed513f339ea300acef5a1c6b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791753"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379001"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL — Metoda
 Ustawia wartość określającą, czy wywołania do [ICorDebugStepper:: StepRange —](icordebugstepper-steprange-method.md) przechodzą wartości argumentów, które są względne dla kodu natywnego lub względem kodu języka pośredniego firmy Microsoft (MSIL) metody, która jest testowana przez.  
@@ -35,13 +35,13 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>Parametry  
  `bIL`  
- podczas Ustaw na `true`, aby określić, że zakresy są względne dla kodu MSIL. Ustaw na `false`, aby określić, że zakresy są względne dla kodu natywnego. Wartość domyślna to `true`.  
+ podczas Ustaw na `true` , aby określić, że zakresy są względne dla kodu MSIL. Ustaw na `false` , aby określić, że zakresy są względne dla kodu natywnego. Wartość domyślna to `true`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider2:: GetGenericDictionaryInfo, Metoda'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791505"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379322"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: GetGenericDictionaryInfo, Metoda
 
@@ -63,7 +63,7 @@ Rozmiar sterty może być obliczany przez czytnik strumienia przez odjęcie dłu
 Heap Size = Stream.Length – (Directory Size + 4)
 ```
 
-miejsce, w którym rozmiar katalogu jest `N * 8`.
+gdzie katalog jest rozmiarem `N * 8` .
 
 Format każdego elementu informacji o tworzeniu wystąpienia na stercie to:
 
@@ -77,15 +77,15 @@ Włączenie długości dla każdego elementu sterty umożliwia proste sortowanie
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorDebug. idl, CorDebug. h
 
 **Biblioteka:** CorGuids. lib
 
-**Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugSymbolProvider2, interfejs](icordebugsymbolprovider2-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a74d32478bc88ee634fa5ff9b61ac2059bc8e302
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133591"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379718"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper — Metoda
 Tworzy obiekt ICorDebugStepper, który umożliwia przechodzenie przez aktywną ramkę tego ICorDebugThread.  
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parametry  
  `ppStepper`  
- określoną Wskaźnik do adresu obiektu `ICorDebugStepper`, który umożliwia przechodzenie przez aktywną ramkę tego wątku.  
+ określoną Wskaźnik do adresu `ICorDebugStepper` obiektu, który umożliwia przechodzenie przez aktywną ramkę tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
  Aktywna ramka może być kodem niezarządzanym.  
   
- Aby wykonać rzeczywiste przechodzenie, należy użyć interfejsu `ICorDebugStepper`.  
+ `ICorDebugStepper`Interfejs musi być używany do wykonywania rzeczywistego kroku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

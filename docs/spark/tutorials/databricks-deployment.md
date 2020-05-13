@@ -1,15 +1,15 @@
 ---
 title: Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Spark w usłudze datakostki.
-ms.date: 01/23/2020
+ms.date: 05/11/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 228ddd59023dbd9d63ff392764fb36441a6af23a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895716"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379844"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w kostkach
 
@@ -40,7 +40,7 @@ Przed rozpoczęciem wykonaj następujące zadania:
 
 W tej sekcji utworzysz obszar roboczy usługi Azure Databricks przy użyciu witryny Azure Portal.
 
-1. W Azure Portal wybierz pozycję **Utwórz** > **Analytics** > **Azure Databricks**analizy zasobów.
+1. W Azure Portal wybierz pozycję **Utwórz**  >  **Analytics**  >  **Azure Databricks**analizy zasobów.
 
    ![Tworzenie zasobu Azure Databricks w Azure Portal](./media/databricks-deployment/create-databricks-resource.png)
 
@@ -79,15 +79,15 @@ Korzystając z **interfejsu wiersza polecenia datacegłs** , można nawiązać p
    pip3 install databricks-cli
    ```
 
-3. Po zainstalowaniu interfejsu wiersza polecenia datakostki Otwórz nowy wiersz poleceń i uruchom polecenie `databricks`. Jeśli zostanie wyświetlony komunikat " **" nie jest rozpoznawany jako błąd wewnętrzny lub zewnętrzny**, upewnij się, że otwarto nowy wiersz polecenia.
+3. Po zainstalowaniu interfejsu wiersza polecenia datakostki Otwórz nowy wiersz poleceń i uruchom polecenie `databricks` . Jeśli zostanie wyświetlony komunikat " **" nie jest rozpoznawany jako błąd wewnętrzny lub zewnętrzny**, upewnij się, że otwarto nowy wiersz polecenia.
 
 ## <a name="set-up-azure-databricks"></a>Skonfiguruj Azure Databricks
 
 Teraz, gdy masz zainstalowany interfejs wiersza polecenia datakosteks, musisz skonfigurować szczegóły uwierzytelniania.
 
-1. Uruchom polecenie CLI w interfejsie wiersza `databricks configure --token`polecenia.
+1. Uruchom polecenie CLI w interfejsie wiersza polecenia `databricks configure --token` .
 
-2. Po uruchomieniu polecenia Konfiguruj zostanie wyświetlony monit o wprowadzenie hosta. Adres URL hosta używa formatu: **https://< \location>. azuredatabricks.NET**. Na przykład jeśli podczas tworzenia usługi Azure Databricks wybrano opcję **eastus2** , host będzie miał wartość **https://eastus2.azuredatabricks.net**.
+2. Po uruchomieniu polecenia Konfiguruj zostanie wyświetlony monit o wprowadzenie hosta. Adres URL hosta używa formatu: **https://< \location>. azuredatabricks.NET**. Na przykład jeśli podczas tworzenia usługi Azure Databricks wybrano opcję **eastus2** , host będzie miał wartość **https://eastus2.azuredatabricks.net** .
 
 3. Po wprowadzeniu hosta zostanie wyświetlony monit o wprowadzenie tokenu. W Azure Portal wybierz pozycję **Uruchom obszar roboczy** , aby uruchomić Azure Databricks obszar roboczy.
 
@@ -115,7 +115,7 @@ Teraz powinno być możliwe uzyskanie dostępu do dowolnych klastrów Azure Data
 
    Utwórz nowy plik o nazwie **DB-init.sh** na komputerze lokalnym i wklej [zawartość DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) znajdującą się w witrynie GitHub.
 
-   W właśnie utworzonym pliku Ustaw `DOTNET_SPARK_RELEASE` zmienną na. `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` Pozostaw resztę pliku *DB-init.sh* .
+   W właśnie utworzonym pliku Ustaw `DOTNET_SPARK_RELEASE` zmienną na `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` . Pozostaw resztę pliku *DB-init.sh* .
 
 > [!Note]
 > Jeśli używasz systemu Windows, upewnij się, że końce wiersza w skryptach *Install-Worker.sh* i *DB-init.sh* są w stylu systemu UNIX (LF). Końce wierszy można zmienić za pomocą edytorów tekstu, takich jak Notatnik + + i Atom.
@@ -188,7 +188,7 @@ Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiające
 
 1. Przejdź do zadania i wybierz pozycję **Edytuj** , aby skonfigurować klaster zadania.
 
-2. Ustaw klaster na platformę **Spark 2.4.1**. Następnie wybierz pozycję **Opcje** > zaawansowane**init skrypty**. Ustaw ścieżkę skryptu init jako `dbfs:/spark-dotnet/db-init.sh`.
+2. Ustaw klaster na platformę **Spark 2.4.1**. Następnie wybierz pozycję **Opcje zaawansowane**  >  **init skrypty**. Ustaw ścieżkę skryptu init jako `dbfs:/spark-dotnet/db-init.sh` .
 
    ![Skonfiguruj klaster Spark w Azure Databricks](./media/databricks-deployment/cluster-config.png)
 

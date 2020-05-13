@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792061"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378230"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters — Metoda
 Pobiera wartość każdego rejestru (dla platformy, w której kod jest aktualnie wykonywany), która jest określona przez daną maskę bitową.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parametry  
  `maskCount`  
- podczas Rozmiar (w bajtach) tablicy `mask`.  
+ podczas Rozmiar tablicy w bajtach `mask` .  
   
  `mask`  
  podczas Tablica bajtów, z których każdy bit odnosi się do rejestru. Jeśli bit wynosi 1, zostanie pobrana odpowiednia wartość rejestru.  
@@ -47,27 +47,27 @@ HRESULT GetRegisters (
  podczas Liczba wartości rejestru do pobrania.  
   
  `regBuffer`  
- określoną Tablica obiektów `CORDB_REGISTER`, z których każdy otrzymuje wartość rejestru.  
+ określoną Tablica `CORDB_REGISTER` obiektów, z których każdy otrzymuje wartość rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetRegisters` zwraca tablicę wartości z rejestrów, które są określone przez maskę. Tablica nie zawiera wartości rejestrów, których bit maski nie jest ustawiony. W ten sposób rozmiar tablicy `regBuffer` musi być równy liczbie 1 w masce. Jeśli wartość `regCount` jest za mała dla liczby rejestrów wskazywanych przez maskę, wartości wyższych numerowanych rejestrów zostaną obcięte z zestawu. Jeśli `regCount` jest zbyt duży, nieużywane elementy `regBuffer` będą niemodyfikowane.  
+ `GetRegisters`Metoda zwraca tablicę wartości z rejestrów, które są określone przez maskę. Tablica nie zawiera wartości rejestrów, których bit maski nie jest ustawiony. W tym celu rozmiar `regBuffer` tablicy musi być równy liczbie 1 w masce. Jeśli wartość `regCount` jest za mała dla liczby rejestrów wskazywanych przez maskę, wartości wyższych numerowanych rejestrów zostaną obcięte z zestawu. Jeśli `regCount` jest zbyt duży, nieużywane `regBuffer` elementy będą niemodyfikowane.  
   
  Jeśli niedostępna Rejestracja jest wskazywana przez maskę, zostanie zwrócona wartość nieokreślona dla tego rejestru.  
   
- Metoda `ICorDebugRegisterSet2::GetRegisters` jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestry ogólnego przeznaczenia i 128 rejestry zmiennoprzecinkowe, więc potrzebujesz więcej niż 64-bitów w masce bitowej.  
+ Ta `ICorDebugRegisterSet2::GetRegisters` Metoda jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestry ogólnego przeznaczenia i 128 rejestry zmiennoprzecinkowe, więc potrzebujesz więcej niż 64-bitów w masce bitowej.  
   
- Jeśli nie ma więcej niż 64 rejestrów, tak jak w przypadku platform, takich jak x86, Metoda `GetRegisters` faktycznie tłumaczy bajty w tablicy `mask` bajtów na `ULONG64`, a następnie wywołuje metodę [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , która przyjmuje maskę `ULONG64`.  
+ Jeśli nie ma więcej niż 64 rejestrów, tak jak w przypadku platform, takich jak x86, `GetRegisters` Metoda faktycznie po prostu tłumaczy bajty w `mask` tablicy bajtów na `ULONG64` a następnie wywołuje metodę [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , która przyjmuje `ULONG64` maskę.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugRegisterSet2, interfejs](icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet, interfejs](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 — Interfejs](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet — Interfejs](icordebugregisterset-interface.md)

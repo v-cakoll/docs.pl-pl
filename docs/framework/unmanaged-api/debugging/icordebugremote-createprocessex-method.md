@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791991"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377983"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx — Metoda
 Uruchamia proces na maszynie zdalnej pod debugerem.  
@@ -85,7 +85,7 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  określoną Wskaźnik do adresu obiektu "ICorDebugProcess Interface", który reprezentuje proces.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Pomyślnie uruchomiono proces na maszynie zdalnej i zwróciło "interfejs ICorDebugProcess" do debugowania.  
   
@@ -96,7 +96,7 @@ HRESULT CreateProcessEx (
  Debugowanie w trybie mieszanym nie jest obsługiwane w programie Silverlight.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl  
   
@@ -104,9 +104,9 @@ HRESULT CreateProcessEx (
   
  **.NET Framework wersje:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugRemote, interfejs](icordebugremote-interface.md)
-- [ICorDebug, interfejs](icordebug-interface.md)
+- [ICorDebugRemote — Interfejs](icordebugremote-interface.md)
+- [ICorDebug — Interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

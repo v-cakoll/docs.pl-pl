@@ -463,18 +463,17 @@
           href: localization-attributes-and-comments.md
         - name: Przegląd Dwukierunkowe funkcje WPF
           href: bidirectional-features-in-wpf-overview.md
-        - name: — Tematy porad
-          href: globalization-and-localization-how-to-topics.md
+        - name: Instrukcje
           items:
             - name: Lokalizowanie aplikacji
               href: how-to-localize-an-application.md
-            - name: Używanie automatycznego układu do utworzenia przycisku
+            - name: Tworzenie przycisku przy użyciu układu automatycznego
               href: how-to-use-automatic-layout-to-create-a-button.md
-            - name: Używanie siatki do automatycznego układu
+            - name: Używanie siatki dla układu automatycznego
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: Używanie elementu ResourceDictionary do zarządzania lokalizowalnymi zasobami ciągów
+            - name: Zarządzanie zasobami za pomocą elementu ResourceDictionary
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-            - name: Używanie zasobów w lokalizowalnych aplikacjach
+            - name: Używanie zasobów w lokalizowanych aplikacjach
               href: how-to-use-resources-in-localizable-applications.md
     - name: Układ
       href: layout.md

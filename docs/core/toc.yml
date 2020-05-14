@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: Wykaz identyfikatorów środowisk uruchomieniowych (RID)
   href: rid-catalog.md
+- name: Nazwy manifestów zasobów
+  href: resources/manifest-file-names.md
 - name: Zarządzanie zależnościami i ładowanie ich
   items:
     - name: Zarządzanie zależnościami

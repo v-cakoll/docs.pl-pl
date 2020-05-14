@@ -1,51 +1,51 @@
 ---
 title: Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
-description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Zapoznaj się ze szczegółami implementacji warstwy trwałości infrastruktury przy użyciu programu Entity Framework Core.
+description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami implementacji warstwy trwałości infrastruktury przy użyciu Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805481"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396256"
 ---
-# <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
+# <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Zaimplementuj warstwę trwałości infrastruktury za pomocą Entity Framework Core
 
-Korzystając z relacyjnych baz danych, takich jak SQL Server, Oracle lub PostgreSQL, zalecanym podejściem jest zaimplementowanie warstwy trwałości opartej na entity framework (EF). EF obsługuje LINQ i zapewnia silnie typizowane obiekty dla modelu, a także uproszczoną trwałość w bazie danych.
+W przypadku korzystania z relacyjnych baz danych, takich jak SQL Server, Oracle lub PostgreSQL, Zalecanym podejściem jest implementacja warstwy trwałości na podstawie Entity Framework (EF). Dr obsługuje LINQ i zapewnia obiekty silnie wpisane dla modelu, a także uproszczoną trwałość do bazy danych.
 
-Entity Framework ma długą historię jako część programu .NET Framework. Korzystając z programu .NET Core, należy również użyć programu Entity Framework Core, który działa w systemie Windows lub Linux w taki sam sposób, jak program .NET Core. EF Core jest kompletnym przepisać entity framework, który jest implementowany ze znacznie mniejszym rozmiarem i ważne ulepszenia wydajności.
+Entity Framework ma długą historię w ramach .NET Framework. W przypadku korzystania z platformy .NET Core należy również użyć Entity Framework Core, który działa w systemie Windows lub Linux w taki sam sposób, jak .NET Core. EF Core to pełny zapis Entity Framework, który jest implementowany z znacznie mniejszym wpływem i istotnymi ulepszeniami wydajności.
 
-## <a name="introduction-to-entity-framework-core"></a>Wprowadzenie do core struktury encji
+## <a name="introduction-to-entity-framework-core"></a>Wprowadzenie do Entity Framework Core
 
-Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej technologii dostępu do danych entity framework. Został wprowadzony z .NET Core w połowie 2016 roku.
+Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej Entity Framework technologii dostępu do danych. Wprowadzono ją z platformą .NET Core w połowie 2016.
 
-Ponieważ wprowadzenie do EF Core jest już dostępne w dokumentacji firmy Microsoft, w tym miejscu po prostu podamy łącza do tych informacji.
+Ponieważ wprowadzenie do EF Core jest już dostępne w dokumentacji firmy Microsoft, tutaj udostępniamy linki do tych informacji.
 
 ### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Rdzeń struktury encji** \
+- **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
 
 - **Wprowadzenie do ASP.NET Core i Entity Framework Core przy użyciu programu Visual Studio** \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
-- **Klasa DbContext** \
+- **DbContext — Klasa** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Porównaj EF Core & EF6.x** \
+- **Porównaj EF Core & EF6. x** \
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
-## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruktura w ramach entity framework core z perspektywy DDD
+## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruktura w Entity Framework Core z perspektywy DDD
 
-Z punktu widzenia DDD ważną możliwością EF jest możliwość używania jednostek domeny POCO, znanych również w terminologii EF jako *jednostki poco oparte na kodzie.* Jeśli używasz jednostek domeny POCO, klasy modelu domeny są niewiedzą dotyczące trwałości, zgodnie z [zasadami ignorancji trwałości](https://deviq.com/persistence-ignorance/) i [ignorancji infrastruktury.](https://ayende.com/blog/3137/infrastructure-ignorance)
+Z punktu widzenia, ważną funkcją EF jest możliwość korzystania z jednostek domeny POCO, znanego również w terminologii EF jako jednostki POCO w *kodzie*. Jeśli używasz jednostek domeny POCO, klasy modelu domeny są trwałości-ignorujących, przestrzegając [Ignorujących trwałości](https://deviq.com/persistence-ignorance/) i zasad [ignorujących infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) .
 
-Na wzorce DDD należy hermetyzować zachowanie domeny i reguły w samej klasie jednostki, dzięki czemu można kontrolować invariants, sprawdzania poprawności i reguł podczas uzyskiwania dostępu do dowolnej kolekcji. W związku z tym nie jest dobrą praktyką w DDD, aby umożliwić publiczny dostęp do kolekcji jednostek podrzędnych lub obiektów wartości. Zamiast tego chcesz udostępnić metody, które kontrolują, jak i kiedy pola i kolekcje właściwości mogą być aktualizowane i jakie zachowanie i akcje powinny wystąpić, gdy tak się stanie.
+Na wzorce DDD należy hermetyzować zachowanie domeny i reguły w samej klasie jednostki, aby można było sterować niektórymi, walidacjami i regułami podczas uzyskiwania dostępu do dowolnej kolekcji. W związku z tym nie jest dobrym zwyczajem w DDD, aby zezwalać na publiczny dostęp do kolekcji jednostek podrzędnych lub obiektów wartości. Zamiast tego należy udostępnić metody kontrolujące, jak i kiedy można aktualizować pola i kolekcje właściwości oraz jakie zachowanie i akcje powinny wystąpić, gdy wystąpi taka sytuacja.
 
-Ponieważ EF Core 1.1, aby spełnić te wymagania DDD, można mieć zwykłych pól w jednostkach zamiast właściwości publicznych. Jeśli nie chcesz, aby pole encji było dostępne z zewnątrz, można po prostu utworzyć atrybut lub pole zamiast właściwości. Można również użyć ustawiaczów właściwości prywatnych.
+Ponieważ EF Core 1,1, aby spełnić te wymagania dotyczące DDD, w jednostkach można używać zwykłych pól zamiast właściwości publicznych. Jeśli nie chcesz, aby pole jednostki było dostępne na zewnątrz, możesz po prostu utworzyć atrybut lub pole zamiast właściwości. Można również użyć własnych metod ustawiających właściwości.
 
-W podobny sposób można teraz mieć dostęp tylko do odczytu do kolekcji przy użyciu właściwości publicznej wpisane `IReadOnlyCollection<T>`jako `List<T>`, który jest wspierany przez prywatnego elementu członkowskiego pola dla kolekcji (jak a) w jednostce, która opiera się na EF dla trwałości. Poprzednie wersje entity framework wymagane właściwości `ICollection<T>`kolekcji do obsługi , co oznaczało, że każdy deweloper przy użyciu klasy jednostki nadrzędnej można dodać lub usunąć elementy za pośrednictwem jego kolekcji właściwości. Taka możliwość byłaby sprzeczna z zalecanymi wzorami w DDD.
+W podobny sposób można teraz mieć dostęp tylko do odczytu do kolekcji przy użyciu właściwości publicznej wpisanej jako `IReadOnlyCollection<T>` , która jest objęta przez prywatny element członkowski dla kolekcji (na przykład `List<T>` ) w jednostce, która opiera się na EF dla trwałości. Poprzednie wersje Entity Framework wymaganych właściwości kolekcji do obsługi `ICollection<T>` , co oznacza, że każdy deweloper korzystający z klasy jednostki nadrzędnej może dodawać lub usuwać elementy za pośrednictwem swoich kolekcji właściwości. Taka możliwość będzie od zalecanych wzorców w DDD.
 
-Kolekcję prywatną można używać podczas ujawniania `IReadOnlyCollection<T>` obiektu tylko do odczytu, jak pokazano w poniższym przykładzie kodu:
+Możesz użyć prywatnej kolekcji podczas udostępniania obiektu tylko do odczytu `IReadOnlyCollection<T>` , jak pokazano w poniższym przykładzie kodu:
 
 ```csharp
 public class Order : Entity
@@ -78,9 +78,9 @@ public class Order : Entity
 }
 ```
 
-Do `OrderItems` obiektu można uzyskać dostęp tylko `IReadOnlyCollection<OrderItem>`do odczytu za pomocą . Ten typ jest tylko do odczytu, więc jest chroniony przed regularnymi aktualizacjami zewnętrznymi.
+`OrderItems`Dostęp do właściwości można uzyskać tylko do odczytu przy użyciu `IReadOnlyCollection<OrderItem>` . Ten typ jest tylko do odczytu, więc jest chroniony przed regularnymi aktualizacjami zewnętrznymi.
 
-EF Core umożliwia mapowanie modelu domeny do fizycznej bazy danych bez "zanieczyszczania" modelu domeny. Jest to czysty kod POCO .NET, ponieważ akcja mapowania jest implementowana w warstwie trwałości. W tej akcji mapowania należy skonfigurować mapowanie pól do bazy danych. W poniższym `OnModelCreating` przykładzie `OrderingContext` metody `OrderEntityTypeConfiguration` z i klasy `SetPropertyAccessMode` wywołanie nakazuje `OrderItems` EF Core dostęp do właściwości za pośrednictwem jego pola.
+EF Core zapewnia sposób mapowania modelu domeny do fizycznej bazy danych bez "zanieczyszczania" modelu domeny. Jest to czysty kod POCO .NET, ponieważ akcja mapowania jest zaimplementowana w warstwie trwałości. W tej akcji mapowania należy skonfigurować mapowanie pola-do-bazy danych. W poniższym przykładzie `OnModelCreating` metody z `OrderingContext` i `OrderEntityTypeConfiguration` klasy, wywołanie do `SetPropertyAccessMode` instruuje EF Core, aby uzyskać dostęp do `OrderItems` właściwości za pośrednictwem pola.
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -110,14 +110,14 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Podczas korzystania z pól zamiast właściwości, `OrderItem` jednostka jest utrwalona tak, jakby miała `List<OrderItem>` właściwość. Jednak udostępnia pojedynczy akcesor, `AddOrderItem` metoda dodawania nowych elementów do zamówienia. W rezultacie zachowanie i dane są powiązane ze sobą i będą spójne w całym kodzie aplikacji, który używa modelu domeny.
+Gdy używasz pól zamiast właściwości, `OrderItem` jednostka jest utrwalona tak, jakby miała `List<OrderItem>` Właściwość. Jednak udostępnia on pojedynczy akcesor, `AddOrderItem` metodę, służącą do dodawania nowych elementów do zamówienia. W efekcie zachowanie i dane są powiązane ze sobą i będą spójne w całym kodzie aplikacji, który używa modelu domeny.
 
-## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementowanie repozytoriów niestandardowych za pomocą programu Entity Framework Core
+## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementowanie niestandardowych repozytoriów przy użyciu Entity Framework Core
 
-Na poziomie implementacji repozytorium jest po prostu klasą z kodem trwałości danych koordynowanym przez jednostkę pracy (DBContext w EF Core) podczas wykonywania aktualizacji, jak pokazano w następującej klasie:
+Na poziomie implementacji repozytorium jest po prostu klasą z kodem trwałości danych koordynowanym przez jednostkę pracy (DbContext w EF Core) podczas przeprowadzania aktualizacji, jak pokazano w poniższej klasie:
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository
@@ -154,43 +154,43 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Interfejs `IBuyerRepository` pochodzi z warstwy modelu domeny jako kontrakt. Jednak implementacja repozytorium odbywa się w warstwie trwałości i infrastruktury.
+`IBuyerRepository`Interfejs pochodzi z warstwy modelu domeny jako kontraktu. Implementacja repozytorium jest jednak wykonywana z warstwy trwałości i infrastruktury.
 
-Ef DbContext pochodzi za pośrednictwem konstruktora za pośrednictwem iniekcji zależności. Jest on współużytkowane przez wiele repozytoriów w`ServiceLifetime.Scoped`tym samym zakresie żądań HTTP, dzięki jego `services.AddDbContext<>`domyślnemu okresowi istnienia ( ) w kontenerze IoC (który można również jawnie ustawić za pomocą ).
+Kontekst EF DBjest dostarczany przez Konstruktor poprzez wstrzyknięcie zależności. Jest ona udostępniana między wieloma repozytoriami w ramach tego samego zakresu żądania HTTP, dzięki czemu jego domyślny okres istnienia ( `ServiceLifetime.Scoped` ) w kontenerze IOC (który można także jawnie ustawić przy użyciu `services.AddDbContext<>` ).
 
-### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Metody implementacji w repozytorium (aktualizacje lub transakcje w porównaniu z kwerendami)
+### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Metody implementacji w repozytorium (aktualizacje lub transakcje w porównaniu z zapytaniami)
 
-W ramach każdej klasy repozytorium należy umieścić metody trwałości, które aktualizują stan jednostek zawartych przez powiązane zagregowane. Pamiętaj, że istnieje relacja jeden do jednego między agregacją a powiązanym repozytorium. Należy wziąć pod uwagę, że obiekt jednostki głównej agregacji może mieć osadzone jednostki podrzędne w jego wykres EF. Na przykład kupujący może mieć wiele metod płatności jako powiązane jednostki podrzędne.
+W ramach każdej klasy repozytorium należy umieścić metody trwałości, które aktualizują stan jednostek zawartych w powiązanej agregacji. Należy pamiętać, że istnieje relacja jeden do jednego między agregacją i powiązanym repozytorium. Należy wziąć pod uwagę, że zagregowany obiekt jednostki głównej może mieć osadzone jednostki podrzędne w ramach jego grafu EF. Na przykład kupujący może mieć wiele metod płatności jako powiązanych jednostek podrzędnych.
 
-Ponieważ podejście do zamawiania mikrousługi w eShopOnContainers jest również oparte na CQS/CQRS, większość zapytań nie są implementowane w repozytoriach niestandardowych. Deweloperzy mają swobodę tworzenia zapytań i sprzężeń, których potrzebują dla warstwy prezentacji bez ograniczeń nałożonych przez agregaty, niestandardowe repozytoria na agregację i DDD w ogóle. Większość niestandardowych repozytoriów sugerowanych w tym przewodniku ma kilka metod aktualizacji lub transakcyjnych, ale tylko metody kwerendy potrzebne do uzyskania danych do aktualizacji. Na przykład repozytorium Nabywcy Repozytorium repozytorium implementuje FindAsync metody, ponieważ aplikacja musi wiedzieć, czy dany nabywca istnieje przed utworzeniem nowego nabywcy związane z zamówieniem.
+Ponieważ podejście do mikrousługi porządkowania w eShopOnContainers opiera się również na CQS/CQRS, większość zapytań nie jest zaimplementowana w niestandardowych repozytoriach. Deweloperzy mogą uzyskać swobodę tworzenia zapytań i sprzężeń potrzebnych do warstwy prezentacji bez ograniczeń narzuconych przez agregacje, niestandardowe repozytoria na zagregowane i DDD w ogólności. Większość repozytoriów niestandardowych sugerowanych przez ten przewodnik ma kilka metod Update lub transakcyjnych, ale tylko metody zapytania potrzebne do aktualizacji danych. Na przykład repozytorium BuyerRepository implementuje metodę FindAsync, ponieważ aplikacja musi wiedzieć, czy konkretny kupujący istnieje przed utworzeniem nowego nabywcy związanego z kolejnością.
 
-Jednak metody rzeczywistych zapytań, aby uzyskać dane do wysłania do warstwy prezentacji lub aplikacji klienckich są implementowane, jak wspomniano, w zapytaniach CQRS na podstawie elastycznych zapytań przy użyciu Dapper.
+Jednak prawdziwe metody zapytań umożliwiające pobieranie danych do wysłania do warstwy prezentacji lub aplikacji klienckich są implementowane, jak wspomniano w zapytaniach CQRS na podstawie elastycznych zapytań przy użyciu Dapper.
 
-### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Korzystanie z repozytorium niestandardowego a bezpośrednio przy użyciu EF DbContext
+### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Korzystanie z niestandardowego repozytorium i bezpośrednie używanie EF DbContext
 
-Entity Framework DbContext Klasa jest oparta na jednostki pracy i repozytorium wzorców i może być używany bezpośrednio z kodu, takich jak z ASP.NET core kontrolera MVC. Wzorce jednostki pracy i repozytorium powodują najprostszy kod, jak w mikrousługach katalogu CRUD w eShopOnContainers. W przypadkach, gdy chcesz najprostszy kod możliwe, można bezpośrednio użyć DbContext klasy, jak wielu deweloperów zrobić.
+Entity Framework DbContext jest oparta na wzorcach wzorców pracy i repozytorium i może być używana bezpośrednio w kodzie, na przykład z kontrolera ASP.NET Core MVC. Wzorce jednostki pracy i repozytorium powodują powstanie najprostszego kodu, tak jak w przypadku mikrousługi CRUD Catalog w eShopOnContainers. W przypadkach, gdy chcesz, aby najprostszy kod był możliwy, możesz chcieć bezpośrednio użyć klasy DbContext, tak jak wielu deweloperów.
 
-Jednak implementowanie repozytoriów niestandardowych zapewnia kilka korzyści podczas implementowania bardziej złożonych mikrousług lub aplikacji. Wzorce jednostki pracy i repozytorium są przeznaczone do hermetyzacji warstwy trwałości infrastruktury, dzięki czemu jest oddzielona od warstw aplikacji i modelu domeny. Implementowanie tych wzorców może ułatwić korzystanie z repozytoriów makiety symulujących dostęp do bazy danych.
+Jednak wdrożenie repozytoriów niestandardowych zapewnia kilka korzyści w przypadku implementowania bardziej złożonych mikrousług lub aplikacji. Wzorce jednostki pracy i repozytorium są przeznaczone do hermetyzacji warstwy trwałości infrastruktury, aby była ona oddzielona od warstw aplikacji i modelu domeny. Wdrożenie tych wzorców może ułatwić korzystanie z repozytoriów makiety, które symulują dostęp do bazy danych.
 
-Na rysunku 7-18 widać różnice między nie przy użyciu repozytoriów (bezpośrednio przy użyciu EF DbContext) w porównaniu przy użyciu repozytoriów, co ułatwia mock tych repozytoriów.
+Na rysunku 7-18 można zobaczyć różnice między nieużywaniem repozytoriów (bezpośrednio przy użyciu EF DbContext) zamiast korzystać z repozytoriów, co ułatwia zasymulować te repozytoria.
 
-![Diagram przedstawiający składniki i przepływ danych w dwóch repozytoriach.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
+![Diagram przedstawiający składniki i przepływu danych w dwóch repozytoriach.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
-**Rysunek 7-18**. Używanie niestandardowych repozytoriów w porównaniu do zwykłego DbContext
+**Rysunek 7-18**. Używanie niestandardowych repozytoriów zamiast zwykłego DbContext
 
-Rysunek 7-18 pokazuje, że przy użyciu niestandardowego repozytorium dodaje warstwę abstrakcji, która może służyć do ułatwienia testowania przez szyderczy repozytorium. Istnieje wiele alternatyw podczas szyderstwa. Możesz drwić tylko repozytoria lub można drwić z całej jednostki pracy. Zwykle szydzenie tylko repozytoria wystarczy, a złożoność do abstrakcyjnego i pozorować całą jednostkę pracy zwykle nie jest potrzebna.
+Rysunek 7-18 pokazuje, że za pomocą repozytorium niestandardowego dodaje warstwę abstrakcji, która może być używana do ułatwienia testowania przez imitację repozytorium. Podczas imitacji istnieje wiele wariantów. Można zasymulować tylko repozytoria lub można zasymulować całą jednostkę pracy. Zwykle imitacja tylko repozytoria jest wystarczająca, a złożoność abstrakcyjna i makieta całościowej jednostki pracy zwykle nie jest wymagana.
 
-Później, gdy koncentrujemy się na warstwie aplikacji, zobaczysz, jak wstrzykiwanie zależności działa w ASP.NET Core i jak jest implementowany podczas korzystania z repozytoriów.
+Później, gdy skupmy się na warstwie aplikacji, zobaczysz, jak iniekcja zależności działa w ASP.NET Core i jak jest zaimplementowana w przypadku korzystania z repozytoriów.
 
-Krótko mówiąc, niestandardowe repozytoria umożliwiają łatwiejsze testowanie kodu za pomocą testów jednostkowych, na które stan warstwy danych nie ma wpływu. Jeśli uruchomisz testy, które również uzyskać dostęp do rzeczywistej bazy danych za pośrednictwem entity framework, nie są one testy jednostkowe, ale testy integracji, które są znacznie wolniejsze.
+W krótkim przypadku niestandardowe repozytoria umożliwiają łatwiejsze testowanie kodu przy użyciu testów jednostkowych, które nie mają wpływu na stan warstwy danych. Jeśli uruchamiasz testy, które również uzyskują dostęp do rzeczywistej bazy danych za pomocą Entity Framework, nie są one testami jednostkowymi, ale testy integracji, które są znacznie wolniejsze.
 
-Jeśli używasz DbContext bezpośrednio, trzeba by mock go lub uruchomić testy jednostkowe przy użyciu programu SQL Server w pamięci z przewidywalnych danych dla testów jednostkowych. Ale szydzenie z DbContext lub kontrolowanie fałszywych danych wymaga więcej pracy niż szydzenie na poziomie repozytorium. Oczywiście zawsze można przetestować kontrolery MVC.
+Jeśli używasz DbContext bezpośrednio, musisz go zasymulować lub uruchomić testy jednostkowe za pomocą SQL Server w pamięci z przewidywalnymi danymi dla testów jednostkowych. Jednak imitacja DbContext lub kontrolowanie danych fałszywych wymaga większego działania niż imitacja na poziomie repozytorium. Oczywiście można zawsze testować kontrolery MVC.
 
-## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Ef DbContext i IUnitOfPraca istnienia wystąpienia w kontenerze IoC
+## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Okres istnienia wystąpienia elementu EF DbContext i IUnitOfWork w kontenerze IoC
 
-Obiekt `DbContext` (udostępniany `IUnitOfWork` jako obiekt) powinien być współużytkowane przez wiele repozytoriów w tym samym zakresie żądań HTTP. Na przykład jest to prawdą, gdy wykonywana operacja musi dotyczyć wielu agregatów lub po prostu dlatego, że używasz wielu wystąpień repozytorium. Należy również wspomnieć, `IUnitOfWork` że interfejs jest częścią warstwy domeny, a nie typu EF Core.
+`DbContext`Obiekt (uwidoczniony jako `IUnitOfWork` obiekt) powinien być współużytkowany między wieloma repozytoriami w ramach tego samego zakresu żądania HTTP. Na przykład dzieje się tak, gdy wykonywana operacja musi zająć się wieloma agregacjami lub po prostu, ponieważ jest używane wiele wystąpień repozytorium. Należy również pamiętać, że `IUnitOfWork` interfejs jest częścią warstwy domeny, a nie typu EF Core.
 
-Aby to zrobić, wystąpienie `DbContext` obiektu musi mieć jego okres istnienia usługi ustawiona na ServiceLifetime.Scoped. Jest to domyślny okres `DbContext` istnienia `services.AddDbContext` podczas rejestrowania w kontenerze IoC `Startup.cs` z Metody ConfigureServices pliku w projekcie interfejsu API sieci Web ASP.NET Core. Ilustruje to poniższy kod.
+Aby to zrobić, wystąpienie `DbContext` obiektu musi mieć ustawiony okres istnienia usługi jako servicelifetime. zakres. Jest to domyślny okres istnienia rejestracji w `DbContext` usłudze `services.AddDbContext` w kontenerze IOC z metody ConfigureServices `Startup.cs` pliku w projekcie interfejsu API sieci Web ASP.NET Core. Ilustruje to poniższy kod.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -215,11 +215,11 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 }
 ```
 
-Tryb wystąpienia DbContext nie powinien być skonfigurowany jako ServiceLifetime.Transient lub ServiceLifetime.Singleton.
+Tryb tworzenia wystąpień DbContext nie powinien być skonfigurowany jako servicelifetime. przejściowy lub servicelifetime. singleton.
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Okres istnienia wystąpienia repozytorium w kontenerze IoC
 
-W podobny sposób okres istnienia repozytorium powinien być zwykle ustawiony jako zakres (InstancePerLifetimeScope w autofac). Może to być również przejściowy (InstancePerDependency w Autofac), ale usługa będzie bardziej wydajne w odniesieniu do pamięci podczas korzystania z okresu istnienia o określonym zakresie.
+W podobny sposób okres istnienia repozytorium powinien być zazwyczaj ustawiany jako zakres (InstancePerLifetimeScope w Autofac). Może to być również przejściowe (InstancePerDependency w Autofac), ale usługa będzie bardziej wydajna w zakresie pamięci w przypadku korzystania z okresu istnienia w zakresie.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,36 +228,36 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Przy użyciu okresu istnienia pojedynczego dla repozytorium może spowodować poważne problemy współbieżności, gdy DbContext jest ustawiona na zakres (InstancePerLifetimeScope) okres istnienia (domyślne okresy istnienia dla DBContext).
+Użycie pojedynczego okresu istnienia dla repozytorium może spowodować poważne problemy współbieżności, gdy dla kontekstu DbContext ustawiono zakres (InstancePerLifetimeScope) okres istnienia (domyślne okresy istnienia dla kontekstu DbContext).
 
 ### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Implementowanie repozytorium i jednostki wzorców pracy w ASP.NET aplikacji MVC** \
+- **Implementacja wzorców repozytorium i jednostki pracy w aplikacji ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Strategie wdrażania wzorca repozytorium z entity framework, dapper i łańcuch** \
+- **Jonathana. Strategie implementacji dla wzorca repozytorium z Entity Framework, Dapper i łańcuchem** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Porównywanie okresów istnienia usługi kontenera core ASP.NET core z zakresami wystąpień kontenera IoC autofac** \
+- **Cesar de La Torre. Porównanie ASP.NET Core okresów istnienia usługi kontenera IoC z zakresem wystąpień kontenera Autofac IoC** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapowanie tabeli
 
-Mapowanie tabel identyfikuje dane tabeli, z których mają być wyszukiwane i zapisywane w bazie danych. Wcześniej był używany sposób, w jaki jednostki domeny (na przykład domena produktu lub zamówienia) mogą być używane do generowania schematu powiązanej bazy danych. EF jest silnie zaprojektowany wokół koncepcji *konwencji*. Konwencje odnoszą się do pytań takich jak "Jaka będzie nazwa stołu?" lub "Jaka właściwość jest kluczem podstawowym?" Konwencje są zazwyczaj oparte na nazwach konwencjonalnych. Na przykład jest to typowe dla klucza podstawowego, aby być właściwość, która kończy `Id`się .
+Mapowanie tabeli identyfikuje dane tabeli, z których mają być wysyłane zapytania i zapisane w bazie danych. Wcześniej pokazano, jak jednostki domeny (na przykład produkt lub domena zamówienia) mogą być używane do generowania powiązanego schematu bazy danych. EF jest silnie zaprojektowana wokół koncepcji *Konwencji*. Konwencje dotyczące adresów, takich jak "Jaka będzie nazwa tabeli?" lub "Jaka właściwość jest kluczem podstawowym?" Konwencje zwykle opierają się na nazwach konwencjonalnych. Na przykład typowym dla klucza podstawowego jest właściwość kończąca się na `Id` .
 
-Zgodnie z konwencją każda jednostka zostanie skonfigurowana do mapowania `DbSet<TEntity>` do tabeli o takiej samej nazwie jak właściwość, która udostępnia jednostkę w kontekście pochodnym. Jeśli `DbSet<TEntity>` dla danej jednostki nie jest podana żadna wartość, używana jest nazwa klasy.
+Zgodnie z Konwencją każda jednostka zostanie skonfigurowana do mapowania na tabelę o tej samej nazwie co `DbSet<TEntity>` Właściwość, która uwidacznia jednostkę w kontekście pochodnym. Jeśli nie podano `DbSet<TEntity>` wartości dla danej jednostki, używana jest nazwa klasy.
 
-### <a name="data-annotations-versus-fluent-api"></a>Adnotacje danych a płynny interfejs API
+### <a name="data-annotations-versus-fluent-api"></a>Adnotacje danych a interfejs API Fluent
 
-Istnieje wiele dodatkowych konwencji EF Core, a większość z nich można zmienić za pomocą adnotacji danych lub fluent API, zaimplementowane w ramach OnModelCreating metody.
+Istnieje wiele dodatkowych Konwencji EF Core i większość z nich można zmienić za pomocą adnotacji danych lub interfejsu API Fluent wdrożonych w ramach metody OnModelCreating.
 
-Adnotacje danych muszą być używane w klasach modelu jednostki, co jest bardziej inwazyjny sposób z punktu widzenia DDD. Jest to spowodowane zanieczyszczone modelu adnotacjami danych związanych z bazy danych infrastruktury. Z drugiej strony Fluent interfejsu API jest wygodnym sposobem, aby zmienić większość konwencji i mapowania w warstwie infrastruktury trwałości danych, więc model jednostki będzie czysty i oddzielone od infrastruktury trwałości.
+Adnotacje danych muszą być używane w samych klasach modelu jednostki, co jest bardziej nieinwazyjne od drogi punktu widzenia. Dzieje się tak dlatego, że jesteś w trakcie zanieczyszczania modelu za pomocą adnotacji danych związanych z bazą danych infrastruktury. Z drugiej strony interfejs API Fluent jest wygodnym sposobem zmiany większości Konwencji i mapowań w warstwie infrastruktury trwałości danych, więc model jednostki będzie czysty i niezależny od infrastruktury trwałości.
 
-### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent API i OnModelCreating metody
+### <a name="fluent-api-and-the-onmodelcreating-method"></a>Interfejs API Fluent i Metoda OnModelCreating
 
-Jak wspomniano, w celu zmiany konwencji i mapowania, można użyć OnModelCreating metody w DbContext klasy.
+Jak wspomniano, aby zmienić konwencje i mapowania, można użyć metody OnModelCreating w klasie DbContext.
 
-Mikrousługa zamawiania w eShopOnContainers implementuje jawne mapowanie i konfigurację, w razie potrzeby, jak pokazano w poniższym kodzie.
+Mikrousługa porządkowania w eShopOnContainers implementuje jawne mapowanie i konfigurację, w razie konieczności, jak pokazano w poniższym kodzie.
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -339,43 +339,43 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Można ustawić wszystkie mapowania interfejsu API `OnModelCreating` Fluent w ramach tej samej metody, ale wskazane jest partycjonowanie tego kodu i wiele klas konfiguracji, po jednej na jednostkę, jak pokazano w przykładzie. Szczególnie w przypadku dużych modeli zaleca się, aby mieć oddzielne klasy konfiguracji do konfigurowania różnych typów jednostek.
+Można ustawić wszystkie mapowania interfejsu API Fluent w ramach tej samej `OnModelCreating` metody, ale zaleca się, aby podzielić ten kod i wiele klas konfiguracji, jeden na jednostkę, jak pokazano w przykładzie. Szczególnie w przypadku dużych modeli zaleca się posiadanie oddzielnych klas konfiguracji do konfigurowania różnych typów jednostek.
 
-Kod w przykładzie pokazuje kilka jawnych deklaracji i mapowania. Jednak ef core konwencje zrobić wiele z tych mapowań automatycznie, więc rzeczywisty kod, który będzie potrzebny w twoim przypadku może być mniejsza.
+Kod w przykładzie pokazuje kilka jawnych deklaracji i mapowania. Jednakże konwencje EF Core automatycznie wykonują wiele mapowań, więc rzeczywisty kod, który będzie potrzebny w przypadku, może być mniejszy.
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Algorytm Hi/Lo w EF Core
 
-Ciekawym aspektem kodu w poprzednim przykładzie jest to, że używa [algorytmu Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) jako strategii generowania kluczy.
+Interesujący aspekt kodu w poprzednim przykładzie polega na tym, że używa [algorytmu Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) jako strategii generowania kluczy.
 
-Algorytm Hi/Lo jest przydatny, gdy potrzebujesz unikatowych kluczy przed zatwierdzeniem zmian. Podsumowując, algorytm Hi-Lo przypisuje unikatowe identyfikatory do wierszy tabeli, nie będąc w zależności od natychmiastowego przechowywania wiersza w bazie danych. Dzięki temu można rozpocząć korzystanie z identyfikatorów od razu, jak to się dzieje w przypadku regularnych identyfikatorów sekwencyjnej bazy danych.
+Algorytm Hi/Lo jest przydatny, gdy potrzebne są unikatowe klucze przed zatwierdzeniem zmian. Podsumowując, algorytm Hi-Lo przypisuje unikatowe identyfikatory do wierszy tabeli, a nie w zależności od tego, czy wiersz jest natychmiast umieszczany w bazie danych. Dzięki temu można od razu zacząć korzystać z identyfikatorów, tak jak w przypadku zwykłych sekwencyjnych identyfikatorów baz danych.
 
-Algorytm Hi/Lo opisuje mechanizm uzyskiwania partii unikatowych identyfikatorów z powiązanej sekwencji bazy danych. Te identyfikatory są bezpieczne w użyciu, ponieważ baza danych gwarantuje unikatowość, więc nie będzie żadnych kolizji między użytkownikami. Algorytm ten jest interesujący z następujących powodów:
+Algorytm Hi/Lo opisuje mechanizm pobierania partii unikatowych identyfikatorów z powiązanej sekwencji bazy danych. Te identyfikatory są bezpieczne, ponieważ baza danych gwarantuje unikatowość, dlatego nie będzie żadnych kolizji między użytkownikami. Ten algorytm jest interesujący z następujących powodów:
 
-- Nie przerywa wzorca jednostki pracy.
+- Nie powoduje zerwania wzorca jednostki pracy.
 
-- Pobiera identyfikatory sekwencji w partiach, aby zminimalizować rund do bazy danych.
+- Uzyskuje identyfikatory sekwencji w partiach, aby zminimalizować liczbę rund do bazy danych.
 
-- Generuje identyfikator czytelny dla człowieka, w przeciwieństwie do technik, które używają identyfikatorów GUID.
+- Generuje on czytelny dla człowieka identyfikator, w przeciwieństwie do technik, które używają identyfikatorów GUID.
 
-EF Core obsługuje [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) z `UseHiLo` metodą, jak pokazano w poprzednim przykładzie.
+EF Core obsługuje [Hilo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) z `UseHiLo` metodą, jak pokazano w powyższym przykładzie.
 
 ### <a name="map-fields-instead-of-properties"></a>Mapuj pola zamiast właściwości
 
-Dzięki tej funkcji, dostępnej od ef core 1.1, można bezpośrednio mapować kolumny do pól. Istnieje możliwość nie używać właściwości w klasie jednostki i tylko do mapowania kolumn z tabeli do pól. Typowym zastosowaniem dla tego byłoby pola prywatne dla każdego stanu wewnętrznego, które nie muszą być dostępne spoza jednostki.
+Korzystając z tej funkcji, dostępnej od EF Core 1,1, można bezpośrednio mapować kolumny do pól. Nie można używać właściwości w klasie Entity, a jedynie do mapowania kolumn z tabeli do pól. Typowym zastosowaniem tego elementu byłyby pola prywatne dla dowolnego stanu wewnętrznego, do którego nie trzeba uzyskiwać dostępu poza jednostką.
 
-Można to zrobić za pomocą pojedynczych pól `List<>` lub kolekcji, takich jak pole. Ten punkt został wymieniony wcześniej, gdy omówiliśmy modelowanie klas modelu domeny, ale tutaj `PropertyAccessMode.Field` można zobaczyć, jak to mapowanie jest wykonywane z konfiguracją wyróżnioną w poprzednim kodzie.
+Można to zrobić przy użyciu pojedynczych pól lub kolekcji, takich jak `List<>` pole. Ten punkt został wymieniony wcześniej podczas omawiania modelowania klas modelu domeny, ale w tym miejscu można zobaczyć, jak to mapowanie jest wykonywane z `PropertyAccessMode.Field` konfiguracją wyróżnioną w poprzednim kodzie.
 
-### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Użyj właściwości cienia w EF Core, ukrytych na poziomie infrastruktury
+### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Używanie właściwości cienia w EF Core, ukryte na poziomie infrastruktury
 
-Właściwości cienia w EF Core są właściwości, które nie istnieją w modelu klasy jednostki. Wartości i stany tych właściwości są utrzymywane wyłącznie w [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) klasy na poziomie infrastruktury.
+Właściwości cienia w EF Core są właściwościami, które nie istnieją w modelu klasy jednostki. Wartości i Stany tych właściwości są utrzymywane wyłącznie w klasie [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) na poziomie infrastruktury.
 
-## <a name="implement-the-query-specification-pattern"></a>Implementowanie wzorca specyfikacji kwerendy
+## <a name="implement-the-query-specification-pattern"></a>Implementowanie wzorca specyfikacji zapytania
 
-Jak wprowadzono wcześniej w sekcji projektu, wzorzec specyfikacji kwerendy jest wzorzec projektu opartego na domenie zaprojektowany jako miejsce, w którym można umieścić definicję kwerendy z opcjonalną logiką sortowania i stronicowania.
+Zgodnie z opisem we wcześniejszej części projektu wzorzec specyfikacji zapytania jest oparty na domenie Wzorzec projektowy zaprojektowany jako miejsce, w którym można umieścić definicję zapytania z opcjonalną logiką sortowania i stronicowania.
 
-Wzorzec specyfikacji kwerendy definiuje kwerendę w obiekcie. Na przykład w celu hermetyzacji sstronicowanego zapytania, które wyszukuje niektóre produkty, można utworzyć specyfikację PagedProduct, która przyjmuje niezbędne parametry wejściowe (pageNumber, pageSize, filter itp.). Następnie w ramach dowolnej metody repozytorium (zwykle przeciążenie List() zaakceptuje IQuerySpecification i uruchomi oczekiwane zapytanie na podstawie tej specyfikacji.
+Wzorzec specyfikacji zapytania definiuje zapytanie w obiekcie. Na przykład w celu hermetyzacji zapytania stronicowanego, które wyszukuje niektóre produkty, można utworzyć specyfikację PagedProduct, która przyjmuje niezbędne parametry wejściowe (pageNumber, pageSize, Filter itp.). Następnie w ramach dowolnej metody repozytorium (zazwyczaj Przeciążenie listy () przyjmuje IQuerySpecification i uruchamia oczekiwane zapytanie na podstawie tej specyfikacji.
 
-Przykładem ogólnego interfejsu specyfikacji jest następujący kod z [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
+Przykładem interfejsu specyfikacji ogólnej jest Poniższy kod z [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-Poniższa specyfikacja ładuje jednostkę pojedynczego koszyka, pod którą podano identyfikator koszyka lub identyfikator kupującego, do którego należy koszyk. Chętnie [załaduje](/ef/core/querying/related-data) kolekcję `Items` kosza.
+Poniższa specyfikacja ładuje jednostkę pojedynczego koszyka z IDENTYFIKATORem koszyka lub IDENTYFIKATORem nabywcy, do którego należy koszyk. Zostanie [eagerly załadowanie](/ef/core/querying/related-data) kolekcji koszyka `Items` .
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -443,7 +443,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
 }
 ```
 
-I wreszcie, można zobaczyć poniżej, jak ogólne repozytorium EF można użyć takiej specyfikacji do filtrowania i chętnie załadować dane związane z danego typu jednostki T.
+Na koniec można zobaczyć poniżej, jak ogólne repozytorium EF może użyć takiej specyfikacji do filtrowania i eager danych związanych z danym typem jednostki T.
 
 ```csharp
 // GENERIC EF REPOSITORY WITH SPECIFICATION
@@ -468,30 +468,30 @@ public IEnumerable<T> List(ISpecification<T> spec)
 }
 ```
 
-Oprócz hermetyzacji logiki filtrowania, specyfikacja można określić kształt danych, które mają być zwracane, w tym właściwości, które mają być wypełniane.
+Oprócz hermetyzacji logiki filtrowania, Specyfikacja może określić kształt danych do zwrócenia, w tym właściwości do wypełnienia.
 
-Mimo że nie zaleca `IQueryable` się zwracania z repozytorium, jest całkowicie w porządku, aby użyć ich w repozytorium do tworzenia zestawu wyników. Możesz zobaczyć to podejście używane w List metody `IQueryable` powyżej, który używa wyrażeń pośrednich do tworzenia listy kwerendy zawiera przed wykonaniem kwerendy z kryteriami specyfikacji w ostatnim wierszu.
+Chociaż nie zalecamy powrotu `IQueryable` z repozytorium, doskonale dobrze jest użyć ich w repozytorium, aby utworzyć zestaw wyników. To podejście można zobaczyć w powyższej metodzie list, która używa wyrażeń pośrednich w `IQueryable` celu utworzenia listy instrukcji include przed wykonaniem zapytania przy użyciu kryteriów specyfikacji w ostatnim wierszu.
 
 ### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Mapowanie tabel** \
+- **Mapowanie tabeli** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Używanie HiLo do generowania kluczy za pomocą programu Entity Framework Core** \
+- **Użyj HiLo, aby generować klucze z Entity Framework Core** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **Pola zapasowe** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Zhermetyzowane kolekcje w core ramach encji** \
+- **Steve Smith. Hermetyzowane kolekcje w Entity Framework Core** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Właściwości cienia** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **Wzór specyfikacji** \
+- **Wzorzec specyfikacji** \
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](infrastructure-persistence-layer-design.md)
-> [następny](nosql-database-persistence-infrastructure.md)
+> [Poprzedni](infrastructure-persistence-layer-design.md) 
+>  [Dalej](nosql-database-persistence-infrastructure.md)

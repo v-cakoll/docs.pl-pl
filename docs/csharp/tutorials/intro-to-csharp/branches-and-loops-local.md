@@ -3,12 +3,12 @@ title: Rozgałęzienia i pętle — wprowadzenie do samouczka języka C#
 description: W tym samouczku dotyczącym gałęzi i pętli można napisać kod w języku C#, aby poznać składnię języka, która obsługuje gałęzie warunkowe, i pętle, aby wielokrotnie wykonywać instrukcje.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135948"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396879"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informacje o logice warunkowej przy użyciu instrukcji Branch i Loop
 
@@ -16,7 +16,7 @@ W tym samouczku przedstawiono sposób pisania kodu, który analizuje zmienne i z
 
 Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
 
-## <a name="make-decisions-using-the-if-statement"></a>Podejmowanie decyzji przy `if` użyciu instrukcji
+## <a name="make-decisions-using-the-if-statement"></a>Podejmowanie decyzji przy użyciu `if` instrukcji
 
 Utwórz katalog o nazwie *branchs — samouczek*. Upewnij się, że bieżący katalog i uruchom następujące polecenie:
 
@@ -48,9 +48,9 @@ Wpisz `dotnet run` ponownie. Ponieważ odpowiedź jest mniejsza niż 10, nic nie
 > [!TIP]
 > Podczas nauki języka C# (lub dowolnego języka programowania) będziesz robić błędy przy pisaniu kodu. Kompilator znajdzie i zgłosi błędy. Sprawdź blisko danych wyjściowych błędu i kod, który wygenerował błąd. Błąd kompilatora może zwykle pomóc w znalezieniu problemu.
 
-Ten pierwszy przykład pokazuje moc `if` i typy logiczne. *Wartość logiczna* to zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C# definiuje typ specjalny, `bool` dla zmiennych logicznych. Instrukcja `if` umożliwia sprawdzenie wartości typu `bool`. Jeśli wartość to `true`, zostanie wykonana instrukcja następująca po instrukcji `if`. W przeciwnym razie zostanie ona pominięta.
+Ten pierwszy przykład pokazuje moc `if` i typy logiczne. *Wartość logiczna* to zmienna, która może mieć jedną z dwóch wartości: `true` lub `false` . C# definiuje typ specjalny, `bool` dla zmiennych logicznych. Instrukcja `if` umożliwia sprawdzenie wartości typu `bool`. Jeśli wartość to `true`, zostanie wykonana instrukcja następująca po instrukcji `if`. W przeciwnym razie zostanie pominięty.
 
-Taki proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków daje ogromne możliwości.
+Ten proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków jest zaawansowany.
 
 ## <a name="make-if-and-else-work-together"></a>Łączenie działania instrukcji if i else
 
@@ -65,14 +65,14 @@ else
     Console.WriteLine("The answer is not greater than 10");
 ```
 
-Instrukcja po słowie kluczowym `else` jest wykonywana tylko wtedy, gdy testowany warunek ma wartość `false`. Łączenie `if` i `else` z warunkami logicznymi zapewnia wszystko, co jest potrzebne do obsługi zarówno `true` `false` warunku, jak i.
+Instrukcja po słowie kluczowym `else` jest wykonywana tylko wtedy, gdy testowany warunek ma wartość `false`. Łączenie `if` i `else` z warunkami logicznymi zapewnia wszystko, co jest potrzebne do obsługi zarówno `true` warunku, jak i `false` .
 
 > [!IMPORTANT]
 > Wcięcia pod instrukcjami `if` i `else` służą tylko do zwiększenia czytelności.
 > Język C# nie traktuje wcięcia ani odstępu jako znaczącego.
 > Instrukcja po słowie kluczowym `if` lub `else` zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku są zgodne ze wspólną metodą tworzenia wcięć wierszy na podstawie przepływu sterowania instrukcji.
 
-Ponieważ wcięcia nie mają znaczenia, należy użyć znaków `{` i `}` do określenia, czy do bloku wykonywanego warunkowo ma należeć więcej niż jedna instrukcja. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich klauzulach `if` i `else`. Poniższy przykład jest taki sam jak właśnie utworzony. Zmodyfikuj kod powyżej, aby był zgodny z następującym kodem:
+Ponieważ wcięcia nie są istotne, należy użyć `{` i, `}` Aby wskazać, Kiedy chcesz, aby więcej niż jedna instrukcja była częścią bloku, który jest wykonywany warunkowo. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich klauzulach `if` i `else`. Poniższy przykład jest taki sam jak utworzony przez siebie. Zmodyfikuj kod powyżej, aby był zgodny z następującym kodem:
 
 ```csharp
 int a = 5;
@@ -106,7 +106,7 @@ else
 }
 ```
 
-`==` Symbol sprawdza *równość*. Użycie `==` odróżnia test pod kątem równości przed przypisaniem `a = 5`.
+`==`Symbol sprawdza *równość*. Użycie `==` odróżnia test pod kątem równości przed przypisaniem `a = 5` .
 
 Znaki `&&` określają warunek „i”. Oznacza to, że instrukcja w gałęzi dla wartości true zostanie wykonana tylko wtedy, gdy oba warunki będą mieć wartość true.  Te przykłady przedstawiają także, że można użyć wielu instrukcji w każdej gałęzi warunkowej, jeśli zostaną umieszczone między znakami `{` i `}`.
 
@@ -125,9 +125,9 @@ else
 }
 ```
 
-`a`Zmodyfikuj wartości, `b`i `c` i przełączenie między `&&` i `||` do Eksploruj. Dowiesz się `&&` , jak działają operatory i `||` .
+Zmodyfikuj wartości `a` , `b` i `c` i przełączenie między `&&` i `||` do Eksploruj. Dowiesz się, jak `&&` `||` działają operatory i.
 
-Wykonano pierwszy krok. Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę `Main` metody na `ExploreIf` i Napisz nową `Main` metodę, która wywołuje `ExploreIf`. Po zakończeniu kod powinien wyglądać następująco:
+Wykonano pierwszy krok. Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę `Main` metody na `ExploreIf` i Napisz nową `Main` metodę, która wywołuje `ExploreIf` . Po zakończeniu kod powinien wyglądać następująco:
 
 ```csharp
 using System;
@@ -181,17 +181,17 @@ namespace BranchesAndLoops
 }
 ```
 
-Komentarz wywołania do `ExploreIf()`. Dane wyjściowe będą mniej czytelne podczas pracy w tej sekcji:
+Komentarz wywołania do `ExploreIf()` . Dane wyjściowe będą mniej czytelne podczas pracy w tej sekcji:
 
 ```csharp
 //ExploreIf();
 ```
 
-W `//` języku C# jest uruchamiany **komentarz** . Komentarze są dowolnym tekstem, który chcesz zachować w kodzie źródłowym, ale nie można go wykonać jako kod. Kompilator nie generuje żadnego kodu wykonywalnego z komentarzy.
+`//`W języku C# jest uruchamiany **komentarz** . Komentarze są dowolnym tekstem, który chcesz zachować w kodzie źródłowym, ale nie można go wykonać jako kod. Kompilator nie generuje żadnego kodu wykonywalnego z komentarzy.
 
 ## <a name="use-loops-to-repeat-operations"></a>Użycie pętli do powtarzania operacji
 
-W tej sekcji Użyj **pętli** do powtarzania instrukcji. Wypróbuj ten kod w `Main` metodzie:
+W tej sekcji użyto **pętli** do powtarzania instrukcji. Wypróbuj ten kod w `Main` metodzie:
 
 ```csharp
 int counter = 0;
@@ -202,14 +202,14 @@ while (counter < 10)
 }
 ```
 
-`while` Instrukcja sprawdza warunek i wykonuje instrukcję lub blok instrukcji po `while`. Wielokrotnie sprawdza warunek i wykonuje te instrukcje do momentu, gdy warunek nie ma wartości false.
+`while`Instrukcja sprawdza warunek i wykonuje instrukcję lub blok instrukcji po `while` . Wielokrotnie sprawdza warunek i wykonuje te instrukcje do momentu, gdy warunek nie ma wartości false.
 
 Ten przykład zawiera jeszcze jeden nowy operator. Znaki `++` po zmiennej `counter` oznaczają operator **inkrementacji**. Dodaje 1 do wartości `counter` i zapisuje tę wartość w `counter` zmiennej.
 
 > [!IMPORTANT]
 > Upewnij się, że `while` warunek pętli zmieni się na FAŁSZ podczas wykonywania kodu. W przeciwnym razie wystąpi **pętla nieskończona**, czyli wykonywanie programu nigdy się nie skończy. Nie jest to pokazane w tym przykładzie, ponieważ trzeba wymusić zamknięcie programu przy użyciu **klawiszy CTRL-C** lub innych.
 
-Pętla `while` testuje warunek przed wykonaniem kodu po instrukcji `while`. Pętla `do`...`while` najpierw wykonuje kod, a następnie sprawdza warunek. Pętla do while jest pokazana w poniższym kodzie:
+Pętla `while` testuje warunek przed wykonaniem kodu po instrukcji `while`. Pętla `do`...`while` najpierw wykonuje kod, a następnie sprawdza warunek. Pętla *do while* jest pokazana w poniższym kodzie:
 
 ```csharp
 int counter = 0;
@@ -220,7 +220,7 @@ do
 } while (counter < 10);
 ```
 
-Ta `do` pętla i wcześniejsza `while` pętla tworzą te same dane wyjściowe.
+Ta `do` Pętla i wcześniejsza `while` Pętla tworzą te same dane wyjściowe.
 
 ## <a name="work-with-the-for-loop"></a>Praca z pętlą for
 
@@ -233,24 +233,26 @@ for (int index = 0; index < 10; index++)
 }
 ```
 
-Działa on tak samo jak już przedstawione pętle `while` i `do`. Instrukcja `for` składa się z trzech części, które sterują jej pracą.
+Poprzedni kod wykonuje te same działania co `while` Pętla i `do` pętlę, która została już użyta. Instrukcja `for` składa się z trzech części, które sterują jej pracą.
 
-Pierwsza część to **inicjator for**: `int index = 0;` deklaruje, że `index` jest to zmienna pętli, i ustawia jej wartość początkową `0`na.
+Pierwsza część to **inicjator for**: `int index = 0;` deklaruje, że `index` jest to zmienna pętli, i ustawia jej wartość początkową na `0` .
 
-Częścią średnią jest **warunek dla**: `index < 10` deklaruje, `for` że ta pętla będzie działać tak długo, jak wartość licznika jest mniejsza niż 10.
+Częścią średnią jest **warunek dla**: `index < 10` deklaruje, że ta `for` pętla będzie działać tak długo, jak wartość licznika jest mniejsza niż 10.
 
 Ostatnia część to **iterator**: `index++` określa, jak zmodyfikować zmienną pętli po wykonaniu bloku po `for` instrukcji. Tutaj zdefiniowano, że zmienną `index` należy zwiększyć o 1 po każdym wykonaniu bloku.
 
-Poeksperymentuj samodzielnie z tymi elementami. Wypróbuj poniższe modyfikacje:
+Wypróbuj samodzielnie. Wypróbuj każdą z następujących wariantów:
 
 - Zmień inicjator, tak aby miał inną wartość początkową.
 - Zmień warunek, tak aby zatrzymanie pętli nastąpiło przy innej wartości.
 
 Gdy skończysz, przejdziemy do samodzielnego pisania kodu, gdzie wykorzystasz zdobyte umiejętności.
 
+Istnieje jedna inna instrukcja zapętlenia, która nie została omówiona w tym samouczku: `foreach` instrukcja. `foreach`Instrukcja powtarza instrukcję dla każdego elementu w sekwencji elementów. Jest ona najczęściej używana z *kolekcjami*, więc została omówiona w następnym samouczku.
+
 ## <a name="created-nested-loops"></a>Utworzone Pętle zagnieżdżone
 
-Pętla `do` lub `for` może być zagnieżdżona w innej pętli `while`, aby utworzyć macierz przy użyciu kombinacji każdego elementu w pętli zewnętrznej z każdym elementem w wewnętrznej pętli. Zróbmy to, aby utworzyć zestaw par alfanumerycznych do reprezentowania wierszy i kolumn.
+`while` `do` Pętla,, lub `for` może być zagnieżdżona w innej pętli, aby utworzyć macierz przy użyciu kombinacji każdego elementu w pętli zewnętrznej z każdym elementem w pętli wewnętrznej. Zróbmy to, aby utworzyć zestaw par alfanumerycznych do reprezentowania wierszy i kolumn.
 
 Jedna `for` pętla może generować wiersze:
 
@@ -298,7 +300,7 @@ Samouczek "gałęzie i pętle" został ukończony.
 
 Możesz kontynuować samouczek dotyczący [tablic i kolekcji](arrays-and-collections.md) w Twoim środowisku programistycznym.
 
-Więcej na temat tych pojęć możesz dowiedzieć się w następujących tematach:
+Więcej informacji na temat tych pojęć można znaleźć w następujących artykułach:
 
 - [if i else, instrukcje](../../language-reference/keywords/if-else.md)
 - [While, instrukcja](../../language-reference/keywords/while.md)

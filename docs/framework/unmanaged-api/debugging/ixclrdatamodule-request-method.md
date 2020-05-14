@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataModule::Request
+title: 'IXCLRDataModule:: Request — Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632224"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395270"
 ---
-# <a name="ixclrdatamodulerequest-method"></a>Metoda IXCLRDataModule::Request
+# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule:: Request — Metoda
 
-Żądania do buforu, biorąc pod uwagę przy użyciu danych modułu wypełniania.
+Żądania wypełnienia buforu podanego za pomocą danych modułu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,30 +41,30 @@ HRESULT Request([in] ULONG32 reqCode,
 ## <a name="parameters"></a>Parametry
 
 `reqCode`\
-[in] Typ do wysłania żądania.
+podczas Typ żądania do wysłania.
 
 `inBufferSize`\
-[in] rozmiar buforu wejściowego, który ma być przekazany w.
+[in] rozmiar buforu wejściowego, który ma zostać przesłany.
 
 `inBuffer`\
-[in, size_is(inBufferSize)] Bufor wskaźnik do danych pierwotnych, które mają być wysyłane w żądaniu.
+[in, size_is (inBufferSize)] Wskaźnik buforu dla nieprzetworzonych danych, które mają zostać wysłane w żądaniu.
 
 `outBufferSize`\
-[in] Rozmiar buforu wyjściowego.
+podczas Rozmiar buforu wyjściowego.
 
 `outBuffer`\
-[out, size_is(outBufferSize)] Wskaźnik buforu używany do przechowywania odpowiedzi na żądanie.
+[out, size_is (outBufferSize)] Wskaźnik buforu używany do przechowywania odpowiedzi na żądanie.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataModule` interfejs i odnosi się do 36 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataModule` interfejsu i odpowiada gnieździe 37th tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
-**Nagłówek:** Brak **biblioteki:** Brak **wersje programu .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Nagłówek:** Brak **biblioteki:** brak **.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataModule](ixclrdatamodule-interface.md)
+- [IXCLRDataModule, interfejs](ixclrdatamodule-interface.md)

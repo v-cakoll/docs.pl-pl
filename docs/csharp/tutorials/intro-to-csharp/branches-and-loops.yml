@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Kolekcja list
-  ms.openlocfilehash: a7c855e362e606f82a8b576fbb8db1d632b0f0eb
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: e7679c511cf67eed55687c5815bcf7faf4e1e624
+  ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860989"
+  ms.lasthandoff: 05/14/2020
+  ms.locfileid: "83396859"
 items:
 - durationInMinutes: 1
   content: >
@@ -61,13 +61,13 @@ items:
     > To ćwiczenie pomoże Ci poznać strukturę kodu w języku C#.
 
 
-    Pierwszy przykład przedstawia możliwości instrukcji `if` i typów logicznych. Zmienna *typu logicznego* to zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. Język C# definiuje specjalny typ dla zmiennych logicznych: `bool`. Instrukcja `if` umożliwia sprawdzenie wartości typu `bool`. Jeśli wartość to `true`, zostanie wykonana instrukcja następująca po instrukcji `if`. W przeciwnym razie zostanie ona pominięta.
+    Pierwszy przykład przedstawia możliwości instrukcji `if` i typów logicznych. Zmienna *typu logicznego* to zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. Język C# definiuje specjalny typ dla zmiennych logicznych: `bool`. Instrukcja `if` umożliwia sprawdzenie wartości typu `bool`. Jeśli wartość to `true`, zostanie wykonana instrukcja następująca po instrukcji `if`. W przeciwnym razie zostanie pominięty.
 
 
-    Taki proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków daje ogromne możliwości. Dowiedzmy się więcej.
+    Ten proces sprawdzania warunków i wykonywania instrukcji na podstawie tych warunków jest zaawansowany. Dowiedzmy się więcej.
 - title: Łączenie działania instrukcji if i else
   durationInMinutes: 10
-  content: "\nAby wykonać różny kod w gałęziach dla wartości true i false, należy utworzyć gałąź `else` wykonywaną, jeśli wartość warunku to false. Spróbuj tego:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nInstrukcja po słowie kluczowym `else` jest wykonywana tylko wtedy, gdy testowany warunek ma wartość `false`. Połączenie instrukcji `if` i `else` za pomocą warunków logicznych daje wszelkie potrzebne możliwości.\n\n> [!IMPORTANT]\n> Wcięcia pod instrukcjami `if` i `else` służą tylko do zwiększenia czytelności.\n> Język C# nie traktuje wcięcia ani odstępu jako znaczącego.\n> Instrukcja po słowie kluczowym `if` lub `else` zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku są zgodne ze wspólną metodą tworzenia wcięć wierszy na podstawie przepływu sterowania instrukcji.\n\nPonieważ wcięcia nie mają znaczenia, należy użyć znaków `{` i `}` do określenia, czy do bloku wykonywanego warunkowo ma należeć więcej niż jedna instrukcja. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich klauzulach `if` i `else`. Następujący przykład jest taki sam jak właśnie utworzony. Wypróbuj go.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> W pozostałej części tego samouczka wszystkie przykłady kodu zawierają nawiasy klamrowe, po zastosowaniu zaakceptowanych praktyk.\n\nIstnieje możliwość testowania bardziej skomplikowanych warunków:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` Symbol sprawdza *równość*. Użycie `==` odróżnia test pod kątem równości przed przypisaniem `a = 5`.\n\nZnaki `&&` określają warunek „i”. Oznacza to, że instrukcja w gałęzi dla wartości true zostanie wykonana tylko wtedy, gdy oba warunki będą mieć wartość true.  Te przykłady przedstawiają także, że można użyć wielu instrukcji w każdej gałęzi warunkowej, jeśli zostaną umieszczone między znakami `{` i `}`.\n\nIstnieje także możliwość użycia znaków `||` reprezentujących warunek „lub”:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`Zmodyfikuj wartości, `b`i `c` i przełączenie między `&&` i `||` do Eksploruj. Dowiesz się `&&` , jak działają operatory i `||` .\n"
+  content: "\nAby wykonać różny kod w gałęziach dla wartości true i false, należy utworzyć gałąź `else` wykonywaną, jeśli wartość warunku to false. Spróbuj tego:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nInstrukcja po słowie kluczowym `else` jest wykonywana tylko wtedy, gdy testowany warunek ma wartość `false`. Połączenie instrukcji `if` i `else` za pomocą warunków logicznych daje wszelkie potrzebne możliwości.\n\n> [!IMPORTANT]\n> Wcięcia pod instrukcjami `if` i `else` służą tylko do zwiększenia czytelności.\n> Język C# nie traktuje wcięcia ani odstępu jako znaczącego.\n> Instrukcja po słowie kluczowym `if` lub `else` zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku są zgodne ze wspólną metodą tworzenia wcięć wierszy na podstawie przepływu sterowania instrukcji.\n\nPonieważ wcięcia nie są istotne, należy użyć `{` i, `}` Aby wskazać, Kiedy chcesz, aby więcej niż jedna instrukcja była częścią bloku, który jest wykonywany warunkowo. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich klauzulach `if` i `else`. Poniższy przykład jest taki sam jak utworzony przez Ciebie. Wypróbuj go.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> W pozostałej części tego samouczka wszystkie przykłady kodu zawierają nawiasy klamrowe, po zastosowaniu zaakceptowanych praktyk.\n\nIstnieje możliwość testowania bardziej skomplikowanych warunków:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==`Symbol sprawdza *równość*. Użycie `==` odróżnia test pod kątem równości przed przypisaniem `a = 5` .\n\nZnaki `&&` określają warunek „i”. Oznacza to, że instrukcja w gałęzi dla wartości true zostanie wykonana tylko wtedy, gdy oba warunki będą mieć wartość true.  Te przykłady przedstawiają także, że można użyć wielu instrukcji w każdej gałęzi warunkowej, jeśli zostaną umieszczone między znakami `{` i `}`.\n\nIstnieje także możliwość użycia znaków `||` reprezentujących warunek „lub”:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nZmodyfikuj wartości `a` , `b` i `c` i przełączenie między `&&` i `||` do Eksploruj. Dowiesz się, jak `&&` `||` działają operatory i.\n"
 - title: Użycie pętli do powtarzania operacji
   durationInMinutes: 6
   content: >
@@ -140,10 +140,10 @@ items:
     Działa on tak samo jak już przedstawione pętle `while` i `do`. Instrukcja `for` składa się z trzech części, które sterują jej pracą.
 
 
-    Pierwsza część to **inicjator for**: `int counter = 0;` deklaruje, że `counter` jest to zmienna pętli, i ustawia jej wartość początkową `0`na.
+    Pierwsza część to **inicjator for**: `int counter = 0;` deklaruje, że `counter` jest to zmienna pętli, i ustawia jej wartość początkową na `0` .
 
 
-    Częścią średnią jest **warunek dla**: `counter < 10` deklaruje, `for` że ta pętla będzie działać tak długo, jak wartość licznika jest mniejsza niż 10.
+    Częścią średnią jest **warunek dla**: `counter < 10` deklaruje, że ta `for` pętla będzie działać tak długo, jak wartość licznika jest mniejsza niż 10.
 
 
     Ostatnia część to **iterator**: `counter++` określa, jak zmodyfikować zmienną pętli po wykonaniu bloku po `for` instrukcji. Tutaj zdefiniowano, że zmienną `counter` należy zwiększyć o 1 po każdym wykonaniu bloku.
@@ -158,9 +158,12 @@ items:
 
 
     Gdy skończysz, przejdziemy do samodzielnego pisania kodu, gdzie wykorzystasz zdobyte umiejętności.
+
+
+    Istnieje jedna inna instrukcja zapętlenia, która nie została omówiona w tym samouczku: `foreach` instrukcja. `foreach`Instrukcja powtarza instrukcję dla każdego elementu w sekwencji elementów. Jest ona najczęściej używana z *kolekcjami*, więc została omówiona w następnym samouczku.
 - title: Utworzone Pętle zagnieżdżone
   durationInMinutes: 10
-  content: "Pętla `do` lub `for` może być zagnieżdżona w innej pętli `while`, aby utworzyć macierz przy użyciu kombinacji każdego elementu w pętli zewnętrznej z każdym elementem w wewnętrznej pętli. Zróbmy to, aby utworzyć zestaw par alfanumerycznych do reprezentowania wierszy i kolumn.\n\nJedna `for` pętla może generować wiersze:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nInna pętla może generować kolumny:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nMożna zagnieździć jedną pętlę wewnątrz par:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nMożna zobaczyć, że pętla zewnętrzna przyrostowo rośnie dla każdego pełnego przebiegu pętli wewnętrznej. Wycofaj zagnieżdżanie wierszy i kolumn i zobacz zmiany dla siebie.\n"
+  content: "`while` `do` Pętla,, lub `for` może być zagnieżdżona w innej pętli, aby utworzyć macierz przy użyciu kombinacji każdego elementu w pętli zewnętrznej z każdym elementem w pętli wewnętrznej. Zróbmy to, aby utworzyć zestaw par alfanumerycznych do reprezentowania wierszy i kolumn.\n\nJedna `for` pętla może generować wiersze:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nInna pętla może generować kolumny:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nMożna zagnieździć jedną pętlę wewnątrz par:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nMożna zobaczyć, że pętla zewnętrzna przyrostowo rośnie dla każdego pełnego przebiegu pętli wewnętrznej. Wycofaj zagnieżdżanie wierszy i kolumn i zobacz zmiany dla siebie.\n"
 - title: Łączenie gałęzi i pętli
   durationInMinutes: 12
   content: >
@@ -202,7 +205,7 @@ items:
     Ukończono Samouczek interaktywny "gałęzie i pętle". Możesz wybrać link **kolekcji list** poniżej, aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
-    Więcej na temat tych pojęć możesz dowiedzieć się w następujących tematach:
+    Więcej informacji na temat tych pojęć można znaleźć w następujących artykułach:
 
 
     - [if i else, instrukcje](../../language-reference/keywords/if-else.md)

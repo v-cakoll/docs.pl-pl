@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLCLDATaProcess::EnumMethodInstanceByAddress Metoda
+title: 'IXCLRDataProcess:: EnumMethodInstanceByAddress, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176659"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395106"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metoda IXCLCLDATaProcess::EnumMethodInstanceByAddress Metoda
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess:: EnumMethodInstanceByAddress, Metoda
 
-Wylicza wystąpienia metody tego procesu, począwszy od przesunięcia adresu.
+Wylicza wystąpienia metody tego procesu, rozpoczynając od przesunięcia adresu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,22 +40,22 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[w] Dojście do wyliczania wystąpień metody.
+podczas Dojście do wyliczania wystąpień metod.
 
 `mod`\
-[na zewnątrz] Wystąpienie metody wyliczonej.
+określoną Wystąpienie metody z wyliczeniem.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest `IXCLRDataProcess` częścią interfejsu i odpowiada 28-cie gniazdo tabeli metody wirtualnej.
+Podana metoda jest częścią `IXCLRDataProcess` interfejsu i odpowiada 29 w gnieździe tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
-**Nagłówek:** Brak **biblioteki:** Brak **wersji programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Nagłówek:** Brak **biblioteki:** brak **.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wyliczanie CLRDataSourceType](clrdatasourcetype-enumeration.md)
-- [Debugging](index.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
+- [Debugowanie](index.md)
 - [IXCLRDataProcess, interfejs](ixclrdataprocess-interface.md)

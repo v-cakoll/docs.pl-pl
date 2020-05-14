@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790956"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396538"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome, interfejs
 Reprezentuje zmienną lokalną lub argument funkcji.  
@@ -31,15 +31,15 @@ Reprezentuje zmienną lokalną lub argument funkcji.
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetArgumentIndex, metoda](icordebugvariablehome-getargumentindex-method.md)|Pobiera indeks argumentu funkcji.|  
-|[GetCode, metoda](icordebugvariablehome-getcode-method.md)|Pobiera wystąpienie "ICorDebugCode", które zawiera ten obiekt `ICorDebugVariableHome`.|  
+|[GetCode, metoda](icordebugvariablehome-getcode-method.md)|Pobiera wystąpienie "ICorDebugCode", które zawiera ten `ICorDebugVariableHome` obiekt.|  
 |[GetLiveRange, metoda](icordebugvariablehome-getliverange-method.md)|Pobiera natywny zakres, w którym znajduje się ta zmienna.|  
 |[GetLocationType, metoda](icordebugvariablehome-getlocationtype-method.md)|Pobiera typ lokalizacji natywnej zmiennej.|  
-|[GetOffset, metoda](icordebugvariablehome-getoffset-method.md)|Pobiera przesunięcie z rejestru podstawowego dla zmiennej.|  
-|[GetRegister, metoda](icordebugvariablehome-getregister-method.md)|Pobiera rejestr zawierający zmienną z typem lokalizacji `VLT_REGISTER`i podstawową rejestracją dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE`.|  
+|[GetOffset — Metoda](icordebugvariablehome-getoffset-method.md)|Pobiera przesunięcie z rejestru podstawowego dla zmiennej.|  
+|[GetRegister, metoda](icordebugvariablehome-getregister-method.md)|Pobiera rejestr zawierający zmienną z typem lokalizacji `VLT_REGISTER` i rejestr podstawowy dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE` .|  
 |[GetSlotIndex, metoda](icordebugvariablehome-getslotindex-method.md)|Pobiera zarządzany indeks szczeliny zmiennej lokalnej.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment kodu używa obiektu [ICorDebugCode4](icordebugcode4-interface.md) o nazwie `pCode4`.  
+ Poniższy fragment kodu używa obiektu [ICorDebugCode4](icordebugcode4-interface.md) o nazwie `pCode4` .  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,15 +81,15 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum, interfejs](icordebugvariablehomeenum-interface.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: 190671b4f690f8c2cad43cf446a1196985ec5a42
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c44a12ef377d29e0b33b8be86aa1d8f0aa9d26bd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790753"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397153"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget — Interfejs
 Zapewnia metody, które kontrolują liczby odwołań, wyliczają procesy i zwalniają pamięć skojarzoną z debugerem, który jest dołączony do zdalnego obiektu docelowego Silverlight platformy Macintosh.  
@@ -51,25 +51,25 @@ class ICoreClrDebugTarget {
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICoreClrDebugTarget::EnumProcesses, metoda](icoreclrdebugtarget-enumprocesses-method.md)|Wylicza procesy, które są uruchomione na komputerze zdalnym.|  
-|[ICoreClrDebugTarget::EnumRuntimes, metoda](icoreclrdebugtarget-enumruntimes-method.md)|Wylicza środowisko uruchomieniowe języka wspólnego (CLRs) w określonym procesie na komputerze zdalnym.|  
-|[ICoreClrDebugTarget::FreeMemory, metoda](icoreclrdebugtarget-freememory-method.md)|Zwalnia pamięć przydzieloną przez metody wyliczenia w tej klasie.|  
+|[ICoreClrDebugTarget::EnumProcesses — Metoda](icoreclrdebugtarget-enumprocesses-method.md)|Wylicza procesy, które są uruchomione na komputerze zdalnym.|  
+|[ICoreClrDebugTarget::EnumRuntimes — Metoda](icoreclrdebugtarget-enumruntimes-method.md)|Wylicza środowisko uruchomieniowe języka wspólnego (CLRs) w określonym procesie na komputerze zdalnym.|  
+|[ICoreClrDebugTarget::FreeMemory — Metoda](icoreclrdebugtarget-freememory-method.md)|Zwalnia pamięć przydzieloną przez metody wyliczenia w tej klasie.|  
   
 ## <a name="remarks"></a>Uwagi  
  Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania obiektu docelowego aplikacji opartego na technologii Silverlight, który jest uruchomiony na komputerze zdalnym Macintosh.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86. dll  
   
  **.NET Framework wersje:** 3,5 SP1  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugRemoteTarget, interfejs](icordebugremotetarget-interface.md)
-- [ICorDebug, interfejs](icordebug-interface.md)
+- [ICorDebugRemoteTarget — Interfejs](icordebugremotetarget-interface.md)
+- [ICorDebug — Interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

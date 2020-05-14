@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataMethodDefinition::StartEnumInstances
+title: 'IXCLRDataMethodDefinition:: StartEnumInstances, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::StartEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84e0ad392c5fee8377115427482d80543454fff3
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756295"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397206"
 ---
-# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Metoda IXCLRDataMethodDefinition::StartEnumInstances
+# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition:: StartEnumInstances, Metoda
 
-Udostępnia dojścia wyliczania wystąpień metody dla danego `IXCLRDataAppDomain`.
+Zapewnia obsługę wyliczania wystąpień metody dla danego elementu `IXCLRDataAppDomain` .
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,24 +40,24 @@ HRESULT StartEnumInstances(
 ## <a name="parameters"></a>Parametry
 
 `appDomain`\
-[in] Elementu AppDomain dla wyliczenia.
+podczas Element AppDomain dla wyliczenia.
 
 `handle`\
-[out] Dojście do wyliczania wystąpień.
+określoną Dojście do wyliczania wystąpień.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataMethodDefinition` interfejs i odnosi się do trzeciego miejsca, w tabeli wirtualnej metody.
+Podana metoda jest częścią `IXCLRDataMethodDefinition` interfejsu i odpowiada piątemu miejscu tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)
+- [IXCLRDataMethodDefinition, interfejs](ixclrdatamethoddefinition-interface.md)

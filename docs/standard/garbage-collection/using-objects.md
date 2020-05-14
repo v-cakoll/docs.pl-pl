@@ -1,6 +1,6 @@
 ---
-title: Korzystanie z obiektów implementujących IDisposable
-ms.date: 04/07/2017
+title: Używanie obiektów implementujących interfejs IDisposable
+ms.date: 05/13/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,55 +10,58 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0d55a9253fee1ffcfd5c10714a1118883f6c4ce
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160287"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396968"
 ---
-# <a name="using-objects-that-implement-idisposable"></a>Korzystanie z obiektów implementujących IDisposable
+# <a name="using-objects-that-implement-idisposable"></a>Używanie obiektów implementujących interfejs IDisposable
 
-Moduł zbierający elementy bezużyteczne w czasie wykonywania języka wspólnego odzyskuje pamięć używaną <xref:System.IDisposable> przez obiekty zarządzane, ale typy korzystające z zasobów niezarządzanych implementują interfejs, aby umożliwić odzyskanie pamięci przydzielonej do tych niezarządzanych zasobów. Po zakończeniu przy użyciu obiektu, który implementuje <xref:System.IDisposable>, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> należy wywołać implementacji obiektu. Można to zrobić na jeden z dwóch sposobów:  
-  
-- Z C# `using` instrukcji lub `Using` Visual Basic instrukcji.  
-  
-- Implementując `try/finally` blok.  
+Moduł zbierający elementy bezużyteczne środowiska uruchomieniowego języka wspólnego ponownie przejmuje pamięć używaną przez zarządzane obiekty, ale typy korzystające z zasobów niezarządzanych implementują <xref:System.IDisposable> interfejs w celu zezwalania na odzyskiwanie zasobów wymaganych przez te niezarządzane zasoby. Po zakończeniu korzystania z obiektu, który implementuje <xref:System.IDisposable> , należy wywołać <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementację obiektu. Można to zrobić na jeden z dwóch sposobów:
+
+- Za pomocą instrukcji języka C# `using` ( `Using` w Visual Basic).
+- Przez implementację `try/finally` bloku i wywołanie elementu <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> w `finally` .
 
 ## <a name="the-using-statement"></a>Instrukcja using
 
-Instrukcja `using` w języku `Using` C# i instrukcji w języku Visual Basic uprościć kod, który należy napisać, aby utworzyć i oczyścić obiekt. Instrukcja `using` uzyskuje jeden lub więcej zasobów, wykonuje instrukcje, które określisz i automatycznie usuwa obiekt. Jednak instrukcja `using` jest przydatna tylko dla obiektów, które są używane w zakresie metody, w którym są one konstruowane.  
-  
-W poniższym `using` przykładzie użyto instrukcji <xref:System.IO.StreamReader?displayProperty=nameWithType> do utworzenia i zwolnienia obiektu.  
-  
+[ `using` Instrukcja](../../csharp/language-reference/keywords/using-statement.md) w języku C# i [ `Using` instrukcja](../../visual-basic/language-reference/statements/using-statement.md) w Visual Basic upraszczają kod, który należy napisać, aby oczyścić obiekt. `using`Instrukcja uzyskuje jeden lub więcej zasobów, wykonuje określone instrukcje i automatycznie usuwa obiekt. Jednak `using` instrukcja jest przydatna tylko w przypadku obiektów, które są używane w zakresie metody, w której są zbudowane.
+
+Poniższy przykład używa `using` instrukcji w celu utworzenia i zwolnienia <xref:System.IO.StreamReader?displayProperty=nameWithType> obiektu.
+
 [!code-csharp[Conceptual.Disposable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using1.cs#1)]
-[!code-vb[Conceptual.Disposable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using1.vb#1)]  
-  
-Należy zauważyć, <xref:System.IO.StreamReader> że mimo <xref:System.IDisposable> że klasa implementuje interfejs, co wskazuje, że używa zasobu niezarządzanego, w przykładzie nie jawnie wywołać <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> metodę. Gdy kompilator Języka C# `using` lub Visual Basic napotka instrukcję, emituje język pośredni (IL), `try/finally` który jest odpowiednikiem następującego kodu, który jawnie zawiera blok.  
-  
+[!code-vb[Conceptual.Disposable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using1.vb#1)]
+
+Mimo że <xref:System.IO.StreamReader> Klasa implementuje <xref:System.IDisposable> interfejs, który wskazuje, że używa niezarządzanego zasobu, przykład nie wywołuje jawnie <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> metody. Gdy kompilator języka C# lub Visual Basic napotka `using` instrukcję, emituje język pośredni (IL), który jest odpowiednikiem poniższego kodu, który jawnie zawiera `try/finally` blok.
+
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
-[!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
-  
-Instrukcja `using` C# umożliwia również uzyskanie wielu zasobów w jednej instrukcji, która `using` jest wewnętrznie równoważna zagnieżdżonych instrukcji. Poniższy przykład tworzy dwa <xref:System.IO.StreamReader> obiekty do odczytu zawartości dwóch różnych plików.  
-  
+[!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]
+
+Instrukcja języka C# `using` umożliwia także uzyskanie wielu zasobów w pojedynczej instrukcji, która jest wewnętrznie odpowiednikiem zagnieżdżonych `using` instrukcji. Poniższy przykład tworzy wystąpienie dwóch <xref:System.IO.StreamReader> obiektów w celu odczytania zawartości dwóch różnych plików.
+
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
 ## <a name="tryfinally-block"></a>Blok try/finally
 
-Zamiast zawijania `try/finally` bloku w `using` instrukcji, `try/finally` można zaimplementować blok bezpośrednio. Może to wynikać z osobistego stylu kodowania albo mieć jedną z następujących przyczyn:  
-  
-- Aby dołączyć `catch` blok do obsługi wyjątków `try` zgłoszonych w bloku. W przeciwnym razie wszelkie `using` wyjątki generowane przez instrukcję są nieobsługiwane, podobnie jak wszelkie wyjątki generowane w `using` bloku, jeśli `try/catch` blok nie jest obecny.  
-  
-- Aby utworzyć wystąpienia obiektu, który <xref:System.IDisposable> implementuje którego zakres nie jest lokalny do bloku, w którym jest zadeklarowany.  
-  
-Poniższy przykład jest podobny do poprzedniego przykładu, `try/catch/finally` z tą różnicą, że używa <xref:System.IO.StreamReader> bloku do tworzenia wystąpienia, używania <xref:System.IO.StreamReader> i usuwania <xref:System.IO.StreamReader.ReadToEnd%2A> obiektu oraz do obsługi wszelkich wyjątków zgłaszanych przez konstruktora i jego metodę. Należy zauważyć, że `finally` kod w bloku sprawdza, czy `null` obiekt, <xref:System.IDisposable.Dispose%2A> który implementuje <xref:System.IDisposable> nie jest przed wywołaniem metody. Niezastosowanie się do tego <xref:System.NullReferenceException> może spowodować wyjątek w czasie wykonywania.  
-  
+Zamiast zawijać `try/finally` blok w `using` instrukcji, możesz wybrać opcję `try/finally` bezpośredniego wdrożenia bloku. Może to być osobisty styl kodowania lub można to zrobić z jednego z następujących powodów:
+
+- Aby dołączyć `catch` blok obsługujący wyjątki zgłoszone w `try` bloku. W przeciwnym razie wyjątki zgłaszane w `using` instrukcji są nieobsługiwane.
+
+- Aby utworzyć wystąpienie obiektu, który implementuje, <xref:System.IDisposable> którego zakres nie jest lokalny dla bloku, w którym jest zadeklarowany.
+
+Poniższy przykład jest podobny do poprzedniego przykładu, z tą różnicą, że używa `try/catch/finally` bloku do tworzenia wystąpienia, używania i usuwania <xref:System.IO.StreamReader> obiektu oraz do obsługi wszelkich wyjątków zgłoszonych przez <xref:System.IO.StreamReader> konstruktora i jego <xref:System.IO.StreamReader.ReadToEnd%2A> metodę. Kod w `finally` bloku sprawdza, czy obiekt, który implementuje <xref:System.IDisposable> nie `null` przed wywołaniem <xref:System.IDisposable.Dispose%2A> metody. Niewykonanie tej czynności może spowodować wyjątek w <xref:System.NullReferenceException> czasie wykonywania.
+
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
-[!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
-  
-Można wykonać ten podstawowy wzorzec, jeśli `try/finally` zdecydujesz się zaimplementować lub musi `using` zaimplementować blok, <xref:System.IDisposable.Dispose%2A> ponieważ język programowania nie obsługuje instrukcji, ale zezwala na bezpośrednie wywołania metody.
-  
-## <a name="see-also"></a>Zobacz też
+[!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]
+
+Możesz użyć tego podstawowego wzorca, jeśli zdecydujesz się zaimplementować lub musi zaimplementować `try/finally` blok, ponieważ język programowania nie obsługuje `using` instrukcji, ale zezwala na bezpośrednie wywołania <xref:System.IDisposable.Dispose%2A> metody.
+
+## <a name="idisposable-instance-members"></a>Elementy członkowskie wystąpienia IDisposable
+
+Jeśli klasa przechowuje <xref:System.IDisposable> implementację jako element członkowski wystąpienia, pole lub właściwość, należy również zaimplementować klasę <xref:System.IDisposable> . Aby uzyskać więcej informacji, zobacz [implementacja kaskadowego usuwania](implementing-dispose.md#cascade-dispose-calls).
+
+## <a name="see-also"></a>Zobacz także
 
 - [Oczyszczanie zasobów niezarządzanych](../../../docs/standard/garbage-collection/unmanaged.md)
 - [using — Instrukcja (odwołanie w C#)](../../csharp/language-reference/keywords/using-statement.md)

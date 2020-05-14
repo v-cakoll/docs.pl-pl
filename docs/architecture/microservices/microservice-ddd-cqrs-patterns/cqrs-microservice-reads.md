@@ -1,61 +1,61 @@
 ---
 title: Implementowanie odczytów i zapytań w mikrousłudze CQRS
-description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Zrozumieć implementację strony zapytań CQRS na mikrousługi zamawiania w eShopOnContainers przy użyciu Dapper.
+description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z implementacją zapytania CQRS na mikrousłudze porządkowania w eShopOnContainers przy użyciu Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 4b789bb3fb465c17c5c4445a1d3dc9dffa47a152
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988755"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396274"
 ---
-# <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementowanie odczytów/zapytań w mikrousługach CQRS
+# <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
 
-W przypadku odczytów/zapytań zamawianie mikrousługi z aplikacji referencyjnej eShopOnContainers implementuje zapytania niezależnie od modelu DDD i obszaru transakcyjnego. Dokonano tego przede wszystkim dlatego, że wymagania dotyczące zapytań i transakcji są drastycznie różne. Zapisuje wykonać transakcje, które muszą być zgodne z logiką domeny. Zapytania, z drugiej strony, są idempotentne i mogą być oddzielone od reguł domeny.
+W przypadku operacji odczytu/zapytań, mikrousługa porządkowania z aplikacji referencyjnej eShopOnContainers implementuje zapytania niezależnie od modelu DDD i obszaru transakcyjnego. Zostało to zrobione przede wszystkim dlatego, że wymagania dotyczące zapytań i transakcji są znacząco inne. Zapisuje transakcje wykonania, które muszą być zgodne z logiką domeny. Zapytania, z drugiej strony, są idempotentne i mogą być segregowane z reguł domeny.
 
-Podejście jest proste, jak pokazano na rysunku 7-3. Interfejs interfejsu API jest implementowany przez kontrolery interfejsu API sieci Web przy użyciu dowolnej infrastruktury, takiej jak mikro obiekt owacyjna mapera (ORM) , taka jak Dapper, i zwracanie dynamicznych modeli viewmodele w zależności od potrzeb aplikacji interfejsu użytkownika.
+Podejście jest proste, jak pokazano na rysunku 7-3. Interfejs API jest implementowany przez kontrolery interfejsu API sieci Web przy użyciu dowolnej infrastruktury, takiej jak relacyjne mapowanie mikroobiektu (ORM), takie jak Dapper, i zwracanie dynamicznego modele widoków w zależności od potrzeb aplikacji interfejsu użytkownika.
 
-![Diagram przedstawiający kwerendy wysokiego poziomu w uproszczonym CQRS.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
+![Diagram przedstawiający zapytania wysokiego poziomu — po stronie uproszczonej CQRS.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
-**Rysunek 7-3**. Najprostsze podejście do zapytań w mikrousługach CQRS
+**Rysunek 7-3**. Najprostszym podejściem do wykonywania zapytań w mikrousłudze CQRS
 
-Najprostsze podejście po stronie zapytań w uproszczonym podejściu CQRS można zaimplementować, po prostu kwerendy bazy danych z Micro-ORM jak Dapper, zwracając dynamiczne Modele widoków. Definicje kwerendy kwerendy bazy danych i zwraca dynamiczny ViewModel zbudowany na bieżąco dla każdej kwerendy. Ponieważ zapytania są idempotentne, nie zmieni danych bez względu na to, ile razy uruchamiasz kwerendę. W związku z tym nie muszą być ograniczone przez dowolny wzorzec DDD używane w stronie transakcyjnej, takich jak agregaty i inne wzorce i dlatego kwerendy są oddzielone od obszaru transakcyjnego. Wystarczy zbadać bazy danych dla danych, które wymaga interfejsu użytkownika i zwraca dynamiczne ViewModel, który nie musi być statycznie zdefiniowane w dowolnym miejscu (bez klas dla ViewModels), z wyjątkiem instrukcji SQL siebie.
+Najprostszym podejściem do wykonywania zapytań w uproszczonym podejściu CQRS może być implementacja przez samo wykonanie zapytania dotyczącego bazy danych przy użyciu mikroorm, na przykład Dapper, zwrócenie dynamicznego modele widoków. Definicje zapytania zapytania do bazy danych i zwracają dynamiczny ViewModel zbudowany na bieżąco dla każdego zapytania. Ponieważ zapytania są idempotentne, nie zmieniają danych niezależnie od tego, ile razy zostało uruchomione zapytanie. W związku z tym nie trzeba ograniczać się przez żaden wzorzec DDD używany w stronie transakcyjnej, taki jak agregacje i inne wzorce, a także to, dlaczego zapytania są oddzielone od obszaru transakcyjnego. Po prostu wysyłasz zapytanie do bazy danych o dane wymagane przez interfejs użytkownika i zwracają dynamiczny ViewModel, który nie musi być statycznie zdefiniowany w dowolnym miejscu (brak klas dla modele widoków), z wyjątkiem samych instrukcji SQL.
 
-Ponieważ jest to proste podejście, kod wymagany po stronie kwerend (takich jak kod przy użyciu micro ORM jak [Dapper](https://github.com/StackExchange/Dapper)) można zaimplementować [w ramach tego samego projektu interfejsu API sieci Web.](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) Rysunek 7-4 pokazuje to. Zapytania są zdefiniowane w projekcie mikrousług **Ordering.API** w ramach rozwiązania eShopOnContainers.
+Ponieważ jest to proste podejście, kod wymagany dla strony zapytania (na przykład kod korzystający z mikroorm like [Dapper](https://github.com/StackExchange/Dapper)) można zaimplementować [w ramach tego samego projektu interfejsu API sieci Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). Przedstawiono to na rysunku 7-4. Zapytania są definiowane w projekcie **porządkowania. API** mikrousług w ramach rozwiązania eShopOnContainers.
 
-![Zrzut ekranu przedstawiający folder Kwerendy projektu Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![Zrzut ekranu przedstawiający folder zapytań porządkowania. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
-**Rysunek 7-4**. Zapytania w mikrousługach zamawiania w eShopOnContainers
+**Rysunek 7-4**. Zapytania w mikrousłudze porządkowania w eShopOnContainers
 
-## <a name="use-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>Używanie modeli viewmodele specjalnie dla aplikacji klienckich, niezależnie od ograniczeń modelu domeny
+## <a name="use-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>Używaj modele widoków określonych dla aplikacji klienckich, niezależnie od ograniczeń modelu domeny
 
-Ponieważ kwerendy są wykonywane w celu uzyskania danych wymaganych przez aplikacje klienckie, zwracany typ może być specjalnie dla klientów, na podstawie danych zwróconych przez kwerendy. Te modele lub obiekty transferu danych (DTO) są nazywane Modelami widoków.
+Ponieważ zapytania są wykonywane w celu uzyskania danych wymaganych przez aplikacje klienckie, zwracany typ może być przeznaczony dla klientów na podstawie danych zwróconych przez zapytania. Te modele lub Transfer danych obiekty (DTO) są nazywane modele widoków.
 
-Zwrócone dane (ViewModel) może być wynikiem łączenia danych z wielu jednostek lub tabel w bazie danych, lub nawet w wielu agregatów zdefiniowanych w modelu domeny dla obszaru transakcyjnego. W takim przypadku, ponieważ tworzysz kwerendy niezależne od modelu domeny, agreguje granice i ograniczenia są całkowicie ignorowane i możesz swobodnie wysyłać zapytania do dowolnej tabeli i kolumny, które mogą być potrzebne. Takie podejście zapewnia dużą elastyczność i produktywność dla deweloperów tworzenia lub aktualizowania zapytań.
+Zwrócone dane (ViewModel) mogą wynikać z dołączania danych z wielu jednostek lub tabel w bazie danych, a nawet wielu agregacji zdefiniowanych w modelu domeny dla obszaru transakcyjnego. W tym przypadku, ponieważ tworzysz zapytania niezależnie od modelu domeny, zagregowane granice i ograniczenia są całkowicie ignorowane i można wysyłać zapytania do dowolnej tabeli i kolumny, które mogą być potrzebne. Takie podejście zapewnia dużą elastyczność i produktywność dla deweloperów tworzących lub aktualizujących zapytania.
 
-ViewModels mogą być typy statyczne zdefiniowane w klasach. Lub mogą być tworzone dynamicznie na podstawie zapytań wykonywanych (jak jest zaimplementowana w mikrousługi zamawiania), który jest bardzo elastyczny dla deweloperów.
+Modele widoków mogą być typami statycznymi zdefiniowanymi w klasach. Lub mogą być tworzone dynamicznie na podstawie zapytań wykonanych (zgodnie z implementacją mikrousługi porządkowania), które są bardzo elastyczne dla deweloperów.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Użyj Dapper jako micro ORM do wykonywania zapytań
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Używanie Dapper jako mikroorm do wykonywania zapytań
 
-Można użyć dowolnego mikro ORM, Entity Framework Core, a nawet zwykły ADO.NET do wykonywania zapytań. W przykładowej aplikacji Dapper został wybrany dla zamawiania mikrousługi w eShopOnContainers jako dobry przykład popularnego micro ORM. Można uruchomić zwykłych zapytań SQL z doskonałą wydajnością, ponieważ jest to bardzo lekka struktura. Za pomocą Dapper, można napisać zapytanie SQL, które można uzyskać dostęp i dołączyć do wielu tabel.
+Do wykonywania zapytań można użyć dowolnego mikroorm, Entity Framework Core lub nawet zwykłego ADO.NET. W przykładowej aplikacji Dapper został wybrany dla mikrousługi porządkowania w eShopOnContainers jako dobry przykład popularnego mikroorm. Może uruchamiać zwykłe zapytania SQL o doskonałej wydajności, ponieważ jest to bardzo lekka struktura. Za pomocą Dapper można napisać zapytanie SQL, które może uzyskać dostęp do wielu tabel i dołączyć do nich.
 
-Dapper jest projektem typu open source (oryginalnym stworzonym przez Sama Szafrana) i jest częścią bloków konstrukcyjnych używanych w [Stack Overflow](https://stackoverflow.com/). Aby korzystać z Dapper, wystarczy zainstalować go za pośrednictwem [pakietu Dapper NuGet](https://www.nuget.org/packages/Dapper), jak pokazano na poniższym rysunku:
+Dapper to projekt typu "open source" (oryginalny utworzony przez sam Saffron) i jest częścią bloków konstrukcyjnych używanych w [Stack Overflow](https://stackoverflow.com/). Aby korzystać z Dapper, wystarczy zainstalować go za pomocą [pakietu NuGet Dapper](https://www.nuget.org/packages/Dapper), jak pokazano na poniższym rysunku:
 
-![Zrzut ekranu przedstawiający pakiet Dapper w widoku pakietów NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
+![Zrzut ekranu przedstawiający pakiet Dapper w widoku pakiety NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
-Należy również dodać using instrukcji, dzięki czemu kod ma dostęp do dapper metody rozszerzenia.
+Należy również dodać `using` dyrektywę, aby kod miał dostęp do metod rozszerzenia Dapper.
 
-Korzystając z Dapper w kodzie, należy <xref:System.Data.SqlClient.SqlConnection> bezpośrednio użyć <xref:System.Data.SqlClient> klasy dostępne w obszarze nazw. Za pomocą QueryAsync metody i innych <xref:System.Data.SqlClient.SqlConnection> metod rozszerzenia, które rozszerzają klasy, można po prostu uruchomić kwerendy w sposób prosty i wydajny.
+Gdy używasz Dapper w kodzie, możesz bezpośrednio użyć <xref:System.Data.SqlClient.SqlConnection> klasy dostępnej w <xref:System.Data.SqlClient> przestrzeni nazw. Za pomocą metody QueryAsync i innych metod rozszerzenia, które rozszerzają <xref:System.Data.SqlClient.SqlConnection> klasę, można po prostu uruchamiać zapytania w sposób prosty i wydajny.
 
-## <a name="dynamic-versus-static-viewmodels"></a>Dynamiczne i statyczne modele widoków
+## <a name="dynamic-versus-static-viewmodels"></a>Dynamiczny a statyczny modele widoków
 
-Podczas zwracania ViewModels od strony serwera do aplikacji klienckich, można myśleć o tych ViewModels jako DTO (Obiekty transferu danych), które mogą być różne od wewnętrznych jednostek domeny modelu jednostki, ponieważ ViewModels przechowywania danych w sposób aplikacji klienckiej potrzeb. W związku z tym w wielu przypadkach można agregować dane pochodzące z wielu jednostek domeny i redagować ViewModels dokładnie zgodnie z tym, jak aplikacja kliencka potrzebuje tych danych.
+Po powrocie modele widoków z serwera do aplikacji klienckich można myśleć o tych modele widoków jako DTO (Transfer danych obiektów), które mogą być różne dla wewnętrznych jednostek domeny modelu jednostki, ponieważ modele widoków przechowuje dane w sposób potrzeb aplikacji klienta. Z tego względu w wielu przypadkach można agregować dane pochodzące z wielu jednostek domeny i precyzyjnie redagować modele widoków według sposobu, w jaki aplikacja kliencka wymaga tych danych.
 
-Te ViewModels lub DTO mogą być zdefiniowane jawnie `OrderSummary` (jako klasy posiadacza danych), jak klasa wyświetlana w nowszym fragmentie kodu lub można po prostu zwrócić dynamiczne modele viewmodels lub dynamiczne DTO po prostu na podstawie atrybutów zwracanych przez zapytania, jako typ dynamiczny.
+Te modele widoków lub DTO mogą być jawnie zdefiniowane (jako klasy posiadaczy danych), takie jak `OrderSummary` Klasa pokazana w późniejszym fragmencie kodu lub po prostu zwracają dynamiczne modele widoków lub dynamiczne DTO na podstawie atrybutów zwracanych przez zapytania jako typ dynamiczny.
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel jako typ dynamiczny
 
-Jak pokazano w poniższym `ViewModel` kodzie, a może być bezpośrednio zwracany przez kwerendy, po prostu zwracając typ *dynamiczny,* który wewnętrznie jest oparty na atrybuty zwracane przez kwerendę. Oznacza to, że podzbiór atrybutów do zwrotu opiera się na samej kwerendzie. W związku z tym po dodaniu nowej kolumny do kwerendy lub `ViewModel`sprzężenia, że dane są dynamicznie dodawane do zwracanego .
+Jak pokazano w poniższym kodzie, `ViewModel` można zwrócić bezpośrednio przez zapytania, zwracając typ *dynamiczny* , który wewnętrznie jest oparty na atrybutach zwracanych przez zapytanie. Oznacza to, że podzbiór atrybutów do zwrócenia jest oparty na zapytaniu. W związku z tym, jeśli dodasz nową kolumnę do zapytania lub sprzężenia, dane te są dynamicznie dodawane do zwracanego `ViewModel` .
 
 ```csharp
 using Dapper;
@@ -85,23 +85,23 @@ public class OrderQueries : IOrderQueries
 }
 ```
 
-Ważnym punktem jest to, że przy użyciu typu dynamicznego, zwracana kolekcja danych jest dynamicznie montowane jako ViewModel.
+Ważnym punktem jest to, że za pomocą typu dynamicznego, zwrócona kolekcja danych jest dynamicznie zmontowany jako ViewModel.
 
-**Plusy:** Takie podejście zmniejsza potrzebę modyfikowania statycznych viewmodel klas przy każdej aktualizacji zdanie SQL kwerendy, dzięki czemu to podejście projektu dość zwinny podczas kodowania, proste i szybkie ewoluować w odniesieniu do przyszłych zmian.
+**Specjaliści:** Takie podejście zmniejsza konieczność modyfikacji statycznych klas ViewModel za każdym razem, gdy aktualizujesz zdanie SQL zapytania, dzięki czemu ten projekt podejścia jest dość Agile podczas kodowania, bezpośrednie i szybkiej ewolucji w odniesieniu do przyszłych zmian.
 
-**Wady:** W dłuższej perspektywie typy dynamiczne mogą negatywnie wpłynąć na przejrzystość i zgodność usługi z aplikacjami klienckimi. Ponadto oprogramowanie pośredniczące, takie jak Swashbuckle, nie może zapewnić tego samego poziomu dokumentacji zwróconych typów, jeśli używasz typów dynamicznych.
+**Wady:** W długim okresie typy dynamiczne mogą mieć negatywny wpływ na przejrzystość i zgodność usługi z aplikacjami klienckimi. Ponadto oprogramowanie pośredniczące, takie jak Swashbuckle, nie może zapewnić tego samego poziomu dokumentacji dla zwracanych typów, jeśli są używane typy dynamiczne.
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel jako wstępnie zdefiniowane klasy DTO
 
-**Plusy:** Posiadanie statycznych wstępnie zdefiniowanych klas ViewModel, takich jak "kontrakty" oparte na jawnych klasach DTO, jest zdecydowanie lepsze dla publicznych interfejsów API, ale także dla mikrousług długoterminowych, nawet jeśli są one używane tylko przez tę samą aplikację.
+**Specjaliści**: posiadanie statycznych wstępnie zdefiniowanych klas ViewModel, na przykład "umów" opartych na jawnych klasach DTO, jest w znacznym zakresie lepsze dla publicznych interfejsów API, ale również dla mikrousług długoterminowych, nawet jeśli są one używane tylko przez tę samą aplikację.
 
-Jeśli chcesz określić typy odpowiedzi dla Swagger, należy użyć jawnych klas DTO jako typu zwracanego. W związku z tym wstępnie zdefiniowane klasy DTO umożliwiają oferowanie bogatszych informacji z Swagger. To poprawia dokumentację interfejsu API i zgodność podczas korzystania z interfejsu API.
+Jeśli chcesz określić typy odpowiedzi dla struktury Swagger, musisz użyć jawnych klas DTO jako typu zwracanego. W związku z tym wstępnie zdefiniowane klasy DTO umożliwiają oferowanie bardziej szczegółowych informacji z struktury Swagger. Poprawia to dokumentację interfejsu API i zgodność przy korzystaniu z interfejsu API.
 
-**Minusy:** Jak wspomniano wcześniej, podczas aktualizowania kodu, wymaga kilku kroków, aby zaktualizować klasy DTO.
+**Wady**: jak wspomniano wcześniej, podczas aktualizowania kodu należy wykonać kilka kroków, aby zaktualizować klasy DTO.
 
-*Porada na podstawie naszego doświadczenia:* W zapytaniach zaimplementowanych w mikrousługach zamawiania w eShopOnContainers, zaczęliśmy się rozwijać przy użyciu dynamicznych ViewModels, ponieważ było to bardzo proste i zwinne na wczesnych etapach rozwoju. Ale po ustabilizowaniu rozwoju, zdecydowaliśmy się refaktoryzować interfejsów API i używać statycznych lub wstępnie zdefiniowanych obiektów DTO dla ViewModels, ponieważ jest jaśniejsze dla konsumentów mikrousług, aby wiedzieć jawne typy DTO, używane jako "kontrakty".
+*Porada oparta na naszym doświadczeniu*: w zapytaniach zaimplementowanych w mikrousłudze porządkowania w eShopOnContainers rozpoczynamy Programowanie przy użyciu dynamicznych modele widoków, ponieważ było to bardzo proste i elastyczne na wczesnych etapach tworzenia oprogramowania. Jednak po ustabilizowaniu rozwoju wybieramy do refaktoryzacji interfejsy API i używają statycznego lub wstępnie zdefiniowanego DTO dla modele widoków, ponieważ jest to wyraźniejsze dla konsumentów mikrousług, aby znać jawne typy DTO, używane jako "kontrakty".
 
-W poniższym przykładzie można zobaczyć, jak kwerenda zwraca dane przy użyciu jawnej klasy DTO ViewModel: OrderSummary klasy.
+W poniższym przykładzie można zobaczyć, jak zapytanie zwraca dane przy użyciu jawnej klasy ViewModel DTO: klasy OrderSummary.
 
 ```csharp
 using Dapper;
@@ -132,11 +132,11 @@ public class OrderQueries : IOrderQueries
 }
 ```
 
-#### <a name="describe-response-types-of-web-apis"></a>Opis typów odpowiedzi interfejsów API sieci Web
+#### <a name="describe-response-types-of-web-apis"></a>Opisywanie typów odpowiedzi interfejsów API sieci Web
 
-Deweloperzy zużywający interfejsy API sieci web i mikrousług są najbardziej zaniepokojeni tym, co jest zwracane — w szczególności typy odpowiedzi i kody błędów (jeśli nie są standardowe). Są one obsługiwane w komentarzach XML i adnotacjach danych.
+Deweloperzy korzystający z interfejsów API sieci Web i mikrousług są najbardziej zainteresowani tym, co jest zwracane — w szczególności typy odpowiedzi i kody błędów (jeśli nie są standardem). Są one obsługiwane w komentarzach XML i adnotacjach danych.
 
-Bez odpowiedniej dokumentacji w interfejsie użytkownika Swagger konsument nie ma wiedzy o tym, jakie typy są zwracane lub jakie kody HTTP mogą być zwracane. Ten problem jest rozwiązany <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType>przez dodanie , więc Swashbuckle może generować bogatsze informacje o modelu powrotu interfejsu API i wartości, jak pokazano w poniższym kodzie:
+Bez odpowiedniej dokumentacji w interfejsie użytkownika programu Swagger klient nie ma wiedzy na temat typów zwracanych lub kodów HTTP, które mogą być zwracane. Ten problem został rozwiązany przez dodanie <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> , więc Swashbuckle może generować bogatsze informacje o modelu i wartościach zwracanych przez interfejs API, jak pokazano w poniższym kodzie:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
@@ -161,7 +161,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
 }
 ```
 
-Jednak `ProducesResponseType` atrybut nie może używać dynamicznych jako typu, ale `OrderSummary` wymaga użycia jawnych typów, takich jak ViewModel DTO, pokazany w poniższym przykładzie:
+Jednak `ProducesResponseType` atrybut nie może używać elementu dynamicznego jako typu, ale wymaga użycia jawnych typów, takich jak `OrderSummary` ViewModel DTO, pokazany w poniższym przykładzie:
 
 ```csharp
 public class OrderSummary
@@ -173,27 +173,27 @@ public class OrderSummary
 }
 ```
 
-Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne, w dłuższej perspektywie. Korzystając z `ProducesResponseType` atrybutu, można również określić, jaki jest oczekiwany wynik w odniesieniu do możliwych błędów HTTP / kody, takie jak 200, 400, itp.
+Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne w długim okresie. Przy użyciu `ProducesResponseType` atrybutu można także określić oczekiwany wynik w odniesieniu do możliwych błędów/kodów http, takich jak 200, 400 itd.
 
-Na poniższej ilustracji można zobaczyć, jak Swagger UI pokazuje informacje ResponseType.
+Na poniższej ilustracji widać, jak interfejs użytkownika struktury Swagger wyświetla informacje o odpowiedzi.
 
-![Zrzut ekranu przedstawiający stronę interfejsu użytkownika swagger dla interfejsu API zamawiania.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
+![Zrzut ekranu przedstawiający stronę interfejsu użytkownika programu Swagger dla interfejsu API porządkowania.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
-**Rysunek 7-5**. Interfejs użytkownika swagger pokazujący typy odpowiedzi i możliwe kody stanu HTTP z interfejsu API sieci Web
+**Rysunek 7-5**. Interfejs użytkownika struktury Swagger pokazujący typy odpowiedzi i możliwe kody stanu HTTP z internetowego interfejsu API
 
-Możesz zobaczyć na obrazku powyżej kilka przykładowych wartości na podstawie viewmodel typów plus możliwe kody stanu HTTP, które mogą być zwracane.
+Na obrazie można zobaczyć więcej przykładowych wartości na podstawie typów ViewModel oraz możliwych kodów stanu HTTP, które mogą być zwracane.
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. Punkty danych - Dapper, Entity Framework i Aplikacje hybrydowe (artykuł magazynu MSDN)**  
+- **Julie Lerman. Punkty danych — Dapper, Entity Framework i aplikacje hybrydowe (artykuł z magazynu MSDN)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
-- **ASP.NET core Web API Strony pomocy przy użyciu Swagger**  
+- **ASP.NET Core stronach pomocy interfejsu API sieci Web przy użyciu programu Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md)
->[następny](ddd-oriented-microservice.md)
+>[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md) 
+> [Dalej](ddd-oriented-microservice.md)

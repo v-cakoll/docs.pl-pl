@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975410"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396245"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
@@ -22,9 +22,9 @@ Należy wziąć pod uwagę możliwość tworzenia i projektowania rozwiązań pr
 
 ### <a name="separation-of-concerns"></a>Rozdzielenie problemów
 
-Zasada identyfikatora GUID podczas opracowywania polega na **rozdzieleniu obaw**. Ta zasada potwierdza, że oprogramowanie powinno być oddzielone w zależności od rodzaju wykonywanych przez niego zadań. Rozważmy na przykład aplikację, która zawiera logikę do identyfikowania wartych elementów do wyświetlenia użytkownikowi, a także formatuje takie elementy w określony sposób, aby były bardziej zauważalne. Zachowanie odpowiedzialne za wybór, które elementy mają być sformatowane, powinny być przechowywane niezależnie od zachowań odpowiedzialnych za formatowanie elementów, ponieważ są to osobne wątpliwości, które są tylko ze sobą powiązane ze sobą.
+Zasada identyfikatora GUID podczas opracowywania polega na **rozdzieleniu obaw**. Ta zasada potwierdza, że oprogramowanie powinno być oddzielone w zależności od rodzaju wykonywanych przez niego zadań. Rozważmy na przykład aplikację, która zawiera logikę do identyfikowania wartych elementów do wyświetlenia użytkownikowi, a także formatuje takie elementy w określony sposób, aby były bardziej zauważalne. Zachowanie odpowiedzialne za wybór, które elementy mają być sformatowane, powinno być przechowywane niezależnie od zachowania odpowiedzialnego za formatowanie elementów, ponieważ te zachowania są oddzielnymi problemami, które są tylko ze sobą powiązane ze sobą.
 
-Architektura aplikacji może być logicznie skompilowana, aby przestrzegać tej zasady, oddzielając podstawowe zachowanie biznesowe od infrastruktury i logiki interfejsu użytkownika. W idealnym przypadku reguły biznesowe i logika powinny znajdować się w osobnym projekcie, który nie powinien zależeć od innych projektów w aplikacji. Pozwala to zagwarantować, że model biznesowy jest łatwy do testowania i może zostać rozmieszczony bez ścisłej współpracy z szczegółami implementacji niskiego poziomu. Rozdzielenie problemów jest najważniejszym zagadnieniem związanym z użyciem warstw w architekturze aplikacji.
+Architektura aplikacji może być logicznie skompilowana, aby przestrzegać tej zasady, oddzielając podstawowe zachowanie biznesowe od infrastruktury i logiki interfejsu użytkownika. W idealnym przypadku reguły biznesowe i logika powinny znajdować się w osobnym projekcie, który nie powinien zależeć od innych projektów w aplikacji. Ta separacja pomaga zapewnić, że model biznesowy jest łatwy do przetestowania i może zostać rozmieszczony bez ścisłej współpracy z szczegółami implementacji niskiego poziomu. Rozdzielenie problemów jest najważniejszym zagadnieniem związanym z użyciem warstw w architekturze aplikacji.
 
 ### <a name="encapsulation"></a>Encapsulation
 
@@ -34,7 +34,7 @@ W klasach hermetyzacja jest realizowana przez ograniczenie poza dostępem do sta
 
 ### <a name="dependency-inversion"></a>Niewersja zależności
 
-Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szczegóły implementacji. Większość aplikacji jest zapisywana w taki sposób, że przepływy zależności czasu kompilacji w kierunku wykonywania środowiska uruchomieniowego. Spowoduje to utworzenie grafu zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, która będzie zależeć od C, jak pokazano na rysunku 4-1.
+Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szczegóły implementacji. Większość aplikacji jest zapisywana w taki sposób, że przepływy zależności czasu kompilacji w kierunku wykonywania środowiska uruchomieniowego, generujący wykres zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, która będzie zależeć od C, jak pokazano na rysunku 4-1.
 
 ![Wykres zależności bezpośredniej](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ Zastosowanie zasady odróżniania zależności umożliwia wywoływanie metod w r
 
 **Metody i klasy powinny jawnie wymagać wszelkich obiektów współpracy, które są potrzebne do poprawnego działania.** Konstruktory klas zapewniają szansę dla klas, aby identyfikować elementy, których potrzebują, aby były w prawidłowym stanie i działać prawidłowo. W przypadku zdefiniowania klas, które mogą być skonstruowane i wywoływane, ale które będą działać prawidłowo tylko wtedy, gdy są używane pewne składniki globalne lub infrastruktury, te klasy są *DISHONEST* z klientami. Kontrakt konstruktora mówi klientowi, że potrzebuje tylko określonych elementów (prawdopodobnie nic nie tylko wtedy, gdy Klasa korzysta tylko z konstruktora bez parametrów), ale w czasie wykonywania obiekt naprawdę nie wymaga czegoś innego.
 
-Zgodnie z zasadą jawnych zależności, klasy i metody są uczciwie związane z klientami na temat tego, czego potrzebują do działania. Dzięki temu kod może być bardziej czytelny, a kontrakty związane z kodowaniem są bardziej przyjazne dla użytkownika, ponieważ użytkownicy będą musieli ufać, o ile są one wymagane w formie parametrów metody lub konstruktora, obiekty, z którymi pracują, działają poprawnie w czasie wykonywania.
+Zgodnie z zasadą jawnych zależności, klasy i metody są uczciwie związane z klientami na temat tego, czego potrzebują do działania. Zgodnie z zasadą sprawia, że kod jest bardziej czytelny, a kontrakty związane z kodowaniem są bardziej przyjazne dla użytkownika, ponieważ użytkownicy będą mieli zaufanie, o ile są one wymagane w formie parametrów metody lub konstruktora, obiekty, z którymi pracują, działają poprawnie w czasie wykonywania.
 
 ### <a name="single-responsibility"></a>Pojedyncza odpowiedzialność
 
@@ -66,7 +66,7 @@ Gdy ta zasada jest stosowana do architektury aplikacji i została przełączona 
 
 ### <a name="dont-repeat-yourself-dry"></a>Nie powtarzaj siebie (SUCHa)
 
-Aplikacja powinna unikać określania zachowania związanego z konkretną koncepcją w wielu miejscach, ponieważ jest to częste źródło błędów. W pewnym momencie zmiana wymagań będzie wymagała zmiany tego zachowania. Prawdopodobnie nie będzie można zaktualizować co najmniej jednego wystąpienia zachowania, co spowoduje niespójne zachowanie systemu.
+Aplikacja powinna unikać określania zachowania związanego z konkretną koncepcją w wielu miejscach, ponieważ to rozwiązanie jest częstym źródłem błędów. W pewnym momencie zmiana wymagań będzie wymagała zmiany tego zachowania. Prawdopodobnie nie będzie można zaktualizować co najmniej jednego wystąpienia zachowania, a system będzie niespójnie zachowywać się.
 
 Zamiast duplikowania logiki należy hermetyzować ją w konstrukcji programistycznej. Uczyń ten konstrukcja pojedynczym urzędem w tym zachowaniu i w każdej innej części aplikacji, która wymaga tego zachowania, użyj nowej konstrukcji.
 
@@ -105,5 +105,5 @@ Co najmniej poszczególne aplikacje sieci Web powinny dążyć do własnego kont
 - [Ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)
->[Następny](common-web-application-architectures.md)
+>[Poprzedni](choose-between-traditional-web-and-single-page-apps.md) 
+> [Dalej](common-web-application-architectures.md)

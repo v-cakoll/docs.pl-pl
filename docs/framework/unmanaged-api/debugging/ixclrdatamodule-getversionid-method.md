@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataModule::GetVersionId
+title: 'IXCLRDataModule:: GetVersionId, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetVersionId Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5bd84f784ea92e7b2ce2465e64972dc84e16a16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff8ccf42d1131fb15d7473ae12ecefde9d55177f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744700"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395278"
 ---
-# <a name="ixclrdatamodulegetversionid-method"></a>Metoda IXCLRDataModule::GetVersionId
+# <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule:: GetVersionId, Metoda
 
 Pobiera identyfikator wersji modułu.
 
@@ -39,20 +39,20 @@ HRESULT GetVersionId(
 ## <a name="parameters"></a>Parametry
 
 `vid`\
-[out] Identyfikator wersji modułu.
+określoną Identyfikator wersji modułu.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataModule` interfejs i odnosi się do 40 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataModule` interfejsu i odpowiada gnieździe 41st tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataModule](ixclrdatamodule-interface.md)
+- [IXCLRDataModule, interfejs](ixclrdatamodule-interface.md)

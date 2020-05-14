@@ -1,15 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::Metoda GetName
+title: 'ICorDebugVariableSymbol:: GetName — Metoda'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: abc0e368f259df1a3542b0fc8e7fbfd7e06cf6eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea414a39e140c74df736764dbbb1bb3934bda78f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178453"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397127"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::Metoda GetName
+# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol:: GetName — Metoda
 Pobiera nazwę zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -24,29 +24,29 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [w] Liczba znaków w `szName` buforze.  
+ podczas Liczba znaków w `szName` buforze.  
   
  `pcchName`  
- [na zewnątrz] Wskaźnik do liczby znaków faktycznie zapisane `szName` w buforze.  
+ określoną Wskaźnik do liczby znaków rzeczywiście zapisywana w `szName` buforze.  
   
  `szName`  
- Wskaźnik do tablicy znaków zawierającej nazwę zmiennej.  
+ Wskaźnik do tablicy znaków, która zawiera nazwę zmiennej.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
+> Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorDebugVariableSymbol, interfejs](icordebugvariablesymbol-interface.md)
 - [Debugowanie — Interfejsy](debugging-interfaces.md)

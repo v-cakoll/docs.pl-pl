@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178406"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396298"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName — Metoda
-Pobiera nazwę domeny aplikacji, która jest reprezentowana przez ten [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
+Pobiera nazwę domeny aplikacji reprezentowanej przez ten [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [w] Rozmiar tablicy. `szName`  
+ podczas Rozmiar `szName` tablicy.  
   
  `pcchName`  
- [na zewnątrz] Wskaźnik do liczby znaków szerokich, w tym znaku `szName` null, zwrócony w tablicy.  
+ określoną Wskaźnik do liczby znaków dwubajtowych, w tym znak null, zwracany w `szName` tablicy.  
   
  `szName`  
- [na zewnątrz] Tablica, w której ma być przechowywana nazwa.  
+ określoną Tablica, w której ma zostać przechowana nazwa.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `szName` metoda nie jest `GetName` null, metoda `cchName` kopiuje do znaków `szName`(w tym zerowy terminator) do . Jeśli w `pcchName`tablicy jest zwracana wartość null, rzeczywista liczba znaków w nazwie `szName` (w tym terminator zerowy) jest przechowywana w tablicy.  
+ Jeśli `szName` jest inna niż null, `GetName` Metoda kopiuje do. do `cchName` znaków (w tym terminator wartości null) `szName` . Jeśli zwracana jest wartość inna niż null `pcchName` , rzeczywista liczba znaków w nazwie (łącznie z terminatorem wartości null) jest przechowywana w `szName` tablicy.  
   
- Metoda `GetName` zwraca S_OK HRESULT niezależnie od liczby znaków zostały skopiowane.  
+ `GetName`Metoda zwraca S_OK HRESULT, niezależnie od liczby skopiowanych znaków.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ICorPublishAppDomain, interfejs](icorpublishappdomain-interface.md)
+- [ICorPublishAppDomain — Interfejs](icorpublishappdomain-interface.md)

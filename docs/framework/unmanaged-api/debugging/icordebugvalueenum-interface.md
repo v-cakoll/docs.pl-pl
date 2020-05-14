@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: ba61df045caa117acae3756eb879cf67d0791222
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f95202bd0c8c5045c10378068ae83cad3d93fdd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791068"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396466"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum, interfejs
 Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugValue".  
@@ -28,7 +28,7 @@ Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugValue".
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](icordebugvalueenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugValue` z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next — Metoda](icordebugvalueenum-next-method.md)|Pobiera określoną liczbę `ICorDebugValue` wystąpień z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -36,14 +36,14 @@ Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugValue".
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

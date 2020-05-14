@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
+title: 'IXCLRDataProcess:: EndEnumMethodInstancesByAddress, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04ce8f44b0c9f532951666de7bfb9de475c14746
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757853"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395258"
 ---
-# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
+# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: EndEnumMethodInstancesByAddress, Metoda
 
-Zwalnia zasoby używane przez Iteratory wewnętrzny używany podczas wyliczania wystąpień.
+Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania wystąpień.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,21 +39,21 @@ HRESULT EndEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out] Dojście do wyliczania wystąpień metody.
+określoną Dojście do wyliczania wystąpień metod.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 29 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataProcess` interfejsu i odpowiada 30emu gnieździe tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess, interfejs](ixclrdataprocess-interface.md)

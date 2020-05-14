@@ -2,12 +2,12 @@
 title: Podsumowanie
 description: Podsumowanie najważniejszych konkluzji z aplikacji platformy .NET natywnej w chmurze dla przewodnika/książki elektronicznej platformy Azure.
 ms.date: 04/29/2020
-ms.openlocfilehash: 97f20771aae73ed88d2dadefa7ba89d64eb62fcd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82899697"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395321"
 ---
 # <a name="summary"></a>Podsumowanie
 
@@ -17,11 +17,11 @@ Podsumowując, poniżej przedstawiono ważne wnioski z tego przewodnika:
 
 - ** [Natywna platforma obliczeniowa w chmurze](https://www.cncf.io/) (CNCF)** to wpływ konsorcjum typu "open source" o ponad 300 głównych korporacji. Jest on odpowiedzialny za wspieranie wdrażania natywnych danych w chmurze w różnych technologiach i stosach w chmurze.
 
-- **Wytyczne CNCF** zaleca się, aby aplikacje natywne w chmurze miały sześć ważnych filarów, jak pokazano na rysunku 12-1:
+- **Wytyczne CNCF** zaleca się, aby aplikacje natywne w chmurze miały sześć ważnych filarów, jak pokazano na rysunku 11-1:
 
   ![Natywne filary w chmurze](./media/cloud-native-foundational-pillars.png)
 
-  **Rysunek 12-1**. Natywne filary w chmurze
+  **Rysunek 11-1**. Natywne filary w chmurze
 
 - Te filary natywne w chmurze obejmują:
   - Chmura i jej model usługi bazowej
@@ -45,7 +45,7 @@ Podsumowując, poniżej przedstawiono ważne wnioski z tego przewodnika:
 
 - **Odporność** to zdolność systemu do reagowania na awarie i nadal pozostaje funkcjonalna. Systemy natywne w chmurze stosują architekturę rozproszoną, w której niepowodzenie jest nieuniknione. Aplikacje muszą być skonstruowane w taki sposób, aby nie reagować na błędy i szybko powrócić do stanu w pełni funkcjonalny.
 
-- **Sieci usług** to konfigurowalna warstwa infrastruktury z wbudowanymi funkcjami do obsługi komunikacji z usługą i innych wyzwań związanych z nacinaniem. Oddzielą odpowiedzialności za przecinanie z kodu biznesowego. Te obowiązki przechodzą do serwera proxy usługi. Określany jako `Sidecar pattern`, serwer proxy jest wdrażany w osobnym procesie, aby zapewnić izolację kodu biznesowego.
+- **Sieci usług** to konfigurowalna warstwa infrastruktury z wbudowanymi funkcjami do obsługi komunikacji z usługą i innych wyzwań związanych z nacinaniem. Oddzielą odpowiedzialności za przecinanie z kodu biznesowego. Te obowiązki przechodzą do serwera proxy usługi. Określany jako `Sidecar pattern` , serwer proxy jest wdrażany w osobnym procesie, aby zapewnić izolację kodu biznesowego.
 
 - **Zauważalność** to kluczowe zagadnienia projektowe dla aplikacji natywnych w chmurze. Ponieważ usługi są dystrybuowane w klastrze węzłów, scentralizowane rejestrowanie, monitorowanie i alerty, stają się obowiązkowe. Azure Monitor to zbiór narzędzi opartych na chmurze, zaprojektowanych w celu zapewnienia widoczności stanu systemu.
 

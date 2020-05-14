@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110062"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396621"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next — Metoda
-Pobiera liczbę wystąpień "ICorDebugType" określonych przez `celt` z wyliczenia, rozpoczynając od bieżącego położenia.  
+Pobiera liczbę wystąpień "ICorDebugType" określonych przez `celt` Wyliczenie z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba wystąpień `ICorDebugType` do pobrania.  
+ podczas Liczba `ICorDebugType` wystąpień do pobrania.  
   
  `values`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugType`.  
+ określoną Tablica wskaźników, z których każdy wskazuje `ICorDebugType` obiekt.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugType`. Ta wartość może być równa null, jeśli `celt` to jeden.  
+ określoną Wskaźnik do liczby `ICorDebugType` faktycznie zwróconych wystąpień. Ta wartość może być równa null, jeśli `celt` jest taka.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

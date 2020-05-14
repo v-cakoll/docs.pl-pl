@@ -1,26 +1,26 @@
 ---
-title: Praca z kolekcjami — wprowadzenie do samouczka C#
-description: Dowiedz się C# eksplorując List kolekcji w tym samouczku.
+title: Współpraca z kolekcjami — wprowadzenie do samouczka języka C#
+description: Poznaj język C#, eksplorując kolekcję list w tym samouczku.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635653"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396895"
 ---
-# <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Dowiedz się, jak zarządzać zbieraniem danych przy użyciu typu listy ogólnej
+# <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Dowiedz się, jak zarządzać kolekcjami danych przy użyciu typu listy ogólnej
 
-Ten samouczek wprowadzający zawiera wprowadzenie do języka C# <xref:System.Collections.Generic.List%601> i podstawy klasy.
+Ten samouczek wprowadzający zawiera wprowadzenie do języka C# i podstawowe informacje o <xref:System.Collections.Generic.List%601> klasie.
 
-W tym samouczku oczekuje się, że masz komputer, którego można użyć do tworzenia. W samouczku .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) są instrukcje dotyczące konfigurowania lokalnego środowiska programistycznego w systemach Windows, Linux lub macOS. Szybki przegląd poleceń, których będziesz używać, znajduje się w [części Zapoznaj się z narzędziami programistycznymi](local-environment.md), z łączami do więcej szczegółów.
+Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS. Szybki przegląd poleceń, które będą używane, jest [znany z narzędziami programistycznymi](local-environment.md)z linkami do dodatkowych informacji.
 
 ## <a name="a-basic-list-example"></a>Przykład listy podstawowej
 
-Tworzenie katalogu o nazwie *lista-samouczek*. Zrób bieżący katalog i `dotnet new console`uruchom program .
+Utwórz katalog o nazwie *list-samouczek*. Upewnij się, że bieżący katalog jest uruchomiony `dotnet new console` .
 
-Otwórz *Program.cs* w ulubionym edytorze i zastąp istniejący kod następującymi:
+Otwórz *program.cs* w ulubionym edytorze i Zastąp istniejący kod następującym:
 
 ```csharp
 using System;
@@ -42,19 +42,19 @@ namespace list_tutorial
 }
 ```
 
-Zamień `<name>` swoje imię i nazwisko. Zapisz plik *Program.cs*. Wpisz `dotnet run` w oknie konsoli, aby spróbować.
+Zamień `<name>` na nazwę użytkownika. Zapisz plik *Program.cs*. Wpisz `dotnet run` w oknie konsoli, aby ją wypróbować.
 
-Właśnie utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowano nazwy we wszystkich caps. Używasz pojęć, które zostały nauczone we wcześniejszych samouczkach, aby zapętlać listę.
+Utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowanych nazw we wszystkich WERSALIKach. Są używane koncepcje, które zostały uzyskane we wcześniejszych samouczkach, aby przepętlać listę.
 
-Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągu.](../../language-reference/tokens/interpolated.md)  Po poprzedzić `string` `$` znak, można osadzić kod C# w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten kod Języka C# wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy, konwertowane na <xref:System.String.ToUpper%2A> wielkie litery, ponieważ metoda została wywołana.
+Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) .  Gdy poprzedzasz `string` `$` znak, możesz osadzić kod w języku C# w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten kod C# wartością, którą generuje. W tym przykładzie zastępuje on `{name.ToUpper()}` każdą nazwę, przekonwertowane na wielkie litery, ponieważ wywołano <xref:System.String.ToUpper%2A> metodę.
 
-Kontynuujmy odkrywanie.
+Kontynuujmy Eksplorowanie.
 
-## <a name="modify-list-contents"></a>Modyfikowanie zawartości listy
+## <a name="modify-list-contents"></a>Modyfikuj zawartość listy
 
-Utworzona kolekcja używa <xref:System.Collections.Generic.List%601> tego typu. Ten typ przechowuje sekwencje elementów. Należy określić typ elementów między nawiasami kątowymi.
+Utworzona kolekcja używa <xref:System.Collections.Generic.List%601> typu. Ten typ przechowuje sekwencje elementów. Należy określić typ elementów między nawiasami kątowymi.
 
-Jednym z ważnych <xref:System.Collections.Generic.List%601> aspektów tego typu jest to, że może rosnąć lub zmniejszać, umożliwiając dodawanie lub usuwanie elementów. Dodaj ten kod `}` przed `Main` zamknięciem w metodzie:
+Jednym z ważnych aspektów tego <xref:System.Collections.Generic.List%601> typu jest to, że można go zwiększyć lub zmniejszyć, umożliwiając dodawanie lub usuwanie elementów. Dodaj ten kod przed zamknięciem `}` `Main` metody:
 
 ```csharp
 Console.WriteLine();
@@ -67,26 +67,26 @@ foreach (var name in names)
 }
 ```
 
-Dodano jeszcze dwie nazwy na końcu listy. Usunięto również jeden. Zapisz plik i `dotnet run` wpisz, aby go wypróbować.
+Dodano dwie więcej nazw na końcu listy. Również został także usunięty. Zapisz plik i wpisz, `dotnet run` Aby go wypróbować.
 
-Umożliwia <xref:System.Collections.Generic.List%601> odwoływanie się do poszczególnych elementów przez **indeks,** jak również. Umieść indeks między `[` `]` i tokenów po nazwie listy. C# używa 0 dla pierwszego indeksu. Dodaj ten kod bezpośrednio pod kodem, który właśnie dodałeś i wypróbuj go:
+<xref:System.Collections.Generic.List%601>Umożliwia także odwoływanie się do poszczególnych elementów według **indeksu** . Indeks między `[` i `]` tokenami należy umieścić po nazwie listy. Język C# używa wartości 0 jako pierwszego indeksu. Dodaj ten kod bezpośrednio poniżej kodu, który właśnie został dodany, i wypróbuj go:
 
 ```csharp
 Console.WriteLine($"My name is {names[0]}");
 Console.WriteLine($"I've added {names[2]} and {names[3]} to the list");
 ```
 
-Nie można uzyskać dostępu do indeksu poza końcem listy. Pamiętaj, że indeksy zaczynają się od 0, więc największy prawidłowy indeks jest o jeden mniejszy niż liczba elementów na liście. Można sprawdzić, jak długo lista <xref:System.Collections.Generic.List%601.Count%2A> jest przy użyciu właściwości. Dodaj następujący kod na końcu Main metody:
+Nie można uzyskać dostępu do indeksu poza końcem listy. Pamiętaj, że indeksy zaczynają się od 0, więc największy prawidłowy indeks jest mniejszy od liczby elementów na liście. Możesz sprawdzić, jak długo lista używa <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod na końcu metody Main:
 
 ```csharp
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Zapisz plik i `dotnet run` wpisz ponownie, aby wyświetlić wyniki.
+Zapisz plik i wpisz ponownie, `dotnet run` Aby zobaczyć wyniki.
 
 ## <a name="search-and-sort-lists"></a>Wyszukiwanie i sortowanie list
 
-Nasze przykłady używają stosunkowo małych list, ale aplikacje często mogą tworzyć listy z wieloma innymi elementami, czasami numerując w tysiącach. Aby znaleźć elementy w tych większych kolekcjach, należy przeszukać listę różnych elementów. Metoda <xref:System.Collections.Generic.List%601.IndexOf%2A> wyszukuje towar i zwraca indeks towaru. Dodaj ten kod na `Main` dole metody:
+Nasze przykłady używają stosunkowo małych list, ale aplikacje mogą często tworzyć listy z wieloma elementami, czasami numerowania w tysiącach. Aby znaleźć elementy w tych większych kolekcjach, należy przeszukać listę pod kątem różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A>Metoda wyszukuje element i zwraca indeks elementu. Jeśli element nie znajduje się na liście, `IndexOf` zwraca `-1` . Dodaj ten kod na końcu `Main` metody:
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Elementy na liście można również sortować. Metoda <xref:System.Collections.Generic.List%601.Sort%2A> sortuje wszystkie elementy na liście w normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod na `Main` dole naszej metody:
+Elementy na liście można także sortować. <xref:System.Collections.Generic.List%601.Sort%2A>Metoda sortuje wszystkie elementy na liście w ich normalnej kolejności (alfabetycznie w przypadku ciągów). Dodaj ten kod na końcu naszej `Main` metody:
 
 ```csharp
 names.Sort();
@@ -121,9 +121,9 @@ foreach (var name in names)
 }
 ```
 
-Zapisz plik i `dotnet run` wpisz, aby wypróbować tę najnowszą wersję.
+Zapisz plik i wpisz, `dotnet run` Aby wypróbować tę najnowszą wersję.
 
-Przed rozpoczęciem następnej sekcji przenieśmy bieżący kod do osobnej metody. To ułatwia rozpoczęcie pracy z nowym przykładem. Zmień nazwę `Main` metody `WorkingWithStrings` i napisz `Main` nową `WorkingWithStrings`metodę, która wywołuje . Po zakończeniu kod powinien wyglądać następująco:
+Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę `Main` metody na `WorkingWithStrings` i Napisz nową `Main` metodę, która wywołuje `WorkingWithStrings` . Po zakończeniu kod powinien wyglądać następująco:
 
 ```csharp
 using System;
@@ -193,15 +193,15 @@ namespace list_tutorial
 
 ## <a name="lists-of-other-types"></a>Listy innych typów
 
-Do tej pory `string` używałeś tego typu na listach. Zróbmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Zbudujmy zestaw liczb.
+Używasz `string` typu na listach do tej pory. Użyjmy <xref:System.Collections.Generic.List%601> innego typu. Utwórzmy zestaw numerów.
 
-Dodaj następujące elementy na dole `Main` nowej metody:
+Dodaj następujący wiersz na końcu nowej `Main` metody:
 
 ```csharp
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-Tworzy listę liczby całkowite i ustawia dwie pierwsze liczby całkowite na wartość 1. Są to dwie pierwsze wartości *sekwencji Fibonacciego*, sekwencja liczb. Każdy następny numer Fibonacciego znajduje się, biorąc sumę poprzednich dwóch liczb. Dodaj ten kod:
+Tworzy listę liczb całkowitych i ustawia pierwsze dwie liczby całkowite na wartość 1. Są to dwie pierwsze wartości *sekwencji Fibonacci*, sekwencja liczb. Każdy kolejny numer Fibonacci można znaleźć, pobierając sumę poprzednich dwóch liczb. Dodaj ten kod:
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
@@ -213,21 +213,21 @@ foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Zapisz plik i `dotnet run` wpisz, aby zobaczyć wyniki.
+Zapisz plik i wpisz `dotnet run` , aby zobaczyć wyniki.
 
 > [!TIP]
-> Aby skupić się tylko na tej sekcji, `WorkingWithStrings();`możesz skomentować kod, który wywołuje . Wystarczy umieścić `/` dwa znaki przed wezwaniem `// WorkingWithStrings();`w ten sposób: .
+> Aby skoncentrować się na tej sekcji, można skomentować kod, który wywołuje `WorkingWithStrings();` . Po prostu umieść dwa `/` znaki przed wywołaniem podobnym do tego: `// WorkingWithStrings();` .
 
 ## <a name="challenge"></a>Wyzwanie
 
-Sprawdź, czy możesz połączyć niektóre z pojęć z tej i wcześniejszych lekcji. Rozwiń to, co zbudowałeś do tej pory dzięki Liczbom Fibonacciego. Spróbuj napisać kod, aby wygenerować pierwsze 20 liczb w sekwencji. (Jako wskazówka, 20 numer Fibonacciego jest 6765.)
+Sprawdź, czy możesz połączyć niektóre koncepcje z tej i wcześniejszych lekcji. Rozwiń elementy, które zostały już skompilowane z użyciem numerów Fibonacci. Spróbuj napisać kod w celu wygenerowania pierwszych 20 cyfr w sekwencji. (Jako wskazówkę 20 Fibonacci numer jest 6765).
 
 ## <a name="complete-challenge"></a>Ukończenie wyzwania
 
-Możesz zobaczyć przykładowe [rozwiązanie, patrząc na gotowy przykładowy kod na GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23).
+Przykładowe rozwiązanie można zobaczyć, [przeglądając gotowy przykładowy kod w serwisie GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23).
 
-Przy każdej iteracji pętli bierzesz dwie ostatnie liczby całkowite na liście, sumując je i dodając tę wartość do listy. Pętla powtarza się, dopóki nie dodasz 20 elementów do listy.
+Każda iteracja pętli polega na wykorzystaniu ostatnich dwóch liczb całkowitych na liście, sumowaniu ich i dodawania tej wartości do listy. Pętla jest powtarzana do momentu dodania 20 elementów do listy.
 
-Gratulacje, ukończyłeś samouczek listy. Możesz kontynuować wprowadzenie [do zajęć](introduction-to-classes.md) samouczek w swoim własnym środowisku programistycznym.
+Gratulacje, ukończono samouczek z listą. Możesz przejść do samouczka [wprowadzenie do klas](introduction-to-classes.md) w Twoim środowisku programistycznym.
 
-Więcej informacji na temat `List` pracy z typem można uzyskać w artykule [przewodnika .NET](../../../standard/index.yml) dotyczącymi [kolekcji](../../../standard/collections/index.md). Dowiesz się również o wielu innych typach kolekcji.
+Aby dowiedzieć się więcej na temat pracy z `List` typem w artykule [Przewodnik .NET](../../../standard/index.yml) w [kolekcji](../../../standard/collections/index.md). Zapoznaj się również z wieloma innymi typami kolekcji.

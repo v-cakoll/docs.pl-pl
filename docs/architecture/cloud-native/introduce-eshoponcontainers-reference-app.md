@@ -2,12 +2,12 @@
 title: Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 description: Wprowadzenie do aplikacji referencyjnej dla mikrousług eShopOnContainers Cloud Native dla ASP.NET Core i platformy Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895540"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395397"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 
@@ -50,7 +50,7 @@ Aplikacja ma również następujące wymagania niefunkcjonalne:
 
 Aplikacja eShopOnContainers jest dostępna z poziomu klientów sieci Web lub urządzeń przenośnych, które uzyskują dostęp do aplikacji za pośrednictwem protokołu HTTPS, jako aplikacji serwera ASP.NET Core MVC lub odpowiedniej bramy interfejsu API. Bramy interfejsu API oferują kilka korzyści, takich jak oddzielenie usług zaplecza od indywidualnych klientów frontonu i zapewnienie lepszych zabezpieczeń. Aplikacja używa również powiązanego wzorca znanego jako zaplecza (BFF), który zaleca Tworzenie oddzielnych bram interfejsu API dla każdego klienta frontonu. Architektura referencyjna pokazuje, jak należy rozdzielić bramy interfejsu API w zależności od tego, czy żądanie pochodzi z klienta sieci Web czy aplikacji mobilnej.
 
-Funkcjonalność aplikacji jest dzielona na wiele różnych mikrousług. Istnieją usługi odpowiedzialne za uwierzytelnianie i tożsamość, wyświetlanie listy elementów z katalogu produktów, zarządzanie koszykami zakupów użytkowników oraz umieszczanie zamówień. Każda z tych odrębnych usług ma swój własny magazyn trwały. Należy zauważyć, że nie istnieje pojedynczy magazyn danych głównych, z którym są współdziałane wszystkie usługi. Zamiast tego, koordynacja i komunikacja między usługami odbywa się zgodnie z wymaganą zasadami oraz za pomocą magistrali komunikatów.
+Funkcjonalność aplikacji jest dzielona na wiele różnych mikrousług. Istnieją usługi odpowiedzialne za uwierzytelnianie i tożsamość, wyświetlanie listy elementów z katalogu produktów, zarządzanie koszykami zakupów użytkowników oraz umieszczanie zamówień. Każda z tych odrębnych usług ma swój własny magazyn trwały. Nie istnieje pojedynczy magazyn danych głównych, za pomocą którego wszystkie usługi będą współdziałać. Zamiast tego, koordynacja i komunikacja między usługami odbywa się zgodnie z wymaganą zasadami oraz za pomocą magistrali komunikatów.
 
 Poszczególne mikrousługi są zaprojektowane inaczej, na podstawie ich indywidualnych wymagań. Oznacza to, że ich stos technologii może się różnić, chociaż są one tworzone przy użyciu platformy .NET Core i zaprojektowanej dla chmury. Prostsze usługi zapewniają dostęp do podstawowych magazynów danych za pomocą metody Create-Read-Update-Delete (CRUD), natomiast bardziej zaawansowane usługi używają opartych na domenie podejścia i wzorców do zarządzania złożonością biznesową.
 
@@ -73,5 +73,5 @@ Kod jest zorganizowany do obsługi różnych mikrousług, a w każdej mikrousłu
 Ta książka koncentruje się na aplikacjach natywnych w chmurze utworzonych przy użyciu technologii platformy Azure. Aby dowiedzieć się więcej o najlepszych rozwiązaniach mikrousług i sposobach tworzenia architektury aplikacji opartych na mikrousługach, przeczytaj książkę pomocniczą i [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 >[!div class="step-by-step"]
->[Poprzedni](candidate-apps.md)
->[Następny](map-eshoponcontainers-azure-services.md)
+>[Poprzedni](candidate-apps.md) 
+> [Dalej](map-eshoponcontainers-azure-services.md)

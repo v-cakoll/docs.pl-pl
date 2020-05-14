@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: e1044386bd6251132703c4e98a0cf2ed267d34e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b8d2e49031e59db0527de3c848d7d390095797bf
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791134"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396793"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue, interfejs
 Reprezentuje wartość w debugowanym procesie. Wartość może być wartością odczytu lub zapisu.  
@@ -28,10 +28,10 @@ Reprezentuje wartość w debugowanym procesie. Wartość może być wartością 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateBreakpoint, metoda](icordebugvalue-createbreakpoint-method.md)|Ta metoda nie jest obecnie zaimplementowana.|  
-|[GetAddress, metoda](icordebugvalue-getaddress-method.md)|Pobiera adres tego obiektu `ICorDebugValue`, który jest w trakcie debugowania.|  
-|[GetSize, metoda](icordebugvalue-getsize-method.md)|Pobiera rozmiar (w bajtach) tego obiektu `ICorDebugValue`.|  
-|[GetType, metoda](icordebugvalue-gettype-method.md)|Pobiera typ pierwotny tego obiektu `ICorDebugValue`.|  
+|[CreateBreakpoint — Metoda](icordebugvalue-createbreakpoint-method.md)|Ta metoda nie jest obecnie zaimplementowana.|  
+|[GetAddress — Metoda](icordebugvalue-getaddress-method.md)|Pobiera adres tego `ICorDebugValue` obiektu, który jest w trakcie debugowania.|  
+|[GetSize — Metoda](icordebugvalue-getsize-method.md)|Pobiera rozmiar tego obiektu w bajtach `ICorDebugValue` .|  
+|[GetType, metoda](icordebugvalue-gettype-method.md)|Pobiera typ pierwotny tego `ICorDebugValue` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ogólnie rzecz biorąc, własność obiektu wartości jest przenoszona, gdy jest zwracany. Odbiorca jest odpowiedzialny za usunięcie odwołania z obiektu po zakończeniu z obiektem.  
@@ -42,15 +42,15 @@ Reprezentuje wartość w debugowanym procesie. Wartość może być wartością 
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugValue3, interfejs](icordebugvalue3-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [ICorDebugValue3 — Interfejs](icordebugvalue3-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

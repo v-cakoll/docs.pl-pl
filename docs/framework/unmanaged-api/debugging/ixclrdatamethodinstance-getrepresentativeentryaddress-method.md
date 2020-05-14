@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetRepresentativeEntryAddress Method
+title: 'IXCLRDataMethodInstance:: GetRepresentativeEntryAddress, Metoda'
 ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance::GetRepresentativeEntryAddress
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5c79e916a06e796fc87b57eb949cccda77b8a9bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f9e16d243c0f3b45ac24776caea5bb9c32dcc1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744664"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395751"
 ---
-# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress Method
+# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance:: GetRepresentativeEntryAddress, Metoda
 
-Pobiera najbardziej reprezentatywnej adres punktu wejścia dla natywnej kompilacji wszystkie możliwe punkty wejścia dla metody.
+Pobiera najbardziej reprezentatywny adres punktu wejścia dla natywnej kompilacji wszystkich możliwych punktów wejścia dla metody.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT GetRepresentativeEntryAddress(
 ## <a name="parameters"></a>Parametry
 
 `addr`\
-[out] Adres najbardziej reprezentatywnej natywnego punktu wejścia dla metody.
+określoną Adres najbardziej reprezentatywnego macierzystego punktu wejścia dla metody.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią [ `IXCLRDataMethodInstance` interfejsu](ixclrdatamethodinstance-interface.md) i odpowiada 19 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią [ `IXCLRDataMethodInstance` interfejsu](ixclrdatamethodinstance-interface.md) i odpowiada dwudziestemu gnieździe tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)
+- [IXCLRDataMethodInstance, interfejs](ixclrdatamethodinstance-interface.md)

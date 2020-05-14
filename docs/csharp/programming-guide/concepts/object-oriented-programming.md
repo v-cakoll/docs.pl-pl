@@ -1,13 +1,13 @@
 ---
 title: Programowanie zorientowane obiektowo (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200096"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396684"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -87,13 +87,12 @@ class SampleClass
 }
 ```
 
-Większość właściwości ma metody lub procedury ustawiające i pobierające wartość właściwości. Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie. W języku C# można pominąć metodę `get` lub `set` właściwość. Jednak właściwości zaimplementowane domyślnie nie mogą być tylko do zapisu. Właściwości, które są implementowane w trybie tylko do odczytu, można ustawić w konstruktorach klasy zawierającej.
+Większość właściwości ma metody lub procedury ustawiające i pobierające wartość właściwości. Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie. W języku C# można pominąć `get` `set` metodę lub właściwość. Jednak właściwości zaimplementowane domyślnie nie mogą być tylko do zapisu. Właściwości, które są implementowane w trybie tylko do odczytu, można ustawić w konstruktorach klasy zawierającej.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [get](../../language-reference/keywords/get.md)
-
-- [zbiór](../../language-reference/keywords/set.md)
+- [Pobierz](../../language-reference/keywords/get.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Metody
 
@@ -104,7 +103,7 @@ Aby zdefiniować metodę klasy:
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ Klasa może mieć kilka implementacji lub *przeciążenia*tej samej metody, któ
 Aby przeciążyć metodę:
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 W większości przypadków deklaruje metodę w ramach definicji klasy. Jednak w języku C# obsługiwane są również *metody rozszerzające* , które umożliwiają dodawanie metod do istniejącej klasy poza rzeczywistą definicją klasy.
@@ -156,10 +155,8 @@ Aby uzyskać więcej informacji na temat finalizatorów i wyrzucania elementów 
 Zdarzenia umożliwiają klasie lub obiektowi powiadamianie innych klas lub obiektów w przypadku wystąpienia czegoś zainteresowania. Klasa, która wysyła (lub podnosi) zdarzenie, jest nazywana *wydawcą* i klasy, które odbierają (lub obsługują) zdarzenie są nazywane *subskrybentami*. Aby uzyskać więcej informacji o zdarzeniach, sposobie ich podniesienia i obsłudze, zobacz [zdarzenia](../../../standard/events/index.md).
 
 - Aby zadeklarować zdarzenie w klasie, użyj słowa kluczowego [zdarzenia](../../language-reference/keywords/event.md) .
-
 - Aby zgłosić zdarzenie, wywołaj delegata zdarzenia.
-
-- Aby subskrybować zdarzenie, użyj `+=` operatora; Aby anulować subskrypcję zdarzenia, użyj `-=` operatora.
+- Aby subskrybować zdarzenie, użyj `+=` operatora; aby anulować subskrypcję zdarzenia, użyj `-=` operatora.
 
 #### <a name="nested-classes"></a>Klasy zagnieżdżone
 
@@ -187,14 +184,14 @@ Wszystkie klasy i elementy członkowskie klasy mogą określać poziom dostępu 
 
 Dostępne są następujące Modyfikatory dostępu:
 
-|Modyfikator języka C#|Definicja|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego innego kodu w tym samym zestawie lub innym zestawie, który odwołuje się do niego.|
-|[private](../../language-reference/keywords/private.md)|Do typu lub elementu członkowskiego można uzyskać dostęp tylko w kodzie w tej samej klasie.|
-|[protected](../../language-reference/keywords/protected.md)|Do typu lub elementu członkowskiego można uzyskać dostęp tylko za pomocą kodu w tej samej klasie lub w klasie pochodnej.|
-|[internal](../../language-reference/keywords/internal.md)|Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie, ale nie z innego zestawu.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie lub przez dowolną klasę pochodną w innym zestawie.|
-|[private protected](../../language-reference/keywords/private-protected.md)|Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą kodu w tej samej klasie lub w klasie pochodnej w ramach zestawu klasy bazowej.|
+| Modyfikator języka C# | Definicja |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego innego kodu w tym samym zestawie lub innym zestawie, który odwołuje się do niego. |
+| [private](../../language-reference/keywords/private.md) | Do typu lub elementu członkowskiego można uzyskać dostęp tylko w kodzie w tej samej klasie. |
+| [protected](../../language-reference/keywords/protected.md) | Do typu lub elementu członkowskiego można uzyskać dostęp tylko za pomocą kodu w tej samej klasie lub w klasie pochodnej. |
+| [internal](../../language-reference/keywords/internal.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie, ale nie z innego zestawu. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie lub przez dowolną klasę pochodną w innym zestawie. |
+| [private protected](../../language-reference/keywords/private-protected.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą kodu w tej samej klasie lub w klasie pochodnej w ramach zestawu klasy bazowej. |
 
 Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../classes-and-structs/access-modifiers.md).
 
@@ -212,15 +209,18 @@ Po utworzeniu wystąpienia klasy można przypisać wartości do właściwości i
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 Aby przypisać wartości do właściwości podczas procesu tworzenia wystąpienia klasy, należy użyć inicjatorów obiektów:
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Aby uzyskać więcej informacji, zobacz:
@@ -259,15 +259,18 @@ Aby utworzyć wystąpienie typu anonimowego:
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Aby uzyskać więcej informacji, zobacz: [Typy anonimowe](../classes-and-structs/anonymous-types.md).
 
 ## <a name="inheritance"></a>Dziedziczenie
 
-Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa, rozszerza i modyfikuje zachowanie zdefiniowane w innej klasie. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Jednak wszystkie klasy w języku C# niejawnie dziedziczą <xref:System.Object> z klasy, która obsługuje hierarchię klas .NET i zapewnia usługi niskiego poziomu dla wszystkich klas.
+Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa, rozszerza i modyfikuje zachowanie zdefiniowane w innej klasie. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Jednak wszystkie klasy w języku C# niejawnie dziedziczą z <xref:System.Object> klasy, która obsługuje hierarchię klas .NET i zapewnia usługi niskiego poziomu dla wszystkich klas.
 
 > [!NOTE]
 > Język C# nie obsługuje dziedziczenia wielokrotnego. Oznacza to, że można określić tylko jedną klasę bazową dla klasy pochodnej.
@@ -275,7 +278,7 @@ Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa, rozszer
 Aby dziedziczyć z klasy bazowej:
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 Domyślnie wszystkie klasy mogą być dziedziczone. Można jednak określić, czy Klasa nie może być używana jako klasa bazowa, ani utworzyć klasy, która może być używana tylko jako klasa bazowa.
@@ -295,8 +298,7 @@ public abstract class B { }
 Aby uzyskać więcej informacji, zobacz:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
-- [streszczeń](../../language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Zastępowanie elementów członkowskich
 
@@ -304,12 +306,12 @@ Domyślnie Klasa pochodna dziedziczy wszystkich członków z jej klasy bazowej. 
 
 Poniższe Modyfikatory służą do kontrolowania sposobu przesłania właściwości i metod:
 
-|Modyfikator języka C#|Definicja|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|Zezwala na przesłanianie składowej klasy w klasie pochodnej.|
-|[override](../../language-reference/keywords/override.md)|Przesłania element członkowski wirtualny (zastępujący) zdefiniowany w klasie bazowej.|
-|[streszczeń](../../language-reference/keywords/abstract.md)|Wymaga, aby element członkowski klasy był zastępowany w klasie pochodnej.|
-|[new, modyfikator](../../language-reference/keywords/new-modifier.md)|Ukrywa składową dziedziczoną z klasy bazowej|
+| Modyfikator języka C# | Definicja |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | Zezwala na przesłanianie składowej klasy w klasie pochodnej. |
+| [override](../../language-reference/keywords/override.md) | Przesłania element członkowski wirtualny (zastępujący) zdefiniowany w klasie bazowej. |
+| [abstract](../../language-reference/keywords/abstract.md) | Wymaga, aby element członkowski klasy był zastępowany w klasie pochodnej. |
+| [new, modyfikator](../../language-reference/keywords/new-modifier.md) | Ukrywa składową dziedziczoną z klasy bazowej |
 
 ## <a name="interfaces"></a>Interfejsy
 
@@ -320,7 +322,7 @@ Aby zdefiniować interfejs:
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ Aby zaimplementować interfejs w klasie:
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 Aby utworzyć wystąpienie klasy generycznej:
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Typy ogólne](../../../standard/generics/index.md)
-
-- [Typy ogólne](../generics/index.md)
+- [Typy ogólne w .NET](../../../standard/generics/index.md)
+- [Typy ogólne — Przewodnik programowania w języku C#](../generics/index.md)
 
 ## <a name="delegates"></a>Delegaty
 
@@ -383,10 +384,11 @@ Aby utworzyć odwołanie do metody, która jest zgodna z sygnaturą określoną 
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

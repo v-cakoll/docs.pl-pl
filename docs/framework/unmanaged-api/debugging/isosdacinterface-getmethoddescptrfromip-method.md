@@ -1,5 +1,5 @@
 ---
-title: Metoda ISOSDacInterface::GetMethodDescPtrFromIP
+title: 'ISOSDacInterface:: GetMethodDescPtrFromIP, Metoda'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetMethodDescPtrFromIP Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764744"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396930"
 ---
-# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Metoda ISOSDacInterface::GetMethodDescPtrFromIP
+# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface:: GetMethodDescPtrFromIP, Metoda
 
-Pobiera wskaźnik MethodDesc odpowiadającej metody zawierającą adres instrukcji natywnych.
+Pobiera wskaźnik MethodDesc odpowiadającego metodzie zawierającej podanego adresu instrukcji macierzystej.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDescPtrFromIP(
 ## <a name="parameters"></a>Parametry
 
 `ip`\
-[in] Adres w metodzie w czasie wykonywania.
+podczas Adres w ramach metody w czasie wykonywania.
 
 `ppMD`\
-[out] Adres `MethodDesc` dla określonej metody.
+określoną Adres `MethodDesc` dla określonej metody.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią [ `ISOSDacInterface` interfejsu](isosdacinterface-interface.md) i odnosi się do 21 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią [ `ISOSDacInterface` interfejsu](isosdacinterface-interface.md) i odnosi się do 22 gniazda tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Interfejs ISOSDacInterface](isosdacinterface-interface.md)
+- [ISOSDacInterface, interfejs](isosdacinterface-interface.md)

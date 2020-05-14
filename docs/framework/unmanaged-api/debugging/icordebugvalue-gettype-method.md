@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: 7def2bd2c0f3ab501fdb918a0e9a7ee154159b78
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a3cd62384ad87d072cd715d23d0e9ee9dac23270
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791156"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396740"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType — Metoda
 Pobiera typ pierwotny tego obiektu "ICorDebugValue".  
@@ -38,17 +38,17 @@ HRESULT GetType (
  określoną Wskaźnik do wartości wyliczenia "CorElementType —", która wskazuje typ wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli obiekt jest złożonym typem czasu wykonywania, ten typ może być badany za pomocą odpowiednich podklas interfejsu `ICorDebugValue`. Na przykład "ICorDebugObjectValue", który dziedziczy z `ICorDebugValue`, reprezentuje typ złożony.  
+ Jeśli obiekt jest złożonym typem czasu wykonywania, ten typ może być badany za pomocą odpowiednich podklas `ICorDebugValue` interfejsu. Na przykład "ICorDebugObjectValue", który dziedziczy po `ICorDebugValue` , reprezentuje typ złożony.  
   
- Metody `GetType` i [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) każda zwracają informacje o typie wartości. Są one zastępowane przez metodę [ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md) z uwzględnieniem typów ogólnych.  
+ `GetType`Metody i [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) każda zwracają informacje o typie wartości. Są one zastępowane przez metodę [ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md) z uwzględnieniem typów ogólnych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

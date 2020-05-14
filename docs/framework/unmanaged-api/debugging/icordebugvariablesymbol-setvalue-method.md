@@ -2,12 +2,12 @@
 title: 'ICorDebugVariableSymbol:: SetValue — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: fe6b63e4c0706dd69478753b3512f606e73bee7c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790857"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397078"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol:: SetValue — Metoda
 Przypisuje wartość tablicy bajtów do zmiennej.  
@@ -39,7 +39,7 @@ HRESULT SetValue(
  podczas Kontekst wątku używany do zapisania wartości.  
   
  `cbValue`  
- podczas Rozmiar w bajtach buforu `pValue`.  
+ podczas Rozmiar w bajtach `pValue` buforu.  
   
  `pValue`  
  podczas Bufor, który zawiera wartość do ustawienia.  
@@ -50,15 +50,15 @@ HRESULT SetValue(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [ICorDebugVariableSymbol, interfejs](icordebugvariablesymbol-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

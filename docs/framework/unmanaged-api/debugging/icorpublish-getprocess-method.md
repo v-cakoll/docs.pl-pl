@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: 46f047dbec7ff008873540806b76ffe7085086b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cd2238ac67713564922be440ce64a2ebc4bbf44
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178422"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396337"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess — Metoda
-Pobiera [ICorPublishProcess wystąpienie,](icorpublishprocess-interface.md) które reprezentuje proces o określonym identyfikatorze.  
+Pobiera wystąpienie [ICorPublishProcess](icorpublishprocess-interface.md) , które reprezentuje proces o określonym identyfikatorze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,23 +36,23 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>Parametry  
  `pid`  
- [w] Identyfikator procesu.  
+ podczas Identyfikator procesu.  
   
  `ppProcess`  
- [na zewnątrz] Wskaźnik do adresu wystąpienia, `ICorPublishProcess` które reprezentuje proces.  
+ określoną Wskaźnik do adresu `ICorPublishProcess` wystąpienia, które reprezentuje proces.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetProcess`kończy się niepowodzeniem, jeśli proces nie istnieje lub nie jest zarządzanym procesem, który może zostać debugowany przez bieżącego użytkownika.  
+ `GetProcess`Niepowodzenie, jeśli proces nie istnieje lub nie jest procesem zarządzanym, który może być debugowany przez bieżącego użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ICorPublish, interfejs](icorpublish-interface.md)
+- [ICorPublish — Interfejs](icorpublish-interface.md)

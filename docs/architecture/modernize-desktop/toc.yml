@@ -1,0 +1,15 @@
+- name: Modernizacja aplikacji klasycznych w systemie Windows 10 przy użyciu programu .NET Core 3.1
+  href: index.md
+  items:
+    - name: Dlaczego warto korzystać z nowoczesnych aplikacji klasycznych
+      href: why-modern-applications.md
+    - name: Co nowego w programie .NET Core for Desktop?
+      href: whats-new-dotnet-core.md
+    - name: Migrowanie nowoczesnych aplikacji klasycznych
+      href: migrate-modern-applications.md
+    - name: Migracja w systemie Windows 10
+      href: windows-migration.md
+    - name: Przykład migracji do programu .NET Core 3.1
+      href: example-migration-core.md
+    - name: Wdrażanie nowoczesnych aplikacji klasycznych
+      href: deploy-modern-applications.md

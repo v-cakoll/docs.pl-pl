@@ -15,6 +15,8 @@
       href: microservices/
     - name: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
       href: serverless/
+    - name: Modernizacja aplikacji klasycznych w systemie Windows 10 przy użyciu programu .NET Core 3.1
+      href: modernize-desktop/
 - name: Podgląd książek elektronicznych
   expanded: true
   items:

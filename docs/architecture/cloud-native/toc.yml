@@ -86,9 +86,11 @@
       items:
         - name: Zabezpieczenia platformy Azure dla aplikacji natywnych dla chmury
           href: azure-security.md
-    - name: Usługa DevOps natywna dla chmury
+    - name: DevOps
       href: devops.md
       items:
+        - name: Flagi funkcji
+          href: feature-flags.md
         - name: Infrastruktura jako kod
           href: infrastructure-as-code.md
         - name: Pakiety aplikacji natywnych dla chmury

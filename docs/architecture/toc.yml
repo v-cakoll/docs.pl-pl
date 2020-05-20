@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
       href: serverless/
+    - name: Projektowanie natywnych dla chmury aplikacji platformy .NET dla platformy Azure
+      href: cloud-native/
     - name: Modernizacja aplikacji klasycznych w systemie Windows 10 przy użyciu programu .NET Core 3.1
       href: modernize-desktop/
 - name: Podgląd książek elektronicznych
   expanded: true
   items:
-    - name: Projektowanie natywnych dla chmury aplikacji platformy .NET dla platformy Azure
-      href: cloud-native/
     - name: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
       href: blazor-for-web-forms-developers/

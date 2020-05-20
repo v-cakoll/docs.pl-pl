@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 47477bb473df8b568844d07bea704df681c9b95d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448609"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441880"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod — Interfejs
 Zawiera informacje dotyczące funkcji Edytuj i Kontynuuj.  
@@ -28,15 +28,15 @@ Zawiera informacje dotyczące funkcji Edytuj i Kontynuuj.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetDocumentsForMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Pobiera dokumenty, w których ta metoda zawiera wiersze.|  
-|[GetDocumentsForMethodCount, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Pobiera liczbę dokumentów, w których ta metoda zawiera wiersze.|  
-|[GetFileNameFromOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Pobiera nazwę pliku dla wiersza skojarzonego z przesunięcia.|  
-|[GetLineFromOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Pobiera informacje o wierszu skojarzone z przesunięciem.|  
-|[GetSourceExtentInDocument, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Pobiera najmniejszą linię początkową i największą linię końcową dla metody w określonym dokumencie.|  
+|[GetDocumentsForMethod, metoda](isymencunmanagedmethod-getdocumentsformethod-method.md)|Pobiera dokumenty, w których ta metoda zawiera wiersze.|  
+|[GetDocumentsForMethodCount, metoda](isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Pobiera liczbę dokumentów, w których ta metoda zawiera wiersze.|  
+|[GetFileNameFromOffset, metoda](isymencunmanagedmethod-getfilenamefromoffset-method.md)|Pobiera nazwę pliku dla wiersza skojarzonego z przesunięcia.|  
+|[GetLineFromOffset, metoda](isymencunmanagedmethod-getlinefromoffset-method.md)|Pobiera informacje o wierszu skojarzone z przesunięciem.|  
+|[GetSourceExtentInDocument, metoda](isymencunmanagedmethod-getsourceextentindocument-method.md)|Pobiera najmniejszą linię początkową i największą linię końcową dla metody w określonym dokumencie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)

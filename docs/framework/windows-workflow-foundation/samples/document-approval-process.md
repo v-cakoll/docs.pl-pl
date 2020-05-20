@@ -1,13 +1,14 @@
 ---
 title: Proces zatwierdzania dokumentu
+description: Ten przykład pokazuje wiele funkcji Windows Workflow Foundation i Windows Communication Foundation w scenariuszu procesu zatwierdzania dokumentów.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710850"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421413"
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
 
@@ -18,7 +19,7 @@ W tym przykładzie pokazano, jak używać wielu funkcji Windows Workflow Foundat
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -90,7 +91,7 @@ Z punktu widzenia aplikacji Menedżera zatwierdzania proces zatwierdzania dział
 
 2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3. Aby uruchomić rozwiązanie, uruchom aplikację Menedżer zatwierdzania, klikając prawym przyciskiem myszy projekt zatwierdzania w **Eksplorator rozwiązań** i klikając polecenie **Debuguj**->**Uruchom** nowe wystąpienie w menu po kliknięciu prawym klawiszem myszy.
+3. Aby uruchomić rozwiązanie, uruchom aplikację Menedżer zatwierdzania, klikając prawym przyciskiem myszy projekt zatwierdzania w **Eksplorator rozwiązań** a następnie klikając polecenie **Debuguj** -> **Uruchom** nowe wystąpienie w menu rozwijanym.
 
     Poczekaj na dane wyjściowe menedżera, aby poinformować, że jest to gotowe.
 
@@ -104,11 +105,11 @@ Z punktu widzenia aplikacji Menedżera zatwierdzania proces zatwierdzania dział
 
 4. Kliknij przycisk **odkryj**, poczekaj, aż przycisk **Subskrybuj** zostanie włączony.
 
-5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. Dla jednego klienta Użyj `UserType1` i innego typu `UserType2`.
+5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. Dla jednego klienta Użyj `UserType1` i innego typu `UserType2` .
 
-6. W `UserType1` klienta wybierz typ pojedynczego zatwierdzenia z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**.
+6. W `UserType1` kliencie wybierz typ pojedynczego zatwierdzenia z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**.
 
-7. W kliencie `UserType2` zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź** lub **Odrzuć**. Wyniki powinny być widoczne w kliencie `UserType1`.
+7. W `UserType2` kliencie zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź** lub **Odrzuć**. Wyniki powinny być wyświetlane na `UserType1` kliencie.
 
 ##### <a name="to-run-the-quorum-approval-scenario"></a>Aby uruchomić Scenariusz zatwierdzania kworum
 
@@ -120,11 +121,11 @@ Z punktu widzenia aplikacji Menedżera zatwierdzania proces zatwierdzania dział
 
 4. Kliknij przycisk **odkryj**, poczekaj, aż przycisk **Subskrybuj** zostanie włączony.
 
-5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. Dla jednego z klientów `UserType1` i drugi `UserType2`.
+5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. Dla jednego klienta `UserType1` i drugiego typu `UserType2` .
 
-6. W `UserType1` klienta wybierz typ zatwierdzenia kworum z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**. Ta prośba o zaakceptowanie lub odrzucenie dokumentu przez dwóch klientów `UserType2`. Chociaż obu klientów `UserType2` muszą reagować, tylko jeden klient musi zatwierdzić dokument do zatwierdzenia.
+6. W `UserType1` kliencie wybierz typ zatwierdzenia kworum z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**. Ta prośba o `UserType2` zaakceptowanie lub odrzucenie dokumentu przez dwóch klientów. Chociaż obydwie `UserType2` klienci muszą reagować, tylko jeden klient musi zatwierdzić dokument do zatwierdzenia.
 
-7. Na klientach `UserType2` zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź** lub **Odrzuć**. Wyniki powinny być widoczne w kliencie `UserType1`.
+7. Na `UserType2` klientach zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź** lub **Odrzuć**. Wyniki powinny być wyświetlane na `UserType1` kliencie.
 
 ##### <a name="to-run-the-complex-approval-scenario"></a>Aby uruchomić złożony Scenariusz zatwierdzania
 
@@ -136,15 +137,15 @@ Z punktu widzenia aplikacji Menedżera zatwierdzania proces zatwierdzania dział
 
 4. Kliknij przycisk **odkryj**, poczekaj, aż przycisk **Subskrybuj** zostanie włączony.
 
-5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. W przypadku jednego klienta `UserType1`, w dwóch `UserType2`typu, i w ostatnim `UserType3`.
+5. Wpisz dowolną nazwę użytkownika i kliknij przycisk **Subskrybuj**. Do użycia w przypadku jednego klienta `UserType1` w przypadku dwóch typów użycia `UserType2` i w ostatnim użyciu `UserType3` .
 
-6. W `UserType1` klienta wybierz typ pojedynczego zatwierdzenia z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**.
+6. W `UserType1` kliencie wybierz typ pojedynczego zatwierdzenia z menu rozwijanego i wpisz nazwę dokumentu i zawartość. Kliknij pozycję **Żądaj zatwierdzenia**.
 
-7. Na klientach `UserType2` zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź**, dokument jest przesyłany do klienta `UserType3`.
+7. Na `UserType2` klientach zostanie wyświetlony dokument oczekujący na zatwierdzenie. Zaznacz go i naciśnij przycisk **Zatwierdź**, dokument jest przesyłany do `UserType3` klienta.
 
-    Jeśli dokument zostanie zatwierdzony przez pierwszy `UserType2` kworum, dokument jest przesyłany do `UserType3` klienta.
+    Jeśli dokument zostanie zatwierdzony przez pierwsze `UserType2` kworum, dokument jest przesyłany do `UserType3` klienta.
 
-8. Zatwierdź lub Odrzuć dokument z klienta `UserType3`. Wyniki powinny być widoczne w kliencie `UserType1`.
+8. Zatwierdź lub Odrzuć dokument z `UserType3` klienta. Wyniki powinny być wyświetlane na `UserType1` kliencie.
 
 ##### <a name="to-clean-up"></a>Aby oczyścić
 

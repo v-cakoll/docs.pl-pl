@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449266"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441623"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature — Metoda
 Pobiera sygnaturę stałej.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parametry  
  `cSig`  
- podczas Długość buforu, na który wskazuje parametr `pcSig`.  
+ podczas Długość buforu, `pcSig` do którego wskazuje parametr.  
   
  `pcSig`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania podpisu.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora wymaganego do zawierania podpisu.  
   
  `sig`  
  określoną Bufor przechowujący podpis.  
@@ -53,6 +53,6 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedConstant, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetValue, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant — Interfejs](isymunmanagedconstant-interface.md)
+- [GetName — Metoda](isymunmanagedconstant-getname-method.md)
+- [GetValue — Metoda](isymunmanagedconstant-getvalue-method.md)

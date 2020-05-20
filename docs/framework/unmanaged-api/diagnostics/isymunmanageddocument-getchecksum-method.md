@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449202"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441100"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum — Metoda
 Pobiera sumę kontrolną.  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametry  
  `cData`  
- podczas Długość buforu dostarczonego przez parametr `data`  
+ podczas Długość buforu dostarczonego przez `data` parametr  
   
  `pcData`  
  określoną Rozmiar i długość sumy kontrolnej w bajtach.  
@@ -49,4 +49,4 @@ HRESULT GetCheckSum(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument, interfejs](isymunmanageddocument-interface.md)

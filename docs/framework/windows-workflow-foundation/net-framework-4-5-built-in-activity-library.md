@@ -1,17 +1,18 @@
 ---
-title: .NET framework 4.5 wbudowana biblioteka działań
+title: Wbudowana Biblioteka działań .NET Framework 4,5
+description: W tym artykule opisano nową bibliotekę działań z rozszerzoną funkcją, która jest częścią .NET Framework 4,5.
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
-ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ce4420759512ec3adfff70bf0c365014d96ec7b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786012"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421491"
 ---
-# <a name="net-framework-45-built-in-activity-library"></a>.NET framework 4.5 wbudowana biblioteka działań
+# <a name="net-framework-45-built-in-activity-library"></a>Wbudowana Biblioteka działań .NET Framework 4,5
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera nową bibliotekę działanie z następującymi rozszerzona funkcjonalność. Następujące typy działań:
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]obejmuje nową bibliotekę działań z rozwiniętymi funkcjami. Typy działań obejmują następujące elementy:
 
 - [Przepływ sterowania](control-flow-activities-in-wf.md)
 
@@ -25,7 +26,7 @@ ms.locfileid: "61786012"
 
 - [Typy pierwotne](primitives-activities-in-wf.md)
 
-- [Transakcja](transaction-activities-in-wf.md)
+- [Transaction](transaction-activities-in-wf.md)
 
 - [Kolekcja](collection-activities-in-wf.md)
 
@@ -33,4 +34,4 @@ ms.locfileid: "61786012"
 
 - [Migracja](migration-activity-in-wf.md)
 
-Działania w Biblioteka działań wbudowanych można składa się w ramach przepływów pracy lub używać razem z działań niestandardowych. Działania w wbudowana biblioteka działań są zapieczętowane; nie są przeznaczone do służyć do tworzenia nowych funkcji poprzez dziedziczenie.
+Działania w wbudowanej bibliotece działań mogą być składają się na przepływy pracy lub używane razem z działaniami niestandardowymi. Działania w wbudowanej bibliotece działań są zapieczętowane; nie są przeznaczone do użycia w celu tworzenia nowych funkcji przez dziedziczenie.

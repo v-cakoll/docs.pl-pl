@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448657"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441932"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda
 Pobiera nazwę pliku dla wiersza skojarzonego z przesunięcia.  
@@ -38,13 +38,13 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parametry  
  `dwOffset`  
- podczas `ULONG32`, który zawiera przesunięcie.  
+ podczas A `ULONG32` , który zawiera przesunięcie.  
   
  `cchName`  
- podczas `ULONG32`, który wskazuje rozmiar buforu `szName`.  
+ podczas `ULONG32`Wskazuje rozmiar `szName` buforu.  
   
  `pcchName`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania nazw plików.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania nazw plików.  
   
  `szName`  
  określoną Bufor zawierający nazwy plików.  
@@ -57,4 +57,4 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod — Interfejs](isymencunmanagedmethod-interface.md)

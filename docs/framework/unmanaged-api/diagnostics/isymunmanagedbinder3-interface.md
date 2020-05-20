@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449299"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441594"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 — Interfejs
-Rozszerza interfejs segregatora symboli. Uzyskaj ten interfejs, wywołując `QueryInterface` na obiekcie, który implementuje interfejs `ISymUnmanagedBinder`.  
+Rozszerza interfejs segregatora symboli. Uzyskaj ten interfejs, wywołując `QueryInterface` obiekt, który implementuje `ISymUnmanagedBinder` interfejs.  
   
 > [!IMPORTANT]
 > Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych programu (PDB) z niezaufanego źródła.  
@@ -31,13 +31,13 @@ Rozszerza interfejs segregatora symboli. Uzyskaj ten interfejs, wywołując `Que
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReaderFromCallback, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Zezwala użytkownikowi na implementowanie lub dostarczanie za pośrednictwem wywołania zwrotnego albo `IID_IDiaReadExeAtRVACallback` lub `IID_IDiaReadExeAtOffsetCallback`, aby uzyskać informacje o katalogu debugowania z pamięci|  
+|[GetReaderFromCallback, metoda](isymunmanagedbinder3-getreaderfromcallback-method.md)|Zezwala użytkownikowi na implementowanie lub dostarczanie za pośrednictwem wywołania zwrotnego albo `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` uzyskanie informacji o katalogu debugowania z pamięci|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [ISymUnmanagedBinder2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder — Interfejs](isymunmanagedbinder-interface.md)
+- [ISymUnmanagedBinder2, interfejs](isymunmanagedbinder2-interface.md)

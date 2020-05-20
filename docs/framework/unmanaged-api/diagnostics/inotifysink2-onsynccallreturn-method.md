@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1bda761-6292-4750-a14b-7d5db8f33456
 topic_type:
 - apiref
-ms.openlocfilehash: d2d90d33ce7a8135f40a0fb4039a2418dd1987ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff1dabcfc366607639cd98be4392f8dd59dc83a1
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435971"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442010"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn — Metoda
 Wywoływany, gdy wywołanie zwraca wartość.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- podczas Identyfikator wywołania, z którego są zwracane. Zobacz [strukturę CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ podczas Identyfikator wywołania, z którego są zwracane. Zobacz [strukturę CALL_ID](call-id-structure.md).  
   
  `in_pBuffer`  
  podczas Bufor wywołań.  
@@ -54,6 +54,6 @@ HRESULT OnSyncCallReturn
   
 ## <a name="see-also"></a>Zobacz także
 
-- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 — Interfejs](inotifysink2-interface.md)
+- [INotifySource2 — Interfejs](inotifysource2-interface.md)
+- [INotifyConnection2 — Interfejs](inotifyconnection2-interface.md)

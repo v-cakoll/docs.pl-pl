@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: ca5afa8c0cf0198dbc8ab65824605f18c22dcdbb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449257"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441417"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant — Interfejs
 Zapewnia dostęp do stałych niezarządzanych.  
@@ -28,13 +28,13 @@ Zapewnia dostęp do stałych niezarządzanych.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Pobiera nazwę stałej.|  
-|[GetSignature, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Pobiera sygnaturę stałej.|  
-|[GetValue, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Pobiera wartość stałej.|  
+|[GetName — Metoda](isymunmanagedconstant-getname-method.md)|Pobiera nazwę stałej.|  
+|[GetSignature, metoda](isymunmanagedconstant-getsignature-method.md)|Pobiera sygnaturę stałej.|  
+|[GetValue — Metoda](isymunmanagedconstant-getvalue-method.md)|Pobiera wartość stałej.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)

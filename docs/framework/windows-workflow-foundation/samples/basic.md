@@ -1,13 +1,14 @@
 ---
 title: Basic — WF
+description: Ten artykuł odnosi się do przykładów demonstrujących podstawowe funkcje Windows Workflow Foundation, na przykład działania wbudowane i niestandardowe.
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 5e7084a405dce0f57cb4ef391415b69041b6de6e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2f5ba92b6bb2718773f6ae965596ff175f92cbfc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716774"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421374"
 ---
 # <a name="basic"></a>Podstawowy
 Ta sekcja zawiera przykłady demonstrujące podstawowe funkcje Windows Workflow Foundation (WF).  
@@ -19,7 +20,7 @@ Ta sekcja zawiera przykłady demonstrujące podstawowe funkcje Windows Workflow 
  [Działania niestandardowe](custom-activities.md)  
  Zawiera przykłady demonstrujące Tworzenie działań niestandardowych.  
   
- [Projektant](designer.md)  
+ [Projektantów](designer.md)  
  Zawiera przykłady, które pokazują, jak używać systemu Windows Projektant przepływu pracy.  
   
  [Rehostowanie projektanta](designer-rehosting.md)  

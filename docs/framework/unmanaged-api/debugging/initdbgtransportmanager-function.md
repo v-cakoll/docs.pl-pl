@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e18ceb25b9c58a9710ef967cb071e3ef55beea8c
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103288"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421049"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager — Funkcja
 Inicjuje menedżera transportu, aby połączyć się ze zdalnym elementem docelowym na potrzeby wyliczenia procesu i środowiska uruchomieniowego.  
@@ -34,7 +34,7 @@ HRESULT InitDbgTransportManager ();
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Prawnego.  
+ Powodzenie.  
   
  E_OUTOFMEMORY  
  Funkcja nie może przydzielić pamięci dla menedżera transportu.  
@@ -43,7 +43,7 @@ HRESULT InitDbgTransportManager ();
  Inne błędy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 657d2d638a419ba88d4cf7152f4505de1bd23706
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790508"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421075"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum — Interfejs
 Podklasa interfejsu [ICorPublishEnum](icorpublishenum-interface.md) , która dostarcza metody umożliwiające przechodzenie kolekcji obiektów [ICorPublishProcess](icorpublishprocess-interface.md) .  
@@ -28,23 +28,23 @@ Podklasa interfejsu [ICorPublishEnum](icorpublishenum-interface.md) , która dos
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](icorpublishprocessenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorPublishProcess` z kolekcji, rozpoczynając od bieżącego położenia.|  
+|[Next — Metoda](icorpublishprocessenum-next-method.md)|Pobiera określoną liczbę `ICorPublishProcess` wystąpień z kolekcji, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs `ICorPublishProcessEnum` implementuje metody interfejsu abstrakcyjnego, [ICorPublishEnum](icorpublishenum-interface.md).  
+ `ICorPublishProcessEnum`Interfejs implementuje metody interfejsu abstrakcyjnego, [ICorPublishEnum](icorpublishenum-interface.md).  
   
- Wystąpienie `ICorPublishProcessEnum` jest tworzone przez metodę [ICorPublish:: EnumProcesses —](icorpublish-enumprocesses-method.md) . Przechodzenie kolekcji obiektów `ICorPublishProcess` jest oparte na kryteriach filtrowania określonych w momencie utworzenia wystąpienia `ICorPublishProcessEnum`.  
+ `ICorPublishProcessEnum`Wystąpienie jest tworzone przez metodę [ICorPublish:: EnumProcesses —](icorpublish-enumprocesses-method.md) . Przechodzenie kolekcji `ICorPublishProcess` obiektów jest oparte na kryteriach filtrowania określonych w momencie `ICorPublishProcessEnum` utworzenia wystąpienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub. idl, CorPub. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
-- [CorpubPublish, klasa coclass](corpubpublish-coclass.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
+- [CorpubPublish — Klasa coclass](corpubpublish-coclass.md)

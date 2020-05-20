@@ -1,19 +1,20 @@
 ---
 title: Proceduralne przepływy pracy
+description: W programie Workflow Foundation przepływy pracy proceduralnej korzystają z metod sterowania przepływem podobnych do tych, które znajdują się w językach proceduralnych.
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: d1edd73b2276d0a3918b61c8da2d04769d09e7c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97664c1352928e7d05c2ed15fc118dd21474cfc3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956118"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421439"
 ---
 # <a name="procedural-workflows"></a>Proceduralne przepływy pracy
-Proceduralne przepływy pracy używają metod sterowania przepływem podobnych do tych, które znajdują się w językach proceduralnych. Te konstrukcje obejmują `While` i `If`. Te przepływy pracy mogą być swobodnie składane przy użyciu innych działań <xref:System.Activities.Statements.Flowchart> sterowania <xref:System.Activities.Statements.Sequence>przepływem, takich jak i.  
+Proceduralne przepływy pracy używają metod sterowania przepływem podobnych do tych, które znajdują się w językach proceduralnych. Te konstrukcje obejmują `While` i `If` . Te przepływy pracy mogą być swobodnie składane przy użyciu innych działań sterowania przepływem, takich jak <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> .  
   
 ## <a name="controlling-execution-flow"></a>Sterowanie przepływem wykonywania  
- Biblioteka działań przepływu pracy ma działania dotyczące modelowania większości metod kontroli przepływu używanych w językach proceduralnych. Należą do nich następujące elementy:  
+ Biblioteka działań przepływu pracy ma działania dotyczące modelowania większości metod kontroli przepływu używanych w językach proceduralnych. Należą do nich:  
   
 - <xref:System.Activities.Statements.While>  
   

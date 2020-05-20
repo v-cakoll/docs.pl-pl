@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178387"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421127"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName — Metoda
 Pobiera pełną ścieżkę pliku wykonywalnego dla procesu, do którego odwołuje się ten [ICorPublishProcess](icorpublishprocess-interface.md).  
@@ -38,23 +38,23 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [w] Rozmiar tablicy. `szName`  
+ podczas Rozmiar `szName` tablicy.  
   
  `pcchName`  
- [na zewnątrz] Liczba znaków szerokości zwróconych `szName` w tablicy.  
+ określoną Liczba znaków dwubajtowych zwracanych w `szName` tablicy.  
   
  `szName`  
- [na zewnątrz] Tablica do przechowywania nazwy, w tym pełnej ścieżki, pliku wykonywalnego. Nazwa jest anulowana z wartością null.  
+ określoną Tablica do przechowywania nazwy, łącznie z pełną ścieżką pliku wykonywalnego. Nazwa jest zakończona wartością null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorPublishProcess — Interfejs](icorpublishprocess-interface.md)

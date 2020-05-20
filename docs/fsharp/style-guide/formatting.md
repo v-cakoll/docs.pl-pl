@@ -1,49 +1,49 @@
 ---
 title: Wskazówki dotyczące formatowania kodu F#
-description: Poznaj wskazówki dotyczące formatowania kodu języka F#.
+description: 'Poznaj wskazówki dotyczące formatowania kodu F #.'
 ms.date: 11/04/2019
-ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102492"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617272"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
 
-Ten artykuł zawiera wskazówki dotyczące formatowania kodu, tak aby kod języka F# był:
+Ten artykuł zawiera wskazówki dotyczące sposobu formatowania kodu w taki sposób, aby kod języka F #:
 
 * Bardziej czytelne
 * Zgodnie z konwencjami stosowanymi przez narzędzia formatowania w programie Visual Studio i innych edytorach
-* Podobne do innych kodów online
+* Podobnie jak w przypadku innych kodów online
 
-Wytyczne te są oparte na [kompleksowym przewodniku po konwencjach formatowania F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) [autorstwa Anh-Dung Phan](https://github.com/dungpa).
+Wytyczne te są oparte na [kompleksowym przewodniku w zakresie stosowania Konwencji formatowania języka F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-obornik Phan](https://github.com/dungpa).
 
-## <a name="general-rules-for-indentation"></a>Ogólne zasady wcięci
+## <a name="general-rules-for-indentation"></a>Ogólne reguły wcięć
 
-F# domyślnie używa znacznych odstępów. Poniższe wytyczne mają na celu zapewnienie wskazówek, jak żonglować niektórymi wyzwaniami, które może narzucić.
+F # domyślnie używa znacznego białego odstępu. W poniższych wytycznych zawarto informacje na temat sposobu Juggle niektórych wyzwań.
 
-### <a name="using-spaces"></a>Korzystanie z przestrzeni
+### <a name="using-spaces"></a>Używanie spacji
 
-Jeśli wymagane jest wcięcie, należy użyć spacji, a nie kart. Wymagana jest co najmniej jedna przestrzeń. Organizacja może tworzyć standardy kodowania, aby określić liczbę spacji do użycia do wcięci; dwie, trzy lub cztery spacje wcięci na każdym poziomie, na którym występuje wcięcie jest typowe.
+Gdy jest wymagane wcięcie, należy użyć spacji, a nie tabulacji. Wymagane jest co najmniej jedno miejsce. Organizacja może tworzyć standardy kodowania, aby określić liczbę spacji do użycia w przypadku wcięcia; dwa, trzy lub cztery spacje wcięcia na każdym poziomie, gdzie występuje wcięcie jest typowe.
 
-**Zalecamy cztery spacje na wcięcie.**
+**Zalecamy użycie czterech spacji na wcięcie.**
 
-To powiedzia się, wcięcie programów jest kwestią subiektywną. Odmiany są OK, ale pierwszą zasadą, którą należy przestrzegać, jest *spójność wcięcia*. Wybierz ogólnie akceptowany styl wcięci i używaj go systematycznie w całej bazie kodu.
+Oznacza to, że wcięcie programów jest subiektywne. Różnice są prawidłowe, ale pierwsza reguła, którą należy wykonać, jest *spójna z wcięciem*. Wybierz ogólnie zaakceptowany styl wcięcia i używaj go systematycznie w całej bazie kodu.
 
-## <a name="formatting-white-space"></a>Formatowanie odstępu
+## <a name="formatting-white-space"></a>Formatowanie białego znaku
 
-F# jest czuły na białe przesiewowe. Chociaż większość semantyki z białych spacji są objęte prawidłowym wcięciem, istnieje kilka innych rzeczy do rozważenia.
+W języku F # jest rozróżniana wielkość liter. Chociaż większość semantyki z białego znaku jest objęta odpowiednimi wcięciami, należy wziąć pod uwagę pewne inne zagadnienia.
 
 ### <a name="formatting-operators-in-arithmetic-expressions"></a>Operatory formatowania w wyrażeniach arytmetycznych
 
-Zawsze używaj odstępu wokół binarnych wyrażeń arytmetycznych:
+Zawsze używaj białych znaków wokół binarnych wyrażeń arytmetycznych:
 
 ```fsharp
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Operatory `-` dwuary powinny być zawsze natychmiast następuje wartość, którą negują:
+Operatory jednoargumentowe `-` powinny zawsze występować bezpośrednio po nich wartość negacji:
 
 ```fsharp
 // OK
@@ -53,18 +53,18 @@ let negate x = -x
 let negateBad x = - x
 ```
 
-Dodawanie znaku odstępu po `-` operatorze może prowadzić do zamieszania dla innych.
+Dodanie znaku odstępu, gdy `-` operator może prowadzić do pomyłki dla innych.
 
 Podsumowując, ważne jest, aby zawsze:
 
-* Operatory binarne surround z odstępem
-* Nigdy nie ma spływu białym po operatorze bezemisowym
+* Otocz operatory binarne z białym znakiem
+* Nie pozostawiaj pustego odstępu po operatorze jednoargumentowym
 
-Szczególnie ważne są wytyczne dotyczące operatora arytmetycznego binarnego. Nieoczynienie `-` otoczyć operatora binarnego w połączeniu z pewnymi opcjami formatowania może prowadzić do interpretacji go jako dwuarchiwa. `-`
+Wytyczne binarnego operatora arytmetycznego są szczególnie ważne. Nie można ująć operatora binarnego `-` , gdy jest on połączony z pewnymi opcjami formatowania, może prowadzić do interpretowania go jako jednoargumentowy `-` .
 
-### <a name="surround-a-custom-operator-definition-with-white-space"></a>Otaczanie niestandardowej definicji operatora z białymi znakami
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Umieść niestandardową definicję operatora z białym znakiem
 
-Zawsze używaj odstępu do otaczania definicji operatora:
+Zawsze używaj białego znaku, aby obsłużyć definicję operatora:
 
 ```fsharp
 // OK
@@ -74,11 +74,11 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Dla dowolnego niestandardowego operatora, który rozpoczyna się `*` i który ma więcej niż jeden znak, należy dodać biały znak na początku definicji, aby uniknąć niejednoznaczności kompilatora. Z tego powodu zaleca się po prostu otoczyć definicje wszystkich operatorów z jednym znakiem odstępu.
+Dla dowolnego operatora niestandardowego, który rozpoczyna się od `*` i który ma więcej niż jeden znak, należy dodać białe miejsce na początku definicji, aby uniknąć niejednoznaczności kompilatora. Z tego względu zalecamy, aby po prostu ująć definicje wszystkich operatorów z pojedynczym znakiem odstępu.
 
-### <a name="surround-function-parameter-arrows-with-white-space"></a>Strzałki parametrów funkcji otoczyć z białymi znakami
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Strzałki parametru funkcji przestrzenny z białym znakiem
 
-Podczas definiowania podpisu funkcji należy użyć `->` odstępu wokół symbolu:
+Podczas definiowania sygnatury funkcji należy użyć białego `->` znaku wokół symbolu:
 
 ```fsharp
 // OK
@@ -88,9 +88,9 @@ type MyFun = int -> int -> string
 type MyFunBad = int->int->string
 ```
 
-### <a name="surround-function-arguments-with-white-space"></a>Argumenty funkcji surround z odstępem
+### <a name="surround-function-arguments-with-white-space"></a>Argumenty funkcji przestrzenny z białym znakiem
 
-Podczas definiowania funkcji należy użyć odstępu wokół każdego argumentu.
+Podczas definiowania funkcji należy używać odstępów wokół każdego argumentu.
 
 ```fsharp
 // OK
@@ -100,9 +100,9 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Umieszczanie parametrów w nowym wierszu dla długich definicji elementów członkowskich
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Umieść parametry w nowym wierszu dla długich definicji elementu członkowskiego
 
-Jeśli masz bardzo długą definicję elementu członkowskiego, umieść parametry w nowych wierszach i wcięj je jednym zakresem.
+W przypadku bardzo długiej definicji elementu członkowskiego należy umieścić parametry w nowych wierszach i wciąć je o jeden zakres.
 
 ```fsharp
 type C() =
@@ -123,11 +123,11 @@ type C(
     // ... the body of the class follows
 ```
 
-### <a name="type-annotations"></a>Wpisz adnotacje
+### <a name="type-annotations"></a>Adnotacje typu
 
-#### <a name="right-pad-function-argument-type-annotations"></a>Adnotacje typu argumentu funkcji panelu prawego
+#### <a name="right-pad-function-argument-type-annotations"></a>Adnotacje typu argumentów funkcji po prawej stronie
 
-Podczas definiowania argumentów z adnotacjami `:` typu należy używać odstępu za symbolem:
+Podczas definiowania argumentów z adnotacjami typu, użyj odstępu po `:` symbolu:
 
 ```fsharp
 // OK
@@ -137,9 +137,9 @@ let complexFunction (a: int) (b: int) c = a + b + c
 let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
 ```
 
-#### <a name="surround-return-type-annotations-with-white-space"></a>Adnotacje typu surround z odstępem
+#### <a name="surround-return-type-annotations-with-white-space"></a>Otocz adnotacje typu zwracanego z białym znakiem
 
-W funkcji let-bound lub adnotacji typu wartości (typ zwracany w przypadku funkcji) należy użyć odstępu przed i po symbolu: `:`
+W przypadku funkcji lub adnotacji typu wartości (typ zwracany w przypadku funkcji) Użyj odstępu przed i po `:` symbolu:
 
 ```fsharp
 // OK
@@ -153,14 +153,14 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 
 ## <a name="formatting-blank-lines"></a>Formatowanie pustych wierszy
 
-* Oddziel definicje funkcji najwyższego poziomu i klas dwoma pustymi wierszami.
-* Definicje metod wewnątrz klasy są oddzielone pojedynczą pustą linią.
-* Dodatkowe puste wiersze mogą być używane (oszczędnie) do oddzielnych grup powiązanych funkcji. Puste wiersze mogą być pominięte między kilka powiązanych one-liners (na przykład zestaw implementacji manekina).
-* W funkcjach należy oszczędnie wskazywać sekcje logiczne pustymi wierszami w funkcjach.
+* Rozdziel funkcję najwyższego poziomu i definicje klas z dwoma pustymi wierszami.
+* Definicje metod wewnątrz klasy są oddzielone pojedynczym pustym wierszem.
+* Dodatkowe puste wiersze mogą być używane (oszczędnie) do oddzielenia grup powiązanych funkcji. Puste wiersze można pominąć między zestawem powiązanych z jednym wierszem (na przykład zestawem implementacji fikcyjnej).
+* Używaj pustych wierszy w funkcjach, oszczędnie, aby wskazać sekcje logiczne.
 
 ## <a name="formatting-comments"></a>Formatowanie komentarzy
 
-Ogólnie preferuje wiele komentarzy z podwójnym ukośnikiem nad komentarzami blokowym w stylu ML.
+Zwykle Preferuj wiele komentarzy o podwójnym ukośniku w komentarzach bloku w stylu ML.
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -172,7 +172,7 @@ Ogólnie preferuje wiele komentarzy z podwójnym ukośnikiem nad komentarzami bl
 *)
 ```
 
-Komentarze w komentarzach powinny być pisane kapitułą pierwszej litery.
+Komentarze wbudowane powinny rozpoczynać się wielką literą.
 
 ```fsharp
 let f x = x + 1 // Increment by one.
@@ -180,9 +180,9 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj camelCase dla wartości i funkcji związanych z klasą, wyrażeniami i wzorcem
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj camelCase dla wartości powiązanych z klasą, powiązanych z wyrażeniami i funkcji, które są powiązane z wzorcem
 
-Jest to typowe i akceptowane F# styl używać camelCase dla wszystkich nazw związanych jako zmienne lokalne lub w dopasowywanie wzorca i definicje funkcji.
+Jest to typowy i zaakceptowany styl języka F # do używania camelCase dla wszystkich nazw związanych ze zmiennymi lokalnymi lub dopasowaniami wzorców i definicjami funkcji.
 
 ```fsharp
 // OK
@@ -195,7 +195,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-Lokalnie związane funkcje w klasach należy również użyć camelCase.
+W klasach należy również użyć funkcji camelCase.
 
 ```fsharp
 type MyClass() =
@@ -209,9 +209,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a>Użyj camelCase do funkcji publicznych związanych z modułem
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Użyj camelCase dla funkcji publicznych powiązanych z modułem
 
-Gdy funkcja związana z modułem jest częścią publicznego interfejsu API, należy użyć camelCase:
+Gdy funkcja powiązana z modułem jest częścią publicznego interfejsu API, powinna używać camelCase:
 
 ```fsharp
 module MyAPI =
@@ -220,9 +220,9 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Użyj camelCase dla wewnętrznych i prywatnych wartości i funkcji związanych z modułem
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Używanie camelCase do wewnętrznych i prywatnych wartości i funkcji powiązanych z modułem
 
-Użyj camelCase dla prywatnych wartości związanych z modułem, w tym następujące:
+Użyj camelCase dla prywatnych wartości związanych z modułem, w tym następujących:
 
 * Funkcje ad hoc w skryptach
 
@@ -235,7 +235,7 @@ let emailMyBossTheLatestResults =
 
 ### <a name="use-camelcase-for-parameters"></a>Użyj camelCase dla parametrów
 
-Wszystkie parametry powinny używać camelCase zgodnie z konwencjami nazewnictwa .NET.
+Wszystkie parametry powinny używać camelCase zgodnie z konwencjami nazewnictwa platformy .NET.
 
 ```fsharp
 module MyModule =
@@ -245,7 +245,7 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a>Użyj PascalCase dla modułów
+### <a name="use-pascalcase-for-modules"></a>Korzystanie z PascalCase dla modułów
 
 Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżone) powinny używać PascalCase.
 
@@ -259,9 +259,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase służy do oznaczania deklaracji typów, elementów członkowskich i etykiet
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Użyj PascalCase dla deklaracji typu, elementów członkowskich i etykiet
 
-Klasy, interfejsy, struktury, wyliczenia, delegatów, rekordy i dyskryminowane związki powinny być nazwane pascalcase. Członkowie w ramach typów i etykiet dla rekordów i dyskryminowanych związków powinny również używać PascalCase.
+Klasy, interfejsy, struktury, wyliczenia, Delegaty, rekordy i związki rozłączne powinny mieć nazwę z PascalCase. Elementy członkowskie w typach i etykietach dla rekordów i Unii rozłącznych powinny również używać PascalCase.
 
 ```fsharp
 type IMyInterface =
@@ -279,19 +279,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase używa konstrukcji wewnętrznych do platformy .NET
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Użyj PascalCase dla konstrukcji wewnętrznych dla platformy .NET
 
-Obszary nazw, wyjątki, zdarzenia i`.dll` nazwy projektu/ powinny również używać PascalCase. Nie tylko to sprawiają, że zużycie z innych języków platformy .NET jest bardziej naturalne dla konsumentów, jest również zgodne z konwencjami nazewnictwa .NET, które mogą wystąpić.
+Przestrzenie nazw, wyjątki, zdarzenia i projekty/ `.dll` nazwy powinny również używać PascalCase. Nie tylko robi to, że użycie z innych języków .NET jest bardziej naturalne dla użytkowników, jest również spójne z konwencjami nazewnictwa platformy .NET, które prawdopodobnie występują.
 
 ### <a name="avoid-underscores-in-names"></a>Unikaj podkreśleń w nazwach
 
-Historycznie niektóre biblioteki Języka F# używały podkreśleń w nazwach. Jednak nie jest to już powszechnie akceptowane, częściowo dlatego, że ściera się z konwencjami nazewnictwa .NET. To powiedziawia, że niektórzy programiści F# używają podkreśla mocno, częściowo ze względów historycznych, a tolerancja i szacunek jest ważne. Należy jednak pamiętać, że styl jest często nielubiany przez innych, którzy mają wybór, czy go używać.
+Historycznie Niektóre biblioteki języka F # używały podkreśleń w nazwach. Nie jest to jednak już powszechnie akceptowane, częściowo ponieważ koliduje z konwencjami nazewnictwa platformy .NET. Tak samo, niektórzy programiści F # używają podkreśleń silnie, częściowo z przyczyn historycznych, a tolerancja i istotność są ważne. Należy jednak pamiętać, że styl często nie jest używany przez inne osoby, które mają możliwość wyboru, czy należy z niego korzystać.
 
-Jeden wyjątek obejmuje współdziałanie ze składnikami macierzystymi, gdzie podkreślenia są wspólne.
+Jeden wyjątek obejmuje współdziałanie ze składnikami macierzystymi, w których znaki podkreślenia są wspólne.
 
-### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów Języka F#
+### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów języka F #
 
-Następujące operatory są zdefiniowane w bibliotece standardowej języka F# i powinny być używane zamiast definiowania odpowiedników. Korzystanie z tych operatorów jest zalecane, ponieważ ma tendencję do kodu bardziej czytelny i idiomatyczny. Deweloperzy z tła w OCaml lub inny funkcjonalny język programowania mogą być przyzwyczajeni do różnych idiomów. Poniższa lista zawiera podsumowanie zalecanych operatorów języka F#.
+Następujące operatory są zdefiniowane w standardowej bibliotece F # i powinny być używane zamiast definiować odpowiedniki. Przy użyciu tych operatorów zaleca się, aby kod był bardziej czytelny i idiomatyczne. Deweloperzy z tłem w OCaml lub innym języku programowania funkcjonalnego mogą być przyzwyczajoni do różnych idiomy. Poniższa lista zawiera podsumowanie zalecanych operatorów języka F #.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -311,23 +311,23 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Użyj składni prefiksu`Foo<T>`dla generycznych ( )`T Foo`zamiast składni poprawek ( )
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Użyj składni prefiksu dla typów ogólnych ( `Foo<T>` ) w preferencjach do przyrostkowej składni ( `T Foo` )
 
-F# dziedziczy zarówno postfix STYL ML nazewnictwa `int list`typów ogólnych (na przykład), jak również `list<int>`prefiks .NET style (na przykład). Preferuj styl .NET, z wyjątkiem pięciu określonych typów:
+F # dziedziczy styl przyrostka (na przykład), a `int list` także styl (na przykład `list<int>` ). Preferuj styl .NET, z wyjątkiem pięciu określonych typów:
 
-1. W przypadku list F# użyj `int list` formularza `list<int>`postfix: zamiast .
-2. W przypadku opcji języka F# `int option` użyj `option<int>`formularza postfix: zamiast .
-3. W przypadku opcji wartości języka F#użyj formularza postfix: `int voption` zamiast `voption<int>`.
-4. W przypadku tablic F# użyj nazwy `int[]` składni, a nie `int array` lub `array<int>`.
-5. W przypadku komórek `int ref` referencyjnych należy użyć zamiast `ref<int>` lub `Ref<int>`.
+1. Dla list języka F # Użyj przyrostkowej formy: `int list` zamiast `list<int>` .
+2. W przypadku opcji języka F # należy użyć przyrostkowej formy: `int option` zamiast `option<int>` .
+3. W przypadku opcji wartości języka F # Użyj przyrostkowej formy: `int voption` zamiast `voption<int>` .
+4. W przypadku tablic języka F # należy użyć nazwy składni `int[]` zamiast `int array` lub `array<int>` .
+5. W przypadku komórek referencyjnych Użyj `int ref` zamiast `ref<int>` lub `Ref<int>` .
 
-W przypadku wszystkich innych typów należy użyć formularza prefiksu.
+Dla wszystkich innych typów Użyj formy prefiksu.
 
-## <a name="formatting-tuples"></a>Krotek formatowania
+## <a name="formatting-tuples"></a>Formatowanie krotek
 
-Wystąpienie krotki powinno być w nawiasie, a po rozdzielającym przecinkach w nim `(1, 2)`powinno `(x, y, z)`następować pojedyncza spacja, na przykład: , .
+Tworzenie wystąpienia spójnej kolekcji musi być ujęte w nawiasy, a w tym przecinku należy następować pojedyncze miejsce, na przykład: `(1, 2)` , `(x, y, z)` .
 
-Jest powszechnie akceptowane pominąć nawiasy w dopasowywania wzorów krotek:
+Jest on powszechnie akceptowany w celu pomijania nawiasów we wzorcu dopasowania spójnych krotek:
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -340,7 +340,7 @@ match x, y with
 | x, y -> 1
 ```
 
-Jest również powszechnie akceptowane pominąć nawiasy, jeśli krotka jest zwracana wartość funkcji:
+Jest również często akceptowane do pomijania nawiasów, jeśli Krotka jest wartością zwracaną funkcji:
 
 ```fsharp
 // OK
@@ -350,11 +350,11 @@ let update model msg =
     | _ -> model, [ msg ]
 ```
 
-Podsumowując, preferuj nawiasy wystąpienia spójnej strony, ale podczas korzystania z krotek do dopasowywania wzorców lub wartości zwracanej, jest uważany za w porządku, aby uniknąć nawiasów.
+W obszarze Podsumowanie zaleca się Tworzenie wystąpień spójnych krotek, ale w przypadku używania krotek w celu dopasowania do wzorca lub wartości zwracanej jest on traktowany jako drobny, aby uniknąć nawiasów.
 
-## <a name="formatting-discriminated-union-declarations"></a>Formatowanie dyskryminowanych deklaracji związków zawodowych
+## <a name="formatting-discriminated-union-declarations"></a>Formatowanie deklaracji związku rozłącznych
 
-Wcięcie `|` w definicji typu przez cztery spacje:
+Wcięcie `|` w definicji typu według czterech spacji:
 
 ```fsharp
 // OK
@@ -370,9 +370,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a>Formatowanie dyskryminowanych związków
+## <a name="formatting-discriminated-unions"></a>Formatowanie związków rozłącznych
 
-Wystąpienia dyskryminowanych związków, które podzielone na wiele wierszy powinny nadać zawartym danym nowy zakres z wcięciem:
+Utworzone przez siebie związki rozłączne, które dzielą się między wiele wierszy, powinny dawać zawarte dane nowe zakresy z wcięciem:
 
 ```fsharp
 let tree1 =
@@ -391,9 +391,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a>Formatowanie deklaracji rekordów
+## <a name="formatting-record-declarations"></a>Formatowanie deklaracji rekordu
 
-Wcięcie `{` w definicji typu przez cztery spacje i rozpoczęcie listy pól w tym samym wierszu:
+Zwiększ wcięcie `{` w definicji typu o cztery spacje i uruchom listę pól w tym samym wierszu:
 
 ```fsharp
 // OK
@@ -419,7 +419,7 @@ type PostalAddress =
     }
 ```
 
-Umieszczenie tokenu otwarcia w nowym wierszu i token zamknięcia w nowym wierszu jest korzystne, jeśli deklarujesz implementacje interfejsu lub członków w rekordzie:
+Umieszczenie tokenu otwierającego w nowym wierszu, a token zamykający w nowym wierszu jest preferowany, Jeśli deklarujesz implementacje interfejsów lub składowe w rekordzie:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -440,13 +440,13 @@ type MyRecord =
 
 ## <a name="formatting-records"></a>Formatowanie rekordów
 
-Krótkie rekordy mogą być zapisywane w jednym wierszu:
+Krótkie rekordy można napisać w jednym wierszu:
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-Rekordy, które są dłuższe, powinny używać nowych wierszy dla etykiet:
+Rekordy, które są dłuższe, powinny używać nowych wierszy do etykiet:
 
 ```fsharp
 let rainbow =
@@ -454,10 +454,10 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Umieszczenie tokenu otwarcia w nowym wierszu, zawartość z kartami w jednym zakresie i token zamknięcia w nowym wierszu jest preferowane, jeśli:
+Umieszczenie tokenu otwierającego w nowym wierszu, zawartości z zakładkami w jednym zakresie, a token zamykający w nowym wierszu jest preferowany, jeśli:
 
-* Przenoszenie rekordów w kodzie z różnymi zakresami wcięci
-* Wprowadzenie ich do funkcji
+* Przenoszenie rekordów wokół kodu z różnymi zakresami wcięć
+* Przeprzewody do funkcji
 
 ```fsharp
 let rainbow =
@@ -487,11 +487,11 @@ let foo a =
         })
 ```
 
-Te same reguły mają zastosowanie do elementów listy i tablicy.
+Te same reguły dotyczą elementów list i tablic.
 
-## <a name="formatting-copy-and-update-record-expressions"></a>Formatowanie wyrażeń rekordu kopiowania i aktualizowania
+## <a name="formatting-copy-and-update-record-expressions"></a>Formatowanie wyrażeń kopiowania i aktualizacji
 
-Wyrażenie rekordu kopiowania i aktualizacji jest nadal rekordem, więc obowiązują podobne wytyczne.
+Wyrażenie rekordu kopiowania i aktualizacji jest nadal rekordem, więc stosuje się do nich podobne wskazówki.
 
 Krótkie wyrażenia mogą zmieścić się w jednym wierszu:
 
@@ -505,10 +505,10 @@ Dłuższe wyrażenia powinny używać nowych wierszy:
 let rainbow2 =
     { rainbow with
         Boss = "Jeffrey"
-        Lackeys = ["Zippy"; "George"; "Bungle"] }
+        Lackeys = [ "Zippy"; "George"; "Bungle" ] }
 ```
 
-Podobnie jak w przypadku wskazówek dotyczących rekordu, można poświęcić oddzielne wiersze dla nawiasów klamrowych i wcięcie jednego zakresu po prawej stronie za pomocą wyrażenia. W niektórych szczególnych przypadkach, takich jak zawijanie wartości z opcjonalnym bez nawiasów, może być konieczne utrzymanie nawiasu w jednym wierszu:
+Podobnie jak w przypadku wskazówek dotyczących rekordu, możesz chcieć oddzielić osobne wiersze dla nawiasów klamrowych i wciąć jeden zakres z prawej strony wyrażenia. W niektórych specjalnych przypadkach, takich jak Zawijanie wartości z opcjonalną bez nawiasów, może być konieczne pozostawienie nawiasu klamrowego w jednej linii:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -527,16 +527,16 @@ let newState =
 
 ## <a name="formatting-lists-and-arrays"></a>Formatowanie list i tablic
 
-Pisz `x :: l` z spacjami wokół `::` operatora (`::` jest operatorem infix, stąd otoczony spacjami).
+Pisz `x :: l` ze spacjami wokół `::` operatora ( `::` jest operatorem wrostkowe, dlatego jest ujęty w spacje).
 
-Lista i tablice zadeklarowane w jednym wierszu powinny mieć spację po nawiasie otwierającym i przed nawiasem zamykającym:
+Lista i tablice zadeklarowane w jednym wierszu powinny zawierać spację po nawiasie otwierającym i przed nawiasem zamykającym:
 
 ```fsharp
 let xs = [ 1; 2; 3 ]
 let ys = [| 1; 2; 3; |]
 ```
 
-Zawsze należy używać co najmniej jednej spacji między dwoma różnymi operatorami przypominającymi nawiasy klamrowe. Na przykład pozostaw `[` spację `{`między a a .
+Zawsze używaj co najmniej jednego miejsca między dwoma odrębnymi operatorami w nawiasach klamrowych. Na przykład pozostaw spację między a `[` i `{` .
 
 ```fsharp
 // OK
@@ -556,7 +556,7 @@ Zawsze należy używać co najmniej jednej spacji między dwoma różnymi operat
 
 Te same wytyczne dotyczą list lub tablic krotek.
 
-Listy i tablice podzielone na wiele wierszy są zgodne z podobną regułą jak rekordy:
+Listy i tablice, które dzielą się między wiele wierszy, są zgodne z podobną regułą jako rekordy:
 
 ```fsharp
 let pascalsTriangle =
@@ -573,9 +573,9 @@ let pascalsTriangle =
     |]
 ```
 
-I podobnie jak w rekordach, deklarowanie nawiasów otwierających i zamykających na własnej linii ułatwi przenoszenie kodu i tworzenie rurociągów do funkcji.
+Podobnie jak w przypadku rekordów, deklarowanie otwierających i zamykających nawiasów w osobnym wierszu spowoduje, że przenoszenie kodu i potoki do funkcji są łatwiejsze.
 
-Podczas generowania tablic i list programowo `do ... yield` preferuj, `->` gdy zawsze jest generowana wartość:
+Podczas tworzenia tablic i list programistycznych należy preferować, `->` `do ... yield` gdy wartość jest zawsze generowana:
 
 ```fsharp
 // Preferred
@@ -585,7 +585,7 @@ let squares = [ for x in 1..10 -> x * x ]
 let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
-Starsze wersje języka F# wymagane `yield` określania w sytuacjach, gdy dane mogą być generowane warunkowo lub mogą być kolejne wyrażenia do oceny. Preferuj pominięcie tych `yield` słów kluczowych, chyba że musisz skompilować ze starszą wersją języka F#:
+W przypadku starszych wersji języka F # wymagane jest określenie `yield` w sytuacjach, w których dane mogą być generowane warunkowo lub mogą być oceniane kolejne wyrażenia. Wolisz pominąć te `yield` słowa kluczowe, chyba że musisz skompilować przy użyciu starszej wersji języka F #:
 
 ```fsharp
 // Preferred
@@ -615,17 +615,17 @@ let daysOfWeek' includeWeekend =
     ]
 ```
 
-W niektórych `do...yield` przypadkach, może pomóc w czytelności. Przypadki te, choć subiektywne, powinny być brane pod uwagę.
+W niektórych przypadkach `do...yield` może pomóc w czytelności. Te przypadki, chociaż należy rozważyć, powinny być brane pod uwagę.
 
-## <a name="formatting-if-expressions"></a>Formatowanie, jeśli wyrażenia
+## <a name="formatting-if-expressions"></a>Formatowanie wyrażeń if
 
-Wcięcie warunkowości zależy od rozmiarów wyrażeń, które je tworzą. Jeśli `cond` `e1` , `e2` i są krótkie, po prostu napisz je w jednym wierszu:
+Wcięcia warunkowe są zależne od rozmiarów wyrażeń, które je tworzą. Jeśli `cond` `e1` i `e2` są krótkie, wystarczy napisać je w jednym wierszu:
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Jeśli albo `cond` `e1` , `e2` lub są dłuższe, ale nie wieloliniowe:
+Jeśli jeden `cond` `e1` lub `e2` więcej, ale nie wiele wierszy:
 
 ```fsharp
 if cond
@@ -633,7 +633,7 @@ then e1
 else e2
 ```
 
-Jeśli którekolwiek z wyrażeń jest wielowierszowe:
+Jeśli dowolne wyrażenie ma wiele wierszy:
 
 ```fsharp
 if cond then
@@ -642,7 +642,7 @@ else
     e2
 ```
 
-Wiele warunków z `elif` `else` i są wcięciami `if`w tym samym zakresie co:
+Wiele warunkowych z `elif` i `else` ma wcięcia w tym samym zakresie co `if` :
 
 ```fsharp
 if cond1 then e1
@@ -651,9 +651,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a>Konstrukcje dopasowywania wzorców
+### <a name="pattern-matching-constructs"></a>Konstrukcje dopasowania wzorca
 
-Użyj `|` a dla każdej klauzuli dopasowania bez wcięci. Jeśli wyrażenie jest krótkie, można rozważyć użycie pojedynczego wiersza, jeśli każde wyrażenie podrzędne jest również proste.
+Użyj `|` dla każdej klauzuli dopasowania bez wcięcia. Jeśli wyrażenie jest krótkie, można rozważyć użycie pojedynczej linii, jeśli każde Podwyrażenie jest również proste.
 
 ```fsharp
 // OK
@@ -669,7 +669,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-Jeśli wyrażenie po prawej stronie strzałki dopasowania wzorca jest zbyt duże, przenieś go `match` / `|`do następującego wiersza, wciętego o jeden krok od .
+Jeśli wyrażenie po prawej stronie strzałki dopasowania do wzorca jest zbyt duże, przenieś je do poniższego wiersza, z wcięciem jeden krok z `match` / `|` .
 
 ```fsharp
 match lam with
@@ -681,7 +681,7 @@ match lam with
 
 ```
 
-Dopasowywanie wzorców funkcji `function`anonimowych, począwszy od , na ogół nie powinno wcięcie zbyt daleko. Na przykład wcięcie jednego zakresu w następujący sposób jest w porządku:
+Dopasowanie wzorców funkcji anonimowych, zaczynające `function` się od, nie powinno być zwykle zbyt dalekie. Na przykład wcięcie jednego z zakresów w następujący sposób jest następujące:
 
 ```fsharp
 lambdaList
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Dopasowywanie wzorca `let rec` w funkcjach zdefiniowanych przez `let` `let` lub `function` powinny być wcięte cztery spacje po rozpoczęciu , nawet jeśli używane jest słowo kluczowe:
+Dopasowanie wzorca w funkcjach zdefiniowanych przez `let` lub `let rec` powinno mieć wcięcia cztery spacje po uruchomieniu `let` , nawet jeśli `function` jest używane słowo kluczowe:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -702,9 +702,9 @@ let rec sizeLambda acc = function
 
 Nie zaleca się wyrównywania strzałek.
 
-## <a name="formatting-trywith-expressions"></a>Formatowanie try/z wyrażeniami
+## <a name="formatting-trywith-expressions"></a>Formatowanie wyrażeń try/with
 
-Dopasowanie wzorca na typie wyjątku powinno być `with`wcięcie na tym samym poziomie co .
+Dopasowanie wzorca dla typu wyjątku powinno być wcięte na tym samym poziomie co `with` .
 
 ```fsharp
 try
@@ -719,11 +719,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a>Aplikacja parametrów funkcji formatowania
+## <a name="formatting-function-parameter-application"></a>Formatowanie aplikacji parametrów funkcji
 
-Ogólnie rzecz biorąc większość aplikacji parametr funkcji odbywa się w tym samym wierszu.
+Ogólnie rzecz biorąc, większość aplikacji parametrów funkcji jest wykonywana w tym samym wierszu.
 
-Jeśli chcesz zastosować parametry do funkcji w nowym wierszu, wcięj je według jednego zakresu.
+Jeśli chcesz zastosować parametry do funkcji w nowym wierszu, Zwiększ wcięcie według jednego zakresu.
 
 ```fsharp
 // OK
@@ -743,7 +743,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Te same wytyczne dotyczą wyrażeń lambda jako argumentów funkcji. Jeśli treść wyrażenia lambda, obiekt może mieć inny wiersz, wcięcie przez jeden zakres
+Te same wskazówki dotyczą wyrażeń lambda jako argumentów funkcji. Jeśli treść wyrażenia lambda, treść może mieć inny wiersz, wcięcie według jednego zakresu
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -759,13 +759,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-Jeśli jednak treść wyrażenia lambda jest więcej niż jeden wiersz, należy wziąć pod uwagę faktoringu go do oddzielnej funkcji, a nie mają wielowierszowej konstrukcji stosowane jako pojedynczy argument do funkcji.
+Jednakże jeśli treść wyrażenia lambda ma więcej niż jeden wiersz, Rozważ umieszczenie go w osobnej funkcji, a nie ma zastosowania jednowierszowej konstrukcji jako pojedynczego argumentu do funkcji.
 
-### <a name="formatting-infix-operators"></a>Formatowanie operatorów infix
+### <a name="formatting-infix-operators"></a>Formatowanie operatorów wrostkowe
 
-Oddziel operatory według spacji. Oczywiste wyjątki od tej `!` `.` reguły są i operatorów.
+Oddziel operatory spacjami. Oczywiste wyjątki od tej reguły to `!` Operatory i `.` .
 
-Wyrażenia Infix są ok do linii w tej samej kolumnie:
+Wyrażenia wrostkowe są prawidłowe dla zestawień w tej samej kolumnie:
 
 ```fsharp
 acc +
@@ -777,9 +777,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a>Formatowanie operatorów potoków
+### <a name="formatting-pipeline-operators"></a>Formatowanie operatorów potoku
 
-Operatorzy potoku `|>` powinny przejść pod wyrażenia, na których działają.
+Operatory potoku `|>` powinny się znaleźć pod wyrażeniami, w których działają.
 
 ```fsharp
 // Preferred approach
@@ -802,9 +802,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a>Moduły formatowania
+### <a name="formatting-modules"></a>Formatowanie modułów
 
-Kod w module lokalnym musi być wcięcie względem modułu, ale kod w module najwyższego poziomu nie powinny być wcięcie. Elementy obszaru nazw nie muszą być wcięciowe.
+Dla kodu w module lokalnym należy zastosować wcięcie względem modułu, ale nie ma wcięcia kodu w module najwyższego poziomu. Elementy przestrzeni nazw nie muszą mieć wcięcia.
 
 ```fsharp
 // A is a top-level module.
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatowanie wyrażeń i interfejsów obiektów
 
-Wyrażenia i interfejsy obiektów powinny być wyrównane `member` w taki sam sposób, jak wcięcie po czterech spacjach.
+Wyrażenia i interfejsy obiektów powinny być wyrównane w taki sam sposób, jak w przypadku `member` wcięć z czterech spacji.
 
 ```fsharp
 let comparer =
@@ -836,9 +836,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a>Formatowanie odstępu w wyrażeniach
+### <a name="formatting-white-space-in-expressions"></a>Formatowanie białych znaków w wyrażeniach
 
-Unikaj obcych odstępów w wyrażeniach Języka F#.
+Unikaj nadmiarowego odstępu w wyrażeniach języka F #.
 
 ```fsharp
 // OK
@@ -848,7 +848,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-Nazwane argumenty nie powinny `=`również mieć miejsca wokół :
+Argumenty nazwane nie mogą również zawierać spacji otaczających `=` :
 
 ```fsharp
 // OK
@@ -858,9 +858,9 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
 
-## <a name="formatting-attributes"></a>Atrybuty formatowania
+## <a name="formatting-attributes"></a>Formatowanie atrybutów
 
-[Atrybuty](../language-reference/attributes.md) są umieszczane nad konstrukcją:
+[Atrybuty](../language-reference/attributes.md) są umieszczane powyżej konstrukcji:
 
 ```fsharp
 [<SomeAttribute>]
@@ -876,9 +876,9 @@ type MyRecord =
       Label2: string }
 ```
 
-### <a name="formatting-attributes-on-parameters"></a>Formatowanie atrybutów parametrów
+### <a name="formatting-attributes-on-parameters"></a>Formatowanie atrybutów dla parametrów
 
-Atrybuty można również umieszczać na parametrach. W takim przypadku umieść następnie w tym samym wierszu co parametr i przed nazwą:
+Atrybuty mogą być również umieszczane w parametrach. W takim przypadku należy umieścić w tym samym wierszu co parametr i przed nazwą:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.
@@ -888,7 +888,7 @@ type C() =
 
 ### <a name="formatting-multiple-attributes"></a>Formatowanie wielu atrybutów
 
-Gdy wiele atrybutów są stosowane do konstrukcji, która nie jest parametrem, powinny być umieszczone w taki sposób, że istnieje jeden atrybut na wiersz:
+W przypadku zastosowania wielu atrybutów do konstrukcji, która nie jest parametrem, powinny one zostać umieszczone w taki sposób, że istnieje jeden atrybut na wiersz:
 
 ```fsharp
 [<Struct>]
@@ -898,11 +898,11 @@ type MyRecord =
       Label2: string }
 ```
 
-Po zastosowaniu do parametru, muszą one znajdować się `;` w tej samej linii i oddzielone separatorem.
+Gdy zastosowano do parametru, muszą one znajdować się w tym samym wierszu i oddzielić `;` separatorem.
 
-## <a name="formatting-literals"></a>Formatowanie literałów
+## <a name="formatting-literals"></a>Literały formatowania
 
-[Literały F#](../language-reference/literals.md) używające atrybutu `Literal` powinny umieszczać atrybut we własnym wierszu i używać nazewnictwa PascalCase:
+[Literały F #](../language-reference/literals.md) używające `Literal` atrybutu powinny umieścić atrybut w osobnym wierszu i używać PascalCase nazw:
 
 ```fsharp
 [<Literal>]
@@ -912,4 +912,4 @@ let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
-Należy unikać umieszczania atrybutu w tym samym wierszu co wartość.
+Należy unikać umieszczania atrybutu w tym samym wierszu, w którym znajduje się wartość.

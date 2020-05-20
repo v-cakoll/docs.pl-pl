@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 6c35174be50ffc5031d0c4183bd936b4ef27757e
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 251b8df571dc08ab8362a6e8551f0f9f62c25a11
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859803"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702475"
 ---
 ### <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>Metody SSE i SSE2 CompareGreaterThan prawidłowo obsługują dane wejściowe NaN
 
-Następujące <xref:System.Runtime.Intrinsics.X86.Sse?displayProperty=nameWithType> metody i <xref:System.Runtime.Intrinsics.X86.Sse2?displayProperty=nameWithType> zostały naprawione w celu prawidłowego `NaN` obsłużenia danych wejściowych i dopasowania sprzętowego do odpowiednich metod <xref:System.Runtime.Intrinsics.X86.Avx?displayProperty=nameWithType> w klasie:
+Następujące <xref:System.Runtime.Intrinsics.X86.Sse?displayProperty=nameWithType> metody i zostały <xref:System.Runtime.Intrinsics.X86.Sse2?displayProperty=nameWithType> naprawione w celu prawidłowego obsłużenia `NaN` danych wejściowych i dopasowania sprzętowego do odpowiednich metod w <xref:System.Runtime.Intrinsics.X86.Avx?displayProperty=nameWithType> klasie:
 
 * `CompareGreaterThan`
 * `CompareGreaterThanOrEqual`
@@ -23,11 +23,11 @@ Następujące <xref:System.Runtime.Intrinsics.X86.Sse?displayProperty=nameWithTy
 
 Wcześniej `NaN` dane wejściowe na liście <xref:System.Runtime.Intrinsics.X86.Sse> i <xref:System.Runtime.Intrinsics.X86.Sse2> metody zwróciły niepoprawny wynik. Wynik również różni się od wyniku wygenerowanego przez odpowiadającą metodę w <xref:System.Runtime.Intrinsics.X86.Avx> klasie.
 
-Począwszy od platformy .NET 5,0, te metody poprawnie `NaN` obsługują dane wejściowe i zwracają te same wyniki, co odpowiednie metody <xref:System.Runtime.Intrinsics.X86.Avx> w klasie.
+Począwszy od platformy .NET 5,0, te metody poprawnie obsługują `NaN` dane wejściowe i zwracają te same wyniki, co odpowiednie metody w <xref:System.Runtime.Intrinsics.X86.Avx> klasie.
 
 Streaming SIMD Extensions (SSE) i Streaming SIMD Extensions 2 (SSE2) Industry Architecture (ISAs) nie zapewniają bezpośredniej obsługi sprzętu dla tych metod porównywania, dzięki czemu są one zaimplementowane w oprogramowaniu. Wcześniej metody były niepoprawnie zaimplementowane i nieprawidłowo obsługiwały `NaN` dane wejściowe. W przypadku kodu portowego z macierzystego nieprawidłowe zachowanie może spowodować błędy. W przypadku ścieżki kodu 256-bitowego metody mogą również generować różne wyniki do równoważnych metod w <xref:System.Runtime.Intrinsics.X86.Avx> klasie.
 
-Przykład sposobu, w jaki metody były wcześniej nieprawidłowe, można zaimplementować `CompareNotGreaterThan(x,y)` jako `CompareLessThanOrEqual(x,y)` dla zwykłych liczb całkowitych. Jednak w przypadku `NaN` danych wejściowych logika oblicza niewłaściwy wynik. Zamiast tego, `CompareNotLessThan(y,x)` używając porównuje cyfry *and* poprawnie i `NaN` pobiera dane wejściowe.
+Przykład sposobu, w jaki metody były wcześniej nieprawidłowe, można zaimplementować `CompareNotGreaterThan(x,y)` jako `CompareLessThanOrEqual(x,y)` dla zwykłych liczb całkowitych. Jednak w przypadku `NaN` danych wejściowych logika oblicza niewłaściwy wynik. Zamiast tego, używając `CompareNotLessThan(y,x)` porównuje cyfry poprawnie *i* pobiera `NaN` dane wejściowe.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -74,7 +74,7 @@ Podstawowe biblioteki platformy .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Runtime.Intrinsics.X86.Sse.CompareGreaterThan(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})`
 - `M:System.Runtime.Intrinsics.X86.Sse.CompareGreaterThanOrEqual(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})`

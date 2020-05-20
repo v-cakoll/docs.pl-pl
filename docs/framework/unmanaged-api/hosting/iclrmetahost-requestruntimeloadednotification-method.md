@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140890"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703702"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
-Zapewnia funkcję wywołania zwrotnego, która jest gwarantowana, gdy wersja środowiska uruchomieniowego języka wspólnego (CLR) jest najpierw ładowana, ale jeszcze nie została uruchomiona. Ta metoda zastępuje funkcję [LockClrVersion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
+Zapewnia funkcję wywołania zwrotnego, która jest gwarantowana, gdy wersja środowiska uruchomieniowego języka wspólnego (CLR) jest najpierw ładowana, ale jeszcze nie została uruchomiona. Ta metoda zastępuje funkcję [LockClrVersion —](lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pCallbackFunction` ma wartość null.|  
+|E_POINTER|`pCallbackFunction`ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołanie zwrotne działa w następujący sposób:  
@@ -76,27 +76,27 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Jeśli host zamierza załadować lub spowodować załadowanie innego środowiska uruchomieniowego w sposób współużytkowany, należy użyć parametrów `pfnCallbackThreadSet` i `pfnCallbackThreadUnset`, które są dostępne w funkcji wywołania zwrotnego w następujący sposób:  
+ Jeśli host zamierza załadować lub spowodować załadowanie innego środowiska uruchomieniowego w sposób współużytkowany, `pfnCallbackThreadSet` Parametry i, `pfnCallbackThreadUnset` które są dostępne w funkcji wywołania zwrotnego, muszą być używane w następujący sposób:  
   
-- `pfnCallbackThreadSet` musi być wywoływana przez wątek, który może spowodować obciążenie w czasie wykonywania przed próbą takiego obciążenia.  
+- `pfnCallbackThreadSet`musi być wywoływana przez wątek, który może spowodować obciążenie w czasie wykonywania przed próbą takiego obciążenia.  
   
-- należy wywołać `pfnCallbackThreadUnset`, gdy wątek nie będzie już powodował obciążenia w czasie wykonywania (i przed powrotem z początkowego wywołania zwrotnego).  
+- `pfnCallbackThreadUnset`musi być wywoływana, gdy wątek nie będzie już powodował obciążenia w czasie wykonywania (i przed powrotem z początkowego wywołania zwrotnego).  
   
-- `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` są zarówno niewspółpracujące.  
+- `pfnCallbackThreadSet`i `pfnCallbackThreadUnset` nie są współużytkowane.  
   
 > [!NOTE]
-> Aplikacje hosta nie mogą wywoływać `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` poza zakresem parametru `pCallbackFunction`.  
+> Aplikacje hosta nie mogą wywoływać i znajdować `pfnCallbackThreadSet` `pfnCallbackThreadUnset` się poza zakresem `pCallbackFunction` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRMetaHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHost, interfejs](iclrmetahost-interface.md)
+- [Hosting](index.md)

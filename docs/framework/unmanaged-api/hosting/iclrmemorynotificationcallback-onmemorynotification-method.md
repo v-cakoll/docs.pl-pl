@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5612a44d-56cc-4f34-af31-8c9809ba9431
 topic_type:
 - apiref
-ms.openlocfilehash: 11b9b500e16917498856888c437c58c0df2edafb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d88abcc523eca06c8ec50cac2d2984b26099174a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140990"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703792"
 ---
 # <a name="iclrmemorynotificationcallbackonmemorynotification-method"></a>ICLRMemoryNotificationCallback::OnMemoryNotification — Metoda
 Powiadamia środowisko uruchomieniowe języka wspólnego (CLR) o załadowaniu pamięci na komputerze.  
@@ -35,36 +35,36 @@ HRESULT OnMemoryNotification (
   
 ## <a name="parameters"></a>Parametry  
  `eMemoryAvailable`  
- podczas Jedna z wartości [EMemoryAvailable —](../../../../docs/framework/unmanaged-api/hosting/ememoryavailable-enumeration.md) , wskazująca na to, że komputer jest aktualnie obecny.  
+ podczas Jedna z wartości [EMemoryAvailable —](ememoryavailable-enumeration.md) , wskazująca na to, że komputer jest aktualnie obecny.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`OnMemoryNotification` pomyślnie zwrócone.|  
+|S_OK|`OnMemoryNotification`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie metody E_FAIL nie będzie można używać środowiska CLR w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR rejestruje wywołanie zwrotne do `OnMemoryNotification` za pomocą wywołania metody [IHostMemoryManager:: RegisterMemoryNotificationCallback —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md) . Środowisko uruchomieniowe używa informacji zwracanych w wywołaniu zwrotnym, aby zwolnić dodatkową pamięć, gdy host zgłasza, że zasoby pamięci są niskie.  
+ Środowisko CLR rejestruje wywołanie zwrotne do `OnMemoryNotification` przy użyciu wywołania metody [IHostMemoryManager:: RegisterMemoryNotificationCallback —](ihostmemorymanager-registermemorynotificationcallback-method.md) . Środowisko uruchomieniowe używa informacji zwracanych w wywołaniu zwrotnym, aby zwolnić dodatkową pamięć, gdy host zgłasza, że zasoby pamięci są niskie.  
   
 > [!NOTE]
-> Wywołania do `OnMemoryNotification` nigdy nie blokują. Zawsze są zwracane natychmiast.  
+> Wywołania `OnMemoryNotification` nigdy nie blokują. Zawsze są zwracane natychmiast.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [RegisterMemoryNotificationCallback, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md)
-- [ICLRMemoryNotificationCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [IHostMemoryManager, interfejs](ihostmemorymanager-interface.md)
+- [RegisterMemoryNotificationCallback, metoda](ihostmemorymanager-registermemorynotificationcallback-method.md)
+- [ICLRMemoryNotificationCallback — Interfejs](iclrmemorynotificationcallback-interface.md)

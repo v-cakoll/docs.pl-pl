@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: d8df78e3d5cebe5378dfba11dc0ea93cc8e346eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e32714bba2403752f1ac2551ab182f2655f1fa75
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178099"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703857"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy — Metoda
-Modyfikuje zasady wiązania dla określonego zestawu i tworzy nową wersję zasad.  
+Modyfikuje zasady powiązań dla określonego zestawu i tworzy nową wersję zasad.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,51 +41,51 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>Parametry  
  `pwzSourceAssemblyIdentity`  
- [w] Tożsamość zestawu do zmodyfikowania.  
+ podczas Tożsamość zestawu do zmodyfikowania.  
   
  `pwzTargetAssemblyIdentity`  
- [w] Nowa tożsamość zmodyfikowanego zestawu.  
+ podczas Nowa tożsamość zmodyfikowanego zestawu.  
   
  `pbApplicationPolicy`  
- [w] Wskaźnik do buforu, który zawiera dane zasad wiązania dla zestawu do zmodyfikowania.  
+ podczas Wskaźnik do buforu, który zawiera dane zasad powiązań dla zestawu do zmodyfikowania.  
   
  `cbAppPolicySize`  
- [w] Rozmiar zasad wiązania, które mają zostać zastąpione.  
+ podczas Rozmiar zasad powiązania, które mają zostać zastąpione.  
   
  `dwPolicyModifyFlags`  
- [w] Logiczna kombinacja OR [wartości EHostBindingPolicyModifyFlags,](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) wskazująca kontrolę nad przekierowaniem.  
+ podczas Logiczne lub kombinacja wartości [EHostBindingPolicyModifyFlags —](ehostbindingpolicymodifyflags-enumeration.md) wskazujących na kontrolę przekierowania.  
   
  `pbNewApplicationPolicy`  
- [na zewnątrz] Wskaźnik do buforu, który zawiera nowe dane zasad wiązania.  
+ określoną Wskaźnik do buforu, który zawiera nowe dane zasad powiązań.  
   
  `pcbNewAppPolicySize`  
- [w, na zewnątrz] Wskaźnik do rozmiaru nowego buforu zasad wiązania.  
+ [in. out] Wskaźnik do rozmiaru nowego buforu zasad powiązania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Zasady zostały pomyślnie zmodyfikowane.|  
-|E_invalidarg|`pwzSourceAssemblyIdentity`lub `pwzTargetAssemblyIdentity` był odwołaniem zerowym.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`jest zbyt mała.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub proces wywołania pomyślnie.|  
-|HOST_E_TIMEOUT|Limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
-|E_fail|Doszło do nieznanej katastrofalnej awarii. Po metoda zwraca E_FAIL, CLR nie jest już użyteczny w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|Zasady zostały zmodyfikowane pomyślnie.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity`lub `pwzTargetAssemblyIdentity` było odwołaniem o wartości null.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`jest za mała.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie metody E_FAIL nie będzie można używać środowiska CLR w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metodę `ModifyApplicationPolicy` można wywołać dwa razy. Pierwsze wywołanie powinno podać wartość `pbNewApplicationPolicy` null dla parametru. To wywołanie powróci z `pcbNewAppPolicySize`niezbędną wartością dla . Drugie wywołanie powinno podać `pcbNewAppPolicySize`tę wartość dla i wskazać `pbNewApplicationPolicy`bufor o tym rozmiarze dla .  
+ `ModifyApplicationPolicy`Metodę można wywołać dwukrotnie. Pierwsze wywołanie powinno podawać wartość null dla `pbNewApplicationPolicy` parametru. To wywołanie zwróci wartość wymaganą dla parametru `pcbNewAppPolicySize` . Drugie wywołanie powinno dostarczyć tę wartość dla `pcbNewAppPolicySize` i wskazać bufor tego rozmiaru dla `pbNewApplicationPolicy` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ICLRHostBindingPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [ICLRHostBindingPolicyManager, interfejs](iclrhostbindingpolicymanager-interface.md)

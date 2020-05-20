@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5212c5d9513a8ef5f51693857d0ddb60db4e49b9
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: f1fc70075ef09a4f036c69788342c07ee51d72ce
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158407"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702473"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>Metody WinForms teraz generują ArgumentException
 
@@ -12,15 +12,15 @@ Niektóre metody Windows Forms teraz generują <xref:System.ArgumentException> d
 
 #### <a name="change-description"></a>Zmień opis
 
-Wcześniej przekazywanie argumentów nieoczekiwanego lub nieprawidłowego typu do określonych metod Windows Forms spowoduje nieokreślony stan. Począwszy od platformy .NET 5,0, metody te generują <xref:System.ArgumentException> teraz, gdy przekazane nieprawidłowe argumenty.
+Wcześniej przekazywanie argumentów nieoczekiwanego lub nieprawidłowego typu do określonych metod Windows Forms spowoduje nieokreślony stan. Począwszy od platformy .NET 5,0, metody te generują teraz, <xref:System.ArgumentException> gdy przekazane nieprawidłowe argumenty.
 
-Zgłaszanie <xref:System.ArgumentException> jest zgodne z zachowaniem środowiska uruchomieniowego .NET. Usprawnia to również środowisko debugowania, przez co jasno komunikuje się, który argument jest nieprawidłowy.
+Zgłaszanie jest <xref:System.ArgumentException> zgodne z zachowaniem środowiska uruchomieniowego .NET. Usprawnia to również środowisko debugowania, przez co jasno komunikuje się, który argument jest nieprawidłowy.
 
 Poniższa tabela zawiera listę odpowiednich metod i parametrów:
 
 | Metoda | Nazwa parametru | Warunek | Dodana wersja |
 |-|-|-|
-| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | Argument nie jest typu <xref:System.Windows.Forms.TabPage>. | 5,0 wersja zapoznawcza 1 |
+| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | Argument nie jest typu <xref:System.Windows.Forms.TabPage> . | 5,0 wersja zapoznawcza 1 |
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -29,7 +29,7 @@ Poniższa tabela zawiera listę odpowiednich metod i parametrów:
 #### <a name="recommended-action"></a>Zalecana akcja
 
 - Zaktualizuj kod, aby zapobiec przekazywaniu nieprawidłowych argumentów.
-- W razie potrzeby dojście <xref:System.ArgumentException> do wywołania metody.
+- W razie potrzeby dojście do <xref:System.ArgumentException> wywołania metody.
 
 #### <a name="category"></a>Kategoria
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
 

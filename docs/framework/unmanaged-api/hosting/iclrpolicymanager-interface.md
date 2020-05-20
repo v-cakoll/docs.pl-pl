@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c834aa1-f2db-408a-b230-c7bec093d364
 topic_type:
 - apiref
-ms.openlocfilehash: 59aa904d4c67326b60381d3476eaab179d7fa42b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 631301a10aee96bb00aeda6b0b8695f0aea186a8
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140806"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703475"
 ---
 # <a name="iclrpolicymanager-interface"></a>ICLRPolicyManager — Interfejs
 Dostarcza metody, które pozwalają hostowi określić akcje zasad, które mają być podejmowane w przypadku awarii i przekroczeń limitu czasu.  
@@ -28,25 +28,25 @@ Dostarcza metody, które pozwalają hostowi określić akcje zasad, które mają
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetActionOnFailure, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)|Określa akcję zasad, która ma być wykonywana przez środowisko uruchomieniowe języka wspólnego (CLR) w przypadku wystąpienia określonego błędu.|  
-|[SetActionOnTimeout, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)|Określa akcję zasad wykonywaną przez środowisko CLR po przełączeniu określonej operacji.|  
-|[SetDefaultAction, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)|Określa akcję zasad wykonywaną przez środowisko CLR po wystąpieniu określonej operacji.|  
-|[SetTimeout, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)|Ustawia wartość limitu czasu dla określonej operacji.|  
-|[SetTimeoutAndAction, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)|Ustawia wartość limitu czasu dla określonej operacji i określa akcję zasad, którą powinien wykonać środowisko CLR po wystąpieniu operacji.|  
-|[SetUnhandledExceptionPolicy, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)|Określa zachowanie środowiska CLR w przypadku wystąpienia nieobsługiwanego wyjątku.|  
+|[SetActionOnFailure, metoda](iclrpolicymanager-setactiononfailure-method.md)|Określa akcję zasad, która ma być wykonywana przez środowisko uruchomieniowe języka wspólnego (CLR) w przypadku wystąpienia określonego błędu.|  
+|[SetActionOnTimeout, metoda](iclrpolicymanager-setactionontimeout-method.md)|Określa akcję zasad wykonywaną przez środowisko CLR po przełączeniu określonej operacji.|  
+|[SetDefaultAction, metoda](iclrpolicymanager-setdefaultaction-method.md)|Określa akcję zasad wykonywaną przez środowisko CLR po wystąpieniu określonej operacji.|  
+|[SetTimeout, metoda](iclrpolicymanager-settimeout-method.md)|Ustawia wartość limitu czasu dla określonej operacji.|  
+|[SetTimeoutAndAction, metoda](iclrpolicymanager-settimeoutandaction-method.md)|Ustawia wartość limitu czasu dla określonej operacji i określa akcję zasad, którą powinien wykonać środowisko CLR po wystąpieniu operacji.|  
+|[SetUnhandledExceptionPolicy, metoda](iclrpolicymanager-setunhandledexceptionpolicy-method.md)|Określa zachowanie środowiska CLR w przypadku wystąpienia nieobsługiwanego wyjątku.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [EClrFailure, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [EClrFailure — Wyliczenie](eclrfailure-enumeration.md)
+- [EClrOperation — Wyliczenie](eclroperation-enumeration.md)
+- [EPolicyAction — Wyliczenie](epolicyaction-enumeration.md)
+- [ICLRControl — Interfejs](iclrcontrol-interface.md)

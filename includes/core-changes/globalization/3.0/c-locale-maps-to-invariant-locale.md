@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567782"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702288"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>Ustawienia regionalne "C" są mapowane na niezmienne ustawienia regionalne
 
@@ -20,18 +20,20 @@ Mapowanie "C" na en_US_POSIX kulturę powodowało pomyłkę klienta, ponieważ e
 
 3.0
 
-### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecana akcja
 
 Niczego nie ma więcej niż świadomość tej zmiany. Ta zmiana dotyczy tylko aplikacji, które korzystają z mapowania ustawień regionalnych "C".
 
-### <a name="category"></a>Kategoria
+#### <a name="category"></a>Kategoria
 
 Globalizacja
 
-### <a name="affected-apis"></a>Dotyczy interfejsów API
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
 
 Ta zmiana ma wpływ na wszystkie interfejsy API sortowania i kultury.
 
 <!--
+
+#### Affected APIs
 
 -->

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: ab8d801f3cdcfbeb6de20146754b26e3713d7dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158406"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702462"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>Metody WinForms teraz generują ArgumentNullException
 
-Niektóre metody Windows Forms teraz throw <xref:System.ArgumentNullException> dla argumentów o wartości null, w których wcześniej wywołały. <xref:System.NullReferenceException>
+Niektóre metody Windows Forms teraz throw <xref:System.ArgumentNullException> dla argumentów o wartości null, w których wcześniej wywołały <xref:System.NullReferenceException> .
 
 #### <a name="change-description"></a>Zmień opis
 
-Wcześniej niektóre metody Windows Forms zgłosiły, <xref:System.NullReferenceException> Jeśli przekazano argument, który miał wartość null. Począwszy od platformy .NET 5,0, metody te teraz <xref:System.ArgumentNullException> zgłaszają zamiast argumentów wartości null.
+Wcześniej niektóre metody Windows Forms zgłosiły, <xref:System.NullReferenceException> Jeśli przekazano argument, który miał wartość null. Począwszy od platformy .NET 5,0, metody te teraz zgłaszają <xref:System.ArgumentNullException> zamiast argumentów wartości null.
 
-Zgłaszanie <xref:System.ArgumentNullException> jest zgodne z zachowaniem środowiska uruchomieniowego .NET. Usprawnia to również środowisko debugowania przez wyraźne poinformowanie, że argument ma wartość null i który argument jest.
+Zgłaszanie jest <xref:System.ArgumentNullException> zgodne z zachowaniem środowiska uruchomieniowego .NET. Usprawnia to również środowisko debugowania przez wyraźne poinformowanie, że argument ma wartość null i który argument jest.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -23,7 +23,7 @@ Zgłaszanie <xref:System.ArgumentNullException> jest zgodne z zachowaniem środo
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli wywołasz dowolną z tych metod, a kod aktualnie przechwytuje <xref:System.NullReferenceException> dla argumentów o wartości null, <xref:System.ArgumentNullException> Przechwyć zamiast tego. Ponadto należy rozważyć zaktualizowanie kodu, aby uniemożliwić przekazywanie argumentów o wartości null do wymienionych metod.
+Jeśli wywołasz dowolną z tych metod, a kod aktualnie przechwytuje <xref:System.NullReferenceException> dla argumentów o wartości null, Przechwyć <xref:System.ArgumentNullException> zamiast tego. Ponadto należy rozważyć zaktualizowanie kodu, aby uniemożliwić przekazywanie argumentów o wartości null do wymienionych metod.
 
 #### <a name="category"></a>Kategoria
 
@@ -49,7 +49,7 @@ Począwszy od programu .NET 5,0 w wersji zapoznawczej 2:
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Control.ControlCollection.#ctor(System.Windows.Forms.Control)`
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`

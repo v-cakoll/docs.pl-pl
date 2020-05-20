@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8ac959c192814562488ab916c8462b0baa0d8e6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120250"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703648"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface — Metoda
-Ładuje środowisko CLR do bieżącego procesu i zwraca wskaźniki interfejsu środowiska uruchomieniowego, takie jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)i [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Ładuje środowisko CLR do bieżącego procesu i zwraca wskaźniki interfejsu środowiska uruchomieniowego, takie jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)i [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
   
- Ta metoda zastępuje wszystkie `CorBindTo`* funkcje w sekcji [przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) .  
+ Ta metoda zastępuje wszystkie `CorBindTo` * funkcje w sekcji [przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT GetInterface(
  podczas Interfejs CLSID dla klasy coclass.  
   
  `riid`  
- podczas Identyfikator IID żądanego interfejsu `rclsid`.  
+ podczas Identyfikator IID żądanego `rclsid` interfejsu.  
   
  `ppUnk`  
  określoną Wskaźnik do zapytania do interfejsu.  
@@ -52,14 +52,14 @@ HRESULT GetInterface(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`ppUnk` ma wartość null.|  
+|E_POINTER|`ppUnk`ma wartość null.|  
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby obsłużyć żądanie.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Inne środowisko uruchomieniowe zostało już powiązane ze starszymi zasadami aktywacji środowiska CLR w wersji 2.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda powoduje załadowanie środowiska CLR, ale nie jego inicjalizację.  
   
- W poniższej tabeli przedstawiono obsługiwane kombinacje `rclsid` i `riid`.  
+ W poniższej tabeli przedstawiono obsługiwane kombinacje dla programów `rclsid` i `riid` .  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -73,16 +73,16 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo, interfejs](iclrruntimeinfo-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting](index.md)

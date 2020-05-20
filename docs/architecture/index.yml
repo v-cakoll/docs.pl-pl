@@ -1,51 +1,51 @@
 ### YamlMime:Landing
 title: Dokumentacja architektury aplikacji .NET
-summary: Dowiedz się, jak tworzyć gotowe do produkcji aplikacje .NET lub migrować istniejące aplikacje do chmury.
+summary: Dowiedz się, jak tworzyć aplikacje .NET gotowe do produkcji lub migrować istniejące aplikacje do chmury.
 metadata:
   title: Dokumentacja architektury aplikacji .NET
-  description: Zapoznaj się z zalecanymi praktykami ego owymi eniami, tworzeniem i migrowanie aplikacji .NET.
+  description: Zapoznaj się z zalecanymi rozwiązaniami dotyczącymi tworzenia i migrowania aplikacji .NET.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228600"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613645"
 landingContent:
 - title: Opracowywanie aplikacji ASP.NET Core
   linkLists:
   - linkListType: concept
     links:
-    - text: Architektuj nowoczesne aplikacje internetowe z ASP.NET Core i platformą Azure
+    - text: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure
       url: modern-web-apps-azure/index.md
-    - text: Blazor dla ASP.NET twórców formularzy sieci Web (Wersja zapoznawcza)
+    - text: Blazor for ASP.NET Web Forms Developers (wersja zapoznawcza)
       url: blazor-for-web-forms-developers/index.md
     - text: Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
       url: grpc-for-wcf-developers/index.md
-- title: Tworzenie aplikacji platformy .NET natywnych dla chmury dla platformy Azure
+- title: Tworzenie natywnych aplikacji .NET w chmurze dla platformy Azure
   linkLists:
   - linkListType: concept
     links:
-    - text: Projektowanie aplikacji platformy .NET natywnych dla chmury dla platformy Azure (wersja zapoznawcza)
+    - text: Projektowanie natywnych dla chmury aplikacji platformy .NET dla platformy Azure
       url: cloud-native/index.md
     - text: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
       url: serverless/index.md
-    - text: 'Mikrousług .NET: Architektura konteneryzowanych aplikacji .NET'
+    - text: 'Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET'
       url: microservices/index.md
   - linkListType: learn
     links:
-    - text: Hello World Microservice tutorial
+    - text: Samouczek Hello world mikrousług
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
-- title: Migrowanie aplikacji platformy .NET na platformę Azure
+- title: Migrowanie aplikacji .NET na platformę Azure
   linkLists:
   - linkListType: concept
     links:
-    - text: Modernizuj istniejące aplikacje platformy .NET za pomocą kontenerów w chmurze platformy Azure i systemu Windows
+    - text: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows
       url: modernize-with-azure-containers/index.md
-    - text: Migrowanie aplikacji platformy .NET na platformę Azure
+    - text: Migrowanie aplikacji .NET na platformę Azure
       url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
-- title: Zrozumienie devops dla platformy .NET
+- title: Zrozumienie DevOps dla platformy .NET
   linkLists:
   - linkListType: concept
     links:
@@ -53,3 +53,9 @@ landingContent:
       url: containerized-lifecycle/index.md
     - text: ASP.NET Core DevOps z platformą Azure
       url: /aspnet/core/azure/devops/
+- title: Modernizacja aplikacji klasycznych
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Modernizacja aplikacji klasycznych w systemie Windows 10 przy użyciu programu .NET Core 3.1
+      url: modernize-desktop/index.md

@@ -1,106 +1,107 @@
 ---
 title: 'Instrukcje: Tworzenie działania'
+description: 'W tym artykule opisano sposób tworzenia dwóch działań w programie Workflow Foundation: jeden, który używa kodu do implementowania logiki i jednego zdefiniowanego przy użyciu innych działań.'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 6d74af6af6cea0d65c33db67ecbfd71ac1d5c346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dae099d102b0c85d09a1ef8bcce56e8a9096bd20
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636946"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419593"
 ---
 # <a name="how-to-create-an-activity"></a>Instrukcje: Tworzenie działania
 
-Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logika wykonania działania, które można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie pokazano, jak utworzyć dwóch działań. Pierwsze działanie jest proste działania, które używa kodu, aby zaimplementować logikę jego wykonywania. Implementacja drugiego działania jest zdefiniowana za pomocą innych działań. Te działania są używane w kolejnych krokach samouczka.
+Działania są podstawową jednostką zachowania w programie [!INCLUDE[wf1](../../../includes/wf1-md.md)] . Logikę wykonywania działania można zaimplementować w kodzie zarządzanym lub można ją zaimplementować przy użyciu innych działań. W tym temacie przedstawiono sposób tworzenia dwóch działań. Pierwsze działanie to proste działanie, które używa kodu do zaimplementowania logiki wykonywania. Implementacja drugiego działania jest definiowana przy użyciu innych działań. Te działania są używane w następujących krokach w samouczku.
 
 > [!NOTE]
-> Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Aby pobrać kompletną wersję samouczka, zobacz [Windows Workflow Foundation (WF45) — samouczek wprowadzenie](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="create-the-activity-library-project"></a>Utwórz projekt biblioteki działań
 
-1. Otwórz program Visual Studio i wybierz polecenie **New** > **projektu** z **pliku** menu.
+1. Otwórz program Visual Studio i wybierz pozycję **Nowy**  >  **projekt** z menu **plik** .
 
-2. W **nowy projekt** okna dialogowego, w obszarze **zainstalowane** kategorii, wybierz opcję **Visual C#** > **przepływu pracy** (lub **Języka Visual Basic** > **przepływu pracy**).
+2. W oknie dialogowym **Nowy projekt** w obszarze **zainstalowana** Kategoria wybierz pozycję przepływ pracy w **języku Visual C#**  >  **Workflow** (lub **Visual Basic**  >  **przepływ pracy**).
 
     > [!NOTE]
-    > Jeśli nie widzisz **przepływu pracy** kategorii szablonu, użytkownik może być konieczne zainstalowanie **Windows Workflow Foundation** składnika programu Visual Studio. Wybierz **Otwórz Instalator programu Visual Studio** linku w lewej części **nowy projekt** okna dialogowego. Instalator programu Visual Studio wybierz **poszczególne składniki** kartę. Następnie w obszarze **działań programistycznych** kategorii, wybierz opcję **Windows Workflow Foundation** składnika. Wybierz **Modyfikuj** do instalacji składnika należy.
+    > Jeśli nie widzisz kategorii szablonów **przepływu pracy** , może być konieczne zainstalowanie składnika **Windows Workflow Foundation** programu Visual Studio. Wybierz łącze **otwórz Instalator programu Visual Studio** po lewej stronie okna dialogowego **Nowy projekt** . W Instalator programu Visual Studio wybierz kartę **poszczególne składniki** . Następnie w kategorii **działania deweloperskie** wybierz składnik **Windows Workflow Foundation** . Wybierz pozycję **Modyfikuj** , aby zainstalować składnik.
 
-3. Wybierz **Biblioteka działań** szablonu projektu. Typ `NumberGuessWorkflowActivities` w **nazwa** pole, a następnie kliknij przycisk **OK**.
+3. Wybierz szablon projektu **Biblioteka działań** . Wpisz `NumberGuessWorkflowActivities` w polu **Nazwa** , a następnie kliknij przycisk **OK**.
 
-4. Kliknij prawym przyciskiem myszy **Activity1.xaml** w **Eksploratora rozwiązań** i wybierz polecenie **Usuń**. Kliknij przycisk **OK** o potwierdzenie.
+4. Kliknij prawym przyciskiem myszy **zakończeniu. XAML** w **Eksplorator rozwiązań** i wybierz polecenie **Usuń**. Kliknij przycisk **OK** , aby potwierdzić.
 
-## <a name="create-the-readint-activity"></a>Utwórz działanie readint —
+## <a name="create-the-readint-activity"></a>Tworzenie działania ReadInt
 
-1. Wybierz **Dodaj nowy element** z **projektu** menu.
+1. Wybierz pozycję **Dodaj nowy element** z menu **projekt** .
 
-2. W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działanie kodu** z **przepływu pracy** listy.
+2. W węźle **zainstalowane**  >  **elementy wspólne** wybierz pozycję **przepływ pracy**. Wybierz **działanie Code** z listy **przepływów pracy** .
 
-3. Typ `ReadInt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
+3. Wpisz tekst `ReadInt` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.
 
-4. Zastąp istniejące `ReadInt` definicji przy użyciu następującej definicji.
+4. Zastąp istniejącą `ReadInt` definicję następującą definicją.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` Pochodzi od klasy działania <xref:System.Activities.NativeActivity%601> zamiast <xref:System.Activities.CodeActivity>, co jest ustawieniem domyślnym dla szablonu działania kodu. <xref:System.Activities.CodeActivity%601> można użyć, jeśli działanie zapewnia pojedynczy wynik, która jest dostępna za pośrednictwem <xref:System.Activities.Activity%601.Result%2A> argument, ale <xref:System.Activities.CodeActivity%601> nie obsługuje korzystanie z zakładek, więc <xref:System.Activities.NativeActivity%601> jest używany.
+    > `ReadInt`Działanie pochodzi od <xref:System.Activities.NativeActivity%601> zamiast <xref:System.Activities.CodeActivity> , czyli domyślnego dla szablonu działania kodu. <xref:System.Activities.CodeActivity%601>może być używany, jeśli działanie zawiera pojedynczy wynik, który jest udostępniany przez <xref:System.Activities.Activity%601.Result%2A> argument, ale nie <xref:System.Activities.CodeActivity%601> obsługuje użycia zakładek, więc <xref:System.Activities.NativeActivity%601> jest używany.
 
 ## <a name="create-the-prompt-activity"></a>Utwórz działanie monitu
 
-1. Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania projektu. Kompilowanie projektu zapewniającą `ReadInt` działania w tym projekcie ma być używany do tworzenia niestandardowych działań w tym kroku.
+1. Naciśnij **klawisze CTRL** + **SHIFT** + **B** , aby skompilować projekt. Kompilowanie projektu umożliwia `ReadInt` działanie w tym projekcie do użycia w celu utworzenia niestandardowego działania z tego kroku.
 
-2. Wybierz **Dodaj nowy element** z **projektu** menu.
+2. Wybierz pozycję **Dodaj nowy element** z menu **projekt** .
 
-3. W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działania** z **przepływu pracy** listy.
+3. W węźle **zainstalowane**  >  **elementy wspólne** wybierz pozycję **przepływ pracy**. Wybierz **działanie** z listy **przepływów pracy** .
 
-4. Typ `Prompt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
+4. Wpisz tekst `Prompt` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.
 
-5. Kliknij dwukrotnie **Prompt.xaml** w **Eksploratora rozwiązań** do wyświetlenia w projektancie, jeśli nie jest już wyświetlany.
+5. Kliknij dwukrotnie pozycję **Prompt. XAML** w **Eksplorator rozwiązań** , aby wyświetlić ją w projektancie, jeśli nie jest jeszcze wyświetlana.
 
-6. Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta działania, aby wyświetlić **argumenty** okienka.
+6. Kliknij pozycję **argumenty** w lewym dolnym rogu projektanta działań, aby wyświetlić okienko **argumenty** .
 
-7. Kliknij przycisk **utworzenia argumentu**.
+7. Kliknij przycisk **Utwórz argument**.
 
-8. Typ `BookmarkName` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej wybierz **ciąg** z **Typ argumentu** listy rozwijanej, a następnie klawisz **Enter** można zapisać argumentu.
+8. Wpisz tekst w `BookmarkName` polu **Nazwa** , wybierz **pozycję z** listy rozwijanej **kierunek** , wybierz pozycję **ciąg** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz **Enter** , aby zapisać argument.
 
-9. Kliknij przycisk **utworzenia argumentu**.
+9. Kliknij przycisk **Utwórz argument**.
 
-10. Typ `Result` do **nazwa** pole, znajdujący się pod nowo dodanym `BookmarkName` argument, wybierz opcję **się** z **kierunek** listy rozwijanej wybierz **Int32** z **typ argumentu** listy rozwijanej, a następnie klawisz **Enter**.
+10. Wpisz `Result` w polu **Nazwa** , który znajduje się pod nowo dodanym `BookmarkName` argumentem **Out** , wybierz pozycję z listy rozwijanej **kierunek** , wybierz pozycję **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz **Enter**.
 
-11. Kliknij przycisk **utworzenia argumentu**.
+11. Kliknij przycisk **Utwórz argument**.
 
-12. Typ `Text` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej wybierz **ciąg** z **Typ argumentu** listy rozwijanej, a następnie klawisz **Enter** można zapisać argumentu.
+12. Wpisz tekst w `Text` polu **Nazwa** , wybierz **pozycję z** listy rozwijanej **kierunek** , wybierz pozycję **ciąg** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz **Enter** , aby zapisać argument.
 
-     Te trzy argumenty są powiązane z argumentami odpowiedniego <xref:System.Activities.Statements.WriteLine> i `ReadInt` działań, które są dodawane do `Prompt` działania w poniższych krokach.
+     Te trzy argumenty są powiązane z odpowiednimi argumentami <xref:System.Activities.Statements.WriteLine> i `ReadInt` działaniami, które są dodawane do `Prompt` działania w poniższych krokach.
 
-13. Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć **argumenty** okienka.
+13. Kliknij pozycję **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć okienko **argumenty** .
 
-14. Przeciągnij **sekwencji** działanie z **przepływ sterowania** części **przybornika** i upuść je na **Upuść działanie tutaj** etykiety **Monitu** projektanta działań.
-
-    > [!TIP]
-    > Jeśli **przybornika** nie zostanie wyświetlone okno, wybierz **przybornika** z **widoku** menu.
-
-15. Przeciągnij **WriteLine** działanie z **podstawowych** części **przybornika** i upuść je na **Upuść działanie tutaj** etykiety **Sekwencji** działania.
-
-16. Powiązanie **tekstu** argument **WriteLine** działanie **tekstu** argument **monitu** działania, wpisując `Text` do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole w **właściwości** okna, a następnie naciśnij klawisz **kartę** klucz dwa razy. Zamknięte okno technologii IntelliSense lista elementów członkowskich i zapisuje wartości właściwości, przenosząc wyboru Wyłącz właściwości. Można również ustawić tę właściwość, wpisując `Text` do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole je.
+14. Przeciągnij aktywność **sekwencji** z sekcji **przepływ sterowania** w **przyborniku** i upuść ją na **działanie upuść w tym miejscu** w projektancie działań **monitu** .
 
     > [!TIP]
-    > Jeśli **okno właściwości** nie jest wyświetlany, wybierz opcję **okno właściwości** z **widoku** menu.
+    > Jeśli okno **Przybornik** nie jest wyświetlane, wybierz pozycję **Przybornik** z menu **Widok** .
 
-17. Przeciągnij **readint —** działanie z **NumberGuessWorkflowActivities** części **przybornika** i upuść je **sekwencji** działanie, tak że następuje **WriteLine** działania.
+15. Przeciągnij działanie **WriteLine** z sekcji elementy **pierwotne** w **przyborniku** i upuść je na **działanie Drop tutaj** etykieta działania **sekwencji** .
 
-18. Powiąż **Nazwa_zakładki** argument **readint —** działanie **Nazwa_zakładki** argument **monitu** działania, wpisując `BookmarkName` do **wprowadź wyrażenie VB** pole po prawej stronie **Nazwa_zakładki** argument **okno właściwości**, a następnie naciśnij klawisz **Kartę** dwa razy, aby zamknąć okno technologii IntelliSense listy elementów członkowskich, a następnie Zapisz właściwość klucza.
+16. Powiąż argument **Text** działania **WriteLine** z argumentem **Text** działania **Prompt** , wpisując w polu `Text` **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** w oknie **Właściwości** , a następnie naciśnij klawisz **Tab** dwa razy. Spowoduje to odrzucenie okna członków listy IntelliSense i zapisanie wartości właściwości poprzez przeniesienie zaznaczenia poza właściwość. Tę właściwość można również ustawić, wpisując `Text` w polu **wprowadź wyrażenie języka C#** lub wprowadzając pole **wyrażenia VB** w samym działaniu.
 
-19. Powiązanie **wynik** argument **readint —** działanie **wynik** argument **monitu** działania, wpisując `Result` do **wprowadź wyrażenie VB** pole po prawej stronie **wynik** argument **okno właściwości**, a następnie naciśnij klawisz **kartę** klucza dwa razy.
+    > [!TIP]
+    > Jeśli **okno właściwości** nie jest wyświetlane, wybierz pozycję **okno właściwości** w menu **Widok** .
 
-20. Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania rozwiązania.
+17. Przeciągnij działanie **ReadInt** z sekcji **NumberGuessWorkflowActivities** w **przyborniku** i upuść je w działaniu **sekwencji** , tak aby była zgodna z działaniem **WriteLine** .
+
+18. Powiąż argument **BookmarkName** działania **ReadInt** z argumentem **BookmarkName** działania **Prompt** , wpisując w `BookmarkName` polu **wprowadź wyrażenie VB** z prawej strony argumentu **zakładkaname** w **oknie właściwości**, a następnie naciśnij klawisz **Tab** dwa razy, aby zamknąć okno członków listy IntelliSense i zapisać właściwość.
+
+19. Powiązanie argumentu **wynik** działania **ReadInt** z argumentem **wynik** działania **monitu** , wpisując `Result` w polu **wprowadź wyrażenie VB** z prawej strony argumentu **wynik** w **oknie właściwości**, a następnie naciskając klawisz **Tab** dwa razy.
+
+20. Naciśnij **klawisze CTRL** + **SHIFT** + **B** , aby skompilować rozwiązanie.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Instrukcje dotyczące sposobu tworzenia przepływu pracy przy użyciu tych działań można znaleźć następnego kroku w tym samouczku [jak: Tworzenie przepływu pracy](how-to-create-a-workflow.md).
+Aby uzyskać instrukcje dotyczące sposobu tworzenia przepływu pracy przy użyciu tych działań, zobacz następny krok w samouczku [: tworzenie przepływu pracy](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Zobacz także
 

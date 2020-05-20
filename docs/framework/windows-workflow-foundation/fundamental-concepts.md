@@ -1,66 +1,67 @@
 ---
 title: Podstawowe pojęcia związane z programem Windows Workflow
+description: W tym artykule opisano niektóre koncepcje tworzenia przepływu pracy w .NET Framework 4.6.1, które mogą być nieznane dla niektórych deweloperów.
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650933"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419892"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Podstawowe pojęcia związane z programem Windows Workflow
-Projektowanie przepływów pracy w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] korzysta z koncepcji, które mogą być nowe dla niektórych programistów. W tym temacie opisano niektóre z pojęć i ich implementacji.  
+Tworzenie przepływów pracy w programie obejmuje [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] koncepcje, które mogą być nowe dla niektórych deweloperów. W tym temacie opisano niektóre koncepcje i sposób ich implementacji.  
   
 ## <a name="workflows-and-activities"></a>Przepływy pracy i działania  
- Przepływ pracy jest strukturą kolekcję akcji, który modeluje procesu. Każdej akcji w przepływie pracy są modelowane jako działania. Host wchodzi w interakcję z przepływem pracy przy użyciu <xref:System.Activities.WorkflowInvoker> do wywoływania przepływu pracy, tak jakby był metodą, <xref:System.Activities.WorkflowApplication> dla jawną kontrolę nad wykonywaniem wystąpienia jeden przepływ pracy i <xref:System.ServiceModel.WorkflowServiceHost> oparta na komunikatach interakcji w wielu wystąpieniach scenariusze. Ponieważ kroki przepływu pracy są zdefiniowane jako hierarchię działań, działanie najwyższego poziomu w hierarchii można powiedzieć do definiowania samego przepływu pracy. Ten model hierarchii zajmuje miejsce jawne `SequentialWorkflow` i `StateMachineWorkflow` klasy z poprzedniej wersji. Działania, samodzielnie są tworzone jako kolekcje innych działań (przy użyciu <xref:System.Activities.Activity> klasy jako podstawa, zazwyczaj definiowane przy użyciu XAML) lub są tworzone za pomocą niestandardowego <xref:System.Activities.CodeActivity> klasy, która może korzystania ze środowiska uruchomieniowego, aby uzyskać dostęp do danych lub za pomocą <xref:System.Activities.NativeActivity> klasy, która przedstawia szerokość środowiska uruchomieniowego przepływu pracy do autora działania. Działania opracowane za pomocą <xref:System.Activities.CodeActivity> i <xref:System.Activities.NativeActivity> są tworzone przy użyciu zgodnych ze standardami CLR języków, takich jak C#.  
+ Przepływ pracy to strukturalna kolekcja akcji, które modelują proces. Każda akcja w przepływie pracy jest modelowana jako działanie. Host współdziała z przepływem pracy przy użyciu <xref:System.Activities.WorkflowInvoker> do wywoływania przepływu pracy tak, jakby był to metoda, <xref:System.Activities.WorkflowApplication> dla jawnej kontroli nad wykonywaniem pojedynczego wystąpienia przepływu pracy oraz <xref:System.ServiceModel.WorkflowServiceHost> dla interakcji opartych na komunikatach w scenariuszach obejmujących wiele wystąpień. Ze względu na to, że kroki przepływu pracy są zdefiniowane jako hierarchia działań, w celu zdefiniowania samego przepływu pracy można określić działanie najwyższego poziomu w hierarchii. Ten model hierarchii uwzględnia miejsce jawne `SequentialWorkflow` i `StateMachineWorkflow` klasy z poprzednich wersji. Same działania są opracowywane jako kolekcje innych działań (przy użyciu <xref:System.Activities.Activity> klasy jako bazy, zazwyczaj zdefiniowanej przy użyciu języka XAML) lub są niestandardowe utworzone przy użyciu <xref:System.Activities.CodeActivity> klasy, która może używać środowiska uruchomieniowego na potrzeby dostępu do danych lub przy użyciu <xref:System.Activities.NativeActivity> klasy, która udostępnia szerokość środowiska uruchomieniowego przepływu pracy do autora działania. Działania opracowane przy użyciu <xref:System.Activities.CodeActivity> i <xref:System.Activities.NativeActivity> są tworzone przy użyciu języków zgodnych ze standardem CLR, takich jak C#.  
   
-## <a name="activity-data-model"></a>Model danych aktywności  
- Działania przechowywania i udostępniania danych przy użyciu typów pokazano w poniższej tabeli.  
+## <a name="activity-data-model"></a>Model danych działań  
+ Działania przechowują i udostępniają dane przy użyciu typów pokazanych w poniższej tabeli.  
   
 |||  
 |-|-|  
 |Zmienna|Przechowuje dane w działaniu.|  
-|Argument|Przeniesienie danych do i z działania.|  
-|Wyrażenie|Działanie z wartością zwracaną z podwyższonym poziomem uprawnień używać w powiązaniach argumentu.|  
+|Argument|Przenosi dane do działania i z niego.|  
+|Wyrażenie|Działanie z wartością zwracaną z podwyższonym poziomem uprawnień użytą w powiązaniach argumentów.|  
   
-## <a name="workflow-runtime"></a>Środowisko wykonawcze przepływów pracy  
- Środowisko wykonawcze przepływów pracy jest środowisko, w którym wykonania przepływów pracy. <xref:System.Activities.WorkflowInvoker> jest to najprostszy sposób na wykonanie przepływu pracy. Host używa <xref:System.Activities.WorkflowInvoker> dla następujących:  
+## <a name="workflow-runtime"></a>Środowisko uruchomieniowe przepływu pracy  
+ Środowisko uruchomieniowe przepływu pracy jest środowiskiem, w którym są wykonywane przepływy pracy. <xref:System.Activities.WorkflowInvoker>to najprostszy sposób wykonywania przepływu pracy. Na hoście są stosowane <xref:System.Activities.WorkflowInvoker> następujące elementy:  
   
-- Synchronicznego wywoływania przepływu pracy.  
+- Aby synchronicznie wywołać przepływ pracy.  
   
-- Podaj dane wejściowe lub pobrać dane wyjściowe z przepływu pracy.  
+- Aby zapewnić dane wejściowe lub pobrać dane wyjściowe z przepływu pracy.  
   
-- Aby dodać rozszerzenia do użycia przez działania.  
+- , Aby dodać rozszerzenia, które mają być używane przez działania.  
   
- <xref:System.Activities.ActivityInstance> jest metodą o bezpiecznych wątkach serwerem proxy, który hostów może służyć do interakcji ze środowiskiem uruchomieniowym. Host używa <xref:System.Activities.ActivityInstance> dla następujących:  
+ <xref:System.Activities.ActivityInstance>to bezpieczny dla wątków serwer proxy, którego hosty mogą używać do współdziałania z środowiskiem uruchomieniowym. Na hoście są stosowane <xref:System.Activities.ActivityInstance> następujące elementy:  
   
-- Można uzyskać wystąpienie przez jej tworzenia lub załadowanie go ze sklepu wystąpienia.  
+- Aby uzyskać wystąpienie, tworząc je lub ładując z magazynu wystąpień.  
   
-- Aby otrzymywać powiadomienia o zdarzenia cyklu życia wystąpienia.  
+- Aby otrzymywać powiadomienia o zdarzeniach cyklu życia wystąpienia.  
   
 - Do kontrolowania wykonywania przepływu pracy.  
   
-- Podaj dane wejściowe lub pobrać dane wyjściowe z przepływu pracy.  
+- Aby zapewnić dane wejściowe lub pobrać dane wyjściowe z przepływu pracy.  
   
-- Sygnał kontynuacji przepływu pracy i wartości są przekazywane do przepływu pracy.  
+- Aby sygnalizować kontynuację przepływu pracy i przekazać wartości do przepływu pracy.  
   
 - Aby zachować dane przepływu pracy.  
   
-- Aby dodać rozszerzenia do użycia przez działania.  
+- , Aby dodać rozszerzenia, które mają być używane przez działania.  
   
- Działania uzyskać dostęp do środowiska wykonawczego przepływów pracy przy użyciu odpowiedniego <xref:System.Activities.ActivityContext> pochodne klasy, takie jak <xref:System.Activities.NativeActivityContext> lub <xref:System.Activities.CodeActivityContext>. Używają to postępowania po otrzymaniu zmienne i argumenty, planowanie działania podrzędne i do innych celów.  
+ Działania uzyskują dostęp do środowiska uruchomieniowego przepływu pracy przy użyciu odpowiedniej <xref:System.Activities.ActivityContext> klasy pochodnej, takiej jak <xref:System.Activities.NativeActivityContext> lub <xref:System.Activities.CodeActivityContext> . Służą one do rozpoznawania argumentów i zmiennych, do planowania działań podrzędnych i w wielu innych celach.  
   
 ## <a name="services"></a>Usługi  
- Przepływy pracy zawierają naturalny sposób wdrożenia i uzyskiwanie dostępu do usług luźno powiązane przy użyciu działań dotyczących komunikatów. Działań dotyczących komunikatów są oparte na WCF i są podstawowym mechanizmem stosowane w celu pobrania danych do i z przepływu pracy. Można utworzyć działań dotyczących komunikatów ze sobą, aby modelować dowolnego rodzaju wymiany komunikatów, którą chcesz. Aby uzyskać więcej informacji, zobacz [działań Messaging](../wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są hostowane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. Aby uzyskać więcej informacji, zobacz [przegląd usług przepływu pracy obsługującego](../wcf/feature-details/hosting-workflow-services-overview.md). Aby uzyskać więcej informacji na temat usług przepływu pracy zobacz [usług przepływu pracy](../wcf/feature-details/workflow-services.md)  
+ Przepływy pracy zapewniają naturalny sposób implementacji i uzyskiwania dostępu do luźno sprzężonych usług przy użyciu działań związanych z obsługą wiadomości. Działania związane z obsługą komunikatów są oparte na programie WCF i są podstawowym mechanizmem służącym do pobierania danych do i z przepływu pracy. Możesz redagować działania związane z obsługą wiadomości, aby modelować dowolny rodzaj niepotrzebnego wzorca wymiany komunikatów. Aby uzyskać więcej informacji, zobacz [działania dotyczące komunikatów](../wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są hostowane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. Aby uzyskać więcej informacji, zobacz [hostowanie usług przepływu pracy — Omówienie](../wcf/feature-details/hosting-workflow-services-overview.md). Aby uzyskać więcej informacji na temat usług przepływu pracy, zobacz [usługi przepływu pracy](../wcf/feature-details/workflow-services.md)  
   
-## <a name="persistence-unloading-and-long-running-workflows"></a>Stan trwały, zwalniania i długotrwałe przepływy pracy  
- Przepływ pracy Windows upraszcza tworzenie programów reaktywne długotrwałych, zapewniając:  
+## <a name="persistence-unloading-and-long-running-workflows"></a>Trwałość, wyładowywanie i długotrwałe przepływy pracy  
+ Przepływ pracy systemu Windows upraszcza tworzenie długotrwałych, nieaktywnych programów, zapewniając:  
   
-- Działania, do których dostęp zewnętrznych danych wejściowych.  
+- Działania, które uzyskują dostęp do zewnętrznych danych wejściowych.  
   
-- Możliwość tworzenia <xref:System.Activities.Bookmark> obiektów, które może być wznowione przez odbiornik hosta.  
+- Możliwość tworzenia <xref:System.Activities.Bookmark> obiektów, które mogą być wznowione przez odbiornik hosta.  
   
-- Zdolność do utrwalenia danych przepływu pracy i zwalnianie przepływu pracy, a następnie załaduj ponownie i Uaktywnij ponownie przepływu pracy w odpowiedzi na wznowienie <xref:System.Activities.Bookmark> obiektów w określonego przepływu pracy.  
+- Możliwość utrwalania danych przepływu pracy i zwalniania przepływu pracy, a następnie ponownego załadowania i ponownego uaktywniania przepływu pracy w odpowiedzi na wznowienie <xref:System.Activities.Bookmark> obiektów w określonym przepływie pracy.  
   
- Przepływ pracy nieprzerwanie wykonuje działania, dopóki nie ma żadnych więcej działań do wykonania lub dopóki wszystkie aktualnie wykonywanego działania oczekiwania na dane wejściowe. W tym ostatnim stanie przepływu pracy jest w stanie bezczynności. Często hosta można zwolnić przepływów pracy, które przeszły bezczynności i ponownie załadować je, aby kontynuować wykonywanie, gdy wiadomość zostaje nadejściu. <xref:System.ServiceModel.Activities.WorkflowServiceHost> oferuje funkcję dla tej funkcji i udostępnia zasady rozszerzonego zwolnienia. Dla bloków wykonywania korzystające z danych o stanie lotnych lub inne dane, które nie może zostać utrwalona, działanie może wskazywać na hoście, nie należy go utrwalone przy użyciu <xref:System.Activities.NoPersistHandle>. Przepływu pracy można także jawnie utrwalić swoje dane do nośnika trwałego magazynu przy użyciu <xref:System.Activities.Statements.Persist> działania.
+ Przepływ pracy ciągle wykonuje działania do momentu, gdy nie będzie więcej działań do wykonania lub dopóki wszystkie aktualnie wykonywane działania nie oczekują na dane wejściowe. W tym ostatnim stanie przepływ pracy jest bezczynny. Host może zwolnić przepływy pracy, które zostały przetworzone bezczynnie i ponownie załadować je, aby kontynuować wykonywanie po nadejściu wiadomości. <xref:System.ServiceModel.Activities.WorkflowServiceHost>oferuje funkcje tej funkcji i zawiera rozszerzalne zasady zwalniania. Dla bloków wykonywania, które korzystają z danych o stanie volatile lub innych danych, które nie mogą być utrwalane, działanie może wskazywać na hosta, który nie powinien być utrwalany przy użyciu <xref:System.Activities.NoPersistHandle> . Przepływ pracy może również jawnie utrwalać swoje dane na trwałym nośniku magazynu za pomocą <xref:System.Activities.Statements.Persist> działania.

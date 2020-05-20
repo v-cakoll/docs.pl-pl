@@ -4,12 +4,12 @@ description: W tym zaawansowanym samouczku pokazano, jak generować strumienie a
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200109"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420373"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Samouczek: generowanie strumieni asynchronicznych i korzystanie z nich przy użyciu języków C# 8,0 i .NET Core 3,0
 
@@ -42,13 +42,13 @@ W tym samouczku założono, że znasz języki C# i .NET, w tym Visual Studio lub
 
 ## <a name="run-the-starter-application"></a>Uruchom aplikację Starter
 
-Możesz uzyskać kod dla aplikacji startowej używanej w tym samouczku z repozytorium [dotnet/docs](https://github.com/dotnet/docs) w folderze [CSharp/samouczki/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) .
+Możesz uzyskać kod dla aplikacji startowej używanej w tym samouczku z repozytorium [dotnet/docs](https://github.com/dotnet/docs) w folderze [CSharp/samouczki/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) .
 
 Aplikacja startowa to Aplikacja konsolowa korzystająca z interfejsu [GraphQL GitHub](https://developer.github.com/v4/) do pobierania ostatnich problemów pisanych w repozytorium [dotnet/docs](https://github.com/dotnet/docs) . Zacznij od przejrzenia następującego kodu dla metody Starter App `Main` :
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-Można ustawić zmienną `GitHubKey` środowiskową na osobisty token dostępu lub zastąpić ostatni argument w wywołaniu do `GenEnvVariable` osobistego tokenu dostępu. Nie umieszczaj kodu dostępu w kodzie źródłowym, jeśli będziesz udostępniać inne osoby. Nigdy nie przekazuj kodów dostępu do udostępnionego repozytorium źródłowego.
+Można ustawić `GitHubKey` zmienną środowiskową na osobisty token dostępu lub zastąpić ostatni argument w wywołaniu do `GenEnvVariable` osobistego tokenu dostępu. Nie umieszczaj kodu dostępu w kodzie źródłowym, jeśli będziesz udostępniać inne osoby. Nigdy nie przekazuj kodów dostępu do udostępnionego repozytorium źródłowego.
 
 Po utworzeniu klienta usługi GitHub kod w programie `Main` tworzy obiekt raportowania postępu i token anulowania. Po utworzeniu tych obiektów program `Main` wywołuje `runPagedQueryAsync` w celu pobrania najnowszych utworzonych problemów 250. Po zakończeniu tego zadania zostaną wyświetlone wyniki.
 
@@ -56,19 +56,19 @@ Po uruchomieniu aplikacji Starter możesz wprowadzić pewne ważne uwagi dotycz�
 
 ## <a name="examine-the-implementation"></a>Sprawdzanie implementacji
 
-Implementacja pokazuje, dlaczego zaobserwowano zachowanie omówione w poprzedniej sekcji. Przejrzyj kod dla `runPagedQueryAsync`:
+Implementacja pokazuje, dlaczego zaobserwowano zachowanie omówione w poprzedniej sekcji. Przejrzyj kod dla `runPagedQueryAsync` :
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
-Skoncentrujemy się na algorytmie stronicowania i strukturze asynchronicznej poprzedniego kodu. (Szczegółowe informacje o interfejsie API usługi GitHub GraphQL można znaleźć w [dokumentacji usługi GitHub GraphQL](https://developer.github.com/v4/guides/) ). `runPagedQueryAsync` Metoda wylicza problemy od najnowszych do najstarszych. Żąda 25 problemów na stronę i analizuje `pageInfo` strukturę odpowiedzi, aby kontynuować z poprzednią stroną. Jest to zgodne ze standardową obsługą stronicowania GraphQL dla odpowiedzi na wiele stron. Odpowiedź zawiera `pageInfo` obiekt, który zawiera `hasPreviousPages` wartość i `startCursor` wartość użytą do żądania poprzedniej strony. Problemy znajdują się w `nodes` tablicy. `runPagedQueryAsync` Metoda dołącza te węzły do tablicy, która zawiera wszystkie wyniki ze wszystkich stron.
+Skoncentrujemy się na algorytmie stronicowania i strukturze asynchronicznej poprzedniego kodu. (Szczegółowe informacje o interfejsie API usługi GitHub GraphQL można znaleźć w [dokumentacji usługi GitHub GraphQL](https://developer.github.com/v4/guides/) ). `runPagedQueryAsync`Metoda wylicza problemy od najnowszych do najstarszych. Żąda 25 problemów na stronę i analizuje `pageInfo` strukturę odpowiedzi, aby kontynuować z poprzednią stroną. Jest to zgodne ze standardową obsługą stronicowania GraphQL dla odpowiedzi na wiele stron. Odpowiedź zawiera `pageInfo` obiekt, który zawiera `hasPreviousPages` wartość i `startCursor` wartość użytą do żądania poprzedniej strony. Problemy znajdują się w `nodes` tablicy. `runPagedQueryAsync`Metoda dołącza te węzły do tablicy, która zawiera wszystkie wyniki ze wszystkich stron.
 
-Po pobraniu i przywróceniu strony wyników raporty `runPagedQueryAsync` postępują i sprawdzają, czy zostały anulowane. Jeśli żądanie zostało anulowane, `runPagedQueryAsync` program wygeneruje <xref:System.OperationCanceledException>.
+Po pobraniu i przywróceniu strony wyników `runPagedQueryAsync` raporty postępują i sprawdzają, czy zostały anulowane. Jeśli żądanie zostało anulowane, program `runPagedQueryAsync` wygeneruje <xref:System.OperationCanceledException> .
 
-W tym kodzie istnieje kilka elementów, które można ulepszyć. Co najważniejsze, `runPagedQueryAsync` należy przydzielić magazyn dla wszystkich zwracanych problemów. Ten przykład zakończył się z powodu 250 problemów, ponieważ pobieranie wszystkich otwartych problemów wymagało dużo więcej pamięci do przechowywania wszystkich pobranych problemów. Protokoły obsługujące raporty z postępów i anulowanie sprawiają, że algorytm jest trudniejszy do zrozumienia podczas pierwszego odczytywania. Są wykorzystywane więcej typów i interfejsów API. Należy śledzić komunikację za pośrednictwem programu <xref:System.Threading.CancellationTokenSource> i powiązane <xref:System.Threading.CancellationToken> z nim, aby zrozumieć, gdzie zażądano anulowania, i miejsce, w którym jest ono udzielone.
+W tym kodzie istnieje kilka elementów, które można ulepszyć. Co najważniejsze, `runPagedQueryAsync` należy przydzielić magazyn dla wszystkich zwracanych problemów. Ten przykład zakończył się z powodu 250 problemów, ponieważ pobieranie wszystkich otwartych problemów wymagało dużo więcej pamięci do przechowywania wszystkich pobranych problemów. Protokoły obsługujące raporty z postępów i anulowanie sprawiają, że algorytm jest trudniejszy do zrozumienia podczas pierwszego odczytywania. Są wykorzystywane więcej typów i interfejsów API. Należy śledzić komunikację za pośrednictwem programu <xref:System.Threading.CancellationTokenSource> i powiązane z nim, <xref:System.Threading.CancellationToken> Aby zrozumieć, gdzie zażądano anulowania, i miejsce, w którym jest ono udzielone.
 
 ## <a name="async-streams-provide-a-better-way"></a>Strumienie asynchroniczne zapewniają lepszy sposób
 
-Strumienie asynchroniczne i powiązane z nimi wsparcie dotyczące języka dotyczą wszystkich problemów. Kod generujący sekwencję może teraz używać `yield return` do zwracania elementów w metodzie, która została zadeklarowana z `async` modyfikatorem. Można wykorzystać strumień asynchroniczny za pomocą `await foreach` pętli tak samo jak w przypadku użycia dowolnej sekwencji przy `foreach` użyciu pętli.
+Strumienie asynchroniczne i powiązane z nimi wsparcie dotyczące języka dotyczą wszystkich problemów. Kod generujący sekwencję może teraz używać `yield return` do zwracania elementów w metodzie, która została zadeklarowana z `async` modyfikatorem. Można wykorzystać strumień asynchroniczny za pomocą `await foreach` pętli tak samo jak w przypadku użycia dowolnej sekwencji przy użyciu `foreach` pętli.
 
 Te nowe funkcje języka zależą od trzech nowych interfejsów dodanych do .NET Standard 2,1 i wdrożonych w środowisku .NET Core 3,0:
 
@@ -82,11 +82,11 @@ Te trzy interfejsy powinny być znane dla większości deweloperów języka C#. 
 - <xref:System.Collections.Generic.IEnumerator%601?displayProperty=nameWithType>
 - <xref:System.IDisposable?displayProperty=nameWithType>
 
-Jednym z typów, które mogą być nieznane <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>. `ValueTask` Struktura zapewnia podobny interfejs API do <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klasy. `ValueTask`jest używany w tych interfejsach ze względu na wydajność.
+Jednym z typów, które mogą być nieznane <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType> . `ValueTask`Struktura zapewnia podobny interfejs API do <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klasy. `ValueTask`jest używany w tych interfejsach ze względu na wydajność.
 
 ## <a name="convert-to-async-streams"></a>Konwertuj na strumienie asynchroniczne
 
-Następnie Skonwertuj `runPagedQueryAsync` metodę w celu wygenerowania strumienia asynchronicznego. Najpierw Zmień sygnaturę `runPagedQueryAsync` `IAsyncEnumerable<JToken>`, aby zwracała, i Usuń tokeny anulowania i obiekty postępu z listy parametrów, jak pokazano w poniższym kodzie:
+Następnie Skonwertuj `runPagedQueryAsync` metodę w celu wygenerowania strumienia asynchronicznego. Najpierw Zmień sygnaturę `runPagedQueryAsync` , aby zwracała `IAsyncEnumerable<JToken>` , i Usuń tokeny anulowania i obiekty postępu z listy parametrów, jak pokazano w poniższym kodzie:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetUpdateSignature" :::
 
@@ -112,7 +112,7 @@ Zastąp ten kod następującą `await foreach` pętlą:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
 
-Nowy interfejs <xref:System.Collections.Generic.IAsyncEnumerator%601> pochodzi od <xref:System.IAsyncDisposable>. Oznacza to, że poprzednia pętla będzie asynchronicznie zlikwidować strumień po zakończeniu pętli. Można wyobrazić pętlę, tak jak w poniższym kodzie:
+Nowy interfejs <xref:System.Collections.Generic.IAsyncEnumerator%601> pochodzi od <xref:System.IAsyncDisposable> . Oznacza to, że poprzednia pętla będzie asynchronicznie zlikwidować strumień po zakończeniu pętli. Można wyobrazić pętlę, tak jak w poniższym kodzie:
 
 ```csharp
 int num = 0;
@@ -132,23 +132,23 @@ try
 }
 ```
 
-Domyślnie elementy strumienia są przetwarzane w przechwyconym kontekście. Jeśli chcesz wyłączyć przechwytywanie kontekstu, użyj metody <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [konsumowania wzorca asynchronicznego opartego na zadaniach](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Domyślnie elementy strumienia są przetwarzane w przechwyconym kontekście. Jeśli chcesz wyłączyć przechwytywanie kontekstu, użyj <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metody rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [konsumowania wzorca asynchronicznego opartego na zadaniach](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-Strumienie asynchroniczne obsługują anulowanie przy użyciu tego samego protokołu `async` , co inne metody. Należy zmodyfikować sygnaturę dla asynchronicznej metody iteratora w następujący sposób, aby obsługiwać anulowanie:
+Strumienie asynchroniczne obsługują anulowanie przy użyciu tego samego protokołu, co inne `async` metody. Należy zmodyfikować sygnaturę dla asynchronicznej metody iteratora w następujący sposób, aby obsługiwać anulowanie:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
 
-Ten <xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> atrybut powoduje, <xref:System.Collections.Generic.IAsyncEnumerator%601> że kompilator generuje kod dla, który przekazuje token jako `GetAsyncEnumerator` widoczny dla treści iteratora asynchronicznego jako ten argument. Wewnątrz `runQueryAsync`można skontrolować stan tokenu i w razie żądania anulować dalsze prace.
+Ten <xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> atrybut powoduje, że kompilator generuje kod dla <xref:System.Collections.Generic.IAsyncEnumerator%601> , który przekazuje token `GetAsyncEnumerator` jako widoczny dla treści iteratora asynchronicznego jako ten argument. Wewnątrz `runQueryAsync` można skontrolować stan tokenu i w razie żądania anulować dalsze prace.
 
-Aby przekazać token anulowania do strumienia <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>asynchronicznego, należy użyć innej metody rozszerzenia. Należy zmodyfikować pętlę wyliczające problemy w następujący sposób:
+<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>Aby przekazać token anulowania do strumienia asynchronicznego, należy użyć innej metody rozszerzenia. Należy zmodyfikować pętlę wyliczające problemy w następujący sposób:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Kod gotowego samouczka można uzyskać z repozytorium [dotnet/docs](https://github.com/dotnet/docs) w folderze [CSharp/samouczki/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) .
+Kod gotowego samouczka można uzyskać z repozytorium [dotnet/docs](https://github.com/dotnet/docs) w folderze [CSharp/samouczki/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) .
 
 ## <a name="run-the-finished-application"></a>Uruchamianie gotowej aplikacji
 
-Uruchom ponownie aplikację. Poróżnij swoje zachowanie z zachowaniem aplikacji startowej. Pierwsza Strona wyników jest wyliczana zaraz po jej udostępnieniu. Po zażądaniu i pobraniu każdej nowej strony istnieje zauważalne wstrzymanie, a następnie wyniki następnej strony są szybko wyliczane. `try` jest wymagany do obsługi anulowania: obiekt wywołujący może zatrzymać wyliczanie  /  `catch` kolekcji. Postęp jest jasno raportowany, ponieważ strumień asynchroniczny generuje wyniki po pobraniu każdej strony. Stan każdego zwróconego problemu jest bezproblemowo zawarty w `await foreach` pętli. Obiekt wywołania zwrotnego nie jest potrzebny do śledzenia postępu.
+Uruchom ponownie aplikację. Poróżnij swoje zachowanie z zachowaniem aplikacji startowej. Pierwsza Strona wyników jest wyliczana zaraz po jej udostępnieniu. Po zażądaniu i pobraniu każdej nowej strony istnieje zauważalne wstrzymanie, a następnie wyniki następnej strony są szybko wyliczane. `try`  /  `catch` Blok nie jest wymagany do obsługi anulowania: obiekt wywołujący może zatrzymać Wyliczanie kolekcji. Postęp jest jasno raportowany, ponieważ strumień asynchroniczny generuje wyniki po pobraniu każdej strony. Stan każdego zwróconego problemu jest bezproblemowo zawarty w `await foreach` pętli. Obiekt wywołania zwrotnego nie jest potrzebny do śledzenia postępu.
 
 Aby zobaczyć ulepszenia wykorzystania pamięci, zbadając kod. Nie trzeba już przydzielać kolekcji do przechowywania wszystkich wyników przed ich wyliczeniem. Obiekt wywołujący może określić, jak zużywać wyniki i czy wymagana jest kolekcja magazynu.
 

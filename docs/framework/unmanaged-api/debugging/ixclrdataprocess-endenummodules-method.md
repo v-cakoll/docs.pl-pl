@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataProcess::EndEnumModules
+title: 'IXCLRDataProcess:: EndEnumModules, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775430"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420841"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>Metoda IXCLRDataProcess::EndEnumModules
+# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess:: EndEnumModules, Metoda
 
-Zwalnia zasoby używane przez Iteratory wewnętrzny używany podczas wyliczania modułu.
+Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania modułu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,18 +39,18 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out] Dojścia wyliczania modułów.
+określoną Dojście do wyliczania modułów.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 26 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataProcess` interfejsu i odpowiada 26emu miejscu tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
-**Nagłówek:** Brak **biblioteki:** Brak **wersje programu .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Nagłówek:** Brak **biblioteki:** brak **.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess, interfejs](ixclrdataprocess-interface.md)

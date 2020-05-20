@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 786e53d43ecde0bc3a97fadb77184d25d41430bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cd451854d4dbb3b243339efdc33d7dcd7860eb7
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178348"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420607"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes — Wyliczenie
-Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli. Te stałe są używane przez [metody ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) metody.  
+Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli. Te stałe są używane przez metody [ISymUnmanagedBinder2:: GetReaderForFile2 —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3:: GetReaderFromCallback —](isymunmanagedbinder3-getreaderfromcallback-method.md) .  
   
 > [!IMPORTANT]
 > Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych programu (PDB) z niezaufanego źródła.  
@@ -43,14 +43,14 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Wysyła zapytanie do rejestru o ścieżki wyszukiwania symboli.|  
+|`AllowRegistryAccess`|Wysyła zapytanie do rejestru pod kątem ścieżek wyszukiwania symboli.|  
 |`AllowSymbolServerAccess`|Uzyskuje dostęp do serwera symboli.|  
 |`AllowOriginalPathAccess`|Przeszukuje ścieżkę określoną w katalogu debugowania.|  
-|`AllowReferencePathAccess`|Wyszukuje bazę danych WDB w miejscu, w którym znajduje się plik exe.|  
+|`AllowReferencePathAccess`|Wyszukuje PDB w miejscu, gdzie plik. exe jest.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Wyliczenia magazynu symboli diagnostycznych](diagnostics-symbol-store-enumerations.md)

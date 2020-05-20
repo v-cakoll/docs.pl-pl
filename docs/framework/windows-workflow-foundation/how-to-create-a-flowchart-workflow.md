@@ -1,22 +1,23 @@
 ---
 title: 'Instrukcje: Tworzenie przepływu pracy schematu blokowego'
+description: W tym artykule opisano tworzenie przepływu pracy korzystającego z wbudowanych działań i działań niestandardowych z poprzedniego artykułu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6b3fa423200f5c5cfece60f07372ce9678fc0072
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989685"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419710"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Instrukcje: Tworzenie przepływu pracy schematu blokowego
-Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy korzystającego z obu wbudowanych działań, takich jak działanie <xref:System.Activities.Statements.Flowchart>, oraz działań niestandardowych z poprzednich [jak: Utwórz temat](how-to-create-an-activity.md) działania. Przepływ pracy modeluje grę z liczbą odgadnąć.  
+Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy korzystającego z obu wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie, oraz działań niestandardowych z poprzednich instrukcji [: Create a Activity](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.  
   
 > [!NOTE]
-> Każdy temat w samouczku Wprowadzenie zależy od poprzednich tematów. Aby ukończyć ten temat, należy najpierw wykonać [How to: Utwórz](how-to-create-an-activity.md)działania.  
+> Każdy temat w samouczku Wprowadzenie zależy od poprzednich tematów. Aby ukończyć ten temat, należy najpierw wykonać [instrukcje: tworzenie działania](how-to-create-an-activity.md).  
   
 > [!NOTE]
 > Aby pobrać kompletną wersję samouczka, zobacz [Windows Workflow Foundation (WF45) — samouczek wprowadzenie](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -27,7 +28,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
   
 2. W węźle **zainstalowane**, **wspólne elementy** wybierz pozycję **przepływ pracy**. Wybierz **działanie** z listy **przepływów pracy** .  
   
-3. Wpisz `FlowchartNumberGuessWorkflow` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.  
+3. Wpisz tekst `FlowchartNumberGuessWorkflow` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.  
   
 4. Przeciągnij działanie **Flowchart** z sekcji **Flowchart** w **przyborniku** i upuść je do **działania Drop tutaj** etykieta na powierzchni projektowej przepływu pracy.  
   
@@ -39,11 +40,11 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
   
 3. Kliknij przycisk **Utwórz argument**.  
   
-4. Wpisz `MaxNumber` w polu **Nazwa** **, wybierz z** listy rozwijanej **kierunek** , wybierz **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER, aby zapisać argument.  
+4. Wpisz `MaxNumber` **w** polu **Nazwa** , wybierz z listy rozwijanej **kierunek** , wybierz **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER, aby zapisać argument.  
   
 5. Kliknij przycisk **Utwórz argument**.  
   
-6. Wpisz `Turns` w polu **Nazwa** , który znajduje się poniżej nowo dodanego argumentu `MaxNumber`, wybierz pozycję z listy rozwijanej **kierunek** **, wybierz wartość** **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER.  
+6. Wpisz `Turns` w polu **Nazwa** , który znajduje się poniżej nowo dodanego `MaxNumber` argumentu **Out** , wybierz pozycję z listy rozwijanej **kierunek** , wybierz pozycję **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER.  
   
 7. Kliknij pozycję **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć okienko **argumenty** .  
   
@@ -52,13 +53,13 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 9. Kliknij pozycję **Utwórz zmienną**.  
   
     > [!TIP]
-    > Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij działanie <xref:System.Activities.Statements.Flowchart> na powierzchni projektanta przepływu pracy, aby je wybrać.  
+    > Jeśli nie zostanie wyświetlone pole **Utwórz zmienną** , kliknij <xref:System.Activities.Statements.Flowchart> działanie na powierzchni projektanta przepływu pracy, aby je wybrać.  
   
-10. Wpisz `Guess` w polu **Nazwa** wybierz opcję **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
+10. Wpisz `Guess` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
 11. Kliknij pozycję **Utwórz zmienną**.  
   
-12. Wpisz `Target` w polu **Nazwa** wybierz opcję **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
+12. Wpisz `Target` w polu **Nazwa** , wybierz wartość **Int32** z listy rozwijanej **Typ zmiennej** , a następnie naciśnij klawisz ENTER, aby zapisać zmienną.  
   
 13. Kliknij pozycję **zmienne** w lewej dolnej części okna projektanta działań, aby zamknąć okienko **zmienne** .  
   
@@ -69,7 +70,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     > [!NOTE]
     > Działania mogą być również wskazywane jako działanie uruchamiania w przepływie pracy przez ręczne łączenie z tym działaniem z węzłem początkowym. Aby to zrobić, umieść kursor myszy nad węzłem **startowym** , kliknij jeden z prostokątów, który pojawia się, gdy wskaźnik myszy znajduje się nad węzłem **startowym** , i przeciągnij linię łączącą w dół do żądanego działania i upuść ją na jednym z prostokątów, które są wyświetlane. Możesz również wyznaczyć działanie jako działanie uruchamiania, klikając je prawym przyciskiem myszy i wybierając pozycję **Ustaw jako węzeł startowy**.  
   
-2. Wpisz `Target` w polu **do** i poniższe wyrażenie w polu  **C# wprowadź wyrażenie** lub **wprowadź wyrażenie w języku VB** .  
+2. Wpisz `Target` w polu **do** i poniższe wyrażenie w polu **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,7 +85,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
   
 3. Przeciągnij działanie **monitu** z sekcji **NumberGuessWorkflowActivities** w **przyborniku**, upuść je poniżej akcji **Przypisz** z poprzedniego kroku, a następnie połącz działanie **monitu** z **przypisaniem** działania. Istnieją trzy sposoby łączenia tych dwóch działań. Pierwszy sposób polega na nawiązaniu połączenia w trakcie upuszczania działania **monitu** w przepływie pracy. Przeciągając działanie **monitu** do przepływu pracy, umieść je nad przydziałem **Assign** i upuść je na jednym z czterech trójkątów, które pojawiają się, gdy działanie **monitu** znajduje się nad **przypisaniem** . Drugi sposób polega na porzucenia działania **monitu** na przepływ pracy w odpowiedniej lokalizacji. Następnie przesuń wskaźnik myszy nad działanie **przypisywania** i przeciągnij jeden z prostokątów, które pojawiają się w dół do działania **monitu** . Przeciągnij myszą tak, aby linia łącząca z działania **Assign** łączyła się z jednym z prostokątów działania **monitu** , a następnie zwolnij przycisk myszy. Trzeci sposób jest bardzo podobny do pierwszego, z tą różnicą, że zamiast przeciągać działanie **monitu** z **przybornika**, przeciągniesz go z jego lokalizacji na powierzchni projektowej przepływu pracy, umieścisz go nad działaniem **przypisywania** i upuść je na jeden z wyświetlonych trójkątów.  
   
-4. W **oknie właściwości** działania **monitu** wpisz `"EnterGuess"` w tym cudzysłowy w polu wartość właściwości **zakładkaname** . Wpisz `Guess` w polu wartość właściwości **wynik** i wpisz następujące wyrażenie w polu właściwości **Text** .  
+4. W **oknie właściwości** działania **monitu** wpisz, w `"EnterGuess"` tym cudzysłowy w polu wartość właściwości **zakładkaname** . Wpisz `Guess` w polu wartość właściwości **wynik** i wpisz następujące wyrażenie w polu właściwości **Text** .  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -99,7 +100,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
   
 5. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w **przyborniku** i połącz je przy użyciu jednej z metod opisanych w poprzednim kroku, tak aby była niższa od działania **monitu** .  
   
-6. Wpisz `Turns` w polu **do** i `Turns + 1` w polu  **C# wprowadź wyrażenie** lub **wprowadź wyrażenie w języku VB** .  
+6. Wpisz `Turns` w polu **do** i `Turns + 1` w polu **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie w języku VB** .  
   
 7. Przeciągnij element **FlowDecision** z sekcji **Flowchart** w **przyborniku** i połącz go pod działaniem **Assign** . W **oknie właściwości**wpisz następujące wyrażenie w polu wartość właściwości **warunek** .  
   
@@ -146,9 +147,9 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
   
 ### <a name="to-build-the-workflow"></a>Aby skompilować przepływ pracy  
   
-1. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+1. Naciśnij kombinację klawiszy CTRL+SHIFT+B w celu skompilowania rozwiązania.  
   
-     Instrukcje dotyczące sposobu uruchamiania przepływu pracy można znaleźć w następnym temacie [How to: Uruchom przepływ pracy](how-to-run-a-workflow.md). Jeśli wykonano już [, jak: Uruchom przepływ pracy](how-to-run-a-workflow.md) kroku z innym stylem przepływu pracy i chcesz uruchomić go za pomocą przepływu pracy Flowchart z tego kroku, przejdź do sekcji [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [instrukcje: Uruchom przepływ pracy](how-to-run-a-workflow.md).  
+     Aby uzyskać instrukcje dotyczące sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: uruchamianie przepływu pracy](how-to-run-a-workflow.md). Jeśli zostały już wykonane kroki [: uruchamianie przepływu pracy](how-to-run-a-workflow.md) z innym stylem przepływu pracy i chcesz uruchomić go za pomocą przepływu pracy Flowchart z tego kroku, przejdź do tematu, [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) w temacie [jak uruchomić przepływ pracy](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -157,5 +158,5 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 - [Programowanie w programie Windows Workflow Foundation](programming.md)
 - [Projektowanie przepływów pracy](designing-workflows.md)
 - [Wprowadzenie — samouczek](getting-started-tutorial.md)
-- [Instrukcje: Tworzenie](how-to-create-an-activity.md) działań
+- [Instrukcje: Tworzenie działania](how-to-create-an-activity.md)
 - [Instrukcje: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)

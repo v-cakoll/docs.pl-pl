@@ -1,23 +1,24 @@
 ---
 title: 'Instrukcje: Tworzenie sekwencyjnego przepływu pracy'
+description: W tym artykule opisano tworzenie przepływu pracy korzystającego z obu wbudowanych działań, takich jak działanie sekwencji i działania niestandardowe.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f80ac471fdcc425504b11b5fb17effa888aa9590
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989704"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419697"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Instrukcje: Tworzenie sekwencyjnego przepływu pracy
 
-Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy, który używa zarówno wbudowanych działań, jak <xref:System.Activities.Statements.Sequence> działania, jak i działań niestandardowych, z poprzednich [metod: Utwórz temat działania](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.
+Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z działań niestandardowych. W tym temacie przedstawiono procedurę tworzenia przepływu pracy korzystającego z obu wbudowanych działań, takich jak <xref:System.Activities.Statements.Sequence> działanie, oraz działań niestandardowych z poprzednich instrukcji [: Create a Activity](how-to-create-an-activity.md) . Przepływ pracy modeluje grę z liczbą odgadnąć.
 
 > [!NOTE]
-> Każdy temat w samouczku Wprowadzenie zależy od poprzednich tematów. Aby ukończyć ten temat, należy najpierw wykonać [następujące czynności: Utwórz działanie](how-to-create-an-activity.md).
+> Każdy temat w samouczku Wprowadzenie zależy od poprzednich tematów. Aby ukończyć ten temat, należy najpierw wykonać [instrukcje: tworzenie działania](how-to-create-an-activity.md).
 
 > [!NOTE]
 > Aby pobrać kompletną wersję samouczka, zobacz [Windows Workflow Foundation (WF45) — samouczek wprowadzenie](https://go.microsoft.com/fwlink/?LinkID=248976).
@@ -28,7 +29,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 
 2. W węźle **zainstalowane**, **wspólne elementy** wybierz pozycję **przepływ pracy**. Wybierz **działanie** z listy **przepływów pracy** .
 
-3. Wpisz `SequentialNumberGuessWorkflow` tekst w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.
+3. Wpisz tekst `SequentialNumberGuessWorkflow` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.
 
 4. Przeciągnij działanie **sekwencji** z sekcji **przepływ sterowania** w **przyborniku** i upuść je na etykiecie **działania upuść** na powierzchni projektowej przepływu pracy.
 
@@ -44,7 +45,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 
 5. Kliknij przycisk **Utwórz argument**.
 
-6. Wpisz `Turns` w polu **Nazwa** , który znajduje się poniżej nowo dodanego `MaxNumber` argumentu, wybierz **pozycję z listy** rozwijanej **kierunek** , wybierz pozycję **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER.
+6. Wpisz `Turns` w polu **Nazwa** , który znajduje się poniżej nowo dodanego `MaxNumber` argumentu **Out** , wybierz pozycję z listy rozwijanej **kierunek** , wybierz pozycję **Int32** z listy rozwijanej **Typ argumentu** , a następnie naciśnij klawisz ENTER.
 
 7. Kliknij pozycję **argumenty** w lewym dolnym rogu projektanta działań, aby zamknąć okienko **argumenty** .
 
@@ -65,7 +66,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 
 ## <a name="to-add-the-workflow-activities"></a>Aby dodać działania przepływu pracy
 
-1. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w **przyborniku** i upuść je na działanie **sekwencji** . Wpisz `Target` w polu **do** i poniższe wyrażenie w polu  **C# wprowadź wyrażenie** lub **wprowadź wyrażenie w języku VB** .
+1. Przeciągnij działanie **Przypisz** z sekcji elementy **pierwotne** w **przyborniku** i upuść je na działanie **sekwencji** . Wpisz `Target` w polu **do** i poniższe wyrażenie w polu **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** .
 
     ```vb
     New System.Random().Next(1, MaxNumber + 1)
@@ -90,11 +91,11 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     Guess != Target
     ```
 
-     Działanie wykonuje działania podrzędne, a następnie szacuje <xref:System.Activities.Statements.DoWhile.Condition%2A>je. <xref:System.Activities.Statements.DoWhile> Jeśli zostanie <xref:System.Activities.Statements.DoWhile.Condition%2A> obliczona `True`wartość, działania <xref:System.Activities.Statements.DoWhile> wykonywane ponownie. W tym przykładzie oszacowanie użytkownika jest oceniane i <xref:System.Activities.Statements.DoWhile> kontynuuje do momentu poprawienia wartości.
+     <xref:System.Activities.Statements.DoWhile>Działanie wykonuje działania podrzędne, a następnie szacuje je <xref:System.Activities.Statements.DoWhile.Condition%2A> . Jeśli zostanie <xref:System.Activities.Statements.DoWhile.Condition%2A> obliczona wartość `True` , działania <xref:System.Activities.Statements.DoWhile> wykonywane ponownie. W tym przykładzie oszacowanie użytkownika jest oceniane i <xref:System.Activities.Statements.DoWhile> kontynuuje do momentu poprawienia wartości.
 
 4. Przeciągnij działanie **monitu** z sekcji **NumberGuessWorkflowActivities** w **przyborniku** i upuść je w działaniu **DoWhile** z poprzedniego kroku.
 
-5. W **oknie właściwości**, w polu `"EnterGuess"` wartość właściwości **zakładkiname** dla działania **monitu** wpisz cudzysłowy. Wpisz `Guess` w polu wartość właściwości **wynik** i wpisz następujące wyrażenie w polu właściwości **Text** .
+5. W **oknie właściwości**, w `"EnterGuess"` polu wartość właściwości **Zakładkiname** dla działania **monitu** wpisz cudzysłowy. Wpisz `Guess` w polu wartość właściwości **wynik** i wpisz następujące wyrażenie w polu właściwości **Text** .
 
     ```vb
     "Please enter a number between 1 and " & MaxNumber
@@ -112,7 +113,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
     > [!NOTE]
     > Po porzucenia działania **Przypisz** należy zwrócić uwagę, jak Projektant przepływu pracy automatycznie dodaje działanie **sekwencji** , aby zawierało zarówno działanie **monitu** , jak i nowo dodane działanie **przypisywania** .
 
-7. Wpisz `Turns` w polu **do** i `Turns + 1` w polu **wprowadź C# wyrażenie** lub wprowadź wyrażenie w **języku VB** .
+7. Wpisz `Turns` w polu **do** i `Turns + 1` w polu **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie w języku VB** .
 
 8. Przeciągnij działanie **if** z sekcji **przepływ sterowania** w **przyborniku** i upuść je w działaniu **sekwencji** , tak aby była zgodna z nowo dodanym działaniem **przypisywania** .
 
@@ -154,9 +155,9 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 
 ## <a name="to-build-the-workflow"></a>Aby skompilować przepływ pracy
 
-1. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.
+1. Naciśnij kombinację klawiszy CTRL+SHIFT+B w celu skompilowania rozwiązania.
 
-     Instrukcje dotyczące sposobu uruchamiania przepływu pracy można znaleźć w następnym temacie, [jak: Uruchom przepływ pracy](how-to-run-a-workflow.md). Jeśli zostały już wykonane [następujące instrukcje: Uruchom krok przepływu](how-to-run-a-workflow.md) pracy z innym stylem przepływu pracy i chcesz uruchomić go przy użyciu sekwencyjnego przepływu pracy z tego kroku, przejdź do sekcji [Aby skompilować i uruchomić](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [aplikację w temacie How to: Uruchom przepływ pracy](how-to-run-a-workflow.md).
+     Aby uzyskać instrukcje dotyczące sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: uruchamianie przepływu pracy](how-to-run-a-workflow.md). Jeśli zostały już wykonane kroki [: uruchamianie przepływu pracy](how-to-run-a-workflow.md) z innym stylem przepływu pracy i chcesz uruchomić go przy użyciu sekwencyjnego przepływu pracy z tego kroku, przejdź do tematu, [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) w temacie [jak uruchomić przepływ pracy](how-to-run-a-workflow.md).
 
 ## <a name="see-also"></a>Zobacz także
 

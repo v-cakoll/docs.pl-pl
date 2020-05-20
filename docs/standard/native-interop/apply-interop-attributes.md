@@ -1,5 +1,6 @@
 ---
 title: Stosowanie atrybutów międzyoperacyjności
+description: Ten artykuł podsumowuje atrybuty międzyoperacyjności modelu COM w przestrzeni nazw System. Runtime. InteropServices, w tym atrybuty czasu projektowania i narzędzia konwersji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
@@ -13,15 +14,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159250"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420542"
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
-<xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu com.  
+<xref:System.Runtime.InteropServices>Przestrzeń nazw zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu com.  
   
  Jeśli nie znasz zadania dotyczącego stosowania atrybutów do kodu zarządzanego, zobacz [Rozszerzanie metadanych przy użyciu atrybutów](../../../docs/standard/attributes/index.md). Podobnie jak w przypadku innych atrybutów niestandardowych, można zastosować atrybuty dotyczące międzyoperacyjności do typów, metod, właściwości, parametrów, pól i innych elementów członkowskich.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "78159250"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Zawiera **TYPEFLAGS** , które zostały pierwotnie zaimportowane dla tego typu z biblioteki typów com.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Zawiera **VARFLAGS** , które zostały pierwotnie zaimportowane dla tej zmiennej z biblioteki typów com.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices>
 - [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

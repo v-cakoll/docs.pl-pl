@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataProcess::EnumModule
+title: 'IXCLRDataProcess:: EnumModule, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumModule Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 40ab90a3218d4309cda709004a191e9440fe505d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5caadcfe091393a8ff79106d57a50a532c349829
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769582"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420781"
 ---
-# <a name="ixclrdataprocessenummodule-method"></a>Metoda IXCLRDataProcess::EnumModule
+# <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess:: EnumModule, Metoda
 
 Wylicza moduły tego procesu.
 
@@ -40,25 +40,25 @@ HRESULT EnumModule(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out w] Dojścia wyliczania modułów.
+[in. out] Dojście do wyliczania modułów.
 
 `mod`\
-[out] Moduł wyliczany.
+określoną Moduł wyliczany.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 25 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataProcess` interfejsu i odpowiada 25 gniazdo tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataModule](ixclrdatamodule-interface.md)
-- [Interfejs IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataModule, interfejs](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess, interfejs](ixclrdataprocess-interface.md)

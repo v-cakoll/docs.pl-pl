@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8757642db6c4375cf55d1f7288669c4c8a752a38
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3c2bc771c0a131329b9403c99a33ca7b79023771
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790393"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420854"
 ---
 # <a name="ixclrdatamodule-interface"></a>IXCLRDataModule, interfejs
 
@@ -38,16 +38,16 @@ Zapewnia metody wykonywania zapytania o informacje o załadowanym module.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM, który pochodzi od `IUnknown` z identyfikatorem GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2`, który można uzyskać za pomocą zwykłych mechanizmów COM.
+Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM pochodzący z `IUnknown` identyfikatora GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2` , który można uzyskać za pomocą zwykłych mechanizmów com.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
 **Nagłówek:** Dawaj  
 **Biblioteka:** Dawaj  
-**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](index.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

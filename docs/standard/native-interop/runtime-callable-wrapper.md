@@ -1,5 +1,6 @@
 ---
 title: Wywoływana otoka środowiska uruchomieniowego
+description: Środowisko CLR uwidacznia obiekty COM za pomocą otoki wywołującej środowisko uruchomieniowe, która zarządza wywołaniami między klientem .NET a obiektem COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156013"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420490"
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego udostępnia obiekty COM za pomocą serwera proxy zwanego otoką (otoka) środowiska uruchomieniowego. Chociaż Otoka RCW wydaje się być zwykłym obiektem dla klientów platformy .NET, jej podstawową funkcją jest kierowanie wywołań między klientem .NET a obiektem COM.  
@@ -41,7 +42,7 @@ Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów 
   
  Otoka RCW zużywa interfejsy wymienione w poniższej tabeli, które są uwidaczniane przez obiekt, który jest zawijany.  
   
-|Interface|Opis|  
+|Interfejs|Opis|  
 |---------------|-----------------|  
 |**IDispatch**|Dla późnego wiązania do obiektów COM przy użyciu odbicia.|  
 |**IErrorInfo**|Zawiera tekstowy opis błędu, jego źródło, plik pomocy, kontekst pomocy oraz identyfikator GUID interfejsu, który definiuje błąd (zawsze **GUID_NULL** dla klas .NET).|  
@@ -50,13 +51,13 @@ Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów 
   
  Otoka (RCW) opcjonalnie wykorzystuje interfejsy wymienione w poniższej tabeli, które są udostępniane przez obiekt, który jest zawijany.  
   
-|Interface|Opis|  
+|Interfejs|Opis|  
 |---------------|-----------------|  
 |**IConnectionPoint** i **IConnectionPointContainer**|Otoka RCW Konwertuje obiekty, które uwidaczniają styl zdarzenia punktu połączenia do zdarzeń na podstawie delegowania.|  
 |**IDispatchEx** (tylko .NET Framework) |Jeśli klasa implementuje **IDispatchEx**, otoka zawiera implementację **IExpando**. Interfejs **IDispatchEx** jest rozszerzeniem interfejsu **IDispatch** , który, w przeciwieństwie do **IDispatch**, włącza Wyliczenie, Dodawanie, usuwanie i uwzględnianie wielkości liter dla elementów członkowskich.|  
 |**IEnumVARIANT**|Włącza typy COM obsługujące wyliczenia, które mają być traktowane jako kolekcje.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Otoki COM](com-wrappers.md)
 - [Wywoływana otoka COM](com-callable-wrapper.md)

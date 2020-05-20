@@ -1,5 +1,6 @@
 ---
 title: Kwalifikowanie typów .NET do współdziałania z modelem COM
+description: Ten artykuł zawiera wskazówki ułatwiające uwidocznienie typów w zestawie .NET w aplikacjach COM dla współdziałania z modelem COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091579"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420503"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Kwalifikowanie typów .NET do współdziałania z modelem COM
 Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę wymagania międzyoperacyjności modelu COM w czasie projektowania. Typy zarządzane (Klasa, interfejs, struktura i Wyliczenie) bezproblemowo integrują się z typami COM w przypadku przestrzegania następujących wytycznych:  
@@ -33,7 +34,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
   
 - Metody, właściwości, pola i zdarzenia muszą być publiczne.  
   
-     Elementy członkowskie typów publicznych muszą być również publiczne, jeśli mają być widoczne dla modelu COM. Można ograniczyć widoczność zestawu, typu publicznego lub publicznych składowych typu publicznego przez zastosowanie <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Domyślnie wszystkie typy publiczne i członkowie są widoczne.  
+     Elementy członkowskie typów publicznych muszą być również publiczne, jeśli mają być widoczne dla modelu COM. Można ograniczyć widoczność zestawu, typu publicznego lub publicznych składowych typu publicznego przez zastosowanie <xref:System.Runtime.InteropServices.ComVisibleAttribute> . Domyślnie wszystkie typy publiczne i członkowie są widoczne.  
   
 - Typy muszą mieć publiczny Konstruktor bez parametrów, który ma być aktywowany z modelu COM.  
   
@@ -45,7 +46,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
   
  Po eksportowaniu do modelu COM Hierarchia dziedziczenia typu zarządzanego jest spłaszczona. Przechowywanie wersji różni się również między środowiskami zarządzanymi i niezarządzanymi. Typy ujawnione dla modelu COM nie mają takich samych cech wersji jak inne typy zarządzane.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

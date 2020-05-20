@@ -1,5 +1,6 @@
 ---
 title: Wywoływana otoka COM
+description: Gdy klient COM wywołuje obiekt .NET, środowisko CLR tworzy obiekt zarządzany i otokę COM wywołującą dla niego. Klienci modelu COM wywołują otokę dla obiektu.
 ms.date: 10/23/2018
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400380"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420529"
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 
@@ -47,7 +48,7 @@ Aby utworzyć to bezproblemowe podejście, CCW produkuje tradycyjne interfejsy C
 
 Oprócz ujawniania interfejsów, które są jawnie implementowane przez klasę w środowisku zarządzanym, środowisko uruchomieniowe platformy .NET dostarcza implementacje interfejsów COM wymienionych w poniższej tabeli w imieniu obiektu. Klasa platformy .NET może zastąpić domyślne zachowanie, dostarczając własną implementację tych interfejsów. Jednak środowisko uruchomieniowe zawsze zapewnia implementację interfejsów **IUnknown** i **IDispatch** .
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |**IDispatch**|Udostępnia mechanizm późnego wiązania do typu.|
 |**IErrorInfo**|Zawiera tekstowy opis błędu, jego źródło, plik pomocy, kontekst pomocy oraz identyfikator GUID interfejsu, który definiuje błąd (zawsze **GUID_NULL** dla klas .NET).|
@@ -58,18 +59,18 @@ Oprócz ujawniania interfejsów, które są jawnie implementowane przez klasę w
 
  Zarządzana Klasa może również udostępniać interfejsy COM opisane w poniższej tabeli.
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
-|Interfejs klasy\_(*ClassName*)|Interfejs, uwidoczniony przez środowisko uruchomieniowe i niejawnie zdefiniowany, który uwidacznia wszystkie interfejsy publiczne, metody, właściwości i pola, które są jawnie uwidocznione w zarządzanym obiekcie.|
+|\_Interfejs klasy (*ClassName*)|Interfejs, uwidoczniony przez środowisko uruchomieniowe i niejawnie zdefiniowany, który uwidacznia wszystkie interfejsy publiczne, metody, właściwości i pola, które są jawnie uwidocznione w zarządzanym obiekcie.|
 |**IConnectionPoint** i **IConnectionPointContainer**|Interfejs dla obiektów, które są źródłem zdarzeń opartych na delegatach (interfejs do rejestrowania subskrybentów zdarzeń).|
 |**IDispatchEx** (tylko .NET Framework)|Interfejs dostarczony przez środowisko uruchomieniowe, jeśli klasa implementuje **IExpando**. Interfejs **IDispatchEx** jest rozszerzeniem interfejsu **IDispatch** , który, w przeciwieństwie do **IDispatch**, włącza Wyliczenie, Dodawanie, usuwanie i uwzględnianie wielkości liter dla elementów członkowskich.|
 |**IEnumVARIANT**|Interfejs dla klas typu kolekcji, który wylicza obiekty w kolekcji, jeśli klasa implementuje **interfejs IEnumerable**.|
 
 ## <a name="introducing-the-class-interface"></a>Wprowadzenie do interfejsu klasy
 
-Interfejs klasy, który nie jest jawnie zdefiniowany w kodzie zarządzanym, jest interfejsem, który uwidacznia wszystkie metody publiczne, właściwości, pola i zdarzenia, które są jawnie uwidocznione w obiekcie .NET. Ten interfejs może być interfejsem o podwójnym lub tylko do wysyłania. Interfejs klasy odbiera nazwę samej klasy .NET, poprzedzoną podkreśleniem. Na przykład dla ssaków klasy, interfejs klasy to \_ssak.
+Interfejs klasy, który nie jest jawnie zdefiniowany w kodzie zarządzanym, jest interfejsem, który uwidacznia wszystkie metody publiczne, właściwości, pola i zdarzenia, które są jawnie uwidocznione w obiekcie .NET. Ten interfejs może być interfejsem o podwójnym lub tylko do wysyłania. Interfejs klasy odbiera nazwę samej klasy .NET, poprzedzoną podkreśleniem. Na przykład dla ssaków klasy, interfejs klasy to \_ ssak.
 
-W przypadku klas pochodnych interfejs klasy udostępnia również wszystkie metody publiczne, właściwości i pola klasy podstawowej. Klasa pochodna również udostępnia interfejs klasy dla każdej klasy bazowej. Na przykład, jeśli ssak klas rozszerza klasę MammalSuperclass, która sama stanowi rozszerzenie elementu System. Object, obiekt .NET uwidacznia klientom COM trzy interfejsy klasy o \_nazwie ssak \_, MammalSuperclass i \_Object.
+W przypadku klas pochodnych interfejs klasy udostępnia również wszystkie metody publiczne, właściwości i pola klasy podstawowej. Klasa pochodna również udostępnia interfejs klasy dla każdej klasy bazowej. Na przykład, jeśli ssak klas rozszerza klasę MammalSuperclass, która sama stanowi rozszerzenie elementu System. Object, obiekt .NET uwidacznia klientom COM trzy interfejsy klasy o nazwie \_ ssak, \_ MammalSuperclass i \_ Object.
 
 Rozważmy na przykład następujące klasy .NET:
 
@@ -96,7 +97,7 @@ public class Mammal
 }
 ```
 
-Klient COM może uzyskać wskaźnik do interfejsu klasy o nazwie `_Mammal`. Na .NET Framework można użyć narzędzia [eksportu biblioteki typów (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) w celu wygenerowania biblioteki typów zawierającej definicję `_Mammal` interfejsu. Eksporter biblioteki typów nie jest obsługiwany w programie .NET Core. Jeśli `Mammal` Klasa implementuje jeden lub więcej interfejsów, interfejsy pojawią się pod klasą coclass.
+Klient COM może uzyskać wskaźnik do interfejsu klasy o nazwie `_Mammal` . Na .NET Framework można użyć narzędzia [eksportu biblioteki typów (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) w celu wygenerowania biblioteki typów zawierającej `_Mammal` definicję interfejsu. Eksporter biblioteki typów nie jest obsługiwany w programie .NET Core. Jeśli `Mammal` Klasa implementuje jeden lub więcej interfejsów, interfejsy pojawią się pod klasą coclass.
 
 ```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
@@ -184,15 +185,15 @@ Automatycznie wygenerowany podwójny interfejs może być odpowiedni w rzadkich 
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Upewnij się, że wszystkie powiadomienia o zdarzeniach COM są opóźnione.
 
-Domyślnie informacje o typie COM są osadzone bezpośrednio w zarządzanych zestawach, co eliminuje konieczność stosowania podstawowych zestawów międzyoperacyjnych (zestawów PIA). Jednak jedno z ograniczeń informacji o typie osadzonym polega na tym, że nie obsługuje on dostarczania powiadomień o zdarzeniach COM przez wczesne wywołania tablic wirtualnych, ale obsługuje tylko wywołania `IDispatch::Invoke` z późnym wiązaniem.
+Domyślnie informacje o typie COM są osadzone bezpośrednio w zarządzanych zestawach, co eliminuje konieczność stosowania podstawowych zestawów międzyoperacyjnych (zestawów PIA). Jednak jedno z ograniczeń informacji o typie osadzonym polega na tym, że nie obsługuje on dostarczania powiadomień o zdarzeniach COM przez wczesne wywołania tablic wirtualnych, ale obsługuje tylko wywołania z późnym wiązaniem `IDispatch::Invoke` .
 
-Jeśli aplikacja wymaga wczesnych wywołań metod interfejsu zdarzenia COM, można ustawić właściwość **Osadź typy** współdziałania w programie Visual Studio do `true`, lub dołączyć następujący element w pliku projektu:
+Jeśli aplikacja wymaga wczesnych wywołań metod interfejsu zdarzenia COM, można ustawić właściwość **Osadź typy** współdziałania w programie Visual Studio do `true` , lub dołączyć następujący element w pliku projektu:
 
 ```xml
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Otoki COM](com-wrappers.md)

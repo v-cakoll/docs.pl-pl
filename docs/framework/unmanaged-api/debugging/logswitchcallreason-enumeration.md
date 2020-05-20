@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: 29781666c106755f96f945325e3a8953bf93b211
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d29bb3886ffb51e1dfb9654f4d70ef7c568fd43
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790344"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420711"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason — Wyliczenie
 Wskazuje operację wykonywaną na przełączniku debugowania/śledzenia.  
@@ -36,21 +36,21 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|Utworzono przełącznik debugowania/śledzenia.|  
 |`SWITCH_MODIFY`|Zmodyfikowano przełącznik debugowania/śledzenia.|  
 |`SWITCH_DELETE`|Usunięto przełącznik debugowania/śledzenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](debugging-enumerations.md)
+- [Debugowanie — wyliczenia](debugging-enumerations.md)

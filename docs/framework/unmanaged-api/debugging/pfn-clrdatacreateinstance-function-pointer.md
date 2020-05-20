@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 433f34447d3bd1a57ca1e289cb0eab3facac2c69
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 34aae3cd913465bc3167d6c5eee9873d212fa4ac
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790357"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420695"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance — Wskaźnik funkcji
 Wskazuje funkcję, która tworzy obiekt interfejsu dla określonego elementu docelowego.  
@@ -45,16 +45,16 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  określoną Wskaźnik do adresu zwróconego obiektu interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt `ICLRDataTarget` jest implementowany przez moduł zapisujący aplikacji debugowania. Implementacja zależy od typu reprezentowanego elementu docelowego. Element docelowy może być procesem, zrzutem pamięci, maszyną zdalną i tak dalej.  
+ `ICLRDataTarget`Obiekt jest implementowany przez moduł zapisujący aplikacji debugowania. Implementacja zależy od typu reprezentowanego elementu docelowego. Element docelowy może być procesem, zrzutem pamięci, maszyną zdalną i tak dalej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData. idl  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

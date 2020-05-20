@@ -1,20 +1,20 @@
 ---
 title: Wyrażenia kwerend
-description: Dowiedz się więcej o obsłudze wyrażeń zapytania F# dla LINQ w języku programowania.
+description: 'Dowiedz się więcej o obsłudze wyrażeń zapytania dla LINQ w języku programowania F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424887"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419190"
 ---
 # <a name="query-expressions"></a>Wyrażenia kwerend
 
 > [!NOTE]
 > Linki do odwołań do interfejsów API w tym artykule przeprowadzą Cię do subskrypcji MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-Wyrażenia zapytań umożliwiają wykonywanie zapytań względem źródła danych i umieszczanie danych w żądanym formularzu. Wyrażenia zapytania zapewniają obsługę LINQ w F#.
+Wyrażenia zapytań umożliwiają wykonywanie zapytań względem źródła danych i umieszczanie danych w żądanym formularzu. Wyrażenia zapytań zapewniają obsługę LINQ w języku F #.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenia zapytań są typem wyrażenia obliczeń podobnym do wyrażeń sekwencji. Podobnie jak w przypadku określenia sekwencji przez podanie kodu w wyrażeniu sekwencji, należy określić zestaw danych, dostarczając kod w wyrażeniu zapytania. W wyrażeniu sekwencji `yield` słowo kluczowe identyfikuje dane, które mają zostać zwrócone jako część wynikowej sekwencji. W wyrażeniach zapytań `select` słowo kluczowe wykonuje tę samą funkcję. Oprócz słowa kluczowego `select`, F# obsługuje również kilka operatorów zapytań, które są podobne do części instrukcji SELECT języka SQL. Oto przykład prostego wyrażenia zapytania wraz z kodem, który łączy się ze źródłem Northwind OData.
+Wyrażenia zapytań są typem wyrażenia obliczeń podobnym do wyrażeń sekwencji. Podobnie jak w przypadku określenia sekwencji przez podanie kodu w wyrażeniu sekwencji, należy określić zestaw danych, dostarczając kod w wyrażeniu zapytania. W wyrażeniu sekwencji `yield` słowo kluczowe identyfikuje dane, które mają zostać zwrócone jako część wynikowej sekwencji. W wyrażeniach zapytania `select` słowo kluczowe wykonuje tę samą funkcję. Oprócz `select` słowa kluczowego język F # obsługuje również kilka operatorów zapytań, które są podobne do części instrukcji SELECT języka SQL. Oto przykład prostego wyrażenia zapytania wraz z kodem, który łączy się ze źródłem Northwind OData.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,17 +46,17 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-W poprzednim przykładzie kod wyrażenie zapytania znajduje się w nawiasach klamrowych. Znaczenie kodu w wyrażeniu polega na zwracaniu każdego klienta w tabeli Customers w bazie danych w wynikach zapytania. Wyrażenia zapytania zwracają typ, który implementuje <xref:System.Linq.IQueryable%601> i <xref:System.Collections.Generic.IEnumerable%601>, i tak, aby mogły być powtarzane przy użyciu [modułu SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , jak pokazano w przykładzie.
+W poprzednim przykładzie kod wyrażenie zapytania znajduje się w nawiasach klamrowych. Znaczenie kodu w wyrażeniu polega na zwracaniu każdego klienta w tabeli Customers w bazie danych w wynikach zapytania. Wyrażenia zapytania zwracają typ, który implementuje <xref:System.Linq.IQueryable%601> i <xref:System.Collections.Generic.IEnumerable%601> i tak, aby można było wykonać iterację przy użyciu [modułu SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , jak pokazano w przykładzie.
 
-Każdy typ wyrażenia obliczeń jest kompilowany z klasy konstruktora. Klasa konstruktora dla wyrażenia obliczeń zapytania jest `QueryBuilder`. Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](computation-expressions.md) i [Klasa LINQ. QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Każdy typ wyrażenia obliczeń jest kompilowany z klasy konstruktora. Klasa konstruktora dla wyrażenia obliczeń zapytania to `QueryBuilder` . Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](computation-expressions.md) i [Klasa LINQ. QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
 
 ## <a name="query-operators"></a>Operatory zapytań
 
-Operatory zapytań umożliwiają określanie szczegółów zapytania, na przykład w celu umieszczenia kryteriów dla rekordów do zwrócenia lub określenia kolejności sortowania wyników. Źródło zapytania musi obsługiwać operator zapytań. Jeśli spróbujesz użyć nieobsługiwanego operatora zapytań, zostanie wygenerowany `System.NotSupportedException`.
+Operatory zapytań umożliwiają określanie szczegółów zapytania, na przykład w celu umieszczenia kryteriów dla rekordów do zwrócenia lub określenia kolejności sortowania wyników. Źródło zapytania musi obsługiwać operator zapytań. Jeśli spróbujesz użyć nieobsługiwanego operatora zapytań, `System.NotSupportedException` zostanie zgłoszony.
 
-W wyrażeniach zapytań można używać tylko wyrażeń, które mogą być tłumaczone na SQL. Na przykład nie są dozwolone wywołania funkcji w wyrażeniach w przypadku używania operatora zapytania `where`.
+W wyrażeniach zapytań można używać tylko wyrażeń, które mogą być tłumaczone na SQL. Na przykład żadne wywołania funkcji nie są dozwolone w wyrażeniach, gdy używasz `where` operatora zapytania.
 
-Tabela 1 zawiera dostępne operatory zapytań. Ponadto należy zapoznać się z tematem tabela2, który porównuje zapytania F# SQL i równoważne wyrażenia zapytania w dalszej części tego tematu. Niektóre operatory zapytań nie są obsługiwane przez niektórych dostawców typów. W szczególności dostawca typu OData jest ograniczony do operatorów zapytań, które obsługuje z powodu ograniczeń w protokole OData. Aby uzyskać więcej informacji, zobacz [ODataService Type ProviderF#()](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabela 1 zawiera dostępne operatory zapytań. Ponadto należy zapoznać się z tematem tabela2, który porównuje zapytania SQL i równoważne wyrażenia zapytania F # w dalszej części tego tematu. Niektóre operatory zapytań nie są obsługiwane przez niektórych dostawców typów. W szczególności dostawca typu OData jest ograniczony do operatorów zapytań, które obsługuje z powodu ograniczeń w protokole OData. Aby uzyskać więcej informacji, zobacz [ODataService Type Provider (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 W tej tabeli przyjęto założenie, że baza danych ma następującą postać:
 
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności rosnącej według danego klucza sortowania. Tego operatora można używać tylko po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>lub <code>thenByDescending</code>.<br/><br/>
+<td><code>thenBy</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności rosnącej według danego klucza sortowania. Tego operatora można używać tylko po,, <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> , lub <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności malejącej według danego klucza sortowania. Tego operatora można używać tylko po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>lub <code>thenByDescending</code>.<br/><br/>
+<td><code>thenByDescending</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności malejącej według danego klucza sortowania. Tego operatora można używać tylko po,, <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> , lub <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>Skorelowanie dwóch zestawów wybranych wartości na podstawie pasujących kluczy. Należy zauważyć, że kolejność kluczy wokół znaku = w wyrażeniu Join jest istotna. We wszystkich sprzężeniach, jeśli linia jest podzielona po symbolu <code>-&gt;</code>, wcięcie musi być wcięciem co najmniej tak długo, jak słowo kluczowe <code>for</code>.<br/><br/>
+<td><code>join</code></td><td>Skorelowanie dwóch zestawów wybranych wartości na podstawie pasujących kluczy. Należy zauważyć, że kolejność kluczy wokół znaku = w wyrażeniu Join jest istotna. We wszystkich sprzężeniach, jeśli linia jest podzielona po <code>-&gt;</code> symbolu, wcięcie musi być wcięciem co najmniej tak długo, jak słowo kluczowe <code>for</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności rosnącej według danego klucza sortowania dopuszczającego wartość null. Tego operatora można używać tylko natychmiast po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>lub <code>thenByDescending</code>lub ich wariantów dopuszczających wartość null.<br/><br/>
+<td><code>thenByNullable</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności rosnącej według danego klucza sortowania dopuszczającego wartość null. Tego operatora można używać tylko od <code>sortBy</code> , <code>sortByDescending</code> , <code>thenBy</code> , lub <code>thenByDescending</code> lub do ich wariantów dopuszczających wartość null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności malejącej według danego klucza sortowania dopuszczającego wartość null. Tego operatora można używać tylko natychmiast po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>lub <code>thenByDescending</code>lub ich wariantów dopuszczających wartość null.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Wykonuje kolejne porządkowanie elementów wybranych do tej pory w kolejności malejącej według danego klucza sortowania dopuszczającego wartość null. Tego operatora można używać tylko od <code>sortBy</code> , <code>sortByDescending</code> , <code>thenBy</code> , lub <code>thenByDescending</code> lub do ich wariantów dopuszczających wartość null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -500,14 +500,14 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Porównanie języka Transact-SQL z wyrażeniem zapytania F#
 
-W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich ekwiwalenty w F#programie. W kodzie w tej tabeli założono również tę samą bazę danych co poprzednia tabela i ten sam kod początkowy, aby skonfigurować dostawcę typów.
+W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich odpowiedniki w języku F #. W kodzie w tej tabeli założono również tę samą bazę danych co poprzednia tabela i ten sam kod początkowy, aby skonfigurować dostawcę typów.
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabela 2. Transact-SQL i wyrażenia zapytania F#
 
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (bez uwzględniania wielkości liter)</th>
-    <th>F#Wyrażenie zapytania (z uwzględnieniem wielkości liter)</th>
+    <th>Wyrażenie zapytania języka F # (z uwzględnieniem wielkości liter)</th>
   </tr>
 <tr><td>
 Wybierz wszystkie pola z tabeli.<br>
@@ -543,11 +543,14 @@ query {
 <td><code>EXISTS</code>
 <br />
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
   (SELECT * FROM CourseSelection
    WHERE CourseSelection.StudentID = Student.StudentID)
 </code></pre>
+<!-- markdownlint-restore -->
 </td>
 
 <td>
@@ -608,11 +611,14 @@ query {
 </td></tr><tr><td>
 Grupowanie z warunkiem liczby.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -652,12 +658,15 @@ query {
 </td></tr><tr><td>
 Grupowanie, liczenie i porządkowanie według liczby.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 ORDER BY COUNT( * ) DESC
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -674,7 +683,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code> zestaw określonych wartości<br/>
+<code>IN</code>zestaw określonych wartości<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -697,7 +706,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> i <code>TOP</code>.<br/>
+<code>LIKE</code>i <code>TOP</code> .<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -715,7 +724,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> z ustawionym dopasowaniem do wzorca.<br/>
+<code>LIKE</code>z ustawioną dopasowaniem do wzorca.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -732,7 +741,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> z ustawionym wzorcem wykluczania.<br/>
+<code>LIKE</code>z ustawieniem wzorzec wykluczenia.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -751,7 +760,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> jednego pola, ale wybierz inne pole.<br/>
+<code>LIKE</code>w jednym polu, ale wybierz inne pole.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -766,7 +775,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>, z użyciem wyszukiwania podciągów.<br/>
+</td></tr><tr><td><code>LIKE</code>, za pomocą wyszukiwania podciągu.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -783,7 +792,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Prosta <code>JOIN</code> z dwiema tabelami.<br/>
+Proste <code>JOIN</code> z dwiema tabelami.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -801,7 +810,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code> z dwiema tabelami.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>z dwiema tabelami.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -820,7 +829,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> z <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code>się<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -903,7 +912,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code> z porządkowaniem<br/>
+</td></tr><tr><td><code>OR</code>z porządkowaniem<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -921,7 +930,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>, <code>OR</code>i porządkowanie.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code> i porządkowanie.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -943,12 +952,15 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code> dwóch zapytań.<br/>
+</td></tr><tr><td><code>UNION</code>dwóch zapytań.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
 SELECT * FROM lastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -970,10 +982,13 @@ query2.Union (query1)
 
 </td></tr><tr><td>Przecięcie dwóch zapytań.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
 SELECT * FROM LastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 </td><td>
 
 <pre><code class="lang-fsharp">
@@ -992,7 +1007,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td>warunek <code>CASE</code>.<br/>
+</td></tr><tr><td><code>CASE</code>rozgrzewa.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1861,7 +1876,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-A oto pełne dane wyjściowe, gdy ten kod jest uruchamiany w F# trybie interaktywnym.
+A oto pełne dane wyjściowe, gdy ten kod jest uruchamiany w F# Interactive.
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2424,6 +2439,6 @@ end
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka F#](index.md)
+- [Dokumentacja języka F #](index.md)
 - [LINQ. QueryBuilder, Klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Wyrażenia obliczeń](Computation-Expressions.md)

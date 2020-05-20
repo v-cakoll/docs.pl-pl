@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataProcess::StartEnumModules
+title: 'IXCLRDataProcess:: StartEnumModules, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 79c4e0ed99a068d7d806d5c25580dc477aac6475
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d55b07ea3fada73237919bf677163a9096d5ad04
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752630"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420724"
 ---
-# <a name="ixclrdataprocessstartenummodules-method"></a>Metoda IXCLRDataProcess::StartEnumModules
+# <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess:: StartEnumModules, Metoda
 
-Zawiera dojście do wyliczenia modułów procesu.
+Udostępnia dojście do wyliczenia modułów procesu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,21 +39,21 @@ HRESULT StartEnumModules(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out] Dojścia wyliczania modułów.
+określoną Dojście do wyliczania modułów.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 24 gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią `IXCLRDataProcess` interfejsu i odpowiada 24emu miejscu tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
 - [Debugowanie](index.md)
-- [Interfejs IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess, interfejs](ixclrdataprocess-interface.md)

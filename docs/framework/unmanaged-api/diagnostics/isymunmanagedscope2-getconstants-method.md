@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176620"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615335"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="436df-102">ISymUnmanagedScope2::GetConstants — Metoda</span><span class="sxs-lookup"><span data-stu-id="436df-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="436df-103">Pobiera stałe lokalne zdefiniowane w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="436df-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="3fc05-102">ISymUnmanagedScope2::GetConstants — Metoda</span><span class="sxs-lookup"><span data-stu-id="3fc05-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="3fc05-103">Pobiera stałe lokalne zdefiniowane w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="3fc05-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="436df-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="436df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3fc05-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3fc05-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetConstants(  
@@ -36,22 +36,22 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="436df-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="436df-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3fc05-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3fc05-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="436df-106">[w] Długość buforu, na `pcConstants` który wskazuje parametr.</span><span class="sxs-lookup"><span data-stu-id="436df-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="3fc05-106">podczas Długość buforu, `pcConstants` do którego wskazuje parametr.</span><span class="sxs-lookup"><span data-stu-id="3fc05-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="436df-107">[na zewnątrz] Wskaźnik do, `ULONG32` który odbiera rozmiar, w znakach, buforu wymagane do zawierają stałe.</span><span class="sxs-lookup"><span data-stu-id="436df-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="3fc05-107">określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora, który musi zawierać stałe.</span><span class="sxs-lookup"><span data-stu-id="3fc05-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="436df-108">[na zewnątrz] Bufor, który przechowuje stałe.</span><span class="sxs-lookup"><span data-stu-id="436df-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="3fc05-108">określoną Bufor przechowujący stałe.</span><span class="sxs-lookup"><span data-stu-id="3fc05-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="436df-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="436df-109">Return Value</span></span>  
- <span data-ttu-id="436df-110">S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="436df-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3fc05-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3fc05-109">Return Value</span></span>  
+ <span data-ttu-id="3fc05-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="3fc05-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="436df-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="436df-111">Requirements</span></span>  
- <span data-ttu-id="436df-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="436df-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3fc05-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3fc05-111">Requirements</span></span>  
+ <span data-ttu-id="3fc05-112">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="3fc05-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="436df-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="436df-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fc05-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3fc05-113">See also</span></span>
 
-- [<span data-ttu-id="436df-114">ISymUnmanagedScope2, interfejs</span><span class="sxs-lookup"><span data-stu-id="436df-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [<span data-ttu-id="3fc05-114">ISymUnmanagedScope2, interfejs</span><span class="sxs-lookup"><span data-stu-id="3fc05-114">ISymUnmanagedScope2 Interface</span></span>](isymunmanagedscope2-interface.md)

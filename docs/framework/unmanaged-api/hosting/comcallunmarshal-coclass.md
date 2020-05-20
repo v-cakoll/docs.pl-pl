@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 939acc0ad47021d5fdffe7b7b71ea6a4a1635a6d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131932"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616739"
 ---
-# <a name="comcallunmarshal-coclass"></a><span data-ttu-id="e1457-102">ComCallUnmarshal — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="e1457-102">ComCallUnmarshal Coclass</span></span>
-<span data-ttu-id="e1457-103">Udostępnia interfejsy służące do zarządzania kierowaniem wskaźników interfejsu.</span><span class="sxs-lookup"><span data-stu-id="e1457-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  
+# <a name="comcallunmarshal-coclass"></a><span data-ttu-id="23b98-102">ComCallUnmarshal — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="23b98-102">ComCallUnmarshal Coclass</span></span>
+<span data-ttu-id="23b98-103">Udostępnia interfejsy służące do zarządzania kierowaniem wskaźników interfejsu.</span><span class="sxs-lookup"><span data-stu-id="23b98-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1457-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e1457-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23b98-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="23b98-104">Syntax</span></span>  
   
 ```cpp  
 coclass ComCallUnmarshal {  
@@ -32,21 +32,21 @@ coclass ComCallUnmarshal {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="e1457-105">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="e1457-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="23b98-105">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="23b98-105">Interfaces</span></span>  
   
-|<span data-ttu-id="e1457-106">Interface</span><span class="sxs-lookup"><span data-stu-id="e1457-106">Interface</span></span>|<span data-ttu-id="e1457-107">Opis</span><span class="sxs-lookup"><span data-stu-id="e1457-107">Description</span></span>|  
+|<span data-ttu-id="23b98-106">Interfejs</span><span class="sxs-lookup"><span data-stu-id="23b98-106">Interface</span></span>|<span data-ttu-id="23b98-107">Opis</span><span class="sxs-lookup"><span data-stu-id="23b98-107">Description</span></span>|  
 |---------------|-----------------|  
-|`IMarshal`|<span data-ttu-id="e1457-108">Zapewnia metody tworzenia, inicjowania i zarządzania serwerem proxy w procesie klienta.</span><span class="sxs-lookup"><span data-stu-id="e1457-108">Provides methods for creating, initializing, and managing a proxy in a client process.</span></span>|  
+|`IMarshal`|<span data-ttu-id="23b98-108">Zapewnia metody tworzenia, inicjowania i zarządzania serwerem proxy w procesie klienta.</span><span class="sxs-lookup"><span data-stu-id="23b98-108">Provides methods for creating, initializing, and managing a proxy in a client process.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e1457-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e1457-109">Requirements</span></span>  
- <span data-ttu-id="e1457-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1457-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23b98-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="23b98-109">Requirements</span></span>  
+ <span data-ttu-id="23b98-110">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23b98-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1457-111">**Nagłówek:** MSCorEE. idl</span><span class="sxs-lookup"><span data-stu-id="e1457-111">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="23b98-111">**Nagłówek:** MSCorEE. idl</span><span class="sxs-lookup"><span data-stu-id="23b98-111">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="e1457-112">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="e1457-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="23b98-112">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="23b98-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e1457-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1457-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="23b98-113">**.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23b98-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1457-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e1457-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23b98-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="23b98-114">See also</span></span>
 
-- [<span data-ttu-id="e1457-115">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="e1457-115">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [<span data-ttu-id="23b98-115">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="23b98-115">Hosting Coclasses</span></span>](hosting-coclasses.md)

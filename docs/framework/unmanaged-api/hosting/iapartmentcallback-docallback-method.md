@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: 9bb257a3d84d5022b9ae13c89a34572485d3033b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a56c3ebe4b1c528f9c6555bdfbf1270a438410d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126942"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617116"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback — Metoda
 Wykonuje określoną funkcję w obrębie apartamentu.  
@@ -42,14 +42,14 @@ HRESULT _stdcall DoCallback(
  podczas Wskaźnik do argumentu funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IApartmentCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)
+- [IApartmentCallback, interfejs](iapartmentcallback-interface.md)

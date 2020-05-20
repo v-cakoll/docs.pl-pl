@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc8a02b-a0ac-46e3-80c1-fb8b5cef6341
 topic_type:
 - apiref
-ms.openlocfilehash: f6d033b6910120ac3074cf008391cf93e084fa2e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ba5c8cffcaff38b60be7031a98d4588ec6071d76
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449083"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615556"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter — Interfejs
 Zapewnia metody zapisu do dokumentu, do którego odwołuje się magazyn symboli.  
@@ -28,12 +28,12 @@ Zapewnia metody zapisu do dokumentu, do którego odwołuje się magazyn symboli.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetCheckSum, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Ustawia informacje o sumie kontrolnej.|  
-|[SetSource, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Ustawia osadzone źródło dla dokumentu, który jest zapisywany.|  
+|[SetCheckSum, metoda](isymunmanageddocumentwriter-setchecksum-method.md)|Ustawia informacje o sumie kontrolnej.|  
+|[SetSource, metoda](isymunmanageddocumentwriter-setsource-method.md)|Ustawia osadzone źródło dla dokumentu, który jest zapisywany.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)

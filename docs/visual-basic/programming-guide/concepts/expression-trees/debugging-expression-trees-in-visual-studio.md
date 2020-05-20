@@ -2,12 +2,12 @@
 title: Debugowanie drzew w programie Visual Studio
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2c4b1fec389a8ee168b890339ce11af596581cbc
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 287f3096a1af8b9fa42d252c5240d7caefa6bac8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378798"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616904"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debugowanie drzew wyrażeń w programie Visual Studio (Visual Basic)
 Można analizować strukturę i zawartość drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć `DebugView` właściwości, która reprezentuje drzewa wyrażeń [przy użyciu specjalnej składni](debugview-syntax.md). (Uwaga, która `DebugView` jest dostępna tylko w trybie debugowania).  
@@ -24,9 +24,9 @@ Alternatywnie można zainstalować i używać [wizualizatora niestandardowego](h
 
   ![Zrzut ekranu przedstawiający wizualizator wyrażeń możliwych do odczytu.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [Wizualizator drzewa wyrażeń](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licencja mit](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)) zawiera graficzny widok drzewa wyrażenia, jego właściwości i powiązane obiekty; i można renderować drzewo wyrażeń przy użyciu kodu Visual Basic:
+- [Wizualizator drzewa wyrażeń](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/README.md) ([licencja mit](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/LICENSE)) zawiera widok drzewa drzewa wyrażenia i jego poszczególne węzły; i można renderować drzewo wyrażeń przy użyciu składni Visual Basic:
 
-  ![Zrzut ekranu przedstawiający wizualizator ExpressionToString.](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
+  ![Zrzut ekranu przedstawiający wizualizator drzewa wyrażeń.](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizer-vb.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Aby otworzyć wizualizator dla drzewa wyrażenia  
   
@@ -38,7 +38,7 @@ Alternatywnie można zainstalować i używać [wizualizatora niestandardowego](h
 
 2. Kliknij wizualizator, którego chcesz użyć.  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Drzewa wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugger-feature-tour)

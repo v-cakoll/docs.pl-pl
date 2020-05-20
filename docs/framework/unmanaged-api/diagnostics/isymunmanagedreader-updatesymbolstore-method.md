@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446458"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615439"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore — Metoda
 Aktualizuje istniejący magazyn symboli przy użyciu magazynu symboli różnicowych. Ta metoda jest używana w scenariuszach Edytuj i Kontynuuj, aby zaktualizować magazyn symboli tak, aby pasował do różnic w oryginalnym przenośnym pliku wykonywalnym (PE).  
   
 > [!NOTE]
-> Należy określić tylko jeden z parametrów `filename` lub `pIStream`, ale nie oba. Jeśli `filename` jest określony, magazyn symboli zostanie zaktualizowany przy użyciu symboli w tym pliku. W przypadku określenia `pIStream` magazyn zostanie zaktualizowany o dane z <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Należy określić tylko jeden z `filename` `pIStream` parametrów lub, ale nie oba. Jeśli `filename` jest określony, magazyn symboli zostanie zaktualizowany przy użyciu symboli w tym pliku. Jeśli `pIStream` jest określony, magazyn zostanie zaktualizowany o dane z <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,9 +41,9 @@ HRESULT UpdateSymbolStore (
  podczas Nazwa pliku, który zawiera magazyn symboli.  
   
  `pIStream`  
- podczas Strumień pliku używany jako alternatywa dla parametru `filename`.  
+ podczas Strumień pliku używany jako alternatywa dla `filename` parametru.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -51,4 +51,4 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

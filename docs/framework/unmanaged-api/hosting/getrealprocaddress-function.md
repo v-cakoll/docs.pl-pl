@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178159"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617207"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress — Funkcja
-Pobiera adres określonej funkcji, która jest eksportowana z najnowszej zainstalowanej wersji środowiska wykonawczego języka wspólnego (CLR).  
+Pobiera adres określonej funkcji wyeksportowanej z najnowszej zainstalowanej wersji środowiska uruchomieniowego języka wspólnego (CLR).  
   
- Ta funkcja została przestarzała w .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,29 +37,29 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parametry  
  `pwszProcName`  
- [w] Nazwa funkcji.  
+ podczas Nazwa funkcji.  
   
  `ppv`  
- [na zewnątrz] Lokalizacja, która odbiera wskaźnik do adresu funkcji.  
+ określoną Lokalizacja, która otrzymuje wskaźnik na adres funkcji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów modelu com (Component Object Model), zgodnie z definicją w pliku WinError.h, oprócz następujących wartości zdefiniowanych w pliku CorError.h.  
+ Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości zdefiniowanych w CorError. h.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_pointer|`ppv`jest nieprawidłowa.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|Funkcja nie jest eksportowana ze środowiska wykonawczego.|  
+|E_POINTER|`ppv`jest nieprawidłowy.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|Funkcja nie została wyeksportowana z środowiska uruchomieniowego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Mscoree.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

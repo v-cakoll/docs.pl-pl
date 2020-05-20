@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: 8764a3d665c997460419561eb168f92ca769c30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 615637813b08629aaea74b23fa2737f52d61bafb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192112"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616921"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo — Struktura
 Zawiera szczegółowe informacje o przywoływanym zestawie.  
@@ -37,30 +37,30 @@ typedef struct _AssemblyBindInfo {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`dwAppDomainId`|Unikatowy identyfikator `IStream` zwrócone przez wywołanie [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), z którego ma zostać załadowany przywoływany zestaw.|  
+|`dwAppDomainId`|Unikatowy identyfikator `IStream` zwracanego przez wywołanie [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md), z którego ma zostać załadowany przywoływany zestaw.|  
 |`lpReferencedIdentity`|Unikatowy identyfikator dla przywoływanego zestawu.|  
 |`lpPostPolicyIdentity`|Identyfikator zestawu, którego dotyczy odwołanie, po zastosowaniu wszystkich wartości zasad powiązań.|  
-|`ePolicyLevel`|Jedna z wartości [EPolicyAction —](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wskazujących, które zasady przechowywania wersji (jeśli istnieją), należy zastosować do przywoływanego zestawu.|  
+|`ePolicyLevel`|Jedna z wartości [EPolicyAction —](epolicyaction-enumeration.md) wskazujących, które zasady przechowywania wersji (jeśli istnieją), należy zastosować do przywoływanego zestawu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Host dostarcza unikatowy identyfikator `dwAppDomainId` do środowiska uruchomieniowego języka wspólnego (CLR). Po wywołaniu `IHostAssemblyStore::ProvideAssembly` zwraca, środowisko uruchomieniowe używa identyfikatora, aby określić, czy zawartość `IStream` została zmapowana. Jeśli tak, środowisko uruchomieniowe ładuje istniejącą kopię zamiast ponownego mapowania strumienia. Środowisko uruchomieniowe używa również tego identyfikatora jako klucza wyszukiwania dla strumieni zwróconych z wywołań do [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). W związku z tym identyfikator musi być unikatowy dla żądań modułów i dla żądań zestawu.  
+ Host dostarcza unikatowy identyfikator `dwAppDomainId` do środowiska uruchomieniowego języka wspólnego (CLR). Po wywołaniu `IHostAssemblyStore::ProvideAssembly` zwraca, środowisko uruchomieniowe używa identyfikatora, aby określić, czy zawartość `IStream` została zamapowana. Jeśli tak, środowisko uruchomieniowe ładuje istniejącą kopię zamiast ponownego mapowania strumienia. Środowisko uruchomieniowe używa również tego identyfikatora jako klucza wyszukiwania dla strumieni zwróconych z wywołań do [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md). W związku z tym identyfikator musi być unikatowy dla żądań modułów i dla żądań zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. idl  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [ModuleBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)
+- [Hosting, struktury](hosting-structures.md)
+- [ICLRAssemblyIdentityManager, interfejs](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList — Interfejs](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager, interfejs](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore, interfejs](ihostassemblystore-interface.md)
+- [ModuleBindInfo, struktura](modulebindinfo-structure.md)

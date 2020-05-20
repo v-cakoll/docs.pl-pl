@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 294b82efd66704014aab1b73171afe9165f17664
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136824"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616453"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen — Funkcja
-Tworzy obiekt [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
+Tworzy obiekt [ICeeFileGen](iceefilegen-class.md) .  
   
  Ta funkcja jest przestarzała w .NET Framework 4.  
   
@@ -38,25 +38,25 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>Parametry  
  `ceeFileGen`  
- określoną Wskaźnik do adresu nowego obiektu `ICeeFileGen`.  
+ określoną Wskaźnik do adresu nowego `ICeeFileGen` obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca standardowe kody błędów COM.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt `ICeeFileGen` jest używany do tworzenia przenośnych plików wykonywalnych (PE) środowiska uruchomieniowego języka wspólnego (CLR).  
+ `ICeeFileGen`Obiekt jest używany do tworzenia przenośnych plików wykonywalnych (PE) środowiska uruchomieniowego języka wspólnego (CLR).  
   
- Wywołaj funkcję [DestroyICeeFileGen —](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) , aby zniszczyć obiekt `ICeeFileGen` po zakończeniu.  
+ Wywołaj funkcję [DestroyICeeFileGen —](destroyiceefilegen-function.md) , aby zniszczyć `ICeeFileGen` obiekt po zakończeniu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** ICeeFileGen. h  
   
  **Biblioteka:** MSCorPE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

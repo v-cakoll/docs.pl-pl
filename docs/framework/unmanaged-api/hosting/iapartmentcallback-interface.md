@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-ms.openlocfilehash: 4424509c16dd1d9f83db117ae7343fa03995297e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbf501d906ecc0bf55719fa33d1af2d4db1cc2ef
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126914"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617100"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback — Interfejs
 Zapewnia metody tworzenia wywołań zwrotnych w obrębie apartamentu. *Apartament* jest kontenerem logicznym w ramach procesu dla obiektów, które mają takie same wymagania dotyczące dostępu do wątków.  
@@ -28,17 +28,17 @@ Zapewnia metody tworzenia wywołań zwrotnych w obrębie apartamentu. *Apartamen
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[DoCallback, metoda](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Wykonuje określoną funkcję w obrębie apartamentu.|  
+|[DoCallback, metoda](iapartmentcallback-docallback-method.md)|Wykonuje określoną funkcję w obrębie apartamentu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting, interfejsy](hosting-interfaces.md)

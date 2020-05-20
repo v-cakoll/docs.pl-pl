@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4c83ffaf920abe005ba987e0a744e13aa0d3c016
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129295"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615673"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump — Metoda
 Określa konfigurację niestandardowych zrzutów sterty dla raportowania błędów.  
@@ -38,13 +38,13 @@ HRESULT BeginCustomDump (
   
 ## <a name="parameters"></a>Parametry  
  `dwFlavor`  
- podczas Wartość [ECustomDumpFlavor —](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) , która wskazuje rodzaj zrzutu sterty, na którym ma zostać skompilowany zrzut sterty niestandardowej.  
+ podczas Wartość [ECustomDumpFlavor —](ecustomdumpflavor-enumeration.md) , która wskazuje rodzaj zrzutu sterty, na którym ma zostać skompilowany zrzut sterty niestandardowej.  
   
  `dwNumItems`  
- podczas Długość tablicy `items`. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `dwNumItems` powinna być równa zero.  
+ podczas Długość `items` tablicy. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `dwNumItems` powinna być równa zero.  
   
  `items`  
- podczas Tablica wystąpień [CustomDumpItem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , określająca elementy, które mają zostać dodane do mini zrzutu. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `items` powinna mieć wartość null.  
+ podczas Tablica wystąpień [CustomDumpItem —](customdumpitem-structure.md) , określająca elementy, które mają zostać dodane do mini zrzutu. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `items` powinna mieć wartość null.  
   
  `dwReserved`  
  podczas Zarezerwowane do użytku w przyszłości.  
@@ -58,25 +58,25 @@ HRESULT BeginCustomDump (
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie metody E_FAIL nie będzie można używać środowiska CLR w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `BeginCustomDump` ustawia niestandardową konfigurację zrzutu sterty. Metoda [EndCustomDump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) czyści konfigurację zrzutu sterty niestandardowej i zwalnia wszystkie skojarzone Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu sterty.  
+ `BeginCustomDump`Metoda ustawia niestandardową konfigurację zrzutu sterty. Metoda [EndCustomDump —](iclrerrorreportingmanager-endcustomdump-method.md) czyści konfigurację zrzutu sterty niestandardowej i zwalnia wszystkie skojarzone Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu sterty.  
   
 > [!IMPORTANT]
-> Nie można wywołać `EndCustomDump` powoduje przeciek pamięci.  
+> Niepowodzenie wywołania `EndCustomDump` powoduje przeciek pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [CustomDumpItem, struktura](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
-- [ECustomDumpFlavor, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
-- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [CustomDumpItem, struktura](customdumpitem-structure.md)
+- [ECustomDumpFlavor — Wyliczenie](ecustomdumpflavor-enumeration.md)
+- [ICLRErrorReportingManager, interfejs](iclrerrorreportingmanager-interface.md)

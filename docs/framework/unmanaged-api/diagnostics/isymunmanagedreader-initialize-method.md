@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429738"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615478"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize — Metoda
 Inicjuje czytnik symboli z interfejsem importera metadanych, z którym zostanie skojarzony ten czytnik, wraz z nazwą pliku modułu.  
@@ -43,7 +43,7 @@ HRESULT Initialize (
  podczas Interfejs programu do importowania metadanych, z którym ten czytnik zostanie skojarzony.  
   
  `filename`  
- podczas Nazwa pliku modułu. Zamiast tego można użyć parametru `pIStream`.  
+ podczas Nazwa pliku modułu. Zamiast tego można użyć `pIStream` parametru.  
   
  `searchPath`  
  podczas Ścieżka do wyszukania. Ten parametr jest opcjonalny.  
@@ -55,11 +55,11 @@ HRESULT Initialize (
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy określić tylko jeden z `filename` lub `pIStream` parametrów, nie obu. Parametr `searchPath` jest opcjonalny.  
+ Należy określić tylko jeden z `filename` `pIStream` parametrów lub. `searchPath`Parametr jest opcjonalny.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-ms.openlocfilehash: dbf876a514ce106c566a168f688eb3a22d3a1ea2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 06a331e24622e0a155d974ca869818a6532baa1f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449049"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615543"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum — Metoda
 Ustawia informacje o sumie kontrolnej.  
@@ -39,7 +39,7 @@ HRESULT SetCheckSum(
  podczas Identyfikator GUID, który reprezentuje identyfikator algorytmu.  
   
  `checkSumSize`  
- podczas `ULONG32` wskazujący rozmiar buforu `checkSum` w bajtach.  
+ podczas `ULONG32`Wskazuje rozmiar bufora (w bajtach) `checkSum` .  
   
  `checkSum`  
  podczas Bufor przechowujący informacje o sumie kontrolnej.  
@@ -52,4 +52,4 @@ HRESULT SetCheckSum(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedDocumentWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [ISymUnmanagedDocumentWriter, interfejs](isymunmanageddocumentwriter-interface.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-ms.openlocfilehash: 37919be2d0ebd7d243615bc5845b0781ac13e574
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e1c1b1984c63bedb3c073f45a7b9a3574afdcec
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129318"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615686"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain — Metoda
 Ustawia właściwości, które zostaną użyte do zainicjowania domyślnej domeny aplikacji.  
@@ -35,7 +35,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
 ## <a name="parameters"></a>Parametry  
  `nProperties`  
- podczas Liczba wpisów w `pwszPropertyNames` i `pwszPropertyValues`.  
+ podczas Liczba wpisów w `pwszPropertyNames` i `pwszPropertyValues` .  
   
  `pwszPropertyNames`  
  podczas Tablica nazw właściwości lub wartość null, jeśli nie ma żadnych właściwości. Obecnie jedyną nazwą właściwości, która jest rozpoznawana przez tę metodę, jest "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
@@ -49,21 +49,21 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` zawiera nazwę właściwości, która nie jest rozpoznawana przez tę metodę.|  
+|HRESULT_FROM_WIN32 (ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames`zawiera nazwę właściwości, która nie jest rozpoznawana przez tę metodę.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość właściwości "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" jest listą zestawów, które mają atrybut warunkowego <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) z flagą <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>, które mają być widoczne dla częściowo zaufanych wywołujących w domenie domyślnej aplikacji.  
+ Wartość właściwości "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" to lista zestawów, które mają atrybut Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) z <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flagą, które mają być widoczne dla częściowo zaufanych wywołujących w domenie aplikacji domyślnej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [ICLRDomainManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+- [Hosting](index.md)
+- [ICLRDomainManager, interfejs](iclrdomainmanager-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176581"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615322"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData — Metoda
-Zwraca dane serwera źródłowego dla modułu. Rozmówca musi zwolnić zasoby `CoTaskMemFree`za pomocą programu .  
+Zwraca dane serwera źródłowego dla modułu. Obiekt wywołujący musi zwolnić zasoby za pomocą polecenia `CoTaskMemFree` .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parametry  
  `pDataByteCount`  
- [na zewnątrz] Wskaźnik `ULONG32` do, który odbiera rozmiar w bajtach danych serwera źródłowego.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w bajtach) danych serwera źródłowego.  
   
  `ppData`  
- [na zewnątrz] Wskaźnik do zwróconej `pDataByteCount` wartości.  
+ określoną Wskaźnik do zwracanej `pDataByteCount` wartości.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedSourceServerModule — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [ISymUnmanagedSourceServerModule — Interfejs](isymunmanagedsourceservermodule-interface.md)

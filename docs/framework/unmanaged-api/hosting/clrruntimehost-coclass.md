@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40766ce5837053493f2e3f1f25fe7d1d63ec695f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129455"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616805"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost — Klasa coclass
 Udostępnia interfejsy umożliwiające zarządzanie wykonywaniem kodu przez środowisko uruchomieniowe.  
@@ -35,20 +35,20 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>Interfejsy  
   
-|Interface|Opis|  
+|Interfejs|Opis|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Zapewnia metody kontrolowania wykonywania aplikacji przez środowisko uruchomieniowe.|  
-|[ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Zapewnia metody weryfikacji przenośnych obrazów wykonywalnych i szczegółowe raportowanie błędów walidacji.|  
+|[ICLRRuntimeHost, interfejs](iclrruntimehost-interface.md)|Zapewnia metody kontrolowania wykonywania aplikacji przez środowisko uruchomieniowe.|  
+|[ICLRValidator, interfejs](iclrvalidator-interface.md)|Zapewnia metody weryfikacji przenośnych obrazów wykonywalnych i szczegółowe raportowanie błędów walidacji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. idl  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Współklasy hostingu](hosting-coclasses.md)

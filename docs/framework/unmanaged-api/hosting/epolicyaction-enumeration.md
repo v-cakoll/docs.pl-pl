@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: eaba6b2166a82cfe825ffb98db515e24d4656462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138231"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616193"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction — Wyliczenie
-Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) i błędy opisane przez [EClrFailure —](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) i błędy opisane przez [EClrFailure —](eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,34 +43,34 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`eAbortThread`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) powinno bezpiecznie przerwać wątek. Bezpieczne przerwanie obejmuje próby uruchomienia wszystkich bloków `finally`, wszelkich bloków `catch` związanych z przerwami wątku i finalizatorami.|  
+|`eAbortThread`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) powinno bezpiecznie przerwać wątek. Bezpieczne przerywanie obejmuje próby uruchomienia wszystkich `finally` bloków, wszelkich `catch` bloków związanych z przerwami wątków i finalizatorów.|  
 |`eDisableRuntime`|Określa, że środowisko CLR ma wejść w stan wyłączony. Żaden kod zarządzany nie może być wykonywany w odpowiednim procesie, a wątki są blokowane przed wprowadzeniem środowiska CLR.|  
 |`eExitProcess`|Określa, że środowisko CLR ma próbować bezpiecznie wyjść z procesu, w tym uruchamiania finalizatorów i wykonywania operacji czyszczenia i rejestrowania.|  
 |`eFastExitProcess`|Określa, że środowisko CLR powinno zakończyć proces natychmiast, bez uruchamiania finalizatorów lub wykonywania operacji czyszczenia i rejestrowania. Powiadomienia są jednak wysyłane do debugera.|  
 |`eNoAction`|Określa, że żadna akcja nie powinna być wykonywana.|  
-|`eRudeAbortThread`|Określa, że środowisko CLR ma wykonać przerwanie wątku prosta. Wykonywane są tylko te `catch` i bloki `finally` oznaczone jako <xref:System.EnterpriseServices.MustRunInClientContextAttribute>.|  
+|`eRudeAbortThread`|Określa, że środowisko CLR ma wykonać przerwanie wątku prosta. Tylko te `catch` i `finally` bloki oznaczone za pomocą <xref:System.EnterpriseServices.MustRunInClientContextAttribute> są wykonywane.|  
 |`eRudeExitProcess`|Określa, że środowisko CLR ma wyjść z procesu bez uruchamiania finalizatorów lub operacji rejestrowania.|  
-|`eRudeUnloadAppDomain`|Określa, że środowisko CLR ma wykonać prosta Unload <xref:System.AppDomain>. Wykonywane są tylko finalizatory oznaczone <xref:System.EnterpriseServices.MustRunInClientContextAttribute>. Podobnie wszystkie wątki z tym <xref:System.AppDomain> w stosie odbierają `ThreadAbortException`, ale są wykonywane tylko te bloki `catch` i `finally` oznaczone jako <xref:System.EnterpriseServices.MustRunInClientContextAttribute>.|  
+|`eRudeUnloadAppDomain`|Określa, że środowisko CLR ma wykonać prosta zwolnienie z programu <xref:System.AppDomain> . Tylko finalizatory oznaczone jako with <xref:System.EnterpriseServices.MustRunInClientContextAttribute> są wykonywane. Podobnie wszystkie wątki z tym elementem <xref:System.AppDomain> w ich stosie odbierają `ThreadAbortException` , ale tylko te `catch` i `finally` bloki oznaczone jako with <xref:System.EnterpriseServices.MustRunInClientContextAttribute> są wykonywane.|  
 |`eThrowException`|Określa, że wyjątek odpowiedni dla warunku, taki jak braku pamięci, przepełnienie buforu i tak dalej, powinien zostać wygenerowany.|  
 |`eUnloadAppDomain`|Określa, że <xref:System.AppDomain> powinny być zwolnione. Środowisko CLR próbuje uruchomić finalizatorów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Host ustawia akcje zasad przez wywołanie metod interfejsu [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Aby uzyskać informacje na temat prosta i łagodnego przerwania, zobacz Wyliczenie [EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) .  
+ Host ustawia akcje zasad przez wywołanie metod interfejsu [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Aby uzyskać informacje na temat prosta i łagodnego przerwania, zobacz Wyliczenie [EClrOperation —](eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [EClrFailure, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [EClrFailure — Wyliczenie](eclrfailure-enumeration.md)
+- [ICLRPolicyManager, interfejs](iclrpolicymanager-interface.md)
+- [IHostPolicyManager, interfejs](ihostpolicymanager-interface.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

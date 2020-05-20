@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131238"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616310"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException — Wyliczenie
 Opisuje dostępne opcje zarządzania wyjątkami, które nie są obsługiwane w kodzie użytkownika.  
@@ -35,28 +35,28 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|Określa, że występuje zachowanie domyślne. Proces został rozdarty.|  
 |`eHostDeterminedPolicy`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) ignoruje Nieobsłużone wyjątki i umożliwia hostowi określenie dalszych akcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby określić, że środowisko CLR zachowuje się jak wcześniejsze wersje, użyj elementu członkowskiego `eHostDeterminedPolicy`.  
+ Aby określić, że środowisko CLR zachowuje się jak wcześniejsze wersje, użyj `eHostDeterminedPolicy` elementu członkowskiego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [EClrFailure, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [SetUnhandledExceptionPolicy, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
-- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [EClrFailure — Wyliczenie](eclrfailure-enumeration.md)
+- [EClrOperation — Wyliczenie](eclroperation-enumeration.md)
+- [ICLRPolicyManager, interfejs](iclrpolicymanager-interface.md)
+- [SetUnhandledExceptionPolicy, metoda](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [IHostPolicyManager, interfejs](ihostpolicymanager-interface.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

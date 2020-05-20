@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 4d9de489bdeb0ab506f56ff08f4afb4cf6d0ab4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178275"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616882"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters — Struktura
-Przechowuje nazwę typu zdarzenia i parametry dla bieżącego wyjątku, który jest skojarzony ze zdarzeniem.  
+Przechowuje nazwę typu zdarzenia i parametry bieżącego wyjątku, który jest skojarzony ze zdarzeniem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,17 +38,17 @@ typedef struct _BucketParameters {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`fInited`|`true`, jeśli pozostała część tej struktury jest ważna; w `false`przeciwnym razie , .|  
+|`fInited`|`true`, jeśli pozostała część tej struktury jest prawidłowa; w przeciwnym razie `false` .|  
 |`pszEventTypeName`|Nazwa typu zdarzenia.|  
 |`pszParams`|Tablica ciągów, z których każdy określa parametr dla bieżącego wyjątku skojarzonego ze zdarzeniem.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** mscoree.idl  
+ **Nagłówek:** MSCorEE. idl  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hosting, struktury](hosting-structures.md)

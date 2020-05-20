@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88a5da04-8729-4108-82c4-af206a7d483e
 topic_type:
 - apiref
-ms.openlocfilehash: 2acbe72377e4c5b291ab062fcb5faa6503bd7937
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 704d8d0921e671e4172fa6e0ae3f14c4908f289a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129293"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615660"
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>ICLRErrorReportingManager::EndCustomDump — Metoda
-Usuwa konfigurację niestandardowego zrzutu stosu, która została określona we wcześniejszym wywołaniu metody [ICLRErrorReportingManager:: BeginCustomDump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) .  
+Usuwa konfigurację niestandardowego zrzutu stosu, która została określona we wcześniejszym wywołaniu metody [ICLRErrorReportingManager:: BeginCustomDump —](iclrerrorreportingmanager-begincustomdump-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,30 +35,30 @@ HRESULT EndCustomDump ();
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`EndCustomDump` pomyślnie zwrócone.|  
+|S_OK|`EndCustomDump`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie metody E_FAIL nie będzie można używać środowiska CLR w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `EndCustomDump` czyści konfigurację niestandardowego zrzutu stosu ustawioną przez wcześniejsze wywołanie metody `BeginCustomDump` i zwalnia wszystkie powiązane Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu stosu.  
+ `EndCustomDump`Metoda czyści konfigurację niestandardowego zrzutu stosu ustawioną przez wcześniejsze wywołanie `BeginCustomDump` metody i zwalnia wszystkie powiązane Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu stosu.  
   
 > [!IMPORTANT]
-> Nie można wywołać `EndCustomDump` powoduje przeciek pamięci.  
+> Niepowodzenie wywołania `EndCustomDump` powoduje przeciek pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [CustomDumpItem, struktura](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
-- [ECustomDumpFlavor, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
-- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [CustomDumpItem, struktura](customdumpitem-structure.md)
+- [ECustomDumpFlavor — Wyliczenie](ecustomdumpflavor-enumeration.md)
+- [ICLRErrorReportingManager, interfejs](iclrerrorreportingmanager-interface.md)

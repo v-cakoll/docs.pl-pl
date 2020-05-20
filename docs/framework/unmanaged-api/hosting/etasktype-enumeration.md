@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138188"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616167"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType — Wyliczenie
-Zawiera wartości wskazujące typ zadania reprezentowanego przez interfejs [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
+Zawiera wartości wskazujące typ zadania reprezentowanego przez interfejs [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [IHostTask](ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|Interfejs reprezentuje zadanie wyładowywania domeny aplikacji.|  
 |`TT_DEBUGGERHELPER`|Interfejs reprezentuje zadanie pomocnika debugera.|  
@@ -59,14 +59,14 @@ typedef enum ETaskType {
 |`TT_USER`|Interfejs reprezentuje zadanie użytkownika.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

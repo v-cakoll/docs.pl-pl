@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 64ecbb56ab32ac8381a4864acd5fd40741786d30
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449132"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615608"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange — Metoda
 Zwraca określony zakres osadzonego źródła do podanego buforu. Bufor musi być wystarczająco duży, aby pomieścić źródło.  
@@ -66,4 +66,4 @@ HRESULT GetSourceRange(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument, interfejs](isymunmanageddocument-interface.md)

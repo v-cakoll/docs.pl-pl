@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 6566adc442034763e0209869404b60b5afa63866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176490"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616622"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost — Funkcja
-Umożliwia hostom załadowanie określonej wersji środowiska wykonawczego języka wspólnego (CLR) do procesu.  
+Włącza hosty do załadowania określonej wersji środowiska uruchomieniowego języka wspólnego (CLR) do procesu.  
   
- Ta funkcja została przestarzała w .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,54 +43,54 @@ HRESULT CorBindToRuntimeHost (
   
 ## <a name="parameters"></a>Parametry  
  `pwszVersion`  
- [w] Ciąg opisujący wersję programu CLR, którą chcesz załadować.  
+ podczas Ciąg opisujący wersję środowiska CLR, które chcesz załadować.  
   
- Numer wersji w ramach .NET Framework składa się z czterech części oddzielonych kropkami: *major.minor.build.revision*. Ciąg przeszedł `pwszVersion` zgodnie z musi zaczynać się od znaku "v", po którym następuje pierwsze trzy części numeru wersji (na przykład "v1.0.1529").  
+ Numer wersji w .NET Framework składa się z czterech części oddzielonych kropkami: *główna. pomocnicza. kompilacja. poprawka*. Ciąg przeszedł jako `pwszVersion` musi rozpoczynać się od znaku "v", po którym następuje pierwsze trzy części numeru wersji (na przykład "v 1.0.1529").  
   
- Niektóre wersje programu CLR są instalowane z instrukcją zasad określającą zgodność z poprzednimi wersjami programu CLR. Domyślnie podkładka uruchamiania `pwszVersion` ocenia instrukcje zasad i ładuje najnowszą wersję środowiska wykonawczego, która jest zgodna z żądaną wersją. Host może wymusić podkładkę, aby pominąć oceny `pwszVersion` zasad i załadować dokładną wersję `startupFlags` określoną w przekazując wartość STARTUP_LOADER_SAFEMODE dla parametru.  
+ Niektóre wersje środowiska CLR są instalowane z instrukcją zasad, która określa zgodność z poprzednimi wersjami środowiska CLR. Domyślnie podkładka uruchamiania szacuje się `pwszVersion` przed instrukcjami zasad i ładuje najnowszą wersję środowiska uruchomieniowego, która jest zgodna z żądaną wersją. Host może zmusić podkładkę do pominięcia oceny zasad i załadowania dokładnej wersji określonej w `pwszVersion` wyniku przekazania wartości STARTUP_LOADER_SAFEMODE dla `startupFlags` parametru.  
   
- Jeśli `pwszVersion` `null,` jest metoda nie ładuje żadnej wersji CLR. Zamiast tego zwraca CLR_E_SHIM_RUNTIMELOAD, co wskazuje, że nie można załadować środowiska wykonawczego.  
+ If `pwszVersion` to `null,` Metoda nie ładuje żadnej wersji środowiska CLR. Zamiast tego zwraca CLR_E_SHIM_RUNTIMELOAD, co oznacza, że ładowanie środowiska uruchomieniowego nie powiodło się.  
   
  `pwszBuildFlavor`  
- [w] Ciąg, który określa, czy załadować serwer lub kompilacji stacji roboczej CLR. Prawidłowe `svr` wartości `wks`są i . Kompilacja serwera jest zoptymalizowana pod kątem korzystania z wielu procesorów do wyrzucania elementów bezużytecznych, a kompilacja stacji roboczej jest zoptymalizowana pod kątem aplikacji klienckich uruchomionych na komputerze z jednym procesorem.  
+ podczas Ciąg określający, czy załadować serwer lub kompilację stacji roboczej środowiska CLR. Prawidłowe wartości to `svr` i `wks` . Kompilacja serwera jest zoptymalizowana pod kątem wykorzystania wielu procesorów na potrzeby wyrzucania elementów bezużytecznych, a kompilacja stacji roboczej jest zoptymalizowana pod kątem aplikacji klienckich uruchomionych na komputerze z jednym procesorem.  
   
- Jeśli `pwszBuildFlavor` jest ustawiona na wartość null, kompilacja stacji roboczej jest ładowana. Podczas pracy na komputerze z jednym procesorem kompilacja stacji `pwszBuildFlavor` roboczej `svr`jest zawsze ładowana, nawet jeśli jest ustawiona na . Jednak jeśli `pwszBuildFlavor` jest `svr` ustawiona i równoczesnych wyrzucania elementów `startupFlags` bezużytecznych jest określony (zobacz opis parametru), kompilacja serwera jest ładowany.  
+ Jeśli `pwszBuildFlavor` jest ustawiona na wartość null, kompilacja stacji roboczej zostanie załadowana. W przypadku uruchamiania na komputerze z jednym procesorem kompilacja stacji roboczej jest zawsze ładowana, nawet jeśli `pwszBuildFlavor` jest ustawiona na `svr` . Jeśli jednak `pwszBuildFlavor` jest ustawiona na `svr` i zostanie określone współbieżne wyrzucanie elementów bezużytecznych (zobacz Opis `startupFlags` parametru), kompilacja serwera zostanie załadowana.  
   
 > [!NOTE]
-> Równoczesne wyrzucanie elementów bezużytecznych nie jest obsługiwane w aplikacjach z emulatorem WOW64 x86 w systemach 64-bitowych, które implementują architekturę Intel Itanium (dawniej nazywaną IA-64). Aby uzyskać więcej informacji na temat używania WOW64 w 64-bitowych systemach Windows, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).  
+> Współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwane w aplikacjach uruchamiających emulator WOW64 x86 w systemach 64-bitowych, które implementują architekturę Intel Itanium (dawniej zwane IA-64). Aby uzyskać więcej informacji na temat korzystania z emulatora WOW64 w systemach 64-bitowych systemu Windows, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).  
   
  `pwszHostConfigFile`  
- [w] Nazwa pliku konfiguracji hosta, który określa wersję clr do załadowania. Jeśli nazwa pliku nie zawiera w pełni kwalifikowanej ścieżki, zakłada się, że plik znajduje się w tym samym katalogu co plik wykonywalny, który wykonuje wywołanie.  
+ podczas Nazwa pliku konfiguracji hosta, który określa wersję środowiska CLR do załadowania. Jeśli nazwa pliku nie zawiera w pełni kwalifikowanej ścieżki, zakłada się, że plik znajduje się w tym samym katalogu co plik wykonywalny, który wykonuje wywołanie.  
   
  `pReserved`  
- [w] Zarezerwowane dla przyszłej rozszerzalności.  
+ podczas Zarezerwowane do użytku w przyszłości.  
   
  `startupFlags`  
- [w] Zestaw flag, który kontroluje równoczesnych wyrzucania elementów bezużytecznych, `pwszVersion` kod neutralny dla domeny i zachowanie parametru. Wartość domyślna to pojedyncza domena, jeśli nie ustawiono żadnej flagi. Aby uzyskać listę obsługiwanych wartości, zobacz [STARTUP_FLAGS wyliczenie](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+ podczas Zestaw flag kontrolujących współbieżne odzyskiwanie pamięci, kod neutralny przez domenę i zachowanie `pwszVersion` parametru. Wartość domyślna to pojedyncza domena, jeśli flaga nie jest ustawiona. Aby uzyskać listę obsługiwanych wartości, zobacz [wyliczenie STARTUP_FLAGS](startup-flags-enumeration.md).  
   
  `rclsid`  
- [w] Coclass, `CLSID` który implementuje interfejs [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) lub [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) Obsługiwane wartości są CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
+ podczas `CLSID`Klasy coclass implementującej interfejs [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) lub [ICLRRuntimeHost](iclrruntimehost-interface.md) . Obsługiwane wartości to CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
   
  `riid`  
- [w] Interfejs, `IID` o który prosisz. Obsługiwane wartości są IID_ICorRuntimeHost lub IID_ICLRRuntimeHost.  
+ podczas Żądanego `IID` interfejsu. Obsługiwane wartości to IID_ICorRuntimeHost lub IID_ICLRRuntimeHost.  
   
  `ppv`  
- [na zewnątrz] Wskaźnik interfejsu do wersji środowiska wykonawczego, który został załadowany.  
+ określoną Wskaźnik interfejsu do wersji środowiska uruchomieniowego, która została załadowana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** mscoree.idl  
+ **Nagłówek:** MSCorEE. idl  
   
- **Biblioteka:** Mscoree.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [CorBindToCurrentRuntime, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeEx, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime, funkcja](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime, funkcja](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg — Funkcja](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeEx, funkcja](corbindtoruntimeex-function.md)
+- [ICorRuntimeHost, interfejs](icorruntimehost-interface.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

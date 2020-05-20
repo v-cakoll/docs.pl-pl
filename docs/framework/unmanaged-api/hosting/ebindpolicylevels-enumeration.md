@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 94d2ec12309249afbecdc4130f8fe20c927b0a9b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136550"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616375"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels — Wyliczenie
 Zapewnia flagi do określania poziomu, na którym mają być stosowane lub zmodyfikowane zasady zestawu.  
@@ -41,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`ePolicyLevelAdmin`|Określa, że zasady mają być stosowane na poziomie administratora.|  
 |`ePolicyLevelApp`|Określa, że zasady mają być stosowane na poziomie aplikacji.|  
@@ -49,22 +49,22 @@ typedef enum {
 |`ePolicyLevelNone`|Określa brak flag poziomu zasad.|  
 |`ePolicyLevelPublisher`|Określa, że zasady mają być stosowane na poziomie wydawcy.|  
 |`ePolicyLevelRetargetable`|Określa, że zasady powinny być stosowane na poziomach zmiennych.|  
-|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenośność między implementacjami zestawu .NET Framework. Zobacz [\<tag supportportability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) pliku konfiguracji.|  
+|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenośność między implementacjami zestawu .NET Framework. Zobacz [ \< tag supportportability>](../../configure-apps/file-schema/runtime/supportportability-element.md) pliku konfiguracji.|  
 |`ePolicyUnifiedToCLR`|Określa, że zasady powinny być ujednolicone dla tego środowiska uruchomieniowego języka wspólnego (CLR).|  
   
 ## <a name="remarks"></a>Uwagi  
- To wyliczenie jest przesyłane do metod interfejsu [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) , aby określić zmiany zasad aplikacji.  
+ To wyliczenie jest przesyłane do metod interfejsu [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) , aby określić zmiany zasad aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRAssemblyIdentityManager, interfejs](iclrassemblyidentitymanager-interface.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

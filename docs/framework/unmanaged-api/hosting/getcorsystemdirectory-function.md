@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: bdafacfe52d678aacfcd44de1e924bcb88547424
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 137b2e30916cb1934d4389c5668bfb7eb5066064
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178205"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617233"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory — Funkcja
-Zwraca katalog instalacyjny środowiska wykonawczego języka wspólnego (CLR), który jest ładowany do procesu. Katalog instalacyjny jest w pełni kwalifikowany, na przykład "c:\windows\microsoft.net\framework\v1.0.3705".  
+Zwraca katalog instalacyjny środowiska uruchomieniowego języka wspólnego (CLR), który jest ładowany do procesu. Katalog instalacyjny jest w pełni kwalifikowany, na przykład "c:\Windows\Microsoft.NET\Framework\v1.0.3705".  
   
- Ta funkcja jest przestarzała. Zastępuje go metoda [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) dostępna w ramach .NET Framework 4.  
+ Ta funkcja jest przestarzała. Jest zastępowany przez metodę [ICLRRuntimeInfo:: GetRuntimeDirectory —](iclrruntimeinfo-getruntimedirectory-method.md) podaną w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametry  
  `pbuffer`  
- [na zewnątrz] Bufor, w którym środowisko wykonawcze zwraca ciąg zawierający w pełni kwalifikowaną nazwę katalogu instalacyjnego dla środowiska wykonawczego, który jest ładowany do procesu. Jeśli środowisko wykonawcze nie zostało jeszcze załadowane do procesu, funkcja zwraca odpowiednie informacje o katalogu dla najnowszej wersji środowiska wykonawczego zainstalowanego na komputerze.  
+ określoną Bufor, w którym środowisko uruchomieniowe zwraca ciąg, który zawiera w pełni kwalifikowaną nazwę katalogu instalacyjnego dla środowiska uruchomieniowego, które jest ładowane do procesu. Jeśli środowisko uruchomieniowe nie zostało jeszcze załadowane do procesu, funkcja zwróci odpowiednie informacje dotyczące katalogu dla najnowszej wersji środowiska uruchomieniowego zainstalowanej na komputerze.  
   
  `cchBuffer`  
- [w] Rozmiar w bajtach `pbuffer`.  
+ podczas Rozmiar, w bajtach, z `pbuffer` .  
   
  `dwLength`  
- [na zewnątrz] Liczba znaków zwróconych `pbuffer`w pliku .  
+ określoną Liczba znaków zwrócona w `pbuffer` .  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!CAUTION]
-> Nie należy używać tej funkcji w procesach, które są uruchomione w wersji 4 CLR. Jeśli na komputerze jest zainstalowana wcześniejsza wersja programu CLR, ta funkcja zwraca katalog instalacyjny dla tej wersji.  
+> Nie należy używać tej funkcji w procesach, w których jest uruchomiona wersja 4 środowiska CLR. Jeśli na komputerze jest zainstalowana starsza wersja środowiska CLR, ta funkcja zwróci katalog instalacji dla tej wersji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Mscoree.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

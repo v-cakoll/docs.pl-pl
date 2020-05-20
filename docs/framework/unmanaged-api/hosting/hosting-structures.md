@@ -6,46 +6,46 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: 3d43225574b8794733ee2e83562699276ddc5bab
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126937"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616089"
 ---
 # <a name="hosting-structures"></a>Hosting — Struktury
 W tej sekcji opisano niezarządzane struktury używane przez interfejs API hostingu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [AssemblyBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
+ [AssemblyBindInfo, struktura](assemblybindinfo-structure.md)  
  Zawiera szczegółowe informacje o przywoływanym zestawie.  
   
- [BucketParameters, struktura](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
+ [BucketParameters — Struktura](bucketparameters-structure.md)  
  Przechowuje nazwę typu zdarzenia i parametry bieżącego wyjątku, który jest skojarzony ze zdarzeniem.  
   
- [COR_GC_STATS, struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
+ [COR_GC_STATS, struktura](cor-gc-stats-structure.md)  
  Zawiera dane statystyczne dotyczące mechanizmu odzyskiwania pamięci środowiska uruchomieniowego języka wspólnego (CLR).  
   
- [COR_GC_THREAD_STATS, struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
+ [COR_GC_THREAD_STATS, struktura](cor-gc-thread-stats-structure.md)  
  Zawiera statystyki poszczególnych wątków dotyczące wyrzucania elementów bezużytecznych.  
   
- [CustomDumpItem, struktura](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
+ [CustomDumpItem, struktura](customdumpitem-structure.md)  
  Opisuje element, który ma zostać dodany do niestandardowego zrzutu w raporcie o błędach.  
   
- [MDAInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- Zawiera szczegółowe informacje o zdarzeniu `Event_MDAFired`, które wyzwala tworzenie zarządzanego asystenta debugowania (MDA).  
+ [MDAInfo, struktura](mdainfo-structure.md)  
+ Zawiera szczegółowe informacje o `Event_MDAFired` zdarzeniu, które wyzwala tworzenie zarządzanego asystenta debugowania (MDA).  
   
- [ModuleBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
+ [ModuleBindInfo, struktura](modulebindinfo-structure.md)  
  Zawiera szczegółowe informacje dotyczące modułu, do którego istnieje odwołanie, i zestawu, który go zawiera.  
   
- [StackOverflowInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
+ [StackOverflowInfo, struktura](stackoverflowinfo-structure.md)  
  Przechowuje typ przepełnienia, który wystąpił, i informacje o wyjątku, który został zgłoszony z powodu przepełnienia.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ [Współklasy hostingu](hosting-coclasses.md)  
   
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Hosting, interfejsy](hosting-interfaces.md)  
   
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)  
   
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Hosting — Wyliczenia](hosting-enumerations.md)

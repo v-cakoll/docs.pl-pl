@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178178"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617203"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion — Funkcja
-Pobiera informacje o wersji wspólnego środowiska wykonawczego języka (CLR) określonego pliku przy użyciu określonego buforu.  
+Pobiera informacje o wersji środowiska uruchomieniowego języka wspólnego (CLR) określonego pliku przy użyciu określonego buforu.  
   
- Ta funkcja została przestarzała w .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,24 +39,24 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parametry  
  `szFilename`  
- [w] Ścieżka pliku, który ma zostać zbadany.  
+ podczas Ścieżka pliku, który ma zostać zbadany.  
   
  `szBuffer`  
- [w, na zewnątrz] Bufor przydzielony dla zwracanych informacji o wersji.  
+ [in. out] Bufor przydzielony dla zwracanych informacji o wersji.  
   
  `cchBuffer`  
- [w] Rozmiar, w szerokich `szBuffer`znaków, z .  
+ podczas Rozmiar, w postaci znaków dwubajtowych, z `szBuffer` .  
   
  `dwLength`  
- [na zewnątrz] Rozmiar (w bajtach) `szBuffer`zwracanego .  
+ określoną Rozmiar zwracanych wartości (w bajtach) `szBuffer` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

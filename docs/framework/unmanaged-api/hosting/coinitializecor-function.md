@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-ms.openlocfilehash: e8d65e739504e01a7d11b37d1b34d7313b13a5e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 188f98504fa73c4a85615a4e688bae02d966b9b6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138335"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616752"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor — Funkcja
-`CoInitializeCor` jest przestarzała.  
+`CoInitializeCor`jest przestarzały.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,11 +34,11 @@ STDAPI CoInitializeCor (
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zainicjować środowisko uruchomieniowe języka wspólnego, użyj opcji [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
+ Aby zainicjować środowisko uruchomieniowe języka wspólnego, użyj opcji [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** Cor. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Statyczne funkcje globalne metadanych](../metadata/metadata-global-static-functions.md)

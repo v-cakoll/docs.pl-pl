@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: 44578595b3cb790570c5359e714bd39c109cf1f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176464"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616570"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess — Funkcja
 Zamyka bieżący proces niezarządzany.  
   
- Ta funkcja została przestarzała w .NET Framework 4. Zamiast tego należy użyć metody [ICLRMetaHost::ExitProcess.](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)  
+ Ta funkcja jest przestarzała w .NET Framework 4. Zamiast tego użyj metody [ICLRMetaHost:: ExitProcess —](iclrmetahost-exitprocess-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ void STDMETHODCALLTYPE CorExitProcess (
   
 ## <a name="parameters"></a>Parametry  
  `exitCode`  
- Liczba całkowita określająca kod zakończenia procesu.  
+ Liczba całkowita, która określa kod zakończenia procesu.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> Począwszy od programu .NET `CorExitProcess` Framework 4, kończy każde uruchomione środowisko uruchomieniowe w procesie, a nie tylko środowisko uruchomieniowe, do którego zostały powiązane starsze interfejsy API.  
+> Począwszy od .NET Framework 4, `CorExitProcess` zamyka wszystkie uruchomione środowisko uruchomieniowe w procesie, a nie tylko środowisko uruchomieniowe, do którego zostały powiązane starsze interfejsy API.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Mscoree.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 3a6da0e845fa50d090cdf0808b211a5806c40961
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178217"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616505"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage — Funkcja
-Sprawdza poprawność obrazów modułów zarządzanych i powiadamia moduł ładujący systemu operacyjnego po ich załadowaniu.  
+Sprawdza poprawność obrazów modułu zarządzanego i powiadamia program ładujący system operacyjny po ich załadowaniu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,51 +35,51 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parametry  
  `ImageBase`  
- [w] Wskaźnik do lokalizacji początkowej obrazu, aby sprawdzić poprawność jako kod zarządzany. Obraz musi być już załadowany do pamięci.  
+ podczas Wskaźnik do lokalizacji początkowej obrazu do zweryfikowania jako kod zarządzany. Obraz musi już być załadowany do pamięci.  
   
  `FileName`  
- [w] Nazwa pliku obrazu.  
+ podczas Nazwa pliku obrazu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta funkcja zwraca `E_INVALIDARG`wartości `E_OUTOFMEMORY` `E_UNEXPECTED`standardowe `E_FAIL`, , i , a także następujące wartości.  
+ Ta funkcja zwraca wartości standardowe `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` , i `E_FAIL` , jak również następujące wartości.  
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|Obraz jest nieprawidłowy. Ta wartość ma HRESULT 0xC000007BL.|  
-|`STATUS_SUCCESS`|Obraz jest prawidłowy. Ta wartość ma HRESULT 0x0000000L.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|Obraz jest nieprawidłowy. Ta wartość ma wynik HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|Obraz jest prawidłowy. Ta wartość ma wynik HRESULT.|  
   
 ## <a name="remarks"></a>Uwagi  
- W systemie Windows XP i nowszych wersjach program ładujący systemu operacyjnego sprawdza moduły zarządzane, sprawdzając bit katalogu deskryptora COM w nagłówku wspólnego formatu pliku obiektu (COFF). Bit zestawu wskazuje moduł zarządzany. Jeśli moduł ładujący wykryje moduł zarządzany, ładuje msCorEE.dll i wywołuje `_CorValidateImage`, który wykonuje następujące akcje:  
+ W systemie Windows XP i nowszych wersjach moduł ładujący systemu operacyjnego sprawdza moduły zarządzane, sprawdzając bit katalogu deskryptorów COM w nagłówku pliku Common Object Format (COFF). Zestaw bit wskazuje moduł zarządzany. W przypadku wykrycia modułu zarządzanego przez moduł ładujący ładuje biblioteki MsCorEE. dll i wywołania `_CorValidateImage` , które wykonują następujące czynności:  
   
 - Potwierdza, że obraz jest prawidłowym modułem zarządzanym.  
   
-- Zmienia punkt wejścia na obrazie na punkt wejścia w czasie wykonywania języka wspólnego (CLR).  
+- Zmienia punkt wejścia w obrazie na punkt wejścia w środowisku uruchomieniowym języka wspólnego (CLR).  
   
-- W przypadku 64-bitowych wersji systemu Windows modyfikuje obraz w pamięci, przekształcając go z pe32 do formatu PE32+.  
+- W przypadku 64-bitowych wersji systemu Windows program modyfikuje obraz znajdujący się w pamięci, przekształcając go z PE32 na PE32 + format.  
   
-- Powraca do modułu ładującego po załadowaniu obrazów modułu zarządzanego.  
+- Zwraca do modułu ładującego po załadowaniu obrazów modułu zarządzanego.  
   
- W przypadku obrazów wykonywalnych program ładujący systemu operacyjnego wywołuje następnie funkcję [_CorExeMain,](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) niezależnie od punktu wejścia określonego w pliku wykonywalnym. W przypadku obrazów zestawu DLL moduł ładujący wywołuje funkcję [_CorDllMain.](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ W przypadku obrazów wykonywalnych program ładujący systemu operacyjnego wywołuje funkcję [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , niezależnie od punktu wejścia określonego w pliku wykonywalnym. W przypadku obrazów zestawów bibliotek DLL moduł ładujący wywołuje funkcję [_CorDllMain](cordllmain-function.md) .  
   
- `_CorExeMain`lub `_CorDllMain` wykonuje następujące czynności:  
+ `_CorExeMain`lub `_CorDllMain` wykonuje następujące akcje:  
   
-- Inicjuje clr.  
+- Inicjuje środowisko CLR.  
   
 - Lokalizuje zarządzany punkt wejścia z nagłówka CLR zestawu.  
   
 - Rozpoczyna wykonywanie.  
   
- Moduł ładujący wywołuje funkcję [_CorImageUnloading,](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) gdy obrazy modułów zarządzanych są zwalniane. Jednak ta funkcja nie wykonuje żadnych akcji; po prostu powraca.  
+ Moduł ładujący wywołuje funkcję [_CorImageUnloading](corimageunloading-function.md) , gdy zarządzane obrazy modułu są zwolnione. Jednakże ta funkcja nie wykonuje żadnych działań; Zwraca wartość.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Statyczne funkcje globalne metadanych](../metadata/metadata-global-static-functions.md)

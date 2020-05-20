@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 4932e1fd6294f4a01264e982835dd0707324082a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 585287f63f57f55e877c94684820833b6d1add60
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178230"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616542"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading — Funkcja
-Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są zwalniane.  
+Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są zwolnione.  
   
- Ta funkcja nie jest zaimplementowana. Jeśli wywoływane, zwraca E_NOTIMPL.  
+ Ta funkcja nie jest zaimplementowana. Jeśli zostanie wywołana, zwraca E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,17 +36,17 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parametry  
  `ImageBase`  
- [w] Wskaźnik do lokalizacji początkowej obrazu do wyładowania.  
+ podczas Wskaźnik do lokalizacji początkowej obrazu do zwolnienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Statyczne funkcje globalne metadanych](../metadata/metadata-global-static-functions.md)

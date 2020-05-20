@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 637e1aed003e211654141ab397c9c0b4724753c2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429755"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615491"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables — Metoda
 Zwraca zmienną nielokalną, używając jej elementu nadrzędnego i nazwy.  
@@ -41,10 +41,10 @@ HRESULT GetVariables (
  podczas Element nadrzędny zmiennej.  
   
  `cVars`  
- podczas Rozmiar tablicy `pVars`.  
+ podczas Rozmiar `pVars` tablicy.  
   
  `pcVars`  
- określoną Wskaźnik do zmiennej, która otrzymuje liczbę zmiennych zwracanych w `pVars`.  
+ określoną Wskaźnik do zmiennej, która otrzymuje liczbę zmiennych zwróconych w `pVars` .  
   
  `pVars`  
  określoną Wskaźnik do zmiennej, która odbiera zmienne.  
@@ -57,4 +57,4 @@ HRESULT GetVariables (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

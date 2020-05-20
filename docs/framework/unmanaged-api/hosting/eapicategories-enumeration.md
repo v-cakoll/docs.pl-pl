@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d31b0190ef9a697fb27c849db080bec6c57618ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131212"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616388"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories — Wyliczenie
 Opisuje kategorie możliwości, które host może blokować z uruchamiania w częściowo zaufanym kodzie.  
@@ -44,9 +44,9 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`eAll`|Określa, że wszystkie zarządzane klasy i elementy członkowskie, które są objęte innymi polami `EApiCategories`, nie mogą być uruchamiane w częściowo zaufanym kodzie.|  
+|`eAll`|Określa, że wszystkie zarządzane klasy i elementy członkowskie, które są objęte innymi polami, nie `EApiCategories` mogą być uruchamiane w częściowo zaufanym kodzie.|  
 |`eExternalProcessMgmt`|Określa, że zarządzane klasy i elementy członkowskie, które umożliwiają tworzenie, manipulowanie i niszczenie procesów zewnętrznych, nie są uruchamiane w częściowo zaufanym kodzie.|  
 |`eExternalThreading`|Określa, że zarządzane klasy i elementy członkowskie, które umożliwiają tworzenie, manipulowanie i niszczenie wątków zewnętrznych, nie są uruchamiane w częściowo zaufanym kodzie.|  
 |`eMayLeakOnAbort`|Określa, że zarządzane typy i elementy członkowskie, które mogą potencjalnie przeciekać pamięć przy przerwaniu, mogą być uruchamiane w częściowo zaufanym kodzie.|  
@@ -59,20 +59,20 @@ typedef enum {
 |`eUI`|Określa, że zarządzane klasy i elementy członkowskie, które zezwalają na interakcję ludzką lub wymagają, aby nie były uruchamiane w częściowo zaufanym kodzie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda [ICLRHostProtectionManager:: SetProtectedCategories —](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) przyjmuje parametr typu `EApiCategories`.  
+ Metoda [ICLRHostProtectionManager:: SetProtectedCategories —](iclrhostprotectionmanager-setprotectedcategories-method.md) przyjmuje parametr typu `EApiCategories` .  
   
- Wyliczenie `EApiCategories` i Metoda `SetProtectedCategories` są bezpośrednio powiązane z klasą zarządzanej <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>. Zarządzana Klasa jest używana z wyliczeniem <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>, którego wartości odpowiadają bezpośrednio na wartości `EApiCategories`, aby oznaczyć typy zarządzane i składowe, które uwidaczniają możliwości odpowiadające kategoriom opisanym przez `EApiCategories`.  
+ `EApiCategories`Wyliczenie i `SetProtectedCategories` Metoda są bezpośrednio powiązane z klasą zarządzaną <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> . Zarządzana Klasa jest używana z <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> wyliczeniem, którego wartości odpowiadają bezpośrednio na `EApiCategories` wartości, aby oznaczyć zarządzane typy i składowe, które uwidaczniają możliwości odpowiadające kategoriom opisanym przez `EApiCategories` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRHostProtectionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRHostProtectionManager, interfejs](iclrhostprotectionmanager-interface.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

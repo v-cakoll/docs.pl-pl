@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8202fe4ec3ae6ef96440f203c5aea6db84744a72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136959"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616585"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 — Funkcja
 Wykonuje punkt wejścia w określonym kodzie mapowanym w pamięci. Ta funkcja jest wywoływana przez program ładujący systemu operacyjnego.  
@@ -41,7 +41,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  podczas Wskaźnik do kodu mapowanego na pamięć.  
   
  `cUnmappedPE`  
- podczas Liczba elementów, `pUnmappedPE` mogą być przechowywane.  
+ podczas Liczba elementów, które `pUnmappedPE` mogą być przechowywane.  
   
  `pImageNameIn`  
  podczas Wskaźnik do nazwy obrazu wykonywalnego.  
@@ -53,14 +53,14 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  podczas Parametry wiersza polecenia, jeśli istnieją.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Statyczne funkcje globalne metadanych](../metadata/metadata-global-static-functions.md)

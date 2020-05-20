@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176620"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615335"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants — Metoda
 Pobiera stałe lokalne zdefiniowane w tym zakresie.  
@@ -38,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>Parametry  
  `cConstants`  
- [w] Długość buforu, na `pcConstants` który wskazuje parametr.  
+ podczas Długość buforu, `pcConstants` do którego wskazuje parametr.  
   
  `pcConstants`  
- [na zewnątrz] Wskaźnik do, `ULONG32` który odbiera rozmiar, w znakach, buforu wymagane do zawierają stałe.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora, który musi zawierać stałe.  
   
  `constants`  
- [na zewnątrz] Bufor, który przechowuje stałe.  
+ określoną Bufor przechowujący stałe.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedScope2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [ISymUnmanagedScope2, interfejs](isymunmanagedscope2-interface.md)

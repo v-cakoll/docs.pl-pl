@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a71563c0-62f2-4eb4-970c-825d61827613
 topic_type:
 - apiref
-ms.openlocfilehash: 4d2de38e5e506873a6db262dcec19c7af9d8a0d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 093c5e3e64395c8946acd9201990d132e8111fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446094"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610590"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind — Metoda
 Pobiera rodzaj adresu tej zmiennej.  
@@ -34,7 +34,7 @@ HRESULT GetAddressKind(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- określoną Wskaźnik do `ULONG32`, który odbiera wartość. Możliwe wartości są zdefiniowane w wyliczeniu [CorSymAddrKind —](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) .  
+ określoną Wskaźnik do elementu `ULONG32` , który otrzymuje wartość. Możliwe wartości są zdefiniowane w wyliczeniu [CorSymAddrKind —](corsymaddrkind-enumeration.md) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -44,4 +44,4 @@ HRESULT GetAddressKind(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable, interfejs](isymunmanagedvariable-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445524"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442127"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach — Metoda
 Wykonuje automatyczne dołączanie debugera wywoływanego przez serwer.  
@@ -40,13 +40,13 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parametry  
  `guidPort`  
- podczas Zawsze ustawiaj na `GUID_NULL`.  
+ podczas Zawsze ustawiaj na `GUID_NULL` .  
   
  `dwPid`  
- podczas Identyfikator procesu, zwykle pobierany z funkcją `GetCurrentProcessId`.  
+ podczas Identyfikator procesu, zwykle pobierany z `GetCurrentProcessId` funkcją.  
   
  `dwProgramType`  
- podczas Typ programu: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`lub `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ podczas Typ programu: `AUTOATTACH_PROGRAM_WIN32` , `AUTOATTACH_PROGRAM_COMPLUS` , lub `AUTOATTACH_PROGRAM_UNKNOWN` .  
   
  `dwProgramId`  
  podczas Identyfikator programu.  
@@ -54,7 +54,7 @@ HRESULT AutoAttach
  `pszSessionId`  
  podczas Ciąg przesłany przez czasownik debugowania.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -62,4 +62,4 @@ HRESULT AutoAttach
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IDebugAutoAttach, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [IDebugAutoAttach — Interfejs](idebugautoattach-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-ms.openlocfilehash: 38c4819a375cdd94ee31c2744871c600d8de0b40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f2996349fd2bf1765a3de5b67d3296a25b1eaa5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446005"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610369"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset — Metoda
 Pobiera przesunięcie początku tej zmiennej w elemencie nadrzędnym. Jeśli jest to zmienna lokalna w zakresie, przesunięcie rozpoczęcia będzie należeć do przesunięć zdefiniowanych dla zakresu.  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- określoną Wskaźnik do `ULONG32`, który odbiera przesunięcie rozpoczęcia.  
+ określoną Wskaźnik do elementu `ULONG32` , który odbiera przesunięcie rozpoczęcia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -44,5 +44,5 @@ HRESULT GetStartOffset(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetEndOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [ISymUnmanagedVariable, interfejs](isymunmanagedvariable-interface.md)
+- [GetEndOffset, metoda](isymunmanagedvariable-getendoffset-method.md)

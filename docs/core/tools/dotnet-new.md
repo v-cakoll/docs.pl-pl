@@ -2,12 +2,12 @@
 title: polecenie dotnet New
 description: Polecenie dotnet New umożliwia tworzenie nowych projektów platformy .NET Core na podstawie określonego szablonu.
 ms.date: 04/10/2020
-ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506860"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442244"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -21,7 +21,7 @@ ms.locfileid: "82506860"
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
-    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [-lang|--language {"C#"|"F#"|VB}] [-n|--name <OUTPUT_NAME>]
     [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
     [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 
@@ -32,7 +32,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet new` Polecenie tworzy projekt .NET Core lub inne artefakty na podstawie szablonu.
+`dotnet new`Polecenie tworzy projekt .NET Core lub inne artefakty na podstawie szablonu.
 
 Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , aby utworzyć artefakty na dysku na podstawie określonego szablonu i opcji.
 
@@ -48,9 +48,9 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 
   Można uruchomić `dotnet new --list` lub `dotnet new -l` wyświetlić listę wszystkich zainstalowanych szablonów. Jeśli `TEMPLATE` wartość nie jest dokładnym dopasowaniem do tekstu w kolumnie **Szablony** lub **krótka nazwa** z zwróconej tabeli, do tych dwóch kolumn jest wykonywane dopasowanie podciągu.
 
-  Począwszy od zestawu SDK platformy .NET Core 3,0, interfejs wiersza `dotnet new` polecenia wyszukuje szablony w NuGet.org, gdy wywoła polecenie w następujących warunkach:
+  Począwszy od zestawu SDK platformy .NET Core 3,0, interfejs wiersza polecenia wyszukuje szablony w NuGet.org, gdy wywoła `dotnet new` polecenie w następujących warunkach:
 
-  - Jeśli interfejs wiersza polecenia nie może znaleźć dopasowania szablonu podczas wywoływania `dotnet new`, nie nawet częściowej.
+  - Jeśli interfejs wiersza polecenia nie może znaleźć dopasowania szablonu podczas wywoływania `dotnet new` , nie nawet częściowej.
   - Jeśli jest dostępna nowsza wersja szablonu. W takim przypadku projekt lub artefakt jest tworzony, ale interfejs wiersza polecenia ostrzega użytkownika o zaktualizowanej wersji szablonu.
 
   W poniższej tabeli przedstawiono szablony, które są wstępnie zainstalowane wraz z zestaw .NET Core SDK. Język domyślny dla szablonu jest pokazywany w nawiasach. Kliknij link krótkiej nazwy, aby wyświetlić opcje konkretnego szablonu.
@@ -68,7 +68,7 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 | Usługa procesu roboczego                               | [odpowiedzialn](#web-others)           | Znajd         | Common/Worker/sieć Web                     | 3.0        |
 | Projekt testu jednostkowego                            | [MSTest](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
 | Projekt testowy NUnit 3                         | [NUnit](#nunit)                  | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
-| Element testowy NUnit 3                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2.2        |
+| Element testowy NUnit 3                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2,2        |
 | Projekt testu xUnit                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1.0        |
 | Składnik Razor                              | `razorcomponent`                | Znajd         | Web/ASP. NET                           | 3.0        |
 | Strona Razor                                   | [stronic](#page)                   | Znajd         | Web/ASP. NET                           | 2.0        |
@@ -104,11 +104,11 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 
 - **`-h|--help`**
 
-  Drukuje pomoc dla polecenia. Może być wywoływana dla samego `dotnet new` polecenia lub dla dowolnego szablonu. Na przykład `dotnet new mvc --help`.
+  Drukuje pomoc dla polecenia. Może być wywoływana dla `dotnet new` samego polecenia lub dla dowolnego szablonu. Na przykład `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
-  Instaluje pakiet szablonów z `PATH` lub `NUGET_ID` dostarczone. Jeśli chcesz zainstalować wersję wstępną pakietu szablonu, musisz określić wersję w formacie `<package-name>::<package-version>`. Domyślnie program `dotnet new` przekazuje \* wersję, która reprezentuje najnowszą stabilną wersję pakietu. Zobacz przykład w sekcji [przykładów](#examples) .
+  Instaluje pakiet szablonów z `PATH` lub `NUGET_ID` dostarczone. Jeśli chcesz zainstalować wersję wstępną pakietu szablonu, musisz określić wersję w formacie `<package-name>::<package-version>` . Domyślnie program `dotnet new` przekazuje \* wersję, która reprezentuje najnowszą stabilną wersję pakietu. Zobacz przykład w sekcji [przykładów](#examples) .
   
   Jeśli wersja szablonu została już zainstalowana po uruchomieniu tego polecenia, szablon zostanie zaktualizowany do określonej wersji lub do najnowszej wersji stabilnej, jeśli nie określono żadnej wersji.
 
@@ -139,16 +139,16 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 
 - **`--type <TYPE>`**
 
-  Filtruje szablony w oparciu o dostępne typy. Wstępnie zdefiniowane wartości `project`to `item`,, `other`i.
+  Filtruje szablony w oparciu o dostępne typy. Wstępnie zdefiniowane wartości to `project` , `item` , i `other` .
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
-  Odinstalowuje pakiet szablonów w `PATH` lub `NUGET_ID` udostępniony. Gdy `<PATH|NUGET_ID>` wartość nie jest określona, wyświetlane są wszystkie aktualnie zainstalowane pakiety szablonów i skojarzone z nimi szablony. Podczas określania `NUGET_ID`nie należy umieszczać numeru wersji.
+  Odinstalowuje pakiet szablonów w `PATH` lub `NUGET_ID` udostępniony. Gdy `<PATH|NUGET_ID>` wartość nie jest określona, wyświetlane są wszystkie aktualnie zainstalowane pakiety szablonów i skojarzone z nimi szablony. Podczas określania `NUGET_ID` nie należy umieszczać numeru wersji.
 
   Jeśli nie określisz parametru do tej opcji, polecenie wyświetli listę zainstalowanych szablonów i szczegółowe informacje o nich.
 
   > [!NOTE]
-  > Aby odinstalować szablon przy użyciu programu `PATH`, należy w pełni zakwalifikować ścieżkę. Na przykład *C:/Users/\<User>/Documents/templates/garciasoftware.consoletemplate.CSharp* będzie działał, ale */GarciaSoftware.ConsoleTemplate.CSharp* z folderu zawierającego.
+  > Aby odinstalować szablon przy użyciu programu `PATH` , należy w pełni zakwalifikować ścieżkę. Na przykład *C:/Users/ \< User>/Documents/templates/garciasoftware.consoletemplate.CSharp* będzie działał, ale */GarciaSoftware.ConsoleTemplate.CSharp* z folderu zawierającego.
   > Nie dołączaj ostatecznego ukośnika katalogu w ścieżce szablonu.
 
 - **`--update-apply`**
@@ -173,12 +173,12 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Ustawia `LangVersion` właściwość w utworzonym pliku projektu. Na przykład użyj `--langVersion 7.3` , aby użyć języka C# 7,3. Nieobsługiwane dla języka F #. Dostępne od wersji .NET Core 2,2 SDK.
+  Ustawia `LangVersion` Właściwość w utworzonym pliku projektu. Na przykład użyj, `--langVersion 7.3` Aby użyć języka C# 7,3. Nieobsługiwane dla języka F #. Dostępne od wersji .NET Core 2,2 SDK.
 
   Listę domyślnych wersji języka C# można znaleźć w temacie [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -192,11 +192,11 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Określa [platformę](../../standard/frameworks.md) docelową. Wartości: `netcoreapp<version>` aby utworzyć bibliotekę klas platformy .NET Core lub `netstandard<version>` utworzyć bibliotekę klas .NET Standard. Wartością domyślną jest `netstandard2.0`.
+  Określa [platformę](../../standard/frameworks.md) docelową. Wartości: `netcoreapp<version>` Aby utworzyć bibliotekę klas platformy .NET Core lub `netstandard<version>` utworzyć bibliotekę klas .NET Standard. Wartość domyślna to `netstandard2.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Ustawia `LangVersion` właściwość w utworzonym pliku projektu. Na przykład użyj `--langVersion 7.3` , aby użyć języka C# 7,3. Nieobsługiwane dla języka F #. Dostępne od wersji .NET Core 2,2 SDK.
+  Ustawia `LangVersion` Właściwość w utworzonym pliku projektu. Na przykład użyj, `--langVersion 7.3` Aby użyć języka C# 7,3. Nieobsługiwane dla języka F #. Dostępne od wersji .NET Core 2,2 SDK.
 
   Listę domyślnych wersji języka C# można znaleźć w temacie [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -210,11 +210,11 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
+  Określa [platformę](../../standard/frameworks.md) docelową. Wartość domyślna to `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Ustawia `LangVersion` właściwość w utworzonym pliku projektu. Na przykład użyj `--langVersion 7.3` , aby użyć języka C# 7,3.
+  Ustawia `LangVersion` Właściwość w utworzonym pliku projektu. Na przykład użyj, `--langVersion 7.3` Aby użyć języka C# 7,3.
 
   Listę domyślnych wersji języka C# można znaleźć w temacie [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -228,7 +228,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Ustawia `LangVersion` właściwość w utworzonym pliku projektu. Na przykład użyj `--langVersion 7.3` , aby użyć języka C# 7,3.
+  Ustawia `LangVersion` Właściwość w utworzonym pliku projektu. Na przykład użyj, `--langVersion 7.3` Aby użyć języka C# 7,3.
 
   Listę domyślnych wersji języka C# można znaleźć w temacie [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
@@ -242,7 +242,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
+  Określa [platformę](../../standard/frameworks.md) docelową. Wartość domyślna to `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
 
 - **`--exclude-launch-settings`**
 
@@ -264,7 +264,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
 - **`-p|--enable-pack`**
@@ -287,9 +287,9 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
-  | 2.2         | `netcoreapp2.2` |
+  | 2,2         | `netcoreapp2.2` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`-p|--enable-pack`**
@@ -306,7 +306,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Przestrzeń nazw dla wygenerowanego kodu. Wartością domyślną jest `MyApp.Namespace`.
+  Przestrzeń nazw dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
 - **`-np|--no-pagemodel`**
 
@@ -318,7 +318,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Przestrzeń nazw dla wygenerowanego kodu. Wartością domyślną jest `MyApp.Namespace`.
+  Przestrzeń nazw dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
 ***
 
@@ -337,7 +337,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/tfp/`.
+  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -353,27 +353,27 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Używanie z `SingleOrg` usługą `MultiOrg` lub uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/`.
+  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Używanie z usługą `SingleOrg` lub `MultiOrg` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Identyfikator klienta dla tego projektu. Użyj z `IndividualB2C`, `SingleOrg`lub `MultiOrg` uwierzytelniania. Wartością domyślną jest `11111111-1111-1111-11111111111111111`.
+  Identyfikator klienta dla tego projektu. Użyj z `IndividualB2C` , `SingleOrg` lub `MultiOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Domena dzierżawy katalogu. Używanie z `SingleOrg` usługą `IndividualB2C` lub uwierzytelnianiem. Wartością domyślną jest `qualified.domain.name`.
+  Domena dzierżawy katalogu. Używanie z usługą `SingleOrg` lub `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartością domyślną jest `22222222-2222-2222-2222-222222222222`.
+  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Ścieżka żądania w ścieżce podstawowej identyfikatora URI przekierowania. Używanie z `SingleOrg` usługą `IndividualB2C` lub uwierzytelnianiem. Wartością domyślną jest `/signin-oidc`.
+  Ścieżka żądania w ścieżce podstawowej identyfikatora URI przekierowania. Używanie z usługą `SingleOrg` lub `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
-  Zezwala tej aplikacji na dostęp do odczytu do katalogu. Dotyczy `SingleOrg` tylko `MultiOrg` uwierzytelniania.
+  Zezwala tej aplikacji na dostęp do odczytu do katalogu. Dotyczy tylko `SingleOrg` `MultiOrg` uwierzytelniania.
 
 - **`--exclude-launch-settings`**
 
@@ -381,11 +381,11 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--no-https`**
 
-  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko `Individual`wtedy `IndividualB2C`, `SingleOrg`gdy, `MultiOrg` , lub nie są `--auth`używane w programie.
+  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko wtedy, gdy,, `Individual` `IndividualB2C` `SingleOrg` lub `MultiOrg` nie są używane w programie `--auth` .
 
 - **`-uld|--use-local-db`**
 
-  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy `Individual` tylko `IndividualB2C` uwierzytelniania.
+  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy tylko `Individual` `IndividualB2C` uwierzytelniania.
 
 - **`--no-restore`**
 
@@ -407,7 +407,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
@@ -436,7 +436,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/tfp/`.
+  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -452,27 +452,27 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Używanie z `SingleOrg` usługą `MultiOrg` lub uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/`.
+  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Używanie z usługą `SingleOrg` lub `MultiOrg` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Identyfikator klienta dla tego projektu. Użyj z `IndividualB2C`, `SingleOrg`lub `MultiOrg` uwierzytelniania. Wartością domyślną jest `11111111-1111-1111-11111111111111111`.
+  Identyfikator klienta dla tego projektu. Użyj z `IndividualB2C` , `SingleOrg` lub `MultiOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Domena dzierżawy katalogu. Używanie z `SingleOrg` usługą `IndividualB2C` lub uwierzytelnianiem. Wartością domyślną jest `qualified.domain.name`.
+  Domena dzierżawy katalogu. Używanie z usługą `SingleOrg` lub `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartością domyślną jest `22222222-2222-2222-2222-222222222222`.
+  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Ścieżka żądania w ścieżce podstawowej identyfikatora URI przekierowania. Używanie z `SingleOrg` usługą `IndividualB2C` lub uwierzytelnianiem. Wartością domyślną jest `/signin-oidc`.
+  Ścieżka żądania w ścieżce podstawowej identyfikatora URI przekierowania. Używanie z usługą `SingleOrg` lub `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
-  Zezwala tej aplikacji na dostęp do odczytu do katalogu. Dotyczy `SingleOrg` tylko `MultiOrg` uwierzytelniania.
+  Zezwala tej aplikacji na dostęp do odczytu do katalogu. Dotyczy tylko `SingleOrg` `MultiOrg` uwierzytelniania.
 
 - **`--exclude-launch-settings`**
 
@@ -480,11 +480,11 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--no-https`**
 
-  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko `Individual`wtedy `IndividualB2C`, `SingleOrg`gdy, `MultiOrg` , lub nie jest używany.
+  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko wtedy, gdy,, `Individual` `IndividualB2C` `SingleOrg` lub `MultiOrg` nie jest używany.
 
 - **`-uld|--use-local-db`**
 
-  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy `Individual` tylko `IndividualB2C` uwierzytelniania.
+  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy tylko `Individual` `IndividualB2C` uwierzytelniania.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -494,7 +494,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
 - **`--no-restore`**
@@ -532,11 +532,11 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--no-https`**
 
-  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko wtedy, `None`gdy uwierzytelnianie jest.
+  Wyłącza protokół HTTPS. Ta opcja ma zastosowanie tylko wtedy, gdy uwierzytelnianie jest `None` .
 
 - **`-uld|--use-local-db`**
 
-  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy `Individual` tylko `IndividualB2C` uwierzytelniania. Dostępne od wersji .NET Core 3,0 SDK.
+  Należy używać LocalDB zamiast oprogramowania SQLite. Dotyczy tylko `Individual` `IndividualB2C` uwierzytelniania. Dostępne od wersji .NET Core 3,0 SDK.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -546,7 +546,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
@@ -566,7 +566,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
@@ -605,7 +605,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/tfp/`.
+  Wystąpienie Azure Active Directory B2C, z którym ma zostać nawiązane połączenie. Użyj z `IndividualB2C` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -613,19 +613,19 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--aad-instance <INSTANCE>`**
 
-  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartością domyślną jest `https://login.microsoftonline.com/`.
+  Wystąpienie Azure Active Directory, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartość domyślna to `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Identyfikator klienta dla tego projektu. Używanie z `IndividualB2C` usługą `SingleOrg` lub uwierzytelnianiem. Wartością domyślną jest `11111111-1111-1111-11111111111111111`.
+  Identyfikator klienta dla tego projektu. Używanie z usługą `IndividualB2C` lub `SingleOrg` uwierzytelnianiem. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Domena dzierżawy katalogu. Używanie z `IndividualB2C` usługą `SingleOrg` lub uwierzytelnianiem. Wartością domyślną jest `qualified.domain.name`.
+  Domena dzierżawy katalogu. Używanie z usługą `IndividualB2C` lub `SingleOrg` uwierzytelnianiem. Wartość domyślna to `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartością domyślną jest `22222222-2222-2222-2222-222222222222`.
+  Identyfikator TenantId katalogu, z którym ma zostać nawiązane połączenie. Użyj z `SingleOrg` uwierzytelnianiem. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
 
 - **`-r|--org-read-access`**
 
@@ -637,7 +637,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--no-https`**
 
-  Wyłącza protokół HTTPS. `app.UseHsts`i `app.UseHttpsRedirection` nie są dodawane `Startup.Configure`do. Ta opcja ma zastosowanie tylko `IndividualB2C` wtedy `SingleOrg` , gdy lub nie są używane do uwierzytelniania.
+  Wyłącza protokół HTTPS. `app.UseHsts`i `app.UseHttpsRedirection` nie są dodawane do `Startup.Configure` . Ta opcja ma zastosowanie tylko wtedy `IndividualB2C` , gdy lub `SingleOrg` nie są używane do uwierzytelniania.
 
 - **`-uld|--use-local-db`**
 
@@ -651,7 +651,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   | Wersja zestawu SDK | Wartość domyślna   |
   |-------------|-----------------|
-  | 3.1         | `netcoreapp3.1` |
+  | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
@@ -680,7 +680,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 - Utwórz projekt aplikacji konsolowej F # w bieżącym katalogu:
 
   ```dotnetcli
-  dotnet new console -lang F#
+  dotnet new console -lang "F#"
   ```
 
 - Utwórz projekt biblioteki klas .NET Standard w określonym katalogu:

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445481"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442088"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 — Interfejs
 Deklaruje metody rejestrowania źródła powiadomień połączenia i wyrejestrowywania go.  
@@ -28,14 +28,14 @@ Deklaruje metody rejestrowania źródła powiadomień połączenia i wyrejestrow
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[RegisterNotifySource, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Instaluje określony obiekt źródłowy powiadomienia.|  
-|[UnregisterNotifySource, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Usuwa określony obiekt źródłowy powiadomienia z połączenia.|  
+|[RegisterNotifySource, metoda](inotifyconnection2-registernotifysource-method.md)|Instaluje określony obiekt źródłowy powiadomienia.|  
+|[UnregisterNotifySource, metoda](inotifyconnection2-unregisternotifysource-method.md)|Usuwa określony obiekt źródłowy powiadomienia z połączenia.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [INotifySink2 — Interfejs](inotifysink2-interface.md)
+- [INotifySource2 — Interfejs](inotifysource2-interface.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)

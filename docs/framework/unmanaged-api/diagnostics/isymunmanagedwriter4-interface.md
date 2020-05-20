@@ -2,12 +2,12 @@
 title: ISymUnmanagedWriter4 — Interfejs
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: a656777461c50b5a1593917278eb54abda982dc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eaf2e8e60d9812ab6a31fb3b9050cbaae0f1a9d7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134567"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609472"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>ISymUnmanagedWriter4 — Interfejs
 Interfejs ISymUnmanagedWriter4.  
@@ -23,12 +23,12 @@ Interfejs ISymUnmanagedWriter4.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetDebugInfoWithPadding, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Działa tak samo jak [Metoda GetDebugInfo —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , z tą różnicą, że ciąg ścieżki jest dopełniany zerami po zamykającym znaku null, aby dane ciągu miały stały rozmiar `MAX_PATH`. Uzupełnienie jest nadawane tylko wtedy, gdy sama długość ciągu ścieżki jest mniejsza niż `MAX_PATH`.<br /><br /> Ułatwia to pisanie narzędzi, które różnicuje pliki PE.|  
+|[GetDebugInfoWithPadding, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Działa tak samo jak [Metoda GetDebugInfo —](isymunmanagedwriter-getdebuginfo-method.md) , z tą różnicą, że ciąg ścieżki jest dopełniany zerami po zamykającym znaku null, aby dane ciągu miały stały rozmiar `MAX_PATH` . Uzupełnienie jest udzielane tylko wtedy, gdy sama długość ciągu ścieżki jest mniejsza niż `MAX_PATH` .<br /><br /> Ułatwia to pisanie narzędzi, które różnicuje pliki PE.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedWriter3, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedWriter3 — Interfejs](isymunmanagedwriter3-interface.md)

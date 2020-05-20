@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88a844a7f79f14c717a5966b345588b3b3b9f81
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178317"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609420"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 — Metoda
-Otwiera metodę i zapewnia jej rzeczywiste przesunięcie przekroju na obrazie.  
+Otwiera metodę i udostępnia jej rzeczywiste przesunięcie sekcji w obrazie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parametry  
  `method`  
- [w] Token metadanych dla metody, która ma zostać otwarta.  
+ podczas Token metadanych dla metody, która ma zostać otwarta.  
   
  `isect`  
- [w] Przesunięcie sekcji na obrazie.  
+ podczas Przesunięcie sekcji na obrazie.  
   
  `offset`  
- [w] Przesunięcie obrazu.  
+ podczas Przesunięcie na obrazie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter3 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [OpenMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter3 — Interfejs](isymunmanagedwriter3-interface.md)
+- [OpenMethod, metoda](isymunmanagedwriter-openmethod-method.md)

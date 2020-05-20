@@ -2,12 +2,12 @@
 title: polecenie dotnet Pack
 description: Polecenie programu dotnet Pack tworzy pakiety NuGet dla projektu .NET Core.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595757"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442231"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -32,7 +32,7 @@ dotnet pack -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet pack` Polecenie kompiluje projekt i tworzy pakiety NuGet. Wynikiem tego polecenia jest pakiet NuGet (czyli plik *. nupkg* ).
+`dotnet pack`Polecenie kompiluje projekt i tworzy pakiety NuGet. Wynikiem tego polecenia jest pakiet NuGet (czyli plik *. nupkg* ).
 
 Jeśli chcesz wygenerować pakiet zawierający symbole debugowania, dostępne są dwie opcje:
 
@@ -64,13 +64,13 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 `PROJECT | SOLUTION`
 
-  Projekt lub rozwiązanie do spakowania. Jest to ścieżka do [pliku csproj](csproj.md), pliku rozwiązania lub do katalogu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog dla pliku projektu lub rozwiązania.
+  Projekt lub rozwiązanie do spakowania. Jest to ścieżka do [pliku csproj](csproj.md), plik vbproj, plik fsproj, plik rozwiązania lub do katalogu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog dla pliku projektu lub rozwiązania.
 
 ## <a name="options"></a>Opcje
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartością domyślną dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
+  Definiuje konfigurację kompilacji. Wartością domyślną dla większości projektów jest `Debug` , ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 - **`--force`**
 
@@ -122,11 +122,11 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Definiuje wartość właściwości programu `$(VersionSuffix)` MSBuild w projekcie.
+  Definiuje wartość `$(VersionSuffix)` Właściwości programu MSBuild w projekcie.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` .
 
 ## <a name="examples"></a>Przykłady
 
@@ -142,7 +142,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-- Pakowanie projektu w bieżącym katalogu i umieszczenie w nim pakietów `nupkgs` powstających:
+- Pakowanie projektu w bieżącym katalogu i umieszczenie w nim pakietów powstających `nupkgs` :
 
   ```dotnetcli
   dotnet pack --output nupkgs
@@ -154,13 +154,13 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
   dotnet pack --no-build --output nupkgs
   ```
 
-- Przy użyciu sufiksu wersji projektu skonfigurowanego `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` jako w pliku *. csproj* należy spakować bieżący projekt i zaktualizować uzyskaną wersję pakietu przy użyciu danego sufiksu:
+- Przy użyciu sufiksu wersji projektu skonfigurowanego jako `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` w pliku *. csproj* należy spakować bieżący projekt i zaktualizować uzyskaną wersję pakietu przy użyciu danego sufiksu:
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- Ustaw wersję pakietu na `2.1.0` za pomocą właściwości `PackageVersion` MSBuild:
+- Ustaw wersję pakietu na `2.1.0` za pomocą `PackageVersion` właściwości MSBuild:
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
@@ -184,7 +184,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
 
-  Informacje o sposobach korzystania `NuspecFile`z programu `NuspecBasePath`, i `NuspecProperties`można znaleźć w następujących zasobach:
+  Informacje o sposobach korzystania z `NuspecFile` programu, `NuspecBasePath` i `NuspecProperties` można znaleźć w następujących zasobach:
   
   - [Pakowanie przy użyciu elementu. nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Zaawansowane punkty rozszerzenia do tworzenia dostosowanego pakietu](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)

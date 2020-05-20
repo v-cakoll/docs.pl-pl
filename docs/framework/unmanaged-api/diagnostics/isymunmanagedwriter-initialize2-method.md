@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427941"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610070"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 — Metoda
 Ustawia interfejs emitujący metadane, z którym jest skojarzony ten składnik zapisywania i ustawia nazwę pliku wyjściowego, do którego będą zapisywane symbole debugowania. Ta metoda umożliwia również ustawienie końcowej lokalizacji pliku bazy danych programu (PDB).  
@@ -41,16 +41,16 @@ HRESULT Initialize2(
  podczas Wskaźnik do interfejsu emitującego metadane.  
   
  `tempfilename`  
- podczas Wskaźnik do `WCHAR`, który zawiera nazwę pliku, do którego są zapisywane symbole debugowania. Jeśli nazwa pliku jest określona dla składnika zapisywania, który nie używa nazw plików, ten parametr jest ignorowany.  
+ podczas Wskaźnik do elementu `WCHAR` , który zawiera nazwę pliku, do którego są napisywane symbole debugowania. Jeśli nazwa pliku jest określona dla składnika zapisywania, który nie używa nazw plików, ten parametr jest ignorowany.  
   
  `pIStream`  
- podczas Jeśli ta wartość jest określona, moduł zapisujący symboli emituje symbole do danego <xref:System.Runtime.InteropServices.ComTypes.IStream>, a nie do pliku określonego w parametrze `filename`. Parametr `pIStream` jest opcjonalny.  
+ podczas Jeśli ta wartość jest określona, moduł zapisujący symboli emituje symbole do danego obiektu, <xref:System.Runtime.InteropServices.ComTypes.IStream> a nie do pliku określonego w `filename` parametrze. `pIStream`Parametr jest opcjonalny.  
   
  `fFullBuild`  
- [in] `true`, jeśli jest to pełna kompilacja; `false`, jeśli jest to kompilacja przyrostowa.  
+ [w] `true` Jeśli jest to pełna ponowna kompilacja; `false`Jeśli jest to kompilacja przyrostowa.  
   
  `finalfilename`  
- podczas Wskaźnik do `WCHAR`, który jest ciągiem ścieżki do ostatecznej lokalizacji pliku PDB.  
+ podczas Wskaźnik do `WCHAR` , który jest ciągiem ścieżki do ostatecznej lokalizacji pliku PDB.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -60,5 +60,5 @@ HRESULT Initialize2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)
+- [Initialize — Metoda](isymunmanagedwriter-initialize-method.md)

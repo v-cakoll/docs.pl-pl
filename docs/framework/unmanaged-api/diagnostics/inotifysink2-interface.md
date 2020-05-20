@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440970"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442062"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 — Interfejs
 Deklaruje metody powiadamiania o ujściach.  
@@ -28,16 +28,16 @@ Deklaruje metody powiadamiania o ujściach.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OnSyncCallEnter, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Wywoływana podczas wprowadzania wywołania.|  
-|[OnSyncCallExit, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Wywoływany podczas kończenia wywołania.|  
-|[OnSyncCallOut, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Wywoływana, gdy wywołanie jest wychodzące.|  
-|[OnSyncCallReturn, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Wywoływany, gdy wywołanie zwraca wartość.|  
+|[OnSyncCallEnter, metoda](inotifysink2-onsynccallenter-method.md)|Wywoływana podczas wprowadzania wywołania.|  
+|[OnSyncCallExit, metoda](inotifysink2-onsynccallexit-method.md)|Wywoływany podczas kończenia wywołania.|  
+|[OnSyncCallOut, metoda](inotifysink2-onsynccallout-method.md)|Wywoływana, gdy wywołanie jest wychodzące.|  
+|[OnSyncCallReturn, metoda](inotifysink2-onsynccallreturn-method.md)|Wywoływany, gdy wywołanie zwraca wartość.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [INotifyConnection2 — Interfejs](inotifyconnection2-interface.md)
+- [INotifySource2 — Interfejs](inotifysource2-interface.md)
+- [Interfejsy magazynu symboli diagnostycznych](diagnostics-symbol-store-interfaces.md)

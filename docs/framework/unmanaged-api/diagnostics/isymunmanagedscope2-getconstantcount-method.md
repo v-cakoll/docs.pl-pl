@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e1f0be6-c4e8-4d6c-98cd-d5fa9f686e87
 topic_type:
 - apiref
-ms.openlocfilehash: f795147bdcd822db90106c7f2171eb1771b1126f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 88fc6b7d6076bca42050ca87533062557e6a7b50
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446258"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610954"
 ---
 # <a name="isymunmanagedscope2getconstantcount-method"></a>ISymUnmanagedScope2::GetConstantCount — Metoda
 Pobiera liczbę stałych zdefiniowanych w tym zakresie.  
@@ -34,9 +34,9 @@ HRESULT GetConstantCount(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora, który musi zawierać stałe.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora, który musi zawierać stałe.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -44,4 +44,4 @@ HRESULT GetConstantCount(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedScope2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [ISymUnmanagedScope2, interfejs](isymunmanagedscope2-interface.md)

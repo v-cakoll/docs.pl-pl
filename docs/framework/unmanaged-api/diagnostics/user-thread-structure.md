@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-ms.openlocfilehash: 51db7a2b6464b562e09ce061991898a8d604ead1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5144feab742bc5dac36563d701d81a699d0bb2f3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437966"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609446"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD — Struktura
-Zawiera informacje dotyczące debugera wątku. Aby uzyskać więcej informacji, zobacz metodę [INotifySource2:: SetNotifyFilter —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) .  
+Zawiera informacje dotyczące debugera wątku. Aby uzyskać więcej informacji, zobacz metodę [INotifySource2:: SetNotifyFilter —](inotifysource2-setnotifyfilter-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,9 +35,9 @@ typedef struct tagUSER_THREAD
 } USER_THREAD;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`pSidBuffer`|Adres buforu wątku.|  
 |`dwSidLen`|Długość buforu wątku w bajtach.|  
@@ -48,5 +48,5 @@ typedef struct tagUSER_THREAD
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SetNotifyFilter, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
-- [Struktury magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [SetNotifyFilter, metoda](inotifysource2-setnotifyfilter-method.md)
+- [Struktury magazynu symboli diagnostycznych](diagnostics-symbol-store-structures.md)

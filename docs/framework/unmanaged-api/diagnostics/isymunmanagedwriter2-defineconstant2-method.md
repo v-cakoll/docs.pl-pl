@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70ee853ff657a75dcc4df1454c4354f9d3f8202f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438318"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614724"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>ISymUnmanagedWriter2::DefineConstant2 — Metoda
 Definiuje nazwę wartości stałej.  
@@ -44,7 +44,7 @@ HRESULT DefineConstant2(
  `sigToken`  
  podczas Token metadanych stałej.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -52,5 +52,5 @@ HRESULT DefineConstant2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineConstant, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [ISymUnmanagedWriter2 — Interfejs](isymunmanagedwriter2-interface.md)
+- [DefineConstant, metoda](isymunmanagedwriter-defineconstant-method.md)

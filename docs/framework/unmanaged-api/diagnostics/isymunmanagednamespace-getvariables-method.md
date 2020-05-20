@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448371"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615088"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables — Metoda
 Zwraca wszystkie zmienne zdefiniowane w zakresie globalnym w tej przestrzeni nazw.  
@@ -37,10 +37,10 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametry  
  `cVars`  
- podczas `ULONG32`, który wskazuje rozmiar tablicy `pVars`.  
+ podczas `ULONG32`Wskazuje rozmiar `pVars` tablicy.  
   
  `pcVars`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do przechowywania przestrzeni nazw.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu wymaganego do przechowywania przestrzeni nazw.  
   
  `pVars`  
  określoną Wskaźnik do buforu, który zawiera przestrzenie nazw.  
@@ -53,4 +53,4 @@ HRESULT GetVariables(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedNamespace, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace, interfejs](isymunmanagednamespace-interface.md)

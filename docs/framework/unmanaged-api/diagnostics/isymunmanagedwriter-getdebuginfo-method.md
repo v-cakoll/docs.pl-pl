@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427966"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614789"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo — Metoda
-Zwraca informacje niezbędne do zapisania przez kompilator wpisu katalogu debugowania w nagłówku przenośnego pliku wykonywalnego (PE). Moduł zapisywania symboli wypełnia wszystkie pola z wyjątkiem `TimeDateStamp` i `PointerToRawData`. (Kompilator jest odpowiedzialny za odpowiednie ustawienie tych dwóch pól).  
+Zwraca informacje niezbędne do zapisania przez kompilator wpisu katalogu debugowania w nagłówku przenośnego pliku wykonywalnego (PE). Moduł zapisywania symboli wypełnia wszystkie pola z wyjątkiem `TimeDateStamp` i `PointerToRawData` . (Kompilator jest odpowiedzialny za odpowiednie ustawienie tych dwóch pól).  
   
- Kompilator powinien wywołać tę metodę, emitować obiekt BLOB danych do pliku PE, ustawić pole `PointerToRawData` w IMAGE_DEBUG_DIRECTORY, aby wskazywało emitowane dane, i napisać IMAGE_DEBUG_DIRECTORY do pliku PE. Kompilator powinien również ustawić pole `TimeDateStamp` tak, aby było równe `TimeDateStamp` generowanego pliku PE.  
+ Kompilator powinien wywołać tę metodę, emitować obiekt BLOB danych do pliku PE, ustawić `PointerToRawData` pole w IMAGE_DEBUG_DIRECTORY, aby wskazywało emitowane dane, i zapisać IMAGE_DEBUG_DIRECTORY do pliku PE. Kompilator powinien również ustawić pole tak `TimeDateStamp` , aby było równe `TimeDateStamp` wygenerowanego pliku PE.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ HRESULT GetDebugInfo(
  [in. out] Wskaźnik do IMAGE_DEBUG_DIRECTORY wypełniania przez moduł zapisujący symboli.  
   
  `cData`  
- podczas `DWORD`, który zawiera rozmiar danych debugowania.  
+ podczas A `DWORD` , który zawiera rozmiar danych debugowania.  
   
  `pcData`  
- określoną Wskaźnik do `DWORD`, który odbiera rozmiar buforu wymaganego do przechowywania danych debugowania.  
+ określoną Wskaźnik do obiektu `DWORD` , który odbiera rozmiar buforu wymaganego do przechowywania danych debugowania.  
   
  `data`  
  określoną Wskaźnik do buforu, który jest wystarczająco duży, aby pomieścić dane debugowania dla magazynu symboli.  
@@ -59,4 +59,4 @@ HRESULT GetDebugInfo(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

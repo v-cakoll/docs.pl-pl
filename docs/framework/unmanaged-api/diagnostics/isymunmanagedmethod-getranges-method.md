@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448929"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615179"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges — Metoda
 Nadana pozycja w dokumencie zwraca tablicę par przesunięć początkowych i końcowych odpowiadających zakresom języka pośredniego firmy Microsoft (MSIL), który znajduje się w tej metodzie. Tablica jest tablicą liczb całkowitych i ma format [początkowy, końcowy, początkowy, końcowy]. Liczba par zakresów jest długością tablicy podzieloną przez 2.  
@@ -49,15 +49,15 @@ HRESULT GetRanges(
  podczas Kolumna dokumentu odpowiadająca zakresom.  
   
  `cRanges`  
- podczas Rozmiar tablicy `ranges`.  
+ podczas Rozmiar `ranges` tablicy.  
   
  `pcRanges`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do zawierania zakresów.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu wymaganego do przechowywania zakresów.  
   
  `ranges`  
  określoną Wskaźnik do buforu, który odbiera zakresy.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -65,4 +65,4 @@ HRESULT GetRanges(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

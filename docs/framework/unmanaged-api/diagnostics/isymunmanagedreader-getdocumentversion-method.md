@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448308"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615036"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion — Metoda
-Pobiera określoną wersję określonego dokumentu. Wersja dokumentu zaczyna się od 1 i jest zwiększana za każdym razem, gdy dokument zostanie zaktualizowany przy użyciu metody [UpdateSymbolStore —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) . Jeśli parametr `pbCurrent` jest `true`, jest to Najnowsza wersja dokumentu.  
+Pobiera określoną wersję określonego dokumentu. Wersja dokumentu zaczyna się od 1 i jest zwiększana za każdym razem, gdy dokument zostanie zaktualizowany przy użyciu metody [UpdateSymbolStore —](isymunmanagedreader-updatesymbolstore-method.md) . Jeśli `pbCurrent` parametr jest `true` , jest to Najnowsza wersja dokumentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ HRESULT GetDocumentVersion (
  określoną Wskaźnik do zmiennej, która otrzymuje wersję określonego dokumentu.  
   
  `pbCurrent`  
- określoną Wskaźnik do zmiennej, która otrzymuje `true`, jeśli jest to Najnowsza wersja dokumentu lub `false`, jeśli nie jest to Najnowsza wersja.  
+ określoną Wskaźnik do zmiennej, która otrzymuje `true` , jeśli jest to Najnowsza wersja dokumentu lub jeśli nie jest to `false` Najnowsza wersja.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -52,4 +52,4 @@ HRESULT GetDocumentVersion (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

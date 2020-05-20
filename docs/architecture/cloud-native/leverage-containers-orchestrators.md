@@ -1,17 +1,15 @@
 ---
 title: Korzystanie z kontenerów i orkiestratorów
 description: Korzystanie z kontenerów platformy Docker i koordynatorów Kubernetes na platformie Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895548"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613918"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Korzystanie z kontenerów i orkiestratorów
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kontenery i Koordynatory zostały zaprojektowane w celu rozwiązywania problemów typowych dla podejścia do wdrożenia.
 
@@ -19,7 +17,7 @@ Kontenery i Koordynatory zostały zaprojektowane w celu rozwiązywania problemó
 
 Tradycyjnie większość aplikacji wdrożono jako pojedynczą jednostkę. Takie aplikacje są określane jako monolitu. To ogólne podejście do wdrażania aplikacji jako pojedyncze jednostki nawet wtedy, gdy składają się z wielu modułów lub zestawów, jest znana jako architektura monolityczna, jak pokazano na rysunku 3-1.
 
-![Architektura monolityczna.](./media/monolithic-architecture.png)
+![Architektura monolityczna.](./media/monolithic-design.png)
 
 **Rysunek 3-1**. Architektura monolityczna.
 
@@ -57,8 +55,9 @@ Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzy�
 
 Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzyć i uruchomić w ten sam sposób. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji są rozmieszczone inaczej niż inne, dlaczego należy ponownie wdrożyć całą aplikację, gdy wystarczy wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
 
-![Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Rysunek 3-2**. Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu.
+![Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu.](./media/cloud-native-design.png)
+
+**Rysunek 3-2**. Tworzenie aplikacji monolitycznej w celu wdrażania mikrousług.
 
 Każda usługa w chmurze została skompilowana i wdrożona w osobnym kontenerze. Każda z nich może być aktualizowana w razie konieczności. Poszczególne usługi mogą być hostowane na węzłach mających zasoby odpowiednie dla każdej usługi. Środowisko, w którym działa każda usługa, jest niezmienne, współużytkowane przez środowisko deweloperskie, testowe i produkcyjne oraz w łatwy sposób. Sprzęganie różnych obszarów aplikacji występuje jawnie jako wywołania lub komunikaty między usługami, a nie zależności czasu kompilacji w ramach monolitu. Możesz również wybrać technologię, która najlepiej spełnia daną możliwość, bez konieczności wprowadzania zmian w pozostałej części aplikacji.
 
@@ -111,7 +110,7 @@ Kubernetes obsługuje zarówno deklaratywną, jak i bezwzględną konfigurację.
 
 Bezwzględne polecenia są doskonałe do uczenia się i interaktywnego eksperymentowania. Należy jednak pamiętać o deklaratywnym utworzeniu plików manifestu Kubernetes, aby wdrożyć infrastrukturę jako podejście kodu, zapewniając niezawodne i powtarzalne wdrożenia. Plik manifestu jest artefaktem projektu i jest używany w potoku CI/CD do automatyzowania wdrożeń Kubernetes.
 
-Jeśli klaster został już skonfigurowany za pomocą bezwzględnych poleceń, można wyeksportować deklaratywny manifest za pomocą `kubectl get svc SERVICENAME -o yaml > service.yaml`. To polecenie generuje manifest podobny do przedstawionego poniżej:
+Jeśli klaster został już skonfigurowany za pomocą bezwzględnych poleceń, można wyeksportować deklaratywny manifest za pomocą `kubectl get svc SERVICENAME -o yaml > service.yaml` . To polecenie generuje manifest podobny do przedstawionego poniżej:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-W przypadku korzystania z konfiguracji deklaracyjnej można wyświetlić podgląd zmian, które zostaną wprowadzone przed ich zatwierdzeniem za `kubectl diff -f FOLDERNAME` pomocą folderu, w którym znajdują się pliki konfiguracji. Po upewnieniu się, że chcesz zastosować zmiany, uruchom `kubectl apply -f FOLDERNAME`polecenie. Dodaj `-R` , aby rekursywnie przetworzyć hierarchię folderów.
+W przypadku korzystania z konfiguracji deklaracyjnej można wyświetlić podgląd zmian, które zostaną wprowadzone przed ich zatwierdzeniem za pomocą `kubectl diff -f FOLDERNAME` folderu, w którym znajdują się pliki konfiguracji. Po upewnieniu się, że chcesz zastosować zmiany, uruchom polecenie `kubectl apply -f FOLDERNAME` . Dodaj `-R` , aby rekursywnie przetworzyć hierarchię folderów.
 
 Można również użyć konfiguracji deklaratywnej z innymi funkcjami Kubernetes, jednym z nich, które są wdrażane. Wdrożenia deklaratywne ułatwiają Zarządzanie wersjami, aktualizacjami i skalowaniem. Poinstruują Kubernetes Deployment Controller o sposobie wdrażania nowych zmian, skalowania w poziomie lub wycofywania do poprzedniej poprawki. Jeśli klaster jest niestabilny, wdrożenie deklaracyjne automatycznie zwróci klaster z powrotem do żądanego stanu. Jeśli na przykład węzeł ma awaria, mechanizm wdrażania ponownie wdroży zastąpienie w celu osiągnięcia żądanego stanu
 
@@ -181,7 +180,7 @@ Co to jest Minikube? W projekcie Minikube jest wyświetlany komunikat "Minikube 
 - Włączanie interfejsu sieciowego kontenera (CNI)
 - Ruch przychodzący
 
-Po zainstalowaniu Minikube można szybko rozpocząć korzystanie z niego, uruchamiając `minikube start` polecenie, które pobiera obraz i uruchamia lokalny klaster Kubernetes. Po uruchomieniu klastra możesz korzystać z niego przy użyciu standardowych poleceń Kubernetes `kubectl` .
+Po zainstalowaniu Minikube można szybko rozpocząć korzystanie z niego, uruchamiając `minikube start` polecenie, które pobiera obraz i uruchamia lokalny klaster Kubernetes. Po uruchomieniu klastra możesz korzystać z niego przy użyciu standardowych `kubectl` poleceń Kubernetes.
 
 ### <a name="docker-desktop"></a>Pulpit Docker
 
@@ -204,26 +203,26 @@ Program Visual Studio obsługuje programowanie platformy Docker dla aplikacji si
 Gdy ta opcja jest zaznaczona, projekt jest tworzony przy użyciu elementu `Dockerfile` w jego katalogu głównym, który może służyć do kompilowania i hostowania aplikacji w kontenerze platformy Docker. Przykład pliku dockerfile przedstawiono na rysunku 3 -6. git
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **Rysunek 3-6**. Program Visual Studio wygenerował pliku dockerfile
@@ -236,13 +235,17 @@ Domyślne zachowanie podczas uruchamiania aplikacji jest skonfigurowane do korzy
 
 Poza programowaniem lokalnym [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) zapewnia wygodny sposób pracy wielu programistów z własnymi konfiguracjami Kubernetes na platformie Azure. Jak widać na rysunku 3-7, można również uruchomić aplikację w Azure Dev Spaces.
 
-Ponadto w dowolnym momencie można dodać obsługę platformy Docker do istniejącej aplikacji ASP.NET Core. W programie Visual Studio Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i **Dodaj** > **obsługę platformy Docker**, jak pokazano na rysunku 3-8.
+Ponadto w dowolnym momencie można dodać obsługę platformy Docker do istniejącej aplikacji ASP.NET Core. W programie Visual Studio Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i **Dodaj**  >  **obsługę platformy Docker**, jak pokazano na rysunku 3-8.
+
+![Dodawanie obsługi platformy Docker w programie Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Rysunek 3-8**. Dodawanie obsługi platformy Docker do programu Visual Studio
 
-Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i zostanie dodany `charts` folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
+Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i `charts` zostanie dodany folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
 
-Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i zostanie dodany `charts` folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
+Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i `charts` zostanie dodany folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
+
+![Obsługa programu Visual Studio Add Orchestrator](./media/visual-studio-add-orchestrator-support.png)
 
 **Rysunek 3-9**. Dodawanie obsługi aranżacji do programu Visual Studio
 
@@ -253,5 +256,5 @@ Istnieje wiele rozszerzeń dostępnych dla Visual Studio Code obsługujących pr
 Firma Microsoft udostępnia [platformę Docker dla Visual Studio Code rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). To rozszerzenie upraszcza proces dodawania obsługi kontenera do aplikacji. Szkieletuje wymagane pliki, tworzy obrazy platformy Docker i umożliwia debugowanie aplikacji w kontenerze. Rozszerzenie zawiera program Visual Explorer, który ułatwia podejmowanie działań na kontenerach i obrazach, takich jak uruchamianie, zatrzymywanie, inspekcja, usuwanie i nie tylko. Rozszerzenie obsługuje również Docker Compose umożliwiające zarządzanie wieloma uruchomionymi kontenerami jako pojedynczą jednostką.
 
 >[!div class="step-by-step"]
->[Poprzedni](scale-applications.md)
->[Następny](leverage-serverless-functions.md)
+>[Poprzedni](scale-applications.md) 
+> [Dalej](leverage-serverless-functions.md)

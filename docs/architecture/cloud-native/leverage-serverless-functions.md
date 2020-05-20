@@ -1,17 +1,15 @@
 ---
 title: Korzystanie z funkcji bezserwerowych
 description: Korzystanie z bezserwerowych i Azure Functions w aplikacjach natywnych w chmurze
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199745"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613866"
 ---
 # <a name="leveraging-serverless-functions"></a>Korzystanie z funkcji bezserwerowych
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W spektrum od zarządzania maszynami fizycznymi do korzystania z możliwości chmury, bezserwerowe życie na najwyższym końcu. Jedyną odpowiedzialnością jest Twój kod i płacisz tylko wtedy, gdy kod jest uruchomiony. Azure Functions zapewnia sposób tworzenia możliwości bezserwerowych w aplikacjach natywnych w chmurze.
 
@@ -54,8 +52,8 @@ Rozwiązania bezserwerowe i skalowanie na żądanie. Gdy nowe wystąpienie zosta
 
 Rysunek 3-10 pokazuje wzorzec zimnego startu. Należy pamiętać o dodatkowych krokach wymaganych, gdy aplikacja jest zimna.
 
-![Rysunek zimny i](./media/cold-start-warm-start.png)
-rozgrzany początek**3-10**. Zimne rozpoczęcie i rozgrzane.
+![Rysunek zimny i rozgrzany początek ](./media/cold-start-warm-start.png)
+ **3-10**. Zimne rozpoczęcie i rozgrzane.
 
 Aby uniknąć całkowitego uruchamiania zimnego, możesz przełączyć się z [planu zużycia do dedykowanego planu](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). Możesz również skonfigurować co najmniej jedno [wystąpienie wstępnie rozgrzane](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) z uaktualnieniem planu Premium. W takich przypadkach należy dodać kolejne wystąpienie, które jest już gotowe do użycia. Te opcje mogą pomóc w ograniczeniu problemu zimnego startu związanego z przetwarzaniem nieserwerowym.
 
@@ -64,5 +62,5 @@ Dostawcy usług w chmurze rachunku bezserwerowego na podstawie czasu wykonywania
 Na koniec korzystanie z Azure Functions dla zadań aplikacji zwiększa złożoność. Warto najpierw przeprowadzić architekta swojej aplikacji przy użyciu modularnie powiązanego projektu. Następnie ustal, czy nie ma żadnych korzyści bezserwerowych, które uzasadniają dodatkową złożoność.
 
 >[!div class="step-by-step"]
->[Poprzedni](leverage-containers-orchestrators.md)
->[Następny](combine-containers-serverless-approaches.md)
+>[Poprzedni](leverage-containers-orchestrators.md) 
+> [Dalej](combine-containers-serverless-approaches.md)

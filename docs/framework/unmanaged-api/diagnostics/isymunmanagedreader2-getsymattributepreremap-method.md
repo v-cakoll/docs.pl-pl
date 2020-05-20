@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446419"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614919"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda
 Pobiera atrybut niestandardowy na podstawie jego nazwy. W przeciwieństwie do atrybutów niestandardowych metadanych, te atrybuty są przechowywane w magazynie symboli.  
@@ -42,13 +42,13 @@ HRESULT GetSymAttributePreRemap(
  podczas Token metadanych elementu nadrzędnego.  
   
  `name`  
- podczas Wskaźnik do `WCHAR`, który zawiera nazwę.  
+ podczas Wskaźnik do `WCHAR` , który zawiera nazwę.  
   
  `cBuffer`  
- podczas `ULONG32`, który wskazuje rozmiar tablicy `buffer`.  
+ podczas `ULONG32`Wskazuje rozmiar `buffer` tablicy.  
   
  `pcBuffer`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do uwzględnienia bajtów atrybutu.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu wymaganego do uwzględnienia bajtów atrybutu.  
   
  `buffer`  
  określoną Wskaźnik do buforu, który odbiera bajty atrybutu.  
@@ -61,4 +61,4 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 — Interfejs](isymunmanagedreader2-interface.md)

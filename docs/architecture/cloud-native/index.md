@@ -2,19 +2,19 @@
 title: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
 description: Przewodnik tworzenia aplikacji natywnych w chmurze wykorzystujących kontenery, mikrousługi i funkcje bezserwerowe platformy Azure.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507393"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614005"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![obraz okładki](./media/cover.png)
+
+**Wersja 1.0**
 
 OPUBLIKOWANA PRZEZ
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Waszyngton 98052-6399
 
-Copyright &copy; 2019 od firmy Microsoft Corporation
+Copyright &copy; 2020 od firmy Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
@@ -34,7 +34,7 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione na https://www.microsoft.com stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
@@ -58,11 +58,13 @@ Uczestnicy i recenzenci:
 >
 > **Cecil Phillip**, starszy ambasador w chmurze, Microsoft
 
-Dowiedz się więcej o eShopOnContainers
-
 Edytory
 
 > **Maira Wenzel**, Menedżer programów, .NET Team, Microsoft
+
+## <a name="version"></a>Wersja
+
+Ten przewodnik został zapisany w celu uwzględnienia wersji **programu .NET Core 3,1** wraz z wieloma dodatkowymi aktualizacjami związanymi z tym samym "" Wave "technologiami (czyli platformą Azure i dodatkowymi technologiami innych firm), które są zgodne z wersją platformy .net Core 3,1.
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
 
@@ -83,6 +85,10 @@ Ten przewodnik rozpoczyna się od zdefiniowania natywnej chmury i wprowadzenia a
 - DevOps
 
 Ten przewodnik jest dostępny zarówno w formacie PDF, jak i w trybie online. Możesz przesłać dalej ten dokument lub linki do swojej wersji online swojego zespołu, aby pomóc w zapewnieniu powszechnego poznania się z tymi tematami. Większość z tych tematów korzysta ze spójnych zasad i wzorców, a także tych, których dotyczą decyzje związane z tymi tematami. Naszym celem tego dokumentu jest wyposażenie zespołów i ich liderów z informacjami potrzebnymi do podejmowania świadomych decyzji o architekturze, programowaniu i hostingu aplikacji.
+
+## <a name="send-your-feedback"></a>Wyślij opinię
+
+Ta książka i powiązane przykłady są ciągle zmieniane, dzięki czemu Twoje opinie są gotowe! Jeśli masz komentarze dotyczące sposobu, w jaki można ulepszyć tę książkę, Skorzystaj z sekcji opinia w dolnej części strony utworzonej w witrynie [GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
 >[Dalej](introduction.md)

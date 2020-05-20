@@ -2,17 +2,15 @@
 title: Komunikacja między usługami
 description: Dowiedz się, jak mikrousługi zaplecza w chmurze komunikują się z innymi mikrousługami zaplecza.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895492"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613710"
 ---
 # <a name="service-to-service-communication"></a>Komunikacja między usługami
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Po przeniesieniu się z klienta frontonu firma Microsoft komunikuje się ze sobą.
 
@@ -50,7 +48,7 @@ Wykonywanie sporadycznego żądania, które powoduje, że jedno bezpośrednie wy
 
 **Rysunek 4-9**. Łączenie kwerend HTTP
 
-Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie w \#przypadku niepowodzenia kroku 3? Lub krok \#8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić, \#Jeśli krok 6 jest wolny, ponieważ podstawowa usługa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
+Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie w przypadku \# niepowodzenia kroku 3? Lub krok \# 8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić, jeśli krok \# 6 jest wolny, ponieważ podstawowa usługa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
 
 Duży stopień sprzęgania w poprzednim obrazie sugeruje, że usługi nie były optymalnie modelowane. Behoove zespół do ponownego odwiedzania projektu.
 
@@ -166,7 +164,7 @@ Dzięki zdarzeniom przechodźmy od technologii kolejkowania do *tematów*. [Tema
 
 **Rysunek 4-16**. Architektura tematu
 
-Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "Zamów" do subskrypcji \#1 i subskrypcji \#3, ale nie do subskrypcji \#2. Do subskrypcji \#2 i subskrypcji \#3 zostanie wysłane zdarzenie "OrderCompleted".
+Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "Zamów" do subskrypcji \# 1 i subskrypcji \# 3, ale nie do subskrypcji \# 2. Do subskrypcji \# 2 i subskrypcji 3 zostanie wysłane zdarzenie "OrderCompleted" \# .
 
 Chmura systemu Azure obsługuje dwie różne usługi tematu: Tematy Azure Service Bus i Azure EventGrid.
 
@@ -231,5 +229,5 @@ Zamiast odczytywania z tego samego zasobu, każda grupa odbiorców odczytuje mi�
 W przypadku aplikacji natywnych w chmurze, które muszą przesyłać strumieniowo dużą liczbę zdarzeń, usługa Azure Event Hub może być niezawodna i niedrogie rozwiązanie.
 
 >[!div class="step-by-step"]
->[Poprzedni](front-end-communication.md)
->[Następny](grpc.md)
+>[Poprzedni](front-end-communication.md) 
+> [Dalej](grpc.md)

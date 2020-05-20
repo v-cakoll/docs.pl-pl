@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427841"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614763"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute — Metoda
 Definiuje atrybut niestandardowy na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do atrybutów niestandardowych metadanych.  
@@ -40,10 +40,10 @@ HRESULT SetSymAttribute(
  podczas Token metadanych, dla którego atrybut jest definiowany.  
   
  `name`  
- podczas Wskaźnik do `WCHAR`, który zawiera nazwę atrybutu.  
+ podczas Wskaźnik do elementu `WCHAR` , który zawiera nazwę atrybutu.  
   
  `cData`  
- podczas `ULONG32`, który wskazuje rozmiar tablicy `data`.  
+ podczas `ULONG32`Wskazuje rozmiar `data` tablicy.  
   
  `data`  
  podczas Wartość atrybutu.  
@@ -56,4 +56,4 @@ HRESULT SetSymAttribute(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

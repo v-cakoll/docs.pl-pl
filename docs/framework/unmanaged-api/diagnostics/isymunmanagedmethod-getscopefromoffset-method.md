@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448899"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615166"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset — Metoda
 Pobiera najbardziej otaczający zakres leksykalny w ramach tej metody, który obejmuje określone przesunięcie. Służy do uruchamiania wyszukiwania zmiennych lokalnych.  
@@ -35,10 +35,10 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parametry  
  `offset`  
- podczas `ULONG`, który zawiera przesunięcie.  
+ podczas A `ULONG` , który zawiera przesunięcie.  
   
  `pRetVal`  
- określoną Wskaźnik, który jest ustawiony na zwracany Interfejs [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) .  
+ określoną Wskaźnik, który jest ustawiony na zwracany Interfejs [ISymUnmanagedScope](isymunmanagedscope-interface.md) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -48,4 +48,4 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

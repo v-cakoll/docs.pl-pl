@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433887"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615101"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces — Metoda
 Pobiera elementy podrzędne tej przestrzeni nazw.  
@@ -37,15 +37,15 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametry  
  `cNameSpaces`  
- podczas `ULONG32`, który wskazuje rozmiar tablicy `namespaces`.  
+ podczas `ULONG32`Wskazuje rozmiar `namespaces` tablicy.  
   
  `pcNameSpaces`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania przestrzeni nazw.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania przestrzeni nazw.  
   
  `namespaces`  
  określoną Wskaźnik do buforu, który zawiera przestrzenie nazw.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -53,4 +53,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedNamespace, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace, interfejs](isymunmanagednamespace-interface.md)

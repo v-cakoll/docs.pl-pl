@@ -1,17 +1,15 @@
 ---
 title: Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Zabezpieczenia platformy Azure dla natywnych aplikacji w chmurze
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394718"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614256"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Aplikacje natywne w chmurze mogą być łatwiejsze i trudniejsze do zabezpieczenia niż tradycyjne aplikacje. W minusem należy zabezpieczyć bardziej mniejsze aplikacje i przeznaczyć większą energię do tworzenia infrastruktury zabezpieczeń. Niejednorodny charakter języków programowania i stylów w większości wdrożeń usług oznacza również, że należy zwrócić uwagę na Biuletyny zabezpieczeń od wielu różnych dostawców.
 

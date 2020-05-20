@@ -2,17 +2,15 @@
 title: Wzorce komunikacji rozwiązań natywnych dla chmury
 description: Informacje o problemach z łącznością usług w aplikacjach natywnych w chmurze
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895630"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614217"
 ---
 # <a name="cloud-native-communication-patterns"></a>Wzorce komunikacji rozwiązań natywnych dla chmury
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Podczas konstruowania systemu natywnego w chmurze komunikacja jest istotną decyzją projektową. Jak aplikacja klienta frontonu komunikuje się z mikrousługą zaplecza? Jak usługa back-end komunikuje się ze sobą? Jakie są zasady, wzorce i najlepsze rozwiązania, które należy wziąć pod uwagę podczas implementowania komunikacji w aplikacjach natywnych w chmurze?
 
@@ -49,5 +47,5 @@ Usługa Książka oparta na [platformie .NET: architektura dla kontenerów aplik
 W tym rozdziale będziemy najpierw rozwiązywać komunikaty między aplikacjami frontonu a mikrousługami zaplecza. Następnie będziemy informować o mikrousługach zaplecza. Będziemy poznać technologię komunikacji w górę i w gRPC. Na koniec będziemy szukać nowych innowacyjnych wzorców komunikacji przy użyciu technologii siatki usług. Zobaczymy również, w jaki sposób usługa Azure Cloud oferuje różne rodzaje *usług zapasowych* w celu obsługi komunikacji natywnej w chmurze.
 
 >[!div class="step-by-step"]
->[Poprzedni](other-deployment-options.md)
->[Następny](front-end-communication.md)
+>[Poprzedni](other-deployment-options.md) 
+> [Dalej](front-end-communication.md)

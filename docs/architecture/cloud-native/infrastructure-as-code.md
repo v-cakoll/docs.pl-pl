@@ -1,17 +1,15 @@
 ---
 title: Infrastruktura jako kod
 description: Wdrażanie infrastruktury jako kodu (IaC) z aplikacjami natywnymi w chmurze
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395345"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613957"
 ---
 # <a name="infrastructure-as-code"></a>Infrastruktura jako kod
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Systemy natywne w chmurze uwzględniają mikrousługi, kontenery i nowoczesne projektowanie systemu, aby osiągnąć szybkość i elastyczność. Zapewniają one automatyczne etapy kompilowania i wydawania, aby zapewnić spójność i jakość kodu. Ale jest to tylko część wątku. Jak można zainicjować obsługę środowisk w chmurze, na których są uruchamiane te systemy?
 

@@ -2,21 +2,19 @@
 title: Definiowanie rozwiązań natywnych dla chmury
 description: Poznaj filary podstawowe, które zapewniają nimi dla systemów natywnych w chmurze
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895615"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614183"
 ---
 # <a name="defining-cloud-native"></a>Definiowanie natywnego chmury
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Zatrzymywanie czynności i tekstu dziesięciu współpracowników. Poproś ich o zdefiniowanie terminu "natywne w chmurze". Z pewnością uzyskasz dziesięć różnych odpowiedzi.
 
-Zatrzymywanie czynności i tekstu dziesięciu współpracowników. Poproś ich o zdefiniowanie terminu "natywne w chmurze". Z pewnością uzyskasz osiem różnych odpowiedzi.
-
-W chmurze wszystkie informacje na temat zmieniania sposobu konstruowania krytycznych systemów firmy.
+Natywne rozwiązanie w chmurze to zmiana sposobu, w jaki myślisz o tworzeniu krytycznych systemów firmy.
 
 Systemy natywne w chmurze zostały zaprojektowane w celu przeprowadzenia szybkiej zmiany, dużej skali i odporności.
 
@@ -72,7 +70,7 @@ Jak można zaprojektować aplikację natywną w chmurze? Jak będzie wyglądać 
 
 Powszechnie zaakceptowaną metodologią konstruowania aplikacji opartych na chmurze jest [aplikacja 12-Factor](https://12factor.net/). Opisano w nim zestaw zasad i praktyk, które deweloperzy obserwują w celu konstruowania aplikacji zoptymalizowanych pod kątem nowoczesnych środowisk chmurowych. Szczególną uwagę można uzyskać w odróżnieniu od środowisk i deklaracyjnej automatyzacji.
 
-W przypadku aplikacji opartych na sieci Web wiele lekarzy traktuje ją jako solidną podstawę do tworzenia aplikacji natywnych w chmurze. Systemy utworzone na podstawie tych zasad mogą szybko wdrażać i skalować funkcje umożliwiające szybkie reagowanie na zmiany rynkowe.
+W przypadku aplikacji opartych na sieci Web wiele lekarzy uważa się jako solidną podstawę do tworzenia aplikacji natywnych dla chmury. Systemy utworzone na podstawie tych zasad mogą szybko wdrażać i skalować funkcje umożliwiające szybkie reagowanie na zmiany rynkowe.
 
 W poniższej tabeli przedstawiono metodologię 12-czynnikową:
 
@@ -91,7 +89,7 @@ W poniższej tabeli przedstawiono metodologię 12-czynnikową:
 | 11 | Rejestrowanie | Traktuj dzienniki generowane przez mikrousługi jako strumienie zdarzeń. Przetwarzaj je za pomocą agregatora zdarzeń i Propaguj dane do narzędzi do zarządzania danymi/dziennika, takich jak Azure Monitor lub Splunk i ostatecznie długoterminowe archiwizowanie. |
 | 12 | Procesy administracyjne | Uruchamiaj zadania administracyjne/Zarządzanie jako procesy jednorazowe. Zadania mogą obejmować czyszczenie danych i ściąganie analiz dla raportu. Narzędzia wykonujące te zadania powinny być wywoływane ze środowiska produkcyjnego, ale niezależnie od aplikacji. |
 
-W książce [poza aplikacją 12-składnikową](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), autor: Jan Hoffman szczegóły każdego z oryginalnych 12 czynników (napisane w 2011). Ponadto książka zawiera trzy dodatkowe czynniki odzwierciedlające współczesny współczesny projekt aplikacji w chmurze.
+W książce [poza aplikacją 12-składnikową](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), autor: Jan Hoffman szczegóły każdego z oryginalnych 12 czynników (napisane w 2011). Ponadto omawiamy trzy dodatkowe czynniki odzwierciedlające współczesny współczesny projekt aplikacji w chmurze.
 
 |    |  Nowy czynnik | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
@@ -155,7 +153,7 @@ Rysunek 1-4 kontrast podejścia aplikacji monolitycznej z podejściem mikrousłu
 
 Należy zauważyć, jak mikrousługi promują zasadę "jedna baza kodu, jedna aplikacja" z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
-> *Współczynnik \#1 określa "pojedynczą bazę kodu dla każdej mikrousługi, która jest przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach ".*
+> *Współczynnik \# 1 określa "pojedynczą bazę kodu dla każdej mikrousługi, która jest przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach ".*
 
 ### <a name="why-microservices"></a>Dlaczego mikrousługi?
 
@@ -197,7 +195,7 @@ Zwróć uwagę na to, jak każdy kontener utrzymuje własny zestaw zależności 
 
 Zwróć uwagę na to, jak dobrze model kontenera obejmuje zasadę "zależności" z [aplikacji 12-składnikowej](https://12factor.net/).
 
-> *Współczynnik \#2 określa, że każda mikrousług izoluje i pakuje własne zależności, wdrażając zmiany bez wpływu na cały system ".*
+> *Współczynnik \# 2 określa, że każda mikrousług izoluje i pakuje własne zależności, wdrażając zmiany bez wpływu na cały system ".*
 
 Kontenery obsługują obciążenia dla systemów Linux i Windows. Chmura platformy Azure jest otwarta jednocześnie. Jest to w ciekawej postaci system Linux, a nie system Windows Server, który stał się najpopularniejszym systemem operacyjnym na platformie Azure.
 
@@ -236,9 +234,9 @@ W poniższej tabeli opisano typowe zadania aranżacji.
 
 Należy zauważyć, jak usługi Orchestrator wdrażają zasady disposability i współbieżności z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
-> *Czynnik \#9 określa, że wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
+> *Czynnik \# 9 określa, że wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
 
-> *Fabryka \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie do skalowania pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
+> *Fabryka \# 8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie do skalowania pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
 
 Chociaż istnieje kilka koordynatorów kontenerów, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) stał się de facto standardem dla świata natywnego w chmurze. Jest to przenośna, rozszerzalna platforma typu "open source" do zarządzania obciążeniami kontenera.
 
@@ -258,7 +256,7 @@ Systemy natywne w chmurze zależą od wielu różnych zasobów pomocniczych, tak
 
 Usługi zapasowe promują zasadę "bezstanowe" z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
->*Współczynnik \#6* określa, że "Każda mikrousługa powinna być wykonywana we własnym procesie, odizolowana od innych uruchomionych usług. Externalize stan wymagany do usługi zapasowej, na przykład rozproszonej pamięci podręcznej lub magazynu danych ".
+>*Współczynnik \# 6* określa, że "Każda mikrousługa powinna być wykonywana we własnym procesie, odizolowana od innych uruchomionych usług. Externalize stan wymagany do usługi zapasowej, na przykład rozproszonej pamięci podręcznej lub magazynu danych ".
 
 Możesz obsługiwać własne usługi zapasowe, ale następnie ponosisz odpowiedzialność za Licencjonowanie, Inicjowanie obsługi administracyjnej i zarządzanie tymi zasobami.
 
@@ -268,9 +266,9 @@ Systemy natywne w chmurze preferują zarządzane usługi zapasowe od dostawców 
 
 Najlepszym rozwiązaniem jest traktowanie usługi zapasowej jako *dołączonego zasobu*, dynamicznie powiązanej z mikrousługą z informacjami (adresem URL i poświadczeniami) przechowywanymi w konfiguracji zewnętrznej. Wskazówki te są opisane w części [12-składnikowej aplikacji](https://12factor.net/)omówionej wcześniej w rozdziale.
 
->*Fabryka \#4* określa, że usługi zapasowe powinny być udostępniane za pośrednictwem adresu URL z adresami. W ten sposób można oddzielić zasób od aplikacji, co umożliwi jego zmianę.
+>*Fabryka \# 4* określa, że usługi zapasowe powinny być udostępniane za pośrednictwem adresu URL z adresami. W ten sposób można oddzielić zasób od aplikacji, co umożliwi jego zmianę.
 
->*Współczynnik \#3* określa, że "informacje o konfiguracji są przenoszone z mikrousługi i zewnętrznie za pomocą narzędzia do zarządzania konfiguracją poza kodem".
+>*Współczynnik \# 3* określa, że "informacje o konfiguracji są przenoszone z mikrousługi i zewnętrznie za pomocą narzędzia do zarządzania konfiguracją poza kodem".
 
 Za pomocą tego wzorca można dołączać i odłączać usługę zapasową bez wprowadzania zmian w kodzie. Mikrousługa można promować z poziomu funkcji pytań i odpowiedzi w środowisku przejściowym. Konfigurację mikrousług należy zaktualizować, aby wskazywała usługi zapasowe w trakcie przemieszczania i wstrzyknąć ustawienia do kontenera za pomocą zmiennej środowiskowej.
 
@@ -298,7 +296,7 @@ W artykule [co to jest infrastruktura jako kod](https://docs.microsoft.com/azure
 
 [Aplikacja 12-czynnikowa](https://12factor.net/), omówiona wcześniej, wywołuje oddzielne kroki podczas przekształcania wykonanego kodu w uruchomioną aplikację.
 
-> *Współczynnik \#5* określa, że "Każde wydanie musi wymusić ścisłe oddzielenie między kompilacją, wydaniem i etapami uruchomienia. Każdy z nich powinien być oznaczony unikatowym IDENTYFIKATORem i obsługiwać możliwość wycofywania ".
+> *Współczynnik \# 5* określa, że "Każde wydanie musi wymusić ścisłe oddzielenie między kompilacją, wydaniem i etapami uruchomienia. Każdy z nich powinien być oznaczony unikatowym IDENTYFIKATORem i obsługiwać możliwość wycofywania ".
 
 Nowoczesne systemy ciągłej integracji/ciągłego wdrażania pomagają spełnić tę zasadę. Zapewniają one oddzielne kroki wdrażania i zapewniają spójny i jakościowy kod, który jest łatwo dostępny dla użytkowników.
 
@@ -340,5 +338,5 @@ Możesz zdefiniować potok w kodzie w pliku YAML, obok pozostałej części kodu
 Usługa Azure Pipelines obsługuje większość dostawców git i może generować potoki wdrożenia dla aplikacji pisanych na platformach Linux, macOS lub Windows. Obejmuje to obsługę języków Java, .NET, JavaScript, Python, PHP, go, XCode i C++.
 
 >[!div class="step-by-step"]
->[Poprzedni](introduction.md)
->[Następny](candidate-apps.md)
+>[Poprzedni](introduction.md) 
+> [Dalej](candidate-apps.md)

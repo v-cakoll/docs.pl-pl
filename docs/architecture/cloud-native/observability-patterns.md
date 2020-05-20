@@ -1,17 +1,15 @@
 ---
 title: Wzorce wglądu
 description: Wzorce zauważalne dla aplikacji natywnych w chmurze
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448533"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613814"
 ---
 # <a name="observability-patterns"></a>Wzorce wglądu
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Podobnie jak wzorce zostały opracowane w celu pomocy w układzie kodu w aplikacjach, istnieją wzorce dla aplikacji operacyjnych w niezawodny sposób. Zakryto trzy przydatne wzorce w utrzymywaniu aplikacji: **Rejestrowanie**, **monitorowanie**i **alerty**.
 
@@ -21,20 +19,20 @@ Bez względu na to, jak dokładnie jesteśmy, aplikacje niemal zawsze zachowują
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Wyzwania podczas rejestrowania w aplikacjach natywnych w chmurze
 
-W tradycyjnych aplikacjach pliki dziennika są zwykle przechowywane na komputerze lokalnym. W rzeczywistości w systemach operacyjnych działających w systemie UNIX istnieje struktura folderów zdefiniowana do przechowywania dzienników, zwykle w obszarze `/var/log`.
+W tradycyjnych aplikacjach pliki dziennika są zwykle przechowywane na komputerze lokalnym. W rzeczywistości w systemach operacyjnych działających w systemie UNIX istnieje struktura folderów zdefiniowana do przechowywania wszystkich dzienników, zwykle w obszarze `/var/log` .
 
-![logowanie do pliku w aplikacji monolitycznej.](./media/single-monolith-logging.png)
-**rysunek 7-1**. Logowanie do pliku w aplikacji monolitycznej.
+![Logowanie do pliku w aplikacji monolitycznej. ](./media/single-monolith-logging.png)
+ **Rysunek 7-1**. Logowanie do pliku w aplikacji monolitycznej.
 
 Użyteczność rejestrowania w pliku prostym na pojedynczym komputerze jest znacznie ograniczona w środowisku chmury. Dzienniki wyprodukowania aplikacji mogą nie mieć dostępu do dysku lokalnego lub dysk lokalny może być wysoce przejściowy, ponieważ kontenery są rozwiązane na maszynach fizycznych. Nawet proste skalowanie aplikacji monolitycznych w wielu węzłach może być trudne do zlokalizowania odpowiedniego pliku dziennika opartego na plikach.
 
-![logowanie do plików w skalowanej aplikacji monolitycznej.](./media/multiple-node-monolith-logging.png)
-**rysunek 7-2**. Rejestrowanie w plikach w skalowanej aplikacji monolitycznej.
+![Rejestrowanie w plikach w skalowanej aplikacji monolitycznej. ](./media/multiple-node-monolith-logging.png)
+ **Rysunek 7-2**. Rejestrowanie w plikach w skalowanej aplikacji monolitycznej.
 
 Aplikacje natywne w chmurze opracowane przy użyciu architektury mikrousług również stanowią pewne wyzwania dotyczące rejestratorów opartych na plikach. Żądania użytkowników mogą teraz obejmować wiele usług, które są uruchamiane na różnych komputerach i mogą zawierać funkcje bezserwerowe bez dostępu do lokalnego systemu plików. Bardzo trudne jest skorelowanie dzienników od użytkownika lub sesji przez te wiele usług i maszyn.
 
-![rejestrowanie w plikach lokalnych w aplikacji mikrousług.](./media/local-log-file-per-service.png)
-**rysunek 7-3**. Rejestrowanie w plikach lokalnych w aplikacji mikrousług.
+![Rejestrowanie w plikach lokalnych w aplikacji mikrousług. ](./media/local-log-file-per-service.png)
+ **Rysunek 7-3**. Rejestrowanie w plikach lokalnych w aplikacji mikrousług.
 
 Na koniec liczba użytkowników w niektórych aplikacjach natywnych w chmurze jest wysoka. Załóżmy, że każdy użytkownik generuje setki wierszy komunikatów dziennika podczas logowania do aplikacji. W izolacji, którą można zarządzać, ale należy pomnożyć, że ponad 100 000 użytkowników i ilość dzienników są wystarczająco duże, że specjalne narzędzia są wymagane do obsługi efektywnego korzystania z dzienników.
 
@@ -57,8 +55,8 @@ Ze względu na wyzwania związane z korzystaniem z dzienników opartych na plika
 
 Podczas tworzenia rejestrowania obejmującego wiele usług warto również stosować standardowe rozwiązania. Na przykład generowanie [identyfikatora korelacji](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) na początku interakcji o długim czasie, a następnie rejestrowanie go w każdym komunikacie związanym z tą interakcją ułatwia wyszukiwanie wszystkich powiązanych komunikatów. Jeden z nich musi znaleźć tylko jeden komunikat i wyodrębnić identyfikator korelacji, aby znaleźć wszystkie powiązane komunikaty. Innym przykładem jest upewnienie się, że format dziennika jest taki sam dla każdej usługi, niezależnie od używanej przez niego biblioteki języka lub rejestrowania. Ta Standaryzacja ułatwia znacznie łatwiejsze odczytywanie dzienników. Rysunek 7-4 pokazuje, jak architektura mikrousług może korzystać z scentralizowanego rejestrowania w ramach przepływu pracy.
 
-Dzienniki ![z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.](./media/centralized-logging.png)
-**rysunek 7-4**. Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.
+![Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników. ](./media/centralized-logging.png)
+ **Rysunek 7-4**. Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>Wyzwania dotyczące wykrywania potencjalnych problemów z kondycją aplikacji i reagowania na nie
 
@@ -101,5 +99,5 @@ Zwykle jednak jeden błąd 500 jest zbyt mały, aby ustalić, czy wystąpił pro
 Jednym z najbardziej szkodliwych wzorców alertów jest uruchomienie zbyt wielu alertów w celu zbadania ich przez człowieka. Właściciele usług będą szybko stać się Desensitized na błędy, które zostały wcześniej zbadane i okazały się niegroźne. Następnie, gdy wystąpią prawdziwe błędy, zostaną utracone w hałasie setek fałszywych wartości dodatnich. Parable [Boy, kto Cried Wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf) jest często powiadamiany o elementach podrzędnych, aby ostrzec o tym bardzo niebezpieczeństwie. Ważne jest, aby upewnić się, że alerty, które są uruchamiane, są wskaźnikiem rzeczywistego problemu.
 
 >[!div class="step-by-step"]
->[Poprzednie](monitoring-health.md)
->[dalej](logging-with-elastic-stack.md)
+>[Poprzedni](monitoring-health.md) 
+> [Dalej](logging-with-elastic-stack.md)

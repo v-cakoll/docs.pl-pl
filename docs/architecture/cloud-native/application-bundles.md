@@ -1,17 +1,15 @@
 ---
 title: Pakiety aplikacji natywnych dla chmury
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Zbiory natywnych aplikacji w chmurze
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395492"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614347"
 ---
 # <a name="cloud-native-application-bundles"></a>Pakiety aplikacji natywnych dla chmury
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kluczowa Właściwość aplikacji natywnych w chmurze polega na tym, że wykorzystują możliwości chmury w celu przyspieszenia tworzenia oprogramowania. Ten projekt często oznacza, że pełna aplikacja korzysta z różnych rodzajów technologii. Aplikacje mogą być dostarczane w kontenerach platformy Docker, niektóre usługi mogą używać Azure Functions, podczas gdy inne części mogą być uruchamiane bezpośrednio na maszynach wirtualnych przyznanych na dużych serwerach metalowych przy użyciu sprzętowego przyspieszania procesora GPU. Żadne dwie aplikacje natywne w chmurze nie są takie same, dlatego trudno jest zapewnić jeden mechanizm do wysyłania.
 
@@ -80,7 +78,7 @@ Format CNAB jest również elastyczny, dzięki czemu można go używać z dowoln
 
 Istnieje wiele doskonałych narzędzi w przestrzeni DevOps w ciągu kilku dni i jeszcze bardziej fantastyczniee książki i dokumenty dotyczące sukcesu. Ulubiona Książka do rozpoczęcia podróży DevOps jest [projektem w Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), który następuje po przekształceniu fikcyjnej firmy od NoOps do DevOps. Jedną z rzeczy jest dla niektórych: DevOps nie jest już "całkiem" w przypadku wdrażania złożonych, natywnych aplikacji w chmurze. Jest to wymagane i powinny być planowane dla i zamierzone na początku każdego projektu.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
 - [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)

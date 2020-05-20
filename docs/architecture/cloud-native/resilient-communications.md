@@ -1,52 +1,56 @@
 ---
 title: Komunikacja odporna
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Komunikacja odporna
-ms.date: 06/30/2019
-ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315803"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613749"
 ---
 # <a name="resilient-communications"></a>Komunikacja odporna
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+W tej książce zamieszczono podejście architektoniczne oparte na mikrousługach. Chociaż taka architektura zapewnia ważne korzyści, wiąże się to z wieloma wyzwaniami:
 
-W tej książce evangelized się korzyści związane z przechodzeniem poza tradycyjne, monolityczne projektowanie aplikacji i wdrażanie architektury opartej na mikrousługach, w której zestaw rozproszonych, samodzielnych usług działa niezależnie i komunikuje się z każdym inne przy użyciu standardowych protokołów komunikacyjnych, takich jak HTTP i HTTPS. Chociaż taka architektura kupuje wiele ważnych korzyści, oferuje również wiele wyzwań. Rozważmy na przykład następujące kwestie:
+- *Komunikacja sieciowa poza procesem.* Każda mikrousługa komunikuje się za pośrednictwem protokołu sieciowego, który wprowadza Przeciążenie sieci, opóźnienia i błędy przejściowe.
 
-- *Komunikacja sieciowa poza procesem.* Każda usługa komunikuje się za pośrednictwem protokołu sieciowego, który wprowadza Przeciążenie sieci, opóźnienia i błędy przejściowe.
-- *Odnajdowanie usług.* W jaki sposób usługi są wykrywane i komunikują się ze sobą za pomocą każdej usługi uruchomionej w klastrze maszyn z własnym adresem IP i portem?
+- *Odnajdowanie usług.* Jak mikrousługi odnajdują i komunikują się ze sobą podczas uruchamiania w klastrze maszyn z własnymi adresami IP i portami?
+
 - *Odporności.* Jak zarządzać awariami krótko-i zachować stabilność systemu?
-- *Równoważenie obciążenia.* Jak ruch przychodzący jest dystrybuowany między wieloma wystąpieniami usługi?
-- *Bezpieczeństw.* Jak są problemy z bezpieczeństwem, takie jak szyfrowanie na poziomie transportu i zarządzanie certyfikatami?
-- *Monitorowanie rozproszone.* -Jak skorelować i przechwytywać możliwości śledzenia i monitorowania pojedynczego żądania w wielu usługach korzystających z usług?
 
-Chociaż te problemy mogą być rozwiązywane z różnymi bibliotekami i strukturami, implementacja ich wewnątrz bazy kodu może być kosztowna, złożona i czasochłonna. Ponadto można dokończyć rozwiązanie, w którym zagadnienia dotyczące infrastruktury są połączone z logiką biznesową.
+- *Równoważenie obciążenia.* Jak ruch przychodzący jest dystrybuowany między wieloma wystąpieniami mikrousług?
+
+- *Bezpieczeństw.* Jak są problemy z bezpieczeństwem, takie jak szyfrowanie na poziomie transportu i zarządzanie certyfikatami?
+
+- *Monitorowanie rozproszone.* -Jak skorelować i przechwytywać śledzenie i monitorowanie jednego żądania w wielu zużywanych mikrousługach?
+
+Można rozwiązać te problemy z różnymi bibliotekami i strukturami, ale implementacja może być kosztowna, złożona i czasochłonna. Istnieją również problemy z infrastrukturą połączone z logiką biznesową.
 
 ## <a name="service-mesh"></a>Siatka usług
 
-Lepszym rozwiązaniem jest uwzględnienie nowej i szybko rozwijanej technologii zatytułowanej *sieci*. [Siatka usług](https://www.nginx.com/blog/what-is-a-service-mesh/) to konfigurowalna warstwa infrastruktury z wbudowanymi funkcjami do obsługi komunikacji z usługą i wielu wyzwań wymienionych powyżej. Oddziely te problemy od kodu biznesowego i przenosi je do serwera proxy usługi, którego wystąpienie towarzyszy każdej z Twoich usług. Często określany jako [wzorzec przyczepki](https://docs.microsoft.com/azure/architecture/patterns/sidecar), serwer proxy siatki usługi jest wdrażany w osobnym procesie, aby zapewnić izolację i hermetyzację z kodu biznesowego. Jednak serwer proxy jest ściśle połączony z utworzoną usługą wraz z nią i udostępnia cykl życia. Na rysunku 6-9 przedstawiono ten scenariusz.
+Lepszym rozwiązaniem jest rozwój technologii uprawniony do działania *sieci*. [Siatka usług](https://www.nginx.com/blog/what-is-a-service-mesh/) to konfigurowalna warstwa infrastruktury z wbudowanymi funkcjami do obsługi komunikacji z usługą i innych wyzwań wymienionych powyżej. Oddziely te problemy, przenosząc je do serwera proxy usługi. Serwer proxy jest wdrażany w osobnym procesie (nazywanym [przyczepą](https://docs.microsoft.com/azure/architecture/patterns/sidecar)), aby zapewnić izolację z kodu biznesowego. Jednak Przyczepka jest połączona z usługą — została utworzona wraz z nią i udostępnia jej cykl życia. Na rysunku 6-7 przedstawiono ten scenariusz.
 
 ![Siatka usług z samochodem bocznym](./media/service-mesh-with-side-car.png)
 
-**Rysunek 6-9**. Siatka usług z samochodem bocznym
+**Rysunek 6-7**. Siatka usług z samochodem bocznym
 
 Na poprzedniej ilustracji należy zwrócić uwagę na to, jak serwer proxy przechwytuje i zarządza komunikacją między mikrousługami i klastrem.
 
-Siatka usługi jest logicznie dzielona na dwa różne składniki: [płaszczyzna danych](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) i [płaszczyzna kontroli](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Na rysunku 6-10 przedstawiono te składniki i ich obowiązki.
+Siatka usługi jest logicznie dzielona na dwa różne składniki: [płaszczyzna danych](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) i [płaszczyzna kontroli](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Na rysunku 6-8 przedstawiono te składniki i ich obowiązki.
 
 ![Sterowanie siatką usług i płaszczyzna danych](./media/istio-control-and-data-plane.png)
 
-**Rysunek 6-10.** Sterowanie siatką usług i płaszczyzna danych
+**Rysunek 6-8.** Sterowanie siatką usług i płaszczyzna danych
 
-Po skonfigurowaniu usługi siatka jest wysoce funkcjonalna. Może pobrać odpowiadającą pulę wystąpień z punktu końcowego odnajdowania usług. Następnie może wysłać żądanie do określonego wystąpienia, rejestrując czas oczekiwania i typ odpowiedzi wyniku. Siatka może wybrać wystąpienie najlepiej zwracające szybką odpowiedź w oparciu o wiele czynników, w tym ich zaobserwowany czas oczekiwania na ostatnie żądania.
+Po skonfigurowaniu usługi siatka jest wysoce funkcjonalna. Może pobrać odpowiadającą pulę wystąpień z punktu końcowego odnajdowania usług. Siatka może wysyłać żądanie do określonego wystąpienia, rejestrując czas oczekiwania i typ odpowiedzi wyniku. Siatka może wybrać wystąpienie najlepiej zwracające szybką odpowiedź w oparciu o wiele czynników, w tym ich zaobserwowany czas oczekiwania na ostatnie żądania.
 
-Jeśli wystąpienie nie odpowiada lub kończy się niepowodzeniem, Siatka może ponowić żądanie w innym wystąpieniu. Jeśli pula zwraca błędy, Siatka może wykluczyć ją z puli równoważenia obciążenia, aby ponowić próbę w późniejszym czasie po wprowadzeniu błędów. Jeśli upłynął limit czasu żądania, Siatka może zakończyć się niepowodzeniem, a następnie ponowić próbę żądania. Siatka przechwytuje zachowanie w formie metryk i rozproszonego śledzenia, które następnie można emitować do scentralizowanego systemu metryk.
+Jeśli wystąpienie nie odpowiada lub kończy się niepowodzeniem, Siatka ponowi próbę wykonania żądania w innym wystąpieniu. Jeśli zwróci błędy, Siatka spowoduje wykluczenie wystąpienia z puli równoważenia obciążenia i przestanie go po wprowadzeniu go. Jeśli upłynął limit czasu żądania, Siatka może zakończyć się niepowodzeniem, a następnie ponowić próbę żądania. Siatka przechwytuje i emituje metryki i rozproszone śledzenie do scentralizowanego systemu metryk.
 
 ## <a name="istio-and-envoy"></a>Istio i wysłannika
 
-Mimo że niektóre opcje sieci usługi są obecnie dostępne, [Istio](https://istio.io/docs/concepts/what-is-istio/) jest najpopularniejsze w czasie tego pisania. Wspólnym przedsiębiorstwem firmy IBM, Google i LYFT jest oferta typu "open source", którą można zintegrować z nową lub istniejącą aplikacją rozproszoną. Zapewnia spójne i kompletne rozwiązanie do zabezpieczania, łączenia i monitorowania mikrousług. Dostępne są następujące funkcje:
+Chociaż obecnie istnieje kilka opcji sieci usługi, [Istio](https://istio.io/docs/concepts/what-is-istio/) to najpopularniejsze w czasie tego pisania. Istio jest wspólnym przedsięwzięciem firmy IBM, Google i LYFT. Jest to oferta typu "open source", którą można zintegrować z nową lub istniejącą aplikacją rozproszoną. Technologia zapewnia spójne i kompletne rozwiązanie do zabezpieczania, łączenia i monitorowania mikrousług. Dostępne są następujące funkcje:
 
 - Zabezpieczanie komunikacji między usługami w klastrze z silnym uwierzytelnianiem i autoryzacją w oparciu o tożsamość.
 - Automatyczne równoważenie obciążenia dla ruchu HTTP, [gRPC](https://grpc.io/), WEBSOCKET i TCP.
@@ -54,7 +58,7 @@ Mimo że niektóre opcje sieci usługi są obecnie dostępne, [Istio](https://is
 - Podłączana warstwa zasad i interfejs API konfiguracji obsługujący kontrolę dostępu, limity szybkości i przydziały.
 - Automatyczne metryki, dzienniki i ślady dla całego ruchu w klastrze, w tym dane przychodzące i wychodzące klastra.
 
-Kluczowy składnik implementacji Istio to usługa serwera proxy uprawniona do [serwera proxy wysłannika](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy). Pochodzące z LYFT, a następnie do [natywnej podstawy obliczeniowej w chmurze](https://www.cncf.io/) (omówione w rozdziale 1), serwer proxy wysłannika działa obok każdej usługi i udostępnia platformę niezależny od Foundation dla następujących funkcji:
+Kluczowy składnik implementacji Istio to usługa serwera proxy uprawniona do [serwera proxy wysłannika](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy). Jest ona uruchamiana obok każdej usługi i udostępnia platformę niezależny od Foundation dla następujących funkcji:
 
 - Odnajdywanie usługi dynamicznej.
 - Równoważenie obciążenia.
@@ -73,6 +77,30 @@ Chmura Azure obejmuje usługę Istio i zapewnia bezpośrednią pomoc techniczną
 - [Instalowanie Istio w AKS](https://docs.microsoft.com/azure/aks/istio-install)
 - [Korzystanie z AKS i Istio](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
 
+### <a name="references"></a>Dokumentacja
+
+- [Usługa Polly](http://www.thepollyproject.org/)
+
+- [Wzorzec ponawiania](https://docs.microsoft.com/azure/architecture/patterns/retry)
+
+- [Wzorzec wyłącznika](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+
+- [Dokumentacja odporności na platformie Azure](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
+
+- [opóźnienie sieci](https://www.techopedia.com/definition/8553/network-latency)
+
+- [Nadmiarowość](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+
+- [replikacja geograficzna](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+
+- [Traffic Manager platformy Azure](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+
+- [Wskazówki dotyczące skalowania automatycznego](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+
+- [Istio](https://istio.io/docs/concepts/what-is-istio/)
+
+- [Wysłannika serwer proxy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)
+
 >[!div class="step-by-step"]
->[Poprzedni](infrastructure-resiliency-azure.md)
->[Następny](monitoring-health.md)
+>[Poprzedni](infrastructure-resiliency-azure.md) 
+> [Dalej](monitoring-health.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-ms.openlocfilehash: b8bbedb4c60a2df6070373f2b6a104fff094869a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cda30f3c73bf75c37ff79fc415e02382b053807e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448969"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614490"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace — Metoda
 Pobiera przestrzeń nazw, w której jest zdefiniowana ta metoda.  
@@ -34,9 +34,9 @@ HRESULT GetNamespace(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- określoną Wskaźnik, który jest ustawiony na zwracany Interfejs [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) .  
+ określoną Wskaźnik, który jest ustawiony na zwracany Interfejs [ISymUnmanagedNamespace](isymunmanagednamespace-interface.md) .  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -44,4 +44,4 @@ HRESULT GetNamespace(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

@@ -1,19 +1,18 @@
 ---
 title: Odporność rozwiązań natywnych dla chmury
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna odporność w chmurze
-ms.date: 06/30/2019
-ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: f3aa89e3ae21b13a31f65013b59636b3f931553c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781083"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613775"
 ---
 # <a name="cloud-native-resiliency"></a>Odporność rozwiązań natywnych dla chmury
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Odporność to zdolność systemu do reagowania na awarie i nadal pozostaje funkcjonalna. Nie ma on na uniknięcie błędu. Jednak przyjmujemy, że ten błąd jest nieunikniony w systemach opartych na chmurze i kompilowanie aplikacji w celu reagowania na nią. Celem odporności jest przywrócenie aplikacji do stanu w pełni funkcjonalnym po awarii.
+Odporność to zdolność systemu do reagowania na awarie i nadal pozostaje funkcjonalna. Nie dotyczy to unikania awarii, ale akceptowania błędów i konstruowania usług natywnych w chmurze w celu reagowania na nie. Chcesz szybko przywrócić stan w pełni funkcjonalny.
 
 W przeciwieństwie do tradycyjnych aplikacji monolitycznych, gdzie wszystko działa razem w pojedynczym procesie, systemy natywne w chmurze stosują architekturę rozproszoną, jak pokazano na rysunku 6-1:
 
@@ -21,25 +20,28 @@ W przeciwieństwie do tradycyjnych aplikacji monolitycznych, gdzie wszystko dzia
 
 **Rysunek 6-1.** Rozproszone środowisko natywne w chmurze
 
-Na poprzedniej ilustracji należy zwrócić uwagę na to, jak każdy klient, mikrousługa i [usługa tworzenia kopii zapasowych](https://12factor.net/backing-services) oparte na chmurze wykonuje jako oddzielny proces uruchomiony na różnych serwerach, a wszystkie komunikują się za pośrednictwem wywołań sieciowych.
+Na powyższej ilustracji każda mikrousługa i oparta na chmurze [Usługa do tworzenia kopii zapasowych](https://12factor.net/backing-services) jest wykonywana w osobnym procesie, między infrastrukturą serwera, komunikujących się za pośrednictwem wywołań sieciowych.
 
-Co może być niewłaściwe?
+W tym środowisku usługa musi być wrażliwa na wiele różnych wyzwań:
 
-- Nieoczekiwane [opóźnienie sieci](https://www.techopedia.com/definition/8553/network-latency).
-- Błędy [przejściowe](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (tymczasowe błędy łączności sieciowej).
-- Blokowanie przez długotrwałą operację synchroniczną.
+- Nieoczekiwane opóźnienie sieci — czas przesyłania żądania usługi do odbiornika i z powrotem.
+
+- [Awarie przejściowe](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) — krótkie Błędy łączności sieciowej.
+
+- Zatorem przez długotrwałą operację synchroniczną.
+
 - Proces hosta, który uległ awarii i jest ponownie uruchamiany lub przenoszony.
+
 - Przeciążona mikrousługa, która nie może odpowiadać przez krótki czas.
-- Operacja DevOps w locie, taka jak operacja aktualizacji lub skalowania.
-- Operacja programu Orchestrator, taka jak przeniesienie usługi z jednego węzła do drugiego.
-- Awarie sprzętowe sprzętu z asortymentu.
 
-W przypadku wdrażania usług rozproszonych w infrastrukturze opartej na chmurze czynniki z poprzedniej listy stają się bardzo prawdziwe i należy się z nimi przydzielić i rozwijać, aby z nich pracować.
+- Operacja programu Orchestrator w locie, taka jak uaktualnienie stopniowe lub przeniesienie usługi z jednego węzła do drugiego.
 
-W systemie rozproszonym w niewielkim stopniu awaria nie będzie mniejsza, ale w przypadku skalowania w górę i w poziomie można oczekiwać więcej z tych problemów do punktu, w którym częściowa awaria stanie się normalną operacją.
+- Awarie sprzętu.
 
-W związku z tym aplikacja i infrastruktura muszą być odporne na błędy. W poniższych sekcjach opisano techniki obronne, które można dodać do aplikacji, oraz wbudowane funkcje w chmurze, których można użyć, aby pomóc w wykorzystaniu punktorów przez użytkownika.
+Platformy chmury mogą wykrywać i ograniczać wiele problemów z infrastrukturą. Może on zostać ponownie uruchomiony, przeskalowany w poziomie i nawet rozdystrybuowany do innego węzła.  Aby jednak w pełni korzystać z tej wbudowanej ochrony, należy zaprojektować usługi w celu reagowania na nie i rozwoju w tym środowisku dynamicznym.
+
+W poniższych sekcjach opisano techniki obronne, które mogą wykorzystać usługa i zarządzane zasoby w chmurze w celu zminimalizowania przestojów i przerw w działaniu.
 
 >[!div class="step-by-step"]
->[Poprzedni](elastic-search-in-azure.md)
->[Następny](application-resiliency-patterns.md)
+>[Poprzedni](elastic-search-in-azure.md) 
+> [Dalej](application-resiliency-patterns.md)

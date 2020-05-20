@@ -2,17 +2,15 @@
 title: gRPC
 description: Dowiedz się więcej na temat gRPC, jego roli w aplikacjach natywnych w chmurze i różnice między komunikacją HTTP RESTful.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895565"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614048"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Do tej pory ta książka koncentruje się na komunikacji [opartej na protokole REST](https://docs.microsoft.com/azure/architecture/best-practices/api-design) . Wiemy, że reszta jest elastycznym stylem architektonicznym, który definiuje operacje oparte na CRUDniu w odniesieniu do zasobów jednostki. Klienci współpracują z zasobami w protokole HTTP z modelem komunikacji żądania/odpowiedzi. Podczas gdy usługa REST jest szeroko zaimplementowana, nowsza Technologia komunikacji, gRPC, zyskała ogromne możliwości w całej społeczności natywnej w chmurze.
 
@@ -41,7 +39,7 @@ gRPC jest lekki i wysoce wydajny. Może to być nawet 8x szybciej niż Serializa
 
 gRPC obejmuje technologię "open source" o nazwie [bufory protokołu](https://developers.google.com/protocol-buffers/docs/overview). Zapewniają wysoce wydajny i neutralny dla platformy format serializacji służący do serializowania komunikatów strukturalnych wysyłanych przez usługi. Deweloperzy mogą definiować kontrakt usługi dla każdej mikrousługi przy użyciu języka definicji (IDL) dla wielu platform. Umowa zaimplementowana jako `.proto` plik tekstowy, opisuje metody, dane wejściowe i wyjściowe dla każdej usługi. Ten sam plik kontraktu może służyć do gRPC klientów i usług opartych na różnych platformach deweloperskich.
 
-Przy użyciu pliku proto, kompilatora protobuf, `protoc`program generuje kod klienta i usługi dla platformy docelowej. Kod zawiera następujące składniki:
+Przy użyciu pliku proto, kompilatora protobuf, `protoc` program generuje kod klienta i usługi dla platformy docelowej. Kod zawiera następujące składniki:
 
 - Obiekty o jednoznacznie określonym typie, współużytkowane przez klienta i usługę, które reprezentują operacje usługi i elementy danych dla wiadomości.
 - Klasa bazowa o jednoznacznie określonym typie z wymaganą siecią wodociągową, którą zdalna usługa gRPC może dziedziczyć i zwiększać.
@@ -114,5 +112,5 @@ Staramy się oddzielić mikrousługi z wzorcem komunikacji asynchronicznej, poni
 Patrząc na przyszłość, gRPC będzie nadal uzyskać trakcję dla systemów natywnych w chmurze. Zalety wydajności i łatwość programowania są atrakcyjne. Jednakże reszta będzie prawdopodobnie przez długi czas. Program Excel IT dla publicznie uwidocznionych interfejsów API i ze względu na zgodność z poprzednimi wersjami.
 
 >[!div class="step-by-step"]
->[Poprzedni](service-to-service-communication.md)
->[Następny](service-mesh-communication-infrastructure.md)
+>[Poprzedni](service-to-service-communication.md) 
+> [Dalej](service-mesh-communication-infrastructure.md)

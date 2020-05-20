@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 048d784a55fd7c29c837a54fbd5adcdcf62a7a2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615160"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken — Metoda
 Zwraca token metadanych dla tej metody.  
@@ -34,7 +34,7 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Parametry  
  `pToken`  
- określoną Wskaźnik do `mdMethodDef`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania metadanych.  
+ określoną Wskaźnik do obiektu, `mdMethodDef` który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania metadanych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -44,4 +44,4 @@ HRESULT GetToken(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

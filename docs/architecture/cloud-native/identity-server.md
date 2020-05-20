@@ -1,17 +1,15 @@
 ---
 title: IdentityServer dla natywnych aplikacji w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394877"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614035"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer dla aplikacji natywnych w chmurze
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer to serwer uwierzytelniania "open source", który implementuje standardy OpenID Connect Connect (OIDC) i OAuth 2,0 dla ASP.NET Core. Zaprojektowano w celu zapewnienia typowego sposobu uwierzytelniania żądań do wszystkich aplikacji, niezależnie od tego, czy są to punkty końcowe sieci Web, natywne, mobilne czy interfejsy API. IdentityServer może służyć do implementowania logowania jednokrotnego (SSO) dla wielu aplikacji i typów aplikacji. Może służyć do uwierzytelniania rzeczywistych użytkowników za pośrednictwem formularzy logowania i podobnych interfejsów użytkownika, a także uwierzytelniania opartego na usługach, który zazwyczaj obejmuje wystawianie, weryfikację i odnawianie tokenów bez żadnego interfejsu użytkownika. IdentityServer została zaprojektowana jako dostosowywalne rozwiązanie. Każde wystąpienie jest zwykle dostosowane do konkretnej organizacji i/lub zestawu potrzeb aplikacji.
 
@@ -46,7 +44,7 @@ IdentityServer zapewnia oprogramowanie pośredniczące działające w ramach apl
 
 Usługi identityserver4 to "open source" i bezpłatna do użycia. Możesz dodać go do aplikacji przy użyciu swoich pakietów NuGet. Pakiet główny to [usługi identityserver4](https://www.nuget.org/packages/IdentityServer4/) , który został pobrany ponad 4 000 000 razy. Pakiet podstawowy nie zawiera żadnego kodu interfejsu użytkownika i obsługuje tylko w konfiguracji pamięci. Aby używać jej z bazą danych, należy również użyć dostawcy danych, takiego jak [usługi identityserver4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) , który używa Entity Framework Core do przechowywania danych konfiguracyjnych i operacyjnych dla IdentityServer. W przypadku interfejsu użytkownika można skopiować pliki z [repozytorium szybkiego interfejsu użytkownika](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) do aplikacji ASP.NET Core MVC, aby dodać obsługę logowania i wylogować się przy użyciu oprogramowania pośredniczącego IdentityServer.
 
-## <a name="configuration"></a>Konfigurowanie
+## <a name="configuration"></a>Konfiguracja
 
 Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w klasie aplikacji ASP.NET Core `Startup` w `ConfigureServices` metodzie. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Na rysunku 8-2 przedstawiono przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika szybkiego startu usługi identityserver4:
 
@@ -99,7 +97,7 @@ IdentityServer również udostępnia publiczną witrynę demonstracyjną, która
 
 Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwera i rozbudowanych aplikacji jednostronicowych klienta (aplikacji jednostronicowych) na frontonie. IdentityServer dostarcza [klient JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) za pośrednictwem npm, który można dodać do aplikacji jednostronicowych, aby umożliwić im używanie IdentityServer do logowania, wylogowywania i uwierzytelniania opartych na tokenach interfejsów API sieci Web.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - [Dokumentacja IdentityServer](http://docs.identityserver.io/en/latest/)
 - [Typy aplikacji](https://docs.microsoft.com/azure/active-directory/develop/app-types)

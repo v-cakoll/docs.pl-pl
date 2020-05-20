@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427995"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614815"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter — Metoda
 Definiuje pojedynczy parametr w bieżącej metodzie. Typ parametru jest pobierany z pozycji parametru (Sequence) w podpisie metody.  
@@ -62,7 +62,7 @@ HRESULT DefineParameter(
  `addr3`  
  podczas Trzeci adres dla specyfikacji parametru.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -70,4 +70,4 @@ HRESULT DefineParameter(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

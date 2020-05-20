@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428053"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615231"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument — Metoda
 Definiuje dokument źródłowy. Identyfikatory GUID są udostępniane dla znanych języków, dostawców i typów dokumentów.  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parametry  
  `url`  
- podczas Wskaźnik do `WCHAR`, który definiuje adres URL (Uniform Resource Locator) identyfikujący dokument.  
+ podczas Wskaźnik do obiektu `WCHAR` , który definiuje adres URL (Uniform Resource Locator) identyfikujący dokument.  
   
  `language`  
  podczas Wskaźnik do identyfikatora GUID, który definiuje język dokumentu.  
@@ -50,7 +50,7 @@ HRESULT DefineDocument(
  podczas Wskaźnik do identyfikatora GUID, który definiuje typ dokumentu.  
   
  `pRetVal`  
- określoną Wskaźnik do zwracanego interfejsu [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) .  
+ określoną Wskaźnik do zwracanego interfejsu [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -60,4 +60,4 @@ HRESULT DefineDocument(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

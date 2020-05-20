@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448864"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614425"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd — Metoda
 Pobiera położenie początku i końca dokumentu dla źródła tej metody. Pierwsza pozycja tablicy jest początkowa, a druga pozycja tablicy to koniec.  
@@ -46,7 +46,7 @@ HRESULT GetSourceStartEnd(
  podczas Kolumny początkowe i końcowe w odpowiednich dokumentach źródłowych.  
   
  `pRetVal`  
- [out] `true`, jeśli zdefiniowano pozycje; w przeciwnym razie `false`.  
+ [out] `true` Jeśli pozycje zostały zdefiniowane; w przeciwnym razie `false` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -56,4 +56,4 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

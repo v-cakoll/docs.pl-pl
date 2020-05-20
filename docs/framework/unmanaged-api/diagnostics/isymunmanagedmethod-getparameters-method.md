@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448956"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614464"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters — Metoda
 Pobiera parametry dla tej metody. Parametry są zwracane w kolejności, w jakiej są zdefiniowane w podpisie metody.  
@@ -37,10 +37,10 @@ HRESULT GetParameters(
   
 ## <a name="parameters"></a>Parametry  
  `cParams`  
- podczas Rozmiar tablicy `params`.  
+ podczas Rozmiar `params` tablicy.  
   
  `pcParams`  
- podczas Wskaźnik do `ULONG32`, który odbiera rozmiar buforu, który jest wymagany do zawierania parametrów.  
+ podczas Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu, który jest wymagany do zawierania parametrów.  
   
  `params`  
  określoną Wskaźnik do buforu, który odbiera parametry.  
@@ -53,4 +53,4 @@ HRESULT GetParameters(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

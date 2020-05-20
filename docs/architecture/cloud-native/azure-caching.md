@@ -1,18 +1,16 @@
 ---
-title: Buforowanie w aplikacji natywnej w chmurze
+title: Buforowanie w aplikacji natywnej dla chmury
 description: Dowiedz się więcej na temat strategii buforowania w aplikacji natywnej w chmurze.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794969"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614295"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Buforowanie w aplikacji natywnej w chmurze
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Zalety buforowania są zrozumiałe. Technika działa przez tymczasowe kopiowanie często używanych danych z magazynu danych zaplecza do *szybkiego magazynu* , który znajduje się bliżej aplikacji. Buforowanie jest często implementowane, gdzie...
 
@@ -32,15 +30,15 @@ Należy również rozważyć buforowanie, aby uniknąć powtarzających się obl
 
 ## <a name="caching-architecture"></a>Architektura buforowania
 
-Natywne aplikacje w chmurze zwykle implementują rozproszoną architekturę pamięci podręcznej. Pamięć podręczna jest hostowana jako usługa do [tworzenia kopii zapasowych](./definition.md#backing-services)oparta na chmurze, oddzielona od mikrousług. Na rysunku 5-20 przedstawiono architekturę.
+Natywne aplikacje w chmurze zwykle implementują rozproszoną architekturę pamięci podręcznej. Pamięć podręczna jest hostowana jako usługa do [tworzenia kopii zapasowych](./definition.md#backing-services)oparta na chmurze, oddzielona od mikrousług. Na rysunku 5-15 przedstawiono architekturę.
 
 ![Buforowanie w natywnej aplikacji w chmurze](media/caching-in-a-cloud-native-app.png)
 
-**Rysunek 5-19**: buforowanie w natywnej aplikacji w chmurze
+**Rysunek 5-15**: buforowanie w natywnej aplikacji w chmurze
 
 Na poprzedniej ilustracji należy zauważyć, jak pamięć podręczna jest niezależna i współdzielona przez mikrousługi. W tym scenariuszu pamięć podręczna jest wywoływana przez [bramę interfejsu API](./front-end-communication.md). Jak opisano w rozdziale 4, Brama służy jako fronton dla wszystkich żądań przychodzących. Rozproszonej pamięci podręcznej zwiększa czas odpowiedzi systemu przez zwrócenie danych w pamięci podręcznej, jeśli to możliwe. Ponadto oddzielenie pamięci podręcznej od usług pozwala na niezależne skalowanie w górę lub w poziomie w celu spełnienia zwiększonych wymagań w zakresie ruchu.
 
-Rysunek przedstawia wspólny wzorzec buforowania znany jako wzorzec z odkładaniem do [pamięci podręcznej](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). W przypadku żądania przychodzącego należy najpierw wykonać zapytanie do pamięci podręcznej (krok \#1) w celu uzyskania odpowiedzi. Jeśli ta wartość zostanie znaleziona, dane są zwracane natychmiast. Jeśli dane nie znajdują się w pamięci podręcznej (nazywanej [chybień pamięci podręcznej](https://www.techopedia.com/definition/6308/cache-miss)), są pobierane z lokalnej bazy danych w usłudze podrzędnej (krok \#2). Następnie jest on zapisywana w pamięci podręcznej w celu przyszłego żądania (krok \#3) i zwracany do obiektu wywołującego. Należy zwrócić uwagę na okresowe wykluczanie danych w pamięci podręcznej tak, aby system pozostały czasowo i spójny.
+Powyższy rysunek przedstawia typowy wzorzec buforowania znany jako wzorzec z odkładaniem do [pamięci podręcznej](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). W przypadku żądania przychodzącego należy najpierw wykonać zapytanie do pamięci podręcznej (krok \# 1) w celu uzyskania odpowiedzi. Jeśli ta wartość zostanie znaleziona, dane są zwracane natychmiast. Jeśli dane nie znajdują się w pamięci podręcznej (nazywanej [chybień pamięci podręcznej](https://www.techopedia.com/definition/6308/cache-miss)), są pobierane z lokalnej bazy danych w usłudze podrzędnej (krok \# 2). Następnie jest on zapisywana w pamięci podręcznej w celu przyszłego żądania (krok \# 3) i zwracany do obiektu wywołującego. Należy zwrócić uwagę na okresowe wykluczanie danych w pamięci podręcznej tak, aby system pozostały czasowo i spójny.
 
 W miarę zwiększania współużytkowanej pamięci podręcznej może okazać się korzystne, aby mieć możliwość partycjonowania danych w wielu węzłach. Takie działanie może pomóc zminimalizować rywalizację i zwiększyć skalowalność. Wiele usług buforowania obsługuje możliwość dynamicznego dodawania i usuwania węzłów oraz ponownego równoważenia danych w różnych partycjach. Takie podejście zwykle obejmuje klastrowanie. Klastrowanie udostępnia kolekcję węzłów federacyjnych jako bezproblemową, pojedynczą pamięć podręczną. Wewnętrznie dane są jednak dystrybuowane między węzłami w ramach wstępnie zdefiniowanej strategii dystrybucji, która równoważy obciążenie.
 
@@ -62,5 +60,5 @@ W przypadku zaawansowanych scenariuszy kopia danych w pamięci podręcznej może
 Azure Redis Cache jest dostępny w wielu wstępnie zdefiniowanych konfiguracjach i warstwach cenowych.  [Warstwa Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) oferuje wiele funkcji na poziomie przedsiębiorstwa, takich jak klastrowanie, trwałość danych, replikacja geograficzna i izolacja sieci wirtualnej.
 
 >[!div class="step-by-step"]
->[Poprzedni](relational-vs-nosql-data.md)
->[Następny](elastic-search-in-azure.md)
+>[Poprzedni](relational-vs-nosql-data.md) 
+> [Dalej](elastic-search-in-azure.md)

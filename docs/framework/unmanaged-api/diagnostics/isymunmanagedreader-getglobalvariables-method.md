@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448320"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615023"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables — Metoda
 Zwraca wszystkie zmienne globalne.  
@@ -37,10 +37,10 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>Parametry  
  `cVars`  
- podczas Długość buforu wskazywanego przez `pcVars`.  
+ podczas Długość buforu wskazywanego przez `pcVars` .  
   
  `pcVars`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu, który musi zawierać zmienne.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu, który musi zawierać zmienne.  
   
  `pVars`  
  określoną Bufor zawierający zmienne.  
@@ -53,4 +53,4 @@ HRESULT GetGlobalVariables(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

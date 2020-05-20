@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 796b2154-b53c-4d07-9e67-80fd6064725a
 topic_type:
 - apiref
-ms.openlocfilehash: 220788a38cd0ff90fed3b681a161c579206cf805
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f612e38398f8c1320ba87722498400d70ec8bff0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449019"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614542"
 ---
 # <a name="isymunmanagedencupdateinitializeforenc-method"></a>ISymUnmanagedENCUpdate::InitializeForEnc — Metoda
-Umożliwia obliczenia granic metod przed pierwszym wywołaniem metody [ISymUnmanagedENCUpdate:: UpdateSymbolStore2 —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) .  
+Umożliwia obliczenia granic metod przed pierwszym wywołaniem metody [ISymUnmanagedENCUpdate:: UpdateSymbolStore2 —](isymunmanagedencupdate-updatesymbolstore2-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,4 +39,4 @@ HRESULT InitializeForEnc();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedENCUpdate, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate, interfejs](isymunmanagedencupdate-interface.md)

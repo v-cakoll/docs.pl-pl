@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: 889fd4ec3332cbe80a035e13a5145421dc0ed5a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448897"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614438"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount — Metoda
 Pobiera liczbę punktów sekwencji w tej metodzie.  
@@ -34,7 +34,7 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do zawierania punktów sekwencji.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu wymaganego do zawierania punktów sekwencji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -44,4 +44,4 @@ HRESULT GetSequencePointCount(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod — Interfejs](isymunmanagedmethod-interface.md)

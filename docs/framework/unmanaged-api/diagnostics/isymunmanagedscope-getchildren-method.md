@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446374"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614867"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren — Metoda
 Pobiera elementy podrzędne tego zakresu.  
@@ -37,10 +37,10 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parametry  
  `cChildren`  
- podczas `ULONG32`, który wskazuje rozmiar tablicy `children`.  
+ podczas `ULONG32`Wskazuje rozmiar `children` tablicy.  
   
  `pcChildren`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do zawierania elementów podrzędnych.  
+ określoną Wskaźnik do obiektu `ULONG32` , który odbiera rozmiar buforu wymaganego do zawierania elementów podrzędnych.  
   
  `children`  
  określoną Zwracana tablica elementów podrzędnych.  
@@ -53,5 +53,5 @@ HRESULT GetChildren(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedScope, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetParent, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [ISymUnmanagedScope — Interfejs](isymunmanagedscope-interface.md)
+- [GetParent, metoda](isymunmanagedscope-getparent-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428033"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614841"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField — Metoda
 Definiuje pojedynczą zmienną, która nie znajduje się w metodzie. Ta metoda jest używana w przypadku niektórych pól klas, pól bitowych i tak dalej.  
@@ -51,7 +51,7 @@ HRESULT DefineField(
  podczas Atrybuty pola.  
   
  `cSig`  
- podczas `ULONG32`, który jest rozmiarem (w znakach) bufora wymaganego do zawierania podpisu pola.  
+ podczas `ULONG32`Jest to rozmiar (w znakach) bufora, który musi zawierać sygnaturę pola.  
   
  `signature`  
  podczas Tablica sygnatur pól.  
@@ -68,7 +68,7 @@ HRESULT DefineField(
  `addr3`  
  podczas Trzeci adres dla specyfikacji pola.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -76,4 +76,4 @@ HRESULT DefineField(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

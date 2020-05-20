@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 71b9d59621efb547713cb4a6c9df7a7142f4a677
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378230"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615192"
 ---
-# <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters — Metoda
+# <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2:: GetRegisters — Metoda
+
 Pobiera wartość każdego rejestru (dla platformy, w której kod jest aktualnie wykonywany), która jest określona przez daną maskę bitową.  
   
 ## <a name="syntax"></a>Składnia  
@@ -36,7 +37,8 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry
+
  `maskCount`  
  podczas Rozmiar tablicy w bajtach `mask` .  
   
@@ -49,16 +51,18 @@ HRESULT GetRegisters (
  `regBuffer`  
  określoną Tablica `CORDB_REGISTER` obiektów, z których każdy otrzymuje wartość rejestru.  
   
-## <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi
+
  `GetRegisters`Metoda zwraca tablicę wartości z rejestrów, które są określone przez maskę. Tablica nie zawiera wartości rejestrów, których bit maski nie jest ustawiony. W tym celu rozmiar `regBuffer` tablicy musi być równy liczbie 1 w masce. Jeśli wartość `regCount` jest za mała dla liczby rejestrów wskazywanych przez maskę, wartości wyższych numerowanych rejestrów zostaną obcięte z zestawu. Jeśli `regCount` jest zbyt duży, nieużywane `regBuffer` elementy będą niemodyfikowane.  
   
  Jeśli niedostępna Rejestracja jest wskazywana przez maskę, zostanie zwrócona wartość nieokreślona dla tego rejestru.  
   
- Ta `ICorDebugRegisterSet2::GetRegisters` Metoda jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestry ogólnego przeznaczenia i 128 rejestry zmiennoprzecinkowe, więc potrzebujesz więcej niż 64-bitów w masce bitowej.  
+ Ta `ICorDebugRegisterSet2::GetRegisters` Metoda jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestry ogólnego przeznaczenia i 128 rejestry zmiennoprzecinkowe, więc potrzebujesz więcej niż 64 bitów w masce bitowej.  
   
- Jeśli nie ma więcej niż 64 rejestrów, tak jak w przypadku platform, takich jak x86, `GetRegisters` Metoda faktycznie po prostu tłumaczy bajty w `mask` tablicy bajtów na `ULONG64` a następnie wywołuje metodę [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , która przyjmuje `ULONG64` maskę.  
+ Jeśli nie masz więcej niż 64 rejestrów, tak jak w przypadku platform, takich jak x86, `GetRegisters` Metoda po prostu tłumaczy bajty w `mask` tablicy bajtów na `ULONG64` a następnie wywołuje metodę [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , która przyjmuje `ULONG64` maskę.  
   
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
+
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug. idl, CorDebug. h  
@@ -67,7 +71,7 @@ HRESULT GetRegisters (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorDebugRegisterSet2 — Interfejs](icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet — Interfejs](icordebugregisterset-interface.md)

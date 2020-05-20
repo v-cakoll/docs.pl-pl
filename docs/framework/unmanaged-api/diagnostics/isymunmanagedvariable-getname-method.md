@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-ms.openlocfilehash: 77dec4332aa65f6125685db607169b3398bcab98
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b48d131fa99b65d38856d2b635bf59145db9157e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446054"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615244"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName — Metoda
 Pobiera nazwę tej zmiennej.  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- podczas Długość buforu, na który wskazuje parametr `pcchName`.  
+ podczas Długość buforu, `pcchName` do którego wskazuje parametr.  
   
  `pcchName`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora, który musi zawierać nazwę, łącznie z zakończeniem o wartości null.  
+ określoną Wskaźnik do obiektu, `ULONG32` który odbiera rozmiar (w znakach) bufora, który musi zawierać nazwę, łącznie z zakończeniem o wartości null.  
   
  `szName`  
  określoną Bufor przechowujący nazwę.  
@@ -53,4 +53,4 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable, interfejs](isymunmanagedvariable-interface.md)

@@ -1,17 +1,16 @@
 ---
 title: Flagi funkcji
 description: Implementuj flagi funkcji w aplikacjach natywnych w chmurze korzystających z konfiguracji aplikacji platformy Azure
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398310"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614074"
 ---
 # <a name="feature-flags"></a>Flagi funkcji
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W rozdziale 1 zagwarantujemy, że chmura w chmurze ma wiele informacji o szybkości i elastyczności. Użytkownicy oczekują szybkiego reagowania, innowacyjnych funkcji i zerowego przestoju. `Feature flags`to nowoczesny technik wdrażania, który pomaga zwiększyć elastyczność dla aplikacji natywnych w chmurze. Umożliwiają one wdrażanie nowych funkcji w środowisku produkcyjnym, ale ogranicza ich dostępność. Dzięki szybkiemu przejściu przełącznika można aktywować nową funkcję dla określonych użytkowników bez konieczności ponownego uruchamiania aplikacji ani wdrażania nowego kodu. Oddzielają one wydanie nowych funkcji od ich wdrożenia kodu.
 

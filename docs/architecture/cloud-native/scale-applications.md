@@ -1,17 +1,15 @@
 ---
 title: Skalowanie aplikacji natywnych w chmurze
 description: Skalowanie aplikacji natywnych w chmurze za pomocą usługi Azure Kubernetes i Azure Functions, aby zaspokoić zapotrzebowanie użytkowników w ekonomiczny sposób.
-ms.date: 04/13/2020
-ms.openlocfilehash: 91d925778e9dfcf8a1ec2486fe8961037409f207
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: d425976eed248461a9c2e4fe03596f9f6dfd2eba
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199946"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613736"
 ---
 # <a name="scaling-cloud-native-applications"></a>Skalowanie aplikacji natywnych w chmurze
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Jedną z najczęściej zachwalana korzyści związanych z przechodzeniem do środowiska hostingu w chmurze jest skalowalność. Skalowalność lub możliwość akceptowania przez aplikację dodatkowego obciążenia użytkownika bez kompromisu wydajności dla każdego użytkownika. Jest to najczęściej realizowane przez rozdzielenie aplikacji na małe fragmenty, które mogą być dostarczone przez zasoby, których wymagają. Dostawcy chmury umożliwiają ogromne skalowanie w dowolnym czasie i dowolnym miejscu na świecie.
 
@@ -22,5 +20,5 @@ Jedną z najczęściej zachwalana korzyści związanych z przechodzeniem do śro
 - Przetwarzanie bezserwerowe
 
 >[!div class="step-by-step"]
->[Poprzedni](centralized-configuration.md)
->[Następny](leverage-containers-orchestrators.md)
+>[Poprzedni](centralized-configuration.md) 
+> [Dalej](leverage-containers-orchestrators.md)

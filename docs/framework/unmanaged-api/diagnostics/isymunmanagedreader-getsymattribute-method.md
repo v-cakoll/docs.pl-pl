@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b7e2814e56765037b69c6ef7ca0ba610dd7d3c95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440139"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614932"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute — Metoda
 Pobiera atrybut niestandardowy na podstawie jego nazwy. W przeciwieństwie do atrybutów niestandardowych metadanych, te atrybuty niestandardowe są przechowywane w magazynie symboli.  
@@ -45,7 +45,7 @@ HRESULT GetSymAttribute (
  podczas Wskaźnik do zmiennej, która wskazuje atrybut do pobrania.  
   
  `cBuffer`  
- podczas Rozmiar tablicy `buffer`.  
+ podczas Rozmiar `buffer` tablicy.  
   
  `pcBuffer`  
  określoną Wskaźnik do zmiennej, która otrzymuje długość danych atrybutów.  
@@ -61,4 +61,4 @@ HRESULT GetSymAttribute (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 description: Wprowadzenie do aplikacji referencyjnej dla mikrousług eShopOnContainers Cloud Native dla ASP.NET Core i platformy Azure.
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395397"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613970"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Wprowadzenie do aplikacji referencyjnej eShopOnContainers
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Firma Microsoft, w partnerstwie z wiodącymi ekspertami społecznościowymi, produkowała w pełni funkcjonalne, natywne aplikacje mikrousług, eShopOnContainers. Ta aplikacja jest zbudowana do pokazania przy użyciu platformy .NET Core i platformy Docker oraz opcjonalnie platform Azure, Kubernetes i Visual Studio, aby utworzyć sklep online.
 
@@ -32,8 +30,8 @@ Zacznijmy od przejrzenia funkcji i wymagań aplikacji. Aplikacja eShopOnContaine
 - Edytuj lub Usuń elementy z koszyka
 - Checkout
 - Rejestrowanie konta
-- Zaloguj się
-- Wyloguj
+- Logowanie
+- Wyloguj się
 - Przejrzyj zamówienia
 
 Aplikacja ma również następujące wymagania niefunkcjonalne:

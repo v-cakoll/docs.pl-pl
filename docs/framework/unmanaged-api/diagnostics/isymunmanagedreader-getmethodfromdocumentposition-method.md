@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8015056b110fe8a5b5122b1bc81143980b780047
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426736"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614984"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition — Metoda
 Zwraca metodę, która zawiera punkt przerwania w podanym miejscu w dokumencie.  
@@ -46,7 +46,7 @@ HRESULT GetMethodFromDocumentPosition (
  podczas Kolumna określonego dokumentu.  
   
  `pRetVal`  
- określoną Wskaźnik do adresu obiektu [interfejsu ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) , który reprezentuje metodę zawierającą punkt przerwania.  
+ określoną Wskaźnik do adresu obiektu [interfejsu ISymUnmanagedMethod](isymunmanagedmethod-interface.md) , który reprezentuje metodę zawierającą punkt przerwania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
@@ -56,4 +56,4 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

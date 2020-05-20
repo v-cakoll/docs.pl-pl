@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449035"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614555"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables — Metoda
 Pobiera zmienne lokalne.  
@@ -41,15 +41,15 @@ HRESULT GetLocalVariables(
  podczas Token metadanych metody.  
   
  `cLocals`  
- podczas `ULONG`, który wskazuje rozmiar parametru `rgLocals`.  
+ podczas `ULONG`Wskazuje rozmiar `rgLocals` parametru.  
   
  `rgLocals`  
  określoną Zwrócona tablica wystąpień [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) .  
   
  `pceltFetched`  
- określoną Wskaźnik do `ULONG`, który odbiera rozmiar buforu `rgLocals` wymaganego do przechowywania wartości lokalnych.  
+ określoną Wskaźnik do obiektu `ULONG` , który odbiera rozmiar `rgLocals` buforu wymaganego do przechowywania wartości lokalnych.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -57,4 +57,4 @@ HRESULT GetLocalVariables(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedENCUpdate, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate, interfejs](isymunmanagedencupdate-interface.md)

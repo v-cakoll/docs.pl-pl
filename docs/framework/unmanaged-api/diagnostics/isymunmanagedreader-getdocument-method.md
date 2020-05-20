@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 950fb3b9c51ae2c9470b5aadd31c877d7aa6b6f6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448346"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615062"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument — Metoda
 Znajduje dokument. Język dokumentu, dostawca i typ są opcjonalne.  
@@ -52,7 +52,7 @@ HRESULT GetDocument (
  `pRetVal`  
  określoną Wskaźnik do zwracanego interfejsu.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -60,4 +60,4 @@ HRESULT GetDocument (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader — Interfejs](isymunmanagedreader-interface.md)

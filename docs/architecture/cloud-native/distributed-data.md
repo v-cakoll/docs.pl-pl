@@ -2,17 +2,15 @@
 title: Rozproszone dane
 description: Magazyn danych kontrastowych w aplikacjach monolitycznych i natywnych w chmurze.
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204697"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614139"
 ---
 # <a name="distributed-data"></a>Rozproszone dane
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Jak widać w tej książce, podejście natywne w chmurze zmienia sposób projektowania i wdrażania aplikacji oraz zarządzania nimi. Zmienia również sposób zarządzania i przechowywania danych.
 
@@ -151,5 +149,5 @@ Dla tego wzorca należy wziąć pod uwagę magazyn danych, który bezpośrednio 
 Podobnie jak w przypadku wszystkich wzorców i technologii, należy zaimplementować strategiczne i w razie konieczności. Chociaż źródłem zdarzeń może być zwiększona wydajność i skalowalność, zapewnia ona koszt złożoności i krzywą szkoleniową.
 
 >[!div class="step-by-step"]
->[Poprzedni](service-mesh-communication-infrastructure.md)
->[Następny](relational-vs-nosql-data.md)
+>[Poprzedni](service-mesh-communication-infrastructure.md) 
+> [Dalej](relational-vs-nosql-data.md)

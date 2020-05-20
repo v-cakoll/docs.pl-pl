@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: DevOps uwagi dotyczące aplikacji natywnych w chmurze
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395818"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614123"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ulubiony mantrą konsultantów oprogramowania ma na celu odpowiedzenie "jest to zależne" z wszelkimi powodowanymi pytaniami. Nie wynika to z faktu, że konsultanci Fond nie pobierają pozycji. Wynika to z faktu, że nie ma żadnej prawdziwej odpowiedzi na pytania w oprogramowaniu. Nie ma bezwzględnych praw i nieprawidłowych, ale raczej równowagi między przeciwieństwem.
 

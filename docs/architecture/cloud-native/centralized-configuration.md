@@ -1,17 +1,15 @@
 ---
 title: Konfiguracja scentralizowana
 description: Scentralizowana konfiguracja aplikacji natywnych w chmurze przy użyciu usługi Azure App Configuration i magazynu AzureKey.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895654"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614230"
 ---
 # <a name="centralized-configuration"></a>Konfiguracja scentralizowana
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W przeciwieństwie do aplikacji monolitycznej, w której wszystko działa w ramach jednego wystąpienia, aplikacja natywna w chmurze składa się z niezależnych usług dystrybuowanych na maszynach wirtualnych, kontenerach i regionach geograficznych. Zarządzanie ustawieniami konfiguracji dla dziesiątek usług zależnych może być trudne. Duplikowanie kopii ustawień konfiguracji w różnych lokalizacjach jest podatne na błędy i trudne do zarządzania. Scentralizowana konfiguracja jest wymaganiem krytycznym dla rozproszonych aplikacji natywnych w chmurze.
 
@@ -53,7 +51,7 @@ Dostęp do Key Vault wymaga właściwego uwierzytelniania i autoryzacji wywołuj
 
 Aplikacja eShopOnContainers obejmuje lokalne pliki ustawień aplikacji z każdą mikrousługą. Te pliki są sprawdzane w kontroli źródła, ale nie zawierają wpisów tajnych, takich jak parametry połączenia lub klucze interfejsu API. W środowisku produkcyjnym poszczególne ustawienia mogą zostać zastąpione zmiennymi środowiskowymi dla poszczególnych usług. Wprowadzanie wpisów tajnych w zmiennych środowiskowych jest powszechną metodą obsługi hostowanych aplikacji, ale nie zapewnia centralnego magazynu konfiguracji. Aby zapewnić obsługę scentralizowanego zarządzania ustawieniami konfiguracji, każda mikrousługa zawiera ustawienie umożliwiające przełączenie między użyciem ustawień lokalnych lub Azure Key Vault ustawień.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - [Architektura eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
@@ -68,5 +66,5 @@ Aplikacja eShopOnContainers obejmuje lokalne pliki ustawień aplikacji z każdą
 - [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
->[Poprzedni](deploy-eshoponcontainers-azure.md)
->[Następny](scale-applications.md)
+>[Poprzedni](deploy-eshoponcontainers-azure.md) 
+> [Dalej](scale-applications.md)

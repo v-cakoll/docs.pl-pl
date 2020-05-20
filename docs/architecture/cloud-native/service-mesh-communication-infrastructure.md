@@ -2,17 +2,15 @@
 title: Infrastruktura komunikacji z siatką usług
 description: Dowiedz się więcej na temat sposobu, w jaki technologie sieci w chmurze upraszczają natywną komunikację mikrousług
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199953"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613693"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruktura komunikacji z siatką usług
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W tym rozdziale zbadamy wyzwania komunikacji mikrousług. Firma Microsoft stwierdziła, że zespoły programistyczne muszą być wrażliwe na to, jak usługi zaplecza komunikują się ze sobą. W idealnym przypadku mniejsza komunikacja między usługami jest lepsza. Jednak unikanie nie zawsze jest możliwe, ponieważ usługi zaplecza często korzystają ze sobą, aby zakończyć operacje.
 
@@ -73,5 +71,5 @@ Następnie następnym przejdziemy do danych rozproszonych w systemach natywnych 
 - [Tworzenie usług gRPC z użyciem wideo .NET](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[Poprzedni](grpc.md)
->[Następny](distributed-data.md)
+>[Poprzedni](grpc.md) 
+> [Dalej](distributed-data.md)

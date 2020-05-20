@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427985"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614802"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints — Metoda
 Definiuje grupę punktów sekwencji w bieżącej metodzie. Każda linia początkowa i początkowa kolumna definiują początek instrukcji w ramach metody. Każdy wiersz końcowy i kolumna końcowa definiują koniec instrukcji w ramach metody. Tablice powinny być sortowane w kolejności rosnącej. Przesunięcie jest zawsze mierzone od początku metody, w bajtach.  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  podczas Obiekt dokumentu, dla którego są definiowane punkty sekwencji.  
   
  `spCount`  
- podczas `ULONG32`, który wskazuje rozmiar każdego z `offsets`, `lines`, `columns`, `endLines`i `endColumns` buforów.  
+ podczas A, `ULONG32` który wskazuje rozmiar każdego z `offsets` `lines` buforów,, `columns` , `endLines` i `endColumns` .  
   
  `offsets`  
  podczas Przesunięcie punktów sekwencji mierzone od początku metody.  
@@ -68,4 +68,4 @@ HRESULT DefineSequencePoints(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter — Interfejs](isymunmanagedwriter-interface.md)

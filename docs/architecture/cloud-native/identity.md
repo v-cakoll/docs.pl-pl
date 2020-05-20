@@ -1,17 +1,15 @@
 ---
 title: Tożsamość
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Identity
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183050"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614022"
 ---
 # <a name="identity"></a>Tożsamość
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Większość aplikacji oprogramowania musi mieć pewną wiedzę na temat użytkownika lub procesu wywołującego je. Użytkownik lub proces, który współdziała z aplikacją, jest znany jako podmiot zabezpieczeń, a proces uwierzytelniania i autoryzacji tych podmiotów jest znany jako Zarządzanie tożsamościami lub po prostu *tożsamość*. Proste aplikacje mogą obejmować wszystkie Zarządzanie tożsamościami w aplikacji, ale takie podejście nie jest dobrze skalowane w przypadku wielu aplikacji i wielu rodzajów podmiotów zabezpieczeń. System Windows obsługuje używanie Active Directory w celu zapewnienia scentralizowanego uwierzytelniania i autoryzacji.
 
@@ -27,10 +25,10 @@ Nowoczesne natywne rozwiązania do obsługi tożsamości w chmurze zwykle wykorz
 
 Zazwyczaj usługa STS jest odpowiedzialna za uwierzytelnianie podmiotu zabezpieczeń. Określenie poziomu dostępu do zasobów jest pozostawione do innych części aplikacji.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - [Platforma tożsamości firmy Microsoft](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
->[Poprzedni](azure-monitor.md)
->[Następny](authentication-authorization.md)
+>[Poprzedni](azure-monitor.md) 
+> [Dalej](authentication-authorization.md)

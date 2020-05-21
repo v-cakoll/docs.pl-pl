@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: f43ee6d9a3832fca1766ec27c9f02d1aab2f5b8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7874424150e0f4e1818ad9c72e31fd584e016829
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127769"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762399"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl — Metoda
 Ustawia interfejs wywołania zwrotnego dla wątków planowania dla zadań innych niż środowisko uruchomieniowe, które w przeciwnym razie byłyby blokowane dla wyrzucania elementów bezużytecznych.  
@@ -35,20 +35,20 @@ HRESULT SetGCThreadControl (
   
 ## <a name="parameters"></a>Parametry  
  `pGCThreadControl`  
- podczas Wskaźnik do obiektu [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) , który powiadamia hosta o zawieszeniu wątków dla zadań innych niż środowisko uruchomieniowe.  
+ podczas Wskaźnik do obiektu [IGCThreadControl](igcthreadcontrol-interface.md) , który powiadamia hosta o zawieszeniu wątków dla zadań innych niż środowisko uruchomieniowe.  
   
 ## <a name="remarks"></a>Uwagi  
- Host może wybrać w ramach wywołania zwrotnego [IGCThreadControl:: ThreadIsBlockingForSuspension —](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) , czy ponownie zaplanować wątek.  
+ Host może wybrać w ramach wywołania zwrotnego [IGCThreadControl:: ThreadIsBlockingForSuspension —](igcthreadcontrol-threadisblockingforsuspension-method.md) , czy ponownie zaplanować wątek.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorConfiguration, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [ICorConfiguration, interfejs](icorconfiguration-interface.md)

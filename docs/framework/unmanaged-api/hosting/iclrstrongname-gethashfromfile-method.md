@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: ed735c3d7830551581df35793f3f6fdc4953dc8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4a5f6440a016176cf06704b342c173b29748e78
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178072"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762113"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile — Metoda
-Generuje skrót nad zawartością określonego pliku.  
+Generuje skrót do zawartości określonego pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,36 +39,36 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>Parametry  
  `szFilePath`  
- [w] Nazwa pliku do mieszania.  
+ podczas Nazwa pliku do skrótu.  
   
  `piHashAlg`  
- [w, na zewnątrz] Algorytm do użycia podczas generowania skrótu. Prawidłowe algorytmy są zdefiniowane przez Win32 CryptoAPI. Jeśli `piHashAlg` jest ustawiona na 0, używany jest domyślny algorytm CALG_SHA-1.  
+ [in. out] Algorytm, który ma być używany podczas generowania skrótu. Prawidłowymi algorytmami są te zdefiniowane przez interfejs CryptoAPI Win32. Jeśli `piHashAlg` jest ustawiona na 0, zostanie użyty domyślny algorytm CALG_SHA-1.  
   
  `pbHash`  
- [na zewnątrz] Tablica bajtów zawierająca wygenerowany skrót.  
+ określoną Tablica bajtowa zawierająca wygenerowany skrót.  
   
  `cchHash`  
- [w] Maksymalny rozmiar buforu, który `pbHash` wskazuje.  
+ podczas Maksymalny rozmiar buforu, który `pbHash` wskazuje.  
   
  `pchHash`  
- [na zewnątrz] Rozmiar (w bajtach) `pbHash`zwracanego .  
+ określoną Rozmiar zwracanych wartości (w bajtach) `pbHash` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`jeśli metoda została pomyślnie ukończona; w przeciwnym razie wartość HRESULT wskazująca błąd (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+ `S_OK`Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest taka sama jak [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metody, z tą różnicą, że specyfikacja nazwy pliku jest ANSI zamiast Unicode.  
+ Ta metoda jest taka sama jak Metoda [ICLRStrongName:: GetHashFromFileW —](iclrstrongname-gethashfromfilew-method.md) , z tą różnicą, że Specyfikacja nazwy pliku jest ANSI zamiast Unicode.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [GetHashFromFileW, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFileW, metoda](iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName, interfejs](iclrstrongname-interface.md)

@@ -2,12 +2,12 @@
 title: Opcje konfiguracji czasu wykonywania
 description: Dowiedz się, jak skonfigurować aplikacje platformy .NET Core za pomocą ustawień konfiguracji czasu wykonywania.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506788"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761957"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Ustawienia konfiguracji środowiska uruchomieniowego .NET Core
 
@@ -27,6 +27,9 @@ Platforma .NET Core udostępnia następujące mechanizmy konfigurowania zachowan
 - [Właściwości programu MSBuild](#msbuild-properties)
 
 - [Zmienne środowiskowe](#environment-variables)
+
+> [!TIP]
+> Skonfigurowanie opcji czasu wykonywania przy użyciu zmiennej środowiskowej stosuje ustawienie do wszystkich aplikacji platformy .NET Core. Skonfigurowanie opcji czasu wykonywania w pliku *runtimeconfig. JSON* lub projektu powoduje zastosowanie ustawienia tylko do tej aplikacji.
 
 Niektóre wartości konfiguracji można również ustawić programowo, wywołując <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metodę.
 
@@ -71,7 +74,7 @@ Jeśli umieszczasz opcje w wyjściowym pliku JSON, zastąp je `runtimeOptions` w
 
 ### <a name="example-runtimeconfigtemplatejson-file"></a>Przykład pliku runtimeconfig. Template. JSON
 
-Jeśli umieszczasz opcje w pliku JSON szablonu, Pomiń `runtimeOptions` właściwość.
+Jeśli umieszczasz opcje w pliku JSON szablonu, Pomiń `runtimeOptions` Właściwość.
 
 ```json
 {
@@ -106,11 +109,11 @@ Oto przykładowy plik projektu w stylu zestawu SDK z właściwościami MSBuild s
 </Project>
 ```
 
-Właściwości programu MSBuild służące do konfigurowania zachowania w czasie wykonywania są zanotowane w poszczególnych artykułach dla każdego obszaru, na przykład na [wyrzucaniu elementów bezużytecznych](garbage-collector.md).
+Właściwości programu MSBuild służące do konfigurowania zachowania w czasie wykonywania są zanotowane w poszczególnych artykułach dla każdego obszaru, na przykład na [wyrzucaniu elementów bezużytecznych](garbage-collector.md). Są one również wymienione w sekcji [Konfiguracja czasu wykonywania](../project-sdk/msbuild-props.md#run-time-configuration-properties) w temacie Informacje o właściwościach programu MSBuild dla projektów w stylu zestawu SDK.
 
 ## <a name="environment-variables"></a>Zmienne środowiskowe
 
-Zmienne środowiskowe mogą służyć do dostarczania niektórych informacji o konfiguracji czasu wykonywania. Pokrętła konfiguracji określone jako zmienne środowiskowe zwykle mają prefiks **COMPlus_**.
+Zmienne środowiskowe mogą służyć do dostarczania niektórych informacji o konfiguracji czasu wykonywania. Skonfigurowanie opcji czasu wykonywania przy użyciu zmiennej środowiskowej stosuje ustawienie do wszystkich aplikacji platformy .NET Core. Pokrętła konfiguracji określone jako zmienne środowiskowe zwykle mają prefiks **COMPlus_**.
 
 Zmienne środowiskowe można definiować w panelu sterowania systemu Windows, w wierszu polecenia lub programowo poprzez wywołanie <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> metody w systemach Windows i UNIX.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-ms.openlocfilehash: b42079d138e754996470e07b884d49c1ebb625c3
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 081df31d1e3b1ca3345fe44b60cff6af27386953
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901165"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762126"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob — Metoda
 Pobiera skrót zestawu pod określonym adresem pamięci przy użyciu określonego algorytmu wyznaczania wartości skrótu.  
@@ -52,23 +52,23 @@ HRESULT GetHashFromBlob (
  określoną Zwrócony bufor wyznaczania wartości skrótu.  
   
  `cchHash`  
- podczas Żądany maksymalny rozmiar `pbHash`.  
+ podczas Żądany maksymalny rozmiar `pbHash` .  
   
  `pchHash`  
- określoną Rozmiar w bajtach zwracanej `pbHash`.  
+ określoną Rozmiar zwracanych wartości (w bajtach) `pbHash` .  
   
-## <a name="return-value"></a>Wartość zwrócona  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+## <a name="return-value"></a>Wartość zwracana  
+ `S_OK`Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName, interfejs](iclrstrongname-interface.md)

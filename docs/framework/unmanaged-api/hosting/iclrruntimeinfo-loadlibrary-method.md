@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192085"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762178"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary — Metoda
-Ładuje bibliotekę .NET Framework z aparatu plików wykonywalnych języka wspólnego (CLR) reprezentowanego przez interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .  
+Ładuje bibliotekę .NET Framework z aparatu plików wykonywalnych języka wspólnego (CLR) reprezentowanego przez interfejs [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
   
- Ta metoda zastępuje funkcję [LoadLibraryShim —](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) .  
+ Ta metoda zastępuje funkcję [LoadLibraryShim —](loadlibraryshim-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,23 +48,23 @@ HRESULT LoadLibrary(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pwzDllName` lub `phndModule` ma wartość null.|  
+|E_POINTER|`pwzDllName`lub `phndModule` ma wartość null.|  
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby obsłużyć żądanie.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda ładuje tylko biblioteki dll zawarte w pakiecie redystrybucyjnym .NET Framework. Nie można załadować zestawów wygenerowanych przez użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo, interfejs](iclrruntimeinfo-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting](index.md)

@@ -3,12 +3,12 @@ title: Ustawienia konfiguracji kompilacji
 description: Informacje o ustawieniach czasu wykonywania, które konfigurują sposób działania kompilatora JIT dla aplikacji platformy .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506847"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762009"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opcje konfiguracji czasu wykonywania dla kompilacji
 
@@ -98,7 +98,7 @@ Plik projektu:
 - Określa, czy kompilator JIT używa szybkiej JIT metod, które zawierają pętle.
 - Włączenie szybkiej JIT dla pętli może poprawić wydajność uruchamiania. Jednak długotrwałe pętle mogą być zablokowane w niezoptymalizowanym kodzie przez długi czas.
 - Jeśli [szybka JIT](#quick-jit) jest wyłączona, to ustawienie nie ma żadnego wpływu.
-- Domyślnie: Disabled (`false`).
+- W przypadku pominięcia tego ustawienia szybka JIT nie jest używana dla metod, które zawierają pętle. Jest to równoznaczne z ustawieniem wartości `false` .
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
@@ -136,7 +136,7 @@ Plik projektu:
 
 - Określa, czy środowisko uruchomieniowe programu .NET Core używa wstępnie skompilowanego kodu dla obrazów z dostępnymi danymi ReadyToRun. Wyłączenie tej opcji zmusza środowisko uruchomieniowe do kompilowania kodu struktury JIT.
 - Aby uzyskać więcej informacji, zobacz [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Wartość domyślna: włączone`1`().
+- W przypadku pominięcia tego ustawienia platforma .NET będzie używać danych ReadyToRun, gdy jest ona dostępna. Jest to równoznaczne z ustawieniem wartości `1` .
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |

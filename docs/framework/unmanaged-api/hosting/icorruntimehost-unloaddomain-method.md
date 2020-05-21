@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-ms.openlocfilehash: dfdcb9b8aedeb3ccbbd27864e79ce43338942922
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 558b6e4c6ac369e33be3d45b7241e8b11db8bfae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133357"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760397"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain — Metoda
 Zwalnia określoną domenę aplikacji z bieżącego procesu.  
@@ -43,11 +43,11 @@ HRESULT UnloadDomain (
 |-------------|-----------------|  
 |S_OK|Operacja zakończyła się pomyślnie.|  
 |S_FALSE|Nie można ukończyć operacji.|  
-|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
@@ -55,8 +55,8 @@ HRESULT UnloadDomain (
   
  **Wersja .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost, interfejs](icorruntimehost-interface.md)

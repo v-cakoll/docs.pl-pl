@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88abdbc62c8b27f48c5629afb99ab6e30ee67e00
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139565"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762269"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration — Metoda
 Pobiera obiekt, który umożliwia hostowi określenie konfiguracji wywołania zwrotnego środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -35,13 +35,13 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>Parametry  
  `pConfiguration`  
- określoną Wskaźnik do adresu obiektu [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) , który może służyć do konfigurowania środowiska CLR.  
+ określoną Wskaźnik do adresu obiektu [ICorConfiguration](icorconfiguration-interface.md) , który może służyć do konfigurowania środowiska CLR.  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR musi być skonfigurowane przed jego inicjalizacją; w przeciwnym razie metoda `GetConfiguration` zwraca wartość HRESULT wskazującą błąd.  
+ Środowisko CLR musi być skonfigurowane przed jego inicjalizacją; w przeciwnym razie `GetConfiguration` Metoda zwraca wynik HRESULT wskazujący błąd.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
@@ -49,6 +49,6 @@ HRESULT GetConfiguration(
   
  **.NET Framework wersje:** 1,0, 1,1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost, interfejs](icorruntimehost-interface.md)

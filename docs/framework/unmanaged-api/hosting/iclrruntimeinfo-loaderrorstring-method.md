@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195927"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762191"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString — Metoda
 Tłumaczy wartość HRESULT na odpowiedni komunikat o błędzie dla określonej kultury.  
   
  Ta metoda zastępuje następujące funkcje:  
   
-- [LoadStringRC —](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [LoadStringRC —](loadstringrc-function.md)  
   
-- [LoadStringRCEx —](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [LoadStringRCEx —](loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ HRESULT LoadErrorString(
  określoną Ciąg komunikatu skojarzony z podaną wartością HRESULT.  
   
  `pcchBuffer`  
- [in. out] Rozmiar `pwzbuffer`, aby uniknąć przekroczeń buforu. Jeśli `pwzbuffer` ma wartość null, `pcchBuffer` zapewnia oczekiwany rozmiar `pwzbuffer` w celu umożliwienia wstępnego przydzielenia.  
+ [in. out] Rozmiar, `pwzbuffer` Aby uniknąć przekroczeń buforu. Jeśli `pwzbuffer` ma wartość null, `pcchBuffer` zapewnia oczekiwany rozmiar, `pwzbuffer` który umożliwia wstępne przydzielanie.  
   
  `iLocaleID`  
  podczas Identyfikator kultury. Aby użyć domyślnej kultury, należy określić-1.  
@@ -60,20 +60,20 @@ HRESULT LoadErrorString(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pcchBuffer` ma wartość null.|  
-|E_INVALIDARG|`pwzBuffer` ma wartość null.|  
+|E_POINTER|`pcchBuffer`ma wartość null.|  
+|E_INVALIDARG|`pwzBuffer`ma wartość null.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo, interfejs](iclrruntimeinfo-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting](index.md)

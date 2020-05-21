@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-ms.openlocfilehash: bb3778a55e7f395ad65f6a9841ca1f31f1de4ebc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2174afe0ee96bd153b7b40c73c0185d9058a0dc
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178256"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760347"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer — Metoda
-Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio z kodu.  
+Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,14 +37,14 @@ HRESULT CorChangeTimer (
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICorThreadpool, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool, interfejs](icorthreadpool-interface.md)

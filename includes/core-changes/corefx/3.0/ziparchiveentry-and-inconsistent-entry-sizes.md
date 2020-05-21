@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c8e87c885c99d28aa9a7a5d5a2b48c80d40d7db
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568109"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721122"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>Element ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wpisów
 
@@ -12,11 +12,11 @@ Archiwa zip wyświetlają rozmiar skompresowany i nieskompresowany w katalogu ce
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 2,2 i starszych wersjach <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> program kończy się powodzeniem nawet wtedy, gdy nagłówek lokalny nie zgadza się z centralnym nagłówkiem pliku zip. Dane są dekompresowane do momentu osiągnięcia końca skompresowanego strumienia, nawet jeśli jego długość przekracza rozmiar nieskompresowanych plików wymieniony w katalogu centralnym/nagłówku lokalnym.
+W programie .NET Core 2,2 i starszych wersjach program <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> kończy się powodzeniem nawet wtedy, gdy nagłówek lokalny nie zgadza się z centralnym nagłówkiem pliku zip. Dane są dekompresowane do momentu osiągnięcia końca skompresowanego strumienia, nawet jeśli jego długość przekracza rozmiar nieskompresowanych plików wymieniony w katalogu centralnym/nagłówku lokalnym.
 
 Począwszy od platformy .NET Core 3,0, <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> Metoda sprawdza, czy nagłówek lokalny i nagłówek centralny zgadzają się na skompresowane i nieskompresowane rozmiary wpisu.  Jeśli tak nie jest, metoda zgłasza <xref:System.IO.InvalidDataException> rozmiar i/lub listę deskryptorów danych w archiwum, które nie zgadzają się z katalogiem centralnym pliku zip. Podczas odczytywania wpisu dekompresowane dane są obcinane do rozmiaru nieskompresowanego pliku wymienionego w nagłówku.
 
-Ta zmiana została wprowadzona w celu upewnienia <xref:System.IO.Compression.ZipArchiveEntry> się, że poprawnie reprezentuje rozmiar danych i że tylko ta ilość danych jest odczytywana.
+Ta zmiana została wprowadzona w celu upewnienia się, że <xref:System.IO.Compression.ZipArchiveEntry> poprawnie reprezentuje rozmiar danych i że tylko ta ilość danych jest odczytywana.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -39,7 +39,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 `M:System.IO.Compression.ZipArchiveEntry.Open`
 `Overload:System.IO.Compression.ZipFileExtensions.ExtractToDirectory%2A`

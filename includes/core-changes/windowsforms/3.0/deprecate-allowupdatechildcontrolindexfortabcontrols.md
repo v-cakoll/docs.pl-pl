@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1c55eab0b968daab7322350e201b49149e63215
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937112"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721254"
 ---
-### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Przełącznik zgodności AllowUpdateChildControlForTabControl nie jest obsługiwany
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności AllowUpdateChildControlIndexForTabControls
 
-Przełącznik `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` zgodności jest obsługiwany w formularzach systemu Windows w wersji .NET Framework 4.6 i nowszej, ale nie jest obsługiwany w formularzach systemu Windows, począwszy od .NET Core 3.0.
+`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`Przełącznik zgodności jest obsługiwany w Windows Forms na .NET Framework 4,6 i nowszych wersjach, ale nie jest obsługiwany w Windows Forms począwszy od platformy .NET Core 3,0.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Framework 4.6 i nowszych wersjach wybranie karty zmienia kolejność swojej kolekcji formantów. Przełącznik `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` zgodności umożliwia aplikacji pominąć to ponowne zamawianie, gdy to zachowanie jest niepożądane.
+W .NET Framework 4,6 i nowszych wersjach, wybranie karty zmienia kolejność kolekcji kontrolek. `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`Przełącznik zgodności pozwala aplikacji pominąć tę zmianę kolejności, jeśli to zachowanie jest niepożądane.
 
-W .NET Core `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` przełącznik nie jest obsługiwany.
+W przypadku platformy .NET Core `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` przełącznik nie jest obsługiwany.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
+Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

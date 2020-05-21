@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06a700a6fcd9c434e5ea8a10031371d13a4d1a4b
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76508586"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721558"
 ---
-### <a name="removed-controls"></a>Usunięte formanty
+### <a name="removed-controls"></a>Usunięte kontrolki
 
-Począwszy od .NET Core 3.1, niektóre formanty formularzy systemu Windows nie są już dostępne.
+Począwszy od platformy .NET Core 3,1, niektóre kontrolki Windows Forms nie są już dostępne.
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Core 3.1, różne formanty formularzy systemu Windows nie są już dostępne. Formanty zastępowania, które mają lepszy projekt i obsługę zostały wprowadzone w .NET Framework 2.0. Przestarzałe formanty zostały wcześniej usunięte z designerskich przybornika, ale nadal były dostępne do użycia.
+Począwszy od platformy .NET Core 3,1, różne kontrolki Windows Forms nie są już dostępne. Kontrolki zamiany, które mają lepszy projekt i pomoc techniczną, zostały wprowadzone w .NET Framework 2,0. Przestarzałe formanty zostały wcześniej usunięte z przyborników projektanta, ale były nadal dostępne do użycia.
 
 Następujące typy nie są już dostępne:
 
@@ -47,21 +47,21 @@ Następujące typy nie są już dostępne:
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.1
+3,1
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Każdy usunięty formant ma zalecany formant wymiany. Zapoznaj się z poniższą tabelą:
+Każda z usuniętych kontrolek ma zalecaną kontrolę zamiany. Zapoznaj się z poniższą tabelą:
 
-| Usunięto kontrolkę (API) | Zalecana wymiana | Skojarzone interfejsy API, które są usuwane |
+| Usunięty formant (API) | Zalecane zastąpienie | Skojarzone interfejsy API, które zostały usunięte |
 |-|-|-|
-| DataGrid | Datagridview | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
-| ToolBar | ToolStrip | Wygląd paska narzędzi |
-| Toolbarbutton | Toolstripbutton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
+| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, Element DataGridTableStyle, DataGridColumnStyle, datalinii siatki, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
+| ToolBar | ToolStrip | ToolBarAppearance |
+| ToolBarButton | Element ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButton, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| Menu | Menu rozwijane ToolStrip, Menu z uchyłkiem narzędzia | Menuitemcollection |
-| Mainmenu | MenuStrip | |
-| MenuItem | Toolstripmenuitem | |
+| Menu | ToolStripDropDown, ToolStripDropDownMenu | MenuItemCollection |
+| MainMenu | MenuStrip | |
+| MenuItem | ToolStripMenuItem | |
 
 #### <a name="category"></a>Kategoria
 
@@ -100,7 +100,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.Menu`
 - `T:System.Windows.Forms.Menu.MenuItemCollection`

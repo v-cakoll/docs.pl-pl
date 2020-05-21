@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09027863ff2f0009a14578db35db870c27369726
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116346"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721217"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Typy w przestrzeni nazw Microsoft. VisualBasic. ApplicationServices są niedostępne
 
@@ -16,7 +16,7 @@ Typy w <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName>
 
 #### <a name="change-description"></a>Zmień opis
 
-Typy w <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> przestrzeni nazw były dostępne w niektórych wersjach programu .net Core 3,0 Preview. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
+Typy w <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> przestrzeni nazw były dostępne w niektórych wersjach programu .NET Core 3,0 Preview. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
 
 Typy zostały usunięte, aby uniknąć niepotrzebnych zależności zestawów lub istotne zmiany w kolejnych wersjach.
 
@@ -34,7 +34,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 

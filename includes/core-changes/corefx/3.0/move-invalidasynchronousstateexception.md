@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 78678b4b352bb063d1521e9aee3492c0cee059b8
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158485"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721755"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException — przeniesiony do innego zestawu
 
-<xref:System.ComponentModel.InvalidAsynchronousStateException> Klasa została przeniesiona.
+<xref:System.ComponentModel.InvalidAsynchronousStateException>Klasa została przeniesiona.
 
 #### <a name="change-description"></a>Zmień opis
 
@@ -22,7 +22,7 @@ Począwszy od platformy .NET Core 3,0, znajduje się on w zestawie *System. Comp
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Ta zmiana dotyczy tylko aplikacji, które używają odbicia do <xref:System.ComponentModel.InvalidAsynchronousStateException> ładowania przez wywołanie metody, takiej <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> jak lub przeciążenia <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> , która zakłada, że typ znajduje się w określonym zestawie. W takim przypadku należy zaktualizować zestaw przywoływany w wywołaniu metody, aby odzwierciedlić nową lokalizację zestawu.
+Ta zmiana dotyczy tylko aplikacji, które używają odbicia do ładowania <xref:System.ComponentModel.InvalidAsynchronousStateException> przez wywołanie metody, takiej jak <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> lub przeciążenia <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> , która zakłada, że typ znajduje się w określonym zestawie. W takim przypadku należy zaktualizować zestaw przywoływany w wywołaniu metody, aby odzwierciedlić nową lokalizację zestawu.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Brak.
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 3f0e8fb4d0d727b40cff5de7cfdc7529bf32dac4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb8c0532bb2bcfbcd619cd382f3d236b431c3480
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937038"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721656"
 ---
-### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>Przełącznik zgodności DoNotLoadLatestRichEditControl nie jest obsługiwany
+### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności DoNotLoadLatestRichEditControl
 
-Przełącznik `Switch.System.Windows.Forms.UseLegacyImages` zgodności, który został wprowadzony w programie .NET Framework 4.7.1, nie jest obsługiwany w formularzach systemu Windows w programie .NET Core 3.0.
+`Switch.System.Windows.Forms.UseLegacyImages`Przełącznik zgodności, który został wprowadzony w .NET Framework 4.7.1, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Framework 4.6.2 i <xref:System.Windows.Forms.RichTextBox> poprzednich wersjach formant będzie utworzyć wystąpienia w usytuanym win32 RichEdit kontroli v3.0 i dla aplikacji, które są przeznaczone do .NET Framework 4.7.1, <xref:System.Windows.Forms.RichTextBox> formant będzie wystąpienia RichEdit v4.1 (w *msftedit.dll*). Przełącznik `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` zgodności został wprowadzony, aby umożliwić aplikacjom docelowym .NET Framework 4.7.1 i nowszym wersjom rezygnację z nowego formantu RichEdit v4.1 i zamiast tego użyj starego formantu RichEdit v3.
+W .NET Framework 4.6.2 i poprzednich wersjach <xref:System.Windows.Forms.RichTextBox> kontrolka spowoduje utworzenie wystąpienia programu Win32 RichEdit Control v 3.0 i dla aplikacji, które są przeznaczone dla .NET Framework 4.7.1, <xref:System.Windows.Forms.RichTextBox> kontrolka spowoduje utworzenie wystąpienia elementu RichEdit v 4.1 (w *msftedit. dll*). `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl`Wprowadzono przełącznik zgodności, aby umożliwić aplikacjom, które są przeznaczone .NET Framework 4.7.1 i nowsze wersje, aby zrezygnować z nowej kontrolki RichEdit v 4.1 i zamiast tego używać starego formantu RichEdit v3.
 
-W .NET Core `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` przełącznik nie jest obsługiwany. Obsługiwane są tylko <xref:System.Windows.Forms.RichTextBox> nowe wersje formantu.
+W przypadku platformy .NET Core `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` przełącznik nie jest obsługiwany. Obsługiwane są tylko nowe wersje <xref:System.Windows.Forms.RichTextBox> formantu.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
+Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 -  `T:System.Windows.Forms.RichTextBox` 
 

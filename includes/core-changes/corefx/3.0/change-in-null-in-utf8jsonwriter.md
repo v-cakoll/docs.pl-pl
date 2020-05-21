@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: c9547cdc2f127cf13a3610118a26736930fcd8bd
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 13da0ef6155d65fbc894c5747cc36bb3483ba518
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021621"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721564"
 ---
 ### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Zmień semantykę `(string)null` w Utf8JsonWriter
 
-W programie .NET Core 3,0 w wersji zapoznawczej 7 ciąg o wartości null jest traktowany jako pusty ciąg w <xref:System.Text.Json.Utf8JsonWriter>. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, ciąg o wartości null zgłasza wyjątek, gdy jest używany jako nazwa właściwości i emituje token JSON o wartości null, gdy jest używany jako wartość.
+W programie .NET Core 3,0 w wersji zapoznawczej 7 ciąg o wartości null jest traktowany jako pusty ciąg w <xref:System.Text.Json.Utf8JsonWriter> . Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, ciąg o wartości null zgłasza wyjątek, gdy jest używany jako nazwa właściwości i emituje token JSON o wartości null, gdy jest używany jako wartość.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 3,0 w wersji zapoznawczej 7 `null` ciąg `""` był traktowany jako oba podczas pisania nazw właściwości i podczas pisania wartości.  
+W programie .NET Core 3,0 w wersji zapoznawczej 7 `null` ciąg był traktowany jako `""` oba podczas pisania nazw właściwości i podczas pisania wartości.  
 
-Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej `null` 8, `ArgumentNullException`nazwa właściwości zgłasza `null` , a wartość jest traktowana jako <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> wywołanie <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>lub.
+Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8, `null` Nazwa właściwości zgłasza `ArgumentNullException` , a `null` wartość jest traktowana jako wywołanie <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> lub <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType> .
 
 Spójrzmy na poniższy kod:
 
@@ -46,7 +46,7 @@ Jeśli program jest uruchamiany z programem .NET Core 3,0 w wersji zapoznawczej 
 [{"":"","prop2":""},""]
 ```
 
-Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej `writer.WriteString(propertyName1, propertyValue1)` 8, <xref:System.ArgumentNullException>wywołanie do wyrzucania.  Jeśli `propertyName1 = null` jest zastępowany `propertyName1 = string.Empty`przez, dane wyjściowe byłyby teraz:
+Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8, wywołanie do wyrzucania `writer.WriteString(propertyName1, propertyValue1)` <xref:System.ArgumentNullException> .  Jeśli `propertyName1 = null` jest zastępowany przez `propertyName1 = string.Empty` , dane wyjściowe byłyby teraz:
 
 ```js
 [{"":null,"prop2":null},null]
@@ -62,11 +62,11 @@ Ta zmiana została wprowadzona w celu lepszego dopasowania przy użyciu oczekiwa
 
 Podczas zapisywania nazw właściwości i wartości z <xref:System.Text.Json.Utf8JsonWriter> klasą:
 
-- Upewnij się,`null` że nie są używane jako nazwy właściwości.
+- Upewnij `null` się, że nie są używane jako nazwy właściwości.
 
-- Jeśli poprzednie zachowanie jest wymagane, użyj wywołania łączenia o wartości null; na przykład `writer.WriteString(propertyName1 ?? "", propertyValue1)`.
+- Jeśli poprzednie zachowanie jest wymagane, użyj wywołania łączenia o wartości null; na przykład `writer.WriteString(propertyName1 ?? "", propertyValue1)` .
 
-- Jeśli pisanie `null` literału dla wartości `null` ciągu nie jest pożądane, użyj wywołania łączenia o wartości null; na przykład `writer.WriteString(propertyName2, propertyValue2 ?? "")`.
+- Jeśli zapisanie `null` literału dla `null` wartości ciągu nie jest pożądane, użyj wywołania łączenia o wartości null, na przykład `writer.WriteString(propertyName2, propertyValue2 ?? "")` .
 
 #### <a name="category"></a>Kategoria
 
@@ -98,7 +98,7 @@ Podstawowe biblioteki platformy .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.Utf8JsonWriter.WriteBase64String(System.String,System.ReadOnlySpan{System.Byte})`
 - `M:System.Text.Json.Utf8JsonWriter.WriteBoolean(System.String,System.Boolean)`

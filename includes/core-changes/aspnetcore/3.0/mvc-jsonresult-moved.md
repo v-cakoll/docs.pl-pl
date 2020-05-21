@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: f6fd75c5b49156f44d31c650ea452eb549f13b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1356f3eee5e2d8090d7d96aafc07a19507a1aff1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901743"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720927"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC: JsonResult przeniesiony do Microsoft. AspNetCore. MVC. Core
 
-`JsonResult`został przeniesiony do `Microsoft.AspNetCore.Mvc.Core` zestawu. Ten typ jest używany do zdefiniowania w pliku [Microsoft. AspNetCore. MVC. formatującegos. JSON](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json). Dodano `Microsoft.AspNetCore.Mvc.Formatters.Json` atrybut na poziomie zestawu [[TypeForwardedTo]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute) , aby rozwiązać ten problem w przypadku większości użytkowników. Aplikacje korzystające z bibliotek innych firm mogą napotkać problemy.
+`JsonResult`został przeniesiony do `Microsoft.AspNetCore.Mvc.Core` zestawu. Ten typ jest używany do zdefiniowania w pliku [Microsoft. AspNetCore. MVC. formatującegos. JSON](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json). Dodano atrybut na poziomie zestawu [[TypeForwardedTo]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute) , aby `Microsoft.AspNetCore.Mvc.Formatters.Json` rozwiązać ten problem w przypadku większości użytkowników. Aplikacje korzystające z bibliotek innych firm mogą napotkać problemy.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -46,7 +46,7 @@ ASP.NET Core
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 `T:Microsoft.AspNetCore.Mvc.JsonResult`
 

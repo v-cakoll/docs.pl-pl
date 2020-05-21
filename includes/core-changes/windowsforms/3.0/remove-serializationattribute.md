@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b35e99b1516c3236d07153cf0b69dae55a4bff7d
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643957"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721462"
 ---
-### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute usunięte z niektórych typów formularzy systemu Windows
+### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute usunięte z niektórych typów Windows Forms
 
-Został <xref:System.SerializableAttribute> usunięty z niektórych klas formularzy systemu Windows, które nie mają znanych scenariuszy serializacji binarnej.
+Program <xref:System.SerializableAttribute> został usunięty z niektórych klas Windows Forms, które nie mają znanych scenariuszy serializacji binarnej.
 
 #### <a name="change-description"></a>Zmień opis
 
-Następujące typy są ozdobione <xref:System.SerializableAttribute> w .NET Framework, ale atrybut został usunięty w .NET Core:
+Następujące typy są dekoracyjne <xref:System.SerializableAttribute> w .NET Framework, ale atrybut został usunięty z platformy .NET Core:
 
 - `System.InvariantComparer`
 - <xref:System.ComponentModel.Design.ExceptionCollection?displayProperty=nameWithType>
@@ -26,17 +26,17 @@ Następujące typy są ozdobione <xref:System.SerializableAttribute> w .NET Fram
 - `System.Windows.Forms.NativeMethods.MSOCRINFOSTRUCT`
 - `System.Windows.Forms.NativeMethods.MSG`
 
-Historycznie ten mechanizm serializacji miał poważne problemy z konserwacją i bezpieczeństwem. Utrzymywanie `SerializableAttribute` na typy oznacza, że te typy muszą być testowane pod kątem zmian serializacji wersji do wersji i potencjalnie framework-to-framework zmiany serializacji. To sprawia, że trudniej rozwijać te typy i może być kosztowne w utrzymaniu. Te typy nie mają znanych scenariuszy serializacji binarnych, co minimalizuje wpływ usuwania atrybutu.
+W przeszłości ten mechanizm serializacji miał poważne problemy związane z konserwacją i bezpieczeństwem. Utrzymywanie `SerializableAttribute` na typach oznacza, że te typy muszą być testowane pod kątem zmian serializacji z wersji do wersji oraz ewentualnych zmian serializacji między platformami. Dzięki temu trudniej jest rozwijać te typy i mogą być kosztowne do utrzymania. Te typy nie mają znanych scenariuszy serializacji binarnej, co minimalizuje wpływ usuwania atrybutu.
 
 Aby uzyskać więcej informacji, zobacz [Serializacja binarna](~/docs/standard/serialization/binary-serialization.md).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zaktualizuj dowolny kod, który może zależeć od tych typów są oznaczone jako serializacji.
+Zaktualizuj każdy kod, który może zależeć od tych typów jako możliwy do serializacji.
 
 #### <a name="category"></a>Kategoria
 
@@ -48,7 +48,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

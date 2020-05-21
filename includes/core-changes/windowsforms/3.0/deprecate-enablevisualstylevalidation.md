@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97e38685777c7c418c0ccd91f4c433501ecf3aaa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937119"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720941"
 ---
-### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>Przełącznik zgodności EnableVisualStyleValidation nie jest obsługiwany
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności EnableVisualStyleValidation
 
-Przełącznik `Switch.System.Windows.Forms.EnableVisualStyleValidation` zgodności nie jest obsługiwany w formularzach systemu Windows w programie .NET Core 3.0.
+`Switch.System.Windows.Forms.EnableVisualStyleValidation`Przełącznik zgodności nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET `Switch.System.Windows.Forms.EnableVisualStyleValidation` Framework przełącznik zgodności umożliwił aplikacji rezygnację z sprawdzania poprawności stylów wizualnych dostarczanych w formie liczbowej.
+W .NET Framework `Switch.System.Windows.Forms.EnableVisualStyleValidation` przełącznik zgodności zezwala aplikacji na rezygnację z walidacji stylów wizualnych dostarczonych w postaci liczbowej.
 
-W .NET Core `Switch.System.Windows.Forms.EnableVisualStyleValidation` przełącznik nie jest obsługiwany.
+W przypadku platformy .NET Core `Switch.System.Windows.Forms.EnableVisualStyleValidation` przełącznik nie jest obsługiwany.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
+Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

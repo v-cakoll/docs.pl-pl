@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 55c13aa70a03bcc548ce1d096cca8f40de6cda84
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937032"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721129"
 ---
-### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Przełącznik zgodności DontSupportReentrantFilterMessage nie jest obsługiwany
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności DontSupportReentrantFilterMessage
 
-Przełącznik `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` zgodności, który został wprowadzony w programie .NET Framework 4.6.1, nie jest obsługiwany w formularzach systemu Windows w programie .NET Core 3.0.
+`Switch.System.Windows.Forms.DontSupportReentrantFilterMessage`Przełącznik zgodności, który został wprowadzony w .NET Framework 4.6.1, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Framework 4.6.1, `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` przełącznik <xref:System.IndexOutOfRangeException> zgodności adresy <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> możliwych wyjątków, gdy komunikat jest wywoływana z implementacji niestandardowej. <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> Aby uzyskać więcej informacji, zobacz [Łagodzenia: Niestandardowe implementacje IMessageFilter.PreFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
+Począwszy od .NET Framework 4.6.1, `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` przełącznik zgodności rozwiązuje możliwe wyjątki, <xref:System.IndexOutOfRangeException> gdy <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> komunikat jest wywoływany z implementacją niestandardową <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> . Aby uzyskać więcej informacji, zobacz Rozwiązywanie [problemów z niestandardowymi implementacjami IMessageFilter. PreFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
 
-W .NET Core `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` przełącznik nie jest obsługiwany.
+W przypadku platformy .NET Core `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` przełącznik nie jest obsługiwany.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Podgląd 9
+3,0 wersja zapoznawcza 9
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
+Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message)`
 

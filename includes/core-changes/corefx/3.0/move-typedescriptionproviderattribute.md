@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 57ca2ad839aab8d61da1a929660920efe1190334
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2617f27dfd6bb527ff6d408fae6382075f24ae
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147539"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721738"
 ---
 ### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute przeniesiony do innego zestawu
 
-<xref:System.ComponentModel.TypeDescriptionProviderAttribute> Klasa została przeniesiona.
+<xref:System.ComponentModel.TypeDescriptionProviderAttribute>Klasa została przeniesiona.
 
 #### <a name="change-description"></a>Zmień opis
 
@@ -22,7 +22,7 @@ Począwszy od platformy .NET Core 3,0, znajduje się on w zestawie *System. Obje
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Ta zmiana dotyczy tylko aplikacji, które używają odbicia do <xref:System.ComponentModel.TypeDescriptionProviderAttribute> ładowania typu przez wywołanie metody, takiej <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> jak lub przeciążenia <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> , która zakłada, że typ znajduje się w określonym zestawie. W takim przypadku zestaw, do którego odwołuje się wywołanie metody, powinien zostać zaktualizowany w celu odzwierciedlenia nowej lokalizacji zestawu.
+Ta zmiana dotyczy tylko aplikacji, które używają odbicia do ładowania <xref:System.ComponentModel.TypeDescriptionProviderAttribute> typu przez wywołanie metody, takiej jak <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> lub przeciążenia <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> , która zakłada, że typ znajduje się w określonym zestawie. W takim przypadku zestaw, do którego odwołuje się wywołanie metody, powinien zostać zaktualizowany w celu odzwierciedlenia nowej lokalizacji zestawu.
 
 #### <a name="category"></a>Kategoria
 
@@ -34,7 +34,7 @@ Brak.
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

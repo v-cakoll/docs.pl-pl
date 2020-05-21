@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: acb8ed44b7d18b257731e32339f087c8fe5fdd4a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116371"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720967"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Typy w przestrzeni nazw Microsoft. VisualBasic. WebServices są niedostępne
 
@@ -16,7 +16,7 @@ Typy w <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> przestrz
 
 #### <a name="change-description"></a>Zmień opis
 
-Typy w <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> przestrzeni nazw były dostępne w niektórych wersjach programu .net Core 3,0 Preview. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
+Typy w <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> przestrzeni nazw były dostępne w niektórych wersjach programu .NET Core 3,0 Preview. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
 
 Typy zostały usunięte, aby uniknąć niepotrzebnych zależności zestawów lub istotne zmiany w kolejnych wersjach.
 
@@ -26,7 +26,7 @@ Jeśli kod zależy od użycia typów **Microsoft. VisualBasic. WebServices** i i
 
 |Typ Microsoft. VisualBasic. WebServices|Typ biblioteki klas .NET|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType>dla aplikacji <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> WPF dla aplikacji Windows Forms|
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType>dla aplikacji WPF dla <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> aplikacji Windows Forms|
 |<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|Typy w <xref:System.IO> przestrzeni nazw|
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|Typy związane z rejestrem w <xref:Microsoft.Win32> przestrzeni nazw|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|
@@ -41,7 +41,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.MyServices`
 

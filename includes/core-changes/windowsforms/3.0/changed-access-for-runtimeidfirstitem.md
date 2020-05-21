@@ -1,26 +1,26 @@
 ---
-ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ea2d70a7cfe04cc4c4b9b58ea6bb6fa0226b245
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74644048"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721630"
 ---
-### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>Zmiana dostępu dla accessibleObject.RuntimeIDFirstItem
+### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>Zmiana dostępu do elementu AccessibleObject. RuntimeIDFirstItem
 
-Począwszy od .NET Core 3.0 `AccessibleObject.RuntimeIDFirstItem` RC1, `protected` `internal`dostępność została zmieniona z .
+Począwszy od platformy .NET Core 3,0 RC1, dostępność programu `AccessibleObject.RuntimeIDFirstItem` została zmieniona z `protected` na `internal` .
 
 #### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Core 3.0 Preview 4, `AccessibleObject.RuntimeIDFirstItem` pole było `protected`. Począwszy od .NET Core 3.0 RC1, został zmieniony z `protected` na wyrównanie `internal` z dostępnością pola w .NET Framework.
+Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 4, `AccessibleObject.RuntimeIDFirstItem` pole było `protected` . Począwszy od platformy .NET Core 3,0 RC1, zmienił się z `protected` na, `internal` Aby wyrównać dostępność pola w .NET Framework.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 Rc1
+3,0 RC1
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zmiana może mieć wpływ, jeśli opracowano aplikację .NET Core z <xref:System.Windows.Forms.AccessibleObject> typem, `RuntimeIDFirstItem` który pochodzi od pola i uzyskuje dostęp do niego. W takim przypadku można zdefiniować stałą lokalną w następujący sposób:
+Ta zmiana może mieć wpływ na użytkownika, jeśli opracowano aplikację .NET Core z typem pochodzącym z <xref:System.Windows.Forms.AccessibleObject> i uzyskuje dostęp do `RuntimeIDFirstItem` pola. W takim przypadku można zdefiniować stałą lokalną w następujący sposób:
 
 ```csharp
 const int RuntimeIDFirstItem = 0x2a;
@@ -32,11 +32,11 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-- Nie wykrywalne za pomocą analizy Interfejsu API.
+- Nie wykrywalne za pośrednictwem analizy interfejsu API.
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

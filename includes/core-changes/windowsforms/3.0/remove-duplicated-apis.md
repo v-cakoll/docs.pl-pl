@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 3dfacadb5127319d4ce27f367803637cfb1ed00f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888139"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721519"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>Zduplikowane interfejsy API usunięte z formularzy systemu Windows
+### <a name="duplicated-apis-removed-from-windows-forms"></a>Zduplikowane interfejsy API zostały usunięte z Windows Forms
 
-Liczba interfejsów API przypadkowo zduplikowane w obszarze <xref:System.Windows.Forms?displayProperty=fullName> nazw, począwszy od .NET Core 3.0 Preview 4 zostały usunięte w .NET Core 3.0 RC1.
+Wiele interfejsów API przypadkowo zduplikowanych w <xref:System.Windows.Forms?displayProperty=fullName> przestrzeni nazw rozpoczynających się w programie .net core 3,0 Preview 4 zostały usunięte w programie .net core 3,0 RC1.
 
 #### <a name="change-description"></a>Zmień opis
 
-Program .NET Core 3.0 Preview 4 przypadkowo zduplikował wiele typów w obszarze <xref:System.Windows.Forms?displayProperty=fullName> nazw, które już istniały w obszarze <xref:System.ComponentModel.Design?displayProperty=fullName> nazw. Począwszy od .NET Core 3.0 RC1, te zduplikowane typy nie są już dostępne. W poniższej tabeli przedstawiono oryginalny typ i jego zduplikowany typ:
+Program .NET Core 3,0 w wersji zapoznawczej 4 przypadkowo duplikuje kilka typów w <xref:System.Windows.Forms?displayProperty=fullName> przestrzeni nazw, które już istniały w <xref:System.ComponentModel.Design?displayProperty=fullName> przestrzeni nazw. Począwszy od platformy .NET Core 3,0 RC1, te zduplikowane typy nie są już dostępne. Poniższa tabela zawiera listę typów pierwotnych i duplikatów typów:
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Typ oryginalny|Zduplikowany typ|
@@ -23,13 +23,13 @@ Program .NET Core 3.0 Preview 4 przypadkowo zduplikował wiele typów w obszarze
 > |<xref:System.ComponentModel.Design.DesignerActionUIService?displayProperty=fullName>|`System.Windows.Forms.DesignerActionUIService`|
 > |<xref:System.ComponentModel.Design.DesignerCommandSet?displayProperty=fullName>|`System.Windows.Forms.DesignerCommandSet`|
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
-3.0 RC1
+3,0 RC1
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zaktualizuj kod, aby odwoływać się do oryginalnego typu, jak pokazano w kolumnie **Typ oryginalny** tabeli.
+Zaktualizuj kod, aby odwołać się do oryginalnego typu, jak pokazano w kolumnie **pierwotnego typu** tabeli.
 
 #### <a name="category"></a>Kategoria
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

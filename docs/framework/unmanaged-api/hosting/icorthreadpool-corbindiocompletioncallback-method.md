@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b159225-f09c-42f1-aa7c-44087e121249
 topic_type:
 - apiref
-ms.openlocfilehash: 3073f391efd483a161d9e7bc3787a6ce180aa28c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3ebe0bcd546feeeb0aa8c962f2b4c8b0562cb6f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133366"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760449"
 ---
-# <a name="icorthreadpoolcorbindiocompletioncallback-method"></a><span data-ttu-id="cf90b-102">ICorThreadpool::CorBindIoCompletionCallback — Metoda</span><span class="sxs-lookup"><span data-stu-id="cf90b-102">ICorThreadpool::CorBindIoCompletionCallback Method</span></span>
-<span data-ttu-id="cf90b-103">Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="cf90b-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorbindiocompletioncallback-method"></a><span data-ttu-id="a4def-102">ICorThreadpool::CorBindIoCompletionCallback — Metoda</span><span class="sxs-lookup"><span data-stu-id="a4def-102">ICorThreadpool::CorBindIoCompletionCallback Method</span></span>
+<span data-ttu-id="a4def-103">Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a4def-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf90b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cf90b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4def-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a4def-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorBindIoCompletionCallback (  
@@ -34,15 +34,15 @@ HRESULT CorBindIoCompletionCallback (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cf90b-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cf90b-105">Requirements</span></span>  
- <span data-ttu-id="cf90b-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf90b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4def-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a4def-105">Requirements</span></span>  
+ <span data-ttu-id="a4def-106">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4def-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf90b-107">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="cf90b-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a4def-107">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a4def-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cf90b-108">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="cf90b-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4def-108">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a4def-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cf90b-109">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf90b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4def-109">**.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4def-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf90b-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cf90b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4def-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a4def-110">See also</span></span>
 
-- [<span data-ttu-id="cf90b-111">ICorThreadpool, interfejs</span><span class="sxs-lookup"><span data-stu-id="cf90b-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [<span data-ttu-id="a4def-111">ICorThreadpool, interfejs</span><span class="sxs-lookup"><span data-stu-id="a4def-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)

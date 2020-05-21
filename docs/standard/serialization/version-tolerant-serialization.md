@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 87bdc0f0328e7a75477672432c0944818dbef244
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380093"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762594"
 ---
 # <a name="version-tolerant-serialization"></a>Serializacja odporna na wersje
 
@@ -28,7 +28,7 @@ W wersji 1,0 i 1,1 .NET Framework, tworzenie możliwych do przetworzenia typów,
 - Starsze wersje aplikacji mogą generować wyjątki, gdy zostanie wyświetlony monit o deserializacja nowych wersji starego typu.
 - Nowsze wersje aplikacji spowodują wygenerowanie wyjątków podczas deserializacji starszych wersji typu z brakującymi danymi.
 
-Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których <xref:System.SerializableAttribute> zastosowano atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](version-tolerant-serialization-technology-sample.md).
+Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których <xref:System.SerializableAttribute> zastosowano atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](basic-serialization-technology-sample.md).
 
 Funkcje SRS są włączone, korzystając z <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ponadto wszystkie funkcje, z wyjątkiem tolerancja nadmiarowe dane są również włączone podczas korzystania z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Aby uzyskać więcej informacji o używaniu tych klas do serializacji, zobacz [Serializacja binarna](binary-serialization.md).
 

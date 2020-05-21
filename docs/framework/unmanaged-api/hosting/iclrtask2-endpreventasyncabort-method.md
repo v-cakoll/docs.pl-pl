@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8013659-e3df-44b3-814f-a6b534ce62f8
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae66e0bf96138e5bc2f33e4c14ad86e7dabc6b8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ea36c56ef9ccf5886ba96191627e5283da186f7
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124552"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762856"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a>ICLRTask2::EndPreventAsyncAbort — Metoda
 Zezwala na to, aby nowe lub oczekujące żądania przerwania wątku powodowały przerwania wątku w bieżącym wątku.  
@@ -42,24 +42,24 @@ HRESULT EndPreventAsyncAbort();
 ## <a name="remarks"></a>Uwagi  
  Wywołanie tej metody zmniejsza licznik Opóźnij wątek-Abort dla bieżącego wątku o jeden.  
   
- Wywołania [ICLRTask2:: BeginPreventAsyncAbort —](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md) i `EndPreventAsyncAbort` mogą być zagnieżdżane. Tak długo, jak licznik jest większy od zera, przerwania wątku dla bieżącego wątku są opóźnione.  
+ Wywołania [ICLRTask2:: BeginPreventAsyncAbort —](iclrtask2-beginpreventasyncabort-method.md) i `EndPreventAsyncAbort` mogą być zagnieżdżane. Tak długo, jak licznik jest większy od zera, przerwania wątku dla bieżącego wątku są opóźnione.  
   
- Funkcja, która jest udostępniona przez tę funkcję, jest używana wewnętrznie przez maszynę wirtualną (VM). Użycie tych metod może spowodować nieokreślone zachowanie maszyny wirtualnej. Na przykład wywoływanie `EndPreventAsyncAbort` bez uprzedniego wywołania `BeginPreventAsyncAbort` może spowodować, że licznik ma wartość zero, gdy maszyna wirtualna została wcześniej zwiększona. Podobnie licznik wewnętrzny nie jest sprawdzany pod kątem przepełnienia. W przypadku przekroczenia limitu całkowitego, ponieważ jest zwiększana przez zarówno hosta, jak i maszynę wirtualną, zachowanie nie zostanie określone.  
+ Funkcja, która jest udostępniona przez tę funkcję, jest używana wewnętrznie przez maszynę wirtualną (VM). Użycie tych metod może spowodować nieokreślone zachowanie maszyny wirtualnej. Na przykład wywołanie `EndPreventAsyncAbort` bez pierwszego wywołania `BeginPreventAsyncAbort` może spowodować ustawienie wartości zero dla licznika, gdy maszyna wirtualna została wcześniej zwiększona. Podobnie licznik wewnętrzny nie jest sprawdzany pod kątem przepełnienia. W przypadku przekroczenia limitu całkowitego, ponieważ jest zwiększana przez zarówno hosta, jak i maszynę wirtualną, zachowanie nie zostanie określone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [BeginPreventAsyncAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)
-- [ICLRTask2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
-- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [BeginPreventAsyncAbort, metoda](iclrtask2-beginpreventasyncabort-method.md)
+- [ICLRTask2 — Interfejs](iclrtask2-interface.md)
+- [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](ihosttask-interface.md)
+- [IHostTaskManager, interfejs](ihosttaskmanager-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)

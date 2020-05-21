@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-ms.openlocfilehash: 8151531e470b149012b2dd4fca918c8937f13918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f32381dc40a744157e46780e59b83efd63e58dcb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133343"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762646"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchOutLogicalThreadState — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -38,7 +38,7 @@ HRESULT SwitchOutLogicalThreadState(
  określoną Plik cookie wskazujący, że włókna są przełączane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
@@ -46,6 +46,6 @@ HRESULT SwitchOutLogicalThreadState(
   
  **Wersja .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost, interfejs](icorruntimehost-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76d4f93a-5e25-4399-abcc-a1389549481d
 topic_type:
 - apiref
-ms.openlocfilehash: e789996af3aedd17251fc52cde52a336f65053ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edce771b3c36f2c56637aa2a21fe524be0ae12c8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176347"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83763023"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize — Metoda
-Zwraca rozmiar podpisu silnej nazwy. Ta metoda jest zwykle używana przez kompilatory, aby określić, ile miejsca do zarezerwowania w pliku podczas tworzenia zestawu podpisane z opóźnieniem.  
+Zwraca rozmiar sygnatury silnej nazwy. Ta metoda jest zwykle używana przez kompilatory do określenia ilości miejsca do zarezerwowania w pliku podczas tworzenia zestawu z opóźnieniem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,26 +37,26 @@ HRESULT StrongNameSignatureSize (
   
 ## <a name="parameters"></a>Parametry  
  `pbPublicKeyBlob`  
- [w] Struktura typu [PublicKeyBlob,](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) który zawiera część publiczną pary kluczy używane do generowania podpisu silnej nazwy.  
+ podczas Struktura typu [PublicKeyBlob —](../strong-naming/publickeyblob-structure.md) , która zawiera publiczną część pary kluczy używanej do generowania podpisu silnej nazwy.  
   
  `cbPublicKeyBlob`  
- [w] Rozmiar w bajtach `pbPublicKeyBlob`.  
+ podczas Rozmiar, w bajtach, z `pbPublicKeyBlob` .  
   
  `pcbSize`  
- [w] Liczba bajtów wymaganych do przechowywania podpisu silnej nazwy.  
+ podczas Liczba bajtów wymagana do zapisania sygnatury silnej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`jeśli metoda została pomyślnie ukończona; w przeciwnym razie wartość HRESULT wskazująca błąd (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+ `S_OK`Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName, interfejs](iclrstrongname-interface.md)

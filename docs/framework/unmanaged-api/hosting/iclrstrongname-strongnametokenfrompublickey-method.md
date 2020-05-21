@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7962ce88-7e86-4a6f-8298-621b01ffc3c2
 topic_type:
 - apiref
-ms.openlocfilehash: 919c1321f18ca163481d27fa204c78f38af1e456
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e61a652072b424d1245518c832f9b0856e0f2021
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176321"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762607"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>ICLRStrongName::StrongNameTokenFromPublicKey — Metoda
-Pobiera token, który reprezentuje klucz publiczny. Token silnej nazwy jest skróconą formą klucza publicznego.  
+Pobiera token reprezentujący klucz publiczny. Token silnej nazwy to skrócona postać klucza publicznego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,34 +38,34 @@ HRESULT StrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Parametry  
  `pbPublicKeyBlob`  
- [w] Struktura typu [PublicKeyBlob,](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) który zawiera część publiczną pary kluczy używane do generowania podpisu silnej nazwy.  
+ podczas Struktura typu [PublicKeyBlob —](../strong-naming/publickeyblob-structure.md) , która zawiera publiczną część pary kluczy używanej do generowania podpisu silnej nazwy.  
   
  `cbPublicKeyBlob`  
- [w] Rozmiar w bajtach `pbPublicKeyBlob`.  
+ podczas Rozmiar, w bajtach, z `pbPublicKeyBlob` .  
   
  `ppbStrongNameToken`  
- [na zewnątrz] Token silnej nazwy odpowiadający `pbPublicKeyBlob`kluczowi przekazanym w . Środowisko wykonawcze języka wspólnego przydziela pamięć, w której do zwrócenia tokenu. Wywołujący należy zwolnić tę pamięć przy użyciu [metody ICLRStrongName::StrongNameFreeBuffer.](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)  
+ określoną Token silnej nazwy odpowiadający kluczowi przekazaniu `pbPublicKeyBlob` . Środowisko uruchomieniowe języka wspólnego przydziela pamięć, w której ma zostać zwrócony token. Obiekt wywołujący musi zwolnić tę pamięć przy użyciu metody [ICLRStrongName:: StrongNameFreeBuffer —](iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbStrongNameToken`  
- [na zewnątrz] Rozmiar w bajtach zwróconego tokenu silnej nazwy.  
+ określoną Rozmiar (w bajtach) zwracanego tokenu silnej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`jeśli metoda została pomyślnie ukończona; w przeciwnym razie wartość HRESULT wskazująca błąd (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+ `S_OK`Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Token silnej nazwy to skrócona forma klucza publicznego, który jest używany do zapisywania miejsca podczas przechowywania kluczowych informacji w metadanych. W szczególności tokeny silnej nazwy są używane w odwołaniach do zestawu w celu odwoływania się do zestawu zależnego.  
+ Token silnej nazwy jest skróconą formą klucza publicznego, który służy do oszczędzania miejsca podczas zapisywania informacji o kluczu w metadanych. W odniesieniu do zestawu zależnego w odwołaniach do zestawów są używane tokeny silnej nazwy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku mscoree.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece mscoree. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [StrongNameGetPublicKey, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [PublicKeyBlob — Struktura](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameGetPublicKey, metoda](iclrstrongname-strongnamegetpublickey-method.md)
+- [PublicKeyBlob — Struktura](../strong-naming/publickeyblob-structure.md)
+- [ICLRStrongName, interfejs](iclrstrongname-interface.md)

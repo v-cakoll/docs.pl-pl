@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-ms.openlocfilehash: fbc9ea6aab9f0c3d9be95e6affcd04342ce4c5cc
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e2003ce78f04b101fe093867e0820f9c3840151a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901075"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762711"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx — Metoda
 Pobiera wartość wskazującą, czy manifest zestawu w podanej ścieżce zawiera podpis silnej nazwy.  
@@ -40,27 +40,27 @@ HRESULT StrongNameSignatureVerificationEx (
  podczas Ścieżka do przenośnego pliku wykonywalnego (. exe lub. dll) dla zestawu, który ma zostać zweryfikowany.  
   
  `fForceVerification`  
- [in] `true` przeprowadzić weryfikację, nawet jeśli konieczne jest przesłonięcie ustawień rejestru; w przeciwnym razie `false`.  
+ [w] `true` Aby przeprowadzić weryfikację, nawet jeśli konieczne jest przesłonięcie ustawień rejestru; w przeciwnym razie `false` .  
   
  `pfWasVerified`  
- [out] `true`, jeśli zweryfikowano podpis silnej nazwy; w przeciwnym razie `false`. `pfWasVerified` jest również ustawiony na `false`, Jeśli weryfikacja zakończyła się pomyślnie z powodu ustawień rejestru.  
+ [out] `true` Jeśli podpis silnej nazwy został zweryfikowany; w przeciwnym razie `false` . `pfWasVerified`jest również ustawiony na `false` , Jeśli weryfikacja zakończyła się pomyślnie z powodu ustawień rejestru.  
   
-## <a name="return-value"></a>Wartość zwrócona  
- `S_OK`, Jeśli weryfikacja zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+## <a name="return-value"></a>Wartość zwracana  
+ `S_OK`Jeśli weryfikacja zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda [ICLRStrongName:: StrongNameSignatureVerificationEx —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) zapewnia możliwość podobną do metody [ICLRStrongName:: StrongNameSignatureVerification —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) . Jednak drugi parametr wejściowy i parametr wyjściowy dla [ICLRStrongName:: StrongNameSignatureVerificationEx —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) są typu `BOOLEAN`, a nie `DWORD`.  
+ Metoda [ICLRStrongName:: StrongNameSignatureVerificationEx —](iclrstrongname-strongnamesignatureverificationex-method.md) zapewnia możliwość podobną do metody [ICLRStrongName:: StrongNameSignatureVerification —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) . Jednak drugi parametr wejściowy i parametr wyjściowy dla [ICLRStrongName:: StrongNameSignatureVerificationEx —](iclrstrongname-strongnamesignatureverificationex-method.md) są typu `BOOLEAN` zamiast `DWORD` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [StrongNameSignatureVerification, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureVerification, metoda](iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName, interfejs](iclrstrongname-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: e0ab16348abbaff00152f2b259ccafdd331174df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3275a69683a312340f35841815685066def10b23
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136360"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762529"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded — Metoda
-Wskazuje, czy środowisko uruchomieniowe języka wspólnego (CLR) skojarzone z interfejsem [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) jest załadowane do procesu. Środowisko uruchomieniowe może zostać załadowane bez również uruchamiania.  
+Wskazuje, czy środowisko uruchomieniowe języka wspólnego (CLR) skojarzone z interfejsem [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) jest załadowane do procesu. Środowisko uruchomieniowe może zostać załadowane bez również uruchamiania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ HRESULT IsLoaded(
  podczas Dojście do procesu.  
   
  `pbLoaded`  
- [out] `true`, jeśli środowisko CLR jest załadowane do procesu; w przeciwnym razie `false`.  
+ [out] `true` Jeśli środowisko CLR jest załadowane do procesu; w przeciwnym razie `false` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
@@ -46,32 +46,32 @@ HRESULT IsLoaded(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pbLoaded` ma wartość null.|  
+|E_POINTER|`pbLoaded`ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda jest zgodna z poprzednimi wersjami przy użyciu następujących funkcji i interfejsów:  
   
-- Interfejs [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) (w interfejsie API hostingu .NET Framework w wersji 1).  
+- Interfejs [ICorRuntimeHost](icorruntimehost-interface.md) (w interfejsie API hostingu .NET Framework w wersji 1).  
   
-- Interfejs [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) (w interfejsie API hostingu .NET Framework 2,0).  
+- Interfejs [ICLRRuntimeHost](iclrruntimehost-interface.md) (w interfejsie API hostingu .NET Framework 2,0).  
   
-- Przestarzałe funkcje `CorBindTo*` (zobacz [przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) w interfejsie API hostingu .NET Framework 2,0).  
+- Przestarzałe `CorBindTo*` funkcje (zobacz [przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md) w interfejsie API hostingu .NET Framework 2,0).  
   
- Host może wywołać jedną z przestarzałych funkcji `CorBindTo*`, takich jak funkcja [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) , aby utworzyć wystąpienie konkretnej wersji środowiska CLR. Następnie host może wywołać metodę [ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) i określić ten sam numer wersji, aby uzyskać Interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .  
+ Host może wywołać jedną z przestarzałych `CorBindTo*` funkcji, takich jak funkcja [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) , aby utworzyć wystąpienie konkretnej wersji środowiska CLR. Następnie host może wywołać metodę [ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) i określić ten sam numer wersji, aby uzyskać Interfejs [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
   
- Jeśli host następnie wywoła metodę `IsLoaded` na zwróconym interfejsie [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) , `pbLoaded` zwróci `true`; w przeciwnym razie zwraca `false`.  
+ Jeśli host następnie wywoła `IsLoaded` metodę w zwróconym interfejsie [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) , `pbLoaded` zwraca `true` ; w przeciwnym razie zwraca `false` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo, interfejs](iclrruntimeinfo-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting](index.md)

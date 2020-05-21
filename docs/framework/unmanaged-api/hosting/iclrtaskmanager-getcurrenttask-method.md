@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-ms.openlocfilehash: a57610d1b41d80d54a245b9744aafd78a1e88177
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9cb97d9f383b7b54b431457042c4c4a7fc9cd876
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195910"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762836"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask — Metoda
-Pobiera wystąpienie [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) , które jest aktualnie uruchomione w wątku systemu operacyjnego, z którego pochodzi wywołanie metody.  
+Pobiera wystąpienie [ICLRTask](iclrtask-interface.md) , które jest aktualnie uruchomione w wątku systemu operacyjnego, z którego pochodzi wywołanie metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,23 +46,23 @@ HRESULT GetCurrentTask (
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystąpienie `ICLRTask`, które wskazuje `ppTask` parametru, aby reprezentować aktualnie wykonywane zadanie dla środowiska CLR. Wystąpienie `ICLRTask` jest skojarzone z odpowiednim wystąpieniem [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) , które reprezentuje zadanie dla hosta.  
+ `ICLRTask`Wystąpienie, które `ppTask` wskazuje parametr, aby reprezentować aktualnie wykonywane zadanie dla środowiska CLR. `ICLRTask`Wystąpienie jest skojarzone z odpowiednim wystąpieniem [IHostTask](ihosttask-interface.md) , które reprezentuje zadanie dla hosta.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask — Interfejs](iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](ihosttask-interface.md)
+- [IHostTaskManager, interfejs](ihosttaskmanager-interface.md)

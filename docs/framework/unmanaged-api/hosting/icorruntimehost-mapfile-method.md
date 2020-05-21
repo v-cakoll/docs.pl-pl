@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b1a0cd9a1dfba6f33a20416f2a10c967f871a06
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139504"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762672"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile — Metoda
 Mapuje określony plik do pamięci. Ta metoda jest przestarzała.  
@@ -42,7 +42,7 @@ HRESULT MapFile(
  określoną Początkowy adres pamięci, pod którym ma zostać rozpoczęte mapowanie pliku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
@@ -50,6 +50,6 @@ HRESULT MapFile(
   
  **Wersja .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost, interfejs](icorruntimehost-interface.md)

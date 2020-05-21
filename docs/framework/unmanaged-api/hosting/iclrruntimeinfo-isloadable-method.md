@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 9339bb974c261e62502c760dfaf45651573cbe1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13b4e00cf002abca625dbdda010f7d8994360687
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136374"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762542"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable — Metoda
 Wskazuje, czy środowisko uruchomieniowe skojarzone z tym interfejsem może zostać załadowane do bieżącego procesu, biorąc pod uwagę inne środowiska uruchomieniowe, które mogły już zostać załadowane do procesu.  
@@ -34,7 +34,7 @@ HRESULT IsLoadable(
   
 ## <a name="parameters"></a>Parametry  
  `pbLoadable`  
- [out] `true`, jeśli środowisko uruchomieniowe może zostać załadowane do bieżącego procesu; w przeciwnym razie `false`.  
+ [out] `true` Jeśli to środowisko uruchomieniowe może zostać załadowane do bieżącego procesu; w przeciwnym razie `false` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
@@ -42,24 +42,24 @@ HRESULT IsLoadable(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pbLoadable` ma wartość null.|  
+|E_POINTER|`pbLoadable`ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli inne środowisko uruchomieniowe jest już załadowane do procesu, a środowisko uruchomieniowe skojarzone z tym interfejsem może zostać załadowane dla równoczesnego wykonania w procesie, `pbLoadable` zwraca `true`. Jeśli dwa środowiska uruchomieniowe nie mogą być uruchamiane równolegle w procesie, `pbLoadable` zwraca `false`. Na przykład środowisko uruchomieniowe języka wspólnego (CLR) w wersji 4 może działać obok siebie w tym samym procesie, przy użyciu środowiska CLR w wersji 2,0 lub CLR w wersji 1,1. Jednak środowisko CLR w wersji 1,1 i środowisko CLR w wersji 2,0 nie mogą być uruchamiane równolegle.  
+ Jeśli inne środowisko uruchomieniowe jest już załadowane do procesu, a środowisko uruchomieniowe skojarzone z tym interfejsem może zostać załadowane do wykonywania równoczesnego, `pbLoadable` zwraca wartość `true` . Jeśli dwa środowiska uruchomieniowe nie mogą być uruchamiane równolegle, `pbLoadable` Funkcja zwraca wartość `false` . Na przykład środowisko uruchomieniowe języka wspólnego (CLR) w wersji 4 może działać obok siebie w tym samym procesie, przy użyciu środowiska CLR w wersji 2,0 lub CLR w wersji 1,1. Jednak środowisko CLR w wersji 1,1 i środowisko CLR w wersji 2,0 nie mogą być uruchamiane równolegle.  
   
- Jeśli żadne środowisko uruchomieniowe nie zostanie załadowane do procesu, ta metoda zawsze zwraca `true`.  
+ Jeśli żadne środowisko uruchomieniowe nie zostanie załadowane do procesu, ta metoda zawsze zwraca wartość `true` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Obiekt ServiceHost. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo, interfejs](iclrruntimeinfo-interface.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting](index.md)

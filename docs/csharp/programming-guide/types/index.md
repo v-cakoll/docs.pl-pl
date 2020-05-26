@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615218"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802934"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -92,10 +92,10 @@ Typy wartości pochodne od <xref:System.ValueType?displayProperty=nameWithType> 
 
 Istnieją dwie kategorie typów wartości: [struct](../../language-reference/builtin-types/struct.md) i [enum](../../language-reference/builtin-types/enum.md).
 
-Wbudowane typy liczbowe to struktury i mają właściwości i metody, do których można uzyskać dostęp:
+Wbudowane typy liczbowe to struktury i mają pola i metody, do których można uzyskać dostęp:
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 
@@ -199,7 +199,7 @@ Aby uzyskać więcej informacji, zobacz następujące tematy:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie w C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../index.md)

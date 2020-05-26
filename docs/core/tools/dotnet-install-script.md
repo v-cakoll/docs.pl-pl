@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 04/30/2020
-ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205930"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802720"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -100,7 +100,7 @@ Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobie
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Określa ścieżkę instalacji. Katalog zostanie utworzony, jeśli nie istnieje. Wartość domyślna to *%LocalAppData%\Microsoft\dotnet*. Pliki binarne są umieszczane bezpośrednio w tym katalogu.
+  Określa ścieżkę instalacji. Katalog zostanie utworzony, jeśli nie istnieje. Wartość domyślna to *%LocalAppData%\Microsoft\dotnet* w systemach Windows i */usr/share/dotnet* w systemie Linux/macOS. Pliki binarne są umieszczane bezpośrednio w tym katalogu.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

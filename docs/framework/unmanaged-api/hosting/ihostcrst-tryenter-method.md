@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a922fa98-beab-4f09-a342-cc94fc65687f
 topic_type:
 - apiref
-ms.openlocfilehash: f4b40a595bbdea4dd390a42af6a0d4b1a5efa2f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 782a12a47de0196b90de06572520ef5ed36efb26
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130492"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804866"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter — Metoda
-Próbuje wprowadzić sekcję krytyczną reprezentowaną przez bieżące wystąpienie [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) .  
+Próbuje wprowadzić sekcję krytyczną reprezentowaną przez bieżące wystąpienie [IHostCrst](ihostcrst-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,36 +36,36 @@ HRESULT TryEnter (
   
 ## <a name="parameters"></a>Parametry  
  `option`  
- podczas Jedna z wartości [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , wskazująca, jaka akcja powinna być wykonywana przez hosta, jeśli operacja jest blokowana.  
+ podczas Jeden z wartości [WAIT_OPTION](wait-option-enumeration.md) , wskazujący, jaka akcja powinna zostać podjęta przez hosta, jeśli operacja jest blokowana.  
   
  `pbSucceeded`  
- [out] `true` czy można wprowadzić sekcję krytyczną; w przeciwnym razie `false`.  
+ [out] `true` Jeśli można wprowadzić sekcję krytyczną; w przeciwnym razie `false` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`TryEnter` pomyślnie zwrócone.|  
+|S_OK|`TryEnter`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `TryEnter` zwraca natychmiast i wskazuje, czy wywołujący wątek wszedł do sekcji krytycznej. Ta metoda odzwierciedla funkcję Wind32 `TryEnterCriticalSection`.  
+ `TryEnter`zwraca natychmiast i wskazuje, czy wywołujący wątek wszedł do sekcji krytycznej. Ta metoda odzwierciedla funkcję Wind32 `TryEnterCriticalSection` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager — Interfejs](iclrsyncmanager-interface.md)
+- [IHostCrst, interfejs](ihostcrst-interface.md)
+- [IHostSyncManager, interfejs](ihostsyncmanager-interface.md)

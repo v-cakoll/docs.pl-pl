@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: b53c0bb38922ae8de048c131807eb32f97423d6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d37b7d803509ebfa861b7502d419f868bd12e11
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128589"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804387"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree — Metoda
-Służy jako otoka logiczna dla odpowiadającej jej funkcji Win32. Implementacja Win32 `VirtualFree` zwalnia, decommits lub zwalnia i anuluje region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
+Służy jako otoka logiczna dla odpowiadającej jej funkcji Win32. Implementacja Win32 `VirtualFree` zwalnia, decommits lub releases i decommit region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,29 +49,29 @@ HRESULT VirtualFree (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree` pomyślnie zwrócone.|  
+|S_OK|`VirtualFree`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_INVALIDOPERATION|Podjęto próbę zwolnienia pamięci, która nie została przyalokowana przez hosta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `VirtualFree` zwalnia strony pamięci wirtualnej skojarzone z parametrem `lpAddress` za pomocą wcześniejszego wywołania funkcji [IHostMemoryManager:: funkcja VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) . Próby zwolnienia pamięci, która nie została przydzielono za pomocą hosta, powinny zwrócić HOST_E_INVALIDOPERATION.  
+ `VirtualFree`zwalnia strony pamięci wirtualnej skojarzone z `lpAddress` parametrem za pomocą wcześniejszego wywołania funkcji [IHostMemoryManager:: funkcja VirtualAlloc](ihostmemorymanager-virtualalloc-method.md) . Próby zwolnienia pamięci, która nie została przydzielono za pomocą hosta, powinny zwrócić HOST_E_INVALIDOPERATION.  
   
- Semantyka jest taka sama jak w przypadku implementacji Win32 `VirtualFree`. Aby uzyskać więcej informacji, zobacz dokumentację platformy systemu Windows.  
+ Semantyka jest taka sama jak w przypadku implementacji Win32 `VirtualFree` . Aby uzyskać więcej informacji, zobacz dokumentację platformy systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager, interfejs](ihostmemorymanager-interface.md)
+- [IHostMalloc, interfejs](ihostmalloc-interface.md)

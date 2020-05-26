@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Łączenie łańcuchowe standardowych operatorów zapytań
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Samouczek: łączenie łańcuchowe zapytań'
-                              items:
-                                - name: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Przykład wykonania odroczonego
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Przykład łączenia łańcuchowego zapytań
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Materializacja pośrednia
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Łączenie łańcuchowe standardowych operatorów zapytań
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Samouczek: manipulowanie zawartością w dokumencie WordprocessingML'
                               items:
                                 - name: Kształt dokumentów WordprocessingML

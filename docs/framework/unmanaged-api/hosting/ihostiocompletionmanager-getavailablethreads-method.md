@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bab363d1-b859-47a4-9884-5661c611cce7
 topic_type:
 - apiref
-ms.openlocfilehash: 2fa429979faa04518397cf58aaa62d3e45230a76
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ea7395bb1f185ba59940d76def562ab5440e560
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133834"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804768"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads — Metoda
 Pobiera liczbę wątków zakończenia operacji we/wy (całkowitej liczby wątków zarządzanych przez hosta), które nie obsługują obecnie żądań.  
@@ -41,27 +41,27 @@ HRESULT GetAvailableThreads (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetAvailableThreads` pomyślnie zwrócone.|  
+|S_OK|`GetAvailableThreads`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|Host nie dostarcza implementacji `GetAvailableThreads`.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_NOTIMPL|Host nie oferuje implementacji programu `GetAvailableThreads` .|  
   
 ## <a name="remarks"></a>Uwagi  
- Host może potrzebować wyłącznej kontroli nad rozmiarem puli wątków ukończenia we/wy, z przyczyn takich jak implementacja, wydajność lub skalowalność. W związku z tym host nie jest wymagany do implementowania `GetAvailableThreads`. W takim przypadku host powinien zwrócić E_NOTIMPL z tej metody.  
+ Host może potrzebować wyłącznej kontroli nad rozmiarem puli wątków ukończenia we/wy, z przyczyn takich jak implementacja, wydajność lub skalowalność. W związku z tym host nie musi być zaimplementowany `GetAvailableThreads` . W takim przypadku host powinien zwrócić E_NOTIMPL z tej metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRIoCompletionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [IHostIoCompletionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [ICLRIoCompletionManager, interfejs](iclriocompletionmanager-interface.md)
+- [IHostIoCompletionManager, interfejs](ihostiocompletionmanager-interface.md)

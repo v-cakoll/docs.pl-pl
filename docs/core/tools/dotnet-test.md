@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie Test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975436"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802681"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -37,7 +37,7 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym rozwiązaniu. `dotnet test` Polecenie kompiluje rozwiązanie i uruchamia test aplikacji hosta dla każdego projektu testowego w rozwiązaniu. Host testowy wykonuje testy w danym projekcie przy użyciu struktury testowej, na przykład: MSTest, NUnit lub xUnit, i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1.
+`dotnet test`Polecenie służy do wykonywania testów jednostkowych w danym rozwiązaniu. `dotnet test`Polecenie kompiluje rozwiązanie i uruchamia test aplikacji hosta dla każdego projektu testowego w rozwiązaniu. Host testowy wykonuje testy w danym projekcie przy użyciu struktury testowej, na przykład: MSTest, NUnit lub xUnit, i raportuje sukces lub niepowodzenie każdego testu. Jeśli wszystkie testy zakończą się pomyślnie, moduł uruchamiający testy zwraca 0 jako kod zakończenia; w przeciwnym razie, jeśli dowolny test zakończy się niepowodzeniem, zwraca 1.
 
 W przypadku projektów wielowymiarowych testy są uruchamiane dla każdej platformy dostosowanej. Hosta testowego i struktury testów jednostkowych są spakowane jako pakiety NuGet i są przywracane jako zwykłe zależności projektu.
 
@@ -45,7 +45,7 @@ Projekty testowe określają Test Runner przy użyciu zwykłego `<PackageReferen
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma testowa. I `xunit.runner.visualstudio` jest adapterem testowym, który pozwala platformie xUnit na współdziałanie z hostem testowym.
+Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym, `xunit` jest to Platforma testowa. I `xunit.runner.visualstudio` jest adapterem testowym, który pozwala platformie xUnit na współdziałanie z hostem testowym.
 
 ### <a name="implicit-restore"></a>Przywracanie niejawne
 
@@ -74,7 +74,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`, ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
+  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug` , ale Konfiguracja projektu może zastąpić to domyślne ustawienie zestawu SDK.
 
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
@@ -82,7 +82,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku oraz do plików obok niego. Proces rejestrowania komunikatów określa, które pliki są tworzone, takie jak `*.host_<date>.txt` dziennik hosta testowego i `*.datacollector_<date>.txt` dziennik modułu zbierającego dane.
+  Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku oraz do plików obok niego. Proces rejestrowania komunikatów określa, które pliki są tworzone, takie jak `*.host_<date>.txt` Dziennik hosta testowego i `*.datacollector_<date>.txt` Dziennik modułu zbierającego dane.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -102,7 +102,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Określa Rejestrator dla wyników testu. W przeciwieństwie do programu MSBuild, test dotnet nie akceptuje skrótów: `-l "console;v=d"` zamiast `-l "console;verbosity=detailed"`używać.
+  Określa Rejestrator dla wyników testu. W przeciwieństwie do programu MSBuild, test dotnet nie akceptuje skrótów: zamiast `-l "console;v=d"` używać `-l "console;verbosity=detailed"` .
 
 - **`--no-build`**
 
@@ -118,11 +118,11 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w którym można znaleźć pliki binarne do uruchomienia. Jeśli nie zostanie określony, ścieżka domyślna to `./bin/<configuration>/<framework>/`.  W przypadku projektów z wieloma platformami docelowymi ( `TargetFrameworks` za pośrednictwem właściwości) należy również zdefiniować `--framework` , kiedy należy określić tę opcję. `dotnet test`Zawsze uruchamiaj testy z katalogu wyjściowego. Można użyć <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> do korzystania z zasobów testowych w katalogu wyjściowym.
+  Katalog, w którym można znaleźć pliki binarne do uruchomienia. Jeśli nie zostanie określony, ścieżka domyślna to `./bin/<configuration>/<framework>/` .  W przypadku projektów z wieloma platformami docelowymi (za pośrednictwem `TargetFrameworks` Właściwości) należy również zdefiniować, `--framework` kiedy należy określić tę opcję. `dotnet test`zawsze uruchamia testy z katalogu wyjściowego. Można użyć <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> do korzystania z zasobów testowych w katalogu wyjściowym.
 
 - **`-r|--results-directory <PATH>`**
 
-  Katalog, w którym zostaną umieszczone wyniki testu. Jeśli określony katalog nie istnieje, zostanie utworzony. Wartość domyślna znajduje `TestResults` się w katalogu, który zawiera plik projektu.
+  Katalog, w którym zostaną umieszczone wyniki testu. Jeśli określony katalog nie istnieje, zostanie utworzony. Wartość domyślna znajduje się `TestResults` w katalogu, który zawiera plik projektu.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -130,7 +130,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Plik `.runsettings` , który ma być używany do uruchamiania testów. Należy zauważyć, `TargetPlatform` że element (x86 | x64) nie ma wpływu `dotnet test`na. Aby uruchomić testy, które są przeznaczone dla architektury x86, Zainstaluj wersję x86 programu .NET Core. Liczba bitów programu *dotnet. exe* , która znajduje się na ścieżce, będzie używana do uruchamiania testów. Więcej informacji zawierają następujące zasoby:
+  `.runsettings`Plik, który ma być używany do uruchamiania testów. Należy zauważyć, że `TargetPlatform` element (x86 | x64) nie ma wpływu na `dotnet test` . Aby uruchomić testy, które są przeznaczone dla architektury x86, Zainstaluj wersję x86 programu .NET Core. Liczba bitów programu *dotnet. exe* , która znajduje się na ścieżce, będzie używana do uruchamiania testów. Więcej informacji zawierają następujące zasoby:
 
   - [Skonfiguruj testy jednostkowe przy użyciu `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Konfigurowanie przebiegu testowego](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -141,7 +141,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - **`RunSettings`** argumentu
 
@@ -187,16 +187,16 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 `--filter <EXPRESSION>`
 
-`<Expression>`ma format `<property><operator><value>[|&<Expression>]`.
+`<Expression>`ma format `<property><operator><value>[|&<Expression>]` .
 
-`<property>`jest atrybutem klasy `Test Case`. Poniżej przedstawiono właściwości obsługiwane przez popularne struktury testów jednostkowych:
+`<property>`jest atrybutem klasy `Test Case` . Poniżej przedstawiono właściwości obsługiwane przez popularne struktury testów jednostkowych:
 
 | Platforma testowa | Obsługiwane właściwości                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>ClassName</li><li>Priorytet</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cech</li></ul>                                   |
 
-`<operator>` Opisuje relację między właściwością a wartością:
+`<operator>`Opisuje relację między właściwością a wartością:
 
 | Operator | Funkcja        |
 | :------: | --------------- |
@@ -207,7 +207,7 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym `xunit` , jest to Platforma 
 
 `<value>`jest ciągiem. Wszystkie wyszukiwania są rozróżniane wielkości liter.
 
-Wyrażenie bez `<operator>` elementu jest automatycznie uznawane za Właściwość `contains` on `FullyQualifiedName` (na przykład `dotnet test --filter xyz` jest takie samo jak `dotnet test --filter FullyQualifiedName~xyz`).
+Wyrażenie bez elementu `<operator>` jest automatycznie uznawane za `contains` Właściwość on `FullyQualifiedName` (na przykład `dotnet test --filter xyz` jest takie samo jak `dotnet test --filter FullyQualifiedName~xyz` ).
 
 Wyrażenia mogą być dołączane za pomocą operatorów warunkowych:
 
@@ -216,7 +216,7 @@ Wyrażenia mogą być dołączane za pomocą operatorów warunkowych:
 | <code>&#124;</code> | LUB       |
 | `&`                 | AND      |
 
-Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na przykład `(Name~TestMethod1) | (Name~TestMethod2)`).
+Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na przykład `(Name~TestMethod1) | (Name~TestMethod2)` ).
 
 Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-ms.openlocfilehash: 13679b4d40e660dfdd18e6fbafe19226b2ffda37
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 334520df749ba428e6480188cd0655bb734725a6
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195866"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803310"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent — Metoda
 Tworzy obiekt zdarzenia resetowania ręcznego.  
@@ -36,37 +36,37 @@ HRESULT CreateManualEvent (
   
 ## <a name="parameters"></a>Parametry  
  `bInitialState`  
- [in] `true`, jeśli obiekt jest zasygnalizowani; w przeciwnym razie `false`.  
+ [in] `true` , jeśli obiekt jest zasygnalizowani; w przeciwnym razie, `false` .  
   
  `ppEvent`  
- określoną Wskaźnik do adresu wystąpienia [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) lub wartość null, jeśli nie można utworzyć zdarzenia.  
+ określoną Wskaźnik do adresu wystąpienia [IHostManualEvent](ihostmanualevent-interface.md) lub wartość null, jeśli nie można utworzyć zdarzenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateManualEvent` pomyślnie zwrócone.|  
+|S_OK|`CreateManualEvent`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby utworzyć żądany obiekt zdarzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateManualEvent` tworzy `IHostManualEvent`, obiekt zdarzenia resetowania ręcznego, który wymaga wywołania metody [IHostManualEvent:: Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) , aby ustawić ją w stanie niesygnalizującym. `CreateManualEvent` odzwierciedla funkcję Win32 `CreateEvent` z wartością `true` określoną dla parametru `bManualReset`.  
+ `CreateManualEvent`tworzy `IHostManualEvent` obiekt zdarzenia resetowania ręcznego, który wymaga wywołania metody [IHostManualEvent:: Reset](ihostmanualevent-reset-method.md) , aby ustawić ją na stan niesygnalizujący. `CreateManualEvent`odzwierciedla funkcję Win32 `CreateEvent` o wartości `true` określonej dla `bManualReset` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostManualEvent, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager — Interfejs](iclrsyncmanager-interface.md)
+- [IHostManualEvent, interfejs](ihostmanualevent-interface.md)
+- [IHostSyncManager, interfejs](ihostsyncmanager-interface.md)

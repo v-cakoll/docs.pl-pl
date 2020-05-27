@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175684"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003883"
 ---
-# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="3ce97-102">IMetaDataEmit::SaveToStream — Metoda</span><span class="sxs-lookup"><span data-stu-id="3ce97-102">IMetaDataEmit::SaveToStream Method</span></span>
-<span data-ttu-id="3ce97-103">Zapisuje wszystkie metadane w bieżącym `IStream`zakresie do określonego .</span><span class="sxs-lookup"><span data-stu-id="3ce97-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
+# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="dd8e4-102">IMetaDataEmit::SaveToStream — Metoda</span><span class="sxs-lookup"><span data-stu-id="dd8e4-102">IMetaDataEmit::SaveToStream Method</span></span>
+<span data-ttu-id="dd8e4-103">Zapisuje wszystkie metadane w bieżącym zakresie do określonego `IStream` .</span><span class="sxs-lookup"><span data-stu-id="dd8e4-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ce97-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3ce97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd8e4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dd8e4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToStream (
@@ -34,23 +34,23 @@ HRESULT SaveToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ce97-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3ce97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd8e4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="dd8e4-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="3ce97-106">[w] Zapisywalny strumień do zapisania.</span><span class="sxs-lookup"><span data-stu-id="3ce97-106">[in] The writable stream to save to.</span></span>  
+ <span data-ttu-id="dd8e4-106">podczas Zapisywalny strumień do zapisu.</span><span class="sxs-lookup"><span data-stu-id="dd8e4-106">[in] The writable stream to save to.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="3ce97-107">[w] Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="3ce97-107">[in] Reserved.</span></span> <span data-ttu-id="3ce97-108">Musi być zero.</span><span class="sxs-lookup"><span data-stu-id="3ce97-108">Must be zero.</span></span>  
+ <span data-ttu-id="dd8e4-107">podczas Rezerwacj.</span><span class="sxs-lookup"><span data-stu-id="dd8e4-107">[in] Reserved.</span></span> <span data-ttu-id="dd8e4-108">Musi być równa zero.</span><span class="sxs-lookup"><span data-stu-id="dd8e4-108">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ce97-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3ce97-109">Requirements</span></span>  
- <span data-ttu-id="3ce97-110">**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ce97-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd8e4-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dd8e4-109">Requirements</span></span>  
+ <span data-ttu-id="dd8e4-110">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd8e4-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ce97-111">**Nagłówek:** Okręg wyborczy Cor.h</span><span class="sxs-lookup"><span data-stu-id="3ce97-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dd8e4-111">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="dd8e4-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3ce97-112">**Biblioteka:** Używany jako zasób w pliku MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ce97-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dd8e4-112">**Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="dd8e4-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ce97-113">**Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ce97-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dd8e4-113">**.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd8e4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ce97-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3ce97-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd8e4-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="dd8e4-114">See also</span></span>
 
-- [<span data-ttu-id="3ce97-115">IMetaDataEmit — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3ce97-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="3ce97-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="3ce97-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="dd8e4-115">IMetaDataEmit — Interfejs</span><span class="sxs-lookup"><span data-stu-id="dd8e4-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="dd8e4-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="dd8e4-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)

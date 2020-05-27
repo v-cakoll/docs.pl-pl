@@ -1,21 +1,21 @@
 ---
 title: polecenie kompilacji dotnet
-description: Polecenie kompilacji dotnet tworzy projekt i wszystkie jego zależności.
+description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102843"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840913"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
 ## <a name="name"></a>Nazwa
 
-`dotnet build`- Buduje projekt i wszystkie jego zależności.
+`dotnet build`-Kompiluje projekt i wszystkie jego zależności.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -23,35 +23,35 @@ ms.locfileid: "82102843"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-v|--verbosity <LEVEL>]
-    [--version-suffix <VERSION_SUFFIX>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
 ```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet build` tworzy projekt i jego zależności do zestawu plików binarnych. Pliki binarne zawierają kod projektu w plikach języka pośredniego (IL) z rozszerzeniem *.dll.*  W zależności od typu projektu i ustawień mogą zostać dołączone inne pliki, takie jak:
+`dotnet build`Polecenie kompiluje projekt i jego zależności do zestawu plików binarnych. Pliki binarne zawierają kod projektu w plikach języka pośredniego (IL) z rozszerzeniem *. dll* .  W zależności od typu projektu i ustawień można uwzględnić inne pliki, takie jak:
 
-- Plik wykonywalny, który może służyć do uruchamiania aplikacji, jeśli typ projektu jest wykonywalnym kierowaniem .NET Core 3.0 lub nowszym.
-- Pliki symboli używane do debugowania z rozszerzeniem *pdb.*
-- Plik *deps.json,* który wyświetla listę zależności aplikacji lub biblioteki.
-- Plik *.runtimeconfig.json,* który określa udostępnione środowisko uruchomieniowe i jego wersję dla aplikacji.
-- Inne biblioteki, od których zależy projekt (za pośrednictwem odwołań do projektu lub odwołań do pakietu NuGet).
+- Plik wykonywalny, który może służyć do uruchamiania aplikacji, jeśli typem projektu jest plik wykonywalny przeznaczony dla platformy .NET Core 3,0 lub nowszego.
+- Pliki symboli używane do debugowania z rozszerzeniem *. pdb* .
+- Plik *. deps. JSON* , który zawiera listę zależności aplikacji lub biblioteki.
+- Plik *. runtimeconfig. JSON* , który określa udostępnione środowisko uruchomieniowe i jego wersję dla aplikacji.
+- Inne biblioteki, od których zależy projekt (za pośrednictwem odwołań projektu lub pakietów NuGet).
 
-W przypadku projektów wykonywalnych przeznaczonych dla wersji wcześniejszych niż .NET Core 3.0 zależności biblioteki z NuGet zazwyczaj NIE są kopiowane do folderu wyjściowego.  Są one rozpoznawane z folderu pakietów globalnych NuGet w czasie wykonywania. Mając to na uwadze, `dotnet build` produkt nie jest gotowy do przeniesienia na inną maszynę do uruchomienia. Aby utworzyć wersję aplikacji, która może być wdrożona, należy ją opublikować (na przykład za pomocą polecenia [publikowania dotnet).](dotnet-publish.md) Aby uzyskać więcej informacji, zobacz [.NET Core Application Deployment](../deploying/index.md).
+W przypadku projektów wykonywalnych przeznaczonych dla wersji wcześniejszej niż .NET Core 3,0, zależności biblioteki z NuGet nie są zwykle kopiowane do folderu wyjściowego.  Są one rozpoznawane z folderu pakietów globalnych NuGet w czasie wykonywania. Z tego względu produkt `dotnet build` nie jest gotowy do przeniesienia na inną maszynę do uruchomienia. Aby utworzyć wersję aplikacji, którą można wdrożyć, należy ją opublikować (na przykład przy użyciu polecenia [dotnet Publish](dotnet-publish.md) ). Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
 
-W przypadku projektów wykonywalnych przeznaczonych dla platformy .NET Core 3.0 lub nowszych zależności biblioteki są kopiowane do folderu wyjściowego. Oznacza to, że jeśli nie ma żadnej innej logiki specyficzne dla publikowania (takich jak projekty sieci Web), dane wyjściowe kompilacji powinny być wdrażalne.
+W przypadku projektów wykonywalnych przeznaczonych dla platformy .NET Core 3,0 i nowszych zależności biblioteki są kopiowane do folderu wyjściowego. Oznacza to, że jeśli nie ma żadnej innej logiki specyficznej dla publikacji (takiej jak projekty sieci Web), dane wyjściowe kompilacji powinny być możliwe do wdrożenia.
 
-### <a name="implicit-restore"></a>Niejawne przywracanie
+### <a name="implicit-restore"></a>Przywracanie niejawne
 
-Tworzenie wymaga pliku *project.assets.json,* który zawiera listę zależności aplikacji. Plik jest tworzony [`dotnet restore`](dotnet-restore.md) podczas wykonywania. Bez pliku zasobów w miejscu narzędzia nie można rozpoznać zestawów odwołań, co powoduje błędy.
+Kompilowanie wymaga pliku *Project. assets. JSON* , który zawiera listę zależności aplikacji. Plik jest tworzony, gdy [`dotnet restore`](dotnet-restore.md) jest wykonywany. Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-### <a name="executable-or-library-output"></a>Dane wykonywalne lub dane wyjściowe biblioteki
+### <a name="executable-or-library-output"></a>Plik wykonywalny lub biblioteka wyjściowa
 
-Określana przez `<OutputType>` właściwość w pliku projektu, czy projekt jest wykonywalny. W poniższym przykładzie pokazano projekt, który tworzy kod wykonywalny:
+Czy projekt jest plikiem wykonywalnym, czy nie jest określony przez `<OutputType>` Właściwość w pliku projektu. W poniższym przykładzie przedstawiono projekt tworzący kod wykonywalny:
 
 ```xml
 <PropertyGroup>
@@ -59,27 +59,27 @@ Określana przez `<OutputType>` właściwość w pliku projektu, czy projekt jes
 </PropertyGroup>
 ```
 
-Aby utworzyć bibliotekę, `<OutputType>` pomiń właściwość `Library`lub zmień jej wartość na . Biblioteka DLL IL dla biblioteki nie zawiera punktów wejścia i nie może być wykonana.
+Aby utworzyć bibliotekę, Pomiń `<OutputType>` Właściwość lub zmień jej wartość na `Library` . Biblioteka DLL IL dla biblioteki nie zawiera punktów wejścia i nie można jej wykonać.
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build`używa MSBuild do tworzenia projektu, więc obsługuje zarówno równoległe, jak i przyrostowe kompilacje. Aby uzyskać więcej informacji, zobacz [Kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
+`dotnet build`używa programu MSBuild do skompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, zobacz [Kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
 
-Oprócz opcji `dotnet build` polecenie akceptuje opcje MSBuild, takie `-p` jak ustawienie właściwości `-l` lub zdefiniowanie rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Można też użyć polecenia [dotnet msbuild.](dotnet-msbuild.md)
+Oprócz opcji, `dotnet build` polecenie akceptuje Opcje programu MSBuild, takie jak `-p` właściwości ustawienia lub `-l` definiowania rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [informacje dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub można również użyć polecenia programu [dotnet MSBuild](dotnet-msbuild.md) .
 
-Bieganie `dotnet build` jest `dotnet msbuild -restore`równoznaczne z bieganiem; jednak domyślna szczegółowość danych wyjściowych jest inna.
+Uruchomienie `dotnet build` jest równoważne działaniu `dotnet msbuild -restore` , jednak domyślna szczegółowość danych wyjściowych jest inna.
 
 ## <a name="arguments"></a>Argumenty
 
 `PROJECT | SOLUTION`
 
-Plik projektu lub rozwiązania do utworzenia. Jeśli plik projektu lub rozwiązania nie jest określony, MSBuild przeszukuje bieżący katalog roboczy dla pliku, który ma rozszerzenie pliku, który kończy się *proj* lub *sln* i używa tego pliku.
+Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwiązania nie zostanie określony, program MSBuild przeszukuje bieżący katalog roboczy dla pliku, który ma rozszerzenie pliku, które kończy się w *proj* lub *sln* i używa tego pliku.
 
 ## <a name="options"></a>Opcje
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna dla `Debug`większości projektów to , ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
+  Definiuje konfigurację kompilacji. Wartością domyślną dla większości projektów jest `Debug` , ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -87,7 +87,7 @@ Plik projektu lub rozwiązania do utworzenia. Jeśli plik projektu lub rozwiąza
 
 - **`--force`**
 
-  Wymusza wszystkie zależności do rozwiązania, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usunięcie pliku *project.assets.json.*
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
 
 - **`-h|--help`**
 
@@ -95,67 +95,71 @@ Plik projektu lub rozwiązania do utworzenia. Jeśli plik projektu lub rozwiąza
 
 - **`--interactive`**
 
-  Umożliwia zatrzymywania polecenia i oczekiwania na dane wejściowe lub akcję użytkownika. Na przykład, aby zakończyć uwierzytelnianie. Dostępne od .NET Core 3.0 SDK.
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję. Na przykład, aby ukończyć uwierzytelnianie. Dostępne od wersji .NET Core 3,0 SDK.
 
 - **`--no-dependencies`**
 
-  Ignoruje odwołania do projektu do projektu (P2P) i tworzy tylko określony projekt główny.
+  Ignoruje odwołania między projektami i projektami (P2P) i kompiluje tylko określony projekt główny.
 
 - **`--no-incremental`**
 
-  Oznacza kompilacji jako niebezpieczne dla kompilacji przyrostowej. Ta flaga wyłącza kompilacji przyrostowej i wymusza czyste odbudowanie wykresu zależności projektu.
+  Oznacza kompilację jako niebezpieczną dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymuszenie czystej odbudowy wykresu zależności projektu.
 
 - **`--no-restore`**
 
-  Nie wykonuje niejawnego przywracania podczas kompilacji.
+  Nie wykonuje przywracania niejawnego podczas kompilacji.
 
 - **`--nologo`**
 
-  Nie wyświetla banera startowego ani wiadomości o prawach autorskich. Dostępne od .NET Core 3.0 SDK.
+  Nie wyświetla transparentu początkowego ani komunikatu o prawach autorskich. Dostępne od wersji .NET Core 3,0 SDK.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w którym można umieścić wbudowane pliki binarne. Jeśli nie zostanie określona, domyślną ścieżką jest `./bin/<configuration>/<framework>/`.  W przypadku projektów z wieloma `TargetFrameworks` strukturami docelowymi (za pośrednictwem właściwości) należy również zdefiniować `--framework` podczas określania tej opcji.
+  Katalog, w którym mają zostać umieszczone skompilowane pliki binarne. Jeśli nie zostanie określony, ścieżka domyślna to `./bin/<configuration>/<framework>/` .  W przypadku projektów z wieloma platformami docelowymi (za pośrednictwem `TargetFrameworks` Właściwości) należy również zdefiniować, `--framework` kiedy należy określić tę opcję.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa docelowy czas wykonywania. Aby uzyskać listę identyfikatorów środowiska wykonawczego (RID), zobacz [katalog RID](../rid-catalog.md).
+  Określa docelowy środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
+
+- **`-s|--source <SOURCE>`**
+
+  Identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości MSBuild. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i . Wartość domyślna to `minimal`.
+  Ustawia poziom szczegółowości programu MSBuild. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Ustawia wartość właściwości `$(VersionSuffix)` do użycia podczas tworzenia projektu. To działa tylko `$(Version)` wtedy, gdy właściwość nie jest ustawiona. Następnie `$(Version)` jest ustawiona `$(VersionPrefix)` na `$(VersionSuffix)`połączone z , oddzielone kreską.
+  Ustawia wartość `$(VersionSuffix)` właściwości, która ma być używana podczas kompilowania projektu. Działa to tylko wtedy, gdy `$(Version)` Właściwość nie jest ustawiona. Następnie `$(Version)` jest ustawiona na `$(VersionPrefix)` połączone z `$(VersionSuffix)` , oddzielone kreską.
 
 ## <a name="examples"></a>Przykłady
 
-- Tworzenie projektu i jego zależności:
+- Kompiluj projekt i jego zależności:
 
   ```dotnetcli
   dotnet build
   ```
 
-- Tworzenie projektu i jego zależności przy użyciu konfiguracji wydania:
+- Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-- Tworzenie projektu i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18.04):
+- Kompiluj projekt i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18,04):
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- Skompiluj projekt i użyj określonego źródła pakietu NuGet podczas operacji przywracania (.NET Core 2.0 SDK i nowsze wersje):
+- Kompiluj projekt i Użyj określonego źródła pakietu NuGet podczas operacji przywracania (zestaw .NET Core 2,0 SDK i nowsze wersje):
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-- Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu `-p` opcji [MSBuild:](#msbuild)
+- Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu `-p` [opcji MSBuild](#msbuild):
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

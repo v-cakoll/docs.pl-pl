@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9d39c80-41a1-49e7-bb5e-ea3433bfb5d7
 topic_type:
 - apiref
-ms.openlocfilehash: bbb563a304e3ff7cdba3dfe7e394da9cf138ff10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6eac134a4ffb1813cdc6957632ce5fb9b1a5fff
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121369"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842273"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask — Metoda
-Kojarzy wystąpienie `ICLRTask` z bieżącym wystąpieniem [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
+Kojarzy `ICLRTask` wystąpienie z bieżącym wystąpieniem [IHostTask](ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,34 +35,34 @@ HRESULT SetCLRTask (
   
 ## <a name="parameters"></a>Parametry  
  `pCLRTask`  
- podczas Wskaźnik interfejsu do wystąpienia `ICLRTask`, który ma zostać skojarzony z bieżącym wystąpieniem `IHostTask`.  
+ podczas Wskaźnik interfejsu do wystąpienia, `ICLRTask` które ma zostać skojarzone z bieżącym `IHostTask` wystąpieniem.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetCLRTask` pomyślnie zwrócone.|  
+|S_OK|`SetCLRTask`pomyślnie zwrócono.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania CLR `SetCLRTask` do skojarzenia wystąpienia `ICLRTask` z bieżącym wystąpieniem `IHostTask`, które zostało utworzone przez wywołanie [IHostTaskManager::](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)CreateInstance.  
+ Środowisko CLR wywołuje `SetCLRTask` skojarzenie `ICLRTask` wystąpienia z bieżącym `IHostTask` wystąpieniem, które zostało utworzone przez wywołanie [IHostTaskManager::](ihosttaskmanager-createtask-method.md)CreateInstance.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask — Interfejs](iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](ihosttask-interface.md)
+- [IHostTaskManager, interfejs](ihosttaskmanager-interface.md)

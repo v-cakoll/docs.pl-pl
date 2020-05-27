@@ -1,39 +1,39 @@
 ---
 title: polecenie odwołania do listy dotnet
-description: Polecenie referencyjne listy dotnet zapewnia wygodną opcję listy odwołań do projektu.
+description: Polecenie odwołania do listy dotnet udostępnia wygodną opcję wyświetlania listy odwołań do projektu.
 ms.date: 02/14/2020
-ms.openlocfilehash: c0ea46298123e69ae527870e50d204d8fcf5cc85
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b9b34c17102c6218f3d99f6e2620e99f70140284
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463645"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802766"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list reference`- Wyświetla listę odwołań do projektu.
+`dotnet list reference`-Wyświetla odwołania projektu do projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] reference
+dotnet list [<PROJECT>] reference
 
 dotnet list -h|--help
 ```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet list reference` zapewnia wygodną opcję listy odwołań do projektu dla danego projektu lub rozwiązania.
+`dotnet list reference`Polecenie udostępnia wygodną opcję wyświetlania listy odwołań projektu dla danego projektu.
 
 ## <a name="arguments"></a>Argumenty
 
-* **`PROJECT | SOLUTION`**
+* **`PROJECT`**
 
-  Określa plik projektu lub rozwiązania, który ma być używany do wyświetlania odwołań do listy. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog w poszukiwaniu pliku projektu.
+  Plik projektu do działania. Jeśli plik nie zostanie określony, polecenie przeszuka bieżący katalog.
 
 ## <a name="options"></a>Opcje
 
@@ -43,13 +43,13 @@ Polecenie `dotnet list reference` zapewnia wygodną opcję listy odwołań do pr
 
 ## <a name="examples"></a>Przykłady
 
-* Lista odwołań do projektu dla określonego projektu:
+* Wyświetl listę odwołań projektu dla określonego projektu:
 
   ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* Wyświetl listę odwołań do projektu dla projektu w bieżącym katalogu:
+* Wyświetl listę odwołań projektu dla projektu w bieżącym katalogu:
 
   ```dotnetcli
   dotnet list reference

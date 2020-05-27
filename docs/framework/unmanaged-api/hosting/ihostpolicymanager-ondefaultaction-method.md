@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 071e73bd-4795-470f-9373-cfaef553b7f2
 topic_type:
 - apiref
-ms.openlocfilehash: 8d987614c1a5a2c90ccb3faa11c605767ae5cfda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6aa8cb814e509d310c2f5b5524e0fd6727fc43f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178022"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804287"
 ---
 # <a name="ihostpolicymanagerondefaultaction-method"></a>IHostPolicyManager::OnDefaultAction — Metoda
-Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) ma zamiar podjąć domyślną akcję, która została ustawiona przez wywołanie [do metody ICLRPolicyManager::SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md) metody w odpowiedzi na przerwanie wątku lub <xref:System.AppDomain> zwolnić.  
+Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) ma wykonać akcję domyślną ustawioną przez wywołanie metody [ICLRPolicyManager:: SetDefaultAction —](iclrpolicymanager-setdefaultaction-method.md) w odpowiedzi na przerwanie wątku lub jego <xref:System.AppDomain> zwolnienie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,34 +36,34 @@ HRESULT OnDefaultAction (
   
 ## <a name="parameters"></a>Parametry  
  `operation`  
- [w] Jedna z [wartości EClrOperation,](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) wskazująca rodzaj zdarzenia, na które odpowiada clr.  
+ podczas Jedna z wartości [EClrOperation —](eclroperation-enumeration.md) , wskazując rodzaj zdarzenia, do którego odpowiada środowisko CLR.  
   
  `action`  
- [w] Jedna z wartości [EPolicyAction,](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wskazująca akcję, którą clr podejmuje w odpowiedzi na zdarzenie.  
+ podczas Jedna z wartości [EPolicyAction —](epolicyaction-enumeration.md) , wskazująca na akcję, którą wykonuje środowisko CLR w odpowiedzi na zdarzenie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`OnDefaultAction`zwrócono pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Clr nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub przetworzyć wywołanie. Pomyślnie|  
-|HOST_E_TIMEOUT|Limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
-|E_fail|Doszło do nieznanej katastrofalnej awarii. Gdy metoda zwraca E_FAIL, CLR nie jest już użyteczny w ramach procesu. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`OnDefaultAction`pomyślnie zwrócono.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania. została|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [EClrOperation — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [EClrOperation — Wyliczenie](eclroperation-enumeration.md)
+- [EPolicyAction — Wyliczenie](epolicyaction-enumeration.md)
+- [ICLRPolicyManager, interfejs](iclrpolicymanager-interface.md)
+- [IHostPolicyManager, interfejs](ihostpolicymanager-interface.md)

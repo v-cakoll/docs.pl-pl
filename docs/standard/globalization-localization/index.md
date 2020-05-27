@@ -1,5 +1,5 @@
 ---
-title: Globalizacja i lokalizowanie aplikacji .NET
+title: Globalizacja i lokalizowanie aplikacji platformy .NET
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120886"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842013"
 ---
-# <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizowanie aplikacji .NET
+# <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizowanie aplikacji platformy .NET
 
-Opracowanie aplikacji gotowej na świat, w tym aplikacji, która może być zlokalizowana w jednym lub kilku językach, obejmuje trzy kroki: globalizację, przegląd możliwości lokalizowania i lokalizację.
+Tworzenie aplikacji gotowej do używania na świecie, w tym aplikacji, która może być lokalizowana do jednego lub kilku języków, obejmuje trzy kroki: globalizacja, przegląd możliwości zlokalizowania i lokalizacja.
 
 [Globalizacja](globalization.md)
 
@@ -40,7 +40,7 @@ Wykonanie tych trzech kroków ma dwie zalety:
 
 - Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.
 
-.NET zapewnia szerokie wsparcie dla rozwoju aplikacji gotowych na świat i zlokalizowanych. W szczególności wiele elementów członkowskich typu w bibliotece klasy .NET pomocy globalizacji przez zwracanie wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. Ponadto .NET obsługuje zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.
+Platforma .NET zapewnia szeroką pomoc techniczną dla rozwoju aplikacji gotowych do użycia na całym świecie. W szczególności wiele elementów członkowskich typu w bibliotece klas .NET ułatwia globalizację przez zwrócenie wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. Ponadto platforma .NET obsługuje zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.
 
 Aby uzyskać dodatkowe informacje, zobacz [dokumentację globalizacji](/globalization/).
 
@@ -49,6 +49,10 @@ Aby uzyskać dodatkowe informacje, zobacz [dokumentację globalizacji](/globaliz
 [Globalizacja](globalization.md)
 
 Omówienie pierwszego etapu tworzenia aplikacji gotowych do użycia na całym świecie, który obejmuje projektowanie i programowanie aplikacji neutralnej językowo i kulturowo.
+
+[Globalizacja i ICU platformy .NET](globalization-icu.md)
+
+Opisuje, w jaki sposób globalizacja platformy .NET używa [składników międzynarodowych dla standardu Unicode (ICU)](http://site.icu-project.org/home).
 
 [Sprawdzenie możliwości lokalizacji](localizability-review.md)
 
@@ -60,30 +64,30 @@ Omówienie końcowego etapu tworzenia zlokalizowanych aplikacji, który polega n
 
 [Niezależne od kultury operacje na ciągach](culture-insensitive-string-operations.md)
 
-W tym artykule opisano, jak używać metod i klas .NET, które są domyślnie zależne od kultury, aby uzyskać wyniki niewrażliwe na kulturę.
+Opisuje sposób użycia metod i klas .NET, które domyślnie są zależne od kultury w celu uzyskania wyników niewrażliwych na kulturę.
 
-[Najlepsze praktyki dotyczące tworzenia aplikacji gotowych do pracy na całym świecie](best-practices-for-developing-world-ready-apps.md)
+[Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do użytku na całym świecie](best-practices-for-developing-world-ready-apps.md)
 
 Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.
 
 ## <a name="reference"></a>Dokumentacja
 
-- <xref:System.Globalization?displayProperty=nameWithType>Namespace
+- <xref:System.Globalization?displayProperty=nameWithType>obszaru
 
    Zawiera klasy, które definiują informacje związane z kulturą, w tym język, kraj/region, używane kalendarze, wzorce formatu daty, waluty i liczb oraz kolejność sortowania dla ciągów.
 
-- <xref:System.Resources>Namespace
+- <xref:System.Resources>obszaru
 
    Udostępnia klasy służące do tworzenia i używania zasobów oraz wykonywania na nich operacji.
 
-- <xref:System.Text>Namespace
+- <xref:System.Text>obszaru
 
    Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.
 
-- [Resgen.exe (generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (Generator plików zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
 
    Opis sposobu używania programu Resgen.exe w celu konwertowania plików z rozszerzeniem txt i zasobów opartych na formacie języka XML (resx) na pliki binarne resources środowiska uruchomieniowego języka wspólnego.
 
-- [Winres.exe (Edytor zasobów formularzy systemu Windows)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (Edytor zasobów Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Opis sposobu używania programu Winres.exe w celu lokalizowania formularzy programu Windows Forms.

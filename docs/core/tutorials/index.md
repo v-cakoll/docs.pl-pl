@@ -1,53 +1,59 @@
 ---
-title: Samouczki dotyczące rdzenia .NET
-description: Postępuj zgodnie z samouczkami do nauki .NET Core do tworzenia aplikacji i bibliotek na komputerach Mac, Linux i Windows.
+title: Samouczki dotyczące platformy .NET Core
+description: Postępuj zgodnie z samouczkami dotyczącymi uczenia się platformy .NET Core, aby tworzyć aplikacje i biblioteki na komputerach Mac, Linux i Windows.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625937"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840926"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Dowiedz się, że program .NET Core i narzędzia zestawu SDK .NET Core zostaną zdane przez poznawanie tych samouczków
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
-Poniższe samouczki są dostępne do nauki o .NET Core.
+Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 
-## <a name="create-applications-with-visual-studio"></a>Tworzenie aplikacji za pomocą programu Visual Studio
+## <a name="use-visual-studio"></a>Korzystanie z programu Visual Studio
 
-- [Tworzenie aplikacji konsoli Hello World](with-visual-studio.md)
-- [Debugowanie aplikacji Hello World](debugging-with-visual-studio.md)
-- [Publikowanie aplikacji Hello World](publishing-with-visual-studio.md)
+- [Tworzenie aplikacji konsolowej](with-visual-studio.md)
+- [Tworzenie aplikacji konsolowej języka F #](../../fsharp/get-started/get-started-visual-studio.md)
+- [Debugowanie aplikacji](debugging-with-visual-studio.md)
+- [Publikowanie aplikacji](publishing-with-visual-studio.md)
 - [Tworzenie biblioteki klas](library-with-visual-studio.md)
-- [Testowanie biblioteki klas](testing-library-with-visual-studio.md)
+- [Testowanie jednostkowe biblioteki klas](testing-library-with-visual-studio.md)
 - [Korzystanie z biblioteki klas](consuming-library-with-visual-studio.md)
-- [Usługa Azure Cosmos DB: Wprowadzenie do interfejsu API SQL i programu .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Instalowanie pakietu i korzystanie z niego](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [Tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>Tworzenie aplikacji za pomocą kodu programu Visual Studio
+## <a name="use-visual-studio-code"></a>Korzystanie z programu Visual Studio Code
 
-- [Wprowadzenie do języka C# i programu Visual Studio Code](with-visual-studio-code.md)
-- [Wprowadzenie do platformy .NET Core w systemie macOS](using-on-macos.md)
+Wybierz te samouczki, jeśli chcesz użyć Visual Studio Code lub innego edytora kodu. Wszystkie używają interfejsu wiersza polecenia dla zadań programistycznych platformy .NET Core, dlatego wszystkie mogą być używane z dowolnym edytorem kodu.
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>Tworzenie aplikacji za pomocą programu Visual Studio dla komputerów Mac
+- [Tworzenie aplikacji konsolowej](with-visual-studio-code.md)
+- [Tworzenie aplikacji konsolowej i publikowanie jej](cli-create-console-app.md)
+- [Tworzenie aplikacji konsolowej języka F #](../../fsharp/get-started/get-started-vscode.md)
+- [Tworzenie biblioteki i testowanie jednostkowe — macOS](using-on-macos.md)
+- [Instalowanie pakietu i korzystanie z niego](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [Tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](using-on-mac-vs.md)
-- [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>Użyj Visual Studio dla komputerów Mac
 
-## <a name="build-applications-with-the-net-core-cli"></a>Tworzenie aplikacji za pomocą cli .NET Core
+- [Tworzenie aplikacji konsolowej](using-on-mac-vs.md)
+- [Utwórz bibliotekę i test jednostkowy](using-on-mac-vs-full-solution.md)
+- [Instalowanie pakietu i korzystanie z niego](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [Wprowadzenie do programu .NET Core w systemie Windows/Linux/macOS przy użyciu procesora CLI .NET Core](cli-create-console-app.md)
-- [Organizowanie i testowanie projektów za pomocą cli .NET Core](testing-with-cli.md)
-- [Wprowadzenie do F #](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a>Tematy zaawansowane
 
-## <a name="other"></a>Inne
-
-- [Testowanie jednostkowe w .NET Core przy użyciu testu dotnet](../testing/unit-testing-with-dotnet-test.md)
-- [Testowanie jednostkowe z mstestem i programami .NET Core](../testing/unit-testing-with-mstest.md)
-- [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](libraries.md)
-- [Hostowanie platformy .NET Core z kodu natywnego](netcore-hosting.md)
+- [Jak utworzyć biblioteki](libraries.md)
+- [Testowanie jednostkowe aplikacji za pomocą xUnit](testing-with-cli.md)
+- [Test jednostkowy przy użyciu języka C#/VB/F # z NUnit/xUnit/MSTest](../testing/index.md)
+- [Test jednostkowy na żywo w programie Visual Studio](/visualstudio/test/live-unit-testing-start)
 - [Tworzenie szablonów dla interfejsu wiersza polecenia](cli-templates-create-item-template.md)
-- [Tworzenie i używanie narzędzi dla cli](../tools/global-tools-how-to-create.md)
+- [Tworzenie i używanie narzędzi dla interfejsu wiersza polecenia](../tools/global-tools-how-to-create.md)
+- [Tworzenie aplikacji przy użyciu wtyczek](creating-app-with-plugin-support.md)
 
-Tutoriale dotyczące tworzenia aplikacji sieci Web ASP.NET Core można znaleźć w [dokumentacji ASP.NET Core](/aspnet/core/).
+## <a name="create-web-apps"></a>Tworzenie aplikacji sieci Web
+
+Samouczki dotyczące projektowania ASP.NET Core aplikacji sieci Web znajdują się w [dokumentacji ASP.NET Core](/aspnet/core/).

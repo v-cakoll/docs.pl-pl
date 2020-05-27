@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8b8521a09fa54a105e8263a471ab0467fb6ccc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5bc5752d4d2b772b1d18f438c4daaa1b8938da9e
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176295"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842351"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook — Metoda
-Umożliwia hostowi określenie, czy środowisko uruchomieniowe języka wspólnego (CLR) może wbudowane określone wywołanie funkcji niezarządzanej.  
+Umożliwia hostowi określenie, czy środowisko uruchomieniowe języka wspólnego (CLR) może być wbudowane w określone wywołanie do niezarządzanej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,39 +36,39 @@ HRESULT CallNeedsHostHook (
   
 ## <a name="parameters"></a>Parametry  
  `target`  
- [w] Adres w mapowanym pliku wykonywalnego przenośnego (PE) niezarządzanej funkcji, która ma być wywoływana.  
+ podczas Adres w zamapowanym przenośnym pliku wykonywalnym (PE) niezarządzanej funkcji, która ma zostać wywołana.  
   
  `pbCallNeedsHostHook`  
- [na zewnątrz] Wskaźnik do wartości logicznej, który wskazuje, czy host wymaga połączenia, które mają być podłączone.  
+ określoną Wskaźnik do wartości logicznej wskazującej, czy host wymaga wywołania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`zwrócono pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Clr nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub proces wywołania pomyślnie.|  
-|HOST_E_TIMEOUT|Limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
-|E_fail|Doszło do nieznanej katastrofalnej awarii. Gdy metoda zwraca E_FAIL, CLR nie jest już użyteczny w ramach procesu. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CallNeedsHostHook`pomyślnie zwrócono.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zoptymalizować wykonanie kodu, CLR wykonuje analizę każdej platformy wywołać wywołanie podczas kompilacji, aby ustalić, czy wywołanie może być inlined. `CallNeedsHostHook`umożliwia hostowi zastąpienie tej decyzji, wymagając podłączenia wywołania funkcji niezarządzanej. Jeśli host wymaga haka, środowisko wykonawcze nie inline wywołania.  
+ Aby ułatwić optymalizację wykonywania kodu, środowisko CLR wykonuje analizę każdego wywołania wywołania platformy podczas kompilacji, aby określić, czy wywołanie może być wbudowane. `CallNeedsHostHook`umożliwia hostowi przesłonięcie tej decyzji przez wymaganie wywołania niezarządzanej funkcji. Jeśli host wymaga elementu Hook, środowisko uruchomieniowe nie wywołuje wywołania.  
   
- Host zazwyczaj wymaga haka, gdzie musi dostosować stan zmiennoprzecinkowe lub po otrzymaniu powiadomienia, że wywołanie jest wprowadzenie stanu, w którym host nie może śledzić żądania środowiska wykonawczego dla pamięci lub blokady podjęte. Gdy host wymaga, aby wywołanie zostało podłączona, środowisko wykonawcze powiadamia o wielu przejściach do i z kodu zarządzanego przy użyciu wywołań [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)i [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Host zwykle wymaga punktu zaczepienia, w którym należy dostosować stan zmiennoprzecinkowy lub po odebraniu powiadomienia, że wywołanie przejdzie do stanu, w którym host nie może śledzić żądań dotyczących pamięci lub wszelkich wykonanych blokad. Gdy host wymaga, aby wywołanie było podłączane, środowisko uruchomieniowe powiadamia hosta przejść do i z kodu zarządzanego za pomocą wywołań do [EnterRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)i [ReverseLeaveRuntime —](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [ICLRTask — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask — Interfejs](iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](ihosttask-interface.md)
+- [IHostTaskManager, interfejs](ihosttaskmanager-interface.md)

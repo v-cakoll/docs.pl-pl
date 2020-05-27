@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158310"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840939"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -32,7 +32,7 @@ dotnet restore -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet restore` Polecenie używa narzędzia NuGet do przywracania zależności oraz narzędzi specyficznych dla projektu, które są określone w pliku projektu.  W większości przypadków nie trzeba jawnie używać `dotnet restore` polecenia, ponieważ przywracanie NuGet jest uruchamiane niejawnie w razie potrzeby podczas uruchamiania następujących poleceń:
+`dotnet restore`Polecenie używa narzędzia NuGet do przywracania zależności oraz narzędzi specyficznych dla projektu, które są określone w pliku projektu.  W większości przypadków nie trzeba jawnie używać `dotnet restore` polecenia, ponieważ przywracanie NuGet jest uruchamiane niejawnie w razie potrzeby podczas uruchamiania następujących poleceń:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -42,14 +42,14 @@ dotnet restore -h|--help
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Czasami może być niewygodne uruchamianie niejawnego przywracania NuGet przy użyciu tych poleceń. Na przykład niektóre zautomatyzowane systemy, takie jak systemy kompilacji, muszą jawnie wywołać `dotnet restore` , aby określić, kiedy następuje przywracanie, aby można było kontrolować użycie sieci. Aby zapobiec niejawnemu przywracaniu NuGet, można użyć `--no-restore` flagi z dowolnym z tych poleceń, aby wyłączyć Przywracanie niejawne.
+Czasami może być niewygodne uruchamianie niejawnego przywracania NuGet przy użyciu tych poleceń. Na przykład niektóre zautomatyzowane systemy, takie jak systemy kompilacji, muszą jawnie wywołać, `dotnet restore` Aby określić, kiedy następuje przywracanie, aby można było kontrolować użycie sieci. Aby zapobiec niejawnemu przywracaniu NuGet, można użyć `--no-restore` flagi z dowolnym z tych poleceń, aby wyłączyć Przywracanie niejawne.
 
 ### <a name="specify-feeds"></a>Określ źródła danych
 
 Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany, gdy zainstalowano zestaw .NET Core SDK. Aby określić dodatkowe źródła danych, wykonaj jedną z następujących czynności:
 
 - Utwórz własny plik *NuGet. config* w katalogu projektu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](/nuget/consume-packages/configuring-nuget-behavior) i [NuGet. config różnice](#nugetconfig-differences) w dalszej części tego artykułu.
-- Użyj `dotnet nuget` poleceń, takich [`dotnet nuget add source`](dotnet-nuget-add-source.md)jak.
+- Użyj `dotnet nuget` poleceń, takich jak [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
 Można zastąpić źródła danych *NuGet. config* `-s` opcją.
 
@@ -57,11 +57,11 @@ Informacje o sposobach korzystania z uwierzytelnionych źródeł danych znajduj�
 
 ### <a name="global-packages-folder"></a>Folder pakietów globalnych
 
-W przypadku zależności można określić miejsce, w którym przywrócone pakiety są umieszczane podczas operacji przywracania `--packages` przy użyciu argumentu. Jeśli nie zostanie określony, zostanie użyta domyślna pamięć podręczna pakietów NuGet, która znajduje `.nuget/packages` się w katalogu w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych. Na przykład */home/user1* na system Linux lub *C:\Users\user1* w systemie Windows.
+W przypadku zależności można określić miejsce, w którym przywrócone pakiety są umieszczane podczas operacji przywracania przy użyciu `--packages` argumentu. Jeśli nie zostanie określony, zostanie użyta domyślna pamięć podręczna pakietów NuGet, która znajduje się w katalogu `.nuget/packages` w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych. Na przykład */home/user1* na system Linux lub *C:\Users\user1* w systemie Windows.
 
 ### <a name="project-specific-tooling"></a>Narzędzia specyficzne dla projektu
 
-W przypadku narzędzi specyficznych dla projektu `dotnet restore` program najpierw przywraca pakiet, w którym narzędzie jest spakowane, a następnie przechodzi do przywracania zależności narzędzia, jak określono w pliku projektu.
+W przypadku narzędzi specyficznych dla projektu program `dotnet restore` najpierw przywraca pakiet, w którym narzędzie jest spakowane, a następnie przechodzi do przywracania zależności narzędzia, jak określono w pliku projektu.
 
 ### <a name="nugetconfig-differences"></a>różnice NuGet. config
 
@@ -71,11 +71,11 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  Przekierowania powiązań nie działają z `<PackageReference>` elementami i .NET Core obsługuje `<PackageReference>` tylko elementy dla pakietów NuGet.
+  Przekierowania powiązań nie działają z `<PackageReference>` elementami i .NET Core obsługuje tylko `<PackageReference>` elementy dla pakietów NuGet.
 
 - [Narzędzie](/nuget/schema/nuget-config-file#solution-section)
 
-  To ustawienie dotyczy programu Visual Studio i nie ma zastosowania do programu .NET Core. Platforma .NET Core nie używa `packages.config` pliku, a zamiast `<PackageReference>` tego używa elementów dla pakietów NuGet.
+  To ustawienie dotyczy programu Visual Studio i nie ma zastosowania do programu .NET Core. Platforma .NET Core nie używa `packages.config` pliku, a zamiast tego używa `<PackageReference>` elementów dla pakietów NuGet.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
@@ -139,11 +139,11 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa środowisko uruchomieniowe przywracania pakietu. Służy do przywracania pakietów dla środowiska uruchomieniowego, które nie są `<RuntimeIdentifiers>` jawnie wymienione w tagu w pliku *. csproj* . Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). Podaj wiele identyfikatorów RID, określając tę opcję wiele razy.
+  Określa środowisko uruchomieniowe przywracania pakietu. Służy do przywracania pakietów dla środowiska uruchomieniowego, które nie są jawnie wymienione w `<RuntimeIdentifiers>` tagu w pliku *. csproj* . Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). Podaj wiele identyfikatorów RID, określając tę opcję wiele razy.
 
 - **`-s|--source <SOURCE>`**
 
-  Określa źródło pakietu NuGet do użycia podczas operacji przywracania. To ustawienie zastępuje wszystkie źródła określone w plikach *NuGet. config* . Można podać wiele źródeł, określając tę opcję wiele razy.
+  Określa identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania. To ustawienie zastępuje wszystkie źródła określone w plikach *NuGet. config* . Można podać wiele źródeł, określając tę opcję wiele razy.
 
 - **`--use-lockfile`**
 
@@ -151,7 +151,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `minimal`.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `minimal` .
 
 ## <a name="examples"></a>Przykłady
 

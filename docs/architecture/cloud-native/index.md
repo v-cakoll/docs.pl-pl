@@ -3,12 +3,12 @@ title: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy A
 description: Przewodnik tworzenia aplikacji natywnych w chmurze wykorzystujących kontenery, mikrousługi i funkcje bezserwerowe platformy Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614005"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840887"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
 
@@ -34,7 +34,7 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki towarowe wymienione na https://www.microsoft.com stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione na [https://www.microsoft.com](https://www.microsoft.com) stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 

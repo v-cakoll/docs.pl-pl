@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f399d33dbe05cb5768aa45533ef30d28409e18e2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141472"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006483"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType — Wyliczenie
 Zawiera wartości wskazujące podstawową przyczynę zdarzenia przepełnienia stosu.  
@@ -36,24 +36,24 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`SO_ClrEngine`|Przepełnienie stosu zostało spowodowane przez aparat wykonywania.|  
 |`SO_Managed`|Przepełnienie stosu zostało spowodowane przez kod zarządzany.|  
 |`SO_Other`|Przepełnienie stosu zostało spowodowane przez kod niezarządzany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Te informacje są przesyłane do hosta za pomocą wywołania metody [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) .  
+ Te informacje są przesyłane do hosta za pomocą wywołania metody [IActionOnCLREvent:: OnEvent](iactiononclrevent-onevent-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

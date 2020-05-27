@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: 76f18336808e6832b2ded94349efd7948f23a1ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23f6a301c4c11be92e05dbac0d4f69817d857a28
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175697"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003964"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save — Metoda
 Zapisuje wszystkie metadane w bieżącym zakresie do pliku pod określonym adresem.  
@@ -36,21 +36,21 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parametry  
  `wzFile`  
- [w] Nazwa pliku do zapisania. Jeśli ta wartość ma wartość null, kopia w pamięci zostanie zapisana w ostatniej lokalizacji, która została użyta.  
+ podczas Nazwa pliku, w którym ma zostać zapisana. Jeśli ta wartość jest równa null, kopia znajdująca się w pamięci zostanie zapisana w ostatnio używanej lokalizacji.  
   
  `dwSaveFlags`  
- [w] Zastrzeżone. Musi być zero.  
+ podczas Rezerwacj. Musi być równa zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

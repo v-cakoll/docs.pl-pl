@@ -4,20 +4,20 @@ ms.date: 11/08/2019
 helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
-ms.openlocfilehash: 4031ff19131c905072696837d1622dbb6e54ae61
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978376"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004741"
 ---
-# <a name="gcnoaffinitize-element"></a>\<element > GCNoAffinitize
+# <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize>, element
 
 Określa, czy koligacji wątki serwera GC z procesorami CPU.
 
-\<Konfiguracja > \
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCNoAffinitize >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCNoAffinitize>
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,11 +56,11 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie wątki serwera GC są trudne do koligacji z odpowiednimi procesorami CPU. Każdy z dostępnych procesorów systemu ma własną stertę i wątek GC. Jest to zazwyczaj preferowane ustawienie, ponieważ optymalizuje użycie pamięci podręcznej. Rozpoczynając od .NET Framework 4.6.2, ustawiając atrybut `enabled` elementu **GCNoAffinitize** na `false`, można określić, że wątki i procesory serwera GC nie powinny być ściśle sprzężone.
+Domyślnie wątki serwera GC są trudne do koligacji z odpowiednimi procesorami CPU. Każdy z dostępnych procesorów systemu ma własną stertę i wątek GC. Jest to zazwyczaj preferowane ustawienie, ponieważ optymalizuje użycie pamięci podręcznej. Rozpoczynając od .NET Framework 4.6.2, ustawiając atrybut **GCNoAffinitize** elementu `enabled` na `true` , można określić, że wątki i procesory serwera GC nie powinny być ściśle sprzężone.
 
 Można określić **GCNoAffinitize** element konfiguracji, aby nie koligacji wątki serwera GC z procesorami CPU. Można go również użyć wraz z elementem [GCHeapCount](gcheapcount-element.md) , aby kontrolować liczbę stert i wątków GC używanych przez aplikację.
 
-Jeśli atrybut `enabled` elementu **GCNoAffinitize** jest `false` (jego wartość domyślna), można również użyć elementu [GCHeapCount](gcheapcount-element.md) w celu określenia liczby wątków i sterty GC, a także elementu [GCHeapAffinitizeMask](gcheapaffinitizemask-element.md) , aby określić procesory, do których są koligacje wątki i sterty GC.
+Jeśli `enabled` atrybut elementu **GCNoAffinitize** jest `false` (jego wartość domyślna), można również użyć elementu [GCHeapCount](gcheapcount-element.md) , aby określić liczbę wątków i sterty GC, wraz z elementem [GCHeapAffinitizeMask](gcheapaffinitizemask-element.md) , aby określić procesory, do których są koligacje wątki i sterty GC.
 
 ## <a name="example"></a>Przykład
 
@@ -87,7 +87,7 @@ Poniższy przykład nie koligacji wątków serwera GC i ogranicza liczbę stert/
 </configuration>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCHeapAffinitizeMask, element](gcheapaffinitizemask-element.md)

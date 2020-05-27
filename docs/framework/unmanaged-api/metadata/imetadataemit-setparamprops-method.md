@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b710f966f519e2702607b7e186fff5986110d391
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177504"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007822"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps — Metoda
-Ustawia lub zmienia funkcje parametru metody zdefiniowanego przez wcześniejsze wywołanie [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Ustawia lub zmienia funkcje parametru metody, który został zdefiniowany przez poprzednie wywołanie do [IMetaDataEmit::D efineparam](imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,33 +40,33 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `pd`  
- [w] Token parametru docelowego.  
+ podczas Token dla parametru Target.  
   
  `szName`  
- [w] Nazwa parametru w Unicode.  
+ podczas Nazwa parametru w formacie Unicode.  
   
  `dwParamFlags`  
- [w] Flagi parametru.  
+ podczas Flagi parametru.  
   
  `dwCPlusTypeFlag`  
- [w] Wartość ELEMENT_TYPE_* dla wartości stałej.  
+ podczas ELEMENT_TYPE_ * dla wartości stałej.  
   
  `pValue`  
- [w] Stała wartość parametru.  
+ podczas Stała wartość parametru.  
   
  `cchValue`  
- [w] Rozmiar w znakach (Unicode) . `pValue`  
+ podczas Znaki w formacie (Unicode) `pValue` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

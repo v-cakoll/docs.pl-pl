@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: 23a6931b31ea2d7e4e8d1cb3dc8adf3a51216315
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae30140e69926be32570960a32524a74b850bda4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175749"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009356"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName — Metoda
 Pobiera token metadanych dla typu, który jest zdefiniowany w określonym zakresie, który znajduje się poza bieżącym zakresem.  
@@ -37,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parametry  
  `tkResolutionScope`  
- [w] Token określający zakres rozpoznawania. Następujące typy tokenów są prawidłowe:  
+ podczas Token określający zakres rozwiązania. Następujące typy tokenów są prawidłowe:  
   
-- `mdModuleRef`, jeśli typ jest zdefiniowany w tym samym złożeniu, w którym zdefiniowano wywołującego.  
+- `mdModuleRef`, jeśli typ jest zdefiniowany w tym samym zestawie, w którym jest zdefiniowany obiekt wywołujący.  
   
-- `mdAssemblyRef`, jeśli typ jest zdefiniowany w złożeniu innym niż ten, w którym jest zdefiniowany rozmówca.  
+- `mdAssemblyRef`, jeśli typ jest zdefiniowany w zestawie innym niż ten, w którym jest zdefiniowany obiekt wywołujący.  
   
-- `mdTypeRef`, jeśli typ jest typem zagnieżdżanym.  
+- `mdTypeRef`, jeśli typ jest typem zagnieżdżonym.  
   
-- `mdModule`, jeśli typ jest zdefiniowany w tym samym module, w którym jest zdefiniowany wywołujący.  
+- `mdModule`, jeśli typ jest zdefiniowany w tym samym module, w którym jest zdefiniowany obiekt wywołujący.  
   
-- Null, jeśli typ jest zdefiniowany globalnie.  
+- Wartość null, jeśli typ jest zdefiniowany globalnie.  
   
  `szName`  
- [w] Nazwa typu docelowego w Unicode.  
+ podczas Nazwa typu docelowego w formacie Unicode.  
   
  `ptr`  
- [na zewnątrz] Wskaźnik do `mdTypeRef` tokenu, który jest przypisany do typu.  
+ określoną Wskaźnik do `mdTypeRef` tokenu, który jest przypisany do typu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

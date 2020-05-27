@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177979"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008520"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx — Funkcja
-Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury.  
+Tłumaczy wartość HRESULT na odpowiedni komunikat o błędzie dla określonej kultury.  
   
- Ta funkcja została przestarzała w .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,45 +41,45 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Parametry  
  `lcid`  
- [w] Identyfikator kultury. Przekaż -1, `lcid` aby użyć kultury domyślnej.  
+ podczas Identyfikator kultury. Przekaż `lcid` wartość 1, aby użyć domyślnej kultury.  
   
  `iResourceID`  
- [w] An HRESULT.  
+ podczas WYNIK HRESULT.  
   
  `szBuffer`  
- [na zewnątrz] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
+ określoną Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
   
  `iMax`  
- [w] Rozmiar buforu komunikatu o błędzie.  
+ podczas Rozmiar buforu komunikatów o błędach.  
   
  `bQuiet`  
- [w] Ignorowane.  
+ podczas Ignoruj.  
   
  `pcwchUsed`  
- [na zewnątrz] Wskaźnik do długości komunikatu o błędzie.  
+ określoną Wskaźnik do długości komunikatu o błędzie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów COM, zgodnie z definicją w winError.h, oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów COM, jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_invalidarg|`szBuffer`jest null `iMax` lub wynosi zero (0).|  
+|E_INVALIDARG|`szBuffer`ma wartość null lub `iMax` jest równa zero (0).|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda nie zostanie `szBuffer` ukończona pomyślnie, zawiera pusty ciąg.  
+ Jeśli metoda nie zakończy się pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Mscoree.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [LoadStringRC, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [LoadStringRC, funkcja](loadstringrc-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

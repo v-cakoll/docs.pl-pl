@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: 6825a5198976cc7ab2c04ebd6e782418dcf4a8f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edce5cb93b770fb5730e5a06633ffffacf332f7a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177679"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004698"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType — Metoda
-Tworzy odwołanie do określonego typu, który jest zdefiniowany poza bieżącym zakresem i definiuje token dla tego odwołania.  
+Tworzy odwołanie do określonego typu, który jest zdefiniowany poza bieżącym zakresem, i definiuje token dla tego odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,39 +41,39 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>Parametry  
  `pAssemImport`  
- [w] [Interfejs IMetaDataAssemblyImport,](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) który reprezentuje zestaw, z którego jest importowany typ docelowy.  
+ podczas Interfejs [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) , który reprezentuje zestaw, z którego zaimportowano typ docelowy.  
   
  `pbHashValue`  
- [w] Tablica zawierająca skrót dla zestawu `pAssemImport`określonego przez program .  
+ podczas Tablica, która zawiera skrót dla zestawu określonego przez `pAssemImport` .  
   
  `cbHashValue`  
- [w] Liczba bajtów w `pbHashValue` tablicy.  
+ podczas Liczba bajtów w `pbHashValue` tablicy.  
   
  `pImport`  
- [w] Interfejs [IMetaDataImport reprezentujący](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) zakres metadanych, z którego jest importowany typ docelowy.  
+ podczas Interfejs [IMetaDataImport](imetadataimport-interface.md) reprezentujący zakres metadanych, z którego jest importowany typ docelowy.  
   
  `tdImport`  
- [w] Token, `mdTypeDef` który określa typ docelowy.  
+ podczas `mdTypeDef`Token określający typ docelowy.  
   
  `pAssemEmit`  
- [w] [Interfejs IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) reprezentujący zestaw, do którego importowany jest typ docelowy.  
+ podczas Interfejs [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) , który reprezentuje zestaw, do którego zaimportowany jest typ docelowy.  
   
  `ptr`  
- [na zewnątrz] Token, `mdTypeRef` który jest zdefiniowany w bieżącym zakresie odwołania do typu.  
+ określoną `mdTypeRef`Token, który jest zdefiniowany w bieżącym zakresie dla odwołania do typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Przed [wywołaniem metody IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) można użyć `DefineImportType` tej metody, aby utworzyć odwołanie do typu w bieżącym zakresie dla klasy nadrzędnej elementu członkowskiego lub interfejsu nadrzędnego.  
+ Przed wywołaniem metody [IMetaDataEmit::D efineimportmember](imetadataemit-defineimportmember-method.md) , można użyć `DefineImportType` metody, aby utworzyć odwołanie do typu w bieżącym zakresie dla klasy nadrzędnej lub interfejsu nadrzędnego elementu członkowskiego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560a6adf85fab7f421b86cba52224d5b1bfe1089
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176022"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006262"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources — Metoda
-Pobiera wskaźnik do wyliczania zasobów, do których odwołuje się w bieżącym manifeście zestawu.  
+Pobiera wskaźnik do modułu wyliczającego dla zasobów, do których odwołuje się bieżący manifest zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość `EnumManifestResources` null, gdy metoda jest wywoływana po raz pierwszy.  
+ [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy `EnumManifestResources` Metoda jest wywoływana po raz pierwszy.  
   
  `rManifestResources`  
- [na zewnątrz] Tablica używana do `mdManifestResource` przechowywania tokenów metadanych.  
+ określoną Tablica służąca do przechowywania `mdManifestResource` tokenów metadanych.  
   
  `cMax`  
- [w] Maksymalna liczba `mdManifestResource` tokenów, które `rManifestResources`można umieścić w .  
+ podczas Maksymalna liczba `mdManifestResource` tokenów, które mogą być umieszczone w `rManifestResources` .  
   
  `pcTokens`  
- [na zewnątrz] Liczba tokenów `mdManifestResource` faktycznie umieszczonych w `rManifestResources`.  
+ określoną Liczba `mdManifestResource` tokenów, które zostały umieszczone w rzeczywistości `rManifestResources` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
+|`S_OK`|`EnumManifestResources`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

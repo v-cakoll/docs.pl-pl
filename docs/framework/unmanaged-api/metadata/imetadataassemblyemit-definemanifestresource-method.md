@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 026f5efe195cdb34999b65c5f47de6f68d30e11a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177869"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008134"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource — Metoda
 Tworzy `ManifestResource` strukturę zawierającą metadane dla określonego zasobu manifestu i zwraca skojarzony token metadanych.  
@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [w] Nazwa zasobu.  
+ podczas Nazwa zasobu.  
   
  `tkImplementation`  
- [w] Token metadanych `mdtFile` typu `mdtAssemblyRef` lub który jest mapowany do dostawcy zasobów. Wartość NULL wskazuje, że plik, w którym osadzone są metadane, jest dostawcą zasobów.  
+ podczas Token metadanych typu `mdtFile` lub `mdtAssemblyRef` mapowany do dostawcy zasobów. Wartość NULL wskazuje, że plik, w którym są osadzone metadane, jest dostawcą zasobów.  
   
  `dwOffset`  
- [w] Przesunięcie na początek zasobu w pliku. W przypadku zasobów w plikach autonomicznych zawsze będzie to zero. Jeśli zasób jest osadzony w pliku PE (przenośny plik wykonywalny), jest to przesunięcie obiektu BLOB zasobu, który rozpoczyna się w lokalizacji określonej w pliku nagłówka cor.h.  
+ podczas Przesunięcie do początku zasobu w pliku. W przypadku zasobów w plikach autonomicznych zawsze będzie to zero. Jeśli zasób jest osadzony w pliku PE (przenośny plik wykonywalny), jest to przesunięcie obiektu BLOB zasobu, który jest uruchamiany w lokalizacji określonej w pliku nagłówkowym cor. h.  
   
  `dwResourceFlags`  
- [w] Bitowa kombinacja wartości flagi określających ustawienia właściwości dla definicji zasobu.  
+ podczas Bitowa kombinacja wartości flag, które określają ustawienia właściwości dla definicji zasobu.  
   
  `pmdmr`  
- [na zewnątrz] Wskaźnik do zwróconego tokenu metadanych.  
+ określoną Wskaźnik do zwracanego tokenu metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- Jedna `ManifestResource` struktura metadanych musi być zdefiniowana dla każdego zasobu, który jest implementowany w każdym pliku zestawu.  
+ `ManifestResource`Dla każdego zasobu, który jest zaimplementowany w każdym z plików zestawu, musi być zdefiniowana jedna struktura metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0066c6590a9e0cf278e036111c2739f7cfaf679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175658"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003909"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal — Metoda
-Ustawia informacje o kierowaniu PInvoke dla pola, zwracania metody lub parametru metody, do którego odwołuje się określony token.  
+Ustawia informacje o kierowaniu PInvoke dla parametru, zwraca metodę lub parametr metody, do którego odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] Token dla elementu danych docelowych. Jest to token `mdFieldDef` lub `mdParamDef` token.  
+ podczas Token dla docelowego elementu danych. Jest to albo `mdFieldDef` `mdParamDef` token.  
   
  `pvNativeType`  
- [w] Podpis dla typu niezarządzanego.  
+ podczas Sygnatura dla typu niezarządzanego.  
   
  `cbNativeType`  
- [w] Liczba bajtów `pvNativeType`w pliku .  
+ podczas Liczba bajtów w `pvNativeType` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

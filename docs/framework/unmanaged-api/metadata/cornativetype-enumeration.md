@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: 09a351db65c7ed310d3eb68c71a5207ed6040dd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177969"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007640"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType — Wyliczenie
 Zawiera wartości opisujące natywne typy niezarządzane.  
@@ -91,60 +91,60 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Nieaktualne.|  
 |`NATIVE_TYPE_VOID`|Nieaktualne.|  
-|`NATIVE_TYPE_BOOLEAN`|4-bajtowa wartość logiczna, gdzie wartość TRUE jest niezerowa, a wartość FALSE wynosi zero.|  
-|`NATIVE_TYPE_I1`|Podpisana 8-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_U1`|Niepodpisana 8-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_I2`|Podpisana 16-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_U2`|Niepodpisana 16-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_I4`|Podpisana 32-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_U4`|Niepodpisana 32-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_I8`|Podpisana 64-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_U8`|Niepodpisana 64-bitowa wartość całkowita.|  
-|`NATIVE_TYPE_R4`|4-bajtowa zmiennoprzecinczna wartość liczbowa.|  
-|`NATIVE_TYPE_R8`|8-bajtowa zmiennoprzecinczna wartość liczbowa.|  
+|`NATIVE_TYPE_BOOLEAN`|4-bajtowa wartość logiczna, gdzie TRUE ma wartość różną od zera, a wartość FALSE to zero.|  
+|`NATIVE_TYPE_I1`|8-bitowa liczba całkowita ze znakiem.|  
+|`NATIVE_TYPE_U1`|8-bitowa liczba całkowita bez znaku.|  
+|`NATIVE_TYPE_I2`|Wartość 16-bitowa ze znakiem.|  
+|`NATIVE_TYPE_U2`|16-bitowa liczba całkowita bez znaku.|  
+|`NATIVE_TYPE_I4`|Podpisana 32-bitowa liczba całkowita.|  
+|`NATIVE_TYPE_U4`|Niepodpisana wartość 32-bitowa liczba całkowita.|  
+|`NATIVE_TYPE_I8`|Podpisana 64-bitowa liczba całkowita.|  
+|`NATIVE_TYPE_U8`|Niepodpisana wartość 64-bitowa liczba całkowita.|  
+|`NATIVE_TYPE_R4`|4-bajtowa wartość liczbowa zmiennoprzecinkowa.|  
+|`NATIVE_TYPE_R8`|8-bajtowa wartość liczbowa zmiennoprzecinkowa.|  
 |`NATIVE_TYPE_SYSCHAR`|Nieaktualne.|  
 |`NATIVE_TYPE_VARIANT`|Nieaktualne.|  
-|`NATIVE_TYPE_CURRENCY`|Numeryczny typ COM, który odpowiada <xref:System.Decimal> typowi zarządzanemu.|  
+|`NATIVE_TYPE_CURRENCY`|Liczbowy typ COM, który odpowiada typowi zarządzanemu <xref:System.Decimal> .|  
 |`NATIVE_TYPE_PTR`|Nieaktualne.|  
 |`NATIVE_TYPE_DECIMAL`|Nieaktualne.|  
 |`NATIVE_TYPE_DATE`|Nieaktualne.|  
-|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_BSTR`|Międzyoperacyjność modelu COM.|  
 |`NATIVE_TYPE_LPSTR`|Wartość ciągu LPSTR.|  
 |`NATIVE_TYPE_LPWSTR`|Wartość ciągu LPWSTR.|  
 |`NATIVE_TYPE_LPTSTR`|Wartość ciągu LPTSTR.|  
 |`NATIVE_TYPE_FIXEDSYSSTRING`|Stała, zdefiniowana przez system wartość ciągu.|  
 |`NATIVE_TYPE_OBJECTREF`|Nieaktualne.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
-|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
-|`NATIVE_TYPE_STRUCT`|Wartość struktury macierzystej.|  
-|`NATIVE_TYPE_INTF`|COM Interop.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_IUNKNOWN`|Międzyoperacyjność modelu COM.|  
+|`NATIVE_TYPE_IDISPATCH`|Międzyoperacyjność modelu COM.|  
+|`NATIVE_TYPE_STRUCT`|Wartość struktury natywnej.|  
+|`NATIVE_TYPE_INTF`|Międzyoperacyjność modelu COM.|  
+|`NATIVE_TYPE_SAFEARRAY`|Międzyoperacyjność modelu COM.|  
 |`NATIVE_TYPE_FIXEDARRAY`|Wartość tablicy o stałej długości.|  
-|`NATIVE_TYPE_INT`|Natywna 16-bitowa podpisana wartość całkowita.|  
-|`NATIVE_TYPE_UINT`|Natywna 16-bitowa niepodpisana wartość całkowita.|  
+|`NATIVE_TYPE_INT`|Natywna 16-bitowa liczba całkowita ze znakiem.|  
+|`NATIVE_TYPE_UINT`|Natywna 16-bitowa liczba całkowita bez znaku.|  
 |`NATIVE_TYPE_NESTEDSTRUCT`|Nieaktualne.<br /><br /> Użyj NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Wybierz BSTR lub ANSIBSTR w zależności od platformy.|  
-|`NATIVE_TYPE_VARIANTBOOL`|2-bajtowa wartość logiczna, gdzie wartość TRUE wynosi -1, a FALSE wynosi zero.|  
+|`NATIVE_TYPE_BYVALSTR`|Międzyoperacyjność modelu COM.|  
+|`NATIVE_TYPE_ANSIBSTR`|Międzyoperacyjność modelu COM.|  
+|`NATIVE_TYPE_TBSTR`|Międzyoperacyjność modelu COM.<br /><br /> W zależności od platformy wybierz opcję BSTR lub ANSIBSTR.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Wartość 2-bajtowa wartości logicznej, gdzie TRUE to-1, a FALSE to zero.|  
 |`NATIVE_TYPE_FUNC`|Wskaźnik funkcji.|  
-|`NATIVE_TYPE_ASANY`|Odwołanie do dowolnego typu macierzystego.|  
-|`NATIVE_TYPE_ARRAY`|Odwołanie do tablicy z elementami członkowskich nieokreślonego typu.|  
+|`NATIVE_TYPE_ASANY`|Odwołanie do dowolnego typu natywnego.|  
+|`NATIVE_TYPE_ARRAY`|Odwołanie do tablicy z elementami członkowskimi nieokreślonego typu.|  
 |`NATIVE_TYPE_LPSTRUCT`|32-bitowy wskaźnik liczby całkowitej do struktury.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Niestandardowy typ macierzysty organizatora.<br /><br /> Po tym musi następować ciąg o następującym formacie: "Nazwa typu macierzystego/0Nazwa typu organizatora/0Optional cookie/0" lub "{Typ macierzysty GUID}/0Nazwa typu organizatora aplikacji/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> Z ELEMENT_TYPE_I4 tego typu mapuje do VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Typ `IInspectable` macierzysty.|  
-|`NATIVE_TYPE_HSTRING`|Rodzimy `HString`.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Typ natywny organizatora niestandardowego.<br /><br /> Musi to być ciąg o następującym formacie: "native type name/0Custom typ marshaler/0Optional cookie/0" lub "{native Type GUID}/0Custom typu nazwa/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|Międzyoperacyjność modelu COM.<br /><br /> Dzięki ELEMENT_TYPE_I4 ten typ mapuje do VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|Typ natywny `IInspectable` .|  
+|`NATIVE_TYPE_HSTRING`|Natywny `HString` .|  
 |`NATIVE_TYPE_MAX`|Nieprawidłowa wartość.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

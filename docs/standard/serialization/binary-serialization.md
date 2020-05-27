@@ -339,7 +339,7 @@ Platforma .NET Core obsługuje serializację binarne dla podzbioru typów. List�
 > | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | Począwszy od platformy .NET Core 2.0.4. |
 > | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | Począwszy od platformy .NET Core 2.0.4. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization>\
 Zawiera klasy, które mogą być używane do serializacji i deserializacji obiektów.

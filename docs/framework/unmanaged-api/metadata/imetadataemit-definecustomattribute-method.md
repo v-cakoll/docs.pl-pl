@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175892"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005631"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute — Metoda
-Tworzy definicję atrybutu niestandardowego z określonym podpisem metadanych, który ma być dołączony do określonego obiektu i pobiera token do tej definicji atrybutu niestandardowego.  
+Tworzy definicję atrybutu niestandardowego z określonym podpisem metadanych do dołączenia do określonego obiektu i pobiera token do tej definicji atrybutu niestandardowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parametry  
  `tkObj`  
- [w] Token dla elementu właściciela.  
+ podczas Token dla elementu będącego właścicielem.  
   
  `tkType`  
- [w] Token, który identyfikuje atrybut niestandardowy.  
+ podczas Token, który identyfikuje atrybut niestandardowy.  
   
  `pCustomAttribute`  
- [w] Wskaźnik do atrybutu niestandardowego.  
+ podczas Wskaźnik do atrybutu niestandardowego.  
   
  `cbCustomAttribute`  
- [w] Liczba bajtów `pCustomAttribute`w pliku .  
+ podczas Liczba bajtów w `pCustomAttribute` .  
   
  `pcv`  
- [na zewnątrz] Token `mdCustomAttribute` przypisany.  
+ określoną `mdCustomAttribute`Przypisany token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

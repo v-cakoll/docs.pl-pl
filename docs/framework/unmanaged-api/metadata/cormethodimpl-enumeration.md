@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450206"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007666"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl — Wyliczenie
 Zawiera wartości opisujące funkcje implementacji metody.  
@@ -54,7 +54,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Flagi opisujące typ kodu.|  
 |`miIL`|Określa, że implementacja metody to język pośredni (MSIL) firmy Microsoft.|  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|Określa, że metoda nie może być wbudowana.|  
 |`miAggressiveInlining`|Określa, że metoda powinna być przedkreślona, jeśli to możliwe.|  
 |`miNoOptimization`|Określa, że metoda nie powinna być zoptymalizowana.|  
-|`miMaxMethodImplVal`|Maksymalna prawidłowa wartość `CorMethodImpl`.|  
+|`miMaxMethodImplVal`|Maksymalna prawidłowa wartość elementu `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

@@ -159,7 +159,7 @@ Przepływy pracy mogą być zbudowane z wbudowanych działań, a także z dział
 
      Aby uzyskać instrukcje dotyczące sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: uruchamianie przepływu pracy](how-to-run-a-workflow.md). Jeśli zostały już wykonane kroki [: uruchamianie przepływu pracy](how-to-run-a-workflow.md) z innym stylem przepływu pracy i chcesz uruchomić go przy użyciu sekwencyjnego przepływu pracy z tego kroku, przejdź do tematu, [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) w temacie [jak uruchomić przepływ pracy](how-to-run-a-workflow.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>

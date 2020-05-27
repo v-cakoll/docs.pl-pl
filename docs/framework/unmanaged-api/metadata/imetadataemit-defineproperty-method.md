@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175788"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009382"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty — Metoda
-Tworzy definicję właściwości dla określonego typu, z określonymi `get` i `set` akcesorami metod i pobiera token do tej definicji właściwości.  
+Tworzy definicję właściwości określonego typu, z określonymi `get` `set` metodami dostępu, i pobiera token do tej definicji właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token dla klasy lub interfejsu, na którym właściwość jest definiowana.  
+ podczas Token klasy lub interfejsu, w którym właściwość jest zdefiniowana.  
   
  `szProperty`  
- [w] Nazwa właściwości.  
+ podczas Nazwa właściwości.  
   
  `dwPropFlags`  
- [w] Flagi właściwości.  
+ podczas Flagi właściwości.  
   
  `pvSig`  
- [w] Podpis właściwości.  
+ podczas Podpis właściwości.  
   
  `cbSig`  
- [w] Liczba bajtów `pvSig`w pliku .  
+ podczas Liczba bajtów w `pvSig` .  
   
  `dwCPlusTypeFlag`  
- [w] Typ wartości domyślnej właściwości.  
+ podczas Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [w] Wartość domyślna właściwości.  
+ podczas Wartość domyślna właściwości.  
   
  `cchValue`  
- [w] Liczba znaków (Unicode) `pValue`w pliku .  
+ podczas Liczba znaków (Unicode) w `pValue` .  
   
  `mdSetter`  
- [w] Metoda, która ustawia wartość właściwości.  
+ podczas Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- [w] Metoda, która pobiera wartość właściwości.  
+ podczas Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [w] Tablica innych metod skojarzonych z właściwością. Zakończ tablicę za `mdTokenNil`pomocą pliku .  
+ podczas Tablica innych metod skojarzonych z właściwością. Przerwij tablicę przy użyciu `mdTokenNil` .  
   
  `pmdProp`  
- [na zewnątrz] Token `mdProperty` przypisany.  
+ określoną `mdProperty`Przypisany token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

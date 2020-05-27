@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177527"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008758"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps — Metoda
-Ustawia lub aktualizuje określoną funkcję zdarzenia zdefiniowanego przez wcześniejsze wywołanie [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Ustawia lub aktualizuje określoną funkcję zdarzenia zdefiniowaną przez poprzednie wywołanie do [IMetaDataEmit::D efineevent](imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parametry  
  `ev`  
- [w] Token zdarzenia.  
+ podczas Token zdarzenia.  
   
  `dwEventFlags`  
- [w] Flagi zdarzeń. Jest to maska `CorEventAttr` bitowa wartości.  
+ podczas Flagi zdarzeń. To jest maska bitów `CorEventAttr` wartości.  
   
  `tkEventType`  
- [w] Token dla klasy zdarzenia. Jest to token `mdTypeDef` lub `mdTypeRef` token.  
+ podczas Token dla klasy Event. Jest to albo `mdTypeDef` `mdTypeRef` token.  
   
  `mdAddOn`  
- [w] Metoda używana do subskrybowania zdarzenia lub null.  
+ podczas Metoda używana do subskrybowania zdarzenia lub wartość null.  
   
  `mdRemoveOn`  
- [w] Metoda używana do anulowania subskrypcji zdarzenia lub null.  
+ podczas Metoda używana do anulowania subskrypcji zdarzenia lub wartość null.  
   
  `mdFire`  
- [w] Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
+ podczas Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
   
  `rmdOtherMethods[]`  
- [w] Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Ostatnim elementem tablicy `mdMethodDefNil`musi być .  
+ podczas Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Ostatni element tablicy musi być `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

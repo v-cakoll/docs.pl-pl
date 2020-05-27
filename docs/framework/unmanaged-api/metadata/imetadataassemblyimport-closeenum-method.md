@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9df4087-12b3-46d9-b075-9067dd7805df
 topic_type:
 - apiref
-ms.openlocfilehash: c037b9dce4b7530c952c75122f86335da82e1b27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 63e81e822eb55b4090aeee6d6be3c72adbd94451
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446032"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009135"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum — Metoda
 Zwalnia odwołanie do określonego wystąpienia wyliczenia.  
@@ -38,14 +38,14 @@ void CloseEnum (
  podczas Wystąpienie wyliczenia, które ma zostać zamknięte.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

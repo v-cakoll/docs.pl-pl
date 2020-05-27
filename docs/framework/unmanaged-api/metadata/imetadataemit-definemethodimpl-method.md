@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175827"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004494"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl — Metoda
-Tworzy definicję implementacji metody dziedziczonej z interfejsu i zwraca token do tej definicji implementacji metody.  
+Tworzy definicję dla implementacji metody dziedziczonej z interfejsu i zwraca token do tej definicji implementacji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token `mdTypedef` klasy implementującej.  
+ podczas `mdTypedef`Token klasy implementującej.  
   
  `tkBody`  
- [w] `mdMethodDef` Lub `mdMemberRef` token treści kodu.  
+ podczas `mdMethodDef`Token lub `mdMemberRef` treść kodu.  
   
  `tkDecl`  
- [w] Lub `mdMethodDef` `mdMemberRef` token metody interfejsu implementowane.  
+ podczas `mdMethodDef`Token lub `mdMemberRef` metoda interfejsu, która jest implementowana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

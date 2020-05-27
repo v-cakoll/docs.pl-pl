@@ -57,7 +57,7 @@ Te wykresy można następnie osadzić w Azure Portal w odpowiedni sposób przy u
 ![Przykład Power BI pulpitu nawigacyjnego ](./media/azure-monitor.png)
  **7-15**. Przykład Power BI pulpitu nawigacyjnego.
 
-## <a name="alerts"></a>Alerts (Alerty)
+## <a name="alerts"></a>Alerty
 
 Czasami posiadanie pulpitów nawigacyjnych danych jest niewystarczające. Jeśli nikt nie będzie w stanie obejrzeć pulpitów nawigacyjnych, może to potrwać kilka godzin, zanim problem zostanie rozwiązany, a nawet wykryty. W tym celu Azure Monitor również zawiera pierwsze rozwiązanie do tworzenia [alertów](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview). Alerty mogą być wyzwalane przez szeroki zakres warunków, w tym:
 

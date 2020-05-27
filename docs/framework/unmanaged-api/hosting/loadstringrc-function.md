@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 56ae7b7cf3b577bfe41ebd0bdd98e0da68047b44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8bd0292ddf22453f8892ed8bddd10c2144877097
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176243"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008521"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC — Funkcja
 Tłumaczy wartość HRESULT na komunikat o błędzie przy użyciu domyślnej kultury bieżącego wątku.  
   
- Ta funkcja została przestarzała w .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,38 +39,38 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Parametry  
  `iResourceID`  
- [w] An HRESULT.  
+ podczas WYNIK HRESULT.  
   
  `szBuffer`  
- [na zewnątrz] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
+ określoną Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
   
  `iMax`  
- [w] Rozmiar buforu komunikatu o błędzie.  
+ podczas Rozmiar buforu komunikatów o błędach.  
   
  `bQuiet`  
- [w] Ignorowane.  
+ podczas Ignoruj.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów modelu com (Component Object Model), zgodnie z definicją w pliku WinError.h, oprócz następujących wartości.  
+ Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_invalidarg|`szBuffer`jest zerowa lub `iMax` wynosi zero (0).|  
+|E_INVALIDARG|`szBuffer`ma wartość null lub `iMax` jest równa zero (0).|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda nie zostanie `szBuffer` ukończona pomyślnie, zawiera pusty ciąg.  
+ Jeśli metoda nie zakończy się pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** plik MSCorEE.dll i Mscorwks.dll. Użyj pliku MSCorEE.dll zamiast pliku Mscorwks.dll, aby upewnić się, że jest to właściwa wersja programu .NET Framework.  
+ **Biblioteka:** MSCorEE. dll i mscorwks. dll. Użyj biblioteki MSCorEE. dll zamiast Mscorwks. dll, aby upewnić się, że docelowa jest poprawna wersja .NET Framework.  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [LoadStringRCEx — Funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [LoadStringRCEx — Funkcja](loadstringrcex-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

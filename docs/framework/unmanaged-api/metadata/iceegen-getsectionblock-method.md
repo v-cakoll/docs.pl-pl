@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176087"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008333"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock — Metoda
 Pobiera blok sekcji bazy kodu.  
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [w] Sekcja, z której ma być pobierana blokada bazy kodu.  
+ podczas Sekcja, z której ma zostać pobrany blok bazy kodu.  
   
  `len`  
- [w] Długość bloku do pobrania.  
+ podczas Długość bloku do pobrania.  
   
  `align`  
- [w] Bajt względem początku sekcji, z którym należy wyrównać pierwszy bajt bloku. Jest to położenie bloku w sekcji.  
+ podczas Bajt względem początku sekcji, za pomocą którego ma zostać wyrównany pierwszy bajt bloku. To jest pozycja bloku w sekcji.  
   
  `ppBytes`  
- [na zewnątrz] Wskaźnik do lokalizacji, która odbiera adres pobranego bloku.  
+ określoną Wskaźnik do lokalizacji, która otrzymuje adres pobranego bloku.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `GetSectionBlock` tylko wtedy, gdy masz specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.  
+ Wywołanie `GetSectionBlock` tylko wtedy, gdy istnieją specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen — Interfejs](iceegen-interface.md)

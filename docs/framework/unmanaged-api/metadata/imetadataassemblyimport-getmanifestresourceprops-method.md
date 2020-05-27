@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177663"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009031"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps — Metoda
 Pobiera zestaw właściwości zasobu manifestu z określonym podpisem metadanych.  
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdmr`  
- [w] Token, `mdManifestResource` który reprezentuje zasób, dla którego można uzyskać właściwości.  
+ podczas `mdManifestResource`Token reprezentujący zasób, dla którego mają zostać pobrane właściwości.  
   
  `szName`  
- [na zewnątrz] Nazwa zasobu.  
+ określoną Nazwa zasobu.  
   
  `cchName`  
- [w] Rozmiar, w szerokich znaków, z `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, z `szName` .  
   
  `pchName`  
- [na zewnątrz] Wskaźnik do liczby szerokich znaków rzeczywiście `szName`zwrócony w .  
+ określoną Wskaźnik do liczby znaków dwubajtowych faktycznie zwróconych w `szName` .  
   
  `ptkImplementation`  
- [na zewnątrz] Wskaźnik do `mdFile` tokenu `mdAssemblyRef` lub tokenu, który reprezentuje plik lub zestaw, odpowiednio, który zawiera zasób.  
+ określoną Wskaźnik do `mdFile` tokenu lub `mdAssemblyRef` tokenu, który reprezentuje odpowiednio plik lub zestaw, który zawiera zasób.  
   
  `pdwOffset`  
- [na zewnątrz] Wskaźnik do wartości, która określa przesunięcie na początku zasobu w pliku.  
+ określoną Wskaźnik do wartości, która określa przesunięcie do początku zasobu w pliku.  
   
  `pdwResourceFlags`  
- [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do zasobu. Wartość flag jest kombinacją co najmniej jednej wartości [CorManifestResourceFlags.](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)  
+ określoną Wskaźnik do flag, które opisują metadane zastosowane do zasobu. Wartość flags jest kombinacją co najmniej jednej wartości [CorManifestResourceFlags —](cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

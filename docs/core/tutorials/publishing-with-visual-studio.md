@@ -1,75 +1,113 @@
 ---
-title: Publikowanie aplikacji .NET Core Hello World za pomocą programu Visual Studio
-description: Publikowanie tworzy zestaw plików, które są potrzebne do uruchomienia aplikacji .NET Core.
+title: Publikowanie aplikacji Hello world .NET Core przy użyciu programu Visual Studio
+description: Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji .NET Core.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/10/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156637"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005116"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publikowanie aplikacji .NET Core Hello World za pomocą programu Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core za pomocą programu Visual Studio
 
-W [programie Tworzenie aplikacji Hello World z usługą .NET Core w programie Visual Studio](with-visual-studio.md)utworzono aplikację konsoli Hello World. W [debugowania aplikacji Hello World za pomocą programu Visual Studio](debugging-with-visual-studio.md)przetestowano ją przy użyciu debugera Programu Visual Studio. Teraz, gdy masz pewność, że działa zgodnie z oczekiwaniami, możesz go opublikować, aby inni użytkownicy mogli go uruchomić. Publikowanie tworzy zestaw plików, które są potrzebne do uruchomienia aplikacji. Aby wdrożyć pliki, skopiuj je na komputer docelowy.
+W tym samouczku pokazano, jak opublikować aplikację konsolową, tak aby inni użytkownicy mogli ją uruchomić. Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji. Aby wdrożyć pliki, skopiuj je na maszynę docelową.
+
+## <a name="prerequisites"></a>Wymagania wstępne
+
+- Ten samouczek współpracuje z aplikacją konsolową utworzoną w temacie [Tworzenie aplikacji konsolowej platformy .NET Core w programie Visual Studio 2019](with-visual-studio.md).
 
 ## <a name="publish-the-app"></a>Publikowanie aplikacji
 
-1. Upewnij się, że program Visual Studio jest tworzenie wersji aplikacji. W razie potrzeby zmień ustawienie konfiguracji kompilacji na pasku narzędzi z **Debug** na **Release**.
+1. Upewnij się, że program Visual Studio kompiluje wydaną wersję aplikacji. W razie potrzeby zmień ustawienie konfiguracji kompilacji na pasku narzędzi z **Debuguj** na **Release**.
 
-   ![Pasek narzędzi programu Visual Studio z wybraną kompilacją wersji](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
+   ![Program Visual Studio Toolbar z wybraną kompilacją wydania](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Kliknij prawym przyciskiem myszy projekt **HelloWorld** (nie rozwiązanie HelloWorld) i wybierz **polecenie Publikuj** z menu. (Możesz również wybrać **opcję Publikuj HelloWorld** z głównego menu **Kompilacja).**
+1. Kliknij prawym przyciskiem myszy projekt **HelloWorld** (nie rozwiązanie HelloWorld) i wybierz polecenie **Publikuj** z menu.
 
-   ![Visual Studio Publikowanie menu kontekstowe](media/publishing-with-visual-studio/publish-context-menu.png)
+   ![Menu kontekstowe publikacji programu Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
 
-1. Na stronie **Wybierz obiekt docelowy publikowania** wybierz pozycję **Folder**, a następnie wybierz pozycję **Utwórz profil**.
+1. Na karcie **Target** strony **Publikowanie** wybierz pozycję **folder**, a następnie wybierz pozycję **dalej**.
 
-   ![Wybieranie obiektu docelowego publikowania w programie Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
+   ![Wybieranie elementu docelowego publikowania w programie Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. Na stronie **Publikowanie** wybierz pozycję **Publikuj**.
+1. Na karcie **Lokalizacja** strony **Publikowanie** wybierz pozycję **Zakończ**.
 
-   ![Okno Publikowania w programie Visual Studio](media/publishing-with-visual-studio/publish-page.png)
+   ![Karta Lokalizacja strony publikacji programu Visual Studio](media/publishing-with-visual-studio/publish-page-loc-tab.png)
 
-## <a name="inspect-the-files"></a>Sprawdzanie plików
+1. Na karcie **Publikowanie** okna **Publikowanie** wybierz pozycję **Publikuj**.
 
-Proces publikowania tworzy wdrożenie zależne od struktury, które jest typem wdrożenia, w którym opublikowana aplikacja jest uruchamiana na dowolnej platformie obsługiwanej przez program .NET Core z zainstalowanym w systemie .NET Core. Użytkownicy mogą uruchomić opublikowaną aplikację, klikając dwukrotnie plik wykonywalny lub wydając `dotnet HelloWorld.dll` polecenie z wiersza polecenia.
+   ![Okno publikowania programu Visual Studio](media/publishing-with-visual-studio/publish-page.png)
 
-W poniższych krokach przyjrzysz się plikom utworzonym przez proces publikowania.
+## <a name="inspect-the-files"></a>Inspekcja plików
 
-1. Otwórz wiersz polecenia.
+Proces publikowania tworzy wdrożenie zależne od platformy, które jest typem wdrożenia, w którym jest uruchomiona opublikowana aplikacja na komputerze z zainstalowanym środowiskiem uruchomieniowym .NET Core. Użytkownicy mogą uruchamiać opublikowaną aplikację przez dwukrotne kliknięcie pliku wykonywalnego lub wydawanie `dotnet HelloWorld.dll` polecenia z wiersza polecenia.
 
-   Jednym ze sposobów otwarcia wiersza polecenia jest wprowadzenie **wiersza polecenia** (lub **skrótu cmd)** w polu wyszukiwania na pasku zadań systemu Windows. Wybierz aplikację **klasyczną Wiersz polecenia** lub naciśnij klawisz **Enter,** jeśli jest już zaznaczona w wynikach wyszukiwania.
+W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikowania.
 
-1. Przejdź do opublikowanej aplikacji w *katalogu bin\Release\netcoreapp3.1\publish* katalogu projektu aplikacji.
+1. W **Eksplorator rozwiązań**wybierz opcję **Pokaż wszystkie pliki**.
 
-   ![Okno konsoli z wyświetlonymi opublikowanymi plikami](media/publishing-with-visual-studio/published-files-output.png)
+1. W folderze projektu rozwiń węzeł *bin/Release/netcoreapp 3.1/Publish*.
 
-   Jak pokazano na obrazie, opublikowane dane wyjściowe zawierają następujące pliki:
+   :::image type="content" source="media/publishing-with-visual-studio/published-files-output.png" alt-text="Eksplorator rozwiązań wyświetlania opublikowanych plików":::
 
-      * *HelloWorld.deps.json*
+   W miarę wyświetlania obrazu opublikowane dane wyjściowe zawierają następujące pliki:
 
-         Jest to plik zależności w czasie wykonywania aplikacji. Definiuje składniki .NET Core i biblioteki (w tym biblioteki łączy dynamicznych, która zawiera aplikację) potrzebne do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [Pliki konfiguracyjne czasu wykonywania](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+      * *HelloWorld. deps. JSON*
 
-      * *HelloWorld.dll*
+         Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-         Jest to wersja [wdrożenia zależna od struktury](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę `dotnet HelloWorld.dll` łączy dynamicznych, wprowadź w wierszu polecenia.
+      * *HelloWorld. dll*
 
-      * *HelloWorld.exe (HelloWorld.exe)*
+         Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia.
 
-         Jest to [zależna od struktury wykonywalna](../deploying/deploy-with-cli.md#framework-dependent-executable) wersja aplikacji. Aby go uruchomić, wprowadź `HelloWorld.exe` w wierszu polecenia.
+      * *HelloWorld. exe*
 
-      * *HelloWorld.pdb* (opcjonalnie do wdrożenia)
+         Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Aby uruchomić tę opcję, wprowadź `HelloWorld.exe` w wierszu polecenia.
 
-         Jest to plik symboli debugowania. Nie są wymagane do wdrożenia tego pliku wraz z aplikacją, chociaż należy zapisać go w przypadku, gdy trzeba debugować opublikowaną wersję aplikacji.
+      * *HelloWorld. pdb* (opcjonalnie dla wdrożenia)
 
-      * *HelloWorld.runtimeconfig.json*
+         Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
 
-         Jest to plik konfiguracyjny aplikacji w czasie wykonywania. Identyfikuje wersję programu .NET Core, na którą została zbudowana aplikacja. Można również dodać do niego opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
+      * *HelloWorld. runtimeconfig. JSON*
+
+         To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
+
+## <a name="run-the-published-app"></a>Uruchom opublikowaną aplikację
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy folder *Publikowanie* , a następnie wybierz polecenie **Kopiuj pełną ścieżkę**.
+
+1. Otwórz wiersz polecenia i przejdź do folderu *Publikowanie* . Wprowadź `cd` i wklej pełną ścieżkę. Przykład:
+
+   ```
+   cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+   ```
+
+1. Uruchom aplikację przy użyciu pliku wykonywalnego:
+
+   1. Wprowadź `HelloWorld.exe` i naciśnij klawisz ENTER.
+
+   1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
+
+1. Uruchom aplikację za pomocą `dotnet` polecenia:
+
+   1. Wprowadź `dotnet HelloWorld.dll` i naciśnij klawisz ENTER.
+
+   1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
 - [Wdrażanie aplikacji .NET Core](../deploying/index.md)
+
+## <a name="next-steps"></a>Następne kroki
+
+W tym samouczku opublikowano aplikację konsolową. W następnym samouczku utworzysz bibliotekę klas.
+
+> [!div class="nextstepaction"]
+> [Tworzenie biblioteki .NET Standard w programie Visual Studio](library-with-visual-studio.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176204"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007926"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets — Wyliczenie
 Określa elementy aplikacji, na których jest prawidłowy, aby zastosować atrybut.  
@@ -62,35 +62,35 @@ typedef enum CorAttributeTargets
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`catAssembly`|Atrybut może być stosowany do zestawu.|  
-|`catModule`|Atrybut może być stosowany do przenośnego modułu wykonywalnego (.dll lub .exe).|  
+|`catAssembly`|Atrybut może zostać zastosowany do zestawu.|  
+|`catModule`|Atrybut można zastosować do przenośnego modułu pliku wykonywalnego (. dll lub. exe).|  
 |`catClass`|Atrybut może być stosowany do klasy.|  
 |`catStruct`|Atrybut może być stosowany do struktury; oznacza to, że typ wartości.|  
 |`catEnum`|Atrybut może być stosowany do wyliczenia.|  
 |`catConstructor`|Atrybut może być stosowany do konstruktora.|  
-|`catMethod`|Atrybut może być stosowany do metody.|  
+|`catMethod`|Atrybut można zastosować do metody.|  
 |`catProperty`|Atrybut może być stosowany do właściwości.|  
-|`catField`|Atrybut można zastosować do pola.|  
+|`catField`|Atrybut może być stosowany do pola.|  
 |`catEvent`|Atrybut może być stosowany do zdarzenia.|  
 |`catInterface`|Atrybut może być stosowany do interfejsu.|  
 |`catParameter`|Atrybut może być stosowany do parametru.|  
-|`catDelegate`|Atrybut można zastosować do pełnomocnika.|  
-|`catGenericParameter`|Atrybut może być stosowany do parametru ogólnego.|  
+|`catDelegate`|Atrybut można zastosować do obiektu delegowanego.|  
+|`catGenericParameter`|Atrybut może być stosowany do parametru generycznego.|  
 |`catAll`|Atrybut można zastosować do dowolnego elementu aplikacji.|  
-|`catClassMembers`|Atrybut może być stosowany do członka klasy.|  
+|`catClassMembers`|Atrybut można zastosować do składowej klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości `CorAttributeTargets` wyliczenia można łączyć z bitową operacją OR, aby uzyskać preferowaną kombinację.  
+ `CorAttributeTargets`Wartości wyliczenia można łączyć z wartością bitową lub operacją w celu uzyskania preferowanej kombinacji.  
   
- Paralele `CorAttributeTargets` wyliczenia zarządzanego. <xref:System.AttributeTargets?displayProperty=nameWithType>  
+ `CorAttributeTargets`Równolegle zarządzanym <xref:System.AttributeTargets?displayProperty=nameWithType> wyliczeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

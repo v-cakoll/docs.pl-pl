@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133776"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008498"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion — Funkcja
 Umożliwia hostowi określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR) zostanie użyta w procesie przed jawnym inicjalizacją środowiska CLR.  
@@ -56,7 +56,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Co najmniej jeden argument ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Host wywołuje `LockClrVersion` przed zainicjowaniem środowiska CLR. `LockClrVersion` pobiera trzy parametry, z których wszystkie są wywołaniami zwrotnymi typu [FLockClrVersionCallback —](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Ten typ jest definiowany w następujący sposób.  
+ Host wywołuje `LockClrVersion` przed zainicjowaniem środowiska CLR. `LockClrVersion`Pobiera trzy parametry, z których wszystkie są wywołaniami zwrotnymi typu [FLockClrVersionCallback —](flockclrversioncallback-function-pointer.md). Ten typ jest definiowany w następujący sposób.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -64,33 +64,33 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  Następujące kroki są wykonywane po zainicjowaniu środowiska uruchomieniowego:  
   
-1. Host wywołuje [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jedną z innych funkcji inicjalizacji środowiska uruchomieniowego. Alternatywnie host może zainicjować środowisko uruchomieniowe przy użyciu funkcji aktywacji obiektów COM.  
+1. Host wywołuje [CorBindToRuntimeEx](corbindtoruntimeex-function.md) lub jedną z innych funkcji inicjalizacji środowiska uruchomieniowego. Alternatywnie host może zainicjować środowisko uruchomieniowe przy użyciu funkcji aktywacji obiektów COM.  
   
-2. Środowisko uruchomieniowe wywołuje funkcję określoną przez parametr `hostCallback`.  
+2. Środowisko uruchomieniowe wywołuje funkcję określoną przez `hostCallback` parametr.  
   
-3. Funkcja określona przez `hostCallback` następnie wykonuje następującą sekwencję wywołań:  
+3. Funkcja określona przez `hostCallback` then wykonuje następującą sekwencję wywołań:  
   
-    - Funkcja określona przez parametr `pBeginHostSetup`.  
+    - Funkcja określona przez `pBeginHostSetup` parametr.  
   
-    - `CorBindToRuntimeEx` (lub inna funkcja inicjacji środowiska uruchomieniowego).  
+    - `CorBindToRuntimeEx`(lub inna funkcja inicjacji środowiska uruchomieniowego).  
   
-    - [ICLRRuntimeHost:: SetHostControl —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: SetHostControl —](iclrruntimehost-sethostcontrol-method.md).  
   
-    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md).  
   
-    - Funkcja określona przez parametr `pEndHostSetup`.  
+    - Funkcja określona przez `pEndHostSetup` parametr.  
   
- Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` muszą wystąpić w pojedynczym wątku lub włókna przy użyciu tego samego logicznego stosu. Ten wątek może się różnić od wątku, w którym wywołano `hostCallback`.  
+ Wszystkie wywołania z `pBeginHostSetup` programu `pEndHostSetup` muszą odbywać się w pojedynczym wątku lub włókna przy użyciu tego samego stosu logicznego. Ten wątek może się różnić od wątku, w którym `hostCallback` jest wywoływana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

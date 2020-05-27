@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 6a4489d094974eb872b39824ceb185b0cbe48625
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b9700455da82fc7f4a39d4c208ac0b18ef79722
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177829"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009122"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda
 Wylicza `mdAssemblyRef` wystąpienia, które są zdefiniowane w manifeście zestawu.  
@@ -38,33 +38,33 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość `EnumAssemblyRefs` null, gdy metoda jest wywoływana po raz pierwszy.  
+ [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy `EnumAssemblyRefs` Metoda jest wywoływana po raz pierwszy.  
   
  `rAssemblyRefs`  
- [na zewnątrz] Wyliczenie tokenów `mdAssemblyRef` metadanych.  
+ określoną Wyliczanie `mdAssemblyRef` tokenów metadanych.  
   
  `cMax`  
- [w] Maksymalna liczba tokenów, które mogą `rAssemblyRefs` być umieszczone w tablicy.  
+ podczas Maksymalna liczba tokenów, które mogą zostać umieszczone w `rAssemblyRefs` tablicy.  
   
  `pcTokens`  
- [na zewnątrz] Liczba tokenów faktycznie umieszczonych w `rAssemblyRefs`.  
+ określoną Liczba tokenów, które zostały umieszczone w rzeczywistości `rAssemblyRefs` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
+|`S_OK`|`EnumAssemblyRefs`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

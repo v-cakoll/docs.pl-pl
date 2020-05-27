@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: a71d8694ec8c5bd35ecd3e98ed32e05bc7b382fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: def77bb64e21b1421983cf263d488ecc1ddb9452
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177615"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009326"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString — Metoda
 Pobiera token metadanych dla określonego ciągu literału.  
@@ -37,24 +37,24 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Parametry  
  `szString`  
- [w] Ciąg użytkownika do przechowywania.  
+ podczas Ciąg użytkownika do zapisania.  
   
  `cchString`  
- [w] Liczba szerokich znaków `szString`w pliku .  
+ podczas Liczba znaków dwubajtowych w `szString` .  
   
  `pstk`  
- [na zewnątrz] Przypisany token ciągu.  
+ określoną Przypisany token ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea84b742c901ba58a3bb730f1f5033a0d90610ce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176178"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007380"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr — Wyliczenie
-Zawiera wartości <xref:System.Type> opisujące parametry typów ogólnych, używane w wywołaniach [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Zawiera wartości opisujące <xref:System.Type> parametry typów ogólnych, które są używane w wywołaniach [IMetaDataEmit2::D efinegenericparam](imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,23 +47,23 @@ typedef enum CorGenericParamAttr {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`gpVarianceMask`|Wariancja parametrów ma zastosowanie tylko do parametrów ogólnych dla interfejsów i delegatów.|  
+|`gpVarianceMask`|WARIANCJA parametrów dotyczy tylko parametrów ogólnych interfejsów i delegatów.|  
 |`gpNonVariant`|Wskazuje brak wariancji.|  
 |`gpCovariant`|Wskazuje kowariancję.|  
-|`gpContravariant`|Wskazuje kontrawarancję.|  
-|`gpSpecialConstraintMask`|Specjalne ograniczenia mogą mieć <xref:System.Type> zastosowanie do dowolnego parametru.|  
-|`gpNoSpecialConstraint`|Wskazuje, że do parametru <xref:System.Type> nie ma zastosowania żadne ograniczenie.|  
-|`gpReferenceTypeConstraint`|Wskazuje, że <xref:System.Type> parametr musi być typem odwołania.|  
-|`gpNotNullableValueTypeConstraint`|Wskazuje, że <xref:System.Type> parametr musi być typem wartości, która nie może być wartością null.|  
+|`gpContravariant`|Wskazuje kontrawariancja.|  
+|`gpSpecialConstraintMask`|Ograniczenia specjalne mogą dotyczyć dowolnego <xref:System.Type> parametru.|  
+|`gpNoSpecialConstraint`|Wskazuje, że żadne ograniczenie nie ma zastosowania do <xref:System.Type> parametru.|  
+|`gpReferenceTypeConstraint`|Wskazuje, że <xref:System.Type> parametr musi być typem referencyjnym.|  
+|`gpNotNullableValueTypeConstraint`|Wskazuje, że <xref:System.Type> parametr musi być typem wartości, który nie może być wartością null.|  
 |`gpDefaultConstructorConstraint`|Wskazuje, że <xref:System.Type> parametr musi mieć domyślny konstruktor publiczny, który nie przyjmuje żadnych parametrów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

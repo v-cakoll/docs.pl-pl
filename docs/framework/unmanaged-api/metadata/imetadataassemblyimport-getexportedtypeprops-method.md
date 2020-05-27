@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177756"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008407"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps — Metoda
-Pobiera zestaw właściwości eksportowanego typu z określonym podpisem metadanych.  
+Pobiera zestaw właściwości wyeksportowanego typu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdct`  
- [w] Token `mdExportedType` metadanych reprezentujący eksportowany typ.  
+ podczas `mdExportedType`Token metadanych reprezentujący wyeksportowany typ.  
   
  `szName`  
- [na zewnątrz] Nazwa wyeksportowanego typu.  
+ określoną Nazwa wyeksportowanego typu.  
   
  `cchName`  
- [w] Rozmiar, w szerokich `szName`znaków, z .  
+ podczas Rozmiar, w postaci znaków dwubajtowych, z `szName` .  
   
  `pchName`  
- [na zewnątrz] Liczba szerokich znaków rzeczywiście zwróconych w`szName`  
+ określoną Liczba znaków dwubajtowych rzeczywiście zwróconych w`szName`  
   
  `ptkImplementation`  
- [na zewnątrz] Token `mdFile` `mdAssemblyRef`, `mdExportedType` lub metadanych, który zawiera lub umożliwia dostęp do właściwości eksportowanego typu.  
+ określoną `mdFile` `mdAssemblyRef` Lub `mdExportedType` token metadanych, który zawiera lub zezwala na dostęp do właściwości wyeksportowanego typu.  
   
  `ptkTypeDef`  
- [na zewnątrz] Wskaźnik do `mdTypeDef` tokenu, który reprezentuje typ w pliku.  
+ określoną Wskaźnik do `mdTypeDef` tokenu, który reprezentuje typ w pliku.  
   
  `pdwExportedTypeFlags`  
- [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do eksportowanego typu. Wartość flag może być jedną lub kilkoma [wartościami CorTypeAttr.](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)  
+ określoną Wskaźnik do flag opisujących metadane zastosowane do wyeksportowanego typu. Wartość flag może być jedną lub większą liczbą wartości [CorTypeAttr —](cortypeattr-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

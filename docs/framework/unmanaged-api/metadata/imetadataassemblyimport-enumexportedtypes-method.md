@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 514488c6e0d2e89de0d8ee483def485ec9f3ef25
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176009"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009109"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes — Metoda
 Wylicza eksportowane typy, do których odwołuje się manifest zestawu w bieżącym zakresie metadanych.  
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość `EnumExportedTypes` null, gdy metoda jest wywoływana po raz pierwszy.  
+ [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy `EnumExportedTypes` Metoda jest wywoływana po raz pierwszy.  
   
  `rExportedTypes`  
- [na zewnątrz] Wyliczenie tokenów `mdExportedType` metadanych.  
+ określoną Wyliczanie `mdExportedType` tokenów metadanych.  
   
  `cMax`  
- [w] Maksymalna liczba `mdExportedType` tokenów, które mogą `rExportedTypes` być umieszczone w tablicy.  
+ podczas Maksymalna liczba `mdExportedType` tokenów, które mogą zostać umieszczone w `rExportedTypes` tablicy.  
   
  `pcTokens`  
- [na zewnątrz] Liczba tokenów `mdExportedType` faktycznie umieszczonych w `rExportedTypes`.  
+ określoną Liczba `mdExportedType` tokenów, które zostały umieszczone w rzeczywistości `rExportedTypes` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
+|`S_OK`|`EnumExportedTypes`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

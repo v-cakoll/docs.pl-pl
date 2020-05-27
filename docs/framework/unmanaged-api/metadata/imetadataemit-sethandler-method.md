@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-ms.openlocfilehash: 375c4b2cece0bdfd763ae383c5412c9e25614baf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa227d18b8cb10936d93fda9bcaf413ce63ca3b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177539"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003954"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler — Metoda
-Ustawia metodę, do którą `IUnknown` odwołuje się określony wskaźnik jako wywołanie zwrotne powiadomień dla ponownego mapowania tokenu.  
+Ustawia metodę przywoływaną przez określony `IUnknown` wskaźnik jako wywołanie zwrotne powiadomienia o ponownym mapowaniu tokenu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,23 +35,23 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parametry  
  `pUnk`  
- [w] Program obsługi do zarejestrowania.  
+ podczas Procedura obsługi do rejestracji.  
   
 ## <a name="remarks"></a>Uwagi  
- Aparat metadanych wysyła powiadomienie przy użyciu `SetHandler`metody, która jest dostarczana przez , do kompilatorów, które nie generują rekordów w sposób zoptymalizowany i które chcą zoptymalizować zapisane rekordy.  
+ Aparat metadanych wysyła powiadomienie przy użyciu metody dostarczonej przez `SetHandler` , do kompilatorów, które nie generują rekordów w sposób zoptymalizowany i który chce zoptymalizować zapisane rekordy.  
   
- Jeśli metoda wywołania zwrotnego `SetHandler`nie jest dostarczana za pośrednictwem , nie zostanie przeprowadzona optymalizacja przy zapisywaniu, z wyjątkiem sytuacji, gdy kilka zakresów importu zostało scalonych przy użyciu `IMapToken` scalania dla każdego zakresu.  
+ Jeśli nie podano metody wywołania zwrotnego za pośrednictwem programu `SetHandler` , nie będzie przeprowadzana żadna Optymalizacja przy zapisywaniu, z wyjątkiem sytuacji, gdy kilka zakresów importu zostało scalonych przy użyciu `IMapToken` scalania dla każdego zakresu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

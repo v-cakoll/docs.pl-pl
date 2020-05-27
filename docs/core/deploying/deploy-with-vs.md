@@ -309,7 +309,7 @@ Podczas wdrażania aplikacji wszystkie zależności innych firm używane w aplik
 
 Można wdrożyć tylko własne wdrożenie z biblioteką innej firmy na platformach obsługiwanych przez tę bibliotekę. Jest to podobne do występowania zależności innych firm z natywnymi zależnościami w ramach wdrożenia zależnego od platformy, w przypadku których natywne zależności nie będą istniały na platformie docelowej, chyba że zostały wcześniej zainstalowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wdrażanie aplikacji .NET Core](index.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

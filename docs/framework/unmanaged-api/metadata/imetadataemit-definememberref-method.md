@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576f4561ed782f091840ac378831110a1bfef9c6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175840"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004699"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef — Metoda
 Definiuje odwołanie do elementu członkowskiego modułu poza bieżącym zakresem i pobiera token do tej definicji odwołania.  
@@ -39,30 +39,30 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parametry  
  `tkImport`  
- [w] Token dla klasy lub interfejsu docelowego elementu członkowskiego, jeśli element członkowski nie jest globalny; jeśli element członkowski `mdModuleRef` jest globalny, token dla tego innego pliku.  
+ podczas Token klasy lub interfejsu docelowej składowej, jeśli element członkowski nie jest globalny; Jeśli element członkowski jest globalny, `mdModuleRef` token dla tego innego pliku.  
   
  `szName`  
- [w] Nazwa elementu docelowego.  
+ podczas Nazwa docelowego elementu członkowskiego.  
   
  `pvSigBlob`  
- [w] Podpis elementu członkowskiego docelowego.  
+ podczas Sygnatura docelowego elementu członkowskiego.  
   
  `cbSigBlob`  
- [w] Liczba bajtów `pvSigBlob`w pliku .  
+ podczas Liczba bajtów w `pvSigBlob` .  
   
  `pmr`  
- [na zewnątrz] Token `mdMemberRef` przypisany.  
+ określoną `mdMemberRef`Przypisany token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

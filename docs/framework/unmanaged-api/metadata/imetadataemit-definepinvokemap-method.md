@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177753"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008030"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap — Metoda
-Ustawia funkcje podpisu PInvoke metody, do którego odwołuje się określony token.  
+Ustawia funkcje podpisu PInvoke metody, do której odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] Token dla metody docelowej.  
+ podczas Token dla metody docelowej.  
   
  `dwMappingFlags`  
- [w] Flagi używane przez PInvoke do mapowania.  
+ podczas Flagi używane przez funkcję PInvoke do wykonania mapowania.  
   
  `szImportName`  
- [w] Nazwa docelowej metody eksportu w niezarządzanej biblioteki DLL.  
+ podczas Nazwa docelowej metody eksportu w niezarządzanej bibliotece DLL.  
   
  `mrImportDLL`  
- [w] Token dla docelowej natywnej biblioteki DLL.  
+ podczas Token dla docelowej natywnej biblioteki DLL.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

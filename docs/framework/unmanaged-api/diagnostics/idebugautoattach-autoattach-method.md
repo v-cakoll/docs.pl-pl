@@ -60,6 +60,6 @@ HRESULT AutoAttach
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** DbgAutoAttach. h  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IDebugAutoAttach — Interfejs](idebugautoattach-interface.md)

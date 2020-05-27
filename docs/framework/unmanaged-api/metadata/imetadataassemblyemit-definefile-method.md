@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176061"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008147"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile — Metoda
-Tworzy `File` strukturę metadanych zawierającą metadane dla zestawu, do którego odwołuje się ten zestaw, i zwraca skojarzony token metadanych.  
+Tworzy `File` strukturę metadanych zawierającą metadane zestawu, do którego odwołuje się ten zestaw, i zwraca skojarzony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [w] Nazwa pliku, który ma zostać zużyty.  
+ podczas Nazwa pliku, który ma być użyty.  
   
  `pbHashValue`  
- [w] Wskaźnik do danych mieszania skojarzonych z zestawem.  
+ podczas Wskaźnik do danych skrótu skojarzonych z zestawem.  
   
  `cbHashValue`  
- [w] Rozmiar w bajtach . `pbHashValue`  
+ podczas Rozmiar w bajtach `pbHashValue` .  
   
  `dwFileFlags`  
- [w] Bitowa kombinacja `FileFlags` wartości określających ustawienia właściwości.  
+ podczas Bitowa kombinacja `FileFlags` wartości, które określają ustawienia właściwości.  
   
  `pmdf`  
- [na zewnątrz] Wskaźnik do zwróconego `File` tokenu.  
+ określoną Wskaźnik do zwracanego `File` tokenu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jedna `File` struktura metadanych musi być zdefiniowana dla każdego pliku, który był częścią tego zestawu w czasie, gdy ten zestaw został zbudowany, z wyłączeniem pliku, który zawiera metadane.  
+ `File`Dla każdego pliku, który był częścią tego zestawu, należy zdefiniować jedną strukturę metadanych, wykluczając plik zawierający metadane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)

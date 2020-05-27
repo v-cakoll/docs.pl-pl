@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: 7648a1b3d219ee5d2b1ddc6b26f7b65c9ac85105
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d429995e41006798aee5f796150bedbd6ae87f6f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175645"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003875"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA — Metoda
 Ustawia wartość zmiennej globalnej dla względnego adresu wirtualnego pola, do którego odwołuje się określony token.  
@@ -36,21 +36,21 @@ HRESULT SetFieldRVA (
   
 ## <a name="parameters"></a>Parametry  
  `fd`  
- [w] Token dla pola docelowego.  
+ podczas Token dla pola docelowego.  
   
  `ulRVA`  
- [w] Adres kodu lub obszaru danych.  
+ podczas Adres kodu lub obszaru danych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

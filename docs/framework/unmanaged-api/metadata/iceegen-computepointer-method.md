@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176100"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008875"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer — Metoda
 Określa bufor dla określonej sekcji kodu.  
@@ -39,23 +39,23 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [w] Sekcja kodu, dla której ma być zwracany bufor.  
+ podczas Sekcja kodu, dla której ma zostać zwrócony bufor.  
   
  `RVA`  
- [w] Względny adres wirtualny metody, dla której można uzyskać wskaźnik.  
+ podczas Względny adres wirtualny metody, dla której ma zostać pobrany wskaźnik.  
   
  `lpBuffer`  
- [na zewnątrz] Wskaźnik do zwróconego buforu.  
+ określoną Wskaźnik do zwróconego buforu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen — Interfejs](iceegen-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442845"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009200"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions — Wyliczenie
 Zawiera wartości flag kontrolujące zachowanie podczas importu zestawu poza bieżącym zakresem.  
@@ -42,9 +42,9 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Wskazuje zachowanie domyślne, co oznacza pominięcie usuniętych rekordów.|  
 |`MDImportOptionAll`|Wskazuje, że wszystkie metadane powinny być wyliczane.|  
@@ -57,12 +57,12 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Wskazuje, że wszystkie wyeksportowane typy, łącznie z usuniętymi, powinny być wyliczane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

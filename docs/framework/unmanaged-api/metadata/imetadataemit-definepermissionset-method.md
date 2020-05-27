@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a069e2f4ec5d4114e9504fa5a58c5066fdfd7249
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175801"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008043"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet — Metoda
 Tworzy definicję zestawu uprawnień z określonym podpisem metadanych i pobiera token do tej definicji zestawu uprawnień.  
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] Obiekt, który ma być ozdobiony.  
+ podczas Obiekt, który ma być dekoracyjny.  
   
  `dwAction`  
- [w] Wartość [CorDeclSecurity,](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) która określa typ zabezpieczeń deklaratywnych, które mają być używane.  
+ podczas Wartość [CorDeclSecurity —](cordeclsecurity-enumeration.md) , która określa typ zabezpieczenia deklaracyjnego do użycia.  
   
  `pvPermission`  
- [w] Obiekt BLOB uprawnień.  
+ podczas Obiekt BLOB uprawnień.  
   
  `cbPermission`  
- [w] Rozmiar w bajtach `pvPermission`.  
+ podczas Rozmiar, w bajtach, z `pvPermission` .  
   
  `ppm`  
- [na zewnątrz] Token zwróconego uprawnienia.  
+ określoną Zwrócony token uprawnienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175931"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007328"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory — Metoda
-Otwiera obszar pamięci zawierający istniejące metadane. Oznacza to, że ta metoda otwiera określony obszar pamięci, w którym istniejące dane są traktowane jako metadane.  
+Otwiera obszar pamięci, który zawiera istniejące metadane. Oznacza to, że ta metoda otwiera określony obszar pamięci, w której istniejące dane są traktowane jako metadane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,45 +39,45 @@ HRESULT OpenScopeOnMemory (
   
 ## <a name="parameters"></a>Parametry  
  `pData`  
- [w] Wskaźnik określający adres początkowy obszaru pamięci.  
+ podczas Wskaźnik określający adres początkowy obszaru pamięci.  
   
  `cbData`  
- [w] Rozmiar obszaru pamięci w bajtach.  
+ podczas Rozmiar obszaru pamięci (w bajtach).  
   
  `dwOpenFlags`  
- [w] Wartość [wyliczenia CorOpenFlags,](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) aby określić tryb (odczyt, zapis i tak dalej) do otwarcia.  
+ podczas Wartość wyliczenia [CorOpenFlags —](coropenflags-enumeration.md) w celu określenia trybu (odczyt, zapis itd.) do otwarcia.  
   
  `riid`  
- [w] Identyfikator żądanego interfejsu metadanych do zwrócona; wywołujący użyje interfejsu do importowania (odczytu) lub emitowania (zapisu) metadanych.  
+ podczas Identyfikator IID żądanego interfejsu metadanych do zwrócenia; Obiekt wywołujący będzie używać interfejsu do importowania metadanych (odczytu) lub emisji (zapisu).  
   
- Wartość `riid` musi określać jeden z interfejsów "import" lub "emituj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.  
+ Wartość `riid` musi określać jeden z interfejsów "Import" lub "Emituj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [na zewnątrz] Wskaźnik do zwróconego interfejsu.  
+ określoną Wskaźnik do zwracanego interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Kopię metadanych w pamięci można zbadać przy użyciu metod z jednego z interfejsów "importuj" lub dodać do przy użyciu metod z jednego z interfejsów "emituj".  
+ Kopię metadanych w pamięci można zbadać przy użyciu metod z jednego z interfejsów "Import" lub dodać do metod przy użyciu metody z jednego z interfejsów "Emituj".  
   
- Metoda `OpenScopeOnMemory` jest podobna do [metody IMetaDataDispenser::OpenScope,](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) z tą różnicą, że metadane będące przedmiotem zainteresowania już istnieją w pamięci, a nie w pliku na dysku.  
+ `OpenScopeOnMemory`Metoda jest podobna do metody [IMetaDataDispenser:: OpenScope —](imetadatadispenser-openscope-method.md) , z tą różnicą, że metadane zainteresowania już istnieją w pamięci, a nie w pliku na dysku.  
   
- Jeśli obszar docelowy pamięci nie zawiera metadanych wspólnego środowiska `OpenScopeOnMemory` wykonawczego języka (CLR), metoda zakończy się niepowodzeniem.  
+ Jeśli obszar docelowy pamięci nie zawiera metadanych środowiska uruchomieniowego języka wspólnego (CLR), `OpenScopeOnMemory` Metoda zakończy się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataDispenser — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser — Interfejs](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx, interfejs](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

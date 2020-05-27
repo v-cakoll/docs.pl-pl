@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 2f9325f3795262a0c33af02f87fc5d3a020658cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177632"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008368"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope — Metoda
 Tworzy nowy obszar w pamięci, w którym można tworzyć nowe metadane.  
@@ -38,37 +38,37 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>Parametry  
  `rclsid`  
- [w] Identyfikator CLSID wersji struktur metadanych, które mają zostać utworzone. Ta wartość musi być CLSID_CorMetaDataRuntime dla programu .NET Framework w wersji 2.0.  
+ podczas Identyfikator CLSID wersji struktur metadanych, które mają zostać utworzone. Ta wartość musi być CLSID_CorMetaDataRuntime dla .NET Framework wersja 2,0.  
   
  `dwCreateFlags`  
- [w] Flagi określające opcje. Ta wartość musi wynosić zero dla programu .NET Framework 2.0.  
+ podczas Flagi określające opcje. Ta wartość musi być równa zero dla .NET Framework 2,0.  
   
  `riid`  
- [w] Identyfikator żądanego interfejsu metadanych do zwrócona; wywołujący użyje interfejsu do utworzenia nowych metadanych.  
+ podczas Identyfikator IID żądanego interfejsu metadanych do zwrócenia; Obiekt wywołujący użyje interfejsu do utworzenia nowych metadanych.  
   
- Wartość `riid` musi określać jeden z interfejsów "emitować". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit lub IID_IMetaDataEmit2.  
+ Wartość `riid` musi określać jeden z interfejsów "Emituj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit lub IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [na zewnątrz] Wskaźnik do zwróconego interfejsu.  
+ określoną Wskaźnik do zwracanego interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- `DefineScope`tworzy zestaw tabel metadanych w pamięci, generuje unikatowy identyfikator GUID (identyfikator wersji modułu lub MVID) dla metadanych i tworzy wpis w tabeli modułów dla emitowanej jednostki kompilacji.  
+ `DefineScope`tworzy zestaw tabel metadanych w pamięci, generuje unikatowy identyfikator GUID (identyfikator wersji modułu lub MVID) dla metadanych i tworzy wpis w tabeli modułów dla wyemitowanej jednostki kompilacji.  
   
- Atrybuty można dołączyć do zakresu metadanych jako całości przy użyciu [metody IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) lub [IMetaDataEmit::DefineCustomAttribute.](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)  
+ Można dołączać atrybuty do zakresu metadanych jako całości przy użyciu metody [IMetaDataEmit:: SetModuleProps —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) lub [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) , zgodnie z potrzebami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataDispenser — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataDispenser — Interfejs](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx, interfejs](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123272"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008550"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate — Metoda
 Sprawdza poprawność określonego przenośnego pliku wykonywalnego (PE) lub języka pośredniego firmy Microsoft (MSIL).  
@@ -42,13 +42,13 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parametry  
  `veh`  
- podczas Wskaźnik do wystąpienia `IVEHandler`, które obsługuje błędy walidacji.  
+ podczas Wskaźnik do `IVEHandler` wystąpienia, które obsługuje błędy walidacji.  
   
  `pAppDomain`  
  podczas Wskaźnik do domeny aplikacji, w której plik zostanie załadowany.  
   
  `ulFlags`  
- podczas Bitowa kombinacja wartości [ValidatorFlags —](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wskazujących, które powinny być wykonywane.  
+ podczas Bitowa kombinacja wartości [ValidatorFlags —](validatorflags-enumeration.md) wskazujących, które powinny być wykonywane.  
   
  `ulMaxError`  
  podczas Maksymalna liczba błędów, które należy pozostawić przed wyjściem z walidacji.  
@@ -66,10 +66,10 @@ HRESULT Validate (
  podczas Rozmiar pliku, który ma być zweryfikowany w bajtach.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator. idl, IValidator. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

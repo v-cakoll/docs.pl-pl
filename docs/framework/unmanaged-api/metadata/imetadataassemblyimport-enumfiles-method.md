@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed8bafd67b5d55a5116111b7721fbdc31c52aca6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177815"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009100"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles — Metoda
 Wylicza pliki, do których odwołuje się bieżący manifest zestawu.  
@@ -38,33 +38,33 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość null dla pierwszego wywołania tej metody.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi to być wartość null dla pierwszego wywołania tej metody.  
   
  `rFiles`  
- [na zewnątrz] Tablica używana do `mdFile` przechowywania tokenów metadanych.  
+ określoną Tablica służąca do przechowywania `mdFile` tokenów metadanych.  
   
  `cMax`  
- [w] Maksymalna liczba `mdFile` tokenów, które `rFiles`można umieścić w .  
+ podczas Maksymalna liczba `mdFile` tokenów, które mogą być umieszczone w `rFiles` .  
   
  `pcTokens`  
- [na zewnątrz] Liczba tokenów `mdFile` faktycznie umieszczonych w `rFiles`.  
+ określoną Liczba `mdFile` tokenów, które zostały umieszczone w rzeczywistości `rFiles` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
+|`S_OK`|`EnumFiles`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

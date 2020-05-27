@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18d54280-46af-479f-8d84-5ab64f8b23b9
 topic_type:
 - apiref
-ms.openlocfilehash: cf4d82bb795ee17f748955a44b422071c8009184
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e06e67b0900b4a5b7cceead60e183ee9c728a7e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124820"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008706"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -32,14 +32,14 @@ HRESULT Clear ( );
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting, interfejsy](hosting-interfaces.md)

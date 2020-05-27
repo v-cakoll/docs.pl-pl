@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450148"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007601"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement — Wyliczenie
 Określa powiadomienia, które będą wysyłane do klienta API metadanych, gdy następuje ponowne mapowanie tokenu.  
@@ -59,44 +59,44 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Powiadamiaj po przeniesieniu tokenów `mdTypeRef`, `mdMethodDef`, `mdMemberRef`lub `mdFieldDef`.|  
+|`MDNotifyDefault`|Powiadamiaj `mdTypeRef` o `mdMethodDef` `mdMemberRef` `mdFieldDef` przeniesieniu tokenów,, lub.|  
 |`MDNotifyAll`|Powiadamiaj po przeniesieniu dowolnego tokenu.|  
 |`MDNotifyNone`|Nie powiadamiaj, gdy tokeny są przenoszone.|  
-|`MDNotifyMethodDef`|Powiadamiaj po przeniesieniu tokenu `mdMethodDef`.|  
-|`MDNotifyMemberRef`|Powiadamiaj po przeniesieniu tokenu `mdMemberRef`.|  
-|`MDNotifyFieldDef`|Powiadamiaj po przeniesieniu tokenu `mdFieldDef`.|  
-|`MDNotifyTypeRef`|Powiadamiaj po przeniesieniu tokenu `mdTypeRef`.|  
-|`MDNotifyTypeDef`|Powiadamiaj po przeniesieniu tokenu `mdTypeDef`.|  
-|`MDNotifyParamDef`|Powiadamiaj po przeniesieniu tokenu `mdParamDef`.|  
-|`MDNotifyInterfaceImpl`|Powiadamiaj po przeniesieniu tokenu `mdInterfaceImpl`.|  
-|`MDNotifyProperty`|Powiadamiaj po przeniesieniu tokenu `mdProperty`.|  
-|`MDNotifyEvent`|Powiadamiaj po przeniesieniu tokenu `mdEvent`.|  
-|`MDNotifySignature`|Powiadamiaj po przeniesieniu tokenu `mdSignature`.|  
-|`MDNotifyTypeSpec`|Powiadamiaj po przeniesieniu tokenu `mdTypeSpec`.|  
-|`MDNotifyCustomAttribute`|Powiadamiaj po przeniesieniu tokenu `mdCustomAttribute`.|  
-|`MDNotifySecurityValue`|Powiadamiaj po przeniesieniu tokenu `mdSecurityValue`.|  
-|`MDNotifyPermission`|Powiadamiaj po przeniesieniu tokenu `mdPermission`.|  
-|`MDNotifyModuleRef`|Powiadamiaj po przeniesieniu tokenu `mdModuleRef`.|  
-|`MDNotifyNameSpace`|Powiadamiaj po przeniesieniu tokenu `mdNameSpace`.|  
-|`MDNotifyAssemblyRef`|Powiadamiaj po przeniesieniu tokenu `mdAssemblyRef`.|  
-|`MDNotifyFile`|Powiadamiaj po przeniesieniu tokenu `mdFile`.|  
-|`MDNotifyExportedType`|Powiadamiaj po przeniesieniu tokenu `mdExportedType`.|  
-|`MDNotifyResource`|Powiadamiaj po przeniesieniu tokenu `mdManifestResource`.|  
+|`MDNotifyMethodDef`|Powiadamiaj o `mdMethodDef` przeniesieniu tokenu.|  
+|`MDNotifyMemberRef`|Powiadamiaj o `mdMemberRef` przeniesieniu tokenu.|  
+|`MDNotifyFieldDef`|Powiadamiaj o `mdFieldDef` przeniesieniu tokenu.|  
+|`MDNotifyTypeRef`|Powiadamiaj o `mdTypeRef` przeniesieniu tokenu.|  
+|`MDNotifyTypeDef`|Powiadamiaj o `mdTypeDef` przeniesieniu tokenu.|  
+|`MDNotifyParamDef`|Powiadamiaj o `mdParamDef` przeniesieniu tokenu.|  
+|`MDNotifyInterfaceImpl`|Powiadamiaj o `mdInterfaceImpl` przeniesieniu tokenu.|  
+|`MDNotifyProperty`|Powiadamiaj o `mdProperty` przeniesieniu tokenu.|  
+|`MDNotifyEvent`|Powiadamiaj o `mdEvent` przeniesieniu tokenu.|  
+|`MDNotifySignature`|Powiadamiaj o `mdSignature` przeniesieniu tokenu.|  
+|`MDNotifyTypeSpec`|Powiadamiaj o `mdTypeSpec` przeniesieniu tokenu.|  
+|`MDNotifyCustomAttribute`|Powiadamiaj o `mdCustomAttribute` przeniesieniu tokenu.|  
+|`MDNotifySecurityValue`|Powiadamiaj o `mdSecurityValue` przeniesieniu tokenu.|  
+|`MDNotifyPermission`|Powiadamiaj o `mdPermission` przeniesieniu tokenu.|  
+|`MDNotifyModuleRef`|Powiadamiaj o `mdModuleRef` przeniesieniu tokenu.|  
+|`MDNotifyNameSpace`|Powiadamiaj o `mdNameSpace` przeniesieniu tokenu.|  
+|`MDNotifyAssemblyRef`|Powiadamiaj o `mdAssemblyRef` przeniesieniu tokenu.|  
+|`MDNotifyFile`|Powiadamiaj o `mdFile` przeniesieniu tokenu.|  
+|`MDNotifyExportedType`|Powiadamiaj o `mdExportedType` przeniesieniu tokenu.|  
+|`MDNotifyResource`|Powiadamiaj o `mdManifestResource` przeniesieniu tokenu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Token może być ponownie mapowany (czyli przeniesiony) podczas scalania metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177488"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007809"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps — Metoda
-Ustawia lub aktualizuje funkcje podpisu metadanych zestawu uprawnień zdefiniowanego przez wcześniejsze wywołanie [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Ustawia lub aktualizuje funkcje sygnatury metadanych zestawu uprawnień zdefiniowanego przez poprzednie wywołanie do [IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,30 +39,30 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] Token metadanych, który reprezentuje obiekt, który ma zostać ozdobiony.  
+ podczas Token metadanych, który reprezentuje obiekt, który ma być dekoracyjny.  
   
  `dwAction`  
- [w] Wartość [CorDeclSecurity,](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) która określa typ zabezpieczeń deklaratywnych, które mają być używane.  
+ podczas Wartość [CorDeclSecurity —](cordeclsecurity-enumeration.md) , która określa typ zabezpieczenia deklaracyjnego do użycia.  
   
  `pvPermission`  
- [w] Obiekt BLOB uprawnień.  
+ podczas Obiekt BLOB uprawnień.  
   
  `cbPermission`  
- [w] Rozmiar w bajtach `pvPermission`.  
+ podczas Rozmiar, w bajtach, z `pvPermission` .  
   
  `ppm`  
- [na zewnątrz] Token `mdPermission` metadanych reprezentujący zaktualizowane uprawnienia.  
+ określoną `mdPermission`Token metadanych, który reprezentuje zaktualizowane uprawnienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

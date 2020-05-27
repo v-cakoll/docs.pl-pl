@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffbc9a10ff48b3dfd59b95c0f6b9ecab80b6a49c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443741"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007887"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity — Wyliczenie
 Określa akcje zabezpieczeń, które mogą być wykonywane przy użyciu zabezpieczeń deklaratywnych.  
@@ -54,13 +54,13 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`dclActionMask`|Rezerwacj.|  
-|`dclActionNil`|Rezerwacj.|  
-|`dclRequest`|Rezerwacj.|  
+|`dclActionMask`|Zarezerwowany.|  
+|`dclActionNil`|Zarezerwowany.|  
+|`dclRequest`|Zarezerwowany.|  
 |`dclDemand`|Wszystkie obiekty wywołujące wyższe w stosie wywołań muszą mieć przyznane uprawnienia określone przez bieżący obiekt uprawnień.|  
 |`dclAssert`|Kod wywołujący może uzyskać dostęp do zasobu identyfikowanego przez bieżący obiekt uprawnień, nawet jeśli obiekty wywołujące wyższe w stosie nie uzyskały uprawnień dostępu do zasobu|  
 |`dclDeny`|Możliwość dostępu do zasobu określonego przez bieżący obiekt uprawnień jest odrzucana dla wywołujących, nawet jeśli udzielono uprawnień dostępu do niej.|  
@@ -70,23 +70,23 @@ typedef enum CorDeclSecurity {
 |`dclRequestMinimum`|Obiekt wywołujący może żądać minimalnych uprawnień wymaganych do uruchomienia kodu. Tej akcji można używać tylko w zakresie zestawu.|  
 |`dclRequestOptional`|Obiekt wywołujący może żądać dodatkowych uprawnień, które są opcjonalne (niewymagane do uruchomienia). To żądanie niejawnie odrzuca wszystkie inne uprawnienia, które nie zostały zażądane. Tej akcji można używać tylko w zakresie zestawu.|  
 |`dclRequestRefuse`|Żądanie obiektu wywołującego dla uprawnień, które mogą być nieużywane, nie zostanie przyznane. Tej akcji można używać tylko w zakresie zestawu.|  
-|`dclPrejitGrant`|Rezerwacj.|  
-|`dclPrejitDenied`|Rezerwacj.|  
-|`dclNonCasDemand`|Rezerwacj.|  
+|`dclPrejitGrant`|Zarezerwowany.|  
+|`dclPrejitDenied`|Zarezerwowany.|  
+|`dclNonCasDemand`|Zarezerwowany.|  
 |`dclNonCasLinkDemand`|Bezpośredni obiekt wywołujący musi mieć przyznane określone uprawnienie.|  
-|`dclNonCasInheritance`|Rezerwacj.|  
-|`dclLinkDemandChoice`|Rezerwacj.|  
-|`dclInheritanceDemandChoice`|Rezerwacj.|  
-|`dclDemandChoice`|Rezerwacj.|  
-|`dclMaximumValue`|Rezerwacj.|  
+|`dclNonCasInheritance`|Zarezerwowany.|  
+|`dclLinkDemandChoice`|Zarezerwowany.|  
+|`dclInheritanceDemandChoice`|Zarezerwowany.|  
+|`dclDemandChoice`|Zarezerwowany.|  
+|`dclMaximumValue`|Zarezerwowany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

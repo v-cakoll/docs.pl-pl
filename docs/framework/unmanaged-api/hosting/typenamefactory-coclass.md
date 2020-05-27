@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141433"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009486"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory — Klasa coclass
 Udostępnia interfejs do zarządzania dekonstrukcja nazwy typu.  
@@ -34,19 +34,19 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>Interfejsy  
   
-|Interface|Opis|  
+|Interfejs|Opis|  
 |---------------|-----------------|  
-|[ITypeNameFactory, interfejs](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|  
+|[ITypeNameFactory, interfejs](itypenamefactory-interface.md)|Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. idl  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Współklasy hostingu](hosting-coclasses.md)

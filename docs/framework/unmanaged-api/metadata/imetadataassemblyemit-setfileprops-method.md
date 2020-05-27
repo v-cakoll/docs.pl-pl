@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9990daea1b097532de53684921d3f10c520a3b1a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176035"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008069"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps — Metoda
-Modyfikuje `File` strukturę określonych metadanych.  
+Modyfikuje określoną `File` strukturę metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,29 +38,29 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parametry  
  `file`  
- [w] Token metadanych, który `File` określa strukturę metadanych, która ma zostać zmodyfikowana.  
+ podczas Token metadanych określający `File` strukturę metadanych, która ma zostać zmodyfikowana.  
   
  `pbHashValue`  
- [w] Wskaźnik do danych skrótu skojarzonych z plikiem.  
+ podczas Wskaźnik do danych skrótu skojarzonych z plikiem.  
   
  `cbHashValue`  
- [w] Rozmiar w bajtach . `pbHashValue`  
+ podczas Rozmiar w bajtach `pbHashValue` .  
   
  `dwFileFlags`  
- [w] Bitowe połączenie wartości [CorFileFlags,](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) które określają różne atrybuty pliku.  
+ podczas Bitowa kombinacja wartości [CorFileFlags —](corfileflags-enumeration.md) , które określają różne atrybuty pliku.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `File` strukturę metadanych, należy użyć [metody IMetaDataAssemblyEmit::DefineFile.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)  
+ Aby utworzyć `File` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efinefile](imetadataassemblyemit-definefile-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)

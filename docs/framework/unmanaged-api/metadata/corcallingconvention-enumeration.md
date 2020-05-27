@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443836"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007913"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention — Wyliczenie
 Zawiera wartości opisujące typy konwencji wywoływania, które są wykonywane w kodzie zarządzanym.  
@@ -50,7 +50,7 @@ typedef enum CorCallingConvention
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Wskazuje domyślną konwencję wywoływania.|  
 |`IMAGE_CEE_CS_CALLCONV_VARARG`|Wskazuje, że metoda przyjmuje zmienną liczbę parametrów.|  
@@ -62,17 +62,17 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Wskazuje 64-bitowego wywołania PInvoke do metody, która przyjmuje zmienną liczbę parametrów.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Opisuje nieprawidłową wartość 4-bitową.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|Wskazuje, że Konwencja wywoływania jest opisana przez cztery ostatnie bity.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje, że górny bit opisuje parametr `this`.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Wskazuje, że parametr `this` jest jawnie opisany w podpisie.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje, że górny bit opisuje `this` parametr.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Wskazuje, że `this` parametr jest jawnie opisany w podpisie.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Wskazuje sygnaturę metody ogólnej z jawną liczbą argumentów typu. Poprzedza to zwykłą liczbę parametrów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

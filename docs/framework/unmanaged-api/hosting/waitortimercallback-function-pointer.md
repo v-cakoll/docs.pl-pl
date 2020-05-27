@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092036"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009455"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK — Wskaźnik funkcji
-Wskazuje funkcję, która powiadamia hosta o zasygnalizowaniu lub przekroczeniu limitu czasu dojścia oczekiwania (<xref:System.Threading.WaitHandle>).  
+Wskazuje funkcję, która powiadamia hosta o <xref:System.Threading.WaitHandle> zasygnalizowaniu lub przekroczeniu limitu czasu dojścia oczekiwania ().  
   
  Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
@@ -40,20 +40,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
  podczas Wskaźnik do obiektu, który zawiera informacje zdefiniowane przez hosta.  
   
  `TimerOrWaitFired`  
- [in] `true`, jeśli upłynął limit czasu dojścia oczekiwania lub `false`, jeśli został zasygnalizowani.  
+ [w] `true` Jeśli upłynął limit czasu dojścia oczekiwania lub `false` Jeśli został on zasygnalizowani.  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcja, do której punkty `WAITORTIMERCALLBACK` są funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji hostingowej.  
+ Funkcja, do której `WAITORTIMERCALLBACK` punkty jest funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji hostingowej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorWks. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md)

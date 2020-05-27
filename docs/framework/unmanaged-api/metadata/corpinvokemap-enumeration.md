@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 8216dc3030b18428ab52fbf8385d392f81057aa0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176152"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007549"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap — Wyliczenie
 Określa opcje wywołania PInvoke.  
@@ -65,36 +65,36 @@ typedef enum  CorPinvokeMap {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`pmNoMangle`|Użyj każdej nazwy elementu członkowskiego, jak określono.|  
+|`pmNoMangle`|Użyj każdej nazwy elementu członkowskiego w określony sposób.|  
 |`pmCharSetMask`|Zarezerwowany.|  
 |`pmCharSetNotSpec`|Zarezerwowany.|  
-|`pmCharSetAnsi`|Ciągi marshal jako ciągi znaków wielo bajtów.|  
-|`pmCharSetUnicode`|Ciągi marshaljako 2-bajtowe znaki Unicode.|  
-|`pmCharSetAuto`|Automatycznie marshal ciągi odpowiednio dla docelowego systemu operacyjnego. Domyślnie jest to Unicode w systemach Windows NT, Windows 2000, Windows XP i Windows Server 2003; domyślnie jest ANSI w systemie Windows 98 i Windows Me.|  
+|`pmCharSetAnsi`|Kierowanie ciągów jako ciągów znaków wielobajtowych.|  
+|`pmCharSetUnicode`|Kierowanie ciągów jako znaków Unicode 2-bajtowych.|  
+|`pmCharSetAuto`|Automatyczne kierowanie ciągów odpowiednio dla docelowego systemu operacyjnego. Wartość domyślna to Unicode w systemie Windows NT, Windows 2000, Windows XP i rodziny Windows Server 2003. wartość domyślna to ANSI w systemach Windows 98 i Windows Me.|  
 |`pmBestFitUseAssem`|Zarezerwowany.|  
-|`pmBestFitEnabled`|Wykonaj najlepsze mapowanie znaków Unicode, które nie mają dokładnego dopasowania w zestawie znaków ANSI.|  
-|`pmBestFitDisabled`|Nie należy wykonywać najkosztowanego mapowania znaków Unicode. W takim przypadku wszystkie znaki, które nie można zastosować, zostaną zastąpione przez '?'.|  
+|`pmBestFitEnabled`|Wykonaj najlepiej dopasowane mapowanie znaków Unicode, które nie mają dokładnego dopasowania w zestawie znaków ANSI.|  
+|`pmBestFitDisabled`|Nie wykonuj najlepszego mapowania znaków Unicode. W takim przypadku wszystkie znaki napotkano zostaną zastąpione "?".|  
 |`pmBestFitMask`|Zarezerwowany.|  
 |`pmThrowOnUnmappableCharUseAssem`|Zarezerwowany.|  
-|`pmThrowOnUnmappableCharEnabled`|Zgłosić wyjątek, gdy organizator międzyoperacyjny napotka znak niezadający do aplikacji.|  
-|`pmThrowOnUnmappableCharDisabled`|Nie zgłaszaj wyjątku, gdy organizator międzyoperacyjny napotka znak niemożna zastosować.|  
+|`pmThrowOnUnmappableCharEnabled`|Zgłoś wyjątek, gdy organizator międzyoperacyjny napotka znak napotkano.|  
+|`pmThrowOnUnmappableCharDisabled`|Nie zgłaszaj wyjątku, gdy organizator międzyoperacyjny napotka znak napotkano.|  
 |`pmThrowOnUnmappableCharMask`|Zarezerwowano|  
-|`pmSupportsLastError`|Zezwalaj wywołującemu na wywołanie `SetLastError` funkcji Win32 przed zwróceniem z przypisanej metody.|  
+|`pmSupportsLastError`|Zezwalaj wywołującemu na wywoływanie `SetLastError` funkcji Win32 przed powrotem z metody z atrybutem.|  
 |`pmCallConvMask`|Zarezerwowano|  
-|`pmCallConvWinapi`|Użyj domyślnej konwencji wywoływania platformy. Na przykład w systemie `StdCall` Windows domyślny jest i `Cdecl`w systemie Windows CE .NET jest .|  
-|`pmCallConvCdecl`|Użyj `Cdecl` konwencji wywoływania. W takim przypadku obiektu wywołującego czyści stosu. Umożliwia to wywoływanie funkcji z `varargs` (czyli funkcje, które akceptują zmienną liczbę parametrów).|  
-|`pmCallConvStdcall`|Użyj `StdCall` konwencji wywoływania. W takim przypadku wywoływany czyści stosu. Jest to domyślna konwencja wywoływania niezarządzanych funkcji za pomocą wywołania platformy.|  
-|`pmCallConvThiscall`|Użyj `ThisCall` konwencji wywoływania. W takim przypadku pierwszym parametrem `this` jest wskaźnik i jest przechowywany w rejestrze ECX. Inne parametry są wypychane na stosie. Konwencja wywołująca `ThisCall` jest używana do wywoływania metod na klasy eksportowane z biblioteki DLL niezarządzanej.|  
+|`pmCallConvWinapi`|Użyj domyślnej konwencji wywoływania platformy. Na przykład w systemie Windows jest to ustawienie domyślne `StdCall` i na Windows CE .NET `Cdecl` .|  
+|`pmCallConvCdecl`|Użyj `Cdecl` konwencji wywoływania. W takim przypadku wywołujący czyści stos. Umożliwia to wywoływanie funkcji za pomocą `varargs` (czyli funkcji, które akceptują zmienną liczbę parametrów).|  
+|`pmCallConvStdcall`|Użyj `StdCall` konwencji wywoływania. W takim przypadku wywoływany czyści stos. Jest to domyślna konwencja wywoływania funkcji niezarządzanych przy użyciu wywołania platformy.|  
+|`pmCallConvThiscall`|Użyj `ThisCall` konwencji wywoływania. W tym przypadku pierwszy parametr jest `this` wskaźnikiem i jest przechowywany w rejestrze ECX. Inne parametry są wypychane na stosie. `ThisCall`Konwencja wywoływania jest używana do wywoływania metod w klasach wyeksportowanych z niezarządzanej biblioteki DLL.|  
 |`pmCallConvFastcall`|Zarezerwowany.|  
 |`pmMaxValue`|Zarezerwowany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

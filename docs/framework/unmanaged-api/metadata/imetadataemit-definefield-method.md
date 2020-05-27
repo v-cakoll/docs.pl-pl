@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177712"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004819"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField — Metoda
 Tworzy definicję dla pola z określonym podpisem metadanych i pobiera token do tej definicji pola.  
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token `mdTypeDef` dla otaczającej klasy lub interfejsu.  
+ podczas `mdTypeDef`Token dla otaczającej klasy lub interfejsu.  
   
  `szName`  
- [w] Nazwa pola w unicode.  
+ podczas Nazwa pola w formacie Unicode.  
   
  `dwFieldFlags`  
- [w] Atrybuty pola. Jest to maska `CorFieldAttr` bitowa wartości.  
+ podczas Atrybuty pola. To jest maska bitów `CorFieldAttr` wartości.  
   
  `pvSigBlob`  
- [w] Podpis pola jako obiekt BLOB.  
+ podczas Podpis pola jako obiekt BLOB.  
   
  `cbSigBlob`  
- [w] Liczba bajtów `pvSigBlob`w pliku .  
+ podczas Liczba bajtów w `pvSigBlob` .  
   
  `dwCPlusTypeFlag`  
- [w] Dla `ELEMENT_TYPE_` *\** wartości stałej. Jest to `CorElementType` wartość. Jeśli nie zdefiniowano stałej wartości `ELEMENT_TYPE_END`dla pola, należy użyć programu .  
+ podczas `ELEMENT_TYPE_` *\** Wartość stałej. To jest `CorElementType` wartość. Jeśli nie definiuje wartości stałej dla pola, użyj `ELEMENT_TYPE_END` .  
   
  `pValue`  
- [w] Stała wartość pola.  
+ podczas Stała wartość pola.  
   
  `cchValue`  
- [w] Rozmiar w znakach (Unicode) . `pValue`  
+ podczas Znaki w formacie (Unicode) `pValue` .  
   
  `pmd`  
- [na zewnątrz] Token `mdFieldDef` przypisany.  
+ określoną `mdFieldDef`Przypisany token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

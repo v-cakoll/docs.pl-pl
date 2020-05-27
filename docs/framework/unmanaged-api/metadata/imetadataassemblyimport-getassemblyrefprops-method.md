@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175970"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009070"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps — Metoda
 Pobiera zestaw właściwości dla odwołania do zestawu z określonym podpisem metadanych.  
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdar`  
- [w] Token `mdAssemblyRef` metadanych, który reprezentuje odwołanie do zestawu, dla którego mają zostać właściwości.  
+ podczas `mdAssemblyRef`Token metadanych reprezentujący odwołanie do zestawu, dla którego mają zostać pobrane właściwości.  
   
  `ppbPublicKeyOrToken`  
- [na zewnątrz] Wskaźnik do klucza publicznego lub tokenu metadanych.  
+ określoną Wskaźnik do klucza publicznego lub tokenu metadanych.  
   
  `pcbPublicKeyOrToken`  
- [na zewnątrz] Liczba bajtów w zwróconym kluczu publicznym lub tokenie.  
+ określoną Liczba bajtów w zwracanym kluczu publicznym lub tokenie.  
   
  `szName`  
- [na zewnątrz] Prosta nazwa zestawu.  
+ określoną Prosta nazwa zestawu.  
   
  `cchName`  
- [w] Rozmiar, w szerokich znaków, z `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, z `szName` .  
   
  `pchName`  
- [na zewnątrz] Wskaźnik do liczby szerokich znaków rzeczywiście `szName`zwrócony w .  
+ określoną Wskaźnik do liczby znaków dwubajtowych faktycznie zwróconych w `szName` .  
   
  `pMetaData`  
- [na zewnątrz] Wskaźnik do ASSEMBLYMETADATA struktury, która zawiera metadane zestawu.  
+ określoną Wskaźnik do struktury ASSEMBLYMETADATA, która zawiera metadane zestawu.  
   
  `ppbHashValue`  
- [na zewnątrz] Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu `PublicKey` SHA-1 właściwości zestawu, do którego odwołuje się, chyba że arfFullOriginator flagi [AssemblyRefFlags wyliczenia](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) jest ustawiona.  
+ określoną Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu SHA-1 `PublicKey` Właściwości zestawu, którego dotyczy odwołanie, chyba że ustawiona jest flaga arfFullOriginator wyliczenia [AssemblyRefFlags —](assemblyrefflags-enumeration.md) .  
   
  `pcbHashValue`  
- [na zewnątrz] Liczba znaków szerokich w zwróconej wartości skrótu.  
+ określoną Liczba znaków dwubajtowych w zwracanej wartości skrótu.  
   
  `pdwAssemblyRefFlags`  
- [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do zestawu. Wartość flag jest kombinacją jednej lub więcej wartości [CorAssemblyFlags.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
+ określoną Wskaźnik do flag, które opisują metadane zastosowane do zestawu. Wartość flags jest kombinacją co najmniej jednej wartości [CorAssemblyFlags —](corassemblyflags-enumeration.md) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca S_OK, jeśli zakończy się pomyślnie; w przeciwnym razie zwraca jeden z kodów błędów zdefiniowanych w pliku nagłówka Winerror.h.  
+ Ta metoda zwraca S_OK, jeśli zakończy się pomyślnie; w przeciwnym razie zwraca jeden z kodów błędów zdefiniowanych w pliku nagłówkowym Winerror. h.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

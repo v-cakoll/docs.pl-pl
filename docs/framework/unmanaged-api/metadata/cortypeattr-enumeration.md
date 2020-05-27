@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436444"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008966"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr — Wyliczenie
 Zawiera wartości wskazujące metadane typu.  
@@ -73,9 +73,9 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Służy do wyświetlania informacji o widoczności.|  
 |`tdNotPublic`|Określa, że typ nie należy do zakresu publicznego.|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Określa, że ten typ interpretuje LPTSTR jako ANSI.|  
 |`tdUnicodeClass`|Określa, że ten typ interpretuje LPTSTR jako Unicode.|  
 |`tdAutoClass`|Określa, że ten typ interpretuje LPTSTR automatycznie.|  
-|`tdCustomFormatClass`|Określa, że typ ma niestandardową metodę kodowania określoną przez `CustomFormatMask`.|  
+|`tdCustomFormatClass`|Określa, że typ ma niestandardowe kodowanie określone przez `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Użyj tej maski, aby uzyskać informacje o niestandardowym kodowaniu dla natywnej międzyoperacyjności. Znaczenie wartości tych dwóch bitów nie jest określone.|  
 |`tdBeforeFieldInit`|Określa, że typ musi być zainicjowany przed pierwszą próbą uzyskania dostępu do pola statycznego.|  
 |`tdForwarder`|Określa, że typ jest eksportowany i usługa przesyłania dalej typu.|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Określa, że typ ma skojarzone zabezpieczenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

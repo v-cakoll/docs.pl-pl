@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c75aef9-c742-4b33-a14b-56ff94b0f725
 topic_type:
 - apiref
-ms.openlocfilehash: 652169c67461c1663c005dd014290c4cf2d993ba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d0f9a8c5c3baf7594e098a3d5544bad55fdc917
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434364"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009291"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>IMetaDataEmit::DeleteFieldMarshal — Metoda
 Niszczy sygnaturę metadanych kierowania PInvoke dla obiektu, do którego odwołuje się określony token.  
@@ -35,18 +35,18 @@ HRESULT DeleteFieldMarshal (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- podczas Token `mdFieldDef` lub `mdParamDef` reprezentujący pole lub parametr, dla którego ma zostać usunięty podpis Marshaling metadanych.  
+ podczas `mdFieldDef`Token lub `mdParamDef` , który reprezentuje pole lub parametr, dla którego ma zostać usunięta sygnatura organizowania metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

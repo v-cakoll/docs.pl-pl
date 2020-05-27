@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da82950ea1a0da81c77d173be9ab45dcb3001bfe
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007835"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent — Metoda
-Ustanawia, że określony element członkowski, zgodnie z definicją wcześniejszego wywołania [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), jest członkiem określonego typu, zgodnie z definicją wcześniejszego wywołania [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Ustala, że określony element członkowski zdefiniowany przez poprzednie wywołanie do [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), jest elementem członkowskim określonego typu, zdefiniowanym przez poprzednie wywołanie do [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +36,21 @@ HRESULT SetParent (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [w] Token, `mdMemberRef` aby otrzymać nowy element nadrzędny.  
+ podczas `mdMemberRef`Token do otrzymania nowego elementu nadrzędnego.  
   
  `tk`  
- [w] Dla `mdToken` nowego rodzica.  
+ podczas `mdToken`Dla nowego elementu nadrzędnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

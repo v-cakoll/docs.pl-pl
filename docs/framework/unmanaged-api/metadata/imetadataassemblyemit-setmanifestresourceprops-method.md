@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177840"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009148"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda
-Modyfikuje `ManifestResource` strukturę określonych metadanych.  
+Modyfikuje określoną `ManifestResource` strukturę metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [w] Token, który określa `ManifestResource` strukturę metadanych, które mają zostać zmodyfikowane.  
+ podczas Token określający `ManifestResource` strukturę metadanych, która ma zostać zmodyfikowana.  
   
  `tkImplementation`  
- [w] Token, typu `File` lub `AssemblyRef`, który mapuje do dostawcy zasobów.  
+ podczas Token, typu `File` lub `AssemblyRef` , który jest mapowany do dostawcy zasobów.  
   
  `dwOffset`  
- [w] Przesunięcie na początek zasobu w pliku.  
+ podczas Przesunięcie do początku zasobu w pliku.  
   
  `dwResourceFlags`  
- [w] Bitowa kombinacja wartości flagi określających atrybuty zasobu.  
+ podczas Bitowa kombinacja wartości flag, które określają atrybuty zasobu.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `ManifestResource` strukturę metadanych, należy użyć [metody IMetaDataAssemblyEmit::DefineManifestResource.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)  
+ Aby utworzyć `ManifestResource` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443587"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007440"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder — Wyliczenie
 Zawiera wartości flag, które wskazują warunki, w których komunikat o błędzie powinien zostać wygenerowany, gdy metadane są emitowane poza kolejnością.  
@@ -43,7 +43,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|Wskazuje zachowanie domyślne, które nie generuje komunikatów o błędach.|  
 |`MDErrorOutOfOrderNone`|Wskazuje, że kompilator nie powinien generować komunikatów o błędach.|  
@@ -55,12 +55,12 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDEventOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, gdy zdarzenie jest emitowane poza kolejnością.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

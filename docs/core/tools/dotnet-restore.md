@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840939"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005323"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -25,7 +25,7 @@ dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
     [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
-    [--use-lockfile] [-v|--verbosity <LEVEL>]
+    [--use-lock-file] [-v|--verbosity <LEVEL>]
 
 dotnet restore -h|--help
 ```
@@ -145,7 +145,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
   Określa identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania. To ustawienie zastępuje wszystkie źródła określone w plikach *NuGet. config* . Można podać wiele źródeł, określając tę opcję wiele razy.
 
-- **`--use-lockfile`**
+- **`--use-lock-file`**
 
   Umożliwia generowanie i używanie pliku blokady projektu z przywracaniem.
 

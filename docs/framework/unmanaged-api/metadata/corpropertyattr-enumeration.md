@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177943"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007536"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr — Wyliczenie
 Zawiera wartości opisujące metadane właściwości.  
@@ -42,19 +42,19 @@ typedef enum CorPropertyAttr {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`prSpecialName`|Określa, że właściwość jest wyjątkowa i że jej nazwa opisuje sposób.|  
+|`prSpecialName`|Określa, że właściwość jest specjalna i że jej nazwa opisuje sposób.|  
 |`prReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`prRTSpecialName`|Określa, że wewnętrzne interfejsy API środowiska wykonawczego wspólnego języka powinny sprawdzać kodowanie nazwy właściwości.|  
+|`prRTSpecialName`|Określa, że wewnętrzne interfejsy API środowiska uruchomieniowego języka wspólnego powinny sprawdzać kodowanie nazwy właściwości.|  
 |`prHasDefault`|Określa, że właściwość ma wartość domyślną.|  
 |`prUnused`|Nieużywany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

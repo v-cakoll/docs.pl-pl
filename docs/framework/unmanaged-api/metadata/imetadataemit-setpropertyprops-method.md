@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177475"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007783"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps — Metoda
-Ustawia obiekty przechowywane w metadanych dla właściwości zdefiniowanej przez wcześniejsze [wywołanie metody DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Ustawia funkcje przechowywane w metadanych dla właściwości zdefiniowanej przez poprzednie wywołanie [metody DefineProperty —](imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parametry  
  `pr`  
- [w] Token dla właściwości, która ma zostać zmieniona  
+ podczas Token dla właściwości, która ma zostać zmieniona.  
   
  `dwPropFlags`  
- [w] Flagi właściwości.  
+ podczas Flagi właściwości.  
   
  `dwCPlusTypeFlag`  
- [w] Typ wartości domyślnej właściwości.  
+ podczas Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [w] Wartość domyślna właściwości.  
+ podczas Wartość domyślna właściwości.  
   
  `cchValue`  
- [w] Liczba znaków (Unicode) `pValue`w pliku .  
+ podczas Liczba znaków (Unicode) w `pValue` .  
   
  `mdSetter`  
- [w] Metoda, która ustawia wartość właściwości.  
+ podczas Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- [w] Metoda, która pobiera wartość właściwości.  
+ podczas Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [w] Tablica innych metod skojarzonych z właściwością. Zakończ tę tablicę `mdTokenNil` za pomocą tokenu.  
+ podczas Tablica innych metod skojarzonych z właściwością. Przerwij tę tablicę przy użyciu `mdTokenNil` tokenu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

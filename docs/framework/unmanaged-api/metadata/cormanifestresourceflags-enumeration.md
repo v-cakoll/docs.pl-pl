@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: 35966e25d02bd6f1a9bdd21ad4e9cc44b7bb480e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ebdff88e9fdf499b809d56c4c29a906dbef9ec40
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450260"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008979"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags — Wyliczenie
 Wskazuje widoczność zasobów zakodowanych w manifeście zestawu.  
@@ -38,19 +38,19 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`mrVisibilityMask`|Rezerwacj.|  
+|`mrVisibilityMask`|Zarezerwowany.|  
 |`mrPublic`|Zasoby są publiczne.|  
 |`mrPrivate`|Zasoby są prywatne.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

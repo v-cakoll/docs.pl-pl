@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175814"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004359"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType — Metoda
-Tworzy podpis metadanych definicji typu, zwraca `mdTypeDef` token dla tego typu i określa, że zdefiniowany `tdEncloser` typ jest członkiem typu, do którego odwołuje się parametr.  
+Tworzy sygnaturę metadanych definicji typu, zwraca `mdTypeDef` token dla tego typu i określa, że zdefiniowany typ jest składową typu, do którego odwołuje się `tdEncloser` parametr.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametry  
  `szTypeDef`  
- [w] Nazwa typu w Unicode.  
+ podczas Nazwa typu w formacie Unicode.  
   
  `dwTypeDefFlags`  
- [w] `TypeDef` atrybutów. Jest to maska `CorTypeAttr` bitowa wartości.  
+ [w] `TypeDef` Attributes. To jest maska bitów `CorTypeAttr` wartości.  
   
  `tkExtends`  
- [w] Token klasy podstawowej. Jest to token `mdTypeDef` lub `mdTypeRef` token.  
+ podczas Token klasy bazowej. Jest to albo `mdTypeDef` `mdTypeRef` token.  
   
  `rtkImplements`[]  
- [w] Tablica tokenów, które określają interfejsy, które implementuje ta klasa lub interfejs.  
+ podczas Tablica tokenów, które określają interfejsy, które implementuje Ta klasa lub interfejs.  
   
  `tdEncloser`  
- [w] Token otaczającego typu. Ostatnim elementem tablicy `mdTokenNil`musi być .  
+ podczas Token typu otaczającego. Ostatni element tablicy musi być `mdTokenNil` .  
   
  `ptd`  
- [na zewnątrz] Token `mdTypeDef` przypisany.  
+ określoną `mdTypeDef`Przypisany token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

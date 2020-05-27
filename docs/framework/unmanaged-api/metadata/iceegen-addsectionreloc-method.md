@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176113"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008901"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc — Metoda
-Dodaje instrukcję .reloc do podstawy kodu.  
+Dodaje instrukcję. reloc do bazy kodu.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [w] Sekcja kodu w pamięci, do której należy dodać instrukcję .reloc.  
+ podczas Sekcja kodu w pamięci, do której ma zostać dodana Instrukcja. reloc.  
   
  `offset`  
- [w] Przesunięcie sekcji.  
+ podczas Przesunięcie sekcji.  
   
  `relativeTo`  
- [w] Sekcja, do `offset` której się odnosi.  
+ podczas Sekcja, do której `offset` odwołuje się.  
   
  `relocType`  
- [w] Jedna z wartości [CeeSectionRelocType,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) wskazująca rodzaj instrukcji .reloc, aby dodać.  
+ podczas Jedna z wartości [CeeSectionRelocType —](ceesectionreloctype-enumeration.md) , wskazując rodzaj instrukcji. reloc, która ma zostać dodana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen — Interfejs](iceegen-interface.md)

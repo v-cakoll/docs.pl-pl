@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1cb84b94b37a2e9e8dd4d20d09cbca82db290c0f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444303"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009458"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags — Wyliczenie
 Zawiera wartości opisujące funkcje czasu wykonywania zestawu.  
@@ -36,9 +36,9 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|Określa, że eksportowane definicje typów są niejawne w obrębie plików wchodzących w skład zestawu. W .NET Framework wersje 1,0 i 1,1 Ta wartość jest zawsze ustawiana jako ustawiona.|  
 |`afImplicitResources`|Określa, że definicje zasobów są niejawne w obrębie plików wchodzących w skład zestawu. W .NET Framework 1,0 i 1,1 Ta wartość jest zawsze przyjmowana jako ustawiona.|  
@@ -50,15 +50,15 @@ typedef enum {
  Wartości między 0x0010 i 0x0070, włącznie, służą do opisywania funkcji zgodności Side-by-Side w przywoływanym zestawie. Jeśli żadna z tych wartości nie zostanie ustawiona, przyjmuje się, że zestaw jest zgodny ze sobą.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MsCorEE. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)
+- [IMetaDataAssemblyEmit — Interfejs](imetadataassemblyemit-interface.md)

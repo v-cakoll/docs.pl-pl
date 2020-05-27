@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443913"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007939"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags — Wyliczenie
 Zawiera wartości opisujące metadane zastosowane do kompilacji zestawu.  
@@ -53,9 +53,9 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`afPublicKey`|Wskazuje, że odwołanie do zestawu zawiera pełny, niezmieszany klucz publiczny.|  
 |`afPA_None`|Wskazuje, że nie określono architektury procesora.|  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|Wskazuje, że architektura procesora jest Itanium (PE32 +).|  
 |`afPA_AMD64`|Wskazuje, że architektura procesora to AMD x64 (PE32 +).|  
 |`afPA_ARM`|Wskazuje, że architektura procesora to ARM (PE32).|  
-|`afPA_NoPlatform`|Wskazuje, że zestaw jest zestawem referencyjnym; oznacza to, że ma zastosowanie do dowolnej architektury, ale nie może działać w żadnej architekturze. W tym celu flaga jest taka sama jak `afPA_Mask`.|  
-|`afPA_Specified`|Wskazuje, że flagi architektury procesora powinny być propagowane do rekordu `AssemblyRef`.|  
+|`afPA_NoPlatform`|Wskazuje, że zestaw jest zestawem referencyjnym; oznacza to, że ma zastosowanie do dowolnej architektury, ale nie może działać w żadnej architekturze. W tym celu flaga jest taka sama jak `afPA_Mask` .|  
+|`afPA_Specified`|Wskazuje, że flagi architektury procesora powinny być propagowane do `AssemblyRef` rekordu.|  
 |`afPA_Mask`|Maska opisująca architekturę procesora.|  
 |`afPA_FullMask`|Określa, że opis architektury procesora jest uwzględniany.|  
 |`afPA_Shift`|Wskazuje liczbę przesunięć w flagach architektury procesora do i z indeksu.|  
-|`afEnableJITcompileTracking`|Wskazuje odpowiednią wartość z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Wskazuje odpowiednią wartość z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afEnableJITcompileTracking`|Wskazuje odpowiednią wartość z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
+|`afDisableJITcompileOptimizer`|Wskazuje odpowiednią wartość z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
 |`afRetargetable`|Wskazuje, że zestaw można przekierować w czasie wykonywania do zestawu z innego wydawcy.|  
 |`afContentType_Mask`|Maska opisująca typ zawartości.|  
 |`afContentType_Default`|Wskazuje domyślny typ zawartości.|  
 |`afContentType_WindowsRuntime`|Wskazuje typ zawartości środowisko wykonawcze systemu Windows.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

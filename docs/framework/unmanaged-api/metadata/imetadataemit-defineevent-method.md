@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: a9598be850604f16ee8cc62187e1fed7ecf3a7e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7babd0a90b9882acb03b6360753f55c57a399b9e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175853"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005638"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent — Metoda
 Tworzy definicję zdarzenia z określonym podpisem metadanych i pobiera token do tej definicji zdarzenia.  
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token dla klasy docelowej lub interfejsu. Jest to token `mdTypeDef` `mdTypeDefNil` lub token.  
+ podczas Token dla docelowej klasy lub interfejsu. Jest to `mdTypeDef` `mdTypeDefNil` token lub.  
   
  `szEvent`  
- [w] Nazwa zdarzenia.  
+ podczas Nazwa zdarzenia.  
   
  `dwEventFlags`  
- [w] Flagi zdarzeń.  
+ podczas Flagi zdarzeń.  
   
  `tkEventType`  
- [w] Token dla klasy zdarzenia. Jest to `mdTypeDef`, `mdTypeRef`a `mdTokenNil` , lub token.  
+ podczas Token dla klasy Event. Jest to `mdTypeDef` , a `mdTypeRef` , lub `mdTokenNil` token.  
   
  `mdAddOn`  
- [w] Metoda używana do subskrybowania zdarzenia lub null.  
+ podczas Metoda używana do subskrybowania zdarzenia lub wartość null.  
   
  `mdRemoveOn`  
- [w] Metoda używana do anulowania subskrypcji zdarzenia lub null.  
+ podczas Metoda używana do anulowania subskrypcji zdarzenia lub wartość null.  
   
  `mdFire`  
- [w] Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
+ podczas Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
   
  `rmdOtherMethods[]`  
- [w] Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Tablica zostanie zakończona `mdMethodDefNil` tokenem.  
+ podczas Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Tablica została zakończona z `mdMethodDefNil` tokenem.  
   
  `pmdEvent`  
- [na zewnątrz] Token metadanych przypisany do zdarzenia.  
+ określoną Token metadanych przypisany do zdarzenia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

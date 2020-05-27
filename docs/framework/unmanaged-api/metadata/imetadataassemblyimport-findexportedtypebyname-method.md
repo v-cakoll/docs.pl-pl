@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175996"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009395"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName — Metoda
-Pobiera wskaźnik do typu eksportowanego, biorąc pod uwagę jego nazwę i otaczający typ.  
+Pobiera wskaźnik do wyeksportowanego typu z uwzględnieniem jego nazwy i typu otaczającego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [w] Nazwa wyeksportowanego typu.  
+ podczas Nazwa wyeksportowanego typu.  
   
  `mdtExportedType`  
- [w] Token metadanych dla otaczającej klasy eksportowanego typu. Ta wartość `mdExportedTypeNil` jest, jeśli żądany typ eksportowane nie jest typem zagnieżdżone.  
+ podczas Token metadanych dla otaczającej klasy wyeksportowanego typu. Ta wartość jest `mdExportedTypeNil` , jeśli żądany wyeksportowany typ nie jest typem zagnieżdżonym.  
   
  `ptkExportedType`  
- [na zewnątrz] Wskaźnik do `mdExportedType` tokenu, który reprezentuje eksportowany typ.  
+ określoną Wskaźnik do `mdExportedType` tokenu, który reprezentuje wyeksportowany typ.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `FindExportedTypeByName` używa standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego do rozpoznawania odwołań.  
+ `FindExportedTypeByName`Metoda używa standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego do rozpoznawania odwołań.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../deployment/how-the-runtime-locates-assemblies.md)

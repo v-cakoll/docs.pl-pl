@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-ms.openlocfilehash: e59e7695246b2c83171e77352e16464258516f8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b05527f118de059c674ea659b1a22b7895126cf4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177461"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007770"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>IMetaDataEmit::SetTypeDefProps — Metoda
-Ustawia funkcje typu zdefiniowane przez wcześniejsze wywołanie [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Ustawia funkcje typu zdefiniowanego przez poprzednie wywołanie [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token `mdTypeDef` uzyskany z oryginalnego wywołania [do IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ podczas `mdTypeDef`Token uzyskany od oryginalnego wywołania do [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [w] `TypeDef` atrybutów. Jest to maska `CorTypeAttr` bitowa wartości.  
+ [w] `TypeDef` Attributes. To jest maska bitów `CorTypeAttr` wartości.  
   
  `tkExtends`  
- [w] Klasa `mdToken` podstawowa. Uzyskane z poprzedniego wywołania [do IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), lub `null`.  
+ podczas `mdToken`Klasy podstawowej. Uzyskano od poprzedniego wywołania do [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md)lub `null` .  
   
  `rtkImplements[]`  
- [w] Tablica tokenów dla interfejsów, które implementuje tego typu. Tokeny te `mdTypeRef` są uzyskiwane przy użyciu [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). Ostatnim elementem tablicy musi `mdTokenNil`być .  
+ podczas Tablica tokenów dla interfejsów, które implementuje ten typ. Te `mdTypeRef` tokeny są uzyskiwane przy użyciu [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md). Ostatni element tablicy musi być `mdTokenNil` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

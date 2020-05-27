@@ -74,7 +74,7 @@ typedef enum LoggingLevelEnum {
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.EventLog>
 - [Debugowanie — wyliczenia](debugging-enumerations.md)

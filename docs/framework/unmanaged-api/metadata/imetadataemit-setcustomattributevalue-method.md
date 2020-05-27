@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e24db7da7abbdb597b8ff64515e8053667af3ff
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175671"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008771"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue — Metoda
-Ustawia lub aktualizuje wartość atrybutu niestandardowego zdefiniowanego przez wcześniejsze wywołanie [iMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Ustawia lub aktualizuje wartość atrybutu niestandardowego zdefiniowanego przez poprzednie wywołanie do [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>Parametry  
  `pcv`  
- [w] Token atrybutu niestandardowego docelowego.  
+ podczas Token docelowego atrybutu niestandardowego.  
   
  `pCustomAttribute`  
- [w] Wskaźnik do tablicy zawierającej atrybut niestandardowy.  
+ podczas Wskaźnik do tablicy zawierającej atrybut niestandardowy.  
   
  `cbCustomAttribute`  
- [w] Rozmiar atrybutu niestandardowego w bajtach.  
+ podczas Rozmiar atrybutu niestandardowego w bajtach.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

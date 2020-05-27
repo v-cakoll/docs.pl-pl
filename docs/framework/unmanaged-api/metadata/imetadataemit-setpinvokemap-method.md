@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d34c7a2992a2779b96ec87f1a0175d8fcbce34a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175593"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007796"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap — Metoda
-Ustawia lub zmienia funkcje podpisu PInvoke metody, zgodnie z definicją wcześniejszego wywołania [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Ustawia lub zmienia funkcje podpisu PInvoke metody, zgodnie z definicją w poprzednim wywołaniu [IMetaDataEmit::D efinepinvokemap](imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] Informacje `mdToken` o mapowaniu.  
+ podczas , `mdToken` Do którego mają zastosowanie informacje dotyczące mapowania.  
   
  `dwMappingFlags`  
- [w] Flagi używane przez PInvoke do mapowania. Jest to maska `CorPinvokeMap` bitowa wartości.  
+ podczas Flagi używane przez funkcję PInvoke do wykonania mapowania. To jest maska bitów `CorPinvokeMap` wartości.  
   
  `szImportName`  
- [w] Nazwa docelowego eksportu w macierzystej biblioteki DLL.  
+ podczas Nazwa docelowego eksportu w natywnej bibliotece DLL.  
   
  `mrImportDLL`  
- [w] Token `mdModuleRef` dla docelowej biblioteki DLL niezarządzanej.  
+ podczas `mdModuleRef`Token dla docelowej niezarządzanej biblioteki DLL.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97dc3a56-adfa-431f-889e-06a35ac84d51
 topic_type:
 - apiref
-ms.openlocfilehash: 09a1605deda5b51be604c3b8f0c69fa5adcf9dc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f8c0c2cb8dea8ad2b9c0040654122ef5942aca0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175957"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008394"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib — Metoda
-Pobiera wskaźnik interfejsu do wystąpienia [IMetaDataImport,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) który reprezentuje podpis metadanych `ITypeLib` biblioteki typów reprezentowanych przez określone wystąpienie.  
+Pobiera wskaźnik interfejsu do wystąpienia [IMetaDataImport](imetadataimport-interface.md) , które reprezentuje sygnaturę metadanych biblioteki typów reprezentowanej przez określone `ITypeLib` wystąpienie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +36,21 @@ HRESULT GetMetaDataFromTypeLib (
   
 ## <a name="parameters"></a>Parametry  
  `pITL`  
- [w] Wskaźnik do `ITypeLib` obiektu reprezentującego bibliotekę typów.  
+ podczas Wskaźnik do `ITypeLib` obiektu, który reprezentuje bibliotekę typów.  
   
  `ppMDI`  
- [na zewnątrz] Wskaźnik do lokalizacji, która odbiera `IMetaDataImport` adres wystąpienia, który reprezentuje podpis metadanych.  
+ określoną Wskaźnik do lokalizacji, która otrzymuje adres `IMetaDataImport` wystąpienia, które reprezentuje sygnaturę metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)

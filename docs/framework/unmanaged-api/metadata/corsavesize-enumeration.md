@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176139"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009187"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize — Wyliczenie
-Zawiera wartości wskazujące poziom precyzji wymagany podczas wykonywania zapytań o rozmiar operacji zapisywania.  
+Zawiera wartości wskazujące poziom dokładności wymagany podczas wykonywania zapytania o rozmiar operacji zapisywania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,18 +39,18 @@ typedef enum CorSaveSize {
 |Członek|Opis|  
 |------------|-----------------|  
 |`cssAccurate`|Określa, że wartość zwracana powinna być dokładna.|  
-|`cssQuick`|Określa, że wartość zwracana powinna być szacowana.|  
-|`cssDiscardTransientCAs`|Określa, że typy podlegające odrzuceniu powinny zostać usunięte.|  
+|`cssQuick`|Określa, że należy oszacować wartość zwracaną.|  
+|`cssDiscardTransientCAs`|Określa, że typy, które mają być odrzucane, powinny być usuwane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

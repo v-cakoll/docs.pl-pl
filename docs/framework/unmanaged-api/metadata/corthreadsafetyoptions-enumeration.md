@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442471"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007510"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions — Wyliczenie
 
@@ -37,20 +37,20 @@ typedef enum CorThreadSafetyOptions {
 
 ## <a name="members"></a>Elementy członkowskie
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Wartość domyślna. Taki sam jak `MDThreadSafetyOff`.|
+|`MDThreadSafetyDefault`|Wartość domyślna. Analogicznie jak `MDThreadSafetyOff` .|
 |`MDThreadSafetyOff`|Wskazuje, że nie można ustawić blokady czytnika/składnika zapisywania.|
 |`MDThreadSafetyOn`|Wskazuje, że można ustawić blokadę czytnika/składnika zapisywania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorHdr. h
 
-**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)

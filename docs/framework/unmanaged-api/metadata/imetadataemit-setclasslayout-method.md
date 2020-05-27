@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a18583ce807ffa672811f3a0cd1e744233f6eb30
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177562"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008836"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout — Metoda
-Kończy układ pól dla klasy, która została zdefiniowana przez wcześniejsze wywołanie [metody DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Uzupełnia układ pól dla klasy, która została zdefiniowana przez poprzednie wywołanie [metody DefineTypeDef —](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,36 +38,36 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] Token, `mdTypeDef` który określa klasę, która ma zostać rozmieszczona.  
+ podczas `mdTypeDef`Token określający klasę, która ma zostać ustanowiona.  
   
  `dwPackSize`  
- [w] Rozmiar opakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar opakowania to liczba bajtów między przyległymi polami.  
+ podczas Rozmiar pakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar pakowania to liczba bajtów między sąsiednimi polami.  
   
  `rFieldOffsets`  
- [w] Tablica [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktur, z których każda określa pole klasy i przesunięcie pola w klasie. Zakończ tablicę `mdTokenNil`za pomocą pliku .  
+ podczas Tablica struktur [COR_FIELD_OFFSET](cor-field-offset-structure.md) , z których każdy określa pole klasy i przesunięcie pola w klasie. Przerwij tablicę za pomocą `mdTokenNil` .  
   
  `ulClassSize`  
- [w] Rozmiar w bajtach klasy.  
+ podczas Rozmiar klasy w bajtach.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa jest początkowo zdefiniowana przez [wywołanie metody IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) i określenie jednego z trzech układów dla pól klasy: automatycznego, sekwencyjnego lub jawnego. Zwykle można użyć układu automatycznego i niech środowisko uruchomieniowe wybrać najlepszy sposób rozmieszczenia pól.  
+ Klasa jest początkowo definiowana przez wywołanie metody [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md) i określenie jednego z trzech układów dla pól klasy: automatyczne, sekwencyjne lub jawne. Zwykle należy używać automatycznego układu i pozwolić, aby środowisko uruchomieniowe było najlepszym sposobem ułożenia pól.  
   
- Jednak może chcesz pola określone zgodnie z układem, który używa kodu niezarządzanego. W takim przypadku wybierz układ sekwencyjny lub `SetClassLayout` jawny i wywołaj, aby ukończyć układ pól:  
+ Jednakże można chcieć, aby pola zostały określone zgodnie z rozmieszczeniem, które jest używane w kodzie niezarządzanym. W takim przypadku wybierz Układ sekwencyjny lub jawny i Wywołaj, `SetClassLayout` Aby zakończyć układ pól:  
   
-- Układ sekwencyjny: Określ rozmiar opakowania. Pole jest wyrównane zgodnie z jego naturalnym rozmiarem lub rozmiarem opakowania, w zależności od tego, co skutkuje mniejszym przesunięciem pola. Ustaw `rFieldOffsets` `ulClassSize` i na zero.  
+- Układ sekwencyjny: Określ rozmiar pakowania. Pole jest wyrównane do rozmiaru naturalnego lub rozmiaru pakowania, w zależności od tego, czy jest to mniejsze przesunięcie pola. Ustaw wartość `rFieldOffsets` i `ulClassSize` na zero.  
   
-- Jawny układ: Określ przesunięcie każdego pola lub określ rozmiar klasy i rozmiar opakowania.  
+- Układ jawny: Określ przesunięcie każdego pola lub Określ rozmiar klasy oraz rozmiar pakowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)

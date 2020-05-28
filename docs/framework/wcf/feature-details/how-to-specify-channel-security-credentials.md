@@ -2,12 +2,12 @@
 title: 'Instrukcje: określanie poświadczeń zabezpieczeń kanału'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972444"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144711"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: określanie poświadczeń zabezpieczeń kanału
 Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM wywoływanie usług WCF. Większość usług WCF wymaga od klienta określenia poświadczeń uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z poziomu klienta WCF można określić te poświadczenia w kodzie zarządzanym lub w pliku konfiguracyjnym aplikacji. Podczas wywoływania usługi WCF z poziomu aplikacji modelu COM można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu, aby określić poświadczenia. W tym temacie przedstawiono różne sposoby określania poświadczeń przy użyciu <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
@@ -23,11 +23,11 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
   
 2. Otwórz projekt zabezpieczeń wiadomości.  
   
-3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` Dodaj`ICalculator` do definicji interfejsu.  
+3. Dodaj `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` do `ICalculator` definicji interfejsu.  
   
 4. Dodaj `bindingNamespace="http://Microsoft.ServiceModel.Samples"` do znacznika punktu końcowego w pliku App. config dla usługi.  
   
-5. Utwórz próbkę zabezpieczenia komunikatów i uruchom Service. exe. Użyj programu Internet Explorer i przejdź do identyfikatora URI usługi (http://localhost:8000/ServiceModelSamples/Service) aby upewnić się, że usługa działa.  
+5. Utwórz próbkę zabezpieczenia komunikatów i uruchom Service. exe. Użyj programu Internet Explorer i przejdź do identyfikatora URI usługi ( `http://localhost:8000/ServiceModelSamples/Service` ), aby upewnić się, że usługa działa.  
   
 6. Otwórz Visual Basic 6,0 i Utwórz nowy plik w standardowym pliku. exe. Dodaj przycisk do formularza i kliknij dwukrotnie przycisk, aby dodać następujący kod do procedury obsługi kliknięcia:  
   
@@ -50,7 +50,7 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
   
 7. Uruchom aplikację Visual Basic i sprawdź wyniki.  
   
-     Aplikacja Visual Basic wyświetli okno komunikatu z wynikiem wywołania Dodawanie (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29>lub <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> można również użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> zamiast tego, aby ustawić certyfikat klienta:  
+     Aplikacja Visual Basic wyświetli okno komunikatu z wynikiem wywołania Dodawanie (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29>lub <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> można również użyć zamiast tego <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> , aby ustawić certyfikat klienta:  
   
     ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -64,9 +64,9 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
   
 ### <a name="to-specify-user-name-and-password"></a>Aby określić nazwę użytkownika i hasło  
   
-1. Zmodyfikuj plik App. config usługi, aby użyć programu `wsHttpBinding`. Jest to wymagane do weryfikacji nazwy użytkownika i hasła:  
+1. Zmodyfikuj plik App. config usługi, aby użyć programu `wsHttpBinding` . Jest to wymagane do weryfikacji nazwy użytkownika i hasła:  
 
-2. Ustaw nazwę użytkownika na: `clientCredentialType`  
+2. Ustaw `clientCredentialType` nazwę użytkownika na:  
 
 3. Otwórz Visual Basic 6,0 i Utwórz nowy plik w standardowym pliku. exe. Dodaj przycisk do formularza i kliknij dwukrotnie przycisk, aby dodać następujący kod do procedury obsługi kliknięcia:  
   
@@ -87,7 +87,7 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
 4. Uruchom aplikację Visual Basic i sprawdź wyniki. Aplikacja Visual Basic wyświetli okno komunikatu z wynikiem wywołania Dodawanie (3, 4).  
   
     > [!NOTE]
-    > Powiązanie określone w monikerze usługi w tym przykładzie zostało zmienione na WSHttpBinding_ICalculator. Należy również pamiętać, że w wywołaniu metody <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>należy podać prawidłową nazwę użytkownika i hasło.  
+    > Powiązanie określone w monikerze usługi w tym przykładzie zostało zmienione na WSHttpBinding_ICalculator. Należy również pamiętać, że w wywołaniu metody należy podać prawidłową nazwę użytkownika i hasło <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> .  
   
 ### <a name="to-specify-windows-credentials"></a>Aby określić poświadczenia systemu Windows  
   
@@ -129,12 +129,12 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Aby uzyskać więcej informacji na temat parametrów dla tej metody, <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>Zobacz.  
+     Aby uzyskać więcej informacji na temat parametrów dla tej metody, zobacz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> .  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Instrukcje: Konfigurowanie poświadczeń na usługa federacyjna](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

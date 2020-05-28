@@ -4,187 +4,187 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 86e0c77b899ad590b9958fea3a050ad0e660bb43
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d09dd6bcb8564f770df6b87751aee4cdb04cd12c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463791"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144620"
 ---
 # <a name="security-protocols"></a>Protokoły zabezpieczeń
-Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące wymagania dotyczące zabezpieczeń obsługi wiadomości w przedsiębiorstwie. W tej sekcji opisano szczegóły programu Windows Communication Foundation <xref:System.ServiceModel.Channels.SecurityBindingElement>(WCF) (zaimplementowane w ) dla następujących protokołów zabezpieczeń usług sieci Web.  
+Protokoły zabezpieczenia usług w sieci Web zapewniają mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące wymagania dotyczące zabezpieczeń dotyczące komunikatów w przedsiębiorstwie. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) (zaimplementowane w programie <xref:System.ServiceModel.Channels.SecurityBindingElement> ) dla następujących protokołów zabezpieczeń usług sieci Web.  
   
 |Specyfikacja/dokument|Link|  
 |-|-|  
-|WSS: Zabezpieczenia wiadomości SOAP 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS: Profil tokenu użytkownika 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: Profil tokenu X509 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS: SAML 1.1 Profil tokenu 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: Zabezpieczenia wiadomości SOAP 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|Profil tokenu nazwy użytkownika WSS 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: Profil tokenu X.509 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS: Profil tokenu Protokołu Kerberos 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS: SAML 1.1 Profil tokenu 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|Rozmowa w zabezpieczeniu WS 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
-|WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
-|Uwaga aplikacji:<br /><br /> Korzystanie z funkcji zaufania WS dla uzgadniania TLS|Do opublikowania|  
-|Uwaga aplikacji:<br /><br /> Korzystanie z funkcji WS-Trust dla usługi SPNEGO|Do opublikowania|  
-|Uwaga aplikacji:<br /><br /> Usługi sieci Web adresujące odwołania do punktów końcowych i tożsamość|Do opublikowania|  
-|WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
+|WSS: zabezpieczenia komunikatów SOAP 1,0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|  
+|WSS: Nazwa użytkownika — profil tokenu 1,0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS: Profil tokenu x509 1,0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|  
+|WSS: Profil tokenu SAML 1,1 1,0|<http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|  
+|WSS: zabezpieczenia komunikatów SOAP 1,1|<http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|  
+|Nazwa użytkownika programu WSS username profile 1,1|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS: Profil tokenu X. 509 1,1|<http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|  
+|WSS: Profil tokenu Kerberos 1,1|<http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|  
+|WSS: Profil tokenu SAML 1,1 1,1|<http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|  
+|Bezpieczna konwersacja WS-in 1,3|<http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf>|  
+|WS-Trust 1,3|<http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf>|  
+|Uwaga dotycząca aplikacji:<br /><br /> Uzgadnianie przy użyciu protokołu WS-Trust for TLS|Do opublikowania|  
+|Uwaga dotycząca aplikacji:<br /><br /> Korzystanie z protokołu WS-Trust dla SPNEGO|Do opublikowania|  
+|Uwaga dotycząca aplikacji:<br /><br /> Odwołania i tożsamość punktów końcowych usługi sieci Web|Do opublikowania|  
+|WS-SecurityPolicy 1,2 (2007/04)|<http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf>|  
   
- WCF, wersja 1, zawiera 17 trybów uwierzytelniania, które mogą być używane jako podstawa konfiguracji zabezpieczeń usług sieci Web. Każdy tryb jest zoptymalizowany pod kątem wspólnego zestawu wymagań dotyczących wdrażania, takich jak:  
+ Program WCF, wersja 1, zapewnia 17 trybów uwierzytelniania, które mogą być używane jako podstawa konfiguracji zabezpieczeń usług sieci Web. Każdy tryb jest zoptymalizowany pod kątem wspólnego zestawu wymagań dotyczących wdrażania, takich jak:  
   
-- Poświadczenia używane do uwierzytelniania klienta i usługi.  
+- Poświadczenia używane do uwierzytelniania klientów i usług.  
   
-- Mechanizmy ochrony bezpieczeństwa wiadomości lub transportu.  
+- Mechanizmy ochrony komunikatów lub transportu.  
   
-- Wzorce wymiany wiadomości.  
+- Wzorce wymiany komunikatów.  
   
 |Tryb uwierzytelniania|Uwierzytelnianie klienta|Uwierzytelnianie serwera|Tryb|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|Nazwa użytkownikaTransportuTransport|Nazwa użytkownika/hasło|X509|Transport|  
+|UserNameOverTransport|Nazwa użytkownika/hasło|X509|Transport|  
 |CertificateOverTransport|X509|X509|Transport|  
-|Protokół KerberosOverTransport|Windows|X509|Transport|  
+|KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|Federacyjni|X509|Transport|  
-|SspiNegotiatedOverTransport|Wynegocjowane SSPI systemu Windows|Wynegocjowane SSPI systemu Windows|Transport|  
+|SspiNegotiatedOverTransport|Windows SSPI negocjowane|Windows SSPI negocjowane|Transport|  
 |AnonymousForCertificate|Brak|X509|Komunikat|  
-|Certyfikat UserNameForCertificate|Nazwa użytkownika/hasło|X509|Komunikat|  
-|Certyfikat MutualCertificate|X509|X509|Komunikat|  
-|Wzajemne CertyfikatyOdlot|X509|X509|Komunikat|  
-|Certyfikat IssuedTokenForCertificate|Federacyjni|X509|Komunikat|  
+|UserNameForCertificate|Nazwa użytkownika/hasło|X509|Komunikat|  
+|MutualCertificate|X509|X509|Komunikat|  
+|MutualCertificateDuplex|X509|X509|Komunikat|  
+|IssuedTokenForCertificate|Federacyjni|X509|Komunikat|  
 |Kerberos|Windows|Windows|Komunikat|  
-|Issuedtoken|Federacyjni|Federacyjni|Komunikat|  
-|SspiNegotiated|Wynegocjowane SSPI systemu Windows|Wynegocjowane SSPI systemu Windows|Komunikat|  
-|AnonymousForSslNegotiated|Brak|X509, TLS-Nego|Komunikat|  
-|Nazwa użytkownikaForSslNegotiated|Nazwa użytkownika/hasło|X509, TLS-Nego|Komunikat|  
-|MutualSslNegotowany|X509|X509, TLS-Nego|Komunikat|  
-|WydanaTokenForSslNegotiated|Federacyjni|X509, TLS-Nego|Komunikat|  
+|IssuedToken|Federacyjni|Federacyjni|Komunikat|  
+|SspiNegotiated|Windows SSPI negocjowane|Windows SSPI negocjowane|Komunikat|  
+|AnonymousForSslNegotiated|Brak|X509, TLS-nego|Komunikat|  
+|UserNameForSslNegotiated|Nazwa użytkownika/hasło|X509, TLS-nego|Komunikat|  
+|MutualSslNegotiated|X509|X509, TLS-nego|Komunikat|  
+|IssuedTokenForSslNegotiated|Federacyjni|X509, TLS-nego|Komunikat|  
   
- Punkty końcowe przy użyciu takich trybów uwierzytelniania można wyrazić swoje wymagania dotyczące zabezpieczeń przy użyciu WS-SecurityPolicy (WS-SP). W tym dokumencie opisano strukturę nagłówka zabezpieczeń i komunikatów infrastruktury dla każdego trybu uwierzytelniania i przedstawiono przykłady zasad i komunikatów.  
+ Punkty końcowe korzystające z takich trybów uwierzytelniania mogą wyrażać wymagania dotyczące zabezpieczeń przy użyciu protokołu WS-SecurityPolicy (WS-SP). W tym dokumencie opisano strukturę nagłówka zabezpieczeń i komunikatów infrastruktury dla każdego trybu uwierzytelniania oraz przedstawiono przykłady zasad i komunikatów.  
   
- WCF wykorzystuje WS-SecureConversation do zapewnienia bezpiecznej obsługi sesji w celu ochrony wymiany wielu komunikatów między aplikacjami.  Zobacz "Bezpieczne sesje" poniżej, aby uzyskać szczegółowe informacje na temat implementacji.  
+ Funkcja WCF korzysta z protokołu WS-SecureConversation, aby zapewnić obsługę bezpiecznych sesji w celu ochrony wymiany wielokomunikatowej między aplikacjami.  Aby uzyskać szczegółowe informacje dotyczące implementacji, zobacz sekcję "bezpieczne sesje".  
   
- Oprócz trybów uwierzytelniania WCF udostępnia ustawienia do kontrolowania typowych mechanizmów ochrony, które mają zastosowanie do większości trybów uwierzytelniania opartych na zabezpieczeniach wiadomości, na przykład: kolejność podpisu i operacji szyfrowania, zestawy algorytmów, wyprowadzanie kluczy i potwierdzenie podpisu.  
+ Oprócz trybów uwierzytelniania program WCF udostępnia ustawienia do kontrolowania typowych mechanizmów ochrony, które mają zastosowanie do większości trybów uwierzytelniania opartych na zabezpieczeniach komunikatów, na przykład: kolejność podpisu i operacje szyfrowania, zestawy algorytmów, wyprowadzanie kluczy i potwierdzenie podpisu.  
   
  W tym dokumencie są używane następujące prefiksy i przestrzenie nazw.  
   
 |Prefiks|Przestrzeń nazw|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
-|sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|a|http://www.w3.org/2005/08/addressing|  
-|wsse|TBD – OASIS WSS 1.0 URI|  
-|wsse11|TBD – OASIS WSS 1.1 URI|  
-|wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
-|ds|TBD – W3C XMLDSig URI|  
-|Wst|TBD – WS-Trust 2005/02 URI|  
-|wssc|TBD – WS-SecureConversation 2005/02 URI|  
-|wsaw|http://www.w3.org/2006/05/addressing/wsdl|  
-|wsp.|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|s|`http://www.w3.org/2003/05/soap-envelope`|  
+|sp|`http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702`|  
+|a|`http://www.w3.org/2005/08/addressing`|  
+|wsse|TBD — JĘZYKA OASIS Z IDENTYFIKATOREM URI PROGRAMU WSS 1,0|  
+|wsse11|TBD — JĘZYKA OASIS Z IDENTYFIKATOREM URI PROGRAMU WSS 1,1|  
+|wsu|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd`|  
+|ds|TBD — identyfikator URI XMLDSig W3C|  
+|wst|TBD — identyfikator URI 2005/02 WS-Trust|  
+|wssc|TBD — identyfikator URI WS-SecureConversation 2005/02|  
+|wsaw|`http://www.w3.org/2006/05/addressing/wsdl`|  
+|wsp|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
   
-## <a name="1-token-profiles"></a>1. Profile tokenów  
- Specyfikacje zabezpieczeń usług sieci Web reprezentują poświadczenia jako tokeny zabezpieczające. WCF obsługuje następujące typy tokenów:  
+## <a name="1-token-profiles"></a>1. profile tokenów  
+ Specyfikacja zabezpieczenia usług w sieci Web reprezentuje poświadczenie jako tokeny zabezpieczające. Usługa WCF obsługuje następujące typy tokenów:  
   
-### <a name="11-usernametoken"></a>1.1 Nazwa użytkownikaDoken  
- WCF następuje UsernameToken10 i UsernameToken11 profile z następujących ograniczeń:  
+### <a name="11-usernametoken"></a>1,1 UsernameToken  
+ Program WCF jest zgodny z profilami UsernameToken10 i UsernameToken11 z następującymi ograniczeniami:  
   
- Atrybut PasswordType R1101 w elemencie UsernameToken\Password MUSI zostać pominięty lub mieć wartość #PasswordText (domyślnie).  
+ Atrybut R1101 Passwordtype elementu UsernameToken\Password musi być pominięty lub mieć wartość #PasswordText (domyślnie).  
   
- Można zaimplementować #PasswordDigest przy użyciu rozszerzalności. Zaobserwowano, że #PasswordDigest często mylił się jako wystarczająco bezpieczny mechanizm ochrony hasłem. Ale #PasswordDigest nie może służyć jako substytut szyfrowania UsernameToken. Głównym celem #PasswordDigest jest ochrona przed atakami powtarzania. W trybach uwierzytelniania WCF zagrożenia ataku powtarzania są ograniczane przy użyciu podpisów wiadomości.  
+ Jeden może zaimplementować #PasswordDigest przy użyciu rozszerzalności. Zauważono, że #PasswordDigest był często omyłkowo uznawany za bezpieczny mechanizm ochrony hasłem. Ale #PasswordDigest nie może stanowić zamiennika szyfrowania UsernameToken. Głównym celem #PasswordDigest jest ochrona przed atakami metodą powtórzeń. W przypadku trybów uwierzytelniania WCF złośliwe ataki są rozwiązywane za pomocą sygnatur komunikatów.  
   
- B1102 WCF nigdy nie emituje Nonce i utworzone podelementów UsernameToken.  
+ B1102 WCF nigdy nie emituje identyfikatora wiersza i utworzonych elementów podrzędnych UsernameToken.  
   
- Te podkawiany mają na celu ułatwienie wykrywania powtarzania. WCF zamiast tego używa podpisów wiadomości.  
+ Te elementy podrzędne mają na celu ułatwienie wykrywania powtarzania. Usługa WCF używa zamiast tego sygnatury komunikatów.  
   
- Oasis WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) wprowadzono klucz pochodny z funkcji hasła.  
+ JĘZYKA Oasis WSS Message Security UsernameToken profil 1,1 (UsernameToken11) wprowadził klucz wyprowadzania z funkcji password.  
   
- B1103 Nazwa użytkownikaNaken hasło nie może być używany do wyprowadzania klucza, a zatem do operacji kryptograficznych.  
+ Hasła B1103 UsernameToken nie można używać do wyprowadzania klucza i w związku z tym dla operacji kryptograficznych.  
   
- Uzasadnienie: hasła są zazwyczaj uważane za zbyt słabe, aby można je było używać do operacji kryptograficznych.  
+ Uzasadnienie: hasła są zwykle uznawane za słabe, aby można było używać ich na potrzeby operacji kryptograficznych.  
   
-### <a name="12-x509-token"></a>1.2 Token X509  
- WCF obsługuje certyfikaty X509v3 jako typ poświadczeń i następuje X509TokenProfile1.0 i X509TokenProfile1.1 z następującymi ograniczeniami:  
+### <a name="12-x509-token"></a>Token x509 1,2  
+ Usługa WCF obsługuje certyfikaty X509v3 jako typ poświadczenia i następuje po X509TokenProfile 1.0 i X509TokenProfile 1.1 z następującymi ograniczeniami:  
   
- R1201 Atrybut ValueType w elemencie BinarySecurityToken musi mieć wartość #X509v3, gdy zawiera certyfikat X509v3.  
+ R1201 atrybut ValueType w elemencie BinarySecurityToken musi mieć wartość #X509v3, gdy zawiera certyfikat X509v3.  
   
- WSS X509 Token Profile 1.0 i 1.1 definiują również #X509PKIPathv1 i #PKCS7 jako typy wartości. WCF nie obsługuje tych typów.  
+ Profil tokenu x509 usług WSS 1,0 i 1,1 definiuje również #X509PKIPathv1 i #PKCS7 jako typy wartości. Program WCF nie obsługuje tych typów.  
   
- R1202 Jeśli rozszerzenie SubjectKeyIdentifier (SKI) jest obecne w certyfikacie X509, wsse:KeyIdentifier powinien być używany do zewnętrznych odwołań do tokenu, z atrybutem ValueType jako #X509SubjectKeyIdentifier i jego zawartości wartości zakodowanej base64 rozszerzenia SKI certyfikatu.  
+ R1202 Jeśli w certyfikacie x509 znajduje się rozszerzenie SubjectKeyIdentifier (SKI), wsse: Identyfikator klucza powinien być używany do odwołań zewnętrznych do tokenu, z atrybutem ValueType jako #X509SubjectKeyIdentifier i jego zawartością jest zakodowana w formacie base64 wartość rozszerzenia SKI certyfikatu.  
   
- Referencje SKI są szeroko stosowane i udowodnione jako wysoce interoperacyjny zewnętrzny typ odniesienia.  
+ Odwołania NARCIARSKIe są szeroko implementowane i sprawdzane jako typ odwołania zewnętrznego o wysokiej interoperacyjności.  
   
- R1203 Zewnętrzne odwołanie do tokenu zabezpieczającego X509 NIE POWINNO używać ds:X509IssuerSerial.  
+ R1203 odwołanie zewnętrzne do tokenu zabezpieczającego x509 nie powinno korzystać z usług DS: X509IssuerSerial.  
   
- R1204 Jeśli X509TokenProfile1.1 jest w użyciu, zewnętrzne odwołanie do tokenu zabezpieczającego X509 należy użyć odcisk palca wprowadzony przez WS-Security 1.1.  
+ R1204 Jeśli X509TokenProfile 1.1 jest używany, odwołanie zewnętrzne do tokenu zabezpieczającego x509 powinno używać odcisku palca wprowadzonego przez usługę WS-Security 1,1.  
   
- WCF obsługuje X509IssuerSerial. Istnieją jednak problemy ze współdziałaniem z X509IssuerSerial: WCF używa ciągu do porównania dwóch wartości X509IssuerSerial. W związku z tym jeśli jeden ponownie zamówi składniki nazwy podmiotu i wysyła do usługi WCF odwołanie do certyfikatu, nie może być znaleziony.  
+ Usługa WCF obsługuje X509IssuerSerial. Występują jednak problemy ze współdziałaniem z X509IssuerSerial: WCF używa ciągu do porównywania dwóch wartości X509IssuerSerial. W związku z tym jeśli jedna zmiana kolejności składników nazwy podmiotu jest wysyłana do usługi WCF odwołanie do certyfikatu, może nie zostać znaleziona.  
   
-### <a name="13-kerberos-token"></a>1.3 Token Protokołu Kerberos  
- WCF obsługuje Protokół KerberosTokenProfile1.1 do celów uwierzytelniania systemu Windows z następującymi ograniczeniami:  
+### <a name="13-kerberos-token"></a>1,3 token Kerberos  
+ Usługa WCF obsługuje KerberosTokenProfile 1.1 na potrzeby uwierzytelniania systemu Windows z następującymi ograniczeniami:  
   
- R1301 Token Protokołu Kerberos musi zawierać wartość Opakowanego protokołu Kerberos v4 AP_REQ, zgodnie z definicją w GSS_API i specyfikacji Protokołu Kerberos, oraz musi mieć atrybut ValueType z wartością #GSS_Kerberosv5_AP_REQ.  
+ R1301 token Kerberos musi mieć wartość opakowanego protokołu Kerberos v4 AP_REQ zgodnie z definicją w GSS_API i specyfikacją protokołu Kerberos i musi mieć atrybut ValueType o wartości #GSS_Kerberosv5_AP_REQ.  
   
- WCF używa GSS opakowane Kerberos AP-REQ, a nie nagie AP-REQ. Jest to najlepsze rozwiązanie w zakresie zabezpieczeń.  
+ Funkcja WCF używa opakowanego protokołu Kerberos w języku GSS-REQ, a nie od zera-REQ. Jest to najlepsze rozwiązanie w zakresie zabezpieczeń.  
   
-### <a name="14-saml-v11-token"></a>1.4 SamL v1.1 Token  
- WCF obsługuje WSS SAML Token profile 1.0 i 1.1 dla SAML v1.1 tokenów. Możliwe jest zaimplementowanie innych wersji formatów tokenów SAML.  
+### <a name="14-saml-v11-token"></a>1,4 token SAML v 1.1  
+ Usługa WCF obsługuje profile tokenów SAML programu WSS 1,0 i 1,1 dla tokenów SAML w wersji 1.1. Istnieje możliwość zaimplementowania innych wersji formatów tokenów języka SAML.  
   
-### <a name="15-security-context-token"></a>1.5 Token kontekstu zabezpieczeń  
- WCF obsługuje token kontekstu zabezpieczeń (SCT) wprowadzony w WS-SecureConversation. SCT jest używany do reprezentowania kontekstu zabezpieczeń ustanowionego w SecureConversation, a także binarnych protokołów negocjacji TLS i SSPI, opisanych poniżej.  
+### <a name="15-security-context-token"></a>1,5 token kontekstu zabezpieczeń  
+ WCF obsługuje token kontekstu zabezpieczeń (SCT) wprowadzony w usłudze WS-SecureConversation. SCT służy do reprezentowania kontekstu zabezpieczeń ustanowionego w SecureConversation, a także do protokołów negocjacji binarnych TLS i SSPI, opisanych poniżej.  
   
-## <a name="2-common-message-security-parameters"></a>2. Typowe parametry zabezpieczeń wiadomości  
+## <a name="2-common-message-security-parameters"></a>2. typowe parametry zabezpieczeń komunikatów  
   
-### <a name="21-timestamp"></a>2.1 Sygnatura czasowa  
- Obecność sygnatury <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> czasowej <xref:System.ServiceModel.Channels.SecurityBindingElement> jest kontrolowana przy użyciu właściwości klasy. WCF zawsze serializuje wsse:TimeStamp z wsse:Created i wsse:Expires fields. Sygnatura czasowa wsse:Timestamp jest zawsze podpisywane podczas podpisywania jest używany.  
+### <a name="21-timestamp"></a>Sygnatura czasowa 2,1  
+ Obecność sygnatury czasowej jest kontrolowana przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> właściwości <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy. Funkcja WCF zawsze serializować wsse: TimeStamp z polami wsse: Created i wsse: Expires. Wsse: sygnatura czasowa jest zawsze podpisywana przy użyciu podpisywania.  
   
-### <a name="22-protection-order"></a>2.2 Nakaz ochrony  
- WCF obsługuje kolejność ochrony wiadomości "Sign Before Encrypt" i "Encrypt Before Sign" (Zasady zabezpieczeń 1.2). "Sign Before Encrypt" jest zalecane z powodów, w tym: wiadomości chronione za pomocą szyfruj przed znakiem są otwarte dla ataków podstawienia podpisu, chyba że używany jest mechanizm SignatureConfirmation w ramach WS-Security 1.1, a podpis za pomocą zaszyfrowanej zawartości utrudnia inspekcję.  
+### <a name="22-protection-order"></a>2,2 kolejność ochrony  
+ Usługa WCF obsługuje kolejność ochrony wiadomości przed szyfrowaniem i szyfrowanie przed znakiem (zasady zabezpieczeń 1,2). Zalecane jest "podpisywanie przed szyfrowaniem", w tym: komunikaty chronione przy użyciu szyfrowania przed podpisaniem podpisu, chyba że jest używany mechanizm WS-Security 1,1 SignatureConfirmation, a sygnatura z zaszyfrowaną zawartością sprawia, że inspekcja jest trudniejsza.  
   
-### <a name="23-signature-protection"></a>2.3 Ochrona podpisu  
- Gdy encrypt before sign jest używany, zaleca się, aby chronić podpis, aby zapobiec atakom siłowych w celu odgadnięcia zaszyfrowanej zawartości lub klucza podpisywania (zwłaszcza gdy niestandardowy token jest używany ze słabym materiałem klucza).  
+### <a name="23-signature-protection"></a>Ochrona za sygnaturą 2,3  
+ Gdy jest używane szyfrowanie przed znakiem, zaleca się ochronę podpisu, aby zapobiec atakom typu "nadjęcie" na potrzeby odgadnięcia zaszyfrowanej zawartości lub klucza podpisywania (zwłaszcza gdy Token niestandardowy jest używany z słabym materiałem klucza).  
   
-### <a name="24-algorithm-suite"></a>2.4 Pakiet algorytmów  
- WCF obsługuje wszystkie zestawy algorytmów wymienione w zasadach zabezpieczeń 1.2.  
+### <a name="24-algorithm-suite"></a>Pakiet algorytmów 2,4  
+ Usługa WCF obsługuje wszystkie pakiety algorytmów wymienione w zasadach zabezpieczeń 1,2.  
   
-### <a name="25-key-derivation"></a>2.5 Wyprowadzanie kluczy  
- WCF używa "Wyprowadzanie kluczy symetrycznych" zgodnie z opisem w WS-SecureConversation.  
+### <a name="25-key-derivation"></a>Tworzenie klucza 2,5  
+ WCF używa "wyprowadzania klucza dla kluczy symetrycznych" zgodnie z opisem w temacie WS-SecureConversation.  
   
-### <a name="26-signature-confirmation"></a>2.6 Potwierdzenie podpisu  
- Potwierdzenie podpisu może służyć jako ochrona przed atakami pośrednika w celu ochrony zestawu podpisów.  
+### <a name="26-signature-confirmation"></a>Potwierdzenie podpisu 2,6  
+ Potwierdzenie podpisu może służyć jako ochrona przed atakami na średnią ataki chroniącą zestaw podpisów.  
   
-### <a name="27-security-header-layout"></a>2.7 Układ nagłówka zabezpieczeń  
- Każdy tryb uwierzytelniania opisuje określony układ nagłówka zabezpieczeń. Elementy w nagłówku zabezpieczeń są częściowo uporządkowane. Aby zdefiniować kolejność elementów podrzędnych nagłówka zabezpieczeń, usługa WS-Security Policy definiuje następujące tryby układu nagłówka zabezpieczeń:  
+### <a name="27-security-header-layout"></a>2,7 — układ nagłówka zabezpieczeń  
+ Każdy tryb uwierzytelniania opisuje określony układ nagłówka zabezpieczeń. Elementy w nagłówku zabezpieczeń są częściowo uporządkowane. Aby zdefiniować kolejność elementów podrzędnych nagłówka zabezpieczeń, zasady WS-Security definiują następujące tryby układu nagłówka zabezpieczeń:  
   
 |||  
 |-|-|  
-|Dokładny|Elementy są dodawane do nagłówka zabezpieczeń zgodnie z zasadami układu numerowanymi opisanymi w sekcji Zasady zabezpieczeń 7.7.1 zgodnie z ogólną zasadą "deklarowania przed użyciem".|  
-|Lax|Elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności zgodnej z zasadami WSS: SOAP Message Security.|  
-|LaxTimestampPierwsz|Tak samo jak Lax, z tą różnicą, że pierwszy element w nagłówku zabezpieczeń musi być sygnaturą czasową wsse:Timestamp|  
-|LaxTimestampLast|Tak samo jak lax, z tą różnicą, że ostatni element w nagłówku zabezpieczeń musi być wsse:Timestamp|  
+|Dokładny|Elementy są dodawane do nagłówka Security, zgodnie z regułami układu numerowanego opisanymi w sekcji zasady zabezpieczeń 7.7.1 zgodnie z ogólną zasadą "DECLARE przed użyciem".|  
+|Swobodny|Elementy są dodawane do nagłówka zabezpieczenia w dowolnej kolejności, która jest zgodna z programem WSS: zabezpieczenia komunikatów protokołu SOAP.|  
+|LaxTimestampFirst|Analogicznie jak swobodny, z tą różnicą, że pierwszy element w nagłówku zabezpieczeń musi być wsse: timestamp|  
+|LaxTimestampLast|Analogicznie jak swobodny, z tą różnicą, że ostatni element w nagłówku zabezpieczeń musi być wsse: timestamp|  
   
- WCF obsługuje wszystkie cztery tryby dla układu nagłówka zabezpieczeń. Struktura nagłówka zabezpieczeń i przykłady komunikatów dla trybów uwierzytelniania poniżej są zgodne z trybem "Ścisłe".  
+ Funkcja WCF obsługuje wszystkie cztery tryby układu nagłówka zabezpieczeń. Przykłady struktury nagłówka zabezpieczeń i komunikatów dla trybów uwierzytelniania poniżej są zgodne z trybem Strict.  
   
-## <a name="3-common-message-security-parameters"></a>3. Typowe parametry zabezpieczeń wiadomości  
- W tej sekcji przedstawiono przykładowe zasady dla każdego trybu uwierzytelniania wraz z przykładami przedstawiającymi strukturę nagłówka zabezpieczeń w wiadomościach wymienianych przez klienta i usługę.  
+## <a name="3-common-message-security-parameters"></a>3. typowe parametry zabezpieczeń komunikatów  
+ Ta sekcja zawiera przykładowe zasady dla każdego trybu uwierzytelniania wraz z przykładami przedstawiającymi strukturę nagłówka zabezpieczeń w komunikatach wymienianych przez klienta i usługę.  
   
-### <a name="31-transport-protection"></a>3.1 Ochrona przed transportem  
- WCF zapewnia pięć trybów uwierzytelniania, które używają bezpiecznego transportu do ochrony wiadomości; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport i SspiNegotiatedOverTransport.  
+### <a name="31-transport-protection"></a>Ochrona przed transportem 3,1  
+ Usługa WCF oferuje pięć trybów uwierzytelniania, które używają bezpiecznego transportu do ochrony komunikatów; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport i SspiNegotiatedOverTransport.  
   
- Te tryby uwierzytelniania są konstruowane przy użyciu powiązania transportu opisanego w SecurityPolicy. W trybie uwierzytelniania UserNameOverTransport Nazwa_użytkownika Jest podpisanym tokenem pomocniczym. W przypadku innych trybów uwierzytelniania token jest wyświetlany jako podpisany token zatwierdzający. Załącznik C.1.2 i C.1.3 securityPolicy szczegółowo opisują układ nagłówka zabezpieczeń. Poniższe przykładowe nagłówki zabezpieczeń pokazują ścisły układ dla danego trybu uwierzytelniania.  
+ Te tryby uwierzytelniania są konstruowane przy użyciu powiązania transportu opisanego w SecurityPolicy. W przypadku trybu uwierzytelniania UserNameOverTransport UsernameToken jest podpisanym tokenem pomocniczym. W przypadku innych trybów uwierzytelniania token pojawia się jako podpisany token zatwierdzania. Dodatek C. 1.2 i C. 1.3 z SecurityPolicy opisują szczegóły układu nagłówka zabezpieczeń. Poniższe przykładowe nagłówki zabezpieczeń pokazują ścisły układ dla danego trybu uwierzytelniania.  
   
- Wartość właściwości "Klucze pochodne" dla tokenów we wszystkich przypadkach jest "false".  
+ Wartość właściwości "klucze pochodne" dla tokenów we wszystkich przypadkach wynosi "false".  
   
- Wartości różnych właściwości powiązania transportu są następujące:  
+ Wartości różnych właściwości powiązania transportowego są następujące:  
   
- Sygnatura czasowa: true  
+ Sygnatura czasowa: prawda  
   
- Układ nagłówka zabezpieczeń: Ścisły  
+ Układ nagłówka zabezpieczeń: Strict  
   
  Pakiet algorytmów: Basic256  
   
-#### <a name="311-usernameovertransport"></a>3.1.1 Nazwa użytkownikaTransporttransport  
- W tym trybie uwierzytelniania klient uwierzytelnia się za pomocą tokenu nazwy użytkownika, który pojawia się w warstwie SOAP jako podpisany token pomocniczy, który jest zawsze wysyłany z inicjatora do adresata. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509 w warstwie transportu. Używane powiązanie jest powiązanie transportu.  
+#### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
+ W tym trybie uwierzytelniania klient uwierzytelnia się za pomocą tokenu nazwy użytkownika, który jest wyświetlany na warstwie protokołu SOAP jako podpisany token pomocniczy, który jest zawsze wysyłany z inicjatora do odbiorcy. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509 w warstwie transportowej. Użyte powiązanie jest powiązaniem transportu.  
   
  Zasady  
   
@@ -207,7 +207,7 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 ```  
   
 #### <a name="312-certificateovertransport"></a>3.1.2 CertificateOverTransport  
- W tym trybie uwierzytelniania klient uwierzytelnia się przy użyciu certyfikatu X.509, który pojawia się w warstwie SOAP jako token pomocniczy, który jest zawsze wysyłany z inicjatora do adresata. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509 w warstwie transportu. Używane powiązanie jest powiązanie transportu. CertificateOverTransport podpisuje tylko nagłówki PROTOKOŁU SOAP, a nie obiekt SOAP. Jest to tryb uwierzytelniania używany przez transportwithmessagecredentials tryb zabezpieczeń. Tylko nagłówki PROTOKOŁU SOAP są podpisane, ponieważ uwierzytelnianie odbywa się przy użyciu poświadczeń wiadomości.  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany przy użyciu certyfikatu X. 509, który jest wyświetlany w warstwie protokołu SOAP jako zatwierdzenie tokenu pomocniczego, który jest zawsze wysyłany z inicjatora do odbiorcy. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509 w warstwie transportowej. Użyte powiązanie jest powiązaniem transportu. CertificateOverTransport podpisuje tylko nagłówki protokołu SOAP, a nie treści protokołu SOAP. Jest to tryb uwierzytelniania używany przez tryb zabezpieczeń TransportWithMessageCredentials. Tylko nagłówki protokołu SOAP są podpisane, ponieważ uwierzytelnianie odbywa się przy użyciu poświadczeń komunikatów.  
   
  Zasady  
   
@@ -229,8 +229,8 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### <a name="313-issuedtokenovertransport"></a>3.1.3 WydanyTokenTransport  
- W tym trybie uwierzytelniania klient nie uwierzytelnia się w usłudze jako takiej, ale raczej przedstawia token wystawiony przez usługę tokenu zabezpieczającego (STS) i potwierdza znajomość klucza udostępnionego. Wystawiony token pojawia się w warstwie SOAP jako token pomocniczy, który jest zawsze wysyłany z inicjatora do adresata. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509 w warstwie transportu. Powiązanie jest powiązanie transportu.  
+#### <a name="313-issuedtokenovertransport"></a>3.1.3 IssuedTokenOverTransport  
+ W tym trybie uwierzytelniania klient nie jest uwierzytelniany w usłudze, w związku z czym, ale przedstawia token wystawiony przez usługę tokenu zabezpieczającego (STS) i udowadnia znajomość klucza współużytkowanego. Wystawiony token jest wyświetlany w warstwie protokołu SOAP jako zatwierdzenie tokenu, który jest zawsze wysyłany z inicjatora do odbiorcy. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509 w warstwie transportowej. Powiązanie jest powiązaniem transportu.  
   
  Zasady  
   
@@ -321,8 +321,8 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-fab7e1b2-8dc4-412b-bda9-b95a4f836815-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-#### <a name="314-kerberosovertransport"></a>3.1.4 Protokół KerberosOverTransport  
- W tym trybie uwierzytelniania klient uwierzytelnia się w usłudze przy użyciu biletu Kerberos. Token Protokołu Kerberos pojawia się w warstwie SOAP jako token pomocniczy. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509 w warstwie transportu. Powiązanie jest powiązanie transportu.  
+#### <a name="314-kerberosovertransport"></a>3.1.4 KerberosOverTransport  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany w usłudze przy użyciu biletu protokołu Kerberos. Token Kerberos jest wyświetlany w warstwie protokołu SOAP jako token pomocniczy. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509 w warstwie transportowej. Powiązanie jest powiązaniem transportu.  
   
  Zasady  
   
@@ -345,7 +345,7 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- W tym trybie protokół negocjacji jest używany do wykonywania uwierzytelniania klienta i serwera. Kerberos jest używany, jeśli to możliwe, w przeciwnym razie NTLM. Wynikowy SCT pojawia się w warstwie SOAP jako token pomocniczy, który jest zawsze wysyłany od inicjatora do adresata. Usługa jest dodatkowo uwierzytelniona w warstwie transportu za pomocą certyfikatu X.509. Używane powiązanie jest powiązanie transportu. "SPNEGO" (negocjacja) opisuje, jak WCF używa protokołu negocjacji binarnych SSPI z WS-Trust. Przykłady nagłówka zabezpieczeń w tej sekcji są po SCT został ustanowiony za pośrednictwem uzgadniania SPNEGO.  
+ W tym trybie protokół negocjacji jest używany do przeprowadzania uwierzytelniania klienta i serwera. Protokół Kerberos jest używany, jeśli jest to możliwe, w przeciwnym razie NTLM. Wynikający z tego, że SCT zostanie wyświetlony w warstwie protokołu SOAP jako zaświadczanie tokenu pomocniczego, który jest zawsze wysyłany z inicjatora do odbiorcy. Usługa jest również uwierzytelniana w warstwie transportowej przez certyfikat X. 509. Użyte powiązanie jest powiązaniem transportu. "SPNEGO" (negocjowanie) opisuje, jak WCF używa protokołu negocjowania binarnego interfejsu SSPI z usługą WS-Trust. Przykłady nagłówka zabezpieczeń w tej sekcji są po ustanowieniu SCT przez uzgadnianie SPNEGO.  
   
  Zasady  
   
@@ -353,8 +353,8 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 <wsp:Policy wsu:Id="SspiNegotiatedOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples"></a>Przykłady nagłówków zabezpieczeń  
- Po ustanowieniu tokenu kontekstu zabezpieczeń za pomocą uzgadniania SPNEGO przy użyciu negocjacji binarnych WS-Trust komunikaty aplikacji mają nagłówki zabezpieczeń o następującej strukturze.  
+### <a name="security-header-examples"></a>Przykłady nagłówka zabezpieczeń  
+ Po ustanowieniu tokenu kontekstu zabezpieczeń za pośrednictwem uzgadniania SPNEGO przy użyciu negocjacji binarnej protokołu WS-Trust komunikaty aplikacji mają nagłówki zabezpieczeń z następującą strukturą.  
   
  Żądanie  
   
@@ -368,25 +368,25 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 Korzystanie z certyfikatów X.509 do uwierzytelniania usługi  
- W tej sekcji opisano następujące tryby uwierzytelniania: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate i IssuedTokenForCertificate.  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3,2 przy użyciu certyfikatów X. 509 do uwierzytelniania usługi  
+ W tej sekcji opisano następujące tryby uwierzytelniania: MutualCertificate WSS 1.0, wzajemne CertificateDuplex, MutualCertificate WSS 1.1, AnonymousForCertificate, UserNameForCertificate i IssuedTokenForCertificate.  
   
-#### <a name="321-mutualcertificate-wss10"></a>3.2.1 Certyfikat wzajemny WSS1.0  
- W tym trybie uwierzytelniania klient uwierzytelnia się przy użyciu certyfikatu X.509, który pojawia się w warstwie SOAP jako token inicjatora. Usługa jest również uwierzytelniona przy użyciu certyfikatu X.509. Podpisywane są zarówno nagłówki PROTOKOŁU SOAP, jak i obiekt SOAP. Klucz symetryczny jest tworzony i szyfrowany za pomocą certyfikatu transportu dla odbiorcy.  
+#### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS 1.0  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany przy użyciu certyfikatu X. 509, który jest wyświetlany w warstwie protokołu SOAP jako token inicjatora. Usługa jest również uwierzytelniana przy użyciu certyfikatu X. 509. Wszystkie nagłówki protokołu SOAP i treść protokołu SOAP są podpisane. Klucz symetryczny jest tworzony i szyfrowany przy użyciu certyfikatu transportu dla odbiorcy.  
   
- Użyte powiązanie jest powiązaniem asymetrycznym z następującymi wartościami właściwości:  
+ Używane powiązanie jest powiązaniem asymetrycznym z następującymi wartościami właściwości:  
   
- Token inicjatora: certyfikat X.509 klienta, z trybem dołączania ustawionym na .../IncludeToken/AlwaysToRecipient  
+ Token inicjatora: certyfikat X. 509 klienta z trybem dołączania ustawionym na. ../IncludeToken/AlwaysToRecipient  
   
- Token odbiorcy: Certyfikat X.509 serwera z trybem włączenia jest ustawiony .../IncludeToken/Never  
+ Token adresata: certyfikat X. 509 serwera z ustawionym trybem dołączania. ../IncludeToken/Never  
   
- Ochrona tokenu: Fałsz  
+ Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
  Zasady  
   
@@ -427,21 +427,21 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 ```  
   
 #### <a name="322-mutualcertificateduplex"></a>3.2.2 MutualCertificateDuplex  
- W tym trybie uwierzytelniania klient uwierzytelnia się przy użyciu certyfikatu X.509, który pojawia się w warstwie SOAP jako token inicjatora. Usługa jest również uwierzytelniona przy użyciu certyfikatu X.509.  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany przy użyciu certyfikatu X. 509, który jest wyświetlany w warstwie protokołu SOAP jako token inicjatora. Usługa jest również uwierzytelniana przy użyciu certyfikatu X. 509.  
   
- Użyte powiązanie jest powiązaniem asymetrycznym z następującymi wartościami właściwości:  
+ Używane powiązanie jest powiązaniem asymetrycznym z następującymi wartościami właściwości:  
   
- Token inicjatora: Certyfikat X509 klienta, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToRecipient  
+ Token inicjatora: certyfikat x509 klienta, tryb dołączania ma wartość. ../IncludeToken/AlwaysToRecipient  
   
- Token odbiorcy: Certyfikat X509 serwera, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToInitiator  
+ Token adresata: certyfikat x509 serwera, tryb dołączania ma wartość. ../IncludeToken/AlwaysToInitiator  
   
- Ochrona tokenu: Fałsz  
+ Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
  Zasady  
   
@@ -450,7 +450,7 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Prośba i odpowiedź  
+ Żądanie i odpowiedź  
   
 ```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-4dec3da4-b572-4654-ba4d-4a2f84a87510-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
@@ -463,32 +463,32 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Prośba i odpowiedź  
+ Żądanie i odpowiedź  
   
 ```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b0e23feb-cd2d-4dc1-bad9-284bc45f3be3-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 Korzystanie z symetrycznego powiązania z uwierzytelnianiem usługi X.509  
- "WSS10" zapewnia ograniczoną obsługę scenariuszy z tokenami X509. Na przykład nie było sposobu zapewnienia ochrony podpisu i szyfrowania dla wiadomości przy użyciu tylko usługi token X509. "WSS11" wprowadzono użycie EncryptedKey jako token symetryczny. Teraz klucz tymczasowy zaszyfrowany dla certyfikatu X.509 usługi może służyć zarówno do ochrony wiadomości żądania i odpowiedzi. Tryby uwierzytelniania opisane w sekcji 3.4 poniżej używają tego wzorca.  
+#### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 przy użyciu Symetrycznebinding z uwierzytelnianiem za pomocą usługi X. 509  
+ "WSS10" zapewnia ograniczoną obsługę scenariuszy z tokenami x509. Na przykład nie było możliwości zapewnienia podpisywania i ochrony przed szyfrowaniem komunikatów przy użyciu tylko tokenu x509 usługi. "WSS11" wprowadził Użycie EncryptedKey jako tokenu symetrycznego. Teraz klucz tymczasowy szyfrowany dla certyfikatu X. 509 usługi może być używany zarówno w przypadku ochrony komunikatów żądania, jak i odpowiedzi. W przypadku trybów uwierzytelniania opisanych w sekcji 3,4 poniżej Użyj tego wzorca.  
   
- WS-SecurityPolicy opisuje ten wzorzec przy użyciu SymmetricBinding z tokenem Usługi X509 jako token ochrony.  
+ Usługa WS-SecurityPolicy opisuje ten wzorzec przy użyciu protokołu Symetrycznybinding z tokenem x509 usługi jako tokenem ochrony.  
   
- Tryby uwierzytelniania AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 i IssuedTokenForCertificate używają podobnego wystąpienia sp:SymmetricBinding z następującymi wartościami właściwości:  
+ Tryby uwierzytelniania AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 i IssuedTokenForCertificate używają podobnego wystąpienia SP: Symetrycznebinding z następującymi wartościami właściwości:  
   
- Token ochrony: Certyfikat X509 serwera, tryb dołączania jest ustawiony na .../IncludeToken/Never  
-Ochrona tokenu: Fałsz  
+ Token ochrony: certyfikat x509 serwera, tryb dołączania ma wartość. ../IncludeToken/Never  
+Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
- Powyższe tryby uwierzytelniania różnią się tylko tokenami pomocniczymi, których używają. AnonymousForCertificate nie ma żadnych tokenów pomocniczych, MutualCertificate WSS 1.1 ma certyfikat X509 klienta jako tokeny pomocnicze, UserNameForCertificate ma token username jako podpisany token pomocniczy i IssuedTokenForCertificate ma wystawiony token jako token wspierający.  
+ Powyższe tryby uwierzytelniania różnią się tylko przez tokeny pomocnicze, których używają. AnonymousForCertificate nie ma żadnych tokenów pomocniczych, MutualCertificate WSS 1,1 ma certyfikat x509 klienta jako poświadczający tokeny pomocnicze, UserNameForCertificate ma token nazwy użytkownika jako podpisany token pomocniczy, a IssuedTokenForCertificate ma token wystawiony jako token pomocniczy.  
   
-#### <a name="324-anonymousforcertificate"></a>3.2.4 AnonimowośćDotałtowanie  
- W tym trybie uwierzytelniania klient jest anonimowy, a usługa jest uwierzytelniana przy użyciu certyfikatu X.509. Użyte powiązanie jest wystąpieniem wiązania symetrycznego, jak opisano w 3.4.2.  
+#### <a name="324-anonymousforcertificate"></a>3.2.4 AnonymousForCertificate  
+ W tym trybie uwierzytelniania klient jest anonimowy i usługa jest uwierzytelniana przy użyciu certyfikatu X. 509. Użyte powiązanie to wystąpienie powiązania symetrycznego, zgodnie z opisem w 3.4.2.  
   
  Zasady  
   
@@ -528,8 +528,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-15b48260-23da-424d-8dc4-8f4e150fb8cf-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="ALF+QNGmWn2k3LpWEDIzSBgTkvo=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="325-usernameforcertificate"></a>3.2.5 Nazwa użytkownikaDocertyfikat  
- W tym trybie uwierzytelniania klient uwierzytelnia się w usłudze przy użyciu tokenu nazwy użytkownika, który pojawia się w warstwie SOAP jako podpisany token pomocniczy. Usługa uwierzytelnia się klientowi przy użyciu certyfikatu X.509. Używane powiązanie jest powiązanie symetryczne z tokenem ochrony jest klucz generowany przez klienta, zaszyfrowane za pomocą klucza publicznego usługi.  
+#### <a name="325-usernameforcertificate"></a>3.2.5 UserNameForCertificate  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany w usłudze przy użyciu tokenu nazwy użytkownika, który pojawia się w warstwie protokołu SOAP jako podpisanego tokenu pomocniczego. Usługa jest uwierzytelniana na kliencie przy użyciu certyfikatu X. 509. Używane powiązanie jest powiązaniem symetrycznym z tokenem ochrony, który jest kluczem generowanym przez klienta, szyfrowanym przy użyciu klucza publicznego usługi.  
   
  Zasady  
   
@@ -569,8 +569,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8a7ad353-f071-49dc-90dd-5ad2e9abd40a-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="326-mutualcertificate-wss-11"></a>3.2.6 Certyfikat wzajemny (WSS 1.1)  
- W tym trybie uwierzytelniania klient uwierzytelnia się przy użyciu certyfikatu X.509, który pojawia się w warstwie SOAP jako token pomocniczy. Usługa jest również uwierzytelniona przy użyciu certyfikatu X.509. Używane powiązanie jest powiązanie symetryczne z tokenem ochrony jest klucz generowany przez klienta, zaszyfrowane za pomocą klucza publicznego usługi.  
+#### <a name="326-mutualcertificate-wss-11"></a>3.2.6 MutualCertificate (WSS 1,1)  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany przy użyciu certyfikatu X. 509, który jest wyświetlany w warstwie protokołu SOAP jako token pomocniczy. Usługa jest również uwierzytelniana przy użyciu certyfikatu X. 509. Używane powiązanie jest powiązaniem symetrycznym z tokenem ochrony, który jest kluczem generowanym przez klienta, szyfrowanym przy użyciu klucza publicznego usługi.  
   
  Zasady  
   
@@ -610,8 +610,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-67dacc31-4a50-4866-b673-ccc03e156337-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="mYyksUQKkK27Fd6hmgOiqFwvudk=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><k:SignatureConfirmation u:Id="_3" Value="SreOZ4Rr2BcXjFQFvgN55ERypI/1/86hdWThE5lav0eYIxF1OCzQgZF+y7cQ82t+g3CRnLbE3c52DqMpY/HXlrdMct3m3rnpDH+fqdhNY4fE+M2v4zUMFR7uxDKWcEm9zZpmUvJCDfJRfKRaKjy5cTbccRKqSxw7HAqOYnqibA4=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="327-issuedtokenforcertificate"></a>3.2.7 Certyfikat WydanyTokenForCertificate  
- W tym trybie uwierzytelniania klient nie uwierzytelnia się w usłudze jako takiej, ale zamiast tego przedstawia token wystawiony przez usługę STS i potwierdza znajomość klucza udostępnionego. Wystawiony token pojawia się w warstwie SOAP jako token pomocniczy. Usługa uwierzytelnia się klientowi przy użyciu certyfikatu X.509. Używane powiązanie jest powiązanie symetryczne z tokenem ochrony jest klucz generowany przez klienta, zaszyfrowane za pomocą klucza publicznego usługi.  
+#### <a name="327-issuedtokenforcertificate"></a>3.2.7 IssuedTokenForCertificate  
+ W tym trybie uwierzytelniania klient nie jest uwierzytelniany w usłudze w taki sposób, ale przedstawia token wystawiony przez usługę STS i udowadnia znajomość klucza współużytkowanego. Wystawiony token pojawia się na warstwie protokołu SOAP jako token pomocniczy. Usługa jest uwierzytelniana na kliencie przy użyciu certyfikatu X. 509. Używane powiązanie jest powiązaniem symetrycznym z tokenem ochrony, który jest kluczem generowanym przez klienta, szyfrowanym przy użyciu klucza publicznego usługi.  
   
  Zasady  
   
@@ -651,17 +651,17 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-## <a name="33-kerberos"></a>3.3 Protokół Kerberos  
- W tym trybie uwierzytelniania klient uwierzytelnia się w usłudze przy użyciu biletu Kerberos. Ten sam bilet zapewnia również uwierzytelnianie serwera. Użyte powiązanie jest powiązaniem symetrycznym z następującymi właściwościami;  
+## <a name="33-kerberos"></a>3,3 Kerberos  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany w usłudze przy użyciu biletu protokołu Kerberos. Ten sam bilet zapewnia również uwierzytelnianie serwera. Używane powiązanie jest powiązaniem symetrycznym z następującymi właściwościami:  
   
- Token ochrony: Bilet Kerberos, tryb włączenia jest ustawiony na .../IncludeToken/Once  
-Ochrona tokenu: Fałsz  
+ Token ochrony: bilet protokołu Kerberos, tryb dołączania jest ustawiony na wartość. ../IncludeToken/Once  
+Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
  Zasady  
   
@@ -701,17 +701,17 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="34-issuedtoken"></a>3.4 WydanyDuchyń  
- W tym trybie uwierzytelniania klient nie uwierzytelnia się w usłudze, jako taki, a klient przedstawia token wystawiony przez usługę STS i potwierdza znajomość klucza udostępnionego. Usługa nie jest uwierzytelniana do klienta, jako takie, zamiast STS szyfruje klucz udostępniony jako część wystawionego tokenu, tak aby tylko usługa może odszyfrować klucz. Używane powiązanie jest jako wiązanie symetryczne z następującymi właściwościami;  
+#### <a name="34-issuedtoken"></a>3,4 IssuedToken  
+ W tym trybie uwierzytelniania klient nie jest uwierzytelniany w usłudze, w związku z czym klient przedstawia token wystawiony przez usługę STS i udowadnia znajomość klucza współużytkowanego. Usługa nie jest uwierzytelniana klientowi, w związku z czym w zamian jest szyfrowany klucz współużytkowany jako część wystawionego tokenu, aby tylko usługa mogła odszyfrować klucz. Używane powiązanie jest powiązaniem symetrycznym z następującymi właściwościami:  
   
- Token ochrony: Wystawiony token, tryb włączenia jest ustawiony na .../IncludeToken/AlwaysToRecipient  
-Ochrona tokenu: Fałsz  
+ Token ochrony: wystawiony token, tryb dołączania ma wartość. ../IncludeToken/AlwaysToRecipient  
+Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
  Zasady  
   
@@ -751,25 +751,25 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 Korzystanie z usługi SslNegotiated do uwierzytelniania usługi  
- W tej sekcji opisano grupę trybów uwierzytelniania, które używają powiązania symetrycznego z tokenem ochrony jako token kontekstu zabezpieczeń na WS-SecureConversation (WS-SecureConversation (WS-SC), którego wartość klucza jest negocjowana przez wykonanie protokołu TLS za pomocą komunikatów RST/RSTR usługi WS-Trust (WS-T). Szczegóły implementacji uzgadniania TLS przy użyciu programu WS-Trust są opisane w TLSNEGO. W tym miejscu w przykładach wiadomości zakładamy, że SCT z skojarzonym kontekstem zabezpieczeń jest już ustanowiony za pomocą uzgadniania.  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a>3,5 użycie SslNegotiated do uwierzytelniania usługi  
+ W tej sekcji opisano grupę trybów uwierzytelniania, która używa powiązania symetrycznego z tokenem ochrony z tokenem kontekstu zabezpieczeń dla protokołu WS-SecureConversation (WS-SC), którego wartość klucza jest negocjowana przez wykonanie protokołu TLS za pośrednictwem komunikatów typu "WS-Trust" (WS-T) RST/RSTR. Szczegóły implementacji uzgadniania TLS przy użyciu protokołu WS-Trust są opisane w TLSNEGO. W tym przykładzie w komunikatach przyjęto założenie, że SCT ze skojarzonym kontekstem zabezpieczeń zostanie już ustanowiony za pomocą uzgadniania.  
   
- Użyte powiązanie jest powiązaniem symetrycznym z następującymi właściwościami;  
+ Używane powiązanie jest powiązaniem symetrycznym z następującymi właściwościami:  
   
- Token ochrony: SslContextToken, tryb włączenia jest ustawiony na .../IncludeToken/Never  
-Ochrona tokenu: Fałsz  
+ Token ochrony: SslContextToken, tryb dołączania jest ustawiony na. ../IncludeToken/Never  
+Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
-#### <a name="351-policy-for-sslnegotiated-service-authentication"></a>3.5.1 Zasady uwierzytelniania usługi SslNegotiated  
- Zasady dla wszystkich trybów uwierzytelniania w tej sekcji są podobne i różnią się tylko określonymi podpisanymi tokenami pomocniczymi lub aprobującymi używanymi.  
+#### <a name="351-policy-for-sslnegotiated-service-authentication"></a>zasady 3.5.1 dotyczące uwierzytelniania usługi SslNegotiated  
+ Zasady dla wszystkich trybów uwierzytelniania w tej sekcji są podobne i różnią się tylko przez określone podpisane tokeny obsługujące lub zatwierdzania.  
   
-#### <a name="352-anonymousforsslnegotiated"></a>3.5.2 AnonimowoDo negocjacji  
- W tym trybie uwierzytelniania klient jest anonimowy, a usługa jest uwierzytelniana przy użyciu certyfikatu X.509. Użyte powiązanie jest wystąpieniem wiązania symetrycznego, jak opisano w 3.5.1 powyżej.  
+#### <a name="352-anonymousforsslnegotiated"></a>3.5.2 AnonymousForSslNegotiated  
+ W tym trybie uwierzytelniania klient jest anonimowy i usługa jest uwierzytelniana przy użyciu certyfikatu X. 509. Użyte powiązanie to wystąpienie powiązania symetrycznego, zgodnie z opisem w artykule 3.5.1 powyżej.  
   
  Zasady  
   
@@ -809,8 +809,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-df206ad9-1ee2-46d7-9fb4-6e4631c9762f-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="353-usernameforsslnegotiated"></a>3.5.3 Nazwa użytkownikaDo negocjacji  
- W tym trybie uwierzytelniania klient uwierzytelnia się przy użyciu tokenu nazwy użytkownika, który pojawia się w warstwie SOAP jako podpisany token pomocniczy. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509. Użyte powiązanie jest wystąpieniem wiązania symetrycznego, jak opisano w 3.5.1.  
+#### <a name="353-usernameforsslnegotiated"></a>3.5.3 UserNameForSslNegotiated  
+ W tym trybie uwierzytelniania klient jest uwierzytelniany przy użyciu tokenu nazwy użytkownika, który jest wyświetlany na warstwie protokołu SOAP jako podpisanego tokenu pomocniczego. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509. Używane powiązanie to wystąpienie powiązania symetrycznego, zgodnie z opisem w artykule 3.5.1.  
   
  Zasady  
   
@@ -850,8 +850,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-83d053cb-03a0-4461-9616-86475cf083c4-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="354-issuedtokenforsslnegotiated"></a>3.5.4 WydanyTokenForSslNegotiated  
- W tym trybie uwierzytelniania klient nie uwierzytelnia się w usłudze jako takiej, ale zamiast tego przedstawia token wystawiony przez usługę STS i potwierdza znajomość klucza udostępnionego. Wystawiony token pojawia się w warstwie SOAP jako token pomocniczy. Usługa jest uwierzytelniona przy użyciu certyfikatu X.509. Użyte powiązanie jest wystąpieniem wiązania symetrycznego, jak opisano w 3.5.1 powyżej.  
+#### <a name="354-issuedtokenforsslnegotiated"></a>3.5.4 IssuedTokenForSslNegotiated  
+ W tym trybie uwierzytelniania klient nie jest uwierzytelniany w usłudze w taki sposób, ale przedstawia token wystawiony przez usługę STS i udowadnia znajomość klucza współużytkowanego. Wystawiony token pojawia się na warstwie protokołu SOAP jako token pomocniczy. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509. Użyte powiązanie to wystąpienie powiązania symetrycznego, zgodnie z opisem w artykule 3.5.1 powyżej.  
   
  Zasady  
   
@@ -892,7 +892,7 @@ Ochrona tokenu: Fałsz
 ```  
   
 #### <a name="355-mutualsslnegotiated"></a>3.5.5 MutualSslNegotiated  
- W tym trybie uwierzytelniania klient i usługa uwierzytelniają się przy użyciu certyfikatów X.509. Użyte powiązanie jest wystąpieniem wiązania symetrycznego, jak opisano w 3.5.1 powyżej.  
+ W tym trybie uwierzytelniania klient i usługa uwierzytelniają się za pomocą certyfikatów X. 509. Użyte powiązanie to wystąpienie powiązania symetrycznego, zgodnie z opisem w artykule 3.5.1 powyżej.  
   
  Zasady  
   
@@ -932,17 +932,17 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
- W tym trybie uwierzytelniania protokół negocjacji jest używany do wykonywania uwierzytelniania klienta i serwera. Kerberos jest używany, jeśli to możliwe, w przeciwnym razie NTLM. Użyte powiązanie jest powiązaniem symetrycznym z następującymi właściwościami;  
+### <a name="36-sspinegotiated"></a>3,6 SspiNegotiated  
+ Przy użyciu tego trybu uwierzytelniania protokół negocjacji jest używany do uwierzytelniania klientów i serwerów. Protokół Kerberos jest używany, jeśli jest to możliwe, w przeciwnym razie NTLM. Używane powiązanie jest powiązaniem symetrycznym z następującymi właściwościami:  
   
- Token ochrony: SpnegoContextToken, tryb włączenia jest ustawiony na .../IncludeToken/AlwaysToRecipient  
-Ochrona tokenu: Fałsz  
+ Token ochrony: SpnegoContextToken, tryb dołączania jest ustawiony na. ../IncludeToken/AlwaysToRecipient  
+Ochrona tokenu: FAŁSZ  
   
- Cały nagłówek i podpisy treści: True  
+ Cały podpis nagłówka i treści: prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfruj podpis: True  
+ Szyfruj sygnaturę: prawda  
   
  Zasady  
   
@@ -982,8 +982,8 @@ Ochrona tokenu: Fałsz
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="37-secureconversation"></a>3.7 Bezpieczna konwersacja  
- Używane powiązanie jest powiązanie symetryczne z tokenem ochrony jest SCT na WS-SecureConversation (WS-SC). SCT jest negocjowany przy użyciu WS-Trust (WS-Trust) lub WS-SecureConversation (WS-SC) zgodnie z zagnieżdżonego powiązania, który sam w sobie jest powiązanie symetryczne, który używa protokołu negocjacji. Protokół negocjacji będzie używany do wykonywania uwierzytelniania klienta i serwera, jeśli to możliwe. Jeśli protokołu Kerberos nie można użyć, powróci do NTLM.  
+### <a name="37-secureconversation"></a>3,7 SecureConversation  
+ Używane powiązanie jest powiązaniem symetrycznym z tokenem ochrony, który jest SCT dla WS-SecureConversation (WS-SC). SCT jest negocjowany przy użyciu protokołu WS-Trust (WS-Trust) lub WS-SecureConversation (WS-SC) zgodnie z zagnieżdżonym powiązaniem, które jest samym powiązaniem symetrycznym korzystającym z protokołu negocjacji. Protokół negocjacji użyje protokołu Kerberos do przeprowadzenia uwierzytelniania klienta i serwera, o ile jest to możliwe. Jeśli nie można użyć protokołu Kerberos, nastąpi powrót do NTLM.  
   
  Zasady  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963776"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143566"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. TCP, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferują możliwość hostowania dużej liczby aplikacji na danym komputerze.  
@@ -36,9 +36,9 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem
   
 |Scenariusz|Powiązania witryny|Ścieżka aplikacji|Podstawowe identyfikatory URI aplikacji|  
 |--------------|-------------------|----------------------|---------------------------|  
-|Tylko HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP i inne niż HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />NET. TCP://localhost/appTwo/|  
-|Tylko inne niż HTTP|NET. pipe: *|/appThree|net.pipe://appThree/|  
+|Tylko HTTP|http: *: 80:\*|/appTwo|`http://localhost/appTwo/`|  
+|HTTP i inne niż HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|Tylko inne niż HTTP|NET. pipe: *|/appThree|`net.pipe://appThree/`|  
   
  Można również rozwiązać usługi i zasoby w aplikacji. W aplikacji zasoby aplikacji są rozkierowane względem podstawowej ścieżki aplikacji. Załóżmy na przykład, że lokacja w nazwie komputera contoso.com ma powiązania lokacji dla protokołów HTTP i net. TCP. Załóżmy również, że lokacja zawiera jedną aplikację znajdującą się w/Billing, która uwidacznia usługę w usłudze GetOrders. svc. Następnie, jeśli usługa GetOrders. svc uwidocznia punkt końcowy z względnym adresem SecureEndpoint, punkt końcowy usługi zostałby ujawniony przy użyciu następujących dwóch identyfikatorów URI:  
   

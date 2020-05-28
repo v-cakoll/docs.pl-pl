@@ -1,48 +1,48 @@
 ---
 title: Wskazówki ogólne
-description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Ogólne wytyczne
+description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Ogólne wskazówki
 ms.date: 09/11/2018
-ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089648"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144568"
 ---
 # <a name="general-guidance"></a>Wskazówki ogólne
 
-Ta sekcja zawiera podsumowanie, kiedy wybrać .NET Core lub .NET Framework. Więcej szczegółów na temat tych wyborów udostępniamy w poniższych sekcjach.
+Ta sekcja zawiera podsumowanie, kiedy należy wybrać platformę .NET Core lub .NET Framework. Więcej informacji o tych opcjach znajduje się w poniższych sekcjach.
 
-Aby kontenerowa aplikacja serwera Platformy Docker była używana w kontenerach do serwera Platformy Docker, należy używać programu .NET Core z kontenerami systemu Linux lub Kontenerów systemu Windows, gdy:
+Należy używać platformy .NET Core z kontenerami systemu Linux lub Windows dla aplikacji serwera platformy Docker, gdy:
 
-- Masz potrzeby wieloplatformowe. Na przykład chcesz używać kontenerów Linux i Windows.
+- Wymagania dotyczące wielu platform. Na przykład chcesz użyć kontenerów systemów Linux i Windows.
 
 - Architektura aplikacji jest oparta na mikrousługach.
 
-- Musisz szybko uruchomić kontenery i chcesz mieć niewielką powierzchnię na kontener, aby osiągnąć lepszą gęstość lub więcej kontenerów na jednostkę sprzętową, aby obniżyć koszty.
+- Należy szybko rozpocząć pracę z kontenerami i mieć niewielki wpływ na kontener, aby osiągnąć lepszą gęstość lub więcej kontenerów na jednostkę sprzętową w celu obniżenia kosztów.
 
-Krótko mówiąc, podczas tworzenia nowych konteneryzowanych aplikacji .NET należy rozważyć .NET Core jako domyślny wybór. Ma wiele zalet i najlepiej pasuje do filozofii pojemników i stylu pracy.
+W krótkim czasie podczas tworzenia nowych kontenerów aplikacji .NET należy rozważyć wybór domyślny dla platformy .NET Core. Ma wiele korzyści i najlepiej pasuje do tej i stylu pracy kontenerów.
 
-Dodatkową zaletą korzystania z programu .NET Core jest możliwość uruchamiania obok siebie wersji .NET dla aplikacji na tym samym komputerze. Ta korzyść jest ważniejsza dla serwerów lub maszyn wirtualnych, które nie używają kontenerów, ponieważ kontenery izolują wersje .NET, których potrzebuje aplikacja. (Tak długo, jak są one zgodne z podstawowym systemem operacyjnym).
+Dodatkową zaletą korzystania z platformy .NET Core jest możliwość uruchamiania równoległych wersji platformy .NET dla aplikacji znajdujących się na tym samym komputerze. Ta korzyść jest bardziej ważna w przypadku serwerów lub maszyn wirtualnych, które nie korzystają z kontenerów, ponieważ kontenery izolują wersje programu .NET, których potrzebuje aplikacja. (Pod warunkiem, że są one zgodne z bazowym systemem operacyjnym).
 
-Należy użyć .NET Framework dla konteneryzowanej aplikacji serwera Platformy Docker, gdy:
+.NET Framework dla aplikacji serwera platformy Docker należy używać w przypadku:
 
-- Aplikacja korzysta obecnie z platformy .NET Framework i ma silne zależności w systemie Windows.
+- Obecnie aplikacja używa .NET Framework i ma silne zależności w systemie Windows.
 
-- Należy użyć interfejsów API systemu Windows, które nie są obsługiwane przez program .NET Core.
+- Należy używać interfejsów API systemu Windows, które nie są obsługiwane przez platformę .NET Core.
 
-- Należy użyć bibliotek .NET innych firm lub pakietów NuGet, które nie są dostępne dla .NET Core.
+- Musisz użyć bibliotek .NET innych firm lub pakietów NuGet, które nie są dostępne dla platformy .NET Core.
 
-Za pomocą platformy .NET Framework na platformie Docker można poprawić środowisko wdrażania, minimalizując problemy z wdrażaniem. Ten [scenariusz "lift and shift"](https://aka.ms/liftandshiftwithcontainersebook) jest ważny dla konteneryzacji starszych aplikacji, które zostały pierwotnie opracowane przy tradycyjnych .NET Framework, takich jak ASP.NET WebForms, Aplikacje internetowe MVC lub Usługi WCF (Windows Communication Foundation).
+Używanie .NET Framework na platformie Docker może ulepszyć środowisko wdrażania, minimalizując problemy z wdrażaniem. Ten [scenariusz "Unieś i Shift"](https://aka.ms/liftandshiftwithcontainersebook) jest istotny dla konteneryzowania starszych aplikacji, które zostały pierwotnie opracowane przy użyciu tradycyjnych .NET Framework, takich jak ASP.NET WebForms, Web Apps i WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **E-book: Modernizacja istniejących aplikacji .NET Framework za pomocą platformy Azure i kontenerów systemu Windows**  
-    https://aka.ms/liftandshiftwithcontainersebook
+- **Książka elektroniczna: modernizowanie istniejących aplikacji .NET Framework przy użyciu platformy Azure i kontenerów systemu Windows**  
+    <https://aka.ms/liftandshiftwithcontainersebook>
 
-- **Przykładowe aplikacje: modernizacja starszych ASP.NET aplikacji sieci Web przy użyciu kontenerów systemu Windows**  
-    https://aka.ms/eshopmodernizing
+- **Przykładowe aplikacje: Modernizacja starszych aplikacji internetowych ASP.NET przy użyciu kontenerów systemu Windows**  
+    <https://aka.ms/eshopmodernizing>
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)
->[następny](net-core-container-scenarios.md)
+>[Poprzedni](index.md) 
+> [Dalej](net-core-container-scenarios.md)

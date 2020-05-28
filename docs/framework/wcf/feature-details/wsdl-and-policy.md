@@ -2,78 +2,78 @@
 title: WSDL i zasady
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929665"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144685"
 ---
 # <a name="wsdl-and-policy"></a>WSDL i zasady
-W tym temacie omówiono WSDL Windows Communication Foundation (WCF) 1.1, szczegóły implementacji protokołu WS-Policy i WS-PolicyAttachment, a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1.1 wprowadzone przez architekturę WCF.  
+W tym temacie Windows Communication Foundation omówiono szczegóły implementacji WSDL 1,1, WS-Policy i WS-PolicyAttachment (WCF), a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1,1 wprowadzone przez funkcję WCF.  
   
- Usługi WCF implementuje specyfikacji WS-Policy i WS-PolicyAttachment przesłane do W3C z ograniczeniami i wyjaśnienia, opisane w tym dokumencie.  
+ Funkcja WCF implementuje specyfikacje WS-Policy i WS-PolicyAttachment przesyłane do W3C z ograniczeniami i wyjaśnieniami opisanymi w tym dokumencie.  
   
- Ten dokument używa prefiksy i przestrzenie nazw pokazano w poniższej tabeli.  
+ W tym dokumencie są stosowane prefiksy i przestrzenie nazw podane w poniższej tabeli.  
   
 |Prefiks|Przestrzeń nazw|  
 |------------|---------------|  
-|WSP (WS-Policy 1.2)|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|WSP (WS-Policy 1.5)|http://www.w3.org/ns/ws-policy|  
-|http|http://schemas.microsoft.com/ws/06/2004/policy/http|  
-|msmq|http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq|  
-|msf|http://schemas.microsoft.com/ws/2006/05/framing/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
-|msc|http://schemas.microsoft.com/ws/2005/12/wsdl/contract|  
-|cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
+|wsp (WS-Policy 1,2)|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|wsp (WS-Policy 1,5)|`http://www.w3.org/ns/ws-policy`|  
+|http|`http://schemas.microsoft.com/ws/06/2004/policy/http`|  
+|usługą|`http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq`|  
+|MSF|`http://schemas.microsoft.com/ws/2006/05/framing/policy`|  
+|mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
+|MSC|`http://schemas.microsoft.com/ws/2005/12/wsdl/contract`|  
+|CDP|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
-## <a name="wcf-wsdl11-extensions"></a>Rozszerzenia WSDL1.1 WCF  
- Usługi WCF używa następujących rozszerzeń WSDL1.1 do opisują wymagania dotyczące sesji kontraktu.  
+## <a name="wcf-wsdl11-extensions"></a>Rozszerzenia języka WSDL WCF 1.1  
+ Program WCF używa następujących rozszerzeń WSDL 1.1 do opisywania wymagań dotyczących sesji kontraktu.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:Boolean, wskazuje, że ta operacja powoduje zainicjowanie sesji usługi WCF. Wartość domyślna to `false`.  
+ XS: Boolean, wskazuje, że ta operacja inicjuje sesję WCF; wartość domyślna to `false` .  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:Boolean, wskazuje, że ta operacja kończy sesję WCF. Wartość domyślna to `false`.  
+ XS: wartość logiczna wskazuje, że ta operacja kończy sesję WCF; wartość domyślna to `false` .  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
- xs:Boolean, wskazuje, że ten kontrakt wymaga elementu session zostać nawiązane.  
+ XS: wartość logiczna wskazuje, że ten kontrakt wymaga ustanowienia sesji.  
   
-### <a name="soap-1x-http-binding-transport-uris"></a>Liczba bloków URI protokołu SOAP 1.x HTTP powiązania transportu  
- Usługi WCF używa następujących identyfikatorów URI, aby wskazać transportu do użycia dla elementów rozszerzenia Powiązanie WSDL 1.1, SOAP 1.1 i SOAP 1.2.  
+### <a name="soap-1x-http-binding-transport-uris"></a>Identyfikatory URI transportu protokołu SOAP 1. x  
+ Funkcja WCF używa następujących identyfikatorów URI, aby wskazać transporty, które mają być używane dla elementów WSDL 1,1, SOAP 1,1 i SOAP 1,2 powiązania.  
   
 |Transport|Identyfikator URI|  
 |---------------|---------|  
-|HTTP|http://schemas.xmlsoap.org/soap/http|  
-|TCP|http://schemas.microsoft.com/soap/tcp|  
-|Usługa MSMQ|http://schemas.microsoft.com/soap/msmq|  
-|Nazwane potoki|http://schemas.microsoft.com/soap/named-pipe|  
+|HTTP|`http://schemas.xmlsoap.org/soap/http`|  
+|TCP|`http://schemas.microsoft.com/soap/tcp`|  
+|Usługa MSMQ|`http://schemas.microsoft.com/soap/msmq`|  
+|Nazwane potoki|`http://schemas.microsoft.com/soap/named-pipe`|  
   
-## <a name="policy-assertions-implemented-by-wcf"></a>Asercji zasad implementowane przez architekturę WCF  
- Oprócz asercji zasad, które wprowadzono w specyfikacji usług sieci Web (WS-*) i wspomniano w innych częściach niniejszego dokumentu, usługi WCF implementuje następujących asercji zasad.  
+## <a name="policy-assertions-implemented-by-wcf"></a>Potwierdzenia zasad implementowane przez WCF  
+ Oprócz potwierdzeń zasad wprowadzonych w specyfikacjach usług sieci Web (WS-*) i wymienionych w innych sekcjach tego dokumentu, WCF implementuje następujące potwierdzenia zasad.  
   
-|Potwierdzenie zasad|Zasad tematu|Opis|  
+|Potwierdzenie zasad|Podmiot zasad|Opis|  
 |----------------------|--------------------|-----------------|  
-|http:HttpBasicAuthentication|Punkt końcowy|Punkt końcowy korzysta z uwierzytelniania podstawowego HTTP.|  
-|http:HttpDigestAuthentication|Punkt końcowy|Punkt końcowy korzysta z uwierzytelniania szyfrowanego protokołu HTTP.|  
-|http:HttpNegotiateAuthentication|Punkt końcowy|Punkt końcowy korzysta z uwierzytelniania negocjowania protokołu HTTP.|  
-|http:HttpNtlmAuthentication|Punkt końcowy|Punkt końcowy korzysta z uwierzytelniania NTLM HTTP.|  
-|msf:Streamed|Punkt końcowy|Punkt końcowy korzysta ramek strumienia komunikatów. Potwierdzenie jest używany przy użyciu protokołu ramek wiadomości podano dla transportu, takich jak TCP i nazwane potoki.|  
-|msf:SslTransportSecurity|Punkt końcowy|Punkt końcowy korzysta transport layer security (TLS) za pomocą ramek komunikatu.|  
-|msf:WindowsTransportSecurity|Punkt końcowy|Punkt końcowy korzysta zabezpieczeń dostawcy negocjacji SPNEGO () za pomocą ramek komunikatu.|  
-|msmq:MsmqBestEffort|Punkt końcowy|Usługa MSMQ gwarancje największej staranności.|  
-|msmq:MsmqSession|Punkt końcowy|Gwarantuje usługi MSMQ z sesją.|  
-|msmq:MsmqVolatile|Punkt końcowy|MSMQ Volatile.|  
-|msmq:Authenticated|Punkt końcowy|Za pomocą transportu MSMQ jest używane uwierzytelnianie.|  
-|msmq:WindowsDomain|Punkt końcowy|Usługa MSMQ korzysta z uwierzytelniania Windows domeny.|  
-|cdp:CompositeDuplex|Punkt końcowy|Punkt końcowy korzysta z dwóch oddzielnych transportu odwrotna połączeń dla in i out wiadomości.|  
-|mssp:RsaToken|Nested|Potwierdzenie tokenu klucza RSA. Wymóg ten jest zazwyczaj spełnione przez klucz RSA serializować bezpośrednio jako część informacji klucza w podpisie zatwierdzania.|  
-|mssp:SslContextToken|Nested|Wymaga wykorzystania SecurityContextToken uzyskany przy użyciu binarne uzgadniania TLS przy użyciu protokołu WS-Trust. Zagnieżdżone potwierdzenia obejmują: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.|  
-|mssp:MustNotSendCancel|Nested|Określa wymagania, że żądania tokenu zabezpieczającego (RST) żądania komunikatów [WS-Trust] za pomocą powiązania Anuluj [WS-Trust, WS-SC] nie można wysłać do wystawca danego SecurityContextToken. Jeśli ma to potwierdzenie takich komunikatów żądań nie musi być wysyłane do wystawcy. Jeśli ta asercja nie jest obecny, takich komunikatów żądań może otrzymywać wystawcy.|  
-|mssp:RequireClientCertificate|Nested|Ten opcjonalny element określa wymagania certyfikatu klienta należy podać w ramach protokołu TLSNEGO. Jeśli ta asercja jest obecna, musi być podana certyfikatu klienta. Jeśli ta asercja nie jest obecny, następnie certyfikat klienta nie jest wymagany. Ta asercja nie mogą być używane poza mssp:SslContextToken.|  
+|http: HttpBasicAuthentication|Endpoint|Punkt końcowy używa uwierzytelniania podstawowego protokołu HTTP.|  
+|http: HttpDigestAuthentication|Endpoint|Punkt końcowy używa uwierzytelniania szyfrowanego protokołu HTTP.|  
+|http: HttpNegotiateAuthentication|Endpoint|Punkt końcowy używa uwierzytelniania przy użyciu protokołu HTTP.|  
+|http: HttpNtlmAuthentication|Endpoint|Punkt końcowy używa uwierzytelniania HTTP NTLM.|  
+|MSF: przesyłane strumieniowo|Endpoint|Punkt końcowy używa ramek komunikatów przesyłanych strumieniowo. To potwierdzenie jest używane z protokołem ramek komunikatów udostępnianym do transportów, takich jak TCP i nazwane potoki.|  
+|MSF: SslTransportSecurity|Endpoint|Punkt końcowy używa protokołu TLS (Transport Layer Security) z ramkami komunikatów.|  
+|MSF: WindowsTransportSecurity|Endpoint|Punkt końcowy używa negocjacji dostawcy zabezpieczeń (SPNEGO) z ramkami komunikatów.|  
+|MSMQ: MsmqBestEffort|Endpoint|Usługa MSMQ z gwarancjami najlepszego wysiłku.|  
+|MSMQ: MsmqSession|Endpoint|Usługa MSMQ z gwarancjami sesji.|  
+|MSMQ: MsmqVolatile|Endpoint|Nietrwała usługa MSMQ.|  
+|MSMQ: uwierzytelnione|Endpoint|Uwierzytelnianie jest używane z transportem usługi MSMQ.|  
+|MSMQ: WindowsDomain|Endpoint|Usługa MSMQ używa uwierzytelniania domeny systemu Windows.|  
+|CDP: CompositeDuplex|Endpoint|Punkt końcowy używa dwóch oddzielnych połączeń Transverse transportowej dla komunikatów in i out.|  
+|mssp:RsaToken|Zagnieżdża|Potwierdzenie tokenu klucza RSA. To wymaganie jest zwykle spełnione przez Serializowanie klucza RSA bezpośrednio jako część najważniejszych informacji w podpisie poświadczanym.|  
+|mssp:SslContextToken|Zagnieżdża|Wymaga, aby SecurityContextToken uzyskany przy użyciu binarnego uzgadniania TLS przy użyciu protokołu WS-Trust. Zagnieżdżone potwierdzenia obejmują: SP: RequireDerivedKeys, mssp: MustNotSendCancel, mssp: RequireClientCertificate.|  
+|mssp:MustNotSendCancel|Zagnieżdża|Określa wymaganie, aby komunikaty żądania tokenu zabezpieczającego żądania (RST) [WS-Trust] za pomocą anulowania powiązania [WS-Trust, WS-SC] nie były wysyłane do wystawcy danego SecurityContextToken. Jeśli to potwierdzenie jest obecne, takie komunikaty żądania nie mogą być wysyłane do wystawcy. Jeśli to potwierdzenie nie istnieje, takie komunikaty żądania mogą być wysyłane do wystawcy.|  
+|mssp:RequireClientCertificate|Zagnieżdża|Ten opcjonalny element określa wymaganie, aby certyfikat klienta był dostarczany jako część protokołu TLSNEGO. Jeśli to potwierdzenie jest obecne, należy podać certyfikat klienta. Jeśli to potwierdzenie nie istnieje, nie można podać certyfikatu klienta. Nie można używać tego potwierdzenia poza mssp: SslContextToken.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Instrukcje: Eksportowanie niestandardowych plików WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Instrukcje: Import Custom WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Instrukcje: Eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

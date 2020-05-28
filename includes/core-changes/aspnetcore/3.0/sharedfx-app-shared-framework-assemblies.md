@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549597"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144975"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Udostępnione środowisko: zestawy usunięte z Microsoft. AspNetCore. App
 
-Począwszy od ASP.NET Core 3,0, ASP.NET Core Shared Framework (`Microsoft.AspNetCore.App`) zawiera tylko zestawy pierwszej jednostki, które są w pełni opracowane, obsługiwane i udostępniane przez firmę Microsoft.
+Począwszy od ASP.NET Core 3,0, ASP.NET Core Shared Framework ( `Microsoft.AspNetCore.App` ) zawiera tylko zestawy pierwszej jednostki, które są w pełni opracowane, obsługiwane i udostępniane przez firmę Microsoft.
 
 #### <a name="change-description"></a>Zmień opis
 
 Należy zastanowić się nad zmianą podczas ponownego definiowania granic dla ASP.NET Core "platformy". Udostępniona platforma będzie [budować Źródło przez każdy za pośrednictwem usługi GitHub](https://github.com/dotnet/source-build) i będzie w dalszym ciągu oferować istniejące zalety platformy .NET Core dla aplikacji. Niektóre korzyści obejmują mniejszy rozmiar wdrożenia, scentralizowaną poprawkę i krótszy czas uruchamiania.
 
-W ramach zmiany niektóre istotne zmiany są wprowadzane w `Microsoft.AspNetCore.App`.
+W ramach zmiany niektóre istotne zmiany są wprowadzane w `Microsoft.AspNetCore.App` .
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,17 +22,17 @@ W ramach zmiany niektóre istotne zmiany są wprowadzane w `Microsoft.AspNetCore
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Projekty, `Microsoft.AspNetCore.App` `<PackageReference>` do których odwołuje się element w pliku projektu.
+Projekty, do których odwołuje się `Microsoft.AspNetCore.App` `<PackageReference>` element w pliku projektu.
 
 Ponadto `Microsoft.AspNetCore.App` zawarte są następujące podskładniki:
 
-- Json.NET (`Newtonsoft.Json`)
-- Entity Framework Core (zestawy poprzedzone prefiksem `Microsoft.EntityFrameworkCore.`)
-- Roslyn (`Microsoft.CodeAnalysis`)
+- Json.NET ( `Newtonsoft.Json` )
+- Entity Framework Core (zestawy poprzedzone prefiksem `Microsoft.EntityFrameworkCore.` )
+- Roslyn ( `Microsoft.CodeAnalysis` )
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Odwołanie do `Microsoft.AspNetCore.App` nie wymaga już `<PackageReference>` elementu w pliku projektu. Zestaw .NET Core SDK obsługuje nowy element o nazwie `<FrameworkReference>`, który zastępuje użycie. `<PackageReference>`
+Odwołanie do `Microsoft.AspNetCore.App` nie wymaga już `<PackageReference>` elementu w pliku projektu. Zestaw .NET Core SDK obsługuje nowy element o nazwie `<FrameworkReference>` , który zastępuje użycie `<PackageReference>` .
 
 Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
@@ -50,12 +50,12 @@ Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [ten wpis 
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Nie jest konieczne, aby projekty korzystały z zestawów `Microsoft.AspNetCore.App` w programie jako pakiety NuGet. Aby uprościć Określanie elementów docelowych i użycie ASP.NET Core udostępnionej platformy, wiele pakietów NuGet dostarczonych od ASP.NET Core 1,0 nie jest już generowanych. Interfejsy API udostępniane przez te pakiety są nadal dostępne dla aplikacji za pomocą `<FrameworkReference>` programu `Microsoft.AspNetCore.App`do. Typowe przykłady interfejsów API to Kestrel, MVC i Razor.
+Nie jest konieczne, aby projekty korzystały z zestawów w programie `Microsoft.AspNetCore.App` jako pakiety NuGet. Aby uprościć Określanie elementów docelowych i użycie ASP.NET Core udostępnionej platformy, wiele pakietów NuGet dostarczonych od ASP.NET Core 1,0 nie jest już generowanych. Interfejsy API udostępniane przez te pakiety są nadal dostępne dla aplikacji za pomocą programu `<FrameworkReference>` do `Microsoft.AspNetCore.App` . Typowe przykłady interfejsów API to Kestrel, MVC i Razor.
 
 Ta zmiana nie ma zastosowania do wszystkich plików binarnych, do których odwołuje się `Microsoft.AspNetCore.App` w ASP.NET Core 2. x. Do istotnych wyjątków należą:
 
-- `Microsoft.Extensions`biblioteki, które przejdźą do .NET Standard będą dostępne jako pakiety NuGet (patrz https://github.com/dotnet/extensions).
-- Interfejsy API produkowane przez zespół ASP.NET Core, które nie są `Microsoft.AspNetCore.App`częścią programu. Na przykład następujące składniki są dostępne jako pakiety NuGet:
+- `Microsoft.Extensions`biblioteki, które przejdźą do .NET Standard będą dostępne jako pakiety NuGet (zobacz <https://github.com/dotnet/extensions> ).
+- Interfejsy API produkowane przez zespół ASP.NET Core, które nie są częścią programu `Microsoft.AspNetCore.App` . Na przykład następujące składniki są dostępne jako pakiety NuGet:
   - Entity Framework Core
   - Interfejsy API zapewniające integrację innych firm
   - Funkcje eksperymentalne

@@ -2,12 +2,12 @@
 title: Przykład migracji do programu .NET Core 3.1
 description: Przedstawiamy sposób migrowania przykładowych aplikacji przeznaczonych dla .NET Framework do programu .NET Core 3,1.
 ms.date: 05/12/2020
-ms.openlocfilehash: ef8a0c24ec81a21eb89411ed4c9a543d4d70d89f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8b1219cf4bd89ada5b71a60ef27eaabb94997c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423384"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144271"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>Przykład migracji do programu .NET Core 3.1
 
@@ -43,7 +43,7 @@ Po przeprowadzeniu migracji odwołań do pakietów należy sprawdzić wszystkie 
 
 ![Zrzut ekranu przedstawiający zależności NuGet dla pakietu Castle. Windsor](./media/example-migration-core/nuget-dependencies.png)
 
-Aby sprawdzić zgodność pakietu, można użyć narzędzia <http://fuget.org> oferującego bardziej szczegółowe informacje o wersjach i zależnościach.
+Aby sprawdzić zgodność pakietu, można użyć narzędzia <https://fuget.org> oferującego bardziej szczegółowe informacje o wersjach i zależnościach.
 
 Być może projekt odwołuje się do starszych wersji pakietu, które nie obsługują platformy .NET Core, ale mogą znaleźć nowsze wersje, które je obsługują. Dlatego aktualizowanie pakietów do nowszych wersji jest generalnie dobrym zaleceniem. Należy jednak wziąć pod uwagę, że aktualizacja wersji pakietu może wprowadzić pewne istotne zmiany, które wymusić zaktualizowanie kodu.
 
@@ -133,7 +133,7 @@ Na przykład w przypadku korzystania z plików konfiguracji (*App. config*) mog�
 
 Kolejną przyczyną błędów jest użycie `BeginInvoke` metod i, `EndInvoke` ponieważ nie są one obsługiwane przez platformę .NET Core. Nie są one obsługiwane przez platformę .NET Core, ponieważ mają one zależność od komunikacji zdalnej, która nie istnieje w programie .NET Core. Aby rozwiązać ten problem, spróbuj użyć `await` słowa kluczowego (jeśli jest dostępne) lub <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> metody.
 
-Analizatory zgodności umożliwiają identyfikowanie interfejsów API i wzorców kodu w kodzie, które mogą powodować problemy w czasie wykonywania za pomocą platformy .NET Core. Przejdź do programu <http://github.com/dotnet/platform-compat> i użyj analizatora interfejsów API platformy .NET.
+Analizatory zgodności umożliwiają identyfikowanie interfejsów API i wzorców kodu w kodzie, które mogą powodować problemy w czasie wykonywania za pomocą platformy .NET Core. Przejdź do programu <https://github.com/dotnet/platform-compat> i użyj analizatora interfejsów API platformy .NET.
 
 ## <a name="migrating-a-windows-forms-application"></a>Migrowanie aplikacji Windows Forms
 

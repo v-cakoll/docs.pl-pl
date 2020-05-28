@@ -98,11 +98,6 @@
         - name: Testowanie jednostkowe biblioteki
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: Korzystanie z biblioteki
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: Test jednostkowy na żywo
-          href: /visualstudio/test/live-unit-testing-start
         - name: Instalowanie i używanie pakietu
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'

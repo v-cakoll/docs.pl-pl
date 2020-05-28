@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Dowiedz się więcej o zestawach SDK projektu .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206060"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144242"
 ---
 # <a name="net-core-project-sdks"></a>Zestawy SDK projektu .NET Core
 
@@ -21,8 +21,8 @@ Dostępne są następujące zestawy SDK dla platformy .NET Core:
 
 | ID | Opis | Repo|
 | - | - | - |
-| `Microsoft.NET.Sdk` | Zestaw .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | [Zestaw SDK sieci Web](/aspnet/core/razor-pages/web-sdk) platformy .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | Zestaw .NET Core SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | [Zestaw SDK sieci Web](/aspnet/core/razor-pages/web-sdk) platformy .NET Core | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | [Zestaw SDK](/aspnet/core/razor-pages/sdk) programu .NET Core Razor |
 | `Microsoft.NET.Sdk.Worker` | Zestaw SDK usługi procesu roboczego platformy .NET Core |
 | `Microsoft.NET.Sdk.WindowsDesktop` | Podstawowe WinForms i zestaw WPF SDK platformy .NET |
@@ -89,8 +89,8 @@ W poniższej tabeli pokazano, które elementy i które [elementy globalne](https
 
 | Element           | Uwzględnij globalizowania                              | Wyklucz globalizowania                                                  | Usuń globalizowania              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Opracowania           | \*\*/\*. cs (lub inne rozszerzenia językowe) | \*\*/\*Użytkownicy  \*\*/\*.\* proj  \*\*/\*. sln  \*\*/\*. vssscc  | Brak                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*Użytkownicy \*\*/\*.\* proj \*\*/\*. sln \*\*/\*. vssscc     | Brak                      |
+| Opracowania           | \*\*/\*. cs (lub inne rozszerzenia językowe) | \*\*/\*Użytkownicy  \*\*/\*.\* proj  \*\*/\*. sln  \*\*/\*. vssscc  | Nie dotyczy                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*Użytkownicy \*\*/\*.\* proj \*\*/\*. sln \*\*/\*. vssscc     | Nie dotyczy                      |
 | Brak              | \*\*/\*                                   | \*\*/\*Użytkownicy \*\*/\*.\* proj \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*Rejestr \*\*/\*. resx |
 
 > [!NOTE]
@@ -174,7 +174,7 @@ Aby użyć niestandardowego obiektu docelowego w projekcie, Dodaj element wskazu
 
 Można skonfigurować sposób używania niestandardowego obiektu docelowego. Ponieważ jest to element docelowy programu MSBuild, może on zależeć od danego elementu docelowego, działać po innym elemencie docelowym lub być wywoływana ręcznie przy użyciu `dotnet msbuild -t:<target-name>` polecenia. Aby jednak zapewnić lepsze środowisko użytkownika, można połączyć narzędzia dla poszczególnych projektów i niestandardowe elementy docelowe. W tym scenariuszu narzędzie dla projektu akceptuje wszelkie parametry, które są potrzebne, i tłumaczy je na wymagane [`dotnet msbuild`](../tools/dotnet-msbuild.md) wywołanie, które wykonuje miejsce docelowe. Możesz zobaczyć przykład tego rodzaju synergii w repozytorium [przykładów Hackathonych](https://github.com/dotnet/MVPSummitHackathon2016) w projekcie programu 2016 MVP [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Instalowanie programu .NET Core](../install/index.md)
 - [Jak używać zestawów SDK projektu MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)

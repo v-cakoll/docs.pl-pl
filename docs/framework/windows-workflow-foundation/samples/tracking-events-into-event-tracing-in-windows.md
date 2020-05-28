@@ -2,16 +2,16 @@
 title: Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094582"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144893"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 
-W tym przykładzie pokazano, jak włączyć śledzenie Windows Workflow Foundation (WF) w usłudze przepływu pracy i emitować zdarzenia śledzenia w usłudze śledzenie zdarzeń systemu Windows (ETW). Aby emitować rekordy śledzenia przepływu pracy do funkcji ETW, przykład używa uczestnika śledzenia ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
+W tym przykładzie pokazano, jak włączyć śledzenie Windows Workflow Foundation (WF) w usłudze przepływu pracy i emitować zdarzenia śledzenia w usłudze śledzenie zdarzeń systemu Windows (ETW). Aby emitować rekordy śledzenia przepływu pracy do funkcji ETW, przykład używa uczestnika śledzenia ETW ( <xref:System.Activities.Tracking.EtwTrackingParticipant> ).
 
 Przepływ pracy w przykładzie odbiera żądanie, przypisuje odwrotność danych wejściowych do zmiennej wejściowej i Zwraca odwrotność z powrotem do klienta. Gdy dane wejściowe mają wartość 0, wystąpi wyjątek dzielenia przez zero, który jest nieobsługiwany, który powoduje przerwanie przepływu pracy. Po włączeniu śledzenia rekord śledzenia błędów jest emitowany do funkcji ETW, co może pomóc w późniejszym rozwiązaniu błędu. Uczestnik śledzenia ETW jest skonfigurowany przy użyciu profilu śledzenia w celu subskrybowania śledzenia rekordów. Profil śledzenia jest zdefiniowany w pliku Web. config i podany jako parametr konfiguracji uczestnika śledzenia ETW. Uczestnik śledzenia funkcji ETW jest skonfigurowany w pliku Web. config usługi przepływu pracy i jest stosowany do usługi jako zachowanie usługi. W tym przykładzie przeglądasz zdarzenia śledzenia w dzienniku zdarzeń przy użyciu Podgląd zdarzeń.
 
@@ -22,7 +22,7 @@ Windows Workflow Foundation udostępnia infrastrukturę śledzenia do śledzenia
 |Składnik|Opis|
 |---------------|-----------------|
 |Śledzenie środowiska uruchomieniowego|Udostępnia infrastrukturę do emisji rekordów śledzenia.|
-|Śledzenie uczestników|Uzyskuje dostęp do rekordów śledzenia. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dostarcza uczestnika śledzenia, który zapisuje rekordy śledzenia jako zdarzenia śledzenia zdarzeń systemu Windows (ETW).|
+|Śledzenie uczestników|Uzyskuje dostęp do rekordów śledzenia. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]dostarcza uczestnika śledzenia, który zapisuje rekordy śledzenia jako zdarzenia śledzenia zdarzeń systemu Windows (ETW).|
 |Profil śledzenia|Mechanizm filtrowania umożliwiający uczestnikom śledzenia subskrybowanie podzbioru rekordów śledzenia emitowanych z wystąpienia przepływu pracy.|
 
 W poniższej tabeli przedstawiono szczegółowe informacje o rekordach śledzenia, które są emitowane przez środowisko uruchomieniowe przepływu pracy.
@@ -47,11 +47,11 @@ Uczestnik śledzenia subskrybuje podzestaw wyemitowanych rekordów śledzenia pr
 
 3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
-    Domyślnie usługa nasłuchuje na porcie 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+    Domyślnie usługa nasłuchuje na porcie 53797 ( `http://localhost:53797/SampleWorkflowService.xamlx` ).
 
 4. Korzystając z Eksploratora plików, Otwórz klienta testowego WCF.
 
-    Klient testowy WCF (WcfTestClient. exe) znajduje się w folderze \<instalacyjnym programu Visual Studio 2010 > folderze \Common7\IDE\.
+    Klient testowy WCF (WcfTestClient. exe) znajduje się w \<Visual Studio 2010 installation folder> folderze \Common7\IDE\.
 
     Domyślny folder instalacji programu Visual Studio 2010 to C:\Program Files\Microsoft Visual Studio 10,0.
 
@@ -61,7 +61,7 @@ Uczestnik śledzenia subskrybuje podzestaw wyemitowanych rekordów śledzenia pr
 
 6. Otwórz aplikację Podgląd zdarzeń.
 
-    Przed wywołaniem usługi Uruchom Podgląd zdarzeń z menu **Start** , wybierz polecenie **Uruchom** i wpisz w `eventvwr.exe`. Upewnij się, że dziennik zdarzeń nasłuchuje zdarzeń śledzenia emitowanych z usługi przepływu pracy.
+    Przed wywołaniem usługi Uruchom Podgląd zdarzeń z menu **Start** , wybierz polecenie **Uruchom** i wpisz w `eventvwr.exe` . Upewnij się, że dziennik zdarzeń nasłuchuje zdarzeń śledzenia emitowanych z usługi przepływu pracy.
 
 7. W widoku drzewa Podgląd zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**oraz **firmę Microsoft**. Kliknij prawym przyciskiem myszy pozycję **Microsoft** i wybierz pozycję **Widok** , a następnie **Pokaż dzienniki analityczne i debugowania** , aby włączyć dzienniki analityczne i debugowania.
 
@@ -69,9 +69,9 @@ Uczestnik śledzenia subskrybuje podzestaw wyemitowanych rekordów śledzenia pr
 
 8. W widoku drzewa w Podgląd zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **serwer aplikacji-aplikacje**. Kliknij prawym przyciskiem myszy pozycję **analityczne** i wybierz pozycję **Włącz dziennik** , aby włączyć dziennik **analityczny** .
 
-9. Przetestuj usługę przy użyciu klienta testowego WCF przez dwukrotne kliknięcie `GetData`.
+9. Przetestuj usługę, korzystając z klienta testowego WCF przez dwukrotne kliknięcie `GetData` .
 
-    Spowoduje to otwarcie metody `GetData`. Żądanie akceptuje jeden parametr i zapewnia, że wartość jest równa 0, co jest ustawieniem domyślnym.
+    Spowoduje to otwarcie `GetData` metody. Żądanie akceptuje jeden parametr i zapewnia, że wartość jest równa 0, co jest ustawieniem domyślnym.
 
      Kliknij pozycję **Wywołaj**.
 
@@ -83,7 +83,7 @@ Uczestnik śledzenia subskrybuje podzestaw wyemitowanych rekordów śledzenia pr
 
 11. Powtórz kroki 9 i 10 przy użyciu danych wejściowych innych niż 0, aby nie zgłaszać błędów.
 
-Profile śledzenia umożliwiają subskrybowanie zdarzeń, które są emitowane przez środowisko uruchomieniowe po zmianie stanu wystąpienia przepływu pracy. W zależności od wymagań dotyczących monitorowania można utworzyć profil, który jest bardzo duży, który subskrybuje niewielki zestaw zmian stanu wysokiego poziomu w przepływie pracy. Z drugiej strony można utworzyć bardzo precyzyjny profil, którego dane wyjściowe są wystarczająco rozbudowane, aby odtworzyć wykonywanie później. Przykład pokazuje zdarzenia emitowane przez środowisko uruchomieniowe przepływu pracy do funkcji ETW przy użyciu `HealthMonitoring Tracking Profile`, które emitują mały zestaw zdarzeń. Inny profil, który emituje więcej zdarzeń śledzenia przepływu pracy, jest również dostępny w pliku Web. config o nazwie `Troubleshooting Tracking Profile`. Po zainstalowaniu [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] w pliku Machine. config zostanie skonfigurowany profil domyślny o pustej nazwie. Ten profil jest używany przez konfigurację zachowania śledzenia funkcji ETW, gdy nie określono nazwy profilu lub pustej nazwy profilu.
+Profile śledzenia umożliwiają subskrybowanie zdarzeń, które są emitowane przez środowisko uruchomieniowe po zmianie stanu wystąpienia przepływu pracy. W zależności od wymagań dotyczących monitorowania można utworzyć profil, który jest bardzo duży, który subskrybuje niewielki zestaw zmian stanu wysokiego poziomu w przepływie pracy. Z drugiej strony można utworzyć bardzo precyzyjny profil, którego dane wyjściowe są wystarczająco rozbudowane, aby odtworzyć wykonywanie później. Przykład pokazuje zdarzenia emitowane przez środowisko uruchomieniowe przepływu pracy do funkcji ETW przy użyciu `HealthMonitoring Tracking Profile` , która emituje niewielki zestaw zdarzeń. Inny profil, który emituje więcej zdarzeń śledzenia przepływu pracy, jest również dostępny w pliku Web. config o nazwie `Troubleshooting Tracking Profile` . Po [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] zainstalowaniu programu w pliku Machine. config zostanie skonfigurowany profil domyślny o pustej nazwie. Ten profil jest używany przez konfigurację zachowania śledzenia funkcji ETW, gdy nie określono nazwy profilu lub pustej nazwy profilu.
 
 Profil śledzenia monitorowania kondycji emituje rekordy wystąpień przepływu pracy i rekordy propagacji błędów aktywności. Ten profil jest tworzony przez dodanie następującego profilu śledzenia do pliku konfiguracji Web. config.
 
@@ -111,7 +111,7 @@ Profil śledzenia monitorowania kondycji emituje rekordy wystąpień przepływu 
 </tracking>
 ```
 
- Profil można zmienić, zmieniając konfigurację `EtwTrackingParticipant` w następujący sposób.
+ Profil można zmienić, zmieniając `EtwTrackingParticipant` konfigurację na poniższe.
 
 ```xml
 <behaviors>
@@ -138,7 +138,7 @@ Profil śledzenia monitorowania kondycji emituje rekordy wystąpień przepływu 
 > [!NOTE]
 > Istnieje znany problem w Podgląd zdarzeń, w którym może nie można zdekodować zdarzeń ETW. Może pojawić się komunikat o błędzie, który wygląda podobnie do poniższego.
 >
-> Nie można znaleźć opisu identyfikatora zdarzenia \<identyfikator > ze źródła Microsoft-Windows-Application Server-Applications. Składnik, który wywołuje to zdarzenie, nie jest zainstalowany na komputerze lokalnym lub instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym.
+> Opis identyfikatora zdarzenia \<id> ze źródła Microsoft-Windows-Application Server — nie można odnaleźć aplikacji. Składnik, który wywołuje to zdarzenie, nie jest zainstalowany na komputerze lokalnym lub instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym.
 >
 > Jeśli ten błąd wystąpi, kliknij przycisk Odśwież w okienku Akcje. Zdarzenie powinno teraz zostać zdekodowane poprawnie.
 
@@ -147,10 +147,10 @@ Profil śledzenia monitorowania kondycji emituje rekordy wystąpień przepływu 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

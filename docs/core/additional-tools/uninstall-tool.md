@@ -2,17 +2,17 @@
 title: Narzędzie do odinstalowywania
 description: Omówienie narzędzia do odinstalowywania platformy .NET Core, narzędzia z przewodnikiem, które umożliwia kontrolowane czyszczenie zestawów SDK i środowiska uruchomieniowego platformy .NET Core.
 author: sfoslund
-ms.date: 01/06/2020
-ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/27/2020
+ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595718"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144516"
 ---
 # <a name="net-core-uninstall-tool"></a>Narzędzie do dezinstalacji platformy .NET Core
 
-[Narzędzie do dezinstalacji programu .NET Core](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) umożliwia usuwanie zestawów SDK i środowisk uruchomieniowych platformy .NET Core z systemu. Dostępna jest kolekcja opcji, aby określić wersje, które mają zostać odinstalowane.
+[Narzędzie do dezinstalacji programu .NET Core](https://aka.ms/dotnet-core-uninstall-tool) ( `dotnet-core-uninstall` ) umożliwia usuwanie zestawów SDK i środowisk uruchomieniowych platformy .NET Core z systemu. Dostępna jest kolekcja opcji, aby określić wersje, które mają zostać odinstalowane.
 
 Narzędzie obsługuje systemy Windows i macOS. System Linux nie jest obecnie obsługiwany.
 
@@ -23,7 +23,7 @@ W systemie Windows narzędzie może odinstalować tylko zestawy SDK i środowisk
 
 W systemie macOS narzędzie może odinstalować tylko zestawy SDK i środowiska uruchomieniowe znajdujące się w folderze */usr/local/share/dotnet* .
 
-Ze względu na te ograniczenia narzędzie może nie być w stanie odinstalować wszystkich zestawów SDK i środowisk uruchomieniowych platformy .NET Core na komputerze. Możesz użyć `dotnet --info` polecenia, aby znaleźć wszystkie zainstalowane zestawy SDK .NET Core i środowiska uruchomieniowe, w tym zestawy SDK i środowiska uruchomieniowe, których to narzędzie nie może usunąć. `dotnet-core-uninstall list` Polecenie wyświetla listę zestawów SDK, które można odinstalować za pomocą narzędzia.
+Ze względu na te ograniczenia narzędzie może nie być w stanie odinstalować wszystkich zestawów SDK i środowisk uruchomieniowych platformy .NET Core na komputerze. Możesz użyć polecenia, `dotnet --info` Aby znaleźć wszystkie zainstalowane zestawy SDK .NET Core i środowiska uruchomieniowe, w tym zestawy SDK i środowiska uruchomieniowe, których to narzędzie nie może usunąć. `dotnet-core-uninstall list`Polecenie wyświetla listę zestawów SDK, które można odinstalować za pomocą narzędzia.
 
 ## <a name="install-the-tool"></a>Zainstaluj narzędzie
 
@@ -43,10 +43,10 @@ W poniższych krokach przedstawiono zalecane podejście do uruchamiania narzędz
 
 ### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>Krok 1. wyświetlanie zainstalowanych zestawów SDK i środowisk uruchomieniowych platformy .NET Core
 
-`dotnet-core-uninstall list` Polecenie wyświetla listę zainstalowanych zestawów SDK .NET Core i środowiska uruchomieniowe, które można usunąć za pomocą tego narzędzia. Niektóre zestawy SDK i środowiska uruchomieniowe mogą być wymagane przez program Visual Studio i są wyświetlane z zawarto adnotacją dlaczego nie zaleca się ich odinstalowywania.
+`dotnet-core-uninstall list`Polecenie wyświetla listę zainstalowanych zestawów SDK .NET Core i środowiska uruchomieniowe, które można usunąć za pomocą tego narzędzia. Niektóre zestawy SDK i środowiska uruchomieniowe mogą być wymagane przez program Visual Studio i są wyświetlane z zawarto adnotacją dlaczego nie zaleca się ich odinstalowywania.
 
 > [!NOTE]
-> Dane wyjściowe `dotnet-core-uninstall list` polecenia nie będą zgodne z listą zainstalowanych wersji w danych wyjściowych `dotnet --info` w większości przypadków. W przypadku tego narzędzia nie będą wyświetlane wersje zainstalowane przez pliki zip ani zarządzane przez program Visual Studio (dowolna wersja zainstalowana z programem Visual Studio 2019 16,3 lub nowszym). Jednym ze sposobów sprawdzenia, czy wersja jest zarządzana przez program Visual Studio, jest wyświetlenie jej w programie `Add or Remove Programs`, gdzie wersje zarządzane programu Visual Studio są oznaczone jako takie w nazwach wyświetlanych.
+> Dane wyjściowe `dotnet-core-uninstall list` polecenia nie będą zgodne z listą zainstalowanych wersji w danych wyjściowych `dotnet --info` w większości przypadków. W przypadku tego narzędzia nie będą wyświetlane wersje zainstalowane przez pliki zip ani zarządzane przez program Visual Studio (dowolna wersja zainstalowana z programem Visual Studio 2019 16,3 lub nowszym). Jednym ze sposobów sprawdzenia, czy wersja jest zarządzana przez program Visual Studio, jest wyświetlenie jej w programie `Add or Remove Programs` , gdzie wersje zarządzane programu Visual Studio są oznaczone jako takie w nazwach wyświetlanych.
 
 **dotnet-Core — lista dezinstalacji**
 
@@ -66,7 +66,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  Wyświetla listę wszystkich pakietów środowiska uruchomieniowego środowiska .NET Core i hostingu, które można odinstalować za pomocą tego narzędzia.
+  Wyświetla listę wszystkich pakietów hostingu platformy .NET Core, które można odinstalować za pomocą tego narzędzia.
 
 * **`--runtime`**
 
@@ -78,7 +78,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
 
 * **`--x64`**
 
@@ -100,7 +100,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
   
 ---
 
@@ -126,7 +126,7 @@ dotnet-core-uninstall list [options]
 
 ### <a name="step-2---do-a-dry-run"></a>Krok 2 — wykonywanie suchego przebiegu
 
-Polecenia `dotnet-core-uninstall dry-run` i `dotnet-core-uninstall whatif` wyświetlają .NET Core zestawy SDK i środowiska uruchomieniowe, które zostaną usunięte na podstawie opcji dostępnych bez konieczności odinstalowania. Te polecenia są synonimami.
+`dotnet-core-uninstall dry-run`Polecenia i `dotnet-core-uninstall whatif` wyświetlają .NET Core zestawy SDK i środowiska uruchomieniowe, które zostaną usunięte na podstawie opcji dostępnych bez konieczności odinstalowania. Te polecenia są synonimami.
 
 **dotnet-Core — Odinstalowywanie suchego i dotnet-Core-Uninstall whatIf**
 
@@ -146,7 +146,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   > [!TIP]
   > Pliki odpowiedzi są alternatywą do umieszczania wszystkich wersji w wierszu polecenia.
-  > Są one plikami tekstowymi, zazwyczaj z \*rozszerzeniem. rsp, a każda wersja jest wymieniona w osobnym wierszu.
+  > Są one plikami tekstowymi, zazwyczaj z \* rozszerzeniem. rsp, a każda wersja jest wymieniona w osobnym wierszu.
   > Aby określić plik odpowiedzi dla `VERSION` argumentu, użyj \@ znaku bezpośrednio po nazwie pliku odpowiedzi.
 
 #### <a name="options"></a>Opcje
@@ -203,22 +203,22 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
 
 * **`--x64`**
 
-  Musi być używana z `--sdk`, `--runtime`, i `--aspnet-runtime` do usuwania zestawów SDK x64 lub środowisk uruchomieniowych.
+  Musi być używana z `--sdk` , `--runtime` , i `--aspnet-runtime` do usuwania zestawów SDK x64 lub środowisk uruchomieniowych.
 
 * **`--x86`**
 
-  Musi być używana z `--sdk`, `--runtime`, i `--aspnet-runtime` do usuwania zestawów SDK x86 lub środowisk uruchomieniowych.
+  Musi być używana z `--sdk` , `--runtime` , i `--aspnet-runtime` do usuwania zestawów SDK x86 lub środowisk uruchomieniowych.
 
 * **`--force`** Wymusza usunięcie wersji, które mogą być używane przez program Visual Studio.
 
 Uwagi:
 
-1. Dokładnie jeden z `--sdk`, `--runtime`, `--aspnet-runtime`, i `--hosting-bundle` jest wymagany.
-2. `--all`, `--all-below`, `--all-but` `--major-minor` `[<VERSION>...]` ,,,,, i są wyłączne. `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest`
+1. Dokładnie jeden z `--sdk` , `--runtime` , `--aspnet-runtime` , i `--hosting-bundle` jest wymagany.
+2. `--all`,,,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest` `--major-minor` i `[<VERSION>...]` są wyłączne.
 3. Jeśli `--x64` lub `--x86` nie zostanie określony, zostaną usunięte oba wersje x64 i x86.
 
 ## <a name="macos"></a>[macOS](#tab/macos)
@@ -265,21 +265,21 @@ Uwagi:
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
   
 * **`--force`** Wymusza usunięcie wersji, które mogą być używane przez program Visual Studio lub zestawy SDK.
 
 Uwagi:
 
 1. Dokładnie jeden z `--sdk` i `--runtime` jest wymagany.
-2. `--all`, `--all-below`, `--all-but` `--major-minor` `[<VERSION>...]` ,,,,, i są wyłączne. `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest`
+2. `--all`,,,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest` `--major-minor` i `[<VERSION>...]` są wyłączne.
 
 ---
 
 #### <a name="examples"></a>Przykłady
 
 > [!NOTE]
-> Domyślnie zestawy SDK platformy .NET Core i środowiska uruchomieniowe, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK `dotnet-core-uninstall dry-run` , nie są uwzględniane w danych wyjściowych. W poniższych przykładach niektóre z określonych zestawów SDK i środowiska uruchomieniowe mogą nie zostać uwzględnione w danych wyjściowych, w zależności od stanu komputera. Aby uwzględnić wszystkie zestawy SDK i środowiska uruchomieniowe, należy je jawnie wystawić `--force` jako argumenty lub użyć opcji.
+> Domyślnie zestawy SDK platformy .NET Core i środowiska uruchomieniowe, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK, nie są uwzględniane w `dotnet-core-uninstall dry-run` danych wyjściowych. W poniższych przykładach niektóre z określonych zestawów SDK i środowiska uruchomieniowe mogą nie zostać uwzględnione w danych wyjściowych, w zależności od stanu komputera. Aby uwzględnić wszystkie zestawy SDK i środowiska uruchomieniowe, należy je jawnie wystawić jako argumenty lub użyć `--force` opcji.
 
 * Suchy przebieg usuwania wszystkich środowisk uruchomieniowych platformy .NET Core, które zostały zastąpione nowszymi poprawkami:
 
@@ -287,7 +287,7 @@ Uwagi:
   dotnet-core-uninstall dry-run --all-lower-patches --runtime
   ```
 
-* Suchy przebieg usuwania wszystkich zestawów .NET Core SDK poniżej wersji `2.2.301`:
+* Suchy przebieg usuwania wszystkich zestawów .NET Core SDK poniżej wersji `2.2.301` :
 
   ```console
   dotnet-core-uninstall whatif --all-below 2.2.301 --sdk
@@ -297,7 +297,7 @@ Uwagi:
 
 `dotnet-core-uninstall remove`Odinstalowuje zestawy SDK platformy .NET Core i środowiska uruchomieniowe, które są określone przez kolekcję opcji. Narzędzia nie można użyć do odinstalowania zestawów SDK i środowiska uruchomieniowego w wersji 5,0 lub nowszej.
 
-Ponieważ to narzędzie ma szkodliwe zachowanie, **zdecydowanie** zaleca się wykonanie suchego uruchomienia przed uruchomieniem polecenia Usuń. W przypadku uruchamiania w trybie suchym zostanie wyświetlone, które zestawy SDK i środowiska uruchomieniowe platformy .NET Core `remove` zostaną usunięte przy użyciu polecenia. Zapoznaj się z tematem [czy należy usunąć wersję?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) , aby dowiedzieć się, które zestawy SDK i środowiska uruchomieniowe są bezpieczne do usunięcia.
+Ponieważ to narzędzie ma szkodliwe zachowanie, **zdecydowanie** zaleca się wykonanie suchego uruchomienia przed uruchomieniem polecenia Usuń. W przypadku uruchamiania w trybie suchym zostanie wyświetlone, które zestawy SDK i środowiska uruchomieniowe platformy .NET Core zostaną usunięte przy użyciu `remove` polecenia. Zapoznaj się z tematem [czy należy usunąć wersję?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) , aby dowiedzieć się, które zestawy SDK i środowiska uruchomieniowe są bezpieczne do usunięcia.
 
 > [!CAUTION]
 > Należy pamiętać o następujących zastrzeżeniach:
@@ -306,9 +306,9 @@ Ponieważ to narzędzie ma szkodliwe zachowanie, **zdecydowanie** zaleca się wy
 >- To narzędzie umożliwia odinstalowanie wersji środowiska uruchomieniowego programu .NET Core, które są wymagane przez aplikacje zależne od platformy. Środowiska uruchomieniowe platformy .NET Core można ponownie zainstalować ze strony [pobierania programu .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
 >- To narzędzie umożliwia odinstalowanie wersji zestaw .NET Core SDK i środowiska uruchomieniowego, na których bazuje program Visual Studio. W przypadku przerwania instalacji programu Visual Studio Uruchom polecenie "Napraw" w Instalatorze programu Visual Studio, aby powrócić do stanu roboczego.
 
-Domyślnie wszystkie polecenia zachowują zestawy .NET Core i środowiska uruchomieniowe, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK. Te zestawy SDK i środowiska uruchomieniowe mogą zostać odinstalowane przez wymienienie ich jawnie jako `--force` argumenty lub przy użyciu opcji.
+Domyślnie wszystkie polecenia zachowują zestawy .NET Core i środowiska uruchomieniowe, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK. Te zestawy SDK i środowiska uruchomieniowe mogą zostać odinstalowane przez wymienienie ich jawnie jako argumenty lub przy użyciu `--force` opcji.
 
-Narzędzie wymaga podniesienia uprawnień, aby odinstalować zestawy SDK i środowiska uruchomieniowe platformy .NET Core. Uruchom narzędzie w wierszu polecenia administratora w systemie Windows i `sudo` w systemie macOS. Polecenia `dry-run` i `whatif` nie wymagają podniesienia uprawnień.
+Narzędzie wymaga podniesienia uprawnień, aby odinstalować zestawy SDK i środowiska uruchomieniowe platformy .NET Core. Uruchom narzędzie w wierszu polecenia administratora w systemie Windows i w systemie `sudo` macOS. `dry-run`Polecenia i `whatif` nie wymagają podniesienia uprawnień.
 
 **dotnet-Core — usuwanie odinstalowania**
 
@@ -326,7 +326,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   > [!TIP]
   > Pliki odpowiedzi są alternatywą do umieszczania wszystkich wersji w wierszu polecenia.
-  > Są one plikami tekstowymi, zazwyczaj z \*rozszerzeniem. rsp, a każda wersja jest wymieniona w osobnym wierszu.
+  > Są one plikami tekstowymi, zazwyczaj z \* rozszerzeniem. rsp, a każda wersja jest wymieniona w osobnym wierszu.
   > Aby określić plik odpowiedzi dla `VERSION` argumentu, użyj \@ znaku bezpośrednio po nazwie pliku odpowiedzi.
 
 #### <a name="options"></a>Opcje
@@ -383,15 +383,15 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
 
 * **`--x64`**
 
-  Musi być używana z `--sdk`, `--runtime`, i `--aspnet-runtime` do usuwania zestawów SDK x64 lub środowisk uruchomieniowych.
+  Musi być używana z `--sdk` , `--runtime` , i `--aspnet-runtime` do usuwania zestawów SDK x64 lub środowisk uruchomieniowych.
 
 * **`--x86`**
 
-  Musi być używana z `--sdk`, `--runtime`, i `--aspnet-runtime` do usuwania zestawów SDK x86 lub środowisk uruchomieniowych.
+  Musi być używana z `--sdk` , `--runtime` , i `--aspnet-runtime` do usuwania zestawów SDK x86 lub środowisk uruchomieniowych.
 
 * **`-y, --yes`** Wykonuje polecenie bez potwierdzenia typu "tak" lub "nie".
 
@@ -399,8 +399,8 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 Uwagi:
 
-1. Dokładnie jeden z `--sdk`, `--runtime`, `--aspnet-runtime`, i `--hosting-bundle` jest wymagany.
-2. `--all`, `--all-below`, `--all-but` `--major-minor` `[<VERSION>...]` ,,,,, i są wyłączne. `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest`
+1. Dokładnie jeden z `--sdk` , `--runtime` , `--aspnet-runtime` , i `--hosting-bundle` jest wymagany.
+2. `--all`,,,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest` `--major-minor` i `[<VERSION>...]` są wyłączne.
 3. Jeśli `--x64` lub `--x86` nie zostanie określony, zostaną usunięte oba wersje x64 i x86.
 
 ## <a name="macos"></a>[macOS](#tab/macos)
@@ -447,7 +447,7 @@ Uwagi:
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `normal`.
+  Ustawia poziom szczegółowości. Dozwolone wartości to `q[uiet]` , `m[inimal]` , `n[ormal]` , `d[etailed]` i `diag[nostic]` . Wartość domyślna to `normal`.
 
 * **`-y, --yes`** Wykonuje polecenie bez potwierdzenia Y/N.
   
@@ -456,16 +456,16 @@ Uwagi:
 Uwagi:
 
 1. Dokładnie jeden z `--sdk` i `--runtime` jest wymagany.
-2. `--all`, `--all-below`, `--all-but` `--major-minor` `[<VERSION>...]` ,,,,, i są wyłączne. `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest`
+2. `--all`,,,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` `--all-previews-but-latest` `--major-minor` i `[<VERSION>...]` są wyłączne.
 
 ---
 
 #### <a name="examples"></a>Przykłady
 
 > [!NOTE]
-> Domyślnie są przechowywane zestawy SDK i środowiska uruchomieniowe platformy .NET Core, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK. W poniższych przykładach niektóre z określonych zestawów SDK i środowiska uruchomieniowe mogą pozostać w zależności od stanu komputera. Aby usunąć wszystkie zestawy SDK i środowiska uruchomieniowe, należy je jawnie wystawić `--force` jako argumenty lub użyć opcji.
+> Domyślnie są przechowywane zestawy SDK i środowiska uruchomieniowe platformy .NET Core, które mogą być wymagane przez program Visual Studio lub inne zestawy SDK. W poniższych przykładach niektóre z określonych zestawów SDK i środowiska uruchomieniowe mogą pozostać w zależności od stanu komputera. Aby usunąć wszystkie zestawy SDK i środowiska uruchomieniowe, należy je jawnie wystawić jako argumenty lub użyć `--force` opcji.
 
-* Usuń wszystkie środowiska uruchomieniowe platformy .NET Core z `3.0.0-preview6-27804-01` wyjątkiem wersji, która nie wymaga potwierdzenia Y/N:
+* Usuń wszystkie środowiska uruchomieniowe platformy .NET Core z wyjątkiem wersji, która `3.0.0-preview6-27804-01` nie wymaga potwierdzenia Y/N:
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
@@ -517,7 +517,7 @@ W niektórych przypadkach nie jest już potrzebna `NuGetFallbackFolder` i może 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
 1. Otwórz aplet **Dodaj lub usuń programy**.
-2. Wyszukaj `Microsoft .NET Core SDK Uninstall Tool`.
+2. Wyszukaj ciąg `Microsoft .NET Core SDK Uninstall Tool`.
 3. Wybierz pozycję **Odinstaluj**.
 
 ## <a name="macos"></a>[macOS](#tab/macos)

@@ -3,12 +3,12 @@ title: Rozproszone dane
 description: Magazyn danych kontrastowych w aplikacjach monolitycznych i natywnych w chmurze.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614139"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144399"
 ---
 # <a name="distributed-data"></a>Rozproszone dane
 
@@ -120,7 +120,7 @@ Na rysunku 5-7 przedstawiono implementację wzorca CQRS.
 
 **Rysunek 5-7**. Implementacja CQRS
 
-Na poprzednim rysunku zaimplementowane są osobne modele poleceń i zapytań. Każda operacja zapisu danych jest zapisywana w magazynie zapisu, a następnie propagowana do magazynu odczytu. Zwróć szczególną uwagę na to, jak proces propagacji danych działa na zasadzie [spójności ostatecznej](http://www.cloudcomputingpatterns.org/eventual_consistency/). Model odczytu ostatecznie synchronizuje się z modelem zapisu, ale może wystąpić pewne opóźnienie w procesie. Omawiana jest spójność ostateczna w następnej sekcji.
+Na poprzednim rysunku zaimplementowane są osobne modele poleceń i zapytań. Każda operacja zapisu danych jest zapisywana w magazynie zapisu, a następnie propagowana do magazynu odczytu. Zwróć szczególną uwagę na to, jak proces propagacji danych działa na zasadzie [spójności ostatecznej](https://www.cloudcomputingpatterns.org/eventual_consistency/). Model odczytu ostatecznie synchronizuje się z modelem zapisu, ale może wystąpić pewne opóźnienie w procesie. Omawiana jest spójność ostateczna w następnej sekcji.
 
 To Separacja umożliwia niezależne skalowanie odczytów i zapisów. Operacje odczytu używają schematu zoptymalizowanego pod kątem zapytań, podczas gdy zapisy używają schematu zoptymalizowanego pod kątem aktualizacji. Zapytania odczytu przechodzą na nieznormalizowane dane, podczas gdy złożona logika biznesowa może być stosowana do modelu zapisu. Ponadto można nałożyć ściślejsze zabezpieczenia na operacje zapisu niż te, które uwidaczniają odczyty.
 

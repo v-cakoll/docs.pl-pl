@@ -10,31 +10,31 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 06ed304e566bb437a2353dd330d7de5328f2a729
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745530"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144828"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Porady: wyświetlanie łączy stylu sieci Web za pomocą formantu RichTextBox formularzy systemu Windows
 
-Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetlać linki sieci Web jako kolorowe i podkreślone. Można napisać kod, który otwiera okno przeglądarki pokazujące witrynę sieci Web określoną w polu tekst linku po kliknięciu linku.
+<xref:System.Windows.Forms.RichTextBox>Kontrolka Windows Forms może wyświetlać linki sieci Web jako kolorowe i podkreślane. Można napisać kod, który otwiera okno przeglądarki pokazujące witrynę sieci Web określoną w polu tekst linku po kliknięciu linku.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Aby utworzyć link do strony sieci Web z kontrolką RichTextBox
 
-1. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.Text%2A> na ciąg zawierający prawidłowy adres URL (na przykład "http://www.microsoft.com/").
+1. Ustaw <xref:System.Windows.Forms.RichTextBox.Text%2A> Właściwość na ciąg, który zawiera prawidłowy adres URL (na przykład " https://www.microsoft.com/ ").
 
-2. Upewnij się, że właściwość <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> jest ustawiona na `true` (wartość domyślna).
+2. Upewnij się, że <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> Właściwość jest ustawiona na `true` (wartość domyślna).
 
-3. Utwórz nowe wystąpienie globalne obiektu <xref:System.Diagnostics.Process>.
+3. Utwórz nowe wystąpienie globalne <xref:System.Diagnostics.Process> obiektu.
 
-4. Napisz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.RichTextBox.LinkClicked>, które wysyła przeglądarkę do żądanego tekstu.
+4. Napisz procedurę obsługi zdarzeń <xref:System.Windows.Forms.RichTextBox.LinkClicked> , która wysyła do przeglądarki żądany tekst.
 
-    W poniższym przykładzie zdarzenie <xref:System.Windows.Forms.RichTextBox.LinkClicked> otwiera wystąpienie programu Internet Explorer na adres URL określony we właściwości <xref:System.Windows.Forms.RichTextBox.Text%2A> kontrolki <xref:System.Windows.Forms.RichTextBox>. W tym przykładzie przyjęto, że formularz z kontrolką <xref:System.Windows.Forms.RichTextBox>.
+    W poniższym przykładzie <xref:System.Windows.Forms.RichTextBox.LinkClicked> zdarzenie otwiera wystąpienie programu Internet Explorer na adres URL określony we <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwości <xref:System.Windows.Forms.RichTextBox> formantu. W tym przykładzie założono formularz z <xref:System.Windows.Forms.RichTextBox> kontrolką.
 
     > [!IMPORTANT]
-    > W wywołaniu metody <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> wystąpi wyjątek <xref:System.Security.SecurityException>, jeśli używasz kodu w kontekście częściowego zaufania z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
+    > W wywołaniu <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> metody, wystąpi wyjątek, jeśli używasz <xref:System.Security.SecurityException> kodu w kontekście częściowego zaufania z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,13 +75,13 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetla
        }
     ```
 
-    (Wizualizacja C++) Należy zainicjować `p`procesu, który można wykonać, dołączając następujące instrukcje w Konstruktorze formularza:
+    (Visual C++) Należy zainicjować proces `p` , który można wykonać, dołączając następujące instrukcje w Konstruktorze formularza:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();
     ```
 
-    (Wizualizacja C#, C++wizualizacja) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.
+    (Visual C#, Visual C++) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.
 
     ```csharp
     this.richTextBox1.LinkClicked += new
@@ -123,4 +123,4 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetla
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

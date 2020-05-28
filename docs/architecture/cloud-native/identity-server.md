@@ -2,12 +2,12 @@
 title: IdentityServer dla natywnych aplikacji w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614035"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144373"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer dla aplikacji natywnych w chmurze
 
@@ -29,7 +29,7 @@ Zazwyczaj aplikacje muszą obsługiwać niektóre lub wszystkie z następującyc
 
 W każdym z tych scenariuszy uwidocznione funkcje muszą być zabezpieczone przed nieautoryzowanym użyciem. Minimalnym wymaganiem jest zazwyczaj uwierzytelnianie użytkownika lub podmiotu zabezpieczeń wysyłającego żądanie dotyczące zasobu. Uwierzytelnianie może korzystać z jednego z kilku popularnych protokołów, takich jak SAML2p, WS-karmione lub OpenID Connect Connect. Komunikowanie się z interfejsami API zwykle używa protokołu OAuth2 oraz obsługi tokenów zabezpieczających. Oddzielenie tych krytycznych zagadnień związanych z bezpieczeństwem i ich implementacji z aplikacji zapewnia spójność i zwiększa bezpieczeństwo i łatwość utrzymania. Podniesieniu tych problemów do dedykowanego produktu, takiego jak IdentityServer, ułatwia wymagania dla każdej aplikacji, aby rozwiązać te problemy.
 
-IdentityServer zapewnia oprogramowanie pośredniczące działające w ramach aplikacji ASP.NET Core i dodaje obsługę OpenID Connect Connect i OAuth2 (patrz [obsługiwane specyfikacje](http://docs.identityserver.io/en/latest/intro/specs.html)). Organizacje tworzą własne aplikacje ASP.NET Core przy użyciu oprogramowania pośredniczącego IdentityServer, aby działały jako usługa STS dla wszystkich protokołów zabezpieczeń opartych na tokenach. Oprogramowanie pośredniczące IdentityServer uwidacznia punkty końcowe do obsługi standardowych funkcji, w tym:
+IdentityServer zapewnia oprogramowanie pośredniczące działające w ramach aplikacji ASP.NET Core i dodaje obsługę OpenID Connect Connect i OAuth2 (patrz [obsługiwane specyfikacje](https://docs.identityserver.io/en/latest/intro/specs.html)). Organizacje tworzą własne aplikacje ASP.NET Core przy użyciu oprogramowania pośredniczącego IdentityServer, aby działały jako usługa STS dla wszystkich protokołów zabezpieczeń opartych na tokenach. Oprogramowanie pośredniczące IdentityServer uwidacznia punkty końcowe do obsługi standardowych funkcji, w tym:
 
 - Autoryzuj (uwierzytelniaj użytkownika końcowego)
 - Token (żądanie tokenu programowo)
@@ -44,7 +44,7 @@ IdentityServer zapewnia oprogramowanie pośredniczące działające w ramach apl
 
 Usługi identityserver4 to "open source" i bezpłatna do użycia. Możesz dodać go do aplikacji przy użyciu swoich pakietów NuGet. Pakiet główny to [usługi identityserver4](https://www.nuget.org/packages/IdentityServer4/) , który został pobrany ponad 4 000 000 razy. Pakiet podstawowy nie zawiera żadnego kodu interfejsu użytkownika i obsługuje tylko w konfiguracji pamięci. Aby używać jej z bazą danych, należy również użyć dostawcy danych, takiego jak [usługi identityserver4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) , który używa Entity Framework Core do przechowywania danych konfiguracyjnych i operacyjnych dla IdentityServer. W przypadku interfejsu użytkownika można skopiować pliki z [repozytorium szybkiego interfejsu użytkownika](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) do aplikacji ASP.NET Core MVC, aby dodać obsługę logowania i wylogować się przy użyciu oprogramowania pośredniczącego IdentityServer.
 
-## <a name="configuration"></a>Konfiguracja
+## <a name="configuration"></a>Konfigurowanie
 
 Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w klasie aplikacji ASP.NET Core `Startup` w `ConfigureServices` metodzie. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Na rysunku 8-2 przedstawiono przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika szybkiego startu usługi identityserver4:
 
@@ -95,13 +95,13 @@ IdentityServer również udostępnia publiczną witrynę demonstracyjną, która
 
 ## <a name="javascript-clients"></a>Klienci języka JavaScript
 
-Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwera i rozbudowanych aplikacji jednostronicowych klienta (aplikacji jednostronicowych) na frontonie. IdentityServer dostarcza [klient JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) za pośrednictwem npm, który można dodać do aplikacji jednostronicowych, aby umożliwić im używanie IdentityServer do logowania, wylogowywania i uwierzytelniania opartych na tokenach interfejsów API sieci Web.
+Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwera i rozbudowanych aplikacji jednostronicowych klienta (aplikacji jednostronicowych) na frontonie. IdentityServer dostarcza [klient JavaScript](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) za pośrednictwem npm, który można dodać do aplikacji jednostronicowych, aby umożliwić im używanie IdentityServer do logowania, wylogowywania i uwierzytelniania opartych na tokenach interfejsów API sieci Web.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
-- [Dokumentacja IdentityServer](http://docs.identityserver.io/en/latest/)
+- [Dokumentacja IdentityServer](https://docs.identityserver.io/en/latest/)
 - [Typy aplikacji](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [Klient JavaScript OIDC](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [Klient JavaScript OIDC](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Poprzedni](azure-active-directory.md) 

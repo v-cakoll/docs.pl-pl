@@ -2,12 +2,12 @@
 title: Co nowego w programie .NET Core for Desktop?
 description: Dowiedz się więcej na temat platformy .NET Core, różnic między platformą .NET Core i .NET Framework oraz nowych funkcji, które zostały dodane.
 ms.date: 05/12/2020
-ms.openlocfilehash: 9ec4f3002dc9d9ea80fd2b6db8095930867a5c65
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423265"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144264"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Co nowego w programie .NET Core for Desktop?
 
@@ -19,7 +19,7 @@ Od momentu jego uruchomienia w 2002, .NET Framework został rozwijający przez l
 
 Jeśli masz tylko jedną z tych platform, możesz użyć tego modelu. Jednak w wielu przypadkach może być potrzebna więcej niż jedna platforma docelowa w tym samym rozwiązaniu. Na przykład aplikacja może mieć część administratora pulpitu, czyli witrynę sieci Web, która udostępnia logikę zaplecza działającą na serwerze, a nawet klienta mobilnego. W takim przypadku konieczne jest ujednolicone środowisko kodowania, które może obejmować wszystkie te pionowe środowiska .NET.
 
-Po wydaniu systemu Windows 8 podaliśmy koncepcję bibliotek klas przenośnych (PCLs). Początkowo .NET Framework został zaprojektowany wokół założeń, że zawsze będzie ona wdrażana jako jedna jednostka [, więc nie](http://en.wikipedia.org/wiki/Decomposition_(computer_science)) ma obaw. Aby sprostać problemom z współdzieleniem kodu między pionowymi, siła jazdy polega na sposobie refaktoryzacji struktury. Pomysłem jest zapewnienie dobrze przeczynnika powierzchni interfejsu API. Kontrakty są po prostu zestawami, które są kompilowane i są zaprojektowane z odpowiednim czynnikiem do wzięcia pod uwagę zależności między nimi.
+Po wydaniu systemu Windows 8 podaliśmy koncepcję bibliotek klas przenośnych (PCLs). Początkowo .NET Framework został zaprojektowany wokół założeń, że zawsze będzie ona wdrażana jako jedna jednostka [, więc nie](https://wikipedia.org/wiki/Decomposition_(computer_science)) ma obaw. Aby sprostać problemom z współdzieleniem kodu między pionowymi, siła jazdy polega na sposobie refaktoryzacji struktury. Pomysłem jest zapewnienie dobrze przeczynnika powierzchni interfejsu API. Kontrakty są po prostu zestawami, które są kompilowane i są zaprojektowane z odpowiednim czynnikiem do wzięcia pod uwagę zależności między nimi.
 
 Prowadzi to do uzyskania informacji o różnicach interfejsu API między pionowymi na poziomie zestawu, a nie na poziomie poszczególnych interfejsów API. Ten aspekt włącza środowisko biblioteki klas, które może być ukierunkowane na wiele pionowych, znanych również jako przenośne biblioteki klas.
 

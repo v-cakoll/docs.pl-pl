@@ -1,13 +1,13 @@
 ---
-title: ASP.NET Core gRPC dla programistów WCF - gRPC dla programistów WCF
-description: Wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3.0 dla programistów WCF
+title: ASP.NET Core gRPC for WCF Developers — gRPC dla deweloperów WCF
+description: Wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 dla deweloperów WCF
 ms.date: 09/02/2019
-ms.openlocfilehash: 175dfbf1880a0937615543c248fba3bed0e25c23
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988963"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144360"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
 
@@ -15,57 +15,57 @@ ms.locfileid: "80988963"
 
 OPUBLIKOWANA PRZEZ
 
-Zespoły produktów Microsoft Developer Division, .NET i Visual Studio
+Zespoły deweloperów firmy Microsoft, .NET i Visual Studio
 
-Oddział firmy Microsoft Corporation
+Dział firmy Microsoft Corporation
 
 One Microsoft Way
 
 Redmond, Waszyngton 98052-6399
 
-Prawa autorskie © 2019 przez Microsoft Corporation
+Prawa autorskie © 2019 przez firmę Microsoft Corporation
 
-Wszelkie prawa zastrzeżone. Żadna część zawartości tej książki nie może być powielana ani przekazywana w jakiejkolwiek formie lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
+Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
-Książka ta jest dostarczana "tak jak jest" i wyraża poglądy i opinie autora. Poglądy, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odniesienia do stron internetowych, mogą ulec zmianie bez powiadomienia.
+Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
 
 Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki https://www.microsoft.com towarowe wymienione na stronie internetowej "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione na <https://www.microsoft.com> stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Logo docker wielorybów jest zastrzeżonym znakiem towarowym firmy Docker, Inc. Używany za zgodą.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
-Wszystkie inne znaki i logo są własnością ich odpowiednich właścicieli.
+Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
-Autorów:
+Autorów
 
-> **Mark Rendle** - Dyrektor Techniczny - [Visual Recode](https://visualrecode.com)
+> **Mark The Rendle** -dyrektor ds. technicznych — [Visual firmy Recode](https://visualrecode.com)
 >
-> **Miranda Steiner** - autor techniczny
+> **Miranda Steiner** — autor techniczny
 
-Edytor:
+Edytora
 
-> **Maira Wenzel** - Sr. Content Developer - Microsoft
+> **Maira Wenzel** — SR. Content Developer — Microsoft
 
 ## <a name="introduction"></a>Wprowadzenie
 
-gRPC to nowoczesne ramy dla tworzenia usług sieciowych i aplikacji rozproszonych. Wyobraź sobie wydajność powiązań NetTCP programu Windows Communication Foundation (WCF) w połączeniu z interoperacyjnością protokołu SOAP na wielu platformach. GRPC opiera się na HTTP/2 i protobuf message-encoding protocol, aby zapewnić wysoką wydajność, niską przepustowość komunikacji między aplikacjami i usługami. Obsługuje generowanie kodu serwera i klienta w najpopularniejszych językach programowania i platformach, w tym .NET, Java, Python, Node.js, Go i C++. Dzięki najwyższej klasy obsłudze gRPC w ASP.NET Core 3.0, obok istniejących narzędzi i bibliotek gRPC dla platformy .NET 4.x, jest to doskonała alternatywa dla WCF dla zespołów programistycznych, które chcą przyjąć .NET Core w swoich organizacjach.
+gRPC to nowoczesne środowisko do tworzenia usług sieciowych i aplikacji rozproszonych. Wyobraź sobie Windows Communication Foundation wydajność powiązań NetTCP (WCF) w połączeniu z międzyplatformowym współdziałaniem protokołu SOAP. gRPC kompiluje na HTTP/2 i protokół kodowania komunikatów protobuf, aby zapewnić wysoką wydajność, komunikację o niskiej przepustowości między aplikacjami i usługami. Obsługuje ona generowanie kodu serwera i klienta w większości popularnych języków programowania i platform, w tym .NET, Java, Python, Node. js, go i C++. Dzięki pierwszej klasie wsparcia dla gRPC w ASP.NET Core 3,0 wraz z istniejącymi narzędziami i bibliotekami gRPC dla platformy .NET 4. x jest to świetna alternatywa dla usług WCF dla zespołów programistycznych, które chcą przyjąć platformę .NET Core w swoich organizacjach.
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
 
-Ten przewodnik został napisany dla deweloperów pracujących w programie .NET Framework lub .NET Core, którzy wcześniej używali WCF i którzy chcą przeprowadzić migrację swoich aplikacji do nowoczesnego środowiska RPC dla platformy .NET Core 3.0 i nowszych wersji. Ogólniej rzecz biorąc, jeśli uaktualniasz lub rozważasz uaktualnienie do platformy .NET Core 3.0 i chcesz użyć wbudowanych narzędzi gRPC, ten przewodnik jest również przydatny.
+Ten przewodnik został utworzony dla deweloperów pracujących w .NET Framework lub .NET Core, którzy wcześniej korzystali z usług WCF, i którzy chcą migrować swoje aplikacje do nowoczesnego środowiska RPC dla programu .NET Core 3,0 i jego nowszych wersji. Ogólnie rzecz biorąc, Jeśli uaktualniasz lub rozważasz uaktualnienie do programu .NET Core 3,0 i chcesz korzystać z wbudowanych narzędzi gRPC, ten przewodnik jest również przydatny.
 
-## <a name="how-you-can-use-this-guide"></a>Jak można korzystać z tego przewodnika
+## <a name="how-you-can-use-this-guide"></a>Jak można użyć tego przewodnika
 
-Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3.0, ze szczególnym uwzględnieniem WCF jako analogicznej platformy. Wyjaśniono w nim zasady gRPC, odnoszące się do każdej koncepcji z równoważnymi cechami WCF, i oferuje wskazówki dotyczące migracji istniejącej aplikacji WCF do gRPC. Jest to również przydatne dla programistów, którzy mają doświadczenie z WCF i chcą nauczyć się gRPC do tworzenia nowych usług. Przykładowe aplikacje można używać jako szablonu lub odwołania dla własnych projektów i można kopiować i ponownie używać kodu z książki lub jej przykładów.
+Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0, z uwzględnieniem programu WCF jako analogicznej platformy. Wyjaśniono zasady gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF i oferuje wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC. Jest on również przydatny dla deweloperów, którzy korzystają z WCF i chcą uczyć się gRPC w tworzeniu nowych usług. Przykładowymi aplikacjami można używać jako szablonu lub odwołania do własnych projektów i możesz kopiować i ponownie używać kodu z książki lub jej przykładów.
 
-Możesz przesłać ten przewodnik do swojego zespołu, aby zapewnić wspólne zrozumienie tych zagadnień i możliwości. Posiadanie wszystkich pracujących ze wspólnego zestawu terminów i podstawowych zasad pomaga zapewnić spójne stosowanie wzorców i praktyk architektonicznych.
+Możesz przesłać dalej ten przewodnik do zespołu, aby pomóc w zapewnieniu powszechnej wiedzy na temat tych zagadnień i możliwości. Korzystanie ze wspólnego zestawu warunków i podstawowych zasad ułatwia zapewnienie spójnego stosowania wzorców i praktyk architektury.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
-- **Witryna internetowa firmy gRPC**
+- **Witryna sieci Web gRPC**
   <https://grpc.io>
-- **Wybór między programem .NET Core a platformą .NET Framework dla aplikacji serwerowych**
+- **Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych**
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]

@@ -1,34 +1,34 @@
 ---
 title: Instalowanie dodatkowych zależności ML.NET
-description: Dowiedz się, jak zainstalować wszystkie biblioteki macierzyste, od których ML.NET pakiety są zależne, ale nie są instalowane z pakietami NuGet
+description: Dowiedz się, jak zainstalować wszystkie biblioteki natywne, od których są zależne pakiety ML.NET, ale nie są instalowane z pakietami NuGet
 ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021846"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008433"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>Instalowanie dodatkowych zależności ML.NET
 
-W większości przypadków we wszystkich systemach operacyjnych instalowanie ML.NET jest tak proste, jak odwoływanie się do odpowiedniego pakietu NuGet.
+W większości przypadków w przypadku wszystkich systemów operacyjnych Instalowanie ML.NET jest proste, ponieważ odwołuje się do odpowiedniego pakietu NuGet.
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.ML
 ```
 
-W niektórych przypadkach istnieją jednak dodatkowe wymagania dotyczące instalacji, szczególnie gdy wymagane są składniki macierzyste. W tym dokumencie opisano wymagania dotyczące instalacji w tych przypadkach. Sekcje są podzielone według `Microsoft.ML.*` określonego pakietu NuGet, który ma dodatkową zależność.
+W niektórych przypadkach istnieją dodatkowe wymagania dotyczące instalacji, zwłaszcza w przypadku, gdy wymagane są składniki natywne. W tym dokumencie opisano wymagania dotyczące instalacji tych przypadków. Sekcje są podzielone według określonego `Microsoft.ML.*` pakietu NuGet, który ma dodatkową zależność.
 
-## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft.ML.TimeSeries, Microsoft.ML.AutoML
+## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft. ML. szeregów czasowych, Microsoft. ML. AutoML
 
-Oba te pakiety mają `Microsoft.ML.MKL.Redist`zależność od , `libiomp`który ma zależność od .
+Oba te pakiety mają zależność od `Microsoft.ML.MKL.Redist` , która ma zależność od `libiomp` .
 
 ### <a name="windows"></a>Windows
 
-Nie są wymagane żadne dodatkowe czynności instalacyjne. Biblioteka jest instalowana po dodaniu pakietu NuGet do projektu.
+Nie są wymagane żadne dodatkowe kroki instalacji. Biblioteka jest instalowana, gdy pakiet NuGet zostanie dodany do projektu.
 
 ### <a name="linux"></a>Linux
 
@@ -48,19 +48,19 @@ Nie są wymagane żadne dodatkowe czynności instalacyjne. Biblioteka jest insta
     exit
     ```
 
-2. Dodaj repozytorium APT dla MKL
+2. Dodawanie repozytorium APT dla MKL
 
     ```bash
     sudo sh -c 'echo deb https://apt.repos.intel.com/mkl all main > /etc/apt/sources.list.d/intel-mkl.list'
     ```
 
-3. Aktualizuj pakiety
+3. Pakiety aktualizacji
 
     ```bash
     sudo apt-get update
     ```
 
-4. Instalowanie programu MKL
+4. Zainstaluj MKL
 
     ```bash
     sudo apt-get install <COMPONENT>-<VERSION>.<UPDATE>-<BUILD_NUMBER>
@@ -72,7 +72,7 @@ Nie są wymagane żadne dodatkowe czynności instalacyjne. Biblioteka jest insta
     sudo apt-get install intel-mkl-64bit-2020.0-088
     ```
 
-    Określić lokalizację`libiomp.so`
+    Określ lokalizację`libiomp.so`
 
     ```bash
     find /opt -name "libiomp5.so"
@@ -84,7 +84,7 @@ Nie są wymagane żadne dodatkowe czynności instalacyjne. Biblioteka jest insta
     /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin/libiomp5.so
     ```
 
-5. Dodaj tę lokalizację do ścieżki biblioteki obciążenia:
+5. Dodaj tę lokalizację do ścieżki biblioteki ładowania:
 
     ```bash
     sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin
@@ -92,7 +92,7 @@ Nie są wymagane żadne dodatkowe czynności instalacyjne. Biblioteka jest insta
 
 ### <a name="mac"></a>Mac
 
-1. Zainstaluj bibliotekę za pomocą`Homebrew`
+1. Zainstaluj bibliotekę z`Homebrew`
 
     ```bash
     brew update && brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f5b1ac99a7fba27c19cee0bc4f036775c889b359/Formula/libomp.rb && brew link libomp --force

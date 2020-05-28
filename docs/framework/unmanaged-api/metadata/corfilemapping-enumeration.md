@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ca41592-b8da-475a-8032-a15627730003
 topic_type:
 - apiref
-ms.openlocfilehash: f85a36c810df52f871ecc75b92a3b4440455c66b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ed1579886f1682348a136be3391f6bdc2543d26
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450296"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007393"
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping — Wyliczenie
-Zawiera wartości opisujące typ mapowania plików zwracanego z wywołania metody [IMetaDataInfo:: GetFileMapping —](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) .  
+Zawiera wartości opisujące typ mapowania plików zwracanego z wywołania metody [IMetaDataInfo:: GetFileMapping —](imetadatainfo-getfilemapping-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,21 +35,21 @@ typedef enum CorFileMapping {
 } CorFileMapping;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`fmFlat`|Plik jest mapowany jako plik danych. Oznacza to, że flaga `SEC_IMAGE` nie została przeniesiona do funkcji `CreateFileMapping` Microsoft Win32.|  
-|`fmExecutableImage`|Plik jest mapowany do wykonania przy użyciu funkcji `LoadLibrary` lub funkcji `CreateFileMapping` z flagą `SEC_IMAGE`.|  
+|`fmFlat`|Plik jest mapowany jako plik danych. Oznacza to, że `SEC_IMAGE` flaga nie została przeniesiona do funkcji Microsoft Win32 `CreateFileMapping` .|  
+|`fmExecutableImage`|Plik jest mapowany do wykonania przy użyciu `LoadLibrary` funkcji lub `CreateFileMapping` funkcji z `SEC_IMAGE` flagą.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [GetFileMapping, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)
+- [GetFileMapping — Metoda](imetadatainfo-getfilemapping-method.md)

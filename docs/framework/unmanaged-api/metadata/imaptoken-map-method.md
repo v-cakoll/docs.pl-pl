@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176074"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008199"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map — Metoda
-Mapuje relację między zestawami przy użyciu podpisów metadanych.  
+Mapuje relacje między zestawami przy użyciu podpisów metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parametry  
  `tkImp`  
- [w] Token metadanych reprezentujący importowany obiekt kodu.  
+ podczas Token metadanych reprezentujący zaimportowany obiekt kodu.  
   
  `tkEmit`  
- [w] Token metadanych, który reprezentuje obiekt emitowanego kodu.  
+ podczas Token metadanych reprezentujący emitowany obiekt kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy ponowna mapa tokenu występuje podczas scalania, oryginalny token jest objęty zakresem w zakresie metadanych importowanych (źródłowych), a nowy token jest objęty zakresem w zakresie metadanych emitowanych (docelowych).  
+ Gdy ponowne mapowanie tokenu odbywa się podczas scalania, oryginalny token jest objęty zakresem zaimportowanego (źródłowego) zakresu metadanych, a nowy token jest objęty zakresem metadanych emitowanych (docelowych).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [IMapToken, interfejs](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken, interfejs](imaptoken-interface.md)

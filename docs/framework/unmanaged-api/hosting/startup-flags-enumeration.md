@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141458"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006418"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS — Wyliczenie
 Zawiera wartości, które wskazują zachowanie uruchamiania środowiska uruchomieniowego języka wspólnego (CLR). Domyślnie zbieranie elementów bezużytecznych nie jest współbieżne i tylko podstawowa Biblioteka klas jest ładowana do obszaru neutralnego dla domeny.  
@@ -53,7 +53,7 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Określa, że należy użyć współbieżnego wyrzucania elementów bezużytecznych. Jeśli obiekt wywołujący prosi o kompilację serwera i współbieżne wyrzucanie elementów bezużytecznych na komputerze z jednym procesorem, zamiast tego uruchamiane są kompilacje stacji roboczej i niewspółbieżne odzyskiwanie pamięci. **Uwaga:**  Współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwane w aplikacjach korzystających z emulatora WOW64 x86 w systemach 64-bitowych, które implementują architekturę Intel Itanium (dawniej zwane IA-64). Aby uzyskać więcej informacji na temat korzystania z emulatora WOW64 w systemach 64-bitowych systemu Windows, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Określa, że optymalizacja modułu ładującego jest wykonywana.|  
@@ -68,19 +68,19 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|Określa, że personifikacja nie powinna domyślnie przepływać się w punktach asynchronicznych.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Określa, że cały stos wątku nie powinien być zatwierdzany podczas uruchamiania wątku.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Określa, że zarządzane osoby odwołujące się i osoby niedochodzące za pośrednictwem wywołania platformy będą przepływać przez punkty asynchroniczne. Domyślnie tylko zarządzane osoby będą przepływać między punktami asynchronicznymi.|  
-|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej zajmowanego miejsca, gdy ilość pamięci jest niska. Zobacz `gcTrimCommitOnLowMemory` w obszarze [Optymalizacja dla udostępnionego hostingu w sieci Web](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Określa, że śledzenie zdarzeń systemu Windows (ETW) jest włączone dla zdarzeń środowiska uruchomieniowego języka wspólnego. Począwszy od systemu Windows Vista, śledzenie zdarzeń jest zawsze włączone, więc ta flaga nie ma żadnego wpływu. Zobacz [kontrolowanie rejestrowania .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Określa, że jest włączone monitorowanie zasobów domeny aplikacji. Zobacz Właściwość <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> i [\<appDomainResourceMonitoring > elementu](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej zajmowanego miejsca, gdy ilość pamięci jest niska. Zapoznaj `gcTrimCommitOnLowMemory` się z tematem [Optymalizacja dla udostępnionego hostingu w sieci Web](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Określa, że śledzenie zdarzeń systemu Windows (ETW) jest włączone dla zdarzeń środowiska uruchomieniowego języka wspólnego. Począwszy od systemu Windows Vista, śledzenie zdarzeń jest zawsze włączone, więc ta flaga nie ma żadnego wpływu. Zobacz [kontrolowanie rejestrowania .NET Framework](../../performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Określa, że jest włączone monitorowanie zasobów domeny aplikacji. Zobacz <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> Właściwość i [ \<appDomainResourceMonitoring> element](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE. h  
   
  **Biblioteka:** MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosting — Wyliczenia](hosting-enumerations.md)

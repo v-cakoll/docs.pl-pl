@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku przedstawiono szereg funkcji platformy .NET Core i języka C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420386"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004858"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -37,10 +37,10 @@ Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [
 Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog dla aplikacji. Upewnij się, że bieżący katalog. W oknie konsoli wprowadź następujące polecenie:
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world". Nazwa projektu to "WebApiClient". Ponieważ jest to nowy projekt, żadne zależności nie są stosowane. Pierwsze uruchomienie spowoduje pobranie platformy .NET Core, zainstalowanie certyfikatu deweloperskiego i uruchomienie Menedżera pakietów NuGet w celu przywrócenia brakujących zależności.
+Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world". Nazwa projektu to "WebAPIClient". Ponieważ jest to nowy projekt, żadne zależności nie są stosowane. Pierwsze uruchomienie spowoduje pobranie platformy .NET Core, zainstalowanie certyfikatu deweloperskiego i uruchomienie Menedżera pakietów NuGet w celu przywrócenia brakujących zależności.
 
 Przed rozpoczęciem wprowadzania modyfikacji wpisz `dotnet run` ([Zobacz Uwaga](#dotnet-restore-note)) w wierszu polecenia, aby uruchomić aplikację. `dotnet run`wykonuje automatycznie, `dotnet restore` Jeśli w środowisku nie ma zależności. Wykonuje również, `dotnet build` Jeśli aplikacja musi zostać odbudowana.
 Po wstępnej konfiguracji wystarczy uruchomić program `dotnet restore` lub tylko `dotnet build` wtedy, gdy jest to zrozumiałe dla projektu.

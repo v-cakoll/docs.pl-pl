@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d8e5ab607f9310341ded482b35f02f3845926328
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123283"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008563"
 ---
 # <a name="ivalidator-interface"></a>IValidator — Interfejs
 Zapewnia metody sprawdzania poprawności przenośnych obrazów wykonywalnych (PE) i raportowania błędów walidacji.  
@@ -28,19 +28,19 @@ Zapewnia metody sprawdzania poprawności przenośnych obrazów wykonywalnych (PE
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|legalizacj|Sprawdza poprawność określonego pliku PE lub języka pośredniego firmy Microsoft (MSIL).|  
+|Walidacja|Sprawdza poprawność określonego pliku PE lub języka pośredniego firmy Microsoft (MSIL).|  
 |FormatEventInfo —|Pobiera komunikat o błędzie odpowiadający określonemu błędowi walidacji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator. idl, IValidator. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost, klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Hosting, interfejsy](hosting-interfaces.md)
+- [CorRuntimeHost, klasa coclass](corruntimehost-coclass.md)

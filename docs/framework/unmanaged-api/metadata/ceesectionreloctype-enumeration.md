@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176217"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006038"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType — Wyliczenie
-Zawiera wartości wpływające `reloc` na typ instrukcji emitowanych w wywołaniu [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Dostarcza wartości mające wpływ na typ `reloc` instrukcji emitowanej w wywołaniu [ICeeGen:: AddSectionReloc —](iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,33 +52,33 @@ typedef enum  {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generuje tylko względny `reloc`przekroju, nie przesyła niczego do sekcji .reloc.|  
-|`srRelocHighLow`|Generuje `reloc` dla lokalizacji o rozmiarze wskaźnika. Jest to przekształcane w BASED_HIGHLOW lub BASED_DIR64 w zależności od platformy.|  
-|`srRelocHighAdj`|Generuje `reloc` dla góry 16 bitów liczby 32-bitowej, gdzie dolne 16 bitów są zawarte w następnym słowie w tabeli .reloc.|  
-|`srRelocMapToken`|Generuje przeniesienie mapy tokenu, nie wysyłając nic do sekcji .reloc.|  
+|`srRelocAbsolute`|Generuje tylko odwołanie względne `reloc` do sekcji, wysyłając Nothing do sekcji. reloc.|  
+|`srRelocHighLow`|Generuje `reloc` dla lokalizacji wskaźnika. Jest on przekształcany w BASED_HIGHLOW lub BASED_DIR64 w zależności od platformy.|  
+|`srRelocHighAdj`|Generuje `reloc` dla pierwszych 16 bitów o 32-bitowej liczbie, gdzie ostatnie 16 bitów jest uwzględnionych w następnym wyrazie w tabeli. reloc.|  
+|`srRelocMapToken`|Generuje relokację mapy tokenów, wysyłając nic do sekcji. reloc.|  
 |`srRelocRelative`|Wskazuje, że wartość jest korektą adresu względnego.|  
-|`srRelocFilePos`|Generuje tylko względny `reloc`przekroju, nie przesyła niczego do sekcji .reloc. Jest `reloc` to związane z położeniem pliku sekcji, a nie adresem wirtualnym sekcji.|  
-|`srRelocCodeRelative`|Określa korektę adresu względnego kodu.|  
-|`srRelocIA64Imm64`|Generuje `reloc` dla adresu 64-bitowego w instrukcji `movl` ia64.|  
+|`srRelocFilePos`|Generuje tylko odwołanie względne `reloc` do sekcji, wysyłając Nothing do sekcji. reloc. `reloc`Jest to względne względem położenia pliku sekcji, a nie adresu wirtualnego sekcji.|  
+|`srRelocCodeRelative`|Określa naprawianie adresów względnych w kodzie.|  
+|`srRelocIA64Imm64`|Generuje `reloc` dla adresu 64 bitowego w `movl` instrukcji ia64.|  
 |`srRelocDir64`|Generuje `reloc` dla adresu 64-bitowego.|  
-|`srRelocIA64PcRel25`|Wygeneruj `reloc` dla 25-bitowego adresu względnego `br.call` komputera w instrukcji ia64.|  
-|`srRelocIA64PcRel64`|Generuje `reloc` dla 64-bitowy adres względny komputera w `brl.call` instrukcji ia64.|  
-|`srRelocAbsoluteTagged`|Generuje 30-bitową sekcję `reloc`względną, używaną dla oznakowanych wartości wskaźnika.|  
-|`srRelocSentinel`|Wartość wartownika, aby zapewnić wszelkie dodatki do tego `reloc` wyliczenia są odzwierciedlane do wewnętrznej tablicy nazw.|  
-|`srNoBaseReloc`|Określa, że nie `reloc`emituje bazy .|  
-|`srRelocPtr`|Wartość wskazująca, że zawartość pamięci wstępnego korekty jest wskaźnikiem, a nie przesunięciem sekcji.|  
+|`srRelocIA64PcRel25`|Wygeneruj `reloc` adres 25-bitowy względem komputera w `br.call` instrukcji ia64.|  
+|`srRelocIA64PcRel64`|Generuje wartość `reloc` dla 64-bitowego adresu komputera w `brl.call` instrukcji ia64.|  
+|`srRelocAbsoluteTagged`|Generuje 30-bitową względną sekcję `reloc` , używaną dla oznakowanych wartości wskaźnika.|  
+|`srRelocSentinel`|Wartość wskaźnikowa, która pomaga zapewnić, że wszelkie dodatki do tego wyliczenia są odzwierciedlone w wewnętrznej `reloc` tablicy nazw.|  
+|`srNoBaseReloc`|Określa, że nie ma być emitowana baza `reloc` .|  
+|`srRelocPtr`|Wartość wskazująca, że przed przemieszczeniem sekcji jest wskaźnik, a nie przesunięty sekcję.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [AddSectionReloc — Metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [Wyliczenia metadanych](metadata-enumerations.md)
+- [ICeeGen — Interfejs](iceegen-interface.md)
+- [AddSectionReloc — Metoda](iceegen-addsectionreloc-method.md)

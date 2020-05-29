@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212190"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202373"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
 
@@ -15,7 +15,7 @@ Rezerwacja adresu URL umożliwia ograniczenie użytkowników, którzy mogą odbi
   
  W ramach domyślnej konfiguracji systemu operacyjnego program Windows Communication Foundation (WCF) tworzy globalnie dostępną rezerwację dla portu 80, aby umożliwić wszystkim użytkownikom uruchamianie aplikacji korzystających z podwójnego powiązania protokołu HTTP na potrzeby komunikacji dwukierunkowej. Ponieważ lista kontroli dostępu dla tej rezerwacji jest dla wszystkich, Administratorzy nie mogą jawnie zezwolić na nasłuchiwanie adresu URL lub zestawu adresów URL ani nie zezwalać na nie. W tym temacie opisano sposób usuwania tej rezerwacji i ponownego tworzenia rezerwacji z ograniczoną listą ACL.  
   
-W systemie Windows Vista lub Windows Server 2008 można wyświetlić wszystkie rezerwacje adresów URL HTTP z wiersza polecenia z podwyższonym poziomem uprawnień, wprowadzając `netsh http show urlacl`. W poniższym przykładzie przedstawiono sposób rezerwacji adresu URL programu WCF:
+W systemie Windows Vista lub Windows Server 2008 można wyświetlić wszystkie rezerwacje adresów URL protokołu HTTP z wiersza polecenia z podwyższonym poziomem uprawnień, wprowadzając polecenie `netsh http show urlacl` . W poniższym przykładzie przedstawiono sposób rezerwacji adresu URL programu WCF:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -31,7 +31,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Kliknij przycisk **Start**, wskaż **Wszystkie programy**, kliknij przycisk **akcesoria**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia** , a następnie kliknij polecenie **Uruchom jako administrator** w wyświetlonym menu kontekstowym. Kliknij przycisk **Kontynuuj** w oknie Kontrola konta użytkownika (UAC), które może zadawać uprawnienia do kontynuowania.  
   
-2. W oknie wiersza polecenia wpisz polecenie **netsh http Delete urlacl URL =http://+:80/Temporary_Listen_Addresses/** .  
+2. Wpisz w `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/` oknie wiersza polecenia.  
   
 3. Jeśli rezerwacja zostanie pomyślnie usunięta, zostanie wyświetlony następujący komunikat. **Pomyślnie usunięto rezerwację adresu URL**  
   
@@ -42,7 +42,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Kliknij przycisk **Start**, wskaż **Wszystkie programy**, kliknij przycisk **akcesoria**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia** , a następnie kliknij polecenie **Uruchom jako administrator** w wyświetlonym menu kontekstowym. Kliknij przycisk **Kontynuuj** w oknie Kontrola konta użytkownika (UAC), które może zadawać uprawnienia do kontynuowania.  
   
-2. Wpisz w polu **net localgroup "\<nazwa grupy zabezpieczeń >"/comment: "\<opis grupy zabezpieczeń >"/Add** w wierszu polecenia. Zastępowanie **\<nazwy grupy zabezpieczeń >** nazwą grupy zabezpieczeń, którą chcesz utworzyć, i **\<opisową grupę zabezpieczeń >** z odpowiednim opisem dla grupy zabezpieczeń.  
+2. Wpisz w `net localgroup "<security group name>" /comment:"<security group description>" /add` wierszu polecenia. Zastąpienie **\<security group name>** na nazwę grupy zabezpieczeń, którą chcesz utworzyć, oraz **\<security group description>** odpowiedni opis grupy zabezpieczeń.  
   
 3. Jeśli grupa zabezpieczeń została utworzona pomyślnie, zostanie wyświetlony następujący komunikat. **Polecenie zostało wykonane pomyślnie.**  
   
@@ -56,6 +56,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Kliknij przycisk **Start**, wskaż **Wszystkie programy**, kliknij przycisk **akcesoria**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia** , a następnie kliknij polecenie **Uruchom jako administrator** w wyświetlonym menu kontekstowym. Kliknij przycisk **Kontynuuj** w oknie Kontrola konta użytkownika (UAC), które może zadawać uprawnienia do kontynuowania.  
   
-2. Wpisz **polecenie netsh http Add urlacl URL =http://+:80/Temporary_Listen_Addresses/ User = "\< Machine name >\\ < nazwa grupy zabezpieczeń\>** w wierszu polecenia. Zastępowanie **\<nazwy maszyny >** nazwą komputera, na którym należy utworzyć grupę, i **\<nazwę grupy zabezpieczeń >** nazwą grupy zabezpieczeń, która została wcześniej utworzona.  
+2. Wpisz w `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` wierszu polecenia. Zastępowanie na **\<machine name>** nazwę komputera, na którym należy utworzyć grupę, oraz **\<security group name>** nazwę grupy zabezpieczeń, która została wcześniej utworzona.  
   
 3. Jeśli rezerwacja zostanie utworzona pomyślnie, zostanie wyświetlony następujący komunikat. **Pomyślnie dodano rezerwację adresu URL**.

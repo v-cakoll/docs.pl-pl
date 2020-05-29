@@ -4,16 +4,16 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205808"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202210"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
-C# jest językiem o jednoznacznie określonym typie. Każda zmienna i stała ma typ, tak jak każde wyrażenie, którego wynikiem jest wartość. Każdy podpis metody Określa typ dla każdego parametru wejściowego i dla zwracanej wartości. Biblioteka klas .NET Framework definiuje zestaw wbudowanych typów liczbowych, a także bardziej złożone typy, które reprezentują szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów oraz daty. Typowy program C# używa typów z biblioteki klas, a także typów zdefiniowanych przez użytkownika, które są modelami koncepcji specyficznych dla domeny problemu programu.  
+C# jest jednoznacznie określonym językiem. Każda zmienna i stała ma typ, tak jak każde wyrażenie, którego wynikiem jest wartość. Każdy podpis metody Określa typ dla każdego parametru wejściowego i dla zwracanej wartości. Biblioteka klas .NET Framework definiuje zestaw wbudowanych typów liczbowych, a także bardziej złożone typy, które reprezentują szeroką gamę konstrukcji logicznych, takich jak system plików, połączenia sieciowe, kolekcje i tablice obiektów oraz daty. Typowy program C# używa typów z biblioteki klas, a także typów zdefiniowanych przez użytkownika, które są modelami koncepcji specyficznych dla domeny problemu programu.  
   
 Informacje przechowywane w typie mogą obejmować następujące elementy:  
   
@@ -84,7 +84,7 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Frame
   
 - Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy, które definiujesz za pomocą `struct` `enum` słowa kluczowego or, są typami wartości. Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](language-reference/builtin-types/value-types.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Typy struktur](language-reference/builtin-types/struct.md)
 - [Typów wyliczeniowych](language-reference/builtin-types/enum.md)

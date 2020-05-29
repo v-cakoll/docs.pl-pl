@@ -3,17 +3,18 @@ title: Wprowadzenie do samouczków języka C# — interaktywny
 description: Poznaj język C# w przeglądarce i Rozpocznij pracę z własnym środowiskiem programistycznym
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007705"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202435"
 ---
 # <a name="introduction-to-c"></a>Wprowadzenie do języka C\#
 
 Witamy w samouczkach wprowadzenie do języka C#. Te lekcje zaczynają się od kodu interaktywnego, który można uruchomić w przeglądarce. Przed rozpoczęciem tych interaktywnych lekcji możesz poznać podstawy języka C# z [serii wideo w języku c# 101](https://aka.ms/dotnet3-csharp) .
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 Pierwsze lekcje objaśniają koncepcje języka C# przy użyciu małych fragmentów kodu. Poznasz podstawy składni języka C# i sposób pracy z typami danych, takimi jak ciągi, liczby i wartości logiczne. Jest to wszystko interaktywne, a ty będziesz pisać i uruchamiać kod w ciągu kilku minut. W tych pierwszej lekcji nie założono wcześniej znajomości programowania ani języka C#.

@@ -1,19 +1,19 @@
 ---
 title: Dostawcy typów
-description: Dowiedz się F# , w jaki sposób dostawca typów jest składnikiem, który dostarcza typy, właściwości i metody do użycia w programach.
+description: 'Dowiedz się, w jaki sposób dostawca typów języka F # to składnik, który dostarcza typy, właściwości i metody do użycia w programach.'
 ms.date: 04/02/2018
-ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552917"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202113"
 ---
 # <a name="type-providers"></a>Dostawcy typów
 
-Dostawca typów języka F# to składnik, który dostarcza typy, właściwości i metody używane w programie. Dostawcy typów generują elementy znane jako **dostarczone typy**, które są generowane przez F# kompilator i są oparte na zewnętrznym źródle danych.
+Dostawca typów języka F# to składnik, który dostarcza typy, właściwości i metody używane w programie. Dostawcy typów generują elementy znane jako **dostarczone typy**, które są generowane przez kompilator F # i są oparte na zewnętrznym źródle danych.
 
-Na przykład dostawca F# typów dla SQL może generować typy reprezentujące tabele i kolumny w relacyjnej bazie danych. W rzeczywistości jest to typ dostawcy typu [SqlProvider](https://fsprojects.github.io/SQLProvider/) .
+Na przykład dostawca typów języka F # dla programu SQL Server może generować typy reprezentujące tabele i kolumny w relacyjnej bazie danych. W rzeczywistości jest to typ dostawcy typu [SqlProvider](https://fsprojects.github.io/SQLProvider/) .
 
 Dostarczone typy są zależne od parametrów wejściowych dostawcy typów. Takie dane wejściowe mogą być przykładowym źródłem danych (takim jak plik schematu JSON), adres URL wskazujący bezpośrednio na usługę zewnętrzną lub parametry połączenia ze źródłem danych. Dostawca typów może również upewnić się, że grupy typów są rozwinięte na żądanie. oznacza to, że są one rozwinięte, jeśli do tych typów rzeczywiście odwołuje się program. Umożliwia to bezpośrednią integrację na żądanie przestrzeni informacji o wielkiej skali, takich jak sieciowe rynki danych, w sposób silnie typizowany.
 
@@ -30,8 +30,8 @@ Wymazywanie dostawców typów produkuje typy, które mogą być używane tylko w
 Następujące powszechnie używane biblioteki zawierają dostawców typów do różnych celów:
 
 - [FSharp. Data](https://fsharp.github.io/FSharp.Data/) zawiera dostawców typów dla formatów dokumentów JSON, XML, CSV i HTML oraz zasobów.
-- [Sqldostarczający](https://fsprojects.github.io/SQLProvider/) zapewnia dostęp z jednoznacznie określonymi typami do baz danych z wykorzystaniem mapowania F# obiektów i zapytań LINQ względem tych źródeł danych.
-- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ma zestaw dostawców typów dla zakontrolowanego osadzania kodu T-SQL w F#.
+- Program [Sqldostarczający](https://fsprojects.github.io/SQLProvider/) zapewnia silnie określony dostęp do relacji baz danych za poorednictwem mapowania obiektów i zapytań języka F # LINQ względem tych źródeł danych.
+- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ma zestaw dostawców typów dla zaznaczonego osadzania języka T-SQL w języku F #.
 - [Dostawca typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/) udostępnia typy dla obiektów blob, tabel i kolejek platformy Azure, dzięki czemu można uzyskiwać dostęp do tych zasobów bez konieczności określania nazw zasobów jako ciągów w całym programie.
 - [FSharp. Data. GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) zawiera **GraphQLProvider**, który dostarcza typy oparte na serwerze GraphQL określonym za pomocą adresu URL.
 
@@ -40,4 +40,4 @@ W razie potrzeby można [utworzyć własnych niestandardowych dostawców typów]
 ## <a name="see-also"></a>Zobacz także
 
 - [Samouczek: Tworzenie dostawcy typów](creating-a-type-provider.md)
-- [Dokumentacja języka F#](../../language-reference/index.md)
+- [Dokumentacja języka F #](../../language-reference/index.md)

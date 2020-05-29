@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900890"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202149"
 ---
 # <a name="wcf-data-services-overview"></a>Przegląd Usługi danych programu WCF
 Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sieci Web lub intranet przy użyciu protokołu Open Data Protocol (OData). Usługa OData umożliwia Uwidacznianie danych jako zasobów, które są adresowane przez identyfikatory URI. Dzięki temu można uzyskać dostęp do danych i zmienić je przy użyciu semantyki przenoszonego transferu stanu (REST), w tym standardowych czasowników HTTP funkcji GET, PUT, POST i DELETE. Ten temat zawiera omówienie wzorców i praktyk zdefiniowanych przez usługi OData, a także funkcje zapewniane przez Usługi danych programu WCF, aby korzystać z protokołu OData w aplikacjach opartych na .NET Framework.  
@@ -18,9 +18,9 @@ Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sie
 ## <a name="address-data-as-resources"></a>Adresowanie danych jako zasobów  
  Usługa OData udostępnia dane jako zasoby, które są adresowane przez identyfikatory URI. Ścieżki zasobów są konstruowane na podstawie Konwencji relacji jednostek Entity Data Model. W tym modelu jednostki reprezentują jednostki operacyjne danych w domenie aplikacji, takie jak klienci, zamówienia, elementy i produkty. Aby uzyskać więcej informacji, zobacz [Entity Data Model](../adonet/entity-data-model.md).  
   
- W protokole OData zasoby jednostki są adresowane jako zestaw jednostek, który zawiera wystąpienia typów jednostek. Na przykład identyfikator URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> zwraca wszystkie zamówienia z usługi danych `Northwind`, które są powiązane z klientem z wartością `CustomerID` `ALFKI.`  
+ W protokole OData zasoby jednostki są adresowane jako zestaw jednostek, który zawiera wystąpienia typów jednostek. Na przykład identyfikator URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` zwraca wszystkie zamówienia z `Northwind` usługi danych, które są powiązane z klientem z `CustomerID` wartością`ALFKI.`  
   
- Wyrażenia zapytań umożliwiają wykonywanie tradycyjnych operacji zapytań względem zasobów, takich jak filtrowanie, sortowanie i stronicowanie. Na przykład identyfikator URI <https://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI")/Orders? $filter = fracht gt 50 > filtruje zasoby, aby zwracały tylko zamówienia z kosztem frachtu większym niż $50. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md).  
+ Wyrażenia zapytań umożliwiają wykonywanie tradycyjnych operacji zapytań względem zasobów, takich jak filtrowanie, sortowanie i stronicowanie. Na przykład identyfikator URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` filtruje zasoby, aby zwracały tylko zamówienia z kosztem frachtu większym niż $50. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md).  
   
 ## <a name="interoperable-data-access"></a>Dostęp do danych międzyoperacyjnych  
  Usługa OData kompiluje się w standardowych protokołach internetowych, aby zapewnić współdziałanie usług danych z aplikacjami, które nie używają .NET Framework. Ze względu na to, że można używać standardowych identyfikatorów URI do adresowania danych, aplikacja może uzyskiwać dostęp do danych i zmieniać je przy użyciu semantyki przenoszonego transferu Stanów (REST), w tym standardowych zleceń HTTP funkcji GET, PUT, POST i DELETE. Dzięki temu można uzyskać dostęp do tych usług z dowolnego klienta, który może analizować dane przesyłane za pośrednictwem standardowych protokołów HTTP i uzyskiwać do nich dostęp.  
@@ -34,12 +34,12 @@ Usługa OData definiuje zestaw rozszerzeń protokołu publikowania Atom (AtomPub
   
  Usługi danych programu WCF integruje się z Entity Framework ADO.NET, aby umożliwić tworzenie usług danych, które uwidaczniają dane relacyjne. Za pomocą narzędzi Entity Data Model można utworzyć model danych, który zawiera zasoby adresowane jako jednostki i w tym samym czasie definiują mapowanie między tym modelem i tabelami w źródłowej bazie danych. Aby uzyskać więcej informacji, zobacz [Entity Framework Provider](entity-framework-provider-wcf-data-services.md).  
   
- Usługi danych programu WCF umożliwia również tworzenie usług danych, które uwidaczniają wszystkie struktury danych, które zwracają implementację interfejsu <xref:System.Linq.IQueryable%601>. Dzięki temu można tworzyć usługi danych, które uwidaczniają dane z typów .NET Framework. Operacje tworzenia, aktualizowania i usuwania są obsługiwane w przypadku zaimplementowania interfejsu <xref:System.Data.Services.IUpdatable>. Aby uzyskać więcej informacji, zobacz temat [dostawca odbicia](reflection-provider-wcf-data-services.md).  
+ Usługi danych programu WCF umożliwia również tworzenie usług danych, które uwidaczniają wszystkie struktury danych, które zwracają implementację <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu można tworzyć usługi danych, które uwidaczniają dane z typów .NET Framework. Operacje tworzenia, aktualizowania i usuwania są obsługiwane w przypadku zaimplementowania <xref:System.Data.Services.IUpdatable> interfejsu. Aby uzyskać więcej informacji, zobacz temat [dostawca odbicia](reflection-provider-wcf-data-services.md).  
   
  Aby zapoznać się z ilustracją, jak Usługi danych programu WCF integrują się z tymi dostawcami danych, zapoznaj się z diagramem architektury w dalszej części tego tematu.  
   
 ## <a name="custom-business-logic"></a>Niestandardowa logika biznesowa  
- Usługi danych programu WCF ułatwia dodawanie niestandardowych logiki biznesowej do usługi danych za pomocą operacji usługi i przechwycenia. Operacje usługi to metody zdefiniowane na serwerze, które są adresowane przez identyfikatory URI w tym samym formularzu co zasoby danych. Operacje usługi mogą również używać składni wyrażeń zapytania do filtrowania, porządkowania i danych stronicowych zwracanych przez operację. Na przykład identyfikator URI `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$orderby=OrderDate&$top=10&$skip=10` reprezentuje wywołanie operacji usługi o nazwie `GetOrdersByCity` w usłudze danych Northwind, która zwraca zamówienia dla klientów z Londyn, z wynikami stronicowanymi posortowanymi przez `OrderDate`. Aby uzyskać więcej informacji, zobacz [operacje usługi](service-operations-wcf-data-services.md).  
+ Usługi danych programu WCF ułatwia dodawanie niestandardowych logiki biznesowej do usługi danych za pomocą operacji usługi i przechwycenia. Operacje usługi to metody zdefiniowane na serwerze, które są adresowane przez identyfikatory URI w tym samym formularzu co zasoby danych. Operacje usługi mogą również używać składni wyrażeń zapytania do filtrowania, porządkowania i danych stronicowych zwracanych przez operację. Na przykład identyfikator URI `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$orderby=OrderDate&$top=10&$skip=10` reprezentuje wywołanie operacji usługi o nazwie `GetOrdersByCity` w usłudze danych Northwind, która zwraca zamówienia dla klientów z Londyn, z wynikami stronicowanymi posortowanymi według `OrderDate` . Aby uzyskać więcej informacji, zobacz [operacje usługi](service-operations-wcf-data-services.md).  
   
  Interceptory umożliwiają integrację niestandardowej logiki aplikacji w przetwarzaniu komunikatów żądania lub odpowiedzi przez usługę danych. Interceptory są wywoływane, gdy w określonym zestawie jednostek występuje akcja zapytania, wstawiania, aktualizacji lub usuwania. Interceptor może zmienić dane, wymusić zasady autoryzacji lub nawet przerwać operację. Metody przechwytywania muszą być jawnie zarejestrowane dla danego zestawu jednostek, który jest udostępniany przez usługę danych. Aby uzyskać więcej informacji, zobacz [Interceptory](interceptors-wcf-data-services.md).  
   

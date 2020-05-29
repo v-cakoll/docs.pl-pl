@@ -1,25 +1,25 @@
 ---
-title: Co nowego w Przewodniku po językach F# 4.5 — F#
-description: Zapoznaj się z nowymi funkcjami dostępnymi w języku F# 4.5.
+title: 'Co nowego w języku F # 4,5 — Przewodnik po języku f #'
+description: 'Zapoznaj się z omówieniem nowych funkcji dostępnych w języku F # 4,5.'
 ms.date: 11/27/2019
-ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c978c66a4bf231398508cbc1cbb8839228ea8e9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186135"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202354"
 ---
-# <a name="whats-new-in-f-45"></a>Co nowego w Języku F# 4.5
+# <a name="whats-new-in-f-45"></a>Co nowego w języku F # 4,5
 
-F# 4.5 dodaje wiele ulepszeń do języka F#. Wiele z tych funkcji zostały dodane razem, aby umożliwić pisanie kodu efektywnego wydajności w języku F# przy jednoczesnym zapewnieniu, że ten kod jest bezpieczny. Oznacza to dodanie kilku pojęć do języka i znaczną ilość analizy kompilatora podczas korzystania z tych konstrukcji.
+F # 4,5 dodaje wiele udoskonaleń do języka F #. Wiele z tych funkcji zostało jednocześnie dodanych, aby umożliwić pisanie wydajnego kodu w języku F #, a także zapewnianie, że ten kod jest bezpieczny. To oznacza dodanie kilku koncepcji do języka i znacznej ilości analizy kompilatora podczas korzystania z tych konstrukcji.
 
-## <a name="get-started"></a>Wprowadzenie
+## <a name="get-started"></a>Rozpoczęcie pracy
 
-F# 4.5 jest dostępny we wszystkich dystrybucjach .NET Core i visual studio narzędzi. [Zacznij korzystać z języka F#,](../get-started/index.md) aby dowiedzieć się więcej.
+Język F # 4,5 jest dostępny we wszystkich dystrybucjach .NET Core i narzędziach programu Visual Studio. [Rozpocznij pracę z językiem F #](../get-started/index.md) , aby dowiedzieć się więcej.
 
-## <a name="span-and-byref-like-structs"></a>Struktury span i byref-jak
+## <a name="span-and-byref-like-structs"></a>Struktury zakresów i ByRef
 
-Typ <xref:System.Span%601> wprowadzony w .NET Core umożliwia reprezentowanie buforów w pamięci w sposób silnie typizowany, który jest teraz dozwolony w języku F#, począwszy od języka F# 4.5. W poniższym przykładzie pokazano, jak można ponownie <xref:System.Span%601> użyć funkcji działającej na różnych reprezentacjach buforu:
+<xref:System.Span%601>Typ wprowadzony w środowisku .NET Core umożliwia reprezentowanie buforów w pamięci w sposób silnie określony, który jest teraz dozwolony w języku f # począwszy od f # 4,5. Poniższy przykład pokazuje, jak można wykorzystać funkcję, która działa w przypadku <xref:System.Span%601> różnych reprezentacji buforów:
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-Ważnym aspektem jest to, że Span i inne [struktury byref-jak](../language-reference/structures.md#byreflike-structs) mają bardzo sztywną analizę statyczną wykonywaną przez kompilator, które ograniczają ich użycie w sposób, który może okazać się nieoczekiwany. Jest to podstawowy kompromis między wydajnością, wyrazistością i bezpieczeństwem, który został wprowadzony w języku F# 4.5.
+Ważnym aspektem tego jest to, że zakres i inne [struktury podobne do ByRef](../language-reference/structures.md#byreflike-structs) mają bardzo sztywną analizę statyczną wykonywaną przez kompilator, która ogranicza ich użycie w sposób nieoczekiwany. Jest to podstawowe kompromisy między wydajnością, wyrazistości i bezpieczeństwem wprowadzonym w F # 4,5.
 
-## <a name="revamped-byrefs"></a>Przebudowane byrefs
+## <a name="revamped-byrefs"></a>Odnowionych ByRef
 
-Przed F# 4.5 [Byrefs](../language-reference/byrefs.md) w F# były niebezpieczne i niezdrowe dla wielu aplikacji. Problemy z dźwiękiem wokół byrefs zostały rozwiązane w F# 4.5 i tej samej analizy statycznej wykonane dla rozpiętości i byref-jak structs został również zastosowany.
+Przed F # 4,5, [ByRef](../language-reference/byrefs.md) w f # były niebezpieczne i niezdrowe w przypadku wielu aplikacji. Problemy z dźwiękiem dotyczące operacji ByRef zostały rozwiązane w języku F # 4,5, a także zastosowano tę samą analizę statyczną dla struktur i struktury typu ByRef.
 
-### <a name="inreft-and-outreft"></a>inref<'t> i outref<'t>
+### <a name="inreft-and-outreft"></a>inref<> i outref<>
 
-Aby reprezentować pojęcie tylko do odczytu, tylko do zapisu i odczytu/zapisu `inref<'T>` `outref<'T>` wskaźnik zarządzany, F# 4.5 wprowadza , typy do reprezentowania tylko do odczytu i tylko do zapisu wskaźniki, odpowiednio. Każdy z nich ma inną semantykę. Na przykład nie można `inref<'T>`napisać do :
+Aby reprezentować pojęcie wskaźnika zarządzanego tylko do odczytu, tylko do zapisu i odczytu/zapisu, F # 4,5 wprowadza `inref<'T>` , `outref<'T>` typy reprezentujące jedynie wskaźniki tylko do odczytu i tylko do zapisu. Każdy z nich ma inną semantykę. Na przykład nie można zapisać w `inref<'T>` :
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-Domyślnie wnioskowanie o typie wywnioskuje zarządzane wskaźniki, które `inref<'T>` są zgodne z niezmiennym charakterem kodu F#, chyba że coś zostało już zadeklarowane jako zmienne. Aby coś zapisywalnego, należy zadeklarować typ, `mutable` jak przed przekazaniem jego adres do funkcji lub elementu członkowskiego, który manipuluje nim. Aby dowiedzieć się więcej, zobacz [Byrefs](../language-reference/byrefs.md).
+Domyślnie wnioskowanie o typie będzie zgłaszać zarządzane wskaźniki jako `inref<'T>` zgodne z niezmiennym charakterem kodu języka F #, chyba że coś zostało już zadeklarowane jako mutable. Aby wprowadzić coś do zapisu, musisz zadeklarować typ jako `mutable` przed przekazaniem jego adresu do funkcji lub elementu członkowskiego, który manipulowanie nim. Aby dowiedzieć się więcej, zobacz [ByRef](../language-reference/byrefs.md).
 
 ## <a name="readonly-structs"></a>Struktury tylko do odczytu
 
-Począwszy od F# 4.5, można adnotować strukturę jako <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> takie:
+Począwszy od F # 4,5, można dodać adnotację do struktury w <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> taki sposób, aby:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-To uniemożliwia deklarowanie elementu członkowskiego zmiennego w strukturze i emituje metadane, które umożliwia F# i C# traktować go jako tylko do odczytu, gdy używane z zestawu. Aby dowiedzieć się więcej, zobacz [Struktury tylko do odczytu](../language-reference/structures.md#readonly-structs).
+Uniemożliwia to zadeklarowanie modyfikowalnego elementu członkowskiego w strukturze i emituje metadane, które umożliwiają użycie języka F # i języka C# do traktowania go jako ReadOnly, gdy jest używany z zestawu. Aby dowiedzieć się więcej, zobacz [struktury tylko do odczytu](../language-reference/structures.md#readonly-structs).
 
-## <a name="void-pointers"></a>Nieważne wskaźniki
+## <a name="void-pointers"></a>Wskaźniki typu void
 
-Typ `voidptr` jest dodawany do Języka F# 4.5, podobnie jak następujące funkcje:
+`voidptr`Typ zostanie dodany do F # 4,5, ponieważ są to następujące funkcje:
 
-* `NativePtr.ofVoidPtr`, aby przekonwertować wskaźnik void na macierzysty wskaźnik int
-* `NativePtr.toVoidPtr`, aby przekonwertować macierzysty wskaźnik int na wskaźnik void
+* `NativePtr.ofVoidPtr`Aby skonwertować wskaźnik void na natywny wskaźnik int
+* `NativePtr.toVoidPtr`Aby skonwertować natywny wskaźnik int na wskaźnik void
 
-Jest to przydatne podczas współdziałania z natywnym składnikiem, który używa wskaźników void.
+Jest to przydatne w przypadku współdziałania ze składnikiem natywnym, który używa wskaźników typu void.
 
 ## <a name="the-match-keyword"></a>Słowo kluczowe `match!`
 
-Słowo `match!` kluczowe zwiększa dopasowanie wzorca, gdy wewnątrz wyrażenia obliczeniowego:
+`match!`Słowo kluczowe rozszerza dopasowanie do wzorca, gdy wewnątrz wyrażenia obliczeń:
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -111,11 +111,11 @@ let funcWithString (s: string) =
 }
 ```
 
-Dzięki temu można skrócić kod, który często obejmuje opcje mieszania (lub innych typów) z wyrażeniami obliczeniowymi, takimi jak async. Aby dowiedzieć się więcej, zobacz [mecz!](../language-reference/computation-expressions.md#match).
+Pozwala to skrócić kod, który często obejmuje Opcje mieszania (lub inne typy) z wyrażeniami obliczeń, takimi jak Async. Aby dowiedzieć się więcej, zobacz [Match!](../language-reference/computation-expressions.md#match).
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Uproszczone wymagania dotyczące rzutowania w wyrażeniach tablicowych, listowych i sekwencji
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Wymagania dotyczące swobodnego rzutowania w wyrażeniach tablicowych, list i sekwencji
 
-Mieszanie typów, gdzie można dziedziczyć z innego wewnątrz tablicy, listy i sekwencji wyrażeń `:>` `upcast`tradycyjnie wymagane do upcast dowolnego typu pochodnego do jego typu nadrzędnego z lub . Jest to teraz zrelaksowany, wykazano w następujący sposób:
+Mieszanie typów, gdy jedna z nich może dziedziczyć z innego wewnątrz wyrażenia Array, list i Sequence, tradycyjnie wymagało przerzutowania dowolnego typu pochodnego na jego typ nadrzędny z `:>` lub `upcast` . Jest to teraz swobodne:
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,9 +125,9 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Wcięcie relaksacyjne dla wyrażeń tablicy i listy
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Wyróżnianie wcięć dla wyrażeń tablicowych i listowych
 
-Przed F# 4.5, trzeba nadmiernie wcięcia tablicy i listy wyrażeń po przekazaniu jako argumenty do wywołania metody. Nie jest to już wymagane:
+Przed F # 4,5, należy nadmiernie wcięcia tablic i wyrażeń list, gdy są przekazane jako argumenty wywołań metod. Nie jest to już wymagane:
 
 ```fsharp
 module NoExcessiveIndenting =

@@ -2,12 +2,12 @@
 title: Link źródłowy i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dotyczących używania linku źródłowego w celu usprawnienia debugowania bibliotek platformy .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5dee2a6b1f77daa641351e02c1dd3e0a38f66550
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212428"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201980"
 ---
 # <a name="source-link"></a>Link do źródła
 
@@ -15,6 +15,7 @@ Link źródłowy to technologia, która umożliwia debugowanie kodu źródłoweg
 
 ## <a name="source-link-demo"></a>Pokaz linku źródłowego
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
 ## <a name="using-source-link"></a>Używanie linku źródłowego

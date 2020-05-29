@@ -2,29 +2,29 @@
 title: Używanie monikera programu WCF z klientami COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: d4d812c59a504f365eb3ad63ddd45ba5a66296e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1d5e0c7d7460e207fedba601e991f25281ddb6e
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183236"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202086"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
-W tym przykładzie pokazano, jak używać moniker usługi Windows Communication Foundation (WCF) do integracji usług sieci Web w środowiskach programistycznych opartych na komismencie, takich jak Microsoft Office Visual Basic for Applications (Office VBA) lub Visual Basic 6.0. Ten przykład składa się z klienta hosta skryptów systemu Windows (vbs), pomocniczej biblioteki klienta (dll) i biblioteki usług (dll) hostowanego przez internetowe usługi informacyjne (IIS). Usługa jest usługą kalkulatora, a klient COM wywołuje operacje matematyczne — dodawanie, odejmowanie, mnożenie i dzielenie — w usłudze. Aktywność klienta jest widoczna w oknach okna okna okna komunikatu.  
+Ten przykład pokazuje, jak używać monikera usługi Windows Communication Foundation (WCF) do integrowania usług sieci Web w środowiskach deweloperskich opartych na modelu COM, takich jak Microsoft Office Visual Basic for Applications (Office VBA) lub Visual Basic 6,0. Ten przykład składa się z klienta hosta skryptów systemu Windows (. vbs), pomocniczej biblioteki klienta (. dll) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa to usługa kalkulatora, a klient COM wywołuje operacje matematyczne — Dodawanie, odejmowanie, mnożenie i dzielenie — w usłudze. Aktywność klienta jest widoczna w oknach okna komunikatu.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
- Usługa implementuje `ICalculator` kontrakt zdefiniowany w sposób pokazany w poniższym przykładzie kodu.  
+ Usługa implementuje `ICalculator` kontrakt zdefiniowany jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -41,34 +41,34 @@ public interface ICalculator
 }  
 ```  
   
- Przykład pokazuje trzy alternatywne podejścia do korzystania z monikera:  
+ Przykład ilustruje trzy alternatywne podejścia do używania monikera:  
   
-- Typowa umowa — kontrakt jest zarejestrowany jako typ widoczny com na komputerze klienckim.  
+- Typ kontraktu — kontrakt jest rejestrowany jako widoczny dla modelu COM na komputerze klienckim.  
   
-- Umowa WSDL — umowa jest dostarczana w formie dokumentu WSDL.  
+- Kontrakt WSDL — kontrakt jest dostarczany w formie dokumentu WSDL.  
   
 - Kontrakt wymiany metadanych — kontrakt jest pobierany w czasie wykonywania z punktu końcowego wymiany metadanych (MEX).  
   
-## <a name="typed-contract"></a>Typowa umowa  
- Aby użyć monikera z typowym użyciem umowy, odpowiednio przypisane typy dla umowy serwisowej muszą być zarejestrowane w com. Po pierwsze, klient musi być generowany przy użyciu [narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Uruchom następujące polecenie z wiersza polecenia w katalogu klienta, aby wygenerować wpisany serwer proxy.  
+## <a name="typed-contract"></a>Typ kontraktu  
+ Aby użyć monikera z określonym umownym użyciem kontraktu, odpowiednie typy atrybutów dla kontraktu usługi muszą być zarejestrowane w modelu COM. Najpierw należy wygenerować klienta przy użyciu [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Uruchom następujące polecenie w wierszu polecenia w katalogu klienta, aby wygenerować serwer proxy z określonym typem.  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
- Ta klasa musi być uwzględniona w projekcie, a projekt powinien być skonfigurowany do generowania zestawu widocznego dla urządzenia COM po skompilowaniu. W pliku AssemblyInfo.cs należy uwzględnić następujący atrybut.  
+ Ta klasa musi być uwzględniona w projekcie, a projekt powinien zostać skonfigurowany w taki sposób, aby generował zestaw z widocznym elementem COM, gdy zostanie skompilowany. Następujący atrybut powinien zostać uwzględniony w pliku AssemblyInfo.cs.  
   
 ```csharp
 [assembly: ComVisible(true)]  
 ```  
   
- Po zbudowaniu projektu zarejestruj typy widoczne `regasm` w programie COM przy użyciu jak pokazano w poniższym przykładzie.  
+ Po skompilowaniu projektu, należy zarejestrować typy widoczne dla modelu COM za pomocą `regasm` , jak pokazano w poniższym przykładzie.  
   
 ```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
- Zestaw, który jest tworzony należy dodać do globalnej pamięci podręcznej zestawów. Chociaż nie jest to ściśle wymagane, upraszcza to proces środowiska wykonawczego lokalizowania zestawu. Następujące polecenie dodaje zestaw do globalnej pamięci podręcznej zestawów.  
+ Utworzony zestaw powinien zostać dodany do globalnej pamięci podręcznej zestawów. Chociaż nie jest to ściśle wymagane, upraszcza to proces środowiska uruchomieniowego, w którym znajduje się zestaw. Poniższe polecenie dodaje zestaw do globalnej pamięci podręcznej zestawów.  
   
 ```console  
 gacutil.exe /i client.dll  
@@ -77,7 +77,7 @@ gacutil.exe /i client.dll
 > [!NOTE]
 > Moniker usługi wymaga tylko rejestracji typu i nie używa serwera proxy do komunikowania się z usługą.  
   
- ComCalcClient.vbs aplikacja kliencka używa `GetObject` tej funkcji do konstruowania serwera proxy dla usługi, przy użyciu składni moniker usługi, aby określić adres, powiązanie i umowy dla usługi.  
+ Aplikacja kliencka ComCalcClient. vbs używa `GetObject` funkcji do konstruowania serwera proxy dla usługi przy użyciu składni krótkiej usługi do określenia adresu, powiązania i kontraktu dla usługi.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -89,23 +89,23 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 - Adres punktu końcowego usługi.  
   
-- Powiązanie, które klient powinien używać do łączenia się z tym punktem końcowym. W takim przypadku zdefiniowane przez system wsHttpBinding jest używane, chociaż niestandardowe powiązania mogą być definiowane w plikach konfiguracji klienta. Do użytku z hostem skryptów systemu Windows powiązanie niestandardowe jest zdefiniowane w pliku Cscript.exe.config w tym samym katalogu co Cscript.exe.  
+- Powiązanie, którego klient powinien używać do łączenia się z tym punktem końcowym. W tym przypadku wsHttpBinding zdefiniowany przez system jest używany, chociaż niestandardowe powiązania można definiować w plikach konfiguracji klienta. W przypadku korzystania z hosta skryptów systemu Windows niestandardowe powiązanie jest zdefiniowane w pliku cscript. exe. config w tym samym katalogu, co cscript. exe.  
   
-- Typ kontraktu, który jest obsługiwany w punkcie końcowym. Jest to typ, który został wygenerowany i zarejestrowany powyżej. Ponieważ skrypt języka Visual Basic nie zapewnia silnie typizowanego środowiska COM, należy określić identyfikator kontraktu. Ten identyfikator GUID jest `interfaceID` z CalcProxy.tlb, który można przeglądać za pomocą narzędzi COM, takich jak OLE/COM Object Viewer (OleView.exe). W przypadku silnie typizowanych środowisk, takich jak Office VBA lub Visual Basic 6.0, zamiast parametru kontraktu można dodać jawne odwołanie do biblioteki typów, a następnie zadeklarować typ obiektu serwera proxy. Zapewnia to również obsługę IntelliSense podczas tworzenia aplikacji klienckich.  
+- Typ kontraktu, który jest obsługiwany w punkcie końcowym. Jest to typ wygenerowany i zarejestrowany powyżej. Ponieważ skrypt Visual Basic nie zapewnia środowiska COM o jednoznacznie określonym typie, należy określić identyfikator kontraktu. Ten identyfikator GUID to `interfaceID` CalcProxy. tlb, który można wyświetlić za pomocą narzędzi com, takich jak Przeglądarka obiektów OLE/COM (OleView. exe). W przypadku środowisk o jednoznacznie określonym typie, takich jak pakiet Office VBA lub Visual Basic 6,0, Dodawanie jawnego odwołania do biblioteki typów, a następnie deklarowanie typu obiektu serwera proxy może być używane zamiast parametru kontraktu. Zapewnia to również obsługę technologii IntelliSense podczas tworzenia aplikacji klienckiej.  
   
- Po skonstruowaniu wystąpienia serwera proxy za pomocą moniker usługi, aplikacja kliencka może wywołać metody na serwerze proxy, co powoduje infrastruktury moniker usługi wywołując odpowiednie operacje usługi.  
+ Po zbudowaniu wystąpienia serwera proxy za pomocą monikera usługi aplikacja kliencka może wywoływać metody na serwerze proxy, co powoduje, że infrastruktura monikera usługi wywołuje odpowiednie operacje usługi.  
   
 ```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. Pokazuje to klienta COM, który wywołuje COM przy użyciu wpisanego monikera do komunikowania się z usługą WCF. Pomimo użycia com w aplikacji klienckiej, komunikacja z usługą składa się tylko z wywołań usługi sieci Web.  
+ Po uruchomieniu przykładu odpowiedź operacji zostanie wyświetlona w oknie komunikatów hosta skryptów systemu Windows. Przedstawia to klientowi COM wywołania COM przy użyciu wpisanej monikera do komunikowania się z usługą WCF. Mimo korzystania z modelu COM w aplikacji klienckiej komunikacja z usługą obejmuje tylko wywołania usługi sieci Web.  
   
 ## <a name="wsdl-contract"></a>Kontrakt WSDL  
- Aby użyć moniker z umową WSDL, nie jest wymagana rejestracja biblioteki klienta, ale kontrakt WSDL dla usługi musi być pobierany za pośrednictwem mechanizmu poza pasmem, takiego jak korzystanie z przeglądarki w celu uzyskania dostępu do punktu końcowego WSDL dla usługi. Moniker może następnie uzyskać dostęp do tej umowy w czasie wykonywania.  
+ Aby użyć monikera z kontraktem WSDL, nie jest wymagana żadna rejestracja biblioteki klienta, ale kontrakt WSDL dla usługi musi zostać pobrany za pośrednictwem mechanizmu poza pasmem, takiego jak korzystanie z przeglądarki w celu uzyskania dostępu do punktu końcowego WSDL usługi. Moniker może następnie uzyskać dostęp do tego kontraktu w czasie wykonywania.  
   
- ComCalcClient.vbs aplikacja kliencka `FileSystemObject` używa dostępu do lokalnie zapisanego pliku WSDL, a następnie ponownie używa `GetObject` funkcji do konstruowania serwera proxy dla usługi.  
+ Aplikacja kliencka ComCalcClient. vbs używa programu w `FileSystemObject` celu uzyskania dostępu do lokalnego zapisanego pliku WSDL, a następnie ponownie używa `GetObject` funkcji do konstruowania serwera proxy dla usługi.  
   
 ```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -129,28 +129,28 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
 - Adres punktu końcowego usługi.  
   
-- Powiązanie, które klient powinien używać do łączenia się z tym punktem końcowym i przestrzenią nazw, w której zdefiniowano to powiązanie. W takim przypadku `wsHttpBinding_ICalculator` jest używany.  
+- Powiązanie, którego klient powinien używać do łączenia się z tym punktem końcowym i przestrzeni nazw, w której jest zdefiniowane to powiązanie. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
   
-- WSDL, który definiuje kontrakt. W tym przypadku jest to ciąg, który został odczytany z pliku serviceWsdl.xml.  
+- WSDL, który definiuje kontrakt. W tym przypadku jest to ciąg, który został odczytany z pliku serviceWsdl. XML.  
   
-- Nazwa i obszar nazw kontraktu. Ta identyfikacja jest wymagana, ponieważ WSDL może zawierać więcej niż jedną umowę.  
+- Nazwa i przestrzeń nazw kontraktu. Ta identyfikacja jest wymagana, ponieważ WSDL może zawierać więcej niż jeden kontrakt.  
   
     > [!NOTE]
-    > Domyślnie usługi WCF generują oddzielne pliki WSDL dla każdego obszaru nazw, który jest używany. Są one połączone z użyciem konstrukcji importu WSDL. Ponieważ moniker oczekuje pojedynczej definicji WSDL, usługa musi używać pojedynczego obszaru nazw, jak pokazano w tym przykładzie lub oddzielne pliki muszą być scalane ręcznie.  
+    > Domyślnie usługi WCF generują oddzielne pliki WSDL dla każdej przestrzeni nazw używanej przez program. Są one powiązane z użyciem konstrukcji importu WSDL. Ponieważ moniker oczekuje pojedynczej definicji WSDL, usługa musi albo użyć pojedynczej przestrzeni nazw, jak pokazano w tym przykładzie, albo oddzielne pliki muszą zostać scalone ręcznie.  
   
- Po skonstruowaniu wystąpienia serwera proxy za pomocą moniker usługi, aplikacja kliencka może wywołać metody na serwerze proxy, co powoduje infrastruktury moniker usługi wywołując odpowiednie operacje usługi.  
+ Po zbudowaniu wystąpienia serwera proxy za pomocą monikera usługi aplikacja kliencka może wywoływać metody na serwerze proxy, co powoduje, że infrastruktura monikera usługi wywołuje odpowiednie operacje usługi.  
   
 ```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. Pokazuje to klienta COM wykonywanie wywołań COM przy użyciu moniker z umowy WSDL do komunikowania się z usługą WCF.  
+ Po uruchomieniu przykładu odpowiedź operacji zostanie wyświetlona w oknie komunikatów hosta skryptów systemu Windows. Przedstawia to klientowi COM wywołania COM przy użyciu monikera z kontraktem WSDL do komunikowania się z usługą WCF.  
   
 ## <a name="metadata-exchange-contract"></a>Kontrakt wymiany metadanych  
- Aby użyć moniker z umową MEX, tak jak w przypadku umowy WSDL, nie jest wymagana rejestracja klienta. Kontrakt dla usługi jest pobierany w czasie wykonywania za pośrednictwem wewnętrznego użycia metadata Exchange.  
+ Aby użyć monikera z kontraktem MEX, jak w przypadku kontraktu WSDL, rejestracja klienta nie jest wymagana. Kontrakt usługi jest pobierany w czasie wykonywania za pomocą wewnętrznego używania wymiany metadanych.  
   
- ComCalcClient.vbs aplikacja kliencka `GetObject` ponownie używa funkcji do konstruowania serwera proxy dla usługi.  
+ Aplikacja kliencka ComCalcClient. vbs ponownie używa `GetObject` funkcji do konstruowania serwera proxy dla usługi.  
   
 ```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -169,70 +169,70 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
 - Adres punktu końcowego usługi.  
   
-- Powiązanie, które klient powinien używać do łączenia się z tym punktem końcowym i przestrzenią nazw, w której zdefiniowano to powiązanie. W takim przypadku `wsHttpBinding_ICalculator` jest używany.  
+- Powiązanie, którego klient powinien używać do łączenia się z tym punktem końcowym i przestrzeni nazw, w której jest zdefiniowane to powiązanie. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
   
-- Nazwa i obszar nazw kontraktu. Ta identyfikacja jest wymagana, ponieważ WSDL może zawierać więcej niż jedną umowę.  
+- Nazwa i przestrzeń nazw kontraktu. Ta identyfikacja jest wymagana, ponieważ WSDL może zawierać więcej niż jeden kontrakt.  
   
- Po skonstruowaniu wystąpienia serwera proxy za pomocą moniker usługi, aplikacja kliencka może wywołać metody na serwerze proxy, co powoduje infrastruktury moniker usługi wywołując odpowiednie operacje usługi.  
+ Po zbudowaniu wystąpienia serwera proxy za pomocą monikera usługi aplikacja kliencka może wywoływać metody na serwerze proxy, co powoduje, że infrastruktura monikera usługi wywołuje odpowiednie operacje usługi.  
   
 ```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. Pokazuje to klienta COM wykonywanie wywołań COM przy użyciu moniker z umowy MEX do komunikowania się z usługą WCF.  
+ Po uruchomieniu przykładu odpowiedź operacji zostanie wyświetlona w oknie komunikatów hosta skryptów systemu Windows. Pokazuje to, że klient COM wywołuje wywołania COM przy użyciu monikera z kontraktem MEX, aby komunikować się z usługą WCF.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i utworzyć próbkę  
+#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. W wierszu polecenia dewelopera dla programu Visual Studio otwórz folder \client\bin w folderze specyficznym dla języka.  
+3. W wiersz polecenia dla deweloperów dla programu Visual Studio Otwórz folder \client\bin w obszarze folder charakterystyczny dla języka.  
   
     > [!NOTE]
-    > Jeśli używasz systemu Windows Vista, Windows Server 2008, Windows 7 lub Windows Server 2008 R2, upewnij się, że wiersz polecenia jest uruchamiany z uprawnieniami administratora.  
+    > W przypadku korzystania z systemu Windows Vista, Windows Server 2008, Windows 7 lub Windows Server 2008 R2 upewnij się, że uruchamiasz wiersz polecenia z uprawnieniami administratora.  
   
-4. Wpisz, `tlbexp.exe client.dll /out:CalcProxy.tlb` aby wyeksportować bibliotekę dll do pliku tlb. Oczekiwano "Ostrzeżenia eksportera biblioteki typu", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
+4. Wpisz tekst, `tlbexp.exe client.dll /out:CalcProxy.tlb` Aby wyeksportować bibliotekę DLL do pliku TLB. Oczekiwana jest wartość "ostrzeżenie eksportera biblioteki typów", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
   
-5. Wpisz, `regasm.exe /tlb:CalcProxy.tlb client.dll` aby zarejestrować typy w COM. Oczekiwano "Ostrzeżenia eksportera biblioteki typu", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
+5. Wpisz w, `regasm.exe /tlb:CalcProxy.tlb client.dll` Aby zarejestrować typy z modelem com. Oczekiwana jest wartość "ostrzeżenie eksportera biblioteki typów", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
   
-6. `gacutil.exe /i client.dll` Wpisz, aby dodać zestaw do globalnej pamięci podręcznej zestawów.  
+6. Wpisz, `gacutil.exe /i client.dll` Aby dodać zestaw do globalnej pamięci podręcznej zestawów.  
   
-#### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić próbkę na tym samym komputerze  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1. Sprawdź, czy możesz uzyskać dostęp do usługi za pomocą `http://localhost/servicemodelsamples/service.svc`przeglądarki, wpisując następujący adres: . W odpowiedzi powinna zostać wyświetlona strona potwierdzenia.  
+1. Sprawdź, czy możesz uzyskać dostęp do usługi przy użyciu przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc` . W odpowiedzi powinna zostać wyświetlona strona potwierdzenia.  
   
-2. Uruchom comcalcclient.vbs z \client, spod folderu specyficznego dla języka. Aktywność klienta jest wyświetlana w oknach okna okna komunikatu.  
+2. Uruchom ComCalcClient. vbs z \Client, z poziomu folderu specyficznego dla języka. Aktywność klienta jest wyświetlana w oknach okna komunikatu.  
   
-3. Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić próbkę na różnych komputerach  
+#### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach  
   
-1. Na komputerze usługi utwórz katalog wirtualny o nazwie ServiceModelSamples. Skrypt Setupvroot.bat dołączony do przykładu może służyć do tworzenia katalogu dysku i katalogu wirtualnego.  
+1. Na komputerze usługi Utwórz katalog wirtualny o nazwie ServiceModelSamples. Skrypt Setupvroot. bat dołączony do przykładu może służyć do tworzenia katalogu dysku i katalogu wirtualnego.  
   
-2. Skopiuj pliki programu serwisowego z %SystemDrive%\Inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego ServiceModelSamples na komputerze usługi. Pamiętaj, aby dołączyć pliki do katalogu \bin.  
+2. Skopiuj pliki programu usługi z%SystemDrive%\Inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego ServiceModelSamples na komputerze usługi. Pamiętaj o uwzględnieniu plików w katalogu \Bin.  
   
-3. Skopiuj plik skryptu klienta z folderu \client w folderze specyficznym dla języka na komputer kliencki.  
+3. Skopiuj plik skryptu klienta z folderu \Client, w obszarze folder specyficzny dla języka, do komputera klienckiego.  
   
-4. W pliku skryptu zmień wartość adresu definicji punktu końcowego, aby dopasować go do nowego adresu usługi. Zastąp wszelkie odwołania do "localhost" w pełni kwalifikowaną nazwą domeny w adresie.  
+4. W pliku skryptu Zmień wartość adresu definicji punktu końcowego, aby była zgodna z nowym adresem usługi. Zastąp wszystkie odwołania do "localhost" z w pełni kwalifikowaną nazwą domeny w adresie.  
   
-5. Skopiuj plik WSDL na komputer kliencki. W pliku WSDL, serviceWsdl.xml, zastąp wszelkie odwołania do "localhost" w pełni kwalifikowaną nazwą domeny w adresie.  
+5. Skopiuj plik WSDL na komputer kliencki. W pliku WSDL, serviceWsdl. XML, Zastąp wszelkie odwołania do "localhost" z w pełni kwalifikowaną nazwą domeny w adresie.  
   
-6. Skopiuj bibliotekę Client.dll z folderu \client\bin w folderze specyficznym dla języka do katalogu na komputerze klienckim.  
+6. Skopiuj bibliotekę Client. dll z folderu \client\bin w obszarze folder specyficzny dla języka do katalogu na komputerze klienckim.  
   
-7. W wierszu polecenia przejdź do tego katalogu docelowego na komputerze klienckim. Jeśli używasz systemu Windows Vista lub Windows Server 2008, uruchom wiersz polecenia jako administrator.  
+7. W wierszu polecenia przejdź do katalogu docelowego na komputerze klienckim. W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 upewnij się, że uruchamiasz wiersz polecenia jako administrator.  
   
-8. Wpisz, `tlbexp.exe client.dll /out:CalcProxy.tlb` aby wyeksportować bibliotekę dll do pliku tlb. Oczekiwano "Ostrzeżenia eksportera biblioteki typu", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
+8. Wpisz tekst, `tlbexp.exe client.dll /out:CalcProxy.tlb` Aby wyeksportować bibliotekę DLL do pliku TLB. Oczekiwana jest wartość "ostrzeżenie eksportera biblioteki typów", ale nie jest to problem, ponieważ typ ogólny nie jest wymagany.  
   
-9. Wpisz, `regasm.exe /tlb:CalcProxy.tlb client.dll` aby zarejestrować typy w COM. Przed uruchomieniem polecenia upewnij się, `regasm.exe` że ścieżka została ustawiona na folder, który zawiera.  
+9. Wpisz w, `regasm.exe /tlb:CalcProxy.tlb client.dll` Aby zarejestrować typy z modelem com. Upewnij się, że ścieżka została ustawiona na folder, który zawiera `regasm.exe` przed uruchomieniem polecenia.  
   
-10. `gacutil.exe /i client.dll` Wpisz, aby dodać zestaw do globalnej pamięci podręcznej zestawów. Przed uruchomieniem polecenia upewnij się, `gacutil.exe` że ścieżka została ustawiona na folder, który zawiera.  
+10. Wpisz, `gacutil.exe /i client.dll` Aby dodać zestaw do globalnej pamięci podręcznej zestawów. Upewnij się, że ścieżka została ustawiona na folder, który zawiera `gacutil.exe` przed uruchomieniem polecenia.  
   
-11. Sprawdź, czy można uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
+11. Sprawdź, czy możesz uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
   
-12. Na komputerze klienckim uruchom comcalcclient.vbs.  
+12. Na komputerze klienckim uruchom ComCalcClient. vbs.  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby oczyścić po próbce  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-- Ze względów bezpieczeństwa usuń definicję katalogu wirtualnego i uprawnienia przyznane w krokach konfiguracji po zakończeniu pracy z próbkami.  
+- Ze względów bezpieczeństwa usuń definicję katalogu wirtualnego i uprawnienia przyznane w procedurach instalacji po zakończeniu pracy z przykładami.  

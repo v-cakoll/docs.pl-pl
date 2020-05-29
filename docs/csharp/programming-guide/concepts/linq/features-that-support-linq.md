@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635798"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202411"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 
-W poniższej sekcji przedstawiono nowe konstrukcje języka wprowadzone w języku C# 3.0. Mimo że te nowe funkcje są używane w stopniu z zapytaniami LINQ, nie są one ograniczone do LINQ i mogą być używane w dowolnym kontekście, w którym można je znaleźć przydatne.
+W poniższej sekcji wprowadzono nowe konstrukcje języka wprowadzone w języku C# 3,0. Chociaż te nowe funkcje są używane do stopnia z zapytania LINQ, nie są ograniczone do LINQ i mogą być używane w dowolnym kontekście, w którym są użyteczne.
 
 ## <a name="query-expressions"></a>Wyrażenia kwerend
 
-Wyrażenia kwerend y używają składni deklaratywnej podobnej do SQL lub XQuery do wykonywania zapytań za pomocą kolekcji Numerowanych. W kompie czas składnia kwerendy jest konwertowany na wywołania metody do implementacji dostawcy LINQ standardowych metod rozszerzenia operatora kwerendy. Aplikacje kontrolują standardowe operatory zapytań, które znajdują się `using` w zakresie, określając odpowiedni obszar nazw za pomocą dyrektywy. Następujące wyrażenie kwerendy przyjmuje tablicę ciągów, grupuje je według pierwszego znaku w ciągu i porządkuje grupy.
+Wyrażenia zapytań używają składni deklaracyjnej podobnej do SQL lub XQuery w celu wykonywania zapytań na kolekcjach IEnumerable. W czasie kompilacji Składnia zapytania jest konwertowana na wywołania metody do implementacji dostawcy LINQ standardowych metod rozszerzenia operatora zapytania. Aplikacje kontrolują standardowe operatory zapytań, które znajdują się w zakresie przez określenie odpowiedniej przestrzeni nazw z `using` dyrektywą. Następujące wyrażenie zapytania pobiera tablicę ciągów, grupuje je według pierwszego znaku w ciągu i porządkuje grupy.
 
 ```csharp
 var query = from str in stringArray
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Aby uzyskać więcej informacji, zobacz [WYRAŻENIA ZAPytań LINQ](../../../linq/index.md).
+Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań LINQ](../../../linq/index.md).
 
-## <a name="implicitly-typed-variables-var"></a>Zmienne wpisane niejawnie (var)
+## <a name="implicitly-typed-variables-var"></a>Niejawnie wpisane zmienne (var)
 
-Zamiast jawnie określać typ podczas deklarowania i inicjowania zmiennej, można użyć modyfikatora [var,](../../../language-reference/keywords/var.md) aby poinstruować kompilator, aby wywnioskować i przypisać typ, jak pokazano poniżej:
+Zamiast jawnie określić typ podczas deklarowania i inicjowania zmiennej, można użyć modyfikatora [var](../../../language-reference/keywords/var.md) , aby nakazać kompilatorowi wywnioskowanie i przypisanie typu, jak pokazano poniżej:
 
 ```csharp
 var number = 5;
@@ -40,19 +40,19 @@ var query = from str in stringArray
             select str;
 ```
 
-Zmienne zadeklarowane `var` jako są tak samo silnie typizowane jako zmienne, których typ określa się jawnie. Użycie `var` umożliwia tworzenie typów anonimowych, ale może służyć tylko dla zmiennych lokalnych. Tablice mogą być również deklarowane z niejawnym wpisywaniem.
+Zmienne zadeklarowane jako `var` są równie silnie wpisywane jako zmienne, których typ określa się jawnie. Użycie systemu `var` umożliwia tworzenie typów anonimowych, ale może być używane tylko dla zmiennych lokalnych. Tablice mogą być również deklarowane przy użyciu niejawnego wpisywania.
 
-Aby uzyskać więcej informacji, zobacz [Niejawnie wpisane zmienne lokalne](../../classes-and-structs/implicitly-typed-local-variables.md).
+Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 ## <a name="object-and-collection-initializers"></a>Inicjatory obiektów i kolekcji
 
-Inicjatory obiektów i kolekcji umożliwiają inicjowanie obiektów bez jawnego wywoływania konstruktora dla obiektu. Inicjatory są zwykle używane w wyrażeniach kwerend, gdy projektują dane źródłowe do nowego typu danych. Zakładając, że `Customer` klasa `Name` `Phone` o nazwie public i właściwości, inicjatora obiektu może służyć jak w następującym kodzie:
+Inicjatory obiektów i kolekcji umożliwiają inicjowanie obiektów bez jawnego wywoływania konstruktora dla obiektu. Inicjatory są zwykle używane w wyrażeniach zapytań, gdy projektują dane źródłowe do nowego typu danych. Przy założeniu klasy o nazwie `Customer` z publiczną `Name` i `Phone` właściwością inicjatora obiektów można używać tak jak w poniższym kodzie:
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
-Kontynuując naszą `Customer` klasę, załóżmy, że `IncomingOrders`istnieje źródło danych o `OrderSize`nazwie , i że `Customer` dla każdego zamówienia z dużym , chcielibyśmy stworzyć nowy oparty na tej kolejności. Kwerenda LINQ mogą być wykonywane na tym źródle danych i używać inicjowania obiektu do wypełnienia kolekcji:
+Kontynuując pracę z naszą `Customer` klasą, Załóżmy, że istnieje źródło danych o nazwie `IncomingOrders` i że dla każdego zamówienia z dużą, chcemy `OrderSize` utworzyć nową wartość `Customer` na podstawie tej kolejności. Zapytanie LINQ można wykonać w tym źródle danych i użyć inicjalizacji obiektu do wypełnienia kolekcji:
 
 ```csharp
 var newLargeOrderCustomers = from o in IncomingOrders
@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-Źródło danych może mieć więcej właściwości leżących `Customer` pod `OrderSize`maską niż klasa, takich jak , ale z inicjowania obiektu, dane zwrócone z kwerendy jest formowane do żądanego typu danych; wybieramy dane, które są istotne dla naszej klasy. W rezultacie mamy teraz `IEnumerable` wypełnione nowym `Customer`s chcieliśmy. Powyższe można również zapisać w składni metody LINQ:
+Źródło danych może mieć więcej właściwości znajdujących się pod okapem niż `Customer` Klasa, taka jak `OrderSize` , ale z inicjalizacją obiektu, dane zwrócone z zapytania są Molded do żądanego typu danych. wybieramy dane, które są istotne dla naszej klasy. W związku z tym mamy teraz `IEnumerable` wypełnioną nową, `Customer` pożądaną nowością. Powyższe dane można także napisać w składni metody LINQ:
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
@@ -74,7 +74,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 ## <a name="anonymous-types"></a>Typy anonimowe
 
-Typ anonimowy jest konstruowany przez kompilator, a nazwa typu jest dostępna tylko dla kompilatora. Typy anonimowe zapewniają wygodny sposób grupowania zestawu właściwości tymczasowo w wyniku kwerendy bez konieczności definiowania oddzielnego typu o nazwie. Typy anonimowe są inicjowane z nowym wyrażeniem i inicjatorem obiektu, jak pokazano poniżej:
+Typ anonimowy jest konstruowany przez kompilator, a nazwa typu jest dostępna tylko dla kompilatora. Typy anonimowe umożliwiają wygodne grupowanie zestawu właściwości w wyniku zapytania, bez konieczności definiowania oddzielnego nazwanego typu. Typy anonimowe są inicjowane za pomocą nowego wyrażenia i inicjatora obiektów, jak pokazano poniżej:
 
 ```csharp
 select new {name = cust.Name, phone = cust.Phone};
@@ -82,24 +82,24 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../../classes-and-structs/anonymous-types.md).
 
-## <a name="extension-methods"></a>Metody rozszerzeń
+## <a name="extension-methods"></a>Metody rozszerzania
 
-Metoda rozszerzenia jest metodą statyczną, która może być skojarzona z typem, dzięki czemu może być wywoływana tak, jakby była metodą wystąpienia typu. Ta funkcja umożliwia, w efekcie, "dodawanie" nowych metod do istniejących typów bez ich modyfikowania. Standardowe operatory zapytań to zestaw metod rozszerzenia, które zapewniają funkcje kwerendy LINQ dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.
+Metoda rozszerzenia to metoda statyczna, która może być skojarzona z typem, tak aby można ją było wywołać tak, jakby była metodą wystąpienia w typie. Ta funkcja umożliwia, w efekcie, "dodać" nowe metody do istniejących typów bez ich faktycznego modyfikowania. Standardowe operatory zapytań to zestaw metod rozszerzających, które udostępniają funkcje zapytań LINQ dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601> .
 
-Aby uzyskać więcej informacji, zobacz [Metody rozszerzenia](../../classes-and-structs/extension-methods.md).
+Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Wyrażenia lambda
 
-Wyrażenie lambda jest funkcją inline, która używa => operatora do oddzielenia parametrów wejściowych od treści funkcji i może być konwertowane w czasie kompilacji do delegata lub drzewa wyrażeń. W programowaniu LINQ napotkasz wyrażenia lambda podczas wykonywania wywołań metody bezpośredniej do standardowych operatorów zapytań.
+Wyrażenie lambda jest funkcją wbudowaną, która używa operatora => do oddzielania parametrów wejściowych od treści funkcji i może być konwertowana w czasie kompilacji do delegata lub drzewa wyrażenia. W programowaniu LINQ, można napotkać wyrażenia lambda podczas wykonywania wywołań metody bezpośredniej do standardowych operatorów zapytań.
 
 Aby uzyskać więcej informacji, zobacz:
 
 - [Funkcje anonimowe](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Wyrażenia Lambda](../../statements-expressions-operators/lambda-expressions.md)
+- [Wyrażenia lambda](../../statements-expressions-operators/lambda-expressions.md)
 
 - [Drzewa wyrażeń (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Zapytanie zintegrowane z językiem (LINQ) (C#)](./index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)

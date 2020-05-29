@@ -3,12 +3,12 @@ title: gRPC
 description: Dowiedz się więcej na temat gRPC, jego roli w aplikacjach natywnych w chmurze i różnice między komunikacją HTTP RESTful.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614048"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201331"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -41,7 +41,7 @@ gRPC obejmuje technologię "open source" o nazwie [bufory protokołu](https://de
 
 Przy użyciu pliku proto, kompilatora protobuf, `protoc` program generuje kod klienta i usługi dla platformy docelowej. Kod zawiera następujące składniki:
 
-- Obiekty o jednoznacznie określonym typie, współużytkowane przez klienta i usługę, które reprezentują operacje usługi i elementy danych dla wiadomości.
+- Obiekty silnie wpisane, udostępnione przez klienta i usługę, które reprezentują operacje usługi i elementy danych dla wiadomości.
 - Klasa bazowa o jednoznacznie określonym typie z wymaganą siecią wodociągową, którą zdalna usługa gRPC może dziedziczyć i zwiększać.
 - Procedura wejścia klienta, która zawiera wymagane instalacje wodociągowe do wywołania zdalnej usługi gRPC.
 
@@ -83,7 +83,7 @@ Preferuj gRPC w następujących scenariuszach:
 
 W tej chwili ten zapis gRPC jest używany głównie z usługami zaplecza. Większość nowoczesnych przeglądarek nie może zapewnić poziomu kontroli protokołu HTTP/2 wymaganego do obsługi klienta frontonu gRPC. W ten sposób istnieje [wczesna inicjatywa](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , która umożliwia gRPC komunikację z aplikacjami opartymi na przeglądarce skompilowanymi przy użyciu technologii JavaScript lub Blazor. [GRPC-Web for .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) ASP.NET Core umożliwia aplikacji gRPC do obsługi funkcji gRPC w aplikacjach przeglądarki:
 
-- Klienci z jednoznacznie określonym kodem
+- Jednoznacznie wpisane, generowane przez kod klientów
 - Kompaktowe komunikaty protobuf
 - Przesyłanie strumieniowe serwera
 

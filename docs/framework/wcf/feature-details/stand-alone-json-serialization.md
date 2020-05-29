@@ -2,12 +2,12 @@
 title: Autonomiczna Serializacja kodu JSON przy użyciu Klasa DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144932"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202392"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Autonomiczna Serializacja kodu JSON przy użyciu Klasa DataContractJsonSerializer
 
@@ -189,7 +189,7 @@ Typy "element", takie jak <xref:System.Xml.Linq.XElement> są serializowane w po
 
 #### <a name="preserving-type-information"></a>Zachowanie informacji o typie
 
-Jak wspomniano wcześniej, polimorfizm jest obsługiwany w formacie JSON z pewnymi ograniczeniami. Język JavaScript jest nieprawidłowym typem języka i tożsamość typu nie jest zazwyczaj problemem. Jednak w przypadku korzystania z formatu JSON do komunikacji między systemem o jednoznacznie określonym typie (.NET) i niejednoznacznie określonym systemem (JavaScript) warto zachować tożsamość typu. Na przykład typy z nazwami kontraktu danych "Square" i "Circle" pochodzą od typu z nazwą kontraktu danych "Shape". Jeśli "okrąg" jest wysyłany z platformy .NET do języka JavaScript i później jest zwracany do metody .NET, która oczekuje "Shape", jest to przydatne w przypadku strony .NET, aby wiedzieć, że dany obiekt był pierwotnie "Circle" — w przeciwnym razie wszelkie informacje specyficzne dla typu pochodnego (na przykład "promień" elementu członkowskiego danych "Circle") mogą zostać utracone.
+Jak wspomniano wcześniej, polimorfizm jest obsługiwany w formacie JSON z pewnymi ograniczeniami. Język JavaScript jest nieprawidłowym typem języka i tożsamość typu nie jest zazwyczaj problemem. Jednak w przypadku korzystania z formatu JSON do komunikacji między systemem o jednoznacznie określonym typie (.NET) a niejednoznacznie określonym systemem (JavaScript) warto zachować tożsamość typu. Na przykład typy z nazwami kontraktu danych "Square" i "Circle" pochodzą od typu z nazwą kontraktu danych "Shape". Jeśli "okrąg" jest wysyłany z platformy .NET do języka JavaScript i później jest zwracany do metody .NET, która oczekuje "Shape", jest to przydatne w przypadku strony .NET, aby wiedzieć, że dany obiekt był pierwotnie "Circle" — w przeciwnym razie wszelkie informacje specyficzne dla typu pochodnego (na przykład "promień" elementu członkowskiego danych "Circle") mogą zostać utracone.
 
 Aby zachować tożsamość typu, podczas serializowania typów złożonych do notacji JSON można dodać "wskazówkę typu", a Deserializator rozpoznaje wskazówkę i odpowiednio działa. "Wskazówka dotycząca typu" to para klucza/wartości JSON z nazwą klucza " \_ \_ Type" (dwa podkreślenia, po których następuje słowo "Type"). Wartość jest ciągiem JSON o postaci "DataContractName: DataContractNamespace" (wszystkie elementy do pierwszego dwukropka to nazwa). Przy użyciu wcześniejszego przykładu "okrąg" można serializować w następujący sposób.
 
@@ -229,7 +229,7 @@ Nie istnieje sposób emisji wskazówki typu dla typów niezłożonych. Na przyk�
 
 Wskazówki dotyczące typów mogą znacząco zwiększyć rozmiar wiadomości (jednym ze sposobów na ograniczenie tego problemu jest użycie krótszych przestrzeni nazw kontraktu danych, jeśli jest to możliwe). W związku z tym następujące reguły określają, czy wskazówki dotyczące typu są emitowane:
 
-- Gdy jest używany ASP.NET AJAX, wskazówki typu są zawsze emitowane w miarę możliwości, nawet jeśli nie istnieje przypisanie podstawowe/pochodne — na przykład nawet wtedy, gdy okrąg jest przypisany do okręgu. (Jest to wymagane, aby w pełni włączyć proces wywoływania z słabego typu środowiska JSON w środowisku .NET o jednoznacznie określonym typie, bez zaskakujące utraty informacji).
+- Gdy jest używany ASP.NET AJAX, wskazówki typu są zawsze emitowane w miarę możliwości, nawet jeśli nie istnieje przypisanie podstawowe/pochodne — na przykład nawet wtedy, gdy okrąg jest przypisany do okręgu. (Jest to wymagane, aby w pełni włączyć proces wywoływania z słabego typu środowiska JSON w środowisku platformy .NET o jednoznacznie określonym typie bez zaskakujące utraty informacji).
 
 - Gdy korzystasz z usług AJAX z integracją ASP.NET, wskazówki dotyczące typów są emitowane tylko wtedy, gdy istnieje przypisanie podstawowe/pochodne — to jest generowane, gdy okrąg jest przypisywany do kształtu lub, <xref:System.Object> ale nie w przypadku przypisywania do okręgu. Zapewnia to minimalne informacje wymagane do poprawnego zaimplementowania klienta języka JavaScript, a tym samym zwiększenie wydajności, ale nie chroni przed utratą informacji typu w niewłaściwie zaprojektowanych klientach. Należy unikać przypisywania podstawowego/pochodnego całkowicie na serwerze, jeśli chcesz uniknąć tego problemu na kliencie.
 

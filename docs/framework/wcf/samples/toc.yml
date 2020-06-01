@@ -454,7 +454,7 @@
         - name: Przykłady rozszerzania syndykacji
           href: syndication-extensibility-samples.md
           items:
-            - name: Rozszerzenia z silną kontrolą typów
+            - name: Rozszerzenia z jednoznacznie określonym typem
               href: strongly-typed-extensions-sample.md
             - name: Program formatujący kanału informacyjnego (format JSON)
               href: feed-formatter-json.md

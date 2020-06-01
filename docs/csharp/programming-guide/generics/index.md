@@ -1,47 +1,47 @@
 ---
-title: Generics - Przewodnik programowania Języka C#
+title: Typy ogólne — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: c7252180c9c98a8ca99c8cc6b3faaf8b1b8f0749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3ed3aa412c7d9c9d6b705dba80b527057c647fa
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167495"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241672"
 ---
 # <a name="generics-c-programming-guide"></a>Typy ogólne (Przewodnik programowania w języku C#)
 
-Rodzajowe wprowadzić pojęcie parametrów typu do .NET Framework, które umożliwiają projektowanie klas i metod, które odroczyć specyfikację jednego lub więcej typów, dopóki klasa lub metoda jest zadeklarowana i tworzone przez kod klienta. Na przykład za pomocą parametru `T`typu ogólnego, można napisać jedną klasę, której można użyć inny kod klienta bez ponoszenia kosztów lub ryzyka rzutowania w czasie wykonywania lub operacji bokserskich, jak pokazano poniżej:
+Typy ogólne wprowadzają koncepcję parametrów typu do platformy .NET, co pozwala na projektowanie klas i metod, które opóźniają specyfikację jednego lub więcej typów do momentu zadeklarowania klasy lub metody jako wystąpienia przez kod klienta. Na przykład przy użyciu parametru typu ogólnego można `T` napisać pojedynczą klasę, która może być używana przez inny kod klienta bez ponoszenia kosztów lub ryzyka rzutowania w czasie wykonywania lub operacji pakowania, jak pokazano poniżej:
 
 [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]
 
-Ogólne klasy i metody łączą możliwości ponownego użycia, bezpieczeństwo typów i wydajność w sposób, który nie może być ich odpowiednikami nierodzajowymi. Rodzajowe są najczęściej używane z kolekcji i metod, które działają na nich. Obszar <xref:System.Collections.Generic> nazw zawiera kilka klas kolekcji ogólnej. Kolekcje nierodzajowe, <xref:System.Collections.ArrayList> takie jak nie są zalecane i są obsługiwane do celów zgodności. Aby uzyskać więcej informacji, zobacz [Generykwi w .NET](../../../standard/generics/index.md).
+Klasy generyczne i metody łączą użyteczność, bezpieczeństwo typów i wydajność w taki sposób, że ich nieogólnymi odpowiednikami nie jest. Typy ogólne są najczęściej używane z kolekcjami i metodami, które działają na nich. <xref:System.Collections.Generic>Przestrzeń nazw zawiera kilka rodzajowych klas kolekcji. Kolekcje inne niż ogólne, takie jak <xref:System.Collections.ArrayList> nie są zalecane i są obsługiwane w celu zapewnienia zgodności. Aby uzyskać więcej informacji, zobacz [typy ogólne w programie .NET](../../../standard/generics/index.md).
 
-Oczywiście można również utworzyć niestandardowe typy ogólne i metody, aby zapewnić własne uogólnione rozwiązania i wzorce projektowe, które są bezpieczne dla typu i wydajne. W poniższym przykładzie kodu przedstawiono prostą klasę ogólnej listy połączonej do celów demonstracyjnych. (W większości przypadków należy <xref:System.Collections.Generic.List%601> użyć klasy dostarczonej przez bibliotekę klas .NET Framework zamiast tworzyć własne). Parametr `T` type jest używany w kilku lokalizacjach, w których typ betonu zwykle używany do wskazania typu elementu przechowywanego na liście. Jest on używany w następujący sposób:
+Oczywiście można również tworzyć niestandardowe typy ogólne i metody w celu udostępniania własnych uogólnionych rozwiązań i wzorców projektowych, które są bezpieczne i wydajne. Poniższy przykład kodu pokazuje prostą ogólną klasę listy połączonej w celach demonstracyjnych. (W większości przypadków należy użyć <xref:System.Collections.Generic.List%601> klasy dostarczonej przez platformę .NET zamiast tworzenia własnych). Parametr typu `T` jest używany w kilku lokalizacjach, w których konkretny typ jest zwykle używany do wskazania typu elementu przechowywanego na liście. Jest on używany w następujący sposób:
 
-- Jako typ parametru metody `AddHead` w metodzie.
-- Jako typ zwracany `Data` właściwości w `Node` klasie zagnieżdżonej.
-- Jako typ członka prywatnego `data` w klasie zagnieżdżonej.
+- Jako typ parametru metody w `AddHead` metodzie.
+- Jako zwracany typ `Data` właściwości w klasie zagnieżdżonej `Node` .
+- Jako typ prywatnego elementu członkowskiego `data` w klasie zagnieżdżonej.
 
- Należy `T` zauważyć, że jest `Node` dostępna dla klasy zagnieżdżonej. Gdy `GenericList<T>` jest tworzony z rodzaju betonu, `GenericList<int>`na przykład `T` jako , `int`każde wystąpienie zostanie zastąpione .
+ Należy pamiętać, że `T` jest ona dostępna dla klasy zagnieżdżonej `Node` . Gdy `GenericList<T>` jest tworzona przy użyciu konkretnego typu, na przykład jako `GenericList<int>` , każde wystąpienie `T` zostanie zastąpione `int` .
 
 [!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)]
 
-W poniższym przykładzie kodu pokazano, jak kod klienta używa klasy ogólnej `GenericList<T>` do tworzenia listy liczb całkowitych. Po prostu zmieniając argument typu, następujący kod można łatwo zmodyfikować, aby utworzyć listy ciągów lub innego typu niestandardowego:
+Poniższy przykład kodu pokazuje, jak kod klienta używa klasy generycznej `GenericList<T>` do tworzenia listy liczb całkowitych. Po prostu poprzez zmianę argumentu typu można łatwo zmodyfikować następujący kod w celu utworzenia list ciągów lub dowolnego innego typu niestandardowego:
 
 [!code-csharp[csProgGuideGenerics#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#3)]
 
-## <a name="generics-overview"></a>Ogólny przegląd
+## <a name="generics-overview"></a>Ogólne — przegląd
 
-- Użyj typów ogólnych, aby zmaksymalizować ponowne użycie kodu, bezpieczeństwo typów i wydajność.
-- Najczęstszym zastosowaniem typów ogólnych jest tworzenie klas kolekcji.
-- Biblioteka klas .NET Framework zawiera kilka nowych <xref:System.Collections.Generic> klas kolekcji rodzajowych w obszarze nazw. Powinny one być używane, gdy jest <xref:System.Collections.ArrayList> to <xref:System.Collections> możliwe, zamiast klas, takich jak w przestrzeni nazw.
-- Można utworzyć własne interfejsy ogólne, klasy, metody, zdarzenia i delegatów.
-- Klasy ogólne mogą być ograniczone, aby umożliwić dostęp do metod dla określonych typów danych.
-- Informacje o typach, które są używane w typie danych ogólnych można uzyskać w czasie wykonywania przy użyciu odbicia.
+- Używaj typów ogólnych do maksymalizowania ponownego użycia kodu, bezpieczeństwa typów i wydajności.
+- Typowym zastosowaniem typów ogólnych jest utworzenie klas kolekcji.
+- Biblioteka klas .NET zawiera kilka ogólnych klas kolekcji w <xref:System.Collections.Generic> przestrzeni nazw. Powinny one być używane w miarę możliwości zamiast klas takich jak <xref:System.Collections.ArrayList> w <xref:System.Collections> przestrzeni nazw.
+- Można tworzyć własne interfejsy, klasy, metody, zdarzenia i Delegaty.
+- Klasy generyczne mogą być ograniczone, aby umożliwić dostęp do metod dla konkretnych typów danych.
+- Informacje na temat typów, które są używane w ogólnym typie danych, można uzyskać w czasie wykonywania przy użyciu odbicia.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
@@ -62,8 +62,8 @@ Aby uzyskać więcej informacji, zobacz [Specyfikacja języka C#](~/_csharplang/
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic>
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Typy](../types/index.md)
-- [\<>typuparam](../xmldoc/typeparam.md)
-- [\<typparamref>](../xmldoc/typeparamref.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Typy ogólne w .NET](../../../standard/generics/index.md)

@@ -1,20 +1,20 @@
 ---
-title: Jak czytać plik tekstowy po jednym wierszu naraz - Przewodnik programowania C#
+title: Jak czytać plik tekstowy jeden wiersz w przewodniku programowania w języku C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: e4a9ba2da2548991f442c2f5ab09d39243137875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167520"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241776"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Jak czytać plik tekstowy po jednym wierszu naraz (Przewodnik programowania C#)
-W tym przykładzie odczytuje zawartość pliku tekstowego, jeden wiersz na `ReadLine` raz, `StreamReader` do ciągu przy użyciu metody klasy. Każdy wiersz tekstu jest `line` zapisywany w ciągu i wyświetlany na ekranie.  
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Jak czytać plik tekstowy po jednym wierszu (Przewodnik programowania w języku C#)
+Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz naraz, do ciągu przy użyciu `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlany na ekranie.  
   
 ## <a name="example"></a>Przykład  
   
@@ -38,7 +38,7 @@ System.Console.ReadLine();
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj kod i `Main` wklej go do metody aplikacji konsoli.  
+ Skopiuj kod i wklej go do `Main` metody aplikacji konsolowej.  
   
  Zamień `"c:\test.txt"` na rzeczywistą nazwę pliku.  
   
@@ -47,11 +47,11 @@ System.Console.ReadLine();
   
 - Plik może nie istnieć.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `myFile.cs` może nie być plikiem źródłowym Języka C#.  
+## <a name="net-security"></a>Zabezpieczenia platformy .NET  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `myFile.cs` nie może być plikiem źródłowym języka C#.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [System plików i rejestr (Przewodnik programowania w języku C#)](./index.md)

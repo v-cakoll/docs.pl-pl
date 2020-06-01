@@ -2,12 +2,12 @@
 title: Kolekcje (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201134"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241399"
 ---
 # <a name="collections-c"></a>Kolekcje (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Rodzaje kolekcji
 
-.NET Framework udostępnia wiele popularnych kolekcji. Każdy typ kolekcji jest przeznaczony do określonego celu.
+Platforma .NET udostępnia wiele popularnych kolekcji. Każdy typ kolekcji jest przeznaczony do określonego celu.
 
 Niektóre popularne klasy kolekcji zostały opisane w tej sekcji:
 
@@ -214,7 +214,7 @@ Aby uzyskać dodatkowe informacje, zobacz [często używane typy kolekcji](../..
 
 ### <a name="systemcollectionsconcurrent-classes"></a>Klasy System. Collections. współbieżne
 
-W .NET Framework 4 lub nowszej kolekcje w <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają wydajne, bezpieczne dla wątków operacje umożliwiające dostęp do elementów kolekcji z wielu wątków.
+W .NET Framework 4 i nowszych wersjach kolekcje w <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają wydajne, bezpieczne dla wątków operacje umożliwiające dostęp do elementów kolekcji z wielu wątków.
 
 Klasy w <xref:System.Collections.Concurrent> przestrzeni nazw powinny być używane zamiast odpowiednich typów w <xref:System.Collections.Generic?displayProperty=nameWithType> <xref:System.Collections?displayProperty=nameWithType> przestrzeniach nazw i za każdym razem, gdy wiele wątków uzyskuje dostęp do kolekcji współbieżnie. Aby uzyskać więcej informacji, zobacz [kolekcje bezpieczne dla wątków](../../../standard/collections/thread-safe/index.md) i <xref:System.Collections.Concurrent> .
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 Kolekcję można zdefiniować przez implementację <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerable> interfejsu lub.
 
-Chociaż można zdefiniować kolekcję niestandardową, zazwyczaj lepiej jest używać kolekcji, które znajdują się w .NET Framework, które są opisane w [typach kolekcji](#BKMK_KindsOfCollections) wcześniej w tym temacie.
+Chociaż można zdefiniować kolekcję niestandardową, zazwyczaj lepiej jest używać kolekcji zawartych w programie .NET, które są opisane w [rodzaju kolekcje](#BKMK_KindsOfCollections) wcześniej w tym artykule.
 
 W poniższym przykładzie zdefiniowano klasę kolekcji niestandardowej o nazwie `AllColors` . Ta klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga, aby <xref:System.Collections.IEnumerable.GetEnumerator%2A> Metoda została zaimplementowana.
 
@@ -596,7 +596,7 @@ private static IEnumerable<int> EvenSequence(
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Inicjatory obiektów i kolekcji](../classes-and-structs/object-and-collection-initializers.md)
 - [Koncepcje programowania (C#)](./index.md)

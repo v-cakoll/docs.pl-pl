@@ -9,28 +9,28 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337259"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241659"
 ---
 # <a name="c-programming-guide"></a>Przewodnik programowania w języku C#
 
-Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka Języka C# i funkcje dostępne dla języka C# za pośrednictwem .NET Framework.  
+Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka C# i funkcji dostępnych dla języka C# za poorednictwem platformy .NET.  
   
- Większość z tej sekcji zakłada, że już wiesz coś o Języku C# i ogólne koncepcje programowania. Jeśli jesteś początkującym początkującym z programowaniem lub z C#, możesz odwiedzić [wprowadzenie do samouczków języka C#](../tutorials/intro-to-csharp/index.md) lub [samouczka .NET w przeglądarce,](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
+ W większości tej sekcji przyjęto założenie, że znasz już coś o języku C# i ogólnych pojęciach związanych z programowaniem. Jeśli jesteś kompletnym początkującym programowaniem lub przy użyciu języka C#, możesz chcieć odwiedzić [wprowadzenie do samouczków języka C#](../tutorials/intro-to-csharp/index.md) lub [samouczka platformy .NET w przeglądarce](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
   
- Aby uzyskać informacje na temat określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz [C# Odwołanie](../language-reference/index.md). For information about the C# Language Specification, see [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Aby uzyskać informacje o określonych słowach kluczowych, operatorach i dyrektywach preprocesora, zobacz [Dokumentacja języka C#](../language-reference/index.md). Aby uzyskać informacje na temat specyfikacji języka C#, zobacz [Specyfikacja języka c#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
-[Konstrukcja programu C#](./inside-a-program/index.md)  
+[Wewnątrz programu C#](./inside-a-program/index.md)  
   
-[Main() i argumenty wiersza polecenia](./main-and-command-args/index.md)  
+[Main () i argumenty wiersza polecenia](./main-and-command-args/index.md)  
 
-## <a name="language-sections"></a>Sekcje językowe
+## <a name="language-sections"></a>Sekcje języka
 
 [Instrukcje, wyrażenia i operatory](./statements-expressions-operators/index.md)  
 
@@ -40,7 +40,7 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka J
   
  [Interfejsy](./interfaces/index.md)  
 
- [Delegaty](./delegates/index.md)  
+ [Delegaci](./delegates/index.md)  
 
  [Tablice](./arrays/index.md)  
   
@@ -48,7 +48,7 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka J
   
  [Właściwości](./classes-and-structs/properties.md)  
   
- [Indexers](./indexers/index.md) (Indeksatory)  
+ [Indeksatory](./indexers/index.md)  
   
  [Zdarzenia](./events/index.md)  
   
@@ -56,15 +56,15 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka J
   
  [Iteratory](./concepts/iterators.md)
   
- [Wyrażenia zapytań LINQ](../linq/index.md)  
+ [Wyrażenia zapytania LINQ](../linq/index.md)  
   
- [Wyrażenia Lambda](./statements-expressions-operators/lambda-expressions.md)  
+ [Wyrażenia lambda](./statements-expressions-operators/lambda-expressions.md)  
   
  [Przestrzenie nazw](./namespaces/index.md)  
   
  [Niebezpieczny kod i wskaźniki](./unsafe-code-pointers/index.md)  
   
- [Komentarze dotyczące dokumentacji XML](./xmldoc/index.md)  
+ [Komentarze dokumentacji XML](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Sekcje platformy
 
@@ -86,4 +86,4 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka J
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Odwołanie do języka C#](../language-reference/index.md)
+- [Odwołanie w C#](../language-reference/index.md)

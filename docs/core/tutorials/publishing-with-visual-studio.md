@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005116"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241500"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core za pomocą programu Visual Studio
 
@@ -59,25 +59,25 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    W miarę wyświetlania obrazu opublikowane dane wyjściowe zawierają następujące pliki:
 
-      * *HelloWorld. deps. JSON*
+   * *HelloWorld. deps. JSON*
 
-         Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+      Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-      * *HelloWorld. dll*
+   * *HelloWorld. dll*
 
-         Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia.
+      Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia. Ta metoda uruchamiania aplikacji działa na dowolnej platformie, na której zainstalowano środowisko uruchomieniowe platformy .NET Core.
 
-      * *HelloWorld. exe*
+   * *HelloWorld. exe*
 
-         Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Aby uruchomić tę opcję, wprowadź `HelloWorld.exe` w wierszu polecenia.
+      Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Aby uruchomić tę opcję, wprowadź `HelloWorld.exe` w wierszu polecenia. Plik działa w systemie operacyjnym.
 
-      * *HelloWorld. pdb* (opcjonalnie dla wdrożenia)
+   * *HelloWorld. pdb* (opcjonalnie dla wdrożenia)
 
-         Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
+      Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
 
-      * *HelloWorld. runtimeconfig. JSON*
+   * *HelloWorld. runtimeconfig. JSON*
 
-         To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
+      To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="run-the-published-app"></a>Uruchom opublikowaną aplikację
 
@@ -91,17 +91,17 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
 1. Uruchom aplikację przy użyciu pliku wykonywalnego:
 
-   1. Wprowadź `HelloWorld.exe` i naciśnij klawisz ENTER.
+   1. Wprowadź `HelloWorld.exe` i naciśnij klawisz <kbd>Enter</kbd>.
 
    1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
 
 1. Uruchom aplikację za pomocą `dotnet` polecenia:
 
-   1. Wprowadź `dotnet HelloWorld.dll` i naciśnij klawisz ENTER.
+   1. Wprowadź `dotnet HelloWorld.dll` i naciśnij klawisz <kbd>Enter</kbd>.
 
    1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - [Wdrażanie aplikacji .NET Core](../deploying/index.md)
 

@@ -1,23 +1,23 @@
 ---
-title: 'Iterate przez kolekcje w C #'
+title: 'Iterowanie za poorednictwem kolekcji w języku C #'
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626273"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240697"
 ---
-# <a name="iterators-c"></a>Iterytory (C#)
+# <a name="iterators-c"></a>Iteratory (C#)
 
-*Iterator* może służyć do kroku kolekcji, takich jak listy i tablice.
+*Iterator* może służyć do przechodzenia między kolekcjami, takimi jak listy i tablice.
 
-Metoda iterator `get` lub akcesor wykonuje niestandardowe iteracji za pomocą kolekcji. Metoda iterator używa [yield return](../../language-reference/keywords/yield.md) instrukcji do zwrócenia każdego elementu po jednym na raz. Po `yield return` osiągnięciu instrukcji zostanie zapamiętana bieżąca lokalizacja w kodzie. Wykonywanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji sterująca.
+Metoda iteratora lub `get` akcesor wykonuje niestandardową iterację w kolekcji. Metoda iterator używa instrukcji [yield return](../../language-reference/keywords/yield.md) , aby zwrócić każdy element po jednym naraz. Po `yield return` osiągnięciu instrukcji zostanie zapamiętana bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.
 
-Użyj iterator z kodu klienta przy użyciu [foreach](../../language-reference/keywords/foreach-in.md) instrukcji lub przy użyciu kwerendy LINQ.
+Iterator z kodu klienta jest używany przy użyciu instrukcji [foreach](../../language-reference/keywords/foreach-in.md) lub zapytania LINQ.
 
-W poniższym przykładzie pierwsza iteracja `foreach` pętli powoduje wykonanie, `SomeNumbers` aby kontynuować w metodzie iteratorem, aż do osiągnięcia pierwszej `yield return` instrukcji. Ta iteracja zwraca wartość 3, a bieżąca lokalizacja w metodzie iteratorem jest zachowywana. W następnej iteracji pętli wykonanie w metodzie iteratorem jest kontynuowane od miejsca, `yield return` w którym zostało wyłączone, ponownie zatrzymując się po osiągnięciu instrukcji. Ta iteracja zwraca wartość 5, a bieżąca lokalizacja w metodzie iteratorem jest ponownie zachowywana. Pętla kończy się po osiągnięciu końca metody iterator.
+W poniższym przykładzie pierwsza iteracja pętli powoduje, że `foreach` wykonywanie jest wykonywane w `SomeNumbers` metodzie iteratora do momentu `yield return` osiągnięcia pierwszej instrukcji. Ta iteracja zwraca wartość 3, a bieżąca lokalizacja w metodzie iteratora jest zachowywana. W następnej iteracji pętli wykonywanie w metodzie iteratora jest kontynuowane od miejsca, w którym została pozostawiona, po osiągnięciu `yield return` instrukcji. Ta iteracja zwraca wartość 5, a bieżąca lokalizacja w metodzie iteratora jest zachowywana ponownie. Pętla kończy się, gdy zostanie osiągnięty koniec metody iteratora.
 
 ```csharp
 static void Main()
@@ -38,16 +38,16 @@ public static System.Collections.IEnumerable SomeNumbers()
 }
 ```
 
-Zwracany typ metody iteratorego `get` lub <xref:System.Collections.IEnumerable>akcesora może być , <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, lub <xref:System.Collections.Generic.IEnumerator%601>.
+Typem zwracanym metody iteratora lub `get` akcesora może być <xref:System.Collections.IEnumerable> , <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Collections.IEnumerator> , lub <xref:System.Collections.Generic.IEnumerator%601> .
 
-Można użyć `yield break` instrukcji, aby zakończyć iterację.
+Możesz użyć instrukcji, `yield break` Aby zakończyć iterację.
 
 > [!NOTE]
-> Dla wszystkich przykładów w tym temacie z wyjątkiem prostego iterator przykład, obejmują [przy użyciu](../../language-reference/keywords/using-directive.md) dyrektyw dla `System.Collections` i `System.Collections.Generic` przestrzeni nazw.
+> We wszystkich przykładach w tym temacie oprócz prostego przykładu iteratora [using](../../language-reference/keywords/using-directive.md) należy uwzględnić dyrektywy using `System.Collections` dla `System.Collections.Generic` przestrzeni nazw i.
 
-## <a name="simple-iterator"></a>Prosty iterator
+## <a name="simple-iterator"></a>Iterator prosty
 
-Poniższy przykład ma `yield return` jedną instrukcję, która znajduje się wewnątrz [for](../../language-reference/keywords/for.md) pętli. W `Main`, każda iteracja treści `foreach` instrukcji tworzy wywołanie funkcji iterator, `yield return` która przechodzi do następnej instrukcji.
+Poniższy przykład zawiera pojedynczą `yield return` instrukcję, która znajduje się wewnątrz pętli [for](../../language-reference/keywords/for.md) . W programie `Main` każda iteracja `foreach` treści instrukcji tworzy wywołanie funkcji iteratora, która przechodzi do następnej `yield return` instrukcji.
 
 ```csharp
 static void Main()
@@ -76,9 +76,9 @@ public static System.Collections.Generic.IEnumerable<int>
 
 ## <a name="creating-a-collection-class"></a>Tworzenie klasy kolekcji
 
-W poniższym `DaysOfTheWeek` przykładzie klasa implementuje <xref:System.Collections.IEnumerable> interfejs, <xref:System.Collections.IEnumerable.GetEnumerator%2A> który wymaga metody. Kompilator niejawnie wywołuje `GetEnumerator` metodę, która zwraca . <xref:System.Collections.IEnumerator>
+W poniższym przykładzie `DaysOfTheWeek` Klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody. Kompilator niejawnie wywołuje `GetEnumerator` metodę, która zwraca <xref:System.Collections.IEnumerator> .
 
-Metoda `GetEnumerator` zwraca każdy ciąg jeden na `yield return` raz przy użyciu instrukcji.
+`GetEnumerator`Metoda zwraca każdy ciąg pojedynczo przy użyciu `yield return` instrukcji.
 
 ```csharp
 static void Main()
@@ -110,7 +110,7 @@ public class DaysOfTheWeek : IEnumerable
 
 Poniższy przykład tworzy `Zoo` klasę, która zawiera kolekcję zwierząt.
 
-Instrukcja, `foreach` która odwołuje się`theZoo`do wystąpienia klasy `GetEnumerator` ( ) niejawnie wywołuje metodę. Instrukcje, `foreach` które odwołują `Birds` się do i `Mammals` właściwości użyć `AnimalsForType` metody o nazwie iterator.
+`foreach`Instrukcja odwołująca się do wystąpienia klasy ( `theZoo` ) niejawnie wywołuje `GetEnumerator` metodę. `foreach`Instrukcje odwołujące się do `Birds` `Mammals` właściwości i używają `AnimalsForType` nazwanego metody iteratora.
 
 ```csharp
 static void Main()
@@ -204,15 +204,15 @@ public class Zoo : IEnumerable
 }
 ```
 
-## <a name="using-iterators-with-a-generic-list"></a>Korzystanie z iteratorów z listą ogólną
+## <a name="using-iterators-with-a-generic-list"></a>Używanie iteratorów z listą ogólną
 
-W poniższym przykładzie <xref:System.Collections.Generic.Stack%601> klasy ogólnej <xref:System.Collections.Generic.IEnumerable%601> implementuje interfejs ogólny. Metoda <xref:System.Collections.Generic.Stack%601.Push%2A> przypisuje wartości do tablicy `T`typu . Metoda <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> zwraca wartości tablicy `yield return` przy użyciu instrukcji.
+W poniższym przykładzie <xref:System.Collections.Generic.Stack%601> Klasa generyczna implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejs generyczny. <xref:System.Collections.Generic.Stack%601.Push%2A>Metoda przypisuje wartości do tablicy typu `T` . <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>Metoda zwraca wartości tablicy przy użyciu `yield return` instrukcji.
 
-Oprócz metody ogólnej <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> należy również <xref:System.Collections.IEnumerable.GetEnumerator%2A> wdrożyć metodę nierodzajową. Dzieje się <xref:System.Collections.Generic.IEnumerable%601> tak, <xref:System.Collections.IEnumerable>ponieważ dziedziczy z . Implementacja nierodzajowa odracza implementację ogólne.
+Oprócz <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> metody ogólnej <xref:System.Collections.IEnumerable.GetEnumerator%2A> należy również zaimplementować metodę nierodzajową. Wynika to z faktu, że <xref:System.Collections.Generic.IEnumerable%601> dziedziczy z <xref:System.Collections.IEnumerable> . Implementacja nieogólna odłożenia do ogólnej implementacji.
 
-W przykładzie używa nazwanych iteratorów do obsługi różnych sposobów iteracji za pośrednictwem tego samego zbierania danych. Te nazwane iteratory są `TopToBottom` `BottomToTop` i właściwości i `TopN` metody.
+W przykładzie używa się nazwanych iteratorów do obsługi różnych sposobów iterowania za pośrednictwem tej samej kolekcji danych. Te nazwane Iteratory to `TopToBottom` właściwości i i `BottomToTop` `TopN` Metoda.
 
-Właściwość `BottomToTop` używa iteratorem `get` w akcesorze.
+`BottomToTop`Właściwość używa iteratora w `get` metodzie dostępu.
 
 ```csharp
 static void Main()
@@ -320,39 +320,39 @@ public class Stack<T> : IEnumerable<T>
 }
 ```
 
-## <a name="syntax-information"></a>Informacje składni
+## <a name="syntax-information"></a>Informacje o składni
 
-Iterator może wystąpić jako `get` metoda lub akcesor. Iteratora nie może wystąpić w przypadku, konstruktora wystąpienia, konstruktora statycznego lub statycznego finalizatora.
+Iterator może wystąpić jako metoda lub `get` akcesor. Iterator nie może wystąpić w zdarzeniu, konstruktorze wystąpienia, konstruktorze statycznym lub niestatycznego finalizatora.
 
-Konwersja niejawna musi istnieć `yield return` od typu wyrażenia `IEnumerable<T>` w instrukcji do argumentu typu dla zwracanego przez iterator.
+Niejawna konwersja musi istnieć z typu wyrażenia w `yield return` instrukcji do argumentu typu `IEnumerable<T>` zwracanego przez iterator.
 
-W języku C#, metoda iterator nie może mieć żadnych `in`, `ref`lub `out` parametry.
+W języku C# Metoda iteratora nie może mieć `in` żadnych `ref` parametrów,, ani `out` .
 
-W języku `yield` C#, nie jest słowem zastrzeżonym `return` i `break` ma specjalne znaczenie tylko wtedy, gdy jest używany przed lub słowa kluczowego.
+W języku C#, `yield` nie jest słowem zastrzeżonym i ma specjalne znaczenie tylko wtedy, gdy jest używany `return` przed `break` słowem kluczowym or.
 
 ## <a name="technical-implementation"></a>Realizacja techniczna
 
-Mimo że piszesz sterujące jako metodę, kompilator tłumaczy go na zagnieżdżoną klasę, która jest w rzeczywistości maszyną stanu. Ta klasa śledzi położenie iterator tak długo, jak pętla `foreach` w kodzie klienta trwa.
+Chociaż należy napisać iterator jako metodę, kompilator tłumaczy go na zagnieżdżoną klasę, która jest, w efekcie, komputera stanu. Ta klasa śledzi pozycję iteratora, tak długo `foreach` Pętla w kodzie klienta jest kontynuowana.
 
-Aby zobaczyć, co robi kompilator, można użyć narzędzia Ildasm.exe, aby wyświetlić kod języka pośredniego firmy Microsoft, który jest generowany dla metody iteratora.
+Aby zobaczyć, co robi kompilator, możesz użyć narzędzia Ildasm. exe, aby wyświetlić kod języka pośredniego firmy Microsoft, który został wygenerowany dla metody iteratora.
 
-Podczas tworzenia iteratora dla [klasy](../../language-reference/keywords/class.md) lub [struktury](../../language-reference/builtin-types/struct.md)nie trzeba implementować <xref:System.Collections.IEnumerator> całego interfejsu. Gdy kompilator wykryje iterator, automatycznie `Current`generuje `MoveNext`, `Dispose` i metody <xref:System.Collections.IEnumerator> <xref:System.Collections.Generic.IEnumerator%601> lub interfejsu.
+Podczas tworzenia iteratora dla [klasy](../../language-reference/keywords/class.md) lub [struktury](../../language-reference/builtin-types/struct.md)nie trzeba implementować całego <xref:System.Collections.IEnumerator> interfejsu. Gdy kompilator wykryje iterator, automatycznie generuje `Current` `MoveNext` metody,, i `Dispose` <xref:System.Collections.IEnumerator> <xref:System.Collections.Generic.IEnumerator%601> interfejsu.
 
-Przy każdej kolejnej `foreach` iteracji pętli (lub `IEnumerator.MoveNext`bezpośredniego wywołania ), następna treść `yield return` kodu iteratora zostanie wznowiona po poprzedniej instrukcji. Następnie kontynuuje do `yield return` następnej instrukcji do końca treści iteratości zostanie `yield break` osiągnięty lub do momentu napotkania instrukcji.
+Dla każdej kolejnej iteracji `foreach` pętli (lub bezpośredniego wywołania do `IEnumerator.MoveNext` ) Następna treść kodu iteratora zostanie wznowiona po poprzedniej `yield return` instrukcji. Następnie przechodzi do następnej `yield return` instrukcji do momentu osiągnięcia końca treści iteratora lub do momentu `yield break` napotkania instrukcji.
 
-Iteratory nie obsługują <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> metody. Aby powtórzyć od samego początku, należy uzyskać nowy iterator. Wywołanie <xref:System.Collections.IEnumerator.Reset%2A> iterator zwrócony metodą iteratorem <xref:System.NotSupportedException>wyrzuca .
+Iteratory nie obsługują <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> metody. Aby wykonać ponowną iterację od początku, należy uzyskać nowy iterator. Wywołanie <xref:System.Collections.IEnumerator.Reset%2A> iteratora zwróconego przez metodę iteratora generuje <xref:System.NotSupportedException> .
 
-For additional information, see the [C# Language Specification](~/_csharplang/spec/classes.md#iterators).
+Aby uzyskać dodatkowe informacje, zobacz [specyfikację języka C#](~/_csharplang/spec/classes.md#iterators).
 
-## <a name="use-of-iterators"></a>Korzystanie z iteratorów
+## <a name="use-of-iterators"></a>Użycie iteratorów
 
-Iteratory umożliwiają zachowanie prostoty `foreach` pętli, gdy trzeba użyć złożonego kodu do wypełnienia sekwencji listy. Może to być przydatne, gdy chcesz wykonać następujące czynności:
+Iteratory umożliwiają zachowanie prostoty `foreach` pętli, gdy trzeba użyć kodu złożonego, aby wypełnić sekwencję listy. Może to być przydatne, gdy chcesz wykonać następujące czynności:
 
-- Zmodyfikuj sekwencję listy po pierwszej `foreach` iteracji pętli.
+- Zmodyfikuj sekwencję list po pierwszej `foreach` iteracji pętli.
 
-- Należy unikać pełnego ładowania dużej listy przed `foreach` pierwszą iteracją pętli. Przykładem jest stronicowane pobieranie, aby załadować partię wierszy tabeli. Innym przykładem <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> jest metoda, która implementuje iteratory w ramach .NET Framework.
+- Unikaj całkowitego ładowania dużej listy przed pierwszą iteracją `foreach` pętli. Przykładem jest pobieranie stronicowane w celu załadowania partii wierszy tabeli. Innym przykładem jest <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> Metoda, która implementuje Iteratory w programie .NET.
 
-- Hermetyzować tworzenie listy w iteratorze. W metodzie iteratora można utworzyć listę, a następnie przynieść każdy wynik w pętli.
+- Hermetyzuje Kompilowanie listy w iterator. W metodzie iteratora można skompilować listę, a następnie dać każdy wynik w pętli.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396684"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241893"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -91,8 +91,8 @@ Większość właściwości ma metody lub procedury ustawiające i pobierające 
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Pobierz](../../language-reference/keywords/get.md)
-- [set](../../language-reference/keywords/set.md)
+- [get](../../language-reference/keywords/get.md)
+- [zbiór](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Metody
 
@@ -124,9 +124,9 @@ W większości przypadków deklaruje metodę w ramach definicji klasy. Jednak w 
 Aby uzyskać więcej informacji, zobacz:
 
 - [Metody](../classes-and-structs/methods.md)
-- [Metody rozszerzeń](../classes-and-structs/extension-methods.md)
+- [Metody rozszerzania](../classes-and-structs/extension-methods.md)
 
-#### <a name="constructors"></a>Konstruktorów
+#### <a name="constructors"></a>Konstruktory
 
 Konstruktory są metodami klasy, które są wykonywane automatycznie po utworzeniu obiektu danego typu. Konstruktory zazwyczaj inicjują elementy członkowskie danych nowego obiektu. Konstruktor można uruchomić tylko raz podczas tworzenia klasy. Ponadto kod w konstruktorze zawsze jest uruchamiany przed jakimkolwiek innym kodem w klasie. Można jednak utworzyć wiele przeciążeń konstruktora w taki sam sposób jak w przypadku innych metod.
 
@@ -146,9 +146,9 @@ Aby uzyskać więcej informacji, zobacz [konstruktory](../classes-and-structs/co
 
 #### <a name="finalizers"></a>Finalizatory
 
-Finalizator jest używany do destruktora wystąpień klas. W .NET Framework Moduł wyrzucania elementów bezużytecznych automatycznie zarządza alokacją i ilością pamięci dla obiektów zarządzanych w aplikacji. Jednak nadal mogą być potrzebne finalizatory do czyszczenia wszystkich niezarządzanych zasobów tworzonych przez aplikację. Może istnieć tylko jeden finalizator dla klasy.
+Finalizator jest używany do destruktora wystąpień klas. W programie .NET moduł zbierający elementy bezużyteczne automatycznie zarządza alokacją i ilością pamięci dla zarządzanych obiektów w aplikacji. Jednak nadal mogą być potrzebne finalizatory do czyszczenia wszystkich niezarządzanych zasobów tworzonych przez aplikację. Może istnieć tylko jeden finalizator dla klasy.
 
-Aby uzyskać więcej informacji na temat finalizatorów i wyrzucania elementów bezużytecznych w .NET Framework, zobacz [odzyskiwanie pamięci](../../../standard/garbage-collection/index.md).
+Aby uzyskać więcej informacji na temat finalizatorów i wyrzucania elementów bezużytecznych w programie .NET, zobacz [odzyskiwanie pamięci](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Zdarzenia
 
@@ -298,7 +298,7 @@ public abstract class B { }
 Aby uzyskać więcej informacji, zobacz:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [streszczeń](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Zastępowanie elementów członkowskich
 
@@ -310,7 +310,7 @@ Poniższe Modyfikatory służą do kontrolowania sposobu przesłania właściwo�
 |--|--|
 | [virtual](../../language-reference/keywords/virtual.md) | Zezwala na przesłanianie składowej klasy w klasie pochodnej. |
 | [override](../../language-reference/keywords/override.md) | Przesłania element członkowski wirtualny (zastępujący) zdefiniowany w klasie bazowej. |
-| [abstract](../../language-reference/keywords/abstract.md) | Wymaga, aby element członkowski klasy był zastępowany w klasie pochodnej. |
+| [streszczeń](../../language-reference/keywords/abstract.md) | Wymaga, aby element członkowski klasy był zastępowany w klasie pochodnej. |
 | [new, modyfikator](../../language-reference/keywords/new-modifier.md) | Ukrywa składową dziedziczoną z klasy bazowej |
 
 ## <a name="interfaces"></a>Interfejsy
@@ -342,7 +342,7 @@ Aby uzyskać więcej informacji, zobacz artykuł Przewodnik programowania dotycz
 
 ## <a name="generics"></a>Typy ogólne
 
-Klasy, struktury, interfejsy i metody w .NET Framework mogą zawierać *parametry typu* , które definiują typy obiektów, które mogą być przechowywane lub używane. Najbardziej typowym przykładem typów ogólnych jest kolekcja, w której można określić typ obiektów, które mają być przechowywane w kolekcji.
+Klasy, struktury, interfejsy i metody w programie .NET mogą zawierać *parametry typu* , które definiują typy obiektów, które mogą być przechowywane lub używane. Najbardziej typowym przykładem typów ogólnych jest kolekcja, w której można określić typ obiektów, które mają być przechowywane w kolekcji.
 
 Aby zdefiniować klasę generyczną:
 
@@ -365,7 +365,7 @@ Aby uzyskać więcej informacji, zobacz:
 - [Typy ogólne w .NET](../../../standard/generics/index.md)
 - [Typy ogólne — Przewodnik programowania w języku C#](../generics/index.md)
 
-## <a name="delegates"></a>Delegaty
+## <a name="delegates"></a>Delegaci
 
 *Delegat* jest typem, który definiuje sygnaturę metody i może podać odwołanie do dowolnej metody ze zgodną sygnaturą. Metodę można wywołać (lub wywołać) za pomocą delegata. Delegaty służą do przekazywania metod jako argumentów do innych metod.
 
@@ -400,6 +400,6 @@ class SampleClass
 
 Aby uzyskać więcej informacji, zobacz artykuł Przewodnik programowania dotyczący [delegatów](../delegates/index.md) i artykuł referencyjny języka w słowie kluczowym [delegata](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)

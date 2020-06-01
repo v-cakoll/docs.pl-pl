@@ -1,16 +1,16 @@
 ---
-title: Jak odczytywać dane obiektu z pliku XML (C#)
+title: Jak odczytywać dane obiektów z pliku XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167821"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241880"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Jak odczytywać dane obiektu z pliku XML (C#)
-W tym przykładzie odczytuje dane obiektu, który <xref:System.Xml.Serialization.XmlSerializer> został wcześniej zapisany do pliku XML przy użyciu klasy.  
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Jak odczytywać dane obiektów z pliku XML (C#)
+Ten przykład odczytuje dane obiektu, które wcześniej Zapisano do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
 ## <a name="example"></a>Przykład  
   
@@ -43,27 +43,27 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Zastąp nazwę pliku "c:\temp\SerializationOverview.xml" nazwą pliku zawierającego dane serializowane. Aby uzyskać więcej informacji na temat serializacji danych, zobacz [Jak zapisywać dane obiektów w pliku XML (C#).](./how-to-write-object-data-to-an-xml-file.md)
+Zastąp nazwę pliku "c:\temp\SerializationOverview.xml" nazwą pliku zawierającego serializowane dane. Aby uzyskać więcej informacji na temat serializowania danych, zobacz [jak pisać dane obiektów do pliku XML (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
- Klasa musi mieć konstruktora publicznego bez parametrów.  
+ Klasa musi mieć Konstruktor publiczny bez parametrów.  
   
- Deserializowane są tylko właściwości i pola publiczne.  
+ Tylko publiczne właściwości i pola są deserializowane.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- Klasa serializacji nie ma konstruktora publicznego, bezparametrów.  
+- Serializowana Klasa nie ma publicznego konstruktora bez parametrów.  
   
-- Dane w pliku nie reprezentują danych z klasy, która ma zostać zdeserializowana.  
+- Dane w pliku nie reprezentują danych z klasy, która ma zostać poddana deserializacji.  
   
-- Plik nie istnieje<xref:System.IO.IOException>( ).  
+- Plik nie istnieje ( <xref:System.IO.IOException> ).  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Zawsze sprawdzaj dane wejściowe i nigdy nie deserializuj danych z niezaufanego źródła. Ponownie utworzony obiekt jest uruchamiany na komputerze lokalnym z uprawnieniami kodu, który go deserializował. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
+## <a name="net-security"></a>Zabezpieczenia platformy .NET  
+ Zawsze Weryfikuj dane wejściowe i nigdy nie wykonuj deserializacji danych z niezaufanego źródła. Nowo utworzony obiekt jest uruchamiany na komputerze lokalnym z uprawnieniami kodu, który został deserializowany. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.StreamWriter>
-- [Jak zapisywać dane obiektu do pliku XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Jak napisać dane obiektu do pliku XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [Serializacja (C#)](./index.md)
-- [Przewodnik programowania języka C#](../../index.md)
+- [Przewodnik programowania w języku C#](../../index.md)

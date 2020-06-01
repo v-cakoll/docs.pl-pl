@@ -2,12 +2,12 @@
 title: Debugowanie aplikacji konsolowej .NET Core za pomocą Visual Studio Code
 description: Dowiedz się, jak debugować aplikację konsolową .NET Core za pomocą Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202590"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241516"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Samouczek: debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code
 
@@ -29,7 +29,13 @@ W konfiguracji debugowania program kompiluje z pełnymi symbolicznymi informacja
 
 Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
 
-1. W *program.cs*Ustaw *punkt przerwania* w wierszu, który wyświetla nazwę, datę i godzinę, klikając na lewym marginesie okna kod. Lewy margines znajduje się po lewej stronie numerów wierszy. Innym sposobem ustawienia punktu przerwania jest umieszczenie kursora w wierszu kodu, a następnie naciśnięcie klawisza <kbd>F9</kbd>.
+1. Otwórz program Visual Studio Code.
+
+1. Otwórz folder projektu *HelloWorld* , który został utworzony w temacie [Tworzenie aplikacji konsolowej platformy .net Core w Visual Studio Code](with-visual-studio-code.md).
+
+1. Otwórz plik *program.cs* .
+
+1. Ustaw *punkt przerwania* w wierszu, który wyświetla nazwę, datę i godzinę, klikając na lewym marginesie okna kod. Lewy margines znajduje się po lewej stronie numerów wierszy. Innym sposobem ustawienia punktu przerwania jest umieszczenie kursora w wierszu kodu, a następnie naciśnięcie klawisza <kbd>F9</kbd>.
 
    Jak pokazano na poniższej ilustracji, Visual Studio Code wskazuje wiersz, w którym jest ustawiony punkt przerwania, wyświetlając czerwoną kropkę na lewym marginesie.
 
@@ -209,16 +215,13 @@ Aby skompilować i przetestować wydaną wersję aplikacji konsolowej, Otwórz *
 dotnet run --configuration Release
 ```
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 * [Debugowanie w Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku użyto narzędzi debugowania Visual Studio Code. Aby dowiedzieć się, jak opublikować wdrożoną wersję aplikacji, zobacz temat [publikowanie aplikacji](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+W tym samouczku użyto narzędzi debugowania Visual Studio Code. W następnym samouczku zostanie opublikowana wersja aplikacji, którą można wdrożyć.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Publikowanie aplikacji konsolowej .NET Core za pomocą Visual Studio Code](publishing-with-visual-studio-code.md)

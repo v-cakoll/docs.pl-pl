@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2ff8a8b85c3bfa594bd958a9a3688380885e0426
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159484"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290308"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Weryfikacja schematu XML (XSD) przy użyciu klasy XmlSchemaCollection
-Za pomocą programu <xref:System.Xml.Schema.XmlSchemaCollection> można sprawdzić poprawność dokumentu XML względem schematów języka definicji schematu XML (XSD). <xref:System.Xml.Schema.XmlSchemaCollection> Zwiększa wydajność dzięki przechowywaniu schematów w kolekcji, tak aby nie były ładowane do pamięci po każdym wystąpieniu walidacji. Jeśli schemat istnieje w kolekcji schematów, ten `schemaLocation` atrybut jest używany do wyszukania schematu w kolekcji.  
+Za pomocą programu można <xref:System.Xml.Schema.XmlSchemaCollection> sprawdzić poprawność dokumentu XML względem schematów języka definicji schematu XML (XSD). <xref:System.Xml.Schema.XmlSchemaCollection>Zwiększa wydajność dzięki przechowywaniu schematów w kolekcji, tak aby nie były ładowane do pamięci po każdym wystąpieniu walidacji. Jeśli schemat istnieje w kolekcji schematów, ten `schemaLocation` atrybut jest używany do wyszukania schematu w kolekcji.  
   
 > [!IMPORTANT]
-> <xref:System.Xml.Schema.XmlSchemaCollection> Klasa jest obecnie przestarzała i została zastąpiona <xref:System.Xml.Schema.XmlSchemaSet> klasą. Aby uzyskać więcej informacji na <xref:System.Xml.Schema.XmlSchemaSet> temat klasy, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> <xref:System.Xml.Schema.XmlSchemaCollection>Klasa jest obecnie przestarzała i została zastąpiona <xref:System.Xml.Schema.XmlSchemaSet> klasą. Aby uzyskać więcej informacji na temat <xref:System.Xml.Schema.XmlSchemaSet> klasy, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](xmlschemaset-for-schema-compilation.md).  
   
  Poniższy przykład pokazuje element główny pliku danych.  
   
@@ -28,9 +28,9 @@ Za pomocą programu <xref:System.Xml.Schema.XmlSchemaCollection> można sprawdzi
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- Na potrzeby tego przykładu wartość `targetNamespace` atrybutu jest `urn:bookstore-schema`, która jest tą samą przestrzenią nazw, która jest używana podczas dodawania schematu do obiektu <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ Na potrzeby tego przykładu wartość `targetNamespace` atrybutu jest `urn:bookstore-schema` , która jest tą samą przestrzenią nazw, która jest używana podczas dodawania schematu do obiektu <xref:System.Xml.Schema.XmlSchemaCollection> .  
   
- Poniższy przykład kodu dodaje schemat XML do obiektu <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ Poniższy przykład kodu dodaje schemat XML do obiektu <xref:System.Xml.Schema.XmlSchemaCollection> .  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -50,9 +50,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- Ten `targetNamespace` atrybut jest zazwyczaj używany podczas dodawania `namespaceURI` właściwości <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metody dla. <xref:System.Xml.Schema.XmlSchemaCollection> Można określić odwołanie o wartości null przed dodaniem schematu do elementu <xref:System.Xml.Schema.XmlSchemaCollection>. Pusty ciąg ("") powinien być używany w schematach bez przestrzeni nazw. <xref:System.Xml.Schema.XmlSchemaCollection> Może mieć tylko jeden schemat bez przestrzeni nazw.  
+ Ten `targetNamespace` atrybut jest zazwyczaj używany podczas dodawania `namespaceURI` właściwości <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metody dla <xref:System.Xml.Schema.XmlSchemaCollection> . Można określić odwołanie o wartości null przed dodaniem schematu do elementu <xref:System.Xml.Schema.XmlSchemaCollection> . Pusty ciąg ("") powinien być używany w schematach bez przestrzeni nazw. <xref:System.Xml.Schema.XmlSchemaCollection>Może mieć tylko jeden schemat bez przestrzeni nazw.  
   
- Poniższy przykład kodu dodaje schemat XML, wartość <xref:System.Xml.Schema.XmlSchemaCollection> osobowy. xsd, do i sprawdza poprawność. XML.  
+ Poniższy przykład kodu dodaje schemat XML, wartość osobowy. xsd, do <xref:System.Xml.Schema.XmlSchemaCollection> i sprawdza poprawność. XML.  
   
 ```vb  
 Imports System  
@@ -147,7 +147,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Poniższy przykład kodu tworzy obiekt <xref:System.Xml.XmlValidatingReader> , który przyjmuje. <xref:System.Xml.XmlTextReader> Plik wejściowy sample4. XML jest sprawdzany pod kątem schematu XML sample4. xsd.  
+ Poniższy przykład kodu tworzy obiekt <xref:System.Xml.XmlValidatingReader> , który przyjmuje <xref:System.Xml.XmlTextReader> . Plik wejściowy sample4. XML jest sprawdzany pod kątem schematu XML sample4. xsd.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -206,9 +206,9 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>
 - <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>
-- [Kompilacja schematu a klasa XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+- [Kompilacja schematu a klasa XmlSchemaCollection](xmlschemacollection-schema-compilation.md)

@@ -5,28 +5,28 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0765b01e9c07d1250c99cd38aa55ba815511f274
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140051"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291724"
 ---
 # <a name="parallel-diagnostic-tools"></a>Równoległe narzędzia diagnostyczne
-Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania aplikacji wielowątkowych.  
+Program Visual Studio zapewnia szeroką obsługę debugowania i profilowania aplikacji wielowątkowych.  
   
-## <a name="debugging"></a>Debugging  
+## <a name="debugging"></a>Debugowanie  
  Debuger programu Visual Studio dodaje nowe okna do debugowania aplikacji równoległych. Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
 - [Korzystanie z okna stosów równoległych](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
 - [Korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window)  
   
-- [Instruktaż: Debugowanie aplikacji równoległej](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
+- [Przewodnik: debugowanie aplikacji równoległej](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
 ## <a name="profiling"></a>Profilowanie  
- Widoki raportu wizualizacji współbieżności umożliwiają wizualizację sposobu interakcji wątków w programie równoległym i wątków z innych procesów w systemie. Aby uzyskać więcej informacji, zobacz [Wizualizacja współbieżności](/visualstudio/profiling/concurrency-visualizer).  
+ Widoki raportów wizualizatora współbieżności umożliwiają wizualizowanie, jak wątki w programie równoległym współdziałają ze sobą i z wątkami z innych procesów w systemie. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+- [Programowanie równoległe](index.md)

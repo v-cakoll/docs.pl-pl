@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441009"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289368"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 
@@ -309,7 +309,7 @@ Poniższy przykład tworzy wystąpienie <xref:System.Collections.Hashtable> obie
 W przypadku wyświetlania danych niebędących ciągami, takich jak liczby i daty i godziny, sformatuj je przy użyciu ustawień kultury użytkownika. Domyślnie następujące wszystkie używają bieżącej kultury wątku w operacjach formatowania:
 
 - Ciągi interpolowane obsługiwane przez kompilatory [C#](../../csharp/language-reference/tokens/interpolated.md) i [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) .
-- Operacje łączenia ciągów wykorzystujące operatory łączenia [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) lub [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) lub bezpośrednio wywołujące <xref:System.String.Concat%2A?displayProperty=nameWithType> metodę.
+- Operacje łączenia ciągów wykorzystujące operatory łączenia [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) lub [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) lub bezpośrednio wywołujące <xref:System.String.Concat%2A?displayProperty=nameWithType> metodę.
 - <xref:System.String.Format%2A?displayProperty=nameWithType>Metoda.
 - `ToString`Metody typów liczbowych i typów dat i godzin.
 

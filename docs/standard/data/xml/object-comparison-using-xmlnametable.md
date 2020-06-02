@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 63278f1aa1fe47377d2dae322a9d12338bbe45dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0dd68e8c9beadf26f858a4a5100e2824bbbd4a19
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710534"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292036"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Porównywanie obiektów przy użyciu tabeli XmlNameTable
-Element **XmlDocuments**, po utworzeniu, ma tabelę nazw utworzoną dla tego dokumentu. Gdy XML jest ładowany do dokumentu lub są tworzone nowe elementy lub atrybuty, nazwy atrybutów i elementów są umieszczane w **XmlNameTable**. Można również utworzyć **XmlDocument** przy użyciu istniejącego **NameTable** z innego dokumentu. Gdy **dokumenty XmlDocument** są tworzone za pomocą konstruktora, który przyjmuje parametr **XmlNameTable** , dokument ma dostęp do nazw węzłów, przestrzeni nazw i prefiksów już przechowywanych w **XmlNameTable**. Niezależnie od sposobu ładowania tabeli nazw do nazw, gdy nazwy są przechowywane w tabeli, nazwy można porównać szybko przy użyciu porównania obiektów zamiast porównywania ciągów. Ciągi można także dodawać do tabeli nazw przy użyciu <xref:System.Xml.NameTable.Add%2A>. Poniższy przykład kodu przedstawia utworzoną tabelę nazw **i ciąg ciągu, który jest** dodawany do tabeli. Po tym elemencie **XmlDocument** zostanie utworzony przy użyciu tej tabeli, a nazwy elementów i atrybutów w **pliku. XML** są dodawane do istniejącej tabeli nazw.  
+Element **XmlDocuments**, po utworzeniu, ma tabelę nazw utworzoną dla tego dokumentu. Gdy XML jest ładowany do dokumentu lub są tworzone nowe elementy lub atrybuty, nazwy atrybutów i elementów są umieszczane w **XmlNameTable**. Można również utworzyć **XmlDocument** przy użyciu istniejącego **NameTable** z innego dokumentu. Gdy **dokumenty XmlDocument** są tworzone za pomocą konstruktora, który przyjmuje parametr **XmlNameTable** , dokument ma dostęp do nazw węzłów, przestrzeni nazw i prefiksów już przechowywanych w **XmlNameTable**. Niezależnie od sposobu ładowania tabeli nazw do nazw, gdy nazwy są przechowywane w tabeli, nazwy można porównać szybko przy użyciu porównania obiektów zamiast porównywania ciągów. Ciągi można także dodawać do tabeli nazw przy użyciu <xref:System.Xml.NameTable.Add%2A> . Poniższy przykład kodu przedstawia utworzoną tabelę nazw **i ciąg ciągu, który jest** dodawany do tabeli. Po tym elemencie **XmlDocument** zostanie utworzony przy użyciu tej tabeli, a nazwy elementów i atrybutów w **pliku. XML** są dodawane do istniejącej tabeli nazw.  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -51,6 +51,6 @@ if (((object)node1.Name) == ((object)node2.Name))
   
  Powyższy scenariusz tabeli nazw przekazaną między dwoma dokumentami jest typowy, gdy ten sam typ dokumentu jest przetwarzany wielokrotnie, na przykład w kolejności dokumentów w witrynie handlu elektronicznego, który jest zgodny ze schematem języka definicji schematu XML (XSD) lub definicją typu dokumentu (DTD), a te same ciągi są powtórzone. Korzystanie z tej samej tabeli nazw zapewnia poprawę wydajności, ponieważ ta sama nazwa elementu występuje w wielu dokumentach.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

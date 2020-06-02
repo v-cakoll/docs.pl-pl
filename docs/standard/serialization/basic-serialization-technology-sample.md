@@ -3,12 +3,12 @@ title: Przykład technologii serializacji podstawowej
 description: Ten przykład ilustruje możliwość wykonywania serializacji grafu obiektów w pamięci do strumienia. Ten przykład może używać SoapFormatter lub BinaryFormatter.
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378443"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276572"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
 
@@ -87,7 +87,7 @@ Poniższe punktory krótko opisują klasy i technologie używane w tym przykład
 
   - <xref:System.IO.FileStream>Używane do serializacji i deserializacji połączonych list.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO>
 - <xref:System.IO.File>
@@ -100,9 +100,9 @@ Poniższe punktory krótko opisują klasy i technologie używane w tym przykład
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [Serializacja podstawowa](../../../docs/standard/serialization/basic-serialization.md)
-- [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)
-- [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Serializacja](../../../docs/standard/serialization/index.md)
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serializacja podstawowa](basic-serialization.md)
+- [Serializacja binarna](binary-serialization.md)
+- [Kontrolowanie serializacji XML przy użyciu atrybutów](controlling-xml-serialization-using-attributes.md)
+- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
+- [Serializacja](index.md)
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)

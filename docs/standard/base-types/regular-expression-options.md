@@ -12,63 +12,63 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289294"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 
-Domyślnie porównanie ciągu wejściowego z dowolnymi znakami dosłownymi we wzorcu wyrażenia regularnego jest rozróżniane wielkość liter, biały znak we wzorcu wyrażenia regularnego jest interpretowany jako dosłowne znaki odstępu, a przechwytywanie grup w wyrażeniu regularnym nosi nazwę niejawnie, a także jawnie. Można zmodyfikować te i kilka innych aspektów domyślnego zachowania wyrażenia regularnego, określając opcje wyrażenia regularnego. Te opcje, które są wymienione w poniższej tabeli, mogą być zawarte w linii jako <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> część wzorca wyrażenia regularnego lub <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> mogą być dostarczane do konstruktora klasy lub statycznego wzorca dopasowania metody jako wartość wyliczenia.
+Domyślnie porównanie ciągu wejściowego z dowolnym znakiem literału we wzorcu wyrażenia regularnego uwzględnia wielkość liter, biały znak w wzorcu wyrażenia regularnego jest interpretowany jako literał znaków białych, a grupy przechwytywania w wyrażeniu regularnym są nazywane niejawnie, jak również jawnie. Można modyfikować te i kilka innych aspektów domyślnego zachowania wyrażeń regularnych, określając opcje wyrażenia regularnego. Te opcje, które są wymienione w poniższej tabeli, mogą być ujęte wewnętrznie jako część wzorca wyrażenia regularnego lub mogą być dostarczone do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznej metody dopasowania do wzorca jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartość wyliczenia.
 
-|Członek reexoptions|Znak wbudowany|Efekt|
+|RegexOptions element członkowski|Znak wbudowany|Efekt|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|Niedostępne|Użyj zachowania domyślnego. Aby uzyskać więcej informacji, zobacz [Opcje domyślne](#default-options).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Używa dopasowywania bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz [Dopasowanie bez uwzględniania wielkości liter](#case-insensitive-matching).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Użyj trybu wielowierszowego, gdzie `^` i `$` dopasować początek i koniec każdego wiersza (zamiast początku i końca ciągu wejściowego). Aby uzyskać więcej informacji, zobacz [Tryb wielowierszowy](#multiline-mode).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Użyj trybu jednowierszowego, w którym kropka (.) pasuje `\n`do każdego znaku (zamiast każdego znaku z wyjątkiem ). Aby uzyskać więcej informacji, zobacz [Tryb jednowierszowy](#single-line-mode).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Nie przechwytuje nienazwanych grup. Jedynymi prawidłowymi ujęciami są jawnie nazwane `(?<`lub ponumerowane grupy *podwyrażenia*`)` *nazwy* `>` formularza . Aby uzyskać więcej informacji, zobacz [Tylko jawne przechwytywanie](#explicit-captures-only).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Niedostępne|Skompilować wyrażenie regularne do zestawu. Aby uzyskać więcej informacji, zobacz [Skompilowane wyrażenia regularne](#compiled-regular-expressions).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Wyklucz nieskażone białe znaki ze wzoru i włącz`#`komentarze po znaku liczbowym ( ). Aby uzyskać więcej informacji, zobacz [Ignorowanie odstępu](#ignore-white-space).|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Niedostępne|Zmień kierunek wyszukiwania. Wyszukiwanie przesuwa się od prawej do lewej, a nie od lewej do prawej. Aby uzyskać więcej informacji, zobacz [Tryb od prawej do lewej](#right-to-left-mode).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Niedostępne|Włącz zachowanie zgodne z ecmascript dla wyrażenia. Aby uzyskać więcej informacji, zobacz [ECMAScript Matching Behavior](#ecmascript-matching-behavior).|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Niedostępne|Ignoruj różnice kulturowe w języku. Aby uzyskać więcej informacji, zobacz [Porównanie przy użyciu kultury niezmiennej](#comparison-using-the-invariant-culture).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Używa dopasowywania bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz [Dopasowanie bez uwzględniania wielkości](#case-insensitive-matching)liter.|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Użyj trybu wielowierszowego, gdzie `^` i `$` pasuje do początku i końca każdego wiersza (zamiast początku i końca ciągu wejściowego). Aby uzyskać więcej informacji, zobacz [tryb wielowierszowy](#multiline-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Użyj trybu jednowierszowego, gdzie kropka (.) dopasowuje każdy znak (zamiast każdego znaku z wyjątkiem `\n` ). Aby uzyskać więcej informacji, zobacz [tryb jednowierszowy](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Nie przechwytuje nienazwanych grup. Jedyne prawidłowe przechwycenia są jawnie nazwanymi lub numerowanymi grupami `(?<` *name* `>` *podwyrażenia*nazwy formularza `)` . Aby uzyskać więcej informacji, zobacz [tylko jawne przechwycenia](#explicit-captures-only).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Niedostępne|Kompiluj wyrażenie regularne do zestawu. Aby uzyskać więcej informacji, zobacz [skompilowane wyrażenia regularne](#compiled-regular-expressions).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Wyklucz niezmieniony znak ze wzorca i Włącz Komentarze po znaku cyfry ( `#` ). Aby uzyskać więcej informacji, zobacz [Ignorowanie białych znaków](#ignore-white-space).|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Niedostępne|Zmień kierunek wyszukiwania. Wyszukiwanie przechodzi od prawej do lewej zamiast od lewej do prawej. Aby uzyskać więcej informacji, zobacz [tryb od prawej do lewej](#right-to-left-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Niedostępne|Włącz zachowanie zgodne ze standardem ECMAScript dla wyrażenia. Aby uzyskać więcej informacji, zobacz [zachowanie dopasowania języka ECMAScript](#ecmascript-matching-behavior).|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Niedostępne|Ignoruj różnice kulturowe w języku. Aby uzyskać więcej informacji, zobacz [porównanie przy użyciu niezmiennej kultury](#comparison-using-the-invariant-culture).|
 
 ## <a name="specifying-the-options"></a>Określanie opcji
 
-Opcje wyrażeń regularnych można określić na jeden z trzech sposobów:
+Możesz określić opcje dla wyrażeń regularnych na jeden z trzech sposobów:
 
-- W `options` parametrze <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy`Shared` lub statycznej (w języku Visual <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>Basic) metody dopasowywania wzorca, takiej jak lub . Parametr `options` jest bitową kombinacją <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> or wyliczonych wartości.
+- W `options` parametrze <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznej ( `Shared` w Visual Basic) Metoda dopasowania do wzorca, taka jak <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> lub <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> . `options`Parametr jest bitową lub kombinacją <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartości wyliczanych.
 
-  Gdy opcje są <xref:System.Text.RegularExpressions.Regex> dostarczane do `options` wystąpienia przy użyciu parametru konstruktora <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> klasy, opcje są przypisane do właściwości. Jednak <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość nie odzwierciedla opcji wbudowanych w wzorcu wyrażenia regularnego.
+  Gdy opcje są dostarczane do <xref:System.Text.RegularExpressions.Regex> wystąpienia przy użyciu `options` parametru konstruktora klasy, opcje są przypisywane do <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwości. Jednak właściwość nie <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> odzwierciedla opcji wbudowanych we wzorcu wyrażenia regularnego.
 
-  Poniższy przykład stanowi ilustrację. Używa parametru `options` <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, aby włączyć dopasowanie bez uwzględniania wielkości liter i ignorować biały znak wzorca podczas identyfikowania słów, które zaczynają się od litery "d".
+  Poniższy przykład stanowi ilustrację. Używa `options` parametru <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, aby włączyć Dopasowywanie bez uwzględniania wielkości liter i ignorować biały znak w przypadku identyfikowania wyrazów rozpoczynających się od litery "d".
 
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- Stosując opcje wbudowane we wzorcu wyrażenia regularnego `(?imnsx-imnsx)`ze składnią . Opcja ma zastosowanie do wzorca od punktu, w którym opcja jest zdefiniowana na końcu szyku lub do punktu, w którym opcja jest niezdefiniowana przez inną opcję wbudowaną. Należy zauważyć, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> że <xref:System.Text.RegularExpressions.Regex> właściwość wystąpienia nie odzwierciedla tych opcji wbudowanych. Aby uzyskać więcej informacji, zobacz [różne konstrukcje](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) tematu.
+- Stosując opcje wbudowane we wzorcu wyrażenia regularnego z składnią `(?imnsx-imnsx)` . Opcja ma zastosowanie do wzorca od punktu, w którym opcja jest zdefiniowana do końca wzorca lub do punktu, w którym opcja jest niezdefiniowana przez inną opcję wbudowaną. Należy zauważyć, że <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> Właściwość <xref:System.Text.RegularExpressions.Regex> wystąpienia nie odzwierciedla tych wbudowanych opcji. Aby uzyskać więcej informacji, zobacz temat [różne konstrukcje](miscellaneous-constructs-in-regular-expressions.md) .
 
-  Poniższy przykład stanowi ilustrację. Używa opcji wbudowanych, aby włączyć dopasowanie bez uwzględniania wielkości liter i ignorować biały znak wzorca podczas identyfikowania słów, które zaczynają się od litery "d".
+  Poniższy przykład stanowi ilustrację. Używa opcji wbudowanych, aby włączyć Dopasowywanie bez uwzględniania wielkości liter i ignorować biały znak w przypadku identyfikowania wyrazów zaczynających się od litery "d".
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Stosując opcje wbudowane w konstrukcji grupy w wzorcu wyrażenia regularnego `(?imnsx-imnsx:`z *podciągliwość*`)`składni . Brak znaku przed zestawem opcji włącza się zestaw; znak minus, zanim zestaw opcji wyłączy ustawienie. (`?` jest stałą częścią składni konstrukcji języka, która jest wymagana, niezależnie od tego, czy opcje są włączone, czy wyłączone.) Opcja ta dotyczy tylko tej grupy. Aby uzyskać więcej informacji, zobacz [Grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Stosując opcje wbudowane w określonej konstrukcji grupowania we wzorcu wyrażenia regularnego z `(?imnsx-imnsx:` *podwyrażeniem*składni `)` . Nie pisz przed zestawem opcji ustawia włączony; znak minus przed zestawem opcji powoduje wyłączenie zestawu. ( `?` to stała część składni konstrukcji języka, która jest wymagana, czy opcje są włączone, czy wyłączone). Ta opcja ma zastosowanie tylko do tej grupy. Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](grouping-constructs-in-regular-expressions.md).
 
-  Poniższy przykład stanowi ilustrację. Używa opcji wbudowanych w konstrukcji grupowania, aby włączyć dopasowanie bez uwzględniania wielkości liter i ignorować biały znak wzorca podczas identyfikowania wyrazów, które zaczynają się od litery "d".
+  Poniższy przykład stanowi ilustrację. Używa wbudowanych opcji w konstrukcji grupującej, aby umożliwić Dopasowywanie bez uwzględniania wielkości liter i ignorować biały znak w przypadku identyfikowania wyrazów rozpoczynających się od litery "d".
 
   [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
   [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
-Jeśli opcje są określone w linii, znak minus (`-`) przed opcją lub zestawem opcji wyłącza te opcje. Na przykład wbudowana `(?ix-ms)` konstrukcja włącza <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> i opcje i <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> wyłącza i opcje. Wszystkie opcje wyrażenia regularnego są domyślnie wyłączone.
+Jeśli opcje są określone w tekście, znak minus ( `-` ) przed opcją lub zestaw opcji powoduje wyłączenie tych opcji. Na przykład konstrukcja wbudowana `(?ix-ms)` włącza <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> Opcje i wyłącza <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> Opcje i. Wszystkie opcje wyrażenia regularnego są domyślnie wyłączone.
 
 > [!NOTE]
-> Jeśli opcje wyrażenia regularnego `options` określone w parametrze konstruktora lub wywołania metody są w konflikcie z opcjami określonymi w ywór w wzorcu wyrażenia regularnego, używane są opcje wbudowane.
+> Jeśli opcje wyrażenia regularnego określone w `options` parametrze konstruktora lub wywołania metody powodują konflikt z opcjami określonymi wewnętrznie we wzorcu wyrażenia regularnego, są używane wbudowane opcje.
 
-Następujące pięć opcji wyrażenia regularnego można ustawić zarówno za pomocą parametru opcji, jak i wbudowanego:
+Następujące pięć opcji wyrażenia regularnego można ustawić przy użyciu parametru options i inline:
 
 - <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>
 
@@ -80,7 +80,7 @@ Następujące pięć opcji wyrażenia regularnego można ustawić zarówno za po
 
 - <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>
 
-Następujące pięć opcji wyrażenia regularnego można `options` ustawić przy użyciu parametru, ale nie można ustawić w linii:
+Następujące pięć opcji wyrażenia regularnego można ustawić przy użyciu `options` parametru, ale nie można ustawić go w tekście:
 
 - <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>
 
@@ -94,287 +94,287 @@ Następujące pięć opcji wyrażenia regularnego można `options` ustawić przy
 
 ## <a name="determining-the-options"></a>Określanie opcji
 
-Można określić, które opcje <xref:System.Text.RegularExpressions.Regex> zostały dostarczone do obiektu, gdy został skreślony <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> przez pobranie wartości właściwości tylko do odczytu. Ta właściwość jest szczególnie przydatna do określania opcji, które są <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> zdefiniowane dla skompilowanego wyrażenia regularnego utworzonego przez metodę.
+Można określić, które opcje zostały dostarczone do <xref:System.Text.RegularExpressions.Regex> obiektu podczas tworzenia wystąpienia, pobierając wartość właściwości tylko do odczytu <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> . Ta właściwość jest szczególnie przydatna do określania opcji, które są zdefiniowane dla skompilowanego wyrażenia regularnego utworzonego przez <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metodę.
 
-Aby przetestować obecność dowolnej <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>opcji z wyjątkiem , wykonać <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> operację AND <xref:System.Text.RegularExpressions.RegexOptions> z wartością właściwości i wartością, w której jesteś zainteresowany. Następnie sprawdź, czy wynik <xref:System.Text.RegularExpressions.RegexOptions> jest równy tej wartości. Poniższy przykład sprawdza, <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> czy opcja została ustawiona.
+Aby przetestować obecność dowolnej opcji, z wyjątkiem <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> , należy wykonać OPERACJĘ i z wartością <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> właściwości oraz <xref:System.Text.RegularExpressions.RegexOptions> wartość, w której interesują Cię zainteresowania. Następnie sprawdź, czy wynik jest równy tej <xref:System.Text.RegularExpressions.RegexOptions> wartości. Poniższy przykład sprawdza, czy <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcja została ustawiona.
 
 [!code-csharp[Conceptual.Regex.Language.Options#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#19)]
 [!code-vb[Conceptual.Regex.Language.Options#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#19)]
 
-Aby przetestować dla <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>, określić, <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>czy wartość właściwości jest równa , jak pokazano w poniższym przykładzie.
+Aby sprawdzić <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> , czy wartość <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> właściwości jest równa <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> , jak pokazano w poniższym przykładzie.
 
 [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
 [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]
 
-W poniższych sekcjach przedstawiono opcje obsługiwane przez wyrażenie regularne w .NET.
+W poniższych sekcjach wymieniono opcje obsługiwane przez wyrażenie regularne w programie .NET.
 
 ## <a name="default-options"></a>Opcje domyślne
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> wskazuje, że nie określono żadnych opcji, a aparat wyrażeń regularnych używa jego domyślnego zachowania. Uwzględnione są następujące elementy:
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>Opcja wskazuje, że nie określono żadnych opcji, a aparat wyrażeń regularnych używa swojego zachowania domyślnego. Uwzględnione są następujące elementy:
 
-- Wzorzec jest interpretowany jako wyrażenie regularne kanoniczne, a nie ecmascript.
+- Wzorzec jest interpretowany jako kanoniczny, a nie wyrażenie regularne języka ECMAScript.
 
-- Wzorzec wyrażenia regularnego jest dopasowywane w ciągu wejściowym od lewej do prawej.
+- Wzorzec wyrażenia regularnego jest dopasowywany w ciągu wejściowym od lewej do prawej.
 
 - W porównaniach rozróżniana jest wielkość liter.
 
-- Elementy `^` `$` i język są zgodne z początkiem i końcem ciągu wejściowego.
+- `^` `$` Elementy języka i pasują do początku i końca ciągu wejściowego.
 
-- Element `.` języka pasuje do `\n`każdego znaku z wyjątkiem .
+- `.`Element języka pasuje do każdego znaku z wyjątkiem `\n` .
 
-- Każdy biały znak we wzorcu wyrażenia regularnego jest interpretowany jako znak spacji literału.
+- Wszystkie białe znaki we wzorcu wyrażenia regularnego są interpretowane jako znak spacji literału.
 
-- Konwencje bieżącej kultury są używane podczas porównywania wzorca z ciągiem wejściowym.
+- Konwencje bieżącej kultury są używane podczas porównywania wzorców z ciągiem wejściowym.
 
-- Przechwytywanie grup we wzorcu wyrażeń regularnych są niejawne, a także jawne.
+- Grupy przechwytywania we wzorcu wyrażenia regularnego są niejawne i jawne.
 
 > [!NOTE]
-> Opcja <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> nie ma odpowiednika wbudowanego. Gdy opcje wyrażenia regularnego są stosowane w linii, domyślne zachowanie jest przywracane na zasadzie opcji według opcji, wyłączając określoną opcję. Na przykład `(?i)` włącza porównanie bez uwzględniania wielkości `(?-i)` liter i przywraca domyślne porównanie z uwzględnieniem wielkości liter.
+> <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>Opcja nie ma odpowiedników wbudowanych. Gdy opcje wyrażenia regularnego są stosowane w tekście, zachowanie domyślne jest przywracane w zależności od opcji, poprzez wyłączenie określonej opcji. Na przykład `(?i)` włącza porównanie bez uwzględniania wielkości liter i `(?-i)` Przywraca domyślne porównanie z uwzględnieniem wielkości liter.
 
-Ponieważ <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> opcja reprezentuje domyślne zachowanie aparatu wyrażeń regularnych, rzadko jest jawnie określony w wywołaniu metody. Zamiast tego wywoływana jest metoda dopasowywania konstruktora lub statycznego `options` wzorca bez parametru.
+Ponieważ <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> opcja reprezentuje domyślne zachowanie aparatu wyrażeń regularnych, jest rzadko jawnie określona w wywołaniu metody. Zamiast tego wywołano Konstruktor lub statyczną metodę dopasowania do wzorca bez `options` parametru.
 
-## <a name="case-insensitive-matching"></a>Dopasowanie bez uwzględniania wielkości liter
+## <a name="case-insensitive-matching"></a>Dopasowywanie bez uwzględniania wielkości liter
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> lub opcja `i` wbudowana zapewnia dopasowanie bez uwzględniania wielkości liter. Domyślnie używane są konwencje wielkości liter bieżącej kultury.
+<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>Opcja, lub `i` opcja wbudowana, zapewnia Dopasowywanie bez uwzględniania wielkości liter. Domyślnie używane są konwencje wielkości liter bieżącej kultury.
 
-Poniższy przykład definiuje wzorzec `\bthe\w*\b`wyrażenia regularnego, który pasuje do wszystkich wyrazów, począwszy od "the". Ponieważ pierwsze wywołanie <xref:System.Text.RegularExpressions.Regex.Match%2A> metody używa domyślnego porównania z uwzględnieniem wielkości liter, dane wyjściowe wskazują, że ciąg "The", który rozpoczyna zdanie, nie jest dopasowany. Jest onpasytowany, gdy <xref:System.Text.RegularExpressions.Regex.Match%2A> metoda <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>jest wywoływana z opcjami ustawionymi na .
+W poniższym przykładzie zdefiniowano wzorzec wyrażenia regularnego, `\bthe\w*\b` który dopasowuje wszystkie wyrazy rozpoczynające się od "a". Ponieważ pierwsze wywołanie <xref:System.Text.RegularExpressions.Regex.Match%2A> metody używa domyślnego porównania uwzględniającego wielkość liter, dane wyjściowe wskazują, że ciąg "" ", który rozpoczyna zdanie, nie jest dopasowany. Jest dopasowywany, gdy <xref:System.Text.RegularExpressions.Regex.Match%2A> Metoda jest wywoływana z opcjami ustawionymi na <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> .
 
 [!code-csharp[Conceptual.Regex.Language.Options#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case1.cs#1)]
 [!code-vb[Conceptual.Regex.Language.Options#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case1.vb#1)]
 
-Poniższy przykład modyfikuje wzorzec wyrażenia regularnego z poprzedniego przykładu, aby użyć opcji wbudowanych zamiast parametru, `options` aby zapewnić porównanie bez uwzględniania wielkości liter. Pierwszy wzorzec definiuje opcję bez uwzględniania wielkości liter w konstrukcji grupowania, która ma zastosowanie tylko do litery "t" w ciągu "the". Ponieważ konstruowanie opcji występuje na początku wzorca, drugi wzorzec stosuje opcję bez uwzględniania wielkości liter do całego wyrażenia regularnego.
+Poniższy przykład modyfikuje wzorzec wyrażenia regularnego z poprzedniego przykładu, aby użyć opcji wbudowanych zamiast `options` parametru w celu zapewnienia porównania bez uwzględniania wielkości liter. Pierwszy wzorzec definiuje opcję nieuwzględniającą wielkości liter w konstrukcji grupującej, która ma zastosowanie tylko do litery "t" w ciągu "The". Ponieważ konstrukcja opcji występuje na początku wzorca, drugi wzorzec stosuje opcję bez uwzględniania wielkości liter do całego wyrażenia regularnego.
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
 
 ## <a name="multiline-mode"></a>Tryb wielowierszowy
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> lub opcja `m` wbudowana umożliwia aparatowi wyrażeń regularnych obsługę ciągu wejściowego, który składa się z wielu wierszy. Zmienia interpretację `^` elementów `$` języka i tak, aby były zgodne z początkiem i końcem wiersza, zamiast początku i końca ciągu wejściowego.
+<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>Opcja, lub `m` opcja wbudowana, umożliwia aparatowi wyrażeń regularnych obsługę ciągu wejściowego, który składa się z wielu wierszy. Zmienia interpretację `^` elementów języka i, `$` tak aby pasowały do początku i końca wiersza, zamiast początku i końca ciągu wejściowego.
 
-Domyślnie `$` dopasowuje tylko koniec ciągu wejściowego. Jeśli <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> określisz tę opcję, jest ona zgodna`\n`ze znakiem nowego linii ( ) lub na końcu ciągu wejściowego. Nie jest to jednak zgodne z kombinacją znaków powrotu karetki/wiersza. Aby pomyślnie je dopasować, użyj `\r?$` podwyrażenia zamiast tylko `$`.
+Domyślnie `$` dopasowuje tylko koniec ciągu wejściowego. W przypadku określenia <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji dopasowuje znak nowego wiersza ( `\n` ) lub koniec ciągu wejściowego. Nie jest jednak zgodna z kombinacją znaku powrotu karetki/wysuwu wiersza. Aby pomyślnie dopasować je, użyj podwyrażenia, `\r?$` a nie tylko `$` .
 
-Poniższy przykład wyodrębnia nazwy meloniki i wyniki <xref:System.Collections.Generic.SortedList%602> i dodaje je do kolekcji, która sortuje je w porządku malejącym. Metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A> jest wywoływana dwa razy. W pierwszym wywołaniu metody wyrażenie `^(\w+)\s(\d+)$` regularne jest i nie są ustawione żadne opcje. Jak pokazuje dane wyjściowe, ponieważ aparat wyrażeń regularnych nie może dopasować wzorzec danych wejściowych wraz z początku i końca ciągu wejściowego, nie znaleziono żadnych dopasowań. W drugim wywołaniu metody wyrażenie regularne `^(\w+)\s(\d+)\r?$` jest zmieniane <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>na i opcje są ustawione na . Jak pokazano dane wyjściowe, nazwy i wyniki są pomyślnie dopasowane, a wyniki są wyświetlane w kolejności malejącej.
+W poniższym przykładzie są wyodrębniane i wydające puchary i są dodawane do <xref:System.Collections.Generic.SortedList%602> kolekcji, która sortuje je w kolejności malejącej. <xref:System.Text.RegularExpressions.Regex.Matches%2A>Metoda jest wywoływana dwukrotnie. W pierwszym wywołaniu metody wyrażenie regularne jest `^(\w+)\s(\d+)$` i nie są ustawione żadne opcje. Jak pokazuje dane wyjściowe, ponieważ aparat wyrażeń regularnych nie może dopasować wzorca wejściowego do początku i końca ciągu wejściowego, nie znaleziono żadnych dopasowań. W drugim wywołaniu metody wyrażenie regularne jest zmieniane na, `^(\w+)\s(\d+)\r?$` a opcje są ustawione na <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Jak pokazuje dane wyjściowe, nazwy i oceny zostaną pomyślnie dopasowane, a wyniki są wyświetlane w kolejności malejącej.
 
 [!code-csharp[Conceptual.Regex.Language.Options#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline1.cs#3)]
 [!code-vb[Conceptual.Regex.Language.Options#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline1.vb#3)]
 
-Wzorzec `^(\w+)\s(\d+)\r*$` wyrażenia regularnego jest zdefiniowany w sposób pokazany w poniższej tabeli.
+Wzorzec wyrażenia regularnego `^(\w+)\s(\d+)\r*$` jest zdefiniowany, jak pokazano w poniższej tabeli.
 
 |Wzorce|Opis|
 |-------------|-----------------|
-|`^`|Rozpocznij od początku wiersza.|
+|`^`|Zacznij od początku wiersza.|
 |`(\w+)`|Dopasowuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|
 |`\s`|Dopasowuje znak odstępu.|
 |`(\d+)`|Dopasowanie do co najmniej jednej cyfry dziesiętnej. Jest to druga grupa przechwytywania.|
-|`\r?`|Dopasuj zero lub jeden znak powrotu karetki.|
+|`\r?`|Dopasowanie do zera lub jednego znaku powrotu karetki.|
 |`$`|Koniec na końcu wiersza.|
 
-Poniższy przykład jest odpowiednikiem poprzedniego, z tą różnicą, że używa opcji `(?m)` wbudowanej do ustawiania opcji wielowierszowej.
+Poniższy przykład jest równoważny poprzedniemu, z tą różnicą, że używa opcji wbudowanej `(?m)` w celu ustawienia opcji wielowierszowy.
 
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
 ## <a name="single-line-mode"></a>Tryb jednowierszowy
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> lub opcja `s` wbudowana powoduje, że aparat wyrażeń regularnych traktuje ciąg wejściowy tak, jakby składa się z pojedynczego wiersza. Odbywa się to poprzez zmianę zachowania`.`elementu języka kropka ( ) tak, aby pasował do każdego `\n` znaku, zamiast dopasowywania każdego znaku z wyjątkiem znaku nowego linii lub \u000A.
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>Opcja, lub `s` opcja wbudowana, powoduje, że aparat wyrażeń regularnych traktuje ciąg wejściowy tak, jakby zawiera pojedynczy wiersz. Robi to poprzez zmianę zachowania elementu języka kropki ( `.` ), tak aby pasował do każdego znaku, zamiast dopasowywania każdego znaku z wyjątkiem znaku nowego wiersza `\n` lub \u000A.
 
-Poniższy przykład ilustruje, `.` jak zmienia się zachowanie <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> elementu języka podczas korzystania z opcji. Wyrażenie regularne `^.+` rozpoczyna się na początku ciągu i pasuje do każdego znaku. Domyślnie dopasowanie kończy się na końcu pierwszego wiersza; wzorzec wyrażenia regularnego pasuje `\r` do znaku powrotu karetki lub \u000D, ale nie jest zgodny `\n`. Ponieważ <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcja interpretuje cały ciąg wejściowy jako pojedynczy wiersz, pasuje do `\n`każdego znaku w ciągu wejściowym, w tym .
+Poniższy przykład ilustruje, jak zachowanie `.` elementu języka zmienia się podczas korzystania z <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcji. Wyrażenie regularne `^.+` rozpoczyna się od początku ciągu i dopasowuje każdy znak. Domyślnie dopasowanie kończy się na końcu pierwszego wiersza; wzorzec wyrażenia regularnego dopasowuje znak powrotu karetki `\r` lub \u000D, ale nie jest zgodny `\n` . Ponieważ <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcja interpretuje cały ciąg wejściowy jako pojedynczy wiersz, dopasowuje każdy znak w ciągu wejściowym, w tym `\n` .
 
 [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
 [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]
 
-Poniższy przykład jest odpowiednikiem poprzedniego, z tą różnicą, że używa opcji `(?s)` wbudowanej, aby włączyć tryb jednowierszowy.
+Poniższy przykład jest równoważny poprzedniemu, z tą różnicą, że używa opcji wbudowanej `(?s)` w celu włączenia trybu jednowierszowego.
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
 
-## <a name="explicit-captures-only"></a>Tylko jawne przechwytywanie
+## <a name="explicit-captures-only"></a>Tylko jawne przechwycenia
 
-Domyślnie grupy przechwytywania są definiowane przez użycie nawiasów we wzorcu wyrażenia regularnego. Nazwane grupy są przypisywane nazwę `(?<`lub numer przez *nazwę*`>`*subexpression* `)` opcji języka, podczas gdy nienazwane grupy są dostępne przez indeks. W <xref:System.Text.RegularExpressions.GroupCollection> obiekcie grupy bez nazwy poprzedzają nazwane grupy.
+Domyślnie grupy przechwytywania są definiowane przy użyciu nawiasów we wzorcu wyrażenia regularnego. Do nazwanych grup są przypisywane nazwy lub liczby przez `(?<` *name* `>` opcję języka*podwyrażenia* nazwy `)` , podczas gdy grupy nienazwane są dostępne przez indeks. W <xref:System.Text.RegularExpressions.GroupCollection> obiekcie nienazwane grupy poprzedzają nazwane grupy.
 
-Konstrukcje grupowania są często używane tylko do stosowania kwantyfikatorów do wielu elementów języka, a przechwycone podciągi nie są interesujące. Na przykład, jeśli następujące wyrażenie regularne:
+Konstrukcje grupujące są często używane tylko do zastosowania kwantyfikatorów do wielu elementów języka, a przechwycone podciągi nie są istotne. Na przykład, jeśli następujące wyrażenie regularne:
 
 `\b\(?((\w+),?\s?)+[\.!?]\)?`
 
-jest przeznaczony tylko do wyodrębniania zdań, które kończą się kropką, wykrzyknikiem lub znakiem <xref:System.Text.RegularExpressions.Match> zapytania z dokumentu, interesujące jest tylko zdanie wynikowe (reprezentowane przez obiekt). Poszczególne słowa w kolekcji nie są.
+jest przeznaczony tylko do wyodrębniania zdań kończących się kropką, wykrzyknikiem lub znakiem zapytania z dokumentu, tylko zdanie wyniku (które jest reprezentowane przez <xref:System.Text.RegularExpressions.Match> obiekt) jest istotne. Poszczególne wyrazy w kolekcji nie są.
 
-Przechwytywanie grup, które nie są następnie używane może być kosztowne, <xref:System.Text.RegularExpressions.GroupCollection> ponieważ <xref:System.Text.RegularExpressions.CaptureCollection> aparat wyrażeń regularnych musi wypełniać obiekty i kolekcji. Alternatywnie można użyć <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opcji lub opcji `n` wbudowanej, aby określić, że tylko prawidłowe przechwytuje są jawnie nazwane lub ponumerowane grupy, które są wyznaczone `(?<`przez konstrukcję *subexpression* `)` *nazwy.* `>`
+Grupy przechwytywania, które nie są następnie używane, mogą być kosztowne, ponieważ aparat wyrażeń regularnych musi wypełniać <xref:System.Text.RegularExpressions.GroupCollection> <xref:System.Text.RegularExpressions.CaptureCollection> obiekty kolekcji i. Alternatywnie można użyć <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opcji lub `n` opcji wbudowanej, aby określić, że jedyne prawidłowe przechwycenia są jawnymi nazwami lub numerowanymi grupami, które są Wyznaczeni przez `(?<` *name* `>` konstrukcję *podwyrażenia* Name `)` .
 
-Poniższy przykład wyświetla informacje o `\b\(?((\w+),?\s?)+[\.!?]\)?` dopasowania zwracanych <xref:System.Text.RegularExpressions.Regex.Match%2A> przez wzorzec wyrażenia <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> regularnego, gdy metoda jest wywoływana z i bez opcji. Jak pokazano dane wyjściowe z pierwszego wywołania metody, <xref:System.Text.RegularExpressions.GroupCollection> aparat <xref:System.Text.RegularExpressions.CaptureCollection> wyrażeń regularnych w pełni wypełnia obiekty i kolekcji informacjami o przechwyconych podciągach. Ponieważ druga metoda jest `options` wywoływana z set to <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>, nie przechwytuje informacji o grupach.
+Poniższy przykład wyświetla informacje o dopasowaniach zwracanych przez `\b\(?((\w+),?\s?)+[\.!?]\)?` wzorzec wyrażenia regularnego, gdy <xref:System.Text.RegularExpressions.Regex.Match%2A> Metoda jest wywoływana z i bez <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opcji. Ponieważ dane wyjściowe z pierwszego wywołania metody są wyświetlane, aparat wyrażeń regularnych w pełni wypełnia <xref:System.Text.RegularExpressions.GroupCollection> <xref:System.Text.RegularExpressions.CaptureCollection> obiekty kolekcji i z informacjami o przechwyconych podciągach. Ponieważ druga metoda jest wywoływana z `options` ustawioną na <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> , nie przechwytujy informacji o grupach.
 
 [!code-csharp[Conceptual.Regex.Language.Options#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit1.cs#9)]
 [!code-vb[Conceptual.Regex.Language.Options#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit1.vb#9)]
 
-Wzorzec`\b\(?((?>\w+),?\s?)+[\.!?]\)?` wyrażenia regularnego jest zdefiniowany w sposób pokazany w poniższej tabeli.
+Wzorzec wyrażenia regularnego `\b\(?((?>\w+),?\s?)+[\.!?]\)?` jest zdefiniowany, jak pokazano w poniższej tabeli.
 
 |Wzorce|Opis|
 |-------------|-----------------|
 |`\b`|Zacznij od granicy słowa.|
-|`\(?`|Dopasuj zero lub jedno wystąpienie nawiasu otwierającego ("(").|
-|`(?>\w+),?`|Dopasuj jeden lub więcej znaków wyrazowych, po których następuje zero lub jeden przecinek. Nie cofaj się podczas dopasowywania znaków wyrazowych.|
+|`\(?`|Dopasowanie do zera lub jednego wystąpienia nawiasu otwierającego ("(").|
+|`(?>\w+),?`|Dopasowuje co najmniej jeden znak słowa, po którym następuje zero lub jeden przecinek. Nie nawrotu podczas dopasowywania znaków słowa.|
 |`\s?`|Dopasowanie do zera lub jednego znaku odstępu.|
-|`((\w+),?\s?)+`|Dopasuj kombinację jednego lub więcej znaków wyrazowych, zero lub jeden przecinek i zero lub jeden znak odstępu jeden lub więcej razy.|
-|`[\.!?]\)?`|Dopasuj dowolny z trzech symboli interpunkcyjnych, po których następuje zero lub jeden nawias zamykający (")").|
+|`((\w+),?\s?)+`|Dopasowuje kombinację jednego lub więcej znaków wyrazu, zera lub jednego przecinka oraz zero lub jeden znak odstępu jeden lub więcej razy.|
+|`[\.!?]\)?`|Dopasowuje dowolny z trzech symboli interpunkcyjnych, po których następuje zero lub jedno nawias zamykający (")").|
 
-Można również użyć `(?n)` elementu wbudowanego, aby pominąć automatyczne przechwytywanie. Poniższy przykład modyfikuje poprzedni wzorzec wyrażenia regularnego, aby użyć elementu `(?n)` wbudowanego zamiast <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opcji.
+Można również użyć `(?n)` elementu wbudowanego, aby pominąć Automatyczne przechwytywanie. Poniższy przykład modyfikuje poprzedni wzorzec wyrażenia regularnego, aby użyć `(?n)` wbudowanego elementu zamiast <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opcji.
 
 [!code-csharp[Conceptual.Regex.Language.Options#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit2.cs#10)]
 [!code-vb[Conceptual.Regex.Language.Options#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit2.vb#10)]
 
-Na koniec można użyć elementu `(?n:)` grupy wbudowanej, aby pominąć automatyczne przechwytywanie na podstawie grupy po grupie. Poniższy przykład modyfikuje poprzedni wzorzec, aby pominąć nienazwane przechwytuje w grupie zewnętrznej, `((?>\w+),?\s?)`. Należy zauważyć, że pomija to nienazwane przechwytuje w grupie wewnętrznej, jak również.
+Na koniec można użyć wbudowanego elementu grupy, `(?n:)` Aby pominąć Automatyczne przechwytywanie na zasadzie grupy po grupie. Poniższy przykład modyfikuje poprzedni wzorzec, aby pominąć nienazwane przechwycenia w grupie zewnętrznej `((?>\w+),?\s?)` . Należy zauważyć, że spowoduje to pominięcie nienazwanych przechwyconych w grupie wewnętrznej.
 
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
 ## <a name="compiled-regular-expressions"></a>Skompilowane wyrażenia regularne
 
-Domyślnie interpretowane są wyrażenia regularne w domenie .NET. Gdy <xref:System.Text.RegularExpressions.Regex> obiekt jest wystąpienia lub metoda <xref:System.Text.RegularExpressions.Regex> statyczna jest wywoływana, wzorzec wyrażenia regularnego jest analizowany w zestawie niestandardowych kodów operacyjnych, a interpreter używa tych kodów opcode do uruchomienia wyrażenia regularnego. Wiąże się to z kompromisem: koszt inicjowania aparatu wyrażeń regularnych jest zminimalizowany kosztem wydajności w czasie wykonywania.
+Domyślnie wyrażenia regularne w programie .NET są interpretowane. Gdy <xref:System.Text.RegularExpressions.Regex> obiekt jest skonkretyzowany lub <xref:System.Text.RegularExpressions.Regex> wywoływana jest metoda statyczna, wzorzec wyrażenia regularnego jest analizowany w zestawie niestandardowych kodów operacji, a interpreter używa tych kodów w celu uruchomienia wyrażenia regularnego. Obejmuje to kompromis: koszt inicjowania aparatu wyrażeń regularnych jest zminimalizowany na koszt wydajności w czasie wykonywania.
 
-Za pomocą <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> tej opcji można użyć skompilowanych zamiast interpretowanych wyrażeń regularnych. W takim przypadku, gdy wzorzec jest przekazywany do aparatu wyrażeń regularnych, jest analizowany w zestawie kodów operacyjnych, a następnie konwertowany na język pośredni firmy Microsoft (MSIL), który może być przekazywany bezpośrednio do środowiska wykonawczego języka wspólnego. Skompilowane wyrażenia regularne maksymalizują wydajność w czasie wykonywania kosztem czasu inicjowania.
-
-> [!NOTE]
-> Wyrażenie regularne można skompilować tylko <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> przez `options` podanie wartości <xref:System.Text.RegularExpressions.Regex> do parametru konstruktora klasy lub metody dopasowywania wzorców statycznych. Nie jest dostępna jako opcja wbudowana.
-
-Można użyć skompilowanych wyrażeń regularnych w wywołaniach zarówno statycznych, jak i wystąpień regularnych. W statycznych wyrażeniach <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> regularnych opcja jest `options` przekazywana do parametru metody dopasowywania wzorca wyrażenia regularnego. W przypadku wyrażeń regularnych jest `options` przekazywana do parametru konstruktora <xref:System.Text.RegularExpressions.Regex> klasy. W obu przypadkach powoduje zwiększoną wydajność.
-
-Jednak ta poprawa wydajności występuje tylko w następujących warunkach:
-
-- Obiekt, <xref:System.Text.RegularExpressions.Regex> który reprezentuje określone wyrażenie regularne jest używany w wielu wywołań metod dopasowywania wzorców wyrażeń regularnych.
-
-- Obiekt <xref:System.Text.RegularExpressions.Regex> nie może wyjść poza zakres, więc może być ponownie ponownie.
-
-- Statyczne wyrażenie regularne jest używane w wielu wywołaniach metod dopasowywania wzorców wyrażeń regularnych. (Poprawa wydajności jest możliwe, ponieważ wyrażenia regularne używane w wywołaniach metody statycznej są buforowane przez aparat wyrażeń regularnych.)
+Można używać skompilowanych wyrażeń regularnych zamiast interpretowanych za pomocą <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcji. W tym przypadku, gdy wzorzec jest przenoszona do aparatu wyrażeń regularnych, jest analizowany w zestaw kodów operacji, a następnie konwertowany do języka pośredniego firmy Microsoft (MSIL), który można przesłać bezpośrednio do środowiska uruchomieniowego języka wspólnego. Skompilowane wyrażenia regularne maksymalizują wydajność w czasie wykonywania kosztem czasu inicjacji.
 
 > [!NOTE]
-> Opcja <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> nie jest <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> związana z metodą, która tworzy zestaw specjalnego przeznaczenia, który zawiera wstępnie zdefiniowane skompilowane wyrażenia regularne.
+> Wyrażenie regularne może być kompilowane tylko poprzez dostarczenie <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> wartości do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub statycznej metody dopasowania do wzorca. Nie jest ona dostępna jako opcja wbudowana.
 
-## <a name="ignore-white-space"></a>Ignoruj biały spację
+Skompilowane wyrażenia regularne można używać w wywołaniach zarówno w wyrażeniach statycznych, jak i wystąpieniach regularnych. W statycznych wyrażeniach regularnych <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcja jest przenoszona do `options` parametru metody dopasowania do wzorca wyrażenia regularnego. W wyrażeniach regularnych wystąpienia jest ona przenoszona do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy. W obu przypadkach powstaje zwiększona wydajność.
 
-Domyślnie biały znak we wzorcu wyrażenia regularnego jest znaczący; wymusza aparat wyrażeń regularnych, aby dopasować znak odstępu w ciągu wejściowym. Z tego powodu wyrażenie`\b\w+\s`regularne "`\b\w+` " i " " są mniej więcej równoważnymi wyrażeniami regularnymi. Ponadto po napotkaniu znaku liczbowego (#) we wzorcu wyrażenia regularnego jest on interpretowany jako znak literał, który ma być dopasowany.
+Jednak ten wzrost wydajności występuje tylko w następujących warunkach:
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> lub opcja `x` wbudowana zmienia to domyślne zachowanie w następujący sposób:
+- <xref:System.Text.RegularExpressions.Regex>Obiekt, który reprezentuje określone wyrażenie regularne jest używany w wielu wywołaniach metod dopasowania do wzorca wyrażenia regularnego.
 
-- Niesłańcuchowany biały znak we wzorcu wyrażenia regularnego jest ignorowany. Aby być częścią wzorca wyrażenia regularnego, znaki odstępu muszą `\s` być`\` zmienione (na przykład jako lub " ").
+- <xref:System.Text.RegularExpressions.Regex>Obiekt nie może wykraczać poza zakres, więc można go ponownie użyć.
 
-- Znak numeru (#) jest interpretowany jako początek komentarza, a nie jako znak literał. Cały tekst we wzorcu wyrażenia regularnego od znaku # do końca ciągu jest interpretowany jako komentarz.
+- Statyczne wyrażenie regularne jest używane w wielu wywołaniach metod dopasowania do wzorca wyrażenia regularnego. (Zwiększenie wydajności jest możliwe, ponieważ wyrażenia regularne używane w wywołaniach metod statycznych są buforowane przez aparat wyrażeń regularnych).
 
-Jednak w następujących przypadkach znaki odstępu w wyrażeniu regularnym nie są <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> ignorowane, nawet jeśli używasz tej opcji:
+> [!NOTE]
+> <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>Opcja jest niezwiązana z <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metodą, która tworzy zestaw specjalnego przeznaczenia zawierający wstępnie zdefiniowane skompilowane wyrażenia regularne.
 
-- Biały znak w klasie znaków jest zawsze interpretowany dosłownie. Na przykład wzorzec `[ .,;:]` wyrażenia regularnego pasuje do dowolnego pojedynczego znaku odstępu, kropki, przecinka, średnika lub dwukropka.
+## <a name="ignore-white-space"></a>Ignoruj odstępy
 
-- Biały znak nie jest dozwolony w nawiasie `{`kwantyfikatora, takiego jak *n*`}`, `{` *n*`,}`i `{` *n*`,`*m*`}`. Na przykład wzorzec `\d{1, 3}` wyrażenia regularnego nie pasuje do wszystkich sekwencji cyfr od jednej do trzech cyfr, ponieważ zawiera znak odstępu.
+Domyślnie biały znak we wzorcu wyrażenia regularnego jest znaczący; wymusza, aby aparat wyrażeń regularnych pasował do znaku odstępu w ciągu wejściowym. W związku z tym wyrażenie regularne " `\b\w+\s` " i " `\b\w+` " są w przybliżeniu równoważne z wyrażeniami regularnymi. Ponadto, gdy w wzorcu wyrażenia regularnego jest wykryty znak numeru (#), jest interpretowany jako znak literału, który ma zostać dopasowany.
 
-- Biały znak nie jest dozwolone w sekwencji znaków, która wprowadza element języka. Przykład:
+<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>Opcja, lub `x` opcja wbudowana, zmienia to zachowanie domyślne w następujący sposób:
 
-  - `(?:` *Podwyrażenie* `)` elementu języka reprezentuje grupę niebędącą `(?:` częścią elementu, a część elementu nie może mieć osadzonych spacji. `(? :` *Podwyrażenie* `)` wzorca zgłasza <xref:System.ArgumentException> w czasie wykonywania, ponieważ aparat wyrażeń regularnych nie `( ?:`może analizować wzorca, a *wyrażenie podrzędne* `)` wzorca nie odpowiada *podwyrażeniem podrzędnym.*
+- Niezmieniony biały znak we wzorcu wyrażenia regularnego jest ignorowany. Aby była częścią wzorca wyrażenia regularnego, znaki spacji muszą być puste (na przykład jako `\s` lub " `\` ").
 
-  - `\p{` *name*Nazwa`}`elementu języka , która reprezentuje kategorię Unicode lub nazwany blok, `\p{` nie może zawierać osadzonych spacji w części elementu. Jeśli zostanie dodasz biały znak, element <xref:System.ArgumentException> zgłasza w czasie wykonywania.
+- Znak numeru (#) jest interpretowany jako początek komentarza, a nie jako znak literału. Cały tekst we wzorcu wyrażenia regularnego ze znaku # na końcu ciągu jest interpretowany jako komentarz.
 
-Włączenie tej opcji pomaga uprościć wyrażenia regularne, które są często trudne do przeanalizowania i zrozumienia. Poprawia czytelność i umożliwia dokumentowanie wyrażenia regularnego.
+Jednak w następujących przypadkach znaki odstępu w wyrażeniu regularnym nie są ignorowane, nawet jeśli używana jest <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> Opcja:
 
-Poniższy przykład definiuje następujący wzorzec wyrażenia regularnego:
+- Biały znak w klasie znaków jest zawsze interpretowany dosłownie. Na przykład wzorzec wyrażenia regularnego `[ .,;:]` dopasowuje dowolny pojedynczy znak odstępu, kropkę, przecinek, średnik lub dwukropek.
+
+- Biały znak nie jest dozwolony w obrębie kwantyfikatora w nawiasach klamrowych, takich jak `{` *n* `}` , `{` *n* `,}` i `{` *n* `,` *m* `}` . Na przykład wzorzec wyrażenia regularnego `\d{1, 3}` nie jest zgodny z żadną sekwencją cyfr z jednej do trzech cyfr, ponieważ zawiera znak odstępu.
+
+- Biały znak jest niedozwolony w sekwencji znaków, która wprowadza element języka. Na przykład:
+
+  - Podwyrażenie elementu języka `(?:` *subexpression* `)` reprezentuje grupę nieprzechwytującą, a `(?:` część elementu nie może mieć osadzonych spacji. Podwyrażenie wzorca `(? :` *subexpression* `)` zgłasza <xref:System.ArgumentException> w czasie wykonywania, ponieważ aparat wyrażeń regularnych nie może przeanalizować wzorca, a `( ?:` *Podwyrażenie* wzorca `)` nie będzie pasować do *podwyrażenia*.
+
+  - Nazwa elementu języka `\p{` *name* `}` , która reprezentuje kategorię Unicode lub nazwany blok, nie może zawierać osadzonych spacji w `\p{` części elementu. Jeśli zostanie uwzględniony biały znak, element zgłasza <xref:System.ArgumentException> czas wykonywania.
+
+Włączenie tej opcji pomaga uprościć wyrażenia regularne, które często trudno jest analizować i zrozumieć. Zwiększa czytelność i umożliwia dokumentowanie wyrażenia regularnego.
+
+W poniższym przykładzie zdefiniowano następujący wzorzec wyrażenia regularnego:
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-Ten wzorzec jest podobny do wzorca zdefiniowanego w [jawnych przechwytuje tylko](#explicit-captures-only) sekcji, z tą różnicą, <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> że używa opcji do ignorowania wzorca biały znak.
+Ten wzorzec jest podobny do wzorca zdefiniowanego w sekcji [tylko przechwycenia jawne](#explicit-captures-only) , z tą różnicą, że używa <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> opcji do ignorowania białego znaku w deseniu.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
 
-W poniższym przykładzie użyto opcji `(?x)` wbudowanej do ignorowania odstępu szyku.
+Poniższy przykład używa wbudowanej opcji, `(?x)` Aby zignorować biały znak w deseniu.
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
 
 ## <a name="right-to-left-mode"></a>Tryb od prawej do lewej
 
-Domyślnie aparat wyrażeń regularnych wyszukuje od lewej do prawej. Kierunek wyszukiwania można odwrócić <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> za pomocą tej opcji. Wyszukiwanie rozpoczyna się automatycznie od ostatniej pozycji znaku ciągu. Dla metod dopasowywania wzorców, które <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>zawierają parametr pozycji początkowej, takich jak pozycja początkowa jest indeks po prawej stronie znaku, w którym ma się rozpocząć wyszukiwanie.
+Domyślnie aparat wyrażeń regularnych przeszukuje od lewej do prawej. Kierunek wyszukiwania można odwrócić przy użyciu <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> opcji. Wyszukiwanie rozpocznie się automatycznie od ostatniej pozycji znaku ciągu. Dla metod dopasowania do wzorca, które zawierają parametr pozycji początkowej, takich jak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> , pozycja początkowa jest indeksem pozycji znaku po prawej stronie, w którym rozpocznie się wyszukiwanie.
 
 > [!NOTE]
-> Tryb wzorca od prawej do lewej jest <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> dostępny `options` tylko przez <xref:System.Text.RegularExpressions.Regex> podanie wartości do parametru konstruktora klasy lub metody dopasowywania wzorca statycznego. Nie jest dostępna jako opcja wbudowana.
+> Tryb wzorca od prawej do lewej jest dostępny tylko poprzez dostarczenie <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> wartości do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub statycznej metody dopasowania do wzorca. Nie jest ona dostępna jako opcja wbudowana.
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> zmienia tylko kierunek wyszukiwania; nie interpretuje wzorca wyrażenia regularnego od prawej do lewej. Na przykład wyrażenie `\bb\w+\s` regularne dopasowuje wyrazy, które zaczynają się od litery "b", a po nim następuje znak odstępu. W poniższym przykładzie ciąg wejściowy składa się z trzech wyrazów, które zawierają jeden lub więcej znaków "b". Pierwsze słowo zaczyna się od "b", drugie kończy się na "b", a trzecie zawiera dwa znaki "b" w środku wyrazu. Jak pokazano dane wyjściowe z przykładu, tylko pierwsze słowo pasuje do wzorca wyrażenia regularnego.
+<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType>Opcja zmienia tylko kierunek wyszukiwania. nie interpretuje wzorca wyrażenia regularnego od prawej do lewej. Na przykład wyrażenie regularne `\bb\w+\s` dopasowuje wyrazy rozpoczynające się od litery "b", po którym następuje znak odstępu. W poniższym przykładzie ciąg wejściowy składa się z trzech słów, które zawierają jeden lub więcej znaków "b". Pierwsze słowo rozpoczyna się od litery "b", drugi kończą się znakiem "b", a trzeci zawiera dwa znaki "b" w środku słowa. Jak pokazano na przykładzie, tylko pierwszy wyraz pasuje do wzorca wyrażenia regularnego.
 
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-Należy również zauważyć, że asercja wyprzedzająca `(?=`(element`)` języka `(?<=` *podwyrażenia)* i twierdzenie patrząc za (element`)` języka *podwyrażenia)* nie zmieniają kierunku. Twierdzenia wyprzedzające patrzą w prawo; spojrzenia na poprzestały w lewo. Na przykład wyrażenie `(?<=\d{1,2}\s)\w+,?\s\d{4}` regularne używa potwierdzenia lookbehind do testowania daty poprzedzającej nazwę miesiąca. Wyrażenie regularne następnie pasuje do miesiąca i roku. Aby uzyskać informacje na temat twierdzeń wyprzedzających i obradych, zobacz [Grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Należy również zauważyć, że potwierdzenie naprzód ( `(?=` element języka *podwyrażenia* `)` ) i potwierdzenie asercja wsteczna ( `(?<=` element języka *podwyrażenia* `)` ) nie zmieniają kierunku. Potwierdzenia naprzód są przeszukiwane w prawo; potwierdzenia asercja wsteczna wyglądają po lewej stronie. Na przykład wyrażenie regularne `(?<=\d{1,2}\s)\w+,?\s\d{4}` używa potwierdzenia asercja wsteczna, aby przetestować datę poprzedzającą nazwę miesiąca. Następnie wyrażenie regularne dopasowuje miesiąc i rok. Aby uzyskać informacje na temat potwierdzeń i asercja wsteczna, zobacz [Grouping konstrukcjes](grouping-constructs-in-regular-expressions.md).
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
 
-Wzorzec wyrażenia regularnego jest zdefiniowany w sposób pokazany w poniższej tabeli.
+Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.
 
 |Wzorce|Opis|
 |-------------|-----------------|
-|`(?<=\d{1,2}\s)`|Początek dopasowania musi być poprzedzony jedną lub dwiema cyframi dziesiętnymi, po których następuje spacja.|
+|`(?<=\d{1,2}\s)`|Początek dopasowania musi być poprzedzony jedną lub dwiema cyframi dziesiętnymi, po których występuje spacja.|
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|
-|`,?`|Dopasuj zero lub jeden przecinek.|
+|`,?`|Dopasowanie do zera lub jednego przecinka.|
 |`\s`|Dopasowuje znak odstępu.|
-|`\d{4}`|Dopasuj cztery cyfry dziesiętne.|
+|`\d{4}`|Dopasowuje cztery cyfry dziesiętne.|
 
-## <a name="ecmascript-matching-behavior"></a>Zachowanie dopasowywania ECMAScript
+## <a name="ecmascript-matching-behavior"></a>Zachowanie dopasowania ECMAScript
 
-Domyślnie aparat wyrażeń regularnych używa zachowania kanonicznego podczas dopasowywania wzorca wyrażenia regularnego do tekstu wejściowego. Można jednak poinstruować aparat wyrażeń regularnych, aby używał <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> zachowania dopasowywania ECMAScript, określając tę opcję.
+Domyślnie aparat wyrażeń regularnych używa zachowania kanonicznego, gdy dopasowuje wzorzec wyrażenia regularnego do tekstu wejściowego. Można jednak nakazać aparatowi wyrażeń regularnych, aby używał zachowania zgodnego z dopasowaniem ECMAScript przez określenie <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> opcji.
 
 > [!NOTE]
-> Zachowanie zgodne ze standardem ECMAScript <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> jest dostępne `options` tylko <xref:System.Text.RegularExpressions.Regex> przez podanie wartości parametru konstruktora klasy lub metody dopasowywania wzorców statycznych. Nie jest dostępna jako opcja wbudowana.
+> Zachowanie zgodne ze standardem ECMAScript jest dostępne tylko poprzez dostarczenie <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> wartości do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub statycznej metody dopasowania do wzorca. Nie jest ona dostępna jako opcja wbudowana.
 
-Opcja <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> może być łączona <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> tylko z opcjami i opcjami. Użycie dowolnej innej opcji w wyrażeniu regularnym powoduje <xref:System.ArgumentOutOfRangeException>
+<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>Opcja może być łączona tylko z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcjami i. Użycie jakichkolwiek innych opcji w wyrażeniu regularnym powoduje wystąpienie elementu <xref:System.ArgumentOutOfRangeException> .
 
-Zachowanie ECMAScript i kanonicznych wyrażeń regularnych różni się w trzech obszarach: składnia klasy znaków, samonawodujące się grupy przechwytywania oraz interpretacja ósemkowe i wsteczne.
+Zachowanie ECMAScript i kanoniczne wyrażenia regularne różnią się w trzech obszarach: Składnia klasy znaków, grupy przechwytywania do odwołujących się do siebie oraz interpretacja ósemkowa i wsteczna.
 
-- Składnia klasy znaków. Ponieważ kanoniczne wyrażenia regularne obsługują Unicode, podczas gdy ECMAScript nie, klasy znaków w ecmascript mają bardziej ograniczoną składnię, a niektóre elementy języka klasy znaków mają inne znaczenie. Na przykład ecmascript nie obsługuje elementów języka, takich jak `\p` `\P`kategoria Unicode lub elementy bloku i . Podobnie `\w` element, który pasuje do znaku wyrazu, `[a-zA-Z_0-9]` jest odpowiednikiem klasy `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` znaków podczas korzystania z ECMAScript i podczas korzystania z zachowania kanonicznego. Aby uzyskać więcej informacji, zobacz [Klasy znaków](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
+- Składnia klasy znaków. Ze względu na to, że kanoniczne wyrażenia regularne obsługują standard Unicode, natomiast klasy znaków w ECMAScript mają bardziej ograniczoną składnię, a niektóre elementy języka klasy znaku mają inne znaczenie. Na przykład ECMAScript nie obsługuje elementów języka, takich jak kategoria Unicode lub elementy bloku `\p` i `\P` . Podobnie, `\w` element, który dopasowuje znak słowa, jest odpowiednikiem `[a-zA-Z_0-9]` klasy znaku podczas korzystania z języka ECMAScript i `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` w przypadku używania zachowania kanonicznego. Aby uzyskać więcej informacji, zobacz [klasy znaków](character-classes-in-regular-expressions.md).
 
-  Poniższy przykład ilustruje różnicę między dopasowaniem wzorców kanonicznych i ECMAScript. Definiuje wyrażenie regularne, `\b(\w+\s*)+`które dopasowuje wyrazy, po których następują znaki odstępu. Dane wejściowe składają się z dwóch ciągów, jeden, który używa zestawu znaków łacińskich, a drugi, który używa zestawu znaków cyrylicy. Jak pokazano na wyjściu, <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> wywołanie metody, która używa dopasowania ECMAScript nie odpowiada cyrylicy, podczas gdy wywołanie metody, która używa dopasowania kanonicznego, jest zgodne z tymi słowami.
+  Poniższy przykład ilustruje różnicę między kanonicznym i ECMAScript dopasowania do wzorca. Definiuje wyrażenie regularne, `\b(\w+\s*)+` które pasuje do wyrazów, po których następuje znak spacji. Dane wejściowe składają się z dwóch ciągów, jeden, który używa zestawu znaków łacińskich, a drugi, który używa zestawu znaków cyrylicy. Ponieważ dane wyjściowe są wyświetlane, wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, która używa dopasowania ECMAScript, nie jest zgodne z wyrazami cyrylicy, podczas gdy wywołanie metody używające dopasowywania kanonicznego jest zgodne z tymi wyrazami.
 
   [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
   [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
-- Samonawiązujące się grupy przechwytywania. Klasa przechwytywania wyrażeń regularnych z wstecznązwycesością do siebie musi być aktualizowana przy każdej iteracji przechwytywania. Jak pokazano w poniższym przykładzie, `((a+)(\1) ?)+` ta funkcja umożliwia wyrażenie regularne dopasowanie ciągu wejściowego " aaaaa aaaaaa " podczas korzystania z ECMAScript, ale nie podczas korzystania z dopasowywania kanonicznego.
+- Odwołujące się do siebie grupy przechwytywania. Klasa przechwytywania wyrażenia regularnego z odwołaniem wstecznym musi zostać zaktualizowana przy użyciu każdej iteracji przechwytywania. Jak pokazano na poniższym przykładzie, ta funkcja włącza wyrażenie regularne `((a+)(\1) ?)+` dopasowuje ciąg wejściowy "AA AAAA aaaaaa" przy użyciu języka ECMAScript, ale nie jest używana do dopasowywania kanonicznego.
 
   [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
   [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-  Wyrażenie regularne jest zdefiniowane w sposób pokazany w poniższej tabeli.
+  Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.
 
   |Wzorce|Opis|
   |-------------|-----------------|
-  |1lit.|Dopasuj literę "a" jeden lub więcej razy. Jest to druga grupa przechwytywania.|
-  |(\1)|Dopasuj podciąg przechwycony przez pierwszą grupę przechwytywania. Jest to trzecia grupa przechwytywania.|
-  |?|Dopasuj zero lub jeden znak spacji.|
-  |((a+)(\1) ?) +|Dopasuj wzorzec jednego lub więcej znaków "a", po którym następuje ciąg, który pasuje do pierwszej grupy przechwytywania, po której następuje zero lub jeden znak spacji jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|
+  |(a +)|Dopasowuje znak "a" jeden lub więcej razy. Jest to druga grupa przechwytywania.|
+  |(\ 1)|Dopasowuje podciąg przechwytywany przez pierwszą grupę przechwytywania. Jest to trzecia grupa przechwytywania.|
+  |?|Dopasowuje zero lub jeden znak spacji.|
+  |((a +) (\ 1)?) +|Dopasowuje wzorzec składający się z co najmniej jednego znaku "a", po którym następuje ciąg, który pasuje do pierwszej grupy przechwytywania, po którym następuje zero lub jeden znak spacji. Jest to pierwsza grupa przechwytywania.|
 
-- Rozwiązywanie niejasności między ósemkowymi ucieczkami a wnioskami wsteczowymi. W poniższej tabeli podsumowano różnice w interpretacji ósemkowej i wstecznej za pomocą wyrażeń regularnych kanonicznych i ECMAScript.
+- Rozpoznawanie niejasności między ósemkowymi znakami ucieczki i odwołaniami wstecznymi. Poniższa tabela podsumowuje różnice w liczbie ósemkowej i interpretacji odwołania wstecznego przez kanoniczne i ECMAScript wyrażenia regularne.
 
-  |Wyrażenie regularne|Zachowanie kanoniczne|Zachowanie ECMAScript|
+  |Wyrażenie regularne|Zachowanie kanoniczne|Zachowanie języka ECMAScript|
   |------------------------|------------------------|-------------------------|
-  |`\0`następnie od 0 do 2 cyfr ósemkowych|Interpretuj jako ósemki. Na przykład `\044` jest zawsze interpretowane jako wartość ósemki i oznacza "$".|To samo zachowanie.|
-  |`\`po którym następuje cyfra od 1 do 9, po której następuje brak dodatkowych cyfr dziesiętnych,|Interpretować jako wniosek wsteczny. Na przykład `\9` zawsze oznacza backreference 9, nawet jeśli dziewiąta grupa przechwytywania nie istnieje. Jeśli grupa przechwytywania nie istnieje, analizator wyrażenia regularnego <xref:System.ArgumentException>zgłasza plik .|Jeśli istnieje grupa przechwytywania pojedynczej cyfry dziesiętnej, odniesienie wsteczne do tej cyfry. W przeciwnym razie należy interpretować wartość jako literał.|
-  |`\`po którym następuje cyfra od 1 do 9, a następnie dodatkowe cyfry dziesiętne|Interpretuj cyfry jako wartość dziesiętną. Jeśli ta grupa przechwytywania istnieje, należy interpretować wyrażenie jako wniosek wsteczny.<br /><br /> W przeciwnym razie należy interpretować wiodące cyfry ósemki do ósemki 377; oznacza to, że należy wziąć pod uwagę tylko niskie 8 bitów wartości. Zinterpretuj pozostałe cyfry jako literały. Na przykład w `\3000`wyrażeniu , jeśli istnieje przechwytywanie grupy 300, interpretuj jako przyw. jeśli przechwytywanie grupy 300 nie istnieje, interpretować jako ósemki 300 następuje 0.|Interpretować jako backreference konwertując jak najwięcej cyfr, jak to możliwe do wartości dziesiętnej, która może odnosić się do przechwytywania. Jeśli nie można przekonwertować żadnych cyfr, należy interpretować jako ósemę przy użyciu cyfr ósemkowych wiodących do ósemki 377; interpretować pozostałe cyfry jako literały.|
+  |`\0`następują cyfry ósemkowe od 0 do 2|Interpretuj jako ósemkowy. Na przykład `\044` zawsze jest interpretowana jako wartość ósemkowa i oznacza "$".|Takie samo zachowanie.|
+  |`\`po którym następuje cyfra od 1 do 9, po której następuje brak dodatkowych cyfr dziesiętnych,|Interpretuj jako odwołanie wsteczne. Na przykład `\9` zawsze oznacza odwołanie wsteczne 9, nawet jeśli dziewiąta grupa przechwytywania nie istnieje. Jeśli grupa przechwytywania nie istnieje, Analizator wyrażeń regularnych zgłasza <xref:System.ArgumentException> .|Jeśli istnieje pojedyncza cyfra dziesiętna grupa przechwytywania, odwołuje się do tej cyfry. W przeciwnym razie interpretuje wartość jako literał.|
+  |`\`następuje cyfra od 1 do 9, po której następuje dodatkowe cyfry dziesiętne|Interpretuj cyfry jako wartość dziesiętną. Jeśli ta grupa przechwytywania istnieje, interpretuj wyrażenie jako odwołanie wsteczne.<br /><br /> W przeciwnym razie Interpretuj wiodące cyfry ósemkowe do ósemkowego 377; oznacza to, że należy wziąć pod uwagę tylko 8 bitów wartości. Interpretuj pozostałe cyfry jako literały. Na przykład w wyrażeniu `\3000` , jeśli grupa przechwytywania 300 istnieje, interpretuj jako odwołanie wsteczne 300; jeśli 300 grupa przechwytywania nie istnieje, interpretuj jako ósemkową 300, a następnie 0.|Interpretuj jako odwołanie wsteczne, konwertując dowolną liczbę cyfr na wartość dziesiętną, która może odwoływać się do przechwytywania. Jeśli nie można przekonwertować cyfr, interpretuj jako ósemkowy przy użyciu wiodących cyfr ósemkowych do ósemkowego 377; Interpretuj pozostałe cyfry jako literały.|
 
-## <a name="comparison-using-the-invariant-culture"></a>Porównanie przy użyciu kultury niezmiennej
+## <a name="comparison-using-the-invariant-culture"></a>Porównanie przy użyciu niezmiennej kultury
 
-Domyślnie, gdy aparat wyrażeń regularnych wykonuje porównania bez uwzględniania wielkości liter, używa konwencji wielkości liter bieżącej kultury do określenia równoważnych wielkich i małych liter.
+Domyślnie, gdy aparat wyrażeń regularnych wykonuje porównania bez uwzględniania wielkości liter, używa konwencji osłony dla bieżącej kultury, aby określić równoważne wielkie i małe litery.
 
-Jednak to zachowanie jest niepożądane w przypadku niektórych typów porównań, szczególnie podczas porównywania danych wejściowych użytkownika z nazwami zasobów systemowych, takich jak hasła, pliki lub adresy URL. Poniższy przykład ilustruje takie jak scenariusz. Kod ma na celu zablokowanie dostępu do dowolnego zasobu, którego adres URL jest poprzedzony **FILE://**. Wyrażenie regularne próbuje dopasowania bez uwzględniania wielkości liter z ciągiem `$FILE://`przy użyciu wyrażenia regularnego . Jednakże, gdy obecna kultura systemu jest tr-TR (turecko-turecki), "I" nie jest wielką literą odpowiednik "i". W rezultacie wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody zwraca `false`, a dostęp do pliku jest dozwolony.
+Jednak takie zachowanie jest niepożądane w przypadku niektórych typów porównań, szczególnie w przypadku porównywania danych wejściowych użytkownika z nazwami zasobów systemowych, takich jak hasła, pliki lub adresy URL. Poniższy przykład ilustruje przykład scenariusza. Kod jest przeznaczony do blokowania dostępu do dowolnego zasobu, którego adres URL jest poprzedzony **File://**. Wyrażenie regularne próbuje dopasować wielkość liter do ciągu przy użyciu wyrażenia regularnego `$FILE://` . Jednakże gdy bieżącą kulturą systemu jest TR-TR (turecki-Turcja), "I" nie jest odpowiednikiem litery "i". W związku z tym wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody zwraca `false` i dostęp do pliku jest dozwolone.
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat porównań ciągów, które są rozróżniane z literą i które używają kultury niezmiennej, zobacz [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)znaków .
+> Aby uzyskać więcej informacji na temat porównań ciągów, w których jest rozróżniana wielkość liter i które używają niezmiennej kultury, zobacz [najlepsze rozwiązania dotyczące używania ciągów](best-practices-strings.md).
 
-Zamiast używać porównania bez uwzględniania wielkości liter bieżącej kultury, można <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> określić opcję ignorowania różnic kulturowych w języku i używać konwencji kultury niezmiennej.
+Zamiast używać porównania z uwzględnieniem wielkości liter w bieżącej kulturze, można określić <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> opcję ignorowania różnic kulturowych w języku i używania Konwencji niezmiennej kultury.
 
 > [!NOTE]
-> Porównanie przy użyciu kultury niezmiennej jest dostępna <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> tylko przez `options` podanie <xref:System.Text.RegularExpressions.Regex> wartości do parametru konstruktora klasy lub statycznej metody dopasowywania wzorców. Nie jest dostępna jako opcja wbudowana.
+> Porównanie przy użyciu niezmiennej kultury jest dostępne tylko poprzez dostarczenie <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> wartości do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub statycznej metody dopasowania do wzorca. Nie jest ona dostępna jako opcja wbudowana.
 
-Poniższy przykład jest identyczny z poprzednim przykładem, z tą różnicą, że metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> jest wywoływana z opcjami, które zawierają <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType>. Nawet wtedy, gdy bieżąca kultura jest ustawiona na turecki (Turcja), aparat wyrażeń regularnych jest w stanie pomyślnie dopasować "PLIK" i "plik" i zablokować dostęp do zasobu pliku.
+Poniższy przykład jest identyczny z poprzednim przykładem, z tą różnicą, że metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> jest wywoływana z opcjami, które obejmują <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> . Nawet jeśli bieżąca kultura jest ustawiona na turecki (Turcja), aparat wyrażeń regularnych może pomyślnie dopasować "plik" i "plik" i zablokować dostęp do zasobu pliku.
 
 [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
 [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Język wyrażeń regularnych — podręczny wykaz](regular-expression-language-quick-reference.md)

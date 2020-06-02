@@ -10,12 +10,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: dd13116b13ac8e2d7a3af6ef014eb4f393909515
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a3b090b39e1e907826551ed152d4eece4885ce41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743700"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290139"
 ---
 # <a name="nested-types"></a>Zagnieżdżone typy
 Typ zagnieżdżony jest typem zdefiniowanym w zakresie innego typu, który jest nazywany typem otaczającym. Typ zagnieżdżony ma dostęp do wszystkich elementów członkowskich jego typu otaczającego. Na przykład ma dostęp do prywatnych pól zdefiniowanych w typie otaczającym i do chronionych pól zdefiniowanych we wszystkich elementów nadrzędnych typu otaczającego.
@@ -26,19 +26,19 @@ Typ zagnieżdżony jest typem zdefiniowanym w zakresie innego typu, który jest 
 
  ✔️ Używaj zagnieżdżonych typów, gdy relacja między typem zagnieżdżonym a jego zewnętrznym typem jest taka, że semantyka dostępności elementu członkowskiego jest pożądana.
 
- ❌ nie używać publicznych typów zagnieżdżonych jako konstrukcji grupowania logicznego; Użyj przestrzeni nazw dla tego programu.
+ ❌NIE używaj publicznych typów zagnieżdżonych jako konstrukcji grupowania logicznego; Użyj przestrzeni nazw dla tego programu.
 
- ❌ unikać publicznie uwidocznionych typów zagnieżdżonych. Jedynym wyjątkiem jest to, że zmienne typu zagnieżdżonego muszą być deklarowane tylko w rzadkich scenariuszach, takich jak podklasy lub inne zaawansowane scenariusze dostosowywania.
+ ❌UNIKAj publicznie uwidocznionych typów zagnieżdżonych. Jedynym wyjątkiem jest to, że zmienne typu zagnieżdżonego muszą być deklarowane tylko w rzadkich scenariuszach, takich jak podklasy lub inne zaawansowane scenariusze dostosowywania.
 
- ❌ nie używaj zagnieżdżonych typów, jeśli typ jest prawdopodobnie przywoływany poza typem zawierającym.
+ ❌NIE używaj zagnieżdżonych typów, jeśli istnieje najprawdopodobniej odwołanie poza typem zawierającym.
 
  Na przykład Wyliczenie przesłane do metody zdefiniowanej w klasie nie powinno być zdefiniowane jako typ zagnieżdżony w klasie.
 
- ❌ nie używaj zagnieżdżonych typów, jeśli muszą one być tworzone przez kod klienta.  Jeśli typ ma konstruktora publicznego, prawdopodobnie nie powinien być zagnieżdżony.
+ ❌NIE używaj zagnieżdżonych typów, jeśli muszą one być tworzone przez kod klienta.  Jeśli typ ma konstruktora publicznego, prawdopodobnie nie powinien być zagnieżdżony.
 
  Jeśli typ może być skonkretyzowany, który wydaje się wskazywać, że typ ma miejsce w strukturze na własny (można go utworzyć, działać z nim i zniszczyć bez użycia typu zewnętrznego) i dlatego nie powinien być zagnieżdżony. Typy wewnętrzne nie powinny być szeroko ponownie używane poza typem zewnętrznym bez żadnej relacji z typem zewnętrznym.
 
- ❌ nie definiują typu zagnieżdżonego jako elementu członkowskiego interfejsu. W wielu językach nie jest obsługiwana taka konstrukcja.
+ ❌NIE należy definiować typu zagnieżdżonego jako elementu członkowskiego interfejsu. W wielu językach nie jest obsługiwana taka konstrukcja.
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
@@ -46,5 +46,5 @@ Typ zagnieżdżony jest typem zdefiniowanym w zakresie innego typu, który jest 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania typów](type.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

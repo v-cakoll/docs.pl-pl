@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201758"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286161"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytania dotyczącego usługi danych (Usługi danych programu WCF)
 
@@ -67,7 +67,7 @@ Aby uzyskać więcej informacji, zobacz temat [zagadnienia dotyczące LINQ](linq
 
 ## <a name="adding-query-options"></a>Dodawanie opcji zapytania
 
-Zapytania dotyczące usługi danych obsługują wszystkie opcje zapytania udostępniane przez usługi danych WCF. Wywoływana jest <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Metoda dołączania opcji zapytania do <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>Zwraca nowe <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienie, które jest równoważne z oryginalnym zapytaniem, ale z ustawioną nową opcją zapytania. Następujące zapytanie, gdy wykonywane, zwraca, `Orders` które są filtrowane według `Freight` wartości i uporządkowane według `OrderID` , malejąco:
+Zapytania dotyczące usługi danych obsługują wszystkie opcje zapytania dostępne Usługi danych programu WCF. Wywoływana jest <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Metoda dołączania opcji zapytania do <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>Zwraca nowe <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienie, które jest równoważne z oryginalnym zapytaniem, ale z ustawioną nową opcją zapytania. Następujące zapytanie, gdy wykonywane, zwraca, `Orders` które są filtrowane według `Freight` wartości i uporządkowane według `OrderID` , malejąco:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]

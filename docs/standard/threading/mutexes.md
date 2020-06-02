@@ -8,46 +8,46 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242728"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291178"
 ---
 # <a name="mutexes"></a>Muteksy
-Za pomocą <xref:System.Threading.Mutex> obiektu można zapewnić wyłączny dostęp do zasobu. Klasa <xref:System.Threading.Mutex> używa więcej zasobów systemowych niż <xref:System.Threading.Monitor> klasa, ale może być organizowane przez granice domeny aplikacji, może być używany z wielu czeka i może służyć do synchronizacji wątków w różnych procesach. Aby zapoznać się z porównaniem mechanizmów synchronizacji zarządzanych, zobacz [Omówienie ćwigów synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+<xref:System.Threading.Mutex>Aby zapewnić wyłączny dostęp do zasobu, można użyć obiektu. <xref:System.Threading.Mutex>Klasa używa większej liczby zasobów systemowych niż <xref:System.Threading.Monitor> Klasa, ale może być organizowana między granicami domeny aplikacji, może być używana z wieloma czekami i może służyć do synchronizowania wątków w różnych procesach. Aby zapoznać się z porównaniem mechanizmów synchronizacji zarządzanej, zobacz [Omówienie elementów pierwotnych synchronizacji](overview-of-synchronization-primitives.md).  
   
- Przykłady kodu można znaleźć w <xref:System.Threading.Mutex.%23ctor%2A> dokumentacji referencyjnej dla konstruktorów.  
+ Aby zapoznać się z przykładami kodu, zobacz dokumentację referencyjną dla <xref:System.Threading.Mutex.%23ctor%2A> konstruktorów.  
   
-## <a name="using-mutexes"></a>Korzystanie z muteksów  
- Wątek <xref:System.Threading.WaitHandle.WaitOne%2A> wywołuje metodę obiektu mutex do żądania własności. Wywołanie blokuje, dopóki obiekt mutex jest dostępny lub do momentu upływu opcjonalnego przedziału czasu. Stan obiektu mutex jest sygnalizowany, jeśli żaden wątek nie jest jego właścicielem.  
+## <a name="using-mutexes"></a>Używanie muteksów  
+ Wątek wywołuje <xref:System.Threading.WaitHandle.WaitOne%2A> metodę obiektu mutex, aby zażądać własności. Bloki wywołań do momentu, gdy mutex jest dostępny, lub do momentu, gdy upłynie opcjonalny interwał limitu czasu. Stan obiektu mutex jest sygnalizowane, jeśli żaden z nich nie należy do niego.  
   
- Wątek zwalnia obiektu mutex, wywołując jego <xref:System.Threading.Mutex.ReleaseMutex%2A> metodę. Muteksy mają koligacji wątku; oznacza to, że mutex może być zwolniony tylko przez wątek, który jest jego właścicielem. Jeśli wątek zwalnia mutex nie <xref:System.ApplicationException> jest właścicielem, jest wyrzucany w wątku.  
+ Wątek zwalnia element mutex, wywołując jego <xref:System.Threading.Mutex.ReleaseMutex%2A> metodę. Muteksy mają koligację wątku; oznacza to, że mutex można wydać tylko przez wątek, który jest właścicielem tego elementu. Jeśli wątek zwalnia element mutex, który nie jest właścicielem, <xref:System.ApplicationException> zostanie zgłoszony w wątku.  
   
- Ponieważ <xref:System.Threading.Mutex> klasa pochodzi <xref:System.Threading.WaitHandle>od , można również <xref:System.Threading.WaitHandle.WaitAll%2A> wywołać statyczne lub <xref:System.Threading.WaitHandle.WaitAny%2A> metody <xref:System.Threading.WaitHandle> żądania własności <xref:System.Threading.Mutex> w połączeniu z innymi uchwytami oczekiwania.  
+ Ponieważ <xref:System.Threading.Mutex> Klasa pochodzi od <xref:System.Threading.WaitHandle> , można również wywołać statyczne <xref:System.Threading.WaitHandle.WaitAll%2A> lub metody, <xref:System.Threading.WaitHandle.WaitAny%2A> <xref:System.Threading.WaitHandle> Aby zażądać własności <xref:System.Threading.Mutex> w połączeniu z innymi dojściami oczekiwania.  
   
- Jeśli wątek <xref:System.Threading.Mutex>jest właścicielem , <xref:System.Threading.Mutex> ten wątek można określić to samo w powtarzających się wywołań żądania oczekiwania bez blokowania jego wykonania; jednak musi zwolnić <xref:System.Threading.Mutex> tyle razy, aby zwolnić własność.  
+ Jeśli wątek jest właścicielem <xref:System.Threading.Mutex> , ten wątek może określić te same <xref:System.Threading.Mutex> w powtarzanych wywołaniach oczekiwania na żądanie bez blokowania jego wykonywania, jednak musi wydać <xref:System.Threading.Mutex> dowolną liczbę razy, aby zwolnić własność.  
   
-## <a name="abandoned-mutexes"></a>Opuszczone mutexes  
- Jeśli wątek kończy się <xref:System.Threading.Mutex>bez zwalniania , mutex jest mówi się, że porzucone. Często wskazuje to na poważny błąd programowania, ponieważ zasób, który chroni obiekt mutex, może pozostać w niespójnym stanie. W .NET Framework w wersji 2.0 <xref:System.Threading.AbandonedMutexException> jest generowany w następnym wątku, który uzyskuje obiektu mutex.  
+## <a name="abandoned-mutexes"></a>Porzucone muteksy  
+ Jeśli wątek kończy się bez zwalniania <xref:System.Threading.Mutex> , element mutex zostanie wskazany jako porzucony. Często oznacza to, że ten błąd programistyczny jest niespójny, ponieważ zasób, który jest chroniony przez mutex, może pozostać w stanie niespójności. W .NET Framework w wersji 2,0, <xref:System.Threading.AbandonedMutexException> jest zgłaszany w następnym wątku, który uzyskuje mutex.  
   
 > [!NOTE]
-> W .NET Framework w wersjach 1.0 i 1.1 porzucone <xref:System.Threading.Mutex> jest ustawiona na stan sygnalizowane i następny wątek oczekiwania pobiera własność. Jeśli żaden wątek <xref:System.Threading.Mutex> nie oczekuje, pozostaje w stanie sygnalizowanym. Wyjątek nie jest zgłaszany.  
+> W .NET Framework wersje 1,0 i 1,1 <xref:System.Threading.Mutex> zostanie ustawiony stan zasygnalizowania, a następny wątek oczekujący otrzymuje własność. Jeśli żaden wątek nie oczekuje, <xref:System.Threading.Mutex> pozostaje w stanie sygnalizacji. Wyjątek nie jest zgłaszany.  
   
- W przypadku obiektu mutex dla całego systemu porzucony obiekt mutex może wskazywać, że aplikacja została nagle zakończona (na przykład przy użyciu Menedżera zadań systemu Windows).  
+ W przypadku obiektu mutex w całym systemie porzucony obiekt mutex może wskazywać, że aplikacja została zakończona nieoczekiwanie (na przykład za pomocą Menedżera zadań systemu Windows).  
   
-## <a name="local-and-system-mutexes"></a>Mutexes lokalne i systemowe  
- Muteksy są dwa typy: lokalne muteksy i nazwane muteksy systemu. Jeśli tworzysz <xref:System.Threading.Mutex> obiekt przy użyciu konstruktora, który akceptuje nazwę, jest skojarzony z obiektem systemu operacyjnego o tej nazwie. Nazwane muteksy systemowe są widoczne w całym systemie operacyjnym i mogą być używane do synchronizowania działań procesów. Można utworzyć <xref:System.Threading.Mutex> wiele obiektów, które reprezentują ten sam system <xref:System.Threading.Mutex.OpenExisting%2A> mutex i można użyć metody, aby otworzyć istniejący nazwany mutex systemu.  
+## <a name="local-and-system-mutexes"></a>Lokalne i systemowe muteksy  
+ Muteksy są dwa typy: lokalne muteksy i nazwane muteksy systemowe. Jeśli utworzysz <xref:System.Threading.Mutex> Obiekt przy użyciu konstruktora, który akceptuje nazwę, zostanie on skojarzony z obiektem systemu operacyjnego o tej nazwie. Nazwane muteksy systemu są widoczne w całym systemie operacyjnym i mogą służyć do synchronizowania działań procesów. Można utworzyć wiele <xref:System.Threading.Mutex> obiektów, które reprezentują ten sam nazwany obiekt mutex, i można użyć metody, <xref:System.Threading.Mutex.OpenExisting%2A> Aby otworzyć istniejący nazwany element mutex systemu.  
   
- Lokalny mutex istnieje tylko w ramach procesu. Może być używany przez dowolny wątek w procesie, który ma odwołanie do obiektu lokalnego. <xref:System.Threading.Mutex> Każdy <xref:System.Threading.Mutex> obiekt jest oddzielnym lokalnym obiektem mutex.  
+ Lokalny element mutex istnieje tylko w ramach procesu. Może być używany przez dowolny wątek w procesie, który ma odwołanie do <xref:System.Threading.Mutex> obiektu lokalnego. Każdy <xref:System.Threading.Mutex> obiekt jest osobnym lokalnym elementem mutex.  
   
-### <a name="access-control-security-for-system-mutexes"></a>Zabezpieczenia kontroli dostępu dla mutexów systemowych  
- Program .NET Framework w wersji 2.0 umożliwia wykonywanie zapytań i ustawianie zabezpieczeń kontroli dostępu systemu Windows dla nazwanych obiektów systemowych. Ochrona muteksów systemowych od momentu utworzenia jest zalecana, ponieważ obiekty systemowe są globalne i dlatego mogą być blokowane przez kod inny niż własny.  
+### <a name="access-control-security-for-system-mutexes"></a>Access Control zabezpieczenia dla muteksów systemu  
+ .NET Framework wersja 2,0 zapewnia możliwość wykonywania zapytań i ustawiania zabezpieczeń kontroli dostępu do systemu Windows dla nazwanych obiektów systemowych. Ochrona muteksów systemu od momentu utworzenia jest zalecana, ponieważ obiekty systemowe są globalne i dlatego mogą być blokowane przez kod inny niż własny.  
   
- Aby uzyskać informacje na temat zabezpieczeń kontroli <xref:System.Security.AccessControl.MutexSecurity> <xref:System.Security.AccessControl.MutexAccessRule> dostępu dla <xref:System.Security.AccessControl.MutexRights> muteksów, <xref:System.Threading.Mutex.GetAccessControl%2A> <xref:System.Threading.Mutex.SetAccessControl%2A>zobacz <xref:System.Threading.Mutex.OpenExisting%2A> i klasy, wyliczenie, , i metody <xref:System.Threading.Mutex> klasy i konstruktora. <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>  
+ Aby uzyskać informacje na temat zabezpieczeń kontroli dostępu dla muteksów, <xref:System.Security.AccessControl.MutexSecurity> Zobacz <xref:System.Security.AccessControl.MutexAccessRule> klasy i, <xref:System.Security.AccessControl.MutexRights> Wyliczenie,, <xref:System.Threading.Mutex.GetAccessControl%2A> <xref:System.Threading.Mutex.SetAccessControl%2A> ,, i <xref:System.Threading.Mutex.OpenExisting%2A> metody <xref:System.Threading.Mutex> klasy oraz <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> Konstruktor.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>
@@ -55,5 +55,5 @@ Za pomocą <xref:System.Threading.Mutex> obiektu można zapewnić wyłączny dos
 - <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - [Wątkowość obiektów i funkcji](threading-objects-and-features.md)
-- [Gwinty i gwintowanie](threads-and-threading.md)
+- [Wątki i wątkowość](threads-and-threading.md)
 - [Wątkowość](index.md)

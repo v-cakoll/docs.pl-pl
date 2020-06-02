@@ -12,27 +12,27 @@ helpviewer_keywords:
 - delegates [.NET Framework], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: 4e17e6a96a12b705cf455d70add7e12a30f5fa90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 82e0a57c3d8e180456aed48886e38ca466db16c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121746"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289970"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programowanie asynchroniczne przy użyciu delegatów
-Delegaci umożliwiają wywołanie metody synchronicznej w sposób asynchroniczny. Podczas wywoływania delegata synchronicznie, `Invoke` metoda wywołuje metodę docelową bezpośrednio w bieżącym wątku. Jeśli `BeginInvoke` metoda jest wywoływana, program runtime języka wspólnego (CLR) kolejki żądania i zwraca natychmiast do obiektu wywołującego. Metoda docelowa jest wywoływana asynchronicznie w wątku z puli wątków. Oryginalny wątek, który przesłał żądanie, może kontynuować wykonywanie równolegle z metodą docelową. Jeśli metoda wywołania wywołania został określony `BeginInvoke` w wywołaniu metody, metoda wywołania wywołania wywołania jest wywoływana po zakończeniu metody docelowej. W metodzie wywołania `EndInvoke` zwrotnego metoda uzyskuje wartość zwracaną i wszelkie parametry wejścia/wyjścia lub tylko do wyjścia. Jeśli podczas wywoływania nie określono `BeginInvoke` `EndInvoke` żadnej metody wywołania wywołania, można wywołać z wątku, który o nazwie `BeginInvoke`.  
+Delegaty umożliwiają wywoływanie metody synchronicznej w sposób asynchroniczny. W przypadku wywołania delegata synchronicznie `Invoke` Metoda wywołuje metodę docelową bezpośrednio w bieżącym wątku. Jeśli `BeginInvoke` Metoda jest wywoływana, środowisko uruchomieniowe języka wspólnego (CLR) kolejkuje żądanie i natychmiast wraca do obiektu wywołującego. Metoda docelowa jest wywoływana asynchronicznie w wątku z puli wątków. Oryginalny wątek, który przesłał żądanie, jest bezpłatny, aby kontynuować wykonywanie równolegle z metodą docelową. Jeśli metoda wywołania zwrotnego została określona w wywołaniu `BeginInvoke` metody, metoda wywołania zwrotnego jest wywoływana, gdy metoda docelowa zostanie zakończona. W metodzie wywołania zwrotnego `EndInvoke` metoda uzyskuje wartość zwracaną oraz wszystkie parametry wejściowe/wyjściowe lub wyjściowe. Jeśli metoda wywołania zwrotnego nie zostanie określona podczas wywoływania `BeginInvoke` , `EndInvoke` można wywołać z wątku, który wywołał `BeginInvoke` .  
   
 > [!IMPORTANT]
-> Kompilatory powinny emitować `BeginInvoke`klasy `EndInvoke` delegata z `Invoke`, i metody przy użyciu podpisu delegata określonego przez użytkownika. I `BeginInvoke` `EndInvoke` metody powinny być urządzone jako rodzime. Ponieważ te metody są oznaczone jako macierzyste, CLR automatycznie zapewnia implementację w czasie ładowania klasy. Moduł ładujący zapewnia, że nie są one zastępowane.  
+> Kompilatory powinny emitować klasy delegatów `Invoke` z `BeginInvoke` `EndInvoke` metodami, i przy użyciu podpisu delegata określonego przez użytkownika. `BeginInvoke`Metody i `EndInvoke` powinny być dekoracyjne. Ponieważ te metody są oznaczone jako natywne, środowisko CLR automatycznie udostępnia implementację w czasie ładowania klasy. Moduł ładujący gwarantuje, że nie są one zastępowane.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wywołanie metod synchronicznych w sposób asynchroniczny](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- W tym artykule omówiono użycie delegatów do wywoływania asynchronicznego zwykłych metod i zawiera proste przykłady kodu, które pokazują cztery sposoby oczekiwania na asynchroniczne wywołanie do zwrócenia.  
+ [Wywołanie metod synchronicznych w sposób asynchroniczny](calling-synchronous-methods-asynchronously.md)  
+ W tym artykule omówiono użycie delegatów do wykonywania wywołań asynchronicznych metod zwykłych i przedstawiono proste przykłady kodu, które pokazują cztery sposoby oczekiwania na zwrócenie wywołania asynchronicznego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- Opisuje programowanie asynchroniczne z .NET Framework.  
+ [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](event-based-asynchronous-pattern-eap.md)  
+ Opisuje programowanie asynchroniczne przy użyciu .NET Framework.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Delegate>

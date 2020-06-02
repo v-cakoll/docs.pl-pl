@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać narzędzia analizatora przenośności pl
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209369"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278366"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośności platformy .NET
 
@@ -20,7 +20,7 @@ Po przeprowadzeniu konwersji projektu na nową platformę, taką jak .NET Core, 
 ## <a name="common-targets"></a>Wspólne elementy docelowe
 
 - [.NET Core](../../core/index.yml): ma model modularny, obsługuje instalację równoległą i kieruje scenariusze dla wielu platform. Instalacja równoczesna pozwala na zastosowanie nowych wersji platformy .NET Core bez przerywania innych aplikacji. Jeśli chcesz przenieść aplikację do platformy .NET Core i obsługiwać wiele platform, jest to zalecany element docelowy.
-- . [Net Standard](../../standard/net-standard.md): zawiera interfejsy API .NET Standard dostępne we wszystkich implementacjach platformy .NET. Jeśli chcesz, aby Twoja biblioteka działała na wszystkich platformach obsługiwanych przez platformę .NET, jest to zalecane.
+- . [Net Standard](../net-standard.md): zawiera interfejsy API .NET Standard dostępne we wszystkich implementacjach platformy .NET. Jeśli chcesz, aby Twoja biblioteka działała na wszystkich platformach obsługiwanych przez platformę .NET, jest to zalecane.
 - [ASP.NET Core](/aspnet/core): nowoczesne środowisko sieci Web oparte na platformie .NET Core. Jeśli chcesz przenieść aplikację sieci Web do programu .NET Core w celu obsługi wielu platform, jest to zalecane miejsce docelowe.
 - Rozszerzenia platformy .NET Core + [platform](../../core/porting/windows-compat-pack.md): zawierają interfejsy API platformy .NET Core oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia aplikacji z .NET Framework do platformy .NET Core w systemie Windows.
 - Rozszerzenia .NET Standard i [platformy](../../core/porting/windows-compat-pack.md): zawierają interfejsy API .NET Standard oprócz pakietu zgodności systemu Windows, który zapewnia wiele .NET Framework dostępnych technologii. Jest to zalecany element docelowy do przenoszenia biblioteki z .NET Framework do platformy .NET Core w systemie Windows.

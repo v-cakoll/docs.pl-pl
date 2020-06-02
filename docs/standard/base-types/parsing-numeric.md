@@ -1,5 +1,5 @@
 ---
-title: Analizowanie ciągów liczbowych w .NET
+title: Analizowanie ciągów liczbowych w programie .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,78 +11,78 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127602"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277651"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizowanie ciągów liczbowych w sieci
-Wszystkie typy liczbowe mają dwie statyczne `Parse` `TryParse`metody analizowania i , które można użyć do konwersji reprezentacji ciągu liczby na typ liczbowy. Metody te umożliwiają analizowanie ciągów, które zostały wyprodukowane przy użyciu ciągów formatu udokumentowanych w [standardowych ciągach formatu numerycznego](../../../docs/standard/base-types/standard-numeric-format-strings.md) i [niestandardowych ciągach formatu numerycznego](../../../docs/standard/base-types/custom-numeric-format-strings.md). Domyślnie `Parse` metody `TryParse` i mogą pomyślnie konwertować ciągi zawierające integralne cyfry dziesiętne tylko na wartości całkowite. Mogą pomyślnie konwertować ciągi zawierające cyfry dziesiętne, separatory grup i separator dziesiętny na wartości zmiennoprzecinkowe. Metoda `Parse` zgłasza wyjątek, jeśli operacja nie powiedzie się, podczas `TryParse` gdy metoda zwraca `false`.  
+Wszystkie typy liczbowe mają dwie metody statycznej analizy `Parse` i `TryParse` , których można użyć do przekonwertowania ciągu reprezentującego liczbę do typu liczbowego. Te metody umożliwiają analizowanie ciągów, które zostały utworzone za pomocą ciągów formatu udokumentowanych w [standardowych ciągach formatu liczbowego](standard-numeric-format-strings.md) i [niestandardowych ciągów formatu liczbowego](custom-numeric-format-strings.md). Domyślnie `Parse` `TryParse` metody i mogą pomyślnie konwertować ciągi, które zawierają cyfry dziesiętne tylko do wartości całkowitych. Mogą pomyślnie konwertować ciągi, które zawierają cyfry całkowite i ułamkowe dziesiętne, separatory grup i separator dziesiętny do wartości zmiennoprzecinkowych. `Parse`Metoda zgłasza wyjątek, jeśli operacja nie powiedzie się, a `TryParse` Metoda zwraca `false` .  
   
 ## <a name="parsing-and-format-providers"></a>Analiza składniowa i format dostawców  
- Zazwyczaj reprezentacje ciągów wartości liczbowych różnią się w zależności od kultury. Elementy ciągów liczbowych, takich jak symbole waluty, separatory grup (lub tysiące) i separatory dziesiętne różnią się w zależności od kultury. Metody analizowania niejawnie lub jawnie używają dostawcy formatu, który rozpoznaje te odmiany specyficzne dla kultury. Jeśli żaden dostawca formatu nie jest `Parse` `TryParse` określony w wywołaniu lub metody, używany <xref:System.Globalization.NumberFormatInfo> jest dostawca <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> formatu skojarzony z bieżącą kulturą wątku (obiekt zwrócony przez właściwość).  
+ Zazwyczaj reprezentacje ciągów wartości liczbowych różnią się w zależności od kultury. Elementy ciągów liczbowych, takich jak symbole walut, separatory grup (lub tysięcy) i Separatory dziesiętne różnią się w zależności od kultury. Metody analizy niejawnie lub jawnie używają dostawcy formatu, który rozpoznaje te Wariacje specyficzne dla kultury. Jeśli w wywołaniu metody lub nie określono dostawcy formatu `Parse` `TryParse` , jest używany dostawca formatu skojarzony z bieżącą kulturą wątku ( <xref:System.Globalization.NumberFormatInfo> obiekt zwracany przez <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> Właściwość).  
   
- Dostawca formatu jest reprezentowany <xref:System.IFormatProvider> przez implementację. Ten interfejs ma jeden <xref:System.IFormatProvider.GetFormat%2A> element członkowski, <xref:System.Type> metodę, której pojedynczy parametr jest obiektem reprezentującym typ, który ma być sformatowany. Ta metoda zwraca obiekt, który zawiera informacje o formatowaniu. .NET obsługuje następujące <xref:System.IFormatProvider> dwie implementacje do analizowania ciągów liczbowych:  
+ Dostawca formatu jest reprezentowany przez <xref:System.IFormatProvider> implementację. Ten interfejs ma jeden element członkowski, <xref:System.IFormatProvider.GetFormat%2A> Metoda, której pojedynczy parametr jest <xref:System.Type> obiektem, który reprezentuje typ do sformatowania. Ta metoda zwraca obiekt, który dostarcza informacje o formatowaniu. Platforma .NET obsługuje następujące dwie <xref:System.IFormatProvider> implementacje analizy ciągów liczbowych:  
   
-- Obiekt, <xref:System.Globalization.CultureInfo> <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> którego metoda <xref:System.Globalization.NumberFormatInfo> zwraca obiekt, który zawiera informacje o formatowaniu specyficzne dla kultury.  
+- <xref:System.Globalization.CultureInfo>Obiekt, którego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> Metoda zwraca <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
   
-- Obiekt, <xref:System.Globalization.NumberFormatInfo> <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> którego metoda zwraca się.  
+- <xref:System.Globalization.NumberFormatInfo>Obiekt, którego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> Metoda zwraca samą siebie.  
   
- Poniższy przykład próbuje przekonwertować każdy ciąg <xref:System.Double> w tablicy do wartości. Najpierw próbuje przeanalizować ciąg przy użyciu dostawcy formatu, który odzwierciedla konwencje kultury angielski (Stany Zjednoczone). Jeśli ta operacja <xref:System.FormatException>powoduje wysuwanie ciąg , próbuje przeanalizować ciąg przy użyciu dostawcy formatu, który odzwierciedla konwencje kultury francuskiej (Francja).  
+ Poniższy przykład próbuje skonwertować każdy ciąg w tablicy do <xref:System.Double> wartości. Najpierw próbuje przeanalizować ciąg przy użyciu dostawcy formatu, który odzwierciedla konwencje angielskiej (Stany Zjednoczone) kultury. Jeśli ta operacja zgłasza <xref:System.FormatException> , próbuje przeanalizować ciąg przy użyciu dostawcy formatu, który odzwierciedla konwencje kultury francuskiej (Francja).  
   
  [!code-csharp[Parsing.Numbers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/formatproviders1.cs#1)]
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>Analiza składniowa i wartości NumberStyles  
- Elementy stylu (takie jak biały znak, separatory grup i separator dziesiętny), które operacja <xref:System.Globalization.NumberStyles> analizy może obsłużyć, są definiowane przez wartość wyliczenia. Domyślnie ciągi reprezentujące wartości całkowite są analizowane <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> przy użyciu wartości, która zezwala tylko na cyfry, początkowe i końcowe białe znaki oraz znak wiodący. Ciągi reprezentujące wartości zmiennoprzecinkowe są <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> analizowane przy użyciu kombinacji i <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> wartości; ten styl złożony umożliwia cyfry dziesiętne wraz z białym znakiem wiodącym i sutkowym, znakiem wiodącym, separatorem dziesiętnym, separatorem grupy i wykładnikiem. Wywołując przeciążenie `Parse` lub `TryParse` metody, która zawiera <xref:System.Globalization.NumberStyles> parametr typu i <xref:System.Globalization.NumberStyles> ustawienie jednej lub więcej flag, można kontrolować elementy stylu, które mogą być obecne w ciągu dla operacji analizy, aby odnieść sukces.  
+ Elementy stylu (takie jak odstępy, separatory grup i separator dziesiętny), które może obsłużyć operacja analizy, są definiowane przez <xref:System.Globalization.NumberStyles> wartość wyliczenia. Domyślnie ciągi reprezentujące wartości całkowite są analizowane przy użyciu <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> wartości, która zezwala na tylko cyfry liczbowe, wiodące i końcowe białe znaki oraz znak wiodący. Ciągi reprezentujące wartości zmiennoprzecinkowe są analizowane przy użyciu kombinacji <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> wartości; ten styl złożony dopuszcza cyfry dziesiętne oraz wiodące i końcowe białe znaki, znak wiodący, separator dziesiętny, separator grupy i wykładnik. Wywołując Przeciążenie `Parse` `TryParse` metody lub, która zawiera parametr typu <xref:System.Globalization.NumberStyles> i ustawiając jedną lub więcej <xref:System.Globalization.NumberStyles> flag, można kontrolować elementy stylu, które mogą być obecne w ciągu, aby operacja analizy powiodła się.  
   
- Na przykład ciąg zawierający separator grupy nie można <xref:System.Int32> przekonwertować <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> na wartość przy użyciu metody. Jednak konwersja powiedzie się, <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> jeśli używasz flagi, jak pokazano w poniższym przykładzie.  
+ Na przykład ciąg zawierający separator grupy nie może zostać skonwertowany na <xref:System.Int32> wartość za pomocą <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> metody. Jednak konwersja powiedzie się, jeśli używasz <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> flagi, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[Parsing.Numbers#2](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/styles1.cs#2)]
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
-> Operacja analizy zawsze używa konwencji formatowania określonej kultury. Jeśli nie określisz kultury <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> przez przekazywanie lub obiektu, kultura skojarzona z bieżącym wątku jest używany.  
+> Operacja analizy zawsze używa Konwencji formatowania określonej kultury. Jeśli nie określisz kultury przez przekazanie <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> obiektu, używana jest kultura skojarzona z bieżącym wątkiem.  
   
- W poniższej tabeli wymieniono elementy członkowskie <xref:System.Globalization.NumberStyles> wyliczenia i opisano ich wpływ na operację analizy.  
+ W poniższej tabeli wymieniono elementy członkowskie <xref:System.Globalization.NumberStyles> wyliczenia i opisano wpływ ich działania na operację analizowania.  
   
-|Wartość wyliczenia NumberStyles|Wpływ na ciąg do przeanalizowania|  
+|Wartość wyliczenia NumberStyles|Wpływ na ciąg, który ma zostać przeanalizowany|  
 |------------------------|---------------------------------------|  
-|<xref:System.Globalization.NumberStyles.None?displayProperty=nameWithType>|Dozwolone są tylko cyfry.|  
-|<xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType>|Separator dziesiętny i cyfry ułamkowe są dozwolone. W przypadku wartości całkowitych tylko zero jest dozwolone jako cyfra ułamkowa. Prawidłowe separatory dziesiętne <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A?displayProperty=nameWithType> są <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A?displayProperty=nameWithType> określane przez lub właściwość.|  
-|<xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType>|Znak "e" lub "E" może służyć do wskazania notacji wykładniczej. Dodatkowe <xref:System.Globalization.NumberStyles> informacje można znaleźć w centrum uwagi.|  
-|<xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>|Dozwolone jest prowadzenie biały znak.|  
-|<xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>|Dozwolone jest spływu biały znak.|  
-|<xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType>|Znak dodatni lub ujemny może poprzedzać cyfry liczbowe.|  
-|<xref:System.Globalization.NumberStyles.AllowTrailingSign?displayProperty=nameWithType>|Znak dodatni lub ujemny może być zgodny z cyframi.|  
-|<xref:System.Globalization.NumberStyles.AllowParentheses?displayProperty=nameWithType>|Nawiasy mogą służyć do wskazywania wartości ujemnych.|  
-|<xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>|Separator grupy jest dozwolony. Znak separatora grupy jest <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A?displayProperty=nameWithType> określana przez lub właściwość.|  
-|<xref:System.Globalization.NumberStyles.AllowCurrencySymbol?displayProperty=nameWithType>|Symbol waluty jest dozwolony. Symbol waluty jest definiowany <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A?displayProperty=nameWithType> przez właściwość.|  
-|<xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>|Ciąg do przeanalizowania jest interpretowany jako liczba szesnastkowa. Może zawierać cyfry szesnastkowe 0-9, A-F i a-f. Ta flaga może służyć tylko do analizowania wartości całkowitych.|  
+|<xref:System.Globalization.NumberStyles.None?displayProperty=nameWithType>|Dozwolone są tylko cyfry numeryczne.|  
+|<xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType>|Dozwolone są Separatory dziesiętne i cyfry ułamkowe. W przypadku wartości całkowitych jako cyfry ułamkowej dozwolony jest tylko zero. Prawidłowe Separatory dziesiętne są określane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A?displayProperty=nameWithType> <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A?displayProperty=nameWithType> Właściwość or.|  
+|<xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType>|Znak "e" lub "E" może służyć do wskazania notacji wykładniczej. <xref:System.Globalization.NumberStyles>Aby uzyskać dodatkowe informacje, zobacz.|  
+|<xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>|Jest dozwolony wiodący biały znak.|  
+|<xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>|Białe znaki końcowe są dozwolone.|  
+|<xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType>|Znak dodatni lub ujemny może poprzedzać cyfry cyfr.|  
+|<xref:System.Globalization.NumberStyles.AllowTrailingSign?displayProperty=nameWithType>|Znak dodatni lub ujemny może następować po cyfrach numerycznych.|  
+|<xref:System.Globalization.NumberStyles.AllowParentheses?displayProperty=nameWithType>|Nawiasy mogą służyć do wskazania wartości ujemnych.|  
+|<xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>|Separator grupy jest dozwolony. Znak separatora grupy jest określany przez <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A?displayProperty=nameWithType> Właściwość or.|  
+|<xref:System.Globalization.NumberStyles.AllowCurrencySymbol?displayProperty=nameWithType>|Symbol waluty jest dozwolony. Symbol waluty jest definiowany przez <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A?displayProperty=nameWithType> Właściwość.|  
+|<xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>|Ciąg, który ma być analizowany, jest interpretowany jako liczba szesnastkowa. Może zawierać cyfry szesnastkowe 0-9, A-F i a-f. Ta flaga może być używana tylko do analizowania wartości całkowitych.|  
   
- Ponadto <xref:System.Globalization.NumberStyles> wyliczenie zawiera następujące style złożone, <xref:System.Globalization.NumberStyles> które zawierają wiele flag.  
+ Ponadto <xref:System.Globalization.NumberStyles> Wyliczenie zawiera następujące style złożone, które obejmują wiele <xref:System.Globalization.NumberStyles> flag.  
   
-|Wartość złożonych stylów liczb|Obejmuje członków|  
+|Złożona wartość wyliczenia NumberStyles|Obejmuje członków|  
 |----------------------------------|----------------------|  
-|<xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>i <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType> style. Jest to styl domyślny używany do analizowania wartości całkowitych.|  
-|<xref:System.Globalization.NumberStyles.Number?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>style <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingSign?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> , i style.|  
-|<xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType> i style.|  
-|<xref:System.Globalization.NumberStyles.Currency?displayProperty=nameWithType>|Zawiera wszystkie <xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType> style <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>z wyjątkiem i .|  
-|<xref:System.Globalization.NumberStyles.Any?displayProperty=nameWithType>|Zawiera wszystkie <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>style z wyjątkiem .|  
-|<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>i <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> style.|  
+|<xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType> Style, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType> . Jest to domyślny styl używany do analizowania wartości całkowitych.|  
+|<xref:System.Globalization.NumberStyles.Number?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType> Style, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> ,,, <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowTrailingSign?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> .|  
+|<xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType> Style, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> , <xref:System.Globalization.NumberStyles.AllowLeadingSign?displayProperty=nameWithType> , <xref:System.Globalization.NumberStyles.AllowDecimalPoint?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType> .|  
+|<xref:System.Globalization.NumberStyles.Currency?displayProperty=nameWithType>|Zawiera wszystkie style z wyjątkiem <xref:System.Globalization.NumberStyles.AllowExponent?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> .|  
+|<xref:System.Globalization.NumberStyles.Any?displayProperty=nameWithType>|Zawiera wszystkie style z wyjątkiem <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> .|  
+|<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|Zawiera <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType> Style, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> i <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> .|  
   
 ## <a name="parsing-and-unicode-digits"></a>Analiza składniowa i cyfry Unicode  
- Standard Unicode definiuje punkty kodowe dla cyfr w różnych systemach pisania. Na przykład punkty kodu od U +0030 do U +0039 reprezentują podstawowe cyfry łacińskie od 0 do 9, punkty kodu od U +09E6 do U +09EF reprezentują cyfry Bangla od 0 do 9, a punkty kodu od U +FF10 do U +FF19 reprezentują cyfry fullwidth od 0 do 9. Jednak tylko cyfry rozpoznawane przez metody analizy są podstawowe cyfry łacińskie 0-9 z punktów kodu od U + 0030 do U + 0039. Jeśli metoda analizy liczbowej jest przekazywana ciąg zawierający inne cyfry, <xref:System.FormatException>metoda zgłasza .  
+ Standard Unicode definiuje punkty kodów dla cyfr w różnych systemach pisania. Na przykład punkty kodów z U + 0030 do U + 0039 reprezentują podstawowe cyfry łacińskie od 0 do 9, punkty kodów z U + 09E6 do U + 09EF reprezentują cyfry bengalskie od 0 do 9, a punkty kodu z U + FF10 do U + FF19 reprezentują cyfry pełnej od 0 do 9. Jednak jedynymi cyframi, które są rozpoznawane przez metody analizy, są podstawowe cyfry łacińskie 0-9 z punktami kodu od U + 0030 do U + 0039. Jeśli metoda analizy liczbowej została przeniesiona jako ciąg, który zawiera inne cyfry, metoda zgłasza <xref:System.FormatException> .  
   
- W poniższym <xref:System.Int32.Parse%2A?displayProperty=nameWithType> przykładzie użyto metody do analizowania ciągów, które składają się z cyfr w różnych systemach pisania. Jak pokazuje dane wyjściowe z przykładu, próba przeanalizowania podstawowych cyfr łacińskich powiedzie się, ale próba przeanalizowania cyfr Fullwidth, Arabska indic i Bangla nie powiedzie się.  
+ Poniższy przykład używa <xref:System.Int32.Parse%2A?displayProperty=nameWithType> metody do analizowania ciągów, które składają się z cyfr w różnych systemach pisania. Jak wynika z przykładu, próba przeanalizowania podstawowych cyfr szesnastkowych powiedzie się, ale próba przeanalizowania cyfr pełnej, arabskiej-indyjskich i bengalskich kończy się niepowodzeniem.  
   
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Globalization.NumberStyles>
-- [Analiza składniowa ciągów](../../../docs/standard/base-types/parsing-strings.md)
-- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
+- [Analiza składniowa ciągów](parsing-strings.md)
+- [Formatowanie typów](formatting-types.md)

@@ -1,6 +1,6 @@
 ---
 title: Zabezpieczanie danych o stanie
-description: Deklaruj dane stanu jako zmienne prywatne lub wewnętrzne, aby ograniczyć dostęp do nich. Takie dane są nadal dostępne za pomocą odbicia, serializacji i debugowania.
+description: Zadeklaruj dane stanu jako zmienne prywatne lub wewnętrzne, aby ograniczyć dostęp do niego. Dostęp do tych danych można nadal uzyskać poprzez odbicie, serializację i debugowanie.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: f95bf409f7eef8c2636d3c180d2bbd95fbc689c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186823"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291048"
 ---
 # <a name="securing-state-data"></a>Zabezpieczanie danych o stanie
-Aplikacje, które obsługują poufne dane lub podejmują wszelkiego rodzaju decyzje dotyczące zabezpieczeń, muszą zachować te dane pod własną kontrolą i nie mogą zezwolić innemu potencjalnie złośliwemu kodowi na bezpośredni dostęp do danych. Najlepszym sposobem ochrony danych w pamięci jest zadeklarowanie danych jako zmiennych prywatnych lub wewnętrznych (z zakresem ograniczonym do tego samego zestawu). Jednak nawet te dane podlegają dostępowi, o którym powinieneś wiedzieć:  
+Aplikacje, które obsługują dane poufne lub podejmują jakiekolwiek decyzje dotyczące zabezpieczeń, muszą zachować te dane w ramach własnych kontroli i nie mogą być bezpośrednio dostępne w innym potencjalnie złośliwym kodzie. Najlepszym sposobem ochrony danych w pamięci jest zadeklarowanie danych jako prywatnych lub wewnętrznych (z zakresem ograniczonym do tego samego zestawu). Jednak nawet te dane podlegają dostępowi, należy pamiętać o:  
   
-- Za pomocą mechanizmów odbicia, wysoce zaufany kod, który może odwoływać się do obiektu można uzyskać i ustawić członków prywatnych.  
+- Korzystanie z mechanizmów odbicia, wysoce zaufany kod, który może odwoływać się do obiektu, może pobierać i ustawiać prywatnych członków.  
   
-- Za pomocą serializacji, wysoce zaufany kod można skutecznie uzyskać i ustawić członków prywatnych, jeśli można uzyskać dostęp do odpowiednich danych w postaci serializowane obiektu.  
+- Przy użyciu serializacji wysoce zaufany kod może efektywnie uzyskać i ustawić prywatne składowe, jeśli ma dostęp do odpowiednich danych w serializowanej formie obiektu.  
   
-- W obszarze debugowania te dane mogą być odczytywane.  
+- W obszarze Debugowanie można odczytać te dane.  
   
- Upewnij się, że żadna z własnych metod lub właściwości nie udostępnia tych wartości przypadkowo.  
+ Upewnij się, że żadna z własnych metod lub właściwości nie ujawnia tych wartości przypadkowo.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Wytyczne dotyczące bezpiecznego programowania](secure-coding-guidelines.md)

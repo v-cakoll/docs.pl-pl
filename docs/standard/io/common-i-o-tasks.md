@@ -5,33 +5,33 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9474d6c0340583e285a6dc47933c602f799f121d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708181"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287430"
 ---
 # <a name="common-io-tasks"></a>Typowe zadania We/Wy
-Obszar <xref:System.IO> nazw zawiera kilka klas, które umożliwiają wykonywanie różnych akcji, takich jak odczyt i zapis, dla plików, katalogów i strumieni. Aby uzyskać więcej informacji, zobacz [Plik i strumień we/wy](../../../docs/standard/io/index.md).  
+<xref:System.IO>Przestrzeń nazw zawiera kilka klas, które umożliwiają wykonywanie różnych akcji, takich jak odczytywanie i zapisywanie, w przypadku plików, katalogów i strumieni. Aby uzyskać więcej informacji, zobacz [we/wy plików i strumienia](index.md).  
   
 ## <a name="common-file-tasks"></a>Typowe zadania związane z plikami  
   
 |Aby wykonać tę czynność...|Zobacz przykład w tym temacie...|  
 |-------------------|--------------------------------------|  
 |Tworzenie pliku tekstowego|Metoda <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.File.Create%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType>|  
-|Zapis w pliku tekstowym|[Instrukcje: zapisywanie tekstu w pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Instrukcje: wpisywanie tekstu do pliku tekstowego (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
-|Odczyt z pliku tekstowego|[Porady: odczyt tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|Dołączanie tekstu do pliku|[Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> Metoda <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Zapis w pliku tekstowym|[Instrukcje: Zapisywanie tekstu w pliku](how-to-write-text-to-a-file.md)<br /><br /> [Instrukcje: wpisywanie tekstu do pliku tekstowego (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|Odczyt z pliku tekstowego|[Instrukcje: Odczytywanie tekstu z pliku](how-to-read-text-from-a-file.md)|  
+|Dołączanie tekstu do pliku|[Instrukcje: Otwieranie pliku dziennika i dołączanie do niego](how-to-open-and-append-to-a-log-file.md)<br /><br /> Metoda <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
 |Zmienianie nazwy lub przenoszenie pliku|Metoda <xref:System.IO.File.Move%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Usuwanie pliku|Metoda <xref:System.IO.File.Delete%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType>|  
 |Kopiowanie pliku|Metoda <xref:System.IO.File.Copy%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType>|  
-|Pobieranie rozmiaru pliku|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>Właściwość|  
+|Pobieranie rozmiaru pliku|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>wartość|  
 |Pobieranie atrybutów pliku|Metoda <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
 |Ustawianie atrybutów pliku|Metoda <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
 |Ustalanie, czy plik istnieje|Metoda <xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
-|Odczyt z pliku binarnego|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Zapis w pliku binarnym|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Odczyt z pliku binarnego|[Instrukcje: Odczyt i zapis we właśnie utworzonym pliku danych](how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Zapis w pliku binarnym|[Instrukcje: Odczyt i zapis we właśnie utworzonym pliku danych](how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Pobieranie rozszerzenia nazwy pliku|Metoda <xref:System.IO.Path.GetExtension%2A?displayProperty=nameWithType>|  
 |Pobieranie w pełni kwalifikowanej ścieżki pliku|Metoda <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>|  
 |Pobieranie nazwy pliku oraz jego rozszerzenia ze ścieżki|Metoda <xref:System.IO.Path.GetFileName%2A?displayProperty=nameWithType>|  
@@ -41,18 +41,18 @@ Obszar <xref:System.IO> nazw zawiera kilka klas, które umożliwiają wykonywani
   
 |Aby wykonać tę czynność...|Zobacz przykład w tym temacie...|  
 |-------------------|--------------------------------------|  
-|Dostęp do pliku w folderze specjalnym, takim jak Moje dokumenty|[Instrukcje: zapisywanie tekstu w pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Tworzenie katalogu|Metoda <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>Właściwość|  
+|Dostęp do pliku w folderze specjalnym, takim jak Moje dokumenty|[Instrukcje: Zapisywanie tekstu w pliku](how-to-write-text-to-a-file.md)|  
+|Tworzenie katalogu|Metoda <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>wartość|  
 |Tworzenie podkatalogu|Metoda <xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType>|  
 |Zmienianie nazwy lub przenoszenie katalogu|Metoda <xref:System.IO.Directory.Move%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType>|  
-|Kopiowanie katalogu|[Porady: kopiowanie katalogów](../../../docs/standard/io/how-to-copy-directories.md)|  
+|Kopiowanie katalogu|[Instrukcje: Kopiowanie katalogów](how-to-copy-directories.md)|  
 |Usuwanie katalogu|Metoda <xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType><br /><br /> Metoda <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType>|  
-|Wyświetlanie plików i podkatalogów w katalogu|[Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
+|Wyświetlanie plików i podkatalogów w katalogu|[Instrukcje: Wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md)|  
 |Znajdowanie rozmiaru katalogu|Klasa <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Ustalanie, czy katalog istnieje|Metoda <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)
-- [Tworzenie strumieni](../../../docs/standard/io/composing-streams.md)
-- [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [We/wy plików i strumieni](index.md)
+- [Tworzenie strumieni](composing-streams.md)
+- [Asynchroniczne operacje we/wy pliku](asynchronous-file-i-o.md)

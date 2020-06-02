@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419060"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290204"
 ---
 # <a name="names-of-namespaces"></a>Nazwy przestrzeni nazw
 Podobnie jak w przypadku innych wytycznych dotyczących nazewnictwa, celem podczas nazewnictwa przestrzeni nazw jest utworzenie wystarczającej przejrzystości dla programisty korzystającego z platformy, aby natychmiast znać zawartość przestrzeni nazw. Następujący szablon określa ogólną regułę nazewnictwa przestrzeni nazw:
@@ -84,5 +84,5 @@ Podobnie jak w przypadku innych wytycznych dotyczących nazewnictwa, celem podcz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wskazówki dotyczące projektowania struktury](../../../docs/standard/design-guidelines/index.md)
-- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

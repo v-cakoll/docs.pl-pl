@@ -7,33 +7,33 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 18927d242c2ed957d2bc9f8b481beeed775a4e4e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6bbc6e8fa11759afbd3a1fb2d785f476a6c178ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741675"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289814"
 ---
 # <a name="exception-throwing"></a>Zgłaszanie wyjątku
-Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicji znaczenia błędu wykonania. Niepowodzenie wykonywania występuje zawsze, gdy członek nie może wykonać czynności, do których został zaprojektowany (co oznacza nazwa elementu członkowskiego). Na przykład, jeśli metoda `OpenFile` nie może zwrócić otwartego dojścia do pliku wywołującego, będzie ona traktowana jako błąd wykonania.
+Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicji znaczenia błędu wykonania. Niepowodzenie wykonywania występuje zawsze, gdy członek nie może wykonać czynności, do których został zaprojektowany (co oznacza nazwa elementu członkowskiego). Na przykład, jeśli `OpenFile` Metoda nie może zwrócić otwartego dojścia do pliku wywołującego, będzie traktowana jako błąd wykonania.
 
  Większość deweloperów była wygodna z użyciem wyjątków dla błędów użycia, takich jak dzielenie przez zero lub puste odwołania. W strukturze wyjątki są używane dla wszystkich warunków błędów, w tym błędów wykonania.
 
- ❌ nie zwracają kodów błędów.
+ ❌NIE zwracają kodów błędów.
 
  Wyjątkiem są podstawowe metody raportowania błędów w strukturach.
 
  ✔️ wykonywanie raportów przez wyrzucanie wyjątków.
 
- ✔️ ROZWAŻYĆ zakończenie procesu, wywołując `System.Environment.FailFast` (funkcję .NET Framework 2,0), zamiast zgłaszać wyjątek, jeśli kod napotka sytuację, w której jest niebezpieczny do dalszej realizacji.
+ ✔️ ROZWAŻYĆ zakończenie procesu przez wywołanie `System.Environment.FailFast` funkcji (.NET Framework 2,0) zamiast zgłaszania wyjątku, jeśli kod napotka sytuację, w której jest niebezpieczny do dalszej realizacji.
 
- ❌ nie należy używać wyjątków dla normalnego przepływu sterowania, jeśli jest to możliwe.
+ ❌NIE należy używać wyjątków dla normalnego przepływu sterowania, jeśli jest to możliwe.
 
  Z wyjątkiem awarii systemu i operacji z potencjalnymi warunkami wyścigu, projektanci struktury powinni projektować interfejsy API, aby użytkownicy mogli pisać kod, który nie zgłasza wyjątków. Na przykład można umożliwić sprawdzenie warunków wstępnych przed wywołaniem elementu członkowskiego, aby użytkownicy mogli pisać kod, który nie zgłasza wyjątków.
 
  Element członkowski używany do sprawdzania warunków wstępnych innego elementu członkowskiego jest często nazywany testerem, a element członkowski, który faktycznie wykonuje prace, nosi nazwę DOER.
 
- Istnieją przypadki, w których wzorzec testera DOER może mieć nieakceptowalne obciążenie wydajności. W takich przypadkach należy wziąć pod uwagę ten wzór try-Parse (zobacz [wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md) , aby uzyskać więcej informacji).
+ Istnieją przypadki, w których wzorzec testera DOER może mieć nieakceptowalne obciążenie wydajności. W takich przypadkach należy wziąć pod uwagę ten wzór try-Parse (zobacz [wyjątki i wydajność](exceptions-and-performance.md) , aby uzyskać więcej informacji).
 
  ✔️ ROZWAŻYĆ implikacje wydajności zgłaszania wyjątków. Stawki za 100 na sekundę mogą mieć zauważalny wpływ na wydajność większości aplikacji.
 
@@ -41,9 +41,9 @@ Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicj
 
  Wyjątki, które są częścią kontraktu, nie powinny się zmieniać z jednej wersji na następną (tj. nie należy zmieniać typu wyjątku, a nowe wyjątki nie powinny być dodawane).
 
- ❌ nie mają publicznych składowych, które mogą zgłosić lub nie na podstawie jakiejś opcji.
+ ❌NIE mają publicznych składowych, które mogą zgłosić lub nie na podstawie pewnej opcji.
 
- ❌ nie mają publicznych składowych, które zwracają wyjątki jako wartość zwrotną lub parametr `out`.
+ ❌NIE mają publicznych składowych, które zwracają wyjątki jako wartość zwrotną lub `out` parametr.
 
  Zwracanie wyjątków z publicznych interfejsów API zamiast zgłaszania ich przez wiele zalet raportowania błędów opartych na wyjątkach.
 
@@ -53,11 +53,11 @@ Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicj
 
  Ponadto elementy członkowskie, które generują wyjątki, nie są obsługiwane. Przeniesienie instrukcji throw wewnątrz konstruktora może pozwolić, aby element członkowski był wbudowany.
 
- ❌ nie zgłaszaj wyjątków z bloków filtru wyjątków.
+ ❌NIE zgłaszaj wyjątków z bloków filtru wyjątków.
 
  Gdy filtr wyjątku zgłasza wyjątek, wyjątek jest przechwytywany przez środowisko CLR, a filtr zwraca wartość false. Takie zachowanie jest odróżnienie od wykonywanych przez filtr i zwraca wartość false, dlatego trudno jest debugować.
 
- ❌ UNIKAj jawnego zgłaszania wyjątków z bloków finally. Niejawnie zgłoszone wyjątki powstałe w wyniku wywoływania metod wywołujących są akceptowalne.
+ ❌UNIKAj jawnego zgłaszania wyjątków z bloków finally. Niejawnie zgłoszone wyjątki powstałe w wyniku wywoływania metod wywołujących są akceptowalne.
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
@@ -65,5 +65,5 @@ Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Wyjątki — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/exceptions.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wyjątki — zalecenia dotyczące projektowania](exceptions.md)

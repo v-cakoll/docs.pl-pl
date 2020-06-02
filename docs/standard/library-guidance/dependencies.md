@@ -2,12 +2,12 @@
 title: Zależności i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań związanych z zarządzaniem zależnościami NuGet w bibliotekach platformy .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895704"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291373"
 ---
 # <a name="dependencies"></a>Zależności
 
@@ -76,19 +76,19 @@ Udostępnione pakiety źródłowe doskonale nadaje się do uwzględnienia małyc
 
 ![Udostępniony projekt źródłowy](./media/dependencies/shared-source-project.png "Udostępniony projekt źródłowy")
 
-Udostępnione pakiety źródłowe mają pewne ograniczenia. Można do nich odwoływać się `PackageReference`tylko, dlatego `packages.config` starsze projekty są wykluczone. Współużytkowane pakiety źródłowe są również używane tylko przez projekty o tym samym typie języka. Ze względu na to, że udostępnione pakiety źródłowe najlepiej wykorzystać do udostępniania funkcjonalności w ramach projektu typu open source.
+Udostępnione pakiety źródłowe mają pewne ograniczenia. Można do nich odwoływać się tylko `PackageReference` , dlatego starsze `packages.config` projekty są wykluczone. Współużytkowane pakiety źródłowe są również używane tylko przez projekty o tym samym typie języka. Ze względu na to, że udostępnione pakiety źródłowe najlepiej wykorzystać do udostępniania funkcjonalności w ramach projektu typu open source.
 
 ✔️ ROZWAŻYĆ odwołujące się do udostępnionych pakietów źródłowych dla małych, wewnętrznych fragmentów funkcjonalności.
 
 ✔️ Rozważ, aby pakiet był udostępnionym pakietem źródłowym, jeśli udostępnia małe, wewnętrzne elementy funkcjonalności.
 
-✔️ NALEŻY odwoływać się do udostępnionych `PrivateAssets="All"`pakietów źródłowych za pomocą programu.
+✔️ NALEŻY odwoływać się do udostępnionych pakietów źródłowych za pomocą programu `PrivateAssets="All"` .
 
 > To ustawienie informuje program NuGet, że pakiet jest używany tylko w czasie projektowania i nie powinien być ujawniony jako zależność publiczna.
 
 ❌W publicznym interfejsie API nie ma udostępnionych typów pakietów źródłowych.
 
-> Współużytkowane typy źródeł są kompilowane do zestawu, do którego się odwołuje, i nie mogą być wymieniane między granicami zestawu. Na przykład typ źródła `IRepository` udostępnionego w jednym projekcie jest osobnym typem z tego samego udostępnionego źródła `IRepository` w innym projekcie. Typy w udostępnionych pakietach źródłowych powinny mieć `internal` widoczność.
+> Współużytkowane typy źródeł są kompilowane do zestawu, do którego się odwołuje, i nie mogą być wymieniane między granicami zestawu. Na przykład typ źródła udostępnionego `IRepository` w jednym projekcie jest osobnym typem z tego samego udostępnionego źródła `IRepository` w innym projekcie. Typy w udostępnionych pakietach źródłowych powinny mieć `internal` widoczność.
 
 ❌NIE Publikuj udostępnionych pakietów źródłowych do NuGet.org.
 
@@ -97,5 +97,5 @@ Udostępnione pakiety źródłowe mają pewne ograniczenia. Można do nich odwo�
 > Publikuj udostępnione pakiety źródłowe w [lokalnym kanale informacyjnym lub MyGet](./publish-nuget-package.md) , aby wykorzystać je wewnętrznie w ramach projektu.
 
 >[!div class="step-by-step"]
->[Poprzedni](nuget.md)
->[Następny](sourcelink.md)
+>[Poprzedni](nuget.md) 
+> [Dalej](sourcelink.md)

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: b6d06bc8a1e8535f1452af0726138abaebfd4951
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c6ac53014e048da3a90dd7b8e961176f61e90355
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743612"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290814"
 ---
 # <a name="struct-design"></a>Projekt struktury
-Typ wartości ogólnego przeznaczenia jest najczęściej określany jako struktura, jego C# słowo kluczowe. Ta sekcja zawiera wskazówki dotyczące ogólnego projektowania struktury.
+Typ wartości ogólnego przeznaczenia jest najczęściej określany jako struktura, jego słowo kluczowe języka C#. Ta sekcja zawiera wskazówki dotyczące ogólnego projektowania struktury.
 
- ❌ nie udostępniaj konstruktora bez parametrów dla struktury.
+ ❌Nie udostępniaj konstruktora bez parametrów dla struktury.
 
- Poniższe wytyczne umożliwiają tworzenie tablic struktur bez konieczności uruchamiania konstruktora dla każdego elementu tablicy. Zwróć uwagę C# , że struktury nie umożliwiają konstruktorom bez parametrów.
+ Poniższe wytyczne umożliwiają tworzenie tablic struktur bez konieczności uruchamiania konstruktora dla każdego elementu tablicy. Należy zauważyć, że w języku C# nie jest dozwolone, aby struktury miały konstruktory bez parametrów.
 
- ❌ nie definiować modyfikowalnych typów wartościowych.
+ ❌NIE Definiuj modyfikowalnych typów wartościowych.
 
  Modyfikowalne typy wartości mają kilka problemów. Na przykład, gdy metoda pobierająca Właściwość zwraca typ wartości, wywołujący otrzymuje kopię. Ponieważ kopia jest tworzona niejawnie, deweloperzy mogą nie wiedzieć, że są one mutacją, a nie pierwotną wartością. Ponadto w niektórych językach (w szczególności Języki dynamiczne) występują problemy z użyciem modyfikowalnych typów wartości, ponieważ nawet zmienne lokalne, gdy jest używana, powoduje, że kopia zostanie wykonana.
 
@@ -33,11 +33,11 @@ Typ wartości ogólnego przeznaczenia jest najczęściej określany jako struktu
 
  Zapobiega to przypadkowemu tworzeniu nieprawidłowych wystąpień podczas tworzenia tablicy struktur.
 
- ✔️ Implementowanie <xref:System.IEquatable%601> na typach wartości.
+ ✔️ Implementowanie <xref:System.IEquatable%601> w typach wartości.
 
- Metoda <xref:System.Object.Equals%2A?displayProperty=nameWithType> w typach wartości powoduje opakowanie, a jej domyślna implementacja nie jest bardzo wydajna, ponieważ używa odbicia. <xref:System.IEquatable%601.Equals%2A> może mieć znacznie lepszą wydajność i można ją zaimplementować, aby nie powodowały pakowania.
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>Metoda w typach wartości powoduje opakowanie, a jej domyślna implementacja nie jest bardzo wydajna, ponieważ używa odbicia. <xref:System.IEquatable%601.Equals%2A>może mieć znacznie lepszą wydajność i można go zaimplementować, aby nie powodowały opakowywania opakowania.
 
- niejawnie rozszerzona <xref:System.ValueType>❌. W rzeczywistości większość języków zapobiega tym.
+ ❌NIE należy jawnie zwiększać <xref:System.ValueType> . W rzeczywistości większość języków zapobiega tym.
 
  Ogólnie rzecz biorąc, struktury mogą być bardzo przydatne, ale powinny być używane tylko w przypadku małych, pojedynczych, niezmiennych wartości, które nie będą często opakowane.
 
@@ -47,6 +47,6 @@ Typ wartości ogólnego przeznaczenia jest najczęściej określany jako struktu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Wybieranie między klasą i strukturą](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+- [Wskazówki dotyczące projektowania typów](type.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wybieranie między klasą i strukturą](choosing-between-class-and-struct.md)

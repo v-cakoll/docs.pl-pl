@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Implementowanie wzorca przepływu danych producent — konsument'
+title: 'Instrukcje: Implementowanie wzorca przepływu danych producent — konsument'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491f3912998e56fe768d21da82ff68cb64f6d6c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091486"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289528"
 ---
-# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Porady: Implementowanie wzorca przepływu danych producent — konsument
-W tym dokumencie opisano sposób używania biblioteki przepływu danych TPL do implementowania wzorca producent-konsument. W tym wzorcu *producent* wysyła wiadomości do bloku komunikatów, a *konsument* odczytuje wiadomości z tego bloku.  
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Instrukcje: Implementowanie wzorca przepływu danych producent — konsument
+W tym dokumencie opisano sposób użycia biblioteki TPL przepływu danych do wdrożenia wzorca producenta. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów, a *konsument* odczytuje komunikaty z tego bloku.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono podstawowy model producenta- konsumenta, który używa przepływu danych. Metoda `Produce` zapisuje tablice, które zawierają losowe <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> bajty `Consume` danych do obiektu i <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> metoda odczytuje bajty z obiektu. Działając na <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> interfejsy i <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> zamiast ich typów pochodnych, można napisać kod wielokrotnego użytku, który może działać na różnych typów bloków przepływu danych. W tym <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> przykładzie użyto klasy. Ponieważ <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> klasa działa zarówno jako blok źródłowy, jak i jako blok docelowy, producent i konsument mogą używać obiektu udostępnionego do przesyłania danych.  
+ W poniższym przykładzie pokazano podstawowy model konsumencki-konsumenta, który używa przepływu danych. `Produce`Metoda zapisuje tablice zawierające losowe bajty danych do <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> obiektu, a `Consume` Metoda odczytuje bajty z <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> obiektu. Działając na <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> interfejsach i zamiast ich typach pochodnych można napisać kod wielokrotnego użytku, który może działać na różnych typach bloków przepływu danych. W tym przykładzie używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> klasy. Ponieważ <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasa działa jako blok źródłowy i jako blok docelowy, producent i odbiorca mogą używać obiektu udostępnionego do transferowania danych.  
   
- Metoda `Produce` wywołuje <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę w pętli do synchronicznie zapisywać dane do bloku docelowego. Po `Produce` metoda zapisuje wszystkie dane do bloku docelowego, wywołuje <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> metodę, aby wskazać, że blok nigdy nie będzie miał dodatkowe dane dostępne. Metoda `Consume` używa [asynchronicznych](../../csharp/language-reference/keywords/async.md) i [await](../../csharp/language-reference/operators/await.md) operatorów[(Async](../../visual-basic/language-reference/modifiers/async.md) i [Await](../../visual-basic/language-reference/operators/await-operator.md) w języku Visual Basic) do asynchronicznie obliczyć całkowitą liczbę bajtów, które są odbierane z <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> obiektu. Aby działać asynchronicznie, `Consume` <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> metoda wywołuje metodę, aby otrzymać powiadomienie, gdy blok źródłowy ma dostępne dane i gdy blok źródłowy nigdy nie będzie miał dodatkowe dane dostępne.  
+ `Produce`Metoda wywołuje <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę w pętli, aby synchronicznie zapisywać dane w bloku docelowym. Gdy `Produce` Metoda zapisuje wszystkie dane w bloku docelowym, wywołuje <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> metodę, aby wskazać, że blok nigdy nie będzie miał dostępnych dodatkowych danych. `Consume`Metoda używa operatorów [Async](../../csharp/language-reference/keywords/async.md) i [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) i [await](../../visual-basic/language-reference/operators/await-operator.md) w Visual Basic), aby asynchronicznie obliczyć łączną liczbę bajtów odebranych z <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> obiektu. Aby działać asynchronicznie, `Consume` Metoda wywołuje <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> metodę, aby otrzymać powiadomienie, gdy blok źródłowy ma dostępne dane i gdy blok źródłowy nigdy nie będzie miał dodatkowych dostępnych danych.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- W poprzednim przykładzie używa tylko jednego konsumenta do przetwarzania danych źródłowych. Jeśli masz wielu konsumentów w aplikacji, użyj <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> metody do odczytu danych z bloku źródłowego, jak pokazano w poniższym przykładzie.  
+ W poprzednim przykładzie jest wykorzystywany tylko jeden odbiorca do przetwarzania danych źródłowych. Jeśli masz wielu odbiorców w aplikacji, użyj <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> metody w celu odczytania danych z bloku źródłowego, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#2)]
  [!code-vb[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#2)]  
   
- Metoda <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> zwraca, `False` gdy nie są dostępne żadne dane. Gdy wielu konsumentów musi jednocześnie uzyskać dostęp do bloku źródłowego, mechanizm <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>ten gwarantuje, że dane są nadal dostępne po wywołaniu .  
+ <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A>Metoda zwraca wartość, `False` gdy żadne dane nie są dostępne. Gdy wielu odbiorców musi uzyskać dostęp do bloku źródłowego współbieżnie, ten mechanizm gwarantuje, że dane są nadal dostępne po wywołaniu <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> .  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Przepływ danych](dataflow-task-parallel-library.md)

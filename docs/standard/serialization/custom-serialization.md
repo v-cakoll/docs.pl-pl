@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: dcd5fa2777d2f1e351179570806a95eb835ad843
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375997"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289658"
 ---
 # <a name="custom-serialization"></a>Serializacja niestandardowa
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolując serializacji, można zapewnić zgodność serializacji, która jest możliwością serializacji i deserializacji między wersjami typu bez przerywania podstawowej funkcjonalności typu. Na przykład w pierwszej wersji typu mogą istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze druga wersja aplikacji musi mieć możliwość serializacji i deserializacji obu typów. W następujących sekcjach opisano kontrola serializacji.
@@ -180,8 +180,8 @@ End Class
   
  Obiekty są odtworzone wewnątrz i wywołania metody podczas deserializacji może mieć niepożądane skutki uboczne, ponieważ metody o nazwie może odnosić się do odwołuje się do obiektu, które nie została przeprowadzona przez razem, gdy zostanie nawiązane połączenie. Jeśli deserializowana Klasa implementuje <xref:System.Runtime.Serialization.IDeserializationCallback> <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> metodę, metoda jest wywoływana automatycznie, gdy zostanie odszeregowany cały Graf obiektu. Na tym etapie wszystkie obiekty podrzędne, do których odwołuje się zostały w pełni przywrócone. Tablica skrótów jest typowym przykładem klasy, która jest trudna do deserializacji bez użycia odbiornika zdarzeń. Łatwo można pobrać par kluczy i wartości podczas deserializacji, ale dodanie tych obiektów do tabeli mieszania może spowodować problemy, ponieważ nie ma żadnej gwarancji tej klasy, które opracowane na podstawie tabeli mieszania deserializacji. Wywołanie metody w tabeli mieszania na tym etapie z tego powodu nie jest zalecane.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Serializacja binarna](binary-serialization.md)
 - [Serializacja XML i SOAP](xml-and-soap-serialization.md)
-- [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)
+- [Zabezpieczenia i serializacja](../../framework/misc/security-and-serialization.md)

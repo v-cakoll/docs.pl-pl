@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286031"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Sterta dużego obiektu w systemach Windows
 
@@ -203,7 +203,7 @@ Jak widać, jest to bardzo prosty test, który po prostu przypisuje duże obiekt
 
 ### <a name="a-debugger"></a>Debuger
 
-Jeśli wszystko jest zrzutem pamięci i chcesz sprawdzić, jakie obiekty faktycznie znajdują się w LOH, możesz użyć [rozszerzenia debugera sos](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) dostarczonego przez platformę .NET.
+Jeśli wszystko jest zrzutem pamięci i chcesz sprawdzić, jakie obiekty faktycznie znajdują się w LOH, możesz użyć [rozszerzenia debugera sos](../../framework/tools/sos-dll-sos-debugging-extension.md) dostarczonego przez platformę .NET.
 
 > [!NOTE]
 > Polecenia debugowania wymienione w tej sekcji dotyczą [debugerów systemu Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

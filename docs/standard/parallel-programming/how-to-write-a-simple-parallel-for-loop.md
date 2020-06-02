@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zapisywanie prostej równoległej pętli For'
+title: 'Instrukcje: Zapisywanie prostej pętli Parallel.For'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,67 +10,67 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139655"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290736"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Porady: zapisywanie prostej równoległej pętli For
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Instrukcje: Zapisywanie prostej pętli Parallel.For
 
-Ten temat zawiera dwa przykłady, które ilustrują <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metodę. Pierwszy używa <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> przeciążenia metody, a <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> drugi używa przeciążenia, dwa <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> najprostsze przeciążenia metody. Można użyć tych dwóch przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody, gdy nie trzeba anulować pętli, wyrwać się z iteracji pętli lub zachować dowolny stan lokalny wątku.
+Ten temat zawiera dwa przykłady ilustrujące <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metodę. Pierwszy używa <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> przeciążenia metody, a drugi używa <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> przeciążenia, dwa najprostsze przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody. Można użyć tych dwóch przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody, gdy nie trzeba anulować pętli, przerwać iteracji pętli lub zachować dowolnego stanu wątku.
 
 > [!NOTE]
-> Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w TPL. Jeśli nie znasz wyrażeń lambda w języku C# lub Visual Basic, zobacz [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Ta dokumentacja używa wyrażeń lambda do definiowania delegatów w TPL. Jeśli nie znasz wyrażeń lambda w języku C# lub Visual Basic, zobacz [lambda Expressions in PLINQ and TPL](lambda-expressions-in-plinq-and-tpl.md).
 
-Pierwszy przykład oblicza rozmiar plików w jednym katalogu. Drugi oblicza iloczyn dwóch matryc.
+Pierwszy przykład oblicza rozmiar plików w jednym katalogu. Drugi Oblicza iloczyn dwóch macierzy.
 
 ## <a name="directory-size-example"></a>Przykład rozmiaru katalogu
 
-W tym przykładzie jest to proste narzędzie wiersza polecenia, które oblicza całkowity rozmiar plików w katalogu. Oczekuje pojedynczej ścieżki katalogu jako argumentu i raportuje liczbę i całkowity rozmiar plików w tym katalogu. Po sprawdzeniu, czy katalog <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> istnieje, używa metody do wyliczania plików w katalogu i określania ich rozmiarów plików. Każdy rozmiar pliku jest `totalSize` następnie dodawany do zmiennej. Należy zauważyć, że dodanie jest <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> wykonywane przez wywołanie tak, aby dodanie jest wykonywane jako operacji atomowej. W przeciwnym razie wiele zadań `totalSize` może próbować zaktualizować zmienną jednocześnie.
+Ten przykład to proste narzędzie wiersza polecenia, które oblicza łączny rozmiar plików w katalogu. Oczekuje ona pojedynczej ścieżki katalogu jako argumentu i raportuje liczbę i łączny rozmiar plików w tym katalogu. Po sprawdzeniu, czy katalog istnieje, używa <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody do wyliczania plików w katalogu i określania rozmiarów plików. Każdy rozmiar pliku jest następnie dodawany do `totalSize` zmiennej. Należy zauważyć, że dodanie jest wykonywane przez wywołanie metody, <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> Aby dodanie zostało wykonane jako operacja niepodzielna. W przeciwnym razie wiele zadań może próbować jednocześnie zaktualizować `totalSize` zmienną.
 
 [!code-csharp[Conceptual.Parallel.For#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.parallel.for/cs/for1.cs#1)]
 [!code-vb[Conceptual.Parallel.For#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.parallel.for/vb/for1.vb#1)]
 
-## <a name="matrix-and-stopwatch-example"></a>Przykład matrycy i stopera
+## <a name="matrix-and-stopwatch-example"></a>Przykład macierzy i stopera
 
-W tym <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> przykładzie użyto metody do obliczenia produktu dwóch macierzy. Pokazuje również, jak <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> użyć klasy do porównania wydajności pętli równoległej z pętli nierównoległej. Należy zauważyć, że ponieważ może generować dużą ilość danych wyjściowych, przykład umożliwia dane wyjściowe, które mają być przekierowywane do pliku.
+Ten przykład używa <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody do obliczenia iloczynu dwóch macierzy. Pokazano również, jak używać <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> klasy do porównywania wydajności pętli równoległej z pętlą nierównoległą. Należy pamiętać, że ponieważ może on generować dużą ilość danych wyjściowych, przykład umożliwia przekierowywanie danych wyjściowych do pliku.
 
 [!code-csharp[TPL_Parallel#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleparallelfor.cs#01)]
 [!code-vb[TPL_Parallel#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleparallelfor.vb#01)]
 
-Podczas paralelowania dowolnego kodu, w tym pętli, jednym ważnym celem jest wykorzystanie procesorów w jak największym stopniu bez nadmiernego równoległości do punktu, w którym obciążenie dla przetwarzania równoległego neguje wszelkie korzyści wydajności. W tym konkretnym przykładzie tylko zewnętrzna pętla jest równoległa, ponieważ nie ma zbyt wiele pracy wykonywanej w pętli wewnętrznej. Połączenie niewielkiej ilości pracy i niepożądanych efektów pamięci podręcznej może spowodować spadek wydajności w zagnieżdżonych pętlach równoległych. W związku z tym równoległość tylko pętli zewnętrznej jest najlepszym sposobem, aby zmaksymalizować korzyści współbieżności w większości systemów.
+W przypadku przekształcają dowolnego kodu, w tym pętle, jeden istotny cel polega na tym, że procesor jest możliwie największej ilości bez przekształcają do momentu, w którym obciążenie przetwarzaniem równoległym wyklucza wszelkie korzyści z wydajności. W tym konkretnym przykładzie tylko pętla zewnętrzna jest równoległa, ponieważ nie ma zbyt dużej ilości pracy wykonanej w wewnętrznej pętli. Połączenie niewielkiej ilości pracy i niepożądanych efektów pamięci podręcznej może spowodować spadek wydajności zagnieżdżonych pętli równoległych. W związku z tym przekształcają pętlę zewnętrzną to najlepszy sposób, aby zmaksymalizować zalety współbieżności w większości systemów.
 
-## <a name="the-delegate"></a>Pełnomocnik
+## <a name="the-delegate"></a>Obiekt delegowany
 
-Trzeci parametr tego przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A> jest delegatem `Action<int>` typu w `Action(Of Integer)` języku C# lub w języku Visual Basic. Pełnomocnik, `Action` niezależnie od tego, czy ma zero, jeden lub szesnaście parametrów typu, zawsze zwraca void. W języku Visual Basic `Action` zachowanie jest `Sub`zdefiniowany za pomocą . W przykładzie użyto wyrażenia lambda do utworzenia pełnomocnika, ale można utworzyć pełnomocnika w inny sposób, jak również. Aby uzyskać więcej informacji, zobacz [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+Trzeci parametr tego przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A> jest delegatem typu `Action<int>` w języku C# lub `Action(Of Integer)` w Visual Basic. `Action`Delegat, bez względu na to, czy ma zero, jeden lub szesnast parametry typu, zawsze zwraca wartość void. W Visual Basic zachowanie `Action` jest zdefiniowane za pomocą `Sub` . W przykładzie jest stosowane wyrażenie lambda do utworzenia delegata, ale można również utworzyć delegata w inny sposób. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda w PLINQ i TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="the-iteration-value"></a>Wartość iteracji
 
-Delegat przyjmuje pojedynczy parametr wejściowy, którego wartość jest bieżącą iteracją. Ta wartość iteracji jest dostarczana przez program runtime, a jego wartość początkowa jest indeksem pierwszego elementu w segmencie (partycji) źródła, który jest przetwarzany w bieżącym wątku.
+Delegat przyjmuje jeden parametr wejściowy, którego wartością jest bieżąca iteracja. Ta wartość iteracji jest dostarczana przez środowisko uruchomieniowe i jej wartość początkowa jest indeksem pierwszego elementu w segmencie (partycji) źródła, które jest przetwarzane w bieżącym wątku.
 
-Jeśli potrzebujesz większej kontroli nad poziomem współbieżności, należy <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> użyć jednego z <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>przeciążeń, który przyjmuje parametr wejściowy, takich jak: .
+Jeśli potrzebujesz większej kontroli nad poziomem współbieżności, użyj jednego z przeciążeń, które pobiera <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> parametr wejściowy, na przykład: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType> .
 
-## <a name="return-value-and-exception-handling"></a>Zwracawartość i obsługa wyjątków
+## <a name="return-value-and-exception-handling"></a>Wartość zwracana i obsługa wyjątków
 
-<xref:System.Threading.Tasks.Parallel.For%2A>zwraca <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> obiekt po zakończeniu wszystkich wątków. Ta wartość zwracana jest przydatna podczas ręcznego zatrzymywania <xref:System.Threading.Tasks.ParallelLoopResult> lub przerywania iteracji pętli, ponieważ przechowuje informacje, takie jak ostatnia iteracja, która została uruchomiona do zakończenia. Jeśli jeden lub więcej wyjątków występuje w <xref:System.AggregateException?displayProperty=nameWithType> jednym z wątków, zostanie wygenerowany.
+<xref:System.Threading.Tasks.Parallel.For%2A>zwraca <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> obiekt po zakończeniu wszystkich wątków. Ta wartość zwracana jest przydatna podczas ręcznego zatrzymywania lub przerywania iteracji pętli, ponieważ <xref:System.Threading.Tasks.ParallelLoopResult> zawiera informacje, takie jak Ostatnia iteracja, która została uruchomiona. Jeśli co najmniej jeden wyjątek występuje w jednym z wątków, <xref:System.AggregateException?displayProperty=nameWithType> zostanie zgłoszony.
 
-W kodzie w tym przykładzie <xref:System.Threading.Tasks.Parallel.For%2A> wartość zwracana nie jest używana.
+W kodzie w tym przykładzie zwracana wartość <xref:System.Threading.Tasks.Parallel.For%2A> nie jest używana.
 
 ## <a name="analysis-and-performance"></a>Analiza i wydajność
 
-Za pomocą Kreatora wydajności można wyświetlać użycie procesora na komputerze. Jako eksperyment zwiększ liczbę kolumn i wierszy w matrycych. Im większe macierze, tym większa różnica wydajności między równoległymi i sekwencyjnymi wersjami obliczeń. Gdy macierz jest mała, wersja sekwencyjna będzie działać szybciej ze względu na obciążenie podczas konfigurowania pętli równoległej.
+Aby wyświetlić użycie procesora CPU na komputerze, można użyć Kreatora wydajności. W ramach eksperymentu Zwiększ liczbę kolumn i wierszy w macierzach. Im większa macierz, tym większa różnica wydajności między równoległymi i sekwencyjnymi wersjami obliczeń. Gdy macierz jest mała, wersja sekwencyjna będzie działać szybciej ze względu na obciążenie podczas konfigurowania pętli równoległej.
 
-Synchroniczne wywołania zasobów udostępnionych, takich jak Konsola lub System plików, znacznie obniżą wydajność pętli równoległej. Podczas pomiaru wydajności należy unikać <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> wywołań, takich jak w pętli.
+Wywołania synchroniczne do udostępnionych zasobów, takie jak konsola lub system plików, znacząco obniżą wydajność pętli równoległej. Podczas mierzenia wydajności spróbuj uniknąć wywołań takich jak <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> w pętli.
 
-## <a name="compile-the-code"></a>Skompiluj kod
+## <a name="compile-the-code"></a>Kompiluj kod
 
 Skopiuj i wklej ten kod do projektu programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+- [Równoległość danych](data-parallelism-task-parallel-library.md)
+- [Programowanie równoległe](index.md)

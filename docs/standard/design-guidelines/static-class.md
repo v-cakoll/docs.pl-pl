@@ -10,25 +10,25 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-ms.openlocfilehash: 104fa204a95ef31d34e224348068e3a6505aded5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c906502ed071e8515f101996ec42a04772f72b12
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743597"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291932"
 ---
 # <a name="static-class-design"></a>Projekt klasy statycznej
-Klasa statyczna jest definiowana jako Klasa, która zawiera tylko statyczne elementy członkowskie (oczywiście oprócz członków wystąpienia dziedziczonych z <xref:System.Object?displayProperty=nameWithType> i ewentualnie konstruktora prywatnego). Niektóre języki zapewniają wbudowaną obsługę klas statycznych. W C# 2,0 i nowszych, gdy Klasa jest zadeklarowana jako statyczna, jest zapieczętowana, abstrakcyjna i nie można zastępować ani deklarować elementów członkowskich wystąpienia.
+Klasa statyczna jest definiowana jako Klasa, która zawiera tylko statyczne elementy członkowskie (oczywiście oprócz członków wystąpienia dziedziczonych z <xref:System.Object?displayProperty=nameWithType> i prawdopodobnie konstruktora prywatnego). Niektóre języki zapewniają wbudowaną obsługę klas statycznych. W języku C# 2,0 i nowszych, gdy Klasa jest zadeklarowana jako statyczna, jest zapieczętowana, abstrakcyjna i nie można zastąpić jej elementów członkowskich wystąpienia.
 
- Klasy statyczne są kompromisem między czystym i prostotą zorientowanym na obiektem. Są one często używane do udostępniania skrótów do innych operacji (takich jak <xref:System.IO.File?displayProperty=nameWithType>), posiadaczy metod rozszerzających lub funkcji, dla których pełna otoka zorientowana obiektowo jest nieuzasadniona (na przykład <xref:System.Environment?displayProperty=nameWithType>).
+ Klasy statyczne są kompromisem między czystym i prostotą zorientowanym na obiektem. Są one często używane do udostępniania skrótów do innych operacji (takich jak <xref:System.IO.File?displayProperty=nameWithType> ), posiadaczy metod rozszerzających lub funkcji, dla których pełna otoka zorientowana obiektowo jest nieuzasadniona (na przykład <xref:System.Environment?displayProperty=nameWithType> ).
 
  ✔️ używać klas statycznych oszczędnie.
 
  Klasy statyczne powinny być używane tylko jako klasy pomocnicze dla rdzenia zorientowanego obiektowo struktury.
 
- ❌ nie Traktuj klas statycznych jako zasobników dodatkowych.
+ ❌NIE Traktuj klas statycznych jako zasobników dodatkowych.
 
- ❌ nie deklaruj ani nie przesłonić składowych wystąpienia w klasach statycznych.
+ ❌Nie deklaruj ani nie Przesłoń składowych wystąpienia w klasach statycznych.
 
  ✔️ NALEŻY zadeklarować klasy statyczne jako zapieczętowane, abstrakcyjne i dodać konstruktora wystąpienia prywatnego, jeśli język programowania nie ma wbudowanej obsługi dla klas statycznych.
 
@@ -38,5 +38,5 @@ Klasa statyczna jest definiowana jako Klasa, która zawiera tylko statyczne elem
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania typów](type.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842013"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288293"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizowanie aplikacji platformy .NET
 
@@ -84,10 +84,10 @@ Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowani
 
    Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.
 
-- [Resgen. exe (Generator plików zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (Generator plików zasobów)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    Opis sposobu używania programu Resgen.exe w celu konwertowania plików z rozszerzeniem txt i zasobów opartych na formacie języka XML (resx) na pliki binarne resources środowiska uruchomieniowego języka wspólnego.
 
-- [Winres. exe (Edytor zasobów Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (Edytor zasobów Windows Forms)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Opis sposobu używania programu Winres.exe w celu lokalizowania formularzy programu Windows Forms.

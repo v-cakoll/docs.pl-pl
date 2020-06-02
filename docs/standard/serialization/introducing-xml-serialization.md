@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421270"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277963"
 ---
 # <a name="xml-serialization"></a>Serializacja XML
 
@@ -33,7 +33,7 @@ Serializacji to proces konwersji obiektu do formularza, który można łatwo prz
 
  Dane w obiektach są opisane przy użyciu konstrukcji języka programowania, takich jak klasy, pola, właściwości, typy pierwotne, tablice, a nawet osadzone XML w postaci obiektów **XmlElement** lub **XmlAttribute** . Istnieje możliwość tworzenia własnych klas oznaczona z atrybutów, lub za pomocą narzędzia definicji schematu XML można wygenerować klas na podstawie istniejącego schematu XML.
 
- Jeśli masz schematu XML, należy uruchomić narzędzie definicji schematu XML do tworzenia zestaw klasy, które są silnie wpisany schematu i dodawać adnotacje z atrybutami. W przypadku wystąpienia takich klasy jest serializowana, wygenerowany kod XML jest zgodna schematu XML. Zamieszczone w przypadku klasy, można programować względem model obiektów łatwo manipulować spełniającą pewność, że wygenerowany kod XML jest zgodny ze schematem XML. Jest to alternatywa dla użycia innych klas w .NET Framework, takich jak klasy **XmlReader** i **XmlWriter** , do analizowania i pisania strumienia XML. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../docs/standard/data/xml/index.md). Klasy te umożliwiają przeanalizować strumieniem XML. W przeciwieństwie, użyj **XmlSerializer** , gdy strumień XML powinien być zgodny ze znanymi schematem XML.
+ Jeśli masz schematu XML, należy uruchomić narzędzie definicji schematu XML do tworzenia zestaw klasy, które są silnie wpisany schematu i dodawać adnotacje z atrybutami. W przypadku wystąpienia takich klasy jest serializowana, wygenerowany kod XML jest zgodna schematu XML. Zamieszczone w przypadku klasy, można programować względem model obiektów łatwo manipulować spełniającą pewność, że wygenerowany kod XML jest zgodny ze schematem XML. Jest to alternatywa dla użycia innych klas w .NET Framework, takich jak klasy **XmlReader** i **XmlWriter** , do analizowania i pisania strumienia XML. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../data/xml/index.md). Klasy te umożliwiają przeanalizować strumieniem XML. W przeciwieństwie, użyj **XmlSerializer** , gdy strumień XML powinien być zgodny ze znanymi schematem XML.
 
  Atrybuty kontrolują strumień XML wygenerowany przez klasę **XmlSerializer** , co pozwala na ustawienie przestrzeni nazw XML, nazwy elementu, nazwy atrybutu i tak dalej w przypadku strumienia XML. Aby uzyskać więcej informacji o tych atrybutach i sposobach ich kontroli serializacji XML, zobacz [Kontrolowanie serializacji XML przy użyciu atrybutów](controlling-xml-serialization-using-attributes.md). Dla tabeli tych atrybutów, które są używane do kontrolowania wygenerowanego kodu XML, zobacz atrybuty kontrolujące [serializacji XML](attributes-that-control-xml-serialization.md).
 

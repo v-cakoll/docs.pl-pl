@@ -12,17 +12,17 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 76042bef1475f2fdf14e309390dcba6654ccfaa9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741748"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280364"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybieranie między klasą i strukturą
 Jedną z podstawowych decyzji projektowych każdej twarzy projektanta platformy jest to, czy projekt typu ma być klasą (typem referencyjnym) czy jako struktura (typ wartości). Dobre zrozumienie różnic w zachowaniu typów referencyjnych i typów wartości jest decydujące w przypadku dokonania tego wyboru.
 
- Pierwszą różnicą między typami referencyjnymi i typami wartości, które należy wziąć pod uwagę, jest to, że typy odwołań są przydzielane na stercie i elementy bezużyteczne, a typy wartości są przydzielane na stosie lub w wierszu zawierającym typy i cofnięte przydział, gdy stos powoduje cofnięcie przydziału typu "niewietrzne" lub "typ zawierający". W związku z tym alokacje i cofanie alokacji typów wartości są ogólnie tańsze niż alokacje i cofanie alokacji typów referencyjnych.
+ Pierwszą różnicą między typami referencyjnymi i typami wartości, które należy wziąć pod uwagę, jest to, że typy odwołań są przydzielane na stercie i elementy bezużyteczne, a typy wartości są przydzielane na stosie lub w wierszu zawierającym typy i cofane, gdy stos jest odsunięty lub gdy typ zawierający zostanie cofnięty przydział. W związku z tym alokacje i cofanie alokacji typów wartości są ogólnie tańsze niż alokacje i cofanie alokacji typów referencyjnych.
 
  Następnie tablice typów referencyjnych są przydzielane poza wierszem, co oznacza, że elementy tablicy są tylko odwołaniami do wystąpień typu referencyjnego znajdującego się na stercie. Tablice typu wartości są przypisywane wewnętrznie, co oznacza, że elementy tablicy są rzeczywistymi wystąpieniami typu wartości. W związku z tym alokacje i cofanie alokacji tablic typu wartości są znacznie tańsze niż alokacje i cofanie alokacji tablic typu referencyjnego. Ponadto, w większości przypadków tablice typów wartości wykazują znacznie lepszą miejscowość odwołania.
 
@@ -36,9 +36,9 @@ Jedną z podstawowych decyzji projektowych każdej twarzy projektanta platformy 
 
  ✔️ ROZWAŻYĆ zdefiniowanie struktury zamiast klasy, jeśli wystąpienia typu są małe i często krótkotrwałe lub są często osadzone w innych obiektach.
 
- ❌ uniknąć definiowania struktury, chyba że typ ma wszystkie następujące cechy:
+ ❌Należy unikać definiowania struktury, chyba że typ ma wszystkie następujące właściwości:
 
-- Logicznie reprezentuje pojedynczą wartość, podobną do typów pierwotnych (`int`, `double`itp.).
+- Logicznie reprezentuje pojedynczą wartość, podobną do typów pierwotnych ( `int` , `double` itp.).
 
 - Ma rozmiar wystąpienia poniżej 16 bajtów.
 
@@ -54,5 +54,5 @@ Jedną z podstawowych decyzji projektowych każdej twarzy projektanta platformy 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania typów](type.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

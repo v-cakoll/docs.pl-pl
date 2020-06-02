@@ -12,74 +12,74 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400604"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280351"
 ---
 # <a name="constructor-design"></a>Projekt konstruktora
 
-Istnieją dwa rodzaje konstruktorów: konstruktory typu i konstruktory wystąpienia.
+Istnieją dwa rodzaje konstruktorów: konstruktory typów i konstruktory wystąpień.
 
-Konstruktory typu są statyczne i są uruchamiane przez CLR przed typem jest używany. Konstruktory wystąpienia są uruchamiane po utworzeniu wystąpienia typu.
+Konstruktory typów są statyczne i są uruchamiane przez środowisko CLR przed użyciem typu. Konstruktory wystąpień są uruchamiane podczas tworzenia wystąpienia typu.
 
-Konstruktory typu nie mogą przyjmować żadnych parametrów. Konstruktory wystąpienia może. Konstruktory wystąpienia, które nie przyjmują żadnych parametrów są często nazywane konstruktorów bezparametrów.
+Konstruktory typów nie mogą przyjmować żadnych parametrów. Konstruktory wystąpień mogą. Konstruktory wystąpień, które nie przyjmują żadnych parametrów, są często nazywane konstruktorami bez parametrów.
 
-Konstruktory są najbardziej naturalny sposób tworzenia wystąpień typu. Większość deweloperów będzie wyszukiwać i próbować użyć konstruktora, zanim rozważyalternatywne sposoby tworzenia wystąpień (takich jak metody fabryczne).
+Konstruktory to najbardziej naturalny sposób tworzenia wystąpień typu. Większość deweloperów przeszuka i spróbuje użyć konstruktora przed uwzględnieniem alternatywnych sposobów tworzenia wystąpień (takich jak metody fabryki).
 
-✔️ ROZWAŻ zapewnienie prostych, najlepiej domyślnych konstruktorów.
+✔️ ROZWAŻYĆ udostępnienie prostych, idealnie domyślnych konstruktorów.
 
-Prosty konstruktor ma bardzo małą liczbę parametrów, a wszystkie parametry są prymitywami lub wyliczeniami. Takie proste konstruktory zwiększają użyteczność struktury.
+Prosty Konstruktor ma bardzo małą liczbę parametrów, a wszystkie parametry są pierwotne lub wyliczeniowe. Takie proste konstruktory zwiększają użyteczność struktury.
 
-✔️ ZASTANÓW SIĘ przy użyciu statycznej metody fabryki zamiast konstruktora, jeśli semantyka żądanej operacji nie mapuje bezpośrednio do budowy nowego wystąpienia lub jeśli zgodnie z wytycznymi projektowymi konstruktora czuje się nienaturalne.
+✔️ ROZWAŻYĆ użycie statycznej metody fabryki zamiast konstruktora, Jeśli semantyka żądanej operacji nie jest mapowana bezpośrednio do konstrukcji nowego wystąpienia lub jeśli zgodnie z wytycznymi projektowania konstruktora uważać nienaturalny.
 
-✔️ UŻYWAĆ parametrów konstruktora jako skrótów do ustawiania właściwości głównych.
+✔️ używać parametrów konstruktora jako skrótów do ustawiania właściwości głównych.
 
-Nie powinno być żadnej różnicy w semantyce między użyciem pustego konstruktora, a następnie niektóre zestawy właściwości i przy użyciu konstruktora z wieloma argumentami.
+Nie powinno się różnicować semantyki między użyciem pustego konstruktora, a po nim niektóre zestawy właściwości i użycie konstruktora z wieloma argumentami.
 
-✔️ należy użyć tej samej nazwy dla parametrów konstruktora i właściwości, jeśli parametry konstruktora są używane do prostego ustawienia właściwości.
+✔️ Użyj tej samej nazwy dla parametrów konstruktora i właściwości, jeśli konstruktory są używane do zwykłego ustawiania właściwości.
 
-Jedyną różnicą między takimi parametrami a właściwościami powinna być obudowa.
+Jedyną różnicą między takimi parametrami i właściwościami powinna być wielkość liter.
 
-✔️ zrobić minimalną pracę w konstruktorze.
+✔️ WYKONAĆ minimalną ilość pracy w konstruktorze.
 
-Konstruktory nie należy wykonywać wiele pracy innych niż przechwytywanie parametrów konstruktora. Koszt każdego innego przetwarzania powinien być opóźniony do momentu, gdy będzie to wymagane.
+Konstruktory nie powinny wykonywać wielu zadań niż przechwycić parametry konstruktora. Koszt dowolnego innego przetwarzania powinien zostać opóźniony do czasu wymagane.
 
-✔️ do zgłaszać wyjątki od konstruktorów instancji, jeśli jest to właściwe.
+✔️ należy zgłosić wyjątki z konstruktorów wystąpień, jeśli są odpowiednie.
 
-✔️ do jawnie zadeklarować konstruktora parametrów publicznych w klasach, jeśli taki konstruktor jest wymagany.
+✔️ jawnie zadeklarować publiczny Konstruktor bez parametrów w klasach, jeśli taki Konstruktor jest wymagany.
 
-Jeśli nie jawnie zadeklarować żadnych konstruktorów na typ, wiele języków (takich jak C#) automatycznie doda konstruktora public parameterless. (Klasy abstrakcyjne uzyskać chroniony konstruktora.)
+Jeśli nie deklarujesz jawnie żadnych konstruktorów w typie, wiele języków (takich jak C#) automatycznie doda publiczny Konstruktor bez parametrów. (Klasy abstrakcyjne uzyskują chroniony Konstruktor).
 
-Dodanie konstruktora sparametryzowanego do klasy uniemożliwia kompilatorowi dodawanie konstruktora bezparametrowego. Często powoduje to przypadkowe zmiany.
+Dodanie konstruktora sparametryzowanego do klasy uniemożliwi kompilatorowi dodanie konstruktora bez parametrów. Często powoduje to przypadkowe krytyczne zmiany.
 
-❌UNIKAJ jawnie definiowania konstruktorów bezparametrów na strukturach.
+❌UNIKAj jawnego definiowania konstruktorów bez parametrów w strukturach.
 
-Dzięki temu tworzenie tablicy szybciej, ponieważ jeśli konstruktor bezparametrów nie jest zdefiniowany, nie musi być uruchamiany na każdym gnieździe w tablicy. Należy zauważyć, że wiele kompilatorów, w tym C#, nie zezwalają structs mieć konstruktorów bezparametrów z tego powodu.
+Dzięki temu tworzenie macierzy jest szybsze, ponieważ jeśli Konstruktor bez parametrów nie jest zdefiniowany, nie musi być uruchamiany w każdym gnieździe tablicy. Należy zauważyć, że wiele kompilatorów, w tym C#, nie zezwala strukturom na używanie konstruktorów bez parametrów z tego powodu.
 
-❌UNIKAJ wywoływania wirtualnych elementów członkowskich na obiekcie wewnątrz jego konstruktora.
+❌Należy unikać wywoływania wirtualnych elementów członkowskich w obiekcie wewnątrz jego konstruktora.
 
-Wywołanie elementu członkowskiego wirtualnego spowoduje, że najbardziej pochodne zastąpić być wywoływane, nawet jeśli konstruktor typu najbardziej pochodnych nie został jeszcze w pełni uruchomiony.
+Wywołanie wirtualnej składowej spowoduje wywołanie najbardziej pochodnego przesłonięcia, nawet jeśli Konstruktor najbardziej pochodnego nie został jeszcze w pełni uruchomiony.
 
-## <a name="type-constructor-guidelines"></a>Wskazówki dotyczące konstruktora tekstu
+## <a name="type-constructor-guidelines"></a>Wytyczne dotyczące konstruktora typów
 
-✔️ zrobić statyczne konstruktory prywatne.
+✔️ uczynić statycznymi konstruktorami prywatnymi.
 
-Konstruktora statycznego, zwany także konstruktora klasy, jest używany do inicjowania typu. CLR wywołuje konstruktora statycznego przed pierwszym wystąpieniem typu jest tworzony lub wszystkie elementy statyczne na tym typie są wywoływane. Użytkownik nie ma kontroli nad, gdy konstruktor statyczny jest wywoływana. Jeśli konstruktor statyczny nie jest prywatny, może być wywoływany przez kod inny niż CLR. W zależności od operacji wykonywanych w konstruktorze może to spowodować nieoczekiwane zachowanie. Kompilator C# wymusza konstruktory statyczne jako prywatne.
+Konstruktor statyczny nazywany również konstruktorem klasy jest używany do inicjowania typu. CLR wywołuje konstruktora statycznego przed utworzeniem pierwszego wystąpienia typu lub wszystkie statyczne elementy członkowskie tego typu są wywoływane. Użytkownik nie ma kontroli nad tym, kiedy Konstruktor statyczny jest wywoływany. Jeśli Konstruktor statyczny nie jest prywatny, może być wywoływany przez kod inny niż CLR. W zależności od operacji wykonywanych w konstruktorze może to spowodować nieoczekiwane zachowanie. Kompilator języka C# wymusza, aby konstruktory statyczne były prywatne.
 
 ❌NIE zgłaszaj wyjątków od konstruktorów statycznych.
 
-Jeśli wyjątek jest generowany z konstruktora typu, typ nie jest użyteczny w bieżącej domenie aplikacji.
+Jeśli wyjątek jest zgłaszany z konstruktora typów, typ nie jest użyteczny w bieżącej domenie aplikacji.
 
-✔️ NALEŻY WZIĄĆ POD UWAGĘ inicjowanie pól statycznych w wierszu, a nie jawnie przy użyciu konstruktorów statycznych, ponieważ czas wykonywania jest w stanie zoptymalizować wydajność typów, które nie mają jawnie zdefiniowane static konstruktora.
+✔️ ROZWAŻYĆ zainicjowanie pól statycznych zamiast jawnie przy użyciu konstruktorów statycznych, ponieważ środowisko uruchomieniowe może zoptymalizować wydajność typów, które nie mają jawnie zdefiniowanego konstruktora statycznego.
 
-*Części © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+*Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
-*Przedruk za zgodą Pearson Education, Inc. z [Framework Design Guidelines: Conventions, Idioms i Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) autorstwa Krzysztofa Cwaliny i Brada Abramsa, opublikowane 22 października 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development Series.*
+*Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania elementów członkowskich](member.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

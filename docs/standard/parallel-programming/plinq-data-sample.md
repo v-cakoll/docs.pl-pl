@@ -8,30 +8,30 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588609"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291711"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
-Ten przykład zawiera przykładowe dane w formacie csv, wraz z metodami, które przekształcają go w kolekcje w pamięci klientów, produkty, zamówienia i szczegóły zamówienia. Aby dalej eksperymentować z PLINQ, można wkleić przykłady kodu z niektórych `Main` innych tematów do kodu w tym temacie i wywołać go z metody. Można również użyć tych danych z własnymi zapytaniami PLINQ.  
+Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z `Main` metody. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
   
- Dane reprezentują podzbiór bazy danych Northwind. Uwzględniono pięćdziesiąt (50) rekordów odbiorców, ale nie wszystkie pola. Uwzględniono podzbiór wierszy z Zamówień i odpowiadające im dane Order_Detail dla każdego Klienta. Wszystkie produkty są wliczone w cenę.  
+ Dane przedstawiają podzestaw bazy danych Northwind. 50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola. Uwzględniono podzestaw wierszy z zamówień i odpowiadające im Order_Detail dane dla każdego klienta. Wszystkie produkty są dołączone.  
   
 > [!NOTE]
-> Zestaw danych nie jest wystarczająco duży, aby wykazać, że PLINQ jest szybszy niż LINQ do obiektów dla kwerend, które zawierają tylko podstawowe `where` i `select` klauzule. Aby zaobserwować wzrost szybkości dla małych zestawów danych, takich jak ten, należy użyć kwerend, które zawierają obliczeniowo kosztowne operacje na każdym elemencie w zestawie danych.  
+> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają `where` tylko `select` klauzule podstawowe i. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
   
-### <a name="to-set-up-this-sample"></a>Aby skonfigurować tę próbkę  
+### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
-1. Tworzenie projektu aplikacji konsoli Visual Basic lub Visual C#.  
+1. Utwórz projekt aplikacji konsolowej Visual Basic lub Visual C#.  
   
-2. Zastąp zawartość module1.vb lub Program.cs, używając kodu, który następuje po wykonaniu tych kroków.  
+2. Zastąp zawartość Module1. vb lub Program.cs przy użyciu kodu, który następuje po wykonaniu tych kroków.  
   
-3. W menu **Projekt** kliknij polecenie **Dodaj nowy element**. Zaznacz pozycję **Plik tekstowy,** a następnie kliknij przycisk **OK**. Skopiuj dane w tym temacie, a następnie wklej go do nowego pliku tekstowego. W menu **Plik** kliknij polecenie **Zapisz**, nazwij plik Plinqdata.csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.  
+3. W menu **projekt** kliknij polecenie **Dodaj nowy element**. Wybierz pozycję **plik tekstowy** , a następnie kliknij przycisk **OK**. Skopiuj dane z tego tematu, a następnie wklej je w nowym pliku tekstowym. W menu **plik** kliknij polecenie **Zapisz**, Nazwij plik Plinqdata. csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.  
   
-4. Naciśnij klawisz F5, aby sprawdzić, czy projekt tworzy i działa poprawnie. W oknie konsoli powinny być wyświetlane następujące dane wyjściowe.  
+4. Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany. Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.  
   
     ```console  
     Customer count: 50  
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Równoległe LINQ (PLINQ)](introduction-to-plinq.md)

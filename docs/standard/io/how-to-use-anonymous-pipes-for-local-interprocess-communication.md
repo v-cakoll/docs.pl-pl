@@ -1,5 +1,5 @@
 ---
-title: 'Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
+title: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627997"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291789"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
-Anonimowe potoki zapewniają komunikację międzyprocesową na komputerze lokalnym. Oferują one mniej funkcji niż nazwane potoki, ale również wymagają mniej narzutów. Za pomocą anonimowych potoków można ułatwić komunikację międzyprocesową na komputerze lokalnym. Nie można używać anonimowych potoków do komunikacji za pomocą sieci.  
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
+Potoki anonimowe zapewniają komunikację międzyprocesową na komputerze lokalnym. Oferują one mniej funkcji niż nazwane potoki, ale również wymagają mniejszego obciążenia. Można używać potoków anonimowych, aby ułatwić komunikację międzyprocesową na komputerze lokalnym. Nie można używać potoków anonimowych do komunikacji za pośrednictwem sieci.  
   
- Aby zaimplementować anonimowe <xref:System.IO.Pipes.AnonymousPipeServerStream> <xref:System.IO.Pipes.AnonymousPipeClientStream> potoki, należy użyć i klas.  
+ Aby zaimplementować anonimowe potoki, <xref:System.IO.Pipes.AnonymousPipeServerStream> Użyj <xref:System.IO.Pipes.AnonymousPipeClientStream> klas i.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono sposób wysyłania ciągu z procesu nadrzędnego do procesu podrzędnego przy użyciu anonimowych potoków. W tym <xref:System.IO.Pipes.AnonymousPipeServerStream> przykładzie tworzy obiekt w <xref:System.IO.Pipes.PipeDirection> procesie <xref:System.IO.Pipes.PipeDirection.Out>nadrzędnym o wartości . Proces nadrzędny następnie tworzy proces podrzędny przy <xref:System.IO.Pipes.AnonymousPipeClientStream> użyciu dojścia klienta do utworzenia obiektu. Proces podrzędny <xref:System.IO.Pipes.PipeDirection> ma <xref:System.IO.Pipes.PipeDirection.In>wartość .  
+ Poniższy przykład ilustruje sposób wysyłania ciągu z procesu nadrzędnego do procesu podrzędnego przy użyciu potoków anonimowych. Ten przykład tworzy <xref:System.IO.Pipes.AnonymousPipeServerStream> obiekt w procesie nadrzędnym z <xref:System.IO.Pipes.PipeDirection> wartością <xref:System.IO.Pipes.PipeDirection.Out> . Następnie proces nadrzędny tworzy proces podrzędny przy użyciu dojścia klienta do utworzenia <xref:System.IO.Pipes.AnonymousPipeClientStream> obiektu. Proces podrzędny ma <xref:System.IO.Pipes.PipeDirection> wartość <xref:System.IO.Pipes.PipeDirection.In> .  
   
- Następnie proces nadrzędny wysyła ciąg dostarczony przez użytkownika do procesu podrzędnego. Ciąg jest wyświetlany do konsoli w procesie podrzędnym.  
+ Następnie proces nadrzędny wysyła ciąg dostarczony przez użytkownika do procesu podrzędnego. Ten ciąg jest wyświetlany w konsoli w procesie podrzędnym.  
   
- W poniższym przykładzie przedstawiono proces serwera.  
+ Poniższy przykład przedstawia proces serwera.  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
@@ -39,13 +39,13 @@ Anonimowe potoki zapewniają komunikację międzyprocesową na komputerze lokaln
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono proces klienta. Proces serwera uruchamia proces klienta i daje temu procesowi dojście klienta. Wynikowy plik wykonywalny z `pipeClient.exe` kodu klienta powinien zostać nazwany i skopiowany do tego samego katalogu co plik wykonywalny serwera przed uruchomieniem procesu serwera.  
+ Poniższy przykład przedstawia proces klienta. Proces serwera uruchamia proces klienta i zapewnia, że proces obsługi klienta. Utworzony plik wykonywalny z kodu klienta powinien mieć nazwę `pipeClient.exe` i być kopiowany do tego samego katalogu co plik wykonywalny serwera przed uruchomieniem procesu serwera.  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Potoki](../../../docs/standard/io/pipe-operations.md)
-- [Instrukcje: stosowanie potoków nazwanych do sieciowej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Potoki](pipe-operations.md)
+- [Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej](how-to-use-named-pipes-for-network-interprocess-communication.md)

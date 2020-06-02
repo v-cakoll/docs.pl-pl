@@ -3,12 +3,12 @@ title: Kompilator XSLT (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 18f351546699487316858198b705e970de4856c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709728"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282613"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Kompilator XSLT (xsltc.exe)
 Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Skompilowany arkusz stylów można następnie przesłać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można generować podpisanych zestawów za pomocą xsltc. exe.  
@@ -32,7 +32,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Określa nazwę klasy dla poniższego arkusza stylów. Nazwa klasy może być w pełni kwalifikowana.<br /><br /> Nazwa klasy jest domyślnie nazwą arkusza stylów. Na przykład jeśli arkusz stylów są kompilowane. xsl, domyślna nazwa klasy to Customers.|  
-|`/debug[`+&#124;-`]`|Określa, czy informacje o debugowaniu mają być generowane.<br /><br /> Określenie `+` lub `/debug`, powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych programu (PDB). Nazwa wygenerowanego pliku PDB to `assemblyName`. pdb.<br /><br /> Określenie `-`, która obowiązuje, jeśli nie zostanie określone `/debug`, powoduje, że nie są tworzone żadne informacje debugowania. Zestaw detaliczny jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania może znacząco wpłynąć na wydajność XSLT.|  
+|`/debug[`+&#124;-`]`|Określa, czy informacje o debugowaniu mają być generowane.<br /><br /> Określenie `+` lub `/debug` , powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych programu (PDB). Nazwa wygenerowanego pliku PDB to `assemblyName` . pdb.<br /><br /> Określenie `-` , która obowiązuje, jeśli nie zostanie określone, powoduje, że nie `/debug` są tworzone żadne informacje debugowania. Zestaw detaliczny jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania może znacząco wpłynąć na wydajność XSLT.|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija wyświetlanie komunikatu o prawach autorskich kompilatora.|  
 |`/platform:` `string`|Określa platformy, na których można uruchomić zestaw. Poniżej opisano prawidłowe wartości platformy:<br /><br /> `x86`kompiluje zestaw do uruchomienia przez 32-bitowe, zgodne ze standardem x86 środowisko uruchomieniowe języka wspólnego<br /><br /> `x64`kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.<br /><br /> Procesor Itanium kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze z procesorem Itanium.<br /><br /> `anycpu`kompiluje zestaw do uruchomienia na dowolnej platformie. Domyślnie włączone.|  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 > Należy również uwzględnić skompilowany zestaw jako odwołanie w aplikacji.  
   
- Narzędzie xsltc. exe nie weryfikuje nazw klas (`/class:`*nazw*) ani zestawów (`/out:`*AssemblyName*). Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy są nieprawidłowe.  
+ Narzędzie xsltc. exe nie weryfikuje nazw klas ( `/class:` *nazw*) ani zestawów ( `/out:` *AssemblyName*). Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy są nieprawidłowe.  
   
 ## <a name="examples"></a>Przykłady  
  Poniższe polecenie kompiluje arkusz stylów i tworzy zestaw o nazwie booksort. dll.  
@@ -80,8 +80,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
-- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
+- [Przekształcenia XSLT](xslt-transformations.md)

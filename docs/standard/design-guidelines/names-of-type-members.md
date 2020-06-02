@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744180"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290191"
 ---
 # <a name="names-of-type-members"></a>Nazwy składowych typu
 Typy składowe są elementami członkowskimi: metodami, właściwościami, zdarzeniami, konstruktorami i polami. W poniższych sekcjach opisano wskazówki dotyczące nazewnictwa elementów członkowskich typu.
@@ -40,7 +40,7 @@ public class String {
 
  ✔️ Właściwości nazwy przy użyciu rzeczownika, frazy rzeczowników lub przymiotniku.
 
- ❌ nie mają właściwości, które pasują do nazwy metod "Get", tak jak w poniższym przykładzie:
+ ❌NIE mają właściwości, które pasują do nazwy metod "Get", tak jak w poniższym przykładzie:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,11 +48,11 @@ public class String {
 
  ✔️ DO właściwości kolekcji nazw z frazą w liczbie mnogiej opisującą elementy w kolekcji, zamiast używać pojedynczej frazy, a po niej "list" lub "Collection".
 
- ✔️ NALEŻY nazwać właściwości logiczne przy użyciu potwierdzenia (`CanSeek` zamiast `CantSeek`). Opcjonalnie można również prefiksować właściwości logiczne z "is", "może" lub "ma", ale tylko wtedy, gdy dodaje wartość.
+ ✔️ NALEŻY nazwać właściwości logiczne z wyrażeniem potwierdzającym ( `CanSeek` zamiast `CantSeek` ). Opcjonalnie można również prefiksować właściwości logiczne z "is", "może" lub "ma", ale tylko wtedy, gdy dodaje wartość.
 
  ✔️ ROZWAŻYĆ nadanie właściwości takiej samej nazwy jak jej typ.
 
- Na przykład następująca Właściwość prawidłowo pobiera i ustawia wartość wyliczenia o nazwie `Color`, więc właściwość ma nazwę `Color`:
+ Na przykład następująca Właściwość prawidłowo pobiera i ustawia wartość wyliczenia o nazwie `Color` , więc właściwość ma nazwę `Color` :
 
 ```csharp
 public enum Color {...}
@@ -66,34 +66,34 @@ public class Control {
 
  ✔️ NALEŻY nazwać zdarzenia za pomocą czasownika lub wyrażenia orzeczenia.
 
- Przykłady obejmują `Clicked`, `Painting`, `DroppedDown`i tak dalej.
+ Przykłady obejmują `Clicked` , `Painting` , `DroppedDown` , i tak dalej.
 
  ✔️ NALEŻY udzielić nazw zdarzeń z koncepcją przed i po, przy użyciu obecnych i ostatnich dziesiątek.
 
- Na przykład zdarzenie zamykające wywoływane przed zamknięciem okna powinno być wywoływane `Closing`, a jeden, który jest wywoływany po zamknięciu okna, zostanie wywołany `Closed`.
+ Na przykład zdarzenie zamknięcia, które jest wywoływane przed zamknięciem okna, zostanie wywołane `Closing` , a jeden, który jest wywoływany po zamknięciu okna, zostanie wywołany `Closed` .
 
- ❌ nie używać prefiksów "Before" lub "After", aby wskazać zdarzenia przed i po zakończeniu. Użyj obecnych i ostatnich dziesiątek tak samo, jak zostało to opisane.
+ ❌NIE używaj "Before" lub "After" prefiksów ani przyrostków, aby wskazać zdarzenia poprzedzające i końcowe. Użyj obecnych i ostatnich dziesiątek tak samo, jak zostało to opisane.
 
  ✔️ obsługi zdarzeń nazw (delegatów używanych jako typy zdarzeń) przy użyciu sufiksu "EventHandler", jak pokazano w następującym przykładzie:
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️ należy używać dwóch parametrów o nazwach `sender` i `e` w obsłudze zdarzeń.
+ ✔️ używać dwóch parametrów o nazwach `sender` i `e` w obsłudze zdarzeń.
 
- Parametr Sender reprezentuje obiekt, który spowodował zdarzenie. Parametr nadawcy jest zazwyczaj typu `object`, nawet jeśli można użyć bardziej określonego typu.
+ Parametr Sender reprezentuje obiekt, który spowodował zdarzenie. Parametr nadawcy jest zazwyczaj typu `object` , nawet jeśli można użyć bardziej określonego typu.
 
  ✔️ NALEŻY nazwać klasy argumentów zdarzeń z sufiksem "EventArgs".
 
 ## <a name="names-of-fields"></a>Nazwy pól
- Wskazówki dotyczące nazewnictwa pól mają zastosowanie do statycznych pól publicznych i chronionych. Pola wewnętrzne i prywatne nie są objęte wskazówkami, a pola Public lub Protected instance są niedozwolone w [wytycznych dotyczących projektowania elementu członkowskiego](../../../docs/standard/design-guidelines/member.md).
+ Wskazówki dotyczące nazewnictwa pól mają zastosowanie do statycznych pól publicznych i chronionych. Pola wewnętrzne i prywatne nie są objęte wskazówkami, a pola Public lub Protected instance są niedozwolone w [wytycznych dotyczących projektowania elementu członkowskiego](member.md).
 
  ✔️ używać PascalCasing w nazwach pól.
 
  ✔️ nazwy pól przy użyciu rzeczownika, frazy rzeczowników lub przymiotniku.
 
- ❌ nie należy używać prefiksu dla nazw pól.
+ ❌NIE należy używać prefiksu dla nazw pól.
 
- Na przykład nie umożliwia "g_" lub "s_" oznaczają pola statyczne.
+ Na przykład nie należy używać "g_" lub "s_" do wskazania pól statycznych.
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
@@ -101,5 +101,5 @@ public class Control {
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

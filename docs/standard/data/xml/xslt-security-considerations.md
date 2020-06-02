@@ -3,12 +3,12 @@ title: Zagadnienia dotyczące bezpieczeństwa danych XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81db764016607ebe6facfc530dbb2bac8e6b8cfe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709689"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282514"
 ---
 # <a name="xslt-security-considerations"></a>Zagadnienia dotyczące bezpieczeństwa danych XSLT
 Język XSLT oferuje bogaty zestaw funkcji, które zapewniają doskonałą wydajność i elastyczność. Zawiera ona wiele funkcji, które mogą być również wykorzystywane przez źródła zewnętrzne. Aby bezpiecznie używać XSLT, należy zrozumieć typy problemów z zabezpieczeniami, które powstają podczas korzystania z języka XSLT, oraz podstawowe strategie, których można użyć w celu ograniczenia tych zagrożeń.  
@@ -18,28 +18,28 @@ Język XSLT oferuje bogaty zestaw funkcji, które zapewniają doskonałą wydajn
   
 - Obiekty rozszerzeń dodają funkcje programistyczne do transformacji XSL.  
   
-- Skrypty można osadzić w arkuszu stylów przy użyciu elementu `msxsl:script` rozszerzenia.  
+- Skrypty można osadzić w arkuszu stylów przy użyciu `msxsl:script` elementu rozszerzenia.  
   
 ### <a name="extension-objects"></a>Obiekty rozszerzeń  
  Obiekty rozszerzeń są dodawane przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Zestaw uprawnień FullTrust jest wymagany do obsługi obiektów rozszerzeń. Dzięki temu podniesienie uprawnień nie następuje, gdy zostanie wykonany kod obiektu rozszerzenia. Próba wywołania <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody bez uprawnień FullTrust powoduje zgłoszenie wyjątku zabezpieczeń.  
   
 ### <a name="style-sheet-scripts"></a>Skrypty arkusza stylów  
- Skrypty można osadzić w arkuszu stylów przy użyciu elementu `msxsl:script` rozszerzenia. Obsługa skryptów jest opcjonalną funkcją w <xref:System.Xml.Xsl.XslCompiledTransform> klasie, która jest domyślnie wyłączona. Obsługę skryptów <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> można włączyć przez ustawienie właściwości na `true` i przekazanie <xref:System.Xml.Xsl.XsltSettings> obiektu do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
+ Skrypty można osadzić w arkuszu stylów przy użyciu `msxsl:script` elementu rozszerzenia. Obsługa skryptów jest opcjonalną funkcją w <xref:System.Xml.Xsl.XslCompiledTransform> klasie, która jest domyślnie wyłączona. Obsługę skryptów można włączyć przez ustawienie <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> właściwości na `true` i przekazanie <xref:System.Xml.Xsl.XsltSettings> obiektu do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
   
 #### <a name="guidelines"></a>Wytyczne  
- Włącz obsługę skryptów tylko wtedy, gdy arkusz stylów pochodzi z zaufanego źródła. Jeśli nie możesz zweryfikować źródła arkusza stylów lub jeśli arkusz stylów nie pochodzi z zaufanego źródła, przekaż go `null` do ARGUMENTU ustawienia XSLT.  
+ Włącz obsługę skryptów tylko wtedy, gdy arkusz stylów pochodzi z zaufanego źródła. Jeśli nie możesz zweryfikować źródła arkusza stylów lub jeśli arkusz stylów nie pochodzi z zaufanego źródła, Przekaż `null` go do argumentu ustawienia XSLT.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Język XSLT zawiera funkcje, takie jak `xsl:import`, `xsl:include`, lub `document()` funkcja, gdzie procesor wymaga rozpoznania odwołań do identyfikatorów URI. <xref:System.Xml.XmlResolver> Klasa jest używana do rozpoznawania zasobów zewnętrznych. Zasoby zewnętrzne mogą wymagać rozwiązania w następujących dwóch przypadkach:  
+ Język XSLT zawiera funkcje, takie jak `xsl:import` , `xsl:include` , lub `document()` Funkcja, gdzie procesor wymaga rozpoznania odwołań do identyfikatorów URI. <xref:System.Xml.XmlResolver>Klasa jest używana do rozpoznawania zasobów zewnętrznych. Zasoby zewnętrzne mogą wymagać rozwiązania w następujących dwóch przypadkach:  
   
 - Podczas kompilowania arkusza stylów, <xref:System.Xml.XmlResolver> jest używany do `xsl:import` rozpoznawania i `xsl:include` rozwiązywania.  
   
 - Podczas wykonywania transformacji <xref:System.Xml.XmlResolver> jest używana do rozpoznawania `document()` funkcji.  
   
     > [!NOTE]
-    > `document()` Funkcja jest domyślnie wyłączona w <xref:System.Xml.Xsl.XslCompiledTransform> klasie. Tę funkcję <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> można włączyć przez ustawienie właściwości na `true` i przekazanie <xref:System.Xml.Xsl.XsltSettings> obiektu do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
+    > `document()`Funkcja jest domyślnie wyłączona w <xref:System.Xml.Xsl.XslCompiledTransform> klasie. Tę funkcję można włączyć przez ustawienie <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> właściwości na `true` i przekazanie <xref:System.Xml.Xsl.XsltSettings> obiektu do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
   
- Każdy <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> z <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> tych metod obejmuje przeciążenia, które akceptują <xref:System.Xml.XmlResolver> jako jeden z argumentów. Jeśli nie <xref:System.Xml.XmlResolver> jest określony, zostanie użyta <xref:System.Xml.XmlUrlResolver> wartość domyślna bez poświadczeń.  
+ Każdy z tych <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metod obejmuje przeciążenia, które akceptują <xref:System.Xml.XmlResolver> jako jeden z argumentów. Jeśli <xref:System.Xml.XmlResolver> nie jest określony, <xref:System.Xml.XmlUrlResolver> zostanie użyta wartość domyślna bez poświadczeń.  
   
 #### <a name="guidelines"></a>Wytyczne  
  Włącz `document()` funkcję tylko wtedy, gdy arkusz stylów pochodzi z zaufanego źródła.  
@@ -52,10 +52,10 @@ Język XSLT oferuje bogaty zestaw funkcji, które zapewniają doskonałą wydajn
   
 - Jeśli chcesz dostosować zachowanie, możesz zaimplementować własną <xref:System.Xml.XmlResolver> klasę i używać jej do rozwiązywania zasobów.  
   
-- Jeśli chcesz się upewnić, że nie ma dostępu do zasobów zewnętrznych, możesz `null` określić dla <xref:System.Xml.XmlResolver> tego argumentu.  
+- Jeśli chcesz się upewnić, że nie ma dostępu do zasobów zewnętrznych, możesz określić `null` dla tego <xref:System.Xml.XmlResolver> argumentu.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Rozpoznawanie zewnętrznych zasobów podczas przetwarzania XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)
+- [Przekształcenia XSLT](xslt-transformations.md)
+- [Rozpoznawanie zewnętrznych zasobów podczas przetwarzania XSLT](resolving-external-resources-during-xslt-processing.md)
+- [Zabezpieczenia dostępu kodu](../../../framework/misc/code-access-security.md)

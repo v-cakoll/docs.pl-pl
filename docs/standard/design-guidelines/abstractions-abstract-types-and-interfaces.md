@@ -8,15 +8,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6a4f511af72aad916d367153090504e2a8e11cb8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741810"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280617"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrakcje (typy abstrakcyjne i interfejsy)
-Streszczenie to typ, który opisuje kontrakt, ale nie zapewnia pełnej implementacji kontraktu. Streszczenia są zwykle implementowane jako klasy abstrakcyjne lub interfejsy i są one ze dobrze zdefiniowanym zestawem dokumentacji referencyjnej opisującym wymaganą semantykę typów implementujących kontrakt. Niektóre z najważniejszych streszczeń w .NET Framework obejmują <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>i <xref:System.Object>.
+Streszczenie to typ, który opisuje kontrakt, ale nie zapewnia pełnej implementacji kontraktu. Streszczenia są zwykle implementowane jako klasy abstrakcyjne lub interfejsy i są one ze dobrze zdefiniowanym zestawem dokumentacji referencyjnej opisującym wymaganą semantykę typów implementujących kontrakt. Niektóre z najważniejszych streszczeń w .NET Framework obejmują <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> , i <xref:System.Object> .
 
  Struktury można rozciągnąć przez implementację konkretnego typu, który obsługuje umowę abstrakcji i używa tego konkretnego typu z interfejsami API platformy, które używają (działającego na) abstrakcji.
 
@@ -26,7 +26,7 @@ Streszczenie to typ, który opisuje kontrakt, ale nie zapewnia pełnej implement
 
  Jednakże abstrakcje zapewniają wyjątkowo zaawansowane rozszerzalność, która nie jest często zgodna z innymi mechanizmami rozszerzalności. Są one podstawą wielu wzorców architektonicznych, takich jak wtyczki, niewersja kontroli (IoC), potoki itd. Są one również niezwykle ważne do testowania struktur. Dobre abstrakcje sprawiają, że istnieje możliwość wypróbowania dużych zależności na potrzeby testowania jednostkowego. Podsumowując, abstrakcje są odpowiedzialne za pomyślne zamiar — po rozbudowaniu nowoczesnych platform zorientowanych obiektowo.
 
- ❌ nie zapewniają abstrakcji, chyba że są testowane przez opracowywanie kilku konkretnych implementacji i interfejsów API korzystających z abstrakcji.
+ ❌NIE należy podawać abstrakcji, chyba że są one testowane przez opracowywanie kilku konkretnych implementacji i interfejsów API korzystających z abstrakcji.
 
  ✔️ NALEŻY uważnie wybierać między klasą abstrakcyjną i interfejsem podczas projektowania abstrakcji.
 
@@ -38,5 +38,5 @@ Streszczenie to typ, który opisuje kontrakt, ale nie zapewnia pełnej implement
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Projektowanie pod kątem rozszerzalności](designing-for-extensibility.md)

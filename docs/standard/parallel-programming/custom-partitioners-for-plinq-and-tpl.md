@@ -8,125 +8,125 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141566"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276728"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 
-Aby zrównoleglić operację w źródle danych, jednym z podstawowych kroków jest *partycjonowanie* źródła na wiele sekcji, do których można uzyskać dostęp jednocześnie przez wiele wątków. PLINQ i równoległej biblioteki zadań (TPL) zapewniają domyślne partycjonery, które działają w sposób niewidoczny podczas pisania kwerendy równoległej lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. W przypadku bardziej zaawansowanych scenariuszy można podłączyć własny partycjoner.
+Aby zrównoleglanie operację do źródła danych, jednym z najważniejszych kroków jest *partycjonowanie* źródła w wielu sekcjach, do których można uzyskać dostęp jednocześnie przez wiele wątków. PLINQ i Biblioteka zadań równoległych (TPL) zapewniają domyślne partycje, które działają w sposób niewidoczny dla użytkownika podczas pisania równoległego zapytania lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. W przypadku bardziej zaawansowanych scenariuszy można podłączyć własną partycję.
 
 ## <a name="kinds-of-partitioning"></a>Rodzaje partycjonowania
 
-Istnieje wiele sposobów partycjonowania źródła danych. W najbardziej efektywnych podejść wiele wątków współpracować do przetwarzania oryginalnej sekwencji źródłowej, a nie fizycznie oddzielanie źródła do wielu podsekwencji. Dla tablic i innych źródeł <xref:System.Collections.IList> indeksowanych, takich jak kolekcje, gdzie długość jest znana z góry, *partycjonowanie zakresu* jest najprostszym rodzajem partycjonowania. Każdy wątek odbiera unikatowe indeksy początkowe i końcowe, dzięki czemu może przetwarzać jego zakres źródła bez zastępowania lub zastępowania przez inny wątek. Jedynym obciążeniem związanym z partycjonowaniem zakresu jest początkowa praca tworzenia zakresów; po tym czasie nie jest wymagana dodatkowa synchronizacja. W związku z tym może zapewnić dobrą wydajność, tak długo, jak obciążenie jest dzielone równomiernie. Wadą partycjonowania zakresu jest to, że jeśli jeden wątek kończy się wcześnie, nie może pomóc innym wątkom zakończyć ich pracę.
+Istnieje wiele sposobów partycjonowania źródła danych. W najbardziej wydajnych podejściach wiele wątków współdziała w celu przetworzenia oryginalnej sekwencji źródłowej, a nie fizycznego oddzielenia źródła na wiele podsekwencji. W przypadku tablic i innych źródeł indeksowanych <xref:System.Collections.IList> , takich jak kolekcje, w których długość jest znana z wyprzedzeniem, *partycjonowanie zakresu* jest Najprostszym rodzajem partycjonowania. Każdy wątek otrzymuje unikatowy indeks początkowy i końcowy, dzięki czemu może przetwarzać swój zakres źródła bez zastępowania lub przesłonięcia przez inny wątek. Jedyne obciążenie związane z partycjonowaniem zakresu jest początkową pracą tworzenia zakresów; po tym zakończeniu nie jest wymagana żadna dodatkowa synchronizacja. W związku z tym może zapewnić dobrą wydajność, o ile obciążenie jest podzielone równomiernie. Wadą partycjonowania zakresu jest to, że jeśli jeden wątek kończy się wczesnie, nie może pomóc innym wątkom zakończyć pracę.
 
-Dla połączonych list lub innych kolekcji, których długość nie jest znana, można użyć *partycjonowania fragmentów*. W partycjonowanie fragmentu każdy wątek lub zadanie w pętli równoległej lub kwerendy zużywa pewną liczbę elementów źródłowych w jednym fragmencie, przetwarza je, a następnie wraca do pobierania dodatkowych elementów. Partycjonowanie zapewnia, że wszystkie elementy są dystrybuowane i że nie ma żadnych duplikatów. Fragment może mieć dowolny rozmiar. Na przykład partycjonowanie, który jest pokazany w [Jak: Implementować partycje dynamiczne](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) tworzy fragmenty, które zawierają tylko jeden element. Tak długo, jak fragmenty nie są zbyt duże, tego rodzaju partycjonowania jest z natury równoważenia obciążenia, ponieważ przypisanie elementów do wątków nie jest wstępnie określone. Jednak partycjonowanie ponosi obciążenie synchronizacji za każdym razem, gdy wątek musi uzyskać inny fragment. Ilość synchronizacji poniesionej w tych przypadkach jest odwrotnie proporcjonalna do rozmiaru fragmentów.
+W przypadku list połączonych lub innych kolekcji, których długość nie jest znana, można użyć *partycjonowania fragmentów*. W przypadku partycjonowania fragmentów każdy wątek lub zadanie w pętli równoległej lub zapytaniu zużywa pewną liczbę elementów źródłowych w jednym fragmencie, przetwarza je, a następnie wraca do pobrania dodatkowych elementów. Partycja gwarantuje, że wszystkie elementy są dystrybuowane i że nie ma duplikatów. Fragment może być dowolnym rozmiarem. Na przykład partycja, która jest przedstawiona w [instrukcje: implementowanie partycji dynamicznych](how-to-implement-dynamic-partitions.md) tworzy fragmenty, które zawierają tylko jeden element. Tak długo, jak fragmenty nie są zbyt duże, ten rodzaj partycjonowania jest założenia równoważenia obciążenia, ponieważ przypisanie elementów do wątków nie jest wstępnie ustalone. Jednak program Partitioner ponosi obciążenie związane z synchronizacją za każdym razem, gdy wątek musi uzyskać kolejny fragment. Ilość synchronizacji ponoszonych w tych przypadkach jest odwrotnie proporcjonalna do rozmiaru fragmentów.
 
-Ogólnie rzecz biorąc partycjonowanie zakresu jest tylko szybsze, gdy czas wykonywania delegata jest mały do umiarkowanego, a źródło ma dużą liczbę elementów, a całkowita praca każdej partycji jest mniej więcej równoważna. Partycjonowanie fragmentów jest zatem zazwyczaj szybsze w większości przypadków. W źródłach z niewielką liczbą elementów lub dłuższyczas wykonywania dla delegata, a następnie wydajność fragmentu i zakresu partycjonowania jest o równej.
+Ogólnie partycjonowanie zakresu jest szybsze, gdy czas wykonywania delegata jest mały do umiarkowany, a źródło ma dużą liczbę elementów, a całkowita praca każdej partycji jest w przybliżeniu równoważna. Partycjonowanie fragmentów jest zatem ogólnie szybsze w większości przypadków. W przypadku źródeł o niewielkiej liczbie elementów lub dłuższym czasie wykonywania dla delegata, wydajność partycjonowania fragmentu i zakresu jest równa.
 
-Partycjonery TPL obsługują również dynamiczną liczbę partycji. Oznacza to, że mogą tworzyć partycje w locie, <xref:System.Threading.Tasks.Parallel.ForEach%2A> na przykład, gdy pętla pojawia się nowe zadanie. Ta funkcja umożliwia partycjonowanie skalować wraz z samej pętli. Dynamiczne partycjonery są również z natury równoważenia obciążenia. Podczas tworzenia partycjonowania niestandardowego, należy obsługiwać partycjonowanie dynamiczne, aby można było zużywać z <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli.
+Partycje TPL obsługują również dynamiczną liczbę partycji. Oznacza to, że mogą tworzyć partycje na bieżąco, na przykład gdy <xref:System.Threading.Tasks.Parallel.ForEach%2A> Pętla duplikuje nowe zadanie. Ta funkcja umożliwia skalowanie ze sobą przy użyciu samej pętli. Dynamiczne partycje są również z równoważeniem obciążenia. Podczas tworzenia niestandardowej partycji należy obsługiwać partycjonowanie dynamiczne, aby można było go używać z <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli.
 
-### <a name="configuring-load-balancing-partitioners-for-plinq"></a>Konfigurowanie partycjonerów równoważenia obciążenia dla plinq
+### <a name="configuring-load-balancing-partitioners-for-plinq"></a>Konfigurowanie partycji równoważenia obciążenia dla PLINQ
 
-Niektóre przeciążenia <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> metody umożliwiają utworzenie partycjonera <xref:System.Collections.IList> dla tablicy lub źródła i określić, czy należy próbować zrównoważyć obciążenie między wątkami. Gdy partycjonowanie jest skonfigurowany do równoważenia obciążenia, partycjonowanie fragment jest używany, a elementy są przekazywane do każdej partycji w małych fragmentów, ponieważ są one wymagane. Takie podejście pomaga upewnić się, że wszystkie partycje mają elementy do przetworzenia, dopóki nie zostanie ukończona cała pętla lub kwerenda. Dodatkowe przeciążenie może służyć do zapewnienia równoważenia <xref:System.Collections.IEnumerable> obciążenia partycjonowania dowolnego źródła.
+Niektóre przeciążenia <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> metody umożliwiają utworzenie partycji dla tablicy lub <xref:System.Collections.IList> źródła i określenie, czy należy podjąć próbę zrównoważenia obciążenia między wątki. Gdy partycja jest skonfigurowana do równoważenia obciążenia, używane jest partycjonowanie fragmentu, a elementy są przekazywane do każdej partycji w małych fragmentach w miarę ich żądania. Takie podejście pozwala upewnić się, że wszystkie partycje mają elementy do przetworzenia, dopóki cała pętla lub kwerenda nie zostanie ukończona. Dodatkowe Przeciążenie można wykorzystać w celu zapewnienia partycjonowania w ramach równoważenia obciążenia dowolnego <xref:System.Collections.IEnumerable> źródła.
 
-Ogólnie rzecz biorąc równoważenia obciążenia wymaga partycji do żądania elementów stosunkowo często z partycjonowania. Natomiast partycjonowanie, który wykonuje partycjonowanie statyczne można przypisać elementy do każdego partycjonowania wszystkie naraz przy użyciu zakresu lub fragment partycjonowania. Wymaga to mniej obciążenia niż równoważenie obciążenia, ale może to potrwać dłużej, jeśli jeden wątek kończy się znacznie więcej pracy niż inne. Domyślnie po przekazaniu ilist lub tablicy, PLINQ zawsze używa partycjonowania zakresu bez równoważenia obciążenia. Aby włączyć równoważenie obciążenia dla funkcji `Partitioner.Create` PLINQ, należy użyć metody, jak pokazano w poniższym przykładzie.
+Ogólnie rzecz biorąc, równoważenie obciążenia wymaga, aby partycje często żądały elementów z partycji. Z kolei partycja, która umożliwia partycjonowanie statycznej, może przypisywać elementy do każdego programu Partitioner wszystkie jednocześnie, używając partycjonowania zakresu lub fragmentu. Wymaga to mniejszego obciążenia niż Równoważenie obciążenia, ale może trwać dłużej, jeśli jeden wątek zostanie zakończony znacznie większym nakładem pracy niż inne. Domyślnie, gdy przeszedł element IList lub Array, PLINQ zawsze używa partycjonowania zakresu bez równoważenia obciążenia. Aby włączyć równoważenie obciążenia dla PLINQ, użyj `Partitioner.Create` metody, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[TPL_Partitioners#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#02)]
 [!code-vb[TPL_Partitioners#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionsnippets_vb.vb#02)]
 
-Najlepszym sposobem określenia, czy używać równoważenia obciążenia w danym scenariuszu jest eksperymentowanie i mierzenie czasu, jaki trwa operacja w ramach reprezentatywnych obciążeń i konfiguracji komputera. Na przykład partycjonowanie statyczne może zapewnić znaczne przyspieszenie na komputerze wielordzeniowym, który ma tylko kilka rdzeni, ale może spowodować spowolnienie na komputerach, które mają stosunkowo wiele rdzeni.
+Najlepszym sposobem, aby określić, czy należy używać równoważenia obciążenia w danym scenariuszu, jest eksperymentowanie i pomiar, jak długo trwa wykonywanie operacji w ramach reprezentatywnych obciążeń i konfiguracji komputerów. Na przykład partycjonowanie statyczne może zapewnić znaczący przyspieszenie na komputerze z wieloma rdzeniami, który ma tylko kilka rdzeni, ale może to spowodować spowolnienie na komputerach mających stosunkowo wiele rdzeni.
 
-W poniższej tabeli wymieniono <xref:System.Collections.Concurrent.Partitioner.Create%2A> dostępne przeciążenia metody. Te partycjonery nie są ograniczone do <xref:System.Threading.Tasks.Task>użytku tylko z PLINQ lub . Mogą być również używane z dowolną konstrukcją równoległą niestandardową.
+Poniższa tabela zawiera listę dostępnych przeciążeń <xref:System.Collections.Concurrent.Partitioner.Create%2A> metody. Te partycje nie są ograniczone do użycia tylko z PLINQ lub <xref:System.Threading.Tasks.Task> . Mogą być również używane w przypadku dowolnej niestandardowej konstrukcji równoległej.
 
-|Przeciążenie|Używa równoważenia obciążenia|
+|Występują|Używa równoważenia obciążenia|
 |--------------|-------------------------|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Zawsze|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Gdy argument Logiczny jest określony jako true|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Gdy argument Logiczny jest określony jako true|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Gdy argument logiczny jest określony jako true|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Gdy argument logiczny jest określony jako true|
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Nigdy|
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Nigdy|
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Nigdy|
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Nigdy|
 
-### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Konfigurowanie partycjonerów zakresu statycznego dla Parallel.ForEach
+### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Konfigurowanie partycji zakresów statycznych dla elementu Parallel. ForEach
 
-W <xref:System.Threading.Tasks.Parallel.For%2A> pętli treść pętli jest dostarczana do metody jako delegat. Koszt wywołania tego delegata jest mniej więcej taki sam jak wywołanie metody wirtualnej. W niektórych scenariuszach treść pętli równoległej może być na tyle mała, że koszt wywołania delegata w każdej iteracji pętli staje się znaczący. W takich sytuacjach można użyć <xref:System.Collections.Concurrent.Partitioner.Create%2A> jednego z przeciążeń, aby utworzyć <xref:System.Collections.Generic.IEnumerable%601> partycje zakresu nad elementami źródłowymi. Następnie można przekazać tę kolekcję <xref:System.Threading.Tasks.Parallel.ForEach%2A> zakresów do metody, `for` której treść składa się z regularnej pętli. Zaletą tego podejścia jest to, że koszt wywołania delegata jest ponoszony tylko raz na zakres, a nie raz na element. W poniższym przykładzie przedstawiono podstawowy wzorzec.
+W <xref:System.Threading.Tasks.Parallel.For%2A> pętli, treść pętli jest udostępniana metodzie jako delegat. Koszt wywołania tego delegata jest taki sam jak wywołanie metody wirtualnej. W niektórych scenariuszach treść pętli równoległej może być wystarczająco mała, że koszt wywołania delegata w każdej iteracji zostanie znaczący. W takich sytuacjach można użyć jednego z <xref:System.Collections.Concurrent.Partitioner.Create%2A> przeciążeń w celu utworzenia <xref:System.Collections.Generic.IEnumerable%601> partycji zakresu względem elementów źródłowych. Następnie można przekazać tę kolekcję zakresów do <xref:System.Threading.Tasks.Parallel.ForEach%2A> metody, której treść składa się z zwykłej `for` pętli. Zaletą tego podejścia jest to, że koszt wywołania delegata jest naliczany tylko raz dla każdego zakresu, a nie raz na element. Poniższy przykład demonstruje wzorzec podstawowy.
 
 [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
 [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]
 
-Każdy wątek w pętli <xref:System.Tuple%602> odbiera własne, który zawiera początkowe i końcowe wartości indeksu w określonym podzakresie. Pętla `for` wewnętrzna `fromInclusive` `toExclusive` używa i wartości do <xref:System.Collections.IList> pętli przez tablicy lub bezpośrednio.
+Każdy wątek w pętli otrzymuje swój własny <xref:System.Tuple%602> , który zawiera wartości początkowe i końcowe indeksu w określonym zakresie. `for`Pętla wewnętrzna używa `fromInclusive` wartości i `toExclusive` do pętli bezpośrednio przez tablicę <xref:System.Collections.IList> .
 
-Jedno z <xref:System.Collections.Concurrent.Partitioner.Create%2A> przeciążeń pozwala określić rozmiar partycji i liczbę partycji. To przeciążenie może służyć w scenariuszach, w których praca na element jest tak niska, że nawet jedno wywołanie metody wirtualnej na element ma zauważalny wpływ na wydajność.
+Jedno z <xref:System.Collections.Concurrent.Partitioner.Create%2A> przeciążeń pozwala określić rozmiar partycji oraz liczbę partycji. Tego przeciążenia można używać w scenariuszach, w których prace na element są tak niskie, że nawet jedno wywołanie metody wirtualnej na element ma zauważalny wpływ na wydajność.
 
-## <a name="custom-partitioners"></a>Niestandardowe partycjonery
+## <a name="custom-partitioners"></a>Niestandardowe partycje
 
-W niektórych scenariuszach może być warto lub nawet wymagane do zaimplementowania własnego partycjonowania. Na przykład może mieć niestandardowe klasy kolekcji, które można podzielić bardziej efektywnie niż domyślne partycjonowania może, na podstawie wiedzy o wewnętrznej struktury klasy. Lub można utworzyć partycje zakres o różnych rozmiarach na podstawie wiedzy o tym, jak długo potrwa do przetwarzania elementów w różnych lokalizacjach w kolekcji źródłowej.
+W niektórych scenariuszach może być wartościowa, a nawet wymagane do zaimplementowania własnego programu Partitioner. Na przykład może istnieć niestandardowa Klasa kolekcji, która może być bardziej wydajna niż domyślna partycja, na podstawie wiedzy o wewnętrznej strukturze klasy. Możesz również utworzyć partycje zakresu o różnych rozmiarach na podstawie wiedzy o tym, jak długo będzie przetwarzać elementy w różnych lokalizacjach w kolekcji źródłowej.
 
-Aby utworzyć podstawowy niestandardowy partycjonator, należy wyprowadzić klasę z <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=nameWithType> i zastąpić metody wirtualne, zgodnie z opisem w poniższej tabeli.
-
-|||
-|-|-|
-|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Ta metoda jest wywoływana raz przez wątek główny i zwraca IList(IEnumerator(TSource)). Każdy wątek roboczy w pętli `GetEnumerator` lub kwerendy <xref:System.Collections.Generic.IEnumerator%601> można wywołać na liście, aby pobrać ponad partycji odrębne.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Powrót, `true` jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>zaimplementujesz , w przeciwnym razie, `false`.|
-|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Jeśli <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true`jest , ta metoda może <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>być opcjonalnie wywołana zamiast .|
-
-Jeśli wyniki muszą być sortowalne lub wymagają dostępu indeksowane <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> do elementów, a następnie pochodzą od i zastąpić jego metody wirtualne, jak opisano w poniższej tabeli.
+Aby utworzyć podstawową partycję niestandardową, Utwórz klasę z <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=nameWithType> i Zastąp metody wirtualne zgodnie z opisem w poniższej tabeli.
 
 |||
 |-|-|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Ta metoda jest wywoływana raz przez `IList(IEnumerator(TSource))`wątek główny i zwraca . Każdy wątek roboczy w pętli `GetEnumerator` lub kwerendy <xref:System.Collections.Generic.IEnumerator%601> można wywołać na liście, aby pobrać ponad partycji odrębne.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Powrót, `true` jeśli <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>zaimplementujesz ; w przeciwnym razie, false.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|Zazwyczaj to tylko <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>wywołuje .|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Jeśli <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true`jest , ta metoda może <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>być opcjonalnie wywołana zamiast .|
+|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Ta metoda jest wywoływana raz przez wątek główny i zwraca IList (IEnumerator (TSource)). Każdy wątek roboczy w pętli lub zapytaniu może wywoływać `GetEnumerator` na liście, aby pobrać oddzielną <xref:System.Collections.Generic.IEnumerator%601> partycję.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zwróć `true` w przypadku zaimplementowania <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> , w przeciwnym razie, `false` .|
+|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Jeśli <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> jest `true` , ta metoda może być wywoływana zamiast <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> .|
 
-W poniższej tabeli przedstawiono dodatkowe szczegóły dotyczące sposobu implementowania <xref:System.Collections.Concurrent.OrderablePartitioner%601> klasy trzech rodzajów partycjonerów równoważenia obciążenia.
+Jeśli wyniki muszą być sortowane lub wymagają dostępu indeksowanego do elementów, a następnie dziedziczyć <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> i zastępować metody wirtualne zgodnie z opisem w poniższej tabeli.
 
-|Metoda/właściwość|IList / Tablica bez równoważenia obciążenia|IList / Tablica z równoważeniem obciążenia|Ienumerable|
+|||
+|-|-|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Ta metoda jest wywoływana raz przez wątek główny i zwraca `IList(IEnumerator(TSource))` . Każdy wątek roboczy w pętli lub zapytaniu może wywoływać `GetEnumerator` na liście, aby pobrać oddzielną <xref:System.Collections.Generic.IEnumerator%601> partycję.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zwróć `true` w przypadku zaimplementowania <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A> ; w przeciwnym razie, FAŁSZ.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|Zwykle jest to wywołanie <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> .|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Jeśli <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> jest `true` , ta metoda może być wywoływana zamiast <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> .|
+
+W poniższej tabeli znajdują się dodatkowe szczegółowe informacje o tym, jak trzy rodzaje partycji równoważenia obciążenia implementują <xref:System.Collections.Concurrent.OrderablePartitioner%601> klasę.
+
+|Metoda/Właściwość|Elementy IList/Array bez równoważenia obciążenia|Elementy IList/Array z równoważeniem obciążenia|IEnumerable|
 |----------------------|-------------------------------------------|----------------------------------------|-----------------|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Używa partycjonowania zakresu|Używa partycjonowania fragmentów zoptymalizowanych pod kątem list dla określonej liczby partycji|Używa partycjonowania fragmentu, tworząc statyczną liczbę partycji.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Zgłasza wyjątek nieobsługiwany|Używa partycjonowania fragmentów zoptymalizowanych pod kątem list i partycji dynamicznych|Używa partycjonowania fragmentów, tworząc dynamiczną liczbę partycji.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Zwraca`true`|Zwraca`true`|Zwraca`true`|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Zwraca`true`|Zwraca`false`|Zwraca`false`|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Zwraca`true`|Zwraca`true`|Zwraca`true`|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zwraca`false`|Zwraca`true`|Zwraca`true`|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Używa partycjonowania zakresu|Używa partycjonowania fragmentów zoptymalizowanego dla list dla partitionCount określonych|Używa partycjonowania fragmentów przez utworzenie statycznej liczby partycji.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Zgłasza wyjątek nieobsługiwany|Używa partycjonowania fragmentów zoptymalizowanego pod kątem list i partycji dynamicznych|Używa partycjonowania fragmentów przez utworzenie dynamicznej liczby partycji.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Typu`true`|Typu`true`|Typu`true`|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Typu`true`|Typu`false`|Typu`false`|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Typu`true`|Typu`true`|Typu`true`|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Typu`false`|Typu`true`|Typu`true`|
 
 ### <a name="dynamic-partitions"></a>Partycje dynamiczne
 
-Jeśli zamierzasz partycjonowania, które <xref:System.Threading.Tasks.Parallel.ForEach%2A> mają być używane w metodzie, musi być w stanie zwrócić dynamiczną liczbę partycji. Oznacza to, że partycjonowanie może dostarczyć wyliczacz dla nowej partycji na żądanie w dowolnym momencie podczas wykonywania pętli. Zasadniczo za każdym razem, gdy pętla dodaje nowe zadanie równoległe, żąda nowej partycji dla tego zadania. Jeśli wymagane dane mają być uporządkowane, a <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> następnie pochodzą z tak, że każdy element w każdej partycji jest przypisany unikatowy indeks.
+Jeśli zamierzasz używać partycji w <xref:System.Threading.Tasks.Parallel.ForEach%2A> metodzie, musisz mieć możliwość zwrócenia dynamicznej liczby partycji. Oznacza to, że partycja może dostarczyć moduł wyliczający dla nowej partycji na żądanie w dowolnym momencie podczas wykonywania pętli. W zasadzie Każda pętla dodaje nowe zadanie równoległe, żąda nowej partycji dla tego zadania. Jeśli wymaga się, aby dane były uporządkowane, pochodne od <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> tak, aby każdy element w każdej partycji miał przypisany unikatowy indeks.
 
-Aby uzyskać więcej informacji i przykład, zobacz [Jak: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Aby uzyskać więcej informacji, zobacz [temat jak: implementowanie partycji dynamicznych](how-to-implement-dynamic-partitions.md).
 
-### <a name="contract-for-partitioners"></a>Kontrakt dla partycjonerów
+### <a name="contract-for-partitioners"></a>Kontrakt dla partycji
 
-Podczas implementacji niestandardowego partycjonera postępuj zgodnie z poniższymi <xref:System.Threading.Tasks.Parallel.ForEach%2A> wskazówkami, aby zapewnić prawidłową interakcję z PLINQ i w tpl:
+Podczas implementowania niestandardowego programu Partitioner postępuj zgodnie z poniższymi wskazówkami, aby zapewnić poprawną interakcję z PLINQ i <xref:System.Threading.Tasks.Parallel.ForEach%2A> TPL:
 
-- Jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> jest wywoływana z argumentem `partitionsCount`zero <xref:System.ArgumentOutOfRangeException>lub mniej dla , throw . Chociaż PLINQ i TPL nigdy `partitionCount` nie przejdą w równej 0, zalecamy jednak ochronę przed możliwością.
+- Jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> jest wywoływana z argumentem równym zero lub less dla `partitionsCount` , throw <xref:System.ArgumentOutOfRangeException> . Mimo że PLINQ i TPL nigdy nie przekażą `partitionCount` wartości równej 0, jednak zalecamy ochronę przed możliwością.
 
-- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze `partitionsCount` zwracaliczbę partycji. Jeśli partycjonowanie zabraknie danych i nie można utworzyć tyle partycji, zgodnie z żądaniem, a następnie metoda powinna zwrócić puste wyliczacza dla każdej z pozostałych partycji. W przeciwnym razie zarówno PLINQ, <xref:System.InvalidOperationException>jak i TPL wyrzucą .
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze powinna zwracać `partitionsCount` liczbę partycji. Jeśli program partitioner nie może utworzyć tylu partycji zgodnie z żądaniem, metoda powinna zwrócić pusty moduł wyliczający dla każdej z pozostałych partycji. W przeciwnym razie zarówno PLINQ, jak i TPL będą zgłaszać <xref:System.InvalidOperationException> .
 
-- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> , i `null` `Nothing` nigdy nie powinien zwracać (w języku Visual Basic). Jeśli to zrobią, PLINQ/TPL wyrzuci . <xref:System.InvalidOperationException>
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> , <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nigdy nie powinny zwracać `null` ( `Nothing` w Visual Basic). W takim przypadku PLINQ/TPL zgłosi <xref:System.InvalidOperationException> .
 
-- Metody, które zwracają partycje zawsze należy zwrócić partycje, które można w pełni i jednoznacznie wyliczyć źródło danych. Nie powinno być żadnych powielania w źródle danych lub pominięte elementy, chyba że jest to wyraźnie wymagane przez projekt partycjonowania. Jeśli ta reguła nie jest przestrzegana, kolejność wyjścia może być kodowane.
+- Metody, które zwracają partycje, powinny zawsze zwracać partycje, które mogą w pełni i jednoznacznie wyliczyć źródło danych. Nie powinno być duplikowane w źródle danych ani elementy pominięte, chyba że jest to wymagane przez projekt partycji. Jeśli ta reguła nie zostanie zastosowana, kolejność danych wyjściowych może zostać zaszyfrowana.
 
-- Następujące programy święcenia muszą zawsze dokładnie zwracać następujące wartości, aby kolejność danych wyjściowych nie była kodowane:
+- Następujące metody pobierające dane logiczne muszą zawsze prawidłowo zwracać następujące wartości, aby kolejność wyjściowa nie została zaszyfrowana:
 
   - `KeysOrderedInEachPartition`: Każda partycja zwraca elementy z rosnącymi indeksami kluczy.
 
-  - `KeysOrderedAcrossPartitions`: Dla wszystkich partycji, które są zwracane, kluczowe indeksy w partycji *i* są wyższe niż kluczowe indeksy w partycji *i*-1.
+  - `KeysOrderedAcrossPartitions`: Dla wszystkich zwracanych partycji, indeksy kluczy na partycji *i* są wyższe niż indeksy kluczy na partycji *i*-1.
 
-  - `KeysNormalized`: Wszystkie kluczowe indeksy rosną monotonicznie bez luk, zaczynając od zera.
+  - `KeysNormalized`: Wszystkie indeksy kluczowych monotonicznie zwiększają się bez przerw, zaczynając od zera.
 
-- Wszystkie indeksy muszą być unikatowe. Nie mogą być zduplikowane indeksy. Jeśli ta reguła nie jest przestrzegana, kolejność wyjścia może być kodowane.
+- Wszystkie indeksy muszą być unikatowe. Nie można duplikować indeksów. Jeśli ta reguła nie zostanie zastosowana, kolejność danych wyjściowych może zostać zaszyfrowana.
 
-- Wszystkie indeksy muszą być nieujemna. Jeśli ta reguła nie jest przestrzegana, plinq/TPL może zgłaszać wyjątki.
+- Wszystkie indeksy muszą być nieujemne. Jeśli ta reguła nie zostanie zastosowana, PLINQ/TPL może zgłosić wyjątki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
-- [Porady: implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [Porady: implementowanie partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Programowanie równoległe](index.md)
+- [Instrukcje: Implementowanie partycji dynamicznych](how-to-implement-dynamic-partitions.md)
+- [Instrukcje: Implementowanie partycjonera dla partycjonowania statycznego](how-to-implement-a-partitioner-for-static-partitioning.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 63446df3fa2c931c839eda91c648cee961715f93
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: e9c7ba250995db1c7a701de346b18661892e7e23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377556"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291555"
 ---
 # <a name="how-to-serialize-an-object"></a>Instrukcje: Serializacja obiektu
 Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci trwałej, Utwórz <xref:System.IO.FileStream> obiekt.  
   
 > [!NOTE]
-> Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
+> Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](examples-of-xml-serialization.md).  
   
 ### <a name="to-serialize-an-object"></a>Do serializacji obiektu  
   
@@ -51,7 +51,7 @@ Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być seria
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
+- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

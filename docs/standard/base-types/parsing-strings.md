@@ -1,5 +1,5 @@
 ---
-title: Analizowanie ciągów w .NET
+title: Analizowanie ciągów w programie .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 717022e5d2e292c1624e6155bd7571e4daa997b9
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: ab446a8f868cabdeff73d1b72e1399b7c2beb1e1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523805"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277417"
 ---
-# <a name="parsing-strings-in-net"></a>Analizowanie ciągów w .NET
-Operacja analizowania konwertuje ciąg reprezentujący typ podstawowy platformy .NET na ten typ podstawowy. Na przykład operacja analizowania służy do konwertowania ciągu na liczbę zmiennoprzecinkową lub na wartość daty i godziny. Metoda najczęściej używana do wykonywania operacji analizy jest `Parse` metoda. Ponieważ analizowanie jest odwrotną operacją formatowania (która polega na konwersji typu podstawowego na jego reprezentację ciągu), stosuje się wiele tych samych reguł i konwencji. Podobnie jak formatowanie używa obiektu, <xref:System.IFormatProvider> który implementuje interfejs, aby zapewnić informacje o formatowaniu zależne <xref:System.IFormatProvider> od kultury, analizowanie używa również obiektu, który implementuje interfejs, aby określić sposób interpretowania reprezentacji ciągów. Aby uzyskać więcej informacji, zobacz [Typy formatowania](../../../docs/standard/base-types/formatting-types.md).  
+# <a name="parsing-strings-in-net"></a>Analizowanie ciągów w programie .NET
+Operacja analizowania konwertuje ciąg, który reprezentuje typ podstawowy platformy .NET do tego typu podstawowego. Na przykład operacja analizowania służy do konwertowania ciągu na liczbę zmiennoprzecinkową lub na wartość daty i godziny. Metoda najczęściej używana do wykonywania operacji analizowania jest `Parse` metodą. Ponieważ analizowanie jest operacją wsteczną formatowania (która wymaga przekonwertowania typu bazowego na jego reprezentację ciągu), mają zastosowanie wiele z tych samych zasad i Konwencji. Tak samo jak formatowanie korzysta z obiektu, który implementuje <xref:System.IFormatProvider> interfejs, aby zapewnić informacje o formatowaniu z uwzględnieniem kultury, podczas analizy używa również obiektu, który implementuje <xref:System.IFormatProvider> interfejs, aby określić sposób interpretowania przedstawienia ciągu. Aby uzyskać więcej informacji, zobacz [Typy formatowania](formatting-types.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Analizowanie ciągów liczbowych](../../../docs/standard/base-types/parsing-numeric.md)  
- W tym artykule opisano sposób konwertowania ciągów na typy liczbowe .NET.  
+ [Analizowanie ciągów liczbowych](parsing-numeric.md)  
+ Opisuje sposób konwersji ciągów na typy liczbowe platformy .NET.  
   
- [Analizowanie ciągów daty i godziny](../../../docs/standard/base-types/parsing-datetime.md)  
- W tym artykule opisano sposób konwertowania ciągów na typy **.NET DateTime.**  
+ [Analizowanie ciągów daty i godziny](parsing-datetime.md)  
+ Opisuje sposób konwertowania ciągów na typy **datetimes** platformy .NET.  
   
- [Analiza składniowa innych ciągów](../../../docs/standard/base-types/parsing-other.md)  
- W tym artykule opisano sposób konwertowania ciągów na typy **Char,** **Boolean**i **Enum.**  
+ [Analiza składniowa innych ciągów](parsing-other.md)  
+ Opisuje sposób konwersji ciągów na typy **znaków**, **wartości logicznych**i typów **wyliczeniowych** .  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- Zawiera opis podstawowych pojęć formatowania, takich jak specyfikatory formatów i dostawcy formatów.  
+ [Formatowanie typów](formatting-types.md)  
+ Opisuje podstawowe pojęcia dotyczące formatowania, takie jak specyfikatory formatu i dostawcy formatowania.  
   
- [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)  
- W tym artykule opisano sposób konwertowania typów.
+ [Konwersja typów w programie .NET](type-conversion.md)  
+ Opisuje sposób konwersji typów.

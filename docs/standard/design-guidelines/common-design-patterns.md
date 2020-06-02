@@ -6,18 +6,18 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: 2c51b1c9bc970d6ff143fa5986eade4a8b69f25a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9b9525a7597f7df6c9a554b51160a99f0e06232c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709507"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290970"
 ---
 # <a name="common-design-patterns"></a>Często używane wzorce projektowe
 Istnieją liczne książki dotyczące wzorców oprogramowania, języków wzorców i antywzorców, które stanowią ogólny zakres wzorców. W związku z tym Rozdział ten zawiera wytyczne i dyskusje związane z bardzo ograniczonym zestawem wzorców, które są często używane w projekcie .NET Framework interfejsów API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Właściwości zależności](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [Właściwości zależności](dependency-properties.md)  
  [Wzorzec Dispose](../garbage-collection/implementing-dispose.md)  
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
@@ -25,4 +25,4 @@ Istnieją liczne książki dotyczące wzorców oprogramowania, języków wzorcó
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

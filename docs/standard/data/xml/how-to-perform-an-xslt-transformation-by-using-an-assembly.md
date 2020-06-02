@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155978"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287730"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu
 Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Zestaw można przesłać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
@@ -85,7 +85,7 @@ Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Z
     </xsl:stylesheet>  
     ```  
   
-- Skopiuj plik XML na komputer lokalny i nadaj mu `books.xml`nazwę.  
+- Skopiuj plik XML na komputer lokalny i nadaj mu nazwę `books.xml` .  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,7 +130,7 @@ Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Z
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusz stylów z włączonym skryptem.  
   
-1. Wykonanie następującego polecenia w wierszu polecenia powoduje utworzenie dwóch zestawów o `Transform.dll` nazwach `Transform_Script1.dll` i (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie jest nazwą arkusza stylów głównych):  
+1. Wykonanie następującego polecenia w wierszu polecenia powoduje utworzenie dwóch zestawów o nazwach `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie jest nazwą arkusza stylów głównych):  
   
     ```console  
     xsltc /settings:script+ Transform.xsl  
@@ -177,11 +177,11 @@ with
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly. Load, <xref:System.Reflection.Assembly.Load%2A>Zobacz.  
+w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly. Load, zobacz <xref:System.Reflection.Assembly.Load%2A> .  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Kompilator XSLT (xsltc.exe)](xslt-compiler-xsltc-exe.md)
+- [Przekształcenia XSLT](xslt-transformations.md)
 - [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

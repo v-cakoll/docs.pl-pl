@@ -15,22 +15,22 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121932"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290061"
 ---
 # <a name="metadata-and-self-describing-components"></a>Składniki samoopisujące się i metadane
 
-W przeszłości składnik oprogramowania (exe lub .dll), który został napisany w jednym języku, nie mógł łatwo użyć składnika oprogramowania napisanego w innym języku. COM stanowił krok w kierunku rozwiązania tego problemu. .NET Framework sprawia, że współdziałanie składników jeszcze łatwiejsze, umożliwiając kompilatory emitować dodatkowe informacje deklaratywne do wszystkich modułów i zestawów. Te informacje, zwane metadanymi, pomagają składnikom bezproblemowo współdziałać.
+W przeszłości składnik oprogramowania (. exe lub. dll), który został zapisany w jednym języku, nie mógł łatwo korzystać ze składnika oprogramowania, który został zapisany w innym języku. COM podano krok prowadzący do rozwiązania tego problemu. .NET Framework sprawia, że współdziałanie składników jest jeszcze łatwiejsze, dzięki czemu kompilatory mogą emitować dodatkowe informacje deklaracyjne do wszystkich modułów i zestawów. Te informacje, nazywane metadanymi, ułatwiają bezproblemowe współdziałanie ze składnikami.
 
- Metadane to informacje binarne opisujące program, który jest przechowywany w pliku przenośnego pliku wykonywalnego w czasie wykonywania języka wspólnego języka lub w pamięci. Podczas kompilowania kodu do pliku PE metadane są wstawiane do jednej części pliku, a kod jest konwertowany na język pośredni firmy Microsoft (MSIL) i wstawiany do innej części pliku. Każdy typ i element członkowski, który jest zdefiniowany i odwołuje się w module lub zestawie jest opisany w metadanych. Gdy kod jest wykonywany, czas wykonywania ładuje metadane do pamięci i odwołuje się do niego, aby odnajdować informacje o klasach kodu, członków, dziedziczenia i tak dalej.
+ Metadane to informacje binarne opisujące program, który jest przechowywany w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego (PE) lub w pamięci. Podczas kompilowania kodu do pliku PE metadane są wstawiane do jednej części pliku, a kod jest konwertowany do języka pośredniego firmy Microsoft (MSIL) i wstawiany do innej części pliku. Każdy typ i element członkowski, który jest zdefiniowany i przywoływany w module lub zestawie, jest opisany w metadanych. Gdy kod jest wykonywany, środowisko uruchomieniowe ładuje metadane do pamięci i odwołuje się do niego, aby odnaleźć informacje o klasach, elementach członkowskich, dziedziczeniu i tak dalej.
 
- Metadane opisuje każdy typ i element członkowski zdefiniowane w kodzie w sposób neutralny dla języka. W metadanych przechowywane są następujące informacje:
+ Metadane opisują każdy typ i element członkowski zdefiniowane w kodzie w sposób niezależny od języka. Metadane przechowują następujące informacje:
 
-- Opis złożenia.
+- Opis zestawu.
 
   - Tożsamość (nazwa, wersja, kultura, klucz publiczny).
 
@@ -38,37 +38,37 @@ W przeszłości składnik oprogramowania (exe lub .dll), który został napisany
 
   - Inne zestawy, od których zależy ten zestaw.
 
-  - Uprawnienia zabezpieczeń potrzebne do uruchomienia.
+  - Uprawnienia zabezpieczeń, które są konieczne do uruchomienia programu.
 
 - Opis typów.
 
-  - Zaimplementowano nazwę, widoczność, klasę podstawową i interfejsy.
+  - Wdrożono nazwę, widoczność, klasę bazową i interfejsy.
 
   - Elementy członkowskie (metody, pola, właściwości, zdarzenia, typy zagnieżdżone).
 
-- Atrybuty.
+- Attributes.
 
-  - Dodatkowe elementy opisowe, które modyfikują typy i elementy członkowskie.
+  - Dodatkowe opisowe elementy, które modyfikują typy i elementy członkowskie.
 
 ## <a name="benefits-of-metadata"></a>Zalety metadanych
 
-Metadane są kluczem do prostszego modelu programowania i eliminują potrzebę plików języka definicji interfejsu (IDL), plików nagłówkowych lub jakiejkolwiek zewnętrznej metody odwołania się do składnika. Metadane umożliwia językom .NET Framework automatyczne opisywanie się w sposób neutralny pod względem języka, niewidoczny zarówno przez dewelopera, jak i użytkownika. Ponadto metadane można rozszerzyć za pomocą atrybutów. Metadane zapewniają następujące główne korzyści:
+Metadane to prostszy model programowania i eliminuje konieczność stosowania plików języka definicji interfejsu (IDL), plików nagłówkowe lub wszelkich zewnętrznych metod odwołania do składników. Metadane umożliwiają .NET Framework językach opisywania automatycznie w sposób niezależny od języka, niewidocznych dla deweloperów i użytkowników. Ponadto metadane są rozszerzalne przy użyciu atrybutów. Metadane zapewniają następujące korzyści:
 
-- Pliki samoopisujące się.
+- Pliki z własnymi opisami.
 
-  Wspólne moduły wykonywania języka i zestawy są samoopisujące. Metadane modułu zawierają wszystko, co jest potrzebne do interakcji z innym modułem. Metadane automatycznie udostępnia funkcje IDL w modelu COM, dzięki czemu można użyć jednego pliku zarówno do definicji i implementacji. Moduły i zestawy czasu wykonywania nie wymagają nawet rejestracji w systemie operacyjnym. W rezultacie opisy używane przez program runtime zawsze odzwierciedlają rzeczywisty kod w skompilowanym pliku, co zwiększa niezawodność aplikacji.
+  Moduły i zestawy środowiska uruchomieniowego języka wspólnego są samodzielne. Metadane modułu zawierają wszystkie elementy potrzebne do współdziałania z innym modułem. Metadane automatycznie udostępniają funkcje IDL w modelu COM, dlatego można użyć jednego pliku dla definicji i implementacji. Moduły i zestawy środowiska uruchomieniowego nie wymagają rejestracji w systemie operacyjnym. W związku z tym opisy używane przez środowisko uruchomieniowe zawsze odzwierciedlają rzeczywisty kod w skompilowanym pliku, co zwiększa niezawodność aplikacji.
 
-- Interoperacyjność językowa i łatwiejszy projekt oparty na komponentach.
+- Współdziałanie języków i łatwiejsza konstrukcja oparta na składnikach.
 
-  Metadane zawiera wszystkie informacje wymagane o skompilowany kod, aby odziedziczyć klasę z pliku PE napisane w innym języku. Można utworzyć wystąpienie dowolnej klasy napisane w dowolnym języku zarządzanym (dowolny język, który jest przeznaczony dla języka uruchomieniowego języka wspólnego) bez martwienia się o jawne organizowanie lub przy użyciu niestandardowego kodu współdziałania.
+  Metadane zawierają wszystkie informacje wymagane na temat skompilowanego kodu, aby dziedziczyć klasę z pliku PE, który został zapisany w innym języku. Można utworzyć wystąpienie klasy, która jest zapisywana w dowolnym języku zarządzanym (dowolny język, który jest przeznaczony dla środowiska uruchomieniowego języka wspólnego) bez obaw o jawne kierowanie lub użycie niestandardowego kodu współdziałania.
 
-- Atrybuty.
+- Attributes.
 
-  Program .NET Framework umożliwia deklarowanie określonych rodzajów metadanych, nazywanych atrybutami, w skompilowanym pliku. Atrybuty można znaleźć w całej platformy .NET Framework i są używane do kontrolowania bardziej szczegółowo, jak program zachowuje się w czasie wykonywania. Ponadto można emitować własne niestandardowe metadane do plików .NET Framework za pomocą atrybutów niestandardowych zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji, zobacz [Atrybuty](../../docs/standard/attributes/index.md).
+  .NET Framework umożliwia deklarowanie określonych rodzajów metadanych o nazwie Attributes w skompilowanym pliku. Atrybuty można znaleźć w części .NET Framework i służą do kontrolowania bardziej szczegółowych informacji o zachowaniu programu w czasie wykonywania. Ponadto można emitować własne metadane niestandardowe do plików .NET Framework za poorednictwem niestandardowych atrybutów zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Struktura pliku PE i metadanych
 
-Metadane są przechowywane w jednej sekcji przenośnego pliku wykonywalnego (PE) środowiska .NET Framework, podczas gdy kod w języku Microsoft Intermediate Language (MSIL) jest przechowywany w innej sekcji pliku PE. Część pliku stanowiąca metadane zawiera szereg struktur danych w postaci tabeli i stosu. Część MSIL zawiera kod języka MSIL i tokeny metadanych, które odwołują się do części pliku PE stanowiącej metadane. Tokeny metadanych mogą wystąpić podczas korzystania z narzędzi, takich jak [Disassembler MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania kodu MSIL, na przykład.
+Metadane są przechowywane w jednej sekcji przenośnego pliku wykonywalnego (PE) środowiska .NET Framework, podczas gdy kod w języku Microsoft Intermediate Language (MSIL) jest przechowywany w innej sekcji pliku PE. Część pliku stanowiąca metadane zawiera szereg struktur danych w postaci tabeli i stosu. Część MSIL zawiera kod języka MSIL i tokeny metadanych, które odwołują się do części pliku PE stanowiącej metadane. Tokeny metadanych mogą wystąpić podczas korzystania z narzędzi takich jak [Dezasembler MSIL (Ildasm. exe)](../framework/tools/ildasm-exe-il-disassembler.md) w celu wyświetlenia na przykład kodu MSIL.
 
 ### <a name="metadata-tables-and-heaps"></a>Tabele i stosy metadanych
 
@@ -84,7 +84,7 @@ Token metadanych jest czterobajtową liczbą. Pierwszy bajt określa tabelę met
 
 `0x06000004`
 
-Górny bajt`0x06`( ) wskazuje, że jest to token **MethodDef.** Niższe trzy bajty`000004`( ) informuje program runtime języka wspólnego szukać w czwartym wierszu **MethodDef** tabeli informacji, które opisuje tę definicję metody.
+Górny bajt ( `0x06` ) wskazuje, że jest to token **MethodDef** . Trzy mniejsze bajty ( `000004` ) instruują środowisko uruchomieniowe języka wspólnego, aby zajrzeć do czwartego wiersza tabeli **MethodDef** dla informacji opisujących tę definicję metody.
 
 ### <a name="metadata-within-a-pe-file"></a>Metadane w pliku PE
 
@@ -98,7 +98,7 @@ Gdy program jest kompilowany dla środowiska uruchomieniowego języka wspólnego
 
 ## <a name="run-time-use-of-metadata"></a>Użycie metadanych w czasie wykonywania
 
-Aby lepiej zrozumieć metadane i jego rolę w czasie wykonywania języka wspólnego, może być pomocne skonstruować prosty program i zilustrować, jak metadane wpływa na jego okres użytkowania. Poniższy przykład kodu pokazuje dwie metody `MyApp`wewnątrz klasy o nazwie . Metoda `Main` jest punktem wejścia programu, `Add` podczas gdy metoda po prostu zwraca sumę dwóch argumentów całkowitych.
+Aby lepiej zrozumieć metadane i jego rolę w środowisku uruchomieniowym języka wspólnego, może być przydatne utworzenie prostego programu i zilustrowanie, jak metadane wpływają na jego żywotność. Poniższy przykład kodu przedstawia dwie metody wewnątrz klasy o nazwie `MyApp` . `Main`Metoda jest punktem wejścia programu, podczas gdy `Add` Metoda po prostu zwraca sumę dwóch argumentów liczb całkowitych.
 
 ```vb
 Public Class MyApp
@@ -132,9 +132,9 @@ public class MyApp
 }
 ```
 
-Po uruchomieniu kodu, czas wykonywania ładuje moduł do pamięci i konsultuje się z metadanymi dla tej klasy. Po załadowaniu program runtime przeprowadza obszerną analizę strumienia języka pośredniego (MSIL) metody, aby przekonwertować go na szybkie instrukcje komputera macierzystego. W czasie wykonywania używa kompilatora just-in-time (JIT) do konwertowania instrukcji MSIL do natywnego kodu maszynowego jednej metody w razie potrzeby.
+Po uruchomieniu kodu środowisko uruchomieniowe ładuje moduł do pamięci i sprawdza metadane tej klasy. Po załadowaniu środowisko uruchomieniowe wykonuje szeroką analizę strumienia języka pośredniego (MSIL) metody firmy Microsoft w celu przeprowadzenia konwersji na szybkie instrukcje maszyn natywnych. Środowisko uruchomieniowe używa kompilatora just-in-Time (JIT) do konwertowania instrukcji MSIL na natywny kod maszynowy po jednej metodzie w razie potrzeby.
 
-W poniższym przykładzie przedstawiono część MSIL produkowane `Main` z funkcji poprzedniego kodu. MSIL i metadane można wyświetlić z dowolnej aplikacji .NET Framework przy użyciu [pliku MSIL Disassembler (Ildasm.exe).](../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+Poniższy przykład przedstawia część MSIL wygenerowanego przez funkcję poprzedniego kodu `Main` . Można wyświetlić MSIL i metadane z dowolnych aplikacji .NET Framework przy użyciu [Dezasembler MSIL (Ildasm. exe)](../framework/tools/ildasm-exe-il-disassembler.md).
 
 ```console
 .entrypoint
@@ -153,24 +153,24 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-Kompilator JIT odczytuje MSIL dla całej metody, analizuje ją dokładnie i generuje wydajne instrukcje macierzyste dla metody. W `IL_000d`przypadku tokenu metadanych `Add` `/*` `06000003 */`dla metody ( ) jest napotkany i w czasie wykonywania używa tokenu, aby zapoznać się z trzecim wierszem **MethodDef** tabeli.
+Kompilator JIT odczytuje MSIL dla całej metody, analizuje ją dokładnie i generuje wydajne instrukcje natywne dla metody. W programie `IL_000d` napotkano token metadanych dla `Add` metody ( `/*` `06000003 */` ), a środowisko uruchomieniowe używa tokenu do zapoznania się z trzecim wierszem tabeli **MethodDef** .
 
-W poniższej tabeli przedstawiono część tabeli **MethodDef,** do której `Add` odwołuje się token metadanych opisujący metodę. Podczas gdy inne tabele metadanych istnieją w tym zestawie i mają własne unikatowe wartości, omówiono tylko tę tabelę.
+W poniższej tabeli przedstawiono część tabeli **MethodDef** , do której odwołuje się token metadanych opisującą `Add` metodę. Chociaż inne tabele metadanych istnieją w tym zestawie i mają własne unikatowe wartości, omawiana jest tylko ta tabela.
 
-|Wiersz|Względny adres wirtualny (RVA)|ImplFlags|Flagi|Nazwa<br /><br /> (Wskazuje stertę ciągu).|Podpis (wskazuje stertę obiektu blob).|
+|Wiersz|Względny adres wirtualny (RVA)|ImplFlags|Flagi|Nazwa<br /><br /> (Punkty do sterty ciągu).|Podpis (punkty do sterty obiektów BLOB).|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Zarządzani|Public<br /><br /> Ponowne użycieSlot<br /><br /> Specialname<br /><br /> Nazwa RTSpecialName<br /><br /> .ctor (ctor)|.ctor (konstruktor)||
-|2|0x00002058|IL<br /><br /> Zarządzani|Public<br /><br /> Statyczny<br /><br /> Ponowne użycieSlot|Główne|Ciąg|
-|3|0x0000208c|IL<br /><br /> Zarządzani|Public<br /><br /> Statyczny<br /><br /> Ponowne użycieSlot|Dodaj|int, int, int|
+|1|0x00002050|IL<br /><br /> Zarządzani|Public<br /><br /> ReuseSlot<br /><br /> Jako SpecialName<br /><br /> Oznaczone<br /><br /> . ctor|. ctor (Konstruktor)||
+|2|0x00002058|IL<br /><br /> Zarządzani|Public<br /><br /> Static<br /><br /> ReuseSlot|Główną|String (ciąg)|
+|3|0x0000208c|IL<br /><br /> Zarządzani|Public<br /><br /> Static<br /><br /> ReuseSlot|Dodaj|int, int, int|
 
-Każda kolumna tabeli zawiera ważne informacje o kodzie. Kolumna **RVA** umożliwia programowi runtime obliczenie początkowego adresu pamięci msil, który definiuje tę metodę. **ImplFlags** i **Flags** kolumny zawierają maski bitowe, które opisują metodę (na przykład, czy metoda jest publiczna lub prywatna). Kolumna **Nazwa** indeksuje nazwę metody ze sterty ciągu. Kolumna **Podpis** indeksuje definicję podpisu metody w stercie obiektu blob.
+Każda kolumna tabeli zawiera ważne informacje o kodzie. Kolumna **RVA** umożliwia środowisko uruchomieniowe Obliczanie adresu pamięci początkowej, który definiuje tę metodę. Kolumny **ImplFlags** i **flag** zawierają masek bitowych opisujące metodę (na przykład czy metoda jest publiczna lub prywatna). Kolumna **name** indeksuje nazwę metody z sterty ciągu. Kolumna **Signature** indeksuje definicję sygnatury metody w stercie obiektów BLOB.
 
-Czas wykonywania oblicza żądany adres przesunięcia z kolumny **RVA** w trzecim wierszu i zwraca ten adres do kompilatora JIT, który następnie przechodzi do nowego adresu. Kompilator JIT kontynuuje przetwarzanie MSIL pod nowym adresem, dopóki nie napotka innego tokenu metadanych, a proces zostanie powtórzony.
+Środowisko uruchomieniowe oblicza żądany adres przesunięcia z kolumny **RVA** w trzecim wierszu i zwraca ten adres do kompilatora JIT, który następnie przechodzi do nowego adresu. Kompilator JIT kontynuuje przetwarzanie MSIL pod nowym adresem do momentu napotkania innego tokenu metadanych, a proces jest powtarzany.
 
-Przy użyciu metadanych, czas wykonywania ma dostęp do wszystkich informacji potrzebnych do załadowania kodu i przetworzyć go na macierzyste instrukcje komputera. W ten sposób metadane umożliwia samoopisujące się pliki i, wraz z systemem typowych typów, dziedziczenie w wielu językach.
+Przy użyciu metadanych środowisko uruchomieniowe ma dostęp do wszystkich informacji potrzebnych do załadowania kodu i przetworzyć je w natywnych instrukcjach dotyczących maszyn. W ten sposób metadane umożliwiają samodzielne opisywanie plików oraz, wraz ze wspólnym systemem typów, dziedziczenie między językami.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Atrybuty](../../docs/standard/attributes/index.md)|W tym artykule opisano sposób stosowania atrybutów, pisania atrybutów niestandardowych i pobierania informacji przechowywanych w atrybutach.|
+|[Atrybuty](attributes/index.md)|Opisuje sposób stosowania atrybutów, pisania atrybutów niestandardowych i pobierania informacji przechowywanych w atrybutach.|

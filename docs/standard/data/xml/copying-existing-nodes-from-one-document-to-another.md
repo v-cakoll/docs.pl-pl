@@ -3,12 +3,12 @@ title: Kopiowanie istniejących węzłów z jednego dokumentu do innego
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711028"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289203"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 Metoda **ImportNode** jest mechanizmem, za pomocą którego jest kopiowany węzeł lub całe poddrzewo węzła z jednego **dokumentu XmlDocument** do innego. Węzeł zwrócony z wywołania to kopia węzła z dokumentu źródłowego, w tym wartości atrybutów, nazwa węzła, typ węzła i wszystkie atrybuty powiązane z przestrzenią nazw, takie jak prefiks, nazwa lokalna i przestrzeń nazw Uniform Resource Identifier (URI). Dokument źródłowy nie jest zmieniany. Po zaimportowaniu węzła nadal trzeba dodać go do drzewa przy użyciu jednej z metod używanych do wstawiania węzłów.  
@@ -36,8 +36,8 @@ Metoda **ImportNode** jest mechanizmem, za pomocą którego jest kopiowany węze
 |Wszystkie inne typy węzłów|Nie można zaimportować tych typów węzłów.|Nie można zaimportować tych typów węzłów.|  
   
 > [!NOTE]
-> Chociaż węzły DocumentType można zaimportować, dokument może mieć tylko jeden DocumentType. Dlatego po zaimportowaniu typu dokumentu przed wstawieniem go do drzewa musisz upewnić się, że dokument nie zawiera żadnego typu dokumentu. Aby uzyskać informacje na temat usuwania węzłów, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
+> Chociaż węzły DocumentType można zaimportować, dokument może mieć tylko jeden DocumentType. Dlatego po zaimportowaniu typu dokumentu przed wstawieniem go do drzewa musisz upewnić się, że dokument nie zawiera żadnego typu dokumentu. Aby uzyskać informacje na temat usuwania węzłów, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](removing-nodes-content-and-values-from-an-xml-document.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

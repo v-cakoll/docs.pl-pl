@@ -1,21 +1,22 @@
 ---
 title: Dodawanie danych do elementu DataTable
+description: Zapoznaj się z tym przykładowym kodem, aby dodać nowe wiersze danych do tabeli w ADO.NET, po utworzeniu elementu DataTable i zdefiniowaniu jego struktury przy użyciu kolumn i ograniczeń.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151536"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286937"
 ---
 # <a name="adding-data-to-a-datatable"></a>Dodawanie danych do elementu DataTable
-Po utworzeniu <xref:System.Data.DataTable> i zdefiniowaniu jego struktury przy użyciu kolumn i ograniczeń można dodać nowe wiersze danych do tabeli. Aby dodać nowy wiersz, zadeklaruj nową zmienną jako typ <xref:System.Data.DataRow>. Nowy obiekt **DataRow** jest zwracany <xref:System.Data.DataTable.NewRow%2A> po wywołaniu metody. **DataTable** następnie tworzy **DataRow** obiektu na podstawie struktury tabeli, <xref:System.Data.DataColumnCollection>zgodnie z definicją .  
+Po utworzeniu <xref:System.Data.DataTable> i zdefiniowaniu struktury przy użyciu kolumn i ograniczeń można dodać do tabeli nowe wiersze danych. Aby dodać nowy wiersz, Zadeklaruj nową zmienną jako typ <xref:System.Data.DataRow> . Nowy obiekt **DataRow** jest zwracany po wywołaniu <xref:System.Data.DataTable.NewRow%2A> metody. Element **DataTable** następnie tworzy obiekt **DataRow** na podstawie struktury tabeli zdefiniowanej przez <xref:System.Data.DataColumnCollection> .  
   
- W poniższym przykładzie pokazano, jak utworzyć nowy wiersz, wywołując **NewRow** metody.  
+ W poniższym przykładzie pokazano, jak utworzyć nowy wiersz przez wywołanie metody **NewRow** .  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +26,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- Następnie można manipulować nowo dodany wiersz przy użyciu indeksu lub nazwy kolumny, jak pokazano w poniższym przykładzie.  
+ Następnie można manipulować nowo dodanym wierszem przy użyciu indeksu lub nazwy kolumny, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +38,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Po wstawieniu danych do nowego wiersza, **Add** metoda <xref:System.Data.DataRowCollection>jest używana do dodawania wiersza do , pokazano w poniższym kodzie.  
+ Po wstawieniu danych do nowego wiersza, Metoda **Dodaj** służy do dodawania wiersza do <xref:System.Data.DataRowCollection> , jak pokazano w poniższym kodzie.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +48,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Można również wywołać **Add** metody, aby dodać nowy wiersz, przekazując <xref:System.Object>w tablicy wartości, wpisane jako , jak pokazano w poniższym przykładzie.  
+ Możesz również wywołać metodę **Add** , aby dodać nowy wiersz przez przekazanie tablicy wartości, <xref:System.Object> tak jak pokazano w poniższym przykładzie.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +58,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Przekazywanie tablicy wartości wpisanych jako **Object**do **Metody Dodaj** tworzy nowy wiersz wewnątrz tabeli i ustawia jego wartości kolumn na wartości w tablicy obiektów. Należy zauważyć, że wartości w tablicy są dopasowywać sekwencyjnie do kolumn, na podstawie kolejności, w jakiej pojawiają się w tabeli.  
+ Przekazanie tablicy wartości, wpisanej jako **obiekt**, do metody **Add** tworzy nowy wiersz wewnątrz tabeli i ustawia jego wartości kolumny na wartości w tablicy obiektów. Należy zauważyć, że wartości w tablicy są dopasowane sekwencyjnie do kolumn, na podstawie kolejności ich wyświetlania w tabeli.  
   
- W poniższym przykładzie dodano 10 wierszy do nowo utworzonej tabeli **Klienci.**  
+ Poniższy przykład dodaje 10 wierszy do nowo utworzonej tabeli **Customers** .  
   
 ```vb  
 Dim workRow As DataRow  
@@ -85,7 +86,7 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>

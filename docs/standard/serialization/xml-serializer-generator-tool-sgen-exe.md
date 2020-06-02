@@ -3,12 +3,12 @@ title: Narzędzie generatora serializatora XML (Sgen.exe)
 description: Generator serializatora XML tworzy zestaw serializacji XML dla typów w zestawie, który zwiększa wydajność uruchamiania XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380043"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288943"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generatora serializatora XML (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \< katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
+> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \<SDK> katalogu \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
   
 ## <a name="parameters"></a>Parametry  
   
@@ -62,7 +62,7 @@ sgen Data.dll
   
  Zestaw Data.XmlSerializers.dll można odwoływać się z kodu, który musi serializacji i deserializacji typów w Data.dll.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [narzędzia](../../../docs/framework/tools/index.md)
-- [Wiersze poleceń](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](../../framework/tools/index.md)
+- [Wiersze poleceń](../../framework/tools/developer-command-prompt-for-vs.md)

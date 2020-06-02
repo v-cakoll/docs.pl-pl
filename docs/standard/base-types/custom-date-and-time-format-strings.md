@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440996"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279002"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 
-Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości będącej wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [ciągiem standardowego formatu daty i godziny](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) , jest interpretowany jako ciąg niestandardowego formatu daty i godziny.
+Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości będącej wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [ciągiem standardowego formatu daty i godziny](standard-date-and-time-format-strings.md) , jest interpretowany jako ciąg niestandardowego formatu daty i godziny.
 
 > [!TIP]
 > Możesz pobrać **Narzędzie formatowania**, aplikację .net Core Windows Forms, która umożliwia stosowanie ciągów formatowania do wartości liczbowych lub daty i godziny i wyświetla ciąg wynikowy. Kod źródłowy jest dostępny dla [języków C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) i [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
@@ -629,7 +629,7 @@ Następujące znaki w niestandardowym ciągu formatu daty i godziny są zastrze�
 |-|-|-|-|-|
 |F|H|K|M|d|
 |k|g|h|m|s|
-|t|t|z|%|:|
+|t|Y|z|%|:|
 |/|"|'|&#92;||
 
 Wszystkie inne znaki są zawsze interpretowane jako literały znakowe, a w operacji formatowania są uwzględniane w niezmienionym ciągu wynikowym.  W operacji analizowania muszą one dokładnie pasować do znaków w ciągu wejściowym; w porównaniu z rozróżnianiem wielkości liter.
@@ -696,7 +696,7 @@ Ciąg wynikowy utworzony przez wiele specyfikatorów niestandardowego formatu da
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
-- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Formatowanie typów](formatting-types.md)
+- [Standardowe ciągi formatujące datę i godzinę](standard-date-and-time-format-strings.md)
 - [Przykład: Narzędzie formatowania programu .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Przykład: Narzędzie formatowania programu .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

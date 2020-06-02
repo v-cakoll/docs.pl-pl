@@ -1,5 +1,5 @@
 ---
-title: <value> - Przewodnik programowania C#
+title: <value> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 120805346672738e614743ab8c98388b8dbac0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd6630a8d5894fda39ad289c8dd584f6d84e5490
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793349"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287197"
 ---
-# <a name="value-c-programming-guide"></a>\<wartość> (przewodnik programowania C#)
+# <a name="value-c-programming-guide"></a>\<value>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ ms.locfileid: "76793349"
 
 - `property-description`
 
-  Opis obiektu.
+  Opis właściwości.
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość \<> tag pozwala opisać wartość, która reprezentuje właściwość. Należy zauważyć, że po dodaniu właściwości za pomocą kreatora kodu w środowisku programistycznym programu Visual Studio .NET doda [ \<podsumowanie>](./summary.md) tag dla nowej właściwości. Następnie należy ręcznie \<dodać wartość> tag, aby opisać wartość, która reprezentuje właściwość.
+`<value>`Tag umożliwia opisanie wartości reprezentowanej przez właściwość. Po dodaniu właściwości za pośrednictwem Kreatora kodu w środowisku deweloperskim Visual Studio .NET dodaje [\<summary>](./summary.md) tag nowej właściwości. Następnie należy ręcznie dodać tag, `<value>` aby opisać wartość, którą reprezentuje właściwość.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

@@ -11,138 +11,138 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708400"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287561"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
-Kowariancja i kontrawariancja to terminy, które odnoszą się do możliwości używania typu bardziej pochodnego (bardziej szczegółowego) lub mniej pochodnego typu (mniej specyficznego) niż pierwotnie określono. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach przyjęto `Base` klasę podstawową o `Derived`nazwie i klasę pochodną o nazwie .  
+Kowariancja i kontrawariancja są terminami, które odwołują się do możliwości użycia bardziej pochodnej typu (bardziej szczegółowe) lub mniej pochodnego typu (mniej specyficznego) niż pierwotnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. Przykłady zakładają klasę bazową o nazwie `Base` i klasę pochodną o nazwie `Derived` .  
   
 - `Covariance`  
   
-     Umożliwia użycie typu bardziej pochodnego niż pierwotnie określony.  
+     Umożliwia użycie bardziej pochodnej typu niż pierwotnie określony.  
   
-     Można przypisać wystąpienie `IEnumerable<Derived>` (w`IEnumerable(Of Derived)` języku Visual Basic) `IEnumerable<Base>`do zmiennej typu .  
+     Do zmiennej typu można przypisać wystąpienie `IEnumerable<Derived>` ( `IEnumerable(Of Derived)` w Visual Basic) `IEnumerable<Base>` .  
   
 - `Contravariance`  
   
      Umożliwia użycie bardziej ogólnego (mniej pochodnego) typu niż oryginalnie określony.  
   
-     Można przypisać wystąpienie `Action<Base>` (w`Action(Of Base)` języku Visual Basic) `Action<Derived>`do zmiennej typu .  
+     Do zmiennej typu można przypisać wystąpienie `Action<Base>` ( `Action(Of Base)` w Visual Basic) `Action<Derived>` .  
   
 - `Invariance`  
   
      Oznacza, że można użyć tylko oryginalnie określonego typu, więc inwariantny parametr typu ogólnego nie jest ani kowariantny, ani kontrawariantny.  
   
-     Nie można przypisać wystąpienia `List<Base>` `List(Of Base)` (w języku Visual Basic) do zmiennej typu `List<Derived>` lub odwrotnie.  
+     Nie można przypisać wystąpienia `List<Base>` ( `List(Of Base)` w Visual Basic) do zmiennej typu `List<Derived>` lub odwrotnie.  
   
- Parametry typu kowariantnego umożliwiają wykonywanie przypisań, które wyglądają podobnie do zwykłego [polimorfizmu,](../../csharp/programming-guide/classes-and-structs/polymorphism.md)jak pokazano w poniższym kodzie.  
+ Parametry typu współwariantowego umożliwiają tworzenie przypisań, które wyglądają podobnie jak zwykłe [polimorfizm](../../csharp/programming-guide/classes-and-structs/polymorphism.md), jak pokazano w poniższym kodzie.  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
   
- Klasa <xref:System.Collections.Generic.List%601> implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejs, `List<Derived>` więc`List(Of Derived)` (w języku `IEnumerable<Derived>`Visual Basic) implementuje . Kowariantny parametr typu wykonuje resztę zadania.  
+ <xref:System.Collections.Generic.List%601>Klasa implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejs, więc `List<Derived>` ( `List(Of Derived)` w Visual Basic) implementuje `IEnumerable<Derived>` . Kowariantny parametr typu wykonuje resztę zadania.  
   
- Z drugiej strony, kontrawariancja wydaje się nielogiczna. Poniższy przykład tworzy delegata `Action<Base>` typu`Action(Of Base)` (w języku Visual Basic), a następnie `Action<Derived>`przypisuje tego delegata do zmiennej typu .  
+ Z drugiej strony, kontrawariancja wydaje się nielogiczna. Poniższy przykład tworzy delegata typu `Action<Base>` ( `Action(Of Base)` w Visual Basic), a następnie przypisuje tego delegata do zmiennej typu `Action<Derived>` .  
   
  [!code-csharp[CoContraSimpleAction#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleaction/cs/example.cs#1)]
  [!code-vb[CoContraSimpleAction#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleaction/vb/example.vb#1)]  
   
- Wydaje się to wsteczne, ale jest to bezpieczny dla typów kod, który można skompilować i uruchomić. Wyrażenie lambda pasuje do delegata, do której jest przypisany, więc `Base` definiuje metodę, która przyjmuje jeden parametr typu i która nie ma wartości zwracanej. Wynikowy delegat można przypisać do zmiennej `Action<Derived>` typu, ponieważ `T` parametr <xref:System.Action%601> typu delegata jest zmienny. Kod jest bezpieczny dla `T` typu, ponieważ określa typ parametru. Gdy delegat typu `Action<Base>` jest wywoływany tak, jakby był `Action<Derived>`pełnomocnikiem typu, jego `Derived`argument musi być typu . Ten argument zawsze można bezpiecznie przekazać do metody podstawowej, ponieważ `Base`parametr metody jest typu .  
+ Wydaje się to wsteczne, ale jest to bezpieczny dla typów kod, który można skompilować i uruchomić. Wyrażenie lambda jest zgodne z delegatem, do którego jest przypisany, więc definiuje metodę, która przyjmuje jeden parametr typu `Base` i która nie zwraca wartości. Otrzymany delegat można przypisać do zmiennej typu, `Action<Derived>` ponieważ parametr typu `T` <xref:System.Action%601> delegata to kontrawariantne. Kod jest bezpieczny dla typów, ponieważ `T` określa typ parametru. Gdy delegat typu `Action<Base>` jest wywoływany tak, jakby był delegatem typu `Action<Derived>` , jego argument musi być typu `Derived` . Ten argument można zawsze bezpiecznie przekazywać do bazowej metody, ponieważ parametr metody jest typu `Base` .  
   
  Ogólnie, kowariantnego parametru typu można użyć jako typu zwracanego delegata, a kontrawariantnych parametrów typu można używać jako typów parametrów. Na przykład kowariantnych parametrów typu można używać jako typów zwracanych metod interfejsu, a kontrawariantnych parametrów typu można używać jako typów parametrów metod interfejsu.  
   
- Kowariancja i kontrawariancja są zbiorczo określane jako *wariancja*. Parametr typu ogólnego, który nie jest oznaczony jako kowariantny lub kontrawariantny, jest określany jako *niezmienny.* Krótkie podsumowanie faktów na temat wariancji w środowisku uruchomieniowym języka wspólnego:  
+ Kowariancja i kontrawariancja są określane zbiorczo jako *WARIANCJA*. Parametr typu generycznego, który nie jest oznaczony jako kontrawariantne, jest określany jako *niezmienny*. Krótkie podsumowanie faktów na temat wariancji w środowisku uruchomieniowym języka wspólnego:  
   
-- W .NET Framework 4 parametry typu wariantu są ograniczone do ogólnych typów interfejsu i delegatów ogólnych.  
+- W .NET Framework 4, parametry typu Variant są ograniczone do ogólnego typu interfejsu i rodzajowego delegata.  
   
 - Ogólny typ interfejsu lub delegata może mieć kowariantne i kontrawariantne parametry typu.  
   
 - Wariancja dotyczy tylko typów referencyjnych; określenie typu wartości dla wariantnego parametru typu spowoduje, że parametr typu będzie inwariantny dla wynikowego skonstruowanego typu.  
   
-- Wariancja nie dotyczy kombinacji delegatów. Oznacza to, że biorąc `Action<Derived>` `Action<Base>` pod`Action(Of Derived)` `Action(Of Base)` uwagę dwóch delegatów typów i ( i w języku Visual Basic), nie można połączyć drugiego delegata z pierwszym chociaż wynik będzie typu bezpieczne. Wariancja umożliwia drugiemu delegatowi przypisanie do `Action<Derived>`zmiennej typu, ale pełnomocnicy mogą łączyć tylko wtedy, gdy ich typy są dokładnie zgodne.
+- Wariancja nie dotyczy kombinacji delegatów. Oznacza to, że w przypadku dwóch delegatów typów `Action<Derived>` i `Action<Base>` ( `Action(Of Derived)` i `Action(Of Base)` w Visual Basic) nie można połączyć drugiego delegata z pierwszym, mimo że wynikiem byłyby typ bezpieczny. WARIANCJA umożliwia przypisanie drugiego delegata do zmiennej typu `Action<Derived>` , ale Delegaty mogą łączyć się tylko wtedy, gdy ich typy pasują do siebie.
 
 <a name="InterfaceCovariantTypeParameters"></a>
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfejsy ogólne z kowariantnymi parametrami typu  
- Począwszy od .NET Framework 4, kilka ogólnych interfejsów mają parametry typu kowariantnego; na <xref:System.Collections.Generic.IEnumerable%601>przykład: <xref:System.Collections.Generic.IEnumerator%601> <xref:System.Linq.IQueryable%601>, <xref:System.Linq.IGrouping%602>, i . Wszystkie parametry typu tych interfejsów są kowariantne, więc parametry typu są używane tylko dla typów zwracanych elementów członkowskich.  
+ Począwszy od .NET Framework 4, kilka ogólnych interfejsów ma parametry typu współwariantowego; na przykład: <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Collections.Generic.IEnumerator%601> , <xref:System.Linq.IQueryable%601> , i <xref:System.Linq.IGrouping%602> . Wszystkie parametry typu tych interfejsów są kowariantne, więc parametry typu są używane tylko dla typów zwracanych elementów członkowskich.  
   
- W poniższym przykładzie pokazano kowariantne parametry typu. W przykładzie definiuje dwa `Base` typy: ma `PrintBases` metodę `IEnumerable<Base>` statyczną o nazwie, która przyjmuje (`IEnumerable(Of Base)` w języku Visual Basic) i drukuje elementy. `Derived`dziedziczy `Base`z . W przykładzie tworzy `List<Derived>` `List(Of Derived)` pusty (w języku Visual Basic) i `PrintBases` pokazuje, że ten `IEnumerable<Base>` typ może być przekazywany do zmiennej typu bez rzutowania i przypisane do zmiennej typu. <xref:System.Collections.Generic.List%601>implementuje <xref:System.Collections.Generic.IEnumerable%601>, który ma jeden parametr typu kowariantowego. Parametr typu kowariantnego jest przyczyną, `IEnumerable<Derived>` dlaczego można `IEnumerable<Base>`użyć wystąpienia zamiast .  
+ W poniższym przykładzie pokazano kowariantne parametry typu. W przykładzie zdefiniowano dwa typy: `Base` ma statyczną metodę o nazwie `PrintBases` , która przyjmuje `IEnumerable<Base>` ( `IEnumerable(Of Base)` w Visual Basic) i drukuje elementy. `Derived`dziedziczy z `Base` . Przykład tworzy puste `List<Derived>` ( `List(Of Derived)` w Visual Basic) i pokazuje, że ten typ może być przesłany do `PrintBases` i przypisany do zmiennej typu `IEnumerable<Base>` bez rzutowania. <xref:System.Collections.Generic.List%601>implementuje <xref:System.Collections.Generic.IEnumerable%601> , który ma jeden parametr typu współwariantowego. Parametr typu współwariantowego to powód, dla którego wystąpienie `IEnumerable<Derived>` może być używane zamiast `IEnumerable<Base>` .  
   
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Interfejsy ogólne z kontrawariantnymi parametrami typu  
- Począwszy od .NET Framework 4, kilka ogólnych interfejsów mają parametry typu kontrawariantnego; na <xref:System.Collections.Generic.IComparer%601>przykład: <xref:System.IComparable%601>, <xref:System.Collections.Generic.IEqualityComparer%601>, i . Te interfejsy mają tylko kontrawariantne parametry typu, więc te parametry typów są używane tyko jako typy parametrów w elementach członkowskich tych interfejsów.  
+ Począwszy od .NET Framework 4, kilka interfejsów ogólnych ma parametry typu kontrawariantne; na przykład: <xref:System.Collections.Generic.IComparer%601> , <xref:System.IComparable%601> , i <xref:System.Collections.Generic.IEqualityComparer%601> . Te interfejsy mają tylko kontrawariantne parametry typu, więc te parametry typów są używane tyko jako typy parametrów w elementach członkowskich tych interfejsów.  
   
- W poniższym przykładzie pokazano kontrawariantne parametry typu. W przykładzie definiuje abstrakcyjne`MustInherit` (w `Shape` języku `Area` Visual Basic) klasy z właściwością. W przykładzie zdefiniowano również `ShapeAreaComparer` `IComparer<Shape>` klasę, która implementuje (`IComparer(Of Shape)` w języku Visual Basic). Implementacja <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> metody jest oparta na wartości `Area` właściwości, `ShapeAreaComparer` więc może `Shape` służyć do sortowania obiektów według obszaru.  
+ W poniższym przykładzie pokazano kontrawariantne parametry typu. W przykładzie zdefiniowano abstrakcyjną ( `MustInherit` w Visual Basic) `Shape` klasę z `Area` właściwością. W przykładzie zdefiniowano również `ShapeAreaComparer` klasę implementującą `IComparer<Shape>` ( `IComparer(Of Shape)` w Visual Basic). Implementacja <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> metody jest oparta na wartości `Area` właściwości, więc `ShapeAreaComparer` może być używana do sortowania `Shape` obiektów według obszaru.  
   
- Klasa `Circle` dziedziczy `Shape` i `Area`zastępuje . W przykładzie <xref:System.Collections.Generic.SortedSet%601> tworzy `Circle` obiektów, przy użyciu konstruktora, który ma ( `IComparer<Circle>` `IComparer(Of Circle)` w języku Visual Basic). Jednak zamiast przekazywania `IComparer<Circle>`, przykład przekazuje `ShapeAreaComparer` obiekt, który `IComparer<Shape>`implementuje . Przykład można przekazać moduł porównujący typu`Shape`mniej pochodne ( ), gdy kod wywołuje dla`Circle`porównania typu bardziej <xref:System.Collections.Generic.IComparer%601> pochodne ( ), ponieważ parametr typu interfejsu ogólnego jest kontrawariant.  
+ `Circle`Klasa dziedziczy `Shape` i przesłania `Area` . Przykład tworzy <xref:System.Collections.Generic.SortedSet%601> `Circle` Obiekt przy użyciu konstruktora, który przyjmuje `IComparer<Circle>` ( `IComparer(Of Circle)` w Visual Basic). Jednak zamiast przekazywania `IComparer<Circle>` , przykład przekazuje `ShapeAreaComparer` obiekt, który implementuje `IComparer<Shape>` . Przykład może przekazać funkcję porównującą mniej pochodnego typu ( `Shape` ), gdy kod wywołuje funkcję porównującą z bardziej pochodnym typem ( `Circle` ), ponieważ parametr type <xref:System.Collections.Generic.IComparer%601> interfejsu generycznego to kontrawariantne.  
   
- Po `Circle` dodaniu nowego obiektu `SortedSet<Circle>`do `IComparer<Shape>.Compare` ,`IComparer(Of Shape).Compare` metoda (metoda w `ShapeAreaComparer` języku Visual Basic) obiektu jest wywoływana za każdym razem, gdy nowy element jest porównywany do istniejącego elementu. Typ parametru metody`Shape`( ) jest mniej pochodny niż`Circle`typ, który jest przekazywany ( ), więc wywołanie jest bezpieczne. Contravariance `ShapeAreaComparer` umożliwia sortowanie kolekcji dowolnego pojedynczego typu, a także mieszanekolekcji `Shape`typów, które pochodzą z .  
+ Po `Circle` dodaniu nowego obiektu do `SortedSet<Circle>` , `IComparer<Shape>.Compare` Metoda ( `IComparer(Of Shape).Compare` Metoda w Visual Basic) `ShapeAreaComparer` obiektu jest wywoływana za każdym razem, gdy nowy element jest porównywany z istniejącym elementem. Typ parametru metody ( `Shape` ) jest mniej pochodny niż typ, który jest przesyłany ( `Circle` ), więc wywołanie jest bezpieczne typu. Kontrawariancja umożliwia `ShapeAreaComparer` Sortowanie kolekcji dowolnego typu pojedynczego, a także mieszany zbiór typów, które pochodzą od `Shape` .  
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
 
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Delegaty ogólne z wariantnymi parametrami typu  
- W .NET Framework 4 `Func` ogólnych delegatów, takich jak <xref:System.Func%602>, mają typy zwrotów kowariantycznych i typy parametrów kontrawariantne. Delegaci `Action` rodzajowi, na przykład <xref:System.Action%602>, mają typy parametrów kontrawariantne. Oznacza to, że delegatów można przypisać do zmiennych, które mają więcej `Func` pochodnych typów parametrów i (w przypadku delegatów ogólnych) mniej pochodnych typów zwracanych.  
+ W .NET Framework 4, `Func` delegatów generycznych, takich jak <xref:System.Func%602> , mają typy zwracające współwarianty i typy parametrów kontrawariantne. `Action`Delegaty ogólne, takie jak <xref:System.Action%602> , mają typy parametrów kontrawariantne. Oznacza to, że Delegaty mogą być przypisywane do zmiennych, które mają bardziej pochodne typy parametrów i (w przypadku `Func` delegatów ogólnych) mniej pochodne typy zwracane.  
   
 > [!NOTE]
-> Ostatni parametr typu ogólnego `Func` delegatów ogólnych określa typ wartości zwracanej w podpisie delegata. Jest kowariant`out` (słowo kluczowe), podczas gdy inne ogólne parametry`in` typu są kontrawariantne (słowo kluczowe).  
+> Ostatni parametr typu ogólnego `Func` delegatów ogólnych określa typ wartości zwracanej w sygnaturze delegata. Jest to współwariant ( `out` słowo kluczowe), natomiast inne parametry typu ogólnego to kontrawariantne ( `in` słowo kluczowe).  
   
- Ilustruje to poniższy kod. Pierwszy fragment kodu definiuje klasę `Base`o nazwie `Derived` , klasę `Base`o nazwie dziedziczy`Shared` , a `MyMethod`inną klasę z metodą (w języku `static` Visual Basic) o nazwie . Metoda przyjmuje wystąpienie `Base` i zwraca wystąpienie `Derived`. (Jeśli argument `Derived`jest wystąpieniem `MyMethod` , zwraca go; jeśli `Base`argument `MyMethod` jest wystąpieniem `Derived`, zwraca nowe wystąpienie .) W `Main()`przykładzie tworzy wystąpienie `Func<Base, Derived>` (`Func(Of Base, Derived)` w języku Visual `MyMethod`Basic), który reprezentuje `f1`i przechowuje go w zmiennej .  
+ Ilustruje to poniższy kod. Pierwszy fragment kodu definiuje klasę o nazwie `Base` , klasę o nazwie, `Derived` która dziedziczy `Base` , i inną klasę z `static` metodą ( `Shared` w Visual Basic) o nazwie `MyMethod` . Metoda przyjmuje wystąpienie klasy `Base` i zwraca wystąpienie `Derived` . (Jeśli argument jest wystąpieniem `Derived` , `MyMethod` zwraca go; Jeśli argument jest wystąpieniem `Base` , `MyMethod` zwraca nowe wystąpienie `Derived` .) W programie `Main()` przykład tworzy wystąpienie `Func<Base, Derived>` ( `Func(Of Base, Derived)` w Visual Basic) reprezentujące `MyMethod` i zapisuje je w zmiennej `f1` .  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
   
- Drugi fragment kodu pokazuje, że delegat a plik może `Func<Base, Base>` być`Func(Of Base, Base)` przypisany do zmiennej typu (w języku Visual Basic), ponieważ typ zwracany jest kowarianty.  
+ Drugi fragment kodu pokazuje, że delegat można przypisać do zmiennej typu `Func<Base, Base>` ( `Func(Of Base, Base)` w Visual Basic), ponieważ typ zwracany jest współwariantem.  
   
  [!code-csharp[CoContravarianceDelegates#3](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#3)]
  [!code-vb[CoContravarianceDelegates#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#3)]  
   
- Trzeci fragment kodu pokazuje, że delegat aplikator może `Func<Derived, Derived>` `Func(Of Derived, Derived)` być przypisany do zmiennej typu (w języku Visual Basic), ponieważ typ parametru jest kontrawariantny.  
+ Trzeci fragment kodu pokazuje, że delegat można przypisać do zmiennej typu `Func<Derived, Derived>` ( `Func(Of Derived, Derived)` w Visual Basic), ponieważ typ parametru to kontrawariantne.  
   
  [!code-csharp[CoContravarianceDelegates#4](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#4)]
  [!code-vb[CoContravarianceDelegates#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#4)]  
   
- Ostatni fragment kodu pokazuje, że delegat może być przypisany do zmiennej typu `Func<Derived, Base>` (w`Func(Of Derived, Base)` języku Visual Basic), łącząc efekty typu parametru kontrawariantnego i typu zwrotu kowariantowego.  
+ Ostatni fragment kodu pokazuje, że delegat może być przypisany do zmiennej typu `Func<Derived, Base>` ( `Func(Of Derived, Base)` w Visual Basic), łącząc efekty typu parametru kontrawariantne i typu zwracanego przez typ Variant.  
   
  [!code-csharp[CoContravarianceDelegates#5](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#5)]
  [!code-vb[CoContravarianceDelegates#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#5)]  
   
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Wariancja w delegatach ogólnych i nieogólnych  
- W poprzednim kodzie podpis `MyMethod` dokładnie pasuje do podpisu skonstruowanego delegata ogólnego: `Func<Base, Derived>` (`Func(Of Base, Derived)` w języku Visual Basic). W przykładzie pokazano, że ten ogólny delegat mogą być przechowywane w zmiennych lub parametrów metody, które mają więcej pochodnych typów parametrów i <xref:System.Func%602>mniej pochodnych typów zwracanych, tak długo, jak wszystkie typy delegata są konstruowane z ogólnego typu delegata .  
+ W poprzednim kodzie sygnatura `MyMethod` dokładnie pasuje do sygnatury konstruowanego delegata generycznego: `Func<Base, Derived>` ( `Func(Of Base, Derived)` w Visual Basic). W przykładzie pokazano, że ten delegat generyczny może być przechowywany w zmiennych lub parametrach metod, które mają bardziej pochodne typy parametrów i mniej pochodne typy zwracane, o ile wszystkie typy delegatów są zbudowane z ogólnego typu delegata <xref:System.Func%602> .  
   
- Jest to ważny punkt. Skutki kowariancji i kontrawariancji w parametrach typu ogólnych delegatów są podobne do skutków kowariancji i kontrawaracji w zwykłym powiązaniu delegata (zobacz [Wariancja w delegatach (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [Wariancja w delegatach (Visual Basic).](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) Jednak wariancja w powiązaniach delegatów działa ze wszystkimi typami delegatów, a nie tylko z ogólnymi typami delegatów, które mają wariantne parametry typu. Co więcej wariancja w powiązaniach delegatów umożliwia powiązanie metody z dowolnym delegatem, który ma bardziej restrykcyjne typy parametrów i mniej restrykcyjny typ zwracany, podczas gdy przypisanie delegatów ogólnych działa tylko wtedy, gdy oba typy delegatów są konstruowane na podstawie jednej definicji typu ogólnego.  
+ Jest to ważny punkt. Skutki kowariancji i kontrawariancja w parametrach typu delegatów ogólnych są podobne do efektów kowariancji i kontrawariancja w zwykłych powiązaniach delegatów (zobacz [Wariancja w delegatach (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [Wariancja w delegatach (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). Jednak wariancja w powiązaniach delegatów działa ze wszystkimi typami delegatów, a nie tylko z ogólnymi typami delegatów, które mają wariantne parametry typu. Co więcej wariancja w powiązaniach delegatów umożliwia powiązanie metody z dowolnym delegatem, który ma bardziej restrykcyjne typy parametrów i mniej restrykcyjny typ zwracany, podczas gdy przypisanie delegatów ogólnych działa tylko wtedy, gdy oba typy delegatów są konstruowane na podstawie jednej definicji typu ogólnego.  
   
- W poniższym przykładzie pokazano połączone efekty zastosowania wariancji w powiązaniu delegatów oraz zastosowania wariancji w parametrach typu ogólnego. W przykładzie definiuje hierarchię typów, która zawiera trzy`Type1`typy, od`Type3`najmniej pochodnych ( ) do większości pochodnych ( ). Wariancja w zwykłym powiązaniu delegata jest używana do `Type1` powiązania metody `Type3` z typem parametru i `Type2` typem zwracanym `Type2`do ogólnego delegata z typem parametru i zwracanym typem . Wynikowy delegat ogólny jest następnie przypisywany do innej zmiennej, której `Type3` ogólny typ `Type1`delegata ma parametr typu i zwracany typ , przy użyciu kowariancji i przeciwwariancji parametrów typu ogólnego. Drugie przypisanie wymaga, aby zarówno typ zmiennej, jak i typ delegata <xref:System.Func%602>były konstruowane z tej samej definicji typu ogólnego, w tym przypadku .  
+ W poniższym przykładzie pokazano połączone efekty zastosowania wariancji w powiązaniu delegatów oraz zastosowania wariancji w parametrach typu ogólnego. W przykładzie zdefiniowano hierarchię typów, która zawiera trzy typy, od najmniej pochodnych ( `Type1` ) do najbardziej pochodnej ( `Type3` ). Wariancja w zwykłych powiązaniach delegatów służy do powiązania metody z typem parametru `Type1` i typem zwracanym `Type3` delegata generycznego z typem parametru `Type2` i typem zwracanym `Type2` . Wynikowy Delegat ogólny jest następnie przypisywany do innej zmiennej, której typ delegata generycznego ma parametr typu `Type3` i zwracany typ `Type1` , przy użyciu kowariancji i kontrawariancja parametrów typu ogólnego. Drugie przypisanie wymaga, aby zarówno typ zmiennej, jak i typ delegata były skonstruowane z tej samej definicji typu ogólnego, w tym przypadku <xref:System.Func%602> .  
   
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
 
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definiowanie wariantów interfejsów i delegatów ogólnych
- Począwszy od .NET Framework 4, Visual Basic i C# mają słowa kluczowe, które umożliwiają oznaczenie ogólnych parametrów typu interfejsów i delegatów jako kowariantne lub kontrawariantne.  
+ Począwszy od .NET Framework 4, Visual Basic i C# mają słowa kluczowe, które umożliwiają oznaczenie parametrów typu ogólnego interfejsów i delegatów jako współvariant lub kontrawariantne.  
   
 > [!NOTE]
-> Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed .NET Framework 4 jedynym sposobem definiowania klasy ogólnej, która ma te adnotacje jest użycie języka pośredniego firmy Microsoft (MSIL), albo przez skompilowanie klasy z [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) lub przez emitowanie go w dynamicznym zestawie.  
+> Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed .NET Framework 4, jedynym sposobem zdefiniowania klasy generycznej, która ma te adnotacje, jest użycie języka pośredniego firmy Microsoft (MSIL), przez skompilowanie klasy z [Ilasm. exe (ASEMBLER Il)](../../framework/tools/ilasm-exe-il-assembler.md) lub przez emitowanie jej w zestawie dynamicznym.  
   
- Parametr typu kowariantowego jest `out` oznaczony`Out` słowem kluczowym `+` (słowo kluczowe w języku Visual Basic, dla [asemblera MSIL).](../../../docs/framework/tools/ilasm-exe-il-assembler.md) Kowariantnego parametru typu można użyć jako wartości zwracanej metody, która należy do interfejsu, lub typu zwracanego delegata. Kowariantnego parametru typu nie można użyć jako ograniczenia typu ogólnego dla metod interfejsu.  
+ Wartość parametru typu współwariantowego jest oznaczona za pomocą `out` słowa kluczowego ( `Out` słowo kluczowe w Visual Basic, `+` dla [asemblera MSIL](../../framework/tools/ilasm-exe-il-assembler.md)). Kowariantnego parametru typu można użyć jako wartości zwracanej metody, która należy do interfejsu, lub typu zwracanego delegata. Kowariantnego parametru typu nie można użyć jako ograniczenia typu ogólnego dla metod interfejsu.  
   
 > [!NOTE]
 > Jeśli metoda interfejsu ma parametr, który jest typem ogólnym delegatów, kowariantny parametr typu dla typu interfejsu może być używany w celu określenia kontrawariantnego parametru typu dla typu delegata.  
   
- Parametr typu kontrawariantnego jest `in` oznaczony`In` słowem kluczowym (słowo kluczowe w języku Visual Basic, `-` dla [asemblera MSIL).](../../../docs/framework/tools/ilasm-exe-il-assembler.md) Kontrawariantnego parametru typu można użyć jako typu parametru metody, która należy do interfejsu, lub typu parametru delegata. Kontrawariantnego parametru typu można użyć jako ograniczenia typu ogólnego dla metody interfejsu.  
+ Kontrawariantne parametr typu jest oznaczany `in` słowem kluczowym ( `In` słowo kluczowe w Visual Basic, `-` dla [asemblera MSIL](../../framework/tools/ilasm-exe-il-assembler.md)). Kontrawariantnego parametru typu można użyć jako typu parametru metody, która należy do interfejsu, lub typu parametru delegata. Kontrawariantnego parametru typu można użyć jako ograniczenia typu ogólnego dla metody interfejsu.  
   
  Tylko typy interfejsów i typy delegatów mogą mieć wariantne parametry typu. Typ interfejsu lub delegata może mieć kowariantne i kontrawariantne parametry typu.  
   
- Programy Visual Basic i C# nie zezwalają na naruszanie reguł używania kowariantnych i kontrawariantnych parametrów typu oraz dodawanie adnotacji o kowariancji i kontrawariancji do parametrów typu dla typów innych niż interfejsy i delegaty. [Asembler MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) nie wykonuje takich <xref:System.TypeLoadException> kontroli, ale jest generowany, jeśli spróbujesz załadować typ, który narusza reguły.  
+ Programy Visual Basic i C# nie zezwalają na naruszanie reguł używania kowariantnych i kontrawariantnych parametrów typu oraz dodawanie adnotacji o kowariancji i kontrawariancji do parametrów typu dla typów innych niż interfejsy i delegaty. [Asembler MSIL](../../framework/tools/ilasm-exe-il-assembler.md) nie wykonuje takich testów, ale <xref:System.TypeLoadException> jest zgłaszany w przypadku próby załadowania typu, który narusza zasady.  
   
- Aby uzyskać informacje i przykładowy kod, zobacz [Wariancja w interfejsach ogólnych (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) i [Odchylenie w interfejsach ogólnych (Visual Basic).](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ Aby uzyskać informacje i przykładowy kod, zobacz [Wariancje w interfejsach ogólnych (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) i [Wariancje w interfejsach ogólnych (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
 
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista wariantów ogólnych typów interfejsów i delegatów
- W .NET Framework 4 następujące typy interfejsu i delegatów mają parametry typu kowariantnego i/lub kontrawariantnego.  
+ W .NET Framework 4 następujące typy interfejsów i delegatów mają parametry typu współvariant i/lub kontrawariantne.  
   
 |Typ|Kowariantne parametry typu|Kontrawariantne parametry typu|  
 |----------|-------------------------------|-----------------------------------|  
@@ -162,7 +162,7 @@ Kowariancja i kontrawariancja to terminy, które odnoszą się do możliwości u
 |<xref:System.Linq.IOrderedQueryable%601>|Tak||  
 |<xref:System.Linq.IQueryable%601>|Tak||  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Kowariancja i kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Kowariancja i kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

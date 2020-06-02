@@ -3,12 +3,12 @@ title: Zasady wnioskowania typów węzłów schematu i struktury
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710248"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289086"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Zasady wnioskowania typów węzłów schematu i struktury
 W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typy węzłów w dokumencie XML na strukturę języka definicji schematu XML (XSD).  
@@ -35,12 +35,12 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 > [!NOTE]
 > Wszystkie `complexType` deklaracje są wywnioskowane jako typy anonimowe. Jedynym wywnioskowanym elementem globalnym jest element główny; wszystkie inne elementy są lokalne.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 ### <a name="simple-typed-element"></a>Prosty typ elementu  
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Pogrubiony element pokazuje schemat wywnioskowany dla elementu typu prostego.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -49,7 +49,7 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 ### <a name="empty-element"></a>Pusty element  
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Pogrubiony element pokazuje schemat wywnioskowany dla pustego elementu.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -58,7 +58,7 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 ### <a name="empty-element-with-attributes"></a>Pusty element z atrybutami  
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Elementy pogrubione pokazują schemat wywnioskowany dla pustego elementu z atrybutami.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -67,7 +67,7 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 ### <a name="element-with-attributes-and-simple-content"></a>Element z atrybutami i prostą zawartością  
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Elementy pogrubione pokazują schemat wywnioskowany dla elementu z atrybutami i prostą zawartością.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -79,7 +79,7 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 > [!NOTE]
 > Nawet jeśli element ma tylko jeden element podrzędny, jest nadal traktowany jako sekwencja.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -91,7 +91,7 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 > [!NOTE]
 > Nawet jeśli element ma tylko jeden element podrzędny, jest nadal traktowany jako sekwencja.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -101,9 +101,9 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Elementy pogrubione pokazują schemat wywnioskowany dla elementu z sekwencją i wyborem elementów podrzędnych.  
   
 > [!NOTE]
-> `maxOccurs` Atrybut `xs:choice` elementu jest ustawiony na `"unbounded"` w wywnioskowanym schemacie.  
+> `maxOccurs`Atrybut `xs:choice` elementu jest ustawiony na `"unbounded"` w wywnioskowanym schemacie.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
@@ -113,19 +113,19 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
  W poniższej tabeli przedstawiono dane wejściowe XML do <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metody i Wygenerowano schemat XML. Elementy pogrubione pokazują schemat wywnioskowany dla elementu z sekwencją i wyborem elementów podrzędnych i atrybutów.  
   
 > [!NOTE]
-> `maxOccurs` Atrybut `xs:choice` elementu jest ustawiony na `"unbounded"` w wywnioskowanym schemacie.  
+> `maxOccurs`Atrybut `xs:choice` elementu jest ustawiony na `"unbounded"` w wywnioskowanym schemacie.  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schemat|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
 ### <a name="attribute-processing"></a>Przetwarzanie atrybutów  
- Za każdym razem, gdy w węźle zostanie napotkany nowy atrybut, jest on dodawany do wywnioskowanej definicji węzła przy `use="required"`użyciu. Przy następnym znalezieniu tego samego węzła w wystąpieniu proces wnioskowania będzie porównywał atrybuty bieżącego wystąpienia z tymi, które zostały już wywnioskowane. Jeśli w wystąpieniu brakuje niektórych z już wywnioskowanych elementów, `use="optional"` jest ono dodawane do definicji atrybutu. Nowe atrybuty są dodawane do istniejących deklaracji z `use="optional"`.  
+ Za każdym razem, gdy w węźle zostanie napotkany nowy atrybut, jest on dodawany do wywnioskowanej definicji węzła przy użyciu `use="required"` . Przy następnym znalezieniu tego samego węzła w wystąpieniu proces wnioskowania będzie porównywał atrybuty bieżącego wystąpienia z tymi, które zostały już wywnioskowane. Jeśli w wystąpieniu brakuje niektórych z już wywnioskowanych elementów, `use="optional"` jest ono dodawane do definicji atrybutu. Nowe atrybuty są dodawane do istniejących deklaracji z `use="optional"` .  
   
 ### <a name="occurrence-constraints"></a>Ograniczenia wystąpień  
- Podczas procesu wnioskowania o schemacie są `minOccurs` generowane `maxOccurs` atrybuty i dla wywnioskowanych składników schematu, z `"0"` wartościami lub `"1"` i `"1"` lub. `"unbounded"` `"1"` Wartości `"unbounded"` i są używane tylko wtedy, gdy wartości `"0"` i `"1"` nie mogą sprawdzić poprawności dokumentu XML (na przykład jeśli `MinOccurs="0"` nie opisują dokładnie elementu, `minOccurs="1"` jest używany).  
+ Podczas procesu wnioskowania o schemacie `minOccurs` `maxOccurs` są generowane atrybuty i dla wywnioskowanych składników schematu, z wartościami `"0"` lub `"1"` i `"1"` lub `"unbounded"` . Wartości `"1"` i `"unbounded"` są używane tylko wtedy, gdy wartości `"0"` i `"1"` nie mogą sprawdzić poprawności dokumentu XML (na przykład jeśli nie `MinOccurs="0"` opisują dokładnie elementu, `minOccurs="1"` jest używany).  
   
 ### <a name="mixed-content"></a>Zawartość mieszana  
  Jeśli element zawiera zawartość mieszaną (na przykład tekst przeplatany z elementami), `mixed="true"` atrybut jest generowany dla niedozwolonej definicji typu złożonego.  
@@ -137,17 +137,17 @@ W tym temacie opisano sposób, w jaki proces wnioskowania schematu tłumaczy typ
 |---------------|-----------------|  
 |Przetwarzanie instrukcji|Ignorowane.|  
 |Komentarz|Ignorowane.|  
-|Odwołanie do jednostki|<xref:System.Xml.Schema.XmlSchemaInference> Klasa nie obsługuje odwołań do jednostek. Jeśli dokument XML zawiera odwołania do jednostek, należy użyć czytnika rozszerzającego jednostki. Na przykład można przekazać obiekt <xref:System.Xml.XmlTextReader> z <xref:System.Xml.XmlTextReader.EntityHandling%2A> właściwością ustawioną <xref:System.Xml.EntityHandling.ExpandEntities> jako parametr. Jeśli są napotkane odwołania do jednostek, a czytnik nie rozszerza jednostek, zgłaszany jest wyjątek.|  
-|CDATA|Wszystkie `<![CDATA[ … ]]` sekcje dokumentu XML zostaną wywnioskowane jako `xs:string`.|  
+|Odwołanie do jednostki|Klasa nie obsługuje <xref:System.Xml.Schema.XmlSchemaInference> odwołań do jednostek. Jeśli dokument XML zawiera odwołania do jednostek, należy użyć czytnika rozszerzającego jednostki. Na przykład można przekazać obiekt <xref:System.Xml.XmlTextReader> z <xref:System.Xml.XmlTextReader.EntityHandling%2A> właściwością ustawioną <xref:System.Xml.EntityHandling.ExpandEntities> jako parametr. Jeśli są napotkane odwołania do jednostek, a czytnik nie rozszerza jednostek, zgłaszany jest wyjątek.|  
+|CDATA|Wszystkie `<![CDATA[ … ]]` sekcje dokumentu XML zostaną wywnioskowane jako `xs:string` .|  
 |Typ dokumentu|Ignorowane.|  
-|Namespaces|Ignorowane.|  
+|Przestrzenie nazw|Ignorowane.|  
   
- Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Aby uzyskać więcej informacji na temat procesu wnioskowania schematu, zobacz [wnioskowanie schematów z dokumentów XML](inferring-schemas-from-xml-documents.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Wnioskowanie schematu XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Zasady wnioskowania typów prostych](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [Model SOM (XML Schema Object Model)](xml-schema-object-model-som.md)
+- [Wnioskowanie schematu XML](inferring-an-xml-schema.md)
+- [Wnioskowanie schematów na podstawie dokumentów XML](inferring-schemas-from-xml-documents.md)
+- [Zasady wnioskowania typów prostych](rules-for-inferring-simple-types.md)

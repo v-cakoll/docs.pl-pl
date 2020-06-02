@@ -1,21 +1,22 @@
 ---
 title: Parametry elementu DataAdapter
+description: Dowiedz się więcej o właściwościach DbDataAdapter, które zwracają dane ze źródła danych i zarządzają zmianami w źródle danych.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 9954570dcf33c5eea4dcccf880de2c307de0aeca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b6787162b48f83a48127257dc8e23e31a859b7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151549"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286989"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
-Ma <xref:System.Data.Common.DbDataAdapter> cztery właściwości, które są używane do pobierania danych i aktualizacji <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> danych do źródła danych: właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> i właściwości są używane do zarządzania zmianami w źródle danych. Właściwość `SelectCommand` musi być ustawiona `Fill` przed `DataAdapter`wywołaniem metody . `UpdateCommand`Przed `InsertCommand`wywołaniem `DeleteCommand` `Update` metody `DataAdapter` wywoływania metody , lub właściwości należy ustawić, w zależności od <xref:System.Data.DataTable>tego, jakie zmiany zostały wprowadzone w danych w pliku . Na przykład, jeśli wiersze zostały `InsertCommand` dodane, musi `Update`być ustawiona przed wywołaniem . Podczas `Update` przetwarzania wstawionego, zaktualizowanego lub `DataAdapter` usuniętego `Command` wiersza używa odpowiedniej właściwości do przetworzenia akcji. Bieżące informacje o zmodyfikowanym wierszu `Command` są `Parameters` przekazywane do obiektu za pośrednictwem kolekcji.  
+<xref:System.Data.Common.DbDataAdapter>Ma cztery właściwości, które są używane do pobierania danych z i aktualizowania danych do źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> Właściwość zwraca dane ze źródła danych, a <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> właściwości, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> są używane do zarządzania zmianami w źródle danych. `SelectCommand`Właściwość musi być ustawiona przed wywołaniem `Fill` metody `DataAdapter` . `InsertCommand`Właściwości, `UpdateCommand` , lub `DeleteCommand` muszą być ustawione przed `Update` `DataAdapter` wywołaniem metody, w zależności od tego, jakie zmiany zostały wprowadzone do danych w <xref:System.Data.DataTable> . Na przykład, jeśli dodano wiersze, `InsertCommand` należy ustawić przed wywołaniem metody `Update` . Gdy `Update` program przetwarza wstawione, zaktualizowane lub usunięte wiersze, `DataAdapter` używa odpowiedniej `Command` właściwości do przetwarzania akcji. Bieżące informacje o zmodyfikowanym wierszu są przesyłane do `Command` obiektu za pomocą `Parameters` kolekcji.  
   
- Podczas aktualizowania wiersza w źródle danych, należy wywołać UPDATE instrukcji, która używa unikatowy identyfikator do identyfikowania wiersza w tabeli, które mają być aktualizowane. Unikatowy identyfikator jest zazwyczaj wartością pola klucza podstawowego. Instrukcja UPDATE używa parametrów, które zawierają zarówno unikatowy identyfikator, jak i kolumny i wartości, które mają zostać zaktualizowane, jak pokazano w poniższej instrukcji Transact-SQL.  
+ Gdy aktualizujesz wiersz w źródle danych, wywołasz instrukcję UPDATE, która używa unikatowego identyfikatora, aby zidentyfikować wiersz w tabeli, która ma zostać zaktualizowana. Unikatowy identyfikator jest zwykle wartością pola klucza podstawowego. Instrukcja UPDATE używa parametrów, które zawierają zarówno unikatowy identyfikator, jak i kolumny i wartości do zaktualizowania, jak pokazano w poniższej instrukcji języka Transact-SQL.  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName
@@ -23,9 +24,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
-> Składnia symboli zastępczych parametrów zależy od źródła danych. W tym przykładzie przedstawiono symbole zastępcze dla źródła danych programu SQL Server. Użyj symboli zastępczych i <xref:System.Data.OleDb> <xref:System.Data.Odbc> parametrów znaku zapytania (?).  
+> Składnia symboli zastępczych parametrów zależy od źródła danych. Ten przykład przedstawia symbole zastępcze dla SQL Servergo źródła danych. Użyj symboli zastępczych znaku zapytania (?) <xref:System.Data.OleDb> dla <xref:System.Data.Odbc> parametrów i.  
   
- W tym przykładzie `CompanyName` języka Visual Basic pole `@CompanyName` jest aktualizowane `CustomerID` o wartość parametru `@CustomerID` dla wiersza, gdzie jest równa wartości parametru. Parametry pobierają informacje ze zmodyfikowanego wiersza <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> przy <xref:System.Data.SqlClient.SqlParameter> użyciu właściwości obiektu. Poniżej przedstawiono parametry poprzedniej przykładowej instrukcji UPDATE. Kod zakłada, że `adapter` zmienna <xref:System.Data.SqlClient.SqlDataAdapter> reprezentuje prawidłowy obiekt.  
+ W tym Visual Basic przykładzie `CompanyName` pole jest aktualizowane z wartością `@CompanyName` parametru wiersza, gdzie jest `CustomerID` równa wartości `@CustomerID` parametru. Parametry pobierają informacje ze zmodyfikowanego wiersza przy użyciu <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> właściwości <xref:System.Data.SqlClient.SqlParameter> obiektu. Poniżej przedstawiono parametry poprzedniej przykładowej instrukcji UPDATE. W kodzie założono, że zmienna `adapter` reprezentuje prawidłowy <xref:System.Data.SqlClient.SqlDataAdapter> obiekt.  
   
 ```vb
 adapter.Parameters.Add( _  
@@ -36,33 +37,33 @@ Dim parameter As SqlParameter = _
 parameter.SourceVersion = DataRowVersion.Original  
 ```  
   
- Metoda `Add` `Parameters` kolekcji przyjmuje nazwę parametru, typ danych, rozmiar (jeśli dotyczy typu) i <xref:System.Data.Common.DbParameter.SourceColumn%2A> nazwę `DataTable`z . Należy zauważyć, <xref:System.Data.Common.DbParameter.SourceVersion%2A> `@CustomerID` że parametr `Original`jest ustawiony na . Gwarantuje to, że istniejący wiersz w źródle danych zostanie zaktualizowany, jeśli wartość identyfikującej kolumny lub kolumn została zmieniona w zmodyfikowanym <xref:System.Data.DataRow>pliku . W takim przypadku `Original` wartość wiersza będzie zgodna z bieżącą `Current` wartością w źródle danych, a wartość wiersza będzie zawierać zaktualizowaną wartość. Dla `SourceVersion` parametru `@CompanyName` nie jest ustawiona i `Current` używa domyślnej wartości wiersza.  
+ `Add`Metoda `Parameters` kolekcji przyjmuje nazwę parametru, typ danych, rozmiar (jeśli ma zastosowanie do typu) i nazwę elementu <xref:System.Data.Common.DbParameter.SourceColumn%2A> z `DataTable` . Należy zauważyć, że <xref:System.Data.Common.DbParameter.SourceVersion%2A> `@CustomerID` parametr jest ustawiony na `Original` . Gwarantuje to, że istniejący wiersz w źródle danych zostanie zaktualizowany, jeśli wartość kolumny lub kolumny identyfikacyjnej została zmieniona w zmodyfikowanym elemencie <xref:System.Data.DataRow> . W takim przypadku `Original` wartość wiersza byłaby zgodna z bieżącą wartością w źródle danych, a `Current` wartość wiersza będzie zawierać zaktualizowaną wartość. `SourceVersion` `@CompanyName` Parametr dla parametru nie jest ustawiony i używa domyślnej `Current` wartości wiersza.  
   
 > [!NOTE]
-> Dla operacji `Fill` `DataAdapter` i `Get` metod `DataReader`, .NET Framework typu jest wywnioskowane z typu zwróconego z dostawcy danych .NET Framework. Wywnioskowane typy programu .NET Framework i metody akcesorów dla typów danych Microsoft SQL Server, OLE DB i ODBC są opisane w [mapowaniach typów danych w ADO.NET](data-type-mappings-in-ado-net.md).  
+> Dla `Fill` operacji `DataAdapter` i `Get` metod `DataReader` , typ .NET Framework jest wywnioskowany na podstawie typu zwróconego przez dostawcę danych .NET Framework. Wywnioskowane typy .NET Framework i metody dostępu dla typów danych Microsoft SQL Server, OLE DB i ODBC są opisane w [mapowaniu typu danych w ADO.NET](data-type-mappings-in-ado-net.md).  
   
-## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
- I `SourceColumn` `SourceVersion` mogą być przekazywane jako `Parameter` argumenty do konstruktora lub `Parameter`ustawić jako właściwości istniejącego . Jest `SourceColumn` to <xref:System.Data.DataColumn> nazwa, z <xref:System.Data.DataRow> której zostanie `Parameter` pobrana wartość. Określa `SourceVersion` `DataRow` wersję, która `DataAdapter` używa do pobierania wartości.  
+## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter. SourceColumn, Parameter. SourceVersion  
+ `SourceColumn`I `SourceVersion` mogą być przekazane jako argumenty do `Parameter` konstruktora lub ustawione jako właściwości istniejącego elementu `Parameter` . `SourceColumn`Jest nazwą z lokalizacji, w <xref:System.Data.DataColumn> <xref:System.Data.DataRow> której `Parameter` zostanie pobrana wartość. `SourceVersion`Określa `DataRow` wersję używaną przez program `DataAdapter` do pobrania wartości.  
   
- W poniższej <xref:System.Data.DataRowVersion> tabeli przedstawiono wartości wyliczenia dostępne do użycia z programem `SourceVersion`.  
+ W poniższej tabeli przedstawiono <xref:System.Data.DataRowVersion> wartości wyliczenia dostępne do użycia z `SourceVersion` .  
   
-|Wyliczenie DataRowVersion|Opis|  
+|DataRowVersion, Wyliczenie|Opis|  
 |--------------------------------|-----------------|  
 |`Current`|Parametr używa bieżącej wartości kolumny. Domyślnie włączone.|  
 |`Default`|Parametr używa `DefaultValue` kolumny.|  
 |`Original`|Parametr używa oryginalnej wartości kolumny.|  
 |`Proposed`|Parametr używa proponowanej wartości.|  
   
- Przykład `SqlClient` kodu w następnej sekcji definiuje <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> parametr, `CustomerID` w `SourceColumn` którym kolumna jest `@CustomerID` używana`SET CustomerID = @CustomerID`jako `@OldCustomerID` `WHERE CustomerID = @OldCustomerID`dla dwóch parametrów: ( ), i ( ). Parametr `@CustomerID` służy do aktualizowania kolumny **CustomerID** do `DataRow`bieżącej wartości w pliku . W rezultacie stosuje `CustomerID` `SourceColumn` się `SourceVersion` `Current` z a of. Parametr `@OldCustomerID` służy do identyfikowania bieżącego wiersza w źródle danych. Ponieważ pasująca wartość kolumny `Original` znajduje się w wersji `SourceColumn` `CustomerID`wiersza, `SourceVersion` `Original` jest używana ta sama ( ) z of.  
+ `SqlClient`Przykład kodu w następnej sekcji definiuje parametr, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> w którym `CustomerID` kolumna jest używana jako `SourceColumn` dla dwóch parametrów: `@CustomerID` ( `SET CustomerID = @CustomerID` ) i `@OldCustomerID` ( `WHERE CustomerID = @OldCustomerID` ). Ten `@CustomerID` parametr służy do aktualizowania kolumny **CustomerID** do bieżącej wartości w `DataRow` . W związku z tym `CustomerID` `SourceColumn` jest używany element with a `SourceVersion` `Current` . Ten `@OldCustomerID` parametr służy do identyfikowania bieżącego wiersza w źródle danych. Ponieważ pasująca wartość kolumny jest znaleziona w `Original` wersji wiersza, używana jest ta sama `SourceColumn` ( `CustomerID` ) z parametrem `SourceVersion` `Original` .  
   
 ## <a name="working-with-sqlclient-parameters"></a>Praca z parametrami SqlClient  
- W poniższym przykładzie pokazano, jak <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> <xref:System.Data.MissingSchemaAction.AddWithKey> utworzyć <xref:System.Data.SqlClient.SqlDataAdapter> i ustawić do w celu pobrania dodatkowych informacji o schemacie z bazy danych. Zestaw <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>właściwości <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>i <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> odpowiadających im <xref:System.Data.SqlClient.SqlParameter> obiektów oraz <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> ich odpowiednich obiektów. Metoda zwraca `SqlDataAdapter` obiekt.  
+ W poniższym przykładzie pokazano, jak utworzyć <xref:System.Data.SqlClient.SqlDataAdapter> i ustawić <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> do w celu <xref:System.Data.MissingSchemaAction.AddWithKey> pobrania dodatkowych informacji o schemacie z bazy danych. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> Ustawione właściwości,,, i <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> odpowiadające im <xref:System.Data.SqlClient.SqlParameter> obiekty dodane do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji. Metoda zwraca `SqlDataAdapter` obiekt.  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
 ## <a name="oledb-parameter-placeholders"></a>Symbole zastępcze parametrów OleDb  
- W <xref:System.Data.OleDb.OleDbDataAdapter> przypadku <xref:System.Data.Odbc.OdbcDataAdapter> obiektów i należy użyć symboli zastępczych znaku zapytania (?), aby zidentyfikować parametry.  
+ Dla <xref:System.Data.OleDb.OleDbDataAdapter> obiektów i należy <xref:System.Data.Odbc.OdbcDataAdapter> użyć symboli zastępczych znaku zapytania (?), aby zidentyfikować parametry.  
   
 ```vb  
 Dim selectSQL As String = _  
@@ -89,9 +90,9 @@ string updateSQL =
 string deleteSQL = "DELETE FROM Customers WHERE CustomerID = ?";  
 ```  
   
- Sparametryzowane instrukcje kwerendy określają, które parametry wejściowe i wyjściowe muszą zostać utworzone. Aby utworzyć parametr, `Parameters.Add` należy użyć `Parameter` metody lub konstruktora, aby określić nazwę kolumny, typ danych i rozmiar. W przypadku wewnętrznych typów danych, `Integer`takich jak , nie trzeba uwzględniać rozmiaru lub można określić rozmiar domyślny.  
+ Sparametryzowane instrukcje zapytania definiują, które parametry wejściowe i wyjściowe muszą zostać utworzone. Aby utworzyć parametr, użyj `Parameters.Add` metody lub `Parameter` konstruktora, aby określić nazwę kolumny, typ danych i rozmiar. W przypadku wewnętrznych typów danych, takich jak `Integer` , nie trzeba uwzględniać rozmiaru lub można określić rozmiar domyślny.  
   
- Poniższy przykład kodu tworzy parametry instrukcji SQL, `DataSet`a następnie wypełnia plik .  
+ Poniższy przykład kodu tworzy parametry instrukcji SQL, a następnie wypełnia `DataSet` .  
   
 ## <a name="oledb-example"></a>Przykład OleDb  
   
@@ -129,7 +130,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");  
 ```  
   
-## <a name="odbc-parameters"></a>Parametry Odbc  
+## <a name="odbc-parameters"></a>Parametry ODBC  
   
 ```vb  
 ' Assumes that connection is a valid OdbcConnection object.  
@@ -162,9 +163,9 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> Jeśli nazwa parametru nie jest podana dla parametru, parametr otrzymuje przyrostową domyślną nazwę parametru*N,* *,* zaczynając od "Parametr1". Zaleca się unikanie konwencji nazewnictwa parametru*N* podczas podawania nazwy parametru, ponieważ podana `ParameterCollection`nazwa może kolidować z istniejącą domyślną nazwą parametru w pliku . Jeśli podana nazwa już istnieje, zostanie zgłoszony wyjątek.  
+> Jeśli nazwa parametru nie jest podana dla parametru, parametr otrzymuje przyrostową domyślną nazwę parametru*N* *,* rozpoczynając od "parametr1". Zalecamy uniknięcie konwencji nazewnictwa*N* parametrem w przypadku podania nazwy parametru, ponieważ dostarczona nazwa może powodować konflikt z istniejącą domyślną nazwą parametru w `ParameterCollection` . Jeśli podana nazwa już istnieje, zgłaszany jest wyjątek.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Elementy DataAdapter i DataReader](dataadapters-and-datareaders.md)
 - [Polecenia i parametry](commands-and-parameters.md)

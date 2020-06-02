@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379911"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290944"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 
@@ -86,7 +86,7 @@ Ponieważ zestawy zawierają informacje o zawartości, wersji i zależnościach,
 Aby użyć zestawu w aplikacji, należy dodać do niego odwołanie. Po przywoływaniu zestawu wszystkie dostępne typy, właściwości, metody i inne elementy członkowskie jego przestrzeni nazw są dostępne dla aplikacji, tak jakby ich kod był częścią pliku źródłowego.
 
 > [!NOTE]
-> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj element [ \< PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodaj odwołanie** w programie Visual Studio lub przy użyciu `-reference` opcji wiersza polecenia dla kompilatorów [języka C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) element dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodaj odwołanie** w programie Visual Studio lub przy użyciu `-reference` opcji wiersza polecenia dla kompilatorów [języka C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 W języku C# można użyć dwóch wersji tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -102,14 +102,14 @@ W języku C# można użyć dwóch wersji tego samego zestawu w pojedynczej aplik
 |[Przechowywanie wersji zestawu](versioning.md)|Omówienie zasad dotyczących wersji .NET Framework.|
 |[Umieszczanie zestawu](../../framework/app-domains/assembly-placement.md)|Gdzie można znaleźć zestawy.|
 |[Zestawy i wykonywanie równoczesne](side-by-side-execution.md)|Używaj jednocześnie wielu wersji środowiska uruchomieniowego lub zestawu.|
-|[Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Tworzenie zestawów dynamicznych.|
-|[Jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Jak .NET Framework rozwiązuje odwołania do zestawów w czasie wykonywania.|
+|[Emitowanie dynamicznych metod i zestawów](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Tworzenie zestawów dynamicznych.|
+|[Jak środowisko uruchomieniowe lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md)|Jak .NET Framework rozwiązuje odwołania do zestawów w czasie wykonywania.|
 
 ## <a name="reference"></a>Dokumentacja
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Format pliku zestawu .NET](file-format.md)
 - [Przyjazne zestawy](friend.md)

@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507523"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291074"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (zapytanie zintegrowane z językiem)
 
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-Ten sam przykład przy `IEnumerable<T>` użyciu interfejsu API:
+Ten sam przykład przy użyciu `IEnumerable<T>` interfejsu API:
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -50,7 +50,7 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
 
 ## <a name="linq-is-expressive"></a>LINQ jest wyraźne
 
-Wyobraź sobie, że masz listę zwierząt domowych, ale chcesz ją przekonwertować na słownik, w którym możesz uzyskać dostęp do Pet bezpośrednio przez `RFID` jego wartość.
+Wyobraź sobie, że masz listę zwierząt domowych, ale chcesz ją przekonwertować na słownik, w którym możesz uzyskać dostęp do Pet bezpośrednio przez jego `RFID` wartość.
 
 Tradycyjny, bezwzględny kod:
 
@@ -113,7 +113,7 @@ End Function
 
 Pisanie kodu do ręcznego przechodzenia dokumentu XML w celu wykonania tego zadania byłoby znacznie trudniejsze.
 
-Korzystanie z języka XML nie jest jedynym elementem, który można wykonywać za pomocą dostawców LINQ. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) to stosunkowo jednoskładnikowo-relacyjny obiekt mapowania (ORM) dla bazy danych serwera MSSQL. Biblioteka [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) zapewnia wydajną przechodzenie dokumentów JSON za pośrednictwem LINQ. Ponadto jeśli nie ma biblioteki, która robi to potrzebne, możesz również [napisać własnego dostawcę LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
+Korzystanie z języka XML nie jest jedynym elementem, który można wykonywać za pomocą dostawców LINQ. [LINQ to SQL](../framework/data/adonet/sql/linq/index.md) to stosunkowo jednoskładnikowo-relacyjny obiekt mapowania (ORM) dla bazy danych serwera MSSQL. Biblioteka [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) zapewnia wydajną przechodzenie dokumentów JSON za pośrednictwem LINQ. Ponadto jeśli nie ma biblioteki, która robi to potrzebne, możesz również [napisać własnego dostawcę LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
 
 ## <a name="why-use-the-query-syntax"></a>Dlaczego warto używać składni zapytania?
 
@@ -165,7 +165,7 @@ Aby zapoznać się z prawdziwie obszerną listą przykładów LINQ, zobacz [101 
 
 Poniżej znajduje się szybka Prezentacja niektórych najważniejszych fragmentów LINQ. Ta funkcja nie jest kompletna, ponieważ składnik LINQ zapewnia znacznie większą funkcjonalność niż to, co zostało przedstawione w tym miejscu.
 
-* Chleb i masło- `Where`, `Select`i `Aggregate`:
+* Chleb i masło- `Where` , `Select` i `Aggregate` :
 
 ```csharp
 // Filtering a list.
@@ -384,7 +384,7 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-Ten kod podzieli `facebookUsers` się na poszczególne wątki systemu w miarę potrzeb, sumuje całkowitą liczbę polubień w każdym wątku równolegle, sumuje wyniki obliczone przez poszczególne wątki i projektu, które powodują powstanie ciągu znaków.
+Ten kod podzieli się na `facebookUsers` poszczególne wątki systemu w miarę potrzeb, sumuje całkowitą liczbę polubień w każdym wątku równolegle, sumuje wyniki obliczone przez poszczególne wątki i projektu, które powodują powstanie ciągu znaków.
 
 W formularzu diagramu:
 

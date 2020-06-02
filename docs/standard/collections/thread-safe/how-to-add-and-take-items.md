@@ -8,31 +8,31 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: 3f4270d2ec71421bad8974a3e5cd8f1d65db3b74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711301"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287890"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Porady: dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection
-W tym przykładzie pokazano, jak <xref:System.Collections.Concurrent.BlockingCollection%601> dodawać i usuwać elementy z pliku w sposób blokujący i nieblokujący. Aby uzyskać <xref:System.Collections.Concurrent.BlockingCollection%601>więcej informacji na temat , zobacz [BlockingCollection Omówienie](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+Ten przykład pokazuje, jak dodawać i usuwać elementy z <xref:System.Collections.Concurrent.BlockingCollection%601> zarówno w bloku blokowania, jak i bez blokowania. Aby uzyskać więcej informacji na temat <xref:System.Collections.Concurrent.BlockingCollection%601> , zobacz [BlockingCollection Overview](blockingcollection-overview.md).  
   
- Na przykład jak wyliczyć a <xref:System.Collections.Concurrent.BlockingCollection%601> dopóki nie jest pusty i nie więcej elementów zostaną dodane, zobacz [Jak: Użyj ForEach usunąć elementy w BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
+ Aby zapoznać się z przykładem, jak wyliczyć a <xref:System.Collections.Concurrent.BlockingCollection%601> dopóki nie jest pusty i nie zostaną dodane żadne elementy, zobacz [How to: use foreach by Remove Items in BlockingCollection](how-to-use-foreach-to-remove.md).
   
 ## <a name="example"></a>Przykład  
- W tym pierwszym przykładzie pokazano, jak dodawać i przyjmować elementy, tak aby operacje blokowały, jeśli kolekcja jest tymczasowo pusta (podczas przyjmowania) lub przy maksymalnej pojemności (podczas dodawania) lub jeśli upłynął określony okres czasu. Należy zauważyć, że blokowanie maksymalnej pojemności jest włączona tylko wtedy, gdy BlockingCollection został utworzony z maksymalną pojemnością określoną w konstruktorze.  
+ Ten pierwszy przykład pokazuje, jak dodawać i podejmować elementy, aby operacje były blokowane, jeśli kolekcja jest tymczasowo pusta (podczas wykonywania) lub przy maksymalnej pojemności (podczas dodawania) lub w przypadku, gdy upłynął określony limit czasu. Należy zauważyć, że blokowanie dla maksymalnej pojemności jest włączone tylko wtedy, gdy BlockingCollection został utworzony z maksymalną pojemnością określoną w konstruktorze.  
   
  [!code-csharp[CDS_BlockingCollection#01](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example01.cs#01)]
  [!code-vb[CDS_BlockingCollection#01](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/simpleblocking.vb#01)]  
   
 ## <a name="example"></a>Przykład  
- W tym drugim przykładzie pokazano, jak dodawać i przyjmować elementy, aby operacje nie blokowały. Jeśli żaden element nie jest obecny, osiągnięto maksymalną pojemność ograniczonej kolekcji lub upłynął <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> okres czasu, a następnie lub operacja zwraca false. Dzięki temu wątek do wykonywania innych przydatnych prac na chwilę, a następnie spróbuj ponownie później, aby pobrać nowy element lub spróbuj dodać ten sam element, który nie może być dodany wcześniej. Program pokazuje również, jak zaimplementować <xref:System.Collections.Concurrent.BlockingCollection%601>anulowanie podczas uzyskiwania dostępu do pliku .  
+ Ten drugi przykład pokazuje, jak dodawać i podejmować elementy, aby nie blokowały operacji. Jeśli żaden element nie jest obecny, osiągnięto maksymalną pojemność w ograniczonej kolekcji lub upłynął limit czasu, a następnie <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> operacja lub zwróci wartość false. Dzięki temu wątek może wykonać inne przydatne działania przez pewien czas, a następnie spróbować ponownie później, aby pobrać nowy element, lub spróbować dodać ten sam element, którego nie można dodać wcześniej. Program demonstruje również sposób implementacji anulowania podczas uzyskiwania dostępu do elementu <xref:System.Collections.Concurrent.BlockingCollection%601> .  
   
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+- [BlockingCollection — Przegląd](blockingcollection-overview.md)

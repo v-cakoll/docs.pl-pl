@@ -1,23 +1,24 @@
 ---
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
+description: Postępuj zgodnie z tym przewodnikiem, aby utworzyć klasę jednostki, która modeluje tabelę w przykładowej bazie danych. Następnie utwórz proste zapytanie, aby wyświetlić listę klientów w określonej lokalizacji.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792131"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286304"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 
 Ten Instruktaż zawiera podstawowy kompleksowy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz z minimalnymi złożonością. Utworzysz klasę jednostki, która będzie modelować tabelę Customers w przykładowej bazie danych Northwind. Następnie utworzysz proste zapytanie, aby wyświetlić listę klientów, którzy znajdują się w Londynie.
 
-Ten Instruktaż jest zorientowany na kod według projektu, aby pomóc w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pokazywania koncepcji. Zwykle mówiąc, użyj Object Relational Designer do utworzenia modelu obiektów.
+Ten Instruktaż jest zorientowany na kod według projektu, aby pomóc w pokazywania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] koncepcji. Zwykle mówiąc, użyj Object Relational Designer do utworzenia modelu obiektów.
 
 [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
 
-Ten Instruktaż został zapisany przy użyciu ustawień C# deweloperskich.
+Ten Instruktaż został zapisany przy użyciu ustawień programistycznych Visual C#.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -29,7 +30,7 @@ Ten Instruktaż został zapisany przy użyciu ustawień C# deweloperskich.
 
 Ten przewodnik składa się z sześciu głównych zadań:
 
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tworzenie rozwiązania w programie Visual Studio.
+- Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.
 
 - Mapowanie klasy do tabeli bazy danych.
 
@@ -49,7 +50,7 @@ W tym pierwszym zadaniu utworzysz rozwiązanie programu Visual Studio, które za
 
 1. W menu **plik** programu Visual Studio wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
 
-2. W okienku **typy projektów** okna dialogowego **Nowy projekt** kliknij pozycję **Wizualizacja C#** .
+2. W okienku **typy projektów** okna dialogowego **Nowy projekt** kliknij **Visual C#**.
 
 3. W okienku **Szablony** kliknij pozycję **Aplikacja konsolowa**.
 
@@ -63,7 +64,7 @@ W tym pierwszym zadaniu utworzysz rozwiązanie programu Visual Studio, które za
 
 W tym instruktażu są używane zestawy, które mogą nie być instalowane domyślnie w projekcie. Jeśli obiekt system. Data. LINQ nie jest wymieniony jako odwołanie w projekcie (rozwiń węzeł **odwołania** w **Eksplorator rozwiązań**), Dodaj go, jak wyjaśniono w poniższych krokach.
 
-### <a name="to-add-systemdatalinq"></a>To add System.Data.Linq
+### <a name="to-add-systemdatalinq"></a>Aby dodać system. Data. LINQ
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **odwołania**, a następnie kliknij pozycję **Dodaj odwołanie**.
 
@@ -77,11 +78,11 @@ W tym instruktażu są używane zestawy, które mogą nie być instalowane domy�
 
 ## <a name="mapping-a-class-to-a-database-table"></a>Mapowanie klasy do tabeli bazy danych
 
-W tym kroku utworzysz klasę i zamapujesz ją do tabeli bazy danych. Takie klasy są określane jako *Klasa jednostki*. Należy pamiętać, że mapowanie jest realizowane przez jedynie dodanie <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Właściwość określa nazwę tabeli w bazie danych.
+W tym kroku utworzysz klasę i zamapujesz ją do tabeli bazy danych. Takie klasy są określane jako *Klasa jednostki*. Należy pamiętać, że mapowanie jest realizowane przez jedynie dodanie <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>Właściwość określa nazwę tabeli w bazie danych.
 
 ### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Aby utworzyć klasę jednostki i zamapować ją na tabelę bazy danych
 
-- Wpisz lub wklej następujący kod do program.cs bezpośrednio powyżej `Program` deklaracji klasy:
+- Wpisz lub wklej następujący kod do Program.cs bezpośrednio powyżej `Program` deklaracji klasy:
 
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]
 
@@ -89,41 +90,41 @@ W tym kroku utworzysz klasę i zamapujesz ją do tabeli bazy danych. Takie klasy
 
 W tym kroku wykonujesz kilka zadań.
 
-- Użyj <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć `City` `CustomerID` i właściwości klasy Entity jako reprezentujące kolumny w tabeli bazy danych.
+- Użyj atrybutu, <xref:System.Data.Linq.Mapping.ColumnAttribute> Aby wyznaczyć `CustomerID` i `City` właściwości klasy Entity jako reprezentujące kolumny w tabeli bazy danych.
 
 - Należy wyznaczyć `CustomerID` Właściwość reprezentującą kolumnę klucza podstawowego w bazie danych.
 
-- `_CustomerID` Wyznaczysz `_City` pola i dla magazynu prywatnego. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]program może następnie przechowywać i pobierać wartości bezpośrednio, zamiast korzystać z publicznych metod dostępu, które mogą zawierać logikę biznesową.
+- Wyznaczysz `_CustomerID` `_City` pola i dla magazynu prywatnego. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]program może następnie przechowywać i pobierać wartości bezpośrednio, zamiast korzystać z publicznych metod dostępu, które mogą zawierać logikę biznesową.
 
 ### <a name="to-represent-characteristics-of-two-database-columns"></a>Do reprezentowania cech dwóch kolumn bazy danych
 
-- Wpisz lub wklej następujący kod do program.cs wewnątrz nawiasów klamrowych `Customer` klasy.
+- Wpisz lub wklej następujący kod do Program.cs wewnątrz nawiasów klamrowych `Customer` klasy.
 
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]
 
 ## <a name="specifying-the-connection-to-the-northwind-database"></a>Określanie połączenia z bazą danych Northwind
 
-W tym kroku użyjesz <xref:System.Data.Linq.DataContext> obiektu, aby nawiązać połączenie między strukturami danych opartymi na kodzie i samą bazą danych. <xref:System.Data.Linq.DataContext> Jest głównym kanałem, za pośrednictwem którego można pobrać obiekty z bazy danych i przesłać zmiany.
+W tym kroku użyjesz <xref:System.Data.Linq.DataContext> obiektu, aby nawiązać połączenie między strukturami danych opartymi na kodzie i samą bazą danych. <xref:System.Data.Linq.DataContext>Jest głównym kanałem, za pośrednictwem którego można pobrać obiekty z bazy danych i przesłać zmiany.
 
-Deklarujemy również, `Table<Customer>` aby pełnić rolę logicznej, wpisanej tabeli dla zapytań względem tabeli Customers w bazie danych. Te zapytania zostaną utworzone i wykonane w dalszych krokach.
+Deklarujemy również `Table<Customer>` , aby pełnić rolę logicznej, wpisanej tabeli dla zapytań względem tabeli Customers w bazie danych. Te zapytania zostaną utworzone i wykonane w dalszych krokach.
 
 ### <a name="to-specify-the-database-connection"></a>Aby określić połączenie z bazą danych
 
 - Wpisz lub wklej następujący kod w `Main` metodzie.
 
-     Należy pamiętać, `northwnd.mdf` że plik jest założono, że znajduje się w folderze linqtest5. Aby uzyskać więcej informacji, zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.
+     Należy pamiętać, że `northwnd.mdf` plik jest założono, że znajduje się w folderze linqtest5. Aby uzyskać więcej informacji, zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.
 
      [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]
 
 ## <a name="creating-a-simple-query"></a>Tworzenie prostego zapytania
 
-W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQC#()](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+W tym kroku utworzysz zapytanie, aby sprawdzić, którzy klienci w tabeli Klienci bazy danych znajdują się w Londynie. Kod zapytania w tym kroku tylko opisuje zapytanie. Nie wykonuje go. Takie podejście jest znane jako *odroczone wykonanie*. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-Utworzysz również dane wyjściowe dziennika w celu wyświetlenia poleceń SQL, które [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generują. Ta funkcja rejestrowania (która korzysta <xref:System.Data.Linq.DataContext.Log%2A>z programu) jest przydatna podczas debugowania, a przy określaniu, że polecenia wysyłane do bazy danych dokładnie reprezentują zapytanie.
+Utworzysz również dane wyjściowe dziennika w celu wyświetlenia poleceń SQL, które [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generują. Ta funkcja rejestrowania (która korzysta <xref:System.Data.Linq.DataContext.Log%2A> z programu) jest przydatna podczas debugowania, a przy określaniu, że polecenia wysyłane do bazy danych dokładnie reprezentują zapytanie.
 
 ### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie
 
-- Wpisz lub wklej następujący kod do `Main` metody `Table<Customer>` po deklaracji.
+- Wpisz lub wklej następujący kod do `Main` metody po `Table<Customer>` deklaracji.
 
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]
 
@@ -160,7 +161,7 @@ W tym kroku rzeczywiście wykonujesz zapytanie. Wyrażenia zapytania utworzone w
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Przewodnik: Wykonywanie zapytań w relacjachC#(](walkthrough-querying-across-relationships-csharp.md) ) jest kontynuowane, gdy ten przewodnik zakończy się. Wskazówki dotyczące zapytania między relacjami pokazują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , jak można wykonywać zapytania między tabelami, podobnie jak *sprzężenia* w relacyjnej bazie danych.
+[Przewodnik: wykonywanie zapytań w relacjach (C#) —](walkthrough-querying-across-relationships-csharp.md) temat kontynuuje się, gdy ten przewodnik zakończy się. Wskazówki dotyczące zapytania między relacjami pokazują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , jak można wykonywać zapytania między tabelami, podobnie jak *sprzężenia* w relacyjnej bazie danych.
 
 Jeśli chcesz wykonać zapytanie w przewodniku dotyczącym relacji, pamiętaj o zapisaniu rozwiązania dla przewodnika, który właśnie został ukończony, co jest wymaganiem wstępnym.
 

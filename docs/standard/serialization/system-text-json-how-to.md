@@ -1,17 +1,21 @@
 ---
-title: ''
+title: Jak serializować i deserializować kod JSON przy użyciu języka C# — .NET
 description: W tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702272"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289515"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Jak serializować i deserializować (Marshaling and unmarshaling) JSON w programie .NET
 
@@ -380,46 +384,10 @@ Aby wykluczyć wszystkie właściwości wartości null, należy ustawić <xref:S
 Oto przykład obiektu do serializacji i danych wyjściowych JSON:
 
 |Właściwość |Wartość  |
-|---
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | TemperatureCelsius | 25 | | Podsumowanie | wartość null |
+|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM – 07:00|
+| TemperatureCelsius| 25 |
+| Podsumowanie| wartość null|
 
 ```json
 {
@@ -672,65 +640,13 @@ W przypadku deserializacji kodu JSON pokazanego w pokazanym typie, `DatesAvailab
 Podczas deserializacji kodu JSON pokazanego wcześniej w tym typie próbkowania dodatkowe dane staną się parami klucz-wartość `ExtensionData` Właściwości:
 
 |Właściwość |Wartość  |Uwagi  |
-|---
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Opis: "w tym artykule pokazano, jak używać System.Text.Json przestrzeni nazw do serializacji i deserializacji z JSON w programie .NET. Zawiera przykładowy kod ".
-MS. Date: No-Loc:
-- 'System.Text.Json'
-- " Newtonsoft.Json " helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | | TemperatureCelsius | 0 | Niezgodność z rozróżnianiem wielkości liter ( `temperatureCelsius` w formacie JSON), więc właściwość nie jest ustawiona. | | Podsumowanie | Gorąca | | | ExtensionData — | temperatureCelsius: 25 | Ponieważ przypadek nie jest zgodny, ta właściwość JSON jest dodatkową, a jej para klucz-wartość w słowniku. | || DatesAvailable:<br>  8/1/2019 12:00:00 AM – 07:00<br>8/2/2019 12:00:00 AM-07:00 | Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości. | | | SummaryWords:<br>Chłodna<br>Wiatr<br>Humid | Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości. |
+|---------|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM – 07:00||
+| TemperatureCelsius| 0 | Niezgodność z rozróżnianiem wielkości liter ( `temperatureCelsius` w formacie JSON), więc właściwość nie jest ustawiona. |
+| Podsumowanie | Gorąca ||
+| ExtensionData — | temperatureCelsius: 25 |Ponieważ przypadek nie jest zgodny, ta właściwość JSON jest dodatkową i jest parą klucz-wartość w słowniku.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM – 07:00<br>8/2/2019 12:00:00 AM – 07:00 |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
+| |SummaryWords:<br>Chłodna<br>Wiatr<br>Humid |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
 
 Gdy obiekt docelowy jest serializowany, pary wartości klucza danych rozszerzenia stają się właściwościami JSON tak samo jak w przychodzących danych JSON:
 

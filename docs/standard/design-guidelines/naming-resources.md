@@ -9,12 +9,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 95aff35569e58eacfd064609140a29b53e0036da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 762ba99c4751ba40f5f33e99455cf950af35cdf6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743818"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290152"
 ---
 # <a name="naming-resources"></a>Nazewnictwo zasobów
 Ponieważ zasoby lokalizowalne mogą być przywoływane za pośrednictwem pewnych obiektów, tak jakby były właściwościami, wskazówki dotyczące nazewnictwa dla zasobów są podobne do wytycznych dotyczących właściwości.
@@ -23,7 +23,7 @@ Ponieważ zasoby lokalizowalne mogą być przywoływane za pośrednictwem pewnyc
 
  ✔️ Podaj opis, a nie krótkie identyfikatory.
 
- ❌ nie używać słów kluczowych właściwych dla języka dla głównych języków CLR.
+ ❌NIE używaj słów kluczowych właściwych dla języka dla głównych języków CLR.
 
  ✔️ używać tylko znaków alfanumerycznych i podkreśleń w przypadku nazw zasobów.
 
@@ -40,5 +40,5 @@ Ponieważ zasoby lokalizowalne mogą być przywoływane za pośrednictwem pewnyc
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

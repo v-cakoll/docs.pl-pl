@@ -1,13 +1,14 @@
 ---
 title: Uwierzytelnianie w programie SQL Server
+description: Dowiedz się więcej o uwierzytelnianiu SQL Server ADO.NET, w tym trybem uwierzytelniania systemu Windows i trybem mieszanym.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959969"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286549"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i tryb mieszany.  
@@ -19,7 +20,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
 > [!IMPORTANT]
 > Zalecamy używanie uwierzytelniania systemu Windows wszędzie tam, gdzie to możliwe. Uwierzytelnianie systemu Windows korzysta z serii zaszyfrowanych komunikatów do uwierzytelniania użytkowników w SQL Server. Gdy są używane SQL Server logowania, nazwy logowania SQL Server i szyfrowane hasła są przesyłane przez sieć, co sprawia, że są one mniej bezpieczne.  
   
- W przypadku uwierzytelniania systemu Windows użytkownicy są już zalogowani do systemu Windows i nie muszą logować się oddzielnie do SQL Server. Poniższe `SqlConnection.ConnectionString` określają uwierzytelnianie systemu Windows bez konieczności podawania nazwy użytkownika lub hasła.  
+ W przypadku uwierzytelniania systemu Windows użytkownicy są już zalogowani do systemu Windows i nie muszą logować się oddzielnie do SQL Server. Poniżej `SqlConnection.ConnectionString` określono uwierzytelnianie systemu Windows bez konieczności podawania nazwy użytkownika lub hasła.  
   
 ```csharp  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
@@ -64,24 +65,24 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
  Jeśli konieczne jest użycie uwierzytelniania w trybie mieszanym, należy utworzyć SQL Server nazwy logowania, które są przechowywane w SQL Server. Następnie należy podać nazwę użytkownika SQL Server i hasło w czasie wykonywania.  
   
 > [!IMPORTANT]
-> SQL Server instalowany przy użyciu SQL Server logowania o nazwie `sa` (skrót "administrator systemu"). Przypisz silne hasło do `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` logowania są mapowane na stałą rolę serwera `sysadmin`, która ma nieodwołalne poświadczenia administracyjne na całym serwerze. Jeśli osoba atakująca uzyska dostęp jako administrator systemu, nie ma żadnych ograniczeń dotyczących potencjalnego uszkodzenia. Wszyscy członkowie grupy `BUILTIN\Administrators` systemu Windows (grupy administratorów lokalnych) są domyślnie członkami roli `sysadmin`, ale można ją usunąć z tej roli.  
+> SQL Server instalowany przy użyciu SQL Server logowania o nazwie `sa` (skrót "administrator systemu"). Przypisz silne hasło do `sa` nazwy logowania i nie używaj `sa` nazwy logowania w aplikacji. Dane `sa` logowania są mapowane na `sysadmin` stałą rolę serwera, która ma nieodwołalne poświadczenia administracyjne na całym serwerze. Jeśli osoba atakująca uzyska dostęp jako administrator systemu, nie ma żadnych ograniczeń dotyczących potencjalnego uszkodzenia. Wszyscy członkowie grupy systemu Windows `BUILTIN\Administrators` (grupa administratorów lokalnych) są `sysadmin` Domyślnie członkami roli, ale można ją usunąć z tej roli.  
   
  SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania do haseł używanych wewnątrz SQL Server.  
   
 > [!IMPORTANT]
-> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
+> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
+ Więcej informacji zawierają poniższe zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Podmiotów](/sql/relational-databases/security/authentication-access/principals-database-engine)|Opisuje nazwy logowania i inne podmioty zabezpieczeń w SQL Server.|  
+|[Podmioty zabezpieczeń](/sql/relational-databases/security/authentication-access/principals-database-engine)|Opisuje nazwy logowania i inne podmioty zabezpieczeń w SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](application-security-scenarios-in-sql-server.md)
 - [Nawiązywanie połączenia ze źródłem danych](../connecting-to-a-data-source.md)
-- [Parametry połączeń](../connection-strings.md)
+- [Parametry połączenia](../connection-strings.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

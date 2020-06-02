@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156533"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287782"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Obsługa zdarzeń w dokumencie XML przy użyciu klasy XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** hermetyzuje argumenty przekazane do programów obsługi zdarzeń zarejestrowanych w obiekcie **XmlDocument** na potrzeby obsługi zdarzeń. Zdarzenia i opis po ich uruchomieniu podano w poniższej tabeli.  
   
-|Wydarzenie|Uruchamiany|  
+|Zdarzenie|Uruchamiany|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Gdy węzeł należący do bieżącego dokumentu zostanie wstawiony do innego węzła.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Gdy węzeł należący do bieżącego dokumentu został wstawiony do innego węzła.|  
@@ -206,6 +206,6 @@ public class Sample
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeChangedEventArgs> i <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

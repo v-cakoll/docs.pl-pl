@@ -3,12 +3,12 @@ title: Rozpoznawanie zasobów zewnętrznych
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82e9231be8a3619f59313460f0d5e0b246eb9436
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710274"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291490"
 ---
 # <a name="resolving-external-resources"></a>Rozpoznawanie zasobów zewnętrznych
 Właściwość **XmlResolver** obiektu **XmlDocument** jest używana przez klasę **XmlDocument** do lokalizowania zasobów, które nie są wbudowane w dane XML, takie jak definicje typu dokumentu zewnętrznego (DTD), jednostki i schematy. Elementy te mogą znajdować się w sieci lub na dysku lokalnym i są identyfikowane za pomocą Uniform Resource Identifier (URI). Dzięki temu element **XmlDocument** może rozpoznać węzły **EntityReference** , które znajdują się w dokumencie i sprawdzać poprawność dokumentu zgodnie z zewnętrznym DTD lub schematem.  
@@ -41,15 +41,15 @@ Właściwość **XmlResolver** obiektu **XmlDocument** jest używana przez klas�
   
 |XmlResolver — właściwość|Funkcja|Uwagi|  
 |--------------------------|--------------|-----------|  
-|Klasa **XmlResolver** używana przez **XmlDocument** jest taka sama jak ta, która jest używana przez element **XmlReader**.|**XmlDocument** używa elementu **XmlResolver** , który został przypisany do elementu **XmlReader**.<br /><br /> Nie można ustawić właściwości **XmlDocument. resolver** , niezależnie od poziomu zaufania **XmlDocument** , ponieważ jest ona pobierana z elementu **XmlReader** **XmlResolver** . Nie można podjąć próby przesłonięcia ustawień elementu **XmlReaders** **XmlResolver xmlrozpoznawania** , ustawiając właściwość **XmlResolver** obiektu **XmlDocument**.|Element **XmlReader** może być **XmlTextReader**, walidacją <xref:System.Xml.XmlReader>lub czytnikiem niestandardowym. Jeśli używany czytnik obsługuje rozpoznawanie jednostek, jednostki zewnętrzne są rozwiązane. Jeśli czytnik programu przeszedł nie obsługuje odwołań do jednostek, odwołania do jednostek nie są rozwiązane.|  
+|Klasa **XmlResolver** używana przez **XmlDocument** jest taka sama jak ta, która jest używana przez element **XmlReader**.|**XmlDocument** używa elementu **XmlResolver** , który został przypisany do elementu **XmlReader**.<br /><br /> Nie można ustawić właściwości **XmlDocument. resolver** , niezależnie od poziomu zaufania **XmlDocument** , ponieważ jest ona pobierana z elementu **XmlReader** **XmlResolver** . Nie można podjąć próby przesłonięcia ustawień elementu **XmlReaders** **XmlResolver xmlrozpoznawania** , ustawiając właściwość **XmlResolver** obiektu **XmlDocument**.|Element **XmlReader** może być **XmlTextReader**, walidacją <xref:System.Xml.XmlReader> lub czytnikiem niestandardowym. Jeśli używany czytnik obsługuje rozpoznawanie jednostek, jednostki zewnętrzne są rozwiązane. Jeśli czytnik programu przeszedł nie obsługuje odwołań do jednostek, odwołania do jednostek nie są rozwiązane.|  
   
  Ustawienie XmlResolver w taki sposób, aby zawierało poprawne poświadczenia, umożliwia dostęp do zasobów zewnętrznych.  
   
 > [!NOTE]
 > Nie ma możliwości pobrania właściwości **XmlResolver** . Pozwala to zapobiec użyciu przez użytkownika elementu **XmlResolver** , na którym zostały ustawione poświadczenia. Ponadto jeśli **XmlTextReader** lub Walidacja <xref:System.Xml.XmlReader> jest używana do załadowania **dokumentu** XmlDocument, a element **XmlDocument** ma skonfigurowany mechanizm rozwiązywania konfliktów, nie są buforowane przez **XmlDocument** po fazie **obciążenia** , ponieważ stanowi to również zagrożenie bezpieczeństwa.  
   
- Aby uzyskać więcej informacji, zobacz sekcję uwagi na stronie <xref:System.Xml.XmlResolver> referencyjnej.  
+ Aby uzyskać więcej informacji, zobacz sekcję uwagi na <xref:System.Xml.XmlResolver> stronie referencyjnej.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

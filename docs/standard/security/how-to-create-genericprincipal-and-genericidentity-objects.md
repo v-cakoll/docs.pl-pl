@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706152"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290866"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Porady: tworzenie obiektów GenericPrincipal i GenericIdentity
 
-Można użyć klasy <xref:System.Security.Principal.GenericIdentity> w połączeniu z klasą <xref:System.Security.Principal.GenericPrincipal>, aby utworzyć schemat autoryzacji, który istnieje niezależnie od domeny systemu Windows.
+Można użyć <xref:System.Security.Principal.GenericIdentity> klasy w połączeniu z <xref:System.Security.Principal.GenericPrincipal> klasą, aby utworzyć schemat autoryzacji, który istnieje niezależnie od domeny systemu Windows.
 
 ### <a name="to-create-a-genericprincipal-object"></a>Aby utworzyć obiekt GenericPrincipal —
 
-1. Utwórz nowe wystąpienie klasy Identity i zainicjuj je nazwą, która ma zostać wstrzymana. Poniższy kod tworzy nowy obiekt **GenericIdentity** i inicjuje go przy użyciu nazwy `MyUser`.
+1. Utwórz nowe wystąpienie klasy Identity i zainicjuj je nazwą, która ma zostać wstrzymana. Poniższy kod tworzy nowy obiekt **GenericIdentity** i inicjuje go nazwą `MyUser` .
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -46,7 +46,7 @@ Można użyć klasy <xref:System.Security.Principal.GenericIdentity> w połącze
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Użyj poniższego kodu, aby dołączyć podmiot zabezpieczeń do bieżącego wątku. Jest to przydatne w sytuacjach, w których podmiot zabezpieczeń musi być zweryfikowany kilka razy, musi być zweryfikowany przez inny kod uruchomiony w aplikacji lub musi być zweryfikowany przez obiekt <xref:System.Security.Permissions.PrincipalPermission>. Można nadal wykonywać walidację na obiekcie Principal, bez dołączania go do wątku. Aby uzyskać więcej informacji, zobacz [zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Użyj poniższego kodu, aby dołączyć podmiot zabezpieczeń do bieżącego wątku. Jest to przydatne w sytuacjach, w których podmiot zabezpieczeń musi być zweryfikowany kilka razy, musi być zweryfikowany przez inny kod uruchomiony w aplikacji lub musi być zweryfikowany przez <xref:System.Security.Permissions.PrincipalPermission> obiekt. Można nadal wykonywać walidację na obiekcie Principal, bez dołączania go do wątku. Aby uzyskać więcej informacji, zobacz [zastępowanie obiektu podmiotu zabezpieczeń](replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -144,5 +144,5 @@ Is this a Manager? True
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [Zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md)
-- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Zastępowanie obiektu podmiotu zabezpieczeń](replacing-a-principal-object.md)
+- [Obiekty główne i obiekty tożsamości](principal-and-identity-objects.md)

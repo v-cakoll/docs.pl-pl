@@ -1,17 +1,18 @@
 ---
 title: Oracle i ADO.NET
+description: Informacje na temat funkcji i zachowań .NET Framework Dostawca danych dla programu Oracle, które zapewniają dostęp do bazy danych Oracle przy użyciu interfejsu wywołania Oracle.
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980083"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286692"
 ---
 # <a name="oracle-and-adonet"></a>Oracle i ADO.NET
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "76980083"
   
  .NET Framework Dostawca danych dla programu Oracle zapewnia dostęp do bazy danych Oracle przy użyciu interfejsu wywołania Oracle (OCI) dostarczonego przez oprogramowanie klienckie Oracle. Funkcja dostawcy danych została zaprojektowana tak, aby była podobna do .NET Framework dostawców danych dla SQL Server, OLE DB i ODBC.  
   
- Aby użyć Dostawca danych .NET Framework dla programu Oracle, aplikacja musi odwoływać się do przestrzeni nazw <xref:System.Data.OracleClient> w następujący sposób:  
+ Aby użyć Dostawca danych .NET Framework dla programu Oracle, aplikacja musi odwoływać się do <xref:System.Data.OracleClient> przestrzeni nazw w następujący sposób:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -31,7 +32,7 @@ Imports System.Data.OracleClient
 using System.Data.OracleClient;  
 ```  
   
- Podczas kompilowania kodu należy również dodać odwołanie do biblioteki DLL. Na przykład, Jeśli kompilujesz C# program, wiersz polecenia powinien zawierać:  
+ Podczas kompilowania kodu należy również dodać odwołanie do biblioteki DLL. Na przykład, Jeśli kompilujesz program w języku C#, wiersz polecenia powinien zawierać:  
   
 ```console
 csc /r:System.Data.OracleClient.dll  
@@ -42,32 +43,32 @@ csc /r:System.Data.OracleClient.dll
  W tym artykule opisano wymagania dotyczące korzystania z Dostawca danych .NET Framework dla programu Oracle oraz opisano różne problemy, które należy wziąć pod uwagę podczas korzystania z niego.  
   
  [Oracle BFILE](oracle-bfiles.md)  
- Opisuje klasę <xref:System.Data.OracleClient.OracleBFile>, która jest używana do pracy z typem danych Oracle bInformacje.  
+ Opisuje <xref:System.Data.OracleClient.OracleBFile> klasę, która jest używana do pracy z typem danych Oracle bInformacje.  
   
  [Oracle LOB](oracle-lobs.md)  
- Opisuje klasę <xref:System.Data.OracleClient.OracleLob>, która jest używana do pracy z typami danych LOB firmy Oracle.  
+ Opisuje <xref:System.Data.OracleClient.OracleLob> klasę, która jest używana do pracy z typami danych LOB firmy Oracle.  
   
  [Oracle REF CURSOR](oracle-ref-cursors.md)  
  Opisuje obsługę typu danych kursora usługi Oracle REF.  
   
  [OracleTypes](oracletypes.md)  
- Opisuje struktury, których można użyć do pracy z typami danych Oracle, w tym <xref:System.Data.OracleClient.OracleNumber> i <xref:System.Data.OracleClient.OracleString>.  
+ Opisuje struktury, których można użyć do pracy z typami danych Oracle, w tym <xref:System.Data.OracleClient.OracleNumber> i <xref:System.Data.OracleClient.OracleString> .  
   
  [Sekwencje Oracle](oracle-sequences.md)  
  Opisuje obsługę pobierania wartości sekwencji programu Oracle klucza generowanej przez serwer.  
   
  [Mapowanie typu danych Oracle](oracle-data-type-mappings.md)  
- Wyświetla listę typów danych Oracle i ich mapowania do <xref:System.Data.OracleClient.OracleDataReader>.  
+ Wyświetla listę typów danych Oracle i ich mapowania na <xref:System.Data.OracleClient.OracleDataReader> .  
   
  [Transakcje rozproszone Oracle](oracle-distributed-transactions.md)  
- Opisuje sposób automatycznego rejestrowania obiektu <xref:System.Data.OracleClient.OracleConnection> w istniejącej transakcji rozproszonej, jeśli określa, że transakcja jest aktywna.  
+ Opisuje, jak <xref:System.Data.OracleClient.OracleConnection> obiekt automatycznie jest zarejestrowany w istniejącej transakcji rozproszonej, jeśli określa, że transakcja jest aktywna.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Zabezpieczanie aplikacji ADO.NET](securing-ado-net-applications.md)  
  Zawiera opis bezpiecznych praktyk kodowania w przypadku korzystania z ADO.NET.  
   
  [Elementy DataSet, DataTable i DataView](./dataset-datatable-dataview/index.md)  
- Opisuje sposób tworzenia i używania `DataSets`, wpisanych `DataSets`, `DataTables`i `DataViews`.  
+ Opisuje sposób tworzenia i używania `DataSets` , wpisywania `DataSets` , `DataTables` i `DataViews` .  
   
  [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
  Opisuje sposób pracy z danymi w ADO.NET.  

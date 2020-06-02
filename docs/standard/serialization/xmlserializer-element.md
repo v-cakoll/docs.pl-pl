@@ -7,18 +7,18 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380022"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288930"
 ---
-# <a name="xmlserializer-element"></a>\<Element XmlSerializer>
+# <a name="xmlserializer-element"></a>\<xmlSerializer>, element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
   
- \<> konfiguracji  
-\<> system. XML. Serialization  
+ \<configuration>  
+\<system.xml.serialization>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
+|[\<system.xml.serialization>Postaci](system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. W przypadku wykrycia takiego warunku zostanie zgłoszony wyjątek z następującym komunikatem: "błąd wewnętrzny: deserializacja nie powiodła się przed strumieniem bazowym".  
@@ -61,8 +61,8 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<system.xml.serialization>Postaci](system-xml-serialization-element.md)
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)

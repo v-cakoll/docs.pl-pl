@@ -1,5 +1,5 @@
 ---
-title: <para> - Przewodnik programowania C#
+title: <para> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793418"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287301"
 ---
-# <a name="para-c-programming-guide"></a>\<para> (przewodnik programowania C#)
+# <a name="para-c-programming-guide"></a>\<para>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,15 +31,15 @@ ms.locfileid: "76793418"
 
 ## <a name="remarks"></a>Uwagi
 
-Znacznik \<para> służy do użycia wewnątrz znacznika, takiego jak [ \<>podsumowania, ](./summary.md) [ \<uwagi>](./remarks.md)lub [ \<zwraca>](./returns.md)i umożliwia dodanie struktury do tekstu.
+`<para>`Tag jest używany wewnątrz tagu, takiego jak [\<summary>](./summary.md) , [\<remarks>](./remarks.md) , lub [\<returns>](./returns.md) , i umożliwia dodanie struktury do tekstu.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [ \<podsumowanie>](./summary.md) przykład \<ukorzystania z para>.
+Zobacz [\<summary>](./summary.md) , aby zobaczyć przykład użycia `<para>` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

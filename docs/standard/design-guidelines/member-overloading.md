@@ -9,15 +9,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: c9cb178e838aab99c22089b527a6bd2e86b325de
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6a2cd6d4dd293a7f4a408e1ee97a125c9454be41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727843"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289008"
 ---
 # <a name="member-overloading"></a>Przeciążanie składowej
-Przeciążenie elementu członkowskiego oznacza utworzenie dwóch lub większej liczby elementów członkowskich tego samego typu, które różnią się tylko liczbą lub typem parametrów, ale mają tę samą nazwę. Na przykład w poniższej metodzie `WriteLine` jest przeciążona:
+Przeciążenie elementu członkowskiego oznacza utworzenie dwóch lub większej liczby elementów członkowskich tego samego typu, które różnią się tylko liczbą lub typem parametrów, ale mają tę samą nazwę. Na przykład w poniższym przykładzie `WriteLine` Metoda jest przeciążona:
 
 ```csharp
 public static class Console {
@@ -34,19 +34,19 @@ public static class Console {
 
  ✔️ Spróbuj użyć opisowych nazw parametrów, aby wskazać wartość domyślną używaną przez krótsze przeciążenia.
 
- ❌ unikać arbitralnie różnych nazw parametrów w przeciążeniach. Jeśli parametr w jednym przeciążeniu reprezentuje takie samo dane wejściowe jak parametr w innym przeciążeniu, parametry powinny mieć taką samą nazwę.
+ ❌UNIKAj arbitralnie różnych nazw parametrów w przeciążeniach. Jeśli parametr w jednym przeciążeniu reprezentuje takie samo dane wejściowe jak parametr w innym przeciążeniu, parametry powinny mieć taką samą nazwę.
 
- ❌ UNIKAj niespójności w kolejności parametrów w przeciążonych elementach członkowskich. Parametry o tej samej nazwie powinny znajdować się w tej samej pozycji we wszystkich przeciążeń.
+ ❌UNIKAj niespójności w kolejności parametrów w przeciążonych elementach członkowskich. Parametry o tej samej nazwie powinny znajdować się w tej samej pozycji we wszystkich przeciążeń.
 
  ✔️ WYKONAĆ tylko najdłuższym wirtualnym przeciążeniem (jeśli jest wymagana rozszerzalność). Krótsze przeciążenia powinny po prostu wywołać do dłuższego przeciążenia.
 
- ❌ nie należy używać modyfikatorów `ref` lub `out` do przeciążania elementów członkowskich.
+ ❌NIE należy używać `ref` `out` modyfikatorów ani do przeciążania elementów członkowskich.
 
  Niektóre języki nie mogą rozpoznawać wywołań do przeciążenia, takich jak ten. Ponadto takie przeciążenia zwykle mają całkowicie inną semantykę i prawdopodobnie nie powinny być przeciążeniami, ale zamiast nich należy użyć dwóch oddzielnych metod.
 
- ❌ nie mają przeciążeń z parametrami w tym samym położeniu i podobnych typach z inną semantyką.
+ ❌NIE należy przeciążać z parametrami w tym samym położeniu i podobnych typach z inną semantyką.
 
- ✔️ Zezwalaj na przekazywanie `null` dla opcjonalnych argumentów.
+ ✔️ zezwalać na `null` przekazywanie argumentów opcjonalnych.
 
  ✔️ użyć przeciążenia elementu członkowskiego zamiast definiować członków z argumentami domyślnymi.
 
@@ -58,5 +58,5 @@ public static class Console {
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania elementów członkowskich](member.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

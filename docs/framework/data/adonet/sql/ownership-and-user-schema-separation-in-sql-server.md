@@ -1,13 +1,14 @@
 ---
 title: Własność i oddzielenie schematu użytkownika w programie SQL Server
+description: Dowiedz się, jak separacja schematów użytkownika umożliwia elastyczność zarządzania uprawnieniami obiektu SQL Server Database. Schematy grupują obiekty w oddzielne przestrzenie nazw.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894426"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286265"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Własność i oddzielenie schematu użytkownika w programie SQL Server
 Podstawową koncepcją SQL Server zabezpieczeń jest to, że właściciele obiektów mają nieodwołalne uprawnienia do administrowania nimi. Nie można usunąć uprawnień z właściciela obiektu i nie można upuścić użytkowników z bazy danych, jeśli są one właścicielami obiektów.  
@@ -40,12 +41,12 @@ Server.Database.DatabaseSchema.DatabaseObject
  Jeśli porzucisz je z bazy danych modelu, nie będą one wyświetlane w nowych bazach danych.  
   
 > [!NOTE]
-> Schematy `sys` i`INFORMATION_SCHEMA` są zarezerwowane dla obiektów systemowych. Nie można tworzyć obiektów w tych schematach i nie można ich upuścić.  
+> `sys`Schematy i `INFORMATION_SCHEMA` są zarezerwowane dla obiektów systemowych. Nie można tworzyć obiektów w tych schematach i nie można ich upuścić.  
   
 #### <a name="the-dbo-schema"></a>Schemat dbo  
- `dbo` Schemat jest domyślnym schematem nowo utworzonej bazy danych. Schemat jest własnością `dbo` konta użytkownika. `dbo` Domyślnie użytkownicy utworzeni za pomocą polecenia Create User Transact-SQL mają `dbo` jako domyślny schemat.  
+ `dbo`Schemat jest domyślnym schematem nowo utworzonej bazy danych. `dbo`Schemat jest własnością `dbo` konta użytkownika. Domyślnie użytkownicy utworzeni za pomocą polecenia CREATE USER Transact-SQL mają `dbo` jako domyślny schemat.  
   
- Użytkownicy, którym przypisano schemat, `dbo` nie dziedziczą uprawnień `dbo` konta użytkownika. Żadne uprawnienia nie są dziedziczone przez użytkowników ze schematu; uprawnienia schematu są dziedziczone przez obiekty bazy danych zawarte w schemacie.  
+ Użytkownicy, którym przypisano `dbo` schemat, nie dziedziczą uprawnień `dbo` konta użytkownika. Żadne uprawnienia nie są dziedziczone przez użytkowników ze schematu; uprawnienia schematu są dziedziczone przez obiekty bazy danych zawarte w schemacie.  
   
 > [!NOTE]
 > Gdy odwoływanie się do obiektów bazy danych przy użyciu jednoczęściowej nazwy, SQL Server najpierw szuka domyślnego schematu użytkownika. Jeśli obiekt nie zostanie tam znaleziony, SQL Server będzie wyglądał dalej w `dbo` schemacie. Jeśli obiekt nie znajduje się w `dbo` schemacie, zwracany jest błąd.  

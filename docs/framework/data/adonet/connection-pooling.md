@@ -1,13 +1,14 @@
 ---
 title: Pula połączeń
+description: Dowiedz się więcej o puli połączeń, która ADO.NET używa do minimalizowania kosztów otwierania połączeń ze źródłami danych.
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: c431011cf57fd9ef79c2f0a099ab1080116c571f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b8f89dfda7edbde14dbb5945f10f2284ac43c3d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786711"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287093"
 ---
 # <a name="connection-pooling"></a>Pula połączeń
 Nawiązywanie połączenia ze źródłem danych może być czasochłonne. Aby zminimalizować koszt otwarcia połączeń, ADO.NET korzysta z techniki optymalizacji zwanej *pulą połączeń*, co minimalizuje koszt wielokrotnego otwierania i zamykania połączeń. Pule połączeń są obsługiwane inaczej dla dostawców danych .NET Framework.  

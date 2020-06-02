@@ -1,5 +1,5 @@
 ---
-title: 'Jak: Kopiowanie katalogów'
+title: 'Instrukcje: kopiowanie katalogów'
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159458"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288579"
 ---
-# <a name="how-to-copy-directories"></a>Jak: Kopiowanie katalogów
-W tym temacie pokazano, jak używać klas we/wy do synchronicznie kopiować zawartość katalogu do innej lokalizacji.
+# <a name="how-to-copy-directories"></a>Instrukcje: kopiowanie katalogów
+W tym temacie pokazano, jak używać klas we/wy do synchronicznego kopiowania zawartości katalogu do innej lokalizacji.
 
-Na przykład asynchronicznej kopii pliku zobacz [Asynchronous file I/O](../../../docs/standard/io/asynchronous-file-i-o.md).
+Aby zapoznać się z przykładem asynchronicznego kopiowania plików, zobacz [asynchroniczne operacje we/wy na plikach](asynchronous-file-i-o.md).
 
-W tym przykładzie kopiuje `copySubDirs` podkatalogi, ustawiając `DirectoryCopy` metodę na `true`. Metoda `DirectoryCopy` rekurencyjne kopiowanie podkatalogów przez wywołanie się na każdym podkatalogu, dopóki nie ma więcej do skopiowania.  
+Ten przykład kopiuje podkatalogi przez ustawienie `copySubDirs` `DirectoryCopy` metody na `true` . `DirectoryCopy`Metoda cyklicznie kopiuje podkatalogi przez wywołanie ich w każdym podkatalogu, dopóki nie będzie więcej do kopiowania.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -32,11 +32,11 @@ W tym przykładzie kopiuje `copySubDirs` podkatalogi, ustawiając `DirectoryCopy
   
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [Plik i strumień we/wy](../../../docs/standard/io/index.md)
-- [Typowe zadania we/wy](../../../docs/standard/io/common-i-o-tasks.md)
-- [We/Wy pliku asynchronicznego](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [We/wy plików i strumieni](index.md)
+- [Typowe zadania we/wy](common-i-o-tasks.md)
+- [Asynchroniczne operacje we/wy pliku](asynchronous-file-i-o.md)

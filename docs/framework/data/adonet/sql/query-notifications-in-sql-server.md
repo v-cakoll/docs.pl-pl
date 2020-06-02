@@ -1,24 +1,25 @@
 ---
 title: Powiadomienia zapytań w programie SQL Server
+description: Informacje na temat używania powiadomień o zapytaniach w celu powiadomienia aplikacji o zmianie danych w bazie danych SQL Server, na przykład w celu odświeżenia wyświetlania aplikacji.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 11d9a1a800bea4224853a57b128ca89c9f2cf781
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1351c83b6cc5837115321d53e8779c0f364c3099
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452373"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286226"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
 W oparciu o infrastrukturę Service Broker powiadomienia o zapytaniach umożliwiają powiadamianie aplikacji o zmianach danych. Ta funkcja jest szczególnie przydatna w przypadku aplikacji, które udostępniają pamięć podręczną informacji z bazy danych, takiej jak aplikacja sieci Web, i należy powiadamiać o zmianach danych źródłowych.  
   
  Istnieją trzy sposoby implementacji powiadomień o zapytaniach przy użyciu ADO.NET:  
   
-1. Implementacja niskiego poziomu jest dostarczana przez klasę `SqlNotificationRequest`, która uwidacznia funkcje po stronie serwera, co umożliwia wykonywanie poleceń z żądaniem powiadomienia.  
+1. Implementacja niskiego poziomu jest dostarczana przez `SqlNotificationRequest` klasę, która udostępnia funkcje po stronie serwera, co umożliwia wykonywanie poleceń z żądaniem powiadomienia.  
   
-2. Implementacja wysokiego poziomu jest dostarczana przez klasę `SqlDependency`, która jest klasą, która zapewnia abstrakcję wysokiego poziomu funkcji powiadomień między aplikacją źródłową i SQL Server, umożliwiając używanie zależności do wykrywania zmian na serwerze. W większości przypadków jest to najprostszy i najbardziej efektywny sposób, aby wykorzystać możliwości SQL Server powiadomień przez zarządzane aplikacje klienckie przy użyciu Dostawca danych .NET Framework dla SQL Server.  
+2. Implementacja wysokiego poziomu jest dostarczana przez `SqlDependency` klasę, która jest klasą, która zapewnia abstrakcję wysokiego poziomu funkcji powiadomień między aplikacją źródłową i SQL Server, co pozwala na używanie zależności do wykrywania zmian na serwerze. W większości przypadków jest to najprostszy i najbardziej efektywny sposób, aby wykorzystać możliwości SQL Server powiadomień przez zarządzane aplikacje klienckie przy użyciu Dostawca danych .NET Framework dla SQL Server.  
   
-3. Ponadto aplikacje sieci Web skompilowane przy użyciu ASP.NET 2,0 lub nowszej mogą używać klas pomocników `SqlCacheDependency`.  
+3. Ponadto aplikacje sieci Web skompilowane przy użyciu ASP.NET 2,0 lub nowszej mogą używać `SqlCacheDependency` klas pomocnika.  
   
  Powiadomienia o zapytaniach są używane w przypadku aplikacji, które wymagają odświeżenia wyświetlania lub buforowania w odpowiedzi na zmiany danych bazowych. Microsoft SQL Server umożliwia aplikacjom .NET Framework wysyłanie polecenia do SQL Server i żądanie powiadomienia, jeśli wykonanie tego samego polecenia spowoduje wygenerowanie zestawów wynikowych innych niż pobrane początkowo. Powiadomienia generowane na serwerze są wysyłane przez kolejki, aby można je było przetworzyć później.  
   
@@ -49,19 +50,19 @@ W oparciu o infrastrukturę Service Broker powiadomienia o zapytaniach umożliwi
  Pokazuje, w jaki sposób wykryć, kiedy wyniki zapytania będą inne niż te, które zostały pierwotnie odebrane.  
   
  [Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
- Demonstruje Konfigurowanie obiektu <xref:System.Data.SqlClient.SqlCommand> do pracy z powiadomieniem o zapytaniach.  
+ Demonstruje Konfigurowanie <xref:System.Data.SqlClient.SqlCommand> obiektu do pracy z powiadomieniem o zapytaniach.  
   
 ## <a name="reference"></a>Dokumentacja  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- Opisuje klasę <xref:System.Data.Sql.SqlNotificationRequest> i wszystkich jej elementów członkowskich.  
+ Opisuje <xref:System.Data.Sql.SqlNotificationRequest> klasę i wszystkich jej członków.  
   
  <xref:System.Data.SqlClient.SqlDependency>  
- Opisuje klasę <xref:System.Data.SqlClient.SqlDependency> i wszystkich jej elementów członkowskich.  
+ Opisuje <xref:System.Data.SqlClient.SqlDependency> klasę i wszystkich jej członków.  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- Opisuje klasę <xref:System.Web.Caching.SqlCacheDependency> i wszystkich jej elementów członkowskich.  
+ Opisuje <xref:System.Web.Caching.SqlCacheDependency> klasę i wszystkich jej członków.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [SQL Server i ADO.NET](index.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

@@ -1,18 +1,19 @@
 ---
 title: Operacje kopiowania masowego w programie SQL Server
+description: Dowiedz się, jak używać klasy SqlBulkCopy do pisania rozwiązań kodu zarządzanego, które zbiorczo kopiują duże pliki do tabel lub widoków w bazach danych SQL Server.
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: ae97bcdd6776d573cf9e523133c2c00a42c273bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f877836aa45efe162cce3c42cb5733f86deab2c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782525"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286523"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operacje kopiowania masowego w programie SQL Server
-Microsoft SQL Server obejmuje popularne narzędzie wiersza polecenia o nazwie **BCP** , aby szybko skopiować duże pliki do tabel lub widoków w bazach danych SQL Server. <xref:System.Data.SqlClient.SqlBulkCopy> Klasa umożliwia pisanie rozwiązań kodu zarządzanego, które zapewniają podobną funkcjonalność. Istnieją inne sposoby ładowania danych do tabeli SQL Server (na przykład instrukcje INSERT), ale <xref:System.Data.SqlClient.SqlBulkCopy> oferują one znaczącą wydajność.  
+Microsoft SQL Server obejmuje popularne narzędzie wiersza polecenia o nazwie **BCP** , aby szybko skopiować duże pliki do tabel lub widoków w bazach danych SQL Server. <xref:System.Data.SqlClient.SqlBulkCopy>Klasa umożliwia pisanie rozwiązań kodu zarządzanego, które zapewniają podobną funkcjonalność. Istnieją inne sposoby ładowania danych do tabeli SQL Server (na przykład instrukcje INSERT), ale <xref:System.Data.SqlClient.SqlBulkCopy> oferują one znaczącą wydajność.  
   
- <xref:System.Data.SqlClient.SqlBulkCopy> Klasa może służyć do zapisywania danych tylko w tabelach SQL Server. Ale źródło danych nie jest ograniczone do SQL Server; można użyć dowolnego źródła danych, o ile dane mogą zostać załadowane do <xref:System.Data.DataTable> wystąpienia lub odczytane <xref:System.Data.IDataReader> za pomocą wystąpienia.  
+ <xref:System.Data.SqlClient.SqlBulkCopy>Klasa może służyć do zapisywania danych tylko w tabelach SQL Server. Ale źródło danych nie jest ograniczone do SQL Server; można użyć dowolnego źródła danych, o ile dane mogą zostać załadowane do <xref:System.Data.DataTable> wystąpienia lub odczytane za pomocą <xref:System.Data.IDataReader> wystąpienia.  
   
  Korzystając z <xref:System.Data.SqlClient.SqlBulkCopy> klasy, można wykonać następujące polecenie:  
   
@@ -23,14 +24,14 @@ Microsoft SQL Server obejmuje popularne narzędzie wiersza polecenia o nazwie **
 - Operacja kopiowania zbiorczego w ramach transakcji  
   
 > [!NOTE]
-> W przypadku używania .NET Framework w wersji 1,1 lub starszej (która nie <xref:System.Data.SqlClient.SqlBulkCopy> obsługuje klasy) można wykonać SQL Server instrukcji języka Transact-SQL **BULK INSERT** przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu.  
+> W przypadku używania .NET Framework w wersji 1,1 lub starszej (która nie obsługuje <xref:System.Data.SqlClient.SqlBulkCopy> klasy) można wykonać SQL Server instrukcji języka Transact-SQL **BULK INSERT** przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konfiguracja przykładu kopiowania zbiorczego](bulk-copy-example-setup.md)  
  Opisuje tabele używane w przykładowych kopiach zbiorczych i udostępnia skrypty SQL do tworzenia tabel w bazie danych AdventureWorks.  
   
  [Pojedyncze operacje kopiowania zbiorczego](single-bulk-copy-operations.md)  
- Opisuje, jak wykonać pojedynczą zbiorczą kopię danych w wystąpieniu SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy i jak wykonać operację kopiowania zbiorczego za pomocą instrukcji języka Transact-SQL <xref:System.Data.SqlClient.SqlCommand> i klasy.  
+ Opisuje, jak wykonać pojedynczą zbiorczą kopię danych w wystąpieniu SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy i jak wykonać operację kopiowania zbiorczego za pomocą instrukcji języka Transact-SQL i <xref:System.Data.SqlClient.SqlCommand> klasy.  
   
  [Wiele operacji kopiowania zbiorczego](multiple-bulk-copy-operations.md)  
  Opisuje sposób wykonywania wielu operacji zbiorczych kopiowania danych do wystąpienia SQL Server przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy.  

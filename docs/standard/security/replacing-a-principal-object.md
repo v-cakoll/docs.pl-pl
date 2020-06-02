@@ -10,15 +10,15 @@ helpviewer_keywords:
 - security [.NET Framework], replacing principal objects
 - security [.NET Framework], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-ms.openlocfilehash: 89b7036215cb7998222e280ceef02073d455a1b2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 056bd0bbafe0e7dc84d8d0c532ff844370c59230
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705941"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291217"
 ---
 # <a name="replacing-a-principal-object"></a>Zastępowanie obiektu głównego
-Aplikacje, które zapewniają usługi uwierzytelniania, muszą być w stanie zastąpić obiekt **podmiotu zabezpieczeń** (<xref:System.Security.Principal.IPrincipal>) dla danego wątku. Ponadto system zabezpieczeń musi pomagać w ochronie możliwości zastąpienia obiektów **głównych** , ponieważ złośliwie podłączona, nieprawidłowa **podmiot** zabezpieczeń narusza zabezpieczenia aplikacji przez zajęcie nieprawdziwej tożsamością lub rolą. W związku z tym aplikacje, które wymagają możliwości zastąpienia obiektów **Principal** , muszą mieć przyznany obiekt <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> dla kontroli podmiotu zabezpieczeń. (Należy zauważyć, że to uprawnienie nie jest wymagane do wykonywania kontroli zabezpieczeń opartych na rolach ani do tworzenia obiektów **głównych** ).  
+Aplikacje, które zapewniają usługi uwierzytelniania, muszą być w stanie zastąpić obiekt **podmiotu zabezpieczeń** ( <xref:System.Security.Principal.IPrincipal> ) dla danego wątku. Ponadto system zabezpieczeń musi pomagać w ochronie możliwości zastąpienia obiektów **głównych** , ponieważ złośliwie podłączona, nieprawidłowa **podmiot** zabezpieczeń narusza zabezpieczenia aplikacji przez zajęcie nieprawdziwej tożsamością lub rolą. W związku z tym aplikacje, które wymagają możliwości zastąpienia obiektów **Principal** , muszą mieć przyznany <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> obiekt dla kontroli podmiotu zabezpieczeń. (Należy zauważyć, że to uprawnienie nie jest wymagane do wykonywania kontroli zabezpieczeń opartych na rolach ani do tworzenia obiektów **głównych** ).  
   
  Bieżący obiekt **Principal** można zastąpić, wykonując następujące zadania:  
   
@@ -35,4 +35,4 @@ Aplikacje, które zapewniają usługi uwierzytelniania, muszą być w stanie zas
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
-- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Obiekty główne i obiekty tożsamości](principal-and-identity-objects.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 98cc4a983c9703e6c5ab132f6110a327c6081b6c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379177"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289632"
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 
-Serializacja XML może przyjmować więcej niż jeden formularz, od prostego do złożonej. Na przykład można serializować klasy, która po prostu zawiera pola publiczne i właściwości, jak pokazano na [wprowadzeniu serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Poniższy przykład kodu dotyczy różnych zaawansowanych scenariuszy, w tym sposobu używania serializacji XML do generowania strumienia XML, który jest zgodny z określonym dokumentem schematu XML (XSD).
+Serializacja XML może przyjmować więcej niż jeden formularz, od prostego do złożonej. Na przykład można serializować klasy, która po prostu zawiera pola publiczne i właściwości, jak pokazano na [wprowadzeniu serializacji XML](introducing-xml-serialization.md). Poniższy przykład kodu dotyczy różnych zaawansowanych scenariuszy, w tym sposobu używania serializacji XML do generowania strumienia XML, który jest zgodny z określonym dokumentem schematu XML (XSD).
 
 ## <a name="serializing-a-dataset"></a>Serializacji zestawu danych
 
@@ -768,7 +768,7 @@ Dane wyjściowe XML może wyglądać w następujący sposób.
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 - [Kontrolowanie serializacji XML przy użyciu atrybutów](controlling-xml-serialization-using-attributes.md)

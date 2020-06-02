@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421283"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289697"
 ---
 # <a name="binary-serialization"></a>Serializacja binarna
 
@@ -339,15 +339,15 @@ Platforma .NET Core obsługuje serializację binarne dla podzbioru typów. List�
 > | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | Począwszy od platformy .NET Core 2.0.4. |
 > | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | Począwszy od platformy .NET Core 2.0.4. |
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Serialization>\
 Zawiera klasy, które mogą być używane do serializacji i deserializacji obiektów.
 
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)\
 Opisuje mechanizm serializacji XML, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.
 
-- [Zabezpieczenia i Serializacja](../../../docs/framework/misc/security-and-serialization.md)\
+- [Zabezpieczenia i Serializacja](../../framework/misc/security-and-serialization.md)\
 Opisuje bezpiecznego wskazówek kodowania, które należy wykonać podczas pisania kodu, który będzie wykonywać serializacji.
 
 - [Komunikacja zdalna .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\

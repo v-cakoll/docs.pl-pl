@@ -5,27 +5,27 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 33c0b5a93a9c63e3e743a04e69bb7353ac69fa8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57a01726e897f4ddbf8df5ede53609c198012d80
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711288"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287877"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Porady: dodawanie do kolekcji funkcji blokujących i ograniczających
-W tym przykładzie pokazano, jak dodać funkcje ograniczające i <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> blokujące do klasy kolekcji niestandardowej, implementując interfejs <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>w klasie, a następnie używając wystąpienia klasy jako mechanizmu magazynu wewnętrznego dla . Aby uzyskać więcej informacji na temat granic i blokowania, zobacz [BlockingCollection Omówienie](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+Ten przykład pokazuje, jak dodać funkcje ograniczania i blokowania do niestandardowej klasy kolekcji <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> , implementując interfejs w klasie, a następnie używając wystąpienia klasy jako wewnętrznego mechanizmu magazynowania dla <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> . Aby uzyskać więcej informacji na temat ograniczania i blokowania, zobacz [BlockingCollection Overview](blockingcollection-overview.md).  
   
 ## <a name="example"></a>Przykład  
- Klasa kolekcji niestandardowej jest kolejką priorytetu podstawowego, w której <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> poziomy priorytetu są reprezentowane jako tablica obiektów. W każdej kolejce nie jest wykonywana żadna dodatkowa kolejność.  
+ Klasa kolekcji niestandardowych jest podstawową kolejką priorytetową, w której poziomy priorytetów są reprezentowane jako tablica <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> obiektów. Żadna dodatkowa kolejność nie jest przeprowadzana w ramach każdej kolejki.  
   
- W kodzie klienta są uruchamiane trzy zadania. Pierwsze zadanie tylko sonduje dla pociągnięć klawiatury, aby włączyć anulowanie w dowolnym momencie podczas wykonywania. Drugim zadaniem jest wątek producenta; dodaje nowe elementy do kolekcji blokowania i nadaje każdemu elementowi priorytet na podstawie wartości losowej. Trzecie zadanie usuwa elementy z kolekcji, gdy stają się one dostępne.  
+ W kodzie klienta uruchomiono trzy zadania. Pierwsze zadanie po prostu sonduje pod kątem pociągnięć z klawiaturą, aby umożliwić anulowanie w dowolnym momencie wykonywania. Drugie zadanie jest wątkiem producenta; dodaje nowe elementy do kolekcji blokującej i daje każdemu elementowi priorytet oparty na wartości losowej. Trzecie zadanie usuwa elementy z kolekcji, gdy staną się dostępne.  
   
- Zachowanie aplikacji można dostosować, wykonując jeden z wątków działa szybciej niż inne. Jeśli producent działa szybciej, można zauważyć, że funkcje ograniczające, jak blokowanie kolekcji zapobiega dodania elementów, jeśli już zawiera liczbę elementów, które są określone w konstruktorze. Jeśli konsument działa szybciej, można zauważyć, że funkcja blokowania, jak konsument czeka na nowy element, który ma zostać dodany.  
+ Można dostosować zachowanie aplikacji, co sprawia, że jeden z wątków działa szybciej niż inne. Jeśli producent działa szybciej, zobaczysz powiązane funkcje, ponieważ kolekcja blokująca uniemożliwia dodanie elementów, jeśli zawiera już liczbę elementów, które są określone w konstruktorze. Jeśli klient działa szybciej, zobaczysz funkcję blokowania, gdy odbiorca czeka na dodanie nowego elementu.  
   
  [!code-csharp[CDS_BlockingCollection#06](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/prodcon.cs#06)]  
   
- Domyślnie magazyn dla <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> a <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>jest .  
+ Domyślnie magazyn dla programu to <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)
+- [Kolekcje bezpieczne dla wątków](index.md)

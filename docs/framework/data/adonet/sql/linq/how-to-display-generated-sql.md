@@ -1,24 +1,25 @@
 ---
-title: 'Instrukcje: wyświetlanie wygenerowanego kodu SQL'
+title: 'Instrukcje: Wyświetlanie wygenerowanego kodu SQL'
+description: Dowiedz się, jak wyświetlić kod SQL wygenerowany dla zapytań za pomocą właściwości log, aby pomóc zrozumieć LINQ to SQL funkcje i debugowanie.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002970"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286381"
 ---
-# <a name="how-to-display-generated-sql"></a>Instrukcje: wyświetlanie wygenerowanego kodu SQL
-Można wyświetlić kod SQL wygenerowany dla zapytań i przetwarzania zmian za pomocą właściwości <xref:System.Data.Linq.DataContext.Log%2A>. Takie podejście może być przydatne w przypadku znajomości funkcjonalności [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] i debugowania określonych problemów.  
+# <a name="how-to-display-generated-sql"></a>Instrukcje: Wyświetlanie wygenerowanego kodu SQL
+Można wyświetlić kod SQL wygenerowany dla zapytań i przetwarzania zmian przy użyciu <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Takie podejście może być przydatne w przypadku znajomości [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalności i debugowania określonych problemów.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa właściwości <xref:System.Data.Linq.DataContext.Log%2A> do wyświetlania kodu SQL w oknie konsoli przed wykonaniem kodu.  Tej właściwości można użyć z poleceniami Query, INSERT, Update i DELETE.  
+ Poniższy przykład używa właściwości, <xref:System.Data.Linq.DataContext.Log%2A> Aby wyświetlić kod SQL w oknie konsoli przed wykonaniem kodu.  Tej właściwości można użyć z poleceniami Query, INSERT, Update i DELETE.  
   
- Wiersze z okna konsoli są wyświetlane podczas wykonywania Visual Basic lub C# kodu poniżej.  
+ Wiersze z okna konsoli są wyświetlane podczas wykonywania poniższego kodu Visual Basic lub C#.  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

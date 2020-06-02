@@ -1,5 +1,5 @@
 ---
-title: Omówienie programu Common Language Runtime (CLR) — .NET Framework
+title: Omówienie środowiska uruchomieniowego języka wspólnego (CLR) — .NET Framework
 ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,59 +16,59 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74884413"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289249"
 ---
-# <a name="common-language-runtime-clr-overview"></a>Omówienie czasu wykonywania języka wspólnego (CLR)
+# <a name="common-language-runtime-clr-overview"></a>Środowisko uruchomieniowe języka wspólnego (CLR) — Omówienie
 
-Program .NET Framework zapewnia środowisko wykonywania o nazwie środowiska uruchomieniowego języka wspólnego, który uruchamia kod i zapewnia usługi, które ułatwiają proces tworzenia.
+.NET Framework zapewnia środowisko uruchomieniowe o nazwie środowisko uruchomieniowe języka wspólnego, które uruchamia kod i udostępnia usługi, które ułatwiają proces tworzenia aplikacji.
 
-Kompilatory i narzędzia uwidaczniają funkcjonalność środowiska uruchomieniowego języka wspólnego i umożliwiają pisanie kodu, który korzysta z tego środowiska zarządzanego wykonywania. Kod, który można opracować za pomocą kompilatora języka, który jest przeznaczony dla czasu wykonywania jest nazywany kodem zarządzanym; korzysta z funkcji, takich jak integracja między językami, obsługa wyjątków między językami, zwiększone zabezpieczenia, obsługa wersji i wdrażania, uproszczony model interakcji ze składnikami oraz usługi debugowania i profilowania.
+Kompilatory i narzędzia udostępniają funkcjonalność środowiska uruchomieniowego języka wspólnego i umożliwiają pisanie kodu, który korzysta z tego środowiska wykonywania zarządzanego. Kod opracowywany przy użyciu kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego, jest nazywany kodem zarządzanym; korzyści płynące z takich funkcji, jak integracja między językami, obsługa wyjątków między językami, ulepszone zabezpieczenia, obsługa wersji i wdrażanie, uproszczony model interakcji ze składnikami oraz funkcje debugowania i profilowania.
 
 > [!NOTE]
-> Kompilatory i narzędzia są w stanie wygenerować dane wyjściowe, które środowisko uruchomieniowe języka wspólnego może zużywać, ponieważ system typów, format metadanych i środowiska wykonawczego (system wykonywania wirtualnego) są zdefiniowane przez standard publiczny, wspólny język ECMA Specyfikacja infrastruktury. Aby uzyskać więcej informacji, zobacz [ECMA C# i Specyfikacje infrastruktury języka wspólnego](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+> Kompilatory i narzędzia są w stanie generować dane wyjściowe, które mogą być używane przez środowisko uruchomieniowe języka wspólnego, ponieważ system typów, format metadanych i środowisko uruchomieniowe (wirtualny system wykonywania) są zdefiniowane przez Standard publiczny, Specyfikacja ECMA Common Language Infrastructure. Aby uzyskać więcej informacji, zobacz [ECMA C# i specyfikacje Common Language Infrastructure](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
-Aby włączyć czas uruchomieniowy do świadczenia usług do kodu zarządzanego, kompilatory języka musi emitować metadane, które opisuje typy, elementy członkowskie i odwołania w kodzie. Metadane są przechowywane z kodem; każdy wczytywalny plik przenośnego pliku wykonywalnego (PE) w czasie wykonywania języka wspólnego zawiera metadane. W czasie wykonywania używa metadanych do lokalizowania i ładowania klas, rozłożyć wystąpienia w pamięci, rozpoznać wywołania metody, wygenerować kod macierzysty, wymusić zabezpieczenia i ustawić granice kontekstu w czasie wykonywania.
+Aby umożliwić środowisko uruchomieniowe dostarczania usług do kodu zarządzanego, kompilatory języka muszą emitować metadane opisujące typy, elementy członkowskie i odwołania w kodzie. Metadane są przechowywane w kodzie; Każdy załadowany plik wykonywalny (PE) środowiska uruchomieniowego CLR zawiera metadane. Środowisko uruchomieniowe używa metadanych do lokalizowania i ładowania klas, układania wystąpień w pamięci, rozwiązywania wywołań metod, generowania kodu natywnego, wymuszania zabezpieczeń i ustawiania granic kontekstu czasu wykonywania.
 
-Czas wykonywania automatycznie obsługuje układ obiektu i zarządza odwołania do obiektów, zwalniając je, gdy nie są już używane. Obiekty, których okresy istnienia są zarządzane w ten sposób są nazywane danymi zarządzanymi. Wyrzucanie elementów bezużytecznych eliminuje przecieki pamięci, a także niektóre inne typowe błędy programowania. Jeśli kod jest zarządzany, można użyć danych zarządzanych, danych niezarządzanych lub zarówno zarządzanych, jak i niezarządzanych danych w aplikacji .NET Framework. Ponieważ kompilatory języka podać własne typy, takie jak typy pierwotne, nie zawsze wiadomo (lub trzeba wiedzieć), czy dane są zarządzane.
+Środowisko wykonawcze automatycznie obsługuje układ obiektu i zarządza odwołaniami do obiektów, zwalniając je, gdy nie są już używane. Obiekty, których okresy istnienia są zarządzane w ten sposób, są nazywane danymi zarządzanymi. Wyrzucanie elementów bezużytecznych eliminuje przecieki pamięci, a także inne typowe błędy programistyczne. Jeśli Twój kod jest zarządzany, możesz użyć danych zarządzanych, danych niezarządzanych lub zarówno danych zarządzanych, jak i niezarządzanych w aplikacji .NET Framework. Ponieważ kompilatory języka dostarczają własne typy, takie jak typy pierwotne, może nie zawsze znać (lub koniecznie wiedzieć), czy Twoje dane są zarządzane.
 
-Czas wykonywania języka wspólnego ułatwia projektowanie składników i aplikacji, których obiekty współdziałają między językami. Obiekty napisane w różnych językach mogą komunikować się ze sobą, a ich zachowania mogą być ściśle zintegrowane. Na przykład można zdefiniować klasę, a następnie użyć innego języka, aby wyprowadzić klasę z oryginalnej klasy lub wywołać metodę w oryginalnej klasie. Można również przekazać wystąpienie klasy do metody klasy napisane w innym języku. Ta integracja między językami jest możliwe, ponieważ kompilatory języka i narzędzia, które są przeznaczone dla czasu wykonywania użyć wspólnego systemu typów zdefiniowane przez czas wykonywania i są zgodne z regułami wykonywania do definiowania nowych typów, a także do tworzenia, używania, utrwalania i powiązania z typami.
+Środowisko uruchomieniowe języka wspólnego ułatwia projektowanie składników i aplikacji, których obiekty współdziałają w różnych językach. Obiekty wpisywane w różnych językach mogą komunikować się ze sobą, a ich zachowania mogą być ściśle zintegrowane. Na przykład można zdefiniować klasę, a następnie użyć innego języka do uzyskania klasy z oryginalnej klasy lub wywołać metodę w klasie oryginalnej. Można również przekazać wystąpienie klasy do metody klasy, która jest zapisywana w innym języku. Ta integracja między językami jest możliwa, ponieważ kompilatory i Narzędzia językowe przeznaczone dla środowiska uruchomieniowego korzystają ze wspólnego systemu typów zdefiniowanego przez środowisko uruchomieniowe i stosują reguły środowiska uruchomieniowego do definiowania nowych typów, a także do tworzenia, używania, utrwalania i powiązania z typami.
 
-W ramach swoich metadanych wszystkie zarządzane składniki przenoszą informacje o składnikach i zasobach, przeciwko którym zostały zbudowane. Czas wykonywania używa tych informacji, aby upewnić się, że składnik lub aplikacja ma określone wersje wszystkiego, czego potrzebuje, co sprawia, że kod mniej prawdopodobne, aby przerwać z powodu niektórych niezaspokojone zależności. Informacje rejestracyjne i dane o stanie nie są już przechowywane w rejestrze, w którym mogą być trudne do ustalenia i utrzymania. Zamiast tego informacje o typach, które definiujesz (i ich zależności) są przechowywane z kodem jako metadane, dzięki czemu zadania replikacji składników i usuwania znacznie mniej skomplikowane.
+W ramach swoich metadanych wszystkie składniki zarządzane zawierają informacje o składnikach i zasobach, z których zostały zbudowane. Środowisko uruchomieniowe korzysta z tych informacji, aby upewnić się, że składnik lub aplikacja mają określone wersje wszystkich potrzeb, co sprawia, że kod może być nieprzerwany z powodu pewnej zależności niewypełnienia. Informacje o rejestracji i dane o stanie nie są już przechowywane w rejestrze, gdzie mogą być trudne do ustanowienia i utrzymania. Zamiast tego informacje o typach, które definiujesz (wraz z ich zależnościami), są przechowywane w kodzie jako metadane, co sprawia, że zadania związane z replikacją i usuwaniem składników są znacznie mniej skomplikowane.
 
-Kompilatory języka i narzędzia uwidaczniają funkcjonalność środowisko uruchomieniowego w sposób, który ma być przydatny i intuicyjny dla deweloperów. Oznacza to, że niektóre funkcje środowiska uruchomieniowego mogą być bardziej zauważalne w jednym środowisku niż w innym. Sposób działania środowiska uruchomieniowego zależy od tego, którego kompilatora języka lub narzędzi używasz. Na przykład jeśli jesteś programistą języka Visual Basic, można zauważyć, że w czasie wykonywania języka wspólnego języka języka języka ma więcej obiektów obiektów niż wcześniej. Czas wykonywania zapewnia następujące korzyści:
+Kompilatory i narzędzia języka udostępniają funkcjonalność środowiska uruchomieniowego w sposób, który ma być przydatny i intuicyjny dla deweloperów. Oznacza to, że niektóre funkcje środowiska uruchomieniowego mogą być bardziej zauważalne w jednym środowisku niż w innym. Sposób działania środowiska uruchomieniowego zależy od tego, jakiego kompilatora języka lub jakich narzędzi używasz. Na przykład jeśli jesteś deweloperem Visual Basic, możesz zauważyć, że w środowisku uruchomieniowym języka wspólnego język Visual Basic ma więcej funkcji zorientowanych obiektowo niż wcześniej. Środowisko uruchomieniowe zapewnia następujące korzyści:
 
 - Usprawnienia wydajności.
 
-- Możliwość łatwego korzystania ze składników opracowanych w innych językach.
+- Możliwość łatwego korzystania ze składników utworzonych w innych językach.
 
-- Typy rozszerzalne dostarczane przez bibliotekę klas.
+- Rozszerzalne typy udostępniane przez bibliotekę klas.
 
-- Funkcje języka, takie jak dziedziczenie, interfejsy i przeciążenia dla programowania obiektowego.
+- Funkcje języka, takie jak dziedziczenie, interfejsy i przeciążanie dla programowania zorientowanego obiektowo.
 
-- Obsługa jawnego wolnego wątkowania, które umożliwia tworzenie wielowątkowych, skalowalnych aplikacji.
+- Obsługa jawnej bezpłatnej wielowątkowości, która umożliwia tworzenie aplikacji wielowątkowych i skalowalnych.
 
-- Obsługa ustrukturyzowanej obsługi wyjątków.
+- Obsługa wyjątków strukturalnych.
 
 - Obsługa atrybutów niestandardowych.
 
-- Wyrzucanie elementów bezużytecznych.
+- Odzyskiwanie pamięci.
 
-- Użyj delegatów zamiast wskaźników funkcji dla zwiększenia bezpieczeństwa typu i bezpieczeństwa. Aby uzyskać więcej informacji na temat delegatów, zobacz [System typowego typu](../../docs/standard/base-types/common-type-system.md).
+- Użycie delegatów zamiast wskaźników funkcji w celu zwiększenia bezpieczeństwa typu i bezpieczeństwa. Aby uzyskać więcej informacji na temat delegatów, zobacz [Common Type System](base-types/common-type-system.md).
 
-## <a name="clr-versions"></a>Wersje CLR
+## <a name="clr-versions"></a>Wersje środowiska CLR
 
-Numer wersji .NET Framework nie musi odpowiadać numer wersji clr zawiera. Aby uzyskać listę wersji programu .NET Framework i odpowiadających im wersji clr, zobacz [.NET Framework wersje i zależności](../framework/migration-guide/versions-and-dependencies.md). Wersje .NET Core mają jedną wersję produktu, oznacza to, że nie ma osobnej wersji CLR. Aby uzyskać listę wersji programu .NET Core, zobacz [Pobieranie programu .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Numer wersji .NET Framework nie musi odpowiadać numerowi wersji środowiska CLR, który zawiera. Listę wersji .NET Framework i odpowiadających im wersji środowiska CLR można znaleźć w temacie [.NET Framework wersje i zależności](../framework/migration-guide/versions-and-dependencies.md). Wersje .NET Core mają jedną wersję produktu, czyli nie ma oddzielnej wersji środowiska CLR. Aby zapoznać się z listą wersji programu .NET Core, zobacz [pobieranie platformy .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Powiązane tematy
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Proces zarządzanego wykonania](managed-execution-process.md)|Opisuje kroki wymagane do korzystania ze wspólnego języka wykonywania.|
-|[Automatyczne zarządzanie pamięcią](automatic-memory-management.md)|Opisuje, jak moduł zbierający elementy bezużyteczne przydziela i zwalnia pamięć.|
-|[Przegląd programu .NET Framework](../framework/get-started/overview.md)|W tym artykule opisano pojęcia key .NET Framework, takie jak wspólny system typów, współdziałanie między językami, wykonanie zarządzane, domeny aplikacji i zestawy.|
-|[System typu wspólnego](./base-types/common-type-system.md)|Opisuje sposób, w jaki typy są deklarowane, używane i zarządzane w czasie wykonywania na rzecz integracji między językami.|
+|[Zarządzany proces wykonywania](managed-execution-process.md)|Opisuje kroki wymagane do skorzystania z środowiska uruchomieniowego języka wspólnego.|
+|[Automatyczne zarządzanie pamięcią](automatic-memory-management.md)|Opisuje, jak moduł wyrzucania elementów bezużytecznych przydziela i zwalnia pamięć.|
+|[Przegląd programu .NET Framework](../framework/get-started/overview.md)|Opisuje kluczowe pojęcia .NET Framework, takie jak wspólny system typów, współdziałanie między językami, wykonywanie zarządzane, domeny aplikacji i zestawy.|
+|[Wspólny system typów](./base-types/common-type-system.md)|Opisuje, w jaki sposób typy są zadeklarowane, używane i zarządzane w środowisku uruchomieniowym w celu obsługi integracji wielu języków.|

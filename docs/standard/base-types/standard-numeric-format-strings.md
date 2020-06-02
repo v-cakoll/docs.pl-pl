@@ -16,18 +16,18 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 93f93574e6a3c24fc03a2cbc6c7d0f11f4fe61f6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 6b84fc752a7bb37ff64bf6cfa08879aed3f20010
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440879"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288319"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
 Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Standardowy ciąg formatu liczbowego przyjmuje formę `Axx` , gdzie:
 
-- `A`jest pojedynczym znakiem alfabetycznym o nazwie *specyfikator formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+- `A`jest pojedynczym znakiem alfabetycznym o nazwie *specyfikator formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące](custom-numeric-format-strings.md).
 
 - `xx`jest opcjonalną liczbą całkowitą o nazwie *specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy zauważyć, że specyfikator dokładności określa liczbę cyfr w ciągu reprezentującym liczbę. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglania, należy użyć <xref:System.Math.Ceiling%2A?displayProperty=nameWithType> metody, <xref:System.Math.Floor%2A?displayProperty=nameWithType> , lub <xref:System.Math.Round%2A?displayProperty=nameWithType> .
 
@@ -36,13 +36,13 @@ Ciągi standardowych formatów liczb służą do formatowania popularnych typów
   - **W przypadku platformy .NET Core 2,1 i nowszych**środowisko uruchomieniowe wybiera wynik z parzystą cyfrą, która jest równa co najmniej znaczącej liczbie (czyli przy użyciu <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> ).
 
   > [!NOTE]
-  > Specyfikator dokładności określa liczbę cyfr w ciągu wynikowym. Aby zapełnić ciąg wynikowy początkowymi lub końcowymi spacjami, użyj funkcji [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) i zdefiniuj *składnik wyrównania* w elemencie formatu.
+  > Specyfikator dokładności określa liczbę cyfr w ciągu wynikowym. Aby zapełnić ciąg wynikowy początkowymi lub końcowymi spacjami, użyj funkcji [formatowania złożonego](composite-formatting.md) i zdefiniuj *składnik wyrównania* w elemencie formatu.
 
 Ciągi standardowego formatu liczbowego są obsługiwane przez:
 
 - Niektóre przeciążenia `ToString` metody dla wszystkich typów liczbowych. Na przykład można podać ciąg formatu liczbowego dla <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metod i.
 
-- [Funkcja formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md)platformy .NET, która jest używana przez niektóre `Write` i `WriteLine` metody <xref:System.Console> klasy i <xref:System.IO.StreamWriter> , metody i <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody. Funkcja formatu złożonego umożliwia dołączenie ciągu reprezentującego wiele elementów danych w jednym ciągu, aby określić szerokość pola i wyrównać liczby w polu. Aby uzyskać więcej informacji, zobacz [formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md).
+- [Funkcja formatowania złożonego](composite-formatting.md)platformy .NET, która jest używana przez niektóre `Write` i `WriteLine` metody <xref:System.Console> klasy i <xref:System.IO.StreamWriter> , metody i <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody. Funkcja formatu złożonego umożliwia dołączenie ciągu reprezentującego wiele elementów danych w jednym ciągu, aby określić szerokość pola i wyrównać liczby w polu. Aby uzyskać więcej informacji, zobacz [formatowanie złożone](composite-formatting.md).
 
 - [Ciągi interpolowane](../../csharp/language-reference/tokens/interpolated.md) w języku C# i Visual Basic, które zapewniają uproszczoną składnię w porównaniu z ciągami formatu złożonego.
 
@@ -78,7 +78,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- Może być dostarczony jako `formatString` argument w elemencie formatu używany z takimi metodami jak <xref:System.String.Format%2A?displayProperty=nameWithType> , <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> . Aby uzyskać więcej informacji, zobacz [formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.
+- Może być dostarczony jako `formatString` argument w elemencie formatu używany z takimi metodami jak <xref:System.String.Format%2A?displayProperty=nameWithType> , <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> . Aby uzyskać więcej informacji, zobacz [formatowanie złożone](composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -384,9 +384,9 @@ W poniższym przykładzie całkowita i zmiennoprzecinkowa wartość liczbowa jes
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
-- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md)
+- [Niestandardowe ciągi formatujące liczby](custom-numeric-format-strings.md)
+- [Formatowanie typów](formatting-types.md)
+- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](how-to-pad-a-number-with-leading-zeros.md)
+- [Formatowanie złożone](composite-formatting.md)
 - [Przykład: Narzędzie formatowania programu .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Przykład: Narzędzie formatowania programu .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

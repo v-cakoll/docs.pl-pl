@@ -3,19 +3,19 @@ title: Mapowanie typów danych XML na typy CLR
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710664"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289112"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mapowanie typów danych XML na typy CLR
 
 W poniższej tabeli opisano domyślne mapowanie między typami danych XML a typami środowiska uruchomieniowego języka wspólnego (CLR).
 
 > [!NOTE]
-> `xs` A `xdt` prefiksy są mapowane na odpowiednio identyfikatory URI <https://www.w3.org/2001/XMLSchema> i <https://www.w3.org/2003/05/xpath-datatypes> przestrzeni nazw.
+> `xs`A `xdt` prefiksy są mapowane na <https://www.w3.org/2001/XMLSchema> <https://www.w3.org/2003/05/xpath-datatypes> odpowiednio identyfikatory URI i przestrzeni nazw.
 
 |Typ XML|Typ CLR|
 |--------------|--------------|
@@ -76,6 +76,6 @@ W poniższej tabeli opisano domyślne mapowanie między typami danych XML a typa
 |Węzeł komentarza|<xref:System.Xml.XPath.XPathNavigator>|
 |Przetwarzanie węzła instrukcji|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [Obsługa typu w ramach klas zestawu System.Xml](type-support-in-the-system-xml-classes.md)

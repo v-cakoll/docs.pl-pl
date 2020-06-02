@@ -1,5 +1,5 @@
 ---
-title: Formatowanie typów w .NET
+title: Formatowanie typów w programie .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,324 +25,324 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: e63a0962efb689a865436df771420e92319110b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523942"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290542"
 ---
-# <a name="format-types-in-net"></a>Formatowanie typów w sieci .NET
+# <a name="format-types-in-net"></a>Typy formatów w programie .NET
 
-Formatowanie jest procesem konwersji wystąpienia klasy, struktury lub wartości wyliczenia na jego reprezentację ciągu, często tak, że wynikowy ciąg może być wyświetlany użytkownikom lub deserialized przywrócić oryginalny typ danych. Ta konwersja może stanowić szereg wyzwań:
+Formatowanie to proces konwersji wystąpienia klasy, struktury lub wartości wyliczenia na reprezentację ciągu, często tak, aby otrzymany ciąg można było wyświetlić użytkownikom lub deserializacji w celu przywrócenia oryginalnego typu danych. Ta konwersja może stanowić wiele wyzwań:
 
-- Sposób, w jaki wartości są przechowywane wewnętrznie, niekoniecznie odzwierciedla sposób, w jaki użytkownicy chcą je wyświetlać. Na przykład numer telefonu może być przechowywany w formularzu 8009999999, który nie jest przyjazny dla użytkownika. Zamiast tego powinien być wyświetlany jako 800-999-9999. Zobacz sekcję [Ciągi formatu niestandardowego,](#custom-format-strings) aby zapoznać się z przykładem, który formatuje liczbę w ten sposób.
+- Sposób, w jaki są przechowywane wartości wewnętrznie, niekoniecznie odzwierciedla sposób, w jaki użytkownicy chcą je wyświetlić. Na przykład numer telefonu może być przechowywany w postaci 8009999999, który nie jest przyjazny dla użytkownika. Zamiast tego powinna być wyświetlana jako 800-999-9999. Zapoznaj się z sekcją [ciągów formatów niestandardowych](#custom-format-strings) , aby zapoznać się z przykładem, który formatuje liczbę w ten sposób.
 
-- Czasami konwersja obiektu do jego reprezentacji ciągu nie jest intuicyjna. Na przykład nie jest jasne, jak powinna być wyświetlana reprezentacja ciągu obiektu Temperature lub Person. Na przykład, który formatuje Obiekt Temperature na różne sposoby, zobacz sekcję [Ciągi formatu standardowego.](#standard-format-strings)
+- Czasami Konwersja obiektu na jego reprezentację w postaci ciągu nie jest intuicyjna. Na przykład nie jest jasne, jak powinna zostać wyświetlona Reprezentacja ciągu obiektu temperatury lub osoby. Aby zapoznać się z przykładem, który formatuje obiekt temperatury na różne sposoby, zobacz sekcję [ciągi formatu standardowego](#standard-format-strings) .
 
-- Wartości często wymagają formatowania uwzględniającego kulturę. Na przykład w aplikacji, która używa liczb do odzwierciedlenia wartości pieniężnych, ciągi liczbowe powinny zawierać symbol waluty bieżącej kultury, separator grupy (który w większości kultur jest separatorem tysięcy) i symbol dziesiętny. Na przykład zobacz [kultury zależne od formatowania z dostawcami formatów](#culture-sensitive-formatting-with-format-providers) sekcji.
+- Wartości często wymagają formatowania z uwzględnieniem kultury. Na przykład w aplikacji, która używa liczb do odzwierciedlenia wartości pieniężnych, ciągi numeryczne powinny zawierać symbol waluty bieżącej kultury, separator grupy (który w większości kultur jest separatorem tysięcy) i symbol dziesiętny. Aby zapoznać się z przykładem, zobacz [Formatowanie wrażliwe na kulturę z sekcją dostawcy formatu](#culture-sensitive-formatting-with-format-providers) .
 
-- Aplikacja może być musiał wyświetlić tę samą wartość na różne sposoby. Na przykład aplikacja może reprezentować element członkowski wyliczenia, wyświetlając reprezentację ciągu jego nazwy lub wyświetlając jego wartość podstawową. Na przykład, który formatuje <xref:System.DayOfWeek> członka wyliczenia na różne sposoby, zobacz sekcję [Ciągi formatu standardowego.](#standard-format-strings)
+- Aplikacja może mieć taką samą wartość na różne sposoby. Na przykład aplikacja może reprezentować element członkowski wyliczenia, wyświetlając ciąg reprezentujący jego nazwę lub wyświetlając jego wartość podstawową. Aby zapoznać się z przykładem formatowania elementu członkowskiego <xref:System.DayOfWeek> wyliczenia na różne sposoby, zobacz sekcję [ciągi formatu standardowego](#standard-format-strings) .
 
 > [!NOTE]
-> Formatowanie konwertuje wartość typu na reprezentację ciągu. Analizowanie jest odwrotnością formatowania. Operacja analizowania tworzy wystąpienie typu danych z jego reprezentacji ciągu. Aby uzyskać informacje dotyczące konwertowania ciągów na inne typy danych, zobacz [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)znaków .
+> Formatowanie konwertuje wartość typu na reprezentację w postaci ciągu. Analizowanie jest odwrotnością formatowania. Operacja analizowania tworzy wystąpienie typu danych z jego reprezentacji w postaci ciągu. Aby uzyskać informacje o konwertowaniu ciągów na inne typy danych, zobacz [Analizowanie ciągów](parsing-strings.md).
 
-.NET zapewnia obsługę formatowania zaawansowanego, która umożliwia deweloperom spełnianie tych wymagań.
+Platforma .NET zapewnia obsługę formatowania zaawansowanego, która umożliwia deweloperom rozwiązywanie tych wymagań.
 
-## <a name="formatting-in-net"></a>Formatowanie w .NET
+## <a name="formatting-in-net"></a>Formatowanie w programie .NET
 
-Podstawowym mechanizmem formatowania jest domyślna <xref:System.Object.ToString%2A?displayProperty=nameWithType> implementacja metody, która jest omówiona w [domyślnej sekcji Formatowanie przy użyciu metody ToString](#default-formatting-using-the-tostring-method) w dalszej części tego tematu. Jednak .NET udostępnia kilka sposobów modyfikowania i rozszerzania domyślnej obsługi formatowania. Należą do nich między innymi:
+Podstawowym mechanizmem formatowania jest domyślna implementacja <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody, która została omówiona w [domyślnym formatowaniu przy użyciu metody ToString](#default-formatting-using-the-tostring-method) w dalszej części tego tematu. Jednak platforma .NET oferuje kilka sposobów modyfikowania i zwiększania obsługi formatowania domyślnego. Należą do nich między innymi:
 
-- Zastępowanie <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody definiowania niestandardowej reprezentacji ciągu wartości obiektu. Aby uzyskać więcej informacji, zobacz [Zastąpienie ToString Metody](#override-the-tostring-method) sekcji w dalszej części tego tematu.
+- Zastępowanie <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody, aby zdefiniować niestandardową reprezentację obiektu w postaci ciągu. Aby uzyskać więcej informacji, zobacz sekcję [Zastępowanie metody ToString](#override-the-tostring-method) w dalszej części tego tematu.
 
-- Definiowanie specyfikatorów formatu, które umożliwiają reprezentację ciągu wartości obiektu, aby przybierać różne formy. Na przykład specyfikator formatu "X" w poniższej instrukcji konwertuje liczbę całkowitą na reprezentację ciągu wartości szesnastkowej.
+- Definiowanie specyfikatorów formatu, które umożliwiają reprezentację ciągu obiektu w celu przejęcia wielu formularzy. Na przykład, specyfikator formatu "X" w poniższej instrukcji konwertuje liczbę całkowitą na ciąg reprezentujący wartość szesnastkową.
 
      [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
      [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]
 
-     Aby uzyskać więcej informacji na temat specyfikatorów formatu, zobacz [ToString Metody i Format ciągów](#the-tostring-method-and-format-strings) sekcji.
+     Aby uzyskać więcej informacji na temat specyfikatorów formatu, zobacz sekcję [metody ToString i ciągi formatu](#the-tostring-method-and-format-strings) .
 
-- Za pomocą dostawców formatu, aby skorzystać z konwencji formatowania określonej kultury. Na przykład następująca instrukcja wyświetla wartość waluty przy użyciu konwencji formatowania kultury en-US.
+- Korzystanie z dostawców formatu w celu wykorzystania Konwencji formatowania określonej kultury. Na przykład poniższa instrukcja wyświetla wartość waluty przy użyciu Konwencji formatowania kultury en-US.
 
      [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
      [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]
 
-     Aby uzyskać więcej informacji na temat formatowania z dostawcami formatów, zobacz sekcję [Dostawcy formatów.](#culture-sensitive-formatting-with-format-providers)
+     Aby uzyskać więcej informacji o formatowaniu z dostawcami formatu, zobacz sekcję about [Providers (dostawcy formatu](#culture-sensitive-formatting-with-format-providers) ).
 
-- Implementowanie <xref:System.IFormattable> interfejsu do obsługi konwersji <xref:System.Convert> ciągów z klasy i formatowania złożonego. Aby uzyskać więcej informacji, zobacz [sekcję IFormattable Interface ( IFormatable Interface](#the-iformattable-interface) section.
+- Implementacja <xref:System.IFormattable> interfejsu do obsługi obydwu konwersji ciągów z <xref:System.Convert> klasą i formatowaniem złożonym. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [interfejsu IFormattable](#the-iformattable-interface) .
 
-- Za pomocą formatowania złożonego do osadzania reprezentacji ciągu wartości w większym ciągu. Aby uzyskać więcej informacji, zobacz sekcję [Formatowanie złożone.](#composite-formatting)
+- Użycie formatowania złożonego do osadzenia ciągu reprezentującego wartość w większym ciągu. Aby uzyskać więcej informacji, zobacz sekcję [formatowanie złożone](#composite-formatting) .
 
-- Implementowanie <xref:System.ICustomFormatter> <xref:System.IFormatProvider> i zapewnienie kompletnego rozwiązania do formatowania niestandardowego. Aby uzyskać więcej informacji, zobacz sekcję [Formatowanie niestandardowe za pomocą iCustomFormatter.](#custom-formatting-with-icustomformatter)
+- Implementowanie <xref:System.ICustomFormatter> i <xref:System.IFormatProvider> zapewnianie kompletnego rozwiązania do formatowania niestandardowego. Aby uzyskać więcej informacji, zobacz sekcję [formatowanie niestandardowe z ICustomFormatter](#custom-formatting-with-icustomformatter) .
 
-W poniższych sekcjach należy zbadać te metody konwersji obiektu do jego reprezentacji ciągu.
+Poniższe sekcje przedstawiają te metody konwertowania obiektu na jego reprezentację w postaci ciągu.
 
 ## <a name="default-formatting-using-the-tostring-method"></a>Formatowanie domyślne przy użyciu metody ToString
 
-Każdy typ, który <xref:System.Object?displayProperty=nameWithType> jest pochodną automatycznie `ToString` dziedziczy metodę bez parametrów, która zwraca nazwę typu domyślnie. Poniższy przykład ilustruje metodę domyślną. `ToString` Definiuje klasę o `Automobile` nazwie, która nie ma implementacji. Gdy klasa jest tworzone, `ToString` a jej metoda jest wywoływana, wyświetla jego nazwę typu. Należy zauważyć, że `ToString` metoda nie jest jawnie wywoływana w przykładzie. Metoda <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> niejawnie `ToString` wywołuje metodę obiektu przekazany do niego jako argument.
+Każdy typ pochodzący od <xref:System.Object?displayProperty=nameWithType> automatycznie dziedziczy `ToString` metodę bez parametrów, która domyślnie zwraca nazwę typu. Poniższy przykład ilustruje `ToString` metodę domyślną. Definiuje klasę o nazwie `Automobile` , która nie ma implementacji. Po utworzeniu wystąpienia klasy i `ToString` wywołaniu metody jest wyświetlana nazwa typu. Należy zauważyć, że `ToString` Metoda nie jest jawnie wywoływana w przykładzie. <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType>Metoda niejawnie wywołuje `ToString` metodę obiektu, do którego jest przenoszona jako argument.
 
 [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> Począwszy od systemu Windows 8.1, <xref:Windows.Foundation.IStringable> środowisko wykonawcze systemu Windows zawiera interfejs z jedną metodą [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), która zapewnia domyślną obsługę formatowania. Jednak zaleca się, że typy `IStringable` zarządzane nie implementują interfejsu. Aby uzyskać więcej informacji, zobacz sekcję "Środowisko wykonawcze systemu Windows i `IStringable` interfejs" na stronie referencyjnej. <xref:System.Object.ToString%2A?displayProperty=nameWithType>
+> Począwszy od Windows 8.1, środowisko wykonawcze systemu Windows zawiera <xref:Windows.Foundation.IStringable> interfejs z pojedynczą metodą [IStringable. ToString](xref:Windows.Foundation.IStringable.ToString%2A), która zapewnia obsługę formatowania domyślnego. Jednak zaleca się, aby typy zarządzane nie implementują `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz sekcję "środowisko wykonawcze systemu Windows i `IStringable` interfejs" na <xref:System.Object.ToString%2A?displayProperty=nameWithType> stronie odniesienia.
 
-Ponieważ wszystkie typy inne niż <xref:System.Object>interfejsy pochodzą z , ta funkcja jest automatycznie udostępniana do klas niestandardowych lub struktur. Jednak funkcje oferowane przez metodę `ToString` domyślną, jest ograniczona: Mimo, że identyfikuje typ, nie dostarcza żadnych informacji o wystąpieniu typu. Aby zapewnić reprezentację ciągu obiektu, który zawiera informacje o tym `ToString` obiekcie, należy zastąpić metodę.
+Ponieważ wszystkie typy inne niż interfejsy są wyprowadzane z <xref:System.Object> , ta funkcja jest automatycznie dostarczana do niestandardowych klas lub struktur. Jednak funkcje oferowane przez `ToString` metodę domyślną są ograniczone: Chociaż identyfikuje typ, nie dostarcza żadnych informacji o wystąpieniu typu. Aby podać ciąg reprezentujący obiekt, który zawiera informacje o tym obiekcie, należy zastąpić `ToString` metodę.
 
 > [!NOTE]
-> Struktury dziedziczą <xref:System.ValueType>z , który z <xref:System.Object>kolei pochodzi od . Chociaż <xref:System.ValueType> zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType>, jego implementacja jest identyczna.
+> Struktury dziedziczą z <xref:System.ValueType> , które z kolei są wyprowadzane z <xref:System.Object> . Chociaż <xref:System.ValueType> zastąpienia <xref:System.Object.ToString%2A?displayProperty=nameWithType> , jego implementacja jest taka sama.
 
-## <a name="override-the-tostring-method"></a>Zastąpać Metodę ToString
+## <a name="override-the-tostring-method"></a>Zastąp metodę ToString
 
-Wyświetlanie nazwy typu jest często ograniczonego użycia i nie pozwala konsumentom typów do odróżnienia jednego wystąpienia od innego. Można jednak zastąpić `ToString` metodę, aby zapewnić bardziej użyteczną reprezentację wartości obiektu. Poniższy przykład definiuje `Temperature` obiekt i zastępuje `ToString` jego metodę wyświetlania temperatury w stopniach Celsjusza.
+Wyświetlanie nazwy typu jest często ograniczonym zastosowaniem i nie pozwala na odbiorców typów odróżnienia jednego wystąpienia od drugiego. Można jednak zastąpić `ToString` metodę, aby zapewnić bardziej przydatną reprezentację wartości obiektu. Poniższy przykład definiuje `Temperature` obiekt i zastępuje jego metodę, `ToString` Aby wyświetlić temperaturę w stopniach Celsjusza.
 
 [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
 [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]
 
-W .NET `ToString` metoda każdego pierwotnego typu wartości została zastąpiona w celu wyświetlenia wartości obiektu zamiast jego nazwy. W poniższej tabeli przedstawiono zastąpienie dla każdego typu pierwotnego. Należy zauważyć, że większość metod zastąpione wywołać inne przeciążenie `ToString` metody i przekazać go specyfikator formatu "G", który definiuje ogólny format dla jego typu i obiekt, <xref:System.IFormatProvider> który reprezentuje bieżącą kulturę.
+W programie .NET `ToString` Metoda każdego typu wartości pierwotnej została zastąpiona, aby wyświetlić wartość obiektu zamiast jego nazwy. W poniższej tabeli przedstawiono przesłonięcie dla każdego typu pierwotnego. Należy zauważyć, że większość zastąpionych metod wywołuje inne Przeciążenie `ToString` metody i przekazuje ją specyfikator formatu "G", który definiuje format ogólny dla jego typu, a <xref:System.IFormatProvider> obiekt, który reprezentuje bieżącą kulturę.
 
-|Typ|Zastępowanie tostrowania|
+|Typ|Zastąpienie metody ToString|
 |----------|-----------------------|
-|<xref:System.Boolean>|Zwraca albo <xref:System.Boolean.TrueString?displayProperty=nameWithType> <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
-|<xref:System.Byte>|Wywołania `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Byte> wartości dla bieżącej kultury.|
+|<xref:System.Boolean>|Zwraca albo <xref:System.Boolean.TrueString?displayProperty=nameWithType> <xref:System.Boolean.FalseString?displayProperty=nameWithType> .|
+|<xref:System.Byte>|Wywołuje metodę `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Byte> wartości dla bieżącej kultury.|
 |<xref:System.Char>|Zwraca znak jako ciąg.|
-|<xref:System.DateTime>|Wywołania `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` formatowania wartości daty i godziny dla bieżącej kultury.|
-|<xref:System.Decimal>|Wywołania `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Decimal> wartości dla bieżącej kultury.|
-|<xref:System.Double>|Wywołania `Double.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Double> wartości dla bieżącej kultury.|
-|<xref:System.Int16>|Wywołania `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int16> wartości dla bieżącej kultury.|
-|<xref:System.Int32>|Wywołania `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int32> wartości dla bieżącej kultury.|
-|<xref:System.Int64>|Wywołania `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int64> wartości dla bieżącej kultury.|
-|<xref:System.SByte>|Wywołania `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.SByte> wartości dla bieżącej kultury.|
-|<xref:System.Single>|Wywołania `Single.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Single> wartości dla bieżącej kultury.|
-|<xref:System.UInt16>|Wywołania `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt16> wartości dla bieżącej kultury.|
-|<xref:System.UInt32>|Wywołania `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt32> wartości dla bieżącej kultury.|
-|<xref:System.UInt64>|Wywołania `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt64> wartości dla bieżącej kultury.|
+|<xref:System.DateTime>|Wywołuje metodę `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` formatowania wartości daty i godziny dla bieżącej kultury.|
+|<xref:System.Decimal>|Wywołuje metodę `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Decimal> wartości dla bieżącej kultury.|
+|<xref:System.Double>|Wywołuje metodę `Double.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Double> wartości dla bieżącej kultury.|
+|<xref:System.Int16>|Wywołuje metodę `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int16> wartości dla bieżącej kultury.|
+|<xref:System.Int32>|Wywołuje metodę `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int32> wartości dla bieżącej kultury.|
+|<xref:System.Int64>|Wywołuje metodę `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Int64> wartości dla bieżącej kultury.|
+|<xref:System.SByte>|Wywołuje metodę `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.SByte> wartości dla bieżącej kultury.|
+|<xref:System.Single>|Wywołuje metodę `Single.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.Single> wartości dla bieżącej kultury.|
+|<xref:System.UInt16>|Wywołuje metodę `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt16> wartości dla bieżącej kultury.|
+|<xref:System.UInt32>|Wywołuje metodę `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt32> wartości dla bieżącej kultury.|
+|<xref:System.UInt64>|Wywołuje metodę `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` formatowania <xref:System.UInt64> wartości dla bieżącej kultury.|
 
-## <a name="the-tostring-method-and-format-strings"></a>Metoda ToString i ciągi formatu
+## <a name="the-tostring-method-and-format-strings"></a>Metody ToString i ciągi formatujące
 
-Poleganie na `ToString` metodzie domyślnej `ToString` lub zastępowanie jest właściwe, gdy obiekt ma reprezentację pojedynczego ciągu. Jednak wartość obiektu często ma wiele reprezentacji. Na przykład temperatura może być wyrażona w stopniach Fahrenheita, stopni Celsjusza lub kelwinach. Podobnie wartość całkowita 10 może być reprezentowana na wiele sposobów, w tym 10, 10,0, 1,0e01 lub 10,00 USD.
+Opieranie się na domyślnej `ToString` metodzie lub zastępowaniu `ToString` jest odpowiednie, gdy obiekt ma pojedynczą reprezentację ciągu. Jednak wartość obiektu często ma wiele reprezentacji. Na przykład temperatura może być wyrażona w stopniach Fahrenheita, stopniach Celsjusza i kelwinach. Podobnie wartość całkowita 10 może być reprezentowana na wiele sposobów, w tym 10, 10,0, 1.0 E01 lub $10,00.
 
-Aby włączyć pojedynczą wartość, aby mieć wiele reprezentacji ciągów, .NET używa ciągów formatu. Ciąg formatu to ciąg zawierający co najmniej jeden wstępnie zdefiniowany format specyfikatorów, które `ToString` są pojedynczymi znakami lub grupami znaków definiustrujących sposób formatowania jej danych wyjściowych. Ciąg formatu jest następnie przekazywany jako `ToString` parametr do metody obiektu i określa, jak powinna pojawić się reprezentacja ciągu wartości tego obiektu.
+Aby włączyć pojedynczą wartość, aby zawierała wiele reprezentacji ciągów, platforma .NET używa ciągów formatu. Ciąg formatu jest ciągiem zawierającym co najmniej jeden wstępnie zdefiniowany specyfikator formatu, które są pojedynczymi znakami lub grupami znaków, które definiują sposób `ToString` formatowania danych wyjściowych przez metodę. Ciąg formatu jest następnie przenoszona jako parametr do `ToString` metody obiektu i określa, jak będzie wyglądać ciąg reprezentujący wartość tego obiektu.
 
-Wszystkie typy liczbowe, typy dat i godzin oraz typy wyliczenia w obszarze .NET obsługują wstępnie zdefiniowany zestaw specyfikatorów formatu. Można również użyć ciągów formatu do definiowania wielu reprezentacji ciągów typów danych zdefiniowanych przez aplikację.
+Wszystkie typy liczbowe, typy daty i godziny oraz typy wyliczeniowe w programie .NET obsługują wstępnie zdefiniowany zestaw specyfikatorów formatu. Można również użyć ciągów formatowania do zdefiniowania wielu reprezentacji ciągów dla typów danych zdefiniowanych przez aplikację.
 
 ### <a name="standard-format-strings"></a>Ciągi formatu standardowego
 
-Ciąg formatu standardowego zawiera specyfikator pojedynczego formatu, który jest znakiem alfabetycznym definiutywnym, który definiuje reprezentację ciągu obiektu, do którego jest stosowany, wraz z opcjonalnym specyfikatorem precyzji, który wpływa na liczbę cyfr wyświetlanych w ciągu wynikowym. Jeśli specyfikator precyzji zostanie pominięty lub nie jest obsługiwany, specyfikator formatu standardowego jest odpowiednikiem ciągu formatu standardowego.
+Ciąg formatu standardowego zawiera pojedynczy specyfikator formatu, który jest znakiem alfabetycznym, który definiuje ciąg reprezentujący obiekt, do którego jest stosowany, wraz z opcjonalnym specyfikatorem dokładności, który ma wpływ na liczbę cyfr wyświetlanych w ciągu wynikowym. Jeśli specyfikator dokładności zostanie pominięty lub nie jest obsługiwany, specyfikator formatu standardowego jest równoznaczny z ciągiem formatu standardowego.
 
-.NET definiuje zestaw specyfikatorów formatu standardowego dla wszystkich typów liczbowych, wszystkich typów daty i godziny oraz wszystkich typów wyliczeń. Na przykład każda z tych kategorii obsługuje specyfikator standardowego formatu "G", który definiuje ogólną reprezentację ciągu wartości tego typu.
+Platforma .NET definiuje zestaw specyfikatorów formatu standardowego dla wszystkich typów liczbowych, wszystkich typów daty i godziny oraz wszystkich typów wyliczeniowych. Na przykład każda z tych kategorii obsługuje specyfikator formatu standardowego "G", który definiuje ogólną reprezentację ciągu wartości tego typu.
 
-Ciągi formatu standardowego dla typów wyliczenia bezpośrednio kontrolują reprezentację ciągu wartości. Ciągi formatu przekazywane do metody wartości `ToString` wyliczenia określają, czy wartość jest wyświetlana przy użyciu nazwy ciągu (specyfikatory formatu "G" i "F"), jego podstawowej wartości integralnej (specyfikator formatu "D") lub jej wartości szesnastowej (specyfikator formatu "X"). Poniższy przykład ilustruje użycie ciągów formatu standardowego do formatowania wartości wyliczenia. <xref:System.DayOfWeek>
+Ciągi formatu standardowego dla typów wyliczeniowych bezpośrednio kontrolują reprezentację ciągu wartości. Ciągi formatu przesłane do metody wartości wyliczenia `ToString` określają, czy wartość jest wyświetlana przy użyciu nazwy ciągu (specyfikatory formatu "G" i "F"), jej podstawowej wartości całkowitej (specyfikator formatu "D") lub jej wartości szesnastkowej (specyfikator formatu "X"). Poniższy przykład ilustruje użycie ciągów formatu standardowego do formatowania <xref:System.DayOfWeek> wartości wyliczenia.
 
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
-Aby uzyskać informacje o ciągach formatu wyliczenia, zobacz [Ciągi formatu wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md).
+Aby uzyskać informacje na temat ciągów formatu wyliczenia, zobacz [ciągi formatujące Wyliczenie](enumeration-format-strings.md).
 
-Ciągi formatu standardowego dla typów liczbowych zwykle definiują ciąg wynikowy, którego dokładny wygląd jest kontrolowany przez jedną lub więcej wartości właściwości. Na przykład specyfikator formatu "C" formatuje liczbę jako wartość waluty. Po wywołaniu `ToString` metody z specyfikatorem formatu "C" jako jedynym parametrem, <xref:System.Globalization.NumberFormatInfo> następujące wartości właściwości z obiektu bieżącej kultury są używane do definiowania reprezentacji ciągu wartości liczbowej:
+Ciągi formatu standardowego dla typów liczbowych zwykle definiują ciąg wynikowy, którego dokładny wygląd jest kontrolowany przez jedną lub więcej wartości właściwości. Na przykład specyfikator formatu "C" formatuje liczbę jako wartość walutową. Po wywołaniu `ToString` metody ze specyfikatorem formatu "C" jako jedynego parametru, następujące wartości właściwości z obiektu bieżącej kultury <xref:System.Globalization.NumberFormatInfo> są używane do definiowania ciągu reprezentującego wartość liczbową:
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> która określa symbol waluty bieżącej kultury.
+- <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>Właściwość, która określa symbol waluty bieżącej kultury.
 
-- Lub <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> właściwość, która zwraca liczbę całkowitą, która określa następujące wartości:
+- <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>Właściwość lub <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> , która zwraca liczbę całkowitą, która określa następujące elementy:
 
   - Położenie symbolu waluty.
 
-  - Czy wartości ujemne są wskazywane przez wiodący znak ujemny, końcowy znak ujemny lub nawiasy.
+  - Czy wartości ujemne są wskazywane przez wiodący znak ujemny, końcowy znak minus lub nawiasy.
 
-  - Określa, czy spacja jest wyświetlana między wartością liczbową a symbolem waluty.
+  - Określa, czy spacja jest wyświetlana między wartością liczbową, a symbolem waluty.
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A> która definiuje liczbę cyfr ułamkowych w ciągu wynikowym.
+- <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>Właściwość, która definiuje liczbę cyfr dziesiętnych w ciągu wynikowym.
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A> która definiuje symbol separatora dziesiętnego w ciągu wynikowym.
+- <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>Właściwość, która definiuje symbol separatora dziesiętnego w ciągu wynikowym.
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A> która definiuje symbol separatora grupy.
+- <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>Właściwość, która definiuje symbol separatora grupy.
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A> która definiuje liczbę cyfr w każdej grupie po lewej stronie miejsca dziesiętnego.
+- <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>Właściwość, która definiuje liczbę cyfr w każdej grupie po lewej stronie wartości dziesiętnej.
 
-- Właściwość, <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> która określa znak ujemny używany w ciągu wynik, jeśli nawiasy nie są używane do wskazywania wartości ujemnych.
+- <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>Właściwość, która określa znak ujemny używany w ciągu wynikowym, jeśli nawiasy nie są używane do wskazania wartości ujemnych.
 
-Ponadto ciągi formatu numerycznego mogą zawierać specyfikator precyzji. Znaczenie tego specyfikatora zależy od ciągu formatu, z którym jest używany, ale zazwyczaj wskazuje całkowitą liczbę cyfr lub liczbę cyfr ułamkowych, które powinny pojawić się w ciągu wynikowym. Na przykład w poniższym przykładzie użyto standardowego ciągu numerycznego "X4" i specyfikatora precyzji, aby utworzyć wartość ciągu, która ma cztery cyfry szesnastkowe.
+Ponadto ciągi formatu liczbowego mogą zawierać specyfikator dokładności. Znaczenie tego specyfikatora zależy od ciągu formatu, z którym jest używany, ale zazwyczaj wskazuje całkowitą liczbę cyfr lub liczbę cyfr, które powinny być wyświetlane w ciągu wynikowym. Na przykład w poniższym przykładzie użyto standardowego ciągu numerycznego "X4" i specyfikatora dokładności, aby utworzyć wartość ciągu, która ma cztery cyfry szesnastkowe.
 
 [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
 [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]
 
-Aby uzyskać więcej informacji na temat standardowych ciągów formatowania liczbowego, zobacz [Standardowe ciągi formatu numerycznego](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+Aby uzyskać więcej informacji na temat standardowych ciągów formatowania liczbowego, zobacz [Standardowe ciągi formatujące](standard-numeric-format-strings.md).
 
-Ciągi formatu standardowego dla wartości daty i godziny są <xref:System.Globalization.DateTimeFormatInfo> aliasami dla ciągów formatu niestandardowego przechowywanych przez określoną właściwość. Na przykład wywołanie `ToString` metody wartości daty i godziny z specyfikatorem formatu "D" wyświetla datę i godzinę <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> przy użyciu ciągu formatu niestandardowego przechowywanego we właściwości bieżącej kultury. (Aby uzyskać więcej informacji na temat ciągów formatu niestandardowego, zobacz [następną sekcję](#custom-format-strings).) Poniższy przykład ilustruje tę relację.
+Ciągi formatu standardowego dla wartości daty i godziny to aliasy dla ciągów formatów niestandardowych przechowywanych przez określoną <xref:System.Globalization.DateTimeFormatInfo> Właściwość. Na przykład wywołanie `ToString` metody wartości daty i godziny z specyfikatorem formatu "D" powoduje wyświetlenie daty i godziny przy użyciu niestandardowego ciągu formatu przechowywanego we właściwości bieżącej kultury <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> . (Aby uzyskać więcej informacji na temat ciągów formatu niestandardowego, zobacz [następną sekcję](#custom-format-strings)). Poniższy przykład ilustruje tę relację.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
 
-Aby uzyskać więcej informacji o standardowych ciągach formatu daty i godziny, zobacz [Ciągi formatu daty standardowej i godziny](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
+Aby uzyskać więcej informacji na temat standardowych ciągów formatu daty i godziny, zobacz [ciągi standardowych formatów daty i godziny](standard-date-and-time-format-strings.md).
 
-Można również użyć ciągów formatu standardowego, aby zdefiniować reprezentację ciągu obiektu `ToString(String)` zdefiniowanego przez aplikację, który jest produkowany przez metodę obiektu. Można zdefiniować specyfikatory określonego formatu standardowego, które obsługuje obiekt, i można określić, czy są one rozróżniane wielkość liter, czy niewrażliwe na wielkość liter. Implementacja `ToString(String)` metody powinna obsługiwać następujące elementy:
+Za pomocą ciągów formatu standardowego można także zdefiniować ciąg reprezentujący obiekt zdefiniowany przez aplikację, który jest generowany przez `ToString(String)` metodę obiektu. Można zdefiniować określone specyfikatory formatu standardowego, które obsługuje dany obiekt, i można określić, czy są one rozróżniane wielkości liter czy nie są rozróżniane wielkości liter. Implementacja `ToString(String)` metody powinna obsługiwać następujące elementy:
 
-- Specyfikator formatu "G", który reprezentuje niestandardowy lub wspólny format obiektu. Bezparametrowe przeciążenie `ToString` metody obiektu `ToString(String)` należy wywołać jego przeciążenie i przekazać go ciąg formatu standardowego "G".
+- Specyfikator formatu "G", który reprezentuje niestandardowy lub typowy format obiektu. Przeciążenie bez parametrów `ToString` metody obiektu powinno wywołać jego `ToString(String)` Przeciążenie i przekazać do niego ciąg formatu standardowego "G".
 
-- Obsługa specyfikatora formatu, który jest`Nothing` równy odwołaniu zerowemu (w języku Visual Basic). Specyfikator formatu, który jest równy odwołani null należy uznać za równoważne specyfikatora formatu "G".
+- Obsługa specyfikatora formatu, który jest równy odwołaniu o wartości null ( `Nothing` w Visual Basic). Specyfikator formatu, który jest równy odwołaniu o wartości null, powinien być uważany za równoważny specyfikatorowi formatu "G".
 
-Na przykład `Temperature` klasa może wewnętrznie przechowywać temperaturę w stopniach Celsjusza i `Temperature` używać specyfikatorów formatu do reprezentowania wartości obiektu w stopniach Celsjusza, stopni Celsjusza i kelwinach. Poniższy przykład stanowi ilustrację.
+Na przykład `Temperature` Klasa może wewnętrznie przechowywać temperaturę w stopniach Celsjusza i używać specyfikatorów formatu do reprezentowania wartości `Temperature` obiektu w stopniach Celsjusza, stopniach Fahrenheita i kelwinach. Poniższy przykład stanowi ilustrację.
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
 
 ### <a name="custom-format-strings"></a>Niestandardowe ciągi formatowania
 
-Oprócz ciągów formatu standardowego program .NET definiuje ciągi niestandardowego formatu zarówno dla wartości liczbowych, jak i wartości daty i godziny. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora formatu niestandardowego, które definiują reprezentację ciągu wartości. Na przykład niestandardowy ciąg formatu daty i godziny "rrrr/mm/dd hh:mm:ss.ffff t zzz" konwertuje datę na jego reprezentację ciągu w postaci "2008/11/15 07:45:00.0000 P -08:00" dla kultury en-US. Podobnie ciąg formatu niestandardowego "0000" konwertuje wartość całkowitą 12 na "0012". Aby uzyskać pełną listę ciągów formatu niestandardowego, zobacz [Niestandardowe ciągi formatu daty i godziny](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) oraz [Niestandardowe ciągi formatu numerycznego](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+Oprócz standardowych ciągów formatu, .NET definiuje niestandardowe ciągi formatu dla wartości liczbowych i wartości daty i godziny. Niestandardowy ciąg formatu składa się z co najmniej jednego specyfikatora formatu niestandardowego, który definiuje reprezentację ciągu wartości. Na przykład niestandardowy ciąg formatu daty i godziny "rrrr/mm/dd hh: mm: SS. FFFF t ZZZ" konwertuje datę na reprezentację ciągu w postaci "2008/11/15 07:45:00.0000 P-08:00" dla kultury en-US. Podobnie ciąg formatu niestandardowego "0000" konwertuje wartość całkowitą 12 na "0012". Aby zapoznać się z pełną listą niestandardowych ciągów formatujących, zobacz [Niestandardowe ciągi formatujące datę i godzinę](custom-date-and-time-format-strings.md) oraz [Niestandardowe ciągi formatujące liczbowe](custom-numeric-format-strings.md).
 
-Jeśli ciąg formatu składa się z jednego specyfikatora formatu niestandardowego, specyfikator formatu powinien być poprzedzony procentem (%) aby uniknąć pomyłek ze standardowym specyfikatorem formatu. W poniższym przykładzie użyto specyfikatora formatu niestandardowego "M", aby wyświetlić jednocyfrowy lub dwucyfrowy numer miesiąca określonej daty.
+Jeśli ciąg formatu składa się z pojedynczego specyfikatora formatu niestandardowego, specyfikator formatu powinien być poprzedzony wartością procentową (%) symbol, aby uniknąć nieporozumień ze specyfikatorem formatu standardowego. Poniższy przykład używa specyfikatora formatu niestandardowego "M", aby wyświetlić jedną cyfrę lub dwucyfrową liczbę miesięcy w danym dniu.
 
 [!code-csharp[Conceptual.Formatting.Overview#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/singlecustom1.cs#8)]
 [!code-vb[Conceptual.Formatting.Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/singlecustom1.vb#8)]
 
-Wiele ciągów w formacie standardowym dla wartości daty i godziny to aliasy dla ciągów formatu niestandardowego, które są definiowane przez właściwości <xref:System.Globalization.DateTimeFormatInfo> obiektu. Ciągi formatu niestandardowego oferują również znaczną elastyczność w dostarczaniu formatowania zdefiniowanego przez aplikację dla wartości liczbowych lub wartości daty i godziny. Można zdefiniować własne niestandardowe ciągi wyników dla wartości liczbowych oraz wartości daty i godziny, łącząc wiele specyfikatorów formatu niestandardowego w jeden ciąg formatu niestandardowego. Poniższy przykład definiuje ciąg formatu niestandardowego, który wyświetla dzień tygodnia w nawiasach po nazwie miesiąca, dniu i roku.
+Wiele ciągów formatu standardowego dla wartości daty i godziny to aliasy dla ciągów formatów niestandardowych, które są zdefiniowane przez właściwości <xref:System.Globalization.DateTimeFormatInfo> obiektu. Niestandardowe ciągi formatujące oferują również znaczną elastyczność w dostarczaniu formatowania zdefiniowanego przez aplikację dla wartości numerycznych lub wartości daty i godziny. Można zdefiniować własne niestandardowe ciągi wynikowe dla wartości liczbowych i wartości daty i godziny, łącząc wiele niestandardowych specyfikatorów formatu w jeden ciąg formatu niestandardowego. W poniższym przykładzie zdefiniowano ciąg formatu niestandardowego, który wyświetla dzień tygodnia w nawiasach po nazwie miesiąca, dzień i roku.
 
 [!code-csharp[Conceptual.Formatting.Overview#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/custom1.cs#9)]
 [!code-vb[Conceptual.Formatting.Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/custom1.vb#9)]
 
-Poniższy przykład definiuje ciąg formatu <xref:System.Int64> niestandardowego, który wyświetla wartość jako standardowy, siedmiocyfrowy numer telefonu w USA wraz z jego numerem kierunkowym.
+W poniższym przykładzie zdefiniowano ciąg formatu niestandardowego, który wyświetla <xref:System.Int64> wartość jako standardowy, 7-cyfrowy numer telefonu amerykańskiego wraz z numerem kierunkowym.
 
 [!code-csharp[Conceptual.Formatting.Overview#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/telnumber1.cs#21)]
 [!code-vb[Conceptual.Formatting.Overview#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/telnumber1.vb#21)]
 
-Mimo że ciągi formatów standardowych mogą zazwyczaj obsługiwać większość potrzeb formatowania dla typów zdefiniowanych przez aplikację, można również zdefiniować niestandardowe specyfikatory formatów w celu formatowania typów.
+Chociaż ciągi formatu standardowego mogą ogólnie obsłużyć większość potrzeb formatowania dla typów zdefiniowanych przez aplikację, można także zdefiniować specyfikatory formatu niestandardowego, aby sformatować typy.
 
-### <a name="format-strings-and-net-types"></a>Formatowanie ciągów i typów .NET
+### <a name="format-strings-and-net-types"></a>Ciągi formatujące i typy .NET
 
-Wszystkie <xref:System.Byte>typy liczbowe (czyli <xref:System.Decimal> <xref:System.Double>, <xref:System.Int16> <xref:System.Int32>, <xref:System.Int64> <xref:System.SByte>, <xref:System.Single> <xref:System.UInt16>, <xref:System.UInt32> <xref:System.UInt64>, <xref:System.Numerics.BigInteger> , , , <xref:System.DateTime>, <xref:System.DateTimeOffset> <xref:System.TimeSpan>, <xref:System.Guid>, , i typy), a także , , , , i wszystkie typy wyliczenia, obsługa formatowania z ciągami formatu. Aby uzyskać informacje na temat określonych ciągów formatu obsługiwanych przez każdy typ, zobacz następujące tematy:
+Wszystkie typy liczbowe (takie jak,,,,,,,,,, <xref:System.Byte> <xref:System.Decimal> <xref:System.Double> <xref:System.Int16> <xref:System.Int32> <xref:System.Int64> <xref:System.SByte> <xref:System.Single> <xref:System.UInt16> <xref:System.UInt32> <xref:System.UInt64> i <xref:System.Numerics.BigInteger> ), jak również typy <xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.TimeSpan> wyliczeniowe,,,, <xref:System.Guid> i wszystkie, obsługują formatowanie ciągów formatowania. Informacje o określonych ciągach formatu obsługiwanych przez poszczególne typy można znaleźć w następujących tematach:
 
 |Tytuł|Definicja|
 |-----------|----------------|
-|[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów wartości liczbowych.|
-|[Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|W tym artykule opisano ciągi formatów niestandardowych, które tworzą formaty specyficzne dla aplikacji dla wartości liczbowych.|
-|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|W tym artykule opisano ciągi formatu <xref:System.DateTime> <xref:System.DateTimeOffset> standardowego, które tworzą często używane reprezentacje ciągów i wartości.|
-|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano ciągi formatu niestandardowego, które tworzą formaty specyficzne dla <xref:System.DateTime> aplikacji i <xref:System.DateTimeOffset> wartości.|
-|[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów interwałów czasu.|
-|[Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|W tym artykule opisano ciągi formatów niestandardowych, które tworzą formaty specyficzne dla aplikacji dla interwałów czasowych.|
-|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które są używane do tworzenia reprezentacji ciągów wartości wyliczenia.|
-|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Opisuje standardowe ciągi <xref:System.Guid> formatu dla wartości.|
+|[Standardowe ciągi formatujące liczby](standard-numeric-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów wartości liczbowych.|
+|[Niestandardowe ciągi formatujące liczby](custom-numeric-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty specyficzne dla aplikacji dla wartości liczbowych.|
+|[Standardowe ciągi formatujące datę i godzinę](standard-date-and-time-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągu <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.|
+|[Niestandardowe ciągi formatujące datę i godzinę](custom-date-and-time-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty dla i wartości specyficzne dla aplikacji <xref:System.DateTime> <xref:System.DateTimeOffset> .|
+|[Standardowe ciągi formatujące TimeSpan](standard-timespan-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów przedziałów czasu.|
+|[Niestandardowe ciągi formatujące TimeSpan](custom-timespan-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty specyficzne dla aplikacji dla przedziałów czasu.|
+|[Ciągi formatujące Wyliczenie](enumeration-format-strings.md)|Opisuje ciągi formatu standardowego, które są używane do tworzenia reprezentacji ciągów wartości wyliczenia.|
+|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Opisuje ciągi formatu standardowego dla <xref:System.Guid> wartości.|
 
-## <a name="culture-sensitive-formatting-with-format-providers"></a>Formatowanie z uwzględnieniem kultury z dostawcami formatów
+## <a name="culture-sensitive-formatting-with-format-providers"></a>Uwzględnianie kulturowe formatowania z dostawcami formatowania
 
-Chociaż specyfikatory formatów umożliwiają dostosowanie formatowania obiektów, tworzenie znaczącej reprezentacji ciągów obiektów często wymaga dodatkowych informacji o formatowaniu. Na przykład formatowanie liczby jako wartości waluty przy użyciu ciągu formatu standardowego "C" lub ciągu formatu niestandardowego, takiego jak "$ #,#.00", wymaga co najmniej informacji o prawidłowym symbolu waluty, separatorze grupy i separatorze dziesiętnym, które mają być dostępne do uwzględnienia w sformatowanym ciągu. W .NET te dodatkowe informacje o formatowaniu są udostępniane za pośrednictwem <xref:System.IFormatProvider> interfejsu, który jest `ToString` dostarczany jako parametr do jednego lub więcej przeciążeń metody typów liczbowych oraz typów daty i godziny. <xref:System.IFormatProvider>implementacje są używane w .NET do obsługi formatowania specyficznego dla kultury. Poniższy przykład ilustruje, jak zmienia się reprezentacja ciągu <xref:System.IFormatProvider> obiektu, gdy jest sformatowany z trzema obiektami reprezentującymi różne kultury.
+Chociaż specyfikatory formatu pozwalają dostosować formatowanie obiektów, generowanie znaczących reprezentacji obiektów często wymaga dodatkowych informacji o formatowaniu. Na przykład formatowanie liczby jako wartości walutowej przy użyciu standardowego ciągu formatu "C" lub niestandardowego ciągu formatu, takiego jak "$ #, #. 00" wymaga co najmniej informacji o poprawnym symbolu waluty, separatorze grup i separatorze dziesiętnym, który ma być dostępny do uwzględnienia w sformatowanym ciągu. W programie .NET te dodatkowe informacje o formatowaniu są udostępniane za pomocą <xref:System.IFormatProvider> interfejsu, który jest dostarczany jako parametr do jednego lub większej liczby przeciążeń `ToString` metody typów liczbowych i typów dat i godzin. <xref:System.IFormatProvider>implementacje są używane w programie .NET do obsługi formatowania specyficznego dla kultury. Poniższy przykład ilustruje sposób, w jaki ciąg reprezentujący obiekt ulega zmianie, gdy jest sformatowany przy użyciu trzech <xref:System.IFormatProvider> obiektów, które reprezentują różne kultury.
 
 [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
 [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]
 
-Interfejs <xref:System.IFormatProvider> zawiera jedną <xref:System.IFormatProvider.GetFormat%28System.Type%29>metodę, która ma pojedynczy parametr, który określa typ obiektu, który zawiera informacje o formatowaniu. Jeśli metoda może dostarczyć obiekt tego typu, zwraca go. W przeciwnym razie zwraca`Nothing` odwołanie null (w języku Visual Basic).
+<xref:System.IFormatProvider>Interfejs zawiera jedną metodę, <xref:System.IFormatProvider.GetFormat%28System.Type%29> , która ma jeden parametr, który określa typ obiektu, który zawiera informacje o formatowaniu. Jeśli metoda może dostarczyć obiekt tego typu, zwraca go. W przeciwnym razie zwraca odwołanie o wartości null ( `Nothing` w Visual Basic).
 
-<xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>jest metodą wywołania zwrotnego. Po wywołaniu `ToString` przeciążenia metody, który <xref:System.IFormatProvider> zawiera <xref:System.IFormatProvider.GetFormat%2A> parametr, <xref:System.IFormatProvider> wywołuje metodę tego obiektu. Metoda <xref:System.IFormatProvider.GetFormat%2A> jest odpowiedzialna za zwracanie obiektu, który zawiera niezbędne informacje `formatType` o formatowaniu, określone przez jego parametr, do `ToString` metody.
+<xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>jest metodą wywołania zwrotnego. Po wywołaniu `ToString` przeciążenia metody, która zawiera <xref:System.IFormatProvider> parametr, wywołuje <xref:System.IFormatProvider.GetFormat%2A> metodę tego <xref:System.IFormatProvider> obiektu. <xref:System.IFormatProvider.GetFormat%2A>Metoda jest odpowiedzialna za zwracanie obiektu, który dostarcza niezbędne informacje o formatowaniu, jak określono przez jego `formatType` parametr, do `ToString` metody.
 
-Wiele metod formatowania lub konwersji ciągów <xref:System.IFormatProvider>zawiera parametr typu , ale w wielu przypadkach wartość parametru jest ignorowana, gdy metoda jest wywoływana. W poniższej tabeli wymieniono niektóre metody formatowania, <xref:System.Type> które używają parametru <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> i typ obiektu, który przechodzą do metody.
+Wiele metod formatowania lub konwersji ciągów zawiera parametr typu <xref:System.IFormatProvider> , ale w wielu przypadkach wartość parametru jest ignorowana, gdy wywoływana jest metoda. W poniższej tabeli wymieniono niektóre metody formatowania, które używają parametru i typu <xref:System.Type> obiektu, który przekazuje do <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody.
 
 |Metoda|Typ `formatType` parametru|
 |------------|------------------------------------|
-|`ToString`metoda typów liczbowych|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
-|`ToString`metoda typów daty i godziny|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
+|`ToString`Metoda typów liczbowych|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
+|`ToString`Metoda typów daty i godziny|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 
 > [!NOTE]
-> Metody `ToString` typów liczbowych i typów daty i godziny są przeciążone, a <xref:System.IFormatProvider> tylko niektóre przeciążenia zawierają parametr. Jeśli metoda nie ma parametru <xref:System.IFormatProvider>typu , obiekt, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> który jest zwracany przez właściwość jest przekazywana zamiast. Na przykład wywołanie metody <xref:System.Int32.ToString?displayProperty=nameWithType> domyślnej ostatecznie powoduje wywołanie metody, takie jak: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.
+> `ToString`Metody typów liczbowych i daty i godziny są przeciążone, a tylko niektóre przeciążenia zawierają <xref:System.IFormatProvider> parametr. Jeśli metoda nie ma parametru typu <xref:System.IFormatProvider> , zamiast niego zostanie przekazana obiekt, który jest zwracany przez <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> Właściwość. Na przykład wywołanie <xref:System.Int32.ToString?displayProperty=nameWithType> metody domyślnej ostatecznie powoduje wywołanie metody, takie jak: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)` .
 
-.NET udostępnia trzy <xref:System.IFormatProvider>klasy, które implementują:
+Platforma .NET udostępnia trzy klasy, które implementują <xref:System.IFormatProvider> :
 
-- <xref:System.Globalization.DateTimeFormatInfo>, klasa, która zawiera informacje o formatowaniu wartości daty i godziny dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienie siebie.
+- <xref:System.Globalization.DateTimeFormatInfo>, Klasa, która zawiera informacje o formatowaniu dla wartości daty i godziny dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienie samego siebie.
 
-- <xref:System.Globalization.NumberFormatInfo>, klasa, która zawiera informacje o formatowaniu numerycznym dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienie siebie.
+- <xref:System.Globalization.NumberFormatInfo>, Klasa, która zawiera informacje o formatowaniu liczb dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienie samego siebie.
 
-- <xref:System.Globalization.CultureInfo>. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może <xref:System.Globalization.NumberFormatInfo> zwrócić obiekt w celu zapewnienia <xref:System.Globalization.DateTimeFormatInfo> informacji o formatowaniu liczbowym lub obiekt, aby zapewnić informacje o formatowaniu wartości daty i godziny.
+- <xref:System.Globalization.CultureInfo>. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może zwrócić <xref:System.Globalization.NumberFormatInfo> obiekt, aby zapewnić informacje o formatowaniu liczb lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, aby zapewnić informacje o formatowaniu dla wartości daty i godziny.
 
-Można również zaimplementować własnego dostawcy formatu, aby zastąpić jedną z tych klas. Jednak <xref:System.IFormatProvider.GetFormat%2A> metoda implementacji musi zwrócić obiekt typu wymienionego w poprzedniej tabeli, jeśli musi `ToString` dostarczyć informacje o formatowaniu do metody.
+Możesz również zaimplementować własnego dostawcę formatu, aby zastąpić każdą z tych klas. Jednak <xref:System.IFormatProvider.GetFormat%2A> Metoda implementacji musi zwrócić obiekt typu wymienionego w poprzedniej tabeli, jeśli musi dostarczyć informacje o formatowaniu do `ToString` metody.
 
-### <a name="culture-sensitive-formatting-of-numeric-values"></a>Formatowanie wartości liczbowych z uwzględnieniem kultury
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>Czułe na kulturę formatowanie wartości liczbowych
 
-Domyślnie formatowanie wartości liczbowych jest zależne od kultury. Jeśli nie określisz kultury podczas wywoływania metody formatowania, używane są konwencje formatowania bieżącej kultury wątku. Jest to zilustrowane w poniższym przykładzie, który zmienia bieżącą kulturę wątku cztery razy, a następnie wywołuje <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> metodę. W każdym przypadku ciąg wynik odzwierciedla konwencje formatowania bieżącej kultury. Jest to `ToString` spowodowane `ToString(String)` i metody zawijają wywołania do każdego typu numerycznego `ToString(String, IFormatProvider)` metody.
+Domyślnie formatowanie wartości liczbowych jest zależne od kultury. Jeśli nie określisz kultury podczas wywoływania metody formatowania, używane są konwencje formatowania bieżącej kultury wątku. Jest to zilustrowane w poniższym przykładzie, który zmienia bieżącą kulturę wątku czterokrotnie, a następnie wywołuje <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> metodę. W każdym przypadku ciąg wynikowy odzwierciedla konwencje formatowania bieżącej kultury. Wynika to z faktu, że `ToString` `ToString(String)` metody i zawijają wywołania do poszczególnych metod typu liczbowego `ToString(String, IFormatProvider)` .
 
 [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
 [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]
 
-Można również sformatować wartość liczbową dla `ToString` określonej kultury, wywołując przeciążenie, które ma `provider` parametr i przekazując go jedną z następujących czynności:
+Możesz również sformatować wartość numeryczną dla określonej kultury, wywołując `ToString` Przeciążenie, które ma `provider` parametr i przekazując go jedną z następujących czynności:
 
-- Obiekt, <xref:System.Globalization.CultureInfo> który reprezentuje kultury, których konwencje formatowania mają być używane. Jego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca wartość <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> właściwości, która <xref:System.Globalization.NumberFormatInfo> jest obiektem, który zawiera informacje o formatowaniu specyficzne dla kultury dla wartości liczbowych.
+- <xref:System.Globalization.CultureInfo>Obiekt, który reprezentuje kulturę, której konwencje formatowania mają być używane. Jego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> Metoda zwraca wartość <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> właściwości, która jest <xref:System.Globalization.NumberFormatInfo> obiektem, który zawiera informacje o formatowaniu specyficzne dla kultury dla wartości numerycznych.
 
-- Obiekt, <xref:System.Globalization.NumberFormatInfo> który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Jego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> metoda zwraca wystąpienie siebie.
+- <xref:System.Globalization.NumberFormatInfo>Obiekt, który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Jego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> Metoda zwraca wystąpienie samego siebie.
 
-W poniższym <xref:System.Globalization.NumberFormatInfo> przykładzie użyto obiektów, które reprezentują kultury angielski (Stany Zjednoczone) i Angielski (Wielka Brytania) oraz kultury neutralne francuskie i rosyjskie do formatowania liczby zmiennoprzecinkowej.
+Poniższy przykład używa <xref:System.Globalization.NumberFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Wielka Brytania) oraz kulturę neutralną w języku francuskim i rosyjskim do formatowania liczby zmiennoprzecinkowej.
 
 [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
 [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]
 
-### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Formatowanie wartości daty i godziny uwzględniające kulturę
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Czułe na kulturowe formatowanie wartości daty i godziny
 
-Domyślnie formatowanie wartości daty i godziny jest zależne od kultury. Jeśli nie określisz kultury podczas wywoływania metody formatowania, używane są konwencje formatowania bieżącej kultury wątku. Jest to zilustrowane w poniższym przykładzie, który zmienia bieżącą kulturę wątku cztery razy, a następnie wywołuje <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> metodę. W każdym przypadku ciąg wynik odzwierciedla konwencje formatowania bieżącej kultury. Dzieje się <xref:System.DateTime.ToString?displayProperty=nameWithType>tak <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>dlatego, <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> że , <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> , <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> i metody zawijają wywołania i metody.
+Domyślnie formatowanie wartości daty i godziny jest zależne od kultury. Jeśli nie określisz kultury podczas wywoływania metody formatowania, używane są konwencje formatowania bieżącej kultury wątku. Jest to zilustrowane w poniższym przykładzie, który zmienia bieżącą kulturę wątku czterokrotnie, a następnie wywołuje <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> metodę. W każdym przypadku ciąg wynikowy odzwierciedla konwencje formatowania bieżącej kultury. Jest to spowodowane tym <xref:System.DateTime.ToString?displayProperty=nameWithType> , <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> że <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> metody,, i <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> zawijają wywołania <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metod i.
 
 [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
 [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]
 
-Można również sformatować wartość daty i <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> godziny <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> dla określonej `provider` kultury, wywołując lub przeciążenie, które ma parametr i przekazując go jedną z następujących czynności:
+Możesz również sformatować wartość daty i godziny dla określonej kultury poprzez wywołanie metody <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> przeciążenia, która ma `provider` parametr i przekazanie do niego jednego z następujących elementów:
 
-- Obiekt, <xref:System.Globalization.CultureInfo> który reprezentuje kultury, których konwencje formatowania mają być używane. Jego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca wartość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości, która <xref:System.Globalization.DateTimeFormatInfo> jest obiektem, który zawiera informacje o formatowaniu specyficzne dla kultury dla wartości daty i godziny.
+- <xref:System.Globalization.CultureInfo>Obiekt, który reprezentuje kulturę, której konwencje formatowania mają być używane. Jego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> Metoda zwraca wartość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości, która jest <xref:System.Globalization.DateTimeFormatInfo> obiektem, który zawiera informacje o formatowaniu specyficzne dla kultury dla wartości daty i godziny.
 
-- Obiekt, <xref:System.Globalization.DateTimeFormatInfo> który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Jego <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> metoda zwraca wystąpienie siebie.
+- <xref:System.Globalization.DateTimeFormatInfo>Obiekt, który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Jego <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> Metoda zwraca wystąpienie samego siebie.
 
-W poniższym <xref:System.Globalization.DateTimeFormatInfo> przykładzie użyto obiektów, które reprezentują kultury angielski (Stany Zjednoczone) i Angielski (Wielka Brytania) oraz kultury neutralne francuskie i rosyjskie do formatowania daty.
+Poniższy przykład używa <xref:System.Globalization.DateTimeFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Wielka Brytania) oraz kulturę neutralną w języku francuskim i rosyjskim do formatowania daty.
 
 [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
 [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]
 
 ## <a name="the-iformattable-interface"></a>Interfejs IFormattable
 
-Zazwyczaj typy, które `ToString` przeciążają metodę <xref:System.IFormatProvider> ciągiem <xref:System.IFormattable> formatu i parametrem również implementują interfejs. Ten interfejs ma jeden <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>element członkowski, który zawiera zarówno ciąg formatu, jak i dostawcę formatu jako parametry.
+Zazwyczaj typy, które przeciążą `ToString` metodę z ciągiem formatu i <xref:System.IFormatProvider> parametrem również implementują <xref:System.IFormattable> interfejs. Ten interfejs ma pojedynczy element członkowski, <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> który zawiera ciąg formatu i dostawcę formatowania jako parametry.
 
 Implementacja <xref:System.IFormattable> interfejsu dla klasy zdefiniowanej przez aplikację oferuje dwie zalety:
 
-- Obsługa konwersji ciągów <xref:System.Convert> przez klasę. Wywołania <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> i <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metody <xref:System.IFormattable> wywołać implementacji automatycznie.
+- Obsługa konwersji ciągów przez <xref:System.Convert> klasę. Wywołania <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> metod i powodują <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> automatyczne wywoływanie <xref:System.IFormattable> implementacji.
 
-- Obsługa formatowania kompozytowego. Jeśli element formatu, który zawiera ciąg formatu jest używany do formatowania <xref:System.IFormattable> typu niestandardowego, środowisko uruchomieniowe języka wspólnego automatycznie wywołuje implementację i przekazuje go ciąg formatu. Aby uzyskać więcej informacji na temat <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>formatowania złożonego za pomocą metod, takich jak lub , zobacz sekcję [Formatowanie kompozytowe.](#composite-formatting)
+- Obsługa formatowania złożonego. Jeśli element formatu, który zawiera ciąg formatu, jest używany do formatowania typu niestandardowego, środowisko uruchomieniowe języka wspólnego automatycznie wywoła <xref:System.IFormattable> implementację i przekaże ciąg formatu. Aby uzyskać więcej informacji na temat formatowania złożonego przy użyciu metod takich jak <xref:System.String.Format%2A?displayProperty=nameWithType> lub <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , zobacz sekcję [formatowanie złożone](#composite-formatting) .
 
-Poniższy przykład definiuje `Temperature` klasę, która <xref:System.IFormattable> implementuje interfejs. Obsługuje specyfikatory formatu "C" lub "G", aby wyświetlić temperaturę w stopniach Celsjusza, specyfikator formatu "F", aby wyświetlić temperaturę w Fahrenheita, oraz specyfikator formatu "K", aby wyświetlić temperaturę w kelwinach.
+W poniższym przykładzie zdefiniowano `Temperature` klasę, która implementuje <xref:System.IFormattable> interfejs. Obsługuje specyfikatory formatu "C" lub "G", aby wyświetlić temperaturę w c, specyfikator formatu "F", aby wyświetlić temperaturę w stopniach Fahrenheita i specyfikator formatu "K", aby wyświetlić temperaturę w Kelvin.
 
 [!code-csharp[Conceptual.Formatting.Overview#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#12)]
 [!code-vb[Conceptual.Formatting.Overview#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#12)]
 
-Poniższy przykład wystąpienia `Temperature` obiektu. Następnie wywołuje <xref:System.Convert.ToString%2A> metodę i używa kilku ciągów formatu złożonego, `Temperature` aby uzyskać różne reprezentacje ciągów obiektu. Każda z tych wywołań metody, <xref:System.IFormattable> z `Temperature` kolei wywołuje implementację klasy.
+Poniższy przykład tworzy wystąpienie `Temperature` obiektu. Następnie wywołuje <xref:System.Convert.ToString%2A> metodę i używa kilku ciągów formatu złożonego, aby uzyskać różne reprezentacje ciągu `Temperature` obiektu. Z kolei każda z tych wywołań metod wywołuje <xref:System.IFormattable> implementację `Temperature` klasy.
 
 [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
 [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]
 
-## <a name="composite-formatting"></a>Formatowanie kompozytowe
+## <a name="composite-formatting"></a>Złożone formatowanie
 
-Niektóre metody, <xref:System.String.Format%2A?displayProperty=nameWithType> takie <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>jak i , obsługują formatowanie złożone. Ciąg formatu złożonego jest rodzajem szablonu, który zwraca pojedynczy ciąg, który zawiera reprezentację ciągu zero, jeden lub więcej obiektów. Każdy obiekt jest reprezentowany w ciągu formatu złożonego przez element formatu indeksowanego. Indeks elementu formatu odpowiada położeniu obiektu, który reprezentuje na liście parametrów metody. Indeksy są oparte na wartościach zerowych. Na przykład w następującym <xref:System.String.Format%2A?displayProperty=nameWithType> wywołaniu metody, pierwszy `{0:D}`element formatu, , `thatDate`jest zastępowany przez reprezentację ciągu ; drugi element formatu, `{1}`jest zastępowany `item1`przez reprezentację ciągu ; a element trzeciego `{2:C2}`formatu, jest zastępowany `item1.Value`przez reprezentację ciągu .
+Niektóre metody, takie jak <xref:System.String.Format%2A?displayProperty=nameWithType> i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> , obsługują formatowanie złożone. Ciąg formatu złożonego jest rodzajem szablonu, który zwraca pojedynczy ciąg, który zawiera ciąg reprezentujący zero, jeden lub więcej obiektów. Każdy obiekt jest reprezentowany w ciągu formatu złożonego przez element formatu indeksowanego. Indeks elementu formatu odnosi się do położenia obiektu reprezentowanego na liście parametrów metody. Indeksy są oparte na zero. Na przykład w poniższym wywołaniu <xref:System.String.Format%2A?displayProperty=nameWithType> metody pierwszy element formatu, `{0:D}` ,, jest zastępowany ciągiem reprezentującym `thatDate` ; drugi element formatu, `{1}` , jest zastępowany ciągiem reprezentującym `item1` ; i trzeci element formatu, `{2:C2}` , jest zastępowany ciągiem reprezentującym `item1.Value` .
 
 [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
 [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]
 
-Oprócz zastąpienia elementu formatu reprezentacją ciągu odpowiedniego obiektu, elementy formatu umożliwiają również kontrolowanie następujących elementów:
+Oprócz zamiany elementu formatu na ciąg reprezentujący odpowiadający mu obiekt, elementy formatu umożliwiają również kontrolę następujących elementów:
 
-- Określony sposób, w jaki obiekt jest reprezentowany jako ciąg, <xref:System.IFormattable> jeśli obiekt implementuje interfejs i obsługuje ciągi formatu. Można to zrobić, wykonując indeks elementu `:` formatu z (dwukropek), a następnie ciąg prawidłowego formatu. W poprzednim przykładzie zrobiliśmy to, formatując wartość daty z ciągiem formatu `{0:d}`"d" (wzorzec daty krótkiej) (np. ) i `{2:C2}` formatując wartość liczbową za pomocą ciągu formatu "C2" (np. reprezentując liczbę jako wartość waluty z dwiema ułamkowymi cyframi dziesiętnymi.
+- Określony sposób, w którym obiekt jest reprezentowany jako ciąg, jeśli obiekt implementuje <xref:System.IFormattable> interfejs i obsługuje ciągi formatu. Można to zrobić, wykonując indeks elementu formatowania z `:` dwukropkiem, po którym następuje prawidłowy ciąg formatu. W poprzednim przykładzie pokazano, jak sformatować wartość daty za pomocą ciągu formatu "d" (krótkiej daty) (np. `{0:d}` ) i przez sformatowanie wartości liczbowej z ciągiem formatu "C2" (np., `{2:C2}` aby reprezentować liczbę jako wartość walutową z dwiema cyframi dziesiętnymi.
 
-- Szerokość pola zawierającego reprezentację ciągu obiektu i wyrównanie reprezentacji ciągu w tym polu. Można to zrobić, postępowo indeks elementu `,` formatu z (przecinek) po szerokości pola. Ciąg jest wyrównany do prawej w polu, jeśli szerokość pola jest wartością dodatnią i jest wyrównany do lewej, jeśli szerokość pola jest wartością ujemną. Poniższy przykład wyrównuje wartości daty w polu 20-znakowym i wyrównuje wartości dziesiętne z jedną cyfrą ułamkową w polu 11-znakowym.
+- Szerokość pola zawierającego reprezentację ciągu obiektu oraz wyrównanie ciągu reprezentującego w tym polu. W tym celu należy `,` postępować według szerokości pola (indeks elementu formatu z przecinkiem). Ciąg jest wyrównany do prawej w polu, jeśli szerokość pola jest wartością dodatnią i jest wyrównany do lewej, jeśli szerokość pola jest wartością ujemną. Poniższy przykład wyrównuje wartości dat w polu 20-znakowym i wyrównuje wartości dziesiętne z jedną cyfrą ułamkową w polu 11-znakowym.
 
      [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
      [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]
 
-     Należy zauważyć, że jeśli obecny jest zarówno składnik ciągu wyrównania, jak i `{0,-20:g}`składnik ciągu formatu, pierwszy z nich poprzedza ten ostatni (na przykład .
+     Należy zauważyć, że jeśli zarówno składnik ciągu wyrównania, jak i składnik ciągu formatu są obecne, dawniej poprzedza ostatni (na przykład `{0,-20:g}` .
 
-Aby uzyskać więcej informacji na temat formatowania złożonego, zobacz [Formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md).
+Aby uzyskać więcej informacji na temat formatowania złożonego, zobacz [formatowanie złożone](composite-formatting.md).
 
-## <a name="custom-formatting-with-icustomformatter"></a>Formatowanie niestandardowe za pomocą formatu ICustomFormatter
+## <a name="custom-formatting-with-icustomformatter"></a>Niestandardowe formatowanie za pomocą ICustomFormatter
 
-Dwie metody formatowania <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>złożonego i , obejmują parametr dostawcy formatu, który obsługuje formatowanie niestandardowe. Gdy wywoływana jest żadna z tych <xref:System.Type> metod formatowania, przekazuje obiekt reprezentujący <xref:System.ICustomFormatter> interfejs do metody dostawcy formatu. <xref:System.IFormatProvider.GetFormat%2A> Metoda <xref:System.IFormatProvider.GetFormat%2A> jest następnie odpowiedzialny za <xref:System.ICustomFormatter> zwracanie implementacji, która zapewnia niestandardowe formatowanie.
+Dwie metody formatowania złożonego <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> i <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> zawierają parametr dostawcy formatu obsługujący niestandardowe formatowanie. Gdy każda z tych metod formatowania jest wywoływana, przekazuje <xref:System.Type> obiekt, który reprezentuje <xref:System.ICustomFormatter> interfejs do metody dostawcy formatowania <xref:System.IFormatProvider.GetFormat%2A> . <xref:System.IFormatProvider.GetFormat%2A>Metoda jest następnie odpowiedzialna za zwrócenie <xref:System.ICustomFormatter> implementacji, która zapewnia niestandardowe formatowanie.
 
-Interfejs <xref:System.ICustomFormatter> ma jedną metodę, <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>która jest wywoływana automatycznie przez metodę formatowania złożonego, raz dla każdego elementu formatu w ciągu formatu złożonego. Metoda <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> ma trzy parametry: ciąg formatu, który reprezentuje `formatString` argument w elemencie formatu, obiekt do formatowania i obiekt, <xref:System.IFormatProvider> który zapewnia usługi formatowania. Zazwyczaj klasa, która implementuje <xref:System.ICustomFormatter> również <xref:System.IFormatProvider>implementuje, więc ten ostatni parametr jest odwołaniem do samej klasy formatowania niestandardowego. Metoda zwraca niestandardową sformatowaną reprezentację ciągu obiektu, który ma być sformatowany. Jeśli metoda nie może sformatować obiektu,`Nothing` należy zwrócić odwołanie null (w języku Visual Basic).
+<xref:System.ICustomFormatter>Interfejs ma pojedynczą metodę, <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> która jest wywoływana automatycznie przez metodę formatowania złożonego, jednokrotnie dla każdego elementu formatu w ciągu formatu złożonego. <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>Metoda ma trzy parametry: ciąg formatu, który reprezentuje `formatString` argument w elemencie formatu, obiekt do sformatowania i <xref:System.IFormatProvider> obiekt, który zapewnia usługi formatowania. Zazwyczaj Klasa implementująca <xref:System.ICustomFormatter> również implementuje <xref:System.IFormatProvider> , dlatego ostatni parametr jest odwołaniem do samej klasy formatowania niestandardowego. Metoda zwraca niestandardową reprezentację ciągu obiektu do sformatowania. Jeśli metoda nie może sformatować obiektu, powinna zwrócić odwołanie o wartości null ( `Nothing` w Visual Basic).
 
-Poniższy przykład <xref:System.ICustomFormatter> zawiera `ByteByByteFormatter` implementację o nazwie, która wyświetla wartości całkowite jako sekwencję dwucyfrowych wartości szesnastkowy, po którym następuje spacja.
+W poniższym przykładzie przedstawiono <xref:System.ICustomFormatter> implementację o nazwie `ByteByByteFormatter` , która wyświetla wartości całkowite jako sekwencję dwucyfrowych wartości szesnastkowych, po których występuje spacja.
 
 [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
 [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]
 
-Poniższy przykład używa `ByteByByteFormatter` klasy do formatowania wartości całkowitych. Należy zauważyć, że <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> metoda jest wywoływana więcej niż jeden raz w drugim <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> wywołaniu metody i że domyślny <xref:System.Globalization.NumberFormatInfo> dostawca jest używany w trzecim wywołaniu metody, ponieważ .`ByteByByteFormatter.Format` metoda nie rozpoznaje ciągu formatu "N0"`Nothing` i zwraca odwołanie null (w języku Visual Basic).
+Poniższy przykład używa `ByteByByteFormatter` klasy do formatowania wartości całkowitych. Należy zauważyć, że <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> Metoda jest wywoływana więcej niż raz w drugim <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> wywołaniu metody i że <xref:System.Globalization.NumberFormatInfo> dostawca domyślny jest używany w trzecim wywołaniu metody, ponieważ.`ByteByByteFormatter.Format` Metoda nie rozpoznaje ciągu formatu "N0" i zwraca odwołanie o wartości null ( `Nothing` w Visual Basic).
 
 [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
 [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]
@@ -351,15 +351,15 @@ Poniższy przykład używa `ByteByByteFormatter` klasy do formatowania wartości
 
 |Tytuł|Definicja|
 |-----------|----------------|
-|[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów wartości liczbowych.|
-|[Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|W tym artykule opisano ciągi formatów niestandardowych, które tworzą formaty specyficzne dla aplikacji dla wartości liczbowych.|
-|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|W tym artykule opisano ciągi formatu <xref:System.DateTime> standardowego, które tworzą często używane reprezentacje znaków wartości.|
-|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano ciągi formatów niestandardowych, które tworzą formaty specyficzne dla aplikacji dla <xref:System.DateTime> wartości.|
-|[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów interwałów czasu.|
-|[Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|W tym artykule opisano ciągi formatów niestandardowych, które tworzą formaty specyficzne dla aplikacji dla interwałów czasowych.|
-|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano ciągi formatu standardowego, które są używane do tworzenia reprezentacji ciągów wartości wyliczenia.|
-|[Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)|W tym artykule opisano sposób osadzania jednej lub kilku sformatowanych wartości w ciągu. Ciąg może być następnie wyświetlany na konsoli lub zapisywany w strumieniu.|
-|[Analiza składniowa ciągów](../../../docs/standard/base-types/parsing-strings.md)|Opisuje sposób inicjowania obiektów do wartości opisanych przez reprezentacje ciągów tych obiektów. Analizowanie jest odwrotną operacją formatowania.|
+|[Standardowe ciągi formatujące liczby](standard-numeric-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów wartości liczbowych.|
+|[Niestandardowe ciągi formatujące liczby](custom-numeric-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty specyficzne dla aplikacji dla wartości liczbowych.|
+|[Standardowe ciągi formatujące datę i godzinę](standard-date-and-time-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów <xref:System.DateTime> wartości.|
+|[Niestandardowe ciągi formatujące datę i godzinę](custom-date-and-time-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty charakterystyczne dla aplikacji dla <xref:System.DateTime> wartości.|
+|[Standardowe ciągi formatujące TimeSpan](standard-timespan-format-strings.md)|Opisuje ciągi formatu standardowego, które tworzą często używane reprezentacje ciągów przedziałów czasu.|
+|[Niestandardowe ciągi formatujące TimeSpan](custom-timespan-format-strings.md)|Opisuje niestandardowe ciągi formatujące, które tworzą formaty specyficzne dla aplikacji dla przedziałów czasu.|
+|[Ciągi formatujące Wyliczenie](enumeration-format-strings.md)|Opisuje ciągi formatu standardowego, które są używane do tworzenia reprezentacji ciągów wartości wyliczenia.|
+|[Formatowanie złożone](composite-formatting.md)|Opisuje sposób osadzenia jednej lub więcej sformatowanych wartości w ciągu. Ciąg można następnie wyświetlić w konsoli lub zapisać w strumieniu.|
+|[Analiza składniowa ciągów](parsing-strings.md)|Opisuje sposób inicjowania obiektów do wartości opisanych przez ciąg reprezentujący te obiekty. Analizowanie jest operacją odwrotną formatowania.|
 
 ## <a name="reference"></a>Tematy pomocy
 

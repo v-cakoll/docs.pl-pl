@@ -1,5 +1,5 @@
 ---
-title: <param> - Przewodnik programowania C#
+title: <param> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - param
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d16070a82531519dd276b2ea999623017769d716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 396ed716c246091a674268020261069f36dd2be8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789756"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287327"
 ---
-# <a name="param-c-programming-guide"></a>\<param> (przewodnik programowania C#)
+# <a name="param-c-programming-guide"></a>\<param>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,7 +27,7 @@ ms.locfileid: "76789756"
 
 - `name`
 
-  Nazwa parametru metody. Nazwę ująć w podwójne cudzysłowy (" ").
+  Nazwa parametru metody. Ujmij nazwę w znaki podwójnego cudzysłowu ("").
 
 - `description`
 
@@ -35,17 +35,17 @@ ms.locfileid: "76789756"
 
 ## <a name="remarks"></a>Uwagi
 
-Tag \<> param powinien być używany w komentarzu dla deklaracji metody, aby opisać jeden z parametrów metody. Aby udokumentować wiele parametrów, należy użyć wielu \<tagów> paramów.
+`<param>`Tag powinien być używany w komentarzu dla deklaracji metody, aby opisać jeden z parametrów dla metody. Aby udokumentować wiele parametrów, Użyj wielu `<param>` tagów.
 
-Tekst znacznika \<> param ów będzie wyświetlany w intelliSense, przeglądarce obiektów oraz w raporcie internetowym komentarzu kodu.
+Tekst `<param>` znacznika jest wyświetlany w obszarze IntelliSense, Przeglądarka obiektów i raport sieci Web komentarza do kodu.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

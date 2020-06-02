@@ -1,46 +1,47 @@
 ---
 title: Liczniki wydajności
+description: Użyj liczników wydajności ADO.NET do monitorowania stanu aplikacji i zasobów połączeń przy użyciu Monitora wydajności systemu Windows lub programowo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149339"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286679"
 ---
 # <a name="performance-counters-in-adonet"></a>Liczniki wydajności w ADO.NET
-ADO.NET 2.0 wprowadzono rozszerzoną obsługę liczników wydajności, <xref:System.Data.SqlClient> która <xref:System.Data.OracleClient>obejmuje obsługę obu i . Liczniki <xref:System.Data.SqlClient> wydajności dostępne w poprzednich wersjach ADO.NET zostały przestarzałe i zastąpione nowymi licznikami wydajności omówionymi w tym temacie. Liczniki wydajności ADO.NET można używać do monitorowania stanu aplikacji i zasobów połączenia, których używa. Liczniki wydajności mogą być monitorowane za pomocą Monitora wydajności systemu <xref:System.Diagnostics.PerformanceCounter> Windows <xref:System.Diagnostics> lub można uzyskać dostęp programowo przy użyciu klasy w obszarze nazw.  
+W ADO.NET 2,0 wprowadzono rozszerzoną obsługę liczników wydajności, które obejmują obsługę obu <xref:System.Data.SqlClient> i <xref:System.Data.OracleClient> . <xref:System.Data.SqlClient>Liczniki wydajności dostępne w poprzednich wersjach ADO.NET zostały wycofane i zastąpione nowymi licznikami wydajności opisanymi w tym temacie. Liczników wydajności ADO.NET można użyć do monitorowania stanu aplikacji i zasobów połączenia, z których korzysta. Liczniki wydajności można monitorować przy użyciu Monitora wydajności systemu Windows lub mogą być dostępne programowo przy użyciu <xref:System.Diagnostics.PerformanceCounter> klasy w <xref:System.Diagnostics> przestrzeni nazw.  
   
 ## <a name="available-performance-counters"></a>Dostępne liczniki wydajności  
- Obecnie dostępnych jest 14 różnych liczników wydajności <xref:System.Data.SqlClient> i <xref:System.Data.OracleClient> zgodnie z opisem w poniższej tabeli. Należy zauważyć, że nazwy poszczególnych liczników nie są zlokalizowane w regionalnych wersjach programu Microsoft .NET Framework.  
+ Obecnie dostępne są 14 różnych liczników wydajności dla <xref:System.Data.SqlClient> i <xref:System.Data.OracleClient> , zgodnie z opisem w poniższej tabeli. Należy zauważyć, że nazwy poszczególnych liczników nie są zlokalizowane w regionalnych wersjach środowiska Microsoft .NET Framework.  
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
-|`HardConnectsPerSecond`|Liczba połączeń na sekundę, które są wprowadzane do serwera bazy danych.|  
-|`HardDisconnectsPerSecond`|Liczba rozłączenia na sekundę, które są wprowadzane do serwera bazy danych.|  
-|`NumberOfActiveConnectionPoolGroups`|Liczba unikatowych grup puli połączeń, które są aktywne. Ten licznik jest kontrolowany przez liczbę unikatowych ciągów połączeń, które znajdują się w AppDomain.|  
-|`NumberOfActiveConnectionPools`|Całkowita liczba pul połączeń.|  
-|`NumberOfActiveConnections`|Liczba aktywnych połączeń, które są obecnie używane. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz [Aktywowanie liczników domyślnych](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Liczba połączeń dostępnych do użycia w pulach połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz [Aktywowanie liczników domyślnych](#ActivatingOffByDefault).|  
-|`NumberOfInactiveConnectionPoolGroups`|Liczba unikatowych grup puli połączeń, które są oznaczone do przycinania. Ten licznik jest kontrolowany przez liczbę unikatowych ciągów połączeń, które znajdują się w AppDomain.|  
-|`NumberOfInactiveConnectionPools`|Liczba nieaktywnych pul połączeń, które nie miały ostatnio aktywności i oczekują na usunięcie.|  
-|`NumberOfNonPooledConnections`|Liczba aktywnych połączeń, które nie są połączone.|  
-|`NumberOfPooledConnections`|Liczba aktywnych połączeń, które są zarządzane przez infrastrukturę buforowania połączeń.|  
-|`NumberOfReclaimedConnections`|Liczba połączeń, które zostały odzyskane za pośrednictwem `Close` `Dispose` wyrzucania elementów bezużytecznych, gdzie lub nie został wywołany przez aplikację. Nie jawnie zamykanie lub usuwanie połączeń wpływa na wydajność.|  
-|`NumberOfStasisConnections`|Liczba połączeń oczekujących obecnie oczekujących na zakończenie akcji i które w związku z tym są niedostępne do użycia przez aplikację.|  
-|`SoftConnectsPerSecond`|Liczba aktywnych połączeń pobieranych z puli połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz [Aktywowanie liczników domyślnych](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Liczba aktywnych połączeń, które są zwracane do puli połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz [Aktywowanie liczników domyślnych](#ActivatingOffByDefault).|  
+|`HardConnectsPerSecond`|Liczba połączeń na sekundę wysyłanych do serwera bazy danych.|  
+|`HardDisconnectsPerSecond`|Liczba połączeń na sekundę, które są wprowadzane do serwera bazy danych.|  
+|`NumberOfActiveConnectionPoolGroups`|Liczba aktywnych grup puli połączeń, które są aktywne. Ten licznik jest kontrolowany przez liczbę unikatowych parametrów połączenia znalezionych w domenie aplikacji.|  
+|`NumberOfActiveConnectionPools`|Łączna liczba pul połączeń.|  
+|`NumberOfActiveConnections`|Liczba aktywnych połączeń, które są obecnie używane. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz sekcję [Aktywowanie liczników wyłączonych jako domyślne](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|Liczba połączeń dostępnych do użycia w pulach połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz sekcję [Aktywowanie liczników wyłączonych jako domyślne](#ActivatingOffByDefault).|  
+|`NumberOfInactiveConnectionPoolGroups`|Liczba unikatowych grup puli połączeń, które są oznaczone do oczyszczenia. Ten licznik jest kontrolowany przez liczbę unikatowych parametrów połączenia znalezionych w domenie aplikacji.|  
+|`NumberOfInactiveConnectionPools`|Liczba nieaktywnych pul połączeń, dla których nie wprowadzono żadnych ostatnich działań i które oczekują na ich likwidację.|  
+|`NumberOfNonPooledConnections`|Liczba aktywnych połączeń, które nie są w puli.|  
+|`NumberOfPooledConnections`|Liczba aktywnych połączeń, które są zarządzane przez infrastrukturę puli połączeń.|  
+|`NumberOfReclaimedConnections`|Liczba połączeń, które zostały ododzyskiwane za pomocą wyrzucania elementów bezużytecznych, gdzie `Close` lub `Dispose` nie zostały wywołane przez aplikację. Niejawnie zamykające lub likwidowane połączenia pogarszają wydajność.|  
+|`NumberOfStasisConnections`|Liczba połączeń aktualnie oczekujących na ukończenie akcji, które są w związku z tym niedostępne do użytku przez aplikację.|  
+|`SoftConnectsPerSecond`|Liczba aktywnych połączeń pobieranych z puli połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz sekcję [Aktywowanie liczników wyłączonych jako domyślne](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|Liczba aktywnych połączeń, które są zwracane do puli połączeń. **Uwaga:**  Ten licznik wydajności nie jest domyślnie włączony. Aby włączyć ten licznik wydajności, zobacz sekcję [Aktywowanie liczników wyłączonych jako domyślne](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Grupy puli połączeń i pule połączeń  
- Podczas korzystania z uwierzytelniania systemu Windows `NumberOfActiveConnectionPoolGroups` (zintegrowane zabezpieczenia), należy monitorować zarówno liczniki wydajności, jak i `NumberOfActiveConnectionPools` wydajności. Powodem jest to, że grupy puli połączeń mapują unikatowe parametry połączenia. Gdy używane są zintegrowane zabezpieczenia, pule połączeń mapują parametry połączenia i dodatkowo tworzą oddzielne pule dla poszczególnych tożsamości systemu Windows. Na przykład jeśli Fred i Julie, każdy w tej samej `"Data Source=MySqlServer;Integrated Security=true"`AppDomain, zarówno użyć ciągu połączenia, grupa puli połączeń jest tworzony dla ciągu połączenia i dwa dodatkowe pule są tworzone, jeden dla Fred i jeden dla Julie. Jeśli John i Martha używają ciągu połączenia z `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`identycznym logowaniem programu SQL Server, wówczas dla tożsamości **lowPrivUser** jest tworzona tylko pojedyncza pula.  
+ W przypadku korzystania z uwierzytelniania systemu Windows (zabezpieczenia zintegrowane) należy monitorować oba `NumberOfActiveConnectionPoolGroups` `NumberOfActiveConnectionPools` liczniki wydajności i. Przyczyną jest to, że grupy puli połączeń mapują na unikatowe parametry połączenia. W przypadku użycia zintegrowanego zabezpieczenia pule połączeń mapują się na parametry połączenia i dodatkowo tworzą oddzielne pule dla poszczególnych tożsamości systemu Windows. Na przykład, jeśli Fred i Julie, każdy w ramach tego samego elementu AppDomain, użyj parametrów połączenia `"Data Source=MySqlServer;Integrated Security=true"` , grupy puli połączeń dla parametrów połączenia i są tworzone dwa dodatkowe pule, jeden dla Fred i jeden dla Julie. Jeśli Jan i Martha używają parametrów połączenia o identycznym logowaniu SQL Server, to `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` dla tożsamości **lowPrivUser** zostanie utworzona tylko jedna pula.  
   
 <a name="ActivatingOffByDefault"></a>
-### <a name="activating-off-by-default-counters"></a>Aktywowanie liczników domyślnych  
- Liczniki `NumberOfFreeConnections`wydajności `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, `SoftConnectsPerSecond` i są domyślnie wyłączone. Dodaj następujące informacje do pliku konfiguracyjnego aplikacji, aby je włączyć:  
+### <a name="activating-off-by-default-counters"></a>Aktywowanie liczników wyłączonych przez domyślne  
+ Liczniki wydajności `NumberOfFreeConnections` ,, `NumberOfActiveConnections` `SoftDisconnectsPerSecond` i `SoftConnectsPerSecond` są domyślnie wyłączone. Dodaj następujące informacje do pliku konfiguracji aplikacji, aby je włączyć:  
   
 ```xml  
 <system.diagnostics>  
@@ -52,10 +53,10 @@ ADO.NET 2.0 wprowadzono rozszerzoną obsługę liczników wydajności, <xref:Sys
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>Pobieranie wartości licznika wydajności  
- W poniższej aplikacji konsoli pokazano, jak pobrać wartości licznika wydajności w aplikacji. Połączenia muszą być otwarte i aktywne, aby informacje były zwracane dla wszystkich liczników wydajności ADO.NET.  
+ W poniższej aplikacji konsolowej pokazano, jak pobrać wartości liczników wydajności w aplikacji. Połączenia muszą być otwarte i aktywne, aby można było zwracać informacje dla wszystkich liczników wydajności ADO.NET.  
   
 > [!NOTE]
-> W tym przykładzie użyto przykładowej bazy danych **AdventureWorks** dołączonej do programu SQL Server. Parametry połączenia podane w przykładowym kodzie zakładają, że baza danych jest zainstalowana i dostępna na komputerze lokalnym o nazwie wystąpienia SqlExpress i że utworzono logowania programu SQL Server, które są zgodne z tymi dostarczonymi w ciągu połączenia. Może być konieczne włączenie logowania programu SQL Server, jeśli serwer jest skonfigurowany przy użyciu domyślnych ustawień zabezpieczeń, które zezwalają tylko na uwierzytelnianie systemu Windows. Zmodyfikuj parametry połączenia zgodnie z potrzebami, aby dostosować je do potrzeb środowiska.  
+> Ten przykład używa przykładowej bazy danych **AdventureWorks** dołączonej do SQL Server. Parametry połączenia podane w przykładowym kodzie założono, że baza danych jest zainstalowana i dostępna na komputerze lokalnym z nazwą wystąpienia SqlExpress oraz że utworzono SQL Server logowania zgodne z tymi określonymi w parametrach połączenia. Może być konieczne włączenie SQL Server logowania, jeśli serwer jest skonfigurowany przy użyciu domyślnych ustawień zabezpieczeń, które zezwalają na uwierzytelnianie systemu Windows. Zmodyfikuj parametry połączenia stosownie do potrzeb środowiska.  
   
 ### <a name="example"></a>Przykład  
   
@@ -394,11 +395,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Łączenie się ze źródłem danych](connecting-to-a-data-source.md)
+- [Nawiązywanie połączenia ze źródłem danych](connecting-to-a-data-source.md)
 - [Buforowanie połączenia Oracle, OLE DB i ODBC](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Liczniki wydajności dla ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Profilowanie środowiska uruchomieniowego](../../debug-trace-profile/runtime-profiling.md)
-- [Wprowadzenie do progów wydajności monitorowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Wprowadzenie do monitorowania progów wydajności](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Omówienie ADO.NET](ado-net-overview.md)

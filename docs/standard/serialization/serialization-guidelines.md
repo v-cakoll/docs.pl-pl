@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378388"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287496"
 ---
 # <a name="serialization-guidelines"></a>Wskazówki dotyczące serializacji
 Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podczas projektowania interfejs API serializacji.  
@@ -79,7 +79,7 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     W przypadkach, gdy lista znanych typów nie jest znana statycznie (po skompilowaniu klasy **Person** ), **atrybut KnownTypeAttribute** może również wskazywać na metodę, która zwraca listę znanych typów w czasie wykonywania.  
+     W przypadkach, gdy lista znanych typów nie jest znana statycznie (podczas kompilowania klasy **osoba** ), element **KnownTypeAttribute** może również wskazywać na metodę, która zwraca listę znanych typów w czasie wykonywania.  
   
 5. Należy wziąć pod uwagę zgodność z poprzednimi wersjami i do przodu, podczas tworzenia lub zmiany typów możliwych do serializacji.  
   
@@ -92,7 +92,7 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Aby uzyskać więcej informacji, zobacz [Kontrakty danych zgodne z przekazywaniem dalej](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+     Aby uzyskać więcej informacji, zobacz [Kontrakty danych zgodne z przekazywaniem dalej](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 #### <a name="supporting-xml-serialization"></a>Obsługa serializacji XML  
  Serializacja kontrakt danych jest głównym (domyślnie) technologii serializacji w programie .NET Framework, ale istnieją scenariusze serializacji umowy serializacji w danych nie obsługuje. Na przykład nie zapewnia pełnej kontroli nad kształtem XML produkowanym lub zużywanym przez serializator. Jeśli wymagana jest taka kontrola, *Serializacja XML* musi być używana i musisz zaprojektować typy do obsługi tej technologii serializacji.  
@@ -138,12 +138,12 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Używanie kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializator kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Typy obsługiwane przez serializator kontraktu danych](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Używanie kontraktów danych](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Serializator kontraktów danych](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Typy obsługiwane przez serializator kontraktu danych](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializacja binarna](binary-serialization.md)
 - [Wywołaniem funkcji zdalnych .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializacja XML i SOAP](xml-and-soap-serialization.md)
-- [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)
+- [Zabezpieczenia i serializacja](../../framework/misc/security-and-serialization.md)

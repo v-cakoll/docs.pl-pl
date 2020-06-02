@@ -1,5 +1,5 @@
 ---
-title: <list> - Przewodnik programowania C#
+title: <list> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789752"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287340"
 ---
-# <a name="list-c-programming-guide"></a>\<lista> (przewodnik programowania C#)
+# <a name="list-c-programming-guide"></a>\<list>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,27 +40,27 @@ ms.locfileid: "76789752"
 
 - `term`
 
-  Termin do zdefiniowania, który `description`zostanie zdefiniowany w .
+  Termin do zdefiniowania, który zostanie zdefiniowany w `description` .
 
 - `description`
 
-  Element na liście punktorowej lub numerowanej `term`lub definicja .
+  Element na liście punktowanej lub numerowanej lub definicji `term` .
   
 ## <a name="remarks"></a>Uwagi
 
-Blok \<> listheader służy do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli, należy podać tylko wpis dla terminu w nagłówku.
+`<listheader>`Blok służy do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.
 
-Każdy element na liście jest \<określony z elementem> bloku. Podczas tworzenia listy definicji należy określić `term` oba `description`i . Jednak w przypadku tabeli, listy punktowanej lub listy numerowanej wystarczy `description`podać wpis dla .
+Każdy element na liście jest określony za pomocą `<item>` bloku. Podczas tworzenia listy definicji należy określić zarówno, `term` jak i `description` . Jednak dla tabeli, listy punktowanej lub listy numerowanej wystarczy podać wpis dla `description` .
 
-Lista lub tabela może \<mieć dowolną liczbę elementów> bloków, zgodnie z potrzebami.
+Lista lub tabela może zawierać tyle `<item>` bloków, ile jest to konieczne.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

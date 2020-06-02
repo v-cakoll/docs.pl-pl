@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378660"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290022"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
 Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do uruchomienia zestawu. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
@@ -39,7 +39,7 @@ Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do u
 - W celu uzyskania uprawnień wymaganych przez kod nie używać żądań o uprawnienia, ale przygotować się na obsługę wyjątków zabezpieczeń w razie nieprzyznania uprawnień.  
   
   > [!NOTE]
-  > Zabezpieczenia to skomplikowana dziedzina, w której istnieje wiele opcji do wyboru. Aby uzyskać więcej informacji, zobacz podstawowe [pojęcia dotyczące zabezpieczeń](../../standard/security/key-security-concepts.md).  
+  > Zabezpieczenia to skomplikowana dziedzina, w której istnieje wiele opcji do wyboru. Aby uzyskać więcej informacji, zobacz podstawowe [pojęcia dotyczące zabezpieczeń](../security/key-security-concepts.md).  
   
  Podczas ładowania dowód zestawu jest wykorzystywany jako dane wejściowe dla zasad zabezpieczeń. Zasady zabezpieczeń są ustalane przez przedsiębiorstwo i administratora komputera, a także przez ustawienia zasad użytkownika. Określają one zestaw uprawnień przydzielanych całemu zarządzanemu kodowi podczas wykonywania. Zasady zabezpieczeń można ustanowić dla wydawcy zestawu (jeśli ma on podpis wygenerowany przez narzędzie do podpisywania), dla witryny internetowej i strefy (w znaczeniu używanym w programie Internet Explorer), z której zestaw został pobrany, lub dla silnej nazwy zestawu. Na przykład administrator komputera może ustanowić zasady zabezpieczeń, które pozwalają, aby kod pobrany z witryny internetowej i podpisany przez producenta danego oprogramowania miał dostęp do bazy danych na komputerze, ale nie przyznają dostępu umożliwiającego zapis na dysku komputera.  
   
@@ -61,7 +61,7 @@ Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do u
   
  Ze względu na to, że silne nazewnictwo i podpisywanie przy użyciu [Narzędzia Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md) gwarantuje integralność, zasady zabezpieczeń dostępu kodu są oparte na tych dwóch formach dowodu zestawu. Silne nazewnictwo i podpisywanie przy użyciu [Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md) gwarantuje integralność za pośrednictwem podpisów cyfrowych i certyfikatów. Wszystkie wymienione technologie — weryfikacja skrótu, silne nazewnictwo i podpisywanie przy użyciu [Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md)— działają razem, aby upewnić się, że zestaw nie został zmieniony w żaden sposób.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zestawy o silnych nazwach](strong-named.md)
 - [Zestawy w środowisku .NET](index.md)

@@ -1,5 +1,5 @@
 ---
-title: <summary> - Przewodnik programowania C#
+title: <summary> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a8c9d61e61eae7ba6bf7f0c1b9d2a8dc8a4171
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789674"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287210"
 ---
-# <a name="summary-c-programming-guide"></a>\<podsumowanie> (przewodnik programowania C#)
+# <a name="summary-c-programming-guide"></a>\<summary>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,17 +31,17 @@ ms.locfileid: "76789674"
 
 ## <a name="remarks"></a>Uwagi
 
-Tag \<> podsumowania powinien być używany do opisywania typu lub elementu członkowskiego typu. Użyj [ \<uwag>,](./remarks.md) aby dodać dodatkowe informacje do opisu typu. Użyj [atrybutu cref,](./cref-attribute.md) aby włączyć narzędzia dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle,](https://github.com/EWSoftware/SHFB) aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.
+`<summary>`Tag powinien służyć do opisywania typu lub elementu członkowskiego typu. Służy [\<remarks>](./remarks.md) do dodawania dodatkowych informacji do opisu typu. Użyj [atrybutu cref](./cref-attribute.md) , aby włączyć narzędzia do dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.
 
-Tekst \<podsumowania> tagu jest jedynym źródłem informacji o typie w intelliSense i jest również wyświetlany w oknie przeglądarki obiektów.
+Tekst `<summary>` znacznika jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w oknie Przeglądarka obiektów.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku. Aby utworzyć ostateczną dokumentację na podstawie pliku wygenerowanego przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku. Aby utworzyć ostateczną dokumentację opartą na pliku generowanym przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]
 
-Poprzedni przykład tworzy następujący plik XML.
+W poprzednim przykładzie jest tworzony następujący plik XML.
 
 ```xml
 <?xml version="1.0"?>
@@ -68,11 +68,11 @@ Poprzedni przykład tworzy następujący plik XML.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak odwołać się `cref` do typu ogólnego.
+Poniższy przykład pokazuje, jak utworzyć `cref` odwołanie do typu ogólnego.
 
 [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]
 
-Poprzedni przykład tworzy następujący plik XML.
+W poprzednim przykładzie jest tworzony następujący plik XML.
 
 ```xml
 <?xml version="1.0"?>
@@ -98,7 +98,7 @@ Poprzedni przykład tworzy następujący plik XML.
 </doc>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

@@ -1,21 +1,22 @@
 ---
 title: Dodawanie kolumn do elementu DataTable
+description: Element DataTable zawiera obiekty DataColumn, do których odwołują się właściwości Columns tabeli. Użyj tego przykładowego kodu, aby dodać kolumny do tabeli w ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784857"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286950"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Dodawanie kolumn do elementu DataTable
-A <xref:System.Data.DataTable> zawiera<xref:System.Data.DataColumn> kolekcję obiektów, do których odwołuje się Właściwość **kolumn** tabeli. Ta kolekcja kolumn, wraz z wszelkimi ograniczeniami, definiuje schemat, czyli strukturę tabeli.  
+A <xref:System.Data.DataTable> zawiera kolekcję obiektów, <xref:System.Data.DataColumn> do których odwołuje się Właściwość **kolumn** tabeli. Ta kolekcja kolumn, wraz z wszelkimi ograniczeniami, definiuje schemat, czyli strukturę tabeli.  
   
- Tworzysz obiekty **DataColumn** w tabeli przy użyciu konstruktora **DataColumn** lub wywołując metodę **Add** właściwości **Columns** tabeli, która jest <xref:System.Data.DataColumnCollection>. Metoda **Add** akceptuje opcjonalne argumenty **ColumnName**, **DataType**i **Expression** i tworzy nową **kolumnę DataColumn** jako element członkowski kolekcji. Akceptuje również istniejący obiekt **DataColumn** i dodaje go do kolekcji i zwraca odwołanie do dodanej **kolumny** , jeśli jest to wymagane. Ponieważ obiekty **DataTable** nie są specyficzne dla żadnego źródła danych, typy .NET Framework są używane podczas określania typu danych w **kolumnie DataColumn**.  
+ Tworzysz obiekty **DataColumn** w tabeli przy użyciu konstruktora **DataColumn** lub wywołując metodę **Add** właściwości **Columns** tabeli, która jest <xref:System.Data.DataColumnCollection> . Metoda **Add** akceptuje opcjonalne argumenty **ColumnName**, **DataType**i **Expression** i tworzy nową **kolumnę DataColumn** jako element członkowski kolekcji. Akceptuje również istniejący obiekt **DataColumn** i dodaje go do kolekcji i zwraca odwołanie do dodanej **kolumny** , jeśli jest to wymagane. Ponieważ obiekty **DataTable** nie są specyficzne dla żadnego źródła danych, typy .NET Framework są używane podczas określania typu danych w **kolumnie DataColumn**.  
   
  Poniższy przykład dodaje cztery kolumny do **elementu DataTable**.  
   
@@ -49,7 +50,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 > Jeśli nie podano nazwy kolumny dla kolumny, kolumna otrzymuje przyrostową domyślną nazwę kolumny*N,* rozpoczynając od "Kolumna1", gdy zostanie dodana do elementu **DataColumnCollection**. Zalecamy uniknięcie konwencji nazewnictwa "Column*N*" w przypadku podania nazwy kolumny, ponieważ dostarczona nazwa może powodować konflikt z istniejącą domyślną nazwą kolumny w elemencie **DataColumnCollection**. Jeśli podana nazwa już istnieje, zgłaszany jest wyjątek.  
   
- Jeśli używasz <xref:System.Xml.Linq.XElement> programu <xref:System.Data.DataColumn.DataType%2A> jako <xref:System.Data.DataColumn> elementu w<xref:System.Data.DataTable>, serializacja XML nie będzie działała podczas odczytywania danych. Na przykład jeśli piszesz a <xref:System.Xml.XmlDocument> przy `DataTable.WriteXml` użyciu metody, po serializacji do kodu XML istnieje <xref:System.Xml.Linq.XElement>dodatkowy węzeł nadrzędny w obiekcie. Aby obejść ten problem, użyj <xref:System.Data.SqlTypes.SqlXml> typu <xref:System.Xml.Linq.XElement>zamiast. `ReadXml`i `WriteXml` działają poprawnie z <xref:System.Data.SqlTypes.SqlXml>.  
+ Jeśli używasz programu <xref:System.Xml.Linq.XElement> jako elementu <xref:System.Data.DataColumn.DataType%2A> <xref:System.Data.DataColumn> w <xref:System.Data.DataTable> , serializacja XML nie będzie działała podczas odczytywania danych. Na przykład jeśli piszesz a przy <xref:System.Xml.XmlDocument> użyciu `DataTable.WriteXml` metody, po serializacji do kodu XML istnieje dodatkowy węzeł nadrzędny w obiekcie <xref:System.Xml.Linq.XElement> . Aby obejść ten problem, użyj <xref:System.Data.SqlTypes.SqlXml> typu zamiast <xref:System.Xml.Linq.XElement> . `ReadXml`i `WriteXml` działają poprawnie z <xref:System.Data.SqlTypes.SqlXml> .  
   
 ## <a name="see-also"></a>Zobacz także
 

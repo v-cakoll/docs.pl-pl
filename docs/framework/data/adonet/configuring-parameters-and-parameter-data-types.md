@@ -1,107 +1,108 @@
 ---
 title: Konfigurowanie parametrów i typów danych parametrów
+description: Obiekty poleceń używają parametrów do przekazywania wartości do instrukcji SQL lub procedur składowanych, zapewniając sprawdzanie typu i weryfikację w ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a426eeae785274b0484a84a2fae2dce4572fb4c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879970"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287119"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 
-Obiekty poleceń parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając sprawdzania typu i weryfikacji. W przeciwieństwie do tekstu polecenia wprowadzanie parametrów jest traktowany jako literał, nie jako kod wykonywalny. Dzięki temu można zabezpieczyć się przed "SQL" wstrzyknięciu kodu, w których osoba atakująca Wstawia polecenie Zabezpieczenia naruszeń na serwerze do instrukcji SQL.
+Obiekty poleceń używają parametrów do przekazywania wartości do instrukcji SQL lub procedur składowanych, zapewniając sprawdzanie typu i weryfikację. W przeciwieństwie do tekstu polecenia, wprowadzanie parametrów jest traktowane jako wartość literału, a nie jako kod wykonywalny. Pomaga to chronić przed atakami "iniekcji SQL", w których osoba atakująca wstawia polecenie naruszające zabezpieczenia serwera do instrukcji SQL.
 
-Poleceń sparametryzowanych może również zwiększyć wydajność wykonywania zapytań, ponieważ pomagają dokładne dopasowanie przychodzące polecenie z planu prawidłowego zapytania w pamięci podręcznej serwera bazy danych. Aby uzyskać więcej informacji, zobacz [wykonywania Plan pamięci podręcznej i ponowne użycie](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) i [parametrów i wykonanie planu ponowne użycie](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Oprócz korzyści bezpieczeństwo i wydajność poleceń sparametryzowanych zapewniają wygodną metodę służący do organizowania wartości przekazane do źródła danych.
+Polecenia sparametryzowane mogą również zwiększyć wydajność wykonywania zapytań, ponieważ ułatwiają one serwerowi bazy danych dokładne dopasowanie do polecenia przychodzącego z prawidłowym buforowanym planem zapytań. Aby uzyskać więcej informacji, zobacz [buforowanie i ponowne użycie planu wykonywania](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) oraz ponowne używanie [parametrów i planu wykonania](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Oprócz korzyści związanych z zabezpieczeniami i wydajnością, polecenia sparametryzowane zapewniają wygodną metodę organizowania wartości przesyłanych do źródła danych.
 
-A <xref:System.Data.Common.DbParameter> obiektu można utworzyć za pomocą jej konstruktora lub przez dodanie jej do <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> przez wywołanie metody `Add` metody <xref:System.Data.Common.DbParameterCollection> kolekcji. `Add` Metoda zajmie się jako dane wejściowe w argumentach konstruktora lub parametr obiektu, w zależności od dostawcy danych.
+<xref:System.Data.Common.DbParameter>Obiekt można utworzyć za pomocą jego konstruktora lub przez dodanie go do obiektu <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> przez wywołanie `Add` metody <xref:System.Data.Common.DbParameterCollection> kolekcji. `Add`Metoda przyjmuje jako dane wejściowe argumenty konstruktora lub istniejący obiekt parametru, w zależności od dostawcy danych.
 
-## <a name="supplying-the-parameterdirection-property"></a>Udostępnia właściwości ParameterDirection
+## <a name="supplying-the-parameterdirection-property"></a>Dostarczanie właściwości ParameterDirection
 
-Dodając parametry, należy podać <xref:System.Data.ParameterDirection> właściwość parametrów innych niż parametrów wejściowych. W poniższej tabeli przedstawiono `ParameterDirection` wartości, które można używać z <xref:System.Data.ParameterDirection> wyliczenia.
+Podczas dodawania parametrów należy podać <xref:System.Data.ParameterDirection> Właściwość parametrów innych niż parametry wejściowe. W poniższej tabeli przedstawiono `ParameterDirection` wartości, których można użyć z <xref:System.Data.ParameterDirection> wyliczeniem.
 
 |Nazwa elementu członkowskiego|Opis|
 |-----------------|-----------------|
 |<xref:System.Data.ParameterDirection.Input>|Parametr jest parametrem wejściowym. Domyślnie włączone.|
-|<xref:System.Data.ParameterDirection.InputOutput>|Parametr można wykonywać zarówno dane wejściowe i wyjściowe.|
+|<xref:System.Data.ParameterDirection.InputOutput>|Parametr może wykonywać zarówno dane wejściowe, jak i wyjściowe.|
 |<xref:System.Data.ParameterDirection.Output>|Parametr jest parametrem wyjściowym.|
-|<xref:System.Data.ParameterDirection.ReturnValue>|Parametr reprezentuje wartość zwracana z operacji, takich jak procedury składowanej, funkcji wbudowanej lub funkcję zdefiniowaną przez użytkownika.|
+|<xref:System.Data.ParameterDirection.ReturnValue>|Parametr reprezentuje wartość zwracaną z operacji, takiej jak procedura składowana, wbudowana funkcja lub funkcja zdefiniowana przez użytkownika.|
 
-## <a name="working-with-parameter-placeholders"></a>Praca z symbolami zastępczymi parametru
+## <a name="working-with-parameter-placeholders"></a>Praca z symbolami zastępczymi parametrów
 
-Składnia dla symboli zastępczych parametru zależy od źródła danych. Dostawcy danych .NET Framework obsługują nazewnictwa i określanie parametrów i symbole zastępcze parametr inaczej. Ta składnia jest dostosowane do określonego źródła danych, zgodnie z opisem w poniższej tabeli.
+Składnia symboli zastępczych parametrów zależy od źródła danych. Dostawcy danych .NET Framework obsługują nazewnictwo i Określanie parametrów i symboli zastępczych parametrów w różny sposób. Ta składnia jest dostosowana do określonego źródła danych, zgodnie z opisem w poniższej tabeli.
 
-|Dostawca danych|Składnia nazwy parametru|
+|Dostawca danych|Składnia nazewnictwa parametrów|
 |-------------------|-----------------------------|
-|<xref:System.Data.SqlClient>|Korzysta z nazwanych parametrów w formacie `@` *parametername*.|
-|<xref:System.Data.OleDb>|Używa wskaźników parametr pozycyjne wskazywanym przez znak zapytania (`?`).|
-|<xref:System.Data.Odbc>|Używa wskaźników parametr pozycyjne wskazywanym przez znak zapytania (`?`).|
-|<xref:System.Data.OracleClient>|Korzysta z nazwanych parametrów w formacie `:` *parmname* (lub *parmname*).|
+|<xref:System.Data.SqlClient>|Używa nazwanych parametrów w formacie `@` *ParameterName*.|
+|<xref:System.Data.OleDb>|Używa znaczników parametrów pozycyjnych wskazanych przez znak zapytania ( `?` ).|
+|<xref:System.Data.Odbc>|Używa znaczników parametrów pozycyjnych wskazanych przez znak zapytania ( `?` ).|
+|<xref:System.Data.OracleClient>|Używa nazwanych parametrów w formacie `:` *parmname* (lub *parmname*).|
 
-## <a name="specifying-parameter-data-types"></a>Określenie typów danych parametrów
+## <a name="specifying-parameter-data-types"></a>Określanie typów danych parametrów
 
-Typ danych parametru jest specyficzne dla dostawcy danych .NET Framework. Określenie typu konwertuje wartość `Parameter` typ dostawcy danych .NET Framework przed przekazaniem wartości do źródła danych. Możesz również określić typ `Parameter` w sposób ogólny, ustawiając `DbType` właściwość `Parameter` obiektu do określonego <xref:System.Data.DbType>.
+Typ danych parametru jest specyficzny dla dostawcy danych .NET Framework. Określenie typu spowoduje konwersję wartości `Parameter` do typu .NET Framework dostawcy danych przed przekazaniem wartości do źródła danych. Można również określić typ a `Parameter` w ogólny sposób, ustawiając `DbType` Właściwość `Parameter` obiektu na konkretną <xref:System.Data.DbType> .
 
-Typ dostawcy danych .NET Framework z `Parameter` obiektu jest wnioskowany z typu .NET Framework `Value` z `Parameter` obiektu, albo z `DbType` z `Parameter` obiektu. W poniższej tabeli przedstawiono wywnioskowane `Parameter` typ oparty na obiekcie, który został przekazany jako `Parameter` wartość lub określone `DbType`.
+Typ dostawcy danych .NET Frameworkgo `Parameter` obiektu jest wywnioskowany na podstawie typu .NET Framework `Value` `Parameter` obiektu lub z `DbType` `Parameter` obiektu. W poniższej tabeli przedstawiono typ wnioskowany `Parameter` na podstawie obiektu przekazanego jako `Parameter` wartość lub określony `DbType` .
 
-|Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
+|Typ programu .NET Framework|DbType|DbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Boolean|Bit|Byte|
+|<xref:System.Boolean>|Boolean (wartość logiczna)|Bit|Boolean (wartość logiczna)|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
-|byte[]|plików binarnych|VarBinary. To niejawna konwersja nie powiedzie się, jeśli tablica bajtów jest większy niż maksymalny rozmiar wartości typu VarBinary, czyli 8000 bajtów. Dla tablic bajtów jest większa niż 8000 bajtów, należy jawnie ustawić <xref:System.Data.SqlDbType>.|VarBinary|plików binarnych|nieprzetworzone|
-|<xref:System.Char>| |Wnioskowanie <xref:System.Data.SqlDbType> z char nie jest obsługiwane.|Char|Char|Byte|
-|<xref:System.DateTime>|DataGodzina|DataGodzina|DBTimeStamp|DataGodzina|DataGodzina|
-|<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset programu SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z DateTimeOffset nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|||DataGodzina|
-|<xref:System.Decimal>|Wartość dziesiętna|Wartość dziesiętna|Wartość dziesiętna|Numeric|Wartość liczbowa|
-|<xref:System.Double>|Double|Float|Podwójne|Podwójne|Double|
+|Byte []|Binarne|Liczby. Ta niejawna konwersja zakończy się niepowodzeniem, jeśli tablica bajtów jest większa niż maksymalny rozmiar VarBinary, czyli 8000 bajtów. W przypadku tablic bajtowych o rozmiarze większym niż 8000 bajtów jawnie ustaw wartość <xref:System.Data.SqlDbType> .|Liczby|Binarne|Nieprzetworzone|
+|<xref:System.Char>| |Wnioskowanie typu <xref:System.Data.SqlDbType> from nie jest obsługiwane.|Char|Char|Byte|
+|<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
+|<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset w SQL Server 2008. Wnioskowanie z klasy <xref:System.Data.SqlDbType> DateTimeOffset nie jest obsługiwane w wersjach SQL Server starszych niż SQL Server 2008.|||DateTime|
+|<xref:System.Decimal>|Wartość dziesiętna|Wartość dziesiętna|Wartość dziesiętna|Liczbowe|Liczba|
+|<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Rzeczywiste|Single|Rzeczywiste|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|nieprzetworzone|
+|<xref:System.Guid>|Guid (identyfikator GUID)|UniqueIdentifier|Guid (identyfikator GUID)|UniqueIdentifier|Nieprzetworzone|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
-|<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Wartość liczbowa|
-|<xref:System.Object>|Obiekt|Variant|Variant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Blob|
-|<xref:System.String>|String|NVarChar. To niejawna konwersja nie powiedzie się, jeśli ciąg jest większy niż maksymalny rozmiar typu NVarChar to 4000 znaków. Ciągi większej niż 4000 znaków, należy jawnie ustawić <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
-|<xref:System.TimeSpan>|Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z przedziału czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|
+|<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Liczba|
+|<xref:System.Object>|Obiekt|Wariant|Wariant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Obiekt blob|
+|<xref:System.String>|String (ciąg)|NVarChar. Ta niejawna konwersja zakończy się niepowodzeniem, jeśli ciąg jest większy niż maksymalny rozmiar elementu NVarChar, który jest 4000 znaków. W przypadku ciągów o rozmiarze większym niż 4000 znaków jawnie ustaw wartość <xref:System.Data.SqlDbType> .|VarWChar|NVarChar|NVarChar|
+|<xref:System.TimeSpan>|Godzina|Czas w SQL Server 2008. Wnioskowanie z elementu <xref:System.Data.SqlDbType> TimeSpan nie jest obsługiwane w wersjach SQL Server starszych niż SQL Server 2008.|Czas|Godzina|DateTime|
 |<xref:System.UInt16>|UInt16|Wnioskowanie <xref:System.Data.SqlDbType> z UInt16 nie jest obsługiwane.|UnsignedSmallInt|int|UInt16|
-|<xref:System.UInt32>|UInt32|Wnioskowanie <xref:System.Data.SqlDbType> z UInt32 nie jest obsługiwane.|unsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Wnioskowanie <xref:System.Data.SqlDbType> z UInt64 nie jest obsługiwane.|UnsignedBigInt|Numeric|Wartość liczbowa|
+|<xref:System.UInt32>|UInt32|Wnioskowanie z typu <xref:System.Data.SqlDbType> UInt32 nie jest obsługiwane.|UnsignedInt|BigInt|UInt32|
+|<xref:System.UInt64>|UInt64|Wnioskowanie <xref:System.Data.SqlDbType> z UInt64 nie jest obsługiwane.|UnsignedBigInt|Liczbowe|Liczba|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Waluta|money|Waluta|Wnioskowanie `OdbcType` z `Currency` nie jest obsługiwane.|Wartość liczbowa|
-||Data|Data w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> od daty nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBDate|Data|DataGodzina|
-||SByte|Wnioskowanie <xref:System.Data.SqlDbType> z SByte nie jest obsługiwane.|TinyInt|Wnioskowanie `OdbcType` z SByte nie jest obsługiwane.|SByte|
+||Waluta|Pieniądze|Waluta|Wnioskowanie `OdbcType` z `Currency` nie jest obsługiwane.|Liczba|
+||Data|Data w SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z daty od nie jest obsługiwane w wersjach SQL Server starszych niż SQL Server 2008.|DBDate|Data|DateTime|
+||SByte|Wnioskowanie typu <xref:System.Data.SqlDbType> from nie jest obsługiwane.|TinyInt|Wywnioskowanie z niezgodnego elementu `OdbcType` nie jest obsługiwane.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
-||Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> od czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|
-||VarNumeric|Wnioskowanie <xref:System.Data.SqlDbType> z VarNumeric nie jest obsługiwane.|VarNumeric|Wnioskowanie `OdbcType` z VarNumeric nie jest obsługiwane.|Wartość liczbowa|
-|Typ zdefiniowany przez użytkownika (obiektu przy użyciu <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Obiekt lub ciąg, w zależności od dostawcy (SqlClient zawsze zwraca obiekt, Odbc zawsze zwraca wartość typu ciąg, a następnie zobaczyć albo dostawcy danych zarządzanych OleDb|SqlDbType.Udt Jeśli <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> jest obecna, w przeciwnym razie Variant|OleDbType.VarWChar (jeśli ma wartość null) OleDbType.Variant inaczej.|OdbcType.NVarChar|Nie jest obsługiwany|
+||Godzina|Czas w SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z czasu od nie jest obsługiwane w wersjach SQL Server starszych niż SQL Server 2008.|Czas|Godzina|DateTime|
+||VarNumeric|Wnioskowanie <xref:System.Data.SqlDbType> z VARNUMERIC nie jest obsługiwane.|VarNumeric|Wnioskowanie `OdbcType` z VARNUMERIC nie jest obsługiwane.|Liczba|
+|typ zdefiniowany przez użytkownika (obiekt z<xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Obiekt lub ciąg, w zależności od dostawcy (SqlClient zawsze zwraca obiekt, ODBC zawsze zwraca ciąg, a dostawca danych zarządzanych OleDb może zobaczyć|SqlDbType. UDT <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> , jeśli jest obecny, w przeciwnym razie wariant|OleDbtype. VarWChar (Jeśli wartość jest równa null) w przeciwnym wypadku OleDbtype. Variant.|OdbcType. NVarChar|nieobsługiwane|
 
 > [!NOTE]
-> Konwersja dziesiętne na inne typy są zawężających, które zaokrąglona wartość dziesiętną do najbliższej wartości całkowitej w kierunku zera. Jeśli wynik konwersji nie jest stałego w typie docelowym <xref:System.OverflowException> zgłaszany.
+> Konwersje z wartości dziesiętnych na inne typy są zawężanymi konwersjemi, które zaokrąglią wartość dziesiętną do najbliższej wartości całkowitej w kierunku zera. Jeśli wynik konwersji nie zostanie zaprezentowany w typie docelowym, <xref:System.OverflowException> zostanie zgłoszony.
 
 > [!NOTE]
-> Wartość parametru o wartości null jest wysyłany do serwera, należy określić <xref:System.DBNull>, a nie `null` (`Nothing` w języku Visual Basic). Wartość null w systemie jest pusty obiekt, który nie ma wartości. <xref:System.DBNull> jest używana do reprezentowania wartości null. Aby uzyskać więcej informacji o wartości null w bazie danych, zobacz [Obsługa wartości zerowych](./sql/handling-null-values.md).
+> W przypadku wysyłania wartości parametru o wartości null do serwera należy określić wartość <xref:System.DBNull> , a nie `null` ( `Nothing` w Visual Basic). Wartość null w systemie jest pustym obiektem, który nie ma wartości. <xref:System.DBNull>służy do reprezentowania wartości null. Aby uzyskać więcej informacji na temat wartości null bazy danych, zobacz [Obsługa wartości null](./sql/handling-null-values.md).
 
-## <a name="deriving-parameter-information"></a>Wyprowadzanie informacje o parametrach
+## <a name="deriving-parameter-information"></a>Wyprowadzanie informacji o parametrach
 
-Parametry mogą również pochodzić z procedury składowanej przy użyciu `DbCommandBuilder` klasy. Zarówno `SqlCommandBuilder` i `OleDbCommandBuilder` klasy zapewniają statycznej metody `DeriveParameters`, który automatycznie wypełnia kolekcję parametrów obiektu polecenia, który używa parametru informacji z procedury składowanej. Należy pamiętać, że `DeriveParameters` zastępuje wszelkie istniejące informacje parametr dla polecenia.
-
-> [!NOTE]
-> Wyprowadzanie informacje o parametrach powoduje spadek wydajności, ponieważ wymaga ona dodatkowej komunikacji dwustronnej źródła danych, aby pobrać informacje. Jeśli informacje o parametrach jest znany w czasie projektowania, może zwiększyć wydajność aplikacji, jawnie ustawiając parametrów.
-
-Aby uzyskać więcej informacji, zobacz [Generowanie poleceń za pomocą CommandBuilders](generating-commands-with-commandbuilders.md).
-
-## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Przy użyciu parametrów SqlCommand i procedury składowanej
-
-Procedury składowane oferują wiele zalet w aplikacjach opartych na danych. Za pomocą procedur składowanych, operacje bazy danych można być hermetyzowane w pojedynczym poleceniu, zoptymalizowane pod kątem uzyskania najlepszej wydajności i rozszerzone o dodatkowe zabezpieczenia. Chociaż procedury składowanej może być wywoływany przez przekazanie nazwy procedury składowanej, następuje argumenty parametrów jako instrukcji SQL przy użyciu <xref:System.Data.Common.DbCommand.Parameters%2A> zbiór ADO.NET <xref:System.Data.Common.DbCommand> obiektu pozwala na zdefiniowanie bardziej jawny sposób procedury składowanej Parametry i dostęp do danych wyjściowych, parametrów i wartości zwracane.
+Parametry mogą również pochodzić z procedury składowanej przy użyciu `DbCommandBuilder` klasy. `SqlCommandBuilder` `OleDbCommandBuilder` Klasy i zapewniają metodę statyczną, `DeriveParameters` która automatycznie wypełnia kolekcję parametrów obiektu polecenia, który używa informacji o parametrach z procedury składowanej. Należy zauważyć, że `DeriveParameters` zastępuje wszystkie istniejące informacje o parametrach dla polecenia.
 
 > [!NOTE]
-> Sparametryzowanych instrukcji są wykonywane na serwerze przy użyciu `sp_executesql,` pozwalający do ponownego wykorzystania planu zapytania. Kursory lokalne lub zmiennych w `sp_executesql` usługi batch nie są widoczne dla usługi batch, która wywołuje `sp_executesql`. Ostatnie zmiany w kontekście bazy danych tylko na końcu `sp_executesql` instrukcji. Aby uzyskać więcej informacji, zobacz [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
+> Wyprowadzanie informacji o parametrach powoduje spadek wydajności, ponieważ wymaga dodatkowej podróży do źródła danych w celu pobrania informacji. Jeśli informacje o parametrach są znane w czasie projektowania, można zwiększyć wydajność aplikacji przez ustawienie parametrów jawnie.
 
-Podczas korzystania z parametrów za pomocą <xref:System.Data.SqlClient.SqlCommand> programu SQL Server wykonaj procedurę składowaną w, nazwy parametrów dodanych do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji musi być zgodne z nazwami znaczników parametr w procedurze składowanej. .NET Framework Data Provider for SQL Server nie obsługuje znaku zapytania (?) — symbol zastępczy przekazywania parametrów do instrukcji SQL lub procedury składowanej. Traktuje parametry w procedurze składowanej jako nazwane parametry, a szuka dopasowania z symbolami parametru. Na przykład `CustOrderHist` procedury składowanej jest definiowana za pomocą parametru o nazwie `@CustomerID`. Gdy kod wykonuje procedurę składowaną, należy również użyć parametru o nazwie `@CustomerID`.
+Aby uzyskać więcej informacji, zobacz [Generowanie poleceń z CommandBuilders](generating-commands-with-commandbuilders.md).
+
+## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Używanie parametrów z SqlCommand i procedurą składowaną
+
+Procedury składowane oferują wiele korzyści w aplikacjach opartych na danych. Korzystając z procedur składowanych, operacje bazy danych mogą być hermetyzowane w pojedynczym poleceniu, zoptymalizowane pod kątem najlepszej wydajności i ulepszone z dodatkowymi zabezpieczeniami. Chociaż procedura składowana może być wywoływana przez przekazanie nazwy procedury składowanej, a następnie argumentów parametrów jako instrukcji SQL, przy użyciu <xref:System.Data.Common.DbCommand.Parameters%2A> kolekcji obiektu ADO.NET, <xref:System.Data.Common.DbCommand> można dokładniej definiować parametry procedury składowanej oraz uzyskać dostęp do parametrów wyjściowych i zwracanych wartości.
+
+> [!NOTE]
+> Instrukcje sparametryzowane są wykonywane na serwerze przy użyciu `sp_executesql,` , który umożliwia ponowne użycie planu zapytania. Lokalne kursory lub zmienne w `sp_executesql` partii nie są widoczne dla partii, która wywołuje `sp_executesql` . Zmiany kontekstu bazy danych są ostatnie na końcu `sp_executesql` instrukcji. Aby uzyskać więcej informacji, zobacz [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
+
+W przypadku używania parametrów z <xref:System.Data.SqlClient.SqlCommand> do wykonywania SQL Server procedury składowanej, nazwy parametrów dodawane do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji muszą być zgodne z nazwami znaczników parametrów w procedurze składowanej. Dostawca danych .NET Framework dla SQL Server nie obsługuje symbolu zastępczego znaku zapytania (?) do przekazywania parametrów do instrukcji SQL lub procedury składowanej. Traktuje parametry w procedurze składowanej jako parametry nazwane i wyszukuje pasujące znaczniki parametrów. Na przykład `CustOrderHist` procedura składowana jest definiowana przy użyciu parametru o nazwie `@CustomerID` . Gdy kod wykonuje procedurę składowaną, musi również użyć parametru o nazwie `@CustomerID` .
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -109,25 +110,25 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono sposób wywoływania procedur składowanych serwera SQL Server `Northwind` przykładowej bazy danych. Nazwa procedury składowanej jest `dbo.SalesByCategory` i ma parametr wejściowy o nazwie `@CategoryName` z typem danych `nvarchar(15)`. Ten kod tworzy nową <xref:System.Data.SqlClient.SqlConnection> wewnątrz using blokowania, tak aby połączenie zostanie usunięty po zakończeniu procedury. <xref:System.Data.SqlClient.SqlCommand> i <xref:System.Data.SqlClient.SqlParameter> obiekty są tworzone i ustaw jego właściwości. A <xref:System.Data.SqlClient.SqlDataReader> wykonuje `SqlCommand` i zwraca zestawu wyników z procedury składowanej, wyświetlanie danych wyjściowych w oknie konsoli.
+W tym przykładzie pokazano, jak wywołać procedurę składowaną SQL Server w `Northwind` przykładowej bazie danych. Nazwa procedury składowanej jest `dbo.SalesByCategory` i ma parametr wejściowy o nazwie `@CategoryName` z typem danych `nvarchar(15)` . Kod tworzy nowy <xref:System.Data.SqlClient.SqlConnection> wewnątrz bloku using, aby połączenie zostało usunięte po zakończeniu procedury. <xref:System.Data.SqlClient.SqlCommand>Obiekty i <xref:System.Data.SqlClient.SqlParameter> są tworzone i ich właściwości są ustawione. A <xref:System.Data.SqlClient.SqlDataReader> wykonuje `SqlCommand` i zwraca zestaw wyników z procedury składowanej, wyświetlając dane wyjściowe w oknie konsoli.
 
 > [!NOTE]
-> Zamiast tworzyć `SqlCommand` i `SqlParameter` obiektów, a następnie ustawiając właściwości w osobnych instrukcji, możesz zamiast tego wybrać opcję Użyj jednej z przeciążenia konstruktorów do ustawiania wielu właściwości w pojedynczej instrukcji.
+> Zamiast tworzyć obiekty i a `SqlCommand` `SqlParameter` następnie ustawiać właściwości w oddzielnych instrukcjach, zamiast tego można wybrać opcję użycia jednego z przeciążonych konstruktorów, aby ustawić wiele właściwości w jednej instrukcji.
 
 [!code-csharp[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]
 
-## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Przy użyciu parametrów przy użyciu OleDbCommand lub OdbcCommand
+## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Używanie parametrów z OleDbCommand lub OdbcCommand
 
-Podczas korzystania z parametrów za pomocą <xref:System.Data.OleDb.OleDbCommand> lub <xref:System.Data.Odbc.OdbcCommand>, kolejność parametrów dodanych do `Parameters` kolekcji musi być zgodna z kolejnością parametrów zdefiniowanych w swojej przechowywanej procedurze. .NET Framework Data Provider for OLE DB i .NET Framework Data Provider for ODBC traktować parametry w procedurze składowanej jako symbole zastępcze i stosowanie wartości parametrów w kolejności. Ponadto, zwróć wartość parametry muszą być pierwsze parametry, które są dodawane do `Parameters` kolekcji.
+W przypadku używania parametrów z <xref:System.Data.OleDb.OleDbCommand> lub <xref:System.Data.Odbc.OdbcCommand> , kolejność parametrów dodanych do `Parameters` kolekcji musi być zgodna z kolejnością parametrów zdefiniowanych w procedurze składowanej. .NET Framework Dostawca danych dla OLE DB i .NET Framework Dostawca danych dla ODBC Traktuj parametry w procedurze składowanej jako symbole zastępcze i Zastosuj wartości parametrów w podanej kolejności. Ponadto parametry wartości zwracanej muszą być pierwszymi parametrami dodawanymi do `Parameters` kolekcji.
 
-.NET Framework Data Provider for OLE DB i .NET Framework Data Provider for ODBC nie obsługują parametrów nazwanych przekazywania parametrów do instrukcji SQL lub procedury składowanej. W takim przypadku należy użyć symbolu zastępczego znak zapytania (?), jak w poniższym przykładzie.
+Dostawca danych .NET Framework dla OLE DB i .NET Framework Dostawca danych dla ODBC nie obsługują parametrów nazwanych do przekazywania parametrów do instrukcji SQL lub procedury składowanej. W takim przypadku należy użyć symbolu zastępczego znaku zapytania (?), jak w poniższym przykładzie.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?
 ```
 
-W rezultacie, kolejność, w której `Parameter` obiekty są dodawane do `Parameters` kolekcji bezpośrednio musi odpowiadać położenie? symbol zastępczy dla parametru.
+W związku z tym kolejność, w jakiej `Parameter` obiekty są dodawane do `Parameters` kolekcji, musi być bezpośrednio zgodna z pozycją? Symbol zastępczy dla parametru.
 
 ### <a name="oledb-example"></a>Przykład OleDb
 

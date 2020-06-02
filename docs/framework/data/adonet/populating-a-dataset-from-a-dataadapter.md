@@ -1,33 +1,34 @@
 ---
 title: Wypełnianie zestawu danych z elementu DataAdapter
+description: Dowiedz się, jak wypełnić zestaw danych z elementu DataAdapter w ADO.NET, który zapewnia spójny relacyjny model programowania niezależnie od źródła danych.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: d2d7719c7f6c2cacd6d68ecae226673248bbd680
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d4da840e1d51ec6f309915787caa8891db3eb59
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149235"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286666"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Wypełnianie zestawu danych z elementu DataAdapter
-ADO.NET <xref:System.Data.DataSet> jest reprezentacją danych rezydentną w pamięci, która zapewnia spójny model programowania relacyjnego niezależny od źródła danych. Reprezentuje `DataSet` kompletny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła `DataSet` danych, a może zawierać dane lokalne do aplikacji i dane z wielu źródeł danych. Interakcja z istniejącymi źródłami danych jest kontrolowana za pośrednictwem pliku `DataAdapter`.  
+ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w pamięci, która zapewnia spójny relacyjny model programowania niezależnie od źródła danych. `DataSet`Reprezentuje kompletny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` program jest niezależny od źródła danych, `DataSet` może obejmować dane lokalne do aplikacji oraz dane z wielu źródeł danych. Interakcje z istniejącymi źródłami danych są kontrolowane przez program `DataAdapter` .  
   
- Właściwość `SelectCommand` `DataAdapter` obiektu jest `Command` obiektem pobieranym dane ze źródła danych. Obiekty `InsertCommand` `UpdateCommand`, `DeleteCommand` i właściwości `DataAdapter` obiektów `Command` są, które zarządzają aktualizacjami danych w źródle danych `DataSet`zgodnie z modyfikacjami wprowadzonymi do danych w pliku . Te właściwości są bardziej szczegółowo opisane w [aktualizacji źródeł danych za pomocą programów DataAdapters](updating-data-sources-with-dataadapters.md).  
+ `SelectCommand`Właściwość `DataAdapter` jest `Command` obiektem, który pobiera dane ze źródła danych. `InsertCommand`Właściwości, `UpdateCommand` i `DeleteCommand` `DataAdapter` są obiektami, `Command` które zarządzają aktualizacjami danych w źródle danych, w zależności od zmian wprowadzonych w danych w `DataSet` . Te właściwości są szczegółowo omówione w temacie [Aktualizowanie źródeł danych za pomocą adapterów](updating-data-sources-with-dataadapters.md).  
   
- Metoda `Fill` `DataAdapter` jest używana do zapełnienia `DataSet` a z `SelectCommand` wynikami `DataAdapter`. `Fill`przyjmuje za swoje `DataSet` argumenty a do `DataTable` wypełnienia, a obiekt `DataTable` lub nazwę do wypełnienia wierszami zwróconymi z `SelectCommand`.  
-  
-> [!NOTE]
-> Za `DataAdapter` pomocą do pobrania wszystkich tabeli wymaga czasu, zwłaszcza jeśli istnieje wiele wierszy w tabeli. Dzieje się tak, ponieważ uzyskiwanie dostępu do bazy danych, lokalizowanie i przetwarzanie danych, a następnie przesyłanie danych do klienta jest czasochłonne. Ciągnięcie całej tabeli do klienta blokuje również wszystkie wiersze na serwerze. Aby zwiększyć wydajność, można `WHERE` użyć klauzuli, aby znacznie zmniejszyć liczbę wierszy zwróconych do klienta. Można również zmniejszyć ilość danych zwróconych do klienta tylko jawnie aukcji `SELECT` wymaganych kolumn w instrukcji. Innym dobrym rozwiązaniem jest pobranie wierszy w partiach (na przykład kilkaset wierszy naraz) i pobieranie następnej partii tylko po zakończeniu klienta z bieżącą partią.  
-  
- Metoda `Fill` używa `DataReader` obiektu niejawnie do zwrócenia nazw kolumn i typów, które `DataSet`są używane do tworzenia tabel w , i `DataSet`danych do wypełniania wierszy tabel w . Tabele i kolumny są tworzone tylko wtedy, gdy jeszcze nie istnieją; w `Fill` przeciwnym razie `DataSet` używa istniejącego schematu. Typy kolumn są tworzone jako typy programu .NET Framework zgodnie z tabelami w [mapowaniach typów danych w ADO.NET](data-type-mappings-in-ado-net.md). Klucze podstawowe nie są tworzone, chyba `DataAdapter`że istnieją w źródle danych i **.**`MissingSchemaAction` jest ustawiona na `MissingSchemaAction` **.** `AddWithKey`. Jeśli `Fill` stwierdzi, że klucz podstawowy istnieje dla tabeli, `DataSet` zastąpi dane z danymi ze źródła danych dla wierszy, w których wartości kolumny klucza podstawowego są zgodne z wartościami wiersza zwróconego ze źródła danych. Jeśli nie zostanie znaleziony żaden klucz podstawowy, dane są `DataSet`dołączane do tabel w pliku . `Fill`używa wszelkich mapowań, które mogą istnieć `DataSet` podczas wypełniania (zobacz [DataAdapter DataTable i DataColumn Mappings](dataadapter-datatable-and-datacolumn-mappings.md)).  
+ `Fill`Metoda `DataAdapter` jest używana do wypełniania `DataSet` wynikami `SelectCommand` `DataAdapter` . `Fill`przyjmuje jako argumenty `DataSet` , które mają być wypełnione, a `DataTable` obiekt lub nazwę `DataTable` do wypełnienia wierszami zwracanymi z `SelectCommand` .  
   
 > [!NOTE]
-> Jeśli `SelectCommand` zwraca wyniki SPRZĘŻENIA `DataAdapter` ZEWNĘTRZNEGO, nie `PrimaryKey` ustawia wartości `DataTable`wynikowego . Należy zdefiniować `PrimaryKey` samodzielnie, aby upewnić się, że zduplikowane wiersze są poprawnie rozpoznawane. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](./dataset-datatable-dataview/defining-primary-keys.md).  
+> `DataAdapter`Pobieranie całej tabeli trwa przy użyciu programu, zwłaszcza jeśli w tabeli znajduje się wiele wierszy. Dzieje się tak dlatego, że dostęp do bazy danych, lokalizowanie i przetwarzanie danych, a następnie Transferowanie danych do klienta odbywa się czasochłonnie. Przeciągnięcie całej tabeli do klienta spowoduje również zablokowanie wszystkich wierszy na serwerze. Aby zwiększyć wydajność, można użyć klauzuli, `WHERE` aby znacznie zmniejszyć liczbę wierszy zwracanych do klienta. Możesz również zmniejszyć ilość danych zwracanych do klienta, tylko jawnie wymieniając wymagane kolumny w `SELECT` instrukcji. Innym dobrym rozwiązaniem jest pobranie wierszy w partiach (takich jak kilka setek wierszy w danym momencie) i pobranie kolejnej partii, gdy klient zostanie zakończony przy użyciu bieżącej partii.  
   
- Poniższy przykład kodu tworzy <xref:System.Data.SqlClient.SqlDataAdapter> wystąpienie, <xref:System.Data.SqlClient.SqlConnection> które używa do `Northwind` bazy danych programu <xref:System.Data.DataTable> Microsoft `DataSet` SQL Server i wypełnia w a z listy klientów. Instrukcja SQL <xref:System.Data.SqlClient.SqlConnection> i argumenty <xref:System.Data.SqlClient.SqlDataAdapter> przekazywane do konstruktora są używane do tworzenia <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> właściwości <xref:System.Data.SqlClient.SqlDataAdapter>.  
+ `Fill`Metoda używa `DataReader` obiektu niejawnie do zwracania nazw kolumn i typów, które są używane do tworzenia tabel w `DataSet` , i danych do wypełniania wierszy tabel w `DataSet` . Tabele i kolumny są tworzone tylko wtedy, gdy jeszcze nie istnieją; w przeciwnym razie `Fill` stosuje istniejący `DataSet` schemat. Typy kolumn są tworzone jako typy .NET Framework zgodnie z tabelami w [mapowaniu typu danych w ADO.NET](data-type-mappings-in-ado-net.md). Klucze podstawowe nie są tworzone, chyba że istnieją w źródle danych i `DataAdapter` **.**`MissingSchemaAction` jest ustawiona na `MissingSchemaAction` **.** `AddWithKey` . Jeśli `Fill` okaże się, że klucz podstawowy istnieje dla tabeli, spowoduje to zastąpienie danych w danych z `DataSet` danymi ze źródła danych dla wierszy, w których wartości kolumny klucza podstawowego są zgodne z wierszami zwróconymi ze źródła danych. Jeśli klucz podstawowy nie zostanie znaleziony, dane są dołączane do tabel w `DataSet` . `Fill`używa wszelkich mapowań, które mogą istnieć podczas wypełniania `DataSet` (zobacz [mapowania DataAdapter DataTable i DataColumn](dataadapter-datatable-and-datacolumn-mappings.md)).  
+  
+> [!NOTE]
+> Jeśli `SelectCommand` zwraca wyniki sprzężenia zewnętrznego, `DataAdapter` obiekt nie ustawia `PrimaryKey` wartości wynikowej `DataTable` . Należy zdefiniować siebie, `PrimaryKey` Aby upewnić się, że zduplikowane wiersze są poprawnie rozpoznawane. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](./dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Poniższy przykład kodu tworzy wystąpienie <xref:System.Data.SqlClient.SqlDataAdapter> , które używa <xref:System.Data.SqlClient.SqlConnection> do `Northwind` bazy danych Microsoft SQL Server i wypełnia <xref:System.Data.DataTable> `DataSet` listę klientów w a. Instrukcja SQL i <xref:System.Data.SqlClient.SqlConnection> argumenty przekazane do <xref:System.Data.SqlClient.SqlDataAdapter> konstruktora są używane do tworzenia <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> właściwości <xref:System.Data.SqlClient.SqlDataAdapter> .  
   
 ## <a name="example"></a>Przykład  
   
@@ -53,16 +54,16 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> Kod pokazany w tym przykładzie nie otwiera `Connection`jawnie i zamyka plik . Metoda `Fill` niejawnie `Connection` otwiera, `DataAdapter` że używa, jeśli stwierdzi, że połączenie nie jest jeszcze otwarte. Po `Fill` otwarciu połączenia, to również `Fill` zamyka połączenie po zakończeniu. Może to uprościć kod, gdy masz `Fill` do `Update`czynienia z pojedynczą operacją, taką jak a lub . Jeśli jednak wykonujesz wiele operacji, które wymagają otwartego połączenia, możesz poprawić wydajność `Open` aplikacji, `Connection`jawnie wywołując metodę , wykonując operacje `Close` ze `Connection`źródłem danych, a następnie wywołując metodę . Należy starać się zachować połączenia ze źródłem danych otwarte tak krótko, jak to możliwe, aby zwolnić zasoby do użytku przez inne aplikacje klienckie.  
+> Kod przedstawiony w tym przykładzie nie jest jawnie otwarty i zamknięty `Connection` . `Fill`Metoda niejawnie otwiera `Connection` , czy `DataAdapter` jest używana, jeśli stwierdzi, że połączenie nie jest jeszcze otwarte. Jeśli `Fill` połączenie zostało otwarte, zamyka również połączenie po `Fill` zakończeniu. Może to uprościć kod, gdy zajmujesz się jedną operacją, taką jak `Fill` lub `Update` . Jednak w przypadku wykonywania wielu operacji, które wymagają otwartego połączenia, można zwiększyć wydajność aplikacji, jawnie wywołując `Open` metodę `Connection` , wykonując operacje względem źródła danych, a następnie wywołując `Close` metodę `Connection` . Aby zwolnić zasoby używane przez inne aplikacje klienckie, należy podjąć próbę zablokowania połączenia ze źródłem danych.  
   
 ## <a name="multiple-result-sets"></a>Wiele zestawów wyników  
- Jeśli `DataAdapter` napotka wiele zestawów wyników, `DataSet`tworzy wiele tabel w . Tabele otrzymują przyrostową domyślną nazwę tabeli*N,* zaczynając od "Tabela" dla tabeli0. Jeśli nazwa tabeli jest przekazywana jako argument do `Fill` metody, tabele otrzymują przyrostową domyślną nazwę TableName*N,* począwszy od "TableName" dla TableName0.  
+ Jeśli `DataAdapter` napotkają wiele zestawów wyników, tworzy wiele tabel w `DataSet` . Tabele uzyskują przyrostową domyślną nazwę tabeli*N*, zaczynając od "Table" dla TABLE0. Jeśli nazwa tabeli jest przenoszona jako argument do `Fill` metody, tabele uzyskują przyrostową domyślną nazwę tabeliname*N*, rozpoczynając od "TableName" dla TableName0.  
   
-## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Wypełnianie zestawu danych z wielu danychAdapters  
- Z dowolnym obiektem `DataAdapter` `DataSet`można używać dowolnej liczby obiektów z obiektem . Każdy `DataAdapter` może służyć do wypełnienia `DataTable` jednego lub więcej obiektów i rozpoznać aktualizacje z powrotem do odpowiedniego źródła danych. `DataRelation`i `Constraint` obiekty mogą być `DataSet` dodawane do lokalnie, co umożliwia powiązanie danych z różnych źródeł danych. Na przykład `DataSet` może zawierać dane z bazy danych programu Microsoft SQL Server, bazy danych IBM DB2 udostępniane za pośrednictwem ole DB i źródła danych, które strumieniuje XML. Jeden lub `DataAdapter` więcej obiektów może obsługiwać komunikację z każdym źródłem danych.  
+## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Wypełnianie zestawu danych z wielu kart DataAdapters  
+ Dowolna liczba `DataAdapter` obiektów może być używana z `DataSet` . Każdy `DataAdapter` z nich może służyć do wypełnienia jednego lub większej liczby `DataTable` obiektów i rozwiązania aktualizacji z powrotem do odpowiedniego źródła danych. `DataRelation`i `Constraint` obiekty można dodać do `DataSet` lokalnego, co umożliwia powiązanie danych z niepodobnymi źródłami danych. Na przykład `DataSet` może zawierać dane z Microsoft SQL Server bazy danych, bazy danych IBM DB2 uwidocznionej za pośrednictwem OLE DB i źródła danych, które przesyła strumieniowo XML. Co najmniej jeden `DataAdapter` obiekt może obsługiwać komunikację z każdym źródłem danych.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu wypełnia listę klientów `Northwind` z bazy danych na programie Microsoft SQL `Northwind` Server oraz listę zamówień z bazy danych przechowywanej w programie Microsoft Access 2000. Wypełnione tabele są `DataRelation`powiązane z programem , a lista odbiorców jest następnie wyświetlana z zamówieniami dla tego odbiorcy. Aby uzyskać `DataRelation` więcej informacji o obiektach, zobacz [Dodawanie danychrelacji](./dataset-datatable-dataview/adding-datarelations.md) i [nawigowanie do danych](./dataset-datatable-dataview/navigating-datarelations.md).  
+ Poniższy przykład kodu wypełnia listę klientów z `Northwind` bazy danych w Microsoft SQL Server i listę zamówień z `Northwind` bazy danych przechowywanej w programie Microsoft Access 2000. Wypełnione tabele są powiązane z `DataRelation` , a lista klientów jest następnie wyświetlana wraz z zamówieniami dla tego klienta. Aby uzyskać więcej informacji na temat `DataRelation` obiektów, zobacz [Dodawanie relacji](./dataset-datatable-dataview/adding-datarelations.md) danych i [nawigowanie po relacjach](./dataset-datatable-dataview/navigating-datarelations.md)danych.  
   
 ```vb  
 ' Assumes that customerConnection is a valid SqlConnection object.  
@@ -117,21 +118,21 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 }  
 ```  
   
-## <a name="sql-server-decimal-type"></a>Typ dziesiętny programu SQL Server  
- Domyślnie przechowuje `DataSet` dane przy użyciu typów danych .NET Framework. W przypadku większości aplikacji zapewniają one wygodną reprezentację informacji o źródle danych. Jednak ta reprezentacja może powodować problem, gdy typ danych w źródle danych jest typem danych dziesiętnych lub liczbowych programu SQL Server. Typ danych `decimal` programu .NET Framework umożliwia maksymalnie 28 cyfr znaczących, podczas gdy typ danych programu SQL Server `decimal` umożliwia 38 cyfr znaczących. Jeśli `SqlDataAdapter` podczas `Fill` operacji zostanie stwierdzi, że `decimal` dokładność pola programu SQL Server jest większa niż `DataTable`28 znaków, bieżący wiersz nie zostanie dodany do pliku . Zamiast tego `FillError` występuje zdarzenie, które umożliwia określenie, czy wystąpi utrata precyzji i odpowiednio reagować. Aby uzyskać więcej `FillError` informacji na temat zdarzenia, zobacz [Obsługa zdarzeń dataadapter](handling-dataadapter-events.md). Aby uzyskać wartość `decimal` programu SQL Server, <xref:System.Data.SqlClient.SqlDataReader> można również <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> użyć obiektu i wywołać metodę.  
+## <a name="sql-server-decimal-type"></a>SQL Server Typ dziesiętny  
+ Domyślnie `DataSet` dane są przechowywane przy użyciu .NET Framework typów danych. W przypadku większości aplikacji zapewniają one wygodną reprezentację informacji o źródle danych. Jednakże ta reprezentacja może spowodować problem, gdy typ danych w źródle danych jest SQL Server dziesiętny lub numeryczny typ danych. `decimal`Typ danych .NET Framework dopuszcza maksymalnie 28 cyfr znaczących, podczas gdy `decimal` typ danych SQL Server umożliwia 38 cyfr znaczących. Jeśli `SqlDataAdapter` podczas operacji decyduje, `Fill` że dokładność `decimal` pola SQL Server jest większa niż 28 znaków, bieżący wiersz nie zostanie dodany do `DataTable` . Zamiast tego `FillError` wystąpi zdarzenie, które pozwala określić, czy nastąpi utrata dokładności i odpowiednio reagować. Aby uzyskać więcej informacji o `FillError` zdarzeniu, zobacz [Obsługa zdarzeń DataAdapter](handling-dataadapter-events.md). Aby uzyskać SQL Server `decimal` wartość, można również użyć <xref:System.Data.SqlClient.SqlDataReader> obiektu i wywołać <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> metodę.  
   
- ADO.NET 2.0 wprowadzono rozszerzone wsparcie <xref:System.Data.SqlTypes> w `DataSet`. Aby uzyskać więcej informacji, zobacz [SqlTypes i DataSet](./sql/sqltypes-and-the-dataset.md).  
+ W programie ADO.NET 2,0 wprowadzono rozszerzoną obsługę programu <xref:System.Data.SqlTypes> w programie `DataSet` . Aby uzyskać więcej informacji, zobacz [SqlTypes i zestaw danych](./sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>Rozdziały OLE DB  
- Hierarchiczne zestawy wierszy lub rozdziały (typ `DBTYPE_HCHAPTER`OLE `adChapter`DB , typ ADO `DataSet`) mogą być używane do wypełniania zawartości pliku . Gdy <xref:System.Data.OleDb.OleDbDataAdapter> napotka roz chaptered `Fill` kolumny `DataTable` podczas operacji, a jest tworzony dla kolumny rozdziałów, a tabela jest wypełniona kolumn i wierszy z rozdziału. Tabela utworzona dla kolumny rozdzielanej nosi nazwę zarówno nazwy tabeli nadrzędnej, jak i nazwy kolumny rozdzielanej w formularzu "*ParentTableNameChapteredColumnName*". Jeśli tabela już istnieje `DataSet` w nazwie kolumny roz chaptered, bieżąca tabela jest wypełniona danymi rozdziału. Jeśli w istniejącej tabeli nie ma kolumny zgodnej z kolumną znalezioną w rozdziale, dodawana jest nowa kolumna.  
+ Hierarchiczne zestawy wierszy lub rozdziały (typ OLE DB `DBTYPE_HCHAPTER` , typ ADO `adChapter` ) mogą być używane do wypełniania zawartości `DataSet` . Gdy <xref:System.Data.OleDb.OleDbDataAdapter> napotkają kolumnę z rozdziałem podczas `Fill` operacji, `DataTable` jest tworzona dla kolumny z rozdziałem, a ta tabela jest wypełniana kolumnami i wierszami z rozdziału. Tabela utworzona dla kolumny z rozdziałem jest nazywana przy użyciu nazwy tabeli nadrzędnej i nazwy kolumny rozdziału w postaci "*ParentTableNameChapteredColumnName*". Jeśli tabela już istnieje w, `DataSet` która jest zgodna z nazwą kolumny z rozdziałem, bieżąca tabela jest wypełniana danymi rozdziału. Jeśli w istniejącej tabeli nie ma kolumn pasujących do kolumny znalezionej w rozdziale, zostanie dodana nowa kolumna.  
   
- Przed wypełnionymi `DataSet` tabelami w kolumnach rozdziałów tworzona jest relacja między tabelami nadrzędnymi i podrzędnymi hierarchicznego zestawu wierszy przez dodanie kolumny całkowitej do tabeli nadrzędnej i `DataRelation` podrzędnej, ustawienie kolumny nadrzędnej na automatyczny przyrost i utworzenie przy użyciu dodanych kolumn z obu tabel. Dodana relacja jest nazywana przy użyciu nazw tabeli nadrzędnej i kolumn rozdziału w formularzu "*ParentTableNameChapterColumnName*".  
+ Przed `DataSet` zapełnieniem tabel w obiekcie, które znajdują się w kolumnie z rozdziałem, relacja jest tworzona między tabelami nadrzędnymi i podrzędnymi hierarchicznego zestawu wierszy poprzez dodanie kolumny liczb całkowitych do tabeli nadrzędnej i podrzędnej, ustawienie kolumny nadrzędnej na automatycznie przyrostowe i utworzenie `DataRelation` przy użyciu dodanych kolumn z obu tabel. Dodana relacja nosi nazwę przy użyciu tabeli nadrzędnej i nazw kolumn rozdziałów w postaci "*ParentTableNameChapterColumnName*".  
   
- Należy zauważyć, że powiązana `DataSet`kolumna istnieje tylko w pliku . Kolejne wypełnienia ze źródła danych mogą powodować dodawanie nowych wierszy do tabel zamiast scalania zmian z istniejącymi wierszami.  
+ Zwróć uwagę, że kolumna powiązane istnieje tylko w `DataSet` . Kolejne wypełnienia ze źródła danych mogą spowodować dodanie nowych wierszy do tabel zamiast zmian scalanych do istniejących wierszy.  
   
- Należy również zauważyć, że `DataAdapter.Fill` w przypadku `DataTable`użycia przeciążenia, które ma , tylko ta tabela zostanie wypełniona. Kolumna liczby całkowitej automatycznego zwiększania liczby całkowitej nadal będzie dodawana do tabeli, ale nie zostanie utworzona ani wypełniona żadna tabela podrzędna i nie zostanie utworzona żadna relacja.  
+ Należy również pamiętać, że jeśli używasz `DataAdapter.Fill` przeciążenia, które pobiera `DataTable` , tylko ta tabela zostanie wypełniona. Do tabeli zostanie dodana kolumna o podwójnej liczbie całkowitej, ale żadna tabela podrzędna nie zostanie utworzona lub nie zostanie wypełniona, a relacja nie zostanie utworzona.  
   
- W poniższym przykładzie użyto dostawcy MSDataShape do generowania kolumny rozdział zamówień dla każdego klienta na liście odbiorców. A `DataSet` jest następnie wypełniona danymi.  
+ Poniższy przykład używa dostawcy MSDataShape w celu wygenerowania kolumny rozdział zamówień dla każdego klienta na liście klientów. A `DataSet` następnie jest wypełniony danymi.  
   
 ```vb  
 Using connection As OleDbConnection = New OleDbConnection( _  
@@ -163,25 +164,25 @@ adapter.Fill(customers, "Customers");
 }  
 ```  
   
- Po `Fill` zakończeniu `DataSet` operacji zawiera dwie `Customers` tabele: i `CustomersOrders`, gdzie `CustomersOrders` reprezentuje kolumnę rozdziałów. Dodatkowa kolumna `Orders` o nazwie `Customers` zostanie dodana do `CustomersOrders` tabeli, `CustomersOrders` a do tabeli zostanie dodana dodatkowa kolumna o nazwie. Kolumna `Orders` w `Customers` tabeli jest ustawiona na automatyczne zwiększanie. A `DataRelation` `CustomersOrders`, jest tworzony przy użyciu kolumn, które `Customers` zostały dodane do tabel z jako tabela nadrzędna. W poniższych tabelach przedstawiono niektóre przykładowe wyniki.  
+ Po `Fill` zakończeniu operacji `DataSet` zawiera dwie tabele: `Customers` i `CustomersOrders` , gdzie `CustomersOrders` reprezentuje kolumnę z rozdziałem. Dodatkowa kolumna o nazwie `Orders` zostanie dodana do `Customers` tabeli, a dodatkowa kolumna o nazwie `CustomersOrders` zostanie dodana do `CustomersOrders` tabeli. `Orders`Kolumna w `Customers` tabeli ma ustawioną funkcję autoprzyrost. A `DataRelation` , `CustomersOrders` , jest tworzony przy użyciu kolumn, które zostały dodane do tabel `Customers` jako tabela nadrzędna. W poniższych tabelach przedstawiono niektóre przykładowe wyniki.  
   
-### <a name="tablename-customers"></a>Nazwa tabeli: Klienci  
+### <a name="tablename-customers"></a>TableName: Customers  
   
 |CustomerID|CompanyName|Orders|  
 |----------------|-----------------|------------|  
-|Alfki|Alfreds Futterkiste|0|  
-|ANATR (ANATR)|Ana Trujillo Emparedados y helados|1|  
+|ALFKI|Alfreds Futterkiste|0|  
+|ANATR|P Trujillo Emparedados y Helados|1|  
   
-### <a name="tablename-customersorders"></a>Nazwa tabeli: CustomersOrders  
+### <a name="tablename-customersorders"></a>TableName: CustomersOrders  
   
-|CustomerID|OrderID|Liczba zamówień na klientów|  
+|CustomerID|OrderID|CustomersOrders|  
 |----------------|-------------|---------------------|  
-|Alfki|10643|0|  
-|Alfki|10692|0|  
-|ANATR (ANATR)|10308|1|  
-|ANATR (ANATR)|10625|1|  
+|ALFKI|10643|0|  
+|ALFKI|10692|0|  
+|ANATR|10308|1|  
+|ANATR|10625|1|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Elementy DataAdapter i DataReader](dataadapters-and-datareaders.md)
 - [Mapowanie typu danych w ADO.NET](data-type-mappings-in-ado-net.md)

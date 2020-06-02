@@ -1,14 +1,14 @@
 ---
 title: Co to jest Konstruktor modelu i jak to działa?
 description: Jak korzystać z konstruktora modelu ML.NET w celu automatycznego uczenia modelu uczenia maszynowego
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616933"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289502"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Konstruktor modelu i jak to działa?
 
@@ -109,7 +109,7 @@ Jeśli nie masz jeszcze własnych danych, wypróbuj jeden z tych zestawów danyc
 
 |Scenariusz|Przykład|Dane|Etykieta|Funkcje|
 |-|-|-|-|-|
-|Klasyfikacja|Przewidywanie anomalii sprzedaży|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Month|
+|Klasyfikacja|Przewidywanie anomalii sprzedaży|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Miesiąc|
 ||Przewidywanie tonacji z komentarzy w witrynie sieci Web|[dane komentarzy witryny sieci Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0 w przypadku wartości ujemnej tonacji, 1, gdy wartość jest dodatnia)|Komentarz, rok|
 ||Przewidywanie oszustw transakcji kart kredytowych|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, v1 — v28 (funkcje anonimowe)|
 ||Przewidywanie typu problemu w repozytorium GitHub|[Dane problemu w usłudze GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Warstwowy|Tytuł, opis|
@@ -119,7 +119,7 @@ Jeśli nie masz jeszcze własnych danych, wypróbuj jeden z tych zestawów danyc
 
 ## <a name="train"></a>Szkolenie
 
-Po wybraniu scenariusza, danych i etykiety, Konstruktor modelu pociąga za niego model.
+Po wybraniu scenariusza, środowiska, danych i etykiety, Konstruktor modelu pociąga za niego model.
 
 ### <a name="what-is-training"></a>Co to jest szkolenie?
 
@@ -149,6 +149,8 @@ Te liczby są tylko przewodnikiem. Dokładna długość szkolenia zależy od:
 - Typ kolumn
 - zadanie ML
 - wydajność procesora, dysku i pamięci maszyny używanej na potrzeby szkolenia
+
+Zwykle zaleca się użycie więcej niż 100 wierszy jako zestawów danych o mniejszej liczbie niż, która może nie dawać wyników i może trwać znacznie dłużej do uczenia się.
 
 ## <a name="evaluate"></a>Evaluate
 
@@ -193,7 +195,7 @@ Jeśli Ocena wydajności modelu nie jest tak dobra, jak chcesz, możesz:
 
 - Uczenie przez dłuższy czas. Przez więcej czasu eksperymenty aparatu uczenia maszynowego z dodatkowymi algorytmami i ustawieniami.
 
-- Dodaj więcej danych. Czasami ilość danych nie wystarcza do uczenia modelu uczenia maszynowego o wysokiej jakości.
+- Dodaj więcej danych. Czasami ilość danych nie wystarcza do uczenia modelu uczenia maszynowego o wysokiej jakości. Jest to szczególnie prawdziwe z zestawami danych, które mają niewielką liczbę przykładów.
 
 - Zrównoważ dane. W przypadku zadań klasyfikacji upewnij się, że zestaw szkoleniowy jest zrównoważony w różnych kategoriach. Na przykład, jeśli masz cztery klasy do 100 przykładów szkoleniowych, a dwie pierwszej klasy (tag1 i tag2) są używane do 90 rekordów, ale pozostałe dwa (tag3 i tag4) są używane tylko w pozostałych 10 rekordach, brak zrównoważonych danych może spowodować, że model będzie mógł niezawodnie przewidzieć, czy ma być prawidłowo przewidywalna wartość tag3 lub tag4.
 

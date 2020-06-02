@@ -8,43 +8,43 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708327"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287522"
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
-W tym temacie przedstawiono omówienie ogólnych interfejsów, które zapewniają typowe funkcje dla rodzin typów ogólnych.  
+Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają typowe funkcje w różnych rodzinach typów ogólnych.  
   
 ## <a name="generic-interfaces"></a>Interfejsy ogólne  
- Interfejsy ogólne zapewniają bezpieczne dla typu odpowiedniki interfejsów nieogólnych do porównywania porządkowania i równości oraz dla funkcji współużytkowanej przez typy kolekcji rodzajowych.  
+ Interfejsy generyczne zapewniają bezpieczne dla typu interfejsy nieogólne do sortowania i porównywania równości oraz funkcji, które są współużytkowane przez typy kolekcji generycznej.  
   
 > [!NOTE]
-> Począwszy od .NET Framework 4, parametry typu kilku interfejsów ogólnych są oznaczone kowariantne lub kontrawariantne, zapewniając większą elastyczność w przypisywaniu i przy użyciu typów, które implementują te interfejsy. Zobacz [Kowariancja i Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> Począwszy od .NET Framework 4, parametry typu kilku interfejsów ogólnych są oznaczone jako współvariant lub kontrawariantne, co zapewnia większą elastyczność w przypisywaniu i używaniu typów, które implementują te interfejsy. Zobacz [Kowariancja i kontrawariancja](covariance-and-contravariance.md).  
   
-### <a name="equality-and-ordering-comparisons"></a>Porównania równości i kolejności  
- W <xref:System> przestrzeni nazw <xref:System.IComparable%601?displayProperty=nameWithType> interfejsów i <xref:System.IEquatable%601?displayProperty=nameWithType> ogólnych, takich jak ich odpowiedniki nierodzajowe, zdefiniować metody porządkowania porównań i porównań równości, odpowiednio. Typy implementują te interfejsy, aby zapewnić możliwość wykonywania takich porównań.  
+### <a name="equality-and-ordering-comparisons"></a>Porównania równości i określania kolejności  
+ W <xref:System> obszarze nazw, <xref:System.IComparable%601?displayProperty=nameWithType> i <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsy ogólne, takie jak ich niegeneryczne odpowiedniki, definiują metody określania kolejności porównań i porównywania równości. Typy implementują te interfejsy, aby zapewnić możliwość wykonywania takich porównań.  
   
- W <xref:System.Collections.Generic> przestrzeni nazw <xref:System.Collections.Generic.IComparer%601> interfejsów i <xref:System.Collections.Generic.IEqualityComparer%601> ogólnych oferują sposób definiowania kolejności lub porównania <xref:System.IComparable%601?displayProperty=nameWithType> równości <xref:System.IEquatable%601?displayProperty=nameWithType> dla typów, które nie implementują lub ogólny interfejs i zapewniają sposób ponownego zdefiniowania tych relacji dla typów, które nie. Te interfejsy są używane przez metody i konstruktory wielu klas kolekcji ogólnej. Na przykład można przekazać <xref:System.Collections.Generic.IComparer%601> obiekt ogólny do <xref:System.Collections.Generic.SortedDictionary%602> konstruktora klasy, aby określić kolejność <xref:System.IComparable%601?displayProperty=nameWithType>sortowania dla typu, który nie implementuje ogólny . Istnieją przeciążenia <xref:System.Array.Sort%2A?displayProperty=nameWithType> ogólnej metody <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> statycznej i metody wystąpienia sortowania <xref:System.Collections.Generic.IComparer%601> tablic i list przy użyciu implementacji ogólnych.  
+ W <xref:System.Collections.Generic> przestrzeni nazw <xref:System.Collections.Generic.IComparer%601> i <xref:System.Collections.Generic.IEqualityComparer%601> interfejsy ogólne umożliwiają zdefiniowanie porównania porządkunia lub równości dla typów, które nie implementują <xref:System.IComparable%601?displayProperty=nameWithType> <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu lub ogólnych, a także umożliwiają zdefiniowanie tych relacji dla typów, które wykonują. Te interfejsy są używane przez metody i konstruktory wielu klas kolekcji ogólnej. Na przykład można przekazać obiekt generyczny <xref:System.Collections.Generic.IComparer%601> do konstruktora <xref:System.Collections.Generic.SortedDictionary%602> klasy, aby określić kolejność sortowania dla typu, który nie implementuje generycznej <xref:System.IComparable%601?displayProperty=nameWithType> . Istnieją przeciążenia <xref:System.Array.Sort%2A?displayProperty=nameWithType> ogólnej metody statycznej i <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> metody instancji do sortowania tablic i list przy użyciu <xref:System.Collections.Generic.IComparer%601> implementacji ogólnych.  
   
- Klasy <xref:System.Collections.Generic.Comparer%601> <xref:System.Collections.Generic.EqualityComparer%601> ogólne i ogólne zapewniają klasy <xref:System.Collections.Generic.IComparer%601> podstawowe <xref:System.Collections.Generic.IEqualityComparer%601> dla implementacji i ogólnych interfejsów, a <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> także <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> zapewniają domyślne porządkowanie i porównania równości za pośrednictwem ich odpowiednich i właściwości.  
+ <xref:System.Collections.Generic.Comparer%601>Klasy i <xref:System.Collections.Generic.EqualityComparer%601> generyczne zapewniają klasy bazowe dla implementacji <xref:System.Collections.Generic.IComparer%601> <xref:System.Collections.Generic.IEqualityComparer%601> interfejsów i ogólnych, a także zapewniają domyślne sortowanie i Porównywanie równości przy użyciu ich odpowiednich <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> i <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> właściwości.  
   
 ### <a name="collection-functionality"></a>Funkcje kolekcji  
- Ogólny <xref:System.Collections.Generic.ICollection%601> interfejs jest podstawowym interfejsem dla typów kolekcji ogólnych. Zapewnia podstawowe funkcje dodawania, usuwania, kopiowania i wyliczania elementów. <xref:System.Collections.Generic.ICollection%601>dziedziczy zarówno <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Collections.IEnumerable>ogólnych, jak i nieogólnych .  
+ <xref:System.Collections.Generic.ICollection%601>Ogólny interfejs to podstawowy interfejs dla typów kolekcji rodzajowych. Zapewnia podstawowe funkcje dodawania, usuwania, kopiowania i wyliczania elementów. <xref:System.Collections.Generic.ICollection%601>dziedziczy z zarówno rodzajowe <xref:System.Collections.Generic.IEnumerable%601> , jak i nieogólne <xref:System.Collections.IEnumerable> .  
   
- Ogólny <xref:System.Collections.Generic.IList%601> interfejs rozszerza <xref:System.Collections.Generic.ICollection%601> ogólny interfejs o metody pobierania indeksowane.  
+ <xref:System.Collections.Generic.IList%601>Ogólny interfejs rozszerza <xref:System.Collections.Generic.ICollection%601> interfejs ogólny o metody do pobierania indeksowanego.  
   
- Ogólny <xref:System.Collections.Generic.IDictionary%602> interfejs rozszerza <xref:System.Collections.Generic.ICollection%601> ogólny interfejs o metody pobierania kluczy. Typy słowników ogólnych w bibliotece klas podstawowych <xref:System.Collections.IDictionary> .NET Framework również implementują interfejs nierodzajowy.  
+ <xref:System.Collections.Generic.IDictionary%602>Interfejs generyczny rozszerza <xref:System.Collections.Generic.ICollection%601> interfejs ogólny o metody do pobierania, który został utworzony. Typy słownika generycznego w .NET Framework biblioteki klas podstawowych również implementują interfejs nieogólny <xref:System.Collections.IDictionary> .  
   
- Ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejs zapewnia ogólną strukturę modułu wyliczania. Ogólny <xref:System.Collections.Generic.IEnumerator%601> interfejs zaimplementowany przez ogólne moduły wyliczania dziedziczy interfejs nierodzajowy; <xref:System.Collections.IEnumerator> i <xref:System.Collections.IEnumerator.MoveNext%2A> <xref:System.Collections.IEnumerator.Reset%2A> elementy członkowskie, które nie zależą `T`od parametru typu, pojawiają się tylko na interfejsie nierodzajowym. Oznacza to, że każdy konsument interfejsu nierodzajowego może również korzystać z interfejsu ogólnego.  
+ <xref:System.Collections.Generic.IEnumerable%601>Ogólny interfejs zawiera ogólną strukturę modułu wyliczającego. <xref:System.Collections.Generic.IEnumerator%601>Ogólny interfejs implementowany przez moduł wyliczający generyczne dziedziczy interfejs nieogólny <xref:System.Collections.IEnumerator> ; <xref:System.Collections.IEnumerator.MoveNext%2A> i <xref:System.Collections.IEnumerator.Reset%2A> składowe, które nie są zależne od parametru typu `T` , są wyświetlane tylko w nieogólnym interfejsie. Oznacza to, że każdy użytkownik niegenerycznego interfejsu może również korzystać z interfejsu ogólnego.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Typy ogólne](../../../docs/standard/generics/index.md)
-- [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)
-- [Delegaty ogólne do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [Typy ogólne](index.md)
+- [Kolekcje ogólne w oprogramowaniu .NET Framework](collections.md)
+- [Delegaty ogólne do manipulowania tablicami i listami](delegates-for-manipulating-arrays-and-lists.md)
+- [Kowariancja i kontrawariancja](covariance-and-contravariance.md)

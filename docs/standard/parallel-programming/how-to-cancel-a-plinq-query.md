@@ -1,5 +1,5 @@
 ---
-title: 'Porady: anulowanie zapytania PLINQ'
+title: 'Instrukcje: Anulowanie zapytania PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 09405a8a9f5d96d80454bcc98cbf29db54df6725
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635878"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288215"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Porady: anulowanie zapytania PLINQ
-Poniższe przykłady pokazują dwa sposoby anulowania kwerendy PLINQ. W pierwszym przykładzie pokazano, jak anulować kwerendę, która składa się głównie z przechodzenia danych. W drugim przykładzie pokazano, jak anulować kwerendę, która zawiera funkcję użytkownika, która jest kosztowna pod względem obliczeniowym.
+# <a name="how-to-cancel-a-plinq-query"></a>Instrukcje: Anulowanie zapytania PLINQ
+W poniższych przykładach pokazano dwa sposoby anulowania zapytania PLINQ. Pierwszy przykład pokazuje, jak anulować zapytanie, które składa się głównie z przechodzenia do danych. Drugi przykład pokazuje, jak anulować zapytanie zawierające funkcję użytkownika, która jest w praktyce kosztowna.
 
 > [!NOTE]
-> Gdy "Tylko mój kod" jest włączona, Visual Studio zostanie przerwana w wierszu, który zgłasza wyjątek i wyświetli komunikat o błędzie z napisem "wyjątek nie obsługiwany przez kod użytkownika". Ten błąd jest łagodny. Można nacisnąć klawisz F5, aby kontynuować z niego i zobacz zachowanie obsługi wyjątków, które jest pokazane w poniższych przykładach. Aby zapobiec przerywaniu pierwszego błędu w programie Visual Studio, po prostu wyczyść pole wyboru "Tylko mój kod" w obszarze **Narzędzia, Opcje, Debugowanie, Ogólne**.
+> Po włączeniu "Tylko mój kod" program Visual Studio przerwie w wierszu, który zgłasza wyjątek, i wyświetla komunikat o błędzie "wyjątek nie jest obsługiwany przez kod użytkownika". Ten błąd jest niegroźny. Możesz nacisnąć klawisz F5, aby kontynuować z niego i zobaczyć zachowanie obsługi wyjątków, które przedstawiono w poniższych przykładach. Aby zapobiec utracie przez program Visual Studio pierwszego błędu, po prostu usuń zaznaczenie pola wyboru "Tylko mój kod" w obszarze **Narzędzia, opcje, debugowanie, ogólne**.
 >
-> W tym przykładzie jest przeznaczony do wykazania użycia i nie może działać szybciej niż równoważne sekwencyjne LINQ do kwerendy obiektów. Aby uzyskać więcej informacji na temat przyspieszenia, zobacz [Opis przyspieszania w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+> Ten przykład jest przeznaczony do zademonstrowania użycia i może nie działać szybciej niż równoważne LINQ to Objects sekwencyjne zapytanie. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [Opis przyspieszenie w PLINQ](understanding-speedup-in-plinq.md).
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
 [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]
 
-Struktura PLINQ nie toczy <xref:System.OperationCanceledException> ani <xref:System.AggregateException?displayProperty=nameWithType>jednego w ; <xref:System.OperationCanceledException> muszą być obsługiwane w oddzielnym bloku połowowym. Jeśli jeden lub więcej delegatów użytkownika zgłasza OperationCanceledException(externalCT) <xref:System.Threading.CancellationToken?displayProperty=nameWithType>(przy użyciu zewnętrznego), ale nie `AsParallel().WithCancellation(externalCT)`ma innego wyjątku, <xref:System.OperationCanceledException> a kwerenda została <xref:System.AggregateException?displayProperty=nameWithType>zdefiniowana jako , plinq wyda pojedynczy (externalCT) zamiast . Jednak jeśli jeden delegat użytkownika <xref:System.OperationCanceledException>zgłasza , a inny delegat zgłasza inny typ wyjątku, a następnie oba wyjątki zostaną zwinięte w . <xref:System.AggregateException>
+Struktura PLINQ nie jest rzutowana na <xref:System.OperationCanceledException> <xref:System.AggregateException?displayProperty=nameWithType> ; <xref:System.OperationCanceledException> musi być obsługiwana w oddzielnym bloku catch. Jeśli co najmniej jeden delegat użytkownika zgłosi OperationCanceledException (externalCT) (przy użyciu zewnętrznego <xref:System.Threading.CancellationToken?displayProperty=nameWithType> ), ale nie inny wyjątek, a zapytanie zostało zdefiniowane jako `AsParallel().WithCancellation(externalCT)` , a następnie PLINQ będzie wystawiał pojedynczy <xref:System.OperationCanceledException> (externalCT), a nie <xref:System.AggregateException?displayProperty=nameWithType> . Jeśli jednak jeden delegat użytkownika zgłosi <xref:System.OperationCanceledException> , a inny delegat zgłosi inny typ wyjątku, oba wyjątki zostaną przeagregowane do <xref:System.AggregateException> .
 
-Ogólne wytyczne dotyczące anulowania są następujące:
+Ogólne wskazówki dotyczące anulowania są następujące:
 
-1. W przypadku anulowania delegowania użytkownika należy poinformować <xref:System.Threading.CancellationToken> PLINQ <xref:System.OperationCanceledException>o zewnętrznym i wrzucić (externalCT).
+1. Jeśli wykonujesz anulowanie delegata użytkownika, należy poinformować PLINQ o zewnętrznym <xref:System.Threading.CancellationToken> i wyrzucaniu <xref:System.OperationCanceledException> (externalCT).
 
-2. Jeśli nastąpi anulowanie i nie są zgłaszane <xref:System.OperationCanceledException> żadne <xref:System.AggregateException>inne wyjątki, a następnie obsłużyć zamiast .
+2. Jeśli wystąpiło anulowanie i nie są zgłaszane żadne inne wyjątki, należy obsłużyć <xref:System.OperationCanceledException> zamiast <xref:System.AggregateException> .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak obsługiwać anulowanie, gdy masz funkcje obliczeniowo drogie w kodzie użytkownika.
+Poniższy przykład pokazuje, jak obsłużyć anulowanie, gdy w kodzie użytkownika znajduje się Funkcja obliczeniowa kosztowna.
 
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-Podczas obsługi anulowania w kodzie użytkownika, <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nie trzeba używać w definicji kwerendy. Jednak zaleca się, aby <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>użyć <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> , ponieważ nie ma wpływu na wydajność kwerendy i umożliwia anulowanie być obsługiwane przez operatorów zapytań i kodu użytkownika.
+W przypadku obsługi anulowania w kodzie użytkownika nie trzeba używać <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> w definicji zapytania. Zaleca się jednak korzystanie z <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> programu, ponieważ nie <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> ma ono wpływu na wydajność zapytań i umożliwia anulowanie obsługi przez operatory zapytań oraz kod użytkownika.
 
-Aby zapewnić szybkość reakcji systemu, zaleca się sprawdzenie, czy anulowanie jest około raz na milisekundę; jednak każdy okres do 10 milisekund jest uważany za dopuszczalny. Ta częstotliwość nie powinna mieć negatywnego wpływu na wydajność kodu.
+Aby zapewnić czas odpowiedzi systemu, zalecamy sprawdzenie, czy anulowanie ma być anulowane dla każdego milisekundu; Jednak okres do 10 milisekund jest uznawany za akceptowalny. Ta częstotliwość nie powinna mieć negatywnego wpływu na wydajność kodu.
 
-Gdy wyliczacz jest usuwany, na przykład, gdy kod wyłamuje się z foreach (Dla każdego w języku Visual Basic) pętli, która jest iteracji przez wyniki kwerendy, a następnie kwerenda jest anulowana, ale nie wyjątek.
+Gdy moduł wyliczający jest usuwany, na przykład w przypadku przerwania kodu z pętli foreach (dla każdej w Visual Basic), która iteruje względem wyników zapytania, zapytanie zostanie anulowane, ale nie jest zgłaszany żaden wyjątek.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Anulowanie w wątkach zarządzanych](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Równoległe LINQ (PLINQ)](introduction-to-plinq.md)
+- [Anulowanie w zarządzanych wątkach](../threading/cancellation-in-managed-threads.md)

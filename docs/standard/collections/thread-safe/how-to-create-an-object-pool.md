@@ -8,21 +8,21 @@ dev_langs:
 helpviewer_keywords:
 - object pool, in .NET Framework
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
-ms.openlocfilehash: 2c060dc901f8d06a5f9c51db1cd563cb28e4fda3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 64d91162b27eba80fba63761d0a926e441b63440
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728470"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287864"
 ---
 # <a name="create-an-object-pool-by-using-a-concurrentbag"></a>Tworzenie puli obiektów przy użyciu obiekt ConcurrentBag
 
-Ten przykład pokazuje, <xref:System.Collections.Concurrent.ConcurrentBag%601> jak używać do implementowania puli obiektów. Pule obiektów mogą zwiększyć wydajność aplikacji w sytuacjach, gdy wymagana jest wiele wystąpień klasy, a Klasa jest kosztowna do tworzenia lub niszczenia. Gdy program kliencki żąda nowego obiektu, Pula obiektów najpierw próbuje dostarczyć taką, która została już utworzona i zwrócona do puli. Jeśli żaden nie jest dostępny, tylko wtedy jest tworzony nowy obiekt.
+Ten przykład pokazuje, jak używać <xref:System.Collections.Concurrent.ConcurrentBag%601> do implementowania puli obiektów. Pule obiektów mogą zwiększyć wydajność aplikacji w sytuacjach, gdy wymagana jest wiele wystąpień klasy, a Klasa jest kosztowna do tworzenia lub niszczenia. Gdy program kliencki żąda nowego obiektu, Pula obiektów najpierw próbuje dostarczyć taką, która została już utworzona i zwrócona do puli. Jeśli żaden nie jest dostępny, tylko wtedy jest tworzony nowy obiekt.
 
-<xref:System.Collections.Concurrent.ConcurrentBag%601> Służy do przechowywania obiektów, ponieważ obsługuje szybkie Wstawianie i usuwanie, szczególnie gdy ten sam wątek dodaje i usuwa elementy. Ten przykład może być dodatkowo rozszerzany tak <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, aby był zbudowany wokół, który jest implementowany przez strukturę danych zbioru <xref:System.Collections.Concurrent.ConcurrentQueue%601> , <xref:System.Collections.Concurrent.ConcurrentStack%601>jak to zrobić i.
+Służy <xref:System.Collections.Concurrent.ConcurrentBag%601> do przechowywania obiektów, ponieważ obsługuje szybkie Wstawianie i usuwanie, szczególnie gdy ten sam wątek dodaje i usuwa elementy. Ten przykład może być dodatkowo rozszerzany tak, aby był zbudowany wokół <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> , który jest implementowany przez strukturę danych zbioru, jak to zrobić <xref:System.Collections.Concurrent.ConcurrentQueue%601> i <xref:System.Collections.Concurrent.ConcurrentStack%601> .
 
 > [!TIP]
-> W tym artykule opisano sposób pisania własnej implementacji puli obiektów z podstawowym typem współbieżnym do przechowywania obiektów do ponownego użycia. Jednak ten <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601?displayProperty=nameWithType> typ już istnieje w <xref:Microsoft.Extensions.ObjectPool?displayProperty=fullName> przestrzeni nazw. Rozważ użycie dostępnego typu przed utworzeniem własnej implementacji, która obejmuje wiele dodatkowych funkcji.
+> W tym artykule opisano sposób pisania własnej implementacji puli obiektów z podstawowym typem współbieżnym do przechowywania obiektów do ponownego użycia. Jednak ten <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601?displayProperty=nameWithType> Typ już istnieje w <xref:Microsoft.Extensions.ObjectPool?displayProperty=fullName> przestrzeni nazw. Rozważ użycie dostępnego typu przed utworzeniem własnej implementacji, która obejmuje wiele dodatkowych funkcji.
 
 ## <a name="example"></a>Przykład
 
@@ -31,4 +31,4 @@ Ten przykład pokazuje, <xref:System.Collections.Concurrent.ConcurrentBag%601> j
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kolekcje bezpieczne dla wątków](../../../../docs/standard/collections/thread-safe/index.md)
+- [Kolekcje bezpieczne dla wątków](index.md)

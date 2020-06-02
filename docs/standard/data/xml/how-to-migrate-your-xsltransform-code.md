@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-ms.openlocfilehash: 2bc5cbc1b0857a82d3b0a11f05a4eb5756724546
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 42ca884c269611ebf7dae3b4e7aa8a39ba96b521
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710846"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287743"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Instrukcje: Migrowanie kodu XslTransform
-Nowe klasy XSLT zostały zaprojektowane tak, aby były bardzo podobne do istniejących klas. <xref:System.Xml.Xsl.XslCompiledTransform> Klasa zastępuje <xref:System.Xml.Xsl.XslTransform> klasę. Arkusze stylów są kompilowane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody. Transformacje są wykonywane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody. W poniższych procedurach przedstawiono typowe zadania XSLT i porównano kod przy użyciu <xref:System.Xml.Xsl.XslTransform> klasy w porównaniu <xref:System.Xml.Xsl.XslCompiledTransform> z klasą.  
+Nowe klasy XSLT zostały zaprojektowane tak, aby były bardzo podobne do istniejących klas. <xref:System.Xml.Xsl.XslCompiledTransform>Klasa zastępuje <xref:System.Xml.Xsl.XslTransform> klasę. Arkusze stylów są kompilowane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody. Transformacje są wykonywane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody. W poniższych procedurach przedstawiono typowe zadania XSLT i porównano kod przy użyciu <xref:System.Xml.Xsl.XslTransform> klasy w porównaniu z <xref:System.Xml.Xsl.XslCompiledTransform> klasą.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Aby przekształcić plik i dane wyjściowe na identyfikator URI  
   
@@ -74,7 +74,7 @@ Nowe klasy XSLT zostały zaprojektowane tak, aby były bardzo podobne do istniej
 - Kod używający <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  
   
     > [!NOTE]
-    > <xref:System.Xml.Xsl.XslCompiledTransform> Klasa nie ma metody, która zwraca wyniki transformacji XSLT jako <xref:System.Xml.XmlReader> obiekt. Można jednak wykonać wyjście do pliku XML i załadować plik XML do innego obiektu.  
+    > <xref:System.Xml.Xsl.XslCompiledTransform>Klasa nie ma metody, która zwraca wyniki transformacji XSLT jako <xref:System.Xml.XmlReader> obiekt. Można jednak wykonać wyjście do pliku XML i załadować plik XML do innego obiektu.  
   
      [!code-csharp[XML_Migration#20](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#20)]
      [!code-vb[XML_Migration#20](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#20)]  
@@ -91,7 +91,7 @@ Nowe klasy XSLT zostały zaprojektowane tak, aby były bardzo podobne do istniej
      [!code-csharp[XML_Migration#18](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#18)]
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
-- [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md)
+- [Używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md)

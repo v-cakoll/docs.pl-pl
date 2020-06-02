@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375964"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289684"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Kontrolowanie serializacji XML przy użyciu atrybutów
 
@@ -30,7 +30,7 @@ Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny
 > [!NOTE]
 > Jeśli wygenerowany kod XML musi być zgodny z sekcją 5 dokumentu organizacja World Wide Web Consortium (W3C) zatytułowanego [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), użyj atrybutów wymienionych w [atrybutach, które kontrolują zaszyfrowane serializacji SOAP](attributes-that-control-encoded-soap-serialization.md).
 
-Domyślnie nazwa elementu XML jest określana przez nazwę klasy lub składowej. W prostej klasie o nazwie `Book` pole o nazwie `ISBN` będzie generować tag elementu XML \<>, jak pokazano w poniższym przykładzie.
+Domyślnie nazwa elementu XML jest określana przez nazwę klasy lub składowej. W prostej klasie o nazwie `Book` pole o nazwie `ISBN` utworzy tag elementu XML \<ISBN> , jak pokazano w poniższym przykładzie.
 
 ```vb
 Public Class Book
@@ -67,7 +67,7 @@ public class TaxRates {
 }
 ```
 
-Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../docs/standard/attributes/index.md). Aby zapoznać się z listą atrybutów kontrolujących serializacji XML, zobacz atrybuty kontrolujące [serializacji XML](attributes-that-control-xml-serialization.md).
+Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../attributes/index.md). Aby zapoznać się z listą atrybutów kontrolujących serializacji XML, zobacz atrybuty kontrolujące [serializacji XML](attributes-that-control-xml-serialization.md).
 
 ## <a name="controlling-array-serialization"></a>Kontrolowanie serializacji tablicy
 
@@ -316,7 +316,7 @@ Z drugiej strony, jeśli zostały do serializacji wystąpienia klasy, tylko `New
 
 Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne serializacji. Na przykład pole lub właściwość może służyć do przechowywania metadanych. W takich przypadkach należy zastosować <xref:System.Xml.Serialization.XmlIgnoreAttribute> do pola lub właściwości, a następnie <xref:System.Xml.Serialization.XmlSerializer> pomijać je.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Atrybuty kontrolujące serializacji XML](attributes-that-control-xml-serialization.md)
 - [Atrybuty kontrolujące zakodowaną serializację protokołu SOAP](attributes-that-control-encoded-soap-serialization.md)

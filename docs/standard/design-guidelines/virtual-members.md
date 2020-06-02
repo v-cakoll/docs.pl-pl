@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 8ed519a01162056151d8ae6398c0d06495911afd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743527"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288501"
 ---
 # <a name="virtual-members"></a>Wirtualne składowe
 Wirtualne elementy członkowskie można przesłonić, zmieniając zachowanie podklasy. Są one bardzo podobne do wywołania zwrotnego pod względem rozszerzalności, które zapewnia, ale są lepsze pod względem wydajności i zużycia pamięci. Ponadto wirtualne elementy członkowskie działają bardziej naturalnie w scenariuszach, które wymagają utworzenia specjalnego rodzaju istniejącego typu (specjalizacji).
@@ -23,7 +23,7 @@ Wirtualne elementy członkowskie można przesłonić, zmieniając zachowanie pod
 
  Wirtualne elementy członkowskie, takie jak wywołania zwrotne (i mogą być większe niż wywołania zwrotne), są kosztowne do projektowania, testowania i konserwowania, ponieważ każde wywołanie elementu wirtualnego można przesłonić w sposób nieprzewidywalny i można wykonać dowolny kod. Ponadto zwykle wymagane jest wyraźne określenie kontraktu wirtualnych elementów członkowskich, dzięki czemu koszt projektowania i dokumentowania jest wyższy.
 
- ❌ nie nadaje się do elementów wirtualnych, chyba że jest to dobry powód, a ty masz świadomość wszystkich kosztów związanych z projektowaniem, testowaniem i konserwacją wirtualnych elementów członkowskich.
+ ❌NIE należy tworzyć elementów członkowskich wirtualnych, chyba że jest to dobry powód i masz świadomość wszystkich kosztów związanych z projektowaniem, testowaniem i utrzymywaniem wirtualnych elementów członkowskich.
 
  Wirtualne elementy członkowskie są mniej łagodniejszej pod względem zmian, które mogą być w nich przeznaczone bez przerywania zgodności. Ponadto są one wolniejsze niż wirtualne elementy członkowskie, głównie ponieważ wywołania wirtualnych elementów członkowskich nie są wbudowane.
 
@@ -39,5 +39,5 @@ Wirtualne elementy członkowskie można przesłonić, zmieniając zachowanie pod
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Projektowanie pod kątem rozszerzalności](designing-for-extensibility.md)

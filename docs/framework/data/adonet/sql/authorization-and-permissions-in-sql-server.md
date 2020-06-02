@@ -1,13 +1,14 @@
 ---
 title: Autoryzacja i uprawnienia w programie SQL Server
+description: Dowiedz się, jak jawnie przyznać uprawnienia do tworzenia obiektów bazy danych, które są dostępne dla użytkowników w SQL Server z ADO.NET.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782585"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286536"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autoryzacja i uprawnienia w programie SQL Server
 Podczas tworzenia obiektów bazy danych należy jawnie udzielić uprawnień, aby były dostępne dla użytkowników. Każdy zabezpieczany obiekt ma uprawnienia, które mogą zostać przyznane podmiotowi zabezpieczeń przy użyciu instrukcji uprawnień.  
@@ -35,7 +36,7 @@ Podczas tworzenia obiektów bazy danych należy jawnie udzielić uprawnień, aby
 |--------------------------|-----------------|  
 |DAWAĆ|Przyznaje uprawnienia.|  
 |ODWOŁANIA|Odwołuje uprawnienie. Jest to domyślny stan nowego obiektu. Uprawnienie odwołane od użytkownika lub roli można nadal dziedziczyć z innych grup lub ról, do których jest przypisany podmiot zabezpieczeń.|  
-|POZBAWIĆ|Odmów unieważnia uprawnienia, aby nie można było dziedziczyć. Odmów ma pierwszeństwo przed wszystkimi uprawnieniami, z wyjątkiem Odmów nie ma zastosowania do właścicieli obiektów lub `sysadmin`członków. Jeśli odmówisz uprawnień do obiektu do roli `public` , odmówiono wszystkim użytkownikom i rolom, z wyjątkiem właścicieli obiektów i `sysadmin` członków.|  
+|DENY|Odmów unieważnia uprawnienia, aby nie można było dziedziczyć. Odmów ma pierwszeństwo przed wszystkimi uprawnieniami, z wyjątkiem Odmów nie ma zastosowania do właścicieli obiektów lub członków `sysadmin` . Jeśli odmówisz uprawnień do obiektu do `public` roli, odmówiono wszystkim użytkownikom i rolom, z wyjątkiem właścicieli obiektów i `sysadmin` członków.|  
   
 - Instrukcja GRANT może przypisywać uprawnienia do grupy lub roli, które mogą być dziedziczone przez użytkowników bazy danych. Jednakże instrukcja DENY ma pierwszeństwo przed wszystkimi innymi instrukcjami uprawnień. W związku z tym użytkownik, który odmówił uprawnienia, nie może dziedziczyć go z innej roli.  
   
@@ -52,7 +53,7 @@ Podczas tworzenia obiektów bazy danych należy jawnie udzielić uprawnień, aby
 > Tworzenie łańcucha własności nie ma zastosowania w przypadku dynamicznych instrukcji SQL. Aby wywołać procedurę, która wykonuje instrukcję SQL, obiekt wywołujący musi mieć przyznane uprawnienia do odpowiednich tabel, pozostawiając aplikacji narażonych na ataki z iniekcją SQL. SQL Server udostępnia nowe mechanizmy, takie jak personifikacja i moduły podpisywania z certyfikatami, które nie wymagają przyznawania uprawnień w tabelach bazowych. Mogą one być również używane z procedurami składowanymi CLR.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Więcej informacji zawierają poniższe zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  

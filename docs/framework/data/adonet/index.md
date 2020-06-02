@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: Dowiedz się więcej na temat ADO.NET, klasy, które uwidaczniają usługi dostępu do danych dla programistów .NET Framework do tworzenia rozproszonych aplikacji do udostępniania danych.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094400"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286730"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -31,13 +32,13 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  Opisuje mapowania typu danych między .NET Framework typami danych i .NET Framework dostawcami danych.  
   
  [Elementy DataSet, DataTable i DataView](./dataset-datatable-dataview/index.md)  
- Opisuje sposób tworzenia i używania `DataSets`, wpisanych `DataSets`, `DataTables`i `DataViews`.  
+ Opisuje sposób tworzenia i używania `DataSets` , wpisywania `DataSets` , `DataTables` i `DataViews` .  
   
- [LINQ to DataSet](linq-to-dataset.md)  
+ [LINQ do DataSet](linq-to-dataset.md)  
  Zawiera informacje dotyczące LINQ to DataSet, w tym przykładów programistycznych.  
   
  [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
- Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands`, `DataReaders`i `DataAdapters`.  
+ Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands` , `DataReaders` i `DataAdapters` .  
   
  [SQL Server i ADO.NET](./sql/index.md)  
  Opisuje sposób pracy z funkcjami i funkcjami, które są specyficzne dla SQL Server.  
@@ -46,8 +47,8 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  Opisuje funkcje i zachowania, które są specyficzne dla Dostawca danych .NET Framework dla programu Oracle.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Language-Integrated Query (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Oferuje linki do tematów i przykładów LINQ przy C#użyciu programu.  
+ [Zapytanie zintegrowane z językiem (LINQ)-C #](../../../csharp/programming-guide/concepts/linq/index.md)  
+ Oferuje linki do tematów i przykładów LINQ przy użyciu języka C#.  
   
  [Zapytanie zintegrowane z językiem (LINQ) — Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Oferuje linki do tematów i przykładów LINQ przy użyciu Visual Basic.  
@@ -55,13 +56,13 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  [Usługi danych WCF 4.5](../wcf/index.md)  
  Opisuje, jak używać Usługi danych programu WCF do wdrażania usług danych w sieci Web lub intranet, które implementują protokół Open Data Protocol (OData).  
   
- [Przewodnik programowania .NET Framework](../../development-guide.md)  
+ [.NET Framework — podręcznik programowania](../../development-guide.md)  
  Zawiera łącza do informacji o standardowych zadaniach programistycznych w .NET Framework.  
   
  [Przykłady i samouczki](../../../samples-and-tutorials/index.md)  
  Zawiera listę przykładów i samouczków dotyczących platformy .NET.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Omówienie ADO.NET](ado-net-overview.md)

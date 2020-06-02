@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378479"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288332"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<Dodaj element> dla \< schemaImporterExtensions>
-Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="add-element-for-schemaimporterextensions"></a>\<add>, element dla \<schemaImporterExtensions>
+Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../framework/configure-apps/file-schema/index.md).  
   
- \<> konfiguracji  
-\<> system. XML. Serialization  
+ \<configuration>  
+\<system.xml.serialization>  
 \<schemaImporterExtensions>  
-\<Dodaj>  
+\<add>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,8 +61,8 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<Element> system. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<schemaImporterExtensions, element>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<system.xml.serialization>Postaci](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions>Postaci](schemaimporterextensions-element.md)

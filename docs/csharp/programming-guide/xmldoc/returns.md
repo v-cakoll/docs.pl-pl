@@ -1,5 +1,5 @@
 ---
-title: <returns> - Przewodnik programowania C#
+title: <returns> — Przewodnik programowania w języku C#
 ms.date: 07/20/2015
 f1_keywords:
 - returns
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 784d9effa589c962b8a2b982fd199f74309fb4dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bc950a8d89a3ac2b5c3b7a68e05c7778e97f85c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789708"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287236"
 ---
-# <a name="returns-c-programming-guide"></a>\<zwraca> (przewodnik programowania C#)
+# <a name="returns-c-programming-guide"></a>\<returns>(Przewodnik programowania w języku C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,15 +31,15 @@ ms.locfileid: "76789708"
 
 ## <a name="remarks"></a>Uwagi
 
-Zwraca \<> tag powinien być używany w komentarzu dla deklaracji metody do opisania wartości zwracanej.
+`<returns>`Tag powinien być używany w komentarzu dla deklaracji metody, aby opisać wartość zwracaną.
 
-Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

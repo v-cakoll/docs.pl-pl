@@ -1,13 +1,14 @@
 ---
 title: Przegląd zabezpieczeń serwera SQL
+description: Dowiedz się więcej o architekturze zabezpieczeń SQL Server, aby zrozumieć, które funkcje i liczniki znane zagrożenia, i zaprzewidywania przyszłych zagrożeń.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780940"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286278"
 ---
 # <a name="overview-of-sql-server-security"></a>Przegląd zabezpieczeń serwera SQL
 Strategia obrony szczegółowej z nakładającymi się warstwami zabezpieczeń jest najlepszym sposobem na licznik zagrożeń bezpieczeństwa. SQL Server zapewnia architekturę zabezpieczeń, która została zaprojektowana tak, aby umożliwić administratorom baz danych i deweloperom tworzenie bezpiecznych aplikacji baz danych i zagrożeń. Każda wersja SQL Server została ulepszona w poprzednich wersjach SQL Server z wprowadzeniem nowych funkcji i funkcji. Jednak zabezpieczenia nie są dostarczane w tym polu. Każda aplikacja jest unikatowa w wymaganiach dotyczących zabezpieczeń. Deweloperzy muszą zrozumieć, którą kombinację funkcji i funkcji są najbardziej odpowiednie do określenia znanych zagrożeń, oraz do przewidywania zagrożeń, które mogą wystąpić w przyszłości.  

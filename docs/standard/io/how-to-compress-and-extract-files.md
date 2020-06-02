@@ -1,5 +1,5 @@
 ---
-title: 'Jak: Kompresowanie i wyodrębnianie plików'
+title: 'Instrukcje: kompresowanie i wyodrębnianie plików'
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 28f9a0baa73f58b0a5c7f93a4b0b3ece3b87c3a5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248020"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288566"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Jak: Kompresowanie i wyodrębnianie plików
+# <a name="how-to-compress-and-extract-files"></a>Instrukcje: kompresowanie i wyodrębnianie plików
 
-Obszar <xref:System.IO.Compression> nazw zawiera następujące typy kompresji i dekompresji plików i strumieni. Za pomocą tych typów można również odczytać i zmodyfikować zawartość skompresowanego pliku.
+<xref:System.IO.Compression>Przestrzeń nazw zawiera następujące typy do kompresowania i dekompresowania plików i strumieni. Możesz również użyć tych typów do odczytu i modyfikacji zawartości skompresowanego pliku.
 
 - <xref:System.IO.Compression.ZipFile>
 - <xref:System.IO.Compression.ZipArchive>
@@ -27,56 +27,56 @@ Obszar <xref:System.IO.Compression> nazw zawiera następujące typy kompresji i 
 - <xref:System.IO.Compression.DeflateStream>
 - <xref:System.IO.Compression.GZipStream>
 
-Poniższe przykłady pokazują niektóre operacje, które można wykonać za pomocą skompresowanych plików. Te przykłady wymagają następujących pakietów NuGet, które mają zostać dodane do projektu:
+W poniższych przykładach przedstawiono niektóre operacje, które można wykonywać przy użyciu skompresowanych plików. Te przykłady wymagają dodania następujących pakietów NuGet do projektu:
 
-- [System.IO.Kompresja](https://www.nuget.org/packages/System.IO.Compression)
-- [Plik System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+- [System. IO. Compression](https://www.nuget.org/packages/System.IO.Compression)
+- [System. IO. Compression. ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
 
-Jeśli używasz programu .NET Framework, dodaj odwołania do tych dwóch bibliotek do projektu:
+Jeśli używasz .NET Framework, Dodaj odwołania do tych dwóch bibliotek do projektu:
 
 - `System.IO.Compression`
 - `System.IO.Compression.FileSystem`
 
-## <a name="example-1-create-and-extract-a-zip-file"></a>Przykład 1: Tworzenie i wyodrębnianie pliku zip
+## <a name="example-1-create-and-extract-a-zip-file"></a>Przykład 1: Tworzenie i Wyodrębnianie pliku zip
 
-W poniższym przykładzie pokazano, jak utworzyć i wyodrębnić skompresowany plik *zip* przy użyciu <xref:System.IO.Compression.ZipFile> klasy. W przykładzie zawartość folderu jest kompresowany do nowego pliku *zip,* a następnie wyodrębnia go do nowego folderu.
+Poniższy przykład pokazuje, jak utworzyć i wyodrębnić skompresowany plik *zip* przy użyciu <xref:System.IO.Compression.ZipFile> klasy. Przykład kompresuje zawartość folderu do nowego pliku *zip* , a następnie wyodrębnia plik zip do nowego folderu.
 
-Aby uruchomić przykład, utwórz folder *startowy* w folderze programu i wypełnij go plikami do zip.
+Aby uruchomić przykład, należy utworzyć folder *startowy* w folderze programu i wypełnić go plikami do pliku zip.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2-extract-specific-file-extensions"></a>Przykład 2: Wyodrębnianie określonych rozszerzeń plików
+## <a name="example-2-extract-specific-file-extensions"></a>Przykład 2: Wyodrębnienie określonych rozszerzeń plików
 
-Następny przykład iteruje zawartość istniejącego pliku *zip* i wyodrębnia pliki, które mają rozszerzenie *txt.* Używa klasy, <xref:System.IO.Compression.ZipArchive> aby uzyskać dostęp do <xref:System.IO.Compression.ZipArchiveEntry> zip i klasy do kontroli poszczególnych wpisów. Metoda <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> rozszerzenia obiektu <xref:System.IO.Compression.ZipArchiveEntry> jest dostępna <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> w klasie.
+Następny przykład wykonuje iterację zawartości istniejącego pliku *. zip* i wyodrębnia pliki z rozszerzeniem *. txt* . Używa <xref:System.IO.Compression.ZipArchive> klasy w celu uzyskania dostępu do pliku zip oraz <xref:System.IO.Compression.ZipArchiveEntry> klasy do inspekcji poszczególnych wpisów. Metoda rozszerzenia <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> dla <xref:System.IO.Compression.ZipArchiveEntry> obiektu jest dostępna w <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> klasie.
 
-Aby uruchomić próbkę, umieść plik *zip* o nazwie *result.zip* w folderze programu. Po wyświetleniu monitu podaj nazwę folderu, do którym chcesz wyodrębnić.
+Aby uruchomić przykład, Umieść plik *zip* o nazwie *Result. zip* w folderze programu. Po wyświetleniu monitu podaj nazwę folderu do wyodrębnienia.
 
 > [!IMPORTANT]
-> Podczas rozpakowywania plików należy szukać złośliwych ścieżek plików, które mogą wydostać się z katalogu, do którego się rozpakujesz. Jest to znane jako atak przechodzenia ścieżki. W poniższym przykładzie pokazano, jak sprawdzić, czy złośliwe ścieżki plików i zapewnia bezpieczny sposób rozpakowania.
+> Podczas rozpakowywania plików należy wyszukać złośliwe ścieżki plików, które mogą wyjść z katalogu, w którym się znajdujesz. Jest to tzw. atak przechodzenia do lokalizacji. W poniższym przykładzie pokazano, jak wyszukiwać złośliwe ścieżki plików i zapewniać bezpieczną metodę rozpakowania.
 
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3-add-a-file-to-an-existing-zip"></a>Przykład 3: Dodawanie pliku do istniejącego kodu błyskawicznego
+## <a name="example-3-add-a-file-to-an-existing-zip"></a>Przykład 3: Dodaj plik do istniejącego pliku zip
 
-Poniższy przykład używa <xref:System.IO.Compression.ZipArchive> klasy, aby uzyskać dostęp do istniejącego pliku *zip* i dodaje do niego plik. Nowy plik zostanie skompresowany po dodaniu go do istniejącego kodu błyskawicznego.
+Poniższy przykład używa <xref:System.IO.Compression.ZipArchive> klasy, aby uzyskać dostęp do istniejącego pliku *. zip* i dodaje do niego plik. Nowy plik zostanie skompresowany po dodaniu go do istniejącego pliku zip.
 
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4-compress-and-decompress-gz-files"></a>Przykład 4: Kompresowanie i dekompresja plików gz
+## <a name="example-4-compress-and-decompress-gz-files"></a>Przykład 4: kompresowanie i dekompresowanie plików. gz
 
-Można również użyć <xref:System.IO.Compression.GZipStream> <xref:System.IO.Compression.DeflateStream> i klas do kompresji i dekompresji danych. Używają tego samego algorytmu kompresji. Można dekompresować <xref:System.IO.Compression.GZipStream> obiekty zapisywane w pliku *gz* przy użyciu wielu typowych narzędzi. W poniższym przykładzie pokazano, jak skompresować i <xref:System.IO.Compression.GZipStream> dekompresować katalog plików przy użyciu klasy:
+Można również użyć <xref:System.IO.Compression.GZipStream> <xref:System.IO.Compression.DeflateStream> klas i do kompresowania i dekompresowania danych. Korzystają one z tego samego algorytmu kompresji. Można dekompresowanie <xref:System.IO.Compression.GZipStream> obiektów, które są zapisywane w pliku *. gz* za pomocą wielu popularnych narzędzi. Poniższy przykład przedstawia sposób kompresowania i dekompresowania katalogu plików przy użyciu <xref:System.IO.Compression.GZipStream> klasy:
 
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.Compression.ZipArchive>  
 - <xref:System.IO.Compression.ZipFile>  
 - <xref:System.IO.Compression.ZipArchiveEntry>  
 - <xref:System.IO.Compression.DeflateStream>  
 - <xref:System.IO.Compression.GZipStream>  
-- [We/wy plików i strumieni](../../../docs/standard/io/index.md)
+- [We/wy plików i strumieni](index.md)

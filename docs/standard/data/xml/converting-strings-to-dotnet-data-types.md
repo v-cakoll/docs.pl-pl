@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160355"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289229"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konwertowanie ciągów na typy danych programu .NET Framework
-Jeśli chcesz przekonwertować ciąg na typ danych .NET Framework, użyj metody **XmlConvert** , która pasuje do wymagań aplikacji. Aby uzyskać listę wszystkich metod konwersji dostępnych w klasie **XmlConvert** , zobacz <xref:System.Xml.XmlConvert>.  
+Jeśli chcesz przekonwertować ciąg na typ danych .NET Framework, użyj metody **XmlConvert** , która pasuje do wymagań aplikacji. Aby uzyskać listę wszystkich metod konwersji dostępnych w klasie **XmlConvert** , zobacz <xref:System.Xml.XmlConvert> .  
   
  Ciąg zwracany przez metodę **ToString** jest ciągiem wersji, która została przekazana. Ponadto istnieje kilka typów .NET Framework, które konwertują się przy użyciu klasy **XmlConvert** , ale nie używają metod w klasie **System. Convert** . Klasa **XmlConvert** jest zgodna ze specyfikacją typu danych schematu XML (XSD) i ma typ danych, na który mapowanie **XmlConvert** może być mapowane.  
   
@@ -22,18 +22,18 @@ Jeśli chcesz przekonwertować ciąg na typ danych .NET Framework, użyj metody 
   
 |Typ programu .NET Framework|Zwrócony ciąg|  
 |-------------------------|---------------------|  
-|Wartość logiczna|"true", "false"|  
+|Boolean (wartość logiczna)|"true", "false"|  
 |Single. PositiveInfinity|INF|  
 |Single. NegativeInfinity|"-INF"|  
 |Double. PositiveInfinity|INF|  
 |Double. NegativeInfinity|"-INF"|  
 |DateTime|Format to "RRRR-MM-DDTgg: mm: sszzzzzz" i jego podzestawy.|  
-|Zakres czasu|Format to PnYnMnTnHnMnS, `P2Y10M15DT10H30M20S` czyli okres 2 lat, 10 miesięcy, 15 dni, 10 godzin, 30 minut i 20 sekund.|  
+|Zakres czasu|Format to PnYnMnTnHnMnS, czyli `P2Y10M15DT10H30M20S` okres 2 lat, 10 miesięcy, 15 dni, 10 godzin, 30 minut i 20 sekund.|  
   
 > [!NOTE]
 > W przypadku konwertowania dowolnego typu .NET Framework wymienionego w tabeli na ciąg przy użyciu metody **ToString** zwracany ciąg nie jest typem podstawowym, ale typ ciągu schematu XML (XSD).  
   
- Typ wartości **DateTime** i **TimeSpan** różni się w tym, że element **DateTime** reprezentuje chwilę w czasie, podczas gdy obiekt **TimeSpan** reprezentuje przedział czasu. Formaty **DateTime** i **TimeSpan** są określone w specyfikacji typów danych schematu XML (XSD). Przykład:  
+ Typ wartości **DateTime** i **TimeSpan** różni się w tym, że element **DateTime** reprezentuje chwilę w czasie, podczas gdy obiekt **TimeSpan** reprezentuje przedział czasu. Formaty **DateTime** i **TimeSpan** są określone w specyfikacji typów danych schematu XML (XSD). Na przykład:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -119,7 +119,7 @@ Console.WriteLine(bvalue);
 |INF|Double. PositiveInfinity|  
 |"-INF"|Double. NegativeInfinity|  
   
- Poniższy kod zapisuje `<Infinity>INF</Infinity>`:  
+ Poniższy kod zapisuje `<Infinity>INF</Infinity>` :  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Konwersja typów danych XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [Konwertowanie typów programu .NET Framework na ciągi](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Konwersja typów danych XML](conversion-of-xml-data-types.md)
+- [Konwertowanie typów programu .NET Framework na ciągi](converting-dotnet-types-to-strings.md)

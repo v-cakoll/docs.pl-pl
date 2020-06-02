@@ -3,12 +3,12 @@ title: Narzędzie definicji schematu XML (Xsd.exe)
 description: Generator serializatora XML tworzy zestaw serializacji XML dla typów w określonym zestawie, co zwiększa wydajność uruchamiania elementu XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380054"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288982"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \< katalogu SDK> \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
+> Aby narzędzia .NET Framework działały prawidłowo, należy odpowiednio ustawić `Path` `Include` `Lib` zmienne środowiskowe, i. Ustaw te zmienne środowiskowe, uruchamiając SDKVars. bat, który znajduje się w \<SDK> katalogu \v2.0\bin. SDKVars.bat muszą zostać wykonane w każdym powłoki poleceń.
 
 ## <a name="argument"></a>Argument
 
@@ -63,7 +63,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e \[ lementuj \] :**_element_|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|
 |**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejs na wszystkich wygenerowanych typach, aby włączyć powiązanie danych. Krótka forma to `/edb` .|
-|**/enableLinqDataSet**|(Krótka wersja: `/eld` .) Określa, że wygenerowany zestaw danych może być badany przy użyciu LINQ to DataSet. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet przegląd](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [wykonywanie zapytań dotyczących wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [Language-Integrated Query (LINQ) — C#](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (linq) — Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/enableLinqDataSet**|(Krótka wersja: `/eld` .) Określa, że wygenerowany zestaw danych może być badany przy użyciu LINQ to DataSet. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet przegląd](../../framework/data/adonet/linq-to-dataset-overview.md) i [wykonywanie zapytań dotyczących wpisanych zestawów danych](../../framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [Language-Integrated Query (LINQ) — C#](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (linq) — Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
 |**/f \[ ields\]**|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|
 |**/l \[ anguage \] :**_Język_|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy implementującej<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
 |**/n \[ amespace \] :**_przestrzeń nazw_|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|
@@ -132,10 +132,10 @@ Należy określić tylko jedną z poniższych opcji dotyczących `<generateSchem
 
 |Element|Opis|
 |-------------|-----------------|
-|\<> zestawu|Określa generowanie schematu z zestawu.|
-|\<Typ>|Określa typ odnaleźć w zestawie do generowania schemat.|
-|\<> XML|Określa PLik XML do generowania schemat.|
-|\<XDR>|Określa PLik XDR do generowania schemat.|
+|\<assembly>|Określa generowanie schematu z zestawu.|
+|\<type>|Określa typ odnaleźć w zestawie do generowania schemat.|
+|\<xml>|Określa PLik XML do generowania schemat.|
+|\<xdr>|Określa PLik XDR do generowania schemat.|
 
 Aby wygenerować PLik kodu, należy użyć `<generateClasses>` elementu. Poniższy przykład generuje plik kodu. Należy zauważyć, że dwa atrybuty są także wyświetlane, która pozwala na ustawienie języka programowania i przestrzeni nazw w wygenerowanym PLiku.
 
@@ -151,9 +151,9 @@ Aby wygenerować PLik kodu, należy użyć `<generateClasses>` elementu. Poniżs
 
 |Element|Opis|
 |-------------|-----------------|
-|\<> elementu|Określa PLik XSD do generowania kodu dla elementu.|
+|\<element>|Określa PLik XSD do generowania kodu dla elementu.|
 |\<schemaImporterExtensions>|Określa typ pochodzący od <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> klasy.|
-|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \< elementów> schematu.|
+|\<schema>|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \<schema> elementów.|
 
 Poniższa tabela zawiera atrybuty, które umożliwia także z `<generateClasses>` elementu.
 
@@ -176,7 +176,7 @@ Można ustawić dla opcji `<generateDataSet>` obejmują elementu.
 
 |Element|Opis|
 |-------------|-----------------|
-|\<> schematu|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \< elementów> schematu.|
+|\<schema>|Określa PLik schematu XML do generowania kodu. Można określić wiele plików schematu XML przy użyciu wielu \<schema> elementów.|
 
  Poniższa tabela zawiera atrybuty, które mogą być używane z `<generateDataSet>` elementu.
 
@@ -229,13 +229,13 @@ Następujące polecenie generuje schematów XML dla wszystkich typów w zestawie
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [narzędzia](../../../docs/framework/tools/index.md)
-- [Wiersze poleceń](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [Omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
-- [Wykonywanie zapytania do typizowanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Narzędzia](../../framework/tools/index.md)
+- [Wiersze poleceń](../../framework/tools/developer-command-prompt-for-vs.md)
+- [Omówienie LINQ to DataSet](../../framework/data/adonet/linq-to-dataset-overview.md)
+- [Wykonywanie zapytania do typizowanych zestawów danych](../../framework/data/adonet/querying-typed-datasets.md)
 - [LINQ (zapytanie zintegrowane z językiem) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ (zapytanie zintegrowane z językiem) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

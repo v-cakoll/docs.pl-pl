@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159679"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287795"
 ---
 # <a name="extending-the-dom"></a>Rozszerzanie modelu DOM
 
@@ -27,9 +27,9 @@ Podczas wyprowadzania nowych klas istnieją dwie ogólne wytyczne:
 
 ## <a name="creating-your-own-node-instances"></a>Tworzenie własnych wystąpień węzłów
 
-<xref:System.Xml.XmlDocument> Klasa zawiera metody tworzenia węzłów. Po załadowaniu pliku XML te metody są wywoływane w celu utworzenia węzłów. Można zastąpić te metody, aby wystąpienia węzłów były tworzone po załadowaniu dokumentu. Na przykład, jeśli rozszerzono <xref:System.Xml.XmlElement> klasę, należy odziedziczyć <xref:System.Xml.XmlDocument> klasę i zastąpić <xref:System.Xml.XmlDocument.CreateElement%2A> metodę.
+<xref:System.Xml.XmlDocument>Klasa zawiera metody tworzenia węzłów. Po załadowaniu pliku XML te metody są wywoływane w celu utworzenia węzłów. Można zastąpić te metody, aby wystąpienia węzłów były tworzone po załadowaniu dokumentu. Na przykład, jeśli rozszerzono <xref:System.Xml.XmlElement> klasę, należy odziedziczyć <xref:System.Xml.XmlDocument> klasę i zastąpić <xref:System.Xml.XmlDocument.CreateElement%2A> metodę.
 
-Poniższy przykład pokazuje, <xref:System.Xml.XmlDocument.CreateElement%2A> jak zastąpić metodę w celu zwrócenia implementacji <xref:System.Xml.XmlElement> klasy.
+Poniższy przykład pokazuje, jak zastąpić <xref:System.Xml.XmlDocument.CreateElement%2A> metodę w celu zwrócenia implementacji <xref:System.Xml.XmlElement> klasy.
 
 ```vb
 Class LineInfoDocument
@@ -240,16 +240,16 @@ Number of elements in book.xml: 3
 
 ## <a name="node-event-handler"></a>Procedura obsługi zdarzeń węzła
 
-.NET Framework implementacja modelu DOM obejmuje również system zdarzeń, który umożliwia odbieranie i obsługę zdarzeń w przypadku zmiany węzłów w dokumencie XML. Korzystając z <xref:System.Xml.XmlNodeChangedEventHandler> klas <xref:System.Xml.XmlNodeChangedEventArgs> i, można przechwytywać `NodeChanged`, `NodeChanging` `NodeInserted` `NodeInserting` `NodeRemoved`,,, i `NodeRemoving` zdarzenia.
+.NET Framework implementacja modelu DOM obejmuje również system zdarzeń, który umożliwia odbieranie i obsługę zdarzeń w przypadku zmiany węzłów w dokumencie XML. Korzystając z <xref:System.Xml.XmlNodeChangedEventHandler> <xref:System.Xml.XmlNodeChangedEventArgs> klas i, można przechwytywać,,,, `NodeChanged` `NodeChanging` `NodeInserted` `NodeInserting` `NodeRemoved` i `NodeRemoving` zdarzenia.
 
 Proces obsługi zdarzeń działa dokładnie tak samo w klasach pochodnych, jak w oryginalnych klasach DOM.
 
-Aby uzyskać więcej informacji na temat obsługi zdarzeń węzłów [Events](../../../../docs/standard/events/index.md) , zobacz <xref:System.Xml.XmlNodeChangedEventHandler>zdarzenia i.
+Aby uzyskać więcej informacji na temat obsługi zdarzeń węzłów, zobacz [zdarzenia](../../events/index.md) i <xref:System.Xml.XmlNodeChangedEventHandler> .
 
 ## <a name="default-attributes-and-the-createelement-method"></a>Atrybuty domyślne i Metoda CreateElement
 
-Jeśli zastępujesz <xref:System.Xml.XmlDocument.CreateElement%2A> metodę w klasie pochodnej, atrybuty domyślne nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Jest to problem tylko podczas edycji. Ponieważ <xref:System.Xml.XmlDocument.CreateElement%2A> Metoda jest odpowiedzialna za dodawanie atrybutów domyślnych do <xref:System.Xml.XmlDocument>, należy zakodować tę funkcję w <xref:System.Xml.XmlDocument.CreateElement%2A> metodzie. W przypadku ładowania programu <xref:System.Xml.XmlDocument> zawierającego atrybuty domyślne zostaną one obsłużone prawidłowo. Aby uzyskać więcej informacji na temat atrybutów domyślnych, zobacz [Tworzenie nowych atrybutów dla elementów w modelu dom](creating-new-attributes-for-elements-in-the-dom.md).
+Jeśli zastępujesz <xref:System.Xml.XmlDocument.CreateElement%2A> metodę w klasie pochodnej, atrybuty domyślne nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Jest to problem tylko podczas edycji. Ponieważ <xref:System.Xml.XmlDocument.CreateElement%2A> Metoda jest odpowiedzialna za dodawanie atrybutów domyślnych do <xref:System.Xml.XmlDocument> , należy zakodować tę funkcję w <xref:System.Xml.XmlDocument.CreateElement%2A> metodzie. W przypadku ładowania programu <xref:System.Xml.XmlDocument> zawierającego atrybuty domyślne zostaną one obsłużone prawidłowo. Aby uzyskać więcej informacji na temat atrybutów domyślnych, zobacz [Tworzenie nowych atrybutów dla elementów w modelu dom](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

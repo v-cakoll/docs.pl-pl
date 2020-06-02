@@ -7,29 +7,29 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: 07a100e2cd6aaff2b54b99144c9d762c8979fb47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccaacd44f8aaed9c3178cb94f98b0f58d4d3c7d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140273"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285992"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optymalizacja udostępnionej usługi hostingu sieci Web
-Jeśli jesteś administratorem serwera współdzielonego przez hostowanie kilku małych witryn sieci Web, możesz `gcTrimCommitOnLowMemory` zoptymalizować wydajność i zwiększyć pojemność lokacji, dodając następujące ustawienie do `runtime` węzła w pliku Aspnet.config w katalogu .NET:  
+Jeśli jesteś administratorem serwera, który jest udostępniany przez hosting kilku małych witryn sieci Web, możesz zoptymalizować wydajność i zwiększyć pojemność lokacji, dodając następujące `gcTrimCommitOnLowMemory` ustawienie do `runtime` węzła w pliku aspnet. config w katalogu .NET:  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
-> To ustawienie jest zalecane tylko w przypadku scenariuszy hostingu udostępnionego sieci Web.  
+> To ustawienie jest zalecane tylko w scenariuszach hostingu w sieci Web.  
   
- Ponieważ moduł zbierający elementy bezużyteczne zachowuje pamięć dla przyszłych alokacji, jego zatwierdzone miejsce może być więcej niż to, co jest ściśle potrzebne. Można zmniejszyć to miejsce, aby pomieścić razy, gdy istnieje duże obciążenie pamięci systemowej. Zmniejszenie tej zaangażowanej przestrzeni zwiększa wydajność i zwiększa pojemność hostowania większej liczby witryn.  
+ Ponieważ moduł wyrzucania elementów bezużytecznych zachowuje pamięć dla przyszłych przydziałów, jego zatwierdzone miejsce może być większe niż to, co jest absolutnie wymagane. Można zmniejszyć to miejsce do czasu, gdy występuje duże obciążenie pamięci systemowej. Zmniejszenie ilości tego zajmowanego miejsca zwiększa wydajność i zwiększa możliwości hostowania większej liczby lokacji.  
   
- Gdy `gcTrimCommitOnLowMemory` ustawienie jest włączone, moduł zbierający elementy bezużyteczne ocenia obciążenie pamięci systemowej i przechodzi w tryb przycinania, gdy obciążenie osiągnie 90%. Utrzymuje tryb przycinania, aż obciążenie spadnie poniżej 85%.  
+ Gdy to `gcTrimCommitOnLowMemory` ustawienie jest włączone, moduł zbierający elementy bezużyteczne szacuje obciążenie pamięci systemowej i przechodzi do trybu przycinania, gdy obciążenie osiągnie 90%. Utrzymuje tryb przycinania do momentu spadku obciążenia poniżej 85%.  
   
- Gdy pozwalają na to warunki, moduł `gcTrimCommitOnLowMemory` zbierający elementy bezużyteczne może zdecydować, że ustawienie nie pomoże bieżącej aplikacji i zignorować go.  
+ Gdy warunki zezwalają, Moduł wyrzucania elementów bezużytecznych może zdecydować, że to `gcTrimCommitOnLowMemory` ustawienie nie będzie pomocne dla bieżącej aplikacji i nie zostanie zignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment XML pokazuje, `gcTrimCommitOnLowMemory` jak włączyć ustawienie. Elipsy wskazują inne ustawienia, `runtime` które byłyby w węźle.  
+ Poniższy fragment kodu XML pokazuje, jak włączyć `gcTrimCommitOnLowMemory` ustawienie. Elipsy wskazują inne ustawienia, które mogą znajdować się w `runtime` węźle.  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -42,6 +42,6 @@ Jeśli jesteś administratorem serwera współdzielonego przez hostowanie kilku 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)
+- [Odzyskiwanie pamięci](index.md)

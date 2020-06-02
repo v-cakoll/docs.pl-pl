@@ -7,17 +7,17 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: d4a1f379a88231654c710b1df7b505316377c915
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 30277507050091de6b1e9293401d61ac5e351a1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741808"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280624"
 ---
 # <a name="arrays"></a>Tablice
-✔️ Preferuj przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API. Sekcja [kolekcje](../../../docs/standard/design-guidelines/guidelines-for-collections.md) zawiera szczegółowe informacje dotyczące wyboru między kolekcjami i tablicami.
+✔️ Preferuj przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API. Sekcja [kolekcje](guidelines-for-collections.md) zawiera szczegółowe informacje dotyczące wyboru między kolekcjami i tablicami.
 
- ❌ nie używaj pól tablicy tylko do odczytu. Samo pole jest tylko do odczytu i nie można go zmienić, ale elementy w tablicy można zmienić.
+ ❌NIE używaj pól tablicy tylko do odczytu. Samo pole jest tylko do odczytu i nie można go zmienić, ale elementy w tablicy można zmienić.
 
  ✔️ ROZWAŻYĆ użycie tablic nieregularnych zamiast tablic wielowymiarowych.
 
@@ -30,5 +30,5 @@ ms.locfileid: "76741808"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Array>
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wskazówki dotyczące użycia](usage-guidelines.md)

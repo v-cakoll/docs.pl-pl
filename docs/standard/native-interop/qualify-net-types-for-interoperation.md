@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420503"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285966"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Kwalifikowanie typów .NET do współdziałania z modelem COM
 Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę wymagania międzyoperacyjności modelu COM w czasie projektowania. Typy zarządzane (Klasa, interfejs, struktura i Wyliczenie) bezproblemowo integrują się z typami COM w przypadku przestrzegania następujących wytycznych:  
@@ -49,7 +49,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Udostępnianie składników .NET Framework modelowi COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Wprowadzenie do interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface)
-- [Stosowanie atrybutów międzyoperacyjności](../../../docs/standard/native-interop/apply-interop-attributes.md)
-- [Pakowanie zestawu .NET Framework dla modelu COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Stosowanie atrybutów międzyoperacyjności](apply-interop-attributes.md)
+- [Pakowanie zestawu .NET Framework dla modelu COM](../../framework/interop/packaging-an-assembly-for-com.md)

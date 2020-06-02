@@ -2,12 +2,12 @@
 title: polecenie dotnet New
 description: Polecenie dotnet New umożliwia tworzenie nowych projektów platformy .NET Core na podstawie określonego szablonu.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442244"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283978"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -68,13 +68,14 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 | Usługa procesu roboczego                               | [odpowiedzialn](#web-others)           | Znajd         | Common/Worker/sieć Web                     | 3.0        |
 | Projekt testu jednostkowego                            | [MSTest](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
 | Projekt testowy NUnit 3                         | [NUnit](#nunit)                  | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
-| Element testowy NUnit 3                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2,2        |
+| Element testowy NUnit 3                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2.2        |
 | Projekt testu xUnit                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1.0        |
 | Składnik Razor                              | `razorcomponent`                | Znajd         | Web/ASP. NET                           | 3.0        |
 | Strona Razor                                   | [stronic](#page)                   | Znajd         | Web/ASP. NET                           | 2.0        |
 | ViewImports MVC                              | [viewimports](#namespace)       | Znajd         | Web/ASP. NET                           | 2.0        |
 | ViewStart MVC                                | `viewstart`                     | Znajd         | Web/ASP. NET                           | 2.0        |
 | Aplikacja serwera Blazor                            | [blazorserver](#blazorserver)   | Znajd         | Sieć Web/Blazor                            | 3.0        |
+| Aplikacja webassembly Blazor                       | `blazorwasm`                    | Znajd         | Sieć Web/Blazor/webassembly                            | 3.1.300    |
 | ASP.NET Core puste                           | [witrynę](#web)                     | [C#], F #     | Sieć Web/pusta                             | 1.0        |
 | Aplikacja sieci Web ASP.NET Core (Model-View-Controller) | [Standard](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
 | Aplikacja sieci Web ASP.NET Core                         | [webapp, Razor](#web-options)   | Znajd         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -148,7 +149,7 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
   Jeśli nie określisz parametru do tej opcji, polecenie wyświetli listę zainstalowanych szablonów i szczegółowe informacje o nich.
 
   > [!NOTE]
-  > Aby odinstalować szablon przy użyciu programu `PATH` , należy w pełni zakwalifikować ścieżkę. Na przykład *C:/Users/ \< User>/Documents/templates/garciasoftware.consoletemplate.CSharp* będzie działał, ale */GarciaSoftware.ConsoleTemplate.CSharp* z folderu zawierającego.
+  > Aby odinstalować szablon przy użyciu programu `PATH` , należy w pełni zakwalifikować ścieżkę. Na przykład *C:/Users/ \<USER> /Documents/templates/GarciaSoftware.ConsoleTemplate.CSharp* będzie działał, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z folderu zawierającego nie będzie.
   > Nie dołączaj ostatecznego ukośnika katalogu w ścieżce szablonu.
 
 - **`--update-apply`**
@@ -289,7 +290,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
   |-------------|-----------------|
   | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
-  | 2,2         | `netcoreapp2.2` |
+  | 2.2         | `netcoreapp2.2` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`-p|--enable-pack`**

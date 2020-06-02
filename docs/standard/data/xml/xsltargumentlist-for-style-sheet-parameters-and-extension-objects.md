@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160199"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281703"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
-<xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera Extensible Stylesheet Language dla parametrów Transformations (XSLT) i obiektów rozszerzeń XSLT. Po przekazaniu <xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
+<xref:System.Xml.Xsl.XsltArgumentList>Klasa zawiera Extensible Stylesheet Language dla parametrów Transformations (XSLT) i obiektów rozszerzeń XSLT. Po przekazaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
   
 > [!NOTE]
-> Klasy <xref:System.Xml.Xsl.XslTransform> i <xref:System.Xml.Xsl.XsltArgumentList> są przestarzałe w .NET Framework 2,0. Przekształcenia XSLT można wykonywać przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform>Klasy i <xref:System.Xml.Xsl.XsltArgumentList> są przestarzałe w .NET Framework 2,0. Przekształcenia XSLT można wykonywać przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) .  
   
- <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera parametry XSLT i obiekty rozszerzeń XSLT. Po przekazaniu <xref:System.Xml.Xsl.XslTransform.Transform%2A> do metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
+ <xref:System.Xml.Xsl.XsltArgumentList>Klasa zawiera parametry XSLT i obiekty rozszerzeń XSLT. Po przekazaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
   
  Poniżej przedstawiono zalety przekazywania obiektów zamiast używać osadzonego skryptu:  
   
@@ -27,9 +27,9 @@ ms.locfileid: "78160199"
   
 - Zezwala na mniejsze i łatwiejsze w obsłudze arkusze stylów.  
   
-- Obsługuje metody wywoływania w klasach należących do przestrzeni nazw innych niż te zdefiniowane w ramach <xref:System> zestawu obsługiwanych przestrzeni nazw.  
+- Obsługuje metody wywoływania w klasach należących do przestrzeni nazw innych niż te zdefiniowane w ramach zestawu obsługiwanych <xref:System> przestrzeni nazw.  
   
-- Obsługuje przekazywanie fragmentów drzewa wyników do arkusza stylów przy użyciu <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Obsługuje przekazywanie fragmentów drzewa wyników do arkusza stylów przy użyciu <xref:System.Xml.XPath.XPathNodeIterator> .  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parametry arkusza stylów XSLT  
  Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody using. Kwalifikowana nazwa i przestrzeń nazw Uniform Resource Identifier (URI) są skojarzone z obiektem parametru w tym czasie.  
@@ -38,8 +38,8 @@ ms.locfileid: "78160199"
   
 |Typ W3C|Równoważna Klasa .NET Framework (typ)|Typ XPath lub typ XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Ciąg|System. String|XPath|  
-|Wartość logiczna|System. Boolean|XPath|  
+|String (ciąg)|System. String|XPath|  
+|Boolean (wartość logiczna)|System. Boolean|XPath|  
 |Liczba|System. Double|XPath|  
 |Fragment drzewa wyników|System. XML. XPath. XPathNavigator|XSL|  
 |Zestaw węzłów|System. XML. XPath. XPathNodeIterator|XPath|  
@@ -48,7 +48,7 @@ ms.locfileid: "78160199"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Aby użyć parametru XSLT, użytkownik musi wykonać następujące czynności:  
   
-1. Utwórz <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj obiekty przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Utwórz <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj obiekty przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> .  
   
 2. Wywołaj parametry z arkusza stylów.  
   
@@ -189,7 +189,7 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Aby użyć obiektu rozszerzenia XSLT, użytkownik musi wykonać następujące czynności:  
   
-1. Utwórz <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj obiekt rozszerzenia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Utwórz <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj obiekt rozszerzenia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> .  
   
 2. Wywołaj obiekt rozszerzenia z arkusza stylów.  
   
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)

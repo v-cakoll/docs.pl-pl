@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: efa0925a96fcdd4356109632fa77199edde73c26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794640"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284289"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Używanie generatora serializatorów Microsoft XML na platformie .NET Core
 
@@ -24,7 +24,7 @@ W tym samouczku przedstawiono sposób użycia generatora serializatorów XML fir
 > - Jak dodać klasę i obiekt XmlSerializer
 > - Jak skompilować i uruchomić aplikację
 
-Podobnie jak w przypadku .NET Framework [Generator serializatorów XML (Sgen. exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) , [pakiet NuGet Microsoft. XmlSerializer. Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) jest odpowiednikiem projektów .NET Core i .NET Standard. Tworzy zestaw serializacji XML dla typów zawartych w zestawie, aby zwiększyć wydajność podczas uruchamiania serializacji XML podczas serializacji lub deserializacji obiektów tych typów przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.
+Podobnie jak w przypadku .NET Framework [Generator serializatorów XML (Sgen. exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) , [pakiet NuGet Microsoft. XmlSerializer. Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) jest odpowiednikiem projektów .NET Core i .NET Standard. Tworzy zestaw serializacji XML dla typów zawartych w zestawie, aby zwiększyć wydajność podczas uruchamiania serializacji XML podczas serializacji lub deserializacji obiektów tych typów przy użyciu <xref:System.Xml.Serialization.XmlSerializer> .
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Dodawanie odwołania do pakietu Microsoft. XmlSerializer. Generator w projekcie MojaApl
 
-Użyj polecenia [`dotnet add package`](../tools/dotnet-add-package.md) , aby dodać odwołanie w projekcie.
+Użyj [`dotnet add package`](../tools/dotnet-add-package.md) polecenia, aby dodać odwołanie w projekcie.
 
 Wpisz:
 
@@ -93,7 +93,7 @@ public class MyClass
 }
 ```
 
-### <a name="create-an-xmlserializer-for-myclass"></a>Utwórz dla `XmlSerializer` elementu MyClass
+### <a name="create-an-xmlserializer-for-myclass"></a>Utwórz `XmlSerializer` dla elementu MyClass
 
 Dodaj następujący wiersz w obszarze *głównym* , aby utworzyć `XmlSerializer` for MyClass:
 
@@ -103,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>Kompilowanie i uruchamianie aplikacji
 
-Nadal w folderze *MojaApl* Uruchom aplikację za pośrednictwem [`dotnet run`](../tools/dotnet-run.md) programu, która automatycznie ładuje i używa wstępnie wygenerowanych serializatorów w czasie wykonywania.
+W folderze *MojaApl* należy uruchomić aplikację za pośrednictwem programu, która [`dotnet run`](../tools/dotnet-run.md) automatycznie ładuje i używa wstępnie wygenerowanych serializatorów w czasie wykonywania.
 
 W oknie konsoli wpisz następujące polecenie:
 
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)wywołuje [`dotnet build`](../tools/dotnet-build.md) się, by upewnić się, że cele kompilacji zostały skompilowane `dotnet <assembly.dll>` , a następnie wywołuje, aby uruchomić aplikację docelową.
+> [`dotnet run`](../tools/dotnet-run.md)wywołuje [`dotnet build`](../tools/dotnet-build.md) się, by upewnić się, że cele kompilacji zostały skompilowane, a następnie wywołuje, `dotnet <assembly.dll>` Aby uruchomić aplikację docelową.
 
 > [!IMPORTANT]
 > Polecenia i kroki przedstawione w tym samouczku do uruchamiania aplikacji są używane tylko w czasie projektowania. Gdy wszystko będzie gotowe do wdrożenia aplikacji, zapoznaj się z różnymi [strategiami wdrażania](../deploying/index.md) aplikacji .NET Core i [`dotnet publish`](../tools/dotnet-publish.md) poleceniem.

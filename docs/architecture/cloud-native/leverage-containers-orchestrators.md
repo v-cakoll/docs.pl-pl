@@ -2,12 +2,12 @@
 title: Korzystanie z kontenerów i orkiestratorów
 description: Korzystanie z kontenerów platformy Docker i koordynatorów Kubernetes na platformie Azure
 ms.date: 05/13/2020
-ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613918"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282587"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Korzystanie z kontenerów i orkiestratorów
 
@@ -53,30 +53,11 @@ Kontenery są definiowane przez proste pliki tekstowe, które stają się artefa
 
 Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzyć i uruchomić w ten sam sposób. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji są rozmieszczone inaczej niż inne, dlaczego należy ponownie wdrożyć całą aplikację, gdy wystarczy wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
 
-Kontenery są niezmienne. Po zdefiniowaniu kontenera można go ponownie utworzyć i uruchomić w ten sam sposób. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji są rozmieszczone inaczej niż inne, dlaczego należy ponownie wdrożyć całą aplikację, gdy wystarczy wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
-
 ![Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu.](./media/cloud-native-design.png)
 
 **Rysunek 3-2**. Tworzenie aplikacji monolitycznej w celu wdrażania mikrousług.
 
 Każda usługa w chmurze została skompilowana i wdrożona w osobnym kontenerze. Każda z nich może być aktualizowana w razie konieczności. Poszczególne usługi mogą być hostowane na węzłach mających zasoby odpowiednie dla każdej usługi. Środowisko, w którym działa każda usługa, jest niezmienne, współużytkowane przez środowisko deweloperskie, testowe i produkcyjne oraz w łatwy sposób. Sprzęganie różnych obszarów aplikacji występuje jawnie jako wywołania lub komunikaty między usługami, a nie zależności czasu kompilacji w ramach monolitu. Możesz również wybrać technologię, która najlepiej spełnia daną możliwość, bez konieczności wprowadzania zmian w pozostałej części aplikacji.
-
-Usługi kontenerowe wymagają zautomatyzowanego zarządzania. Nie byłoby możliwe ręczne administrowanie dużym zestawem niezależnie wdrożonych kontenerów. Rozważmy na przykład następujące zadania:
-
-- Jak będą obsługiwane wystąpienia kontenerów w klastrze wielu maszyn?
-- Po wdrożeniu, w jaki sposób kontenery będą odnajdywane i komunikować się ze sobą?
-- Jak można skalować kontenery w poziomie lub na żądanie?
-- Jak monitorować kondycję każdego kontenera?
-- Jak chronić kontener przed awariami sprzętu i oprogramowania?
-- Jak należy uaktualnić kontenery dla działającej aplikacji bez przestoju?
-
-Koordynatory kontenerów i automatyzują te i inne zagadnienia.
-
-W natywnym systemie ekonomicznym w chmurze Kubernetes stał się de facto koordynatorem kontenerów. Jest to platforma "open source" zarządzana przez natywną platformę obliczeniową w chmurze (CNCF). Kubernetes automatyzuje wdrażanie, skalowanie i problemy operacyjne obciążeń kontenerów w ramach klastra maszynowego. Jednak Instalowanie Kubernetes i zarządzanie nim jest wielowątkowy bardzo złożone.
-
-Znacznie lepszym rozwiązaniem jest wykorzystanie Kubernetes jako usługi zarządzanej od dostawcy chmury. Usługa Azure Cloud oferuje w pełni zarządzaną platformę Kubernetes uprawnioną do [usługi Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS abstrakcje złożoności i obciążenia operacyjnego związane z zarządzaniem Kubernetes. Korzystasz z Kubernetes jako usługi w chmurze; Firma Microsoft ponosi odpowiedzialność za zarządzanie i obsługę. AKS także ścisłą integrację z innymi usługami platformy Azure i narzędziami deweloperskimi.
-
-AKS jest technologią opartą na klastrze. Pula federacyjnych maszyn wirtualnych lub węzłów jest wdrażana w chmurze platformy Azure. Razem tworzą one środowisko o wysokiej dostępności lub klaster. Klaster jest wyświetlany jako bezproblemową, pojedynczą jednostkę w aplikacji natywnej w chmurze. W obszarze okapu AKS wdraża usługi kontenerów w tych węzłach zgodnie ze wstępnie zdefiniowaną strategią, która równomiernie dystrybuuje obciążenie.
 
 Usługi kontenerowe wymagają zautomatyzowanego zarządzania. Nie byłoby możliwe ręczne administrowanie dużym zestawem niezależnie wdrożonych kontenerów. Rozważmy na przykład następujące zadania:
 
@@ -240,8 +221,6 @@ Ponadto w dowolnym momencie można dodać obsługę platformy Docker do istniej�
 ![Dodawanie obsługi platformy Docker w programie Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Rysunek 3-8**. Dodawanie obsługi platformy Docker do programu Visual Studio
-
-Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i `charts` zostanie dodany folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
 
 Możesz również dodać obsługę aranżacji kontenera, jak pokazano na rysunku 3-8. Domyślnie w programie Orchestrator są stosowane Kubernetes i Helm. Po wybraniu programu Orchestrator `azds.yaml` plik zostanie dodany do katalogu głównego projektu i `charts` zostanie dodany folder zawierający wykresy Helm używane do konfigurowania i wdrażania aplikacji w Kubernetes. Rysunek 3-9 pokazuje pliki wyników w nowym projekcie.
 

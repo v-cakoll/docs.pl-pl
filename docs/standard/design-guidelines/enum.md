@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 3b24bfefd3edb0585e9c6369e9b8151b17151661
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741713"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280143"
 ---
 # <a name="enum-design"></a>Projekt wyliczeń
 
@@ -28,17 +28,17 @@ Typy wyliczeniowe flag są przeznaczone do obsługi operacji bitowych na wartoś
 
 ✔️ za pomocą wyliczenia zamiast stałych statycznych.
 
-❌ nie należy używać wyliczenia dla zestawów otwartych (takich jak wersja systemu operacyjnego, nazwiska znajomych itp.).
+❌NIE należy używać wyliczenia dla zestawów otwartych (takich jak wersja systemu operacyjnego, nazwiska znajomych itp.).
 
-❌ nie zapewniają zarezerwowanych wartości wyliczenia, które są przeznaczone do użytku w przyszłości.
+❌Nie dostarczaj zarezerwowanych wartości wyliczenia, które są przeznaczone do użytku w przyszłości.
 
 Zawsze możesz po prostu dodać wartości do istniejącego wyliczenia na późniejszym etapie. Aby uzyskać więcej informacji na temat dodawania wartości do typów wyliczeniowych, zobacz [Dodawanie wartości do wyliczeń](#add_value) . Wartości zarezerwowane powodują zanieczyszczenie zestawu rzeczywistych wartości i umożliwiają osiągnięcie błędów użytkownika.
 
-❌ uniknąć publicznego ujawniania wyliczeń tylko z jedną wartością.
+❌UNIKAj publicznego ujawniania wyliczeń tylko z jedną wartością.
 
 Typowym sposobem zapewnienia przyszłej rozszerzalności interfejsów API języka C jest dodanie zarezerwowanych parametrów do sygnatur metod. Takie zastrzeżone parametry można wyrazić jako wyliczenia z pojedynczą wartością domyślną. Nie należy tego robić w zarządzanych interfejsach API. Przeciążanie metod pozwala dodawać parametry w przyszłych wersjach.
 
-❌ nie obejmują wartości wskaźnikowych w wyliczeniach.
+❌Nie uwzględniaj wartości wskaźnikowych w wyliczeniach.
 
 Chociaż są czasami pomocne dla deweloperów platformy, wartości wskaźnikowe są mylące dla użytkowników struktury. Są one używane do śledzenia stanu wyliczenia, a nie jako jedna z wartości z zestawu reprezentowanego przez wyliczenie.
 
@@ -46,11 +46,11 @@ Chociaż są czasami pomocne dla deweloperów platformy, wartości wskaźnikowe 
 
 Rozważ wywołanie wartości podobnej do "none". Jeśli taka wartość nie jest odpowiednia dla danego wyliczenia, najbardziej typowa wartość domyślna dla wyliczenia powinna mieć przypisaną podstawową wartość równą zero.
 
-✔️ ROZWAŻYĆ użycie <xref:System.Int32> (domyślnie w większości języków programowania) jako typ podstawowy wyliczenia, chyba że spełniony jest którykolwiek z następujących warunków:
+✔️ ROZWAŻYĆ użycie <xref:System.Int32> (wartość domyślna w większości języków programowania) jako typ podstawowy wyliczenia, chyba że spełniony jest którykolwiek z następujących warunków:
 
 - Wyliczenie jest wyliczeniem flag i ma więcej niż 32 flag lub oczekuje więcej w przyszłości.
 
-- Typ podstawowy musi być inny niż <xref:System.Int32>, aby ułatwić współdziałanie z kodem niezarządzanym.
+- Typ podstawowy musi być inny niż <xref:System.Int32> w celu łatwiejszego współdziałania z niezarządzanym kodem, który oczekuje różnych rodzajów wyliczeniowych.
 
 - Mniejszy typ podstawowy spowoduje znaczne oszczędności w miejscu. Jeśli spodziewasz się, że Wyliczenie ma być używane głównie jako argument dla przepływu sterowania, rozmiar powoduje niewielkie różnice. Oszczędność rozmiaru może być istotna, jeśli:
 
@@ -60,31 +60,31 @@ Rozważ wywołanie wartości podobnej do "none". Jeśli taka wartość nie jest 
 
   - Oczekuje się, że wiele wystąpień wyliczenia ma być serializowana.
 
-W przypadku użycia w pamięci należy pamiętać, że obiekty zarządzane są zawsze `DWORD`wyrównane, dlatego w celu wprowadzenia różnic należy użyć wielu wyliczeń lub innych małych struktur w wystąpieniu do spakowania mniejszego wyliczenia z, ponieważ całkowity rozmiar wystąpienia zawsze będzie zaokrąglany do `DWORD`.
+W przypadku użycia w pamięci należy pamiętać, że obiekty zarządzane są zawsze `DWORD` wyrównane, dlatego w celu zapewnienia różnicy należy użyć wielu wyliczeń lub innych małych struktur w celu spakowania mniejszego wyliczenia z, ponieważ całkowity rozmiar wystąpienia zawsze będzie zaokrąglany do `DWORD` .
 
 ✔️ DO flagi nazwy wyliczenia z rzeczownikami w liczbie mnogiej lub rzeczownikami i prostymi wyliczeniami z pojedynczą rzeczownikami lub oznaczeniami rzeczowników.
 
-❌ nie należy poszerzać <xref:System.Enum?displayProperty=nameWithType> bezpośrednio.
+❌NIE należy bezpośrednio przełączać <xref:System.Enum?displayProperty=nameWithType> .
 
-<xref:System.Enum?displayProperty=nameWithType> jest specjalnym typem używanym przez środowisko CLR do tworzenia wyliczeń zdefiniowanych przez użytkownika. Większość języków programowania udostępnia element programistyczny, który zapewnia dostęp do tej funkcji. Na przykład, w C# `enum` słowo kluczowe jest używane do definiowania wyliczenia.
+<xref:System.Enum?displayProperty=nameWithType>jest specjalnym typem używanym przez środowisko CLR do tworzenia wyliczeń zdefiniowanych przez użytkownika. Większość języków programowania udostępnia element programistyczny, który zapewnia dostęp do tej funkcji. Na przykład w języku C# `enum` słowo kluczowe jest używane do definiowania wyliczenia.
 
 <a name="design"></a>
 
 ### <a name="designing-flag-enums"></a>Projektowanie typów wyliczeniowych flag
 
-✔️ zastosować <xref:System.FlagsAttribute?displayProperty=nameWithType> do flagi wyliczeń. Nie stosuj tego atrybutu do prostych typów wyliczeniowych.
+✔️ zastosować <xref:System.FlagsAttribute?displayProperty=nameWithType> do flag wyliczeniowych. Nie stosuj tego atrybutu do prostych typów wyliczeniowych.
 
 ✔️ Użyj uprawnień dwóch dla wartości wyliczenia flag, aby można je było swobodnie łączyć przy użyciu operacji bitowej lub.
 
 ✔️ ROZWAŻYĆ dostarczenie specjalnych wartości wyliczenia dla często używanych kombinacji flag.
 
-Operacje bitowe są zaawansowaną koncepcją i nie powinny być wymagane w przypadku prostych zadań. Przykładem takiej wartości jest <xref:System.IO.FileAccess.ReadWrite>.
+Operacje bitowe są zaawansowaną koncepcją i nie powinny być wymagane w przypadku prostych zadań. <xref:System.IO.FileAccess.ReadWrite>to przykład specjalnej wartości.
 
-❌ unikać tworzenia wyliczeń flag, w których niektóre kombinacje wartości są nieprawidłowe.
+❌UNIKAj tworzenia wyliczeń flag, w których niektóre kombinacje wartości są nieprawidłowe.
 
-❌ unikać używania wartości wyliczeniowych flag zero, chyba że wartość reprezentuje "wszystkie flagi są wyczyszczone" i jest odpowiednio określona, zgodnie z opisem w następnej wytycznej.
+❌UNIKAj używania wartości wyliczeniowych flag zero, chyba że wartość reprezentuje "wszystkie flagi są wyczyszczone" i jest odpowiednio określona, zgodnie z opisem w następnej wytycznej.
 
-✔️ NALEŻY nazwać wartość zero dla wyliczeń flag `None`. W przypadku wyliczenia flag wartość musi zawsze oznaczać, że wszystkie flagi są wyczyszczone.
+✔️ NALEŻY nazwać wartość zerową dla wyliczeń flag `None` . W przypadku wyliczenia flag wartość musi zawsze oznaczać, że wszystkie flagi są wyczyszczone.
 
 <a name="add_value"></a>
 
@@ -102,5 +102,5 @@ Jeśli masz prawdziwe dane dotyczące niezgodności aplikacji spowodowanych prze
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Wskazówki dotyczące projektowania typów](type.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)

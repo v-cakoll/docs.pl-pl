@@ -14,76 +14,76 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: 0db0331620da8337930bfacf5d1bbd9913647afa
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: c212397f99bd09195f298d7d704c879705b14f02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344159"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281547"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Wykonywanie operacji arytmetycznych na wartościach dat i godzin
 
-Chociaż zarówno <xref:System.DateTime> struktury, jak i <xref:System.DateTimeOffset> struktury zapewniają elementy członkowskie, które wykonują operacje arytmetyczne na ich wartościach, wyniki operacji arytmetycznych są bardzo różne. W tym temacie analizuje te różnice, odnosi się do stopni świadomości strefy czasowej w danych daty i godziny i omówiono sposób wykonywania operacji w pełni strefę czasową za pomocą danych daty i godziny.
+Chociaż <xref:System.DateTime> <xref:System.DateTimeOffset> struktury i zapewniają składowe, które wykonują operacje arytmetyczne na ich wartości, wyniki operacji arytmetycznych są bardzo różne. Ten temat zawiera informacje o różnicach, odniesieniu ich do stopni rozpoznawania strefy czasowej w danych daty i godziny. omówiono w nim wykonywanie operacji w pełni opartej na strefie czasowej przy użyciu danych daty i godziny.
 
 ## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a>Porównania i operacje arytmetyczne z wartościami DateTime
 
-Właściwość <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> umożliwia <xref:System.DateTimeKind> wartość, która ma być przypisana do daty i godziny, aby wskazać, czy reprezentuje czas lokalny, skoordynowany czas uniwersalny (UTC) lub czas w nieokreślonej strefie czasowej. Jednak ta ograniczona strefa czasowa jest ignorowana podczas porównywania lub <xref:System.DateTimeKind> wykonywania arytmetyki daty i godziny wartości. Poniższy przykład, który porównuje bieżący czas lokalny z bieżącym czasem UTC, ilustruje to.
+<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>Właściwość umożliwia <xref:System.DateTimeKind> przypisanie wartości do daty i godziny w celu wskazania, czy reprezentuje ona czas lokalny, uniwersalny czas koordynowany (UTC), czy czas w nieokreślonej strefie czasowej. Jednak te ograniczone informacje o strefie czasowej są ignorowane podczas porównywania lub wykonywania operacji arytmetycznych na wartościach daty i godziny <xref:System.DateTimeKind> . Poniższy przykład, który porównuje bieżący czas lokalny z bieżącym czasem UTC, ilustruje to.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]
 
-Metoda <xref:System.DateTime.CompareTo%28System.DateTime%29> raportuje, że czas lokalny jest wcześniejszy (lub mniejszy) czas UTC, a operacja odejmowania wskazuje, że różnica między czasem UTC a czasem lokalnym dla systemu w standardowej strefie czasowej usa pacific wynosi siedem godzin. Ale ponieważ te dwie wartości zapewniają różne reprezentacje pojedynczego punktu w czasie, jest jasne, w tym przypadku, że przedział czasu jest całkowicie przypisać do przesunięcia lokalnej strefy czasowej z UTC.
+<xref:System.DateTime.CompareTo%28System.DateTime%29>Metoda zgłasza, że czas lokalny jest wcześniejszy niż czas UTC, a operacja odejmowania wskazuje, że różnica między czasem UTC a czasem lokalnym dla systemu w strefie czasowej pacyficznego w Stanach Zjednoczonych w warstwie Standardowa wynosi siedem godzin. Jednak ponieważ te dwie wartości zapewniają różne reprezentacje pojedynczego punktu w czasie, w tym przypadku jest jasne, że przedział czasu jest całkowicie przypisany do przesunięcia lokalnej strefy czasowej z czasu UTC.
 
-Bardziej ogólnie rzecz <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> biorąc, właściwość nie <xref:System.DateTime.Kind> wpływa na wyniki zwracane przez porównanie i metody arytmetyczne (jak wskazuje porównanie dwóch identycznych punktów w czasie), chociaż może mieć wpływ na interpretację tych wyników. Przykład:
+Bardziej ogólnie rzecz biorąc, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> Właściwość nie wpływa na wyniki zwracane przez <xref:System.DateTime.Kind> metody porównania i arytmetyczne (w miarę jak porównanie dwóch identycznych punktów w czasie wskazuje), chociaż może to wpływać na interpretację tych wyników. Na przykład:
 
-- Wynik każdej operacji arytmetycznej wykonywanej na dwie <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartości daty i godziny, których właściwości są równe, <xref:System.DateTimeKind> odzwierciedla rzeczywisty przedział czasu między dwiema wartościami. Podobnie porównanie dwóch takich wartości daty i godziny dokładnie odzwierciedla relację między czasami.
+- Wynik operacji arytmetycznych na dwóch wartościach daty i godziny, których <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości są równe <xref:System.DateTimeKind> , odzwierciedla rzeczywiste przedział czasu między tymi dwiema wartościami. Podobnie porównanie dwóch takich wartości daty i godziny dokładnie odzwierciedla relacje między nimi.
 
-- Wynik każdej operacji arytmetycznej lub porównania wykonywanej na <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> dwie wartości <xref:System.DateTimeKind> daty i godziny, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> których właściwości są równe lub na dwie wartości daty i godziny z różnymi wartościami właściwości odzwierciedla różnicę w czasie zegara między dwiema wartościami.
+- Wynik operacji arytmetycznych lub porównania wykonanych na dwóch wartościach daty i godziny, których <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości są równe <xref:System.DateTimeKind> lub dwie wartości daty i godziny z różnymi <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartościami właściwości, odzwierciedlają różnice w czasie zegara między tymi dwiema wartościami.
 
-- Operacje arytmetyczne lub porównawcze w lokalnych wartościach daty i godziny nie biorą pod uwagę, czy określona wartość jest niejednoznaczna czy nieprawidłowa, ani nie uwzględniają wpływu jakichkolwiek reguł korekty, które wynikają z przejścia lokalnej strefy czasowej do lub z światła dziennego oszczędność czasu.
+- Operacje arytmetyczne lub porównania na lokalnych wartościach daty i godziny nie są brane pod uwagę, czy określona wartość jest niejednoznaczna, czy nieprawidłowa, ani nie podejmuje wpływu na skutki wszelkich reguł korekty wynikających ze przejścia lokalnej strefy czasowej do lub z czasu letniego.
 
-- Każda operacja, która porównuje lub oblicza różnicę między czasem UTC a czasem lokalnym, zawiera przedział czasu równy odsuniętemu od czasu UTC w wyniku lokalnej strefy czasowej.
+- Każda operacja, która porównuje lub oblicza różnicę między czasem UTC a czasem lokalnym, obejmuje przedział czasu równy przesunięciu strefy czasowej z UTC w wyniku.
 
-- Każda operacja, która porównuje lub oblicza różnicę między nieokreślonym czasem a czasem UTC lub czasem lokalnym, odzwierciedla prosty czas zegara. Różnice w strefie czasowej nie są brane pod uwagę, a wynik nie odzwierciedla stosowania reguł korekty strefy czasowej.
+- Każda operacja, która porównuje lub oblicza różnicę między nieokreślonym czasem a czasem UTC lub czasem lokalnym odzwierciedla prosty czas zegara. Różnice między strefami czasowymi nie są brane pod uwagę, a wynik nie odzwierciedla zastosowania reguł dostosowania strefy czasowej.
 
-- Każda operacja, która porównuje lub oblicza różnicę między dwoma nieokreślonymi czasami może zawierać nieznany interwał, który odzwierciedla różnicę między czasem w dwóch różnych strefach czasowych.
+- Każda operacja, która porównuje lub oblicza różnicę między dwoma nieokreślonymi czasami może obejmować nieznany interwał, który odzwierciedla różnicę między czasem w dwóch różnych strefach czasowych.
 
-Istnieje wiele scenariuszy, w których różnice stref czasowych nie wpływają na obliczenia daty i godziny (w celu omówienia niektórych z nich, zobacz [Wybór między DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)) lub w którym kontekst danych daty i godziny definiuje znaczenie operacji porównawczych lub arytmetycznych.
+Istnieje wiele scenariuszy, w których różnice między strefami czasowymi nie wpływają na obliczenia daty i godziny (w przypadku omówienia niektórych z nich, zobacz [Wybieranie między elementami DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](choosing-between-datetime.md)) lub, w których kontekst danych daty i godziny definiuje znaczenie operacji porównania lub arytmetycznych.
 
 ## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a>Porównania i operacje arytmetyczne z wartościami DateTimeOffset
 
-Wartość <xref:System.DateTimeOffset> zawiera nie tylko datę i godzinę, ale także przesunięcie, które jednoznacznie definiuje tę datę i godzinę względem czasu UTC. Dzięki temu można zdefiniować równość <xref:System.DateTimeOffset> nieco inaczej niż w przypadku wartości. Podczas <xref:System.DateTime> gdy wartości są równe, jeśli mają <xref:System.DateTimeOffset> tę samą wartość daty i godziny, wartości są równe, jeśli oba odnoszą się do tego samego punktu w czasie. To sprawia, <xref:System.DateTimeOffset> że wartość bardziej dokładne i mniej potrzeby interpretacji, gdy jest używany w porównaniach i w większości operacji arytmetycznych, które określają interwał między dwiema datami i godzinami. Poniższy przykład, który <xref:System.DateTimeOffset> jest odpowiednikiem poprzedniego przykładu, <xref:System.DateTimeOffset> który porównał wartości lokalne i UTC, ilustruje tę różnicę w zachowaniu.
+<xref:System.DateTimeOffset>Wartość zawiera nie tylko datę i godzinę, ale również przesunięcie, które jednoznacznie definiuje datę i godzinę względem czasu UTC. Dzięki temu można zdefiniować równość nieco inaczej niż w przypadku <xref:System.DateTimeOffset> wartości. <xref:System.DateTime>Wartości są równe, jeśli mają taką samą wartość daty i godziny, <xref:System.DateTimeOffset> wartości są równe, jeśli oba odwołują się do tego samego punktu w czasie. Pozwala to na <xref:System.DateTimeOffset> dokładniejsze i mniejsze wykorzystanie interpretacji w przypadku porównywania i w większości operacji arytmetycznych, które określają interwał między dwiema datami i godzinami. Poniższy przykład, który jest <xref:System.DateTimeOffset> odpowiednikiem poprzedniego przykładu w porównaniu wartości lokalnych i UTC <xref:System.DateTimeOffset> , ilustruje tę różnicę w zachowaniu.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]
 
-W tym przykładzie <xref:System.DateTimeOffset.CompareTo%2A> metoda wskazuje, że bieżący czas lokalny i bieżący czas <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> UTC są równe, a <xref:System.TimeSpan.Zero?displayProperty=nameWithType>odejmowanie wartości wskazuje, że różnica między dwoma razy jest .
+W tym przykładzie <xref:System.DateTimeOffset.CompareTo%2A> Metoda wskazuje, że bieżący czas lokalny i bieżący czas UTC są równe, a odejmowanie <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> wartości wskazuje, że różnica między nimi wynosi dwa razy <xref:System.TimeSpan.Zero?displayProperty=nameWithType> .
 
-Głównym ograniczeniem <xref:System.DateTimeOffset> używania wartości w arytmetyce <xref:System.DateTimeOffset> daty i godziny jest to, że chociaż wartości mają pewną świadomość strefy czasowej, nie są w pełni świadome strefy czasowej. Mimo <xref:System.DateTimeOffset> że przesunięcie wartości odzwierciedla przesunięcie strefy czasowej z <xref:System.DateTimeOffset> czasu UTC, gdy zmienna jest najpierw przypisana wartość, staje się odłączony od strefy czasowej później. Ponieważ nie jest już bezpośrednio skojarzony z identyfikowalnym czasem, dodawanie i odejmowanie dat i interwałów czasu nie uwzględnia reguł dopasowania strefy czasowej.
+Głównym ograniczeniem używania <xref:System.DateTimeOffset> wartości w czasie arytmetycznym jest to, że chociaż <xref:System.DateTimeOffset> wartości mają pewną świadomość strefy czasowej, nie są w pełni świadome strefy czasowej. Chociaż <xref:System.DateTimeOffset> przesunięcie wartości odzwierciedla przesunięcie strefy czasowej z UTC <xref:System.DateTimeOffset> , gdy zmienna jest przypisana po raz pierwszy, staje się nieskojarzona z strefą czasową. Ponieważ nie jest już bezpośrednio skojarzony z możliwym do zidentyfikowania czasem, Dodawanie i odejmowanie interwałów daty i czasu nie uwzględnia reguł korekty strefy czasowej.
 
-Aby zilustrować, przejście na czas letni w centralnej strefie czasowej stanów USA odbywa się o godzinie 2:00. w dniu 9 marca 2008 r. Oznacza to, że dodanie dwu-i półgodzinnego interwału do centralnego czasu standardowego o godzinie 1:30 czasu środkowego. w dniu 9 marca 2008 r., powinien przedstawić datę i godzinę 5:00 Rano. w dniu 9 marca 2008 r. Jednak, jak pokazano w poniższym przykładzie, wynik dodania wynosi 4:00 Rano. w dniu 9 marca 2008 r. Należy zauważyć, że wynik tej operacji reprezentuje poprawny punkt w czasie, chociaż nie jest to czas w strefie czasowej, w której jesteśmy zainteresowani (oznacza to, że nie ma oczekiwanego przesunięcia strefy czasowej).
+Aby zilustrować, przejście do czasu letniego w środkowej strefie czasowej w stanie USA występuje o godz. 2:00 9 marca 2008. Oznacza to, że dodanie interwału dwóch i pół godziny do środkowego czasu standardowego o 1:30 rano 9 marca 2008 powinien utworzyć datę i godzinę 5:00 rano 9 marca 2008. Jednak, jak pokazano na poniższym przykładzie, wynikiem dodania jest 4:00 rano 9 marca 2008. Należy zauważyć, że wynik tej operacji reprezentuje właściwy punkt w czasie, chociaż nie jest to godzina w strefie czasowej, w której jesteśmy zainteresowani (czyli nie ma oczekiwanego przesunięcia strefy czasowej).
 
 [!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]
 
-## <a name="arithmetic-operations-with-times-in-time-zones"></a>Operacje arytmetyczne z czasem w strefach czasowych
+## <a name="arithmetic-operations-with-times-in-time-zones"></a>Operacje arytmetyczne z czasami w strefach czasowych
 
-Klasa <xref:System.TimeZoneInfo> zawiera szereg metod konwersji, które automatycznie stosują korekty podczas konwertowania czasów z jednej strefy czasowej na inną. Należą do nich między innymi:
+<xref:System.TimeZoneInfo>Klasa zawiera szereg metod konwersji, które automatycznie stosują korekty podczas konwertowania czasu z jednej strefy czasowej na inną. Należą do nich między innymi:
 
-- I <xref:System.TimeZoneInfo.ConvertTime%2A> <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> metody, które konwertuje razy między dowolnymi dwiema strefami czasowymi.
+- <xref:System.TimeZoneInfo.ConvertTime%2A>Metody i <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> , które konwertują czasy między dowolnymi dwiema strefami czasowymi.
 
-- Metody <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> i metody, które konwertuje czas w określonej strefie czasowej do CZASU UTC lub konwertować UTC do czasu w określonej strefie czasowej.
+- <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>Metody i <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> , które konwertują czas w określonej strefie czasowej na czas UTC lub konwertują czasu UTC na czas w określonej strefie czasowej.
 
-Aby uzyskać szczegółowe informacje, zobacz [Konwertowanie czasów między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md).
+Aby uzyskać szczegółowe informacje, zobacz [konwertowanie czasów między strefami czasowymi](converting-between-time-zones.md).
 
-Klasa <xref:System.TimeZoneInfo> nie zawiera żadnych metod, które automatycznie stosują reguły dopasowania podczas wykonywania arytmetyki daty i godziny. Można to jednak zrobić, konwertując czas w strefie czasowej na utc, wykonując operację arytmetyczną, a następnie konwertując z czasu UTC z powrotem na czas w strefie czasowej. Aby uzyskać szczegółowe informacje, zobacz [Jak: Używanie stref czasowych w arytmetyce daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+<xref:System.TimeZoneInfo>Klasa nie udostępnia żadnych metod, które automatycznie stosują reguły korekty podczas wykonywania operacji arytmetycznych daty i czasu. Można to zrobić przez przekonwertowanie czasu w strefie czasowej na UTC, wykonanie operacji arytmetycznej, a następnie konwersję z powrotem na godzinę w strefie czasowej. Aby uzyskać szczegółowe informacje, zobacz [How to: use Time Zones in Data i Time arytmetyczne](use-time-zones-in-arithmetic.md).
 
-Na przykład poniższy kod jest podobny do poprzedniego kodu, który dodał dwie i pół godziny do 2:00 rano. w dniu 9 marca 2008 r. Ponieważ jednak czas standardowy jest konwertowany na czas STANDARDOWY centralny na czas UTC przed wykonaniem arytmetyki daty i godziny, a następnie konwertuje wynik z czasu UTC z powrotem na centralny czas standardowy, wynikowy czas odzwierciedla przejście centralnej standardowej strefy czasowej na czas letni Czas.
+Na przykład poniższy kod jest podobny do poprzedniego kodu, który dodał dwie i pół godziny do 2:00 rano 9 marca 2008. Jednak ze względu na to, że konwertuje środkowy czas standardowy na UTC przed wykonaniem operacji arytmetycznych daty i godziny, a następnie konwertuje wynik z z powrotem z UTC do centralnego czasu standardowego, a wynikowy czas odzwierciedla centralne przejście standardowej strefy czasowej do czasu letniego.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-- [Instrukcje: Używanie stref czasowych w arytmetyce wartości daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Daty, godziny i strefy czasowe](index.md)
+- [Instrukcje: Używanie stref czasowych w arytmetyce wartości daty i godziny](use-time-zones-in-arithmetic.md)

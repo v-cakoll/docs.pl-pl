@@ -1,5 +1,5 @@
 ---
-title: 'Porady: sterowanie szeregowaniem w zapytaniu PLINQ'
+title: 'Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,42 +8,42 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 86011cff71fabed5e47e085f91b1759238638c9a
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 80e199d75471eba219f1f3da12d307b6cd1d90cf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588490"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285459"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>Porady: sterowanie szeregowaniem w zapytaniu PLINQ
-Te przykłady pokazują, jak kontrolować kolejność w kwerendzie <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> PLINQ przy użyciu metody rozszerzenia.  
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ
+W poniższych przykładach pokazano, jak kontrolować porządkowanie w kwerendzie PLINQ przy użyciu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> metody rozszerzenia.  
   
 > [!WARNING]
-> Te przykłady są przeznaczone przede wszystkim do wykazania użycia i może lub nie może działać szybciej niż równoważne sekwencyjne LINQ do kwerend obiektów.  
+> Te przykłady są przeznaczone głównie do zademonstrowania użycia i mogą być uruchamiane szybciej niż równoważne zapytania sekwencyjne LINQ to Objects.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zachowuje kolejność sekwencji źródłowej. Czasami jest to konieczne; na przykład niektóre operatory zapytań wymagają uporządkowanej sekwencji źródłowej do uzyskania poprawnych wyników.  
+ Poniższy przykład zachowuje kolejność sekwencji źródłowej. Jest to czasami konieczne; na przykład niektóre operatory zapytań wymagają uporządkowanej sekwencji źródłowej, aby generować poprawne wyniki.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje niektóre operatory zapytań, których sekwencja źródło prawdopodobnie oczekuje się, że zostanie uporządkowany. Te operatory będą pracować nad sekwencjami nieuiarszowanymi, ale mogą one przynieść nieoczekiwane wyniki.  
+ W poniższym przykładzie przedstawiono niektóre operatory zapytań, których sekwencja źródłowa prawdopodobnie powinna być uporządkowana. Te operatory będą działały w sekwencjach nieuporządkowanych, ale mogą generować nieoczekiwane wyniki.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Aby uruchomić tę metodę, wklej ją do klasy PLINQDataSample w projekcie [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) i naciśnij klawisz F5.  
+ Aby uruchomić tę metodę, wklej ją do klasy PLINQDataSample w projekcie [przykład danych PLINQ Data](plinq-data-sample.md) i naciśnij klawisz F5.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak zachować kolejność dla pierwszej części kwerendy, a następnie usunąć kolejność, aby zwiększyć wydajność klauzuli sprzężenia, a następnie ponownie zasądzenie kolejności do sekwencji wyników końcowych.  
+ Poniższy przykład pokazuje, jak zachować kolejność dla pierwszej części zapytania, a następnie usunąć kolejność, aby zwiększyć wydajność klauzuli join, a następnie ponownie zastosować porządkowanie do końcowej sekwencji wyników.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Aby uruchomić tę metodę, wklej ją do klasy PLINQDataSample w projekcie [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) i naciśnij klawisz F5.  
+ Aby uruchomić tę metodę, wklej ją do klasy PLINQDataSample w projekcie [przykład danych PLINQ Data](plinq-data-sample.md) i naciśnij klawisz F5.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Równoległe LINQ (PLINQ)](introduction-to-plinq.md)

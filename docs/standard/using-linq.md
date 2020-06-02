@@ -9,20 +9,20 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507523"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291074"
 ---
-# <a name="linq-language-integrated-query"></a><span data-ttu-id="95648-103">LINQ (zapytanie zintegrowane z językiem)</span><span class="sxs-lookup"><span data-stu-id="95648-103">LINQ (Language Integrated Query)</span></span>
+# <a name="linq-language-integrated-query"></a><span data-ttu-id="f0c16-103">LINQ (zapytanie zintegrowane z językiem)</span><span class="sxs-lookup"><span data-stu-id="f0c16-103">LINQ (Language Integrated Query)</span></span>
 
-## <a name="what-is-it"></a><span data-ttu-id="95648-104">co to jest?</span><span class="sxs-lookup"><span data-stu-id="95648-104">What is it?</span></span>
+## <a name="what-is-it"></a><span data-ttu-id="f0c16-104">co to jest?</span><span class="sxs-lookup"><span data-stu-id="f0c16-104">What is it?</span></span>
 
-<span data-ttu-id="95648-105">LINQ zapewnia możliwości zapytań na poziomie języka i interfejs API [funkcji wyższej kolejności](https://en.wikipedia.org/wiki/Higher-order_function) do języka C# i Visual Basic jako sposób pisania kodu, który jest bardziej wyraźny.</span><span class="sxs-lookup"><span data-stu-id="95648-105">LINQ provides language-level querying capabilities and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and Visual Basic as a way to write expressive, declarative code.</span></span>
+<span data-ttu-id="f0c16-105">LINQ zapewnia możliwości zapytań na poziomie języka i interfejs API [funkcji wyższej kolejności](https://en.wikipedia.org/wiki/Higher-order_function) do języka C# i Visual Basic jako sposób pisania kodu, który jest bardziej wyraźny.</span><span class="sxs-lookup"><span data-stu-id="f0c16-105">LINQ provides language-level querying capabilities and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and Visual Basic as a way to write expressive, declarative code.</span></span>
 
-<span data-ttu-id="95648-106">Składnia zapytania na poziomie języka:</span><span class="sxs-lookup"><span data-stu-id="95648-106">Language-level query syntax:</span></span>
+<span data-ttu-id="f0c16-106">Składnia zapytania na poziomie języka:</span><span class="sxs-lookup"><span data-stu-id="f0c16-106">Language-level query syntax:</span></span>
 
 ```csharp
 var linqExperts = from p in programmers
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-<span data-ttu-id="95648-107">Ten sam przykład przy `IEnumerable<T>` użyciu interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="95648-107">Same example using the `IEnumerable<T>` API:</span></span>
+<span data-ttu-id="f0c16-107">Ten sam przykład przy użyciu `IEnumerable<T>` interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="f0c16-107">Same example using the `IEnumerable<T>` API:</span></span>
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -48,11 +48,11 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
                              Select(Function(p) New LINQExpert(p))
 ```
 
-## <a name="linq-is-expressive"></a><span data-ttu-id="95648-108">LINQ jest wyraźne</span><span class="sxs-lookup"><span data-stu-id="95648-108">LINQ is Expressive</span></span>
+## <a name="linq-is-expressive"></a><span data-ttu-id="f0c16-108">LINQ jest wyraźne</span><span class="sxs-lookup"><span data-stu-id="f0c16-108">LINQ is Expressive</span></span>
 
-<span data-ttu-id="95648-109">Wyobraź sobie, że masz listę zwierząt domowych, ale chcesz ją przekonwertować na słownik, w którym możesz uzyskać dostęp do Pet bezpośrednio przez `RFID` jego wartość.</span><span class="sxs-lookup"><span data-stu-id="95648-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
+<span data-ttu-id="f0c16-109">Wyobraź sobie, że masz listę zwierząt domowych, ale chcesz ją przekonwertować na słownik, w którym możesz uzyskać dostęp do Pet bezpośrednio przez jego `RFID` wartość.</span><span class="sxs-lookup"><span data-stu-id="f0c16-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
 
-<span data-ttu-id="95648-110">Tradycyjny, bezwzględny kod:</span><span class="sxs-lookup"><span data-stu-id="95648-110">Traditional imperative code:</span></span>
+<span data-ttu-id="f0c16-110">Tradycyjny, bezwzględny kod:</span><span class="sxs-lookup"><span data-stu-id="f0c16-110">Traditional imperative code:</span></span>
 
 ```csharp
 var petLookup = new Dictionary<int, Pet>();
@@ -71,9 +71,9 @@ For Each pet in pets
 Next
 ```
 
-<span data-ttu-id="95648-111">Zamiarem za kod nie jest utworzenie nowego `Dictionary<int, Pet>` i dodanie go do niego za pośrednictwem pętli, to przekonwertowanie istniejącej listy do słownika!</span><span class="sxs-lookup"><span data-stu-id="95648-111">The intention behind the code is not to create a new `Dictionary<int, Pet>` and add to it via a loop, it is to convert an existing list into a dictionary!</span></span> <span data-ttu-id="95648-112">LINQ zachowuje zamiar, a sam kod nie jest.</span><span class="sxs-lookup"><span data-stu-id="95648-112">LINQ preserves the intention whereas the imperative code does not.</span></span>
+<span data-ttu-id="f0c16-111">Zamiarem za kod nie jest utworzenie nowego `Dictionary<int, Pet>` i dodanie go do niego za pośrednictwem pętli, to przekonwertowanie istniejącej listy do słownika!</span><span class="sxs-lookup"><span data-stu-id="f0c16-111">The intention behind the code is not to create a new `Dictionary<int, Pet>` and add to it via a loop, it is to convert an existing list into a dictionary!</span></span> <span data-ttu-id="f0c16-112">LINQ zachowuje zamiar, a sam kod nie jest.</span><span class="sxs-lookup"><span data-stu-id="f0c16-112">LINQ preserves the intention whereas the imperative code does not.</span></span>
 
-<span data-ttu-id="95648-113">Równoważne wyrażenie LINQ:</span><span class="sxs-lookup"><span data-stu-id="95648-113">Equivalent LINQ expression:</span></span>
+<span data-ttu-id="f0c16-113">Równoważne wyrażenie LINQ:</span><span class="sxs-lookup"><span data-stu-id="f0c16-113">Equivalent LINQ expression:</span></span>
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
@@ -83,13 +83,13 @@ var petLookup = pets.ToDictionary(pet => pet.RFID);
 Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
-<span data-ttu-id="95648-114">Kod przy użyciu LINQ jest cenny, ponieważ nawet pole Play między intencją a kodem, gdy jest to programista.</span><span class="sxs-lookup"><span data-stu-id="95648-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="95648-115">Kolejną premią jest zwięzłości kodu.</span><span class="sxs-lookup"><span data-stu-id="95648-115">Another bonus is code brevity.</span></span> <span data-ttu-id="95648-116">Załóżmy, że zmniejszasz duże fragmenty kodu bazy danych o 1/3 jak powyżej.</span><span class="sxs-lookup"><span data-stu-id="95648-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="95648-117">Dość słodkiej transakcji?</span><span class="sxs-lookup"><span data-stu-id="95648-117">Pretty sweet deal, right?</span></span>
+<span data-ttu-id="f0c16-114">Kod przy użyciu LINQ jest cenny, ponieważ nawet pole Play między intencją a kodem, gdy jest to programista.</span><span class="sxs-lookup"><span data-stu-id="f0c16-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="f0c16-115">Kolejną premią jest zwięzłości kodu.</span><span class="sxs-lookup"><span data-stu-id="f0c16-115">Another bonus is code brevity.</span></span> <span data-ttu-id="f0c16-116">Załóżmy, że zmniejszasz duże fragmenty kodu bazy danych o 1/3 jak powyżej.</span><span class="sxs-lookup"><span data-stu-id="f0c16-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="f0c16-117">Dość słodkiej transakcji?</span><span class="sxs-lookup"><span data-stu-id="f0c16-117">Pretty sweet deal, right?</span></span>
 
-## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="95648-118">Dostawcy LINQ upraszczają dostęp do danych</span><span class="sxs-lookup"><span data-stu-id="95648-118">LINQ Providers Simplify Data Access</span></span>
+## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="f0c16-118">Dostawcy LINQ upraszczają dostęp do danych</span><span class="sxs-lookup"><span data-stu-id="f0c16-118">LINQ Providers Simplify Data Access</span></span>
 
-<span data-ttu-id="95648-119">Aby uzyskać znaczący fragment oprogramowania na świecie, wszystko to koncentruje się na danych z niektórych źródeł (baz danych, JSON, XML itp.).</span><span class="sxs-lookup"><span data-stu-id="95648-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, etc).</span></span> <span data-ttu-id="95648-120">Często obejmuje to uczenie nowego interfejsu API dla każdego źródła danych, co może być irytujące.</span><span class="sxs-lookup"><span data-stu-id="95648-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="95648-121">LINQ upraszcza to dzięki abstrakcyjnym typowym elementom dostępu do danych do składni zapytań, która wygląda tak samo niezależnie od wybranego źródła danych.</span><span class="sxs-lookup"><span data-stu-id="95648-121">LINQ simplifies this by abstracting common elements of data access into a query syntax which looks the same no matter which data source you pick.</span></span>
+<span data-ttu-id="f0c16-119">Aby uzyskać znaczący fragment oprogramowania na świecie, wszystko to koncentruje się na danych z niektórych źródeł (baz danych, JSON, XML itp.).</span><span class="sxs-lookup"><span data-stu-id="f0c16-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, etc).</span></span> <span data-ttu-id="f0c16-120">Często obejmuje to uczenie nowego interfejsu API dla każdego źródła danych, co może być irytujące.</span><span class="sxs-lookup"><span data-stu-id="f0c16-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="f0c16-121">LINQ upraszcza to dzięki abstrakcyjnym typowym elementom dostępu do danych do składni zapytań, która wygląda tak samo niezależnie od wybranego źródła danych.</span><span class="sxs-lookup"><span data-stu-id="f0c16-121">LINQ simplifies this by abstracting common elements of data access into a query syntax which looks the same no matter which data source you pick.</span></span>
 
-<span data-ttu-id="95648-122">Rozważ następujące kwestie: znalezienie wszystkich elementów XML z określoną wartością atrybutu.</span><span class="sxs-lookup"><span data-stu-id="95648-122">Consider the following: finding all XML elements with a specific attribute value.</span></span>
+<span data-ttu-id="f0c16-122">Rozważ następujące kwestie: znalezienie wszystkich elementów XML z określoną wartością atrybutu.</span><span class="sxs-lookup"><span data-stu-id="f0c16-122">Consider the following: finding all XML elements with a specific attribute value.</span></span>
 
 ```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
@@ -111,13 +111,13 @@ End Function
 
 ```
 
-<span data-ttu-id="95648-123">Pisanie kodu do ręcznego przechodzenia dokumentu XML w celu wykonania tego zadania byłoby znacznie trudniejsze.</span><span class="sxs-lookup"><span data-stu-id="95648-123">Writing code to manually traverse the XML document to perform this task would be far more challenging.</span></span>
+<span data-ttu-id="f0c16-123">Pisanie kodu do ręcznego przechodzenia dokumentu XML w celu wykonania tego zadania byłoby znacznie trudniejsze.</span><span class="sxs-lookup"><span data-stu-id="f0c16-123">Writing code to manually traverse the XML document to perform this task would be far more challenging.</span></span>
 
-<span data-ttu-id="95648-124">Korzystanie z języka XML nie jest jedynym elementem, który można wykonywać za pomocą dostawców LINQ.</span><span class="sxs-lookup"><span data-stu-id="95648-124">Interacting with XML isn’t the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="95648-125">[LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) to stosunkowo jednoskładnikowo-relacyjny obiekt mapowania (ORM) dla bazy danych serwera MSSQL.</span><span class="sxs-lookup"><span data-stu-id="95648-125">[Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="95648-126">Biblioteka [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) zapewnia wydajną przechodzenie dokumentów JSON za pośrednictwem LINQ.</span><span class="sxs-lookup"><span data-stu-id="95648-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="95648-127">Ponadto jeśli nie ma biblioteki, która robi to potrzebne, możesz również [napisać własnego dostawcę LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).</span><span class="sxs-lookup"><span data-stu-id="95648-127">Furthermore, if there isn’t a library which does what you need, you can also [write your own LINQ Provider](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
+<span data-ttu-id="f0c16-124">Korzystanie z języka XML nie jest jedynym elementem, który można wykonywać za pomocą dostawców LINQ.</span><span class="sxs-lookup"><span data-stu-id="f0c16-124">Interacting with XML isn’t the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="f0c16-125">[LINQ to SQL](../framework/data/adonet/sql/linq/index.md) to stosunkowo jednoskładnikowo-relacyjny obiekt mapowania (ORM) dla bazy danych serwera MSSQL.</span><span class="sxs-lookup"><span data-stu-id="f0c16-125">[Linq to SQL](../framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="f0c16-126">Biblioteka [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) zapewnia wydajną przechodzenie dokumentów JSON za pośrednictwem LINQ.</span><span class="sxs-lookup"><span data-stu-id="f0c16-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="f0c16-127">Ponadto jeśli nie ma biblioteki, która robi to potrzebne, możesz również [napisać własnego dostawcę LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).</span><span class="sxs-lookup"><span data-stu-id="f0c16-127">Furthermore, if there isn’t a library which does what you need, you can also [write your own LINQ Provider](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
 
-## <a name="why-use-the-query-syntax"></a><span data-ttu-id="95648-128">Dlaczego warto używać składni zapytania?</span><span class="sxs-lookup"><span data-stu-id="95648-128">Why Use the Query Syntax?</span></span>
+## <a name="why-use-the-query-syntax"></a><span data-ttu-id="f0c16-128">Dlaczego warto używać składni zapytania?</span><span class="sxs-lookup"><span data-stu-id="f0c16-128">Why Use the Query Syntax?</span></span>
 
-<span data-ttu-id="95648-129">Jest to pytanie, które często się pojawia.</span><span class="sxs-lookup"><span data-stu-id="95648-129">This is a question which often comes up.</span></span> <span data-ttu-id="95648-130">Następnie,</span><span class="sxs-lookup"><span data-stu-id="95648-130">After all, this,</span></span>
+<span data-ttu-id="f0c16-129">Jest to pytanie, które często się pojawia.</span><span class="sxs-lookup"><span data-stu-id="f0c16-129">This is a question which often comes up.</span></span> <span data-ttu-id="f0c16-130">Następnie,</span><span class="sxs-lookup"><span data-stu-id="f0c16-130">After all, this,</span></span>
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
@@ -127,7 +127,7 @@ var filteredItems = myItems.Where(item => item.Foo);
 Dim filteredItems = myItems.Where(Function(item) item.Foo)
 ```
 
-<span data-ttu-id="95648-131">jest znacznie bardziej zwięzły niż:</span><span class="sxs-lookup"><span data-stu-id="95648-131">is a lot more concise than this:</span></span>
+<span data-ttu-id="f0c16-131">jest znacznie bardziej zwięzły niż:</span><span class="sxs-lookup"><span data-stu-id="f0c16-131">is a lot more concise than this:</span></span>
 
 ```csharp
 var filteredItems = from item in myItems
@@ -141,31 +141,31 @@ Dim filteredItems = From item In myItems
                     Select item
 ```
 
-<span data-ttu-id="95648-132">Czy składnia interfejsu API jest bardziej zwięzła, aby wykonać składnię zapytania?</span><span class="sxs-lookup"><span data-stu-id="95648-132">Isn’t the API syntax just a more concise way to do the query syntax?</span></span>
+<span data-ttu-id="f0c16-132">Czy składnia interfejsu API jest bardziej zwięzła, aby wykonać składnię zapytania?</span><span class="sxs-lookup"><span data-stu-id="f0c16-132">Isn’t the API syntax just a more concise way to do the query syntax?</span></span>
 
-<span data-ttu-id="95648-133">Nie.</span><span class="sxs-lookup"><span data-stu-id="95648-133">No.</span></span> <span data-ttu-id="95648-134">Składnia zapytania umożliwia użycie klauzuli **Let** , która umożliwia wprowadzenie i powiązanie zmiennej w zakresie wyrażenia, przy użyciu jej w kolejnych fragmentach wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="95648-134">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="95648-135">Odtwarzanie tego samego kodu tylko przy użyciu składni interfejsu API można wykonać, ale najprawdopodobniej prowadzi to do kodu, który jest trudno odczytać.</span><span class="sxs-lookup"><span data-stu-id="95648-135">Reproducing the same code with only the API syntax can be done, but will most likely lead to code which is hard to read.</span></span>
+<span data-ttu-id="f0c16-133">Nie.</span><span class="sxs-lookup"><span data-stu-id="f0c16-133">No.</span></span> <span data-ttu-id="f0c16-134">Składnia zapytania umożliwia użycie klauzuli **Let** , która umożliwia wprowadzenie i powiązanie zmiennej w zakresie wyrażenia, przy użyciu jej w kolejnych fragmentach wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="f0c16-134">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="f0c16-135">Odtwarzanie tego samego kodu tylko przy użyciu składni interfejsu API można wykonać, ale najprawdopodobniej prowadzi to do kodu, który jest trudno odczytać.</span><span class="sxs-lookup"><span data-stu-id="f0c16-135">Reproducing the same code with only the API syntax can be done, but will most likely lead to code which is hard to read.</span></span>
 
-<span data-ttu-id="95648-136">W związku z tym begs pytanie, **czy wystarczy użyć składni zapytania?**</span><span class="sxs-lookup"><span data-stu-id="95648-136">So this begs the question, **should you just use the query syntax?**</span></span>
+<span data-ttu-id="f0c16-136">W związku z tym begs pytanie, **czy wystarczy użyć składni zapytania?**</span><span class="sxs-lookup"><span data-stu-id="f0c16-136">So this begs the question, **should you just use the query syntax?**</span></span>
 
-<span data-ttu-id="95648-137">Odpowiedź na to pytanie ma **wartość tak** , jeśli...</span><span class="sxs-lookup"><span data-stu-id="95648-137">The answer to this question is **yes** if...</span></span>
+<span data-ttu-id="f0c16-137">Odpowiedź na to pytanie ma **wartość tak** , jeśli...</span><span class="sxs-lookup"><span data-stu-id="f0c16-137">The answer to this question is **yes** if...</span></span>
 
-* <span data-ttu-id="95648-138">Istniejąca baza kodu używa już składni zapytania</span><span class="sxs-lookup"><span data-stu-id="95648-138">Your existing codebase already uses the query syntax</span></span>
-* <span data-ttu-id="95648-139">Należy określić zakres zmiennych w zapytaniach ze względu na złożoność</span><span class="sxs-lookup"><span data-stu-id="95648-139">You need to scope variables within your queries due to complexity</span></span>
-* <span data-ttu-id="95648-140">Wolisz składnię zapytania i nie będzie ona przeszkadzać w kodzie bazowej</span><span class="sxs-lookup"><span data-stu-id="95648-140">You prefer the query syntax and it won’t distract from your codebase</span></span>
+* <span data-ttu-id="f0c16-138">Istniejąca baza kodu używa już składni zapytania</span><span class="sxs-lookup"><span data-stu-id="f0c16-138">Your existing codebase already uses the query syntax</span></span>
+* <span data-ttu-id="f0c16-139">Należy określić zakres zmiennych w zapytaniach ze względu na złożoność</span><span class="sxs-lookup"><span data-stu-id="f0c16-139">You need to scope variables within your queries due to complexity</span></span>
+* <span data-ttu-id="f0c16-140">Wolisz składnię zapytania i nie będzie ona przeszkadzać w kodzie bazowej</span><span class="sxs-lookup"><span data-stu-id="f0c16-140">You prefer the query syntax and it won’t distract from your codebase</span></span>
 
-<span data-ttu-id="95648-141">Odpowiedź na to pytanie **nie** dotyczy, jeśli...</span><span class="sxs-lookup"><span data-stu-id="95648-141">The answer to this question is **no** if...</span></span>
+<span data-ttu-id="f0c16-141">Odpowiedź na to pytanie **nie** dotyczy, jeśli...</span><span class="sxs-lookup"><span data-stu-id="f0c16-141">The answer to this question is **no** if...</span></span>
 
-* <span data-ttu-id="95648-142">Istniejąca baza kodu używa już składni interfejsu API</span><span class="sxs-lookup"><span data-stu-id="95648-142">Your existing codebase already uses the API syntax</span></span>
-* <span data-ttu-id="95648-143">Nie ma potrzeby określania zakresu zmiennych w zapytaniach</span><span class="sxs-lookup"><span data-stu-id="95648-143">You have no need to scope variables within your queries</span></span>
-* <span data-ttu-id="95648-144">Wolisz składnię interfejsu API i nie będzie ona przeszkadzać w kodzie bazowym</span><span class="sxs-lookup"><span data-stu-id="95648-144">You prefer the API syntax and it won’t distract from your codebase</span></span>
+* <span data-ttu-id="f0c16-142">Istniejąca baza kodu używa już składni interfejsu API</span><span class="sxs-lookup"><span data-stu-id="f0c16-142">Your existing codebase already uses the API syntax</span></span>
+* <span data-ttu-id="f0c16-143">Nie ma potrzeby określania zakresu zmiennych w zapytaniach</span><span class="sxs-lookup"><span data-stu-id="f0c16-143">You have no need to scope variables within your queries</span></span>
+* <span data-ttu-id="f0c16-144">Wolisz składnię interfejsu API i nie będzie ona przeszkadzać w kodzie bazowym</span><span class="sxs-lookup"><span data-stu-id="f0c16-144">You prefer the API syntax and it won’t distract from your codebase</span></span>
 
-## <a name="essential-samples"></a><span data-ttu-id="95648-145">Najważniejsze przykłady</span><span class="sxs-lookup"><span data-stu-id="95648-145">Essential Samples</span></span>
+## <a name="essential-samples"></a><span data-ttu-id="f0c16-145">Najważniejsze przykłady</span><span class="sxs-lookup"><span data-stu-id="f0c16-145">Essential Samples</span></span>
 
-<span data-ttu-id="95648-146">Aby zapoznać się z prawdziwie obszerną listą przykładów LINQ, zobacz [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/).</span><span class="sxs-lookup"><span data-stu-id="95648-146">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/).</span></span>
+<span data-ttu-id="f0c16-146">Aby zapoznać się z prawdziwie obszerną listą przykładów LINQ, zobacz [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/).</span><span class="sxs-lookup"><span data-stu-id="f0c16-146">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/).</span></span>
 
-<span data-ttu-id="95648-147">Poniżej znajduje się szybka Prezentacja niektórych najważniejszych fragmentów LINQ.</span><span class="sxs-lookup"><span data-stu-id="95648-147">The following is a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="95648-148">Ta funkcja nie jest kompletna, ponieważ składnik LINQ zapewnia znacznie większą funkcjonalność niż to, co zostało przedstawione w tym miejscu.</span><span class="sxs-lookup"><span data-stu-id="95648-148">This is in no way comprehensive, as LINQ provides significantly more functionality than what is showcased here.</span></span>
+<span data-ttu-id="f0c16-147">Poniżej znajduje się szybka Prezentacja niektórych najważniejszych fragmentów LINQ.</span><span class="sxs-lookup"><span data-stu-id="f0c16-147">The following is a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="f0c16-148">Ta funkcja nie jest kompletna, ponieważ składnik LINQ zapewnia znacznie większą funkcjonalność niż to, co zostało przedstawione w tym miejscu.</span><span class="sxs-lookup"><span data-stu-id="f0c16-148">This is in no way comprehensive, as LINQ provides significantly more functionality than what is showcased here.</span></span>
 
-* <span data-ttu-id="95648-149">Chleb i masło- `Where`, `Select`i `Aggregate`:</span><span class="sxs-lookup"><span data-stu-id="95648-149">The bread and butter - `Where`, `Select`, and `Aggregate`:</span></span>
+* <span data-ttu-id="f0c16-149">Chleb i masło- `Where` , `Select` i `Aggregate` :</span><span class="sxs-lookup"><span data-stu-id="f0c16-149">The bread and butter - `Where`, `Select`, and `Aggregate`:</span></span>
 
 ```csharp
 // Filtering a list.
@@ -209,7 +209,7 @@ Dim seed As Integer = 0
 Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
 ```
 
-* <span data-ttu-id="95648-150">Spłaszczanie listy list:</span><span class="sxs-lookup"><span data-stu-id="95648-150">Flattening a list of lists:</span></span>
+* <span data-ttu-id="f0c16-150">Spłaszczanie listy list:</span><span class="sxs-lookup"><span data-stu-id="f0c16-150">Flattening a list of lists:</span></span>
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
@@ -221,7 +221,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
 ```
 
-* <span data-ttu-id="95648-151">Złożenie między dwoma zestawami (z niestandardowym komparatorem):</span><span class="sxs-lookup"><span data-stu-id="95648-151">Union between two sets (with custom comparator):</span></span>
+* <span data-ttu-id="f0c16-151">Złożenie między dwoma zestawami (z niestandardowym komparatorem):</span><span class="sxs-lookup"><span data-stu-id="f0c16-151">Union between two sets (with custom comparator):</span></span>
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -282,7 +282,7 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-* <span data-ttu-id="95648-152">Część wspólna między dwoma zestawami:</span><span class="sxs-lookup"><span data-stu-id="95648-152">Intersection between two sets:</span></span>
+* <span data-ttu-id="f0c16-152">Część wspólna między dwoma zestawami:</span><span class="sxs-lookup"><span data-stu-id="f0c16-152">Intersection between two sets:</span></span>
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -296,7 +296,7 @@ Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      New VolunteerTimeComparer())
 ```
 
-* <span data-ttu-id="95648-153">Zamówienie</span><span class="sxs-lookup"><span data-stu-id="95648-153">Ordering:</span></span>
+* <span data-ttu-id="f0c16-153">Zamówienie</span><span class="sxs-lookup"><span data-stu-id="f0c16-153">Ordering:</span></span>
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -312,7 +312,7 @@ Dim results = DirectionsProcessor.GetDirections(start, end).
                 ThenBy(Function(direction) direction.EstimatedTime)
 ```
 
-* <span data-ttu-id="95648-154">Na koniec bardziej zaawansowaną próbkę: określenie, czy wartości właściwości dwóch wystąpień tego samego typu są równe (zapożyczone i zmodyfikowane z [tego StackOverflow post](https://stackoverflow.com/a/844855)):</span><span class="sxs-lookup"><span data-stu-id="95648-154">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
+* <span data-ttu-id="f0c16-154">Na koniec bardziej zaawansowaną próbkę: określenie, czy wartości właściwości dwóch wystąpień tego samego typu są równe (zapożyczone i zmodyfikowane z [tego StackOverflow post](https://stackoverflow.com/a/844855)):</span><span class="sxs-lookup"><span data-stu-id="f0c16-154">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -350,11 +350,11 @@ Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As 
 End Function
 ```
 
-## <a name="plinq"></a><span data-ttu-id="95648-155">PLINQ</span><span class="sxs-lookup"><span data-stu-id="95648-155">PLINQ</span></span>
+## <a name="plinq"></a><span data-ttu-id="f0c16-155">PLINQ</span><span class="sxs-lookup"><span data-stu-id="f0c16-155">PLINQ</span></span>
 
-<span data-ttu-id="95648-156">PLINQ lub Parallel LINQ jest aparatem wykonywania równoległym dla wyrażeń LINQ.</span><span class="sxs-lookup"><span data-stu-id="95648-156">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="95648-157">Inaczej mówiąc, regularne wyrażenie LINQ może być równolegle równoległe do dowolnej liczby wątków.</span><span class="sxs-lookup"><span data-stu-id="95648-157">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="95648-158">Jest to realizowane za pośrednictwem wywołania `AsParallel()` poprzedzającego wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="95648-158">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
+<span data-ttu-id="f0c16-156">PLINQ lub Parallel LINQ jest aparatem wykonywania równoległym dla wyrażeń LINQ.</span><span class="sxs-lookup"><span data-stu-id="f0c16-156">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="f0c16-157">Inaczej mówiąc, regularne wyrażenie LINQ może być równolegle równoległe do dowolnej liczby wątków.</span><span class="sxs-lookup"><span data-stu-id="f0c16-157">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="f0c16-158">Jest to realizowane za pośrednictwem wywołania `AsParallel()` poprzedzającego wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="f0c16-158">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
 
-<span data-ttu-id="95648-159">Rozważ następujące źródła:</span><span class="sxs-lookup"><span data-stu-id="95648-159">Consider the following:</span></span>
+<span data-ttu-id="f0c16-159">Rozważ następujące źródła:</span><span class="sxs-lookup"><span data-stu-id="f0c16-159">Consider the following:</span></span>
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -384,16 +384,16 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-<span data-ttu-id="95648-160">Ten kod podzieli `facebookUsers` się na poszczególne wątki systemu w miarę potrzeb, sumuje całkowitą liczbę polubień w każdym wątku równolegle, sumuje wyniki obliczone przez poszczególne wątki i projektu, które powodują powstanie ciągu znaków.</span><span class="sxs-lookup"><span data-stu-id="95648-160">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
+<span data-ttu-id="f0c16-160">Ten kod podzieli się na `facebookUsers` poszczególne wątki systemu w miarę potrzeb, sumuje całkowitą liczbę polubień w każdym wątku równolegle, sumuje wyniki obliczone przez poszczególne wątki i projektu, które powodują powstanie ciągu znaków.</span><span class="sxs-lookup"><span data-stu-id="f0c16-160">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
 
-<span data-ttu-id="95648-161">W formularzu diagramu:</span><span class="sxs-lookup"><span data-stu-id="95648-161">In diagram form:</span></span>
+<span data-ttu-id="f0c16-161">W formularzu diagramu:</span><span class="sxs-lookup"><span data-stu-id="f0c16-161">In diagram form:</span></span>
 
 ![Diagram PLINQ](./media/using-linq/plinq-diagram.png)
 
-<span data-ttu-id="95648-163">Działania równoległego zadania związane z PROCESORem, które można łatwo wyrazić za pośrednictwem LINQ (innymi słowy, są czystymi funkcjami i nie mają efektów ubocznych) są doskonałym kandydatem do PLINQ.</span><span class="sxs-lookup"><span data-stu-id="95648-163">Parallelizable CPU-bound jobs which can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="95648-164">W przypadku zadań _, które mają_ efekt uboczny, należy rozważyć użycie [biblioteki zadań równoległych](./parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="95648-164">For jobs which _do_ have a side effect, consider using the [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).</span></span>
+<span data-ttu-id="f0c16-163">Działania równoległego zadania związane z PROCESORem, które można łatwo wyrazić za pośrednictwem LINQ (innymi słowy, są czystymi funkcjami i nie mają efektów ubocznych) są doskonałym kandydatem do PLINQ.</span><span class="sxs-lookup"><span data-stu-id="f0c16-163">Parallelizable CPU-bound jobs which can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="f0c16-164">W przypadku zadań _, które mają_ efekt uboczny, należy rozważyć użycie [biblioteki zadań równoległych](./parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="f0c16-164">For jobs which _do_ have a side effect, consider using the [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="95648-165">Dalsze zasoby:</span><span class="sxs-lookup"><span data-stu-id="95648-165">Further Resources:</span></span>
+## <a name="further-resources"></a><span data-ttu-id="f0c16-165">Dalsze zasoby:</span><span class="sxs-lookup"><span data-stu-id="f0c16-165">Further Resources:</span></span>
 
-* [<span data-ttu-id="95648-166">Przykłady dla LINQ 101</span><span class="sxs-lookup"><span data-stu-id="95648-166">101 LINQ Samples</span></span>](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
-* <span data-ttu-id="95648-167">[LINQPad](https://www.linqpad.net/), środowisko plac zabaw i aparat zapytań bazy danych dla języka C#/F #/Visual Basic</span><span class="sxs-lookup"><span data-stu-id="95648-167">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/Visual Basic</span></span>
-* <span data-ttu-id="95648-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)— książka elektroniczna do uczenia się, jak jest implementowane LINQ-to-Objects</span><span class="sxs-lookup"><span data-stu-id="95648-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>
+* [<span data-ttu-id="f0c16-166">Przykłady dla LINQ 101</span><span class="sxs-lookup"><span data-stu-id="f0c16-166">101 LINQ Samples</span></span>](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* <span data-ttu-id="f0c16-167">[LINQPad](https://www.linqpad.net/), środowisko plac zabaw i aparat zapytań bazy danych dla języka C#/F #/Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f0c16-167">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/Visual Basic</span></span>
+* <span data-ttu-id="f0c16-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)— książka elektroniczna do uczenia się, jak jest implementowane LINQ-to-Objects</span><span class="sxs-lookup"><span data-stu-id="f0c16-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>

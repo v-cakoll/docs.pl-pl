@@ -3,12 +3,12 @@ title: XML Document Object Model (DOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dbc53d713d77cfdc9d0dbb8a201f2b5627a76921
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709962"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283393"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Document Object Model (DOM)
 
@@ -33,7 +33,7 @@ Klasa XML Document Object Model (DOM) to reprezentacja dokumentu XML w pamięci.
 
 Na poniższej ilustracji przedstawiono sposób, w jaki pamięć jest strukturalna, gdy dane XML są odczytywane w strukturze modelu DOM.
 
-![Struktura dokumentu XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Struktura dokumentu XML
+![Struktura dokumentu XML](media/xml-to-domtree.gif "XML_To_DOMTree") Struktura dokumentu XML
 
 W strukturze dokumentu XML każdy okrąg na tej ilustracji reprezentuje węzeł, który jest nazywany obiektem **XmlNode** . Obiekt **XmlNode** jest obiektem podstawowym w drzewie dom. Klasa **XmlDocument** , która rozszerza element **XmlNode**, obsługuje metody wykonywania operacji na dokumencie jako całość (na przykład ładując go do pamięci lub zapisując plik XML do pliku. Ponadto Metoda **XmlDocument** umożliwia wyświetlanie węzłów w całym dokumencie XML i manipulowanie nimi. Zarówno element **XmlNode** , jak i **XmlDocument** mają udoskonalenia wydajności i użyteczności oraz mają metody i właściwości, aby:
 
@@ -64,17 +64,17 @@ Obiekty **węzłów** mają zestaw metod i właściwości, a także podstawowe i
 
 - Węzły, które znajdują się na tym samym poziomie, reprezentowane na diagramie przez węzły **książka** i **pubinfo** , są równorzędne.
 
-Jedną z cech modelu DOM jest sposób obsługi atrybutów. Atrybuty nie są węzłami, które są częścią relacji nadrzędnej, podrzędnej i równorzędnej. Atrybuty są uważane za właściwość węzła elementu i składają się z nazwy i pary wartości. Na przykład, jeśli masz `format="dollar`dane XML zawierające "skojarzone z elementem `price`, słowo `format` jest nazwą, a wartość `format` atrybutu jest. `dollar` Aby pobrać `format="dollar"` atrybut węzła **Cena** , należy wywołać metodę **GetAttribute** , gdy kursor znajduje się w węźle `price` elementu. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów w modelu dom](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
+Jedną z cech modelu DOM jest sposób obsługi atrybutów. Atrybuty nie są węzłami, które są częścią relacji nadrzędnej, podrzędnej i równorzędnej. Atrybuty są uważane za właściwość węzła elementu i składają się z nazwy i pary wartości. Na przykład, jeśli masz dane XML zawierające `format="dollar` "skojarzone z elementem `price` , słowo `format` jest nazwą, a wartość `format` atrybutu jest `dollar` . Aby pobrać `format="dollar"` atrybut węzła **Cena** , należy wywołać metodę **GetAttribute** , gdy kursor znajduje się w `price` węźle elementu. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów w modelu dom](accessing-attributes-in-the-dom.md).
 
 Ponieważ kod XML jest odczytywany w pamięci, tworzone są węzły. Jednak nie wszystkie węzły są tego samego typu. Element w kodzie XML ma różne reguły i składnię niż instrukcja przetwarzania. W związku z tym, jako że odczytywane są różne dane, do każdego węzła jest przypisany typ węzła. Ten typ węzła określa cechy i funkcje węzła.
 
-Aby uzyskać więcej informacji na temat typów węzłów generowanych w pamięci, zobacz [typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md). Aby uzyskać więcej informacji na temat obiektów utworzonych w drzewie węzłów, zobacz [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).
+Aby uzyskać więcej informacji na temat typów węzłów generowanych w pamięci, zobacz [typy węzłów XML](types-of-xml-nodes.md). Aby uzyskać więcej informacji na temat obiektów utworzonych w drzewie węzłów, zobacz [Mapowanie hierarchii obiektów na dane XML](mapping-the-object-hierarchy-to-xml-data.md).
 
-Firma Microsoft rozszerzyła interfejsy API, które są dostępne w organizacja World Wide Web Consortium (W3C) DOM Level 1 i 2, aby ułatwić pracę z dokumentem XML. W pełni obsługujące standardy W3C, dodatkowe klasy, metody i właściwości dodają funkcje wykraczające poza to, co można zrobić za pomocą W3C XML DOM. Nowe klasy umożliwiają dostęp do danych relacyjnych, dając metody synchronizowania z danymi ADO.NET, jednocześnie udostępniając dane w formacie XML. Aby uzyskać więcej informacji, zobacz [synchronizowanie zestawu danych z XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).
+Firma Microsoft rozszerzyła interfejsy API, które są dostępne w organizacja World Wide Web Consortium (W3C) DOM Level 1 i 2, aby ułatwić pracę z dokumentem XML. W pełni obsługujące standardy W3C, dodatkowe klasy, metody i właściwości dodają funkcje wykraczające poza to, co można zrobić za pomocą W3C XML DOM. Nowe klasy umożliwiają dostęp do danych relacyjnych, dając metody synchronizowania z danymi ADO.NET, jednocześnie udostępniając dane w formacie XML. Aby uzyskać więcej informacji, zobacz [synchronizowanie zestawu danych z XmlDataDocument](../../../framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).
 
 DOM jest najbardziej przydatny do odczytywania danych XML w pamięci, aby zmienić jej strukturę, dodać lub usunąć węzły lub zmodyfikować dane przechowywane przez węzeł tak jak w tekście zawartym w elemencie. Jednak inne klasy są dostępne szybciej niż DOM w innych scenariuszach. Aby uzyskać szybki, niebuforowany dostęp do strumienia XML tylko do przodu, użyj elementu **XmlReader** i **XmlWriter**. Jeśli potrzebujesz dostępu losowego z modelem kursorów i **XPath**, użyj klasy **XPathNavigator** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
-- [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+- [Typy węzłów XML](types-of-xml-nodes.md)
+- [Mapowanie hierarchii obiektów na dane XML](mapping-the-object-hierarchy-to-xml-data.md)

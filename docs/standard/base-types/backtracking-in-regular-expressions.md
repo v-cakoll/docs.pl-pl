@@ -1,6 +1,6 @@
 ---
-title: Wycofywanie w wyrażeniach regularnych platformy .NET
-description: Dowiedz się, jak kontrolować wycofywanie w dopasowywaniu wzorców wyrażeń regularnych.
+title: Wycofywanie w wyrażeniach regularnych programu .NET
+description: Dowiedz się, jak kontrolować wycofywanie we wzorcu wyrażenia regularnego.
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,48 +17,48 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243235"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277807"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
-Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacji,](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)a aparat wyrażeń regularnych powraca do poprzedniego zapisanego stanu, aby kontynuować wyszukiwanie dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
+Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](quantifiers-in-regular-expressions.md) lub [konstrukcje warunkowe](alternation-constructs-in-regular-expressions.md), a aparat wyrażeń regularnych powraca do poprzedniego zapisanego stanu, aby kontynuować wyszukiwanie zgodności. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
   
 > [!NOTE]
-> Ogólnie rzecz biorąc, aparat niedeterministycznych automatów skończonych (NFA), takich jak aparat wyrażeń regularnych .NET, nakłada odpowiedzialność za tworzenie wydajnych, szybkich wyrażeń regularnych na dewelopera.  
+> Ogólnie rzecz biorąc, Niedeterministyczny usługi Automation (NFA), taki jak aparat wyrażeń regularnych programu .NET, jest odpowiedzialny za efektywne, szybkie wyrażenia regularne na deweloperach.  
 
 ## <a name="linear-comparison-without-backtracking"></a>Porównanie liniowe bez wycofywania  
  Jeśli wzorzec wyrażenia regularnego nie ma opcjonalnych kwantyfikatorów ani konstrukcji zmiany, aparat wyrażeń regularnych wykonuje go liniowo. Oznacza to, że gdy aparat wyrażeń regularnych znajdzie pierwszy element języka ze wzorca w tekście w ciągu wejściowym, próbuje dopasować następny element języka ze wzorca do następnego znaku lub grupy znaków w ciągu wejściowym. Ten proces jest kontynuowany do czasu, aż dopasowywanie zakończy się pomyślnie lub niepomyślnie. W każdym przypadku aparat wyrażeń regularnych przesuwa się w danej chwili o jeden znak do przodu w ciągu wejściowym.  
   
- Poniższy przykład stanowi ilustrację. Wyrażenie regularne `e{2}\w\b` wyszukuje dwa wystąpienia litery "e", po których następuje dowolny znak wyrazu, po którym następuje granica słowa.  
+ Poniższy przykład stanowi ilustrację. Wyrażenie regularne `e{2}\w\b` szuka dwóch wystąpień litery "e", po którym następuje dowolny znak słowa, po którym następuje granica słowa.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking1.vb#1)]  
   
- Chociaż to wyrażenie regularne zawiera `{2}`kwantyfikator, jest oceniane w sposób liniowy. Aparat wyrażeń regularnych nie `{2}` cofa się, ponieważ nie jest opcjonalnym kwantyfikatorem; określa dokładną liczbę, a nie zmienną liczbę razy, że poprzednie podwyrażenie musi być zgodne. W wyniku tego aparat wyrażeń regularnych próbuje dopasować wzorzec wyrażenia regularnego do ciągu wejściowego, tak jak pokazano w poniższej tabeli.  
+ Chociaż to wyrażenie regularne zawiera kwantyfikator `{2}` , jest oceniane w sposób liniowy. Aparat wyrażeń regularnych nie jest nawrotu, ponieważ `{2}` nie jest to opcjonalny kwantyfikator; określa dokładną liczbę, a nie zmienną liczbę przypadków, gdy poprzednie Podwyrażenie musi być zgodne. W wyniku tego aparat wyrażeń regularnych próbuje dopasować wzorzec wyrażenia regularnego do ciągu wejściowego, tak jak pokazano w poniższej tabeli.  
   
 |Operacja|Pozycja we wzorcu|Pozycja w ciągu|Wynik|  
 |---------------|-------------------------|------------------------|------------|  
 |1|e|„needing a reed” (indeks 0)|Brak dopasowania.|  
 |2|e|„eeding a reed” (indeks 1)|Możliwe dopasowanie.|  
-|3|E{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
+|3|adres{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
 |4|\w|„ding a reed” (indeks 3)|Możliwe dopasowanie.|  
 |5|\b|„ing a reed” (indeks 4)|Możliwe dopasowanie nie powiodło się.|  
 |6|e|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
-|7|E{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
+|7|adres{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
 |8|e|„ding a reed” (indeks 3)|Dopasowanie nie powiodło się.|  
 |9|e|„ing a reed” (indeks 4)|Brak dopasowania.|  
 |10|e|„ng a reed” (indeks 5)|Brak dopasowania.|  
 |11|e|„g a reed” (indeks 6)|Brak dopasowania.|  
-|12|e|" kapituła" (indeks 7)|Brak dopasowania.|  
-|13|e|"kapituła" (indeks 8)|Brak dopasowania.|  
-|14|e|" kapituła" (indeks 9)|Brak dopasowania.|  
-|15|e|"kapituła" (indeks 10)|Brak dopasowania.|  
+|12|e|"a Reed" (indeks 7)|Brak dopasowania.|  
+|13|e|"a Reed" (indeks 8)|Brak dopasowania.|  
+|14|e|"Reed" (indeks 9)|Brak dopasowania.|  
+|15|e|"Reed" (indeks 10)|Brak dopasowania.|  
 |16|e|„eed” (indeks 11)|Możliwe dopasowanie.|  
-|17|E{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
+|17|adres{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
 |18|\w|„d” (indeks 13)|Możliwe dopasowanie.|  
 |19|\b|„” (indeks 14)|Dopasowanie.|  
   
@@ -67,14 +67,14 @@ Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [k
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Wycofywanie z użyciem opcjonalnych kwantyfikatorów lub konstrukcji zmiany  
  Gdy wyrażenie regularne zawiera opcjonalne kwantyfikatory lub konstrukcje zmiany, obliczenia wykonywane na ciągu wejściowym nie są już liniowe. Dopasowywanie wzorca za pomocą aparatu NFA jest oparte na elementach języka w wyrażeniu regularnym, a nie na znakach, które mają zostać dopasowane w ciągu wejściowym. Dlatego aparat wyrażeń regularnych próbuje w pełni dopasować opcjonalne lub alternatywne podwyrażenia. Kiedy aparat wyrażeń regularnych przechodzi do następnego elementu języka w podwyrażeniu i wykonanie dopasowania nie jest możliwe, może porzucić część pomyślnie wykonanego dopasowania i powrócić do wcześniejszego zapisanego stanu dopasowywania wyrażenia regularnego jako całości w ciągu wejściowym. Ten proces wracania do poprzednio zapisanego stanu w celu znalezienia dopasowania jest nazywany wycofywaniem.  
   
- Rozważmy na przykład wzorzec `.*(es)`wyrażenia regularnego, który pasuje do znaków "es" i wszystkich znaków, które go poprzedzają. W poniższym przykładzie pokazano, że jeśli ciągiem wejściowym jest ciąg „Essential services are provided by regular expressions.”, wzorzec dopasowuje cały ciąg aż do znaków „es” w wyrazie „expressions” włącznie.  
+ Rozważmy na przykład wzorzec wyrażenia regularnego `.*(es)` , który dopasowuje znaki "es" i wszystkie znaki poprzedzające ją. W poniższym przykładzie pokazano, że jeśli ciągiem wejściowym jest ciąg „Essential services are provided by regular expressions.”, wzorzec dopasowuje cały ciąg aż do znaków „es” w wyrazie „expressions” włącznie.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking2.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking2.vb#2)]  
   
  W tym celu aparat wyrażeń regularnych używa wycofywania, tak jak opisano poniżej:  
   
-- Pasuje `.*` do (który pasuje do zera, jednego lub więcej wystąpień dowolnego znaku) z całym ciągiem wejściowym.  
+- Dopasowuje się do `.*` (który odpowiada zero, jeden lub więcej wystąpień dowolnego znaku) z całym ciągiem wejściowym.  
   
 - Podejmuje próbę dopasowania znaku „e” we wzorcu wyrażenia regularnego. Jednak ciąg wejściowy nie zawiera już znaków, z którymi można by wykonać porównanie.  
   
@@ -87,39 +87,39 @@ Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [k
  Gdy jest używane wycofywanie, wykonanie dopasowania wzorca wyrażenia regularnego do ciągu wejściowego składającego się z 55 znaków wymaga wykonania 67 operacji porównania. Ogólnie, jeśli wzorzec wyrażenia regularnego zawiera jedną konstrukcję zmiany lub jeden opcjonalny kwantyfikator, liczba operacji porównania wymaganych do wykonania dopasowania wzorca jest ponad dwa razy większa niż liczba znaków w ciągu wejściowym.
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Wycofywanie z użyciem zagnieżdżonych opcjonalnych kwantyfikatorów  
- Liczba operacji porównania wymaganych do wykonania dopasowania wzorca wyrażenia regularnego rośnie wykładniczo, gdy wzorzec zawiera dużą liczbę konstrukcji zmiany, jeśli zawiera zagnieżdżone konstrukcje zmiany lub, co występuje najczęściej, zawiera zagnieżdżone kwantyfikatory opcjonalne. Na przykład wzorzec `^(a+)+$` wyrażenia regularnego jest przeznaczony do dopasowania pełnego ciągu, który zawiera jeden lub więcej znaków "a". W przykładzie podano dwa ciągi wejściowe o identycznej długości, ale tylko pierwszy ciąg pasuje do wzorca. Klasa <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> jest używana do określenia, jak długo trwa operacja dopasowania.  
+ Liczba operacji porównania wymaganych do wykonania dopasowania wzorca wyrażenia regularnego rośnie wykładniczo, gdy wzorzec zawiera dużą liczbę konstrukcji zmiany, jeśli zawiera zagnieżdżone konstrukcje zmiany lub, co występuje najczęściej, zawiera zagnieżdżone kwantyfikatory opcjonalne. Na przykład wzorzec wyrażenia regularnego `^(a+)+$` jest zgodny z kompletnym ciągiem zawierającym jeden lub więcej znaków "a". W przykładzie podano dwa ciągi wejściowe o identycznej długości, ale tylko pierwszy ciąg pasuje do wzorca. <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType>Klasa jest używana do określenia, jak długo trwa operacja dopasowania.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking3.vb#3)]  
   
  Jak wynika z danych wyjściowych z przykładu, aparat wyrażeń regularnych potrzebuje prawie dwa razy więcej czasu na ustalenie, że ciąg wejściowy nie pasuje do wzorca, niż na zidentyfikowanie pasującego ciągu. Jest to spowodowane tym, że niepowodzenie tworzenia dopasowania zawsze jest scenariuszem najgorszego przypadku. Aparat wyrażeń regularnych musi użyć wyrażenia regularnego, aby sprawdzić wszystkie możliwe ścieżki w danych, zanim będzie mógł uznać, że nie można wykonać dopasowania, a zagnieżdżone nawiasy powodują powstanie wielu dodatkowych ścieżek w danych. Aparat wyrażeń regularnych dochodzi do wniosku, że drugi ciąg nie pasuje do wzorca, wykonując następujące czynności:  
   
-- Sprawdza, czy był na początku ciągu, a następnie dopasowuje pierwsze pięć `a+`znaków w ciągu do wzorca . Następnie ustala, że w ciągu nie znajdują się dodatkowe grupy liter „a”. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga wykonania 9 porównań. Aparat wyrażeń regularnych zapisuje też informacje o stanie swoich dopasowań znaku „a” (dopasowanie 1), znaków „aa” (dopasowanie 2), znaków „aaa” (dopasowanie 3) i znaków „aaaa” (dopasowanie 4).  
+- Sprawdza, czy znajdował się na początku ciągu, a następnie dopasowuje pięć pierwszych znaków w ciągu ze wzorcem `a+` . Następnie ustala, że w ciągu nie znajdują się dodatkowe grupy liter „a”. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga wykonania 9 porównań. Aparat wyrażeń regularnych zapisuje też informacje o stanie swoich dopasowań znaku „a” (dopasowanie 1), znaków „aa” (dopasowanie 2), znaków „aaa” (dopasowanie 3) i znaków „aaaa” (dopasowanie 4).  
   
-- Aparat powraca do uprzednio zapisanego dopasowania 4. Ustala, że istnieje jeden dodatkowy znak „a”, który można przypisać do dodatkowej przechwyconej grupy. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga 4 porównań. Do tego momentu zostało wykonanych 13 porównań.  
+- Aparat powraca do uprzednio zapisanego dopasowania 4. Ustala, że istnieje jeden dodatkowy znak „a”, który można przypisać do dodatkowej przechwyconej grupy. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To dopasowanie nie powiodło się wymaga 4 porównań. Do tego momentu zostało wykonanych 13 porównań.  
   
-- Powraca do wcześniej zapisanego meczu 3. Ustala, że istnieją dwa dodatkowe znaki „a”, które można przypisać do dodatkowej przechwyconej grupy. Jednak test końca ciągu kończy się niepowodzeniem. Następnie aparat wraca do dopasowania 3 i próbuje dopasować dwa dodatkowe znaki „a” w dwóch dodatkowych przechwyconych grupach. Test końca ciągu nadal kończy się niepowodzeniem. Te nieudane dopasowania wymagały wykonania 12 porównań. Do tej pory przeprowadzono łącznie 25 porównań.  
+- Powraca do wcześniej zapisanego dopasowania 3. Ustala, że istnieją dwa dodatkowe znaki „a”, które można przypisać do dodatkowej przechwyconej grupy. Jednak test końca ciągu kończy się niepowodzeniem. Następnie aparat wraca do dopasowania 3 i próbuje dopasować dwa dodatkowe znaki „a” w dwóch dodatkowych przechwyconych grupach. Test końca ciągu nadal kończy się niepowodzeniem. Te nieudane dopasowania wymagały wykonania 12 porównań. Do tej pory zostały wykonane wszystkie 25 porównań.  
   
- Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Ze względu na zagnieżdżone kwantyfikatory, to porównanie jest O(2<sup>n</sup>) lub operacji wykładniczej, gdzie *n* jest liczbą znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego.
+ Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Ze względu na zagnieżdżone kwantyfikatory to porównanie jest operacją O (2<sup>n</sup>) lub wykładniczą, gdzie *n* to liczba znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego.
 
 ## <a name="controlling-backtracking"></a>Sterowanie wycofywaniem  
- Wycofywanie umożliwia tworzenie zaawansowanych, elastycznych wyrażeń regularnych. Jednak, tak jak pokazano w poprzedniej sekcji, ich zalety może przesłonić nieakceptowalnie niska wydajność. Aby zapobiec nadmiernemu wycofywaniu, należy zdefiniować limit czasu podczas <xref:System.Text.RegularExpressions.Regex> tworzenia wystąpienia obiektu lub wywołania statycznej metody dopasowywania wyrażeń regularnych. Ta czynność została omówiona w następnej sekcji. Ponadto .NET obsługuje trzy elementy języka wyrażenia regularnego, które ograniczają lub pomijają wycofywanie i które obsługują złożone wyrażenia regularne z niewielką lub żadną karą wydajności: grupy [atomowe, potwierdzenia spojrzenia](#lookbehind-assertions) [i potwierdzenia wyprzedzające.](#lookahead-assertions) [atomic groups](#atomic-groups) Aby uzyskać więcej informacji na temat każdego elementu języka, zobacz [Grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Wycofywanie umożliwia tworzenie zaawansowanych, elastycznych wyrażeń regularnych. Jednak, tak jak pokazano w poprzedniej sekcji, ich zalety może przesłonić nieakceptowalnie niska wydajność. Aby zapobiec nadmiernemu śledzeniu, należy zdefiniować interwał limitu czasu podczas tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu lub wywołania statycznej metody dopasowania wyrażenia regularnego. Ta czynność została omówiona w następnej sekcji. Ponadto platforma .NET obsługuje trzy elementy języka wyrażeń regularnych, które ograniczają lub pomijają funkcję wycofywania oraz obsługują złożone wyrażenia regularne z małą ilością lub brakiem wydajności: [grupy niepodzielne](#atomic-groups), [potwierdzenia asercja wsteczna](#lookbehind-assertions)i [potwierdzenia naprzód](#lookahead-assertions). Aby uzyskać więcej informacji na temat każdego elementu języka, zobacz [Grouping konstrukcjes](grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definiowanie interwału limitu czasu  
- Począwszy od .NET Framework 4.5, można ustawić wartość przesunięcia czasu, który reprezentuje najdłuższy interwał aparat wyrażeń regularnych będzie wyszukiwać pojedyncze dopasowanie, zanim porzuci próbę i zgłasza <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątek. Należy określić przedział limitów czasu, podając <xref:System.TimeSpan> wartość do <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> konstruktora dla wyrażeń regularnych na przykład. Ponadto każda metoda dopasowywania wzorca statycznego ma przeciążenie z parametrem, <xref:System.TimeSpan> który pozwala określić wartość przekroczeń czasu. Domyślnie jest ustawiony limit czasu, <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> a aparat wyrażeń regularnych nie przekracza limit czasu.  
+ Począwszy od .NET Framework 4,5, można ustawić wartość limitu czasu reprezentującą najdłuższy interwał, przez który aparat wyrażeń regularnych będzie wyszukiwać pojedyncze dopasowanie, zanim porzuca próbę i zgłosi <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątek. Należy określić interwał limitu czasu, dostarczając <xref:System.TimeSpan> wartość do <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> konstruktora dla wyrażeń regularnych wystąpienia. Ponadto każda metoda dopasowania do wzorca statycznego ma Przeciążenie z <xref:System.TimeSpan> parametrem, który pozwala określić wartość limitu czasu. Domyślnie interwał limitu czasu jest ustawiony na <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> , a aparat wyrażeń regularnych nie przekroczy limitu czasu.  
   
 > [!IMPORTANT]
 > Zalecane jest, aby zawsze ustawić interwał limitu czasu, jeśli w wyrażeniu regularnym jest stosowane wycofywanie.  
   
- Wyjątek <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wskazuje, że aparat wyrażeń regularnych nie mógł znaleźć dopasowania w określonym przedziale czasu, ale nie wskazuje, dlaczego wyjątek został zgłoszony. Przyczyną może być nadmierne wycofywanie, ale możliwe jest też, że ustawiono zbyt krótki interwał limitu czasu w stosunku do obciążenia systemu w chwili zgłoszenia wyjątku. Podczas obsługi tego wyjątku można określić, że nie mają być wykonywane kolejne porównania z ciągiem wejściowym, albo zwiększyć interwał limitu czasu i ponowić próbę wykonania operacji dopasowywania.  
+ <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>Wyjątek oznacza, że aparat wyrażeń regularnych nie mógł znaleźć dopasowania w określonym interwale limitu czasu, ale nie wskazuje dlaczego wyjątek został zgłoszony. Przyczyną może być nadmierne wycofywanie, ale możliwe jest też, że ustawiono zbyt krótki interwał limitu czasu w stosunku do obciążenia systemu w chwili zgłoszenia wyjątku. Podczas obsługi tego wyjątku można określić, że nie mają być wykonywane kolejne porównania z ciągiem wejściowym, albo zwiększyć interwał limitu czasu i ponowić próbę wykonania operacji dopasowywania.  
   
- Na przykład następujący kod <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> wywołuje konstruktora <xref:System.Text.RegularExpressions.Regex> do wystąpienia obiektu z wartością limit czasu jednej sekundy. Wzorzec `(a+)+$`wyrażenia regularnego , który pasuje do jednej lub więcej sekwencji jednego lub więcej znaków "a" na końcu wiersza, podlega nadmiernemu wycofywaniu. Jeśli <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> a jest generowany, w przykładzie zwiększa wartość przekroju czasu do maksymalnego interwału trzech sekund. Po upływie tego czasu nie będą już podejmowane próby dopasowania wzorca.  
+ Na przykład poniższy kod wywołuje <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> konstruktora, aby utworzyć wystąpienie <xref:System.Text.RegularExpressions.Regex> obiektu z wartością limitu czasu jednej sekundy. Wzorzec wyrażenia regularnego `(a+)+$` , który dopasowuje co najmniej jedną sekwencję składającą się z co najmniej jednego znaku "a" na końcu wiersza, podlega nadmiernemu śledzeniu. Jeśli <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> jest zgłaszany, przykład zwiększa wartość limitu czasu do maksymalnie trzech sekund. Po upływie tego czasu nie będą już podejmowane próby dopasowania wzorca.  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
-### <a name="atomic-groups"></a>Grupy atomowe
- Element `(?>` języka *podrzędnego* `)` pomija wycofywanie do podwyrażenia. Po pomyślnym dopasowaniu, nie zrezygnują z żadnej części swojego meczu do późniejszego wycofywania. Na przykład we `(?>\w*\d*)1`wzorze `1` , jeśli nie `\d*` można dopasować, nie będzie zrezygnować z żadnego `1` z jego dopasowania, nawet jeśli oznacza to, że pozwoli na pomyślne dopasowanie. Grupy atomowe mogą pomóc w zapobieganiu problemom z wydajnością skojarzonym z nieudanymi dopasowaniami.
+### <a name="atomic-groups"></a>Grupy niepodzielne
+ `(?>`Element języka *subexpression* `)` pomija wycofywanie do podwyrażenia. Po pomyślnym dopasowaniu nie będzie on zawierać żadnej części dopasowania do kolejnych wycofywania. Na przykład, we wzorcu `(?>\w*\d*)1` , jeśli `1` nie można dopasować, `\d*` nie otrzyma żadnego z jego dopasowania, nawet jeśli oznacza to, że umożliwi `1` pomyślne dopasowanie. Grupy niepodzielne mogą pomóc zapobiec problemom z wydajnością związanym z błędami.
   
  W poniższym przykładzie pokazano, w jaki sposób pomijanie wycofywania zwiększa wydajność w sytuacji, gdy są używane kwantyfikatory zagnieżdżone. Mierzony jest czas potrzebny aparatowi wyrażeń regularnych na ustalenie, że ciąg wejściowy nie pasuje do dwóch wyrażeń regularnych. W pierwszym wyrażeniu regularnym jest używane wycofywanie w celu podjęcia próby dopasowania ciągu zawierającego co najmniej jedno wystąpienie co najmniej jednej cyfry szesnastkowej, po której następuje dwukropek, po którym następuje co najmniej jedna cyfra szesnastkowa, po której następują dwa dwukropki. Drugie wyrażenie regularne jest takie samo jak pierwsze, aby wyłączono w nim wycofywanie. Jak widać w wynikach przykładu, wyłączenie wycofywania przynosi znaczącą poprawę wydajności.  
   
@@ -127,71 +127,71 @@ Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [k
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>Asercje wsteczne  
- Program .NET zawiera `(?<=`dwa elementy języka: *subexpression* `)` i `(?<!` *subexpression*`)`, które pasują do poprzedniego znaku lub znaków w ciągu wejściowym. Oba elementy języka są potwierdzeniami o zerowej szerokości; oznacza to, że określają one, czy znak lub znaki, które bezpośrednio poprzedzają bieżący znak, mogą być dopasowane przez *podwyrażenie*, bez posuwania się lub wycofywania.  
+ Platforma .NET zawiera dwa elementy języka, `(?<=` *Podwyrażenie* `)` i `(?<!` *Podwyrażenie* `)` , które pasują do poprzedniego znaku lub znaków w ciągu wejściowym. Oba elementy języka są potwierdzeniami o zerowej szerokości; oznacza to, że określają, czy znak lub znaki bezpośrednio poprzedzające bieżący znak mogą być dopasowane przez *Podwyrażenie*, bez przeciągania lub wycofywania.  
   
- `(?<=`*podekspresja* `)` jest pozytywnym spojrzeniem za twierdzeniem; oznacza to, że znak lub znaki przed bieżącą pozycją muszą być zgodne *z podwyrażeniem*. `(?<!`*podekspresja* `)` jest negatywnym twierdzeniem; oznacza to, że znak lub znaki przed bieżącą pozycją nie mogą być zgodne *z wyrażeniem podrzędnym*. Zarówno pozytywne, jak i negatywne potwierdzenia wyglądu są najbardziej przydatne, gdy *podwyrażenie podrzędne* jest podzbiorem poprzedniego podwyrażenia podrzędnego.  
+ `(?<=`*Podwyrażenie* `)` jest pozytywnym potwierdzeniem asercja wsteczna; oznacza to, że znak lub znaki przed bieżącą pozycją muszą pasować do *podwyrażenia*. `(?<!`*Podwyrażenie* `)` jest ujemną asercja wstecznaą; oznacza to, że znak lub znaki przed bieżącą pozycją nie mogą pasować do *podwyrażenia*. Pozytywne i negatywne potwierdzenia asercja wsteczna są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem poprzedniego podwyrażenia.  
   
- W poniższym przykładzie użyto dwóch równoważnych wzorców wyrażeń regularnych, które sprawdzają poprawność nazwy użytkownika w adresie e-mail. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wsteczną. Dane wyjściowe z przykładu wyświetla <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> czas wykonania metody.  
+ W poniższym przykładzie są używane dwa równoważne wzorce wyrażeń regularnych, które weryfikują nazwę użytkownika w adresie e-mail. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wsteczną. Dane wyjściowe z przykładu wyświetlają czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
   
- Pierwszy wzorzec `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`wyrażenia regularnego jest zdefiniowany w sposób pokazany w poniższej tabeli.  
+ Pierwszy wzorzec wyrażenia regularnego, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@` ,, jest zdefiniowany w poniższej tabeli.  
   
 |Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczyna dopasowywanie na początku ciągu.|  
-|`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. To porównanie jest niewrażliwe na wielkości, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> jest wywoływana z opcją.|  
+|`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. W tym porównaniu wielkość liter nie jest rozróżniana, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcją.|  
 |`[-.\w]*`|Dopasowuje zero, jedno lub większą liczbę wystąpień łącznika, kropki lub znaku słowa.|  
 |`[0-9A-Z]`|Dopasowuje znak alfanumeryczny.|  
 |`([-.\w]*[0-9A-Z])*`|Dopasowuje zero lub większą liczbę wystąpień kombinacji składających się z zera lub większej liczby łączników, kropek lub znaków słowa, po których występuje znak alfanumeryczny. Jest to pierwsza grupa przechwytywania.|  
-|`@`|Dopasuj znak\@przy znaku (" ").|  
+|`@`|Dopasowuje znak (" \@ ").|  
   
- Drugi wzorzec `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`wyrażenia regularnego, , używa pozytywnego lookbehind potwierdzenia. Definicję tego wyrażenia pokazano w poniższej tabeli.  
+ W drugim wzorcu wyrażenia regularnego jest `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@` stosowane pozytywne potwierdzenie asercja wsteczna. Definicję tego wyrażenia pokazano w poniższej tabeli.  
   
 |Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczyna dopasowywanie na początku ciągu.|  
-|`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. To porównanie jest niewrażliwe na wielkości, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> jest wywoływana z opcją.|  
+|`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. W tym porównaniu wielkość liter nie jest rozróżniana, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcją.|  
 |`[-.\w]*`|Dopasowuje zero lub większą liczbę wystąpień łącznika, kropki lub znaku słowa.|  
 |`(?<=[0-9A-Z])`|Sprawdza ostatni dopasowany znak i kontynuuje dopasowywanie, jeśli jest to znak alfanumeryczny. Należy zauważyć, że znaki alfanumeryczne stanowią podzestaw zestawu składającego się z kropek, łączników i wszystkich znaków słowa.|  
-|`@`|Dopasuj znak\@przy znaku (" ").|  
+|`@`|Dopasowuje znak (" \@ ").|  
 
 ### <a name="lookahead-assertions"></a>Asercje wyprzedzające  
- Program .NET zawiera `(?=`dwa elementy języka: *subexpression* `)` i `(?!` *subexpression*`)`, które pasują do następnego znaku lub znaków w ciągu wejściowym. Oba elementy języka są potwierdzeniami o zerowej szerokości; oznacza to, że określają one, czy znak lub znaki, które natychmiast następuje po bieżącym znaku mogą być dopasowane przez *podwyrażenie*, bez postępu lub wycofywania.  
+ Platforma .NET zawiera dwa elementy języka, `(?=` *Podwyrażenie* `)` i `(?!` *Podwyrażenie* `)` , które pasują do następnego znaku lub znaków w ciągu wejściowym. Oba elementy języka są potwierdzeniami o zerowej szerokości; oznacza to, że określają, czy znak lub znaki znajdujące się bezpośrednio po bieżącym znaku mogą być dopasowane przez *Podwyrażenie*, bez przeciągania lub wycofywania.  
   
- `(?=`*podekspresja* `)` jest pozytywnym twierdzeniem wyprzedzającym; oznacza to, że znak lub znaki po bieżącej pozycji muszą być zgodne *z podwyrażeniem*. `(?!`*podekspresja* `)` jest negatywnym twierdzeniem wyprzedzającym; oznacza to, że znak lub znaki po bieżącej pozycji nie mogą być zgodne *z wyrażeniem podrzędnym*. Zarówno pozytywne, jak i negatywne potwierdzenia wysuwu są najbardziej przydatne, gdy *podwyrażenie* jest podzbiorem następnego podwyrażenia podrzędnego.  
+ `(?=`*Podwyrażenie* `)` jest pozytywnym potwierdzeniem naprzód; oznacza to, że znak lub znaki po bieżącej pozycji muszą pasować do *podwyrażenia*. `(?!`*Podwyrażenie* `)` jest negatywnym potwierdzeniem naprzód; oznacza to, że znak lub znaki po bieżącej pozycji nie mogą pasować do *podwyrażenia*. Pozytywne i negatywne potwierdzenia naprzód są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem następnego podwyrażenia.  
   
- W poniższym przykładzie są używane dwa równoważne wzorce wyrażenia regularnego sprawdzające w pełni kwalifikowaną nazwę typu. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wyprzedzającą. Dane wyjściowe z przykładu wyświetla <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> czas wykonania metody.  
+ W poniższym przykładzie są używane dwa równoważne wzorce wyrażenia regularnego sprawdzające w pełni kwalifikowaną nazwę typu. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wyprzedzającą. Dane wyjściowe z przykładu wyświetlają czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
   
- Pierwszy wzorzec `^(([A-Z]\w*)+\.)*[A-Z]\w*$`wyrażenia regularnego jest zdefiniowany w sposób pokazany w poniższej tabeli.  
+ Pierwszy wzorzec wyrażenia regularnego, `^(([A-Z]\w*)+\.)*[A-Z]\w*$` ,, jest zdefiniowany w poniższej tabeli.  
   
 |Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczyna dopasowywanie na początku ciągu.|  
-|`([A-Z]\w*)+\.`|Dopasowuje znak alfanumeryczny (A–Z), po którym co najmniej raz występuje zero lub większa liczba znaków słowa, po których następuje kropka. To porównanie jest niewrażliwe na wielkości, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> jest wywoływana z opcją.|  
+|`([A-Z]\w*)+\.`|Dopasowuje znak alfanumeryczny (A–Z), po którym co najmniej raz występuje zero lub większa liczba znaków słowa, po których następuje kropka. W tym porównaniu wielkość liter nie jest rozróżniana, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcją.|  
 |`(([A-Z]\w*)+\.)*`|Dopasowuje poprzedni wzorzec zero lub większą liczbę razy.|  
 |`[A-Z]\w*`|Dopasowuje znak alfabetyczny, po którym występuje zero lub większa liczba znaków słowa.|  
 |`$`|Dopasowywanie kończy się na końcu ciągu wejściowego.|  
   
- Drugi wzorzec `^((?=[A-Z])\w+\.)*[A-Z]\w*$`wyrażenia regularnego, , używa pozytywnego potwierdzenia wysuwu. Definicję tego wyrażenia pokazano w poniższej tabeli.  
+ Drugi wzorzec wyrażenia regularnego, `^((?=[A-Z])\w+\.)*[A-Z]\w*$` używa pozytywnego potwierdzenia naprzód. Definicję tego wyrażenia pokazano w poniższej tabeli.  
   
 |Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczyna dopasowywanie na początku ciągu.|  
-|`(?=[A-Z])`|Sprawdza pierwszy następny znak i kontynuuje dopasowywanie, jeśli jest to znak alfabetyczny (A–Z). To porównanie jest niewrażliwe na wielkości, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> jest wywoływana z opcją.|  
+|`(?=[A-Z])`|Sprawdza pierwszy następny znak i kontynuuje dopasowywanie, jeśli jest to znak alfabetyczny (A–Z). W tym porównaniu wielkość liter nie jest rozróżniana, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcją.|  
 |`\w+\.`|Dopasowuje co najmniej jeden znak słowa, po którym następuje kropka.|  
 |`((?=[A-Z])\w+\.)*`|Dopasowuje wzorzec składający się z co najmniej jednego znaku słowa, po którym zero lub większą liczbę razy występuje kropka. Początkowy znak słowa musi być znakiem alfabetycznym.|  
 |`[A-Z]\w*`|Dopasowuje znak alfabetyczny, po którym występuje zero lub większa liczba znaków słowa.|  
 |`$`|Dopasowywanie kończy się na końcu ciągu wejściowego.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wyrażenia regularne platformy .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [Konstrukcje naprzemnienia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Wyrażenia regularne .NET](regular-expressions.md)
+- [Język wyrażeń regularnych — podręczny wykaz](regular-expression-language-quick-reference.md)
+- [Kwantyfikatory](quantifiers-in-regular-expressions.md)
+- [Konstrukcje warunkowe](alternation-constructs-in-regular-expressions.md)
+- [Konstrukcje grupujące](grouping-constructs-in-regular-expressions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8af4a15e1e5b34c38b14c6b547cf44801bbf13e6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741760"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280403"
 ---
 # <a name="capitalization-conventions"></a>Konwencje dotyczące wielkości liter
 Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która jest stosowana spójnie, dzięki czemu identyfikatory typów, elementów członkowskich i parametrów łatwo odczytać.
@@ -47,11 +47,11 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 
  W poniższej tabeli opisano reguły dotyczące wielkich liter dla różnych typów identyfikatorów.
 
-|Identyfikator|Wielkość znaków|Przykład|
+|Identyfikator|Wielkość liter|Przykład|
 |----------------|------------|-------------|
 |Przestrzeń nazw|Pascal|`namespace System.Security { ... }`|
 |Typ|Pascal|`public class StreamReader { ... }`|
-|Interface|Pascal|`public interface IEnumerable { ... }`|
+|Interfejs|Pascal|`public interface IEnumerable { ... }`|
 |Metoda|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |Właściwość|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
 |Zdarzenie|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
@@ -62,7 +62,7 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Wielkie litery słów i typowe terminy
  Większość postanowień złożonych jest traktowanych jako pojedyncze słowa do celów wielkich liter.
 
- ❌ nie rób wielką literą każdego wyrazu w tak zwanych słowami "zamknięte".
+ ❌NIE używaj wielkich liter w każdym słowie, tak jak w przypadku wyrazów złożonych.
 
  Są to wyrazy złożone zapisywane jako pojedyncze słowo, takie jak punkt końcowy. Aby zapoznać się z wytycznymi dotyczącymi wielkości liter, Traktuj zamknięty wyraz złożony jako pojedynczy wyraz. Użyj bieżącego słownika, aby określić, czy złożone słowo jest zapisywana w zamkniętym formularzu.
 
@@ -97,7 +97,7 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 ## <a name="case-sensitivity"></a>Rozróżnianie wielkości liter
  Języki, które mogą być uruchamiane w środowisku CLR, nie są wymagane do obsługi rozróżniania wielkości liter, chociaż niektóre z nich wykonują. Nawet jeśli język obsługuje tę funkcję, inne języki, które mogą uzyskać dostęp do platformy, nie. Wszystkie interfejsy API, które są dostępne z zewnątrz, w związku z tym nie mogą polegać na przypadku odróżnienia dwóch nazw w tym samym kontekście.
 
- ❌ nie zakłada się, że wszystkie języki programowania uwzględniają wielkość liter. Nie są. Nazwy nie mogą różnić się w zależności od wielkości liter.
+ ❌NIE należy zakładać, że wszystkie języki programowania uwzględniają wielkość liter. Nie są. Nazwy nie mogą różnić się w zależności od wielkości liter.
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
@@ -105,5 +105,5 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

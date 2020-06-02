@@ -6,19 +6,19 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: b22923338f8488b6f7684e565f62d9afc16e6aa0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741779"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280572"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Klasy bazowe na potrzeby implementowania abstrakcji
 Ściśle mówiąc, Klasa jest klasą bazową, gdy tworzona jest inna Klasa. Jednak na potrzeby tej sekcji Klasa bazowa jest klasą zaprojektowaną głównie w celu zapewnienia wspólnego abstrakcji lub innych klas do wielokrotnego użycia implementacji domyślnej, chociaż dziedziczenia. Klasy bazowe zwykle znajdują się w środku hierarchii dziedziczenia, między abstrakcją w katalogu głównym hierarchii a kilkoma implementacjami niestandardowymi w dolnej części.
 
- Służą one jako pomocnicy implementacji do implementowania abstrakcji. Na przykład jedna z streszczeń struktury dla uporządkowanych kolekcji elementów jest interfejsem <xref:System.Collections.Generic.IList%601>. Implementowanie <xref:System.Collections.Generic.IList%601> nie jest proste i dlatego struktura zawiera kilka klas bazowych, takich jak <xref:System.Collections.ObjectModel.Collection%601> i <xref:System.Collections.ObjectModel.KeyedCollection%602>, które pomagają jako pomocnicy do implementowania kolekcji niestandardowych.
+ Służą one jako pomocnicy implementacji do implementowania abstrakcji. Na przykład jedna z streszczeń struktury dla uporządkowanych kolekcji elementów jest <xref:System.Collections.Generic.IList%601> interfejsem. Implementacja <xref:System.Collections.Generic.IList%601> nie jest prosta i dlatego struktura zawiera kilka klas bazowych, takich jak <xref:System.Collections.ObjectModel.Collection%601> i <xref:System.Collections.ObjectModel.KeyedCollection%602> , które pomagają jako pomocnicy do implementowania kolekcji niestandardowych.
 
- Klasy bazowe zazwyczaj nie są odpowiednie do obsłużenia jako abstrakcje, ponieważ mogą zawierać zbyt wiele implementacji. Na przykład klasa bazowa `Collection<T>` zawiera wiele implementacji związanych z tym faktem, że implementuje interfejs nieogólny `IList` (w celu usprawnienia integracji z kolekcjami nieogólnymi) i jest to kolekcja elementów przechowywanych w pamięci w jednym z jej pól.
+ Klasy bazowe zazwyczaj nie są odpowiednie do obsłużenia jako abstrakcje, ponieważ mogą zawierać zbyt wiele implementacji. Na przykład `Collection<T>` Klasa bazowa zawiera wiele implementacji związanych z tym faktem, że implementuje interfejs nieogólny `IList` (aby zintegrować lepszy z kolekcjami nierodzajowymi) i że jest kolekcją elementów przechowywanych w pamięci w jednym z jej pól.
 
  Jak wspomniano wcześniej, klasy bazowe mogą zapewniać niecenną pomoc dla użytkowników, którzy muszą wdrożyć streszczenia, ale jednocześnie mogą być znaczną odpowiedzialnością. Dodają obszar powierzchni i zwiększają głębokość hierarchii dziedziczenia, a więc koncepcje komplikują strukturę. W związku z tym klasy bazowe powinny być używane tylko wtedy, gdy zapewniają użytkownikom struktury znaczącą wartość. Należy je unikać, jeśli zapewniają wartość tylko dla realizatorów struktury, w takim przypadku delegowanie do wewnętrznej implementacji zamiast dziedziczenia z klasy bazowej powinno być silnie rozważane.
 
@@ -26,7 +26,7 @@ ms.locfileid: "76741779"
 
  ✔️ Rozważ umieszczenie klas bazowych w oddzielnym obszarze nazw z typów scenariuszy linii głównej. Według definicji klasy bazowe są przeznaczone dla zaawansowanych scenariuszy rozszerzalności, dlatego nie są one interesujące dla większości użytkowników.
 
- ❌ uniknąć nadawania nazw klasom bazowym sufiksem "Base", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.
+ ❌Należy unikać nazywania klas bazowych sufiksem "Base", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
@@ -34,5 +34,5 @@ ms.locfileid: "76741779"
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
-- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Wskazówki dotyczące projektowania struktury](index.md)
+- [Projektowanie pod kątem rozszerzalności](designing-for-extensibility.md)

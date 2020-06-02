@@ -6,23 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: bfcbf7306e896af54808c49e25f95d0631f5bcc0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6e56616543bf7d2ad2e6be4d7bf7cbc50ba3a23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710209"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292010"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Weryfikacja schematu przy użyciu klasy XPathNavigator
-Korzystając z <xref:System.Xml.XmlDocument> klasy, można sprawdzić poprawność zawartości XML zawartej <xref:System.Xml.XmlDocument> w obiekcie na dwa sposoby. Pierwszym sposobem jest zweryfikowanie zawartości XML przy użyciu obiektu sprawdzającego <xref:System.Xml.XmlReader> poprawność, a drugi — użycie <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. Można również wykonać walidację zawartości XML tylko do odczytu przy użyciu <xref:System.Xml.XPath.XPathDocument> klasy.  
+Korzystając z <xref:System.Xml.XmlDocument> klasy, można sprawdzić poprawność zawartości XML zawartej w <xref:System.Xml.XmlDocument> obiekcie na dwa sposoby. Pierwszym sposobem jest zweryfikowanie zawartości XML przy użyciu obiektu sprawdzającego poprawność, <xref:System.Xml.XmlReader> a drugi — użycie <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. Można również wykonać walidację zawartości XML tylko do odczytu przy użyciu <xref:System.Xml.XPath.XPathDocument> klasy.  
   
 ## <a name="validating-xml-data"></a>Walidacja danych XML  
- <xref:System.Xml.XmlDocument> Klasa nie sprawdza poprawności dokumentu XML przy użyciu opcji walidacji schematu języka definicji schematu XML (XSD). Sprawdza tylko, czy dokument XML jest poprawnie sformułowany.  
+ <xref:System.Xml.XmlDocument>Klasa nie sprawdza poprawności dokumentu XML przy użyciu opcji walidacji schematu języka definicji schematu XML (XSD). Sprawdza tylko, czy dokument XML jest poprawnie sformułowany.  
   
  Pierwszy sposób sprawdzania poprawności dokumentu XML polega na sprawdzeniu, czy dokument jest ładowany do <xref:System.Xml.XmlDocument> obiektu za pomocą walidacji <xref:System.Xml.XmlReader> obiektu. Drugi sposób polega na sprawdzeniu, czy niewpisany wcześniej dokument XML przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. W obu przypadkach zmiany zweryfikowanego dokumentu XML mogą być ponownie weryfikowane przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy.  
   
 ### <a name="validating-a-document-as-it-is-loaded"></a>Sprawdzanie poprawności dokumentu w trakcie jego ładowania  
- Obiekt <xref:System.Xml.XmlReader> walidacji jest tworzony przez przekazanie <xref:System.Xml.XmlReaderSettings> obiektu do <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy, która przyjmuje <xref:System.Xml.XmlReaderSettings> obiekt jako parametr. <xref:System.Xml.XmlReaderSettings> Obiekt przeszedł jako parametr ma ustawioną <xref:System.Xml.XmlReaderSettings.ValidationType%2A> Właściwość `Schema` i schemat XML dla dokumentu XML zawartego w <xref:System.Xml.XmlDocument> obiekcie dodanym do jego <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwości. Obiekt walidacji <xref:System.Xml.XmlReader> jest następnie używany do tworzenia <xref:System.Xml.XmlDocument> obiektu.  
+ Obiekt walidacji <xref:System.Xml.XmlReader> jest tworzony przez przekazanie <xref:System.Xml.XmlReaderSettings> obiektu do <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy, która przyjmuje <xref:System.Xml.XmlReaderSettings> obiekt jako parametr. <xref:System.Xml.XmlReaderSettings>Obiekt przeszedł jako parametr ma <xref:System.Xml.XmlReaderSettings.ValidationType%2A> ustawioną właściwość `Schema` i schemat XML dla dokumentu XML zawartego w <xref:System.Xml.XmlDocument> obiekcie dodanym do jego <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwości. Obiekt walidacji <xref:System.Xml.XmlReader> jest następnie używany do tworzenia <xref:System.Xml.XmlDocument> obiektu.  
   
  Poniższy przykład sprawdza poprawność `contosoBooks.xml` pliku w trakcie jego ładowania do <xref:System.Xml.XmlDocument> obiektu przez utworzenie <xref:System.Xml.XmlDocument> obiektu za pomocą walidacji <xref:System.Xml.XmlReader> obiektu. Ponieważ dokument XML jest prawidłowy zgodnie ze schematem, nie są generowane żadne błędy walidacji schematu ani Ostrzeżenia.  
   
@@ -120,19 +120,19 @@ class ValidatingReaderExample
   
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
- W powyższym przykładzie <xref:System.Xml.Schema.XmlSchemaValidationException> zostanie wygenerowany, gdy <xref:System.Xml.XmlDocument.Load%2A> jest wywoływana, jeśli dowolny atrybut lub typ elementu nie pasuje do odpowiedniego typu określonego w schemacie walidacji. Jeśli <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest ustawiona dla walidacji <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> zostanie wywołane przy każdym napotkaniu nieprawidłowego typu.  
+ W powyższym przykładzie <xref:System.Xml.Schema.XmlSchemaValidationException> zostanie wygenerowany, gdy <xref:System.Xml.XmlDocument.Load%2A> jest wywoływana, jeśli dowolny atrybut lub typ elementu nie pasuje do odpowiedniego typu określonego w schemacie walidacji. Jeśli <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest ustawiona dla walidacji <xref:System.Xml.XmlReader> , <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> zostanie wywołane przy każdym napotkaniu nieprawidłowego typu.  
   
- <xref:System.Xml.Schema.XmlSchemaException> Zostanie wygenerowany, gdy atrybut lub element z <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> ustawionym na `invalid` jest dostępny przez <xref:System.Xml.XPath.XPathNavigator>.  
+ <xref:System.Xml.Schema.XmlSchemaException>Zostanie wygenerowany, gdy atrybut lub element z <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> ustawionym na `invalid` jest dostępny przez <xref:System.Xml.XPath.XPathNavigator> .  
   
- <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> Właściwość może służyć do określenia, czy pojedynczy atrybut lub element jest prawidłowy podczas uzyskiwania dostępu do atrybutów lub elementów za pomocą <xref:System.Xml.XPath.XPathNavigator>.  
+ <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A>Właściwość może służyć do określenia, czy pojedynczy atrybut lub element jest prawidłowy podczas uzyskiwania dostępu do atrybutów lub elementów za pomocą <xref:System.Xml.XPath.XPathNavigator> .  
   
 > [!NOTE]
 > Gdy dokument XML jest ładowany do <xref:System.Xml.XmlDocument> obiektu ze skojarzonym schematem, który definiuje wartości domyślne, <xref:System.Xml.XmlDocument> obiekt traktuje te wartości domyślne tak, jakby pojawiły się w dokumencie XML. Oznacza to, że <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> Właściwość zawsze zwraca `false` dla elementu, który został domyślnie zwrócony ze schematu, nawet jeśli w dokumencie XML został zapisany jako pusty element.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Walidacja dokumentu przy użyciu metody weryfikacji  
- <xref:System.Xml.XmlDocument.Validate%2A> Metoda <xref:System.Xml.XmlDocument> klasy sprawdza poprawność dokumentu XML zawartego w <xref:System.Xml.XmlDocument> obiekcie względem schematów określonych we <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Schemas%2A> właściwości obiektu i wykonuje rozszerzanie sprawdzonych. Wynikiem jest poprzednio niewpisany dokument XML w <xref:System.Xml.XmlDocument> obiekcie zastępowanym przez wpisany dokument.  
+ <xref:System.Xml.XmlDocument.Validate%2A>Metoda <xref:System.Xml.XmlDocument> klasy sprawdza poprawność dokumentu XML zawartego w <xref:System.Xml.XmlDocument> obiekcie względem schematów określonych we <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Schemas%2A> właściwości obiektu i wykonuje rozszerzanie sprawdzonych. Wynikiem jest poprzednio niewpisany dokument XML w <xref:System.Xml.XmlDocument> obiekcie zastępowanym przez wpisany dokument.  
   
- <xref:System.Xml.XmlDocument> Obiekt zgłasza błędy walidacji schematu i ostrzeżenia przy użyciu <xref:System.Xml.Schema.ValidationEventHandler> delegata przekazaną jako parametr <xref:System.Xml.XmlDocument.Validate%2A> do metody.  
+ <xref:System.Xml.XmlDocument>Obiekt zgłasza błędy walidacji schematu i ostrzeżenia przy użyciu <xref:System.Xml.Schema.ValidationEventHandler> delegata przekazaną jako parametr do <xref:System.Xml.XmlDocument.Validate%2A> metody.  
   
  Poniższy przykład sprawdza poprawność `contosoBooks.xml` pliku zawartego w <xref:System.Xml.XmlDocument> obiekcie względem `contosoBooks.xsd` schematu zawartego we <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Schemas%2A> właściwości obiektu.  
   
@@ -346,24 +346,24 @@ class ValidatingReaderExample
   
  W tym przykładzie błędy walidacji zostały wprowadzone po załadowaniu dokumentu XML i zostały znalezione przy użyciu <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy.  
   
- Modyfikacje wprowadzone przy <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> użyciu metody <xref:System.Xml.XPath.XPathNavigator> klasy spowodowały, <xref:System.InvalidCastException> że nowa wartość była nieprawidłowa przy uwzględnieniu typu schematu węzła.  
+ Modyfikacje wprowadzone przy użyciu <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy spowodowały, że <xref:System.InvalidCastException> Nowa wartość była nieprawidłowa przy uwzględnieniu typu schematu węzła.  
   
- Aby uzyskać więcej informacji na temat modyfikowania wartości <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> przy użyciu metody, zobacz temat [modyfikowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) .  
+ Aby uzyskać więcej informacji na temat modyfikowania wartości przy użyciu <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> metody, zobacz temat [modyfikowanie danych XML przy użyciu klasy XPathNavigator](modify-xml-data-using-xpathnavigator.md) .  
   
 ### <a name="read-only-validation"></a>Walidacja tylko do odczytu  
- <xref:System.Xml.XPath.XPathDocument> Klasa jest reprezentacją w pamięci dokumentu XML tylko do odczytu. <xref:System.Xml.XPath.XPathDocument> Klasy i <xref:System.Xml.XmlDocument> klasy tworzą <xref:System.Xml.XPath.XPathNavigator> obiekty do nawigowania i edytowania dokumentów XML. Ponieważ <xref:System.Xml.XPath.XPathDocument> Klasa jest klasą tylko do odczytu, <xref:System.Xml.XPath.XPathNavigator> obiekt zwrócony z <xref:System.Xml.XPath.XPathDocument> obiektów nie może edytować dokumentu XML zawartego w <xref:System.Xml.XPath.XPathDocument> obiekcie.  
+ <xref:System.Xml.XPath.XPathDocument>Klasa jest reprezentacją w pamięci dokumentu XML tylko do odczytu. <xref:System.Xml.XPath.XPathDocument>Klasy i <xref:System.Xml.XmlDocument> klasy tworzą <xref:System.Xml.XPath.XPathNavigator> obiekty do nawigowania i edytowania dokumentów XML. Ponieważ <xref:System.Xml.XPath.XPathDocument> Klasa jest klasą tylko do odczytu, <xref:System.Xml.XPath.XPathNavigator> obiekt zwrócony z <xref:System.Xml.XPath.XPathDocument> obiektów nie może edytować dokumentu XML zawartego w <xref:System.Xml.XPath.XPathDocument> obiekcie.  
   
- W przypadku weryfikacji można utworzyć <xref:System.Xml.XPath.XPathDocument> obiekt tak samo jak w przypadku tworzenia <xref:System.Xml.XmlDocument> obiektu za pomocą walidacji <xref:System.Xml.XmlReader> obiektu, jak opisano wcześniej w tym temacie. <xref:System.Xml.XPath.XPathDocument> Obiekt sprawdza poprawność dokumentu XML w trakcie jego ładowania, ale ponieważ nie można edytować danych XML w <xref:System.Xml.XPath.XPathDocument> obiekcie, nie można ponownie sprawdzić poprawności dokumentu XML.  
+ W przypadku weryfikacji można utworzyć <xref:System.Xml.XPath.XPathDocument> obiekt tak samo jak w przypadku tworzenia <xref:System.Xml.XmlDocument> obiektu za pomocą walidacji <xref:System.Xml.XmlReader> obiektu, jak opisano wcześniej w tym temacie. <xref:System.Xml.XPath.XPathDocument>Obiekt sprawdza poprawność dokumentu XML w trakcie jego ładowania, ale ponieważ nie można edytować danych XML w <xref:System.Xml.XPath.XPathDocument> obiekcie, nie można ponownie sprawdzić poprawności dokumentu XML.  
   
- Aby uzyskać więcej informacji na temat obiektów tylko do <xref:System.Xml.XPath.XPathNavigator> odczytu i edytowalnych, zobacz [odczytywanie danych XML przy użyciu XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md) .  
+ Aby uzyskać więcej informacji na temat obiektów tylko do odczytu i edytowalnych <xref:System.Xml.XPath.XPathNavigator> , zobacz [odczytywanie danych XML przy użyciu XPathDocument i XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md) .  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)
-- [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
-- [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [Edytowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
+- [Przetwarzanie danych XML przy użyciu modelu danych XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md)
+- [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](accessing-xml-data-using-xpathnavigator.md)
+- [Edytowanie danych XML przy użyciu klasy XPathNavigator](editing-xml-data-using-xpathnavigator.md)

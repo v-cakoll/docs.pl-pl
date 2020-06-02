@@ -10,28 +10,28 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141308"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288046"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków na platformie .NET
 
-Ten artykuł zawiera wprowadzenie do systemów kodowania znaków, które są używane przez platformę .NET. W tym artykule wyjaśniono <xref:System.String>, <xref:System.Char>jak <xref:System.Text.Rune>,, <xref:System.Globalization.StringInfo> i typy działają z Unicode, UTF-16 i UTF-8.
+Ten artykuł zawiera wprowadzenie do systemów kodowania znaków, które są używane przez platformę .NET. W tym artykule wyjaśniono <xref:System.String> , jak,, <xref:System.Char> <xref:System.Text.Rune> i <xref:System.Globalization.StringInfo> typy działają z Unicode, UTF-16 i UTF-8.
 
-Ten *znak* jest używany w tym miejscu w ogólnym sensie, *co czytnik jest postrzegany jako pojedynczy element wyświetlania*. Typowe przykłady to litera "a", symbol "@" i Emoji "🐂". Czasami wygląda na to, że jeden znak jest w rzeczywistości składający się z wielu niezależnych elementów wyświetlanych, ponieważ sekcja w [klastrach Grapheme](#grapheme-clusters) objaśnia.
+Ten *znak* jest używany w tym miejscu w ogólnym sensie, *co czytnik jest postrzegany jako pojedynczy element wyświetlania*. Typowe przykłady to litera "a", symbol "@" i Emoji " 🐂 ". Czasami wygląda na to, że jeden znak jest w rzeczywistości składający się z wielu niezależnych elementów wyświetlanych, ponieważ sekcja w [klastrach Grapheme](#grapheme-clusters) objaśnia.
 
-## <a name="the-string-and-char-types"></a>Typy ciągów i znaków
+## <a name="the-string-and-char-types"></a>stringTypy i char
 
-Wystąpienie klasy [String](xref:System.String) reprezentuje jakiś tekst. A `string` jest logicznie sekwencją wartości 16-bitowych, z których każdy jest wystąpieniem struktury [char](xref:System.Char) . [Ciąg. Właściwość length](xref:System.String.Length) zwraca liczbę `char` wystąpień w `string` wystąpieniu.
+Wystąpienie [string](xref:System.String) klasy reprezentuje jakiś tekst. A `string` jest logicznie sekwencją wartości 16-bitowych, z których każdy jest wystąpieniem [char](xref:System.Char) struktury. [ string . Właściwość length](xref:System.String.Length) zwraca liczbę `char` wystąpień w `string` wystąpieniu.
 
-Poniższa funkcja Przykładowa drukuje wartości w notacji szesnastkowej wszystkich `char` wystąpień w `string`:
+Poniższa funkcja Przykładowa drukuje wartości w notacji szesnastkowej wszystkich `char` wystąpień w `string` :
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
 
-Przekaż ciąg "Hello" do tej funkcji i uzyskasz następujące dane wyjściowe:
+Przekaż string "Hello" do tej funkcji i uzyskasz następujące dane wyjściowe:
 
 ```csharp
 PrintChars("Hello");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-Jednak w przypadku niektórych języków i dla niektórych symboli i Emoji do reprezentowania pojedynczego znaku `char` przyjmuje się dwa wystąpienia. Na przykład Porównaj znaki i `char` wystąpienia w wyrazie oznaczające *Osage* w języku Osage:
+Jednak w przypadku niektórych języków i dla niektórych symboli i Emoji `char` do reprezentowania pojedynczego znaku przyjmuje się dwa wystąpienia. Na przykład Porównaj znaki i `char` wystąpienia w wyrazie oznaczające *Osage* w języku Osage:
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -87,7 +87,7 @@ s[16] = '�' ('\udcdf')
 
 W poprzednim przykładzie każdy znak z wyjątkiem miejsca jest reprezentowany przez dwa `char` wystąpienia.
 
-Pojedynczy emoji Unicode jest również reprezentowany przez dwa `char`s, jak pokazano w poniższym przykładzie pokazujący OX-emoji:
+Pojedynczy emoji Unicode jest również reprezentowany przez dwa `char` s, jak pokazano w poniższym przykładzie pokazujący OX-emoji:
 
 ```
 "🐂".Length = 2
@@ -95,15 +95,15 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-Te przykłady pokazują, że wartość `string.Length`, która wskazuje liczbę `char` wystąpień, nie musi wskazywać liczby wyświetlanych znaków. Pojedyncze `char` wystąpienie przez siebie nie musi reprezentować znaku.
+Te przykłady pokazują, że wartość `string.Length` , która wskazuje liczbę `char` wystąpień, nie musi wskazywać liczby wyświetlanych znaków. Pojedyncze `char` wystąpienie przez siebie nie musi reprezentować znaku.
 
-`char` Pary, które są mapowane na pojedynczy znak, są nazywane *parami surogatów*. Aby zrozumieć, jak działają, należy zrozumieć kodowanie Unicode i UTF-16.
+`char`Pary, które są mapowane na pojedynczy znak, są nazywane *parami surogatów*. Aby zrozumieć, jak działają, należy zrozumieć kodowanie Unicode i UTF-16.
 
 ## <a name="unicode-code-points"></a>Punkty kodu Unicode
 
 Unicode jest międzynarodowym standardem kodowania do użycia na różnych platformach i w różnych językach i skryptach.
 
-Standard Unicode definiuje ponad 1 100 000 [punktów kodów](https://www.unicode.org/glossary/#code_point). Punkt kodu jest wartością całkowitą, która może być z zakresu od 0 `U+10FFFF` do (dziesiętne 1 114 111). Niektóre punkty kodu są przypisywane do liter, symboli lub emoji. Inne są przypisane do akcji kontrolujących sposób wyświetlania tekstu lub znaków, na przykład z wyprzedzeniem do nowego wiersza. Wiele punktów kodowych nie jest jeszcze przypisanych.
+Standard Unicode definiuje ponad 1 100 000 [punktów kodów](https://www.unicode.org/glossary/#code_point). Punkt kodu jest wartością całkowitą, która może być z zakresu od 0 do `U+10FFFF` (dziesiętne 1 114 111). Niektóre punkty kodu są przypisywane do liter, symboli lub emoji. Inne są przypisane do akcji kontrolujących sposób wyświetlania tekstu lub znaków, na przykład z wyprzedzeniem do nowego wiersza. Wiele punktów kodowych nie jest jeszcze przypisanych.
 
 Poniżej przedstawiono kilka przykładów przypisań punktów kodu z linkami do wykresów Unicode, w których są one wyświetlane:
 
@@ -115,12 +115,12 @@ Poniżej przedstawiono kilka przykładów przypisań punktów kodu z linkami do 
 |68 675 | `U+10C43`| 𐱃 | [STARY TURKIC LETTER ORKHON NA](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127 801| `U+1F339`| 🌹 | [RÓŻAny emoji](https://www.unicode.org/charts/PDF/U1F300.pdf) |
 
-Punkty kodu są zwykle określane przy użyciu składni `U+xxxx`, gdzie `xxxx` jest wartością całkowitą zakodowaną szesnastkowo.
+Punkty kodu są zwykle określane przy użyciu składni `U+xxxx` , gdzie `xxxx` jest wartością całkowitą zakodowaną szesnastkowo.
 
 W całym zakresie punktów kodu istnieją dwa podzakresy:
 
-* **Podstawowa płaszczyzna wielojęzyczna (BMP)** w zakresie `U+0000..U+FFFF`. Ten 16-bitowy zakres zapewnia 65 536 punktów kodów, wystarczających do pokrycia większości systemów pisania na świecie.
-* **Dodatkowe punkty kodu** z zakresu `U+10000..U+10FFFF`. Ten 21-bitowy zakres oferuje ponad milion dodatkowych punktów kodu, które mogą być używane dla mniej dobrze znanych języków i innych celów, takich jak emoji.
+* **Podstawowa płaszczyzna wielojęzyczna (BMP)** w zakresie `U+0000..U+FFFF` . Ten 16-bitowy zakres zapewnia 65 536 punktów kodów, wystarczających do pokrycia większości systemów pisania na świecie.
+* **Dodatkowe punkty kodu** z zakresu `U+10000..U+10FFFF` . Ten 21-bitowy zakres oferuje ponad milion dodatkowych punktów kodu, które mogą być używane dla mniej dobrze znanych języków i innych celów, takich jak emoji.
 
 Na poniższym diagramie przedstawiono relację między BMP i dodatkowymi punktami kodu.
 
@@ -128,9 +128,9 @@ Na poniższym diagramie przedstawiono relację między BMP i dodatkowymi punktam
 
 ## <a name="utf-16-code-units"></a>Jednostki kodu UTF-16
 
-16-bitowy format transformacji Unicode ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) to system kodowania znaków, który używa 16-bitowych *jednostek kodu* do reprezentowania punktów kodu Unicode. .NET używa kodowania UTF-16, aby zakodować `string`tekst w. `char` Wystąpienie reprezentuje jednostkę kodu 16-bitowego.
+16-bitowy format transformacji Unicode ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) to system kodowania znaków, który używa 16-bitowych *jednostek kodu* do reprezentowania punktów kodu Unicode. .NET używa kodowania UTF-16, aby zakodować tekst w `string` . `char`Wystąpienie reprezentuje jednostkę kodu 16-bitowego.
 
-Pojedyncza jednostka kodowa 16-bitowa może reprezentować dowolny punkt kodu w 16-bitowym zakresie podstawowej płaszczyzny wielojęzycznej. Jednak w przypadku punktu kodu w dodatkowych zakresach są potrzeby `char` dwa wystąpienia.
+Pojedyncza jednostka kodowa 16-bitowa może reprezentować dowolny punkt kodu w 16-bitowym zakresie podstawowej płaszczyzny wielojęzycznej. Jednak w przypadku punktu kodu w dodatkowych zakresach `char` są potrzeby dwa wystąpienia.
 
 ## <a name="surrogate-pairs"></a>Pary zastępcze
 
@@ -140,7 +140,7 @@ Na poniższym diagramie przedstawiono relację między kodem BMP i surogatem.
 
 :::image type="content" source="media/character-encoding-introduction/bmp-and-surrogate.svg" alt-text="BMP i Surogat — punkty kodu":::
 
-Gdy do *górnego* punktu kodowego`U+D800..U+DBFF`() bezpośrednio następuje *dolny* punkt kodowy (`U+DC00..U+DFFF`), para jest interpretowana jako dodatkowy punkt kodu przy użyciu następującej formuły:
+Gdy do *górnego* punktu kodowego ( `U+D800..U+DBFF` ) bezpośrednio następuje *dolny* punkt kodowy ( `U+DC00..U+DFFF` ), para jest interpretowana jako dodatkowy punkt kodu przy użyciu następującej formuły:
 
 ```
 code point = 0x10000 +
@@ -158,7 +158,7 @@ code point = 65,536 +
 
 *Górny* punkt kodu wieloskładnikowego nie ma wyższej wartości liczbowej niż *dolny* punkt kodowy. Górny punkt kodowy jest nazywany "wysoki", ponieważ jest używany do obliczania wyższej liczby 11 bitów pełnego zakresu kodów 21-bitowego. Dolny punkt kodowy jest używany do obliczania 10 bitów o mniejszej kolejności.
 
-Na przykład rzeczywisty punkt kodu, który odnosi się do pary `0xD83C` zastępczej i `0xDF39` jest obliczany w następujący sposób:
+Na przykład rzeczywisty punkt kodu, który odnosi się do pary zastępczej `0xD83C` i `0xDF39` jest obliczany w następujący sposób:
 
 ```
 actual = 0x10000 + ((0xD83C - 0xD800) * 0x0400) + (0xDF39 - 0xDC00)
@@ -176,7 +176,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
        = 127,801
 ```
 
-Powyższy przykład pokazuje, `"\ud83c\udf39"` że jest kodowanie `U+1F339 ROSE ('🌹')` UTF-16 powyżej wymienionego powyżej.
+Powyższy przykład pokazuje, że `"\ud83c\udf39"` jest kodowanie UTF-16 `U+1F339 ROSE ('🌹')` powyżej wymienionego powyżej.
 
 ## <a name="unicode-scalar-values"></a>Wartości skalarne Unicode
 
@@ -186,11 +186,11 @@ Na poniższym diagramie przedstawiono punkty kodów wartości skalarnych.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Wartości skalarne":::
 
-### <a name="the-opno-locrune-type-as-a-scalar-value"></a>Rune Typ jako wartość skalarną
+### <a name="the-rune-type-as-a-scalar-value"></a>RuneTyp jako wartość skalarną
 
-Począwszy od platformy .NET Core 3,0, <xref:System.Text.Rune?displayProperty=fullName> typ reprezentuje wartość skalarną Unicode. **`Rune`Program nie jest dostępny w programie .NET Core 2. x lub .NET Framework 4. x.**
+Począwszy od platformy .NET Core 3,0, <xref:System.Text.Rune?displayProperty=fullName> Typ reprezentuje wartość skalarną Unicode. **`Rune`Program nie jest dostępny w programie .NET Core 2. x lub .NET Framework 4. x.**
 
-`Rune` Konstruktory weryfikują, że wystąpienie wyniku jest prawidłową wartością skalarną Unicode, w przeciwnym razie zgłasza wyjątek. Poniższy przykład pokazuje kod, który pomyślnie tworzy wystąpienia `Rune` wystąpień, ponieważ dane wejściowe reprezentują prawidłowe wartości skalarne:
+`Rune`Konstruktory weryfikują, że wystąpienie wyniku jest prawidłową wartością skalarną Unicode, w przeciwnym razie zgłasza wyjątek. Poniższy przykład pokazuje kod, który pomyślnie tworzy wystąpienia `Rune` wystąpień, ponieważ dane wejściowe reprezentują prawidłowe wartości skalarne:
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetValid":::
 
@@ -202,58 +202,58 @@ Poniższy przykład zgłasza wyjątek, ponieważ punkt kodu znajduje się poza d
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="opno-locrune-usage-example-changing-letter-case"></a>Runeprzykład użycia: zmiana wielkości liter
+### <a name="rune-usage-example-changing-letter-case"></a>Runeprzykład użycia: zmiana wielkości liter
 
-Interfejs API, który przyjmuje `char` i zakłada, że pracuje z punktem kodu, który jest wartością skalarną, nie działa poprawnie, `char` Jeśli pochodzi z pary zastępczej. Rozważmy na przykład następującą metodę, która wywołuje <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> na każdym char z string:
+Interfejs API, który przyjmuje `char` i zakłada, że pracuje z punktem kodu, który jest wartością skalarną, nie działa poprawnie, jeśli `char` pochodzi z pary zastępczej. Rozważmy na przykład następującą metodę, która wywołuje <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> na każdym z char string :
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetBadExample":::
 
-`input` string Jeśli zawiera małą literę `er` Deseret (`𐑉`), ten kod nie przekonwertuje go na wielkie litery`𐐡`(). Kod jest wywoływany `char.ToUpperInvariant` oddzielnie w każdym punkcie kodu zastępczego `U+D801` i `U+DC49`. Ale `U+D801` nie ma wystarczających informacji, aby zidentyfikować je jako małą literę, więc `char.ToUpperInvariant` pozostawia ją samodzielnie. Obsługuje `U+DC49` to ten sam sposób. Wynikiem jest to, że małe litery "𐑉" `input` string w nie są konwertowane na wielkie litery "𐑉".
+Jeśli `input` string zawiera małą literę Deseret `er` ( `𐑉` ), ten kod nie przekonwertuje go na wielkie litery ( `𐐡` ). Kod jest wywoływany `char.ToUpperInvariant` oddzielnie w każdym punkcie kodu zastępczego `U+D801` i `U+DC49` . Ale `U+D801` nie ma wystarczających informacji, aby zidentyfikować je jako małą literę, więc `char.ToUpperInvariant` pozostawia ją samodzielnie. Obsługuje to ten `U+DC49` sam sposób. Wynikiem jest to, że małe litery "𐑉" w `input` string nie są konwertowane na wielkie litery "𐑉".
 
 Poniżej przedstawiono dwie opcje prawidłowej konwersji string na wielkie litery:
 
-* Wywołania <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> na wejściu string zamiast Iterowanie `char`przez-`char`. `string.ToUpperInvariant` Metoda ma dostęp do obu części każdej pary surogatów, więc może prawidłowo obsługiwać wszystkie punkty kodu Unicode.
-* Wykonaj iterację przez wartości skalarne `Rune` Unicode jako wystąpienia `char` , a nie wystąpienia, jak pokazano w poniższym przykładzie. Ponieważ `Rune` wystąpienie jest prawidłową wartością skalarną Unicode, można je przesłać do interfejsów API, które oczekują na wartość skalarną. Na przykład wywoływanie <xref:System.Text.Rune.ToUpperInvariant%2A?displayProperty=nameWithType> , jak pokazano w poniższym przykładzie, daje poprawne wyniki:
+* Wywołania <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> na wejściu string zamiast Iterowanie `char` przez- `char` . `string.ToUpperInvariant`Metoda ma dostęp do obu części każdej pary surogatów, więc może prawidłowo obsługiwać wszystkie punkty kodu Unicode.
+* Wykonaj iterację przez wartości skalarne Unicode jako `Rune` wystąpienia `char` , a nie wystąpienia, jak pokazano w poniższym przykładzie. Ponieważ `Rune` wystąpienie jest prawidłową wartością skalarną Unicode, można je przesłać do interfejsów API, które oczekują na wartość skalarną. Na przykład wywoływanie, <xref:System.Text.Rune.ToUpperInvariant%2A?displayProperty=nameWithType> jak pokazano w poniższym przykładzie, daje poprawne wyniki:
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-opno-locrune-apis"></a>Inne Rune interfejsy API
+### <a name="other-rune-apis"></a>Inne Rune interfejsy API
 
-`Rune` Typ uwidacznia analogowe wiele `char` interfejsów API. Na przykład następujące metody dublowania statycznych interfejsów API w `char` typie:
+`Rune`Typ uwidacznia analogowe wiele `char` interfejsów API. Na przykład następujące metody dublowania statycznych interfejsów API w `char` typie:
 
 * <xref:System.Text.Rune.IsLetter%2A?displayProperty=nameWithType>
 * <xref:System.Text.Rune.IsWhiteSpace%2A?displayProperty=nameWithType>
 * <xref:System.Text.Rune.IsLetterOrDigit%2A?displayProperty=nameWithType>
 * <xref:System.Text.Rune.GetUnicodeCategory%2A?displayProperty=nameWithType>
 
-Aby pobrać nieprzetworzoną wartość skalarną `Rune` z wystąpienia, użyj <xref:System.Text.Rune.Value%2A?displayProperty=nameWithType> właściwości.
+Aby pobrać nieprzetworzoną wartość skalarną z `Rune` wystąpienia, użyj <xref:System.Text.Rune.Value%2A?displayProperty=nameWithType> właściwości.
 
-Aby skonwertować `Rune` wystąpienie z powrotem do sekwencji `char`s, użyj <xref:System.Text.Rune.ToString%2A?displayProperty=nameWithType> <xref:System.Text.Rune.EncodeToUtf16%2A?displayProperty=nameWithType> metody lub.
+Aby skonwertować `Rune` wystąpienie z powrotem do sekwencji `char` s, użyj <xref:System.Text.Rune.ToString%2A?displayProperty=nameWithType> <xref:System.Text.Rune.EncodeToUtf16%2A?displayProperty=nameWithType> metody lub.
 
-Ponieważ każda wartość skalarna Unicode jest możliwa do zaprezentowania `char` przez pojedynczą lub dwuskładnikową `Rune` parę, każde wystąpienie może być reprezentowane przez `char` co najwyżej 2 wystąpienia. Użyj <xref:System.Text.Rune.Utf16SequenceLength%2A?displayProperty=nameWithType> , aby zobaczyć, `char` ile wystąpień jest wymaganych do reprezentowania `Rune` wystąpienia.
+Ponieważ każda wartość skalarna Unicode jest możliwa do zaprezentowania przez pojedynczą `char` lub dwuskładnikową parę, każde `Rune` wystąpienie może być reprezentowane przez co najwyżej 2 `char` wystąpienia. Użyj <xref:System.Text.Rune.Utf16SequenceLength%2A?displayProperty=nameWithType> , aby zobaczyć, ile `char` wystąpień jest wymaganych do reprezentowania `Rune` wystąpienia.
 
-Aby uzyskać więcej informacji na temat `Rune` typu .NET, zobacz [ `Rune` dokumentacja interfejsu API](xref:System.Text.Rune).
+Aby uzyskać więcej informacji na temat `Rune` typu .NET, zobacz [ `Rune` Dokumentacja interfejsu API](xref:System.Text.Rune).
 
 ## <a name="grapheme-clusters"></a>Klastry Grapheme
 
 Wygląda na to, że jeden znak może wynikać z kombinacji wielu punktów kodowych, więc bardziej opisowy termin, który jest często używany zamiast "Character", to [Grapheme klastra](https://www.unicode.org/glossary/#grapheme_cluster). Odpowiedni termin w programie .NET to [element tekstowy](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
 
-Rozważ `string` wystąpienia "a", "o". "i"`👩🏽‍🚒`". Jeśli system operacyjny obsługuje je zgodnie z definicją standardu Unicode, każde z tych `string` wystąpień jest wyświetlane jako pojedynczy element tekstowy lub klaster Grapheme. Jednak ostatnie dwa są reprezentowane przez więcej niż jeden punkt kodu wartości skalarnej.
+Rozważ `string` wystąpienia "a", "o". "i" `👩🏽‍🚒` ". Jeśli system operacyjny obsługuje je zgodnie z definicją standardu Unicode, każde z tych `string` wystąpień jest wyświetlane jako pojedynczy element tekstowy lub klaster Grapheme. Jednak ostatnie dwa są reprezentowane przez więcej niż jeden punkt kodu wartości skalarnej.
 
-* string "A" jest reprezentowane przez jedną wartość skalarną i zawiera jedno `char` wystąpienie.
+* string"A" jest reprezentowane przez jedną wartość skalarną i zawiera jedno `char` wystąpienie.
 
   * `U+0061 LATIN SMALL LETTER A`
 
-* " string I" jest reprezentowane przez jedną wartość skalarną i zawiera jedno `char` wystąpienie.
+* "I" string jest reprezentowane przez jedną wartość skalarną i zawiera jedno `char` wystąpienie.
 
   * `U+00E1 LATIN SMALL LETTER A WITH ACUTE`
 
-* string "A" wygląda tak samo jak "", ale jest reprezentowane przez dwie wartości skalarne i zawiera dwa `char` wystąpienia.
+* string"A" wygląda tak samo jak "", ale jest reprezentowane przez dwie wartości skalarne i zawiera dwa `char` wystąpienia.
 
   * `U+0065 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
-* Na string koniec "`👩🏽‍🚒`" jest reprezentowane przez cztery wartości skalarne i zawiera siedem `char` wystąpień.
+* Na koniec string " `👩🏽‍🚒` " jest reprezentowane przez cztery wartości skalarne i zawiera siedem `char` wystąpień.
 
   * `U+1F469 WOMAN`(zakres dodatkowy, wymaga pary dwuskładnikowej)
   * `U+1F3FD EMOJI MODIFIER FITZPATRICK TYPE-4`(zakres dodatkowy, wymaga pary dwuskładnikowej)
@@ -262,27 +262,27 @@ Rozważ `string` wystąpienia "a", "o". "i"`👩🏽‍🚒`". Jeśli system ope
 
 W niektórych z powyższych przykładów — takich jak modyfikator łączenia akcentu lub modyfikator odcienia skórki — punkt kodu nie jest wyświetlany jako element autonomiczny na ekranie. Zamiast tego służy do modyfikowania wyglądu elementu tekstowego, który został wcześniej dołączony. Te przykłady pokazują, że może przyjmować wiele wartości skalarnych, aby określić, co myślisz jako pojedynczy "znak" lub "klaster Grapheme".
 
-Aby wyliczyć klastry Grapheme z `string`, należy użyć <xref:System.Globalization.StringInfo> klasy, jak pokazano w poniższym przykładzie. Jeśli znasz język SWIFT, typ .NET `StringInfo` jest koncepcyjnie podobny do [ `character` typu SWIFT](https://developer.apple.com/documentation/swift/character).
+Aby wyliczyć klastry Grapheme z `string` , należy użyć <xref:System.Globalization.StringInfo> klasy, jak pokazano w poniższym przykładzie. Jeśli znasz język SWIFT, `StringInfo` Typ .NET jest koncepcyjnie podobny do [ `character` typu SWIFT](https://developer.apple.com/documentation/swift/character).
 
-### <a name="example-count-opno-locchar-opno-locrune-and-text-element-instances"></a>Przykład: liczba char, Runei wystąpienia elementu tekstowego
+### <a name="example-count-char-rune-and-text-element-instances"></a>Przykład: liczba char , Rune i wystąpienia elementu tekstowego
 
-W interfejsach API platformy .NET klaster Grapheme jest nazywany *elementem tekstowym*. Poniższa metoda pokazuje różnice między elementami `char`, `Rune`i wystąpieniami elementów tekstu w `string`:
+W interfejsach API platformy .NET klaster Grapheme jest nazywany *elementem tekstowym*. Poniższa metoda pokazuje różnice między elementami `char` , `Rune` i wystąpieniami elementów tekstu w `string` :
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCountMethod":::
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCallCountMethod":::
 
-W przypadku uruchomienia tego kodu w .NET Framework lub .NET Core 3,1 lub starszym liczba elementów tekstowych dla znaku emoji zostanie wyświetlona `4`. Jest to spowodowane usterką w `StringInfo` klasie, która została naprawiona w programie .NET 5.
+W przypadku uruchomienia tego kodu w .NET Framework lub .NET Core 3,1 lub starszym liczba elementów tekstowych dla znaku emoji zostanie wyświetlona `4` . Jest to spowodowane usterką w `StringInfo` klasie, która została naprawiona w programie .NET 5.
 
-### <a name="example-splitting-opno-locstring-instances"></a>Przykład: dzielenie string wystąpień
+### <a name="example-splitting-string-instances"></a>Przykład: dzielenie string wystąpień
 
-Podczas dzielenia `string` wystąpień należy unikać dzielenia pary zastępczych i klastrów Grapheme. Rozważmy następujący przykład nieprawidłowego kodu, który zamierza wstawiać podziały wierszy co 10 znaków w string:
+Podczas dzielenia `string` wystąpień należy unikać dzielenia pary zastępczych i klastrów Grapheme. Rozważmy następujący przykład nieprawidłowego kodu, który zamierza wstawiać podziały wierszy co 10 znaków w string :
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
 
-Ponieważ ten kod wylicza `char` wystąpienia, para dwuskładnikowa, która ma miejsce na`char` obramowanie międzystrefowe, zostanie podzielona i zostanie dodany nowy wiersz. W tym wstawieniu wprowadzono uszkodzenia danych, ponieważ punkty kodu surogatu są istotne tylko jako pary.
+Ponieważ ten kod wylicza `char` wystąpienia, para dwuskładnikowa, która ma miejsce na obramowanie międzystrefowe, `char` zostanie podzielona i zostanie dodany nowy wiersz. W tym wstawieniu wprowadzono uszkodzenia danych, ponieważ punkty kodu surogatu są istotne tylko jako pary.
 
-Potencjalne uszkodzenie danych nie jest eliminowane w przypadku wyliczania `Rune` wystąpień (wartości skalarnych) `char` zamiast wystąpień. Zestaw `Rune` wystąpień może utworzyć klaster Grapheme, który ma międzystrefę 10`char` granic. Jeśli zestaw klastrów Grapheme jest podzielony, nie można go poprawnie zinterpretować.
+Potencjalne uszkodzenie danych nie jest eliminowane w przypadku wyliczania `Rune` wystąpień (wartości skalarnych) zamiast `char` wystąpień. Zestaw `Rune` wystąpień może utworzyć klaster Grapheme, który ma międzystrefę 10 `char` granic. Jeśli zestaw klastrów Grapheme jest podzielony, nie można go poprawnie zinterpretować.
 
 Lepszym rozwiązaniem jest przerwanie string przez zliczanie klastrów Grapheme lub elementów tekstowych, jak w poniższym przykładzie:
 
@@ -324,11 +324,11 @@ Jak wspomniano wcześniej, pojedyncza jednostka kodu UTF-16 z [pary zastępczej]
 
 ### <a name="endianness"></a>Endian
 
-W programie .NET jednostki kodu UTF-16 string są przechowywane w ciągłej pamięci jako sekwencja 16-bitowych liczb całkowitych (`char` wystąpień). Bity poszczególnych jednostek kodu są ustalane w zależności od liczby [bajtów](https://en.wikipedia.org/wiki/Endianness) bieżącej architektury.
+W programie .NET jednostki kodu UTF-16 string są przechowywane w ciągłej pamięci jako sekwencja 16-bitowych liczb całkowitych ( `char` wystąpień). Bity poszczególnych jednostek kodu są ustalane w zależności od liczby [bajtów](https://en.wikipedia.org/wiki/Endianness) bieżącej architektury.
 
-W przypadku architektury little-endian string złożone z punktów `[ D801 DCCC ]` kodu UTF-16 zostałyby ustalone w pamięci jako bajty. `[ 0x01, 0xD8, 0xCC, 0xDC ]` W przypadku architektury string big-endian można ją określić w pamięci jako bajty `[ 0xD8, 0x01, 0xDC, 0xCC ]`.
+W przypadku architektury little-endian string złożone z punktów kodu UTF-16 `[ D801 DCCC ]` zostałyby ustalone w pamięci jako bajty `[ 0x01, 0xD8, 0xCC, 0xDC ]` . W przypadku architektury big-endian string można ją określić w pamięci jako bajty `[ 0xD8, 0x01, 0xDC, 0xCC ]` .
 
-Systemy komputerowe, które komunikują się ze sobą, muszą wyrazić zgodę na reprezentację danych przekraczających sieć. Większość protokołów sieciowych używa kodowania UTF-8 jako standard podczas przesyłania tekstu, częściowo, aby uniknąć problemów, które mogą wynikać z komputera z dużą liczbą bajtów, komunikując się z komputerem o małej przepustowości. string Składowe składające się z punktów `[ F0 90 93 8C ]` kodu UTF-8 będą zawsze reprezentowane jako bajty, niezależnie od liczby bajtów `[ 0xF0, 0x90, 0x93, 0x8C ]` .
+Systemy komputerowe, które komunikują się ze sobą, muszą wyrazić zgodę na reprezentację danych przekraczających sieć. Większość protokołów sieciowych używa kodowania UTF-8 jako standard podczas przesyłania tekstu, częściowo, aby uniknąć problemów, które mogą wynikać z komputera z dużą liczbą bajtów, komunikując się z komputerem o małej przepustowości. stringSkładowe składające się z punktów kodu UTF-8 `[ F0 90 93 8C ]` będą zawsze reprezentowane jako bajty, `[ 0xF0, 0x90, 0x93, 0x8C ]` niezależnie od liczby bajtów.
 
 Aby użyć UTF-8 do przesyłania tekstu, aplikacje .NET często używają kodu, takiego jak Poniższy przykład:
 
@@ -338,10 +338,10 @@ byte[] stringAsUtf8Bytes = Encoding.UTF8.GetBytes(stringToWrite);
 await outputStream.WriteAsync(stringAsUtf8Bytes, 0, stringAsUtf8Bytes.Length);
 ```
 
-W poprzednim przykładzie metoda [Encoding. UTF8. GetBytes](xref:System.Text.UTF8Encoding.GetBytes%2A) dekoduje kod UTF-16 `string` do serii wartości skalarnych Unicode, a następnie ponownie koduje te wartości skalarne na UTF-8 i umieszcza wyniki sekwencji w `byte` tablicy. Metoda [Encoding. UTF8. GetString](xref:System.Text.UTF8Encoding.GetString%2A) wykonuje odwrotną transformację, konwertując tablicę UTF `byte` -8 na UTF-16 `string`.
+W poprzednim przykładzie metoda [Encoding. UTF8. GetBytes](xref:System.Text.UTF8Encoding.GetBytes%2A) dekoduje kod UTF-16 `string` do serii wartości skalarnych Unicode, a następnie ponownie koduje te wartości skalarne na UTF-8 i umieszcza wyniki sekwencji w `byte` tablicy. Metoda [Encoding. UTF8. GetString](xref:System.Text.UTF8Encoding.GetString%2A) wykonuje odwrotną transformację, konwertując tablicę UTF-8 `byte` na UTF-16 `string` .
 
 > [!WARNING]
-> Ponieważ UTF-8 jest commonplace w Internecie, może być skłonny do odczytu nieprzetworzonych bajtów z sieci i do traktowania danych, tak jakby była to UTF-8. Należy jednak sprawdzić, czy jest on rzeczywiście poprawnie sformułowany. Złośliwy klient może przesłać do usługi źle sformułowany format UTF-8. Jeśli te dane są używane w taki sposób, jakby były poprawnie sformułowane, może to spowodować błędy lub luki w zabezpieczeniach aplikacji. Aby sprawdzić poprawność danych UTF-8, można użyć metody `Encoding.UTF8.GetString`takiej jak, która przeprowadza walidację podczas konwertowania danych przychodzących na `string`.
+> Ponieważ UTF-8 jest commonplace w Internecie, może być skłonny do odczytu nieprzetworzonych bajtów z sieci i do traktowania danych, tak jakby była to UTF-8. Należy jednak sprawdzić, czy jest on rzeczywiście poprawnie sformułowany. Złośliwy klient może przesłać do usługi źle sformułowany format UTF-8. Jeśli te dane są używane w taki sposób, jakby były poprawnie sformułowane, może to spowodować błędy lub luki w zabezpieczeniach aplikacji. Aby sprawdzić poprawność danych UTF-8, można użyć metody takiej jak `Encoding.UTF8.GetString` , która przeprowadza walidację podczas konwertowania danych przychodzących na `string` .
 
 ### <a name="well-formed-encoding"></a>Poprawnie sformułowane kodowanie
 
@@ -351,13 +351,13 @@ Pytanie, czy sekwencja kodowania jest poprawnie sformułowana, czy nie jest niez
 
 Poniżej przedstawiono kilka przykładów niewłaściwie sformułowanych kodowań:
 
-* W UTF-8 sekwencja `[ 6C C2 61 ]` jest źle sformułowana, ponieważ `C2` nie może następować po `61`niej.
+* W UTF-8 sekwencja `[ 6C C2 61 ]` jest źle sformułowana, ponieważ `C2` nie może następować po niej `61` .
 
-* W UTF- `[ DC00 DD00 ]` 16, sekwencja (lub, w języku C#, string `"\udc00\udd00"`) jest źle sformułowana, ponieważ dolny Surogat `DC00` nie może następować po drugim dolnym surogatie. `DD00`
+* W UTF-16, sekwencja `[ DC00 DD00 ]` (lub, w języku C#, string `"\udc00\udd00"` ) jest źle sformułowana, ponieważ dolny Surogat `DC00` nie może następować po drugim dolnym surogatie `DD00` .
 
 * W UTF-32 sekwencja `[ 0011ABCD ]` jest źle sformułowana, ponieważ `0011ABCD` znajduje się poza zakresem wartości skalarnych Unicode.
 
-W programie .NET `string` wystąpienia prawie zawsze zawierają poprawnie sformułowane dane UTF-16, ale nie są one gwarantowane. W poniższych przykładach pokazano prawidłowy kod w języku C#, który tworzy nieprawidłowo sformułowane dane `string` UTF-16 w wystąpieniach.
+W programie .NET `string` wystąpienia prawie zawsze zawierają poprawnie sformułowane dane UTF-16, ale nie są one gwarantowane. W poniższych przykładach pokazano prawidłowy kod w języku C#, który tworzy nieprawidłowo sformułowane dane UTF-16 w `string` wystąpieniach.
 
 * Nieprawidłowo sformułowany literał:
 
@@ -372,7 +372,7 @@ W programie .NET `string` wystąpienia prawie zawsze zawierają poprawnie sformu
   string y = x.Substring(1, 1); // "\udd70" standalone low surrogate
   ```
 
-Interfejsy API [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) , takie jak nigdy nie `string` zwracają źle sformułowane wystąpienia. `Encoding.GetString`metody `Encoding.GetBytes` i wykrywają źle sformułowane sekwencje w danych wejściowych i wykonują podstawienie znaków podczas generowania danych wyjściowych. Jeśli [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) na przykład w danych wejściowych zostanie wyświetlony bajt inny niż ASCII (poza zakresem u + 0000.. u + 007F), wstawiany jest znak "?" w zwracanym `string` wystąpieniu. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A)zamienia źle sformułowane sekwencje UTF-8 `U+FFFD REPLACEMENT CHARACTER ('�')` z w zwracanym `string` wystąpieniu. Aby uzyskać więcej informacji, zobacz [standard Unicode](https://www.unicode.org/versions/latest/), sekcje 5,22 i 3,9.
+Interfejsy API, takie jak [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) nigdy nie zwracają źle sformułowane `string` wystąpienia. `Encoding.GetString``Encoding.GetBytes`metody i wykrywają źle sformułowane sekwencje w danych wejściowych i wykonują podstawienie znaków podczas generowania danych wyjściowych. Jeśli na przykład [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) w danych wejściowych zostanie wyświetlony bajt inny niż ASCII (poza zakresem u + 0000.. u + 007F), wstawiany jest znak "?" w zwracanym `string` wystąpieniu. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A)zamienia źle sformułowane sekwencje UTF-8 z `U+FFFD REPLACEMENT CHARACTER ('�')` w zwracanym `string` wystąpieniu. Aby uzyskać więcej informacji, zobacz [standard Unicode](https://www.unicode.org/versions/latest/), sekcje 5,22 i 3,9.
 
 Wbudowane `Encoding` klasy można również skonfigurować w taki sposób, aby zgłaszać wyjątek, a nie wykonywać podstawienia znaków, gdy widoczne są źle sformułowane sekwencje. Takie podejście jest często stosowane w aplikacjach z uwzględnieniem zabezpieczeń, w których podstawienie znaków może nie być akceptowalne.
 
@@ -384,9 +384,9 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 Aby uzyskać informacje o sposobach korzystania z wbudowanych `Encoding` klas, zobacz [jak używać klas kodowania znaków w programie .NET](character-encoding.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.String>
 - <xref:System.Char>
 - <xref:System.Text.Rune>
-- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)
+- [Globalizacja i lokalizacja](../globalization-localization/index.md)

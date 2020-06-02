@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7651360b375071c48ba0d23b64881ac794e51e86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709702"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282535"
 ---
 # <a name="xslt-parameters"></a>Parametry XSLT
 Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody using. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametru w tym czasie.  
@@ -38,7 +38,7 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:Syst
   
  * Jest to odpowiednik zestawu węzłów, który zawiera pojedynczy węzeł.  
   
- Jeśli obiekt parametru nie jest jedną z powyższych klas, jest konwertowany zgodnie z poniższymi regułami. Typy liczbowe środowiska uruchomieniowego języka wspólnego (CLR) są <xref:System.Double>konwertowane na. <xref:System.DateTime> Typ jest konwertowany na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable>typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. Element **XPathNavigator []** jest konwertowany <xref:System.Xml.XPath.XPathNodeIterator>na.  
+ Jeśli obiekt parametru nie jest jedną z powyższych klas, jest konwertowany zgodnie z poniższymi regułami. Typy liczbowe środowiska uruchomieniowego języka wspólnego (CLR) są konwertowane na <xref:System.Double> . <xref:System.DateTime>Typ jest konwertowany na <xref:System.String> . <xref:System.Xml.XPath.IXPathNavigable>typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator> . Element **XPathNavigator []** jest konwertowany na <xref:System.Xml.XPath.XPathNodeIterator> .  
   
  Wszystkie inne typy zgłaszają błąd.  
   
@@ -66,6 +66,6 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> <xref:Syst
 </order>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Przekształcenia XSLT](xslt-transformations.md)

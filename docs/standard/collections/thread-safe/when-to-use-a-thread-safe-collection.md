@@ -5,63 +5,63 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711223"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288878"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
-.NET Framework 4 wprowadza pięć nowych typów kolekcji, które są specjalnie zaprojektowane do obsługi operacji dodawania i usuwania wielowątkowych. Aby osiągnąć bezpieczeństwo wątków, te nowe typy używają różnego rodzaju wydajnych mechanizmów blokowania i synchronizacji bez blokady. Synchronizacja dodaje obciążenie do operacji. Ilość obciążenie zależy od rodzaju synchronizacji, który jest używany, rodzaj operacji, które są wykonywane i inne czynniki, takie jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
+W .NET Framework 4 wprowadzono pięć nowych typów kolekcji, które są specjalnie przeznaczone do obsługi operacji dodawania i usuwania wielowątkowych wątków. Aby zapewnić bezpieczeństwo wątków, te nowe typy wykorzystują różne rodzaje wydajnych mechanizmów synchronizacji i blokowania bez blokady. Synchronizacja dodaje narzuty do operacji. Ilość narzutów zależy od rodzaju używanej synchronizacji, rodzaju wykonywanych operacji oraz innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
   
- W niektórych scenariuszach obciążenie synchronizacji jest znikome i umożliwia typ wielowątkowy do wykonywania znacznie szybciej i skalować znacznie lepiej niż jego odpowiednik nie-wątku bezpieczne, gdy chronione przez blokadę zewnętrzną. W innych scenariuszach obciążenie może spowodować typu bezpiecznego dla wątków do wykonywania i skalowania o tym samym lub nawet wolniej niż zewnętrznie zablokowane, niewątkowo-bezpieczne wersji tego typu.  
+ W niektórych scenariuszach narzuty związane z synchronizacją są nieznaczne i umożliwiają znacznie szybszy i bardziej skalowalne skalowanie, w porównaniu z niebezpiecznym wątkem, w przypadku ochrony przez zewnętrzną blokadę. W innych scenariuszach narzuty mogą spowodować, że typ bezpieczny wątkowo będzie wykonywany i skalowalny na tym samym lub nawet wolniej niż zablokowana zewnętrznie, niezabezpieczona przed wątkiem wersja typu.  
   
- W poniższych sekcjach przedstawiono ogólne wskazówki dotyczące używania kolekcji bezpiecznej dla wątków w porównaniu z jego odpowiednikiem niebezpiecznym od wątków, który ma blokadę dostarczoną przez użytkownika wokół operacji odczytu i zapisu. Ponieważ wydajność może się różnić w zależności od wielu czynników, wskazówki nie są specyficzne i niekoniecznie są ważne we wszystkich okolicznościach. Jeśli wydajność jest bardzo ważna, najlepszym sposobem określenia typu kolekcji jest pomiar wydajności na podstawie reprezentatywnych konfiguracji i obciążeń komputera. W tym dokumencie użyto następujących terminów:  
+ W poniższych sekcjach znajdują się ogólne wskazówki dotyczące sytuacji, w których należy używać kolekcji bezpiecznej dla wątków, a jej bezwzględnie niebezpieczny wątek, która ma blokadę dostarczoną przez użytkownika wokół operacji odczytu i zapisu. Ze względu na to, że wydajność może się różnić w zależności od wielu czynników, wskazówki nie są specyficzne i nie zawsze są ważne we wszystkich okolicznościach. Jeśli wydajność jest bardzo ważna, najlepszym sposobem określenia typu kolekcji, który ma być używany, jest pomiar wydajności na podstawie konfiguracji i obciążeń na reprezentatywnym komputerze. W tym dokumencie są stosowane następujące warunki:  
   
- *Czysty scenariusz producent-konsument*  
- Każdy dany wątek jest dodawanie lub usuwanie elementów, ale nie oba.  
+ *Czysty scenariusz dla producentów*  
+ Każdy dany wątek dodaje lub usuwa elementy, ale nie oba.  
   
- *Mieszany scenariusz producent-konsument*  
- Każdy dany wątek jest zarówno dodawanie i usuwanie elementów.  
+ *Mieszany scenariusz dla klientów*  
+ Każdy dany wątek jednocześnie dodaje i usuwa elementy.  
   
  *Przyspieszenie*  
- Szybsza wydajność algorytmiczna w stosunku do innego typu w tym samym scenariuszu.  
+ Szybsza wydajność algorytmu względem innego typu w tym samym scenariuszu.  
   
  *Skalowalność*  
- Wzrost wydajności, który jest proporcjonalny do liczby rdzeni na komputerze. Algorytm, który skaluje się szybciej na ośmiu rdzeniach niż na dwóch rdzeniach.  
+ Zwiększenie wydajności, która jest proporcjonalna do liczby rdzeni na komputerze. Algorytm, który skaluje się szybciej na osiem rdzeni niż w przypadku dwóch rdzeni.  
   
-## <a name="concurrentqueuet-vs-queuet"></a>Kolejka współbieżna(T) a kolejka (T)  
- W scenariuszach czystego producenta-konsumenta, gdzie czas przetwarzania dla każdego elementu <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> jest bardzo mały <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> (kilka instrukcji), a następnie może zaoferować skromne korzyści wydajności w przypadku blokady zewnętrznej. W tym <xref:System.Collections.Concurrent.ConcurrentQueue%601> scenariuszu działa najlepiej, gdy jeden dedykowany wątek jest w kolejce i jeden dedykowany wątek jest de-kolejki. Jeśli ta reguła nie <xref:System.Collections.Generic.Queue%601> zostanie wymuszona, może nawet działać nieco szybciej niż <xref:System.Collections.Concurrent.ConcurrentQueue%601> na komputerach, które mają wiele rdzeni.  
+## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) a kolejka (T)  
+ W czystych scenariuszach dla producentów, w których czas przetwarzania dla każdego elementu jest bardzo mały (kilka instrukcji), a następnie <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> może oferować niewielkie korzyści z wydajności w porównaniu z <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> zewnętrznym zablokowaniem. W tym scenariuszu <xref:System.Collections.Concurrent.ConcurrentQueue%601> najlepiej sprawdza się w przypadku, gdy jeden dedykowany wątek jest kolejką, a jeden dedykowany wątek zostaje cofnięty. Jeśli ta reguła nie jest wymuszana, <xref:System.Collections.Generic.Queue%601> może to być nawet nieco szybsze niż <xref:System.Collections.Concurrent.ConcurrentQueue%601> na komputerach z wieloma rdzeniami.  
   
- Gdy czas przetwarzania wynosi około 500 FLOPS (operacje zmiennoprzecinkowe) lub więcej, to reguła dwuwątkowa nie ma zastosowania do <xref:System.Collections.Concurrent.ConcurrentQueue%601>, który następnie ma bardzo dobrą skalowalność. <xref:System.Collections.Generic.Queue%601>nie skalują się dobrze w tym scenariuszu.  
+ Gdy czas przetwarzania ma około 500 FLOPS (operacji zmiennoprzecinkowych) lub więcej, to reguła dwuwątkowa nie ma zastosowania do <xref:System.Collections.Concurrent.ConcurrentQueue%601> , który następnie ma bardzo dobrą skalowalność. <xref:System.Collections.Generic.Queue%601>nie skaluje się dobrze w tym scenariuszu.  
   
- W mieszanych scenariuszach producent-konsument, gdy czas <xref:System.Collections.Generic.Queue%601> przetwarzania jest bardzo mały, <xref:System.Collections.Concurrent.ConcurrentQueue%601> a, który ma zewnętrzną skalę blokady lepiej niż ma. Jednak gdy czas przetwarzania wynosi około 500 <xref:System.Collections.Concurrent.ConcurrentQueue%601> FLOPÓW lub więcej, waga jest lepsza.  
+ W mieszanych scenariuszach konsumenckich klientów, gdy czas przetwarzania jest bardzo mały, a, <xref:System.Collections.Generic.Queue%601> który ma blokadę zewnętrzną skalowalność <xref:System.Collections.Concurrent.ConcurrentQueue%601> . Jeśli jednak czas przetwarzania ma około 500 FLOPS lub więcej, wówczas <xref:System.Collections.Concurrent.ConcurrentQueue%601> skalowanie jest lepsze.  
   
-## <a name="concurrentstack-vs-stack"></a>ConcurrentStack kontra Stos  
- W scenariuszach czystego producenta-konsumenta, gdy czas <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> przetwarzania jest bardzo mały, a następnie i że ma blokadę zewnętrzną prawdopodobnie będzie wykonywać mniej więcej tyle samo z jednym dedykowanym wątku pchania i jeden dedykowany wątek popping. Jednak wraz ze wzrostem liczby wątków oba typy spowalniają z <xref:System.Collections.Generic.Stack%601> powodu zwiększonej <xref:System.Collections.Concurrent.ConcurrentStack%601>rywalizacji i mogą działać lepiej niż . Gdy czas przetwarzania wynosi około 500 FLOPÓw lub więcej, oba typy są skalowane z szybkością o tej samej szybkości.  
+## <a name="concurrentstack-vs-stack"></a>ConcurrentStack a stos  
+ W czystych scenariuszach z zakresu producentów, gdy czas przetwarzania jest bardzo mały, a w przypadku, gdy <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> ma ona blokadę zewnętrzną, prawdopodobnie zostanie wykonane o jednym dedykowanym wątku wypychania i jednym dedykowanym wątku usuwanie. Jednak w miarę wzrostu liczby wątków oba typy spowalniają działanie ze względu na zwiększoną rywalizację i <xref:System.Collections.Generic.Stack%601> mogą działać lepiej niż <xref:System.Collections.Concurrent.ConcurrentStack%601> . Gdy czas przetwarzania ma około 500 FLOPS lub więcej, wówczas oba typy skalują o tej samej stawce.  
   
- W mieszanych scenariuszach <xref:System.Collections.Concurrent.ConcurrentStack%601> producent-konsument jest szybszy zarówno dla małych, jak i dużych obciążeń.  
+ W mieszanych scenariuszach konsumenckich klientów program <xref:System.Collections.Concurrent.ConcurrentStack%601> jest szybszy dla małych i dużych obciążeń.  
   
- Korzystanie z <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> i <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> może znacznie przyspieszyć czas dostępu.  
+ Korzystanie z <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> i <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> może znacznie przyspieszyć czasy dostępu.  
   
-## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary vs. Słownik  
- Ogólnie rzecz biorąc <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> należy użyć w każdym scenariuszu, w którym są dodawanie i aktualizowanie kluczy lub wartości jednocześnie z wielu wątków. W scenariuszach, które obejmują częste aktualizacje i stosunkowo niewiele odczytów, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zazwyczaj oferuje skromne korzyści. W scenariuszach, które obejmują wiele <xref:System.Collections.Concurrent.ConcurrentDictionary%602> odczytów i wiele aktualizacji, zazwyczaj jest znacznie szybciej na komputerach, które mają dowolną liczbę rdzeni.  
+## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary a słownik  
+ Ogólnie rzecz biorąc, należy użyć <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> w dowolnym scenariuszu, w którym są dodawane i aktualizowane klucze lub wartości jednocześnie z wielu wątków. W scenariuszach, które obejmują częste aktualizacje i stosunkowo kilka operacji odczytu, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zazwyczaj oferują one niewielkie korzyści. W scenariuszach obejmujących wiele operacji odczytu i wielu aktualizacji <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zwykle jest to znacznie szybsze na komputerach, które mają dowolną liczbę rdzeni.  
   
- W scenariuszach, które obejmują częste aktualizacje, można <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zwiększyć stopień współbieżności w, a następnie zmierzyć, aby zobaczyć, czy zwiększa wydajność na komputerach, które mają więcej rdzeni. Jeśli zmienisz poziom współbieżności, należy unikać operacji globalnych, jak to możliwe.  
+ W scenariuszach, które obejmują częste aktualizacje, można zwiększyć stopień współbieżności w, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> a następnie mierzyć, aby sprawdzić, czy wydajność rośnie na komputerach, które mają więcej rdzeni. Jeśli zmienisz poziom współbieżności, unikaj operacji globalnych tak często, jak to możliwe.  
   
- Jeśli czytasz tylko klucz <xref:System.Collections.Generic.Dictionary%602> lub wartości, jest szybsze, ponieważ synchronizacja nie jest wymagana, jeśli słownik nie jest modyfikowany przez żadne wątki.  
+ W przypadku odczytywania tylko klucza lub wartości, <xref:System.Collections.Generic.Dictionary%602> jest to szybsze, ponieważ nie jest wymagana żadna synchronizacja, jeśli słownik nie jest modyfikowany przez żadne wątki.  
   
-## <a name="concurrentbag"></a>Concurrentbag  
- W scenariuszach czystego producenta-konsumenta, <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> prawdopodobnie będzie działać wolniej niż inne typy kolekcji równoczesnych.  
+## <a name="concurrentbag"></a>Obiekt ConcurrentBag  
+ W czystych scenariuszach z zakresu producentów klient <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> prawdopodobnie przestanie działać wolniej niż inne współbieżne typy kolekcji.  
   
- W mieszanych scenariuszach <xref:System.Collections.Concurrent.ConcurrentBag%601> producent-konsument jest zazwyczaj znacznie szybszy i bardziej skalowalny niż jakikolwiek inny typ kolekcji jednocześnie dla dużych i małych obciążeń.  
+ W mieszanych scenariuszach konsumenckich klientów <xref:System.Collections.Concurrent.ConcurrentBag%601> jest to znacznie szybsze i bardziej skalowalne niż każdy inny typ kolekcji współbieżnej dla dużych i małych obciążeń.  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
- Gdy wymagane są ograniczające i blokujące <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> semantyki, prawdopodobnie będzie działać szybciej niż implementacja niestandardowa. Obsługuje również rozbudowane anulowanie, wyliczenie i obsługę wyjątków.  
+ Gdy wymagane są semantyki ograniczania i blokowania, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> prawdopodobnie będą wykonywane szybciej niż Każda implementacja niestandardowa. Obsługuje ona również rozbudowane anulowanie, Wyliczanie i obsługę wyjątków.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)
-- [Programowanie równoległe](../../../../docs/standard/parallel-programming/index.md)
+- [Kolekcje bezpieczne dla wątków](index.md)
+- [Programowanie równoległe](../../parallel-programming/index.md)

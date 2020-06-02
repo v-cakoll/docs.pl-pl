@@ -9,47 +9,47 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139308"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289723"
 ---
 # <a name="how-to-implement-an-observer"></a>Porady: implementowanie obserwatora
-Wzorzec projektowania obserwatora wymaga podziału między obserwatora, który rejestruje powiadomienia, a dostawcą, który monitoruje dane i wysyła powiadomienia do jednego lub więcej obserwatorów. W tym temacie omówiono sposób tworzenia obserwatora. Temat pokrewny, [Jak: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md), omówiono sposób tworzenia dostawcy.  
+Wzorzec projektowy obserwatora wymaga podziału między obserwatorem, który rejestruje powiadomienia i dostawca, który monitoruje dane i wysyła powiadomienia do jednego lub kilku obserwatorów. W tym temacie omówiono sposób tworzenia obserwatora. Pokrewny temat, [jak: implementowanie dostawcy](how-to-implement-a-provider.md), omawia sposób tworzenia dostawcy.  
   
 ### <a name="to-create-an-observer"></a>Aby utworzyć obserwatora  
   
-1. Zdefiniuj obserwatora, który <xref:System.IObserver%601?displayProperty=nameWithType> jest typem, który implementuje interfejs. Na przykład poniższy kod definiuje typ `TemperatureReporter` o nazwie, który jest skonstruowaną <xref:System.IObserver%601?displayProperty=nameWithType> implementacją z argumentem typu ogólnego . `Temperature`  
+1. Zdefiniuj obserwatora, który jest typem, który implementuje <xref:System.IObserver%601?displayProperty=nameWithType> interfejs. Na przykład poniższy kod definiuje typ o nazwie `TemperatureReporter` , który jest konstruowaną <xref:System.IObserver%601?displayProperty=nameWithType> implementacją z argumentem typu ogólnego `Temperature` .  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#8)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#8)]  
   
-2. Jeśli obserwator może przestać odbierać powiadomienia, <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> zanim dostawca wywołuje jego implementacji, należy zdefiniować zmienną prywatną, która będzie przechowywać <xref:System.IDisposable> implementacji zwrócone przez <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> metodę dostawcy. Należy również zdefiniować metodę subskrypcji, która <xref:System.IObservable%601.Subscribe%2A> wywołuje metodę dostawcy <xref:System.IDisposable> i przechowuje zwrócony obiekt. Na przykład poniższy kod definiuje zmienną `unsubscriber` prywatną `Subscribe` o nazwie i definiuje <xref:System.IObservable%601.Subscribe%2A> metodę, która wywołuje metodę `unsubscriber` dostawcy i przypisuje zwrócony obiekt do zmiennej.  
+2. Jeśli obserwator może zrezygnować z otrzymywania powiadomień, zanim dostawca wywoła jego <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> implementację, zdefiniuj zmienną prywatną, która będzie przechowywać <xref:System.IDisposable> implementację zwróconą przez <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> metodę dostawcy. Należy również zdefiniować metodę subskrypcji, która wywołuje <xref:System.IObservable%601.Subscribe%2A> metodę dostawcy i zapisuje zwracany <xref:System.IDisposable> obiekt. Na przykład poniższy kod definiuje zmienną prywatną o nazwie `unsubscriber` i definiuje `Subscribe` metodę, która wywołuje <xref:System.IObservable%601.Subscribe%2A> metodę dostawcy i przypisuje zwracany obiekt do `unsubscriber` zmiennej.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#9)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#9)]  
   
-3. Zdefiniuj metodę, która umożliwia obserwatorowi zaprzestanie <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> odbierania powiadomień, zanim dostawca wywołuje jego implementację, jeśli ta funkcja jest wymagana. Poniższy przykład definiuje `Unsubscribe` metodę.  
+3. Zdefiniuj metodę, która umożliwia obserwatorowi zatrzymanie otrzymywania powiadomień, zanim dostawca wywoła jego <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> implementację, jeśli ta funkcja jest wymagana. W poniższym przykładzie zdefiniowano `Unsubscribe` metodę.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#10)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#10)]  
   
-4. Podaj implementacje trzech metod <xref:System.IObserver%601> zdefiniowanych <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>przez <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>interfejs: <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, , i . W zależności od dostawcy i potrzeb aplikacji <xref:System.IObserver%601.OnError%2A> <xref:System.IObserver%601.OnCompleted%2A> i metody mogą być implementacje skrótowe. Należy zauważyć, <xref:System.IObserver%601.OnError%2A> że metoda <xref:System.Exception> nie powinna obsługiwać przekazany <xref:System.IObserver%601.OnCompleted%2A> obiekt jako wyjątek, a <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metoda jest swobodnie wywołać implementacji dostawcy. W poniższym <xref:System.IObserver%601> przykładzie przedstawiono `TemperatureReporter` implementację klasy.  
+4. Podaj implementacje trzech metod zdefiniowanych przez <xref:System.IObserver%601> Interfejs: <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> , <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> , i <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> . W zależności od dostawcy i potrzeb aplikacji <xref:System.IObserver%601.OnError%2A> <xref:System.IObserver%601.OnCompleted%2A> metody i mogą być implementacjami zastępczymi. Należy zauważyć, że <xref:System.IObserver%601.OnError%2A> Metoda nie powinna obsłużyć pożądanego <xref:System.Exception> obiektu jako wyjątek, a <xref:System.IObserver%601.OnCompleted%2A> Metoda jest bezpłatna do wywołania <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji dostawcy. W poniższym przykładzie przedstawiono <xref:System.IObserver%601> implementację `TemperatureReporter` klasy.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#11)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera kompletny kod `TemperatureReporter` źródłowy dla <xref:System.IObserver%601> klasy, który zapewnia implementację dla aplikacji monitorowania temperatury.  
+ Poniższy przykład zawiera kompletny kod źródłowy dla `TemperatureReporter` klasy, który zapewnia <xref:System.IObserver%601> implementację aplikacji monitorującej temperatury.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IObserver%601>
-- [Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)
-- [Instrukcje: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [Wzorzec projektowy obserwatora — Najlepsze praktyki](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [Wzorzec projektowy obserwatora](observer-design-pattern.md)
+- [Instrukcje: implementowanie dostawcy](how-to-implement-a-provider.md)
+- [Wzorzec projektowy obserwatora — Najlepsze praktyki](observer-design-pattern-best-practices.md)

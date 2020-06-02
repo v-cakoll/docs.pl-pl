@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: Jak pisać konwertery niestandardowe na potrzeby serializacji JSON — .NET
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703611"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279766"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Jak pisać konwertery niestandardowe na potrzeby serializacji JSON (kierowanie) w programie .NET
 
@@ -26,7 +31,7 @@ Możesz również napisać niestandardowe konwertery, aby dostosować lub zwięk
 * [Deserializacja wywnioskowanych typów do właściwości obiektu](#deserialize-inferred-types-to-object-properties).
 * [Obsługa słownika z kluczem niebędącym ciągiem](#support-dictionary-with-non-string-key).
 * [Obsługa deserializacji polimorficznej](#support-polymorphic-deserialization).
-* [Obsługa rundy dla stosu \< T>](#support-round-trip-for-stackt).
+* [Obsługa rundy dla stosu \<T> ](#support-round-trip-for-stackt).
 
 ## <a name="custom-converter-patterns"></a>Wzorce niestandardowego konwertera
 
@@ -44,7 +49,7 @@ Niektóre przykłady typów, które mogą być obsługiwane przez wzorzec Basic,
 * `DateTime`
 * `Int32`
 
-Wzorzec podstawowy tworzy klasę, która może obsługiwać jeden typ. Wzorzec fabryki tworzy klasę, która określa w czasie wykonywania, który określony typ jest wymagany i dynamicznie tworzy odpowiedni konwerter.
+Wzorzec podstawowy tworzy klasę, która może obsługiwać jeden typ. Wzorzec fabryki tworzy klasę, która określa, w czasie wykonywania, który określony typ jest wymagany i dynamicznie tworzy odpowiedni konwerter.
 
 ## <a name="sample-basic-converter"></a>Przykładowy konwerter podstawowy
 
@@ -175,7 +180,7 @@ Poniższe sekcje zawierają przykłady konwerterów, które dotyczą niektórych
 * [Deserializacja wywnioskowanych typów do właściwości obiektu](#deserialize-inferred-types-to-object-properties)
 * [Obsługa słownika z kluczem niebędącym ciągiem](#support-dictionary-with-non-string-key)
 * [Obsługa deserializacji polimorficzna](#support-polymorphic-deserialization)
-* [Obsługa rundy dla stosu \< T>](#support-round-trip-for-stackt).
+* [Obsługa rundy dla stosu \<T> ](#support-round-trip-for-stackt).
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Deserializacja wywnioskowanych typów do właściwości obiektu
 
@@ -283,7 +288,7 @@ Konwerter może deserializować kod JSON, który został utworzony przy użyciu 
 
 Kod konwertera w poprzednim przykładzie odczytuje i zapisuje każdą właściwość ręcznie. Alternatywą jest wywołanie `Deserialize` lub `Serialize` wykonanie niektórych zadań. Aby zapoznać się z przykładem, zobacz [ten StackOverflow post](https://stackoverflow.com/a/59744873/12509023).
 
-### <a name="support-round-trip-for-stackt"></a>Obsługa rundy dla \<> stosu T
+### <a name="support-round-trip-for-stackt"></a>Obsługa rundy dla stosu\<T>
 
 W przypadku deserializacji ciągu JSON do <xref:System.Collections.Generic.Stack%601> obiektu, a następnie serializacji tego obiektu, zawartość stosu jest w odwrotnej kolejności. To zachowanie dotyczy następujących typów i interfejsów oraz typów zdefiniowanych przez użytkownika, które pochodzą z nich:
 
@@ -312,7 +317,7 @@ Następujący kod rejestruje konwerter:
 * [Konwerter Int32, który konwertuje wartość null na wartość 0 podczas deserializacji](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
 * [Konwerter Int32, który zezwala na wartości typu String i Number przy deserializacji](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Konwerter wyliczenia](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
-* [\<Konwerter listy T>, który akceptuje dane zewnętrzne](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [\<T>Konwerter listy akceptujący dane zewnętrzne](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
 * [Długi konwerter [], który działa z rozdzielaną przecinkami listą liczb](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Jeśli musisz utworzyć konwerter, który modyfikuje zachowanie istniejącego wbudowanego konwertera, możesz uzyskać [kod źródłowy istniejącego konwertera](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) , który będzie używany jako punkt wyjścia do dostosowania.

@@ -1,13 +1,14 @@
 ---
 title: Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server
+description: Dowiedz się, jak ograniczyć dostęp do obiektów danych i baz danych, implementując dostęp za pomocą procedur składowanych lub funkcji zdefiniowanych przez użytkownika.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286291"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server
 Jedną z metod tworzenia wielu wierszy obrony bazy danych jest zaimplementowanie całego dostępu do danych za pomocą procedur składowanych lub funkcji zdefiniowanych przez użytkownika. Wszystkie uprawnienia do obiektów bazowych, takie jak tabele, są odwoływane lub odrzucane. Dzięki temu powstaje obwód zabezpieczeń wokół obiektów danych i baz danych.  
@@ -37,11 +38,11 @@ Jedną z metod tworzenia wielu wierszy obrony bazy danych jest zaimplementowanie
   
 - Przyznaj uprawnienia do wykonywania w procedurach składowanych dla ról bazy danych, które mają mieć możliwość uzyskiwania dostępu do danych.  
   
-- Odwołaj lub Odmów wszystkich uprawnień do odpowiednich tabel dla wszystkich ról i użytkowników w bazie danych, w tym roli `public`. Wszyscy użytkownicy dziedziczą uprawnienia od publicznego. W związku z tym odmowa uprawnień do `public` oznacza, że tylko właściciele i członkowie `sysadmin` mają dostęp; Wszyscy inni użytkownicy nie będą mogli dziedziczyć uprawnień z członkostwa w innych rolach.  
+- Odwołaj lub Odmów wszystkich uprawnień do odpowiednich tabel dla wszystkich ról i użytkowników w bazie danych, w tym `public` roli. Wszyscy użytkownicy dziedziczą uprawnienia od publicznego. W związku z tym odmowa uprawnień `public` oznacza, że tylko właściciele i `sysadmin` członkowie mają dostęp; wszyscy inni użytkownicy nie będą mogli odziedziczyć uprawnień z członkostwa w innych rolach.  
   
-- Nie należy dodawać użytkowników ani ról do ról `sysadmin` ani `db_owner`. Administratorzy systemu i właściciele baz danych mogą uzyskać dostęp do wszystkich obiektów bazy danych.  
+- Nie należy dodawać użytkowników ani ról do `sysadmin` ról lub `db_owner` . Administratorzy systemu i właściciele baz danych mogą uzyskać dostęp do wszystkich obiektów bazy danych.  
   
-- Wyłącz konto `guest`. Uniemożliwi to anonimowym użytkownikom łączenie się z bazą danych. Konto gościa jest domyślnie wyłączone w nowych bazach danych.  
+- Wyłącz `guest` konto. Uniemożliwi to anonimowym użytkownikom łączenie się z bazą danych. Konto gościa jest domyślnie wyłączone w nowych bazach danych.  
   
 - Zaimplementuj obsługę błędów i Rejestruj błędy.  
   
@@ -56,7 +57,7 @@ Jedną z metod tworzenia wielu wierszy obrony bazy danych jest zaimplementowanie
 |--------------|-----------------|  
 |[Procedury składowane](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) i [iniekcja kodu SQL](/sql/relational-databases/security/sql-injection)|Artykuły opisują sposób tworzenia procedur składowanych i sposobu działania iniekcji języka SQL.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
 - [Przegląd zabezpieczeń serwera SQL](overview-of-sql-server-security.md)

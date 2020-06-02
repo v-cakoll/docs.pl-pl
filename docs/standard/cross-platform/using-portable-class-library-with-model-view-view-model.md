@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123678"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288852"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Korzystanie z przenośnej biblioteki klas w połączeniu z modelem Model-View-View Model
-Za pomocą [przenośnej biblioteki klas](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) .NET Framework można zaimplementować wzorzec Model-View-View Model (MVVM) i udostępnić zestawy na wielu platformach.
+Za pomocą [przenośnej biblioteki klas](cross-platform-development-with-the-portable-class-library.md) .NET Framework można zaimplementować wzorzec Model-View-View Model (MVVM) i udostępnić zestawy na wielu platformach.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
@@ -50,14 +50,14 @@ Za pomocą [przenośnej biblioteki klas](../../../docs/standard/cross-platform/c
 
 - Klasa <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
-- Wszystkie klasy w przestrzeni nazw <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
+- Wszystkie klasy w <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> przestrzeni nazw
 
 ## <a name="implementing-mvvm"></a>Implementowanie MVVM
  Aby zaimplementować MVVM, zazwyczaj tworzysz model i model widoku w projekcie biblioteki klas przenośnych, ponieważ projekt biblioteki klas przenośnych nie może odwoływać się do projektu nieprzenośnego. Model i model widoku mogą znajdować się w tym samym projekcie lub w oddzielnych projektach. Jeśli używasz oddzielnych projektów, Dodaj odwołanie z projektu modelu widoku do projektu modelu.
 
  Po skompilowaniu modelu i wyświetleniu projektów modelu należy odwołać się do tych zestawów w aplikacji, która zawiera widok. Jeśli widok współdziała tylko z modelem widoku, trzeba tylko odwołać się do zestawu, który zawiera model widoku.
 
-### <a name="model"></a>Modelowanie
+### <a name="model"></a>Model
  W poniższym przykładzie przedstawiono uproszczoną klasę modelu, która może znajdować się w projekcie biblioteki klas przenośnych.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -74,7 +74,7 @@ Za pomocą [przenośnej biblioteki klas](../../../docs/standard/cross-platform/c
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- Implementacja interfejsu <xref:System.Windows.Input.ICommand> jest często używana ze wzorcem MVVM. W poniższym przykładzie przedstawiono implementację interfejsu <xref:System.Windows.Input.ICommand>.
+ Implementacja <xref:System.Windows.Input.ICommand> interfejsu jest często używana ze wzorcem MVVM. Poniższy przykład pokazuje implementację <xref:System.Windows.Input.ICommand> interfejsu.
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
@@ -89,6 +89,6 @@ Za pomocą [przenośnej biblioteki klas](../../../docs/standard/cross-platform/c
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka klas przenośnych](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Biblioteka klas przenośnych](cross-platform-development-with-the-portable-class-library.md)

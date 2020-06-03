@@ -1,6 +1,6 @@
 ---
-title: Jak utworzyć wyjątki zdefiniowane przez użytkownika z zlokalizowanymi komunikatami o wyjątkach
-description: Dowiedz się, jak tworzyć wyjątki zdefiniowane przez użytkownika za pomocą zlokalizowanych komunikatów o wyjątkach
+title: Jak utworzyć wyjątki zdefiniowane przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach
+description: Dowiedz się, jak tworzyć zdefiniowane przez użytkownika wyjątki przy użyciu zlokalizowanych komunikatów o wyjątkach
 author: Youssef1313
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243352"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Jak utworzyć wyjątki zdefiniowane przez użytkownika z zlokalizowanymi komunikatami o wyjątkach
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Jak utworzyć wyjątki zdefiniowane przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach
 
-W tym artykule dowiesz się, jak utworzyć wyjątki zdefiniowane <xref:System.Exception> przez użytkownika, które są dziedziczone z klasy podstawowej z zlokalizowanych komunikatów wyjątków przy użyciu zestawów satelitarnych.
+W tym artykule opisano sposób tworzenia wyjątków zdefiniowanych przez użytkownika, które są dziedziczone z <xref:System.Exception> klasy podstawowej ze zlokalizowanymi komunikatami o wyjątkach przy użyciu zestawów satelickich.
 
 ## <a name="create-custom-exceptions"></a>Tworzenie wyjątków niestandardowych
 
-.NET zawiera wiele różnych wyjątków, których można użyć. Jednak w niektórych przypadkach, gdy żaden z nich nie spełnia Twoich potrzeb, można utworzyć własne wyjątki niestandardowe.
+Platforma .NET zawiera wiele różnych wyjątków, których można użyć. Jednak w niektórych przypadkach, gdy żaden z nich nie spełnia Twoich potrzeb, można utworzyć własne wyjątki niestandardowe.
 
-Załóżmy, `StudentNotFoundException` że chcesz utworzyć, `StudentName` który zawiera właściwość.
+Załóżmy, że chcesz utworzyć element `StudentNotFoundException` , który zawiera `StudentName` Właściwość.
 Aby utworzyć wyjątek niestandardowy, wykonaj następujące kroki:
 
-1. Utwórz klasę serializowalną, która dziedziczy po <xref:System.Exception>pliku . Nazwa klasy powinna kończyć się na "Wyjątek":
+1. Utwórz klasę z możliwością serializacji, która dziedziczy po elemencie <xref:System.Exception> . Nazwa klasy powinna kończyć się znakiem "Exception":
 
     ```csharp
     [Serializable]
@@ -38,7 +38,7 @@ Aby utworzyć wyjątek niestandardowy, wykonaj następujące kroki:
     End Class
     ```
 
-1. Dodaj domyślne konstruktory:
+1. Dodaj konstruktory domyślne:
 
     ```csharp
     [Serializable]
@@ -123,7 +123,7 @@ Aby utworzyć wyjątek niestandardowy, wykonaj następujące kroki:
 
 ## <a name="create-localized-exception-messages"></a>Tworzenie zlokalizowanych komunikatów o wyjątkach
 
-Utworzono wyjątek niestandardowy i można go zgłosić w dowolnym miejscu z kodem, jak poniżej:
+Utworzono wyjątek niestandardowy i można go zgłosić w dowolnym miejscu przy użyciu kodu w następujący sposób:
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,24 +133,24 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-Problem z poprzednim wierszem `"The student cannot be found."` jest to, że jest tylko stały ciąg. W zlokalizowane aplikacji, które mają mieć różne komunikaty w zależności od kultury użytkownika.
-[Zestawy satelitarne](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) są dobrym sposobem, aby to zrobić. Zestaw satelicki to biblioteka dll zawierająca zasoby dla określonego języka. Gdy poprosisz o określone zasoby w czasie wykonywania, środowisko CLR wyszukuje ten zasób w zależności od kultury użytkownika. Jeśli nie znaleziono zestawu satelickiego dla tej kultury, zasoby kultury domyślnej są używane.
+Problem z poprzednim wierszem jest `"The student cannot be found."` tylko stałym ciągiem. W zlokalizowanej aplikacji chcesz mieć różne komunikaty w zależności od kultury użytkownika.
+[Zestawy satelickie](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) to dobry sposób na to. Zestaw satelicki to plik dll, który zawiera zasoby dla określonego języka. Po poproszeniu określonych zasobów w czasie wykonywania środowisko CLR znajdzie ten zasób w zależności od kultury użytkownika. Jeśli nie odnaleziono zestawu satelickiego dla tej kultury, używane są zasoby domyślnej kultury.
 
-Aby utworzyć zlokalizowane komunikaty wyjątków:
+Aby utworzyć zlokalizowane komunikaty o wyjątkach:
 
-1. Utwórz nowy folder o nazwie *Zasoby* do przechowywania plików zasobów.
-1. Dodaj do niego nowy plik zasobów. Aby to zrobić w programie Visual Studio, kliknij prawym przyciskiem myszy folder w **Eksploratorze rozwiązań**i wybierz polecenie **Dodaj** > **nowy plik zasobów****elementów** > . Nazwij plik *ExceptionMessages.resx*. Jest to domyślny plik zasobów.
-1. Dodaj parę nazwa/wartość dla wiadomości o wyjątku, na przykład na poniższej ilustracji:
+1. Utwórz nowy folder o nazwie *resources* , aby przechowywać pliki zasobów.
+1. Dodaj do niego nowy plik zasobów. Aby to zrobić w programie Visual Studio, kliknij prawym przyciskiem myszy folder w **Eksplorator rozwiązań**i wybierz polecenie **Dodaj**  >  **nowy element**  >  **zasobów**elementu. Nazwij plik *ExceptionMessages. resx*. Jest to domyślny plik zasobów.
+1. Dodaj parę nazwa/wartość dla komunikatu o wyjątku, jak pokazano na poniższej ilustracji:
 
-   ![Dodawanie zasobów do kultury domyślnej](media/add-resources-to-default-culture.jpg)
+   ![Dodaj zasoby do domyślnej kultury](media/add-resources-to-default-culture.jpg)
 
-1. Dodaj nowy plik zasobów dla języka francuskiego. Nazwij go *ExceptionMessages.fr-FR.resx*.
-1. Dodaj ponownie parę nazwa/wartość dla komunikatu o wyjątku, ale z wartością francuską:
+1. Dodaj nowy plik zasobów dla języka francuskiego. Nadaj mu nazwę *ExceptionMessages.fr-fr. resx*.
+1. Ponownie Dodaj parę nazwa/wartość dla komunikatu o wyjątku, ale z wartością francuską:
 
    ![Dodawanie zasobów do kultury fr-FR](media/add-resources-to-fr-culture.jpg)
 
-1. Po utworzeniu projektu folder wyjściowy kompilacji powinien zawierać folder *fr-FR* z plikiem *.dll,* który jest zestawem satelickiego.
-1. Zgłaszasz wyjątek z kodem następującym:
+1. Po skompilowaniu projektu folder wyjściowy kompilacji powinien zawierać folder *fr-fr* z plikiem *dll* , który jest zestawem satelickim.
+1. Należy zgłosić wyjątek z kodem podobnym do następującego:
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QUALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
@@ -163,7 +163,7 @@ Aby utworzyć zlokalizowane komunikaty wyjątków:
     ```
 
     > [!NOTE]
-    > Jeśli nazwa projektu `TestProject` jest i plik zasobów *ExceptionMessages.resx* znajduje się w folderze *Zasoby* projektu, `TestProject.Resources.ExceptionMessages`w pełni kwalifikowana nazwa pliku zasobu jest .
+    > Jeśli nazwa projektu to, `TestProject` a plik zasobów *ExceptionMessages. resx* znajduje się w folderze *resources* projektu, w pełni kwalifikowana nazwa pliku zasobów to `TestProject.Resources.ExceptionMessages` .
 
 ## <a name="see-also"></a>Zobacz też
 

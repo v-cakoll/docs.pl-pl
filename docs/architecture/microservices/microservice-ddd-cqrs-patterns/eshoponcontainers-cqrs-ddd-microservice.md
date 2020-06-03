@@ -2,12 +2,12 @@
 title: Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze sposobem, w jaki CQRS jest zaimplementowany w mikrousłudze porządkowania w eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144282"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306945"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Zastosuj podejścia CQRS i CQS w mikrousłudze DDD w eShopOnContainers
 
@@ -27,9 +27,9 @@ Jak pokazano na rysunku 7-2 w poprzedniej sekcji, ten przewodnik sugeruje użyci
 
 W celu zaimplementowania "strony zapytania" można wybrać między wieloma podejściami, z rozwiniętą ORM, takich jak EF Core, projekcje automapowania, procedury składowane, widoki, widoki z materiałami lub mikro ORM.
 
-W tym przewodniku i w eShopOnContainers (w odróżnieniu od mikrousługi porządkowania) wprowadziliśmy proste zapytania przy użyciu mikroorm, takiego jak [Dapper](https://github.com/StackExchange/dapper-dot-net). Dzięki temu można zaimplementować dowolne zapytanie w oparciu o instrukcje SQL, aby uzyskać najlepszą wydajność, dzięki czemu środowisko lekkie z bardzo małym obciążeniem.
+W tym przewodniku i w eShopOnContainers (w odróżnieniu od mikrousługi porządkowania) wprowadziliśmy proste zapytania przy użyciu mikroorm, takiego jak [Dapper](https://github.com/StackExchange/dapper-dot-net). Pozwala to na zaimplementowanie dowolnego zapytania opartego na instrukcjach SQL, aby uzyskać najlepszą wydajność, dzięki czemu środowisko lekkie z małym obciążeniem.
 
-Należy pamiętać, że w przypadku korzystania z tej metody wszystkie aktualizacje modelu, które mają wpływ na sposób utrwalania jednostek w usłudze SQL Database, wymagają również oddzielnych aktualizacji zapytań SQL używanych przez Dapper lub innych oddzielnych metod (innych niż EF) do wykonywania zapytań.
+Korzystając z tego podejścia, wszelkie aktualizacje modelu, które mają wpływ na sposób utrwalania jednostek w usłudze SQL Database, wymagają również oddzielnych aktualizacji zapytań SQL używanych przez Dapper lub innych oddzielnych (nieef) metod wykonywania zapytań.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>Wzorce CQRS i DDD nie są architekturami najwyższego poziomu
 

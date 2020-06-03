@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: e2e25dcfff759d68087006b63544bf688798c029
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286083"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307075"
 ---
 # <a name="background-garbage-collection"></a>Odzyskiwanie pamięci w tle
 
@@ -39,11 +39,11 @@ Odzyskiwanie pamięci serwera w tle działa podobnie do wyrzucania elementów be
 
 Na poniższej ilustracji przedstawiono wyrzucanie elementów bezużytecznych *stacji roboczej* w tle wykonywane w osobnym, dedykowanym wątku:
 
-![Wyrzucanie elementów bezużytecznych stacji roboczej](./media/fundamentals/background-workstation-garbage-collection.png)
+![Wyrzucanie elementów bezużytecznych stacji roboczej](media/fundamentals/background-workstation-garbage-collection.png)
 
 Na poniższej ilustracji przedstawiono wyrzucanie elementów bezużytecznych *serwera* w tle wykonywane w oddzielnych, dedykowanych wątkach:
 
-![Odzyskiwanie pamięci serwera w tle](./media/fundamentals/background-server-garbage-collection.png)
+![Odzyskiwanie pamięci serwera w tle](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Jednoczesne wyrzucanie elementów bezużytecznych
 
@@ -63,9 +63,9 @@ Współbieżne wyrzucanie elementów bezużytecznych jest wykonywane w ramach de
 
 Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezużytecznych wykonywane w osobnym dedykowanym wątku.
 
-![Współbieżne wątki odzyskiwania pamięci](./media/gc-concurrent.png)
+![Współbieżne wątki odzyskiwania pamięci](media/gc-concurrent.png)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Stacja robocza i odzyskiwanie pamięci serwera](workstation-server-gc.md)
 - [Opcje konfiguracji czasu wykonywania dla wyrzucania elementów bezużytecznych](../../core/run-time-config/garbage-collector.md)

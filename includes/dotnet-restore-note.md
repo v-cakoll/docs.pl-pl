@@ -6,8 +6,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2020
 ms.locfileid: "82102748"
 ---
-Nie trzeba uruchamiać, [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) ponieważ jest uruchamiany niejawnie przez wszystkie polecenia, które `dotnet new` `dotnet build`wymagają `dotnet run` `dotnet test`przywrócenia, takie jak , , , , `dotnet publish`i `dotnet pack`. Aby wyłączyć niejawne `--no-restore` przywracanie, użyj tej opcji.
+Nie trzeba uruchamiać programu [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) , ponieważ jest on uruchamiany niejawnie przez wszystkie polecenia, które wymagają wykonania przywracania, takie jak,,,, `dotnet new` `dotnet build` `dotnet run` `dotnet test` `dotnet publish` i `dotnet pack` . Aby wyłączyć Przywracanie niejawne, użyj `--no-restore` opcji.
 
-Polecenie `dotnet restore` jest nadal przydatne w niektórych scenariuszach, w których jawnie przywracanie ma sens, takie jak [kompilacje ciągłej integracji w usługach Azure DevOps](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) lub w systemach kompilacji, które muszą jawnie kontrolować, gdy nastąpi przywracanie.
+`dotnet restore`Polecenie jest nadal przydatne w niektórych scenariuszach, w których jawne jest przywracanie, takie jak [kompilacje ciągłej integracji w Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) lub w systemach kompilacji, które muszą jawnie kontrolować po wystąpieniu przywracania.
 
-Aby uzyskać informacje dotyczące zarządzania źródłami danych NuGet, zobacz [ `dotnet restore` dokumentację](../docs/core/tools/dotnet-restore.md).
+Informacje o sposobach zarządzania źródłami danych NuGet znajdują się w [ `dotnet restore` dokumentacji](../docs/core/tools/dotnet-restore.md).

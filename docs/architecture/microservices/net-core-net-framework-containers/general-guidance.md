@@ -2,18 +2,18 @@
 title: Wskazówki ogólne
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Ogólne wskazówki
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144568"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306880"
 ---
 # <a name="general-guidance"></a>Wskazówki ogólne
 
 Ta sekcja zawiera podsumowanie, kiedy należy wybrać platformę .NET Core lub .NET Framework. Więcej informacji o tych opcjach znajduje się w poniższych sekcjach.
 
-Należy używać platformy .NET Core z kontenerami systemu Linux lub Windows dla aplikacji serwera platformy Docker, gdy:
+Użyj programu .NET Core z kontenerami systemu Linux lub Windows dla aplikacji serwera platformy Docker w przypadku:
 
 - Wymagania dotyczące wielu platform. Na przykład chcesz użyć kontenerów systemów Linux i Windows.
 
@@ -25,7 +25,7 @@ W krótkim czasie podczas tworzenia nowych kontenerów aplikacji .NET należy ro
 
 Dodatkową zaletą korzystania z platformy .NET Core jest możliwość uruchamiania równoległych wersji platformy .NET dla aplikacji znajdujących się na tym samym komputerze. Ta korzyść jest bardziej ważna w przypadku serwerów lub maszyn wirtualnych, które nie korzystają z kontenerów, ponieważ kontenery izolują wersje programu .NET, których potrzebuje aplikacja. (Pod warunkiem, że są one zgodne z bazowym systemem operacyjnym).
 
-.NET Framework dla aplikacji serwera platformy Docker należy używać w przypadku:
+Użyj .NET Framework dla aplikacji serwera platformy Docker w kontenerze, gdy:
 
 - Obecnie aplikacja używa .NET Framework i ma silne zależności w systemie Windows.
 

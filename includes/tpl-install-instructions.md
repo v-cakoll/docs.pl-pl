@@ -7,4 +7,4 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "64761369"
 ---
 > [!NOTE]
-> Biblioteka przepływu danych TPL <xref:System.Threading.Tasks.Dataflow> (obszar nazw) nie jest dystrybuowana z .NET. Aby <xref:System.Threading.Tasks.Dataflow> zainstalować obszar nazw w programie Visual Studio, otwórz projekt, wybierz polecenie **Zarządzaj pakietami NuGet** z menu **Projekt** i wyszukaj pakiet w `System.Threading.Tasks.Dataflow` trybie online. Alternatywnie, aby zainstalować go za pomocą `dotnet add package System.Threading.Tasks.Dataflow` [.NET Core CLI](~/docs/core/tools/index.md), uruchom .
+> Biblioteka przepływu danych TPL ( <xref:System.Threading.Tasks.Dataflow> przestrzeń nazw) nie jest dystrybuowana z platformą .NET. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeń nazw w programie Visual Studio, Otwórz projekt, wybierz pozycję **Zarządzaj pakietami NuGet** z menu **projekt** i Wyszukaj w trybie online `System.Threading.Tasks.Dataflow` pakiet. Alternatywnie, aby zainstalować go przy użyciu [interfejs wiersza polecenia platformy .NET Core](~/docs/core/tools/index.md), uruchom polecenie `dotnet add package System.Threading.Tasks.Dataflow` .

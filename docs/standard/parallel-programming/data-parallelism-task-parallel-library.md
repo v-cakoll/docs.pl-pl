@@ -51,6 +51,6 @@ ms.locfileid: "84276780"
 |[Biblioteka zadań równoległych (TPL)](task-parallel-library-tpl.md)|Zawiera omówienie biblioteki zadań równoległych.|  
 |[Programowanie równoległe](index.md)|Wprowadza programowanie równoległe w .NET Framework.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie równoległe](index.md)

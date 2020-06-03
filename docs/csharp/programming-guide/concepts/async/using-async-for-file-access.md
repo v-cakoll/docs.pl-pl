@@ -174,7 +174,7 @@ public async Task ProcessWriteMultAsync()
   
  W przypadku korzystania <xref:System.IO.Stream.WriteAsync%2A> z <xref:System.IO.Stream.ReadAsync%2A> metod i można określić <xref:System.Threading.CancellationToken> , której można użyć do anulowania strumienia średniej operacji. Aby uzyskać więcej informacji, zobacz [dostrajanie aplikacji asynchronicznej (C#)](./fine-tuning-your-async-application.md) i [Anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie asynchroniczne z Async i Await (C#)](./index.md)
 - [Asynchroniczne typy zwracane (C#)](./async-return-types.md)

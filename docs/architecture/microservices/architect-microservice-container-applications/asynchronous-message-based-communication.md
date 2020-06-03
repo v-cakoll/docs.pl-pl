@@ -2,12 +2,12 @@
 title: Asynchroniczna komunikacja oparta na komunikatach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Asynchroniczna komunikacja oparta na komunikatach to podstawowe koncepcje w architekturze mikrousług, ponieważ jest to najlepszy sposób, aby mikrousługi były niezależne od siebie, a także ostatecznie zsynchronizowane.
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144347"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306971"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchroniczna komunikacja oparta na komunikatach
 
@@ -35,7 +35,7 @@ Po rozpoczęciu wysyłania komunikacji opartej na komunikatach (z poleceniami lu
 
 **Rysunek 4-18**. Jedna mikrousługa otrzymująca komunikat asynchroniczny
 
-Należy pamiętać, że gdy polecenia pochodzą z aplikacji klienckich, można je zaimplementować jako polecenia synchroniczne HTTP. Należy używać poleceń opartych na komunikatach, gdy potrzebna jest wyższa skalowalność lub jeśli już jesteś w procesie biznesowym opartym na komunikatach.
+Gdy polecenia pochodzą z aplikacji klienckich, można je zaimplementować jako polecenia synchroniczne HTTP. Użyj poleceń opartych na komunikatach, gdy potrzebujesz wyższej skalowalności lub gdy jesteś już w procesie biznesowym opartym na komunikatach.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Komunikacja oparta na komunikatach wielu odbiorników
 
@@ -57,7 +57,7 @@ Ważnym punktem jest to, że możesz chcieć komunikować się z wieloma mikrous
 
 **Rysunek 4-19**. Asynchroniczna komunikacja komunikatów oparta na zdarzeniach
 
-W przypadku asynchronicznej komunikacji opartej na zdarzeniach jedna mikrousługa publikuje zdarzenia do magistrali zdarzeń, a wiele mikrousług może subskrybować ten element, aby otrzymywać powiadomienia i podejmować działania. Twoja implementacja określi, który protokół ma być używany na potrzeby komunikacji opartej na zdarzeniach. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji kolejkowanej.
+W przypadku asynchronicznej komunikacji opartej na zdarzeniach jedna mikrousługa publikuje zdarzenia do magistrali zdarzeń, a wiele mikrousług może subskrybować ten element, aby otrzymywać powiadomienia i działać na nim. Twoja implementacja określi, który protokół ma być używany na potrzeby komunikacji opartej na zdarzeniach. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji kolejkowanej.
 
 Korzystając z magistrali zdarzeń, można użyć poziomu abstrakcji (na przykład interfejsu magistrali zdarzeń) na podstawie powiązanej implementacji w klasach z kodem przy użyciu interfejsu API z brokera komunikatów, takiego jak [RabbitMQ](https://www.rabbitmq.com/) , lub usługi Service Bus, takiej jak [Azure Service Bus z tematami](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie możesz chcieć użyć magistrali usług wyższego poziomu, takiej jak NServiceBus, MassTransit lub jaśniejszy, aby ideach swoją magistralę zdarzeń i system publikowania/subskrybowania.
 

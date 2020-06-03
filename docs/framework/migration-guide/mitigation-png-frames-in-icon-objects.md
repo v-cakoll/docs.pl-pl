@@ -1,5 +1,5 @@
 ---
-title: 'Łagodzenie: Ramki PNG w obiektach ikon'
+title: 'Środki zaradcze: ramki PNG w obiektach ikon'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
@@ -9,23 +9,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248898"
 ---
-# <a name="mitigation-png-frames-in-icon-objects"></a>Łagodzenie: Ramki PNG w obiektach ikon
-Począwszy od programu .NET Framework 4.6, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda pomyślnie konwertuje ikony z ramek PNG do <xref:System.Drawing.Bitmap> obiektów.  
+# <a name="mitigation-png-frames-in-icon-objects"></a>Środki zaradcze: ramki PNG w obiektach ikon
+Począwszy od .NET Framework 4,6, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda pomyślnie konwertuje ikony z ramkami PNG na <xref:System.Drawing.Bitmap> obiekty.  
   
- W aplikacjach, które są przeznaczone dla .NET Framework 4.5.2 i wcześniejszych wersji, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda zgłasza wyjątek, <xref:System.ArgumentOutOfRangeException> jeśli <xref:System.Drawing.Icon> obiekt ma ramki PNG.  
+ W aplikacjach przeznaczonych dla .NET Framework 4.5.2 i starszych wersji <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> Metoda zgłasza <xref:System.ArgumentOutOfRangeException> wyjątek, jeśli <xref:System.Drawing.Icon> obiekt zawiera ramki PNG.  
   
 ## <a name="impact"></a>Wpływ  
- Ta zmiana wpływa na aplikacje, które są ponownie kompilowane do celu .NET <xref:System.ArgumentOutOfRangeException> Framework 4.6 i które implementują specjalną obsługę dla tego, który jest generowany, gdy <xref:System.Drawing.Icon> obiekt ma ramki PNG. Po uruchomieniu w ramach .NET Framework 4.6 <xref:System.ArgumentOutOfRangeException> konwersji zakończy się pomyślnie, nie jest już zgłaszany i dlatego program obsługi wyjątków nie jest już wywoływany.  
+ Ta zmiana ma wpływ na aplikacje, które są ponownie kompilowane pod kątem .NET Framework 4,6 i implementowanie specjalnej obsługi dla <xref:System.ArgumentOutOfRangeException> , która jest generowany, gdy <xref:System.Drawing.Icon> obiekt ma ramki PNG. W przypadku uruchamiania w .NET Framework 4,6, konwersja kończy się powodzeniem, <xref:System.ArgumentOutOfRangeException> nie jest już zgłaszane i w związku z tym program obsługi wyjątków nie jest już wywoływany.  
   
 ### <a name="mitigation"></a>Środki zaradcze  
- Jeśli to zachowanie jest niepożądane, można zachować poprzednie zachowanie, dodając następujący element do sekcji [ \<>środowiska wykonawczego](../configure-apps/file-schema/runtime/runtime-element.md) pliku app.config:  
+ Jeśli takie zachowanie jest niepożądane, można zachować poprzednie zachowanie, dodając następujący element do sekcji [ \< > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku App. config:  
   
 ```xml  
 <AppContextSwitchOverrides
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
 ```  
   
- Jeśli plik app.config zawiera `AppContextSwitchOverrides` już element, nowa wartość powinna `value` zostać scalona z atrybutem w ten sposób:  
+ Jeśli plik App. config zawiera już `AppContextSwitchOverrides` element, Nowa wartość powinna być scalona z `value` atrybutem podobnym do tego:  
   
 ```xml  
 <AppContextSwitchOverrides

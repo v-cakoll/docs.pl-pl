@@ -8,4 +8,4 @@ ms.locfileid: "66722052"
 ---
 
 > [!NOTE]
-> Przykłady języka C# w tym artykule są uruchamiane w [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) inline code runner i plac zabaw. Wybierz przycisk **Uruchom,** aby uruchomić przykład w oknie interakcyjnym. Po wykonaniu kodu można go zmodyfikować i uruchomić zmodyfikowany kod, wybierając polecenie **Uruchom** ponownie. Zmodyfikowany kod jest uruchamiany w oknie interakcyjnym lub, jeśli kompilacja nie powiedzie się, interaktywne okno wyświetla wszystkie komunikaty o błędach kompilatora C#.  
+> Przykłady w języku C# w tym artykule są uruchamiane w wbudowanym module uruchamiającego kod [try.NET](https://dotnet.microsoft.com/platform/try-dotnet) i plac zabaw. Wybierz przycisk **Run (Uruchom** ), aby uruchomić przykład w oknie interaktywnym. Po wykonaniu kodu można go zmodyfikować i uruchomić zmodyfikowany kod, wybierając pozycję **Uruchom** ponownie. Zmodyfikowany kod jest uruchamiany w oknie interaktywnym lub, jeśli kompilacja nie powiedzie się, w oknie interaktywnym zostaną wyświetlone wszystkie komunikaty o błędach kompilatora języka C#.  

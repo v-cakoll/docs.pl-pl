@@ -1,64 +1,64 @@
 ---
 title: Stacja robocza a wyrzucanie elementów bezużytecznych serwera (GC)
-description: Dowiedz się więcej o śmietniku stacji roboczej i serwera w .NET.
+description: Informacje o stacjach roboczych i wyrzucaniu elementów bezużytecznych serwera w programie .NET.
 ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 6b8e5f6802e5d44669b95d43d4e897fa4a418512
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103556"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306698"
 ---
-# <a name="workstation-and-server-garbage-collection"></a>Wyrzucanie elementów bezużytecznych stacji roboczych i serwera
+# <a name="workstation-and-server-garbage-collection"></a>Stacja robocza i odzyskiwanie pamięci serwera
 
-Moduł zbierający elementy bezużyteczne jest samoczyszczenia i może pracować w wielu różnych scenariuszach. Można jednak [ustawić typ wyrzucania elementów bezużytecznych](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) na podstawie cech obciążenia. Program CLR udostępnia następujące typy wyrzucania elementów bezużytecznych:
+Moduł wyrzucania elementów bezużytecznych jest samodostrajania i może współpracować w wielu różnych scenariuszach. Można jednak [ustawić typ wyrzucania elementów bezużytecznych](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) na podstawie charakterystyki obciążenia. Środowisko CLR udostępnia następujące typy wyrzucania elementów bezużytecznych:
 
-- Wyrzucanie elementów bezużytecznych stacji roboczych (GC), który jest przeznaczony dla aplikacji klienckich. Jest to domyślny smak GC dla autonomicznych aplikacji. W przypadku hostowanych aplikacji, na przykład tych obsługiwanych przez ASP.NET, host określa domyślny smak GC.
+- Odzyskiwanie pamięci stacji roboczej (GC) przeznaczone dla aplikacji klienckich. Jest to domyślna wersja GC dla aplikacji autonomicznych. Na przykład w przypadku aplikacji hostowanych przez ASP.NET host Określa domyślną wersję GC.
 
-  Wyrzucanie elementów bezużytecznych stacji roboczej może być równoczesne lub niebieżne. Równoczesnych (lub *tła)* wyrzucania elementów bezużytecznych umożliwia zarządzanych wątków, aby kontynuować operacje podczas wyrzucania elementów bezużytecznych. [Wyrzucanie elementów bezużytecznych tła](background-gc.md) zastępuje [równoczesnych wyrzucania elementów bezużytecznych](background-gc.md#concurrent-garbage-collection) w .NET Framework 4 i nowszych wersjach.
+  Wyrzucanie elementów bezużytecznych stacji roboczej może być współbieżne lub niewspółbieżne. Współbieżne (lub w *tle*) wyrzucanie elementów bezużytecznych umożliwia zarządzanym wątkom kontynuowanie operacji podczas odzyskiwania pamięci. [Wyrzucanie elementów bezużytecznych w tle](background-gc.md) zastępuje [współbieżne odzyskiwanie pamięci](background-gc.md#concurrent-garbage-collection) w .NET Framework 4 i nowszych wersjach.
 
-- Wyrzucanie elementów bezużytecznych serwera, który jest przeznaczony dla aplikacji serwera, które wymagają wysokiej przepływności i skalowalności.
+- Odzyskiwanie pamięci serwera, które jest przeznaczone dla aplikacji serwerowych, które potrzebują dużej przepływności i skalowalności.
 
-  - W .NET Core wyrzucanie elementów bezużytecznych serwera może być niebieżne lub tła.
+  - W programie .NET Core zbieranie elementów bezużytecznych serwera może być niewspółbieżne lub niezgodne.
 
-  - W .NET Framework 4.5 i nowszych wersjach wyrzucanie elementów bezużytecznych serwera może być równoczesne lub tła. W .NET Framework 4 i poprzednich wersjach wyrzucanie elementów bezużytecznych serwera nie jest równoczesne.
+  - W .NET Framework 4,5 i nowszych wersjach zbieranie elementów bezużytecznych serwera może być niewspółbieżne lub niezgodne. W .NET Framework 4 i poprzednich wersjach zbieranie elementów bezużytecznych serwera nie jest współbieżne.
 
-Na poniższej ilustracji przedstawiono dedykowane wątki, które wykonują wyrzucania elementów bezużytecznych na serwerze:
+Na poniższej ilustracji przedstawiono dedykowane wątki, które wykonują wyrzucanie elementów bezużytecznych na serwerze:
 
-![Wątki wyrzucania elementów bezużytecznych serwera](./media/gc-server.png)
+![Wątki odzyskiwania pamięci serwera](media/gc-server.png)
 
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
 
 ### <a name="workstation-gc"></a>Stacja robocza GC
 
-Poniżej przedstawiono zagadnienia dotyczące wątków i wydajności dla wyrzucania elementów bezużytecznych stacji roboczej:
+Poniżej przedstawiono zagadnienia dotyczące wątkowości i wydajności dotyczące wyrzucania elementów bezużytecznych stacji roboczej:
 
-- Kolekcja występuje w wątku użytkownika, który wyzwolił wyrzucania elementów bezużytecznych i pozostaje w tym samym priorytecie. Ponieważ wątki użytkownika zazwyczaj działają z normalnym priorytetem, moduł zbierający elementy bezużyteczne (który działa na wątku o normalnym priorytecie) musi konkurować z innymi wątkami dla czasu procesora CPU. (Wątki, które uruchamiają kod macierzysty nie są zawieszone na serwerze lub stacji roboczej wyrzucania elementów bezużytecznych.)
+- Kolekcja odbywa się w wątku użytkownika, który wyzwolił wyrzucanie elementów bezużytecznych i pozostaje na tym samym priorytecie. Ponieważ wątki użytkownika zwykle działają przy normalnym priorytecie, Moduł wyrzucania elementów bezużytecznych (który jest uruchamiany w wątku o normalnym priorytecie) musi konkurować z innymi wątkami czasu procesora CPU. (Wątki, które uruchamiają kod natywny nie są zawieszone na serwerze lub w wyrzucaniu elementów bezużytecznych stacji roboczych).
 
-- Wyrzucanie elementów bezużytecznych stacji roboczej jest zawsze używane na komputerze, który ma tylko jeden procesor, niezależnie od [ustawienia konfiguracji](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- Wyrzucanie elementów bezużytecznych stacji roboczej jest zawsze używane na komputerze z tylko jednym procesorem, niezależnie od [Ustawienia konfiguracji](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
-### <a name="server-gc"></a>GC serwera
+### <a name="server-gc"></a>Serwer GC
 
-Poniżej przedstawiono zagadnienia dotyczące wątków i wydajności dla wyrzucania elementów bezużytecznych serwera:
+Poniżej przedstawiono zagadnienia związane z wątkami i wydajnością dla wyrzucania elementów bezużytecznych serwera:
 
-- Kolekcja występuje na wielu dedykowanych wątków, które są uruchomione na `THREAD_PRIORITY_HIGHEST` poziomie priorytetu.
+- Kolekcja odbywa się na wielu dedykowanych wątkach, które są uruchomione na `THREAD_PRIORITY_HIGHEST` poziomie priorytetu.
 
-- Sterta i dedykowany wątek do wykonywania wyrzucania elementów bezużytecznych są dostarczane dla każdego procesora CPU, a sterty są zbierane w tym samym czasie. Każdy stos zawiera stertę małych obiektów i sterty dużego obiektu, a wszystkie sterty są dostępne za pomocą kodu użytkownika. Obiekty na różnych stertach mogą odnosić się do siebie nawzajem.
+- Sterta i dedykowany wątek służący do wykonywania wyrzucania elementów bezużytecznych są udostępniane dla każdego procesora, a sterty są zbierane w tym samym czasie. Każda sterta zawiera niewielką stertę obiektu i stertę dużego obiektu, a wszystkie sterty są dostępne przez kod użytkownika. Obiekty na różnych stertach mogą odwoływać się do siebie nawzajem.
 
-- Ponieważ wiele wątków wyrzucania elementów bezużytecznych działa ze sobą, wyrzucanie elementów bezużytecznych serwera jest szybsze niż wyrzucanie elementów bezużytecznych na tym samym rozmiarze stosu.
+- Ponieważ wielokrotne wątki odzyskiwania pamięci współpracują ze sobą, wyrzucanie elementów bezużytecznych serwera jest szybsze niż wyrzucanie elementów bezużytecznych stacji roboczej.
 
-- Wyrzucanie elementów bezużytecznych serwera często ma większe segmenty rozmiaru. Jest to jednak tylko uogólnienie: rozmiar segmentu jest specyficzny dla implementacji i może ulec zmianie. Nie należy zakładać rozmiar segmentów przydzielonych przez moduł zbierający elementy bezużyteczne podczas dostrajania aplikacji.
+- Wyrzucanie elementów bezużytecznych serwera często ma większe rozmiary segmentów. Jest to jednak tylko Generalizacja: rozmiar segmentu jest specyficzny dla implementacji i może ulec zmianie. Nie należy tworzyć założeń dotyczących rozmiaru segmentów przydzielonej przez moduł zbierający elementy bezużyteczne podczas dostrajania aplikacji.
 
-- Wyrzucanie elementów bezużytecznych serwera może być intensywnie korzystające z zasobów. Załóżmy na przykład, że istnieje 12 procesów, które używają gc serwera uruchomionego na komputerze, który ma cztery procesory. Jeśli wszystkie procesy zdarzyć się zbierać śmieci w tym samym czasie, będą kolidować ze sobą, jak nie byłoby 12 wątków zaplanowanych na tym samym procesorze. Jeśli procesy są aktywne, nie jest dobrym pomysłem, aby wszystkie one używać gc serwera.
+- Zbieranie elementów bezużytecznych serwera może być czasochłonne. Załóżmy na przykład, że istnieją 12 procesów korzystających z serwera GC uruchomionego na komputerze, który ma cztery procesory. Jeśli wszystkie procesy mają w tym samym czasie zbierać elementy bezużyteczne, mogą one zakłócać sobie nawzajem, ponieważ na tym samym procesorze zaplanowano 12 wątków. Jeśli procesy są aktywne, nie jest dobrym pomysłem na korzystanie z serwera GC.
 
-Jeśli używasz setki wystąpień aplikacji, należy rozważyć użycie wyrzucania elementów bezużytecznych stacji roboczej z równoczesnym wyrzucaniem elementów bezużytecznych wyłączone. Spowoduje to mniej przełączania kontekstu, co może poprawić wydajność.
+Jeśli używasz setek wystąpień aplikacji, rozważ użycie wyrzucania elementów bezużytecznych stacji roboczej z wyłączonym współbieżnym wyrzucaniem elementów bezużytecznych. Spowoduje to przełączenie do mniej kontekstu, co może poprawić wydajność.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyrzucanie elementów bezużytecznych w tle](background-gc.md)
-- [Opcje konfiguracji w czasie wykonywania wyrzucania elementów bezużytecznych](../../core/run-time-config/garbage-collector.md)
+- [Odzyskiwanie pamięci w tle](background-gc.md)
+- [Opcje konfiguracji czasu wykonywania dla wyrzucania elementów bezużytecznych](../../core/run-time-config/garbage-collector.md)

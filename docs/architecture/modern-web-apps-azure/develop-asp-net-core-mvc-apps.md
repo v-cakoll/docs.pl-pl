@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144555"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307010"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -88,7 +88,7 @@ W poprzednim przykładzie dana strona będzie pasowała do trasy z `id` parametr
 "/Products/123"
 ```
 
-Po dopasowaniu danego żądania do trasy, ale przed wywołaniem metody akcji, ASP.NET Core MVC będzie wykonywał [powiązania modelu](/aspnet/core/mvc/models/model-binding) i [Sprawdzanie poprawności modelu](/aspnet/core/mvc/models/validation) na żądanie. Powiązanie modelu jest odpowiedzialne za konwertowanie przychodzących danych HTTP na typy .NET określone jako parametry metody akcji, która ma zostać wywołana. Na przykład jeśli metoda akcja oczekuje parametru identyfikatora int, powiązanie modelu podejmie próbę dostarczenia tego parametru z wartości dostarczonej jako część żądania. W tym celu powiązanie modelu wyszukuje wartości w opublikowanym formularzu, wartości w samej trasie i wartości ciągu zapytania. Przy założeniu, że wartość identyfikatora zostanie znaleziona, zostanie przekonwertowana na liczbę całkowitą przed przekazaniem do metody akcji.
+Po dopasowaniu danego żądania do trasy, ale przed wywołaniem metody akcji, ASP.NET Core MVC będzie wykonywał [powiązania modelu](/aspnet/core/mvc/models/model-binding) i [Sprawdzanie poprawności modelu](/aspnet/core/mvc/models/validation) na żądanie. Powiązanie modelu jest odpowiedzialne za konwertowanie przychodzących danych HTTP na typy .NET określone jako parametry metody akcji, która ma zostać wywołana. Na przykład jeśli metoda akcja oczekuje `int id` parametru, powiązanie modelu podejmie próbę podania tego parametru z wartości dostarczonej jako część żądania. W tym celu powiązanie modelu wyszukuje wartości w opublikowanym formularzu, wartości w samej trasie i wartości ciągu zapytania. Przy założeniu, że wartość identyfikatora zostanie znaleziona, zostanie przekonwertowana na liczbę całkowitą przed przekazaniem do metody akcji.
 
 Po powiązaniu modelu, ale przed wywołaniem metody akcji, następuje Walidacja modelu. Walidacja modelu używa opcjonalnych atrybutów dla typu modelu i może pomóc zapewnić, że udostępniony obiekt modelu spełnia określone wymagania dotyczące danych. Niektóre wartości mogą być określone jako wymagane lub ograniczone do określonej długości lub zakresu liczbowego itd. Jeśli określono atrybuty walidacji, ale model nie spełnia wymagań, właściwość ModelState. IsValid ma wartość false, a zestaw reguł walidacji z błędami będzie dostępny do wysłania do klienta wysyłającego żądanie.
 
@@ -158,7 +158,7 @@ Klasa startowa to model służący do tworzenia struktury innych części aplika
 
 ## <a name="structuring-the-application"></a>Tworzenie struktury aplikacji
 
-Aplikacje monolityczne zwykle mają jeden punkt wejścia. W przypadku ASP.NET Core aplikacji sieci Web punkt wejścia będzie ASP.NET Core projekcie sieci Web. Nie oznacza to jednak, że rozwiązanie powinno zawierać tylko jeden projekt. Warto podzielić aplikację na różne warstwy, aby obserwować rozdzielenie problemów. Po podpisaniu na warstwach warto przekroczyć foldery do oddzielnych projektów, co może pomóc w osiągnięciu lepszego hermetyzacji. Najlepszym podejściem do osiągnięcia tych celów za pomocą aplikacji ASP.NET Core jest odmiana czystego architektury omówionego w rozdziale 5. Po tym podejściu rozwiązanie aplikacji będzie składać się z oddzielnych bibliotek dla interfejsu użytkownika, infrastruktury i ApplicationCore.
+Aplikacje monolityczne zwykle mają jeden punkt wejścia. W przypadku ASP.NET Core aplikacji sieci Web punkt wejścia będzie ASP.NET Core projekcie sieci Web. Nie oznacza to jednak, że rozwiązanie powinno zawierać tylko jeden projekt. Warto podzielić aplikację na różne warstwy, aby obserwować rozdzielenie problemów. Po podpisaniu na warstwach warto przekroczyć foldery do oddzielnych projektów, co może pomóc w osiągnięciu lepszego hermetyzacji. Najlepszym podejściem do osiągnięcia tych celów za pomocą aplikacji ASP.NET Core jest odmiana czystego architektury omówionego w rozdziale 5. Po tym podejściu rozwiązanie aplikacji będzie obejmować oddzielne biblioteki dla interfejsu użytkownika, infrastruktury i ApplicationCore.
 
 Poza tymi projektami są również dołączone oddzielne projekty testowe (testowanie jest omówione w rozdziale 9).
 
@@ -323,7 +323,7 @@ Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykł
 
 Zabezpieczanie aplikacji sieci Web to duży temat z wieloma kwestiami. Na najbardziej podstawowym poziomie zabezpieczenia polegają na tym, że wiesz, z kogo pochodzi żądanie, a następnie upewniając się, że żądanie ma tylko dostęp do zasobów, które powinny. Uwierzytelnianie to proces porównujący poświadczenia dostarczone z żądaniem do tych w zaufanym magazynie danych, aby sprawdzić, czy żądanie powinno być traktowane jako pochodzące ze znanej jednostki. Autoryzacja to proces ograniczania dostępu do określonych zasobów na podstawie tożsamości użytkownika. Trzeci problem dotyczący zabezpieczeń chroni żądania przed podsłuchiwaniem przez inne osoby, dla którego należy [upewnić się, że protokół SSL jest używany przez aplikację](/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Uwierzytelnianie
+### <a name="authentication"></a>Authentication
 
 ASP.NET Core tożsamością jest system członkostwa, którego można użyć do obsługi funkcji logowania dla aplikacji. Obsługuje ona konta użytkowników lokalnych, a także dostawcę logowania zewnętrznego od dostawców, takich jak konto Microsoft, Twitter, Facebook, Google i inne. Oprócz tożsamości ASP.NET Core aplikacja może korzystać z uwierzytelniania systemu Windows lub innego dostawcy tożsamości, takiego jak [serwer tożsamości](https://github.com/IdentityServer/IdentityServer4).
 
@@ -501,7 +501,7 @@ Projektowanie oparte na domenie (DDD) to Agile podejście do tworzenia oprogramo
 
 Podczas kompilowania oprogramowania po drodze, zespół (w tym udziałowcy nietechniczne i współautorzy) powinien opracować powszechny _Język_ dla obszaru problemu. Oznacza to, że ta sama terminologia powinna zostać użyta w przypadku modelowania rzeczywistego pojęcia, odpowiedniki oprogramowania i wszelkich struktur, które mogą istnieć, aby zachować koncepcję (na przykład tabele bazy danych). W związku z tym koncepcje opisane w języku powszechnym powinny stanowić podstawę dla _modelu domeny_.
 
-Model domeny składa się z obiektów, które współdziałają ze sobą, aby reprezentować zachowanie systemu. Te obiekty mogą należeć do następujących kategorii:
+Model domeny obejmuje obiekty, które współdziałają ze sobą, aby reprezentować zachowanie systemu. Te obiekty mogą należeć do następujących kategorii:
 
 - [Jednostki](https://deviq.com/entity/)reprezentujące obiekty z wątkiem tożsamości. Jednostki są zwykle przechowywane w stanie trwałości przy użyciu klucza, za pomocą którego mogą być później pobierane.
 
@@ -537,7 +537,7 @@ DDD jest dobrze dostosowany do dużych aplikacji z znaczącą złożonością fi
 
 DDD obejmuje inwestycje w modelowanie, architekturę i komunikację, które mogą nie być uzasadnione w przypadku mniejszych aplikacji lub aplikacji, które zasadniczo CRUD (Tworzenie/odczytywanie/aktualizowanie/usuwanie). W przypadku wybrania podejścia do Twojej aplikacji po DDD, ale dowiesz się, że domena ma model Anemic bez zachowań, może być konieczne ponowne zawieszanie się z podejściem. Twoja aplikacja może nie potrzebować DDD lub może być potrzebna pomoc w refaktoryzacji aplikacji w celu hermetyzacji logiki biznesowej w modelu domeny, a nie w bazie danych lub interfejsie użytkownika.
 
-Podejście hybrydowe będzie używać DDD tylko dla transakcyjnych lub bardziej złożonych obszarów aplikacji, ale nie dla prostszej CRUD lub tylko do odczytu części aplikacji. Na przykład nie musi mają ograniczenia agregacji, jeśli wykonujesz zapytanie o dane w celu wyświetlenia raportu lub wizualizacji danych dla pulpitu nawigacyjnego. Doskonale akceptowalne jest oddzielny, prostszy model odczytu dla takich wymagań.
+Podejście hybrydowe będzie używać DDD tylko dla transakcyjnych lub bardziej złożonych obszarów aplikacji, ale nie dla prostszej CRUD lub tylko do odczytu części aplikacji. Na przykład nie są wymagane ograniczenia agregacji, jeśli tworzysz zapytanie o dane w celu wyświetlenia raportu lub wizualizacji danych dla pulpitu nawigacyjnego. Doskonale akceptowalne jest oddzielny, prostszy model odczytu dla takich wymagań.
 
 > ### <a name="references--domain-driven-design"></a>Odwołania — Projektowanie oparte na domenie
 >

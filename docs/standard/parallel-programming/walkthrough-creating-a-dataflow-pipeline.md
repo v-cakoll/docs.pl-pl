@@ -108,6 +108,6 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
   
  Istnieje również możliwość połączenia źródłowego bloku przepływu danych z wieloma blokami docelowymi w celu utworzenia *sieci przepływu danych*. Przeciążona wersja <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> metody przyjmuje <xref:System.Predicate%601> obiekt, który określa, czy blok docelowy akceptuje każdy komunikat na podstawie jego wartości. Większość typów bloków przepływu danych, które pełnią funkcję źródła wiadomości do wszystkich połączonych bloków docelowych w kolejności, w jakiej były połączone, dopóki jeden z bloków nie zaakceptuje tego komunikatu. Korzystając z tego mechanizmu filtrowania, można tworzyć systemy połączonych bloków przepływu danych, które kierują określone dane za pośrednictwem jednej ścieżki i innych danych za pośrednictwem innej ścieżki. Aby uzyskać przykład, który używa filtrowania do tworzenia sieci przepływu danych, zobacz [Przewodnik: używanie przepływu danych w aplikacji Windows Forms](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przepływ danych](dataflow-task-parallel-library.md)

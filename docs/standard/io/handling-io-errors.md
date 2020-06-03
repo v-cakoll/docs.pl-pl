@@ -1,5 +1,5 @@
 ---
-title: Obsługa błędów we/wy w .NET
+title: Obsługa błędów we/wy w programie .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,32 +18,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81242676"
 ---
-# <a name="handling-io-errors-in-net"></a>Obsługa błędów we/wy w .NET
+# <a name="handling-io-errors-in-net"></a>Obsługa błędów we/wy w programie .NET
 
-Oprócz wyjątków, które mogą być generowane w dowolnym <xref:System.OutOfMemoryException> wywołaniu metody (na <xref:System.NullReferenceException> przykład, gdy system jest zestresowany lub z powodu błędu programisty), metody systemu plików .NET mogą zgłaszać następujące wyjątki:
+Oprócz wyjątków, które mogą być zgłaszane w przypadku dowolnego wywołania metody (na przykład w <xref:System.OutOfMemoryException> przypadku, gdy system jest podkreślany lub z <xref:System.NullReferenceException> powodu błędu programisty), metody systemu plików .NET mogą zgłosić następujące wyjątki:
 
-- <xref:System.IO.IOException?displayProperty=nameWithType>, klasa podstawowa <xref:System.IO> wszystkich typów wyjątków. Jest on generowany dla błędów, których kody zwrotne z systemu operacyjnego nie są bezpośrednio mapowane do innego typu wyjątku.
+- <xref:System.IO.IOException?displayProperty=nameWithType>, Klasa bazowa dla wszystkich <xref:System.IO> typów wyjątków. Jest zgłaszany w przypadku błędów, których kody powrotne z systemu operacyjnego nie są bezpośrednio mapowane do żadnego innego typu wyjątku.
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
 - <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
 - <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
 - <xref:System.OperationCanceledException?displayProperty=nameWithType>.
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
-- <xref:System.ArgumentException?displayProperty=nameWithType>, który jest generowany dla nieprawidłowych znaków ścieżki w programie .NET Framework i w programie .NET Core 2.0 i poprzednich wersjach.
+- <xref:System.ArgumentException?displayProperty=nameWithType>, który jest generowany dla nieprawidłowych znaków ścieżki w .NET Framework i na platformie .NET Core 2,0 i wcześniejszych wersjach.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, który jest generowany dla nieprawidłowych dwukropków w .NET Framework.
-- <xref:System.Security.SecurityException?displayProperty=nameWithType>, który jest generowany dla aplikacji działających w ograniczonym zaufaniu, które nie mają niezbędnych uprawnień tylko w programie .NET Framework. (Pełne zaufanie jest ustawieniem domyślnym w programie .NET Framework).
+- <xref:System.Security.SecurityException?displayProperty=nameWithType>, który jest generowany w przypadku aplikacji uruchamianych w ograniczonych relacjach zaufania, które nie mają wystarczających uprawnień tylko do .NET Framework. (Pełne zaufanie jest wartością domyślną w .NET Framework).
 
-## <a name="mapping-error-codes-to-exceptions"></a>Mapowanie kodów błędów do wyjątków
+## <a name="mapping-error-codes-to-exceptions"></a>Mapowanie kodów błędów na wyjątki
 
-Ponieważ system plików jest zasobem systemu operacyjnego, metody we/wy zarówno w systemie .NET Core, jak i w ramach .NET Framework zawijają wywołania do podstawowego systemu operacyjnego. Gdy w kodzie wykonywanym przez system operacyjny wystąpi błąd we/wy, system operacyjny zwraca informacje o błędzie do metody we/wy .NET. Metoda następnie tłumaczy informacje o błędzie, zazwyczaj w postaci kodu błędu, do typu wyjątku .NET. W większości przypadków robi to bezpośrednio tłumacząc kod błędu na odpowiedni typ wyjątku; nie wykonuje żadnego specjalnego mapowania błędu na podstawie kontekstu wywołania metody.
+Ponieważ system plików jest zasobem systemu operacyjnego, metody we/wy w oprogramowaniu .NET Core i .NET Framework zawijają wywołania do bazowego systemu operacyjnego. Gdy w kodzie wykonywanym przez system operacyjny wystąpi błąd we/wy, system operacyjny zwraca informacje o błędzie do metody we/wy platformy .NET. Następnie metoda tłumaczy informacje o błędzie, zazwyczaj w postaci kodu błędu, do typu wyjątku platformy .NET. W większości przypadków robi to przez bezpośrednie przekazanie kodu błędu do odpowiadającego mu typu wyjątku; nie wykonuje żadnego specjalnego mapowania błędu na podstawie kontekstu wywołania metody.
 
-Na przykład w systemie operacyjnym Windows wywołanie metody, `ERROR_FILE_NOT_FOUND` które zwraca kod błędu (lub <xref:System.IO.FileNotFoundException>0x02) mapuje na , a kod błędu `ERROR_PATH_NOT_FOUND` (lub 0x03) jest mapowany na <xref:System.IO.DirectoryNotFoundException>plik .
+Na przykład w systemie operacyjnym Windows wywołanie metody zwracające kod błędu `ERROR_FILE_NOT_FOUND` (lub 0x02) mapuje do <xref:System.IO.FileNotFoundException> , a kod błędu `ERROR_PATH_NOT_FOUND` (lub 0x03) mapuje na <xref:System.IO.DirectoryNotFoundException> .
 
-Jednak dokładne warunki, w których system operacyjny zwraca określone kody błędów, są często nieudokumentowane lub słabo udokumentowane. W rezultacie mogą wystąpić nieoczekiwane wyjątki. Na przykład, ponieważ pracujesz z katalogiem, a nie z plikiem, można <xref:System.IO.DirectoryInfo.%23ctor%2A> oczekiwać, że <xref:System.IO.DirectoryNotFoundException>podanie nieprawidłowej ścieżki katalogu do konstruktora spowoduje rzut pliku . Jednak może również rzucić <xref:System.IO.FileNotFoundException>.
+Jednak precyzyjne warunki, w których system operacyjny zwraca określone kody błędów, są często nieudokumentowane lub źle udokumentowane. W związku z tym mogą wystąpić nieoczekiwane wyjątki. Na przykład, ponieważ pracujesz z katalogiem, a nie plikiem, należy się spodziewać, że dostarczenie nieprawidłowej ścieżki katalogu do <xref:System.IO.DirectoryInfo.%23ctor%2A> konstruktora zgłosi <xref:System.IO.DirectoryNotFoundException> . Jednak może to również zgłosić <xref:System.IO.FileNotFoundException> .
 
 ## <a name="exception-handling-in-io-operations"></a>Obsługa wyjątków w operacjach we/wy
 
-Z powodu tego polegania na systemie operacyjnym identyczne warunki wyjątków (takie jak nie znaleziono błędu katalogu w naszym przykładzie) może spowodować, że metoda we/wy zrzuca jedną z całej klasy wyjątków we/wy. Oznacza to, że podczas wywoływania interfejsów API we/wy kod powinien być przygotowany do obsługi większości lub wszystkich tych wyjątków, jak pokazano w poniższej tabeli:
+Ze względu na to, że jest to zależność od systemu operacyjnego, identyczne warunki wyjątków (takie jak błąd nie znaleziono katalogu w naszym przykładzie) mogą spowodować, że metoda we/wy zgłasza jedną z wielu wyjątków we/wy. Oznacza to, że podczas wywoływania interfejsów API we/wy kod powinien zostać przygotowany do obsługi większości lub wszystkich tych wyjątków, jak pokazano w poniższej tabeli:
 
 | Typ wyjątku | .NET Core | .NET Framework |
 |---|---|---|
@@ -54,38 +54,38 @@ Z powodu tego polegania na systemie operacyjnym identyczne warunki wyjątków (t
 | <xref:System.IO.PathTooLongException> | Tak | Tak |
 | <xref:System.OperationCanceledException> | Tak | Tak |
 | <xref:System.UnauthorizedAccessException> | Tak | Tak |
-| <xref:System.ArgumentException> | .NET Core 2.0 i starsze| Tak |
-| <xref:System.NotSupportedException> | Nie | Tak |
-| <xref:System.Security.SecurityException> | Nie | Ograniczone zaufanie tylko |
+| <xref:System.ArgumentException> | .NET Core 2,0 i starsze| Yes |
+| <xref:System.NotSupportedException> | Nie | Yes |
+| <xref:System.Security.SecurityException> | Nie | Tylko ograniczone zaufanie |
 
 ## <a name="handling-ioexception"></a>Obsługa IOException
 
-Jako klasa podstawowa dla <xref:System.IO> wyjątków <xref:System.IO.IOException> w obszarze nazw, jest również zgłaszany dla każdego kodu błędu, który nie jest mapowany do wstępnie zdefiniowanego typu wyjątku. Oznacza to, że może być generowany przez dowolną operację we/wy.
+Jako klasa bazowa dla wyjątków w <xref:System.IO> przestrzeni nazw, <xref:System.IO.IOException> jest również zgłaszane dla każdego kodu błędu, który nie jest mapowany do wstępnie zdefiniowanego typu wyjątku. Oznacza to, że może być zgłaszane przez dowolną operację we/wy.
 
 > [!IMPORTANT]
-> Ponieważ <xref:System.IO.IOException> jest klasą podstawową innych <xref:System.IO> typów wyjątków w obszarze `catch` nazw, należy obsługiwać w bloku po obsłużyniu innych wyjątków związanych z we/wy.
+> Ponieważ <xref:System.IO.IOException> jest klasą bazową innych typów wyjątków w <xref:System.IO> przestrzeni nazw, należy obsłużyć w `catch` bloku po obsłudze innych wyjątków związanych z we/wy.
 
-Ponadto, począwszy od .NET Core 2.1, sprawdzanie poprawności ścieżki (na przykład, aby upewnić się, że nieprawidłowe znaki nie są obecne w ścieżce) zostały usunięte, a środowisko wykonawcze zgłasza wyjątek mapowany z kodu błędu systemu operacyjnego, a nie z własnego kodu sprawdzania poprawności. Najbardziej prawdopodobnym wyjątkiem, który ma <xref:System.IO.IOException>zostać zgłoszony w tym przypadku jest , chociaż można również zrzucić dowolny inny typ wyjątku.
+Ponadto, począwszy od platformy .NET Core 2,1, sprawdzanie poprawności ścieżki (na przykład w celu zapewnienia nieprawidłowych znaków w ścieżce) zostało usunięte, a środowisko uruchomieniowe zgłasza wyjątek mapowany z kodu błędu systemu operacyjnego zamiast z własnego kodu sprawdzania poprawności. Najbardziej prawdopodobną przyczyną może być wyrzucanie w tym przypadku <xref:System.IO.IOException> , chociaż można również zgłaszać jakikolwiek inny typ wyjątku.
 
-Należy zauważyć, że w kodzie obsługi <xref:System.IO.IOException> wyjątku, zawsze należy obsługiwać ostatni. W przeciwnym razie, ponieważ jest to klasa podstawowa wszystkich innych wyjątków we/wy, bloki catch klas pochodnych nie będą oceniane.
+Należy pamiętać, że w kodzie obsługi wyjątków zawsze należy obsłużyć <xref:System.IO.IOException> ostatni. W przeciwnym razie, ponieważ jest klasą bazową wszystkich innych wyjątków we/wy, bloki catch klas pochodnych nie zostaną ocenione.
 
-W przypadku <xref:System.IO.IOException>, można uzyskać dodatkowe informacje o błędzie z Właściwości [IOException.HResult.](xref:System.Exception.HResult) Aby przekonwertować wartość HResult na kod błędu Win32, należy usunąć górne 16 bitów wartości 32-bitowej. W poniższej tabeli wymieniono kody błędów, które mogą być zawinięte w pliku <xref:System.IO.IOException>.
+W przypadku elementu <xref:System.IO.IOException> można uzyskać dodatkowe informacje o błędzie z właściwości [IOException. HRESULT](xref:System.Exception.HResult) . Aby przekonwertować wartość HResult na kod błędu Win32, należy rozdzielić górne 16 bitów wartości 32-bitowej. Poniższa tabela zawiera listę kodów błędów, które mogą być opakowane w programie <xref:System.IO.IOException> .
 
-| Hresult | Stały | Opis |
+| Wynik | Stały | Opis |
 | --- | --- | --- |
-| ERROR_SHARING_VIOLATION | 32 | Brakuje nazwy pliku lub jest używany plik lub katalog. |
+| ERROR_SHARING_VIOLATION | 32 | Brak nazwy pliku lub plik lub katalog jest używany. |
 | ERROR_FILE_EXISTS | 80 | Plik już istnieje. |
-| ERROR_INVALID_PARAMETER | 87 | Argument dostarczony do metody jest nieprawidłowy. |
+| ERROR_INVALID_PARAMETER | 87 | Argument przekazany do metody jest nieprawidłowy. |
 | ERROR_ALREADY_EXISTS | 183 | Plik lub katalog już istnieje. |
 
-Można obsługiwać te `When` przy użyciu klauzuli w catch instrukcji, jak pokazano w poniższym przykładzie.
+Można je obsłużyć za pomocą `When` klauzuli w instrukcji catch, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Obsługa i zgłaszanie wyjątków w .NET](../exceptions/index.md)
-- [Obsługa wyjątków (biblioteka równoległa zadań)](../parallel-programming/exception-handling-task-parallel-library.md)
-- [Najważniejsze wskazówki dotyczące wyjątków](../exceptions/best-practices-for-exceptions.md)
-- [Jak używać określonych wyjątków w bloku połowu](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Obsługa i zgłaszanie wyjątków w programie .NET](../exceptions/index.md)
+- [Obsługa wyjątków (Biblioteka zadań równoległych)](../parallel-programming/exception-handling-task-parallel-library.md)
+- [Najlepsze rozwiązania dotyczące wyjątków](../exceptions/best-practices-for-exceptions.md)
+- [Jak używać określonych wyjątków w bloku catch](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

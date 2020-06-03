@@ -82,6 +82,6 @@ Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ to Objects p
   
 - Zapytania, które zawierają zwrot, chyba że zostaną zastosowane do źródła danych z indeksem.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległe LINQ (PLINQ)](introduction-to-plinq.md)

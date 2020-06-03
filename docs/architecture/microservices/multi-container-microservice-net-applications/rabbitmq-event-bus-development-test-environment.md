@@ -2,18 +2,18 @@
 title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj RabbitMQ, aby zaimplementować obsługę komunikatów usługi Event Bus dla zdarzeń integracji dla środowisk programistycznych lub testowych.
 ms.date: 10/02/2018
-ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144295"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306893"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 
-Należy zacząć od tego, że jeśli utworzysz niestandardową magistralę zdarzeń w oparciu o RabbitMQ uruchomione w kontenerze, jako aplikację eShopOnContainers, powinna ona być używana tylko w środowiskach deweloperskich i testowych. Nie należy używać go w środowisku produkcyjnym, chyba że tworzysz go jako część usługi Service Bus gotowej do produkcji. W przypadku prostej niestandardowej magistrali zdarzeń może brakować wielu funkcji krytycznych gotowych do produkcji dostępnych w komercyjnej usłudze Service Bus.
+Należy zacząć od tego, że jeśli utworzysz niestandardową magistralę zdarzeń w oparciu o RabbitMQ uruchomione w kontenerze, jako aplikację eShopOnContainers, powinna ona być używana tylko w środowiskach deweloperskich i testowych. Nie używaj jej w środowisku produkcyjnym, chyba że tworzysz go jako część usługi Service Bus gotowej do produkcji. W przypadku prostej niestandardowej magistrali zdarzeń może brakować wielu funkcji krytycznych gotowych do produkcji dostępnych w komercyjnej usłudze Service Bus.
 
-Jedna z implementacji niestandardowej usługi Event Bus w eShopOnContainers jest zasadniczo biblioteką korzystającą z interfejsu API RabbitMQ. (Istnieje inna implementacja oparta na Azure Service Bus).
+Jedną z implementacji niestandardowych usługi Event Bus w programie eShopOnContainers jest zasadniczo Biblioteka używająca interfejsu API RabbitMQ. (Istnieje inna implementacja oparta na Azure Service Bus).
 
 Implementacja magistrali zdarzeń z RabbitMQ umożliwia mikrousługom subskrybowanie zdarzeń, publikowanie zdarzeń i odbieranie zdarzeń, jak pokazano na rysunku 6-21.
 
@@ -114,7 +114,7 @@ W przypadku scenariuszy produkcyjnych Sprawdź dodatkowe zasoby poniżej, specyf
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
-Gotowe do produkcji rozwiązania z obsługą RabbitMQ.
+Rozwiązanie gotowe do produkcji z obsługą RabbitMQ.
 
 - **EasyNetQ** — klient interfejsu API .NET Open Source dla RabbitMQ \
   <https://easynetq.com/>

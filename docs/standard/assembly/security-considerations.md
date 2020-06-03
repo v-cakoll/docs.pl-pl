@@ -61,7 +61,7 @@ Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do u
   
  Ze względu na to, że silne nazewnictwo i podpisywanie przy użyciu [Narzędzia Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md) gwarantuje integralność, zasady zabezpieczeń dostępu kodu są oparte na tych dwóch formach dowodu zestawu. Silne nazewnictwo i podpisywanie przy użyciu [Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md) gwarantuje integralność za pośrednictwem podpisów cyfrowych i certyfikatów. Wszystkie wymienione technologie — weryfikacja skrótu, silne nazewnictwo i podpisywanie przy użyciu [Narzędzia SignTool. exe (Narzędzie podpisywania)](../../framework/tools/signtool-exe.md)— działają razem, aby upewnić się, że zestaw nie został zmieniony w żaden sposób.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy o silnych nazwach](strong-named.md)
 - [Zestawy w środowisku .NET](index.md)

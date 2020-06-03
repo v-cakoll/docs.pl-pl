@@ -620,6 +620,6 @@ Aby skompilować przy użyciu języka C#, Zmień nazwę kompilatora z **VBC** na
 csc example.cs /r:UtilityLib.dll
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.CLSCompliantAttribute>

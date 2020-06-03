@@ -10,7 +10,7 @@ ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389557"
 ---
 # <a name="creating-custom-attributes-c"></a>Tworzenie atrybutów niestandardowych (C#)
-Można utworzyć własne atrybuty niestandardowe, definiując klasę atrybutu, klasę, <xref:System.Attribute>która wywodzi się bezpośrednio lub pośrednio z , co sprawia, że identyfikowanie definicji atrybutów w metadanych jest szybkie i łatwe. Załóżmy, że chcesz oznaczyć typy z nazwą programisty, który napisał typ. Można zdefiniować `Author` klasę atrybutów niestandardowych:  
+Można utworzyć własne atrybuty niestandardowe przez zdefiniowanie klasy atrybutów, klasy, która dziedziczy bezpośrednio lub pośrednio z <xref:System.Attribute> , co sprawia, że definicje atrybutów i są łatwe w użyciu w metadanych. Załóżmy, że chcesz oznakować typy nazwą programisty, który zapisał typ. Można zdefiniować `Author` klasę niestandardowego atrybutu:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -29,9 +29,9 @@ public class Author : System.Attribute
 }  
 ```  
   
- Nazwa klasy jest nazwą atrybutu `Author`, . Jest pochodną `System.Attribute`, więc jest to klasa atrybutu niestandardowego. Parametry konstruktora są parametry pozycyjne atrybutu niestandardowego. W tym `name` przykładzie jest parametrem pozycyjnym. Wszystkie publiczne pola odczytu i zapisu lub właściwości są nazywane parametrami. W takim `version` przypadku jest jedynym nazwanym parametrem. Zanotuj `AttributeUsage` użycie atrybutu, `Author` aby atrybut był `struct` prawidłowy tylko dla klasy i deklaracji.  
+ Nazwa klasy jest nazwą atrybutu, `Author` . Jest ona pochodną `System.Attribute` , więc jest klasą atrybutów niestandardowych. Parametry konstruktora są parametrami pozycyjnymi atrybutu niestandardowego. W tym przykładzie `name` jest parametrem pozycyjnym. Wszystkie publiczne pola do odczytu i zapisu są nazwanymi parametrami. W tym przypadku `version` jest jedynym nazwanym parametrem. Zwróć uwagę na użycie `AttributeUsage` atrybutu, aby atrybut był `Author` prawidłowy tylko dla klasy i `struct` deklaracji.  
   
- Możesz użyć tego nowego atrybutu w następujący sposób:  
+ Tego nowego atrybutu można użyć w następujący sposób:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -41,7 +41,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage`ma nazwany parametr, `AllowMultiple`za pomocą którego można wykonać atrybut niestandardowy jednorazowego użytku lub wielokrotnego użytku. W poniższym przykładzie kodu tworzony jest atrybut wielofunkcyjny.  
+ `AttributeUsage`ma nazwany parametr, `AllowMultiple` za pomocą którego można wykonać pojedyncze użycie lub Multiuse atrybutu niestandardowego. W poniższym przykładzie kodu tworzony jest atrybut Multiuse.  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -51,7 +51,7 @@ class SampleClass
 public class Author : System.Attribute  
 ```  
   
- W poniższym przykładzie kodu wiele atrybutów tego samego typu są stosowane do klasy.  
+ W poniższym przykładzie kodu do klasy są stosowane wiele atrybutów tego samego typu.  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -66,7 +66,7 @@ class SampleClass
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection>
-- [C# Przewodnik programowania](../../index.md)
+- [Przewodnik programowania w języku C#](../../index.md)
 - [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)
 - [Odbicie (C#)](../reflection.md)
 - [Atrybuty (C#)](./index.md)

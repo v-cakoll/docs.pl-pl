@@ -12,7 +12,7 @@ ms.locfileid: "82796070"
 
 Możesz użyć serializacji, aby zachować dane obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobieranie ich przy następnym utworzeniu wystąpienia obiektu.
 
-W tym instruktażu utworzysz obiekt podstawowy `Loan` i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.
+W tym instruktażu utworzysz `Loan` obiekt podstawowy i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.
 
 > [!IMPORTANT]
 > Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi mieć `Create` uprawnienie do tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` uprawnień, ale jest to małe uprawnienie. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` uprawnień tylko jednemu plikowi (zamiast tworzenia uprawnień dla folderu). Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.
@@ -37,8 +37,8 @@ Przykładowy kod można przeanalizować w trybie online [w repozytorium usługi 
 
 Pierwszym krokiem jest utworzenie `Loan` klasy i aplikacji konsolowej, która używa klasy:
 
-1. Utwórz nową aplikację. Wpisz `dotnet new console -o serialization` , aby utworzyć nową aplikację konsolową w podkatalogu o `serialization`nazwie.
-1. Otwórz aplikację w edytorze i Dodaj nową klasę o nazwie `Loan.cs`.
+1. Utwórz nową aplikację. Wpisz, `dotnet new console -o serialization` Aby utworzyć nową aplikację konsolową w podkatalogu o nazwie `serialization` .
+1. Otwórz aplikację w edytorze i Dodaj nową klasę o nazwie `Loan.cs` .
 1. Dodaj następujący kod do `Loan` klasy:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
@@ -71,15 +71,15 @@ Aby zachować wartości dla klasy pożyczek, należy najpierw oznaczyć klasę `
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
-<xref:System.SerializableAttribute> Informuje kompilator, że wszystko w klasie może być utrwalone w pliku. Ponieważ `PropertyChanged` zdarzenie nie reprezentuje części grafu obiektów, która powinna być przechowywana, nie powinno być serializowane. Dzięki temu można serializować wszystkie obiekty, które są dołączone do tego zdarzenia. Można dodać <xref:System.NonSerializedAttribute> do deklaracji pola dla programu obsługi `PropertyChanged` zdarzeń.
+<xref:System.SerializableAttribute>Informuje kompilator, że wszystko w klasie może być utrwalone w pliku. Ponieważ `PropertyChanged` zdarzenie nie reprezentuje części grafu obiektów, która powinna być przechowywana, nie powinno być serializowane. Dzięki temu można serializować wszystkie obiekty, które są dołączone do tego zdarzenia. Można dodać <xref:System.NonSerializedAttribute> do deklaracji pola dla `PropertyChanged` programu obsługi zdarzeń.
 
 [!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
-Począwszy od języka C# 7,3, można dołączyć atrybuty do pola zapasowego właściwości automatycznie zaimplementowane przy użyciu wartości `field` docelowej. Poniższy kod dodaje `TimeLastLoaded` Właściwość i oznacza ją jako niemożliwy do serializacji:
+Począwszy od języka C# 7,3, można dołączyć atrybuty do pola zapasowego właściwości automatycznie zaimplementowane przy użyciu `field` wartości docelowej. Poniższy kod dodaje `TimeLastLoaded` Właściwość i oznacza ją jako niemożliwy do serializacji:
 
 [!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
-Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją w pliku, należy użyć przestrzeni nazw <xref:System.IO> i. <xref:System.Runtime.Serialization.Formatters.Binary> Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych przestrzeni nazw, jak pokazano w poniższym kodzie:
+Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją w pliku, należy użyć <xref:System.IO> <xref:System.Runtime.Serialization.Formatters.Binary> przestrzeni nazw i. Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych przestrzeni nazw, jak pokazano w poniższym kodzie:
 
 [!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
@@ -91,7 +91,7 @@ Następnie Dodaj następujący kod po wierszu, który tworzy `TestLoan` obiekt:
 
 [!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
-Najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz <xref:System.IO.Stream> klasę, aby odczytać plik binarny i <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> klasę, aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.
+Najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz klasę, <xref:System.IO.Stream> Aby odczytać plik binarny i klasę, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.
 
 Następnie musisz dodać kod, aby serializować klasę do pliku. Dodaj następujący kod po istniejącym kodzie w `Main` metodzie:
 
@@ -99,7 +99,7 @@ Następnie musisz dodać kod, aby serializować klasę do pliku. Dodaj następuj
 
 W tym momencie możesz ponownie skompilować i uruchomić aplikację. Przy pierwszym uruchomieniu należy zauważyć, że stawki odsetek zaczynają się od 7,5, a następnie zmieniają się na 7,1. Zamknij aplikację, a następnie uruchom ją ponownie. Teraz aplikacja drukuje wiadomość, która odczytała zapisany plik, a oprocentowanie to 7,1 nawet przed kodem, który go zmieni.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Serializacja (C#)](index.md)
 - [Przewodnik programowania w języku C#](../../index.md)

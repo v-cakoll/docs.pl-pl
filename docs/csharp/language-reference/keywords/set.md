@@ -16,9 +16,9 @@ ms.locfileid: "82795069"
 ---
 # <a name="set-c-reference"></a>set (odwołanie w C#)
 
-`set` Słowo kluczowe definiuje metodę *dostępu* we właściwości lub indeksatora, która przypisuje wartość do właściwości lub elementu indeksatora. Aby uzyskać więcej informacji i przykładów, zobacz [Właściwości](../../programming-guide/classes-and-structs/properties.md), [zaimplementowane właściwości](../../programming-guide/classes-and-structs/auto-implemented-properties.md), i [indeksatory](../../programming-guide/indexers/index.md).
+`set`Słowo kluczowe definiuje metodę *dostępu* we właściwości lub indeksatora, która przypisuje wartość do właściwości lub elementu indeksatora. Aby uzyskać więcej informacji i przykładów, zobacz [Właściwości](../../programming-guide/classes-and-structs/properties.md), [zaimplementowane właściwości](../../programming-guide/classes-and-structs/auto-implemented-properties.md), i [indeksatory](../../programming-guide/indexers/index.md).
 
-W poniższym przykładzie zdefiniowano `get` `set` metodę dostępu a i dla właściwości o nazwie `Seconds`. Używa pola prywatnego o nazwie `_seconds` do wstecz wartości właściwości.
+W poniższym przykładzie zdefiniowano `get` `set` metodę dostępu a i dla właściwości o nazwie `Seconds` . Używa pola prywatnego o nazwie `_seconds` do wstecz wartości właściwości.
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
@@ -26,7 +26,7 @@ Często `set` metoda dostępu składa się z pojedynczej instrukcji, która przy
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   
-W przypadku prostych przypadków, w których właściwości `get` i `set` metody dostępu nie wykonują innej operacji niż ustawienie lub pobranie wartości w prywatnym polu zapasowym, można skorzystać z obsługi kompilatora języka C# dla właściwości, które są implementowane. Poniższy przykład implementuje `Hours` jako właściwość, która jest implementowana.
+W przypadku prostych przypadków, w których właściwości `get` i metody `set` dostępu nie wykonują innej operacji niż ustawienie lub pobranie wartości w prywatnym polu zapasowym, można skorzystać z obsługi kompilatora języka C# dla właściwości, które są implementowane. Poniższy przykład implementuje `Hours` jako właściwość, która jest implementowana.
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
@@ -34,7 +34,7 @@ W przypadku prostych przypadków, w których właściwości `get` i `set` metody
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)

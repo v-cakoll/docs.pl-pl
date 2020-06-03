@@ -35,11 +35,11 @@ Ten samouczek zawiera wiele funkcji. Kompilujmy je po jednej.
 
 Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog dla aplikacji. Upewnij się, że bieżący katalog. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world".
 
-Przed rozpoczęciem wprowadzania zmian przejdź do kroku, aby uruchomić prostą aplikację Hello world. Po utworzeniu aplikacji wpisz `dotnet restore` w wierszu polecenia. To polecenie uruchamia proces przywracania pakietów NuGet. Pakiet NuGet jest menedżerem pakietów platformy .NET. To polecenie pobiera wszystkie brakujące zależności dla projektu. Ponieważ jest to nowy projekt, nie są stosowane żadne zależności, więc pierwsze uruchomienie spowoduje pobranie środowiska .NET Core. Po tym początkowym kroku będziesz mieć możliwość uruchamiania `dotnet restore` tylko wtedy, gdy dodasz nowe pakiety zależne lub zaktualizujesz wersje dowolnych zależności.
+Przed rozpoczęciem wprowadzania zmian przejdź do kroku, aby uruchomić prostą aplikację Hello world. Po utworzeniu aplikacji wpisz `dotnet restore` w wierszu polecenia. To polecenie uruchamia proces przywracania pakietów NuGet. Pakiet NuGet jest menedżerem pakietów platformy .NET. To polecenie pobiera wszystkie brakujące zależności dla projektu. Ponieważ jest to nowy projekt, nie są stosowane żadne zależności, więc pierwsze uruchomienie spowoduje pobranie środowiska .NET Core. Po tym początkowym kroku będziesz mieć możliwość uruchamiania tylko wtedy, `dotnet restore` gdy dodasz nowe pakiety zależne lub zaktualizujesz wersje dowolnych zależności.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Po przywróceniu pakietów zostanie uruchomione `dotnet build`polecenie. Spowoduje to uruchomienie aparatu kompilacji i utworzenie pliku wykonywalnego aplikacji. `dotnet run` Na koniec uruchamiasz aplikację.
+Po przywróceniu pakietów zostanie uruchomione polecenie `dotnet build` . Spowoduje to uruchomienie aparatu kompilacji i utworzenie pliku wykonywalnego aplikacji. `dotnet run`Na koniec uruchamiasz aplikację.
 
 Prosty kod aplikacji Hello world to wszystko w Program.cs. Otwórz ten plik za pomocą ulubionego edytora tekstu. Zamierzamy wprowadzić Twoje pierwsze zmiany. W górnej części pliku Zobacz instrukcję using:
 
@@ -47,7 +47,7 @@ Prosty kod aplikacji Hello world to wszystko w Program.cs. Otwórz ten plik za p
 using System;
 ```
 
-Ta instrukcja informuje kompilator, że wszystkie typy z `System` przestrzeni nazw znajdują się w zakresie. Podobnie jak w przypadku innych języków zorientowanych na obiekt, które mogą być używane, C# używa przestrzeni nazw do organizowania typów. Ten program Hello world nie jest inny. Można zobaczyć, że program jest ujęty w przestrzeń nazw o nazwie na podstawie nazwy bieżącego katalogu. Na potrzeby tego samouczka Zmieńmy nazwę przestrzeni nazw na `TeleprompterConsole`:
+Ta instrukcja informuje kompilator, że wszystkie typy z `System` przestrzeni nazw znajdują się w zakresie. Podobnie jak w przypadku innych języków zorientowanych na obiekt, które mogą być używane, C# używa przestrzeni nazw do organizowania typów. Ten program Hello world nie jest inny. Można zobaczyć, że program jest ujęty w przestrzeń nazw o nazwie na podstawie nazwy bieżącego katalogu. Na potrzeby tego samouczka Zmieńmy nazwę przestrzeni nazw na `TeleprompterConsole` :
 
 ```csharp
 namespace TeleprompterConsole
@@ -80,13 +80,13 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-<xref:System.Collections.Generic.IEnumerable%601> Interfejs jest zdefiniowany w <xref:System.Collections.Generic> przestrzeni nazw. <xref:System.IO.File> Klasa jest zdefiniowana w <xref:System.IO> przestrzeni nazw.
+<xref:System.Collections.Generic.IEnumerable%601>Interfejs jest zdefiniowany w <xref:System.Collections.Generic> przestrzeni nazw. <xref:System.IO.File>Klasa jest zdefiniowana w <xref:System.IO> przestrzeni nazw.
 
-Ta metoda jest specjalnym typem metody języka C# zwanej *metodą iteratora*. Metody modułu wyliczającego zwracają sekwencje zwracające opóźnieniem. Oznacza to, że każdy element w sekwencji jest generowany w miarę żądania przez kod korzystający z sekwencji. Metody modułu wyliczającego to metody, które [`yield return`](../language-reference/keywords/yield.md) zawierają jedną lub więcej instrukcji. Obiekt zwrócony przez `ReadFrom` metodę zawiera kod generujący każdy element w sekwencji. W tym przykładzie, który obejmuje odczytywanie następnego wiersza tekstu z pliku źródłowego i zwracanie tego ciągu. Za każdym razem, gdy wywołujący kod żąda następnego elementu z sekwencji, kod odczytuje następny wiersz tekstu z pliku i zwraca go. Gdy plik jest całkowicie odczytywany, sekwencja wskazuje, że nie ma więcej elementów.
+Ta metoda jest specjalnym typem metody języka C# zwanej *metodą iteratora*. Metody modułu wyliczającego zwracają sekwencje zwracające opóźnieniem. Oznacza to, że każdy element w sekwencji jest generowany w miarę żądania przez kod korzystający z sekwencji. Metody modułu wyliczającego to metody, które zawierają jedną lub więcej [`yield return`](../language-reference/keywords/yield.md) instrukcji. Obiekt zwrócony przez `ReadFrom` metodę zawiera kod generujący każdy element w sekwencji. W tym przykładzie, który obejmuje odczytywanie następnego wiersza tekstu z pliku źródłowego i zwracanie tego ciągu. Za każdym razem, gdy wywołujący kod żąda następnego elementu z sekwencji, kod odczytuje następny wiersz tekstu z pliku i zwraca go. Gdy plik jest całkowicie odczytywany, sekwencja wskazuje, że nie ma więcej elementów.
 
-Istnieją dwa inne elementy składni języka C#, które mogą być nowe dla Ciebie. [`using`](../language-reference/keywords/using-statement.md) Instrukcja w tej metodzie zarządza oczyszczaniem zasobów. Zmienna, która została zainicjowana `using` w instrukcji`reader`(w tym przykładzie) musi implementować <xref:System.IDisposable> interfejs. Ten interfejs definiuje pojedynczą metodę `Dispose`, która powinna być wywoływana, gdy zasób powinien zostać wyznaczony. Kompilator generuje to wywołanie, gdy wykonanie osiągnie zamykający nawias klamrowy `using` instrukcji. Kod wygenerowany przez kompilator zapewnia, że zasób jest wydawany nawet wtedy, gdy wyjątek jest zgłaszany z kodu w bloku zdefiniowanym przez instrukcję using.
+Istnieją dwa inne elementy składni języka C#, które mogą być nowe dla Ciebie. [`using`](../language-reference/keywords/using-statement.md)Instrukcja w tej metodzie zarządza oczyszczaniem zasobów. Zmienna, która została zainicjowana w `using` instrukcji ( `reader` w tym przykładzie) musi implementować <xref:System.IDisposable> interfejs. Ten interfejs definiuje pojedynczą metodę, `Dispose` która powinna być wywoływana, gdy zasób powinien zostać wyznaczony. Kompilator generuje to wywołanie, gdy wykonanie osiągnie zamykający nawias klamrowy `using` instrukcji. Kod wygenerowany przez kompilator zapewnia, że zasób jest wydawany nawet wtedy, gdy wyjątek jest zgłaszany z kodu w bloku zdefiniowanym przez instrukcję using.
 
-`reader` Zmienna jest definiowana przy użyciu `var` słowa kluczowego. [`var`](../language-reference/keywords/var.md)definiuje *niejawnie wpisaną zmienną lokalną*. Oznacza to, że typ zmiennej jest określany przez typ czasu kompilacji obiektu przypisanego do zmiennej. Tutaj jest to wartość zwracana z <xref:System.IO.File.OpenText(System.String)> metody, która jest <xref:System.IO.StreamReader> obiektem.
+`reader`Zmienna jest definiowana przy użyciu `var` słowa kluczowego. [`var`](../language-reference/keywords/var.md)definiuje *niejawnie wpisaną zmienną lokalną*. Oznacza to, że typ zmiennej jest określany przez typ czasu kompilacji obiektu przypisanego do zmiennej. Tutaj jest to wartość zwracana z <xref:System.IO.File.OpenText(System.String)> metody, która jest <xref:System.IO.StreamReader> obiektem.
 
 Teraz uzupełnimy kod w celu odczytania pliku w `Main` metodzie:
 
@@ -98,7 +98,7 @@ foreach (var line in lines)
 }
 ```
 
-Uruchom program (za pomocą `dotnet run`programu) i zobaczysz, że każdy wiersz został wydrukowany w konsoli programu.
+Uruchom program (za pomocą programu `dotnet run` ) i zobaczysz, że każdy wiersz został wydrukowany w konsoli programu.
 
 ## <a name="adding-delays-and-formatting-output"></a>Dodawanie opóźnień i formatowanie danych wyjściowych
 
@@ -129,7 +129,7 @@ if (!string.IsNullOrWhiteSpace(line))
 }
 ```
 
-<xref:System.Threading.Tasks.Task> Klasa znajduje się w <xref:System.Threading.Tasks> przestrzeni nazw, dlatego należy dodać tę `using` instrukcję na początku pliku:
+<xref:System.Threading.Tasks.Task>Klasa znajduje się w <xref:System.Threading.Tasks> przestrzeni nazw, dlatego należy dodać tę `using` instrukcję na początku pliku:
 
 ```csharp
 using System.Threading.Tasks;
@@ -175,8 +175,8 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Zauważysz dwie zmiany. Po pierwsze, w treści metody, zamiast wywołania <xref:System.Threading.Tasks.Task.Wait> synchronicznie oczekiwanie na zakończenie zadania, ta wersja używa `await` słowa kluczowego. Aby to zrobić, należy dodać `async` modyfikator do sygnatury metody. Ta metoda zwraca `Task`. Zwróć uwagę, że nie ma instrukcji return zwracających `Task` obiekt. Zamiast tego ten `Task` obiekt jest tworzony przez kod, który kompilator generuje podczas korzystania z `await` operatora. Można Wyobraź sobie, że ta metoda zwraca, gdy osiągnie `await`. Zwracana `Task` wartość wskazuje, że pracę nie została ukończona. Metoda zostaje wznowiona po zakończeniu oczekiwania na zadanie. Po wykonaniu tej operacji zwrócona `Task` wartość wskazuje, że została zakończona.
-Wywoływanie kodu może monitorować, `Task` który zwraca, aby określić, kiedy został ukończony.
+Zauważysz dwie zmiany. Po pierwsze, w treści metody, zamiast wywołania <xref:System.Threading.Tasks.Task.Wait> synchronicznie oczekiwanie na zakończenie zadania, ta wersja używa `await` słowa kluczowego. Aby to zrobić, należy dodać `async` modyfikator do sygnatury metody. Ta metoda zwraca `Task` . Zwróć uwagę, że nie ma instrukcji return zwracających `Task` obiekt. Zamiast tego ten `Task` obiekt jest tworzony przez kod, który kompilator generuje podczas korzystania z `await` operatora. Można Wyobraź sobie, że ta metoda zwraca, gdy osiągnie `await` . Zwracana wartość `Task` wskazuje, że pracę nie została ukończona. Metoda zostaje wznowiona po zakończeniu oczekiwania na zadanie. Po wykonaniu tej operacji zwrócona wartość `Task` wskazuje, że została zakończona.
+Wywoływanie kodu może monitorować, który zwraca, `Task` Aby określić, kiedy został ukończony.
 
 Tę nową metodę można wywołać w `Main` metodzie:
 
@@ -184,7 +184,7 @@ Tę nową metodę można wywołać w `Main` metodzie:
 ShowTeleprompter().Wait();
 ```
 
-W `Main`tym miejscu kod wykonuje synchronicznie oczekiwania. Jeśli to możliwe, `await` należy użyć operatora zamiast synchronicznego oczekiwania. Ale w `Main` metodzie aplikacji konsolowej nie można używać `await` operatora. Spowoduje to zakończenie działania aplikacji przed ukończeniem wszystkich zadań.
+W tym miejscu `Main` kod wykonuje synchronicznie oczekiwania. `await`Jeśli to możliwe, należy użyć operatora zamiast synchronicznego oczekiwania. Ale w metodzie aplikacji konsolowej `Main` nie można używać `await` operatora. Spowoduje to zakończenie działania aplikacji przed ukończeniem wszystkich zadań.
 
 > [!NOTE]
 > Jeśli używasz języka C# 7,1 lub nowszego, możesz tworzyć aplikacje konsolowe za pomocą [ `async` `Main` metody](../whats-new/csharp-7-1.md#async-main).
@@ -219,7 +219,7 @@ private static async Task GetInput()
 
 Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegata, który odczytuje klucz z konsoli programu i modyfikuje zmienną lokalną reprezentującą opóźnienie, gdy użytkownik naciśnie klawisz "<" (mniej niż) lub ">" (większy niż). Metoda Delegate kończy się, gdy użytkownik naciśnie klawisze "X" lub "x", które umożliwiają użytkownikowi zatrzymanie wyświetlania tekstu w dowolnym momencie. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekania użytkownika o naciśnięcie klawisza.
 
-Aby zakończyć tę funkcję, należy utworzyć nową `async Task` metodę zwracającą, która uruchamia oba te zadania (`GetInput` i `ShowTeleprompter`), a także zarządza danymi udostępnionymi między tymi dwoma zadaniami.
+Aby zakończyć tę funkcję, należy utworzyć nową `async Task` metodę zwracającą, która uruchamia oba te zadania ( `GetInput` i `ShowTeleprompter` ), a także zarządza danymi udostępnionymi między tymi dwoma zadaniami.
 
 Czas na utworzenie klasy, która może obsługiwać udostępnione dane między tymi dwoma zadaniami. Ta klasa zawiera dwie właściwości publiczne: opóźnienie i flagę `Done` wskazującą, że plik został całkowicie odczytany:
 
@@ -247,13 +247,13 @@ namespace TeleprompterConsole
 }
 ```
 
-Umieść tę klasę w nowym pliku i umieść ją w `TeleprompterConsole` przestrzeni nazw, jak pokazano powyżej. Należy również dodać `using static` instrukcję, aby można było odwoływać się `Min` do metod i `Max` bez nazwy klasy lub przestrzeni nazw. [`using static`](../language-reference/keywords/using-static.md) Instrukcja importuje metody z jednej klasy. Jest to w przeciwieństwie do `using` instrukcji używanych do tego punktu, który zaimportował wszystkie klasy z przestrzeni nazw.
+Umieść tę klasę w nowym pliku i umieść ją w `TeleprompterConsole` przestrzeni nazw, jak pokazano powyżej. Należy również dodać `using static` instrukcję, aby można było odwoływać się do `Min` `Max` metod i bez nazwy klasy lub przestrzeni nazw. [`using static`](../language-reference/keywords/using-static.md)Instrukcja importuje metody z jednej klasy. Jest to w przeciwieństwie do `using` instrukcji używanych do tego punktu, który zaimportował wszystkie klasy z przestrzeni nazw.
 
 ```csharp
 using static System.Math;
 ```
 
-Następnie należy zaktualizować metody `ShowTeleprompter` i `GetInput` , aby użyć nowego `config` obiektu. Napisz jedną ostateczną `Task` metodę `async` zwracającą, aby uruchomić oba zadania i wyjść po zakończeniu pierwszego zadania:
+Następnie należy zaktualizować `ShowTeleprompter` metody i, `GetInput` Aby użyć nowego `config` obiektu. Napisz jedną ostateczną `Task` metodę zwracającą `async` , aby uruchomić oba zadania i wyjść po zakończeniu pierwszego zadania:
 
 ```csharp
 private static async Task RunTeleprompter()
@@ -268,7 +268,7 @@ private static async Task RunTeleprompter()
 
 Ta nowa metoda to <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> wywołanie. Spowoduje to utworzenie `Task` , który zakończy się zaraz po zakończeniu wszystkich zadań na liście argumentów.
 
-Następnie należy zaktualizować metody `ShowTeleprompter` i `GetInput` , aby użyć `config` obiektu dla opóźnienia:
+Następnie należy zaktualizować `ShowTeleprompter` metody i, `GetInput` Aby użyć `config` obiektu dla opóźnienia:
 
 ```csharp
 private static async Task ShowTeleprompter(TelePrompterConfig config)
@@ -303,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Ta nowa wersja `ShowTeleprompter` wywołuje nową metodę w `TeleprompterConfig` klasie. Teraz musisz zaktualizować `Main` do wywołania `RunTeleprompter` zamiast: `ShowTeleprompter`
+Ta nowa wersja `ShowTeleprompter` wywołuje nową metodę w `TeleprompterConfig` klasie. Teraz musisz zaktualizować `Main` do wywołania `RunTeleprompter` zamiast `ShowTeleprompter` :
 
 ```csharp
 RunTeleprompter().Wait();

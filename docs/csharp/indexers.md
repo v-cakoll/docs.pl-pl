@@ -1,5 +1,5 @@
 ---
-title: Indexers (Indeksatory)
+title: Indeksatory
 description: Poznaj indeksatory języka C# i sposób implementowania właściwości indeksowanych, które są właściwościami, do których odwołuje się jeden lub więcej argumentów.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/14/2020
 ms.locfileid: "83394701"
 ---
-# <a name="indexers"></a>Indexers (Indeksatory)
+# <a name="indexers"></a>Indeksatory
 
 *Indeksatory* są podobne do właściwości. Na wiele sposobów Indeksatory są kompilowane przy użyciu tych samych funkcji językowych, co [Właściwości](properties.md). Indeksatory włączają *indeksowane* właściwości: właściwości, których dotyczy odwołanie, przy użyciu co najmniej jednego argumentu. Te argumenty zapewniają indeks do pewnej kolekcji wartości.
 

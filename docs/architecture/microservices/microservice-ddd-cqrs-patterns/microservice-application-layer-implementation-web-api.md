@@ -2,12 +2,12 @@
 title: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 description: Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144607"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306932"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 
@@ -18,14 +18,14 @@ Jak wspomniano wcześniej, warstwa aplikacji może być implementowana w ramach 
 Na przykład kod warstwy aplikacji mikrousługi porządkowania jest bezpośrednio zaimplementowany jako część projektu **porządkowania. API** (projekt ASP.NET Core Web API), jak pokazano na rysunku 7-23.
 
 :::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Zrzut ekranu przedstawiający mikrousługę porządkowanie. API w Eksplorator rozwiązań.":::
-Widok Eksplorator rozwiązań mikrousługi porządkowania. API, przedstawiający podfoldery w folderze Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, models, zapytania i walidacje.
+Widok Eksplorator rozwiązań mikrousługi porządkowania. API, pokazujący podfoldery w folderze aplikacji: zachowania, polecenia, DomainEventHandlers, IntegrationEvents, modele, zapytania i walidacje.
 :::image-end:::
 
 **Rysunek 7-23**. Warstwa aplikacji w projekcie interfejsu API sieci Web programu porządkowanie. API ASP.NET Core
 
 ASP.NET Core obejmuje prosty [wbudowany kontener IOC](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (reprezentowany przez interfejs IServiceProvider), który domyślnie obsługuje iniekcję konstruktora, a ASP.NET udostępnia niektóre usługi za pomocą di. ASP.NET Core używa *usługi* Term dla dowolnego typu rejestru, który zostanie dodany przez di. Należy skonfigurować usługi wbudowanego kontenera w metodzie ConfigureServices w klasie startowej aplikacji. Zależności są implementowane w usługach, które są wymagane przez typ i rejestrowane w kontenerze IoC.
 
-Zazwyczaj należy wstrzyknąć zależności, które implementują obiekty infrastruktury. Bardzo typowym zależnością do iniekcji jest repozytorium. Można jednak wprowadzić inną zależność infrastruktury, którą może mieć. W przypadku prostszej implementacji można bezpośrednio wstrzyknąć obiekt wzorca jednostki pracy (obiekt EF DbContext), ponieważ DbContext jest również implementacją obiektów trwałości infrastruktury.
+Zazwyczaj należy wstrzyknąć zależności, które implementują obiekty infrastruktury. Typową zależnością do iniekcji jest repozytorium. Można jednak wprowadzić inną zależność infrastruktury, którą może mieć. W przypadku prostszej implementacji można bezpośrednio wstrzyknąć obiekt wzorca jednostki pracy (obiekt EF DbContext), ponieważ DbContext jest również implementacją obiektów trwałości infrastruktury.
 
 W poniższym przykładzie można zobaczyć, jak platforma .NET Core wprowadza wymagane obiekty repozytorium za pomocą konstruktora. Klasa to procedura obsługi poleceń, którą będziemy pokryć w następnej sekcji.
 
@@ -433,7 +433,7 @@ Na powyższym diagramie przedstawiono powiększenie z obrazu 7-24: kontroler ASP
 
 Przyczyną użycia wzorca mediator jest to, że w aplikacjach dla przedsiębiorstw żądania przetwarzania mogą być skomplikowane. Chcesz mieć możliwość dodawania otwartej liczby zagadnień związanych z wycinaniem, takich jak rejestrowanie, walidacje, Inspekcja i zabezpieczenia. W takich przypadkach można polegać na potoku mediator (zobacz [wzorzec mediator](https://en.wikipedia.org/wiki/Mediator_pattern)), aby zapewnić możliwość wykonania tych dodatkowych zachowań lub obaw związanych z wycinaniem.
 
-Mediator to obiekt, który hermetyzuje "jak" tego procesu: koordynuje wykonywanie w oparciu o stan, sposób wywoływania obsługi poleceń lub ładunek, który jest udostępniany do obsługi. Za pomocą składnika mediator można zastosować problemy z wycinaniem i w sposób scentralizowany, stosując dekoratory (lub [zachowania potoku](https://github.com/jbogard/MediatR/wiki/Behaviors) od [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Aby uzyskać więcej informacji, zobacz [wzorzec dekoratora](https://en.wikipedia.org/wiki/Decorator_pattern).
+Mediator to obiekt, który hermetyzuje "jak" tego procesu: koordynuje wykonywanie w oparciu o stan, sposób wywoływania obsługi poleceń lub ładunek, który jest udostępniany do obsługi. Za pomocą składnika mediator można zastosować problemy z wycinaniem i w sposób przejrzysty, stosując dekoratory (lub [zachowania potoku](https://github.com/jbogard/MediatR/wiki/Behaviors) od [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Aby uzyskać więcej informacji, zobacz [wzorzec dekoratora](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Dekoratory i zachowania są podobne do [programowania zorientowanego na proporcje (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), stosowane tylko do określonego potoku procesu zarządzanego przez składnik mediator. Aspekty w AOP, które implementują zagadnienia dotyczące krzyżowego stosowania, są stosowane na podstawie *splotów aspektów* wprowadzonych w czasie kompilacji lub w oparciu o przechwycenie wywołania obiektu. Obydwie typowe podejścia AOP są czasami nazywane "jak Magic", ponieważ nie jest to łatwe do sprawdzenia, jak AOP działa. W przypadku poważnych problemów lub usterek AOP może być trudne do debugowania. Z drugiej strony te dekoratory/zachowania są jawne i stosowane tylko w kontekście mediator, dlatego debugowanie jest znacznie bardziej przewidywalne i łatwe.
 
@@ -477,7 +477,7 @@ Kolejną dobrą przyczyną użycia wzorca mediator został wyjaśniony przez Jim
 
 > Uważam, że w tym miejscu może być warto wspominać o testowaniu — zapewnia to spójne okno do zachowania systemu. Żądanie żądania. Wiemy, że aspekt jest całkiem cenny w tworzeniu spójnych testów.
 
-Najpierw przyjrzyjmy się przykładowym kontrolerowi WebAPI, w którym faktycznie będzie używany obiekt mediator. Jeśli nie korzystasz z obiektu mediator, musisz wstrzyknąć wszystkie zależności dla tego kontrolera, takie jak obiekt rejestratora i inne. W związku z tym Konstruktor byłby dość skomplikowany. Z drugiej strony, jeśli używasz obiektu mediator, Konstruktor kontrolera może być znacznie prostszy, z zaledwie kilkoma zależnościami, a nie z wieloma zależnościami, jeśli istniała jedna dla operacji wycinania, jak w poniższym przykładzie:
+Najpierw przyjrzyjmy się przykładowym kontrolerowi WebAPI, w którym faktycznie będzie używany obiekt mediator. Jeśli nie korzystasz z obiektu mediator, musisz wstrzyknąć wszystkie zależności dla tego kontrolera, takie jak obiekt rejestratora i inne. W związku z tym Konstruktor zostałby skomplikowany. Z drugiej strony, jeśli używasz obiektu mediator, Konstruktor kontrolera może być znacznie prostszy, z zaledwie kilkoma zależnościami, a nie z wieloma zależnościami, jeśli istniała jedna dla operacji wycinania, jak w poniższym przykładzie:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,7 +526,7 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Jednak jest to również nieco bardziej zaawansowane, ponieważ implementujemy również polecenia idempotentne. Proces CreateOrderCommand powinien mieć wartość idempotentne, więc jeśli ten sam komunikat jest zduplikowany za pomocą sieci, ze względu na to, co się dzieje, takie samo zamówienie jest przetwarzane tylko raz.
+Jednak ten przypadek jest również nieco bardziej zaawansowany, ponieważ implementujemy również polecenia idempotentne. Proces CreateOrderCommand powinien mieć wartość idempotentne, więc jeśli ten sam komunikat jest zduplikowany za pomocą sieci, ze względu na to, co się dzieje, takie samo zamówienie jest przetwarzane tylko raz.
 
 Jest to implementowane przez zapakowanie polecenia biznesowego (w tym przypadku CreateOrderCommand) i osadzenie go w ogólnym IdentifiedCommand, który jest śledzony przez identyfikator każdej wiadomości przechodzącej przez sieć, która musi być idempotentne.
 
@@ -590,9 +590,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Ponieważ IdentifiedCommand zachowuje się jak forma biznesowa, gdy wymagane jest przetworzenie polecenia biznesowego, ponieważ nie jest to powtórzony identyfikator, to wykonuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej podczas uruchamiania `_mediator.Send(message.Command)` , z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Ponieważ IdentifiedCommand działa podobnie jak forma polecenia biznesowego, gdy trzeba przetworzyć polecenie biznesowe, ponieważ nie jest to powtórzony identyfikator, to wykonuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej podczas uruchamiania `_mediator.Send(message.Command)` , z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-W takim przypadku spowoduje to połączenie i uruchomienie programu obsługi poleceń firmy, w tym przypadku [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) , w którym są uruchomione transakcje względem bazy danych porządkowania, jak pokazano w poniższym kodzie.
+W takim przypadku spowoduje to połączenie i uruchomienie programu obsługi poleceń firmy, w tym przypadku [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), w którym są uruchomione transakcje względem bazy danych porządkowania, jak pokazano w poniższym kodzie.
 
 ```csharp
 // CreateOrderCommandHandler.cs

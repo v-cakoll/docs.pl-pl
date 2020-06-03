@@ -25,11 +25,11 @@ W poniższym przykładzie `let` jest używany na dwa sposoby:
 
 1. Aby utworzyć wyliczalny typ, który może być badany.
 
-2. Aby włączyć wywoływanie `ToLower` zapytania tylko raz dla zmiennej `word`zakresu. Bez użycia `let`, należy wywołać `ToLower` każdy predykat w `where` klauzuli.
+2. Aby włączyć wywoływanie zapytania `ToLower` tylko raz dla zmiennej zakresu `word` . Bez użycia `let` , należy wywołać `ToLower` każdy predykat w `where` klauzuli.
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie w C#](../index.md)
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)

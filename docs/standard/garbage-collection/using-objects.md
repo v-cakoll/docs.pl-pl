@@ -61,7 +61,7 @@ Możesz użyć tego podstawowego wzorca, jeśli zdecydujesz się zaimplementowa�
 
 Jeśli klasa przechowuje <xref:System.IDisposable> implementację jako element członkowski wystąpienia, pole lub właściwość, należy również zaimplementować klasę <xref:System.IDisposable> . Aby uzyskać więcej informacji, zobacz [implementacja kaskadowego usuwania](implementing-dispose.md#cascade-dispose-calls).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Oczyszczanie zasobów niezarządzanych](unmanaged.md)
 - [using — Instrukcja (odwołanie w C#)](../../csharp/language-reference/keywords/using-statement.md)

@@ -47,7 +47,7 @@ ms.locfileid: "84291178"
   
  Aby uzyskać informacje na temat zabezpieczeń kontroli dostępu dla muteksów, <xref:System.Security.AccessControl.MutexSecurity> Zobacz <xref:System.Security.AccessControl.MutexAccessRule> klasy i, <xref:System.Security.AccessControl.MutexRights> Wyliczenie,, <xref:System.Threading.Mutex.GetAccessControl%2A> <xref:System.Threading.Mutex.SetAccessControl%2A> ,, i <xref:System.Threading.Mutex.OpenExisting%2A> metody <xref:System.Threading.Mutex> klasy oraz <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> Konstruktor.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>

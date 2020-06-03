@@ -2,12 +2,12 @@
 title: Projektowanie modelu domeny mikrousługi
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z najważniejszymi pojęciami dotyczącymi projektowania zorientowanej na siebie modelu domeny.
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144594"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306916"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -35,7 +35,7 @@ Rysunek 7-8 pokazuje jednostkę domeny, która implementuje nie tylko atrybuty d
 
 **Rysunek 7-8**. Przykład projektu jednostki domeny implementującego dane oraz zachowanie
 
-Jednostka modelu domeny implementuje zachowania za pomocą metod, czyli nie jest to model "Anemic". Oczywiście czasami może istnieć jednostka, która nie implementuje żadnej logiki jako części klasy Entity. Może się to zdarzyć w jednostkach podrzędnych w ramach agregacji, jeśli jednostka podrzędna nie ma żadnej specjalnej logiki, ponieważ większość logiki jest zdefiniowana w zagregowanym elemencie głównym. Jeśli istnieje złożona mikrousługa, która ma wiele implementacji logiki w klasach usług, a nie w jednostkach domeny, można uwzględnić model domeny Anemic, wyjaśniony w poniższej sekcji.
+Jednostka modelu domeny implementuje zachowania za pomocą metod, czyli nie jest to model "Anemic". Oczywiście czasami może istnieć jednostka, która nie implementuje żadnej logiki jako części klasy Entity. Może się to zdarzyć w jednostkach podrzędnych w ramach agregacji, jeśli jednostka podrzędna nie ma żadnej specjalnej logiki, ponieważ większość logiki jest zdefiniowana w zagregowanym elemencie głównym. W przypadku złożonej mikrousługi, która ma logikę zaimplementowaną w klasach usług zamiast w jednostkach domeny, można uwzględnić model domeny Anemic, wyjaśniony w poniższej sekcji.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Bogaty model domeny a model domeny Anemic
 
@@ -45,7 +45,7 @@ Podstawowym objawem modelu domeny Anemic jest to, że pierwszy rumianolawendowy 
 
 Oczywiście w przypadku używania modelu domeny Anemic te modele danych będą używane z zestawu obiektów usługi (tradycyjnie nazywana *warstwą biznesową*), które przechwytują całą domenę lub logikę biznesową. Warstwa biznesowa znajduje się na szczycie modelu danych i używa modelu danych tak samo jak dane.
 
-Model domeny Anemic jest tylko projektem w stylu proceduralnym. Obiekty jednostek Anemic nie są obiektami rzeczywistymi, ponieważ nie są one zachowaniem (Metoda). Przechowują one tylko właściwości danych, dlatego nie jest to projektowanie zorientowane obiektowo. Umieszczenie wszystkich zachowań w obiektach usługi (warstwa biznesowa) zasadniczo kończy się [spaghetti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) lub [skryptów transakcji](https://martinfowler.com/eaaCatalog/transactionScript.html), w związku z czym utracisz korzyści, jakie zapewnia model domeny.
+Model domeny Anemic jest tylko projektem w stylu proceduralnym. Obiekty jednostek Anemic nie są obiektami rzeczywistymi, ponieważ nie są one zachowaniem (Metoda). Przechowują one tylko właściwości danych, dlatego nie jest to projektowanie zorientowane obiektowo. Przez umieszczenie wszystkich zachowań w obiektach usługi (warstwa biznesowa), zasadniczo jest to [spaghetti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) lub [skryptów transakcji](https://martinfowler.com/eaaCatalog/transactionScript.html), w związku z czym utracisz korzyści, jakie zapewnia model domeny.
 
 Bez względu na to, że usługa mikrousług lub ograniczone konteksty są bardzo proste (usługi CRUD), model domeny Anemic w formie obiektów Entity ze wszystkimi właściwościami danych może być wystarczająco dobry i nie będzie warto wdrażać bardziej złożonych wzorców DDD. W takim przypadku jest to po prostu model trwałości, ponieważ celowo utworzono jednostkę z tylko danymi do celów CRUD.
 
@@ -121,7 +121,7 @@ public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

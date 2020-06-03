@@ -49,10 +49,10 @@ W poniższym przykładzie zastosowano `using static` dyrektywę, aby zapewnić s
 
 W przykładzie `using static` można również zastosować dyrektywę do <xref:System.Double> typu. Mogłoby to umożliwić wywołanie <xref:System.Double.TryParse(System.String,System.Double@)> metody bez określenia nazwy typu. Jednak tworzy to mniej czytelny kod, ponieważ jest konieczny do sprawdzenia `using static` dyrektywy w celu ustalenia, która metoda typu liczbowego `TryParse` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Using — dyrektywa](using-directive.md)
 - [Odwołanie w C#](../index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
-- [Namespaces](../../programming-guide/namespaces/index.md)
+- [Przestrzenie nazw](../../programming-guide/namespaces/index.md)

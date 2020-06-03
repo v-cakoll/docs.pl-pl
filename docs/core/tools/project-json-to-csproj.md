@@ -339,7 +339,7 @@ W programie MSBuild wszystkie projekty są *przenośne* podczas kompilacji, ale 
 
 Aby uzyskać więcej informacji, zobacz artykuły [z obsługą prewartą (SCD)](../deploying/index.md#publish-self-contained).
 
-## <a name="tools"></a>narzędzia
+## <a name="tools"></a>tools
 
 ```json
 {

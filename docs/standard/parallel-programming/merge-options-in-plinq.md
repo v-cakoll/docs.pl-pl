@@ -63,7 +63,7 @@ Gdy zapytanie jest wykonywane jako Parallel, PLINQ tworzy sekwencję źródłow�
   
  Niektóre operatory obsługujące opcje scalania są zależne od typu sekwencji źródłowej, a także od tego, czy <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator został wcześniej użyty w zapytaniu. <xref:System.Linq.ParallelEnumerable.ForAll%2A>jest zawsze <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; natychmiast zwraca swoje elementy. <xref:System.Linq.ParallelEnumerable.OrderBy%2A>jest zawsze <xref:System.Linq.ParallelMergeOptions.FullyBuffered> ; należy posortować całą listę przed jej zwróceniem.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległe LINQ (PLINQ)](introduction-to-plinq.md)
 - [Instrukcje: Określanie opcji scalania w PLINQ](how-to-specify-merge-options-in-plinq.md)

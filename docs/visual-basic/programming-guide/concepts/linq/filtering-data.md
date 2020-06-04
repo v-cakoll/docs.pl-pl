@@ -2,12 +2,12 @@
 title: Filtrowanie danych
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: 81e207e451055fb2952e4bf393db067f0851afb4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7a1aa76dc93cc03952e55f5f8fc3f75176a3f9f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353495"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383420"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtrowanie danych (Visual Basic)
 
@@ -24,11 +24,11 @@ W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, któr
 |Nazwa metody|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OfType|Wybiera wartości, w zależności od możliwości przerzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|Gdzie|Wybiera wartości, które są oparte na funkcji predykatu.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
+|Lokalizacja|Wybiera wartości, które są oparte na funkcji predykatu.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania
 
-Poniższy przykład używa `Where` do filtrowania z tablicy te ciągi mające określoną długość.
+W poniższym przykładzie zastosowano `Where` do filtrowania z tablicy te ciągi mające określoną długość.
 
 ```vb
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}
@@ -51,12 +51,12 @@ MsgBox(sb.ToString())
 ' fox
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [Instrukcje: filtrowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [Instrukcje: wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md)
+- [Klauzula WHERE](../../../language-reference/queries/where-clause.md)
+- [Instrukcje: filtrowanie wyników zapytania](../../language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [Instrukcje: wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (LINQ) (Visual Basic)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)](how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

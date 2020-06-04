@@ -2,39 +2,39 @@
 title: Zdarzenia LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368819"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>Zdarzenia LINQ to XML (Visual Basic)
-zdarzenia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwiają otrzymywanie powiadomień, gdy drzewo XML zostanie zmienione.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zdarzenia umożliwiają otrzymywanie powiadomień, gdy drzewo XML zostanie zmienione.  
   
- Można dodawać zdarzenia do wystąpienia dowolnego <xref:System.Xml.Linq.XObject>. Procedura obsługi zdarzeń będzie następnie otrzymywać zdarzenia dotyczące modyfikacji tego <xref:System.Xml.Linq.XObject> i wszystkich jego elementów podrzędnych. Na przykład można dodać program obsługi zdarzeń do elementu głównego drzewa i obsłużyć wszystkie modyfikacje drzewa z tego programu obsługi zdarzeń.  
+ Zdarzenia można dodać do wystąpienia dowolnego <xref:System.Xml.Linq.XObject> . Procedura obsługi zdarzeń będzie następnie otrzymywać zdarzenia dotyczące modyfikacji tego <xref:System.Xml.Linq.XObject> elementu i jego elementów podrzędnych. Na przykład można dodać program obsługi zdarzeń do elementu głównego drzewa i obsłużyć wszystkie modyfikacje drzewa z tego programu obsługi zdarzeń.  
   
- Przykłady zdarzeń [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można znaleźć w temacie <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed>.  
+ Przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzeń można znaleźć w tematach <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed> .  
   
 ## <a name="types-and-events"></a>Typy i zdarzenia  
  Następujące typy są używane podczas pracy ze zdarzeniami:  
   
-|Type|Opis|  
+|Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Określa typ zdarzenia, gdy zdarzenie jest zgłaszane dla <xref:System.Xml.Linq.XObject>.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Zawiera dane dla zdarzeń <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed>.|  
+|<xref:System.Xml.Linq.XObjectChange>|Określa typ zdarzenia, gdy zdarzenie jest zgłaszane dla elementu <xref:System.Xml.Linq.XObject> .|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Dostarcza dane dla <xref:System.Xml.Linq.XObject.Changing> zdarzeń i <xref:System.Xml.Linq.XObject.Changed> .|  
   
  Podczas modyfikowania drzewa XML są zgłaszane następujące zdarzenia:  
   
-|Zdarzenie|Opis|  
+|Wydarzenie|Opis|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Występuje tuż przed tym <xref:System.Xml.Linq.XObject> lub dowolnym z jego elementów podrzędnych zostanie zmieniony.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Występuje po zmianie <xref:System.Xml.Linq.XObject> lub dowolnych jego elementów podrzędnych.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Występuje tuż przed tym <xref:System.Xml.Linq.XObject> lub dowolnym z jego obiektów podrzędnych zostanie zmieniony.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Występuje po <xref:System.Xml.Linq.XObject> zmianie lub dowolnych jego elementów podrzędnych.|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Zdarzenia są przydatne, gdy chcesz zachować pewne zagregowane informacje w drzewie XML. Na przykład możesz chcieć zachować sumę faktury, która jest sumą wierszy faktury. Ten przykład używa zdarzeń, aby zachować sumę wszystkich elementów podrzędnych w ramach elementu złożonego `Items`.  
+ Zdarzenia są przydatne, gdy chcesz zachować pewne zagregowane informacje w drzewie XML. Na przykład możesz chcieć zachować sumę faktury, która jest sumą wierszy faktury. Ten przykład używa zdarzeń, aby zachować sumę wszystkich elementów podrzędnych w ramach elementu złożonego `Items` .  
   
 ### <a name="code"></a>Kod  
   
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](advanced-linq-to-xml-programming.md)

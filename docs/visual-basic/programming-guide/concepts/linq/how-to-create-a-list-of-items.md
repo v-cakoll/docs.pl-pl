@@ -5,26 +5,26 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b3df58fb3d56a1eb3ac6efcca57c76be470e4bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855464"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414624"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Instrukcje: tworzenie listy elementów
-Kod w tym temacie Określa `Student` klasy i tworzy listę wystąpień klasy. Lista jest przeznaczona do obsługi temat [instruktażu: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Również może służyć do dowolnej aplikacji, która wymaga listy obiektów. Kod określa elementy na liście uczniów za pomocą inicjatorów obiektów.  
+Kod w tym temacie definiuje `Student` klasę i tworzy listę wystąpień klasy. Lista została zaprojektowana do obsługi [przewodnika: Pisanie zapytań w Visual Basic](walkthrough-writing-queries.md). Można go również użyć dla każdej aplikacji, która wymaga listy obiektów. Kod definiuje elementy na liście uczniów przy użyciu inicjatorów obiektów.  
   
 ## <a name="example"></a>Przykład  
- Jeśli pracujesz w instruktażu, można użyć tego kodu dla projektu, który jest tworzony istnieje plik Module1.vb. Wystarczy zastąpić wiersze oznaczone *** w `Main` metody za pomocą zapytań i wykonania zapytania, które są dostarczane w instruktażu.  
+ Jeśli pracujesz nad tym przewodnikiem, możesz użyć tego kodu dla pliku Module1. vb projektu, który został utworzony w tym miejscu. Po prostu Zastąp wiersze oznaczone symbolem * * * * w `Main` metodzie kwerendami i wykonaniami zapytań, które są dostępne w przewodniku.  
   
  [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [Wskazówki: Pisanie zapytań w Visual Basic](walkthrough-writing-queries.md)
+- [Wprowadzenie do programu LINQ w Visual Basic](getting-started-with-linq.md)
+- [Inicjatory obiektów: typy nazwane i anonimowe](../../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../language-features/linq/introduction-to-linq.md)
+- [LINQ](../../language-features/linq/index.md)
+- [Zapytania](../../../language-reference/queries/index.md)

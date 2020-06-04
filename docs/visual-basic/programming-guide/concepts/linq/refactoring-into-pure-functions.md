@@ -2,12 +2,12 @@
 title: Refaktoryzacja do czystych funkcji
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346521"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413482"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refaktoryzacja do czystych funkcji (Visual Basic)
 
@@ -21,7 +21,7 @@ Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:
 
  Jednym ze sposobów przejścia do programowania funkcjonalnego jest Refaktoryzacja istniejącego kodu w celu wyeliminowania zbędnych efektów ubocznych i zewnętrznych zależności. W ten sposób można utworzyć czystą wersję funkcji istniejącego kodu.
 
-W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: manipulowanie zawartością w samouczku WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.
+W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: manipulowanie zawartością w samouczku WordprocessingML Document (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminowanie efektów ubocznych i zależności zewnętrznych
 
@@ -29,7 +29,7 @@ Poniższe przykłady różnią się dwoma nieczystymi funkcjami i czystą funkcj
 
 ### <a name="non-pure-function-that-changes-a-class-member"></a>Nieczysta funkcja, która zmienia element członkowski klasy
 
-W poniższym kodzie funkcja `HyphenatedConcat` nie jest czystą funkcją, ponieważ modyfikuje element członkowski danych `aMember` w klasie:
+W poniższym kodzie `HyphenatedConcat` Funkcja nie jest czystą funkcją, ponieważ modyfikuje `aMember` element członkowski danych w klasie:
 
 ```vb
 Module Module1
@@ -52,11 +52,11 @@ Ten kod generuje następujące dane wyjściowe:
 StringOne-StringTwo
 ```
 
-Należy zauważyć, że nie ma znaczenia, czy modyfikowane dane mają `public` czy `private` dostępu, czy też jest członkiem `shared` lub członkiem wystąpienia. Czysta funkcja nie zmienia żadnych danych poza funkcją.
+Należy zauważyć, że nie ma znaczenia, czy modyfikowane dane mają dostęp, czy też jest członkiem `public` `private` `shared` lub wystąpieniem. Czysta funkcja nie zmienia żadnych danych poza funkcją.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Nieczysta funkcja, która zmienia argument
 
-Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość jej parametru, `sb`.
+Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość jej parametru, `sb` .
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-Ta wersja programu daje te same dane wyjściowe co w pierwszej wersji, ponieważ funkcja `HyphenatedConcat` zmieniła wartość (stan) pierwszego parametru przez wywołanie funkcji członkowskiej <xref:System.Text.StringBuilder.Append%2A>. Należy zauważyć, że ta zmiana występuje pomimo tego, że `HyphenatedConcat` używa parametrów wywołania-do-wartości.
+Ta wersja programu daje te same dane wyjściowe co pierwsza wersja, ponieważ `HyphenatedConcat` Funkcja zmieniła wartość (stan) pierwszego parametru przez wywołanie <xref:System.Text.StringBuilder.Append%2A> funkcji członkowskiej. Należy zauważyć, że ta zmiana występuje pomimo tego faktu, który `HyphenatedConcat` używa przekazywania parametrów wywołania przez wartość.
 
 > [!IMPORTANT]
 > W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.
 
 ### <a name="pure-function"></a>Czysta funkcja
 
-Ta Następna wersja programu hows sposób implementacji funkcji `HyphenatedConcat` jako czystej funkcji.
+Ta Następna wersja programu hows, jak zaimplementować `HyphenatedConcat` funkcję jako czystą funkcję.
 
 ```vb
 Module Module1
@@ -95,7 +95,7 @@ Module Module1
 End Module
 ```
 
-Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo`. Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej pośredniej `s2`.
+Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo` . Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej pośredniej `s2` .
 
 Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, które są w sposób nieczysty (to oznacza, że deklarują i modyfikują zmienne lokalne), ale są globalnie czyste. Takie funkcje mają wiele pożądanych cech tworzenia, ale unikają niektórych bardziej zawiłeych idiomy programowania, takich jak korzystanie z rekursji, gdy pętla prosta osiągnie tę samą wartość.
 
@@ -103,9 +103,9 @@ Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, któ
 
 Ważną cechą standardowych operatorów zapytań jest zaimplementowanie ich jako czystych funkcji.
 
-Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](functional-programming-vs-imperative-programming.md)

@@ -2,23 +2,23 @@
 title: przechowywanie obiektu w programie Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350396"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413132"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Przewodnik: utrwalanie obiektu w programie Visual Studio (Visual Basic)
 Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie projektowania, wszelkie wartości wprowadzone w czasie wykonywania są tracone, gdy obiekt zostanie zniszczony. Możesz użyć serializacji, aby zachować dane obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobieranie ich przy następnym utworzeniu wystąpienia obiektu.  
   
 > [!NOTE]
-> W Visual Basic, aby przechowywać proste dane, takie jak nazwa lub liczba, można użyć obiektu `My.Settings`. Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> W Visual Basic, aby przechowywać proste dane, takie jak nazwa lub liczba, można użyć `My.Settings` obiektu. Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../language-reference/objects/my-settings-object.md).  
   
- W tym instruktażu utworzysz prosty obiekt `Loan` i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.  
+ W tym instruktażu utworzysz prosty `Loan` obiekt i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.  
   
 > [!IMPORTANT]
-> Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi `Create` uprawnienie dla tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` uprawnienia, ale jest to małe uprawnienie. Jeśli to możliwe, bezpieczniejsze jest tworzenie pliku podczas wdrażania i udzielanie uprawnień `Read` tylko do jednego pliku (zamiast tworzenia uprawnień dla folderu). Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.  
+> Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi mieć `Create` uprawnienia do tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` uprawnień, ale jest to małe uprawnienie. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` uprawnień tylko jednemu plikowi (zamiast tworzenia uprawnień dla folderu). Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.  
   
 > [!IMPORTANT]
 > Ten przykład zapisuje dane w postaci binarnej. Tych formatów nie należy używać w przypadku poufnych danych, takich jak hasła lub informacje o kartach kredytowych.  
@@ -27,13 +27,13 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
 > Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, kliknij przycisk **Importuj i Eksportuj ustawienia** w menu **Narzędzia** . Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Tworzenie obiektu pożyczek  
- Pierwszym krokiem jest utworzenie klasy `Loan` i aplikacji testowej, która używa klasy.  
+ Pierwszym krokiem jest utworzenie `Loan` klasy i aplikacji testowej, która używa klasy.  
   
 ### <a name="to-create-the-loan-class"></a>Aby utworzyć klasę pożyczek  
   
 1. Utwórz nowy projekt biblioteki klas i nadaj mu nazwę "LoanClass". Aby uzyskać więcej informacji, zobacz [Tworzenie rozwiązań i projektów](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2. W **Eksplorator rozwiązań**Otwórz menu skrótów dla pliku Class1 i wybierz polecenie **Zmień nazwę**. Zmień nazwę pliku na `Loan` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy na `Loan`.  
+2. W **Eksplorator rozwiązań**Otwórz menu skrótów dla pliku Class1 i wybierz polecenie **Zmień nazwę**. Zmień nazwę pliku na `Loan` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy na `Loan` .  
   
 3. Dodaj następujące publiczne elementy członkowskie do klasy:  
   
@@ -73,13 +73,13 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     End Class  
     ```  
   
- Należy również utworzyć prostą aplikację, która używa klasy `Loan`.  
+ Należy również utworzyć prostą aplikację, która używa `Loan` klasy.  
   
 ### <a name="to-create-a-test-application"></a>Aby utworzyć aplikację testową  
   
 1. Aby dodać projekt aplikacji Windows Forms do rozwiązania, w menu **plik** wybierz polecenie **Dodaj**,**Nowy projekt**.  
   
-2. W oknie dialogowym **Dodaj nowy projekt** wybierz pozycję **Windows Forms aplikacja**, a następnie wprowadź `LoanApp` jako nazwę projektu, a następnie kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+2. W oknie dialogowym **Dodaj nowy projekt** wybierz pozycję **Windows Forms aplikacja**i wprowadź `LoanApp` nazwę projektu, a następnie kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
 3. W **Eksplorator rozwiązań**wybierz projekt LoanApp.  
   
@@ -89,7 +89,7 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
   
 6. W oknie dialogowym **Dodaj odwołanie** wybierz kartę **projekty** , a następnie wybierz projekt LoanClass.  
   
-7. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+7. Kliknij przycisk **OK**, aby zamknąć okno dialogowe.  
   
 8. W projektancie Dodaj cztery <xref:System.Windows.Forms.TextBox> kontrolki do formularza.  
   
@@ -106,7 +106,7 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     End Sub  
     ```  
   
-10. Dodaj procedurę obsługi zdarzeń dla zdarzenia `PropertyChanged` do formularza przy użyciu następującego kodu:  
+10. Dodaj program obsługi zdarzeń dla `PropertyChanged` zdarzenia do formularza przy użyciu następującego kodu:  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -118,12 +118,12 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     End Sub  
     ```  
   
- W tym momencie można skompilować i uruchomić aplikację. Należy zauważyć, że wartości domyślne z klasy `Loan` pojawiają się w polach tekstowych. Spróbuj zmienić wartość stopy oprocentowania z 7,5 na 7,1, a następnie zamknij aplikację i uruchom ją ponownie — wartość zostanie przywrócona do wartości domyślnej 7,5.  
+ W tym momencie można skompilować i uruchomić aplikację. Należy zauważyć, że wartości domyślne z `Loan` klasy są wyświetlane w polach tekstowych. Spróbuj zmienić wartość stopy oprocentowania z 7,5 na 7,1, a następnie zamknij aplikację i uruchom ją ponownie — wartość zostanie przywrócona do wartości domyślnej 7,5.  
   
  W świecie rzeczywistym stawki odsetek zmieniają się okresowo, ale nie zawsze, gdy aplikacja jest uruchomiona. Zamiast sprawiać, że użytkownik nie aktualizuje stopy oprocentowania za każdym razem, gdy aplikacja jest uruchomiona, lepiej jest zachować najnowszą stawkę odsetek między wystąpieniami aplikacji. W następnym kroku wystarczy dodać serializację do klasy pożyczek.  
   
 ## <a name="using-serialization-to-persist-the-object"></a>Utrwalanie obiektu przy użyciu serializacji  
- Aby zachować wartości dla klasy pożyczek, należy najpierw oznaczyć klasę atrybutem `Serializable`.  
+ Aby zachować wartości dla klasy pożyczek, należy najpierw oznaczyć klasę `Serializable` atrybutem.  
   
 ### <a name="to-mark-a-class-as-serializable"></a>Aby oznaczyć klasę jako możliwy do serializacji  
   
@@ -134,11 +134,11 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     Public Class Loan  
     ```  
   
- Atrybut `Serializable` informuje kompilator, że wszystkie elementy w klasie mogą być utrwalane w pliku. Ponieważ zdarzenie `PropertyChanged` jest obsługiwane przez obiekt formularza systemu Windows, nie może być serializowane. Atrybut `NonSerialized` może służyć do oznaczania elementów członkowskich klasy, które nie powinny być utrwalane.  
+ Ten `Serializable` atrybut informuje kompilator, że wszystko w klasie może być utrwalone w pliku. Ponieważ `PropertyChanged` zdarzenie jest obsługiwane przez obiekt formularza systemu Windows, nie może być serializowane. Ten `NonSerialized` atrybut może służyć do oznaczania elementów członkowskich klasy, które nie powinny być utrwalane.  
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Aby zapobiec serializacji elementu członkowskiego  
   
-- Zmień deklarację dla zdarzenia `PropertyChanged` w następujący sposób:  
+- Zmień deklarację dla `PropertyChanged` zdarzenia w następujący sposób:  
   
     ```vb  
     <NonSerialized()>  
@@ -146,11 +146,11 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją do pliku, należy użyć przestrzeni nazw <xref:System.IO> i <xref:System.Xml.Serialization>. Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych bibliotek klas.  
+ Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją w pliku, należy użyć <xref:System.IO> <xref:System.Xml.Serialization> przestrzeni nazw i. Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych bibliotek klas.  
   
 ### <a name="to-add-references-to-namespaces"></a>Aby dodać odwołania do przestrzeni nazw  
   
-- Dodaj następujące instrukcje na początku klasy `Form1`:  
+- Dodaj następujące instrukcje na górze `Form1` klasy:  
   
     ```vb  
     Imports System.IO  
@@ -169,7 +169,7 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2. Zmodyfikuj kod w procedurze zdarzenia `Form1_Load` w następujący sposób:  
+2. Zmodyfikuj kod w `Form1_Load` procedurze zdarzenia w następujący sposób:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -191,13 +191,13 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
     End Sub  
     ```  
   
-     Należy pamiętać, że najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz klasę <xref:System.IO.Stream>, aby odczytać plik binarny i klasę <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.  
+     Należy pamiętać, że najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz klasę, <xref:System.IO.Stream> Aby odczytać plik binarny i klasę, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.  
   
- Następnie musisz dodać kod, aby zapisać dane wprowadzone w polach tekstowych do klasy `Loan`, a następnie trzeba serializować klasy do pliku.  
+ Następnie musisz dodać kod, aby zapisać dane wprowadzone w polach tekstowych do `Loan` klasy, a następnie trzeba serializować klasę do pliku.  
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Aby zapisać dane i serializować klasę  
   
-- Dodaj następujący kod do procedury zdarzenia `Form1_FormClosing`:  
+- Dodaj następujący kod do `Form1_FormClosing` procedury zdarzenia:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -215,7 +215,7 @@ Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie 
   
  W tym momencie możesz ponownie skompilować i uruchomić aplikację. Początkowo wartości domyślne pojawiają się w polach tekstowych. Spróbuj zmienić wartości i wprowadź nazwę w czwartym polu tekstowym. Zamknij aplikację, a następnie uruchom ją ponownie. Należy pamiętać, że nowe wartości są teraz wyświetlane w polach tekstowych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Serializacja (Visual Basic)](index.md)
+- [Przewodnik programowania w Visual Basic](../../index.md)

@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 7cdbd5fb192fd5cc1be6260dcdcdb1f30cf3f865
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee31156e00059699125fd72a7f091afbb21beab0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400695"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415482"
 ---
-# <a name="ushort-data-type-visual-basic"></a>Typ danych UShort (Visual Basic)
+# <a name="ushort-data-type-visual-basic"></a>UShort — Typ danych (Visual Basic)
 
-Przechowuje niepodpisane 16-bitowe (2-bajtowe) liczby całkowite o wartości od 0 do 65 535.  
+Przechowuje liczby całkowite (2-bajtowe) bez znaku w zakresie od 0 do 65 535.  
   
 ## <a name="remarks"></a>Uwagi
 
- Użyj `UShort` typu danych, aby zawierać `Byte`dane binarne zbyt duże dla .  
+ Użyj `UShort` typu danych, aby zawierać dane binarne za duże `Byte` .  
   
  Wartość domyślna `UShort` to 0.  
 
-## <a name="literal-assignments"></a>Przydziały dosłowne
+## <a name="literal-assignments"></a>Przypisania literałów
 
-Można zadeklarować i `UShort` zainicjować zmienną, przypisując jej literał dziesiętny, szesnastkowy literał, literał ósemkowy lub (zaczynając od języka Visual Basic 2017) literał binarny. Jeśli litera liczba całkowita znajduje się `UShort` poza zakresem (oznacza <xref:System.UInt16.MinValue?displayProperty=nameWithType> to, <xref:System.UInt16.MaxValue?displayProperty=nameWithType>że jest mniejsza lub większa niż , występuje błąd kompilacji.
+Można zadeklarować i zainicjować `UShort` zmienną, przypisując jej literał dziesiętny, literał szesnastkowy, literał ósemkowy lub (Zaczynając od Visual Basic 2017) literał binarny. Jeśli literał liczby całkowitej znajduje się poza zakresem `UShort` (to jest, jeśli jest mniejszy niż <xref:System.UInt16.MinValue?displayProperty=nameWithType> lub większy niż <xref:System.UInt16.MaxValue?displayProperty=nameWithType> , wystąpi błąd kompilacji.
 
-W poniższym przykładzie liczby całkowite równe 65 034, które są reprezentowane jako dziesiętne, szesnastkowe i binarne literały są przypisywane do `UShort` wartości.
+W poniższym przykładzie liczby całkowite równe 65 034 są reprezentowane jako literały dziesiętne, szesnastkowe i binarne są przypisywane do `UShort` wartości.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> Prefiksu `&h` lub `&H` oznaczasz szesnastkowy literał, `&b` `&B` prefiks lub oznacza literał binarny i prefiks `&o` lub `&O` oznacza literał ósemkowy. Literały dziesiętne nie mają prefiksu.
+> Używasz prefiksu `&h` lub `&H` do oznaczenia literału szesnastkowego, prefiksu `&b` lub `&B` do oznaczania literału binarnego oraz prefiksu `&o` lub `&O` do określenia literału ósemkowego. Literały dziesiętne nie mają prefiksu.
 
-Począwszy od języka Visual Basic 2017, `_`można również użyć znaku podkreślenia, jako separatora cyfry, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
+Począwszy od Visual Basic 2017, można również użyć znaku podkreślenia, `_` jako separatora cyfr, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Począwszy od języka Visual Basic 15.5,`_`można również użyć znaku podkreślenia ( ) jako interełownika wiodącego między prefiksem a cyframi szesnastkowymi, binarnymi lub ósemkowymi. Przykład:
+Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia ( `_` ) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Przykład:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literały liczbowe mogą również `US` `us` zawierać [znak](../../programming-guide/language-features/data-types/type-characters.md) lub `UShort` typ oznaczania typu danych, jak pokazano w poniższym przykładzie.
+Literały numeryczne mogą również zawierać `US` `us` [znak](../../programming-guide/language-features/data-types/type-characters.md) lub, aby zauważyć `UShort` Typ danych, jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim number = &H_5826us
@@ -64,21 +64,21 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
   
-- **Liczby ujemne.** Ponieważ `UShort` jest typem niepodpisanym, nie może reprezentować liczby ujemnej. Jeśli w wyrażeniu, które ma być wpisane, użyjesz operatora unary minus (`-`) w wyrażeniu, które ma być wpisane, `UShort`visual basic konwertuje wyrażenie na `Integer` pierwsze.  
+- **Liczby ujemne.** Ponieważ `UShort` jest typem bez znaku, nie może reprezentować liczby ujemnej. W przypadku użycia jednoargumentowego operatora minus ( `-` ) w wyrażeniu, którego typem jest typ `UShort` , Visual Basic konwertuje wyrażenie na `Integer` pierwsze.  
   
-- **Zgodność z CLS.** Typ `UShort` danych nie jest częścią [specyfikacji języka wspólnego](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), więc kod zgodny ze specyfikacją CLS nie może korzystać ze składnika, który go używa.
+- **Zgodność ze specyfikacją CLS.** `UShort`Typ danych nie jest częścią [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), więc kod zgodny ze specyfikacją CLS nie może używać składnika, który go używa.
   
-- **Poszerzenie.** Typ `UShort` danych rozszerza `Integer`się `UInteger` `Long`do `ULong` `Decimal`, `Single`, `Double`, , , i . Oznacza to, `UShort` że można przekonwertować <xref:System.OverflowException?displayProperty=nameWithType> do dowolnego z tych typów bez napotkania błędu.  
+- **Rozszerzającą.** `UShort`Typ danych poszerza do,, `Integer` ,,, `UInteger` `Long` `ULong` `Decimal` `Single` , i `Double` . Oznacza to, że można dokonać konwersji `UShort` do dowolnego z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
-- **Wpisz znaki.** Dołączenie znaków `US` typu literału do literału `UShort` wymusza go do typu danych. `UShort`nie ma znaku typu identyfikatora.  
+- **Znaki typu.** Dołączanie znaków literału `US` do literału wymusza jego do `UShort` typu danych. `UShort`nie ma znaku typu identyfikatora.  
   
-- **Typ struktury.** Odpowiedni typ w .NET Framework <xref:System.UInt16?displayProperty=nameWithType> jest strukturą.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.UInt16?displayProperty=nameWithType> strukturą.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.UInt16>
-- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
-- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
-- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Typy danych](index.md)
+- [Funkcje konwersji typu](../functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../keywords/conversion-summary.md)
+- [Instrukcje: Wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Skuteczne stosowanie typów danych](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

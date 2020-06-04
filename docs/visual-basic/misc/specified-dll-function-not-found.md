@@ -1,25 +1,25 @@
 ---
-title: Nie można odnaleźć określonej funkcji DLL
+title: Nie znaleziono określonej funkcji DLL
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID453
 ms.assetid: c0a308ee-5876-40af-be4b-1979397835df
-ms.openlocfilehash: 4c058d9ee5b673de431aadd7f4304fe0271838b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68f274ca6491d38d5054538fd819c83ba8fc84d1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594989"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357767"
 ---
-# <a name="specified-dll-function-not-found"></a>Nie można odnaleźć określonej funkcji DLL
-Znaleziono biblioteki dołączanej (dynamicznie DLL) w dokumentacji biblioteki użytkownika, ale nie można odnaleźć funkcji biblioteki DLL określonej w bibliotece DLL.  
+# <a name="specified-dll-function-not-found"></a>Nie znaleziono określonej funkcji DLL
+Znaleziono bibliotekę dołączaną dynamicznie (DLL) w odwołaniu do biblioteki użytkownika, ale w bibliotece DLL nie znaleziono określonej funkcji DLL.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. W deklaracji funkcji, należy określić prawidłowy numer.  
+1. Określ prawidłową wartość porządkową w deklaracji funkcji.  
   
-2. Upewnij się, że nazwa biblioteki DLL i alias są poprawne.  
+2. Upewnij się, że nazwa i alias biblioteki DLL są poprawne.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

@@ -2,16 +2,16 @@
 title: 'Przykładowy plik XML: książki (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 2e6ef32e9f7e45b45b22390c1ce669638d0be9a1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4bdf36aef90f56bfe3f2387c18bce69d5015cbb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524084"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413365"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>Przykładowy plik XML: książki (LINQ to XML)
 
-Poniższy plik XML jest używany w różnych przykładach w dokumentacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Plik zawiera informacje o książkach.
+Następujący plik XML jest używany w różnych przykładach w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Plik zawiera informacje o książkach.
 
 ## <a name="booksxml"></a>Books. XML
 
@@ -40,6 +40,6 @@ Poniższy plik XML jest używany w różnych przykładach w dokumentacji [!INCLU
 </Catalog>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Przykładowe dokumenty XML (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

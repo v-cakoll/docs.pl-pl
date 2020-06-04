@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ecb0f5f6416a2dd4ddd6888cb80ed3ac11ee58df
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343916"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415534"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 
@@ -33,29 +33,29 @@ Przechowuje podpisane cyfry IEEE 32-bit (4-bajtowe) liczby zmiennoprzecinkowe o 
   
 ## <a name="remarks"></a>Uwagi  
 
- Użyj `Single` typ danych, aby zawierać wartości zmiennoprzecinkowe, które nie wymagają pełnej szerokości danych `Double`. W niektórych przypadkach środowisko uruchomieniowe języka wspólnego może być w stanie spakować zmienne `Single` blisko siebie i zaoszczędzić użycie pamięci.  
+ Użyj `Single` typu danych, aby zawierać wartości zmiennoprzecinkowe, które nie wymagają pełnej szerokości danych `Double` . W niektórych przypadkach środowisko uruchomieniowe języka wspólnego może mieć `Single` ścisłe pakowanie zmiennych i oszczędność zużycia pamięci.  
   
- Wartość domyślna `Single` wynosi 0.  
+ Wartość domyślna `Single` to 0.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
-- **Dokładne.** Podczas pracy z liczbami zmiennoprzecinkowymi należy pamiętać, że nie zawsze mają dokładną reprezentację w pamięci. Może to prowadzić do nieoczekiwanych wyników niektórych operacji, takich jak porównanie wartości i operator `Mod`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Dokładne.** Podczas pracy z liczbami zmiennoprzecinkowymi należy pamiętać, że nie zawsze mają dokładną reprezentację w pamięci. Może to prowadzić do nieoczekiwanych wyników niektórych operacji, takich jak porównywanie wartości i `Mod` operator. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typami danych](../../programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Rozszerzającą.** Typ danych `Single` poszerza do `Double`. Oznacza to, że można skonwertować `Single` na `Double` bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzającą.** `Single`Typ danych jest rozszerzany do `Double` . Oznacza to, że można przeprowadzić konwersję `Single` na `Double` bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
 - **Końcowe zera.** Zmiennoprzecinkowe typy danych nie mają żadnej wewnętrznej reprezentacji znaków kończących 0. Na przykład nie różnią się od 4,2000 do 4,2. W związku z tym po wyświetleniu lub wydrukowaniu wartości zmiennoprzecinkowych nie są wyświetlane znaki końcowe 0.  
   
-- **Znaki typu.** Dołączanie znaku typu literału `F` do literału wymusza go do `Single` typu danych. Dołączanie znaku typu identyfikatora `!` do dowolnego identyfikatora wymusza `Single`.  
+- **Znaki typu.** Dołączanie znaku typu literału `F` do literału wymusza jego `Single` Typ danych. Dołączanie znaku typu identyfikatora `!` do dowolnego identyfikatora zmusza go do `Single` .  
   
-- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.Single?displayProperty=nameWithType>.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.Single?displayProperty=nameWithType> strukturą.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Single?displayProperty=nameWithType>
-- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
-- [Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Rozwiązywanie problemów związanych z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Typy danych](index.md)
+- [Decimal, typ danych](decimal-data-type.md)
+- [Double, typ danych](double-data-type.md)
+- [Funkcje konwersji typu](../functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)

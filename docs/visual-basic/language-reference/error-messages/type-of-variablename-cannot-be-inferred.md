@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 74b690ce3dee87e481c629a254e629be4b40f8cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512708"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387013"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Nie można wywnioskować typu "\<VariableName >", ponieważ granice pętli i zmienna kroku nie są rozszerzane do tego samego typu
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Nie można wywnioskować typu elementu „\<variablename>”, ponieważ granice pętli i zmienna step nie mogą zostać poszerzone do tego samego typu
 
 Zapisano `For...Next` pętlę, w której kompilator nie może wywnioskować typu danych dla zmiennej kontroli pętli, ponieważ spełnione są następujące warunki:
 
@@ -43,19 +43,19 @@ Dim n = 20
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- W razie potrzeby zmień typy granic pętli i zmiennej krokowej, tak aby co najmniej jedna z nich została poszerzona. W poprzednim przykładzie Zmień typ `stepVar` na. `Integer`
+- W razie potrzeby zmień typy granic pętli i zmiennej krokowej, tak aby co najmniej jedna z nich została poszerzona. W poprzednim przykładzie Zmień typ `stepVar` na `Integer` .
 
   ```vb
   Dim stepVar = 1
   ```
 
-  —lub—
+  -lub-
 
   ```vb
   Dim stepVar As Integer = 1
   ```
 
-- Użyj funkcji jawnej konwersji, aby przekonwertować granice pętli i zmienną krokową na odpowiednie typy. W poprzednim przykładzie Zastosuj `Val` funkcję do. `stepVar`
+- Użyj funkcji jawnej konwersji, aby przekonwertować granice pętli i zmienną krokową na odpowiednie typy. W poprzednim przykładzie Zastosuj `Val` funkcję do `stepVar` .
 
   ```vb
   For i = 1 To 10 Step Val(stepVar)
@@ -63,12 +63,12 @@ Dim n = 20
   Next
   ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
-- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [For...Next, instrukcja](../statements/for-next-statement.md)
+- [Konwersje jawne i niejawne](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Wnioskowanie o typie lokalnym](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer — Instrukcja](../statements/option-infer-statement.md)
+- [Funkcje konwersji typu](../functions/type-conversion-functions.md)
+- [Rozszerzanie i zwężanie konwersji](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

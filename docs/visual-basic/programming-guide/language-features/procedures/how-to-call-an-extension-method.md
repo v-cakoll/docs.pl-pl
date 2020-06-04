@@ -5,18 +5,18 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 54419c99ae08c9ca2e3cfa86993dc99bc02bbb64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340397"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388663"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Porady: wywoływanie metody rozszerzenia (Visual Basic)
 
 Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Po zadeklarowaniu i wejściu do zakresu metody rozszerzenia można wywołać ją jak metodę wystąpienia typu, który rozszerza. Aby uzyskać więcej informacji na temat pisania metody rozszerzenia, zobacz [How to: Write a Extension Method](./how-to-write-an-extension-method.md).
 
- Poniższe instrukcje odnoszą się do metody rozszerzenia `PrintAndPunctuate`, która będzie wyświetlać wystąpienie ciągu, które wywołuje ten element, a następnie dowolną wartość jest wysyłana w dla drugiego parametru, `punc`.
+ Poniższe instrukcje odnoszą się do metody rozszerzającej `PrintAndPunctuate` , która wyświetla wystąpienie ciągu, które wywołuje ten element, a następnie dowolną wartość jest wysyłana w dla drugiego parametru, `punc` .
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -35,13 +35,13 @@ Metoda musi znajdować się w zakresie, gdy jest wywoływana.
 
 ### <a name="to-call-an-extension-method"></a>Aby wywołać metodę rozszerzenia
 
-1. Zadeklaruj zmienną, która ma typ danych pierwszego parametru metody rozszerzenia. W przypadku `PrintAndPunctuate`potrzebna jest zmienna <xref:System.String>:
+1. Zadeklaruj zmienną, która ma typ danych pierwszego parametru metody rozszerzenia. Dla `PrintAndPunctuate` , potrzebna jest <xref:System.String> zmienna:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Ta zmienna wywoła metodę rozszerzającą, a jej wartość jest powiązana z pierwszym parametrem, `aString`. Następująca instrukcja wywołująca wyświetli `Ready?`.
+2. Ta zmienna wywoła metodę rozszerzającą, a jej wartość jest powiązana z pierwszym parametrem `aString` . Zostanie wyświetlona następująca instrukcja wywołująca `Ready?` .
 
     ```vb
     example.PrintAndPunctuate("?")
@@ -61,7 +61,7 @@ Metoda musi znajdować się w zakresie, gdy jest wywoływana.
     example2.PrintAndPunctuate("!!!")
     ```
 
-     Wynik tego czasu to: `or not!!!`.
+     Wynik tego czasu: `or not!!!` .
 
 ## <a name="example"></a>Przykład
  Poniższy kod stanowi kompletny przykład tworzenia i używania prostej metody rozszerzenia.
@@ -95,8 +95,8 @@ End Module
 ' Goodbye?
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md)
-- [Metody rozszerzeń](./extension-methods.md)
-- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Porady: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md)
+- [Metody rozszerzające](./extension-methods.md)
+- [Zakres w Visual Basic](../declared-elements/scope.md)

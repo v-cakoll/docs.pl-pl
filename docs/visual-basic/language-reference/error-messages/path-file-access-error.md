@@ -1,29 +1,29 @@
 ---
-title: Błąd dostępu do ścieżki / pliku
+title: Błąd dostępu do ścieżki/pliku
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799183"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387260"
 ---
 # <a name="pathfile-access-error"></a>Błąd dostępu do ścieżki/pliku
-Podczas operacji uzyskiwania dostępu do plików lub dostępu do dysku systemu operacyjnego nie można ustanowić połączenia między ścieżkę i nazwę pliku.  
+Podczas operacji dostępu do pliku lub dysku system operacyjny nie może nawiązać połączenia między ścieżką i nazwą pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Upewnij się, że specyfikacja plików jest poprawnie sformatowana. Nazwa pliku może zawierać w pełni kwalifikowana (bezwzględny) lub względny ścieżki. W pełni kwalifikowana ścieżka zaczyna się od nazwy dysku (Jeśli ścieżka znajduje się na innym dysku) i wyświetla jawna ścieżka z katalogu głównego, do pliku. Dowolną ścieżkę, która nie jest w pełni kwalifikowany jest określana względem bieżącego dysku i katalogu.  
+1. Upewnij się, że Specyfikacja pliku jest poprawnie sformatowana. Nazwa pliku może zawierać w pełni kwalifikowaną (bezwzględną) lub ścieżkę względną. W pełni kwalifikowana ścieżka rozpoczyna się od nazwy dysku (jeśli ścieżka znajduje się na innym dysku) i zawiera listę jawną ścieżki z katalogu głównego do pliku. Każda ścieżka, która nie jest w pełni kwalifikowana, jest określana względem bieżącego dysku i katalogu.  
   
-2. Upewnij się, że użytkownik nie podjęła próby zapisania pliku, który zastąpi istniejący plik tylko do odczytu. Jeśli jest to możliwe, zmień atrybut tylko do odczytu pliku docelowego lub zapisać plik pod inną nazwą pliku.  
+2. Upewnij się, że nie podjęto próby zapisania pliku, który zastąpi istniejący plik tylko do odczytu. W takim przypadku należy zmienić atrybut tylko do odczytu pliku docelowego lub zapisać plik z inną nazwą pliku.  
   
-3. Upewnij się, że nie podjęła próby otwarcia pliku tylko do odczytu w kolejnych `Output` lub `Append` trybu. Jeśli jest to możliwe, otwórz plik w `Input` tryb lub zmień atrybut tylko do odczytu pliku.  
+3. Upewnij się, że nie podjęto próby otworzenia pliku tylko do odczytu w trybie sekwencyjnym `Output` lub `Append` . W takim przypadku należy otworzyć plik w `Input` trybie lub zmienić atrybut tylko do odczytu pliku.  
   
-4. Upewnij się, że nie podjęła próby zmiany w projektach Visual Basic w bazie danych lub dokumentu.  
+4. Upewnij się, że nie podjęto próby zmiany projektu Visual Basic w bazie danych lub dokumencie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../programming-guide/language-features/error-types.md)

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-ms.openlocfilehash: fc9fd9093a3db4785bfc94719dbae9ec1d586050
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 55961d6857b690fc2726f541df8a5497a3207928
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74329579"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411697"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Wykonywanie zadań z My.Application, My.Computer oraz My.User (Visual Basic)
 
-Trzy `My` centralne obiekty, które zapewniają dostęp do informacji i powszechnie używane funkcje to `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>) i `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Za pomocą tych obiektów można uzyskać dostęp do informacji związanych z bieżącą aplikacją, komputerze, na którym aplikacja jest zainstalowana, lub bieżącego użytkownika aplikacji.  
+Trzy centralne `My` obiekty, które zapewniają dostęp do informacji i powszechnie używane funkcje to `My.Application` ( <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> ), `My.Computer` ( <xref:Microsoft.VisualBasic.Devices.Computer> ) i `My.User` ( <xref:Microsoft.VisualBasic.ApplicationServices.User> ). Za pomocą tych obiektów można uzyskać dostęp do informacji związanych z bieżącą aplikacją, komputerze, na którym aplikacja jest zainstalowana, lub bieżącego użytkownika aplikacji.  
   
 ## <a name="myapplication-mycomputer-and-myuser"></a>My. Application, my. Computer i my. User  
 
- W poniższych przykładach pokazano, jak można pobrać informacje `My`za pomocą polecenia.  
+ W poniższych przykładach pokazano, jak można pobrać informacje za pomocą polecenia `My` .  
   
  [!code-vb[VbVbcnMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbcnMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#2)]  
   
- Oprócz pobierania informacji, elementy udostępniane za pomocą tych trzech obiektów umożliwiają również wykonywanie metod związanych z tym obiektem. Na przykład możesz uzyskać dostęp do różnych metod, aby manipulować plikami lub aktualizować rejestr za pomocą `My.Computer`programu.  
+ Oprócz pobierania informacji, elementy udostępniane za pomocą tych trzech obiektów umożliwiają również wykonywanie metod związanych z tym obiektem. Na przykład możesz uzyskać dostęp do różnych metod, aby manipulować plikami lub aktualizować rejestr za pomocą programu `My.Computer` .  
   
- Operacje we/wy plików są znacznie łatwiejsze i szybsze `My`dzięki programowi, który obejmuje różne metody i właściwości służące do manipulowania plikami, katalogami i dyskami. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiekt umożliwia odczytywanie z dużych plików ze strukturą, które mają pola rozdzielone lub o stałej szerokości. Ten przykład otwiera `TextFieldParser` `reader` i używa go do odczytu z `C:\TestFolder1\test1.txt`.  
+ Operacje we/wy plików są znacznie łatwiejsze i szybsze dzięki `My` programowi, który obejmuje różne metody i właściwości służące do manipulowania plikami, katalogami i dyskami. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>Obiekt umożliwia odczytywanie z dużych plików ze strukturą, które mają pola rozdzielone lub o stałej szerokości. Ten przykład otwiera `TextFieldParser` `reader` i używa go do odczytu z `C:\TestFolder1\test1.txt` .  
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
@@ -43,4 +43,4 @@ Trzy `My` centralne obiekty, które zapewniają dostęp do informacji i powszech
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [Jak My zależy od typu projektu](how-my-depends-on-project-type.md)

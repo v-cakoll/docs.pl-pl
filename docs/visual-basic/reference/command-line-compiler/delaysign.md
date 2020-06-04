@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 3ee94df096b756be544964cfbbd405355e3f728f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581273"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408702"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -26,15 +26,15 @@ Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.
 ## <a name="arguments"></a>Argumenty
 
 `+`&#124;`-`  
-Element opcjonalny. Użyj `-delaysign-` , jeśli chcesz użyć w pełni podpisanego zestawu. Użyj `-delaysign+` , jeśli chcesz umieścić klucz publiczny w zestawie i zarezerwować miejsce dla podpisanej wartości skrótu. Wartość domyślna to `-delaysign-`.
+Opcjonalny. Użyj `-delaysign-` , jeśli chcesz użyć w pełni podpisanego zestawu. Użyj, `-delaysign+` Jeśli chcesz umieścić klucz publiczny w zestawie i zarezerwować miejsce dla podpisanej wartości skrótu. Wartość domyślna to `-delaysign-`.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja `-delaysign` nie ma żadnego efektu, chyba że zostanie użyta z [-KeyFile](../../../visual-basic/reference/command-line-compiler/keyfile.md) lub [-containerer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
+`-delaysign`Opcja nie ma żadnego efektu, chyba że zostanie użyta z [-KeyFile](keyfile.md) lub [-containerer](keycontainer.md).
 
 Po zażądaniu w pełni podpisanego zestawu, kompilator skrótów pliku, który zawiera manifest (metadane zestawu) i podpisuje ten skrót z kluczem prywatnym. Wynikowy podpis cyfrowy jest przechowywany w pliku, który zawiera manifest. Gdy zestaw jest podpisany z opóźnieniem, kompilator nie oblicza i nie przechowuje podpisu, ale rezerwuje miejsce w pliku, aby podpis mógł zostać dodany później.
 
-Na przykład przy użyciu `-delaysign+`, deweloper w organizacji może rozpowszechniać niepodpisane wersje testów zestawu, które testerzy mogą zarejestrować w globalnej pamięci podręcznej zestawów i używać. Po zakończeniu pracy z zestawem osoba odpowiedzialna za klucz prywatny organizacji może w pełni podpisać zestaw. Ta compartmentalization chroni klucz prywatny organizacji przed ujawnieniem, jednocześnie pozwalając wszystkim deweloperom na współdziałanie z zestawami.
+Na przykład przy użyciu `-delaysign+` , deweloper w organizacji może rozpowszechniać niepodpisane wersje testów zestawu, które testerzy mogą zarejestrować w globalnej pamięci podręcznej zestawów i używać. Po zakończeniu pracy z zestawem osoba odpowiedzialna za klucz prywatny organizacji może w pełni podpisać zestaw. Ta compartmentalization chroni klucz prywatny organizacji przed ujawnieniem, jednocześnie pozwalając wszystkim deweloperom na współdziałanie z zestawami.
 
 Zobacz [Tworzenie i używanie zestawów o silnych nazwach,](../../../standard/assembly/create-use-strong-named.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.
 
@@ -48,7 +48,7 @@ Zobacz [Tworzenie i używanie zestawów o silnych nazwach,](../../../standard/as
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [-keyfile](keyfile.md)
+- [-keycontainer](keycontainer.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

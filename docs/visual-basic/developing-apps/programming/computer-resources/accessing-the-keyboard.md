@@ -7,16 +7,16 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f837c01d297f8fc7375b02497c87db7798187115
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329539"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410091"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Uzyskiwanie dostępu do klawiatury (Visual Basic)
 
-`My.Computer.Keyboard` Obiekt zawiera właściwości umożliwiające dostęp do bieżącego stanu klawiatury, takie jak to, które klucze są aktualnie naciśnięte, i zapewnia metodę wysyłania naciśnięć klawiszy do aktywnego okna.  
+`My.Computer.Keyboard`Obiekt zawiera właściwości umożliwiające dostęp do bieżącego stanu klawiatury, takie jak to, które klucze są aktualnie naciśnięte, i zapewnia metodę wysyłania naciśnięć klawiszy do aktywnego okna.  
   
 ## <a name="tasks"></a>Zadania  
 
@@ -30,7 +30,7 @@ ms.locfileid: "74329539"
 |Określanie, czy klawisz CTRL nie działa|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
 |Ustal, czy blokada NUM jest włączona|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
 |Określ, czy jest włączona blokada przewijania|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|Uruchamianie aplikacji i wysyłanie naciśnięć klawiszy IT|[Porady: uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|Uruchamianie aplikacji i wysyłanie naciśnięć klawiszy IT|[Porady: uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)](how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>Zobacz też
 

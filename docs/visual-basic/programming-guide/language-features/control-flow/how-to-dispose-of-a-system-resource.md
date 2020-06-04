@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353945"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403501"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Porady: usuwanie zasobu systemu (Visual Basic)
-Można użyć bloku `Using`, aby zagwarantować, że system usuwa zasób, gdy kod opuszcza blok. Jest to przydatne, jeśli używasz zasobu systemowego, który zużywa dużą ilość pamięci, lub że chcesz również użyć innych składników.  
+Można użyć `Using` bloku, aby zagwarantować, że system usuwa zasób, gdy kod opuszcza blok. Jest to przydatne, jeśli używasz zasobu systemowego, który zużywa dużą ilość pamięci, lub że chcesz również użyć innych składników.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Aby usunąć połączenie z bazą danych, gdy kod jest gotowy  
   
-1. Upewnij się, że dołączysz odpowiednią [instrukcję Imports (przestrzeń nazw i typ platformy .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) dla połączenia z bazą danych na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlClient>).  
+1. Upewnij się, że dołączysz odpowiednią [instrukcję Imports (przestrzeń nazw i typ platformy .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) dla połączenia z bazą danych na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlClient> ).  
   
-2. Utwórz blok `Using` przy użyciu instrukcji `Using` i `End Using`. W bloku należy umieścić kod, który zajmuje się połączeniem z bazą danych.  
+2. Utwórz `Using` blok z `Using` `End Using` instrukcjami i. W bloku należy umieścić kod, który zajmuje się połączeniem z bazą danych.  
   
-3. Zadeklaruj połączenie i Utwórz wystąpienie go jako część instrukcji `Using`.  
+3. Zadeklaruj połączenie i Utwórz wystąpienie go jako część `Using` instrukcji.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -40,16 +40,16 @@ Można użyć bloku `Using`, aby zagwarantować, że system usuwa zasób, gdy ko
   
      System usuwa zasób niezależnie od tego, jak zamknięto blok, w tym przypadek nieobsłużonego wyjątku.  
   
-     Należy zauważyć, że nie można uzyskać dostępu `sqc` spoza bloku `Using`, ponieważ jego zakres jest ograniczony do bloku.  
+     Należy zauważyć, że nie można uzyskać dostępu `sqc` spoza `Using` bloku, ponieważ jego zakres jest ograniczony do bloku.  
   
-     Tej samej metody można użyć w odniesieniu do zasobu systemowego, takiego jak dojście do pliku lub otoka COM. Blok `Using` jest używany, gdy chcesz, aby pozostawić zasób dostępny dla innych składników po zakończeniu bloku `Using`.  
+     Tej samej metody można użyć w odniesieniu do zasobu systemowego, takiego jak dojście do pliku lub otoka COM. Możesz użyć `Using` bloku, gdy chcesz, aby pozostawić zasób dostępny dla innych składników po zakończeniu `Using` bloku.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Using, instrukcja](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [Przepływ sterowania](index.md)
+- [Struktury decyzji](decision-structures.md)
+- [Struktury pętli](loop-structures.md)
+- [Inne struktury sterujące](other-control-structures.md)
+- [Zagnieżdżone struktury sterujące](nested-control-structures.md)
+- [Using, instrukcja](../../../language-reference/statements/using-statement.md)

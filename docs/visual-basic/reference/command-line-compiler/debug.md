@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716776"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408728"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
@@ -34,14 +34,14 @@ lub
 
 |Termin|Definicja|
 |---|---|
-|`+`&#124;`-`|Element opcjonalny. Określenie `+` lub `-debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam efekt, co nie `-debug`określa.|
-|`full`&#124;`pdbonly`|Element opcjonalny. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie zostanie określona `-debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączenie debugera do uruchomionego programu. `pdbonly` Argument zezwala na Debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
+|`+`&#124;`-`|Opcjonalny. Określenie `+` lub `-debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam efekt, co nie określa `-debug` .|
+|`full`&#124;`pdbonly`|Opcjonalny. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie zostanie określona `-debug:pdbonly` , wartość domyślna to `full` , co umożliwia dołączenie debugera do uruchomionego programu. `pdbonly`Argument zezwala na Debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `-debug`, `-debug+`, lub `-debug:full`, nie będziesz w stanie debugować pliku wyjściowego programu.
+Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `-debug` , `-debug+` , lub `-debug:full` , nie będziesz w stanie debugować pliku wyjściowego programu.
 
-Domyślnie informacje debugowania nie są emitowane (`-debug-`). Aby emitować informacje o debugowaniu `-debug` , `-debug+`Określ lub.
+Domyślnie informacje debugowania nie są emitowane ( `-debug-` ). Aby emitować informacje o debugowaniu, określ `-debug` lub `-debug+` .
 
 Informacje o sposobie konfigurowania wydajności debugowania aplikacji znajdują się w temacie [ułatwianie debugowania obrazu](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
@@ -51,7 +51,7 @@ Informacje o sposobie konfigurowania wydajności debugowania aplikacji znajdują
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład umieszcza informacje o debugowaniu w pliku `App.exe`wyjściowym.
+Poniższy przykład umieszcza informacje o debugowaniu w pliku wyjściowym `App.exe` .
 
 ```console
 vbc -debug -out:app.exe test.vb
@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [-bugreport](bugreport.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

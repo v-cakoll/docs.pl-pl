@@ -7,24 +7,24 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: 9b93893e2221b156b65ce8e945089269ea28c989
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba62a0226a1a83326cbc7ab393d135763a7c7cb2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335062"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411645"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Instrukcje: odczyt z rozdzielonych przecinkami plików tekstowych w Visual Basic
 
-`TextFieldParser` Obiekt umożliwia łatwe i wydajne analizowanie strukturalnych plików tekstowych, takich jak dzienniki. Właściwość `TextFieldType` określa, czy jest to plik rozdzielany, czy jeden z polami o stałej szerokości tekstu.  
+`TextFieldParser`Obiekt umożliwia łatwe i wydajne analizowanie strukturalnych plików tekstowych, takich jak dzienniki. `TextFieldType`Właściwość określa, czy jest to plik rozdzielany, czy jeden z polami o stałej szerokości tekstu.  
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>Aby przeanalizować plik tekstowy rozdzielany przecinkami  
   
-1. Utwórz nowy element `TextFieldParser`. Poniższy kod tworzy `TextFieldParser` nazwę `MyReader` i otwiera plik. `test.txt`  
+1. Utwórz nowy element `TextFieldParser`. Poniższy kod tworzy `TextFieldParser` nazwę `MyReader` i otwiera plik `test.txt` .  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
-2. Zdefiniuj `TextField` typ i ogranicznik. Poniższy kod definiuje `TextFieldType` właściwość jako `Delimited` i ogranicznik jako ",".  
+2. Zdefiniuj `TextField` Typ i ogranicznik. Poniższy kod definiuje `TextFieldType` Właściwość jako `Delimited` i ogranicznik jako ",".  
   
      [!code-vb[VbFileIORead#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#16)]  
   
@@ -32,13 +32,13 @@ ms.locfileid: "74335062"
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. Zamknij bloki `While` `Using` `End While` i i `End Using`.  
+4. Zamknij `While` bloki i i `Using` `End While` `End Using` .  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   
 ## <a name="example"></a>Przykład  
 
- Ten przykład odczytuje z pliku `test.txt`.  
+ Ten przykład odczytuje z pliku `test.txt` .  
   
  [!code-vb[VbFileIORead#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#19)]  
   
@@ -46,21 +46,21 @@ ms.locfileid: "74335062"
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nie można przeanalizować wiersza przy użyciu określonego formatu (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku określa wiersz powodujący wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisana do tekstu zawartego w wierszu.  
+- Nie można przeanalizować wiersza przy użyciu określonego formatu ( <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> ). Komunikat o wyjątku określa wiersz powodujący wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> Właściwość jest przypisana do tekstu zawartego w wierszu.  
   
-- Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- Określony plik nie istnieje ( <xref:System.IO.FileNotFoundException> ).  
   
 - Sytuacja częściowej relacji zaufania, w której użytkownik nie ma wystarczających uprawnień dostępu do pliku. (<xref:System.Security.SecurityException>).  
   
-- Ścieżka jest za długa (<xref:System.IO.PathTooLongException>).  
+- Ścieżka jest za długa ( <xref:System.IO.PathTooLongException> ).  
   
-- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wystarczających uprawnień dostępu do pliku ( <xref:System.UnauthorizedAccessException> ).  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Porady: odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Instrukcje: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Wskazówki: manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Rozwiązywanie problemów: odczytywanie z oraz zapisywanie w plikach tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Instrukcje: Odczyt z plików testowych o stałej szerokości](how-to-read-from-fixed-width-text-files.md)
+- [Instrukcje: Odczyt z plików tekstowych w wielu formatach](how-to-read-from-text-files-with-multiple-formats.md)
+- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)
+- [Wskazówki: manipulowanie plikami i katalogami w Visual Basic](walkthrough-manipulating-files-and-directories.md)
+- [Rozwiązywanie problemów: Odczytywanie z plików tekstowych oraz zapisywanie w nich](troubleshooting-reading-from-and-writing-to-text-files.md)

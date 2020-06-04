@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: fa0a40827c1b3865b90c7d796ea4dd364774e1c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4c7704c32c3a6c73e069d0b7129d5386696b438
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343833"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402995"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource — dyrektywa
 
@@ -43,7 +43,7 @@ Wskazuje mapowanie między określonymi wierszami kodu źródłowego a tekstem z
  Wiersz, w którym wystąpił błąd w zewnętrznym źródle.  
   
  `#End ExternalSource`  
- Kończy blok `#ExternalSource`.  
+ Kończy `#ExternalSource` blok.  
   
 ## <a name="remarks"></a>Uwagi  
 
@@ -53,6 +53,6 @@ Wskazuje mapowanie między określonymi wierszami kodu źródłowego a tekstem z
   
  Dyrektywy źródła zewnętrznego nie mają wpływu na kompilację i nie mogą być zagnieżdżone. Są one przeznaczone do użytku wewnętrznego tylko przez aplikację.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Kompilacja warunkowa](../../programming-guide/program-structure/conditional-compilation.md)

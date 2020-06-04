@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348277"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401449"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
 Gdy w wyrażeniu wystąpią kilka operacji, każda część jest oceniana i rozwiązywana w wstępnie określonej kolejności o nazwie *pierwszeństwo operatorów*.
@@ -42,40 +42,40 @@ Gdy w wyrażeniu wystąpią kilka operacji, każda część jest oceniana i rozw
  Kart
 
 ### <a name="arithmetic-and-concatenation-operators"></a>Operatory arytmetyczne i łączenia
- Potęgowanie (`^`)
+ Potęgowanie ( `^` )
 
- Jednoargumentowa tożsamość i negacja (`+`, `–`)
+ Jednoargumentowa tożsamość i negacja ( `+` , `–` )
 
- Mnożenie i dzielenie zmiennoprzecinkowe (`*`, `/`)
+ Mnożenie i dzielenie zmiennoprzecinkowe ( `*` , `/` )
 
- Dzielenie liczb całkowitych (`\`)
+ Dzielenie liczb całkowitych ( `\` )
 
- Moduły arytmetyczne (`Mod`)
+ Moduły arytmetyczne ( `Mod` )
 
- Dodawanie i odejmowanie (`+`, `–`)
+ Dodawanie i odejmowanie ( `+` , `–` )
 
- Łączenie ciągów (`&`)
+ Łączenie ciągów ( `&` )
 
- Przesunięcia bitów arytmetycznych (`<<`, `>>`)
+ Przesunięcia bitów arytmetycznych ( `<<` , `>>` )
 
 ### <a name="comparison-operators"></a>Operatory porównania
- Wszystkie operatory porównania (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ Wszystkie operatory porównania (,,,,,,,,, `=` `<>` `<` `<=` `>` `>=` `Is` `IsNot` `Like` `TypeOf` ... `Is` )
 
 ### <a name="logical-and-bitwise-operators"></a>Operatory logiczne i bitowe
- Negacja (`Not`)
+ Negacja ( `Not` )
 
- Połączenia (`And`, `AndAlso`)
+ Połączenia ( `And` , `AndAlso` )
 
- Rozłączenie włączne (`Or`, `OrElse`)
+ Rozłączenie włączne ( `Or` , `OrElse` )
 
- Odłączanie wyłączne (`Xor`)
+ Rozłączenie wyłączne ( `Xor` )
 
 ### <a name="comments"></a>Komentarze
- Operator `=` jest tylko operatorem porównania równości, a nie operatorem przypisania.
+ `=`Operator jest tylko operatorem porównania równości, a nie operatorem przypisania.
 
- Operator łączenia ciągów (`&`) nie jest operatorem arytmetycznym, ale w priorytecie jest zgrupowany z operatorami arytmetycznymi.
+ Operator łączenia ciągów ( `&` ) nie jest operatorem arytmetycznym, ale z pierwszeństwem jest zgrupowany z operatorami arytmetycznymi.
 
- Operatory `Is` i `IsNot` są operatorami porównania odwołań do obiektów. Nie porównują wartości dwóch obiektów; sprawdzają tylko, czy dwie zmienne obiektu odwołują się do tego samego wystąpienia obiektu.
+ `Is`Operatory i `IsNot` są operatorami porównania odwołań do obiektów. Nie porównują wartości dwóch obiektów; sprawdzają tylko, czy dwie zmienne obiektu odwołują się do tego samego wystąpienia obiektu.
 
 ## <a name="associativity"></a>Łączność
  Gdy operatory równego pierwszeństwa pojawiają się razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator oblicza każdą operację, gdy napotka ją od lewej do prawej. Ilustruje to poniższy przykład.
@@ -86,7 +86,7 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- Pierwsze wyrażenie szacuje podział 96/8 (wyniki w 12), a następnie dział 12/4, który powoduje trzy. Ponieważ kompilator ocenia operacje `n1` od lewej do prawej, ocena jest taka sama, gdy ta kolejność jest jawnie wskazywana dla `n2`. Oba `n1` i `n2` mają wynik trzech. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby najpierw oszacować 8/4.
+ Pierwsze wyrażenie szacuje podział 96/8 (wyniki w 12), a następnie dział 12/4, który powoduje trzy. Ponieważ kompilator ocenia operacje `n1` od lewej do prawej, ocena jest taka sama, gdy ta kolejność jest jawnie wskazywana dla `n2` . Oba `n1` i `n2` mają wynik trzy. Z drugiej strony, `n3` ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby najpierw oszacować 8/4.
 
  Ze względu na to zachowanie operatory są określane jako *pozostawiły skojarzenie* w Visual Basic.
 
@@ -111,13 +111,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)
-- [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)
-- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [= — Operator](assignment-operator.md)
+- [Is, operator](is-operator.md)
+- [IsNot, operator](isnot-operator.md)
+- [Like — Operator](like-operator.md)
+- [TypeOf — Operator](typeof-operator.md)
+- [Operator await](await-operator.md)
+- [Operatory według funkcji](operators-listed-by-functionality.md)
+- [Operatory i wyrażenia](../../programming-guide/language-features/operators-and-expressions/index.md)

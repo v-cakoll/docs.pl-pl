@@ -6,26 +6,26 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: b3f5fc017166ba9cf28359db5de850c81b73bd69
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348631"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410467"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Porady: określanie, czy dwa obiekty są powiązane (Visual Basic)
 
-Można porównać dwa obiekty, aby określić relację, jeśli istnieje, między klasami, z których zostały utworzone. Metoda <xref:System.Type.IsInstanceOfType%2A> klasy <xref:System.Type?displayProperty=nameWithType> zwraca `True`, jeśli określona klasa dziedziczy z bieżącej klasy lub jeśli bieżący typ jest interfejsem obsługiwanym przez określoną klasę.
+Można porównać dwa obiekty, aby określić relację, jeśli istnieje, między klasami, z których zostały utworzone. <xref:System.Type.IsInstanceOfType%2A>Metoda <xref:System.Type?displayProperty=nameWithType> klasy zwraca `True` , jeśli określona klasa dziedziczy z bieżącej klasy lub jeśli bieżący typ jest interfejsem obsługiwanym przez określoną klasę.
 
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Aby określić, czy jeden obiekt dziedziczy z klasy lub interfejsu innego obiektu
 
-1. Na obiekcie, który sądzisz, może być typu podstawowego, wywołaj metodę <xref:System.Object.GetType%2A>.
+1. Na obiekcie, który sądzisz, może być typu podstawowego, wywołaj <xref:System.Object.GetType%2A> metodę.
 
-2. Dla obiektu <xref:System.Type?displayProperty=nameWithType> zwróconego przez <xref:System.Object.GetType%2A>Wywołaj metodę <xref:System.Type.IsInstanceOfType%2A>.
+2. Dla <xref:System.Type?displayProperty=nameWithType> obiektu zwróconego przez <xref:System.Object.GetType%2A> , wywołaj <xref:System.Type.IsInstanceOfType%2A> metodę.
 
-3. Na liście argumentów dla <xref:System.Type.IsInstanceOfType%2A>Określ obiekt, który może być typem pochodnym.
+3. Na liście argumentów dla <xref:System.Type.IsInstanceOfType%2A> Określ obiekt, który może być typem pochodnym.
 
-    <xref:System.Type.IsInstanceOfType%2A> zwraca `True`, jeśli jego typ jest Dziedziczony z typu obiektu <xref:System.Type?displayProperty=nameWithType>.
+    <xref:System.Type.IsInstanceOfType%2A>Zwraca wartość, `True` Jeśli jej typ argumentu dziedziczy z <xref:System.Type?displayProperty=nameWithType> typu obiektu.
 
 ## <a name="example"></a>Przykład
  Poniższy przykład określa, czy jeden obiekt reprezentuje klasę pochodzącą od klasy innego obiektu.
@@ -46,14 +46,14 @@ Public Class testTheseClasses
 End Class
 ```
 
-Zwróć uwagę na nieoczekiwane rozmieszczenie dwóch zmiennych obiektów w wywołaniu do <xref:System.Type.IsInstanceOfType%2A>. Przypuszczalny typ podstawowy jest używany do generowania klasy <xref:System.Type?displayProperty=nameWithType>, a typ pochodny jest przenoszona jako argument do metody <xref:System.Type.IsInstanceOfType%2A>.
+Zwróć uwagę na nieoczekiwane rozmieszczenie dwóch zmiennych obiektów w wywołaniu <xref:System.Type.IsInstanceOfType%2A> . Przypuszczalny typ podstawowy jest używany do generowania <xref:System.Type?displayProperty=nameWithType> klasy, a typ pochodny jest przenoszona jako argument do <xref:System.Type.IsInstanceOfType%2A> metody.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Instrukcje: określanie, czy dwa obiekty są jednakowe](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Object — typ danych](../../../language-reference/data-types/object-data-type.md)
+- [Zmienne obiektów](object-variables.md)
+- [Wartości zmiennej obiektu](object-variable-values.md)
+- [Porady: określanie, czy dwa obiekty są jednakowe](how-to-determine-whether-two-objects-are-identical.md)

@@ -1,26 +1,26 @@
 ---
-title: Delegaty
+title: Delegaci
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 15b4cb0a038429c5fe67d3e013818a7a2170abcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410685"
 ---
 # <a name="delegates-visual-basic"></a>Delegaty (Visual Basic)
 
-Delegaty są obiektami odwołującymi się do metod. Są czasami opisywane jako *wskaźniki funkcji bezpiecznych dla typu* , ponieważ są podobne do wskaźników funkcji używanych w innych językach programowania. Ale w przeciwieństwie do wskaźników funkcji, Visual Basic delegatów jest typem referencyjnym opartym na klasie <xref:System.Delegate?displayProperty=nameWithType>. Delegaty mogą odwoływać się do obu metod wspólnych — metod, które mogą być wywoływane bez określonego wystąpienia klasy — oraz metod wystąpień.
+Delegaty są obiektami odwołującymi się do metod. Są czasami opisywane jako *wskaźniki funkcji bezpiecznych dla typu* , ponieważ są podobne do wskaźników funkcji używanych w innych językach programowania. Ale w przeciwieństwie do wskaźników funkcji, Visual Basic delegatów jest typem referencyjnym opartym na klasie <xref:System.Delegate?displayProperty=nameWithType> . Delegaty mogą odwoływać się do obu metod wspólnych — metod, które mogą być wywoływane bez określonego wystąpienia klasy — oraz metod wystąpień.
 
 ## <a name="delegates-and-events"></a>Delegaci i zdarzenia
 
-Delegaty są przydatne w sytuacjach, gdy potrzebujesz pośrednika między procedurą wywołującą a wywoływaną procedurą. Na przykład możesz chcieć, aby obiekt, który zgłasza zdarzenia, aby mógł wywołać inne procedury obsługi zdarzeń w różnych warunkach. Niestety, obiekt wywołujący zdarzenia nie może wiedzieć przed czasem, w którym program obsługi zdarzeń obsługuje określone zdarzenie. Visual Basic umożliwia dynamiczne kojarzenie programów obsługi zdarzeń ze zdarzeniami przez utworzenie delegata przy użyciu instrukcji `AddHandler`. W czasie wykonywania delegat przekazuje wywołania do odpowiedniego programu obsługi zdarzeń.
+Delegaty są przydatne w sytuacjach, gdy potrzebujesz pośrednika między procedurą wywołującą a wywoływaną procedurą. Na przykład możesz chcieć, aby obiekt, który zgłasza zdarzenia, aby mógł wywołać inne procedury obsługi zdarzeń w różnych warunkach. Niestety, obiekt wywołujący zdarzenia nie może wiedzieć przed czasem, w którym program obsługi zdarzeń obsługuje określone zdarzenie. Visual Basic umożliwia dynamiczne kojarzenie programów obsługi zdarzeń ze zdarzeniami przez utworzenie delegata przy użyciu `AddHandler` instrukcji. W czasie wykonywania delegat przekazuje wywołania do odpowiedniego programu obsługi zdarzeń.
 
-Chociaż można tworzyć własnych delegatów, w większości przypadków Visual Basic tworzy delegata i bierze pod uwagę szczegółowe informacje. Na przykład, instrukcja `Event` niejawnie definiuje klasę delegata o nazwie `<EventName>EventHandler` jako klasę zagnieżdżoną klasy zawierającej instrukcję `Event` i z tym samym podpisem co zdarzenie. Instrukcja `AddressOf` niejawnie tworzy wystąpienie delegata, który odwołuje się do określonej procedury. Poniższe dwa wiersze kodu są równoważne. W pierwszym wierszu zobaczysz jawne utworzenie wystąpienia `EventHandler`, z odwołaniem do metody `Button1_Click` wysyłane jako argument. Drugi wiersz jest bardziej wygodnym sposobem wykonania tego samego zadania.
+Chociaż można tworzyć własnych delegatów, w większości przypadków Visual Basic tworzy delegata i bierze pod uwagę szczegółowe informacje. Na przykład `Event` instrukcja niejawnie definiuje klasę delegata o nazwie `<EventName>EventHandler` jako klasę zagnieżdżoną klasy zawierającej `Event` instrukcję i z tą samą sygnaturą co zdarzenie. `AddressOf`Instrukcja niejawnie tworzy wystąpienie delegata, który odwołuje się do określonej procedury. Poniższe dwa wiersze kodu są równoważne. W pierwszym wierszu zobaczysz jawne utworzenie wystąpienia `EventHandler` , z odwołaniem do metody `Button1_Click` wysyłanej jako argument. Drugi wiersz jest bardziej wygodnym sposobem wykonania tego samego zadania.
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 
@@ -50,23 +50,23 @@ Aby określić odwołanie do metody, należy użyć następującej składni:
 
 `AddressOf` [`expression`.]`methodName`
 
-Typ czasu kompilacji `expression` musi być nazwą klasy lub interfejsem, który zawiera metodę o określonej nazwie, której sygnatura pasuje do sygnatury klasy delegata. `methodName` może być metodą udostępnioną lub metodą wystąpienia. `methodName` nie jest opcjonalna, nawet jeśli utworzysz delegata dla metody domyślnej klasy.
+Typ czasu kompilacji `expression` musi być nazwą klasy lub interfejsem zawierającym metodę o określonej nazwie, której sygnatura pasuje do sygnatury klasy delegata. `methodName`Może to być Metoda wspólna lub metoda wystąpienia. `methodName`Nie jest opcjonalna, nawet jeśli utworzysz delegata dla metody domyślnej klasy.
 
 Aby określić wyrażenie lambda, należy użyć następującej składni:
 
-`Function` ([`parm` jako `type``parm2` jako `type2`,...]) `expression`
+`Function`([ `parm` AS `type` , `parm2` AS, `type2` ...])`expression`
 
-Poniższy przykład pokazuje wyrażenia `AddressOf` i lambda używane do określenia odwołania dla delegata.
+W poniższym przykładzie pokazano zarówno `AddressOf` wyrażenie, jak i wyrażenia lambda używane do określenia odwołania dla delegata.
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-Sygnatura funkcji musi być zgodna z typem delegata. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Aby uzyskać więcej przykładów wyrażenia lambda i `AddressOf` przypisań do delegatów, zobacz [Swobodna konwersja delegata](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+Sygnatura funkcji musi być zgodna z typem delegata. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../procedures/lambda-expressions.md). Aby uzyskać więcej przykładów wyrażenia lambda i `AddressOf` przypisań do delegatów, zobacz [Swobodna konwersja delegata](relaxed-delegate-conversion.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-|Stanowisko|Opis|
+|Tytuł|Opis|
 |-----------|-----------------|
-|[Instrukcje: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Zawiera przykład, który pokazuje, jak skojarzyć metodę z delegatem, a następnie wywołać tę metodę za pomocą delegata.|
-|[Instrukcje: przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Pokazuje, jak używać delegatów do przekazywania jednej procedury do innej procedury.|
-|[Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Opisuje, w jaki sposób można przypisać funkcje sub i Functions do delegatów lub programów obsługi nawet wtedy, gdy ich podpisy nie są identyczne.|
-|[Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)|Zawiera omówienie zdarzeń w Visual Basic.|
+|[Instrukcje: wywoływanie metody delegata](how-to-invoke-a-delegate-method.md)|Zawiera przykład, który pokazuje, jak skojarzyć metodę z delegatem, a następnie wywołać tę metodę za pomocą delegata.|
+|[Porady: przekazywanie procedur do innej procedury w Visual Basic](how-to-pass-procedures-to-another-procedure.md)|Pokazuje, jak używać delegatów do przekazywania jednej procedury do innej procedury.|
+|[Swobodna konwersja delegatów](relaxed-delegate-conversion.md)|Opisuje, w jaki sposób można przypisać funkcje sub i Functions do delegatów lub programów obsługi nawet wtedy, gdy ich podpisy nie są identyczne.|
+|[Zdarzenia](../events/index.md)|Zawiera omówienie zdarzeń w Visual Basic.|

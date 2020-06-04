@@ -8,18 +8,18 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 496627d3b77b0382ae7d15c8225a6fbd41f1db73
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350854"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403125"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Przykładowe wiersze poleceń kompilacji (Visual Basic)
 
 Jako alternatywę do kompilowania Visual Basic programów z poziomu programu Visual Studio można kompilować z wiersza polecenia, aby tworzyć pliki wykonywalne (exe) lub pliki bibliotek dołączanych dynamicznie (. dll).
 
-Kompilator wiersza polecenia Visual Basic obsługuje kompletny zestaw opcji kontrolujących pliki wejściowe i wyjściowe, zestawy oraz opcje debugowania i preprocesora. Każda opcja jest dostępna w dwóch niezmienionych formularzach `-option` : `/option`i. Ta dokumentacja zawiera tylko `-option` formularz.
+Kompilator wiersza polecenia Visual Basic obsługuje kompletny zestaw opcji kontrolujących pliki wejściowe i wyjściowe, zestawy oraz opcje debugowania i preprocesora. Każda opcja jest dostępna w dwóch niezmienionych formularzach: `-option` i `/option` . Ta dokumentacja zawiera tylko `-option` formularz.
 
 Poniższa tabela zawiera listę przykładowych wierszy poleceń, które można modyfikować do własnych potrzeb.
 
@@ -29,7 +29,7 @@ Poniższa tabela zawiera listę przykładowych wierszy poleceń, które można m
 |Kompiluj plik. vb i Utwórz plik. dll|`vbc -target:library File.vb`|
 |Kompiluj plik. vb i Utwórz my. exe|`vbc -out:My.exe File.vb`|
 |Kompiluj plik. vb i Utwórz bibliotekę i zestaw odwołań o nazwie File. dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Kompiluj wszystkie pliki Visual Basic w bieżącym katalogu z optymalizacjami na i zdefiniowanym `DEBUG` symbolem, wytwarzając plik2. exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Kompiluj wszystkie pliki Visual Basic w bieżącym katalogu z optymalizacjami na i `DEBUG` zdefiniowanym symbolem, wytwarzając plik2. exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
 |Kompiluj wszystkie pliki Visual Basic w bieżącym katalogu, generując wersję debugową plik2. dll bez wyświetlania logo lub ostrzeżeń|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
 |Kompiluj wszystkie pliki Visual Basic w bieżącym katalogu na coś. dll|`vbc -target:library -out:Something.dll *.vb`|
 
@@ -38,5 +38,5 @@ Poniższa tabela zawiera listę przykładowych wierszy poleceń, które można m
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Kompilacja warunkowa](../../programming-guide/program-structure/conditional-compilation.md)

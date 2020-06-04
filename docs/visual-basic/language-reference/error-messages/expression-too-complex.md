@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID16
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
-ms.openlocfilehash: 8973e0309fa2a54ff2155229f76cf9fdb5116f02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1717eb9f23778086507cf6d7ca49c16fffa6eb2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665136"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409494"
 ---
 # <a name="expression-too-complex"></a>Wyrażenie jest zbyt złożone
-Wyrażenie typu zmiennoprzecinkowego zawiera zbyt wiele zagnieżdżonych podwyrażenia.  
+Wyrażenie zmiennoprzecinkowe zawiera zbyt wiele zagnieżdżonych podwyrażeń.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Podziel wyrażenia na tyle wyrażeń oddzielne zgodnie z potrzebami, aby zapobiec występowaniu błędu.  
+- Podziel wyrażenie na dowolną liczbę odrębnych wyrażeń, aby zapobiec wystąpieniu błędu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operatory i wyrażenia](../../programming-guide/language-features/operators-and-expressions/index.md)

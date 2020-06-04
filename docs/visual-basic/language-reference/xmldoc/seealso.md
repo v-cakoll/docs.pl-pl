@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 27bb2c271631170082709d9e3d76cd39eefbc860
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5999a4ebcc90f21ee8331b96ffb2a50f7905b1b6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352217"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411515"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso — > (Visual Basic)
+# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
 Określa łącze, które pojawia się w sekcji Zobacz też.  
   
 ## <a name="syntax"></a>Składnia  
@@ -23,18 +23,18 @@ Określa łącze, które pojawia się w sekcji Zobacz też.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML. `member` musi znajdować się w podwójnym cudzysłowie ("").  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML. `member`musi znajdować się w podwójnym cudzysłowie ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj znacznika `<seealso>`, aby określić tekst, który ma być wyświetlany w sekcji Zobacz też. Użyj [\<zobacz >](../../../visual-basic/language-reference/xmldoc/see.md) , aby określić łącze z tekstu.  
+ Użyj `<seealso>` znacznika, aby określić tekst, który ma być wyświetlany w sekcji Zobacz też. Służy [\<see>](see.md) do określania linku w tekście.  
   
- Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zastosowano tag `<seealso>` w sekcji `DoesRecordExist` uwagi, aby odwołać się do metody `UpdateRecord`.  
+ Ten przykład używa `<seealso>` znacznika w `DoesRecordExist` sekcji uwagi, aby odwołać się do `UpdateRecord` metody.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Tagi komentarza XML](index.md)

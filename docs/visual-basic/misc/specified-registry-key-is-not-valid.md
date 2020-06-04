@@ -1,22 +1,22 @@
 ---
-title: Określony klucz rejestru jest nieprawidłowa, ponieważ zawiera ona co najmniej dwóch następujących po sobie kreski ułamkowe odwrócone
+title: Określony klucz rejestru jest nieprawidłowy, ponieważ zawiera dwa lub więcej następujących po sobie ukośników odwrotnych
 ms.date: 07/20/2015
 ms.assetid: 0d78b6f7-5759-45b4-8c37-c6902ada76ff
-ms.openlocfilehash: a4ed6a071e7be200ffaeb7eac766b2e35fec1c1c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2db632be34cf8410532f41c8a3d3681dc91ffc55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660950"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357754"
 ---
-# <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Określony klucz rejestru jest nieprawidłowa, ponieważ zawiera ona co najmniej dwóch następujących po sobie kreski ułamkowe odwrócone
-Określono ścieżki klucza rejestru zawiera co najmniej dwóch następujących po sobie ukośników odwrotnych. Może to być wynikiem łączenie wielu ciągów w ścieżce oraz przypadkowo, takich jak zbyt wiele razy.  
+# <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Określony klucz rejestru jest nieprawidłowy, ponieważ zawiera dwa lub więcej następujących po sobie ukośników odwrotnych
+Klucz rejestru określony ze ścieżką zawiera dwa lub więcej kolejnych ukośników odwrotnych. Może to być wynikiem połączenia kilku ciągów w celu utworzenia ścieżki i przypadkowego uwzględnienia zbyt wielu ukośników odwrotnych.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Sprawdź klucz rejestru, określany w celu określenia, gdzie i dlaczego są wstawiane dodatkowe ukośniki odwrotne.  
+- Sprawdź, czy klucz rejestru został określony, aby określić, gdzie i dlaczego są wstawiane dodatkowe ukośniki odwrotne.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [Instrukcje: Analizowanie ścieżek plików](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [My. Computer. Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

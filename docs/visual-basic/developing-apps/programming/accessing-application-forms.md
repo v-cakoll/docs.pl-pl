@@ -8,16 +8,16 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349244"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410208"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)
 
-`My.Forms` Obiekt zapewnia łatwy sposób uzyskiwania dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Możesz również użyć właściwości `My.Application` obiektu, aby uzyskać dostęp do ekranu powitalnego i formularza głównego aplikacji oraz uzyskać listę otwartych formularzy aplikacji.  
+`My.Forms`Obiekt zapewnia łatwy sposób uzyskiwania dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Możesz również użyć właściwości `My.Application` obiektu, aby uzyskać dostęp do ekranu powitalnego i formularza głównego aplikacji oraz uzyskać listę otwartych formularzy aplikacji.  
   
 ## <a name="tasks"></a>Zadania  
 
@@ -25,7 +25,7 @@ ms.locfileid: "74349244"
   
 |Do|Zobacz|  
 |---|---|  
-|Dostęp do jednego formularza z innego formularza w aplikacji.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Dostęp do jednego formularza z innego formularza w aplikacji.|[My.Forms — Obiekt](../../language-reference/objects/my-forms-object.md)|  
 |Wyświetla tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Zaktualizuj ekran powitalny informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
@@ -33,4 +33,4 @@ ms.locfileid: "74349244"
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
-- [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms — Obiekt](../../language-reference/objects/my-forms-object.md)

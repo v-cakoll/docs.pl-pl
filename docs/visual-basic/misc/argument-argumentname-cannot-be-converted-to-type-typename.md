@@ -1,23 +1,23 @@
 ---
-title: Argument '<argumentname>'nie można przekonwertować na typ'<typename>'
+title: <argumentname>Nie można przekonwertować argumentu "" na typ " <typename> ".
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
 ms.assetid: 5b83a9cf-296b-479f-aa17-df655b8f51a0
-ms.openlocfilehash: 3000633f838be18d3d243c91fa9256f70ec4b65f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 841aca9d57afaff423a7065e9c6d9fc64f14ea2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659957"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411359"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>Argument '\<argumentname >' nie można przekonwertować na typ '\<typename >'
-Konwersja spróbuje argumentem typu, który jest nieprawidłowy.  
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>\<argumentname>Nie można przekonwertować argumentu "" na typ " \<typename> ".
+Konwersja próbuje zmienić argument na typ, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
 - Zmień typ na taki, który jest prawidłowy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Funkcje konwersji](../../visual-basic/language-reference/functions/conversion-functions.md)
+- [Funkcje konwersji](../language-reference/functions/conversion-functions.md)

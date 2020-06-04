@@ -10,33 +10,33 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: fa410a739be2da8802e76a35068448263ddec1fc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dcf52c6200193f81070f323c8037ad82d747942d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343610"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403436"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatory i wyrażenia w Visual Basic
-*Operator* jest elementem kodu, który wykonuje operację na jednym lub większej liczbie elementów kodu, które przechowują wartości. Elementy wartości to zmienne, stałe, literały, właściwości, zwracane z `Function` i `Operator` procedur i wyrażeń.  
+*Operator* jest elementem kodu, który wykonuje operację na jednym lub większej liczbie elementów kodu, które przechowują wartości. Elementy wartości to zmienne, stałe, literały, właściwości, zwracane z `Function` i `Operator` procedury i wyrażenia.  
   
  *Wyrażenie* jest serią elementów wartości połączonych z operatorami, które dają nową wartość. Operatory działają na elementach wartości przez wykonywanie obliczeń, porównań lub innych operacji.  
   
 ## <a name="types-of-operators"></a>Typy operatorów  
  Visual Basic udostępnia następujące typy operatorów:  
   
-- [Operatory arytmetyczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) wykonują znane obliczenia na wartościach liczbowych, w tym przesunięcie ich wzorców bitowych.  
+- [Operatory arytmetyczne](arithmetic-operators.md) wykonują znane obliczenia na wartościach liczbowych, w tym przesunięcie ich wzorców bitowych.  
   
-- [Operatory porównania](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) porównują dwa wyrażenia i zwracają `Boolean` wartość reprezentującą wynik porównania.  
+- [Operatory porównania](comparison-operators.md) porównują dwa wyrażenia i zwracają `Boolean` wartość reprezentującą wynik porównania.  
   
-- [Operatory łączenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) sprzęga wiele ciągów w jeden ciąg.  
+- [Operatory łączenia](concatenation-operators.md) sprzęga wiele ciągów w jeden ciąg.  
   
-- [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) łączą wartości `Boolean` lub liczbowe i zwracają wynik tego samego typu danych co wartości.  
+- [Operatory logiczne i bitowe w Visual Basic](logical-and-bitwise-operators.md) łączenia `Boolean` lub wartości liczbowych i zwracają wynik tego samego typu danych co wartości.  
   
- Elementy wartości, które są połączone z operatorem, są nazywane *operandami* tego operatora. Operatory połączone z wyrażeniami elementów wartości, z wyjątkiem operatora przypisania, który tworzy *instrukcję*. Aby uzyskać więcej informacji, zobacz [instrukcje](../../../../visual-basic/programming-guide/language-features/statements.md).  
+ Elementy wartości, które są połączone z operatorem, są nazywane *operandami* tego operatora. Operatory połączone z wyrażeniami elementów wartości, z wyjątkiem operatora przypisania, który tworzy *instrukcję*. Aby uzyskać więcej informacji, zobacz [instrukcje](../statements.md).  
   
 ## <a name="evaluation-of-expressions"></a>Obliczanie wyrażeń  
- Wynik końcowy wyrażenia reprezentuje wartość, która jest zazwyczaj znanym typem danych, takim jak `Boolean`, `String`lub typu liczbowego.  
+ Wynik końcowy wyrażenia reprezentuje wartość, która jest zazwyczaj znanym typem danych, takim jak `Boolean` , `String` lub typu liczbowego.  
   
  Poniżej przedstawiono przykłady wyrażeń.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "74343610"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- W powyższym przykładzie Visual Basic wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania (`=`), a następnie przypisuje wartość wyniki do zmiennej `x` z lewej strony. Nie ma praktycznego limitu liczby operatorów, które mogą być połączone w wyrażeniu, ale w celu uzyskania oczekiwanych wyników należy zrozumieć [pierwszeństwo operatorów w Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) .  
+ W poprzednim przykładzie Visual Basic wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania ( `=` ), a następnie przypisuje wartość wyniki do zmiennej `x` po lewej. Nie ma praktycznego limitu liczby operatorów, które mogą być połączone w wyrażeniu, ale w celu uzyskania oczekiwanych wyników należy zrozumieć [pierwszeństwo operatorów w Visual Basic](../../../language-reference/operators/operator-precedence.md) .  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Operatory](../../../../visual-basic/language-reference/operators/index.md)
-- [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
-- [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)
+- [Operatory](../../../language-reference/operators/index.md)
+- [Skuteczna kombinacja operatorów](efficient-combination-of-operators.md)
+- [Instrukcje](../../../language-reference/statements/index.md)

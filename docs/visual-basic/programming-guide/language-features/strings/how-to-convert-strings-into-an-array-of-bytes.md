@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: konwertowanie ciągów na tablicę bajtów'
+title: 'Instrukcje: Konwertowanie ciągów na tablice bajtów'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: 76fde3120ce629ce32f29ca28d90eba24fff726c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ee1d5e1e31054f23f4510c7a112d8e3473bcdd7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351970"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410609"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Porady: konwertowanie ciągów w tablice bajtów w Visual Basic
 W tym temacie pokazano, jak przekonwertować ciąg na tablicę bajtów.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zastosowano metodę <xref:System.Text.Encoding.GetBytes%2A> klasy kodowania <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> do przekonwertowania ciągu na tablicę bajtów.  
+ W tym przykładzie zastosowano <xref:System.Text.Encoding.GetBytes%2A> metodę <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> klasy kodowania do przekonwertowania ciągu na tablicę bajtów.  
   
  [!code-vb[VbVbalrStrings#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#74)]  
   
@@ -39,8 +39,8 @@ W tym temacie pokazano, jak przekonwertować ciąg na tablicę bajtów.
   
 - <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-8.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>
-- [Instrukcje: konwertowanie tablicy bajtów na ciąg w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)
+- [Porady: konwertowanie tablicy bajtów w ciąg w Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)

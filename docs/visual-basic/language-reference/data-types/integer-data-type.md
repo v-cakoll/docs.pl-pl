@@ -1,5 +1,5 @@
 ---
-title: Integer — Typ danych
+title: Integer, typ danych
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -21,39 +21,39 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa7b64162308d6af2763b29034c5a7276c973876
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400737"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415612"
 ---
-# <a name="integer-data-type-visual-basic"></a>Typ danych liczby całkowitej (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Integer — typ danych (Visual Basic)
 
 Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.  
   
 ## <a name="remarks"></a>Uwagi
 
- Typ `Integer` danych zapewnia optymalną wydajność procesora 32-bitowego. Inne typy całkowitoliczbowe wolniej wczytują się z pamięci i są w niej zapisywane.  
+ `Integer`Typ danych zapewnia optymalną wydajność procesora 32-bitowego. Inne typy całkowitoliczbowe wolniej wczytują się z pamięci i są w niej zapisywane.  
   
  Wartość domyślna `Integer` to 0.  
 
-## <a name="literal-assignments"></a>Przydziały dosłowne
+## <a name="literal-assignments"></a>Przypisania literałów
 
-Można zadeklarować i `Integer` zainicjować zmienną, przypisując jej literał dziesiętny, szesnastkowy literał, literał ósemkowy lub (zaczynając od języka Visual Basic 2017) literał binarny. Jeśli litera liczba całkowita znajduje się `Integer` poza zakresem (oznacza <xref:System.Int32.MinValue?displayProperty=nameWithType> to, <xref:System.Int32.MaxValue?displayProperty=nameWithType>że jest mniejsza lub większa niż , występuje błąd kompilacji.
+Można zadeklarować i zainicjować `Integer` zmienną, przypisując jej literał dziesiętny, literał szesnastkowy, literał ósemkowy lub (Zaczynając od Visual Basic 2017) literał binarny. Jeśli literał liczby całkowitej znajduje się poza zakresem `Integer` (to jest, jeśli jest mniejszy niż <xref:System.Int32.MinValue?displayProperty=nameWithType> lub większy niż <xref:System.Int32.MaxValue?displayProperty=nameWithType> , wystąpi błąd kompilacji.
 
-W poniższym przykładzie liczby całkowite równe 90 946, które są reprezentowane jako dziesiętne, szesnastkowe i binarne literały są przypisywane do `Integer` wartości.
+W poniższym przykładzie liczby całkowite równe 90 946 są reprezentowane jako literały dziesiętne, szesnastkowe i binarne są przypisywane do `Integer` wartości.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> Prefiksu `&h` lub `&H` oznaczasz szesnastkowy literał, `&b` `&B` prefiks lub oznacza literał binarny i prefiks `&o` lub `&O` oznacza literał ósemkowy. Literały dziesiętne nie mają prefiksu.
+> Używasz prefiksu `&h` lub `&H` do oznaczenia literału szesnastkowego, prefiksu `&b` lub `&B` do oznaczania literału binarnego oraz prefiksu `&o` lub `&O` do określenia literału ósemkowego. Literały dziesiętne nie mają prefiksu.
 
-Począwszy od języka Visual Basic 2017, `_`można również użyć znaku podkreślenia, jako separatora cyfry, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
+Począwszy od Visual Basic 2017, można również użyć znaku podkreślenia, `_` jako separatora cyfr, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Począwszy od języka Visual Basic 15.5,`_`można również użyć znaku podkreślenia ( ) jako interełownika wiodącego między prefiksem a cyframi szesnastkowymi, binarnymi lub ósemkowymi. Przykład:
+Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia ( `_` ) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Przykład:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literały liczbowe mogą również `I` zawierać [znak](../../programming-guide/language-features/data-types/type-characters.md) typu `Integer` oznaczającego typ danych, jak pokazano w poniższym przykładzie.
+Literały numeryczne mogą również zawierać `I` [znak typu](../../programming-guide/language-features/data-types/type-characters.md) , aby zauważyć `Integer` Typ danych, jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim number = &H_035826I
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
-- **Zagadnienia międzyoperacyjne.** W przypadku łączenia ze składnikami nieuznawane dla programu .NET Framework, `Integer` takich jak automatyzacja lub COM, należy pamiętać, że ma inną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, zadeklaruj go jako `Short` zamiast `Integer` w nowym kodzie języka Visual Basic.  
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli korzystasz z składników niepisanych dla .NET Framework, takich jak Automatyzacja lub obiekty COM, pamiętaj, że `Integer` w innych środowiskach ma inną szerokość danych (16 bitów). Jeśli przekazujesz argument 16-bitowy do takiego składnika, zadeklaruj go jako `Short` zamiast `Integer` w nowym kodzie Visual Basic.  
   
-- **Poszerzenie.** Typ `Integer` danych rozszerza `Long`się `Decimal` `Single`do `Double`, , , lub . Oznacza to, `Integer` że można przekonwertować do <xref:System.OverflowException?displayProperty=nameWithType> jednego z tych typów bez napotkania błędu.  
+- **Rozszerzającą.** `Integer`Typ danych poszerza do `Long` , `Decimal` , `Single` , lub `Double` . Oznacza to, że można przekonwertować `Integer` na jeden z tych typów, bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
-- **Wpisz znaki.** Dołączenie znaku literału `I` do literału wymusza go do `Integer` typu danych. Dołączenie znaku `%` typu identyfikatora do dowolnego identyfikatora wymusza jego `Integer`  
+- **Znaki typu.** Dołączanie znaku typu literału `I` do literału wymusza jego `Integer` Typ danych. Dołączanie znaku typu identyfikatora `%` do dowolnego identyfikatora zmusza go do `Integer` .  
   
-- **Typ struktury.** Odpowiedni typ w .NET Framework <xref:System.Int32?displayProperty=nameWithType> jest strukturą.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.Int32?displayProperty=nameWithType> strukturą.  
   
 ## <a name="range"></a>Zakres
 
@@ -98,9 +98,9 @@ k = 5.5
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Int32?displayProperty=nameWithType>
-- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
-- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Typy danych](index.md)
+- [Long, typ danych](long-data-type.md)
+- [Short, typ danych](short-data-type.md)
+- [Funkcje konwersji typu](../functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

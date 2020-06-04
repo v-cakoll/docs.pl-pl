@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: d7d3d86f89ef3b76e958707dd0be2dce8a3e9bf2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7914bc859966e17f3da41c9a13a01573b31baf91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659820"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409676"
 ---
-# <a name="elementname-is-obsolete-visual-basic-warning"></a>"\<elementname >" jest przestarzały (ostrzeżenie Visual Basic)
-Instrukcja próbuje uzyskać dostęp elementu programistycznego, które zostały oznaczone do <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktowanie jej jako ostrzeżenie.  
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>Element „\<elementname>" jest przestarzały (ostrzeżenie w języku Visual Basic)
+Instrukcja próbuje uzyskać dostęp do elementu programistycznego, który został oznaczony <xref:System.ObsoleteAttribute> atrybutem i dyrektywą, aby traktować go jako ostrzeżenie.  
   
- Możesz oznaczyć dowolnego elementu programistycznego jako nie jest już używana przez zastosowanie <xref:System.ObsoleteAttribute> do niego. Jeśli to zrobisz, możesz ustawić atrybutu <xref:System.ObsoleteAttribute.IsError%2A> właściwości albo `True` lub `False`. Jeśli ustawisz na `True`, kompilator traktuje próba użycia elementu jako błąd. Jeśli ustawisz na `False`, lub pozwól, aby go domyślnie `False`, kompilator generuje ostrzeżenie, jeśli próba użycia elementu.  
+ Można oznaczyć dowolny element programistyczny jako nieużywany przez zastosowanie <xref:System.ObsoleteAttribute> do niego. W takim przypadku można ustawić <xref:System.ObsoleteAttribute.IsError%2A> właściwość atrybutu na `True` lub `False` . Jeśli ustawisz ją na `True` , kompilator traktuje próbę użycia elementu jako błąd. Jeśli ustawisz ją na `False` lub Zezwól na ustawienie domyślne `False` , kompilator generuje ostrzeżenie w przypadku próby użycia elementu.  
   
- Domyślnie ten komunikat jest to ostrzeżenie, ponieważ <xref:System.ObsoleteAttribute.IsError%2A> właściwość <xref:System.ObsoleteAttribute> jest `False`. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem, ponieważ <xref:System.ObsoleteAttribute.IsError%2A> Właściwość <xref:System.ObsoleteAttribute> jest `False` . Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC40008  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Upewnij się, że odwołanie do kodu źródłowego jest poprawnie pisownia nazwy elementu.  
+- Upewnij się, że odwołanie do kodu źródłowego jest poprawnie sprawdzane jako nazwa elementu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Przegląd atrybutów](../../programming-guide/concepts/attributes/index.md)

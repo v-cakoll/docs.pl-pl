@@ -5,18 +5,18 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352084"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410117"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Porady: wyjątki rejestru w Visual Basic
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o wyjątkach występujących w aplikacji. W poniższych przykładach pokazano, `My.Application.Log.WriteException` jak używać metody do rejestrowania wyjątków, które są przechwytywane jawnie, oraz wyjątków, które nie są obsługiwane.  
+Za pomocą `My.Application.Log` obiektów i można `My.Log` rejestrować informacje o wyjątkach występujących w aplikacji. W poniższych przykładach pokazano, jak używać `My.Application.Log.WriteException` metody do rejestrowania wyjątków, które są przechwytywane jawnie, oraz wyjątków, które nie są obsługiwane.  
   
- Aby uzyskać informacje o śledzeniu rejestrowania `My.Application.Log.WriteEntry` , użyj metody. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
+ Aby uzyskać informacje o śledzeniu rejestrowania, użyj `My.Application.Log.WriteEntry` metody. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
   
 ### <a name="to-log-a-handled-exception"></a>Aby zarejestrować obsłużony wyjątek  
   
@@ -30,7 +30,7 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
   
 3. Umieść kod, który może generować wyjątek w `Try` bloku.  
   
-     Usuń komentarz z `Dim` wierszy `MsgBox` i, aby wywołać <xref:System.NullReferenceException> wyjątek.  
+     Usuń komentarz z `Dim` wierszy i, `MsgBox` Aby wywołać <xref:System.NullReferenceException> wyjątek.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
@@ -58,7 +58,7 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
   
      Aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzenie przed uruchomieniem aplikacji głównej.  
   
-6. Dodaj `My.Application.Log.WriteException` metodę do procedury obsługi `UnhandledException` zdarzeń.  
+6. Dodaj `My.Application.Log.WriteException` metodę do `UnhandledException` procedury obsługi zdarzeń.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
@@ -71,7 +71,7 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Przewodnik: ustalanie lokalizacji, w której element My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Praca z dziennikami aplikacji](working-with-application-logs.md)
+- [Instrukcje: zapisywanie komunikatów dziennika](how-to-write-log-messages.md)
+- [Przewodnik: ustalanie lokalizacji, w której element My.Application.Log zapisuje informacje](walkthrough-determining-where-my-application-log-writes-information.md)
+- [Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje](walkthrough-changing-where-my-application-log-writes-information.md)

@@ -10,35 +10,35 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 1c9aa78549ca6e41c9fe54c12e0aaec8e7cc30cb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 69040bf48b44a54f7a231738b88db1cbc716ebb3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347832"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359906"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Wskazuje, że Operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może zawierać wszystkie możliwe wartości oryginalnej klasy lub struktury.  
+Wskazuje, że Operator konwersji ( `CType` ) konwertuje klasę lub strukturę do typu, który może zawierać wszystkie możliwe wartości oryginalnej klasy lub struktury.  
   
 ## <a name="converting-with-the-widening-keyword"></a>Konwertowanie za pomocą słowa kluczowego rozszerzającego  
- Procedura konwersji musi określać `Public Shared` oprócz `Widening`.  
+ Procedura konwersji musi być określona `Public Shared` poza `Widening` .  
   
- Rozszerzanie konwersji zawsze powiedzie się w czasie wykonywania i nigdy nie powiąże się z utratą danych. Przykłady `Single` do `Double`, `Char` do `String`i typ pochodny do jego typu podstawowego. Ta ostatnia konwersja jest rozszerzana, ponieważ typ pochodny zawiera wszystkie elementy członkowskie typu podstawowego i w związku z tym jest wystąpieniem typu podstawowego.  
+ Rozszerzanie konwersji zawsze powiedzie się w czasie wykonywania i nigdy nie powiąże się z utratą danych. Przykłady to `Single` `Double` , `Char` do `String` i typ pochodny do jego typu podstawowego. Ta ostatnia konwersja jest rozszerzana, ponieważ typ pochodny zawiera wszystkie elementy członkowskie typu podstawowego i w związku z tym jest wystąpieniem typu podstawowego.  
   
- Kod zużywający nie musi używać `CType` do rozszerzania konwersji nawet wtedy, gdy `Option Strict` jest `On`.  
+ Kod zużywający nie musi być używany `CType` do rozszerzania konwersji, nawet jeśli `Option Strict` jest `On` .  
   
- W tym kontekście można użyć słowa kluczowego `Widening`:  
+ `Widening`Słowo kluczowe może być używane w tym kontekście:  
   
- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator — Instrukcja](../statements/operator-statement.md)  
   
- Aby zapoznać się z przykładami definicji rozszerzania i zawężania operatorów konwersji, zobacz [How to: define Operator konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Aby zapoznać się z przykładami definicji rozszerzania i zawężania operatorów konwersji, zobacz [How to: define Operator konwersji](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Instrukcje: definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Operator — Instrukcja](../statements/operator-statement.md)
+- [Narrowing](narrowing.md)
+- [Rozszerzanie i zwężanie konwersji](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Instrukcje: definiowanie operatora](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [CType — Funkcja](../functions/ctype-function.md)
+- [Option Strict — Instrukcja](../statements/option-strict-statement.md)
+- [Instrukcje: definiowanie operatora konwersji](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

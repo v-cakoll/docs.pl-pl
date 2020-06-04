@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-ms.openlocfilehash: b5e857198351b30c0d7a38dce1a9e6d1209b5258
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b5fcf3cb8801bc99dd2096c28cc41ebefeb34592
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838146"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410000"
 ---
 # <a name="directives-visual-basic"></a>Directives (Visual Basic)
 
@@ -19,13 +19,13 @@ W tematach w tej sekcji udokumentowano dyrektywy kompilatora Visual Basic kodu �
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [#Const — dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md) — Definiowanie stałej kompilatora  
+ [#Const — dyrektywa](const-directive.md) — Definiowanie stałej kompilatora  
   
- [#ExternalSource dyrektywie](../../../visual-basic/language-reference/directives/externalsource-directive.md) --wskazać mapowanie między liniami źródłowymi a tekstem zewnętrznym względem źródła  
+ [#ExternalSource dyrektywie](externalsource-directive.md) --wskazać mapowanie między liniami źródłowymi a tekstem zewnętrznym względem źródła  
   
- [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md) — Kompilowanie wybranych bloków kodu  
+ [#If... Then... #Else — dyrektywy](if-then-else-directives.md) — Kompilowanie wybranych bloków kodu  
   
- [#Region dyrektywie](../../../visual-basic/language-reference/directives/region-directive.md) — zwijanie i ukrywanie fragmentów kodu w edytorze programu Visual Studio  
+ [#Region dyrektywie](region-directive.md) — zwijanie i ukrywanie fragmentów kodu w edytorze programu Visual Studio  
   
  **#Disable, #Enable** --wyłączyć i włączyć określone ostrzeżenia dla regionów kodu.  
   
@@ -41,5 +41,5 @@ W tematach w tej sekcji udokumentowano dyrektywy kompilatora Visual Basic kodu �
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
+ [Dokumentacja języka Visual Basic](../index.md)  
   

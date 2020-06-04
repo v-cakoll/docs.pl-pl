@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46177d0af7e5df767eb8421caf424880baac615e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976461"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411730"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
 
@@ -40,23 +40,23 @@ Visual Basic udostępnia dobrze zdefiniowany model służący do kontrolowania z
   
 - **Uruchamianie aplikacji**. Aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzenie po rozpoczęciu. Obsługując to zdarzenie, można dodać kod inicjujący aplikację przed załadowaniem formularza głównego. To `Startup` zdarzenie umożliwia również anulowanie wykonywania aplikacji w tej fazie procesu uruchamiania, jeśli jest to konieczne.  
   
-     Można skonfigurować aplikację tak, aby wyświetlała ekran powitalny podczas uruchamiania kodu uruchomienia aplikacji. Domyślnie model aplikacji pomija ekran powitalny, gdy jest używany `/nosplash` lub `-nosplash` argument wiersza polecenia.  
+     Można skonfigurować aplikację tak, aby wyświetlała ekran powitalny podczas uruchamiania kodu uruchomienia aplikacji. Domyślnie model aplikacji pomija ekran powitalny, gdy `/nosplash` `-nosplash` jest używany lub argument wiersza polecenia.  
   
-- **Aplikacje o pojedynczym wystąpieniu**. Zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> jest zgłaszane, gdy zostanie uruchomione kolejne wystąpienie aplikacji o jednym wystąpieniu. Zdarzenie przekazuje argumenty wiersza polecenia kolejnego wystąpienia.  
+- **Aplikacje o pojedynczym wystąpieniu**. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>Zdarzenie jest zgłaszane, gdy zostanie uruchomione kolejne wystąpienie aplikacji o jednym wystąpieniu. Zdarzenie przekazuje argumenty wiersza polecenia kolejnego wystąpienia.  
   
 - **Nieobsłużone wyjątki**. Jeśli aplikacja napotka nieobsługiwany wyjątek, wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzenie. Program obsługi dla tego zdarzenia może sprawdzić wyjątek i określić, czy kontynuować wykonywanie.  
   
-     `UnhandledException` Zdarzenie nie zostało zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     `UnhandledException`Zdarzenie nie zostało zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
 - **Zmiany łączności sieciowej**. Jeśli zmieni się dostępność sieci komputera, aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> zdarzenie.  
   
-     `NetworkAvailabilityChanged` Zdarzenie nie zostało zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     `NetworkAvailabilityChanged`Zdarzenie nie zostało zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
 - **Zamykanie aplikacji**. Aplikacja zawiera <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzenie sygnalizujące, kiedy zostanie zamknięte. W tym obsłudze zdarzeń można upewnić się, że operacje wymagane przez aplikację są wykonywane — zamknięcie i zapisanie — na przykład — zostało zakończone. Można skonfigurować aplikację do zamykania, gdy główny formularz zostanie zamknięty lub aby zamknąć tylko wtedy, gdy wszystkie formularze zostały zamknięte.  
   
 ## <a name="availability"></a>Dostępność  
 
- Domyślnie model aplikacji Visual Basic jest dostępny dla Windows Forms projektów. W przypadku skonfigurowania aplikacji tak, aby korzystała z innego obiektu startowego, lub uruchomić kod aplikacji `Sub Main`z niestandardowym, wówczas ten obiekt lub Klasa może wymagać dostarczenia implementacji <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy w celu użycia modelu aplikacji. Aby uzyskać informacje na temat zmiany obiektu uruchomieniowego, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Domyślnie model aplikacji Visual Basic jest dostępny dla Windows Forms projektów. W przypadku skonfigurowania aplikacji tak, aby korzystała z innego obiektu startowego, lub uruchomić kod aplikacji z niestandardowym `Sub Main` , wówczas ten obiekt lub Klasa może wymagać dostarczenia implementacji <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy w celu użycia modelu aplikacji. Aby uzyskać informacje na temat zmiany obiektu uruchomieniowego, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Zobacz też
 
@@ -67,4 +67,4 @@ Visual Basic udostępnia dobrze zdefiniowany model służący do kontrolowania z
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Rozszerzanie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+- [Rozszerzanie modelu aplikacji Visual Basic](../customizing-extending-my/extending-the-visual-basic-application-model.md)

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: 559c905d1e2e2de4500771a93d6116f9630011ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6760b931ceb2ad5c2c04169d664da8629badc487
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591972"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409416"
 ---
-# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Brak metody dostępne "Main" z odpowiednim podpisem został znaleziony w "\<name >"
-Aplikacje wiersza poleceń jest posiadanie `Sub Main` zdefiniowane. `Main` musi być zadeklarowany jako `Public Shared` Jeśli jest zdefiniowana w klasie lub jako `Public` Jeśli zdefiniowany w module.  
+# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>W elemencie „\<name>” nie odnaleziono dostępnej metody „Main” z odpowiednim podpisem.
+Aplikacje wiersza polecenia muszą mieć `Sub Main` zdefiniowany. `Main`musi być zadeklarowany tak, jakby `Public Shared` jest zdefiniowana w klasie lub tak, jakby została `Public` zdefiniowana w module.  
   
  **Identyfikator błędu:** BC30737  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Zdefiniuj `Public Sub Main` procedury dla Twojego projektu. Zadeklaruj go jako `Shared` tylko wtedy, gdy zdefiniujesz wewnątrz klasy.  
+- Zdefiniuj `Public Sub Main` procedurę dla projektu. Zadeklaruj go jako `Shared` if i tylko wtedy, gdy zdefiniujesz go wewnątrz klasy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Struktura programu w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Struktura programu Visual Basic](../../programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Procedury](../../programming-guide/language-features/procedures/index.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: eaaeda2a986584e6e1a2e0d2cda3890fb6187598
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9a8c1fb30bfa5988d48202e41202e7ede0f5f27
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344237"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410506"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Porady: deklarowanie zmiennej obiektu i przydzielanie obiektu do It w Visual Basic
 
-Należy zadeklarować zmienną [typu danych obiektu](../../../../visual-basic/language-reference/data-types/object-data-type.md) , określając `As Object` w [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Obiekt można przypisać do takiej zmiennej poprzez umieszczenie obiektu po znaku równości (`=`) w instrukcji przypisania lub klauzuli inicjacji.
+Należy zadeklarować zmienną [typu danych obiektu](../../../language-reference/data-types/object-data-type.md) przez określenie `As Object` w [instrukcji Dim](../../../language-reference/statements/dim-statement.md). Obiekt można przypisać do takiej zmiennej poprzez umieszczenie obiektu po znaku równości ( `=` ) w instrukcji przypisania lub klauzuli inicjującej.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje zmienną `Object` i przypisuje do niej bieżące wystąpienie.
+Poniższy przykład deklaruje `Object` zmienną i przypisuje do niej bieżące wystąpienie.
 
 ```vb
 Dim thisObject As Object
@@ -31,22 +31,22 @@ Deklarację i przypisanie można połączyć przez zainicjowanie zmiennej jako c
 Dim thisObject As Object= "This is an Object"
 ```
 
-## <a name="compile-the-code"></a>Skompilować kod
+## <a name="compile-the-code"></a>Kompiluj kod
 
 Ten przykład wymaga:
 
-- Odwołanie do przestrzeni nazw <xref:System>.
+- Odwołanie do <xref:System> przestrzeni nazw.
 
-- Klasa, struktura lub moduł, w którym ma zostać umieszczona instrukcja `Dim`.
+- Klasa, struktura lub moduł, w którym należy umieścić `Dim` instrukcję.
 
 - Procedura, w której ma zostać umieszczona Instrukcja przypisania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Deklaracja zmiennej](variable-declaration.md)
+- [Zmienne obiektów](object-variables.md)
+- [Deklaracja zmiennej obiektu](object-variable-declaration.md)
+- [Object — typ danych](../../../language-reference/data-types/object-data-type.md)
+- [Dim, instrukcja](../../../language-reference/statements/dim-statement.md)
+- [Wnioskowanie o typie lokalnym](local-type-inference.md)
+- [Option Strict — Instrukcja](../../../language-reference/statements/option-strict-statement.md)

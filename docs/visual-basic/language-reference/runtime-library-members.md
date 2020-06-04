@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349617"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359493"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
 
-Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wyliczenia stanowiące bibliotekę środowiska uruchomieniowego Visual Basic. Te elementy członkowskie biblioteki udostępniają procedury, właściwości i wartości stałe, których można użyć w kodzie. Każdy moduł i Klasa przedstawiają określoną kategorię funkcji.  
+`Microsoft.VisualBasic`Przestrzeń nazw zawiera klasy, moduły, stałe i wyliczenia, które stanowią bibliotekę środowiska uruchomieniowego Visual Basic. Te elementy członkowskie biblioteki udostępniają procedury, właściwości i wartości stałe, których można użyć w kodzie. Każdy moduł i Klasa przedstawiają określoną kategorię funkcji.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft. VisualBasic. Collection — Klasa  
   
@@ -90,7 +90,7 @@ Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wylicz
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject Class  
+## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft. VisualBasic. ErrObject, Klasa  
   
 |||||  
 |---|---|---|---|  
@@ -98,7 +98,7 @@ Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wylicz
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft. VisualBasic. system plików — moduł  
   
 |||||  
 |---|---|---|---|  
@@ -154,13 +154,13 @@ Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wylicz
 |<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|<xref:Microsoft.VisualBasic.Interaction.Partition%2A>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
 |<xref:Microsoft.VisualBasic.Interaction.Shell%2A>|<xref:Microsoft.VisualBasic.Interaction.Switch%2A>|||  
   
-## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft.VisualBasic.MyGroupCollectionAttribute Class  
+## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft. VisualBasic. atrybut MyGroupCollectionAttribute, Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft. VisualBasic. Strings — moduł  
   
 |||||  
 |---|---|---|---|  
@@ -193,9 +193,9 @@ Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wylicz
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Stałe i wyliczenia Microsoft. VisualBasic  
 
- Przestrzeń nazw `Microsoft.VisualBasic` zawiera stałe i wyliczenia w ramach Visual Basic biblioteki wykonawczej. Możesz użyć tych stałych wartości w kodzie. Każde Wyliczenie reprezentuje konkretną kategorię funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic`Przestrzeń nazw zawiera stałe i wyliczenia w ramach Visual Basic biblioteki wykonawczej. Możesz użyć tych stałych wartości w kodzie. Każde Wyliczenie reprezentuje konkretną kategorię funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)
+- [Stałe i wyliczenia](constants-and-enumerations.md)
+- [Słowa kluczowe](keywords/index.md)

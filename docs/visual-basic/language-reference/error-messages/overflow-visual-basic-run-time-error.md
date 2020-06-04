@@ -4,27 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946552"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387273"
 ---
-# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="b2c7a-102">Przepełnienie (błąd czasu wykonywania w Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2c7a-102">Overflow (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="b2c7a-103">Przepełnienie powoduje podczas próby przypisania przekracza limit przydziału docelowego.</span><span class="sxs-lookup"><span data-stu-id="b2c7a-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
+# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="17cc8-102">Przepełnienie (błąd czasu wykonywania w Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="17cc8-102">Overflow (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="17cc8-103">Przepełnienie wyników podczas próby przypisania, które przekracza limity docelowego przypisania.</span><span class="sxs-lookup"><span data-stu-id="17cc8-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b2c7a-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="b2c7a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="17cc8-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="17cc8-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="b2c7a-105">Upewnij się, że wyniki typu przypisania, obliczeń i danych konwersje nie są zbyt duże, aby mogły być reprezentowane w ramach zakresu dozwolonych dla tego typu wartości zmiennych i przypisać wartość do zmiennej typu może przechowywać w większym zakresie wartości , jeśli to konieczne.</span><span class="sxs-lookup"><span data-stu-id="b2c7a-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
+1. <span data-ttu-id="17cc8-105">Upewnij się, że wyniki przypisań, obliczeń i konwersji typów danych nie są zbyt duże, aby były reprezentowane w zakresie zmiennych dozwolonych dla tego typu wartości, i przypisz wartość do zmiennej typu, która może zawierać większy zakres wartości, w razie potrzeby.</span><span class="sxs-lookup"><span data-stu-id="17cc8-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
   
-2. <span data-ttu-id="b2c7a-106">Upewnij się, że właściwości dopasowana do zakresu właściwości, do którego zostały wprowadzone.</span><span class="sxs-lookup"><span data-stu-id="b2c7a-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
+2. <span data-ttu-id="17cc8-106">Upewnij się, że przypisania do właściwości mieszczą się w zakresie właściwości, w której zostały wprowadzone.</span><span class="sxs-lookup"><span data-stu-id="17cc8-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
   
-3. <span data-ttu-id="b2c7a-107">Upewnij się, że numerów używanych w obliczeniach, są zmuszone do liczb całkowitych, które nie mają wyniki większy niż liczb całkowitych.</span><span class="sxs-lookup"><span data-stu-id="b2c7a-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
+3. <span data-ttu-id="17cc8-107">Upewnij się, że liczby używane w obliczeniach, które są przekształcane w liczby całkowite, nie mają wyników większych niż liczby całkowite.</span><span class="sxs-lookup"><span data-stu-id="17cc8-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2c7a-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b2c7a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17cc8-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="17cc8-108">See also</span></span>
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [<span data-ttu-id="b2c7a-109">Typy danych</span><span class="sxs-lookup"><span data-stu-id="b2c7a-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="b2c7a-110">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="b2c7a-110">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="17cc8-109">Typy danych</span><span class="sxs-lookup"><span data-stu-id="17cc8-109">Data Types</span></span>](../data-types/index.md)
+- [<span data-ttu-id="17cc8-110">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="17cc8-110">Error Types</span></span>](../../programming-guide/language-features/error-types.md)

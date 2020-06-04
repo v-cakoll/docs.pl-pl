@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Znajdowanie poprzedzających elementów równorzędnych (XPath-LINQ to XML)'
+title: 'Instrukcje: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f815aad5709be3624a779fcfb0e0e65e76deb8e1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344690"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400620"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie poprzedzających elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)
-W tym temacie porównano oś `preceding-sibling` XPath z osią [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnej <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
+W tym temacie porównano `preceding-sibling` oś XPath z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osią podrzędną <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> .  
   
  Wyrażenie XPath:  
   
@@ -19,9 +19,9 @@ W tym temacie porównano oś `preceding-sibling` XPath z osią [!INCLUDE[sqltecx
  Zwróć uwagę, że wyniki obu <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> i <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> są w kolejności dokumentu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie elementu `FullAddress`, a następnie pobranie poprzednich elementów przy użyciu osi `preceding-sibling`.  
+ Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobranie poprzednich elementów przy użyciu `preceding-sibling` osi.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -55,6 +55,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

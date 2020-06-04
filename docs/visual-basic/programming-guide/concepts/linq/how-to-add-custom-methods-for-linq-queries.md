@@ -1,25 +1,25 @@
 ---
-title: 'Porady: dodawanie metod niestandardowych do kwerend LINQ'
+title: 'Instrukcje: dodawanie metod niestandardowych do zapytań LINQ'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 3004a9c9c7abeffd9993b848ad765e7ae2dc8876
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 55004441d2d1d74556da6841f28d113b876d1048
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353372"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400607"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Instrukcje: dodawanie metod niestandardowych dla zapytań LINQ (Visual Basic)
 
-Można rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzających do interfejsu <xref:System.Collections.Generic.IEnumerable%601>. Na przykład oprócz standardowej średniej lub maksymalnej operacji można utworzyć niestandardową metodę agregującą, aby obliczyć pojedynczą wartość z sekwencji wartości. Możesz również utworzyć metodę, która działa jako filtr niestandardowy lub Przekształć dane dla sekwencji wartości i zwraca nową sekwencję. Przykładami takich metod są <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>i <xref:System.Linq.Enumerable.Reverse%2A>.
+Można rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzających do <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład oprócz standardowej średniej lub maksymalnej operacji można utworzyć niestandardową metodę agregującą, aby obliczyć pojedynczą wartość z sekwencji wartości. Możesz również utworzyć metodę, która działa jako filtr niestandardowy lub Przekształć dane dla sekwencji wartości i zwraca nową sekwencję. Przykładami takich metod są <xref:System.Linq.Enumerable.Distinct%2A> , <xref:System.Linq.Enumerable.Skip%2A> , i <xref:System.Linq.Enumerable.Reverse%2A> .
 
-Rozszerzając interfejs <xref:System.Collections.Generic.IEnumerable%601>, można zastosować własne metody do dowolnej wyliczalnej kolekcji. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+Rozszerzając <xref:System.Collections.Generic.IEnumerable%601> interfejs, można zastosować niestandardowe metody do dowolnej wyliczalnej kolekcji. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../language-features/procedures/extension-methods.md).
 
 ## <a name="adding-an-aggregate-method"></a>Dodawanie metody agregującej
 
-Metoda agregująca oblicza pojedynczą wartość z zestawu wartości. LINQ zawiera kilka metod agregujących, w tym <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>i <xref:System.Linq.Enumerable.Max%2A>. Można utworzyć własną metodę agregującą, dodając metodę rozszerzenia do interfejsu <xref:System.Collections.Generic.IEnumerable%601>.
+Metoda agregująca oblicza pojedynczą wartość z zestawu wartości. LINQ zawiera kilka metod agregujących, w tym <xref:System.Linq.Enumerable.Average%2A> , <xref:System.Linq.Enumerable.Min%2A> i <xref:System.Linq.Enumerable.Max%2A> . Można utworzyć własną metodę agregującą, dodając metodę rozszerzenia do <xref:System.Collections.Generic.IEnumerable%601> interfejsu.
 
-Poniższy przykład kodu pokazuje, jak utworzyć metodę rozszerzenia o nazwie `Median`, aby obliczyć medianę dla sekwencji liczb typu `double`.
+Poniższy przykład kodu pokazuje, jak utworzyć metodę rozszerzenia wywołana, `Median` Aby obliczyć medianę dla sekwencji liczb typu `double` .
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -50,12 +50,12 @@ Module LINQExtension
 End Module
 ```
 
-Ta metoda rozszerzenia jest wywoływana dla każdej wyliczalnej kolekcji w taki sam sposób, w jaki wywołujemy inne metody agregacji z interfejsu <xref:System.Collections.Generic.IEnumerable%601>.
+Ta metoda rozszerzenia jest wywoływana dla każdej wyliczalnej kolekcji w taki sam sposób, w jaki wywołujemy inne metody agregacji z <xref:System.Collections.Generic.IEnumerable%601> interfejsu.
 
 > [!NOTE]
-> W Visual Basic można użyć wywołania metody lub standardowej składni zapytania dla klauzuli `Aggregate` lub `Group By`. Aby uzyskać więcej informacji, zobacz [klauzula agregująca](../../../../visual-basic/language-reference/queries/aggregate-clause.md) i [klauzula GROUP by](../../../../visual-basic/language-reference/queries/group-by-clause.md).
+> W Visual Basic można użyć wywołania metody lub standardowej składni zapytania dla `Aggregate` `Group By` klauzuli OR. Aby uzyskać więcej informacji, zobacz [klauzula agregująca](../../../language-reference/queries/aggregate-clause.md) i [klauzula GROUP by](../../../language-reference/queries/group-by-clause.md).
 
-Poniższy przykład kodu pokazuje, jak używać metody `Median` dla tablicy typu `double`.
+Poniższy przykład kodu pokazuje, jak używać `Median` metody dla tablicy typu `double` .
 
 ```vb
 Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}
@@ -77,7 +77,7 @@ Można przeciążyć metodę agregacji, aby akceptować sekwencje różnych typ�
 
 #### <a name="to-create-an-overload-for-each-type"></a>Aby utworzyć Przeciążenie dla każdego typu
 
-Można utworzyć określone Przeciążenie dla każdego typu, który ma być obsługiwany. Poniższy przykład kodu przedstawia Przeciążenie metody `Median` dla typu `integer`.
+Można utworzyć określone Przeciążenie dla każdego typu, który ma być obsługiwany. Poniższy przykład kodu przedstawia Przeciążenie `Median` metody dla `integer` typu.
 
 ```vb
 ' Integer overload
@@ -88,7 +88,7 @@ Function Median(ByVal source As IEnumerable(Of Integer)) As Double
 End Function
 ```
 
-Teraz można wywoływać przeciążenia `Median` dla typów `integer` i `double`, jak pokazano w poniższym kodzie:
+Teraz można wywoływać `Median` przeciążenia dla obu `integer` typów i `double` typy, jak pokazano w poniższym kodzie:
 
 ```vb
 Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}
@@ -117,7 +117,7 @@ Console.WriteLine("Integer: Median = " & query2)
 
 Można również utworzyć Przeciążenie, które akceptuje sekwencję obiektów ogólnych. To przeciążenie przyjmuje delegat jako parametr i używa go do konwersji sekwencji obiektów typu ogólnego do określonego typu.
 
-Poniższy kod przedstawia Przeciążenie metody `Median`, która przyjmuje <xref:System.Func%602> delegat jako parametr. Ten delegat pobiera obiekt typu ogólnego T i zwraca obiekt typu `double`.
+Poniższy kod przedstawia Przeciążenie `Median` metody, która przyjmuje <xref:System.Func%602> Delegat jako parametr. Ten delegat pobiera obiekt typu ogólnego T i zwraca obiekt typu `double` .
 
 ```vb
 ' Generic overload.
@@ -129,9 +129,9 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function
 ```
 
-Teraz można wywołać metodę `Median` dla sekwencji obiektów dowolnego typu. Jeśli typ nie ma własnego przeciążenia metody, należy przekazać parametr delegata. W Visual Basic można użyć wyrażenia lambda do tego celu. Ponadto, jeśli używasz klauzuli `Aggregate` lub `Group By` zamiast wywołania metody, można przekazać dowolną wartość lub wyrażenie, które znajduje się w zakresie tej klauzuli.
+Teraz można wywołać `Median` metodę dla sekwencji obiektów dowolnego typu. Jeśli typ nie ma własnego przeciążenia metody, należy przekazać parametr delegata. W Visual Basic można użyć wyrażenia lambda do tego celu. Ponadto, jeśli używasz `Aggregate` `Group By` klauzuli or zamiast wywołania metody, można przekazać dowolną wartość lub wyrażenie, które znajduje się w zakresie tej klauzuli.
 
-Poniższy przykładowy kod pokazuje, jak wywołać metodę `Median` dla tablicy liczb całkowitych i tablicy ciągów. Dla ciągów, mediany dla długości ciągów w tablicy jest obliczany. W przykładzie pokazano, jak przekazać parametr delegata <xref:System.Func%602> do metody `Median` dla każdego przypadku.
+Poniższy przykładowy kod pokazuje, jak wywołać `Median` metodę dla tablicy liczb całkowitych i tablicy ciągów. Dla ciągów, mediany dla długości ciągów w tablicy jest obliczany. W przykładzie pokazano, jak przekazać <xref:System.Func%602> parametr delegata do `Median` metody dla każdego przypadku.
 
 ```vb
 Dim numbers3() As Integer = {1, 2, 3, 4, 5}
@@ -161,9 +161,9 @@ Console.WriteLine("String: Median = " & query4)
 
 ## <a name="adding-a-method-that-returns-a-collection"></a>Dodawanie metody zwracającej kolekcję
 
-Interfejs <xref:System.Collections.Generic.IEnumerable%601> można zwiększyć przy użyciu niestandardowej metody zapytania, która zwraca sekwencję wartości. W takim przypadku metoda musi zwracać kolekcję typu <xref:System.Collections.Generic.IEnumerable%601>. Takie metody mogą służyć do zastosowania filtrów lub transformacji danych do sekwencji wartości.
+Interfejs można rozszerzyć <xref:System.Collections.Generic.IEnumerable%601> za pomocą niestandardowej metody zapytania, która zwraca sekwencję wartości. W tym przypadku metoda musi zwracać kolekcję typu <xref:System.Collections.Generic.IEnumerable%601> . Takie metody mogą służyć do zastosowania filtrów lub transformacji danych do sekwencji wartości.
 
-Poniższy przykład pokazuje, jak utworzyć metodę rozszerzenia o nazwie `AlternateElements`, która zwraca każdy inny element w kolekcji, rozpoczynając od pierwszego elementu.
+Poniższy przykład pokazuje, jak utworzyć metodę rozszerzenia o nazwie `AlternateElements` , która zwraca każdy inny element w kolekcji, rozpoczynając od pierwszego elementu.
 
 ```vb
 ' Extension method for the IEnumerable(of T) interface.
@@ -186,7 +186,7 @@ Function AlternateElements(Of T)(
 End Function
 ```
 
-Można wywołać tę metodę rozszerzenia dla każdej wyliczalnej kolekcji tak samo jak w przypadku wywołania innych metod z interfejsu <xref:System.Collections.Generic.IEnumerable%601>, jak pokazano w poniższym kodzie:
+Można wywołać tę metodę rozszerzenia dla każdej wyliczalnej kolekcji tak samo jak w przypadku wywołania innych metod z <xref:System.Collections.Generic.IEnumerable%601> interfejsu, jak pokazano w poniższym kodzie:
 
 ```vb
 Dim strings() As String = {"a", "b", "c", "d", "e"}
@@ -204,7 +204,7 @@ Next
 ' e
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Metody rozszerzeń](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Metody rozszerzające](../../language-features/procedures/extension-methods.md)

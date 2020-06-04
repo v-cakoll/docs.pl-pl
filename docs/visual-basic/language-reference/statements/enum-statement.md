@@ -1,5 +1,5 @@
 ---
-title: Enum — Instrukcja
+title: Enum, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Enum
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 48220fd1e88cf38e67db5dd3a2ad90638eb6b6df
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 976cc68d67c69ec86918962ab2dd3406d15aed9a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343716"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404735"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum — Instrukcja (Visual Basic)
 
@@ -35,52 +35,52 @@ End Enum
 
 - `attributelist`
 
-  Opcjonalna. Lista atrybutów, które są stosowane do tego wyliczenia. Należy ująć [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ostre ("`<`" i "`>`").
+  Opcjonalny. Lista atrybutów, które są stosowane do tego wyliczenia. Należy ująć [listę atrybutów](attribute-list.md) w nawiasy kątowe (" `<` " i " `>` ").
 
-  Atrybut <xref:System.FlagsAttribute> wskazuje, że wartość wystąpienia wyliczenia może zawierać wiele elementów członkowskich wyliczenia i że każdy element członkowski reprezentuje pole bitowe w wartości wyliczenia.
+  Ten <xref:System.FlagsAttribute> atrybut wskazuje, że wartość wystąpienia wyliczenia może zawierać wiele elementów członkowskich wyliczenia i że każdy element członkowski reprezentuje pole bitowe w wartości wyliczenia.
 
 - `accessmodifier`
 
-  Opcjonalna. Określa kod, który może uzyskać dostęp do tego wyliczenia. Może to być jeden z następujących modyfikatorów dostępu:
+  Opcjonalny. Określa kod, który może uzyskać dostęp do tego wyliczenia. Może być jedną z następujących czynności:
 
-  - [Public](../../../visual-basic/language-reference/modifiers/public.md)
+  - [Społeczeństwo](../modifiers/public.md)
 
-  - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+  - [Chronione](../modifiers/protected.md)
 
-  - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+  - [Osoby](../modifiers/friend.md)
 
-  - [Private](../../../visual-basic/language-reference/modifiers/private.md)
+  - [Użytek](../modifiers/private.md)
 
-  - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+  - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Private Protected](../../language-reference/modifiers/private-protected.md)
+  - [Prywatne chronione](../modifiers/private-protected.md)
 
 - `Shadows`
 
-  Opcjonalna. Określa, że to Wyliczenie ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zestaw przeciążonych elementów w klasie bazowej. Można określić tylko [cienie](../../../visual-basic/language-reference/modifiers/shadows.md) na samym wyliczeniu, a nie na żadnym z jej elementów członkowskich.
+  Opcjonalny. Określa, że to Wyliczenie ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zestaw przeciążonych elementów w klasie bazowej. Można określić tylko [cienie](../modifiers/shadows.md) na samym wyliczeniu, a nie na żadnym z jej elementów członkowskich.
 
 - `enumerationname`
 
-  Wymagana. Nazwa wyliczenia. Aby uzyskać informacje o prawidłowych nazwach, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Wymagany. Nazwa wyliczenia. Aby uzyskać informacje o prawidłowych nazwach, zobacz [zadeklarowane nazwy elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `datatype`
 
-  Opcjonalna. Typ danych wyliczenia i wszystkie jego elementy członkowskie.
+  Opcjonalny. Typ danych wyliczenia i wszystkie jego elementy członkowskie.
 
 - `memberlist`
 
-  Wymagana. Lista stałych elementów członkowskich, które są zadeklarowane w tej instrukcji. W poszczególnych wierszach kodu źródłowego są wyświetlane wiele elementów członkowskich.
+  Wymagany. Lista stałych elementów członkowskich, które są zadeklarowane w tej instrukcji. W poszczególnych wierszach kodu źródłowego są wyświetlane wiele elementów członkowskich.
 
-  Każda `member` ma następującą składnię i części: `[<attribute list>] member name [ = initializer ]`
+  Każda `member` z nich ma następującą składnię i części:`[<attribute list>] member name [ = initializer ]`
 
-  |Części|Opis|
+  |Część|Opis|
   |---|---|
-  |`membername`|Wymagana. Nazwa tego elementu członkowskiego.|
-  |`initializer`|Opcjonalna. Wyrażenie, które jest oceniane w czasie kompilacji i przypisane do tego elementu członkowskiego.|
+  |`membername`|Wymagany. Nazwa tego elementu członkowskiego.|
+  |`initializer`|Opcjonalny. Wyrażenie, które jest oceniane w czasie kompilacji i przypisane do tego elementu członkowskiego.|
 
-- `End``Enum`
+- `End` `Enum`
 
-  Kończy blok `Enum`.
+  Kończy `Enum` blok.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -100,63 +100,63 @@ Wyliczenie ma nazwę, podstawowy typ danych i zestaw elementów członkowskich. 
 
 Wyliczenie zadeklarowane na poziomie klasy, struktury, modułu lub interfejsu, poza żadną procedurą, jest *wyliczeniem elementu członkowskiego*. Jest członkiem klasy, struktury, modułu lub interfejsu, który go deklaruje.
 
-Do wyliczania elementów członkowskich można uzyskiwać dostęp z dowolnego miejsca w swojej klasie, strukturze, module lub interfejsie. Kod poza klasą, strukturą lub modułem musi kwalifikować nazwę wyliczenia elementu członkowskiego o nazwie tej klasy, struktury lub modułu. Można uniknąć konieczności używania w pełni kwalifikowanych nazw przez dodanie instrukcji [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) do pliku źródłowego.
+Do wyliczania elementów członkowskich można uzyskiwać dostęp z dowolnego miejsca w swojej klasie, strukturze, module lub interfejsie. Kod poza klasą, strukturą lub modułem musi kwalifikować nazwę wyliczenia elementu członkowskiego o nazwie tej klasy, struktury lub modułu. Można uniknąć konieczności używania w pełni kwalifikowanych nazw przez dodanie instrukcji [Imports](imports-statement-net-namespace-and-type.md) do pliku źródłowego.
 
 Wyliczenie zadeklarowane na poziomie przestrzeni nazw, poza klasą, strukturą, modułem lub interfejsem, jest członkiem przestrzeni nazw, w której występuje.
 
-*Kontekst deklaracji* wyliczenia musi być plikiem źródłowym, przestrzenią nazw, klasą, strukturą, modułem lub interfejsem i nie może być procedurą. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+*Kontekst deklaracji* wyliczenia musi być plikiem źródłowym, przestrzenią nazw, klasą, strukturą, modułem lub interfejsem i nie może być procedurą. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md).
 
 Atrybuty można zastosować do wyliczenia jako całości, ale nie do elementów członkowskich. Atrybut tworzy informacje w metadanych zestawu.
 
 ## <a name="data-type"></a>Typ danych
 
-Instrukcja `Enum` może deklarować typ danych wyliczenia. Każdy element członkowski Pobiera typ danych wyliczenia. Można określić `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`lub `UShort`.
+`Enum`Instrukcja może deklarować typ danych wyliczenia. Każdy element członkowski Pobiera typ danych wyliczenia. Można określić,,,,,, `Byte` `Integer` `Long` `SByte` `Short` `UInteger` `ULong` lub `UShort` .
 
-Jeśli nie określisz `datatype` do wyliczenia, każdy element członkowski Pobiera typ danych `initializer`. Jeśli określisz zarówno `datatype` i `initializer`, typ danych `initializer` musi być konwertowany na `datatype`. Jeśli nie `datatype` ani `initializer` nie istnieje, typ danych jest wartością domyślną `Integer`.
+Jeśli nie określisz `datatype` dla wyliczenia, każdy element członkowski Pobiera typ danych `initializer` . Jeśli określisz oba elementy `datatype` i `initializer` , typ danych `initializer` musi być konwertowany na `datatype` . Jeśli ani `datatype` nie `initializer` jest obecny, typ danych jest wartością domyślną `Integer` .
 
 ## <a name="initializing-members"></a>Inicjowanie członków
 
-Instrukcja `Enum` może inicjować zawartość wybranych elementów członkowskich w `memberlist`. Użyj `initializer`, aby podać wyrażenie, które ma zostać przypisane do elementu członkowskiego.
+`Enum`Instrukcja może inicjować zawartość wybranych elementów członkowskich w `memberlist` . Używasz, `initializer` Aby podać wyrażenie, które ma zostać przypisane do elementu członkowskiego.
 
-Jeśli nie określisz `initializer` dla elementu członkowskiego, Visual Basic Inicjuje to zero (jeśli jest to pierwszy `member` w `memberlist`) lub wartość większą o jeden niż bezpośrednio przed `member`.
+Jeśli nie określisz `initializer` dla elementu członkowskiego, Visual Basic Inicjuje to zero (jeśli jest to pierwsze `member` w `memberlist` ) lub wartość większą o jeden niż ta, która jest bezpośrednio Poprzednia `member` .
 
-Wyrażenie podane w każdej `initializer` może być dowolną kombinacją literałów, innych stałych, które są już zdefiniowane, oraz składowych wyliczenia, które są już zdefiniowane, włącznie z poprzednią składową tego wyliczenia. Do łączenia takich elementów można używać operatorów arytmetycznych i logicznych.
+Wyrażenie podane w każdym z nich `initializer` może być dowolną kombinacją literałów, innych stałych, które są już zdefiniowane, oraz składowych wyliczenia, które są już zdefiniowane, włącznie z poprzednią składową tego wyliczenia. Do łączenia takich elementów można używać operatorów arytmetycznych i logicznych.
 
-Nie można używać zmiennych ani funkcji w `initializer`. Można jednak użyć słów kluczowych konwersji, takich jak `CByte` i `CShort`. Możesz również użyć `AscW`, jeśli wywołasz go za pomocą stałej `String` lub argumentu `Char`, ponieważ może być oceniane w czasie kompilacji.
+W programie nie można używać zmiennych ani funkcji `initializer` . Można jednak użyć słów kluczowych konwersji, takich jak `CByte` i `CShort` . Można również użyć `AscW` , jeśli wywołasz ją z stałą `String` lub `Char` argumentem, ponieważ może być oceniane w czasie kompilacji.
 
-Wyliczenia nie mogą mieć wartości zmiennoprzecinkowych. Jeśli element członkowski ma przypisaną wartość zmiennoprzecinkową i `Option Strict` jest ustawiona na on, wystąpi błąd kompilatora. Jeśli `Option Strict` jest wyłączone, wartość zostanie automatycznie przekonwertowana na typ `Enum`.
+Wyliczenia nie mogą mieć wartości zmiennoprzecinkowych. Jeśli element członkowski ma przypisaną wartość zmiennoprzecinkową i `Option Strict` jest ustawiony na on, wystąpi błąd kompilatora. Jeśli `Option Strict` jest wyłączona, wartość jest automatycznie konwertowana na `Enum` Typ.
 
 Jeśli wartość elementu członkowskiego przekracza dozwolony zakres dla bazowego typu danych lub jeśli zainicjujesz dowolny element członkowski do wartości maksymalnej dozwolonej przez typ danych, kompilator zgłosi błąd.
 
 ## <a name="modifiers"></a>Modyfikatory
 
-Wyliczenia klasy, struktury, modułu i elementu członkowskiego interfejsu są domyślne dla dostępu publicznego. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Wyliczenie elementu członkowskiego przestrzeni nazw domyślnie ma dostęp do znajomych. Poziom dostępu można dostosować do publicznego, ale nie do prywatnego lub chronionego. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Wyliczenia klasy, struktury, modułu i elementu członkowskiego interfejsu są domyślne dla dostępu publicznego. Możesz dostosować ich poziomy dostępu za pomocą modyfikatorów dostępu. Wyliczenie elementu członkowskiego przestrzeni nazw domyślnie ma dostęp do znajomych. Poziom dostępu można dostosować do publicznego, ale nie do prywatnego lub chronionego. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 Wszyscy członkowie wyliczenia mają dostęp publiczny i nie można używać żadnych modyfikatorów dostępu. Jeśli jednak Wyliczenie ma bardziej ograniczony poziom dostępu, pierwszeństwo ma określony poziom dostępu do wyliczenia.
 
-Domyślnie wszystkie wyliczenia są typami i ich pola są stałymi. W związku z tym słowa kluczowe `Shared`, `Static`i `ReadOnly` nie mogą być używane podczas deklarowania wyliczenia lub jego elementów członkowskich.
+Domyślnie wszystkie wyliczenia są typami i ich pola są stałymi. W związku z tym `Shared` `Static` `ReadOnly` słowa kluczowe, i nie mogą być używane podczas deklarowania wyliczenia lub jego elementów członkowskich.
 
 ## <a name="assigning-multiple-values"></a>Przypisywanie wielu wartości
 
-Wyliczenia zazwyczaj reprezentują wzajemnie wykluczające się wartości. Uwzględniając atrybut <xref:System.FlagsAttribute> w deklaracji `Enum`, można zamiast tego przypisać wiele wartości do wystąpienia wyliczenia. Atrybut <xref:System.FlagsAttribute> określa, że Wyliczenie ma być traktowane jako pole bitowe, czyli zestaw flag. Są one nazywane wyliczaniem *bitowym* .
+Wyliczenia zazwyczaj reprezentują wzajemnie wykluczające się wartości. Dołączając <xref:System.FlagsAttribute> atrybut w `Enum` deklaracji, można zamiast tego przypisać wiele wartości do wystąpienia wyliczenia. Ten <xref:System.FlagsAttribute> atrybut określa, że Wyliczenie ma być traktowane jako pole bitowe, czyli zestaw flag. Są one nazywane wyliczaniem *bitowym* .
 
-W przypadku deklarowania wyliczenia przy użyciu atrybutu <xref:System.FlagsAttribute> zalecamy użycie uprawnień 2, czyli 1, 2, 4, 8, 16 itd., dla wartości. Zalecamy również, aby wartość "none" była nazwą elementu członkowskiego, którego wartością jest 0. Aby uzyskać dodatkowe wskazówki, zobacz <xref:System.FlagsAttribute> i <xref:System.Enum>.
+W przypadku deklarowania wyliczenia przy użyciu <xref:System.FlagsAttribute> atrybutu zalecamy użycie uprawnień 2, czyli 1, 2, 4, 8, 16 itd., dla wartości. Zalecamy również, aby wartość "none" była nazwą elementu członkowskiego, którego wartością jest 0. Aby uzyskać dodatkowe wskazówki, zobacz <xref:System.FlagsAttribute> i <xref:System.Enum> .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać instrukcji `Enum`. Należy zauważyć, że element członkowski jest określany jako `EggSizeEnum.Medium`, a nie jako `Medium`.
+Poniższy przykład pokazuje, jak używać `Enum` instrukcji. Należy zauważyć, że element członkowski jest określany jako `EggSizeEnum.Medium` , a nie jako `Medium` .
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>Przykład
 
-Metoda w poniższym przykładzie znajduje się poza klasą `Egg`. W związku z tym `EggSizeEnum` jest w pełni kwalifikowana jako `Egg.EggSizeEnum`.
+Metoda w poniższym przykładzie znajduje się poza `Egg` klasą. W związku z tym, `EggSizeEnum` jest w pełni kwalifikowana jako `Egg.EggSizeEnum` .
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa instrukcji `Enum` w celu zdefiniowania powiązanego zestawu nazwanych stałych wartości. W takim przypadku wartości są kolorami, które można wybrać do projektowania formularzy wprowadzania danych dla bazy danych.
+Poniższy przykład używa `Enum` instrukcji w celu zdefiniowania powiązanego zestawu nazwanych stałych wartości. W takim przypadku wartości są kolorami, które można wybrać do projektowania formularzy wprowadzania danych dla bazy danych.
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
@@ -168,28 +168,28 @@ Poniższy przykład pokazuje wartości, które zawierają zarówno liczbę dodat
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie klauzula `As` jest używana do określenia `datatype` wyliczenia.
+W poniższym przykładzie `As` klauzula służy do określenia `datatype` wyliczenia.
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać wyliczenia bitowego. Do wystąpienia wyliczenia bitowego można przypisać wiele wartości. Deklaracja `Enum` zawiera atrybut <xref:System.FlagsAttribute>, który wskazuje, że Wyliczenie może być traktowane jako zestaw flag.
+Poniższy przykład pokazuje, jak używać wyliczenia bitowego. Do wystąpienia wyliczenia bitowego można przypisać wiele wartości. `Enum`Deklaracja zawiera <xref:System.FlagsAttribute> atrybut, który wskazuje, że Wyliczenie może być traktowane jako zestaw flag.
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wykonuje iterację przez wyliczenie. Używa metody <xref:System.Enum.GetNames%2A>, aby pobrać tablicę nazw elementów członkowskich z wyliczenia, i <xref:System.Enum.GetValues%2A>, aby pobrać tablicę wartości elementów członkowskich.
+Poniższy przykład wykonuje iterację przez wyliczenie. Używa metody, <xref:System.Enum.GetNames%2A> Aby pobrać tablicę nazw elementów członkowskich z wyliczenia i <xref:System.Enum.GetValues%2A> pobrać tablicę wartości elementów członkowskich.
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
-- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)
-- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Stałe i wyliczenia](../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Const, instrukcja](const-statement.md)
+- [Dim, instrukcja](dim-statement.md)
+- [Konwersje jawne i niejawne](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Funkcje konwersji typu](../functions/type-conversion-functions.md)
+- [Stałe i wyliczenia](../constants-and-enumerations.md)

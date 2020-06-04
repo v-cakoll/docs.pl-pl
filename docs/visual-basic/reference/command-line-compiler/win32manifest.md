@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: cef1e6c19e7fdd6fc9f42c8fc36008314ea80a80
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349132"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414262"
 ---
 # <a name="-win32manifest-visual-basic"></a>-WIN32MANIFEST (Visual Basic)
 Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, który ma zostać osadzony w przenośnym pliku wykonywalnym (PE) projektu.  
@@ -32,7 +32,7 @@ Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, kt�
  Domyślnie kompilator Visual Basic osadza manifest aplikacji, który określa żądany poziom wykonywania jako źródło. Tworzy manifest w tym samym folderze, w którym plik wykonywalny jest kompilowany, zazwyczaj folder bin\Debug lub bin\Release w przypadku korzystania z programu Visual Studio. Jeśli chcesz podać niestandardowy manifest, na przykład aby określić żądany poziom wykonywania najwyższe dostępne lub wymaga administratora, Użyj tej opcji, aby określić nazwę pliku.  
   
 > [!NOTE]
-> Ta opcja i opcja [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) wykluczają się wzajemnie. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
+> Ta opcja i opcja [-win32resource](win32resource.md) wykluczają się wzajemnie. Jeśli spróbujesz użyć obu opcji w tym samym wierszu polecenia, zostanie wyświetlony błąd kompilacji.  
   
  Aplikacja, która nie ma manifestu aplikacji, która określa żądany poziom wykonania, będzie podlegała wirtualizacji plików/rejestru w ramach funkcji kontroli konta użytkownika w systemie Windows Vista. Aby uzyskać więcej informacji na temat wirtualizacji, zobacz [wdrażanie ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
@@ -68,5 +68,5 @@ Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, kt�
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [-nowin32manifest (Visual Basic)](nowin32manifest.md)

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63e61d412e4d1238b08ccae94f11adb0c3d1b54d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918349"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401579"
 ---
-# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>"\<name1 >" jest niejednoznaczny, po imporcie z przestrzeni nazw lub typów\<Nazwa2 > "
-Podano nazwę, która jest niejednoznaczny i dlatego jest w konflikcie z inną nazwą. Kompilator Visual Basic nie ma żadnych reguł rozwiązywania konfliktów; odróżnić nazwy musi samodzielnie.  
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>Element „\<name1>” jest niejednoznaczny, po imporcie z przestrzeni nazw lub typów „\<name2>”
+Podana nazwa jest niejednoznaczna i dlatego powoduje konflikt z inną nazwą. Kompilator Visual Basic nie ma żadnych reguł rozwiązywania konfliktów; należy samodzielnie odróżnić nazwy.  
   
  **Identyfikator błędu:** BC30561  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Odróżnić nazwy, usuwając importowanej przestrzeni nazw.  
+1. Usuń niejednoznaczność nazwy, usuwając Importy przestrzeni nazw.  
   
-2. Pełnej nazwy.  
+2. W pełni Zakwalifikuj nazwę.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Imports — Instrukcja (.NET Namespace i Type)](../statements/imports-statement-net-namespace-and-type.md)
+- [Przestrzenie nazw w Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Namespace — Instrukcja](../statements/namespace-statement.md)

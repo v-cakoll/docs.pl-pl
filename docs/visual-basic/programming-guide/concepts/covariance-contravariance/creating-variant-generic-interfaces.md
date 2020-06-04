@@ -1,29 +1,29 @@
 ---
-title: Tworzenie interfejsów typu Variant
+title: Tworzenie interfejsów ogólnych typu Variant
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 74362b9d9effab028bebb9e9ecf72ac0111366d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 884349159d2738d8481b217f9dab383483616f2b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347071"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400645"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Tworzenie interfejsów ogólnych typu Variant (Visual Basic)
 
 Parametry typu ogólnego można zadeklarować w interfejsach jako współvariant lub kontrawariantne. *Kowariancja* umożliwia metodom interfejsu posiadanie bardziej pochodnych typów zwracanych niż te zdefiniowane przez parametry typu ogólnego. *Kontrawariancja* umożliwia metodom interfejsu posiadanie typów argumentów, które są mniej pochodne niż określone przez parametry ogólne. Ogólny interfejs, który ma parametry typu generycznego lub kontrawariantne, nazywa się *wariantem*.
 
 > [!NOTE]
-> .NET Framework 4 wprowadziła obsługę wariancji dla kilku istniejących interfejsów ogólnych. Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4 wprowadziła obsługę wariancji dla kilku istniejących interfejsów ogólnych. Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Deklarowanie interfejsów ogólnych typu Variant
 
-Można zadeklarować interfejsy ogólne dla wariantów przy użyciu słów kluczowych `in` i `out` dla parametrów typu ogólnego.
+Można zadeklarować interfejsy ogólne wariantu przy użyciu `in` `out` słów kluczowych i dla parametrów typu ogólnego.
 
 > [!IMPORTANT]
-> parametry `ByRef` w Visual Basic nie mogą być wariantem. Typy wartości nie obsługują również wariancji.
+> `ByRef`parametry w Visual Basic nie mogą być wariantem. Typy wartości nie obsługują również wariancji.
 
-Za pomocą słowa kluczowego `out` można zadeklarować element współvariant parametru typu ogólnego. Typ współwariantu musi spełniać następujące warunki:
+Za pomocą słowa kluczowego można zadeklarować współwariant parametru typu ogólnego `out` . Typ współwariantu musi spełniać następujące warunki:
 
 - Typ jest używany tylko jako typ zwracany metod interfejsu i nie jest używany jako typ argumentów metody. Jest to zilustrowane w poniższym przykładzie, w którym typ `R` jest zadeklarowany jako współvariant.
 
@@ -35,7 +35,7 @@ Za pomocą słowa kluczowego `out` można zadeklarować element współvariant p
     End Interface
     ```
 
-    Istnieje jeden wyjątek dla tej reguły. Jeśli masz delegata generycznego kontrawariantne jako parametr metody, możesz użyć typu jako parametru typu ogólnego dla delegata. Jest to zilustrowane przez typ `R` w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Istnieje jeden wyjątek dla tej reguły. Jeśli masz delegata generycznego kontrawariantne jako parametr metody, możesz użyć typu jako parametru typu ogólnego dla delegata. Jest to zilustrowane przez typ `R` w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [Wariancja w delegatach (Visual Basic)](variance-in-delegates.md) i [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md).
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -54,7 +54,7 @@ Za pomocą słowa kluczowego `out` można zadeklarować element współvariant p
     End Interface
     ```
 
-Parametry typu ogólnego kontrawariantne można zadeklarować za pomocą słowa kluczowego `in`. Typ kontrawariantne może być używany tylko jako typ argumentów metody, a nie jako zwracany typ metod interfejsu. Typ kontrawariantne może być również używany dla ograniczeń ogólnych. Poniższy kod przedstawia sposób deklarowania interfejsu kontrawariantne i używania ograniczenia ogólnego dla jednej z jej metod.
+Parametry typu ogólnego kontrawariantne można zadeklarować za pomocą `in` słowa kluczowego. Typ kontrawariantne może być używany tylko jako typ argumentów metody, a nie jako zwracany typ metod interfejsu. Typ kontrawariantne może być również używany dla ograniczeń ogólnych. Poniższy kod przedstawia sposób deklarowania interfejsu kontrawariantne i używania ograniczenia ogólnego dla jednej z jej metod.
 
 ```vb
 Interface IContravariant(Of In A)
@@ -134,7 +134,7 @@ Dim button As SampleImplementation(Of Button) =
 
 ## <a name="extending-variant-generic-interfaces"></a>Rozszerzanie interfejsów ogólnych typu Variant
 
-Podczas rozszerzającej uniwersalnego interfejsu wariantu należy użyć słów kluczowych `in` i `out`, aby jawnie określić, czy interfejs pochodny obsługuje wariancję. Kompilator nie wywnioskuje wariancji z rozszerzanego interfejsu. Rozważmy na przykład następujące interfejsy.
+Po rozłączeniu uniwersalnego interfejsu wariantowego należy użyć `in` `out` słów kluczowych i, aby jawnie określić, czy interfejs pochodny obsługuje wariancję. Kompilator nie wywnioskuje wariancji z rozszerzanego interfejsu. Rozważmy na przykład następujące interfejsy.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -149,9 +149,9 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-W interfejsie `Invariant(Of T)` parametr typu generycznego `T` jest niezmienny, podczas gdy w `IExtCovariant (Of Out T)`parametr typu jest współvariant, chociaż oba interfejsy rozszerzającą ten sam interfejs. Ta sama reguła jest stosowana do parametrów typu ogólnego kontrawariantne.
+W `Invariant(Of T)` interfejsie parametr typu generycznego `T` jest niezmienny, natomiast w `IExtCovariant (Of Out T)` parametrze typu jest współwariant, chociaż oba interfejsy rozszerzającą ten sam interfejs. Ta sama reguła jest stosowana do parametrów typu ogólnego kontrawariantne.
 
-Można utworzyć interfejs, który rozszerza interfejs, w którym parametr typu generycznego `T` jest współvariant i interfejsem, gdzie jest kontrawariantne, jeśli w rozszerzanym interfejsie parametr typu generycznego `T` jest niezmienny. Jest to zilustrowane w poniższym przykładzie kodu.
+Można utworzyć interfejs, który rozszerza zarówno interfejs, w którym parametr typu generycznego `T` to współwariant, jak i interfejs, w którym jest kontrawariantne, jeśli w rozszerzanym interfejsie parametr typu generycznego `T` jest niezmienny. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -181,10 +181,10 @@ End Interface
 
 Podczas implementowania interfejsów ogólnych typu Variant WARIANCJA może czasami prowadzić do niejednoznaczności. Należy to uniknąć.
 
-Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie jest określony, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Może to prowadzić do delikatnych usterek w kodzie. Rozważmy następujący przykład kodu.
+Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie jest określony, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Może to prowadzić do delikatnych usterek w kodzie. Spójrz na poniższy przykład kodu.
 
 > [!NOTE]
-> W przypadku `Option Strict Off`Visual Basic generuje ostrzeżenie kompilatora, gdy istnieje niejednoznaczna implementacja interfejsu. W przypadku `Option Strict On`Visual Basic generuje błąd kompilatora.
+> W programie `Option Strict Off` Visual Basic generuje ostrzeżenie kompilatora, gdy istnieje niejednoznaczna implementacja interfejsu. W programie `Option Strict On` Visual Basic generuje błąd kompilatora.
 
 ```vb
 ' Simple class hierarchy.
@@ -228,9 +228,9 @@ Sub Main()
 End Sub
 ```
 
-W tym przykładzie nie określono, jak Metoda `pets.GetEnumerator` wybiera między `Cat` i `Dog`. Może to spowodować problemy w kodzie.
+W tym przykładzie nie określono `pets.GetEnumerator` metody wybieranej między `Cat` i `Dog` . Może to spowodować problemy w kodzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w interfejsach ogólnych (Visual Basic)](variance-in-generic-interfaces.md)
+- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

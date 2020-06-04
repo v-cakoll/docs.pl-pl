@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349398"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400218"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literał komentarza XML (Visual Basic)
-Literał reprezentujący obiekt <xref:System.Xml.Linq.XComment>.  
+Literał reprezentujący <xref:System.Xml.Linq.XComment> obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +41,23 @@ Literał reprezentujący obiekt <xref:System.Xml.Linq.XComment>.
   
 - Nie można użyć wyrażenia osadzonego w literale komentarza XML, ponieważ ogranicznik wyrażenia osadzonego są prawidłową zawartością komentarza XML.  
   
-- Sekcje komentarza XML nie mogą być zagnieżdżane, ponieważ `content` nie może zawierać wartości "-->".  
+- Sekcje komentarza XML nie mogą być zagnieżdżane, ponieważ `content` nie mogą zawierać wartości "-->".  
   
  Do zmiennej można przypisać literał komentarza XML lub dodać go do literału elementu XML.  
   
 > [!NOTE]
 > Literał XML może obejmować wiele wierszy bez używania znaków kontynuacji wiersza. Ta funkcja umożliwia skopiowanie zawartości z dokumentu XML i wklejenie jej bezpośrednio do programu Visual Basic.  
   
- Kompilator Visual Basic konwertuje literał komentarza XML na wywołanie konstruktora <xref:System.Xml.Linq.XComment.%23ctor%2A>.  
+ Kompilator Visual Basic konwertuje literał komentarza XML na wywołanie <xref:System.Xml.Linq.XComment.%23ctor%2A> konstruktora.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy komentarz XML zawierający tekst "to jest komentarz".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XComment>
-- [Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Literał elementu XML](xml-element-literal.md)
+- [Literały XML](index.md)
+- [Tworzenie XML w Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)

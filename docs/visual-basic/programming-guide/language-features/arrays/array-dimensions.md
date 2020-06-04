@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351909"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413107"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Wymiary tablic w Visual Basic
 
 *Wymiar* to kierunek, w którym można zmienić specyfikację elementów tablicy. Tablica, która przechowuje sumę sprzedaży dla każdego dnia miesiąca, ma jeden wymiar (dzień miesiąca). Tablica zawierająca sumę sprzedaży według działu dla każdego dnia miesiąca ma dwa wymiary (numer działu i dzień miesiąca). Liczba wymiarów, które tablica ma określać jej *rangę*.
 
 > [!NOTE]
-> Aby określić, ile wymiarów ma tablica, można użyć właściwości <xref:System.Array.Rank%2A>.
+> Możesz użyć właściwości, <xref:System.Array.Rank%2A> Aby określić, ile wymiarów ma tablica.
 
 ## <a name="working-with-dimensions"></a>Praca z wymiarami
 
 Należy określić element tablicy przez dostarczenie *indeksu lub indeks* *dolny* dla każdego z jego wymiarów. Elementy są ciągłe wzdłuż każdego wymiaru od indeksu 0 do najwyższego indeksu dla tego wymiaru.
 
-Na poniższych ilustracjach przedstawiono strukturę koncepcyjną tablic o różnych rangach. Każdy element na ilustracjach przedstawia wartości indeksu, które uzyskują do niego dostęp. Na przykład można uzyskać dostęp do pierwszego elementu drugiego wiersza tablicy dwuwymiarowej przez określenie indeksów `(1, 0)`.
+Na poniższych ilustracjach przedstawiono strukturę koncepcyjną tablic o różnych rangach. Każdy element na ilustracjach przedstawia wartości indeksu, które uzyskują do niego dostęp. Na przykład można uzyskać dostęp do pierwszego elementu drugiego wiersza tablicy dwuwymiarowej przez określenie indeksów `(1, 0)` .
 
 ![Diagram przedstawiający tablicę jednowymiarową.](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -88,12 +88,12 @@ Teraz Załóżmy, że chcesz, aby tablica zawierała informacje przez więcej ni
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-Należy pamiętać, że ponieważ każdy indeks różni się od 0 do maksimum, każdy wymiar `salesAmounts` jest zadeklarowany jako jeden mniejszy niż wymagana długość dla tego wymiaru. Zwróć uwagę na to, że rozmiar tablicy rośnie wraz z każdym nowym wymiarem. Trzy powyższe wielkości w powyższych przykładach mają odpowiednio 31, 372 i 1 860 elementów.
+Należy pamiętać, że ponieważ każdy indeks różni się od 0 do maksimum, każdy wymiar `salesAmounts` jest zadeklarowany jako mniejszy niż wymagana długość dla tego wymiaru. Zwróć uwagę na to, że rozmiar tablicy rośnie wraz z każdym nowym wymiarem. Trzy powyższe wielkości w powyższych przykładach mają odpowiednio 31, 372 i 1 860 elementów.
 
 > [!NOTE]
-> Można utworzyć tablicę bez użycia instrukcji `Dim` lub klauzuli `New`. Na przykład można wywołać metodę <xref:System.Array.CreateInstance%2A> lub inny składnik może przekazać kod w ten sposób tablicę utworzoną w ten sposób. Taka tablica może mieć dolną granicę inną niż 0. Zawsze możesz testować dolną granicę wymiaru przy użyciu metody <xref:System.Array.GetLowerBound%2A> lub funkcji `LBound`.
+> Można utworzyć tablicę bez użycia `Dim` instrukcji lub `New` klauzuli. Na przykład można wywołać <xref:System.Array.CreateInstance%2A> metodę lub inny składnik może przekazać kod w ten sposób tablicę utworzoną w ten sposób. Taka tablica może mieć dolną granicę inną niż 0. Zawsze możesz testować dolną granicę wymiaru przy użyciu <xref:System.Array.GetLowerBound%2A> metody lub `LBound` funkcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Tablice](index.md)
+- [Rozwiązywanie problemów związanych z tablicami](troubleshooting-arrays.md)

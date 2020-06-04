@@ -12,28 +12,28 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 622ebe8a77f2dfbeb35e0408be48622d93d409c6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1d20b01200d3f967e3355dc6e9651291003d140e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345859"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402008"
 ---
 # <a name="array-conversions-visual-basic"></a>Konwersje tablic (Visual Basic)
 Typ tablicy można skonwertować na inny typ tablicy, pod warunkiem, że są spełnione następujące warunki:  
   
 - **Równa ranga.** Range dwóch tablic muszą być takie same, co oznacza, że muszą mieć taką samą liczbę wymiarów. Jednak długości odpowiednich wymiarów nie muszą być takie same.  
   
-- **Typ danych elementu.** Typy danych elementów obu tablic muszą być typami referencyjnymi. Nie można przekonwertować tablicy `Integer` na tablicę `Long` lub nawet do tablicy `Object`, ponieważ jest uwzględniany co najmniej jeden typ wartości. Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Typ danych elementu.** Typy danych elementów obu tablic muszą być typami referencyjnymi. Nie można przekonwertować `Integer` tablicy na `Long` tablicę, a nawet do `Object` tablicy, ponieważ występuje co najmniej jeden typ wartości. Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](value-types-and-reference-types.md).  
   
-- **Convertibility.** Konwersja, rozszerzająca lub zawężania, musi być możliwa między typami elementów dwóch tablic. Przykładem niepowodzenia tego wymagania jest próba konwersji między tablicą `String` i tablicą klasy pochodnej <xref:System.Attribute?displayProperty=nameWithType>. Te dwa typy nie mają wspólnych wartości i nie istnieje konwersja żadnego rodzaju między nimi.  
+- **Convertibility.** Konwersja, rozszerzająca lub zawężania, musi być możliwa między typami elementów dwóch tablic. Przykładem, że niepowodzenie tego wymagania jest próba konwersji między `String` tablicą a tablicą klasy pochodnej <xref:System.Attribute?displayProperty=nameWithType> . Te dwa typy nie mają wspólnych wartości i nie istnieje konwersja żadnego rodzaju między nimi.  
   
- Konwersja jednego typu tablicy na inny jest poszerzana lub zawężana w zależności od tego, czy konwersja odpowiednich elementów jest poszerzana czy zawężana. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Konwersja jednego typu tablicy na inny jest poszerzana lub zawężana w zależności od tego, czy konwersja odpowiednich elementów jest poszerzana czy zawężana. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Konwersja na tablicę obiektów  
- Gdy deklarujesz tablicę `Object` bez jej inicjalizacji, jej typ elementu jest `Object`, dopóki nie zostanie zainicjowany. Gdy ustawiasz ją na tablicę określonej klasy, przyjmuje ona typ tej klasy. Jednak jego typ podstawowy jest nadal `Object`i można następnie ustawić go na inną tablicę niepowiązanej klasy. Ponieważ wszystkie klasy pochodzą z `Object`, można zmienić typ elementu tablicy z dowolnej klasy na dowolną inną klasę.  
+ Po zadeklarowaniu `Object` tablicy bez jej inicjalizacji jej typ elementu jest `Object` tak długo, jak pozostaje niezainicjowany. Gdy ustawiasz ją na tablicę określonej klasy, przyjmuje ona typ tej klasy. Jednak jego typ podstawowy jest nadal `Object` , a następnie można ustawić go na inną tablicę niepowiązanej klasy. Ponieważ wszystkie klasy pochodzą z `Object` , można zmienić typ elementu tablicy z dowolnej klasy na dowolną inną klasę.  
   
- W poniższym przykładzie nie istnieje konwersja między typami `student` i `String`, ale oba pochodzą z `Object`, więc wszystkie przypisania są prawidłowe.  
+ W poniższym przykładzie nie istnieje żadna konwersja między typami `student` i `String` , ale obie wartości pochodzą od `Object` , więc wszystkie przypisania są prawidłowe.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -49,7 +49,7 @@ testArray = names
 ### <a name="underlying-type-of-an-array"></a>Typ podstawowy tablicy  
  Jeśli pierwotnie deklarujesz tablicę z określoną klasą, jej typem elementu podstawowego jest Klasa. Jeśli następnie ustawisz ją na tablicę innej klasy, musi istnieć konwersja między tymi dwiema klasami.  
   
- W poniższym przykładzie `students` jest tablicą `student`. Ponieważ nie istnieje żadna konwersja między `String` i `student`, Ostatnia instrukcja kończy się niepowodzeniem.  
+ W poniższym przykładzie `students` jest `student` tablicą. Ponieważ nie istnieje konwersja między `String` i `student` , Ostatnia instrukcja kończy się niepowodzeniem.  
   
 ```vb  
 Dim students() As student  
@@ -59,13 +59,13 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Instrukcje: konwertowanie obiektu na inny typ w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
-- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
-- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Typy danych](index.md)
+- [Konwersje plików w Visual Basic](type-conversions.md)
+- [Konwersje jawne i niejawne](implicit-and-explicit-conversions.md)
+- [Konwertowanie między ciągami a innymi typami danych](conversions-between-strings-and-other-types.md)
+- [Porady: konwertowanie obiektu do innego typu w Visual Basic](how-to-convert-an-object-to-another-type.md)
+- [Typy danych](../../../language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../language-reference/functions/type-conversion-functions.md)
+- [Tablice](../arrays/index.md)

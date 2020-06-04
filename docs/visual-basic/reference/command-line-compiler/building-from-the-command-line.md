@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344791"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414301"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Tworzenie z wiersza polecenia (Visual Basic)
 
@@ -35,18 +35,18 @@ Pliki projektu (. vbproj) można kompilować w wierszu polecenia przy użyciu pr
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Instrukcje: wywoływanie kompilatora wiersza polecenia](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[Instrukcje: wywoływanie kompilatora wiersza polecenia](how-to-invoke-the-command-line-compiler.md) \
 Opisuje sposób wywoływania kompilatora wiersza polecenia w wierszu systemu MS-DOS lub z określonego podkatalogu.
 
-[Przykładowe wiersze poleceń kompilacji](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[Przykładowe wiersze poleceń kompilacji](sample-compilation-command-lines.md) \
 Zawiera listę przykładowych wierszy poleceń, które można modyfikować do własnych potrzeb.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Kompilator wiersza polecenia Visual Basic](index.md) \
 Zawiera listy opcji kompilatora, zorganizowane w porządku alfabetycznym lub według przeznaczenie.
 
-[Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[Kompilacja warunkowa](../../programming-guide/program-structure/conditional-compilation.md) \
 Opisuje sposób kompilowania określonych sekcji kodu.
 
 [Kompilowanie i czyszczenie projektów i rozwiązań w programie Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

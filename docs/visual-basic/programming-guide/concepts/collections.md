@@ -2,18 +2,18 @@
 title: Kolekcje
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202446"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400658"
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 
 W przypadku wielu aplikacji, należy utworzyć grupy powiązanych obiektów i zarządzać nimi. Istnieją dwa sposoby grupowania obiektów: przez tworzenie tablic obiektów i tworzenie kolekcji obiektów.
 
-Tablice są najbardziej przydatne do tworzenia i pracy ze stałą liczbą obiektów silnie wpisanych. Aby uzyskać informacje na temat tablic, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Tablice są najbardziej przydatne do tworzenia i pracy ze stałą liczbą obiektów silnie wpisanych. Aby uzyskać informacje na temat tablic, zobacz [tablice](../language-features/arrays/index.md).
 
 Kolekcje zapewniają bardziej elastyczny sposób pracy z grupami obiektów. W przeciwieństwie do tablic, Grupa obiektów, z którymi pracujesz, może być zwiększana i zmniejszana dynamicznie w miarę potrzeby zmiany aplikacji. W przypadku niektórych kolekcji można przypisać klucz do dowolnego obiektu, który został umieszczony w kolekcji, dzięki czemu można szybko pobrać obiekt przy użyciu klucza.
 
@@ -22,7 +22,7 @@ Kolekcja jest klasą, więc należy zadeklarować wystąpienie klasy, aby można
 Jeśli kolekcja zawiera elementy tylko jednego typu danych, można użyć jednej z klas w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw. Ogólna kolekcja wymusza bezpieczeństwo typu, tak aby nie można było dodać do niego żadnego innego typu danych. Po pobraniu elementu z kolekcji ogólnej nie trzeba określać jego typu danych ani go przekonwertować.
 
 > [!NOTE]
-> Przykłady w tym temacie zawierają instrukcje [Importy](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) dla `System.Collections.Generic` i `System.Linq` przestrzeni nazw.
+> Przykłady w tym temacie zawierają instrukcje [Importy](../../language-reference/statements/imports-statement-net-namespace-and-type.md) dla `System.Collections.Generic` i `System.Linq` przestrzeni nazw.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Jeśli kolekcja zawiera elementy tylko jednego typu danych, można użyć jednej
 
 W przykładach w tej sekcji użyto klasy generycznej <xref:System.Collections.Generic.List%601> , która pozwala na współpracę z silnie wpisaną listą obiektów.
 
-Poniższy przykład tworzy listę ciągów, a następnie wykonuje iterację przez ciągi przy użyciu [for each... Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) — instrukcja.
+Poniższy przykład tworzy listę ciągów, a następnie wykonuje iterację przez ciągi przy użyciu [for each... Next](../../language-reference/statements/for-each-next-statement.md) — instrukcja.
 
 ```vb
 ' Create a list of strings.
@@ -47,7 +47,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Jeśli zawartość kolekcji jest znana z wyprzedzeniem, można użyć *inicjatora kolekcji* w celu zainicjowania kolekcji. Aby uzyskać więcej informacji, zobacz [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+Jeśli zawartość kolekcji jest znana z wyprzedzeniem, można użyć *inicjatora kolekcji* w celu zainicjowania kolekcji. Aby uzyskać więcej informacji, zobacz [Inicjatory kolekcji](../language-features/collection-initializers/index.md).
 
 Poniższy przykład jest taki sam jak w poprzednim przykładzie, z wyjątkiem tego, że inicjator kolekcji jest używany do dodawania elementów do kolekcji.
 
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Możesz użyć [dla... Następna](../../../visual-basic/language-reference/statements/for-next-statement.md) Instrukcja zamiast instrukcji, `For Each` Aby wykonać iterację w kolekcji. Można to osiągnąć, uzyskując dostęp do elementów kolekcji według pozycji indeksu. Indeks elementów zaczyna się od 0 i kończą się na liczbie elementów pomniejszonej o 1.
+Możesz użyć [dla... Następna](../../language-reference/statements/for-next-statement.md) Instrukcja zamiast instrukcji, `For Each` Aby wykonać iterację w kolekcji. Można to osiągnąć, uzyskując dostęp do elementów kolekcji według pozycji indeksu. Indeks elementów zaczyna się od 0 i kończą się na liczbie elementów pomniejszonej o 1.
 
 Poniższy przykład wykonuje iterację elementów kolekcji przy użyciu `For…Next` zamiast `For Each` .
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-Poniższy przykład usuwa elementy z listy ogólnej. Zamiast `For Each` instrukcji, [dla... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Używana jest następna instrukcja, która wykonuje iterację w kolejności malejącej. Wynika to z faktu, że <xref:System.Collections.Generic.List%601.RemoveAt%2A> Metoda powoduje, że elementy po usuniętym elemencie mają niższą wartość indeksu.
+Poniższy przykład usuwa elementy z listy ogólnej. Zamiast `For Each` instrukcji, [dla... ](../../language-reference/statements/for-next-statement.md)Używana jest następna instrukcja, która wykonuje iterację w kolejności malejącej. Wynika to z faktu, że <xref:System.Collections.Generic.List%601.RemoveAt%2A> Metoda powoduje, że elementy po usuniętym elemencie mają niższą wartość indeksu.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Używanie LINQ do uzyskiwania dostępu do kolekcji
 
-LINQ (zapytanie zintegrowane z językiem) może służyć do uzyskiwania dostępu do kolekcji. Zapytania LINQ zapewniają możliwości filtrowania, porządkowania i grupowania. Aby uzyskać więcej informacji, zobacz [wprowadzenie z LINQ w Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+LINQ (zapytanie zintegrowane z językiem) może służyć do uzyskiwania dostępu do kolekcji. Zapytania LINQ zapewniają możliwości filtrowania, porządkowania i grupowania. Aby uzyskać więcej informacji, zobacz [wprowadzenie z LINQ w Visual Basic](linq/getting-started-with-linq.md).
 
 Poniższy przykład wykonuje zapytanie LINQ względem ogólnego `List` . Zapytanie LINQ zwraca inną kolekcję, która zawiera wyniki.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iteratory
 
-*Iterator* jest używany do wykonywania niestandardowej iteracji w kolekcji. Iterator może być metodą lub `get` akcesorem. Iterator używa instrukcji [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) do zwrócenia każdego elementu kolekcji pojedynczo.
+*Iterator* jest używany do wykonywania niestandardowej iteracji w kolekcji. Iterator może być metodą lub `get` akcesorem. Iterator używa instrukcji [Yield](../../language-reference/statements/yield-statement.md) do zwrócenia każdego elementu kolekcji pojedynczo.
 
-Należy wywołać iterator przy użyciu [for each... Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) — instrukcja. Każda iteracja `For Each` pętli wywołuje iterator. Po `Yield` osiągnięciu instrukcji w iteratorze zwracane jest wyrażenie, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu iteratora.
+Należy wywołać iterator przy użyciu [for each... Next](../../language-reference/statements/for-each-next-statement.md) — instrukcja. Każda iteracja `For Each` pętli wywołuje iterator. Po `Yield` osiągnięciu instrukcji w iteratorze zwracane jest wyrażenie, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu iteratora.
 
-Aby uzyskać więcej informacji, zobacz [Iteratory (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+Aby uzyskać więcej informacji, zobacz [Iteratory (Visual Basic)](iterators.md).
 
-W poniższym przykładzie zastosowano metodę iteratora. Metoda iteratora zawiera `Yield` instrukcję, która znajduje się wewnątrz elementu [... Następna](../../../visual-basic/language-reference/statements/for-next-statement.md) pętla. W `ListEvenNumbers` metodzie każda iteracja `For Each` treści instrukcji tworzy wywołanie metody iteratora, która przechodzi do następnej `Yield` instrukcji.
+W poniższym przykładzie zastosowano metodę iteratora. Metoda iteratora zawiera `Yield` instrukcję, która znajduje się wewnątrz elementu [... Następna](../../language-reference/statements/for-next-statement.md) pętla. W `ListEvenNumbers` metodzie każda iteracja `For Each` treści instrukcji tworzy wywołanie metody iteratora, która przechodzi do następnej `Yield` instrukcji.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -568,12 +568,12 @@ As IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Inicjatory kolekcji](../language-features/collection-initializers/index.md)
+- [Koncepcje programowania (Visual Basic)](index.md)
+- [Option Strict — Instrukcja](../../language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)
 - [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Kolekcje i struktury danych](../../../standard/collections/index.md)
 - [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)

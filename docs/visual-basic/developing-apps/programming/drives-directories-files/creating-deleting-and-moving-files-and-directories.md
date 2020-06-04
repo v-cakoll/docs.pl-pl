@@ -22,12 +22,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348909"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401761"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Tworzenie, usuwanie i przenoszenie plików i katalogów w Visual Basic
 
@@ -35,46 +35,46 @@ Ta sekcja zawiera listę zadań związanych z tworzeniem, usuwaniem, przeniesien
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Instrukcje: kopiowanie plików z określonym wzorcem do katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [Instrukcje: Kopiowanie plików z określonym wzorcem do katalogu](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Pokazuje, jak kopiować pliki z określonym wzorcem nazw plików, takim jak tylko pliki txt, do katalogu.  
   
- [Instrukcje: tworzenie kopii pliku w tym samym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [Instrukcje: Tworzenie kopii pliku w tym samym katalogu](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  Pokazuje, jak utworzyć kopię pliku w tym samym katalogu.  
   
- [Instrukcje: tworzenie kopii pliku w innym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [Instrukcje: Tworzenie kopii pliku w innym katalogu](how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  Demonstruje sposób kopiowania pliku do innego katalogu.  
   
- [Porady: tworzenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [Instrukcje: Tworzenie pliku](how-to-create-a-file.md)  
  Pokazuje, jak utworzyć plik.  
   
- [Porady: usuwanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Instrukcje: Usuwanie pliku](how-to-delete-a-file.md)  
  Pokazuje, jak usunąć plik.  
   
- [Porady: znajdowanie plików z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [Instrukcje: Znajdowanie plików z określonym wzorcem](how-to-find-files-with-a-specific-pattern.md)  
  Pokazuje, w jaki sposób wyświetlać listę tylko plików z określonym wzorcem nazw plików w katalogu.  
   
- [Porady: przenoszenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [Instrukcje: Przenoszenie pliku](how-to-move-a-file.md)  
  Pokazuje, jak przenieść plik do innego katalogu.  
   
- [Porady: zmienianie nazwy pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [Instrukcje: Zmienianie nazwy pliku](how-to-rename-a-file.md)  
  Pokazuje, jak zmienić nazwę pliku.  
   
- [Porady: kopiowanie katalogu do innego katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [Instrukcje: Kopiowanie katalogu do innego katalogu](how-to-copy-a-directory-to-another-directory.md)  
  Pokazuje, jak skopiować katalog do innej lokalizacji.  
   
- [Porady: tworzenie katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [Instrukcje: Tworzenie katalogu](how-to-create-a-directory.md)  
  Pokazuje, jak utworzyć katalog.  
   
- [Porady: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Instrukcje: Znajdowanie podkatalogów z określonym wzorcem](how-to-find-subdirectories-with-a-specific-pattern.md)  
  Demonstruje sposób wyświetlania listy katalogów z określonym wzorcem w nazwie.  
   
- [Porady: pobieranie kolekcji plików z katalogu w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [Instrukcje: Pobieranie kolekcji plików z katalogu](how-to-get-the-collection-of-files-in-a-directory.md)  
  Pokazuje, jak wyświetlić listę plików w katalogu.  
   
- [Porady: pobieranie zawartości katalogu Moje dokumenty](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [Instrukcje: Pobieranie zawartości katalogu Moje dokumenty](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  Pokazuje, jak czytać z katalogów specjalnych.  
   
- [Porady: analizowanie ścieżek pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Instrukcje: Analizowanie ścieżek plików](how-to-parse-file-paths.md)  
  Demonstruje sposób używania `My` metod do łączenia ścieżek plików.  
   
 ## <a name="reference"></a>Dokumentacja  
@@ -120,8 +120,8 @@ Ta sekcja zawiera listę zadań związanych z tworzeniem, usuwaniem, przeniesien
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
- [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Odczyt z plików](reading-from-files.md)  
  Wyświetla listę zadań skojarzonych z odczytem z plików.  
   
- [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Zapisywanie w plikach](writing-to-files.md)  
  Wyświetla listę zadań związanych z zapisywaniem do plików.

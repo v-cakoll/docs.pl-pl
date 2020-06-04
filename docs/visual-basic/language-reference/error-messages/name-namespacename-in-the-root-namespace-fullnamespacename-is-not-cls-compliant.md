@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 821044d3ee359a052fa6a763e9c5a89da5d6f607
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b03a50365122c17fa311a284bd6995d1af2631c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775578"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401540"
 ---
-# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nazwa \<namespacename > w głównej przestrzeni nazw \<fullnamespacename > jest niezgodna ze specyfikacją CLS
-Zestaw jest oznaczony jako `<CLSCompliant(True)>`, ale element nazwy głównej przestrzeni nazw zaczyna się od znaku podkreślenia (`_`).  
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nazwa \<namespacename> w głównej przestrzeni nazw \<fullnamespacename> jest niezgodna ze specyfikacją CLS
+Zestaw jest oznaczony jako `<CLSCompliant(True)>` , ale element nazwy głównej przestrzeni nazw zaczyna się od znaku podkreślenia ( `_` ).  
   
- Element programowania może zawierać jeden lub więcej podkreśleń, ale w celu uzyskania zgodności z [niezależnymi od języka i składnikami niezależnymi od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS) nie może zaczynać się od znaku podkreślenia. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Element programowania może zawierać jeden lub więcej podkreśleń, ale w celu uzyskania zgodności z [niezależnymi od języka i składnikami niezależnymi od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS) nie może zaczynać się od znaku podkreślenia. Zobacz [zadeklarowane nazwy elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
   
- Po zastosowaniu <xref:System.CLSCompliantAttribute> do elementu programistycznego, należy ustawić parametr `isCompliant` atrybutu na `True` lub `False`, aby wskazać zgodność lub niezgodność. Dla tego parametru nie ma wartości domyślnej i należy podać wartość.  
+ Po zastosowaniu <xref:System.CLSCompliantAttribute> do elementu programistycznego, należy ustawić `isCompliant` parametr atrybutu na wartość `True` lub `False` w celu wskazania zgodności lub niezgodności. Dla tego parametru nie ma wartości domyślnej i należy podać wartość.  
   
  Jeśli nie zastosujesz <xref:System.CLSCompliantAttribute> do elementu, jest on uznawany za niezgodny.  
   
@@ -31,13 +31,13 @@ Zestaw jest oznaczony jako `<CLSCompliant(True)>`, ale element nazwy głównej p
   
 - Jeśli jest wymagana zgodność ze specyfikacją CLS, Zmień nazwę głównej przestrzeni nazw, tak aby żaden z jej elementów nie zaczynał się od znaku podkreślenia.  
   
-- Jeśli potrzebujesz, aby nazwa przestrzeni nazw pozostała niezmieniona, Usuń <xref:System.CLSCompliantAttribute> z zestawu lub oznacz ją jako `<CLSCompliant(False)>`.  
+- Jeśli potrzebujesz, aby nazwa przestrzeni nazw pozostała niezmieniona, Usuń <xref:System.CLSCompliantAttribute> z zestawu lub oznacz ją jako `<CLSCompliant(False)>` .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [Przestrzenie nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
+- [Namespace — Instrukcja](../statements/namespace-statement.md)
+- [Przestrzenie nazw w Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [-rootnamespace](../../reference/command-line-compiler/rootnamespace.md)
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Konwencje nazewnictwa Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Nazwy zadeklarowanych elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic — Konwencje nazewnictwa](../../programming-guide/program-structure/naming-conventions.md)

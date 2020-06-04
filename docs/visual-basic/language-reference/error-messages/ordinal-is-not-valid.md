@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 740243c744a7ba5391659894812a00d80555fd80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665665"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413056"
 ---
 # <a name="ordinal-is-not-valid"></a>Liczba porządkowa nie jest prawidłowa
-Wywołania do biblioteki dołączanej (dynamicznie DLL) wskazane Użyj numeru zamiast nazwy procedury przy użyciu `#num` składni. Ten błąd ma następujące możliwe przyczyny:  
+Wywołanie do biblioteki dołączanej dynamicznie (DLL) wskazane do użycia numeru zamiast nazwy procedury, przy użyciu `#num` składni. Ten błąd ma następujące możliwe przyczyny:  
   
-- Próba konwersji `#num` wyrażenie numeru porządkowego nie powiodło się.  
+- Próba konwersji `#num` wyrażenia na numer porządkowy nie powiodła się.  
   
-- `#num` Określonego nie określa żadnej funkcji w bibliotece DLL.  
+- `#num`Określony nie określa żadnej funkcji w bibliotece DLL.  
   
-- Biblioteka typów ma nieprawidłową deklarację skutkuje wewnętrzne korzystanie z nieprawidłową liczbą porządkową.  
+- Biblioteka typów ma nieprawidłową deklarację powodującą użycie wewnętrznego nieprawidłowego numeru porządkowego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Upewnij się, że wyrażenie reprezentuje prawidłową liczbę, lub wywołaj procedurę według nazwy.  
+1. Upewnij się, że wyrażenie reprezentuje poprawną liczbę, lub wywołaj procedurę według nazwy.  
   
-2. Upewnij się, że `#num` określa prawidłowe funkcję w bibliotece DLL.  
+2. Upewnij się `#num` , że w bibliotece DLL zidentyfikowano prawidłową funkcję.  
   
-3. Izolowanie po wywołaniu procedury, które powoduje problem, zakomentowując kodu. Zapis `Declare` poufności informacji dotyczące procedury i raport problem z dostawcą biblioteki typów.  
+3. Wyodrębnij wywołanie procedury powodujące problem, dodając komentarz do kodu. Napisz `Declare` instrukcję do procedury i Zgłoś problem dla dostawcy biblioteki typów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare — Instrukcja](../statements/declare-statement.md)

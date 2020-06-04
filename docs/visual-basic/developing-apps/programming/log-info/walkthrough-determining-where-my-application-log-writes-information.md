@@ -9,18 +9,18 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353607"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398282"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 
-`My.Application.Log` Obiekt może zapisywać informacje w kilku detektorach dzienników. Odbiorniki dzienników są konfigurowane przez plik konfiguracji komputera i mogą zostać zastąpione przez plik konfiguracyjny aplikacji. W tym temacie opisano ustawienia domyślne i sposób określania ustawień aplikacji.
+`My.Application.Log`Obiekt może zapisywać informacje w kilku detektorach dzienników. Odbiorniki dzienników są konfigurowane przez plik konfiguracji komputera i mogą zostać zastąpione przez plik konfiguracyjny aplikacji. W tym temacie opisano ustawienia domyślne i sposób określania ustawień aplikacji.
 
-Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, zobacz [Praca z dziennikami aplikacji](working-with-application-logs.md).
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Aby określić odbiorniki my. Application. log
 
@@ -31,9 +31,9 @@ Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, z
 
     Plik konfiguracji jest plikiem XML.
 
-2. Znajdź `<listeners>` sekcję w `<source>` sekcji z `name` atrybutem "DefaultSource", który znajduje się w `<sources>` sekcji. `<sources>` Sekcja znajduje się w `<system.diagnostics>` sekcji w sekcji najwyższego poziomu `<configuration>` .
+2. Znajdź `<listeners>` sekcję w sekcji `<source>` z `name` atrybutem "DefaultSource", który znajduje się w `<sources>` sekcji. Sekcja znajduje się `<sources>` w `<system.diagnostics>` sekcji w sekcji najwyższego poziomu `<configuration>` .
 
-    Jeśli te sekcje nie istnieją, plik konfiguracji komputera może skonfigurować odbiorniki `My.Application.Log` dzienników. W poniższych krokach opisano sposób określania konfiguracji komputera:
+    Jeśli te sekcje nie istnieją, plik konfiguracji komputera może skonfigurować `My.Application.Log` odbiorniki dzienników. W poniższych krokach opisano sposób określania konfiguracji komputera:
 
     1. Zlokalizuj plik Machine. config komputera. Zazwyczaj znajduje się on w katalogu *systemroot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , gdzie `SystemRoot` jest katalogiem systemu operacyjnego i `frameworkVersion` jest wersją .NET Framework.
 
@@ -41,25 +41,25 @@ Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, z
 
         Jeśli opcjonalne elementy wymienione poniżej nie istnieją, można je utworzyć.
 
-    2. Znajdź `<listeners>` sekcję `<source>` w sekcji z `name` atrybutem "DefaultSource" `<sources>` `<system.diagnostics>` w sekcji, w sekcji, w sekcji najwyższego poziomu. `<configuration>`
+    2. Znajdź sekcję w sekcji `<listeners>` `<source>` z `name` atrybutem "DefaultSource" w sekcji, w sekcji `<sources>` `<system.diagnostics>` , w sekcji najwyższego poziomu `<configuration>` .
 
         Jeśli te sekcje nie istnieją, `My.Application.Log` mają tylko domyślne odbiorniki dzienników.
 
-3. Znajdź <`add>` elementy w sekcji <`listeners>` .
+3. Znajdź <`add>` elementy w `listeners>` sekcji <.
 
-     Te elementy dodają nazwane odbiorniki dzienników `My.Application.Log` do źródła.
+     Te elementy dodają nazwane odbiorniki dzienników do `My.Application.Log` źródła.
 
-4. W sekcji `<add>` najwyższego poziomu `<sharedListeners>` `<configuration>` Znajdź elementy z nazwami odbiorników dziennika w `<system.diagnostics>` sekcji.
+4. W sekcji `<add>` `<sharedListeners>` `<system.diagnostics>` najwyższego poziomu Znajdź elementy z nazwami odbiorników dziennika w sekcji `<configuration>` .
 
 5. W przypadku wielu typów udostępnionych odbiorników dane inicjujące odbiornika zawierają opis, gdzie odbiornik kieruje dane:
 
-    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> Odbiornik zapisuje dane w dzienniku plików zgodnie z opisem we wprowadzeniu.
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>Odbiornik zapisuje dane w dzienniku plików zgodnie z opisem we wprowadzeniu.
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> Odbiornik zapisuje informacje do dziennika zdarzeń komputera określonego przez `initializeData` parametr. Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>Odbiornik zapisuje informacje do dziennika zdarzeń komputera określonego przez `initializeData` parametr. Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
 
-    - I odbiorniki zapisują w pliku określonym w `initializeData` parametrze. <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>I <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorniki zapisują w pliku określonym w `initializeData` parametrze.
 
-    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> Odbiornik zapisuje dane w konsoli wiersza polecenia.
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>Odbiornik zapisuje dane w konsoli wiersza polecenia.
 
     - Aby uzyskać informacje o tym, gdzie inne typy odbiorników dzienników zapisują informacje, zapoznaj się z dokumentacją tego typu.
 
@@ -72,9 +72,9 @@ Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, z
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: rejestrowanie wyjątków](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Praca z dziennikami aplikacji](working-with-application-logs.md)
+- [Instrukcje: rejestrowanie wyjątków](how-to-log-exceptions.md)
+- [Instrukcje: zapisywanie komunikatów dziennika](how-to-write-log-messages.md)
+- [Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje](walkthrough-changing-where-my-application-log-writes-information.md)
 - [Zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md)
-- [Rozwiązywanie problemów: odbiorcy dzienników](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Rozwiązywanie problemów: odbiorcy dzienników](troubleshooting-log-listeners.md)

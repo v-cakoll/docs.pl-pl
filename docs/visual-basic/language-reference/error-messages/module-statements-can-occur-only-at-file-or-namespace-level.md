@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: fc3c102dbfe7c55e66093421bc11379d48ba000d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d01c30571fc34e142300ac8706c56d5e99175fcf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592097"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397210"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Instrukcje „Module” mogą wystąpić tylko na poziomie pliku lub przestrzeni nazw
-`Module` instrukcje musi znajdować się w górnej części pliku źródłowego natychmiast po `Option` i `Imports` instrukcje, atrybutami globalnymi i deklaracje przestrzeni nazw, ale przed innych deklaracji.  
+`Module`instrukcje muszą pojawić się w górnej części pliku źródłowego bezpośrednio po `Option` i `Imports` instrukcjach, atrybutach globalnych i deklaracjach przestrzeni nazw, ale przed wszystkimi innymi deklaracjami.  
   
  **Identyfikator błędu:** BC30617  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przenieś `Module` instrukcji na górze pliku deklaracji ani źródła przestrzeni nazw.  
+- Przenieś `Module` instrukcję do początku deklaracji przestrzeni nazw lub pliku źródłowego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module — Instrukcja](../statements/module-statement.md)

@@ -2,16 +2,16 @@
 title: 'Porady: równoległe żądania sieci Web za pomocą Async i Await'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 616efca79312883f17ba837d17a5ee9c97d15b34
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346146"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396587"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Instrukcje: równoległe żądania sieci Web za pomocą Async i Await (Visual Basic)
 
-W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. Operator [await](../../../../visual-basic/language-reference/operators/await-operator.md) jest stosowany do zadania w punkcie metody, w którym przetwarzanie nie może być kontynuowane do momentu zakończenia zadania. Często zadanie jest oczekiwane zaraz po jego utworzeniu, tak jak pokazano w poniższym przykładzie.
+W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. Operator [await](../../../language-reference/operators/await-operator.md) jest stosowany do zadania w punkcie metody, w którym przetwarzanie nie może być kontynuowane do momentu zakończenia zadania. Często zadanie jest oczekiwane zaraz po jego utworzeniu, tak jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,23 +39,23 @@ Poniższy program uruchamia trzy asynchroniczne pobieranie w sieci Web, a nastę
 > [!NOTE]
 > Aby ukończyć ten projekt, na komputerze musi być zainstalowany program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.
 
-Aby uzyskać inny przykład, który uruchamia wiele zadań w tym samym czasie, zobacz [How to: rozszerzając Przewodnik Async przy użyciu Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+Aby uzyskać inny przykład, który uruchamia wiele zadań w tym samym czasie, zobacz [How to: rozszerzając Przewodnik Async przy użyciu Task. WhenAll (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 Kod dla tego przykładu można pobrać z [przykładów kodu dewelopera](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).
 
 ### <a name="to-set-up-the-project"></a>Aby skonfigurować projekt
 
-1. Aby skonfigurować aplikację WPF, wykonaj następujące czynności. Szczegółowe instrukcje dotyczące tych kroków można znaleźć w [przewodniku: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Aby skonfigurować aplikację WPF, wykonaj następujące czynności. Szczegółowe instrukcje dotyczące tych kroków można znaleźć w [przewodniku: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md).
 
-    - Utwórz aplikację WPF, która zawiera pole tekstowe i przycisk. Nadaj nazwę przyciskowi `startButton`i nadaj nazwę `resultsTextBox`pola tekstowego.
+    - Utwórz aplikację WPF, która zawiera pole tekstowe i przycisk. Nadaj nazwę przyciskowi `startButton` i nazwij pole tekstowe `resultsTextBox` .
 
-    - Dodaj odwołanie do <xref:System.Net.Http>.
+    - Dodaj odwołanie do <xref:System.Net.Http> .
 
-    - W pliku MainWindow. XAML. vb Dodaj instrukcję `Imports` dla `System.Net.Http`.
+    - W pliku MainWindow. XAML. vb Dodaj `Imports` instrukcję dla elementu `System.Net.Http` .
 
 ### <a name="to-add-the-code"></a>Aby dodać kod
 
-1. W oknie projekt MainWindow. XAML kliknij dwukrotnie przycisk, aby utworzyć obsługę zdarzeń `startButton_Click` w MainWindow. XAML. vb.
+1. W oknie projekt MainWindow. XAML kliknij dwukrotnie przycisk, aby utworzyć `startButton_Click` obsługę zdarzeń w MainWindow. XAML. vb.
 
 2. Skopiuj poniższy kod i wklej go do treści `startButton_Click` w MainWindow. XAML. vb.
 
@@ -65,15 +65,15 @@ Kod dla tego przykładu można pobrać z [przykładów kodu dewelopera](https://
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."
     ```
 
-     Kod wywołuje metodę asynchroniczną, `CreateMultipleTasksAsync`, która dyskuje aplikację.
+     Kod wywołuje metodę asynchroniczną, `CreateMultipleTasksAsync` która dyskuje aplikację.
 
 3. Dodaj do projektu następujące metody pomocy technicznej:
 
-    - `ProcessURLAsync` używa metody <xref:System.Net.Http.HttpClient> do pobierania zawartości witryny sieci Web jako tablicy bajtów. Metoda obsługi, `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.
+    - `ProcessURLAsync`używa <xref:System.Net.Http.HttpClient> metody do pobierania zawartości witryny sieci Web jako tablicy bajtów. Metoda pomocy technicznej, a `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.
 
-    - `DisplayResults` wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Ten ekran jest wyświetlany po zakończeniu pobierania każdego zadania.
+    - `DisplayResults`Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Ten ekran jest wyświetlany po zakończeniu pobierania każdego zadania.
 
-     Skopiuj następujące metody i wklej je po obsłudze zdarzeń `startButton_Click` w MainWindow. XAML. vb.
+     Skopiuj następujące metody i wklej je po `startButton_Click` procedurze obsługi zdarzeń w MainWindow. XAML. vb.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)
@@ -95,13 +95,13 @@ Kod dla tego przykładu można pobrać z [przykładów kodu dewelopera](https://
     End Sub
     ```
 
-4. Na koniec Zdefiniuj `CreateMultipleTasksAsync`metody, wykonując następujące kroki.
+4. Na koniec Zdefiniuj metodę `CreateMultipleTasksAsync` , która wykonuje następujące czynności.
 
-    - Metoda deklaruje obiekt `HttpClient`, do którego należy uzyskać dostęp <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> metody w `ProcessURLAsync`.
+    - Metoda deklaruje `HttpClient` obiekt, do którego należy uzyskać dostęp za pomocą <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> metody `ProcessURLAsync` .
 
-    - Metoda tworzy i uruchamia trzy zadania typu <xref:System.Threading.Tasks.Task%601>, gdzie `TResult` jest liczbą całkowitą. Po zakończeniu każdego zadania `DisplayResults` wyświetla adres URL zadania i długość pobranej zawartości. Ponieważ zadania są wykonywane asynchronicznie, kolejność, w której wyniki są wyświetlane, może różnić się od kolejności, w której zostały zadeklarowane.
+    - Metoda tworzy i uruchamia trzy zadania typu <xref:System.Threading.Tasks.Task%601> , gdzie `TResult` jest liczbą całkowitą. Po zakończeniu każdego zadania program `DisplayResults` wyświetla adres URL zadania i długość pobranej zawartości. Ponieważ zadania są wykonywane asynchronicznie, kolejność, w której wyniki są wyświetlane, może różnić się od kolejności, w której zostały zadeklarowane.
 
-    - Metoda oczekuje na zakończenie każdego zadania. Każdy operator `Await` zawiesza wykonywanie `CreateMultipleTasksAsync` do momentu zakończenia oczekującego zadania. Operator pobiera również wartość zwracaną z wywołania do `ProcessURLAsync` z każdego wykonanego zadania.
+    - Metoda oczekuje na zakończenie każdego zadania. Każdy `Await` operator zawiesza wykonywanie `CreateMultipleTasksAsync` do momentu zakończenia oczekującego zadania. Operator pobiera również wartość zwracaną z wywołania `ProcessURLAsync` z każdego wykonanego zadania.
 
     - Po zakończeniu zadań i pobraniu wartości całkowitych Metoda sumuje długości witryn sieci Web i wyświetla wynik.
 
@@ -205,8 +205,8 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Instrukcje: Rozszerzonie procedury asynchronicznej za pomocą Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](index.md)
+- [Instrukcje: Rozszerzonie procedury asynchronicznej za pomocą Task. WhenAll (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

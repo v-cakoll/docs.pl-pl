@@ -5,22 +5,22 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74336735"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398295"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: zmienianie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. W tym instruktażu pokazano, jak zastąpić ustawienia domyślne i spowodować `Log` , że obiekt ma być zapisany w innych detektorach dzienników.
+Za pomocą `My.Application.Log` obiektów i można `My.Log` rejestrować informacje o zdarzeniach występujących w aplikacji. W tym instruktażu pokazano, jak zastąpić ustawienia domyślne i spowodować, że `Log` obiekt ma być zapisany w innych detektorach dzienników.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-`Log` Obiekt może zapisywać informacje w kilku detektorach dzienników. Przed zmianą konfiguracji należy określić bieżącą konfigurację odbiorników dziennika. Aby uzyskać więcej informacji, zobacz [Przewodnik: Określanie, gdzie my. Application. Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+`Log`Obiekt może zapisywać informacje w kilku detektorach dzienników. Przed zmianą konfiguracji należy określić bieżącą konfigurację odbiorników dziennika. Aby uzyskać więcej informacji, zobacz [Przewodnik: Określanie, gdzie my. Application. Log zapisuje informacje](walkthrough-determining-where-my-application-log-writes-information.md).
 
-Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) lub [instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku tekstowym](how-to-write-event-information-to-a-text-file.md) lub [instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](how-to-write-to-an-application-event-log.md).
 
 ### <a name="to-add-listeners"></a>Aby dodać detektory
 
@@ -34,9 +34,9 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
 
     2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
 
-    3. Kliknij pozycję **Add** (Dodaj).
+    3. Kliknij pozycję **Dodaj**.
 
-2. Znajdź `<listeners>` sekcję `<source>` w sekcji z `name` atrybutem "DefaultSource" w `<sources>` sekcji. `<sources>` Sekcja znajduje się w `<system.diagnostics>` sekcji najwyższego poziomu `<configuration>` .
+2. Znajdź sekcję w sekcji `<listeners>` `<source>` z `name` atrybutem "DefaultSource" w `<sources>` sekcji. `<sources>`Sekcja znajduje się w sekcji `<system.diagnostics>` najwyższego poziomu `<configuration>` .
 
 3. Dodaj te elementy do tej `<listeners>` sekcji.
 
@@ -53,9 +53,9 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
     <!-- <add name="Console" /> -->
     ```
 
-4. Usuń znaczniki komentarza z odbiorników dziennika, dla `Log` których chcesz otrzymywać wiadomości.
+4. Usuń znaczniki komentarza z odbiorników dziennika, dla których chcesz otrzymywać `Log` wiadomości.
 
-5. Znajdź `<sharedListeners>` sekcję `<system.diagnostics>` w sekcji, w sekcji najwyższego poziomu `<configuration>` .
+5. Znajdź sekcję w sekcji `<sharedListeners>` `<system.diagnostics>` , w sekcji najwyższego poziomu `<configuration>` .
 
 6. Dodaj te elementy do tej `<sharedListeners>` sekcji.
 
@@ -151,17 +151,17 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
 
 1. Znajdź `<add>` element odbiornika z `<sharedListeners>` sekcji.
 
-2. `type` Atrybut zawiera nazwę typu odbiornika. Ten typ musi dziedziczyć po <xref:System.Diagnostics.TraceListener> klasie. Użyj silnie nazwanego typu, aby upewnić się, że jest używany właściwy typ. Aby uzyskać więcej informacji, zobacz sekcję "Aby odwołać się do silnie nazwanego typu" poniżej.
+2. `type`Atrybut zawiera nazwę typu odbiornika. Ten typ musi dziedziczyć po <xref:System.Diagnostics.TraceListener> klasie. Użyj silnie nazwanego typu, aby upewnić się, że jest używany właściwy typ. Aby uzyskać więcej informacji, zobacz sekcję "Aby odwołać się do silnie nazwanego typu" poniżej.
 
      Niektóre typy, których można użyć, to:
 
-    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> Odbiornik, który zapisuje dane w dzienniku plików.
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>Odbiornik, który zapisuje dane w dzienniku plików.
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> Odbiornik, który zapisuje informacje do dziennika zdarzeń komputera określonego przez `initializeData` parametr.
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>Odbiornik, który zapisuje informacje do dziennika zdarzeń komputera określonego przez `initializeData` parametr.
 
-    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> Detektory <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> i, które zapisują w pliku określonym w `initializeData` parametrze.
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> Detektory i, które zapisują w pliku określonym w `initializeData` parametrze.
 
-    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> Odbiornik, który zapisuje dane w konsoli wiersza polecenia.
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>Odbiornik, który zapisuje dane w konsoli wiersza polecenia.
 
      Aby uzyskać informacje o tym, gdzie inne typy odbiorników dzienników zapisują informacje, zapoznaj się z dokumentacją tego typu.
 
@@ -173,7 +173,7 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
 
 1. Aby upewnić się, że odpowiedni typ jest używany dla odbiornika dzienników, upewnij się, że używasz w pełni kwalifikowanej nazwy typu i silnie nazwanego zestawu. Składnia silnie nazwanego typu jest następująca:
 
-     \<*Nazwa typu*>, \< *Nazwa zestawu*>, \< *numer wersji*>, \< *kultura*>, \< *silna nazwa*>
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
 2. Ten przykład kodu pokazuje, jak w tym przypadku określić silnie nazwanego typu dla w pełni kwalifikowanego typu — "System. Diagnostics. FileLogTraceListener".
 
@@ -189,5 +189,5 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym](how-to-write-event-information-to-a-text-file.md)
+- [Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](how-to-write-to-an-application-event-log.md)

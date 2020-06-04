@@ -1,5 +1,5 @@
 ---
-title: Instrukcja nie jest prawidłowa wewnątrz metody / wielowierszowego wyrażenia lambda
+title: Instrukcja nie jest prawidłowa wewnątrz metody/wielowierszowego wyrażenia lambda
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30024
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 9e6c8ddd7851aee6d9fa1928a6854f7337b867b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3c43d640259d5e1af545e2610088aab5d70453d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593223"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396249"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Instrukcja nie jest prawidłowa wewnątrz metody/wielowierszowego wyrażenia lambda
-Wykonywanie instrukcji nie jest prawidłowy w ramach `Sub`, `Function`, właściwość `Get`, lub właściwości `Set` procedury. Niektóre instrukcje mogą być umieszczone na poziomie modułu lub klasy. Inne, takie jak `Option Strict`, musi znajdować się na poziomie przestrzeni nazw i poprzedzać wszystkie inne deklaracje.  
+Instrukcja nie jest prawidłowa w ramach `Sub` procedury, `Function` , właściwości `Get` lub właściwości `Set` . Niektóre instrukcje mogą być umieszczane na poziomie modułu lub klasy. Inne, takie jak `Option Strict` , muszą znajdować się na poziomie przestrzeni nazw i poprzedzać wszystkie inne deklaracje.  
   
  **Identyfikator błędu:** BC30024  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Usuń instrukcję od procedury.  
+- Usuń instrukcję z procedury.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Sub, instrukcja](../statements/sub-statement.md)
+- [Function, instrukcja](../statements/function-statement.md)
+- [Get — Instrukcja](../statements/get-statement.md)
+- [Set — Instrukcja](../statements/set-statement.md)

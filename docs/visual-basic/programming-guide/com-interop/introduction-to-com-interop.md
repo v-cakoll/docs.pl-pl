@@ -1,16 +1,16 @@
 ---
-title: Wprowadzenie do COM Interop
+title: Wprowadzenie do usługi międzyoperacyjnej modelu COM
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c7caf266514c43e40135b33d848a688546acf1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353200"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396782"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Component Object Model (COM) umożliwia obiektowi uwidocznienie jego funkcjonalności innym składnikom i hostowanie aplikacji. Chociaż obiekty COM mają podstawowe znaczenie dla programowania systemu Windows przez wiele lat, aplikacje zaprojektowane dla środowiska uruchomieniowego języka wspólnego (CLR) oferują wiele korzyści.  
@@ -51,14 +51,14 @@ Component Object Model (COM) umożliwia obiektowi uwidocznienie jego funkcjonaln
 ## <a name="interoperability-marshaling"></a>Kierowanie współdziałania  
  Wszystkie aplikacje .NET Framework korzystają z zestawu wspólnych typów, które umożliwiają współdziałanie obiektów, niezależnie od używanego języka programowania. Parametry i zwracane wartości obiektów COM czasami używają typów danych, które różnią się od tych używanych w kodzie zarządzanym. *Kierowanie współdziałania* to proces pakowania parametrów i zwracania wartości do równoważnych typów danych podczas ich przenoszenia do i z obiektów com. Aby uzyskać więcej informacji, zobacz [organizowanie międzyoperacyjnych](../../../framework/interop/interop-marshaling.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Międzyoperacyjność modelu COM](index.md)
+- [Przewodnik: Implementowanie dziedziczenia z obiektami COM](walkthrough-implementing-inheritance-with-com-objects.md)
 - [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md)
-- [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Rozwiązywanie problemów związanych z współdziałaniem](troubleshooting-interoperability.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (eksporter biblioteki typów)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Marshaling międzyoperacyjny](../../../framework/interop/interop-marshaling.md)
-- [Współdziałanie z COM bez rejestrowania](../../../framework/interop/registration-free-com-interop.md)
+- [Tlbimp. exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (Eksporter biblioteki typów)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Organizowanie międzyoperacyjne](../../../framework/interop/interop-marshaling.md)
+- [Współdziałanie z modelem COM bez rejestrowania](../../../framework/interop/registration-free-com-interop.md)

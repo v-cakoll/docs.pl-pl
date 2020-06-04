@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Tworzenie projektu grafu obiektów'
+title: 'Instrukcje: projektowanie wykresu obiektu'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2900a31a469266d392f1b07b4714a08e253d2abd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636682"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396496"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Instrukcje: Tworzenie projektu grafu obiektów (Visual Basic)
 W tym temacie pokazano, jak projektować i wypełniać Graf obiektów z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wypełnia wykres obiektu za pomocą klas `Address`, `PurchaseOrder`i `PurchaseOrderItem` z [przykładowego pliku XML: typowy dokument XML zamówienia zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) .  
+ Poniższy kod wypełnia wykres obiektu za pomocą `Address` `PurchaseOrder` klasy,, i `PurchaseOrderItem` z [przykładowego pliku XML: typowy dokument xml zamówienia zakupu (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) .  
   
 ```vb  
 Class Address  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- W tym przykładzie wynik zapytania LINQ jest zwracany jako <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Elementy w klasie `PurchaseOrder` są typu <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Kod używa metody rozszerzenia <xref:System.Linq.Enumerable.ToList%2A>, aby utworzyć kolekcję <xref:System.Collections.Generic.List%601> z wyników zapytania.  
+ W tym przykładzie wynik zapytania LINQ jest zwracany jako <xref:System.Collections.Generic.IEnumerable%601> z `PurchaseOrderItem` . Elementy w `PurchaseOrder` klasie są typu <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . Kod używa <xref:System.Linq.Enumerable.ToList%2A> metody rozszerzającej, aby utworzyć <xref:System.Collections.Generic.List%601> kolekcję na podstawie wyników zapytania.  
   
  Przykład generuje następujące dane wyjściowe:  
   
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662009"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397405"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>"\<— słowo kluczowe >" jest prawidłowy tylko wewnątrz metody wystąpienia
-`Me`, `MyClass`, I `MyBase` słów kluczowych, zapoznaj się z wystąpieniami określonej klasy. Nie można ich używać w udostępnionej `Function` lub `Sub` procedury.  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>Element „\<keyword>” jest prawidłowy tylko wewnątrz metody wystąpienia
+`Me` `MyClass` Słowa kluczowe, i `MyBase` odwołują się do określonych wystąpień klasy. Nie można ich używać wewnątrz wspólnej `Function` procedury lub `Sub` .  
   
  **Identyfikator błędu:** BC30043  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Usuń słowo kluczowe z procedury lub usunąć `Shared` słowo kluczowe z deklaracja procedury.  
+- Usuń słowo kluczowe z procedury lub Usuń `Shared` słowo kluczowe z deklaracji procedury.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przypisanie zmiennej obiektu](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Me, My, MyBase i MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Przypisanie zmiennej obiektu](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase i MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Podstawowe informacje o dziedziczeniu](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

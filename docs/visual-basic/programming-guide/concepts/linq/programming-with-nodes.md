@@ -2,12 +2,12 @@
 title: Programowanie za pomocą węzłów
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 9c64c348f5d26172f26593b927e6bc24baf365bf
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 4cae85d99e7e28506faad8ca39347cf8f271718e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794406"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396379"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programowanie z węzłami (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Deweloperzy, którzy muszą pisać programy takie jak Edytor XML, system transformacji lub moduł zapisujący raport często muszą pisać programy, które pracują na bardziej szczegółowym poziomie niż elementy i atrybuty. Często muszą oni korzystać z poziomu węzła, manipulowania węzłami tekstu, instrukcjami przetwarzania i komentarzami. W tym temacie przedstawiono szczegółowe informacje na temat programowania na poziomie węzła.  
@@ -16,7 +16,7 @@ ms.locfileid: "82794406"
  Istnieje kilka szczegółów programowania, które programista pracuje na poziomie węzła.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Właściwość nadrzędna węzłów podrzędnych klasy XDocument ma wartość null.  
- <xref:System.Xml.Linq.XObject.Parent%2A> Właściwość zawiera element nadrzędny <xref:System.Xml.Linq.XElement>, a nie węzeł nadrzędny. Węzły podrzędne nie <xref:System.Xml.Linq.XDocument> mają elementu nadrzędnego <xref:System.Xml.Linq.XElement>. Ich element nadrzędny jest dokumentem, więc <xref:System.Xml.Linq.XObject.Parent%2A> właściwość dla tych węzłów ma ustawioną wartość null.  
+ <xref:System.Xml.Linq.XObject.Parent%2A>Właściwość zawiera element nadrzędny <xref:System.Xml.Linq.XElement> , a nie węzeł nadrzędny. Węzły podrzędne <xref:System.Xml.Linq.XDocument> nie mają elementu nadrzędnego <xref:System.Xml.Linq.XElement> . Ich element nadrzędny jest dokumentem, więc <xref:System.Xml.Linq.XObject.Parent%2A> Właściwość dla tych węzłów ma ustawioną wartość null.  
   
  Poniższy przykład ilustruje:  
   
@@ -80,7 +80,7 @@ Console.WriteLine(">>{0}<<", textNode2)
 ```  
   
 ### <a name="an-empty-text-node-impacts-serialization"></a>Pusty węzeł tekstowy wpływa na serializację  
- Jeśli element zawiera tylko podrzędny węzeł tekstowy, który jest pusty, jest serializowany z składnią długiego tagu: `<Child></Child>`. Jeśli element nie zawiera żadnych węzłów podrzędnych, zostaje Zserializowany za pomocą składni krótkiej tagu: `<Child />`.  
+ Jeśli element zawiera tylko podrzędny węzeł tekstowy, który jest pusty, jest serializowany z składnią długiego tagu: `<Child></Child>` . Jeśli element nie zawiera żadnych węzłów podrzędnych, zostaje Zserializowany za pomocą składni krótkiej tagu: `<Child />` .  
   
 ```vb  
 Dim child1 As XElement = New XElement("Child1", _  
@@ -99,9 +99,9 @@ Console.WriteLine(child2)
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Przestrzenie nazw są atrybutami drzewa LINQ to XML  
- Mimo że deklaracje przestrzeni nazw mają identyczną składnię atrybutów, w niektórych interfejsach programowania, takich jak XSLT i XPath, deklaracje przestrzeni nazw nie są uważane za atrybuty. Jednak w programie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]przestrzenie nazw są przechowywane <xref:System.Xml.Linq.XAttribute> jako obiekty w drzewie XML. W przypadku iteracji przez atrybuty elementu, który zawiera deklarację przestrzeni nazw, Deklaracja przestrzeni nazw będzie widoczna jako jeden z elementów w zwróconej kolekcji.  
+ Mimo że deklaracje przestrzeni nazw mają identyczną składnię atrybutów, w niektórych interfejsach programowania, takich jak XSLT i XPath, deklaracje przestrzeni nazw nie są uważane za atrybuty. Jednak w programie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przestrzenie nazw są przechowywane jako <xref:System.Xml.Linq.XAttribute> obiekty w drzewie XML. W przypadku iteracji przez atrybuty elementu, który zawiera deklarację przestrzeni nazw, Deklaracja przestrzeni nazw będzie widoczna jako jeden z elementów w zwróconej kolekcji.  
   
- Właściwość <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> wskazuje, czy atrybut jest deklaracją przestrzeni nazw.  
+ <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>Właściwość wskazuje, czy atrybut jest deklaracją przestrzeni nazw.  
   
 ```vb  
 Dim root As XElement = _
@@ -124,7 +124,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Metody osi XPath nie zwracają białych znaków elementu XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zezwala na podrzędne węzły tekstowe <xref:System.Xml.Linq.XDocument>, tak długo, jak węzły tekstowe zawierają tylko biały znak. Jednak model obiektów XPath nie zawiera białych znaków jako węzłów podrzędnych dokumentu, więc gdy przejdziesz do iteracji przez elementy podrzędne <xref:System.Xml.Linq.XDocument> przy użyciu <xref:System.Xml.Linq.XContainer.Nodes%2A> osi, zostaną zwrócone węzły tekstu odstępu. Jednak podczas iteracji przez elementy podrzędne z <xref:System.Xml.Linq.XDocument> użyciem metody osi XPath, węzły tekstu odstępu nie będą zwracane.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zezwala na podrzędne węzły tekstowe <xref:System.Xml.Linq.XDocument> , tak długo, jak węzły tekstowe zawierają tylko biały znak. Jednak model obiektów XPath nie zawiera białych znaków jako węzłów podrzędnych dokumentu, więc gdy przejdziesz do iteracji przez elementy podrzędne <xref:System.Xml.Linq.XDocument> przy użyciu <xref:System.Xml.Linq.XContainer.Nodes%2A> osi, zostaną zwrócone węzły tekstu odstępu. Jednak podczas iteracji przez elementy podrzędne z <xref:System.Xml.Linq.XDocument> użyciem metody osi XPath, węzły tekstu odstępu nie będą zwracane.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -149,7 +149,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>Obiekty XDeclaration nie są węzłami  
- Gdy przejdziesz do iteracji między węzłami <xref:System.Xml.Linq.XDocument>podrzędnymi, nie zobaczysz obiektu deklaracji XML. Jest to właściwość dokumentu, a nie jego węzeł podrzędny.  
+ Gdy przejdziesz do iteracji między węzłami podrzędnymi <xref:System.Xml.Linq.XDocument> , nie zobaczysz obiektu deklaracji XML. Jest to właściwość dokumentu, a nie jego węzeł podrzędny.  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](advanced-linq-to-xml-programming.md)

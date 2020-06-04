@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578934"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397379"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Wyrażenie lambda nie zostanie usunięte z tej obsługi zdarzeń
 
 Wyrażenie lambda nie zostanie usunięte z tej procedury obsługi zdarzeń. Przypisz wyrażenie lambda do zmiennej i Użyj zmiennej, aby dodać i usunąć zdarzenie.
 
-Gdy wyrażenia lambda są używane z obsługą zdarzeń, może nie być widoczne oczekiwane zachowanie. Kompilator generuje nową metodę dla każdej definicji wyrażenia lambda, nawet jeśli są identyczne. W związku z tym Poniższy kod wyświetla `False`.
+Gdy wyrażenia lambda są używane z obsługą zdarzeń, może nie być widoczne oczekiwane zachowanie. Kompilator generuje nową metodę dla każdej definicji wyrażenia lambda, nawet jeśli są identyczne. W związku z tym Poniższy kod wyświetla `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-Gdy wyrażenia lambda są używane z obsługą zdarzeń, może to spowodować nieoczekiwane wyniki. W poniższym przykładzie wyrażenie lambda dodane przez `AddHandler` nie jest usuwane przez instrukcję `RemoveHandler`.
+Gdy wyrażenia lambda są używane z obsługą zdarzeń, może to spowodować nieoczekiwane wyniki. W poniższym przykładzie wyrażenie lambda dodane przez `AddHandler` nie jest usuwane przez `RemoveHandler` instrukcję.
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na 
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-Aby uniknąć ostrzeżenia i usunąć wyrażenie lambda, przypisz wyrażenie lambda do zmiennej i Użyj zmiennej w instrukcji `AddHandler` i `RemoveHandler`, jak pokazano w poniższym przykładzie.
+Aby uniknąć ostrzeżenia i usunąć wyrażenie lambda, przypisz wyrażenie lambda do zmiennej i Użyj zmiennej w obu `AddHandler` `RemoveHandler` instrukcjach i, jak pokazano w poniższym przykładzie.
 
 ```vb
 Module Module1
@@ -85,8 +85,8 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Wyrażenia lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Swobodna konwersja delegatów](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Zdarzenia](../../programming-guide/language-features/events/index.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: pisanie zapytania, które znajduje elementy na podstawie kontekstu'
+title: 'Instrukcje: pisanie zapytania odnajdującego elementy na podstawie kontekstu'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: d25c6d47eee2ae092c84c3db3c08c3e21e7d98d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 52945cecb1fabe8ebabc836c7e9d61e3570fafb3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346204"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397638"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Instrukcje: pisanie zapytania, które znajduje elementy na podstawie kontekstu (Visual Basic)
 Czasami może być konieczne zapisanie zapytania, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzających lub następujących elementów równorzędnych. Można filtrować na podstawie elementów podrzędnych lub nadrzędnych.  
   
- Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w klauzuli `where`. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w klauzuli `let`, a następnie użycie wyników w klauzuli `where`.  
+ Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w `where` klauzuli. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w `let` klauzuli, a następnie użycie wyników w `where` klauzuli.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zaznacza wszystkie elementy `p`, po których bezpośrednio następuje element `ul`.  
+ W poniższym przykładzie wybrano wszystkie `p` elementy, które są bezpośrednio następuje po `ul` elemencie.  
   
 ```vb  
 Dim doc As XElement = _  
@@ -106,10 +106,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

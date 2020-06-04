@@ -1,23 +1,23 @@
 ---
-title: Operatory warunkowe o wartości null
+title: Operatory warunkowe null
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348288"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401475"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. lub? () operatory warunkowe o wartości null (Visual Basic)
 
-Testuje wartość operandu po lewej stronie dla wartości null (`Nothing`) przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?()`). zwraca `Nothing`, jeśli argument operacji po lewej stronie szacuje się na `Nothing`. Należy zauważyć, że w wyrażeniach, które zwykle zwracają typy wartości, operator warunkowy NULL zwraca <xref:System.Nullable%601>.
+Testuje wartość operandu po lewej stronie dla wartości null ( `Nothing` ) przed wykonaniem operacji dostępu do elementu członkowskiego ( `?.` ) lub indeksu ( `?()` ); zwraca wartość, `Nothing` Jeśli argument operacji po lewej stronie ma wartość `Nothing` . Należy zauważyć, że w wyrażeniach, które zwykle zwracają typy wartości, operator warunkowy o wartości null zwraca wartość <xref:System.Nullable%601> .
 
-Te operatory ułatwiają pisanie mniejszego kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych. Na przykład:
+Te operatory ułatwiają pisanie mniejszego kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych. Przykład:
 
 ```vb
 ' Nothing if customers is Nothing
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Operatory warunkowe `null` skracają łańcuch wykonywania operacji.  Jeśli jedna operacja w łańcuchu warunkowych operacji dostępu i indeksowania zwraca `Nothing`, pozostała część wykonania łańcucha zostanie zatrzymana.  W poniższym przykładzie `C(E)` nie jest oceniane, jeśli `A`, `B`lub `C` szacuje się na `Nothing`.
+Operatory warunkowe o wartości null są krótkimi obwodami.  Jeśli jedna operacja w łańcuchu warunkowego dostępu do elementu członkowskiego i operacji indeksu zostanie zwrócona `Nothing` , pozostała część wykonania łańcucha zostanie zatrzymana.  W poniższym przykładzie `C(E)` nie jest oceniana, `A` Jeśli `B` ,, lub `C` jest wynikiem `Nothing` .
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Innym zastosowaniem dostępu do składowych o wartości null jest wywoływanie delegatów w sposób bezpieczny dla wątków z znacznie mniejszym kodem.  W poniższym przykładzie zdefiniowano dwa typy, `NewsBroadcaster` i `NewsReceiver`. Elementy wiadomości są wysyłane do odbiorcy przez delegata `NewsBroadcaster.SendNews`.
+Innym zastosowaniem dostępu do składowych o wartości null jest wywoływanie delegatów w sposób bezpieczny dla wątków z znacznie mniejszym kodem.  W poniższym przykładzie zdefiniowano dwa typy, `NewsBroadcaster` a i `NewsReceiver` . Elementy wiadomości są wysyłane do odbiorcy przez `NewsBroadcaster.SendNews` delegata.
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-Jeśli na liście wywołań `SendNews` nie ma elementów, delegat `SendNews` zgłosi <xref:System.NullReferenceException>. Przed operatorami warunkowymi null, kod podobny do poniższego upewnił się, że lista wywołań delegata nie została `Nothing`:
+Jeśli na liście wywołań nie ma elementów `SendNews` , `SendNews` Delegat zgłosi <xref:System.NullReferenceException> . Przed operatorami warunkowymi null, kod podobny do poniższego upewnienia się, że lista wywołań delegata nie była `Nothing` :
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -107,10 +107,10 @@ SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod służący do oszacowania `SendNews` tylko jeden raz, utrzymując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje składnia wywołania delegata warunkowego o wartości null `SendNews?(String)`.
+Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod do oszacowania `SendNews` tylko jeden raz, utrzymując wynik w zmiennej tymczasowej. Należy jawnie wywołać `Invoke` metodę, ponieważ nie istnieje składnia niewarunkowego delegata o wartości null `SendNews?(String)` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operatory (Visual Basic)](index.md)
-- [Przewodnik programowania Visual Basic](../../../visual-basic/programming-guide/index.md)
-- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Przewodnik programowania w Visual Basic](../../programming-guide/index.md)
+- [Dokumentacja języka Visual Basic](../index.md)

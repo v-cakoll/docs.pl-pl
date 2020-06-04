@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przerywanie i łączenie instrukcji w Code'
+title: 'Instrukcje: Przerywanie i łączenie instrukcji w kodzie'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347427"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403255"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)
 
@@ -34,10 +34,10 @@ Podczas pisania kodu można czasami tworzyć długie instrukcje, które wymagaj�
 
 ## <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczą instrukcję do wielu wierszy
 
-Użyj znaku kontynuacji wiersza, który jest podkreśleniem (`_`), w punkcie, w którym ma zostać przerwana linia. Znak podkreślenia musi być bezpośrednio poprzedzony spacją, po którym następuje terminator wiersza (znak powrotu karetki) lub (począwszy od wersji 16,0) komentarz, po którym następuje znak powrotu karetki.
+Użyj znaku kontynuacji wiersza, który jest podkreśleniem ( `_` ), w punkcie, w którym ma zostać przerwana linia. Znak podkreślenia musi być bezpośrednio poprzedzony spacją, po którym następuje terminator wiersza (znak powrotu karetki) lub (począwszy od wersji 16,0) komentarz, po którym następuje znak powrotu karetki.
 
   > [!NOTE]
-  > W niektórych przypadkach, jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic niejawnie kontynuuje instrukcję w następnym wierszu kodu. Aby uzyskać listę elementów składni, dla których można pominąć znak kontynuacji wiersza, zobacz "niejawne kontynuacja wiersza" w [instrukcjach](../../../visual-basic/programming-guide/language-features/statements.md).
+  > W niektórych przypadkach, jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic niejawnie kontynuuje instrukcję w następnym wierszu kodu. Aby uzyskać listę elementów składni, dla których można pominąć znak kontynuacji wiersza, zobacz "niejawne kontynuacja wiersza" w [instrukcjach](../language-features/statements.md).
 
   W poniższym przykładzie instrukcja jest dzielona na cztery wiersze z znakami kontynuacji wiersza kończącymi wszystkie oprócz ostatniego wiersza.
 
@@ -49,17 +49,17 @@ Użyj znaku kontynuacji wiersza, który jest podkreśleniem (`_`), w punkcie, w 
 
   Istnieją pewne ograniczenia, w których można użyć znaku kontynuacji wiersza; na przykład nie można użyć go w środku nazwy argumentu. Możesz przerwać listę argumentów za pomocą znaku kontynuacji wiersza, ale poszczególne nazwy argumentów muszą pozostać nienaruszone.
 
-  Nie można kontynuować komentarza przy użyciu znaku kontynuacji wiersza. Kompilator nie bada znaków w komentarzu pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami należy powtórzyć symbol komentarza (`'`) w każdym wierszu.
+  Nie można kontynuować komentarza przy użyciu znaku kontynuacji wiersza. Kompilator nie bada znaków w komentarzu pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami należy powtórzyć symbol komentarza ( `'` ) w każdym wierszu.
 
  Chociaż umieszczenie każdej instrukcji w osobnym wierszu jest zalecaną metodą, Visual Basic umożliwia również umieszczenie wielu instrukcji w tym samym wierszu.
 
 ## <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić wiele instrukcji w tym samym wierszu
 
-Oddziel instrukcje od dwukropka (`:`), jak w poniższym przykładzie:
+Rozdziel instrukcje średnikami ( `:` ), jak w poniższym przykładzie:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Struktura programu i konwencje związane z kodem](program-structure-and-code-conventions.md)
+- [Instrukcje](../language-features/statements.md)

@@ -1,24 +1,24 @@
 ---
-title: 'Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ)'
+title: 'Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396522"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ) (Visual Basic)
 
 Ten przykład pokazuje, jak scalać dane z różnych źródeł w sekwencję nowych typów.
 
 > [!NOTE]
-> Nie należy próbować przyłączyć danych w pamięci lub danych w systemie plików o dane, które są nadal w bazie danych. Takie sprzężenia między domenami mogą dać niezdefiniowane wyniki, ponieważ różne sposoby, w których operacje Join mogą być zdefiniowane dla zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeśli ilość danych w bazie danych jest wystarczająco duża. Aby dołączyć dane z bazy danych do danych znajdujących się w pamięci, najpierw Wywołaj `ToList` lub `ToArray` w zapytaniu bazy danych, a następnie wykonaj sprzężenie w zwróconej kolekcji.
+> Nie należy próbować przyłączyć danych w pamięci lub danych w systemie plików o dane, które są nadal w bazie danych. Takie sprzężenia między domenami mogą dać niezdefiniowane wyniki, ponieważ różne sposoby, w których operacje Join mogą być zdefiniowane dla zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeśli ilość danych w bazie danych jest wystarczająco duża. Aby przyłączyć dane z bazy danych do danych znajdujących się w pamięci, najpierw należy wywołać `ToList` lub `ToArray` w kwerendzie bazy danych, a następnie wykonać sprzężenie w zwróconej kolekcji.
 
 ## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-- Skopiuj pliki Names. csv i Scores. CSV do folderu projektu, zgodnie z opisem w artykule [jak: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Skopiuj pliki Names. csv i Scores. CSV do folderu projektu, zgodnie z opisem w artykule [jak: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Przykład
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-W klauzuli [SELECT klauzula](../../../../visual-basic/language-reference/queries/select-clause.md) Inicjator obiektu jest używany do tworzenia wystąpienia każdego nowego obiektu `Student` przy użyciu danych z dwóch źródeł.
+W klauzuli [SELECT klauzula](../../../language-reference/queries/select-clause.md) Inicjator obiektu jest używany do tworzenia wystąpienia każdego nowego obiektu przy `Student` użyciu danych z dwóch źródeł.
 
 Jeśli nie musisz przechowywać wyników zapytania, typy anonimowe mogą być wygodniejsze niż nazwane typy. Nazwane typy są wymagane, Jeśli przekażesz wyniki zapytania poza metodę, w której jest wykonywane zapytanie. Poniższy przykład wykonuje to samo zadanie co w poprzednim przykładzie, ale używa typów anonimowych zamiast nazwanych:
 
@@ -128,6 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i ciągi (Visual Basic)](linq-and-strings.md)

@@ -1,26 +1,26 @@
 ---
-title: Nie można odczytać stała szerokość pola, ponieważ nic nie stoi FieldWidths lub jest pusty
+title: Nie można odczytać pól o stałej szerokości, ponieważ FieldWidths ma wartość Nothing lub jest pusta
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
-ms.openlocfilehash: c7c0584155a861d8928fb2b5499aeaaa1b949a41
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 855d4c254b0ddac27dc5ee5e21ca5aa3b99b3ea0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913231"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398490"
 ---
-# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Nie można odczytać stała szerokość pola, ponieważ nic nie stoi FieldWidths lub jest pusty
-`TextFieldParser` Nie może odczytać pola o stałej szerokości, ponieważ `FieldWidths` właściwość jest ustawiona na `Nothing` lub jest pusty.  
+# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Nie można odczytać pól o stałej szerokości, ponieważ FieldWidths ma wartość Nothing lub jest pusta
+`TextFieldParser`Nie można odczytać pól o stałej szerokości, ponieważ `FieldWidths` Właściwość jest ustawiona na `Nothing` lub jest pusta.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Ustaw `FieldWidths` na prawidłową wartość.  
+- Ustaw `FieldWidths` prawidłową wartość.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [TextFieldParser.SetFieldWidths Method](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
-- [TextFieldParser.FieldWidths Property](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
-- [Instrukcje: Odczyt z plików testowych o stałej szerokości](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [TextFieldParser, obiekt](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [TextFieldParser. SetFieldWidths — Metoda](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
+- [TextFieldParser. FieldWidths — Właściwość](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
+- [Instrukcje: Odczyt z plików testowych o stałej szerokości](../developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [TextFieldParser — Obiekt](../language-reference/objects/textfieldparser-object.md)

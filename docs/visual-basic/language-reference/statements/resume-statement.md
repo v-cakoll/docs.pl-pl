@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 95137a9f6a4a4a18655b51b95300bfaf93cca193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f49f05f1deb2027b03bbf3443ca44f30c44344e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333028"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404216"
 ---
 # <a name="resume-statement"></a>Resume — Instrukcja
 Wznawia wykonywanie po zakończeniu procedury obsługi błędu.  
   
- Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie jest to możliwe, zamiast korzystania z obsługi wyjątków niestrukturalnych oraz instrukcji `On Error` i `Resume`. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie jest to możliwe, zamiast korzystania z obsługi wyjątków bez struktury i `On Error` instrukcji i `Resume` . Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](try-catch-finally-statement.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,35 +35,35 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Części  
  `Resume`  
- Wymagana. Jeśli błąd wystąpił w tej samej procedurze co program obsługi błędów, wykonanie jest wznawiane za pomocą instrukcji, która spowodowała błąd. Jeśli wystąpił błąd w wywoływanej procedurze, wykonanie zostaje wznowione w instrukcji, która została ostatnio wywołana z procedury zawierającej procedurę obsługi błędu.  
+ Wymagany. Jeśli błąd wystąpił w tej samej procedurze co program obsługi błędów, wykonanie jest wznawiane za pomocą instrukcji, która spowodowała błąd. Jeśli wystąpił błąd w wywoływanej procedurze, wykonanie zostaje wznowione w instrukcji, która została ostatnio wywołana z procedury zawierającej procedurę obsługi błędu.  
   
  `Next`  
- Opcjonalna. Jeśli błąd wystąpił w tej samej procedurze co program obsługi błędów, wykonanie jest wznawiane za pomocą instrukcji bezpośrednio po instrukcji, która spowodowała błąd. Jeśli wystąpił błąd w wywoływanej procedurze, wykonywanie jest wznawiane za pomocą instrukcji bezpośrednio po instrukcji, która została ostatnio wywołana z procedury zawierającej procedury obsługi błędu (lub instrukcji `On Error Resume Next`).  
+ Opcjonalny. Jeśli błąd wystąpił w tej samej procedurze co program obsługi błędów, wykonanie jest wznawiane za pomocą instrukcji bezpośrednio po instrukcji, która spowodowała błąd. Jeśli wystąpił błąd w wywoływanej procedurze, wykonywanie jest wznawiane za pomocą instrukcji bezpośrednio po instrukcji, która została ostatnio wywołana z procedury zawierającej procedury obsługi błędu (lub `On Error Resume Next` instrukcji).  
   
  `line`  
- Opcjonalna. Wykonanie wznowione w wierszu określonym w wymaganym argumencie `line`. Argument `line` jest etykietą wiersza lub numerem wiersza i musi znajdować się w tej samej procedurze jak program obsługi błędów.  
+ Opcjonalny. Wykonanie wznowione w wierszu określonym w wymaganym `line` argumencie. `line`Argument jest etykietą wiersza lub numerem wiersza i musi znajdować się w tej samej procedurze jak program obsługi błędów.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie jest to możliwe, zamiast korzystania z obsługi wyjątków niestrukturalnych oraz instrukcji `On Error` i `Resume`. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+> Zalecamy używanie obsługi wyjątków strukturalnych w kodzie wszędzie tam, gdzie to możliwe, zamiast używania obsługi wyjątków niestrukturalnych i `On Error` `Resume` instrukcji i. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](try-catch-finally-statement.md).  
   
- Jeśli używasz instrukcji `Resume` w innym miejscu niż w procedurze obsługi błędów, wystąpi błąd.  
+ Jeśli używasz `Resume` instrukcji w innym miejscu niż w procedurze obsługi błędów, wystąpi błąd.  
   
- Instrukcji `Resume` nie można użyć w żadnej procedurze, która zawiera instrukcję `Try...Catch...Finally`.  
+ `Resume`Instrukcji nie można używać w żadnej procedurze zawierającej `Try...Catch...Finally` instrukcję.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie używa instrukcji `Resume`, aby zakończyć obsługę błędów w procedurze, a następnie wznowić wykonywanie przy użyciu instrukcji, która spowodowała błąd. Numer błędu 55 został wygenerowany w celu zilustrowania użycia instrukcji `Resume`.  
+ W tym przykładzie używa `Resume` instrukcji, aby zakończyć obsługę błędów w procedurze, a następnie wznowić wykonywanie przy użyciu instrukcji, która spowodowała błąd. Numer błędu 55 został wygenerowany w celu zilustrowania użycia `Resume` instrukcji.  
   
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>Wymagania  
- **Przestrzeń nazw:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
  **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Error, instrukcja](../../../visual-basic/language-reference/statements/error-statement.md)
-- [On Error, instrukcja](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Try...Catch...Finally, instrukcja](try-catch-finally-statement.md)
+- [Error — Instrukcja](error-statement.md)
+- [On Error, instrukcja](on-error-statement.md)

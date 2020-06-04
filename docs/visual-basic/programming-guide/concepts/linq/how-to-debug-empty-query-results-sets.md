@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: debugowanie pustych zestawów wyników zapytania'
+title: 'Instrukcje: debugowanie zestawów wyników zapytania'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 21c161a702338c0c6943fa09212deaea7fdd72f9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2059ccd4638d2fb77c524773cb4bd50f721b5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353074"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398041"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Instrukcje: debugowanie pustych zestawów wyników zapytania (Visual Basic)
 
@@ -92,6 +92,6 @@ Result set follows:
 End of result set
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

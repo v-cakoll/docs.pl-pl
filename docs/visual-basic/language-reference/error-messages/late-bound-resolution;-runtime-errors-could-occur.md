@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 6b78dfed1d615ba865f136365eac1c9c131ed5a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661952"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397353"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Rozpoznanie późnego wiązania; mogą wystąpić błędy podczas wykonywania
-Obiekt jest przypisany do zmiennej, zadeklarowanej będzie [Object — typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md).  
+Obiekt jest przypisany do zmiennej zadeklarowanej jako [Typ danych obiektu](../data-types/object-data-type.md).  
   
- Kiedy Deklarujesz zmienną `Object`, kompilator musi wykonać *późnym wiązaniu*, co powoduje, że dodatkowe operacje w czasie wykonywania. Udostępnia ona również aplikację, aby potencjalne błędy czasu wykonywania. Na przykład, jeśli przypisujesz <xref:System.Windows.Forms.Form> do `Object` zmiennej, a następnie spróbuj uzyskać dostęp do <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> właściwości, środowisko wykonawcze zgłasza <xref:System.MemberAccessException> ponieważ <xref:System.Windows.Forms.Form> klasy nie ujawnia `NameTable` właściwości.  
+ Po zadeklarowaniu zmiennej jako `Object` , kompilator musi wykonać *późne wiązanie*, co powoduje dodatkowe operacje w czasie wykonywania. Udostępnia również aplikacji potencjalne błędy w czasie wykonywania. Na przykład, Jeśli przypiszesz <xref:System.Windows.Forms.Form> do `Object` zmiennej, a następnie spróbujesz uzyskać dostęp do <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> właściwości, środowisko uruchomieniowe zgłosi, <xref:System.MemberAccessException> ponieważ Klasa nie <xref:System.Windows.Forms.Form> uwidacznia `NameTable` właściwości.  
   
- Jeśli zadeklarujesz zmienną określonego typu, kompilator będzie mógł wykonać *wczesne powiązania* w czasie kompilacji. Skutkuje to lepszą wydajność i kontrolowany dostęp do elementów członkowskich z określonego typu i zwiększenia czytelności kodu.  
+ W przypadku deklarowania zmiennej jako określonego typu kompilator może wykonać *wczesne powiązanie* w czasie kompilacji. Powoduje to zwiększenie wydajności, kontrolowany dostęp do elementów członkowskich określonego typu i lepszą czytelność kodu.  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Uzyskać informacje o ukrywaniu ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać informacje na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42017  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli to możliwe należy zadeklarować zmienną określonego typu.  
+- Jeśli to możliwe, zadeklaruj zmienną jako określonego typu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [Deklaracja zmiennej obiektu](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Wczesne i późne powiązania](../../programming-guide/language-features/early-late-binding/index.md)
+- [Deklaracja zmiennej obiektu](../../programming-guide/language-features/variables/object-variable-declaration.md)

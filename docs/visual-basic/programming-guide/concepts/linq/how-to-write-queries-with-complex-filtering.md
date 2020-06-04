@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Pisanie zapytań z użyciem filtrowania złożonego'
+title: 'Instrukcje: pisanie zapytań z zaawansowanym filtrowaniem'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 28e84b7785948e9d50c08438494b89c906ab8505
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 18ed4379b7ec9c8007cc3c189fc45571b5161911
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344455"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397625"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Instrukcje: Pisanie zapytań ze złożonym filtrowaniem (Visual Basic)
 Czasami chcesz pisać zapytania LINQ to XML ze złożonymi filtrami. Na przykład może być konieczne znalezienie wszystkich elementów, które mają element podrzędny o określonej nazwie i wartości. Ten temat zawiera przykład tworzenia zapytania z skomplikowanym filtrowaniem.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje, jak znaleźć wszystkie `PurchaseOrder` elementy mające element podrzędny `Address`, który ma atrybut `Type` równy "wysyłce" i podrzędny element `State` równy "NY". Używa zagnieżdżonego zapytania w klauzuli `Where`, a operator `Any` zwraca `True`, jeśli kolekcja zawiera jakiekolwiek elementy.  
+ Ten przykład pokazuje, jak znaleźć wszystkie `PurchaseOrder` elementy, które mają `Address` element podrzędny, który ma `Type` atrybut równy "wysyłce" i `State` element podrzędny równy "NY". Używa zapytania zagnieżdżonego w `Where` klauzuli i `Any` operator zwraca, `True` Jeśli kolekcja zawiera jakiekolwiek elementy.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Aby uzyskać więcej informacji na temat operatora `Any`, zobacz [Kwantyfikatory operacji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Aby uzyskać więcej informacji na temat `Any` operatora, zobacz [Kwantyfikatory operacji (Visual Basic)](quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ Next
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw](sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -76,13 +76,13 @@ End Module
 99505  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Operacje projekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
-- [Operacje kwantyfikatora (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Właściwości osi elementu podrzędnego XML](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [Właściwości osi atrybutu XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Właściwość wartości XML](../../../language-reference/xml-axis/xml-value-property.md)
+- [Operacje projekcji (Visual Basic)](projection-operations.md)
+- [Operacje kwantyfikatora (Visual Basic)](quantifier-operations.md)

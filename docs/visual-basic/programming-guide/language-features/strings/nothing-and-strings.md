@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-ms.openlocfilehash: dfc43748d0754f0a6a29763c42ab82d9937f89f8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 392de45b0ee1688224f3e8170b0144f1acdb0912
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344295"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360569"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing i ciągi w Visual Basic
-Środowisko uruchomieniowe Visual Basic i .NET Framework oceniane `Nothing` w różny sposób, gdy przejdzie do ciągów.  
+Środowisko uruchomieniowe Visual Basic i .NET Framework są oceniane w `Nothing` różny sposób, gdy przejdzie do ciągów.  
   
 ## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic środowisko uruchomieniowe i .NET Framework  
- Rozważmy następujący przykład:  
+ Rozpatrzmy następujący przykład:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- Środowisko uruchomieniowe Visual Basic zwykle szacuje `Nothing` jako ciąg pusty (""). .NET Framework nie jest jednak ani zgłasza wyjątek, gdy podejmowana jest próba wykonania operacji na ciągach na `Nothing`.  
+ Środowisko uruchomieniowe Visual Basic zwykle jest obliczane `Nothing` jako ciąg pusty (""). .NET Framework nie jest jednak ani zgłasza wyjątek, gdy podejmowana jest próba wykonania operacji na ciągach `Nothing` .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Wprowadzenie do ciągów w Visual Basic](introduction-to-strings.md)

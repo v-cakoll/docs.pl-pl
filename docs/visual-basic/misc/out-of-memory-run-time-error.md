@@ -1,31 +1,31 @@
 ---
-title: Za mało pamięci (błąd czasu wykonywania Visual Basic)
+title: Za mało pamięci (Visual Basic błąd czasu wykonywania)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: cbd9ae0945b89df8c5eb04fa6c1fe2bed22aef2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0546609aa0573b7d43a2a630328e76c48791886
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944755"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375890"
 ---
-# <a name="out-of-memory-visual-basic-run-time-error"></a>Za mało pamięci (błąd czasu wykonywania Visual Basic)
-Większa ilość pamięci nie jest wymagana, niż jest dostępne.  
+# <a name="out-of-memory-visual-basic-run-time-error"></a>Za mało pamięci (Visual Basic błąd czasu wykonywania)
+Jest wymagana większa ilość pamięci niż jest dostępna.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Zamknij zbędne aplikacje, dokumentów lub pliki źródłowe, które są otwarte.  
+1. Zamknij otwarte niepotrzebne aplikacje, dokumenty lub pliki źródłowe.  
   
-2. Podziel duże modułów lub procedury na mniejsze.  
+2. Podziel duże moduły lub procedury na mniejsze.  
   
-3. Eliminuje to zakończenie i — pobytu rezydentne programów.  
+3. Eliminowanie programów do zamieszkania i pobytu.  
   
-4. Wyeliminuj niepotrzebne sterowniki urządzeń.  
+4. Eliminowanie niepotrzebnych sterowników urządzeń.  
   
 5. Zmniejsz liczbę zmiennych publicznych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

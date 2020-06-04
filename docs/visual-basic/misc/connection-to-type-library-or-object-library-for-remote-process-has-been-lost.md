@@ -1,29 +1,29 @@
 ---
-title: Utracono połączenie z biblioteką typów lub biblioteka dla procesu zdalnego
+title: Utracono połączenie z biblioteką typów lub biblioteką obiektów dla procesu zdalnego
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: 76ad5129086f40e99ab94d308a519512baf37a89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d442d582f392ea4e2a074136740f9705d50b8d55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970316"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376771"
 ---
-# <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>Utracono połączenie z biblioteką typów lub biblioteka dla procesu zdalnego
-Utracono połączenie zdalnego procesu obiekt biblioteki lub bibliotekę typów.  
+# <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>Utracono połączenie z biblioteką typów lub biblioteką obiektów dla procesu zdalnego
+Połączenie z biblioteką obiektów procesu zdalnego lub biblioteką typów zostało utracone.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Uruchom ponownie `Application` obiektu.  
+1. Uruchom ponownie `Application` obiekt.  
   
-2. Okno dialogowe błędu za pomocą którego zostały wprowadzone w tym temacie pomocy, kliknij **OK** do wyświetlenia **odwołania** okno dialogowe. Odwołanie do utraty pojawia się wyrazem "Brak" po lewej stronie.  
+2. W oknie dialogowym błędu, w którym został wprowadzony ten temat pomocy, kliknij przycisk **OK** , aby wyświetlić okno dialogowe **odwołania** . Utracone odwołanie pojawia się z wyrazem "Brak" po lewej stronie.  
   
-3. Usuń odwołanie utracone.  
+3. Usuń utracone odwołanie.  
   
-4. W **odwołania** okno dialogowe, zaznacz pole wyboru dla `Application` obiektu.  
+4. W oknie dialogowym **odwołania** zaznacz pole wyboru dla tego `Application` obiektu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

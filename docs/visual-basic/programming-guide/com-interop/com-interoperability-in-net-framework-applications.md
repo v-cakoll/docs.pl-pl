@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452295"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396872"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Współdziałanie COM w aplikacjach .NET Framework (Visual Basic)
 
@@ -25,8 +25,8 @@ Linki na tej stronie zawierają szczegóły dotyczące interakcji między obiekt
 
 | | |
 |---------|---------|
-| [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md) | Zawiera łącza do tematów obejmujących współdziałanie COM w Visual Basic, w tym obiekty COM, formanty ActiveX, biblioteki DLL Win32, obiekty zarządzane i dziedziczenie obiektów COM. |
+| [Międzyoperacyjność modelu COM](index.md) | Zawiera łącza do tematów obejmujących współdziałanie COM w Visual Basic, w tym obiekty COM, formanty ActiveX, biblioteki DLL Win32, obiekty zarządzane i dziedziczenie obiektów COM. |
 | [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md) | Krótki opis niektórych problemów z interakcją między zarządzanym i niezarządzanym kodem i zawiera linki do dalszych badań. |
 | [Otoki COM](../../../standard/native-interop/com-wrappers.md) | Omawia wywoływane otoki środowiska uruchomieniowego, które umożliwiają kodowi zarządzanemu wywoływanie metod COM, i możliwe do wywołania otok COM, które umożliwiają klientom COM wywoływanie metod obiektu .NET. |
 | [Zaawansowana współdziałanie COM](../../../framework/interop/index.md) | Zawiera łącza do tematów obejmujących współdziałanie modelu COM w odniesieniu do otok, wyjątków, dziedziczenia, wątkowości, zdarzeń, konwersji i organizowania. |
-| [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Omawia narzędzie, za pomocą którego można skonwertować definicje typów Znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. |
+| [Tlbimp. exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Omawia narzędzie, za pomocą którego można skonwertować definicje typów Znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. |

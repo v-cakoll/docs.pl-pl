@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie'
+title: 'Instrukcje: wyświetlanie listy wszystkich węzłów w drzewie'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: ea968298d49397f493cf0963db1214915c2e3822
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 15427ccf4701f3cd4bd1dc348f753c187571972c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336134"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396561"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (Visual Basic)
 Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne w przypadku dokładnego uczenia się, jak metoda lub właściwość wpływa na drzewo. Jednym z metod tworzenia listy wszystkich węzłów w postaci tekstowej jest wygenerowanie wyrażenia XPath, które dokładnie i szczególnie identyfikuje każdy węzeł w drzewie.  
   
- Nie jest szczególnie przydatne do wykonywania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath mają niską wydajność niż zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] są znacznie bardziej wydajne. Jednak jako sposób identyfikowania węzłów w drzewie XML, wyrażenie XPath działa prawidłowo.  
+ Nie jest szczególnie przydatne do wykonywania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Wyrażenia XPath mają niską wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie bardziej wydajne. Jednak jako sposób identyfikowania węzłów w drzewie XML, wyrażenie XPath działa prawidłowo.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje funkcję o nazwie `GetXPath`, która generuje określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksów przestrzeni nazw.  
+ Ten przykład pokazuje funkcję o nazwie `GetXPath` generującą określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksów przestrzeni nazw.  
   
  Przykład tworzy to małe drzewo XML zawierające przykład kilku typów węzłów. Następnie wykonuje iterację węzłów podrzędnych i drukuje wyrażenie XPath dla każdego węzła.  
   
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

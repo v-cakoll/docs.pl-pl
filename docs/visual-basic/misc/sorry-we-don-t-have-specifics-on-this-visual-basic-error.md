@@ -3044,35 +3044,35 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053318"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357807"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="39db9-102">Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39db9-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
-<span data-ttu-id="39db9-103">Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie.</span><span class="sxs-lookup"><span data-stu-id="39db9-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="39db9-104">Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web.</span><span class="sxs-lookup"><span data-stu-id="39db9-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="39db9-105">Możesz także zapytać innych deweloperów, korzystając z następujących forów:</span><span class="sxs-lookup"><span data-stu-id="39db9-105">Or, you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="15387-102">Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="15387-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="15387-103">Niestety, nie mamy żadnych szczegółowych informacji o tym błędzie.</span><span class="sxs-lookup"><span data-stu-id="15387-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="15387-104">Możesz wyszukać numer błędu i tekst komunikatu, aby znaleźć informacje w sieci Web.</span><span class="sxs-lookup"><span data-stu-id="15387-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="15387-105">Możesz też podawać innym deweloperom, korzystając z jednego z tych forów:</span><span class="sxs-lookup"><span data-stu-id="15387-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="39db9-106">Język Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39db9-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- <span data-ttu-id="39db9-107">Dyskusje na forum, na którym pytania na temat i ogólne składni języka Visual Basic i kompilatora.</span><span class="sxs-lookup"><span data-stu-id="39db9-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
+ [<span data-ttu-id="15387-106">Język Visual Basic</span><span class="sxs-lookup"><span data-stu-id="15387-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
+ <span data-ttu-id="15387-107">Zawiera Forum dotyczące pytań i ogólnej dyskusji na temat składni języka Visual Basic i kompilatora.</span><span class="sxs-lookup"><span data-stu-id="15387-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="39db9-108">Visual Basic Interop and Upgrade</span><span class="sxs-lookup"><span data-stu-id="39db9-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- <span data-ttu-id="39db9-109">Udostępnia forum dla pytania o i problemów z uaktualnieniem do programu Visual Basic i Praca z funkcjami współpracy.</span><span class="sxs-lookup"><span data-stu-id="39db9-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
+ [<span data-ttu-id="15387-108">Visual Basic międzyoperacyjność i uaktualnienie</span><span class="sxs-lookup"><span data-stu-id="15387-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
+ <span data-ttu-id="15387-109">Zawiera Forum dotyczące pytań i problemów związanych z uaktualnianiem do Visual Basic i pracy z funkcjami współdziałania.</span><span class="sxs-lookup"><span data-stu-id="15387-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
   
- [<span data-ttu-id="39db9-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="39db9-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- <span data-ttu-id="39db9-111">Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="39db9-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="15387-110">Środowisko Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="15387-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
+ <span data-ttu-id="15387-111">Zawiera forum z pytaniami dotyczącymi sposobu pracy w środowisku programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="15387-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="39db9-112">Visual Basic General</span><span class="sxs-lookup"><span data-stu-id="39db9-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- <span data-ttu-id="39db9-113">Udostępnia forum dla pytania o, a następnie generuje za pomocą Visual Basic, które nie są omawiane na innych forach.</span><span class="sxs-lookup"><span data-stu-id="39db9-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="15387-112">Visual Basic ogólne</span><span class="sxs-lookup"><span data-stu-id="15387-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
+ <span data-ttu-id="15387-113">Zawiera forum z pytaniami i problemami dotyczącymi Visual Basic, które nie zostały omówione na innych forach.</span><span class="sxs-lookup"><span data-stu-id="15387-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="39db9-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="39db9-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
- <span data-ttu-id="39db9-115">Udostępnia forum dla pytania o, a następnie generuje za pomocą Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="39db9-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
+ [<span data-ttu-id="15387-114">Witryna StackOverflow</span><span class="sxs-lookup"><span data-stu-id="15387-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="15387-115">Zawiera Forum dotyczące pytań i problemów dotyczących Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="15387-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
   
- <span data-ttu-id="39db9-116">Zobacz też:</span><span class="sxs-lookup"><span data-stu-id="39db9-116">Also see:</span></span>  
- [<span data-ttu-id="39db9-117">Dodatkowe zasoby dla programistów Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39db9-117">Additional Resources for Visual Basic Programmers</span></span>](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="15387-116">Zobacz również:</span><span class="sxs-lookup"><span data-stu-id="15387-116">Also see:</span></span>  
+ [<span data-ttu-id="15387-117">Zasoby dodatkowe dla programistów Visual Basic</span><span class="sxs-lookup"><span data-stu-id="15387-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="39db9-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="39db9-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15387-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="15387-118">See also</span></span>
 
-- [<span data-ttu-id="39db9-119">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39db9-119">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="39db9-120">Dokumentacja języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39db9-120">Visual Basic Reference</span></span>](../../visual-basic/reference/index.md)
+- [<span data-ttu-id="15387-119">Przewodnik programowania w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="15387-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="15387-120">Visual Basic — Odwołanie</span><span class="sxs-lookup"><span data-stu-id="15387-120">Visual Basic Reference</span></span>](../reference/index.md)

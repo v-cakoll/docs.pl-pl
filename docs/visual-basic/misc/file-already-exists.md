@@ -1,23 +1,23 @@
 ---
-title: Plik już istnieje.
+title: Plik już istnieje
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID58
 ms.assetid: 04c2811f-b164-4e46-b4f0-ee9c948adade
-ms.openlocfilehash: 2d40e29a4c03dd8483547675cfb16befdd34b8f9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e0e16aef9a3dce9759e4c400b80b1388c088fa7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610943"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411060"
 ---
-# <a name="file-already-exists"></a><span data-ttu-id="5ae37-102">Plik już istnieje.</span><span class="sxs-lookup"><span data-stu-id="5ae37-102">File already exists</span></span>
-<span data-ttu-id="5ae37-103">Ten błąd występuje w wyniku nazewnictwa nowy plik o nazwie istniejący plik lub przy użyciu **Zapisz jako** polecenie, aby zapisać aktualnie załadowanego projektu o nazwie, która już istnieje.</span><span class="sxs-lookup"><span data-stu-id="5ae37-103">This error occurs as a result of either naming a new file with the name of an existing file or using the **Save As** command to save a currently loaded project with a name that already exists.</span></span>  
+# <a name="file-already-exists"></a><span data-ttu-id="8ad81-102">Plik już istnieje</span><span class="sxs-lookup"><span data-stu-id="8ad81-102">File already exists</span></span>
+<span data-ttu-id="8ad81-103">Ten błąd występuje w wyniku zmiany nazwy nowego pliku na nazwę istniejącego pliku lub przy użyciu polecenia **Zapisz jako** , aby zapisać aktualnie załadowany projekt o nazwie, która już istnieje.</span><span class="sxs-lookup"><span data-stu-id="8ad81-103">This error occurs as a result of either naming a new file with the name of an existing file or using the **Save As** command to save a currently loaded project with a name that already exists.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5ae37-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="5ae37-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8ad81-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="8ad81-104">To correct this error</span></span>  
   
-- <span data-ttu-id="5ae37-105">Sprawdź nazwę, a następnie zmień go na jeden z nich, które nie powodują konflikt, lub usunąć istniejącego pliku lub projektu, jeśli nie jest już potrzebny.</span><span class="sxs-lookup"><span data-stu-id="5ae37-105">Check the name and either change it to one that does not conflict, or delete the pre-existing file or project if it is no longer needed.</span></span>  
+- <span data-ttu-id="8ad81-105">Sprawdź nazwę i zmień ją na taką, która nie powoduje konfliktu, lub usuń istniejący plik lub projekt, jeśli nie jest już wymagany.</span><span class="sxs-lookup"><span data-stu-id="8ad81-105">Check the name and either change it to one that does not conflict, or delete the pre-existing file or project if it is no longer needed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ae37-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5ae37-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ad81-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8ad81-106">See also</span></span>
 
-- [<span data-ttu-id="5ae37-107">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="5ae37-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="8ad81-107">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="8ad81-107">Error Types</span></span>](../programming-guide/language-features/error-types.md)

@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-ms.openlocfilehash: df7868c510eaacbad1d4421259234f4187f60cd7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a66d43d249a12ffa552073866f2e0a1e6d453608
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976217"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409945"
 ---
-# <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a><span data-ttu-id="f23e1-102">Podwójny cudzysłów nie jest prawidłowym tokenem dla rozdzielonych pól, jeżeli parametr EscapeQuote ma wartość ustawioną na True</span><span class="sxs-lookup"><span data-stu-id="f23e1-102">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>
+# <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a><span data-ttu-id="e34c5-102">Podwójny cudzysłów nie jest prawidłowym tokenem dla rozdzielonych pól, jeżeli parametr EscapeQuote ma wartość ustawioną na True</span><span class="sxs-lookup"><span data-stu-id="e34c5-102">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>
 
-<span data-ttu-id="f23e1-103">Jako ogranicznika dla `TextFieldParser`podano znak cudzysłowu, ale `EscapeQuotes` jest ustawiona na `True`.</span><span class="sxs-lookup"><span data-stu-id="f23e1-103">A quotation mark has been supplied as the delimiter for the `TextFieldParser`, but `EscapeQuotes` is set to `True`.</span></span>  
+<span data-ttu-id="e34c5-103">Znak cudzysłowu został dostarczony jako ogranicznik dla `TextFieldParser` , ale `EscapeQuotes` jest ustawiony na `True` .</span><span class="sxs-lookup"><span data-stu-id="e34c5-103">A quotation mark has been supplied as the delimiter for the `TextFieldParser`, but `EscapeQuotes` is set to `True`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f23e1-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="f23e1-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e34c5-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="e34c5-104">To correct this error</span></span>  
   
-- <span data-ttu-id="f23e1-105">Ustaw `EscapeQuotes` na `False`.</span><span class="sxs-lookup"><span data-stu-id="f23e1-105">Set `EscapeQuotes` to `False`.</span></span>  
+- <span data-ttu-id="e34c5-105">Ustaw `EscapeQuotes` wartość `False` .</span><span class="sxs-lookup"><span data-stu-id="e34c5-105">Set `EscapeQuotes` to `False`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f23e1-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f23e1-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e34c5-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e34c5-106">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>
-- [<span data-ttu-id="f23e1-107">Instrukcje: odczyt z rozdzielonych przecinkami plików testowych</span><span class="sxs-lookup"><span data-stu-id="f23e1-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [<span data-ttu-id="e34c5-107">Instrukcje: Odczyt z rozdzielonych przecinkami plików testowych</span><span class="sxs-lookup"><span data-stu-id="e34c5-107">How to: Read From Comma-Delimited Text Files</span></span>](../../developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

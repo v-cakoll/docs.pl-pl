@@ -1,25 +1,25 @@
 ---
-title: Stop — instrukcja napotkano
+title: Napotkano instrukcję Stop
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-ms.openlocfilehash: 32c7b9b18ca35f199ded45f650a72bfbb8434217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fb378253c9840d480b6932758e8cd3c029b8b8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594714"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84361063"
 ---
-# <a name="stop-statement-encountered"></a><span data-ttu-id="a74dd-102">Stop — instrukcja napotkano</span><span class="sxs-lookup"><span data-stu-id="a74dd-102">Stop statement encountered</span></span>
-<span data-ttu-id="a74dd-103">A `Stop` instrukcji, co wstrzymuje wykonywanie, napotkano.</span><span class="sxs-lookup"><span data-stu-id="a74dd-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  
+# <a name="stop-statement-encountered"></a><span data-ttu-id="702de-102">Napotkano instrukcję Stop</span><span class="sxs-lookup"><span data-stu-id="702de-102">Stop statement encountered</span></span>
+<span data-ttu-id="702de-103">`Stop`Napotkano instrukcję, która wstrzymuje wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="702de-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a74dd-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="a74dd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="702de-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="702de-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="a74dd-105">Usuń `Stop` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="a74dd-105">Remove the `Stop` statement.</span></span>  
+1. <span data-ttu-id="702de-105">Usuń `Stop` instrukcję.</span><span class="sxs-lookup"><span data-stu-id="702de-105">Remove the `Stop` statement.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a74dd-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a74dd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="702de-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="702de-106">See also</span></span>
 
-- [<span data-ttu-id="a74dd-107">Stop, instrukcja</span><span class="sxs-lookup"><span data-stu-id="a74dd-107">Stop Statement</span></span>](../../visual-basic/language-reference/statements/stop-statement.md)
-- [<span data-ttu-id="a74dd-108">Przepływ sterowania — podsumowanie</span><span class="sxs-lookup"><span data-stu-id="a74dd-108">Control Flow Summary</span></span>](../../visual-basic/language-reference/keywords/control-flow-summary.md)
-- [<span data-ttu-id="a74dd-109">Instrukcje „Stop” w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a74dd-109">Stop Statements in Visual Basic</span></span>](/visualstudio/debugger/stop-statements-in-visual-basic)
+- [<span data-ttu-id="702de-107">Stop, instrukcja</span><span class="sxs-lookup"><span data-stu-id="702de-107">Stop Statement</span></span>](../language-reference/statements/stop-statement.md)
+- [<span data-ttu-id="702de-108">Przepływ sterowania — podsumowanie</span><span class="sxs-lookup"><span data-stu-id="702de-108">Control Flow Summary</span></span>](../language-reference/keywords/control-flow-summary.md)
+- [<span data-ttu-id="702de-109">Instrukcje stop w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="702de-109">Stop Statements in Visual Basic</span></span>](/visualstudio/debugger/stop-statements-in-visual-basic)

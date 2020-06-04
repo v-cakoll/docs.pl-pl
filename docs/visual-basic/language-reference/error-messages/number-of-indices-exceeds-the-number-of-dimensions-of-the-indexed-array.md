@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 76cf0a997e9ad36ab4b5dfdc7c4bc29c57d309eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d8ffd2c4ad0a386053ced0f98503969723c7168
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665691"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409377"
 ---
-# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="92832-102">Liczba indeksów przekracza liczbę wymiarów tablicy indeksowanej</span><span class="sxs-lookup"><span data-stu-id="92832-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
-<span data-ttu-id="92832-103">Liczba indeksów, które umożliwiają dostęp do elementu tablicy musi być dokładnie taki sam jak rangę tablicy, czyli liczbę wymiarów zadeklarowany dla niego.</span><span class="sxs-lookup"><span data-stu-id="92832-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="556d3-102">Liczba indeksów przekracza liczbę wymiarów tablicy indeksowanej</span><span class="sxs-lookup"><span data-stu-id="556d3-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
+<span data-ttu-id="556d3-103">Liczba indeksów używanych w celu uzyskania dostępu do elementu tablicy musi być dokładnie taka sama jak ranga tablicy, czyli liczba dla nich wymiarów.</span><span class="sxs-lookup"><span data-stu-id="556d3-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
   
- <span data-ttu-id="92832-104">**Identyfikator błędu:** BC30106</span><span class="sxs-lookup"><span data-stu-id="92832-104">**Error ID:** BC30106</span></span>  
+ <span data-ttu-id="556d3-104">**Identyfikator błędu:** BC30106</span><span class="sxs-lookup"><span data-stu-id="556d3-104">**Error ID:** BC30106</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="92832-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="92832-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="556d3-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="556d3-105">To correct this error</span></span>  
   
-- <span data-ttu-id="92832-106">Usuń indeksy dolne z odwołaniem do tablicy, aż łączna liczba indeksów dolnych jest równa rangę tablicy.</span><span class="sxs-lookup"><span data-stu-id="92832-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="92832-107">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="92832-107">For example:</span></span>  
+- <span data-ttu-id="556d3-106">Usuń indeksy dolne z odwołania do tablicy do momentu, aż całkowita liczba indeksów jest równa rangi tablicy.</span><span class="sxs-lookup"><span data-stu-id="556d3-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="556d3-107">Przykład:</span><span class="sxs-lookup"><span data-stu-id="556d3-107">For example:</span></span>  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,6 +35,6 @@ ms.locfileid: "64665691"
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="92832-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="92832-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="556d3-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="556d3-108">See also</span></span>
 
-- [<span data-ttu-id="92832-109">Tablice</span><span class="sxs-lookup"><span data-stu-id="92832-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="556d3-109">Tablice</span><span class="sxs-lookup"><span data-stu-id="556d3-109">Arrays</span></span>](../../programming-guide/language-features/arrays/index.md)

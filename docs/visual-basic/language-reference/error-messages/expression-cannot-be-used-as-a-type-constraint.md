@@ -7,44 +7,44 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2ba411a5f0db21539a9cf99c7645b8c9309caab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642805"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409559"
 ---
-# <a name="expression-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="815fe-102">"\<wyrażenia >" nie można użyć jako ograniczenia typu</span><span class="sxs-lookup"><span data-stu-id="815fe-102">'\<expression>' cannot be used as a type constraint</span></span>
-<span data-ttu-id="815fe-103">Lista ograniczeń zawiera wyrażenie, które nie stanowi prawidłowe ograniczenie dotyczące parametru typu.</span><span class="sxs-lookup"><span data-stu-id="815fe-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="f34dd-102">Elementu „\<expression>” nie można użyć jako ograniczenia typu</span><span class="sxs-lookup"><span data-stu-id="f34dd-102">'\<expression>' cannot be used as a type constraint</span></span>
+<span data-ttu-id="f34dd-103">Lista ograniczeń zawiera wyrażenie, które nie reprezentuje prawidłowego ograniczenia w parametrze typu.</span><span class="sxs-lookup"><span data-stu-id="f34dd-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- <span data-ttu-id="815fe-104">Lista ograniczeń nakłada się na typ argumentu przekazanego do parametru typu wymagania.</span><span class="sxs-lookup"><span data-stu-id="815fe-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="815fe-105">W dowolnej kombinacji, należy określić następujące wymagania:</span><span class="sxs-lookup"><span data-stu-id="815fe-105">You can specify the following requirements in any combination:</span></span>  
+ <span data-ttu-id="f34dd-104">Lista ograniczeń nakłada wymagania dotyczące argumentu typu przekazaną do parametru typu.</span><span class="sxs-lookup"><span data-stu-id="f34dd-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="f34dd-105">W dowolnej kombinacji można określić następujące wymagania:</span><span class="sxs-lookup"><span data-stu-id="f34dd-105">You can specify the following requirements in any combination:</span></span>  
   
-- <span data-ttu-id="815fe-106">Argument typu musi implementować jeden lub więcej interfejsów</span><span class="sxs-lookup"><span data-stu-id="815fe-106">The type argument must implement one or more interfaces</span></span>  
+- <span data-ttu-id="f34dd-106">Argument typu musi implementować jeden lub więcej interfejsów</span><span class="sxs-lookup"><span data-stu-id="f34dd-106">The type argument must implement one or more interfaces</span></span>  
   
-- <span data-ttu-id="815fe-107">Argument typu musi dziedziczyć z co najwyżej jednej klasy</span><span class="sxs-lookup"><span data-stu-id="815fe-107">The type argument must inherit from at most one class</span></span>  
+- <span data-ttu-id="f34dd-107">Argument typu musi dziedziczyć z co najwyżej jednej klasy</span><span class="sxs-lookup"><span data-stu-id="f34dd-107">The type argument must inherit from at most one class</span></span>  
   
-- <span data-ttu-id="815fe-108">Argument typu musi ujawniać konstruktor bez parametrów, które mogą uzyskiwać dostęp do tworzenia kodu (obejmują `New` ograniczenia)</span><span class="sxs-lookup"><span data-stu-id="815fe-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
+- <span data-ttu-id="f34dd-108">Argument typu musi ujawniać Konstruktor bez parametrów, który może uzyskać dostęp do kodu (Uwzględnij `New` ograniczenie)</span><span class="sxs-lookup"><span data-stu-id="f34dd-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- <span data-ttu-id="815fe-109">Jeśli w lista ograniczeń nie zawiera żadnych konkretną klasę lub interfejs, można skonfigurować bardziej ogólnych wymagań, określając jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="815fe-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
+ <span data-ttu-id="f34dd-109">Jeśli na liście ograniczeń nie dołączysz żadnej konkretnej klasy lub interfejsu, możesz wprowadzić bardziej ogólne wymagania, określając jedną z następujących opcji:</span><span class="sxs-lookup"><span data-stu-id="f34dd-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
-- <span data-ttu-id="815fe-110">Argument typu musi być typem wartości (obejmują `Structure` ograniczenia)</span><span class="sxs-lookup"><span data-stu-id="815fe-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
+- <span data-ttu-id="f34dd-110">Argument typu musi być typem wartości (Uwzględnij `Structure` ograniczenie)</span><span class="sxs-lookup"><span data-stu-id="f34dd-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
-- <span data-ttu-id="815fe-111">Argument typu musi być typem referencyjnym (obejmują `Class` ograniczenia)</span><span class="sxs-lookup"><span data-stu-id="815fe-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
+- <span data-ttu-id="f34dd-111">Argument typu musi być typem referencyjnym (Uwzględnij `Class` ograniczenie)</span><span class="sxs-lookup"><span data-stu-id="f34dd-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- <span data-ttu-id="815fe-112">Nie można określić zarówno `Structure` i `Class` dla tego samego typu parametru, a nie można określić jeden więcej niż jeden raz.</span><span class="sxs-lookup"><span data-stu-id="815fe-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
+ <span data-ttu-id="f34dd-112">Nie można określić jednocześnie `Structure` i `Class` dla tego samego parametru typu. nie można określić jednego więcej niż raz.</span><span class="sxs-lookup"><span data-stu-id="f34dd-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- <span data-ttu-id="815fe-113">**Identyfikator błędu:** BC32061</span><span class="sxs-lookup"><span data-stu-id="815fe-113">**Error ID:** BC32061</span></span>  
+ <span data-ttu-id="f34dd-113">**Identyfikator błędu:** BC32061</span><span class="sxs-lookup"><span data-stu-id="f34dd-113">**Error ID:** BC32061</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="815fe-114">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="815fe-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f34dd-114">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="f34dd-114">To correct this error</span></span>  
   
-- <span data-ttu-id="815fe-115">Upewnij się, że wyrażenie i jego elementy są poprawne.</span><span class="sxs-lookup"><span data-stu-id="815fe-115">Verify that the expression and its elements are spelled correctly.</span></span>  
+- <span data-ttu-id="f34dd-115">Sprawdź, czy wyrażenie i jego elementy są poprawnie napisane.</span><span class="sxs-lookup"><span data-stu-id="f34dd-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
-- <span data-ttu-id="815fe-116">Jeśli wyrażenie nie kwalifikują się do powyższej listy wymagań, należy go usunąć z listy ograniczeń.</span><span class="sxs-lookup"><span data-stu-id="815fe-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
+- <span data-ttu-id="f34dd-116">Jeśli wyrażenie nie kwalifikuje się do powyższej listy wymagań, usuń je z listy ograniczeń.</span><span class="sxs-lookup"><span data-stu-id="f34dd-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
-- <span data-ttu-id="815fe-117">Wyrażenie odwołuje się do interfejsu lub klasy, sprawdź, czy kompilator ma dostęp do tego interfejsu lub klasy.</span><span class="sxs-lookup"><span data-stu-id="815fe-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="815fe-118">Może być konieczne jego nazwy i może być konieczne dodać odwołanie do projektu.</span><span class="sxs-lookup"><span data-stu-id="815fe-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="815fe-119">Aby uzyskać więcej informacji, zobacz "Odwołania do projektów" w [odwołania do elementów zadeklarowany](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="815fe-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
+- <span data-ttu-id="f34dd-117">Jeśli wyrażenie odwołuje się do interfejsu lub klasy, należy sprawdzić, czy kompilator ma dostęp do tego interfejsu lub klasy.</span><span class="sxs-lookup"><span data-stu-id="f34dd-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="f34dd-118">Może być konieczne zakwalifikowanie nazwy i może być konieczne dodanie odwołania do projektu.</span><span class="sxs-lookup"><span data-stu-id="f34dd-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="f34dd-119">Aby uzyskać więcej informacji, zobacz "odwołania do projektów" w [odwołaniach do zadeklarowanych elementów](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="f34dd-119">For more information, see "References to Projects" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="815fe-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="815fe-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f34dd-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f34dd-120">See also</span></span>
 
-- [<span data-ttu-id="815fe-121">Typy ogólne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="815fe-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="815fe-122">Typy wartości i odwołań</span><span class="sxs-lookup"><span data-stu-id="815fe-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [<span data-ttu-id="815fe-123">Odwołania do elementów zadeklarowanych</span><span class="sxs-lookup"><span data-stu-id="815fe-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="f34dd-121">Typy ogólne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f34dd-121">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="f34dd-122">Typy wartości i odwołań</span><span class="sxs-lookup"><span data-stu-id="f34dd-122">Value Types and Reference Types</span></span>](../../programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="f34dd-123">Odwołania do elementów zadeklarowanych</span><span class="sxs-lookup"><span data-stu-id="f34dd-123">References to Declared Elements</span></span>](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

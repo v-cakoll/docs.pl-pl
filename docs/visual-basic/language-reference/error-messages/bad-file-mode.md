@@ -4,37 +4,37 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 9a59faf1b6f845858e36efcabdf0758e41ad75dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 534ea2d8316dc29cace798c5ad9b7697a290026f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619746"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409872"
 ---
 # <a name="bad-file-mode"></a>Zły tryb pliku
-Instrukcje używane w manipulowanie zawartością pliku musi być zgodna z trybem, w którym plik został otwarty. Możliwe przyczyny:  
+Instrukcje używane podczas manipulowania zawartością pliku muszą być odpowiednie dla trybu, w którym plik został otwarty. Możliwe przyczyny są następujące:  
   
-- A `FilePutObject` lub `FileGetObject` instrukcja Określa kolejny plik.  
+- `FilePutObject`Instrukcja or `FileGetObject` określa sekwencyjny plik.  
   
-- A `Print` instrukcja Określa plik, który został otwarty w trybie dostępu innych niż `Output` lub `Append`.  
+- `Print`Instrukcja Określa plik otwarty dla trybu dostępu innego niż `Output` lub `Append` .  
   
-- `Input` Instrukcja Określa plik, który został otwarty inny niż tryb dostępu `Input`  
+- `Input`Instrukcja Określa plik otwarty dla trybu dostępu innego niż`Input`  
   
-- Próba zapisu do plików tylko do odczytu.  
+- Próba zapisu w pliku tylko do odczytu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Upewnij się, że `FilePutObject` i `FileGetObject` odnoszą się tylko do plików otwartych do `Random` lub `Binary` dostępu.  
+- Upewnij się `FilePutObject` , że `FileGetObject` odwołują się tylko do plików otwartych dla programu `Random` lub `Binary` .  
   
-- Upewnij się, że `Print` Określa plik, który został otwarty albo `Output` lub `Append` tryb dostępu. W przeciwnym razie użyj innej instrukcji, aby umieścić dane w pliku, lub ponownie otworzyć plik w odpowiedni tryb.  
+- Upewnij się, że `Print` określony plik jest otwarty w `Output` trybie obu lub `Append` dostępu. Jeśli nie, użyj innej instrukcji, aby umieścić dane w pliku, lub Otwórz ponownie plik w odpowiednim trybie.  
   
-- Upewnij się, że `Input` Określa plik, który został otwarty `Input`. W przeciwnym razie użyj innej instrukcji, aby umieścić dane w pliku lub ponownie otworzyć plik w odpowiedni tryb.  
+- Upewnij się `Input` , że wybrano plik otwarty dla programu `Input` . Jeśli nie, użyj innej instrukcji, aby umieścić dane w pliku, lub Otwórz ponownie plik w odpowiednim trybie.  
   
-- Jeśli piszesz w pliku tylko do odczytu, Zmień stan odczytu/zapisu pliku lub nie należy próbować zapisanie w nim.  
+- Jeśli zapisujesz do pliku tylko do odczytu, Zmień stan odczytu/zapisu pliku lub nie próbuj zapisywać do niego.  
   
-- Użyj funkcji dostępnych w `My.Computer.FileSystem` obiektu.  
+- Użyj funkcji dostępnych w `My.Computer.FileSystem` obiekcie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [Rozwiązywanie problemów: Odczytywanie z oraz zapisywanie w plikach tekstowych](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Rozwiązywanie problemów: Odczytywanie z plików tekstowych oraz zapisywanie w nich](../../developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

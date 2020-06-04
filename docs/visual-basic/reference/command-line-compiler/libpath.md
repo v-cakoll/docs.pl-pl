@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716638"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408552"
 ---
 # <a name="-libpath"></a>-libpath
 Określa lokalizację przywoływanych zestawów.  
@@ -29,7 +29,7 @@ Określa lokalizację przywoływanych zestawów.
 |`dirList`|Wymagany. Rozdzielana średnikami lista katalogów, które mają być używane przez kompilator, jeśli zestaw, do którego się odwoływano, nie został znaleziony w bieżącym katalogu roboczym (katalog, z którego prowadzisz kompilator) lub katalog systemowy środowiska uruchomieniowego języka wspólnego. Jeśli nazwa katalogu zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- `-libpath` Opcja określa lokalizację zestawów, do których odwołuje się opcja [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
+ `-libpath`Opcja określa lokalizację zestawów, do których odwołuje się opcja [-Reference](reference.md) .  
   
  Kompilator wyszukuje odwołania do zestawów, które nie są w pełni kwalifikowane w następującej kolejności:  
   
@@ -37,11 +37,11 @@ Określa lokalizację przywoływanych zestawów.
   
 2. Katalog systemowy środowiska uruchomieniowego języka wspólnego.  
   
-3. Katalogi określone przez `-libpath`.  
+3. Katalogi określone przez `-libpath` .  
   
 4. Katalogi określone przez zmienną środowiskową LIB.  
   
- `-libpath` Opcja jest dodatkiem; określenie go więcej niż raz dołącza do dowolnych wcześniejszych wartości.  
+ `-libpath`Opcja jest dodatkiem; określenie, że więcej niż raz dołącza do poprzednich wartości.  
   
  Użyj `-reference` , aby określić odwołanie do zestawu.  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>Zobacz też
 
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

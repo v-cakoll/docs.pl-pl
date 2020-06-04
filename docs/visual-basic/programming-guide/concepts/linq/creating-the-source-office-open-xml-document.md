@@ -2,12 +2,12 @@
 title: Tworzenie źródłowego dokumentu Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9f44c8d0f4080224c461736fdbdf3acd854e4a89
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346415"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410841"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, który jest używany przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne z danymi wyjściowymi podanymi w każdym przykładzie.  
@@ -44,15 +44,15 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
   
 3. Sformatuj pierwszy wiersz za pomocą stylu "Nagłówek 1".  
   
-4. Wybierz wiersze, które zawierają kod Visual Basic. Pierwszy wiersz rozpoczyna się od słowa kluczowego `Imports`. Ostatnim wierszem jest "End Class". Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".  
+4. Wybierz wiersze, które zawierają kod Visual Basic. Pierwszy wiersz rozpoczyna się od `Imports` słowa kluczowego. Ostatnim wierszem jest "End Class". Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".  
   
-5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu stylu `Code`.  
+5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu `Code` stylu.  
   
 6. Zapisz dokument i nadaj mu nazwę SampleDoc. docx.  
   
     > [!NOTE]
     > Jeśli używasz programu Microsoft Word 2003, wybierz pozycję **dokument programu Word 2007** na liście rozwijanej **Zapisz jako typ** .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

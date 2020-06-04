@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 1aa1edf0130e388c6cc87662d83591f41a8e2325
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349161"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398245"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 
@@ -40,13 +40,13 @@ Gdy użytkownik robi coś w formularzu lub jednej z jego kontrolek, generuje zda
 
 Windows Forms zawiera różne kontrolki, które można umieścić w formularzach: kontrolki, które wyświetlają pola tekstowe, przyciski, pola rozwijane, przyciski radiowe i nawet strony sieci Web. Aby uzyskać listę wszystkich kontrolek, których można użyć na formularzu, zobacz [kontrolki do użycia na Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Jeśli istniejący formant nie spełnia Twoich potrzeb, Windows Forms również obsługuje tworzenie własnych niestandardowych formantów przy użyciu <xref:System.Windows.Forms.UserControl> klasy.
 
-Windows Forms ma rozbudowane kontrolki interfejsu użytkownika, które emulują funkcje aplikacji wysokiej klasy, takich jak Microsoft Office. Za pomocą <xref:System.Windows.Forms.ToolStrip> kontrolki i <xref:System.Windows.Forms.MenuStrip> można tworzyć paski narzędzi i menu, które zawierają tekst i obrazy, wyświetlać podmenu i hostować inne kontrolki, takie jak pola tekstowe i pola kombi.
+Windows Forms ma rozbudowane kontrolki interfejsu użytkownika, które emulują funkcje aplikacji wysokiej klasy, takich jak Microsoft Office. Za pomocą <xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.MenuStrip> kontrolki i można tworzyć paski narzędzi i menu, które zawierają tekst i obrazy, wyświetlać podmenu i hostować inne kontrolki, takie jak pola tekstowe i pola kombi.
 
-Za pomocą narzędzia do przeciągania i upuszczania formularzy programu Visual Studio możesz łatwo tworzyć Windows Forms aplikacje: po prostu wybierz kontrolki z kursorem i umieść je w dowolnym miejscu w formularzu. Projektant udostępnia narzędzia takie jak linie siatki i "Przyciągaj linie", aby zastanowić się, że nie można dostosować formantów. Niezależnie od tego <xref:System.Windows.Forms.FlowLayoutPanel>, czy używasz programu Visual Studio, <xref:System.Windows.Forms.TableLayoutPanel> czy kompilować w wierszu polecenia, można użyć formantów <xref:System.Windows.Forms.SplitContainer> i do tworzenia zaawansowanych układów formularzy przy minimalnym czasie i wysiłku.
+Za pomocą narzędzia do przeciągania i upuszczania formularzy programu Visual Studio możesz łatwo tworzyć Windows Forms aplikacje: po prostu wybierz kontrolki z kursorem i umieść je w dowolnym miejscu w formularzu. Projektant udostępnia narzędzia takie jak linie siatki i "Przyciągaj linie", aby zastanowić się, że nie można dostosować formantów. Niezależnie od tego, czy używasz programu Visual Studio, czy kompilować w wierszu polecenia, można <xref:System.Windows.Forms.FlowLayoutPanel> użyć <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.SplitContainer> formantów i do tworzenia zaawansowanych układów formularzy przy minimalnym czasie i wysiłku.
 
 ### <a name="custom-ui-elements"></a>Niestandardowe elementy interfejsu użytkownika
 
-Na <xref:System.Drawing> koniec, jeśli trzeba utworzyć własne niestandardowe elementy interfejsu użytkownika, przestrzeń nazw zawiera wszystkie klasy potrzebne do renderowania linii, okręgów i innych kształtów bezpośrednio w formularzu.
+Na koniec, jeśli trzeba utworzyć własne niestandardowe elementy interfejsu użytkownika, <xref:System.Drawing> przestrzeń nazw zawiera wszystkie klasy potrzebne do renderowania linii, okręgów i innych kształtów bezpośrednio w formularzu.
 
 Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć w następujących tematach pomocy.
 
@@ -59,9 +59,9 @@ Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć 
 
 ## <a name="displaying-and-manipulating-data"></a>Wyświetlanie i manipulowanie danymi
 
-Wiele aplikacji musi wyświetlać dane z bazy danych, pliku XML, usługi sieci Web XML lub innego źródła danych. Windows Forms zapewnia elastyczną kontrolę nazywaną <xref:System.Windows.Forms.DataGridView> formantem do renderowania takich danych tabelarycznych w tradycyjnym formacie wiersza i kolumny, tak aby każda część danych zajmowała swoją własną komórkę. Za <xref:System.Windows.Forms.DataGridView> pomocą można dostosować wygląd poszczególnych komórek, zablokować dowolne wiersze i kolumny w miejscu oraz wyświetlać złożone kontrolki wewnątrz komórek, między innymi.
+Wiele aplikacji musi wyświetlać dane z bazy danych, pliku XML, usługi sieci Web XML lub innego źródła danych. Windows Forms zapewnia elastyczną kontrolę nazywaną <xref:System.Windows.Forms.DataGridView> formantem do renderowania takich danych tabelarycznych w tradycyjnym formacie wiersza i kolumny, tak aby każda część danych zajmowała swoją własną komórkę. Za pomocą można <xref:System.Windows.Forms.DataGridView> dostosować wygląd poszczególnych komórek, zablokować dowolne wiersze i kolumny w miejscu oraz wyświetlać złożone kontrolki wewnątrz komórek, między innymi.
 
-Łączenie ze źródłami danych za pośrednictwem sieci to proste zadanie z Windows Forms inteligentnymi klientami. <xref:System.Windows.Forms.BindingSource> Składnik, nowy z Windows Forms w programie Visual Studio 2005 i .NET Framework 2,0, reprezentuje połączenie ze źródłem danych i udostępnia metody wiązania danych z kontrolkami, nawigowanie do poprzednich i następnych rekordów, edytowanie rekordów i zapisywanie zmian z powrotem do oryginalnego źródła. <xref:System.Windows.Forms.BindingNavigator> Kontrolka udostępnia prosty interfejs dla składnika, <xref:System.Windows.Forms.BindingSource> dla którego użytkownicy mogą przechodzić między rekordami.
+Łączenie ze źródłami danych za pośrednictwem sieci to proste zadanie z Windows Forms inteligentnymi klientami. <xref:System.Windows.Forms.BindingSource>Składnik, nowy z Windows Forms w programie Visual Studio 2005 i .NET Framework 2,0, reprezentuje połączenie ze źródłem danych i udostępnia metody wiązania danych z kontrolkami, nawigowanie do poprzednich i następnych rekordów, edytowanie rekordów i zapisywanie zmian z powrotem do oryginalnego źródła. <xref:System.Windows.Forms.BindingNavigator>Kontrolka udostępnia prosty interfejs <xref:System.Windows.Forms.BindingSource> dla składnika, dla którego użytkownicy mogą przechodzić między rekordami.
 
 ### <a name="data-bound-controls"></a>Formanty powiązane z danymi
 
@@ -110,4 +110,4 @@ Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć 
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - [Formularze systemu Windows — Omówienie](../../../framework/winforms/windows-forms-overview.md)
-- [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms — Obiekt](../../language-reference/objects/my-forms-object.md)

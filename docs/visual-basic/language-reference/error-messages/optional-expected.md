@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 411e3248409ab0184666f4efefb4ec4becf7cab1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946591"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409351"
 ---
 # <a name="optional-expected"></a>Oczekiwano instrukcji „Optional”
-Opcjonalny argument w deklaracji procedury następuje wymaganego argumentu. Każdy argument po opcjonalnym również musi być opcjonalny.  
+Po argumencie opcjonalnym w deklaracji procedury występuje wymagany argument. Każdy argument po opcjonalnym argumencie musi być również opcjonalny.  
   
  **Identyfikator błędu:** BC30202  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Jeśli argument ma być wymagane, przenieś go poprzedzać pierwszy argument opcjonalne na liście argumentów.  
+1. Jeśli argument jest wymagany, przenieś go, aby poprzedzał pierwszy opcjonalny argument na liście argumentów.  
   
-2. Jeśli argument jest opcjonalny, użyj `Optional` — słowo kluczowe.  
+2. Jeśli argument jest zamierzony jako opcjonalny, użyj `Optional` słowa kluczowego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Parametry opcjonalne](../../programming-guide/language-features/procedures/optional-parameters.md)

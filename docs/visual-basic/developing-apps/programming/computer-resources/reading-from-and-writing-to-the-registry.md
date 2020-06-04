@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349762"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360062"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru (Visual Basic)
 
@@ -21,19 +21,19 @@ W tym temacie opisano tematy dotyczące zadań i pojęć, które są skojarzone 
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Instrukcje: tworzenie klucza rejestru i określanie jego wartości](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- Opisuje sposób użycia metod `CreateSubKey` i `SetValue` `My.Computer.Registry` obiektu do utworzenia klucza rejestru i ustawienia jego wartości.  
+ [Instrukcje: tworzenie klucza rejestru i określanie jego wartości](how-to-create-a-registry-key-and-set-its-value.md)  
+ Opisuje sposób użycia `CreateSubKey` `SetValue` metod i `My.Computer.Registry` obiektu do utworzenia klucza rejestru i ustawienia jego wartości.  
   
- [Instrukcje: odczytywanie wartości z klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ [Instrukcje: odczytywanie wartości z klucza rejestru](how-to-read-a-value-from-a-registry-key.md)  
  Opisuje sposób użycia `GetValue` metody `My.Computer.Registry` obiektu do odczytania wartości z klucza rejestru.  
   
- [Instrukcje: usuwanie klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [Instrukcje: usuwanie klucza rejestru](how-to-delete-a-registry-key.md)  
  Opisuje sposób użycia `DeleteSubKey` metody `My.Computer.Registry.CurrentUser` właściwości w celu usunięcia klucza rejestru.  
   
- [Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Opisuje sposób używania klas `Registry` i `RegistryKey` .NET Framework, aby uzyskać dostęp do rejestru.  
+ [Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ Opisuje sposób używania `Registry` `RegistryKey` klas i .NET Framework, aby uzyskać dostęp do rejestru.  
   
- [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ [Bezpieczeństwo i rejestr](security-and-the-registry.md)  
  Omawia problemy z zabezpieczeniami związane z rejestrem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

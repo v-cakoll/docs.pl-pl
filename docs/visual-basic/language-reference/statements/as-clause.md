@@ -8,62 +8,62 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350177"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408461"
 ---
 # <a name="as-clause-visual-basic"></a>As — Klauzula (Visual Basic)
-Wprowadza klauzulę `As`, która identyfikuje typ danych w instrukcji deklaracji lub listę ograniczeń dla parametru typu ogólnego.  
+Wprowadza `As` klauzulę, która identyfikuje typ danych w instrukcji deklaracji lub listę ograniczeń dla parametru typu ogólnego.  
   
 ## <a name="remarks"></a>Uwagi  
- Słowa kluczowego `As` można użyć w tych kontekstach:  
+ `As`Słowo kluczowe może być używane w tych kontekstach:  
   
- [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate, klauzula](../queries/aggregate-clause.md)  
   
- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class, instrukcja](class-statement.md)  
   
- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const, instrukcja](const-statement.md)  
   
- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare — Instrukcja](declare-statement.md)  
   
- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate — Instrukcja](delegate-statement.md)  
   
- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim, instrukcja](dim-statement.md)  
   
- [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum, instrukcja](enum-statement.md)  
   
- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event — Instrukcja](event-statement.md)  
   
- [Dla... Następne instrukcje](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Dla... Następne instrukcje](for-next-statement.md)  
   
- [For each... Następne instrukcje](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For each... Następne instrukcje](for-each-next-statement.md)  
   
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Klauzula from](../queries/from-clause.md)  
   
- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](function-statement.md)  
   
- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join. klauzula](../queries/group-join-clause.md)  
   
- [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface, instrukcja](interface-statement.md)  
   
- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator — Instrukcja](operator-statement.md)  
   
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property — Instrukcja](property-statement.md)  
   
- [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure — Instrukcja](structure-statement.md)  
   
- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](sub-statement.md)  
   
- [Spróbuj... Catch... Finally — instrukcje](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Spróbuj... Catch... Finally — instrukcje](try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: tworzenie nowej zmiennej](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Typy danych](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
-- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+- [Porady: tworzenie nowej zmiennej](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Typy danych](../../programming-guide/language-features/data-types/index.md)
+- [Deklaracja zmiennej](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Lista typów](type-list.md)
+- [Typy ogólne w Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Słowa kluczowe](../keywords/index.md)

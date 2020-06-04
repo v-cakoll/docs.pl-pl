@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 63eaf97016db259870eb77199651ecbdc5f809c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4bf832651d9753c41ee5a02defec4adc55af1ff1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350433"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359764"
 ---
 # <a name="let-clause-visual-basic"></a>Let — Klauzula (Visual Basic)
 Oblicza wartość i przypisuje ją do nowej zmiennej w zapytaniu.  
@@ -32,19 +32,19 @@ Let variable = expression [, ...]
 |`expression`|Wymagany. Wyrażenie, które zostanie obliczone i przypisane do określonej zmiennej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klauzula `Let` umożliwia obliczanie wartości dla każdego wyniku zapytania i odwoływanie się do nich za pomocą aliasu. Alias może być używany w innych klauzulach, takich jak klauzula `Where`. Klauzula `Let` umożliwia utworzenie instrukcji zapytania, która jest łatwiejsza do odczytania, ponieważ można określić alias dla klauzuli Expression zawartej w zapytaniu i zastąpić alias za każdym razem, gdy zostanie użyta klauzula wyrażenia.  
+ `Let`Klauzula umożliwia obliczanie wartości dla każdego wyniku zapytania i odwoływanie się do nich za pomocą aliasu. Alias może być używany w innych klauzulach, takich jak `Where` klauzula. `Let`Klauzula umożliwia utworzenie instrukcji zapytania, która jest łatwiejsza do odczytania, ponieważ można określić alias dla klauzuli Expression zawartej w zapytaniu i zastąpić alias za każdym razem, gdy używana jest klauzula wyrażenia.  
   
- W klauzuli `Let` można uwzględnić dowolną liczbę `variable` i `expression` przypisania. Każde przypisanie należy oddzielić przecinkami (,).  
+ W klauzuli można uwzględnić dowolną liczbę `variable` i `expression` przypisania `Let` . Każde przypisanie należy oddzielić przecinkami (,).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu używa klauzuli `Let`, aby obliczyć rabat 10% na produkty.  
+ Poniższy przykład kodu używa klauzuli, `Let` Aby obliczyć rabat 10% dla produktów.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
-- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](index.md)
+- [SELECT — klauzula](select-clause.md)
+- [Klauzula from](from-clause.md)
+- [Klauzula WHERE](where-clause.md)

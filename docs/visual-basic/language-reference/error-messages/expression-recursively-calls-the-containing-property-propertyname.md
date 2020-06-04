@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698564"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409533"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Wyrażenie cyklicznie wywołuje zawierającą właściwość "\<propertyname >"
-Instrukcja w procedurze `Set` definicji właściwości przechowuje wartość w nazwie właściwości.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Wyrażenie cyklicznie wywołuje zawierającą właściwość „\<propertyname>”
+Instrukcja w `Set` procedurze definicji właściwości przechowuje wartość w nazwie właściwości.  
   
- Zalecanym podejściem do przechowywania wartości właściwości jest Definiowanie zmiennej `Private` w kontenerze właściwości i użycie jej w procedurach `Get` i `Set`. Procedura `Set` powinna następnie przechowywać wartość przychodzącą w tej zmiennej `Private`.  
+ Zalecanym podejściem do przechowywania wartości właściwości jest definiowanie `Private` zmiennej w kontenerze właściwości i użycie jej w `Get` `Set` procedurach i. `Set`Procedura powinna następnie przechowywać wartość przychodzącą w tej `Private` zmiennej.  
   
- Procedura `Get` zachowuje się jak procedura `Function`, więc może przypisywać wartości do nazwy właściwości i kontroli powrotu przez napotkanie instrukcji `End Get`. Zalecanym podejściem jest jednak uwzględnienie zmiennej `Private` jako wartości w [instrukcji return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ `Get`Procedura zachowuje się jak `Function` procedura, dlatego może przypisywać wartości do nazwy właściwości i kontroli powrotu przez napotkanie `End Get` instrukcji. Zalecanym podejściem jest jednak uwzględnienie `Private` zmiennej jako wartości w [instrukcji return](../statements/return-statement.md).  
   
- Procedura `Set` zachowuje się jak procedura `Sub`, która nie zwraca wartości. W związku z tym, nazwa procedury lub właściwości nie ma specjalnego znaczenia w ramach procedury `Set` i nie można zapisać w niej wartości.  
+ `Set`Procedura zachowuje się jak `Sub` procedura, która nie zwraca wartości. W związku z tym, procedura lub nazwa właściwości nie ma specjalnego znaczenia w ramach `Set` procedury i nie można zapisać w niej wartości.  
   
  Poniższy przykład ilustruje podejście, które może spowodować wystąpienie tego błędu, a następnie zalecane podejście.  
   
@@ -63,8 +63,8 @@ End Class
   
 - Zapisz definicję właściwości, aby użyć zalecanego podejścia, jak pokazano w powyższym przykładzie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Procedury własności](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property — Instrukcja](../statements/property-statement.md)
+- [Set — Instrukcja](../statements/set-statement.md)

@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: dane liczbowe w przestrzeni nazw'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 3a067afc6d59c76a50c7c9f91673bb631edd085b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 37e9cdcdd3a1d570f9602ddf72f770def9f4b283
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869099"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360946"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Przykładowy plik XML: dane liczbowe w przestrzeni nazw
 Następujący plik XML jest używany w różnych przykładach w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe dla sumowania, uśredniania i grupowania. KOD XML znajduje się w przestrzeni nazw.  
@@ -55,6 +55,6 @@ Następujący plik XML jest używany w różnych przykładach w [!INCLUDE[sqltec
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Przykładowe dokumenty XML (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

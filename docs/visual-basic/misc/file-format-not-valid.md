@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID321
 ms.assetid: d41e6286-6e4a-463b-87fa-e140723e5c7e
-ms.openlocfilehash: b21ef68e514bec7ac644adcddbd25574e18098cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 584dad31e4bb2ae2586b4396ef91c93d2f5c6b4e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971616"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411034"
 ---
 # <a name="file-format-not-valid"></a>Nieprawidłowy format pliku
-Albo próbował załadować plik do składnika, ale format danych w pliku nie są zgodne ze składnikiem, lub próbowano zapisać dane składnika w pliku, ale format danych nie są zgodne z formatem pliku.  
+Podjęto próbę załadowania pliku do składnika, ale format danych w pliku był niezgodny ze składnikiem lub próbowano zapisać dane składnika do pliku, ale format danych jest niezgodny z formatem pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Zapoznaj się z dokumentacją dla składnika do określenia prawidłowego formatu dla dysku danych plików.  
+1. Zapoznaj się z dokumentacją składnika, aby określić właściwy format danych pliku dyskowego.  
   
-2. Zapoznaj się z dokumentacją w celu określenia, czy zapewnia obsługę dla konwersji z jednego formatu do innego składnika.  
+2. Zapoznaj się z dokumentacją składnika, aby określić, czy zapewnia on obsługę konwersji z jednego formatu na inny.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

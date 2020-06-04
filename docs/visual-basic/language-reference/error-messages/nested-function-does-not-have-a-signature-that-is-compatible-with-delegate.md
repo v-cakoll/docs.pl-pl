@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: d65c8eab661675c955ff6562098248c04036d6e7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 28d07f01c0fd467cb68d73749988273eee95edf4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580651"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409429"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Funkcja zagnieżdżona nie ma sygnatury zgodnej z delegatem "\<delegatename >"
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Funkcja zagnieżdżona nie posiada podpisu zgodnego z delegatem „\<delegatename>”.
 
-Wyrażenie lambda zostało przypisane do delegata, który ma niezgodny podpis. Na przykład w poniższym kodzie delegat `Del` ma dwa parametry Integer.
+Wyrażenie lambda zostało przypisane do delegata, który ma niezgodny podpis. Na przykład, w poniższym kodzie delegat `Del` ma dwa parametry Integer.
 
 ```vb
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ```
 
-Błąd jest wywoływany, jeśli wyrażenie lambda z jednym argumentem jest zadeklarowane jako typ `Del`:
+Błąd jest wywoływany, jeśli wyrażenie lambda z jednym argumentem jest zadeklarowane jako typ `Del` :
 
 ```vb
 ' Neither of these is valid.
@@ -36,7 +36,7 @@ Błąd jest wywoływany, jeśli wyrażenie lambda z jednym argumentem jest zadek
 
 Dostosuj definicję delegata lub przypisane wyrażenie lambda, aby podpisy były zgodne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Swobodna konwersja delegatów](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Wyrażenia lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

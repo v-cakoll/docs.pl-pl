@@ -1,5 +1,5 @@
 ---
-title: Scope
+title: Zakres
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 37fcfa897accb23e9c8c56407ce4ebd956b39c4d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345285"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410737"
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 
-*Zakres* zadeklarowanego elementu jest zestawem wszystkich kodów, które mogą odwoływać się do niego bez zakwalifikowania jego nazwy lub udostępniania za pomocą [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakres na jednym z następujących poziomów:
+*Zakres* zadeklarowanego elementu jest zestawem wszystkich kodów, które mogą odwoływać się do niego bez zakwalifikowania jego nazwy lub udostępniania za pomocą [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakres na jednym z następujących poziomów:
 
 |Poziom|Opis|
 |-----------|-----------------|
@@ -45,7 +45,7 @@ Należy określić zakres elementu podczas jego deklarowania. Zakres może zale�
 
 - Poziom dostępu zadeklarowany dla elementu
 
-Należy zachować ostrożność podczas definiowania zmiennych o tej samej nazwie, ale innym zakresie, ponieważ takie działanie może prowadzić do nieoczekiwanych wyników. Aby uzyskać więcej informacji, zobacz [odwołania do zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Należy zachować ostrożność podczas definiowania zmiennych o tej samej nazwie, ale innym zakresie, ponieważ takie działanie może prowadzić do nieoczekiwanych wyników. Aby uzyskać więcej informacji, zobacz [odwołania do zadeklarowanych elementów](references-to-declared-elements.md).
 
 ## <a name="levels-of-scope"></a>Poziomy zakresu
 
@@ -57,7 +57,7 @@ Blok to zestaw instrukcji ujętych w instrukcji inicjujących i kończących dek
 
 - `Do` i `Loop`
 
-- `For` [`Each`] i `Next`
+- `For`[ `Each` ] i`Next`
 
 - `If` i `End If`
 
@@ -71,7 +71,7 @@ Blok to zestaw instrukcji ujętych w instrukcji inicjujących i kończących dek
 
 - `With` i `End With`
 
-Jeśli zadeklarujesz zmienną w bloku, można jej używać tylko w obrębie tego bloku. W poniższym przykładzie zakres zmiennej całkowitej `cube` jest blokiem między `If` i `End If`i nie można już odwoływać się do `cube`, gdy wykonywanie kończy się w bloku.
+Jeśli zadeklarujesz zmienną w bloku, można jej używać tylko w obrębie tego bloku. W poniższym przykładzie zakres zmiennej całkowitej `cube` jest blokiem między `If` i i `End If` nie można już się odwoływać, `cube` gdy wykonywanie kończy się z bloku.
 
 ```vb
 If n < 1291 Then
@@ -85,12 +85,12 @@ End If
 
 ### <a name="procedure-scope"></a>Zakres procedury
 
-Element zadeklarowany w ramach procedury nie jest dostępny poza tą procedurą. Tylko procedura, która zawiera deklarację, może jej używać. Zmienne na tym poziomie są również nazywane *zmiennymi lokalnymi*. Deklaruje je za pomocą [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)z lub bez słowa kluczowego [static](../../../../visual-basic/language-reference/modifiers/static.md) .
+Element zadeklarowany w ramach procedury nie jest dostępny poza tą procedurą. Tylko procedura, która zawiera deklarację, może jej używać. Zmienne na tym poziomie są również nazywane *zmiennymi lokalnymi*. Deklaruje je za pomocą [instrukcji Dim](../../../language-reference/statements/dim-statement.md)z lub bez słowa kluczowego [static](../../../language-reference/modifiers/static.md) .
 
 Procedura i zakres bloku są ściśle powiązane. Jeśli zadeklarujesz zmienną wewnątrz procedury, ale poza jakimkolwiek blokiem w ramach tej procedury, można myśleć o zmiennej jako zakresu bloku, gdzie blok jest całą procedurą.
 
 > [!NOTE]
-> Wszystkie elementy lokalne, nawet jeśli są `Static` zmienne, są prywatne do procedury, w której się znajdują. Nie można zadeklarować żadnego elementu za pomocą [publicznego](../../../../visual-basic/language-reference/modifiers/public.md) słowa kluczowego w ramach procedury.
+> Wszystkie elementy lokalne, nawet jeśli są `Static` zmiennymi, są prywatne do procedury, w której się znajdują. Nie można zadeklarować żadnego elementu za pomocą [publicznego](../../../language-reference/modifiers/public.md) słowa kluczowego w ramach procedury.
 
 ### <a name="module-scope"></a>Zakres modułu
 
@@ -98,9 +98,9 @@ Dla wygody poziom jednoterminowego *modułu* jest stosowany równomiernie dla mo
 
 Po wprowadzeniu deklaracji na poziomie modułu wybrany poziom dostępu określa zakres. Przestrzeń nazw, która zawiera moduł, klasę lub strukturę, ma także wpływ na zakres.
 
-Elementy, dla których deklarujesz [prywatny](../../../../visual-basic/language-reference/modifiers/private.md) poziom dostępu, są dostępne dla każdej procedury w tym module, ale nie do żadnego kodu w innym module. Instrukcja `Dim` na poziomie modułu jest domyślnie `Private`, jeśli nie są używane żadne słowa kluczowe poziomu dostępu. Jednak zakres i poziom dostępu można bardziej oczywistie, używając słowa kluczowego `Private` w instrukcji `Dim`.
+Elementy, dla których deklarujesz [prywatny](../../../language-reference/modifiers/private.md) poziom dostępu, są dostępne dla każdej procedury w tym module, ale nie do żadnego kodu w innym module. W `Dim` `Private` przypadku, gdy nie są używane żadne słowa kluczowe poziomu dostępu. Jednak zakres i poziom dostępu można uczynić bardziej oczywistymi przy użyciu `Private` słowa kluczowego w `Dim` instrukcji.
 
-W poniższym przykładzie wszystkie procedury zdefiniowane w module mogą odwoływać się do zmiennej ciągu `strMsg`. Gdy druga procedura jest wywoływana, wyświetla zawartość zmiennej ciągu `strMsg` w oknie dialogowym.
+W poniższym przykładzie wszystkie procedury zdefiniowane w module mogą odwoływać się do zmiennej ciągu `strMsg` . Gdy druga procedura jest wywoływana, wyświetla zawartość zmiennej String `strMsg` w oknie dialogowym.
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -117,7 +117,7 @@ End Sub
 
 ### <a name="namespace-scope"></a>Zakres przestrzeni nazw
 
-Jeśli zadeklarujesz element na poziomie modułu przy użyciu słowa kluczowego [zaprzyjaźnione](../../../../visual-basic/language-reference/modifiers/friend.md) lub [publiczne](../../../../visual-basic/language-reference/modifiers/public.md) , będzie on dostępny dla wszystkich procedur w całym obszarze nazw, w którym jest zadeklarowany element. Przy następujących zmianach do poprzedniego przykładu zmienna ciągu `strMsg` może być określana przez kod w dowolnym miejscu w przestrzeni nazw swojej deklaracji.
+Jeśli zadeklarujesz element na poziomie modułu przy użyciu słowa kluczowego [zaprzyjaźnione](../../../language-reference/modifiers/friend.md) lub [publiczne](../../../language-reference/modifiers/public.md) , będzie on dostępny dla wszystkich procedur w całym obszarze nazw, w którym jest zadeklarowany element. Przy następujących zmianach do powyższego przykładu zmienna String `strMsg` może być określana przez kod w dowolnym miejscu w przestrzeni nazw swojej deklaracji.
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
@@ -126,7 +126,7 @@ Public strMsg As String
 
 Zakres przestrzeni nazw zawiera zagnieżdżone przestrzenie nazw. Element dostępny w przestrzeni nazw jest również dostępny z poziomu dowolnej przestrzeni nazw zagnieżdżonej w tej przestrzeni nazw.
 
-Jeśli projekt nie zawiera żadnych [instrukcji Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), wszystko w projekcie znajduje się w tej samej przestrzeni nazw. W takim przypadku zakres przestrzeni nazw może być uważany za zakres projektu. elementy `Public` w module, klasie lub strukturze są również dostępne dla każdego projektu, który odwołuje się do projektu.
+Jeśli projekt nie zawiera żadnych [instrukcji Namespace](../../../language-reference/statements/namespace-statement.md), wszystko w projekcie znajduje się w tej samej przestrzeni nazw. W takim przypadku zakres przestrzeni nazw może być uważany za zakres projektu. `Public`elementy w module, klasie lub strukturze są również dostępne dla każdego projektu, który odwołuje się do projektu.
 
 ## <a name="choice-of-scope"></a>Wybór zakresu
 
@@ -136,19 +136,19 @@ Podczas deklarowania zmiennej należy pamiętać o następujących kwestiach pod
 
 Zmienne lokalne są dobrym wyborem dla dowolnego rodzaju obliczeń tymczasowych, z następujących powodów:
 
-- **Unikanie konfliktu nazw.** Nazwy zmiennych lokalnych nie są podatne na konflikt. Na przykład można utworzyć kilka różnych procedur zawierających zmienną o nazwie `intTemp`. Tak długo, jak każda `intTemp` jest zadeklarowana jako zmienna lokalna, każda procedura rozpoznaje tylko własną wersję `intTemp`. Każda procedura może zmienić wartość w jej lokalnym `intTemp` bez wpływu na zmienne `intTemp` w innych procedurach.
+- **Unikanie konfliktu nazw.** Nazwy zmiennych lokalnych nie są podatne na konflikt. Na przykład można utworzyć kilka różnych procedur zawierających zmienną o nazwie `intTemp` . O ile każda `intTemp` z nich jest zadeklarowana jako zmienna lokalna, każda procedura rozpoznaje tylko własną wersję programu `intTemp` . Każda procedura może zmienić wartość w jej lokalnej `intTemp` bez wpływu na `intTemp` zmienne w innych procedurach.
 
-- **Użycie pamięci.** Zmienne lokalne zużywają pamięć tylko wtedy, gdy ich procedura jest uruchomiona. Pamięć jest wydawana, gdy procedura wraca do kodu wywołującego. Z kolei zmienne [udostępnione](../../../../visual-basic/language-reference/modifiers/shared.md) i [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) zużywają zasoby pamięci do momentu zatrzymania działania aplikacji, dlatego należy używać ich tylko w razie potrzeby. *Zmienne wystąpień* zużywają pamięć, gdy ich wystąpienie nadal istnieje, co sprawia, że są mniej wydajne niż zmienne lokalne, ale potencjalnie wydajniejsze niż `Shared` lub `Static` zmiennych.
+- **Użycie pamięci.** Zmienne lokalne zużywają pamięć tylko wtedy, gdy ich procedura jest uruchomiona. Pamięć jest wydawana, gdy procedura wraca do kodu wywołującego. Z kolei zmienne [udostępnione](../../../language-reference/modifiers/shared.md) i [statyczne](../../../language-reference/modifiers/static.md) zużywają zasoby pamięci do momentu zatrzymania działania aplikacji, dlatego należy używać ich tylko w razie potrzeby. *Zmienne wystąpień* zużywają pamięć, gdy ich wystąpienie nadal istnieje, co sprawia, że są mniej wydajne niż zmienne lokalne, ale potencjalnie bardziej wydajne niż `Shared` lub `Static` zmienne.
 
 ### <a name="minimizing-scope"></a>Minimalizacja zakresu
 
-Ogólnie rzecz biorąc, w przypadku deklarowania dowolnej zmiennej lub stałej jest dobrym sposobem programowania, aby zakres był możliwie wąski (zakres blokowy jest najwęższy). Pozwala to zaoszczędzić pamięć i zminimalizować prawdopodobieństwo błędnego kodu do niewłaściwej zmiennej. Podobnie należy zadeklarować zmienną, która ma być [statyczna](../../../../visual-basic/language-reference/modifiers/static.md) tylko wtedy, gdy jest to konieczne, aby zachować jej wartość między wywołaniami procedur.
+Ogólnie rzecz biorąc, w przypadku deklarowania dowolnej zmiennej lub stałej jest dobrym sposobem programowania, aby zakres był możliwie wąski (zakres blokowy jest najwęższy). Pozwala to zaoszczędzić pamięć i zminimalizować prawdopodobieństwo błędnego kodu do niewłaściwej zmiennej. Podobnie należy zadeklarować zmienną, która ma być [statyczna](../../../language-reference/modifiers/static.md) tylko wtedy, gdy jest to konieczne, aby zachować jej wartość między wywołaniami procedur.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Instrukcje: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Poziomy dostępu w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Charakterystyka zadeklarowanych elementów](declared-element-characteristics.md)
+- [Instrukcje: kontrolowanie zakresu zmiennej](how-to-control-the-scope-of-a-variable.md)
+- [Okres istnienia w Visual Basic](lifetime.md)
+- [Poziomy dostępu w Visual Basic](access-levels.md)
+- [Odwołania do elementów zadeklarowanych](references-to-declared-elements.md)
+- [Deklaracja zmiennej](../variables/variable-declaration.md)

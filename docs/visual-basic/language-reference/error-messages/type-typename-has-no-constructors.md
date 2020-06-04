@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198156"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408513"
 ---
-# <a name="type-typename-has-no-constructors"></a>Typ "\<TypeName >" nie ma konstruktorów
-Typ nie obsługuje wywołania do `Sub New()`. Jedną z możliwych przyczyn jest uszkodzony kompilator lub plik binarny.  
+# <a name="type-typename-has-no-constructors"></a>Typ „\<typename>” nie ma konstruktorów
+Typ nie obsługuje wywołania do `Sub New()` . Jedną z możliwych przyczyn jest uszkodzony kompilator lub plik binarny.  
   
  **Identyfikator błędu:** BC30251  
   
@@ -29,7 +29,7 @@ Typ nie obsługuje wywołania do `Sub New()`. Jedną z możliwych przyczyn jest 
   
 4. Jeśli błąd będzie się powtarzać, Zbierz informacje o okolicznościach i powiadom usługi pomocy technicznej firmy Microsoft.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Obiekty i klasy](../../programming-guide/language-features/objects-and-classes/index.md)
 - [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

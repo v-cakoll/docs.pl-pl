@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2eba9d177769b22de3f931bc7af4905a80e316b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345485"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359971"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Bezpieczeństwo i rejestr (Visual Basic)
 
@@ -20,16 +20,16 @@ Na tej stronie omówiono implikacje zabezpieczeń przechowywania danych w rejest
 
  Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze w postaci zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy ACL (listy kontroli dostępu).  
   
- Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji. Aby użyć tych właściwości, musisz mieć uprawnienia do odczytu i zapisu z <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia, które kontroluje dostęp do zmiennych rejestru. Każdy kod z pełnym zaufaniem (w ramach domyślnych zasad zabezpieczeń) jest to każdy kod zainstalowany na lokalnym dysku twardym użytkownika, który ma odpowiednie uprawnienia dostępu do rejestru. Aby uzyskać więcej informacji, <xref:System.Security.Permissions.RegistryPermission> zobacz Klasa.  
+ Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji. Aby użyć tych właściwości, musisz mieć uprawnienia do odczytu i zapisu z <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia, które kontroluje dostęp do zmiennych rejestru. Każdy kod z pełnym zaufaniem (w ramach domyślnych zasad zabezpieczeń) jest to każdy kod zainstalowany na lokalnym dysku twardym użytkownika, który ma odpowiednie uprawnienia dostępu do rejestru. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.RegistryPermission> Klasa.  
   
- Zmienne rejestru nie powinny być przechowywane w lokalizacjach pamięci, w <xref:System.Security.Permissions.RegistryPermission> których kod nie może uzyskać do nich dostępu. Podobnie, podczas udzielania uprawnień należy przyznać minimalnych uprawnień niezbędnych do wykonania zadania.  
+ Zmienne rejestru nie powinny być przechowywane w lokalizacjach pamięci, w których kod nie <xref:System.Security.Permissions.RegistryPermission> może uzyskać do nich dostępu. Podobnie, podczas udzielania uprawnień należy przyznać minimalnych uprawnień niezbędnych do wykonania zadania.  
   
  Wartości dostępu do uprawnień rejestru są definiowane przez <xref:System.Security.Permissions.RegistryPermissionAccess> Wyliczenie. Poniższa tabela zawiera szczegółowe informacje o jej elementach członkowskich.  
   
 |Wartość|Dostęp do zmiennych rejestru|  
 |-----------|----------------------------------|  
 |`AllAccess`|Tworzenie, odczytywanie i zapisywanie|  
-|`Create`|Utwórz|  
+|`Create`|Przycisk Utwórz|  
 |`NoAccess`|Brak dostępu|  
 |`Read`|Odczyt|  
 |`Write`|Zapisywanie|  
@@ -44,4 +44,4 @@ Na tej stronie omówiono implikacje zabezpieczeń przechowywania danych w rejest
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
-- [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Odczytywanie z rejestru i zapisywanie w nim](reading-from-and-writing-to-the-registry.md)

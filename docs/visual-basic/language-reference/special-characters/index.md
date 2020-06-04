@@ -1,12 +1,12 @@
 ---
 title: Znaki specjalne
 ms.date: 10/31/2017
-ms.openlocfilehash: 07522ae43c40af5be844d873159a4f54a15f90e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: afe514eaa3e6b1837711ef4620ce8e36aa403d1e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349608"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359518"
 ---
 # <a name="special-characters-visual-basic-reference"></a>Znaki specjalne (odwołanie Visual Basic)
 
@@ -14,6 +14,6 @@ Znaki specjalne są wstępnie zdefiniowane, kontekstowe znaki, które modyfikuj�
 
 - [$](interpolated.md), interpolowany znak ciągu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Informacje Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Visual Basic — Odwołanie](../index.md)

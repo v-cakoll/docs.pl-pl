@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wywoływanie kompilatora wiersza polecenia'
+title: 'Instrukcje: Wywoływanie kompilatora z wiersza polecenia'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344258"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408611"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)
 
@@ -30,7 +30,7 @@ Kompilator wiersza polecenia można wywołać, wpisując nazwę pliku wykonywaln
 
 4. W wierszu polecenia wpisz `vbc.exe` *sourceFileName* , a następnie naciśnij klawisz ENTER.
 
-    Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles`, należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb`, można go skompilować, wpisując. `vbc.exe Source.vb`
+    Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles` , należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb` , można go skompilować, wpisując `vbc.exe Source.vb` .
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Aby ustawić zmienną środowiskową PATH na kompilator dla wiersza polecenia systemu Windows
 
@@ -56,9 +56,9 @@ Kompilator wiersza polecenia można wywołać, wpisując nazwę pliku wykonywaln
 
 2. W wierszu polecenia wpisz `vbc.exe` *sourceFileName* , a następnie naciśnij klawisz ENTER.
 
-     Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles`, należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb`, można go skompilować, wpisując. `vbc.exe Source.vb`
+     Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles` , należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb` , można go skompilować, wpisując `vbc.exe Source.vb` .
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Kompilacja warunkowa](../../programming-guide/program-structure/conditional-compilation.md)

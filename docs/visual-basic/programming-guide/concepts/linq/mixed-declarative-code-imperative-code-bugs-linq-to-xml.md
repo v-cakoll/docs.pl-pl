@@ -2,15 +2,15 @@
 title: Mieszane błędy kodu deklaratywnego i imperatywnego (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-ms.openlocfilehash: 369fae59516df785ac686645d47e74e69a8f1457
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e5526a64805b19ea293d3ef28636738923d03662
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331644"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84361076"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mieszany kod deklaratywny/niezbędny kod (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera różne metody, które umożliwiają bezpośrednie modyfikowanie drzewa XML. Możesz dodać elementy, usunąć elementy, zmienić zawartość elementu, dodać atrybuty i tak dalej. Ten interfejs programowania został opisany w temacie [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli dokonujesz iteracji przez jedną z osi, takich jak <xref:System.Xml.Linq.XContainer.Elements%2A>, i modyfikujesz drzewo XML podczas iteracji przez oś, możesz zakończyć z niektórymi niektórymi usterkami.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera różne metody, które umożliwiają bezpośrednie modyfikowanie drzewa XML. Możesz dodać elementy, usunąć elementy, zmienić zawartość elementu, dodać atrybuty i tak dalej. Ten interfejs programowania został opisany w temacie [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md). Jeśli dokonujesz iteracji przez jedną z osi, na przykład <xref:System.Xml.Linq.XContainer.Elements%2A> , i modyfikujesz drzewo XML podczas iteracji przez oś, możesz zakończyć z niektórymi niektórymi usterkami.  
   
  Ten problem jest czasami znany jako "problem z Halloween".  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74331644"
   
  `a -> a' -> b -> b' -> c -> c'`  
   
- Dlatego Napisz kod, który wykonuje iterację na liście, i dla każdego elementu, dodaje nowy element po nim. Co się dzieje, gdy Twój kod będzie najpierw widział element `a` i wstawić `a'` po nim. Teraz kod zostanie przeniesiony do następnego węzła na liście, który jest teraz `a'`! Happily IT dodaje nowy element do listy, `a''`.  
+ Dlatego Napisz kod, który wykonuje iterację na liście, i dla każdego elementu, dodaje nowy element po nim. Co się dzieje, gdy Twój kod będzie najpierw widział `a` element i Wstaw `a'` po nim. Teraz kod zostanie przeniesiony do następnego węzła na liście, który jest teraz `a'` ! Happily IT dodaje nowy element do listy `a''` .  
   
  Jak rozwiązać ten problem w świecie rzeczywistym? Można również utworzyć kopię pierwotnej połączonej listy oraz zupełnie nową listę. Lub jeśli piszesz czysty kod, możesz znaleźć pierwszy element, dodać nowy element, a następnie dwukrotnie wykonać dwa razy na liście połączonej, przenosząc nad element, który właśnie został dodany.  
   
@@ -46,9 +46,9 @@ For Each e As XElement In root.Elements()
 Next  
 ```  
   
- Ten kod przechodzi do nieskończonej pętli. Instrukcja `foreach` iteruje przez oś `Elements()`, dodając nowe elementy do elementu `doc`. Zostanie ona zakończona również za pomocą elementów, które właśnie dodał. I ponieważ przydziela nowe obiekty do każdej iteracji pętli, ostatecznie zużywa całą dostępną pamięć.  
+ Ten kod przechodzi do nieskończonej pętli. `foreach`Instrukcja iteruje przez `Elements()` oś, dodając nowe elementy do `doc` elementu. Zostanie ona zakończona również za pomocą elementów, które właśnie dodał. I ponieważ przydziela nowe obiekty do każdej iteracji pętli, ostatecznie zużywa całą dostępną pamięć.  
   
- Ten problem można rozwiązać, pobierając kolekcję do pamięci przy użyciu standardowego operatora zapytania <xref:System.Linq.Enumerable.ToList%2A> w następujący sposób:  
+ Ten problem można rozwiązać, pobierając kolekcję do pamięci przy użyciu <xref:System.Linq.Enumerable.ToList%2A> standardowego operatora zapytania w następujący sposób:  
   
 ```vb  
 Dim root As XElement = _  
@@ -103,7 +103,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Rozwiązanie jest ponownie wywoływane <xref:System.Linq.Enumerable.ToList%2A> zmaterializowania kolekcji w następujący sposób:  
+ Rozwiązanie to ponownie wywołuje <xref:System.Linq.Enumerable.ToList%2A> zmaterializowania kolekcji w następujący sposób:  
   
 ```vb  
 Dim root As XElement = _  
@@ -124,7 +124,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- Alternatywnie można całkowicie wyeliminować iterację, wywołując <xref:System.Xml.Linq.XElement.RemoveAll%2A> w elemencie nadrzędnym:  
+ Alternatywnie można wyeliminować iterację całkowicie poprzez wywołanie <xref:System.Xml.Linq.XElement.RemoveAll%2A> elementu nadrzędnego:  
   
 ```vb  
 Dim root As XElement = _  
@@ -140,7 +140,7 @@ Console.WriteLine(root)
 ## <a name="why-cant-linq-automatically-handle-this"></a>Dlaczego nie można automatycznie obsłużyć LINQ?  
  Jednym z metod jest zawsze umieszczenie wszystkiego w pamięci zamiast oceny z opóźnieniem. Jest to jednak bardzo kosztowne pod względem wydajności i użycia pamięci. W rzeczywistości, jeśli LINQ i (LINQ to XML) miały przyjąć takie podejście, wystąpi niepowodzenie w rzeczywistych sytuacjach.  
   
- Innym możliwym podejściem jest umieszczenie w kodzie LINQ składni transakcji, a kompilator próbuje analizować kod i ustalić, czy jakakolwiek konkretna kolekcja jest wymagana do materiału. Jednak próba ustalenia całego kodu, który ma efekty uboczne, to niezwykle Complex. Rozważmy następujący kod:  
+ Innym możliwym podejściem jest umieszczenie w kodzie LINQ składni transakcji, a kompilator próbuje analizować kod i ustalić, czy jakakolwiek konkretna kolekcja jest wymagana do materiału. Jednak próba ustalenia całego kodu, który ma efekty uboczne, to niezwykle Complex. Spójrzmy na poniższy kod:  
   
 ```vb  
 Dim z = _  
@@ -158,7 +158,7 @@ Dim z = _
 ## <a name="guidance"></a>Wskazówki  
  Najpierw nie należy mieszać kodu deklaratywnego i bezwzględnego.  
   
- Nawet jeśli znasz dokładnie semantykę kolekcji i semantykę metod, które modyfikują drzewo XML, jeśli piszesz jakiś kod sprytne, który pozwala uniknąć tych kategorii problemów, kod będzie musiał być obsługiwany przez innych deweloperów w przyszłości. i mogą nie być jasne w przypadku problemów. Jeśli Mieszasz deklaratywne i bezwzględne style kodowania, kod będzie bardziej kruchy.  
+ Nawet jeśli znasz dokładnie semantykę kolekcji i semantykę metod, które modyfikują drzewo XML, jeśli napiszesz jakiś kod sprytne, który pozwala uniknąć tych kategorii problemów, kod będzie musiał być obsługiwany przez innych deweloperów w przyszłości i mogą nie być jasne w przypadku problemów. Jeśli Mieszasz deklaratywne i bezwzględne style kodowania, kod będzie bardziej kruchy.  
   
  Jeśli napiszesz kod, który materializuje kolekcję, aby uniknąć tych problemów, zwróć uwagę na to, że komentarze są odpowiednie w kodzie, dzięki czemu programiści mogą zrozumieć problem.  
   
@@ -176,6 +176,6 @@ Dim newRoot As XElement = New XElement("Root", _
 Console.WriteLine(newRoot)  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](advanced-linq-to-xml-programming.md)

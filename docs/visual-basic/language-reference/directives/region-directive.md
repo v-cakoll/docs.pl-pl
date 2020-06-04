@@ -1,5 +1,5 @@
 ---
-title: '#Dyrektywa #Region'
+title: '##Region, dyrektywa'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cd53a6079c1564a8c73a0a1a6273fc166d18d3e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343793"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409946"
 ---
 # <a name="region-directive"></a>#Region — dyrektywa
 
@@ -32,21 +32,21 @@ Zwija i ukrywa sekcje kodu w plikach Visual Basic.
   
 |Termin|Definicja|  
 |---|---|  
-|`identifier_string`|Wymagana. Ciąg, który funkcjonuje jako tytuł regionu, gdy jest zwinięty. Regiony są domyślnie zwinięte.|  
-|`#End Region`|Kończy blok `#Region`.|  
+|`identifier_string`|Wymagany. Ciąg, który działa jako tytuł regionu, gdy jest zwinięty. Regiony są domyślnie zwinięte.|  
+|`#End Region`|Kończy `#Region` blok.|  
   
 ## <a name="remarks"></a>Uwagi  
 
- Użyj dyrektywy `#Region`, aby określić blok kodu do rozwinięcia lub zwinięcia przy użyciu funkcji tworzenia konspektu edytora Visual Studio Code. Możesz umieszczać lub *zagnieżdżać*regiony w innych regionach, aby grupować podobne regiony jednocześnie.  
+ Użyj `#Region` dyrektywy, aby określić blok kodu do rozwinięcia lub zwinięcia przy użyciu funkcji tworzenia konspektu edytora Visual Studio Code. Możesz umieszczać lub *zagnieżdżać*regiony w innych regionach, aby grupować podobne regiony jednocześnie.  
   
 ## <a name="example"></a>Przykład  
 
- Ten przykład używa dyrektywy `#Region`.  
+ Ten przykład używa `#Region` dyrektywy.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Obramowanie](/visualstudio/ide/outlining)
-- [Instrukcje: zwijanie i ukrywanie fragmentów kodu](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+- [#If... Then... #Else — dyrektywy](if-then-else-directives.md)
+- [Tworzenie konspektu](/visualstudio/ide/outlining)
+- [Instrukcje: Zwijanie i ukrywanie fragmentów kodu](../../programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

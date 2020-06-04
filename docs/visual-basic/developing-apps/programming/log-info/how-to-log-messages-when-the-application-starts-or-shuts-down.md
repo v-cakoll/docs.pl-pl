@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 5a4ef3888ba8371d26204c3569b5fb9bae1f15f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5fb17e527bcbcb55f98ec0ced06c152555ce6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352097"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410078"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Porady: rejestrowanie wiadomości podczas uruchamiania lub wyłączania aplikacji (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, jak używać `My.Application.Log.WriteEntry` metody ze zdarzeniami `Startup` i `Shutdown` , aby pisać informacje o śledzeniu.  
+Za pomocą `My.Application.Log` obiektów i można `My.Log` rejestrować informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, jak używać `My.Application.Log.WriteEntry` metody ze `Startup` `Shutdown` zdarzeniami i, aby pisać informacje o śledzeniu.  
   
 ### <a name="to-access-the-applications-event-handler-code"></a>Aby uzyskać dostęp do kodu programu obsługi zdarzeń aplikacji  
   
@@ -38,7 +38,7 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
   
      Aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzenie przed uruchomieniem aplikacji głównej.  
   
-3. Dodaj `My.Application.Log.WriteEntry` metodę do procedury obsługi `Startup` zdarzeń.  
+3. Dodaj `My.Application.Log.WriteEntry` metodę do `Startup` procedury obsługi zdarzeń.  
   
      [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
@@ -50,7 +50,7 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
   
      Aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzenie po uruchomieniu aplikacji głównej, ale przed jej zamknięciem.  
   
-3. Dodaj `My.Application.Log.WriteEntry` metodę do procedury obsługi `Shutdown` zdarzeń.  
+3. Dodaj `My.Application.Log.WriteEntry` metodę do `Shutdown` procedury obsługi zdarzeń.  
   
      [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
@@ -66,4 +66,4 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Praca z dziennikami aplikacji](working-with-application-logs.md)

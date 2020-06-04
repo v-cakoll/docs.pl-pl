@@ -1,30 +1,30 @@
 ---
-title: 'Porady: zapytanie w ArrayList za pomocą LINQ'
+title: 'Instrukcje: zapytanie w ArrayList za pomocą LINQ'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347755"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396470"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Instrukcje: wykonywanie zapytań do ArrayList za pomocą LINQ (Visual Basic)
 
-W przypadku używania LINQ do wykonywania zapytań dotyczących nieogólnych kolekcji <xref:System.Collections.IEnumerable>, takich jak <xref:System.Collections.ArrayList>, należy jawnie zadeklarować typ zmiennej zakresu w celu odzwierciedlenia określonego typu obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> obiektów `Student`, [klauzula FROM](../../../../visual-basic/language-reference/queries/from-clause.md) powinna wyglądać następująco:
+W przypadku korzystania z programu LINQ do wykonywania zapytań dotyczących kolekcji innych niż ogólne <xref:System.Collections.IEnumerable> , takich jak <xref:System.Collections.ArrayList> , należy jawnie zadeklarować typ zmiennej zakresu, aby odzwierciedlała określony typ obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> `Student` obiekty, [klauzula FROM](../../../language-reference/queries/from-clause.md) powinna wyglądać następująco:
 
 ```vb
 Dim query = From student As Student In arrList
 '...
 ```
 
-Określając typ zmiennej zakresu, rzutuje każdy element w <xref:System.Collections.ArrayList> na `Student`.
+Określenie typu zmiennej zakresu powoduje rzutowanie każdego elementu w <xref:System.Collections.ArrayList> `Student` .
 
-Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoważne wywołaniu metody <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> zgłasza wyjątek, jeśli nie można wykonać określonego rzutowania. <xref:System.Linq.Enumerable.Cast%2A> i <xref:System.Linq.Enumerable.OfType%2A> to dwie metody standardowego operatora zapytań, które działają na nieogólnych typach <xref:System.Collections.IEnumerable>. W Visual Basic należy jawnie wywołać metodę <xref:System.Linq.Enumerable.Cast%2A> w źródle danych, aby upewnić się, że określony typ zmiennej zakresu. Aby uzyskać więcej informacji, zobacz [relacje typu w operacjach zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).
+Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoznaczne z wywołaniem <xref:System.Linq.Enumerable.Cast%2A> metody. <xref:System.Linq.Enumerable.Cast%2A>zgłasza wyjątek, jeśli nie można wykonać określonego rzutowania. <xref:System.Linq.Enumerable.Cast%2A>i <xref:System.Linq.Enumerable.OfType%2A> są dwoma standardowymi metodami operatorów zapytań, które działają na typach innych niż ogólne <xref:System.Collections.IEnumerable> . W Visual Basic należy jawnie wywołać <xref:System.Linq.Enumerable.Cast%2A> metodę w źródle danych, aby upewnić się, że określony typ zmiennej zakresu. Aby uzyskać więcej informacji, zobacz [relacje typu w operacjach zapytań (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano proste zapytanie dotyczące <xref:System.Collections.ArrayList>. Należy zauważyć, że w tym przykładzie są używane Inicjatory obiektów, gdy kod wywołuje metodę <xref:System.Collections.ArrayList.Add%2A>, ale nie jest to wymagane.
+W poniższym przykładzie pokazano proste zapytanie w <xref:System.Collections.ArrayList> . Należy zauważyć, że w tym przykładzie są używane Inicjatory obiektów, gdy kod wywołuje <xref:System.Collections.ArrayList.Add%2A> metodę, ale nie jest to wymagane.
 
 ```vb
 Imports System.Collections
@@ -78,6 +78,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

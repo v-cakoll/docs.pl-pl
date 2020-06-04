@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: TworzenieC++ Unii C przy użyciu atrybutów'
+title: 'Instrukcje: tworzenie Unii C-C + + przy użyciu atrybutów'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ebab0ad947f776932f9379af3969e369eeec1941
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349497"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400684"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Instrukcje: Tworzenie elementu C/C++ Union przy użyciu atrybutów (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Instrukcje: tworzenie Unii C/C++ za pomocą atrybutów (Visual Basic)
 
-Przy użyciu atrybutów można dostosować sposób, w jaki struktury są ułożone w pamięci. Na przykład można utworzyć element, który jest znany jako Unia w C/C++ przy użyciu atrybutów `StructLayout(LayoutKind.Explicit)` i `FieldOffset`.
+Przy użyciu atrybutów można dostosować sposób, w jaki struktury są ułożone w pamięci. Na przykład, można utworzyć elementy znane jako Unia w C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` `FieldOffset` atrybutów i.
 
 ## <a name="example"></a>Przykład
 
-W tym segmencie kodu wszystkie pola `TestUnion` są uruchamiane w tej samej lokalizacji w pamięci.
+W tym segmencie kodu wszystkie pola, które są `TestUnion` uruchamiane w tej samej lokalizacji w pamięci.
 
 ```vb
 ' Add an Imports statement for System.Runtime.InteropServices.
@@ -67,15 +67,15 @@ Structure TestExplicit
  End Structure
 ```
 
-Pola dwóch liczb całkowitych, `i1` i `i2`, współużytkują te same lokalizacje pamięci co `lg`. Ten rodzaj kontroli nad układem struktury jest przydatny podczas korzystania z wywołania platformy.
+Dwa pola liczb całkowitych `i1` i `i2` , współużytkują te same lokalizacje pamięci co `lg` . Ten rodzaj kontroli nad układem struktury jest przydatny podczas korzystania z wywołania platformy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania w Visual Basic](../../index.md)
 - [Atrybuty](../../../../standard/attributes/index.md)
-- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Odbicie (Visual Basic)](../reflection.md)
+- [Atrybuty (Visual Basic)](../../../language-reference/attributes.md)
+- [Tworzenie atrybutów niestandardowych (Visual Basic)](creating-custom-attributes.md)
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](accessing-attributes-by-using-reflection.md)

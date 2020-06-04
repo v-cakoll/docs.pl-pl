@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 030c9c2ffa97572298b23f05c23e3af0df7387b0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c59212a28ba27123a7db9163ff7437c159a3d310
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913160"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409702"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Klasy pochodne nie mogą wywoływać zdarzeń klasy bazowej
-Zdarzenie może zostać wywołane jedynie z deklaracji miejsca, w którym jest zdeklarowana. W związku z tym klasy nie mogą wywoływać zdarzeń z żadną inną klasę, nawet jeśli jest on z którego pochodzi.  
+Zdarzenie może być zgłaszane tylko z przestrzeni deklaracji, w której jest zadeklarowany. W związku z tym Klasa nie może wywoływać zdarzeń z żadnej innej klasy, nawet jednego z nich, z której pochodzą.  
   
  **Identyfikator błędu:** BC30029  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przenieś `Event` instrukcji lub `RaiseEvent` instrukcji, dzięki czemu są one w tej samej klasie.  
+- Przenieś `Event` instrukcję lub `RaiseEvent` instrukcję tak, aby znajdowały się w tej samej klasie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
-- [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Event — Instrukcja](../statements/event-statement.md)
+- [RaiseEvent — Instrukcja](../statements/raiseevent-statement.md)

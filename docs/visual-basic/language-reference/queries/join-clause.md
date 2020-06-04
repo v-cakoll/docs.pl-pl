@@ -1,5 +1,5 @@
 ---
-title: Join — Klauzula
+title: Join, klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353264"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359777"
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
 
-Łączy dwie kolekcje w jedną kolekcję. Operacja join jest oparta na zgodnych kluczach i używa operatora `Equals`.
+Łączy dwie kolekcje w jedną kolekcję. Operacja join jest oparta na zgodnych kluczach i używa `Equals` operatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,31 +32,31 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>Części
 
-Wymagane `element`. Zmienna kontroli dla połączonej kolekcji.
+`element`Wymagane. Zmienna kontroli dla połączonej kolekcji.
 
 `collection`  
-Wymagana. Kolekcja do połączenia z kolekcją zidentyfikowaną po lewej stronie operatora `Join`. Klauzula `Join` może być zagnieżdżona w innej klauzuli `Join` lub w klauzuli `Group Join`.
+Wymagany. Kolekcja do połączenia z kolekcją zidentyfikowaną po lewej stronie `Join` operatora. `Join`Klauzula może być zagnieżdżona w innej `Join` klauzuli lub w `Group Join` klauzuli.
 
 `joinClause`  
-Opcjonalna. Co najmniej jeden z dodatkowych klauzul `Join`, aby dodatkowo uściślić zapytanie.
+Opcjonalny. Co najmniej jednej `Join` z dodatkowych klauzul, aby dodatkowo uściślić zapytanie.
 
 `groupJoinClause`  
-Opcjonalna. Co najmniej jeden z dodatkowych klauzul `Group Join`, aby dodatkowo uściślić zapytanie.
+Opcjonalny. Co najmniej jednej `Group Join` z dodatkowych klauzul, aby dodatkowo uściślić zapytanie.
 
 `key1` `Equals` `key2`  
-Wymagana. Identyfikuje klucze dla kolekcji, które są sprzężone. Należy użyć operatora `Equals`, aby porównać klucze z kolekcji, które są sprzężone. Możesz połączyć warunki sprzężenia przy użyciu operatora `And`, aby zidentyfikować wiele kluczy. `key1` musi znajdować się w kolekcji po lewej stronie operatora `Join`. `key2` musi należeć do kolekcji po prawej stronie operatora `Join`.
+Wymagany. Identyfikuje klucze dla kolekcji, które są sprzężone. Należy użyć operatora, `Equals` Aby porównać klucze z kolekcji, które są sprzężone. Możesz połączyć warunki sprzężenia przy użyciu `And` operatora, aby zidentyfikować wiele kluczy. `key1`musi znajdować się w kolekcji po lewej stronie `Join` operatora. `key2`musi znajdować się w kolekcji po prawej stronie `Join` operatora.
 
 Klucze używane w warunku sprzężenia mogą być wyrażeniami, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie klucza może zawierać tylko elementy z odpowiedniej kolekcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Klauzula `Join` łączy dwie kolekcje na podstawie pasujących wartości klucza z kolekcji, które są sprzężone. Kolekcja wyników może zawierać dowolną kombinację wartości z kolekcji identyfikowanej po lewej stronie operatora `Join` i kolekcji identyfikowanej w klauzuli `Join`. Zapytanie zwróci tylko wyniki, dla których spełniony jest warunek określony przez operator `Equals`. Jest to odpowiednik `INNER JOIN` w SQL.
+`Join`Klauzula łączy dwie kolekcje na podstawie pasujących wartości klucza z kolekcji, które są sprzężone. Kolekcja wyników może zawierać dowolną kombinację wartości z kolekcji identyfikowanej po lewej stronie `Join` operatora i kolekcji identyfikowanej w `Join` klauzuli. Zapytanie zwróci tylko wyniki, dla których spełniony jest warunek określony przez `Equals` operatora. Jest to odpowiednik `INNER JOIN` w programie SQL Server.
 
-W zapytaniu można użyć wielu klauzul `Join`, aby dołączyć dwie lub więcej kolekcji do pojedynczej kolekcji.
+Można użyć wielu `Join` klauzul w zapytaniu, aby dołączyć dwie lub więcej kolekcji do jednej kolekcji.
 
-Można wykonać niejawne sprzężenie w celu łączenia kolekcji bez klauzuli `Join`. W tym celu należy uwzględnić wiele klauzul `In` w klauzuli `From` i określić klauzulę `Where`, która identyfikuje klucze, które mają być używane dla sprzężenia.
+Można wykonać niejawne sprzężenie w celu łączenia kolekcji bez `Join` klauzuli. W tym celu należy uwzględnić `In` w klauzuli wiele klauzul `From` i określić `Where` klauzulę, która identyfikuje klucze, które mają być używane dla sprzężenia.
 
-Można użyć klauzuli `Group Join`, aby połączyć kolekcje w jedną hierarchiczną kolekcję. Jest to takie samo jak `LEFT OUTER JOIN` w programie SQL Server.
+Możesz użyć klauzuli, `Group Join` Aby połączyć kolekcje w pojedynczej kolekcji hierarchicznej. Jest to podobne do `LEFT OUTER JOIN` języka SQL.
 
 ## <a name="example"></a>Przykład
 
@@ -66,7 +66,7 @@ Poniższy przykład kodu wykonuje niejawne sprzężenie w celu połączenia list
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join`.
+Poniższy przykład kodu łączy dwie kolekcje przy użyciu `Join` klauzuli.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
@@ -80,7 +80,7 @@ Ten przykład generuje dane wyjściowe podobne do następujących:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Join` z dwiema kolumnami klucza.
+Poniższy przykład kodu łączy dwie kolekcje przy użyciu `Join` klauzuli z dwiema kolumnami klucza.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
@@ -92,11 +92,11 @@ Przykład generuje dane wyjściowe podobne do następujących:
 
 `explorer (2424), File Explorer, Priority = 8`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
-- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](index.md)
+- [SELECT — klauzula](select-clause.md)
+- [Klauzula from](from-clause.md)
+- [Group Join. klauzula](group-join-clause.md)
+- [Klauzula WHERE](where-clause.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74069b111f4316eb81c74f5e62c1fbff6ab8f4b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345615"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401852"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Porady: odczytywanie wartości z klucza rejestru w Visual Basic
 
-`GetValue` Metoda `My.Computer.Registry` obiektu może służyć do odczytywania wartości w rejestrze systemu Windows.  
+`GetValue`Metoda `My.Computer.Registry` obiektu może służyć do odczytywania wartości w rejestrze systemu Windows.  
   
- Jeśli klucz "Software\MyApp" w poniższym przykładzie nie istnieje, zgłaszany jest wyjątek. `ValueName`Jeśli w poniższym przykładzie nie istnieje, zwracana `Nothing` jest wartość "name" (nazwa).  
+ Jeśli klucz "Software\MyApp" w poniższym przykładzie nie istnieje, zgłaszany jest wyjątek. Jeśli `ValueName` w poniższym przykładzie nie istnieje, zwracana jest wartość "name" (nazwa) `Nothing` .  
   
- Metody `GetValue` można również użyć do określenia, czy dana wartość istnieje w określonym kluczu rejestru.  
+ `GetValue`Metody można również użyć do określenia, czy dana wartość istnieje w określonym kluczu rejestru.  
   
  Gdy kod odczytuje rejestr z aplikacji sieci Web, bieżący użytkownik jest określany przez uwierzytelnianie i personifikację, która jest zaimplementowana w aplikacji sieci Web.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "74345615"
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa klucza to `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa klucza to `Nothing` ( <xref:System.ArgumentNullException> ).  
   
-- Użytkownik nie ma uprawnień do odczytu z kluczy rejestru (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma uprawnień do odczytu z kluczy rejestru ( <xref:System.Security.SecurityException> ).  
   
-- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
+- Nazwa klucza przekracza limit 255 znaków ( <xref:System.ArgumentException> ).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
@@ -59,4 +59,4 @@ ms.locfileid: "74345615"
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.Win32.RegistryHive>
-- [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Odczytywanie z rejestru i zapisywanie w nim](reading-from-and-writing-to-the-registry.md)

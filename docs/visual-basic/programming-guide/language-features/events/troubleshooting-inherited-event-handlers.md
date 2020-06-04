@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: fd2ef1c25233cc1eaad6bcde68923688393b471d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e7bedd1de5197fcf8b69091f4cc878f41b01cd5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345106"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405109"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic
 W tym temacie wymieniono typowe problemy związane z obsługą zdarzeń w składnikach dziedziczonych.  
@@ -22,12 +22,12 @@ W tym temacie wymieniono typowe problemy związane z obsługą zdarzeń w skład
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Kod w obsłudze zdarzeń jest wykonywany dwukrotnie dla każdego wywołania  
   
-- Dziedziczona procedura obsługi zdarzeń nie może zawierać klauzuli [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) . Metoda w klasie bazowej jest już skojarzona ze zdarzeniem i zostanie odpowiednio wyzwolona. Usuń klauzulę `Handles` z dziedziczonej metody.  
+- Dziedziczona procedura obsługi zdarzeń nie może zawierać klauzuli [Handles](../../../language-reference/statements/handles-clause.md) . Metoda w klasie bazowej jest już skojarzona ze zdarzeniem i zostanie odpowiednio wyzwolona. Usuń `Handles` klauzulę z dziedziczonej metody.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- Jeśli dziedziczona Metoda nie ma słowa kluczowego `Handles`, należy sprawdzić, czy kod nie zawiera dodatkowej [instrukcji AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ani żadnych dodatkowych metod, które obsługują to samo zdarzenie.  
+- Jeśli dziedziczona Metoda nie ma `Handles` słowa kluczowego, sprawdź, czy Twój kod nie zawiera dodatkowej [instrukcji AddHandler](../../../language-reference/statements/addhandler-statement.md) ani żadnych dodatkowych metod, które obsługują to samo zdarzenie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Zdarzenia](index.md)

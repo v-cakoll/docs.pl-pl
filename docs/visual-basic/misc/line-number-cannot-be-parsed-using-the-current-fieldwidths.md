@@ -1,28 +1,28 @@
 ---
-title: Wiersz <number> nie może zostać przeanalizowany przy użyciu bieżącego parametru FieldWidths
+title: <number>Nie można przeanalizować wiersza przy użyciu bieżącego FieldWidths
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: dc6253dc925ed004fbbeb64547054461c39adffc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd6fc431a4a943a3a0022e8e75c834a49b952a66
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604160"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402138"
 ---
-# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Wiersz \<numer > nie może zostać przeanalizowany przy użyciu bieżącego parametru FieldWidths
-Nie można przeanalizować określonego wiersza, ponieważ jej pola ma szerokości innych niż określone.  
+# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>\<number>Nie można przeanalizować wiersza przy użyciu bieżącego FieldWidths
+Nie można przeanalizować określonego wiersza, ponieważ jego pola mają szerokość inną niż określona.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Dostosuj `FieldWidths` co wiersz może zostać poprawnie zanalizowana, albo Wstaw kod obsługi wyjątków, aby umożliwić obsługę wiersza.  
+- Dostosuj `FieldWidths` , aby wiersz można było analizować prawidłowo, lub wstawić kod obsługi wyjątków w celu obsługi wiersza.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Odczyt z plików tekstowych w wielu formatach](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
-- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [TextFieldParser, obiekt](../../visual-basic/language-reference/objects/textfieldparser-object.md)
-- [TextFieldParser.FieldWidths Property](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
-- [TextFieldParser.SetFieldWidths Method](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
+- [Instrukcje: Odczyt z plików tekstowych w wielu formatach](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [My. Computer. FileSystem. OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
+- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [TextFieldParser — Obiekt](../language-reference/objects/textfieldparser-object.md)
+- [TextFieldParser. FieldWidths — Właściwość](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
+- [TextFieldParser. SetFieldWidths — Metoda](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)

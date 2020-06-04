@@ -2,12 +2,12 @@
 title: Sortowanie danych
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350584"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406797"
 ---
 # <a name="sorting-data-visual-basic"></a>Sortowanie danych (Visual Basic)
 
@@ -27,7 +27,7 @@ Standardowe metody operatorów zapytań, które sortują dane, są wymienione w 
 |OrderByDescending|Sortuje wartości w kolejności malejącej.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
 |ThenBy|Wykonuje sortowanie pomocnicze w kolejności rosnącej.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
 |ThenByDescending|Wykonuje sortowanie pomocnicze w kolejności malejącej.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
-|Cofnięci|Odwraca kolejność elementów w kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+|Reverse|Odwraca kolejność elementów w kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażeń zapytania
 
@@ -35,7 +35,7 @@ Standardowe metody operatorów zapytań, które sortują dane, są wymienione w 
 
 #### <a name="primary-ascending-sort"></a>Podstawowe sortowanie rosnące
 
-Poniższy przykład ilustruje sposób użycia klauzuli `Order By` w zapytaniu LINQ do sortowania ciągów w tablicy według długości ciągu w kolejności rosnącej.
+Poniższy przykład ilustruje sposób użycia `Order By` klauzuli w zapytaniu LINQ do sortowania ciągów w tablicy według długości ciągu w kolejności rosnącej.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -63,7 +63,7 @@ MsgBox(sb.ToString())
 
 #### <a name="primary-descending-sort"></a>Sortowanie sortowania podstawowego
 
-W następnym przykładzie pokazano, jak używać klauzuli `Order By Descending` w zapytaniu LINQ do sortowania ciągów według ich pierwszej litery, w kolejności malejącej.
+W następnym przykładzie pokazano, jak używać `Order By Descending` klauzuli w zapytaniu LINQ do sortowania ciągów według ich pierwszej litery, w kolejności malejącej.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -93,7 +93,7 @@ MsgBox(sb.ToString())
 
 #### <a name="secondary-ascending-sort"></a>Sortowanie pomocnicze rosnąco
 
-W poniższym przykładzie pokazano, jak używać klauzuli `Order By` w zapytaniu LINQ, aby wykonać podstawowe i pomocnicze sortowanie ciągów w tablicy. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu, zarówno w kolejności rosnącej.
+Poniższy przykład ilustruje sposób użycia `Order By` klauzuli w zapytaniu LINQ do wykonywania podstawowego i pomocniczego sortowania ciągów w tablicy. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu, zarówno w kolejności rosnącej.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -121,7 +121,7 @@ MsgBox(sb.ToString())
 
 #### <a name="secondary-descending-sort"></a>Sortowanie malejąco
 
-W następnym przykładzie pokazano, jak używać klauzuli `Order By Descending` w zapytaniu LINQ do wykonywania sortowania podstawowego w kolejności rosnącej i sortowania pomocniczego w kolejności malejącej. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu.
+W następnym przykładzie pokazano, jak używać `Order By Descending` klauzuli w zapytaniu LINQ do wykonywania sortowania podstawowego w kolejności rosnącej i sortowania pomocniczego w kolejności malejącej. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -147,10 +147,10 @@ MsgBox(sb.ToString())
 ' brown
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Order By, klauzula](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Instrukcje: sortowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md)
+- [Order By, klauzula](../../../language-reference/queries/order-by-clause.md)
+- [Instrukcje: sortowanie wyników zapytania](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

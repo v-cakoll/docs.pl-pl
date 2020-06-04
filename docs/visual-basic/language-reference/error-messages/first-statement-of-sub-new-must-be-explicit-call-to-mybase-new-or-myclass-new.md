@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33dd15e3f5f5538963597f2b00f4214895e1f47a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801884"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403008"
 ---
-# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Pierwsza instrukcja tego elementu "Sub New" musi być jawnym wywołaniem elementu "MyBase.New" lub "MyClass.New", ponieważ "\<constructorname >" w klasie bazowej\<baseclassname > "z"\<derivedclassname > "jest oznaczony jako przestarzały:"\< komunikat o błędzie > "
-Konstruktor klasy nie jawnie wywołać konstruktora klasy bazowej i Konstruktor niejawne klasy bazowej jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktowanie jej jako błąd.  
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Pierwsza instrukcja tego elementu „Sub New” musi być jawnym wywołaniem elementu „MyBase.New” lub „MyClass.New”, ponieważ element „\<constructorname>” w klasie bazowej „\<baseclassname>” elementu „\<derivedclassname>” jest oznaczony jako przestarzały: „\<errormessage>"
+Konstruktor klasy nie wywołuje jawnie konstruktora klasy bazowej, a niejawny Konstruktor klasy bazowej jest oznaczony <xref:System.ObsoleteAttribute> atrybutem i dyrektywą, aby traktować go jako błąd.  
   
- Jeśli konstruktor klasy pochodnej nie wywołać konstruktora klasy bazowej, Visual Basic spróbuje go wygenerować wywołanie niejawne konstruktor bez parametrów klasy bazowej. Jeśli jest dostępny żaden konstruktor nie w klasie bazowej, który można wywołać bez argumentów, Visual Basic nie można wygenerować wywołanie niejawne. W tym przypadku wymaganego konstruktora jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybutu, więc języka Visual Basic nie można wywołać go.  
+ Gdy Konstruktor klasy pochodnej nie wywołuje konstruktora klasy bazowej, Visual Basic próbuje wygenerować niejawnego wywołania konstruktora klasy bazowej bez parametrów. Jeśli w klasie bazowej nie ma dostępnego konstruktora, który można wywołać bez argumentów, Visual Basic nie może wygenerować wywołania niejawnego. W takim przypadku wymagany Konstruktor jest oznaczony <xref:System.ObsoleteAttribute> atrybutem, więc Visual Basic nie może go wywołać.  
   
- Możesz oznaczyć dowolnego elementu programistycznego jako nie jest już używana przez zastosowanie <xref:System.ObsoleteAttribute> do niego. Jeśli to zrobisz, możesz ustawić atrybutu <xref:System.ObsoleteAttribute.IsError%2A> właściwości albo `True` lub `False`. Jeśli ustawisz na `True`, kompilator traktuje próba użycia elementu jako błąd. Jeśli ustawisz na `False`, lub pozwól, aby go domyślnie `False`, kompilator generuje ostrzeżenie, jeśli próba użycia elementu.  
+ Można oznaczyć dowolny element programistyczny jako nieużywany przez zastosowanie <xref:System.ObsoleteAttribute> do niego. W takim przypadku można ustawić <xref:System.ObsoleteAttribute.IsError%2A> właściwość atrybutu na `True` lub `False` . Jeśli ustawisz ją na `True` , kompilator traktuje próbę użycia elementu jako błąd. Jeśli ustawisz ją na `False` lub Zezwól na ustawienie domyślne `False` , kompilator generuje ostrzeżenie w przypadku próby użycia elementu.  
   
  **Identyfikator błędu:** BC30920  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź komunikat o błędzie w cudzysłowach i podjąć odpowiednie działania.  
+1. Przejrzyj cytowany komunikat o błędzie i podejmij odpowiednie działanie.  
   
-2. Obejmują wywołania `MyBase.New()` lub `MyClass.New()` jako pierwsza instrukcja `Sub New` w klasie pochodnej.  
+2. Dołącz wywołanie do `MyBase.New()` lub `MyClass.New()` jako pierwszą instrukcję `Sub New` w klasie pochodnej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Przegląd atrybutów](../../programming-guide/concepts/attributes/index.md)

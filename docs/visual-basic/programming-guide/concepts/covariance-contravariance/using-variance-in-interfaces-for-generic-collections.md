@@ -2,24 +2,24 @@
 title: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349021"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375644"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (Visual Basic)
 
 Interfejs współdzielny umożliwia metodom Zwracanie większej liczby typów pochodnych niż określone w interfejsie. Interfejs kontrawariantne umożliwia jej metodom akceptowanie parametrów o mniejszych typach pochodnych niż określone w interfejsie.
 
-W .NET Framework 4, kilka istniejących interfejsów stał się współwariantem i kontrawariantne. Należą do nich <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601>. Dzięki temu można ponownie użyć metod, które działają z ogólnymi kolekcjami typów podstawowych dla kolekcji typów pochodnych.
+W .NET Framework 4, kilka istniejących interfejsów stał się współwariantem i kontrawariantne. Obejmują one <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601> . Dzięki temu można ponownie użyć metod, które działają z ogólnymi kolekcjami typów podstawowych dla kolekcji typów pochodnych.
 
-Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Konwertowanie kolekcji ogólnych
 
-Poniższy przykład ilustruje zalety obsługi kowariancji w interfejsie <xref:System.Collections.Generic.IEnumerable%601>. Metoda `PrintFullName` akceptuje kolekcję typu `IEnumerable(Of Person)` jako parametr. Można jednak ponownie użyć go dla kolekcji typu `IEnumerable(Of Person)`, ponieważ `Employee` dziedziczy `Person`.
+Poniższy przykład ilustruje zalety obsługi kowariancji w <xref:System.Collections.Generic.IEnumerable%601> interfejsie. `PrintFullName`Metoda akceptuje kolekcję `IEnumerable(Of Person)` typu jako parametr. Można jednak ponownie użyć go dla kolekcji `IEnumerable(Of Person)` typu, ponieważ `Employee` dziedziczy `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -53,7 +53,7 @@ End Sub
 
 ## <a name="comparing-generic-collections"></a>Porównywanie kolekcji ogólnych
 
-Poniższy przykład ilustruje zalety obsługi kontrawariancja w interfejsie <xref:System.Collections.Generic.IComparer%601>. Klasa `PersonComparer` implementuje interfejs `IComparer(Of Person)`. Można jednak ponownie użyć tej klasy do porównania sekwencji obiektów typu `Employee`, ponieważ `Employee` dziedziczy `Person`.
+Poniższy przykład ilustruje zalety obsługi kontrawariancja w <xref:System.Collections.Generic.IComparer%601> interfejsie. Klasa `PersonComparer` implementuje interfejs `IComparer(Of Person)`. Można jednak ponownie użyć tej klasy do porównania sekwencji obiektów `Employee` typu, ponieważ `Employee` dziedziczy `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -112,6 +112,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Wariancja w interfejsach ogólnych (Visual Basic)](variance-in-generic-interfaces.md)

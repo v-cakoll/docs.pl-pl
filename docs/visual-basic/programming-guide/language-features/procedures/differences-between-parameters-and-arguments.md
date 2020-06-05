@@ -1,5 +1,5 @@
 ---
-title: Różnice między parametrami i argumentami
+title: Różnice pomiędzy parametrami i argumentami
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd0a62b6567f3e74763b7f2e9b96803c193c7976
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341373"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403359"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Różnice pomiędzy parametrami i argumentami (Visual Basic)
 W większości przypadków procedura musi mieć pewne informacje dotyczące okoliczności, w których zostało wywołane. Procedura wykonująca powtarzalne lub udostępnione zadania używa różnych informacji dla każdego wywołania. Te informacje składają się ze zmiennych, stałych i wyrażeń, które są przekazywane do procedury po jej wywołaniu.  
@@ -26,23 +26,23 @@ W większości przypadków procedura musi mieć pewne informacje dotyczące okol
 ## <a name="parameters"></a>Parametry  
  *Parametr* reprezentuje wartość, którą procedura oczekuje na przekazanie po wywołaniu. Deklaracja procedury definiuje jej parametry.  
   
- Podczas definiowania `Function` lub `Sub` procedury należy określić *listę parametrów* w nawiasach bezpośrednio po nazwie procedury. Dla każdego parametru należy określić nazwę, typ danych i mechanizm przekazywania ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Możesz również wskazać, że parametr jest opcjonalny. Oznacza to, że wywoływany kod nie musi przekazać do niego wartości.  
+ Podczas definiowania `Function` procedury lub należy `Sub` określić *listę parametrów* w nawiasach bezpośrednio po nazwie procedury. Dla każdego parametru należy określić nazwę, typ danych i mechanizm przekazywania ([ByVal](../../../language-reference/modifiers/byval.md) lub [ByRef](../../../language-reference/modifiers/byref.md)). Możesz również wskazać, że parametr jest opcjonalny. Oznacza to, że wywoływany kod nie musi przekazać do niego wartości.  
   
  Nazwa każdego parametru służy jako *zmienna lokalna* w procedurze. Nazwa parametru jest używana w taki sam sposób, jak w przypadku innych zmiennych.  
   
 ## <a name="arguments"></a>Argumenty  
  *Argument* reprezentuje wartość przekazana do parametru procedury po wywołaniu procedury. Kod wywołujący dostarcza argumenty, gdy wywołuje procedurę.  
   
- Po wywołaniu procedury `Function` lub `Sub`, w nawiasach należy dodać *listę argumentów* bezpośrednio po nazwie procedury. Każdy argument odpowiada parametrowi w tej samej pozycji na liście.  
+ Gdy wywołujesz `Function` procedurę lub, dołączysz `Sub` *listę argumentów* w nawiasach bezpośrednio po nazwie procedury. Każdy argument odpowiada parametrowi w tej samej pozycji na liście.  
   
  W przeciwieństwie do definicji parametrów, argumenty nie mają nazw. Każdy argument jest wyrażeniem, które może zawierać zero lub więcej zmiennych, stałych i literałów. Typ danych obliczanego wyrażenia powinien zwykle być zgodny z typem danych zdefiniowanym dla odpowiedniego parametru, a w każdym przypadku musi być konwertowany na typ parametru.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Procedury](./index.md)
 - [Sub, procedury](./sub-procedures.md)
 - [Procedury funkcji](./function-procedures.md)
-- [Procedury właściwości](./property-procedures.md)
+- [Procedury własności](./property-procedures.md)
 - [Procedury operatorów](./operator-procedures.md)
 - [Instrukcje: definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)
 - [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)

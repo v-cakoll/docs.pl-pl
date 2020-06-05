@@ -2,29 +2,29 @@
 title: Plik określony w nazwie pliku nie jest prawidłowym plikiem XML
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: 5a54e5e7e7c75bb7d766b1bbda10f401fa8b99af
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a84042490935e3e7e5a6de2a802d9effd5b4d3d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640825"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358351"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Plik określony w nazwie pliku nie jest prawidłowym plikiem XML
 
-Podanej nazwy pliku nie jest prawidłowym plikiem XML. Aby określić dozwolone struktury i zawartości dokumentu XML, można użyć definicji typu dokumentu (DTD), schemat Microsoft-danych XML (XDR) lub schematu języka (XSD) definicji schematu XML. Schematy XSD to preferowany sposób określania gramatyki XML w programie .NET Framework.
+Podana nazwa pliku nie jest prawidłowym plikiem XML. Aby określić dozwoloną strukturę i zawartość dokumentu XML, można użyć definicji typu dokumentu (DTD), schematu z ograniczeniami (XDR) języka Microsoft XML lub schematu definicji schematu XML (XSD). Schematy XSD są preferowanym sposobem określania gramatyki XML w .NET Framework.
 
 > [!NOTE]
-> W niektórych starszych wersjach programu Visual Studio **Projektant XML** jest Projektant typizowanych zestawów danych i schematu XML. **Projektant XML** nadal można tworzyć i edytować pliki schematów XML. W programie Visual Studio 2012 designer do tworzenia i edytowania zestawów jest jednak **Projektanta obiektów Dataset**. Aby uzyskać więcej informacji, zobacz [tworzenie i edytowanie wpisanych zestawów danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/314t4see(v=vs.120)).
+> W niektórych wcześniejszych wersjach programu Visual Studio **Projektant XML** jest projektantem dla wpisanych zestawów danych i schematu XML. **Projektant XML** może nadal służyć do tworzenia i edytowania plików schematu XML. Jednak w programie Visual Studio 2012 Projektant do tworzenia i edytowania wpisanych zestawów danych jest **Projektant obiektów DataSet**. Aby uzyskać więcej informacji, zobacz [Tworzenie i edytowanie wpisanych zestawów danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/314t4see(v=vs.120)).
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Sprawdź, czy są podawania poprawnej nazwy pliku.
+- Sprawdź, czy podano poprawną nazwę pliku.
 
-- Sprawdź, czy określony plik zawiera prawidłowy kod XML, ładując plik XML, który chcesz zaewidencjonować w **Projektant XML**. Z **XML** menu, kliknij przycisk **sprawdzania poprawności XML**. Błędy są wyświetlane w **listy zadań**.
+- Sprawdź, czy określony plik zawiera prawidłowy kod XML przez załadowanie pliku XML, który chcesz zaewidencjonować do **projektanta XML**. W menu **XML** kliknij polecenie **Weryfikuj kod XML**. Błędy są wyświetlane w **Lista zadań**.
 
-- Jeśli plik XML ma skojarzonego schematu XML, sprawdź, czy elementy są wyświetlane w zdefiniowanej strukturze i że zawartość poszczególnych elementów zgodne typy danych zadeklarowany, określona w schemacie.
+- Jeśli plik XML ma skojarzony schemat XML, sprawdź, czy elementy są widoczne w zdefiniowanej strukturze i czy zawartość poszczególnych elementów jest zgodna z zadeklarowanymi typami danych określonymi w schemacie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml>
-- [Instrukcje: Analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Instrukcje: Analizowanie ścieżek plików](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

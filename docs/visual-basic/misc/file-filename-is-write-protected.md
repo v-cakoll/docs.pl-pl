@@ -1,21 +1,21 @@
 ---
-title: Plik '<filename>' jest chroniona zapisu
+title: Plik " <filename> " jest chroniony przed zapisem
 ms.date: 07/20/2015
 ms.assetid: 6e5105b1-a634-4cde-a753-5bf1ae85a55a
-ms.openlocfilehash: fd0d2495c3d287bb62f713048319a84b320f6245
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64987c4b3af8bb3e56f8a90ec00761fe6ac5ca59
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755860"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411047"
 ---
-# <a name="file-filename-is-write-protected"></a>Plik '\<nazwa pliku >' jest chroniona zapisu
-Plik, który próbujesz zapisać jest zabezpieczony przed zapisem i dlatego nie można zmienić.  
+# <a name="file-filename-is-write-protected"></a>Plik " \<filename> " jest chroniony przed zapisem
+Plik, w którym próbujesz pisać, jest chroniony przed zapisem i dlatego nie można go zmienić.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Zmień uprawnienia do pliku do odczytu/zapisu lub zapisywać do innego pliku.  
+1. Zmień uprawnienia do pliku na odczyt/zapis lub Zapisz w innym pliku.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Rozwiązywanie problemów: Odczytywanie z oraz zapisywanie w plikach tekstowych](../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Rozwiązywanie problemów: Odczytywanie z plików tekstowych oraz zapisywanie w nich](../developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

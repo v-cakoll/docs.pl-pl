@@ -2,18 +2,18 @@
 title: 'Instrukcje: analizowanie ciągu'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a9076fc516bb8e6bc74732ca252fabfeda43d53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344497"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398015"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: analizowanie ciągu (Visual Basic)
-W tym temacie pokazano, jak utworzyć drzewo XML w C#.  
+W tym temacie przedstawiono sposób tworzenia drzewa XML w języku C#.  
   
 ## <a name="example"></a>Przykład  
- Można przeanalizować ciąg w Visual Basic przy użyciu metody `XElement.Parse`. Jednak bardziej wydajne jest użycie literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie cierpią od tych samych kar za wydajność, co analizowanie XML z ciągu.  
+ Można przeanalizować ciąg w Visual Basic przy użyciu `XElement.Parse` metody. Jednak bardziej wydajne jest użycie literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie cierpią od tych samych kar za wydajność, co analizowanie XML z ciągu.  
   
  Za pomocą literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
   
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizowanie kodu XML (Visual Basic)](parsing-xml.md)

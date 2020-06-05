@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350083"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394068"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedury ogólne w Visual Basic
 *Procedura ogólna*, nazywana również *metodą rodzajową*, jest procedurą zdefiniowaną z co najmniej jednym parametrem typu. Dzięki temu kod wywołujący dostosowuje typy danych do swoich wymagań przy każdym wywołaniu procedury.  
@@ -27,7 +27,7 @@ ms.locfileid: "74350083"
  Procedura ogólna może używać jej parametrów typu na swojej normalnej liście parametrów, w jej typie zwracanym, jeśli ma jeden, i w jego kodzie procedury.  
   
 ## <a name="type-inference"></a>Wnioskowanie o typie  
- Można wywołać procedurę ogólną bez podawania żadnych argumentów typu. Jeśli wywołasz ten sposób, kompilator próbuje określić odpowiednie typy danych do przekazania do argumentów typu procedury. Jest to nazywane *wnioskami o typie*. Poniższy kod pokazuje wywołanie, w którym kompilator uważa, że powinien przekazać typ `String` do `t`parametru typu.  
+ Można wywołać procedurę ogólną bez podawania żadnych argumentów typu. Jeśli wywołasz ten sposób, kompilator próbuje określić odpowiednie typy danych do przekazania do argumentów typu procedury. Jest to nazywane *wnioskami o typie*. Poniższy kod pokazuje wywołanie, w którym kompilator uważa, że powinien przekazywać typ `String` do parametru typu `t` .  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
@@ -50,26 +50,26 @@ End Sub
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład definiuje ogólną procedurę `Function`, aby znaleźć konkretny element w tablicy. Definiuje jeden parametr typu i używa go do konstruowania dwóch parametrów na liście parametrów.  
+ W poniższym przykładzie zdefiniowano procedurę ogólną, `Function` Aby znaleźć konkretny element w tablicy. Definiuje jeden parametr typu i używa go do konstruowania dwóch parametrów na liście parametrów.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Komentarze  
- Poprzedni przykład wymaga możliwości porównania `searchValue` z każdym elementem `searchArray`. Aby zagwarantować tę możliwość, ogranicza parametr typu `T` w celu zaimplementowania interfejsu <xref:System.IComparable%601>. Kod używa metody <xref:System.IComparable%601.CompareTo%2A> zamiast operatora `=`, ponieważ nie ma gwarancji, że argument typu dostarczony dla `T` obsługuje operatora `=`.  
+ Poprzedni przykład wymaga możliwości porównania z `searchValue` każdym elementem `searchArray` . Aby zagwarantować tę możliwość, ogranicza parametr typu `T` w celu zaimplementowania <xref:System.IComparable%601> interfejsu. Kod używa <xref:System.IComparable%601.CompareTo%2A> metody zamiast `=` operatora, ponieważ nie ma gwarancji, że argument typu dostarczony dla `T` obsługuje `=` operatora.  
   
- Procedurę `findElement` można przetestować przy użyciu następującego kodu.  
+ Procedurę można przetestować `findElement` przy użyciu następującego kodu.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- Poprzednie wywołania `MsgBox` wyświetlają odpowiednio wartości "0", "1" i "-1".  
+ Poprzednie wywołania do `MsgBox` wyświetlania odpowiednio wartości "0", "1" i "-1".  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Procedury](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Parametry i argumenty procedur](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Lista parametrów](../../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Typy ogólne w Visual Basic](generic-types.md)
+- [Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Instrukcje: Używanie klasy ogólnej](how-to-use-a-generic-class.md)
+- [Procedury](../procedures/index.md)
+- [Parametry i argumenty procedur](../procedures/procedure-parameters-and-arguments.md)
+- [Lista typów](../../../language-reference/statements/type-list.md)
+- [Lista parametrów](../../../language-reference/statements/parameter-list.md)

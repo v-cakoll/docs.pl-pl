@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 04320c7a2fd27749e6de24f0ad21cc51c86ddda2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 107d93429ad0440ed18169bc6b6ca7b2e21cb77a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345154"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405147"
 ---
 # <a name="error-types-visual-basic"></a>Error — Typy (Visual Basic)
 W Visual Basic błędy należą do jednej z trzech kategorii: Błędy składniowe, błędy czasu wykonywania i błędy logiki.
@@ -24,15 +24,15 @@ W Visual Basic błędy należą do jednej z trzech kategorii: Błędy składniow
  *Błędy składni* są te, które pojawiają się podczas pisania kodu. Jeśli używasz programu Visual Studio, Visual Basic sprawdza kod w trakcie wpisywania go w oknie **edytora kodu** i ostrzega użytkownika w przypadku pomyłki, takich jak błąd pisowni wyrazu lub nieprawidłowe użycie elementu języka. W przypadku kompilowania z wiersza polecenia Visual Basic wyświetla błąd kompilatora z informacjami o błędzie składni. Błędy składni są najczęściej spotykanym typem błędów. Można je łatwo rozwiązać w środowisku kodowania, gdy tylko wystąpią.
 
 > [!NOTE]
-> Instrukcja `Option Explicit` jest jednym z metod unikania błędów składniowych. Wymusza z wyprzedzeniem zadeklarować wszystkie zmienne, które mają być używane w aplikacji. W związku z tym, gdy te zmienne są używane w kodzie, wszelkie błędy typograficzne są przechwytywane natychmiast i można je naprawić.
+> `Option Explicit`Instrukcja to jeden z metod unikania błędów składniowych. Wymusza z wyprzedzeniem zadeklarować wszystkie zmienne, które mają być używane w aplikacji. W związku z tym, gdy te zmienne są używane w kodzie, wszelkie błędy typograficzne są przechwytywane natychmiast i można je naprawić.
 
 ## <a name="run-time-errors"></a>Błędy czasu wykonywania
  *Błędy czasu wykonywania* to te, które są wyświetlane dopiero po skompilowaniu i uruchomieniu kodu. Są to kod, który może wydawać się poprawny w tym, że nie ma błędów składniowych, ale nie zostanie wykonany. Na przykład można prawidłowo napisać wiersz kodu, aby otworzyć plik. Ale jeśli plik nie istnieje, aplikacja nie może otworzyć pliku i zgłasza wyjątek. Większość błędów czasu wykonywania można naprawić, przepisując błędny kod lub korzystając z [obsługi wyjątków](../../language-reference/statements/try-catch-finally-statement.md), a następnie ponownie kompilując i uruchamiając go.
   
 ## <a name="logic-errors"></a>Błędy logiki
- *Błędy logiczne* są te, które pojawiają się, gdy aplikacja jest używana. Najczęściej występują błędne założenia wykonywane przez dewelopera lub niechciane lub nieoczekiwane wyniki w reakcji na działania użytkownika. Na przykład błędnie wpisany klucz może dostarczyć błędne informacje do metody lub można założyć, że prawidłowa wartość jest zawsze przekazywana do metody, gdy nie jest to przypadek. Chociaż błędy logiczne mogą być obsługiwane przy użyciu [obsługi wyjątków](../../language-reference/statements/try-catch-finally-statement.md) (na przykład przez testowanie, czy argument jest `Nothing` i zgłasza <xref:System.ArgumentNullException>), najczęściej powinny one być rozkierowane przez skorygowanie błędu w logice i ponowne skompilowanie aplikacji.
+ *Błędy logiczne* są te, które pojawiają się, gdy aplikacja jest używana. Najczęściej występują błędne założenia wykonywane przez dewelopera lub niechciane lub nieoczekiwane wyniki w reakcji na działania użytkownika. Na przykład błędnie wpisany klucz może dostarczyć błędne informacje do metody lub można założyć, że prawidłowa wartość jest zawsze przekazywana do metody, gdy nie jest to przypadek. Chociaż błędy logiczne mogą być obsługiwane przy użyciu [obsługi wyjątków](../../language-reference/statements/try-catch-finally-statement.md) (na przykład przez testowanie, czy argument jest `Nothing` i zgłaszany <xref:System.ArgumentNullException> ), najczęściej należy je rozwiązać przez skorygowanie błędu w logice i ponowne skompilowanie aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally, instrukcja](../../language-reference/statements/try-catch-finally-statement.md)
 - [Podstawowe informacje o debugerze](/visualstudio/debugger/debugger-feature-tour)

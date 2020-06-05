@@ -2,12 +2,12 @@
 title: Standardowe operatory zapytań — Omówienie
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 0f68d175b526a9da86853272c47b5e7d7b4a5992
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201080"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406784"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Standardowe operatory zapytań — Omówienie (Visual Basic)
 
@@ -66,7 +66,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania
 
-Niektóre z często używanych standardowych operatorów zapytań mają dedykowaną składnię słowa kluczowego języka C# i Visual Basic, która umożliwia ich wywoływanie jako część *query* *wyrażenia*zapytania. Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, które mają dedykowane słowa kluczowe i ich odpowiednie składnie, zobacz [składnia wyrażeń zapytania dla standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+Niektóre z często używanych standardowych operatorów zapytań mają dedykowaną składnię słowa kluczowego języka C# i Visual Basic, która umożliwia ich wywoływanie jako część *query* *wyrażenia*zapytania. Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, które mają dedykowane słowa kluczowe i ich odpowiednie składnie, zobacz [składnia wyrażeń zapytania dla standardowych operatorów zapytań (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Rozszerzanie standardowych operatorów zapytań
 
@@ -76,39 +76,39 @@ Zestaw standardowych operatorów zapytań można rozszerzyć przez utworzenie me
 
 Poniższe linki prowadzą do tematów, które dostarczają dodatkowych informacji na temat różnych standardowych operatorów zapytań opartych na funkcjonalności.
 
-- [Sortowanie danych](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Sortowanie danych](sorting-data.md)
 
-- [Operacje Set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [Operacje Set (Visual Basic)](set-operations.md)
 
-- [Filtrowanie danych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [Filtrowanie danych (Visual Basic)](filtering-data.md)
 
-- [Operacje kwantyfikatora (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Operacje kwantyfikatora (Visual Basic)](quantifier-operations.md)
 
-- [Operacje projekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operacje projekcji (Visual Basic)](projection-operations.md)
 
-- [Partycjonowanie danych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [Partycjonowanie danych (Visual Basic)](partitioning-data.md)
 
-- [Operacje join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [Operacje join (Visual Basic)](join-operations.md)
 
-- [Grupowanie danych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [Grupowanie danych (Visual Basic)](grouping-data.md)
 
-- [Operacje generacji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [Operacje generacji (Visual Basic)](generation-operations.md)
 
-- [Operacje równości (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [Operacje równości (Visual Basic)](equality-operations.md)
 
-- [Operacje elementu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [Operacje elementu (Visual Basic)](element-operations.md)
 
-- [Konwertowanie typów danych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [Konwertowanie typów danych (Visual Basic)](converting-data-types.md)
 
-- [Operacje łączenia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [Operacje łączenia (Visual Basic)](concatenation-operations.md)
 
-- [Operacje agregacji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Operacje agregacji (Visual Basic)](aggregation-operations.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Wprowadzenie do LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Składnia wyrażenia zapytania dla standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Metody rozszerzania](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Wprowadzenie do LINQ (Visual Basic)](introduction-to-linq.md)
+- [Składnia wyrażenia zapytania dla standardowych operatorów zapytań (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [Klasyfikacja standardowych operatorów zapytań według sposobu wykonywania (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Metody rozszerzające](../../language-features/procedures/extension-methods.md)

@@ -1,23 +1,23 @@
 ---
-title: Programowanie funkcjonalne a programowanie bezwzględne
+title: Programowanie funkcjonalne a programowanie imperatywne
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353441"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364802"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)
 W tym temacie porównano i kontrastuje programowanie funkcjonalne z bardziej tradycyjnym, niewzględnym (proceduralnym) programowaniem.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie bezwzględne  
- Model *programowania funkcjonalnego* został jawnie utworzony w celu obsługi czystego podejścia funkcjonalnego do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowania deklaratywnego*. W przeciwieństwie do tego większość najpopularniejszych języków, w tym języków programowania zorientowanego obiektowo ( C#OOP), C++takich jak, Visual Basic, i Java, została zaprojektowana tak, aby przede *wszystkim wspierać* bezwzględne (proceduralne) programowanie.  
+## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie imperatywne  
+ Model *programowania funkcjonalnego* został jawnie utworzony w celu obsługi czystego podejścia funkcjonalnego do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowania deklaratywnego*. W przeciwieństwie do najpopularniejszych języków, w tym języków programowania zorientowanego obiektowo (OOP), takich jak C#, Visual Basic, C++ i Java, zostały zaprojektowane głównie *do obsługi* bezwzględnego (proceduralnego) programowania.  
   
  W przypadku, gdy jest to bezwzględne podejście, deweloper zapisuje kod opisujący szczegółowo szczegółowe czynności, które musi wykonać komputer, aby osiągnąć cel. Jest to czasami określane jako programowanie *algorytmów* . Z kolei podejście funkcjonalne obejmuje tworzenie problemów jako zestaw funkcji do wykonania. Należy dokładnie zdefiniować dane wejściowe dla każdej funkcji i co zwraca każda funkcja. W poniższej tabeli opisano niektóre ogólne różnice między tymi dwoma podejściami.  
   
-|Charakterystyk|Bezwzględne podejście|Podejście funkcjonalne|  
+|Charakterystyka|Bezwzględne podejście|Podejście funkcjonalne|  
 |--------------------|-------------------------|-------------------------|  
 |Fokus programisty|Jak wykonywać zadania (algorytmy) i jak śledzić zmiany w stanie.|Jakie informacje są potrzebne i jakie przekształcenia są wymagane.|  
 |Zmiany stanu|Ważne.|Nie istnieje.|  
@@ -50,8 +50,8 @@ W tym temacie porównano i kontrastuje programowanie funkcjonalne z bardziej tra
   
  Na szczęście Visual Basic nie wymaga pełnego przestępności do programowania funkcjonalnego, ponieważ obsługuje zarówno metody programowania zasadniczego, jak i funkcjonalnego. Deweloper może wybrać, które podejście jest najbardziej odpowiednie dla konkretnego scenariusza. W rzeczywistości programy często łączą oba podejścia.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refaktoryzacja do czystych funkcji (Visual Basic)](refactoring-into-pure-functions.md)

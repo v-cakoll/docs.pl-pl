@@ -6,26 +6,26 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344280"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363700"
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
-Typ danych `String` reprezentuje serię znaków (z których każde reprezentuje wystąpienie typu `Char` danych). W tym temacie przedstawiono podstawowe pojęcia dotyczące ciągów w Visual Basic.  
+`String`Typ danych reprezentuje serię znaków (z których każdy reprezentuje wystąpienie `Char` typu danych). W tym temacie przedstawiono podstawowe pojęcia dotyczące ciągów w Visual Basic.  
   
 ## <a name="string-variables"></a>Zmienne ciągu  
- Do wystąpienia ciągu można przypisać wartość literału, która reprezentuje serię znaków. Na przykład:  
+ Do wystąpienia ciągu można przypisać wartość literału, która reprezentuje serię znaków. Przykład:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- Zmienna `String` może również przyjmować dowolne wyrażenie, które daje w wyniku ciąg. Odpowiednie przykłady przedstawiono poniżej:  
+ `String`Zmienna może również akceptować dowolne wyrażenie, które daje w wyniku ciąg. Odpowiednie przykłady przedstawiono poniżej:  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   
- Wszystkie literały przypisane do zmiennej `String` muszą być ujęte w cudzysłów (""). Oznacza to, że znak cudzysłowu w ciągu nie może być reprezentowany przez cudzysłów. Na przykład następujący kod powoduje błąd kompilatora:  
+ Dowolny literał przypisany do `String` zmiennej musi być ujęty w cudzysłów (""). Oznacza to, że znak cudzysłowu w ciągu nie może być reprezentowany przez cudzysłów. Na przykład następujący kod powoduje błąd kompilatora:  
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
@@ -33,7 +33,7 @@ Typ danych `String` reprezentuje serię znaków (z których każde reprezentuje 
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
- W poprzednim przykładzie dwa cudzysłowy poprzedzające wyraz `Look` stają się pojedynczym znakiem cudzysłowu w ciągu. Trzy cudzysłowy znajdujące się na końcu wiersza reprezentują jeden znak cudzysłowu w ciągu i znak zakończenia ciągu.  
+ W poprzednim przykładzie dwa znaki cudzysłowu poprzedzającego słowo `Look` stają się pojedynczym znakiem cudzysłowu w ciągu. Trzy cudzysłowy znajdujące się na końcu wiersza reprezentują jeden znak cudzysłowu w ciągu i znak zakończenia ciągu.  
   
  Literały ciągu mogą zawierać wiele wierszy:  
   
@@ -50,30 +50,30 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Znaki w ciągach  
- Ciąg może być uważany za serię wartości `Char`, a typ `String` ma wbudowane funkcje, które umożliwiają wykonywanie wielu operacji w ciągu, który przypomina manipulowanie dozwolone przez tablice. Podobnie jak w przypadku wszystkich tablic w .NET Framework, są to tablice oparte na zero. Można odwołać się do określonego znaku w ciągu za pomocą właściwości `Chars`, która zapewnia sposób dostępu do znaku przez położenie, w którym występuje w ciągu. Na przykład:  
+ Ciąg może być uważany za serię `Char` wartości, a `String` Typ ma wbudowane funkcje, które umożliwiają wykonywanie wielu operacji na ciągu, który przypomina manipulowanie dozwolonymi przez tablice. Podobnie jak w przypadku wszystkich tablic w .NET Framework, są to tablice oparte na zero. Możesz odwołać się do określonego znaku w ciągu za pomocą `Chars` właściwości, która zapewnia sposób dostępu do znaku przez położenie, w którym występuje w ciągu. Przykład:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- W powyższym przykładzie właściwość `Chars` ciągu zwraca czwarty znak w ciągu, który jest `D`i przypisuje go do `myChar`. Możesz również uzyskać długość określonego ciągu za pomocą właściwości `Length`. Jeśli trzeba wykonać wiele operacji manipulowania typem tablicowym w ciągu, można przekonwertować ją na tablicę wystąpień `Char` przy użyciu funkcji `ToCharArray` ciągu. Na przykład:  
+ W powyższym przykładzie `Chars` Właściwość ciągu zwraca czwarty znak w ciągu, który jest `D` i przypisuje do `myChar` . Możesz również uzyskać długość określonego ciągu za pomocą `Length` właściwości. Jeśli trzeba wykonać wiele operacji manipulowania typem tablicowym w ciągu, można przekonwertować ją na tablicę `Char` wystąpień przy użyciu `ToCharArray` funkcji ciągu. Przykład:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
- Zmienna `myArray` teraz zawiera tablicę wartości `Char`, z których każdy reprezentuje znak z `myString`.  
+ Zmienna `myArray` zawiera teraz tablicę `Char` wartości, z których każdy reprezentuje znak `myString` .  
   
 ## <a name="the-immutability-of-strings"></a>Niezmienności ciągów  
- Ciąg jest *niezmienny*, co oznacza, że jego wartość nie może zostać zmieniona po utworzeniu. Nie uniemożliwia to jednak przypisywania więcej niż jednej wartości do zmiennej ciągu. Rozważmy następujący przykład:  
+ Ciąg jest *niezmienny*, co oznacza, że jego wartość nie może zostać zmieniona po utworzeniu. Nie uniemożliwia to jednak przypisywania więcej niż jednej wartości do zmiennej ciągu. Rozpatrzmy następujący przykład:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
  W tym miejscu zostanie utworzona zmienna ciągu, z uwzględnieniem wartości, a następnie jej wartość zostanie zmieniona.  
   
- Dokładniej, w pierwszym wierszu zostanie utworzone wystąpienie typu `String` i nadano `This string is immutable`wartość. W drugim wierszu przykładu zostanie utworzone nowe wystąpienie, pod którym `Or is it?`wartość, a zmienna String odrzuca odwołanie do pierwszego wystąpienia i zapisuje odwołanie do nowego wystąpienia.  
+ Dokładniej, w pierwszym wierszu `String` jest tworzone wystąpienie typu i ma wartość `This string is immutable` . W drugim wierszu przykładu zostanie utworzone nowe wystąpienie i nadana wartość `Or is it?` , a zmienna String odrzuca odwołanie do pierwszego wystąpienia i zapisuje odwołanie do nowego wystąpienia.  
   
- W przeciwieństwie do innych typów danych wewnętrznych, `String` jest typem referencyjnym. Gdy zmienna typu referencyjnego jest przenoszona jako argument do funkcji lub podprocedury, odwołanie do adresu pamięci, w którym są przechowywane dane jest przekazywane zamiast rzeczywistej wartości ciągu. Dlatego w poprzednim przykładzie nazwa zmiennej pozostaje taka sama, ale wskazuje na nowe i inne wystąpienie klasy `String`, która zawiera nową wartość.  
+ W przeciwieństwie do innych wewnętrznych typów danych, `String` jest typem referencyjnym. Gdy zmienna typu referencyjnego jest przenoszona jako argument do funkcji lub podprocedury, odwołanie do adresu pamięci, w którym są przechowywane dane jest przekazywane zamiast rzeczywistej wartości ciągu. Tak więc w poprzednim przykładzie nazwa zmiennej pozostaje taka sama, ale wskazuje na nowe i inne wystąpienie `String` klasy, która zawiera nową wartość.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Wprowadzenie do ciągów w Visual Basic](introduction-to-strings.md)
+- [Typ danych ciągu](../../../language-reference/data-types/string-data-type.md)
+- [Char, typ danych](../../../language-reference/data-types/char-data-type.md)
 - [Podstawowe operacje na ciągach](../../../../standard/base-types/basic-string-operations.md)

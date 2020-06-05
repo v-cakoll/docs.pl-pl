@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 628461c8136946dd902c0a52048eee7c516c52cd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352924"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393081"
 ---
 # <a name="type-characters-visual-basic"></a>Znaki typu (Visual Basic)
 
@@ -62,9 +62,9 @@ Visual Basic dostarcza zestaw *znaków typu identyfikatora* , których można u�
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- Nie istnieją znaki typu identyfikatora dla `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`lub `UShort` typów danych lub dla jakichkolwiek typów danych złożonych, takich jak tablice lub struktury.
+ Brak znaków typu identyfikatora dla,,,,,,,, `Boolean` `Byte` `Char` `Date` `Object` `SByte` `Short` `UInteger` `ULong` lub `UShort` dla typów danych złożonych, takich jak tablice lub struktury.
 
-W niektórych przypadkach można dołączyć znak `$` do funkcji Visual Basic, na przykład `Left$` zamiast `Left`, aby uzyskać zwracaną wartość typu `String`.
+W niektórych przypadkach można dołączyć `$` znak do funkcji Visual Basic, na przykład `Left$` zamiast `Left` , aby uzyskać zwracaną wartość typu `String` .
 
 We wszystkich przypadkach znak typu identyfikatora musi występować bezpośrednio po nazwie identyfikatora.
 
@@ -79,7 +79,7 @@ Postać literału wyświetlanego w kodzie zwykle określa swój typ danych. W po
 |Tekstowa postać literału|Domyślny typ danych|Przykład|  
 |-----------------------------|-----------------------|-------------|  
 |Liczbowa, bez części ułamkowej|`Integer`|`2147483647`|  
-|Liczbowa, bez części ułamkowej, zbyt duża dla `Integer`|`Long`|`2147483648`|  
+|Liczbowa, bez części ułamkowej, zbyt duża dla`Integer`|`Long`|`2147483648`|  
 |Liczbowa, ułamkowa część|`Double`|`1.2`|  
 |Ujęte w podwójne cudzysłowy|`String`|`"A"`|  
 |Ujęte w znaki liczbowe|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -101,23 +101,23 @@ Visual Basic dostarcza zestaw *znaków literału*, których można użyć, aby w
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-Nie istnieją znaki typu literału dla typu danych `Boolean`, `Byte`, `Date`, `Object`, `SByte`lub `String` lub dla dowolnego złożonego typu danych, takiego jak tablice lub struktury.
+Nie istnieją znaki typu literału dla `Boolean` `Byte` typów danych,,,, `Date` `Object` `SByte` lub `String` , lub dla jakichkolwiek złożonych typów danych, takich jak tablice lub struktury.
 
-Literały mogą również używać znaków typu identyfikatora (`%`, `&`, `@`, `!`, `#`, `$`), ponieważ mogą to być zmienne, stałe i wyrażenia. Jednak znaki literału (`S`, `I`, `L`, `D`, `F`, `R`, `C`) mogą być używane tylko z literałami.
+Literały mogą również używać znaków typu identyfikatora ( `%` ,,,, `&` `@` `!` `#` , `$` ), jako zmiennych, stałych i wyrażeń. Jednak znaki typu literału (,,,,, `S` `I` `L` `D` `F` `R` , `C` ) mogą być używane tylko z literałami.
 
 We wszystkich przypadkach znak typu literału musi występować bezpośrednio po wartości literału.
 
 ## <a name="hexadecimal-binary-and-octal-literals"></a>Literały szesnastkowe, binarne i ósemkowe
 
-Kompilator zwykle interpretuje literał liczby całkowitej, aby znajdować się w systemie dziesiętnym (podstawowy 10). Można również zdefiniować literał liczby całkowitej jako szesnastkową (Base 16) z prefiksem `&H`, jako wartość binarną (podstawową 2) z prefiksem `&B`, a jako ósemkową (bazową 8) liczbę z prefiksem `&O`. Cyfry, które są zgodne z prefiksem, muszą być odpowiednie dla systemu liczbowego. Przedstawiono to w poniższej tabeli.  
+Kompilator zwykle interpretuje literał liczby całkowitej, aby znajdować się w systemie dziesiętnym (podstawowy 10). Można również zdefiniować literał liczby całkowitej jako szesnastkowy (Base 16) z `&H` prefiksem, jako binarny (podstawowy 2) z `&B` prefiksem oraz jako ósemkową (bazową 8) liczbę z `&O` prefiksem. Cyfry, które są zgodne z prefiksem, muszą być odpowiednie dla systemu liczbowego. Przedstawiono to w poniższej tabeli.  
   
-|Podstawa liczby|prefiks|Prawidłowe wartości cyfry|Przykład|
+|Podstawa liczby|Prefiks|Prawidłowe wartości cyfry|Przykład|
 |-----------------|------------|------------------------|-------------|
 |Szesnastkowe (Base 16)|`&H`|0-9 i A-F|`&HFFFF`|
 |Binary (baza 2)|`&B`|0-1|`&B01111100`|
 |Ósemkowe (podstawa 8)|`&O`|0-7|`&O77`|
 
-Począwszy od Visual Basic 2017, można użyć znaku podkreślenia (`_`) jako separatora grupy, aby zwiększyć czytelność literału całkowitego. Poniższy przykład używa znaku `_`, aby zgrupować literał binarny w grupy 8-bitowe:
+Począwszy od Visual Basic 2017, można użyć znaku podkreślenia ( `_` ) jako separatora grupy, aby zwiększyć czytelność literału całkowitego. Poniższy przykład używa znaku, `_` Aby grupować literał binarny w grupy 8-bitowe:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
@@ -130,9 +130,9 @@ Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-W poprzednim przykładzie `counter` ma wartość dziesiętną-32768, a `flags` ma wartość dziesiętną + 32768.
+W poprzednim przykładzie `counter` ma wartość dziesiętną-32768 i `flags` ma wartość dziesiętną + 32768.
 
-Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia (`_`) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Na przykład:
+Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia ( `_` ) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Przykład:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -140,12 +140,12 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
+- [Typy danych](index.md)
+- [Typy danych podstawowych](elementary-data-types.md)
+- [Typy wartości i odwołań](value-types-and-reference-types.md)
+- [Konwersje plików w Visual Basic](type-conversions.md)
+- [Rozwiązywanie problemów związanych z typami danych](troubleshooting-data-types.md)
+- [Deklaracja zmiennej](../variables/variable-declaration.md)
+- [Typy danych](../../../language-reference/data-types/index.md)

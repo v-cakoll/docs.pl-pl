@@ -2,16 +2,16 @@
 title: Dostęp do atrybutów przy użyciu odbicia
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353557"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400761"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)
 
-Fakt, że można zdefiniować atrybuty niestandardowe i umieścić je w kodzie źródłowym, będzie miał małą wartość bez konieczności pobierania tych informacji i działania na nich. Za pomocą odbicia można pobrać informacje, które zostały zdefiniowane przy użyciu atrybutów niestandardowych. Kluczowa Metoda to `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiednikami w czasie wykonywania dla atrybutów kodu źródłowego. Ta metoda ma kilka przeciążonych wersji. Aby uzyskać więcej informacji, zobacz temat <xref:System.Attribute>.
+Fakt, że można zdefiniować atrybuty niestandardowe i umieścić je w kodzie źródłowym, będzie miał małą wartość bez konieczności pobierania tych informacji i działania na nich. Za pomocą odbicia można pobrać informacje, które zostały zdefiniowane przy użyciu atrybutów niestandardowych. Kluczową metodą jest `GetCustomAttributes` , która zwraca tablicę obiektów, które są odpowiednikami w czasie wykonywania dla atrybutów kodu źródłowego. Ta metoda ma kilka przeciążonych wersji. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.
 
 Specyfikacja atrybutu, taka jak:
 
@@ -29,7 +29,7 @@ Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1
 ```
 
-Jednak kod nie jest wykonywany, dopóki `SampleClass` nie zostanie poszukiwany dla atrybutów. Wywołanie `GetCustomAttributes` na `SampleClass` powoduje, że obiekt `Author` zostanie skonstruowany i zainicjowany jak powyżej. Jeśli klasa ma inne atrybuty, inne obiekty atrybutów są konstruowane podobnie. `GetCustomAttributes` następnie zwraca obiekt `Author` i wszelkie inne obiekty atrybutu w tablicy. Następnie można wykonać iterację tej tablicy, określić, jakie atrybuty zostały zastosowane na podstawie typu każdego elementu tablicy, i wyodrębnić informacje z obiektów atrybutów.
+Jednak kod nie jest wykonywany do momentu `SampleClass` zapytania o atrybuty. Wywołanie metody powoduje, że `GetCustomAttributes` `SampleClass` `Author` obiekt ma być skonstruowany i zainicjowany jak powyżej. Jeśli klasa ma inne atrybuty, inne obiekty atrybutów są konstruowane podobnie. `GetCustomAttributes`następnie zwraca `Author` obiekt i wszystkie inne obiekty atrybutu w tablicy. Następnie można wykonać iterację tej tablicy, określić, jakie atrybuty zostały zastosowane na podstawie typu każdego elementu tablicy, i wyodrębnić informacje z obiektów atrybutów.
 
 ## <a name="example"></a>Przykład
 
@@ -101,12 +101,12 @@ Class TestAuthorAttribute
 End Class
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania w Visual Basic](../../index.md)
 - [Pobieranie informacji przechowywanych w atrybutach](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Odbicie (Visual Basic)](../reflection.md)
+- [Atrybuty (Visual Basic)](../../../language-reference/attributes.md)
+- [Tworzenie atrybutów niestandardowych (Visual Basic)](creating-custom-attributes.md)

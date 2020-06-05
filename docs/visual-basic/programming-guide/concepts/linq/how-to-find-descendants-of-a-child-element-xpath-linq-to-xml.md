@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML)'
+title: 'Instrukcje: znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa6a66f4a53fc74b5946a395f7b61218e680f530
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344672"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405225"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML) (Visual Basic)
 W tym temacie pokazano, jak uzyskać elementy podrzędne elementu podrzędnego o określonej nazwie.  
@@ -17,7 +17,7 @@ W tym temacie pokazano, jak uzyskać elementy podrzędne elementu podrzędnego o
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład symuluje problemy związane z wyodrębnianiem tekstu z reprezentacji XML dokumentu przetwarzania tekstów. Najpierw zaznacza wszystkie elementy `Paragraph`, a następnie wybiera wszystkie elementy podrzędne `Text` każdego elementu `Paragraph`. Nie spowoduje to zaznaczenia elementów podrzędnych `Text` elementu `Comment`.  
+ Ten przykład symuluje problemy związane z wyodrębnianiem tekstu z reprezentacji XML dokumentu przetwarzania tekstów. Najpierw zaznacza wszystkie `Paragraph` elementy, a następnie wybiera wszystkie elementy `Text` zależne każdego `Paragraph` elementu. Nie wybrano elementów potomnych `Text` `Comment` elementu.  
   
 ```vb  
 Dim root As XElement = _  
@@ -69,6 +69,6 @@ Results are identical
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

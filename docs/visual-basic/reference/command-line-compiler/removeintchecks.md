@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: bea6ca24ea6da9000267e754d52fe0ca152f7d7f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec4722cb7088819dae95ca1b7cbc1469d957a7aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005230"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400477"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Włącza lub wyłącza przepełnienie — sprawdzanie błędów dla operacji całkowitych.  
@@ -29,7 +29,7 @@ Włącza lub wyłącza przepełnienie — sprawdzanie błędów dla operacji ca�
   
 |Termin|Definicja|  
 |---|---|  
-|`+`&#124;`-`|Element opcjonalny. `-removeintchecks-` Opcja powoduje, że kompilator sprawdza wszystkie obliczenia całkowite dla błędów przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` zapobiega sprawdzaniu błędów i umożliwia szybsze Obliczanie liczb całkowitych. Jednak bez sprawdzania błędów, a w przypadku przepełnienia zdolności do typów danych można przechowywać nieprawidłowe wyniki bez zgłaszania błędu.|  
+|`+`&#124;`-`|Opcjonalny. `-removeintchecks-`Opcja powoduje, że kompilator sprawdza wszystkie obliczenia całkowite dla błędów przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` zapobiega sprawdzaniu błędów i umożliwia szybsze Obliczanie liczb całkowitych. Jednak bez sprawdzania błędów, a w przypadku przepełnienia zdolności do typów danych można przechowywać nieprawidłowe wyniki bez zgłaszania błędu.|  
   
 |Aby ustawić-removeintchecks w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
@@ -44,5 +44,5 @@ vbc -removeintchecks+ test.vb
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

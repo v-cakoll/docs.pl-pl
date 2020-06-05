@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e36b84252c3d8762308e95323b8e284977df8c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649845"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409767"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Stałe muszą być typu wewnętrznego lub wyliczeniowego, a nie typu klasy, struktury, parametru typu lub tablicy
-Podjęto próbę deklarowanie stałej jako klasy, struktury lub typ tablicy lub jako parametr typu zdefiniowane przez zawierającego typu ogólnego.  
+Próbowano zadeklarować stałą jako klasę, strukturę lub typ tablicy albo jako parametr typu zdefiniowany przez zawierający typ ogólny.  
   
- Stałe muszą być typu wewnętrznego (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, lub `UShort`), lub `Enum` typu na podstawie jednego z typów całkowitych.  
+ Stałe muszą być typu wewnętrznego (,,,,,,,,,, `Boolean` `Byte` ,,,, `Date` `Decimal` `Double` `Integer` `Long` `Object` `SByte` `Short` `Single` `String` `UInteger` `ULong` lub `UShort` ) lub `Enum` typu na podstawie jednego z typów całkowitych.  
   
  **Identyfikator błędu:** BC30424  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Deklarowanie stałej jako funkcja wewnętrzna lub `Enum` typu.  
+1. Zadeklaruj stałą jako wewnętrzną lub `Enum` Typ.  
   
-2. Stała może być również specjalna wartość takich jak `True`, `False`, lub `Nothing`. Kompilator traktuje te wstępnie zdefiniowane wartości jako odpowiedniego typu wewnętrznego.  
+2. Stała może być również specjalną wartością, taką jak `True` , `False` , lub `Nothing` . Kompilator uważa, że te wstępnie zdefiniowane wartości mają być odpowiednim typem wewnętrznym.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Stałe i wyliczenia](../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Typy danych](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Stałe i wyliczenia](../constants-and-enumerations.md)
+- [Typy danych](../../programming-guide/language-features/data-types/index.md)
+- [Typy danych](../data-types/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Podstawowe informacje o .NET Framework File I/O i systemie plików
+title: Podstawowe informacje o operacjach We/Wy platformy .NET Framework i systemie plików
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348944"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401800"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dyskami, plikami i katalogami.
 
-<xref:System.IO> Przestrzeń nazw zawiera klasy <xref:System.IO.File> i <xref:System.IO.Directory> , które zapewniają funkcję .NET Framework, która operuje na plikach i katalogach. Ponieważ metody tych obiektów są statycznymi lub udostępnionymi składowymi, można ich używać bezpośrednio bez tworzenia wystąpienia klasy. Skojarzone z tymi klasami są <xref:System.IO.FileInfo> klasami i <xref:System.IO.DirectoryInfo> , które będą znane użytkownikom `My` funkcji. Aby użyć tych klas, należy w pełni zakwalifikować nazwy lub zaimportować odpowiednie przestrzenie nazw, dołączając `Imports` instrukcje na początku kodu, którego to dotyczy. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+<xref:System.IO>Przestrzeń nazw zawiera <xref:System.IO.File> klasy i <xref:System.IO.Directory> , które zapewniają funkcję .NET Framework, która operuje na plikach i katalogach. Ponieważ metody tych obiektów są statycznymi lub udostępnionymi składowymi, można ich używać bezpośrednio bez tworzenia wystąpienia klasy. Skojarzone z tymi klasami są <xref:System.IO.FileInfo> <xref:System.IO.DirectoryInfo> klasami i, które będą znane użytkownikom `My` funkcji. Aby użyć tych klas, należy w pełni zakwalifikować nazwy lub zaimportować odpowiednie przestrzenie nazw, dołączając `Imports` instrukcje na początku kodu, którego to dotyczy. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> W innych tematach w tej sekcji `My.Computer.FileSystem` Użyj obiektu zamiast `System.IO` klas do pracy z dyskami, plikami i katalogami. `My.Computer.FileSystem` Obiekt jest przeznaczony głównie do użytku w Visual Basic programów. `System.IO`klasy są przeznaczone do użycia w dowolnym języku, który obsługuje .NET Framework, w tym Visual Basic.
+> W innych tematach w tej sekcji Użyj `My.Computer.FileSystem` obiektu zamiast `System.IO` klas do pracy z dyskami, plikami i katalogami. `My.Computer.FileSystem`Obiekt jest przeznaczony głównie do użytku w Visual Basic programów. `System.IO`klasy są przeznaczone do użycia w dowolnym języku, który obsługuje .NET Framework, w tym Visual Basic.
 
 ## <a name="definition-of-a-stream"></a>Definicja strumienia
 
@@ -71,9 +71,9 @@ W poniższej tabeli wymieniono zadania często wykonywane przy użyciu strumieni
 
 ## <a name="file-access-and-attributes"></a>Dostęp do plików i atrybuty
 
-Można kontrolować sposób tworzenia, <xref:System.IO.FileAccess>otwierania i udostępniania <xref:System.IO.FileMode>plików, a <xref:System.IO.FileShare> także wyliczenia, które zawierają flagi używane przez konstruktory <xref:System.IO.FileStream> klasy. Na przykład po otwarciu lub utworzeniu nowego <xref:System.IO.FileStream>elementu <xref:System.IO.FileMode> Wyliczenie pozwala określić, czy plik jest otwierany do dołączenia, czy nowy plik zostanie utworzony, jeśli określony plik nie istnieje, niezależnie od tego, czy plik jest zastępowany i tak dalej.
+Można kontrolować sposób tworzenia, otwierania i udostępniania plików, <xref:System.IO.FileAccess> <xref:System.IO.FileMode> a także <xref:System.IO.FileShare> wyliczenia, które zawierają flagi używane przez konstruktory <xref:System.IO.FileStream> klasy. Na przykład po otwarciu lub utworzeniu nowego elementu <xref:System.IO.FileStream> <xref:System.IO.FileMode> Wyliczenie pozwala określić, czy plik jest otwierany do dołączenia, czy nowy plik zostanie utworzony, jeśli określony plik nie istnieje, niezależnie od tego, czy plik jest zastępowany i tak dalej.
 
-<xref:System.IO.FileAttributes> Wyliczenie umożliwia gromadzenie informacji specyficznych dla pliku. <xref:System.IO.FileAttributes> Wyliczenie zwraca przechowywane atrybuty pliku, na przykład czy jest skompresowany, zaszyfrowany, ukryty, tylko do odczytu, archiwum, katalog, plik systemowy lub plik tymczasowy.
+<xref:System.IO.FileAttributes>Wyliczenie umożliwia gromadzenie informacji specyficznych dla pliku. <xref:System.IO.FileAttributes>Wyliczenie zwraca przechowywane atrybuty pliku, na przykład czy jest skompresowany, zaszyfrowany, ukryty, tylko do odczytu, archiwum, katalog, plik systemowy lub plik tymczasowy.
 
 Poniższa tabela zawiera listę zadań związanych z dostępem do plików i atrybutami plików:
 
@@ -104,11 +104,11 @@ W poniższej tabeli wymieniono zadania często związane z izolowanym magazynem 
 
 ## <a name="file-events"></a>Zdarzenia plików
 
-<xref:System.IO.FileSystemWatcher> Składnik umożliwia śledzenie zmian w plikach i katalogach w systemie lub na dowolnym komputerze, do którego masz dostęp do sieci. Na przykład, jeśli plik zostanie zmodyfikowany, można wysłać użytkownikowi alert informujący o tym, że została wprowadzona zmiana. Gdy wystąpią zmiany, zgłaszane jest jedno lub więcej zdarzeń, przechowywane w buforze i przekazywane do <xref:System.IO.FileSystemWatcher> składnika do przetwarzania.
+<xref:System.IO.FileSystemWatcher>Składnik umożliwia śledzenie zmian w plikach i katalogach w systemie lub na dowolnym komputerze, do którego masz dostęp do sieci. Na przykład, jeśli plik zostanie zmodyfikowany, można wysłać użytkownikowi alert informujący o tym, że została wprowadzona zmiana. Gdy wystąpią zmiany, zgłaszane jest jedno lub więcej zdarzeń, przechowywane w buforze i przekazywane do <xref:System.IO.FileSystemWatcher> składnika do przetwarzania.
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
 - [We/wy plików i strumieni](../../../../standard/io/index.md)
 - [Asynchroniczne operacje we/wy pliku](../../../../standard/io/asynchronous-file-i-o.md)
-- [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](classes-used-in-net-framework-file-io-and-the-file-system.md)

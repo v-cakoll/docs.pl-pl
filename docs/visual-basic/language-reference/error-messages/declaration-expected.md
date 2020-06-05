@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619527"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409741"
 ---
 # <a name="declaration-expected"></a>Oczekiwano deklaracji
-Nondeclarative instrukcji, takie jak przypisania lub instrukcji pętli jest wykonywane poza dowolnej procedury. Tylko deklaracje mogą poza procedur.  
+Niedeklaratywna instrukcja, taka jak Instrukcja przypisania lub pętla, występuje poza żadną procedurą. Tylko deklaracje są dozwolone poza procedurami.  
   
- Alternatywnie elementu programistycznego została zadeklarowana bez słowa kluczowego deklaracji takich jak `Dim` lub `Const`.  
+ Alternatywnie, element programowania jest zadeklarowany bez słowa kluczowego deklaracji, takiego jak `Dim` lub `Const` .  
   
  **Identyfikator błędu:** BC30188  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przenieś instrukcję nondeclarative treści procedury.  
+- Przenieś niedeklaracyjne instrukcje do treści procedury.  
   
-- Rozpocznij deklaracji z odpowiednią deklarację słowem kluczowym.  
+- Rozpocznij deklarację z odpowiednimi słowami kluczowymi deklaracji.  
   
-- Upewnij się, że deklaracja słowo kluczowe nie jest błędnie wpisana.  
+- Upewnij się, że słowo kluczowe deklaracji nie jest błędnie napisane.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Procedury](../../programming-guide/language-features/procedures/index.md)
+- [Dim, instrukcja](../statements/dim-statement.md)

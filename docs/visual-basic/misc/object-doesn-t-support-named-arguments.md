@@ -1,23 +1,23 @@
 ---
-title: Obiekt nie obsługuje argumenty nazwane
+title: Obiekt nie obsługuje argumentów nazwanych.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID446
 ms.assetid: f4812db8-e85d-4d5b-b7c9-d54a1f850034
-ms.openlocfilehash: 39940e23f210ecf96f96ae69adea22a57ac11268
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 79ebc638912b218881fd653c5c30b370d3b1b829
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591816"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376137"
 ---
-# <a name="object-doesnt-support-named-arguments"></a><span data-ttu-id="6c7f9-102">Obiekt nie obsługuje argumenty nazwane</span><span class="sxs-lookup"><span data-stu-id="6c7f9-102">Object doesn't support named arguments</span></span>
-<span data-ttu-id="6c7f9-103">Próbowano uzyskać dostęp do obiektu, którego metody nie są obsługiwane argumenty nazwane.</span><span class="sxs-lookup"><span data-stu-id="6c7f9-103">You tried to access an object whose methods don't support named arguments.</span></span>  
+# <a name="object-doesnt-support-named-arguments"></a><span data-ttu-id="a72dd-102">Obiekt nie obsługuje argumentów nazwanych.</span><span class="sxs-lookup"><span data-stu-id="a72dd-102">Object doesn't support named arguments</span></span>
+<span data-ttu-id="a72dd-103">Podjęto próbę uzyskania dostępu do obiektu, którego metody nie obsługują argumentów nazwanych.</span><span class="sxs-lookup"><span data-stu-id="a72dd-103">You tried to access an object whose methods don't support named arguments.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6c7f9-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="6c7f9-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a72dd-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="a72dd-104">To correct this error</span></span>  
   
-- <span data-ttu-id="6c7f9-105">Określ argumenty różnych pozycjach podczas uzyskiwania dostępu do metod dla tego obiektu.</span><span class="sxs-lookup"><span data-stu-id="6c7f9-105">Specify arguments positionally when accessing methods on this object.</span></span> <span data-ttu-id="6c7f9-106">Zapoznaj się dokumentacją obiektu Aby uzyskać więcej informacji na temat argument pozycji i typów.</span><span class="sxs-lookup"><span data-stu-id="6c7f9-106">See the object's documentation for more information on argument positions and types.</span></span>  
+- <span data-ttu-id="a72dd-105">Określ argumenty w pozycji podczas uzyskiwania dostępu do metod w tym obiekcie.</span><span class="sxs-lookup"><span data-stu-id="a72dd-105">Specify arguments positionally when accessing methods on this object.</span></span> <span data-ttu-id="a72dd-106">Aby uzyskać więcej informacji na temat pozycji i typów argumentów, zobacz dokumentację obiektu.</span><span class="sxs-lookup"><span data-stu-id="a72dd-106">See the object's documentation for more information on argument positions and types.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c7f9-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6c7f9-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a72dd-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a72dd-107">See also</span></span>
 
-- [<span data-ttu-id="6c7f9-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="6c7f9-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="a72dd-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="a72dd-108">Error Types</span></span>](../programming-guide/language-features/error-types.md)

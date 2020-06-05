@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b30a5a9d73dd84231f30f20549f5c0ae813742ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344267"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408637"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Wyświetla opcje kompilatora.  
@@ -35,7 +35,7 @@ lub
  Jeśli ta opcja zostanie uwzględniona w kompilacji, żaden plik wyjściowy nie zostanie utworzony i nie będzie wykonywana żadna kompilacja.  
   
 > [!NOTE]
-> `-help` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-help`Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod wyświetla pomoc w wierszu polecenia.  
@@ -46,5 +46,5 @@ vbc -help
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

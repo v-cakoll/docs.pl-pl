@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: a2ba752b95933d146da090a58c416015db75e106
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34718243172d3b1a238a813268e672d62c4eeb6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662670"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406537"
 ---
-# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość
-Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość. W czasie wykonywania może wystąpić wyjątek pustej referencji.  
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Zmienna „\<variablename>” jest używana, zanim zostanie do niej przypisana wartość
+Zmienna " \<variablename> " jest używana przed przypisaniem do niej wartości. Wyjątek odwołania o wartości null może wynikać w czasie wykonywania.  
   
- Aplikacja ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kod, który odczytuje zmienną przed przypisaniem do niej dowolną wartość.  
+ Aplikacja ma co najmniej jedną możliwą ścieżkę za pomocą kodu, który odczytuje zmienną przed przypisaniem do niej żadnej wartości.  
   
- Jeśli zmienna nie zostanie przypisana wartość, zawiera wartość domyślna dla jego typu danych. Odwołanie do typu danych, że wartość domyślna to [nic](../../../visual-basic/language-reference/nothing.md). Odczytywanie zmienną odwołania, który ma wartość `Nothing` może spowodować, że <xref:System.NullReferenceException> w pewnych okolicznościach.  
+ Jeśli zmienna nie ma przypisanej wartości, ma wartość domyślną dla tego typu danych. Dla typu danych referencyjnych wartość domyślna to [Nothing](../nothing.md). Odczytywanie zmiennej odniesienia, która ma wartość, `Nothing` może spowodować wystąpienie <xref:System.NullReferenceException> w pewnych okolicznościach.  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42104  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Sprawdź logikę przepływu sterowania i upewnij się, że zmienna ma prawidłową wartość przed kontrola przechodzi do żadnej instrukcji, który odczyta go.  
+- Sprawdź logikę przepływu sterowania i upewnij się, że zmienna ma prawidłową wartość przed przekazaniem kontroli do dowolnej instrukcji, która odczytuje ją.  
   
-- Jest jednym ze sposobów, aby zagwarantować, że zmienna zawsze ma prawidłową wartość zainicjować go jako części swojej deklaracji. Zobacz sekcję "Inicjowanie" w [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- Jednym ze sposobów zagwarantowania, że zmienna zawsze ma prawidłową wartość, jest zainicjowanie jej jako części swojej deklaracji. Zobacz "Inicjalizacja" w [instrukcji Dim](../statements/dim-statement.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Rozwiązywanie problemów związanych ze zmiennymi](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
+- [Dim, instrukcja](../statements/dim-statement.md)
+- [Deklaracja zmiennej](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Rozwiązywanie problemów związanych ze zmiennymi](../../programming-guide/language-features/variables/troubleshooting-variables.md)

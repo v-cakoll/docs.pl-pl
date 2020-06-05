@@ -2,18 +2,18 @@
 title: 'Instrukcje: filtrowanie elementu opcjonalnego'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9f03eee479e7c47e528a145d370472de6dfddd39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267057"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394366"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Jak: Filtrowanie elementu opcjonalnego (Visual Basic)
-Czasami chcesz filtrować element, nawet jeśli nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno być wykonywane tak, aby jeśli określony element nie ma elementu podrzędnego, nie wyzwolić wyjątek odwołania null przez filtrowanie dla niego. W poniższym przykładzie `Child5` element nie `Type` ma elementu podrzędnego, ale kwerenda nadal wykonuje poprawnie.  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Instrukcje: filtrowanie dla elementu opcjonalnego (Visual Basic)
+Czasami chcesz odfiltrować element, chociaż nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno zostać wykonane, aby Jeśli określony element nie ma elementu podrzędnego, nie zostanie wyzwolony wyjątek odwołania o wartości null przez filtrowanie dla niego. W poniższym przykładzie `Child5` element nie ma `Type` elementu podrzędnego, ale zapytanie jest nadal wykonywane poprawnie.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto <xref:System.Xml.Linq.Extensions.Elements%2A> metody rozszerzenia.  
+ Ten przykład używa <xref:System.Xml.Linq.Extensions.Elements%2A> metody rozszerzenia.  
   
 ```vb  
 Dim root As XElement = _
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia tę samą kwerendę dla xml, który znajduje się w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Omówienie obszarów nazw (LINQ do XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Zapytania podstawowe (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Omówienie standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operacje rzutowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Właściwości osi elementu podrzędnego XML](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [Właściwości osi atrybutu XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Właściwość wartości XML](../../../language-reference/xml-axis/xml-value-property.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md)
+- [Operacje projekcji (Visual Basic)](projection-operations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338618"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396743"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Wskazówki: tworzenie obiektów COM z Visual Basic
 Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy .NET Framework. Jednak Visual Basic ułatwiają również uwidocznienie składnika .NET Framework w modelu COM. Pozwala to udostępnić nowe składniki dla wcześniejszych zestawów aplikacji, które wymagają składników COM. W tym instruktażu pokazano, jak za pomocą Visual Basic uwidocznić obiekty .NET Framework jako obiekty COM, zarówno z szablonem klasy COM, jak i bez niego.  
@@ -21,7 +21,7 @@ Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy 
  Najprostszym sposobem uwidocznienia obiektów COM jest użycie szablonu klasy COM. Szablon klasy COM tworzy nową klasę, a następnie konfiguruje projekt w celu wygenerowania warstwy i współdziałania jako obiektu COM i zarejestrowania go w systemie operacyjnym.  
   
 > [!NOTE]
-> Chociaż można również uwidocznić klasę utworzoną w Visual Basic jako obiekt COM dla niezarządzanego kodu do użycia, nie jest to prawdziwy obiekt COM i nie może być używany przez Visual Basic. Aby uzyskać więcej informacji, zobacz [współdziałanie com w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Chociaż można również uwidocznić klasę utworzoną w Visual Basic jako obiekt COM dla niezarządzanego kodu do użycia, nie jest to prawdziwy obiekt COM i nie może być używany przez Visual Basic. Aby uzyskać więcej informacji, zobacz [współdziałanie com w aplikacjach .NET Framework](com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,7 +31,7 @@ Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy 
   
 2. W oknie dialogowym **Nowy projekt** w polu **typy projektu** Sprawdź, czy jest wybrany system Windows. Na liście **Szablony** wybierz pozycję **Biblioteka klas** , a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.  
   
-3. Wybierz pozycję **Dodaj nowy element** z menu **projekt** . Zostanie wyświetlone okno dialogowe **Dodaj nowy element** .  
+3. Wybierz pozycję **Dodaj nowy element** z menu **projekt** . Zostanie wyświetlone okno dialogowe **Dodaj nowy element**.  
   
 4. Z listy **Szablony** wybierz pozycję **Klasa com** , a następnie kliknij przycisk **Dodaj**. Visual Basic dodaje nową klasę i konfiguruje nowy projekt dla międzyoperacyjności modelu COM.  
   
@@ -58,43 +58,43 @@ Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy 
   
 1. W **Eksplorator rozwiązań**kliknij dwukrotnie pozycję **Class1. vb** , aby wyświetlić swój kod.  
   
-2. Zmień nazwę klasy na `ComClass1`.  
+2. Zmień nazwę klasy na `ComClass1` .  
   
-3. Dodaj następujące stałe do `ComClass1`. Będą one przechowywać stałe unikatowe identyfikatory (GUID), które są wymagane do posiadania obiektów COM.  
+3. Dodaj następujące stałe do programu `ComClass1` . Będą one przechowywać stałe unikatowe identyfikatory (GUID), które są wymagane do posiadania obiektów COM.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4. W menu **Narzędzia** kliknij polecenie **Utwórz identyfikator GUID**. W oknie dialogowym **Tworzenie identyfikatora GUID** kliknij przycisk **Format rejestru** , a następnie kliknij przycisk **Kopiuj**. Kliknij przycisk **Zakończ**.  
   
-5. Zastąp ciąg pusty dla `ClassId` identyfikatorem GUID, usuwając wiodące i końcowe nawiasy klamrowe. Na przykład jeśli identyfikator GUID podany przez Guidgen jest `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`, kod powinien wyglądać w następujący sposób.  
+5. Zastąp ciąg pusty ciągiem `ClassId` z identyfikatorem GUID, usuwając wiodące i końcowe nawiasy klamrowe. Na przykład, jeśli identyfikator GUID podany przez Guidgen to, `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` kod powinien wyglądać w następujący sposób.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Powtórz poprzednie kroki dla stałych `InterfaceId` i `EventsId`, jak w poniższym przykładzie.  
+6. Powtórz poprzednie kroki dla `InterfaceId` i `EventsId` stałych, jak w poniższym przykładzie.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     > Upewnij się, że identyfikatory GUID są nowe i unikatowe; w przeciwnym razie składnik COM może powodować konflikt z innymi składnikami modelu COM.  
   
-7. Dodaj `ComClass` atrybutu do `ComClass1`, określając identyfikatory GUID identyfikatora klasy, identyfikator interfejsu i identyfikator zdarzenia, jak w poniższym przykładzie:  
+7. Dodaj `ComClass` atrybut do `ComClass1` , określając identyfikatory GUID identyfikatora klasy, identyfikator interfejsu i identyfikator zdarzenia, jak w poniższym przykładzie:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8. Klasy COM muszą mieć Konstruktor `Public Sub New()` bez parametrów lub Klasa nie zostanie poprawnie zarejestrowana. Dodaj Konstruktor bez parametrów do klasy:  
+8. Klasy COM muszą mieć konstruktora bez parametrów `Public Sub New()` lub Klasa nie zostanie poprawnie zarejestrowana. Dodaj Konstruktor bez parametrów do klasy:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. Dodaj właściwości, metody i zdarzenia do klasy, kończąc ją z instrukcją `End Class`. Wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . Visual Basic kompiluje zestaw i rejestruje obiekt COM w systemie operacyjnym.  
+9. Dodaj właściwości, metody i zdarzenia do klasy, kończąc ją z `End Class` instrukcją. Wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . Visual Basic kompiluje zestaw i rejestruje obiekt COM w systemie operacyjnym.  
   
     > [!NOTE]
-    > Obiekty COM generowane za pomocą Visual Basic nie mogą być używane przez inne aplikacje Visual Basic, ponieważ nie są one prawdziwymi obiektami COM. Próby dodania odwołań do takich obiektów COM spowodują wystąpienie błędu. Aby uzyskać szczegółowe informacje, zobacz [współdziałanie com w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > Obiekty COM generowane za pomocą Visual Basic nie mogą być używane przez inne aplikacje Visual Basic, ponieważ nie są one prawdziwymi obiektami COM. Próby dodania odwołań do takich obiektów COM spowodują wystąpienie błędu. Aby uzyskać szczegółowe informacje, zobacz [współdziałanie com w aplikacjach .NET Framework](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
-- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [#Region, dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)
-- [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Międzyoperacyjność modelu COM](index.md)
+- [Przewodnik: Implementowanie dziedziczenia z obiektami COM](walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region — dyrektywa](../../language-reference/directives/region-directive.md)
+- [Współdziałanie COM w aplikacjach .NET Framework](com-interoperability-in-net-framework-applications.md)
+- [Rozwiązywanie problemów związanych z współdziałaniem](troubleshooting-interoperability.md)

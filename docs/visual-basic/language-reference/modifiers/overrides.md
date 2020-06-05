@@ -1,5 +1,5 @@
 ---
-title: Overrides
+title: Przesłonięcia
 ms.date: 07/20/2015
 f1_keywords:
 - Overrides
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 04f1cb27d6a8366c2dd13f8fdc1d975d382f1cfd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 657f838b2959a5b6a7cef5ff18295a4ada709e9a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351386"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392031"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 
@@ -26,9 +26,9 @@ Określa, że właściwość lub procedura przesłania właściwość lub proced
 
 ## <a name="rules"></a>Reguły
 
-- **Kontekst deklaracji.** `Overrides` można użyć tylko w instrukcji deklaracji właściwości lub procedury.
+- **Kontekst deklaracji.** Można użyć `Overrides` tylko w instrukcji deklaracji właściwości lub procedury.
 
-- **Połączone modyfikatory.** Nie można określić `Overrides` razem z `Shadows` lub `Shared` w tej samej deklaracji. Ponieważ przesłaniający element jest niejawnie możliwy do zastąpienia, nie można połączyć `Overridable` z `Overrides`.
+- **Połączone modyfikatory.** Nie można określić `Overrides` razem z `Shadows` lub `Shared` w tej samej deklaracji. Ponieważ przesłaniający element jest niejawnie możliwy do zastąpienia, nie można połączyć `Overridable` się z `Overrides` .
 
 - **Pasujące podpisy.** Podpis tej deklaracji musi być dokładnie zgodny z *podpisem* właściwości lub procedury, która zastąpi. Oznacza to, że listy parametrów muszą mieć taką samą liczbę parametrów, w tej samej kolejności, przy użyciu tych samych typów danych.
 
@@ -42,30 +42,30 @@ Określa, że właściwość lub procedura przesłania właściwość lub proced
 
 - **Dodatkowe dopasowanie.** Oprócz dopasowania sygnatury wersji klasy bazowej, ta deklaracja musi również być zgodna z następującymi kwestiami:
 
-  - Modyfikator poziomu dostępu (na przykład [publiczny](../../../visual-basic/language-reference/modifiers/public.md))
+  - Modyfikator poziomu dostępu (na przykład [publiczny](public.md))
 
-  - Mechanizm przekazywania każdego parametru ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Mechanizm przekazywania każdego parametru ([ByVal](byval.md) lub [ByRef](byref.md))
 
   - Listy ograniczeń dla każdego parametru typu procedury ogólnej
 
-- **Przesłanianie i zastępowanie.** Zarówno przesłanianie, jak i przesłonięcie przedefiniują Dziedziczony element, ale istnieją znaczne różnice między tymi dwoma podejściami. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Przesłanianie i zastępowanie.** Zarówno przesłanianie, jak i przesłonięcie przedefiniują Dziedziczony element, ale istnieją znaczne różnice między tymi dwoma podejściami. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md).
 
-Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby interfejsy API biblioteki działały C# łatwiej.
+W przypadku korzystania `Overrides` z programu kompilator niejawnie dodaje w `Overloads` taki sposób, aby interfejsy API biblioteki działały w łatwiejszy sposób.
 
-Modyfikator `Overrides` może być używany w tych kontekstach:
+`Overrides`Modyfikator może być używany w tych kontekstach:
 
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function, instrukcja](../statements/function-statement.md)
 
-- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property — Instrukcja](../statements/property-statement.md)
 
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub, instrukcja](../statements/sub-statement.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Obserwowanie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
+- [MustOverride](mustoverride.md)
+- [NotOverridable](notoverridable.md)
+- [Overridable](overridable.md)
+- [Słowa kluczowe](../keywords/index.md)
+- [Przesłanianie w Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md)
+- [Typy ogólne w Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Lista typów](../statements/type-list.md)

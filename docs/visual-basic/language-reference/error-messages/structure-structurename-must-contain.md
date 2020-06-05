@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4ce24073896326bb5a68e563e2d34aafa09ef1c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b5bda7b1a2ae37eb509c736deae1652dc5e6ab0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374021"
 ---
-# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struktura "\<structurename >" musi zawierać co najmniej jedną zmienną elementu członkowskiego wystąpienia lub co najmniej jedną deklarację wystąpienia zdarzenia nie jest oznaczona "Custom"
-Definicja struktury nie ma żadnych zmiennych nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struktura „\<structurename>" musi zawierać co najmniej jedną zmienną elementu członkowskiego lub co najmniej jedną deklarację wystąpienia zdarzenia, która nie jest oznaczona „Custom"
+Definicja struktury nie zawiera żadnych zmiennych nieudostępnionych lub nieudostępnianych zdarzeń nieniestandardowych.  
   
- Co struktura musi być zmienną lub zdarzenie, które mają zastosowanie do każdego wystąpienia określonych (udostępniana), a nie do wszystkich wystąpień zbiorczo ([Shared](../../../visual-basic/language-reference/modifiers/shared.md)). Stałe nieudostępnionych, właściwości i procedury nie spełniają tego wymagania. Ponadto w przypadku żadnych zmiennych nieudostępnionych i tylko jedno zdarzenie nieudostępnionych, to zdarzenie nie może być `Custom` zdarzeń.  
+ Każda struktura musi mieć zmienną lub zdarzenie, które stosuje się do każdego określonego wystąpienia (nieudostępnione) zamiast do wszystkich wystąpień zbiorczo ([współużytkowane](../modifiers/shared.md)). Nieudostępnione stałe, właściwości i procedury nie spełniają tego wymagania. Ponadto, jeśli nie istnieją zmienne nieudostępnione i tylko jedno nieudostępnione zdarzenie, to zdarzenie nie może być `Custom` zdarzeniem.  
   
  **Identyfikator błędu:** BC30941  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Zdefiniuj co najmniej jedną zmienną lub zdarzeń, który nie jest `Shared`. Jeśli zdefiniujesz tylko jedno zdarzenie, musi ona standardowych, jak również nieudostępnionych.  
+- Zdefiniuj co najmniej jedną zmienną lub zdarzenie, które nie jest `Shared` . Jeśli zdefiniujesz tylko jedno zdarzenie, musi ono być nieniestandardowe i nieudostępnione.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Instrukcje: deklarowanie struktury](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Struktury](../../programming-guide/language-features/data-types/structures.md)
+- [Instrukcje: Deklarowanie struktury](../../programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Structure — Instrukcja](../statements/structure-statement.md)

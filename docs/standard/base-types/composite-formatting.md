@@ -1,5 +1,6 @@
 ---
 title: Złożone formatowanie
+description: Dowiedz się więcej na temat formatowania złożonego .NET, które przyjmuje jako dane wejściowe listę obiektów i ciąg formatu złożonego, zawierający stały tekst z indeksowanymi symbolami zastępczymi.
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 2488a471af3e0dfc8ebf7dad1589c3c03ac15d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289320"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447267"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 

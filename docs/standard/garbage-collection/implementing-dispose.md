@@ -1,5 +1,6 @@
 ---
 title: Implementacja metody Dispose
+description: W tym artykule dowiesz się, jak zaimplementować metodę Dispose, która zwalnia niezarządzane zasoby używane przez kod w programie .NET.
 ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a16034b074b518b25244c47a7d00cb484e145c6e
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307023"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447176"
 ---
 # <a name="implement-a-dispose-method"></a>Implementacja metody Dispose
 
@@ -148,7 +149,7 @@ Poniższy przykład ilustruje wzorzec usuwania dla klasy pochodnej, `DisposableS
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

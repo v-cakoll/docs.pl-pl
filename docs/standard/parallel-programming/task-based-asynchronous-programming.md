@@ -1,5 +1,6 @@
 ---
 title: Programowanie asynchroniczne oparte na zadaniach — .NET
+description: Ten artykuł zawiera informacje na temat programowania asynchronicznego opartego na zadaniach za pośrednictwem biblioteki zadań równoległych (TPL) w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 188a80459fec021dc934597ea2f77ac7b4471b2d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285290"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446382"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadaniach
 
@@ -278,7 +279,7 @@ Jeśli musisz dziedziczyć z <xref:System.Threading.Tasks.Task> lub <xref:System
 |[Dołączone i odłączone zadania podrzędne](attached-and-detached-child-tasks.md)|Opisano różnicę między zadaniami podrzędnymi dołączonymi i odłączonymi.|
 |[Anulowanie zadania](task-cancellation.md)|W tym artykule opisano obsługę anulowania, która jest wbudowana w <xref:System.Threading.Tasks.Task> obiekt.|
 |[Obsługa wyjątków](exception-handling-task-parallel-library.md)|Opisuje sposób obsługi wyjątków w wątkach współbieżnych.|
-|[Instrukcje: użycie metody Parallel. Invoke do wykonywania operacji równoległych](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Opisuje sposób użycia programu <xref:System.Threading.Tasks.Parallel.Invoke%2A> .|
+|[Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Opisuje sposób użycia programu <xref:System.Threading.Tasks.Parallel.Invoke%2A> .|
 |[Instrukcje: Zwracanie wartości z zadania](how-to-return-a-value-from-a-task.md)|Zawiera opis sposobu zwracania wartości z zadań.|
 |[Instrukcje: Anulowanie zadania i jego elementów podrzędnych](how-to-cancel-a-task-and-its-children.md)|Opisuje, jak anulować zadania.|
 |[Instrukcje: Tworzenie wstępnie obliczonych zadań](how-to-create-pre-computed-tasks.md)|Opisuje, jak używać <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody do pobierania wyników asynchronicznych operacji pobierania przechowywanych w pamięci podręcznej.|

@@ -1,5 +1,6 @@
 ---
 title: Standardowe ciągi formatujące liczby
+description: W tym artykule dowiesz się, jak używać standardowych ciągów formatu liczbowego do formatowania wspólnych typów liczbowych w reprezentacjach tekstowych w programie .NET.
 ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 6b84fc752a7bb37ff64bf6cfa08879aed3f20010
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288319"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447124"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 

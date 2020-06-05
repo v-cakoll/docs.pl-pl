@@ -3,12 +3,12 @@ title: Narzędzie do odinstalowywania
 description: Omówienie narzędzia do odinstalowywania platformy .NET Core, narzędzia z przewodnikiem, które umożliwia kontrolowane czyszczenie zestawów SDK i środowiska uruchomieniowego platformy .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144516"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446909"
 ---
 # <a name="net-core-uninstall-tool"></a>Narzędzie do dezinstalacji platformy .NET Core
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Usuwa tylko zestawy SDK i środowiska uruchomieniowe platformy .NET Core z wersją mniejszą niż określona wersja. Określona wersja jest zainstalowana.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core, z wyjątkiem określonych wersji.
 
@@ -227,11 +227,11 @@ Uwagi:
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Usuwa zestawy SDK i środowiska uruchomieniowe platformy .NET Core poniżej określonej wersji. Określona wersja pozostanie.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Usuwa zestawy .NET Core i środowiska uruchomieniowe, z wyjątkiem określonych wersji.
 
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Usuwa tylko zestawy SDK i środowiska uruchomieniowe platformy .NET Core z wersją mniejszą niż określona wersja. Określona wersja jest zainstalowana.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core, z wyjątkiem określonych wersji.
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  Usuwa środowisko uruchomieniowe programu .NET Core i tylko pakiety hostingu.
+  Usuwa tylko zbiory hostingu platformy .NET Core.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ Uwagi:
 
   Usuwa wszystkie zestawy SDK i środowiska uruchomieniowe platformy .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Usuwa zestawy SDK i środowiska uruchomieniowe platformy .NET Core poniżej określonej wersji. Określona wersja pozostanie.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Usuwa zestawy .NET Core i środowiska uruchomieniowe, z wyjątkiem określonych wersji.
 

@@ -1,13 +1,13 @@
 ---
 title: 'Programowanie asynchroniczne w języku C #'
 description: Omówienie obsługi języka C# w programowaniu asynchronicznym przy użyciu asynchronicznego, await, zadania i zadania<T>
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007965"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446451"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programowanie asynchroniczne przy użyciu elementów async i await
 
@@ -32,6 +32,10 @@ Teraz Rozważ te same instrukcje, które zostały wpisane jako instrukcje język
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="śniadanie synchroniczne":::
+
+Synchronicznie przygotowany śniadanie, trwało 30 minut, ponieważ suma jest sumą poszczególnych zadań.
+
 > [!NOTE]
 > `Coffee`Klasy, `Egg` , `Bacon` , `Toast` i `Juice` są puste. Są one po prostu klasy znaczników do celów demonstracyjnych, nie zawierają żadnych właściwości ani nie mają żadnego innego celu.
 
@@ -50,6 +54,9 @@ Powyższy kod demonstruje niewłaściwe rozwiązanie: konstruowanie kodu synchro
 Zacznijmy od zaktualizowania tego kodu, aby wątek nie zablokuje wykonywania zadań. `await`Słowo kluczowe zapewnia nieblokujący sposób uruchamiania zadania, a następnie kontynuuje wykonywanie po zakończeniu zadania. Prosta, asynchroniczna wersja kodu naśniadania będzie wyglądać następująco:
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> Łączny czas, który upłynął, jest w przybliżeniu taki sam, jak początkowa wersja synchonous. Kod nie może jeszcze korzystać z niektórych kluczowych funkcji programowania asynchronicznego.
 
 > [!TIP]
 > Treści metod `FryEggsAsync` , `FryBaconAsync` , i, `ToastBreadAsync` zostały zaktualizowane, aby zwracały `Task<Egg>` , `Task<Bacon>` i `Task<Toast>` odpowiednio. Metody są zmieniane z oryginalnej wersji w celu uwzględnienia sufiksu "Async". Ich wdrożenia są wyświetlane [w dalszej części tego artykułu](#final-version) .
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="śniadanie asynchroniczne":::
+
+Asynchroniczne przygotowanie śniadania trwało około 20 minut, jest to spowodowane tym, że niektóre zadania mogły być uruchamiane współbieżnie.
+
 Poprzedni kod działa lepiej. Wszystkie zadania asynchroniczne są uruchamiane jednocześnie. Każde zadanie zostanie zaczekane tylko wtedy, gdy są potrzebne wyniki. Poprzedni kod może być podobny do kodu w aplikacji sieci Web, która wysyła żądania różnych mikrousług, a następnie łączy wyniki w jedną stronę. Wszystkie żądania zostaną wprowadzone natychmiast, następnie `await` wszystkie te zadania i tworzą stronę sieci Web.
 
 ## <a name="composition-with-tasks"></a>Kompozycja z zadaniami
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 Po wprowadzeniu wszystkich zmian końcowa wersja kodu będzie wyglądać następująco:<a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="gdy dowolny śniadanie Async":::
+
+Końcowa wersja przygotowanych asynchronicznie zakończyła się około 15 minut. jest to spowodowane tym, że niektóre zadania mogły być uruchamiane współbieżnie, a kod mógł monitorować wiele zadań jednocześnie i podejmować działania tylko wtedy, gdy było to konieczne.
 
 Ten ostatni kod jest asynchroniczny. Dokładniej odzwierciedla to, w jaki sposób osoba może zacooka śniadanie. Porównaj poprzedni kod z pierwszym przykładowym kodem w tym artykule. Podstawowe działania są nadal jasne przed odczytaniem kodu. Można odczytać ten kod w taki sam sposób, jak w przypadku uzyskania śniadania na początku tego artykułu. Funkcje języka dla `async` i `await` zapewniają tłumaczenie dla każdej osoby, która wykonuje te instrukcje: Rozpocznij zadania w miarę możliwości i nie blokuj oczekiwania na ukończenie zadań.
 

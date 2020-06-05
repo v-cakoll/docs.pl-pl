@@ -1,5 +1,6 @@
 ---
 title: Niestandardowe ciągi formatujące datę i godzinę
+description: Dowiedz się, jak używać niestandardowych ciągów formatu daty i godziny w celu przeprowadzenia konwersji wartości DateTime lub DateTimeOffset na reprezentacje tekstowe lub do analizowania ciągów dat & razy.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 89601d0628e4f5f00ec02d5cdd6fb79216b1469d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279002"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447254"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 

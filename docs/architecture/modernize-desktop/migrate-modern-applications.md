@@ -2,12 +2,12 @@
 title: Migrowanie nowoczesnych aplikacji klasycznych
 description: Wszystko, czego potrzebujesz, aby poznać proces migracji nowoczesnych aplikacji klasycznych.
 ms.date: 05/12/2020
-ms.openlocfilehash: 2108aa0b99cabfbb0f3263f094ba8277f953ed6a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a015b266dc5c36fcef38dad04b9f4f048ee5906a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423300"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446918"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Migrowanie nowoczesnych aplikacji klasycznych
 
@@ -108,7 +108,7 @@ Można nadal korzystać z ODBC na platformie .NET Core, ponieważ firma Microsof
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](https://msdn.microsoft.com/library/ms722784(v=vs.85).aspx)   był doskonałym sposobem na dostęp do różnych źródeł danych w jednolity sposób. Jednak była oparta na modelu COM, który jest technologią tylko dla systemu Windows i dlatego nie jest najlepszym rozwiązaniem dla technologii międzyplatformowych, takich jak .NET Core. Jest on również nieobsługiwany w SQL Server wersji 2014 i nowszych. Z tego powodu OLE DB nie będą obsługiwane przez platformę .NET Core.
+[OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))   był doskonałym sposobem na dostęp do różnych źródeł danych w jednolity sposób. Jednak była oparta na modelu COM, który jest technologią tylko dla systemu Windows i dlatego nie jest najlepszym rozwiązaniem dla technologii międzyplatformowych, takich jak .NET Core. Jest on również nieobsługiwany w SQL Server wersji 2014 i nowszych. Z tego powodu OLE DB nie będą obsługiwane przez platformę .NET Core.
 
 ### <a name="adonet"></a>ADO.NET
 

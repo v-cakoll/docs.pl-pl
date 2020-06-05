@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
+description: W tym artykule dowiesz się, jak uwzględnić składnik Data i czas milisekundy w sformatowanych ciągach daty i godziny w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 4c63e7e67d388b000954f3a53281f95b0f2522b9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290503"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447072"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny
 Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToString?displayProperty=nameWithType>, zawierają godziny, minuty i sekundy wartości czasu, ale wykluczają składnik milisekund. W tym temacie pokazano jak dołączyć datę i składnik czasu w milisekundach w sformatowanym ciągu daty i czasu.  

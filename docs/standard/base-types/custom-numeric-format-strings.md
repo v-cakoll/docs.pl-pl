@@ -1,5 +1,6 @@
 ---
 title: Niestandardowe ciągi formatujące liczby
+description: Dowiedz się, jak utworzyć niestandardowy ciąg formatu liczbowego do formatowania danych liczbowych w programie .NET. Niestandardowy ciąg formatu liczbowego zawiera jeden lub więcej niestandardowych specyfikatorów liczbowych.
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278963"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447241"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 

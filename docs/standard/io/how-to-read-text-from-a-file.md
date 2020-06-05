@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: odczytywanie tekstu z pliku'
+description: W tym artykule przedstawiono przykłady synchronicznego lub asynchronicznego odczytywania tekstu z pliku tekstowego przy użyciu klasy StreamReader w programie .NET dla aplikacji klasycznych.
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: c46ccaf70d4d1aec030fb61bd8b2924d986e19d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbdeab3e907b34b6658eef7228fa6567ae198b08
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291763"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447059"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Instrukcje: odczytywanie tekstu z pliku
 W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynchronicznie z pliku tekstowego przy użyciu platformy .NET dla aplikacji komputerowych. W obu przykładach podczas tworzenia wystąpienia <xref:System.IO.StreamReader> klasy należy podać względną lub bezwzględną ścieżkę do pliku.

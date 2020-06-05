@@ -1,27 +1,26 @@
 ---
 title: Kluczowe kwestie do zapamiętania
-description: Zapoznaj się z kluczowymi daniami na wynos dla przewodnika.
-ms.date: 02/15/2019
-ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Zapoznaj się z tematem Key wnioski dla przewodnika.
+ms.date: 04/20/2020
+ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295650"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447020"
 ---
 # <a name="key-takeaways"></a>Kluczowe kwestie do zapamiętania
 
-- Rozwiązania oparte na kontenerach zapewniają ważne korzyści w zakresie oszczędności kosztów, ponieważ kontenery rozwiązują problemy z wdrażaniem spowodowane błędami zależności w środowiskach produkcyjnych, co znacznie usprawnia operacje DevOps i operacji produkcyjnych.
+- Rozwiązania oparte na kontenerach zapewniają ważne korzyści wynikające z oszczędności, ponieważ kontenery rozwiązują problemy z wdrażaniem spowodowane awariami zależności w środowiskach produkcyjnych, a tym samym poprawianie DevOps i operacji produkcyjnych.
 
-- Docker staje się de facto standardem w branży kontenerów i jest obsługiwany przez najwybitniejszych dostawców w ekosystemach Linux i Windows, w tym Microsoft. W przyszłości platforma Docker będzie wszechobecna w dowolnym centrum danych w chmurze lub lokalnie.
+- Platforma Docker stanie się ogólnie standardem w branży kontenerów i jest obsługiwana przez najbardziej znaczących dostawców w ekosystemach Linux i Windows, w tym Microsoft. W przyszłości platforma Docker będzie ogólnie oparta na dowolnym centrum danych w chmurze lub w środowisku lokalnym.
 
 - Kontener platformy Docker staje się standardową jednostką wdrożenia dla dowolnej aplikacji lub usługi opartej na serwerze.
 
-- Koordynatorów platformy Docker, takich jak te przewidziane w usłudze Azure Kubernetes Service (AKS) i sieci szkieletowej usług Azure są podstawowe i niezbędne dla wszystkich aplikacji opartych na mikrousługach lub wielu kontenerach, które mają znaczną złożoność i potrzeby skalowalności.
+- Koordynatorzy platformy Docker, jak te dostępne w usłudze Azure Kubernetes Service (AKS) i Azure Service Fabric są fundamentalne i niepotrzebne w przypadku aplikacji opartych na mikrousługach lub obejmujących wiele kontenerów, które mają znaczącą złożoność i skalowalność.
 
-- End-to-end DevOps środowiska, które obsługuje ciągłej integracji/ciągłego wdrażania i łączy się z środowiskami platformy Docker produkcji produkcyjnej może zapewnić elastyczność i ostatecznie skrócić czas wprowadzania na rynek aplikacji.
+- Kompleksowe środowisko DevOps, które obsługuje ciągłej integracji/ciągłego wdrażania (CI/CD) i nawiązuje połączenie z produkcyjnymi środowiskami platformy Docker, może zapewnić elastyczność i ostatecznie poprawić czas wprowadzenia na rynek aplikacji.
 
-- Usługi Azure DevOps znacznie upraszcza środowisko DevOps, wdrażając w środowiskach platformy Docker z potoków ciągłej integracji/ciągłego wdrażania. Ta instrukcja dotyczy prostych środowisk platformy Docker, a także do zaawansowanych koordynatorów mikrousług i kontenerów opartych na platformie Azure.
+- Azure DevOps Services znacznie upraszcza środowisko DevOps, wdrażając je w środowiskach platformy Docker z potoków ciągłej integracji/ciągłego wdrażania. Ta instrukcja ma zastosowanie do prostych środowisk Docker, a także do zaawansowanych mikrousług i koordynatorów kontenerów opartych na platformie Azure.
 
->[!div class="step-by-step"]
->[Wstecz](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"][previous](.. /run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

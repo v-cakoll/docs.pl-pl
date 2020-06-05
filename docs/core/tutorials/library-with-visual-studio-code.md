@@ -2,12 +2,12 @@
 title: Tworzenie biblioteki klas .NET Standard w Visual Studio Code
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard przy użyciu Visual Studio Code.
 ms.date: 05/29/2020
-ms.openlocfilehash: 10c832f5817292b366dc816aebada2dfdab11396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292204"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446955"
 ---
 # <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Samouczek: Tworzenie biblioteki .NET Standard w programie Visual Studio Code
 
@@ -127,7 +127,7 @@ Dodaj nowy projekt biblioteki klas .NET Standard o nazwie "StringLibrary" do roz
 
 Dodaj aplikację konsolową, która używa biblioteki klas. Aplikacja wyświetli monit o wprowadzenie ciągu i zgłoszenie, czy ciąg rozpoczyna się od wielkiej litery.
 
-1. W terminalu uruchom następujące polecenie, aby utworzyć projekt biblioteki:
+1. W terminalu uruchom następujące polecenie, aby utworzyć projekt aplikacji konsoli:
 
    ```dotnetcli
    dotnet new console -o ShowCase

@@ -1,5 +1,6 @@
 ---
 title: Standardowe ciągi formatujące datę i godzinę
+description: W tym artykule dowiesz się, jak używać standardowego ciągu formatu daty i godziny w celu zdefiniowania tekstu reprezentacji wartości daty i godziny w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 0ff187251831130c846a20473237b13268c768be
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289307"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447228"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 

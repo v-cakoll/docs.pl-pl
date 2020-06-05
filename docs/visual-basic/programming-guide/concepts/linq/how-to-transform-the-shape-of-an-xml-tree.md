@@ -2,17 +2,17 @@
 title: 'Instrukcje: przekształcanie kształtu drzewa XML'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 90fa23df09972eb76154dc47ce0a025e85a12ea3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796109"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397664"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Instrukcje: Przekształcanie kształtu drzewa XML (Visual Basic)
 *Kształt* dokumentu XML odwołuje się do jego nazw elementów, nazw atrybutów i cech hierarchii.  
   
- Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład może być konieczne wysłanie istniejącego dokumentu XML do innego systemu, który wymaga innych nazw elementów i atrybutów. Możesz przejść przez dokument, usunąć i zmienić nazwy elementów zgodnie z potrzebami, ale użycie konstrukcji funkcjonalnej skutkuje bardziej czytelnym i możliwym do utrzymania kodem. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalnej, zobacz [konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład może być konieczne wysłanie istniejącego dokumentu XML do innego systemu, który wymaga innych nazw elementów i atrybutów. Możesz przejść przez dokument, usunąć i zmienić nazwy elementów zgodnie z potrzebami, ale użycie konstrukcji funkcjonalnej skutkuje bardziej czytelnym i możliwym do utrzymania kodem. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalnej, zobacz [konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md).  
   
  Pierwszy przykład zmienia organizację dokumentu XML. Przenosi elementy złożone z jednej lokalizacji w drzewie do innej.  
   
@@ -21,9 +21,9 @@ ms.locfileid: "82796109"
 ## <a name="example"></a>Przykład  
  Poniższy kod zmienia kształt pliku XML przy użyciu osadzonych wyrażeń zapytań.  
   
- Źródłowy dokument XML w tym przykładzie zawiera `Customers` element w obszarze `Root` elementu, który zawiera wszystkich klientów. Zawiera również `Orders` element w obszarze `Root` elementu, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta są zawarte w `Orders` elemencie w `Customer` elemencie. Oryginalny dokument zawiera również `CustomerID` element w `Order` elemencie; Ten element zostanie usunięty z dokumentu, który można zmienić.  
+ Źródłowy dokument XML w tym przykładzie zawiera `Customers` element w obszarze `Root` elementu, który zawiera wszystkich klientów. Zawiera również `Orders` element w obszarze `Root` elementu, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta są zawarte w elemencie w `Orders` `Customer` elemencie. Oryginalny dokument zawiera również `CustomerID` element w `Order` elemencie; ten element zostanie usunięty z dokumentu, który można zmienić.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -93,9 +93,9 @@ Console.WriteLine(newCustOrd)
 ## <a name="example"></a>Przykład  
  Ten przykład zmienia nazwę niektórych elementów i konwertuje niektóre atrybuty do elementów.  
   
- Kod wywołuje `ConvertAddress`metodę, która zwraca listę <xref:System.Xml.Linq.XElement> obiektów. Argument metody jest zapytanie, które określa element `Address` złożony, gdzie `Type` atrybut ma wartość. `"Shipping"`  
+ Kod wywołuje metodę `ConvertAddress` , która zwraca listę <xref:System.Xml.Linq.XElement> obiektów. Argument metody jest zapytanie, które określa `Address` element złożony, gdzie `Type` atrybut ma wartość `"Shipping"` .  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -143,6 +143,6 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

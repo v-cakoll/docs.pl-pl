@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f282e6268e4e4b1e86657408c356d1c19c48c1a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649858"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401592"
 ---
-# <a name="constant-expression-not-representable-in-type-typename"></a>Niemożliwa reprezentacja wyrażenia stałego w typie "\<typename >"
-Próbujesz obliczyć stałą, który nie mieści się w typ docelowy zazwyczaj, ponieważ jest ona przepełnienie zakresu.  
+# <a name="constant-expression-not-representable-in-type-typename"></a>Niemożliwa reprezentacja wyrażenia stałego w typie „\<typename>”
+Próbujesz oszacować stałą, która nie mieści się w typie docelowym, zwykle z powodu przepełnienia zakresu.  
   
  **Identyfikator błędu:** BC30439  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Zmień typ docelowy na taki, który może obsługiwać stałą.  
+1. Zmień typ docelowy na taki, który może obsłużyć stałą.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Stałe — przegląd](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Stałe i wyliczenia](../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Stałe — Przegląd](../../programming-guide/language-features/constants-enums/constants-overview.md)
+- [Stałe i wyliczenia](../constants-and-enumerations.md)

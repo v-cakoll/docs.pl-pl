@@ -2,12 +2,12 @@
 title: Znajdowanie tekstu w dokumentach programu Word
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 83941de815968fce471b7366ed7c5114dae0d63c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 546703e3dbead64fd10c04fe52cb1dd98ba53049
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347525"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398093"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Znajdowanie tekstu w dokumentach programu Word (Visual Basic)
 
@@ -17,9 +17,9 @@ Ten temat rozszerza poprzednie zapytania, aby wykonać coś użytecznego: Znajd�
 
 Ten przykład przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie. W tym celu użyjemy zapytania, które odnajdzie ciąg "Hello". Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.
 
-Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).
+Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).
 
-Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.
+Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -302,16 +302,16 @@ StyleName:Code ><
 
 Oczywiście ten przykład można rozszerzyć na wiele sposobów. Na przykład możemy używać wyrażeń regularnych do wyszukiwania tekstu, możemy przejść przez wszystkie pliki programu Word w określonym katalogu i tak dalej.
 
-Należy zauważyć, że ten przykład wykonuje około, a także, jeśli został zapisany jako pojedyncze zapytanie. Ponieważ każde zapytanie jest zaimplementowane w opóźniony, odroczony sposób, każde zapytanie nie zwraca wyników, dopóki zapytanie nie zostanie powtórzone. Aby uzyskać więcej informacji na temat wykonywania i oceny z opóźnieniem, zobacz [odroczone wykonywanie i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Należy zauważyć, że ten przykład wykonuje około, a także, jeśli został zapisany jako pojedyncze zapytanie. Ponieważ każde zapytanie jest zaimplementowane w opóźniony, odroczony sposób, każde zapytanie nie zwraca wyników, dopóki zapytanie nie zostanie powtórzone. Aby uzyskać więcej informacji na temat wykonywania i oceny z opóźnieniem, zobacz [odroczone wykonywanie i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
 Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:
 
-- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](refactoring-using-a-pure-function.md)
+- [Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

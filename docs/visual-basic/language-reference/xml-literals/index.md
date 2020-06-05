@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: cf70486c1c33013d84f68c9ea9dbc9463a751ad7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d7826c48629ee919344ec1982d3a698e6df9ef7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349406"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400243"
 ---
 # <a name="xml-literals-visual-basic"></a>Literały XML (Visual Basic)
 W tematach w tej sekcji opisano składnię literałów XML w Visual Basic. Składnia literału XML umożliwia dołączenie kodu XML bezpośrednio w kodzie.  
@@ -23,12 +23,12 @@ W tematach w tej sekcji opisano składnię literałów XML w Visual Basic. Skła
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|Opisuje składnię literałów reprezentujących obiekty <xref:System.Xml.Linq.XElement>.|  
-|[Literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|Opisuje składnię literałów reprezentujących obiekty <xref:System.Xml.Linq.XDocument>.|  
-|[Literał CDATA XML](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|Opisuje składnię literałów reprezentujących obiekty <xref:System.Xml.Linq.XCData>.|  
-|[Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Opisuje składnię literałów reprezentujących obiekty <xref:System.Xml.Linq.XComment>.|  
-|[Literał instrukcji przetwarzającej kod XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Opisuje składnię literałów reprezentujących obiekty <xref:System.Xml.Linq.XProcessingInstruction>.|  
+|[Literał elementu XML](xml-element-literal.md)|Opisuje składnię dla literałów reprezentujących <xref:System.Xml.Linq.XElement> obiekty.|  
+|[Literał dokumentu XML](xml-document-literal.md)|Opisuje składnię dla literałów reprezentujących <xref:System.Xml.Linq.XDocument> obiekty.|  
+|[Literał CDATA XML](xml-cdata-literal.md)|Opisuje składnię dla literałów reprezentujących <xref:System.Xml.Linq.XCData> obiekty.|  
+|[Literał komentarza XML](xml-comment-literal.md)|Opisuje składnię dla literałów reprezentujących <xref:System.Xml.Linq.XComment> obiekty.|  
+|[Literał instrukcji przetwarzającej kod XML](xml-processing-instruction-literal.md)|Opisuje składnię dla literałów reprezentujących <xref:System.Xml.Linq.XProcessingInstruction> obiekty.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

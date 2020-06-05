@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b94a92567c62efca37b1f0ec34f79fb3ceca54bc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406641"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Odczyt z plików w Visual Basic
 
@@ -21,22 +21,22 @@ W tej sekcji opisano sposób wykonywania zadań, które są skojarzone z odczyte
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Instrukcje: odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ [Instrukcje: odczyt z plików tekstowych](how-to-read-from-text-files.md)  
  Pokazuje, jak czytać z pliku tekstowego.  
   
- [Porady: odczyt z rozdzielonych przecinkami plików testowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [Instrukcje: Odczyt z rozdzielonych przecinkami plików testowych](how-to-read-from-comma-delimited-text-files.md)  
  Pokazuje, jak czytać z rozdzielanego pliku tekstowego.  
   
- [Porady: odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [Instrukcje: Odczyt z plików testowych o stałej szerokości](how-to-read-from-fixed-width-text-files.md)  
  Pokazuje, jak czytać z pliku tekstowego o stałej szerokości.  
   
- [Instrukcje: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [Instrukcje: Odczyt z plików tekstowych w wielu formatach](how-to-read-from-text-files-with-multiple-formats.md)  
  Pokazuje, jak czytać z pliku tekstowego z wieloma formatami.  
   
- [Instrukcje: odczyt z plików binarnych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [Instrukcje: Odczyt z plików binarnych](how-to-read-from-binary-files.md)  
  Pokazuje, jak odczytywać dane z pliku binarnego.  
   
- [Porady: odczyt tekstu z plików za pomocą StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [Instrukcje: Odczyt tekstu z plików za pomocą StreamReader](how-to-read-text-from-files-with-a-streamreader.md)  
  Pokazuje, jak użyć elementu <xref:System.IO.StreamReader> do odczytu z pliku.  
   
 ## <a name="reference"></a>Dokumentacja  
@@ -58,14 +58,14 @@ W tej sekcji opisano sposób wykonywania zadań, które są skojarzone z odczyte
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
- [Zapisywanie danych w schowku i odczytywanie ich z niego](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Wyjaśnia, jak wykonywać zadania skojarzone z `My.Computer.Clipboard`, takie jak odczytywanie danych z lub zapisywanie danych w Schowku.  
+ [Zapisywanie danych w schowku i odczytywanie ich z niego](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ Wyjaśnia, jak wykonywać zadania skojarzone z `My.Computer.Clipboard` , takie jak odczytywanie danych z lub zapisywanie danych w Schowku.  
   
- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)  
  Zawiera omówienie odczytywania plików tekstowych za pomocą `TextFieldParser` obiektu.  
   
- [Wskazówki: manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Pokazuje, `My` jak używać funkcji z plikami i katalogami.  
+ [Wskazówki: manipulowanie plikami i katalogami w Visual Basic](walkthrough-manipulating-files-and-directories.md)  
+ Pokazuje, jak używać `My` funkcji z plikami i katalogami.  
   
- [Wskazówki: manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Demonstruje sposób używania metod .NET Framework z plikami i katalogami.

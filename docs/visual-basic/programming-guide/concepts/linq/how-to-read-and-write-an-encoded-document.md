@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: odczytywanie i pisanie zakodowanego dokumentu'
+title: 'Instrukcje: odczytywanie i zapisywanie zakodowanego dokumentu'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 913b08d91b8d4886bc74cbe538df8e27826a6cca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f66737429950e04f447dfbd58cf47b6434a22976
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347629"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397911"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Instrukcje: odczytywanie i pisanie zakodowanego dokumentu (Visual Basic)
 
@@ -15,9 +15,9 @@ Aby utworzyć zakodowany dokument XML, należy dodać <xref:System.Xml.Linq.XDec
 
 Każda wartość zwrócona przez <xref:System.Text.Encoding.WebName%2A> jest prawidłową wartością.
 
-Jeśli odczytasz zakodowany dokument, właściwość <xref:System.Xml.Linq.XDeclaration.Encoding%2A> zostanie ustawiona na nazwę strony kodowej.
+Jeśli odczytasz zakodowany dokument, <xref:System.Xml.Linq.XDeclaration.Encoding%2A> Właściwość zostanie ustawiona na nazwę strony kodowej.
 
-Jeśli ustawisz <xref:System.Xml.Linq.XDeclaration.Encoding%2A> na poprawną nazwę strony kodowej, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zostanie Zserializowany z określonym kodowaniem.
+W przypadku wybrania <xref:System.Xml.Linq.XDeclaration.Encoding%2A> prawidłowej nazwy strony kodowej program [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zaserializacji z określonym kodowaniem.
 
 ## <a name="example"></a>Przykład
 
@@ -78,7 +78,7 @@ Encoded document:
 Encoding of loaded document is:utf-16
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](advanced-linq-to-xml-programming.md)

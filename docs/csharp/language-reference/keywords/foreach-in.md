@@ -1,6 +1,6 @@
 ---
-title: Instrukcja foreach języka C#
-ms.date: 05/17/2019
+title: Instrukcja "foreach" języka C#
+ms.date: 06/03/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,56 +9,68 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 1645a246c9feee2a92c0d4e4bbeda47f0afde7d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738814"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401891"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, w (odwołanie C#)
+# <a name="foreach-in-c-reference"></a>foreach, in (odwołanie w C#)
 
-Instrukcja `foreach` wykonuje instrukcję lub blok instrukcji dla każdego elementu w wystąpieniu <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> typu, który implementuje lub interfejs. Instrukcja `foreach` nie jest ograniczona do tych typów i może być stosowana do wystąpienia dowolnego typu, które spełnia następujące warunki:
+`foreach`Instrukcja wykonuje instrukcję lub blok instrukcji dla każdego elementu w wystąpieniu typu, który implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejs lub. `foreach`Instrukcja nie jest ograniczona do tych typów i może być stosowana do wystąpienia dowolnego typu, który spełnia następujące warunki:
 
-- ma publiczną `GetEnumerator` metodę bez parametrów, której typem zwracanym jest klasa, struktura lub typ interfejsu,
-- typ zwracany `GetEnumerator` metody ma `Current` właściwość publiczną `MoveNext` i metodę public <xref:System.Boolean>bez parametrów, której typem zwracanym jest .
+- ma publiczną metodę bez parametrów `GetEnumerator` , której typem zwracanym jest Klasa, struktura lub typ interfejsu,
+- zwracany typ `GetEnumerator` metody ma właściwość publiczną `Current` i publiczną metodę bez parametrów, `MoveNext` której typem zwracanym jest <xref:System.Boolean> .
 
-Począwszy od języka C# 7.3, jeśli `Current` właściwość wyliczacza zwraca [wartość zwracaną odwołanie](ref.md#reference-return-values) (gdzie`ref T` `T` jest typem `ref` `ref readonly` elementu kolekcji), można zadeklarować zmienną iteracji za pomocą lub modyfikatora.
+W większości przypadków, `foreach` iteruje `IEnumerable<T>` wyrażenie, gdzie każdy element jest typu `T` . Jednakże elementy mogą być dowolnego typu, który ma niejawną lub jawną konwersję z typu `Current` właściwości. Jeśli `Current` właściwość zwróci wartość `SomeType` , typem elementów mogą być:
 
-Począwszy od języka C# 8.0, `await` operator `foreach` może być stosowany do <xref:System.Collections.Generic.IAsyncEnumerable%601> instrukcji, gdy typ kolekcji implementuje interfejs. Każda iteracja pętli może zostać zawieszona, podczas gdy następny element jest pobierany asynchronicznie. Domyślnie elementy strumienia są przetwarzane w kontekście przechwycone. Jeśli chcesz wyłączyć przechwytywanie kontekstu, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> użyj metody rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [korzystania z wzorca asynchronicznego opartego](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)na zadaniach .
+- Dowolna z klas bazowych `SomeType` .
+- Wszystkie interfejsy zaimplementowane przez `SomeType` .
 
-W dowolnym momencie w bloku `foreach` instrukcji można wyrwać z pętli przy użyciu [break](break.md) instrukcji lub krok do następnej iteracji w pętli przy użyciu [continue](continue.md) instrukcji. Można również wyjść `foreach` z pętli przez [goto](goto.md), [return](return.md), lub [throw](throw.md) instrukcji.
+Ponadto, jeśli `SomeType` jest `class` lub `interface` a i nie `sealed` , typ elementów może obejmować:
 
-Jeśli `foreach` instrukcja jest `null`stosowana <xref:System.NullReferenceException> do , a jest generowany. Jeśli kolekcja źródło `foreach` instrukcji jest pusta, `foreach` treść pętli nie jest wykonywana i pomijana.
+- Dowolny typ pochodzący od `SomeType` .
+- Dowolny dowolny interfejs. Dowolny interfejs jest dozwolony, ponieważ dowolny interfejs może być zaimplementowany przez klasę pochodną lub implementującą `SomeType` .
+
+Można zadeklarować zmienną iteracji przy użyciu dowolnego typu, który jest zgodny z poprzednimi regułami. Jeśli konwersja z `SomeType` do typu zmiennej iteracji wymaga jawnego rzutowania, operacja może zgłosić wyjątek, <xref:System.InvalidCastException> gdy konwersja zakończy się niepowodzeniem.
+
+Począwszy od języka C# 7,3, jeśli właściwość modułu wyliczającego `Current` zwróci [wartość zwracaną odwołania](ref.md#reference-return-values) ( `ref T` gdzie `T` jest typem elementu kolekcji), można zadeklarować zmienną iteracji za pomocą `ref` `ref readonly` modyfikatora or.
+
+Począwszy od języka C# 8,0, `await` operator może zostać zastosowany do `foreach` instrukcji, gdy typ kolekcji implementuje <xref:System.Collections.Generic.IAsyncEnumerable%601> interfejs. Każda iteracja pętli może zostać zawieszona, podczas gdy następny element jest pobierany asynchronicznie. Domyślnie elementy strumienia są przetwarzane w przechwyconym kontekście. Jeśli chcesz wyłączyć przechwytywanie kontekstu, użyj <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metody rozszerzenia. Aby uzyskać więcej informacji na temat kontekstów synchronizacji i przechwytywania bieżącego kontekstu, zobacz artykuł dotyczący [konsumowania wzorca asynchronicznego opartego na zadaniach](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+
+W dowolnym momencie w `foreach` bloku instrukcji można przerwać pętlę przy użyciu instrukcji [Break](break.md) lub przejść do następnej iteracji w pętli przy użyciu instrukcji [Continue](continue.md) . Możesz również wyjść z `foreach` pętli przez instrukcje [goto](goto.md), [Return](return.md)lub [throw](throw.md) .
+
+Jeśli `foreach` instrukcja jest zastosowana do `null` , <xref:System.NullReferenceException> jest zgłaszany. Jeśli kolekcja źródłowa `foreach` instrukcji jest pusta, treść `foreach` pętli nie zostanie wykonana i pominięta.
 
 ## <a name="examples"></a>Przykłady
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Poniższy przykład pokazuje `foreach` użycie instrukcji z <xref:System.Collections.Generic.List%601> wystąpieniem typu, <xref:System.Collections.Generic.IEnumerable%601> który implementuje interfejs:
+W poniższym przykładzie pokazano użycie `foreach` instrukcji z wystąpieniem <xref:System.Collections.Generic.List%601> typu implementującego <xref:System.Collections.Generic.IEnumerable%601> Interfejs:
 
-[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="1" interactive="try-dotnet-method" :::
 
-W następnym przykładzie `foreach` użyto instrukcji <xref:System.Span%601?displayProperty=nameWithType> z wystąpieniem typu, które nie implementuje żadnych interfejsów:
+W następnym przykładzie używa się `foreach` instrukcji z wystąpieniem <xref:System.Span%601?displayProperty=nameWithType> typu, który nie implementuje interfejsów:
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="2" :::
 
-W poniższym przykładzie użyto zmiennej `ref` iteracji, aby ustawić wartość każdego elementu w tablicy stackalloc. Wersja `ref readonly` iteruje kolekcji, aby wydrukować wszystkie wartości. Deklaracja `readonly` używa niejawnej deklaracji zmiennej lokalnej. Niejawne deklaracje zmiennych `ref` mogą `ref readonly` być używane z deklaracjami lub deklaracjami, podobnie jak jawnie wpisane deklaracje zmiennych.
+Poniższy przykład używa `ref` zmiennej iteracji w celu ustawienia wartości każdego elementu w tablicy stackalloc. `ref readonly`Wersja wykonuje iterację kolekcji w celu wydrukowania wszystkich wartości. `readonly`Deklaracja używa niejawnej deklaracji zmiennej lokalnej. Deklaracje zmiennych niejawnych mogą być używane z deklaracjami `ref` lub `ref readonly` , jak można jawnie wpisać deklaracje zmiennych.
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="RefSpan" :::
 
-Poniższy `await foreach` przykład używa do iteracji kolekcji, która generuje każdy element asynchronicznie:
+Poniższy przykład używa `await foreach` do iterowania kolekcji, która generuje każdy element asynchronicznie:
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#AwaitForeach)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="AwaitForeach"  :::
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [foreach instrukcji](~/_csharplang/spec/statements.md#the-foreach-statement) sekcji [specyfikacji języka języka C #,](/dotnet/csharp/language-reference/language-specification/introduction)aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz sekcję [instrukcja foreach](~/_csharplang/spec/statements.md#the-foreach-statement) w [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Odwołanie do języka C#](../index.md)
-- [C# Przewodnik programowania](../../programming-guide/index.md)
-- [C# Słowa kluczowe](index.md)
-- [Korzystanie z foreach z tablicami](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [dla oświadczenia](for.md)
+- [Odwołanie w C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Używanie instrukcji foreach z tablicami](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for, instrukcja](for.md)

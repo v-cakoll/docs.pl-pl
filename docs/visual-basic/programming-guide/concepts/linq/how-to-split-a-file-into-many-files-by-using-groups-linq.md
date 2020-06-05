@@ -1,13 +1,13 @@
 ---
-title: 'Porady: dzielenie pliku na kilka plików za pomocą grup (LINQ)'
+title: 'Instrukcje: dzielenie pliku na kilka plików za pomocą grup (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348028"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397716"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)
 
@@ -116,11 +116,11 @@ End Class
 
 Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.
 
-## <a name="compile-the-code"></a>Skompilować kod
+## <a name="compile-the-code"></a>Kompiluj kod
 
-Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu `Imports` instrukcji dla przestrzeni nazw System. LINQ.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](linq-and-file-directories.md)

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25008f05979638e050b74fc659fdc0a6d13b3c31
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620314"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406589"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >" (odwołania do wielu plików)
-Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >". Niezgodność typów przyczyną może być połączenie odwołania pliku do "\<filepath1 >' w projekcie"\<projectname1 > "z odwołaniem do pliku"\<filepath2 >' w projekcie "\<projectname2 >". Jeśli oba zestawy są identyczne, spróbuj wymienić te odwołania, tak aby oba odwołania z tej samej lokalizacji.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Wartości typu „\<typename1>” nie może zostać przekonwertowana na „\<typename2>” (Odwołania do wielu plików)
+\<typename1>Nie można przekonwertować wartości typu "" na " \<typename2> ". Niezgodność typów może być spowodowana mieszaniem odwołania do pliku " \<filepath1> " w projekcie " \<projectname1> " z odwołaniem do pliku " \<filepath2> " w projekcie " \<projectname2> ". Jeśli oba zestawy są identyczne, spróbuj zastąpić te odwołania, aby oba odwołania były z tej samej lokalizacji.  
   
- W sytuacji, gdy projekt sprawia, że więcej niż jedno odwołanie pliku do zestawu kompilator nie może zagwarantować, że jeden typ może być konwertowany na inny.  
+ W sytuacji, gdy projekt składa więcej niż jedno odwołanie do zestawu, kompilator nie może zagwarantować, że jeden typ może być konwertowany na inny.  
   
- Odwołanie do każdego pliku Określa ścieżkę i nazwę pliku dla pliku wyjściowego projektu (zwykle w pliku DLL). Kompilator nie może zagwarantować, że pliki wyjściowe pochodzą z tego samego źródła lub fakt, że reprezentują tę samą wersję tego samego zestawu. W związku z tym nie gwarantuje, że typy w różne odwołania są tego samego typu lub nawet ten. mogą być konwertowane do drugiego.  
+ Każde odwołanie do pliku Określa ścieżkę i nazwę pliku wyjściowego projektu (zazwyczaj jest to plik DLL). Kompilator nie może zagwarantować, że pliki wyjściowe pochodzą z tego samego źródła lub reprezentują te same wersje tego samego zestawu. W związku z tym nie może zagwarantować, że typy w różnych odwołaniach są tego samego typu, lub nawet że jeden z nich można przekonwertować na drugi.  
   
- Odwołanie do pojedynczego pliku można użyć, jeśli wiesz, że zestawy występujące w odwołaniach mają taką samą tożsamość zestawu. *Tożsamości zestawu* zawiera nazwę zestawu, wersji, klucz publiczny, jeśli istnieje i kultury. Te informacje w sposób unikatowy identyfikuje zestaw.  
+ Można użyć jednego odwołania do pliku, Jeśli wiesz, że zestawy, do których istnieją odwołania, mają tę samą tożsamość zestawu. *Tożsamość zestawu* zawiera nazwę zestawu, wersję, klucz publiczny, jeśli istnieje, oraz kulturę. Te informacje jednoznacznie identyfikują zestaw.  
   
  **Identyfikator błędu:** BC30961  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli zestawy występujące w odwołaniach ma taką samą tożsamość zestawu, usuń lub Zamień jednego odwołania do pliku, tak, aby istniała tylko odwołanie do pojedynczego pliku.  
+- Jeśli zestawy, do których się odwołuje, mają tę samą tożsamość zestawu, Usuń lub Zastąp jedno z odwołań do pliku, tak że istnieje tylko jedno odwołanie do pliku.  
   
-- Jeśli zestawy występujące w odwołaniach nie ma tej samej tożsamości zestawu, a następnie zmień swój kod, tak aby nie próbuje przekonwertować typu na jeden typ w innym.  
+- Jeśli zestawy, do których się odwoływano, nie mają tej samej tożsamości zestawu, a następnie Zmień kod, tak aby nie próbował skonwertować typu w jeden do typu w drugim.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje plików w Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)

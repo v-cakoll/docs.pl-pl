@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Serializowanie przy użyciu elementu XmlSerializer'
+title: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 6d5874d6722fac6deba93de01cb5441e7dbc7503
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2265ad2129a4dc243f82c562058dbe5436fa418b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352355"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397768"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (Visual Basic)
-W tym temacie przedstawiono przykład serializacji i deserializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
+W tym temacie przedstawiono przykład serializacji i deserializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy wiele obiektów, które zawierają obiekty <xref:System.Xml.Linq.XElement>. Następnie deserializacji je do strumienia pamięci, a następnie deserializacji je ze strumienia pamięci.  
+ Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiekty. Następnie deserializacji je do strumienia pamięci, a następnie deserializacji je ze strumienia pamięci.  
   
 ```vb  
 Imports System  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Serializacja grafów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serializacja grafów obiektów, które zawierają obiekty XElement (Visual Basic)](serializing-object-graphs-that-contain-xelement-objects.md)

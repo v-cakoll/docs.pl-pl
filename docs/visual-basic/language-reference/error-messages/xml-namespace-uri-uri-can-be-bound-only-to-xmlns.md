@@ -1,5 +1,5 @@
 ---
-title: Identyfikator URI przestrzeni nazw XML '<uri>' może być powiązana tylko z 'xmlns'
+title: Identyfikator URI „<uri>” przestrzeni nazw XML może być powiązany tylko z elementem „xmlns”
 ms.date: 07/20/2015
 f1_keywords:
 - bc31183
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d791ae699f369ebe69e03fc5019d3ca58554224
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766626"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406485"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>Identyfikator URI przestrzeni nazw XML `http://www.w3.org/XML/1998/namespace`; może być powiązana tylko z 'xmlns'
-Identyfikator URI `http://www.w3.org/XML/1998/namespace` jest używany w deklaracji przestrzeni nazw XML. Ten identyfikator URI jest zarezerwowaną przestrzenią nazw i nie można uwzględnić w deklaracji przestrzeni nazw XML.  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>Identyfikator URI przestrzeni nazw XML `http://www.w3.org/XML/1998/namespace` ; może być powiązany tylko z elementem "xmlns"
+Identyfikator URI `http://www.w3.org/XML/1998/namespace` jest używany w deklaracji przestrzeni nazw XML. Ten identyfikator URI jest zarezerwowaną przestrzenią nazw i nie można go uwzględnić w deklaracji przestrzeni nazw XML.  
   
  **Identyfikator błędu:** BC31183  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-Usuń deklarację przestrzeni nazw XML, lub Zastąp identyfikator URI `http://www.w3.org/XML/1998/namespace` z prawidłowy identyfikator URI przestrzeni nazw.  
+Usuń deklarację przestrzeni nazw XML lub Zastąp identyfikator URI `http://www.w3.org/XML/1998/namespace` prawidłowym identyfikatorem URI przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Imports, instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
-- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Imports — Instrukcja (przestrzeń nazw XML)](../statements/imports-statement-xml-namespace.md)
+- [Literały XML](../xml-literals/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

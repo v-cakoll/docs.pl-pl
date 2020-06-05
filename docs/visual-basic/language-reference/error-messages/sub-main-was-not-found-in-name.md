@@ -8,25 +8,25 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ede68b20fb2066d98ad36ac14e8fcda97f49d88
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013689"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373943"
 ---
-# <a name="sub-main-was-not-found-in-name"></a>"Sub Main" nie znaleziono w "\<name >"
-`Sub Main` jest brak lub nieprawidłową lokalizację określono dla niego.  
+# <a name="sub-main-was-not-found-in-name"></a>Nie odnaleziono instrukcji „Sub Main” w elemencie „\<name>”
+`Sub Main`brakuje lub określono nieprawidłową lokalizację.  
   
  **Identyfikator błędu:** BC30420  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Podaj brakujące `Sub Main` instrukcji, lub jeśli istnieje, przenieś go do odpowiedniej lokalizacji w kodzie. Aby uzyskać więcej informacji na temat `Sub Main`, zobacz [procedura Main w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+1. Podaj brakującą `Sub Main` instrukcję lub jeśli istnieje, przenieś ją do odpowiedniej lokalizacji w kodzie. Aby uzyskać więcej informacji na temat `Sub Main` , zobacz [Main procedur w Visual Basic](../../programming-guide/program-structure/main-procedure.md).  
   
-2. Określ lokalizację projektu startowego obiektu w **formularz początkowy** pole **projektanta projektu**.  
+2. Określ lokalizację obiektu uruchomieniowego projektu w polu **formularz startowy** **projektanta projektu**.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Procedura główna w Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Sub, instrukcja](../statements/sub-statement.md)
+- [Procedura główna w Visual Basic](../../programming-guide/program-structure/main-procedure.md)

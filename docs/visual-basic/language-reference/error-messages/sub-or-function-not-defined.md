@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349576"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373930"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Procedura lub funkcja nie jest zdefiniowana
-Aby można było wywołać `Sub` lub `Function`. Możliwe przyczyny tego błędu to:  
+A `Sub` lub `Function` musi być zdefiniowana, aby można było ją wywołać. Możliwe przyczyny tego błędu to:  
   
 - Błędna pisownia nazwy procedury.  
   
@@ -30,9 +30,9 @@ Aby można było wywołać `Sub` lub `Function`. Możliwe przyczyny tego błędu
   
 3. Sprawdź nazwę procedury.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../programming-guide/language-features/error-types.md)
 - [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instrukcja](../statements/sub-statement.md)
+- [Function, instrukcja](../statements/function-statement.md)

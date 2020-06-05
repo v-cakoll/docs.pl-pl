@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: 6b727d0ee6c87b4c8b3e19af56d35bc6335dcc81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2eb28c342e485658f1550d95c6e4e0629272ad2c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593235"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374099"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Stałe typu string muszą być zakończone znakiem podwójnego cudzysłowu
-Stałe typu String muszą rozpoczynać się i kończyć znakami cudzysłowu.  
+Stałe typu String muszą zaczynać się i kończyć znakiem cudzysłowu.  
   
- **Identyfikator błędu:** BC30648  
+ **ErrorID:** BC30648  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Upewnij się, że literał ciągu kończy się znakiem cudzysłowu ("). Po wklejeniu wartości z innych edytorów tekstu, upewnij się, wklejony znak jest prawidłowy znak cudzysłowu, a nie jeden znaków, które przypominają, takie jak "eleganckie" lub "nawiasów" znaki cudzysłowu ("or") lub dwa znaki pojedynczego cudzysłowu (").  
+- Upewnij się, że literał ciągu jest zakończony znakiem cudzysłowu ("). Jeśli wklejasz wartości z innych edytorów tekstu, upewnij się, że wklejony znak jest prawidłowym znakiem cudzysłowu, a nie jednym ze znaków, takich jak "inteligentne" lub "klamrowe" cudzysłowy ("lub") lub dwa znaki pojedynczego cudzysłowu ("").  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Ciągi](../../programming-guide/language-features/strings/index.md)

@@ -1,5 +1,5 @@
 ---
-title: REM — Instrukcja
+title: REM, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.'
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: bdde4beae242c3175b02cd2af252babb850416f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 68c898145bd8845c657b6ebb8776a3a9027c359c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346726"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404268"
 ---
 # <a name="rem-statement-visual-basic"></a>REM — Instrukcja (Visual Basic)
 Służy do uwzględnienia uwag objaśniających kod źródłowy programu.  
@@ -32,22 +32,22 @@ REM comment
   
 ## <a name="parts"></a>Części  
  `comment`  
- Opcjonalna. Tekst komentarza, który ma zostać uwzględniony. Między słowem kluczowym `REM` i `comment`jest wymagana spacja.  
+ Opcjonalny. Tekst komentarza, który ma zostać uwzględniony. Między `REM` słowem kluczowym i `comment` .  
   
 ## <a name="remarks"></a>Uwagi  
- Można umieścić instrukcję `REM` w wierszu lub można ją umieścić w wierszu po innej instrukcji. Instrukcja `REM` musi być ostatnią instrukcją w wierszu. Jeśli jest ona zgodna z inną instrukcją, `REM` musi być oddzielona od tej instrukcji przez spację.  
+ Instrukcję można umieścić `REM` samodzielnie w wierszu lub można ją umieścić w wierszu po innej instrukcji. `REM`Instrukcja musi być ostatnią instrukcją w wierszu. Jeśli jest ona zgodna z inną instrukcją, `REM` musi być oddzielona od tej instrukcji spacją.  
   
- Możesz użyć pojedynczego cudzysłowu (`'`), a nie `REM`. Dzieje się tak, gdy komentarz jest podążany za inną instrukcją w tym samym wierszu lub w wierszu.  
+ Można użyć pojedynczego cudzysłowu ( `'` ) zamiast `REM` . Dzieje się tak, gdy komentarz jest podążany za inną instrukcją w tym samym wierszu lub w wierszu.  
   
 > [!NOTE]
-> Nie można kontynuować instrukcji `REM` przy użyciu sekwencji kontynuacji wiersza (`_`). Po rozpoczęciu komentarza kompilator nie bada znaków pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami Użyj innej instrukcji `REM` lub symbolu komentarza (`'`) w każdym wierszu.  
+> Nie można kontynuować `REM` instrukcji przy użyciu sekwencji kontynuacji wiersza ( `_` ). Po rozpoczęciu komentarza kompilator nie bada znaków pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami Użyj innej `REM` instrukcji lub symbolu komentarza ( `'` ) w każdym wierszu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje instrukcję `REM`, która jest używana do dołączania uwag objaśniających do programu. Pokazuje również alternatywę użycia znaku pojedynczego cudzysłowu (`'`), a nie `REM`.  
+ Poniższy przykład ilustruje `REM` instrukcję, która jest używana do dołączania uwag objaśniających do programu. Pokazuje również alternatywę użycia znaku pojedynczego cudzysłowu ( `'` ) zamiast `REM` .  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Komentarze w kodzie](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
-- [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Komentarze w kodzie](../../programming-guide/program-structure/comments-in-code.md)
+- [Instrukcje: Przerywanie i łączenie instrukcji w kodzie](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

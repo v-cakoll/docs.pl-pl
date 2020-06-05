@@ -1,13 +1,13 @@
 ---
-title: 'Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ)'
+title: 'Instrukcje: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338503"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357507"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
 
@@ -141,13 +141,13 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39
 ```
 
-Zapytanie działa przy użyciu metody <xref:System.String.Split%2A>, aby przekonwertować każdy wiersz tekstu na tablicę. Każdy element tablicy reprezentuje kolumnę. Na koniec tekst w każdej kolumnie jest konwertowany na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielanym tabulatorami, po prostu zaktualizuj argument w metodzie `Split`, aby `\t`.
+Zapytanie działa przy użyciu metody, <xref:System.String.Split%2A> Aby przekonwertować każdy wiersz tekstu na tablicę. Każdy element tablicy reprezentuje kolumnę. Na koniec tekst w każdej kolumnie jest konwertowany na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielanym tabulatorami, po prostu zaktualizuj argument w `Split` metodzie do `\t` .
 
-## <a name="compile-the-code"></a>Skompilować kod
+## <a name="compile-the-code"></a>Kompiluj kod
 
-Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu `Imports` instrukcji dla przestrzeni nazw System. LINQ.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](linq-and-file-directories.md)

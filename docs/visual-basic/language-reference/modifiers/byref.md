@@ -8,26 +8,26 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: 12c2f7c52986d49a761167536f04e61d0904ecbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0ad07aa206ec982e3120d5cededbb575a936e777
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351605"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373092"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Określa, że argument jest przesyłany w taki sposób, że wywoływana procedura może zmienić wartość zmiennej bazowej argumentu w kodzie wywołującym.  
   
 ## <a name="remarks"></a>Uwagi  
- Modyfikator `ByRef` może być używany w tych kontekstach:  
+ `ByRef`Modyfikator może być używany w tych kontekstach:  
   
- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare — Instrukcja](../statements/declare-statement.md)  
   
- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](../statements/function-statement.md)  
   
- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Przekazywanie argumentów według wartości i według odwołania](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Słowa kluczowe](../keywords/index.md)
+- [Przekazywanie argumentów według wartości i według odwołania](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

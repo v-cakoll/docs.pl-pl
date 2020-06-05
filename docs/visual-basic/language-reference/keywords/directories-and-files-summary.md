@@ -6,19 +6,19 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 6c7e1ef37b8abffee89c207ac1dcfb5cbef25c29
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c4429d58d2f089b86f5c32c1f3ce8353b02880c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349834"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373894"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Katalogi i pliki — Podsumowanie (Visual Basic)
 Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
- Korzystanie z funkcji `My` zapewnia większą produktywność i wydajność operacji we/wy na plikach niż przy użyciu tych elementów członkowskich. Aby uzyskać więcej informacji, zobacz temat <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Korzystanie z tej `My` funkcji zapewnia większą produktywność i wydajność operacji we/wy na plikach niż przy użyciu tych elementów członkowskich. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
-|**Transakcji**|**Element języka**|  
+|**Akcja**|**Element języka**|  
 |----------------|--------------------------|  
 |Zmień katalog lub folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
 |Zmień dysk.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
@@ -33,11 +33,11 @@ Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonaw
 |Zwróć nazwę pliku lub etykietę woluminu.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |Ustawianie informacji o atrybucie dla pliku.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
-- [Odczyt z plików](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Zapisywanie w plikach](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
-- [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Słowa kluczowe](index.md)
+- [Elementy członkowskie biblioteki wykonawczej programu Visual Basic](../runtime-library-members.md)
+- [Odczyt z plików](../../developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Zapisywanie w plikach](../../developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

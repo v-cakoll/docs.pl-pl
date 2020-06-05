@@ -1,5 +1,5 @@
 ---
-title: Optional
+title: Opcjonalne
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: a16dae35bf4bc84d95501624c4f023f390a8dda8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c46d06dba61158d7362d736731161be306af3f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351436"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392148"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
@@ -21,25 +21,25 @@ Określa, że argument procedury może zostać pominięty, gdy procedura jest wy
 
 ## <a name="remarks"></a>Uwagi
 
-Dla każdego opcjonalnego parametru należy określić wyrażenie stałe jako wartość domyślną tego parametru. Jeśli wyrażenie zwróci wartość [Nothing](../../../visual-basic/language-reference/nothing.md), wartością domyślną parametru typ danych jest jako wartość domyślna.
+Dla każdego opcjonalnego parametru należy określić wyrażenie stałe jako wartość domyślną tego parametru. Jeśli wyrażenie zwróci wartość [Nothing](../nothing.md), wartością domyślną parametru typ danych jest jako wartość domyślna.
 
 Jeśli lista parametrów zawiera opcjonalny parametr, każdy parametr, który następuje po nim musi być również opcjonalny.
 
-Modyfikator `Optional` może być używany w tych kontekstach:
+`Optional`Modyfikator może być używany w tych kontekstach:
 
-- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare — Instrukcja](../statements/declare-statement.md)
 
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function, instrukcja](../statements/function-statement.md)
 
-- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property — Instrukcja](../statements/property-statement.md)
 
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-
-> [!NOTE]
-> Podczas wywoływania procedury z parametrami opcjonalnymi lub bez nich można przekazać argumenty według pozycji lub według nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+- [Sub, instrukcja](../statements/sub-statement.md)
 
 > [!NOTE]
-> Można także zdefiniować procedurę z opcjonalnymi parametrami przy użyciu przeciążenia. Jeśli masz jeden opcjonalny parametr, możesz zdefiniować dwie przeciążone wersje procedury, jedną, która akceptuje parametr i jeden, który nie jest. Aby uzyskać więcej informacji, zobacz [przeciążanie procedur](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> Podczas wywoływania procedury z parametrami opcjonalnymi lub bez nich można przekazać argumenty według pozycji lub według nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](../../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+
+> [!NOTE]
+> Można także zdefiniować procedurę z opcjonalnymi parametrami przy użyciu przeciążenia. Jeśli masz jeden opcjonalny parametr, możesz zdefiniować dwie przeciążone wersje procedury, jedną, która akceptuje parametr i jeden, który nie jest. Aby uzyskać więcej informacji, zobacz [przeciążanie procedur](../../programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Przykład
 
@@ -70,8 +70,8 @@ W poniższym przykładzie pokazano, jak wywołać procedurę z argumentami przek
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [Parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+- [Lista parametrów](../statements/parameter-list.md)
+- [Parametry opcjonalne](../../programming-guide/language-features/procedures/optional-parameters.md)
+- [Słowa kluczowe](../keywords/index.md)

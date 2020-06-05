@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913087"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373917"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki
-Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki. Zamiast tego należy utworzyć zmienną lokalną, w ramach pętli i przypisać jej wartość zmiennej iteracji.  
+Użycie zmiennej iteracji w wyrażeniu lambda może mieć nieoczekiwane wyniki. Zamiast tego należy utworzyć zmienną lokalną wewnątrz pętli i przypisać ją do wartości zmiennej iteracji.  
   
- To ostrzeżenie jest wyświetlane, gdy używasz Zmienna iteracji pętli w wyrażeniu lambda, która jest zadeklarowana wewnątrz pętli. Na przykład poniższy przykład powoduje, że ostrzeżenia są wyświetlane.  
+ To ostrzeżenie jest wyświetlane, gdy w wyrażeniu lambda, który jest zadeklarowany wewnątrz pętli, jest używana zmienna iteracji pętli. Na przykład poniższy przykład powoduje wyświetlenie ostrzeżenia.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- `For` Pętli tworzy tablicę wyrażeń lambda, z których każda zwraca wartość zmiennej iteracji pętli `i`. Gdy wyrażenia lambda są obliczane w `For Each` pętli, można by oczekiwać zobaczyć, 0, 1, 2, 3 i 4 wyświetlane, kolejnych wartości `i` w `For` pętli. Zamiast tego zobacz końcowa wartość `i` wyświetlane pięć razy:  
+ `For`Pętla tworzy tablicę wyrażeń lambda, z których każdy zwraca wartość zmiennej iteracji pętli `i` . Gdy wyrażenia lambda są oceniane w `For Each` pętli, może się zdarzyć, że będą widoczne wartości 0, 1, 2, 3 i 4 `i` `For` . Zamiast tego zobaczysz końcową wartość `i` wyświetlaną pięć razy:  
   
  `5`  
   
@@ -57,13 +57,13 @@ End Module
   
  `5`  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42324  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przypisz wartość zmiennej iteracyjnej do zmiennej lokalnej, a następnie użyć zmiennej lokalnej w wyrażeniu lambda.  
+- Przypisz wartość zmiennej iteracji do zmiennej lokalnej i Użyj zmiennej lokalnej w wyrażeniu lambda.  
   
 ```vb  
 Module Module1  
@@ -83,6 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Wyrażenia lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

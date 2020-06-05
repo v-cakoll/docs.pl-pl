@@ -1,25 +1,25 @@
 ---
-title: Urządzenie jest niedostępne
+title: Urządzenie niedostępne
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1c31af1df65855d3632e64983314767f76c9375
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970082"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394794"
 ---
-# <a name="device-unavailable"></a>Urządzenie jest niedostępne
-Utracono połączenie z siecią albo urządzenia, które próbujesz uzyskać dostęp, jest w trybie offline lub nie istnieje.  
+# <a name="device-unavailable"></a>Urządzenie niedostępne
+Utracono połączenie sieciowe lub urządzenie, do którego próbujesz uzyskać dostęp, jest w trybie offline lub nie istnieje.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź możliwości urządzenia i wszystkie kable Łączenie komputera z urządzenia. Jeśli próbujesz uzyskać dostęp z drukarką za pośrednictwem sieci, upewnij się, że istnieje połączenie logiczne między Twoim komputerem a drukarki, na przykład połączenie kojarzenie LPT1 z identyfikatorem sieci drukarki.  
+1. Zapoznaj się z mocą urządzenia i wszystkimi kablami łączącymi komputer z urządzeniem. Jeśli próbujesz uzyskać dostęp do drukarki za pośrednictwem sieci, upewnij się, że istnieje połączenie logiczne między komputerem a drukarką, na przykład połączenie skojarzenia LPT1 z IDENTYFIKATORem drukarki sieciowej.  
   
-2. Ponowne nawiązywanie połączenia z siecią i spróbuj ponownie.  
+2. Ponownie nawiąż połączenie z siecią i spróbuj ponownie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

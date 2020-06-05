@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: konwertowanie obiektu na inny typ'
+title: 'Instrukcje: Konwertowanie obiektu na inny typ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cdb78bc66867ce27076d7b7e42de6a2880cb3a8c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341585"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393964"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Porady: konwertowanie obiektu do innego typu w Visual Basic
-Zmienna `Object` jest konwertowana na inny typ danych za pomocą słowa kluczowego konwersji, takiego jak [Funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Zmienną można przekonwertować `Object` na inny typ danych za pomocą słowa kluczowego konwersji, takiego jak [Funkcja CType](../../../language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład konwertuje zmienną `Object` na `Integer` i `String`.  
+ Poniższy przykład konwertuje `Object` zmienną na `Integer` i `String` .  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,21 +26,21 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Jeśli wiesz, że zawartość zmiennej `Object` jest określonego typu danych, lepiej jest skonwertować zmienną na ten typ danych. Jeśli nadal używasz zmiennej `Object`, naliczane są *opakowanie* i *rozpakowywanie* (dla typu wartości) lub *późne wiązanie* (dla typu odwołania). Wszystkie te operacje pobierają dodatkowy czas wykonywania i zwiększają wydajność.  
+ Jeśli wiesz, że zawartość `Object` zmiennej jest określonego typu danych, lepiej jest skonwertować zmienną na ten typ danych. Jeśli nadal używasz `Object` zmiennej, naliczane są *opakowanie* i *rozpakowywanie* (dla typu wartości) lub *późne wiązanie* (dla typu odwołania). Wszystkie te operacje pobierają dodatkowy czas wykonywania i zwiększają wydajność.  
   
-## <a name="compile-the-code"></a>Skompilować kod  
+## <a name="compile-the-code"></a>Kompiluj kod  
  Ten przykład wymaga:  
   
-- Odwołanie do przestrzeni nazw <xref:System?displayProperty=nameWithType>.  
+- Odwołanie do <xref:System?displayProperty=nameWithType> przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Object>
-- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
-- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
-- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersje plików w Visual Basic](type-conversions.md)
+- [Rozszerzanie i zwężanie konwersji](widening-and-narrowing-conversions.md)
+- [Konwersje jawne i niejawne](implicit-and-explicit-conversions.md)
+- [Konwertowanie między ciągami a innymi typami danych](conversions-between-strings-and-other-types.md)
+- [Konwersje tablic](array-conversions.md)
+- [Struktury](structures.md)
+- [Typy danych](../../../language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../language-reference/functions/type-conversion-functions.md)

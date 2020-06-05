@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: f8246c1d9d45f2e20cbecb83f61fe91de8a821d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11f5d6b034600ae4f669be86eea927a7ed5cc16f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661899"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413030"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Za mało pamięci (Błąd kompilatora Visual Basic)
-Większa ilość pamięci nie jest wymagana, niż jest dostępne.  
+Jest wymagana większa ilość pamięci niż jest dostępna.  
   
  **Identyfikator błędu:** BC2004  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Zamknij zbędne aplikacje, dokumenty i pliki źródłowe.  
+- Zamknij niepotrzebne aplikacje, dokumenty i pliki źródłowe.  
   
-- Wyeliminuj niepotrzebne formanty, a więc mniej formularzy są ładowane w tym samym czasie  
+- Eliminowanie niepotrzebnych kontrolek i formularzy w taki sposób, aby w tym samym czasie załadowano mniej  
   
 - Zmniejsz liczbę `Public` zmiennych.  
   
-- Sprawdź ilość dostępnego miejsca.  
+- Sprawdź ilość dostępnego miejsca na dysku.  
   
-- Zwiększ dostępnej pamięci RAM, instalowania dodatkowej pamięci lub zmienianie alokacji pamięci.  
+- Zwiększ ilość dostępnej pamięci RAM, instalując dodatkową pamięć lub ponowną alokację pamięci.  
   
-- Upewnij się, że pamięć jest zwalniana, gdy nie jest już potrzebny.  
+- Upewnij się, że pamięć jest zwalniana, gdy nie jest już potrzebne.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../programming-guide/language-features/error-types.md)

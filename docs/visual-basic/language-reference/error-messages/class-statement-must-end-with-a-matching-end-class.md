@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c231f577d21028e9ef92f37c7ac5f7f1fe2aa3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602416"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415391"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>Instrukcja „Class” musi być zakończona odpowiadającą jej instrukcją „End Class”
-`Class` Służy do inicjowania `Class` Blokuj; dlatego tylko może występować na początku bloku, odpowiadającą jej instrukcją `End Class` instrukcji blok końcowy. Albo masz nadmiarowe `Class` instrukcji lub użytkownik nie zakończył swojej `Class` blokowania z `End Class`.  
+`Class`służy do inicjowania `Class` bloku; w związku z tym może wystąpić tylko na początku bloku, z odpowiadającą instrukcją `End Class` kończącą blok. Istnieje instrukcja nadmiarowa `Class` lub nie zakończono `Class` blokady przy użyciu `End Class` .  
   
  **Identyfikator błędu:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Zlokalizuj i usuń niepotrzebne `Class` instrukcji.  
+- Znajdź i Usuń niezbędną `Class` instrukcję.  
   
-- Zawrzeć `Class` bloku odpowiadającą jej instrukcją `End Class`.  
+- Zakończ `Class` blok ze zgodnym elementem `End Class` .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Koniec \<— słowo kluczowe > — instrukcja](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
-- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
+- [End — \<keyword> instrukcja](../statements/end-keyword-statement.md)
+- [Class, instrukcja](../statements/class-statement.md)

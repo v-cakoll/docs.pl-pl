@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351424"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392096"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modyfikator ogólny) (Visual Basic)
 
-W przypadku parametrów typu ogólnego `Out` słowo kluczowe Określa, że typ jest współvariant.
+W przypadku parametrów typu ogólnego `Out` słowo kluczowe Określa, że typ jest współwariantem.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -26,7 +26,7 @@ Aby uzyskać więcej informacji, zobacz [Kowariancja i kontrawariancja](../../pr
 
 ## <a name="rules"></a>Reguły
 
-Możesz użyć słowa kluczowego `Out` w interfejsach ogólnych i delegatach.
+Możesz użyć `Out` słowa kluczowego w interfejsach ogólnych i delegatach.
 
 W interfejsie ogólnym parametr typu może być zadeklarowany jako współwariant, jeśli spełnia następujące warunki:
 
@@ -45,7 +45,7 @@ W Visual Basic nie można zadeklarować zdarzeń w interfejsach współvariant b
 
 ## <a name="behavior"></a>Zachowanie
 
-Interfejs, który ma parametr typu klasy współdzielonej, umożliwia jej metodom zwrócenie większej liczby typów pochodnych niż te określone przez parametr typu. Na przykład, ponieważ w .NET Framework 4, w <xref:System.Collections.Generic.IEnumerable%601>, typu T jest współwariantem, można przypisać obiekt typu `IEnumerable(Of String)` do obiektu typu `IEnumerable(Of Object)` bez użycia żadnych specjalnych metod konwersji.
+Interfejs, który ma parametr typu klasy współdzielonej, umożliwia jej metodom zwrócenie większej liczby typów pochodnych niż te określone przez parametr typu. Na przykład, ponieważ w .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601> , typu T jest współwariantem, można przypisać obiekt `IEnumerable(Of String)` typu do obiektu `IEnumerable(Of Object)` typu bez użycia żadnych specjalnych metod konwersji.
 
 Delegata, do którego można przypisać inny delegat tego samego typu, ale z bardziej pochodnym parametrem typu ogólnego.
 
@@ -61,7 +61,7 @@ Poniższy przykład pokazuje, jak zadeklarować, utworzyć wystąpienie i wywoł
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Podczas](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Wariancje w interfejsach](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [W](in-generic-modifier.md)

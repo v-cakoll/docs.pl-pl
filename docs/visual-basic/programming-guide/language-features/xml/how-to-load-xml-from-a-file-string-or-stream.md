@@ -5,50 +5,50 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 7a2a0513a066ae8ea8a70f7a5ae340ab29de7d25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f2a961ebb7ecd4fc0512e141b4a437be87bec0e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330959"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392291"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Porady: ładowanie XML z pliku, ciągu lub strumienia (Visual Basic)
 
-Można tworzyć [literały XML](../../../../visual-basic/language-reference/xml-literals/index.md) i wypełniać je zawartością z zewnętrznego źródła, takiego jak plik, ciąg lub strumień, przy użyciu kilku metod. Te metody przedstawiono w poniższych przykładach.
+Można tworzyć [literały XML](../../../language-reference/xml-literals/index.md) i wypełniać je zawartością z zewnętrznego źródła, takiego jak plik, ciąg lub strumień, przy użyciu kilku metod. Te metody przedstawiono w poniższych przykładach.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 ## <a name="to-load-xml-from-a-file"></a>Aby załadować plik XML z pliku
 
-Aby wypełnić literał XML, taki jak obiekt <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> z pliku, należy użyć metody `Load`. Ta metoda może przyjmować ścieżkę pliku, strumień tekstowy lub strumień XML jako dane wejściowe.
+Aby wypełnić literał XML, taki jak <xref:System.Xml.Linq.XElement> obiekt lub <xref:System.Xml.Linq.XDocument> z pliku, należy użyć `Load` metody. Ta metoda może przyjmować ścieżkę pliku, strumień tekstowy lub strumień XML jako dane wejściowe.
 
-Poniższy przykład kodu pokazuje użycie metody <xref:System.Xml.Linq.XDocument.Load%28System.String%29> do wypełnienia obiektu <xref:System.Xml.Linq.XDocument> z XML z pliku tekstowego.
+Poniższy przykład kodu pokazuje użycie <xref:System.Xml.Linq.XDocument.Load%28System.String%29> metody do wypełniania <xref:System.Xml.Linq.XDocument> obiektu atrybutem XML z pliku tekstowego.
 
 [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
 
 ## <a name="to-load-xml-from-a-string"></a>Aby załadować XML z ciągu
 
-Aby wypełnić literał XML, taki jak obiekt <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> z ciągu, można użyć metody `Parse`.
+Aby wypełnić literał XML, taki jak <xref:System.Xml.Linq.XElement> obiekt lub <xref:System.Xml.Linq.XDocument> z ciągu, można użyć `Parse` metody.
 
-Poniższy przykład kodu pokazuje użycie metody <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType>, aby wypełnić obiekt <xref:System.Xml.Linq.XDocument> z XML z ciągu.
+Poniższy przykład kodu pokazuje użycie <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> metody do wypełniania <xref:System.Xml.Linq.XDocument> obiektu atrybutem XML z ciągu.
 
 [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
 
 ## <a name="to-load-xml-from-a-stream"></a>Aby załadować plik XML ze strumienia
 
-Aby wypełnić literał XML, taki jak obiekt <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> ze strumienia, można użyć metody `Load` lub metody <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>.
+Aby wypełnić literał XML, taki jak <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> obiekt ze strumienia, można użyć `Load` metody lub <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> metody.
 
-Poniższy przykład kodu pokazuje użycie metody <xref:System.Xml.Linq.XNode.ReadFrom%2A> do wypełnienia obiektu <xref:System.Xml.Linq.XDocument> z XML ze strumienia XML.
+Poniższy przykład kodu pokazuje użycie <xref:System.Xml.Linq.XNode.ReadFrom%2A> metody do wypełnienia <xref:System.Xml.Linq.XDocument> obiektu z XML ze strumienia XML.
 
 [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>
-- [Literały XML](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Manipulowanie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [Literały XML](../../../language-reference/xml-literals/index.md)
+- [XML](index.md)
+- [Manipulowanie XML w Visual Basic](manipulating-xml.md)

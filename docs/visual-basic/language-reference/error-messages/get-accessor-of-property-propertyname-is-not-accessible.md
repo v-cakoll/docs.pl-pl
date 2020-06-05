@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 92cc6d732b59617a6043bd71a9549649ff1ad356
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb953671e624d5b9170aa0b3a9dd80c7ba8337e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662049"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402917"
 ---
-# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>Metoda dostępu właściwości "get" "\<propertyname >" jest niedostępny
-Próbuje pobrać wartość właściwości, gdy nie ma dostępu do właściwości instrukcji `Get` procedury.  
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>Metoda dostępu „Get” właściwości „\<propertyname>” jest niedostępna
+Instrukcja próbuje pobrać wartość właściwości, gdy nie ma dostępu do `Get` procedury właściwości.  
   
- Jeśli [instrukcja Get](../../../visual-basic/language-reference/statements/get-statement.md) jest oznaczony przy użyciu bardziej restrykcyjne poziomu niż jego [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md), próba odczytu wartość właściwości może się nie powieść w następujących przypadkach:  
+ Jeśli [instrukcja GET](../statements/get-statement.md) jest oznaczona przy użyciu bardziej restrykcyjnego poziomu dostępu niż jego [instrukcja Property](../statements/property-statement.md), próba odczytu wartości właściwości może zakończyć się niepowodzeniem w następujących przypadkach:  
   
-- `Get` Oznaczonej instrukcji [prywatnej](../../../visual-basic/language-reference/modifiers/private.md) i kod wywołujący znajduje się poza klasy lub struktury, w którym właściwość jest zdefiniowana.  
+- `Get`Instrukcja jest oznaczona jako [Private](../modifiers/private.md) , a kod wywołujący znajduje się poza klasą lub strukturą, w której właściwość jest zdefiniowana.  
   
-- `Get` Oznaczonej instrukcji [chronione](../../../visual-basic/language-reference/modifiers/protected.md) i kod wywołujący nie ma w klasy lub struktury, w którym zdefiniowano właściwość ani w klasie pochodnej.  
+- `Get`Instrukcja jest oznaczona jako [Protected](../modifiers/protected.md) , a wywoływany kod nie znajduje się w klasie lub strukturze, w której właściwość jest zdefiniowana, ani w klasie pochodnej.  
   
-- `Get` Oznaczonej instrukcji [Friend](../../../visual-basic/language-reference/modifiers/friend.md) i kod wywołujący nie jest w tym samym zestawie, w którym właściwość jest zdefiniowana.  
+- `Get`Instrukcja jest oznaczona jako [Friend](../modifiers/friend.md) i kod wywołujący nie znajduje się w tym samym zestawie, w którym jest zdefiniowana właściwość.  
   
  **Identyfikator błędu:** BC31103  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli masz kontroli kodu źródłowego, definiując właściwość, należy rozważyć deklarowanie `Get` procedury na tym samym poziomie dostępu jako samej właściwości.  
+- Jeśli masz kontrolę nad kodem źródłowym definiującym właściwość, rozważ zadeklarowanie `Get` procedury z takim samym poziomem dostępu jak sama właściwość.  
   
-- Jeśli nie masz kontroli kodu źródłowego, definiując właściwość lub należy ograniczyć `Get` procedury więcej niż właściwość, spróbuj przenieść instrukcję, która odczytuje wartości właściwości do regionu kod, który ma lepszy dostęp do poziomu dostępu Właściwość.  
+- Jeśli nie masz kontroli nad kodem źródłowym definiującym właściwość lub musisz ograniczyć `Get` poziom dostępu do procedury więcej niż sama właściwość, spróbuj przenieść instrukcję, która odczytuje wartość właściwości do regionu kodu, który ma lepszy dostęp do właściwości.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)
+- [Procedury własności](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Porady: deklarowanie właściwości z mieszanymi poziomami dostępu](../../programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
 ms.assetid: fa2cf36e-2169-42db-8449-6aca579e8303
-ms.openlocfilehash: 0799773e2db94f2b2588f77b65f6abf575e07897
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be3e2255ce4dc533eb78bacc200575a96f78f4e9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348183"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398581"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Komputer serwera zdalnego nie istnieje lub jest niedostępny (Visual Basic)
 Próbujesz nawiązać połączenie z serwerem zdalnym, który jest niedostępny lub nie istnieje. Przyczyną tego błędu może być utrata połączenia sieciowego.  
@@ -18,6 +18,6 @@ Próbujesz nawiązać połączenie z serwerem zdalnym, który jest niedostępny 
   
 - Ponownie nawiąż połączenie z siecią i spróbuj ponownie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../programming-guide/language-features/error-types.md)

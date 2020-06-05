@@ -1,19 +1,19 @@
 ---
-title: 'Jak: Pobieranie wartości atrybutu (LINQ do XML)'
+title: 'Instrukcje: pobieranie wartości atrybutu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-ms.openlocfilehash: 6593639dcdc234ddda808cfdb5e85ebe1a771b62
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 48ad3c0ab079012793fd9eea89d52fc3a7b1698f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248950"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397807"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Jak: Pobieranie wartości atrybutu (LINQ do XML) (Visual Basic)
-W tym temacie pokazano, jak uzyskać wartość atrybutów. Istnieją dwa główne sposoby: <xref:System.Xml.Linq.XAttribute> można rzucić do żądanego typu; operator konwersji jawne następnie konwertuje zawartość elementu lub atrybutu do określonego typu. Goście mogą również skorzystać <xref:System.Xml.Linq.XAttribute.Value%2A> z obiektu. Jednak odlewanie jest na ogół lepszym podejściem. Jeśli rzutujesz atrybut na typ wartości możliwej do wartości null, kod jest prostszy do zapisania podczas pobierania wartości atrybutu, który może lub nie może istnieć. Aby zapoznać się z przykładami tej techniki, zobacz [Jak: Pobieranie wartości elementu (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Instrukcje: pobieranie wartości atrybutu (LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać wartość atrybutów. Istnieją dwa podstawowe sposoby: można rzutować <xref:System.Xml.Linq.XAttribute> na żądany typ; operator jawnej konwersji następnie konwertuje zawartość elementu lub atrybutu do określonego typu. Alternatywnie można użyć <xref:System.Xml.Linq.XAttribute.Value%2A> właściwości. Jednak Rzutowanie jest ogólnie lepszym rozwiązaniem. Jeśli rzutowanie atrybutu na typ wartości null, kod jest łatwiejszy do zapisu podczas pobierania wartości atrybutu, który może lub nie istnieje. Przykłady tej techniki można znaleźć w temacie [How to: pobieranie wartości elementu (LINQ to XML) (Visual Basic)](how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Przykład  
- W języku Visual Basic można użyć właściwości atrybutu zintegrowanego, aby pobrać wartość atrybutu.  
+ W Visual Basic można użyć właściwości Integrated Attribute, aby pobrać wartość atrybutu.  
   
 ```vb  
 Dim root As XElement = <Root Attr="abcde"/>  
@@ -30,7 +30,7 @@ abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- W języku Visual Basic można użyć właściwości atrybutu zintegrowanego, aby ustawić wartość atrybutu. Ponadto jeśli używasz właściwości atrybutu zintegrowanego, aby ustawić wartość atrybutu, który nie istnieje, zostanie utworzony atrybut.  
+ W Visual Basic można użyć właściwości Integrated Attribute, aby ustawić wartość atrybutu. Ponadto w przypadku użycia właściwości Integrated Attribute do ustawienia wartości atrybutu, który nie istnieje, atrybut zostanie utworzony.  
   
 ```vb  
 Dim root As XElement = <Root Att1="content"/>  
@@ -46,7 +46,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak pobrać wartość atrybutu, w którym atrybut znajduje się w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Omówienie obszarów nazw (LINQ do XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Poniższy przykład pokazuje, jak pobrać wartość atrybutu, gdzie atrybut znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -68,4 +68,4 @@ abcde
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Osie LINQ do XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Osie LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

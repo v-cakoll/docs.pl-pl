@@ -11,20 +11,20 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 1c099c5082f1c4173a50c70998c99135c94821e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3e8df5ccfeca4bc0a19237ba6d59e9d0747080ea
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346372"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394301"
 ---
 # <a name="composite-data-types-visual-basic"></a>Złożone typy danych (Visual Basic)
 Oprócz podstawowych typów danych Visual Basic dostaw, można także złożyć elementy różnych typów w celu utworzenia *złożonych typów danych* , takich jak struktury, tablice i klasy. Można tworzyć złożone typy danych z typów podstawowych i z innych typów złożonych. Na przykład można zdefiniować tablicę elementów struktury lub strukturę z elementami członkowskimi tablicy.  
   
 ## <a name="data-types"></a>Typy danych  
- Typ złożony różni się od typu danych któregokolwiek z jego składników. Na przykład tablica elementów `Integer` nie jest typu danych `Integer`.  
+ Typ złożony różni się od typu danych któregokolwiek z jego składników. Na przykład tablica `Integer` elementów nie jest `Integer` typu danych.  
   
- Typ danych tablicy jest zwykle reprezentowany przy użyciu typu elementu, nawiasów i przecinków w razie potrzeby. Na przykład Jednowymiarowa tablica elementów `String` jest reprezentowana jako `String()`, a Dwuwymiarowa tablica elementów `Boolean` jest reprezentowana jako `Boolean(,)`.  
+ Typ danych tablicy jest zwykle reprezentowany przy użyciu typu elementu, nawiasów i przecinków w razie potrzeby. Na przykład Jednowymiarowa tablica `String` elementów jest reprezentowana jako `String()` , a Dwuwymiarowa tablica `Boolean` elementów jest reprezentowana jako `Boolean(,)` .  
   
 ## <a name="structure-types"></a>Typy struktur  
  Nie istnieje pojedynczy typ danych obejmujący wszystkie struktury. Zamiast tego każda definicja struktury reprezentuje unikatowy typ danych, nawet jeśli dwie struktury definiują identyczne elementy w tej samej kolejności. Jeśli jednak tworzysz dwa lub więcej wystąpień tej samej struktury, Visual Basic uznaje ich za tego samego typu danych.  
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- W poprzednim przykładzie Zmienne tablicowe `arrayA` i `arrayB` są uważane za takie same typy danych — `Byte()` — nawet jeśli są zainicjowane do różnych długości. Zmienne `arrayB` i `arrayC` nie są tego samego typu, ponieważ ich typy elementów są różne. Zmienne `arrayC` i `arrayD` nie są tego samego typu, ponieważ ich Range różnią się od siebie. Zmienne `arrayD` i `arrayE` mają ten sam typ — `Short(,)` — ponieważ ich Range i typy elementów są takie same, nawet jeśli `arrayD` nie została jeszcze zainicjowana.  
+ W poprzednim przykładzie Zmienne tablicowe `arrayA` i `arrayB` są uznawane za te same typy danych — `Byte()` nawet wtedy, gdy są one inicjowane do różnych długości. Zmienne `arrayB` i `arrayC` nie są tego samego typu, ponieważ ich typy elementów są różne. Zmienne `arrayC` i `arrayD` nie są tego samego typu, ponieważ ich Range różnią się od siebie. Zmienne `arrayD` i `arrayE` mają ten sam typ — `Short(,)` — ponieważ ich Range i typy elementów są takie same, nawet jeśli `arrayD` nie zostały jeszcze zainicjowane.  
   
- Aby uzyskać więcej informacji na temat tablic, zobacz [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Aby uzyskać więcej informacji na temat tablic, zobacz [tablice](../arrays/index.md).  
   
 ## <a name="class-types"></a>Typy klas  
  Nie istnieje pojedynczy typ danych składający się ze wszystkich klas. Chociaż jedna klasa może dziedziczyć z innej klasy, każda z nich jest osobnym typem danych. Wiele wystąpień tej samej klasy ma ten sam typ danych. W przypadku przypisania jednej zmiennej wystąpienia klasy do innej nie tylko mają one ten sam typ danych, wskazują na to samo wystąpienie klasy w pamięci.  
   
- Aby uzyskać więcej informacji na temat klas, zobacz [obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ Aby uzyskać więcej informacji na temat klas, zobacz [obiekty i klasy](../objects-and-classes/index.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Instrukcje: utrzymywanie więcej niż jednej wartości w zmiennej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+- [Typy danych](index.md)
+- [Typy danych podstawowych](elementary-data-types.md)
+- [Typy ogólne w Visual Basic](generic-types.md)
+- [Typy wartości i odwołań](value-types-and-reference-types.md)
+- [Konwersje plików w Visual Basic](type-conversions.md)
+- [Struktury](structures.md)
+- [Rozwiązywanie problemów związanych z typami danych](troubleshooting-data-types.md)
+- [Instrukcje: Utrzymywanie więcej niż jednej wartości w zmiennej](how-to-hold-more-than-one-value-in-a-variable.md)

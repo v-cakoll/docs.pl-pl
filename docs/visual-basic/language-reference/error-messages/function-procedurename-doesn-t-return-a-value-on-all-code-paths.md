@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 5564f95048f6b44a48229c7e5be9331839803439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662106"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374138"
 ---
-# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
-Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu. Czy nie brakuje instrukcji "Return"?  
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Funkcja „\<procedurename>" nie zwraca wartości we wszystkich ścieżkach kodu
+Funkcja " \<procedurename> " nie zwraca wartości we wszystkich ścieżkach kodu. Czy brakuje instrukcji "return"?  
   
- A `Function` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kodu, która nie zwraca wartości.  
+ `Function`Procedura zawiera co najmniej jedną możliwą ścieżkę za pomocą kodu, który nie zwraca wartości.  
   
- Może zwracać wartość z zakresu od `Function` procedury w dowolnym z następujących sposobów:  
+ Można zwrócić wartość z `Function` procedury w dowolny z następujących sposobów:  
   
-- Zawiera wartości w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Dołącz wartość do [instrukcji return](../statements/return-statement.md).  
   
-- Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `Exit Function` instrukcji.  
+- Przypisz wartość do `Function` nazwy procedury, a następnie wykonaj `Exit Function` instrukcję.  
   
-- Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `End Function` instrukcji.  
+- Przypisz wartość do `Function` nazwy procedury, a następnie wykonaj `End Function` instrukcję.  
   
- Jeśli kontrola przechodzi do `Exit Function` lub `End Function` i nie przypisano żadnej wartości do nazwy procedury, procedura zwraca wartość domyślną typu danych zwrotnych. Aby uzyskać więcej informacji, zobacz 'Zachowanie' w [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Jeśli kontrola przechodzi do `Exit Function` lub `End Function` i nie przypisano żadnej wartości do nazwy procedury, procedura zwraca wartość domyślną zwracanego typu danych. Aby uzyskać więcej informacji, zobacz "zachowanie" w [instrukcji funkcji](../statements/function-statement.md).  
   
- Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42105  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Sprawdź logikę przepływu sterowania i upewnij się, że przypisanie wartości przed każdej instrukcji, który powoduje, że wynik.  
+- Sprawdź logikę przepływu sterowania i upewnij się, że przypiszesz wartość przed każdą instrukcją, która powoduje zwrócenie.  
   
-     Ułatwia to zagwarantować, każdy zwracany z procedury zwraca wartość, jeśli zawsze używasz `Return` instrukcji. Jeśli to zrobisz, ostatnią instrukcję przed `End Function` powinien być `Return` instrukcji.  
+     Łatwiej jest zagwarantować, że każde zwrócenie z procedury zwraca wartość, jeśli zawsze używasz `Return` instrukcji. Jeśli to zrobisz, ostatnią instrukcją przed `End Function` powinien być `Return` instrukcja.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Procedury funkcji](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Procedury funkcji](../../programming-guide/language-features/procedures/function-procedures.md)
+- [Function, instrukcja](../statements/function-statement.md)
 - [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 1385919a1205a60104125fff1bdd24f409a091df
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d313dee1015362bd0215ed98ab7e898312cfbcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351647"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373163"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Określa, że atrybut na początku pliku źródłowego dotyczy całego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Wiele atrybutów odnosi się do pojedynczego elementu programistycznego, takiego jak Klasa lub właściwość. Ten atrybut jest stosowany przez dołączenie bloku atrybutu w nawiasach kątowych (`< >`) bezpośrednio do instrukcji deklaracji.  
+ Wiele atrybutów odnosi się do pojedynczego elementu programistycznego, takiego jak Klasa lub właściwość. Ten atrybut jest stosowany przez dołączenie bloku atrybutu w nawiasach kątowych ( `< >` ) bezpośrednio do instrukcji deklaracji.  
   
- Jeśli atrybut dotyczy nie tylko następującego elementu, ale do całego zestawu, umieścisz blok atrybutu na początku pliku źródłowego i zidentyfikujesz atrybut za pomocą słowa kluczowego `Assembly`. Jeśli dotyczy bieżącego modułu zestawu, należy użyć słowa kluczowego [modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md) .  
+ Jeśli atrybut dotyczy nie tylko następującego elementu, ale do całego zestawu, umieścisz blok atrybutu na początku pliku źródłowego i zidentyfikujesz atrybut za pomocą `Assembly` słowa kluczowego. Jeśli dotyczy bieżącego modułu zestawu, należy użyć słowa kluczowego [modułu](module-keyword.md) .  
   
  Można również zastosować atrybut do zestawu w pliku AssemblyInfo. vb, w tym przypadku nie trzeba używać bloku atrybutu w głównym pliku kodu źródłowego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [> \<modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Przegląd atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Elementu\<keyword>](module-keyword.md)
+- [Przegląd atrybutów](../../programming-guide/concepts/attributes/index.md)

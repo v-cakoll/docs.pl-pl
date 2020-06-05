@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: Znajdowanie powiązanych elementów (XPath-LINQ to XML)'
+title: 'Instrukcje: wyszukiwanie elementów powiązanych (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: e250572e7bd73e769e4ab06b7b7ff9e3b3d38c47
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5819ef216f767367aa16b20f818b2bbc537d54b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344644"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364659"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie powiązanych elementów (XPath-LINQ to XML) (Visual Basic)
 W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest określany przez wartość innego elementu.  
@@ -17,11 +17,11 @@ W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest o
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład znajduje 12 `Order` elementu, a następnie wyszukuje klienta dla tej kolejności.  
+ Ten przykład znajduje dwunasty `Order` element, a następnie wyszukuje klienta dla tego zamówienia.  
   
  Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykacie XPath jest oparte na "jednej". Ten przykład odzwierciedla tę różnicę.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -73,6 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

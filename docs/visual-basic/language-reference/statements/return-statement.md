@@ -1,5 +1,5 @@
 ---
-title: Return — Instrukcja
+title: Return, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Return
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: efc85a3a844898345aa2d16926ba0e35d7346d1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cdb58e32c30c8e6c1662fb698ac5576c3f71258c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333012"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404203"
 ---
 # <a name="return-statement-visual-basic"></a>Return — Instrukcja (Visual Basic)
-Zwraca kontrolę do kodu, który wywołał procedurę `Function`, `Sub`, `Get`, `Set`lub `Operator`.  
+Zwraca kontrolę do kodu, który wywołał `Function` `Sub` procedurę,,, `Get` `Set` lub `Operator` .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,32 +27,32 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a>Części  
+## <a name="part"></a>Część  
  `expression`  
- Wymagane w procedurze `Function`, `Get`lub `Operator`. Wyrażenie, które reprezentuje wartość, która ma zostać zwrócona do kodu wywołującego.  
+ Wymagane w `Function` procedurze, `Get` lub `Operator` . Wyrażenie, które reprezentuje wartość, która ma zostać zwrócona do kodu wywołującego.  
   
 ## <a name="remarks"></a>Uwagi  
- W procedurze `Sub` lub `Set`, instrukcja `Return` jest równoważna z `Exit Sub` lub `Exit Property` instrukcją i nie można podać `expression`.  
+ W `Sub` procedurze lub `Set` `Return` instrukcja jest równoznaczna z `Exit Sub` `Exit Property` instrukcją or i `expression` nie może być dostarczone.  
   
- W procedurze `Function`, `Get`lub `Operator` instrukcja `Return` musi zawierać `expression`, a `expression` musi oszacować do typu danych, który jest konwertowany na zwracany typ procedury. W procedurze `Function` lub `Get` można także przypisać wyrażenie do nazwy procedury, która ma stanowić wartość zwracaną, a następnie wykonać `Exit Function` lub `Exit Property` instrukcję. W procedurze `Operator` należy użyć `Return expression`.  
+ W `Function` procedurze, `Get` , lub `Operator` , `Return` instrukcja musi zawierać `expression` , i `expression` musi oszacować do typu danych, który jest konwertowany na zwracany typ procedury. W `Function` procedurze lub `Get` można także przypisać wyrażenie do nazwy procedury, która ma stanowić wartość zwracaną, a następnie wykonuje `Exit Function` `Exit Property` instrukcję or. W `Operator` procedurze należy użyć `Return expression` .  
   
- Można dołączyć dowolną liczbę instrukcji `Return`, zgodnie z potrzebami w tej samej procedurze.  
+ `Return`W tej samej procedurze można dołączyć dowolną liczbę instrukcji.  
   
 > [!NOTE]
-> Kod w bloku `Finally` jest uruchamiany po napotkaniu instrukcji `Return` w bloku `Try` lub `Catch`, ale przed wykonaniem tej instrukcji `Return`. Instrukcji `Return` nie można uwzględnić w bloku `Finally`.  
+> Kod w bloku jest `Finally` uruchamiany po `Return` `Try` napotkaniu instrukcji w bloku lub `Catch` , ale przed wykonaniem tej `Return` instrukcji. `Return`Instrukcja nie może być uwzględniona w `Finally` bloku.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa instrukcji `Return` kilka razy, aby powrócić do kodu wywołującego, gdy procedura nie musi wykonywać żadnych innych czynności.  
+ Poniższy przykład używa `Return` instrukcji kilka razy, aby powrócić do kodu wywołującego, gdy procedura nie musi wykonywać żadnych innych czynności.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)
-- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Function, instrukcja](function-statement.md)
+- [Sub, instrukcja](sub-statement.md)
+- [Get — Instrukcja](get-statement.md)
+- [Set — Instrukcja](set-statement.md)
+- [Operator — Instrukcja](operator-statement.md)
+- [Property — Instrukcja](property-statement.md)
+- [Exit, instrukcja](exit-statement.md)
+- [Try...Catch...Finally, instrukcja](try-catch-finally-statement.md)

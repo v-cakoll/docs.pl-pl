@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: 3baf2ec11db72102439b86e151be80d3031cc5d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39be6c90479becb32257bad5803ff1e2c5464f9d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397314"
 ---
 # <a name="line-is-too-long"></a>Wiersz jest za długi
-Wiersze tekstu źródła nie może przekraczać 65535 znaków.  
+Wiersze tekstu źródłowego nie mogą zawierać więcej niż 65535 znaków.  
   
  **Identyfikator błędu:** BC30494  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Zmniejsz długość wiersza do 65535 znaków lub mniej.  
+- Skróć długość wiersza do 65535 znaków lub mniej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../programming-guide/language-features/error-types.md)

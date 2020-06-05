@@ -2,12 +2,12 @@
 title: Zabezpieczenia LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2be3e2df81af046035832794766f3317e1e96e35
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331738"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368533"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>Zabezpieczenia LINQ to XML (Visual Basic)
 W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Ponadto zapewnia pewne wskazówki dotyczące ograniczania narażenia na zabezpieczenia.  
@@ -15,18 +15,18 @@ W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Pona
 ## <a name="linq-to-xml-security-overview"></a>Omówienie zabezpieczeń LINQ to XML  
  LINQ to XML zaprojektowano więcej dla wygody programowania niż w przypadku aplikacji po stronie serwera z rygorystycznymi wymaganiami dotyczącymi bezpieczeństwa. Większość scenariuszy XML polega na przetwarzaniu zaufanych dokumentów XML, a nie przetwarzaniu niezaufanych dokumentów XML, które są przekazywane do serwera. LINQ to XML jest zoptymalizowany pod kątem tych scenariuszy.  
   
- Jeśli konieczne jest przetworzenie niezaufanych danych z nieznanych źródeł, firma Microsoft zaleca użycie wystąpienia klasy <xref:System.Xml.XmlReader>, która została skonfigurowana do filtrowania znanych ataków typu "odmowa usługi" (DoS).  
+ Jeśli konieczne jest przetworzenie niezaufanych danych z nieznanych źródeł, firma Microsoft zaleca użycie wystąpienia <xref:System.Xml.XmlReader> klasy, która została skonfigurowana do filtrowania znanych ataków typu "odmowa usługi" (DOS).  
   
- Jeśli skonfigurowano <xref:System.Xml.XmlReader>, aby ograniczyć ataki typu "odmowa usługi", można użyć tego czytnika do zapełnienia drzewa LINQ to XML i nadal korzystać z ulepszeń programistycznych LINQ to XML. Wiele technik zaradczych wiąże się z tworzeniem czytników skonfigurowanych do ograniczania problemu zabezpieczeń, a następnie tworzenia wystąpienia drzewa XML za pomocą skonfigurowanego czytnika.  
+ Jeśli skonfigurowano <xref:System.Xml.XmlReader> , aby ograniczyć ataki typu "odmowa usługi", można użyć tego czytnika do wypełniania drzewa LINQ to XML i nadal korzystać z ulepszeń programistycznych LINQ to XML. Wiele technik zaradczych wiąże się z tworzeniem czytników skonfigurowanych do ograniczania problemu zabezpieczeń, a następnie tworzenia wystąpienia drzewa XML za pomocą skonfigurowanego czytnika.  
   
  Język XML jest wewnętrznie narażony na ataki typu "odmowa usługi", ponieważ nie ma ograniczenia rozmiaru, głębokości, rozmiaru nazwy elementu i nie tylko. Bez względu na składnik używany do przetwarzania kodu XML, zawsze należy przygotować się do odtworzenia domeny aplikacji, jeśli używa nadmiernych zasobów.  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Eliminowanie ataków XML, XSD, XPath i XSLT  
- LINQ to XML jest oparta na <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter>. LINQ to XML obsługuje XSD i XPath za pomocą metod rozszerzających w przestrzeniach nazw <xref:System.Xml.Schema?displayProperty=nameWithType> i <xref:System.Xml.XPath?displayProperty=nameWithType>. Korzystając z klas <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator>i <xref:System.Xml.XmlWriter> w połączeniu z LINQ to XML, można wywołać XSLT, aby przekształcić drzewa XML.  
+ LINQ to XML jest oparta na <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> . LINQ to XML obsługuje XSD i XPath za pomocą metod rozszerzających <xref:System.Xml.Schema?displayProperty=nameWithType> w <xref:System.Xml.XPath?displayProperty=nameWithType> przestrzeniach nazw i. Korzystając z <xref:System.Xml.XmlReader> <xref:System.Xml.XPath.XPathNavigator> klas,, i <xref:System.Xml.XmlWriter> w połączeniu z LINQ to XML, można wywołać XSLT, aby przekształcić drzewa XML.  
   
- Jeśli pracujesz w mniej bezpiecznym środowisku, istnieje wiele problemów z zabezpieczeniami, które są skojarzone z językiem XML i używają klas w <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType>i <xref:System.Xml.Xsl?displayProperty=nameWithType>. Te problemy obejmują między innymi następujące:  
+ W przypadku korzystania z mniej bezpiecznego środowiska istnieje wiele problemów z zabezpieczeniami, które są skojarzone z językiem XML, i używania klas w <xref:System.Xml?displayProperty=nameWithType> ,, <xref:System.Xml.Schema?displayProperty=nameWithType> <xref:System.Xml.XPath?displayProperty=nameWithType> i <xref:System.Xml.Xsl?displayProperty=nameWithType> . Te problemy obejmują między innymi następujące:  
   
-- XSD, XPath i XSLT są językami opartymi na ciągach, w których można określić operacje, które zużywają dużo czasu lub pamięci. Jest odpowiedzialny dla programistów aplikacji, którzy pobierają ciągi XSD, XPath lub XSLT z niezaufanych źródeł, aby sprawdzać, czy ciągi nie są złośliwe lub monitorować i ograniczać prawdopodobieństwo, że Ocena tych ciągów będzie powodować nadmierne wykorzystanie systemu użycie zasobów.  
+- XSD, XPath i XSLT są językami opartymi na ciągach, w których można określić operacje, które zużywają dużo czasu lub pamięci. W celu sprawdzenia, czy ciągi nie są złośliwe, czy do monitorowania i łagodzenia, że Ocena tych ciągów będzie powodować nadmierne wykorzystanie zasobów systemowych, jest odpowiedzialny Programiści aplikacji, którzy pobierają ciągi XSD, XPath lub XSLT z niezaufanych źródeł.  
   
 - Schematy XSD (w tym schematy wbudowane) są podatne na ataki typu "odmowa usługi"; nie należy akceptować schematów z niezaufanych źródeł.  
   
@@ -38,7 +38,7 @@ W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Pona
   
 - Wyjątkowo głębokie dokumenty XML mogą powodować problemy z odmową usługi; może zajść potrzeba ograniczenia głębokości dokumentów XML.  
   
-- Nie Akceptuj składników pomocniczych, takich jak <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>i <xref:System.Xml.XmlResolver> obiektów, z niezaufanych zestawów.  
+- Nie Akceptuj składników pomocniczych, takich jak <xref:System.Xml.NameTable> , <xref:System.Xml.XmlNamespaceManager> i <xref:System.Xml.XmlResolver> obiektów, z niezaufanych zestawów.  
   
 - Odczytywanie danych w fragmentach w celu ograniczenia ataków na duże dokumenty.  
   
@@ -61,7 +61,7 @@ W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Pona
 ### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>Nie wywołuj metody CodeAccessPermissions. Assert w obsłudze zdarzeń  
  Zestaw może mieć mniejsze lub większe uprawnienia. Zestaw, który ma większe uprawnienia, ma większą kontrolę nad komputerem i jego środowiskami.  
   
- Jeśli kod w zestawie z większymi uprawnieniami wywołuje <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> w programie obsługi zdarzeń, a następnie drzewo XML zostanie przesłane do złośliwego zestawu z ograniczonymi uprawnieniami, złośliwy zestaw może spowodować wystąpienie zdarzenia. Ponieważ zdarzenie uruchamia kod, który znajduje się w zestawie z większymi uprawnieniami, złośliwy zestaw będzie działać z podniesionymi uprawnieniami.  
+ Jeśli kod w zestawie z większą liczbą uprawnień jest wywoływany <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> w programie obsługi zdarzeń, a następnie drzewo XML zostanie przesłane do złośliwego zestawu z ograniczonymi uprawnieniami, złośliwy zestaw może spowodować podniesienie poziomu zdarzenia. Ponieważ zdarzenie uruchamia kod, który znajduje się w zestawie z większymi uprawnieniami, złośliwy zestaw będzie działać z podniesionymi uprawnieniami.  
   
  Firma Microsoft zaleca, aby nie wywoływać <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> w programie obsługi zdarzeń.  
   
@@ -73,24 +73,24 @@ W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Pona
 ### <a name="avoid-excessive-buffer-allocation"></a>Unikaj nadmiernej alokacji buforu  
  Deweloperzy aplikacji powinni mieć świadomość, że wyjątkowo duże źródła danych mogą prowadzić do wyczerpania zasobów i ataków typu "odmowa usługi".  
   
- Jeśli złośliwy użytkownik przesyła lub przekaże bardzo duży dokument XML, może to spowodować, że LINQ to XML zużywa nadmierne zasoby systemowe. Może to stanowić atak typu "odmowa usługi". Aby tego uniknąć, można ustawić właściwość <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> i utworzyć czytnik, który jest następnie ograniczony w rozmiarze dokumentu, który może zostać załadowany. Następnie należy użyć czytnika, aby utworzyć drzewo XML.  
+ Jeśli złośliwy użytkownik przesyła lub przekaże bardzo duży dokument XML, może to spowodować, że LINQ to XML zużywa nadmierne zasoby systemowe. Może to stanowić atak typu "odmowa usługi". Aby tego uniknąć, można ustawić <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> Właściwość i utworzyć czytnik, który jest następnie ograniczony w rozmiarze dokumentu, który może zostać załadowany. Następnie należy użyć czytnika, aby utworzyć drzewo XML.  
   
- Na przykład jeśli wiesz, że maksymalny oczekiwany rozmiar dokumentów XML pochodzących z niezaufanego źródła będzie mniejszy niż 50 000 bajtów, ustaw <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> na 100 000. Nie będzie to encumber przetwarzania dokumentów XML i w tym samym czasie będzie ograniczać zagrożenia odmowy usługi, w przypadku których można przekazać dokumenty, które mogą zużywać duże ilości pamięci.  
+ Na przykład jeśli wiesz, że maksymalny oczekiwany rozmiar dokumentów XML pochodzących z niezaufanego źródła będzie mniejszy niż 50 000 bajtów, ustaw wartość <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> na 100 000. Nie będzie to encumber przetwarzania dokumentów XML i w tym samym czasie będzie ograniczać zagrożenia odmowy usługi, w przypadku których można przekazać dokumenty, które mogą zużywać duże ilości pamięci.  
   
 ### <a name="avoid-excess-entity-expansion"></a>Unikaj nadmiernego rozszerzania jednostek  
- Jednym z znanych ataków typu "odmowa usługi" w przypadku korzystania z DTD jest dokument, który powoduje nadmierne rozwinięcie jednostek. Aby tego uniknąć, można ustawić właściwość <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> i utworzyć czytnik, który jest następnie ograniczony w liczbie znaków będących wynikiem rozwinięcia jednostki. Następnie należy użyć czytnika, aby utworzyć drzewo XML.  
+ Jednym z znanych ataków typu "odmowa usługi" w przypadku korzystania z DTD jest dokument, który powoduje nadmierne rozwinięcie jednostek. Aby tego uniknąć, można ustawić <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> Właściwość i utworzyć czytnik, który jest następnie ograniczony w liczbie znaków będących wynikiem rozwinięcia jednostki. Następnie należy użyć czytnika, aby utworzyć drzewo XML.  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Ograniczanie głębokości hierarchii XML  
- Jednym z możliwych ataków typu "odmowa usługi" jest przesłanie dokumentu, który ma nadmierną Głębokość hierarchii. Aby tego uniknąć, można otoczyć <xref:System.Xml.XmlReader> w swojej klasie, która zlicza elementy. Jeśli głębokość przekracza wstępnie określony poziom, można przerwać przetwarzanie złośliwego dokumentu.  
+ Jednym z możliwych ataków typu "odmowa usługi" jest przesłanie dokumentu, który ma nadmierną Głębokość hierarchii. Aby tego uniknąć, możesz otoczyć obiekt <xref:System.Xml.XmlReader> własną klasą, która oblicza głębokość elementów. Jeśli głębokość przekracza wstępnie określony poziom, można przerwać przetwarzanie złośliwego dokumentu.  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Ochrona przed niezaufanymi implementacjami elementu XmlReader lub XmlWriter  
- Administratorzy powinni upewnić się, że wszystkie niedostarczone zewnętrznie implementacje <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> mają silne nazwy i zostały zarejestrowane w konfiguracji maszyny. Zapobiega to załadowaniu złośliwego kodu jako czytnika lub składnika zapisywania.  
+ Administratorzy powinni upewnić się, że wszystkie dostarczone zewnętrznie <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> implementacje mają silne nazwy i zostały zarejestrowane w konfiguracji maszyny. Zapobiega to załadowaniu złośliwego kodu jako czytnika lub składnika zapisywania.  
   
 ### <a name="periodically-free-objects-that-reference-xname"></a>Okresowe bezpłatne obiekty odwołujące się do XName  
- Aby chronić przed niektórymi atakami, programiści aplikacji powinni bezpłatnie zwolnić wszystkie obiekty, które odwołują się do <xref:System.Xml.Linq.XName> obiektu w domenie aplikacji.  
+ Aby chronić przed niektórymi atakami, programiści aplikacji powinny bezpłatnie zwolnić wszystkie obiekty, które odwołują się do <xref:System.Xml.Linq.XName> obiektu w domenie aplikacji.  
   
 ### <a name="protect-against-random-xml-names"></a>Ochrona przed przypadkowymi nazwami XML  
- Aplikacje, które pobierają dane z niezaufanych źródeł, powinny rozważyć użycie <xref:System.Xml.XmlReader>, który jest opakowany w kod niestandardowy w celu sprawdzenia możliwości losowych nazw XML i przestrzeni nazw. Jeśli zostaną wykryte takie losowe nazwy XML i przestrzenie nazw, aplikacja będzie mogła przerwać przetwarzanie złośliwego dokumentu.  
+ Aplikacje, które pobierają dane z niezaufanych źródeł, powinny rozważyć użycie <xref:System.Xml.XmlReader> , które jest opakowane w kod niestandardowy w celu sprawdzenia możliwości losowych nazw XML i przestrzeni nazw. Jeśli zostaną wykryte takie losowe nazwy XML i przestrzenie nazw, aplikacja będzie mogła przerwać przetwarzanie złośliwego dokumentu.  
   
  Możesz chcieć ograniczyć liczbę nazw w danej przestrzeni nazw (łącznie z nazwami w obszarze brak przestrzeni nazw) do rozsądnego limitu.  
   
@@ -99,6 +99,6 @@ W tym temacie opisano problemy z zabezpieczeniami powiązane z LINQ to XML. Pona
   
  Niektóre zabezpieczenia są udostępniane przez środowisko uruchomieniowe języka wspólnego (CLR). Na przykład składnik, który nie zawiera klasy prywatnej, nie może uzyskać dostępu do adnotacji, które są objęte tą klasą. Jednakże adnotacje mogą być usuwane przez składniki, które nie mogą ich odczytać. Może to być przyczyną naruszenia ataku.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](programming-guide-linq-to-xml.md)

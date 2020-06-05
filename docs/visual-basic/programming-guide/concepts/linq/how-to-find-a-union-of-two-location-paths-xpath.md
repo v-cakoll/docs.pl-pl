@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: Znajdowanie Unii dwóch ścieżek lokalizacji (XPath-LINQ to XML)'
+title: 'Instrukcje: znajdowanie unii dwóch ścieżek lokalizacji (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: db9ba3f66bfa8643738203ec05a106bab4193fda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36528d1748d5675231f14de92dcd78734a696711
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352983"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406875"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie Unii dwóch ścieżek lokalizacji (XPath-LINQ to XML) (Visual Basic)
 Wyrażenie XPath umożliwia znalezienie związku z wynikami dwóch ścieżek lokalizacji XPath.  
@@ -16,12 +16,12 @@ Wyrażenie XPath umożliwia znalezienie związku z wynikami dwóch ścieżek lok
   
  `//Category|//Price`  
   
- Można osiągnąć te same wyniki przy użyciu standardowego operatora zapytań <xref:System.Linq.Enumerable.Concat%2A>.  
+ Można osiągnąć te same wyniki przy użyciu <xref:System.Linq.Enumerable.Concat%2A> standardowego operatora zapytań.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład znajduje wszystkie elementy `Category` i wszystkie elementy `Price` i łączy je w jedną kolekcję. Należy zauważyć, że zapytanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wywołuje <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> w celu uporządkowania wyników. Wyniki obliczania wyrażenia XPath również są w kolejności dokumentu.  
+ Ten przykład umożliwia znalezienie wszystkich `Category` elementów i wszystkich `Price` elementów i połączenie ich w jedną kolekcję. Należy zauważyć, że [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytanie wywołuje w celu <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> uporządkowania wyników. Wyniki obliczania wyrażenia XPath również są w kolejności dokumentu.  
   
- Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -65,6 +65,6 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

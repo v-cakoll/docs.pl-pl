@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 48261e27de302c1809c9725e6e2fc0705a803930
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350743"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386779"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Określa, że co najmniej jedna zadeklarowana zmienna składowej odnosi się do wystąpienia klasy, która może zgłaszać zdarzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy zmienna jest definiowana przy użyciu `WithEvents`, można deklaratywnie określić, że metoda obsługuje zdarzenia zmiennej przy użyciu słowa kluczowego `Handles`.
+Gdy zmienna jest zdefiniowana przy użyciu `WithEvents` , można deklaratywnie określić, że metoda obsługuje zdarzenia zmiennej przy użyciu `Handles` słowa kluczowego.
 
-`WithEvents` można używać tylko na poziomie klasy lub modułu. Oznacza to, że kontekst deklaracji dla zmiennej `WithEvents` musi być klasą lub modułem i nie może być plikiem źródłowym, przestrzenią nazw, strukturą ani procedurą.
+Można używać `WithEvents` tylko na poziomie klasy lub modułu. Oznacza to, że kontekst deklaracji dla `WithEvents` zmiennej musi być klasą lub modułem i nie może być plikiem źródłowym, przestrzenią nazw, strukturą ani procedurą.
 
 Nie można użyć `WithEvents` w składowej struktury.
 
-Można zadeklarować tylko pojedyncze zmienne — nie tablice — z `WithEvents`.
+Można zadeklarować tylko pojedyncze zmienne — nie tablice — za pomocą `WithEvents` .
 
 ## <a name="rules"></a>Reguły
 
-**Typy elementów.** Należy zadeklarować zmienne `WithEvents` jako zmienne obiektów, aby mogły akceptować wystąpienia klas. Nie można jednak zadeklarować ich jako `Object`. Należy zadeklarować je jako konkretną klasę, która może zgłaszać zdarzenia.
+**Typy elementów.** Należy zadeklarować `WithEvents` zmienne jako zmienne obiektów, aby mogły akceptować wystąpienia klasy. Nie można jednak zadeklarować ich jako `Object` . Należy zadeklarować je jako konkretną klasę, która może zgłaszać zdarzenia.
 
-Modyfikator `WithEvents` może być używany w tym kontekście: [Dim — Instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents`Modyfikator może być używany w tym kontekście: [Dim — Instrukcja](../statements/dim-statement.md)
 
 ## <a name="example"></a>Przykład
 
@@ -39,8 +39,8 @@ Modyfikator `WithEvents` może być używany w tym kontekście: [Dim — Instruk
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Handles](../statements/handles-clause.md)
+- [Słowa kluczowe](../keywords/index.md)
+- [Zdarzenia](../../programming-guide/language-features/events/index.md)

@@ -13,72 +13,72 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62ced7f2048ae41c7ea4c9d62c0ff0a903c37856
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864861"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388923"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Zadanie typowe przeprowadzane przy użyciu operatorów Visual Basic
-Operatory wykonać wiele typowych zadań dotyczących co najmniej jednego wyrażenia o nazwie *operandy*.  
+Operatory wykonują wiele typowych zadań związanych z co najmniej jednym wyrażeniem o nazwie *operandy*.  
   
-## <a name="arithmetic-and-bit-shift-tasks"></a>Zadania arytmetyczne i przesunięcie bitu  
- W poniższej tabeli przedstawiono dostępne operacje arytmetyczne i przesunięcie bitu.  
+## <a name="arithmetic-and-bit-shift-tasks"></a>Operacje arytmetyczne i bitowe przesunięcia  
+ W poniższej tabeli zestawiono dostępne operacje arytmetyczne i bitowe.  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |---|---|  
-|Dodaj jedną wartość liczbową do innego|[+, operator](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Odejmij jedną wartość liczbową z innego|[-— Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Zmień znak wartości liczbowej|[-— Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Pomnóż jedną wartość liczbową żadnego innego|[*, operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Podziel jedną wartość liczbową na inny|[/ — Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|Znajdź iloraz jedną wartość liczbową podzielona przez inny (bez resztę)|[\ — Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|Znajdź w pozostałej części jedną wartość liczbową podzielona przez inny (bez iloraz)|[Mod, operator](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|Wywoływanie jedną wartość liczbową do potęgi równej innej|[^, operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Przesunięcia wzorca bitowego wartości liczbowej w lewo|[<\< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Przesunięcia wzorca bitowego wartości liczbowej w prawo|[>>, operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|Dodawanie jednej wartości liczbowej do innej|[+ — Operator](../../../language-reference/operators/addition-operator.md)|  
+|Odejmij jedną wartość liczbową od innego|[-— Operator (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Odwróć znak wartości liczbowej|[-— Operator (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Pomnóż jedną wartość liczbową przez inną|[* — Operator](../../../language-reference/operators/multiplication-operator.md)|  
+|Dzielenie jednej wartości liczbowej na inną|[/— Operator (Visual Basic)](../../../language-reference/operators/floating-point-division-operator.md)|  
+|Znajdź iloraz jednej wartości liczbowej podzieloną przez inną (bez reszty)|[\ — Operator (Visual Basic)](../../../language-reference/operators/integer-division-operator.md)|  
+|Znajdź resztę jednej wartości liczbowej podzieloną przez inną (bez ilorazu)|[Mod — Operator](../../../language-reference/operators/mod-operator.md)|  
+|Podnieś jedną wartość liczbową do potęgi innej|[^ — Operator](../../../language-reference/operators/exponentiation-operator.md)|  
+|Przesuń w lewo wzorzec bitowy wartości liczbowej|[<\<Zakład](../../../language-reference/operators/left-shift-operator.md)|  
+|Przesuwanie wzorca bitowego wartości liczbowej w prawo|[Operator>> ](../../../language-reference/operators/right-shift-operator.md)|  
   
-## <a name="comparison-tasks"></a>Porównanie zadań  
- Poniższa tabela zawiera podsumowanie operacji porównania dostępne.  
+## <a name="comparison-tasks"></a>Zadania porównania  
+ Poniższa tabela zawiera podsumowanie dostępnych operacji porównania.  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |---|---|  
-|Sprawdzić, czy dwie wartości są równe|`=` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Określanie, czy dwie wartości są nierówne|`<>` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Ustal, czy jedna wartość jest mniejszy niż inny|`<` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Ustal, czy jedna wartość jest większy niż inny|`>` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Określić, czy jedna wartość jest mniejsza niż lub równe do innego|`<=` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Ustal, czy jedna wartość jest większa niż lub równy innemu|`>=` Operator ([operatorów porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Określić, czy dwie zmienne do obiektu odnoszą się do tego samego wystąpienia obiektu|[Is, operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Określić, czy dwie zmienne do obiektu odnoszą się do różnych obiektów.|[IsNot, operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|Ustal, czy obiekt jest określonego typu|[TypeOf, operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|Określ, czy dwie wartości są równe|`=`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określanie, czy dwie wartości są różne|`<>`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określ, czy jedna wartość jest mniejsza niż inna|`<`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określ, czy jedna wartość jest większa niż inna|`>`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określ, czy jedna wartość jest mniejsza lub równa innej|`<=`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określ, czy jedna wartość jest większa lub równa innej|`>=`Operator ([Operatory porównania w Visual Basic](comparison-operators.md))|  
+|Określ, czy dwie zmienne obiektów odwołują się do tego samego wystąpienia obiektu|[Is, operator](../../../language-reference/operators/is-operator.md)|  
+|Określanie, czy dwa zmienne obiektów odwołują się do różnych wystąpień obiektów|[IsNot, operator](../../../language-reference/operators/isnot-operator.md)|  
+|Określ, czy obiekt jest określonego typu|[TypeOf — Operator](../../../language-reference/operators/typeof-operator.md)|  
   
-## <a name="concatenation-tasks"></a>Łączenie zadań  
- W poniższej tabeli przedstawiono operacje łączenia dostępne.  
+## <a name="concatenation-tasks"></a>Zadania łączenia  
+ Poniższa tabela zawiera podsumowanie dostępnych operacji łączenia.  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |---|---|  
-|Dołącz do wielu ciągów w jeden ciąg|`&` Operator ([Concatenation — operatory w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|Dołącz do wartości liczbowych za pomocą wartości ciągów|`+` Operator ([Concatenation — operatory w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Dołącz wiele ciągów do jednego ciągu|`&`Operator ([Operatory łączenia w Visual Basic](concatenation-operators.md))|  
+|Sprzęganie wartości liczbowych za pomocą wartości ciągów|`+`Operator ([Operatory łączenia w Visual Basic](concatenation-operators.md))|  
   
-## <a name="logical-and-bitwise-tasks"></a>Logiczne i bitowe zadania  
- W poniższej tabeli przedstawiono dostępne operacje logiczne i bitowe.  
+## <a name="logical-and-bitwise-tasks"></a>Zadania logiczne i bitowe  
+ W poniższej tabeli zestawiono dostępne operacje logiczne i bitowe.  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |---|---|  
-|Wykonaj Negacja logiczna na wartość logiczną|[Not, operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|Wykonaj logiczną na dwóch wartości logicznych|[And, operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Wykonaj łączną sumę logiczną na dwóch wartości logicznych|[Or, operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Przeprowadzania wyłączne logicznego rozłączenia dwóch wartości logicznych|[Xor, operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Wykonaj zwartym połączenie logiczne na dwie wartości logicznych|[AndAlso, operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|Wykonaj zwartym łączną sumę logiczną na dwóch wartości logicznych|[OrElse, operator](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Wykonaj połączenie logiczne bitowe przez bitowy na dwóch wartości całkowitych|[And, operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Wykonaj bitowy przez bitowy łączną sumę logiczną na dwóch wartości całkowitych|[Or, operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Przeprowadzania bitowy przez bitowy wyłączne logicznego rozłączenia dwóch wartości całkowitych|[Xor, operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Wykonaj logiczny negacji bitowej przez bitowej na wartość całkowitą|[Not, operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|Wykonaj negację logiczną dla wartości logicznej|[Not, operator](../../../language-reference/operators/not-operator.md)|  
+|Wykonaj koniunkcję logiczną na dwóch wartościach logicznych|[And, operator](../../../language-reference/operators/and-operator.md)|  
+|Wykonaj łączne logiczne rozłączenie dla dwóch wartości logicznych|[Or, operator](../../../language-reference/operators/or-operator.md)|  
+|Wykonaj wyłączne logiczne rozłączenie dla dwóch wartości logicznych|[Xor, operator](../../../language-reference/operators/xor-operator.md)|  
+|Wykonywanie krótkich obwodów logicznych na dwóch wartościach logicznych|[AndAlso, operator](../../../language-reference/operators/andalso-operator.md)|  
+|Wykonywanie krótkich obwodów logicznych rozłączenia dla dwóch wartości logicznych|[OrElse, operator](../../../language-reference/operators/orelse-operator.md)|  
+|Wykonaj bitowe koniunkcje logiczne na dwóch wartościach całkowitych|[And, operator](../../../language-reference/operators/and-operator.md)|  
+|Wykonaj transbitowe logiczne rozłączenie w bitach na dwie wartości całkowite|[Or, operator](../../../language-reference/operators/or-operator.md)|  
+|Wykonaj bit na wyłączność logicznego rozłączenia na dwóch wartościach całkowitych|[Xor, operator](../../../language-reference/operators/xor-operator.md)|  
+|Wykonaj transbitowe logiczne Negacja na wartości całkowitej|[Not, operator](../../../language-reference/operators/not-operator.md)|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Operatory według funkcji](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatory i wyrażenia](index.md)
+- [Operatory według funkcji](../../../language-reference/operators/operators-listed-by-functionality.md)

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: edd8032e693c233a51248daa6ffdfc830b0648a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bda92b4244631f66142499a94be562854b35437e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662599"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406472"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET.
-Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET. Aby użyć funkcje języka XML, należy przenieść kod związany z kodem.  
+Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w ASP.NET. Aby korzystać z funkcji XML, Przenieś kod do kodu.  
   
- Literał XML i właściwości osi XML jest zdefiniowana w kodzie osadzonym (`<%= =>`) w pliku programu ASP.NET.  
+ Literał XML lub właściwość osi XML jest zdefiniowany w osadzonym kodzie ( `<%= =>` ) w pliku ASP.NET.  
   
  **Identyfikator błędu:** BC31200  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Przenieś kod, który zawiera literał XML i właściwości osi XML w pliku związanym z kodem programu ASP.NET.  
+- Przenieś kod, który zawiera literał XML lub właściwość osi XML do pliku z kodem ASP.NET.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Literały XML](../xml-literals/index.md)
+- [Właściwości osi XML](../xml-axis/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

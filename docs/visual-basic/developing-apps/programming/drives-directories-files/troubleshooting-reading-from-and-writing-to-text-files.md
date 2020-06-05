@@ -9,12 +9,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: dbc53ca3cc9ae9b2d14b925f891d0409b2b7debd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af4160d09f39f2622a007aef793173d614a8b44
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333797"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406628"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Rozwiązywanie problemów: odczytywanie z plików tekstowych i zapisywanie do nich (Visual Basic)
 
@@ -26,19 +26,19 @@ W tym temacie omówiono typowe problemy występujące podczas pracy z plikami te
   
 ### <a name="security-exceptions"></a>Wyjątki zabezpieczeń  
 
- Występuje <xref:System.Security.SecurityException> , gdy wystąpi błąd zabezpieczeń. Jest to często wynikiem braku potrzebnych uprawnień przez użytkownika, które mogą zostać rozwiązane przez dodanie uprawnień lub praca z plikami w izolowanym magazynie.  
+ <xref:System.Security.SecurityException>Występuje, gdy wystąpi błąd zabezpieczeń. Jest to często wynikiem braku potrzebnych uprawnień przez użytkownika, które mogą zostać rozwiązane przez dodanie uprawnień lub praca z plikami w izolowanym magazynie.  
   
 ### <a name="file-encodings"></a>Kodowanie plików  
 
- Kodowanie plików, znane także jako kodowania znaków, określają sposób reprezentowania znaków podczas przetwarzania tekstu. Nieoczekiwane znaki w pliku tekstowym mogą wynikać z nieprawidłowego kodowania. W przypadku większości plików jedno kodowanie może być preferowane przez inne warunki języka, które może lub nie może obsłużyć, chociaż standard Unicode jest zazwyczaj preferowany. Aby uzyskać więcej informacji, zobacz [kodowanie plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) i <xref:System.Text.Encoding>.  
+ Kodowanie plików, znane także jako kodowania znaków, określają sposób reprezentowania znaków podczas przetwarzania tekstu. Nieoczekiwane znaki w pliku tekstowym mogą wynikać z nieprawidłowego kodowania. W przypadku większości plików jedno kodowanie może być preferowane przez inne warunki języka, które może lub nie może obsłużyć, chociaż standard Unicode jest zazwyczaj preferowany. Aby uzyskać więcej informacji, zobacz [kodowanie plików](file-encodings.md) i <xref:System.Text.Encoding> .  
   
 ### <a name="incorrect-paths"></a>Nieprawidłowe ścieżki  
 
- Podczas analizowania ścieżek plików, szczególnie ścieżek względnych, można łatwo dostarczać błędne dane. Wiele problemów można poprawić, upewniając się, że jest dostarczana poprawna ścieżka. Aby uzyskać więcej informacji, zobacz [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
+ Podczas analizowania ścieżek plików, szczególnie ścieżek względnych, można łatwo dostarczać błędne dane. Wiele problemów można poprawić, upewniając się, że jest dostarczana poprawna ścieżka. Aby uzyskać więcej informacji, zobacz [How to: Parse File Paths](how-to-parse-file-paths.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
-- [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
-- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Odczyt z plików](reading-from-files.md)
+- [Zapisywanie w plikach](writing-to-files.md)
+- [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)

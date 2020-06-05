@@ -2,12 +2,12 @@
 title: 'Instrukcje: wypełnianie drzewa XML z systemu plików'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3898b63f24bb87ab5e0de47685c36d61f09250b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344476"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396535"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Instrukcje: wypełnianie drzewa XML z systemu plików (Visual Basic)
 Typową i użyteczną aplikacją drzew XML jest hierarchiczny magazyn danych nazw/wartości. Można wypełnić drzewo XML danymi hierarchicznymi, a następnie wykonać do nich zapytania, przekształcić je i w razie potrzeby serializować. W tym scenariuszu użycia wiele semantyki specyficznych dla XML, takich jak przestrzeń nazw i zachowanie białych znaków, nie są ważne. Zamiast tego używasz drzewa XML jako małej, w pamięci, hierarchicznej bazy danych pojedynczego użytkownika.  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

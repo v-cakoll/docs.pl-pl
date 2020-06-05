@@ -2,12 +2,12 @@
 title: Znajdowanie domyślnego stylu akapitu
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: c3c92c7ae6f80082265d8516e62118595a341790
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b70ae72c293d00c4f7b7a2601bfd20b85702b6d5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353451"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398080"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Znajdowanie domyślnego stylu akapitu (Visual Basic)
 Pierwsze zadanie w informacjach manipulowania w programie WordprocessingML Documents to znalezienie domyślnego stylu akapitów w dokumencie.  
@@ -15,11 +15,11 @@ Pierwsze zadanie w informacjach manipulowania w programie WordprocessingML Docum
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie zostanie otwarty dokument pakietu Office Open XML WordprocessingML, znajduje się w nim części dokumentu i stylu pakietu, a następnie wykonywana jest kwerenda, która znajduje domyślną nazwę stylu. Aby uzyskać informacje na temat pakietów dokumentów Office Open XML i części, które składają się z, zobacz [szczegóły programu Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ W poniższym przykładzie zostanie otwarty dokument pakietu Office Open XML WordprocessingML, znajduje się w nim części dokumentu i stylu pakietu, a następnie wykonywana jest kwerenda, która znajduje domyślną nazwę stylu. Aby uzyskać informacje na temat pakietów dokumentów Office Open XML i części, które składają się z, zobacz [szczegóły programu Office Open XML WordprocessingML Documents (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md).  
   
- Zapytanie znajduje węzeł o nazwie `w:style`, który ma atrybut o nazwie `w:type` o wartości "Paragraph", a także ma atrybut o nazwie `w:default` z wartością "1". Ponieważ będzie istnieć tylko jeden węzeł XML z tymi atrybutami, zapytanie używa operatora <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType>, aby przekonwertować kolekcję na pojedynczą. Następnie pobiera wartość atrybutu o nazwie `w:styleId`.  
+ Zapytanie znajduje węzeł o nazwie `w:style` , który ma atrybut o nazwie o `w:type` wartości "Paragraph", a także ma atrybut o nazwie o `w:default` wartości "1". Ponieważ będzie istnieć tylko jeden węzeł XML z tymi atrybutami, zapytanie używa <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operatora do konwersji kolekcji na pojedynczą. Następnie pobiera wartość atrybutu o nazwie `w:styleId` .  
   
- W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ### <a name="code"></a>Kod  
   
@@ -89,8 +89,8 @@ The default style is: Normal
 ## <a name="next-steps"></a>Następne kroki  
  W następnym przykładzie utworzysz podobne zapytanie, które znajdzie wszystkie akapity w dokumencie i ich style:  
   
-- [Pobieranie akapitów i ich stylów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [Pobieranie akapitów i ich stylów (Visual Basic)](retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

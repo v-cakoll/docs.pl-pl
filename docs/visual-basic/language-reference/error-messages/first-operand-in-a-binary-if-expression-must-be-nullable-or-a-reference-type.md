@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ca16c6604ee071668a5c65d7e9052b233e2313c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249529"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403021"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym wyrażeniu „If” musi być typ zerowalny lub typ referencyjny
-Wyrażenie `If` może mieć dwa lub trzy argumenty. Podczas wysyłania tylko dwa argumenty, pierwszy argument musi być typu odwołania lub typu wartości nullable. Jeśli pierwszy argument ma wartość `Nothing`inną niż zwracana jest jego wartość. Jeśli pierwszy argument ma `Nothing`wartość , drugi argument jest oceniany i zwracany.  
+`If`Wyrażenie może przyjmować dwa lub trzy argumenty. W przypadku wysyłania tylko dwóch argumentów pierwszy argument musi być typem referencyjnym lub typem wartości null. Jeśli pierwszy argument ma wartość inną niż `Nothing` , jest zwracana. Jeśli pierwszy argument ma wartość `Nothing` , drugi argument jest obliczany i zwracany.  
   
- Na przykład poniższy kod `If` zawiera dwa wyrażenia, jeden z trzema argumentami i jeden z dwoma argumentami. Wyrażenia obliczają i zwracają tę samą wartość.  
+ Na przykład poniższy kod zawiera dwa `If` wyrażenia, jeden z trzema argumentami i jeden z dwoma argumentami. Wyrażenia obliczają i zwracają tę samą wartość.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Następujące wyrażenia powodują ten błąd:  
+ Następujące wyrażenia powodują wystąpienie tego błędu:  
   
 ```vb  
 Dim choice1 = 4  
@@ -42,11 +42,11 @@ Dim booleanVar = True
 'Console.WriteLine(If(booleanVar, "Test returns True."))  
 ```  
   
- **Identyfikator błędu:** Bc33107  
+ **Identyfikator błędu:** BC33107  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli nie można zmienić kodu tak, aby pierwszy argument był typem wartości nullable `If` lub typu `If...Then...Else` odwołania, należy rozważyć konwersję na wyrażenie trzech argumentów lub na instrukcję.  
+- Jeśli nie możesz zmienić kodu tak, aby pierwszy argument był typem wartości null lub typem referencyjnym, rozważ konwersję na wyrażenie z trzema argumentami `If` lub do `If...Then...Else` instrukcji.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
@@ -55,6 +55,6 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
   
 ## <a name="see-also"></a>Zobacz też
 
-- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)
-- [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Typy o wartości zerowalnej](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [If, operator](../operators/if-operator.md)
+- [If...Then...Else, instrukcja](../statements/if-then-else-statement.md)
+- [Typy wartości null](../../programming-guide/language-features/data-types/nullable-value-types.md)

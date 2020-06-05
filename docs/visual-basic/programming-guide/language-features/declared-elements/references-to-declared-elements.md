@@ -6,19 +6,19 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345303"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405186"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Odwołania do elementów zadeklarowanych (Visual Basic)
 Gdy kod odwołuje się do zadeklarowanego elementu, kompilator Visual Basic dopasowuje nazwę w odwołaniu do odpowiedniej deklaracji tej nazwy. Jeśli jest zadeklarowany więcej niż jeden element o tej samej nazwie, można kontrolować, które z tych elementów mają być przywoływane przez *zakwalifikowanie* jego nazwy.  
   
  Kompilator próbuje dopasować odwołanie do nazwy do deklaracji nazwy z *najwęższym zakresem*. Oznacza to, że zaczyna się od kodu, który wprowadza odwołanie i działa na zewnątrz przez kolejne poziomy zawierające elementy.  
   
- Poniższy przykład przedstawia odwołania do dwóch zmiennych o tej samej nazwie. Przykład deklaruje dwie zmienne, z których każda o nazwie `totalCount`, na różnych poziomach zakresu w `container`modułu. Gdy procedura `showCount` wyświetla `totalCount` bez kwalifikacji, kompilator Visual Basic rozpoznaje odwołanie do deklaracji z najwęższym zakresem, a mianowicie lokalną deklarację w `showCount`. Gdy kwalifikuje `totalCount` z `container`modułu, kompilator rozpoznaje odwołanie do deklaracji z szerszym zakresem.  
+ Poniższy przykład przedstawia odwołania do dwóch zmiennych o tej samej nazwie. Przykład deklaruje dwie zmienne, z których każdy ma nazwę `totalCount` na różnych poziomach zakresu w module `container` . Gdy procedura `showCount` zostanie wyświetlona `totalCount` bez kwalifikacji, kompilator Visual Basic rozpoznaje odwołanie do deklaracji z najwęższym zakresem, a mianowicie lokalną deklarację wewnątrz `showCount` . Gdy jest ona zgodna `totalCount` z modułem zawierającym `container` , kompilator rozpoznaje odwołanie do deklaracji z szerszym zakresem.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -68,9 +68,9 @@ End Module
   
 2. Określ ścieżkę kwalifikacyjną na podstawie lokalizacji elementu docelowego. Zacznij od przestrzeni nazw najwyższego poziomu, Kontynuuj do przestrzeni nazw najniższego poziomu i kończyć się modułem, klasą lub strukturą zawierającą element docelowy. Każdy element w ścieżce musi zawierać element, który następuje po nim.  
   
-     `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
+     `outerSpace`→ `innerSpace` → `holdsTotals` →`totals`  
   
-3. Przygotuj ciąg kwalifikacji dla elementu docelowego. Umieść kropkę (`.`) po każdym elemencie w ścieżce. Aplikacja musi mieć dostęp do każdego elementu w ciągu kwalifikacji.  
+3. Przygotuj ciąg kwalifikacji dla elementu docelowego. Umieść kropkę ( `.` ) po każdym elemencie w ścieżce. Aplikacja musi mieć dostęp do każdego elementu w ciągu kwalifikacji.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
@@ -82,7 +82,7 @@ End Module
     grandTotal = 9000  
     ```  
   
-5. Poprzedź nazwę elementu docelowego ciągiem kwalifikacji. Nazwa powinna natychmiast podążać za kropką (`.`), która następuje po module, klasie lub strukturze zawierającej element.  
+5. Poprzedź nazwę elementu docelowego ciągiem kwalifikacji. Nazwa powinna natychmiast podążać za kropką ( `.` ), która następuje po module, klasie lub strukturze zawierającej element.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -95,7 +95,7 @@ End Module
   
 6. Kompilator używa ciągu kwalifikacji do znalezienia jasnej, jednoznacznej deklaracji, do której może być zgodny z odwołaniem do elementu docelowego.  
   
- Może być również konieczne zakwalifikowanie odwołania do nazwy, jeśli aplikacja ma dostęp do więcej niż jednego elementu programistycznego, który ma taką samą nazwę. Na przykład przestrzenie nazw <xref:System.Windows.Forms> i <xref:System.Web.UI.WebControls> zawierają klasy `Label` (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> i <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Jeśli aplikacja używa obu, lub jeśli definiuje własną klasę `Label`, należy rozróżnić różne obiekty `Label`. Uwzględnij przestrzeń nazw lub zaimportuj alias w deklaracji zmiennej. Poniższy przykład używa aliasu importu.  
+ Może być również konieczne zakwalifikowanie odwołania do nazwy, jeśli aplikacja ma dostęp do więcej niż jednego elementu programistycznego, który ma taką samą nazwę. Na przykład <xref:System.Windows.Forms> <xref:System.Web.UI.WebControls> przestrzenie nazw i zawierają `Label` klasy ( <xref:System.Windows.Forms.Label?displayProperty=nameWithType> i <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType> ). Jeśli aplikacja używa obu, lub jeśli definiuje własną `Label` klasę, należy rozróżnić różne `Label` obiekty. Uwzględnij przestrzeń nazw lub zaimportuj alias w deklaracji zmiennej. Poniższy przykład używa aliasu importu.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -105,20 +105,20 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Elementy członkowskie innych zawierających elementy  
- W przypadku korzystania z nieudostępnionej składowej innej klasy lub struktury, należy najpierw zakwalifikować nazwę składowej ze zmienną lub wyrażeniem, które wskazuje na wystąpienie klasy lub struktury. W poniższym przykładzie `demoClass` jest wystąpieniem klasy o nazwie `class1`.  
+ W przypadku korzystania z nieudostępnionej składowej innej klasy lub struktury, należy najpierw zakwalifikować nazwę składowej ze zmienną lub wyrażeniem, które wskazuje na wystąpienie klasy lub struktury. W poniższym przykładzie `demoClass` jest wystąpienie klasy o nazwie `class1` .  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- Nie można użyć samej nazwy klasy do kwalifikowania elementu członkowskiego, który nie jest [udostępniany](../../../../visual-basic/language-reference/modifiers/shared.md). Najpierw należy utworzyć wystąpienie w zmiennej obiektu (w tym przypadku `demoClass`), a następnie odwołać się do niego przy użyciu nazwy zmiennej.  
+ Nie można użyć samej nazwy klasy do kwalifikowania elementu członkowskiego, który nie jest [udostępniany](../../../language-reference/modifiers/shared.md). Najpierw należy utworzyć wystąpienie w zmiennej obiektu (w tym przypadku `demoClass` ), a następnie odwołać się do niego przy użyciu nazwy zmiennej.  
   
- Jeśli klasa lub struktura ma `Shared` składową, można kwalifikować tę składową przy użyciu nazwy klasy lub struktury lub ze zmienną lub wyrażeniem, które wskazuje na wystąpienie.  
+ Jeśli klasa lub struktura ma `Shared` element członkowski, można zakwalifikować ten element członkowski przy użyciu nazwy klasy lub struktury lub ze zmienną lub wyrażeniem wskazującym na wystąpienie.  
   
- Moduł nie ma żadnych oddzielnych wystąpień, a wszystkie jego elementy członkowskie są domyślnie `Shared`. W związku z tym należy zakwalifikować element członkowski modułu przy użyciu nazwy modułu.  
+ Moduł nie ma żadnych oddzielnych wystąpień, a wszystkie jego elementy członkowskie są `Shared` domyślnie. W związku z tym należy zakwalifikować element członkowski modułu przy użyciu nazwy modułu.  
   
- Poniższy przykład przedstawia kwalifikowane odwołania do procedur składowych modułu. Przykład deklaruje dwie `Sub` procedury, zarówno nazwane `perform`, w różnych modułach w projekcie. Każdą z nich można określić bez kwalifikacji w ramach własnego modułu, ale musi być kwalifikowana, jeśli istnieje odwołanie z dowolnego miejsca. Ponieważ ostateczne odwołanie w `module3` nie kwalifikuje się `perform`, kompilator nie może rozpoznać tego odwołania.  
+ Poniższy przykład przedstawia kwalifikowane odwołania do procedur składowych modułu. Przykład deklaruje dwie `Sub` procedury, o nazwach `perform` , w różnych modułach w projekcie. Każdą z nich można określić bez kwalifikacji w ramach własnego modułu, ale musi być kwalifikowana, jeśli istnieje odwołanie z dowolnego miejsca. Ponieważ ostateczne odwołanie w `module3` nie kwalifikuje się `perform` , kompilator nie może rozpoznać tego odwołania.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -150,9 +150,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Odwołania do projektów  
- Aby użyć elementów [publicznych](../../../../visual-basic/language-reference/modifiers/public.md) zdefiniowanych w innym projekcie, należy najpierw ustawić *odwołanie* do zestawu lub biblioteki typów tego projektu. Aby ustawić odwołanie, kliknij opcję **Dodaj odwołanie** w menu **projekt** lub użyj opcji kompilatora wiersza polecenia [-Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) .  
+ Aby użyć elementów [publicznych](../../../language-reference/modifiers/public.md) zdefiniowanych w innym projekcie, należy najpierw ustawić *odwołanie* do zestawu lub biblioteki typów tego projektu. Aby ustawić odwołanie, kliknij opcję **Dodaj odwołanie** w menu **projekt** lub użyj opcji kompilatora wiersza polecenia [-Reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) .  
   
- Na przykład można użyć modelu obiektów XML .NET Framework. Jeśli ustawisz odwołanie do przestrzeni nazw <xref:System.Xml>, możesz zadeklarować i użyć dowolnej z jej klas, takich jak <xref:System.Xml.XmlDocument>. Poniższy przykład używa <xref:System.Xml.XmlDocument>.  
+ Na przykład można użyć modelu obiektów XML .NET Framework. Jeśli ustawisz odwołanie do <xref:System.Xml> przestrzeni nazw, możesz zadeklarować i użyć dowolnej z jej klas, takich jak <xref:System.Xml.XmlDocument> . Poniższy przykład używa <xref:System.Xml.XmlDocument> .  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -161,7 +161,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Importowanie zawierających elementy  
- Aby *zaimportować* przestrzenie nazw zawierające moduły lub klasy, które mają być używane, można użyć [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) . Dzięki temu można odwołać się do elementów zdefiniowanych w importowanym obszarze nazw bez w pełni kwalifikujących się nazw. Poniższy przykład zapisuje ponownie poprzedni przykład, aby zaimportować przestrzeń nazw <xref:System.Xml>.  
+ Aby *zaimportować* przestrzenie nazw zawierające moduły lub klasy, które mają być używane, można użyć [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) . Dzięki temu można odwołać się do elementów zdefiniowanych w importowanym obszarze nazw bez w pełni kwalifikujących się nazw. Poniższy przykład zapisuje ponownie poprzedni przykład, aby zaimportować <xref:System.Xml> przestrzeń nazw.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Ponadto instrukcja `Imports` może definiować *alias importu* dla każdej zaimportowanej przestrzeni nazw. Może to spowodować, że kod źródłowy jest krótszy i łatwiejszy do odczytania. Poniższy przykład zapisuje ponownie poprzedni przykład, aby użyć `xD` jako aliasu dla <xref:System.Xml> przestrzeni nazw.  
+ Ponadto `Imports` instrukcja może definiować *alias importu* dla każdej zaimportowanej przestrzeni nazw. Może to spowodować, że kod źródłowy jest krótszy i łatwiejszy do odczytania. Poniższy przykład zapisuje ponownie poprzedni przykład, aby użyć `xD` jako aliasu dla <xref:System.Xml> przestrzeni nazw.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,9 +181,9 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- Instrukcja `Imports` nie sprawia, że elementy z innych projektów są dostępne dla Twojej aplikacji. Oznacza to, że nie ma miejsca na ustawienie odwołania. Importowanie przestrzeni nazw powoduje jedynie usunięcie wymagania, aby kwalifikować się do nazw zdefiniowanych w tej przestrzeni nazw.  
+ `Imports`Instrukcja nie sprawia, że elementy z innych projektów są dostępne dla Twojej aplikacji. Oznacza to, że nie ma miejsca na ustawienie odwołania. Importowanie przestrzeni nazw powoduje jedynie usunięcie wymagania, aby kwalifikować się do nazw zdefiniowanych w tej przestrzeni nazw.  
   
- Można również użyć instrukcji `Imports`, aby zaimportować moduły, klasy, struktury i wyliczenia. Następnie można użyć elementów członkowskich takich zaimportowanych elementów bez kwalifikacji. Należy jednak zawsze kwalifikować nieudostępniane elementy członkowskie klas i struktur z zmienną lub wyrażeniem, które oblicza wystąpienie klasy lub struktury.  
+ Możesz również użyć instrukcji, `Imports` Aby zaimportować moduły, klasy, struktury i wyliczenia. Następnie można użyć elementów członkowskich takich zaimportowanych elementów bez kwalifikacji. Należy jednak zawsze kwalifikować nieudostępniane elementy członkowskie klas i struktur z zmienną lub wyrażeniem, które oblicza wystąpienie klasy lub struktury.  
   
 ## <a name="naming-guidelines"></a>Wskazówki dotyczące nazewnictwa  
  Po zdefiniowaniu co najmniej dwóch elementów programistycznych, które mają taką samą nazwę, *niejednoznaczność* może wynikać z tego, kiedy kompilator próbuje rozpoznać odwołanie do tej nazwy. Jeśli więcej niż jedna definicja znajduje się w zakresie lub jeśli żadna definicja nie należy do zakresu, odwołanie jest nierozwiązywalny. Aby zapoznać się z przykładem, zobacz sekcję dotyczącą przykładowego odwołania na tej stronie pomocy.  
@@ -191,14 +191,14 @@ Dim xDoc As xD.XmlDocument
  Można uniknąć niejednoznaczności nazwy, dając wszystkie elementy unikatowymi nazwami. Następnie można utworzyć odwołanie do dowolnego elementu bez konieczności kwalifikowania jego nazwy z przestrzenią nazw, modułem lub klasą. Zmniejszamy również szanse przypadkowego odwołującego się do niewłaściwego elementu.  
   
 ## <a name="shadowing"></a>Zasłanianie  
- Gdy dwa elementy programistyczne współdzielą tę samą nazwę, jeden z nich może ukryć lub *Zacień*, drugi. Element z cieniem nie jest dostępny dla celów referencyjnych. Zamiast tego, gdy kod używa zasłoniętej nazwy elementu, kompilator Visual Basic rozpoznaje ją jako element przesłaniania. Aby uzyskać bardziej szczegółowe wyjaśnienie z przykładami, zobacz [przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Gdy dwa elementy programistyczne współdzielą tę samą nazwę, jeden z nich może ukryć lub *Zacień*, drugi. Element z cieniem nie jest dostępny dla celów referencyjnych. Zamiast tego, gdy kod używa zasłoniętej nazwy elementu, kompilator Visual Basic rozpoznaje ją jako element przesłaniania. Aby uzyskać bardziej szczegółowe wyjaśnienie z przykładami, zobacz [przesłanianie w Visual Basic](shadowing.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
-- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Nazwy zadeklarowanych elementów](declared-element-names.md)
+- [Charakterystyka zadeklarowanych elementów](declared-element-characteristics.md)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zmienne](../variables/index.md)
+- [Imports — Instrukcja (.NET Namespace i Type)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Operator new](../../../language-reference/operators/new-operator.md)
+- [Społeczeństwo](../../../language-reference/modifiers/public.md)

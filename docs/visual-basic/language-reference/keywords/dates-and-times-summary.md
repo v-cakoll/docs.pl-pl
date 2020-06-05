@@ -10,12 +10,12 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: d377c5fe4c0726b468014639e39df1f2f0cc1c64
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 071da9305c3e58fbc35d82d0cd5a275c35467901
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349875"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402723"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Daty i godziny — Podsumowanie (Visual Basic)
 Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
@@ -24,12 +24,12 @@ Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonaw
 |------------|----------------------|  
 |Pobierz bieżącą datę lub godzinę.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
 |Wykonywanie obliczeń daty.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
-|Zwróć datę.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A><xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
+|Zwróć datę.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
 |Zwróć godzinę.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
-|Ustaw datę lub godzinę.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A><xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
+|Ustaw datę lub godzinę.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
 |Czas trwania procesu.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Słowa kluczowe](index.md)
+- [Elementy członkowskie biblioteki wykonawczej programu Visual Basic](../runtime-library-members.md)

@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e3648ee9893ca0f4045e28e68b659c01035dee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348041"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404476"
 ---
 # <a name="into-clause-visual-basic"></a>Into — Klauzula (Visual Basic)
 Identyfikuje funkcje agregujące lub grupowania, które mają zostać zastosowane do kolekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Słowo kluczowe `Each` jest używane w następujących kontekstach:  
+ `Each`Słowo kluczowe jest używane w następujących kontekstach:  
   
- [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate, klauzula](../queries/aggregate-clause.md)  
   
- [Group By, klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [Group By, klauzula](../queries/group-by-clause.md)  
   
- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join. klauzula](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+- [Słowa kluczowe](../keywords/index.md)

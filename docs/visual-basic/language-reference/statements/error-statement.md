@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404748"
 ---
 # <a name="error-statement"></a>Error — Instrukcja
 Symuluje wystąpienie błędu.  
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Części  
  `errornumber`  
- Wymagana. Może być dowolnym prawidłowym numerem błędu.  
+ Wymagany. Może być dowolnym prawidłowym numerem błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja `Error` jest obsługiwana w celu zapewnienia zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie podczas tworzenia obiektów, użyj metody `Raise` `Err` obiektu do wygenerowania błędów w czasie wykonywania.  
+ Ta `Error` instrukcja jest obsługiwana w celu zapewnienia zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie podczas tworzenia obiektów, użyj `Err` `Raise` metody obiektu do generowania błędów w czasie wykonywania.  
   
- Jeśli `errornumber` jest zdefiniowany, instrukcja `Error` wywołuje procedurę obsługi błędów po przypisaniu właściwości obiektu `Err` do następujących wartości domyślnych:  
+ Jeśli `errornumber` jest zdefiniowany, `Error` instrukcja wywołuje procedurę obsługi błędów po `Err` przypisaniu właściwości obiektu do następujących wartości domyślnych:  
   
 |Właściwość|Wartość|  
 |--------------|-----------|  
-|`Number`|Wartość określona jako argument instrukcji `Error`. Może być dowolnym prawidłowym numerem błędu.|  
+|`Number`|Wartość określona jako argument do `Error` instrukcji. Może być dowolnym prawidłowym numerem błędu.|  
 |`Source`|Nazwa bieżącego projektu Visual Basic.|  
-|`Description`|Wyrażenie ciągu odpowiadające wartości zwracanej funkcji `Error` dla określonego `Number`, jeśli ten ciąg istnieje. Jeśli ciąg nie istnieje, `Description` zawiera ciąg o zerowej długości ("").|  
-|`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku Pomocy języka Visual Basic.|  
-|`HelpContext`|Odpowiedni Visual Basic identyfikator kontekstu pliku pomocy dla błędu odpowiadającego właściwości `Number`.|  
+|`Description`|Wyrażenie ciągu odpowiadające wartości zwracanej `Error` funkcji dla określonej `Number` , jeśli ten ciąg istnieje. Jeśli ciąg nie istnieje, `Description` zawiera ciąg o zerowej długości ("").|  
+|`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku pomocy Visual Basic.|  
+|`HelpContext`|Odpowiedni Visual Basic identyfikator kontekstu pliku pomocy dla błędu odpowiadającego `Number` właściwości.|  
 |`LastDLLError`|Zero.|  
   
- Jeśli nie istnieje procedura obsługi błędów lub jeśli żadna nie jest włączona, zostanie utworzony komunikat o błędzie z właściwościami obiektu `Err`.  
+ Jeśli nie istnieje procedura obsługi błędów lub jeśli żadna nie jest włączona, zostanie utworzony komunikat o błędzie z `Err` właściwościami obiektu.  
   
 > [!NOTE]
-> Niektóre aplikacje hosta Visual Basic nie mogą tworzyć obiektów. Informacje o tym, czy aplikacja hosta może tworzyć klasy i obiekty, znajdziesz w jej dokumentacji.  
+> Niektóre Visual Basic aplikacje hosta nie mogą tworzyć obiektów. Zapoznaj się z dokumentacją aplikacji hosta, aby określić, czy można tworzyć klasy i obiekty.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład używa instrukcji `Error` w celu wygenerowania błędu o numerze 11.  
+ Ten przykład używa `Error` instrukcji w celu wygenerowania błędu o numerze 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,15 +58,15 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Przestrzeń nazw:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
  **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
-- [On Error, instrukcja](../../../visual-basic/language-reference/statements/on-error-statement.md)
-- [Resume, instrukcja](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [Komunikaty o błędach](../../../visual-basic/language-reference/error-messages/index.md)
+- [On Error, instrukcja](on-error-statement.md)
+- [Resume — Instrukcja](resume-statement.md)
+- [Komunikaty o błędach](../error-messages/index.md)

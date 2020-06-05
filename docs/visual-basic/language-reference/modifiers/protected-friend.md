@@ -4,32 +4,32 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: f92021f5f0dab9762470c270bdd5182187d587e5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 202d4f4a3a05a64ab1d74621268f28f6b55e8952
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404839"
 ---
 # <a name="protected-friend-visual-basic"></a>Chroniony znajomy (Visual Basic)
 
-Kombinacja słowa kluczowego `Protected Friend` jest modyfikatorem dostępu składowej. Przyznaje zarówno dostęp [znajomy](friend.md) i [chroniony](protected.md) dostęp do elementów zadeklarowanych, więc są one dostępne z dowolnego miejsca w tym samym zestawie, z własnej klasy i z klas pochodnych. Można określić `Protected Friend` tylko dla elementów członkowskich klasy; nie można zastosować `Protected Friend` do elementów członkowskich struktury, ponieważ struktury nie mogą być dziedziczone.
+`Protected Friend`Kombinacja słowa kluczowego jest modyfikatorem dostępu składowej. Przyznaje zarówno dostęp [znajomy](friend.md) i [chroniony](protected.md) dostęp do elementów zadeklarowanych, więc są one dostępne z dowolnego miejsca w tym samym zestawie, z własnej klasy i z klas pochodnych. Można określić `Protected Friend` tylko dla elementów członkowskich klasy; nie można stosować `Protected Friend` do elementów członkowskich struktury, ponieważ struktury nie mogą być dziedziczone.
 
 > [!NOTE]
-> W programie Visual Studio wybierz pozycję Pomoc F1 na `protected friend` zapewnia pomoc dla [ochrony](protected.md) lub [znajomych](friend.md). IDE wybiera pojedynczy token w obszarze kursora zamiast słowa złożonego.
+> W programie Visual Studio wybierz pozycję Pomoc F1, aby uzyskać pomoc dotyczącą `protected friend` [ochrony](protected.md) lub [znajomych](friend.md). IDE wybiera pojedynczy token w obszarze kursora zamiast słowa złożonego.
 
 ## <a name="rules"></a>Reguły
 
-**Kontekst deklaracji.** `Protected Friend` można używać tylko na poziomie klasy. Oznacza to, że kontekst deklaracji dla elementu `Protected` musi być klasą i nie może być plikiem źródłowym, przestrzenią nazw, interfejsem, strukturą ani procedurą.
+**Kontekst deklaracji.** Można używać `Protected Friend` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji dla `Protected` elementu musi być klasą i nie może być plikiem źródłowym, przestrzenią nazw, interfejsem, modułem, strukturą ani procedurą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Private Protected](./private-protected.md)
-- [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Społeczeństwo](public.md)
+- [Chronione](protected.md)
+- [Osoby](friend.md)
+- [Użytek](private.md)
+- [Prywatne chronione](./private-protected.md)
+- [Poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [Procedury](../../programming-guide/language-features/procedures/index.md)
+- [Struktury](../../programming-guide/language-features/data-types/structures.md)
+- [Obiekty i klasy](../../programming-guide/language-features/objects-and-classes/index.md)

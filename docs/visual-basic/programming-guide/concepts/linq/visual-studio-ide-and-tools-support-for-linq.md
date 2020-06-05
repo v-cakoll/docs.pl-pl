@@ -2,12 +2,12 @@
 title: Obsługa narzędzi i Visual Studio IDE dla LINQ
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 36c3b051a0e8577a5e622f4cdf986945043dbdc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec9c4acf75a32caa7a078782702c0c8c52386702
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351035"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413287"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Środowisko IDE i narzędzia programu Visual Studio obsługujące składnik LINQ (Visual Basic)
 Zintegrowane środowisko programistyczne (IDE) programu Visual Studio zapewnia następujące funkcje, które obsługują Programowanie aplikacji LINQ:  
@@ -24,6 +24,6 @@ Zintegrowane środowisko programistyczne (IDE) programu Visual Studio zapewnia n
 ## <a name="visual-studio-debugger-support"></a>Obsługa debugera programu Visual Studio  
  Debuger programu Visual Studio obsługuje debugowanie wyrażeń zapytań. Aby uzyskać więcej informacji, zobacz [debugowanie LINQ](/visualstudio/debugger/debugging-linq).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)](index.md)

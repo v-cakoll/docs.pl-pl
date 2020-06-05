@@ -11,16 +11,16 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: b395f5fcf1b89bb49e55e207c4910e95f2aae69d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345998"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364321"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 
-Procedura operatora to seria Visual Basic instrukcji, które definiują zachowanie standardowego operatora (na przykład `*`, `<>`lub `And`) dla zdefiniowanej klasy lub struktury. Jest to również nazywane *przeciążeniem operatora*.
+Procedura operatora to seria Visual Basic instrukcji, które definiują zachowanie operatora standardowego (takiego jak `*` , `<>` lub `And` ) dla zdefiniowanej klasy lub struktury. Jest to również nazywane *przeciążeniem operatora*.
 
 ## <a name="when-to-define-operator-procedures"></a>Kiedy należy definiować procedury operatorów
 
@@ -28,7 +28,7 @@ Po zdefiniowaniu klasy lub struktury można zadeklarować zmienne jako typu tej 
 
 Visual Basic definiuje operatory tylko dla podstawowych typów danych. Można zdefiniować zachowanie operatora, gdy jeden lub oba operandy są typu klasy lub struktury.
 
-Aby uzyskać więcej informacji, zobacz [instrukcja operatora](../../../../visual-basic/language-reference/statements/operator-statement.md).
+Aby uzyskać więcej informacji, zobacz [instrukcja operatora](../../../language-reference/statements/operator-statement.md).
 
 ## <a name="types-of-operator-procedure"></a>Typy procedur operatora
 
@@ -42,7 +42,7 @@ Procedura operatora może być jednym z następujących typów:
 
 - Definicja operatora konwersji, która zwraca typ klasy lub struktury.
 
- Operatory konwersji są zawsze jednoargumentowe i zawsze są używane `CType` jako operatora, który definiujesz.
+ Operatory konwersji są zawsze jednoargumentowe i zawsze `CType` są używane jako definiowane operatory.
 
 ## <a name="declaration-syntax"></a>Składnia deklaracji
 
@@ -56,9 +56,9 @@ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  oper
 End Operator
 ```
 
-Możesz użyć słowa kluczowego `Widening` lub `Narrowing` tylko w operatorze konwersji typu. Symbol operatora jest zawsze [CType Funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) dla operatora konwersji typu.
+Użyj `Widening` `Narrowing` słowa kluczowego or tylko w operatorze konwersji typu. Symbol operatora jest zawsze [CType Funkcja](../../../language-reference/functions/ctype-function.md) dla operatora konwersji typu.
 
-Należy zadeklarować dwa operandy do definiowania operatora binarnego i zadeklarować jeden operand do definiowania operatora jednoargumentowego, łącznie z operatorem konwersji typu. Wszystkie operandy muszą być zadeklarowane `ByVal`.
+Należy zadeklarować dwa operandy do definiowania operatora binarnego i zadeklarować jeden operand do definiowania operatora jednoargumentowego, łącznie z operatorem konwersji typu. Wszystkie operandy muszą być zadeklarowane `ByVal` .
 
 Każdy operand należy zadeklarować w taki sam sposób, w jaki deklaruje parametry [procedur podrzędnych](./sub-procedures.md).
 
@@ -66,7 +66,7 @@ Każdy operand należy zadeklarować w taki sam sposób, w jaki deklaruje parame
 
 Ponieważ definiujesz operator dla zdefiniowanej klasy lub struktury, co najmniej jeden z operandów musi być typem danych tej klasy lub struktury. Dla operatora konwersji typu argument operacji lub typ zwracany musi być typem danych klasy lub struktury.
 
-Aby uzyskać więcej informacji, zobacz [instrukcja operatora](../../../../visual-basic/language-reference/statements/operator-statement.md).
+Aby uzyskać więcej informacji, zobacz [instrukcja operatora](../../../language-reference/statements/operator-statement.md).
 
 ## <a name="calling-syntax"></a>Składnia wywołania
 
@@ -74,28 +74,28 @@ Procedurę operatora można wywołać niejawnie przy użyciu symbolu operatora w
 
 Składnia niejawnego wywołania procedury operatora jest następująca:
 
-`Dim testStruct As`*Struktura*
+`Dim testStruct As`  *structurename*
 
-`Dim testNewStruct As`*structure*`= testStruct`*operatorsymbol*`10`
+`Dim testNewStruct As`  *strukturaname* `= testStruct` *operatorsymbol*      `10`
 
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołania
 
-Poniższa struktura przechowuje podpisaną 128-bitową wartość całkowitą jako składnik wysokiej kolejności i niskiego rzędu. Definiuje operator `+`, aby dodawać dwie wartości `veryLong` i generować `veryLong` wartość.
+Poniższa struktura przechowuje podpisaną 128-bitową wartość całkowitą jako składnik wysokiej kolejności i niskiego rzędu. Definiuje operator, `+` Aby dodawać dwie `veryLong` wartości i generować wartość będącą wynikiem `veryLong` .
 
 [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]
 
-W poniższym przykładzie pokazano typowe wywołanie operatora `+` zdefiniowanego w `veryLong`.
+Poniższy przykład przedstawia typowe wywołanie `+` operatora zdefiniowanego w `veryLong` .
 
 [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Procedury](./index.md)
 - [Sub, procedury](./sub-procedures.md)
 - [Procedury funkcji](./function-procedures.md)
-- [Procedury właściwości](./property-procedures.md)
+- [Procedury własności](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator — Instrukcja](../../../language-reference/statements/operator-statement.md)
 - [Instrukcje: definiowanie operatora](./how-to-define-an-operator.md)
 - [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
 - [Instrukcje: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)

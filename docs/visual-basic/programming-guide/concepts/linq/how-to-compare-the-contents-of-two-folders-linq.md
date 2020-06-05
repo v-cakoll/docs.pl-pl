@@ -1,13 +1,13 @@
 ---
-title: 'Porady: porównywanie zawartości dwóch folderów (LINQ)'
+title: 'Instrukcje: porównywanie zawartości dwóch folderów (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 05031466eeafae2dc63db36e9380034ddf9cbf15
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 63a062c562e2c79ea81ac270651aa16776801b99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337545"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410763"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Instrukcje: porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)
 
@@ -22,7 +22,7 @@ Ten przykład ilustruje trzy sposoby porównywania dwóch list plików:
     > [!NOTE]
     > Techniki przedstawione w tym miejscu można dostosować do porównania sekwencji obiektów dowolnego typu.
 
-Pokazana tutaj Klasa `FileComparer` ilustruje sposób używania niestandardowej klasy porównującej ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby określić, czy zawartość każdego folderu jest identyczna, czy nie. W rzeczywistym scenariuszu należy zmodyfikować tę funkcję porównującą w celu przeprowadzenia bardziej rygorystycznej kontroli równości.
+W `FileComparer` poniższej klasie pokazano, jak używać niestandardowej klasy porównującej ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby określić, czy zawartość każdego folderu jest identyczna, czy nie. W rzeczywistym scenariuszu należy zmodyfikować tę funkcję porównującą w celu przeprowadzenia bardziej rygorystycznej kontroli równości.
 
 ## <a name="example"></a>Przykład
 
@@ -114,11 +114,11 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compile-the-code"></a>Skompilować kod
+## <a name="compile-the-code"></a>Kompiluj kod
 
-Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu `Imports` instrukcji dla przestrzeni nazw System. LINQ.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ i katalogi plików (Visual Basic)](linq-and-file-directories.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6a1c8fce17e3e5a54366c2ff4dff4e6aa668f56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775668"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408663"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -38,16 +38,16 @@ Poniższa tabela zawiera podsumowanie efektu `-errorreport` opcji.
 |`send`|Jeśli wystąpi wewnętrzny błąd kompilatora, a ustawienia zasad komputera i użytkownika zezwalają na to, kompilator wysyła dane do firmy Microsoft.<br /><br /> Opcja `-errorreport:send` próbuje automatycznie wysłać informacje o błędzie do firmy Microsoft, jeśli raportowanie jest włączone przez ustawienia systemu [raportowanie błędów systemu Windows](/windows/desktop/wer/windows-error-reporting) . |
 |`none`|W przypadku wystąpienia wewnętrznego błędu kompilatora nie będzie on zbierany ani wysyłany do firmy Microsoft.|
 
-Kompilator wysyła dane, które obejmują stos w momencie błędu, co zwykle zawiera kod źródłowy. Jeśli `-errorreport` jest używany z opcją [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , zostanie wysłany cały plik źródłowy.
+Kompilator wysyła dane, które obejmują stos w momencie błędu, co zwykle zawiera kod źródłowy. Jeśli `-errorreport` jest używany z opcją [-bugreport](bugreport.md) , zostanie wysłany cały plik źródłowy.
 
-Ta opcja jest najlepiej używana z opcją [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ponieważ umożliwia inżynierom firmy Microsoft łatwiejsze odtwarzanie błędu.
+Ta opcja jest najlepiej używana z opcją [-bugreport](bugreport.md) , ponieważ umożliwia inżynierom firmy Microsoft łatwiejsze odtwarzanie błędu.
 
 > [!NOTE]
-> `-errorreport` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
+> `-errorreport`Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio. jest ona dostępna tylko podczas kompilowania z wiersza polecenia.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod próbuje skompilować `T2.vb`, a jeśli kompilator napotyka wewnętrzny błąd kompilatora, zostanie wyświetlony komunikat z prośbą o wysłanie raportu o błędach do firmy Microsoft.
+Poniższy kod próbuje skompilować `T2.vb` , a jeśli kompilator napotyka wewnętrzny błąd kompilatora, zostanie wyświetlony komunikat z prośbą o wysłanie raportu o błędach do firmy Microsoft.
 
 ```console
 vbc -errorreport:prompt t2.vb
@@ -55,6 +55,6 @@ vbc -errorreport:prompt t2.vb
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)
+- [-bugreport](bugreport.md)

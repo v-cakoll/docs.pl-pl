@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odczyt tekstu z plików za pomocą StreamReader'
+title: 'Instrukcje: Odczyt tekstu z plików za pomocą StreamReader'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading files [Visual Basic], text
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 572463d1f03d768fb133f2dac59b012051f053bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d05dac9b612659a74e25c0ce87c7524316d31a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334562"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411606"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Porady: odczyt tekstu z plików za pomocą StreamReader (Visual Basic)
 
-`My.Computer.FileSystem` Obiekt zawiera metody umożliwiające otwarcie <xref:System.IO.TextReader> a i <xref:System.IO.TextWriter>. Te metody `OpenTextFileWriter` i `OpenTextFileReader`są metodami zaawansowanymi, które nie są wyświetlane w technologii IntelliSense, chyba że zostanie wybrana karta **wszystkie** .  
+`My.Computer.FileSystem`Obiekt zawiera metody umożliwiające otwarcie <xref:System.IO.TextReader> a i <xref:System.IO.TextWriter> . Te metody `OpenTextFileWriter` i `OpenTextFileReader` są metodami zaawansowanymi, które nie są wyświetlane w technologii IntelliSense, chyba że zostanie wybrana karta **wszystkie** .  
   
 ### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Aby odczytać wiersz z pliku za pomocą czytnika tekstu  
   
-- Użyj `OpenTextFileReader` metody <xref:System.IO.TextReader>, aby otworzyć, określając plik. Ten przykład otwiera plik o nazwie `testfile.txt`, odczytuje z niego wiersz i wyświetla wiersz w oknie komunikatu.  
+- Użyj `OpenTextFileReader` metody, aby otworzyć <xref:System.IO.TextReader> , określając plik. Ten przykład otwiera plik o nazwie `testfile.txt` , odczytuje z niego wiersz i wyświetla wiersz w oknie komunikatu.  
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
@@ -43,4 +43,4 @@ ms.locfileid: "74334562"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
 - [SaveFileDialog, składnik](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)
-- [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Odczyt z plików](reading-from-files.md)

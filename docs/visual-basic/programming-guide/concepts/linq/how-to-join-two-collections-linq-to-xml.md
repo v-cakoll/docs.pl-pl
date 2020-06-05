@@ -1,35 +1,35 @@
 ---
-title: 'Instrukcje: dołączanie dwóch kolekcji (LINQ to XML)'
+title: 'Instrukcje: łączenie dwóch kolekcji (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
-ms.openlocfilehash: 404a43f52fce141b515da389090c81c57186f2e2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dc3cfd19d990fa81e00f4781cb15bf07eb9a80ea
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344533"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398054"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Instrukcje: sprzęganie dwóch kolekcji (LINQ to XML) (Visual Basic)
-Element lub atrybut w dokumencie XML czasami może odwoływać się do innego elementu lub atrybutu. [Przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) dokument XML zawiera listę klientów i listę zamówień. Każdy element `Customer` zawiera atrybut `CustomerID`. Każdy element `Order` zawiera `CustomerID` elementu. Element `CustomerID` w każdej kolejności odwołuje się do atrybutu `CustomerID` w kliencie.  
+Element lub atrybut w dokumencie XML czasami może odwoływać się do innego elementu lub atrybutu. [Przykładowy plik XML: Customers i Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md) dokument XML zawiera listę klientów i listę zamówień. Każdy `Customer` element zawiera `CustomerID` atrybut. Każdy `Order` element zawiera `CustomerID` element. `CustomerID`Element w każdym porządku odwołuje się do `CustomerID` atrybutu w kliencie.  
   
- [Przykładowy plik XSD tematu: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu. Używa `xs:key` i `xs:keyref` funkcji XSD, aby określić, że atrybut `CustomerID` elementu `Customer` jest kluczem i aby ustanowić relację między `CustomerID` elementu w każdym `Order` elementu i atrybut `CustomerID` w każdym `Customer` elementu.  
+ [Przykładowy plik XSD tematu: klienci i zamówienia](sample-xsd-file-customers-and-orders.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu. Używa `xs:key` i `xs:keyref` funkcji XSD, aby określić, że `CustomerID` atrybut `Customer` elementu jest kluczem i aby ustanowić relację między `CustomerID` elementem w każdym `Order` elemencie a `CustomerID` atrybutem w każdym `Customer` elemencie.  
   
- Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]można wykorzystać tę relację przy użyciu klauzuli `Join`.  
+ Za pomocą programu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można korzystać z tej relacji przy użyciu `Join` klauzuli.  
   
  Należy pamiętać, że ponieważ nie ma dostępnego indeksu, takie dołączenie będzie miało niską wydajność środowiska uruchomieniowego.  
   
- Aby uzyskać szczegółowe informacje na temat `Join`, zobacz [operacje join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ Aby uzyskać bardziej szczegółowe informacje na temat `Join` , zobacz [operacje Join (Visual Basic)](join-operations.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sprzęga elementy `Customer` do elementów `Order` i generuje nowy dokument XML zawierający element `CompanyName` w zamówieniach.  
+ Poniższy przykład sprzęga `Customer` elementy do `Order` elementów i generuje nowy dokument XML, który zawiera `CompanyName` element w zamówieniach.  
   
- Przed wykonaniem zapytania, przykład sprawdza, czy dokument jest zgodny ze schematem w [przykładowym pliku XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Dzięki temu Klauzula join zawsze będzie działała.  
+ Przed wykonaniem zapytania, przykład sprawdza, czy dokument jest zgodny ze schematem w [przykładowym pliku XSD: klienci i zamówienia](sample-xsd-file-customers-and-orders.md). Dzięki temu Klauzula join zawsze będzie działała.  
   
- To zapytanie najpierw pobiera wszystkie elementy `Customer`, a następnie łączy je z elementami `Order`. Wybiera tylko zamówienia dla klientów o `CustomerID` większej niż "K". Następnie projektuje nowy element `Order` zawierający informacje o klientach w poszczególnych zamówieniach.  
+ To zapytanie najpierw pobiera wszystkie `Customer` elementy, a następnie łączy je z `Order` elementami. Wybiera tylko zamówienia dla klientów o `CustomerID` większej niż "K". Następnie projektuje nowy `Order` element, który zawiera informacje o kliencie w ramach poszczególnych zamówień.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący schemat XSD: [przykładowy plik XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ W tym przykładzie zastosowano następujący schemat XSD: [przykładowy plik XSD: klienci i zamówienia](sample-xsd-file-customers-and-orders.md).  
   
  Należy pamiętać, że sprzężenie w ten sposób nie będzie działać prawidłowo. Sprzężenia są wykonywane za pośrednictwem wyszukiwania liniowego. Brak tabel lub indeksów skrótów, które mogą pomóc w wydajności.  
   
@@ -135,6 +135,6 @@ Attempting to validate, custOrdDoc validated
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

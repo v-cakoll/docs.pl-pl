@@ -9,18 +9,18 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3befac591de8fbc7250777a8b87247ee395abf25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330284"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411706"
 ---
 # <a name="development-with-my-visual-basic"></a>Rozwój za pomocą My (Visual Basic)
 
-Usługa Visual Basic udostępnia nowe funkcje szybkiego tworzenia aplikacji, które zwiększają produktywność i łatwość używania przy dostarczaniu mocy. Jedna z tych funkcji, wywoływana `My`, zapewnia dostęp do informacji i domyślnych wystąpień obiektów, które są powiązane z aplikacją i jej środowiskiem wykonawczym. Te informacje są zorganizowane w formacie, który jest wykrywalny za pomocą technologii IntelliSense i logicznie podzielony zgodnie z użyciem.  
+Usługa Visual Basic udostępnia nowe funkcje szybkiego tworzenia aplikacji, które zwiększają produktywność i łatwość używania przy dostarczaniu mocy. Jedna z tych funkcji, wywoływana `My` , zapewnia dostęp do informacji i domyślnych wystąpień obiektów, które są powiązane z aplikacją i jej środowiskiem wykonawczym. Te informacje są zorganizowane w formacie, który jest wykrywalny za pomocą technologii IntelliSense i logicznie podzielony zgodnie z użyciem.  
   
- Elementy członkowskie najwyższego `My` poziomu są uwidocznione jako obiekty. Każdy obiekt zachowuje się podobnie do przestrzeni nazw lub klasy z `Shared` elementami członkowskimi i uwidacznia zestaw powiązanych członków.  
+ Elementy członkowskie najwyższego poziomu `My` są uwidocznione jako obiekty. Każdy obiekt zachowuje się podobnie do przestrzeni nazw lub klasy z `Shared` elementami członkowskimi i uwidacznia zestaw powiązanych członków.  
   
  W tej tabeli przedstawiono obiekty najwyższego poziomu `My` i ich relacje ze sobą.  
   
@@ -28,26 +28,26 @@ Usługa Visual Basic udostępnia nowe funkcje szybkiego tworzenia aplikacji, kt�
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Wykonywanie zadań z My.Application, My.Computer oraz My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- `My` Opisuje trzy centralne obiekty `My.Application`, `My.Computer`, i `My.User`, które zapewniają dostęp do informacji i funkcji  
+ [Wykonywanie zadań z My.Application, My.Computer oraz My.User](performing-tasks-with-my-application-my-computer-and-my-user.md)  
+ Opisuje trzy centralne `My` obiekty,, `My.Application` `My.Computer` i `My.User` , które zapewniają dostęp do informacji i funkcji  
   
- [Domyślne wystąpienia obiektu zapewniane przez My.Forms i My.WebServices](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- Opisuje obiekty `My.Forms` i `My.WebServices` , które zapewniają dostęp do formularzy, źródeł danych i usług sieci Web XML używanych przez aplikację.  
+ [Domyślne wystąpienia obiektu zapewniane przez My.Forms i My.WebServices](default-object-instances-provided-by-my-forms-and-my-webservices.md)  
+ Opisuje `My.Forms` obiekty i `My.WebServices` , które zapewniają dostęp do formularzy, źródeł danych i usług sieci Web XML używanych przez aplikację.  
   
- [Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- Opisuje obiekty `My.Resources` i `My.Settings` , które zapewniają dostęp do zasobów i ustawień aplikacji.  
+ [Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings](rapid-application-development-with-my-resources-and-my-settings.md)  
+ Opisuje `My.Resources` obiekty i `My.Settings` , które zapewniają dostęp do zasobów i ustawień aplikacji.  
   
- [Omówienie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ [Omówienie modelu aplikacji Visual Basic](overview-of-the-visual-basic-application-model.md)  
  Opisuje model uruchamiania/zamykania aplikacji Visual Basic.  
   
- [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- Zawiera szczegółowe informacje o `My` tym, które funkcje są dostępne w różnych typach projektów.  
+ [Jak My zależy od typu projektu](how-my-depends-on-project-type.md)  
+ Zawiera szczegółowe informacje o tym, które `My` funkcje są dostępne w różnych typach projektów.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [My.Forms — Obiekt](../../language-reference/objects/my-forms-object.md)
+- [My.WebServices — Obiekt](../../language-reference/objects/my-webservices-object.md)
+- [Jak My zależy od typu projektu](how-my-depends-on-project-type.md)

@@ -1,26 +1,26 @@
 ---
-title: Przeciążone nie dostępne '<methodname>' można wywołać z tymi argumentami bez konwersji zawężającej
+title: Żaden dostępny przeciążony element " <methodname> " nie może zostać wywołany z tymi argumentami bez konwersji Narrow
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-ms.openlocfilehash: 5c55a767b1ea61117940b9c6f2a741174297274a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d3e2d4864fb454a14e1614c3f278c7042ccf725
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376615"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="dcf91-102">Przeciążone nie dostępne '\<methodname >' można wywołać z tymi argumentami bez konwersji zawężającej</span><span class="sxs-lookup"><span data-stu-id="dcf91-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
-<span data-ttu-id="dcf91-103">Przeciążona metoda została wywołana, ale brak metody zostały dopasowane do elementu z podanych argumentów bez konwersji zawężającej z listy.</span><span class="sxs-lookup"><span data-stu-id="dcf91-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="d7143-102">Żaden dostępny przeciążony element " \<methodname> " nie może zostać wywołany z tymi argumentami bez konwersji Narrow</span><span class="sxs-lookup"><span data-stu-id="d7143-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
+<span data-ttu-id="d7143-103">Wywołano przeciążoną metodę, ale żadna metoda nie była zgodna z listą podanych argumentów bez konwersji zawężania.</span><span class="sxs-lookup"><span data-stu-id="d7143-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dcf91-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="dcf91-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7143-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="d7143-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="dcf91-105">Określ `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="dcf91-105">Specify `Option Strict Off`.</span></span>  
+1. <span data-ttu-id="d7143-105">Podaj wartość `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="d7143-105">Specify `Option Strict Off`.</span></span>  
   
-2. <span data-ttu-id="dcf91-106">Zmień argumentów na odpowiadającą jednemu z nich podpisów przeciążonej metody.</span><span class="sxs-lookup"><span data-stu-id="dcf91-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
+2. <span data-ttu-id="d7143-106">Zmień argumenty tak, aby pasowały do jednego z podpisów przeciążonej metody.</span><span class="sxs-lookup"><span data-stu-id="d7143-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dcf91-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dcf91-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7143-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d7143-107">See also</span></span>
 
-- [<span data-ttu-id="dcf91-108">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="dcf91-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [<span data-ttu-id="dcf91-109">Rozszerzanie i zwężanie konwersji</span><span class="sxs-lookup"><span data-stu-id="dcf91-109">Widening and Narrowing Conversions</span></span>](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="d7143-108">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="d7143-108">Passing Arguments by Value and by Reference</span></span>](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="d7143-109">Rozszerzanie i zwężanie konwersji</span><span class="sxs-lookup"><span data-stu-id="d7143-109">Widening and Narrowing Conversions</span></span>](../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

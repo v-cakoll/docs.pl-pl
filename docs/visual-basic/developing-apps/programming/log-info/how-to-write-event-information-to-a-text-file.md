@@ -6,44 +6,44 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e83f8450ca7be8a2dcd5ff43eab3dd2ec0d2f1b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352070"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410065"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="3c111-102">Porady: zapisywanie informacji o zdarzeniach w pliku tekstowym (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c111-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="c535e-102">Porady: zapisywanie informacji o zdarzeniach w pliku tekstowym (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c535e-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
 
-<span data-ttu-id="3c111-103">Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3c111-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="3c111-104">Ten przykład pokazuje, `My.Application.Log.WriteEntry` jak używać metody do rejestrowania informacji o śledzeniu w pliku dziennika.</span><span class="sxs-lookup"><span data-stu-id="3c111-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>
+<span data-ttu-id="c535e-103">Za pomocą `My.Application.Log` obiektów i można `My.Log` rejestrować informacje o zdarzeniach występujących w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c535e-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="c535e-104">Ten przykład pokazuje, jak używać `My.Application.Log.WriteEntry` metody do rejestrowania informacji o śledzeniu w pliku dziennika.</span><span class="sxs-lookup"><span data-stu-id="c535e-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>
 
-### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="3c111-105">Aby dodać i skonfigurować odbiornik dziennika plików</span><span class="sxs-lookup"><span data-stu-id="3c111-105">To add and configure the file log listener</span></span>
+### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="c535e-105">Aby dodać i skonfigurować odbiornik dziennika plików</span><span class="sxs-lookup"><span data-stu-id="c535e-105">To add and configure the file log listener</span></span>
 
-1. <span data-ttu-id="3c111-106">Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.</span><span class="sxs-lookup"><span data-stu-id="3c111-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>
+1. <span data-ttu-id="c535e-106">Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.</span><span class="sxs-lookup"><span data-stu-id="c535e-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>
 
-     <span data-ttu-id="3c111-107">\-oraz</span><span class="sxs-lookup"><span data-stu-id="3c111-107">\- or -</span></span>
+     <span data-ttu-id="c535e-107">\-oraz</span><span class="sxs-lookup"><span data-stu-id="c535e-107">\- or -</span></span>
 
-     <span data-ttu-id="3c111-108">Jeśli nie ma pliku App. config:</span><span class="sxs-lookup"><span data-stu-id="3c111-108">If there is no app.config file:</span></span>
+     <span data-ttu-id="c535e-108">Jeśli nie ma pliku App. config:</span><span class="sxs-lookup"><span data-stu-id="c535e-108">If there is no app.config file:</span></span>
 
-    1. <span data-ttu-id="3c111-109">W menu **projekt** wybierz polecenie **Dodaj nowy element**.</span><span class="sxs-lookup"><span data-stu-id="3c111-109">On the **Project** menu, choose **Add New Item**.</span></span>
+    1. <span data-ttu-id="c535e-109">W menu **projekt** wybierz polecenie **Dodaj nowy element**.</span><span class="sxs-lookup"><span data-stu-id="c535e-109">On the **Project** menu, choose **Add New Item**.</span></span>
 
-    2. <span data-ttu-id="3c111-110">W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.</span><span class="sxs-lookup"><span data-stu-id="3c111-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
+    2. <span data-ttu-id="c535e-110">W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.</span><span class="sxs-lookup"><span data-stu-id="c535e-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
 
-    3. <span data-ttu-id="3c111-111">Kliknij pozycję **Add** (Dodaj).</span><span class="sxs-lookup"><span data-stu-id="3c111-111">Click **Add**.</span></span>
+    3. <span data-ttu-id="c535e-111">Kliknij pozycję **Dodaj**.</span><span class="sxs-lookup"><span data-stu-id="c535e-111">Click **Add**.</span></span>
 
-2. <span data-ttu-id="3c111-112">Znajdź `<listeners>` sekcję w pliku konfiguracyjnym aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3c111-112">Locate the `<listeners>` section in the application configuration file.</span></span>
+2. <span data-ttu-id="c535e-112">Znajdź `<listeners>` sekcję w pliku konfiguracyjnym aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c535e-112">Locate the `<listeners>` section in the application configuration file.</span></span>
 
-     <span data-ttu-id="3c111-113">W \<sekcji> \<źródłowej znajdują się> detektory z atrybutem Name "DefaultSource", który jest zagnieżdżony w sekcji \<system. Diagnostics>, która jest zagnieżdżona w sekcji> konfiguracji najwyższego poziomu \<.</span><span class="sxs-lookup"><span data-stu-id="3c111-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>
+     <span data-ttu-id="c535e-113">\<listeners>Sekcja w \<source> sekcji ma atrybut name "DefaultSource", który jest zagnieżdżony w \<system.diagnostics> sekcji, która jest zagnieżdżona w sekcji najwyższego poziomu \<configuration> .</span><span class="sxs-lookup"><span data-stu-id="c535e-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>
 
-3. <span data-ttu-id="3c111-114">Dodaj ten element do tej `<listeners>` sekcji:</span><span class="sxs-lookup"><span data-stu-id="3c111-114">Add this element to that `<listeners>` section:</span></span>
+3. <span data-ttu-id="c535e-114">Dodaj ten element do tej `<listeners>` sekcji:</span><span class="sxs-lookup"><span data-stu-id="c535e-114">Add this element to that `<listeners>` section:</span></span>
 
     ```xml
     <add name="FileLogListener" />
     ```
 
-4. <span data-ttu-id="3c111-115">Znajdź `<sharedListeners>` sekcję w `<system.diagnostics>` sekcji zagnieżdżoną w sekcji najwyższego poziomu. `<configuration>`</span><span class="sxs-lookup"><span data-stu-id="3c111-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>
+4. <span data-ttu-id="c535e-115">Znajdź `<sharedListeners>` sekcję w `<system.diagnostics>` sekcji zagnieżdżoną w sekcji najwyższego poziomu `<configuration>` .</span><span class="sxs-lookup"><span data-stu-id="c535e-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>
 
-5. <span data-ttu-id="3c111-116">Dodaj ten element do tej `<sharedListeners>` sekcji:</span><span class="sxs-lookup"><span data-stu-id="3c111-116">Add this element to that `<sharedListeners>` section:</span></span>
+5. <span data-ttu-id="c535e-116">Dodaj ten element do tej `<sharedListeners>` sekcji:</span><span class="sxs-lookup"><span data-stu-id="c535e-116">Add this element to that `<sharedListeners>` section:</span></span>
 
     ```xml
     <add name="FileLogListener"
@@ -55,21 +55,21 @@ ms.locfileid: "74352070"
         customlocation="c:\temp\" />
     ```
 
-     <span data-ttu-id="3c111-117">Zmień wartość `customlocation` atrybutu na katalog dziennika.</span><span class="sxs-lookup"><span data-stu-id="3c111-117">Change the value of the `customlocation` attribute to the log directory.</span></span>
+     <span data-ttu-id="c535e-117">Zmień wartość `customlocation` atrybutu na katalog dziennika.</span><span class="sxs-lookup"><span data-stu-id="c535e-117">Change the value of the `customlocation` attribute to the log directory.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="3c111-118">Aby ustawić wartość właściwości odbiornika, Użyj atrybutu, który ma taką samą nazwę jak właściwość, z wszystkimi literami w nazwie małymi literami.</span><span class="sxs-lookup"><span data-stu-id="3c111-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="3c111-119">`location` Na przykład atrybuty `customlocation` i ustawiają wartości właściwości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> i. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A></span><span class="sxs-lookup"><span data-stu-id="3c111-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>
+    > <span data-ttu-id="c535e-118">Aby ustawić wartość właściwości odbiornika, Użyj atrybutu, który ma taką samą nazwę jak właściwość, z wszystkimi literami w nazwie małymi literami.</span><span class="sxs-lookup"><span data-stu-id="c535e-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="c535e-119">Na przykład `location` `customlocation` atrybuty i ustawiają wartości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> właściwości i.</span><span class="sxs-lookup"><span data-stu-id="c535e-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>
 
-### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="3c111-120">Aby zapisać informacje o zdarzeniu w dzienniku plików</span><span class="sxs-lookup"><span data-stu-id="3c111-120">To write event information to the file log</span></span>
+### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="c535e-120">Aby zapisać informacje o zdarzeniu w dzienniku plików</span><span class="sxs-lookup"><span data-stu-id="c535e-120">To write event information to the file log</span></span>
 
-<span data-ttu-id="3c111-121">Użyj metody `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` , aby zapisać informacje w dzienniku plików.</span><span class="sxs-lookup"><span data-stu-id="3c111-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="3c111-122">Aby uzyskać więcej informacji, zobacz [How to: Write log messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="3c111-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>
+<span data-ttu-id="c535e-121">Użyj `My.Application.Log.WriteEntry` metody lub, `My.Application.Log.WriteException` Aby zapisać informacje w dzienniku plików.</span><span class="sxs-lookup"><span data-stu-id="c535e-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="c535e-122">Aby uzyskać więcej informacji, zobacz [How to: Write log messages](how-to-write-log-messages.md) and [How to: log Exceptions](how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="c535e-122">For more information, see [How to: Write Log Messages](how-to-write-log-messages.md) and [How to: Log Exceptions](how-to-log-exceptions.md).</span></span>
 
-<span data-ttu-id="3c111-123">Po skonfigurowaniu odbiornika dziennika plików dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisują z tego zestawu.</span><span class="sxs-lookup"><span data-stu-id="3c111-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>
+<span data-ttu-id="c535e-123">Po skonfigurowaniu odbiornika dziennika plików dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisują z tego zestawu.</span><span class="sxs-lookup"><span data-stu-id="c535e-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3c111-124">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3c111-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c535e-124">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c535e-124">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="3c111-125">Praca z dziennikami aplikacji</span><span class="sxs-lookup"><span data-stu-id="3c111-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="3c111-126">Instrukcje: rejestrowanie wyjątków</span><span class="sxs-lookup"><span data-stu-id="3c111-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="c535e-125">Praca z dziennikami aplikacji</span><span class="sxs-lookup"><span data-stu-id="c535e-125">Working with Application Logs</span></span>](working-with-application-logs.md)
+- [<span data-ttu-id="c535e-126">Instrukcje: rejestrowanie wyjątków</span><span class="sxs-lookup"><span data-stu-id="c535e-126">How to: Log Exceptions</span></span>](how-to-log-exceptions.md)

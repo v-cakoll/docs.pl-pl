@@ -2,12 +2,12 @@
 title: Przykład, który wyprowadza części dokumentu Office Open XML Document
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 47a4ac649fb370145962247e07e1d8841411cac0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f374967ec633dcb0dd0fab3ac77de669c65a219c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353496"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375190"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład, w którym są wyprowadzane części dokumentu Office Open XML (Visual Basic)
 W tym temacie przedstawiono sposób otwierania dokumentu Office Open XML i części dostępu w nim.  
@@ -15,7 +15,7 @@ W tym temacie przedstawiono sposób otwierania dokumentu Office Open XML i czę�
 ## <a name="example"></a>Przykład  
  Poniższy przykład otwiera dokument Office Open XML i drukuje część dokumentu oraz część stylu do konsoli programu.  
   
- W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -64,6 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)

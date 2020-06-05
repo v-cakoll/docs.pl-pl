@@ -2,22 +2,22 @@
 title: Korzystanie z wariancji dla delegatów ogólnych Func i Action
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349049"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375761"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)
 
 W poniższych przykładach pokazano, jak używać kowariancji i kontrawariancja w `Func` i `Action` delegatów ogólnych, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.
 
-Aby uzyskać więcej informacji na temat kowariancji i kontrawariancja, zobacz [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+Aby uzyskać więcej informacji na temat kowariancji i kontrawariancja, zobacz [Wariancja w delegatach (Visual Basic)](variance-in-delegates.md).
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z parametrami typu współwariantowego
 
-Poniższy przykład ilustruje zalety wsparcia kowariancji w ogólnych delegatach `Func`. Metoda `FindByTitle` przyjmuje parametr typu `String` i zwraca obiekt typu `Employee`. Można jednak przypisać tę metodę do delegata `Func(Of String, Person)`, ponieważ `Employee` dziedziczy `Person`.
+Poniższy przykład ilustruje zalety obsługi kowariancji w `Func` delegatach ogólnych. `FindByTitle`Metoda przyjmuje parametr `String` typu i zwraca obiekt `Employee` typu. Można jednak przypisać tę metodę do `Func(Of String, Person)` delegata, ponieważ `Employee` dziedziczy `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -56,7 +56,7 @@ End Class
 
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>Korzystanie z delegatów z parametrami typu kontrawariantne
 
-Poniższy przykład ilustruje zalety obsługi kontrawariancja w delegatach ogólnych `Action`. Metoda `AddToContacts` przyjmuje parametr typu `Person`. Można jednak przypisać tę metodę do delegata `Action(Of Employee)`, ponieważ `Employee` dziedziczy `Person`.
+Poniższy przykład ilustruje zalety obsługi kontrawariancja w `Action` delegatach ogólnych. `AddToContacts`Metoda przyjmuje parametr `Person` typu. Można jednak przypisać tę metodę do `Action(Of Employee)` delegata, ponieważ `Employee` dziedziczy `Person` .
 
 ```vb
 Public Class Person
@@ -92,7 +92,7 @@ Class AddressBook
 End Class
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Kowariancja i kontrawariancja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Kowariancja i kontrawariancja (Visual Basic)](index.md)
 - [Typy ogólne](../../../../standard/generics/index.md)

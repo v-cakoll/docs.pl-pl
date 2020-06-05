@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
-ms.openlocfilehash: e77c01b561b050f59400a39fd3803bda820b8f66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 51a8b6ae4f7b9c99094636f7aa79d74f14336fe6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331936"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376098"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
 Wyłącza opcję kompilatora.  
   
 ## <a name="remarks"></a>Uwagi  
- Słowa kluczowego `Off` można użyć w tych kontekstach:  
+ `Off`Słowo kluczowe może być używane w tych kontekstach:  
   
- [Option Explicit, instrukcja](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit, instrukcja](../language-reference/statements/option-explicit-statement.md)  
   
- [Option Strict, instrukcja](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict — Instrukcja](../language-reference/statements/option-strict-statement.md)  
   
- [Option Infer, instrukcja](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Infer — Instrukcja](../language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)
+- [Słowa kluczowe](../language-reference/keywords/index.md)

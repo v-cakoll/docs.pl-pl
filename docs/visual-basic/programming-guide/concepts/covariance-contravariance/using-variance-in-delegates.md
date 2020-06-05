@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji w delegatach
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 842392a1342f7d3689d4d1f2a2adb7470eeda05e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375787"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Korzystanie z wariancji w delegatach (Visual Basic)
 
@@ -17,7 +17,7 @@ Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zape
 
 ### <a name="description"></a>Opis
 
-Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata. Typ danych zwracanych przez `DogsHandler` jest typu `Dogs`, który pochodzi od typu `Mammals`, który jest zdefiniowany w delegacie.
+Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata. Typ danych zwracanych przez element `DogsHandler` jest typu `Dogs` , który pochodzi od `Mammals` typu, który jest zdefiniowany w delegacie.
 
 ### <a name="code"></a>Kod
 
@@ -50,19 +50,19 @@ End Class
 
 W tym przykładzie pokazano, jak obiekty delegowane mogą być używane z metodami, które mają parametry, których typy są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. W poniższym przykładzie użyto dwóch delegatów:
 
-- Delegat <xref:System.Windows.Forms.KeyEventHandler>, który definiuje podpis zdarzenia [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) . Podpis jest:
+- <xref:System.Windows.Forms.KeyEventHandler>Delegat definiujący podpis zdarzenia [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) . Podpis jest:
 
    ```vb
    Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
    ```
 
-- Delegat <xref:System.Windows.Forms.MouseEventHandler>, który definiuje sygnaturę zdarzenia [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) . Podpis jest:
+- <xref:System.Windows.Forms.MouseEventHandler>Delegat definiujący sygnaturę zdarzenia [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) . Podpis jest:
 
    ```vb
    Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
    ```
 
-W przykładzie zdefiniowano procedurę obsługi zdarzeń z parametrem <xref:System.EventArgs> i używa jej do obsługi zdarzeń `Button.KeyDown` i `Button.MouseClick`. Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs>.
+W przykładzie zdefiniowano procedurę obsługi zdarzeń z <xref:System.EventArgs> parametrem i używa jej do obsługi zarówno `Button.KeyDown` zdarzenia, jak i `Button.MouseClick` . Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs> .
 
 ### <a name="code"></a>Kod
 
@@ -86,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w delegatach (Visual Basic)](variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

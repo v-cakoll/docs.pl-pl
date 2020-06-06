@@ -3,19 +3,19 @@ title: <add>, element dla schemeSettings (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087718"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<dodać elementu > dla schemeSettings (ustawienia identyfikatora URI)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<add>, element dla schemeSettings (ustawienia identyfikatora URI)
 Dodaje ustawienie schematu dla nazwy schematu.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ Dodaje ustawienie schematu dla nazwy schematu.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Nazwa schematu, dla którego jest stosowane to ustawienie. Jedyne obsługiwane wartości to Name = "http" i Name = "https".|  
+|name|Nazwa schematu, dla którego jest stosowane to ustawienie. Jedyne obsługiwane wartości to Name = "http" i Name = "https".|  
   
 ## <a name="attribute-name-attribute"></a>{Nazwa atrybutu} Przypisane  
   
@@ -48,10 +48,10 @@ Dodaje ustawienie schematu dla nazwy schematu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<element > schemeSettings (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
+|[\<schemeSettings>— Element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
+ Domyślnie <xref:System.Uri?displayProperty=nameWithType> Klasa cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -59,7 +59,7 @@ Dodaje ustawienie schematu dla nazwy schematu.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasie najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. W wyniku przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy wyniki mają następujący identyfikator URI:  
+ Z tego powodu <xref:System.Uri?displayProperty=nameWithType> Klasa najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy są następujące identyfikatory URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ Dodaje ustawienie schematu dla nazwy schematu.
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi nieprawidłowych ograniczników ścieżki w kodzie procentowym dla schematu http.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę do obsługi nieprawidłowych ograniczników ścieżki w kodzie procentowym dla schematu http.  
   
 ```xml  
 <configuration>  

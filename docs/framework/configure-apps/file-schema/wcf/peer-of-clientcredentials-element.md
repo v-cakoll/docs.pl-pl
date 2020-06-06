@@ -1,24 +1,24 @@
 ---
-title: <peer><clientCredentials> elementu
+title: <peer><clientCredentials>elementu
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: dce7ef64de1e3eb248e3553c97cbce8e9b205b4c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400099"
 ---
-# <a name="peer-of-clientcredentials-element"></a>\<> elementów równorzędnych obiektu \<ClientCredentials >
+# <a name="peer-of-clientcredentials-element"></a>\<peer>\<clientCredentials>elementu
 Określa poświadczenia używane podczas uwierzytelniania klientów równorzędnych.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Obiekt clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> elementów równorzędnych**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peer>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ Określa poświadczenia używane podczas uwierzytelniania klientów równorzędn
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> certyfikatów](certificate-element.md)|Określa certyfikat X. 509 używany do podpisywania i szyfrowania komunikatów dla klientów równorzędnych. .|  
-|[\<peerAuthentication >](peerauthentication-element.md)|Określa opcje uwierzytelniania dla klientów równorzędnych.|  
+|[\<certificate>](certificate-element.md)|Określa certyfikat X. 509 używany do podpisywania i szyfrowania komunikatów dla klientów równorzędnych. .|  
+|[\<peerAuthentication>](peerauthentication-element.md)|Określa opcje uwierzytelniania dla klientów równorzędnych.|  
 |[\<messageSenderAuthentication>](messagesenderauthentication-element.md)|Określa opcje uwierzytelniania dla nadawców wiadomości.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  

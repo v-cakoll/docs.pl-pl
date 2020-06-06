@@ -3,19 +3,19 @@ title: <remove>, element dla schemeSettings (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: faf254174527ea74638442a139841eb2365d1e5d
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089146"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<usunąć elementu > dla schemeSettings (ustawienia identyfikatora URI)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<remove>, element dla schemeSettings (ustawienia identyfikatora URI)
 Usuwa ustawienie schematu dla nazwy schematu.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -32,7 +32,7 @@ Usuwa ustawienie schematu dla nazwy schematu.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Nazwa schematu, dla którego jest stosowane to ustawienie. Jedyne obsługiwane wartości to Name = "http" i Name = "https".|  
+|name|Nazwa schematu, dla którego jest stosowane to ustawienie. Jedyne obsługiwane wartości to Name = "http" i Name = "https".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -41,10 +41,10 @@ Usuwa ustawienie schematu dla nazwy schematu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<element > schemeSettings (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
+|[\<schemeSettings>— Element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
+ Domyślnie <xref:System.Uri?displayProperty=nameWithType> Klasa cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Usuwa ustawienie schematu dla nazwy schematu.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasie najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. W wyniku przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy wyniki mają następujący identyfikator URI:  
+ Z tego powodu <xref:System.Uri?displayProperty=nameWithType> Klasa najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy są następujące identyfikatory URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Usuwa ustawienie schematu dla nazwy schematu.
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri>, która usuwa wszystkie ustawienia schematu dla schematu http.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę, która usuwa wszystkie ustawienia schematu dla schematu http.  
   
 ```xml  
 <configuration>  

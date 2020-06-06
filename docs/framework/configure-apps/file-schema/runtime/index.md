@@ -7,10 +7,10 @@ helpviewer_keywords:
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
-ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74431060"
 ---
 # <a name="run-time-settings-schema"></a>Schemat ustawień środowiska uruchomieniowego
@@ -136,7 +136,7 @@ Ustawienia czasu wykonywania są używane przez środowisko uruchomieniowe języ
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|Określa, czy środowisko uruchomieniowe oblicza kody skrótów dla ciągów na podstawie poszczególnych domen aplikacji.|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|Żąda, aby środowisko uruchomieniowe używało jawnych rozmiarów stosu, gdy tworzy pewne wątki używane wewnętrznie, zamiast domyślnego rozmiaru stosu.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat pliku konfiguracji](../index.md)
 - [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)

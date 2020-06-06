@@ -11,19 +11,19 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087513"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Wyczyść element > dla authenticationModules (Ustawienia sieci)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<clear>, element dla authenticationModules (ustawienia sieci)
 Czyści wszystkie moduły uwierzytelniania z aplikacji.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -42,12 +42,12 @@ Czyści wszystkie moduły uwierzytelniania z aplikacji.
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `clear` usuwa wszystkie moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
+ `clear`Element usuwa wszystkie moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

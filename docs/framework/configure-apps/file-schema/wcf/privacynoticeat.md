@@ -3,21 +3,21 @@ title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
 ms.openlocfilehash: 2ff70d3a8636970434582e417e4549ab6b433fc1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738766"
 ---
-# <a name="privacynoticeat"></a>\<privacyNoticeAt >
-Reprezentuje element konfiguracji, który określa powiadomienie o prywatności użyte w powiązaniu `wsFederationHttp`.  
+# \<privacyNoticeAt>
+Reprezentuje element konfiguracji, który określa powiadomienie o prywatności użyte w `wsFederationHttp` powiązaniu.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<privacyNotice >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<privacyNotice>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,7 +46,7 @@ Reprezentuje element konfiguracji, który określa powiadomienie o prywatności 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
+|[\<binding>](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -56,4 +56,4 @@ Reprezentuje element konfiguracji, który określa powiadomienie o prywatności 
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<niestandardowebinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

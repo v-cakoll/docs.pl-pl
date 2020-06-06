@@ -3,10 +3,10 @@ title: Transporty
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
 ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69941151"
 ---
 # <a name="transports"></a>Transporty

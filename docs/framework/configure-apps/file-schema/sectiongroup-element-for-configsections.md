@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215260"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<> elementu \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup>, element dla \<configSections>
 
 Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
-[ **\<> konfiguracji**](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sekcji >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +40,17 @@ Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<configSections >** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
+| [**\<configSections>** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<sekcja >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
+| [**\<section>**](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
 
 ## <a name="remarks"></a>Uwagi
 
-Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracyjnych i zapewnia, że nie występują konflikty nazw z sekcjami konfiguracji zdefiniowanymi przez kogoś innego. \<można zagnieżdżać **>** elementów w obrębie siebie.
+Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracyjnych i zapewnia, że nie występują konflikty nazw z sekcjami konfiguracji zdefiniowanymi przez kogoś innego. Można zagnieżdżać **\<sectionGroup>** elementy w obrębie siebie.
 
 ## <a name="example"></a>Przykład
 
@@ -76,6 +76,6 @@ Poniższy przykład pokazuje, jak zadeklarować grupę sekcji i zadeklarować se
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

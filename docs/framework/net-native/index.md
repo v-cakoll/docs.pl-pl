@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128375"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
@@ -23,7 +23,7 @@ Zazwyczaj aplikacje przeznaczone dla .NET Framework są kompilowane do języka p
 
 - Twoje aplikacje mają wydajność kodu natywnego. Zwykle wydajność zostanie przewyższana do kodu, który jest najpierw kompilowany do IL, a następnie skompilowany do kodu natywnego przez kompilator JIT.
 
-- Możesz kontynuować program w C# programie lub Visual Basic.
+- Możesz kontynuować program w języku C# lub Visual Basic.
 
 - Można nadal korzystać z zasobów udostępnianych przez .NET Framework, w tym biblioteki klas, automatycznego zarządzania pamięcią i wyrzucania elementów bezużytecznych oraz obsługi wyjątków.
 
@@ -46,15 +46,15 @@ Ale .NET Native zawiera więcej niż Kompilacja kodu natywnego. Przekształca on
 
 - Środowisko uruchomieniowe .NET Native jest zoptymalizowane pod kątem statycznej kompilacji wstępnej, a w większości przypadków oferuje najwyższą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które deweloperzy mogą znaleźć.
 
-- .NET Native używa tego samego zaplecza, co C++ kompilator, który jest zoptymalizowany pod kątem statycznych scenariuszy prekompilacji.
+- .NET Native używa tego samego zaplecza co kompilator języka C++, który jest zoptymalizowany pod kątem statycznych scenariuszy wstępnej kompilacji.
 
-.NET Native jest w stanie obsłużyć zalety wydajności C++ programu dla deweloperów kodu zarządzanego, ponieważ używa tych samych lub podobnych narzędzi C++ , co w obszarze okapu, jak pokazano w tej tabeli.
+.NET Native jest w stanie wykorzystać zalety wydajności języka C++ do deweloperów kodu zarządzanego, ponieważ używa tych samych lub podobnych narzędzi, co w przypadku języka C++ pod okapem, jak pokazano w tej tabeli.
 
 ||Architektura .NET Native|C++|
 |-|----------------------------------------------------------------|-----------|
 |Biblioteki|.NET Framework + środowisko wykonawcze systemu Windows|Win32 + środowisko wykonawcze systemu Windows|
 |Compiler|Kompilator optymalizacji UTC|Kompilator optymalizacji UTC|
-|szczebl|Gotowe do uruchomienia pliki binarne|Gotowe do uruchomienia pliki binarne (ASM)|
+|Szczebl|Gotowe do uruchomienia pliki binarne|Gotowe do uruchomienia pliki binarne (ASM)|
 |Środowisko uruchomieniowe|MRT. dll (minimalne środowisko uruchomieniowe CLR)|CRT. dll (środowisko uruchomieniowe języka C)|
 
 W przypadku aplikacji systemu Windows dla systemu Windows 10 przekazywanie plików binarnych kompilacji kodu .NET Native w pakietach aplikacji (pliki. appx) do sklepu Windows.

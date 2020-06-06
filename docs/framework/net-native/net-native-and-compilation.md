@@ -3,15 +3,15 @@ title: Architektura .NET Native i kompilacja
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128246"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 
-Windows 8.1 aplikacji i aplikacji klasycznych systemu Windows, które są przeznaczone dla platformy the.NET Framework, są zapisywane w określonym języku programowania i kompilowane w języku pośrednim (IL). W czasie wykonywania kompilator "just-in-Time" (JIT) jest odpowiedzialny za kompilowanie kodu IL w kodzie macierzystym komputera lokalnego tuż przed wykonaniem metody po raz pierwszy. Z kolei łańcuch narzędzi .NET Native konwertuje kod źródłowy na kod natywny w czasie kompilacji. W tym temacie porównano .NET Native z innymi technologiami kompilacji dostępnymi dla .NET Framework aplikacji, a także praktyczne omówienie sposobu, w jaki .NET Native generuje kod natywny, który może pomóc zrozumieć, dlaczego Wyjątki występujące w kodzie skompilowanym z platformą .NET Natywne nie występują w kodzie skompilowanym przez JIT.
+Windows 8.1 aplikacji i aplikacji klasycznych systemu Windows, które są przeznaczone dla platformy the.NET Framework, są zapisywane w określonym języku programowania i kompilowane w języku pośrednim (IL). W czasie wykonywania kompilator "just-in-Time" (JIT) jest odpowiedzialny za kompilowanie kodu IL w kodzie macierzystym komputera lokalnego tuż przed wykonaniem metody po raz pierwszy. Z kolei łańcuch narzędzi .NET Native konwertuje kod źródłowy na kod natywny w czasie kompilacji. W tym temacie porównano .NET Native z innymi technologiami kompilacji dostępnymi dla .NET Framework aplikacji, a także praktyczne omówienie sposobu, w jaki .NET Native generuje kod natywny, który może pomóc zrozumieć, dlaczego Wyjątki występujące w kodzie skompilowanym z .NET Native nie występują w kodzie skompilowanym przez JIT.
 
 ## <a name="net-native-generating-native-binaries"></a>.NET Native: generowanie natywnych plików binarnych
 
@@ -42,7 +42,7 @@ Dane wejściowe dla łańcucha narzędzi .NET Native to aplikacja ze sklepu Wind
 
 W trakcie konwertowania aplikacji z IL na kod natywny łańcuch narzędzi .NET Native wykonuje operacje podobne do następujących:
 
-- W przypadku niektórych ścieżek kodu zastępuje on kod, który opiera się na odbiciu i metadanych przy użyciu statycznego kodu natywnego. Na przykład, jeśli typ wartości nie przesłania metody <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, domyślny test dla równości używa odbicia, aby pobrać obiekty <xref:System.Reflection.FieldInfo> reprezentujące pola typu wartości, a następnie porównuje wartości pól dwóch wystąpień. Podczas kompilowania do kodu natywnego łańcuch narzędzi .NET Native zastępuje kod odbicia i metadane przy użyciu statycznego porównania wartości pól.
+- W przypadku niektórych ścieżek kodu zastępuje on kod, który opiera się na odbiciu i metadanych przy użyciu statycznego kodu natywnego. Na przykład, jeśli typ wartości nie przesłania <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody, domyślny test dla równości używa odbicia do pobierania <xref:System.Reflection.FieldInfo> obiektów reprezentujących pola typu wartości, a następnie porównuje wartości pól dwóch wystąpień. Podczas kompilowania do kodu natywnego łańcuch narzędzi .NET Native zastępuje kod odbicia i metadane przy użyciu statycznego porównania wartości pól.
 
 - Jeśli to możliwe, próbuje wyeliminować wszystkie metadane.
 
@@ -58,15 +58,15 @@ W trakcie konwertowania aplikacji z IL na kod natywny łańcuch narzędzi .NET N
 
 Aplikacja powstała w łańcuchu narzędzi .NET Native jest zapisywana w katalogu o nazwie ILC {0}. out w katalogu debugowania lub wersji katalogu projektu. Składa się z następujących plików:
 
-- *\<nazwa_aplikacji >* . exe, plik wykonywalny stub, który po prostu transferuje kontrolę do specjalnego eksportu `Main` w *\<nazwa_aplikacji >* . dll.
+- *\<appName>*. exe, plik wykonywalny stub, który po prostu transferuje kontrolę do specjalnego `Main` eksportu w *\<appName>* . dll.
 
-- *\<nazwa_aplikacji >* . dll, biblioteka dołączana dynamicznie systemu Windows, która zawiera wszystkie kod aplikacji, a także kod z biblioteki klas .NET Framework oraz wszystkie biblioteki innych firm, na których masz zależność.  Zawiera również kod pomocy technicznej, taki jak kod niezbędny do współpracy z systemem Windows i do serializacji obiektów w aplikacji.
+- *\<appName>*. dll, biblioteka dołączana dynamicznie systemu Windows, która zawiera cały kod aplikacji, a także kod z biblioteki klas .NET Framework i wszystkie biblioteki innych firm, na których masz zależność.  Zawiera również kod pomocy technicznej, taki jak kod niezbędny do współpracy z systemem Windows i do serializacji obiektów w aplikacji.
 
 - mrt100_app. dll, Refaktoryzacja środowiska uruchomieniowego, która zapewnia usługi środowiska uruchomieniowego, takie jak odzyskiwanie pamięci.
 
  Wszystkie zależności są przechwytywane przez manifest APPX aplikacji.  Oprócz plików exe, DLL i mrt100_app. dll, które są powiązane bezpośrednio z pakietem APPX, obejmuje to również dwa pliki:
 
-- msvcr140_app. dll, biblioteka środowiska uruchomieniowego języka C (CRT) używana przez mrt100_app. dll. Jest on dołączony do struktury w pakiecie.
+- msvcr140_app. dll, biblioteka środowiska uruchomieniowego C (CRT) używana przez mrt100_app. dll. Jest on dołączony do struktury w pakiecie.
 
 - mrt100. dll. Ta biblioteka zawiera funkcje, które mogą zwiększyć wydajność mrt100_app. dll, chociaż jego nieobecność nie zapobiega działaniu mrt100_app. dll. Jest ładowany z katalogu system32 na komputerze lokalnym, jeśli jest obecny.
 
@@ -80,7 +80,7 @@ Ponieważ łańcuch narzędzi .NET Native łączy kod implementacji w aplikacji 
 
 - Międzyoperacyjność modelu COM.
 
-Jeśli w czasie wykonywania nie ma niezbędnych metadanych lub kodu implementacji, środowisko uruchomieniowe .NET Native zgłasza wyjątek. Można zapobiec tym wyjątkom i upewnić się, że łańcuch narzędzi .NET Native zawiera wymagane metadane i kod implementacji, przy użyciu [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md), pliku XML, który wyznacza elementy programu, których metadane lub implementacja kod musi być dostępny w czasie wykonywania i przypisuje do nich zasady środowiska uruchomieniowego. Poniżej przedstawiono domyślny plik dyrektywy środowiska uruchomieniowego, który jest dodawany do projektu sklepu Windows, który jest kompilowany przez łańcuch narzędzi .NET Native:
+Jeśli w czasie wykonywania nie ma niezbędnych metadanych lub kodu implementacji, środowisko uruchomieniowe .NET Native zgłasza wyjątek. Można zapobiec tym wyjątkom i upewnić się, że łańcuch narzędzi .NET Native obejmuje wymagane metadane i kod implementacji, przy użyciu [pliku dyrektywy środowiska uruchomieniowego](runtime-directives-rd-xml-configuration-file-reference.md), pliku XML, który wyznacza elementy programu, których metadane lub kod implementacji muszą być dostępne w czasie wykonywania, i przypisuje do nich zasady środowiska uruchomieniowego. Poniżej przedstawiono domyślny plik dyrektywy środowiska uruchomieniowego, który jest dodawany do projektu sklepu Windows, który jest kompilowany przez łańcuch narzędzi .NET Native:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -104,7 +104,7 @@ Dzięki temu wszystkie typy, a także wszystkie ich elementy członkowskie, we w
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Składniki samoopisujące się i metadane](../../standard/metadata-and-self-describing-components.md)
+- [Metadane i składniki do samoopisywania](../../standard/metadata-and-self-describing-components.md)
 - [Wewnątrz .NET Native (wideo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Odbicie i architektura .NET Native](reflection-and-net-native.md)
 - [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](net-native-general-troubleshooting.md)

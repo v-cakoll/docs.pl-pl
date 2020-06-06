@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089117"
 ---
-# <a name="settings-element-network-settings"></a>\<Ustawienia > elementu (Ustawienia sieci)
-Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net?displayProperty=nameWithType>.  
+# <a name="settings-element-network-settings"></a>\<settings>, element (ustawienia sieci)
+Konfiguruje podstawowe opcje sieci dla <xref:System.Net?displayProperty=nameWithType> przestrzeni nazw.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<settings>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -46,13 +46,13 @@ Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net?display
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[Odbiornika HttpListener](httplistener-element-network-settings.md)|Dostosowuje parametry używane przez klasę <xref:System.Net.HttpListener>.|  
+|[Odbiornika HttpListener](httplistener-element-network-settings.md)|Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasę.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Dostosowuje parametry żądania sieci Web.|  
 |[If](ipv6-element-network-settings.md)|Włącza obsługę protokołu internetowego w wersji 6 (IPv6).|  
-|[\<element > performanceCounter (Ustawienia sieci)](performancecounter-element-network-settings.md)|Włącza liczniki wydajności sieci.|  
+|[\<performanceCounter>— Element (Ustawienia sieci)](performancecounter-element-network-settings.md)|Włącza liczniki wydajności sieci.|  
 |[ServicePointManager](servicepointmanager-element-network-settings.md)|Konfiguruje połączenia z zasobami sieciowymi.|  
 |[używając](socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów zakończenia.|  
-|[\<element > webProxyScript (Ustawienia sieci)](webproxyscript-element-network-settings.md)|Konfiguruje charakterystyki skryptu służącego do odnajdywania serwerów proxy sieci Web.|  
+|[\<webProxyScript>— Element (Ustawienia sieci)](webproxyscript-element-network-settings.md)|Konfiguruje charakterystyki skryptu służącego do odnajdywania serwerów proxy sieci Web.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

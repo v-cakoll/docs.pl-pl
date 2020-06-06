@@ -1,24 +1,24 @@
 ---
-title: <message> element <wsFederationHttpBinding>
+title: <message>elementu<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738981"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<komunikat > elementu \<wsFederationHttpBinding >
-Definiuje ustawienia zabezpieczeń na poziomie wiadomości dla [\<wsFederationHttpBinding >](wsfederationhttpbinding.md).  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<message>elementu\<wsFederationHttpBinding>
+Definiuje ustawienia zabezpieczeń na poziomie wiadomości dla [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSFederationHttpBinding**](wsfederationhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zabezpieczeń**](security-of-wsfederationhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<komunikat >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -87,10 +87,10 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości dla [\<wsFederationHt
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Zobacz tabelę "atrybut algorithmSuite", aby uzyskać prawidłowe wartości tego atrybutu. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).|  
-|issuedKeyType|Określa typ klucza do wystawienia. Prawidłowe wartości to:<br /><br /> - SymmetricKey<br />-PublicKey<br /><br /> Wartość domyślna to `SymmetricKey`. Ten atrybut jest typu <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Zobacz tabelę "atrybut algorithmSuite", aby uzyskać prawidłowe wartości tego atrybutu. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).|  
+|issuedKeyType|Określa typ klucza do wystawienia. Prawidłowe wartości to:<br /><br /> - SymmetricKey<br />-PublicKey<br /><br /> Wartość domyślna to `SymmetricKey`. Ten atrybut jest typu <xref:System.IdentityModel.Tokens.SecurityKeyType> .|  
 |issuedTokenType|Ciąg zawierający identyfikator URI, który określa typ tokenu do wystawienia. Wartość domyślna to `null`.|  
-|negotiateServiceCredential|Wartość logiczna określająca, czy poświadczenie usługi powinno być wymieniane jako część negocjacji lub jest dostępne poza pasmem. Wartość domyślna to `true`, co oznacza, że poświadczenie usługi jest negocjowane.|  
+|negotiateServiceCredential|Wartość logiczna określająca, czy poświadczenie usługi powinno być wymieniane jako część negocjacji lub jest dostępne poza pasmem. Wartość domyślna to `true` , co oznacza, że poświadczenie usługi jest negocjowane.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite — atrybut  
   
@@ -117,16 +117,16 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości dla [\<wsFederationHt
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Określa kolekcję typów roszczeń dla tego powiązania. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|issuer|Określa punkt końcowy, który wystawia token zabezpieczający. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Określa kolekcję typów roszczeń dla tego powiązania. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement> .|  
+|issuer|Określa punkt końcowy, który wystawia token zabezpieczający. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> .|  
 |issuerMetadata|Określa adres punktu końcowego wystawcy.|  
-|[\<tokenRequestParameters >](tokenrequestparameters.md)|Kolekcja parametrów żądania tokenu. Każdy parametr jest elementem XML.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Kolekcja parametrów żądania tokenu. Każdy parametr jest elementem XML.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> zabezpieczeń \<](security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -138,4 +138,4 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości dla [\<wsFederationHt
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
+- [\<binding>](bindings.md)

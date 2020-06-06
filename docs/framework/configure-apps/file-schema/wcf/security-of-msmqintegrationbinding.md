@@ -3,21 +3,21 @@ title: <security> dla <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 ms.openlocfilehash: 2268bf48a2b86c3b3b25db006e6f8f55ea33af73
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738682"
 ---
-# <a name="security-of-msmqintegrationbinding"></a>\<> zabezpieczeń \<msmqIntegrationBinding >
+# <a name="security-of-msmqintegrationbinding"></a>\<security> dla \<msmqIntegrationBinding>
 Definiuje ustawienia zabezpieczeń transportu dla kanału integracji usługi kolejkowania komunikatów (MSMQ).  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegrationBinding**](msmqintegrationbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<zabezpieczenia >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<msmqIntegrationBinding>**](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,19 +44,19 @@ Definiuje ustawienia zabezpieczeń transportu dla kanału integracji usługi kol
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ zabezpieczeń, który kontroluje integralność, poufność i uwierzytelnianie przy użyciu kanału integracji usługi kolejkowania komunikatów. Prawidłowe wartości to:<br /><br /> -Brak: spowoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrona i uwierzytelnianie są oferowane przez transport. Ma to zastosowanie do zabezpieczeń komunikatów między dwoma menedżerami kolejki. Nie ma żadnych zabezpieczeń oferowanych między aplikacją a menedżerem kolejki. Istniejące aplikacje MSMQ są funkcjonalnie równoważne z tego typu trybem zabezpieczeń.<br /><br /> Wartość domyślna to `Transport`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|tryb|Określa typ zabezpieczeń, który kontroluje integralność, poufność i uwierzytelnianie przy użyciu kanału integracji usługi kolejkowania komunikatów. Prawidłowe wartości to:<br /><br /> -Brak: spowoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrona i uwierzytelnianie są oferowane przez transport. Ma to zastosowanie do zabezpieczeń komunikatów między dwoma menedżerami kolejki. Nie ma żadnych zabezpieczeń oferowanych między aplikacją a menedżerem kolejki. Istniejące aplikacje MSMQ są funkcjonalnie równoważne z tego typu trybem zabezpieczeń.<br /><br /> Wartość domyślna to `Transport`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> transportu \<](transport-of-msmqintegrationbinding.md)|Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowania komunikatów. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](transport-of-msmqintegrationbinding.md)|Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowania komunikatów. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement> .|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> powiązań \<](bindings.md)|Element powiązania [\<msmqIntegrationBinding >](msmqintegrationbinding.md).|  
+|[\<binding>](bindings.md)|Element Binding elementu [\<msmqIntegrationBinding>](msmqintegrationbinding.md) .|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -69,5 +69,5 @@ Definiuje ustawienia zabezpieczeń transportu dla kanału integracji usługi kol
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
-- [\<msmqIntegrationBinding >](msmqintegrationbinding.md)
+- [\<binding>](bindings.md)
+- [\<msmqIntegrationBinding>](msmqintegrationbinding.md)

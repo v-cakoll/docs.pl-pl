@@ -1,5 +1,5 @@
 ---
-title: element <remove> dla NameValueSectionHandler i DictionarySectionHandler
+title: <remove>element dla NameValueSectionHandler i DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214754"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<usunąć elementu > dla NameValueSectionHandler i DictionarySectionHandler
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>element dla NameValueSectionHandler i DictionarySectionHandler
 
 Usuwa poprzednio zdefiniowane ustawienie.
 
-[ **\<> konfiguracji**](configuration-element.md)\
-&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,27 +32,27 @@ Usuwa poprzednio zdefiniowane ustawienie.
 
 |           | Opis |
 | --------- | ----------- |
-| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia do usunięcia. |
+| **głównych**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 | Element | Opis |
 | ------- | ------------|
-| [ **\<sectionname >** Postaci](custom-element-2.md) | Definiuje ustawienia niestandardowych sekcji konfiguracji, które używają klas <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler>. |
+| [**\<sectionName>** Postaci](custom-element-2.md) | Definiuje ustawienia niestandardowych sekcji konfiguracji, które używają <xref:System.Configuration.NameValueSectionHandler> klas i <xref:System.Configuration.DictionarySectionHandler> . |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-None
+Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć elementu **\<remove >** , aby usunąć ustawienia z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
+Można użyć elementu, **\<remove>** Aby usunąć ustawienia z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak za pomocą **\<usunąć >** elementu w pliku konfiguracyjnym aplikacji usunąć ustawienia zdefiniowane wcześniej w pliku konfiguracyjnym komputera.
+Poniższy przykład pokazuje, jak używać **\<remove>** elementu w pliku konfiguracyjnym aplikacji do usuwania ustawień zdefiniowanych wcześniej w pliku konfiguracyjnym komputera.
 
-Poniższy kod pliku konfiguracji komputera deklaruje sekcję **\<sekcji >** i dodaje do niej dwa ustawienia, `key1` i `key2`:
+Poniższy kod pliku konfiguracji komputera deklaruje sekcję **\<mySection>** i dodaje dwa ustawienia `key1` i `key2` , do:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Poniższy kod pliku konfiguracji komputera deklaruje sekcję **\<sekcji >** i do
 </configuration>
 ```
 
-Następujący kod pliku konfiguracji aplikacji usuwa ustawienie `key2` z **\<sekcji >** :
+Następujący kod pliku konfiguracji aplikacji usuwa `key2` ustawienie z **\<mySection>** :
 
 ```xml
 <!--Application configuration file -->
@@ -82,6 +82,6 @@ Następujący kod pliku konfiguracji aplikacji usuwa ustawienie `key2` z **\<sek
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

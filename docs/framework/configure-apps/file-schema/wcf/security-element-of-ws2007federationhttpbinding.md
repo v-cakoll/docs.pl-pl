@@ -1,23 +1,23 @@
 ---
-title: <security> element <ws2007FederationHttpBinding>
+title: <security>elementu<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 ms.openlocfilehash: b85c54c6507313522286e0c66504cfd0c8afb2b0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738723"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<> zabezpieczeń elementu \<ws2007FederationHttpBinding >
-Definiuje ustawienia zabezpieczeń elementu [\<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md) .  
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<security>elementu\<ws2007FederationHttpBinding>
+Definiuje ustawienia zabezpieczeń [\<ws2007FederationHttpBinding>](ws2007federationhttpbinding.md) elementu.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007FederationHttpBinding**](ws2007federationhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<zabezpieczenia >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<ws2007FederationHttpBinding>**](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Definiuje ustawienia zabezpieczeń elementu [\<ws2007FederationHttpBinding >](ws
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`mode`|Opcjonalny. Określa typ stosowanego zabezpieczenia. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|`mode`|Opcjonalny. Określa typ stosowanego zabezpieczenia. Wartość domyślna to `Message`. Ten atrybut jest typu <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Atrybut Mode  
   
@@ -57,13 +57,13 @@ Definiuje ustawienia zabezpieczeń elementu [\<ws2007FederationHttpBinding >](ws
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> komunikatów](message-of-ws2007httpbinding.md)|Definiuje ustawienia zabezpieczeń na poziomie wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<message>](message-of-ws2007httpbinding.md)|Definiuje ustawienia zabezpieczeń na poziomie wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> .|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań [\<wsDualHttpBinding >](wsdualhttpbinding.md).|  
+|[\<binding>](bindings.md)|Definiuje wszystkie możliwości powiązań [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -77,4 +77,4 @@ Definiuje ustawienia zabezpieczeń elementu [\<ws2007FederationHttpBinding >](ws
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
+- [\<binding>](bindings.md)

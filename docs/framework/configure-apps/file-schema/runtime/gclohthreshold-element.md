@@ -5,19 +5,19 @@ helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
 ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74451221"
 ---
 # <a name="gclohthreshold-element"></a>GCLOHThreshold, element
 
 Określa rozmiar progu (w bajtach), który powoduje, że moduł wyrzucania elementów bezużytecznych umieszcza obiekty na stercie dużego obiektu (LOH).
 
-[\<> konfiguracji](../configuration-element.md)\
-&nbsp;&nbsp;[\<środowiska uruchomieniowego >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
 ## <a name="syntax"></a>Składnia
 

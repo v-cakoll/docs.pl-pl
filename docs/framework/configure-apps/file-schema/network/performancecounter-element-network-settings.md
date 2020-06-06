@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283093"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<element > performanceCounter (Ustawienia sieci)
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter>, element (ustawienia sieci)
 Włącza lub wyłącza liczniki wydajności sieci.  
 
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<liczniki wydajności >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Włącza lub wyłącza liczniki wydajności sieci.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net>.|  
+|[ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla <xref:System.Net> przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
@@ -56,7 +56,7 @@ Włącza lub wyłącza liczniki wydajności sieci.
   
  Wartością domyślną jest to, że liczniki wydajności sieci są wyłączone.  
   
- Właściwość <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> może służyć do uzyskiwania bieżącej wartości **włączonego** atrybutu z odpowiednich plików konfiguracji.  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>Właściwość może służyć do uzyskiwania bieżącej wartości **włączonego** atrybutu z odpowiednich plików konfiguracji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak skonfigurować <xref:System.Net> i powiązane przestrzenie nazw w celu włączenia liczników wydajności sieci.  

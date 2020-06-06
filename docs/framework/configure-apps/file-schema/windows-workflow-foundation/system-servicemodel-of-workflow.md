@@ -1,22 +1,22 @@
 ---
-title: <system.serviceModel> przepływu pracy
+title: <system. serviceModel> przepływu pracy
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151952"
 ---
-# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="79d57-102">\<system.serviceModel> przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="79d57-102">\<system.serviceModel> of workflow</span></span>
-<span data-ttu-id="79d57-103">Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="79d57-103">This configuration section contains all the workflow configuration elements.</span></span>  
+# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="df589-102">\<system.serviceModel>przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="df589-102">\<system.serviceModel> of workflow</span></span>
+<span data-ttu-id="df589-103">Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="df589-103">This configuration section contains all the workflow configuration elements.</span></span>  
 
-<span data-ttu-id="79d57-104">[**\<>konfiguracyjne**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="79d57-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="79d57-105">&nbsp;&nbsp;**\<System.>z>**</span><span class="sxs-lookup"><span data-stu-id="79d57-105">&nbsp;&nbsp;**\<system.ServiceModel>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
-## <a name="syntax"></a><span data-ttu-id="79d57-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="79d57-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df589-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="df589-104">Syntax</span></span>  
   
 ```xml  
 <system.ServiceModel>  
@@ -94,21 +94,21 @@ ms.locfileid: "79151952"
 </system.ServiceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="79d57-107">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="79d57-107">Attributes and Elements</span></span>  
- <span data-ttu-id="79d57-108">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="79d57-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="df589-105">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="df589-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="df589-106">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="df589-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="79d57-109">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="79d57-109">Attributes</span></span>  
- <span data-ttu-id="79d57-110">Brak</span><span class="sxs-lookup"><span data-stu-id="79d57-110">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="df589-107">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="df589-107">Attributes</span></span>  
+ <span data-ttu-id="df589-108">Brak</span><span class="sxs-lookup"><span data-stu-id="df589-108">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="79d57-111">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="79d57-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="df589-109">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="df589-109">Child Elements</span></span>  
   
-|<span data-ttu-id="79d57-112">Element</span><span class="sxs-lookup"><span data-stu-id="79d57-112">Element</span></span>|<span data-ttu-id="79d57-113">Opis</span><span class="sxs-lookup"><span data-stu-id="79d57-113">Description</span></span>|  
+|<span data-ttu-id="df589-110">Element</span><span class="sxs-lookup"><span data-stu-id="df589-110">Element</span></span>|<span data-ttu-id="df589-111">Opis</span><span class="sxs-lookup"><span data-stu-id="df589-111">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="79d57-114">\<zachowania></span><span class="sxs-lookup"><span data-stu-id="79d57-114">\<behaviors></span></span>](behaviors-of-workflow.md)|<span data-ttu-id="79d57-115">W tej sekcji definiuje **serviceBehaviors kolekcji.**</span><span class="sxs-lookup"><span data-stu-id="79d57-115">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="79d57-116">Każdy element w kolekcji definiuje zachowanie elementy używane przez usługi.</span><span class="sxs-lookup"><span data-stu-id="79d57-116">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="79d57-117">Każdy element zachowania jest identyfikowany przez jego unikatowy atrybut **nazwy.**</span><span class="sxs-lookup"><span data-stu-id="79d57-117">Each behavior element is identified by its unique **name** attribute.</span></span>|  
-|[<span data-ttu-id="79d57-118">\<>śledzenia</span><span class="sxs-lookup"><span data-stu-id="79d57-118">\<tracking></span></span>](tracking.md)|<span data-ttu-id="79d57-119">Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="79d57-119">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="79d57-120">Aby uzyskać więcej informacji dotyczących śledzenia przepływu pracy i jego konfiguracji, zobacz [Śledzenie przepływu pracy i śledzenie](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) i [konfigurowanie śledzenia dla przepływu pracy](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="79d57-120">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
+|[\<behaviors>](behaviors-of-workflow.md)|<span data-ttu-id="df589-112">Ta sekcja definiuje kolekcję **serviceBehaviors** .</span><span class="sxs-lookup"><span data-stu-id="df589-112">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="df589-113">Każdy element w kolekcji definiuje zachowanie elementy używane przez usługi.</span><span class="sxs-lookup"><span data-stu-id="df589-113">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="df589-114">Każdy element zachowania jest identyfikowany przez jego unikatowy atrybut **nazwy** .</span><span class="sxs-lookup"><span data-stu-id="df589-114">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[\<tracking>](tracking.md)|<span data-ttu-id="df589-115">Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="df589-115">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="df589-116">Aby uzyskać więcej informacji na temat śledzenia przepływu pracy i jego konfiguracji, zobacz [śledzenie i śledzenie przepływów pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) oraz [Konfigurowanie śledzenia dla przepływu pracy](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="df589-116">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="79d57-121">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="79d57-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="df589-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="df589-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="79d57-122">Element</span><span class="sxs-lookup"><span data-stu-id="79d57-122">Element</span></span>|<span data-ttu-id="79d57-123">Opis</span><span class="sxs-lookup"><span data-stu-id="79d57-123">Description</span></span>|  
+|<span data-ttu-id="df589-118">Element</span><span class="sxs-lookup"><span data-stu-id="df589-118">Element</span></span>|<span data-ttu-id="df589-119">Opis</span><span class="sxs-lookup"><span data-stu-id="df589-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="79d57-124">\<>konfiguracyjne</span><span class="sxs-lookup"><span data-stu-id="79d57-124">\<configuration></span></span>](../configuration-element.md)|<span data-ttu-id="79d57-125">Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.</span><span class="sxs-lookup"><span data-stu-id="79d57-125">The root element for all configuration elements in a .NET configuration file.</span></span>|
+|[\<configuration>](../configuration-element.md)|<span data-ttu-id="df589-120">Element główny dla wszystkich elementów konfiguracji w PLiku konfiguracji PLatformy .NET.</span><span class="sxs-lookup"><span data-stu-id="df589-120">The root element for all configuration elements in a .NET configuration file.</span></span>|

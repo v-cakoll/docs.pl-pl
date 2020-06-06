@@ -3,20 +3,20 @@ title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
 ms.openlocfilehash: e00bbad452398e7f8f4f50208da572986391fc9e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399476"
 ---
-# <a name="systemservicemodelactivation"></a><span data-ttu-id="255d5-102">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="255d5-102">\<system.serviceModel.activation></span></span>
-<span data-ttu-id="255d5-103">Ta sekcja konfiguracji reprezentuje ustawienia konfiguracji dla narzędzia SMSvcHost. exe.</span><span class="sxs-lookup"><span data-stu-id="255d5-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="255d5-104">Elementy konfiguracji można skonfigurować w pliku SMSvcHost. exe. config.</span><span class="sxs-lookup"><span data-stu-id="255d5-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="255d5-105">Obejmuje to wszystkie ustawienia dotyczące całego komputera, które należy skonfigurować.</span><span class="sxs-lookup"><span data-stu-id="255d5-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# \<system.serviceModel.activation>
+<span data-ttu-id="01d52-102">Ta sekcja konfiguracji reprezentuje ustawienia konfiguracji dla narzędzia SMSvcHost. exe.</span><span class="sxs-lookup"><span data-stu-id="01d52-102">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="01d52-103">Elementy konfiguracji można skonfigurować w pliku SMSvcHost. exe. config.</span><span class="sxs-lookup"><span data-stu-id="01d52-103">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="01d52-104">Obejmuje to wszystkie ustawienia dotyczące całego komputera, które należy skonfigurować.</span><span class="sxs-lookup"><span data-stu-id="01d52-104">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
 
-<span data-ttu-id="255d5-106">[ **\<> konfiguracji**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="255d5-106">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="255d5-107">&nbsp;&nbsp; **\<> System. serviceModel. Activation**</span><span class="sxs-lookup"><span data-stu-id="255d5-107">&nbsp;&nbsp;**\<system.serviceModel.activation>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.serviceModel.activation>**  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="255d5-108">Przykładowy plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="255d5-108">Sample Configuration File</span></span>  
- <span data-ttu-id="255d5-109">Poniżej znajduje się przykładowy plik konfiguracji (SMSvcHost. exe. config), który jest używany przez proces odbiornika SMSvcHost. exe.</span><span class="sxs-lookup"><span data-stu-id="255d5-109">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="01d52-105">Przykładowy plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="01d52-105">Sample Configuration File</span></span>  
+ <span data-ttu-id="01d52-106">Poniżej znajduje się przykładowy plik konfiguracji (SMSvcHost. exe. config), który jest używany przez proces odbiornika SMSvcHost. exe.</span><span class="sxs-lookup"><span data-stu-id="01d52-106">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>
@@ -63,6 +63,6 @@ ms.locfileid: "70399476"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="255d5-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="255d5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01d52-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="01d52-107">See also</span></span>
 
 - <xref:System.ServiceModel.Activation.Configuration>

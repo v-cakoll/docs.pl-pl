@@ -1,12 +1,12 @@
 - name: Konfigurowanie aplikacji
   href: index.md
   items:
-    - name: 'Porady: lokalizowanie zestawów za pomocą DEVPATH'
+    - name: 'Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH'
       href: how-to-locate-assemblies-by-using-devpath.md
     - name: Przekierowywanie wersji zestawu
       href: redirect-assembly-versions.md
       items:
-        - name: 'Porady: włączanie i wyłączanie automatycznego przekierowania powiązań'
+        - name: 'Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań'
           href: how-to-enable-and-disable-automatic-binding-redirection.md
         - name: Uprawnienie zabezpieczeń przekierowania powiązania zestawu
           href: assembly-binding-redirection-security-permission.md
@@ -19,7 +19,7 @@
           href: map-algorithm-names-to-cryptography-classes.md
         - name: Mapowanie identyfikatorów obiektów na algorytmy kryptografii
           href: map-object-identifiers-to-cryptography-algorithms.md
-    - name: 'Porady: tworzenie zasad wydawcy'
+    - name: 'Instrukcje: Tworzenie zasad wydawcy'
       href: how-to-create-a-publisher-policy.md
     - name: Schemat pliku konfiguracji
       href: file-schema/index.md

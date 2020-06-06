@@ -3,22 +3,22 @@ title: <message> dla <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
 ms.openlocfilehash: 748a734af8cf6767ce47cfffce9aec3ef627cb44
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736742"
 ---
-# <a name="message-of-basichttpbinding"></a>\<komunikat > \<basicHttpBinding >
-Definiuje ustawienia zabezpieczeń na poziomie wiadomości [\<> BasicHttpBinding](basichttpbinding.md).  
+# <a name="message-of-basichttpbinding"></a>\<message> dla \<basicHttpBinding>
+Definiuje ustawienia zabezpieczeń na poziomie wiadomości [\<basicHttpBinding>](basichttpbinding.md) .  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding**](basichttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zabezpieczeń**](security-of-basichttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<komunikat >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<basicHttpBinding>**](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,15 +34,15 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości [\<> BasicHttpBinding
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, który określa algorytmy i rozmiary kluczy. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Wartość domyślna to `Basic256`.|  
+|algorithmSuite|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> , który określa algorytmy i rozmiary kluczy. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Wartość domyślna to `Basic256`.|  
 |Powiązania ClientCredentialType|Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu zabezpieczeń opartych na komunikatach. Wartość domyślna to `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialtype — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|UserName|-Wymaga uwierzytelnienia klienta na serwerze przy użyciu poświadczeń nazwy użytkownika. To poświadczenie należy określić przy użyciu [\<clientcredentials >](clientcredentials.md).<br />— Usługa WCF nie obsługuje wysyłania skrótu hasła ani wyprowadzania kluczy przy użyciu haseł i używania tych kluczy do zabezpieczenia komunikatów. W związku z tym WCF wymusza, aby transport był zabezpieczony przy użyciu poświadczeń nazwy użytkownika. W przypadku `basicHttpBinding`wymaga to skonfigurowania kanału SSL.|  
-|Certyfikatu|Wymaga uwierzytelnienia klienta na serwerze przy użyciu certyfikatu. Poświadczenie klienta w tym przypadku należy określić przy użyciu [\<clientcredentials >](clientcredentials.md) i [\<ClientCertificate >](clientcertificate-of-servicecredentials.md). Ponadto w przypadku korzystania z trybu zabezpieczeń wiadomości klient musi być zainicjowany przy użyciu certyfikatu usługi. Poświadczenia usługi w tym przypadku należy określić przy użyciu klasy <xref:System.ServiceModel.Description.ClientCredentials> lub `ClientCredentials` zachowań i określania certyfikatu usługi przy użyciu [\<serviceCertificate](servicecertificate-of-servicecredentials.md).|  
+|UserName|-Wymaga uwierzytelnienia klienta na serwerze przy użyciu poświadczeń nazwy użytkownika. To poświadczenie należy określić przy użyciu [\<clientCredentials>](clientcredentials.md) .<br />— Usługa WCF nie obsługuje wysyłania skrótu hasła ani wyprowadzania kluczy przy użyciu haseł i używania tych kluczy do zabezpieczenia komunikatów. W związku z tym WCF wymusza, aby transport był zabezpieczony przy użyciu poświadczeń nazwy użytkownika. W przypadku programu `basicHttpBinding` wymagane jest skonfigurowanie kanału SSL.|  
+|Certyfikat|Wymaga uwierzytelnienia klienta na serwerze przy użyciu certyfikatu. Poświadczenia klienta w tym przypadku należy określić przy użyciu [\<clientCredentials>](clientcredentials.md) i [\<clientCertificate>](clientcertificate-of-servicecredentials.md) . Ponadto w przypadku korzystania z trybu zabezpieczeń wiadomości klient musi być zainicjowany przy użyciu certyfikatu usługi. Poświadczenia usługi w tym przypadku należy określić przy użyciu <xref:System.ServiceModel.Description.ClientCredentials> klasy lub `ClientCredentials` zachowania elementu, a także określić certyfikat usługi przy użyciu [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -51,10 +51,10 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości [\<> BasicHttpBinding
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> zabezpieczeń \<](security-of-basichttpbinding.md)|Definiuje możliwości zabezpieczeń dla [\<> BasicHttpBinding](basichttpbinding.md).|  
+|[\<security>](security-of-basichttpbinding.md)|Definiuje funkcje zabezpieczeń dla programu [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="example"></a>Przykład  
- Ten przykład ilustruje sposób implementacji aplikacji, która korzysta z basicHttpBinding i zabezpieczenia komunikatów. W poniższym przykładzie konfiguracji dla usługi definicja punktu końcowego określa basicHttpBinding i odwołuje się do konfiguracji powiązania o nazwie `Binding1`. Certyfikat, którego używa Usługa do samodzielnego uwierzytelnienia klienta, jest ustawiany w sekcji `behaviors` pliku konfiguracji w obszarze `serviceCredentials` elementu. Tryb walidacji, który ma zastosowanie do certyfikatu używanego przez klienta do samodzielnego uwierzytelnienia w usłudze, jest również ustawiany w sekcji `behaviors` w elemencie `clientCertificate`.  
+ Ten przykład ilustruje sposób implementacji aplikacji, która korzysta z basicHttpBinding i zabezpieczenia komunikatów. W poniższym przykładzie konfiguracji dla usługi definicja punktu końcowego określa basicHttpBinding i odwołuje się do konfiguracji powiązania o nazwie `Binding1` . Certyfikat, którego używa Usługa do samodzielnego uwierzytelnienia klienta, jest ustawiany w `behaviors` sekcji pliku konfiguracji w obszarze `serviceCredentials` elementu. Tryb walidacji, który ma zastosowanie do certyfikatu używanego przez klienta do samodzielnego uwierzytelnienia w usłudze, jest również ustawiany w `behaviors` sekcji w obszarze `clientCertificate` elementu.  
   
  W pliku konfiguracji klienta określono te same informacje o powiązaniu i zabezpieczeniach.  
   
@@ -130,4 +130,4 @@ Definiuje ustawienia zabezpieczeń na poziomie wiadomości [\<> BasicHttpBinding
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
+- [\<binding>](bindings.md)

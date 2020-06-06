@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154975"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules> Element (Ustawienia sieciowe)
-Określa moduły używane do uwierzytelniania żądań sieciowych.  
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules>, element (ustawienia sieci)
+Określa moduły używane do uwierzytelniania żądań sieci.  
 
-[**\<>konfiguracyjne**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>uwierzytelniania**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<authenticationModules>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -37,26 +37,26 @@ Określa moduły używane do uwierzytelniania żądań sieciowych.
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[Dodaj](add-element-for-authenticationmodules-network-settings.md)|Dodaje moduł uwierzytelniania do aplikacji.|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|Dodaje moduł uwierzytelniania do aplikacji.|  
 |[Wyczyść](clear-element-for-authenticationmodules-network-settings.md)|Czyści wszystkie moduły uwierzytelniania z aplikacji.|  
-|[Usunąć](remove-element-for-authenticationmodules-network-settings.md)|Usuwa moduł uwierzytelniania z aplikacji.|  
+|[usuwa](remove-element-for-authenticationmodules-network-settings.md)|Usuwa moduł uwierzytelniania z aplikacji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia określające sposób łączenia się programu .NET Framework z siecią.|  
+|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `authenticationModule` określa moduły uwierzytelniania, które przeprowadzają proces uwierzytelniania z serwerem. Moduł uwierzytelniania musi <xref:System.Net.IAuthenticationModule> implementować interfejs.  
+ `authenticationModule`Element określa moduły uwierzytelniania, które przeprowadzą proces uwierzytelniania z serwerem. Moduł uwierzytelniania musi implementować <xref:System.Net.IAuthenticationModule> interfejs.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia moduł uwierzytelniania. Należy zastąpić wartości dla Version i PublicKeyToken z poprawnymi wartościami dla określonego modułu.  
+ Poniższy przykład umożliwia włączenie modułu uwierzytelniania. Należy zastąpić wartości wersji i PublicKeyToken wartościami prawidłowymi dla określonego modułu.  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ Określa moduły używane do uwierzytelniania żądań sieciowych.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

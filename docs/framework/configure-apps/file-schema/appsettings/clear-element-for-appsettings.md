@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214798"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Wyczyść > elementu \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<clear>, element dla \<appSettings>
 
 Czyści niestandardowe ustawienia aplikacji.
 
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,17 +32,17 @@ Czyści niestandardowe ustawienia aplikacji.
 
 ## <a name="attributes"></a>Atrybuty
 
-None
+Brak
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji aplikacji. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji aplikacji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-None
+Brak
 
 ## <a name="example"></a>Przykład
 
@@ -54,6 +54,6 @@ Poniższy przykład pokazuje, jak wyczyścić niestandardowe ustawienia konfigur
 </appSettings>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat pliku konfiguracji dla .NET Framework](../index.md)

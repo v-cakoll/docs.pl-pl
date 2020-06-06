@@ -1,5 +1,5 @@
 ---
-title: <dateTimeSerialization>, element
+title: <dateTimeSerialization> Element
 description: W tym artykule opisano <dateTimeSerialization> element, który określa tryb serializacji obiektów DateTime.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289645"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization>, element
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> Element
 Określa tryb serializacji <xref:System.DateTime> obiektów.  
   
  \<configuration>  

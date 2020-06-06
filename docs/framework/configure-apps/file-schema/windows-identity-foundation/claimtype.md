@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: a46e9129bd27319abb4d7519444568af622170fc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252070"
 ---
-# <a name="claimtype"></a>\<claimType>
+# \<claimType>
 Określa jedno opcjonalne lub wymagane żądanie dla przychodzących tokenów zabezpieczających.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. identityModel**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<claimTypeRequired >** ](claimtyperequired.md)\  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> oświadczenia**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequired>**](claimtyperequired.md)\  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimType>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,8 +39,8 @@ Określa jedno opcjonalne lub wymagane żądanie dla przychodzących tokenów za
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ zgłoszenia. Zwykle jest to identyfikator URI. Wymagana.|  
-|optional|Wartość logiczna określająca, czy typ zgłoszenia jest opcjonalny. Opcjonalna.|  
+|typ|Typ zgłoszenia. Zwykle jest to identyfikator URI. Wymagany.|  
+|optional|Wartość logiczna określająca, czy typ zgłoszenia jest opcjonalny. Opcjonalny.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -49,4 +49,4 @@ Określa jedno opcjonalne lub wymagane żądanie dla przychodzących tokenów za
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](claimtyperequired.md)|Określa zestaw wymaganych oświadczeń dla przychodzących tokenów zabezpieczających.|
+|[\<claimTypeRequired>](claimtyperequired.md)|Określa zestaw wymaganych oświadczeń dla przychodzących tokenów zabezpieczających.|

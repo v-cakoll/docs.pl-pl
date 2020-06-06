@@ -3,21 +3,21 @@ title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
 ms.openlocfilehash: e1b40718638ded54e59743730159ea6e65a51a57
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398181"
 ---
-# <a name="callbacktimeouts"></a>\<callbackTimeouts>
+# \<callbackTimeouts>
 Określa wartość limitu czasu podczas przepływu transakcji z serwera, aby client.in scenariusz dwustronnego kontraktu wywołania zwrotnego.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<callbackTimeOuts >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<callbackTimeOuts>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,7 @@ Określa wartość limitu czasu podczas przepływu transakcji z serwera, aby cli
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`transactionTimeout`|<xref:System.TimeSpan> Wartość, która określa przedział czasu, w którym transakcje muszą zostać ukończone lub automatycznie zakończone. Wartość domyślna to "00:00:00".|  
+|`transactionTimeout`|<xref:System.TimeSpan>Wartość, która określa przedział czasu, w którym transakcje muszą zostać ukończone lub automatycznie zakończone. Wartość domyślna to "00:00:00".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,7 +44,7 @@ Określa wartość limitu czasu podczas przepływu transakcji z serwera, aby cli
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="see-also"></a>Zobacz także
 

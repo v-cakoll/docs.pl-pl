@@ -3,21 +3,21 @@ title: <add> dla <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
 ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850551"
 ---
-# <a name="add-of-backuplist"></a>\<Dodawanie > \<backupList >
+# <a name="add-of-backuplist"></a>\<add> dla \<backupList>
 Reprezentuje element konfiguracji, który definiuje kopię zapasową elementu punktu końcowego.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> routingu**](routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupLists >** ](backuplists.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupList >** ](backuplist.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Dodaj >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<backupLists>**](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<backupList>**](backuplist.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ Reprezentuje element konfiguracji, który definiuje kopię zapasową elementu pu
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Ciąg określający nazwę punktu końcowego kopii zapasowej.|  
+|name|Ciąg określający nazwę punktu końcowego kopii zapasowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -47,7 +47,7 @@ Reprezentuje element konfiguracji, który definiuje kopię zapasową elementu pu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> routingu](routing.md)|Zawiera listę punktów końcowych, które mają być używane przez usługę routingu w przypadku, gdy podstawowy punkt końcowy nie zostanie osiągnięty.|  
+|[\<routing>](routing.md)|Zawiera listę punktów końcowych, które mają być używane przez usługę routingu w przypadku, gdy podstawowy punkt końcowy nie zostanie osiągnięty.|  
   
 ## <a name="see-also"></a>Zobacz także
 

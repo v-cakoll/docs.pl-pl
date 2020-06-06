@@ -3,20 +3,20 @@ title: <add> dla <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
 ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850318"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<Dodawanie > \<transportConfigurationType >
+# <a name="add-of-transportconfigurationtype"></a>\<add> dla \<transportConfigurationType>
 Ten element jest parą klucz/wartość, która identyfikuje typ określonego transportu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<transportConfigurationTypes >** ](transportconfigurationtypes.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Dodaj >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<transportConfigurationTypes>**](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ Ten element jest parą klucz/wartość, która identyfikuje typ określonego tra
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowany przez użytkownika, który jednoznacznie identyfikuje typ transportu.|  
+|name|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowany przez użytkownika, który jednoznacznie identyfikuje typ transportu.|  
 |transportConfigurationType|Ciąg, który zawiera typ implementujący określony transport.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  

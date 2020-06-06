@@ -1,5 +1,5 @@
 ---
-title: <qualifyAssembly>, element
+title: <qualifyAssembly> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153922"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> Element
-Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy używana jest nazwa częściowa.  
+Określa pełną nazwę zestawu, który ma być dynamicznie ładowany, gdy zostanie użyta nazwa częściowa.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>montażowy**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<kwalifikacje>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<qualifyAssembly>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,8 +39,8 @@ Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`partialName`|Atrybut wymagany.<br /><br /> Określa częściową nazwę zestawu, jak pojawia się w kodzie.|  
-|`fullName`|Atrybut wymagany.<br /><br /> Określa pełną nazwę zestawu, jak pojawia się w globalnej pamięci podręcznej zestawów.|  
+|`partialName`|Atrybut wymagany.<br /><br /> Określa częściową nazwę zestawu, która pojawia się w kodzie.|  
+|`fullName`|Atrybut wymagany.<br /><br /> Określa pełną nazwę zestawu, która pojawia się w globalnej pamięci podręcznej zestawów.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,12 +54,12 @@ Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody przy użyciu nazw zestawu częściowego powoduje, że środowisko uruchomieniowe języka wspólnego wyszukać zestaw tylko w katalogu podstawowym aplikacji. Użyj ** \<elementu qualifyAssembly>** w pliku konfiguracji aplikacji, aby podać pełne informacje o zestawie (nazwa, wersja, token klucza publicznego i kultury) i spowodować, że środowisko uruchomieniowe języka wspólnego do wyszukiwania zestawu w globalnej pamięci podręcznej zestawu.  
+ Wywołanie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody przy użyciu częściowych nazw zestawów powoduje, że środowisko uruchomieniowe języka wspólnego szuka zestawu tylko w katalogu podstawowym aplikacji. Użyj **\<qualifyAssembly>** elementu w pliku konfiguracji aplikacji, aby podać pełne informacje o zestawie (nazwę, wersję, token klucza publicznego i kulturę) i spowodować wyszukanie zestawu w globalnej pamięci podręcznej zestawów przez środowisko uruchomieniowe języka wspólnego.  
   
- Atrybut **fullName** musi zawierać cztery pola tożsamości zestawu: nazwa, wersja, token klucza publicznego i kultury. Atrybut **partialName** musi częściowo odwoływać się do zestawu. Należy określić co najmniej nazwę tekstową zestawu (najczęstszym przypadkiem), ale można również dołączyć wersję, token klucza publicznego lub kultury (lub dowolną kombinację czterech, ale nie wszystkie cztery). **PartialName** musi odpowiadać nazwie określonej w wywołaniu. Na przykład nie `"math"` można określić jako atrybut **partialName** `Assembly.Load("math, Version=3.3.3.3")` w pliku konfiguracji i wywołać w kodzie.  
+ Atrybut **FullName** musi zawierać cztery pola tożsamości zestawu: nazwę, wersję, token klucza publicznego i kulturę. Atrybut **częściname** musi częściowo odwoływać się do zestawu. Należy określić co najmniej nazwę tekstu zestawu (najbardziej typowe), ale można również dołączyć wersję, token klucza publicznego lub kulturę (lub dowolną kombinację czterech, ale nie wszystkie cztery). **Część częściowa** musi być zgodna z nazwą określoną w wywołaniu. Na przykład nie można określić `"math"` jako atrybutu **częściname** w pliku konfiguracji i wywołać `Assembly.Load("math, Version=3.3.3.3")` w kodzie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład logicznie `Assembly.Load("math")` zamienia `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`wywołanie w .  
+ Poniższy przykład logicznie włącza wywołania `Assembly.Load("math")` do `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")` .  
   
 ```xml  
 <configuration>  
@@ -73,8 +73,8 @@ Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Odwołania do złożenia częściowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Odwołania do zestawów częściowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

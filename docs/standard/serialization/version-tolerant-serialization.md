@@ -15,10 +15,10 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83762594"
 ---
 # <a name="version-tolerant-serialization"></a>Serializacja odporna na wersje
@@ -281,7 +281,7 @@ W celu zapewnienia, że typem będzie zgodna z aparatów przyszłych serializacj
 - Zawsze należy prawidłowo ustawić właściwość **VersionAdded** atrybutu **OptionalFieldAttribute** .
 - Unikaj rozgałęziony przechowywania wersji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

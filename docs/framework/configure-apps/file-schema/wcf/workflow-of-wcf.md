@@ -3,20 +3,20 @@ title: <workflow>programu WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69932795"
 ---
-# <a name="workflow-of-wcf"></a>\<przepływ pracy > WCF
+# <a name="workflow-of-wcf"></a>\<workflow>programu WCF
 Konfigurowanie śledzenia uczestnika nasłuchujący rekordów śledzenia jest emitowane bezpośrednio ze środowiska wykonawczego i przetworzyć je w sposób został skonfigurowany. Dotyczy to również zapis do określonych danych wyjściowych (np. PLik, konsoli, ETW), przetwarzania/agregowania rekordy lub dowolną kombinację, który może być wymagane.  
   
  Aby uzyskać więcej informacji o śledzeniu i śledzeniu przepływów pracy, zobacz [śledzenie przepływu pracy i](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) śledzenie i [Śledzenie uczestników](../../../windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<Śledzenie >  
-\<Uczestnicy >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,9 +38,9 @@ Konfigurowanie śledzenia uczestnika nasłuchujący rekordów śledzenia jest em
   
 |Element|Opis|  
 |-------------|-----------------|  
-|nazwa|Ciąg określający nazwę uczestnika śledzenia.|  
+|name|Ciąg określający nazwę uczestnika śledzenia.|  
 |Nazwa_profilu|Ciąg określający nazwę profilu śledzenia, który definiuje rekordów śledzenia uczestnika śledzenia ma subskrypcję.|  
-|— typ|Ciąg, który określa typ uczestnika śledzenia.|  
+|typ|Ciąg, który określa typ uczestnika śledzenia.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,7 +49,7 @@ Konfigurowanie śledzenia uczestnika nasłuchujący rekordów śledzenia jest em
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Uczestnicy >](../windows-workflow-foundation/participants.md)|Lista śledzenia uczestników|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|Lista śledzenia uczestników|  
   
 ## <a name="remarks"></a>Uwagi  
  Śledzenie uczestników są stosowane w celu pobrania danych śledzenia emitowane z przepływu pracy i zapisać go w różne nośniki. Podobnie dowolny publikować przetwarzania śledzenia, które rekordy można również wykonać w ramach uczestnika śledzenia.  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116252"
 ---
-# <a name="netfx40_legacysecuritypolicy-element"></a>\<element > NetFx40_LegacySecurityPolicy
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
 
 Określa, czy środowisko uruchomieniowe korzysta ze starszych zasad zabezpieczeń dostępu kodu (CAS).
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_LegacySecurityPolicy>**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,13 +61,13 @@ W .NET Framework wersja 3,5 i wcześniejsze wersje zasady CAS są zawsze włącz
 
 Zasady CAS są specyficzne dla wersji. Zasady niestandardowych urzędów certyfikacji, które istnieją we wcześniejszych wersjach .NET Framework muszą zostać określone w .NET Framework 4.
 
-Zastosowanie elementu `<NetFx40_LegacySecurityPolicy>` do zestawu .NET Framework 4 nie wpływa na [kod przezroczysty dla bezpieczeństwa](../../../misc/security-transparent-code.md); nadal obowiązują reguły przezroczystości.
+Zastosowanie `<NetFx40_LegacySecurityPolicy>` elementu do zestawu .NET Framework 4 nie wpływa na [kod przezroczysty dla bezpieczeństwa](../../../misc/security-transparent-code.md); nadal obowiązują reguły przezroczystości.
 
 > [!IMPORTANT]
-> Zastosowanie elementu `<NetFx40_LegacySecurityPolicy>` może spowodować znaczny wpływ na wydajność zestawów obrazów natywnych utworzonych przez [Generator obrazu natywnego (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) , które nie są zainstalowane w [globalnej pamięci podręcznej zestawów](../../../app-domains/gac.md). Spadek wydajności jest spowodowany przez niezdolność środowiska uruchomieniowego do załadowania zestawów jako obrazów natywnych podczas stosowania atrybutu, co spowoduje ich załadowanie jako zestawów just in Time.
+> Zastosowanie `<NetFx40_LegacySecurityPolicy>` elementu może spowodować znaczny wpływ na wydajność zestawów obrazów natywnych utworzonych przez [Generator obrazu natywnego (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) , które nie są zainstalowane w [globalnej pamięci podręcznej zestawów](../../../app-domains/gac.md). Spadek wydajności jest spowodowany przez niezdolność środowiska uruchomieniowego do załadowania zestawów jako obrazów natywnych podczas stosowania atrybutu, co spowoduje ich załadowanie jako zestawów just in Time.
 
 > [!NOTE]
-> Jeśli określisz wersję docelową .NET Framework, która jest wcześniejsza niż .NET Framework 4 w ustawieniach projektu dla projektu programu Visual Studio, zostaną włączone zasady CAS, w tym wszelkie niestandardowe zasady dotyczące urzędów certyfikacji określone dla tej wersji. Nie będzie jednak można używać nowych typów i elementów członkowskich .NET Framework 4. Możesz również określić wcześniejszą wersję .NET Framework przy użyciu [elementu\<supportedRuntime >](../startup/supportedruntime-element.md) w schemacie ustawień uruchamiania w [pliku konfiguracyjnym aplikacji](../../index.md).
+> Jeśli określisz wersję docelową .NET Framework, która jest wcześniejsza niż .NET Framework 4 w ustawieniach projektu dla projektu programu Visual Studio, zostaną włączone zasady CAS, w tym wszelkie niestandardowe zasady dotyczące urzędów certyfikacji określone dla tej wersji. Nie będzie jednak można używać nowych typów i elementów członkowskich .NET Framework 4. Możesz również określić wcześniejszą wersję .NET Framework za pomocą [ \<supportedRuntime> elementu](../startup/supportedruntime-element.md) w schemacie ustawienia uruchamiania w [pliku konfiguracyjnym aplikacji](../../index.md).
 
 > [!NOTE]
 > W składni pliku konfiguracji jest rozróżniana wielkość liter. Należy użyć składni podanej w sekcjach składnia i przykład.

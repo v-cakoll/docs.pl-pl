@@ -3,22 +3,22 @@ title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
 ms.openlocfilehash: 8432463ff62e4b5e54a491b574cc6a5285efe220
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397957"
 ---
-# <a name="issuedtokenparameters"></a>\<issuedTokenParameters >
+# \<issuedTokenParameters>
 Określa parametry tokenu zabezpieczającego wydanego w federacyjnym scenariuszu zabezpieczeń.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedTokenParameters >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedTokenParameters>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,9 +50,9 @@ Określa parametry tokenu zabezpieczającego wydanego w federacyjnym scenariuszu
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |defaultMessageSecurityVersion|Określa wersje specyfikacji zabezpieczeń (WS-Security, WS-Trust, WS-Secure konwersacja i zasady WS-Security), które muszą być obsługiwane przez powiązanie. Ta wartość jest typu <xref:System.ServiceModel.MessageSecurityVersion>.|  
-|Dołączanie|Określa wymagania dotyczące dołączania tokenu. Ten atrybut jest typu <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
+|Dołączanie|Określa wymagania dotyczące dołączania tokenu. Ten atrybut jest typu <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> .|  
 |keySize|Liczba całkowita określająca rozmiar klucza tokenu. Wartość domyślna to 256.|  
-|keyType|Prawidłowa wartość <xref:System.IdentityModel.Tokens.SecurityKeyType> określająca typ klucza. Wartość domyślna to `SymmetricKey`.|  
+|keyType|Prawidłowa wartość określająca <xref:System.IdentityModel.Tokens.SecurityKeyType> Typ klucza. Wartość domyślna to `SymmetricKey`.|  
 |Obiektu TokenType|Ciąg określający typ tokenu. Wartość domyślna to "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -61,7 +61,7 @@ Określa parametry tokenu zabezpieczającego wydanego w federacyjnym scenariuszu
 |-------------|-----------------|  
 |[\<additionalRequestParameters>](additionalrequestparameters-element.md)|Kolekcja elementów konfiguracji, które określają dodatkowe parametry żądania.|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|Określa kolekcję wymaganych typów roszczeń.<br /><br /> W scenariuszu federacyjnym usługi określają wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzące muszą mieć określony zestaw typów roszczeń. Każdy element w tej kolekcji określa typy wymaganych i opcjonalnych oświadczeń, które powinny być wyświetlane w federacyjnym poświadczeniu.|  
-|[\<> wystawcy](issuer-of-issuedtokenparameters.md)|Element konfiguracji, który określa punkt końcowy, który wystawia bieżący token.|  
+|[\<issuer>](issuer-of-issuedtokenparameters.md)|Element konfiguracji, który określa punkt końcowy, który wystawia bieżący token.|  
 |[\<issuerMetadata>](issuermetadata-of-issuedtokenparameters.md)|Element konfiguracji, który określa adres punktu końcowego metadanych wystawcy tokenu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -69,7 +69,7 @@ Określa parametry tokenu zabezpieczającego wydanego w federacyjnym scenariuszu
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
-|[\<> zabezpieczeń](security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
+|[\<security>](security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -81,8 +81,8 @@ Określa parametry tokenu zabezpieczającego wydanego w federacyjnym scenariuszu
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia powiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)
+- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia wiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)
 - [Uwierzytelnianie i tożsamość usług](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Federacja i wystawione tokeny](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Możliwości zabezpieczeń powiązań niestandardowych](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)

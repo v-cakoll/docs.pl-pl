@@ -1,5 +1,5 @@
 ---
-title: <xmlSerializer>, element
+title: <xmlSerializer> Element
 description: <xmlSerializer>Element określa, czy jest wykonywane dodatkowe sprawdzanie postępu elementu XmlSerializer.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
 ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288930"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer>, element
+# <a name="xmlserializer-element"></a>\<xmlSerializer> Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
   
  \<configuration>  

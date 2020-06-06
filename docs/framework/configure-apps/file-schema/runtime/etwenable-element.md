@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117398"
 ---
-# <a name="etwenable-element"></a>\<element > etwEnable
+# <a name="etwenable-element"></a>\<etwEnable> Element
 Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń środowiska uruchomieniowego języka wspólnego.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<etwEnabled>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,14 @@ Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|dostępny|Atrybut wymagany.<br /><br /> Określa, czy funkcja ETW powinna być włączona.|  
+|enabled|Atrybut wymagany.<br /><br /> Określa, czy funkcja ETW powinna być włączona.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |true|Włącz funkcję ETW. Jest to wartość domyślna dla wersji systemu Windows, począwszy od systemów operacyjnych Windows Vista i Windows Server 2008.|  
-|false|Wyłącz funkcję ETW. Jest to wartość domyślna dla wcześniejszych wersji systemu Windows.|  
+|fałsz|Wyłącz funkcję ETW. Jest to wartość domyślna dla wcześniejszych wersji systemu Windows.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

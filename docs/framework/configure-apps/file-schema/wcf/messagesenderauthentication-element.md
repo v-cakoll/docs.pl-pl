@@ -3,25 +3,25 @@ title: <messageSenderAuthentication>, element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
 ms.openlocfilehash: bab0e50d7feba3ea55d505be07cfa41427a5cbbc
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397786"
 ---
-# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication, element >
+# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication>, element
 Określa opcje uwierzytelniania dla nadawców wiadomości równorzędnych.  
   
  Aby uzyskać więcej informacji na temat programowania peer-to-peer, zobacz [sieci peer-to-](../../../wcf/feature-details/peer-to-peer-networking.md)peer.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Obiekt clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> elementów równorzędnych**](peer-of-clientcredentials-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageSenderAuthentication >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageSenderAuthentication>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ Określa opcje uwierzytelniania dla nadawców wiadomości równorzędnych.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiony, `certificateValidationMode` gdy jest ustawiony `Custom`na.|  
-|`certificateValidationMode`|Określa jeden z trzech trybów używanych do walidacji poświadczeń. Jeśli jest ustawiona `Custom`na, należy `customCertificateValidator` również podać wartość.|  
+|`customCertificateValidatorType`|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiony `certificateValidationMode` , gdy jest ustawiony na `Custom` .|  
+|`certificateValidationMode`|Określa jeden z trzech trybów używanych do walidacji poświadczeń. Jeśli jest ustawiona na `Custom` , `customCertificateValidator` należy również podać wartość.|  
 |`revocationMode`|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL).|  
-|`trustedStoreLocation`|Jedna z dwóch lokalizacji magazynu systemowego: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana podczas negocjowania certyfikatu usługi z klientem. Sprawdzanie poprawności jest wykonywane względem magazynu **osób zaufanych** w określonej lokalizacji magazynu.|  
+|`trustedStoreLocation`|Jedna z dwóch lokalizacji magazynu systemowego: `LocalMachine` lub `CurrentUser` . Ta wartość jest używana podczas negocjowania certyfikatu usługi z klientem. Sprawdzanie poprawności jest wykonywane względem magazynu **osób zaufanych** w określonej lokalizacji magazynu.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType — atrybut  
   
@@ -54,19 +54,19 @@ Określa opcje uwierzytelniania dla nadawców wiadomości równorzędnych.
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Opcjonalny. Jedna z następujących wartości: `None`, `PeerTrust`, `ChainTrust` `PeerOrChainTrust`,, `Custom`. Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+|Wyliczenie|Opcjonalny. Jedna z następujących wartości: `None` , `PeerTrust` ,, `ChainTrust` `PeerOrChainTrust` , `Custom` . Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Atrybut odwołania  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedna z następujących wartości: `NoCheck`, `Online`, `Offline`. Wartość domyślna to `Online`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
+|Wyliczenie|Jedna z następujących wartości: `NoCheck` , `Online` , `Offline` . Wartość domyślna to `Online`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedna z następujących wartości: `LocalMachine` lub. `CurrentUser` Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona na koncie systemowym, zwykle `LocalMachine`jest to certyfikat. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, certyfikat zazwyczaj znajduje się w `CurrentUser`temacie. Wartość domyślna to `CurrentUser`.|  
+|Wyliczenie|Jedna z następujących wartości: `LocalMachine` lub `CurrentUser` . Wartość domyślna to `CurrentUser`. Jeśli aplikacja kliencka jest uruchomiona na koncie systemowym, zwykle jest to certyfikat `LocalMachine` . Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, certyfikat zazwyczaj znajduje się w temacie `CurrentUser` . Wartość domyślna to `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -75,13 +75,13 @@ Określa opcje uwierzytelniania dla nadawców wiadomości równorzędnych.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> elementów równorzędnych](peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta w usłudze równorzędnej.|  
+|[\<peer>](peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta w usłudze równorzędnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element musi być skonfigurowany, jeśli wybrano opcję Uwierzytelnianie wiadomości. W przypadku kanałów wyjściowych każdy komunikat jest podpisywany przy użyciu certyfikatu dostarczonego przez [ \<> certyfikatów](certificate-element.md). Wszystkie komunikaty, przed dostarczeniem do aplikacji, są sprawdzane pod kątem poświadczeń komunikatów przy użyciu modułu walidacji `customCertificateValidatorType` określonego przez atrybut tego elementu. Moduł sprawdzania poprawności może zaakceptować lub odrzucić poświadczenie.  
+ Ten element musi być skonfigurowany, jeśli wybrano opcję Uwierzytelnianie wiadomości. W przypadku kanałów wyjściowych każdy komunikat jest podpisywany przy użyciu certyfikatu dostarczonego przez [\<certificate>](certificate-element.md) . Wszystkie komunikaty, przed dostarczeniem do aplikacji, są sprawdzane pod kątem poświadczeń komunikatów przy użyciu modułu walidacji określonego przez `customCertificateValidatorType` atrybut tego elementu. Moduł sprawdzania poprawności może zaakceptować lub odrzucić poświadczenie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod ustawia tryb `PeerOrChainTrust`walidacji nadawcy wiadomości.  
+ Poniższy kod ustawia tryb walidacji nadawcy wiadomości `PeerOrChainTrust` .  
   
 ```xml  
 <behaviors>

@@ -3,22 +3,22 @@ title: <peer> dla <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
 ms.openlocfilehash: ca97be7b1ab562382895fea4f1d1fc716151b70b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397645"
 ---
-# <a name="peer-of-servicecredentials"></a>\<> elementów równorzędnych w \<usłudze ServiceCredentials >
+# <a name="peer-of-servicecredentials"></a>\<peer> dla \<serviceCredentials>
 Określa bieżące poświadczenia dla węzła równorzędnego.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ServiceCredentials**](servicecredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> elementów równorzędnych**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCredentials>**](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peer>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,9 +40,9 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> certyfikatów](certificate-of-peer.md)|Określa certyfikat X. 509 używany do podpisywania i szyfrowania komunikatów dla usług peer-to-peer. .|  
+|[\<certificate>](certificate-of-peer.md)|Określa certyfikat X. 509 używany do podpisywania i szyfrowania komunikatów dla usług peer-to-peer. .|  
 |[\<messageSenderAuthentication>](messagesenderauthentication.md)|Określa opcje uwierzytelniania dla nadawców wiadomości.|  
-|[\<peerAuthentication >](peerauthentication.md)|Określa opcje uwierzytelniania dla usług równorzędnych.|  
+|[\<peerAuthentication>](peerauthentication.md)|Określa opcje uwierzytelniania dla usług równorzędnych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

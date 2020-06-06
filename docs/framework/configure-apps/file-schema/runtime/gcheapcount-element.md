@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283071"
 ---
-# <a name="gcheapcount-element"></a>\<element > GCHeapCount
+# <a name="gcheapcount-element"></a>\<GCHeapCount>, element
 
 Określa liczbę stert/wątków, które mają być używane do wyrzucania elementów bezużytecznych serwera.
 
-\<Konfiguracja > \
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Składnia
 

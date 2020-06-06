@@ -11,20 +11,20 @@ helpviewer_keywords:
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115845"
 ---
-# <a name="publisherpolicy-element"></a>\<element > publisherPolicy Apply
+# <a name="publisherpolicy-element"></a>\<publisherPolicy> Element
 Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zestawubinding**](assemblybinding-element-for-runtime.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherpolicy apply >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<publisherPolicy>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`yes`|Stosuje zasady wydawcy. To jest ustawienie domyślne.|  
+|`yes`|Stosuje zasady wydawcy. Jest to ustawienie domyślne.|  
 |`no`|Nie stosuje zasad wydawcy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -62,14 +62,14 @@ Brak.
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy dostawca składnika zwalnia nową wersję zestawu, dostawca może uwzględnić zasady wydawcy, aby aplikacje używające starej wersji używały teraz nowej wersji. Aby określić, czy zastosować zasady wydawcy dla określonego zestawu, należy umieścić **\<publisherpolicy apply >** elementu w **\<dependentAssembly >** elementu.  
+ Gdy dostawca składnika zwalnia nową wersję zestawu, dostawca może uwzględnić zasady wydawcy, aby aplikacje używające starej wersji używały teraz nowej wersji. Aby określić, czy zastosować zasady wydawcy dla określonego zestawu, umieść **\<publisherPolicy>** element w **\<dependentAssembly>** elemencie.  
   
  Ustawieniem domyślnym dla atrybutu **apply** jest **tak**. Ustawienie atrybutu **Zastosuj** do **nie** zastępuje żadnych poprzednich ustawień **tak** dla zestawu.  
   
- Aby aplikacja jawnie ignorował zasady wydawcy przy użyciu [\<publisherPolicy Apply Apply = "No"/>](publisherpolicy-element.md) , w pliku konfiguracyjnym aplikacji jest wymagane uprawnienie. Uprawnienie jest udzielane przez ustawienie flagi <xref:System.Security.Permissions.SecurityPermissionFlag> w <xref:System.Security.Permissions.SecurityPermission>. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
+ Aby aplikacja jawnie ignorował zasady wydawcy przy użyciu [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) elementu w pliku konfiguracyjnym aplikacji, wymagane jest uprawnienie. Uprawnienie jest udzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagi na <xref:System.Security.Permissions.SecurityPermission> . Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu, `myAssembly`.  
+ Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu `myAssembly` .  
   
 ```xml  
 <configuration>  

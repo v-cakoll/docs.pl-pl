@@ -6,20 +6,20 @@ helpviewer_keywords:
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 ms.openlocfilehash: bcc0e23f0c47ad3a98430e36da31d39612caa3c9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252757"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<clear> Element for \<namedCaches>
-Czyści wszystkie `namedCache` wpisy `namedCaches` w kolekcji pamięci podręcznej pamięci.  
+# <a name="clear-element-for-namedcaches"></a>\<clear>, element dla \<namedCaches>
+Czyści wszystkie `namedCache` wpisy w kolekcji pamięci `namedCaches` podręcznej pamięci.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. buforowanie >** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Elemencie MemoryCache >** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Wyczyść >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,8 +49,8 @@ Czyści wszystkie `namedCache` wpisy `namedCaches` w kolekcji pamięci podręczn
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element czyści wszystkie `namedCache` wpisy w kolekcji nazwanych pamięci podręcznej dla pamięci podręcznej. `clear` Można użyć `clear` elementu przed użyciem elementu, `add` aby dodać nowy nazwany wpis pamięci podręcznej w celu uzyskania pewności, że w kolekcji nie ma innych nazwanych pamięci podręcznych.  
+ `clear`Element czyści wszystkie `namedCache` wpisy w kolekcji nazwanych pamięci podręcznej dla pamięci podręcznej. Można użyć `clear` elementu przed użyciem `add` elementu, aby dodać nowy nazwany wpis pamięci podręcznej w celu uzyskania pewności, że w kolekcji nie ma innych nazwanych pamięci podręcznych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<namedCaches >, element (ustawienia pamięci podręcznej)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>— Element (ustawienia pamięci podręcznej)](namedcaches-element-cache-settings.md)

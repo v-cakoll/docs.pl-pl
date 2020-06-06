@@ -6,19 +6,19 @@ helpviewer_keywords:
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116157"
 ---
-# <a name="netfx40_pinvokestackresilience-element"></a>\<element > NetFx40_PInvokeStackResilience
+# <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience> Element
 
 Określa, czy środowisko uruchomieniowe automatycznie naprawia nieprawidłowe deklaracje wywołania platformy w czasie wykonywania, kosztem wolniejszych przejść między zarządzanym i niezarządzanym kodem.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_PInvokeStackResilience>**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,7 +62,7 @@ Począwszy od .NET Framework 4, ulepszona architektura organizowania międzyoper
 
 Aby ułatwić wykrywanie niepoprawnych deklaracji podczas opracowywania, udoskonalono środowisko debugowania programu Visual Studio. Asystent debugowania zarządzanego [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) (MDA) powiadamia o nieprawidłowej deklaracji wywołania platformy, gdy aplikacja jest uruchomiona z dołączonym debugerem.
 
-Aby rozwiązać scenariusze, w których aplikacja używa składników, których nie można ponownie skompilować, i które mają nieprawidłowe deklaracje wywołania platformy, można użyć elementu `NetFx40_PInvokeStackResilience`. Dodanie tego elementu do pliku konfiguracji aplikacji przy użyciu funkcji `enabled="1"` powoduje przejście do trybu zgodności z zachowaniem wcześniejszych wersji .NET Framework, kosztem wolniejszych przejść. Zestawy, które zostały skompilowane pod kątem wcześniejszych wersji .NET Framework są automatycznie zaznaczane w tym trybie zgodności i nie potrzebują tego elementu.
+Aby rozwiązać scenariusze, w których aplikacja używa składników, których nie można ponownie skompilować, i które mają nieprawidłowe deklaracje wywołania platformy, można użyć `NetFx40_PInvokeStackResilience` elementu. Dodanie tego elementu do pliku konfiguracji aplikacji z opcją załączanie `enabled="1"` do trybu zgodności z zachowaniem wcześniejszych wersji .NET Framework, kosztem wolniejszych przejść. Zestawy, które zostały skompilowane pod kątem wcześniejszych wersji .NET Framework są automatycznie zaznaczane w tym trybie zgodności i nie potrzebują tego elementu.
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 

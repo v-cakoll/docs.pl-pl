@@ -8,21 +8,21 @@ helpviewer_keywords:
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
 ms.openlocfilehash: e24dae47171f741af064ca2eaa822928690acf6e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400448"
 ---
-# <a name="datacontractserializer"></a>\<dataContractSerializer>
-Zawiera dane konfiguracji dla programu <xref:System.Runtime.Serialization.DataContractSerializer>. Ten element występuje w dwóch różnych hierarchiach. Jeden z nich znajduje się w poniższej sekcji hierarchii schematu, a drugi jest wymieniony w sekcji uwagi.  
+# \<dataContractSerializer>
+Zawiera dane konfiguracji dla programu <xref:System.Runtime.Serialization.DataContractSerializer> . Ten element występuje w dwóch różnych hierarchiach. Jeden z nich znajduje się w poniższej sekcji hierarchii schematu, a drugi jest wymieniony w sekcji uwagi.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dataContractSerializer**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dataContractSerializer>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,17 +48,17 @@ Zawiera dane konfiguracji dla programu <xref:System.Runtime.Serialization.DataCo
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zachowania](behavior-of-servicebehaviors.md)|Kolekcja ustawień zachowania usługi.|  
-|[\<system.runtime.serialization>](system-runtime-serialization.md)|Reprezentuje element główny dla <xref:System.Runtime.Serialization> sekcji przestrzeni nazw i zawiera elementy dla opcji <xref:System.Runtime.Serialization.DataContractSerializer>ustawień.|  
+|[\<behavior>](behavior-of-servicebehaviors.md)|Kolekcja ustawień zachowania usługi.|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|Reprezentuje element główny dla <xref:System.Runtime.Serialization> sekcji przestrzeni nazw i zawiera elementy dla opcji ustawień <xref:System.Runtime.Serialization.DataContractSerializer> .|  
   
 ## <a name="remarks"></a>Uwagi  
- Jak określono we wprowadzeniu tego tematu, jest to druga hierarchia, w której \<występuje element X509Extension >.  
+ Zgodnie z wprowadzeniem tego tematu jest to druga hierarchia, w której \<X509Extension> występuje element.  
   
  [\<system.runtime.serialization>](system-runtime-serialization.md)  
   
  [\<dataContractSerializer>](datacontractserializer-element.md)  
   
- Aby uzyskać więcej informacji na temat znanych typów <xref:System.Runtime.Serialization.DataContractSerializer>, zobacz.  
+ Aby uzyskać więcej informacji na temat znanych typów, zobacz <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
 ## <a name="see-also"></a>Zobacz także
 

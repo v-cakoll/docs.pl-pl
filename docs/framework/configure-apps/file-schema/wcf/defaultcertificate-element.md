@@ -1,25 +1,25 @@
 ---
-title: <defaultCertificate>, element
+title: <defaultCertificate> Element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
 ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400425"
 ---
-# <a name="defaultcertificate-element"></a>\<defaultCertificate, element >
+# <a name="defaultcertificate-element"></a>\<defaultCertificate> Element
 Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zapewnia go za pośrednictwem protokołu negocjacji.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Obiekt clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceCertificate**](servicecertificate-of-clientcredentials-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultCertificate >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultCertificate>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +37,7 @@ Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zap
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|findValue|Parametry. Wartość do wyszukania.|  
+|findValue|Ciąg. Wartość do wyszukania.|  
 |x509FindType|Licznik. Jedno z pól certyfikatów do przeszukania.|  
 |storeLocation|Licznik. Jedna z dwóch lokalizacji magazynu systemowego do przeszukania.|  
 |storeName|Licznik. Jeden z magazynów systemu do przeszukania.|  
@@ -52,7 +52,7 @@ Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zap
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Dostępne są następujące wartości: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Wyliczenie|Dostępne są następujące wartości: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation — atrybut  
   
@@ -73,13 +73,13 @@ Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zap
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> serviceCertificate](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat, który ma być używany podczas uwierzytelniania usługi dla klienta.|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat, który ma być używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
  W przypadku powiązań korzystających z zabezpieczeń komunikatów opartych na certyfikatach certyfikat określony przez ten element konfiguracji jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje on pojedynczy certyfikat, który będzie używany w przypadku braku certyfikatu określonego przez usługę.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie określono certyfikat używany dla punktów końcowych, których identyfikator URI `http://www.contoso.com` zaczyna się od i certyfikat używany dla wszystkich innych punktów końcowych, które nie wykonują negocjacji certyfikatów.  
+ W poniższym przykładzie określono certyfikat używany dla punktów końcowych, których identyfikator URI zaczyna się od `http://www.contoso.com` i certyfikat używany dla wszystkich innych punktów końcowych, które nie wykonują negocjacji certyfikatów.  
   
 ```xml  
 <serviceCertificate>
@@ -105,6 +105,6 @@ Określa certyfikat X. 509, który ma być używany, gdy usługa lub STS nie zap
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
 - [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
-- [\<> uwierzytelniania](authentication-of-clientcertificate-element.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
 - [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
 - [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

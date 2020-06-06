@@ -3,19 +3,19 @@ title: <idn>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698173"
 ---
-# <a name="idn-element-uri-settings"></a>\<IDN > element (ustawienia identyfikatora URI)
+# <a name="idn-element-uri-settings"></a>\<idn>, element (ustawienia identyfikatora URI)
 
 Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw domen (IDN).
   
-[ **> konfiguracji \<** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,7 +30,7 @@ Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw
   
 ### <a name="attributes"></a>Atrybuty  
 
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
 |`enabled`|Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw domen (IDN), wartość domyślna to None.|  
 
@@ -40,13 +40,13 @@ Brak
   
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
+|[adresu](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
 
 ## <a name="remarks"></a>Uwagi
 
-Istniejąca Klasa <xref:System.Uri> została rozszerzona w .NET Framework 3,5. 3,0 SP1 i 2,0 SP1 z obsługą międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżąca użytkownicy nie będą widzieć żadnych zmian w zachowaniu .NET Framework 2,0, o ile nie włączą one obsługi IRI i IDN. Zapewnia to zgodność aplikacji z wcześniejszymi wersjami .NET Framework.
+Istniejąca <xref:System.Uri> Klasa została rozszerzona w .NET Framework 3,5. 3,0 SP1 i 2,0 SP1 z obsługą międzynarodowych identyfikatorów zasobów (IRI) i międzynarodowych nazw domen (IDN). Bieżąca użytkownicy nie będą widzieć żadnych zmian w zachowaniu .NET Framework 2,0, o ile nie włączą one obsługi IRI i IDN. Zapewnia to zgodność aplikacji z wcześniejszymi wersjami .NET Framework.
 
 Aby włączyć obsługę IRI, wymagane są następujące dwie zmiany:
 
@@ -80,7 +80,7 @@ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfigur
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi IRI analizy i nazw IDN:
+W poniższym przykładzie przedstawiono konfigurację używaną przez <xref:System.Uri> klasę do obsługi IRI i nazw IDN:
 
 ```xml
 <configuration>

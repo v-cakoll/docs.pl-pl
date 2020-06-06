@@ -3,21 +3,21 @@ title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
 ms.openlocfilehash: 20c0057c80b668df97379d0168bb7c005d9927ce
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400385"
 ---
-# <a name="enablewebscript"></a>\<enableWebScript >
+# \<enableWebScript>
 Ten element włącza zachowanie punktu końcowego, który umożliwia korzystanie z usługi z ASP.NET AJAX stron sieci Web.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<enableWebScript >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<enableWebScript>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,10 +38,10 @@ Ten element włącza zachowanie punktu końcowego, który umożliwia korzystanie
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zestaw zachowań punktów końcowych.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Określa zestaw zachowań punktów końcowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tego zachowania należy używać tylko w połączeniu z [ \<elementem WebHttpBinding >](webhttpbinding.md) [ \<](webmessageencoding.md) powiązanie standardowe lub webMessageEncoding > powiązania.  Aby uzyskać więcej informacji na temat tego zachowania <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, zobacz.  
+ Tego zachowania należy używać tylko w połączeniu ze [\<webHttpBinding>](webhttpbinding.md) standardowym powiązaniem lub [\<webMessageEncoding>](webmessageencoding.md) elementem powiązania.  Aby uzyskać więcej informacji na temat tego zachowania, zobacz <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> .  
   
 ## <a name="see-also"></a>Zobacz także
 

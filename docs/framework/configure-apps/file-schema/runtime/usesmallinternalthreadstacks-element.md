@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73114927"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<element > UseSmallInternalThreadStacks
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> Element
 Żądania, które zmniejszają użycie pamięci przez środowisko uruchomieniowe języka wspólnego (CLR) przez określenie jawnych rozmiarów stosu podczas tworzenia niektórych wątków, które używają wewnętrznie, zamiast używania domyślnego rozmiaru stosu dla tych wątków.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,14 @@ ms.locfileid: "73114927"
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|dostępny|Atrybut wymagany.<br /><br /> Określa, czy należy zażądać, aby środowisko CLR używało jawnych rozmiarów stosu zamiast domyślnego rozmiaru stosu, gdy tworzy pewne wątki używane wewnętrznie. Jawne rozmiary stosu są mniejsze niż domyślny rozmiar stosu wynoszący 1 MB.|  
+|enabled|Atrybut wymagany.<br /><br /> Określa, czy należy zażądać, aby środowisko CLR używało jawnych rozmiarów stosu zamiast domyślnego rozmiaru stosu, gdy tworzy pewne wątki używane wewnętrznie. Jawne rozmiary stosu są mniejsze niż domyślny rozmiar stosu wynoszący 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |true|Żądaj jawnych rozmiarów stosu.|  
-|false|Użyj domyślnego rozmiaru stosu. Jest to wartość domyślna dla .NET Framework 4.|  
+|fałsz|Użyj domyślnego rozmiaru stosu. Jest to wartość domyślna dla .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

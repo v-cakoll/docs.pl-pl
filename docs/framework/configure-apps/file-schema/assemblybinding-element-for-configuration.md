@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155482"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<element> \<do konfiguracji>
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding>, element dla \<configuration>
 
-Określa zasady wiązania zestawu na poziomie konfiguracji.
+Określa zasady powiązań zestawów na poziomie konfiguracji.
 
-konfiguracja &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<montażUUwiązanie>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,30 +32,30 @@ konfiguracja &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<montażUUwi�
 
 |           | Opis |
 | --------- | ----------- |
-| **Xmlns** | Atrybut wymagany.<br><br>Określa obszar nazw XML wymagany dla powiązania zestawu. Użyj ciągu "urn:schemas-microsoft-com:asm.v1" jako wartości. |
+| **'xmlns** | Atrybut wymagany.<br><br>Określa przestrzeń nazw XML wymaganą dla powiązania zestawu. Użyj ciągu "urn: schematys-Microsoft-com: ASM. v1" jako wartości. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [**\<>konfiguracyjne**](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [**\<configuration>**](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-element"></a>Element podrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [**\<>konfiguracji linkedConfiguration**](linkedconfiguration-element.md) | Określa plik konfiguracji do uwzględnienia. |
+| [**\<linkedConfiguration>**](linkedconfiguration-element.md) | Określa plik konfiguracji, który ma zostać uwzględniony. |
 
 ## <a name="remarks"></a>Uwagi
 
-Element [** \<>linkedConfiguration**](linkedconfiguration-element.md) upraszcza zarządzanie zestawami komponentów, umożliwiając plikom konfiguracyjnym aplikacji dołączanie plików konfiguracyjnych w dobrze znanych lokalizacjach, a nie duplikowanie ustawień konfiguracji zestawu.
+[**\<linkedConfiguration>**](linkedconfiguration-element.md)Element upraszcza zarządzanie zestawami składników przez zezwolenie plikom konfiguracji aplikacji na uwzględnianie plików konfiguracji zestawu w dobrze znanych lokalizacjach, a nie duplikowanie ustawień konfiguracji zestawu.
 
 > [!NOTE]
-> Element ** \<linkedConfiguration>** nie jest obsługiwany dla aplikacji z manifestami obok siebie systemu Windows.
+> **\<linkedConfiguration>** Element nie jest obsługiwany w przypadku aplikacji z manifestami równoległymi systemu Windows.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak dołączyć plik konfiguracyjny na lokalnym dysku twardym:
+Poniższy przykład pokazuje, jak dołączyć plik konfiguracji na lokalnym dysku twardym:
 
 ```xml
 <configuration>
@@ -65,6 +65,6 @@ W poniższym przykładzie pokazano, jak dołączyć plik konfiguracyjny na lokal
 </configuration>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracyjnego programu .NET Framework](index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](index.md)

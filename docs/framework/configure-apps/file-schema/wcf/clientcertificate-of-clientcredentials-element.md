@@ -1,24 +1,24 @@
 ---
-title: <clientCertificate><clientCredentials> elementu
+title: <clientCertificate><clientCredentials>elementu
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400517"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<> ClientCertificate elementu \<obiektu ClientCredentials >
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>\<clientCredentials>elementu
 Definiuje certyfikat X. 509 używany do uwierzytelniania klienta w usłudze.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Obiekt clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientCertificate**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCertificate>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,9 +37,9 @@ Definiuje certyfikat X. 509 używany do uwierzytelniania klienta w usłudze.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`findValue`|Ciąg, który zawiera wartość do wyszukania w magazynie certyfikatów X. 509. Typ zawarty w atrybucie musi spełniać wymagania `X509FindType` wartości atrybutu. Wartość domyślna to pusty ciąg.|  
-|`storeLocation`|Określa lokalizację certyfikatu X. 509, którego klient używa do samodzielnego uwierzytelnienia w usłudze. Prawidłowe wartości to:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Określa nazwę magazynu certyfikatu X. 509 do przeszukania. Prawidłowe wartości to:<br /><br /> - AddressBook: Magazyn certyfikatów dla innych użytkowników.<br />AuthRoot Magazyn certyfikatów dla urzędów certyfikacji innych firm.<br />Urząd certyfikacji Magazyn certyfikatów dla pośrednich urzędów certyfikacji (CA).<br />Niedozwolone Magazyn certyfikatów dla odwołanych certyfikatów.<br />Komputer Magazyn certyfikatów dla certyfikatów osobistych.<br />Pierwiastek Magazyn certyfikatów dla zaufanych głównych urzędów certyfikacji (CA).<br />TrustedPeople Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />- TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to my. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Określa typ wyszukiwania X. 509, który ma zostać wykonany. Typ zawarty w `findValue` atrybucie musi spełniać wymagania tego atrybutu. Prawidłowe wartości to:<br /><br /> - FindByThumbPrint<br />- FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|`storeLocation`|Określa lokalizację certyfikatu X. 509, którego klient używa do samodzielnego uwierzytelnienia w usłudze. Prawidłowe wartości to:<br /><br /> -LocalMachine: Magazyn certyfikatów przypisany do komputera lokalnego.<br />-CurrentUser: Magazyn certyfikatów przypisany do bieżącego użytkownika.<br /><br /> Wartość domyślna to LocalMachine. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreLocation> .|  
+|`storeName`|Określa nazwę magazynu certyfikatu X. 509 do przeszukania. Prawidłowe wartości to:<br /><br /> -AddressBook: Magazyn certyfikatów dla innych użytkowników.<br />-AuthRoot: Magazyn certyfikatów dla urzędów certyfikacji innych firm.<br />-Urząd certyfikacji: Magazyn certyfikatów dla pośrednich urzędów certyfikacji (CA).<br />-Niedozwolone: Magazyn certyfikatów dla odwołanych certyfikatów.<br />-My: Magazyn certyfikatów dla certyfikatów osobistych.<br />-Root: Magazyn certyfikatów dla zaufanych głównych urzędów certyfikacji (CA).<br />-TrustedPeople: Magazyn certyfikatów dla bezpośrednio zaufanych osób i zasobów.<br />-TrustedPublisher: Magazyn certyfikatów dla bezpośrednio zaufanych wydawców.<br /><br /> Wartość domyślna to Moje. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.StoreName> .|  
+|X509FindType|Określa typ wyszukiwania X. 509, który ma zostać wykonany. Typ zawarty w `findValue` atrybucie musi spełniać wymagania tego atrybutu. Prawidłowe wartości to:<br /><br /> - FindByThumbPrint<br />- FindBySubjectName<br />- FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />- FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> Wartość domyślna to FindBySubjectDistinguishedName. Ten atrybut jest typu <xref:System.Security.Cryptography.X509Certificates.X509FindType> .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,7 +51,7 @@ Definiuje certyfikat X. 509 używany do uwierzytelniania klienta w usłudze.
 |[\<clientCredentials>](clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta w usłudze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta przy użyciu tego elementu. Aby uzyskać więcej informacji, zobacz [jak: Określ wartości](../../../wcf/how-to-specify-client-credential-values.md)poświadczeń klienta.  
+ Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta przy użyciu tego elementu. Aby uzyskać więcej informacji, zobacz [How to: Określanie wartości poświadczeń klienta](../../../wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -62,7 +62,7 @@ Definiuje certyfikat X. 509 używany do uwierzytelniania klienta w usłudze.
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Zachowania zabezpieczeń](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Instrukcje: Określ wartości poświadczeń klienta](../../../wcf/how-to-specify-client-credential-values.md)
+- [Instrukcje: określanie wartości poświadczeń klienta](../../../wcf/how-to-specify-client-credential-values.md)
 - [Zabezpieczanie klientów](../../../wcf/securing-clients.md)
 - [Praca z certyfikatami](../../../wcf/feature-details/working-with-certificates.md)
 - [Zabezpieczanie usług i klientów](../../../wcf/feature-details/securing-services-and-clients.md)

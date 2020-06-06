@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 ms.openlocfilehash: ea341d562f4b163a3a1771da0f20903b7d64bcdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155534"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<appSettings> elementem \<> konfiguracyjnym
+# <a name="appsettings-element-for-configuration"></a>\<appSettings>, element dla \<configuration>
 
-Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekcja konfiguracji dostarczona przez program .NET Framework.
+Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekcja konfiguracji udostępniona przez .NET Framework.
 
-&nbsp;konfiguracji appSettings>[** \<**](../configuration-element.md) &nbsp; ** \<**
+[**\<configuration>**](../configuration-element.md) &nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,33 +32,33 @@ Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekc
 
 |           | Opis |
 | --------- | ----------- |
-| **Plik**  | Atrybut opcjonalny.<br><br>Określa względną ścieżkę do pliku zewnętrznego zawierającego niestandardowe ustawienia konfiguracji aplikacji. Określony plik zawiera ten sam rodzaj ustawień, które są określone ** \< **w ** \<>dodawania **, usuń>i ** \<wyczyść>** elementy i używa tego samego formatu pary klucz/wartość co te elementy.<br><br>Określona ścieżka jest względem głównego pliku konfiguracyjnego. W przypadku aplikacji Windows Forms jest to folder binarny (na przykład */bin/debug*), a nie lokalizacja pliku konfiguracji aplikacji. W przypadku aplikacji formularzy sieci Web ścieżka jest względem katalogu głównego aplikacji, w którym znajduje się plik *web.config.*<br><br>Środowisko wykonawcze ignoruje atrybut, jeśli nie można odnaleźć określonego pliku. |
+| **rozszerzeniem**  | Atrybut opcjonalny.<br><br>Określa ścieżkę względną do pliku zewnętrznego zawierającego niestandardowe ustawienia konfiguracji aplikacji. Określony plik zawiera ten sam rodzaj ustawień, które są określone w **\<add>** , **\<remove>** , i **\<clear>** i używa tego samego formatu pary klucz/wartość, co te elementy.<br><br>Określona ścieżka jest względna w stosunku do głównego pliku konfiguracji. W przypadku aplikacji Windows Forms jest to folder binarny (na przykład */bin/debug*), a nie lokalizacja pliku konfiguracji aplikacji. W przypadku aplikacji formularzy sieci Web ścieżka jest określana względem katalogu głównego aplikacji, w którym znajduje się plik *Web. config* .<br><br>Środowisko uruchomieniowe ignoruje atrybut, jeśli nie można znaleźć określonego pliku. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [** \<>konfiguracyjne** Element](../configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [**\<configuration>** Postaci](../configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [**\<dodaj>**](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
-| [**\<wyraźne>**](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
-| [**\<usuń>**](remove-element-for-appsettings.md) | Usuwa uprzednio zdefiniowane ustawienie aplikacji. |
+| [**\<add>**](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
+| [**\<clear>**](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
+| [**\<remove>**](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
 
 ## <a name="remarks"></a>Uwagi
 
-** \<AppSettings>** element przechowuje informacje o konfiguracji aplikacji niestandardowych, takie jak parametry połączenia bazy danych, ścieżki plików, adresy URL usługi sieci Web XML lub inne niestandardowe informacje konfiguracyjne dla aplikacji. Pary klucz/wartość określone w ** \<appSettings>** element są dostępne w <xref:System.Configuration.ConfigurationSettings> kodzie przy użyciu klasy.
+**\<appSettings>** Element przechowuje niestandardowe informacje o konfiguracji aplikacji, takie jak parametry połączenia bazy danych, ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji. Pary klucz/wartość określone w **\<appSettings>** elemencie są dostępne w kodzie przy użyciu <xref:System.Configuration.ConfigurationSettings> klasy.
 
-Atrybutu **pliku** można użyć w ** \<appSettings>** element *web.config* i pliki konfiguracyjne aplikacji. Ten atrybut określa plik konfiguracji, który zawiera dodatkowe ustawienia lub zastępuje ustawienia określone w ** \<appSettings>** element. Atrybut **pliku** może służyć w scenariuszach tworzenia zespołu kontroli źródła, takich jak gdy użytkownik chce zastąpić ustawienia projektu określone w pliku konfiguracji aplikacji.
+Możesz użyć atrybutu **pliku** w elemencie w pliku **\<appSettings>** *Web. config* i plikach konfiguracji aplikacji. Ten atrybut określa plik konfiguracji, który zawiera dodatkowe ustawienia lub zastępuje ustawienia określone w **\<appSettings>** elemencie. Atrybut **pliku** może być używany w scenariuszach tworzenia zespołu kontroli źródła, na przykład gdy użytkownik chce zastąpić ustawienia projektu określone w pliku konfiguracyjnym aplikacji.
 
-Pliki konfiguracyjne określone przez atrybut **pliku** muszą mieć węzeł główny ** \<appSettings>,** a nie ** \<>konfiguracji **.
+Pliki konfiguracyjne określone przez atrybut **pliku** muszą mieć węzeł główny, **\<appSettings>** a nie **\<configuration>** .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano plik ustawień aplikacji zewnętrznej *(custom.config),* który definiuje niestandardowe ustawienie aplikacji:
+W poniższym przykładzie przedstawiono zewnętrzny plik ustawień aplikacji (*Custom. config*) definiujący niestandardowe ustawienie aplikacji:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -67,7 +67,7 @@ W poniższym przykładzie pokazano plik ustawień aplikacji zewnętrznej *(custo
 </appSettings>
 ```
 
-W poniższym przykładzie pokazano plik konfiguracji aplikacji, który zużywa ustawienie w pliku ustawień zewnętrznych i ustawia własne ustawienie aplikacji:
+Poniższy przykład przedstawia plik konfiguracji aplikacji, który używa ustawienia w pliku ustawień zewnętrznych i ustawia własne ustawienie aplikacji:
 
 ```xml
 <configuration>
@@ -79,8 +79,8 @@ W poniższym przykładzie pokazano plik konfiguracji aplikacji, który zużywa u
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być używany w pliku konfiguracyjnym aplikacji, pliku konfiguracyjnym komputera *(Machine.config)* i plikach *Web.config,* które nie znajdują się na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Schemat pliku konfiguracyjnego programu .NET Framework](../index.md)
+- [Schemat pliku konfiguracji dla .NET Framework](../index.md)

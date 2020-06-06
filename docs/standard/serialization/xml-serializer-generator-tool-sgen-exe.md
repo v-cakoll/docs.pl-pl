@@ -4,10 +4,10 @@ description: Generator serializatora XML tworzy zestaw serializacji XML dla typÃ
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
 ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288943"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>NarzÄ™dzie generatora serializatora XML (Sgen.exe)

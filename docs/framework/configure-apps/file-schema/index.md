@@ -22,10 +22,10 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039156"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schemat pliku konfiguracji dla .NET Framework
@@ -39,16 +39,16 @@ Aby uzyskać informacje o typach, formacie i lokalizacji plików konfiguracji, z
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[ **\<> elementu konfiguracji** ](configuration-element.md)\
+[**\<configuration>** Postaci](configuration-element.md)\
 Element najwyższego poziomu dla wszystkich plików konfiguracji.
 
-[Element **\<assemblybinding >** ](assemblybinding-element-for-configuration.md)\
+[**\<assemblyBinding>** Postaci](assemblybinding-element-for-configuration.md)\
 Określa zasady powiązań zestawów na poziomie konfiguracji.
 
-[ **\<element > linkedConfiguration** ](linkedconfiguration-element.md)\
+[**\<linkedConfiguration>** Postaci](linkedconfiguration-element.md)\
 Określa plik konfiguracji, który ma zostać uwzględniony.
 
-\ [schematu ustawień uruchamiania](./startup/index.md)
+[Schemat ustawień uruchamiania](./startup/index.md)\
 Elementy określające wersję środowiska uruchomieniowego języka wspólnego do użycia.
 
 [Schemat ustawień środowiska uruchomieniowego](./runtime/index.md)\
@@ -57,48 +57,48 @@ Elementy, które konfigurują powiązanie zestawu i zachowanie środowiska uruch
 [Schemat ustawień sieciowych](./network/index.md)\
 Elementy, które określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem.
 
-\ [schematu ustawień kryptografii](./cryptography/index.md)
+[Schemat ustawień kryptografii](./cryptography/index.md)\
 Elementy, które mapują przyjazne nazwy algorytmów na klasy implementujące algorytmy kryptografii.
 
-\ [schematu sekcji konfiguracyjnych](configuration-sections-schema.md)
+[Schemat sekcji konfiguracji](configuration-sections-schema.md)\
 Elementy służące do tworzenia i używania sekcji konfiguracyjnych ustawień niestandardowych.
 
-[Ustawienia śledzenia i debugowania schematu](./trace-debug/index.md)\
+[Schemat ustawień śledzenia i debugowania](./trace-debug/index.md)\
 Elementy, które określają przełączniki śledzenia i odbiorniki.
 
 [Schemat ustawień kompilatora i dostawcy języka](./compiler/index.md)\
 Elementy, które określają konfigurację kompilatora dla dostępnych dostawców języka.
 
-\ [schematu ustawień aplikacji](application-settings-schema.md)
+[Schemat ustawień aplikacji](application-settings-schema.md)\
 Elementy, które umożliwiają aplikacji Windows Forms lub ASP.NET przechowywanie i pobieranie ustawień zakresu aplikacji i zakresu użytkownika.
 
-\ [schematu ustawień aplikacji](./appsettings/index.md)
+[Schemat ustawień aplikacji](./appsettings/index.md)\
 Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji.
 
-\ [schematu ustawień sieci Web](./web/index.md)
+[Schemat ustawień sieci Web](./web/index.md)\
 Elementy służące do konfigurowania sposobu działania ASP.NET z aplikacją hosta, taką jak usługi IIS. Używany w plikach *ASPNET. config* .
 
-\ [schematu konfiguracji Windows Forms](winforms/index.md)
+[Schemat konfiguracji Windows Forms](winforms/index.md)\
 Wszystkie elementy w sekcji Konfiguracja aplikacji Windows Forms, w tym takie, jak takie dostosowania, jak obsługa wielomonitorów i wysokiej rozdzielczości DPI.
 
-\ [schematu konfiguracji WCF](./wcf/index.md)
+[Schemat konfiguracji WCF](./wcf/index.md)\
 Wszystkie elementy, które umożliwiają skonfigurowanie usługi WCF i aplikacji klienckich.
 
 [Składnia dyrektywy WCF](./wcf-directive/index.md)\
-Opisuje dyrektywę `@ServiceHost`, która definiuje atrybuty specyficzne dla strony używane przez kompilator SVC.
+Opisuje `@ServiceHost` dyrektywę, która definiuje atrybuty specyficzne dla strony używane przez kompilator SVC.
 
-\ [schematu konfiguracji WIF](windows-identity-foundation/index.md)
+[Schemat konfiguracji WIF](windows-identity-foundation/index.md)\
 Wszystkie elementy schematu konfiguracji Windows Identity Foundation (WIF).
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-\ [schematu ustawień usług zdalnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))
+[Schemat ustawień komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 Opisuje elementy, które konfigurują aplikacje klienta i serwera, które implementują komunikację zdalną.
 
-\ [schematu ustawień ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))
+[Schemat ustawień ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 Opisuje elementy kontrolujące zachowanie aplikacji sieci Web ASP.NET.
 
-\ [schematu ustawień usług sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))
+[Schemat ustawień usług sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 Opisuje elementy kontrolujące zachowanie usług sieci Web ASP.NET i ich klientów.
 
 [Konfigurowanie aplikacji .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\

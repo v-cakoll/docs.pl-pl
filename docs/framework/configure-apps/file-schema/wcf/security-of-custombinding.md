@@ -3,21 +3,21 @@ title: <security> dla <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
 ms.openlocfilehash: 454113f66007ddd69f8455bb532e9cbd12fcefb7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738700"
 ---
-# <a name="security-of-custombinding"></a>> zabezpieczeń \<\<CustomBinding >
+# <a name="security-of-custombinding"></a>\<security> dla \<customBinding>
 Określa opcje zabezpieczeń dla niestandardowego powiązania.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<zabezpieczenia >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,17 +48,17 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|allowSerializedSigningTokenOnReply|Opcjonalny. Wartość logiczna określająca, czy serializowany token może być używany w odpowiedzi. Wartość domyślna to `false`. W przypadku korzystania z podwójnego powiązania ustawienie domyślnie `true` i wszystkie wprowadzone ustawienia zostaną zignorowane.|  
+|allowSerializedSigningTokenOnReply|Opcjonalny. Wartość logiczna określająca, czy serializowany token może być używany w odpowiedzi. Wartość domyślna to `false`. W przypadku korzystania z podwójnego powiązania ustawienie domyślnie `true` zostanie zignorowane.|  
 |Parametru AuthenticationMode|Opcjonalny. Określa tryb uwierzytelniania używany między inicjatorem a obiektem odpowiadającym. Poniżej znajdują się wszystkie wartości.<br /><br /> Wartość domyślna to `sspiNegotiated`.|  
-|defaultAlgorithmSuite|Opcjonalny. Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Algorytmy i rozmiary kluczy są określane przez klasę <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Możliwe wartości przedstawiono poniżej. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest używany podczas pracy z inną platformą, która powoduje, że zestaw algorytmów różni się od wartości domyślnej. Podczas wprowadzania modyfikacji tego ustawienia należy mieć świadomość siły i słabości odpowiednich algorytmów. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
+|defaultAlgorithmSuite|Opcjonalny. Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Algorytmy i rozmiary kluczy są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasę. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Możliwe wartości przedstawiono poniżej. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest używany podczas pracy z inną platformą, która powoduje, że zestaw algorytmów różni się od wartości domyślnej. Podczas wprowadzania modyfikacji tego ustawienia należy mieć świadomość siły i słabości odpowiednich algorytmów. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> .|  
 |includeTimestamp|Wartość logiczna określająca, czy sygnatury czasowe są uwzględniane w poszczególnych wiadomościach. Wartość domyślna to `true`.|  
-|Entropia|Określa sposób, w jaki są obliczane klucze służące do zabezpieczania komunikatów. Klucze mogą opierać się tylko na materiale klucza klienta, tylko w materiale klucza usługi lub kombinacji obu tych elementów. Prawidłowe wartości to<br /><br /> -   `ClientEntropy`: klucz sesji jest oparty na danych klucza dostarczonych przez klienta.<br />-   `ServerEntropy`: klucz sesji jest oparty na danych klucza dostarczonych przez serwer.<br />-   `CombinedEntropy`: klucz sesji jest oparty na danych klucza dostarczonych przez klienta i usługę.<br /><br /> Wartość domyślna to `CombinedEntropy`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|messageProtectionOrder|Ustawia kolejność, w jakiej algorytmy zabezpieczeń na poziomie komunikatów są stosowane do wiadomości. Prawidłowe wartości to:<br /><br /> -   `SignBeforeEncrypt`: najpierw Podpisz, a następnie Szyfruj.<br />-   `SignBeforeEncryptAndEncryptSignature`: najpierw Podpisz, Szyfruj, a następnie Szyfruj podpis.<br />-   `EncryptBeforeSign`: Szyfruj najpierw, a następnie podpisz.<br /><br /> Wartość domyślna zależy od używanej wersji usługi WS-Security. Wartość domyślna to `SignBeforeEncryptAndEncryptSignature` w przypadku korzystania z protokołu WS-Security 1,1. Wartość domyślna to `SignBeforeEncrypt` w przypadku korzystania z protokołu WS-Security 1,0.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|messageSecurityVersion|Opcjonalny. Ustawia wersję WS-Security, która jest używana. Prawidłowe wartości to:<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Wartość domyślna to WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 i może być wyrażona w kodzie XML jako po prostu `Default`. Ten atrybut jest typu <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|Entropia|Określa sposób, w jaki są obliczane klucze służące do zabezpieczania komunikatów. Klucze mogą opierać się tylko na materiale klucza klienta, tylko w materiale klucza usługi lub kombinacji obu tych elementów. Prawidłowe wartości to<br /><br /> -   `ClientEntropy`: Klucz sesji jest oparty na danych klucza dostarczonych przez klienta.<br />-   `ServerEntropy`: Klucz sesji jest oparty na danych klucza dostarczonych przez serwer.<br />-   `CombinedEntropy`: Klucz sesji jest oparty na danych klucza dostarczonych przez klienta i usługę.<br /><br /> Wartość domyślna to `CombinedEntropy`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> .|  
+|messageProtectionOrder|Ustawia kolejność, w jakiej algorytmy zabezpieczeń na poziomie komunikatów są stosowane do wiadomości. Prawidłowe wartości to:<br /><br /> -   `SignBeforeEncrypt`: Najpierw Podpisz, a następnie Szyfruj.<br />-   `SignBeforeEncryptAndEncryptSignature`: Najpierw Podpisz, Szyfruj, a następnie Szyfruj podpis.<br />-   `EncryptBeforeSign`: Szyfruj najpierw, a następnie podpisz.<br /><br /> Wartość domyślna zależy od używanej wersji usługi WS-Security. Wartość domyślna to w `SignBeforeEncryptAndEncryptSignature` przypadku korzystania z protokołu WS-Security 1,1. Wartość domyślna to w `SignBeforeEncrypt` przypadku korzystania z protokołu WS-Security 1,0.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.MessageProtectionOrder> .|  
+|messageSecurityVersion|Opcjonalny. Ustawia wersję WS-Security, która jest używana. Prawidłowe wartości to:<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Wartość domyślna to WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 i może być wyrażona w kodzie XML jako po prostu `Default` . Ten atrybut jest typu <xref:System.ServiceModel.MessageSecurityVersion> .|  
 |requireDerivedKeys|Wartość logiczna określająca, czy klucze mogą być uzyskane z oryginalnych kluczy dowodu. Wartość domyślna to `true`.|  
 |requireSecurityContextCancellation|Opcjonalny. Wartość logiczna określająca, czy kontekst zabezpieczeń powinien być anulowany i zakończony, gdy nie jest już wymagany. Wartość domyślna to `true`.|  
-|requireSignatureConfirmation|Opcjonalny. Wartość logiczna określająca, czy włączone jest potwierdzenie podpisu WS-Security. Po ustawieniu na `true`sygnatury komunikatów są potwierdzane przez obiekt odpowiadający.  W przypadku skonfigurowania niestandardowego powiązania dla certyfikatów obustronnych lub skonfigurowania do korzystania z wystawionych tokenów (powiązania usług WSS 1,1) ten atrybut ma wartość domyślną `true`. W przeciwnym razie wartość domyślna to `false`.<br /><br /> Potwierdzenie podpisu służy do potwierdzenia, że usługa reaguje na pełną świadomość żądania.|  
-|securityHeaderLayout|Opcjonalny. Określa kolejność elementów w nagłówku zabezpieczeń. Prawidłowe wartości to<br /><br /> -   `Strict`: elementy są dodawane do nagłówka zabezpieczeń zgodnie z ogólną zasadą "DECLARE przed użyciem".<br />-   `Lax`: elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności, która jest poprawna dla programu WSS: zabezpieczenia komunikatów protokołu SOAP.<br />-   `LaxWithTimestampFirst`: elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności, która jest poprawna dla programu WSS: zabezpieczenia komunikatów protokołu SOAP, z tą różnicą, że pierwszy element w nagłówku zabezpieczeń musi być elementem wsse: timestamp.<br />-   `LaxWithTimestampLast`: elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności, która jest poprawna dla programu WSS: zabezpieczenia komunikatów protokołu SOAP, z tą różnicą, że ostatnim elementem w nagłówku zabezpieczeń musi być element wsse: timestamp.<br /><br /> Wartość domyślna to `Strict`.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|requireSignatureConfirmation|Opcjonalny. Wartość logiczna określająca, czy włączone jest potwierdzenie podpisu WS-Security. Po ustawieniu na `true` sygnatury komunikatów są potwierdzane przez obiekt odpowiadający.  W przypadku skonfigurowania niestandardowego powiązania dla certyfikatów obustronnych lub skonfigurowania do używania wystawionych tokenów (powiązania usług WSS 1,1) ten atrybut jest domyślnie ustawiony na `true` . W przeciwnym razie wartość domyślna to `false` .<br /><br /> Potwierdzenie podpisu służy do potwierdzenia, że usługa reaguje na pełną świadomość żądania.|  
+|securityHeaderLayout|Opcjonalny. Określa kolejność elementów w nagłówku zabezpieczeń. Prawidłowe wartości to<br /><br /> -   `Strict`: Elementy są dodawane do nagłówka Security zgodnie z ogólną zasadą "DECLARE przed użyciem".<br />-   `Lax`: Elementy są dodawane do nagłówka Security w dowolnej kolejności, która jest poprawna w programie WSS: zabezpieczenia komunikatów protokołu SOAP.<br />-   `LaxWithTimestampFirst`: Elementy są dodawane do nagłówka Security w dowolnej kolejności, która jest poprawna dla programu WSS: zabezpieczenia komunikatów protokołu SOAP, z tym wyjątkiem, że pierwszy element w nagłówku zabezpieczeń musi być elementem wsse: timestamp.<br />-   `LaxWithTimestampLast`: Elementy są dodawane do nagłówka Security w dowolnej kolejności, która jest poprawna w programie WSS: zabezpieczenia komunikatów protokołu SOAP, z tym wyjątkiem, że ostatni element w nagłówku zabezpieczeń musi być elementem wsse: timestamp.<br /><br /> Wartość domyślna to `Strict`.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Channels.SecurityHeaderLayout> .|  
   
 ## <a name="authenticationmode-attribute"></a>AuthenticationMode — atrybut  
   
@@ -91,16 +91,16 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](issuedtokenparameters.md)|Określa bieżący token wystawiony. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
-|[\<localClientSettings >](localclientsettings-element.md)|Określa ustawienia zabezpieczeń lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
-|[\<localServiceSettings >](localservicesettings-element.md)|Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
-|[\<secureConversationBootstrap >](secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|Określa bieżący token wystawiony. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement> .|  
+|[\<localClientSettings>](localclientsettings-element.md)|Określa ustawienia zabezpieczeń lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> .|  
+|[\<localServiceSettings>](localservicesettings-element.md)|Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement> .|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
+|[\<binding>](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat używania tego elementu, zobacz [elementu SecurityBindingElement Authentication Modes](../../../wcf/feature-details/securitybindingelement-authentication-modes.md) and [How to: Create a Custom Binding using the elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
@@ -108,9 +108,9 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
 ## <a name="example"></a>Przykład  
  Poniższy przykład ilustruje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Pokazuje, jak użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie wiadomości razem z bezpiecznym transportem. Jest to przydatne, gdy do przesyłania komunikatów między klientem i usługą jest wymagany bezpieczny transport, a jednocześnie komunikaty muszą być bezpieczne na poziomie wiadomości. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczone przez system.  
   
- Konfiguracja usługi definiuje niestandardowe powiązanie obsługujące komunikację TCP zabezpieczone przy użyciu protokołu TLS/SSL i zabezpieczenia komunikatów systemu Windows. Niestandardowe powiązanie używa certyfikatu usługi do uwierzytelniania usługi na poziomie transportu oraz do ochrony komunikatów podczas przesyłania między klientem i usługą. Jest to realizowane przez [\<sslStreamSecurity >](sslstreamsecurity.md) element powiązania. Certyfikat usługi jest konfigurowany przy użyciu zachowania usługi.  
+ Konfiguracja usługi definiuje niestandardowe powiązanie obsługujące komunikację TCP zabezpieczone przy użyciu protokołu TLS/SSL i zabezpieczenia komunikatów systemu Windows. Niestandardowe powiązanie używa certyfikatu usługi do uwierzytelniania usługi na poziomie transportu oraz do ochrony komunikatów podczas przesyłania między klientem i usługą. Jest to realizowane przez [\<sslStreamSecurity>](sslstreamsecurity.md) element Binding. Certyfikat usługi jest konfigurowany przy użyciu zachowania usługi.  
   
- Ponadto niestandardowe powiązanie używa zabezpieczeń komunikatów z typem poświadczeń systemu Windows — jest to domyślny typ poświadczeń. Jest to realizowane przez element powiązania [zabezpieczeń](security-of-custombinding.md) . Klient i usługa są uwierzytelniani przy użyciu zabezpieczeń na poziomie wiadomości, jeśli jest dostępny mechanizm uwierzytelniania Kerberos. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępny, jest używane uwierzytelnianie NTLM. Protokół NTLM uwierzytelnia klienta w usłudze, ale nie uwierzytelnia usługi dla klienta. Element powiązania [zabezpieczeń](security-of-custombinding.md) jest skonfigurowany tak, aby używał `SecureConversation` AuthenticationType, co powoduje utworzenie sesji zabezpieczeń zarówno na kliencie, jak i w usłudze. Jest to wymagane, aby umożliwić pracę kontraktu dupleksowego usługi. Aby uzyskać więcej informacji na temat uruchamiania tego przykładu, zobacz [niestandardowe powiązania zabezpieczeń](../../../wcf/samples/custom-binding-security.md).  
+ Ponadto niestandardowe powiązanie używa zabezpieczeń komunikatów z typem poświadczeń systemu Windows — jest to domyślny typ poświadczeń. Jest to realizowane przez element powiązania [zabezpieczeń](security-of-custombinding.md) . Klient i usługa są uwierzytelniani przy użyciu zabezpieczeń na poziomie wiadomości, jeśli jest dostępny mechanizm uwierzytelniania Kerberos. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępny, jest używane uwierzytelnianie NTLM. Protokół NTLM uwierzytelnia klienta w usłudze, ale nie uwierzytelnia usługi dla klienta. Element powiązania [zabezpieczeń](security-of-custombinding.md) jest skonfigurowany do korzystania z typu `SecureConversation` AuthenticationType, co powoduje utworzenie sesji zabezpieczeń zarówno na kliencie, jak i w usłudze. Jest to wymagane, aby umożliwić pracę kontraktu dupleksowego usługi. Aby uzyskać więcej informacji na temat uruchamiania tego przykładu, zobacz [niestandardowe powiązania zabezpieczeń](../../../wcf/samples/custom-binding-security.md).  
   
 ```xml  
 <configuration>
@@ -175,6 +175,6 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<niestandardowebinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)
 - [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia powiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)
+- [Zabezpieczenia wiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)

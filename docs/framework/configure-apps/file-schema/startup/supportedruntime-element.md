@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "82796044"
 ---
-# <a name="supportedruntime-element"></a>\<supportedRuntime, element>
+# <a name="supportedruntime-element"></a>\<supportedRuntime>, element
 
 Określa, która wersja środowiska uruchomieniowego języka wspólnego i, opcjonalnie, .NET Framework wersji aplikacji.  
 
-[\<>konfiguracji](../configuration-element.md)  
-&nbsp;&nbsp;[\<>uruchamiania](startup-element.md)  
+[\<configuration>](../configuration-element.md)  
+&nbsp;&nbsp;[\<startup>](startup-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
 
 ## <a name="syntax"></a>Składnia
@@ -39,25 +39,25 @@ Określa, która wersja środowiska uruchomieniowego języka wspólnego i, opcjo
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli element ** \<supportedRuntime>** nie znajduje się w pliku konfiguracji aplikacji, używana jest wersja środowiska uruchomieniowego użyta do skompilowania aplikacji.
+Jeśli **\<supportedRuntime>** element nie znajduje się w pliku konfiguracji aplikacji, używana jest wersja środowiska uruchomieniowego użyta do skompilowania aplikacji.
 
-Element ** \<>supportedRuntime** powinien być używany przez wszystkie aplikacje skompilowane przy użyciu wersji 1,1 lub nowszej środowiska uruchomieniowego. Aplikacje skompilowane do obsługi tylko wersji 1,0 środowiska uruchomieniowego muszą używać elementu [ \<requiredRuntime>](requiredruntime-element.md) .
+**\<supportedRuntime>** Element powinien być używany przez wszystkie aplikacje skompilowane przy użyciu wersji 1,1 lub nowszej środowiska uruchomieniowego. Aplikacje skompilowane do obsługi tylko wersji 1,0 środowiska uruchomieniowego muszą używać [\<requiredRuntime>](requiredruntime-element.md) elementu.
 
 > [!NOTE]
-> Jeśli używasz funkcji [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) do określenia pliku konfiguracji, musisz użyć `<requiredRuntime>` elementu dla wszystkich wersji środowiska uruchomieniowego. Element `<supportedRuntime>` jest ignorowany w przypadku korzystania z [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
+> Jeśli używasz funkcji [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) do określenia pliku konfiguracji, musisz użyć `<requiredRuntime>` elementu dla wszystkich wersji środowiska uruchomieniowego. `<supportedRuntime>`Element jest ignorowany w przypadku korzystania z [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
 W przypadku aplikacji, które obsługują wersje środowiska uruchomieniowego z .NET Framework 1,1 do 3,5, gdy obsługiwane są różne wersje środowiska uruchomieniowego, pierwszy element powinien określać najbardziej preferowaną wersję środowiska uruchomieniowego, a ostatni element powinien określać najmniejszą preferowaną wersję. W przypadku aplikacji, które obsługują .NET Framework 4,0 lub nowszych, `version` atrybut wskazuje wersję środowiska CLR, która jest wspólna dla .NET Framework 4 i nowszych wersji, a `sku` atrybut wskazuje na jedną .NET Framework wersję, która jest przeznaczona dla aplikacji.
 
-Jeśli element ** \<>supportedRuntime** z `sku` atrybutem jest obecny w pliku konfiguracyjnym, a zainstalowana wersja .NET Framework jest niższa niż określona obsługiwana wersja, aplikacja nie zostanie uruchomiona, a zamiast tego zostanie wyświetlony komunikat z prośbą o zainstalowanie obsługiwanej wersji. W przeciwnym razie aplikacja próbuje uruchomić się w dowolnej zainstalowanej wersji, ale może zachowywać się nieoczekiwanie, jeśli nie jest w pełni zgodna z tą wersją. (Aby uzyskać różnice zgodności między wersjami .NET Framework, zobacz [zgodność aplikacji w .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)). W związku z tym zaleca się dołączenie tego elementu w pliku konfiguracji aplikacji w celu ułatwienia diagnostyki błędów. (Plik konfiguracji jest generowany automatycznie przez program Visual Studio podczas tworzenia nowego projektu.)
+Jeśli **\<supportedRuntime>** element z `sku` atrybutem jest obecny w pliku konfiguracji, a zainstalowana wersja .NET Framework jest niższa niż określona obsługiwana wersja, aplikacja nie zostanie uruchomiona, a zamiast tego zostanie wyświetlony komunikat z prośbą o zainstalowanie obsługiwanej wersji. W przeciwnym razie aplikacja próbuje uruchomić się w dowolnej zainstalowanej wersji, ale może zachowywać się nieoczekiwanie, jeśli nie jest w pełni zgodna z tą wersją. (Aby uzyskać różnice zgodności między wersjami .NET Framework, zobacz [zgodność aplikacji w .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)). W związku z tym zaleca się dołączenie tego elementu w pliku konfiguracji aplikacji w celu ułatwienia diagnostyki błędów. (Plik konfiguracji jest generowany automatycznie przez program Visual Studio podczas tworzenia nowego projektu.)
   
 > [!NOTE]
-> Jeśli aplikacja używa starszych ścieżek aktywacji, takich jak [Funkcja CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), i chcesz, aby te ścieżki uaktywniali wersję 4 środowiska CLR zamiast wcześniejszej wersji, lub jeśli aplikacja została skompilowana przy użyciu .NET Framework 4, ale ma zależność od zestawu w trybie mieszanym skompilowanego z wcześniejszą wersją .NET Framework, nie wystarczy określić .NET Framework 4 na liście obsługiwanych środowisk uruchomieniowych. Ponadto w pliku konfiguracji, w [ \<> uruchamiania](startup-element.md) , należy ustawić `useLegacyV2RuntimeActivationPolicy` atrybut na `true`. Jednak ustawienie tego atrybutu `true` oznacza, że wszystkie składniki skompilowane przy użyciu wcześniejszych wersji .NET Framework są uruchamiane przy użyciu .NET Framework 4 zamiast środowiska uruchomieniowego, z których zostały skompilowane.
+> Jeśli aplikacja używa starszych ścieżek aktywacji, takich jak [Funkcja CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), i chcesz, aby te ścieżki uaktywniali wersję 4 środowiska CLR zamiast wcześniejszej wersji, lub jeśli aplikacja została skompilowana przy użyciu .NET Framework 4, ale ma zależność od zestawu w trybie mieszanym skompilowanego z wcześniejszą wersją .NET Framework, nie wystarczy określić .NET Framework 4 na liście obsługiwanych środowisk uruchomieniowych. Ponadto, w [ \<startup> elemencie](startup-element.md) w pliku konfiguracji, należy ustawić `useLegacyV2RuntimeActivationPolicy` atrybut na `true` . Jednak ustawienie tego atrybutu `true` oznacza, że wszystkie składniki skompilowane przy użyciu wcześniejszych wersji .NET Framework są uruchamiane przy użyciu .NET Framework 4 zamiast środowiska uruchomieniowego, z których zostały skompilowane.
 
 Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework, za pomocą której mogą być uruchamiane.
 
 <a name="version"></a>
 ## <a name="runtime-version-values"></a>wartości "wersja środowiska uruchomieniowego"
-Ten `runtime` atrybut określa wersję środowiska uruchomieniowego języka wspólnego (CLR), która jest wymagana dla danej aplikacji. Należy pamiętać, że wszystkie wersje .NET Framework v4. x `v4.0` określają środowisko CLR. Poniższa tabela zawiera listę prawidłowych wartości dla wartości *wersji środowiska uruchomieniowego* `version` atrybutu.
+Ten `runtime` atrybut określa wersję środowiska uruchomieniowego języka wspólnego (CLR), która jest wymagana dla danej aplikacji. Należy pamiętać, że wszystkie wersje .NET Framework v4. x określają `v4.0` środowisko CLR. Poniższa tabela zawiera listę prawidłowych wartości dla wartości *wersji środowiska uruchomieniowego* `version` atrybutu.
 
 |Wersja programu .NET Framework|Atrybut `version`|
 |----------------------------|-------------------------|
@@ -70,7 +70,7 @@ Ten `runtime` atrybut określa wersję środowiska uruchomieniowego języka wsp�
 
 ## <a name="sku-id-values"></a><a name="sku"></a>wartości "identyfikator jednostki SKU"
 
-Ten `sku` atrybut używa monikera platformy docelowej (TFM) w celu wskazania wersji .NET Framework, której aplikacja jest przeznaczona do uruchomienia. Poniższa tabela zawiera listę prawidłowych wartości, które są `sku` obsługiwane przez atrybut, począwszy od .NET Framework 4.
+Ten `sku` atrybut używa monikera platformy docelowej (TFM) w celu wskazania wersji .NET Framework, której aplikacja jest przeznaczona do uruchomienia. Poniższa tabela zawiera listę prawidłowych wartości, które są obsługiwane przez `sku` atrybut, począwszy od .NET Framework 4.
 
 |Wersja programu .NET Framework|Atrybut `sku`|
 |----------------------------|---------------------|

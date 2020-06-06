@@ -3,22 +3,22 @@ title: <localServiceSettings>, element
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400300"
 ---
-# <a name="localservicesettings-element"></a>\<localServiceSettings, element >
+# <a name="localservicesettings-element"></a>\<localServiceSettings>, element
 Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localServiceSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localServiceSettings>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,12 +56,12 @@ Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania.
 |`maxPendingSessions`|Dodatnia liczba całkowita, która określa maksymalną liczbę oczekujących sesji bezpieczeństwa obsługiwanych przez usługę. Po osiągnięciu tego limitu Wszyscy nowi klienci odbierają błędy protokołu SOAP. Wartość domyślna to 1000.|  
 |`maxStatefulNegotiations`|Dodatnia liczba całkowita, która określa liczbę negocjacji zabezpieczeń, które mogą być jednocześnie aktywne. Sesje negocjacji przekraczające limit są umieszczane w kolejce i można je wykonać tylko wtedy, gdy będzie dostępna spacja poniżej limitu. Wartość domyślna to 1024.|  
 |`negotiationTimeout`|A <xref:System.TimeSpan> określa okres istnienia zasad zabezpieczeń używanych przez kanał. Po upływie tego czasu kanał jest negocjowany ponownie z klientem w celu uzyskania nowych zasad zabezpieczeń. Wartość domyślna to "00:02:00".|  
-|`reconnectTransportOnFailure`|Wartość logiczna określająca, czy połączenia korzystające z protokołu WS-niezawodny będą podejmować próby ponownego nawiązania połączenia po awariach transportu. Wartość domyślna to `true`, co oznacza, że podjęto próbę nieograniczonej próby ponownego nawiązania połączenia. Cykl jest przerwany przez limit czasu braku aktywności, który powoduje, że kanał zgłasza wyjątek, gdy nie można ponownie nawiązać połączenia.|  
+|`reconnectTransportOnFailure`|Wartość logiczna określająca, czy połączenia korzystające z protokołu WS-niezawodny będą podejmować próby ponownego nawiązania połączenia po awariach transportu. Wartość domyślna to `true` , co oznacza, że podjęto próbę nieograniczonej próby ponownego nawiązania połączenia. Cykl jest przerwany przez limit czasu braku aktywności, który powoduje, że kanał zgłasza wyjątek, gdy nie można ponownie nawiązać połączenia.|  
 |`replayCacheSize`|Dodatnia liczba całkowita określająca liczbę buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń. W przypadku przekroczenia tego limitu najstarszy identyfikator jednorazowy zostanie usunięty i dla nowej wiadomości zostanie utworzony nowy identyfikator jednorazowy. Wartość domyślna to 500000.|  
 |`replayWindow`|A <xref:System.TimeSpan> , który określa czas, w którym poszczególne wiadomości identyfikatorów jednorazowych są prawidłowe.<br /><br /> Po tym czasie zostanie wysłany komunikat z tym samym identyfikatorem jednorazowym, który został wysłany wcześniej, nie zostanie zaakceptowany. Ten atrybut jest używany w połączeniu z `maxClockSkew` atrybutem w celu zapobiegania atakom metodą powtórzeń. Osoba atakująca może odtworzyć komunikat po wygaśnięciu okna powtarzania. Jednak ten komunikat `maxClockSkew` przetestuje niepowodzenie testu, który odrzuca komunikaty z sygnaturami czasowymi czasu wysłania do określonego czasu później lub wcześniej od momentu odebrania komunikatu.|  
 |`sessionKeyRenewalInterval`|A <xref:System.TimeSpan> , który określa czas, po którym inicjator odnowi klucz dla sesji zabezpieczeń. Wartość domyślna to "10:00:00".|  
 |`sessionKeyRolloverInterval`|A <xref:System.TimeSpan> określa przedział czasu, w którym poprzedni klucz sesji jest ważny w przypadku komunikatów przychodzących podczas odnawiania klucza. Wartość domyślna to "00:05:00".<br /><br /> Podczas odnawiania klucza klient i serwer muszą zawsze wysyłać komunikaty przy użyciu najbardziej aktualnego dostępnego klucza. Obie strony będą akceptować wiadomości przychodzące zabezpieczone przy użyciu poprzedniego klucza sesji do momentu wygaśnięcia czasu przerzucania.|  
-|`timestampValidityDuration`|Wartość dodatnia <xref:System.TimeSpan> określająca czas ważności sygnatury czasowej. Wartość domyślna to "00:15:00".|  
+|`timestampValidityDuration`|Wartość dodatnia określająca <xref:System.TimeSpan> czas ważności sygnatury czasowej. Wartość domyślna to "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -70,7 +70,7 @@ Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zabezpieczeń](security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
+|[\<security>](security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -86,7 +86,7 @@ Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania.
   
 - `inactivityTimeout`: określa maksymalny czas, przez który usługa utrzymuje bezpieczną konwersację, bez odebrania na niej komunikatu aplikacji. Ten limit przydziału uniemożliwia klientom ustanawianie bezpiecznych konwersacji w usłudze, co powoduje, że usługa zachowuje stan dla każdego klienta, ale nigdy nie korzysta z nich.  
   
- W sesji bezpiecznej konwersacji należy zauważyć, że zarówno `inactivityTimeout` , `receiveTimeout` jak i atrybuty dotyczące powiązań wpływają na limit czasu sesji. Krótszy z dwóch określa czas wystąpienia przekroczeń limitu czasu.  
+ W sesji bezpiecznej konwersacji należy zauważyć, że zarówno, `inactivityTimeout` jak i `receiveTimeout` atrybuty dotyczące powiązań wpływają na limit czasu sesji. Krótszy z dwóch określa czas wystąpienia przekroczeń limitu czasu.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -99,5 +99,5 @@ Określa ustawienia zabezpieczeń usługi lokalnej dla tego powiązania.
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia powiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)
+- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia wiązania niestandardowego](../../../wcf/samples/custom-binding-security.md)

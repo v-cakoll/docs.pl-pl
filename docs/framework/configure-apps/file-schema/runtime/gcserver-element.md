@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968948"
 ---
-# <a name="gcserver-element"></a>\<element > gcServer
+# <a name="gcserver-element"></a>\<gcServer>, element
 
 Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci serwera.
 
-[\<> konfiguracji](../configuration-element.md)\
-&nbsp;&nbsp;[\<środowiska uruchomieniowego >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer >
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,14 +60,14 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy wyrzucania elementów bezużytecznych: odzyskiwanie pamięci stacji roboczej, które jest dostępne we wszystkich systemach i wyrzucanie elementów bezużytecznych serwera, które jest dostępne w systemach wieloprocesorowych. Użyj elementu **gcServer** , aby kontrolować typ wyrzucania elementów bezużytecznych wykonywanych przez środowisko CLR. Użyj właściwości <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>, aby określić, czy jest włączone odzyskiwanie pamięci serwera.
+Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy wyrzucania elementów bezużytecznych: odzyskiwanie pamięci stacji roboczej, które jest dostępne we wszystkich systemach i wyrzucanie elementów bezużytecznych serwera, które jest dostępne w systemach wieloprocesorowych. Użyj elementu **gcServer** , aby kontrolować typ wyrzucania elementów bezużytecznych wykonywanych przez środowisko CLR. Użyj <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> właściwości, aby określić, czy jest włączone odzyskiwanie pamięci serwera.
 
 W przypadku komputerów z jednym procesorem domyślna opcja wyrzucania elementów bezużytecznych stacji roboczej powinna być najszybszą opcją. Stacja robocza lub serwer może być używana w przypadku komputerów dwuprocesorowych. Wyrzucanie elementów bezużytecznych serwera powinno być najszybszą opcją dla więcej niż dwóch procesorów. Najczęściej systemy serwerów wieloprocesorowych wyłączą serwer GC i używają stacji roboczej GC zamiast tego, gdy wiele wystąpień aplikacji serwerowych działa na tym samym komputerze.
 
 Tego elementu można używać tylko w pliku konfiguracji aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.
 
 > [!NOTE]
-> W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera, Ustaw element **gcServer** na `true` i [element gcConcurrent](gcconcurrent-element.md) , aby `false`.
+> W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera, Ustaw element **gcServer** na `true` i [element gcConcurrent](gcconcurrent-element.md) na wartość `false` .
 
 Począwszy od .NET Framework 4.6.2 można również skonfigurować serwer GC przy użyciu następujących elementów:
 

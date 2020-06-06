@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251793"
 ---
-# <a name="systemidentitymodel"></a>\<system.identityModel>
+# \<system.identityModel>
 Zapewnia konfigurację umożliwiającą włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp; **\<> System. identityModel**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.identityModel>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,10 +42,10 @@ Zapewnia konfigurację umożliwiającą włączanie opcji Windows Identity Found
 |`<configuration>`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<system.identityModel>` Dodaj sekcję do pliku konfiguracji, aby skonfigurować usługę lub aplikację do korzystania z programu Windows Identity Foundation (WIF). Element jest reprezentowany <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> przez klasę. `<system.identityModel>`  
+ Dodaj `<system.identityModel>` sekcję do pliku konfiguracji, aby skonfigurować usługę lub aplikację do korzystania z programu Windows Identity Foundation (WIF). `<system.identityModel>`Element jest reprezentowany przez <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> klasę.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak dodać `<system.identityModel>` sekcję do pliku konfiguracji. Najpierw należy dodać sekcję konfiguracyjną i deklarację przestrzeni nazw w `<configSections>` ramach elementu. Następnie można dodać `<system.IdentityModel>` element do pliku konfiguracji, aby określić co najmniej jedną konfigurację tożsamości.  
+ Poniższy przykład pokazuje, jak dodać `<system.identityModel>` sekcję do pliku konfiguracji. Najpierw należy dodać sekcję konfiguracyjną i deklarację przestrzeni nazw w ramach `<configSections>` elementu. Następnie można dodać `<system.IdentityModel>` element do pliku konfiguracji, aby określić co najmniej jedną konfigurację tożsamości.  
   
 ```xml  
 <configuration>  

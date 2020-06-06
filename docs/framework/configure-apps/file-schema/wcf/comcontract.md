@@ -3,19 +3,19 @@ title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850026"
 ---
-# <a name="comcontract"></a>\<comContract >
+# \<comContract>
 Określa kontrakt usługi integracji COM+.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,10 +51,10 @@ Określa kontrakt usługi integracji COM+.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Przedsiębiorc|Ciąg, który zawiera typ kontraktu.|  
-|nazwa|Ciąg, który zawiera nazwę kontraktu.|  
-|— przestrzeń nazw|Ciąg, który zawiera przestrzeń nazw kontraktu.|  
-|requiresSession|Wartość logiczna określająca, czy kontrakt może być używany tylko na powiązaniach sesji. Po zainicjowaniu usługi środowisko Integration Runtime zapewnia spójność tego ustawienia z typem powiązania, które ma być używane. Wyjątek jest generowany, jeśli co najmniej jedno powiązanie kontraktu jest w konflikcie. Jeśli ta właściwość ma `false`wartość, a kanał jednokierunkowy jest używany i istnieją wszystkie parametry [out], generowany jest również wyjątek.|  
+|przedsiębiorc|Ciąg, który zawiera typ kontraktu.|  
+|name|Ciąg, który zawiera nazwę kontraktu.|  
+|namespace|Ciąg, który zawiera przestrzeń nazw kontraktu.|  
+|requiresSession|Wartość logiczna określająca, czy kontrakt może być używany tylko na powiązaniach sesji. Po zainicjowaniu usługi środowisko Integration Runtime zapewnia spójność tego ustawienia z typem powiązania, które ma być używane. Wyjątek jest generowany, jeśli co najmniej jedno powiązanie kontraktu jest w konflikcie. Jeśli ta właściwość ma wartość `false` , a kanał jednokierunkowy jest używany i istnieją wszystkie parametry [out], generowany jest również wyjątek.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -71,7 +71,7 @@ Określa kontrakt usługi integracji COM+.
 |comContracts|Zawiera kolekcję `comContract` elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kontrakty usługi integracji modelu COM+ są obecnie ograniczone `http://tempuri.org` do przestrzeni nazw, a nazwa kontraktu pochodzi od pomocniczego interfejsu com. Można jednak określić alternatywy przy użyciu `comContracts` sekcji, a także `comContract` elementu w pliku konfiguracji. Można na przykład użyć poniższej konfiguracji, aby określić przestrzeń nazw, nazwę kontraktu i typy zdefiniowane przez użytkownika, a także inne ustawienia dla kontraktu usługi.  
+ Kontrakty usługi integracji modelu COM+ są obecnie ograniczone do `http://tempuri.org` przestrzeni nazw, a nazwa kontraktu pochodzi od pomocniczego interfejsu com. Można jednak określić alternatywy przy użyciu `comContracts` sekcji, a także `comContract` elementu w pliku konfiguracji. Można na przykład użyć poniższej konfiguracji, aby określić przestrzeń nazw, nazwę kontraktu i typy zdefiniowane przez użytkownika, a także inne ustawienia dla kontraktu usługi.  
   
 ```xml  
 <comContracts>
@@ -95,5 +95,5 @@ Określa kontrakt usługi integracji COM+.
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](comcontracts.md)
-- [Współdziałanie z aplikacjami COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Integrowanie z aplikacjami COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Instrukcje: konfigurowanie ustawień usługi COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

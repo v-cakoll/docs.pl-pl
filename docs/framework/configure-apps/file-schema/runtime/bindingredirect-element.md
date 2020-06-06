@@ -1,5 +1,5 @@
 ---
-title: <bindingRedirect>, element
+title: <bindingRedirect> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154299"
 ---
-# <a name="bindingredirect-element"></a>\<element> bindingRedirect
+# <a name="bindingredirect-element"></a>\<bindingRedirect> Element
 Przekierowuje jedną wersję zestawu do innej.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>montażowy**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>bindingRedirect**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bindingRedirect>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ newVersion="new assembly version"/>
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`oldVersion`|Atrybut wymagany.<br /><br /> Określa pierwotnie żądaną wersję zestawu. Format numeru wersji zestawu to *major.minor.build.revision*. Prawidłowe wartości każdej części tego numeru wersji należą do zakresu od 0 do 65535.<br /><br /> Można również określić zakres wersji w następującym formacie:<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|Atrybut wymagany.<br /><br /> Określa wersję zestawu, która ma być używana zamiast pierwotnie żądanej wersji w formacie: *n.n.n.n*<br /><br /> Ta wartość może określić `oldVersion`wcześniejszą wersję niż .|  
+|`oldVersion`|Atrybut wymagany.<br /><br /> Określa pierwotnie żądaną wersję zestawu. Format numeru wersji zestawu to *główna. pomocnicza. kompilacja. poprawka*. Prawidłowe wartości każdej części tego numeru wersji należą do zakresu od 0 do 65535.<br /><br /> Można również określić zakres wersji w następującym formacie:<br /><br /> *n. n. n. n-n. n. n. n*|  
+|`newVersion`|Atrybut wymagany.<br /><br /> Określa wersję zestawu do użycia zamiast pierwotnie żądanej wersji w formacie: *n. n. n. n*<br /><br /> Ta wartość może określać wcześniejszą wersję niż `oldVersion` .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku skompilowania aplikacji programu .NET Framework z użyciem zestawu o silnej nazwie aplikacja domyślnie używa tej wersji w czasie działania, nawet jeśli jest dostępna nowa wersja. Można jednak skonfigurować aplikację do działania z użyciem nowszej wersji zestawu. Aby uzyskać szczegółowe informacje na temat sposobu, w jaki środowisko wykonawcze używa tych plików do określenia, której wersji zestawu użyć, zobacz [Jak środowisko wykonawcze lokalizuje zestawy](../../../deployment/how-the-runtime-locates-assemblies.md).  
+ W przypadku skompilowania aplikacji programu .NET Framework z użyciem zestawu o silnej nazwie aplikacja domyślnie używa tej wersji w czasie działania, nawet jeśli jest dostępna nowa wersja. Można jednak skonfigurować aplikację do działania z użyciem nowszej wersji zestawu. Aby uzyskać szczegółowe informacje dotyczące sposobu, w jaki środowisko uruchomieniowe używa tych plików do określenia wersji zestawu do użycia, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../deployment/how-the-runtime-locates-assemblies.md).  
   
- Można przekierować więcej niż jedną `bindingRedirect` wersję zestawu, dołączając wiele elementów w elemencie. `dependentAssembly` Można również wykonać przekierowanie z nowszej wersji zestawu do starszej.  
+ Można przekierować więcej niż jedną wersję zestawu, dołączając wiele `bindingRedirect` elementów w `dependentAssembly` elemencie. Można również wykonać przekierowanie z nowszej wersji zestawu do starszej.  
   
- Jawne przekierowanie powiązań zestawu w pliku konfiguracji aplikacji wymaga uprawnienia zabezpieczeń. Dotyczy to przekierowań zestawów programu .NET Framework i zestawów firm trzecich. Uprawnienie jest przyznawane <xref:System.Security.Permissions.SecurityPermissionFlag> przez ustawienie <xref:System.Security.Permissions.SecurityPermission>flagi na pliku . Aby uzyskać więcej informacji, zobacz [Uprawnienie zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
+ Jawne przekierowanie powiązań zestawu w pliku konfiguracji aplikacji wymaga uprawnienia zabezpieczeń. Dotyczy to przekierowań zestawów programu .NET Framework i zestawów firm trzecich. Uprawnienie jest udzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagi na <xref:System.Security.Permissions.SecurityPermission> . Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób przekierowywania wersji zestawu.  
@@ -84,7 +84,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

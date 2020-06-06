@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
 ms.openlocfilehash: 30ce69a35cfdd34e0dfea5c682347eb9187e04ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152453"
 ---
-# <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerOquirement>
-Zapewnia opcjonalną <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> konfigurację dla klasy lub klas pochodnych.  
+# \<x509SecurityTokenHandlerRequirement>
+Zapewnia opcjonalną konfigurację <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> klasy lub klas pochodnych.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>konfiguracji tożsamości**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dodaj>**](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509SecurityTokenHandlerOquirement>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509SecurityTokenHandlerRequirement>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,11 +47,11 @@ Zapewnia opcjonalną <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Certificatevalidationmode|Wartość <xref:System.ServiceModel.Security.X509CertificateValidationMode> określająca tryb sprawdzania poprawności dla certyfikatu X.509. Wartością domyślną jest "PeerOrChainTrust".|  
-|mapToWindows|Określa, czy program obsługi tokenu powinien mapować token sprawdzania poprawności na konto systemu Windows przy użyciu przychodzącego oświadczenia upn. Wartość domyślna to "false".|  
-|revocationMode|Wartość <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> określająca tryb odwołania do użycia dla certyfikatu X.509. Wartością domyślną jest "Online".|  
-|trustedStoreLocation|Wartość <xref:System.Security.Cryptography.X509Certificates.StoreLocation> określająca magazyn certyfikatów X.509. Wartością domyślną jest "LocalMachine".|  
-|certificateValidator|Typ niestandardowy, który <xref:System.IdentityModel.Selectors.X509CertificateValidator>pochodzi od . Jeśli `certificateValidationMode` atrybut jest "Niestandardowe", wystąpienie tego typu jest używane do sprawdzania poprawności certyfikatu wystawcy.|  
+|certificateValidationMode|Wartość określająca <xref:System.ServiceModel.Security.X509CertificateValidationMode> tryb walidacji, który ma być używany dla certyfikatu X. 509. Wartość domyślna to "PeerOrChainTrust".|  
+|mapToWindows|Określa, czy program obsługi tokenów powinien mapować token walidacji na konto systemu Windows przy użyciu przychodzącego oświadczenie nazwy UPN. Wartość domyślna to "false".|  
+|odwołaniemode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>Wartość określająca tryb odwołania, który ma być używany dla certyfikatu X. 509. Wartość domyślna to "online".|  
+|trustedStoreLocation|Wartość określająca <xref:System.Security.Cryptography.X509Certificates.StoreLocation> Magazyn certyfikatów X. 509. Wartość domyślna to "LocalMachine".|  
+|certificateValidator|Typ niestandardowy, który pochodzi od <xref:System.IdentityModel.Selectors.X509CertificateValidator> . Jeśli `certificateValidationMode` atrybut jest "Custom", wystąpienie tego typu jest używane na potrzeby walidacji certyfikatu wystawcy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -60,7 +60,7 @@ Zapewnia opcjonalną <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<dodaj>](add.md)|Dodaje określony program obsługi tokenu zabezpieczającego do kolekcji obsługi tokenów.|  
+|[\<add>](add.md)|Dodaje określony program obsługi tokenów zabezpieczających do kolekcji obsługi tokenów.|  
   
 ## <a name="example"></a>Przykład  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913034"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań
@@ -24,18 +24,18 @@ Automatyczne przekierowania powiązań są domyślnie włączone dla aplikacji k
 
 Jeśli masz program Visual Studio 2017 w wersji 15,7 lub nowszej, możesz łatwo wyłączyć automatycznie generowane przekierowania powiązań na stronach właściwości projektu.
 
-1. Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **właściwości**.
+1. Kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
 
 2. Na stronie **aplikacja** Usuń zaznaczenie opcji **automatycznie Generuj powiązania powiązań** .
 
-3. Naciśnij **kombinację klawiszy CTRL**+**S** , aby zapisać zmiany.
+3. Naciśnij **kombinację klawiszy CTRL** + **S** , aby zapisać zmiany.
 
 ### <a name="disable-manually-in-the-project-file"></a>Wyłącz ręcznie w pliku projektu
 
 1. Otwórz plik projektu do edycji przy użyciu jednej z następujących metod:
 
    - W programie Visual Studio wybierz projekt w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Otwórz folder w Eksploratorze plików** z menu skrótów. W Eksploratorze plików Znajdź plik projektu (. csproj lub. vbproj) i otwórz go w Notatniku.
-   - W programie Visual Studio w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**. Ponownie kliknij prawym przyciskiem myszy niezaładowanego projektu, a następnie wybierz polecenie **Edytuj [ProjectName. csproj]** .
+   - W programie Visual Studio w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**. Ponownie kliknij prawym przyciskiem myszy niezaładowanego projektu, a następnie wybierz polecenie **Edytuj [ProjectName. csproj]**.
 
 2. W pliku projektu znajdź następujący wpis właściwości:
 
@@ -43,7 +43,7 @@ Jeśli masz program Visual Studio 2017 w wersji 15,7 lub nowszej, możesz łatwo
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-3. Zmień `true` na `false`:
+3. Zmień `true` na `false` :
 
    ```xml
    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -56,9 +56,9 @@ Automatyczne przekierowania powiązań można włączyć w istniejących aplikac
 1. Otwórz plik projektu do edycji przy użyciu jednej z następujących metod:
 
    - W programie Visual Studio wybierz projekt w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Otwórz folder w Eksploratorze plików** z menu skrótów. W Eksploratorze plików Znajdź plik projektu (. csproj lub. vbproj) i otwórz go w Notatniku.
-   - W programie Visual Studio w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**. Ponownie kliknij prawym przyciskiem myszy niezaładowanego projektu, a następnie wybierz polecenie **Edytuj [ProjectName. csproj]** .
+   - W programie Visual Studio w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**. Ponownie kliknij prawym przyciskiem myszy niezaładowanego projektu, a następnie wybierz polecenie **Edytuj [ProjectName. csproj]**.
 
-2. Dodaj następujący element do pierwszej grupy właściwości konfiguracji (w obszarze \<> tagu właściwości):
+2. Dodaj następujący element do pierwszej grupy właściwości konfiguracji (pod \<PropertyGroup> tagiem):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -101,5 +101,5 @@ Aby dodać przekierowania powiązań do pliku **Web. config** :
 
 ## <a name="see-also"></a>Zobacz także
 
-- [\<bindingRedirect> Element](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>Postaci](./file-schema/runtime/bindingredirect-element.md)
 - [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)

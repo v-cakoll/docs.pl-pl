@@ -4,10 +4,10 @@ description: Generator serializatora XML tworzy zestaw serializacji XML dla typÃ
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288982"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>NarzÄ™dzie definicji schematu XML (Xsd.exe)

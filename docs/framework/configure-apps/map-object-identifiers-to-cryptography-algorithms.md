@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912539"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapowanie identyfikatorów obiektów na algorytmy kryptografii
@@ -38,9 +38,9 @@ Podpisy cyfrowe zapewniają, że dane nie są modyfikowane, gdy są wysyłane z 
 </configuration>  
 ```  
   
- Element oidEntry > zawiera dwa atrybuty. [ \<](./file-schema/cryptography/oidentry-element.md) Atrybut **OID** jest numerem identyfikatora obiektu. Atrybut **name** jest wartością [ \<](./file-schema/cryptography/nameentry-element.md)atrybutu **name** z elementu nameEntry >. Aby można było zamapować identyfikator obiektu na prostą nazwę, musi istnieć mapowanie z nazwy algorytmu na klasę.  
+ [ \<oidEntry> Element](./file-schema/cryptography/oidentry-element.md) zawiera dwa atrybuty. Atrybut **OID** jest numerem identyfikatora obiektu. Atrybut **name** jest wartością atrybutu **name** z [ \<nameEntry> elementu](./file-schema/cryptography/nameentry-element.md). Aby można było zamapować identyfikator obiektu na prostą nazwę, musi istnieć mapowanie z nazwy algorytmu na klasę.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie klas kryptografii](configure-cryptography-classes.md)
+- [Konfigurowanie klasy kryptografii](configure-cryptography-classes.md)
 - [Usługi kryptograficzne](../../standard/security/cryptographic-services.md)

@@ -3,21 +3,21 @@ title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
 ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400497"
 ---
-# <a name="clientcredentials"></a>\<clientCredentials>
+# \<clientCredentials>
 Określa poświadczenia używane do uwierzytelniania klienta w usłudze.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Obiekt clientCredentials >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCredentials>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,18 +53,18 @@ Określa poświadczenia używane do uwierzytelniania klienta w usłudze.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> clientCertificate](clientcertificate-of-clientcredentials-element.md)|Określa certyfikat używany do uwierzytelniania klienta w usłudze. Ten element jest typu <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
-|[\<httpDigest>](httpdigest-element.md)|Określa skrót używany do uwierzytelniania klienta w usłudze. Ten element jest typu <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  
-|[\<issuedToken >](issuedtoken.md)|Określa niestandardowy typ tokenu używany do uwierzytelniania klienta w usłudze bezpiecznego tokenu (STS). Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>.|  
-|[\<> elementów równorzędnych](peer-of-clientcredentials-element.md)|Określa bieżące poświadczenie elementu równorzędnego. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
-|[\<> serviceCertificate](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany do uwierzytelniania usługi na kliencie i udostępnia strukturę do ustawiania opcji certyfikatu. Ten certyfikat musi być dostarczony z usługi do klienta jako poza pasmem. Ten element jest typu <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>.|  
-|[\<windows>](windows-of-clientcredentials-element.md)|Określa poświadczenie systemu Windows. Wartość domyślna to poświadczenie bieżącego wątku. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsClientElement>.|  
+|[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|Określa certyfikat używany do uwierzytelniania klienta w usłudze. Ten element jest typu <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement> .|  
+|[\<httpDigest>](httpdigest-element.md)|Określa skrót używany do uwierzytelniania klienta w usłudze. Ten element jest typu <xref:System.ServiceModel.Configuration.HttpDigestClientElement> .|  
+|[\<issuedToken>](issuedtoken.md)|Określa niestandardowy typ tokenu używany do uwierzytelniania klienta w usłudze bezpiecznego tokenu (STS). Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenClientElement> .|  
+|[\<peer>](peer-of-clientcredentials-element.md)|Określa bieżące poświadczenie elementu równorzędnego. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerCredentialElement> .|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany do uwierzytelniania usługi na kliencie i udostępnia strukturę do ustawiania opcji certyfikatu. Ten certyfikat musi być dostarczony z usługi do klienta jako poza pasmem. Ten element jest typu <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement> .|  
+|[\<windows>](windows-of-clientcredentials-element.md)|Określa poświadczenie systemu Windows. Wartość domyślna to poświadczenie bieżącego wątku. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsClientElement> .|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zachowania](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Poświadczenia klienta służą do uwierzytelniania klienta programu w przypadku, gdy wymagane jest uwierzytelnianie wzajemne. Ta sekcja konfiguracji może również służyć do określania certyfikatów usługi dla scenariuszy, w których klient musi zabezpieczyć komunikaty do usługi za pomocą certyfikatu usługi.  

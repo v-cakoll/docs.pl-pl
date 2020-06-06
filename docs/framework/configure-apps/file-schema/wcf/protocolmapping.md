@@ -3,18 +3,18 @@ title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400019"
 ---
-# <a name="protocolmapping"></a>\<protocolMapping >
+# \<protocolMapping>
 Reprezentuje sekcję konfiguracyjną służącą do definiowania zestawu domyślnego mapowania protokołów między schematami protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązaniami WCF. Podczas tworzenia domyślnych punktów końcowych w czasie wykonywania Windows Communication Foundation (WCF) przegląda skonfigurowane mapowania i decyduje o tym, które powiązanie ma być używane dla określonego adresu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolMapping >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ Reprezentuje sekcję konfiguracyjną służącą do definiowania zestawu domyśl
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Filtry >](filters-of-routing.md)|Zawiera domyślne mapowanie protokołu między schematem protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązaniem WCF.|  
+|[\<filters>](filters-of-routing.md)|Zawiera domyślne mapowanie protokołu między schematem protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązaniem WCF.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

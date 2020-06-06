@@ -1,5 +1,5 @@
 ---
-title: <dependentAssembly>, element
+title: <dependentAssembly> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154208"
 ---
-# <a name="dependentassembly-element"></a>\<element> zależności
-Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj `dependentAssembly` jednego elementu dla każdego złożenia.  
+# <a name="dependentassembly-element"></a>\<dependentAssembly> Element
+Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednego `dependentAssembly` elementu dla każdego zestawu.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>montażowy**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,10 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Zawiera informacje identyfikujące o zestawie. Ten element musi być `dependentAssembly` uwzględniony w każdym elemencie.|  
-|`codeBase`|Określa, gdzie środowisko wykonawcze może znaleźć zestaw udostępniony, jeśli nie jest zainstalowany na komputerze.|  
+|`assemblyIdentity`|Zawiera informacje identyfikacyjne zestawu. Ten element musi być uwzględniony w każdym `dependentAssembly` elemencie.|  
+|`codeBase`|Określa, gdzie środowisko uruchomieniowe może znaleźć zestaw współużytkowany, jeśli nie jest zainstalowany na komputerze.|  
 |`bindingRedirect`|Przekierowuje jedną wersję zestawu do innej.|  
-|`publisherPolicy`|Określa, czy środowisko wykonawcze stosuje zasady wydawcy dla tego zestawu.|  
+|`publisherPolicy`|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy dla tego zestawu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -55,7 +55,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak hermetyzować informacje o zestawie dla dwóch zestawów.  
+ Poniższy przykład pokazuje, jak hermetyzować informacje o zestawie dla dwóch zestawów.  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

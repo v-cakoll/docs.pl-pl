@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
 ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152817"
 ---
-# <a name="certificatereference"></a>\<> odniesienia certyfikatu
-Określa ustawienia używane do znajdowania i sprawdzania poprawności certyfikatu X.509 w magazynie certyfikatów.  
+# \<certificateReference>
+Określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serwisCertificate>**](servicecertificate.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>odniesienia certyfikatu**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateReference>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,11 +44,11 @@ Określa ustawienia używane do znajdowania i sprawdzania poprawności certyfika
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Storename|Nazwa magazynu certyfikatów X.509. Wartość domyślna to "Moje". Element opcjonalny.|  
-|Storelocation|Wartość <xref:System.Security.Cryptography.X509Certificates.StoreLocation> określająca lokalizację magazynu certyfikatów X.509. Wartością domyślną jest "LocalMachine". Element opcjonalny.|  
-|X509findtype|Wartość <xref:System.Security.Cryptography.X509Certificates.X509FindType> określająca typ wyszukiwania, które ma zostać wykonane. Wartość domyślna to "FindBySubjectDistinguishedName". Element opcjonalny.|  
-|Findvalue|Wartość do wyszukania w magazynie certyfikatów X.509. Element opcjonalny.|  
-|w zestawie isChain|Określa, czy sprawdzanie poprawności ma być wykonywane przy użyciu łańcucha certyfikatów. Wartość domyślna to "true"; sprawdzania poprawności odbywa się przy użyciu łańcucha certyfikatów. Element opcjonalny.|  
+|storeName|Nazwa magazynu certyfikatów X. 509. Wartość domyślna to "my". Opcjonalny.|  
+|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>Wartość, która określa lokalizację magazynu certyfikatów X. 509. Wartość domyślna to "LocalMachine". Opcjonalny.|  
+|x509FindType|Wartość określająca <xref:System.Security.Cryptography.X509Certificates.X509FindType> Typ wyszukiwania, które ma zostać wykonane. Wartość domyślna to "FindBySubjectDistinguishedName". Opcjonalny.|  
+|findValue|Wartość do wyszukania w magazynie certyfikatów X. 509. Opcjonalny.|  
+|isChainIncluded|Określa, czy należy przeprowadzić walidację przy użyciu łańcucha certyfikatów. Wartość domyślna to "true"; Walidacja jest przeprowadzana przy użyciu łańcucha certyfikatów. Opcjonalny.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -57,7 +57,7 @@ Określa ustawienia używane do znajdowania i sprawdzania poprawności certyfika
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serwisCertificate>](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów.|  
+|[\<serviceCertificate>](servicecertificate.md)|Konfiguruje certyfikat używany do szyfrowania i odszyfrowywania tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<certificateReference>` określa ustawienia, które są używane do znajdowania i sprawdzania poprawności certyfikatu X.509 w magazynie certyfikatów. Gdy jest określony jako element `<serviceCertificate>` podrzędny elementu, określa ustawienia lokalizacji i weryfikacji certyfikatu X.509, który jest używany do szyfrowania i odszyfrowywania tokenów. Element `<certificateReference>` jest reprezentowany <xref:System.ServiceModel.Configuration.CertificateReferenceElement> przez klasę.
+ `<certificateReference>`Element określa ustawienia, które są używane do znajdowania i weryfikowania certyfikatu X. 509 w magazynie certyfikatów. Gdy jest określony jako element podrzędny `<serviceCertificate>` elementu, określa lokalizację i ustawienia weryfikacji certyfikatu X. 509, który jest używany do szyfrowania i odszyfrowywania tokenów. `<certificateReference>`Element jest reprezentowany przez <xref:System.ServiceModel.Configuration.CertificateReferenceElement> klasę.

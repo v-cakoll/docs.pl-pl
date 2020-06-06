@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154546"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<WebRequestModules> Element (Ustawienia sieciowe)
-Określa moduły, za pomocą których mają być wymagane informacje od hostów sieciowych.  
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules>, element (ustawienia sieci)
+Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;\<>  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +37,28 @@ Określa moduły, za pomocą których mają być wymagane informacje od hostów 
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[Dodaj](add-element-for-webrequestmodules-network-settings.md)|Dodaje niestandardowy moduł żądania sieci Web do aplikacji.|  
-|[Wyczyść](clear-element-for-webrequestmodules-network-settings.md)|Usuwa wszystkie zarejestrowane moduły żądań sieci Web z aplikacji.|  
-|[Usunąć](remove-element-for-webrequestmodules-network-settings.md)|Usuwa niestandardowy moduł żądania sieci Web z aplikacji.|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|Dodaje niestandardowy moduł żądania sieci Web do aplikacji.|  
+|[Wyczyść](clear-element-for-webrequestmodules-network-settings.md)|Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.|  
+|[usuwa](remove-element-for-webrequestmodules-network-settings.md)|Usuwa niestandardowy moduł żądania sieci Web z aplikacji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia określające sposób łączenia się programu .NET Framework z siecią.|  
+|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `webRequestModules` rejestruje elementy podrzędne <xref:System.Net.WebRequest> klasy do obsługi żądań informacji do hostów sieciowych. Moduły żądań sieci <xref:System.Net.IWebRequestCreate> Web muszą implementować interfejs.  
+ `webRequestModules`Element rejestruje elementy podrzędne <xref:System.Net.WebRequest> klasy do obsługi żądań informacji do hostów sieciowych. Moduły żądania sieci Web muszą implementować <xref:System.Net.IWebRequestCreate> interfejs.  
   
- Program .NET Framework zawiera moduły żądań sieci `http://` `https://`Web `file://`dla identyfikatorów URI, które zaczynają się od programów , i . Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracyjnym.  
+ .NET Framework obejmuje moduły żądania sieci Web dla identyfikatorów URI zaczynających się od `http://` , `https://` i `file://` . Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład rejestruje domyślny moduł HTTP. Należy zastąpić wartości dla Version i PublicKeyToken z poprawnymi wartościami dla określonego modułu.  
+ Poniższy przykład rejestruje domyślny moduł HTTP. Należy zastąpić wartości wersji i PublicKeyToken wartościami prawidłowymi dla określonego modułu.  
   
 ```xml  
 <configuration>  
@@ -73,7 +73,7 @@ Określa moduły, za pomocą których mają być wymagane informacje od hostów 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>

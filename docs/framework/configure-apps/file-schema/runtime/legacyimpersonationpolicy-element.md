@@ -1,5 +1,5 @@
 ---
-title: <legacyImpersonationPolicy>, element
+title: <legacyImpersonationPolicy> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 ms.openlocfilehash: 5e43ead278ecd4049014f4000a2f056b2190f7e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154107"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> Element
-Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchroniczne, niezależnie od ustawień przepływu dla kontekstu wykonywania w bieżącym wątku.  
+Określa, że tożsamość systemu Windows nie przepływa między punktami asynchronicznymi, niezależnie od ustawień przepływu dla kontekstu wykonywania w bieżącym wątku.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<legacyImpersonationPolicy>**  
   
 ## <a name="syntax"></a>Składnia  
@@ -36,14 +36,14 @@ Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchron
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, że <xref:System.Security.Principal.WindowsIdentity> nie przepływa przez punkty asynchroniczne, niezależnie od ustawień <xref:System.Threading.ExecutionContext> przepływu w bieżącym wątku.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, że nie <xref:System.Security.Principal.WindowsIdentity> przepływy między punktami asynchronicznymi, niezależnie od <xref:System.Threading.ExecutionContext> ustawień przepływu w bieżącym wątku.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>przepływów przez punkty asynchroniczne w zależności od ustawień <xref:System.Threading.ExecutionContext> przepływu dla bieżącego wątku. Domyślnie włączone.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>nie przepływa przez punkty asynchroniczne, <xref:System.Threading.ExecutionContext> niezależnie od ustawień przepływu w bieżącym wątku.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity>przepływy w punktach asynchronicznych w zależności od <xref:System.Threading.ExecutionContext> ustawień przepływu dla bieżącego wątku. Domyślnie włączone.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity>nie przepływa między punktami asynchronicznymi, niezależnie od <xref:System.Threading.ExecutionContext> ustawień przepływu w bieżącym wątku.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -56,31 +56,31 @@ Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchron
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W .NET Framework w wersjach 1.0 i <xref:System.Security.Principal.WindowsIdentity> 1.1 nie przepływa przez żadnych punktów asynchronicznych zdefiniowanych przez użytkownika. Począwszy od programu .NET Framework w wersji <xref:System.Threading.ExecutionContext> 2.0, istnieje obiekt, który zawiera informacje o aktualnie wykonywanym wątku i przepływa przez punkty asynchroniczne w domenie aplikacji. Jest <xref:System.Security.Principal.WindowsIdentity> uwzględniony w tym kontekście wykonywania i w związku z tym również przepływa przez punkty asynchroniczne, co oznacza, że jeśli istnieje kontekst personifikacji, będzie również przepływać.  
+ W .NET Framework wersje 1,0 i 1,1 nie <xref:System.Security.Principal.WindowsIdentity> przepływa między wszystkimi punktami asynchronicznymi zdefiniowanymi przez użytkownika. Począwszy od .NET Framework w wersji 2,0, istnieje obiekt, <xref:System.Threading.ExecutionContext> który zawiera informacje o aktualnie wykonywanym wątku i przepływie między punktami asynchronicznymi w domenie aplikacji. <xref:System.Security.Principal.WindowsIdentity>Jest uwzględniony w tym kontekście wykonywania i w związku z tym również przepływów między punktami asynchronicznymi, co oznacza, że jeśli istnieje kontekst personifikacji, będzie również przepływać.  
   
- Począwszy od programu .NET Framework 2.0, można użyć `<legacyImpersonationPolicy>` elementu, aby określić, że <xref:System.Security.Principal.WindowsIdentity> nie przepływa przez punkty asynchroniczne.  
+ Począwszy od .NET Framework 2,0, można użyć `<legacyImpersonationPolicy>` elementu, aby określić, że nie <xref:System.Security.Principal.WindowsIdentity> przepływa w punktach asynchronicznych.  
   
 > [!NOTE]
-> Środowisko wykonawcze języka wspólnego (CLR) jest świadomy operacji personifikacji wykonywanych przy użyciu tylko kodu zarządzanego, a nie personifikacji wykonywane poza kodem zarządzanym, takich jak za pośrednictwem platformy wywołać do kodu niezarządzanego lub za pośrednictwem bezpośrednich wywołań funkcji Win32. Tylko <xref:System.Security.Principal.WindowsIdentity> obiekty zarządzane mogą przepływać przez punkty `alwaysFlowImpersonationPolicy` asynchroniczne,`<alwaysFlowImpersonationPolicy enabled="true"/>`chyba że element został ustawiony na true ( ). Ustawienie `alwaysFlowImpersonationPolicy` elementu na true określa, że tożsamość systemu Windows zawsze przepływa przez punkty asynchroniczne, niezależnie od sposobu personifikacji została wykonana. Aby uzyskać więcej informacji na temat przepływu personifikacji niezarządzanej w punktach asynchronicznych, zobacz [ \<alwaysFlowImpersonationPolicy> Element](alwaysflowimpersonationpolicy-element.md).  
+> Środowisko uruchomieniowe języka wspólnego (CLR) ma świadomość operacji personifikacji wykonywanych przy użyciu tylko kodu zarządzanego, a nie personifikacji wykonanej poza kodem zarządzanym, na przykład za pośrednictwem wywołania platformy do kodu niezarządzanego lub bezpośrednie wywołania do funkcji Win32. Tylko <xref:System.Security.Principal.WindowsIdentity> obiekty zarządzane mogą przepływać przez punkty asynchroniczne, chyba że `alwaysFlowImpersonationPolicy` element został ustawiony na wartość true ( `<alwaysFlowImpersonationPolicy enabled="true"/>` ). Ustawienie `alwaysFlowImpersonationPolicy` elementu na wartość true określa, że tożsamość systemu Windows jest zawsze przepływana w punktach asynchronicznych, niezależnie od tego, jak personifikacja została wykonana. Aby uzyskać więcej informacji na temat przepływu niezarządzanej personifikacji w punktach asynchronicznych, zobacz [ \<alwaysFlowImpersonationPolicy> element](alwaysflowimpersonationpolicy-element.md).  
   
- To domyślne zachowanie można zmienić na dwa inne sposoby:  
+ To zachowanie domyślne można zmienić na dwa sposoby:  
   
-1. W kodzie zarządzanym na podstawie wątku.  
+1. W kodzie zarządzanym dla poszczególnych wątków.  
   
-     Przepływ można pominąć na podstawie wątku, <xref:System.Threading.ExecutionContext> modyfikując ustawienia <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> i <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext> ustawienia za pomocą metody , lub.  
+     Przepływ można pominąć dla każdego wątku, modyfikując <xref:System.Threading.ExecutionContext> Ustawienia i za <xref:System.Security.SecurityContext> pomocą <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> metody lub.  
   
-2. W wywołaniu interfejsu hostingu niezarządzanego, aby załadować środowisko uruchomieniowe języka wspólnego (CLR).  
+2. W wywołaniu interfejsu hostingu niezarządzanego w celu załadowania środowiska uruchomieniowego języka wspólnego (CLR).  
   
-     Jeśli do załadowania środowiska CLR używany jest niezarządzany interfejs hostingu (zamiast prostego zarządzanego pliku wykonywalnego), można określić specjalną flagę w wywołaniu funkcji [CorBindToRuntimeEx.](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) Aby włączyć tryb zgodności dla całego procesu, `flags` ustaw parametr [funkcji CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) na STARTUP_LEGACY_IMPERSONATION.  
+     Jeśli do załadowania środowiska CLR jest używany niezarządzany interfejs hostingu (zamiast prostego zarządzanego pliku wykonywalnego), można określić specjalną flagę w wywołaniu funkcji [funkcji CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) . Aby włączyć tryb zgodności dla całego procesu, należy ustawić `flags` parametr dla [funkcji CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) na STARTUP_LEGACY_IMPERSONATION.  
   
- Aby uzyskać więcej informacji, zobacz [ \<alwaysFlowImpersonationPolicy> Element](alwaysflowimpersonationpolicy-element.md).  
+ Aby uzyskać więcej informacji, zobacz [ \<alwaysFlowImpersonationPolicy> element](alwaysflowimpersonationpolicy-element.md).  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
  W aplikacji .NET Framework ten element może być używany tylko w pliku konfiguracji aplikacji.  
   
- W przypadku aplikacji ASP.NET przepływ personifikacji można skonfigurować w pliku aspnet.config znajdującym \<się w katalogu Folder systemu Windows>\Microsoft.NET\Framework\vx.x.xxxx.  
+ W przypadku aplikacji ASP.NET przepływ personifikacji można skonfigurować w pliku aspnet. config znajdującym się w \<Windows Folder> katalogu \Microsoft.NET\Framework\vx.x.xxxx.  
   
- ASP.NET domyślnie wyłącza przepływ personifikacji w pliku aspnet.config przy użyciu następujących ustawień konfiguracyjnych:  
+ Domyślnie ASP.NET powoduje wyłączenie przepływu personifikacji w pliku aspnet. config przy użyciu następujących ustawień konfiguracji:  
   
 ``` xml
 <configuration>  
@@ -91,7 +91,7 @@ Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchron
 </configuration>  
 ```  
   
- W ASP.NET, jeśli chcesz zezwolić na przepływ personifikacji zamiast tego, należy jawnie użyć następujących ustawień konfiguracji:  
+ W ASP.NET, jeśli chcesz zezwolić na przepływ personifikacji, musisz jawnie użyć następujących ustawień konfiguracji:  
   
 ```xml  
 <configuration>  
@@ -103,7 +103,7 @@ Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchron
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak określić starsze zachowanie, które nie przepływa tożsamości systemu Windows przez punkty asynchroniczne.  
+ Poniższy przykład pokazuje, jak określić starsze zachowanie, które nie przepływa tożsamości systemu Windows w punktach asynchronicznych.  
   
 ```xml  
 <configuration>  
@@ -113,8 +113,8 @@ Określa, że tożsamość systemu Windows nie przepływa przez punkty asynchron
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [\<zawsze Element> PolitykiFlowImpersonation](alwaysflowimpersonationpolicy-element.md)
+- [\<alwaysFlowImpersonationPolicy>Postaci](alwaysflowimpersonationpolicy-element.md)

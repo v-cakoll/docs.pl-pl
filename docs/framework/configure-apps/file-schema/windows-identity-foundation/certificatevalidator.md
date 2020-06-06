@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152791"
 ---
-# <a name="certificatevalidator"></a>\<certyfikatValidator>
-Określa typ niestandardowy sprawdzania poprawności certyfikatu. Ten typ jest używany `certificateValidationMode` tylko wtedy, gdy atrybut [ \<certificateValidation>](certificatevalidation.md) element jest ustawiony na "Niestandardowe".  
+# \<certificateValidator>
+Określa typ niestandardowy na potrzeby walidacji certyfikatu. Ten typ jest używany tylko wtedy, gdy `certificateValidationMode` atrybut [\<certificateValidation>](certificatevalidation.md) elementu jest ustawiony na wartość "Custom".  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>konfiguracji tożsamości**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>certyfikatuWeracja**](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certyfikatValidator>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateValidator>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ Określa typ niestandardowy sprawdzania poprawności certyfikatu. Ten typ jest u
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|type|Określa typ niestandardowy, który <xref:System.IdentityModel.Selectors.X509CertificateValidator> pochodzi z klasy. Ustaw `certificateValidationMode` atrybut [ \<certificateValidation>](certificatevalidation.md) element na "Niestandardowe", aby użyć tego typu. Aby uzyskać więcej informacji `type` na temat określania atrybutu, zobacz [Odwołania do typów niestandardowych](../windows-workflow-foundation/index.md). Element opcjonalny.|  
+|typ|Określa typ niestandardowy, który pochodzi od <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. Ustaw `certificateValidationMode` atrybut [\<certificateValidation>](certificatevalidation.md) elementu na wartość "Custom", aby użyć tego typu. Aby uzyskać więcej informacji na temat sposobu określania `type` atrybutu, zobacz [odwołania do typów niestandardowych](../windows-workflow-foundation/index.md). Opcjonalny.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -48,7 +48,7 @@ Określa typ niestandardowy sprawdzania poprawności certyfikatu. Ten typ jest u
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<>certyfikatuWeracja](certificatevalidation.md)|Steruje ustawieniami używanymi przez programy obsługi tokenów do sprawdzania poprawności certyfikatów.|  
+|[\<certificateValidation>](certificatevalidation.md)|Kontroluje ustawienia używane przez programy obsługi do sprawdzania poprawności certyfikatów.|  
   
 ## <a name="example"></a>Przykład  
   

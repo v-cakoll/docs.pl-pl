@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154325"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<element> w \<czasie wykonywania>
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding>, element dla \<runtime>
 Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.  
   
-[**\<>konfiguracyjne**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>montażowy**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Xmlns**|Atrybut wymagany.<br /><br /> Określa obszar nazw XML wymagany dla powiązania zestawu. Użyj ciągu "urn:schemas-microsoft-com:asm.v1" jako wartości.|  
-|**Appliesto**|Określa wersję środowiska uruchomieniowego, do na które ma zastosowanie przekierowanie zestawu .NET Framework. Ten atrybut opcjonalny używa numeru wersji programu .NET Framework, aby wskazać, jakiej wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony, ** \<assemblyBinding>** element ma zastosowanie do wszystkich wersji programu .NET Framework. Atrybut **appliesTo** został wprowadzony w wersji .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, ** \<** że wszystkie elementy>wiązania zestawu są stosowane podczas korzystania z programu .NET Framework w wersji 1.0, nawet jeśli atrybut **appliesTo** jest określony.|  
+|**'xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML wymaganą dla powiązania zestawu. Użyj ciągu "urn: schematys-Microsoft-com: ASM. v1" jako wartości.|  
+|**Zignorowan**|Określa wersję środowiska uruchomieniowego, do której odnosi się przekierowanie zestawu .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework, aby wskazać, której wersji dotyczy. Jeśli nie określono atrybutu **AppliesTo** , **\<assemblyBinding>** element ma zastosowanie do wszystkich wersji .NET Framework. Atrybut **AppliesTo** został wprowadzony w .NET Framework w wersji 1,1; jest on ignorowany przez .NET Framework w wersji 1,0. Oznacza to, że wszystkie **\<assemblyBinding>** elementy są stosowane w przypadku używania .NET Framework w wersji 1,0, nawet jeśli określono atrybut **AppliesTo** .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<>](dependentassembly-element.md)|Hermetyzuje zasady wiązania i lokalizację zestawu dla zestawu. Użyj jednego ** \<zależnegoAsześci>** znacznik dla każdego zestawu.|  
-|[\<sondowanie>](probing-element.md)|Określa podkatalogi wyszukiwania środowiska uruchomieniowego języka wspólnego podczas ładowania zestawów.|  
-|[\<wydawcaPolicja>](publisherpolicy-element.md)|Określa, czy środowisko wykonawcze stosuje zasady wydawcy.|  
-|[\<kwalifikacje>](qualifyassembly-element.md)|Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy używana jest nazwa częściowa.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Hermetyzuje zasady powiązań i lokalizację zestawu. Użyj jednego **\<dependentAssembly>** tagu dla każdego zestawu.|  
+|[\<probing>](probing-element.md)|Określa podkatalogi przeszukiwania środowiska uruchomieniowego języka wspólnego podczas ładowania zestawów.|  
+|[\<publisherPolicy>](publisherpolicy-element.md)|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.|  
+|[\<qualifyAssembly>](qualifyassembly-element.md)|Określa pełną nazwę zestawu, który ma być dynamicznie ładowany, gdy zostanie użyta nazwa częściowa.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -57,7 +57,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak przekierować jedną wersję zestawu do innej i podać bazę kodu.  
+ Poniższy przykład pokazuje, jak przekierować jedną wersję zestawu do innej i podać bazę kodu.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 </configuration>  
 ```  
   
- W poniższym przykładzie pokazano, jak użyć **atrybutu appliesTo,** aby przekierować powiązanie zestawu .NET Framework.  
+ Poniższy przykład pokazuje, jak używać atrybutu **AppliesTo** do przekierowywania powiązań zestawu .NET Framework.  
   
 ```xml  
 <runtime>  
@@ -90,7 +90,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

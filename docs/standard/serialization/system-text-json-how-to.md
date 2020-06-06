@@ -11,10 +11,10 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289515"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Jak serializować i deserializować (Marshaling and unmarshaling) JSON w programie .NET
@@ -385,7 +385,7 @@ Oto przykład obiektu do serializacji i danych wyjściowych JSON:
 
 |Właściwość |Wartość  |
 |---------|---------|
-| Data    | 8/1/2019 12:00:00 AM – 07:00|
+| Date    | 8/1/2019 12:00:00 AM – 07:00|
 | TemperatureCelsius| 25 |
 | Podsumowanie| wartość null|
 
@@ -641,7 +641,7 @@ Podczas deserializacji kodu JSON pokazanego wcześniej w tym typie próbkowania 
 
 |Właściwość |Wartość  |Uwagi  |
 |---------|---------|---------|
-| Data    | 8/1/2019 12:00:00 AM – 07:00||
+| Date    | 8/1/2019 12:00:00 AM – 07:00||
 | TemperatureCelsius| 0 | Niezgodność z rozróżnianiem wielkości liter ( `temperatureCelsius` w formacie JSON), więc właściwość nie jest ustawiona. |
 | Podsumowanie | Gorąca ||
 | ExtensionData — | temperatureCelsius: 25 |Ponieważ przypadek nie jest zgodny, ta właściwość JSON jest dodatkową i jest parą klucz-wartość w słowniku.|

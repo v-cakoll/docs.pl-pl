@@ -1,26 +1,26 @@
 ---
-title: 'Przykład: obsługa wyjątków podczas wiązania danych'
+title: 'Przykład: Obsługa wyjątków podczas wiązania danych'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181023"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Przykład: obsługa wyjątków podczas wiązania danych
+# <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas wiązania danych
 > [!NOTE]
-> Ten temat odnosi się do programu .NET Native Developer Preview, który jest oprogramowaniem w wersji wstępnej. Wersję zapoznawczą można pobrać ze [strony internetowej Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
+> Ten temat dotyczy wersji zapoznawczej programu .NET Native Developer, która jest oprogramowaniem w wersji wstępnej. Wersję zapoznawczą można pobrać z [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- W poniższym przykładzie pokazano, jak rozwiązać [MissingMetadataException](missingmetadataexception-class-net-native.md) wyjątek, który jest generowany, gdy aplikacja skompilowana z .NET natywnego łańcucha narzędzi próbuje powiązać dane. Oto informacje o wyjątku:  
+ Poniższy przykład pokazuje, jak rozpoznać wyjątek [MissingMetadataException](missingmetadataexception-class-net-native.md) , który jest generowany, gdy aplikacja skompilowana za pomocą łańcucha narzędzi .NET Native próbuje powiązać dane. Oto informacje o wyjątku:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:
 App.ViewModels.MainPageVM  
 ```  
   
- Oto skojarzony stos połączeń:  
+ Oto skojarzony stos wywołań:  
   
 ```output
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
@@ -37,27 +37,27 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Co robiła aplikacja?  
- U podstawy stosu ramki z <xref:Windows.UI.Xaml?displayProperty=nameWithType> obszaru nazw wskazują, że aparat renderowania XAML był uruchomiony.   Użycie <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metody wskazuje odbicie oparte na odbiciu wartości właściwości na typ, którego metadane zostały usunięte.  
+ W podstawowym stosie ramki z <xref:Windows.UI.Xaml?displayProperty=nameWithType> przestrzeni nazw wskazują, że aparat renderowania XAML był uruchomiony.   Użycie <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metody wskazuje na podstawie odbicia wartość właściwości w typie, którego metadane zostały usunięte.  
   
- Pierwszym krokiem w dostarczaniu dyrektywy metadanych byłoby dodanie `serialize` metadanych dla typu, tak aby jego właściwości były dostępne:  
+ Pierwszym krokiem w dostarczaniu dyrektywy metadanych byłoby dodanie `serialize` metadanych dla tego typu, aby jego właściwości były dostępne:  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a>Czy jest to odosobniony przypadek?  
- W tym scenariuszu, jeśli powiązanie `ViewModel`danych ma niekompletne metadane dla jednego , może również dla innych.  Jeśli kod jest skonstruowany w taki sposób, że modele `App.ViewModels` widoku aplikacji znajdują się w obszarze nazw, można użyć bardziej ogólnej dyrektywy środowiska uruchomieniowego:  
+## <a name="is-this-an-isolated-case"></a>Czy to jest izolowany przypadek?  
+ W tym scenariuszu, Jeśli powiązanie danych ma niekompletne metadane dla jednej `ViewModel` z nich, może być również dla innych.  Jeśli kod jest strukturalny w sposób, w którym wszystkie modele widoku aplikacji znajdują się w `App.ViewModels` przestrzeni nazw, można użyć bardziej ogólnej dyrektywy środowiska uruchomieniowego:  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Czy kod można przepisać, aby nie używać odbicia?  
- Ponieważ powiązanie danych jest intensywnie odbicie, zmiana kodu, aby uniknąć odbicia nie jest możliwe.  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Czy kod można napisać ponownie, aby nie używać odbicia?  
+ Ponieważ powiązanie danych jest intensywnym odbiciem, zmiana kodu, aby uniknąć odbicia, nie jest możliwe.  
   
- Istnieją jednak sposoby, `ViewModel` aby określić do strony XAML, tak aby łańcuch narzędzi można skojarzyć powiązania właściwości z poprawnym typem w czasie kompilacji i zachować metadane bez użycia dyrektywy środowiska uruchomieniowego.  Na przykład można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybut do właściwości. Powoduje to, że kompilator XAML do generowania wymaganych informacji o odszukaniu i unika konieczności dyrektywy środowiska uruchomieniowego w pliku Default.rd.xml.  
+ Istnieją jednak sposoby określania `ViewModel` na stronie XAML, dzięki czemu łańcuch narzędzi może kojarzyć powiązania właściwości z poprawnym typem w czasie kompilacji i zachować metadane bez użycia dyrektywy środowiska uruchomieniowego.  Na przykład można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybut we właściwościach. Powoduje to wygenerowanie wymaganych informacji wyszukiwania przez kompilator XAML i uniknięcie wymagania dyrektywy środowiska uruchomieniowego w pliku default. Rd. XML.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie](getting-started-with-net-native.md)
-- [Przykład: rozwiązywanie problemów z programowaniem dynamicznym](example-troubleshooting-dynamic-programming.md)
+- [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](example-troubleshooting-dynamic-programming.md)

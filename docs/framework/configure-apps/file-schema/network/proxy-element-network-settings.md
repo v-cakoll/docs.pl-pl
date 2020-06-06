@@ -9,19 +9,19 @@ helpviewer_keywords:
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 ms.openlocfilehash: 590ea747c2fa9e5e85e5e9d05f6fb80fe60251d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154793"
 ---
-# <a name="proxy-element-network-settings"></a>\<element> serwera proxy (ustawienia sieciowe)
+# <a name="proxy-element-network-settings"></a>\<proxy>, element (ustawienia sieci)
 Definiuje serwer proxy.  
 
-[**\<>konfiguracyjne**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>proxy**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -42,39 +42,39 @@ Definiuje serwer proxy.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`autoDetect`|Określa, czy serwer proxy jest wykrywany automatycznie. Wartością domyślną jest `unspecified`.|  
-|`bypassonlocal`|Określa, czy serwer proxy jest pomijany dla zasobów lokalnych. Zasoby lokalne obejmują serwer`http://localhost` `http://loopback`lokalny `http://127.0.0.1`( , , lub )`http://webserver`i identyfikator URI bez kropki ( ). Wartością domyślną jest `unspecified`.|  
+|`autoDetect`|Określa, czy serwer proxy jest wykrywany automatycznie. Wartość domyślna to `unspecified`.|  
+|`bypassonlocal`|Określa, czy serwer proxy jest pomijany dla zasobów lokalnych. Zasoby lokalne obejmują serwer lokalny ( `http://localhost` , `http://loopback` lub `http://127.0.0.1` ) oraz identyfikator URI bez kropki ( `http://webserver` ). Wartość domyślna to `unspecified`.|  
 |`proxyaddress`|Określa identyfikator URI serwera proxy do użycia.|  
-|`scriptLocation`|Określa lokalizację skryptu konfiguracji. Nie należy `bypassonlocal` używać atrybutu z tym atrybutem. |  
-|`usesystemdefault`|Określa, czy mają być używane ustawienia serwera proxy programu Internet Explorer. Jeśli ustawiona na `true`, kolejne atrybuty zastąpią ustawienia serwera proxy programu Internet Explorer. Wartością domyślną jest `unspecified`.|  
+|`scriptLocation`|Określa lokalizację skryptu konfiguracji. Nie należy używać `bypassonlocal` atrybutu z tym atrybutem. |  
+|`usesystemdefault`|Określa, czy mają być używane ustawienia serwera proxy programu Internet Explorer. Jeśli jest ustawiona na `true` , kolejne atrybuty zastąpią ustawienia proxy programu Internet Explorer. Wartość domyślna to `unspecified`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[Defaultproxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy Protokołu transferu hipertekstu (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).|  
   
 ## <a name="text-value"></a>Wartość tekstowa  
   
 ## <a name="remarks"></a>Uwagi  
- Element `proxy` definiuje serwer proxy dla aplikacji. Jeśli w pliku konfiguracyjnym brakuje tego elementu, program .NET Framework użyje ustawień serwera proxy w programie Internet Explorer.  
+ `proxy`Element definiuje serwer proxy dla aplikacji. Jeśli w pliku konfiguracji brakuje tego elementu, .NET Framework będzie używać ustawień serwera proxy w programie Internet Explorer.  
   
- Wartość atrybutu `proxyaddress` powinna być dobrze sformułowanym wskaźnikiem jednolitego zasobu (URI).  
+ Wartość `proxyaddress` atrybutu powinna być poprawnie sformułowanym jednolitym wskaźnikiem zasobów (URI).  
   
- Atrybut `scriptLocation` odnosi się do automatycznego wykrywania skryptów konfiguracji serwera proxy. Klasa <xref:System.Net.WebProxy> spróbuje zlokalizować skrypt konfiguracji (zwykle o nazwie Wpad.dat) po wybraniu opcji **Użyj skryptu konfiguracji automatycznej** w programie Internet Explorer. Jeśli `bypassonlocal` jest ustawiona `scriptLocation` na dowolną wartość, jest ignorowana.
+ Ten `scriptLocation` atrybut odnosi się do automatycznego wykrywania skryptów konfiguracji serwera proxy. <xref:System.Net.WebProxy>Klasa podejmie próbę zlokalizowania skryptu konfiguracji (o nazwie WPAD. dat), gdy opcja **Użyj skryptu automatycznej konfiguracji** jest zaznaczona w programie Internet Explorer. Jeśli `bypassonlocal` jest ustawiona na dowolną wartość, `scriptLocation` jest ignorowana.
   
- Użyj `usesystemdefault` atrybutu dla aplikacji .NET Framework w wersji 1.1, które są migrowane do wersji 2.0.  
+ Użyj `usesystemdefault` atrybutu dla aplikacji .NET Framework w wersji 1,1, które są migrowane do wersji 2,0.  
   
- Wyjątek jest zgłaszany, `proxyaddress` jeśli atrybut określa nieprawidłowy domyślny serwer proxy. Właściwość <xref:System.Exception.InnerException%2A> na wyjątek powinien mieć więcej informacji na temat głównej przyczyny błędu.  
+ Wyjątek jest generowany, jeśli `proxyaddress` atrybut określa nieprawidłowy domyślny serwer proxy. <xref:System.Exception.InnerException%2A>Właściwość wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto wartości domyślnych z serwera proxy programu Internet Explorer, określono adres serwera proxy i pominięto serwer proxy dostępu lokalnego.  
+ W poniższym przykładzie używane są wartości domyślne z serwera proxy programu Internet Explorer, określa adres serwera proxy i pomija serwer proxy na potrzeby dostępu lokalnego.  
   
 ```xml  
 <configuration>  
@@ -90,7 +90,7 @@ Definiuje serwer proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](index.md)

@@ -3,20 +3,20 @@ title: <tracking>programu WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
 ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399419"
 ---
-# <a name="tracking-of-wcf"></a>\<Śledzenie > WCF
+# <a name="tracking-of-wcf"></a>\<tracking>programu WCF
 Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.  
   
  Aby uzyskać więcej informacji na temat śledzenia przepływu pracy i jego konfiguracji, zobacz [śledzenie i śledzenie przepływów pracy](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) oraz [Konfigurowanie śledzenia dla przepływu pracy](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Śledzenie >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,7 +86,7 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Uczestnicy >](../windows-workflow-foundation/participants.md)|Kolekcja elementów konfiguracji definiujących uczestników, którzy subskrybują śledzenie rekordów. Uczestnicy śledzenia zawierają logikę do przetwarzania ładunku z rekordów śledzenia (na przykład mogą wybrać zapis w pliku).|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|Kolekcja elementów konfiguracji definiujących uczestników, którzy subskrybują śledzenie rekordów. Uczestnicy śledzenia zawierają logikę do przetwarzania ładunku z rekordów śledzenia (na przykład mogą wybrać zapis w pliku).|  
 |[\<trackingProfile>](../windows-workflow-foundation/trackingprofile.md)|Profil śledzenia do filtrowania rekordów śledzenia emitowane z wystąpienia przepływu pracy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  

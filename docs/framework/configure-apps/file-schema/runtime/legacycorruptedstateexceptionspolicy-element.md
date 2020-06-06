@@ -6,18 +6,18 @@ helpviewer_keywords:
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116458"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<element > legacyCorruptedStateExceptionsPolicy
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
 Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodowi zarządzanemu przechwytywanie naruszeń dostępu i innych wyjątków uszkodzonych Stanów.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<legacyCorruptedStateExceptionsPolicy>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,13 +54,13 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodowi za
 ## <a name="remarks"></a>Uwagi  
  W .NET Framework w wersji 3,5 i starszych środowisko uruchomieniowe języka wspólnego może przechwytywać wyjątki, które zostały zgłoszone przez uszkodzone Stany procesów. Naruszenie zasad dostępu jest przykładem tego typu wyjątku.  
   
- Począwszy od .NET Framework 4, kod zarządzany nie przechwytuje już tych typów wyjątków w blokach `catch`. Można jednak zastąpić tę zmianę i zachować obsługę wyjątków uszkodzonych Stanów na dwa sposoby:  
+ Począwszy od .NET Framework 4, kod zarządzany nie przechwytuje już tych typów wyjątków w `catch` blokach. Można jednak zastąpić tę zmianę i zachować obsługę wyjątków uszkodzonych Stanów na dwa sposoby:  
   
-- Ustaw atrybut `enabled` elementu `<legacyCorruptedStateExceptionsPolicy>` na `true`. To ustawienie konfiguracji jest stosowane processwide i ma wpływ na wszystkie metody.  
+- Ustaw `<legacyCorruptedStateExceptionsPolicy>` `enabled` atrybut elementu na `true` . To ustawienie konfiguracji jest stosowane processwide i ma wpływ na wszystkie metody.  
   
- —lub—  
+ -lub-  
   
-- Zastosuj atrybut <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> do metody zawierającej blok `catch` wyjątków.  
+- Zastosuj <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atrybut do metody, która zawiera `catch` blok wyjątków.  
   
  Ten element konfiguracji jest dostępny tylko w .NET Framework 4 i nowszych.  
   

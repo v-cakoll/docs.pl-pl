@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117632"
 ---
-# <a name="developmentmode-element"></a>Element > \<developmentmode
+# <a name="developmentmode-element"></a>\<developmentMode> Element
 Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentmode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|**true**|Wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.|  
+|**oznacza**|Wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.|  
 |**false**|Nie wyszukuje zestawów w katalogach określonych przez zmienną środowiskową DEVPATH. Jest to wartość domyślna|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -73,4 +73,4 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Instrukcje: lokalizowanie zestawów za pomocą DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

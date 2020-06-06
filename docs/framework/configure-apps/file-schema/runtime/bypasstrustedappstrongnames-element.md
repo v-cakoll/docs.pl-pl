@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739085"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<element > bypassTrustedAppStrongNames
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Element
 
-Określa, czy pomijać weryfikację silnych nazw w zestawach pełnego zaufania, które są ładowane do <xref:System.AppDomain>pełnego zaufania.
+Określa, czy pomijać weryfikację silnych nazw w zestawach pełnego zaufania, które są ładowane do pełnego zaufania <xref:System.AppDomain> .
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,8 +43,8 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`true`|Sygnatury o silnej nazwie w zestawach pełnego zaufania nie są sprawdzane, gdy zestawy są ładowane do <xref:System.AppDomain>pełnego zaufania. Domyślnie włączone.|
-|`false`|Sygnatury silnej nazwy w zestawach pełnego zaufania są weryfikowane podczas ładowania zestawów do <xref:System.AppDomain>pełnego zaufania. Sygnatura o silnej nazwie jest sprawdzana tylko w celu poprawienia podpisu; nie jest porównywana z inną silną nazwą dla dopasowania.|
+|`true`|Sygnatury o silnej nazwie w zestawach pełnego zaufania nie są sprawdzane, gdy zestawy są ładowane do pełnego zaufania <xref:System.AppDomain> . Domyślnie włączone.|
+|`false`|Sygnatury silnej nazwy w zestawach pełnego zaufania są weryfikowane podczas ładowania zestawów do pełnego zaufania <xref:System.AppDomain> . Sygnatura o silnej nazwie jest sprawdzana tylko w celu poprawienia podpisu; nie jest porównywana z inną silną nazwą dla dopasowania.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -63,11 +63,11 @@ Funkcja pomijania silnej nazwy pozwala uniknąć narzutu na weryfikację podpis�
 
 Funkcja Bypass ma zastosowanie do każdego zestawu, który jest podpisany silną nazwą i ma następującą charakterystykę:
 
-- W pełni zaufane bez <xref:System.Security.Policy.StrongName> dowodów (na przykład ma `MyComputer`e dowody strefy).
+- W pełni zaufane bez <xref:System.Security.Policy.StrongName> dowodu (na przykład zawiera `MyComputer` dowody strefy).
 
-- Załadowano do w pełni zaufanego <xref:System.AppDomain>.
+- Załadowano w pełni zaufany <xref:System.AppDomain> .
 
-- Załadowano z lokalizacji pod właściwością <xref:System.AppDomainSetup.ApplicationBase%2A> tej <xref:System.AppDomain>.
+- Załadowany z lokalizacji pod <xref:System.AppDomainSetup.ApplicationBase%2A> właściwością <xref:System.AppDomain> .
 
 - Nie jest podpisany z opóźnieniem.
 

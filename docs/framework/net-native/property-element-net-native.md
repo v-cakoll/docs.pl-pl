@@ -1,15 +1,15 @@
 ---
-title: Element <Property> (.NET Native)
+title: <Property>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128211"
 ---
-# <a name="property-element-net-native"></a>Element > Właściwości \<(.NET Native)
+# <a name="property-element-net-native"></a>\<Property>— Element (.NET Native)
 Stosuje zasady odbicia środowiska uruchomieniowego do właściwości.  
   
 ## <a name="syntax"></a>Składnia  
@@ -37,13 +37,13 @@ Stosuje zasady odbicia środowiska uruchomieniowego do właściwości.
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_name*|Nazwa właściwości. Typ właściwości jest zdefiniowany przez nadrzędny [typ\<](type-element-net-native.md) lub [\<elementu > TypeInstantiation](typeinstantiation-element-net-native.md) .|  
+|*method_name*|Nazwa właściwości. Typ właściwości jest zdefiniowany przez [\<Type>](type-element-net-native.md) element nadrzędny lub [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla właściwości. Możliwe wartości to `Auto`, `Excluded`, `Included`i `Required`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla właściwości. Możliwe wartości to `Auto` , `Excluded` , `Included` , i `Required` . Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,14 +52,14 @@ Stosuje zasady odbicia środowiska uruchomieniowego do właściwości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[Typ\<](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
-|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli zasady właściwości nie są jawnie zdefiniowane, dziedziczy zasad środowiska uruchomieniowego jego elementu nadrzędnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa odbicia, aby utworzyć wystąpienie obiektu `Book` i wyświetlić jego wartości właściwości. Oryginalny plik default. Rd. XML dla projektu jest wyświetlany w następujący sposób:  
+ Poniższy przykład używa odbicia, aby utworzyć wystąpienie `Book` obiektu i wyświetlić jego wartości właściwości. Oryginalny plik default. Rd. XML dla projektu jest wyświetlany w następujący sposób:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -71,17 +71,17 @@ Stosuje zasady odbicia środowiska uruchomieniowego do właściwości.
 </Directives>  
 ```  
   
- Plik stosuje `All` wartość do zasad `Activate` dla klasy `Book`, co umożliwia dostęp do konstruktorów klas poprzez odbicie. Zasady `Browse` dla klasy `Book` są dziedziczone z nadrzędnej przestrzeni nazw. Ta wartość jest ustawiona na `Required Public`, co sprawia, że metadane są dostępne w czasie wykonywania.  
+ Plik stosuje `All` wartość do `Activate` zasad dla `Book` klasy, co umożliwia dostęp do konstruktorów klas poprzez odbicie. `Browse`Zasady dla `Book` klasy są dziedziczone z jego nadrzędnej przestrzeni nazw. Ta wartość jest ustawiona na `Required Public` , co sprawia, że metadane są dostępne w czasie wykonywania.  
   
- Poniżej znajduje się kod źródłowy dla przykładu. Zmienna `outputBlock` reprezentuje kontrolkę <xref:Windows.UI.Xaml.Controls.TextBlock>.  
+ Poniżej znajduje się kod źródłowy dla przykładu. `outputBlock`Zmienna reprezentuje <xref:Windows.UI.Xaml.Controls.TextBlock> kontrolkę.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- Jednak Kompilowanie i wykonywanie tego przykładu zgłasza wyjątek [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . Mimo że zostały wprowadzone metadane dla `Book` typu, nie udało nam się zapewnić, że implementacje metod pobierających właściwości są dostępne dynamicznie. Możemy naprawić ten błąd w jeden z dwóch sposobów:  
+ Jednak Kompilowanie i wykonywanie tego przykładu zgłasza wyjątek [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . Mimo że zostały zgłoszone metadane dla `Book` dostępnego typu, nie udało nam się zapewnić, że implementacje metod pobierających właściwości są dostępne dynamicznie. Możemy naprawić ten błąd w jeden z dwóch sposobów:  
   
-- Definiując zasady `Dynamic` dla typu `Book` w [\<typie >](type-element-net-native.md) elementu.  
+- Definiowanie `Dynamic` zasad dla `Book` typu w jego [\<Type>](type-element-net-native.md) elemencie.  
   
-- Dodanie zagnieżdżonej [właściwości\<](property-element-net-native.md) elementu dla każdej właściwości, której ma dotyczyć metoda pobierająca, tak jak w poniższym pliku. Rd. XML.  
+- Dodając zagnieżdżony [\<Property>](property-element-net-native.md) element dla każdej właściwości, której ma dotyczyć metoda pobierająca, jako następujący domyślny plik. Rd. XML.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

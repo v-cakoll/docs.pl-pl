@@ -1,5 +1,5 @@
 ---
-title: <schemaImporterExtensions>, element
+title: <schemaImporterExtensions> Element
 description: <schemaImporterExtensions>Element zawiera typy, które są używane przez XmlSchemaImporter do mapowania typów XSD na typy .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84278405"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions>, element
+# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> Element
 Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> dla mapowania typów XSD do typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Składnia  

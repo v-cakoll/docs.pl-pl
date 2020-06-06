@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396349"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466879"
 ---
 ### <a name="pubternal-apis-removed"></a>Usunięte interfejsy API "Pubternal"
 
@@ -22,7 +22,7 @@ Narażone interfejsy API są oznaczone `public` modyfikatorem dostępu i istniej
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Odpowiednie interfejsy API są oznaczone za pomocą modyfikatora dostępu Internal (~/docs/CSharp/Language-Reference/Keywords/Internal.MD) i nie mogą być już używane przez kod poza tym zestawem.
+Narażone interfejsy API są oznaczone modyfikatorem dostępu [wewnętrznego](/dotnet/csharp/language-reference/keywords/internal) i nie mogą być używane przez kod poza tym zestawem.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 

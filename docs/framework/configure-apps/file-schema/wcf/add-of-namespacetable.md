@@ -3,20 +3,20 @@ title: <add> dla <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
 ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850396"
 ---
-# <a name="add-of-namespacetable"></a>\<Dodaj > \<przestrzeni nazw >
+# <a name="add-of-namespacetable"></a>\<add> dla \<namespaceTable>
 Reprezentuje element konfiguracji, który zawiera przestrzeń nazw do mapowania prefiksów, które mogą być następnie używane w filtrach XPath dla routingu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> routingu**](routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Przestrzeń nazw >** ](namespacetable.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Dodaj >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namespaceTable>**](namespacetable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,8 @@ Reprezentuje element konfiguracji, który zawiera przestrzeń nazw do mapowania 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— przestrzeń nazw|Ciąg zawierający przestrzeń nazw.|  
-|prefix|Ciąg zawierający prefiks dla tej przestrzeni nazw.|  
+|namespace|Ciąg zawierający przestrzeń nazw.|  
+|prefiks|Ciąg zawierający prefiks dla tej przestrzeni nazw.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,7 +46,7 @@ Reprezentuje element konfiguracji, który zawiera przestrzeń nazw do mapowania 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Przestrzeń nazw >](namespacetable.md)|Reprezentuje sekcję konfiguracji definiującą zestaw elementów zawierających przestrzeń nazw do mapowania prefiksów, które mogą być następnie używane w filtrach XPath dla routingu.|  
+|[\<namespaceTable>](namespacetable.md)|Reprezentuje sekcję konfiguracji definiującą zestaw elementów zawierających przestrzeń nazw do mapowania prefiksów, które mogą być następnie używane w filtrach XPath dla routingu.|  
   
 ## <a name="see-also"></a>Zobacz także
 

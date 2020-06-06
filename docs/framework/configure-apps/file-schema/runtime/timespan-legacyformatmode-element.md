@@ -9,19 +9,19 @@ helpviewer_keywords:
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968906"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > elementu
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Element
 
-Określa, czy środowisko uruchomieniowe zachowuje starsze zachowanie w operacjach formatowania przy użyciu wartości <xref:System.TimeSpan?displayProperty=nameWithType>.
+Określa, czy środowisko uruchomieniowe zachowuje starsze zachowanie w operacjach formatowania z <xref:System.TimeSpan?displayProperty=nameWithType> wartościami.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<TimeSpan_LegacyFormatMode>**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,7 +38,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe korzysta ze starszego zachowania formatowania z wartościami <xref:System.TimeSpan?displayProperty=nameWithType>.|
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe korzysta ze starszego zachowania formatowania z <xref:System.TimeSpan?displayProperty=nameWithType> wartościami.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
@@ -60,15 +60,15 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od .NET Framework 4, struktura <xref:System.TimeSpan?displayProperty=nameWithType> implementuje interfejs <xref:System.IFormattable> i obsługuje operacje formatowania przy użyciu standardowych i niestandardowych ciągów formatu. Jeśli metoda analizy napotka nieobsługiwany specyfikator formatu lub ciąg formatu, zgłasza <xref:System.FormatException>.
+Począwszy od .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> struktura implementuje <xref:System.IFormattable> interfejs i obsługuje operacje formatowania przy użyciu standardowych i niestandardowych ciągów formatu. Jeśli metoda analizy napotka nieobsługiwany specyfikator formatu lub ciąg formatu, zgłasza <xref:System.FormatException> .
 
-W poprzednich wersjach .NET Framework struktura <xref:System.TimeSpan> nie została zaimplementowana <xref:System.IFormattable> i nie obsługiwała ciągów formatowania. Jednak wielu programistów założono, że <xref:System.TimeSpan> obsłużył zestaw ciągów formatu i używały ich w [operacjach formatowania złożonego](../../../../standard/base-types/composite-formatting.md) z metodami takimi jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Zwykle, jeśli typ implementuje <xref:System.IFormattable> i obsługuje ciągi formatu, wywołania metod formatowania z nieobsługiwanymi ciągami formatu zwykle generują <xref:System.FormatException>. Jednak ponieważ <xref:System.TimeSpan> nie zaimplementował <xref:System.IFormattable>, środowisko uruchomieniowe zignorował ciąg formatu i zamiast tego nazywa metodę <xref:System.TimeSpan.ToString?displayProperty=nameWithType>. Oznacza to, że chociaż ciągi formatu nie miały wpływu na operację formatowania, ich obecność nie powodowała <xref:System.FormatException>.
+W poprzednich wersjach .NET Framework <xref:System.TimeSpan> Struktura nie została zaimplementowana <xref:System.IFormattable> i nie obsługuje ciągów formatu. Jednak w przypadku wielu programistów założono, że program <xref:System.TimeSpan> obsługiwał zestaw ciągów formatu i użył ich w [operacjach formatowania złożonego](../../../../standard/base-types/composite-formatting.md) z metodami takimi jak <xref:System.String.Format%2A?displayProperty=nameWithType> . Zwykle, jeśli typ implementuje <xref:System.IFormattable> i obsługuje ciągi formatowania, wywołania metod formatowania z nieobsługiwanymi ciągami formatu zwykle generują <xref:System.FormatException> . Jednak ponieważ <xref:System.TimeSpan> nie została zaimplementowana <xref:System.IFormattable> , środowisko uruchomieniowe zignorował ciąg formatu i zamiast niego nazywa <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metodę. Oznacza to, że chociaż ciągi formatu nie miały wpływu na operację formatowania, ich obecność nie spowodowało <xref:System.FormatException> .
 
-W przypadkach, w których starszy kod przekazuje metodę formatowania złożonego i nieprawidłowy ciąg formatu, i nie można ponownie skompilować tego kodu, można użyć elementu `<TimeSpan_LegacyFormatMode>`, aby przywrócić zachowanie starszej <xref:System.TimeSpan>. Po ustawieniu atrybutu `enabled` tego elementu na `true`, Metoda formatowania złożonego spowoduje wywołanie <xref:System.TimeSpan.ToString?displayProperty=nameWithType> zamiast <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>i <xref:System.FormatException> nie zostanie zgłoszony.
+W przypadkach, w których starszy kod przekazuje metodę formatowania złożonego i nieprawidłowy ciąg formatu, a ten kod nie może zostać ponownie skompilowany, można użyć `<TimeSpan_LegacyFormatMode>` elementu, aby przywrócić starsze <xref:System.TimeSpan> zachowanie. Po ustawieniu `enabled` atrybutu tego elementu na `true` , Metoda formatowania złożonego powoduje wywołanie <xref:System.TimeSpan.ToString?displayProperty=nameWithType> zamiast <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> i <xref:System.FormatException> nie jest generowane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy wystąpienie obiektu <xref:System.TimeSpan> i próbuje sformatować go za pomocą metody <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> za pomocą nieobsługiwanego ciągu formatu standardowego.
+Poniższy przykład tworzy wystąpienie <xref:System.TimeSpan> obiektu i próbuje sformatować go za pomocą <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> metody przy użyciu nieobsługiwanego ciągu formatu standardowego.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]

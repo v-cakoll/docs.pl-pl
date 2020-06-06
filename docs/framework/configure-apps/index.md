@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972201"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
@@ -40,11 +40,11 @@ ms.locfileid: "70972201"
  W tym temacie opisano składnię plików konfiguracji i podano informacje o trzech typach plików konfiguracji: komputera, aplikacji i zabezpieczeń.  
   
 ## <a name="configuration-file-format"></a>Format pliku konfiguracji  
- Pliki konfiguracji zawierają elementy, które są logicznymi strukturami danych określającymi informacje o konfiguracji. Do oznaczania początku i końca elementu w pliku konfiguracji służą tagi. Na przykład `<runtime>` element składa się z `<runtime>` *elementów*`</runtime>`podrzędnych. Pusty element zostanie zapisany jako `<runtime/>` lub. `<runtime></runtime>`  
+ Pliki konfiguracji zawierają elementy, które są logicznymi strukturami danych określającymi informacje o konfiguracji. Do oznaczania początku i końca elementu w pliku konfiguracji służą tagi. Na przykład `<runtime>` element składa się z `<runtime>` *elementów podrzędnych* `</runtime>` . Pusty element zostanie zapisany jako `<runtime/>` lub `<runtime></runtime>` .  
   
  Podobnie jak w przypadku wszystkich plików XML, w składni plików konfiguracji jest uwzględniana wielkość liter.  
   
- Ustawienia konfiguracji są określane przy użyciu wstępnie zdefiniowanych atrybutów, które są parami nazwa/wartość umieszczonymi wewnątrz tagu początkowego elementu. W poniższym przykładzie określono dwa atrybuty (`version` i `href`) dla `<codeBase>` elementu, który określa, gdzie środowisko uruchomieniowe może zlokalizować zestaw (Aby uzyskać więcej informacji, zobacz [Określanie lokalizacji zestawu](specify-assembly-location.md)).  
+ Ustawienia konfiguracji są określane przy użyciu wstępnie zdefiniowanych atrybutów, które są parami nazwa/wartość umieszczonymi wewnątrz tagu początkowego elementu. W poniższym przykładzie określono dwa atrybuty ( `version` i `href` ) dla `<codeBase>` elementu, który określa, gdzie środowisko uruchomieniowe może zlokalizować zestaw (Aby uzyskać więcej informacji, zobacz [Określanie lokalizacji zestawu](specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -54,7 +54,7 @@ ms.locfileid: "70972201"
 ## <a name="machine-configuration-files"></a>Pliki konfiguracji komputera  
  Plik konfiguracji komputera — Machine.config — zawiera ustawienia, które są stosowane do całego komputera. Ten plik znajduje się w katalogu% \ config*instalacji systemu plików wykonywalnych*. Machine. config zawiera ustawienia konfiguracji dla powiązań zestawów dla całej maszyny, wbudowanych [kanałów komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))i ASP.NET.  
   
- System konfiguracji najpierw wyszukuje w pliku konfiguracyjnym komputera plik [  **\<AppSettings >** ](./file-schema/appsettings/index.md) i inne sekcje konfiguracyjne, które może zdefiniować Deweloper. Następnie przeszukuje plik konfiguracji aplikacji. Aby zachować możliwość zarządzania plikiem konfiguracji komputera, najlepiej jest umieścić te ustawienia w pliku konfiguracji aplikacji. Jednak umieszczenie tych ustawień w pliku konfiguracji komputera może sprawić, że system będzie łatwiejszy w utrzymaniu. Na przykład, jeśli zarówno aplikacja kliencka, jak i serwerowa, używa składnika innej firmy, łatwiej jest umieścić ustawienia dla tego składnika w jednym miejscu. W tym przypadku plik konfiguracji komputera jest właściwym miejscem dla tych ustawień, ponieważ dzięki temu te same ustawienia nie znajdują się w dwóch różnych plikach.  
+ System konfiguracyjny najpierw przeszukuje plik konfiguracji komputera dla [ **\<appSettings>** elementu](./file-schema/appsettings/index.md) i innych sekcji konfiguracyjnych, które może zdefiniować Deweloper. Następnie przeszukuje plik konfiguracji aplikacji. Aby zachować możliwość zarządzania plikiem konfiguracji komputera, najlepiej jest umieścić te ustawienia w pliku konfiguracji aplikacji. Jednak umieszczenie tych ustawień w pliku konfiguracji komputera może sprawić, że system będzie łatwiejszy w utrzymaniu. Na przykład, jeśli zarówno aplikacja kliencka, jak i serwerowa, używa składnika innej firmy, łatwiej jest umieścić ustawienia dla tego składnika w jednym miejscu. W tym przypadku plik konfiguracji komputera jest właściwym miejscem dla tych ustawień, ponieważ dzięki temu te same ustawienia nie znajdują się w dwóch różnych plikach.  
   
 > [!NOTE]
 > Wdrażanie aplikacji za pomocą polecenia XCOPY nie spowoduje skopiowania ustawień z pliku konfiguracji komputera.  
@@ -82,7 +82,7 @@ ms.locfileid: "70972201"
   
      Jeśli aplikacja hostowana w programie Internet Explorer ma plik konfiguracji, lokalizacja tego pliku jest określona w `<link>` tagu o następującej składni:  
   
-     \<link rel = "*ConfigurationFileName*" href = "*Location*" >  
+     \<link rel="*ConfigurationFileName*" href="*location*">  
   
      W tym tagu `location` jest to adres URL pliku konfiguracji. Ta wartość określa podstawę aplikacji. Plik konfiguracji musi znajdować się w tej samej witrynie sieci web, co aplikacja.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70972201"
  [Określanie lokalizacji zestawu](specify-assembly-location.md)  
  Opisuje, jak określić, gdzie środowisko uruchomieniowe ma szukać zestawu.  
   
- [Konfigurowanie klas kryptografii](configure-cryptography-classes.md)  
+ [Konfigurowanie klasy kryptografii](configure-cryptography-classes.md)  
  Opisuje sposób mapowania nazwy algorytmu na klasę kryptograficzną i identyfikator obiektu na algorytm kryptografii.  
   
  [Instrukcje: Tworzenie zasad wydawcy](how-to-create-a-publisher-policy.md)  
@@ -126,5 +126,5 @@ ms.locfileid: "70972201"
 - [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)
 - [Administrowanie witryną sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [Zestawy w środowisku .NET](../../standard/assembly/index.md)

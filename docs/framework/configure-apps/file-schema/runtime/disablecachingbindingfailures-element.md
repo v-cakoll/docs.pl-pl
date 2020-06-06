@@ -11,18 +11,18 @@ helpviewer_keywords:
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117495"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<element > disableCachingBindingFailures
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> Element
 Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wystąpiły, ponieważ nie można odnaleźć zestawu przez sondowanie.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<disableCachingBindingFailures>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +37,7 @@ Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wy
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|dostępny|Atrybut wymagany.<br /><br /> Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wystąpiły, ponieważ nie można odnaleźć zestawu przez sondowanie.|  
+|enabled|Atrybut wymagany.<br /><br /> Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wystąpiły, ponieważ nie można odnaleźć zestawu przez sondowanie.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
@@ -57,9 +57,9 @@ Określa, czy należy wyłączyć buforowanie niepowodzeń powiązań, które wy
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od .NET Framework w wersji 2,0, domyślnym zachowaniem ładowania zestawów jest buforowanie wszystkich błędów powiązań i ładowania. Oznacza to, że jeśli próba załadowania zestawu nie powiedzie się, kolejne żądania załadowania tego samego zestawu kończą się niepowodzeniem, bez próby zlokalizowania zestawu. Ten element wyłącza zachowanie domyślne dla niepowodzeń powiązań, które występują, ponieważ nie można odnaleźć zestawu w ścieżce sondowania. Te błędy generują <xref:System.IO.FileNotFoundException>.  
+ Począwszy od .NET Framework w wersji 2,0, domyślnym zachowaniem ładowania zestawów jest buforowanie wszystkich błędów powiązań i ładowania. Oznacza to, że jeśli próba załadowania zestawu nie powiedzie się, kolejne żądania załadowania tego samego zestawu kończą się niepowodzeniem, bez próby zlokalizowania zestawu. Ten element wyłącza zachowanie domyślne dla niepowodzeń powiązań, które występują, ponieważ nie można odnaleźć zestawu w ścieżce sondowania. Te błędy są wyrzucane <xref:System.IO.FileNotFoundException> .  
   
- Ten element nie ma wpływ na pewne błędy powiązań i ładowania i są zawsze buforowane. Te błędy występują, ponieważ zestaw został znaleziony, ale nie można go załadować. Generują <xref:System.BadImageFormatException> lub <xref:System.IO.FileLoadException>. Poniższa lista zawiera kilka przykładów takich niepowodzeń.  
+ Ten element nie ma wpływ na pewne błędy powiązań i ładowania i są zawsze buforowane. Te błędy występują, ponieważ zestaw został znaleziony, ale nie można go załadować. Zgłaszają <xref:System.BadImageFormatException> lub <xref:System.IO.FileLoadException> . Poniższa lista zawiera kilka przykładów takich niepowodzeń.  
   
 - Jeśli próba załadowania pliku nie jest prawidłowym zestawem, kolejne próby załadowania zestawu zakończą się niepowodzeniem, nawet jeśli zły plik zostanie zastąpiony właściwym zestawem.  
   

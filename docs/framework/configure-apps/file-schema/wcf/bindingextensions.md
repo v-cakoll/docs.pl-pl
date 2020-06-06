@@ -3,19 +3,19 @@ title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
 ms.openlocfilehash: bd6aeb32e0994bceb9e56bcb1c6267f4cb64a5a4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039142"
 ---
-# <a name="bindingextensions"></a>\<bindingExtensions >
+# \<bindingExtensions>
 
-Ta sekcja umożliwia użycie zdefiniowanego przez użytkownika powiązania z pliku konfiguracji komputera lub aplikacji. Można dodać powiązanie zdefiniowane przez użytkownika do tej kolekcji przy użyciu słowa kluczowego `add` i ustawić atrybut `type` elementu na powiązanie zdefiniowane przez użytkownika, a także atrybut `name` na nazwę wiązania zdefiniowanego przez użytkownika.
+Ta sekcja umożliwia użycie zdefiniowanego przez użytkownika powiązania z pliku konfiguracji komputera lub aplikacji. Można dodać powiązanie zdefiniowane przez użytkownika do tej kolekcji przy użyciu `add` słowa kluczowego i ustawić `type` atrybut elementu na powiązanie zdefiniowane przez użytkownika, a także `name` atrybut nazwy wiązania zdefiniowanej przez użytkownika.
 
-Rozszerzenia powiązań umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika do użycia jako część konfiguracji punktu końcowego. Programowe rozszerzenie powiązania jest typem, który implementuje klasę abstrakcyjną <xref:System.ServiceModel.Channels.Binding>.
+Rozszerzenia powiązań umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika do użycia jako część konfiguracji punktu końcowego. Programowe rozszerzenie powiązania jest typem, który implementuje klasę abstrakcyjną <xref:System.ServiceModel.Channels.Binding> .
 
-Poniższy przykład używa elementu `add`, a także atrybutu `name`, aby dodać rozszerzenie powiązania do sekcji `bindingExtensions` pliku konfiguracji:
+Poniższy przykład używa `add` elementu, a także `name` atrybutu, aby dodać rozszerzenie powiązania do `bindingExtensions` sekcji pliku konfiguracji:
 
 ```xml
 <system.serviceModel>
@@ -29,7 +29,7 @@ Poniższy przykład używa elementu `add`, a także atrybutu `name`, aby dodać 
 </system.serviceModel>
 ```
 
-Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i zarejestrować element `bindingSection`. Aby uzyskać więcej informacji na ten temat, zobacz dokumentację <xref:System.Configuration>.
+Aby dodać możliwości konfiguracji do elementu, użytkownik musi napisać i zarejestrować `bindingSection` element. Aby uzyskać więcej informacji na ten temat, zapoznaj się z <xref:System.Configuration> dokumentacją.
 
 Po zdefiniowaniu elementu i jego typu konfiguracji rozszerzenie może być używane jako część punktu końcowego, jak pokazano w następującym przykładzie:
 

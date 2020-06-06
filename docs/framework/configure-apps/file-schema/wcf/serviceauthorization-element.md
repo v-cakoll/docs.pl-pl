@@ -3,22 +3,22 @@ title: <serviceAuthorization>, element
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
 ms.openlocfilehash: f476f754a340f52859be2986e42754cba0ef3771
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71834022"
 ---
-# <a name="serviceauthorization-element"></a>Element > \<ServiceAuthorization
+# <a name="serviceauthorization-element"></a>\<serviceAuthorization>, element
 
 Określa ustawienia, które autoryzują dostęp do operacji usługi
 
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**zachowania\<** ](behaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**serviceBehaviors**](servicebehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zachowanie**](behavior-of-servicebehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ServiceAuthorization >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceAuthorization>**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,7 +42,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|Wartość logiczna określająca, czy wszystkie operacje w usłudze personifikują wywołującego. Wartość domyślna to `false`.<br /><br /> Gdy określona operacja usługi personifikuje obiekt wywołujący, kontekst wątku jest przełączany do kontekstu wywołującego przed wykonaniem określonej usługi.|  
-|principalPermissionMode|Ustawia podmiot zabezpieczeń używany do wykonywania operacji na serwerze. Dostępne są następujące wartości:<br /><br /> -Brak<br />- UseWindowsGroups<br />- UseAspNetRoles<br />-Niestandardowe<br /><br /> Wartość domyślna to UseWindowsGroups. Wartość jest typu <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Aby uzyskać więcej informacji na temat używania tego atrybutu, zobacz [How to: ograniczanie dostępu za pomocą klasy PrincipalPermissionAttribute](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|principalPermissionMode|Ustawia podmiot zabezpieczeń używany do wykonywania operacji na serwerze. Dostępne są następujące wartości:<br /><br /> -   Brak<br />- UseWindowsGroups<br />- UseAspNetRoles<br />-Niestandardowe<br /><br /> Wartość domyślna to UseWindowsGroups. Wartość jest typu <xref:System.ServiceModel.Description.PrincipalPermissionMode> . Aby uzyskać więcej informacji na temat używania tego atrybutu, zobacz [How to: ograniczanie dostępu za pomocą klasy PrincipalPermissionAttribute](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Ciąg określający nazwę dostawcy ról, który dostarcza informacje o roli dla aplikacji Windows Communication Foundation (WCF). Wartość domyślna to pusty ciąg.|  
 |ServiceAuthorizationManagerType|Ciąg zawierający typ Menedżera autoryzacji usługi. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
 
@@ -50,19 +50,19 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Element|Opis|  
 |-------------|-----------------|  
-|authorizationPolicies|Zawiera kolekcję typów zasad autoryzacji, które można dodać za pomocą słowa kluczowego `add`. Każda zasada autoryzacji zawiera jeden wymagany atrybut `policyType`, który jest ciągiem. Ten atrybut określa zasady autoryzacji, które umożliwiają przekształcanie jednego zestawu oświadczeń wejściowych w inny zestaw oświadczeń. Na podstawie tego można udzielić lub odmówić kontroli dostępu. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
+|authorizationPolicies|Zawiera kolekcję typów zasad autoryzacji, które można dodać za pomocą `add` słowa kluczowego. Każda zasada autoryzacji zawiera jeden wymagany `policyType` atrybut, który jest ciągiem. Ten atrybut określa zasady autoryzacji, które umożliwiają przekształcanie jednego zestawu oświadczeń wejściowych w inny zestaw oświadczeń. Na podstawie tego można udzielić lub odmówić kontroli dostępu. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|  
 |-------------|-----------------|  
-|[zachowanie \<>](behavior-of-endpointbehaviors.md)|Zawiera kolekcję ustawień zachowania usługi.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Zawiera kolekcję ustawień zachowania usługi.|  
 
 ## <a name="remarks"></a>Uwagi
 
 Ta sekcja zawiera elementy wpływające na autoryzację, niestandardowych dostawców ról i personifikacji.  
   
-Atrybut `principalPermissionMode` określa grupy użytkowników do użycia podczas autoryzowania używania metody chronionej. Wartość domyślna to `UseWindowsGroups` i określa, że grupy systemu Windows, takie jak "Administratorzy" lub "Użytkownicy", są wyszukiwane pod kątem tożsamości próbującej uzyskać dostęp do zasobu. Możesz również określić `UseAspNetRoles`, aby użyć niestandardowego dostawcy roli, który jest skonfigurowany w ramach elementu \<system. Web >, jak pokazano w poniższym kodzie:
+Ten `principalPermissionMode` atrybut określa grupy użytkowników do użycia podczas autoryzowania używania metody chronionej. Wartość domyślna to `UseWindowsGroups` i określa, że grupy systemu Windows, takie jak "Administratorzy" lub "Użytkownicy", są wyszukiwane pod kątem tożsamości próbującej uzyskać dostęp do zasobu. Możesz również określić `UseAspNetRoles` , aby użyć niestandardowego dostawcy ról, który jest skonfigurowany w ramach \<system.web> elementu, jak pokazano w poniższym kodzie:
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ Atrybut `principalPermissionMode` określa grupy użytkowników do użycia podcz
 </system.web>
 ```
   
-Poniższy kod przedstawia `roleProviderName` używany z atrybutem `principalPermissionMode`:
+Poniższy kod przedstawia `roleProviderName` użyty z `principalPermissionMode` atrybutem:
   
 ```xml
 <behaviors>

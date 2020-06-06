@@ -3,21 +3,21 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732552"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# \<webSocketSettings>
 Element konfiguracji służący do określania ustawień gniazda sieci Web.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<protokół HttpBinding**](nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,8 +57,8 @@ Element konfiguracji służący do określania ustawień gniazda sieci Web.
 |Wartość|Opis|  
 |-----------|-----------------|  
 |WhenDuplex|Użyj protokołu gniazda sieci Web, gdy kontrakt jest w trybie dupleksu.|  
-|stałego|Zawsze używaj protokołu gniazda internetowego niezależnie od kontraktu.|  
-|Ustawione|Nigdy nie używaj protokołu gniazda sieci Web.|  
+|Zawsze|Zawsze używaj protokołu gniazda internetowego niezależnie od kontraktu.|  
+|Nigdy|Nigdy nie używaj protokołu gniazda sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -67,10 +67,10 @@ Element konfiguracji służący do określania ustawień gniazda sieci Web.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<> protokołu HttpBinding|Określa protokół HttpBinding|  
+|\<netHttpBinding>|Określa protokół HttpBinding|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu \<webSocketSettings >.  
+ Poniższy przykład pokazuje, jak używać \<webSocketSettings> elementu.  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ Element konfiguracji służący do określania ustawień gniazda sieci Web.
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
+- [\<binding>](bindings.md)

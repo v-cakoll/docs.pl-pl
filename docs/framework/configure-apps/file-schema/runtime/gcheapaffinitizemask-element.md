@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978383"
 ---
-# <a name="gcheapaffinitizemask-element"></a>\<element > GCHeapAffinitizeMask
+# <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask>, element
 
 Definiuje koligację między stertami GC i procesorami indywidualnymi.
 
-\<Konfiguracja > \
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,11 +59,11 @@ Domyślnie wątki serwera GC są trudne do koligacji z odpowiednim procesorem CP
 
 **GCHeapAffinitizeMask** jest zazwyczaj używany wraz z dwiema innymi flagami:
 
-- [GCNoAffinitize](gcnoaffinitize-element.md), która kontroluje, czy wątki/sterty serwera GC są koligacją z procesorami CPU. Atrybut `enabled` elementu [GCNoAffinitize](gcnoaffinitize-element.md) musi być `false` (jego wartość domyślna) dla ustawienia **GCHeapAffinitizeMask** , które ma być używane.
+- [GCNoAffinitize](gcnoaffinitize-element.md), która kontroluje, czy wątki/sterty serwera GC są koligacją z procesorami CPU. `enabled`Atrybut elementu [GCNoAffinitize](gcnoaffinitize-element.md) musi być `false` (jego wartość domyślna) dla ustawienia **GCHeapAffinitizeMask** , które ma być używane.
 
 - [GCHeapCount](gcheapcount-element.md), który ogranicza liczbę stert używany przez proces dla serwera GC. Domyślnie istnieje jedna sterta dla każdego procesora.
 
-**nnnn** jest maską bitową wyrażoną jako wartość dziesiętną. Bit 0 z bajtem 0 reprezentuje procesor 0, bit 1 bajt 0 reprezentuje procesor 1 i tak dalej. Na przykład:
+**nnnn** jest maską bitową wyrażoną jako wartość dziesiętną. Bit 0 z bajtem 0 reprezentuje procesor 0, bit 1 bajt 0 reprezentuje procesor 1 i tak dalej. Przykład:
 
 ```xml
 <GCHeapAffinitizeMask enabled="1023"/>

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089103"
 ---
-# <a name="smtp-element-network-settings"></a>\<> SMTP (Ustawienia sieci)
+# <a name="smtp-element-network-settings"></a>\<smtp>, element (ustawienia sieci)
 Konfiguruje format dostarczania, metodę dostarczania i adres nadawcy wiadomości e-mail.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**smtp >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,9 +55,9 @@ Konfiguruje format dostarczania, metodę dostarczania i adres nadawcy wiadomośc
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|[\<element > mailSettings (Ustawienia sieci)](mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty.|  
+|[\<mailSettings>— Element (Ustawienia sieci)](mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty.|  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie określono odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu domyślnych poświadczeń sieciowych.  

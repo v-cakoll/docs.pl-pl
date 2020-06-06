@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698208"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<element > defaultProxy (Ustawienia sieci)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy>, element (ustawienia sieci)
 Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).  
   
-[ **> konfiguracji \<** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,29 +39,29 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
   
 ### <a name="attributes"></a>Atrybuty  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
 |`enabled`|Określa, czy używany jest serwer proxy sieci Web. Wartość domyślna to `true`.|  
 |`useDefaultCredentials`|Określa, czy domyślne poświadczenia dla tego hosta są używane w celu uzyskania dostępu do serwera proxy sieci Web. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
-|[module](module-element-network-settings.md)|Dodaje nowy moduł proxy do aplikacji.|  
-|[serwera proxy](proxy-element-network-settings.md)|Definiuje serwer proxy.|  
+|[elementu](module-element-network-settings.md)|Dodaje nowy moduł proxy do aplikacji.|  
+|[proxy](proxy-element-network-settings.md)|Definiuje serwer proxy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
-|**Element**|**Opis**|  
+|**Postaci**|**Opis**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli element defaultProxy jest pusty, zostaną użyte ustawienia serwera proxy z programu Internet Explorer. To zachowanie różni się od wersji 1,1 .NET Framework.  
   
- Wyjątek jest zgłaszany, jeśli element [module](module-element-network-settings.md) określa typ niepubliczny, typ nie jest wyprowadzany z klasy <xref:System.Net.IWebProxy>, wystąpił wyjątek z konstruktora bez parametrów tego obiektu lub wystąpił wyjątek podczas pobierania domyślnego serwera proxy określonego przez system. Właściwość <xref:System.Exception.InnerException%2A> na wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
+ Wyjątek jest zgłaszany, jeśli element [module](module-element-network-settings.md) określa typ niepubliczny, typ nie jest wyprowadzany z <xref:System.Net.IWebProxy> klasy, wystąpił wyjątek z konstruktora bez parametrów tego obiektu lub wystąpił wyjątek podczas pobierania domyślnego serwera proxy określonego przez system. <xref:System.Exception.InnerException%2A>Właściwość wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

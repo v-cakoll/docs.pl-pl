@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855124"
 ---
-# <a name="messagelogging"></a>\<messageLogging >
+# \<messageLogging>
 Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Windows Communication Foundation (WCF).  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> diagnostyki**](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageLogging >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,8 +43,8 @@ Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Win
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`logEntireMessage`|Wartość logiczna określająca, czy cały komunikat (nagłówek i treść wiadomości) jest rejestrowany. Wartość domyślna to `false`, co oznacza, że rejestrowany jest tylko nagłówek komunikatu. To ustawienie ma wpływ na wszystkie poziomy rejestrowania komunikatów (usługa, transport i nieprawidłowo sformułowane).|  
-|`logMalformedMessages`|Wartość logiczna określająca, czy źle sformułowane komunikaty są rejestrowane. Źle sformułowane wiadomości nie są wliczane do `maxMessagesToLog`. Wartość domyślna to `false`.|  
+|`logEntireMessage`|Wartość logiczna określająca, czy cały komunikat (nagłówek i treść wiadomości) jest rejestrowany. Wartość domyślna to `false` , co oznacza, że rejestrowany jest tylko nagłówek komunikatu. To ustawienie ma wpływ na wszystkie poziomy rejestrowania komunikatów (usługa, transport i nieprawidłowo sformułowane).|  
+|`logMalformedMessages`|Wartość logiczna określająca, czy źle sformułowane komunikaty są rejestrowane. Źle sformułowane wiadomości nie są wliczane do `maxMessagesToLog` . Wartość domyślna to `false`.|  
 |`logMessagesAtServiceLevel`|Wartość logiczna określająca, czy komunikaty są śledzone na poziomie usługi (przed szyfrowaniem i transformami związanymi z transportem). Wartość domyślna to `false`.|  
 |`logMessagesAtTransportLevel`|Wartość logiczna określająca, czy komunikaty są śledzone na poziomie transportu. Wszystkie filtry określone w pliku konfiguracyjnym są stosowane i śledzone są tylko komunikaty zgodne z filtrami. Wartość domyślna to `false`.|  
 |`maxMessagesToLog`|Dodatnia liczba całkowita, która określa maksymalną liczbę komunikatów do zarejestrowania. Wartość domyślna to 1000.|  
@@ -54,13 +54,13 @@ Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Win
   
 |Element|Opis|  
 |-------------|-----------------|  
-|filtry|`filters` Element przechowuje kolekcję filtrów XPath. Gdy rejestrowanie komunikatów transportu jest włączone (`logMessagesAtTransportLevel` is `true`), rejestrowane będą tylko komunikaty pasujące do filtrów.<br /><br /> Filtry są stosowane tylko w warstwie transportowej. Filtry nie wpływają na poziom usług i źle sformułowane rejestrowanie komunikatów.<br /><br /> Jedynym atrybutem dla tego elementu `filter`,,, jest obiekt XPathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filtry|`filters`Element przechowuje kolekcję filtrów XPath. Gdy rejestrowanie komunikatów transportu jest włączone ( `logMessagesAtTransportLevel` is `true` ), rejestrowane będą tylko komunikaty pasujące do filtrów.<br /><br /> Filtry są stosowane tylko w warstwie transportowej. Filtry nie wpływają na poziom usług i źle sformułowane rejestrowanie komunikatów.<br /><br /> Jedynym atrybutem dla tego elementu, `filter` ,, jest obiekt XPathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|diagnostyka|Definiuje ustawienia WCF na potrzeby inspekcji i kontroli środowiska uruchomieniowego dla administratora.|  
+|Diagnostyka|Definiuje ustawienia WCF na potrzeby inspekcji i kontroli środowiska uruchomieniowego dla administratora.|  
   
 ## <a name="remarks"></a>Uwagi  
  Komunikaty są rejestrowane na trzech różnych poziomach w stosie: Service, transport i źle sformułowane. Każdy poziom można aktywować osobno.  

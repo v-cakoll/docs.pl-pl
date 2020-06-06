@@ -6,19 +6,19 @@ helpviewer_keywords:
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115655"
 ---
-# <a name="supportportability-element"></a>\<element > Tag supportportability
+# <a name="supportportability-element"></a>\<supportPortability> Element
 Określa, że aplikacja może odwoływać się do tego samego zestawu w dwóch różnych implementacjach .NET Framework, przez wyłączenie domyślnego zachowania, które traktuje zestawy jako równoważne do celów przenośności aplikacji.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zestawubinding**](assemblybinding-element-for-runtime.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tag supportportability >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<supportPortability>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |PKT|Atrybut wymagany.<br /><br /> Określa token klucza publicznego zestawu, którego to dotyczy, jako ciąg znaków.|  
-|dostępny|Atrybut opcjonalny.<br /><br /> Określa, czy obsługa przenośności między implementacjami określonego zestawu .NET Framework powinna być włączona.|  
+|enabled|Atrybut opcjonalny.<br /><br /> Określa, czy obsługa przenośności między implementacjami określonego zestawu .NET Framework powinna być włączona.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |true|Włącz obsługę przenośności między implementacjami określonego zestawu .NET Framework. Domyślnie włączone.|  
-|false|Wyłącz obsługę przenośności między implementacjami określonego zestawu .NET Framework. Dzięki temu aplikacja może mieć odwołania do wielu implementacji określonego zestawu.|  
+|fałsz|Wyłącz obsługę przenośności między implementacjami określonego zestawu .NET Framework. Dzięki temu aplikacja może mieć odwołania do wielu implementacji określonego zestawu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
 
@@ -58,16 +58,16 @@ Brak.
   
 ## <a name="remarks"></a>Uwagi  
 
-Począwszy od .NET Framework 4, pomoc techniczna jest świadczona automatycznie dla aplikacji, które mogą korzystać z jednej z dwóch implementacji .NET Framework, na przykład implementacji .NET Framework lub .NET Framework dla implementacji Silverlight. Dwie implementacje określonego zestawu .NET Framework są uważane za równoważne przez spinacz zestawu. W kilku scenariuszach ta funkcja przenośności aplikacji powoduje problemy. W tych scenariuszach element `<supportPortability>` może być używany do wyłączania funkcji.  
+Począwszy od .NET Framework 4, pomoc techniczna jest świadczona automatycznie dla aplikacji, które mogą korzystać z jednej z dwóch implementacji .NET Framework, na przykład implementacji .NET Framework lub .NET Framework dla implementacji Silverlight. Dwie implementacje określonego zestawu .NET Framework są uważane za równoważne przez spinacz zestawu. W kilku scenariuszach ta funkcja przenośności aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być używany do wyłączania tej funkcji.  
   
 Taki scenariusz jest zestawem, który musi odwoływać się zarówno do implementacji .NET Framework, jak i .NET Framework do implementacji Silverlight dla określonego zestawu odwołania. Na przykład Projektant XAML zapisany w Windows Presentation Foundation (WPF) może potrzebować odwoływać się zarówno do implementacji pulpitu WPF, interfejsu użytkownika projektanta, jak i podzbioru WPF, który jest zawarty w implementacji Silverlight. Domyślnie oddzielne odwołania powodują wystąpienie błędu kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne. Ten element wyłącza zachowanie domyślne i zezwala na pomyślne Kompilowanie.  
   
 > [!IMPORTANT]
-> Aby kompilator przeszedł informacje do logiki wiązania zestawu środowiska uruchomieniowego języka wspólnego, należy użyć opcji kompilatora `/appconfig`, aby określić lokalizację pliku App. config, który zawiera ten element.  
+> Aby kompilator przeszedł informacje do logiki wiązania zestawu środowiska uruchomieniowego języka wspólnego, należy użyć `/appconfig` opcji kompilatora, aby określić lokalizację pliku App. config, który zawiera ten element.  
   
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. Aby określić lokalizację pliku App. config, należy użyć opcji kompilatora `/appconfig`.  
+Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. `/appconfig`Aby określić lokalizację pliku App. config, należy użyć opcji kompilatora.  
   
 ```xml  
 <configuration>  
@@ -82,5 +82,5 @@ Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET
   
 ## <a name="see-also"></a>Zobacz także
 
-- [-AppConfig (C# opcje kompilatora)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-AppConfig (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Przegląd dezjednoczenia zestawu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

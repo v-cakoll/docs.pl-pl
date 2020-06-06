@@ -3,17 +3,17 @@ title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
 ms.openlocfilehash: e4ce0452cc46a8f29334fa67f51f14b83290b1c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69918878"
 ---
-# <a name="filters"></a>\<Filtry >
+# \<filters>
 
-`filters` Element posiada kolekcję filtrów XPath używanych do kontroli rodzaju rejestrowanych komunikatów.
+`filters`Element posiada kolekcję filtrów XPath używanych do kontroli rodzaju rejestrowanych komunikatów.
 
-Filtry są stosowane tylko w warstwie transportowej, określonej `logMessagesAtTransportLevel` przez `true`is. Filtry nie wpływają na poziom usług i źle sformułowane rejestrowanie komunikatów.
+Filtry są stosowane tylko w warstwie transportowej, określonej przez `logMessagesAtTransportLevel` is `true` . Filtry nie wpływają na poziom usług i źle sformułowane rejestrowanie komunikatów.
 
 Aby dodać filtr do kolekcji, użyj `add` słowa kluczowego. Jeśli zdefiniowano co najmniej jeden filtr, rejestrowane są tylko komunikaty zgodne z co najmniej jednym filtrem. Jeśli żaden filtr nie jest zdefiniowany, wszystkie komunikaty są przekazywane.
 
@@ -46,4 +46,4 @@ Poniżej przedstawiono przykład sposobu konfigurowania filtru, który rejestruj
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
 - [Konfigurowanie rejestrowania komunikatów](../../../wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging >](messagelogging.md)
+- [\<messageLogging>](messagelogging.md)

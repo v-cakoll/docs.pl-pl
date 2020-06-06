@@ -3,18 +3,18 @@ title: <EnableAmPmParseAdjustment> Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117371"
 ---
-# <a name="enableampmparseadjustment-element"></a>\<element > EnableAmPmParseAdjustment
+# <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> Element
 Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu reguł do analizowania ciągów dat zawierających dzień, miesiąc, godzinę i oznaczenie AM/PM.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<EnableAmPmParseAdjustment>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu re
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<EnableAmPmParseAdjustment>` kontroluje, jak następujące metody analizują ciąg daty, który zawiera numeryczny dzień i miesiąc, po którym następuje godzina i oznaczenie AM/PM (na przykład "4/10 6 AM"):  
+ `<EnableAmPmParseAdjustment>`Element kontroluje, jak następujące metody analizują ciąg daty, który zawiera numeryczny dzień i miesiąc, po którym następuje godzina i oznaczenie AM/PM (na przykład "4/10 6 AM"):  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,7 +63,7 @@ Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu re
   
  Nie ma to znaczenia dla innych wzorców.  
   
- Element `<EnableAmPmParseAdjustment>` nie ma wpływu na metody <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>i <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>.  
+ `<EnableAmPmParseAdjustment>`Element nie ma wpływu na <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> metody,, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> i <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
 > W przypadku platformy .NET Core i .NET Native dostosowane reguły analizowania AM/PM są domyślnie włączone.  
@@ -72,14 +72,14 @@ Określa, czy metody analizowania dat i godzin używają dopasowanego zestawu re
   
  Jeśli reguła dopasowywania analizy jest włączona, metoda analizy interpretuje dzień i miesiąc jako należące do bieżącego roku i interpretuje czas jako godzinę zegara 12-godzinnego.  
   
- W poniższej tabeli przedstawiono różnicę wartości <xref:System.DateTime>, gdy metoda <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> jest używana do analizowania ciągu "" 4/10 6 AM "z właściwością `enabled` elementu `<EnableAmPmParseAdjustment>` ustawioną na wartość" 0 "lub" 1 ". Przyjęto założenie, że dzisiejszą datą jest 5 stycznia 2017 i wyświetla datę tak, jakby była sformatowana przy użyciu ciągu formatu "G" określonego kultury.  
+ W poniższej tabeli przedstawiono różnice w wartości, <xref:System.DateTime> gdy <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> Metoda jest używana do analizowania ciągu "" 4/10 6 AM "z `<EnableAmPmParseAdjustment>` `enabled` właściwością elementu ustawioną na wartość" 0 "lub" 1 ". Przyjęto założenie, że dzisiejszą datą jest 5 stycznia 2017 i wyświetla datę tak, jakby była sformatowana przy użyciu ciągu formatu "G" określonego kultury.  
   
 |Nazwa kultury|włączone = "0"|włączone = "1"|  
 |------------------|------------------|------------------|  
-|pl-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
-|pl GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
+|pl-PL|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
+|en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Element > środowiska uruchomieniowego \<](runtime-element.md)
-- [\<> elementu konfiguracji](../configuration-element.md)
+- [\<runtime>Postaci](runtime-element.md)
+- [\<configuration>Postaci](../configuration-element.md)

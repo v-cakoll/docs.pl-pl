@@ -1,15 +1,15 @@
 ---
-title: Element <MethodInstantiation> (.NET Native)
+title: <MethodInstantiation>— Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128329"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<element > MethodInstantiation (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation>— Element (.NET Native)
 Stosuje zasady odbicia środowiska uruchomieniowego do skonstruowanej metody ogólnej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -30,7 +30,7 @@ Stosuje zasady odbicia środowiska uruchomieniowego do skonstruowanej metody og�
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę metody.|  
-|`Signature`|Ogólne|Atrybut opcjonalny. Określa nazwane parametry metody. Wiele parametrów nazwanych są oddzielone przecinkami. Atrybut `Signature` jest używany do odróżniania przeciążonych metod.|  
+|`Signature`|Ogólne|Atrybut opcjonalny. Określa nazwane parametry metody. Wiele parametrów nazwanych są oddzielone przecinkami. Ten `Signature` atrybut jest używany do odróżniania przeciążonych metod.|  
 |`Arguments`|Ogólne|Atrybut wymagany. Określa argumenty typu ogólnego. Jeśli istnieją wiele argumentów, są one oddzielone przecinkami.|  
 |`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje wykonywanie zapytań dotyczących informacji na temat lub wyliczanie metody, ale nie włącza żadnego dynamicznego wywołania w czasie wykonywania.|  
 |`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktora lub metody w celu włączenia programowania dynamicznego. Te zasady zapewniają, że element członkowski może być wywoływany dynamicznie w czasie wykonywania.|  
@@ -39,7 +39,7 @@ Stosuje zasady odbicia środowiska uruchomieniowego do skonstruowanej metody og�
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_name*|Nazwa metody. Typ metody jest zdefiniowany przez nadrzędny [typ\<, >](type-element-net-native.md) lub [\<elementu > TypeInstantiation](typeinstantiation-element-net-native.md) .|  
+|*method_name*|Nazwa metody. Typ metody jest zdefiniowany przez [\<Type>](type-element-net-native.md) element nadrzędny lub [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="signature-attribute"></a>Atrybut podpisu  
   
@@ -57,7 +57,7 @@ Stosuje zasady odbicia środowiska uruchomieniowego do skonstruowanej metody og�
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla metody. Możliwe wartości to `Auto`, `Excluded`, `Included`i `Required`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla metody. Możliwe wartości to `Auto` , `Excluded` , `Included` , i `Required` . Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -66,15 +66,15 @@ Stosuje zasady odbicia środowiska uruchomieniowego do skonstruowanej metody og�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[Typ\<](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
-|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
+|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<MethodInstantiation>` przesłania zasady odbicia środowiska uruchomieniowego odpowiadającej jej otwartej metody ogólnej.  
+ `<MethodInstantiation>`Element zastępuje zasady odbicia środowiska uruchomieniowego odpowiadającej jej otwartej metody ogólnej.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)
-- [Element >\<metody](method-element-net-native.md)
+- [\<Method>Postaci](method-element-net-native.md)

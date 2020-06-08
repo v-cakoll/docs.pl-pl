@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177227"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503643"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps — Metoda
-Pobiera informacje przechowywane w metadanych dla definicji określonego elementu członkowskiego, w tym <xref:System.Type> nazwę, podpis binarny i względny adres wirtualny elementu członkowskiego, do którego odwołuje się określony token metadanych. Jest to prosta metoda pomocnika: jeśli *mb* jest MethodDef, a następnie **GetMethodProps** jest wywoływana; jeśli *mb* jest FieldDef, a następnie **GetFieldProps** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje.
+Pobiera informacje przechowywane w metadanych dla określonej definicji elementu członkowskiego, w tym nazwę, podpis binarny i względny adres wirtualny, do <xref:System.Type> elementu członkowskiego, do którego odwołuje się określony token metadanych. Jest to prosta metoda pomocnicza: Jeśli *MB* jest elementem MethodDef, **GetMethodProps —** jest wywoływana; Jeśli liczba *MB* to FieldDef, **GetFieldProps —** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje.
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [w] Token, który odwołuje się do elementu członkowskiego, aby uzyskać skojarzone metadane.  
+ podczas Token, który odwołuje się do elementu członkowskiego, aby uzyskać skojarzone metadane.  
   
  `pClass`  
- [na zewnątrz] Wskaźnik do tokenu metadanych, który reprezentuje klasę członka.  
+ określoną Wskaźnik do tokenu metadanych, który reprezentuje klasę elementu członkowskiego.  
   
  `szMember`  
- [na zewnątrz] Nazwa elementu członkowskiego.  
+ określoną Nazwa elementu członkowskiego.  
   
  `cchMember`  
- [w] Rozmiar w szerokich `szMember` znakach buforu.  
+ podczas Rozmiar w postaci znaków dwubajtowych w `szMember` buforze.  
   
  `pchMember`  
- [na zewnątrz] Rozmiar w szerokich znakach zwracanej nazwy.  
+ określoną Rozmiar w postaci znaków dwubajtowych zwracanej nazwy.  
   
  `pdwAttr`  
- [na zewnątrz] Wszystkie wartości flag zastosowanych do elementu członkowskiego.  
+ określoną Wszystkie wartości flag zastosowane do elementu członkowskiego.  
   
  `ppvSigBlob`  
- [na zewnątrz] Wskaźnik do podpisu binarnych metadanych członka.  
+ określoną Wskaźnik do binarnego podpisu metadanych elementu członkowskiego.  
   
  `pcbSigBlob`  
- [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
+ określoną Rozmiar w bajtach `ppvSigBlob` .  
   
  `pulCodeRVA`  
- [na zewnątrz] Wskaźnik do względnego adresu wirtualnego elementu członkowskiego.  
+ określoną Wskaźnik do względnego adresu wirtualnego elementu członkowskiego.  
   
  `pdwImplFlags`  
- [na zewnątrz] Flagi implementacji dowolnej metody skojarzone z elementem członkowskim.  
+ określoną Wszystkie flagi implementacji metody skojarzone z elementem członkowskim.  
   
  `pdwCPlusTypeFlag`  
- [na zewnątrz] Flaga oznaczająca <xref:System.ValueType>. Jest to jedna `ELEMENT_TYPE_*` z wartości.
+ określoną Flaga oznaczająca element <xref:System.ValueType> . Jest to jedna z `ELEMENT_TYPE_*` wartości.
   
  `ppValue`  
- [na zewnątrz] Stała wartość ciągu zwrócona przez ten element członkowski.  
+ określoną Wartość stałej ciągu zwrócona przez ten element członkowski.  
   
  `pcchValue`  
- [na zewnątrz] Rozmiar znaków `ppValue`, lub zero, jeśli `ppValue` nie posiada ciągu.  
+ określoną Rozmiar w znakach `ppValue` lub zero, jeśli nie zawiera `ppValue` ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

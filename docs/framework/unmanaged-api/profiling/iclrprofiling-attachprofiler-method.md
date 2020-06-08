@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500562"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler — Metoda
 Dołącza określony Profiler do określonego procesu.  
@@ -41,29 +41,29 @@ HRESULT AttachProfiler(
 
 - `dwProfileeProcessID`
 
-  \[] Identyfikator procesu, do którego ma zostać dołączony Profiler. Na komputerze 64-bitowym profilowana liczba bitów procesu PROFILOWANEGO musi być zgodna z bitową procesu wyzwalacza, który wywołuje `AttachProfiler`. Jeśli konto użytkownika, pod którym jest wywoływane `AttachProfiler` ma uprawnienia administracyjne, proces docelowy może być dowolnym procesem w systemie. W przeciwnym razie proces docelowy musi należeć do tego samego konta użytkownika.
+  \[in] Identyfikator procesu, do którego ma zostać dołączony Profiler. Na komputerze 64-bitowym profilowana liczba bitów procesu PROFILOWANEGO musi być zgodna z bitową wywoływanym przez proces wyzwalacza `AttachProfiler` . Jeśli konto użytkownika, pod którym `AttachProfiler` jest wywoływane, ma uprawnienia administracyjne, proces docelowy może być dowolnym procesem w systemie. W przeciwnym razie proces docelowy musi należeć do tego samego konta użytkownika.
 
 - `dwMillisecondsMax`
 
-  \[] czas trwania (w milisekundach) dla `AttachProfiler` do ukończenia. Proces wyzwalacza powinien przekroczyć limit czasu, który jest znany jako wystarczający dla danego profilera, aby zakończyć jego inicjalizację.
+  \[w] czas trwania w milisekundach do `AttachProfiler` ukończenia. Proces wyzwalacza powinien przekroczyć limit czasu, który jest znany jako wystarczający dla danego profilera, aby zakończyć jego inicjalizację.
   
 - `pClsidProfiler`
 
-  \[w] wskaźnik do identyfikatora CLSID profilera do załadowania. Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`.
+  \[w] wskaźnik do identyfikatora CLSID profilera do załadowania. Proces wyzwalacza może ponownie użyć tej pamięci po `AttachProfiler` powrocie.
 
 - `wszProfilerPath`
 
-  \[w] pełna ścieżka do pliku DLL profilera do załadowania. Ten ciąg nie może zawierać więcej niż 260 znaków, łącznie z terminatorem o wartości null. Jeśli `wszProfilerPath` ma wartość null lub jest pustym ciągiem, środowisko uruchomieniowe języka wspólnego (CLR) spróbuje znaleźć lokalizację pliku DLL profilera, przeglądając rejestr dla identyfikatora CLSID, do którego `pClsidProfiler` wskazują.
+  \[w] pełna ścieżka do pliku DLL profilera do załadowania. Ten ciąg nie może zawierać więcej niż 260 znaków, łącznie z terminatorem o wartości null. Jeśli `wszProfilerPath` parametr ma wartość null lub jest pustym ciągiem, środowisko uruchomieniowe języka wspólnego (CLR) spróbuje znaleźć lokalizację pliku DLL profilera, przeglądając rejestr dla identyfikatora CLSID wskazującego `pClsidProfiler` na.
 
 - `pvClientData`
 
-  \[] wskaźnik do danych, które mają zostać przesłane do profilera przez metodę [ICorProfilerCallback3:: InitializeForAttach —](icorprofilercallback3-initializeforattach-method.md) . Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`. Jeśli `pvClientData` ma wartość null, `cbClientData` musi mieć wartość 0 (zero).
+  \[w] wskaźnik do danych, które mają zostać przesłane do profilera przez metodę [ICorProfilerCallback3:: InitializeForAttach —](icorprofilercallback3-initializeforattach-method.md) . Proces wyzwalacza może ponownie użyć tej pamięci po `AttachProfiler` powrocie. Jeśli `pvClientData` ma wartość null, `cbClientData` musi mieć wartość 0 (zero).
 
 - `cbClientData`
 
-  \[] rozmiar (w bajtach) danych, do których `pvClientData` wskazują.
+  \[w] rozmiar, w bajtach, danych, które `pvClientData` wskazują.
 
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące HRESULTs.  
   
 |HRESULT|Opis|  
@@ -71,7 +71,7 @@ HRESULT AttachProfiler(
 |S_OK|Określony profiler został pomyślnie dołączony do procesu docelowego.|  
 |CORPROF_E_PROFILER_ALREADY_ACTIVE|Istnieje już Profiler aktywny lub dołączany do procesu docelowego.|  
 |CORPROF_E_PROFILER_NOT_ATTACHABLE|Określony Profiler nie obsługuje załącznika. Proces wyzwalacza może próbować dołączyć inny Profiler.|  
-|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Nie można zażądać załącznika profilera, ponieważ wersja procesu docelowego jest niezgodna z bieżącym procesem wywołującym `AttachProfiler`.|  
+|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Nie można zażądać załącznika profilera, ponieważ wersja procesu docelowego jest niezgodna z bieżącym procesem wywołującym `AttachProfiler` .|  
 |HRESULT_FROM_WIN32 (ERROR_ACCESS_DENIED)|Użytkownik procesu wyzwalacza nie ma dostępu do procesu docelowego.|  
 |HRESULT_FROM_WIN32 (ERROR_PRIVILEGE_NOT_HELD)|Użytkownik procesu wyzwalacza nie ma uprawnień niezbędnych do dołączenia profilera do danego procesu docelowego. Dziennik zdarzeń aplikacji może zawierać więcej informacji.|  
 |CORPROF_E_IPC_FAILED|Wystąpił błąd podczas komunikacji z procesem docelowym. Zwykle zdarza się to, gdy proces docelowy został zamknięty.|  
@@ -84,20 +84,20 @@ HRESULT AttachProfiler(
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="memory-management"></a>Zarządzanie pamięcią  
- W zakresie utrzymywania z konwencjami COM wywołujący `AttachProfiler` (na przykład kod wyzwalacza utworzony przez twórcę profilera) jest odpowiedzialny za przydzielanie i cofanie przydziału pamięci dla danych, do których wskazuje parametr `pvClientData`. Gdy środowisko CLR wykonuje wywołanie `AttachProfiler`, tworzy kopię pamięci, która `pvClientData` wskazuje i przesyła ją do procesu docelowego. Gdy środowisko CLR wewnątrz procesu docelowego otrzymuje własną kopię bloku `pvClientData`, przekazuje blok do profilera za pośrednictwem metody `InitializeForAttach`, a następnie rozdziela jego kopię bloku `pvClientData` z procesu docelowego.  
+ W zakresie utrzymywania z konwencjami COM obiekt wywołujący `AttachProfiler` (na przykład kod wyzwalacza utworzony przez twórcę profilera) jest odpowiedzialny za przydzielanie i cofanie przydziału pamięci dla danych, `pvClientData` do których wskazuje parametr. Gdy środowisko CLR wykonuje `AttachProfiler` wywołanie, tworzy kopię pamięci, która `pvClientData` wskazuje na i przesyła ją do procesu docelowego. Gdy środowisko CLR wewnątrz procesu docelowego otrzymuje własną kopię `pvClientData` bloku, przekazuje blok do profilera za pośrednictwem `InitializeForAttach` metody, a następnie cofa alokację kopii `pvClientData` bloku z procesu docelowego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](profiling-interfaces.md)
 - [Profilowanie](index.md)

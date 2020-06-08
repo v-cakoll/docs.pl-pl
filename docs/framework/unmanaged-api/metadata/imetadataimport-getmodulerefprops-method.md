@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503584"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps — Metoda
-Pobiera nazwę modułu, do którego odwołuje się token określonych metadanych.  
+Pobiera nazwę modułu, do którego odwołuje się określony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mur`  
- [w] ModułRef token metadanych, który odwołuje się do modułu, aby uzyskać informacje o metadanych.  
+ podczas Token metadanych elementu ModuleRef odwołujący się do modułu, w którym są uzyskiwane informacje o metadanych.  
   
  `szName`  
- [na zewnątrz] Bufor do przechowywania nazwy modułu.  
+ określoną Bufor przechowujący nazwę modułu.  
   
  `cchName`  
- [w] Żądany rozmiar `szName` w szerokich znakach.  
+ podczas Żądany rozmiar znaków dwubajtowych `szName` .  
   
  `pchName`  
- [na zewnątrz] Zwrócony rozmiar `szName` w szerokich znakach.  
+ określoną Zwrócony rozmiar znaków dwubajtowych `szName` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

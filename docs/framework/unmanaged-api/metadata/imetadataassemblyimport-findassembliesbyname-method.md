@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009421"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503838"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName — Metoda
 Pobiera tablicę zestawów z określonym `szAssemblyName` parametrem przy użyciu standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.  
@@ -67,7 +67,7 @@ HRESULT FindAssembliesByName (
 ## <a name="remarks"></a>Uwagi  
  Dana nazwa zestawu, `FindAssembliesByName` Metoda znajduje się w zestawie, zgodnie ze standardowymi regułami dotyczącymi rozpoznawania odwołań do zestawów. (Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName`umożliwia wywołującemu skonfigurowanie różnych aspektów kontekstu programu rozpoznawania nazw, takich jak ścieżka do bazy aplikacji i wyszukiwania prywatnego.  
   
- `FindAssembliesByName`Metoda wymaga zainicjowania środowiska CLR w procesie w celu wywołania logiki rozpoznawania zestawu. W związku z tym należy wywołać [CoInitializeEE —](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (przekazywanie COINITEE_DEFAULT) przed wywołaniem `FindAssembliesByName` , a następnie wykonać wywołanie [CoUninitializeCor —](../hosting/couninitializecor-function.md).  
+ `FindAssembliesByName`Metoda wymaga zainicjowania środowiska CLR w procesie w celu wywołania logiki rozpoznawania zestawu. W związku z tym należy wywołać [CoInitializeEE —](../hosting/coinitializeee-function.md) (przekazywanie COINITEE_DEFAULT) przed wywołaniem `FindAssembliesByName` , a następnie wykonać wywołanie [CoUninitializeCor —](../hosting/couninitializecor-function.md).  
   
  `FindAssembliesByName`Zwraca wskaźnik [IMetaDataImport](imetadataimport-interface.md) do pliku zawierającego manifest zestawu dla nazwy zestawu, która została przeniesiona. Jeśli podana nazwa zestawu nie jest w pełni określona (na przykład jeśli nie zawiera wersji), można zwrócić wiele zestawów.  
   
@@ -82,7 +82,7 @@ HRESULT FindAssembliesByName (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../deployment/how-the-runtime-locates-assemblies.md)
 - [IMetaDataAssemblyImport — Interfejs](imetadataassemblyimport-interface.md)

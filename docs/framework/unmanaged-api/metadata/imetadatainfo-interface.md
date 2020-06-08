@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-ms.openlocfilehash: be08e27bd98eccdffca654972eca775e2ecd0a95
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c63302b53d035edb13ccacf8ceef817bd3107fd7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442097"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503409"
 ---
 # <a name="imetadatainfo-interface"></a>IMetaDataInfo — Interfejs
 Zapewnia metodę, która pobiera informacje o mapowaniu metadanych z pliku na dysku do pamięci.  
@@ -28,18 +28,18 @@ Zapewnia metodę, która pobiera informacje o mapowaniu metadanych z pliku na dy
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFileMapping, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Pobiera region pamięci zamapowanego pliku i rodzaj mapowania.|  
+|[GetFileMapping — Metoda](imetadatainfo-getfilemapping-method.md)|Pobiera region pamięci zamapowanego pliku i rodzaj mapowania.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [CorFileMapping, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [Interfejsy metadanych](metadata-interfaces.md)
+- [CorFileMapping, wyliczenie](corfilemapping-enumeration.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4be2a50664b001e865b5ecdd9aabe8ba727b8c26
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866601"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500393"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished — Metoda
 Powiadamia profiler o zakończeniu ładowania klasy.  
@@ -41,23 +41,23 @@ HRESULT ClassLoadFinished(
 
 - `hrStatus`
 
-  \[in] wynik HRESULT wskazujący, czy klasa została pomyślnie załadowana.
+  \[w] wynik HRESULT wskazujący, czy klasa została pomyślnie załadowana.
 
 ## <a name="remarks"></a>Uwagi  
- Wartość `classId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda `ClassLoadFinished`.  
+ Wartość `classId` nie jest prawidłowa dla żądania informacji, dopóki `ClassLoadFinished` Metoda nie zostanie wywołana.  
   
- Niektóre części ładowania klasy mogą być kontynuowane po wywołaniu wywołania zwrotnego `ClassLoadFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część ładowania klasy zakończyła się powodzeniem.  
+ Niektóre części ładowania klasy mogą być kontynuowane po `ClassLoadFinished` wywołaniu wywołania zwrotnego. Błąd HRESULT w elemencie `hrStatus` wskazuje na błąd. Jednak powodzenie HRESULT w programie `hrStatus` wskazuje tylko, że pierwsza część ładowania klasy zakończyła się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ClassLoadStarted, metoda](icorprofilercallback-classloadstarted-method.md)

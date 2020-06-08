@@ -1,5 +1,6 @@
 ---
 title: Przykład synchronicznego gniazda serwera
+description: Ten przykład .NET Framework program tworzy serwer, który odbiera połączenia od klientów przy użyciu gniazda synchronicznego. Odbiera i zwraca ciąg.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: e8924051a7087ac26793722457f934e58a75f23d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e2fb91dc493b2da4c68a98ac8a62494e78a9fd1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180661"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502109"
 ---
 # <a name="synchronous-server-socket-example"></a>Przykład synchronicznego gniazda serwera
-Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest zbudowany z gniazda synchroniczowego, więc wykonanie aplikacji serwera jest zawieszone, gdy czeka na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg na konsoli, a następnie echa ciągu z powrotem do klienta. Ciąg z klienta musi zawierać\<ciąg "EOF>", aby zasygnalizować koniec wiadomości.  
+Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer został skompilowany za pomocą gniazda synchronicznego, więc wykonywanie aplikacji serwera jest zawieszone podczas oczekiwania na połączenie od klienta. Aplikacja otrzymuje ciąg z klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg z powrotem do klienta. Ciąg z klienta musi zawierać ciąg " \<EOF> ", aby sygnalizować koniec komunikatu.  
   
 ```vb  
 Imports System  
@@ -155,7 +156,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykład synchronicznego gniazda klienta](synchronous-client-socket-example.md)
 - [Używanie synchronicznego gniazda serwera](using-a-synchronous-server-socket.md)

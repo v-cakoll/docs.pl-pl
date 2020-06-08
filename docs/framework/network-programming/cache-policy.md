@@ -1,5 +1,6 @@
 ---
 title: Zasady pamięci podręcznej
+description: Dowiedz się więcej na temat zasad pamięci podręcznej, zasad, które określają, czy żądanie może być spełnione przy użyciu buforowanej kopii żądanego zasobu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - time-based cache policies
@@ -10,35 +11,35 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048777"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502668"
 ---
 # <a name="cache-policy"></a>Zasady pamięci podręcznej
-Zasady pamięci podręcznej definiuje reguły, które są używane do określenia, czy żądanie może być spełnione przy użyciu buforowanej kopii żądanego zasobu. Aplikacje określają wymagania pamięci podręcznej klienta dla świeżości, ale zasady skutecznej pamięci podręcznej zależy od wymagań pamięci podręcznej klienta, wymagań wygaśnięcia zawartości serwera i wymagań ponownego licencjonowania serwera. Interakcja zasad pamięci podręcznej klienta i wymagania serwera zawsze powoduje najbardziej konserwatywne zasady pamięci podręcznej, aby zapewnić, że najświeższa zawartość jest zwracana do aplikacji klienckiej.  
+Zasady pamięci podręcznej definiują reguły, które są używane do określenia, czy żądanie może być spełnione przy użyciu buforowanej kopii żądanego zasobu. Aplikacje określają wymagania dotyczące pamięci podręcznej klienta dla Aktualności, ale obowiązujące zasady pamięci podręcznej określają wymagania dotyczące pamięci podręcznej klienta, wymagania dotyczące wygaśnięcia zawartości serwera i wymagania dotyczące ponownego sprawdzania poprawności serwera. Interakcja z wymaganiami zasad i serwera pamięci podręcznej klienta zawsze polega na najbardziej nieodpowiedniej zasadzie pamięci podręcznej, aby zapewnić, że najnowsza zawartość jest zwracana do aplikacji klienckiej.  
   
- Zasady pamięci podręcznej są oparte na lokalizacji lub na podstawie czasu. Zasady pamięci podręcznej oparte na lokalizacji definiują świeżość buforowanych wpisów na podstawie tego, skąd można zabrać żądany zasób. Zasady pamięci podręcznej oparte na czasie definiuje świeżość wpisów w pamięci podręcznej przy użyciu czasu, w której zasób został pobrany, nagłówków zwróconych z zasobem i bieżącej. Większość aplikacji może używać domyślnych zasad pamięci podręcznej opartych na czasie, która implementuje zasady buforowania określone w RFC 2616, dostępne w witrynie internetowej [Internet Engineering Task Force (IETF).](https://www.ietf.org/)  
+ Zasady pamięci podręcznej są oparte na lokalizacji lub czasie. Zasady pamięci podręcznej oparte na lokalizacji określają świeżość buforowanych wpisów na podstawie lokalizacji, z której można pobrać żądany zasób. Zasady pamięci podręcznej oparte na czasie definiują świeżość buforowanych wpisów przy użyciu czasu pobrania zasobu, nagłówki zwrócone z zasobem i bieżący czas. Większość aplikacji może korzystać z domyślnych zasad pamięci podręcznej opartych na czasie, które implementują Zasady buforowania określone w dokumencie RFC 2616, dostępne w witrynie [Internet Engineering Task Force (IETF)](https://www.ietf.org/) .  
   
- Klasy opisane w poniższej tabeli są używane do określania zasad pamięci podręcznej.  
+ Klasy opisane w poniższej tabeli służą do określania zasad pamięci podręcznej.  
   
 |Nazwa klasy|Opis|  
 |----------------|-----------------|  
-|<xref:System.Net.Cache.HttpRequestCachePolicy>|Reprezentuje oparte na lokalizacji i oparte na czasie <xref:System.Net.HttpWebRequest> zasady pamięci podręcznej dla zasobów wymaganych przy użyciu obiektów.|  
-|<xref:System.Net.Cache.RequestCachePolicy>|Reprezentuje zasady pamięci podręcznej <xref:System.Net.Cache.RequestCacheLevel.Default> oparte na lokalizacji lub oparte <xref:System.Net.WebRequest> na czasie zasady pamięci podręcznej dla zasobów wymaganych przy użyciu obiektów.|  
-|<xref:System.Net.Cache.HttpCacheAgeControl>|Określa wartości używane do tworzenia <xref:System.Net.Cache.HttpRequestCachePolicy> obiektów opartych na czasie.|  
-|<xref:System.Net.Cache.HttpRequestCacheLevel>|Określa wartości używane do tworzenia obiektów opartych na lokalizacji i czasie. <xref:System.Net.Cache.HttpRequestCachePolicy>|  
-|<xref:System.Net.Cache.RequestCacheLevel>|Określa wartości używane do tworzenia obiektów <xref:System.Net.Cache.RequestCacheLevel.Default> opartych <xref:System.Net.Cache.RequestCachePolicy> na lokalizacji lub opartych na czasie.|  
+|<xref:System.Net.Cache.HttpRequestCachePolicy>|Reprezentuje zasady pamięci podręcznej oparte na lokalizacji i czasie dla zasobów żądanych za pomocą <xref:System.Net.HttpWebRequest> obiektów.|  
+|<xref:System.Net.Cache.RequestCachePolicy>|Reprezentuje zasady pamięci podręcznej oparte na lokalizacji lub <xref:System.Net.Cache.RequestCacheLevel.Default> zasady pamięci podręcznej dla zasobów żądanych za pomocą <xref:System.Net.WebRequest> obiektów.|  
+|<xref:System.Net.Cache.HttpCacheAgeControl>|Określa wartości używane do tworzenia obiektów opartych na czasie <xref:System.Net.Cache.HttpRequestCachePolicy> .|  
+|<xref:System.Net.Cache.HttpRequestCacheLevel>|Określa wartości używane do tworzenia obiektów opartych na lokalizacji i czasowych <xref:System.Net.Cache.HttpRequestCachePolicy> .|  
+|<xref:System.Net.Cache.RequestCacheLevel>|Określa wartości używane do tworzenia obiektów opartych na lokalizacji lub na <xref:System.Net.Cache.RequestCacheLevel.Default> podstawie czasu <xref:System.Net.Cache.RequestCachePolicy> .|  
   
- Można zdefiniować zasady pamięci podręcznej dla wszystkich żądań złożonych przez aplikację lub dla poszczególnych żądań. Po określeniu zarówno zasad pamięci podręcznej na poziomie aplikacji, jak i zasad pamięci podręcznej na poziomie żądania, używana jest zasada na poziomie żądania. Zasady pamięci podręcznej na poziomie aplikacji można określić programowo lub przy użyciu plików konfiguracyjnych aplikacji lub komputera. Aby uzyskać więcej informacji, zobacz [ \<requestCaching> Element (Ustawienia sieciowe)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+ Można zdefiniować zasady pamięci podręcznej dla wszystkich żądań wykonywanych przez aplikację lub dla poszczególnych żądań. W przypadku określenia zasad pamięci podręcznej na poziomie aplikacji i zasad pamięci podręcznej na poziomie żądania są używane zasady na poziomie żądania. Zasady pamięci podręcznej na poziomie aplikacji można określić programowo lub przy użyciu plików konfiguracyjnych aplikacji lub komputera. Aby uzyskać więcej informacji, zobacz [ \<requestCaching> element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
- Aby utworzyć zasady pamięci podręcznej, należy utworzyć obiekt zasad, tworząc wystąpienie <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> klasy. Aby określić zasady w żądaniu, <xref:System.Net.WebRequest.CachePolicy%2A> ustaw właściwość żądania na obiekt zasad. Podczas programowania programowania ustawiania zasad na <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> poziomie aplikacji ustaw właściwość na obiekt zasad.  
+ Aby utworzyć zasady pamięci podręcznej, należy utworzyć obiekt zasad, tworząc wystąpienie <xref:System.Net.Cache.RequestCachePolicy> <xref:System.Net.Cache.HttpRequestCachePolicy> klasy or. Aby określić zasady dla żądania, należy ustawić <xref:System.Net.WebRequest.CachePolicy%2A> Właściwość żądania na obiekt zasad. Konfigurując zasady na poziomie aplikacji programowo, należy ustawić <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> właściwość obiektu zasad.  
   
- Aby zapoznać się z przykładami kodu, które pokazują tworzenie i używanie zasad pamięci podręcznej, zobacz [Konfigurowanie buforowania w aplikacjach sieciowych](configuring-caching-in-network-applications.md).  
+ Przykłady kodu, które demonstrują tworzenie i Używanie zasad pamięci podręcznej, można znaleźć [w temacie Konfigurowanie buforowania w aplikacjach sieciowych](configuring-caching-in-network-applications.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)

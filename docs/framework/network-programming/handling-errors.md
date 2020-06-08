@@ -1,5 +1,6 @@
 ---
 title: Obsługa błędów
+description: Dowiedz się więcej o wyjątkach dotyczących systemu i sieci Web zgłoszonych przez WebRequest i WebResponse. Użyj właściwości status, aby zrozumieć i rozwiązać problem.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,45 +32,45 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180871"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502577"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 
-Klasy <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> i zgłaszać zarówno wyjątki <xref:System.ArgumentException>systemowe (takie jak ) <xref:System.Net.WebException> i <xref:System.Net.WebRequest.GetResponse%2A> wyjątki specyficzne dla sieci Web (które są generowane przez metodę).  
+<xref:System.Net.WebRequest>Klasy i <xref:System.Net.WebResponse> generują zarówno wyjątki systemowe (takie jak <xref:System.ArgumentException> ), jak i specyficzne dla sieci Web wyjątki (które są <xref:System.Net.WebException> generowane przez <xref:System.Net.WebRequest.GetResponse%2A> metodę).  
   
-Każdy **WebException** <xref:System.Net.WebException.Status%2A> zawiera właściwość, która <xref:System.Net.WebExceptionStatus> zawiera wartość z wyliczenia. Można zbadać **Status** właściwości, aby określić błąd, który wystąpił i podjąć odpowiednie kroki, aby rozwiązać błąd.  
+Każdy element **WebException** zawiera <xref:System.Net.WebException.Status%2A> Właściwość, która zawiera wartość z <xref:System.Net.WebExceptionStatus> wyliczenia. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
   
-W poniższej tabeli opisano możliwe wartości właściwości **Status.**  
+W poniższej tabeli opisano możliwe wartości właściwości **stan** .  
   
 |Stan|Opis|  
 |------------|-----------------|  
-|ConnectFailure (Połączenie)|Nie można skontaktować się z usługą zdalną na poziomie transportu.|  
-|ConnectionClosed (Zamknięte połączenie)|Połączenie zostało zamknięte przedwcześnie.|  
-|KeepAliveWłasna|Serwer zamknął połączenie nawiązanym z zestawem nagłówków Keep-alive.|  
-|NazwaResolutionFailure|Usługa nazw nie może rozpoznać nazwy hosta.|  
-|ProtokółError|Odpowiedź otrzymana z serwera została ukończona, ale wskazywała błąd na poziomie protokołu.|  
-|ReceiveFailure (Nieujmowie)|Pełna odpowiedź nie została odebrana z serwera zdalnego.|  
-|RequestCanceled (Wyliczył)|Żądanie zostało anulowane.|  
-|SecureChannelWładnia|Wystąpił błąd w łączu bezpiecznego kanału.|  
-|SendFailure (Niebezpieczeństwo wyślij)|Nie można wysłać kompletnego żądania do serwera zdalnego.|  
-|ServerProtocolViolation (Proces serweraProtocolViolation)|Odpowiedź serwera nie była prawidłową odpowiedzią HTTP.|  
-|Powodzenie|Nie wystąpił żaden błąd.|  
-|Limit czasu|W terminie wyznaczonym dla wniosku nie otrzymano odpowiedzi.|  
-|ZaufanieWłasność|Nie można zweryfikować certyfikatu serwera.|  
-|WiadomośćLengthLimitExceeded|Odebrano wiadomość, która przekroczyła określony limit podczas wysyłania żądania lub odbierania odpowiedzi z serwera.|  
-|Oczekujące|Oczekuje na wewnętrzne żądanie asynchroniczne.|  
-|Awaria rurociągu|Ta wartość obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
+|ConnectFailure|Nie można skontaktować się z usługą zdalną na poziomie transportu.|  
+|ConnectionClosed|Połączenie zostało przedwcześnie zakończone.|  
+|KeepAliveFailure|Serwer zamknął połączenie wykonane z zestawem nagłówkowym Keep-Alive.|  
+|NameResolutionFailure|Usługa nazw nie może rozpoznać nazwy hosta.|  
+|ProtocolError|Odpowiedź odebrana z serwera została ukończona, ale wykazała błąd na poziomie protokołu.|  
+|ReceiveFailure|Nie odebrano kompletnej odpowiedzi z serwera zdalnego.|  
+|RequestCanceled|Żądanie zostało anulowane.|  
+|SecureChannelFailure|Wystąpił błąd w łącznym kanale bezpiecznego kanału.|  
+|SendFailure|Nie można wysłać kompletnego żądania do serwera zdalnego.|  
+|ServerProtocolViolation|Odpowiedź serwera nie jest prawidłową odpowiedzią HTTP.|  
+|Powodzenie|Nie wystąpił błąd.|  
+|Limit czasu|Nie odebrano odpowiedzi w określonym limicie czasu dla żądania.|  
+|TrustFailure|Nie można zweryfikować certyfikatu serwera.|  
+|MessageLengthLimitExceeded|Odebrano komunikat, który przekroczył określony limit podczas wysyłania żądania lub odebrania odpowiedzi z serwera.|  
+|Oczekiwanie|Wewnętrzne asynchroniczne żądanie jest w stanie oczekiwania.|  
+|PipelineFailure|Ta wartość obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
 |ProxyNameResolutionFailure|Usługa rozpoznawania nazw nie może rozpoznać nazwy hosta serwera proxy.|  
-|NieznanyError|Wystąpił wyjątek nieznanego typu.|  
+|UnknownError|Wystąpił wyjątek nieznanego typu.|  
   
-Gdy **właściwość Status** jest **WebExceptionStatus.ProtocolError**, **WebResponse,** który zawiera odpowiedź z serwera jest dostępna. Można sprawdzić tę odpowiedź, aby określić rzeczywiste źródło błędu protokołu.  
+Gdy właściwość **status** ma wartość **WebExceptionStatus. ProtocolError**, dostępna jest **WebResponse** , która zawiera odpowiedź z serwera. Tę odpowiedź można sprawdzić w celu ustalenia rzeczywistego źródła błędu protokołu.  
   
-W poniższym przykładzie pokazano, jak złapać **WebException**.  
+Poniższy przykład przedstawia sposób przechwytywania **wyjątku WebException**.  
   
 ```csharp  
 try
@@ -164,11 +165,11 @@ Catch e As Exception
 End Try  
 ```  
   
-Aplikacje, <xref:System.Net.Sockets.Socket> które <xref:System.Net.Sockets.SocketException> używają rzutu klasy, gdy wystąpią błędy w gnieździe systemu Windows. <xref:System.Net.Sockets.TcpListener> <xref:System.Net.Sockets.UdpClient> , <xref:System.Net.Sockets.TcpClient>i klasy są zbudowane na górze **Socket** klasy i rzucać **SocketExceptions,** jak również.  
+Aplikacje korzystające z <xref:System.Net.Sockets.Socket> klasy throw w <xref:System.Net.Sockets.SocketException> przypadku wystąpienia błędów w gnieździe Windows. <xref:System.Net.Sockets.TcpClient>Klasy, <xref:System.Net.Sockets.TcpListener> , i <xref:System.Net.Sockets.UdpClient> są zbudowane na podstawie klasy **Socket** i generują **SocketExceptions** .  
   
-Po uruchomieniu **SocketException,** **SocketException** klasa <xref:System.Net.Sockets.SocketException.ErrorCode%2A> ustawia właściwość do ostatniego błędu gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2.0 w sieci MSDN.  
+Gdy zostanie zgłoszony obiekt **SocketException** , Klasa **SocketException** ustawia <xref:System.Net.Sockets.SocketException.ErrorCode%2A> Właściwość na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Obsługa i zgłaszanie wyjątków w .NET](../../standard/exceptions/index.md)
+- [Obsługa i zgłaszanie wyjątków w programie .NET](../../standard/exceptions/index.md)
 - [Żądanie danych](requesting-data.md)

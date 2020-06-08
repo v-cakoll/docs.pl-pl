@@ -1,5 +1,6 @@
 ---
 title: Włączanie śledzenia sieci
+description: Dowiedz się, jak włączyć śledzenie sieci, które zawiera informacje o wywołaniach metod i ruchu sieciowym dla aplikacji zarządzanej w .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace destinations
@@ -11,29 +12,29 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180880"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502603"
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
-Śledzenie sieci zapewnia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanych przez aplikację zarządzaną. Aby włączyć śledzenie sieci w aplikacji, należy wykonać następujące zadania:  
+Śledzenie sieci zapewnia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Aby włączyć śledzenie sieci w aplikacji, należy wykonać następujące zadania:  
   
-- Skompiluj kod z włączoną funkcją śledzenia. Zobacz [Jak: Kompilowanie warunkowo z śledzenia i debugowania, aby](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) uzyskać więcej informacji na temat przełączników kompilatora wymagane do włączenia śledzenia.  
+- Kompiluj swój kod z włączonym śledzeniem. Zobacz [jak: Kompiluj warunkowo, śledząc i Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) , aby uzyskać więcej informacji na temat przełączników kompilatora wymaganych do włączenia śledzenia.  
   
-- Określ miejsce docelowe dla śledzenia danych wyjściowych.  
+- Określ miejsce docelowe śledzenia danych wyjściowych.  
   
-- Skonfiguruj zachowanie śledzenia sieci. Zobacz [Jak: Konfigurowanie śledzenia sieci, aby](how-to-configure-network-tracing.md) uzyskać szczegółowe informacje.  
+- Skonfiguruj zachowanie funkcji Śledzenie sieci. Zobacz [jak: Konfigurowanie śledzenia sieci,](how-to-configure-network-tracing.md) Aby uzyskać szczegółowe informacje.  
   
- Najczęstsze miejsca docelowe śledzenia, określane również jako detektory śledzenia, są domyślnym odbiornikiem i plikiem dziennika.  
+ Najpopularniejsze miejsca docelowe śledzenia, nazywane również odbiornikami śledzenia, to domyślny odbiornik i plik dziennika.  
   
- Śledzenie używa odbiornika domyślnego, jeśli nie określisz odbiornika śledzenia. Wiadomości wysyłane do odbiornika domyślnego można wyświetlać, wykonując kod w debugerze z włączoną kodem zarządzanym, takim jak debuger ŚRODOWISKA CLR dostarczany z modułem SDK programu .NET Framework lub program DBwin32.exe dostarczany z modułem Windows SDK. Za pomocą debugera CLR komunikaty śledzenia są wyświetlane w oknie **Dane wyjściowe.**  
+ Śledzenie używa domyślnego odbiornika, jeśli nie zostanie określony odbiornik śledzenia. Możesz wyświetlić komunikaty wysyłane do domyślnego odbiornika, wykonując kod w debugerze obsługującym kod zarządzany, taki jak debuger CLR dostarczany z zestawem SDK .NET Framework, lub DBwin32. exe dostarczony z Windows SDK. Przy użyciu debugera CLR komunikaty śledzenia pojawiają się w oknie **danych wyjściowych** .  
   
- Jeśli wolisz używać pliku do odbierania śladów, możesz określić plik dziennika przy użyciu ustawień konfiguracji, jak pokazano w poniższym przykładzie. (Aby zapoznać się z ogólną omówień plików konfiguracyjnych, zobacz [Pliki konfiguracyjne](../configure-apps/index.md).)  
+ Jeśli wolisz używać pliku do odbierania śladów, możesz określić plik dziennika za pomocą ustawień konfiguracji, jak pokazano w poniższym przykładzie. (Ogólne omówienie plików konfiguracji można znaleźć w temacie [pliki konfiguracyjne](../configure-apps/index.md)).  
   
- Aby wysłać ślady do pliku dziennika, `<system.diagnostics>` dodaj następujący węzeł do węzła odpowiedniego pliku konfiguracyjnego (aplikacji lub komputera). Nazwę pliku (trace.log) można zmienić zgodnie z potrzebami.  
+ Aby wysłać ślady do pliku dziennika, Dodaj następujący węzeł do `<system.diagnostics>` węzła odpowiedniego pliku konfiguracji (aplikacji lub komputera). Możesz zmienić nazwę pliku (Trace. log) zgodnie z potrzebami.  
   
 ```xml  
 <system.diagnostics>  
@@ -45,7 +46,7 @@ ms.locfileid: "79180880"
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Interpretowanie śledzenia sieci](interpreting-network-tracing.md)
 - [Śledzenie sieci w .NET Framework](network-tracing.md)

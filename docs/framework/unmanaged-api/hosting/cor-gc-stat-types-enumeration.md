@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d7e78dfc4beba67cc376b221d0cd49f7200f5d23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501706"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES — Wyliczenie
 Określa statystyki, które mają być rejestrowane w celu wyrzucania elementów bezużytecznych.  
@@ -34,7 +34,7 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- To Wyliczenie określa, które statystyki w strukturze [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) mają być ustawiane za pomocą metody [ICLRGCManager::](iclrgcmanager-getstats-method.md) getstatistics.  
+ To Wyliczenie określa, które statystyki w strukturze [COR_GC_STATS](cor-gc-stats-structure.md) mają być ustawiane za pomocą metody [ICLRGCManager::](iclrgcmanager-getstats-method.md) getstatistics.  
   
 ## <a name="members"></a>Elementy członkowskie  
   

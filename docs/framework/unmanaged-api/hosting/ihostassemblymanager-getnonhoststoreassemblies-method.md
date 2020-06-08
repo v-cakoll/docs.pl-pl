@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805064"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501600"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies — Metoda
 Pobiera wskaźnik interfejsu do [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) , który reprezentuje listę zestawów, które host oczekuje na załadowanie środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -56,7 +56,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 - Jeśli zestaw znajduje się na liście, środowisko CLR tworzy je w normalny sposób.  
   
-- Jeśli zestaw nie znajduje się na liście, a host dostarczył implementację [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), środowisko CLR wywołuje [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) , aby umożliwić hostowi powiązanie z zestawem.  
+- Jeśli zestaw nie znajduje się na liście, a host dostarczył implementację [IHostAssemblyStore](ihostassemblystore-interface.md), środowisko CLR wywołuje [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) , aby umożliwić hostowi powiązanie z zestawem.  
   
 - W przeciwnym razie środowisko CLR nie zostanie powiązane z zestawem.  
   
@@ -74,7 +74,7 @@ HRESULT GetNonHostStoreAssemblies (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICLRAssemblyReferenceList — Interfejs](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager, interfejs](ihostassemblymanager-interface.md)

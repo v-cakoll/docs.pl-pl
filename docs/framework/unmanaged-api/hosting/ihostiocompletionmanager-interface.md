@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501541"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager — Interfejs
 Dostarcza metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR) do współdziałania z portami zakończenia we/wy dostarczonymi przez hosta.  
@@ -36,7 +36,7 @@ Dostarcza metody, które umożliwiają środowisko uruchomieniowe języka wspól
 |[GetMaxThreads, metoda](ihostiocompletionmanager-getmaxthreads-method.md)|Pobiera maksymalną liczbę wątków, które host może przydzielić do żądań we/wy usługi.|  
 |[GetMinThreads, metoda](ihostiocompletionmanager-getminthreads-method.md)|Pobiera minimalną liczbę wątków przemieszczonych przez hosta w celu obsługi żądań we/wy.|  
 |[InitializeHostOverlapped, metoda](ihostiocompletionmanager-initializehostoverlapped-method.md)|Udostępnia hostowi możliwość zainicjowania wszelkich niestandardowych danych dotyczących żądania we/wy.|  
-|[SetCLRIoCompletionManager, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Dostarcza host ze wskaźnikiem interfejsu do wystąpienia [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) zaimplementowanego przez środowisko CLR.|  
+|[SetCLRIoCompletionManager, metoda](ihostiocompletionmanager-setclriocompletionmanager-method.md)|Dostarcza host ze wskaźnikiem interfejsu do wystąpienia [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) zaimplementowanego przez środowisko CLR.|  
 |[SetMaxThreads, metoda](ihostiocompletionmanager-setmaxthreads-method.md)|Ustawia maksymalną liczbę wątków przynoszących Host do obsługi żądań we/wy.|  
 |[SetMinThreads, metoda](ihostiocompletionmanager-setminthreads-method.md)|Ustawia minimalną liczbę wątków, które host powinien przydzielić do zakończenia operacji we/wy.|  
   
@@ -52,6 +52,6 @@ Dostarcza metody, które umożliwiają środowisko uruchomieniowe języka wspól
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Hosting, interfejsy](hosting-interfaces.md)

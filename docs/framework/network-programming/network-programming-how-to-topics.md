@@ -1,5 +1,6 @@
 ---
 title: Programowanie dla sieci — tematy z instrukcjami
+description: Skorzystaj z poniższych artykułów, aby poznać różne aspekty programowania sieciowego w .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,15 +8,15 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502278"
 ---
 # <a name="network-programming-how-to-topics"></a>Programowanie dla sieci — tematy z instrukcjami
-Poniższa lista zawiera łącza do tematów in jakyś znalezionych w dokumentacji koncepcyjnej programowania sieciowego.  
+Poniższa lista zawiera linki do tematów, które znajdują się w dokumentacji koncepcyjnej dotyczącej programowania w sieci.  
   
  **Żądanie danych:**  
   
@@ -27,7 +28,7 @@ Poniższa lista zawiera łącza do tematów in jakyś znalezionych w dokumentacj
   
 - [Instrukcje: pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Podłączane i protokoły aplikacji:**  
+ **Protokoły podłączane i aplikacje:**  
   
 - [Instrukcje: rejestrowanie protokołu niestandardowego przy użyciu elementu WebRequest](how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -77,8 +78,8 @@ Poniższa lista zawiera łącza do tematów in jakyś znalezionych w dokumentacj
   
 - [Instrukcje: polecenie ping do hosta](how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Programowanie dla sieci w programie .NET Framework](index.md)
 - [Przykłady programowania sieciowego](network-programming-samples.md)
-- [Przykłady sieci dla platformy .NET w galerii kodów MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [Przykłady sieci dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

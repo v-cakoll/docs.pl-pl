@@ -167,7 +167,7 @@ ms.locfileid: "84241516"
 
 1. <span data-ttu-id="025d3-193">Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.</span><span class="sxs-lookup"><span data-stu-id="025d3-193">Select **Step Into** or press <kbd>F11</kbd>.</span></span>
 
-   :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Przycisk "krok po kroku"":::
+   :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Przycisk krok po kroku":::
 
    <span data-ttu-id="025d3-195">Visual Studio Code podświetla następny wiersz.</span><span class="sxs-lookup"><span data-stu-id="025d3-195">Visual Studio Code highlights the next line.</span></span>
 

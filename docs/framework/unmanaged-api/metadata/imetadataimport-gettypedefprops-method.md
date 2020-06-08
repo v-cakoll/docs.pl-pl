@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490799"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps — Metoda
-Zwraca informacje o metadanych dla <xref:System.Type> reprezentowane przez określony token TypeDef.  
+Zwraca informacje o metadanych <xref:System.Type> reprezentowane przez określony token typedef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,27 +46,27 @@ HRESULT GetTypeDefProps (
  określoną Bufor zawierający nazwę typu.  
   
  `cchTypeDef`  
- podczas Rozmiar w szerokich znakach `szTypeDef`.  
+ podczas Rozmiar w postaci znaków dwubajtowych `szTypeDef` .  
   
  `pchTypeDef`  
- określoną Liczba znaków dwubajtowych zwracanych w `szTypeDef`.  
+ określoną Liczba znaków dwubajtowych zwracana w `szTypeDef` .  
   
  `pdwTypeDefFlags`  
- określoną Wskaźnik do każdej flagi modyfikującej definicję typu. Ta wartość jest maska bitowa z wyliczenia [CorTypeAttr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
+ określoną Wskaźnik do każdej flagi modyfikującej definicję typu. Ta wartość jest maska bitowa z wyliczenia [CorTypeAttr —](cortypeattr-enumeration.md) .  
   
  `ptkExtends`  
  określoną Token metadanych TypeDef lub TypeRef reprezentujący typ podstawowy żądanego typu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

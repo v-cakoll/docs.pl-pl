@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 8925278bdf4d48efc9e589ffc4e181d904444e6b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504371"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Przestarzałe funkcje hostingu środowiska CLR
 W tej sekcji opisano niezarządzane globalne funkcje statyczne, które są używane we wcześniejszych wersjach interfejsu API hostingu.  
@@ -24,7 +24,7 @@ W tej sekcji opisano niezarządzane globalne funkcje statyczne, które są używ
  Przestarzałe. Tworzy wystąpienie określonego typu zarządzanego.  
   
  [CoInitializeCor, funkcja](coinitializecor-function.md)  
- Nieaktualne. Aby zainicjować środowisko uruchomieniowe języka wspólnego (CLR), użyj opcji [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).  
+ Nieaktualne. Aby zainicjować środowisko uruchomieniowe języka wspólnego (CLR), użyj opcji [CorBindToRuntimeEx](corbindtoruntimeex-function.md) lub [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).  
   
  [CoInitializeEE — Funkcja](coinitializeee-function.md)  
  Przestarzałe. Zapewnia, że aparat wykonywania CLR jest ładowany do procesu. Zamiast tego użyj metody [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) .  

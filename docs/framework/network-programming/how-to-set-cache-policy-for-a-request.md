@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: ustawianie zasad pamięci podręcznej dla żądania'
+description: Dowiedz się, jak ustawić zasady pamięci podręcznej dla żądania w .NET Framework. Te zasady pamięci podręcznej umożliwiają użycie zasobu z pamięci podręcznej przez maksymalnie dobę.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502434"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: ustawianie zasad pamięci podręcznej dla żądania
-W poniższym przykładzie pokazano ustawienie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to `http://www.contoso.com/`identyfikator URI, taki jak .  
+W poniższym przykładzie pokazano, jak ustawić zasady pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/` .  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy zasady pamięci podręcznej, która umożliwia żądany zasób do użycia z pamięci podręcznej, jeśli nie był w pamięci podręcznej dłużej niż jeden dzień. W przykładzie jest wyświetlany komunikat wskazujący, czy zasób `"The response was retrieved from the cache : False."`został użyty z pamięci podręcznej , na przykład , a następnie wyświetla zasób. Żądanie może zostać spełnione przez dowolną pamięć podręczną między klientem a serwerem.  
+ Poniższy przykład kodu tworzy zasady pamięci podręcznej, które umożliwiają użycie żądanego zasobu z pamięci podręcznej, jeśli nie było w pamięci podręcznej dłużej niż jeden dzień. Przykład wyświetla komunikat wskazujący, czy zasób został użyty z pamięci podręcznej, na przykład,, `"The response was retrieved from the cache : False."` a następnie wyświetla zasób. Żądanie może być spełnione przez dowolną pamięć podręczną między klientem i serwerem.  
   
 ```csharp  
 using System;  
@@ -105,10 +106,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
 - [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)
-- [\<requestCaching> Element (Ustawienia sieciowe)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching>— Element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

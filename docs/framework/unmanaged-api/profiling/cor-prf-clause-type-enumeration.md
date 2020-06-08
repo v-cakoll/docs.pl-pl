@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501056"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE — Wyliczenie
 Wskazuje typ klauzuli wyjątku, który został właśnie wprowadzony lub pozostawiony w kodzie.  
@@ -37,21 +37,21 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|Klauzula wyjątku jest nieprawidłowa.|  
 |`COR_PRF_CLAUSE_FILTER`|Klauzula wyjątku jest wyrażeniem filtru.|  
-|`COR_PRF_CLAUSE_CATCH`|Klauzula wyjątku jest instrukcją `catch`.|  
-|`COR_PRF_CLAUSE_FINALLY`|Klauzula wyjątku jest instrukcją `finally`.|  
+|`COR_PRF_CLAUSE_CATCH`|Klauzula wyjątku jest `catch` instrukcją.|  
+|`COR_PRF_CLAUSE_FINALLY`|Klauzula wyjątku jest `finally` instrukcją.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

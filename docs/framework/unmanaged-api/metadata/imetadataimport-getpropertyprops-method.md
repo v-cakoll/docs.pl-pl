@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: 5fc71bf240b89afadbf8f2ba10906322921bdda2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491046"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps — Metoda
-Pobiera metadane dla właściwości reprezentowane przez określony token.  
+Pobiera metadane dla właściwości reprezentowanej przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parametry  
  `prop`  
- [w] Token, który reprezentuje właściwość do zwrócenia metadanych.  
+ podczas Token reprezentujący właściwość, dla której ma zostać zwrócona wartość metadanych.  
   
  `pClass`  
- [na zewnątrz] Wskaźnik do TypeDef token, który reprezentuje typ, który implementuje właściwość.  
+ określoną Wskaźnik do tokenu TypeDef, który reprezentuje typ implementujący właściwość.  
   
  `szProperty`  
- [na zewnątrz] Bufor do przechowywania nazwy właściwości.  
+ określoną Bufor służący do przechowywania nazwy właściwości.  
   
  `cchProperty`  
- [w] Rozmiar w szerokich `szProperty`znaków .  
+ podczas Rozmiar w postaci znaków dwubajtowych `szProperty` .  
   
  `pchProperty`  
- [na zewnątrz] Liczba szerokich znaków `szProperty`zwróconych w pliku .  
+ określoną Liczba znaków dwubajtowych zwracana w `szProperty` .  
   
  `pdwPropFlags`  
- [na zewnątrz] Wskaźnik do wszystkich flag atrybutów stosowanych do właściwości. Ta wartość jest maską bitową z [wyliczenia CorPropertyAttr.](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)  
+ określoną Wskaźnik do dowolnych flag atrybutów zastosowanych do właściwości. Ta wartość jest maska bitowa z wyliczenia [CorPropertyAttr —](corpropertyattr-enumeration.md) .  
   
  `ppvSig`  
- [na zewnątrz] Wskaźnik do podpisu metadanych właściwości.  
+ określoną Wskaźnik do sygnatury metadanych właściwości.  
   
  `pbSig`  
- [na zewnątrz] Liczba bajtów zwróconych w `ppvSig`.  
+ określoną Liczba bajtów zwróconych w `ppvSig` .  
   
  `pdwCPlusTypeFlag`  
- [na zewnątrz] Flaga określająca typ stałej, która jest wartością domyślną właściwości. Ta wartość jest z wyliczenia CorElementType.  
+ określoną Flaga określająca typ stałej, która jest wartością domyślną właściwości. Ta wartość pochodzi z wyliczenia CorElementType —.  
   
  `ppDefaultValue`  
- [na zewnątrz] Wskaźnik do bajtów, które przechowują wartość domyślną dla tej właściwości.  
+ określoną Wskaźnik do bajtów przechowujących wartość domyślną dla tej właściwości.  
   
  `pcchDefaultValue`  
- [na zewnątrz] Rozmiar w szerokich `ppDefaultValue`znakach , jeśli `pdwCPlusTypeFlag` jest ELEMENT_TYPE_STRING; w przeciwnym razie wartość ta nie jest istotna. W takim przypadku długość `ppDefaultValue` jest wywnioskowana z `pdwCPlusTypeFlag`typu określonego przez .  
+ określoną Rozmiar w postaci znaków dwubajtowych `ppDefaultValue` , jeśli `pdwCPlusTypeFlag` jest ELEMENT_TYPE_STRING; w przeciwnym razie ta wartość nie jest istotna. W takim przypadku długość `ppDefaultValue` jest wywnioskowana z typu, który jest określony przez `pdwCPlusTypeFlag` .  
   
  `pmdSetter`  
- [na zewnątrz] Wskaźnik do MethodDef token, który reprezentuje metodę akcesora zestawu dla właściwości.  
+ określoną Wskaźnik do tokenu MethodDef, który reprezentuje metodę dostępu set dla właściwości.  
   
  `pmdGetter`  
- [na zewnątrz] Wskaźnik do MethodDef token, który reprezentuje get metody akcesora dla właściwości.  
+ określoną Wskaźnik do tokenu MethodDef, który reprezentuje metodę get akcesora dla właściwości.  
   
  `rmdOtherMethod`  
- [na zewnątrz] Tablica tokenów MethodDef, które reprezentują inne metody skojarzone z właściwością.  
+ określoną Tablica tokenów MethodDef, która reprezentuje inne metody skojarzone z właściwością.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rmdOtherMethod` tablicy. Jeśli nie podasz tablicy wystarczająco duże, aby pomieścić wszystkie metody, są pomijane bez ostrzeżenia.  
+ podczas Maksymalny rozmiar `rmdOtherMethod` tablicy. Jeśli tablica nie jest wystarczająco duża, aby pomieścić wszystkie metody, są one pomijane bez ostrzeżenia.  
   
  `pcOtherMethod`  
- [na zewnątrz] Liczba tokenów MethodDef zwrócona w `rmdOtherMethod`.  
+ określoną Liczba tokenów MethodDef zwróconych w `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

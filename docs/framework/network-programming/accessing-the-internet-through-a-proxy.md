@@ -1,5 +1,6 @@
 ---
 title: Dostęp do Internetu za pośrednictwem serwera proxy
+description: Dowiedz się, jak skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji .NET Framework komunikację z serwerem proxy sieci Web.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71049050"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502746"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Dostęp do Internetu za pośrednictwem serwera proxy
-Jeśli witryna używa serwera proxy do zapewnienia dostępu do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji komunikowanie się z serwerem proxy sieci Web.  
+Jeśli witryna korzysta z serwera proxy w celu zapewnienia dostępu do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji komunikację z serwerem proxy sieci Web.  
   
  Ta sekcja zawiera następujące tematy:  
   
@@ -32,7 +33,7 @@ Jeśli witryna używa serwera proxy do zapewnienia dostępu do Internetu, należ
   
 - [Instrukcje: zastępowanie wyboru globalnego serwera proxy](how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Korzystanie z protokołów aplikacji](using-application-protocols.md)
 - [Programowanie dla sieci w programie .NET Framework](index.md)

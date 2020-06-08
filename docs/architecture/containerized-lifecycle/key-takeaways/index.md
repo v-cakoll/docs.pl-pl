@@ -2,12 +2,12 @@
 title: Kluczowe kwestie do zapamiętania
 description: Zapoznaj się z tematem Key wnioski dla przewodnika.
 ms.date: 04/20/2020
-ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 51662c52ce0917aa89b86151cf7cab5f13f846e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447020"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502785"
 ---
 # <a name="key-takeaways"></a>Kluczowe kwestie do zapamiętania
 
@@ -23,4 +23,5 @@ ms.locfileid: "84447020"
 
 - Azure DevOps Services znacznie upraszcza środowisko DevOps, wdrażając je w środowiskach platformy Docker z potoków ciągłej integracji/ciągłego wdrażania. Ta instrukcja ma zastosowanie do prostych środowisk Docker, a także do zaawansowanych mikrousług i koordynatorów kontenerów opartych na platformie Azure.
 
-> [!div class="step-by-step"][previous](.. /run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"]
+> [ubiegł](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

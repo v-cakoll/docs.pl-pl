@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437126"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491059"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps — Metoda
 Pobiera wartości metadanych dla parametru, do którego odwołuje się określony token ParamDef.  
@@ -56,37 +56,37 @@ HRESULT GetParamProps (
  określoną Bufor służący do przechowywania nazwy parametru.  
   
  `cchName`  
- podczas Żądany rozmiar w szerokich znakach `szName`.  
+ podczas Żądany rozmiar w postaci znaków dwubajtowych `szName` .  
   
  `pchName`  
- określoną Zwrócony rozmiar w szerokich znakach `szName`.  
+ określoną Zwrócony rozmiar w postaci znaków dwubajtowych `szName` .  
   
  `pdwAttr`  
- określoną Wskaźnik do dowolnych flag atrybutów skojarzonych z parametrem. To jest maska bitów wartości `CorParamAttr`.  
+ określoną Wskaźnik do dowolnych flag atrybutów skojarzonych z parametrem. To jest maska bitów `CorParamAttr` wartości.  
   
  `pdwCPlusTypeFlag`  
- określoną Wskaźnik do flagi określającej, że parametr jest <xref:System.ValueType>.  
+ określoną Wskaźnik do flagi wskazującej, że parametr jest <xref:System.ValueType> .  
   
  `ppValue`  
  określoną Wskaźnik do stałego ciągu zwracanego przez parametr.  
   
  `pcchValue`  
- określoną Rozmiar `ppValue` w postaci dwubajtowej lub zero, jeśli `ppValue` nie zawiera ciągu.  
+ określoną Rozmiar znaków dwubajtowych `ppValue` lub zero, jeśli nie zawiera `ppValue` ciągu.  
   
 ## <a name="remarks"></a>Uwagi
 
-Wartości sekwencji w `pulSequence` zaczynają się od 1 dla parametrów. Wartość zwracana ma numer sekwencyjny równy 0.
+Wartości sekwencji `pulSequence` zaczynają się od 1 dla parametrów. Wartość zwracana ma numer sekwencyjny równy 0.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

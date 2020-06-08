@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 891cca8ac47a3f8391bd7ab7b27b35d6318bbe0a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866293"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500094"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback — Interfejs
 Dostarcza metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu o wystąpieniu zdarzeń subskrybowanych przez profiler.  
@@ -42,24 +42,24 @@ Dostarcza metody, które są używane przez środowisko uruchomieniowe języka w
 |[ClassUnloadStarted, metoda](icorprofilercallback-classunloadstarted-method.md)|Powiadamia profiler o tym, że Klasa jest zwalniana.|  
 |[COMClassicVTableCreated, metoda](icorprofilercallback-comclassicvtablecreated-method.md)|Powiadamia program profilujący, że utworzono otokę (OTOKa) środowiska uruchomieniowego dla określonego identyfikatora IID i klasy.|  
 |[COMClassicVTableDestroyed, metoda](icorprofilercallback-comclassicvtabledestroyed-method.md)|Powiadamia profiler o zniszczeniu OTOKi.|  
-|[ExceptionCatcherEnter, metoda](icorprofilercallback-exceptioncatcherenter-method.md)|Powiadamia profiler, że sterowanie jest przesyłane do odpowiedniego bloku `catch`.|  
-|[ExceptionCatcherLeave, metoda](icorprofilercallback-exceptioncatcherleave-method.md)|Powiadamia profiler, że sterowanie jest przesyłane z odpowiedniego bloku `catch`.|  
+|[ExceptionCatcherEnter, metoda](icorprofilercallback-exceptioncatcherenter-method.md)|Powiadamia profiler, że sterowanie jest przesyłane do odpowiedniego `catch` bloku.|  
+|[ExceptionCatcherLeave, metoda](icorprofilercallback-exceptioncatcherleave-method.md)|Powiadamia profiler, że sterowanie jest przesyłane z odpowiedniego `catch` bloku.|  
 |[ExceptionCLRCatcherExecute, metoda](icorprofilercallback-exceptionclrcatcherexecute-method.md)|Przestarzałe w .NET Framework wersja 2,0.|  
 |[ExceptionCLRCatcherFound, metoda](icorprofilercallback-exceptionclrcatcherfound-method.md)|Przestarzałe w .NET Framework 2,0.|  
-|[ExceptionOSHandlerEnter, metoda](icorprofilercallback-exceptionoshandlerenter-method.md)|Nie zaimplementowane. Profiler wymagający niezarządzanych informacji o wyjątku musi uzyskać te informacje w inny sposób.|  
-|[ExceptionOSHandlerLeave, metoda](icorprofilercallback-exceptionoshandlerleave-method.md)|Nie zaimplementowane. Profiler wymagający niezarządzanych informacji o wyjątku musi uzyskać te informacje w inny sposób.|  
+|[ExceptionOSHandlerEnter, metoda](icorprofilercallback-exceptionoshandlerenter-method.md)|Nie zaimplementowano. Profiler wymagający niezarządzanych informacji o wyjątku musi uzyskać te informacje w inny sposób.|  
+|[ExceptionOSHandlerLeave, metoda](icorprofilercallback-exceptionoshandlerleave-method.md)|Nie zaimplementowano. Profiler wymagający niezarządzanych informacji o wyjątku musi uzyskać te informacje w inny sposób.|  
 |[ExceptionSearchCatcherFound, metoda](icorprofilercallback-exceptionsearchcatcherfound-method.md)|Powiadamia profiler, że faza wyszukiwania obsługi wyjątków znalazła procedurę obsługi dla zgłoszonego wyjątku.|  
 |[ExceptionSearchFilterEnter, metoda](icorprofilercallback-exceptionsearchfilterenter-method.md)|Powiadamia profiler o wykonywaniu filtru użytkownika.|  
 |[ExceptionSearchFilterLeave, metoda](icorprofilercallback-exceptionsearchfilterleave-method.md)|Powiadamia profiler o zakończeniu wykonywania przez filtr użytkownika.|  
 |[ExceptionSearchFunctionEnter, metoda](icorprofilercallback-exceptionsearchfunctionenter-method.md)|Powiadamia profiler, że faza wyszukiwania obsługi wyjątków wprowadziła funkcję.|  
 |[ExceptionSearchFunctionLeave, metoda](icorprofilercallback-exceptionsearchfunctionleave-method.md)|Powiadamia profiler, że faza wyszukiwania obsługi wyjątków zakończyła Wyszukiwanie funkcji.|  
 |[ExceptionThrown, metoda](icorprofilercallback-exceptionthrown-method.md)|Powiadamia profiler o zgłoszonym wyjątku.|  
-|[ExceptionUnwindFinallyEnter, metoda](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Powiadamia program profilujący, że faza unwind dla obsługi wyjątków wprowadza klauzulę `finally`ą zawartą w określonej funkcji.|  
-|[ExceptionUnwindFinallyLeave, metoda](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Powiadamia profiler, że faza unwind dla obsługi wyjątków opuściła klauzulę `finally`.|  
+|[ExceptionUnwindFinallyEnter, metoda](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Powiadamia profiler, że faza unwind dla obsługi wyjątków wprowadza `finally` klauzulę znajdującą się w określonej funkcji.|  
+|[ExceptionUnwindFinallyLeave, metoda](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Powiadamia profiler, że faza unwind dla obsługi wyjątków opuściła `finally` klauzulę.|  
 |[ExceptionUnwindFunctionEnter, metoda](icorprofilercallback-exceptionunwindfunctionenter-method.md)|Powiadamia profiler, że faza unwind w obsłudze wyjątków wprowadziła funkcję.|  
 |[ExceptionUnwindFunctionLeave, metoda](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Powiadamia profiler, że faza unwind dla obsługi wyjątków zakończyła odwinięcie funkcji.|  
 |[FunctionUnloadStarted, metoda](icorprofilercallback-functionunloadstarted-method.md)|Powiadamia profiler o rozpoczęciu pracy przez środowisko uruchomieniowe w celu zwolnienia funkcji.|  
-|[Initialize, metoda](icorprofilercallback-initialize-method.md)|Wywołuje się, by zainicjować profiler za każdym razem, gdy zostanie uruchomiona nowa aplikacja środowiska CLR.|  
+|[Initialize — Metoda](icorprofilercallback-initialize-method.md)|Wywołuje się, by zainicjować profiler za każdym razem, gdy zostanie uruchomiona nowa aplikacja środowiska CLR.|  
 |[JITCachedFunctionSearchFinished, metoda](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Powiadamia profiler o zakończeniu wyszukiwania dla funkcji, która została skompilowana wcześniej przy użyciu programu NGen. exe.|  
 |[JITCachedFunctionSearchStarted, metoda](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Powiadamia profiler o rozpoczęciu wyszukiwania dla funkcji, która została skompilowana wcześniej przy użyciu programu NGen. exe.|  
 |[JITCompilationFinished, metoda](icorprofilercallback-jitcompilationfinished-method.md)|Powiadamia profiler, że kompilator JIT zakończył Kompilowanie funkcji.|  
@@ -99,27 +99,27 @@ Dostarcza metody, które są używane przez środowisko uruchomieniowe języka w
 |[UnmanagedToManagedTransition, metoda](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Powiadamia profiler o wystąpieniu przejścia z niezarządzanego kodu do kodu zarządzanego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR wywołuje metodę w interfejsie `ICorProfilerCallback` (lub [ICorProfilerCallback2](icorprofilercallback2-interface.md)) w celu powiadomienia profilera o wystąpieniu zdarzenia subskrybowanego przez profiler. Jest to podstawowy interfejs wywołania zwrotnego, za pomocą którego środowisko CLR komunikuje się z profilerem kodu.  
+ Środowisko CLR wywołuje metodę w `ICorProfilerCallback` interfejsie (lub [ICorProfilerCallback2](icorprofilercallback2-interface.md)) w celu powiadomienia profilera o wystąpieniu zdarzenia subskrybowanego przez profiler. Jest to podstawowy interfejs wywołania zwrotnego, za pomocą którego środowisko CLR komunikuje się z profilerem kodu.  
   
- Profiler kodu musi implementować metody interfejsu `ICorProfilerCallback`. W przypadku .NET Framework w wersji 2,0 lub nowszej profiler musi również zaimplementować metody `ICorProfilerCallback2`. Każda implementacja metody musi zwracać wynik HRESULT, który ma wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md).  
+ Profiler kodu musi implementować metody `ICorProfilerCallback` interfejsu. W przypadku .NET Framework w wersji 2,0 lub nowszej profiler musi również zaimplementować `ICorProfilerCallback2` metody. Każda implementacja metody musi zwracać wynik HRESULT, który ma wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md).  
   
- W rejestrze systemu Microsoft Windows Profiler kodu musi zarejestrować swój obiekt Component Object Model (COM) implementujący interfejsy `ICorProfilerCallback` i `ICorProfilerCallback2`. Profiler kodu subskrybuje zdarzenia, dla których chce otrzymywać powiadomienie przez wywołanie [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Zwykle jest to wykonywane w implementacji profilera [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Profiler jest w stanie odebrać powiadomienie z środowiska uruchomieniowego, gdy zdarzenie ma miejsce lub właśnie wystąpiło w trakcie wykonywania procesu.  
+ W rejestrze systemu Microsoft Windows Profiler kodu musi zarejestrować swój obiekt Component Object Model (COM), który implementuje `ICorProfilerCallback` `ICorProfilerCallback2` interfejsy i. Profiler kodu subskrybuje zdarzenia, dla których chce otrzymywać powiadomienie przez wywołanie [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Zwykle jest to wykonywane w implementacji profilera [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Profiler jest w stanie odebrać powiadomienie z środowiska uruchomieniowego, gdy zdarzenie ma miejsce lub właśnie wystąpiło w trakcie wykonywania procesu.  
   
 > [!NOTE]
-> Profiler rejestruje pojedynczy obiekt COM. Jeśli profiler jest przeznaczony dla .NET Framework w wersji 1,0 lub 1,1, ten obiekt COM musi zaimplementować tylko metody `ICorProfilerCallback`. Jeśli jest to element docelowy .NET Framework wersja 2,0 lub nowsza, obiekt COM musi również zaimplementować metody `ICorProfilerCallback2`.  
+> Profiler rejestruje pojedynczy obiekt COM. Jeśli profiler jest przeznaczony dla .NET Framework w wersji 1,0 lub 1,1, ten obiekt COM musi zaimplementować tylko metody `ICorProfilerCallback` . Jeśli jest to element docelowy .NET Framework wersja 2,0 lub nowsza, obiekt COM musi również zaimplementować metody `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy profilowania](profiling-interfaces.md)
-- [ICorProfilerCallback2, interfejs](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback2 — Interfejs](icorprofilercallback2-interface.md)
 - [ICorProfilerCallback3, interfejs](icorprofilercallback3-interface.md)
 - [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)

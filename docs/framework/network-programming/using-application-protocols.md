@@ -1,5 +1,6 @@
 ---
 title: Korzystanie z protokołów aplikacji
+description: Poznaj powszechnie używane protokoły aplikacji internetowych obsługiwane przez .NET Framework, takie jak HTTP, TCP i UDP, oraz implementowanie protokołów niestandardowych.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, types
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: f9af668a30920daa4634e402ab1922946b014051
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07c4a813d4e2c838fb236d2a7798f54a9ead3a6d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502018"
 ---
 # <a name="using-application-protocols"></a>Korzystanie z protokołów aplikacji
-Program .NET Framework obsługuje powszechnie używane protokoły aplikacji internetowych. Ta sekcja zawiera informacje na temat korzystania z protokołów [HTTP](http.md), "TCP" i "UDP", a także informacje na temat korzystania z interfejsu [Windows Sockets](sockets.md) do implementowania protokołów niestandardowych.  
+.NET Framework obsługuje powszechnie używane protokoły aplikacji internetowych. Ta sekcja zawiera informacje dotyczące korzystania z protokołów [http](http.md), "TCP" i "UDP" oraz informacje na temat używania interfejsu [Windows Sockets](sockets.md) do implementowania protokołów niestandardowych.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Programowanie dla sieci w programie .NET Framework](index.md)
 - [Przykłady programowania sieciowego](network-programming-samples.md)

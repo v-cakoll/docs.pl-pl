@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-ms.openlocfilehash: 8160bb5b9ca5e0a4e22a1a831e978eaf125e7605
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5984c63f0e1a1859dd5cc2550d6dc37c963affb3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870495"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503006"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody — Metoda
 Pobiera wskaźnik do treści metody w kodzie języka pośredniego firmy Microsoft (MSIL), rozpoczynając od jego nagłówka.  
@@ -49,18 +49,18 @@ HRESULT GetILFunctionBody(
  określoną Liczba całkowita określająca rozmiar metody.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda jest objęta zakresem przez moduł, w którym przebywa. Ponieważ metoda `GetILFunctionBody` została zaprojektowana w celu zapewnienia narzędziu dostępu do kodu MSIL przed jego załadowaniem przez środowisko uruchomieniowe języka wspólnego (CLR), używa tokenu metadanych metody w celu znalezienia żądanego wystąpienia.  
+ Metoda jest objęta zakresem przez moduł, w którym przebywa. Ponieważ `GetILFunctionBody` Metoda została zaprojektowana w celu zapewnienia narzędziu dostępu do kodu MSIL przed jego załadowaniem przez środowisko uruchomieniowe języka wspólnego (CLR), używa tokenu metadanych metody w celu znalezienia żądanego wystąpienia.  
   
- `GetILFunctionBody` może zwrócić CORPROF_E_FUNCTION_NOT_IL HRESULT, jeśli `methodId` wskazuje metodę bez kodu MSIL (takie jak metoda abstrakcyjna lub metoda wywołania platformy (PInvoke).  
+ `GetILFunctionBody`może zwrócić CORPROF_E_FUNCTION_NOT_IL HRESULT, jeśli `methodId` wskazuje na metodę bez żadnego kodu MSIL (takie jak metoda abstrakcyjna lub metoda wywołania platformy (PInvoke).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

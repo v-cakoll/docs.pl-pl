@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 320cfae93f8aae94f9315e8e20ed6cf7f9cced7c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491319"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps — Metoda
 Pobiera wartość atrybutu niestandardowego z uwzględnieniem jego tokenu metadanych.  
@@ -42,30 +42,30 @@ HRESULT GetCustomAttributeProps (
  podczas Token metadanych, który reprezentuje atrybut niestandardowy do pobrania.  
   
  `ptkObj`  
- [out, opcjonalne] Token metadanych reprezentujący obiekt, który modyfikuje atrybut niestandardowy. Ta wartość może być dowolnego typu tokenu metadanych, z wyjątkiem `mdCustomAttribute`.  
+ [out, opcjonalne] Token metadanych reprezentujący obiekt, który modyfikuje atrybut niestandardowy. Ta wartość może być dowolnego typu tokenu metadanych z wyjątkiem `mdCustomAttribute` .  
   
  `ptkType`  
- [out, opcjonalne] `mdMethodDef` lub `mdMemberRef` token metadanych reprezentujący <xref:System.Type> zwróconego atrybutu niestandardowego.  
+ [out, opcjonalne] `mdMethodDef` `mdMemberRef` Token metadanych lub reprezentujący <xref:System.Type> zwrócony atrybut niestandardowy.  
   
  `ppBlob`  
  [out, opcjonalne] Wskaźnik do tablicy danych, która jest wartością atrybutu niestandardowego.  
   
  `pcbSize`  
- [out, opcjonalne] Rozmiar w bajtach danych zwróconych w *`ppBlob`.  
+ [out, opcjonalne] Rozmiar w bajtach danych zwróconych w * `ppBlob` .  
   
 ## <a name="remarks"></a>Uwagi  
  Atrybut niestandardowy jest przechowywany jako tablica danych, format zrozumiały dla aparatu metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

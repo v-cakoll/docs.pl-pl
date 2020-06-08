@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: 0464c61e4ff01483e10fb5708d5ed4b5f5ed63d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445233"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490435"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind — Metoda
 Pobiera wartość określającą charakter kodu w przenośnym pliku wykonywalnym (PE), zazwyczaj plik DLL lub EXE, który jest zdefiniowany w bieżącym zakresie metadanych.  
@@ -36,13 +36,13 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Parametry  
  `pdwPEKind`  
- określoną Wskaźnik do wartości wyliczenia [CorPEKind —](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) , który OPISUJE plik PE.  
+ określoną Wskaźnik do wartości wyliczenia [CorPEKind —](corpekind-enumeration.md) , który OPISUJE plik PE.  
   
  `pdwMachine`  
  określoną Wskaźnik do wartości, która identyfikuje architekturę maszyny. Więcej wartości można znaleźć w następnej sekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość, do której odwołuje się parametr `pdwMachine`, może być jedną z następujących.  
+ Wartość, do której odwołuje się `pdwMachine` parametr może być jedną z następujących.  
   
 |Wartość|Architektura komputera|  
 |-----------|--------------------------|  
@@ -51,16 +51,16 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [CorPEKind, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [CorPEKind — Wyliczenie](corpekind-enumeration.md)

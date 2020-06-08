@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503620"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps — Metoda
 Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje się określony token.  
@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [w] Token MemberRef do zwrócenia skojarzonych metadanych.  
+ podczas Token elementu MemberRef do zwrócenia skojarzonych metadanych.  
   
  `ptk`  
- [na zewnątrz] A TypeDef lub TypeRef lub TypeSpec token, który reprezentuje klasę, która deklaruje element członkowski lub ModułRef token, który reprezentuje klasę modułu, który deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.  
+ określoną Element TypeDef lub TypeRef albo token elementu TypeSpec reprezentujący klasę, która deklaruje element członkowski lub token elementu ModuleRef reprezentujący klasę modułu, która deklaruje element członkowski, lub element MethodDef reprezentujący element członkowski.  
   
  `szMember`  
- [na zewnątrz] Bufor ciągu dla nazwy członka.  
+ określoną Bufor ciągu dla nazwy elementu członkowskiego.  
   
  `cchMember`  
- [w] Żądany rozmiar w szerokich znakach `szMember`.  
+ podczas Żądany rozmiar w postaci znaków dwubajtowych `szMember` .  
   
  `pchMember`  
- [na zewnątrz] Zwrócony rozmiar w `szMember`szerokich znakach .  
+ określoną Zwrócony rozmiar w postaci znaków dwubajtowych `szMember` .  
   
  `ppvSibBlob`  
- [na zewnątrz] Wskaźnik do podpisu binarnych metadanych dla członka.  
+ określoną Wskaźnik do binarnego podpisu metadanych dla elementu członkowskiego.  
   
  `pbSig`  
- [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
+ określoną Rozmiar w bajtach `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

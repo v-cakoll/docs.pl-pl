@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490994"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps — Metoda
-Pobiera metadane skojarzone <xref:System.Security.PermissionSet?displayProperty=nameWithType> z reprezentowane przez token określony uprawnienie.  
+Pobiera metadane skojarzone z <xref:System.Security.PermissionSet?displayProperty=nameWithType> reprezentowane przez określony token uprawnienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametry  
  `pm`  
- [w] Token metadanych uprawnień, który reprezentuje zestaw uprawnień, aby uzyskać właściwości metadanych dla.  
+ podczas Token metadanych uprawnienia, który reprezentuje zestaw uprawnień do pobierania właściwości metadanych.  
   
  `pdwAction`  
- [na zewnątrz] Wskaźnik do zestawu uprawnień.  
+ określoną Wskaźnik do zestawu uprawnień.  
   
  `ppvPermission`  
- [na zewnątrz] Wskaźnik do binarnego podpisu metadanych zestawu uprawnień.  
+ określoną Wskaźnik do binarnego podpisu metadanych zestawu uprawnień.  
   
  `pcbPermission`  
- [na zewnątrz] Rozmiar w bajtach . `ppvPermission`  
+ określoną Rozmiar w bajtach `ppvPermission` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Security.PermissionSet>
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

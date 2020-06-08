@@ -1,5 +1,6 @@
 ---
 title: Stosowanie usług UDP
+description: Klasa UdpClient jest abstrakcyjna, aby utworzyć gniazdo do żądania i odbierania danych przy użyciu protokołu UDP w .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 5ff40e8759b1732d4ad228b1414f96f9c37e5ac5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4c2e88492f737800151d30097719d7d011054a5e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209776"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501953"
 ---
 # <a name="use-udp-services"></a>Korzystanie z usług UDP
 
@@ -159,7 +160,7 @@ class Program
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Net.Sockets.UdpClient>
 - <xref:System.Net.IPAddress>

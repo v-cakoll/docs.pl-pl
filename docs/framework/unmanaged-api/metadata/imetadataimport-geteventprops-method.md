@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b47d1559300a462ccda42bc88da43f66c1043ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491306"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps — Metoda
-Pobiera informacje o metadanych dla zdarzenia reprezentowane przez token określonego zdarzenia, w tym typ deklarowania, dodawanie i usuwanie metod delegatów i wszelkie flagi i inne skojarzone dane.  
+Pobiera informacje o metadanych dla zdarzenia reprezentowanego przez określony token zdarzenia, w tym typ deklarujący, metody dodawania i usuwania dla delegatów oraz wszelkie flagi i inne skojarzone dane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametry  
  `ev`  
- [w] Token metadanych zdarzenia reprezentujący zdarzenie, dla które można uzyskać metadane.  
+ podczas Token metadanych zdarzenia, który reprezentuje zdarzenie, dla którego mają zostać pobrane metadane.  
   
  `pClass`  
- [na zewnątrz] Wskaźnik do TypeDef token reprezentujący klasę, która deklaruje zdarzenie.  
+ określoną Wskaźnik do tokenu TypeDef reprezentujący klasę, która deklaruje zdarzenie.  
   
  `szEvent`  
- [na zewnątrz] Nazwa zdarzenia, do którego `ev`odwołuje się .  
+ określoną Nazwa zdarzenia, do którego odwołuje się `ev` .  
   
  `pchEvent`  
- [w] Żądana długość w szerokich znakach `szEvent`.  
+ podczas Żądana długość w postaci znaków dwubajtowych `szEvent` .  
   
  `pdwEventFlags`  
- [na zewnątrz] Zwrócona długość w `szEvent`szerokich znakach .  
+ określoną Długość zwrócona w znaki dwubajtowe z `szEvent` .  
   
  `ptkEventType`  
- [na zewnątrz] Wskaźnik do typeref lub TypeDef token metadanych reprezentujących <xref:System.Delegate> typ zdarzenia.  
+ określoną Wskaźnik do tokenu metadanych elementu TypeRef lub TypeDef reprezentujący <xref:System.Delegate> Typ zdarzenia.  
   
  `pmdAddOn`  
- [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która dodaje programy obsługi dla zdarzenia.  
+ określoną Wskaźnik do tokenu metadanych reprezentującej metodę, która dodaje procedury obsługi dla zdarzenia.  
   
  `pmdRemoveOn`  
- [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która usuwa programy obsługi dla zdarzenia.  
+ określoną Wskaźnik do tokenu metadanych reprezentująca metodę, która usuwa procedury obsługi dla zdarzenia.  
   
  `pmdFire`  
- [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która wywołuje zdarzenie.  
+ określoną Wskaźnik do tokenu metadanych reprezentująca metodę, która wywołuje zdarzenie.  
   
  `rmdOtherMethod`  
- [na zewnątrz] Tablica wskaźników tokenu do innych metod skojarzonych ze zdarzeniem.  
+ określoną Tablica wskaźników tokenów z innymi metodami skojarzonymi ze zdarzeniem.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rmdOtherMethod` tablicy.  
+ podczas Maksymalny rozmiar `rmdOtherMethod` tablicy.  
   
  `pcOtherMethod`  
- [na zewnątrz] Liczba tokenów zwróconych `rmdOtherMethod`w .  
+ określoną Liczba tokenów zwróconych w `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

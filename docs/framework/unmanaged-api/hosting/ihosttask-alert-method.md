@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803023"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501433"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert — Metoda
 Żąda, aby Host wznowił zadanie reprezentowane przez bieżące wystąpienie [IHostTask](ihosttask-interface.md) , więc zadanie można przerwać.  
@@ -46,7 +46,7 @@ HRESULT Alert ();
  Środowisko CLR wywołuje `Alert` metodę, gdy <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> jest wywoływana z kodu użytkownika lub gdy jest <xref:System.AppDomain> skojarzony z bieżącym <xref:System.Threading.Thread> zamknięciem. Host musi zwrócić natychmiast, ponieważ wywołanie zostało wykonane asynchronicznie. Jeśli host nie może natychmiast ostrzec zadania, musi wznowić działanie przy następnym wejściu w stan, w którym można otrzymywać alerty.  
   
 > [!NOTE]
-> `Alert`ma wpływ tylko na te zadania, do których środowisko uruchomieniowe przekazało [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) wartość WAIT_ALERTABLE do metod takich jak [Join](ihosttask-join-method.md).  
+> `Alert`ma wpływ tylko na te zadania, do których środowisko uruchomieniowe przekazało [WAIT_OPTION](wait-option-enumeration.md) wartość WAIT_ALERTABLE do metod takich jak [Join](ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
@@ -57,7 +57,7 @@ HRESULT Alert ();
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICLRTask — Interfejs](iclrtask-interface.md)
 - [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)

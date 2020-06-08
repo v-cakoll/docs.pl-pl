@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427299"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490617"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps — Metoda
 Pobiera metadane skojarzone z parametrem ogólnym reprezentowanym przez określony token.  
@@ -45,10 +45,10 @@ HRESULT GetGenericParamProps (
  podczas Token reprezentujący parametr generyczny, dla którego mają być zwracane metadane.  
   
  `pulParamSeq`  
- określoną Pozycja porządkowa parametru `Type` w konstruktorze nadrzędnym lub metodzie.  
+ określoną Pozycja porządkowa `Type` parametru w konstruktorze nadrzędnym lub metodzie.  
   
  `pdwParamFlags`  
- określoną Wartość wyliczenia [CorGenericParamAttr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) opisująca `Type` parametru generycznego.  
+ określoną Wartość wyliczenia [CorGenericParamAttr —](corgenericparamattr-enumeration.md) , która opisuje `Type` parametr dla parametru generycznego.  
   
  `ptOwner`  
  określoną Token TypeDef lub MethodDef, który reprezentuje właściciela parametru.  
@@ -60,21 +60,21 @@ HRESULT GetGenericParamProps (
  określoną Nazwa parametru generycznego.  
   
  `cchName`  
- podczas Rozmiar buforu `wzName`.  
+ podczas Rozmiar `wzName` buforu.  
   
  `pchName`  
  określoną Zwrócony rozmiar nazwy w znaki dwubajtowe.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501511"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager — Interfejs
 Zapewnia metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR) do udostępniania żądań pamięci wirtualnej za pośrednictwem hosta, zamiast używać standardowych funkcji pamięci wirtualnej Win32.  
@@ -29,7 +29,7 @@ Zapewnia metody, które umożliwiają środowisko uruchomieniowe języka wspóln
 |Metoda|Opis|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace, metoda](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) uzyskało określoną ilość pamięci z systemu operacyjnego.|  
-|[CreateMAlloc, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Pobiera wskaźnik interfejsu do wystąpienia [IHostMAlloc](ihostmalloc-interface.md) , które jest używane do żądania alokacji pamięci ze sterty utworzonej przez hosta.|  
+|[CreateMAlloc, metoda](ihostmemorymanager-createmalloc-method.md)|Pobiera wskaźnik interfejsu do wystąpienia [IHostMAlloc](ihostmalloc-interface.md) , które jest używane do żądania alokacji pamięci ze sterty utworzonej przez hosta.|  
 |[GetMemoryLoad, metoda](ihostmemorymanager-getmemoryload-method.md)|Pobiera ilość pamięci fizycznej, która jest aktualnie używana, zgłoszoną przez hosta.|  
 |[NeedsVirtualAddressSpace, metoda](ihostmemorymanager-needsvirtualaddressspace-method.md)|Powiadamia hosta, że środowisko CLR podejmie próbę użycia określonej pamięci.|  
 |[RegisterMemoryNotificationCallback, metoda](ihostmemorymanager-registermemorynotificationcallback-method.md)|Rejestruje wskaźnik do funkcji wywołania zwrotnego, który jest wywoływany przez hosta w celu powiadomienia CLR o bieżącym obciążeniu pamięci na komputerze.|  
@@ -51,7 +51,7 @@ Zapewnia metody, które umożliwiają środowisko uruchomieniowe języka wspóln
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [IHostMalloc, interfejs](ihostmalloc-interface.md)
 - [Hosting, interfejsy](hosting-interfaces.md)

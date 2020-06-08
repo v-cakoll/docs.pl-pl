@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58ab9ee9381fce4d7af1910df6c8d3bb813bcf13
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177219"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490895"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA — Metoda
-Pobiera względny adres wirtualny (RVA) i flagi implementacji metody lub pola reprezentowane przez określony token.  
+Pobiera względny adres wirtualny (RVA) oraz flagi implementacji metody lub pola reprezentowanego przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [w] A MethodDef lub FieldDef token metadanych, który reprezentuje obiekt kodu do zwrócenia RVY dla. Jeśli token jest FieldDef, pole musi być zmienną globalną.  
+ podczas Token metadanych MethodDef lub FieldDef reprezentujący obiekt kodu do zwrócenia adresu RVA. Jeśli token jest FieldDef, pole musi być zmienną globalną.  
   
  `pulCodeRVA`  
- [na zewnątrz] Wskaźnik do względnego adresu wirtualnego obiektu kodu reprezentowanego przez token.  
+ określoną Wskaźnik do względnego adresu wirtualnego obiektu kodu reprezentowanego przez token.  
   
  `pdwImplFlags`  
- [na zewnątrz] Wskaźnik do flagi implementacji dla metody. Ta wartość jest maską bitową z wyliczenia [CorMethodImpl.](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) Wartość jest `pdwImplFlags` prawidłowa `tk` tylko wtedy, gdy jest tokenem MethodDef.  
+ określoną Wskaźnik do flag implementacji dla metody. Ta wartość jest maska bitowa z wyliczenia [CorMethodImpl —](cormethodimpl-enumeration.md) . Wartość `pdwImplFlags` jest prawidłowa tylko wtedy, gdy `tk` jest tokenem MethodDef.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2c6ed14f9238d653b15d26dec9d954c05238817c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7d209b7c319baff912b3462f8ed5f3f30f127750
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501914"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection — Metoda
 Powiadamia debuger o zmianie zestawu zadań skojarzonych z określonym połączeniem.  
@@ -46,7 +46,7 @@ HRESULT ChangeConnection (
   
 - Gdy debuger dołącza do procesu, który zawiera połączenia. W takim przypadku środowisko uruchomieniowe generuje i wyśle zdarzenie [ICorDebugManagedCallback2::](icordebugmanagedcallback2-createconnection-method.md) CreateProcess oraz `ChangeConnection` zdarzenie dla każdego połączenia w procesie. `ChangeConnection`Dla każdego istniejącego połączenia generowane jest zdarzenie, niezależnie od tego, czy zestaw zadań tego połączenia został zmieniony od czasu jego utworzenia.  
   
-- Gdy host wywołuje [ICLRDebugManager:: SetConnectionTasks —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) w [interfejsie API hostingu](../hosting/index.md).  
+- Gdy host wywołuje [ICLRDebugManager:: SetConnectionTasks —](../hosting/iclrdebugmanager-setconnectiontasks-method.md) w [interfejsie API hostingu](../hosting/index.md).  
   
  Debuger powinien skanować wszystkie wątki w procesie, aby pobrać nowe zmiany.  
   
@@ -59,7 +59,7 @@ HRESULT ChangeConnection (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorDebugManagedCallback2 — Interfejs](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback — Interfejs](icordebugmanagedcallback-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503162"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated — Metoda
-Powiadamia profiler, że wątek został utworzony.  
+Powiadamia program profilujący o utworzeniu wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,21 +34,21 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [w] Identyfikator wątku, który został utworzony.  
+ podczas Identyfikator utworzonego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `threadId` jest natychmiast prawidłowa.  
+ `threadId`Wartość jest natychmiast ważna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ThreadDestroyed, metoda](icorprofilercallback-threaddestroyed-method.md)

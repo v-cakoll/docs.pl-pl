@@ -1,5 +1,6 @@
 ---
 title: Przykład asynchronicznego gniazda serwera
+description: Ten przykład .NET Framework program tworzy serwer, który odbiera połączenia od klientów przy użyciu gniazda asynchronicznego. Odbiera i zwraca ciąg.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 8a9a3cb26968c548aa971bac548313a459c2fdf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 089de8ce9629e30cb6e4458c0f9a4613c9674a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180911"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502720"
 ---
 # <a name="asynchronous-server-socket-example"></a>Przykład asynchronicznego gniazda serwera
-Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest zbudowany z gniazda asynchroniowego, więc wykonanie aplikacji serwera nie jest zawieszone, gdy czeka na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg na konsoli, a następnie echa ciągu z powrotem do klienta. Ciąg z klienta musi zawierać\<ciąg "EOF>", aby zasygnalizować koniec wiadomości.  
+Poniższy przykładowy program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest oparty na asynchronicznym gnieździe, więc wykonywanie aplikacji serwera nie jest wstrzymane podczas oczekiwania na połączenie od klienta. Aplikacja otrzymuje ciąg z klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg z powrotem do klienta. Ciąg z klienta musi zawierać ciąg " \<EOF> ", aby sygnalizować koniec komunikatu.  
   
 ```vb  
 Imports System  
@@ -289,7 +290,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykład asynchronicznego gniazda klienta](asynchronous-client-socket-example.md)
 - [Używanie asynchronicznego gniazda serwera](using-an-asynchronous-server-socket.md)

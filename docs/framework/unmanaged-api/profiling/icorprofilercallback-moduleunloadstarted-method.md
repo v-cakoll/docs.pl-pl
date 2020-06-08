@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ad94bf766e0fcdbff95b0766cf68c2196a2c71
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503339"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted — Metoda
-Powiadamia profiler, że moduł jest zwalniany.  
+Powiadamia program profilujący, że moduł jest zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,21 +34,21 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [w] Identyfikator modułu, który jest zwalniany.  
+ podczas Identyfikator modułu, który jest zwalniany.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość nie `moduleId` jest prawidłowa dla żądania `ModuleUnloadStarted` informacji po zwraca metodę — jest to ostatnia szansa profilera, aby uzyskać informacje o tym module.  
+ Wartość `moduleId` nie jest prawidłowa dla żądania informacji po `ModuleUnloadStarted` powrocie metody — jest to Ostatnia szansa dla profilera, aby uzyskać informacje na temat tego modułu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ModuleUnloadFinished, metoda](icorprofilercallback-moduleunloadfinished-method.md)

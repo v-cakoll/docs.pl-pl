@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866614"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500406"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted — Metoda
 Powiadamia program profilujący, że zestaw jest zwolniony.  
@@ -36,21 +36,21 @@ HRESULT AssemblyUnloadStarted(
 
 - `assemblyId`
 
-  \[in] określa zestaw, który jest zwalniany.
+  \[w programie] określa zestaw, który jest zwalniany.
 
 ## <a name="remarks"></a>Uwagi  
- Wartość `assemblyId` nie jest prawidłowa dla żądania informacji po powrocie metody `AssemblyUnloadStarted` — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tym zestawie.  
+ Wartość `assemblyId` nie jest prawidłowa dla żądania informacji po `AssemblyUnloadStarted` powrocie metody — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tym zestawie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [AssemblyUnloadFinished, metoda](icorprofilercallback-assemblyunloadfinished-method.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616193"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504348"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction — Wyliczenie
-Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) i błędy opisane przez [EClrFailure —](eclrfailure-enumeration.md).  
+Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [EClrOperation —](eclroperation-enumeration.md) i błędy opisane przez [EClrFailure —](eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,7 +57,7 @@ typedef enum {
 |`eUnloadAppDomain`|Określa, że <xref:System.AppDomain> powinny być zwolnione. Środowisko CLR próbuje uruchomić finalizatorów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Host ustawia akcje zasad przez wywołanie metod interfejsu [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Aby uzyskać informacje na temat prosta i łagodnego przerwania, zobacz Wyliczenie [EClrOperation —](eclroperation-enumeration.md) .  
+ Host ustawia akcje zasad przez wywołanie metod interfejsu [ICLRPolicyManager](iclrpolicymanager-interface.md) . Aby uzyskać informacje na temat prosta i łagodnego przerwania, zobacz Wyliczenie [EClrOperation —](eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  

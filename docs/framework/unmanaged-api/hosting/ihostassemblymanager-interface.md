@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: 8106dd70f6c4099b2246530622f0845f22a0c53f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 4e32a36a4cf751bf7c5a2c918fde0122f21b7878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805054"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501598"
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager — Interfejs
 Dostarcza metody, które umożliwiają hostowi określenie zestawów zestawów, które powinny być ładowane przez środowisko uruchomieniowe języka wspólnego (CLR) lub hosta.  
@@ -28,8 +28,8 @@ Dostarcza metody, które umożliwiają hostowi określenie zestawów zestawów, 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetAssemblyStore, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getassemblystore-method.md)|Pobiera wskaźnik interfejsu do [IHostAssemblyStore](ihostassemblystore-interface.md) , który reprezentuje listę zestawów załadowanych przez hosta.|  
-|[GetNonHostStoreAssemblies, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)|Pobiera wskaźnik interfejsu do [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) , który reprezentuje listę zestawów, które host oczekuje na załadowanie środowiska CLR.|  
+|[GetAssemblyStore, metoda](ihostassemblymanager-getassemblystore-method.md)|Pobiera wskaźnik interfejsu do [IHostAssemblyStore](ihostassemblystore-interface.md) , który reprezentuje listę zestawów załadowanych przez hosta.|  
+|[GetNonHostStoreAssemblies, metoda](ihostassemblymanager-getnonhoststoreassemblies-method.md)|Pobiera wskaźnik interfejsu do [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) , który reprezentuje listę zestawów, które host oczekuje na załadowanie środowiska CLR.|  
   
 ## <a name="remarks"></a>Uwagi  
  Host nie jest wymagany do implementowania `IHostAssemblyManager` ani `IHostAssemblyStore` . Jeśli host jest zaimplementowany `IHostAssemblyManager` , musi również implementować `IHostAssemblyStore` .  
@@ -45,7 +45,7 @@ Dostarcza metody, które umożliwiają hostowi określenie zestawów zestawów, 
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICLRAssemblyReferenceList — Interfejs](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyStore, interfejs](ihostassemblystore-interface.md)

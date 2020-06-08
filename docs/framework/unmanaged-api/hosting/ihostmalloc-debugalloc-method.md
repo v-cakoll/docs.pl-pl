@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493295"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc — Metoda
 Żąda, aby Host przydzielił określoną ilość pamięci ze sterty, a także śledzić miejsce przydzielenia pamięci.  
@@ -66,7 +66,7 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby ukończyć żądanie alokacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR Pobiera wskaźnik interfejsu do wystąpienia [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) przez wywołanie metody [IHostMemoryManager::](ihostmemorymanager-createmalloc-method.md) CreateInstance. `DebugAlloc`umożliwia środowisko uruchomieniowe pobieranie informacji o pliku kodu do użycia podczas debugowania.  
+ Środowisko CLR Pobiera wskaźnik interfejsu do wystąpienia [IHostMAlloc](ihostmalloc-interface.md) przez wywołanie metody [IHostMemoryManager::](ihostmemorymanager-createmalloc-method.md) CreateInstance. `DebugAlloc`umożliwia środowisko uruchomieniowe pobieranie informacji o pliku kodu do użycia podczas debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
@@ -77,7 +77,7 @@ HRESULT DebugAlloc (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [IHostMemoryManager, interfejs](ihostmemorymanager-interface.md)
 - [IHostMalloc, interfejs](ihostmalloc-interface.md)

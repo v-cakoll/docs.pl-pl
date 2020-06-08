@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 0cb0dee7db7faa4c1324d705218934489ec6a4b6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005859"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501329"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption — Metoda
 Ustawia określoną opcję na daną wartość dla bieżącego zakresu metadanych. Opcja określa, jak są obsługiwane wywołania bieżącego zakresu metadanych.  
@@ -46,11 +46,11 @@ HRESULT SetOption (
   
 |GUID|Opis|`pValue`Konstruktora|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Kontroluje, które elementy są sprawdzane pod kątem duplikatów. Za każdym razem, gdy wywoływana jest metoda [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) , która tworzy nowy element, można polecić metodę, aby sprawdzić, czy element już istnieje w bieżącym zakresie. Na przykład można sprawdzić obecność `mdMethodDef` elementów. w tym przypadku, gdy wywołasz [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), sprawdzimy, czy metoda jeszcze nie istnieje w bieżącym zakresie. Ten test korzysta z klucza, który jednoznacznie identyfikuje daną metodę: Parent Type, Name i Signature.|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorCheckDuplicatesFor —](corcheckduplicatesfor-enumeration.md) .|  
+|MetaDataCheckDuplicatesFor|Kontroluje, które elementy są sprawdzane pod kątem duplikatów. Za każdym razem, gdy wywoływana jest metoda [IMetaDataEmit](imetadataemit-interface.md) , która tworzy nowy element, można polecić metodę, aby sprawdzić, czy element już istnieje w bieżącym zakresie. Na przykład można sprawdzić obecność `mdMethodDef` elementów. w tym przypadku, gdy wywołasz [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md), sprawdzimy, czy metoda jeszcze nie istnieje w bieżącym zakresie. Ten test korzysta z klucza, który jednoznacznie identyfikuje daną metodę: Parent Type, Name i Signature.|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorCheckDuplicatesFor —](corcheckduplicatesfor-enumeration.md) .|  
 |MetaDataRefToDefCheck|Kontroluje, które elementy, do których istnieją odwołania, są konwertowane na definicje. Domyślnie aparat metadanych optymalizuje kod przez przekonwertowanie elementu, do którego się odwołuje, jeśli element, do którego się odwoływano, jest zdefiniowany w bieżącym zakresie.|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorRefToDefCheck —](correftodefcheck-enumeration.md) .|  
-|MetaDataNotificationForTokenMovement|Określa, które ponowne mapowania tokenu występują podczas scalania metadanych generują wywołania zwrotne. Użyj metody [IMetaDataEmit:: SetHandle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) , aby nawiązać Interfejs [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) .|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorNotificationForTokenMovement —](cornotificationfortokenmovement-enumeration.md) .|  
+|MetaDataNotificationForTokenMovement|Określa, które ponowne mapowania tokenu występują podczas scalania metadanych generują wywołania zwrotne. Użyj metody [IMetaDataEmit:: SetHandle](imetadataemit-sethandler-method.md) , aby nawiązać Interfejs [IMapToken](imaptoken-interface.md) .|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorNotificationForTokenMovement —](cornotificationfortokenmovement-enumeration.md) .|  
 |MetaDataSetENC|Steruje zachowaniem funkcji Edit-and-Continue (ENC). Można ustawić tylko jeden tryb zachowania w danym momencie.|Musi być VARIANT typu UI4 i musi zawierać wartość wyliczenia [CorSetENC —](corsetenc-enumeration.md) . Wartość nie jest maską bitów.|  
-|MetaDataErrorIfEmitOutOfOrder|Kontroluje, które emitowane błędy generują wywołania zwrotne. Emitowanie metadanych poza kolejnością nie jest krytyczne; Jednak w przypadku emisji metadanych w kolejności, w której jest preferowany aparat metadanych, metadane są bardziej kompaktowe i dlatego mogą być bardziej efektywnie przeszukiwane. Użyj `IMetaDataEmit::SetHandler` metody, aby nawiązać Interfejs [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) .|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorErrorIfEmitOutOfOrder —](corerrorifemitoutoforder-enumeration.md) .|  
+|MetaDataErrorIfEmitOutOfOrder|Kontroluje, które emitowane błędy generują wywołania zwrotne. Emitowanie metadanych poza kolejnością nie jest krytyczne; Jednak w przypadku emisji metadanych w kolejności, w której jest preferowany aparat metadanych, metadane są bardziej kompaktowe i dlatego mogą być bardziej efektywnie przeszukiwane. Użyj `IMetaDataEmit::SetHandler` metody, aby nawiązać Interfejs [IMetaDataError](imetadataerror-interface.md) .|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorErrorIfEmitOutOfOrder —](corerrorifemitoutoforder-enumeration.md) .|  
 |MetaDataImportOption|Kontroluje typy elementów, które zostały usunięte podczas ENC, są pobierane przez moduł wyliczający.|Musi być wariantem typu UI4 i musi zawierać kombinację wartości wyliczenia [CorImportOptions — Enumeration](corimportoptions-enumeration.md) .|  
 |MetaDataThreadSafetyOptions|Określa, czy aparat metadanych uzyskuje blokady czytnika/składnika zapisywania, zapewniając w ten sposób bezpieczeństwo wątków. Domyślnie silnik zakłada, że dostęp jest jednowątkowy przez obiekt wywołujący, więc nie są pobierane żadne blokady. Klienci są odpowiedzialni za zachowanie poprawnej synchronizacji wątków podczas korzystania z interfejsu API metadanych.|Musi być VARIANT typu UI4 i musi zawierać wartość wyliczenia [CorThreadSafetyOptions —](corthreadsafetyoptions-enumeration.md) . Wartość nie jest maską bitów.|  
 |MetaDataGenerateTCEAdapters|Określa, czy importer biblioteki typów powinien generować karty z ściśle połączonymi zdarzeniami (TCE) dla kontenerów punktów połączenia COM.|Musi być wariantem typu BOOL. Jeśli `pValue` jest ustawiona na `true` , importer biblioteki typów GENERUJE karty tce.|  
@@ -69,7 +69,7 @@ HRESULT SetOption (
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [IMetaDataDispenserEx, interfejs](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser — Interfejs](imetadatadispenser-interface.md)

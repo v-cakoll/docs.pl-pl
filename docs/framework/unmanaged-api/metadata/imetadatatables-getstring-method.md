@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41e7b8193ce3288d526db8d7d8c289b0a053ee4e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175242"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489759"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString — Metoda
-Pobiera ciąg w określonym indeksie z kolumny tabeli w bieżącym zakresie odwołania.  
+Pobiera ciąg o określonym indeksie z kolumny tabeli w bieżącym zakresie odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +36,21 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametry  
  `ixString`  
- [w] Indeks, w którym należy rozpocząć wyszukiwanie następnej wartości.  
+ podczas Indeks, od którego należy zacząć wyszukiwanie następnej wartości.  
   
  `ppString`  
- [na zewnątrz] Wskaźnik do wskaźnika do zwracanego ciągu wartości.  
+ określoną Wskaźnik do wskaźnika do zwracanej wartości ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](imetadatatables2-interface.md)

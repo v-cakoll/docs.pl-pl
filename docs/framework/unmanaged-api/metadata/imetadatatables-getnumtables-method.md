@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-ms.openlocfilehash: ab864b251a989056bc34b2c7c6658964556f9ac1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: df02def0c14beb4e9ffd1b9260002767586a59b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449497"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490201"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables — Metoda
-Pobiera liczbę tabel w zakresie bieżącego wystąpienia `IMetaDataTables`.  
+Pobiera liczbę tabel w zakresie bieżącego `IMetaDataTables` wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,15 +38,15 @@ HRESULT GetNumTables (
  określoną Wskaźnik do liczby tabel w bieżącym zakresie wystąpienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](imetadatatables2-interface.md)

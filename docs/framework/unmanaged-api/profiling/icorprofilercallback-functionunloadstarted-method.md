@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175164"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503383"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted — Metoda
-Powiadamia profiler, że środowisko wykonawcze rozpoczęło zwalnianie funkcji.  
+Powiadamia profiler o rozpoczęciu pracy przez środowisko uruchomieniowe w celu zwolnienia funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,20 +36,20 @@ HRESULT FunctionUnloadStarted(
 
 - `functionId`
 
-  \[w] Identyfikator funkcji, która jest zwalniana.
+  \[in] identyfikator funkcji, która jest zwalniana.
 
 ## <a name="remarks"></a>Uwagi  
- Wartość parametru `functionId` nie jest już prawidłowa po tym, jak ta metoda zwraca do wywołującego.  
+ Wartość `functionId` parametru nie jest już prawidłowa po powrocie tej metody do obiektu wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)

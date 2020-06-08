@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 0f5bdf97132c05e765cd6fa423a19bb996105d28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ef5d9ae3da4dff13a461162f0ba3466d3d8192c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175268"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501264"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping — Metoda
-Pobiera obszar pamięci zamapowany plik i typ mapowania.  
+Pobiera region pamięci zamapowanego pliku i typ mapowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,41 +37,41 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Parametry  
  `ppvData`  
- [na zewnątrz] Wskaźnik do początku zamapowany plik.  
+ określoną Wskaźnik do początku zamapowanego pliku.  
   
  `pcbData`  
- [na zewnątrz] Rozmiar zamapowanych regionów. Jeśli `pdwMappingType` `fmFlat`tak , jest to rozmiar pliku.  
+ określoną Rozmiar zamapowanego regionu. Jeśli `pdwMappingType` jest `fmFlat` , jest to rozmiar pliku.  
   
  `pdwMappingType`  
- [na zewnątrz] Wartość [CorFileMapping,](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) która wskazuje typ mapowania. Bieżąca implementacja środowiska wykonawczego języka wspólnego (CLR) zawsze zwraca `fmFlat`. Inne wartości są zarezerwowane do wykorzystania w przyszłości. Jednak zawsze należy sprawdzić zwracaną wartość, ponieważ inne wartości mogą być włączone w przyszłych wersjach lub wersjach usługi.  
+ określoną Wartość [CorFileMapping —](corfilemapping-enumeration.md) , która wskazuje typ mapowania. Bieżąca implementacja środowiska uruchomieniowego języka wspólnego (CLR) zawsze zwraca wartość `fmFlat` . Inne wartości są zarezerwowane do użytku w przyszłości. Należy jednak zawsze zweryfikować zwracaną wartość, ponieważ inne wartości mogą być włączone w przyszłych wersjach lub wersjach usługi.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|Wszystkie wyjścia są wypełnione.|  
-|`E_INVALIDARG`|Wartość NULL została przekazana jako wartość argumentu.|  
-|`COR_E_NOTSUPPORTED`|Implementacja CLR nie może dostarczyć informacji o regionie pamięci. Może się to zdarzyć z następujących powodów:<br /><br /> - Zakres metadanych został `ofWrite` `ofCopyMemory` otwarty z lub flagi.<br />- Zakres metadanych został `ofReadOnly` otwarty bez flagi.<br />- Metoda [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) została użyta do otwarcia tylko części metadanych pliku.<br />- Plik nie jest przenośnym plikiem wykonywalnym (PE). **Uwaga:**  Warunki te zależą od implementacji CLR i mogą być osłabione w przyszłych wersjach CLR.|  
+|`S_OK`|Wszystkie dane wyjściowe są wypełnione.|  
+|`E_INVALIDARG`|Jako wartość argumentu przekazano wartość NULL.|  
+|`COR_E_NOTSUPPORTED`|Implementacja środowiska CLR nie może dostarczyć informacji o regionie pamięci. Może się to zdarzyć z następujących powodów:<br /><br /> -Zakres metadanych został otwarty z `ofWrite` `ofCopyMemory` flagą or.<br />-Zakres metadanych został otwarty bez `ofReadOnly` flagi.<br />-Metoda [IMetaDataDispenser:: OpenScopeOnMemory —](imetadatadispenser-openscopeonmemory-method.md) została użyta do otwarcia tylko części metadanych pliku.<br />-Plik nie jest przenośnym plikiem wykonywalnym (PE). **Uwaga:**  Te warunki są zależne od implementacji środowiska CLR i mogą być osłabione w przyszłych wersjach środowiska CLR.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pamięć, `ppvData` która wskazuje jest prawidłowa tylko tak długo, jak zakres podstawowych metadanych jest otwarty.  
+ Pamięć, która `ppvData` wskazuje na, jest prawidłowa tylko tak długo, jak źródłowy zakres metadanych jest otwarty.  
   
- Aby ta metoda działała, podczas mapowania metadanych pliku na dysku do pamięci przez [wywołanie IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metody, należy określić `ofReadOnly` flagę i nie należy określić `ofWrite` lub `ofCopyMemory` flagi.  
+ Aby ta metoda działała, podczas mapowania metadanych pliku na dysk do pamięci przez wywołanie metody [IMetaDataDispenser:: OpenScope —](imetadatadispenser-openscope-method.md) należy określić `ofReadOnly` flagę i nie należy określać `ofWrite` `ofCopyMemory` flagi or.  
   
- Wybór typu mapowania plików dla każdego zakresu jest specyficzny dla danej implementacji CLR. Nie można go ustawić przez użytkownika. Bieżąca implementacja CLR `fmFlat` zawsze `pdwMappingType`zwraca w , ale może się to zmienić w przyszłych wersjach CLR lub w przyszłych wersjach usługi danej wersji. Zawsze należy sprawdzić zwróconą `pdwMappingType`wartość w , ponieważ różne typy będą miały różne układy i przesunięcia.  
+ Wybór typu mapowania plików dla każdego zakresu jest specyficzny dla danej implementacji środowiska CLR. Nie można go ustawić przez użytkownika. Bieżąca implementacja środowiska CLR zawsze zwraca wartość `fmFlat` w `pdwMappingType` , ale może to zmienić w przyszłych wersjach środowiska CLR lub w przyszłych wersjach usługi danej wersji. Należy zawsze sprawdzać wartość zwracaną w `pdwMappingType` , ponieważ różne typy będą mieć różne układy i przesunięcia.  
   
- Przekazywanie null dla dowolnego z trzech parametrów nie jest obsługiwane. Metoda zwraca `E_INVALIDARG`, a żadne z wyjść nie są wypełnione. Ignorowanie typu mapowania lub rozmiaru regionu może spowodować nieprawidłowe zakończenie programu.  
+ Przekazywanie wartości NULL dla dowolnego z trzech parametrów nie jest obsługiwane. Metoda zwraca `E_INVALIDARG` , a żadne wyjście nie jest wypełnione. Ignorowanie typu mapowania lub rozmiaru regionu może spowodować nietypowe zakończenie działania programu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataInfo, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
-- [CorFileMapping, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [IMetaDataInfo, interfejs](imetadatainfo-interface.md)
+- [CorFileMapping, wyliczenie](corfilemapping-enumeration.md)

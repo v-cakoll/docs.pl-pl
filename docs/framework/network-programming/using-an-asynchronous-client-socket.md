@@ -1,5 +1,6 @@
 ---
 title: Używanie asynchronicznego gniazda klienta
+description: Ten przykład pokazuje asynchroniczne gniazdo klienta. .NET Framework programowanie asynchroniczne umożliwia kontynuowanie uruchamiania aplikacji podczas przetwarzania połączenia.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502044"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Używanie asynchronicznego gniazda klienta
-Gniazdo klienta asynchroniiowego nie zawiesza aplikacji podczas oczekiwania na zakończenie operacji sieciowych. Zamiast tego używa standardowego modelu programowania asynchroniowego programu .NET Framework do przetwarzania połączenia sieciowego w jednym wątku, podczas gdy aplikacja będzie nadal działać w oryginalnym wątku. Gniazda asynchroniczne są odpowiednie dla aplikacji, które intensywnie korzystają z sieci lub które nie mogą czekać na zakończenie operacji sieciowych przed kontynuowaniem.  
+Asynchroniczne gniazdo klienta nie wstrzymuje aplikacji podczas oczekiwania na ukończenie operacji sieciowych. Zamiast tego używa standardowego modelu programowania .NET Framework, aby przetwarzać połączenie sieciowe w jednym wątku, gdy aplikacja nadal działa w oryginalnym wątku. Gniazda asynchroniczne są odpowiednie dla aplikacji, które intensywnie wykorzystują sieć lub nie mogą czekać na ukończenie operacji sieciowych przed kontynuowaniem.  
   
- Klasa <xref:System.Net.Sockets.Socket> jest zgodna z wzorcem nazewnictwa programu .NET Framework dla metod asynchronicznych; na przykład metoda synchroniczne <xref:System.Net.Sockets.Socket.Receive%2A> odpowiada asynchroniczne <xref:System.Net.Sockets.Socket.BeginReceive%2A> <xref:System.Net.Sockets.Socket.EndReceive%2A> i metody.  
+ <xref:System.Net.Sockets.Socket>Klasa jest zgodna ze wzorcem nazewnictwa .NET Framework dla metod asynchronicznych, na przykład <xref:System.Net.Sockets.Socket.Receive%2A> metoda synchroniczna odnosi się do metod asynchronicznych <xref:System.Net.Sockets.Socket.BeginReceive%2A> i <xref:System.Net.Sockets.Socket.EndReceive%2A> .  
   
- Operacje asynchroniczne wymagają metody wywołania zwrotnego, aby zwrócić wynik operacji. Jeśli aplikacja nie musi znać wynik, następnie nie jest wymagana metoda wywołania zwrotnego. Przykładowy kod w tej sekcji pokazuje przy użyciu metody, aby rozpocząć łączenie się z urządzeniem sieciowym i metody wywołania zwrotnego, aby zakończyć połączenie, metoda rozpoczęcia wysyłania danych i metody wywołania zwrotnego, aby zakończyć wysyłanie, a metoda, aby rozpocząć odbieranie danych i metody wywołania zwrotnego, aby zakończyć odbieranie danych.  
+ Operacje asynchroniczne wymagają metody wywołania zwrotnego do zwrócenia wyniku operacji. Jeśli aplikacja nie musi znać wyniku, nie jest wymagana żadna metoda wywołania zwrotnego. W przykładowym kodzie w tej sekcji pokazano, jak rozpocząć łączenie się z urządzeniem sieciowym i metoda wywołania zwrotnego, aby zakończyć połączenie, metodę, aby rozpocząć wysyłanie danych i metodę wywołania zwrotnego w celu ukończenia wysyłania, oraz metodę, aby rozpocząć pobieranie danych i metodę wywołania zwrotnego, aby zakończyć pobieranie danych.  
   
- Gniazda asynchroniczne używają wielu wątków z puli wątków systemowych do przetwarzania połączeń sieciowych. Jeden wątek jest odpowiedzialny za inicjowanie wysyłania lub odbierania danych; inne wątki kończą połączenie z urządzeniem sieciowym i wysyłają lub odbierają dane. W poniższych przykładach wystąpienia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> klasy są używane do zawieszenia wykonywania wątku głównego i sygnału, gdy wykonywanie można kontynuować.  
+ Gniazda asynchroniczne używają wielu wątków z puli wątków systemowych do przetwarzania połączeń sieciowych. Jeden wątek jest odpowiedzialny za Inicjowanie wysyłania lub otrzymywania danych; inne wątki ukończą połączenie z urządzeniem sieciowym i wysyłają lub odbierają dane. W poniższych przykładach wystąpienia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> klasy są używane do wstrzymania wykonywania głównego wątku i sygnału, gdy wykonanie może być kontynuowane.  
   
- W `Connect` poniższym przykładzie, aby połączyć gniazdo asynchroniczne z urządzeniem sieciowym, metoda inicjuje **Socket,** a następnie wywołuje <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> metodę, przekazując zdalny punkt końcowy reprezentujący urządzenie sieciowe, metodę wywołania zwrotnego i obiekt stanu (gniazdo klienta), który jest używany do **przekazywania**informacji o stanie między wywołaniami asynchronizacyjnymi. W przykładzie `Connect` implementuje metodę, aby połączyć określony **Socket** do określonego punktu końcowego. Zakłada się, że globalny **ManualResetEvent** o nazwie `connectDone`.  
+ W poniższym przykładzie, aby połączyć gniazdo asynchroniczne z urządzeniem sieciowym, `Connect` Metoda inicjuje **gniazdo** , a następnie wywołuje <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> metodę, przekazując zdalny punkt końcowy reprezentujący urządzenie sieciowe, metodę połączenia wywołania zwrotnego i obiekt stanu ( **gniazdo**klienta), który jest używany do przekazywania informacji o stanie między wywołaniami asynchronicznymi. Przykład implementuje metodę, `Connect` Aby połączyć określone **gniazdo** z określonym punktem końcowym. Przyjęto założenie, że Global **ManualResetEvent** o nazwie `connectDone` .  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -53,7 +54,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- Connect callback `ConnectCallback` metoda implementuje delegata. <xref:System.AsyncCallback> Łączy się z urządzeniem zdalnym, gdy urządzenie zdalne jest dostępne, a następnie sygnalizuje wątek aplikacji, że połączenie zostało zakończone, ustawiając **ManualResetEvent** `connectDone`. Poniższy kod implementuje `ConnectCallback` metodę.  
+ Metoda Connect wywołania zwrotnego `ConnectCallback` implementuje <xref:System.AsyncCallback> delegata. Nawiązuje połączenie z urządzeniem zdalnym, gdy urządzenie zdalne jest dostępne, a następnie sygnalizuje wątek aplikacji, że połączenie zostało ukończone przez ustawienie **ManualResetEvent** `connectDone` . Poniższy kod implementuje `ConnectCallback` metodę.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -95,7 +96,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- Przykładowa `Send` metoda koduje określone dane ciągu w formacie ASCII i wysyła je asynchronicznie do urządzenia sieciowego reprezentowanego przez określone gniazdo. Poniższy przykład implementuje `Send` metodę.  
+ Przykładowa Metoda `Send` koduje określone dane ciągu w formacie ASCII i wysyła je asynchronicznie do urządzenia sieciowego reprezentowanego przez określone gniazdo. Poniższy przykład implementuje `Send` metodę.  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -119,7 +120,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- Metoda `SendCallback` wywołania zwrotnego <xref:System.AsyncCallback> send implementuje pełnomocnika. Wysyła dane, gdy urządzenie sieciowe jest gotowe do odbioru. Poniższy przykład przedstawia implementację `SendCallback` metody. Zakłada się, że globalny **ManualResetEvent** o nazwie `sendDone`.  
+ Metoda wysyłania wywołania zwrotnego `SendCallback` implementuje <xref:System.AsyncCallback> delegata. Wysyła dane, gdy urządzenie sieciowe jest gotowe do odebrania. Poniższy przykład pokazuje implementację `SendCallback` metody. Przyjęto założenie, że Global **ManualResetEvent** o nazwie `sendDone` .  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -157,7 +158,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- Odczytywanie danych z gniazda klienta wymaga obiektu stanu, który przekazuje wartości między wywołaniami asynchronizacyjnymi. Następująca klasa jest przykładowym obiektem stanu do odbierania danych z gniazda klienta. Zawiera pole dla gniazda klienta, bufor dla odebranych <xref:System.Text.StringBuilder> danych i do przechowywania przychodzącego ciągu danych. Umieszczenie tych pól w obiekcie stanu umożliwia ich wartości, które mają być zachowane w wielu wywołań do odczytu danych z gniazda klienta.  
+ Odczytywanie danych z gniazda klienta wymaga obiektu stanu, który przekazuje wartości między wywołaniami asynchronicznymi. Poniżej przedstawiono klasę przykładowego obiektu stanu do odbioru danych z gniazda klienta. Zawiera pole dla gniazda klienta, bufor dla odebranych danych i obiekt <xref:System.Text.StringBuilder> do przechowywania przychodzącego ciągu danych. Umieszczenie tych pól w obiekcie State pozwala zachować ich wartości między wieloma wywołaniami odczytu danych z gniazda klienta.  
   
 ```vb  
 Public Class StateObject  
@@ -185,7 +186,7 @@ public class StateObject {
 }  
 ```  
   
- Przykładowa `Receive` metoda konfiguruje obiekt stanu, a następnie wywołuje **BeginReceive** metody do odczytu danych z gniazda klienta asynchronicznie. Poniższy przykład implementuje `Receive` metodę.  
+ Przykładowa `Receive` Metoda konfiguruje obiekt stanu, a następnie wywołuje metodę **BeginReceive** , aby odczytywać dane z gniazda klienta asynchronicznie. Poniższy przykład implementuje `Receive` metodę.  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -219,9 +220,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- Metoda wywołania `ReceiveCallback` zwrotnego receive implementuje **delegata AsyncCallback.** Odbiera dane z urządzenia sieciowego i tworzy ciąg komunikatu. Odczytuje jeden lub więcej bajtów danych z sieci do buforu danych, a następnie wywołuje **BeginReceive** metody ponownie, aż do zakończenia danych wysyłanych przez klienta. Po odczytaniu wszystkich danych z `ReceiveCallback` klienta sygnalizuje wątek aplikacji, że dane są kompletne, ustawiając **ManualResetEvent** `sendDone`.  
+ Metoda odbierania wywołania zwrotnego `ReceiveCallback` implementuje delegata **AsyncCallback** . Odbiera dane z urządzenia sieciowego i kompiluje ciąg komunikatu. Odczytuje on co najmniej jeden bajt danych z sieci do bufora danych, a następnie ponownie wywołuje metodę **BeginReceive** do momentu ukończenia danych wysyłanych przez klienta. Po odczytaniu wszystkich danych z klienta program `ReceiveCallback` sygnalizuje wątek aplikacji, że dane zostały ukończone przez ustawienie **ManualResetEvent** `sendDone` .  
   
- Poniższy przykładowy kod `ReceiveCallback` implementuje metodę. Przyjęto założenie, że `response` ciąg globalny o nazwie, który zawiera `receiveDone`odebrany ciąg i global **ManualResetEvent** o nazwie . Serwer musi bezpiecznie zamknąć gniazdo klienta, aby zakończyć sesję sieciową.  
+ Poniższy przykładowy kod implementuje `ReceiveCallback` metodę. Przyjęto założenie, że ciąg globalny o nazwie `response` zawiera otrzymany ciąg i globalną **ManualResetEvent** o nazwie `receiveDone` . Serwer musi bezpiecznie zamknąć gniazdo klienta, aby zakończyć sesję sieciową.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -285,7 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Używanie synchronicznego gniazda klienta](using-a-synchronous-client-socket.md)
 - [Nasłuchiwanie przy użyciu gniazd](listening-with-sockets.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866549"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500341"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated — Metoda
 Powiadamia program profilujący, że utworzono tablicę jednoelementową dla określonego identyfikatora IID i klasy.  
@@ -39,7 +39,7 @@ HRESULT COMClassicVTableCreated(
 
 - `wrappedClasId`
 
-  \[in) identyfikator klasy, dla której utworzono tablicę.
+  \[in] Identyfikator klasy, dla której utworzono tablicę.
 
 - `implementedIID`
 
@@ -47,11 +47,11 @@ HRESULT COMClassicVTableCreated(
 
 - `pVTable`
 
-  \[w] wskaźnik do początku elementu tablicowego.
+  \[w] wskaźnik do początku tabeli tablicowej.
 
 - `cSlots`
 
-  \[] Liczba gniazd, które znajdują się w tabeli metod wirtualnych.
+  \[w] Liczba gniazd, które znajdują się w tabeli metod wirtualnych.
 
 ## <a name="remarks"></a>Uwagi  
  Profiler nie powinien blokować swojej implementacji tej metody, ponieważ stos może nie znajdować się w stanie, który zezwala na wyrzucanie elementów bezużytecznych i dlatego nie można włączyć zastępujący elementów bezużytecznych. Jeśli profiler blokuje tutaj i zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu wywołania zwrotnego.  
@@ -59,15 +59,15 @@ HRESULT COMClassicVTableCreated(
  Implementacja profilera nie powinna być wywoływana w kodzie zarządzanym lub w jakikolwiek sposób spowodować alokację pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [COMClassicVTableDestroyed, metoda](icorprofilercallback-comclassicvtabledestroyed-method.md)

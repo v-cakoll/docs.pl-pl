@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 945cf84e6f6201879514e29a21f7f5462aa33fdb
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502876"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs — Metoda
-Pobiera `FunctionID` funkcji przy użyciu określonego tokenu metadanych, zawierającego klasę i `ClassID` wartości dowolnego argumentu typu.  
+Pobiera `FunctionID` funkcję przy użyciu określonego tokenu metadanych, zawierającego klasę i `ClassID` wartości dowolnego argumentu typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  podczas Identyfikator modułu, w którym znajduje się funkcja.  
   
  `funcDef`  
- podczas `mdMethodDef` token metadanych, który odwołuje się do funkcji.  
+ podczas `mdMethodDef`Token metadanych, który odwołuje się do funkcji.  
   
  `classId`  
  podczas Identyfikator klasy zawierającej funkcję.  
@@ -51,26 +51,26 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  podczas Liczba parametrów typu dla danej funkcji. Ta wartość musi być równa zero w przypadku funkcji innych niż ogólne.  
   
  `typeArgs`  
- podczas Tablica wartości `ClassID`, z których każdy jest argumentem funkcji. Wartość `typeArgs` może mieć wartość NULL, jeśli `cTypeArgs` jest ustawiona na zero.  
+ podczas Tablica `ClassID` wartości, z których każdy jest argumentem funkcji. Wartość `typeArgs` może być równa null, jeśli `cTypeArgs` jest ustawiona na zero.  
   
  `pFunctionID`  
  określoną Wskaźnik do `FunctionID` określonej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie metody `GetFunctionFromTokenAndTypeArgs` z metadanymi `mdMethodRef` zamiast `mdMethodDef`ego tokenu metadanych może mieć nieprzewidywalne wyniki. Obiekty wywołujące powinny rozpoznać `mdMethodRef` do `mdMethodDef` podczas ich przekazywania.  
+ Wywołanie `GetFunctionFromTokenAndTypeArgs` metody z `mdMethodRef` metadanymi zamiast `mdMethodDef` tokenu metadanych może mieć nieprzewidywalne wyniki. Podczas przekazywania obiekty wywołujące powinny rozwiązać ten problem `mdMethodRef` `mdMethodDef` .  
   
  Jeśli funkcja nie jest już załadowana, wywołanie `GetFunctionFromTokenAndTypeArgs` spowoduje wystąpienie załadowania, które jest niebezpieczną operacją w wielu kontekstach. Na przykład wywołanie tej metody podczas ładowania modułów lub typów może prowadzić do nieskończonej pętli, ponieważ środowisko uruchomieniowe próbuje cyklicznie ładować elementy.  
   
- Ogólnie rzecz biorąc użycie `GetFunctionFromTokenAndTypeArgs` nie jest zalecane. Jeśli zainteresują Cię zdarzenia dotyczące konkretnej funkcji, powinny one przechowywać `ModuleID` i `mdMethodDef` tej funkcji, a także używać [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) , aby sprawdzić, czy dana `FunctionID` jest pożądaną funkcją.  
+ Ogólnie rzecz biorąc, użycie `GetFunctionFromTokenAndTypeArgs` nie jest zalecane. Jeśli zainteresują Cię zdarzenia dotyczące konkretnej funkcji, powinny one przechowywać `ModuleID` i tej `mdMethodDef` funkcji, a następnie używać [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) , aby sprawdzić, czy dana jest dana `FunctionID` żądana funkcja.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

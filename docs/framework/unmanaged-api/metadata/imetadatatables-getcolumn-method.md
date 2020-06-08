@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-ms.openlocfilehash: f43d4d1547cbe92f325950e1697dada83b42c4f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76d23fe9221ae5a07d79b8c5c1a7ad297922b003
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177138"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501251"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn — Metoda
 Pobiera wskaźnik do wartości zawartej w komórce określonej kolumny i wiersza w danej tabeli.  
@@ -39,48 +39,48 @@ HRESULT GetColumn (
 ## <a name="parameters"></a>Parametry
 
  `ixTbl`  
- [w] Indeks tabeli.  
+ podczas Indeks tabeli.  
   
  `ixCol`  
- [w] Indeks kolumny w tabeli.  
+ podczas Indeks kolumny w tabeli.  
   
  `rid`  
- [w] Indeks wiersza w tabeli.  
+ podczas Indeks wiersza w tabeli.  
   
  `pVal`  
- [na zewnątrz] Wskaźnik do wartości w komórce.  
+ określoną Wskaźnik do wartości w komórce.  
 
 ## <a name="remarks"></a>Uwagi
 
-Interpretacja wartości zwracanej `pVal` za pośrednictwem zależy od typu kolumny. Typ kolumny można określić, wywołując [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+Interpretacja wartości zwracanej przez jest `pVal` zależna od typu kolumny. Typ kolumny można określić przez wywołanie metody [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
 
-- **Metoda GetColumn** automatycznie konwertuje kolumny typu **Rid** lub **CodedToken** na `mdToken` pełne wartości 32-bitowe.
-- Automatycznie konwertuje również wartości 8-bitowe lub 16-bitowe na pełne wartości 32-bitowe.
-- Dla kolumn typu *sterty* zwrócony *pVal* będzie indeksem do odpowiedniego stosu.
+- Metoda **GetColumn** automatycznie konwertuje kolumny typu **RID** lub **CodedToken** na pełne wartości 32-bitowe `mdToken` .
+- Automatycznie konwertuje wartości 8-bitowe lub 16-bitowe na pełne wartości 32-bitowe.
+- W przypadku kolumn typu *sterty* zwracany *Pval* będzie indeksem do odpowiedniej sterty.
 
 | Typ kolumny              | pVal zawiera | Komentarz                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)  | mdToken (mdToken)     | *pVal* będzie zawierać pełny token. Funkcja automatycznie konwertuje Rid do pełnego tokenu. |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | mdToken (mdToken) | Po zwrocie *pVal* będzie zawierał pełny Token. Funkcja automatycznie dekompresuje CodedToken do pełnego tokenu. |
-| `iSHORT`(96)            | Int16         | Automatycznie podpisuj rozszerzony do 32-bitowego.  |
-| `iUSHORT`(97)           | UInt16        | Automatycznie podpisuj rozszerzony do 32-bitowego.  |
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* będzie zawierać pełny token. Funkcja automatycznie konwertuje identyfikator RID na pełny token. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Po powrocie *Pval* będzie zawierać pełny token. Funkcja automatycznie dekompresuje CodedToken do pełnego tokenu. |
+| `iSHORT`(96)            | Int16         | Automatycznie Podpisz do 32-bitowego.  |
+| `iUSHORT`(97)           | UInt16        | Automatycznie Podpisz do 32-bitowego.  |
 | `iLONG`(98)             | Int32         |                                        |
 | `iULONG`(99)            | UInt32        |                                        |
-| `iBYTE`(100)            | Byte          | Automatycznie podpisuj rozszerzony do 32-bitowego.  |
-| `iSTRING`(101)          | Indeks sterty ciągów | *pVal* jest indeksem do stosu String. Użyj [IMetadataTables::GetString,](imetadatatables-getstring-method.md) aby uzyskać rzeczywistą wartość ciągu kolumny. |
-| `iGUID`(102)            | Wskaźnik sterty guid | *pVal* jest indeksem do sterty Guid. Użyj [IMetadataTables::GetGuid,](imetadatatables-getguid-method.md) aby uzyskać rzeczywistą wartość Guid kolumny. |
-| `iBLOB`(103)            | Indeks sterty obiektów blob | *pVal* jest indeksem do sterty obiektów Blob. Użyj [IMetadataTables::GetBlob,](imetadatatables-getblob-method.md) aby uzyskać rzeczywistą wartość obiektu blob kolumny. |
+| `iBYTE`(100)            | Byte          | Automatycznie Podpisz do 32-bitowego.  |
+| `iSTRING`(101)          | Indeks sterty ciągu | *Pval* jest indeksem do sterty ciągu. Użyj [IMetadataTables:: GetString](imetadatatables-getstring-method.md) , aby uzyskać rzeczywistą wartość ciągu kolumny. |
+| `iGUID`(102)            | Indeks sterty identyfikatora GUID | *Pval* jest indeksem do sterty identyfikatora GUID. Użyj [IMetadataTables:: GetGuid](imetadatatables-getguid-method.md) , aby uzyskać rzeczywistą wartość identyfikatora GUID kolumny. |
+| `iBLOB`(103)            | Indeks sterty obiektu BLOB | *Pval* jest indeksem do sterty obiektu BLOB. Użyj [IMetadataTables:: GetBlob](imetadatatables-getblob-method.md) , aby uzyskać rzeczywistą wartość obiektu BLOB kolumny. |
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](imetadatatables2-interface.md)

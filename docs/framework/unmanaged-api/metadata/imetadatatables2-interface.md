@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-ms.openlocfilehash: ff79f0268226739ec9cf6abeeda791bf45644a40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501082"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 — Interfejs
-Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) w celu uwzględnienia metod pracy z strumieniami metadanych.  
+Rozszerza [IMetaDataTables](imetadatatables-interface.md) w celu uwzględnienia metod pracy z strumieniami metadanych.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetaDataStorage, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Pobiera rozmiar i zawartość metadanych przechowywanych w określonej sekcji.|  
-|[GetMetaDataStreamInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Pobiera nazwę, rozmiar i zawartość strumienia metadanych o określonym indeksie.|  
+|[GetMetaDataStorage — Metoda](imetadatatables2-getmetadatastorage-method.md)|Pobiera rozmiar i zawartość metadanych przechowywanych w określonej sekcji.|  
+|[GetMetaDataStreamInfo — Metoda](imetadatatables2-getmetadatastreaminfo-method.md)|Pobiera nazwę, rozmiar i zawartość strumienia metadanych o określonym indeksie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [Interfejsy metadanych](metadata-interfaces.md)

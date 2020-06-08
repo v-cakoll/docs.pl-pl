@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490410"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString — Metoda
 Pobiera numer wersji środowiska uruchomieniowego, który został użyty do skompilowania zestawu.  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  określoną Tablica do przechowywania ciągu, który określa wersję.  
   
  `ccBufSize`  
- podczas Rozmiar w postaci dwubajtowej tablicy `pwzBuf`.  
+ podczas Rozmiar, w postaci dwubajtowej `pwzBuf` tablicy.  
   
  `pccBufSize`  
- określoną Liczba znaków dwubajtowych, łącznie z terminatorem wartości null, zwracana w tablicy `pwzBuf`.  
+ określoną Liczba znaków dwubajtowych, łącznie z terminatorem wartości null, zwracana w `pwzBuf` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetVersionString` pobiera wbudowaną wersję bieżącego zakresu metadanych. Jeśli zakres nigdy nie został zapisany, nie będzie miał wbudowanej wersji i zostanie zwrócony pusty ciąg.  
+ `GetVersionString`Metoda pobiera wbudowaną wersję bieżącego zakresu metadanych. Jeśli zakres nigdy nie został zapisany, nie będzie miał wbudowanej wersji i zostanie zwrócony pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)

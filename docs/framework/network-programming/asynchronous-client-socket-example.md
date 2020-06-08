@@ -1,5 +1,6 @@
 ---
 title: Przykład asynchronicznego gniazda klienta
+description: Ten przykład .NET Framework program tworzy klienta, który nawiązuje połączenie z serwerem przy użyciu gniazda asynchronicznego. Wysyła on ciąg i wyświetla wynik.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180917"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502733"
 ---
 # <a name="asynchronous-client-socket-example"></a>Przykład asynchronicznego gniazda klienta
-Poniższy przykładowy program tworzy klienta, który łączy się z serwerem. Klient jest zbudowany z gniazda asynchroniowego, więc wykonanie aplikacji klienckiej nie jest zawieszone, podczas gdy serwer zwraca odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer na konsoli.  
+Poniższy przykładowy program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest oparty na gnieździe asynchronicznym, więc wykonywanie aplikacji klienckiej nie jest wstrzymane, gdy serwer zwróci odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli programu.  
   
 ```vb  
 Imports System  
@@ -321,7 +322,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykład asynchronicznego gniazda serwera](asynchronous-server-socket-example.md)
 - [Używanie synchronicznego gniazda serwera](using-a-synchronous-server-socket.md)

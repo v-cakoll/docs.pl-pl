@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-ms.openlocfilehash: daca2849908a7798b588ff06f6e117d412db1b33
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b273faafd7abb86ace58bb5c24473406af3ce20e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500978"
 ---
 # <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS — Wyliczenie
 Opisuje finalizator dla obiektu.  
@@ -34,21 +34,21 @@ typedef enum {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`COR_PRF_FINALIZER_CRITICAL`|Finalizator jest krytyczny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wyliczenie `COR_PRF_FINALIZER_FLAGS` jest używane przez metodę [ICorProfilerCallback2:: FinalizeableObjectQueued —](icorprofilercallback2-finalizeableobjectqueued-method.md) do opisywania finalizatora dla obiektu.  
+ `COR_PRF_FINALIZER_FLAGS`Wyliczenie jest używane przez metodę [ICorProfilerCallback2:: FinalizeableObjectQueued —](icorprofilercallback2-finalizeableobjectqueued-method.md) do opisywania finalizatora dla obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

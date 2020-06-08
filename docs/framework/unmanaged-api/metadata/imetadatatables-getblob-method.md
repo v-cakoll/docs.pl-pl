@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff97e419c5309fa7cb820cb7e82db96fee34f30c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445431"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501277"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob — Metoda
 Pobiera wskaźnik do dużego obiektu binarnego (BLOB) w określonym indeksie kolumny.  
@@ -37,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Parametry  
  `ixBlob`  
- podczas Adres pamięci, z którego ma zostać uzyskany `ppData`.  
+ podczas Adres pamięci, z którego ma zostać pobrany `ppData` .  
   
  `pcbData`  
- określoną Wskaźnik do rozmiaru, w bajtach, `ppData`.  
+ określoną Wskaźnik do rozmiaru, w bajtach, z `ppData` .  
   
  `ppData`  
  określoną Pobrano wskaźnik do wskaźnika do danych binarnych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](imetadatatables2-interface.md)

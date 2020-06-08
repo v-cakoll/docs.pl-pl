@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803897"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501472"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager — Interfejs
 Zapewnia metody, które umożliwiają dostęp do i kontrolę nad kontekstem zabezpieczeń aktualnie wykonywanego wątku.  
@@ -28,7 +28,7 @@ Zapewnia metody, które umożliwiają dostęp do i kontrolę nad kontekstem zabe
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSecurityContext, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Pobiera żądany [IHostSecurityContext](ihostsecuritycontext-interface.md) z hosta.|  
+|[GetSecurityContext, metoda](ihostsecuritymanager-getsecuritycontext-method.md)|Pobiera żądany [IHostSecurityContext](ihostsecuritycontext-interface.md) z hosta.|  
 |[ImpersonateLoggedOnUser, metoda](ihostsecuritymanager-impersonateloggedonuser-method.md)|Żąda wykonania kodu przy użyciu poświadczeń bieżącego użytkownika.|  
 |[OpenThreadToken, metoda](ihostsecuritymanager-openthreadtoken-method.md)|Otwiera token dostępu swobodnego skojarzony z bieżącym wątkiem.|  
 |[RevertToSelf, metoda](ihostsecuritymanager-reverttoself-method.md)|Kończy personifikację bieżącej tożsamości użytkownika i zwraca oryginalny token wątku.|  
@@ -57,7 +57,7 @@ Zapewnia metody, które umożliwiają dostęp do i kontrolę nad kontekstem zabe
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [IHostSecurityContext — Interfejs](ihostsecuritycontext-interface.md)
 - [Hosting, interfejsy](hosting-interfaces.md)

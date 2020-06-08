@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-ms.openlocfilehash: 663abfdad79b8e4878ee598587a1f3484f5afccc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fbb9727523aa175f10a05b3ba4f54ac64b790f8e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444616"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489551"
 ---
 # <a name="metadata-structures"></a>Metadane — Struktury
 W tej sekcji opisano niezarządzane struktury używane przez interfejs API metadanych.  
@@ -20,23 +20,23 @@ W tej sekcji opisano niezarządzane struktury używane przez interfejs API metad
  ASSEMBLYMETADATA  
  Przechowuje metadane zestawu do późniejszego użycia.  
   
- [COR_FIELD_OFFSET, struktura](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ [COR_FIELD_OFFSET — Struktura](cor-field-offset-structure.md)  
  Zapisuje przesunięcie w obrębie klasy w określonym polu.  
   
- [COR_NATIVE_LINK, struktura](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
+ [COR_NATIVE_LINK, struktura](cor-native-link-structure.md)  
  Zawiera informacje, które są używane do łączenia kodu natywnego.  
   
- [CVStruct, struktura](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
+ [Struktura CVStruct](cvstruct-structure.md)  
  Zawiera informacje, które są używane podczas instalowania modułu lub obrazu złożonego.  
   
- [OSINFO, struktura](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
+ [OSINFO — Struktura](osinfo-structure.md)  
  Zawiera informacje o systemie operacyjnym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [Interfejsy metadanych](metadata-interfaces.md)  
   
- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [Statyczne funkcje globalne metadanych](metadata-global-static-functions.md)  
   
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Wyliczenia metadanych](metadata-enumerations.md)  
   
- [Unie metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [Unie metadanych](metadata-unions.md)

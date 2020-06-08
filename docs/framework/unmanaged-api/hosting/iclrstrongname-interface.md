@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762079"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501654"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName — Interfejs
 Udostępnia podstawowe globalne funkcje statyczne do podpisywania zestawów o silnych nazwach. Wszystkie `ICLRStrongName` metody zwracają standardowe wartości HRESULT modelu com.  
@@ -35,7 +35,7 @@ Udostępnia podstawowe globalne funkcje statyczne do podpisywania zestawów o si
 |[GetHashFromFileW, metoda](iclrstrongname-gethashfromfilew-method.md)|Generuje skrót do zawartości pliku określonego przez ciąg Unicode.|  
 |[GetHashFromHandle, metoda](iclrstrongname-gethashfromhandle-method.md)|Generuje skrót do zawartości pliku z określonym dojściem do pliku przy użyciu określonego algorytmu wyznaczania wartości skrótu.|  
 |[StrongNameCompareAssemblies, metoda](iclrstrongname-strongnamecompareassemblies-method.md)|Określa, czy dwa zestawy różnią się tylko sygnaturami silnej nazwy.|  
-|[StrongNameFreeBuffer, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Zwalnia pamięć, która została przypisana przy użyciu poprzedniego wywołania metody silnej nazwy, takiej jak [StrongNameGetPublicKey —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)lub [StrongNameSignatureGeneration —](iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[StrongNameFreeBuffer, metoda](iclrstrongname-strongnamefreebuffer-method.md)|Zwalnia pamięć, która została przypisana przy użyciu poprzedniego wywołania metody silnej nazwy, takiej jak [StrongNameGetPublicKey —](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey —](iclrstrongname-strongnametokenfrompublickey-method.md)lub [StrongNameSignatureGeneration —](iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[StrongNameGetBlob, metoda](iclrstrongname-strongnamegetblob-method.md)|Wypełnia określony bufor reprezentacją binarną pliku wykonywalnego pod określonym adresem.|  
 |[StrongNameGetBlobFromImage, metoda](iclrstrongname-strongnamegetblobfromimage-method.md)|Pobiera binarną reprezentację obrazu zestawu pod określonym adresem pamięci.|  
 |[StrongNameGetPublicKey, metoda](iclrstrongname-strongnamegetpublickey-method.md)|Pobiera klucz publiczny z pary kluczy prywatnych/publicznych.|  
@@ -66,7 +66,7 @@ Udostępnia podstawowe globalne funkcje statyczne do podpisywania zestawów o si
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Hosting, interfejsy](hosting-interfaces.md)
 - [Hosting](index.md)

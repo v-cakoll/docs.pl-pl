@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1b973cdeaffbec0dad1f2d082c44e8001647fdcc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866667"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500458"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted — Metoda
 Powiadamia profiler o tym, że domena aplikacji jest zwalniana z procesu.  
@@ -36,20 +36,20 @@ HRESULT AppDomainShutdownStarted(
 
 - `appDomainId`
 
-  \[in] określa domenę, w której są przechowywane zestawy aplikacji.
+  \[w programie] identyfikuje domenę, w której są przechowywane zestawy aplikacji.
 
 ## <a name="remarks"></a>Uwagi  
- Wartość `appDomainId` nie jest prawidłowa dla żadnych żądań informacji po powrocie metody `AppDomainShutdownStarted` — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tej domenie aplikacji.  
+ Wartość `appDomainId` nie jest prawidłowa dla żadnych żądań informacji po `AppDomainShutdownStarted` powrocie metody — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tej domenie aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)

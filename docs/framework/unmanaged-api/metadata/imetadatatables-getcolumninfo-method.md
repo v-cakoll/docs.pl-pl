@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177123"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501199"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo — Metoda
 Pobiera dane dotyczące określonej kolumny w określonej tabeli.  
@@ -42,59 +42,59 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [w] Indeks żądanej tabeli.  
+ podczas Indeks żądanej tabeli.  
   
  `ixCol`  
- [w] Indeks żądanej kolumny.  
+ podczas Indeks żądanej kolumny.  
   
  `poCol`  
- [na zewnątrz] Wskaźnik do odsunięcia kolumny w wierszu.  
+ określoną Wskaźnik do przesunięcia kolumny w wierszu.  
   
  `pcbCol`  
- [na zewnątrz] Wskaźnik do rozmiaru w bajtach kolumny.  
+ określoną Wskaźnik do rozmiaru, w bajtach, kolumny.  
   
  `pType`  
- [na zewnątrz] Wskaźnik do typu wartości w kolumnie.  
+ określoną Wskaźnik do typu wartości w kolumnie.  
   
  `ppName`  
- [na zewnątrz] Wskaźnik do wskaźnika do nazwy kolumny.  
+ określoną Wskaźnik do wskaźnika do nazwy kolumny.  
 
 ## <a name="remarks"></a>Uwagi
 
-Zwracany typ kolumny mieści się w zakresie wartości:
+Zwracany typ kolumny znajduje się w zakresie wartości:
 
-| pTyp                    | Opis   | Funkcja pomocnika                   |
+| pType                    | Opis   | Funkcja pomocnika                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **Typ IsRid**<br>**IsRidOrToken (IsRidOrToken)** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Token kodowany | **Typ IsCodedToken** <br>**IsRidOrToken (IsRidOrToken)** |
-| `iSHORT`(96)            | Int16         | **IsFixedType (Typ isfixedtype)**                   |
-| `iUSHORT`(97)           | UInt16        | **IsFixedType (Typ isfixedtype)**                   |
-| `iLONG`(98)             | Int32         | **IsFixedType (Typ isfixedtype)**                   |
-| `iULONG`(99)            | UInt32        | **IsFixedType (Typ isfixedtype)**                   |
-| `iBYTE`(100)            | Byte          | **IsFixedType (Typ isfixedtype)**                   |
-| `iSTRING`(101)          | Ciąg        | **Typ IsHeapType**                    |
-| `iGUID`(102)            | Guid (identyfikator GUID)          | **Typ IsHeapType**                    |
-| `iBLOB`(103)            | Obiekt blob          | **Typ IsHeapType**                    |
+| `0`..`iRidMax`<br>(0.. 63)   | Objęte           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Zakodowany token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT`(96)            | Int16         | **Isfixedtype**                   |
+| `iUSHORT`(97)           | UInt16        | **Isfixedtype**                   |
+| `iLONG`(98)             | Int32         | **Isfixedtype**                   |
+| `iULONG`(99)            | UInt32        | **Isfixedtype**                   |
+| `iBYTE`(100)            | Byte          | **Isfixedtype**                   |
+| `iSTRING`(101)          | String        | **Issterta**                    |
+| `iGUID`(102)            | Guid (identyfikator GUID)          | **Issterta**                    |
+| `iBLOB`(103)            | Obiekt blob          | **Issterta**                    |
 
-Wartości, które są przechowywane w *stercie* `IsHeapType == true`(czyli) można odczytać za pomocą:
+Wartości, które są przechowywane w *stercie* (czyli `IsHeapType == true` ), można odczytać przy użyciu:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GETguid**
+- `iBLOB`: **IMetadataTables. GetBlob**
 
 > [!IMPORTANT]
-> Aby użyć stałych zdefiniowanych w powyższej `#define _DEFINE_META_DATA_META_CONSTANTS` tabeli, należy dołączyć dyrektywę dostarczoną przez plik nagłówka *cor.h.*
+> Aby użyć stałych zdefiniowanych w powyższej tabeli, należy uwzględnić dyrektywę `#define _DEFINE_META_DATA_META_CONSTANTS` dostarczoną przez plik nagłówkowy *cor. h* .
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](imetadatatables2-interface.md)

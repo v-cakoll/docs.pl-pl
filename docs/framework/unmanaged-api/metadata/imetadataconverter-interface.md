@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: b6ca7c619d32e69ffac20b80561171d0320db2d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7a2a5080872f49a84e36c53ac337d91738c15e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008381"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501342"
 ---
 # <a name="imetadataconverter-interface"></a>IMetaDataConverter — Interfejs
 Zapewnia metody mapowania bibliotek typów na ich sygnatury metadanych oraz do konwersji między nimi.  
@@ -28,7 +28,7 @@ Zapewnia metody mapowania bibliotek typów na ich sygnatury metadanych oraz do k
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetaDataFromTypeInfo — Metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Pobiera wskaźnik do wystąpienia [IMetaDataImport](imetadataimport-interface.md) , które reprezentuje sygnaturę metadanych dla biblioteki typów, do której odwołuje się określone `ITypeInfo` wystąpienie.|  
+|[GetMetaDataFromTypeInfo — Metoda](imetadataconverter-getmetadatafromtypeinfo-method.md)|Pobiera wskaźnik do wystąpienia [IMetaDataImport](imetadataimport-interface.md) , które reprezentuje sygnaturę metadanych dla biblioteki typów, do której odwołuje się określone `ITypeInfo` wystąpienie.|  
 |[GetMetaDataFromTypeLib — Metoda](imetadataconverter-getmetadatafromtypelib-method.md)|Pobiera wskaźnik do `IMetaDataImport` wystąpienia, które reprezentuje sygnaturę metadanych dla biblioteki typów reprezentowanej przez określone `ITypeLib` wystąpienie.|  
 |[GetTypeLibFromMetaData — Metoda](imetadataconverter-gettypelibfrommetadata-method.md)|Pobiera wskaźnik do `ITypeLib` wystąpienia, które reprezentuje bibliotekę typów, która ma określone nazwy modułów i bibliotek.|  
   
@@ -41,7 +41,7 @@ Zapewnia metody mapowania bibliotek typów na ich sygnatury metadanych oraz do k
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy metadanych](metadata-interfaces.md)
 - [IMetaDataImport — Interfejs](imetadataimport-interface.md)

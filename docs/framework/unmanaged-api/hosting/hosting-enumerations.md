@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616115"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504306"
 ---
 # <a name="hosting-enumerations"></a>Hosting — Wyliczenia
 W tej sekcji opisano niezarządzane wyliczenia używane przez interfejs API hostingu.  
@@ -72,13 +72,13 @@ W tej sekcji opisano niezarządzane wyliczenia używane przez interfejs API host
  Zawiera wartości wskazujące wpływ błędu w przypadku żądania określonego przydziału pamięci, ale nie można go spełnić.  
   
  [EPolicyAction — Wyliczenie](epolicyaction-enumeration.md)  
- Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [Wyliczenie EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) i błędy opisane przez [Wyliczenie EClrFailure —](eclrfailure-enumeration.md).  
+ Opisuje akcje zasad, które host może ustawić dla operacji opisanych przez [Wyliczenie EClrOperation —](eclroperation-enumeration.md) i błędy opisane przez [Wyliczenie EClrFailure —](eclrfailure-enumeration.md).  
   
  [ESymbolReadingPolicy, wyliczenie](esymbolreadingpolicy-enumeration.md)  
  Zawiera wartości, które ustawiają zasady odczytujące pliki bazy danych (PDB) programu.  
   
  [ETaskType, wyliczenie](etasktype-enumeration.md)  
- Zawiera wartości wskazujące rodzaj zadania reprezentowanego przez [interfejs ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub interfejs [interfejsu IHostTask](ihosttask-interface.md) .  
+ Zawiera wartości wskazujące rodzaj zadania reprezentowanego przez [interfejs ICLRTask](iclrtask-interface.md) lub interfejs [interfejsu IHostTask](ihosttask-interface.md) .  
   
  [HOST_TYPE, wyliczenie](host-type-enumeration.md)  
  Zawiera wartości określające typ hosta, który uruchamia aplikację.  

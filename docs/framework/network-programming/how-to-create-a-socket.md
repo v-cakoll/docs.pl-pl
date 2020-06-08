@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: tworzenie gniazda'
+description: Dowiedz się, jak zainicjować gniazdo do komunikowania się z urządzeniami zdalnymi. Użyj klasy Socket, aby określić rodzinę adresów, typ gniazda i typ protokołu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180825"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502551"
 ---
 # <a name="how-to-create-a-socket"></a>Instrukcje: tworzenie gniazda
-Aby można było używać gniazda do komunikowania się z urządzeniami zdalnymi, gniazdo musi zostać zainicjowane z informacjami o protokole i adresie sieciowym. Konstruktor <xref:System.Net.Sockets.Socket> dla klasy ma parametry, które określają rodzinę adresów, typ gniazda i typ protokołu, którego gniazdo używa do nawiązywać połączenia.  
+Aby można było używać gniazda do komunikowania się z urządzeniami zdalnymi, gniazdo musi być zainicjowane przy użyciu informacji o protokole i adresie sieciowym. Konstruktor dla <xref:System.Net.Sockets.Socket> klasy ma parametry, które określają rodzinę adresów, typ gniazda i typ protokołu, który jest wykorzystywany przez gniazdo do nawiązywania połączeń.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy Socket, który może służyć do komunikowania się w sieci opartej na TCP/IP, takich jak Internet.  
+ Poniższy przykład tworzy gniazdo, którego można użyć do komunikowania się w sieci opartej na protokole TCP/IP, na przykład w Internecie.  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,
@@ -40,7 +41,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Stream, ProtocolType.Tcp)  
 ```  
   
- Aby użyć protokołu UDP zamiast protokołu TCP, zmień typ protokołu, tak jak w poniższym przykładzie:  
+ Aby użyć protokołu UDP zamiast TCP, należy zmienić typ protokołu, tak jak w poniższym przykładzie:  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,
@@ -52,15 +53,15 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- Wyliczenie <xref:System.Net.Sockets.AddressFamily> określa standardowe rodziny adresów używane przez **Socket** klasy do rozpoznawania adresów sieciowych (na przykład **AddressFamily.InterNetwork** element członkowski określa ip wersji 4 rodziny adresów rodziny).  
+ <xref:System.Net.Sockets.AddressFamily>Wyliczenie określa rodziny adresów standardowych używane przez klasę **Socket** do rozpoznawania adresów sieciowych (na przykład członek **AddressFamily. Internetwork** określa rodzinę adresów IP w wersji 4).  
   
- Wyliczenie <xref:System.Net.Sockets.SocketType> określa typ gniazda (na przykład **SocketType.Stream** element członkowski wskazuje standardowe gniazdo do wysyłania i odbierania danych z kontrolą przepływu).  
+ <xref:System.Net.Sockets.SocketType>Wyliczenie określa typ gniazda (na przykład, członek **gniazda. Stream** wskazuje standardowe gniazdo do wysyłania i otrzymywania danych za pomocą sterowania przepływem).  
   
- Wyliczenie <xref:System.Net.Sockets.ProtocolType> określa protokół sieciowy używany podczas komunikacji na **socket** (na przykład **ProtocolType.Tcp** wskazuje, że gniazdo używa protokołu TCP; **ProtocolType.Udp** wskazuje, że gniazdo używa UDP).  
+ <xref:System.Net.Sockets.ProtocolType>Wyliczenie określa protokół sieciowy, który ma być używany podczas komunikacji w **gnieździe** (na przykład **ProtocolType. TCP** wskazuje, że gniazdo używa protokołu TCP; **ProtocolType. UDP** wskazuje, że gniazdo używa protokołu UDP.  
   
- Po utworzeniu **socket** może zainicjować połączenie ze zdalnym punktem końcowym lub odbierać połączenia z urządzeń zdalnych.  
+ Po utworzeniu **gniazda** można zainicjować połączenie ze zdalnym punktem końcowym lub odebrać połączenia z urządzeń zdalnych.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Używanie gniazd klientów](using-client-sockets.md)
 - [Nasłuchiwanie przy użyciu gniazd](listening-with-sockets.md)

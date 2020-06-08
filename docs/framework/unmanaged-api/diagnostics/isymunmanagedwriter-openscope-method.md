@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbea0644-3873-4329-90b8-624163e87467
 topic_type:
 - apiref
-ms.openlocfilehash: 4008b2a7d785781da5f35b3dc1e564487cb8e760
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2808606be24399c9a4fe03df4c53202d31cbbe91
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609784"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501719"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope — Metoda
 Otwiera nowy zakres leksykalny w bieżącej metodzie. Zakres będzie nowym bieżącym zakresem i jest wypychany do stosu zakresów. Zakresy muszą tworzyć hierarchię. Elementy równorzędne nie mogą nakładać się na siebie.  
@@ -44,7 +44,7 @@ HRESULT OpenScope(
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ISymUnmanagedWriter::OpenScope`zwraca nieprzezroczysty identyfikator zakresu, który może być używany z [ISymUnmanagedWriter:: SetScopeRange —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) w celu zdefiniowania początkowego i końcowego przesunięcia zakresu w późniejszym czasie. W takim przypadku przesunięcia przesłane do `ISymUnmanagedWriter::OpenScope` i [ISymUnmanagedWriter:: CloseScope —](isymunmanagedwriter-closescope-method.md) są ignorowane. Identyfikatory zakresów są prawidłowe tylko w bieżącej metodzie.  
+ `ISymUnmanagedWriter::OpenScope`zwraca nieprzezroczysty identyfikator zakresu, który może być używany z [ISymUnmanagedWriter:: SetScopeRange —](isymunmanagedwriter-setscoperange-method.md) w celu zdefiniowania początkowego i końcowego przesunięcia zakresu w późniejszym czasie. W takim przypadku przesunięcia przesłane do `ISymUnmanagedWriter::OpenScope` i [ISymUnmanagedWriter:: CloseScope —](isymunmanagedwriter-closescope-method.md) są ignorowane. Identyfikatory zakresów są prawidłowe tylko w bieżącej metodzie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym. idl, CorSym. h  

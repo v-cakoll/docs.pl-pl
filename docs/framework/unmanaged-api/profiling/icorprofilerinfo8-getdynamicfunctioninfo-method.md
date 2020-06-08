@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495323"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo, Metoda
 
@@ -46,7 +46,7 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `ppvSig`
 
-  \[out] wskaźnik do podpisu dla funkcji.
+  \[out] wskaźnik do sygnatury funkcji.
 
 - `pbSig`
 
@@ -54,15 +54,15 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[] maksymalny rozmiar tablicy `wszName`.
+  \[w] maksymalny rozmiar `wszName` tablicy.
 
 - `pcchName`
 
-  \[out] liczba znaków w tablicy `wszName`.
+  \[out] liczba znaków w `wszName` tablicy.
 
 - `wszName`
 
-  \[out] tablica `WCHAR`, która jest nazwą funkcji (jeśli taka istnieje).
+  \[out] tablica `WCHAR` , która jest nazwą funkcji (jeśli taka istnieje).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -72,13 +72,13 @@ Ten interfejs API może służyć do pobierania informacji o metodach dynamiczny
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
 **Biblioteka:** CorGuids. lib
 
-**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

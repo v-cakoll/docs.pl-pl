@@ -2,12 +2,12 @@
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, metoda
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-ms.openlocfilehash: 103fe1b6845edfe0a364db979557db63511f6ee3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ed3f305deceacb976aeff994db1588f9e1ce1fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130386"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495531"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, metoda
 
@@ -31,7 +31,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 podczas Identyfikator modułu NGen.
 
 `inlineeModuleId`\
-podczas Identyfikator modułu, który definiuje `inlineeMethodId`. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+podczas Identyfikator modułu, który definiuje `inlineeMethodId` . Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 `inlineeMethodId`\
 podczas Identyfikator metody wbudowanej. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
@@ -44,42 +44,42 @@ określoną Wskaźnik do adresu modułu wyliczającego
 
 ## <a name="remarks"></a>Uwagi
 
-`inlineeModuleId` i `inlineeMethodId` razem tworzą pełny identyfikator dla metody, która może być wbudowana. Załóżmy na przykład, że moduł `A` definiuje `Simple.Add`metody:
+`inlineeModuleId`i `inlineeMethodId` razem tworzą pełny identyfikator dla metody, która może być wbudowana. Na przykład załóżmy, że moduł `A` definiuje metodę `Simple.Add` :
 
 ```csharp
 Simple.Add(int a, int b)
 { return a + b; }
 ```
 
-i moduł B definiuje `Fancy.AddTwice`:
+i moduł B definiuje `Fancy.AddTwice` :
 
 ```csharp
 Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-Umożliwia również założenie, że `Fancy.AddTwice` rozliczanie wywołania `SimpleAdd`. Profiler może użyć tego modułu wyliczającego, aby znaleźć wszystkie metody zdefiniowane w module B, które są wbudowane `Simple.Add`, a wynikiem będzie Wyliczenie `AddTwice`.  `inlineeModuleId` jest identyfikatorem `A`modułu, a `inlineeMethodId` jest identyfikatorem `Simple.Add(int a, int b)`.
+Umożliwia również założenie, że `Fancy.AddTwice` wywołanie `SimpleAdd` . Profiler może użyć tego modułu wyliczającego, aby znaleźć wszystkie metody zdefiniowane w module B `Simple.Add` , które są wbudowane, a wynikiem będzie Wyliczenie `AddTwice` .  `inlineeModuleId`jest identyfikatorem modułu `A` i `inlineeMethodId` jest identyfikatorem `Simple.Add(int a, int b)` .
 
-Jeśli `incompleteData` ma wartość true po powrocie funkcji, moduł wyliczający nie zawiera wszystkich metod, które podkreślają daną metodę. Może to być spowodowane tym, że co najmniej jedna bezpośrednia lub pośrednia zależność modułu modułów nie została jeszcze załadowana. Jeśli Profiler wymaga dokładnej ilości danych, powinien ponowić próbę później, gdy więcej modułów zostanie załadowanych, najlepiej przy każdym załadowaniu modułu.
+Jeśli `incompleteData` wartość jest równa true po zwracaniu funkcji, moduł wyliczający nie zawiera wszystkich metod, które podkreślają daną metodę. Może to być spowodowane tym, że co najmniej jedna bezpośrednia lub pośrednia zależność modułu modułów nie została jeszcze załadowana. Jeśli Profiler wymaga dokładnej ilości danych, powinien ponowić próbę później, gdy więcej modułów zostanie załadowanych, najlepiej przy każdym załadowaniu modułu.
 
-Za pomocą metody `EnumNgenModuleMethodsInliningThisMethod` można obejść ograniczenia dotyczące deReJIT. ReJIT umożliwia usłudze Profiler zmianę implementacji metody, a następnie utworzenie nowego kodu na bieżąco. Można na przykład zmienić `Simple.Add` w następujący sposób:
+`EnumNgenModuleMethodsInliningThisMethod`Metoda może służyć do obejścia ograniczeń dotyczących deReJIT. ReJIT umożliwia usłudze Profiler zmianę implementacji metody, a następnie utworzenie nowego kodu na bieżąco. Na przykład możemy zmienić `Simple.Add` w następujący sposób:
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-Ponieważ jednak `Fancy.AddTwice` ma już wbudowaną `Simple.Add`, nadal ma takie samo zachowanie jak wcześniej. Aby obejść to ograniczenie, obiekt wywołujący musi wyszukać wszystkie metody we wszystkich modułach, które są wbudowane `Simple.Add` i używają `ICorProfilerInfo5::RequestRejit` dla każdej z tych metod. Po ponownym skompilowaniu metod będą one miały nowe zachowanie `Simple.Add` zamiast starego zachowania.
+Mimo że `Fancy.AddTwice` funkcja została już wbudowana `Simple.Add` , nadal ma takie samo zachowanie jak wcześniej. Aby obejść to ograniczenie, obiekt wywołujący musi wyszukać wszystkie metody we wszystkich modułach, które są wbudowane `Simple.Add` i używane `ICorProfilerInfo5::RequestRejit` dla każdej z tych metod. Po ponownym skompilowaniu metod będą one miały nowe zachowanie `Simple.Add` zamiast starego zachowania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
 **Biblioteka:** CorGuids. lib
 
-**Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

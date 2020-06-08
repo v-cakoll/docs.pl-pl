@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494036"
 ---
 # <a name="profiling-interfaces"></a>Interfejsy profilowania
 W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilowanie programu wykonywanego przez środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -20,14 +20,14 @@ W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilowani
  [ICLRProfiling, interfejs](iclrprofiling-interface.md)  
  Udostępnia metodę [AttachProfiler —](iclrprofiling-attachprofiler-method.md) , która umożliwia profilerowi dołączenie do uruchomionego procesu.  
   
- [ICorProfilerAssemblyReferenceProvider, interfejs](icorprofilerassemblyreferenceprovider-interface.md)  
+ [Interfejs ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md)  
  Umożliwia programowi Profiler informowanie CLR o odwołaniach do zestawów, które Profiler doda do wywołania zwrotnego [ICorProfilerCallback:: ModuleLoadFinished —](icorprofilercallback-moduleloadfinished-method.md) .  
   
- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)  
+ [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)  
  Dostarcza metody, które są używane przez środowisko CLR do powiadamiania profilera kodu o wystąpieniu zdarzeń subskrybowanych przez profiler.  
   
- [ICorProfilerCallback2, interfejs](icorprofilercallback2-interface.md)  
- Rozszerza interfejs `ICorProfilerCallback` z wywołaniami zwrotnymi obsługiwanymi w .NET Framework 2,0 i nowszymi wersjami.  
+ [ICorProfilerCallback2 — Interfejs](icorprofilercallback2-interface.md)  
+ Rozszerza `ICorProfilerCallback` interfejs z wywołaniami zwrotnymi obsługiwanymi w .NET Framework 2,0 i nowszych.  
   
  [ICorProfilerCallback3, interfejs](icorprofilercallback3-interface.md)  
  Zapewnia metody wywołania zwrotnego używane przez środowisko CLR do przekazywania informacji o stanie dołączania i odłączania do profilera.  
@@ -50,22 +50,22 @@ Zapewnia metody wywołania zwrotnego używane przez środowisko uruchomieniowe j
 [ICorProfilerCallback9, interfejs](icorprofilercallback9-interface.md)  
 Zapewnia metodę wywołania zwrotnego używaną przez środowisko uruchomieniowe języka wspólnego do powiadomienia profilera, że metoda dynamiczna jest odzyskiwana, a następnie zwolniona.
 
- [ICorProfilerFunctionControl, interfejs](icorprofilerfunctioncontrol-interface.md)  
+ [ICorProfilerFunctionControl — Interfejs](icorprofilerfunctioncontrol-interface.md)  
  Dostarcza metody, które umożliwiają profilerowi kodu komunikowanie się z środowiskiem CLR w celu kontrolowania sposobu generowania kodu przez kompilator JIT podczas ponownego kompilowania określonej metody.  
   
- [ICorProfilerFunctionEnum, interfejs](icorprofilerfunctionenum-interface.md)  
+ [ICorProfilerFunctionEnum — Interfejs](icorprofilerfunctionenum-interface.md)  
  Zapewnia metody sekwencyjnej iteracji przez kolekcję funkcji w środowisku CLR.  
   
  [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)  
  Zapewnia metody do użycia przez program Code profilowas do komunikowania się z środowiskiem CLR w celu kontrolowania informacji o monitorowaniu zdarzeń i żądaniu.  
   
  [ICorProfilerInfo2, interfejs](icorprofilerinfo2-interface.md)  
- Rozszerza interfejs `ICorProfilerInfo` z metodami obsługiwanymi w .NET Framework 2,0 i nowszymi wersjami.  
+ Rozszerza `ICorProfilerInfo` interfejs przy użyciu metod obsługiwanych w .NET Framework 2,0 i nowszych.  
   
  [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)  
- Rozszerza interfejs `ICorProfilerInfo2` z metodami obsługiwanymi w .NET Framework 4 i nowszych wersjach.  
+ Rozszerza `ICorProfilerInfo2` interfejs z metodami obsługiwanymi w .NET Framework 4 i nowszych.  
   
- [ICorProfilerInfo4, interfejs](icorprofilerinfo4-interface.md)  
+ [ICorProfilerInfo4 — Interfejs](icorprofilerinfo4-interface.md)  
  Dostarcza metody, których program codeer używa do komunikacji z środowiskiem CLR w celu kontrolowania monitorowania zdarzeń oraz żądania informacji.  
   
  [ICorProfilerInfo5, interfejs](icorprofilerinfo5-interface.md)  
@@ -80,8 +80,8 @@ Zapewnia metodę wywołania zwrotnego używaną przez środowisko uruchomieniowe
  [ICorProfilerModuleEnum, interfejs](icorprofilermoduleenum-interface.md)  
  Dostarcza metody sekwencyjnie iteracji przez kolekcję modułów ładowanych przez aplikację lub profiler.  
   
- [ICorProfilerObjectEnum, interfejs](icorprofilerobjectenum-interface.md)  
- Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, które są generowane przez program [Ngen. exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ [ICorProfilerObjectEnum — Interfejs](icorprofilerobjectenum-interface.md)  
+ Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, które są generowane przez program [Ngen. exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
   
  [ICorProfilerThreadEnum, interfejs](icorprofilerthreadenum-interface.md)  
  Zapewnia metody sekwencyjnej iteracji przez kolekcję wątków w środowisku CLR.  

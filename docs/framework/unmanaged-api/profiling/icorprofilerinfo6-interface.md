@@ -8,12 +8,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-ms.openlocfilehash: 80ac17a96e5c1c8c32cfc336da6c2be30eaf80fd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fba57a88cd3af582b4edf0e5bdbf6ac48020c9f7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495518"
 ---
 # <a name="icorprofilerinfo6-interface"></a>ICorProfilerInfo6, interfejs
 [Obsługiwane w .NET Framework 4,6 i nowszych wersjach]  
@@ -27,11 +27,11 @@ ms.locfileid: "76868372"
 |[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, metoda](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|Zwraca moduł wyliczający dla wszystkich metod, które należą do danego modułu NGen i są zawarte w treści danej metody.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

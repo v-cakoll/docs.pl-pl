@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 839cd574e5352b74b47cd6242d5706bc6405d439
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862922"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497364"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo — Metoda
 Pobiera szczegółowe informacje o obiekcie array.  
@@ -50,19 +50,19 @@ HRESULT GetArrayObjectInfo(
  określoną Tablica zawierająca liczby całkowite, z których każda reprezentuje dolną granicę wymiaru tablicy.  
   
  `ppData`  
- określoną Wskaźnik na adres nieprzetworzonego buforu dla tablicy, który jest ustalany zgodnie z C++ Konwencją.  
+ określoną Wskaźnik na adres nieprzetworzonego buforu dla tablicy, który jest ustalany zgodnie z Konwencją języka C++.  
   
 ## <a name="remarks"></a>Uwagi  
- `pDimensionSizes` i `pDimensionLowerBounds` są tablicami równoległymi, dlatego elementy znajdujące się w tym samym indeksie w każdej tablicy są cechami tej samej jednostki.  
+ `pDimensionSizes`I `pDimensionLowerBounds` są to tablice równoległe, dlatego elementy znajdujące się w tym samym indeksie w każdej tablicy są cechami tej samej jednostki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

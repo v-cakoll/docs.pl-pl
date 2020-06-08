@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aec05744-e8d4-44c6-b4a8-e583229ac34e
 topic_type:
 - apiref
-ms.openlocfilehash: 98af9931e219c384b017d3c70fe21cdb6e052ac1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 21ebd0c64d6c8bbdac327258ad4c7ffec83a1ce9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615959"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504319"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference — Metoda
 Pobiera moduł wyliczający [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) dla tożsamości zestawu, do których odwołuje się zestaw o określonym typie tożsamości.  
@@ -44,7 +44,7 @@ HRESULT GetProbingAssembliesFromReference (
  podczas Udostępniane do przyszłej rozszerzalności. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT jest jedyną wartością, którą obsługuje bieżąca wersja środowiska uruchomieniowego języka wspólnego (CLR).  
   
  `pwzReferenceIdentity`  
- podczas Nieprzezroczysta tożsamość powiązania zestawu, zazwyczaj zwracana z wywołania metody [ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) lub [ICLRAssemblyIdentityManager:: GetBindingIdentityFromStream —](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) .  
+ podczas Nieprzezroczysta tożsamość powiązania zestawu, zazwyczaj zwracana z wywołania metody [ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile —](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) lub [ICLRAssemblyIdentityManager:: GetBindingIdentityFromStream —](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) .  
   
  `ppProbingAssemblyEnum`  
  określoną Wskaźnik interfejsu do `ICLRProbingAssemblyEnum` modułu wyliczającego, który zawiera odwołania do zestawów, do których odwołuje się zestaw identyfikowany przez `pwzReferenceIdentity` .  

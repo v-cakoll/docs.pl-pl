@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866575"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500380"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished — Metoda
 Powiadamia profiler o zakończeniu zwalniania klasy.  
@@ -37,25 +37,25 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  \[in] określa klasę, która została zwolniona.
+  \[w] identyfikuje klasę, która została zwolniona.
 
 - `hrStatus`
 
-  \[in] wynik HRESULT wskazujący, czy klasa została zwolniona pomyślnie.
+  \[w] wynik HRESULT wskazujący, czy klasa została zwolniona pomyślnie.
   
 ## <a name="remarks"></a>Uwagi  
- Niektóre części zwalniania klasy mogą być kontynuowane po wywołaniu wywołania zwrotnego `ClassUnloadFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część zwalniania klasy zakończyła się powodzeniem.  
+ Niektóre części zwalniania klasy mogą być kontynuowane po `ClassUnloadFinished` wywołaniu wywołania zwrotnego. Błąd HRESULT w elemencie `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w programie `hrStatus` wskazuje tylko, że pierwsza część zwalniania klasy zakończyła się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ClassUnloadStarted, metoda](icorprofilercallback-classunloadstarted-method.md)

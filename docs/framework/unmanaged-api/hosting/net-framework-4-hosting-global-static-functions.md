@@ -6,21 +6,21 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-ms.openlocfilehash: d1cb267127072d47ad9918808bf994c95af30d11
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1a5869e1946e01cbd463bffa2da24b557925488a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501360"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 — statyczne funkcje globalne hostingu
 .NET Framework 4 wprowadza jedną nową metodę wyeksportowaną w bibliotece MSCorEE. dll: [CLRCreateIntstance](clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [CLRCreateInstance — Funkcja](clrcreateinstance-function.md)  
- Udostępnia jeden z trzech interfejsów: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)lub [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
+ Udostępnia jeden z trzech interfejsów: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)lub [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Statyczne funkcje globalne hostingu](hosting-global-static-functions.md)
 - [Hosting](index.md)

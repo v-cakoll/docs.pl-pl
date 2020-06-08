@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: dbcf9230a953069d311c3908aa3ed21fcfd5075c
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 627df3600b920e2fe2250f2fc3da51c852edc774
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496244"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
 Nakazuje programowi uruchomieniowemu odłączenie profilera.  
@@ -56,7 +56,7 @@ HRESULT RequestProfilerDetach(
  Jeśli profiler określa `dwExpectedCompletionMilliseconds` jako 0 (zero), środowisko CLR używa domyślnej wartości 5000, co oznacza, że przeprowadzi sprawdzanie po 5 sekundach, ponownie po upływie 10 sekund, a następnie co 10 minut później.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   

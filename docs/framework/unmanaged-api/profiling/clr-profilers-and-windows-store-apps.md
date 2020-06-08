@@ -12,16 +12,16 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 6330a4c2733729da264065d1eec8c3c9eaf9f05c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501030"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje sklepu Windows Store
 
-W tym temacie omówiono, co należy wziąć pod uwagę podczas pisania narzędzi diagnostycznych, które analizują kod zarządzany działający w aplikacji ze sklepu Windows. Zawiera również wskazówki pozwalające modyfikować istniejące narzędzia programistyczne, aby nadal działały po uruchomieniu ich w aplikacjach ze sklepu Windows. Aby zrozumieć te informacje, najlepszym rozwiązaniem jest zapoznanie się z interfejsem API profilowania środowiska uruchomieniowego języka wspólnego. ten interfejs API jest już używany w narzędziu diagnostycznym, które działa prawidłowo w przypadku aplikacji klasycznych systemu Windows. użytkownik chce teraz modyfikować narzędzie Aby działać poprawnie z aplikacjami ze sklepu Windows.
+W tym temacie omówiono, co należy wziąć pod uwagę podczas pisania narzędzi diagnostycznych, które analizują kod zarządzany działający w aplikacji ze sklepu Windows. Zawiera również wskazówki pozwalające modyfikować istniejące narzędzia programistyczne, aby nadal działały po uruchomieniu ich w aplikacjach ze sklepu Windows. Aby zrozumieć te informacje, najlepszym rozwiązaniem jest zapoznanie się z interfejsem API profilowania środowiska uruchomieniowego języka wspólnego. ten interfejs API jest już używany w narzędziu diagnostycznym, które działa prawidłowo z aplikacjami klasycznymi systemu Windows
 
 ## <a name="introduction"></a>Wprowadzenie
 
@@ -64,9 +64,9 @@ Jest to aplikacja klasyczna, z którą korzysta użytkownik profilera. Jest on o
 
 W tym dokumencie przykładowy kod założono, że:
 
-- Plik DLL profilera jest zapisywana C++w, ponieważ musi być NATYWNą biblioteką DLL, zgodnie z wymaganiami interfejsu API profilowania środowiska CLR.
+- Biblioteka DLL profilera jest zapisywana w języku C++, ponieważ musi być natywną biblioteką DLL, zgodnie z wymaganiami interfejsu API profilowania środowiska CLR.
 
-- Interfejs użytkownika profilera jest zapisany C#. Nie jest to konieczne, ale ponieważ nie ma wymagań dotyczących języka dla procesu interfejsu użytkownika profilera, dlaczego nie należy wybierać języka, który jest zwięzły i prosty?
+- Interfejs użytkownika profilera jest zapisywana w języku C#. Nie jest to konieczne, ale ponieważ nie ma wymagań dotyczących języka dla procesu interfejsu użytkownika profilera, dlaczego nie należy wybierać języka, który jest zwięzły i prosty?
 
 ### <a name="windows-rt-devices"></a>Urządzenia z systemem Windows RT
 
@@ -102,7 +102,7 @@ Gdy system Windows podejmie próbę załadowania biblioteki DLL profilera, spraw
 
 **Uprawnienia systemu plików**
 
-Aplikacja ze sklepu Windows musi mieć uprawnienia do ładowania i uruchamiania pliku DLL profilera z lokalizacji w systemie plików, w którym residesBy domyślnie, aplikacja ze sklepu Windows nie ma takich uprawnień w przypadku większości katalogów i wszelkie nieudane próby załadowania biblioteki DLL profilera w dzienniku zdarzeń aplikacji systemu Windows zostanie wytworzony wpis podobny do przedstawionego poniżej:
+Aplikacja ze sklepu Windows musi mieć uprawnienia do ładowania i uruchamiania pliku DLL profilera z lokalizacji w systemie plików, w którym residesBy domyślnie, aplikacja ze sklepu Windows nie ma takich uprawnień w przypadku większości katalogów, a wszelkie nieudane próby załadowania biblioteki DLL profilera spowodują utworzenie wpisu w dzienniku zdarzeń aplikacji systemu Windows, który wygląda podobnie do tego :
 
 ```output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
@@ -112,7 +112,7 @@ Ogólnie rzecz biorąc, aplikacje ze sklepu Windows mogą uzyskiwać dostęp do 
 
 ### <a name="startup-load"></a>Ładowanie uruchamiania
 
-Zazwyczaj w aplikacji klasycznej interfejs użytkownika programu Profiler poprosi o wprowadzenie ładowania pliku DLL profilera przez zainicjowanie bloku środowiska zawierającego wymagane zmienne środowiskowe interfejsu API profilowania CLR (tj. `COR_PROFILER`, `COR_ENABLE_PROFILING`i `COR_PROFILER_PATH`), a następnie tworząc nowy proces za pomocą tego bloku środowiska. Te same wartości mają wartość prawda w przypadku aplikacji ze sklepu Windows, ale te mechanizmy są różne.
+Zazwyczaj w aplikacji klasycznej interfejs użytkownika profilera jest monitowany o ponowne uruchomienie narzędzia Profiler DLL przez zainicjowanie bloku środowiska zawierającego wymagane zmienne środowiskowe interfejsu API profilowania CLR (tj., `COR_PROFILER` `COR_ENABLE_PROFILING` i `COR_PROFILER_PATH` ), a następnie tworząc nowy proces z tym blokiem środowiska. Te same wartości mają wartość prawda w przypadku aplikacji ze sklepu Windows, ale te mechanizmy są różne.
 
 **Nie uruchamiaj z podwyższonym poziomem uprawnień**
 
@@ -122,9 +122,9 @@ Jeśli proces próbuje zduplikować proces aplikacji ze sklepu Windows w trybie 
 
 Najpierw należy polecić użytkownikowi profilera, który ma zostać uruchomiony aplikacja ze sklepu Windows. W przypadku aplikacji klasycznych może być widoczne okno dialogowe przeglądania plików, a użytkownik powinien znaleźć i wybrać plik. exe. Jednak aplikacje ze sklepu Windows różnią się, a korzystanie z okna dialogowego przeglądania nie ma sensu. Zamiast tego lepiej jest pokazać użytkownikowi listę aplikacji ze sklepu Windows zainstalowanych dla danego użytkownika.
 
-Aby wygenerować tę listę, można użyć klasy <xref:Windows.Management.Deployment.PackageManager>. `PackageManager` jest klasą środowisko wykonawcze systemu Windows, która jest dostępna dla aplikacji klasycznych, a w rzeczywistości jest dostępna *tylko* dla aplikacji klasycznych.
+<xref:Windows.Management.Deployment.PackageManager>Aby wygenerować tę listę, można użyć klasy. `PackageManager`jest klasą środowisko wykonawcze systemu Windows, która jest dostępna dla aplikacji klasycznych, a w rzeczywistości jest dostępna *tylko* dla aplikacji klasycznych.
 
-Poniższy przykład kodu z hipotetycznego interfejsu użytkownika profilera zapisaną jako aplikacja klasyczna C# w programie używa `PackageManager` do wygenerowania listy aplikacji systemu Windows:
+Poniższy przykład kodu z hipotetycznego interfejsu użytkownika profilera zapisaną jako aplikacja klasyczna w języku C# używa `PackageManager` do generowania listy aplikacji systemu Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -135,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Określanie niestandardowego bloku środowiska**
 
-Nowy interfejs COM [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), pozwala dostosować zachowanie aplikacji ze sklepu Windows, aby ułatwić korzystanie z niektórych form diagnostyki. Jedna z jej metod, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), umożliwia przekazanie bloku środowiska do aplikacji ze sklepu Windows, gdy zostanie ona uruchomiona, oraz innych użytecznych efektów, takich jak wyłączenie automatycznego zawieszenia procesów. Blok środowiska jest istotny, ponieważ jest to miejsce, w którym należy określić zmienne środowiskowe (`COR_PROFILER`, `COR_ENABLE_PROFILING`i `COR_PROFILER_PATH)`) używane przez środowisko CLR do załadowania pliku DLL profilera.
+Nowy interfejs COM [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), pozwala dostosować zachowanie aplikacji ze sklepu Windows, aby ułatwić korzystanie z niektórych form diagnostyki. Jedna z jej metod, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), umożliwia przekazanie bloku środowiska do aplikacji ze sklepu Windows, gdy zostanie ona uruchomiona, oraz innych użytecznych efektów, takich jak wyłączenie automatycznego zawieszenia procesów. Blok środowiska jest istotny, ponieważ jest to miejsce, w którym należy określić zmienne środowiskowe ( `COR_PROFILER` , `COR_ENABLE_PROFILING` i `COR_PROFILER_PATH)` ) używane przez środowisko CLR do załadowania pliku DLL profilera.
 
 Rozważmy następujący fragment kodu:
 
@@ -147,17 +147,17 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Istnieje kilka elementów, które trzeba uzyskać po prawej stronie:
 
-- `packageFullName` można określić podczas iteracji pakietów i `package.Id.FullName`.
+- `packageFullName`można określić podczas iterowania pakietów i ich przeprowadzania `package.Id.FullName` .
 
-- `debuggerCommandLine` jest nieco bardziej interesujący. Aby przekazać blok środowiska niestandardowego do aplikacji ze sklepu Windows, należy napisać własny debuger fikcyjny uproszczony. System Windows duplikuje aplikację ze sklepu Windows, a następnie dołącza debuger, uruchamiając debuger przy użyciu wiersza polecenia, takiego jak w poniższym przykładzie:
+- `debuggerCommandLine`jest nieco bardziej interesujący. Aby przekazać blok środowiska niestandardowego do aplikacji ze sklepu Windows, należy napisać własny debuger fikcyjny uproszczony. System Windows duplikuje aplikację ze sklepu Windows, a następnie dołącza debuger, uruchamiając debuger przy użyciu wiersza polecenia, takiego jak w poniższym przykładzie:
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     gdzie `-p 1336` oznacza, że aplikacja ze sklepu Windows ma proces o IDENTYFIKATORze 1336, a `-tid 1424` oznacza wątek o IDENTYFIKATORze 1424 jest zawieszony. Debuger fikcyjny analizuje ThreadID z wiersza polecenia, wznawia ten wątek, a następnie kończy działanie.
+     gdzie `-p 1336` oznacza, że aplikacja ze sklepu Windows ma proces o identyfikatorze 1336 i `-tid 1424` oznacza, że wątek o identyfikatorze 1424 jest zawieszony. Debuger fikcyjny analizuje ThreadID z wiersza polecenia, wznawia ten wątek, a następnie kończy działanie.
 
-     Oto przykładowy C++ kod, aby to zrobić (należy dodać sprawdzanie błędów):
+     Oto przykładowy kod w języku C++, aby to zrobić (Pamiętaj, aby dodać sprawdzanie błędów):
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -174,7 +174,7 @@ Istnieje kilka elementów, które trzeba uzyskać po prawej stronie:
     }
     ```
 
-     Należy wdrożyć ten debuger fikcyjny jako część instalacji narzędzia diagnostycznego, a następnie określić ścieżkę do tego debugera w parametrze `debuggerCommandLine`.
+     Należy wdrożyć ten debuger fikcyjny jako część instalacji narzędzia diagnostycznego, a następnie określić ścieżkę do tego debugera w `debuggerCommandLine` parametrze.
 
 **Uruchamianie aplikacji ze sklepu Windows**
 
@@ -251,7 +251,7 @@ Dzięki temu aplikacja ze sklepu Windows ostatecznie załadowała Twój plik DLL
 
 Podczas przeglądania interfejsu API systemu Windows należy zauważyć, że każdy interfejs API jest udokumentowany jako mający zastosowanie do aplikacji klasycznych, aplikacji ze sklepu Windows lub obu tych funkcji. Na przykład sekcja **wymagania** dokumentacji dla funkcji [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) wskazuje, że funkcja ma zastosowanie tylko do aplikacji klasycznych. Z kolei funkcja [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) jest dostępna dla aplikacji klasycznych i aplikacji ze sklepu Windows.
 
-Podczas tworzenia biblioteki DLL profilera należy traktować ją jako aplikację ze sklepu Windows i używać tylko interfejsów API, które są udokumentowane jako dostępne dla aplikacji ze sklepu Windows. Analizuj zależności (na przykład możesz uruchomić `link /dump /imports` z biblioteką DLL profilera w celu przeprowadzenia inspekcji), a następnie przeszukać dokumenty, aby zobaczyć, które zależności są prawidłowe i które nie są. W większości przypadków naruszenia można naprawić, po prostu zastępując je nowszą formą interfejsu API, który jest udokumentowany jako bezpieczny (na przykład zastępując [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) with [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Podczas tworzenia biblioteki DLL profilera należy traktować ją jako aplikację ze sklepu Windows i używać tylko interfejsów API, które są udokumentowane jako dostępne dla aplikacji ze sklepu Windows. Analizuj zależności (na przykład możesz uruchomić z `link /dump /imports` biblioteką DLL profilera w celu przeprowadzenia inspekcji), a następnie przeszukaj dokumenty, aby zobaczyć, które zależności są prawidłowe i które nie są. W większości przypadków naruszenia można naprawić, po prostu zastępując je nowszą formą interfejsu API, który jest udokumentowany jako bezpieczny (na przykład zastępując [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) with [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
 Można zauważyć, że biblioteka DLL profilera wywołuje niektóre interfejsy API, które są stosowane tylko do aplikacji klasycznych, a mimo to działa nawet wtedy, gdy biblioteka DLL profilera jest załadowana w aplikacji ze sklepu Windows. Należy pamiętać, że jest ryzykowne używanie dowolnego interfejsu API, który nie jest udokumentowany do użycia z aplikacjami ze sklepu Windows w bibliotece DLL profilera, gdy jest ładowany do procesu aplikacji ze sklepu Windows:
 
@@ -275,7 +275,7 @@ Jest to poza zakresem tego tematu, aby wyświetlić listę wszystkich sposobów,
 
 ### <a name="inter-process-communication"></a>Komunikacja między procesami
 
-Jak pokazano na diagramie na początku tego dokumentu, biblioteka DLL profilera (załadowana do obszaru procesu aplikacji ze sklepu Windows) prawdopodobnie będzie musiała komunikować się z interfejsem użytkownika profilera (uruchomionym w oddzielnym obszarze procesu aplikacji klasycznych) za pomocą własnego niestandardowego procesu kanał komunikacji (IPC). Interfejs użytkownika profilera wysyła sygnały do pliku DLL profilera, aby zmodyfikować jego zachowanie, a plik DLL profilera wysyła dane z przeanalizowanej aplikacji ze sklepu Windows z powrotem do interfejsu użytkownika profilera na potrzeby przetwarzania końcowego i wyświetlania użytkownikowi profilera.
+Jak pokazano na rysunku na początku tego dokumentu, biblioteka DLL profilera (załadowana do obszaru procesu aplikacji ze sklepu Windows) prawdopodobnie będzie musiała komunikować się z interfejsem użytkownika profilera (uruchomionym w oddzielnym obszarze procesu aplikacji klasycznej) za pośrednictwem własnego kanału komunikacji między procesami (IPC). Interfejs użytkownika profilera wysyła sygnały do pliku DLL profilera, aby zmodyfikować jego zachowanie, a plik DLL profilera wysyła dane z przeanalizowanej aplikacji ze sklepu Windows z powrotem do interfejsu użytkownika profilera na potrzeby przetwarzania końcowego i wyświetlania użytkownikowi profilera.
 
 Większość plików musi współpracować w ten sposób, ale wybór mechanizmów IPC jest bardziej ograniczony, gdy plik DLL profilera jest ładowany do aplikacji ze sklepu Windows. Na przykład nazwane potoki nie są częścią zestawu SDK aplikacji ze sklepu Windows, więc nie można ich używać.
 
@@ -285,7 +285,7 @@ Jednak oczywiście pliki nadal znajdują się w, chociaż w bardziej ograniczony
 
 Większość danych będzie prawdopodobnie przebiegać między biblioteką DLL profilera a interfejsem użytkownika profilera za pośrednictwem plików. Klucz polega na wybraniu lokalizacji plików, którą Biblioteka DLL profilera (w kontekście aplikacji ze sklepu Windows) i interfejsem użytkownika profilera mają dostęp do odczytu i zapisu. Na przykład ścieżka folderu tymczasowego to lokalizacja, do której można uzyskać dostęp zarówno do biblioteki DLL profilera, jak i interfejsu użytkownika profilera, ale żaden inny pakiet aplikacji do sklepu Windows nie może uzyskać dostępu (w ten sposób osłona zawiera informacje z innych pakietów aplikacji ze sklepu Windows).
 
-Zarówno interfejs użytkownika profilera, jak i plik DLL profilera mogą określać tę ścieżkę niezależnie. Interfejs użytkownika profilera, gdy przechodzi przez wszystkie pakiety zainstalowane dla bieżącego użytkownika (Zobacz przykładowy kod wcześniej), uzyskuje dostęp do klasy `PackageId`, z której można uzyskać kod podobny do tego fragmentu kodu. (Zawsze sprawdzanie błędów jest pomijane dla zwięzłości).
+Zarówno interfejs użytkownika profilera, jak i plik DLL profilera mogą określać tę ścieżkę niezależnie. Interfejs użytkownika profilera, gdy wykonuje iterację we wszystkich pakietach zainstalowanych dla bieżącego użytkownika (Zobacz kod przykładowy wcześniej), uzyskuje dostęp do `PackageId` klasy, z której ścieżka folderu tymczasowego może być pochodna kodu podobnego do tego kodu. (Zawsze sprawdzanie błędów jest pomijane dla zwięzłości).
 
 ```csharp
 // C# code for the Profiler UI.
@@ -296,7 +296,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-W tym czasie Biblioteka DLL profilera może być zasadniczo taka sama, chociaż może łatwiej uzyskać dostęp do klasy <xref:Windows.Storage.ApplicationData> za pomocą właściwości [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
+W tym czasie Biblioteka DLL profilera może być zasadniczo taka sama, chociaż może łatwiej uzyskać do <xref:Windows.Storage.ApplicationData> klasy przy użyciu właściwości [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
 **Komunikacja za pośrednictwem zdarzeń**
 
@@ -317,7 +317,7 @@ Interfejs użytkownika profilera musi znaleźć to nazwane zdarzenie w przestrze
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>` jest identyfikatorem SID aplikacji do sklepu Windows. W poprzedniej sekcji tego tematu pokazano, jak wykonać iterację pakietów zainstalowanych dla bieżącego użytkownika. Z tego przykładowego kodu można uzyskać packageId. I z packageId można uzyskać `<acSid>` z kodem podobnym do poniższego:
+`<acSid>`jest identyfikatorem SID aplikacji do sklepu Windows. W poprzedniej sekcji tego tematu pokazano, jak wykonać iterację pakietów zainstalowanych dla bieżącego użytkownika. Z tego przykładowego kodu można uzyskać packageId. I z packageId można uzyskać `<acSid>` kod z kodem podobnym do poniższego:
 
 ```csharp
 IntPtr acPSID;
@@ -332,7 +332,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>Brak powiadomień o zamknięciu
 
-Podczas pracy w aplikacji ze sklepu Windows Profiler DLL nie powinien polegać na [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) lub nawet [DllMain](/windows/desktop/Dlls/dllmain) (z `DLL_PROCESS_DETACH`) wywoływanym w celu powiadomienia biblioteki DLL profilera, że aplikacja ze sklepu Windows zostanie zamknięta. W rzeczywistości należy się spodziewać, że nigdy nie będą wywoływane. W przeszłości wiele bibliotek DLL profilera użyła tych powiadomień jako wygodnych miejsc do opróżniania pamięci podręcznych na dysk, zamykania plików, wysyłania powiadomień z powrotem do interfejsu użytkownika profilera itp. Jednak teraz Twój plik DLL profilera musi być zorganizowany nieco inaczej.
+W przypadku uruchamiania w ramach aplikacji ze sklepu Windows Profiler DLL nie powinien polegać na [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) lub nawet [DllMain](/windows/desktop/Dlls/dllmain) (z `DLL_PROCESS_DETACH` ) WYWOŁYWANYM w celu powiadomienia biblioteki DLL profilera, że aplikacja ze sklepu Windows zostanie zamknięta. W rzeczywistości należy się spodziewać, że nigdy nie będą wywoływane. W przeszłości wiele bibliotek DLL profilera użyła tych powiadomień jako wygodnych miejsc do opróżniania pamięci podręcznych na dysk, zamykania plików, wysyłania powiadomień z powrotem do interfejsu użytkownika profilera itp. Jednak teraz Twój plik DLL profilera musi być zorganizowany nieco inaczej.
 
 Biblioteka DLL profilera powinna rejestrować informacje w miarę ich tworzenia. Ze względu na wydajność można utworzyć wsadowe informacje w pamięci i opróżnić je na dysk, gdy partia rośnie w rozmiarze poprzedzającym pewien próg. Należy jednak założyć, że wszelkie informacje, które nie zostały jeszcze opróżnione na dysk, mogą zostać utracone. Oznacza to, że warto wybrać próg progu, a interfejs użytkownika profilera musi być zaostrzony, aby można było zająć się niekompletnymi informacjami zapisanymi przez profiler DLL.
 
@@ -342,9 +342,9 @@ Ten dokument znajduje się poza zakresem tego dokumentu, aby szczegółowo zapoz
 
 ### <a name="managed-and-non-managed-winmds"></a>Zarządzane i niezarządzane WinMD
 
-Jeśli deweloper używa programu Visual Studio do utworzenia nowego projektu składnika środowisko wykonawcze systemu Windows, kompilacja tego projektu tworzy plik WinMD, który opisuje metadane (typy opisów klas, interfejsów itp.) utworzonych przez dewelopera. Jeśli ten projekt jest projektem w języku zarządzanym, C# który został zapisany w lub Visual Basic, ten sam plik WinMD również zawiera implementację tych typów (oznacza to, że zawiera wszystkie Il skompilowane z kodu źródłowego dewelopera). Takie pliki są znane jako zarządzane pliki WinMD. Są one interesujące w tym, że zawierają zarówno metadane środowisko wykonawcze systemu Windows, jak i podstawową implementację.
+Jeśli deweloper używa programu Visual Studio do utworzenia nowego projektu składnika środowisko wykonawcze systemu Windows, kompilacja tego projektu tworzy plik WinMD, który opisuje metadane (typy opisów klas, interfejsów itp.) utworzonych przez dewelopera. Jeśli ten projekt jest projektem języka zarządzanego pisanego w języku C# lub Visual Basic, ten sam plik WinMD również zawiera implementację tych typów (oznacza to, że zawiera wszystkie IL skompilowane z kodu źródłowego dewelopera). Takie pliki są znane jako zarządzane pliki WinMD. Są one interesujące w tym, że zawierają zarówno metadane środowisko wykonawcze systemu Windows, jak i podstawową implementację.
 
-W przeciwieństwie do tego, czy deweloper tworzy projekt składnika środowisko wykonawcze systemu Windows C++dla programu, kompilacja tego projektu tworzy plik winmd, który zawiera tylko metadane, a implementacja zostanie skompilowana do oddzielnej NATYWNEJ biblioteki DLL. Podobnie pliki WinMD dostarczane w Windows SDK zawierają tylko metadane, a implementacja została skompilowana do oddzielnych natywnych bibliotek DLL, które są dostarczane jako część systemu Windows.
+W przeciwieństwie do tego, czy deweloper tworzy projekt składnika środowisko wykonawcze systemu Windows dla języka C++, kompilacja tego projektu tworzy plik WinMD, który zawiera tylko metadane, a implementacja zostanie skompilowana do oddzielnej natywnej biblioteki DLL. Podobnie pliki WinMD dostarczane w Windows SDK zawierają tylko metadane, a implementacja została skompilowana do oddzielnych natywnych bibliotek DLL, które są dostarczane jako część systemu Windows.
 
 Poniższe informacje dotyczą zarówno zarządzanych WinMD, które zawierają metadane i implementacje, jak i do niezarządzanych WinMD, które zawierają tylko metadane.
 
@@ -352,19 +352,19 @@ Poniższe informacje dotyczą zarówno zarządzanych WinMD, które zawierają me
 
 W miarę jak środowisko CLR, wszystkie pliki WinMD są modułami. W związku z tym interfejs API profilowania środowiska CLR nakazuje usłudze Profiler DLL, gdy pliki WinMD i ich ModuleIDs są w taki sam sposób jak w przypadku innych modułów zarządzanych.
 
-Biblioteka DLL profilera może rozróżnić pliki WinMD z innych modułów, wywołując metodę [ICorProfilerInfo3:: GetModuleInfo2 —](icorprofilerinfo3-getmoduleinfo2-method.md) i sprawdzając `pdwModuleFlags` parametr wyjściowy dla flagi [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Ustawienie to i tylko wtedy, gdy ModuleID reprezentuje WinMD).
+Biblioteka DLL profilera może rozróżnić pliki WinMD z innych modułów, wywołując metodę [ICorProfilerInfo3:: GetModuleInfo2 —](icorprofilerinfo3-getmoduleinfo2-method.md) i sprawdzając `pdwModuleFlags` parametry wyjściowe flagi [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Ustawienie to i tylko wtedy, gdy ModuleID reprezentuje WinMD).
 
 ### <a name="reading-metadata-from-winmds"></a>Odczytywanie metadanych z WinMD
 
-Pliki WinMD, takie jak regularne moduły, zawierają metadane, które można odczytać za pośrednictwem [interfejsów API metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md). Jednak środowisko CLR mapuje typy środowisko wykonawcze systemu Windows na typy .NET Framework podczas odczytywania plików WinMD, dzięki czemu deweloperzy, którzy programu w kodzie zarządzanym i zużywają plik WinMD, mogą mieć bardziej naturalne środowisko programistyczne. Przykłady tych mapowań można znaleźć w temacie [.NET Framework support for Windows Store Apps i środowisko wykonawcze systemu Windows](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Pliki WinMD, takie jak regularne moduły, zawierają metadane, które można odczytać za pośrednictwem [interfejsów API metadanych](../metadata/index.md). Jednak środowisko CLR mapuje typy środowisko wykonawcze systemu Windows na typy .NET Framework podczas odczytywania plików WinMD, dzięki czemu deweloperzy, którzy programu w kodzie zarządzanym i zużywają plik WinMD, mogą mieć bardziej naturalne środowisko programistyczne. Przykłady tych mapowań można znaleźć w temacie [.NET Framework support for Windows Store Apps i środowisko wykonawcze systemu Windows](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
 Który widok zostanie pobrany przez profiler, gdy używa interfejsów API metadanych: widoku RAW środowisko wykonawcze systemu Windows lub zamapowanego widoku .NET Framework?  Odpowiedź: to wszystko.
 
-Po wywołaniu metody [ICorProfilerInfo:: GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) w WinMD w celu uzyskania interfejsu metadanych, takiego jak [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), można ustawić [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) w parametrze `dwOpenFlags`, aby wyłączyć to mapowanie. W przeciwnym razie mapowanie zostanie włączone. Zwykle program profilujący zachowa mapowanie, dzięki czemu ciągi, które będą pobierane przez program Profiler DLL z metadanych WinMD (na przykład nazwy typów) będą wyglądały znajomo i naturalny dla użytkownika profilera.
+Po wywołaniu metody [ICorProfilerInfo:: GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) w WinMD w celu uzyskania interfejsu metadanych, takiego jak [IMetaDataImport](../metadata/imetadataimport-interface.md), można ustawić [ofNoTransform](../metadata/coropenflags-enumeration.md) w `dwOpenFlags` parametrze, aby wyłączyć to mapowanie. W przeciwnym razie mapowanie zostanie włączone. Zwykle program profilujący zachowa mapowanie, dzięki czemu ciągi, które będą pobierane przez program Profiler DLL z metadanych WinMD (na przykład nazwy typów) będą wyglądały znajomo i naturalny dla użytkownika profilera.
 
 ### <a name="modifying-metadata-from-winmds"></a>Modyfikowanie metadanych z WinMD
 
-Modyfikowanie metadanych w WinMD nie jest obsługiwane. Jeśli wywołasz metodę [ICorProfilerInfo:: GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) dla pliku winmd i określisz [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) w parametrze `dwOpenFlags` lub poproszą o zapisywalny interfejs metadanych, taki jak [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) zakończy się niepowodzeniem. Jest to szczególnie ważne w przypadku, gdy pliki są zapisywane w języku IL, co wymaga modyfikacji metadanych do obsługi Instrumentacji (na przykład w celu dodania siebie lub nowych metod). Należy więc najpierw wyszukać [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (zgodnie z opisem w poprzedniej sekcji) i zrezygnować z monitowania o zapisywalne interfejsy metadanych na tych modułach.
+Modyfikowanie metadanych w WinMD nie jest obsługiwane. Jeśli wywołasz metodę [ICorProfilerInfo:: GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) dla pliku winmd i określisz [ofWrite](../metadata/coropenflags-enumeration.md) w `dwOpenFlags` parametrze lub poproszą o zapisywalny interfejs metadanych, taki jak [IMetaDataEmit](../metadata/imetadataemit-interface.md), [GetModuleMetaData —](icorprofilerinfo-getmodulemetadata-method.md) zakończy się niepowodzeniem. Jest to szczególnie ważne w przypadku, gdy pliki są zapisywane w języku IL, co wymaga modyfikacji metadanych do obsługi Instrumentacji (na przykład w celu dodania siebie lub nowych metod). Należy więc najpierw wyszukać [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (zgodnie z opisem w poprzedniej sekcji) i zrezygnować z monitowania o zapisywalne interfejsy metadanych na tych modułach.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Rozpoznawanie odwołań do zestawów za pomocą WinMD
 
@@ -388,15 +388,15 @@ W związku z tym zaleca się, aby każdy wątek utworzony przez program Profiler
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-Począwszy od .NET Framework 4,5, istnieje nowe wywołanie zwrotne GC, [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md), które zapewnia profilerowi pełniejsze informacje o *dojściach zależnych*. Te uchwyty efektywnie dodają odwołanie z obiektu źródłowego do obiektu docelowego na potrzeby zarządzania okresem istnienia systemu GC. Dojścia zależne nie są nowe i deweloperzy, którzy program w kodzie zarządzanym, mogą tworzyć własne dojścia zależne przy użyciu klasy <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>, nawet przed systemem Windows 8 i .NET Framework 4,5.
+Począwszy od .NET Framework 4,5, istnieje nowe wywołanie zwrotne GC, [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md), które zapewnia profilerowi pełniejsze informacje o *dojściach zależnych*. Te uchwyty efektywnie dodają odwołanie z obiektu źródłowego do obiektu docelowego na potrzeby zarządzania okresem istnienia systemu GC. Dojścia zależne nie są nowe i deweloperzy, którzy program w kodzie zarządzanym, mogą tworzyć własne dojścia zależne przy użyciu <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> klasy nawet przed systemem Windows 8 i .NET Framework 4,5.
 
 Jednak zarządzane aplikacje ze sklepu Windows XAML teraz intensywnie wykorzystują uchwyty zależne. W szczególności środowisko CLR używa ich do ułatwienia zarządzania cyklami odwołań między obiektami zarządzanymi i niezarządzanymi obiektami środowisko wykonawcze systemu Windows. Oznacza to, że jest to ważniejsze niż kiedykolwiek dotąd, aby uzyskać informacje o tych uchwytach zależnych, dzięki czemu można je wizualizować wraz z resztą krawędzi na grafie sterty. Biblioteka DLL profilera powinna używać [RootReferences2 —](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences —](icorprofilercallback-objectreferences-method.md)i [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md) razem do tworzenia pełnego widoku grafu sterty.
 
-## <a name="conclusion"></a>Wniosek
+## <a name="conclusion"></a>Podsumowanie
 
 Można użyć interfejsu API profilowania środowiska CLR do analizy kodu zarządzanego działającego wewnątrz aplikacji ze sklepu Windows. W rzeczywistości można utworzyć istniejący Profiler, który jest opracowywany, i wprowadzić konkretne zmiany, aby można było kierować aplikacje do sklepu Windows. Interfejs użytkownika profilera powinien korzystać z nowych interfejsów API w celu aktywowania aplikacji ze sklepu Windows w trybie debugowania. Upewnij się, że biblioteka DLL profilera wykorzystuje tylko te interfejsy API, które są odpowiednie dla aplikacji ze sklepu Windows. Mechanizm komunikacji między biblioteką DLL i interfejsem użytkownika profilera powinien być zapisany przy użyciu ograniczeń interfejsu API aplikacji ze sklepu Windows i ma świadomość ograniczonych uprawnień dla aplikacji ze sklepu Windows. Biblioteka DLL profilera powinna mieć świadomość, jak środowisko CLR traktuje WinMD i jak zachowanie modułu wyrzucania elementów bezużytecznych jest różne w odniesieniu do zarządzanych wątków.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 **Środowisko uruchomieniowe języka wspólnego**
 
@@ -408,7 +408,7 @@ Można użyć interfejsu API profilowania środowiska CLR do analizy kodu zarzą
 
 - [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Aplikacje ze Sklepu Windows**
+**Aplikacje ze sklepu Windows**
 
 - [Dostęp do plików i uprawnienia (środowisko wykonawcze systemu Windows aplikacje](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 

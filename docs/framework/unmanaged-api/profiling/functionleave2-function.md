@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866934"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500666"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 — Funkcja
 Powiadamia program profilujący, że funkcja ma zwrócić do obiektu wywołującego i zawiera informacje na temat ramki stosu i wartości zwracanej przez funkcję.  
@@ -39,15 +39,15 @@ void __stdcall FunctionLeave2 (
 
 - `funcId`
 
-  \[in) identyfikator funkcji, która zwraca.
+  \[in] Identyfikator zwracanej funkcji.
 
 - `clientData`
 
-  \[w] ponownie mapowany identyfikator funkcji, który Profiler wcześniej określono za pośrednictwem funkcji [FunctionIDMapper](functionidmapper-function.md) .
+  \[w] ponownie mapowany identyfikator funkcji, który Profiler poprzednio określony przez funkcję [FunctionIDMapper](functionidmapper-function.md) .
 
 - `func`
 
-  \[w] `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
+  \[in) `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
 
   Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
@@ -55,12 +55,12 @@ void __stdcall FunctionLeave2 (
 
   \[w] wskaźnik do struktury [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) , która określa lokalizację pamięci wartości zwracanej przez funkcję.
 
-  Aby można było uzyskać dostęp do informacji o wartości zwracanej, należy ustawić flagę `COR_PRF_ENABLE_FUNCTION_RETVAL`. Profiler może użyć metody [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń.
+  Aby można było uzyskać dostęp do informacji zwracanej wartości, `COR_PRF_ENABLE_FUNCTION_RETVAL` należy ustawić flagę. Profiler może użyć metody [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń.
 
 ## <a name="remarks"></a>Uwagi  
- Wartości parametrów `func` i `retvalRange` są nieprawidłowe po powrocie funkcji `FunctionLeave2`, ponieważ wartości mogą ulec zmianie lub zostać zniszczone.  
+ Wartości `func` `retvalRange` parametrów i są nieprawidłowe po `FunctionLeave2` powrocie funkcji, ponieważ wartości mogą ulec zmianie lub zostać zniszczone.  
   
- Funkcja `FunctionLeave2` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
+ `FunctionLeave2`Funkcja jest wywołaniem zwrotnym, należy ją zaimplementować. Implementacja musi używać `__declspec` `naked` atrybutu klasy magazynu ().  
   
  Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
   
@@ -68,18 +68,18 @@ void __stdcall FunctionLeave2 (
   
 - Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
   
- Implementacja `FunctionLeave2` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. Jeśli zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu, `FunctionLeave2` zwraca.  
+ Implementacja `FunctionLeave2` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. W przypadku próby wyrzucania elementów bezużytecznych środowisko uruchomieniowe zostanie zablokowane do momentu `FunctionLeave2` powracania.  
   
- Ponadto funkcja `FunctionLeave2` nie może wywoływać w kodzie zarządzanym lub w jakikolwiek sposób spowodować alokację pamięci zarządzanej.  
+ Ponadto `FunctionLeave2` Funkcja nie może wywołać kodu zarządzanego lub w jakikolwiek sposób może spowodować alokację pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

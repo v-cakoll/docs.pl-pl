@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 57f771d933e896677dfc0bd5d9dac58da2af22c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b1e918edf641d38dd6b91d790bcaff8020293a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493269"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager — Funkcja
 Pobiera wskaźnik do interfejsu, który umożliwia środowisko uruchomieniowe języka wspólnego (CLR) do zarządzania tożsamościami.  
@@ -40,7 +40,7 @@ STDAPI GetCLRIdentityManager(
  podczas A `REFIID` (identyfikator interfejsu), który określa interfejs do pobrania. Ta wartość musi być równa IID_ICLRAssemblyIdentityManager lub IID_ICLRHostBindingPolicyManager.  
   
  `ppManager`  
- określoną Wskaźnik do adresu obiektu [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) lub [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) .  
+ określoną Wskaźnik do adresu obiektu [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) lub [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) .  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołaj funkcję [GetRealProcAddress —](getrealprocaddress-function.md) , aby uzyskać wskaźnik do `GetCLRIdentityManager` funkcji.  

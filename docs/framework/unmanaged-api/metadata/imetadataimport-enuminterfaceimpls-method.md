@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492229"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls — Metoda
-Wylicza wszystkie interfejsy zaimplementowane przez określony `TypeDef`plik .
+Wylicza wszystkie interfejsy zaimplementowane przez określony `TypeDef` .
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `td`  
- [w] Token TypeDef, którego tokeny MethodDef reprezentujące implementacje interfejsu mają być wyliczone.  
+ podczas Token elementu TypeDef, którego tokeny MethodDef reprezentują implementacje interfejsów, mają zostać wyliczone.  
   
  `rImpls`  
- [na zewnątrz] Tablica używana do przechowywania tokenów MethodDef.  
+ określoną Tablica służąca do przechowywania tokenów MethodDef.  
   
  `cMax`  
- [w] Maksymalna długość `rImpls` tablicy.  
+ podczas Maksymalna długość `rImpls` tablicy.  
   
  `pcImpls`  
- [na zewnątrz] Rzeczywista liczba tokenów `rImpls`zwróconych w .  
+ określoną Rzeczywista liczba tokenów zwrócona w `rImpls` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów MethodDef do wyliczenia. W takim `pcImpls` przypadku jest ustawiona na zero.|  
+|`S_OK`|`EnumInterfaceImpls`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów MethodDef do wyliczenia. W takim przypadku `pcImpls` jest ustawiona na zero.|  
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczenie zwraca kolekcję `mdInterfaceImpl` tokenów dla każdego interfejsu `TypeDef`zaimplementowanego przez określony . Tokeny interfejsu są zwracane w kolejności, `DefineTypeDef` w `SetTypeDefProps`interfejsy zostały określone (za pośrednictwem lub ). Właściwości zwróconych `mdInterfaceImpl` tokenów można wyszukiwać za pomocą [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+Wyliczenie zwraca kolekcję `mdInterfaceImpl` tokenów dla każdego interfejsu zaimplementowanego przez określony `TypeDef` . Tokeny interfejsu są zwracane w kolejności, w jakiej interfejsy zostały określone (za pomocą `DefineTypeDef` lub `SetTypeDefProps` ). Do właściwości zwracanych `mdInterfaceImpl` tokenów można wykonywać zapytania przy użyciu [GetInterfaceImplProps —](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

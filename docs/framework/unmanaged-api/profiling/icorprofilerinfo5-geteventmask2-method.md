@@ -12,12 +12,12 @@ api_type:
 ms.assetid: f854b68f-009c-4ffb-89cd-ca874d1c0fb7
 topic_type:
 - apiref
-ms.openlocfilehash: f3943eef969f777b40dc51c4900b190561f14887
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 758e5b71443b127c80c820eb8531056530e81b13
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495700"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>Metoda ICorProfilerInfo5::GetEventMask2
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -41,18 +41,18 @@ HRESULT GetEventMask2(
  określoną Wskaźnik do 4-bajtowej wartości, która określa kategorie zdarzeń.  Każdy bit steruje inną możliwością, zachowaniem lub typem zdarzenia. Bity są opisane w [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md) Wyliczenie.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetEventMask2` służy do określania, które wywołania zwrotne zasubskrybował Profiler. Zazwyczaj należy wykonać wartość logiczną lub `pdwEventsLow` i `pdwEventsHigh`, a także wszystkie nowe bity, które mają zostać ustawione, a następnie wywołać metodę [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
+ `GetEventMask2`Metoda jest używana do określenia, które wywołania zwrotne zasubskrybował Profiler. Zazwyczaj należy wykonać wartości logiczne lub `pdwEventsLow` i i `pdwEventsHigh` wszystkie nowe bity, które mają zostać ustawione, a następnie wywołać metodę [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
  Ta metoda jest zalecaną alternatywą dla metody [GetEventMask —](icorprofilerinfo-geteventmask-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

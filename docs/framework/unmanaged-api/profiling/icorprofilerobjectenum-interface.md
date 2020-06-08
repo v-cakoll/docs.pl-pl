@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: fce89cc2b3b0104ba017b7df9105dea3f6ec4e91
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5ebe99dd8d1d7ec73cd140991a4b13dfa381791d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868229"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494647"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum — Interfejs
-Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, które są generowane przez program [Ngen. exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, które są generowane przez program [Ngen. exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](icorprofilerobjectenum-clone-method.md)|Pobiera wskaźnik interfejsu do kopii tego interfejsu `ICorProfilerObjectEnum`.|  
-|[GetCount, metoda](icorprofilerobjectenum-getcount-method.md)|Pobiera łączną liczbę zablokowanych obiektów w kolekcji.|  
-|[Next, metoda](icorprofilerobjectenum-next-method.md)|Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.|  
-|[Reset, metoda](icorprofilerobjectenum-reset-method.md)|Przenosi ten wskaźnik modułu wyliczającego do początkowego położenia sekwencji.|  
-|[Skip, metoda](icorprofilerobjectenum-skip-method.md)|Przesuwa kursor tego modułu wyliczającego z jego bieżącej pozycji, tak aby określona liczba elementów została pominięta.|  
+|[Clone — Metoda](icorprofilerobjectenum-clone-method.md)|Pobiera wskaźnik interfejsu do kopii tego `ICorProfilerObjectEnum` interfejsu.|  
+|[GetCount — Metoda](icorprofilerobjectenum-getcount-method.md)|Pobiera łączną liczbę zablokowanych obiektów w kolekcji.|  
+|[Next — Metoda](icorprofilerobjectenum-next-method.md)|Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.|  
+|[Reset — Metoda](icorprofilerobjectenum-reset-method.md)|Przenosi ten wskaźnik modułu wyliczającego do początkowego położenia sekwencji.|  
+|[Skip — Metoda](icorprofilerobjectenum-skip-method.md)|Przesuwa kursor tego modułu wyliczającego z jego bieżącej pozycji, tak aby określona liczba elementów została pominięta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs `ICorProfilerObjectEnum` jest modułem wyliczającym. Umożliwia odbiorcom tablicy ściąganie elementów od nadawcy według stawki, która jest odpowiednia dla odbiornika. Innymi słowy, odbiorca może jawnie kontrolować przepływ elementów tablicy, co pozwala uniknąć problemów związanych z przekazywaniem dużych tablic jako parametrów metody.  
+ `ICorProfilerObjectEnum`Interfejs jest modułem wyliczającym. Umożliwia odbiorcom tablicy ściąganie elementów od nadawcy według stawki, która jest odpowiednia dla odbiornika. Innymi słowy, odbiorca może jawnie kontrolować przepływ elementów tablicy, co pozwala uniknąć problemów związanych z przekazywaniem dużych tablic jako parametrów metody.  
   
- Użyj [ICorProfilerInfo2:: EnumModuleFrozenObjects —](icorprofilerinfo2-enummodulefrozenobjects-method.md) , aby uzyskać wskaźnik do interfejsu `ICorProfilerObjectEnum`.  
+ Użyj [ICorProfilerInfo2:: EnumModuleFrozenObjects —](icorprofilerinfo2-enummodulefrozenobjects-method.md) , aby uzyskać wskaźnik do `ICorProfilerObjectEnum` interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

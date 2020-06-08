@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 1e08d246136b33ffaaea91367d428e0bf2db99c1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 41083b2fcd61a9a726e835c3d5710308aa634600
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498651"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo — Metoda
 Akceptuje identyfikator zestawu i zwraca nazwę zestawu oraz identyfikator modułu manifestu.  
@@ -43,7 +43,7 @@ HRESULT GetAssemblyInfo(
  podczas Identyfikator zestawu.  
   
  `cchName`  
- podczas Długość (w znakach) `szName`.  
+ podczas Długość, w znakach, z `szName` .  
   
  `pcchName`  
  określoną Wskaźnik do łącznej długości znaku nazwy zestawu.  
@@ -58,18 +58,18 @@ HRESULT GetAssemblyInfo(
  określoną Wskaźnik do identyfikatora modułu manifestu zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Po powrocie tej metody należy sprawdzić, czy bufor `szName` był wystarczająco duży, aby zawierał pełną nazwę zestawu. W tym celu należy porównać wartość, która `pcchName` wskazuje na wartość parametru `cchName`. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy bufor `szName`, zaktualizuj `cchName` przy użyciu nowego, większego rozmiaru i ponownie wywołaj `GetAssemblyInfo`.  
+ Po powrocie tej metody należy sprawdzić, czy `szName` bufor jest wystarczająco duży, aby pomieścić pełną nazwę zestawu. W tym celu należy porównać wartość wskazującą wartość `pcchName` `cchName` parametru. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName` , Przydziel większy `szName` bufor, zaktualizuj `cchName` przy użyciu nowego, większego rozmiaru i ponownie wywołaj `GetAssemblyInfo` .  
   
- Alternatywnie można najpierw wywołać `GetAssemblyInfo` z buforem `szName` o zerowej długości, aby uzyskać prawidłowy rozmiar buforu. Następnie można dostosować rozmiar buforu na podstawie wartości zwróconej w `pcchName` i ponownie wywołać `GetAssemblyInfo`.  
+ Alternatywnie, można najpierw wywołać `GetAssemblyInfo` z buforem o zerowej długości, `szName` Aby uzyskać prawidłowy rozmiar buforu. Następnie można dostosować rozmiar buforu na podstawie wartości zwróconej w `pcchName` i `GetAssemblyInfo` ponownie wywołać.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

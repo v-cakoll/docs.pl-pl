@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: f7a943627e2087e6b8c78ced9fc32824843d44fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a21924008bcbfa0894218f57aee559a564f8003
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175138"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499977"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply — Metoda
-Powiadamia profiler, że część po stronie serwera wywołania komunikacji zdalnej została zakończona, a klient jest teraz odbieranie i zamierza przetworzyć odpowiedź.  
+Powiadamia program profilujący, że została ukończona część połączenia zdalnego po stronie serwera, a klient otrzymuje i informacje o przetwarzaniu odpowiedzi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,28 +35,28 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parametry  
  `pCookie`  
- [w] Wartość, która będzie odpowiadać wartości podanej w [ICorProfilerCallback::RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) w następujących warunkach:  
+ podczas Wartość, która będzie odpowiadała wartości podanej w [ICorProfilerCallback:: RemotingServerSendingReply —](icorprofilercallback-remotingserversendingreply-method.md) w następujących warunkach:  
   
-- Aktywne są pliki cookie identyfikatorów GUID.  
+- Pliki cookie identyfikatorów GUID usług zdalnych są aktywne.  
   
-- Kanał udaje się przesłać wiadomość.  
+- Kanał pomyślnie przesyła komunikat.  
   
-- Pliki cookie guid są aktywne w procesie po stronie serwera.  
+- Pliki cookie identyfikatorów GUID są aktywne w procesie po stronie serwera.  
   
- Umożliwia to łatwe parowanie połączeń komunikacji zdalnej.  
+ Pozwala to na łatwe parowanie wywołań komunikacji zdalnej.  
   
  `fIsAsync`  
- [w] Wartość, która `true` jest, jeśli wywołanie jest asynchroniczne; w `false`przeciwnym razie , .  
+ podczas Wartość, która jest, `true` Jeśli wywołanie jest asynchroniczne; w przeciwnym razie `false` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)

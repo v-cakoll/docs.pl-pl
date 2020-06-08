@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: d0219751987b1f2d78ee37a1553b323014c1ccfe
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499717"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach — Metoda
 Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby Profiler mógł zainicjować swój stan po operacji dołączania.  
@@ -36,29 +36,29 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parametry  
  `pCorProfilerInfoUnk`  
- podczas Wskaźnik interfejsu dla interfejsu `ICorProfilerInfo*`.  
+ podczas Wskaźnik interfejsu dla `ICorProfilerInfo*` interfejsu.  
   
  `pvClientData`  
- podczas Wskaźnik do danych przesłany do metody [IClrProfiling:: AttachProfiler —](iclrprofiling-attachprofiler-method.md) w parametrze `pvClientData`. Jeśli ten parametr ma wartość null, `cbClientData` będzie równa 0 (zero). Środowisko CLR zwalnia tę pamięć po powrocie z `InitializeForAttach`.  
+ podczas Wskaźnik do danych przesłany do metody [IClrProfiling:: AttachProfiler —](iclrprofiling-attachprofiler-method.md) w jej `pvClientData` parametrze. Jeśli ten parametr ma wartość null, `cbClientData` będzie miał wartość 0 (zero). Środowisko CLR zwalnia tę pamięć po powrocie z programu `InitializeForAttach` .  
   
  `cbClientData`  
- podczas Rozmiar, w bajtach, danych, do których wskazuje `pvClientData`.  
+ podczas Rozmiar, w bajtach, danych, które `pvClientData` wskazują.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania CLR `InitializeForAttach`, aby dać profilerowi możliwość żądania wywołań zwrotnych.  
+ Środowisko CLR wywołuje, `InitializeForAttach` aby dać profilerowi możliwość żądania wywołania zwrotnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](profiling-interfaces.md)
 - [Profilowanie](index.md)

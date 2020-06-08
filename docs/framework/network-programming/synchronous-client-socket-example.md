@@ -1,5 +1,6 @@
 ---
 title: Przykład synchronicznego gniazda klienta
+description: Ten przykład .NET Framework program tworzy klienta, który nawiązuje połączenie z serwerem przy użyciu gniazda synchronicznego. Wysyła on ciąg i wyświetla odpowiedź.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: d55d875546ff34bc38b13f792668cd00309c6e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7455307441045360bc62cee50f13d106df4d005e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502122"
 ---
 # <a name="synchronous-client-socket-example"></a>Przykład synchronicznego gniazda klienta
-Poniższy przykładowy program tworzy klienta, który łączy się z serwerem. Klient jest zbudowany z gniazda synchroniczowego, więc wykonanie aplikacji klienckiej jest zawieszone, dopóki serwer nie zwróci odpowiedzi. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer na konsoli.  
+Poniższy przykładowy program tworzy klienta, który nawiązuje połączenie z serwerem. Klient został skompilowany za pomocą gniazda synchronicznego, więc wykonywanie aplikacji klienckiej jest wstrzymane do momentu, gdy serwer zwróci odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli programu.  
   
 ```vb  
 Imports System  
@@ -135,7 +136,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykład synchronicznego gniazda serwera](synchronous-server-socket-example.md)
 - [Używanie synchronicznego gniazda klienta](using-a-synchronous-client-socket.md)

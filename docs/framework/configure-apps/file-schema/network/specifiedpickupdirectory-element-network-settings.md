@@ -1,5 +1,6 @@
 ---
 title: <specifiedPickupDirectory>, element (ustawienia sieci)
+description: <specifiedPickupDirectory>Element ustawienia sieci konfiguruje katalog lokalny dla opcji serwera SMTP w .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0c4c1845e9542d0f3b836ff03f16bdf2979ebd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504501"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory>, element (ustawienia sieci)
 Konfiguruje katalog lokalny dla serwera SMTP (Simple Mail Transport Protocol).  

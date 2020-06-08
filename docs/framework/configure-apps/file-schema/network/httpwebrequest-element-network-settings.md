@@ -1,5 +1,6 @@
 ---
 title: <httpWebRequest>, element (ustawienia sieci)
+description: <httpWebRequest>Element ustawień sieci dostosowuje parametry żądania sieci Web w .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087454"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504592"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest>, element (ustawienia sieci)
 Dostosowuje parametry żądania sieci Web.  

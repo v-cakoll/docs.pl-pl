@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615782"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504267"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager — Interfejs
 Dostarcza metody, które umożliwiają hostowi kojarzenie zestawu zadań z identyfikatorem i przyjazną nazwą.  
@@ -32,7 +32,7 @@ Dostarcza metody, które umożliwiają hostowi kojarzenie zestawu zadań z ident
 |[EndConnection, metoda](iclrdebugmanager-endconnection-method.md)|Usuwa skojarzenie między listą zadań i identyfikatorem i przyjazną nazwą.|  
 |[GetDacl, metoda](iclrdebugmanager-getdacl-method.md)|Ta metoda nie jest zaimplementowana.|  
 |[IsDebuggerAttached, metoda](iclrdebugmanager-isdebuggerattached-method.md)|Pobiera wartość wskazującą, czy debuger jest dołączony do procesu.|  
-|[SetConnectionTasks, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Kojarzy listę wystąpień [ICLRTask](iclrtask-interface.md) z identyfikatorem i przyjazną nazwą.|  
+|[SetConnectionTasks, metoda](iclrdebugmanager-setconnectiontasks-method.md)|Kojarzy listę wystąpień [ICLRTask](iclrtask-interface.md) z identyfikatorem i przyjazną nazwą.|  
 |[SetDacl, metoda](iclrdebugmanager-setdacl-method.md)|Ta metoda nie jest zaimplementowana.|  
 |[SetSymbolReadingPolicy, metoda](iclrdebugmanager-setsymbolreadingpolicy-method.md)|Ustawia zasady odczytywania plików bazy danych programu (PDB). Zasady określają, czy informacje o numerach wierszy i plikach są zawarte w stosach wywołań.|  
   

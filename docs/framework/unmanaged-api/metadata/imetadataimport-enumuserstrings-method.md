@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449945"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503708"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings — Metoda
 Wylicza tokeny ciągów reprezentujące stałe ciągi w bieżącym zakresie metadanych.  
@@ -44,31 +44,31 @@ HRESULT EnumUserStrings (
  określoną Tablica służąca do przechowywania tokenów ciągów.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rStrings`.  
+ podczas Maksymalny rozmiar `rStrings` tablicy.  
   
  `pcStrings`  
- określoną Liczba tokenów ciągów zwracanych w `rStrings`.  
+ określoną Liczba tokenów ciągu zwróconych w `rStrings` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcStrings` wynosi zero.|  
+|`S_OK`|`EnumUserStrings`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcStrings` jest równa zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tokeny ciągów są tworzone przez metodę [IMetaDataEmit::D efineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) . Ta metoda jest przeznaczona do użycia przez przeglądarkę metadanych, a nie przez kompilator.  
+ Tokeny ciągów są tworzone przez metodę [IMetaDataEmit::D efineuserstring](imetadataemit-defineuserstring-method.md) . Ta metoda jest przeznaczona do użycia przez przeglądarkę metadanych, a nie przez kompilator.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: a5573765486112a83f5ea7cc9258447692f72166
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864074"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498534"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject — Metoda
-Pobiera `ClassID` obiektu, uwzględniając jego `ObjectID`.  
+Pobiera `ClassID` obiekt z danego obiektu `ObjectID` .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- podczas Identyfikator obiektu, dla którego ma zostać pobrany `ClassID`.  
+ podczas Identyfikator obiektu, dla którego ma zostać pobrany `ClassID` .  
   
  `pClassId`  
- określoną Wskaźnik do zwracanej `ClassID`.  
+ określoną Wskaźnik do zwracanego elementu `ClassID` .  
   
 ## <a name="remarks"></a>Uwagi  
- `pClassId` o wartości null wskazuje, że `objectId` ma typ, który jest wyładowania.  
+ Wartość null `pClassId` wskazuje `objectId` Typ, który jest wyładowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

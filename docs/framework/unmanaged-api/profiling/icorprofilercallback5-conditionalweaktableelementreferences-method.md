@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430052"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499249"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>Metoda ICorProfilerCallback5::ConditionalWeakTableElementReferences
 
-Identyfikuje przechodnie zamknięcie obiektów, do których odwołują się te elementy główne za pośrednictwem bezpośrednich odwołań do pól składowych i za pośrednictwem zależności `ConditionalWeakTable`.
+Identyfikuje przechodnie zamknięcie obiektów, do których odwołują się te elementy główne za pośrednictwem bezpośrednich odwołań do pól składowych i za pośrednictwem `ConditionalWeakTable` zależności.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,18 +40,18 @@ HRESULT ConditionalWeakTableElementReferences(
 ## <a name="parameters"></a>Parametry
 
 `cRootRefs`\
-podczas Liczba elementów w tablicach `keyRefIds`, `valueRefIds`i `rootIds`.
+podczas Liczba elementów w `keyRefIds` `valueRefIds` `rootIds` tablicach, i.
 
 `keyRefIds`\
-podczas Tablica identyfikatorów obiektów, z których każdy zawiera `ObjectID` dla elementu podstawowego w parze uchwytów zależnych.
+podczas Tablica identyfikatorów obiektów, z których każdy zawiera `ObjectID` element dla elementu podstawowego w parze uchwytów zależnych.
 
 `valueRefIds`\
-podczas Tablica identyfikatorów obiektów, z których każdy zawiera `ObjectID` dla elementu pomocniczego w parze uchwytów zależnych. (`keyRefIds[i]` utrzymuje `valueRefIds[i]` aktywności).
+podczas Tablica identyfikatorów obiektów, z których każdy zawiera `ObjectID` element dla elementu pomocniczego w parze zależnych uchwytów. ( `keyRefIds[i]` utrzymuje `valueRefIds[i]` aktywność).
 
 `rootIds`\
-podczas Tablica wartości `GCHandleID`, która wskazuje liczbę całkowitą, która zawiera dodatkowe informacje o katalogu głównym wyrzucania elementów bezużytecznych.
+podczas Tablica `GCHandleID` wartości, która wskazuje liczbę całkowitą, która zawiera dodatkowe informacje o katalogu głównym wyrzucania elementów bezużytecznych.
 
-Żadna z wartości `ObjectID` zwróconych przez metodę `ConditionalWeakTableElementReferences` nie jest prawidłowa podczas wywołania zwrotnego, ponieważ moduł wyrzucania elementów bezużytecznych może znajdować się w procesie przeniesienia obiektów ze starych do nowych lokalizacji. W związku z tym nie należy próbować kontrolować obiektów podczas wywołania `ConditionalWeakTableElementReferences`. W `GarbageCollectionFinished`wszystkie obiekty zostały przeniesione do nowej lokalizacji, a inspekcja może zostać wykonana.
+Żadna z `ObjectID` wartości zwracanych przez `ConditionalWeakTableElementReferences` metodę nie jest prawidłowa podczas wywołania zwrotnego, ponieważ moduł wyrzucania elementów bezużytecznych może być w trakcie przechodzenia obiektów ze starych do nowych lokalizacji. W związku z tym nie należy próbować kontrolować obiektów podczas `ConditionalWeakTableElementReferences` wywołania. W programie `GarbageCollectionFinished` wszystkie obiekty zostały przeniesione do nowych lokalizacji i można przeprowadzić inspekcję.
 
 ## <a name="example"></a>Przykład
 
@@ -80,15 +80,15 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Uwagi
 
-Profiler dla .NET Framework 4,5 lub nowszych wersji implementuje interfejs [ICorProfilerCallback5](icorprofilercallback5-interface.md) i rejestruje zależności określone przez metodę `ConditionalWeakTableElementReferences`. `ICorProfilerCallback5` zapewnia pełen zestaw zależności między obiektami na żywo reprezentowanymi przez `ConditionalWeakTable` wpisy. Te zależności i odwołania do pól elementu członkowskiego określone przez metodę [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md) umożliwiają zarządzanemu profilerowi generowanie grafu pełnego obiektu na żywo obiektów.
+Profiler dla .NET Framework 4,5 lub nowszych wersji implementuje interfejs [ICorProfilerCallback5](icorprofilercallback5-interface.md) i rejestruje zależności określone przez `ConditionalWeakTableElementReferences` metodę. `ICorProfilerCallback5`zapewnia pełen zestaw zależności między obiektami na żywo reprezentowane przez `ConditionalWeakTable` wpisy. Te zależności i odwołania do pól elementu członkowskiego określone przez metodę [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md) umożliwiają zarządzanemu profilerowi generowanie grafu pełnego obiektu na żywo obiektów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
-**Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+**.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

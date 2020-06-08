@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 488069f3ea16352cb7bb5e81b9a726637a7a65f8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499366"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError — Metoda
 Powiadamia profiler, że kompilator just in Time (JIT) napotkał błąd w procesie ponownej kompilacji.  
@@ -37,41 +37,41 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- podczas `ModuleID`, w którym podjęto próbę ponownej kompilacji.  
+ podczas , `ModuleID` W którym wykonano próbę ponownej kompilacji.  
   
  `methodId`  
- podczas `MethodDef` metody, w której podjęto próbę ponownej kompilacji.  
+ podczas `MethodDef`Metoda, dla której podjęto próbę ponownej kompilacji.  
   
  `functionId`  
- podczas Wystąpienie funkcji, które jest ponownie kompilowane lub oznaczone do ponownej kompilacji. Ta wartość może być `NULL`, jeśli wystąpił błąd w poszczególnych metodach, a nie na podstawie poszczególnych wystąpień (na przykład jeśli Profiler określił nieprawidłowy token metadanych dla metody do ponownego skompilowania).  
+ podczas Wystąpienie funkcji, które jest ponownie kompilowane lub oznaczone do ponownej kompilacji. Ta wartość może być taka `NULL` , jeśli wystąpił błąd w poszczególnych metodach, a nie na poszczególnych wystąpieniach (na przykład jeśli Profiler określił nieprawidłowy token metadanych dla metody do ponownego skompilowania).  
   
  `hrStatus`  
  podczas WYNIK HRESULT wskazujący charakter błędu. Zapoznaj się z sekcją stan HRESULTs, aby zapoznać się z listą wartości.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Zwracane wartości z tego wywołania zwrotnego są ignorowane.  
   
 ## <a name="status-hresults"></a>Stan HRESULT  
   
 |Wartość HRESULT tablicy stanu|Opis|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID` lub token `methodDef` jest `NULL`.|  
+|E_INVALIDARG|`moduleID`Token lub `methodDef` `NULL` .|  
 |CORPROF_E_DATAINCOMPLETE|Moduł nie jest jeszcze w pełni załadowany lub jest w trakcie jego zwalniania.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Określony moduł został dynamicznie wygenerowany (na przykład przez `Reflection.Emit`) i nie jest obsługiwany przez tę metodę.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Metoda jest tworzona w zestawie kolekcjonowanym i dlatego nie można jej ponownie skompilować. Należy zauważyć, że typy i funkcje zdefiniowane w kontekście bez odbicia (na przykład `List<MyCollectibleStruct>`) mogą być tworzone w zestawie kolekcjonowanym.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Określony moduł został dynamicznie wygenerowany (na przykład przez `Reflection.Emit` ) i nie jest obsługiwany przez tę metodę.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Metoda jest tworzona w zestawie kolekcjonowanym i dlatego nie można jej ponownie skompilować. Należy zauważyć, że typy i funkcje zdefiniowane w kontekście bez odbicia (na przykład `List<MyCollectibleStruct>` ) mogą być tworzone w zestawie kolekcjonowanym.|  
 |E_OUTOFMEMORY|Za mało pamięci środowiska CLR podczas próby oznaczenia określonej metody ponownej kompilacji JIT.|  
 |Inne|System operacyjny zwrócił błąd poza kontrolą środowiska CLR. Na przykład, jeśli wywołanie systemowe w celu zmiany ochrony dostępu strony pamięci nie powiedzie się, zostanie wyświetlony komunikat o błędzie systemu operacyjnego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)

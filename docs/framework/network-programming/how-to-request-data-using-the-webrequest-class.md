@@ -1,5 +1,6 @@
 ---
-title: 'Jak: Żądanie danych przy użyciu WebRequest klasy'
+title: 'Instrukcje: żądanie danych przy użyciu klasy WebRequest'
+description: Dowiedz się, jak zażądać zasobu, takiego jak strona sieci Web lub plik, z serwera przy użyciu klasy WebRequest w .NET Framework.
 ms.date: 03/21/2019
 dev_langs:
 - csharp
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5dcc1a7dad226288e3f74969b86e2dd457c0eed0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048166"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502473"
 ---
-# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Jak: Żądanie danych przy użyciu WebRequest klasy
+# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Instrukcje: żądanie danych przy użyciu klasy WebRequest
 
-W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci Web lub plik, z serwera. Zasób musi być identyfikowany przez identyfikator URI.
+Poniższa procedura zawiera opis czynności, które należy wykonać w celu zażądania zasobu, takiego jak strona sieci Web lub plik, z serwera programu. Zasób musi być identyfikowany za pomocą identyfikatora URI.
 
 ## <a name="to-request-data-from-a-host-server"></a>Aby zażądać danych z serwera hosta
 
-1. Utwórz <xref:System.Net.WebRequest> wystąpienie, wywołując <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> z identyfikatorem URI zasobu. Przykład:
+1. Utwórz <xref:System.Net.WebRequest> wystąpienie, wywołując <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Identyfikator URI zasobu. Na przykład:
 
     ```csharp
     WebRequest request = WebRequest.Create("https://docs.microsoft.com");
@@ -35,11 +36,11 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
     ```
 
     > [!NOTE]
-    > .NET Framework zawiera klasy specyficzne dla <xref:System.Net.WebRequest> protokołu <xref:System.Net.WebResponse> pochodzące z i klasy dla identyfikatorów URI, które zaczynają się od *http:*, *https:*, *ftp:*, i *plik:*.
+    > .NET Framework zawiera klasy specyficzne dla protokołu pochodzące od <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> klas i dla identyfikatorów URI, które zaczynają się od *http:*, *https:*, *FTP:* i *File:*.
 
-    Jeśli chcesz ustawić lub odczytać właściwości specyficzne dla protokołu, <xref:System.Net.WebResponse> należy rzutować lub <xref:System.Net.WebRequest> obiekt do typu obiektu specyficznego dla protokołu. Aby uzyskać więcej informacji, zobacz [Programowanie protokołów podłączanych](programming-pluggable-protocols.md).
+    Jeśli konieczne jest ustawienie lub odczytanie właściwości specyficznych dla protokołu, należy rzutować <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> obiekt lub na typ obiektu specyficzny dla protokołu. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](programming-pluggable-protocols.md).
 
-2. Ustaw wszystkie wartości właściwości, `WebRequest` które są potrzebne w obiekcie. Na przykład, aby włączyć <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> uwierzytelnianie, ustaw <xref:System.Net.NetworkCredential> właściwość na wystąpienie klasy:
+2. Ustaw wartości właściwości, które są potrzebne w `WebRequest` obiekcie. Na przykład aby włączyć uwierzytelnianie, należy ustawić <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> Właściwość na wystąpienie <xref:System.Net.NetworkCredential> klasy:
 
     ```csharp
     request.Credentials = CredentialCache.DefaultCredentials;
@@ -49,7 +50,7 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
     request.Credentials = CredentialCache.DefaultCredentials
     ```
 
-3. Wyślij żądanie do serwera, <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>dzwoniąc . Ta metoda zwraca obiekt zawierający odpowiedź serwera. Typ <xref:System.Net.WebResponse> zwracanego obiektu jest określany przez schemat identyfikatora URI żądania. Przykład:
+3. Wyślij żądanie do serwera przez wywołanie metody <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> . Ta metoda zwraca obiekt zawierający odpowiedź serwera. Typ zwracanego <xref:System.Net.WebResponse> obiektu jest określany przez schemat identyfikatora URI żądania. Na przykład:
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -59,9 +60,9 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
     Dim response As WebResponse = request.GetResponse()
     ```
 
-4. Można uzyskać dostęp do `WebResponse` właściwości obiektu lub przerzucić go do wystąpienia specyficznego dla protokołu, aby odczytać właściwości specyficzne dla protokołu.
+4. Możesz uzyskać dostęp do właściwości `WebResponse` obiektu lub rzutować go do wystąpienia specyficznego dla protokołu, aby odczytywać właściwości specyficzne dla protokołu.
 
-    Na przykład, aby uzyskać dostęp do <xref:System.Net.HttpWebResponse>właściwości `WebResponse` specyficznych `HttpWebResponse` dla protokołu HTTP , rzutuj obiekt na odwołanie. W poniższym przykładzie kodu pokazano, <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> jak wyświetlić właściwość specyficzną dla protokołu HTTP wysłaną z odpowiedzią:
+    Na przykład, aby uzyskać dostęp do właściwości specyficznych dla protokołu HTTP <xref:System.Net.HttpWebResponse> , należy rzutować `WebResponse` obiekt na `HttpWebResponse` odwołanie. Poniższy przykład kodu pokazuje, jak wyświetlić Właściwość specyficzną dla protokołu HTTP, która <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> jest wysyłana z odpowiedzią:
 
     ```csharp
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);
@@ -71,7 +72,7 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
     ```
 
-5. Aby uzyskać strumień zawierający dane odpowiedzi wysyłane <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> przez serwer, należy wywołać metodę. Przykład:
+5. Aby uzyskać strumień zawierający dane odpowiedzi wysyłane przez serwer, wywołaj <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> metodę. Na przykład:
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -81,7 +82,7 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-6. Po przeczytaniu danych z obiektu odpowiedzi zamknij go <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> za pomocą metody lub zamknij <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> strumień odpowiedzi za pomocą metody. Jeśli nie zamkniesz obiektu odpowiedzi lub strumienia, aplikacja może zabraknąć połączeń z serwerem i nie będzie w stanie przetworzyć dodatkowych żądań. Ponieważ `WebResponse.Close` metoda `Stream.Close` wywołuje, gdy zamyka odpowiedź, nie jest `Close` konieczne wywołanie zarówno odpowiedzi i strumienia obiektów, chociaż w ten sposób nie jest szkodliwe. Przykład:
+6. Po odczytaniu danych z obiektu Response należy zamknąć je za pomocą <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> metody lub zamknąć strumień odpowiedzi przy użyciu <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> metody. Jeśli nie zamkniesz obiektu Response lub strumienia, aplikacja może wyłączać połączenia z serwerem i nie może przetwarzać dodatkowych żądań. Ponieważ `WebResponse.Close` Metoda wywołuje się `Stream.Close` , gdy zamyka odpowiedź, nie jest konieczne wywoływanie `Close` zarówno obiektów odpowiedzi, jak i strumienia, chociaż nie jest to szkodliwe. Na przykład:
 
     ```csharp
     response.Close();
@@ -93,15 +94,15 @@ W poniższej procedurze opisano kroki żądania zasobu, takiego jak strona sieci
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, jak utworzyć żądanie do serwera sieci web i odczytać dane w odpowiedzi:
+Poniższy przykład kodu przedstawia sposób tworzenia żądania na serwerze sieci Web i odczytywania danych w odpowiedzi:
 
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie żądań internetowych](creating-internet-requests.md)
-- [Korzystanie ze strumieni w sieci](using-streams-on-the-network.md)
-- [Uzyskiwanie dostępu do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)
+- [Używanie strumieni w sieci](using-streams-on-the-network.md)
+- [Uzyskiwanie dostępu do Internetu za pomocą serwera proxy](accessing-the-internet-through-a-proxy.md)
 - [Żądanie danych](requesting-data.md)
-- [Jak: Wysyłanie danych przy użyciu WebRequest klasy](how-to-send-data-using-the-webrequest-class.md)
+- [Instrukcje: wysyłanie danych przy użyciu klasy WebRequest](how-to-send-data-using-the-webrequest-class.md)

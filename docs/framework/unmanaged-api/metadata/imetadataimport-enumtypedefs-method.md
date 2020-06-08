@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cdfd4e10236d546af2555b125d44233172849a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177296"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503734"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs — Metoda
 Wylicza tokeny TypeDef reprezentujące wszystkie typy w bieżącym zakresie.  
@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [na zewnątrz] Wskaźnik do nowego wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
+ określoną Wskaźnik do nowego modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `rTypeDefs`  
- [w] Tablica używana do przechowywania tokenów TypeDef.  
+ podczas Tablica służąca do przechowywania tokenów TypeDef.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rTypeDefs` tablicy.  
+ podczas Maksymalny rozmiar `rTypeDefs` tablicy.  
   
  `pcTypeDefs`  
- [na zewnątrz] Liczba tokenów TypeDef zwrócona w `rTypeDefs`.  
+ określoną Liczba tokenów TypeDef zwróconych w `rTypeDefs` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTypeDefs` przypadku wynosi zero.|  
+|`S_OK`|`EnumTypeDefs`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTypeDefs` jest równa zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- TypeDef token reprezentuje typ, takich jak klasa lub interfejs, a także dowolny typ dodany za pośrednictwem mechanizmu rozszerzalności.  
+ Token TypeDef reprezentuje typ, taki jak Klasa lub interfejs, a także dowolny typ dodany za pomocą mechanizmu rozszerzalności.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

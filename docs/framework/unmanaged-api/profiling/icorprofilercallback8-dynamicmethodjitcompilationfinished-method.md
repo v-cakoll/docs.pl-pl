@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::DynamicMethodJITKomunikacjaKończa metoda
+title: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished Metoda
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,17 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: c2e9489654a0fe5fa65ec638ed0f991a6c01415a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554cc93de934061e87322c7557e05545e5e7bc62
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175112"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499080"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITKomunikacjaKończa metoda
-[Obsługiwane w .NET Framework 4.7 i nowszych wersjach]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished Metoda
+[Obsługiwane w .NET Framework 4,7 i nowszych wersjach]  
   
-Powiadamia profiler po zakończeniu kompilacji JIT metody dynamicznej.  
+Powiadamia profiler za każdym razem, gdy kompilacja JIT metody dynamicznej została ukończona.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,31 +31,31 @@ HRESULT DynamicMethodJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>Parametry  
-[w]`functionId`  
-Identyfikator funkcji w pamięci, dla której jest uruchomiona kompilacja JIT.
+podczas`functionId`  
+Identyfikator funkcji w pamięci, dla której uruchomiono kompilację JIT.
 
-[w] `hrStatus` Wartość, która wskazuje, czy kompilacja JIT zakończyła się pomyślnie.
+[w] `hrStatus` Wartość wskazująca, czy kompilacja JIT zakończyła się pomyślnie.
 
-[w] `fIsSafeToBlock` aby wskazać, że blokowanie może spowodować, że środowisko uruchomieniowe czekać na wątek wywołujący do powrotu z tego wywołania zwrotnego; 
- `true` `false` , aby wskazać, że blokowanie nie wpłynie na działanie środowiska wykonawczego.  
+[w] `fIsSafeToBlock` 
+ `true` Aby wskazać, że blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; `false`, aby wskazać, że blokowanie nie wpłynie na działanie środowiska uruchomieniowego.  
 
 ## <a name="remarks"></a>Uwagi  
 
-To wywołanie zwrotne jest wyzwalane po zakończeniu kompilacji JIT metody dynamicznej. Obejmuje to różne wycinki IL i metody LCG. Jego celem jest dostarczenie pisarzom profilerów wystarczającej ilości informacji, aby zidentyfikować skompilowaną metodę dla użytkowników.
+To wywołanie zwrotne jest wyzwalane za każdym razem, gdy kompilacja JIT metody dynamicznej została zakończona. Obejmuje to różne metody pośredniczące IL i LCG. Celem jest zapewnienie autorom profilera wystarczającej ilości informacji do zidentyfikowania skompilowanej metody dla użytkowników.
 
 > [!NOTE]
-> `functionId`wartości nie mogą być używane do rozpoznawania ich tokenów metadanych, ponieważ metody dynamiczne nie mają metadanych.
+> `functionId`wartości nie można użyć do rozpoznania ich tokenów metadanych, ponieważ metody dynamiczne nie mają metadanych.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [DynamicMethodJITCompilationStarted, metoda](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8, interfejs](icorprofilercallback8-interface.md)

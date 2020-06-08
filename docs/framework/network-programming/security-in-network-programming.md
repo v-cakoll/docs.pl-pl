@@ -1,5 +1,6 @@
 ---
-title: Bezpieczeństwo w programowaniu sieciowym - .NET Framework
+title: Zabezpieczenia w programowaniu sieciowym — .NET Framework
+description: Poznaj popularne mechanizmy uwierzytelniania aplikacji i uprawnienia dostępu do kodu, które obsługują klasy .NET Framework System.Net.
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -12,32 +13,32 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 546e7223ba4af3029a798fb3edfb503c07e1ab4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502174"
 ---
-# <a name="security-in-network-programming"></a>Bezpieczeństwo w programowaniu sieci
+# <a name="security-in-network-programming"></a>Zabezpieczenia w programowaniu sieciowym
 
-Klasy obszaru <xref:System.Net> nazw programu .NET Framework zapewniają wbudowaną obsługę popularnych mechanizmów uwierzytelniania aplikacji internetowych i uprawnień dostępu do kodu programu .NET Framework.  
+<xref:System.Net>Klasy przestrzeni nazw .NET Framework zapewniają wbudowaną obsługę popularnych mechanizmów uwierzytelniania aplikacji internetowych i .NET Framework uprawnień dostępu do kodu.  
   
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Najważniejsze wskazówki dotyczące zabezpieczeń warstwy transportu (TLS) w ramach platformy .NET Framework](tls.md)  
-W tym artykule opisano najlepsze rozwiązania protokołu TLS z platformą .NET Framework.
+[Transport Layer Security (TLS) — najlepsze rozwiązania z .NET Framework](tls.md)  
+Opisuje najlepsze rozwiązania TLS z .NET Framework.
 
 [Używanie protokołu Secure Sockets Layer](using-secure-sockets-layer.md)  
-W tym artykule opisano sposób korzystania z połączeń SSL (Secure Sockets Layer).  
+Opisuje sposób korzystania z połączeń SSL (SSL).  
   
 [Uwierzytelnianie internetowe](internet-authentication.md)  
-W tym artykule opisano sposób używania metod uwierzytelniania HTTP do ustanawiania uwierzytelnionych połączeń z serwerami HTTP.  
+Opisuje sposób używania metod uwierzytelniania HTTP do nawiązywania uwierzytelnionych połączeń z serwerami HTTP.  
   
 [Internet i uprawnienia gniazd](web-and-socket-permissions.md)  
-W tym artykule opisano sposób ustawiania zabezpieczeń dostępu do kodu dla aplikacji korzystających z połączeń internetowych.  
+Opisuje sposób ustawiania zabezpieczeń dostępu kodu dla aplikacji korzystających z połączeń internetowych.  
   
-## <a name="related-sections"></a>Powiązane sekcje
+## <a name="related-sections"></a>Sekcje pokrewne
 
 [Programowanie dla sieci w programie .NET Framework](index.md)  
-Wprowadza klasy w <xref:System.Net> i <xref:System.Net.Sockets> przestrzenie nazw.
+Wprowadza klasy w <xref:System.Net> <xref:System.Net.Sockets> przestrzeni nazw i.

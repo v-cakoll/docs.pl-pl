@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503620"
 ---
-# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="f3bd1-102">IMetaDataImport::GetMemberRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="f3bd1-102">IMetaDataImport::GetMemberRefProps Method</span></span>
-<span data-ttu-id="f3bd1-103">Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
+# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="84074-102">IMetaDataImport::GetMemberRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="84074-102">IMetaDataImport::GetMemberRefProps Method</span></span>
+<span data-ttu-id="84074-103">Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="84074-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3bd1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f3bd1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84074-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="84074-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMemberRefProps (  
@@ -39,38 +39,38 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f3bd1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f3bd1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84074-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="84074-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="f3bd1-106">[w] Token MemberRef do zwrócenia skojarzonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-106">[in] The MemberRef token to return associated metadata for.</span></span>  
+ <span data-ttu-id="84074-106">podczas Token elementu MemberRef do zwrócenia skojarzonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="84074-106">[in] The MemberRef token to return associated metadata for.</span></span>  
   
  `ptk`  
- <span data-ttu-id="f3bd1-107">[na zewnątrz] A TypeDef lub TypeRef lub TypeSpec token, który reprezentuje klasę, która deklaruje element członkowski lub ModułRef token, który reprezentuje klasę modułu, który deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
+ <span data-ttu-id="84074-107">określoną Element TypeDef lub TypeRef albo token elementu TypeSpec reprezentujący klasę, która deklaruje element członkowski lub token elementu ModuleRef reprezentujący klasę modułu, która deklaruje element członkowski, lub element MethodDef reprezentujący element członkowski.</span><span class="sxs-lookup"><span data-stu-id="84074-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="f3bd1-108">[na zewnątrz] Bufor ciągu dla nazwy członka.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-108">[out] A string buffer for the member's name.</span></span>  
+ <span data-ttu-id="84074-108">określoną Bufor ciągu dla nazwy elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="84074-108">[out] A string buffer for the member's name.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="f3bd1-109">[w] Żądany rozmiar w szerokich znakach `szMember`.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-109">[in] The requested size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="84074-109">podczas Żądany rozmiar w postaci znaków dwubajtowych `szMember` .</span><span class="sxs-lookup"><span data-stu-id="84074-109">[in] The requested size in wide characters of `szMember`.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="f3bd1-110">[na zewnątrz] Zwrócony rozmiar w `szMember`szerokich znakach .</span><span class="sxs-lookup"><span data-stu-id="f3bd1-110">[out] The returned size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="84074-110">określoną Zwrócony rozmiar w postaci znaków dwubajtowych `szMember` .</span><span class="sxs-lookup"><span data-stu-id="84074-110">[out] The returned size in wide characters of `szMember`.</span></span>  
   
  `ppvSibBlob`  
- <span data-ttu-id="f3bd1-111">[na zewnątrz] Wskaźnik do podpisu binarnych metadanych dla członka.</span><span class="sxs-lookup"><span data-stu-id="f3bd1-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
+ <span data-ttu-id="84074-111">określoną Wskaźnik do binarnego podpisu metadanych dla elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="84074-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
   
  `pbSig`  
- <span data-ttu-id="f3bd1-112">[na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`</span><span class="sxs-lookup"><span data-stu-id="f3bd1-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="84074-112">określoną Rozmiar w bajtach `ppvSigBlob` .</span><span class="sxs-lookup"><span data-stu-id="84074-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3bd1-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f3bd1-113">Requirements</span></span>  
- <span data-ttu-id="f3bd1-114">**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3bd1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84074-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="84074-113">Requirements</span></span>  
+ <span data-ttu-id="84074-114">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84074-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3bd1-115">**Nagłówek:** Okręg wyborczy Cor.h</span><span class="sxs-lookup"><span data-stu-id="f3bd1-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="84074-115">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="84074-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f3bd1-116">**Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f3bd1-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="84074-116">**Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="84074-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f3bd1-117">**Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3bd1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="84074-117">**.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84074-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3bd1-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f3bd1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84074-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="84074-118">See also</span></span>
 
-- [<span data-ttu-id="f3bd1-119">IMetaDataImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f3bd1-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f3bd1-120">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f3bd1-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="84074-119">IMetaDataImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="84074-119">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="84074-120">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="84074-120">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: Uwierzytelnianie NTLM i uwierzytelnianie Kerberos
+description: Dowiedz się, jak domyślne uwierzytelnianie NTLM i uwierzytelnianie Kerberos działają dla aplikacji .NET Framework i Poznaj inne niż domyślne uwierzytelnianie NTLM.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180698"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502239"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="a71a1-102">Uwierzytelnianie NTLM i uwierzytelnianie Kerberos</span><span class="sxs-lookup"><span data-stu-id="a71a1-102">NTLM and Kerberos Authentication</span></span>
-<span data-ttu-id="a71a1-103">Domyślne uwierzytelnianie NTLM i uwierzytelnianie Kerberos używają poświadczeń użytkownika systemu Microsoft Windows NT skojarzonych z aplikacją wywołującą w celu podjęcia próby uwierzytelnienia na serwerze.</span><span class="sxs-lookup"><span data-stu-id="a71a1-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="a71a1-104">W przypadku korzystania z uwierzytelniania NTLM nie domyślnego, aplikacja ustawia <xref:System.Net.NetworkCredential> typ uwierzytelniania na NTLM i używa obiektu do przekazywania nazwy użytkownika, hasła i domeny do hosta, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="a71a1-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="6db32-103">Uwierzytelnianie NTLM i uwierzytelnianie Kerberos</span><span class="sxs-lookup"><span data-stu-id="6db32-103">NTLM and Kerberos Authentication</span></span>
+<span data-ttu-id="6db32-104">Domyślne uwierzytelnianie NTLM i uwierzytelnianie Kerberos używają poświadczeń użytkownika systemu Microsoft Windows NT skojarzonych z aplikacją wywołującą, aby próbować uwierzytelniać się za pomocą serwera.</span><span class="sxs-lookup"><span data-stu-id="6db32-104">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="6db32-105">W przypadku korzystania z uwierzytelniania NTLM innego niż domyślne aplikacja ustawia typ uwierzytelniania na NTLM i używa <xref:System.Net.NetworkCredential> obiektu do przekazania nazwy użytkownika, hasła i domeny do hosta, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="6db32-105">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -43,7 +44,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="a71a1-105">Aplikacje, które muszą łączyć się z usługami internetowymi przy użyciu poświadczeń użytkownika aplikacji, mogą to zrobić za pomocą domyślnych poświadczeń użytkownika, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="a71a1-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="6db32-106">Aplikacje, które muszą łączyć się z usługami internetowymi przy użyciu poświadczeń użytkownika aplikacji, mogą to zrobić przy użyciu poświadczeń domyślnych użytkownika, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="6db32-106">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -57,12 +58,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="a71a1-106">Moduł uwierzytelniania negocjacji określa, czy serwer zdalny używa uwierzytelniania NTLM lub Kerberos, i wysyła odpowiednią odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="a71a1-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="6db32-107">Moduł uwierzytelnianie negocjowane określa, czy serwer zdalny używa uwierzytelniania NTLM, czy Kerberos, i wysyła odpowiednią odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="6db32-107">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a71a1-107">Uwierzytelnianie NTLM nie działa za pośrednictwem serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="a71a1-107">NTLM authentication does not work through a proxy server.</span></span>  
+> <span data-ttu-id="6db32-108">Uwierzytelnianie NTLM nie działa przez serwer proxy.</span><span class="sxs-lookup"><span data-stu-id="6db32-108">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a71a1-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a71a1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6db32-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6db32-109">See also</span></span>
 
-- [<span data-ttu-id="a71a1-109">Uwierzytelnianie podstawowe i szyfrowane</span><span class="sxs-lookup"><span data-stu-id="a71a1-109">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
-- [<span data-ttu-id="a71a1-110">Uwierzytelnianie internetowe</span><span class="sxs-lookup"><span data-stu-id="a71a1-110">Internet Authentication</span></span>](internet-authentication.md)
+- [<span data-ttu-id="6db32-110">Uwierzytelnianie podstawowe i szyfrowane</span><span class="sxs-lookup"><span data-stu-id="6db32-110">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
+- [<span data-ttu-id="6db32-111">Uwierzytelnianie internetowe</span><span class="sxs-lookup"><span data-stu-id="6db32-111">Internet Authentication</span></span>](internet-authentication.md)

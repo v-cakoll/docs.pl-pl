@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175528"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492333"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes — Metoda
-Wylicza tokeny niestandardowej definicji atrybutów skojarzone z określonym typem lub elementem członkowskim.  
+Wylicza niestandardowe tokeny definicji atrybutów skojarzone z określonym typem lub członkiem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do zwróconego wylicznika.  
+ [in. out] Wskaźnik do zwróconego modułu wyliczającego.  
   
  `tk`  
- [w] Token dla zakresu wyliczenia lub zero dla wszystkich atrybutów niestandardowych.  
+ podczas Token dla zakresu wyliczenia lub zero dla wszystkich atrybutów niestandardowych.  
   
  `tkType`  
- [w] Token dla konstruktora typu atrybutów, które mają być `null` wyliczone lub dla wszystkich typów.  
+ podczas Token dla konstruktora typu atrybutów do wyliczenia lub `null` dla wszystkich typów.  
   
  `rCustomAttributes`  
- [na zewnątrz] Tablica niestandardowych tokenów atrybutów.  
+ określoną Tablica tokenów atrybutów niestandardowych.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rCustomAttributes` tablicy.  
+ podczas Maksymalny rozmiar `rCustomAttributes` tablicy.  
   
  `pcCustomAttributes`  
- [out, opcjonalnie] Rzeczywista liczba wartości tokenów zwrócona w `rCustomAttributes`.  
+ [out, opcjonalne] Rzeczywista liczba zwracanych wartości tokenu `rCustomAttributes` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych atrybutów niestandardowych do wyliczenia. W takim `pcCustomAttributes` przypadku wynosi zero.|  
+|`S_OK`|`EnumCustomAttributes`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak atrybutów niestandardowych do wyliczenia. W takim przypadku `pcCustomAttributes` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

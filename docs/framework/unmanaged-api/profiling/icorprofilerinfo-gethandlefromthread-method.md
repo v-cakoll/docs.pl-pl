@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: 038f922eaaeb7d660cfbdcc0facb89677bdd154e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 419195d9450bf07e5ad8c7cedcac76e175137c96
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498222"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread — Metoda
 Mapuje identyfikator wątku na dojście wątku Win32.  
@@ -41,16 +41,16 @@ HRESULT GetHandleFromThread(
  określoną Wskaźnik do dojścia do wątku Win32.  
   
 ## <a name="remarks"></a>Uwagi  
- Profiler musi wywołać funkcję `DuplicateHandle` Win32 na dojściem przed jego użyciem.  
+ Profiler musi wywołać `DuplicateHandle` funkcję Win32 w uchwycie przed użyciem go.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

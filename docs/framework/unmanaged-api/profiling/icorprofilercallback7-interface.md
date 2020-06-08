@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-ms.openlocfilehash: e61f6a104b8b9613db32ed6912395fd07c18dcff
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9a49d8e1ff31942c6564ab560d6726b9ede26466
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864820"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499145"
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7, interfejs
 [Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
@@ -28,11 +28,11 @@ ms.locfileid: "76864820"
 |[ModuleInMemorySymbolsUpdated, metoda](icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Powiadamia program profilujący, że jest aktualizowany strumień symboli skojarzony z modułem w pamięci.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

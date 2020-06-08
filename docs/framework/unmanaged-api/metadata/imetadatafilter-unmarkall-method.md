@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-ms.openlocfilehash: 5e31964271c13788e29c7ef0581afcd809c5a9fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c969f4f8f2327e6ddf45b8f0423ecaafc95d81b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492499"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll — Metoda
 Usuwa znaczniki przetwarzania ze wszystkich tokenów w bieżącym zakresie metadanych.  
@@ -32,17 +32,17 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `UnmarkAll` nie przyjmuje żadnych parametrów.  
+ `UnmarkAll`nie przyjmuje żadnych parametrów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** Cor. h  
   
  **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataFilter, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [IMetaDataFilter — Interfejs](imetadatafilter-interface.md)

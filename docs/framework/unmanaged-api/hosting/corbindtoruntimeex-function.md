@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616635"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493503"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx — Funkcja
 Umożliwia niezarządzanym hostom ładowanie środowiska uruchomieniowego języka wspólnego (CLR) do procesu. [CorBindToRuntime](corbindtoruntime-function.md) i `CorBindToRuntimeEx` funkcje wykonują tę samą operację, ale `CorBindToRuntimeEx` Funkcja pozwala ustawić flagi, aby określić zachowanie środowiska CLR.  
@@ -102,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  Opisy tych flag można znaleźć w temacie [STARTUP_FLAGS](startup-flags-enumeration.md) Enumeration.  
   
  `rclsid`  
- podczas `CLSID`Klasy coclass implementującej interfejs [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) lub [ICLRRuntimeHost](iclrruntimehost-interface.md) . Obsługiwane wartości to CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
+ podczas `CLSID`Klasy coclass implementującej interfejs [ICorRuntimeHost](icorruntimehost-interface.md) lub [ICLRRuntimeHost](iclrruntimehost-interface.md) . Obsługiwane wartości to CLSID_CorRuntimeHost lub CLSID_CLRRuntimeHost.  
   
  `riid`  
  podczas `IID`Żądany interfejs z `rclsid` . Obsługiwane wartości to IID_ICorRuntimeHost lub IID_ICLRRuntimeHost.  
@@ -122,7 +122,7 @@ HRESULT CorBindToRuntimeEx (
   
 2. Poprzez zmianę trybu domyślnego procesu na tryb zgodności w wersji 1, gdzie obiekt nie jest <xref:System.Security.Principal.WindowsIdentity> przepływem w żadnym punkcie asynchronicznym, niezależnie od <xref:System.Threading.ExecutionContext> ustawień w bieżącym wątku. Sposób zmiany trybu domyślnego zależy od tego, czy do załadowania środowiska CLR jest używany zarządzany plik wykonywalny, czy niezarządzany interfejs hostingu:  
   
-    1. W przypadku zarządzanych plików wykonywalnych należy ustawić `enabled` atrybut [ \< legacyImpersonationPolicy elementu>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true` .  
+    1. W przypadku zarządzanych plików wykonywalnych należy ustawić `enabled` atrybut [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elementu na `true` .  
   
     2. W przypadku niezarządzanych interfejsów hostingu Ustaw `STARTUP_LEGACY_IMPERSONATION` flagę w `startupFlags` parametrze podczas wywoływania `CorBindToRuntimeEx` funkcji.  
   

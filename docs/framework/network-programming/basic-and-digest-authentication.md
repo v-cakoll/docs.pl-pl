@@ -1,5 +1,6 @@
 ---
 title: Uwierzytelnianie podstawowe i szyfrowane
+description: Zapoznaj się z uwierzytelnianiem podstawowym i szyfrowanym, w którym aplikacja udostępnia nazwę użytkownika i hasło w obiekcie WebRequest używanym do żądania danych.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7772430b508b52a63d716550b69018385418c132
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502704"
 ---
 # <a name="basic-and-digest-authentication"></a>Uwierzytelnianie podstawowe i szyfrowane
-Implementacja <xref:System.Net> uwierzytelniania podstawowego i szyfrowego jest zgodna z rfc2617 — uwierzytelnianie HTTP: uwierzytelnianie podstawowe i szyfrowane (dostępne na stronie internetowej [world wide web consortium).](https://www.w3.org)  
+<xref:System.Net>Implementacja uwierzytelniania podstawowego i szyfrowanego jest zgodna z RFC2617 — uwierzytelnianie http: uwierzytelnianie podstawowe i szyfrowane (dostępne w witrynie sieci web [organizacja World Wide Web Consortium](https://www.w3.org) ).  
   
- Aby użyć uwierzytelniania podstawowego i szyfrowanego, aplikacja <xref:System.Net.WebRequest.Credentials%2A> musi <xref:System.Net.WebRequest> podać nazwę użytkownika i hasło we właściwości obiektu, który używa do żądania danych z Internetu, jak pokazano w poniższym przykładzie.  
+ Aby można było korzystać z uwierzytelniania podstawowego i szyfrowanego, aplikacja musi podać nazwę użytkownika i hasło we <xref:System.Net.WebRequest.Credentials%2A> właściwości <xref:System.Net.WebRequest> obiektu, którego używa do żądania danych z Internetu, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -44,9 +45,9 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
-> Dane wysyłane za pomocą uwierzytelniania podstawowego i szyfrowanego nie są szyfrowane, więc dane mogą być widoczne przez przeciwnika. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane w sposób czysty i mogą zostać przechwycone.  
+> Dane wysyłane z uwierzytelnianiem podstawowym i szyfrowanym nie są szyfrowane, więc dane mogą być widoczne przez atakującej. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane w postaci jasnej i mogą być przechwytywane.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](ntlm-and-kerberos-authentication.md)
 - [Uwierzytelnianie internetowe](internet-authentication.md)

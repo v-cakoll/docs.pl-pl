@@ -11,12 +11,12 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-ms.openlocfilehash: 90071121411b706052e1cbb4cb647536dae2835a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0156a7dfa2a67ce9e62b502df00fc6bc5fccf925
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864872"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499184"
 ---
 # <a name="icorprofilercallback6-interface"></a>Interfejs ICorProfilerCallback6
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -32,11 +32,11 @@ ms.locfileid: "76864872"
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

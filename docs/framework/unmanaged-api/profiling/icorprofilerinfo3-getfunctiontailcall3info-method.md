@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176997"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496532"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info — Metoda
-Udostępnia ramkę stosu funkcji, która jest zgłaszana do profilera przez [functiontailcall3WithInfo](functiontailcall3withinfo-function.md) funkcji. Tę metodę można wywołać `FunctionTailcall3WithInfo` tylko podczas wywołania zwrotnego.  
+Udostępnia ramkę stosu funkcji, która jest raportowana do profilera przez funkcję [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) . Tę metodę można wywołać tylko w trakcie `FunctionTailcall3WithInfo` wywołania zwrotnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,30 +36,30 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [w] Funkcja, `FunctionID` która powraca.  
+ podczas `FunctionID`Funkcja, która zwraca.  
   
  `eltInfo`  
- [w] Nieprzezroczysty uchwyt, który reprezentuje informacje o danej ramce stosu. Profiler powinien zapewnić `eltInfo` taki sam, który został `FunctionTailcall3WithInfo` podany do profilera przez funkcję.  
+ podczas Nieprzezroczyste dojście, które reprezentuje informacje o danej klatce stosu. Profiler powinien zapewnić taki sam `eltInfo` , który został przekazany do profilera przez `FunctionTailcall3WithInfo` funkcję.  
   
  `pFrameInfo`  
- [na zewnątrz] Nieprzezroczysty dojście reprezentujące ogólne informacje o danej ramce stosu. Ten dojście jest `FunctionTailcall3WithInfo` prawidłowy tylko podczas wywołania zwrotnego, w którym profiler o nazwie `GetFunctionTailcall3Info` metody.  
+ określoną Nieprzezroczyste dojście reprezentujące ogólne informacje dotyczące danej ramki stosu. To dojście jest prawidłowe tylko `FunctionTailcall3WithInfo` w przypadku wywołania zwrotnego, w którym Profiler nazywa `GetFunctionTailcall3Info` metodę.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Functionenter3withinfo](functionenter3withinfo-function.md)
-- [Functionleave3withinfo](functionleave3withinfo-function.md)
-- [FunkcjaTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
 - [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](profiling-interfaces.md)
-- [Profilowania](index.md)
+- [Profilowanie](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447568"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494205"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc — Metoda
 
@@ -41,18 +41,18 @@ podczas Liczba bajtów do przydzielenia dla treści metody.
 
 ## <a name="remarks"></a>Uwagi
 
- Przydzieloną pamięć rozpocznie się pod adresem większym niż adres podstawowy modułu, który jest skojarzony z tym alokatorem. Innymi słowy, każdy Alokator jest tworzony dla danego modułu i podejmie próbę przydzielenia pamięci z przesunięciem pozytywnym od jego adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większym niż adres bazowy modułu, zwraca E_OUTOFMEMORY, niezależnie od rzeczywistej ilości dostępnego miejsca w pamięci.
+ Przydzieloną pamięć rozpocznie się pod adresem większym niż adres podstawowy modułu, który jest skojarzony z tym alokatorem. Innymi słowy, każdy Alokator jest tworzony dla danego modułu i podejmie próbę przydzielenia pamięci z przesunięciem pozytywnym od jego adresu podstawowego. Jeśli `Alloc` żądana liczba bajtów w adresie większym niż adres bazowy modułu nie powiedzie się, zwraca E_OUTOFMEMORY, niezależnie od rzeczywistej ilości dostępnego miejsca w pamięci.
 
- Metoda `Alloc` powinna być używana w połączeniu z metodą [ICorProfilerInfo:: SetILFunctionBody —](icorprofilerinfo-setilfunctionbody-method.md) .
+ `Alloc`Metoda powinna być używana w połączeniu z metodą [ICorProfilerInfo:: SetILFunctionBody —](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Wymagania
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
  **Nagłówek:** CorProf. idl, CorProf. h
 
  **Biblioteka:** CorGuids. lib
 
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

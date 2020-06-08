@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: fd7f149e806727d849cdceb3ffbc5dc7392fcf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177412"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492740"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps — Metoda
-Ustawia wartości właściwości dla definicji parametru ogólnego, do których odwołuje się określony token.  
+Ustawia wartości właściwości dla definicji parametru generycznego, do której odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,30 +39,30 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `gp`  
- [w] Token dla definicji parametru ogólnego, dla którego należy ustawić wartości.  
+ podczas Token dla definicji parametru generycznego, dla którego mają zostać ustawione wartości.  
   
  `dwParamFlags`  
- [w] Wartość wyliczania [CorGenericParamAttr,](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) która opisuje typ parametru ogólnego.  
+ podczas Wartość wyliczenia [CorGenericParamAttr —](corgenericparamattr-enumeration.md) opisująca typ parametru generycznego.  
   
  `szName`  
- [w] Opcjonalne. Nazwa parametru, dla którego należy ustawić wartości.  
+ podczas Obowiązkowe. Nazwa parametru, dla którego mają zostać ustawione wartości.  
   
  `reserved`  
- [w] Zarezerwowane dla przyszłej rozszerzalności.  
+ podczas Zarezerwowane do użytku w przyszłości.  
   
  `rtkConstraints`  
- [w] Opcjonalne. Tablica typu zakończona z zerowym o zerowym zakończeniem. Elementy członkowskie tablicy `mdTypeRef`muszą `mdTypeSpec` być tokenem `mdTypeDef`, lub metadanych.  
+ podczas Obowiązkowe. Tablica zakończona zerem z ograniczeniami typu. Elementy członkowskie tablicy muszą być `mdTypeDef` `mdTypeRef` `mdTypeSpec` tokenami, lub.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)

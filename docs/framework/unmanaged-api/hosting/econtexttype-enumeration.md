@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: ceb68410e808bf7843149e3f05a39c7a98d0c000
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b93b27957cc715a5b4718dd9ef61cd11f4a39914
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493422"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType — Wyliczenie
 Opisuje kontekst zabezpieczeń aktualnie wykonywanego wątku.  
@@ -37,7 +37,7 @@ typedef enum {
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`eCurrentContext`|Wskazuje kontekst bieżącego wątku w czasie, gdy środowisko uruchomieniowe języka wspólnego (CLR) wywołuje metodę [IHostSecurityManager:: GetSecurityContext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) lub kontekst żądany przez środowisko CLR w wywołaniu metody [IHostSecurityManager:: SetSecurityContext —](ihostsecuritymanager-setsecuritycontext-method.md) .|  
+|`eCurrentContext`|Wskazuje kontekst bieżącego wątku w czasie, gdy środowisko uruchomieniowe języka wspólnego (CLR) wywołuje metodę [IHostSecurityManager:: GetSecurityContext —](ihostsecuritymanager-getsecuritycontext-method.md) lub kontekst żądany przez środowisko CLR w wywołaniu metody [IHostSecurityManager:: SetSecurityContext —](ihostsecuritymanager-setsecuritycontext-method.md) .|  
 |`eRestrictedContext`|Wskazuje kontekst, w którym host ma niższe uprawnienia, takie jak moduł wyrzucania elementów bezużytecznych lub konstruktory klas lub modułów.|  
   
 ## <a name="remarks"></a>Uwagi  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 068014732cee91147edaec29fa0f954a741d8b5c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175424"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491667"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef — Metoda
-Pobiera wskaźnik do tokenu MemberRef dla odwołania elementu członkowskiego, który jest ujęty przez określony <xref:System.Type> i który ma określoną nazwę i podpis metadanych.  
+Pobiera wskaźnik do tokenu MemberRef dla odwołania do elementu członkowskiego, który jest ujęty w określony <xref:System.Type> i który ma określoną nazwę i sygnaturę metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [w] TypeRef token dla klasy lub interfejsu, który otacza odwołanie do elementu członkowskiego do wyszukiwania. Jeśli ta `mdTokenNil`wartość jest , wyszukiwanie jest wykonywane dla zmiennej globalnej lub odwołania funkcji globalnej.  
+ podczas Token TypeRef dla klasy lub interfejsu, który obejmuje odwołanie do elementu członkowskiego do wyszukania. Jeśli ta wartość jest `mdTokenNil` , wyszukiwanie jest wykonywane dla zmiennej globalnej lub odwołania do funkcji globalnej.  
   
  `szName`  
- [w] Nazwa odwołania elementu członkowskiego do wyszukania.  
+ podczas Nazwa odwołania do elementu członkowskiego do wyszukania.  
   
  `pvSigBlob`  
- [w] Wskaźnik do podpisu binarnych metadanych odwołania elementu członkowskiego.  
+ podczas Wskaźnik do binarnego podpisu metadanych odwołania do elementu członkowskiego.  
   
  `cbSigBlob`  
- [w] Rozmiar w bajtach . `pvSigBlob`  
+ podczas Rozmiar w bajtach `pvSigBlob` .  
   
  `pmr`  
- [na zewnątrz] Wskaźnik do pasującego tokenu MemberRef.  
+ określoną Wskaźnik do zgodnego tokenu elementu MemberRef.  
   
 ## <a name="remarks"></a>Uwagi  
- Element członkowski można określić za`td`pomocą otaczającej`szName`go klasy lub`pvSigBlob`interfejsu ( ), jego nazwy ( i opcjonalnie jego podpisu ( ).  
+ Należy określić składową przy użyciu jej klasy lub interfejsu ( `td` ), jej nazwy ( `szName` ) i opcjonalnie jej sygnatury ( `pvSigBlob` ).  
   
- Podpis przekazany `FindMemberRef` do musi zostały wygenerowane w bieżącym zakresie, ponieważ podpisy są powiązane z określonym zakresem. Podpis można osadzić token, który identyfikuje otaczającą klasę lub typ wartości. Token jest indeksem do lokalnej tabeli TypeDef. Nie można utworzyć podpisu w czasie wykonywania poza kontekstem bieżącego `FindMemberRef`zakresu i użyć tego podpisu jako danych wejściowych do .  
+ Sygnatura przekazano do `FindMemberRef` musi być wygenerowana w bieżącym zakresie, ponieważ sygnatury są powiązane z konkretnym zakresem. Podpis może osadzić token, który identyfikuje otaczającą klasę lub typ wartości. Token jest indeksem tabeli lokalnych TypeDef. Nie można utworzyć podpisu w czasie wykonywania poza kontekstem bieżącego zakresu i użyć tej sygnatury jako danych wejściowych `FindMemberRef` .  
   
- `FindMemberRef`znajduje tylko odwołania do elementów członkowskich, które zostały zdefiniowane bezpośrednio w klasie lub interfejsie; nie znajduje dziedziczonych odwołań do elementów członkowskich.  
+ `FindMemberRef`znajduje tylko odwołania do elementu członkowskiego, które zostały zdefiniowane bezpośrednio w klasie lub interfejsie; nie znaleziono dziedziczonych odwołań do członków.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

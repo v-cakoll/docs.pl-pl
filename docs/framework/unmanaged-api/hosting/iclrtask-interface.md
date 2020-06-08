@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763010"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503955"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask — Interfejs
 Dostarcza metody, które umożliwiają hostowi wykonywanie żądań środowiska uruchomieniowego języka wspólnego (CLR) lub dostarczenie do środowiska CLR powiadomienia o skojarzonym zadaniu.  
@@ -41,7 +41,7 @@ Dostarcza metody, które umożliwiają hostowi wykonywanie żądań środowiska 
 |[YieldTask, metoda](iclrtask-yieldtask-method.md)|Żąda, aby środowisko CLR udostępnić czas procesora innym zadanie. Środowisko CLR nie gwarantuje, że zadanie zostanie umieszczone w stanie, w którym może dać czas przetwarzania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRTask`Jest reprezentacją zadania dla środowiska CLR. W dowolnym momencie wykonywania kodu zadanie można opisać jako uruchomione lub oczekiwanie na uruchomienie. Host wywołuje metodę w `ICLRTask::SwitchIn` celu powiadomienia środowiska CLR o tym, że zadanie reprezentowane przez bieżące `ICLRTask` wystąpienie jest teraz w stanie interoperacyjnym. Po wywołaniu `ICLRTask::SwitchIn` , host może zaplanować zadanie w dowolnym wątku systemu operacyjnego, z wyjątkiem przypadków, gdy środowisko uruchomieniowe wymaga koligacji wątków, jak określono przez wywołania metod [IHostTaskManager:: BeginThreadAffinity —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) i [IHostTaskManager:: EndThreadAffinity —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) . Czasami system operacyjny może zdecydować się na usunięcie zadania z wątku i umieszczenie go w stanie nieuruchomionym. Na przykład może się to zdarzyć, gdy zadanie jest blokowane w przypadku elementów pierwotnych synchronizacji lub czeka na ukończenie operacji we/wy. Host wywołuje [SwitchOut —](iclrtask-switchout-method.md) w celu powiadomienia środowiska CLR, że zadanie reprezentowane przez bieżące `ICLRTask` wystąpienie nie jest już w stanie nieobsługiwanym.  
+ `ICLRTask`Jest reprezentacją zadania dla środowiska CLR. W dowolnym momencie wykonywania kodu zadanie można opisać jako uruchomione lub oczekiwanie na uruchomienie. Host wywołuje metodę w `ICLRTask::SwitchIn` celu powiadomienia środowiska CLR o tym, że zadanie reprezentowane przez bieżące `ICLRTask` wystąpienie jest teraz w stanie interoperacyjnym. Po wywołaniu `ICLRTask::SwitchIn` , host może zaplanować zadanie w dowolnym wątku systemu operacyjnego, z wyjątkiem przypadków, gdy środowisko uruchomieniowe wymaga koligacji wątków, jak określono przez wywołania metod [IHostTaskManager:: BeginThreadAffinity —](ihosttaskmanager-beginthreadaffinity-method.md) i [IHostTaskManager:: EndThreadAffinity —](ihosttaskmanager-endthreadaffinity-method.md) . Czasami system operacyjny może zdecydować się na usunięcie zadania z wątku i umieszczenie go w stanie nieuruchomionym. Na przykład może się to zdarzyć, gdy zadanie jest blokowane w przypadku elementów pierwotnych synchronizacji lub czeka na ukończenie operacji we/wy. Host wywołuje [SwitchOut —](iclrtask-switchout-method.md) w celu powiadomienia środowiska CLR, że zadanie reprezentowane przez bieżące `ICLRTask` wystąpienie nie jest już w stanie nieobsługiwanym.  
   
  Zadanie zwykle kończy się na końcu wykonywania kodu. W tym czasie Host wywołuje, `ICLRTask::ExitTask` aby zniszczyć skojarzone `ICLRTask` . Zadania mogą być również odtwarzane przy użyciu wywołania do `ICLRTask::Reset` , co umożliwia `ICLRTask` ponowne użycie wystąpienia. Takie podejście uniemożliwia narzutowanie wielokrotnego tworzenia i niszczenia wystąpień.  
   
@@ -54,7 +54,7 @@ Dostarcza metody, które umożliwiają hostowi wykonywanie żądań środowiska 
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICLRTaskManager, interfejs](iclrtaskmanager-interface.md)
 - [IHostTask, interfejs](ihosttask-interface.md)

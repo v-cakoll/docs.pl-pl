@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 81b6f009ea61294f398a21c4def927ef2609f32b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615752"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504241"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks — Metoda
 Kojarzy listę wystąpień [ICLRTask](iclrtask-interface.md) z identyfikatorem i przyjazną nazwą.  
@@ -58,7 +58,7 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|[BeginConnection —](iclrdebugmanager-beginconnection-method.md) nie została wywołana przy użyciu tej wartości `id` lub `dwCount` lub `id` jest równa zero lub jeden z elementów `ppCLRTask` ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) udostępnia trzy metody, `BeginConnection` , `SetConnectionTasks` i [EndConnection —](iclrdebugmanager-endconnection-method.md), do kojarzenia list zadań z identyfikatorami i przyjaznymi nazwami.  
+ [ICLRDebugManager](iclrdebugmanager-interface.md) udostępnia trzy metody, `BeginConnection` , `SetConnectionTasks` i [EndConnection —](iclrdebugmanager-endconnection-method.md), do kojarzenia list zadań z identyfikatorami i przyjaznymi nazwami.  
   
 > [!IMPORTANT]
 > Te trzy metody muszą być wywoływane w określonej kolejności dla każdego zestawu zadań. `BeginConnection`jest wywoływana najpierw w celu nawiązania nowego połączenia. `SetConnectionTasks`jest wywoływana dalej, aby określić zestaw zadań, które mają być skojarzone z tym połączeniem. `EndConnection`jest wywoływana jako Ostatnia, aby usunąć skojarzenie między listą zadań a identyfikatorem i przyjazną nazwą. Jednak wywołania dla różnych połączeń mogą być zagnieżdżane.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6a4e1ca934c748352b0c4f5120536a4dd24e0b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 644b31ae8e8f0c51c08bcad57220a028406cfd3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703960"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504078"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl — Metoda
 Ustawia wskaźnik interfejsu, który może być używany przez środowisko uruchomieniowe języka wspólnego (CLR), aby uzyskać implementację [interfejsu IHostControl](ihostcontrol-interface.md).  
@@ -50,7 +50,7 @@ HRESULT SetHostControl(
 |E_CLR_ALREADY_STARTED|Środowisko CLR zostało już zainicjowane.|  
   
 ## <a name="remarks"></a>Uwagi  
- Należy wywołać `SetHostControl` przed zainicjowaniem środowiska CLR, czyli przed wywołaniem [metody Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) lub użyciem dowolnego [interfejsu metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). Zaleca się wywołanie `SetHostControl` natychmiast po wywołaniu [funkcji CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md) lub [funkcji CorBindToRuntimeEx](corbindtoruntimeex-function.md).  
+ Należy wywołać `SetHostControl` przed zainicjowaniem środowiska CLR, czyli przed wywołaniem [metody Start](iclrruntimehost-start-method.md) lub użyciem dowolnego [interfejsu metadanych](../metadata/metadata-interfaces.md). Zaleca się wywołanie `SetHostControl` natychmiast po wywołaniu [funkcji CorBindToCurrentRuntime](corbindtocurrentruntime-function.md) lub [funkcji CorBindToRuntimeEx](corbindtoruntimeex-function.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  

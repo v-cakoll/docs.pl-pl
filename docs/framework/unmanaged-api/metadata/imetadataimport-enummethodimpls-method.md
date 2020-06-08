@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175476"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492019"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
 Wylicza tokeny MethodBody i MethodDeclaration reprezentujące metody określonego typu.  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `td`  
- [w] A TypeDef token dla typu, którego implementacje metody do wyliczenia.  
+ podczas Token TypeDef dla typu, którego implementacje metod mają zostać wyliczone.  
   
  `rMethodBody`  
- [na zewnątrz] Tablica do przechowywania tokenów MethodBody.  
+ określoną Tablica do przechowywania tokenów MethodBody.  
   
  `rMethodDecl`  
- [na zewnątrz] Tablica do przechowywania tokenów MethodDeclaration.  
+ określoną Tablica do przechowywania tokenów MethodDeclaration.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rMethodBody` tablic `rMethodDecl` i tablic.  
+ podczas Maksymalny rozmiar `rMethodBody` `rMethodDecl` tablic i.  
   
  `pcTokens`  
- [w] Rzeczywista liczba metod `rMethodBody` zwróconych w i `rMethodDecl`.  
+ podczas Rzeczywista liczba metod zwróconych w `rMethodBody` i `rMethodDecl` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów metody do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
+|`S_OK`|`EnumMethodImpls`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów metody do wyliczenia. W takim przypadku `pcTokens` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

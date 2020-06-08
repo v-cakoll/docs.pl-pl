@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177010"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494582"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next — Metoda
-Pobiera określoną liczbę obiektów ciągłych z sekwencyjnej kolekcji obiektów, począwszy od bieżącej pozycji wyliczacza w sekwencji.  
+Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [w] Liczba obiektów do pobrania.  
+ podczas Liczba obiektów do pobrania.  
   
  `objects`  
- [na zewnątrz] Tablica `ObjectID` wartości, z których każda reprezentuje pobrany obiekt.  
+ określoną Tablica `ObjectID` wartości, z których każdy reprezentuje pobrany obiekt.  
   
  `pceltFetched`  
- [na zewnątrz] Wskaźnik do liczby elementów faktycznie `objects` zwróconych w tablicy.  
+ określoną Wskaźnik do liczby elementów faktycznie zwracanych w `objects` tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICorProfilerObjectEnum — Interfejs](icorprofilerobjectenum-interface.md)

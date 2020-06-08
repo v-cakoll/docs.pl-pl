@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-ms.openlocfilehash: 0c25a5cad01ef0eb268e90c38bd24d638b6f8cc4
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 772f0c00bb850e35a6f5bf7fa4df2b3052999df5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499795"
 ---
-# <a name="icorprofilercallback2handlecreated-method"></a><span data-ttu-id="df66c-102">ICorProfilerCallback2::HandleCreated — Metoda</span><span class="sxs-lookup"><span data-stu-id="df66c-102">ICorProfilerCallback2::HandleCreated Method</span></span>
-<span data-ttu-id="df66c-103">Powiadamia profiler kodu o utworzeniu dojścia do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="df66c-103">Notifies the code profiler that a garbage collection handle has been created.</span></span>  
+# <a name="icorprofilercallback2handlecreated-method"></a><span data-ttu-id="cf287-102">ICorProfilerCallback2::HandleCreated — Metoda</span><span class="sxs-lookup"><span data-stu-id="cf287-102">ICorProfilerCallback2::HandleCreated Method</span></span>
+<span data-ttu-id="cf287-103">Powiadamia profiler kodu o utworzeniu dojścia do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="cf287-103">Notifies the code profiler that a garbage collection handle has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df66c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="df66c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf287-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cf287-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HandleCreated(  
@@ -33,23 +33,23 @@ HRESULT HandleCreated(
     [in] ObjectID initialObjectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df66c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="df66c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cf287-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cf287-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="df66c-106">podczas Identyfikator dojścia do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="df66c-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="cf287-106">podczas Identyfikator dojścia do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="cf287-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
  `initialObjectId`  
- <span data-ttu-id="df66c-107">podczas Identyfikator obiektu, dla którego utworzono dojście do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="df66c-107">[in] The ID of the object for which the garbage collection handle was created.</span></span>  
+ <span data-ttu-id="cf287-107">podczas Identyfikator obiektu, dla którego utworzono dojście do wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="cf287-107">[in] The ID of the object for which the garbage collection handle was created.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df66c-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="df66c-108">Requirements</span></span>  
- <span data-ttu-id="df66c-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df66c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf287-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cf287-108">Requirements</span></span>  
+ <span data-ttu-id="cf287-109">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf287-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df66c-110">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="df66c-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cf287-110">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="cf287-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="df66c-111">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="df66c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cf287-111">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="cf287-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="df66c-112">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df66c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cf287-112">**.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf287-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df66c-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="df66c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf287-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cf287-113">See also</span></span>
 
-- [<span data-ttu-id="df66c-114">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="df66c-114">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="df66c-115">ICorProfilerCallback2, interfejs</span><span class="sxs-lookup"><span data-stu-id="df66c-115">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
+- [<span data-ttu-id="cf287-114">ICorProfilerCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="cf287-114">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="cf287-115">ICorProfilerCallback2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="cf287-115">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)

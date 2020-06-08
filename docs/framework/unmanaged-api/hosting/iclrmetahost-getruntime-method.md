@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6496e014b767b2bdaf68cdc62017813e1e57f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d482e25c7bf0f028e2478c8e7b7863bc54d7aeb9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504198"
 ---
-# <a name="iclrmetahostgetruntime-method"></a><span data-ttu-id="30bd2-102">ICLRMetaHost::GetRuntime — Metoda</span><span class="sxs-lookup"><span data-stu-id="30bd2-102">ICLRMetaHost::GetRuntime Method</span></span>
-<span data-ttu-id="30bd2-103">Pobiera Interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) , który odnosi się do określonej wersji środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="30bd2-103">Gets the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that corresponds to a particular version of the common language runtime (CLR).</span></span> <span data-ttu-id="30bd2-104">Ta metoda zastępuje funkcję [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) używaną z flagą [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="30bd2-104">This method supersedes the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function used with the [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) flag.</span></span>  
+# <a name="iclrmetahostgetruntime-method"></a><span data-ttu-id="94082-102">ICLRMetaHost::GetRuntime — Metoda</span><span class="sxs-lookup"><span data-stu-id="94082-102">ICLRMetaHost::GetRuntime Method</span></span>
+<span data-ttu-id="94082-103">Pobiera Interfejs [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) , który odnosi się do określonej wersji środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="94082-103">Gets the [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) interface that corresponds to a particular version of the common language runtime (CLR).</span></span> <span data-ttu-id="94082-104">Ta metoda zastępuje funkcję [CorBindToRuntimeEx](corbindtoruntimeex-function.md) używaną z flagą [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="94082-104">This method supersedes the [CorBindToRuntimeEx](corbindtoruntimeex-function.md) function used with the [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) flag.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30bd2-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="30bd2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94082-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="94082-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRuntime (  
@@ -35,45 +35,45 @@ HRESULT GetRuntime (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30bd2-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="30bd2-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94082-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="94082-106">Parameters</span></span>  
  `pwzVersion`  
- <span data-ttu-id="30bd2-107">podczas Wersja kompilacji .NET Framework przechowywana w metadanych w formacie "v*A*. *B*[.\* X\*] ".</span><span class="sxs-lookup"><span data-stu-id="30bd2-107">[in] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="30bd2-108">*A*, *B*i *X* to liczby dziesiętne, które odpowiadają wersji głównej, wersji pomocniczej i numer kompilacji.</span><span class="sxs-lookup"><span data-stu-id="30bd2-108">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span>  
+ <span data-ttu-id="94082-107">podczas Wersja kompilacji .NET Framework przechowywana w metadanych w formacie "v*A*. *B*[.\* X\*] ".</span><span class="sxs-lookup"><span data-stu-id="94082-107">[in] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="94082-108">*A*, *B*i *X* to liczby dziesiętne, które odpowiadają wersji głównej, wersji pomocniczej i numer kompilacji.</span><span class="sxs-lookup"><span data-stu-id="94082-108">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="30bd2-109">Ten parametr musi być zgodny z nazwą katalogu dla .NET Framework wersji, ponieważ pojawia się w obszarze C:\Windows\Microsoft.NET\Framework lub C:\Windows\Microsoft.NET\Framework64.</span><span class="sxs-lookup"><span data-stu-id="30bd2-109">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework or C:\Windows\Microsoft.NET\Framework64.</span></span>  
+> <span data-ttu-id="94082-109">Ten parametr musi być zgodny z nazwą katalogu dla .NET Framework wersji, ponieważ pojawia się w obszarze C:\Windows\Microsoft.NET\Framework lub C:\Windows\Microsoft.NET\Framework64.</span><span class="sxs-lookup"><span data-stu-id="94082-109">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework or C:\Windows\Microsoft.NET\Framework64.</span></span>  
   
- <span data-ttu-id="30bd2-110">Przykładowe wartości to "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" i "v 4.0. *X*", gdzie *x* zależy od zainstalowanego numeru kompilacji.</span><span class="sxs-lookup"><span data-stu-id="30bd2-110">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="30bd2-111">Prefiks "v" jest wymagany.</span><span class="sxs-lookup"><span data-stu-id="30bd2-111">The "v" prefix is required.</span></span>  
+ <span data-ttu-id="94082-110">Przykładowe wartości to "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" i "v 4.0. *X*", gdzie *x* zależy od zainstalowanego numeru kompilacji.</span><span class="sxs-lookup"><span data-stu-id="94082-110">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="94082-111">Prefiks "v" jest wymagany.</span><span class="sxs-lookup"><span data-stu-id="94082-111">The "v" prefix is required.</span></span>  
   
  `riid`  
- <span data-ttu-id="30bd2-112">podczas Identyfikator żądanego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="30bd2-112">[in] The identifier for the desired interface.</span></span> <span data-ttu-id="30bd2-113">Obecnie jedyną poprawną wartością tego parametru jest IID_ICLRRuntimeInfo.</span><span class="sxs-lookup"><span data-stu-id="30bd2-113">Currently, the only valid value for this parameter is IID_ICLRRuntimeInfo.</span></span>  
+ <span data-ttu-id="94082-112">podczas Identyfikator żądanego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="94082-112">[in] The identifier for the desired interface.</span></span> <span data-ttu-id="94082-113">Obecnie jedyną poprawną wartością tego parametru jest IID_ICLRRuntimeInfo.</span><span class="sxs-lookup"><span data-stu-id="94082-113">Currently, the only valid value for this parameter is IID_ICLRRuntimeInfo.</span></span>  
   
  `ppRuntime`  
- <span data-ttu-id="30bd2-114">określoną Wskaźnik do interfejsu [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) , który odnosi się do żądanego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="30bd2-114">[out] A pointer to the [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) interface that corresponds to the requested runtime.</span></span>  
+ <span data-ttu-id="94082-114">określoną Wskaźnik do interfejsu [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) , który odnosi się do żądanego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="94082-114">[out] A pointer to the [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) interface that corresponds to the requested runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30bd2-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="30bd2-115">Return Value</span></span>  
- <span data-ttu-id="30bd2-116">Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="30bd2-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94082-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="94082-115">Return Value</span></span>  
+ <span data-ttu-id="94082-116">Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="94082-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="30bd2-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30bd2-117">HRESULT</span></span>|<span data-ttu-id="30bd2-118">Opis</span><span class="sxs-lookup"><span data-stu-id="30bd2-118">Description</span></span>|  
+|<span data-ttu-id="94082-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="94082-117">HRESULT</span></span>|<span data-ttu-id="94082-118">Opis</span><span class="sxs-lookup"><span data-stu-id="94082-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="30bd2-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="30bd2-119">S_OK</span></span>|<span data-ttu-id="30bd2-120">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="30bd2-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="30bd2-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="30bd2-121">E_POINTER</span></span>|<span data-ttu-id="30bd2-122">`pwzVersion`lub `ppRuntime` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="30bd2-122">`pwzVersion` or `ppRuntime` is null.</span></span>|  
+|<span data-ttu-id="94082-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="94082-119">S_OK</span></span>|<span data-ttu-id="94082-120">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="94082-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="94082-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="94082-121">E_POINTER</span></span>|<span data-ttu-id="94082-122">`pwzVersion`lub `ppRuntime` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="94082-122">`pwzVersion` or `ppRuntime` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="30bd2-123">Uwagi</span><span class="sxs-lookup"><span data-stu-id="30bd2-123">Remarks</span></span>  
- <span data-ttu-id="30bd2-124">Ta metoda współdziała spójnie ze starszymi interfejsami, takimi jak interfejs [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) i starsze funkcje, takie jak funkcje przestarzałe `CorBindTo*` (zobacz [przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md) w interfejsie API hostingu .NET Framework 2,0).</span><span class="sxs-lookup"><span data-stu-id="30bd2-124">This method interacts consistently with legacy interfaces such as the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface and legacy functions such as the deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span> <span data-ttu-id="30bd2-125">Oznacza to, że środowiska uruchomieniowe, które są ładowane ze starszym interfejsem API są widoczne dla nowego interfejsu API, a środowiska uruchomieniowe ładowane z nowym interfejsem API są widoczne dla starszego interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="30bd2-125">That is, runtimes that are loaded with the legacy API are visible to the new API, and runtimes that are loaded with the new API are visible to the legacy API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94082-123">Uwagi</span><span class="sxs-lookup"><span data-stu-id="94082-123">Remarks</span></span>  
+ <span data-ttu-id="94082-124">Ta metoda współdziała spójnie ze starszymi interfejsami, takimi jak interfejs [ICorRuntimeHost](icorruntimehost-interface.md) i starsze funkcje, takie jak funkcje przestarzałe `CorBindTo*` (zobacz [przestarzałe funkcje hostingu środowiska CLR](deprecated-clr-hosting-functions.md) w interfejsie API hostingu .NET Framework 2,0).</span><span class="sxs-lookup"><span data-stu-id="94082-124">This method interacts consistently with legacy interfaces such as the [ICorRuntimeHost](icorruntimehost-interface.md) interface and legacy functions such as the deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span> <span data-ttu-id="94082-125">Oznacza to, że środowiska uruchomieniowe, które są ładowane ze starszym interfejsem API są widoczne dla nowego interfejsu API, a środowiska uruchomieniowe ładowane z nowym interfejsem API są widoczne dla starszego interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="94082-125">That is, runtimes that are loaded with the legacy API are visible to the new API, and runtimes that are loaded with the new API are visible to the legacy API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30bd2-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="30bd2-126">Requirements</span></span>  
- <span data-ttu-id="30bd2-127">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30bd2-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94082-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="94082-126">Requirements</span></span>  
+ <span data-ttu-id="94082-127">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94082-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30bd2-128">**Nagłówek:** Obiekt ServiceHost. h</span><span class="sxs-lookup"><span data-stu-id="30bd2-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="94082-128">**Nagłówek:** Obiekt ServiceHost. h</span><span class="sxs-lookup"><span data-stu-id="94082-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="30bd2-129">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="30bd2-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="94082-129">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="94082-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="30bd2-130">**.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30bd2-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="94082-130">**.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94082-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30bd2-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="30bd2-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94082-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="94082-131">See also</span></span>
 
-- [<span data-ttu-id="30bd2-132">ICLRMetaHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="30bd2-132">ICLRMetaHost Interface</span></span>](iclrmetahost-interface.md)
-- [<span data-ttu-id="30bd2-133">Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="30bd2-133">Deprecated CLR Hosting Interfaces and Coclasses</span></span>](deprecated-clr-hosting-interfaces-and-coclasses.md)
-- [<span data-ttu-id="30bd2-134">Interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="30bd2-134">CLR Hosting Interfaces</span></span>](clr-hosting-interfaces.md)
-- [<span data-ttu-id="30bd2-135">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="30bd2-135">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
-- [<span data-ttu-id="30bd2-136">Hosting</span><span class="sxs-lookup"><span data-stu-id="30bd2-136">Hosting</span></span>](index.md)
+- [<span data-ttu-id="94082-132">ICLRMetaHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="94082-132">ICLRMetaHost Interface</span></span>](iclrmetahost-interface.md)
+- [<span data-ttu-id="94082-133">Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="94082-133">Deprecated CLR Hosting Interfaces and Coclasses</span></span>](deprecated-clr-hosting-interfaces-and-coclasses.md)
+- [<span data-ttu-id="94082-134">Interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="94082-134">CLR Hosting Interfaces</span></span>](clr-hosting-interfaces.md)
+- [<span data-ttu-id="94082-135">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="94082-135">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="94082-136">Hosting</span><span class="sxs-lookup"><span data-stu-id="94082-136">Hosting</span></span>](index.md)

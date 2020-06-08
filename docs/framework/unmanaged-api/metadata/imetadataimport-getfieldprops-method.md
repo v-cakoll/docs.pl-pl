@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177247"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491250"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps — Metoda
 Pobiera metadane skojarzone z polem, do którego odwołuje się określony token FieldDef.  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [w] A FieldDef token, który reprezentuje pole, aby uzyskać skojarzone metadane dla.  
+ podczas Token FieldDef reprezentujący pole, dla którego mają zostać pobrane powiązane metadane.  
   
  `pClass`  
- [na zewnątrz] Wskaźnik do Tokenu TypeDef, który reprezentuje typ klasy, do której należy pole.  
+ określoną Wskaźnik do tokenu TypeDef, który reprezentuje typ klasy, do której należy pole.  
   
  `szField`  
- [na zewnątrz] Nazwa pola.  
+ określoną Nazwa pola.  
   
  `cchField`  
- [w] Rozmiar w szerokich znaków buforu dla *szField*.  
+ podczas Rozmiar w postaci znaków dwubajtowych buforu dla *szField*.  
   
  `pchField`  
- [na zewnątrz] Rzeczywisty rozmiar zwróconego buforu.  
+ określoną Rzeczywisty rozmiar zwróconego buforu.  
   
  `pdwAttr`  
- [na zewnątrz] Flagi skojarzone z metadanymi pola.  
+ określoną Flagi skojarzone z metadanymi pola.  
   
  `ppvSigBlob`  
- [w] Wskaźnik do wartości metadanych binarnych, który opisuje pole.  
+ podczas Wskaźnik do wartości metadanych Binary opisującej pole.  
   
  `pcbSigBlob`  
- [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
+ określoną Rozmiar w bajtach `ppvSigBlob` .  
   
  `pdwCPlusTypeFlag`  
- [na zewnątrz] Flaga określająca typ wartości pola.  
+ określoną Flaga określająca typ wartości pola.  
   
  `ppValue`  
- [na zewnątrz] Stała wartość pola.  
+ określoną Stała wartość pola.  
   
  `pcchValue`  
- [na zewnątrz] Rozmiar w znakach `ppValue`, lub zero, jeśli nie istnieje ciąg.  
+ określoną Rozmiar w znakach `ppValue` lub zero, jeśli nie istnieje ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

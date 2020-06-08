@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 218b65b5899692774c434ae136a3976ecb97ea2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91ae326a89e463d26b39c1659d872130042557bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177310"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492021"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods — Metoda
 Wylicza tokeny MethodDef reprezentujące metody określonego typu.  
@@ -39,37 +39,37 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `cl`  
- [w] A TypeDef token reprezentujący typ z metodami do wyliczenia.  
+ podczas Token TypeDef reprezentujący typ z metodami do wyliczenia.  
   
  `rMethods`  
- [na zewnątrz] Tablica do przechowywania tokenów MethodDef.  
+ określoną Tablica do przechowywania tokenów MethodDef.  
   
  `cMax`  
- [w] Maksymalny rozmiar methoddef `rMethods` tablicy.  
+ podczas Maksymalny rozmiar `rMethods` tablicy MethodDef.  
   
  `pcTokens`  
- [na zewnątrz] Liczba tokenów MethodDef zwrócona w `rMethods`.  
+ określoną Liczba tokenów MethodDef zwróconych w `rMethods` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów MethodDef do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
+|`S_OK`|`EnumMethods`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak tokenów MethodDef do wyliczenia. W takim przypadku `pcTokens` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

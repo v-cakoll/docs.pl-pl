@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4521a3f15ec358a4d786a4533efb6b99d0e1c1cc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492385"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum — Metoda
-Pobiera liczbę elementów w wyliczenia, który został pobrany przez określonego wylicznika.  
+Pobiera liczbę elementów w wyliczeniu, która została pobrana przez określony moduł wyliczający.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +36,24 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- [w] Dojście do wyliczacza.  
+ podczas Uchwyt dla modułu wyliczającego.  
   
  `pulCount`  
- [na zewnątrz] Liczba wyliczonych elementów.  
+ określoną Liczba wyliczonych elementów.  
   
 ## <a name="remarks"></a>Uwagi  
- Dojście `hEnum` określone przez jest `Enum`otrzymywany z poprzedniego *wywołania Name* (na przykład [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ Dojście określone przez `hEnum` jest uzyskiwane z poprzedniego `Enum` wywołania *nazwy* (na przykład [IMetaDataImport:: EnumTypeDefs —](imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

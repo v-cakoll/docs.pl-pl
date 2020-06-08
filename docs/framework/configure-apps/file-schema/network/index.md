@@ -1,5 +1,6 @@
 ---
 title: Schemat ustawień sieci
+description: Informacje o schemacie dla ustawień sieci, które określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem i obsługuje identyfikatory URI.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a22d7f1608db2e8909d0ead11e9110ec8a8a2c5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504579"
 ---
 # <a name="network-settings-schema"></a>Schemat ustawień sieci
 Ustawienia sieci określają, w jaki sposób .NET Framework nawiązuje połączenie z Internetem.

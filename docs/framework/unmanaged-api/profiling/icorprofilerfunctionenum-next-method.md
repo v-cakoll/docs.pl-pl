@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: df62ad1af0ea91783cb62bb0590b6e36d812de3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864470"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503071"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next — Metoda
 Pobiera określoną liczbę funkcji ciągłych z sekwencyjnego zbioru funkcji, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
@@ -39,29 +39,29 @@ HRESULT Next([in]  ULONG      celt,
  podczas Liczba funkcji do pobrania.  
   
  `ids`  
- określoną Tablica wartości `COR_PRF_FUNCTION`, z których każdy reprezentuje pobraną funkcję.  
+ określoną Tablica `COR_PRF_FUNCTION` wartości, z których każdy reprezentuje pobraną funkcję.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby funkcji faktycznie zwracanych w tablicy `ids`.  
+ określoną Wskaźnik do liczby funkcji faktycznie zwracanych w `ids` tablicy.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|zwrócono `celt` elementów.|  
-|S_FALSE|Zwrócono mniej niż `celt` elementów, co oznacza, że Wyliczenie zostało zakończone.|  
+|S_OK|`celt`elementy zostały zwrócone.|  
+|S_FALSE|`celt`Zwrócono mniej niż elementy, co oznacza, że Wyliczenie zostało zakończone.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerFunctionEnum, interfejs](icorprofilerfunctionenum-interface.md)
+- [ICorProfilerFunctionEnum — Interfejs](icorprofilerfunctionenum-interface.md)
 - [Interfejsy profilowania](profiling-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175515"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492281"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields — Metoda
 Wylicza tokeny FieldDef dla typu, do którego odwołuje się określony token TypeDef.  
@@ -39,37 +39,37 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `cl`  
- [w] TypeDef token klasy, których pola mają być wyliczone.  
+ podczas Token TypeDef klasy, której pola mają zostać wyliczone.  
   
  `rFields`  
- [na zewnątrz] Lista tokenów FieldDef.  
+ określoną Lista tokenów FieldDef.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rFields` tablicy.  
+ podczas Maksymalny rozmiar `rFields` tablicy.  
   
  `pcTokens`  
- [na zewnątrz] Rzeczywista liczba tokenów FieldDef `rFields`zwrócona w .  
+ określoną Rzeczywista liczba tokenów FieldDef zwrócona w `rFields` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych pól do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
+|`S_OK`|`EnumFields`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak pól do wyliczenia. W takim przypadku `pcTokens` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

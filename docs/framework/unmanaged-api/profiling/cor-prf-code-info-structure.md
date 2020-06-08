@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-ms.openlocfilehash: eaab5b7faeac3dd0fb64f0a387f437af44e7bc12
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9dbe0219f5932a9d212edaf5181b96335c47db0e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501017"
 ---
 # <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO — Struktura
 Reprezentuje jeden ciągły blok kodu natywnego przechowywanego w pamięci.  
@@ -35,19 +35,19 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`startAddress`|Adres początkowy ciągłego bloku kodu.|  
 |`size`|Rozmiar bloku.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

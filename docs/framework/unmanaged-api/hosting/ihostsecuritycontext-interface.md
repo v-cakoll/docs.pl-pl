@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: bf8e725908177d9a15407b096f68cbcb947c7a01
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f6e25bfe11880730f6f447ccc0406d716d185624
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804155"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501498"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext — Interfejs
 Umożliwia środowisko uruchomieniowe języka wspólnego (CLR), aby zachować informacje kontekstu zabezpieczeń zaimplementowane przez hosta.  
@@ -28,7 +28,7 @@ Umożliwia środowisko uruchomieniowe języka wspólnego (CLR), aby zachować in
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Capture, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|Pobiera klon `IHostSecurityContext` wystąpienia zwróconego z wywołania do [IHostSecurityManager:: GetSecurityContext —](ihostsecuritymanager-getsecuritycontext-method.md).|  
+|[Capture, metoda](ihostsecuritycontext-capture-method.md)|Pobiera klon `IHostSecurityContext` wystąpienia zwróconego z wywołania do [IHostSecurityManager:: GetSecurityContext —](ihostsecuritymanager-getsecuritycontext-method.md).|  
   
 ## <a name="remarks"></a>Uwagi  
  Host może kontrolować cały dostęp kodu do tokenów wątków przez środowisko CLR i kod użytkownika. Może także zapewnić, że pełne informacje kontekstu zabezpieczeń są przesyłane przez operacje asynchroniczne lub punkty kodowe z ograniczonym dostępem do kodu. `IHostSecurityContext`hermetyzuje informacje kontekstu zabezpieczeń, które są nieprzezroczyste dla środowiska uruchomieniowego. Środowisko uruchomieniowe przechwytuje te informacje przy użyciu `Capture` i przenosi je między elementami roboczymi puli wątków, wykonywaniem finalizatora oraz konstruktorami modułów i klas.  
@@ -42,7 +42,7 @@ Umożliwia środowisko uruchomieniowe języka wspólnego (CLR), aby zachować in
   
  **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ICLRHostProtectionManager, interfejs](iclrhostprotectionmanager-interface.md)
 - [IHostSecurityManager, interfejs](ihostsecuritymanager-interface.md)

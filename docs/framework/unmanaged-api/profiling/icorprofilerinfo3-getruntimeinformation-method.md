@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496402"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation — Metoda
 Zawiera informacje o wersji dotyczące PROFILOWANEGO środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -43,7 +43,7 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametry  
  `pClrInstanceId`  
- określoną Identyfikator reprezentatywny uruchomionego wystąpienia środowiska CLR w procesie. Jest to taka sama jak `ClrInstanceID`, w których są zgłaszane zdarzenia uruchamiania śledzenie zdarzeń systemu Windows (ETW).  
+ określoną Identyfikator reprezentatywny uruchomionego wystąpienia środowiska CLR w procesie. Jest to takie samo, jak `ClrInstanceID` raport zdarzenia uruchamiania śledzenie zdarzeń systemu Windows (ETW).  
   
  `pRuntimeType`  
  określoną Typ środowiska uruchomieniowego. Ten parametr zwraca `COR_PRF_DESKTOP_CLR` dla wersji klasycznej środowiska CLR lub `COR_PRF_CORE_CLR` dla podstawowej wersji środowiska CLR używanej w technologii Silverlight.  
@@ -61,10 +61,10 @@ HRESULT GetRuntimeInformation(
  określoną Numer wersji środowiska CLR skojarzonego z aktualizacją oprogramowania.  
   
  `cchVersionString`  
- podczas Długość (w znakach) bufora, do którego `szVersionString` wskazuje.  
+ podczas Długość (w znakach) bufora, który `szVersionString` wskazuje.  
   
  `pcchVersionString`  
- określoną Długość (w znakach) `szVersionString`.  
+ określoną Długość, w znakach, z `szVersionString` .  
   
  `szVersionString`  
  określoną Ciąg wersji środowiska CLR.  
@@ -73,13 +73,13 @@ HRESULT GetRuntimeInformation(
  Dla dowolnego parametru można przekazać wartość null. Jednak `pcchVersionString` nie może mieć wartości null, chyba że `szVersionString` ma również wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

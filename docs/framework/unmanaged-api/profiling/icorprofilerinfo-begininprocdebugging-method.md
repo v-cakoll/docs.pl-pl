@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5c82c69-99f8-4447-aee0-42cca0a5eb5c
 topic_type:
 - apiref
-ms.openlocfilehash: c14979fa711145b9f1a134f90d7450b24e6d8a15
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f0b118ef109d0adb17a28b60c091390b8e4280c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864300"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498664"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging — Metoda
 Inicjuje obsługę debugowania w procesie. Ta metoda jest przestarzała w .NET Framework w wersji 2,0.  
@@ -35,7 +35,7 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>Parametry  
  `fThisThreadOnly`  
- podczas Ustaw tę wartość na `true`, aby zainicjować obsługę debugowania tylko dla bieżącego wątku; Ustaw ją na `false`, aby zainicjować obsługę debugowania dla wszystkich wątków.  
+ podczas Ustaw tę wartość na `true` , aby zainicjować obsługę debugowania tylko dla bieżącego wątku; ustaw ją na `false` w celu zainicjowania obsługi debugowania dla wszystkich wątków.  
   
  `pdwProfilerContext`  
  określoną Wskaźnik do zwracanej wartości, która identyfikuje sesję debugowania.  
@@ -44,7 +44,7 @@ HRESULT BeginInprocDebugging(
  Usługi debugowania CLR obsługiwały ograniczone debugowanie w procesie w .NET Framework wersje 1,0 i 1,1. Debugowanie w procesie umożliwia profilerowi użycie części inspekcji interfejsu API debugowania. Jednak ze względu na Opinie klientów, debugowanie w procesie zostało usunięte z .NET Framework w wersji 2,0 i zastąpione zestawem funkcji, który jest bardziej aktualny z profilem API profilowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   

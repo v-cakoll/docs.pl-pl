@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503825"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec — Metoda
-Tworzy ogólne wystąpienie metody i pobiera token do definicji.  
+Tworzy wystąpienie ogólne metody i pobiera token do definicji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Parametry  
  `tkParent`  
- [w] Token dla metody, której można utworzyć wystąpienie ogólne. Token musi być `mdMethodDef` typu `mdMemberRef`lub .  
+ podczas Token dla metody tworzenia wystąpienia ogólnego. Token musi być typu `mdMethodDef` lub `mdMemberRef` .  
   
  `pvSigBlob`  
- [w] Wskaźnik do binarnego sygnatury COM+ metody.  
+ podczas Wskaźnik do binarnego podpisu COM+ metody.  
   
  `cbSibBlob`  
- [w] Rozmiar w bajtach `pvSigBlob`.  
+ podczas Rozmiar, w bajtach, z `pvSigBlob` .  
   
  `pmi`  
- [na zewnątrz] Token do definicji podpisu metadanych metody.  
+ określoną Token do definicji sygnatury metadanych metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](imetadataemit2-interface.md)
+- [IMetaDataEmit — Interfejs](imetadataemit-interface.md)

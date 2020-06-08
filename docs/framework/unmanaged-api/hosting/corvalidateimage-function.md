@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493477"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage — Funkcja
 Sprawdza poprawność obrazów modułu zarządzanego i powiadamia program ładujący system operacyjny po ich załadowaniu.  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - Zwraca do modułu ładującego po załadowaniu obrazów modułu zarządzanego.  
   
- W przypadku obrazów wykonywalnych program ładujący systemu operacyjnego wywołuje funkcję [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , niezależnie od punktu wejścia określonego w pliku wykonywalnym. W przypadku obrazów zestawów bibliotek DLL moduł ładujący wywołuje funkcję [_CorDllMain](cordllmain-function.md) .  
+ W przypadku obrazów wykonywalnych program ładujący systemu operacyjnego wywołuje funkcję [_CorExeMain](corexemain-function.md) , niezależnie od punktu wejścia określonego w pliku wykonywalnym. W przypadku obrazów zestawów bibliotek DLL moduł ładujący wywołuje funkcję [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`lub `_CorDllMain` wykonuje następujące akcje:  
   

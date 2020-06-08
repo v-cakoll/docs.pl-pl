@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175294"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490448"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps — Metoda
-Pobiera podpis metadanych metody, do którego odwołuje się określony token MethodSpec.  
+Pobiera sygnaturę metadanych metody przywoływanej przez określony token elementu MethodSpec.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>Parametry  
  `mi`  
- [w] A MethodSpec token, który reprezentuje wystąpienie metody.  
+ podczas Token elementu MethodSpec, który reprezentuje Tworzenie wystąpienia metody.  
   
  `tkParent`  
- [na zewnątrz] Wskaźnik do MethodDef lub MethodRef token, który reprezentuje definicję metody.  
+ określoną Wskaźnik do tokenu MethodDef lub MethodRef, który reprezentuje definicję metody.  
   
  `ppvSigBlob`  
- [na zewnątrz] Wskaźnik do podpisu binarnych metadanych metody.  
+ określoną Wskaźnik do binarnego podpisu metadanych metody.  
   
  `pcbSigBlob`  
- [na zewnątrz] Rozmiar w bajtach `ppvSigBlob`.  
+ określoną Rozmiar, w bajtach, z `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)

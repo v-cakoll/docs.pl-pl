@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 05dbbe2b-049c-4a60-be69-2ad7a949405e
 topic_type:
 - apiref
-ms.openlocfilehash: 10e84b729c8af607165009a8591a69dbc1afcb1e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8027cdcde8281c363207e309bf65fcd90c03b626
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868385"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495635"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>Metoda ICorProfilerInfo5::SetEventMask2
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -39,18 +39,18 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
  podczas Wartość 4-bajtowa, która określa kategorie zdarzeń.  Każdy bit steruje inną możliwością, zachowaniem lub typem zdarzenia. Bity są opisane w [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md) Wyliczenie.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `SetEventMask2` służy do ustawiania wywołań zwrotnych, do których jest subskrybowany Profiler. Zazwyczaj należy wywołać metodę [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) , aby określić, które bity są ustawione, wykonywać wartości logiczne lub `pdwEventsLow` i `pdwEventsHigh`, a także wszelkie nowe bity, które chcesz ustawić, a następnie wywołać metodę `SetEventMask2`.  
+ `SetEventMask2`Metoda służy do ustawiania wywołań zwrotnych, do których jest subskrybowany Profiler. Zazwyczaj należy wywołać metodę [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) , aby określić, które bity są ustawione, wykonać wartość logiczną lub jego `pdwEventsLow` wartości oraz `pdwEventsHigh` wszystkie nowe bity, które mają zostać ustawione, a następnie wywołać `SetEventMask2` metodę.  
   
  Ta metoda jest zalecaną alternatywą dla metody [SetEventMask](icorprofilerinfo-seteventmask-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

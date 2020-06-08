@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-ms.openlocfilehash: 49e154ade91ea1a207645f924bd8aea1dbdb635c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a0f5316900dedc6c8983f9e670f60767ed783a40
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493997"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback — Funkcja
 Zapewnia profilerowi informacje o każdej zarządzanej ramce i każdym uruchomieniu niezarządzanych ramek na stosie podczas przechodzenia stosu, który jest inicjowany przez [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .  
@@ -45,32 +45,32 @@ HRESULT __stdcall StackSnapshotCallback (
  podczas Wartość wskaźnika instrukcji kodu natywnego w ramce.  
   
  `frameInfo`  
- podczas Wartość `COR_PRF_FRAME_INFO`, która odwołuje się do informacji o ramce stosu. Ta wartość jest prawidłowa do użycia tylko w trakcie tego wywołania zwrotnego.  
+ podczas `COR_PRF_FRAME_INFO`Wartość, która odwołuje się do informacji o ramce stosu. Ta wartość jest prawidłowa do użycia tylko w trakcie tego wywołania zwrotnego.  
   
  `contextSize`  
- podczas Rozmiar struktury `CONTEXT`, do której odwołuje się parametr `context`.  
+ podczas Rozmiar `CONTEXT` struktury, do której odwołuje się `context` parametr.  
   
  `context`  
- podczas Wskaźnik do struktury `CONTEXT` Win32, który reprezentuje stan procesora CPU dla tej ramki.  
+ podczas Wskaźnik do `CONTEXT` struktury Win32, który reprezentuje stan procesora CPU dla tej ramki.  
   
- Parametr `context` jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT została przeniesiona w `ICorProfilerInfo2::DoStackSnapshot`.  
+ `context`Parametr jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT została przeniesiona `ICorProfilerInfo2::DoStackSnapshot` .  
   
  `clientData`  
- podczas Wskaźnik do danych klienta, który jest przenoszona bezpośrednio przez z `ICorProfilerInfo2::DoStackSnapshot`.  
+ podczas Wskaźnik do danych klienta, który jest przenoszona bezpośrednio przez z `ICorProfilerInfo2::DoStackSnapshot` .  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcja `StackSnapshotCallback` jest implementowana przez moduł zapisujący profilera. Należy ograniczyć złożoność pracy wykonywanej w `StackSnapshotCallback`. Na przykład w przypadku używania `ICorProfilerInfo2::DoStackSnapshot` w sposób asynchroniczny wątek docelowy może być zablokowany. Jeśli kod w `StackSnapshotCallback` wymaga tych samych blokad, może nastąpić zakleszczenie.  
+ `StackSnapshotCallback`Funkcja jest implementowana przez moduł zapisujący profilera. Należy ograniczyć złożoność pracy wykonywanej w programie `StackSnapshotCallback` . Na przykład w przypadku użycia `ICorProfilerInfo2::DoStackSnapshot` w sposób asynchroniczny wątek docelowy może być zablokowany. Jeśli kod w ramach `StackSnapshotCallback` wymaga tych samych blokad, może nastąpić zakleszczenie.  
   
- Metoda `ICorProfilerInfo2::DoStackSnapshot` wywołuje funkcję `StackSnapshotCallback` raz dla każdej zarządzanej ramki lub raz na uruchomienie niezarządzanych ramek. Jeśli `StackSnapshotCallback` jest wywoływana w przypadku uruchamiania ramek niezarządzanych, profiler może użyć kontekstu rejestru (przywoływanego przez parametr `context`) do wykonania własnego przeszukiwania niezarządzanego stosu. W takim przypadku struktura `CONTEXT` Win32 reprezentuje stan procesora dla ostatnio wypchniętej ramki w ramach przebiegu ramek niezarządzanych. Mimo że struktura `CONTEXT` Win32 zawiera wartości dla wszystkich rejestrów, należy polegać tylko na wartościach rejestru wskaźnika stosu, rejestracji wskaźnika ramki, rejestru wskaźnika instrukcji i nietrwałych (przechowywanych) rejestrów liczb całkowitych.  
+ `ICorProfilerInfo2::DoStackSnapshot`Metoda wywołuje `StackSnapshotCallback` funkcję jeden raz dla każdej zarządzanej ramki lub raz na uruchomienie niezarządzanych ramek. Jeśli `StackSnapshotCallback` jest wywoływana w przypadku uruchamiania ramek niezarządzanych, profiler może użyć kontekstu rejestru (przywoływanego przez `context` parametr) do wykonania własnego przeszukiwania niezarządzanego stosu. W takim przypadku `CONTEXT` Struktura Win32 reprezentuje stan procesora dla ostatnio wypchniętej ramki w ramach przebiegu ramek niezarządzanych. Chociaż struktura Win32 `CONTEXT` zawiera wartości dla wszystkich rejestrów, należy polegać tylko na wartościach rejestru wskaźnika stosu, rejestracji wskaźnika ramki, rejestracji wskaźnika instrukcji i nietrwałych (przechowywanych) rejestrów liczb całkowitych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53b1234a176cade5876d70da0cb4eadc18802c69
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177371"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492307"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents — Metoda
 Wylicza tokeny definicji zdarzeń dla określonego tokenu TypeDef.  
@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, na zewnątrz] Wskaźnik do wyliczacza.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `td`  
- [w] TypeDef token, którego definicje zdarzeń mają być wyliczone.  
+ podczas Token TypeDef, którego definicje zdarzeń mają zostać wyliczone.  
   
  `rEvents`  
- [na zewnątrz] Tablica zwróconych zdarzeń.  
+ określoną Tablica zwracanych zdarzeń.  
   
  `cMax`  
- [w] Maksymalny rozmiar `rEvents` tablicy.  
+ podczas Maksymalny rozmiar `rEvents` tablicy.  
   
  `pcEvents`  
- [na zewnątrz] Rzeczywista liczba zdarzeń `rEvents`zwróconych w .  
+ określoną Rzeczywista liczba zdarzeń zwrócona w `rEvents` .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents`zwrócono pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych zdarzeń do wyliczenia. W takim `pcEvents` przypadku wynosi zero.|  
+|`S_OK`|`EnumEvents`pomyślnie zwrócono.|  
+|`S_FALSE`|Brak zdarzeń do wyliczenia. W takim przypadku `pcEvents` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport — Interfejs](imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](imetadataimport2-interface.md)

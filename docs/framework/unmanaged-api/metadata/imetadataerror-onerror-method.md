@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2252f58af1a319d953fb320a99fad1cfec3dca0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177396"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492723"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError — Metoda
-Zawiera powiadomienia o błędach występujących podczas scalania metadanych.  
+Zawiera powiadomienie o błędach występujących podczas scalania metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parametry  
  `hrError`  
- [w] Wartość błędu HRESULT zwrócona do metody wywołującej.  
+ podczas Wartość błędu HRESULT zwracana do metody wywołującej.  
   
  `token`  
- [w] Token metadanych obiektu kodu, który był scalany po wystąpieniu błędu.  
+ podczas Token metadanych obiektu kodu, który został scalony po wystąpieniu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Okręg wyborczy Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataError — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [IMetaDataError — Interfejs](imetadataerror-interface.md)

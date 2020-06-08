@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-ms.openlocfilehash: c287b630aee58c6795ef405cc1801149e220fd51
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 58d11e9084f53c69f2656b4f0ee6bc7d2cc4ae21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868424"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495869"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 — Interfejs
-Zapewnia metody, które są używane przez program codeer do komunikowania się ze środowiskiem uruchomieniowym języka wspólnego (CLR) w celu kontrolowania informacji o monitorowaniu zdarzeń i żądaniach. . Interfejs `ICorProfilerInfo4` jest rozszerzeniem innych interfejsów `ICorProfilerInfo`. Udostępnia nowe metody obsługi ponownej kompilacji just-in-Time (JIT), dodane w .NET Framework 4,5.  
+Zapewnia metody, które są używane przez program codeer do komunikowania się ze środowiskiem uruchomieniowym języka wspólnego (CLR) w celu kontrolowania informacji o monitorowaniu zdarzeń i żądaniach. . `ICorProfilerInfo4`Interfejs jest rozszerzeniem innych `ICorProfilerInfo` interfejsów. Udostępnia nowe metody obsługi ponownej kompilacji just-in-Time (JIT), dodane w .NET Framework 4,5.  
   
 ## <a name="methods"></a>Metody  
   
@@ -40,16 +40,16 @@ Zapewnia metody, które są używane przez program codeer do komunikowania się 
 |[RequestRevert, metoda](icorprofilerinfo4-requestrevert-method.md)|Przywraca oryginalne wersje wszystkich wystąpień określonych funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR implementuje metody interfejsu `ICorProfilerInfo4` przy użyciu modelu typu wolny-wątek. Każda metoda zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie. Aby uzyskać listę możliwych kodów powrotu, zobacz plik CorError. h.  
+ Środowisko CLR implementuje metody `ICorProfilerInfo4` interfejsu przy użyciu modelu typu "wolny-wątek". Każda metoda zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie. Aby uzyskać listę możliwych kodów powrotu, zobacz plik CorError. h.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

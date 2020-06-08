@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::DynamicMethodJITCompilationStarted Metoda
+title: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted Metoda
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,17 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: e8b1a243b691d8d5eb364fd16821fd9156505c60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4c434c5d458602db8a4d582b239d6e57def6ace
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177049"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499002"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted Metoda
-[Obsługiwane w .NET Framework 4.7 i nowszych wersjach]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted Metoda
+[Obsługiwane w .NET Framework 4,7 i nowszych wersjach]  
   
-Powiadamia profiler przy każdym uruchomieniu kompilacji JIT metody dynamicznej.  
+Powiadamia profiler za każdym razem, gdy została rozpoczęta kompilacja JIT metody dynamicznej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,11 +32,11 @@ HRESULT DynamicMethodJITCompilationStarted(
 ```  
   
 ## <a name="parameters"></a>Parametry  
-[w]`functionId`  
-Identyfikator funkcji w pamięci, dla której jest uruchomiona kompilacja JIT.
+podczas`functionId`  
+Identyfikator funkcji w pamięci, dla której uruchomiono kompilację JIT.
 
-[w] `fIsSafeToBlock` aby wskazać, że blokowanie może spowodować, że środowisko uruchomieniowe czekać na wątek wywołujący do powrotu z tego wywołania zwrotnego; 
- `true` `false` , aby wskazać, że blokowanie nie wpłynie na działanie środowiska wykonawczego.  
+[w] `fIsSafeToBlock` 
+ `true` Aby wskazać, że blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; `false`, aby wskazać, że blokowanie nie wpłynie na działanie środowiska uruchomieniowego.  
 
 [w] `pILHeader` Wskaźnik do pierwszego bajtu nagłówka IL metody.
 
@@ -44,23 +44,23 @@ Identyfikator funkcji w pamięci, dla której jest uruchomiona kompilacja JIT.
 
 ## <a name="remarks"></a>Uwagi  
 
-To wywołanie zwrotne jest wyzwalane, gdy metoda dynamiczna jest skompilowana przez JIT. Obejmuje to różne wycinki IL i metody LCG. Jego celem jest dostarczenie pisarzom profilerów wystarczającej ilości informacji, aby zidentyfikować skompilowaną metodę dla użytkowników.
+To wywołanie zwrotne jest wyzwalane za każdym razem, gdy metoda dynamiczna jest skompilowana w trybie JIT. Obejmuje to różne metody pośredniczące IL i LCG. Celem jest zapewnienie autorom profilera wystarczającej ilości informacji do zidentyfikowania skompilowanej metody dla użytkowników.
 
 > [!NOTE]
-> `functionId`wartości nie mogą być używane do rozpoznawania ich tokenów metadanych, ponieważ metody dynamiczne nie mają metadanych.
+> `functionId`wartości nie można użyć do rozpoznania ich tokenów metadanych, ponieważ metody dynamiczne nie mają metadanych.
 
-Wskaźnik `pILHeader` jest prawidłowy tylko podczas wywołania zwrotnego.
+`pILHeader`Wskaźnik jest prawidłowy tylko podczas wywołania zwrotnego.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [DynamicMethodJITCompilationFinished, metoda](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [ICorProfilerCallback8, interfejs](icorprofilercallback8-interface.md)

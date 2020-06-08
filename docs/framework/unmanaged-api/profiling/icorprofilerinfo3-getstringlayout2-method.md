@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a268496-ee51-4d84-8700-ee56fd0c499d
 topic_type:
 - apiref
-ms.openlocfilehash: f3727343755d7014202f844be28414d31ce55bc1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 51d5b2f2ee17cc177e3b0ddc7d2e0b82fd70063d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496376"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 — Metoda
 Pobiera informacje o układzie obiektu ciągu. Ta metoda zastępuje metodę [ICorProfilerInfo2:: GetStringLayout —](icorprofilerinfo2-getstringlayout-method.md) .  
@@ -35,22 +35,22 @@ HRESULT GetStringLayout2(
   
 ## <a name="parameters"></a>Parametry  
  `pStringLengthOffset`  
- określoną Wskaźnik do przesunięcia lokalizacji względem wskaźnika `ObjectID`, w którym jest przechowywana długość ciągu. Długość jest przechowywana jako `DWORD`.  
+ określoną Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, w którym jest przechowywana długość ciągu. Długość jest przechowywana jako `DWORD` .  
   
  `pBufferOffset`  
- określoną Wskaźnik do przesunięcia buforu względem wskaźnika `ObjectID`, w którym jest przechowywany ciąg znaków dwubajtowych.  
+ określoną Wskaźnik do przesunięcia buforu, względem `ObjectID` wskaźnika, który przechowuje ciąg znaków dwubajtowych.  
   
 ## <a name="remarks"></a>Uwagi  
  Ciągi mogą lub nie mogą być zakończone znakiem null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf. idl, CorProf. h  
   
  **Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework wersje:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

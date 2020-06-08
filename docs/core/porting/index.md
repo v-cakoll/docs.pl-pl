@@ -3,12 +3,12 @@ title: Przenoszenie z programu .NET Framework na platformę .NET Core
 description: Poznaj proces przenoszenia i odnajdywanie narzędzi, które mogą okazać się przydatne podczas przenoszenia projektu .NET Framework do programu .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158291"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502772"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Przegląd portów z .NET Framework do platformy .NET Core
 
@@ -38,7 +38,10 @@ W przypadku wielu projektów w rozwiązaniu port może wydawać się bardziej sk
 Aby można było zidentyfikować projekty zamówień, można użyć następujących narzędzi:
 
 - [Diagramy zależności w programie Visual Studio](/visualstudio/modeling/create-layer-diagrams-from-your-code) mogą utworzyć ukierunkowany wykres kodu w rozwiązaniu.
-- Uruchom `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` , aby wygenerować dokument JSON zawierający listę odwołań projektu.
+- Uruchom, `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` Aby wygenerować dokument JSON zawierający listę odwołań projektu.
+- Uruchom [Analizator przenośności platformy .NET](../../standard/analyzers/portability-analyzer.md) z `-r DGML` przełącznikiem, aby pobrać diagram zależności zestawów. Aby uzyskać więcej informacji, zobacz [tutaj](../../standard/analyzers/portability-analyzer.md#solution-wide-view).
+
+Gdy informacje o zależnościach są dostępne, można użyć tych informacji do uruchomienia w węzłach liścia i przeprowadzić Cię przez drzewo zależności, stosując kroki opisane w następnej sekcji.
 
 ## <a name="per-project-steps"></a>Na kroki projektu
 
@@ -66,7 +69,7 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 
    Podczas odczytywania raportów wygenerowanych przez analizatora ważne informacje to rzeczywiste interfejsy API, które są używane, a nie musi to być procent obsługi platformy docelowej. Wiele interfejsów API ma równoważne opcje w .NET Standard/Core i dlatego zrozumienie scenariuszy, w których biblioteka lub aplikacja potrzebuje interfejsu API, aby pomóc w ustaleniu implikacji przenoszenia.
 
-   Istnieją sytuacje, w których interfejsy API nie są równoważne i należy wykonać niektóre dyrektywy preprocesora kompilatora (czyli), `#if NET45`w specjalnym przypadku platform. W tym momencie projekt nadal będzie ukierunkowany na .NET Framework. W przypadku każdego z tych celów zaleca się użycie dobrze znanych warunków, które można zrozumieć jako scenariusz.  Na przykład obsługa AppDomain w programie .NET Core jest ograniczona, ale w przypadku scenariusza ładowania i zwalniania zestawów istnieje nowy interfejs API, który jest niedostępny w programie .NET Core. Typowy sposób obsługi tego kodu w kodzie będzie wyglądać następująco:
+   Istnieją sytuacje, w których interfejsy API nie są równoważne i należy wykonać niektóre dyrektywy preprocesora kompilatora (czyli `#if NET45` ), w specjalnym przypadku platform. W tym momencie projekt nadal będzie ukierunkowany na .NET Framework. W przypadku każdego z tych celów zaleca się użycie dobrze znanych warunków, które można zrozumieć jako scenariusz.  Na przykład obsługa AppDomain w programie .NET Core jest ograniczona, ale w przypadku scenariusza ładowania i zwalniania zestawów istnieje nowy interfejs API, który jest niedostępny w programie .NET Core. Typowy sposób obsługi tego kodu w kodzie będzie wyglądać następująco:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -78,7 +81,7 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
    #endif
    ```
 
-1. Zainstaluj [Analizator interfejsów API platformy .NET](../../standard/analyzers/api-analyzer.md) w swoich projektach, aby identyfikować <xref:System.PlatformNotSupportedException> interfejsy API, które zgłaszają na niektórych platformach i inne potencjalne problemy ze zgodnością.
+1. Zainstaluj [Analizator interfejsów API platformy .NET](../../standard/analyzers/api-analyzer.md) w swoich projektach, aby identyfikować interfejsy API, które <xref:System.PlatformNotSupportedException> zgłaszają na niektórych platformach i inne potencjalne problemy ze zgodnością.
 
    To narzędzie jest podobne do analizatora przenośności, ale zamiast analizowania, czy kod może kompilować na platformie .NET Core, analizuje, czy używasz interfejsu API w sposób, który będzie <xref:System.PlatformNotSupportedException> zgłaszać w czasie wykonywania. Chociaż nie jest to typowe w przypadku przechodzenia z .NET Framework 4.7.2 lub wyższym, warto sprawdzić. Aby uzyskać więcej informacji na temat interfejsów API, które generują wyjątki w programie .NET Core, zobacz [interfejsy API, które zawsze generują wyjątki w programie .NET Core](../compatibility/unsupported-apis.md).
 
@@ -109,6 +112,6 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
-> [Analizowanie](third-party-deps.md)
-> 
-> [pakietu NuGet pakietu](../deploying/creating-nuget-packages.md)[programu zależności ASP.NET do migracji ASP.NET Core](/aspnet/core/migration/proper-to-2x)
+> [Analizowanie zależności](third-party-deps.md) 
+>  [Pakiet](../deploying/creating-nuget-packages.md) 
+>  NuGet pakietu [ASP.NET Core ASP.NET migracji](/aspnet/core/migration/proper-to-2x)

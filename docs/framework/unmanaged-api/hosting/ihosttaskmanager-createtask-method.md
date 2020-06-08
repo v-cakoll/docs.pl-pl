@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501420"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask — Metoda
 Żąda utworzenia nowego zadania przez hosta.  
@@ -47,7 +47,7 @@ HRESULT CreateTask (
  podczas Wskaźnik do danych użytkownika, który ma zostać przesłany do funkcji, lub wartość null, jeśli funkcja nie przyjmuje żadnych parametrów.  
   
  `ppTask`  
- określoną Wskaźnik do adresu wystąpienia [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) utworzonego przez hosta lub wartość null, jeśli nie można utworzyć zadania. Zadanie pozostaje w stanie wstrzymania, dopóki nie zostanie jawnie uruchomione przez wywołanie [IHostTask:: Start](ihosttask-start-method.md).  
+ określoną Wskaźnik do adresu wystąpienia [IHostTask](ihosttask-interface.md) utworzonego przez hosta lub wartość null, jeśli nie można utworzyć zadania. Zadanie pozostaje w stanie wstrzymania, dopóki nie zostanie jawnie uruchomione przez wywołanie [IHostTask:: Start](ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
   

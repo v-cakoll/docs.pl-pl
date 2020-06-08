@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493672"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
 
@@ -86,7 +86,7 @@ Wykonanie listy instrukcji w sekcji Switch z etykietą Case, która pasuje do wy
 
 Każda etykieta przypadku określa wzorzec do porównania z wyrażeniem dopasowania ( `caseSwitch` zmienna w poprzednich przykładach). Jeśli są one zgodne, sterowanie jest przekazywane do sekcji Switch, która zawiera **pierwszą** pasującą etykietę case. Jeśli żaden wzorzec etykiety case nie jest zgodny z wyrażeniem Match, formant jest przenoszony do sekcji z `default` etykietą przypadku, jeśli istnieje. Jeśli nie ma żadnego `default` przypadku, nie są wykonywane żadne instrukcje, a kontrolka jest transferowana poza `switch` instrukcją.
 
-Aby uzyskać informacje na temat `switch` dopasowania do instrukcji i wzorca, zobacz Zgodność [wzorca z sekcją `switch` instrukcji](#pattern) .
+Aby uzyskać informacje na temat `switch` dopasowania do instrukcji i wzorca, zobacz Zgodność [wzorca z sekcją `switch` instrukcji](#pattern-matching with-the-switch-statement) .
 
 Ponieważ C# 6 obsługuje tylko wzorce stałe i nie zezwala na powtarzanie wartości stałych, etykiety przypadków definiują wzajemnie wykluczające się wartości, a tylko jeden wzorzec może być zgodny z wyrażeniem Match. W związku z tym kolejność, w której `case` wyświetlane są instrukcje, jest nieważna.
 
@@ -100,7 +100,7 @@ Możesz rozwiązać ten problem i wyeliminować Ostrzeżenie kompilatora na jede
 
 - Zmieniając kolejność sekcji Switch.
 
-- Za pomocą [klauzuli when](#when) w `case` etykiecie.
+- Za pomocą [klauzuli when](#the-case-statement-and-the-when-clause) w `case` etykiecie.
 
 ## <a name="the-default-case"></a>`default`Wielkość liter
 
@@ -108,7 +108,7 @@ Możesz rozwiązać ten problem i wyeliminować Ostrzeżenie kompilatora na jede
 
 `default`Przypadek może pojawić się w dowolnej kolejności w `switch` instrukcji. Bez względu na jego kolejność w kodzie źródłowym jest zawsze Szacowana jako Ostatnia, po `case` ocenie wszystkich etykiet.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a>Dopasowanie wzorca do `switch` instrukcji
+## <a name="pattern-matching-with-the-switch-statement"></a>Dopasowanie wzorca do `switch` instrukcji
 
 Każda `case` instrukcja definiuje wzorzec, który jest zgodny z wyrażeniem Match, powoduje, że jego sekcja Switch zostanie wykonana. Wszystkie wersje języka C# obsługują stałe wzorce. Pozostałe wzorce są obsługiwane począwszy od języka C# 7,0.
 
@@ -185,7 +185,7 @@ Bez dopasowania do wzorca ten kod może być zapisany w następujący sposób. U
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case`Instrukcja i `when` klauzula
+## <a name="the-case-statement-and-the-when-clause"></a>`case`Instrukcja i `when` klauzula
 
 Począwszy od języka C# 7,0, ponieważ instrukcje Case nie muszą się wzajemnie wykluczać, można dodać `when` klauzulę, aby określić dodatkowy warunek, który musi być spełniony dla instrukcji case, aby obliczyć wartość true. `when`Klauzula może być dowolnym wyrażeniem zwracającym wartość logiczną.
 

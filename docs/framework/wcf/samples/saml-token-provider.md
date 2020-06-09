@@ -2,12 +2,12 @@
 title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: db1307b0f440f8bd55f1728b6645aec706dfe442
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602417"
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
 Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów SAML klienta. Dostawca tokenu w Windows Communication Foundation (WCF) służy do dostarczania poświadczeń do infrastruktury zabezpieczeń. Dostawca tokenu ogólnie bada cel i wystawia odpowiednie poświadczenia, aby infrastruktura zabezpieczeń mogła zabezpieczyć komunikat. Usługa WCF jest dostarczana z domyślnym dostawcą tokenu Menedżera poświadczeń. Usługa WCF jest również dostarczana z dostawcą tokenu programu CardSpace. Dostawcy tokenów niestandardowych są przydatne w następujących przypadkach:
@@ -30,7 +30,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 - Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X. 509 serwera.
 
- Usługa udostępnia dwa punkty końcowe do komunikacji z usługą, zdefiniowane przy użyciu pliku konfiguracji App. config. Każdy punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardowego `wsFederationHttpBinding`, który używa zabezpieczeń komunikatów. Jeden z punktów końcowych oczekuje, że klient uwierzytelnia się za pomocą tokenu SAML, który używa symetrycznego klucza testowego, podczas gdy drugi oczekuje, że klient uwierzytelnia się za pomocą tokenu SAML, który używa klucza nieasymetrycznego dowodu. Usługa konfiguruje również certyfikat usługi przy użyciu zachowania `serviceCredentials`. Zachowanie `serviceCredentials` pozwala konfigurować certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu "localhost" zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w instrukcji konfiguracyjnych na końcu tego tematu. Zachowanie `serviceCredentials` pozwala także skonfigurować certyfikaty, które są zaufane do podpisywania tokenów SAML. Następująca konfiguracja odwołuje się do certyfikatu "Alicja" zainstalowanego podczas próby.
+ Usługa udostępnia dwa punkty końcowe do komunikacji z usługą, zdefiniowane przy użyciu pliku konfiguracji App. config. Każdy punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardu `wsFederationHttpBinding` , który używa zabezpieczeń komunikatów. Jeden z punktów końcowych oczekuje, że klient uwierzytelnia się za pomocą tokenu SAML, który używa symetrycznego klucza testowego, podczas gdy drugi oczekuje, że klient uwierzytelnia się za pomocą tokenu SAML, który używa klucza nieasymetrycznego dowodu. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowania. `serviceCredentials`Zachowanie umożliwia skonfigurowanie certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu "localhost" zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w instrukcji konfiguracyjnych na końcu tego tematu. `serviceCredentials`Zachowanie umożliwia również Konfigurowanie certyfikatów, które są zaufane do podpisywania tokenów SAML. Następująca konfiguracja odwołuje się do certyfikatu "Alicja" zainstalowanego podczas próby.
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
      Przykład implementuje niestandardowego dostawcę tokenów SAML, który zwraca token zabezpieczający na podstawie potwierdzenia SAML dostarczonego w czasie konstruowania.
 
-     Aby wykonać to zadanie, dostawca niestandardowego tokenu pochodzi od klasy <xref:System.IdentityModel.Selectors.SecurityTokenProvider> i zastępuje metodę <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Ta metoda tworzy i zwraca nowe `SecurityToken`.
+     Aby wykonać to zadanie, dostawca niestandardowego tokenu pochodzi od <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy i zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metodę. Ta metoda tworzy i zwraca nowy `SecurityToken` .
 
     ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
@@ -158,7 +158,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 2. Napisz niestandardowego menedżera tokenów zabezpieczających.
 
-     Klasa <xref:System.IdentityModel.Selectors.SecurityTokenManager> służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, które są do niego przesyłane w metodzie `CreateSecurityTokenProvider`. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z klasy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> i zastępuje metodę `CreateSecurityTokenProvider`, aby zwracała niestandardowego dostawcę tokenów SAML, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano tokenu SAML. Jeśli Klasa poświadczeń klienta (zobacz krok 3) nie określiła potwierdzenia, Menedżer tokenów zabezpieczających tworzy odpowiednie wystąpienie.
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager>Klasa jest używana do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla określonych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> , które są przesyłane do niego w `CreateSecurityTokenProvider` metodzie. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i przesłania `CreateSecurityTokenProvider` metodę w celu zwrócenia niestandardowego dostawcy TOKENów SAML, gdy spełnione wymagania dotyczące tokenu wskazują, że żądanie tokenu SAML jest żądane. Jeśli Klasa poświadczeń klienta (zobacz krok 3) nie określiła potwierdzenia, Menedżer tokenów zabezpieczających tworzy odpowiednie wystąpienie.
 
     ```csharp
     public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -304,7 +304,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 - Tworzenie certyfikatu serwera:
 
-     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna `%SERVER_NAME%` określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. `%SERVER_NAME%`Zmienna określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
 
      Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu LocalMachine.
 
@@ -328,7 +328,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 - Tworzenie certyfikatu wystawcy.
 
-     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat wystawcy, który ma być używany. Zmienna `%USER_NAME%` określa nazwę wystawcy. Zmień tę zmienną, aby określić własną nazwę wystawcy. Wartość domyślna w tym pliku wsadowym to Alicja.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat wystawcy, który ma być używany. `%USER_NAME%`Zmienna określa nazwę wystawcy. Zmień tę zmienną, aby określić własną nazwę wystawcy. Wartość domyślna w tym pliku wsadowym to Alicja.
 
      Certyfikat jest przechowywany w magazynie w lokalizacji magazynu CurrentUser.
 
@@ -352,9 +352,9 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 > [!NOTE]
 > Jeśli używasz programu Svcutil. exe w celu ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj, aby zmodyfikować nazwę punktu końcowego w konfiguracji klienta w celu dopasowania go do kodu klienta.
@@ -378,7 +378,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
 2. Skopiuj pliki programu Service Files do katalogu usługi na komputerze usługi. Skopiuj także pliki Setup. bat i Oczyść. bat do komputera usługi.  
   
-3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik Service. exe. config musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikat serwera, modyfikując plik wsadowy Setup. bat. Należy pamiętać, że plik Setup. bat musi być uruchamiany wiersz polecenia dla deweloperów w otwartym oknie programu Visual Studio z uprawnieniami administratora. Należy ustawić zmienną `%SERVER_NAME%` na w pełni kwalifikowaną nazwę hosta komputera, który jest używany do hostowania usługi.  
+3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik Service. exe. config musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikat serwera, modyfikując plik wsadowy Setup. bat. Należy pamiętać, że plik Setup. bat musi być uruchamiany wiersz polecenia dla deweloperów w otwartym oknie programu Visual Studio z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmienną na w pełni kwalifikowaną nazwę hosta komputera, który jest używany do hostowania usługi.  
   
 4. Skopiuj certyfikat serwera do magazynu CurrentUser-TrustedPeople klienta. Ten krok nie jest konieczny, gdy certyfikat serwera jest wystawiony przez zaufanego wystawcy klienta.  
   
@@ -390,7 +390,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
 8. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi.  
   
-9. Na komputerze klienckim uruchom `Client.exe` z okna wiersza polecenia.  
+9. Na komputerze klienckim uruchom `Client.exe` polecenie w oknie wiersza polecenia.  
   
 10. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   

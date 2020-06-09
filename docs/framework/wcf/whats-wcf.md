@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600857"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to platforma służąca do tworzenia aplikacji zorientowanych na usługę. Korzystając z programu WCF, można wysyłać dane jako komunikaty asynchroniczne z jednego punktu końcowego usługi do innego. Punkt końcowy usługi może być częścią stale dostępnej usługi hostowanej przez usługi IIS lub może być usługą hostowaną w aplikacji. Punktem końcowym może być klient usługi, która żąda danych z punktu końcowego usługi. Komunikaty mogą być proste jako pojedynczy znak lub słowo wysyłane jako XML lub jako strumień danych binarnych. Oto kilka przykładowych scenariuszy:
@@ -52,9 +52,9 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
 - **Kontrakty danych**
 
-     Ponieważ platforma WCF została skompilowana przy użyciu .NET Framework, zawiera również przyjazne dla kodu metody dostarczania kontraktów, które mają zostać wymuszone. Jednym z uniwersalnych typów kontraktów jest kontrakt danych. W istocie, podczas pisania kodu usługi przy użyciu wizualizacji C# lub Visual Basic, najprostszym sposobem obsługi danych jest utworzenie klas reprezentujących jednostkę danych z właściwościami należącymi do jednostki danych. Usługa WCF oferuje kompleksowy system do pracy z danymi w ten prosty sposób. Po utworzeniu klas, które reprezentują dane, usługa automatycznie generuje metadane, które umożliwiają klientom przestrzeganie typów danych, które zostały zaprojektowane. Aby uzyskać więcej informacji, zobacz [Korzystanie z kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).
+     Ponieważ platforma WCF została skompilowana przy użyciu .NET Framework, zawiera również przyjazne dla kodu metody dostarczania kontraktów, które mają zostać wymuszone. Jednym z uniwersalnych typów kontraktów jest kontrakt danych. W zasadzie, podczas pisania kodu usługi przy użyciu języka Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest utworzenie klas reprezentujących jednostkę danych z właściwościami należącymi do jednostki danych. Usługa WCF oferuje kompleksowy system do pracy z danymi w ten prosty sposób. Po utworzeniu klas, które reprezentują dane, usługa automatycznie generuje metadane, które umożliwiają klientom przestrzeganie typów danych, które zostały zaprojektowane. Aby uzyskać więcej informacji, zobacz [Korzystanie z kontraktów danych](feature-details/using-data-contracts.md).
 
-- **Security**
+- **Bezpieczeństwo**
 
      Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelniania się przed zezwoleniem na odbieranie komunikatów. Zabezpieczenia można zaimplementować przy użyciu dobrze znanych standardów, takich jak SSL lub WS-SecureConversation. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](./feature-details/security.md).
 
@@ -72,13 +72,13 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
 - **Transakcje**
 
-     WCF obsługuje również transakcje przy użyciu jednego z trzech modeli transakcji: WS-AtomicTransaction, interfejsów API w przestrzeni nazw <xref:System.Transactions> i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji na temat obsługi transakcji w programie WCF, zobacz [transakcje](./feature-details/transactions-in-wcf.md).
+     WCF obsługuje również transakcje przy użyciu jednego z trzech modeli transakcji: WS-AtomicTransaction, interfejsów API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji na temat obsługi transakcji w programie WCF, zobacz [transakcje](./feature-details/transactions-in-wcf.md).
 
 - **Obsługa technologii AJAX i REST**
 
      REST to przykład rozwijającej się technologii sieci Web 2,0. Funkcję WCF można skonfigurować do przetwarzania "zwykłych" danych XML, które nie są opakowane w kopercie protokołu SOAP. Można również rozszerzyć obsługę określonych formatów XML, takich jak ATOM (popularny Standard RSS), a nawet formatów niexml, takich jak JavaScript Object Notation (JSON).
 
-- **Rozszerzalność**
+- **Rozszerzaln**
 
      Architektura WCF ma wiele punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje kilka punktów wejścia, które umożliwiają dostosowanie zachowania usługi. Aby uzyskać więcej informacji na temat dostępnych punktów rozszerzalności, zobacz [rozszerzanie WCF](./extending/index.md).
 
@@ -94,7 +94,7 @@ Microsoft Silverlight to platforma służąca do tworzenia międzyoperacyjnych, 
 
 Funkcje hostingu serwera aplikacji systemu Windows Server AppFabric są przeznaczone specjalnie do wdrażania aplikacji, które używają programu WCF do komunikacji i zarządzania nimi. Funkcje hostingu obejmują rozbudowane narzędzia i opcje konfiguracji zaprojektowane specjalnie dla aplikacji obsługujących WCF.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel>
 - [Podstawowe pojęcia programu Windows Communication Foundation](fundamental-concepts.md)

@@ -2,28 +2,28 @@
 title: Tworzenie usług AJAX WCF bez platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: f4d1d093132c501844aacbaa9cf28ecc3cede442
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f0f730f90227dcccc7e5ebf533d80a28f6e6eb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185237"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599298"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Tworzenie usług AJAX WCF bez platformy ASP.NET
-Dostęp do usług Ajax (Windows Communication Foundation ( WCF) można uzyskać z dowolnej strony sieci Web obsługującej obsługę języka JavaScript, bez konieczności ASP.NET ajax. W tym temacie opisano sposób tworzenia takiej usługi WCF.  
+Usługi Windows Communication Foundation (WCF) AJAX są dostępne z dowolnej strony sieci Web z obsługą języka JavaScript, bez konieczności ASP.NET AJAX. W tym temacie opisano sposób tworzenia takiej usługi WCF.  
   
- Aby uzyskać instrukcje dotyczące używania WCF z ASP.NET AJAX, zobacz [Tworzenie usług WCF dla ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ Aby uzyskać instrukcje dotyczące korzystania z programu WCF z ASP.NET AJAX, zobacz [Tworzenie usług WCF dla ASP.NET AJAX](creating-wcf-services-for-aspnet-ajax.md).  
   
  Istnieją trzy części do tworzenia usługi WCF AJAX:  
   
-- Tworzenie punktu końcowego AJAX, który można uzyskać z przeglądarki.  
+- Tworzenie punktu końcowego AJAX, do którego można uzyskać dostęp za pomocą przeglądarki.  
   
-- Tworzenie umowy serwisowej zgodnej z ajaxem.  
+- Tworzenie kontraktu usługi zgodnej ze standardem AJAX.  
   
 - Uzyskiwanie dostępu do usług WCF AJAX.  
   
 ## <a name="creating-an-ajax-endpoint"></a>Tworzenie punktu końcowego AJAX  
- Najbardziej podstawowym sposobem włączenia obsługi AJAX w usłudze WCF jest użycie <xref:System.ServiceModel.Activation.WebServiceHostFactory> pliku .svc skojarzonego z usługą, jak w poniższym przykładzie.  
+ Najbardziej podstawowym sposobem na włączenie obsługi technologii AJAX w usłudze WCF jest użycie <xref:System.ServiceModel.Activation.WebServiceHostFactory> pliku w formacie SVC skojarzonym z usługą, jak w poniższym przykładzie.  
   
 ```text
 <%ServiceHost
@@ -34,7 +34,7 @@ Dostęp do usług Ajax (Windows Communication Foundation ( WCF) można uzyskać 
 %>  
 ```  
   
- Alternatywnie można również użyć konfiguracji, aby dodać punkt końcowy AJAX. Użyj <xref:System.ServiceModel.WebHttpBinding> punktu końcowego usługi i skonfiguruj ten punkt końcowy z <xref:System.ServiceModel.Description.WebHttpBehavior> jak pokazano w poniższym urywek kodu.  
+ Alternatywnie można również użyć konfiguracji, aby dodać punkt końcowy AJAX. Użyj <xref:System.ServiceModel.WebHttpBinding> w punkcie końcowym usługi i skonfiguruj ten punkt końcowy przy użyciu <xref:System.ServiceModel.Description.WebHttpBehavior> tak jak pokazano w poniższym fragmencie kodu.  
   
 ```xml  
 <configuration>  
@@ -59,41 +59,41 @@ Dostęp do usług Ajax (Windows Communication Foundation ( WCF) można uzyskać 
 </configuration>  
 ```  
   
- Na przykład roboczy zobacz [usługę AJAX z JSON i XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
+ Aby zapoznać się z przykładem roboczym, zobacz [Usługa AJAX z danymi JSON i XML](../samples/ajax-service-with-json-and-xml-sample.md).  
   
-## <a name="creating-an-ajax-compatible-service-contract"></a>Tworzenie umowy serwisowej zgodnej z ajaxem  
- Domyślnie umowy serwisowe udostępniane za pomocą punktu końcowego AJAX zwracają dane w formacie XML. Ponadto domyślne operacje usługi są dostępne za pośrednictwem żądań HTTP POST do adresów URL, które zawierają adres punktu końcowego, po którym następuje nazwa operacji, jak pokazano w poniższym przykładzie.  
+## <a name="creating-an-ajax-compatible-service-contract"></a>Tworzenie kontraktu usługi zgodnej ze standardem AJAX  
+ Domyślnie kontrakty usługi udostępniane za pośrednictwem punktu końcowego AJAX zwracają dane w formacie XML. Ponadto domyślnie operacje usługi są dostępne za pośrednictwem żądań HTTP POST do adresów URL, które zawierają adres punktu końcowego, a następnie nazwę operacji, jak pokazano w poniższym przykładzie.  
   
 ```csharp
 [OperationContract]  
 string[] GetCities(string firstLetters);  
 ```  
   
- Ta operacja jest dostępna przy `http://serviceaddress/endpointaddress/GetCities` użyciu protokołu HTTP POST i zwraca komunikatu XML.  
+ Ta operacja jest dostępna za pomocą polecenia POST protokołu HTTP w celu `http://serviceaddress/endpointaddress/GetCities` zwrócenia wiadomości XML.  
   
- Aby dostosować te podstawowe aspekty, można użyć pełnego modelu programowania sieci Web. Na przykład można użyć <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów lub kontrolować zlecenie HTTP, na który `UriTemplate` odpowiada operacja lub użyć właściwości tych odpowiednich atrybutów, aby określić niestandardowe identyfikatory URI. Aby uzyskać więcej informacji, zobacz [WCF Web HTTP Model tematu.](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ Aby dostosować te podstawowe aspekty, można użyć pełnego modelu programowania sieci Web. Na przykład można użyć <xref:System.ServiceModel.Web.WebGetAttribute> atrybutów lub, <xref:System.ServiceModel.Web.WebInvokeAttribute> Aby kontrolować czasownik http, do którego operacja reaguje, lub użyć `UriTemplate` właściwości tych atrybutów, aby określić niestandardowe identyfikatory URI. Aby uzyskać więcej informacji, zobacz temat [model programowania HTTP sieci Web](wcf-web-http-programming-model.md) w programie WCF.  
   
- Format danych JSON jest często używany w usługach AJAX. Aby utworzyć operację zwracaną JSON zamiast XML, <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> ustaw <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>właściwość <xref:System.ServiceModel.Web.WebMessageFormat.Json>(lub) na . W [temacie Samodzielna serializacja JSON przedstawiono,](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) jak wbudowane typy .NET i typy kontraktów danych są mapowane na JSON.  
+ Format danych JSON jest często używany w usługach AJAX. Aby utworzyć operację zwracającą kod JSON zamiast XML, ustaw <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> Właściwość (lub <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> ) na <xref:System.ServiceModel.Web.WebMessageFormat.Json> . W temacie [autonomiczna Serializacja kodu JSON](stand-alone-json-serialization.md) pokazano, jak wbudowane typy .NET i typy kontraktów danych są mapowane na format JSON.  
   
- Zwykle żądania JSON i odpowiedzi składają się tylko z jednego elementu. Dla poprzedniej `GetCities` operacji żądanie przypomina następującą instrukcję.  
+ Zwykle żądania JSON i odpowiedzi składają się tylko z jednego elementu. Dla poprzedniej `GetCities` operacji żądanie jest podobne do następującej.  
   
 ```json
 "na"  
 ```  
   
- Odpowiedź na to żądanie przypomina następującą instrukcję.  
+ Odpowiedź na to żądanie jest podobna do następującej.  
   
 ```json
 ["Nairobi", "Naples", "Nashville"]  
 ```  
   
- Jeśli operacja przyjmuje dodatkowy parametr, styl żądania musi być zawinięty, aby zawinąć oba parametry w pojedynczym obiekcie JSON. Przykład tego stylu komunikat JSON znajduje się w poniższym przykładzie.  
+ Jeśli operacja przyjmuje dodatkowy parametr, styl żądania musi być opakowany, aby otoczyć oba parametry pojedynczym obiektem JSON. Przykład tego komunikatu JSON w stylu znajduje się w poniższym przykładzie.  
   
 ```json  
 {"firstLetters": "na", "maxNumber": 2}  
 ```  
   
- Poniższa umowa akceptuje ten komunikat.  
+ Następujący kontrakt akceptuje tę wiadomość.  
   
 ```csharp
 [WebInvoke(BodyStyle=WebMessageBodyStyle.WrappedRequest, ResponseFormat=WebMessageFormat.Json)]  
@@ -102,10 +102,10 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>Uzyskiwanie dostępu do usług AJAX  
- Punkty końcowe WCF AJAX zawsze akceptują żądania JSON i XML.  
+ Punkty końcowe AJAX programu WCF zawsze akceptują zarówno żądania JSON, jak i XML.  
   
- Żądania HTTP POST z typem zawartości "application/json" są traktowane jako JSON, a te z typem zawartości, które wskazują XML (na przykład "text/xml") są traktowane jako XML.  
+ Żądania POST protokołu HTTP z typem zawartości "Application/JSON" są traktowane jako dane JSON oraz z typem zawartości, który wskazuje na XML (na przykład "text/xml"), są traktowane jako XML.  
   
  Żądania HTTP GET zawierają wszystkie parametry żądania w samym adresie URL.  
   
- To do użytkownika, aby zdecydować, jak utworzyć żądanie HTTP do punktu końcowego. Ponadto użytkownik ma pełną kontrolę nad konstruowania JSON, który tworzy treść żądania. Na przykład tworzenia żądania z języka JavaScript zobacz [usługę AJAX z JSON i XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).
+ Użytkownik może zdecydować, jak utworzyć żądanie HTTP do punktu końcowego. Ponadto użytkownik ma pełną kontrolę nad konstruowaniem kodu JSON, który stanowi treść żądania. Aby zapoznać się z przykładem tworzenia żądania w języku JavaScript, zobacz [usługę AJAX z danymi JSON i XML](../samples/ajax-service-with-json-and-xml-sample.md).

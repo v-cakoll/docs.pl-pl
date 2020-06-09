@@ -2,21 +2,21 @@
 title: System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure
 ms.date: 03/30/2017
 ms.assetid: ffe115e1-39de-4fc7-88f9-6cf55de29597
-ms.openlocfilehash: 2202c6a860108a65afc7a6b7c92619b22afdf318
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e540f293a342a8cda9ab532a1d79fd97e1e990e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926571"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597946"
 ---
 # <a name="systemservicemodelsecuritysecurityidentityhostnamenormalizationfailure"></a>System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure
 System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure  
   
 ## <a name="description"></a>Opis  
- Nie można znormalizować HostName część adresu punktu końcowego.  
+ Nie można znormalizować części nazwy hosta adresu punktu końcowego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

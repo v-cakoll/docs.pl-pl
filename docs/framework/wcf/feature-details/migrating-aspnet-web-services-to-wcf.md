@@ -2,23 +2,23 @@
 title: Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 52e0e499b5338e20377c14b598c045a5173df7d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa707a4246d5bc9940417072c098b2973140f878
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965336"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598804"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 ASP.NET oferuje .NET Framework biblioteki klas i narzędzia do tworzenia usług sieci Web, a także funkcje usług hostingu w ramach Internet Information Services (IIS). Windows Communication Foundation (WCF) zapewnia .NET Framework biblioteki klas, narzędzia i usługi hostingu umożliwiające obsługę jednostek oprogramowania w celu komunikowania się przy użyciu dowolnych protokołów, w tym tych używanych przez usługi sieci Web.  Migrowanie usług sieci Web ASP.NET do platformy WCF umożliwia aplikacjom korzystanie z nowych funkcji i ulepszeń, które są unikatowe dla usług WCF.  
   
- Funkcja WCF ma kilka ważnych korzyści względem usług sieci Web ASP.NET. Mimo że narzędzia usług sieci Web ASP.NET są przeznaczone wyłącznie do tworzenia usług sieci Web, funkcja WCF udostępnia narzędzia, których można używać w celu komunikacji między jednostkami oprogramowania. Pozwoli to zmniejszyć liczbę technologii, które deweloperzy muszą znać, aby sprostać różnym scenariuszom komunikacji z oprogramowaniem, co z kolei zmniejsza koszty zasobów programistycznych oprogramowania, a także czas ukończenia oprogramowania projekty programistyczne.  
+ Funkcja WCF ma kilka ważnych korzyści względem usług sieci Web ASP.NET. Mimo że narzędzia usług sieci Web ASP.NET są przeznaczone wyłącznie do tworzenia usług sieci Web, funkcja WCF udostępnia narzędzia, których można używać w celu komunikacji między jednostkami oprogramowania. Pozwoli to zmniejszyć liczbę technologii, które deweloperzy muszą znać, aby zaspokoić różne scenariusze komunikacji oprogramowania, co z kolei zmniejsza koszty zasobów programistycznych oprogramowania, a także czas na ukończenie projektów programistycznych.  
   
  Nawet w przypadku projektów programistycznych usług sieci Web WCF obsługuje więcej protokołów usług sieci Web niż obsługa usług sieci Web ASP.NET. Te dodatkowe protokoły zapewniają bardziej zaawansowane rozwiązania obejmujące, między innymi, niezawodne sesje i transakcje.  
   
  Usługa WCF obsługuje więcej protokołów do transportowania komunikatów niż usługi sieci Web ASP.NET. Usługi sieci Web ASP.NET obsługują wysyłanie komunikatów przy użyciu protokołu HTTP (Hypertext Transfer Protocol). Usługa WCF obsługuje wysyłanie komunikatów przy użyciu protokołu HTTP, a także Transmission Control Protocol (TCP), nazwane potoki i usługi kolejkowania komunikatów (MSMQ) firmy Microsoft. Ważniejsze, można rozszerzyć obsługę dodatkowych protokołów transportowych. W związku z tym oprogramowanie opracowane przy użyciu programu WCF może zostać dostosowane do pracy z szeroką gamą innego oprogramowania, co zwiększa potencjalne zwroty w odniesieniu do inwestycji.  
   
- Usługa WCF oferuje wiele bogatszych funkcji wdrażania aplikacji i zarządzania nimi, niż zapewnia usługi sieci Web ASP.NET. Oprócz systemu konfiguracji, który ASP.NET również ma, usługa WCF oferuje Edytor konfiguracji, śledzenie działań od nadawców do odbiorców oraz z powrotem przez dowolną liczbę pośredników, Podgląd śledzenia, rejestrowanie komunikatów, ogromną liczbę liczników wydajności i Obsługa Instrumentacja zarządzania Windows.  
+ Usługa WCF oferuje wiele bogatszych funkcji wdrażania aplikacji i zarządzania nimi, niż zapewnia usługi sieci Web ASP.NET. Oprócz systemu konfiguracji, który ASP.NET również ma, usługa WCF oferuje Edytor konfiguracji, śledzenie działań od nadawców do odbiorców oraz z powrotem przez dowolną liczbę pośredników, Podgląd śledzenia, rejestrowanie komunikatów, ogromną liczbę liczników wydajności i obsługę Instrumentacja zarządzania Windows.  
   
  Biorąc pod uwagę te potencjalne korzyści wynikające z usług sieci Web ASP.NET w programie WCF, jeśli używasz programu lub rozważasz korzystanie z usług sieci Web ASP.NET, możesz skorzystać z kilku opcji:  
   
@@ -35,10 +35,10 @@ ASP.NET oferuje .NET Framework biblioteki klas i narzędzia do tworzenia usług 
   
  W tej sekcji opisano te opcje szczegółowo, porównanie usług sieci Web ASP.NET z WCF i zawiera instrukcje dotyczące migrowania kodu usług sieci Web ASP.NET do programu WCF.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewidywanie przyjęcia Windows Communication Foundation: Przyspieszanie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Przewidywanie przyjęcia Windows Communication Foundation: Przyspieszanie integracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
-- [Adoptowanie programu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
-- [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
-- [Porównywanie usług internetowych platformy ASP.NET z programem WCF na podstawie procesów programistycznych](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości](anticipating-adopting-wcf-migration.md)
+- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie integracji w przyszłości](anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Adoptowanie programu Windows Communication Foundation](adopting-wcf.md)
+- [Porównanie usług sieci Web platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [Porównywanie usług internetowych platformy ASP.NET z programem WCF na podstawie procesów programistycznych](comparing-aspnet-web-services-to-wcf-based-on-development.md)

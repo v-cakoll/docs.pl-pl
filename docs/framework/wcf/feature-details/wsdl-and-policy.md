@@ -2,12 +2,12 @@
 title: WSDL i zasady
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600104"
 ---
 # <a name="wsdl-and-policy"></a>WSDL i zasady
 W tym temacie Windows Communication Foundation omówiono szczegóły implementacji WSDL 1,1, WS-Policy i WS-PolicyAttachment (WCF), a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1,1 wprowadzone przez funkcję WCF.  
@@ -72,8 +72,8 @@ W tym temacie Windows Communication Foundation omówiono szczegóły implementac
 |mssp:MustNotSendCancel|Zagnieżdża|Określa wymaganie, aby komunikaty żądania tokenu zabezpieczającego żądania (RST) [WS-Trust] za pomocą anulowania powiązania [WS-Trust, WS-SC] nie były wysyłane do wystawcy danego SecurityContextToken. Jeśli to potwierdzenie jest obecne, takie komunikaty żądania nie mogą być wysyłane do wystawcy. Jeśli to potwierdzenie nie istnieje, takie komunikaty żądania mogą być wysyłane do wystawcy.|  
 |mssp:RequireClientCertificate|Zagnieżdża|Ten opcjonalny element określa wymaganie, aby certyfikat klienta był dostarczany jako część protokołu TLSNEGO. Jeśli to potwierdzenie jest obecne, należy podać certyfikat klienta. Jeśli to potwierdzenie nie istnieje, nie można podać certyfikatu klienta. Nie można używać tego potwierdzenia poza mssp: SslContextToken.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Instrukcje: Eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Niestandardowa publikacja WSDL](../samples/custom-wsdl-publication.md)
+- [Instrukcje: Eksportowanie niestandardowych informacji w formacie WSDL](../extending/how-to-export-custom-wsdl.md)
+- [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../extending/how-to-import-custom-wsdl.md)

@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599870"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków na platformie .NET
 
@@ -109,7 +109,7 @@ Poniżej przedstawiono kilka przykładów przypisań punktów kodu z linkami do 
 
 |Wartość dziesiętna|Hex       |Przykład|Opis|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |Nie dotyczy| [KANAŁ INFORMACYJNY WIERSZA](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |Brak| [KANAŁ INFORMACYJNY WIERSZA](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |65     | `U+0061` | a | [MAŁA LITERA A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [WIELKA LITERA Y Z MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68 675 | `U+10C43`| 𐱃 | [STARY TURKIC LETTER ORKHON NA](https://www.unicode.org/charts/PDF/U10C00.pdf) |
@@ -250,7 +250,7 @@ Rozważ `string` wystąpienia "a", "o". "i" `👩🏽‍🚒` ". Jeśli system o
 
 * string"A" wygląda tak samo jak "", ale jest reprezentowane przez dwie wartości skalarne i zawiera dwa `char` wystąpienia.
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * Na koniec string " `👩🏽‍🚒` " jest reprezentowane przez cztery wartości skalarne i zawiera siedem `char` wystąpień.
@@ -384,7 +384,7 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 Aby uzyskać informacje o sposobach korzystania z wbudowanych `Encoding` klas, zobacz [jak używać klas kodowania znaków w programie .NET](character-encoding.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.String>
 - <xref:System.Char>

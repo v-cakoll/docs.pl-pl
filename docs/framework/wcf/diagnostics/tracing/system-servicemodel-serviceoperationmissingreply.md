@@ -2,23 +2,23 @@
 title: System.ServiceModel.ServiceOperationMissingReply
 ms.date: 03/30/2017
 ms.assetid: 734d1cac-9f9c-472c-bcf7-bed23454c82c
-ms.openlocfilehash: 189a9e7d96446f3c14a4c68749a71bc7d04d396d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8f22a624c6567cf1a975383d493488d315e6245
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760028"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597751"
 ---
 # <a name="systemservicemodelserviceoperationmissingreply"></a>System.ServiceModel.ServiceOperationMissingReply
 System.ServiceModel.ServiceOperationMissingReply  
   
 ## <a name="description"></a>Opis  
- Operacja żądanie/nietypizowana odpowiedź nie zawiera wiadomości odpowiedzi.  
+ Operacja żądania/odpowiedzi nie ma komunikatu odpowiedzi.  
   
- Jest to operacja dwukierunkowe; jednak nie ma żadnej odpowiedzi, aby wysłać do klienta. Ślad służy do debugowania podczas programowania.  
+ Jest to operacja dwukierunkowa; nie ma jednak odpowiedzi na wysłanie do klienta. Tego śledzenia można używać do debugowania podczas opracowywania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

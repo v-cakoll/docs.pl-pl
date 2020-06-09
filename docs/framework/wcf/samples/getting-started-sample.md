@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575189"
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
 
@@ -26,24 +26,24 @@ Przykład Wprowadzenie ilustruje sposób implementacji typowej usługi i typoweg
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
 Usługa opisuje operacje wykonywane w ramach kontraktu usługi, które ujawnia publicznie jako metadane. Usługa zawiera również kod umożliwiający zaimplementowanie operacji.
 
-Klient zawiera definicję kontraktu usługi i klasy proxy w celu uzyskania dostępu do usługi. Kod serwera proxy jest generowany na podstawie metadanych usługi przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+Klient zawiera definicję kontraktu usługi i klasy proxy w celu uzyskania dostępu do usługi. Kod serwera proxy jest generowany na podstawie metadanych usługi przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 W systemie Windows Vista usługa jest hostowana w usłudze aktywacji systemu Windows (WAS). W systemach Windows XP i Windows Server 2003 jest on hostowany przez Internet Information Services (IIS) i ASP.NET. Hostowanie usługi w usługach IIS lub zezwala na automatyczne Aktywowanie usługi przy pierwszym dostępie.
 
 > [!NOTE]
-> Jeśli wolisz rozpocząć pracę z przykładem, który hostuje usługę w aplikacji konsolowej zamiast usług IIS, [Zobacz przykład samoobsługi.](../../../../docs/framework/wcf/samples/self-host.md)
+> Jeśli wolisz rozpocząć pracę z przykładem, który hostuje usługę w aplikacji konsolowej zamiast usług IIS, [Zobacz przykład samoobsługi.](self-host.md)
 
 Usługa i klient określają szczegóły dostępu w ustawieniach pliku konfiguracji, co zapewnia elastyczność w czasie wdrażania. Obejmuje to definicję punktu końcowego, który określa adres, powiązanie i kontrakt. Powiązanie określa szczegóły dotyczące transportu i zabezpieczeń dotyczące sposobu uzyskiwania dostępu do usługi.
 
 Usługa konfiguruje zachowanie w czasie wykonywania w celu opublikowania jego metadanych.
 
-Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez interfejs `ICalculator`, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient wysyła żądania do danej operacji matematycznej i zwraca odpowiedzi usługi z wynikiem. Usługa implementuje kontrakt `ICalculator`, który jest zdefiniowany w poniższym kodzie.
+Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient wysyła żądania do danej operacji matematycznej i zwraca odpowiedzi usługi z wynikiem. Usługa implementuje `ICalculator` kontrakt zdefiniowany w poniższym kodzie.
 
 ```vb
 ' Define a service contract.
@@ -140,11 +140,11 @@ Usługa udostępnia punkt końcowy do komunikacji z usługą, zdefiniowany przy 
 </services>
 ```
 
-Usługa uwidacznia punkt końcowy pod adresem podstawowym dostarczonym przez usługi IIS lub hosta. Powiązanie jest skonfigurowane przy użyciu standardowej <xref:System.ServiceModel.WSHttpBinding>, która zapewnia komunikację HTTP i standardowe protokoły usług sieci Web do adresowania i zabezpieczenia. Kontrakt jest `ICalculator` zaimplementowany przez usługę.
+Usługa uwidacznia punkt końcowy pod adresem podstawowym dostarczonym przez usługi IIS lub hosta. Powiązanie jest skonfigurowane przy użyciu standardu <xref:System.ServiceModel.WSHttpBinding> , który zapewnia komunikację HTTP i standardowe protokoły usług sieci Web do adresowania i zabezpieczenia. Kontrakt jest `ICalculator` implementowany przez usługę.
 
-Zgodnie z konfiguracją usługa może być dostępna na `http://localhost/servicemodelsamples/service.svc` przez klienta programu na tym samym komputerze. Aby klienci na komputerach zdalnych mogli uzyskać dostęp do usługi, należy określić w pełni kwalifikowaną nazwę domeny zamiast hosta lokalnego.
+Zgodnie z konfiguracją usługa może być dostępna `http://localhost/servicemodelsamples/service.svc` przez klienta programu na tym samym komputerze. Aby klienci na komputerach zdalnych mogli uzyskać dostęp do usługi, należy określić w pełni kwalifikowaną nazwę domeny zamiast hosta lokalnego.
 
-Struktura nie ujawnia domyślnie metadanych. W związku z tym usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i uwidacznia punkt końcowy wymiany metadanych (MEX) w `http://localhost/servicemodelsamples/service.svc/mex`. Poniżej przedstawiono konfigurację.
+Struktura nie ujawnia domyślnie metadanych. W związku z tym usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i uwidacznia punkt końcowy wymiany metadanych (Mex) pod adresem `http://localhost/servicemodelsamples/service.svc/mex` . Poniżej przedstawiono konfigurację.
 
 ```xaml
 <system.serviceModel>
@@ -174,7 +174,7 @@ Struktura nie ujawnia domyślnie metadanych. W związku z tym usługa włącza <
 </system.serviceModel>
 ```
 
-Klient komunikuje się przy użyciu danego typu kontraktu przy użyciu klasy klienta, która jest generowana przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ten wygenerowany klient jest zawarty w pliku generatedClient.cs lub generatedClient. vb. To narzędzie pobiera metadane dla danej usługi i generuje klienta do użytku przez aplikację kliencką w celu komunikowania się przy użyciu danego typu kontraktu. Usługa hostowana musi być dostępna do wygenerowania kodu klienta, ponieważ usługa jest używana do pobierania zaktualizowanych metadanych.
+Klient komunikuje się przy użyciu danego typu kontraktu przy użyciu klasy klienta, która jest generowana przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Ten wygenerowany klient jest zawarty w pliku generatedClient.cs lub generatedClient. vb. To narzędzie pobiera metadane dla danej usługi i generuje klienta do użytku przez aplikację kliencką w celu komunikowania się przy użyciu danego typu kontraktu. Usługa hostowana musi być dostępna do wygenerowania kodu klienta, ponieważ usługa jest używana do pobierania zaktualizowanych metadanych.
 
  Uruchom następujące polecenie w wierszu polecenia zestawu SDK w katalogu klienta, aby wygenerować serwer proxy z określonym typem:
 
@@ -273,17 +273,17 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-Wprowadzenie przykład pokazuje standardowy sposób tworzenia usługi i klienta. Druga [podstawowa](../../../../docs/framework/wcf/samples/basic-sample.md) Kompilacja tego przykładu w celu przedstawienia określonych funkcji produktu.
+Wprowadzenie przykład pokazuje standardowy sposób tworzenia usługi i klienta. Druga [podstawowa](basic-sample.md) Kompilacja tego przykładu w celu przedstawienia określonych funkcji produktu.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: hostowanie usługi WCF w zarządzanej aplikacji](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Instrukcje: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Instrukcje: hostowanie usługi WCF w zarządzanej aplikacji](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Instrukcje: hostowanie usługi WCF w programie IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

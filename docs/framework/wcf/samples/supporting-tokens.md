@@ -2,12 +2,12 @@
 title: Obsługa tokenów
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 9d665c82f4af969204e1c87f982c6398b55cda01
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9c8ee4b11cd61e51e91c2e116ab3c20448fc1a58
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421372"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575046"
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykład tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny do wiadomości, która korzysta z protokołu WS-Security. Przykład dodaje binarny token zabezpieczający X. 509 oprócz tokenu zabezpieczeń nazwy użytkownika. Token jest przesyłany z klienta do usługi, a część wiadomości jest podpisywana przy użyciu klucza prywatnego skojarzonego z tokenem zabezpieczeń X. 509 w celu potwierdzenia posiadania certyfikatu X. 509 do odbiorcy. Jest to przydatne w przypadku, gdy wymagane jest posiadanie wielu oświadczeń skojarzonych z komunikatem w celu uwierzytelnienia lub autoryzacji nadawcy. Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź.
@@ -25,7 +25,7 @@ Przykład tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny do wiadomo
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Klient uwierzytelnia się za pomocą tokenu username i obsługuje token zabezpieczający X. 509
- Usługa ujawnia pojedynczy punkt końcowy do komunikacji, który jest programowo tworzony przy użyciu klas `BindingHelper` i `EchoServiceHost`. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane z powiązaniem niestandardowym przy użyciu `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. Ten przykład ustawia `SymmetricSecurityBindingElement` do korzystania z certyfikatu usługi X. 509 w celu ochrony klucza symetrycznego podczas transmisji i przekazywania `UserNameToken` wraz z pomocniczą `X509SecurityToken` w nagłówku komunikatu WS-Security. Klucz symetryczny jest używany do szyfrowania treści wiadomości i tokenu zabezpieczeń nazwy użytkownika. Token pomocniczy jest przesyłany jako dodatkowy token zabezpieczający binarny w nagłówku komunikatu WS-Security. Autentyczność tokenu pomocniczego jest udowodniona przez podpisywanie części komunikatu z kluczem prywatnym skojarzonym z pomocniczym tokenem zabezpieczeń X. 509.
+ Usługa ujawnia pojedynczy punkt końcowy do komunikacji, który jest programowo tworzony przy użyciu `BindingHelper` `EchoServiceHost` klas i. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane z powiązaniem niestandardowym przy użyciu `SymmetricSecurityBindingElement` i `HttpTransportBindingElement` . Ten przykład ustawia `SymmetricSecurityBindingElement` do użycia certyfikatu usługi X. 509 w celu ochrony klucza symetrycznego podczas transmisji i przekazywania `UserNameToken` wraz z obsługą `X509SecurityToken` w nagłówku komunikatu WS-Security. Klucz symetryczny jest używany do szyfrowania treści wiadomości i tokenu zabezpieczeń nazwy użytkownika. Token pomocniczy jest przesyłany jako dodatkowy token zabezpieczający binarny w nagłówku komunikatu WS-Security. Autentyczność tokenu pomocniczego jest udowodniona przez podpisywanie części komunikatu z kluczem prywatnym skojarzonym z pomocniczym tokenem zabezpieczeń X. 509.
 
 ```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
@@ -171,7 +171,7 @@ public class EchoService : IEchoService
 }
 ```
 
- Punkt końcowy klienta jest skonfigurowany w podobny sposób do punktu końcowego usługi. Klient używa tej samej klasy `BindingHelper`, aby utworzyć powiązanie. Pozostała część instalacji znajduje się w `Client` klasie. Klient ustawia informacje o tokenie zabezpieczającym nazwa użytkownika, pomocniczym tokenie zabezpieczającym X. 509 oraz informacje o certyfikacie usługi Service X. 509 w kodzie instalacji do kolekcji zachowań punktu końcowego klienta.
+ Punkt końcowy klienta jest skonfigurowany w podobny sposób do punktu końcowego usługi. Klient używa tej samej `BindingHelper` klasy do utworzenia powiązania. Pozostała część instalacji znajduje się w `Client` klasie. Klient ustawia informacje o tokenie zabezpieczającym nazwa użytkownika, pomocniczym tokenie zabezpieczającym X. 509 oraz informacje o certyfikacie usługi Service X. 509 w kodzie instalacji do kolekcji zachowań punktu końcowego klienta.
 
 ```csharp
  static void Main()
@@ -282,7 +282,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Wyświetlanie informacji o wywołujących
- Aby wyświetlić informacje o wywołującym, można użyć `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, jak pokazano w poniższym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` zawiera oświadczenia autoryzacji skojarzone z bieżącym obiektem wywołującym. Te oświadczenia są dostarczane automatycznie przez Windows Communication Foundation (WCF) dla każdego tokenu otrzymanego w komunikacie.
+ Aby wyświetlić informacje o wywołującym, można użyć, `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`Zawiera oświadczenia autoryzacji skojarzone z bieżącym obiektem wywołującym. Te oświadczenia są dostarczane automatycznie przez Windows Communication Foundation (WCF) dla każdego tokenu otrzymanego w komunikacie.
 
 ```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
@@ -353,9 +353,9 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
  Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować do uruchamiania w odpowiedniej konfiguracji.
 
 ### <a name="creating-the-client-certificate"></a>Tworzenie certyfikatu klienta
- Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat klienta, który ma być używany. Zmienna `%CLIENT_NAME%` określa temat certyfikatu klienta. Ten przykład używa "client.com" jako nazwy podmiotu.
+ Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat klienta, który ma być używany. `%CLIENT_NAME%`Zmienna określa podmiot certyfikatu klienta. Ten przykład używa "client.com" jako nazwy podmiotu.
 
- Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu `CurrentUser`.
+ Certyfikat jest przechowywany w magazynie (Personal) w `CurrentUser` lokalizacji magazynu.
 
 ```console
 echo ************
@@ -375,7 +375,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>Tworzenie certyfikatu serwera
- Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna `%SERVER_NAME%` określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
+ Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. `%SERVER_NAME%`Zmienna określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
 
  Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu LocalMachine. Certyfikat jest przechowywany w magazynie LocalMachine dla usług hostowanych przez usługi IIS. W przypadku usług samodzielnych należy zmodyfikować plik wsadowy, aby przechowywać certyfikat serwera w lokalizacji magazynu CurrentUser przez zastąpienie ciągu LocalMachine ciągiem CurrentUser.
 
@@ -414,9 +414,9 @@ iisreset
 
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy wykonać poniższe instrukcje.
 
@@ -441,13 +441,13 @@ iisreset
   
 4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również do klienta pliki Setup. bat, Oczyść. bat i ImportServiceCert. bat.  
   
-5. Na serwerze uruchom `setup.bat service` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z argumentem `service` tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny maszyny i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
+5. Na serwerze programu uruchom polecenie `setup.bat service` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny maszyny i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
   
-6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w atrybucie `findValue` w [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
+6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
   
 7. Skopiuj plik. cer usługi z katalogu usługi do katalogu klienta na komputerze klienckim.  
   
-8. Na kliencie Uruchom `setup.bat client` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z argumentem `client` tworzy certyfikat klienta o nazwie client.com i eksportuje certyfikat klienta do pliku o nazwie Client. cer.  
+8. Na kliencie Uruchom program `setup.bat client` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z `client` argumentem tworzy certyfikat klienta o nazwie Client.com i eksportuje certyfikat klienta do pliku o nazwie Client. cer.  
   
 9. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi. Aby to zrobić, Zastąp wartość localhost nazwą FQDN serwera.  
   
@@ -464,4 +464,4 @@ iisreset
 - Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
 > [!NOTE]
-> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między maszynami. W przypadku uruchamiania przykładów WCF, które używają certyfikatów między maszynami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między maszynami. W przypadku uruchamiania przykładów WCF, które używają certyfikatów między maszynami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .

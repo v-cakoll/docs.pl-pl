@@ -1,5 +1,6 @@
 ---
 title: Wybieranie klasy kolekcji
+description: Dowiedz się, jak zdecydować, która Klasa kolekcji ma zostać wybrana na platformie .NET. Użycie nieprawidłowego typu może ograniczyć użycie kolekcji.
 ms.date: 03/18/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 52a839661a09d6fa7561d67b82d1c1bf854e3cfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600818"
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 
@@ -82,7 +83,7 @@ LINQ to Objects umożliwia deweloperom używanie zapytań LINQ do uzyskiwania do
 
 PLINQ zapewnia równoległą implementację LINQ to Objects, która może oferować szybsze wykonywanie zapytań w wielu scenariuszach dzięki wydajniejszemu używaniu komputerów z wieloma rdzeniami. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

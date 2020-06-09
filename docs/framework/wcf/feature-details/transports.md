@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 077d63d8038b245a68083611897c1e6c68971071
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598674"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transporty w programie Windows Communication Foundation
-Warstwa transportu jest na najniższym poziomie stosu kanału. Główne transportów używane w Windows Communication Foundation (WCF) są HTTP, HTTPS, TCP i nazwane potoki. Tematy w tej sekcji omówiono wybierania tych transportu, konfigurowanie transportu i ustawienie właściwości dostrajania.  
+Warstwa transportu jest na najniższym poziomie stosu kanału. Główne transporty używane w Windows Communication Foundation (WCF) to HTTP, HTTPS, TCP i nazwane potoki. W tematach w tej sekcji omówiono wybór między tymi transportami, Konfigurowanie transportu i Ustawianie właściwości dostrajania.  
   
- Usługi WCF zawiera dodatkowe transportów. Aby uzyskać informacji na temat transportu MSMQ (MSMQ), zobacz [kolejki i sesje niezawodne](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Aby uzyskać informacje o transporcie peer-to-peer, zobacz [sieci Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Usługa WCF oferuje dodatkowe transporty. Aby uzyskać informacje na temat transportu usługi kolejkowania komunikatów (MSMQ), zobacz [kolejki i sesje niezawodne](queues-and-reliable-sessions.md). Aby uzyskać informacje o transportach równorzędnych, zobacz [sieci peer-to-](peer-to-peer-networking.md)peer.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- W tym artykule opisano trzy główne transportu i zagadnienia dotyczące wybierania go.  
+ [Wybieranie transportu](choosing-a-transport.md)  
+ Opisuje trzy główne transporty i zagadnienia związane z wybraniem jednej z nich.  
   
- [Wybieranie kodera komunikatów](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- Zawiera opis czynników, które należy wziąć pod uwagę podczas wybierania element powiązania Kodowanie komunikatu.  
+ [Wybieranie kodera komunikatów](choosing-a-message-encoder.md)  
+ Opisuje czynniki, które należy wziąć pod uwagę podczas wybierania elementu powiązania kodowania komunikatów.  
   
- [Strumieniowy transfer komunikatów](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
- W tym artykule opisano sposób konfigurowania warstwy transportowej w celu przesyłania strumieniowego.  
+ [Strumieniowy transfer komunikatów](streaming-message-transfer.md)  
+ Opisuje sposób konfigurowania warstwy transportu na potrzeby przesyłania strumieniowego.  
   
- [Konfigurowanie protokołów HTTP i HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
- W tym artykule opisano sposób konfigurowania elementów wiązania transportu HTTP i HTTPS.  
+ [Konfigurowanie protokołów HTTP i HTTPS](configuring-http-and-https.md)  
+ Opisuje sposób konfigurowania elementów powiązania transportu HTTP i HTTPS.  
   
- [Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Opisuje sposób używania rezerwacje WCFURL z ograniczeniami.  
+ [Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją](how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ Opisuje, jak używać rezerwacji z ograniczeniami WCFURL.  
   
- [Przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
- W tym artykule opisano zagadnienia dotyczące ustawiania przydziałów, które są dostępne w warstwie transportowej.  
+ [Przydziały dla transportu](transport-quotas.md)  
+ Opisuje zagadnienia dotyczące ustawiania przydziałów dostępnych w warstwie transportowej.  
   
- [Praca z translatorami adresów sieciowych i zaporami](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
- W tym artykule opisano sposób konfigurowania warstwy transportowej, gdy komunikaty są wysyłane lub odbierane za zaporą lub w przypadku, gdy występuje translatora adresów sieciowych (NAT).  
+ [Praca z translatorami adresów sieciowych i zaporami](working-with-nats-and-firewalls.md)  
+ Opisuje sposób konfigurowania warstwy transportu w przypadku, gdy komunikaty są wysyłane lub odbierane za zaporą lub w przypadku obecności translacji adresów sieciowych (NAT).  
   
- [Współużytkowanie portów w składniku Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Opisuje sposób używania składnika współużytkowania portów Net.TCP funkcji WCF.  
+ [Współużytkowanie portów w składniku Net.TCP](net-tcp-port-sharing.md)  
+ Opisuje, jak używać składnika do udostępniania portów Net. TCP programu WCF.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
@@ -53,6 +53,6 @@ Warstwa transportu jest na najniższym poziomie stosu kanału. Główne transpor
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Powiązania](bindings.md)  
   
- [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)
+ [Rozszerzanie powiązań](../extending/extending-bindings.md)

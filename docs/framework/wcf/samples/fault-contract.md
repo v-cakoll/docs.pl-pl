@@ -2,20 +2,20 @@
 title: Kontrakt błędu
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: c8e93f73d150132c9d6750b81ba2ade944808d40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5081284075ffa31c947a0e63f915a721ea5983c0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183666"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600506"
 ---
 # <a name="fault-contract"></a>Kontrakt błędu
-Przykład kontraktu usterki pokazuje, jak przekazać informacje o błędzie z usługi do klienta. Przykład jest oparty na [wprowadzenie,](../../../../docs/framework/wcf/samples/getting-started-sample.md)z pewnym dodatkowym kodem dodanym do usługi, aby przekonwertować wewnętrzny wyjątek na błąd. Klient próbuje wykonać podział przez zero, aby wymusić warunek błędu w usłudze.  
+Przykładowa umowa dotycząca błędu demonstruje sposób komunikacji z klientem informacji o błędach z usługi. Przykład jest oparty na [wprowadzenie](getting-started-sample.md), z dodatkowym kodem dodanym do usługi w celu przekonwertowania wewnętrznego wyjątku na błąd. Klient próbuje wykonać dzielenie przez zero w celu wymuszenia błędu w usłudze.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kontrakt kalkulatora został zmodyfikowany w <xref:System.ServiceModel.FaultContractAttribute> celu uwzględnienia, jak pokazano w poniższym przykładowym kodzie.  
+ Kontrakt kalkulatora został zmodyfikowany w taki sposób, aby zawierał element <xref:System.ServiceModel.FaultContractAttribute> , jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- Atrybut <xref:System.ServiceModel.FaultContractAttribute> wskazuje, że `Divide` operacja może zwrócić błąd `MathFault`typu . Błąd może być dowolnego typu, który może być serializowany. W takim przypadku `MathFault` jest kontrakt danych, w następujący sposób:  
+ Ten <xref:System.ServiceModel.FaultContractAttribute> atrybut wskazuje, że `Divide` operacja może zwrócić błąd typu `MathFault` . Błąd może być dowolnego typu, który może być serializowany. W tym przypadku `MathFault` jest to kontrakt danych w następujący sposób:  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -58,7 +58,7 @@ public class MathFault
 }  
 ```  
   
- Metoda `Divide` zgłasza <xref:System.ServiceModel.FaultException%601> wyjątek, gdy występuje wyjątek dzielenia przez zero, jak pokazano w poniższym przykładowym kodzie. Ten wyjątek powoduje, że błąd jest wysyłany do klienta.  
+ `Divide`Metoda zgłasza wyjątek, <xref:System.ServiceModel.FaultException%601> gdy wystąpi wyjątek dzielenia przez zero, jak pokazano w poniższym przykładowym kodzie. Ten wyjątek powoduje, że błąd jest wysyłany do klienta.  
   
 ```csharp
 public int Divide(int n1, int n2)  
@@ -77,7 +77,7 @@ public int Divide(int n1, int n2)
 }  
 ```  
   
- Kod klienta wymusza błąd, żądając podziału przez zero. Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Widzisz podział przez zero jest zgłaszane jako błąd. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Kod klienta wymusza błąd, żądając dzielenia przez zero. Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Zobaczysz, że dzielenie przez zero zostanie zgłoszone jako błąd. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```console  
 Add(15,3) = 18  
@@ -88,7 +88,7 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- Klient robi to, łapiąc odpowiedni `FaultException<MathFault>` wyjątek:  
+ Klient wykonuje to poprzez przechwycenie odpowiedniego `FaultException<MathFault>` wyjątku:  
   
 ```csharp
 catch (FaultException<MathFault> e)  
@@ -98,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Domyślnie szczegóły nieoczekiwanych wyjątków nie są wysyłane do klienta, aby zapobiec szczegóły implementacji usługi z ucieczki bezpiecznej granicy usługi. `FaultContract`zapewnia sposób opisywania usterek w umowie i oznaczanie niektórych rodzajów wyjątków, stosownie do przekazywania do klienta. `FaultException<T>`zapewnia mechanizm wykonywania do wysyłania błędów do konsumentów.  
+ Domyślnie szczegóły nieoczekiwanych wyjątków nie są wysyłane do klienta, aby zapobiec szczegółom implementacji usługi z ucieczki bezpiecznej granicy usługi. `FaultContract`zapewnia sposób opisywania błędów w kontrakcie i oznaczania niektórych typów wyjątków zgodnie z potrzebami do przesyłania danych do klienta. `FaultException<T>`zapewnia mechanizm czasu wykonywania do wysyłania błędów do odbiorców.  
   
- Jednak jest przydatne, aby zobaczyć wewnętrzne szczegóły błędu usługi podczas debugowania. Aby wyłączyć bezpieczne zachowanie wcześniej opisane, można wskazać, że szczegóły każdego nieobsługiwał wyjątek na serwerze powinny być uwzględnione w usterce, która jest wysyłana do klienta. Można to osiągnąć <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> poprzez `true`ustawienie . Można ustawić go w kodzie lub w konfiguracji, jak pokazano w poniższym przykładzie.  
+ Jednak podczas debugowania warto zobaczyć wewnętrzne szczegóły błędu usługi. Aby wyłączyć wcześniej opisane bezpieczne zachowanie, można wskazać, że szczegóły każdego nieobsługiwanego wyjątku na serwerze powinny być dołączone do błędu wysyłanego do klienta programu. Jest to realizowane przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> `true` . Można ustawić ją w kodzie lub w konfiguracji, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <behaviors>  
@@ -113,25 +113,25 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- Ponadto zachowanie musi być skojarzone z usługą, ustawiając `behaviorConfiguration` atrybut usługi w pliku konfiguracyjnym na "CalculatorServiceBehavior".  
+ Ponadto zachowanie musi być skojarzone z usługą przez ustawienie `behaviorConfiguration` atrybutu usługi w pliku konfiguracji na "CalculatorServiceBehavior".  
   
- Aby złapać takie błędy na kliencie, <xref:System.ServiceModel.FaultException> nierodzysk należy złapać.  
+ Aby przechwytywać takie błędy na kliencie, <xref:System.ServiceModel.FaultException> należy przechwycić nieogólne.  
   
- To zachowanie powinno być używane tylko do celów debugowania i nigdy nie powinny być włączone w produkcji.  
+ Takie zachowanie powinno być używane tylko do celów debugowania i nigdy nie powinno być włączone w środowisku produkcyjnym.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

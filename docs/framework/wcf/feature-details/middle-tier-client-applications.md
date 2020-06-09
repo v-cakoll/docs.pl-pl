@@ -2,39 +2,39 @@
 title: Aplikacje klienckie warstwy środkowej
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c50223a55765f211dae710f96bffa7716ce36b32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598817"
 ---
 # <a name="middle-tier-client-applications"></a>Aplikacje klienckie warstwy środkowej
-W tym temacie omówiono różne problemy specyficzne dla aplikacje klienckie warstwy środkowej, które używają usług Windows Communication Foundation (WCF).  
+W tym temacie omówiono różne problemy specyficzne dla aplikacji klienckich warstwy środkowej, które używają Windows Communication Foundation (WCF).  
   
-## <a name="increasing-middle-tier-client-performance"></a>Zwiększanie wydajności klienckie warstwy środkowej  
- W porównaniu do poprzednich technologii komunikacji, takich jak usługi sieci Web za pomocą programu ASP.NET, utworzenie wystąpienia klienta WCF może być bardziej złożone z powodu rozbudowanego zestawu funkcji programu WCF. Na przykład, gdy <xref:System.ServiceModel.ChannelFactory%601> otworzyć obiektu jego ustanowienia bezpiecznej sesji przy użyciu usługi, procedury, która zwiększa się czas uruchamiania dla wystąpienia klienta. Zazwyczaj te możliwości dodatkowych funkcji nie wpływają na aplikacje klienckie znacznie od klienta platformy WCF wykonuje kilka wywołań, a następnie zamyka.  
+## <a name="increasing-middle-tier-client-performance"></a>Zwiększenie wydajności klienta warstwy środkowej  
+ W porównaniu z poprzednimi technologiami komunikacyjnymi, takimi jak usługi sieci Web przy użyciu ASP.NET, tworzenie wystąpienia klienta WCF może być bardziej skomplikowane ze względu na rozbudowany zestaw funkcji WCF. Na przykład po <xref:System.ServiceModel.ChannelFactory%601> otwarciu obiektu można ustanowić bezpieczną sesję z usługą, a także procedurę, która wydłuża czas uruchamiania dla wystąpienia klienta. Zazwyczaj te dodatkowe funkcje funkcji nie wpływają na aplikacje klienckie znacznie, ponieważ klient WCF wykonuje kilka wywołań, a następnie zamyka je.  
   
- Aplikacje klienckie warstwy środkowej, jednak można szybko utworzyć wiele obiektów klienta WCF i, co w efekcie środowiska inicjowania zwiększone wymagania. Istnieją dwa główne sposoby zwiększenie wydajności aplikacji warstwy środkowej podczas wywoływania usługi:  
+ Aplikacje klienckie warstwy środkowej mogą jednak szybko tworzyć wiele obiektów klienta programu WCF i w efekcie zwiększyć wymagania dotyczące inicjacji. Istnieją dwa główne podejścia do zwiększania wydajności aplikacji warstwy środkowej podczas wywoływania usług:  
   
-- Buforowanie obiektu klienta programu WCF i użyć go ponownie dla kolejnych wywołań gdzie to możliwe.  
+- Buforuj obiekt klienta WCF i ponownie go wykorzystuje do kolejnych wywołań, tam gdzie to możliwe.  
   
-- Utwórz <xref:System.ServiceModel.ChannelFactory%601> obiektu, a następnie użyć tego obiektu, do tworzenia nowego klienta WCF obiektów kanał dla każdego wywołania.  
+- Utwórz <xref:System.ServiceModel.ChannelFactory%601> obiekt, a następnie użyj tego obiektu, aby utworzyć nowe obiekty kanału klienta WCF dla każdego wywołania.  
   
- Kwestie do rozważenia, korzystając z tych metod obejmują:  
+ Kwestie, które należy wziąć pod uwagę podczas korzystania z tych metod, obejmują:  
   
-- Jeśli usługa jest stanie specyficzne dla klienta przy użyciu sesji, następnie możesz ponownie użyć klienta WCF warstwy środkowej za pomocą żądań wielu klientów, ponieważ stan usługi jest powiązany z klienckie warstwy środkowej.  
+- Jeśli usługa utrzymuje stan specyficzny dla klienta przy użyciu sesji, nie można ponownie użyć klienta WCF warstwy środkowej z wieloma żądaniami warstwy klienta, ponieważ stan usługi jest powiązany z klientem warstwy środkowej.  
   
-- Jeśli usługa musi przeprowadzić uwierzytelnianie poszczególnych klientów, należy utworzyć nowego klienta dla każdego żądania przychodzącego w warstwie środkowej zamiast ponownego użycia warstwy środkowej klienta WCF (lub obiekt kanału klienta WCF), ponieważ poświadczenia klienta warstwy środkowej Nie można zmodyfikować po klienta WCF (lub <xref:System.ServiceModel.ChannelFactory%601>) został utworzony.  
+- Jeśli usługa musi przeprowadzić uwierzytelnianie dla poszczególnych klientów, należy utworzyć nowego klienta dla każdego żądania przychodzącego w warstwie środkowej zamiast ponownego używania klienta WCF warstwy środkowej (lub obiektu kanału klienta WCF), ponieważ nie można modyfikować poświadczeń klienta warstwy środkowej po utworzeniu klienta WCF (lub <xref:System.ServiceModel.ChannelFactory%601> ).  
   
-- Kanałów i klientów utworzonych przez kanały jest metodą o bezpiecznych wątkach, może nie obsługują zapisywania jednocześnie więcej niż jeden komunikat podczas transmisji. W przypadku wysyłania dużych komunikatów, szczególnie w przypadku przesyłania strumieniowego, operacji wysyłania mogą blokować oczekiwanie na inny wysłać do ukończenia. Powoduje to, że dwa różne rodzaje problemów: Brak współbieżności i możliwość zakleszczenia przepływ sterowania wraca do usługi, o których ponowne użycie kanału (oznacza to, udostępnionych klienta wywołania usługi którego wyniki ścieżka kodu w wywołanie zwrotne do udostępnionego klienta). Ta zasada obowiązuje niezależnie od typu klienta WCF, których można użyć ponownie.  
+- Kanały i klienci tworzone przez kanały są bezpieczne dla wątków, ale mogą nie obsługiwać jednoczesnego zapisywania więcej niż jednego komunikatu w sieci. W przypadku wysyłania dużych komunikatów, szczególnie w przypadku przesyłania strumieniowego, operacja wysyłania może blokować oczekiwanie na zakończenie innego procesu wysyłania. Powoduje to dwa rodzaje problemów: Brak współbieżności i możliwości zakleszczenia, jeśli przepływ sterowania powróci do usługi w sposób ponownie korzystający z kanału (to oznacza, że udostępniony klient wywołuje usługę, której ścieżka kodu powoduje wywołanie zwrotne do klienta udostępnionego). Jest to istotne niezależnie od typu używanego klienta programu WCF.  
   
-- Musi obsługiwać uszkodzoną kanały, niezależnie od tego, czy udostępnianie kanału. Gdy kanały są używane ponownie, jednak błędną kanału można walce z więcej niż jedną oczekującego żądania lub wysyłania.  
+- Należy obsługiwać błędne kanały, niezależnie od tego, czy dany kanał jest udostępniany. Gdy kanały są ponownie używane, kanał błędu może trwać więcej niż jedno oczekujące żądanie lub wysłać.  
   
- Aby uzyskać przykład demonstrujący najlepsze rozwiązania dotyczące ponowne użycie klienta dla wielu żądań, zobacz [powiązanie danych w kliencie programu ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md).  
+ Aby zapoznać się z przykładem, w którym przedstawiono najlepsze rozwiązania dotyczące ponownego korzystania z klienta dla wielu żądań, zobacz [powiązanie danych w kliencie ASP.NET](../samples/data-binding-in-an-aspnet-client.md).  
   
- Ponadto, możesz zwiększyć wydajność uruchamiania dla tych klientów, którzy używają typów danych, które są możliwe do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> Generowanie i kompilowanie kodu serializacji dla tych typów danych w czasie wykonywania, co może skutkować wydajności uruchamiania powolne. [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji, generowania kodu serializacji niezbędne z skompilowanych zestawów dla aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
+ Ponadto można zwiększyć wydajność uruchamiania dla klientów korzystających z typów danych, które można serializować przy użyciu <xref:System.Xml.Serialization.XmlSerializer> generowania i kompilowania kodu serializacji dla tych typów danych w czasie wykonywania, co może spowodować spowolnienie wydajności. [Narzędzie do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) może zwiększyć wydajność uruchamiania tych aplikacji, generując wymagany kod serializacji z skompilowanych zestawów dla aplikacji. Aby uzyskać więcej informacji, zobacz [How to: ulepszanie czasu uruchamiania aplikacji klienckich WCF przy użyciu elementu XmlSerializer](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](accessing-services-using-a-client.md)

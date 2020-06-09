@@ -1,5 +1,6 @@
 ---
 title: Semafor i klasa SemaphoreSlim
+description: Więcej informacji na temat semafora & SemaphoreSlim. Semafor klasy to cienka otoka wokół obiektu semafora Win32. Klasa SemaphoreSlim jest lekkim semaforem.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600454"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor i klasa SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType>Klasa reprezentuje nazwę (systemowo) lub semafor lokalny. Jest to cienka otoka otaczająca obiekt semafora Win32. Semafory Win32 to zliczanie semaforów, które mogą służyć do kontrolowania dostępu do puli zasobów.  
@@ -44,7 +45,7 @@ ms.locfileid: "84291139"
   
  Użyj zabezpieczeń kontroli dostępu, aby chronić <xref:System.Threading.Semaphore> obiekt, który reprezentuje nazwany semafor, najlepiej przy użyciu konstruktora, który określa <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> obiekt. Można również zastosować zabezpieczenia kontroli dostępu przy użyciu <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> metody, ale powoduje to pozostawienie okna luk w zabezpieczeniach między momentem utworzenia semafora a czasem jego ochrony. Ochrona semaforów z zabezpieczeniami kontroli dostępu pomaga zapobiegać złośliwym atakom, ale nie rozwiązuje problemu przypadkowych kolizji nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

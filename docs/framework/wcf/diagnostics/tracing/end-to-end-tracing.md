@@ -2,32 +2,32 @@
 title: Kompleksowe śledzenie
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc8fc448bdcf94ab25349f6b34961a34e5ed2a5a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598583"
 ---
 # <a name="end-to-end-tracing"></a>Kompleksowe śledzenie
-Kompleksowe śledzenie (e2e) umożliwia deweloperom wykonaj wykonywanie kodu w infrastrukturze usługi Windows Communication Foundation (WCF), aby zbadać, dlaczego ścieżka kodu nie powiodło się lub w celu udostępnienia szczegółowego śledzenia pojemności planowanie i analiza wydajności. Windows Communication Foundation (WCF) udostępnia trzy mechanizmy korelacji, aby pomóc w zdiagnozowaniu przyczyny błędu: działań, transfery i propagacji.  
+Śledzenie kompleksowe (E2E) umożliwia deweloperom wykonywanie kodu w infrastrukturze Windows Communication Foundation (WCF) w celu zbadania przyczyny niepowodzenia ścieżki kodu lub zapewnienia szczegółowego śledzenia wydajności planowania pojemności i analizy wydajności. Windows Communication Foundation (WCF) oferuje trzy mechanizmy korelacji ułatwiające zdiagnozowanie przyczyny błędu: działania, transfery i Propagacja.  
   
- Zobacz [scenariusze śledzenia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) listę scenariuszy śledzenia end-to-end oraz ich odpowiednich działań i śledzenie projektu.  
+ Zapoznaj się z [kompleksowymi scenariuszami śledzenia](end-to-end-tracing-scenarios.md) , aby zapoznać się z listą kompleksowych scenariuszy śledzenia i ich odpowiedniego projektu działań i śledzenia.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Działanie](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md):  W tym artykule opisano działanie ślady w modelu śledzenia usług Windows Communication Foundation (WCF).  
+ [Działanie](activity.md): opisuje ślady aktywności w modelu śledzenia Windows Communication Foundation (WCF).  
   
- [Transfer](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md):  W tym artykule opisano transferu w modelu śledzenia usług Windows Communication Foundation (WCF), a do skorelowania działań w ramach punktów końcowych przy użyciu transferu.  
+ [Transfer](transfer.md): opisuje transfer w modelu śledzenia Windows Communication Foundation (WCF) i używanie transferu do skorelowania działań w punktach końcowych.  
   
- [Propagacja](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md):  W tym artykule opisano Propagacja działania w Windows Communication Foundation (WCF) śledzenie modelu i korelowanie działania punktów końcowych przy użyciu propagacji.  
+ [Propagacja](propagation.md): opisuje propagację działań w modelu śledzenia Windows Communication Foundation (WCF) i używa propagacji do skorelowania działań w punktach końcowych.  
   
- [Podsumowanie typu śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
+ [Podsumowanie typu śledzenia](trace-type-summary.md)  
   
- Zawiera podsumowanie wszystkich działań typu śledzenia  
+ Zawiera podsumowanie wszystkich typów śledzenia działania  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Konfigurowanie śledzenia](configuring-tracing.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenariusze kompleksowego śledzenia](end-to-end-tracing-scenarios.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -2,29 +2,29 @@
 title: Tworzenie aplikacji kanału równorzędnego
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: b6f856eed1aa011bd21bcf01172e9322df70925b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e10ddd71f4f2fe480829b1b5dd73befba6dabf6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597608"
 ---
 # <a name="building-a-peer-channel-application"></a>Tworzenie aplikacji kanału równorzędnego
-Poniższe sekcje zawierają wskazówki dotyczące tworzenia aplikacji kanału równorzędnego.  
+Poniższe sekcje zawierają wskazówki dotyczące opracowywania aplikacji kanału równorzędnego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Konwertowanie aplikacji NetTcpBinding na aplikację kanału równorzędnego](../../../../docs/framework/wcf/feature-details/converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
- W tym artykule opisano nowości do konwertowanie aplikacji NetTcpBinding na aplikację aplikacji kanału równorzędnego.  
+ [Konwertowanie aplikacji NetTcpBinding na aplikację kanału równorzędnego](converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
+ Opisuje gorącą konwersję aplikacji NetTcpBinding do aplikacji kanału równorzędnego.  
   
- [Ograniczanie dystrybucji komunikatów](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
- Omawia przy użyciu liczba przeskoków, filtr Propagacja komunikatów, Filtr lokalny lub bezpośrednie połączenie do kontrolowania, jak wiadomości są przekazywane w całej sieci i zawiera ogólne wytyczne dotyczące Wybieranie podejścia.  
+ [Ograniczanie dystrybucji komunikatów](limiting-message-distribution.md)  
+ Omawia użycie liczby przeskoków, filtru propagacji komunikatów, lokalnego filtru lub bezpośredniego połączenia w celu kontrolowania sposobu przekazywania komunikatów w całej sieci i zawiera ogólne wytyczne dotyczące wybierania podejścia.  
   
- [Dodawanie stanu online i offline](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
- Opisuje sposób używania <xref:System.ServiceModel.IOnlineStatus> interfejs do monitorowania konkretne szczegółowe informacje o stanu online i offline kanał elementu równorzędnego połączenia.  
+ [Dodawanie stanu online i offline](adding-online-and-offline-status.md)  
+ Opisuje, jak używać <xref:System.ServiceModel.IOnlineStatus> interfejsu do monitorowania szczegółowych informacji o stanie online i offline połączenia kanału równorzędnego.  
   
- [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- W tym artykule omówiono zabezpieczenia oparte na transport i oparta na komunikatach i najlepsze rozwiązania dotyczące zabezpieczania aplikacji kanałów równorzędnych.  
+ [Zabezpieczanie aplikacji kanałów równorzędnych](securing-peer-channel-applications.md)  
+ Omówienie zabezpieczeń opartych na transportach i opartych na komunikatach oraz najlepsze rozwiązania dotyczące zabezpieczania aplikacji kanału równorzędnego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Pojęcia kanałów równorzędnych](peer-channel-concepts.md)

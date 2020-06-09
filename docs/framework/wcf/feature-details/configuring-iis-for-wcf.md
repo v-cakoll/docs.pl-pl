@@ -2,12 +2,12 @@
 title: Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 41eedcf78d8ca6f10fcd0380e43420dcc1b328f1
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964518"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597569"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation
 
@@ -18,7 +18,7 @@ Internet Information Services (IIS) 7,0 ma modularny projekt, który umożliwia 
 
  W panelu sterowania kliknij pozycję **programy** , a następnie kliknij pozycję **Włącz lub wyłącz funkcje systemu Windows** , które są wyświetlane w obszarze **programy i funkcje**, składnik został wyświetlony na liście tak jak na poniższej ilustracji.
 
- ![Włącz lub wyłącz funkcje okna dialogowego](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
+ ![Włącz lub wyłącz funkcje okna dialogowego](media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
 
  Ta funkcja ma następujące składniki podrzędne:
 
@@ -35,26 +35,26 @@ Internet Information Services (IIS) 7,0 ma modularny projekt, który umożliwia 
 ## <a name="iis-70-default-installation"></a>IIS 7,0: Instalacja domyślna
  Sprawdzając funkcję **Internet Information Services** , niektóre węzły podrzędne są automatycznie sprawdzane, jak pokazano na poniższej ilustracji.
 
- ![Ustawienia domyślne dla funkcji usług IIS 7,0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
+ ![Ustawienia domyślne dla funkcji usług IIS 7,0](media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
 
  Jest to domyślna instalacja usług IIS 7,0. Za pomocą tej instalacji można używać usług IIS 7,0 do obsługi zawartości statycznej (takiej jak strony HTML i inna zawartość). Nie można jednak uruchamiać aplikacji ASP.NET ani CGI ani hostować usług WCF.
 
 ## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7,0: Instalacja z obsługą ASP.NET
  Aby ASP.NET działały w usługach IIS 7,0, należy zainstalować ASP.NET. Po sprawdzeniu **ASP.NET**ekran powinien wyglądać jak na poniższej ilustracji.
 
- ![Asp.NET wymagane ustawienia](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
+ ![Asp.NET wymagane ustawienia](media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
 
  Jest to minimalne środowisko dla aplikacji WCF i ASP.NET, które działają w usługach IIS 7,0.
 
 ## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7,0: Instalacja ze składnikami zgodności usług IIS 6,0
  Podczas instalowania usług IIS 7,0 w systemie z programem Visual Studio 2005 lub innymi skryptami lub narzędziami automatyzacji (na przykład Adsutil. vbs), które konfigurują aplikacje wirtualne korzystające z interfejsu API metabazy usług IIS 6,0, upewnij się, że zaznaczono **Narzędzia do obsługi skryptów**6,0 IIS. Spowoduje to automatyczne sprawdzenie innych podrzędnych węzłów **zgodności zarządzania**usług IIS 6,0. Na poniższej ilustracji przedstawiono ekran po wykonaniu tej czynności:
 
- ![Ustawienia zgodności zarządzania usługami IIS 6,0](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
+ ![Ustawienia zgodności zarządzania usługami IIS 6,0](media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
  W przypadku tej instalacji masz wszystko, co jest wymagane do korzystania z usług IIS 7,0, ASP.NET i funkcji WCF oraz przykładów dostępnych w sieci Web.
 
 ## <a name="request-limits"></a>Limity żądań
- W systemie Windows Vista z usługami IIS 7 zmieniono wartość domyślną `maxUri` i `maxQueryStringSize` ustawień. Domyślnie Filtrowanie żądań w usługach IIS 7,0 zezwala na długość adresu URL 4096 znaków i długość ciągu zapytania wynoszącą 2048 znaków. Aby zmienić te ustawienia domyślne, Dodaj następujący kod XML do pliku App. config.
+ W systemie Windows Vista z usługami IIS 7 wartość domyślna `maxUri` ustawień i `maxQueryStringSize` została zmieniona. Domyślnie Filtrowanie żądań w usługach IIS 7,0 zezwala na długość adresu URL 4096 znaków i długość ciągu zapytania wynoszącą 2048 znaków. Aby zmienić te ustawienia domyślne, Dodaj następujący kod XML do pliku App. config.
 
 ```xml
  <system.webServer>
@@ -66,9 +66,9 @@ Internet Information Services (IIS) 7,0 ma modularny projekt, który umożliwia 
  </system.webServer>
  ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Architektura aktywacji WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Konfigurowanie usługi WAS do użycia z programem WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Architektura aktywacji WAS](was-activation-architecture.md)
+- [Konfigurowanie usługi WAS do użycia z programem WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](how-to-install-and-configure-wcf-activation-components.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

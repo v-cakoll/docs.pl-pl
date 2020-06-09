@@ -7,52 +7,52 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 231310e5c427f507141e3c144cb02b8e848d4fbf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66f51267f20f8cdad8feeedf37435ccfa733146e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185158"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597361"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Grupowanie komunikatów z obsługą kolejek w ramach sesji
-Windows Communication Foundation (WCF) udostępnia sesję, która umożliwia grupowanie zestawu powiązanych wiadomości razem do przetwarzania przez jedną aplikację odbierającą. Wiadomości, które są częścią sesji musi być częścią tej samej transakcji. Ponieważ wszystkie wiadomości są częścią tej samej transakcji, jeśli jedna wiadomość nie może być przetworzona, cała sesja zostanie wycofana. Sesje mają podobne zachowania w odniesieniu do kolejek utraconych wiadomości i kolejek trucizny. Właściwość Czas wygaśnięcia (TTL) ustawiona na powiązanie w kolejce skonfigurowane dla sesji jest stosowana do sesji jako całości. Jeśli tylko niektóre wiadomości w sesji są wysyłane przed wygaśnięciem czasu wygaśnięcia, cała sesja jest umieszczana w kolejce utraconych wiadomości. Podobnie, gdy wiadomości w sesji nie mogą być wysyłane do aplikacji z kolejki aplikacji, cała sesja jest umieszczana w kolejce trucić (jeśli są dostępne).  
+Windows Communication Foundation (WCF) to sesja, która umożliwia grupowanie zestawu powiązanych komunikatów w celu przetworzenia przez pojedynczą aplikację otrzymującą. Komunikaty, które są częścią sesji, muszą być częścią tej samej transakcji. Ponieważ wszystkie komunikaty są częścią tej samej transakcji, jeśli nie można przetworzyć jednego komunikatu, cała sesja jest wycofywana. Sesje mają podobne zachowania w odniesieniu do nieutraconych kolejek i trujących kolejek. Właściwość Time to Live (TTL) ustawiona w powiązaniu w kolejce skonfigurowanym dla sesji jest stosowana do sesji jako całości. Jeśli tylko niektóre komunikaty w sesji są wysyłane przed upływem czasu wygaśnięcia, cała sesja zostanie umieszczona w kolejce utraconych wiadomości. Podobnie w przypadku niepowodzenia wysyłania komunikatów w sesji do aplikacji z kolejki aplikacji cała sesja zostanie umieszczona w kolejce trującej (jeśli jest dostępna).  
   
-## <a name="message-grouping-example"></a>Przykład grupowania wiadomości  
- Jednym z przykładów, gdzie grupowanie wiadomości jest przydatne jest podczas implementowania aplikacji przetwarzania zamówień jako usługi WCF. Na przykład klient przesyła zamówienie do tej aplikacji, która zawiera wiele elementów. Dla każdego elementu klient wykonuje wywołanie usługi, co powoduje wysłanie osobnej wiadomości. Istnieje możliwość wyświetlania A, aby otrzymać pierwszy element, a serwer B, aby otrzymać drugi element. Za każdym razem, gdy element jest dodawany, serwer przetwarzający ten element musi znaleźć odpowiednią kolejność i dodać do niego element, który jest wysoce nieefektywny. Nadal można napotkać takie nieefektywności tylko z jednego serwera obsługi wszystkich żądań, ponieważ serwer musi śledzić wszystkie zamówienia obecnie przetwarzane i określić, który z nich nowy element należy do. Grupowanie wszystkich żądań dla jednego zamówienia znacznie upraszcza implementację takiej aplikacji. Aplikacja kliencka wysyła wszystkie elementy dla pojedynczego zamówienia w sesji, więc gdy usługa przetwarza zamówienie, przetwarza całą sesję jednocześnie. \  
+## <a name="message-grouping-example"></a>Przykład grupowania komunikatów  
+ Przykładem, gdy pomocne jest grupowanie komunikatów, jest zaimplementowanie aplikacji do przetwarzania zamówień jako usługi WCF. Na przykład klient przesyła do tej aplikacji zamówienie, które zawiera kilka elementów. Dla każdego elementu klient wykonuje wywołanie do usługi, co spowoduje wysłanie osobnej wiadomości. Jest możliwe, aby program mógł otrzymać pierwszy element, a serwer B odbierze drugi element. Za każdym razem, gdy element jest dodawany, serwer przetwarzania tego elementu musi znaleźć odpowiednie zamówienie i dodać do niego element, który jest wysoce nieefektywny. W dalszym ciągu można pracować w taki sposób, że tylko jeden serwer obsługuje wszystkie żądania, ponieważ serwer musi śledzić wszystkie aktualnie przetwarzane zamówienia i określić, do którego, do którego należy nowy element. Grupowanie wszystkich żądań dla pojedynczego zamówienia znacznie upraszcza implementację takiej aplikacji. Aplikacja kliencka wysyła wszystkie elementy z pojedynczej kolejności w sesji, więc gdy usługa przetwarza kolejność, przetwarza całą sesję jednocześnie. \  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Aby skonfigurować umowę serwisową do używania sesji  
+#### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Aby skonfigurować kontrakt usługi do korzystania z sesji  
   
-1. Zdefiniuj umowę serwisową, która wymaga sesji. Zrób to <xref:System.ServiceModel.ServiceContractAttribute> za pomocą atrybutu, określając:  
+1. Zdefiniuj kontrakt usługi wymagający sesji. Zrób to z <xref:System.ServiceModel.ServiceContractAttribute> atrybutem, określając:  
   
     ```csharp
     SessionMode=SessionMode.Required  
     ```  
   
-2. Oznacz operacje w umowie jako jednokierunkowe, ponieważ te metody nie zwracają niczego. Odbywa się to <xref:System.ServiceModel.OperationContractAttribute> za pomocą atrybutu, określając:  
+2. Oznacz operacje w kontrakcie jako jednokierunkowe, ponieważ te metody nie zwracają żadnych elementów. Jest to wykonywane z <xref:System.ServiceModel.OperationContractAttribute> atrybutem, określając:  
   
     ```csharp  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3. Zaimplementuj <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode> umowę <xref:System.ServiceModel.InstanceContextMode.PerSession?displayProperty=nameWithType>serwisową i określ wartość . Spowoduje to wystąpienie usługi tylko raz dla każdej sesji.  
+3. Zaimplementuj kontrakt usługi i określ <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.PerSession?displayProperty=nameWithType> . Spowoduje to utworzenie wystąpienia usługi tylko raz dla każdej sesji.  
   
     ```csharp  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4. Każda operacja usługi wymaga transakcji. Określ to <xref:System.ServiceModel.OperationBehaviorAttribute> za pomocą atrybutu. Operacja, która kończy transakcję, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete> `true`powinna również być ustawiona na .  
+4. Każda operacja usługi wymaga transakcji. Określ ten <xref:System.ServiceModel.OperationBehaviorAttribute> atrybut. Operacja, która kończy transakcję, powinna również mieć ustawioną wartość <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete> `true` .  
   
     ```csharp  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
     ```  
   
-5. Skonfiguruj punkt końcowy, który `NetMsmqBinding` używa powiązania dostarczonego przez system.  
+5. Skonfiguruj punkt końcowy, który używa powiązania dostarczonego przez system `NetMsmqBinding` .  
   
-6. Utwórz kolejkę <xref:System.Messaging>transakcyjną przy użyciu programu . Kolejkę można również utworzyć za pomocą usługi kolejkowania wiadomości (MSMQ) lub programu MMC. Jeśli to zrobisz, utwórz kolejkę transakcyjną.  
+6. Utwórz kolejkę transakcyjną przy użyciu <xref:System.Messaging> . Możesz również utworzyć kolejkę za pomocą usługi kolejkowania komunikatów (MSMQ) lub MMC. W takim przypadku należy utworzyć kolejkę transakcyjną.  
   
-7. Utwórz hosta usługi dla <xref:System.ServiceModel.ServiceHost>usługi za pomocą programu .  
+7. Utwórz hosta usługi dla usługi przy użyciu programu <xref:System.ServiceModel.ServiceHost> .  
   
 8. Otwórz hosta usługi, aby udostępnić usługę.  
   
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) udostępnia sesję, która umożliwia gru
   
 1. Utwórz zakres transakcji do zapisu w kolejce transakcyjnej.  
   
-2. Utwórz klienta WCF za pomocą narzędzia [Narzędzie narzędziowe ServiceModel Metadata Utility Tool (Svcutil.exe).](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+2. Utwórz klienta WCF za pomocą narzędzia [Svcutil. exe (narzędzie do przesyłania metadanych)](../servicemodel-metadata-utility-tool-svcutil-exe.md) .  
   
 3. Złóż zamówienie.  
   
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) udostępnia sesję, która umożliwia gru
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład zawiera kod `IProcessOrder` dla usługi i dla klienta, który używa tej usługi. Pokazuje, jak WCF używa sesji w kolejce, aby zapewnić zachowanie grupowania.  
+ Poniższy przykład zawiera kod dla `IProcessOrder` usługi i klienta programu korzystającego z tej usługi. Pokazuje, w jaki sposób WCF używa kolejkowane sesje, aby zapewnić zachowanie grupowania.  
   
 ### <a name="code-for-the-service"></a>Kod usługi  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
@@ -83,5 +83,5 @@ Windows Communication Foundation (WCF) udostępnia sesję, która umożliwia gru
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Sesje i kolejki](../samples/sessions-and-queues.md)
+- [Omówienie kolejek](queues-overview.md)

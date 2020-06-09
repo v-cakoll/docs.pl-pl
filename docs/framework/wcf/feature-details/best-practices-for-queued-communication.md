@@ -5,92 +5,92 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af9ed7d64a60042297e071262be7610c4d791a51
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584984"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601351"
 ---
 # <a name="best-practices-for-queued-communication"></a>Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek
-Ten temat zawiera zalecane praktyki dotyczące komunikacji z obsługą kolejek w Windows Communication Foundation (WCF). W poniższych sekcjach omówiono zalecane praktyki z punktu widzenia scenariusza.  
+Ten temat zawiera zalecane praktyki komunikacji w kolejce w programie Windows Communication Foundation (WCF). W poniższych sekcjach omówiono zalecane praktyki z perspektywy scenariusza.  
   
-## <a name="fast-best-effort-queued-messaging"></a>Szybkie optymalny w kolejce komunikatów  
- Dla scenariuszy, które wymagają zapewnia oddzielenie, który obsługi komunikatów w kolejce i szybko, o wysokiej wydajności, obsługa komunikatów za pomocą największej staranności gwarancje, użyj nietransakcyjnej kolejki i ustawić <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> właściwość `false`.  
+## <a name="fast-best-effort-queued-messaging"></a>Szybka, Optymalna obsługa wiadomości w kolejce  
+ W przypadku scenariuszy, które wymagają rozdzielenia, że obsługa komunikatów w kolejce zapewnia wysoką wydajność i szybkie przesyłanie komunikatów o wysokiej wydajności z gwarancjami najlepszego wysiłku, użyj kolejki nietransakcyjnej i ustaw <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> Właściwość na `false` .  
   
- Ponadto, możesz nie ponosić kosztów operacji zapisu na dysku, ustawiając <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> właściwość `false`.  
+ Ponadto możesz zrezygnować z ponoszenia kosztów zapisu na dysku przez ustawienie <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> właściwości na `false` .  
   
- Zabezpieczenia mają wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [zagadnienia związane z wydajnością](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ Zabezpieczenia mają wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące wydajności](performance-considerations.md).  
   
-## <a name="reliable-end-to-end-queued-messaging"></a>Niezawodne End-to-End w kolejce komunikatów  
- W poniższych sekcjach opisano zalecane praktyki dla scenariuszy, które wymagają niezawodną obsługę komunikatów end-to-end.  
+## <a name="reliable-end-to-end-queued-messaging"></a>Niezawodna kompleksowa obsługa komunikatów w kolejce  
+ W poniższych sekcjach opisano zalecane praktyki dotyczące scenariuszy, które wymagają kompleksowej niezawodnej obsługi komunikatów.  
   
-### <a name="basic-reliable-transfer"></a>Podstawowe niezawodne transferu  
- Niezawodność end-to-end, można ustawić <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> właściwość `true` zapewnienie transferu. <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> Właściwość może być ustawiona na `true` lub `false` w zależności od wymagań (wartość domyślna to `true`). Ogólnie rzecz biorąc <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> właściwość jest ustawiona na `true` jako część niezawodność end-to-end. Naruszenia zabezpieczeń jest spadek wydajności, ale sprawia, że komunikat trwałe, aby wiadomość nie zostaną utracone w przypadku awarii menedżera kolejek.  
+### <a name="basic-reliable-transfer"></a>Podstawowy niezawodny transfer  
+ Aby zapewnić kompleksową niezawodność, należy ustawić <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> Właściwość na, aby `true` upewnić się, że transfer. <xref:System.ServiceModel.MsmqBindingBase.Durable%2A>Właściwość może być ustawiona na wartość `true` lub `false` w zależności od wymagań (wartość domyślna to `true` ). Ogólnie rzecz biorąc <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> Właściwość jest ustawiana `true` jako część kompleksowej niezawodności. Kompromisem jest koszt wydajności, ale zapewnia trwały komunikat, dzięki czemu komunikat nie zostanie utracony w przypadku awarii Menedżera kolejki.  
   
-### <a name="use-of-transactions"></a>Stosowanie transakcji  
- Aby zapewnić niezawodność end-to-end, należy użyć transakcji. `ExactlyOnce` gwarancje tylko upewnij się, że komunikaty są dostarczane do kolejki docelowej. Aby upewnić się, że wiadomość zostaje odebrana, należy użyć transakcji. Bez transakcji Jeśli usługa ulegnie awarii, utraty komunikat, który jest dostarczany, ale faktycznie jest dostarczane do aplikacji.  
+### <a name="use-of-transactions"></a>Korzystanie z transakcji  
+ Aby zapewnić kompleksową niezawodność, należy użyć transakcji. `ExactlyOnce`Gwarancja gwarantuje, że komunikaty są dostarczane do kolejki docelowej. Aby upewnić się, że wiadomość zostanie odebrana, użyj transakcji. Bez transakcji, jeśli usługa ulegnie awarii, utracisz komunikat, który jest dostarczany, ale faktycznie dostarczany do aplikacji.  
   
-### <a name="use-of-dead-letter-queues"></a>Użyj kolejki utraconych wiadomości  
- Kolejki utraconych wiadomości upewnij się, że otrzymasz powiadomienie, jeśli komunikat nie zostanie dostarczona do kolejki docelowej. Można użyć kolejki utraconych wiadomości dostarczanych przez system lub niestandardowe kolejki utraconych wiadomości. Ogólnie rzecz biorąc przy użyciu niestandardowych kolejki utraconych wiadomości jest najlepszy, ponieważ pozwala na wysyłanie wiadomości utraconych komunikatów z jednej aplikacji do pojedynczej kolejki utraconych wiadomości. W przeciwnym razie wszystkie wiadomości utraconych występujących dla wszystkich aplikacji uruchomionych w systemie są dostarczane do pojedynczej kolejki. Każda aplikacja musi następnie wyszukiwania do kolejki utraconych wiadomości można znaleźć utracone wiadomości, które mają zastosowanie do tej aplikacji. Czasami za pomocą niestandardowych kolejki utraconych wiadomości jest niemożliwe, takie jak podczas korzystania z usługi MSMQ 3.0.  
+### <a name="use-of-dead-letter-queues"></a>Korzystanie z kolejek z utraconymi wiadomościami  
+ Kolejki utraconych wiadomości upewnij się, że otrzymasz powiadomienie o niepowodzeniu dostarczenia komunikatu do kolejki docelowej. Można użyć kolejki utraconych wiadomości dostarczonych przez system lub niestandardowej kolejki utraconych wiadomości. Ogólnie rzecz biorąc, używanie niestandardowej kolejki utraconych wiadomości jest najlepszym rozwiązaniem, ponieważ umożliwia wysyłanie wiadomości utraconych z jednej aplikacji do pojedynczej kolejki utraconych wiadomości. W przeciwnym razie wszystkie wiadomości utracone, które wystąpiły dla wszystkich aplikacji uruchomionych w systemie, są dostarczane do pojedynczej kolejki. Każda aplikacja musi następnie przeszukać kolejkę utraconych wiadomości, aby znaleźć komunikaty utraconych danych, które są istotne dla danej aplikacji. Czasami użycie niestandardowej kolejki utraconych wiadomości nie jest możliwe, na przykład w przypadku korzystania z usługi MSMQ 3,0.  
   
- Nie zaleca się wyłączenie kolejki utraconych wiadomości komunikacji niezawodnej end-to-end.  
+ Nie zaleca się wyłączania kolejek z utraconymi wiadomościami w celu zapewnienia komunikacji niezawodnej.  
   
- Aby uzyskać więcej informacji, zobacz [przy użyciu kolejki utraconych wiadomości, do obsługi błędów transferu](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Aby uzyskać więcej informacji, zobacz [Korzystanie z kolejek utraconych w celu obsługi niepowodzeń transferu komunikatów](using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
-### <a name="use-of-poison-message-handling"></a>Korzystanie z Poison postępowanie  
- Obsługa komunikatów poison umożliwia odzyskiwanie po awarii do przetwarzania komunikatów.  
+### <a name="use-of-poison-message-handling"></a>Korzystanie z obsługi komunikatów trujących  
+ Obsługa komunikatów trujących zapewnia możliwość odzyskania sprawności po niepowodzeniu przetwarzania komunikatów.  
   
- Podczas korzystania z funkcji obsługi komunikatów poison, upewnij się, że <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> właściwość jest ustawiona na odpowiednią wartość. Ustawienie <xref:System.ServiceModel.ReceiveErrorHandling.Drop> oznacza, że dane zostaną utracone. Z drugiej strony, ustawieniem dla niego <xref:System.ServiceModel.ReceiveErrorHandling.Fault> błędów hosta usługi w razie wykrycia, zarządzanie skażonymi komunikatami. Za pomocą MSMQ 3.0 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> jest to najlepsze rozwiązanie, aby uniknąć utraty danych, a następnie przenieść Zarządzanie skażonymi komunikatami na bok. Za pomocą usługi MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> przedstawia zalecane podejście. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Przenosi uszkodzone kolejką komunikatu z kolejki, dzięki czemu usługa może w dalszym ciągu przetwarzać nowych wiadomości. Usługa poison wiadomość można następnie przetworzyć Zarządzanie skażonymi komunikatami oddzielnie.  
+ W przypadku korzystania z funkcji Trująca obsługa komunikatów upewnij się, że <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> Właściwość ma ustawioną odpowiednią wartość. Ustawienie to <xref:System.ServiceModel.ReceiveErrorHandling.Drop> oznacza, że dane zostaną utracone. Z drugiej strony, ustawiając ją na <xref:System.ServiceModel.ReceiveErrorHandling.Fault> Błędy hosta usługi, gdy wykryje trujący komunikat. W przypadku korzystania z usługi MSMQ 3,0 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> najlepszym rozwiązaniem jest uniknięcie utraty danych i przeniesienie skażonego komunikatu z metody. <xref:System.ServiceModel.ReceiveErrorHandling.Move>Zalecanym podejściem jest użycie usługi MSMQ 4,0. <xref:System.ServiceModel.ReceiveErrorHandling.Move>przenosi trującą wiadomość z kolejki, aby usługa mogła nadal przetwarzać nowe komunikaty. Nieskażony komunikat może następnie przetworzyć trujący komunikat osobno.  
   
- Aby uzyskać więcej informacji, zobacz [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Aby uzyskać więcej informacji, zobacz [Obsługa skażonych komunikatów](poison-message-handling.md).  
   
-## <a name="achieving-high-throughput"></a>Uzyskanie wysokiej przepływności  
- Aby osiągnąć wysoką przepływność w jednym punkcie końcowym, użyj następującego polecenia:  
+## <a name="achieving-high-throughput"></a>Osiągnięcie dużej przepływności  
+ Aby osiągnąć wysoką przepływność w jednym punkcie końcowym, użyj następujących:  
   
-- Wykonany, przetwarzanie wsadowe. Transakcyjnego przetwarzania wsadowego gwarantuje, że wiele komunikatów mogą być odczytywane w ramach jednej transakcji. Powoduje to zoptymalizowanie zatwierdzeń transakcji, zwiększa ogólną wydajność. Koszt przetwarzanie wsadowe jest to, że jeśli wystąpi awaria w pojedynczym komunikacie w ramach partii, a następnie całą partię zostanie wycofana i komunikaty muszą być przetworzone pojedynczo, dopóki nie jest bezpieczne partii ponownie. W większości przypadków skażone komunikaty są rzadkie, więc przetwarzania wsadowego jest preferowany sposób, aby zwiększyć wydajność systemu, zwłaszcza w przypadku innych menedżerów zasobów, które uczestniczą w transakcji. Aby uzyskać więcej informacji, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Przetwarzanie wsadowe transakcyjne. Transakcyjna Partia zadań zapewnia, że wiele komunikatów może być odczytywanych w jednej transakcji. Umożliwia to optymalizację zatwierdzeń transakcji, co zwiększa ogólną wydajność. Koszt przetwarzania wsadowego polega na tym, że jeśli wystąpi błąd w pojedynczym komunikacie w ramach partii, cała partia zostanie wycofana, a komunikaty muszą być przetwarzane pojedynczo do momentu, aż będzie można bezpiecznie wykonać operację wsadową. W większości przypadków trujące komunikaty są rzadkie, więc przetwarzanie wsadowe jest preferowanym sposobem zwiększenia wydajności systemu, szczególnie w przypadku innych menedżerów zasobów, które uczestniczą w transakcji. Aby uzyskać więcej informacji, zobacz Tworzenie [wsadowe komunikatów w transakcji](batching-messages-in-a-transaction.md).  
   
-- Współbieżność. Współbieżność zwiększa przepustowość, ale współbieżności będzie także miała wpływ rywalizacji o zasoby do udostępnionych zasobów. Aby uzyskać więcej informacji, zobacz [współbieżności](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Współbieżności. Współbieżność zwiększa przepływność, ale współbieżność wpływa również na rywalizację o zasoby udostępnione. Aby uzyskać więcej informacji, zobacz [concurrency](../samples/concurrency.md).  
   
-- Ograniczanie przepustowości. Aby uzyskać optymalną wydajność ograniczać liczbę komunikatów w potoku dyspozytora. Na przykład jak to zrobić, zobacz [ograniczania](../../../../docs/framework/wcf/samples/throttling.md).  
+- Ograniczania. W celu uzyskania optymalnej wydajności Ogranicz liczbę komunikatów w potoku dyspozytora. Aby zapoznać się z przykładem, jak to zrobić, zobacz [ograniczanie](../samples/throttling.md).  
   
- Korzystając z dzielenia na partie, należy pamiętać, że współbieżności i ograniczania przepustowości przełożyć na partie współbieżnych.  
+ Podczas korzystania z usługi Batch należy pamiętać, że współbieżność i ograniczanie przepustowości są tłumaczone na współbieżne partie.  
   
- Aby osiągnąć wyższą przepustowość i dostępność, należy użyć farmy usług WCF, które odczytany z kolejki. Wymaga to, że wszystkie te usługi Udostępnianie tej samej umowy na ten sam punkt końcowy. Podejście farmy jest najlepsza dla aplikacji, które mają produkcyjne o wysokiej szybkości komunikatów, ponieważ umożliwia wielu usług dla wszystkich odczytu z tej samej kolejki.  
+ Aby osiągnąć wyższą przepływność i dostępność, użyj farmy usług WCF odczytanych z kolejki. Wymaga to, aby wszystkie te usługi uwidaczniali ten sam kontrakt w tym samym punkcie końcowym. Podejście farmy działa najlepiej w przypadku aplikacji, które mają wysoką szybkość produkcyjną komunikatów, ponieważ umożliwia ona wszystkim usługom odczytywanie z tej samej kolejki.  
   
- Korzystając z farmy serwerów, należy pamiętać, usługa MSMQ 3.0 nie obsługuje zdalnego transakcyjne operacje odczytu. Usługa MSMQ 4.0 obsługuje zdalnego transakcyjne operacje odczytu.  
+ W przypadku korzystania z Farm należy pamiętać, że usługa MSMQ 3,0 nie obsługuje zdalnych operacji odczytu. Usługa MSMQ 4,0 obsługuje zdalne odczyty transakcyjne.  
   
- Aby uzyskać więcej informacji, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) i [różnice w funkcjach kolejkowania w Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Aby uzyskać więcej informacji, zobacz Tworzenie [wsadowe komunikatów w transakcji](batching-messages-in-a-transaction.md) i [różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
-## <a name="queuing-with-unit-of-work-semantics"></a>Usługi kolejkowania wiadomości z jednostką pracy semantyki  
- W niektórych scenariuszach mogą być związane z grupą komunikatów w kolejce i w związku z tym, kolejność komunikatów jest znacząca. W takich scenariuszach przetwarzania grupy pokrewne wiadomości razem jako pojedyncza jednostka: żaden lub wszystkie komunikaty są przetwarzane pomyślnie. Aby zaimplementować takie zachowanie, należy użyć sesji przy użyciu kolejek.  
+## <a name="queuing-with-unit-of-work-semantics"></a>Kolejkowanie przy użyciu semantyki jednostki pracy  
+ W niektórych scenariuszach Grupa komunikatów w kolejce może być powiązana i dlatego kolejność tych komunikatów jest istotna. W takich scenariuszach przetwarzanie grupy powiązanych komunikatów odbywa się wraz z pojedynczą jednostką: wszystkie komunikaty są przetwarzane pomyślnie lub nie są. Aby zaimplementować takie zachowanie, użyj sesji z kolejkami.  
   
- Aby uzyskać więcej informacji, zobacz [grupowanie komunikatów w kolejce w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Aby uzyskać więcej informacji, zobacz [grupowanie komunikatów umieszczonych w kolejce w sesji](grouping-queued-messages-in-a-session.md).  
   
-## <a name="correlating-request-reply-messages"></a>Korelowanie komunikatów "żądanie-odpowiedź"  
- Chociaż kolejki są zazwyczaj jednokierunkowe, w niektórych scenariuszach możesz chcieć dopasowania odpowiedzi odebrany na żądanie wysłane wcześniej. Jeśli potrzebujesz takiego korelacji, zaleca się stosowanie własnego nagłówka komunikatu protokołu SOAP, zawierający informacje o korelacji z komunikatu. Zazwyczaj nadawcy dołączenie tego pliku nagłówkowego z komunikatem i odbiornik, podczas przetwarzania komunikatu i odpowiadanie nowy komunikat w kolejce odpowiedź z powrotem dołącza nagłówek komunikatu nadawcy, który zawiera informacje o powiązaniu nadawca może Określ komunikat odpowiedzi, komunikatem żądania.  
+## <a name="correlating-request-reply-messages"></a>Skorelowanie komunikatów z odpowiedzią na żądanie  
+ Chociaż kolejki są zwykle jednokierunkowe, w niektórych scenariuszach może być konieczne skorelowanie odpowiedzi odebranej wcześniej wysłanego żądania. Jeśli wymagana jest taka korelacja, zaleca się zastosowanie własnego nagłówka komunikatu protokołu SOAP zawierającego informacje o korelacji z wiadomością. Zazwyczaj nadawca dołącza ten nagłówek wraz z wiadomością i odbiorcę, po przetworzeniu komunikatu i odpowiedzeniu z powrotem przy użyciu nowej wiadomości w kolejce odpowiedzi dołącza nagłówek komunikatu nadawcy, który zawiera informacje o korelacji, dzięki czemu nadawca może zidentyfikować komunikat odpowiedzi z żądaniem.  
   
-## <a name="integrating-with-non-wcf-applications"></a>Współdziałanie z aplikacjami innych WCF  
- Użyj `MsmqIntegrationBinding` podczas integrowania usług WCF lub klientów przy użyciu usługi WCF nie lub klientów. Aplikacja WCF nie może być MSMQ aplikacji napisanych z użyciem System.Messaging, modelu COM +, Visual Basic lub C++.  
+## <a name="integrating-with-non-wcf-applications"></a>Integrowanie z aplikacjami nieobsługującymi usług WCF  
+ Służy `MsmqIntegrationBinding` do integrowania usług lub klientów programu WCF z usługami lub klientami spoza środowiska WCF. Aplikacja nieobsługująca programu WCF może być aplikacją usługi MSMQ zapisaną przy użyciu funkcji system. Messaging, COM+, Visual Basic lub C++.  
   
- Korzystając z `MsmqIntegrationBinding`, należy pamiętać o następujących kwestiach:  
+ Korzystając z programu `MsmqIntegrationBinding` , należy pamiętać o następujących kwestiach:  
   
-- Treść wiadomości WCF nie jest taka sama jak treść wiadomości usługi MSMQ. Podczas wysyłania wiadomości WCF przy użyciu Zakolejkowane powiązanie, treść wiadomości WCF znajduje się wewnątrz wiadomości usługi MSMQ. Infrastruktura usługi MSMQ jest oblivious do tych dodatkowych informacji; jego widzi tylko wiadomości usługi MSMQ.  
+- Treść komunikatu WCF nie jest taka sama jak treść wiadomości MSMQ. Podczas wysyłania komunikatu WCF przy użyciu podanego w kolejce powiązania treść komunikatu WCF jest umieszczana w komunikacie usługi MSMQ. Infrastruktura usługi MSMQ jest Oblivious do tych dodatkowych informacji; widzi tylko komunikat usługi MSMQ.  
   
-- `MsmqIntegrationBinding` obsługuje serializację popularnych typów. Na podstawie typu serializacji, typ treści komunikatu ogólny, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, przyjmuje parametry innego typu. Na przykład <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> wymaga `MsmqMessage\<byte[]>` i <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> wymaga `MsmqMessage<Stream>`.  
+- `MsmqIntegrationBinding`obsługuje popularne typy serializacji. W oparciu o typ serializacji, typ treści komunikatu ogólnego, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> ma inne parametry typu. Na przykład <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> wymaga `MsmqMessage\<byte[]>` i <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> wymaga `MsmqMessage<Stream>` .  
   
-- Serializacji XML można określić przy użyciu znanego typu `KnownTypes` atrybutu na [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element, który jest następnie używany do określenia sposobu deserializacji komunikatu XML.  
+- Przy użyciu serializacji XML można określić typ znany przy użyciu `KnownTypes` atrybutu [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu, który jest następnie używany do określenia sposobu deserializacji wiadomości XML.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Grupowanie komunikatów z obsługą kolejek w ramach sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
-- [Tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Korzystanie z zabezpieczeń komunikatów](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
-- [Rozwiązywanie problemów obsługi komunikatów kolejek](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+- [Tworzenie kolejek w programie WCF](queuing-in-wcf.md)
+- [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Grupowanie komunikatów z obsługą kolejek w ramach sesji](grouping-queued-messages-in-a-session.md)
+- [Tworzenie partii komunikatów w ramach transakcji](batching-messages-in-a-transaction.md)
+- [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Obsługa komunikatów zanieczyszczonych](poison-message-handling.md)
+- [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Ochrona komunikatów za pomocą zabezpieczeń transportu](securing-messages-using-transport-security.md)
+- [Korzystanie z zabezpieczeń komunikatów](securing-messages-using-message-security.md)
+- [Rozwiązywanie problemów obsługi komunikatów kolejek](troubleshooting-queued-messaging.md)

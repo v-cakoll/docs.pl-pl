@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 3e422c138b49fa19aa29e4fa1488d61a2c9bc2f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4ae01201230bf848c045158424db60097d8dd767
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599350"
 ---
 # <a name="create-a-long-running-workflow-service"></a>Tworzenie długotrwałej usługi przepływu pracy
 
@@ -21,7 +21,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 2. Visual Studio 2012
 
-3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Programu[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4. Znasz już programy WCF i Visual Studio 2012 i wiesz, jak tworzyć projekty/rozwiązania.
 
@@ -31,7 +31,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 2. Kliknij przycisk **Połącz** , aby zalogować się do wystąpienia SQL Server
 
-3. Kliknij prawym przyciskiem myszy **bazę danych** w widoku drzewa, a następnie wybierz pozycję **Nowa baza danych.** Aby utworzyć nową bazę danych o nazwie `SQLPersistenceStore`.
+3. Kliknij prawym przyciskiem myszy **bazę danych** w widoku drzewa, a następnie wybierz pozycję **Nowa baza danych.** Aby utworzyć nową bazę danych o nazwie `SQLPersistenceStore` .
 
 4. Uruchom plik skryptu SqlWorkflowInstanceStoreSchema. SQL znajdujący się w katalogu C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en w bazie danych SQLPersistenceStore, aby skonfigurować wymaganą schemat bazy danych.
 
@@ -39,13 +39,13 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 ## <a name="create-the-web-hosted-workflow-service"></a>Tworzenie usługi hostowanego przepływu pracy w sieci Web
 
-1. Utwórz puste rozwiązanie programu Visual Studio 2012 i nadaj mu nazwę `OrderProcessing`.
+1. Utwórz puste rozwiązanie programu Visual Studio 2012 i nadaj mu nazwę `OrderProcessing` .
 
 2. Dodaj nowy projekt aplikacji usługi przepływu pracy WCF o nazwie `OrderService` do rozwiązania.
 
 3. W oknie dialogowym właściwości projektu wybierz kartę **Sieć Web** .
 
-    1. W obszarze **Akcja początkowa** wybierz **określoną stronę** i określ `Service1.xamlx`.
+    1. W obszarze **Akcja początkowa** wybierz **określoną stronę** i określ `Service1.xamlx` .
 
         ![Właściwości sieci Web projektu usługi przepływu pracy](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Tworzenie opcji strony dotyczącej usługi przepływu pracy hostowanej w sieci Web")
 
@@ -58,7 +58,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         Te dwa kroki umożliwiają skonfigurowanie projektu usługi przepływu pracy do hostowania przez usługi IIS.
 
-4. Otwórz `Service1.xamlx`, jeśli nie jest jeszcze otwarty i Usuń istniejące działania **ReceiveRequest** i **SendResponse** .
+4. Otwórz, `Service1.xamlx` Jeśli nie jest jeszcze otwarty i Usuń istniejące działania **ReceiveRequest** i **SendResponse** .
 
 5. Wybierz działanie **usługi sekwencyjnej** i kliknij link **zmienne** , a następnie Dodaj zmienne pokazane na poniższej ilustracji. Spowoduje to dodanie niektórych zmiennych, które będą używane później w usłudze przepływu pracy.
 
@@ -73,9 +73,9 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         ![Ustawianie właściwości działania Odbierz](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "Ustaw właściwości działania Odbierz.")
 
-        Właściwość DisplayName ustawia nazwę wyświetlaną dla działania Receive w projektancie. Właściwości ServiceContractName i OperationName określają nazwę kontraktu usługi i operacji, które są implementowane przez działanie Receive. Aby uzyskać więcej informacji na temat sposobu używania kontraktów w usługach przepływu pracy, zobacz [Używanie kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
+        Właściwość DisplayName ustawia nazwę wyświetlaną dla działania Receive w projektancie. Właściwości ServiceContractName i OperationName określają nazwę kontraktu usługi i operacji, które są implementowane przez działanie Receive. Aby uzyskać więcej informacji na temat sposobu używania kontraktów w usługach przepływu pracy, zobacz [Używanie kontraktów w przepływie pracy](using-contracts-in-workflow.md).
 
-    2. Kliknij link **Definiuj...** w działaniu **ReceiveStartOrder** i ustaw właściwości wyświetlane na poniższej ilustracji.  Zauważ, że przycisk radiowy **Parametry** jest zaznaczony, parametr o nazwie `p_customerName` jest powiązany ze zmienną `customerName`. Spowoduje to skonfigurowanie działania **odbioru** w celu odbierania pewnych danych i powiązania tych danych ze zmiennymi lokalnymi.
+    2. Kliknij link **Definiuj...** w działaniu **ReceiveStartOrder** i ustaw właściwości wyświetlane na poniższej ilustracji.  Zauważ, że przycisk radiowy **Parametry** jest zaznaczony, parametr o nazwie `p_customerName` jest powiązany ze `customerName` zmienną. Spowoduje to skonfigurowanie działania **odbioru** w celu odbierania pewnych danych i powiązania tych danych ze zmiennymi lokalnymi.
 
         ![Ustawianie danych odbieranych przez działanie Odbierz](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "Ustaw właściwości danych odbieranych przez działanie Receive.")
 
@@ -83,7 +83,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         ![Ustawianie właściwości działania SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
-    4. Kliknij link **Definiuj...** w działaniu **SendReplyToStartOrder** i ustaw właściwości wyświetlane na poniższej ilustracji. Zauważ, że wybrano przycisk radiowy **Parametry** ; parametr o nazwie `p_orderId` jest powiązany ze zmienną `orderId`. To ustawienie określa, że działanie SendReplyToStartOrder zwróci wartość typu String do obiektu wywołującego.
+    4. Kliknij link **Definiuj...** w działaniu **SendReplyToStartOrder** i ustaw właściwości wyświetlane na poniższej ilustracji. Zauważ, że wybrano przycisk radiowy **Parametry** ; parametr o nazwie `p_orderId` jest powiązany ze `orderId` zmienną. To ustawienie określa, że działanie SendReplyToStartOrder zwróci wartość typu String do obiektu wywołującego.
 
         ![Konfigurowanie danych zawartości działania SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "Skonfiguruj ustawienie dla działania SetReplyToStartOrder.")
 
@@ -93,7 +93,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         Spowoduje to utworzenie nowego identyfikatora zamówienia i umieszczenie wartości w zmiennej IDZamówienia.
 
-    6. Wybierz działanie **ReplyToStartOrder** . W oknie właściwości kliknij przycisk wielokropka dla **CorrelationInitializers**. Wybierz łącze **Dodaj inicjator** , wprowadź `orderIdHandle` w polu tekstowym inicjator wybierz opcję inicjator korelacji zapytań dla typu korelacji, a następnie wybierz pozycję p_orderId w polu listy rozwijanej zapytania XPath. Te ustawienia zostały pokazane na poniższej ilustracji. Kliknij przycisk **OK**.  Powoduje to zainicjowanie korelacji między klientem a tym wystąpieniem usługi przepływu pracy. Po odebraniu komunikatu zawierającego ten identyfikator zamówienia jest on kierowany do tego wystąpienia usługi przepływu pracy.
+    6. Wybierz działanie **ReplyToStartOrder** . W oknie właściwości kliknij przycisk wielokropka dla **CorrelationInitializers**. Wybierz łącze **Dodaj inicjator** , wpisz `orderIdHandle` w polu tekstowym inicjatora wybierz inicjator korelacji zapytania dla typu korelacji, a następnie wybierz pozycję p_orderId w polu listy rozwijanej zapytania XPath. Te ustawienia zostały pokazane na poniższej ilustracji. Kliknij przycisk **OK**.  Powoduje to zainicjowanie korelacji między klientem a tym wystąpieniem usługi przepływu pracy. Po odebraniu komunikatu zawierającego ten identyfikator zamówienia jest on kierowany do tego wystąpienia usługi przepływu pracy.
 
         ![Dodawanie inicjatora korelacji](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Dodaj inicjator korelacji.")
 
@@ -103,42 +103,42 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
         ![Dodawanie nowych zmiennych](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "Dodaj zmienną ItemId.")
 
-        Dodaj również `orderResult` jako **ciąg** w zakresie `Sequence`.
+        Należy również dodać `orderResult` jako **ciąg** w `Sequence` zakresie.
 
     2. Wybierz działanie **Odbierz** i ustaw właściwości wyświetlane na poniższej ilustracji:
 
         ![Ustawianie właściwości działania Odbierz](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Ustaw właściwości Odbierz działania.")
 
         > [!NOTE]
-        > Nie zapomnij zmienić pola **ServiceContractName** z `../IAddItem`.
+        > Nie zapomnij zmienić pola **ServiceContractName** z `../IAddItem` .
 
     3. Kliknij link **Definiuj...** w działaniu **ReceiveAddItem** i Dodaj parametry pokazane na poniższej ilustracji: spowoduje to skonfigurowanie działania odbioru w celu zaakceptowania dwóch parametrów, identyfikatora zamówienia i identyfikatora uporządkowanego elementu.
 
         ![Określanie parametrów dla drugiego odbioru](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "Skonfiguruj działanie Odbierz, aby otrzymywać dwa parametry.")
 
-    4. Kliknij przycisk wielokropka **CorrelateOn** , a następnie wprowadź `orderIdHandle`. W obszarze **zapytania XPath**kliknij strzałkę listy rozwijanej i wybierz pozycję `p_orderId`. Powoduje to skonfigurowanie korelacji w drugim działaniu Receive. Aby uzyskać więcej informacji na temat korelacji, zobacz [korelacja](../../../../docs/framework/wcf/feature-details/correlation.md).
+    4. Kliknij przycisk wielokropka **CorrelateOn** , a następnie wprowadź `orderIdHandle` . W obszarze **zapytania XPath**kliknij strzałkę listy rozwijanej i wybierz pozycję `p_orderId` . Powoduje to skonfigurowanie korelacji w drugim działaniu Receive. Aby uzyskać więcej informacji na temat korelacji, zobacz [korelacja](correlation.md).
 
         ![Ustawianie właściwości CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "Ustaw Właściwość CorrelatesOn.")
 
     5. Przeciągnij i upuść działanie **if** bezpośrednio po działaniu **ReceiveAddItem** . To działanie działa podobnie jak w przypadku instrukcji if.
 
-        1. Ustaw właściwość **Condition** na `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
+        1. Ustaw właściwość **Condition** na`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
         2. Przeciągnij i upuść działanie **przypisywania** do w sekcji **then** i inne w sekcji **else** ustaw właściwości działania **przypisane** , jak pokazano na poniższej ilustracji.
 
             ![Przypisywanie wyniku wywołania usługi](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Przypisz wynik wywołania usługi.")
 
-            Jeśli warunek jest `true`, zostanie wykonana sekcja **then** . Jeśli warunek jest `false` jest wykonywana sekcja **else** .
+            Jeśli warunek jest `true` wykonany, **Then** sekcja zostanie wykonana. Jeśli warunek jest `false` wykonywany w sekcji **else** .
 
         3. Wybierz działanie **SendReplyToReceive** i ustaw właściwość **DisplayName** pokazane na poniższej ilustracji.
 
             ![Ustawianie właściwości działania SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "Ustaw właściwość działania SendReply.")
 
-        4. Kliknij link **Definiuj...** w działaniu **SetReplyToAddItem** i skonfiguruj go tak, jak pokazano na poniższej ilustracji. Spowoduje to skonfigurowanie działania **SendReplyToAddItem** w celu zwrócenia wartości w zmiennej `orderResult`.
+        4. Kliknij link **Definiuj...** w działaniu **SetReplyToAddItem** i skonfiguruj go tak, jak pokazano na poniższej ilustracji. Spowoduje to skonfigurowanie działania **SendReplyToAddItem** w celu zwrócenia wartości w `orderResult` zmiennej.
 
             ![Ustawianie powiązania danych dla działania SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "Ustaw właściwość dla działania SendReplyToAddItem.")
 
-8. Otwórz plik Web. config i Dodaj następujące elementy w sekcji zachowanie \<>, aby włączyć trwałość przepływu pracy.
+8. Otwórz plik Web. config i Dodaj następujące elementy w \<behavior> sekcji, aby włączyć trwałość przepływu pracy.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -154,15 +154,15 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
 
 1. Dodaj nowy projekt aplikacji konsoli o nazwie `OrderClient` do rozwiązania.
 
-2. Dodaj odwołania do następujących zestawów do projektu `OrderClient`
+2. Dodaj odwołania do następujących zestawów do `OrderClient` projektu
 
     1. System.ServiceModel.dll
 
-    2. System.ServiceModel.Activities.dll
+    2. System. ServiceModel. Activities. dll
 
 3. Dodaj odwołanie do usługi przepływu pracy i określ `OrderService` jako przestrzeń nazw.
 
-4. W metodzie `Main()` projektu klienta Dodaj następujący kod:
+4. W `Main()` metodzie projektu klienta Dodaj następujący kod:
 
     ```csharp
     static void Main(string[] args)
@@ -189,7 +189,7 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
     }
     ```
 
-5. Skompiluj rozwiązanie i uruchom aplikację `OrderClient`. Klient wyświetli następujący tekst:
+5. Skompiluj rozwiązanie i uruchom `OrderClient` aplikację. Klient wyświetli następujący tekst:
 
     ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
@@ -205,6 +205,6 @@ Aby móc korzystać z tego przewodnika, musisz mieć zainstalowane następujące
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Usługi przepływu pracy](workflow-services.md)

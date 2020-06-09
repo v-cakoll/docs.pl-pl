@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597309"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. TCP, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferują możliwość hostowania dużej liczby aplikacji na danym komputerze.  
   
- Aby uzyskać więcej informacji na temat tworzenia usługi WCF działającej w środowisku hostingu, zobacz [How to: hosting a usługi WCF w usłudze was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Aby uzyskać więcej informacji na temat tworzenia usługi WCF działającej w środowisku hostingu, zobacz [How to: hosting a usługi WCF w usłudze was](how-to-host-a-wcf-service-in-was.md).  
   
  Model WAS ma wiele funkcji, które umożliwiają hostowanie aplikacji w sposób bardziej niezawodny, bardziej zarządzany i wykorzystujący zasoby efektywnie:  
   
@@ -48,10 +48,10 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem
 ## <a name="the-was-runtime"></a>Środowisko uruchomieniowe zostało uruchomione  
  Aplikacje są zorganizowane w lokacjach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również pogrupowane w pule aplikacji. Pula aplikacji może mieć wiele różnych aplikacji z wielu różnych lokacji programu. Wszystkie aplikacje wewnątrz puli aplikacji korzystają ze wspólnego zestawu właściwości czasu wykonywania. Na przykład wszystkie są uruchamiane w tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR) i wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odpowiada wystąpieniu procesu roboczego (w3wp. exe). Każda aplikacja zarządzana działająca w ramach udostępnionej puli aplikacji jest odizolowana od innych aplikacji za pomocą elementu AppDomain środowiska CLR.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Architektura aktywacji WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Konfigurowanie usługi WAS do użycia z programem WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Architektura aktywacji WAS](was-activation-architecture.md)
+- [Konfigurowanie usługi WAS do użycia z programem WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](how-to-install-and-configure-wcf-activation-components.md)
+- [Instrukcje: hostowanie usługi WCF w usłudze WAS](how-to-host-a-wcf-service-in-was.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

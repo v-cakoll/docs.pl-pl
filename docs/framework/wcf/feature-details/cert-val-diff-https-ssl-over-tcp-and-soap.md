@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599337"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP
-Certyfikaty w programie Windows Communication Foundation (WCF) z zabezpieczeniami warstwy wiadomości (SOAP) oprócz zabezpieczeń warstwy transportu (TLS) za pośrednictwem protokołu HTTP (HTTPS) lub TCP. W tym temacie opisano różnice w sposobie sprawdzania poprawności takich certyfikatów.  
+Za pomocą protokołu HTTP (HTTPS) lub TCP (TLS) można używać certyfikatów w programie Windows Communication Foundation (WCF) z zabezpieczeniami warstwy komunikatów (SOAP). W tym temacie opisano różnice w sposobie, w jaki takie certyfikaty zostały zweryfikowane.  
   
 ## <a name="validation-of-https-client-certificates"></a>Sprawdzanie poprawności certyfikatów klienta HTTPS  
- Podczas korzystania z protokołu HTTPS do komunikowania się między klientem a usługą, certyfikat używany przez klienta do uwierzytelniania w usłudze musi obsługiwać zaufanie łańcucha. Oznacza to, że musi łańcuch do zaufanego głównego urzędu certyfikacji. Jeśli nie, warstwa HTTP <xref:System.Net.WebException> podnosi a z komunikatem "Serwer zdalny zwrócił błąd: (403) Zabronione." WCF powierzchni tego wyjątku <xref:System.ServiceModel.Security.MessageSecurityException>jako .  
+ W przypadku komunikacji między klientem a usługą przy użyciu protokołu HTTPS certyfikat używany przez klienta do uwierzytelniania w usłudze musi obsługiwać zaufanie łańcucha. Oznacza to, że musi być powiązany z zaufanym głównym urzędem certyfikacji. W przeciwnym razie warstwa HTTP zgłasza <xref:System.Net.WebException> komunikat "serwer zdalny zwrócił błąd: (403) zabronione". Platforma WCF wyświetla ten wyjątek jako <xref:System.ServiceModel.Security.MessageSecurityException> .  
   
 ## <a name="validation-of-https-service-certificates"></a>Sprawdzanie poprawności certyfikatów usługi HTTPS  
- Podczas korzystania z protokołu HTTPS do komunikowania się między klientem a usługą, certyfikat, który serwer uwierzytelnia się z musi obsługiwać zaufanie łańcucha domyślnie. Oznacza to, że musi łańcuch do zaufanego głównego urzędu certyfikacji. Nie jest przeprowadzana kontrola online, aby sprawdzić, czy certyfikat został odwołany. To zachowanie można zastąpić, rejestrując <xref:System.Net.Security.RemoteCertificateValidationCallback> wywołanie zwrotne, jak pokazano w poniższym kodzie.  
+ W przypadku komunikacji między klientem a usługą przy użyciu protokołu HTTPS certyfikat, który jest uwierzytelniany przez serwer, musi obsługiwać domyślnie zaufanie do łańcucha. Oznacza to, że musi być powiązany z zaufanym głównym urzędem certyfikacji. Nie jest przeprowadzane sprawdzanie online, aby sprawdzić, czy certyfikat został odwołany. To zachowanie można zastąpić przez zarejestrowanie <xref:System.Net.Security.RemoteCertificateValidationCallback> wywołania zwrotnego, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
  [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
   
- w przypadku `ValidateServerCertificate` gdy podpis jest następujący:  
+ gdzie sygnatura `ValidateServerCertificate` jest następująca:  
   
  [!code-csharp[c_CertificateValidationDifferences#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#2)]
  [!code-vb[c_CertificateValidationDifferences#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#2)]  
   
- Implementacja `ValidateServerCertificate` może wykonywać wszelkie kontrole, które deweloper aplikacji klienckiej uzna za niezbędne do sprawdzania poprawności certyfikatu usługi.  
+ Implementacja `ValidateServerCertificate` może wykonać wszelkie sprawdzenia, czy Deweloper aplikacji klienta uzna za niezbędne do zweryfikowania certyfikatu usługi.  
   
-## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a>Sprawdzanie poprawności certyfikatów klientów w SSL za demotek TCP lub SOAP  
- W przypadku korzystania z secure sockets layer (SSL) za pośrednictwem zabezpieczeń TCP <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> lub message <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> (SOAP) certyfikaty klienta są sprawdzane zgodnie z wartością właściwości klasy. Właściwość jest ustawiona <xref:System.ServiceModel.Security.X509CertificateValidationMode> na jedną z wartości. Sprawdzanie odwołania jest wykonywane zgodnie z wartościami <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> wartości <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> właściwości klasy. Właściwość jest ustawiona <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> na jedną z wartości.  
+## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a>Sprawdzanie poprawności certyfikatów klienta w protokole SSL za pośrednictwem protokołu TCP lub SOAP Security  
+ W przypadku korzystania z SSL (SSL) za pośrednictwem protokołu TCP lub komunikatów (SOAP) certyfikaty klienta są weryfikowane zgodnie z <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> wartością właściwości <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy. Właściwość jest ustawiona na jedną z <xref:System.ServiceModel.Security.X509CertificateValidationMode> wartości. Sprawdzanie odwołania jest wykonywane zgodnie z wartościami <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> właściwości <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy. Właściwość jest ustawiona na jedną z <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> wartości.  
   
  [!code-csharp[c_CertificateValidationDifferences#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#3)]
  [!code-vb[c_CertificateValidationDifferences#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#3)]  
   
-## <a name="validation-of-service-certificate-in-ssl-over-tcp-and-soap-security"></a>Sprawdzanie poprawności certyfikatu usługi w ssl za 10 TCP i SOAP Security  
- W przypadku korzystania z protokołu SSL za pośrednictwem protokołu TCP <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> lub (SOAP) zabezpieczenia komunikatów, certyfikaty usług są sprawdzane zgodnie z wartością właściwości <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> klasy. Właściwość jest ustawiona <xref:System.ServiceModel.Security.X509CertificateValidationMode> na jedną z wartości.  
+## <a name="validation-of-service-certificate-in-ssl-over-tcp-and-soap-security"></a>Sprawdzanie poprawności certyfikatu usługi w protokole SSL przez TCP i zabezpieczenia SOAP  
+ W przypadku korzystania z protokołu SSL przez TCP lub (SOAP), certyfikaty usług są weryfikowane zgodnie z <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> wartością właściwości <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> klasy. Właściwość jest ustawiona na jedną z <xref:System.ServiceModel.Security.X509CertificateValidationMode> wartości.  
   
- Sprawdzanie odwołania jest wykonywane zgodnie z wartościami <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> wartości <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> właściwości klasy. Właściwość jest ustawiona <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> na jedną z wartości.  
+ Sprawdzanie odwołania jest wykonywane zgodnie z wartościami <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> właściwości <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> klasy. Właściwość jest ustawiona na jedną z <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> wartości.  
   
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
@@ -50,4 +50,4 @@ Certyfikaty w programie Windows Communication Foundation (WCF) z zabezpieczeniam
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Praca z certyfikatami](working-with-certificates.md)

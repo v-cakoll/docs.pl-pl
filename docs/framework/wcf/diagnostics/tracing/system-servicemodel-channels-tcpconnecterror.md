@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.TcpConnectError
 ms.date: 03/30/2017
 ms.assetid: 22d93797-072e-405d-a3e0-5c519ddf290b
-ms.openlocfilehash: 0bfd35e2b3ca421745701a91f2a5bfc91f3063aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5675547108c5d8c5bc4248a5fa98c76f7e29ce23
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942210"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601858"
 ---
 # <a name="systemservicemodelchannelstcpconnecterror"></a>System.ServiceModel.Channels.TcpConnectError
-Nie można wykonać operacji nawiązywania połączeń TCP.  
+Operacja połączenia TCP nie powiodła się.  
   
 ## <a name="description"></a>Opis  
- Tego poziomu śledzenia ostrzeżenie wskazuje błąd, aby nawiązać połączenie z punktem końcowym protokołu TCP. Może się to zdarzyć, jeśli zdalny punkt końcowy nie odpowiada na danego adresu IP i porcie. Ślad można zignorować, jeśli kolejne próby nawiązania połączenia do innych prawidłowy adres IP adresów (np. adresy IPv4 lub IPv6 lub inne adresy IP, reprezentujący podanej nazwy hosta) powiodło się. Wyjątek w ramach tego śledzenia może ujawnić dodatkowe informacje o tym błędzie.  
+ Ten ślad poziomu ostrzeżeń wskazuje, że nie można nawiązać połączenia z punktem końcowym TCP. Może się tak zdarzyć, jeśli zdalny punkt końcowy nie odpowiada na danym adresie IP i porcie. Ten ślad może być ignorowany, jeśli kolejne próby nawiązania połączenia z innymi prawidłowymi adresami IP (takimi jak adresy IPv4 lub IPv6 lub inne adresy IP reprezentujące daną nazwę hosta) zakończyły się powodzeniem. Wyjątek w ramach tego śledzenia może ujawnić dodatkowe informacje o błędzie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

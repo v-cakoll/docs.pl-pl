@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600974"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektórych warunków zabezpieczeń, ale nie stanowi wyczerpującej dokumentacji dla każdego elementu.  
   
- Aby uzyskać więcej informacji na temat terminów używanych w dokumentacji Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia dotyczące Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Aby uzyskać więcej informacji na temat terminów używanych w dokumentacji Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia dotyczące Windows Communication Foundation](../fundamental-concepts.md).  
   
  Lista kontroli dostępu (ACL)  
  Lista ochrony zabezpieczeń odnoszących się do obiektu. (Obiekt może być plikiem, procesem, zdarzeniem lub coś innego mającego deskryptor zabezpieczeń). Wpis na liście ACL to wpis kontroli dostępu (ACE). Istnieją dwa typy list ACL: uznaniowe i systemowe.  
@@ -33,21 +33,21 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Hierarchia urzędu certyfikacji  
  Hierarchia urzędu certyfikacji zawiera wiele urzędów certyfikacji. Jest on zorganizowany tak, aby każdy urząd certyfikacji był certyfikowany przez inny urząd certyfikacji na wyższym poziomie hierarchii do momentu osiągnięcia górnej części hierarchii, znanej również jako *urząd główny*.  
   
- certificate  
+ certyfikat  
  Podpisane cyfrowo oświadczenie zawierające informacje o jednostce i kluczu publicznym jednostki, w ten sposób powiązać te dwa informacje razem. Certyfikat jest wystawiany przez zaufaną organizację (lub jednostkę), nazywaną urzędem certyfikacji, po sprawdzeniu przez urząd, że jest on widoczny.  
   
- Certyfikaty mogą zawierać różne typy danych. Na przykład certyfikat X. 509 zawiera format certyfikatu, numer seryjny certyfikatu, algorytm używany do podpisywania certyfikatu, nazwę urzędu certyfikacji, który wystawił certyfikat, nazwę i klucz publiczny jednostki żądającej certyfikatu i podpis urzędu certyfikacji.  
+ Certyfikaty mogą zawierać różne typy danych. Na przykład certyfikat X. 509 zawiera format certyfikatu, numer seryjny certyfikatu, algorytm używany do podpisywania certyfikatu, nazwę urzędu certyfikacji, który wystawił certyfikat, nazwę i klucz publiczny jednostki żądającej certyfikatu oraz sygnaturę urzędu certyfikacji,.  
   
  Magazyn certyfikatów  
  Zwykle magazyn trwały, w którym są przechowywane certyfikaty, listy odwołania certyfikatów (CRL) i listy zaufania certyfikatów (CTL). Istnieje jednak możliwość tworzenia i otwierania magazynu certyfikatów wyłącznie w pamięci podczas pracy z certyfikatami, które nie muszą być umieszczane w magazynie trwałym.  
   
- claims  
+ oświadczenia  
  Informacje przesyłane z jednej jednostki do innej używanej do ustanowienia tożsamości nadawcy. Na przykład nazwa użytkownika i token hasła lub certyfikat X. 509.  
   
  certyfikat klienta  
  Odnosi się do certyfikatu używanego do uwierzytelniania klienta, takiego jak uwierzytelnianie przeglądarki sieci Web na serwerze sieci Web. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonego serwera sieci Web, klient wysyła swój certyfikat do serwera, aby umożliwić mu zweryfikowanie tożsamości klienta.  
   
- uwierzytelniające  
+ poświadczenia  
  Wcześniej uwierzytelnione dane logowania używane przez podmiot zabezpieczeń do ustalenia własnej tożsamości, takie jak hasło, lub biletu protokołu Kerberos. Poświadczenia służą do kontrolowania dostępu do zasobów.  
   
  dane szyfrowane  
@@ -75,9 +75,9 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Chroniony podsystem służący do uwierzytelniania i rejestrowania użytkowników w systemie lokalnym. Urząd LSA utrzymuje również informacje o wszystkich aspektach zabezpieczeń lokalnych w systemie, które są określane zbiorczo jako zasady zabezpieczeń lokalnych systemu.  
   
  Negotiate  
- Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwa aplikacji między interfejsem dostawcy obsługi zabezpieczeń (SSPI) a innym dostawców SSP. Gdy aplikacja wywołuje interfejs SSPI w celu zalogowania się do sieci, może określić dostawcę SSP, aby przetworzyć żądanie. Jeśli aplikacja określi `Negotiate`, `Negotiate` analizuje żądanie i wybiera najlepszą dostawcę SSP do obsługi żądania zgodnie z zasadami zabezpieczeń skonfigurowanymi przez klienta.  
+ Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwa aplikacji między interfejsem dostawcy obsługi zabezpieczeń (SSPI) a innym dostawców SSP. Gdy aplikacja wywołuje interfejs SSPI w celu zalogowania się do sieci, może określić dostawcę SSP, aby przetworzyć żądanie. Jeśli aplikacja jest określana `Negotiate` , `Negotiate` analizuje żądanie i wybiera najlepszą dostawcę SSP do obsługi żądania zgodnie z zasadami zabezpieczeń skonfigurowanymi przez klienta.  
   
- nonce  
+ jednorazow  
  Generowana losowo wartość służąca do pokonania ataków "Replay".  
   
  niemożność wyparcia  
@@ -86,7 +86,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Standard kryptografii klucza publicznego (PKCS)  
  Specyfikacje opracowane przez firmę RSA Data Security, Inc. we współpracy z deweloperami bezpiecznych systemów na całym świecie w celu przyspieszenia wdrożenia kryptografii klucza publicznego.  
   
- PKCS #7  
+ #7 PKCS  
  Standard składni wiadomości kryptograficznych. Ogólna składnia danych, do których można zastosować kryptografię, na przykład podpisy cyfrowe i szyfrowanie. Zawiera również składnię rozpowszechniania certyfikatów lub list odwołania certyfikatów oraz inne atrybuty komunikatów, takie jak sygnatury czasowe, do wiadomości.  
   
  formacie  
@@ -122,7 +122,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Algorytm bezpiecznego wyznaczania wartości skrótu (SHA)  
  Algorytm wyznaczania wartości skrótu, który generuje skrót wiadomości. SHA jest używany z algorytmem podpisu cyfrowego (DSA) w standardzie sygnatury cyfrowej (DSS) w innych miejscach. Istnieją cztery odmiany SHA-1, SHA-256, SHA-384 i SHA-512. Algorytm SHA-1 generuje 160-bitowy skrót wiadomości. Algorytm SHA-256, SHA-384 i SHA-512 generują odpowiednio skróty 256-bitowe, 384 i 512. Algorytm SHA został opracowany przez Narodowy Instytut standardów i technologii (NIST) oraz przez Agencję Bezpieczeństwa Narodowego.  
   
- SSL (SSL)  
+ Secure Sockets Layer (SSL)  
  Protokół zabezpieczania komunikacji sieciowej przy użyciu kombinacji technologii publicznego i tajnego klucza.  
   
  kontekst zabezpieczeń  
@@ -143,7 +143,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  certyfikat serwera  
  Odnosi się do certyfikatu używanego do uwierzytelniania serwera, takiego jak uwierzytelnianie serwera sieci Web w przeglądarce internetowej. Gdy klient przeglądarki sieci Web próbuje uzyskać dostęp do zabezpieczonego serwera sieci Web, serwer wysyła swój certyfikat do przeglądarki, aby umożliwić mu zweryfikowanie tożsamości serwera.  
   
- obrad  
+ sesja  
  Wymiana komunikatów w ramach ochrony jednego fragmentu materiału klucza. Na przykład sesje SSL używają jednego klucza do wysyłania wielu wiadomości z powrotem i w dół w ramach tego klucza.  
   
  klucz sesji  
@@ -181,8 +181,8 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  X.509  
  Międzynarodowy, uznawany w międzynarodowym Standard dla certyfikatów, który definiuje ich wymagane części.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Podstawowe pojęcia programu Windows Communication Foundation](../fundamental-concepts.md)
+- [Pojęcia dotyczące zabezpieczeń](security-concepts.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

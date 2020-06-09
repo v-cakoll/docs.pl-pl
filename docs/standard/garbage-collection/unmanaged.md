@@ -1,5 +1,6 @@
 ---
 title: Oczyszczanie zasobów niezarządzanych
+description: Zobacz, jak oczyścić niezarządzane zasoby nieobsługiwane przez moduł zbierający elementy bezużyteczne platformy .NET, takie jak pliki, okna, & sieci lub połączenia bazy danych.
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 07a8d754f1fc2612ae53407fa1b12a1eab7e38f2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599837"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Oczyszczanie zasobów niezarządzanych
 

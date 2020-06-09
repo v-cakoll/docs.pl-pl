@@ -2,12 +2,12 @@
 title: Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: beb4382d61804e9b9ea12e1d191f3e96a637f871
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 872632dc7d0a8a94f8829ffb3fe8eea2607697c8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602347"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
 
@@ -33,7 +33,7 @@ static void Main(string[] args)
 }
 ```
 
- Po odebraniu komunikatu w kolejce zostanie wywołana procedura obsługi komunikatów `ProcessOrder`.
+ Po odebraniu komunikatu w kolejce zostanie wywołana procedura obsługi komunikatów `ProcessOrder` .
 
 ```csharp
 public static void ProcessOrder(Object source,
@@ -99,7 +99,7 @@ client.Close();
 
  Klient używa niestandardowego klienta w usłudze w celu wysłania komunikatu MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat, jest aplikacją usługi MSMQ, a nie aplikacją WCF, nie istnieje niejawna Umowa serwisowa między tymi dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy za pomocą narzędzia Svcutil. exe w tym scenariuszu.
 
- Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają powiązania `MsmqIntegration` do wysyłania komunikatów. W przeciwieństwie do innych klientów, nie obejmuje ona zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
+ Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `MsmqIntegration` powiązania do wysyłania komunikatów. W przeciwieństwie do innych klientów, nie obejmuje ona zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -135,7 +135,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
 ## <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, kompilowanie i uruchamianie przykładu
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Jeśli usługa jest uruchamiana po raz pierwszy, sprawdzi, czy kolejka jest obecna. Jeśli kolejka nie istnieje, usługa utworzy ją. Aby utworzyć kolejkę, można najpierw uruchomić tę usługę lub utworzyć ją za pośrednictwem Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.
 
@@ -143,15 +143,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
     2. Rozwiń kartę **funkcje** .
 
-    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz pozycję **Nowa** > **Kolejka prywatna**.
+    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz pozycję **Nowa**  >  **Kolejka prywatna**.
 
     4. Zaznacz pole **transakcyjne** .
 
     5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
-3. Aby skompilować C# lub Visual Basic wersję rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie próbek Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic, postępuj zgodnie z instrukcjami w temacie [Tworzenie próbek Windows Communication Foundation](building-the-samples.md).
 
-4. Aby uruchomić przykład w konfiguracji pojedynczego komputera, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić przykład w konfiguracji pojedynczego komputera, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
 ## <a name="run-the-sample-across-computers"></a>Uruchamianie przykładu między komputerami
 
@@ -170,11 +170,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Kolejkowanie komunikatów](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

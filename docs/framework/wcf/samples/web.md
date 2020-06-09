@@ -1,33 +1,33 @@
 ---
-title: sieć Web
+title: Sieć Web
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-ms.openlocfilehash: 7a3863f1abf1ba926c0dacdb017dca9540246c0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aad3b68dfad8e542bf0975ffcc653a4e791b2d53
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602313"
 ---
-# <a name="web"></a>sieć Web
-Ta sekcja zawiera przykłady hostowanych w sieci Web.  
+# <a name="web"></a>Sieć Web
+Ta sekcja zawiera przykłady hostowane w sieci Web.  
   
 ## <a name="in-this-section"></a>W tej sekcji
   
- [Podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- Demonstruje sposób implementacji usługi oparte na protokole HTTP, opartego na protokole RPC — co jest często określany jako usługa "POX" (zwykłe stare XML) — za pomocą modelu programowania protokołu HTTP sieci Web WCF.
+ [Podstawowa usługa HTTP](basic-http-service.md)  
+ Pokazuje, w jaki sposób zaimplementować usługę opartą na protokole HTTP, która jest znana jako "POX" (zwykła stara usługa XML) — przy użyciu modelu programowania HTTP sieci Web w programie WCF.
   
- [Punkty końcowe protokołów SOAP i HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- Demonstruje sposób implementacji usługi opartego na protokole RPC i udostępnić ją w formacie protokołu SOAP i format "Zwykłego starego kodu XML" (POX) za pomocą modelu programowania protokołu HTTP sieci Web WCF.  
+ [Punkty końcowe protokołów SOAP i HTTP](soap-and-http-endpoints.md)  
+ Pokazuje, jak wdrożyć usługę opartą na protokole RPC i udostępnić ją w formacie protokołu SOAP oraz formacie "zwykły stary kod XML" (POX) przy użyciu modelu programowania HTTP sieci Web w programie WCF.  
   
- [Integracja buforowania platformy ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
- Pokazuje, jak korzystanie z pamięci podręcznej danych wyjściowych platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci Web WCF.  
+ [Integracja buforowania platformy ASP.NET](aspnet-caching-integration.md)  
+ Pokazuje, jak korzystać z pamięci podręcznej danych wyjściowych ASP.NET z modelem programowania HTTP sieci Web w programie WCF.  
   
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- Pokazuje kluczowe pojęcia dotyczące <xref:System.UriTemplate>.  
+ [UriTemplate](uritemplate-sample.md)  
+ Demonstruje kluczowe pojęcia związane z <xref:System.UriTemplate> .  
   
- [Tabela UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- Pokazuje, jak <xref:System.UriTemplateTable> klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem <xref:System.UriTemplate> wystąpień.  
+ [Tabela UriTemplate](uritemplate-table-sample.md)  
+ Pokazuje, w jaki sposób <xref:System.UriTemplateTable> Klasa udostępnia strukturę tabeli asocjacyjnej, która umożliwia pracę z zestawem <xref:System.UriTemplate> wystąpień.  
   
- [Dyspozytor tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
- Przedstawia podstawowy aparat dispatching utworzone przy użyciu <xref:System.UriTemplateTable>, typowy scenariusz użycia dla <xref:System.UriTemplateTable> klasy.
+ [Dyspozytor tabeli UriTemplate](uritemplate-table-dispatcher-sample.md)  
+ Demonstruje podstawowy, oparty na zastosowaniu aparat <xref:System.UriTemplateTable> , który tworzy typowy scenariusz użycia dla <xref:System.UriTemplateTable> klasy.

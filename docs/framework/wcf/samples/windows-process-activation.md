@@ -2,22 +2,22 @@
 title: Aktywacja procesu systemu Windows
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
-ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c24ef6098be447c957a58a4b7f8440c78dcdca73
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602300"
 ---
 # <a name="windows-process-activation"></a>Aktywacja procesu systemu Windows
-Ta sekcja zawiera przykłady pokazujące, aktywacji usługi za pośrednictwem protokołów sieciowych.  
+Ta sekcja zawiera przykłady demonstrujące aktywację usługi za poorednictwem protokołów sieciowych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Aktywowanie elementu NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- Pokazuje, usługi, używającej Windows Process Activation Service (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem potoków nazwy hosta.  
+ [Aktywowanie elementu NamedPipe](namedpipe-activation.md)  
+ Pokazuje hosting usługi, która używa usługi aktywacji procesów systemu Windows (WAS) do aktywowania usługi, która komunikuje się z potokami nazw.  
   
- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- Pokazuje to usługa, która używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.tcp hostingu.
+ [Aktywacja TCP](tcp-activation.md)  
+ Pokazuje hosting usługi, która korzysta z usług aktywacji procesów systemu Windows (WAS) w celu aktywowania usługi, która komunikuje się za pośrednictwem protokołu net. TCP.
 
- [Aktywacja usługi MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- Pokazuje to usługa, która używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.msmq hostingu.
+ [Aktywacja usługi MSMQ](msmq-activation.md)  
+ Pokazuje hosting usługi, która korzysta z usług aktywacji procesów systemu Windows (WAS) w celu aktywowania usługi, która komunikuje się za pośrednictwem protokołu net. MSMQ.

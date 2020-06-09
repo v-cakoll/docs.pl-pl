@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-ms.openlocfilehash: e01f5b683bebe1f4cdf282c56aa3049b6da794ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71090efbb096bc3b7b3d6bcf40ff496b78ac6252
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637476"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600688"
 ---
 # <a name="using-ws-atomictransaction"></a>Używanie elementu WS-AtomicTransaction
-WS-AtomicTransaction (WS-AT) jest protokołem interoperacyjne transakcji. Umożliwia ona przepływu transakcji rozproszonych za pomocą wiadomości usługi sieci Web i koordynacji w sposób interoperacyjny między infrastruktury heterogenicznych transakcji. WS-AT korzysta z protokołu dwufazowego, można dostarczać atomic wyniku między aplikacji rozproszonych, menedżerowie transakcji i menedżerów zasobów.  
+WS-AtomicTransaction (WS-AT) jest protokołem transakcji międzyoperacyjnych. Umożliwia przepływ transakcji rozproszonych przy użyciu komunikatów usługi sieci Web i koordynuje współdziałanie między heterogenicznymi infrastrukturami transakcji. Usługa WS-AT używa dwufazowego protokołu zatwierdzania w celu uzyskania niepodzielnego wyniku między aplikacjami rozproszonymi, menedżerami transakcji i menedżerami zasobów.  
   
- Implementacja WS-AT przez Windows Communication Foundation (WCF) obejmuje protokół oferująca do transakcji Menedżera transakcji Koordynator MSDTC (Microsoft Distributed). Za pomocą WS-AT, aplikacji WCF może przepływać transakcji do innych aplikacji, w tym usług międzyoperacyjnych w sieci Web utworzone przy użyciu technologii innych firm.  
+ Implementacja WS-AT Windows Communication Foundation (WCF) zawiera usługę protokołu wbudowaną w Menedżera transakcji Microsoft Distributed Transaction Coordinator (MSDTC). Za pomocą usługi WS-AT aplikacje WCF mogą przepływać transakcje do innych aplikacji, w tym współdziałających usług sieci Web utworzonych przy użyciu technologii innych firm.  
   
- Podczas przepływu transakcji od aplikacji klienckiej i aplikacji serwera, protokół transakcji jest określana przez powiązanie, czy serwer udostępnia w punkcie końcowym klienta wybrana. Niektórych powiązań dostarczanych przez system WCF wartość domyślna to określanie `OleTransactions` protokołu jako format propagacji transakcji, podczas gdy inne domyślne do określania WS-AT. Można także programowo zmodyfikować wybór protokół transakcji wewnątrz podane powiązanie.  
+ Podczas przepływania transakcji między aplikacją kliencką a aplikacją serwerową używany protokół transakcji jest określany przez powiązanie, które serwer ujawnia w punkcie końcowym wybranego przez klienta. Niektóre powiązania dostarczone przez system WCF domyślnie określają `OleTransactions` Protokół jako format propagacji transakcji, podczas gdy inne domyślnie określają usługę WS-AT. Można również programowo modyfikować wybór protokołu transakcji wewnątrz danego powiązania.  
   
- Wybór protokołu czynników:  
+ Wybór wpływów na protokoły:  
   
-- Format nagłówków wiadomości, używany do przepływu transakcji od klienta do serwera.  
+- Format nagłówków wiadomości używanych do przepływu transakcji z klienta do serwera.  
   
-- Protokół sieciowy używany do uruchomienia Protokół dwufazowego Menedżera transakcji klienta i serwera transakcji, aby rozpoznać wyniku transakcji.  
+- Protokół sieciowy używany do uruchamiania dwufazowego protokołu zatwierdzania między menedżerem transakcji klienta i transakcji serwera, aby można było rozpoznać wynik transakcji.  
   
- Jeśli serwera i klienta są zapisywane przy użyciu usługi WCF, nie musisz używać WS-AT. Zamiast tego można użyć ustawień domyślnych `NetTcpBinding` z `TransactionFlow` włączony atrybut, który będzie używany `OleTransactions` zamiast tego protokołu. Aby uzyskać więcej informacji, zobacz [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). W przeciwnym razie przepływają transakcji usługi sieci Web oparta na technologii innych firm, należy użyć WS-AT.  
+ Jeśli serwer i klient są zapisywana przy użyciu programu WCF, nie trzeba używać usługi WS-AT. Zamiast tego można użyć domyślnych ustawień `NetTcpBinding` z `TransactionFlow` włączonym atrybutem, który będzie korzystał z `OleTransactions` protokołu. Aby uzyskać więcej informacji, zobacz [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md). W przeciwnym razie, jeśli przepływy są transakcje do usług sieci Web opartych na technologiach innych firm, należy użyć usługi WS-AT.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie obsługi protokołu WS-Atomic Transaction](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [Konfigurowanie obsługi protokołu WS-Atomic Transaction](configuring-ws-atomic-transaction-support.md)

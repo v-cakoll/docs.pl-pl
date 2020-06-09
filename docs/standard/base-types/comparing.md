@@ -1,5 +1,6 @@
 ---
 title: Porównywanie ciągów w programie .NET
+description: Przeczytaj informacje o metodach porównywania ciągów w programie .NET. Dowiedz się więcej o metodach Compare, CompareOrdinal, CompareTo, StartsWith, EndsWith, Equals, IndexOf, & LastIndexOf.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602196"
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w programie .NET
 Platforma .NET udostępnia kilka metod porównywania wartości ciągów. W poniższej tabeli wymieniono i opisano metody porównywania wartości.  
@@ -148,7 +149,7 @@ Platforma .NET udostępnia kilka metod porównywania wartości ciągów. W poni�
   
  Obie metody są przydatne, gdy są używane w połączeniu z metodą **String. Remove** . Można użyć metody **IndexOf** lub **LastIndexOf** , aby pobrać pozycję znaku, a następnie podać tę pozycję do metody **Remove** , aby usunąć znak lub wyraz zaczynający się od tego znaku.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe operacje na ciągach](basic-string-operations.md)
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../globalization-localization/performing-culture-insensitive-string-operations.md)

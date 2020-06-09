@@ -2,53 +2,53 @@
 title: Sesje, tworzenie wystąpień i współbieżność
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243118"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600325"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
-*Sesja* jest korelacja wszystkich wiadomości wysyłanych między dwoma punktami końcowymi. *Instancing* odnosi się do kontrolowania okresu istnienia obiektów <xref:System.ServiceModel.InstanceContext> usługi zdefiniowanych przez użytkownika i ich powiązanych obiektów. *Współbieżność* jest terminem nadanym kontroli liczby wątków wykonywanych w <xref:System.ServiceModel.InstanceContext> tym samym czasie.  
+*Sesja* jest korelacją wszystkich komunikatów wysyłanych między dwoma punktami końcowymi. Tworzenie *wystąpień* odnosi się do kontrolowania okresu istnienia obiektów usługi zdefiniowanej przez użytkownika i powiązanych z nimi <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* to termin nadawany kontroli nad liczbą wątków wykonywanych w <xref:System.ServiceModel.InstanceContext> tym samym czasie.  
   
- W tym temacie opisano te ustawienia, sposób ich używania i różne interakcje między nimi.  
+ W tym temacie opisano te ustawienia, sposób ich używania oraz różne interakcje między nimi.  
   
 ## <a name="sessions"></a>Sesje  
- Gdy umowa serwisowa <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> ustawia <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>właściwość do , że umowa mówi, że wszystkie wywołania (czyli podstawowe wymiany komunikatów, które obsługują wywołania) musi być częścią tej samej konwersacji. Jeśli umowa określa, że zezwala na sesje, ale nie wymaga jednego, klienci mogą łączyć się i ustanawiać sesję, czy nie. Jeśli sesja kończy się i wiadomość jest wysyłana za ten sam kanał oparty na sesji wyjątek.  
+ Gdy kontrakt usługi ustawia <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> Właściwość na <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> , ten kontrakt mówi, że wszystkie wywołania (czyli podstawowe wymiany komunikatów, które obsługują wywołania) muszą być częścią tej samej konwersacji. Jeśli kontrakt Określa, że zezwala na sesje, ale go nie wymaga, klienci mogą łączyć się i ustanawiać sesję. Jeśli sesja zostanie zakończona, a wiadomość jest wysyłana za pośrednictwem tego samego kanału opartego na sesji, zgłaszany jest wyjątek.  
   
  Sesje WCF mają następujące główne funkcje koncepcyjne:  
   
-- Są one jawnie inicjowane i zakończone przez aplikację wywołującą.  
+- Są one jawnie inicjowane i kończone przez aplikację wywołującą.  
   
-- Wiadomości dostarczane podczas sesji są przetwarzane w kolejności, w jakiej są odbierane.  
+- Komunikaty dostarczane podczas sesji są przetwarzane w kolejności, w jakiej zostały odebrane.  
   
-- Sesje skorelować grupę wiadomości do konwersacji. Znaczenie tej korelacji jest abstrakcją. Na przykład jeden kanał oparty na sesji może skorelować wiadomości na podstawie udostępnionego połączenia sieciowego, podczas gdy inny kanał oparty na sesji może skorelować wiadomości na podstawie udostępnionego tagu w treści wiadomości. Funkcje, które mogą pochodzić z sesji zależą od charakteru korelacji.  
+- Sesje są skorelowane z grupą komunikatów w konwersacji. Znaczenie tej korelacji jest abstrakcyjne. Na przykład jeden kanał oparty na sesji może skorelować komunikaty na podstawie udostępnionego połączenia sieciowego, podczas gdy inny kanał oparty na sesji może skorelować komunikaty na podstawie tagu udostępnionego w treści komunikatu. Funkcje, które mogą pochodzić z sesji, zależą od charakteru korelacji.  
   
-- Nie ma ogólnego magazynu danych skojarzonego z sesją WCF.  
+- Brak ogólnego magazynu danych skojarzonego z sesją WCF.  
   
- Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasę w ASP.NET aplikacji i funkcji, które zapewnia, można zauważyć następujące różnice między tego rodzaju sesji i WCF sesji:  
+ W przypadku znajomości <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w aplikacjach ASP.NET i udostępnianej przez nią funkcji, można zauważyć następujące różnice między tym rodzajem sesji a sesjami programu WCF:  
   
-- ASP.NET sesje są zawsze inicjowane przez serwer.  
+- Sesje ASP.NET są zawsze inicjowane przez serwer.  
   
-- ASP.NET sesje są niejawnie nieuiarszane.  
+- Sesje ASP.NET są niejawnie nieuporządkowane.  
   
-- ASP.NET sesji zapewniają ogólny mechanizm przechowywania danych między żądaniami.  
+- Sesje ASP.NET zapewniają ogólny mechanizm magazynowania danych między żądaniami.  
   
- Aplikacje klienckie i aplikacje usług współdziałają z sesjami na różne sposoby. Aplikacje klienckie inicjują sesje, a następnie odbierają i przetwarzają wiadomości wysłane w ramach sesji. Aplikacje usługi można użyć sesji jako punkt rozszerzalności, aby dodać dodatkowe zachowanie. Odbywa się to przez pracę <xref:System.ServiceModel.InstanceContext> bezpośrednio z dostawcą kontekstu wystąpienia niestandardowego lub zaimplementowanie.  
+ Aplikacje klienckie i aplikacje usług współpracują z sesjami na różne sposoby. Aplikacje klienckie inicjują sesje, a następnie odbierają i przetwarzają komunikaty wysyłane w ramach sesji. Aplikacje usług mogą używać sesji jako punktu rozszerzalności, aby dodać dodatkowe zachowanie. Jest to realizowane przez pracę bezpośrednio z <xref:System.ServiceModel.InstanceContext> lub implementacją niestandardowego dostawcy kontekstu wystąpienia.  
   
 ## <a name="instancing"></a>Tworzenie wystąpienia  
- Zachowanie instancing (zestaw przy <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> użyciu właściwości) <xref:System.ServiceModel.InstanceContext> kontroluje sposób jest tworzony w odpowiedzi na wiadomości przychodzące. Domyślnie każdy <xref:System.ServiceModel.InstanceContext> jest skojarzony z jednym obiektem usługi zdefiniowanym przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> użytkownika, więc (w przypadku domyślnym) ustawienie właściwości kontroluje również instancing obiektów usługi zdefiniowanej przez użytkownika. Wyliczenie <xref:System.ServiceModel.InstanceContextMode> definiuje tryby instancing.  
+ Zachowanie tworzenia wystąpienia (ustawiane przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Właściwości) kontroluje, w jaki sposób <xref:System.ServiceModel.InstanceContext> jest tworzony w odpowiedzi na komunikaty przychodzące. Domyślnie każda z nich <xref:System.ServiceModel.InstanceContext> jest skojarzona z jednym obiektem zdefiniowanym przez użytkownika, więc (w domyślnym przypadku) ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> Właściwości również kontroluje tworzenie obiektów usługi zdefiniowane przez użytkownika. <xref:System.ServiceModel.InstanceContextMode>Wyliczenie definiuje tryby wystąpienia.  
   
- Dostępne są następujące tryby instancingu:  
+ Dostępne są następujące tryby wystąpienia:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Dla <xref:System.ServiceModel.InstanceContext> każdego żądania klienta tworzony jest nowy (i w związku z tym obiekt usługi).  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: <xref:System.ServiceModel.InstanceContext> Dla każdego żądania klienta tworzony jest nowy (i w związku z tym obiekt usługi).  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym obiekt usługi) jest tworzony dla każdej nowej sesji klienta i utrzymywany przez cały okres istnienia tej sesji (wymaga to powiązania, które obsługuje sesje).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym obiekt usługi) jest tworzony dla każdej nowej sesji klienta i utrzymywany przez okres istnienia tej sesji (wymaga to powiązania, które obsługuje sesje).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedynczy <xref:System.ServiceModel.InstanceContext> (i dlatego obiekt usługi) obsługuje wszystkie żądania klienta przez cały okres istnienia aplikacji.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedynczy <xref:System.ServiceModel.InstanceContext> (i w związku z tym obiekt usługi) obsługuje wszystkie żądania klientów w okresie istnienia aplikacji.  
   
- Poniższy przykład kodu <xref:System.ServiceModel.InstanceContextMode> pokazuje <xref:System.ServiceModel.InstanceContextMode.PerSession> wartość domyślną, jawnie ustawioną w klasie usługi.  
+ Poniższy przykład kodu pokazuje <xref:System.ServiceModel.InstanceContextMode> wartość domyślną, która <xref:System.ServiceModel.InstanceContextMode.PerSession> jest jawnie ustawiana w klasie usługi.  
   
 ```csharp  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]
@@ -58,35 +58,35 @@ public class CalculatorService : ICalculatorInstance
 }  
 ```  
   
- I podczas <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> gdy właściwość <xref:System.ServiceModel.InstanceContext> kontroluje, <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> jak <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> często jest zwalniany, i właściwości kontroli, gdy obiekt usługi jest zwolniony.  
+ A podczas gdy <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Właściwość kontroluje, jak często <xref:System.ServiceModel.InstanceContext> jest wydawana, <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> a <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> właściwości i kontroluje, kiedy obiekt usługi jest wydawany.  
   
-### <a name="well-known-singleton-services"></a>Dobrze znane usługi Singleton  
- Jedna odmiana obiektów usługi pojedynczego wystąpienia jest czasami przydatna: można utworzyć obiekt usługi samodzielnie i utworzyć hosta usługi przy użyciu tego obiektu. Aby to zrobić, należy <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> również <xref:System.ServiceModel.InstanceContextMode.Single> ustawić właściwość lub wyjątek jest zgłaszany po otwarciu hosta usługi.  
+### <a name="well-known-singleton-services"></a>Dobrze znane usługi pojedyncze  
+ Jedna odmiana obiektów usługi pojedynczego wystąpienia jest czasami przydatna: można utworzyć obiekt usługi samodzielnie i utworzyć hosta usługi za pomocą tego obiektu. W tym celu należy również ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Właściwość na <xref:System.ServiceModel.InstanceContextMode.Single> lub wyjątek jest zgłaszany podczas otwierania hosta usługi.  
   
- Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> konstruktora, aby utworzyć taką usługę. Stanowi alternatywę dla implementowania <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> niestandardowego, gdy chcesz podać wystąpienie określonego obiektu do użycia przez usługę singleton. Można użyć tego przeciążenia, gdy typ implementacji usługi jest trudne do skonstruowania (na przykład, jeśli nie implementuje bezwametrycznego konstruktora publicznego).  
+ Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> konstruktora, aby utworzyć taką usługę. Jest to alternatywa dla wdrożenia niestandardowego, <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> gdy chcesz podać konkretne wystąpienie obiektu do użycia przez pojedynczą usługę. Można użyć tego przeciążenia, gdy typ implementacji usługi jest trudny do skonstruowania (na przykład, jeśli nie implementuje konstruktora publicznego bez parametrów).  
   
- Należy zauważyć, że gdy obiekt jest dostarczany do tego konstruktora, niektóre funkcje związane z Windows Communication Foundation (WCF) zachowanie instancing działać inaczej. Na przykład <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> wywołanie nie ma wpływu, gdy jest podana wystąpienie obiektu pojedynczego. Podobnie każdy inny mechanizm zwalniania wystąpienia jest ignorowany. Zawsze <xref:System.ServiceModel.ServiceHost> zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> właściwość jest ustawiona dla wszystkich operacji.  
+ Należy pamiętać, że gdy obiekt jest dostarczany do tego konstruktora, niektóre funkcje związane z zachowaniem wystąpienia Windows Communication Foundation (WCF) działają inaczej. Na przykład wywoływanie nie <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> ma wpływu na wystąpienie pojedynczego obiektu. Podobnie wszystkie inne mechanizmy zwalniania wystąpień są ignorowane. <xref:System.ServiceModel.ServiceHost>Zawsze zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> Właściwość została ustawiona na <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> dla wszystkich operacji.  
   
-### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów instancjowych  
- Można również kontrolować, który sesyjny kanał <xref:System.ServiceModel.InstanceContext> lub wywołanie jest skojarzone z który obiekt, wykonując to skojarzenie samodzielnie.  
+### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów InstanceContext  
+ Można również kontrolować, które kanały sesji lub wywołania są skojarzone z tym <xref:System.ServiceModel.InstanceContext> obiektem przez wykonanie tego skojarzenia samodzielnie.  
   
 ## <a name="concurrency"></a>Współbieżność  
- Współbieżność jest kontrolą liczby wątków aktywnych <xref:System.ServiceModel.InstanceContext> w dowolnym momencie. Jest to kontrolowane <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> przy <xref:System.ServiceModel.ConcurrencyMode> użyciu z wyliczenia.  
+ Współbieżność to kontrola liczby wątków aktywnych w <xref:System.ServiceModel.InstanceContext> dowolnym momencie. Jest to kontrolowane przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> z <xref:System.ServiceModel.ConcurrencyMode> wyliczeniem.  
   
  Dostępne są następujące trzy tryby współbieżności:  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Single>: Każdy kontekst wystąpienia może mieć maksymalnie jeden wątek przetwarzania wiadomości w kontekście wystąpienia w czasie. Inne wątki, które chcą użyć tego samego kontekstu wystąpienia musi zablokować, dopóki oryginalny wątek kończy kontekst wystąpienia.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Każdy kontekst wystąpienia może mieć maksymalnie jeden komunikat przetwarzania wątku w danym momencie. Inne wątki, które chcą korzystać z tego samego kontekstu wystąpienia, muszą blokować do momentu opuszczenia kontekstu wystąpienia przez oryginalny wątek.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Każde wystąpienie usługi może mieć wiele wątków przetwarzania wiadomości jednocześnie. Implementacja usługi musi być bezpieczna dla wątków, aby używać tego trybu współbieżności.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Każde wystąpienie usługi może mieć wiele wątków przetwarzających komunikaty współbieżnie. Implementacja usługi musi być bezpieczna wątkowo, aby można było używać tego trybu współbieżności.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza po jednej wiadomości naraz, ale akceptuje ponowne wniesienie połączeń operacyjnych. Usługa akceptuje tylko te wywołania, gdy jest wywoływanie za pośrednictwem obiektu klienta WCF.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania operacji ponownie. Usługa akceptuje te wywołania tylko wtedy, gdy jest wywoływany przez obiekt klienta WCF.  
   
 > [!NOTE]
-> Zrozumienie i tworzenie kodu, który bezpiecznie używa więcej niż jednego wątku może być trudne do zapisania pomyślnie. Przed <xref:System.ServiceModel.ConcurrencyMode.Multiple> użyciem lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości, upewnij się, że usługa jest prawidłowo zaprojektowany dla tych trybów. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+> Zrozumienie i Programowanie kodu, który bezpiecznie korzysta z więcej niż jednego wątku może być trudne do zapisania. Przed użyciem <xref:System.ServiceModel.ConcurrencyMode.Multiple> lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości upewnij się, że usługa została prawidłowo zaprojektowana dla tych trybów. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
- Użycie współbieżności jest związane z trybem instancing. W <xref:System.ServiceModel.InstanceContextMode.PerCall> instancing współbieżność nie jest istotne, ponieważ każda wiadomość <xref:System.ServiceModel.InstanceContext> jest przetwarzana przez nowy i dlatego <xref:System.ServiceModel.InstanceContext>nigdy więcej niż jeden wątek jest aktywny w .  
+ Użycie współbieżności jest związane z trybem wystąpienia. W <xref:System.ServiceModel.InstanceContextMode.PerCall> przypadku wystąpienia, współbieżność nie jest istotna, ponieważ każdy komunikat jest przetwarzany przez nowy <xref:System.ServiceModel.InstanceContext> i, dlatego nigdy więcej niż jeden wątek jest aktywny w <xref:System.ServiceModel.InstanceContext> .  
   
- Poniższy przykład kodu pokazuje <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ustawienie <xref:System.ServiceModel.ConcurrencyMode.Multiple>właściwości na .  
+ Poniższy przykład kodu demonstruje ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> właściwości na <xref:System.ServiceModel.ConcurrencyMode.Multiple> .  
   
 ```csharp
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
@@ -96,22 +96,22 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
-## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje współdziałają z ustawieniami intertekstu wystąpienia  
- Sesje <xref:System.ServiceModel.InstanceContext> i interakcji w zależności od <xref:System.ServiceModel.SessionMode> kombinacji wartości wyliczenia <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> w umowie i właściwości na implementacji usługi, która kontroluje skojarzenie między kanałami i określonych obiektów usługi.  
+## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje współpracują z ustawieniami InstanceContext  
+ Sesje i <xref:System.ServiceModel.InstanceContext> współdziałanie w zależności od kombinacji wartości <xref:System.ServiceModel.SessionMode> wyliczenia w kontrakcie i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Właściwości implementacji usługi, która kontroluje skojarzenie między kanałami i określonymi obiektami usługi.  
   
- W poniższej tabeli przedstawiono wynik kanału przychodzącego obsługującego sesje lub nie obsługujące <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> sesji, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> biorąc pod uwagę kombinację wartości właściwości i właściwości usługi.  
+ W poniższej tabeli przedstawiono wynik przychodzącego kanału obsługującego sesje lub nieobsługujący sesji, które podano kombinację wartości <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwości i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwości.  
   
-|Wartość InstanceContextMode|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
+|Wartość InstanceContextmode|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|Percall|- Zachowanie z kanałem sesji: Sesja i <xref:System.ServiceModel.InstanceContext> dla każdego połączenia.<br />- Zachowanie z kanału bez sesji: wyjątek jest generowany.|- Zachowanie z kanałem sesji: Sesja i <xref:System.ServiceModel.InstanceContext> dla każdego połączenia.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: Dla każdego połączenia.|- Zachowanie z kanału sesji: wyjątek jest generowany.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: Dla każdego połączenia.|  
-|Persession|- Zachowanie z kanałem sesji: Sesja i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />- Zachowanie z kanału bez sesji: wyjątek jest generowany.|- Zachowanie z kanałem sesji: Sesja i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: Dla każdego połączenia.|- Zachowanie z kanału sesji: wyjątek jest generowany.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: Dla każdego połączenia.|  
-|Single|- Zachowanie z kanałem sesji: <xref:System.ServiceModel.InstanceContext> Sesja i jeden dla wszystkich połączeń.<br />- Zachowanie z kanału bez sesji: wyjątek jest generowany.|- Zachowanie z kanałem sesji: Sesja i <xref:System.ServiceModel.InstanceContext> dla utworzonego lub określonego przez użytkownika singleton.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: dla utworzonego lub określonego przez użytkownika singleton.|- Zachowanie z kanału sesji: wyjątek jest generowany.<br />- Zachowanie z kanału <xref:System.ServiceModel.InstanceContext> bez sesji: dla każdego utworzonego singleton lub dla użytkownika określonego singleton.|  
+|PerCall|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|  
+|PerSession|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|  
+|Single|-Zachowanie przy użyciu kanału sesji: sesji i jednej <xref:System.ServiceModel.InstanceContext> dla wszystkich wywołań.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla pojedynczego elementu określonego lub zdefiniowanego przez użytkownika.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla obiektu utworzonego lub określonego przez użytkownika.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego utworzonego pojedynczego lub dla pojedynczego użytkownika.|  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Korzystanie z sesji](../../../../docs/framework/wcf/using-sessions.md)
-- [Instrukcje: tworzenie usługi wymagającej użycia sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Instrukcje: tworzenie wystąpienia usługi kontroli](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [Współbieżność](../../../../docs/framework/wcf/samples/concurrency.md)
-- [Tworzenie wystąpienia](../../../../docs/framework/wcf/samples/instancing.md)
-- [Sesja](../../../../docs/framework/wcf/samples/session.md)
+- [Korzystanie z sesji](../using-sessions.md)
+- [Instrukcje: tworzenie usługi wymagającej użycia sesji](how-to-create-a-service-that-requires-sessions.md)
+- [Instrukcje: tworzenie wystąpienia usługi kontroli](how-to-control-service-instancing.md)
+- [Współbieżność](../samples/concurrency.md)
+- [Tworzenie wystąpienia](../samples/instancing.md)
+- [Sesja](../samples/session.md)

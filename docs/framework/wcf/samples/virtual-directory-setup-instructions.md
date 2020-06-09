@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2d9443431601ffc712da40bd1c085f595471336b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602365"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
 Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępniania wspólnego katalogu wirtualnego o nazwie servicemodelsamples, który jest mapowany do folderu%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -15,7 +15,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
 > [!NOTE]
 > Dysk% SystemDrive% jest zwykle C: lub D:, w zależności od lokalizacji dysku, w której zainstalowano Internet Information Services (IIS).  
   
- Pliki Setupvroot. bat i cleanupvroot. bat można uruchomić z [procedury konfiguracji jednorazowej dla przykładów Windows Communication Foundation,](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) aby utworzyć katalog wirtualny. Jeśli wolisz ręcznie utworzyć katalog wirtualny, Użyj poniższych procedur.  
+ Pliki Setupvroot. bat i cleanupvroot. bat można uruchomić z [procedury konfiguracji jednorazowej dla przykładów Windows Communication Foundation,](one-time-setup-procedure-for-the-wcf-samples.md) aby utworzyć katalog wirtualny. Jeśli wolisz ręcznie utworzyć katalog wirtualny, Użyj poniższych procedur.  
   
 ## <a name="procedures"></a>Procedury  
   
@@ -39,13 +39,13 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
     > To zadanie należy wykonać tylko raz, ponieważ wszystkie przykłady WCF używają tej samej aplikacji sieci Web servicemodelsamples.  
   
     > [!NOTE]
-    > Na potrzeby tej dokumentacji termin `virtual directory` jest równoznaczny z. `Web application`  
+    > Na potrzeby tej dokumentacji termin `virtual directory` jest równoznaczny z `Web application` .  
   
      Oprócz tworzenia katalogu wirtualnego, należy również ustawić jego właściwości, aby umożliwić uruchamianie usług WCF. Aby uzyskać szczegółowe informacje, zobacz poniżej.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Aby utworzyć katalog wirtualny w usługach IIS 5,1 lub 6,0  
   
-1. Otwórz okno wiersza polecenia i wpisz `start inetmgr` , aby otworzyć przystawkę MMC Internet Information Services (IIS).  
+1. Otwórz okno wiersza polecenia i wpisz, `start inetmgr` Aby otworzyć przystawkę MMC Internet Information Services (IIS).  
   
 2. W lewym okienku rozwiń węzeł nazwą komputera, a następnie rozwiń węzeł **witryny sieci Web** .  
   
@@ -59,7 +59,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
 7. Domyślnie są zaznaczone następujące pola wyboru:  
   
-    - **Read**  
+    - **Odczyt**  
   
     - **Uruchamianie skryptów (takich jak ASP)**  
   
@@ -84,7 +84,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
 2. Domyślnie są zaznaczone następujące pola wyboru:  
   
-    - **Read**  
+    - **Odczyt**  
   
     - **Wizyty w dzienniku**  
   
@@ -102,7 +102,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
 4. Wybierz pozycję **Znajdź** . Zostanie otwarte okno **Wybieranie użytkowników lub grup** .  
   
-5. Kliknij przycisk **zaawansowane**.  
+5. Kliknij pozycję **Zaawansowane**.  
   
 6. Kliknij pozycję **lokalizacje**. Okno **lokalizacje** jest teraz otwarte.  
   
@@ -124,7 +124,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
 2. Kliknij prawym przyciskiem myszy folder **servicemodelsamples** , a następnie kliknij pozycję **udostępnianie i zabezpieczenia.**  
   
-3. Kliknij kartę **zabezpieczenia** .  
+3. Kliknij kartę **Zabezpieczenia**.  
   
 4. Jeśli używasz usług IIS 6,0, w polu **nazwy grupy lub użytkownika** Sprawdź, czy na liście znajdują się **konta gościa internetowego** .  
   
@@ -140,13 +140,13 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
     5. W oknie dialogowym **konta użytkowników** kliknij kartę **Zaawansowane** .  
   
-    6. Kliknij przycisk **zaawansowane**.  
+    6. Kliknij pozycję **Zaawansowane**.  
   
     7. W oknie dialogowym **lokalni użytkownicy i grupy** kliknij, aby rozwinąć folder **Users (Użytkownicy** ).  
   
     8. W prawym okienku kliknij dwukrotnie pozycję **konto gościa internetowego**.  
   
-    9. W oknie dialogowym **Właściwości** skopiuj nazwę używaną jako konto gościa internetowego. Domyślnie nazwa rozpoczyna się od ciągu "USR_", po którym następuje nazwa komputera.  
+    9. W oknie dialogowym **Właściwości** skopiuj nazwę używaną jako konto gościa internetowego. Domyślnie nazwa rozpoczyna się od "USR_", po którym następuje nazwa komputera.  
   
     10. Zamknij okno dialogowe **Właściwości** .  
   
@@ -158,7 +158,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
     14. W oknie dialogowym **Właściwości servicemodelsamples** na karcie **zabezpieczenia** kliknij przycisk **Dodaj**.  
   
-    15. Wpisz nazwę komputera, a następnie ukośnik odwrotny, a następnie wklej nazwę konta użytkownika internetowego, na przykład MojKomputer\\% InternetGuestAccountName%  
+    15. Wpisz nazwę komputera, a następnie ukośnik odwrotny, a następnie wklej nazwę konta użytkownika internetowego, na przykład MojKomputer \\ % InternetGuestAccountName%  
   
     16. Kliknij przycisk **Sprawdź nazwy** , aby zweryfikować dodanie. Jeśli jest to prawidłowe, nazwa jest w Wielkiej litery i jest podkreślona.  
   
@@ -166,7 +166,7 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
      Jeśli usługa sieciowa nie jest wymieniona na liście:  
   
-    1. Kliknij przycisk **Dodaj**.  
+    1. Kliknij pozycję **Dodaj**.  
   
     2. W oknie dialogowym **Wybieranie użytkowników lub grup** wpisz nazwę komputera, a następnie ukośnik odwrotny.  
   
@@ -190,6 +190,6 @@ Przykłady Windows Communication Foundation (WCF) są przeznaczone do udostępni
   
     3. W kolumnie **Grupa** Sprawdź, czy wartość **ASPNET** to "Users".  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](internet-information-service-hosting-instructions.md)

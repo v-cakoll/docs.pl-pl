@@ -2,31 +2,31 @@
 title: Rozszerzalność kanałów
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: aeff683b786d81fc782914bd2df70adb10bcbcec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbae26a548bdc8a8cfb05a3dd90db91475b55ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600636"
 ---
 # <a name="channels-extensibility"></a>Rozszerzalność kanałów
-Ta sekcja zawiera przykłady pokazujące, niestandardowe kanały.  
+Ta sekcja zawiera przykłady demonstrujące kanały niestandardowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Lokalny kanał](../../../../docs/framework/wcf/samples/local-channel.md)  
- Pokazuje lokalnego kanału WCF kanał transportu, który jest używany do komunikacji w ramach tej samej domenie aplikacji.  
+ [Lokalny kanał](local-channel.md)  
+ Pokazuje kanał lokalny, kanał transportu WCF używany do komunikacji w ramach tej samej domeny aplikacji.  
   
- [Niezawodny bezpieczny profil](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- Przedstawia sposób tworzenia usług WCF i niezawodny bezpieczny profil (RSP).  
+ [Niezawodny bezpieczny profil](reliable-secure-profile.md)  
+ Pokazuje, jak tworzyć usługi WCF i niezawodne bezpieczne profile (RSP).  
   
- [Niestandardowy dyspozytor kanału](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
- Przedstawiono sposób tworzenia kanału stosu w niestandardowy sposób przez zaimplementowanie <xref:System.ServiceModel.ServiceHostBase> bezpośrednio oraz sposób tworzenia dyspozytora niestandardowym kanale w środowisku hosta sieci Web.  
+ [Niestandardowy dyspozytor kanału](custom-channel-dispatcher.md)  
+ Demonstruje sposób tworzenia stosu kanału w sposób niestandardowy przez implementację <xref:System.ServiceModel.ServiceHostBase> bezpośrednio i sposób tworzenia niestandardowego dyspozytora kanału w środowisku hosta sieci Web.  
   
- [Kanał dzielący na fragmenty](../../../../docs/framework/wcf/samples/chunking-channel.md)  
- Pokazuje, jak ograniczyć ilość pamięci, aby buforować duże komunikaty wysyłane za pomocą usługi WCF.
+ [Kanał dzielący na fragmenty](chunking-channel.md)  
+ Pokazuje, jak ograniczyć ilość pamięci używanej do buforowania dużych komunikatów wysyłanych za pomocą programu WCF.
   
- [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  
- Przedstawiono sposób tworzenia kanału niestandardowego protokołu na używanie plików cookie protokołu HTTP do zarządzania sesjami.  
+ [HttpCookieSession](httpcookiesession.md)  
+ Pokazuje, jak utworzyć niestandardowy kanał protokołu, aby używać plików cookie protokołu HTTP do zarządzania sesją.  
   
- [Niestandardowy element przechwytujący komunikaty](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
- Demonstruje sposób implementacji element niestandardowego powiązania, który pokazuje tworzenie fabryki kanałów i odbiorniki kanałów, aby przechwycić wszystkie komunikaty przychodzące i wychodzące w określonym punkcie w stosie czasu wykonywania.
+ [Niestandardowy element przechwytujący komunikaty](custom-message-interceptor.md)  
+ Demonstruje sposób implementacji elementu niestandardowego powiązania, który tworzy fabryki kanałów i odbiorników kanałów do przechwytywania wszystkich komunikatów przychodzących i wychodzących w określonym punkcie w stosie czasu wykonywania.

@@ -2,31 +2,31 @@
 title: Kontrakty routingu
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69dff2c82f67a16d51e11a92052c59672a054e04
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601078"
 ---
 # <a name="routing-contracts"></a>Kontrakty routingu
-Kontrakty routingu zdefiniować wzorców wiadomości, które może przetworzyć usługa routingu.  Każdej umowy jest formatów i umożliwia usłudze komunikat bez znajomości schematu wiadomości lub akcji. Dzięki temu usługa routingu do ogólnej kierowanie komunikatów w postaci bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowych komunikaty przesyłane.  
+Kontrakty routingu definiują wzorce komunikatów, które usługa routingu może przetworzyć.  Każdy kontrakt jest beztypu i umożliwia usłudze otrzymywanie wiadomości bez znajomości schematu lub akcji wiadomości. Dzięki temu usługa routingu ogólnie kieruje komunikaty bez dodatkowej konfiguracji dla określonych źródłowych komunikatów, które są przesyłane.  
   
 ## <a name="routing-contracts"></a>Kontrakty routingu  
- Ponieważ usługa routingu akceptuje to obiekt rodzajowy wiadomości WCF, najważniejsze brany pod uwagę podczas wybierania kontrakt jest kształtu kanału, który będzie używany podczas komunikacji z klientami i usługami. Podczas przetwarzania komunikatów, usługa routingu używa pompy komunikatów symetryczne, więc zazwyczaj kształt przychodzącego kontraktu musi być zgodna kształt wychodzącego kontraktu. Jednakże istnieją przypadki, gdzie dyspozytora Model usług można zmodyfikować kształtów, na przykład w przypadku dispatcher konwertuje Kanał dupleksowy do kanału "żądanie-odpowiedź" lub usuwa obsługę sesji z kanału, gdy nie jest wymagana i nie jest używana (to znaczy gdy **SessionMode.Allowed**, konwertowania **IInputSessionChannel** do **IInputChannel**).  
+ Ponieważ usługa routingu akceptuje ogólny obiekt komunikatów WCF, najważniejszym zagadnieniem podczas wybierania kontraktu jest kształt kanału, który będzie używany podczas komunikowania się z klientami i usługami. Podczas przetwarzania wiadomości usługa routingu używa symetrycznej pompki komunikatów, dlatego kształt kontraktu przychodzącego musi być zgodny z kształtem kontraktu wychodzącego. Istnieją jednak przypadki, w których Dyspozytor modelu usług może modyfikować kształty, na przykład gdy Dyspozytor przekształci kanał dupleksowy w kanale żądanie-odpowiedź lub usuwa obsługę sesji z kanału, gdy nie jest to wymagane i nie jest używana (to jest, w trakcie **sesjimode. dozwolone**, konwertowanie **IInputSessionChannel** na **IInputChannel**).  
   
- Na potrzeby obsługi tych pompy komunikatów, usługa routingu udostępnia umów <xref:System.ServiceModel.Routing> przestrzeni nazw, które muszą być używane podczas definiowania punktów końcowych usługi używane przez usługę routingu. Umowy te są formatów, która umożliwia odbieranie dowolnego typu komunikatu lub akcji i umożliwia usługa routingu do obsługi wiadomości, bez znajomości schematu szczegółowy komunikat o błędzie. Aby uzyskać więcej informacji na temat umów używane przez usługę routingu, zobacz [kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ Aby zapewnić obsługę tych pomp komunikatów, usługa routingu udostępnia kontrakty w <xref:System.ServiceModel.Routing> przestrzeni nazw, które muszą być używane podczas definiowania punktów końcowych usługi używanych przez usługę routingu. Te kontrakty są beztypu, co umożliwia otrzymanie dowolnego typu komunikatu lub akcji, a także umożliwia usłudze routingu obsługę komunikatów bez znajomości określonego schematu komunikatów. Aby uzyskać więcej informacji na temat kontraktów używanych przez usługę routingu, zobacz [Kontrakty routingu](routing-contracts.md).  
   
  Kontrakty udostępniane przez usługę routingu znajdują się w <xref:System.ServiceModel.Routing> przestrzeni nazw i są opisane w poniższej tabeli.  
   
-|Kontrakt|Kształt|Kształtu kanału|  
+|Kontrakt|Kształt|Kształt kanału|  
 |--------------|-----------|-------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true<br /><br /> Ustawienie właściwości IsOneWay = true|IInputChannel -> IOutputChannel|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode.Required<br /><br /> AsyncPattern = true<br /><br /> Ustawienie właściwości IsOneWay = true|IInputSessionChannel -> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> Ustawienie właściwości IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode. dozwolone<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel — > IOutputChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode. Required<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel — > IOutputSessionChannel|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode. dozwolone<br /><br /> AsyncPattern = true|IReplyChannel — > IRequestChannel|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode = SessionMode. Required<br /><br /> CallbackContract = typeof (ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow (parametru TransactionFlowOption. dozwolone)|IDuplexSessionChannel — > IDuplexSessionChannel|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)
-- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Usługa routingu](routing-service.md)
+- [Wprowadzenie do routingu](routing-introduction.md)

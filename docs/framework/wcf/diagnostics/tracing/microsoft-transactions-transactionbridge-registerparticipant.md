@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.RegisterParticipant
 ms.date: 03/30/2017
 ms.assetid: 8888fd0a-d454-4123-88de-fa3290102306
-ms.openlocfilehash: 8920f619985a6899b45dfa5b53ed3b194cd8238c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10b652d88d4800fbc221a018dbaf9283f33816eb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599684"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipant"></a>Microsoft.Transactions.TransactionBridge.RegisterParticipant
-Usługa protokołu WS-Atomic Transaction został pomyślnie zarejestrowany uczestnika dla protokołu kontroli.  
+Usługa protokołu transakcji WS-AT pomyślnie zarejestrowała uczestnika dla protokołu kontroli.  
   
 ## <a name="description"></a>Opis  
- Śledzone, gdy lokalny Menedżer transakcji potwierdzi pomyślnie, żądanie rejestru z uczestnika dla protokołu 2pc.  
+ Śledzenie, gdy lokalny Menedżer transakcji pomyślnie potwierdzi żądanie rejestracji od uczestnika protokołu 2PC.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

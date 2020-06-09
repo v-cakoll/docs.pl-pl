@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600415"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w Visual Basic
 
@@ -30,7 +30,7 @@ Należy utworzyć obiekt, aby można było uzyskać dostęp do jego członków, 
 
 ### <a name="create-an-object-from-a-class"></a>Utwórz obiekt z klasy
 
-1. Ustal, z której klasy chcesz utworzyć obiekt, lub Zdefiniuj własną klasę. Na przykład:
+1. Ustal, z której klasy chcesz utworzyć obiekt, lub Zdefiniuj własną klasę. Przykład:
 
    ```vb
    Public Class Customer
@@ -110,7 +110,7 @@ Użyj pól w przypadku:
 
 - Właściwość jest `String` typem danych i nie ma żadnego ograniczenia dotyczącego rozmiaru lub wartości ciągu.
 
-- Aby uzyskać więcej informacji, zobacz [procedury właściwości](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
+- Aby uzyskać więcej informacji, zobacz [procedury właściwości](../procedures/property-procedures.md).
 
 > [!TIP]
 > Zawsze zachowuj prywatne pola niestałe. Jeśli chcesz, aby był on publiczny, zamiast tego użyj właściwości.

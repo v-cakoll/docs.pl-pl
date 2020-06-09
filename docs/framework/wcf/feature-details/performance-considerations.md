@@ -2,24 +2,24 @@
 title: Zagadnienia dotyczące wydajności
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
-ms.openlocfilehash: 46e5b5c392ff3a0d401bb709b21637b3d2e784ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d95d003ef5062e2d942d6a1d1897c27a08ea2f65
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650508"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600753"
 ---
 # <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
-Zagadnienia dotyczące wydajności są istotne zawsze podczas tworzenia aplikacji. Ta sekcja zawiera wpisy związane z wydajnością i bezpieczeństwem.  
+Zagadnienia dotyczące wydajności są zawsze ważne podczas kompilowania aplikacji. Ta sekcja zawiera wpisy związane z wydajnością i zabezpieczeniami.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- W tym artykule opisano najszybszy mechanizm znajdowanie oświadczeń w kolekcji oświadczeń.  
+ [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md)  
+ Opisuje najszybszy mechanizm znajdowania oświadczeń w kolekcji oświadczeń.  
   
- [Szyfrowanie podpisów cyfrowych](../../../../docs/framework/wcf/feature-details/encryption-of-digital-signatures.md)  
- W tym artykule opisano sposób szyfrowania podpis cyfrowy dodawać spadek wydajności i jak go wyłączyć.  
+ [Szyfrowanie podpisów cyfrowych](encryption-of-digital-signatures.md)  
+ Opisuje, w jaki sposób szyfrowanie podpisu cyfrowego może zwiększyć spadek wydajności i jak go wyłączyć.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Najlepsze rozwiązania dotyczące zabezpieczeń](best-practices-for-security-in-wcf.md)
+- [Zagadnienia dotyczące zabezpieczeń](security-considerations-in-wcf.md)

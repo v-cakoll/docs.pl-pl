@@ -2,45 +2,45 @@
 title: Architektura aktywacji WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600675"
 ---
 # <a name="was-activation-architecture"></a>Architektura aktywacji WAS
-W tym temacie wyszczególnia i omówiono składniki usługi aktywacji procesów systemu Windows (znanej również jako WAS).  
+W tym temacie wyszczególniono i omówiono składniki usługi aktywacji procesów systemu Windows (nazywanej także usługą WAS).  
   
 ## <a name="activation-components"></a>Składniki aktywacji  
- WAS składa się z kilku elementów architektonicznych:  
+ Składa się z kilku składników architektury:  
   
-- Adaptery odbiornika. Usługi systemu Windows, które odbierają wiadomości na określonych protokołach sieciowych i komunikują się z usługą WAS w celu kierowania wiadomości przychodzących do właściwego procesu roboczego.  
+- Adaptery odbiornika. Usługi systemu Windows, które odbierają komunikaty z określonych protokołów sieciowych i komunikują się z usługą, przekierować komunikaty przychodzące do poprawnego procesu roboczego.  
   
-- Został. Usługa systemu Windows, która zarządza tworzeniem i okresem istnienia procesów roboczych.  
+- Błędu. Usługa systemu Windows, która zarządza tworzeniem i okresem istnienia procesów roboczych.  
   
-- Ogólny proces roboczy wykonywalny (w3wp.exe).  
+- Plik wykonywalny ogólnego procesu roboczego (w3wp. exe).  
   
-- Menedżer aplikacji. Zarządza tworzeniem i okresem istnienia domen aplikacji, które hostuje aplikacje w procesie roboczym.  
+- Menedżer aplikacji. Zarządza tworzeniem i okresem istnienia domen aplikacji, które obsługują aplikacje w ramach procesu roboczego.  
   
-- Programy obsługi protokołu. Składniki specyficzne dla protokołu, które działają w procesie roboczym i zarządzają komunikacją między procesem roboczym a poszczególnymi kartami odbiornika. Istnieją dwa typy programów obsługi protokołów: programy obsługi protokołów procesów i programy obsługi protokołu AppDomain.  
+- Procedury obsługi protokołu. Składniki specyficzne dla protokołu, które są uruchamiane w procesie roboczym i zarządzają komunikacją między procesem roboczym a poszczególnymi kartami odbiornika. Istnieją dwa typy obsługi protokołów: procedury obsługi protokołu przetwarzania i procedury obsługi protokołu AppDomain.  
   
- Gdy usługa WAS aktywuje wystąpienie procesu roboczego, ładuje programy obsługi protokołu procesu wymagane do procesu roboczego i używa menedżera aplikacji do utworzenia domeny aplikacji do obsługi aplikacji. Domena aplikacji ładuje kod aplikacji, a także programy obsługi protokołu AppDomain, których wymagają protokoły sieciowe używane przez aplikację.  
+ Gdy program został aktywowany wystąpienie procesu roboczego, ładuje do procesu roboczego programy obsługi protokołu procesu, a następnie za pomocą Menedżera aplikacji utworzyć domenę aplikacji do hostowania aplikacji. Domena aplikacji ładuje kod aplikacji, a także obsługę protokołów AppDomain, których wymagają protokoły sieciowe używane przez aplikację.  
   
  ![Zrzut ekranu przedstawiający architekturę WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptery odbiornika  
- Karty odbiornika to pojedyncze usługi systemu Windows, które implementują logikę komunikacji sieciowej używaną do odbierania wiadomości przy użyciu protokołu sieciowego, na który nasłuchują. W poniższej tabeli wymieniono karty odbiornika dla protokołów Programu Windows Communication Foundation (WCF).  
+ Adaptery odbiorników to pojedyncze usługi systemu Windows, które implementują logikę komunikacji sieciowej służącą do odbierania komunikatów przy użyciu protokołu sieciowego, na którym nasłuchuje. W poniższej tabeli przedstawiono karty odbiorników dla protokołów Windows Communication Foundation (WCF).  
   
-|Nazwa usługi karty odbiornika|Protocol (Protokół)|Uwagi|  
+|Nazwa usługi adaptera odbiornika|Protokół|Uwagi|  
 |-----------------------------------|--------------|-----------|  
-|W3svc|http|Typowy składnik, który zapewnia aktywację HTTP dla usług IIS 7.0 i WCF.|  
-|NetTcpActivator (NetTcpActivator)|net.tcp|Zależy od usługi NetTcpPortSharing.|  
-|NetPipeActivator (NetPipeActivator)|net.pipe||  
-|NetMsmqActivator (Aktywizm NetMsmq)|Net.msmq|Do użytku z aplikacjami usługi kolejkowania wiadomości opartymi na WCF.|  
-|NetMsmqActivator (Aktywizm NetMsmq)|nazwa msmq.format|Zapewnia zgodność z powrotem z istniejącymi aplikacjami Usługi kolejkowania wiadomości.|  
+|W3SVC|http|Wspólny składnik zapewniający aktywację HTTP dla usług IIS 7,0 i WCF.|  
+|NetTcpActivator|net.tcp|Zależy od usługi NetTcpPortSharing.|  
+|NetPipeActivator|net.pipe||  
+|NetMsmqActivator|NET. MSMQ|Do użytku z aplikacjami usługi kolejkowania komunikatów opartymi na platformie WCF.|  
+|NetMsmqActivator|wartość MSMQ. formatname|Zapewnia zgodność z poprzednimi wersjami istniejących aplikacji usługi kolejkowania komunikatów.|  
   
- Karty odbiornika dla określonych protokołów są rejestrowane podczas instalacji w pliku applicationHost.config, jak pokazano w poniższym przykładzie XML.  
+ Adaptery odbiorników dla określonych protokołów są rejestrowane podczas instalacji w pliku applicationHost. config, jak pokazano w poniższym przykładzie kodu XML.  
   
 ```xml  
 <system.applicationHost>  
@@ -59,7 +59,7 @@ W tym temacie wyszczególnia i omówiono składniki usługi aktywacji procesów 
 ```  
   
 ### <a name="protocol-handlers"></a>Programy obsługi protokołów  
- Programy obsługi protokołów Process i AppDomain dla określonych protokołów są rejestrowane w pliku Web.config na poziomie komputera.  
+ Procedury obsługi protokołu i programu AppDomain dla określonych protokołów są rejestrowane w pliku Web. config na poziomie komputera.  
   
 ```xml  
 <system.web>  
@@ -87,5 +87,5 @@ W tym temacie wyszczególnia i omówiono składniki usługi aktywacji procesów 
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie usługi WAS do użycia z programem WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Konfigurowanie usługi WAS do użycia z programem WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

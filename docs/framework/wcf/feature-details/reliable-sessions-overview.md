@@ -2,102 +2,102 @@
 title: Omówienie sesji niezawodnych
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-ms.openlocfilehash: 6dd90ef800daf236d77c419d48c0857ac2d78aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a85a34c5e2ec7928c01586e4b01cdf5e90e896a7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601091"
 ---
 # <a name="reliable-sessions-overview"></a>Omówienie sesji niezawodnych
 
-Windows Communication Foundation (WCF) niezawodnej obsługi wiadomości SOAP zapewnia niezawodność transferu wiadomości end-to-end między punktami końcowymi protokołu SOAP. Dzieje się tak w sieciach, które nie jest gwarantowane przez płynną błędów transportu i awarie poziom komunikatu protokołu SOAP. W szczególności zapewnia oparte na sesji pojedynczego i (opcjonalnie) uporządkowane dostarczania wiadomości przesyłane za pośrednictwem pośredników SOAP lub transportu. Oparte na sesji dostarczania zawiera grupowanie komunikatów w sesji z opcjonalnych kolejność komunikatów.
+Usługa Windows Communication Foundation (WCF) funkcja niezawodna obsługa protokołu SOAP zapewnia kompleksową niezawodność przesyłania komunikatów między punktami końcowymi protokołu SOAP. Robi to w przypadku sieci, które są wiarygodne przez przechodzące błędy transportu i błędy poziomu komunikatów protokołu SOAP. W szczególności zapewnia oparte na sesji, pojedyncze i (opcjonalnie) uporządkowane dostarczanie komunikatów wysyłanych przez pośredników protokołu SOAP lub transportu. Dostarczanie oparte na sesji zapewnia grupowanie komunikatów w sesji przy użyciu opcjonalnej kolejności komunikatów.
 
-W tym temacie opisano niezawodne sesje, jak i kiedy ich używać oraz jak je zabezpieczyć.
+W tym temacie opisano niezawodne sesje, sposób i czas ich używania oraz sposób ich zabezpieczania.
 
-## <a name="wcf-reliable-sessions"></a>Niezawodne sesje programu WCF
+## <a name="wcf-reliable-sessions"></a>Niezawodne sesje WCF
 
-Sesje niezawodnej usługi WCF jest implementacją protokołu SOAP niezawodnej obsługi komunikatów, zgodnie z definicją protokołu WS-ReliableMessaging.
+Niezawodne sesje programu WCF to implementacja niezawodnych komunikatów protokołu SOAP, zgodnie z definicją protokołu WS-ReliableMessaging.
 
-Niezawodna obsługa komunikatów WCF SOAP zapewnia end-to-end niezawodnej sesji między dwoma punktami końcowymi, niezależnie od liczby i typu pośredników rozdzielających komunikatów punktów końcowych. Dotyczy to również wszelkich pośredników transportu, które nie używają protokołu SOAP (na przykład serwera proxy HTTP) lub pośredników, które używają protokołu SOAP (na przykład opartego na protokole SOAP routery lub mostków), które są wymagane dla komunikatów przepływ między punktami końcowymi. Kanał niezawodnej sesji obsługuje *interaktywne* komunikacji, aby usługi połączone przez kanał taki uruchamiać jednocześnie i wymianę i przetwarzanie komunikatów w warunkach małych opóźnień, oznacza to, w ramach stosunkowo krótka odstępach czasu. To sprzężenia oznacza, że te składniki postęp razem lub zakończyć się niepowodzeniem ze sobą, dlatego bez izolacji udostępniane między nimi.
+Niezawodna obsługa protokołu SOAP WCF zapewnia kompleksową, niezawodną sesję między dwoma punktami końcowymi, niezależnie od liczby lub typu pośredników, które oddzielają punkty końcowe obsługi komunikatów. Dotyczy to wszystkich pośredników transportu, które nie używają protokołu SOAP (na przykład proxy HTTP) ani pośredników korzystających z protokołu SOAP (na przykład routerów lub mostków opartych na protokole SOAP), które są wymagane do przepływu komunikatów między punktami końcowymi. Kanał niezawodnej sesji obsługuje komunikację *interaktywną* , dzięki czemu usługi połączone przez taki kanał działają współbieżnie i wymieniają i przetwarzają komunikaty w warunkach o małym opóźnieniu, czyli w stosunkowo krótkich odstępach czasu. Ten sprzężenie oznacza, że te składniki sprawiają postęp razem lub kończą się niepowodzeniem, dlatego nie jest zapewniona żadna izolacja między nimi.
 
-Sesja niezawodna maskuje dwa rodzaje błędów:
+Niezawodne maski sesji dwa rodzaje awarii:
 
-- Protokołu SOAP wiadomości niespodziewanymi awariami, co obejmuje wiadomości utracone lub zduplikowane i komunikaty przychodzące w innej kolejności niż kolejność, w jakiej zostały wysłane.
+- Błędy poziomu komunikatów protokołu SOAP, w tym utracone lub zduplikowane komunikaty i komunikaty, które nadeszły w innej kolejności od kolejności, w której zostały wysłane.
 
-- Transport błędów.
+- Błędy transportu.
 
-Sesja niezawodna implementuje protokół WS-ReliableMessaging i okno transfer w pamięci na awarie maska poziom komunikatu protokołu SOAP i ponownie nawiązuje połączenia w przypadku błędów transportu.
+Niezawodna sesja implementuje protokół WS-ReliableMessaging i okno transferu w pamięci w celu zamaskowania błędów na poziomie komunikatu protokołu SOAP i ponownego ustanawiania połączeń w przypadku awarii transportu.
 
-Sesja niezawodna zawiera komunikaty protokołu SOAP protokół TCP zapewnia dla pakietów IP. Połączenie gniazda TCP zapewnia liczbie pojedynczej, w określonej kolejności przesyłanie pakietów IP między węzłami. Niezawodny kanał zawiera ten sam typ transferu niezawodne, ale różni się od niezawodności gniazda TCP w następujący sposób:
+Niezawodna sesja zapewnia komunikaty protokołu SOAP, które są dostępne dla pakietów IP przez protokół TCP. Połączenie gniazda TCP udostępnia pojedynczą, w kolejności transfer pakietów IP między węzłami. Niezawodny kanał zapewnia ten sam typ niezawodnego transferu, ale różni się od niezawodności gniazda TCP w następujący sposób:
 
-- Niezawodność wynosi komunikatu protokołu SOAP poziomu, nie dla pakietu arbitralnie wielkości bajtów.
+- Niezawodność jest na poziomie komunikatu protokołu SOAP, a nie w przypadku niezależnego rozmiaru pakietu bajtów.
 
-- Niezawodność, jest transport niezależny od, nie tylko dla transferu za pośrednictwem protokołu TCP.
+- Niezawodność jest niezależne od transportu, a nie tylko za transfer przez TCP.
 
-- Niezawodność nie jest powiązany z sesją danego transportu (na przykład sesji połączenia protokołu TCP zapewnia) i można użyć wielu sesji transportu jednocześnie lub sekwencyjnie w okresie istnienia sesji.
+- Niezawodność nie jest powiązana z konkretną sesją transportową (na przykład jest to sesja, która zapewnia połączenie TCP) i może korzystać z wielu sesji transportu współbieżnie lub sekwencyjnie w okresie istnienia niezawodnej sesji.
 
-- Niezawodna sesja jest między nadawcą i odbiorcą punktów końcowych protokołu SOAP, niezależnie od tego, liczba połączeń wymaganych dla łączności między nimi. Krótko mówiąc niezawodność TCP kończy się, gdy połączenie transportu zostaje zakończona, a niezawodnej sesji zapewnia niezawodność end-to-end.
+- Niezawodna sesja dotyczy punktów końcowych protokołu SOAP nadawcy i odbiornika, niezależnie od liczby połączeń transportowych wymaganych do połączenia między nimi. W skrócie następuje niezawodność protokołu TCP, w której kończy się połączenie transportowe, a Niezawodna sesja zapewnia kompleksową niezawodność.
 
 ## <a name="reliable-sessions-and-bindings"></a>Niezawodne sesje i powiązania
 
-Jak wspomniano wcześniej, niezawodnej sesji jest neutralne transportu. Ponadto można utworzyć niezawodnej sesji za pośrednictwem wielu wzorców wymiany wiadomości, takich jak żądanie odpowiedź lub dupleks. Usługi WCF niezawodnej sesji jest udostępniany jako właściwość zestawu powiązania.
+Jak wspomniano wcześniej, niezawodnej sesji jest transport neutralny. Ponadto można nawiązać niezawodne sesje za pośrednictwem wielu różnych wzorców wymiany komunikatów, takich jak żądanie-odpowiedź lub dupleks. Niezawodna sesja WCF jest uwidaczniana jako właściwość zestawu powiązań.
 
-Użyj niezawodnej sesji dla punktów końcowych używających:
+Używaj niezawodnej sesji dla punktów końcowych, które używają:
 
-- Standardowa powiązania transportu oparty na protokole HTTP:
+- Standardowe powiązania transportu oparte na protokole HTTP:
 
-  - `WsHttpBinding` i udostępnić "żądanie-odpowiedź" lub kontraktów jednokierunkowych.
+  - `WsHttpBinding`i udostępniaj kontrakty żądanie-odpowiedź lub jednokierunkowe.
 
-  - Korzystając z niezawodnej sesji za pośrednictwem "żądanie-odpowiedź" lub kontrakt prostą usługę jednokierunkowe.
+  - W przypadku korzystania z niezawodnej sesji w ramach żądania odpowiedzi lub prostego kontraktu jednokierunkowego.
 
-  - `WsDualHttpBinding` i udostępnić dupleks, "żądanie-odpowiedź" lub kontraktów jednokierunkowych.
+  - `WsDualHttpBinding`i udostępniaj dwustronne, odpowiedzi na żądania lub kontrakty jednokierunkowe.
 
-  - `WsFederationHttpBinding` i udostępnić "żądanie-odpowiedź" lub kontraktów jednokierunkowych.
+  - `WsFederationHttpBinding`i udostępniaj kontrakty żądanie-odpowiedź lub jednokierunkowe.
 
-- Standardowa powiązania transportu oparte na protokole TCP:
+- Standardowe powiązania transportu oparte na protokole TCP:
 
-  - `NetTcpBinding` i udostępnić dupleks, odpowiedź na żądanie lub kontraktów jednokierunkowych.
+  - `NetTcpBinding`Udostępnianie dupleksu, odpowiedź na żądanie lub kontrakty jednokierunkowe.
 
-Użyj niezawodnej sesji na innych powiązań, tworzenie niestandardowego powiązania, taki jak HTTPS (Aby uzyskać więcej informacji na temat problemów, zobacz <a href="#reliable-sessions-and-security">sesje niezawodnej i zabezpieczenia</a>) lub powiązania nazwanego potoku.
+Używaj niezawodnej sesji na innych powiązaniach, tworząc niestandardowe powiązanie, takie jak HTTPS (Aby uzyskać więcej informacji o problemach, zobacz <a href="#reliable-sessions-and-security">niezawodne sesje i zabezpieczenia</a>) lub powiązanie nazwanego potoku.
 
-Użytkownik może utworzyć stos niezawodnej sesji na różnych typów podstawowych kanału i różni się w wynikowej kształtu kanału niezawodnej sesji. Na kliencie i serwerze typ kanału niezawodnej sesji obsługiwane zależy od typu podstawowego kanał używany. W poniższej tabeli wymieniono typy kanałów sesji obsługiwana na komputerze klienckim, w zależności od typu podstawowego kanału.
+Można układać niezawodną sesję na różnych typach kanałów bazowych, a kształt wyników niezawodnych sesji jest różny. Na kliencie i serwerze typ obsługiwanego kanału niezawodnej sesji zależy od typu używanego kanału. Poniższa tabela zawiera listę typów kanałów sesji obsługiwanych na kliencie jako funkcji typu kanału bazowego.
 
-| Obsługiwane typy kanału niezawodnej sesji&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Obsługiwane typy kanałów niezawodnej sesji&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
-| `IOutputSessionChannel`                         | Tak               | Yes                      | Yes              | Yes                     |
-| `IRequestSessionChannel`                        | Yes               | Yes                      | Nie               | Nie                      |
-| `IDuplexSessionChannel`                         | Nie                | Nie                       | Yes              | Tak                     |
+| `IOutputSessionChannel`                         | Tak               | Tak                      | Tak              | Tak                     |
+| `IRequestSessionChannel`                        | Tak               | Tak                      | Nie               | Nie                      |
+| `IDuplexSessionChannel`                         | Nie                | Nie                       | Tak              | Tak                     |
 
-&#8224;Typy obsługiwanym kanałem są dostępne dla ogólnej wartości `TChannel` wartość parametru, która została przekazana do <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> metody.
+&#8224;obsługiwane typy kanałów to wartości dostępne dla wartości parametru generycznego `TChannel` , który jest przesyłany do <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> metody.
 
-W poniższej tabeli wymieniono typy kanałów sesji obsługiwany na serwerze, w zależności od podstawowego typu kanału.
+Poniższa tabela zawiera listę typów kanałów sesji obsługiwanych na serwerze jako funkcji typu kanału bazowego.
 
-| Obsługiwane typy kanału niezawodnej sesji&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Obsługiwane typy kanałów niezawodnej sesji&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
-| `IInputSessionChannel`                          | Yes             | Yes                    | Yes              | Yes                     |
-| `IReplySessionChannel`                          | Yes             | Yes                    | Nie               | Nie                      |
-| `IDuplexSessionChannel`                         | Nie              | Nie                     | Yes              | Yes                     |
+| `IInputSessionChannel`                          | Tak             | Tak                    | Tak              | Tak                     |
+| `IReplySessionChannel`                          | Tak             | Tak                    | Nie               | Nie                      |
+| `IDuplexSessionChannel`                         | Nie              | Nie                     | Tak              | Tak                     |
 
-&#8225;Typy obsługiwanym kanałem są dostępne dla ogólnej wartości `TChannel` wartość parametru, która została przekazana do <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> metody.
+&#8225;obsługiwane typy kanałów to wartości dostępne dla wartości parametru generycznego `TChannel` , który jest przesyłany do <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> metody.
 
 ## <a name="reliable-sessions-and-security"></a>Niezawodne sesje i zabezpieczenia
 
-Zabezpieczanie niezawodnej sesji ważne jest zapewnienie uwierzytelnieniu komunikujące się strony (usługa i klient) i że nie są w nieuprawniony wiadomości wymieniane w sesji. Ponadto jest ważne, aby zapewnić integralność każdego poszczególnych niezawodnej sesji. Sesja niezawodna jest zabezpieczony przez powiązanie go z kontekstu zabezpieczeń, który reprezentowane i zarządzane przez bezpieczny kanał sesji. Kanał zabezpieczeń zapewnia sesji zabezpieczeń. Tokeny zabezpieczające podczas ustanawiania sesji są następnie używane do zabezpieczenia wiadomości w niezawodnej sesji.
+Zabezpieczanie niezawodnej sesji jest ważne, aby upewnić się, że osoby komunikujące się (usługa i klient) są uwierzytelniani oraz że komunikaty wymieniane w sesji nie zostały naruszone. Ponadto ważne jest zapewnienie integralności każdej indywidualnej niezawodnej sesji. Niezawodna sesja jest zabezpieczona przez powiązanie jej z kontekstem zabezpieczeń reprezentowanym i zarządzanym przez kanał sesji zabezpieczeń. Kanał zabezpieczeń zawiera sesję zabezpieczeń. Tokeny zabezpieczające wymieniane podczas ustanawiania sesji są następnie używane do zabezpieczania komunikatów w niezawodnej sesji.
 
-Po niezawodnej sesji za pośrednictwem protokołu TCP-S sesji TCP jest powiązany niezawodnej sesji. W związku z zabezpieczeń transportu gwarantuje, że zabezpieczeń jest także powiązane niezawodnej sesji. W przypadku ponownego ustanowienia połączenia jest wyłączona.
+Gdy Niezawodna sesja odbywa się za pośrednictwem protokołu TCP-S, sesja TCP jest powiązana z niezawodną sesją. W związku z tym bezpieczeństwo transportu gwarantuje, że zabezpieczenia są również powiązane z niezawodną sesją. W takim przypadku ponowne ustanowienie połączenia jest wyłączone.
 
-Jedynym wyjątkiem jest, gdy przy użyciu protokołu HTTPS. Sesji protokołu Secure Sockets Layer (SSL) nie jest powiązany z niezawodnej sesji. Nakłada za zagrożenie, ponieważ nie są chronione sesje, które udostępniono w kontekście zabezpieczeń (sesji SSL), od siebie; może to spowodować lub może nie być prawdziwym zagrożeniem w zależności od aplikacji.
+Jedynym wyjątkiem jest użycie protokołu HTTPS. Sesja SSL (SSL) nie jest powiązana z niezawodną sesją. Stanowi to zagrożenie, ponieważ sesje współużytkujące kontekst zabezpieczeń (sesja SSL) nie są chronione ze sobą; może to być nieprawdziwe zagrożenie w zależności od aplikacji.
 
-## <a name="using-reliable-sessions"></a>Przy użyciu niezawodnej sesji
+## <a name="using-reliable-sessions"></a>Korzystanie z sesji niezawodnych
 
-Aby użyć sesje niezawodnej usługi WCF, należy utworzyć punkt końcowy przy użyciu powiązania, który obsługuje niezawodnej sesji. Użyj jednego z powiązań dostarczanych przez system, udostępnianych przez usługi WCF z niezawodnej sesji włączona lub utworzyć własne niestandardowe powiązanie, które wykonuje to.
+Aby korzystać z niezawodnych sesji WCF, należy utworzyć punkt końcowy z powiązaniem obsługującym niezawodną sesję. Użyj jednego z powiązań dostarczonych przez system, które obsługuje usługa WCF z włączonymi niezawodnymi sesjami lub Utwórz własne niestandardowe powiązania.
 
-Powiązań zdefiniowanych przez system, które obsługują i włączyć domyślne niezawodnej sesji obejmują:
+Zdefiniowane przez system powiązania, które domyślnie obsługują i umożliwiają niezawodne sesje, obejmują:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
-Powiązania dostarczane przez system, które obsługują niezawodnej sesji jako opcja, ale nie włączysz jeden domyślnie obejmują:
+Powiązania dostarczone przez system obsługujące niezawodną sesję jako opcję, ale nie włączaj go domyślnie obejmują:
 
 - <xref:System.ServiceModel.WSHttpBinding>
 
@@ -105,27 +105,27 @@ Powiązania dostarczane przez system, które obsługują niezawodnej sesji jako 
 
 - <xref:System.ServiceModel.NetTcpBinding>
 
-Na przykład sposobu tworzenia niestandardowego powiązania zobacz [jak: Tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Aby zapoznać się z przykładem tworzenia niestandardowego powiązania, zobacz [How to: Create an Custom niezawodnej sesji powiązania z protokołem HTTPS](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Omówienie powiązań WCF, które obsługuje sesji uwierzytelnianych, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).
+Omówienie powiązań programu WCF, które obsługują niezawodne sesje, można znaleźć w temacie [powiązania dostarczone przez system](../system-provided-bindings.md).
 
-## <a name="when-to-use-reliable-sessions"></a>Kiedy należy używać sesji niezawodnych
+## <a name="when-to-use-reliable-sessions"></a>Kiedy używać sesji niezawodnych
 
-Należy zrozumieć, kiedy należy używać niezawodnej sesji w aplikacji. Usługi WCF obsługuje niezawodne sesje między punktami końcowymi, które są aktywne i aktywne, w tym samym czasie. Jeśli aplikacja wymaga jednego z punktów końcowych, które być niedostępna przez dany okres czasu, a następnie użyć kolejki, aby osiągnąć niezawodność.
+Ważne jest, aby zrozumieć, kiedy należy używać niezawodnych sesji w aplikacji. WCF obsługuje niezawodne sesje między punktami końcowymi, które są aktywne i działają w tym samym czasie. Jeśli aplikacja wymaga jednego z punktów końcowych, na czas niedostępności, użyj kolejek do osiągnięcia niezawodności.
 
-Jeśli scenariusz wymaga dwa punkty końcowe połączone za pośrednictwem protokołu TCP, TCP może być wystarczające, aby zapewnić niezawodne komunikatów. Mimo że nie trzeba używać niezawodnej sesji, ponieważ protokół TCP zapewnia, że pakiety pojawić się w kolejności i tylko jeden raz.
+Jeśli scenariusz wymaga dwóch punktów końcowych połączonych za pośrednictwem protokołu TCP, protokół TCP może być wystarczający do zapewnienia niezawodnej wymiany komunikatów. Mimo że nie jest konieczne używanie niezawodnej sesji, ponieważ protokół TCP zapewnia, że pakiety docierają w kolejności i tylko raz.
 
-W przypadku danego scenariusza ma jakiekolwiek z następujących właściwości, następnie należy naszych użytkowników bardzo poważnie skonfigurować przy użyciu niezawodnej sesji.
+Jeśli Twój Scenariusz ma jedną z następujących cech, należy zastanowić się, że należy rozważyć użycie niezawodnej sesji.
 
-- Pośredników SOAP, takich jak routery protokołu SOAP
+- Pośredniki protokołu SOAP, takie jak routery SOAP
 
-- Serwer proxy pośredników lub mostków transportu
+- Pośredniczące proxy lub mosty transportowe
 
-- Sporadycznej łączności
+- Sporadyczna łączność
 
 - Sesje za pośrednictwem protokołu HTTP
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../using-bindings-to-configure-services-and-clients.md)
+- [Sesja niezawodna WS](../samples/ws-reliable-session.md)

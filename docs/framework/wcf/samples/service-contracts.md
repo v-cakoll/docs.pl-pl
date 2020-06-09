@@ -2,31 +2,31 @@
 title: Kontrakty usług
 ms.date: 03/30/2017
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-ms.openlocfilehash: e6e4deaf3c5023f28f76983e6b7dfe2e24182c11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4487ac693b93a27b11fb69b1c663285ebcdc107
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599896"
 ---
 # <a name="service-contracts"></a>Kontrakty usług
-Ta sekcja zawiera przykłady pokazujące, kontraktów usług w Windows Communication Foundation (WCF).  
+Ta sekcja zawiera przykłady, które demonstrują kontrakty usługi w programie Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)  
- Pokazuje, jak definiować ani implementować kontraktu dwukierunkowego.  
+ [Dupleks](duplex.md)  
+ Demonstruje sposób definiowania i implementowania kontraktu dupleksowego.  
   
- [Kontrakt błędu](../../../../docs/framework/wcf/samples/fault-contract.md)  
- Pokazuje, jak komunikować informacje o błędzie z usługi do klienta.  
+ [Kontrakt błędu](fault-contract.md)  
+ Pokazuje, jak komunikować informacje o błędach z usługi z klientem programu.  
   
- [Komunikacja jednokierunkowa](../../../../docs/framework/wcf/samples/one-way.md)  
- Pokazuje kontaktu usługi z operacjami usługi jednokierunkowej.  
+ [Komunikacja jednokierunkowa](one-way.md)  
+ Pokazuje kontakt usługi z jednokierunkowymi operacjami usługi.  
   
- [Sesja](../../../../docs/framework/wcf/samples/session.md)  
+ [Sesja](session.md)  
  Demonstruje sposób implementacji kontraktu wymagającego sesji.  
   
- [Strumień](../../../../docs/framework/wcf/samples/stream.md)  
- Zademonstrowano użycie przesyłania strumieniowego komunikacji tryb transferu.  
+ [Strumień](stream.md)  
+ Demonstruje użycie komunikacji w trybie transferu strumieniowego.  
   
- [XmlSerializer — błędy](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  
- Pokazuje, jak komunikować informacje o błędzie z usługi klienta, za pomocą <xref:System.Xml.Serialization.XmlSerializer>.
+ [Błędy klasy XmlSerializer](xmlserializer-faults.md)  
+ Pokazuje, jak komunikować informacje o błędach z usługi z klientem za pomocą programu <xref:System.Xml.Serialization.XmlSerializer> .

@@ -2,102 +2,102 @@
 title: Diagnozowanie aplikacji transakcyjnych
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751120"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599220"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
-W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy użyciu funkcji diagnostyki i zarządzania usługi Windows Communication Foundation (WCF).  
+W tym temacie opisano, jak używać funkcji zarządzania i diagnostyki Windows Communication Foundation (WCF) do rozwiązywania problemów z aplikacją transakcyjną.  
   
 ## <a name="performance-counters"></a>Liczniki wydajności  
- Usługi WCF zawiera standardowy zestaw liczników wydajności, które umożliwiają mierzenie wydajności aplikacji transakcyjnych. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ Funkcja WCF oferuje standardowy zestaw liczników wydajności służący do mierzenia wydajności transakcyjnej aplikacji. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../diagnostics/performance-counters/index.md).  
   
- Liczniki wydajności są ograniczone do trzech różnych poziomach: Usługa punktu końcowego i operacji, zgodnie z opisem w poniższych tabelach.  
+ Liczniki wydajności są objęte zakresem trzech różnych poziomów: usługi, punktu końcowego i operacji, zgodnie z opisem w poniższych tabelach.  
   
 ### <a name="service-performance-counters"></a>Liczniki wydajności usługi  
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
-|Przepływ transakcji|Liczba transakcji przekazanych do operacji w tej usłudze. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do usługi.|  
-|Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tej usłudze w ciągu każdej sekundy. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do usługi.|  
-|Potwierdzone operacje transakcyjne|Liczba operacji transakcyjnych, wykonywane, którego transakcja została ukończona z wynik w tej usłudze. Praca wykonana w takich operacji jest w pełni zatwierdzić. Zasoby są aktualizowane zgodnie z pracy wykonanej w ramach operacji.|  
-|Zatwierdzone operacje transakcyjne na sekundę|Liczba operacji transakcyjnych, wykonywane, którego transakcja została ukończona z wyniku zatwierdzone w tej usłudze w ciągu każdej sekundy. Praca wykonana w takich operacji jest w pełni zatwierdzić. Zasoby są aktualizowane zgodnie z pracy wykonanej w ramach operacji.|  
-|Przerwane operacje transakcyjne|Liczba operacji transakcyjnych wykonać, którego transakcja została ukończona z wyniku zostało przerwane w tej usłudze. Praca wykonana w takich operacji jest wycofywana. Zasoby są przywracane do poprzedniego stanu.|  
-|Przerwane operacje transakcyjne na sekundę|Liczba operacji transakcyjnych wykonać, którego transakcja została ukończona z wyniku zostało przerwane w tej usłudze w ciągu każdej sekundy. Praca wykonana w takich operacji jest wycofywana. Zasoby są przywracane do poprzedniego stanu.|  
-|Wątpliwe operacje transakcyjne|Liczba operacji transakcyjnych wykonać, których transakcji zostało ukończone z wynikami w stanie wątpliwości, w tej usłudze. Praca wykonana w w stanie wątpliwości jest w stanie nieokreślonym. Zasoby są wstrzymane do czasu wyniku.|  
-|Wątpliwe operacje transakcyjne na sekundę|Liczba operacji transakcyjnych wykonać, których transakcji została ukończona z wynikami w stanie wątpliwości, w tej usłudze w ciągu każdej sekundy. Praca wykonana w w stanie wątpliwości jest w stanie nieokreślonym. Zasoby są wstrzymane do czasu wyniku.|  
+|Przepływ transakcji|Liczba transakcji, które przepływają do operacji w tej usłudze. Ten licznik jest zwiększany za każdym razem, gdy transakcja jest obecna w wiadomości wysyłanej do usługi.|  
+|Przepływ transakcji na sekundę|Liczba transakcji, które przepływają do operacji w tej usłudze w każdej sekundzie. Ten licznik jest zwiększany za każdym razem, gdy transakcja jest obecna w wiadomości wysyłanej do usługi.|  
+|Potwierdzone operacje transakcyjne|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem zakontraktowanym w tej usłudze. Działanie wykonywane w ramach takich operacji zostało w pełni zatwierdzone. Zasoby są aktualizowane zgodnie z czynnościami wykonywanymi w ramach operacji.|  
+|Zatwierdzone operacje transakcyjne na sekundę|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem zakontraktowanym w tej usłudze w każdej sekundzie. Działanie wykonywane w ramach takich operacji zostało w pełni zatwierdzone. Zasoby są aktualizowane zgodnie z czynnościami wykonywanymi w ramach operacji.|  
+|Przerwane operacje transakcyjne|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem przerwania w tej usłudze. Zadania wykonywane w ramach takich operacji są wycofywane. Zasoby są przywracane do poprzedniego stanu.|  
+|Przerwane operacje transakcyjne na sekundę|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem przerwania w tej usłudze w każdej sekundzie. Zadania wykonywane w ramach takich operacji są wycofywane. Zasoby są przywracane do poprzedniego stanu.|  
+|Wątpliwe operacje transakcyjne|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem wątpliwości w tej usłudze. Działanie wykonane z wynikiem wątpliwości jest w stanie nieokreślonym. Zasoby są przechowywane w stanie oczekiwania.|  
+|Wątpliwe operacje transakcyjne na sekundę|Liczba wykonanych operacji transakcyjnych, których transakcja została ukończona z wynikiem wątpliwości w tej usłudze w każdej sekundzie. Działanie wykonane z wynikiem wątpliwości jest w stanie nieokreślonym. Zasoby są przechowywane w stanie oczekiwania.|  
   
 ### <a name="endpoint-performance-counters"></a>Liczniki wydajności w punkcie końcowym  
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
-|Przepływ transakcji|Liczba transakcji przekazanych do operacji w tym punkcie końcowym. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do punktu końcowego.|  
-|Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do punktu końcowego.|  
+|Przepływ transakcji|Liczba transakcji, które przepływają do operacji w tym punkcie końcowym. Ten licznik jest zwiększany w każdym momencie, gdy transakcja jest obecna w komunikacie wysyłanym do punktu końcowego.|  
+|Przepływ transakcji na sekundę|Liczba transakcji, które przepływają do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany w każdym momencie, gdy transakcja jest obecna w komunikacie wysyłanym do punktu końcowego.|  
   
 ### <a name="operation-performance-counters"></a>Liczniki wydajności operacji  
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
-|Przepływ transakcji|Liczba transakcji przekazanych do operacji w tym punkcie końcowym. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do punktu końcowego.|  
-|Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do punktu końcowego.|  
+|Przepływ transakcji|Liczba transakcji, które przepływają do operacji w tym punkcie końcowym. Ten licznik jest zwiększany w każdym momencie, gdy transakcja jest obecna w komunikacie wysyłanym do punktu końcowego.|  
+|Przepływ transakcji na sekundę|Liczba transakcji, które przepływają do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany w każdym momencie, gdy transakcja jest obecna w komunikacie wysyłanym do punktu końcowego.|  
   
 ## <a name="windows-management-instrumentation"></a>Instrumentacja zarządzania Windows  
- Usługa WCF umożliwia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF. Aby uzyskać więcej informacji na temat uzyskiwania dostępu do danych usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Funkcja WCF udostępnia dane inspekcji usługi w czasie wykonywania za pomocą dostawcy usług WCF Instrumentacja zarządzania Windows (WMI). Aby uzyskać więcej informacji na temat uzyskiwania dostępu do danych usługi WMI, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](../diagnostics/wmi/index.md).  
   
- Liczba tylko do odczytu właściwości WMI wskazują ustawień zastosowanych transakcji usługi. W poniższej tabeli wymieniono wszystkie te ustawienia.  
+ Wiele właściwości usługi WMI tylko do odczytu wskazuje zastosowane ustawienia transakcji dla usługi. W poniższej tabeli wymieniono wszystkie te ustawienia.  
   
  W usłudze `ServiceBehaviorAttribute` ma następujące właściwości.  
   
 |Nazwa|Typ|Opis|  
 |----------|----------|-----------------|  
-|ReleaseServiceInstanceOnTransactionComplete|Boolean|Określa, czy obiekt usługi zostanie odtworzony po zakończeniu bieżącej transakcji.|  
-|TransactionAutoCompleteOnSessionClose|Boolean|Określa, czy oczekujące transakcje są wykonywane po zamknięciu bieżącej sesji.|  
-|TransactionIsolationLevel|Ciąg, który zawiera prawidłową wartość <xref:System.Transactions.IsolationLevel> wyliczenia.|Określa poziom izolacji transakcji, który obsługuje tę usługę.|  
-|TransactionTimeout|<xref:System.DateTime>|Określa okres, w którym należy wykonać transakcję.|  
+|Ustawion|Boolean|Określa, czy obiekt usługi jest odtwarzany po zakończeniu bieżącej transakcji.|  
+|TransactionAutoCompleteOnSessionClose|Boolean|Określa, czy oczekujące transakcje są kończone podczas zamykania bieżącej sesji.|  
+|TransactionIsolationLevel|Ciąg, który zawiera prawidłową wartość <xref:System.Transactions.IsolationLevel> wyliczenia.|Określa poziom izolacji transakcji obsługiwanej przez tę usługę.|  
+|TransactionTimeout|<xref:System.DateTime>|Określa okres, w którym transakcja musi zostać zakończona.|  
   
- `ServiceTimeoutsBehavior` Ma następującą właściwość.  
-  
-|Nazwa|Typ|Opis|  
-|----------|----------|-----------------|  
-|TransactionTimeout|<xref:System.DateTime>|Określa okres, w którym należy wykonać transakcję.|  
-  
- W powiązaniu `TransactionFlowBindingElement` ma następujące właściwości.  
+ `ServiceTimeoutsBehavior`Ma następującą właściwość.  
   
 |Nazwa|Typ|Opis|  
 |----------|----------|-----------------|  
-|TransactionProtocol|Ciąg, który zawiera prawidłową wartość <xref:System.ServiceModel.TransactionProtocol> typu.|Określa protokół transakcji do użycia w przepływu transakcji.|  
-|transactionFlow|Boolean|Określa, czy ruch przychodzący transakcji jest włączone.|  
+|TransactionTimeout|<xref:System.DateTime>|Określa okres, w którym transakcja musi zostać zakończona.|  
+  
+ Na oprawie `TransactionFlowBindingElement` ma następujące właściwości.  
+  
+|Nazwa|Typ|Opis|  
+|----------|----------|-----------------|  
+|Element TransactionProtocol|Ciąg, który zawiera prawidłową wartość <xref:System.ServiceModel.TransactionProtocol> typu.|Określa protokół transakcji do użycia w przepływie transakcji.|  
+|TransactionFlow|Boolean|Określa, czy przepływ transakcji przychodzących jest włączony.|  
   
  W przypadku operacji `OperationBehaviorAttribute` ma następujące właściwości:  
   
 |Nazwa|Typ|Opis|  
 |----------|----------|-----------------|  
-|TransactionAutoComplete|Boolean|Określa, czy można zatwierdzić bieżącej transakcji automatycznie, jeśli wystąpi żaden nieobsługiwany wyjątek.|  
-|TransactionScopeRequired|Boolean|Określa, czy operacja wymaga transakcji.|  
+|Wartość|Boolean|Określa, czy bieżąca transakcja ma być automatycznie przekazywana, jeśli nie wystąpią żadne Nieobsłużone wyjątki.|  
+|Ustawione|Boolean|Określa, czy operacja wymaga transakcji.|  
   
  W przypadku operacji `TransactionFlowAttribute` ma następujące właściwości.  
   
 |Nazwa|Typ|Opis|  
 |----------|----------|-----------------|  
-|TransactionFlowOption|Ciąg, który zawiera prawidłową wartość <xref:System.ServiceModel.TransactionFlowOption> wyliczenia.|Określa zakres przepływu transakcji, która jest to konieczne.|  
+|Parametru TransactionFlowOption|Ciąg, który zawiera prawidłową wartość <xref:System.ServiceModel.TransactionFlowOption> wyliczenia.|Określa zakres, do którego jest wymagany przepływ transakcji.|  
   
 ## <a name="tracing"></a>Śledzenie  
- Ślady umożliwiają monitorowanie i analizowanie błędów w aplikacji transakcyjnych. Można włączyć śledzenie z użyciem następujących sposobów:  
+ Ślady umożliwiają monitorowanie i analizowanie błędów w aplikacjach transakcyjnych. Śledzenie można włączyć, korzystając z następujących sposobów:  
   
-- Standardowe śledzenia WCF  
+- Standardowe śledzenie WCF  
   
-     Tego rodzaju śledzenia jest taka sama jak śledzenie dowolnej aplikacji WCF. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Ten typ śledzenia jest taki sam jak śledzenie dowolnej aplikacji WCF. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../diagnostics/tracing/configuring-tracing.md).  
   
 - Śledzenie WS-AtomicTransaction  
   
-     Śledzenie WS-AtomicTransaction można włączyć za pomocą [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Umożliwia również wewnętrznego śledzenia Model usług, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucz rejestru prawidłową wartością <xref:System.Diagnostics.SourceLevels> wyliczenia. Można włączyć rejestrowanie w taki sam sposób jak inne aplikacje WCF komunikatów.  
+     Śledzenie WS-AtomicTransaction można włączyć za pomocą [Narzędzia konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w ramach systemu. Aby włączyć również śledzenie wewnętrznego modelu usług, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucz rejestru na prawidłową wartość <xref:System.Diagnostics.SourceLevels> wyliczenia. Rejestrowanie komunikatów można włączyć w taki sam sposób, jak w przypadku innych aplikacji WCF.  
   
-- `System.Transactions` Śledzenie  
+- `System.Transactions`pochodzenia  
   
-     Podczas korzystania z protokołu OleTransactions, komunikatach protokołów nie może być śledzony. Obsługa śledzenia <xref:System.Transactions> zapewnia infrastrukturę (które wykorzystuje OleTransactions) pozwala użytkownikom na wyświetlanie zdarzeń, które nastąpiły w transakcji. Aby włączyć śledzenie dla <xref:System.Transactions> aplikacji, zawrzyj następujący kod w `App.config` pliku konfiguracji.  
+     W przypadku korzystania z protokołu OleTransactions komunikaty protokołu nie mogą być śledzone. Funkcja śledzenia zapewnia obsługę <xref:System.Transactions> infrastruktury (która używa OleTransactions) umożliwia użytkownikom wyświetlanie zdarzeń, które wystąpiły w transakcjach. Aby włączyć śledzenie dla <xref:System.Transactions> aplikacji, Dołącz następujący kod w `App.config` pliku konfiguracji.  
   
     ```xml  
     <configuration>  
@@ -118,10 +118,10 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
     </configuration>  
     ```  
   
-     Umożliwia także śledzenie programu WCF, jak również korzysta z usługi WCF <xref:System.Transactions> infrastruktury.  
+     Umożliwia to również śledzenie WCF, ponieważ usługa WCF wykorzystuje również <xref:System.Transactions> infrastrukturę.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Administracja i diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)
-- [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Administracja i Diagnostyka](../diagnostics/index.md)
+- [Konfigurowanie śledzenia](../diagnostics/tracing/configuring-tracing.md)
+- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

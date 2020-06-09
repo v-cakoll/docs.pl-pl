@@ -2,34 +2,34 @@
 title: Odnajdywanie (przykłady)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5471db6f4feb61798926ae1466a3bebac7e959
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600584"
 ---
 # <a name="discovery-samples"></a>Odnajdywanie (przykłady)
-Ta sekcja zawiera przykłady związane z funkcji odnajdywania.  
+Ta sekcja zawiera przykłady dotyczące funkcji odnajdywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Anonse](../../../../docs/framework/wcf/samples/announcements-sample.md)  
- Pokazuje, jak Anonse za pomocą funkcji odnajdywania.  
+ [Anonse](announcements-sample.md)  
+ Demonstruje sposób używania anonsów z funkcją odnajdywania.  
   
- [Podstawy](../../../../docs/framework/wcf/samples/basic-sample.md)  
- Pokazuje, jak stał się wykrywalny programowo, a także wyszukiwanie tej usługi przy użyciu usługi <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ [Podstawowe](basic-sample.md)  
+ Pokazuje, jak umożliwić programowe Odnajdowanie usługi, a także wyszukiwanie tej usługi przy użyciu <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  
   
- [Konfiguracja](../../../../docs/framework/wcf/samples/configuration-sample.md)  
- Pokazuje, jak stał się wykrywalny usługi za pomocą pliku konfiguracji, a także jak używać <xref:System.ServiceModel.Discovery.DynamicEndpoint> za pośrednictwem konfiguracji do wyszukiwania dla tej usługi.  
+ [Konfiguracja](configuration-sample.md)  
+ Pokazuje, jak używać pliku konfiguracji w celu odnajdywania usługi, jak również do <xref:System.ServiceModel.Discovery.DynamicEndpoint> wyszukania tej usługi.  
   
- [Odnajdywanie z zakresami](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- Pokazuje sposób użycia zakresów do kategoryzowania punktów końcowych wykrywalne jako dobrze, jak używać <xref:System.ServiceModel.Discovery.DiscoveryClient> z asynchronicznego wyszukiwania dla punktów końcowych.  
+ [Odnajdywanie z zakresami](discovery-with-scopes-sample.md)  
+ Pokazuje, jak używać zakresów do kategoryzacji punktów końcowych wykrywalnych, jak również w <xref:System.ServiceModel.Discovery.DiscoveryClient> celu przeprowadzenia wyszukiwania asynchronicznego dla punktów końcowych.  
   
- [Niestandardowe kryteria znajdowania](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
- Pokazuje, jak utworzyć niestandardowy zakres dopasowanie przy użyciu logiki i jak wdrożyć usługę odnajdywania niestandardowych.  
+ [Niestandardowe kryteria znajdowania](custom-find-criteria.md)  
+ Pokazuje, jak utworzyć niestandardowe dopasowanie zakresu przy użyciu logiki oraz jak wdrożyć niestandardową usługę odnajdywania.  
   
- [Odnajdywanie przepływu pracy — przykład](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
- Pokazuje, jak stał się wykrywalny usługi przepływu pracy i jak tworzyć działania kodu niestandardowego, wyszukująca określonej usługi.  
+ [Odnajdywanie przepływu pracy — przykład](workflow-discovery-sample.md)  
+ Demonstruje sposób odnajdowania usługi przepływu pracy i tworzenia niestandardowego działania kodu, które wyszukuje konkretną usługę.  
   
- [Usługa routera odnajdywania](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
- Demonstruje sposób przekazywania komunikatów odnajdywania do innego punktu końcowego.
+ [Usługa routera odnajdywania](discovery-router-service.md)  
+ Pokazuje, jak przekazywać komunikaty odnajdywania do innego punktu końcowego.

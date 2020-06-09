@@ -2,23 +2,23 @@
 title: System.ServiceModel.Channels.MessageReceived
 ms.date: 03/30/2017
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
-ms.openlocfilehash: fc2de674bf6a112ff6800ea4a1b2d02e7ead2094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0211244909e6302752985f3958c2d07ac30b34f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792434"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602001"
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
   
 ## <a name="description"></a>Opis  
- Odebrano wiadomość w kanale.  
+ Odebrano komunikat w kanale.  
   
- Ta śledzenia jest emitowane po odebraniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie pełne lub informacji. Ślad jest strzałką korelacji wiadomości w widoku wykresu aktywności.  
+ Ślad jest emitowany po odebraniu komunikatu WCF, gdy `System.ServiceModel` Źródło śledzenia jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest niezbędny do wyświetlenia strzałki korelacji komunikatów w widoku wykresu aktywności.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

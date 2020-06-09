@@ -2,23 +2,23 @@
 title: System.ServiceModel.Channels.MessageSent
 ms.date: 03/30/2017
 ms.assetid: 454cd09c-992f-4faf-9751-2de56e6401da
-ms.openlocfilehash: d3208570a5eefbeff33d0fc8779142d62a3f732f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95b41b86710743ef743b6a7e563dc597f738272f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601988"
 ---
 # <a name="systemservicemodelchannelsmessagesent"></a>System.ServiceModel.Channels.MessageSent
 System.ServiceModel.Channels.MessageSent  
   
 ## <a name="description"></a>Opis  
- Wysłano komunikat w kanale.  
+ Wysłano wiadomość kanałem.  
   
- Ślad jest emitowane po wysłaniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie pełne lub informacji. Ślad jest strzałką korelacji wiadomości w widoku wykresu aktywności.  
+ Ślad jest emitowany, gdy jest wysyłany komunikat WCF, jeśli `System.ServiceModel` Źródło śledzenia jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest niezbędny do wyświetlenia strzałki korelacji komunikatów w widoku wykresu aktywności.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

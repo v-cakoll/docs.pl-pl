@@ -2,18 +2,18 @@
 title: Używanie wielu schematów uwierzytelniania z programem WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600221"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Używanie wielu schematów uwierzytelniania z programem WCF
-Usługi WCF umożliwia teraz określenie wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi sieci web hostowanych może dziedziczyć ustawień uwierzytelniania bezpośrednio za pomocą programu IIS. Samodzielnie hostowanej usługi można określić rodzaju uwierzytelniania może służyć schematów. Aby uzyskać więcej informacji na temat ustawiania ustawienia uwierzytelniania w usługach IIS, zobacz [uwierzytelnianie usług IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
+Funkcja WCF umożliwia teraz określenie wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi hostowane w sieci Web mogą dziedziczyć ustawienia uwierzytelniania bezpośrednio z usług IIS. Usługi samoobsługowe mogą określać, które schematy uwierzytelniania mogą być używane. Aby uzyskać więcej informacji na temat ustawiania ustawień uwierzytelniania w usługach IIS, zobacz [uwierzytelnianie usług IIS](https://go.microsoft.com/fwlink/?LinkId=232458) .  
   
-## <a name="iis-hosted-services"></a>IIS-Hosted Services  
- W przypadku usług hostowanych przez usługi IIS należy ustawić schematy uwierzytelniania, które mają być używane w usługach IIS. Następnie w pliku web.config usługi w konfiguracji powiązania Określ typ clientCredential jako "InheritedFromHost" jak pokazano w poniższym fragmencie kodu XML:  
+## <a name="iis-hosted-services"></a>Usługi hostowane przez usługi IIS  
+ W przypadku usług hostowanych przez usługi IIS Ustaw schematy uwierzytelniania, które mają być używane w usługach IIS. Następnie w pliku Web. config usługi w konfiguracji powiązania Określ obiekt clientCredential Type jako "InheritedFromHost", jak pokazano w poniższym fragmencie kodu XML:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ Usługi WCF umożliwia teraz określenie wielu schematów uwierzytelniania w jed
     </bindings>  
 ```  
   
- Można określić tylko mają podzbiór schematów uwierzytelniania do użycia z usługą za pomocą ServiceAuthenticationBehavior lub \<serviceAuthenticationManager > element. Podczas konfigurowania to w kodzie należy użyć ServiceAuthenticationBehavior, jak pokazano w poniższym fragmencie kodu.  
+ Można określić, że tylko podzbiór schematów uwierzytelniania ma być używany z usługą przy użyciu ServiceAuthenticationBehavior lub \<serviceAuthenticationManager> elementu. Podczas konfigurowania tego programu w kodzie Użyj ServiceAuthenticationBehavior, jak pokazano w poniższym fragmencie kodu.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Podczas konfigurowania to w pliku konfiguracji, użyj \<serviceAuthenticationManager > elementu, jak pokazano w poniższym fragmencie kodu XML.  
+ W przypadku konfigurowania tego elementu w pliku konfiguracji, należy użyć \<serviceAuthenticationManager> element, jak pokazano w poniższym fragmencie kodu XML.  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- Pozwoli to zagwarantować, że tylko podzbiór schematy uwierzytelniania, wymienione w tym miejscu będą uznawane za do stosowania w punkcie końcowym usługi, w zależności od tego, co jest wybrane w usługach IIS. Oznacza to, że deweloper można wykluczyć powiedz uwierzytelnianie podstawowe z listy, pomijając go z listy serviceAuthenticationManager, a nawet, jeśli jest włączone w usługach IIS, nie zostanie zastosowana na punkt końcowy usługi  
+ Zapewni to, że tylko podzestaw schematów uwierzytelniania wymienionych w tym miejscu zostanie uwzględniony w punkcie końcowym usługi, w zależności od tego, co jest wybrane w usługach IIS. Oznacza to, że deweloper może wykluczyć uwierzytelnianie podstawowe na liście, pomijając je z listy ServiceAuthenticationManager, a nawet jeśli jest włączona w usługach IIS, nie zostanie zastosowana w punkcie końcowym usługi.  
   
-## <a name="self-hosted-services"></a>Usługi samodzielnie hostowane  
- Samodzielnie hostowanej usługi są konfigurowane nieco inaczej, ponieważ nie istnieje żadne usługi IIS mają dziedziczyć ustawienia z. W tym miejscu możesz użyć \<serviceAuthenticationManager > element lub ServiceAuthenticationBehavior do określania ustawień uwierzytelniania, które będą dziedziczone. W kodzie wygląda następująco:  
+## <a name="self-hosted-services"></a>Usługi samoobsługowe  
+ Usługi samoobsługowe są skonfigurowane nieco inaczej, ponieważ nie ma żadnych usług IIS do dziedziczenia ustawień. W tym miejscu Użyj \<serviceAuthenticationManager> elementu lub ServiceAuthenticationBehavior, aby określić ustawienia uwierzytelniania, które będą dziedziczone. W kodzie wygląda to następująco:  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- W pliku konfiguracyjnym wygląda następująco:  
+ W konfiguracji wygląda to następująco:  
   
 ```xml  
 <behaviors>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- Alternatywnie można określić schematów uwierzytelniania w niestandardowym powiązaniu, ustawiając schematów uwierzytelniania na HTTP transportu elementu powiązania, jak pokazano w poniższym fragmencie kodu konfiguracji.  
+ Alternatywnie możesz określić schematy uwierzytelniania w niestandardowym powiązaniu, ustawiając schematy uwierzytelniania w elemencie powiązania transportu HTTP, jak pokazano w poniższym fragmencie kodu.  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Konfigurowanie powiązań dostarczanych przez system](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Wiązania i zabezpieczenia](bindings-and-security.md)
+- [Punkty końcowe: Adresy, powiązania i kontrakty](endpoints-addresses-bindings-and-contracts.md)
+- [Konfigurowanie powiązań dostarczanych przez system](configuring-system-provided-bindings.md)
+- [Możliwości zabezpieczeń powiązań niestandardowych](security-capabilities-with-custom-bindings.md)
+- [Powiązania](bindings.md)
+- [Powiązania niestandardowe](../extending/custom-bindings.md)

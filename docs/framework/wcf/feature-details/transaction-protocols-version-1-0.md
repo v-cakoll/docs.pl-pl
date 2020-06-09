@@ -2,17 +2,17 @@
 title: Protokoły transakcyjne wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598713"
 ---
 # <a name="transaction-protocols-version-10"></a>Protokoły transakcyjne wersja 1.0
-Windows Communication Foundation (WCF) w wersji 1 implementuje wersję 1,0 transakcji WS-i protokołów koordynacyjnych WS-AT. Aby uzyskać więcej informacji na temat wersji 1,1, zobacz [Protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) w wersji 1 implementuje wersję 1,0 transakcji WS-i protokołów koordynacyjnych WS-AT. Aby uzyskać więcej informacji na temat wersji 1,1, zobacz [Protokoły transakcji](transaction-protocols.md).  
   
-|Specyfikacja/dokument|Link|  
+|Specyfikacja/dokument|Łącze|  
 |-----------------------------|----------|  
 |Usługa WS-koordynacja|<https://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
 |Protokół WS-AtomicTransaction|<https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) w wersji 1 implementuje wersję 1,0 trans
 #### <a name="activation-message-binding-configuration"></a>Konfiguracja powiązania komunikatów aktywacji  
  Komunikaty o aktywacji zwykle nie uczestniczą w współdziałaniu, ponieważ zazwyczaj występują między aplikacją a jej lokalnym menedżerem transakcji.  
   
- B1221: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) dla komunikatów aktywacji. Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08.  
+ B1221: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](messaging-protocols.md)) dla komunikatów aktywacji. Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08.  
   
  Specyfikacja transakcji WS-niepodzielna, sekcja 8, opis dalszych szczegółowych informacji o korelacji i wzorcach wymiany komunikatów.  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation (WCF) w wersji 1 implementuje wersję 1,0 trans
  W `t:IssuedTokens` celu dołączenia do wiadomości wychodzącej należy wygenerować nowy nagłówek `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>Konfiguracja powiązania komunikatu rejestracji  
- B1231: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08.  
+ B1231: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](messaging-protocols.md)). Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08.  
   
  WS-AtomicTransaction, sekcja 8, zawiera szczegółowe informacje o korelacji i opisach wzorców wymiany komunikatów.  
   
- R1232: komunikaty wychodzące `wscoor:Register` muszą używać `IssuedTokenOverTransport` trybu uwierzytelniania opisanego w [protokole zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: komunikaty wychodzące `wscoor:Register` muszą używać `IssuedTokenOverTransport` trybu uwierzytelniania opisanego w [protokole zabezpieczeń](security-protocols.md).  
   
  `wsse:Timestamp`Element musi być podpisany przy użyciu `SecurityContextToken STx` wystawionego elementu. Podpis jest dowodem posiadania tokenu powiązanego z określoną transakcją i jest używany do uwierzytelniania uczestnika rejestracji w transakcji. Wiadomość RegistrationResponse jest wysyłana z powrotem za pośrednictwem protokołu HTTPS.  
   

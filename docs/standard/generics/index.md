@@ -1,5 +1,6 @@
 ---
 title: Typy ogólne w .NET
+description: Dowiedz się więcej o typach ogólnych w programie .NET. Definiuj & używaj typów ogólnych, Poznaj zalety & z wadą, Poznaj bibliotekę klas & obsługę języka i nie tylko.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84275961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599818"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 

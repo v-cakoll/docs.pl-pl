@@ -2,17 +2,17 @@
 title: Przykład autonomicznego kanału diagnostycznego
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: e8edb6c603e21a517244901993226fce3f055bbe
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600922"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład pokazuje, jak utworzyć kanał informacyjny RSS/Atom dla zespalania z Windows Communication Foundation (WCF). Jest to podstawowy program "Hello world", który zawiera podstawowe informacje dotyczące modelu obiektów i sposobu konfigurowania go w usłudze Windows Communication Foundation (WCF).  
   
- Program WCF modeluje źródła danych zespolonych jako operacje usługi, które zwracają <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>specjalne dane typu. Wystąpienia programu <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> mogą serializować źródło danych do formatów RSS 2,0 i Atom 1,0. Następujący przykładowy kod przedstawia użyty kontrakt.  
+ Program WCF modeluje źródła danych zespolonych jako operacje usługi, które zwracają specjalne dane typu <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . Wystąpienia programu <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> mogą serializować źródło danych do formatów RSS 2,0 i Atom 1,0. Następujący przykładowy kod przedstawia użyty kontrakt.  
   
 ```csharp  
 [ServiceContract(Namespace = "")]  
@@ -32,9 +32,9 @@ Ten przykład pokazuje, jak utworzyć kanał informacyjny RSS/Atom dla zespalani
     }  
 ```  
   
- `GetProcesses` Operacja ma adnotację z <xref:System.ServiceModel.Web.WebGetAttribute> atrybutem, który umożliwia kontrolowanie sposobu, w jaki program WCF wysyła żądania HTTP GET do operacji usługi i określa format wysyłanych komunikatów.  
+ `GetProcesses`Operacja ma adnotację z <xref:System.ServiceModel.Web.WebGetAttribute> atrybutem, który umożliwia kontrolowanie sposobu, w jaki program WCF wysyła żądania HTTP GET do operacji usługi i określa format wysyłanych komunikatów.  
   
- Podobnie jak w przypadku dowolnej usługi WCF, zespolone źródła danych mogą być obsługiwane przez dowolną aplikację zarządzaną. Usługi zespolone wymagają określonego powiązania ( <xref:System.ServiceModel.WebHttpBinding>) i określonego zachowania punktu końcowego ( <xref:System.ServiceModel.Description.WebHttpBehavior>) w celu poprawnego działania. Nowa <xref:System.ServiceModel.Web.WebServiceHost> Klasa zapewnia wygodny interfejs API do tworzenia punktów końcowych bez określonej konfiguracji.  
+ Podobnie jak w przypadku dowolnej usługi WCF, zespolone źródła danych mogą być obsługiwane przez dowolną aplikację zarządzaną. Usługi zespolone wymagają określonego powiązania ( <xref:System.ServiceModel.WebHttpBinding> ) i określonego zachowania punktu końcowego ( <xref:System.ServiceModel.Description.WebHttpBehavior> ) w celu poprawnego działania. Nowa <xref:System.ServiceModel.Web.WebServiceHost> Klasa zapewnia wygodny interfejs API do tworzenia punktów końcowych bez określonej konfiguracji.  
   
 ```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -49,9 +49,9 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <% @ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
 ```
   
- Ponieważ ta usługa odbiera żądania przy użyciu standardowego protokołu HTTP GET, do uzyskiwania dostępu do usługi można użyć dowolnego klienta obsługującego technologię RSS lub ATOM. Na przykład dane wyjściowe tej usługi można wyświetlić, przechodząc do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` w przeglądarce obsługującej funkcję RSS.
+ Ponieważ ta usługa odbiera żądania przy użyciu standardowego protokołu HTTP GET, do uzyskiwania dostępu do usługi można użyć dowolnego klienta obsługującego technologię RSS lub ATOM. Na przykład dane wyjściowe tej usługi można wyświetlić, przechodząc do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` w przeglądarce OBSŁUGUJĄCEJ funkcję RSS.
   
- Możesz również użyć [modelu obiektów zespolonych WCF, który jest mapowany na Atom i RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) , aby odczytywać dane zespolone i przetwarzać je za pomocą kodu.  
+ Możesz również użyć [modelu obiektów zespolonych WCF, który jest mapowany na Atom i RSS](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) , aby odczytywać dane zespolone i przetwarzać je za pomocą kodu.  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -82,7 +82,7 @@ foreach (SyndicationItem i in feed.Items)
 
 3. Uruchom aplikację konsolową.
 
-4. Gdy aplikacja konsolowa jest uruchomiona, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` korzystając z przeglądarki obsługującej funkcję RSS.
+4. Gdy aplikacja konsolowa jest uruchomiona, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` korzystając z przeglądarki OBSŁUGUJĄCEJ funkcję RSS.
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).

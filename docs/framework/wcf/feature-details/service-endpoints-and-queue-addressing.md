@@ -2,17 +2,17 @@
 title: Punkty końcowe usługi i adresowanie kolejki
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600390"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i jak punkty końcowe usługi mapują na kolejki. Na poniższej ilustracji przedstawiono wdrożenie klasycznej aplikacji Windows Communication Foundation (WCF) w kolejce.  
   
- ![Diagram aplikacji znajdujących się w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Rozproszona-Queueed-Figure")  
+ ![Diagram aplikacji znajdujących się w kolejce](media/distributed-queue-figure.jpg "Rozproszona-Queueed-Figure")  
   
  Klient, który wysyła komunikat do usługi, kieruje komunikat do kolejki docelowej. Aby usługa mogła odczytywać wiadomości z kolejki, ustawia adres nasłuchu do kolejki docelowej. Adresowanie w programie WCF odbywa się na podstawie Uniform Resource Identifier (URI), gdy nazwy kolejek usługi kolejkowania komunikatów (MSMQ) nie są oparte na identyfikatorze URI. W związku z tym ważne jest, aby zrozumieć, jak rozadresować kolejki utworzone w usłudze MSMQ przy użyciu programu WCF.  
   
@@ -46,7 +46,7 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
  Adres kolejki jest używany jako identyfikator URI nasłuchiwania przez odbiornik do odczytywania komunikatów. Inaczej mówiąc, adres kolejki jest równoważny portowi nasłuchiwania gniazda TCP.  
   
- Punkt końcowy, który odczytuje z kolejki, musi określać adres kolejki przy użyciu tego samego schematu określonego wcześniej podczas otwierania ServiceHost. Aby zapoznać się z przykładami, zobacz [net MSMQ Binding](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
+ Punkt końcowy, który odczytuje z kolejki, musi określać adres kolejki przy użyciu tego samego schematu określonego wcześniej podczas otwierania ServiceHost. Aby zapoznać się z przykładami, zobacz [net MSMQ Binding](../samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Wiele kontraktów w kolejce  
  Komunikaty w kolejce mogą implementować różne kontrakty. W takim przypadku ważne jest, aby jedna z następujących wartości była prawdziwa, aby pomyślnie odczytywać i przetwarzać wszystkie komunikaty:  
@@ -89,7 +89,7 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
  NET. MSMQ://localhost/[Private/] \<*custom-dead-letter-queue-name*> .  
   
- Usługa WCF sprawdza, czy wszystkie odebrane komunikaty zostały rozkierowane do określonej kolejki, na której nasłuchuje. Jeśli kolejka docelowa komunikatu nie jest zgodna z kolejką, w której znajduje się w, usługa nie przetwarza komunikatu. Jest to problem polegający na tym, że usługi nasłuchujące w kolejce utraconych wiadomości muszą być adresami, ponieważ każdy komunikat w kolejce utraconych wiadomości został przewidziany w innym miejscu. Aby odczytać wiadomości z kolejki utraconych wiadomości lub z kolejki trującej, `ServiceBehavior` <xref:System.ServiceModel.AddressFilterMode.Any> należy użyć parametru z parametrem. Aby zapoznać się z przykładem, zobacz [kolejki utraconych wiadomości](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Usługa WCF sprawdza, czy wszystkie odebrane komunikaty zostały rozkierowane do określonej kolejki, na której nasłuchuje. Jeśli kolejka docelowa komunikatu nie jest zgodna z kolejką, w której znajduje się w, usługa nie przetwarza komunikatu. Jest to problem polegający na tym, że usługi nasłuchujące w kolejce utraconych wiadomości muszą być adresami, ponieważ każdy komunikat w kolejce utraconych wiadomości został przewidziany w innym miejscu. Aby odczytać wiadomości z kolejki utraconych wiadomości lub z kolejki trującej, `ServiceBehavior` <xref:System.ServiceModel.AddressFilterMode.Any> należy użyć parametru z parametrem. Aby zapoznać się z przykładem, zobacz [kolejki utraconych wiadomości](../samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding i adresowanie usług  
  Służy `MsmqIntegrationBinding` do komunikacji z tradycyjnymi aplikacjami MSMQ. Aby ułatwić współdziałanie z istniejącą aplikacją MSMQ, WCF obsługuje tylko adresowanie nazw formatu. W ten sposób komunikaty wysyłane przy użyciu tego powiązania muszą być zgodne ze schematem identyfikatora URI:  
@@ -104,6 +104,6 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
  Należy pamiętać, że nie można użyć net. MSMQ://Addressing with `MsmqIntegrationBinding` . Ponieważ `MsmqIntegrationBinding` obsługuje adresowanie nazw formatu usługi MSMQ, można użyć usługi WCF korzystającej z tego powiązania do korzystania z funkcji listy multiemisji i dystrybucji w usłudze MSMQ. Jeden wyjątek jest określany `CustomDeadLetterQueue` podczas korzystania z `MsmqIntegrationBinding` . Musi mieć postać net. MSMQ://, podobnie jak w przypadku jej określenia przy użyciu `NetMsmqBinding` .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Sieć Web hostująca aplikację zakolejkowaną](web-hosting-a-queued-application.md)

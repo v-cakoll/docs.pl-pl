@@ -2,16 +2,16 @@
 title: Aktywowanie elementu NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a562ec51d35af08f49e89b652670e9a57b0f00c2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602469"
 ---
 # <a name="namedpipe-activation"></a>Aktywowanie elementu NamedPipe
 
-W tym przykładzie pokazano, jak hostować usługę, która używa usługi aktywacji procesów systemu Windows (WAS) do aktywowania usługi, która komunikuje się z potokami nazw. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i wymaga uruchomienia systemu Windows Vista.
+W tym przykładzie pokazano, jak hostować usługę, która używa usługi aktywacji procesów systemu Windows (WAS) do aktywowania usługi, która komunikuje się z potokami nazw. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) i wymaga uruchomienia systemu Windows Vista.
 
 > [!NOTE]
 > Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
@@ -21,7 +21,7 @@ W tym przykładzie pokazano, jak hostować usługę, która używa usługi aktyw
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -29,7 +29,7 @@ W tym przykładzie pokazano, jak hostować usługę, która używa usługi aktyw
 
 Przykład składa się z programu konsoli klienta (. exe) i biblioteki usług (. dll) hostowanej w procesie roboczym aktywowanym przez usługi aktywacji procesów systemu Windows (WAS). Aktywność klienta jest widoczna w oknie konsoli.
 
-Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Umowa jest definiowana przez interfejs `ICalculator`, który uwidacznia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie), jak pokazano w poniższym przykładowym kodzie.
+Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie), jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -71,7 +71,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Przykład używa zmodyfikowanego powiązania `netNamedPipeBinding` bez zabezpieczeń. Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania dla usługi jest określony w atrybucie `binding` elementu punktu końcowego, jak pokazano w poniższej konfiguracji przykładowej.
+Przykład używa zmodyfikowanego `netNamedPipeBinding` powiązania bez zabezpieczeń. Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania dla usługi jest określony w atrybucie elementu punktu końcowego `binding` , jak pokazano w poniższej konfiguracji przykładowej.
 
 Jeśli chcesz użyć bezpiecznego powiązania nazwanego potoku, Zmień tryb zabezpieczeń serwera na żądane ustawienie zabezpieczeń i ponownie uruchom program Svcutil. exe na kliencie, aby uzyskać zaktualizowany plik konfiguracji klienta.
 
@@ -161,7 +161,7 @@ Press <ENTER> to terminate client.
 
 1. Upewnij się, że usługi IIS 7,0 są zainstalowane. Do przeprowadzenia aktywacji wymagane są usługi IIS 7,0.
 
-2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
     Ponadto należy zainstalować składniki aktywacji inne niż HTTP programu WCF:
 
@@ -198,9 +198,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > To polecenie jest pojedynczym wierszem tekstu.
 
-        To polecenie umożliwia dostęp do aplikacji/servicemodelsamples przy użyciu obu `http://localhost/servicemodelsamples` i `net.tcp://localhost/servicemodelsamples`.
+        To polecenie umożliwia dostęp do aplikacji/servicemodelsamples przy użyciu obu `http://localhost/servicemodelsamples` i `net.tcp://localhost/servicemodelsamples` .
 
-4. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 5. Usuń powiązanie witryny net. pipe dodane do tego przykładu.
 
@@ -224,6 +224,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > To polecenie musi być wpisane jako pojedynczy wiersz tekstu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przykłady hostingu i trwałości usługi AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -2,24 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 ms.date: 03/30/2017
 ms.assetid: 8193027e-9db2-4af9-a072-27300cd24330
-ms.openlocfilehash: f634816b2459d2e0b6137e2e87fef907824af017
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9d82162313e46626e5e2fa6f4ef99bf0139162
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599662"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
-Usługa protokołu WS-AT otrzymała z koordynatora w odpowiedzi na wiadomość, zarejestruj się błąd.  
+Usługa protokołu WS-AT otrzymała błąd z koordynatora w odpowiedzi na komunikat rejestru.  
   
 ## <a name="description"></a>Opis  
- Śledzone, jeśli lokalny Menedżer transakcji nie można zarejestrować w usłudze jego przełożonego Menedżer transakcji z powodu błędów, są zwracane.  
+ Śledzony, jeśli lokalny element TransactionManager nie może zarejestrować się w jego nadrzędnym, z powodu błędu.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Sprawdź, czy komunikat śledzenia błędu zwrócony.  
+ Sprawdź komunikat śledzenia dla zwróconego błędu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.ConnectionPoolCloseException
 ms.date: 03/30/2017
 ms.assetid: 8358898e-129e-4fac-a6bf-bf3aa4293ae2
-ms.openlocfilehash: 3dd28276cd3a39497c0387f5b9d0adec23d07c37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a312d192546655dc327667c00f4f2bbc0c15fdb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666836"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602053"
 ---
 # <a name="systemservicemodelchannelsconnectionpoolcloseexception"></a>System.ServiceModel.Channels.ConnectionPoolCloseException
-Wystąpił wyjątek podczas zamykania połączenia w tej puli połączeń.  
+Wystąpił wyjątek podczas zamykania połączeń z tej puli połączeń.  
   
 ## <a name="description"></a>Opis  
- Śledzenie poziomu ten błąd wskazuje, wystąpił błąd podczas zamykania pul połączeń używane przez funkcję buforowanie połączenia z programem Windows Communication Foundation (WCF) firmy. Jedną z możliwych przyczyn tego jest powiodło się zamknięcie połączenia z puli lub zbiór puli połączeń w ramach CloseTimeout. Gdy ten wyjątek jest zgłaszany, wszystkie pozostałe zamknięto połączenia w tej puli zostaną przerwane; Zamknięto połączenia w innych pulach są porzucona.  
+ Ten ślad poziomu błędu wskazuje, że wystąpił błąd podczas zamykania pul połączeń używanych przez funkcję puli połączeń Windows Communication Foundation (WCF). Jedną z możliwych przyczyn jest to nieudane zamknięcie połączenia w puli lub zestaw połączeń w puli w ramach CloseTimeout. Gdy ten wyjątek jest zgłaszany, wszystkie pozostałe niezamknięte połączenia w tej puli są przerywane; niezamknięte połączenia w innych pulach są porzucane.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

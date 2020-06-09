@@ -7,97 +7,97 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86fa38b281d8944797fa858f8c67f0b60c733be8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586673"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595547"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Typy wyliczeniowe w kontraktach danych
-Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedstawiono kilka przykładów, które opisują modelu programowania.  
+Wyliczenia mogą być wyrażone w modelu kontraktu danych. Ten temat zawiera kilka przykładów objaśniających model programowania.  
   
-## <a name="enumeration-basics"></a>Podstawowe informacje dotyczące wyliczenia  
- Jeden ze sposobów użycia Typy wyliczeniowe w modelu kontraktu danych stosuje się <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu. Następnie należy zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu do każdego elementu członkowskiego, które muszą być zawarte w umowie dotyczącej danych.  
+## <a name="enumeration-basics"></a>Podstawowe informacje dotyczące wyliczania  
+ Jednym ze sposobów używania typów wyliczeniowych w modelu kontraktu danych jest zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do typu. Następnie należy zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybut do każdego elementu członkowskiego, który musi być uwzględniony w umowie dotyczącej danych.  
   
- Poniższy przykład pokazuje dwóch klas. Pierwszy używa wyliczenia, a druga definiuje wyliczenia.  
+ Poniższy przykład przedstawia dwie klasy. Pierwszy używa wyliczenia, a drugi definiuje wyliczenie.  
   
  [!code-csharp[c_DataContractEnumerations#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#1)]
  [!code-vb[c_DataContractEnumerations#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#1)]  
   
- Wystąpienie `Car` klasy, które mogą być wysyłane lub odbierane tylko wtedy, gdy `condition` pole jest ustawione na jedną z wartości `New`, `Used`, lub `Rental`. Jeśli `condition` jest `Broken` lub `Stolen`, <xref:System.Runtime.Serialization.SerializationException> zgłaszany.  
+ Wystąpienie `Car` klasy może być wysyłane lub odbierane tylko wtedy, gdy `condition` pole jest ustawione na jedną z wartości `New` , `Used` lub `Rental` . Jeśli `condition` jest `Broken` generowane lub `Stolen` , <xref:System.Runtime.Serialization.SerializationException> jest generowany.  
   
- Możesz użyć <xref:System.Runtime.Serialization.DataContractAttribute> właściwości (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) dla kontraktów danych wyliczenia.  
+ Można użyć <xref:System.Runtime.Serialization.DataContractAttribute> właściwości ( <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> ) jako zwykłych dla kontraktów danych wyliczenia.  
   
-### <a name="enumeration-member-values"></a>Wartości elementów członkowskich wyliczenia  
- Ogólnie kontraktu danych zawiera nazwy elementów członkowskich wyliczenia, nie wartości liczbowe. Jednak korzystając z modelu kontraktu danych, jeśli po stronie odbierającej jest klienta WCF, wyeksportowanego schematu zachowuje wartości liczbowe. Należy pamiętać, że nie jest wymagane przy użyciu [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+### <a name="enumeration-member-values"></a>Wartości elementu członkowskiego wyliczenia  
+ Ogólnie rzecz biorąc kontrakt dotyczący danych zawiera nazwy elementów członkowskich wyliczenia, a nie wartości numeryczne. Jednak w przypadku korzystania z modelu kontraktu danych, jeśli strona otrzymująca jest klientem WCF, wyeksportowany schemat zachowuje wartości liczbowe. Należy zauważyć, że nie jest to przypadek w przypadku używania [klasy XmlSerializer](using-the-xmlserializer-class.md).  
   
- W poprzednim przykładzie Jeśli `condition` ustawiono `Used` i danych jest serializowany do pliku XML, wynikowy kod XML jest `<condition>Used</condition>` i nie `<condition>1</condition>`. W związku z tym, następujące kontraktu danych odpowiada kontrakt danych `CarConditionEnum`.  
+ W poprzednim przykładzie, jeśli `condition` jest ustawiona na, `Used` a dane są serializowane do kodu XML, otrzymany kod XML to, `<condition>Used</condition>` a nie `<condition>1</condition>` . W związku z tym następująca umowa dotycząca danych jest równoznaczna z umową danych `CarConditionEnum` .  
   
  [!code-csharp[c_DataContractEnumerations#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#2)]
  [!code-vb[c_DataContractEnumerations#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#2)]  
   
- Na przykład, można użyć `CarConditionEnum` po stronie wysyłania i `CarConditionWithNumbers` po stronie odbierającej. Chociaż po stronie wysyłającej korzysta z wartości "1" dla `Used` i używa po stronie odbierania, wartość "20" reprezentację XML jest `<condition>Used</condition>` dla obu stron.  
+ Na przykład można użyć po `CarConditionEnum` stronie wysyłającej i po `CarConditionWithNumbers` stronie odbiorczej. Mimo że po stronie wysyłającej jest stosowana wartość "1" `Used` , a po stronie otrzymującej jest stosowana wartość "20", Reprezentacja XML jest `<condition>Used</condition>` dla obu stron.  
   
- Do uwzględnienia w kontraktu danych, należy najpierw zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu. W .NET Framework zawsze można zastosować specjalna wartość 0 (zero) do wyliczenia, która jest również wartością domyślną dla dowolnego wyliczenia. Jednak nawet ten specjalny odcinek serii nie można serializować wartość zero, chyba że jest on oznaczony wartością <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
+ Aby uwzględnić je w kontrakcie danych, należy zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybut. W .NET Framework można zawsze zastosować specjalną wartość 0 (zero) do wyliczenia, która jest również wartością domyślną dla dowolnego wyliczenia. Jednak nawet tej specjalnej wartości zerowej nie można serializować, chyba że jest oznaczona przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
   
- Istnieją dwa wyjątki od tej reguły:  
+ Istnieją dwa wyjątki:  
   
-- Flaga wyliczenia (zostało to omówione w dalszej części tego tematu).  
+- Wyliczenia flag (omówione w dalszej części tego tematu).  
   
-- Elementy członkowskie danych wyliczenia z <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwością `false` (w którym to przypadku wyliczenie o wartości zero jest pominięty z serializowanych danych).  
+- Elementy członkowskie danych wyliczenia z <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwością ustawioną na `false` (w takim przypadku Wyliczenie o wartości zero jest pomijane w przypadku serializowanych danych).  
   
-### <a name="customizing-enumeration-member-values"></a>Dostosowywanie wartości elementu członkowskiego wyliczenia  
- Można dostosować wartość elementu członkowskiego wyliczenia, która jest częścią kontraktu danych za pomocą <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> właściwość <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
+### <a name="customizing-enumeration-member-values"></a>Dostosowywanie wartości elementów członkowskich wyliczenia  
+ Można dostosować wartość elementu członkowskiego wyliczenia, który stanowi część kontraktu danych przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> właściwości <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
   
- Na przykład, poniższy kontraktu danych również jest odpowiednikiem kontrakt danych `CarConditionEnum`.  
+ Na przykład następująca umowa dotycząca danych jest również równoważna z kontraktem danych `CarConditionEnum` .  
   
  [!code-csharp[c_DataContractEnumerations#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#3)]
  [!code-vb[c_DataContractEnumerations#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#3)]  
   
- Gdy serializowany wartość `PreviouslyOwned` jej reprezentacji XML `<condition>Used</condition>`.  
+ Podczas serializacji wartość `PreviouslyOwned` ma reprezentację XML `<condition>Used</condition>` .  
   
 ## <a name="simple-enumerations"></a>Proste wyliczenia  
- Typy wyliczeniowe, do której może serializować <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu nie zostały zastosowane. Wyliczenie, takie typy są traktowane jako dokładnie tak jak opisano wcześniej, chyba że każdy element członkowski (które nie mają <xref:System.NonSerializedAttribute> zastosowany) jest traktowana tak, jakby <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowano atrybut. Na przykład, poniższy wyliczenie niejawnie określono kontraktu danych odpowiednikiem poprzedniego `CarConditionEnum` przykład.  
+ Można również serializować typy wyliczeniowe, do których <xref:System.Runtime.Serialization.DataContractAttribute> atrybut nie został zastosowany. Takie typy wyliczeniowe są traktowane dokładnie zgodnie z wcześniejszym opisem, z tą różnicą, że każdy element członkowski (który nie ma <xref:System.NonSerializedAttribute> zastosowania atrybutu) jest traktowany jak gdyby <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybut został zastosowany. Na przykład następujące Wyliczenie niejawnie ma umowę danych odpowiadającą poprzedniemu `CarConditionEnum` przykładowi.  
   
  [!code-csharp[c_DataContractEnumerations#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#6)]
  [!code-vb[c_DataContractEnumerations#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#6)]  
   
- Można użyć prostego wyliczenia, kiedy nie trzeba dostosować wyliczenia samej nazwie kontraktu danych i przestrzeni nazw i wartości elementów członkowskich wyliczenia.  
+ Można użyć prostych wyliczeń, gdy nie trzeba dostosowywać nazwy i przestrzeni nazw kontraktu danych wyliczenia oraz wartości elementów członkowskich wyliczenia.  
   
-#### <a name="notes-on-simple-enumerations"></a>Uwagi dotyczące prostego wyliczenia  
- Stosowanie <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybut do prostych wyliczenia nie ma znaczenia.  
+#### <a name="notes-on-simple-enumerations"></a>Uwagi dotyczące prostych wyliczeń  
+ Zastosowanie <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu do prostych wyliczeń nie ma żadnego wpływu.  
   
- Nie ma znaczenia czy <xref:System.SerializableAttribute> atrybut jest stosowany do wyliczenia.  
+ Nie ma żadnej różnicy niezależnie od tego, czy <xref:System.SerializableAttribute> atrybut jest stosowany do wyliczenia.  
   
- Fakt, <xref:System.Runtime.Serialization.DataContractSerializer> klasy uwzględniane <xref:System.NonSerializedAttribute> zastosowany do elementów członkowskich wyliczenia różni się od zachowania <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Oba te serializatory Ignoruj <xref:System.NonSerializedAttribute> atrybutu.  
+ Fakt, że <xref:System.Runtime.Serialization.DataContractSerializer> Klasa uznaje <xref:System.NonSerializedAttribute> atrybut zastosowany do elementów członkowskich wyliczenia, różni się od zachowania <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Oba te serializatory ignorują <xref:System.NonSerializedAttribute> atrybut.  
   
-## <a name="flag-enumerations"></a>Flagi wyliczeń  
- Można zastosować <xref:System.FlagsAttribute> atrybutu do wyliczenia. W takim przypadku listę zero lub więcej wartości wyliczenia mogą być wysyłane lub odbierane jednocześnie.  
+## <a name="flag-enumerations"></a>Wyliczenia flag  
+ Można zastosować <xref:System.FlagsAttribute> atrybut do wyliczenia. W takim przypadku można jednocześnie wysłać lub odebrać listę wartości wyliczenia zero lub więcej.  
   
- Aby to zrobić, należy zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do wyliczenia flag, a następnie Oznacz wszystkie elementy członkowskie z potęgi liczb z <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu. Należy pamiętać, że można używać wyliczenia flag, postęp musi być nieprzerwaną sekwencji potęgi 2 (na przykład 1, 2, 4, 8, 16, 32, 64).  
+ W tym celu należy zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybut do wyliczenia flag, a następnie oznaczyć wszystkie elementy członkowskie, które mają uprawnienia dwóch przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu. Należy pamiętać, że aby użyć wyliczenia flag, postęp musi być nieprzerwaną sekwencją uprawnień 2 (na przykład 1, 2, 4, 8, 16, 32, 64).  
   
- Poniższe kroki dotyczą wysyłania wartość wyliczenia flag:  
+ Poniższe kroki dotyczą wysyłania wartości wyliczenia flagi:  
   
-1. Próba odnalezienia elementu członkowskiego wyliczenia (przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) która jest mapowana na wartość liczbową. Jeśli znaleziono, wysłać listę, która zawiera tylko ten element członkowski.  
+1. Próba znalezienia elementu członkowskiego wyliczenia (z <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowanym atrybutem), który jest mapowany na wartość liczbową. Jeśli zostanie znaleziona, Wyślij listę zawierającą tylko ten element członkowski.  
   
-2. Próbują przerwać wartość liczbowa do sumy w taki sposób, że istnieją elementy członkowskie wyliczenia (każdy z <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) mapowania każda część sumy. Wysyłanie listy wszystkich tych elementów członkowskich. Należy pamiętać, że *zachłanne algorytm* jest używana do znajdowania to suma, i w związku z tym nie ma żadnej gwarancji, który takiej sumy zostanie znaleziony, nawet jeśli jest obecny. Aby uniknąć tego problemu, upewnij się, czy uprawnień z dwóch wartości liczbowych elementów członkowskich wyliczenia.  
+2. Podjęto próbę przerwania wartości liczbowej w sumie, w taki sposób, że istnieją elementy członkowskie wyliczenia (z których każdy ma <xref:System.Runtime.Serialization.EnumMemberAttribute> przypisany atrybut), które są mapowane na każdą część sum. Wyślij listę wszystkich tych członków. Należy zauważyć, że *algorytm zachłanne* jest używany do znajdowania takich sum i dlatego nie ma gwarancji, że taka suma jest znaleziona, nawet jeśli jest obecna. Aby uniknąć tego problemu, upewnij się, że wartości liczbowe elementów członkowskich wyliczenia to uprawnienia dwóch.  
   
-3. Jeśli dwa poprzednie kroki zakończyć się niepowodzeniem, a wartość liczbowa jest różna od zera, throw <xref:System.Runtime.Serialization.SerializationException>. Jeśli wartość liczbowa jest wartość zero, należy wysłać pustej listy.  
+3. Jeśli powyższe dwa kroki zakończą się niepowodzeniem, a wartość liczbowa jest różna od zera, throw a <xref:System.Runtime.Serialization.SerializationException> . Jeśli wartość liczbowa jest równa zero, Wyślij pustą listę.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie wyliczenie może służyć w ramach operacji flagi.  
+ W operacji flagi można użyć następującego przykładu wyliczenia.  
   
  [!code-csharp[c_DataContractEnumerations#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#4)]
  [!code-vb[c_DataContractEnumerations#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#4)]  
   
- Następujące przykładowe wartości są serializowane, jak wskazano.  
+ Następujące przykładowe wartości są serializowane zgodnie z podanym opisem.  
   
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Używanie kontraktów danych](using-data-contracts.md)
+- [Określanie transferu danych w kontraktach usług](specifying-data-transfer-in-service-contracts.md)

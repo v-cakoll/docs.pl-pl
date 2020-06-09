@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 7e62c75fd393c4009c987830cca41e512cdb6250
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db8d43edc8b7cb0066fd3afcb75a1852603e86c4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594429"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)
 
@@ -82,7 +82,7 @@ Użycie komentarzy w dokumencie XML wymaga ograniczników wskazujących kompilat
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Komentarze dokumentacji XML](./index.md)

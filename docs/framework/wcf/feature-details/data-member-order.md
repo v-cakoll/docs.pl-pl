@@ -7,34 +7,34 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593467"
 ---
 # <a name="data-member-order"></a>Kolejność elementów członkowskich danych
-W niektórych aplikacjach warto znać kolejność wysyłania danych z różnych elementów członkowskich danych lub oczekuje się ich otrzymania (takich jak kolejność, w jakiej dane są wyświetlane w seryjnym kodzie XML). Czasami może być konieczna zmiana tego zamówienia. W tym temacie opisano reguły zamawiania.  
+W niektórych aplikacjach warto znać kolejność, w jakiej dane z różnych składowych danych są wysyłane lub oczekuje się ich odbioru (na przykład kolejności, w której dane są wyświetlane w serializowanym kodzie XML). Czasami może być konieczne zmiana tej kolejności. W tym temacie objaśniono reguły określania kolejności.  
   
-## <a name="basic-rules"></a>Podstawowe zasady  
- Podstawowe zasady zamawiania danych obejmują:  
+## <a name="basic-rules"></a>Podstawowe reguły  
+ Podstawowe reguły określania kolejności danych obejmują:  
   
-- Jeśli typ kontraktu danych jest częścią hierarchii dziedziczenia, elementy członkowskie danych jego typów podstawowych są zawsze na pierwszym miejscu w kolejności.  
+- Jeśli typ kontraktu danych jest częścią hierarchii dziedziczenia, składowe danych jego typów podstawowych są zawsze najpierw w kolejności.  
   
-- Następna w kolejności są elementy członkowskie danych bieżącego typu, które nie mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwości zestawu <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów w kolejności alfabetycznej.  
+- Dalej w kolejności są elementami członkowskimi danych bieżącego typu, które nie mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwości <xref:System.Runtime.Serialization.DataMemberAttribute> ustawionej w kolejności alfabetycznej.  
   
-- Następnie są wszystkie elementy <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> członkowskie danych, które mają właściwość zestawu <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów. Są one uporządkowane według `Order` wartości właściwości, a następnie alfabetycznie, jeśli `Order` istnieje więcej niż jeden element członkowski określonej wartości. Wartości zamówienia mogą zostać pominięte.  
+- Następnie są dowolnymi elementami członkowskimi danych, które mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> Właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> ustawioną dla atrybutu. Są one uporządkowane według wartości `Order` pierwszej właściwości, a następnie alfabetycznie, jeśli istnieje więcej niż jeden element członkowski określonej `Order` wartości. Można pominąć wartości kolejności.  
   
- Kolejność alfabetyczna jest ustanawiana przez wywołanie <xref:System.String.CompareOrdinal%2A> metody.  
+ Kolejność alfabetyczna jest ustalana przez wywołanie <xref:System.String.CompareOrdinal%2A> metody.  
   
 ## <a name="examples"></a>Przykłady  
- Należy wziąć pod uwagę następujący kod.  
+ Rozważmy następujący kod.  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
  [!code-vb[C_DataContractNames#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#4)]  
   
- Wyprodukowany kod XML jest podobny do następującego.  
+ Utworzony kod XML jest podobny do poniższego.  
   
 ```xml  
 <DerivedType>  
@@ -65,5 +65,5 @@ W niektórych aplikacjach warto znać kolejność wysyłania danych z różnych 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Równoważność kontraktów danych](data-contract-equivalence.md)
+- [Używanie kontraktów danych](using-data-contracts.md)

@@ -2,43 +2,43 @@
 title: Śledzenie
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 3520d2aca07f988c45d65d5d8113d05292a37638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578984"
 ---
 # <a name="tracing"></a>Śledzenie
-Windows Communication Foundation (WCF) udostępnia instrumentacji aplikacji i danych diagnostycznych dla błędów monitorowania i analizy. Aby dowiedzieć się, jak aplikacja zachowuje się lub dlaczego błędów, można użyć śledzenia zamiast debugera. Między składnikami w celu udostępnienia środowiska end-to-end, można skorelować błędów i przetwarzania.  
+Windows Communication Foundation (WCF) udostępnia instrumentację aplikacji i dane diagnostyczne na potrzeby monitorowania i analizy błędów. Możesz użyć śledzenia zamiast debugera, aby zrozumieć, jak działa aplikacja, lub przyczynę błędu. Możesz również skorelować błędy i przetwarzanie między składnikami, aby zapewnić kompleksowe środowisko pracy.  
   
- Usługi WCF wyświetla następujące dane śledzenia diagnostycznego:  
+ Usługa WCF wyprowadza następujące dane do śledzenia diagnostycznego:  
   
-- Śledzenie procesu punktów kontrolnych, dotyczące wszystkich składników aplikacji, takich jak wywołania operacji kodu: wyjątki, ostrzeżenia i inne zdarzenia przetwarzania."  
+- Ślady dla punktów kontrolnych procesu we wszystkich składnikach aplikacji, takich jak wywołania operacji, wyjątki kodu, ostrzeżenia i inne istotne zdarzenia przetwarzania ".  
   
-- Zdarzenia błędu Windows działa funkcja śledzenia.  
+- Zdarzenia błędów systemu Windows, gdy funkcja śledzenia działa nieprawidłowo.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Konfigurowanie śledzenia](configuring-tracing.md)  
   
- W tym temacie opisano, jak skonfigurować śledzenie, na różnych poziomach w zależności od określonych wymagań.  
+ W tym temacie opisano, jak można skonfigurować śledzenie na różnych poziomach zgodnie z konkretną potrzebami.  
   
- [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Kompleksowe śledzenie](end-to-end-tracing.md)  
   
- W tej sekcji opisano, jak można użyć śledzenie działań i Propagacja dla korelacji end-to-end, ułatwiające debugowanie.  
+ W tej sekcji opisano, jak można użyć funkcji Śledzenie aktywności i Propagacja na potrzeby kompleksowej korelacji, aby pomóc w debugowaniu.  
   
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)  
   
- W tej sekcji opisano, jak można użyć z funkcji śledzenia podczas debugowania aplikacji.  
+ W tej sekcji opisano, jak można użyć śledzenia do debugowania aplikacji.  
   
- [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](security-concerns-and-useful-tips-for-tracing.md)  
   
- W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym, a także przydatne porady, korzystając z hostem sieci Web.  
+ W tym temacie opisano, jak można chronić poufne informacje przed ujawnieniem, a także przydatne porady dotyczące korzystania z programu WebHost.  
   
- [Informacje o śladach](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [Informacje o śladach](traces-reference.md)  
   
- Ten temat zawiera listę wszystkich danych śledzenia generowane przez architekturę WCF.  
+ W tym temacie wymieniono wszystkie ślady wygenerowane przez program WCF.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

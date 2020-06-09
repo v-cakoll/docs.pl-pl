@@ -2,12 +2,12 @@
 title: Ujawnianie informacji
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596867"
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 
@@ -19,7 +19,7 @@ Jeśli używasz zabezpieczeń na poziomie komunikatów przez warstwę transportu
 
 ## <a name="policy-information"></a>Informacje o zasadach
 
-Ochrona zasad jest ważna, szczególnie w scenariuszach federacyjnych, w których poufne wymagania dotyczące tokenu wystawione lub informacje o wystawcy tokenu są ujawniane w zasadach. W takich przypadkach zaleca się zabezpieczenie punktu końcowego zasad usługi federacyjnej, aby uniemożliwić osobom atakującym uzyskanie informacji o usłudze, takich jak typ oświadczeń do umieszczenia w wystawionym tokenie, lub przekierowanie klientów do wystawców złośliwych tokenów. Na przykład osoba atakująca może odnaleźć pary nazwa użytkownika/hasło przez ponowne skonfigurowanie federacyjnego łańcucha zaufania do zakończenia w wystawce, która wykonała atak typu man-in-the-middle. Zaleca się również, aby klienci federacyjną, którzy uzyskują swoje powiązania za pomocą pobierania zasad, weryfikują, że ufają wystawcom w uzyskanym federacyjnym łańcuchu zaufania. Aby uzyskać więcej informacji na temat scenariuszy federacyjnych, zobacz [Federacja](../../../../docs/framework/wcf/feature-details/federation.md).
+Ochrona zasad jest ważna, szczególnie w scenariuszach federacyjnych, w których poufne wymagania dotyczące tokenu wystawione lub informacje o wystawcy tokenu są ujawniane w zasadach. W takich przypadkach zaleca się zabezpieczenie punktu końcowego zasad usługi federacyjnej, aby uniemożliwić osobom atakującym uzyskanie informacji o usłudze, takich jak typ oświadczeń do umieszczenia w wystawionym tokenie, lub przekierowanie klientów do wystawców złośliwych tokenów. Na przykład osoba atakująca może odnaleźć pary nazwa użytkownika/hasło przez ponowne skonfigurowanie federacyjnego łańcucha zaufania do zakończenia w wystawce, która wykonała atak typu man-in-the-middle. Zaleca się również, aby klienci federacyjną, którzy uzyskują swoje powiązania za pomocą pobierania zasad, weryfikują, że ufają wystawcom w uzyskanym federacyjnym łańcuchu zaufania. Aby uzyskać więcej informacji na temat scenariuszy federacyjnych, zobacz [Federacja](federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Zrzuty pamięci mogą ujawniać informacje dotyczące roszczeń
 
@@ -31,7 +31,7 @@ Adres punktu końcowego zawiera informacje konieczne do komunikacji z punktem ko
 
 ## <a name="certificates-transferred-unencrypted"></a>Certyfikaty przeniesione niezaszyfrowane
 
-W przypadku uwierzytelniania klienta przy użyciu certyfikatu X. 509 certyfikat jest przesyłany w postaci jasnej w nagłówku protokołu SOAP. Należy pamiętać o tym jako potencjalne ujawnienie danych osobowych. Nie jest to problem z trybem `TransportWithMessageCredential`, w którym cała wiadomość jest zaszyfrowana przy użyciu zabezpieczeń na poziomie transportu.
+W przypadku uwierzytelniania klienta przy użyciu certyfikatu X. 509 certyfikat jest przesyłany w postaci jasnej w nagłówku protokołu SOAP. Należy pamiętać o tym jako potencjalne ujawnienie danych osobowych. Nie jest to problem z `TransportWithMessageCredential` trybem, gdzie cała wiadomość jest zaszyfrowana przy użyciu zabezpieczeń na poziomie transportu.
 
 ## <a name="service-references"></a>Odwołania do usług
 
@@ -43,19 +43,19 @@ Odwołanie do usługi jest odwołaniem do innej usługi. Na przykład usługa mo
 
 - Niektóre aplikacje mogą przedstawić środowisko użytkownika, które umożliwia interaktywne tworzenie zaufania na podstawie danych w odwołaniu do usługi i danych zaufania sprawdzonych dla hosta zdalnego. Środowisko WCF oferuje punkty rozszerzalności dla takich funkcji, ale użytkownik musi je wdrożyć.
 
-## <a name="ntlm"></a>Protokół NTLM
+## <a name="ntlm"></a>NTLM
 
-Domyślnie w środowisku domeny systemu Windows uwierzytelnianie systemu Windows korzysta z protokołu Kerberos do uwierzytelniania i autoryzowania użytkowników. Jeśli z jakiegoś powodu nie można użyć protokołu Kerberos, NT LAN Manager (NTLM) jest używany jako rezerwowy. To zachowanie można wyłączyć, ustawiając właściwość <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> na `false`. Problemy, które należy wziąć pod uwagę podczas zezwalania na uwierzytelnianie NTLM:
+Domyślnie w środowisku domeny systemu Windows uwierzytelnianie systemu Windows korzysta z protokołu Kerberos do uwierzytelniania i autoryzowania użytkowników. Jeśli z jakiegoś powodu nie można użyć protokołu Kerberos, NT LAN Manager (NTLM) jest używany jako rezerwowy. To zachowanie można wyłączyć, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Właściwość na `false` . Problemy, które należy wziąć pod uwagę podczas zezwalania na uwierzytelnianie NTLM:
 
-- Protokół NTLM ujawnia nazwę użytkownika klienta. Jeśli nazwa użytkownika musi być zachowana poufne, ustaw właściwość `AllowNTLM` powiązania na `false`.
+- Protokół NTLM ujawnia nazwę użytkownika klienta. Jeśli nazwa użytkownika musi być zachowana poufne, ustaw `AllowNTLM` właściwość powiązania na `false` .
 
 - Uwierzytelnianie NTLM nie zapewnia uwierzytelniania serwera. W związku z tym klient nie może upewnić się, że komunikuje się z odpowiednią usługą w przypadku używania protokołu NTLM jako protokół uwierzytelniania.
 
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Określanie poświadczeń klienta lub nieprawidłowa tożsamość wymusza użycie NTLM
 
-Podczas tworzenia klienta, Określanie poświadczeń klienta bez nazwy domeny lub określenie nieprawidłowej tożsamości serwera powoduje, że zamiast protokołu Kerberos zostanie użyte uwierzytelnianie NTLM (Jeśli właściwość `AllowNtlm` jest ustawiona na `true`). Ponieważ protokół NTLM nie umożliwia uwierzytelniania serwera, może być możliwe ujawnienie informacji.
+W przypadku tworzenia klienta, określania poświadczeń klienta bez nazwy domeny lub określania nieprawidłowej tożsamości serwera, zamiast protokołu Kerberos należy użyć uwierzytelniania NTLM (Jeśli `AllowNtlm` Właściwość jest ustawiona na `true` ). Ponieważ protokół NTLM nie umożliwia uwierzytelniania serwera, może być możliwe ujawnienie informacji.
 
-Można na przykład określić poświadczenia klienta systemu Windows bez nazwy domeny, jak pokazano w poniższym kodzie wizualnym C# .
+Można na przykład określić poświadczenia klienta systemu Windows bez nazwy domeny, jak pokazano w poniższym kodzie języka Visual C#.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,13 +63,13 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 Kod nie określa nazwy domeny i w związku z tym zostanie użyty protokół NTLM.
 
-Jeśli określono domenę, ale określono nieprawidłową nazwę główną usługi przy użyciu funkcji tożsamości punktu końcowego, używany jest protokół NTLM. Aby uzyskać więcej informacji o sposobie określenia tożsamości punktu końcowego, zobacz [tożsamość usługi i uwierzytelnianie](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Jeśli określono domenę, ale określono nieprawidłową nazwę główną usługi przy użyciu funkcji tożsamości punktu końcowego, używany jest protokół NTLM. Aby uzyskać więcej informacji o sposobie określenia tożsamości punktu końcowego, zobacz [tożsamość usługi i uwierzytelnianie](service-identity-and-authentication.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Zagadnienia dotyczące zabezpieczeń](security-considerations-in-wcf.md)
+- [Podniesienie uprawnień](elevation-of-privilege.md)
+- [Odmowa usługi](denial-of-service.md)
+- [Manipulowanie](tampering.md)
+- [Nieobsługiwane scenariusze](unsupported-scenarios.md)
+- [Ataki oparte na metodzie powtórzeń](replay-attacks.md)

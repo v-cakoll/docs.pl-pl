@@ -2,59 +2,59 @@
 title: Elementy wewnętrzne hosta usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: b95a59b0e1715b3cc18ccfea44d6c4ccd04ca5ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184174"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594884"
 ---
 # <a name="workflow-service-host-internals"></a>Elementy wewnętrzne hosta usługi przepływu pracy
-<xref:System.ServiceModel.WorkflowServiceHost>zapewnia hosta dla usług przepływu pracy. Jest odpowiedzialny za nasłuchiwanie wiadomości przychodzących i routing je do wystąpienia usługi przepływu pracy odpowiednie, kontroluje zwalnianie i utrwalanie bezczynnych przepływów pracy i więcej. W tym temacie opisano, jak Usługa WorkflowServiceHost przetwarza przychodzące wiadomości.  
+<xref:System.ServiceModel.WorkflowServiceHost>dostarcza hosta dla usług przepływu pracy. Jest on odpowiedzialny za nasłuchiwanie przychodzących komunikatów i kierowanie ich do odpowiedniego wystąpienia usługi przepływu pracy, kontroluje wyładowywanie i utrzymywanie bezczynnych przepływów pracy oraz nie tylko. W tym temacie opisano sposób przetwarzania komunikatów przychodzących przez obiekt WorkflowServiceHost.  
   
-## <a name="workflowservicehost-overview"></a>Omówienie usługi workflowHost  
+## <a name="workflowservicehost-overview"></a>Omówienie obiektu WorkflowServiceHost  
 
-Klasa <xref:System.ServiceModel.WorkflowServiceHost> jest używana do hosta usług przepływu pracy. Nasłuchuje wiadomości przychodzących i kieruje je do wystąpienia usługi odpowiednie, tworząc nowe wystąpienia lub ładując istniejące wystąpienia z magazynu trwałe w razie potrzeby. Na poniższym diagramie przedstawiono <xref:System.ServiceModel.WorkflowServiceHost> wysoki poziom działania:
+<xref:System.ServiceModel.WorkflowServiceHost>Klasa jest używana do hostowania usług przepływu pracy. Nasłuchuje komunikatów przychodzących i kieruje je do odpowiedniego wystąpienia usługi, tworząc nowe wystąpienia lub ładując istniejące wystąpienia z trwałego magazynu, zgodnie z potrzebami. Na poniższym diagramie przedstawiono, jak <xref:System.ServiceModel.WorkflowServiceHost> działa:
   
- ![Diagram przedstawiający omówienie hosta usługi przepływu pracy.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
+ ![Diagram przedstawiający przegląd hosta usługi przepływu pracy.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
- Ten diagram <xref:System.ServiceModel.WorkflowServiceHost> pokazuje, że wczytuje definicje usług przepływu pracy z plików xamlx i ładuje informacje o konfiguracji z pliku konfiguracji. Ładuje również konfigurację śledzenia z profilu śledzenia. <xref:System.ServiceModel.WorkflowServiceHost>udostępnia punkt końcowy kontroli przepływu pracy, który umożliwia wysyłanie operacji sterowania do wystąpień przepływu pracy.  Aby uzyskać więcej informacji, zobacz [przykład punktu końcowego kontroli przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md).  
+ Ten diagram pokazuje, że <xref:System.ServiceModel.WorkflowServiceHost> ładuje definicje usługi przepływu pracy z plików. xamlx i ładuje informacje o konfiguracji z pliku konfiguracyjnego. Ładuje również konfigurację śledzenia z profilu śledzenia. <xref:System.ServiceModel.WorkflowServiceHost>uwidacznia punkt końcowy sterowania przepływem pracy, który umożliwia wysyłanie operacji sterowania do wystąpień przepływu pracy.  Aby uzyskać więcej informacji, zobacz [przykład punktu końcowego kontroli przepływu pracy](workflow-control-endpoint.md).  
   
- <xref:System.ServiceModel.WorkflowServiceHost>udostępnia również punkty końcowe aplikacji, które nasłuchują przychodzących komunikatów aplikacji. Po odebraniu wiadomości przychodzącej jest ona wysyłana do odpowiedniego wystąpienia usługi przepływu pracy (jeśli jest aktualnie załadowana). W razie potrzeby zostanie utworzone nowe wystąpienie przepływu pracy. Lub jeśli istniejące wystąpienie zostało utrwalone jest ładowany z magazynu trwałości.  
+ <xref:System.ServiceModel.WorkflowServiceHost>udostępnia również punkty końcowe aplikacji, które nasłuchują przychodzących komunikatów aplikacji. Po nadejściu komunikatu przychodzącego jest on wysyłany do odpowiedniego wystąpienia usługi przepływu pracy (jeśli jest aktualnie załadowana). W razie konieczności zostanie utworzone nowe wystąpienie przepływu pracy. Lub jeśli istniejące wystąpienie zostało utrwalone, jest ładowane z magazynu trwałości.  
   
-## <a name="workflowservicehost-details"></a>Szczegóły usługi WorkflowHost  
- Na poniższym <xref:System.ServiceModel.WorkflowServiceHost> diagramie pokazano, jak obsługuje wiadomości w nieco bardziej szczegółowo:  
+## <a name="workflowservicehost-details"></a>Szczegóły obiektu WorkflowServiceHost  
+ Na poniższym diagramie przedstawiono sposób <xref:System.ServiceModel.WorkflowServiceHost> obsługi komunikatów na nieco bardziej szczegółowy:  
   
  ![Diagram przedstawiający przepływ komunikatów hosta usługi przepływu pracy.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
   
- Ten diagram przedstawia trzy różne punkty końcowe, punkt końcowy aplikacji, punkt końcowy kontroli przepływu pracy i punkt końcowy hostingu przepływu pracy. Punkt końcowy aplikacji odbiera komunikaty, które są powiązane dla określonego wystąpienia przepływu pracy. Punkt końcowy kontroli przepływu pracy nasłuchuje operacji sterowania. Punkt końcowy hostingu przepływu pracy nasłuchuje komunikatów, które powodują <xref:System.ServiceModel.WorkflowServiceHost> ładowanie i wykonywanie przepływów pracy nieusługowych. Jak pokazano na diagramie wszystkie komunikaty są przetwarzane za pośrednictwem środowiska wykonawczego WCF.  Ograniczanie wystąpienia usługi przepływu pracy jest <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> osiągane przy użyciu właściwości. Ta właściwość ograniczy liczbę wystąpień usługi równoczesnych przepływów pracy. Po przekroczeniu tej przepustnicy wszelkie dodatkowe żądania dla nowych wystąpień usługi przepływu pracy lub żądania aktywowania utrwalonych wystąpień przepływu pracy będą umieszczane w kolejce. Żądania w kolejce są przetwarzane w kolejności FIFO, niezależnie od tego, czy są to żądania dla nowego wystąpienia, czy uruchomione, utrwalone wystąpienie. Informacje o zasadach hosta są ładowane, który określa, jak nieobsługiwane wyjątki są rozpatrywane i jak bezczynne usługi przepływu pracy są zwalniane i utrwalone. Aby uzyskać więcej informacji na temat tych tematów, zobacz [Jak: Konfigurowanie zachowania nieobsługiwalnych wyjątków przepływu pracy za pomocą usługi WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) i [jak: Konfigurowanie zachowania bezczynności za pomocą usługi WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Wystąpienia przepływu pracy są utrwalone zgodnie z zasadami hosta i są ponownie ładowane w razie potrzeby. Aby uzyskać więcej informacji na temat trwałości przepływu pracy, zobacz: [Jak: Konfigurowanie trwałości za pomocą usługi WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [Tworzenie długotrwałej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)i [Trwałość przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ Ten diagram przedstawia trzy różne punkty końcowe, punkt końcowy aplikacji, punkt końcowy sterowania przepływem pracy oraz punkt końcowy hostingu przepływu pracy. Punkt końcowy aplikacji odbiera komunikaty, które są powiązane z określonym wystąpieniem przepływu pracy. Punkt końcowy sterowania przepływem pracy nasłuchuje operacji sterowania. Punkt końcowy hostingu przepływu pracy nasłuchuje komunikatów, które powodują <xref:System.ServiceModel.WorkflowServiceHost> ładowanie i wykonywanie przepływów pracy innych niż usługi. Jak pokazano na diagramie, wszystkie komunikaty są przetwarzane przez środowisko uruchomieniowe WCF.  Ograniczanie wystąpienia usługi przepływu pracy jest realizowane przy użyciu <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> właściwości. Ta właściwość ogranicza liczbę współbieżnych wystąpień usługi przepływu pracy. W przypadku przekroczenia limitu przepustowości wszystkie dodatkowe żądania dla nowych wystąpień usługi przepływu pracy lub żądania aktywowania utrwalonych wystąpień przepływów pracy zostaną dodane do kolejki. Żądania w kolejce są przetwarzane w kolejności FIFO niezależnie od tego, czy są żądaniami dla nowego wystąpienia, czy działającym, utrwalonym wystąpieniem. Załadowano informacje o zasadach hosta, które określają sposób postępowania z nieobsługiwanymi wyjątkami oraz sposób, w jaki bezczynne usługi przepływu pracy są zwalniane i utrwalane. Aby uzyskać więcej informacji na temat tych tematów, zobacz [jak: Konfigurowanie zachowania nieobsługiwanego wyjątku przepływu pracy przy użyciu obiektu WorkflowServiceHost](config-workflow-unhandled-exception-workflowservicehost.md) i [instrukcje: Konfigurowanie zachowania bezczynności z](how-to-configure-idle-behavior-with-workflowservicehost.md)obiektem WorkflowServiceHost. Wystąpienia przepływu pracy są utrwalane zgodnie z zasadami hosta i są ponownie ładowane w razie potrzeby. Aby uzyskać więcej informacji na temat trwałości przepływu pracy, zobacz: [How to: Configure trwałości with WorkflowServiceHost](how-to-configure-persistence-with-workflowservicehost.md), [Tworzenie długotrwałej usługi przepływu pracy](creating-a-long-running-workflow-service.md)i [trwałość przepływu pracy](../../windows-workflow-foundation/workflow-persistence.md).  
   
- Na poniższej ilustracji przedstawiono przepływ, gdy wywoływany jest plik WorkflowServiceHost.Open:  
+ Na poniższej ilustracji przedstawiono przepływ, gdy jest wywoływany obiekt WorkflowServiceHost. Open:  
   
- ![Diagram, który pokazuje przepływ, gdy usługa WorkflowServiceHost.Open jest wywoływana.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
+ ![Diagram pokazujący przepływ, gdy jest wywoływany obiekt WorkflowServiceHost. Open.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
   
- Przepływ pracy jest ładowany z XAML i tworzone jest drzewo aktywności. <xref:System.ServiceModel.WorkflowServiceHost>prowadzi drzewo aktywności i tworzy opis usługi. Konfiguracja jest stosowana do hosta. Na koniec host zaczyna nasłuchiwać wiadomości przychodzących.  
+ Przepływ pracy jest ładowany z XAML i tworzone jest drzewo aktywności. <xref:System.ServiceModel.WorkflowServiceHost>przegląda drzewo aktywności i tworzy Opis usługi. Konfiguracja została zastosowana do hosta. Na koniec Host rozpocznie nasłuchiwanie komunikatów przychodzących.  
   
- Na poniższej <xref:System.ServiceModel.WorkflowServiceHost> ilustracji przedstawiono, co robi po odebraniu wiadomości związane z `true`Receive działania, który cancreateinstance ustawiono:  
+ Na poniższej ilustracji pokazano, co się stało, <xref:System.ServiceModel.WorkflowServiceHost> gdy odbierze komunikat powiązany dla działania Receive, które ma ustawioną CanCreateInstance `true` :  
   
- ![Drzewo decyzyjne używane przez hosta WFS po odebraniu wiadomości i CanCreateInstance jest true.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
+ ![Drzewo decyzyjne używane przez hosta WFS, gdy odbierze komunikat, a CanCreateInstance ma wartość true.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
   
- Komunikat dociera i jest przetwarzany przez stos kanału WCF. Throttles są sprawdzane i kwerendy korelacji są wykonywane. Jeśli wiadomość jest powiązana dla istniejącego wystąpienia, wiadomość jest dostarczana. Jeśli nowe wystąpienie musi zostać utworzone, receive działania CanCreateInstance właściwość jest zaznaczona. Jeśli jest ustawiona na true, zostanie utworzone nowe wystąpienie i wiadomość zostanie dostarczona.  
+ Wiadomość zostanie odebrana i przetworzona przez stos kanału WCF. Ograniczenia są zaznaczone, a zapytania korelacji są wykonywane. Jeśli komunikat jest powiązany z istniejącym wystąpieniem, komunikat zostanie dostarczony. Jeśli trzeba utworzyć nowe wystąpienie, właściwość CanCreateInstance działania Receive jest sprawdzana. Jeśli ma wartość true, zostanie utworzone nowe wystąpienie i zostanie wyświetlony komunikat.  
   
- Na poniższej <xref:System.ServiceModel.WorkflowServiceHost> ilustracji przedstawiono, co robi, gdy odbiera wiadomość powiązaną z Receive działania, który cancreateinstance ustawiono false.  
+ Na poniższej ilustracji pokazano, co się stało, <xref:System.ServiceModel.WorkflowServiceHost> gdy odbierze komunikat powiązany dla działania Receive, którego wartość CanCreateInstance ma wartość false.  
   
- ![Drzewo decyzyjne używane przez hosta WFS po odebraniu wiadomości i CanCreateInstance jest false.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
+ ![Drzewo decyzyjne używane przez hosta WFS, gdy odbierze komunikat, a CanCreateInstance ma wartość false.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
   
- Komunikat dociera i jest przetwarzany przez stos kanału WCF. Throttles są sprawdzane i kwerendy korelacji są wykonywane. Wiadomość jest powiązana dla istniejącego wystąpienia (ponieważ CanCreateInstance jest false), więc wystąpienie jest ładowane z magazynu trwałości, zakładka jest wznawiana i wykonuje przepływ pracy.  
+ Wiadomość zostanie odebrana i przetworzona przez stos kanału WCF. Ograniczenia są zaznaczone, a zapytania korelacji są wykonywane. Komunikat jest powiązany z istniejącym wystąpieniem (ponieważ CanCreateInstance ma wartość false), więc wystąpienie jest ładowane z magazynu trwałości, zakładka jest wznawiana i przepływ pracy jest wykonywany.  
   
 > [!WARNING]
-> Host usługi przepływu pracy nie zostanie otwarty, jeśli program SQL Server jest skonfigurowany do nasłuchiwanie tylko na protokole NamedPipe.  
+> Jeśli SQL Server jest skonfigurowany do nasłuchiwania tylko w protokole nazwany potok, Host usługi przepływu pracy nie zostanie otwarty.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Hostowanie usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
-- [Punkt końcowy kontroli przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
-- [Instrukcje: konfigurowanie zachowania dotyczącego nieobsługiwanego wyjątku przepływu pracy przy użyciu klasy WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
-- [Tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
-- [Trwałość przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+- [Usługi przepływu pracy](workflow-services.md)
+- [Hostowanie usług przepływu pracy](hosting-workflow-services.md)
+- [Punkt końcowy kontroli przepływu pracy](workflow-control-endpoint.md)
+- [Instrukcje: konfigurowanie zachowania dotyczącego nieobsługiwanego wyjątku przepływu pracy przy użyciu klasy WorkflowServiceHost](config-workflow-unhandled-exception-workflowservicehost.md)
+- [Tworzenie długo działającej usługi przepływu pracy](creating-a-long-running-workflow-service.md)
+- [Trwałość przepływu pracy](../../windows-workflow-foundation/workflow-persistence.md)

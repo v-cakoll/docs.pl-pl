@@ -2,12 +2,12 @@
 title: Transport WS z poświadczeniami komunikatu
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: a0f604a9b97327df08443f975bcf4ad53e125878
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0082a9df5c112b66315236aad91bc891b80d27c7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144672"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596387"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transport WS z poświadczeniami komunikatu
 Ten przykład ilustruje użycie zabezpieczeń transportu SSL w połączeniu z poświadczeniami klienta, które są przeprowadzane w komunikacie. Ten przykład używa `wsHttpBinding` powiązania.  
@@ -16,12 +16,12 @@ Ten przykład ilustruje użycie zabezpieczeń transportu SSL w połączeniu z po
   
  W tym przykładzie `UserName` Typ poświadczeń jest używany do uwierzytelniania klienta w usłudze.  
   
- Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. `wsHttpBinding`Powiązanie jest określone i skonfigurowane w plikach konfiguracji aplikacji dla klienta i usługi.  
+ Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) , który implementuje usługę kalkulatora. `wsHttpBinding`Powiązanie jest określone i skonfigurowane w plikach konfiguracji aplikacji dla klienta i usługi.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kod programu w przykładzie jest niemal identyczny jak w przypadku usługi [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) . Kontrakt usługi zapewnia jedną dodatkową operację — `GetCallerIdentity` . Ta operacja zwraca nazwę tożsamości obiektu wywołującego do obiektu wywołującego.  
+ Kod programu w przykładzie jest niemal identyczny jak w przypadku usługi [wprowadzenie](getting-started-sample.md) . Kontrakt usługi zapewnia jedną dodatkową operację — `GetCallerIdentity` . Ta operacja zwraca nazwę tożsamości obiektu wywołującego do obiektu wywołującego.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -89,10 +89,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+2. Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](iis-server-certificate-installation-instructions.md).  
   
-3. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  

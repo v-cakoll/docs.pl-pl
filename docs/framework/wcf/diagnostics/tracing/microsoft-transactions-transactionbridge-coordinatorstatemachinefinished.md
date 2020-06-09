@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 16cb428d-d886-4789-a961-6fded4b0dbba
-ms.openlocfilehash: bffaed4976d82202eaea9ce50f6d389548fdabfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b9a3703e49c3932f62fcfb6994c9028b074bbe8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594416"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
-Automatu stanów dla rejestracji koordynatora została wprowadzona w stan zakończenia.  
+Komputer stanu dla rejestracji koordynatora przeszedł w stan zakończenia.  
   
 ## <a name="description"></a>Opis  
- Śledzone, gdy lokalny Menedżer transakcji uważa, że rejestracja przełożonego koordynatora zakończeniu przetwarzania 2pc. Wynik dla rejestracji może być przydzielony, Aborted lub zapomnianych. Również śledzona jest, gdy lokalny Menedżer transakcji głosów tylko do odczytu podczas przygotowywania.  
+ Śledzenie, gdy lokalny Menedżer transakcji uważa, że funkcja rejestracji wyższej koordynatora zakończyła przetwarzanie 2PC. Wynik rejestracji można zatwierdzić lub przerwać lub zazapominać. Jest on także śledzony, jeśli lokalny Menedżer transakcji odnosi wartość ReadOnly podczas przygotowywania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

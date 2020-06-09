@@ -9,75 +9,75 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592190"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595001"
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
-A *kontraktu danych* jest formalną umowę między usługą i klienta, który opisuje abstrakcyjnie danych wymienianych. Oznacza to, do komunikowania się, klienta i usługi nie muszą udostępniać te same typy tylko tych samych kontraktów danych. Dokładnie definiuje kontraktu danych, dla każdego parametr lub zwracany typ danych jest serializowana (przekształcane w XML) do wymiany.  
+*Kontrakt dotyczący danych* jest formalnym porozumieniem między usługą a klientem, który w sposób abstrakcyjny opisuje dane, które mają być wymieniane. Oznacza to, że w celu komunikacji klient i usługa nie muszą używać tych samych typów, tylko tych samych umów dotyczących danych. Dla każdego parametru lub typu zwracanego jest definiowana umowa dotycząca danych, która jest serializowana (w formacie XML) do wymiany.  
   
-## <a name="data-contract-basics"></a>Podstawy kontraktu danych  
- Windows Communication Foundation (WCF) używa mechanizm serializacji, o nazwie serializator kontraktu danych domyślnie do serializacji i deserializacji danych (przekonwertować go do i z pliku XML). Wszystkie typy pierwotne .NET Framework, takich jak liczby całkowite i ciągi, a także niektórych typów traktowane jako podstawowych, takich jak <xref:System.DateTime> i <xref:System.Xml.XmlElement>, może być serializowany z nie innych przygotowania i mających kontraktów danych domyślne. Wiele typów programu .NET Framework mają również istniejące kontraktów danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+## <a name="data-contract-basics"></a>Podstawowe informacje dotyczące kontraktu danych  
+ Windows Communication Foundation (WCF) używa aparatu serializacji o nazwie serializator kontraktu danych domyślnie do serializacji i deserializacji danych (Konwertuj je na i z XML). Wszystkie .NET Framework typy pierwotne, takie jak liczby całkowite i ciągi, a także niektóre typy traktowane jako elementy pierwotne, takie jak <xref:System.DateTime> i <xref:System.Xml.XmlElement> , mogą być serializowane bez innych przygotowań i są traktowane jako z domyślnymi kontraktami danych. Wiele typów .NET Framework ma także istniejące Kontrakty danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [Typy obsługiwane przez serializator kontraktu danych](types-supported-by-the-data-contract-serializer.md).  
   
- Nowe typy złożone, które tworzysz, musi mieć zdefiniowany jako możliwy do serializacji kontrakt danych. Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> wnioskuje kontraktu danych i serializuje wszystkich typów publicznie widoczne. Wszystkie właściwości publiczne odczytu/zapisu i pola tego typu są serializowane. Możesz zrezygnować z elementami członkowskimi z serializacji przy użyciu <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Można także jawnie tworzenie kontraktu danych za pomocą <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów. Zazwyczaj jest to realizowane przez stosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu. Ten atrybut można zastosować do klasy, struktury i wyliczenia. <xref:System.Runtime.Serialization.DataMemberAttribute> Następnie należy zastosować atrybut do każdego członka typu kontraktu danych, aby wskazać, że *element członkowski danych*, oznacza to, powinien zostać Zserializowany. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+ Nowe tworzone typy złożone muszą mieć kontrakt danych zdefiniowany dla nich, aby można było je serializować. Domyślnie program <xref:System.Runtime.Serialization.DataContractSerializer> wnioskuje o umowę danych i serializować wszystkie publicznie widoczne typy. Wszystkie publiczne właściwości odczytu/zapisu i pola typu są serializowane. Członków można zrezygnować z serializacji przy użyciu <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> . Możesz również jawnie utworzyć kontrakt danych przy użyciu <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów i. Jest to zwykle wykonywane przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do typu. Ten atrybut może być stosowany do klas, struktur i wyliczeń. Ten <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut musi następnie zostać zastosowany do każdego elementu członkowskiego typu kontraktu danych, aby wskazać, że jest to *element członkowski danych*, czyli powinien być serializowany. Aby uzyskać więcej informacji, zobacz [typy serializacji](serializable-types.md).  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano kontraktu usługi (interfejs), do którego <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> jawnie zastosowano atrybutów. W przykładzie pokazano, że typy pierwotne nie wymagają kontraktu danych, gdy jest to typ złożony.  
+ W poniższym przykładzie przedstawiono kontrakt usługi (interfejs), do którego <xref:System.ServiceModel.ServiceContractAttribute> atrybuty i zostały <xref:System.ServiceModel.OperationContractAttribute> zastosowane jawnie. W przykładzie pokazano, że typy pierwotne nie wymagają kontraktu danych, podczas gdy typ złożony wykonuje.  
   
  [!code-csharp[C_DataContract#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#1)]
  [!code-vb[C_DataContract#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#1)]  
   
- W poniższym przykładzie pokazano, jak kontraktu danych dla `MyTypes.PurchaseOrder` typ jest tworzony przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów do klasy i jej elementów członkowskich.  
+ W poniższym przykładzie przedstawiono sposób tworzenia kontraktu danych dla `MyTypes.PurchaseOrder` typu przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów i do klasy i jej elementów członkowskich.  
   
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
 ### <a name="notes"></a>Uwagi  
- Poniższe informacje o zapewniają kwestii do rozważenia podczas tworzenia kontraktów danych:  
+ Poniższe notatki zawierają elementy, które należy wziąć pod uwagę podczas tworzenia umów dotyczących danych:  
   
-- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Atrybut jest tylko honorowane, gdy jest używana z typami nieoznaczone. Obejmuje to typy, które nie są oznaczone przy użyciu jednego z <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, lub <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutów lub oznaczony jako możliwy do serializacji w inny sposób (takie jak <xref:System.Xml.Serialization.IXmlSerializable>).  
+- Ten <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybut jest uznawany tylko w przypadku użycia z nieoznaczonymi typami. Obejmuje to typy, które nie są oznaczone jednym z <xref:System.Runtime.Serialization.DataContractAttribute> atrybutów, <xref:System.SerializableAttribute> , <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , lub są <xref:System.Runtime.Serialization.EnumMemberAttribute> oznaczone jako możliwe do serializacji w inny sposób (na przykład <xref:System.Xml.Serialization.IXmlSerializable> ).  
   
-- Można zastosować <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do pola i właściwości.  
+- Można zastosować <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut do pól i właściwości.  
   
-- Poziomy ułatwień dostępu elementu członkowskiego (wewnętrznego, prywatnych, chronionych lub publicznego) nie wpływają na kontraktu danych w jakikolwiek sposób.  
+- Poziomy ułatwień dostępu członków (wewnętrzne, prywatne, chronione lub publiczne) nie wpływają na kontrakt danych w żaden sposób.  
   
-- <xref:System.Runtime.Serialization.DataMemberAttribute> Atrybut jest ignorowany, jeśli zostanie zastosowany do statycznych elementów członkowskich.  
+- Ten <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest ignorowany, jeśli jest stosowany do statycznych elementów członkowskich.  
   
-- Podczas serializacji kod pobieraniem właściwości jest wywoływana dla elementów członkowskich danych właściwości można pobrać wartości właściwości, które mają być serializowane.  
+- Podczas serializacji właściwość Get Code jest wywoływana dla elementów członkowskich danych właściwości, aby uzyskać wartość właściwości, które mają być serializowane.  
   
-- Podczas deserializacji niezainicjowanego obiektu utworzenia bez wywoływania żadnych konstruktorów typu. Następnie wszystkie elementy członkowskie danych są deserializacji.  
+- Podczas deserializacji, Niezainicjowany obiekt jest najpierw tworzony bez wywoływania żadnych konstruktorów tego typu. Następnie wszystkie elementy członkowskie danych są deserializowane.  
   
-- Podczas deserializacji kodu zestawu właściwości jest wywoływana dla elementów członkowskich danych właściwości można ustawić właściwości wartość deserializowany.  
+- Podczas deserializacji kod zestawu właściwości jest wywoływany dla elementów członkowskich danych właściwości, aby ustawić właściwości na deserializowaną wartość.  
   
-- Dla kontraktu danych był prawidłowy musi być możliwe do serializacji wszystkich jego składowych danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Aby umowa dotycząca danych była ważna, musi istnieć możliwość serializacji wszystkich elementów członkowskich danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [Typy obsługiwane przez serializator kontraktu danych](types-supported-by-the-data-contract-serializer.md).  
   
-     Typy ogólne są obsługiwane w taki sam sposób, jak typy ogólne. Istnieją specjalne wymagania dotyczące parametrów ogólnych. Na przykład rozważmy następujący typ.  
+     Typy ogólne są obsługiwane w taki sam sposób jak typy nieogólne. Nie istnieją specjalne wymagania dotyczące parametrów ogólnych. Rozważmy na przykład następujący typ.  
   
  [!code-csharp[C_DataContract#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#3)]
  [!code-vb[C_DataContract#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#3)]  
   
- Ten typ jest możliwy do serializacji, czy typ jest używany dla parametru typu ogólnego (`T`) jest możliwy do serializacji, czy nie. Ponieważ muszą być możliwe do serializacji wszystkie składowe danych, następujący typ jest możliwy do serializacji tylko jeśli parametr typu ogólnego jest również możliwe do serializacji, jak pokazano w poniższym kodzie.  
+ Ten typ jest możliwy do serializacji, niezależnie od tego, czy typ używany dla parametru typu ogólnego ( `T` ) jest możliwy do serializacji. Ponieważ musi być możliwe serializacji wszystkich elementów członkowskich danych, następujący typ jest możliwy do serializacji tylko wtedy, gdy parametr typu ogólnego jest również możliwy do serializacji, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[C_DataContract#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#4)]
  [!code-vb[C_DataContract#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#4)]  
   
- Aby uzyskać kompletny przykład kodu usługi WCF, który definiuje kontrakt danych zobacz [podstawowego kontraktu danych](../../../../docs/framework/wcf/samples/basic-data-contract.md) próbki.  
+ Aby uzyskać kompletny przykład kodu usługi WCF, która definiuje kontrakt danych, zobacz podstawowy przykład [kontraktu danych](../samples/basic-data-contract.md) .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)
-- [Nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Kontrakty danych zgodne z nowszymi wersjami](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Domyślne wartości elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Typy z możliwością serializowania](serializable-types.md)
+- [Nazwy kontraktów danych](data-contract-names.md)
+- [Równoważność kontraktów danych](data-contract-equivalence.md)
+- [Kolejność elementów członkowskich danych](data-member-order.md)
+- [Znane typy kontraktów danych](data-contract-known-types.md)
+- [Kontrakty danych zgodne z nowszymi wersjami](forward-compatible-data-contracts.md)
+- [Przechowywanie wersji kontraktów danych](data-contract-versioning.md)
+- [Wywołania zwrotne serializacji z tolerancją dla wersji](version-tolerant-serialization-callbacks.md)
+- [Domyślne wartości elementów członkowskich danych](data-member-default-values.md)
+- [Typy obsługiwane przez serializator kontraktu danych](types-supported-by-the-data-contract-serializer.md)
+- [Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury](how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

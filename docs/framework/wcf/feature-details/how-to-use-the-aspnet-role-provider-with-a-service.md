@@ -2,30 +2,30 @@
 title: 'Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595300"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą
 
-Dostawca roli ASP.NET (w połączeniu z dostawcą członkostwa ASP.NET) jest funkcją, która umożliwia deweloperom ASP.NET tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie konta w witrynie i przypisywanie ról do celów autoryzacji. Dzięki tej funkcji każdy użytkownik może założyć konto w witrynie i zalogować się, aby uzyskać wyłączny dostęp do witryny i jej usług. Jest to w przeciwieństwie do zabezpieczeń systemu Windows, który wymaga od użytkowników, aby mieć konta w domenie systemu Windows. Zamiast tego każdy użytkownik, który dostarcza swoje poświadczenia (kombinacja nazwa użytkownika/hasło) może korzystać z witryny i jej usług.  
+Dostawca roli ASP.NET (w połączeniu z dostawcą członkostwa ASP.NET) to funkcja, która umożliwia deweloperom ASP.NET tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie konta w lokacji i przypisywanie ról do celów autoryzacji. Korzystając z tej funkcji, każdy użytkownik może nawiązać konto z lokacją i zalogować się w celu uzyskania wyłącznego dostępu do lokacji i jej usług. Jest to w przeciwieństwie do zabezpieczeń systemu Windows, co wymaga, aby użytkownicy mieli konta w domenie systemu Windows. Zamiast tego każdy użytkownik, który poda poświadczenia (kombinacja nazwy użytkownika/hasła), może korzystać z witryny i jej usług.  
   
-Aby zapoznać się z przykładową aplikacją, zobacz [Członkostwo i Dostawca roli](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Aby uzyskać więcej informacji na temat funkcji dostawcy członkostwa ASP.NET, zobacz [Jak: Korzystanie z ASP.NET Dostawcy członkostwa](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+Aby zapoznać się z przykładową aplikacją, zobacz [członkostwo i dostawca ról](../samples/membership-and-role-provider.md). Aby uzyskać więcej informacji na temat funkcji ASP.NET Membership Provider, zobacz [How to: Use the ASP.NET Membership Provider](how-to-use-the-aspnet-membership-provider.md).  
   
-Funkcja dostawcy roli używa bazy danych programu SQL Server do przechowywania informacji o użytkowniku. Deweloperzy programu Windows Communication Foundation (WCF) mogą korzystać z tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu z aplikacją WCF użytkownicy muszą podać kombinację nazwy użytkownika/hasła do aplikacji klienckiej WCF. Aby włączyć WCF do korzystania z bazy danych, należy utworzyć wystąpienie <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> klasy, ustawić jego <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> właściwość , <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>i dodać wystąpienie do kolekcji zachowań do <xref:System.ServiceModel.ServiceHost> usługi, która jest hostująca usługę.  
+Funkcja dostawcy roli używa bazy danych SQL Server do przechowywania informacji o użytkownikach. Deweloperzy Windows Communication Foundation (WCF) mogą korzystać z tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu z aplikacją WCF użytkownicy muszą podać kombinację nazwy użytkownika i hasła do aplikacji klienckiej WCF. Aby włączyć funkcję WCF do korzystania z bazy danych, należy utworzyć wystąpienie <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> klasy, ustawić jej <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> Właściwość na <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> , a następnie dodać wystąpienie do kolekcji zachowań <xref:System.ServiceModel.ServiceHost> , które obsługują usługę.  
   
 ## <a name="configure-the-role-provider"></a>Konfigurowanie dostawcy roli  
   
-1. W pliku Web.config w obszarze <`system.web`> element dodaj element `roleManager` <> i ustaw jego `enabled` atrybut na `true`.  
+1. W pliku Web. config w obszarze < `system.web` > Dodaj `roleManager` element < > i ustaw jego `enabled` atrybut na `true` .  
   
-2. Ustaw `defaultProvider` atrybut na `SqlRoleProvider`.  
+2. Ustaw `defaultProvider` atrybut na `SqlRoleProvider` .  
   
-3. Jako element podrzędny <`roleManager`> dodaj element `providers` <>.  
+3. Jako element podrzędny do <`roleManager`>, dodaj <`providers`> elementu.  
   
-4. Jako element podrzędny do `providers` <> element dodaj `add` <> element z następującymi atrybutami ustawionymi `name` `type`na odpowiednie wartości: , , `connectionStringName`i `applicationName`, jak pokazano w poniższym przykładzie.  
+4. Jako element podrzędny do <`providers`>, Dodaj <`add` elementu> z następującymi atrybutami ustawionymi na odpowiednie wartości: `name` , `type` , `connectionStringName` , i `applicationName` , jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -42,19 +42,19 @@ Funkcja dostawcy roli używa bazy danych programu SQL Server do przechowywania i
   
 ## <a name="configure-the-service-to-use-the-role-provider"></a>Konfigurowanie usługi do korzystania z dostawcy roli  
   
-1. W pliku Web.config dodaj element [ \<system.serviceModel>.](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+1. W pliku Web. config Dodaj [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) element.  
   
-2. Dodaj element [ \<>zachowań](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) do elementu `system.ServiceModel` <>.  
+2. Dodaj [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) element do `system.ServiceModel` elementu> <.  
   
-3. Dodaj [ \<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> elementu.  
+3. Dodaj [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) do `behaviors` elementu> <.  
   
-4. Dodaj [ \<zachowanie>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element i ustaw `name` atrybut na odpowiednią wartość.  
+4. Dodaj [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element i ustaw `name` odpowiednią wartość atrybutu.  
   
-5. Dodaj [ \<>>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) `behavior`> <.  
+5. Dodaj [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) do `behavior` elementu> <.  
   
-6. Ustaw `principalPermissionMode` atrybut na `UseAspNetRoles`.  
+6. Ustaw `principalPermissionMode` atrybut na `UseAspNetRoles` .  
   
-7. Ustaw `roleProviderName` atrybut na `SqlRoleProvider`. W poniższym przykładzie przedstawiono fragment konfiguracji.  
+7. Ustaw `roleProviderName` atrybut na `SqlRoleProvider` . Poniższy przykład przedstawia fragment konfiguracji.  
   
     ```xml  
     <behaviors>  
@@ -69,5 +69,5 @@ Funkcja dostawcy roli używa bazy danych programu SQL Server do przechowywania i
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Dostawca członkostwa i ról](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [Instrukcje: użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Dostawca członkostwa i ról](../samples/membership-and-role-provider.md)
+- [Instrukcje: użycie dostawcy członkostwa platformy ASP.NET](how-to-use-the-aspnet-membership-provider.md)

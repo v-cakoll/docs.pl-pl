@@ -2,22 +2,22 @@
 title: Używanie liczników wydajności
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 7ffd9f5de5efb4be22968958246839e804daf23d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596503"
 ---
 # <a name="using-performance-counters"></a>Używanie liczników wydajności
-W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności programu Windows Communication Foundation (WCF) i jak tworzyć liczniki wydajności zdefiniowane przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności Windows Communication Foundation (WCF) oraz jak tworzyć liczniki wydajności zdefiniowane przez użytkownika. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie klient wywołuje cztery `ICalculator` metody usługi. Klient kontynuuje to, dopóki nie zostanie przerwany przez użytkownika. Usługa pozostaje niezmieniona.  
+ W tym przykładzie klient wywołuje cztery metody `ICalculator` usługi. Klient kontynuuje działanie, dopóki nie zostanie on przerwany przez użytkownika. Usługa pozostaje niezmieniona.  
   
- Liczniki wydajności są włączone w sekcji diagnostyki pliku Web.config dla usługi, jak pokazano w poniższej przykładowej konfiguracji.  
+ Liczniki wydajności są włączane w sekcji Diagnostyka w pliku Web. config dla usługi, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <configuration>  
@@ -27,55 +27,55 @@ W tym przykładzie pokazano, jak uzyskać dostęp do liczników wydajności prog
 </configuration>  
 ```  
   
- To zadanie można również wykonać za pomocą [narzędzia Edytor konfiguracji (SvcConfigEditor.exe).](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ To zadanie można również wykonać za pomocą [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Gdy liczniki wydajności są włączone, cały zestaw liczników wydajności WCF jest włączona dla usługi. Program .NET Framework automatycznie przechowuje dane `ServiceModelService`o `ServiceModelEndpoint` `ServiceModelOperation`wydajności na trzech poziomach: , i . Każdy z tych poziomów ma liczniki wydajności, takie jak "Połączenia", "Połączenia na sekundę" i "Połączenia zabezpieczeń nie autoryzowane".  
+ Po włączeniu liczników wydajności cały pakiet liczników wydajności programu WCF jest włączony dla usługi. .NET Framework automatycznie utrzymuje dane dotyczące wydajności na trzech poziomach: `ServiceModelService` , `ServiceModelEndpoint` i `ServiceModelOperation` . Każdy z tych poziomów ma liczniki wydajności, takie jak "wywołania", "wywołania na sekundę" i "wywołania zabezpieczeń, które nie są autoryzowane".  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, postępuj zgodnie z instrukcjami w [przypadku uruchamiania przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
-### <a name="to-view-performance-data"></a>Aby wyświetlić dane dotyczące wydajności  
+### <a name="to-view-performance-data"></a>Aby wyświetlić dane wydajności  
   
-1. Uruchom narzędzie Monitor wydajności, **Start**klikając przycisk Start `perfmon` , **Uruchom...**, wprowadź i kliknij przycisk **OK** lub w Panelu sterowania, wybierz pozycję **Narzędzia administracyjne** i kliknij dwukrotnie pozycję **Wydajność**.  
-  
-    > [!NOTE]
-    > Nie można dodać liczników, dopóki przykładowy kod nie jest uruchomiony.  
-  
-2. Usuń liczniki wydajności, które są wymienione, zaznaczając je i naciskając klawisz Delete.  
-  
-3. Dodaj liczniki WCF, klikając prawym przyciskiem myszy okienko wykresu i wybierając pozycję **Dodaj liczniki**. W oknie dialogowym **Dodawanie liczników** wybierz pozycję **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 lub ServiceModelService 3.0.0.0** w polu listy rozwijanej obiektu Wydajność. Wybierz liczniki, które chcesz wyświetlić z listy.  
+1. Uruchom narzędzie Monitor wydajności, klikając przycisk **Start**, **Uruchom polecenie...**, wprowadź `perfmon` i kliknij przycisk **OK,** lub z panelu sterowania wybierz pozycję **Narzędzia administracyjne** , a następnie kliknij dwukrotnie pozycję **wydajność**.  
   
     > [!NOTE]
-    > Nie ma żadnych liczników wydajności WCF dla usługi, jeśli na komputerze nie ma żadnych usług WCF.  
+    > Nie można dodać liczników do momentu uruchomienia przykładowego kodu.  
   
-### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Aby włączyć liczniki za pomocą Edytora konfiguracji  
+2. Usuń liczniki wydajności, które znajdują się na liście, zaznaczając je i naciskając klawisz Delete.  
   
-1. Otwórz wystąpienie pliku SvcConfigEditor.exe.  
+3. Dodaj liczniki WCF, klikając prawym przyciskiem myszy okienko wykresu i wybierając polecenie **Dodaj liczniki**. W oknie dialogowym **Dodawanie liczników** wybierz pozycję **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 lub ServiceModelService 3.0.0.0** w polu listy rozwijanej obiekt wydajności. Wybierz liczniki, które chcesz wyświetlić z listy.  
   
-2. W menu Plik kliknij polecenie **Otwórz,** a następnie kliknij polecenie **Plik konfiguracyjny...**.  
+    > [!NOTE]
+    > Brak liczników wydajności programu WCF dla usługi, jeśli na komputerze nie są uruchomione żadne usługi WCF.  
   
-3. Przejdź do przykładowego folderu usługi aplikacji i otwórz plik Web.config.  
+### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Aby włączyć liczniki przy użyciu edytora konfiguracji  
   
-4. Kliknij **pozycję Diagnostyka** w drzewie konfiguracji.  
+1. Otwórz wystąpienie programu SvcConfigEditor. exe.  
   
-5. Przełącz **licznik wydajności** w oknie **Diagnostyka,** aby wyświetlić "Wszystko".  
+2. W menu plik kliknij polecenie **Otwórz** , a następnie kliknij pozycję **plik konfiguracji..**..  
   
-6. Zapisz plik konfiguracyjny i zamknij edytor.  
+3. Przejdź do folderu usługi przykładowej aplikacji i Otwórz plik Web. config.  
+  
+4. W drzewie konfiguracji kliknij pozycję **Diagnostyka** .  
+  
+5. Przełącz **licznik wydajności** w oknie **Diagnostyka** , aby pokazać opcję "wszystkie".  
+  
+6. Zapisz plik konfiguracji i Zamknij Edytor.  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Próbki monitorowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

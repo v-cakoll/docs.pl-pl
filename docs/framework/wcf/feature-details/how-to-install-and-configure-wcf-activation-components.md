@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597036"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
 
@@ -19,7 +19,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
 
 - Skonfigurowano obsługę protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie aktywacji systemu Windows Vista do protokołu TCP.
 
-Po zainstalowaniu i skonfigurowaniu programu zapoznaj się z tematem [jak: Hostowanie usługi WCF w usłudze was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) , aby poznać procedury tworzenia usługi WCF, która uwidacznia punkt końcowy inny niż http.
+Po zainstalowaniu i skonfigurowaniu programu zapoznaj się z tematem [jak: Hostowanie usługi WCF w usłudze was](how-to-host-a-wcf-service-in-was.md) , aby poznać procedury tworzenia usługi WCF, która uwidacznia punkt końcowy inny niż http.
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>Aby zainstalować składniki aktywacji programu WCF inne niż HTTP
 
@@ -52,7 +52,7 @@ Po zainstalowaniu i skonfigurowaniu programu zapoznaj się z tematem [jak: Hosto
     ```
 
     > [!NOTE]
-    > To polecenie jest pojedynczym wierszem tekstu. To polecenie umożliwia dostęp do\<aplikacji *WCF*> aplikacji przy użyciu obu `http://localhost/<WCF Application>` i `net.tcp://localhost/<WCF Application>`.
+    > To polecenie jest pojedynczym wierszem tekstu. To polecenie umożliwia \<*WCF Application*> dostęp do/aplikacji przy użyciu obu `http://localhost/<WCF Application>` i `net.tcp://localhost/<WCF Application>` .
 
      Usuń powiązanie witryny net. TCP dodane do tego przykładu.
 
@@ -101,9 +101,9 @@ Po zainstalowaniu i skonfigurowaniu programu zapoznaj się z tematem [jak: Hosto
     > [!NOTE]
     > To polecenie jest pojedynczym wierszem tekstu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Aktywacja usługi MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [Aktywowanie elementu NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Aktywacja TCP](../samples/tcp-activation.md)
+- [Aktywacja usługi MSMQ](../samples/msmq-activation.md)
+- [Aktywowanie elementu NamedPipe](../samples/namedpipe-activation.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

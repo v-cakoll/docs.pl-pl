@@ -2,24 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 ms.date: 03/30/2017
 ms.assetid: ada4baa5-b60d-46b8-ad46-4d69f8d8a9fa
-ms.openlocfilehash: 02e275fa212128c65beda4bc3703949e75ea5092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c53c1617f3aa3c5f16ba16e8ec548e46ce22137
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594338"
 ---
 # <a name="microsofttransactionstransactionbridgepreparemessageretry"></a>Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
-Ponowna próba przygotowania wiadomość została wysłana do uczestnika, który nie odpowiada.  
+Do uczestnika, który nie odpowiada, wysłano ponowną próbę komunikatu przygotowania.  
   
 ## <a name="description"></a>Opis  
- Śledzone w razie potrzeby lokalny Menedżer transakcji próba wysłania wiadomości przygotowania do podrzędnego uczestnika, ponieważ nie otrzymała odpowiedzi w określonym czasie.  
+ Śledzony, jeśli lokalny Menedżer transakcji jest wymagany do ponownego wysłania komunikatu przygotowania do uczestnika podrzędnego, ponieważ nie otrzymał odpowiedzi w danym czasie.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Badania potencjalnych sieci lub problemy z produktu, które uniemożliwiają są dostarczane na czas odpowiedzi.  Jeśli wiele z tych komunikatów są widoczne, może to wskazywać problemy z infrastrukturą lub nieprawidłowo długich czasów odpowiedzi. Zarówno w przypadku problemów może znacząco zmniejszyć przepływność transakcji w ramach systemu.  
+ Zbadaj potencjalne problemy z siecią lub produktem, które uniemożliwiają dostarczenie odpowiedzi na czas.  Jeśli jest widocznych wiele z tych komunikatów, może to oznaczać problemy z infrastrukturą lub czasy nietypowej odpowiedzi. Oba problemy mogą znacząco zmniejszyć przepływność transakcji w ramach systemu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

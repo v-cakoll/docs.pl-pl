@@ -2,12 +2,12 @@
 title: Pojęcia zabezpieczeń użyte dla programu WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743878"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595183"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
 Zabezpieczenia Windows Communication Foundation (WCF) są tworzone w oparciu o koncepcje już używane i wdrożone w różnych infrastrukturach zabezpieczeń.  
@@ -31,7 +31,7 @@ Infrastruktura kluczy publicznych (PKI) to system certyfikatów cyfrowych, urzę
  Certyfikaty X. 509 są głównym formularzem poświadczeń używanym w aplikacjach zabezpieczeń. Aby uzyskać więcej informacji na temat certyfikatów X. 509, zobacz [Certyfikaty klucza publicznego x. 509](/windows/win32/seccertenroll/about-x-509-public-key-certificates). Certyfikaty X. 509 są przechowywane w magazynie certyfikatów. Komputer z systemem Windows ma kilka rodzajów magazynów certyfikatów, z których każdy ma inny cel. Aby uzyskać więcej informacji na temat różnych magazynów, zobacz [magazyny certyfikatów](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Specyfikacje zabezpieczenia usług w sieci Web  
- Powiązania zdefiniowane przez system obsługują wiele powszechnie używanych specyfikacji zabezpieczeń usług sieci Web. Aby uzyskać pełną listę powiązań dostarczanych przez system i specyfikacji usług sieci Web, które są przez nie obsługiwane przez program, zobacz: [Protokoły usług sieci Web obsługiwanych przez powiązania współdziałania dostarczone przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Powiązania zdefiniowane przez system obsługują wiele powszechnie używanych specyfikacji zabezpieczeń usług sieci Web. Aby uzyskać pełną listę powiązań dostarczanych przez system i specyfikacji usług sieci Web, które są przez nie obsługiwane przez program, zobacz: [Protokoły usług sieci Web obsługiwanych przez powiązania współdziałania dostarczone przez system](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu  
  Funkcja WCF zapewnia wiele sposobów kontroli dostępu do usługi lub operacji. Wśród nich są  
@@ -46,9 +46,9 @@ Infrastruktura kluczy publicznych (PKI) to system certyfikatów cyfrowych, urzę
   
 5. Model tożsamości  
   
- Aby uzyskać więcej informacji na temat tych tematów, zobacz [mechanizmy Access Control](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ Aby uzyskać więcej informacji na temat tych tematów, zobacz [mechanizmy Access Control](access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Przegląd zabezpieczeń](security-overview.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

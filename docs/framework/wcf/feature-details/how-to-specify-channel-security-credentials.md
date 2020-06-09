@@ -2,12 +2,12 @@
 title: 'Instrukcje: określanie poświadczeń zabezpieczeń kanału'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596945"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: określanie poświadczeń zabezpieczeń kanału
 Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM wywoływanie usług WCF. Większość usług WCF wymaga od klienta określenia poświadczeń uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z poziomu klienta WCF można określić te poświadczenia w kodzie zarządzanym lub w pliku konfiguracyjnym aplikacji. Podczas wywoływania usługi WCF z poziomu aplikacji modelu COM można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu, aby określić poświadczenia. W tym temacie przedstawiono różne sposoby określania poświadczeń przy użyciu <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
@@ -15,7 +15,7 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials>jest interfejsem IDispatch i nie uzyskasz funkcji IntelliSense w środowisku programu Visual Studio.  
   
- W tym artykule zostanie użyta usługa WCF zdefiniowana w [przykładzie zabezpieczenia wiadomości](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ W tym artykule zostanie użyta usługa WCF zdefiniowana w [przykładzie zabezpieczenia wiadomości](../samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Aby określić certyfikat klienta  
   
@@ -115,7 +115,7 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
   
 ### <a name="to-specify-an-issue-token"></a>Aby określić token problemu  
   
-1. Tokeny wystawiania są używane tylko w przypadku aplikacji korzystających z zabezpieczeń federacyjnych. Aby uzyskać więcej informacji na temat zabezpieczeń federacyjnych, zobacz [federacyjne i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) i [przykład Federacji](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1. Tokeny wystawiania są używane tylko w przypadku aplikacji korzystających z zabezpieczeń federacyjnych. Aby uzyskać więcej informacji na temat zabezpieczeń federacyjnych, zobacz [federacyjne i wystawione tokeny](federation-and-issued-tokens.md) i [przykład Federacji](../samples/federation-sample.md).  
   
      Poniższy przykład kodu Visual Basic ilustruje sposób wywołania <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> metody:  
   
@@ -131,10 +131,10 @@ Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM
   
      Aby uzyskać więcej informacji na temat parametrów dla tej metody, zobacz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Federacja](federation.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: tworzenie klienta federacyjnego](how-to-create-a-federated-client.md)
+- [Zabezpieczenia komunikatów](message-security-in-wcf.md)
+- [Wiązania i zabezpieczenia](bindings-and-security.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
+description: Dowiedz się, jak używać anonimowych potoków do lokalnej komunikacji międzyprocesowej na komputerze lokalnym w programie .NET. Potoki anonimowe wymagają mniej obciążenia niż potoki nazwane.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291789"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594806"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
 Potoki anonimowe zapewniają komunikację międzyprocesową na komputerze lokalnym. Oferują one mniej funkcji niż nazwane potoki, ale również wymagają mniejszego obciążenia. Można używać potoków anonimowych, aby ułatwić komunikację międzyprocesową na komputerze lokalnym. Nie można używać potoków anonimowych do komunikacji za pośrednictwem sieci.  
@@ -45,7 +46,7 @@ Potoki anonimowe zapewniają komunikację międzyprocesową na komputerze lokaln
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Potoki](pipe-operations.md)
 - [Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej](how-to-use-named-pipes-for-network-interprocess-communication.md)

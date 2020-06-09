@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 99e3c2f4445673f3b74048a2b466203af7bc2795
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596828"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
 
-Windows Communication Foundation (WCF) udostępnia deweloperowi kodu zarządzanego zaawansowane środowisko do tworzenia połączonych aplikacji. Jeśli jednak masz znaczną inwestycję w niezarządzanym kodzie COM i nie chcesz migrować, nadal możesz zintegrować usługi sieci Web WCF bezpośrednio z istniejącym kodem przy użyciu monikera usługi WCF. Moniker usługi może być używany z szerokiego zakresu środowisk programistycznych opartych na modelu COM, takich jak Office VBA, Visual Basic 6,0 i Visual C++ 6,0.
+Windows Communication Foundation (WCF) udostępnia deweloperowi kodu zarządzanego zaawansowane środowisko do tworzenia połączonych aplikacji. Jeśli jednak masz znaczną inwestycję w niezarządzanym kodzie COM i nie chcesz migrować, nadal możesz zintegrować usługi sieci Web WCF bezpośrednio z istniejącym kodem przy użyciu monikera usługi WCF. Moniker usługi może być używany z szerokiego zakresu środowisk programistycznych opartych na modelu COM, takich jak pakiet Office VBA, Visual Basic 6,0 lub Visual C++ 6,0.
 
 > [!NOTE]
 > Moniker usługi używa kanału komunikacyjnego WCF do całej komunikacji. Mechanizmy zabezpieczeń i tożsamości dla tego kanału różnią się od tych używanych w standardowych serwerach proxy modelu COM i modelu DCOM. Ponadto, ponieważ moniker usługi używa kanału komunikacyjnego WCF, domyślny okres limitu czasu wynosi jedną minutę dla wszystkich wywołań.
@@ -67,6 +67,6 @@ W poniższej tabeli przedstawiono parametry, które są obsługiwane przez monik
 >
 > `</configuration>`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Rejestrowanie i Konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Instrukcje: rejestrowanie i konfigurowanie monikera usługi](how-to-register-and-configure-a-service-moniker.md)

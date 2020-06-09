@@ -2,12 +2,12 @@
 title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 835a158ba668a3aef749602c73fd9157e8d83a40
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4b49edd3b5a2cecd203feed713c7694450f7497
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596555"
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 Ten przykład pokazuje, jak zaimplementować niestandardowy wystawca uwierzytelnienia tokenów. Wystawca uwierzytelnienia w programie Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego w komunikacie, weryfikowania, czy jest on spójny, i uwierzytelniania tożsamości skojarzonej z tokenem.
@@ -30,7 +30,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowy wystawca uwierzyteln
 
  Ten przykład pokazuje również, jak tożsamość wywołującego jest dostępna z programu WCF po procesie uwierzytelniania tokenu niestandardowego.
 
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding`, z trybem zabezpieczeń ustawionym na komunikat — domyślny tryb `wsHttpBinding`. Ten przykład ustawia standardowy `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu zachowania `serviceCredentials`. Zachowanie `securityCredentials` pozwala określić certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w poniższych instrukcjach dotyczących instalacji.
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane ze standardem `wsHttpBinding` , z trybem zabezpieczeń ustawionym na komunikat — domyślny tryb `wsHttpBinding` . Ten przykład ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowania. `securityCredentials`Zachowanie pozwala określić certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w poniższych instrukcjach dotyczących instalacji.
 
 ```xml
 <system.serviceModel>
@@ -81,7 +81,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowy wystawca uwierzyteln
   </system.serviceModel>
 ```
 
- Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednimi `Mode` i `clientCredentialType`.
+ Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednimi `Mode` i `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -123,7 +123,7 @@ static void Main()
 
 1. Napisz niestandardowy wystawca uwierzytelnienia.
 
-     Przykład implementuje niestandardowy wystawca uwierzytelnienia tokenów, który sprawdza, czy nazwa użytkownika ma prawidłowy format wiadomości e-mail. Dziedziczy <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Najważniejszym sposobem w tej klasie jest <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. W tej metodzie wystawca uwierzytelnienia weryfikuje format nazwy użytkownika, a także że nazwa hosta nie pochodzi z nieautoryzowanej domeny. W przypadku spełnienia obu warunków funkcja zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> wystąpień tylko do odczytu, która jest następnie używana do dostarczania oświadczeń, które reprezentują informacje przechowywane wewnątrz tokenu username.
+     Przykład implementuje niestandardowy wystawca uwierzytelnienia tokenów, który sprawdza, czy nazwa użytkownika ma prawidłowy format wiadomości e-mail. Dziedziczy <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator> . Najważniejszym sposobem w tej klasie jest <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29> . W tej metodzie wystawca uwierzytelnienia weryfikuje format nazwy użytkownika, a także że nazwa hosta nie pochodzi z nieautoryzowanej domeny. W przypadku spełnienia obu warunków funkcja zwraca kolekcję wystąpień tylko do odczytu, <xref:System.IdentityModel.Policy.IAuthorizationPolicy> która jest używana do dostarczania oświadczeń, które reprezentują informacje przechowywane wewnątrz tokenu username.
 
     ```csharp
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
@@ -142,7 +142,7 @@ static void Main()
 
 2. Podaj zasady autoryzacji, które są zwracane przez niestandardowy wystawca uwierzytelnienia.
 
-     Ten przykład zawiera własną implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> o nazwie `UnconditionalPolicy`, która zwraca zestaw oświadczeń i tożsamości, które zostały do niego przesłane w konstruktorze.
+     Ten przykład zawiera własną implementację o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> nazwie `UnconditionalPolicy` , która zwraca zestaw oświadczeń i tożsamości, które zostały do niego przesłane w konstruktorze.
 
     ```csharp
     class UnconditionalPolicy : IAuthorizationPolicy
@@ -212,7 +212,7 @@ static void Main()
 
 3. Napisz niestandardowego menedżera tokenów zabezpieczających.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> dla konkretnych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> obiektów, które są do niego przenoszone w metodzie `CreateSecurityTokenAuthenticator`. Menedżer tokenów zabezpieczających jest również używany do tworzenia dostawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z klasy <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> i zastępuje metodę `CreateSecurityTokenAuthenticator` w celu zwrócenia niestandardowej wystawcy tokenów username, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano uwierzytelnienia nazwy użytkownika.
+     Służy <xref:System.IdentityModel.Selectors.SecurityTokenManager> do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> dla określonych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> obiektów, które są do niego przenoszone w `CreateSecurityTokenAuthenticator` metodzie. Menedżer tokenów zabezpieczających jest również używany do tworzenia dostawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy i przesłania `CreateSecurityTokenAuthenticator` metodę w celu zwrócenia niestandardowej wystawcy tokenów username, gdy spełnione wymagania dotyczące tokenu wskazują, że żądanie uwierzytelnienia nazwy użytkownika jest wymagane.
 
     ```csharp
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
@@ -268,7 +268,7 @@ static void Main()
 
 5. Skonfiguruj usługę tak, aby korzystała z poświadczeń usługi niestandardowej.
 
-     Aby usługa mogła korzystać z poświadczeń usługi niestandardowej, należy usunąć domyślną klasę poświadczeń usługi po przechwyceniu certyfikatu usługi, który został już wstępnie skonfigurowany w domyślnym poświadczenia usługi, i skonfigurować nowe poświadczenie usługi wystąpienie, aby użyć wstępnie skonfigurowanych certyfikatów usługi i dodać to nowe wystąpienie poświadczeń usługi do zachowań usługi.
+     Aby usługa mogła korzystać z poświadczeń usługi niestandardowej, należy usunąć domyślną klasę poświadczeń usługi po przechwyceniu certyfikatu usługi, który jest już wstępnie skonfigurowany w domyślnym poświadczenie usługi, i skonfigurować nowe wystąpienie poświadczeń usługi do korzystania ze wstępnie skonfigurowanych certyfikatów usługi i dodać nowe wystąpienie poświadczeń usługi do zachowań usługi.
 
     ```csharp
     ServiceCredentials sc = serviceHost.Credentials;
@@ -279,7 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Aby wyświetlić informacje o wywołującym, można użyć <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, jak pokazano w poniższym kodzie. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> zawiera informacje o oświadczeniach dotyczących bieżącego obiektu wywołującego.
+ Aby wyświetlić informacje o wywołującym, można użyć, <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> jak pokazano w poniższym kodzie. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>Zawiera informacje o oświadczeniach dotyczących bieżącego obiektu wywołującego.
 
 ```csharp
 static void DisplayIdentityInformation()
@@ -299,7 +299,7 @@ static void DisplayIdentityInformation()
 
 - Tworzenie certyfikatu serwera.
 
-     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna `%SERVER_NAME%` określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. `%SERVER_NAME%`Zmienna określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
 
     ```console
     echo ************
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. Skopiuj pliki programu Service Files do katalogu usługi na komputerze usługi. Skopiuj także pliki Setup. bat i Oczyść. bat do komputera usługi.  
   
-3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik App. config usługi musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można go utworzyć przy użyciu Setup. bat, jeśli zmienna `%SERVER_NAME%` ma w pełni kwalifikowaną nazwę hosta komputera, na którym zostanie uruchomiona usługa. Należy pamiętać, że plik Setup. bat musi być uruchamiany z wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora.  
+3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik App. config usługi musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można go utworzyć przy użyciu Setup. bat, jeśli ustawisz `%SERVER_NAME%` zmienną na w pełni kwalifikowaną nazwę hosta komputera, na którym zostanie uruchomiona usługa. Należy pamiętać, że plik Setup. bat musi być uruchamiany z wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora.  
   
 4. Skopiuj certyfikat serwera do magazynu CurrentUser-TrustedPeople klienta. Nie trzeba tego robić, chyba że certyfikat serwera zostanie wystawiony przez zaufanego wystawcy klienta.  
   

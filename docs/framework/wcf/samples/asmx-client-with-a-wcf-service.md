@@ -2,12 +2,12 @@
 title: Klient ASMX z usługą WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: a560650dba250d1ee4f0b959ead70a2915c9997f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594780"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Klient ASMX z usługą WCF
 
@@ -16,9 +16,9 @@ W tym przykładzie pokazano, jak utworzyć usługę przy użyciu programu Window
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Umowa jest definiowana przez interfejs `ICalculator`, który uwidacznia operacje matematyczne (`Add`, `Subtract`, `Multiply`i `Divide`). Klient ASMX wykonuje synchroniczne żądania do operacji matematycznej i odpowiedzi usługi z wynikiem.
+Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne ( `Add` , `Subtract` , `Multiply` i `Divide` ). Klient ASMX wykonuje synchroniczne żądania do operacji matematycznej i odpowiedzi usługi z wynikiem.
 
-Usługa implementuje kontrakt `ICalculator` zgodnie z definicją w poniższym kodzie.
+Usługa implementuje `ICalculator` kontrakt zgodnie z definicją w poniższym kodzie.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]
@@ -35,9 +35,9 @@ public interface ICalculator
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> mapują typy CLR na reprezentację w formacie XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpretuje niektóre reprezentacje XML inaczej niż XmlSerializer. Generatory proxy inne niż WCF, takie jak WSDL. exe, generują interfejs bardziej użyteczny, gdy jest używany element XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute> jest stosowany do interfejsu `ICalculator`, aby upewnić się, że XmlSerializer jest używany do mapowania typów CLR na XML. Implementacja usługi oblicza i zwraca odpowiedni wynik.
+<xref:System.Runtime.Serialization.DataContractSerializer>I <xref:System.Xml.Serialization.XmlSerializer> MAPUJ typy CLR na reprezentację XML. <xref:System.Runtime.Serialization.DataContractSerializer>Interpretuje niektóre reprezentacje XML inaczej niż XmlSerializer. Generatory proxy inne niż WCF, takie jak WSDL. exe, generują interfejs bardziej użyteczny, gdy jest używany element XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute>Jest stosowany do `ICalculator` interfejsu, aby upewnić się, że XmlSerializer jest używany do mapowania typów CLR na XML. Implementacja usługi oblicza i zwraca odpowiedni wynik.
 
-Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji (Web. config). Punkt końcowy składa się z adresu, powiązania i kontraktu. Usługa uwidacznia punkt końcowy pod adresem podstawowym dostarczonym przez hosta Internet Information Services (IIS). Atrybut `binding` jest ustawiany na basicHttpBinding, który zapewnia komunikację HTTP przy użyciu protokołu SOAP 1,1, który jest zgodny z protokołem WS-I BasicProfile 1,1, jak pokazano w poniższej konfiguracji przykładowej.
+Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji (Web. config). Punkt końcowy składa się z adresu, powiązania i kontraktu. Usługa uwidacznia punkt końcowy pod adresem podstawowym dostarczonym przez hosta Internet Information Services (IIS). `binding`Atrybut jest ustawiany na BasicHttpBinding, który zapewnia komunikację HTTP przy użyciu protokołu SOAP 1,1, który jest zgodny z protokołem WS-I BasicProfile 1,1, jak pokazano w poniższej konfiguracji przykładowej.
 
 ```xml
 <services>
@@ -51,7 +51,7 @@ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany
 </services>
 ```
 
-Klient ASMX komunikuje się z usługą WCF przy użyciu serwera proxy z określonym typem, który jest generowany przez narzędzie Web Services Description Language (WSDL) (WSDL. exe). Typ serwera proxy jest zawarty w pliku generatedClient.cs. Narzędzie WSDL pobiera metadane dla określonej usługi i generuje serwer proxy z określonym typem, który będzie używany przez klienta do komunikacji. Domyślnie platforma nie ujawnia żadnych metadanych. Aby udostępnić metadane wymagane do wygenerowania serwera proxy, należy dodać [\<ServiceMetadata](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) i ustawić jego atrybut `httpGetEnabled` na `True`, jak pokazano w poniższej konfiguracji.
+Klient ASMX komunikuje się z usługą WCF przy użyciu serwera proxy z określonym typem, który jest generowany przez narzędzie Web Services Description Language (WSDL) (WSDL. exe). Typ serwera proxy jest zawarty w pliku generatedClient.cs. Narzędzie WSDL pobiera metadane dla określonej usługi i generuje serwer proxy z określonym typem, który będzie używany przez klienta do komunikacji. Domyślnie platforma nie ujawnia żadnych metadanych. Aby udostępnić metadane wymagane do wygenerowania serwera proxy, należy dodać [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) i ustawić jego atrybut, `httpGetEnabled` `True` tak jak pokazano w poniższej konfiguracji.
 
 ```xml
 <behaviors>
@@ -132,20 +132,20 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat przekazywania i zwracania złożonych typów danych, zobacz: [powiązanie danych w kliencie Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [powiązanie danych w kliencie Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)i [powiązanie danych w kliencie ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)
+> Aby uzyskać więcej informacji na temat przekazywania i zwracania złożonych typów danych, zobacz: [powiązanie danych w kliencie Windows Forms](data-binding-in-a-windows-forms-client.md), [powiązanie danych w kliencie Windows Presentation Foundation](data-binding-in-a-wpf-client.md)i [powiązanie danych w kliencie ASP.NET](data-binding-in-an-aspnet-client.md)
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`

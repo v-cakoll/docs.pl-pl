@@ -2,21 +2,21 @@
 title: System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent
 ms.date: 03/30/2017
 ms.assetid: a27f4243-2b80-44da-bb79-674912395d93
-ms.openlocfilehash: 29994ad26c9f2808034bad402656ac1280c7908f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 456b183ea58df75f45ff7bfeda36ca0d61e30e75
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595833"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a>System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent
 System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent  
   
 ## <a name="description"></a>Opis  
- Sesja zabezpieczeń serwera, które są wysyłane sesję przerwane błędów do klienta.  
+ Sesja zabezpieczeń serwera wysłała Błąd przerwania sesji do klienta.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie poświadczeń pomocniczych'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597153"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Instrukcje: Tworzenie poświadczeń pomocniczych
 Istnieje możliwość, że niestandardowy schemat zabezpieczeń wymaga więcej niż jednego poświadczenia. Na przykład usługa może wymagać od klienta nie tylko nazwy użytkownika i hasła, ale również poświadczenia, które potwierdzają, że klient znajduje się w wieku 18 lat. Drugie poświadczenie jest *pomocniczą poświadczeniem*. W tym temacie wyjaśniono, jak zaimplementować takie poświadczenia w kliencie Windows Communication Foundation (WCF).  
@@ -27,15 +27,15 @@ Istnieje możliwość, że niestandardowy schemat zabezpieczeń wymaga więcej n
 ## <a name="endorsing-signing-and-encrypting"></a>Zatwierdzanie, podpisywanie i szyfrowanie  
  W wyniku obsługi poświadczenie pomocnicze przesyłane w komunikacie jest *obsługiwany token* . Specyfikacja WS-SecurityPolicy definiuje cztery sposoby dołączania tokenu pomocniczego do wiadomości, zgodnie z opisem w poniższej tabeli.  
   
-|Cel|Opis|  
+|Przeznaczenie|Opis|  
 |-------------|-----------------|  
 |Opatrzon|Token pomocniczy jest zawarty w nagłówku zabezpieczeń i jest podpisany przez sygnaturę wiadomości.|  
 |Indosowania|*Token poświadczający* podpisuje sygnaturę wiadomości.|  
-|Podpisywanie i zatwierdzanie|Podpisane, poświadczające tokeny podpisują cały element `ds:Signature` wystawiony na podstawie podpisu komunikatu i są podpisane przez tę sygnaturę wiadomości; oznacza to, że oba tokeny (token używany dla podpisu wiadomości i podpisany token zatwierdzania) podpisują siebie nawzajem.|  
-|Podpisywanie i szyfrowanie|Podpisane, zaszyfrowane tokeny pomocnicze są podpisywane tokeny pomocnicze, które są również szyfrowane, gdy pojawiają się one w `wsse:SecurityHeader`.|  
+|Podpisywanie i zatwierdzanie|Podpisane, poświadczające tokeny podpisują cały `ds:Signature` element wystawiony na podstawie podpisu wiadomości i są podpisywane przez tę sygnaturę wiadomości; oznacza to, że oba tokeny (token używany dla podpisu wiadomości i podpisany token poświadczający) podpisują siebie nawzajem.|  
+|Podpisywanie i szyfrowanie|Podpisane, zaszyfrowane tokeny pomocnicze są podpisywane tokeny pomocnicze, które są również szyfrowane, gdy są wyświetlane w `wsse:SecurityHeader` .|  
   
 ## <a name="programming-supporting-credentials"></a>Programowanie — poświadczenia pomocnicze  
- Aby utworzyć usługę korzystającą z tokenów pomocniczych, należy utworzyć [\<niestandardowebinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Aby uzyskać więcej informacji, zobacz [How to: Create a Custom Binding using the elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Aby utworzyć usługę korzystającą z tokenów pomocniczych, należy utworzyć [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) . (Aby uzyskać więcej informacji, zobacz [How to: Create a Custom Binding using the elementu SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Pierwszym krokiem podczas tworzenia niestandardowego powiązania jest utworzenie elementu powiązania zabezpieczeń, który może być jednym z trzech typów:  
   
@@ -45,7 +45,7 @@ Istnieje możliwość, że niestandardowy schemat zabezpieczeń wymaga więcej n
   
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Wszystkie klasy dziedziczą z <xref:System.ServiceModel.Channels.SecurityBindingElement>, w tym cztery odpowiednie właściwości:  
+ Wszystkie klasy dziedziczą z <xref:System.ServiceModel.Channels.SecurityBindingElement> , która obejmuje cztery odpowiednie właściwości:  
   
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
@@ -68,18 +68,18 @@ Istnieje możliwość, że niestandardowy schemat zabezpieczeń wymaga więcej n
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Tworzenie niestandardowego powiązania zawierającego poświadczenia pomocnicze  
   
-1. Utwórz element powiązania zabezpieczeń. Poniższy przykład tworzy <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> z trybem uwierzytelniania `UserNameForCertificate`. Użyj metody <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Utwórz element powiązania zabezpieczeń. Poniższy przykład tworzy <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> z `UserNameForCertificate` trybem uwierzytelniania. Użyj metody <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2. Dodaj parametr pomocniczy do kolekcji typów zwracanych przez odpowiednią właściwość (`Endorsing`, `Signed`, `SignedEncrypted`lub `SignedEndorsed`). Typy w przestrzeni nazw <xref:System.ServiceModel.Security.Tokens> zawierają powszechnie używane typy, takie jak <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Dodaj parametr pomocniczy do kolekcji typów zwracanych przez odpowiednią właściwość ( `Endorsing` , `Signed` , `SignedEncrypted` lub `SignedEndorsed` ). Typy w <xref:System.ServiceModel.Security.Tokens> przestrzeni nazw zawierają powszechnie używane typy, takie jak <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> .  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład tworzy wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i dodaje wystąpienie klasy <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> do kolekcji zwróconej przez wartość właściwości zatwierdzania.  
+ Poniższy przykład tworzy wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i dodaje wystąpienie <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> klasy do kolekcji, która zwraca właściwość poświadczający.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

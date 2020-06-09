@@ -2,12 +2,12 @@
 title: Zabezpieczenia transportu HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212134"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592726"
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 W przypadku korzystania z protokołu HTTP jako transportu zabezpieczenia są zapewniane przez implementację SSL (SSL). Protokół SSL jest szeroko używany przez Internet do uwierzytelniania usługi dla klienta, a następnie do zapewnienia poufności (szyfrowania) kanału. W tym temacie opisano sposób działania protokołu SSL i sposobu ich implementacji w programie Windows Communication Foundation (WCF).  
@@ -51,9 +51,9 @@ Aby skonfigurować certyfikaty do użycia z usługami IIS 7,0, zobacz [Konfiguro
 
  W przypadku tworzenia własnej aplikacji WCF należy użyć narzędzia [HttpCfg. exe](/windows/win32/http/httpcfg-exe) .
   
- Aby uzyskać więcej informacji o używaniu narzędzia HttpCfg. exe do konfigurowania portu za pomocą certyfikatu X. 509, zobacz [How to: Configure a port with SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Aby uzyskać więcej informacji o używaniu narzędzia HttpCfg. exe do konfigurowania portu za pomocą certyfikatu X. 509, zobacz [How to: Configure a port with SSL Certificate](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Zabezpieczenia transportu](transport-security.md)
+- [Zabezpieczenia komunikatów](message-security-in-wcf.md)

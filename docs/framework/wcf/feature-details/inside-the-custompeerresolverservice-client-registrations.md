@@ -1,38 +1,38 @@
 ---
-title: 'Szczegóły usługi CustomPeerResolverService: Rejestracje klienta'
+title: 'Szczegóły usługi CustomPeerResolverService: rejestracje klienta'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce694408edbb40309d1750be49b8414ebcbce3f7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619780"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596841"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Szczegóły usługi CustomPeerResolverService: Rejestracje klienta
-Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi rozpoznawania nazw za pośrednictwem `Register` funkcji. Usługa rozpoznawania nazw przechowuje te informacje jako rekord rejestracji. Ten rekord zawiera unikatowy identyfikator (identyfikator), a informacje o punkcie końcowym (PeerNodeAddress) dla węzła.  
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Szczegóły usługi CustomPeerResolverService: rejestracje klienta
+Każdy węzeł siatki publikuje informacje o punkcie końcowym w usłudze rozpoznawania nazw za pomocą `Register` funkcji. Usługa rozpoznawania nazw zapisuje te informacje jako rekord rejestracji. Ten rekord zawiera unikatowy identyfikator (Identyfikator rejestracji) i informacje o punkcie końcowym (PeerNodeAddress) dla węzła.  
   
 ## <a name="stale-records-and-expiration-time"></a>Stare rekordy i czas wygaśnięcia  
- Najlepiej, gdy węzeł opuści siatkę, jego wywoła `Unregister` funkcji, która powoduje, że usługa rozpoznawania nazw usunąć wpis rejestracji. Czasami węzłów zamknięty lub stać się niedostępne, przed wywołaniem `Unregister`, opuścić za rekord starych rejestracji.  
+ Najlepiej, gdy węzeł opuszcza siatkę, wywoła `Unregister` funkcję, co spowoduje usunięcie wpisu rejestracji przez usługę rozpoznawania nazw. Czasami węzły są zamykane lub stają się niedostępne przed wywołaniem `Unregister` , pozostawiając poza nieodświeżonym rekordem rejestracji.  
   
- Starych rekordów w usłudze rozpoznawania nazw może spowodować połączenia zakończone niepowodzeniem. Jeśli węzeł podejmuje próbę nawiązania siatki otrzyma informacje o połączeniu starych z usługi rozpoznawania nazw, może potrwać dłużej pomyślnie dołączyć siatkę. Stare rekordy skorzystać z pamięci. Bez wydajny proces oczyszczania pamięci podręcznej, używane do przechowywania rejestracji po pewnym czasie można overflow i awarii usługi rozpoznawania nazw.  
+ Nieodświeżone rekordy w usłudze rozpoznawania nazw mogą prowadzić do nieudanych połączeń. Jeśli węzeł próbujący połączyć się z siatką otrzymuje stare informacje o połączeniu z usługi rozpoznawania nazw, może to potrwać dłużej. Stare rekordy również zajmują pamięć. Bez skutecznego procesu oczyszczania pamięć podręczna służąca do przechowywania rejestracji może ostatecznie przekroczyć i spowodować awarię usługi rozpoznawania.  
   
- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> Oznacza każdy rekord z czasem wygaśnięcia (Data/godzina) i przechowuje te informacje jako część rekordu. Usługa korzysta z czasu wygaśnięcia do identyfikowania starych rekordów. Niestandardowe implementacje powinien zrobić coś podobnego.  
+ <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>Oznacza każdy rekord z czasem wygaśnięcia (DateTime) i zapisuje te informacje jako część rekordu. Usługa używa czasu wygaśnięcia do identyfikowania starych rekordów. Implementacje niestandardowe powinny być podobne.  
   
 ## <a name="refreshinterval-and-cleanupinterval"></a>RefreshInterval i CleanupInterval  
- `RefreshInterval` Właściwość <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> definiuje, jak długo rejestracji rekordów flagi card_authenticate_ w tabeli odnośników rejestracji usługi. Czas przekazany do tej właściwości został przekazany do danego rekordu, że rekord staje się nieaktualne i jest oznaczona do usunięcia.  
+ `RefreshInterval`Właściwość <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> określa, jak długo rekordy rejestracji są prawidłowe w tabeli odnośników rejestracji usługi. Gdy ilość czasu podanego dla tej właściwości została przekazana dla danego rekordu, ten rekord jest przestarzały i jest oznaczony do usunięcia.  
   
- `CleanupInterval` Właściwość <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> informuje, jak często usługa do wyszukiwania i usuwania starych rejestracji rekordów. `CleanupInterval` Powinna być ustawiona na czas, większa niż lub równa `RefreshInterval` ustawić w usłudze.  
+ `CleanupInterval`Właściwość <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> informuje usługę, jak często wyszukiwanie i usuwanie starych rekordów rejestracji. `CleanupInterval`Należy ustawić wartość czasu większą niż lub równą `RefreshInterval` ustawionej w usłudze.  
   
- Aby zaimplementować usługi rozpoznawania nazw, należy napisać funkcję obsługi do usuwania przestarzałych rejestracji rekordów. Istnieje kilka sposobów, aby to zrobić:  
+ Aby zaimplementować własną usługę rozpoznawania nazw, należy napisać funkcję konserwacji w celu usunięcia starych rekordów rejestracji. Można to zrobić na kilka sposobów:  
   
-- **Okresowej konserwacji**: Należy skonfigurować czasomierz go okresowo i przechodzą przez swoim magazynem danych, aby usunąć stare rekordy. <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> Korzysta z tej metody.  
+- **Okresowa konserwacja**: Ustaw czasomierz, który będzie okresowo wyłączany, i przejdź przez magazyn danych, aby usunąć stare rekordy. <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>Używa tego podejścia.  
   
-- **Usuwanie pasywnym**: Zamiast aktywnie wyszukiwanie starych rekordów w regularnych odstępach czasu, można zidentyfikować i usuwania starych rekordów, gdy usługa działa już inna funkcja. To może spowodować spowolnienie czas odpowiedzi na żądania od klientów programu rozpoznawania nazw, ale eliminuje to potrzebę czasomierza i bardziej wydajne, jeśli kilka węzły są oczekiwane, aby pozostawić bez wywoływania `Unregister`.  
+- **Pasywne usuwanie**: zamiast aktywnie wyszukiwania starych rekordów w regularnych odstępach czasu można identyfikować i usuwać stare rekordy, gdy usługa już wykonuje inną funkcję. Może to potencjalnie spowolnić czas odpowiedzi na żądania od klientów programu rozpoznawania nazw, ale eliminuje konieczność czasomierza i może być bardziej wydajny, jeśli oczekuje się, że kilka węzłów zostanie pozostawionych bez wywoływania `Unregister` .  
   
-## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime i odświeżanie  
- Gdy węzeł rejestruje się za pomocą usługi rozpoznawania nazw, otrzymuje <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> obiektu z usługi. Ten obiekt zawiera `RegistrationLifetime` właściwości, które wskazuje na węzeł, czas, jaki ma przed rejestracją wygaśnie i zostanie usunięty w usłudze rozpoznawania nazw. Jeśli na przykład `RegistrationLifetime` to 2 minuty, węzeł musi wywołać `Refresh` w mniej niż 2 minut zapewnienie rekord pozostaje od nowa i nie zostanie usunięta. Po odebraniu usługi rozpoznawania nazw `Refresh` żądań wyszukuje rekord i resetuje czas wygaśnięcia. Odśwież zwraca <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> obiekt z `RegistrationLifetime` właściwości.  
+## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime i Odśwież  
+ Gdy węzeł rejestruje się za pomocą usługi rozpoznawania nazw, otrzymuje <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> obiekt z usługi. Ten obiekt ma `RegistrationLifetime` Właściwość, która wskazuje na węzeł, ile czasu ma przed wygaśnięciem rejestracji i który zostanie usunięty przez usługę rozpoznawania nazw. Jeśli na przykład `RegistrationLifetime` jest to 2 minuty, węzeł musi wywołać `Refresh` w ciągu 2 minut, aby upewnić się, że rekord pozostanie świeży i nie zostanie usunięty. Gdy usługa rozpoznawania nazw odbiera `Refresh` żądanie, wyszukuje rekord i resetuje czas wygaśnięcia. Funkcja Refresh zwraca <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> obiekt z `RegistrationLifetime` właściwością.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Mechanizmy rozpoznawania elementów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Mechanizmy rozpoznawania elementów równorzędnych](peer-resolvers.md)

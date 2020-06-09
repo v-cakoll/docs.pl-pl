@@ -2,20 +2,20 @@
 title: Pobieranie metadanych
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 9b1adf4ed2a09625ca19016f531936002fff757d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4763686485dfe97844fad78cf0bb279113c0ce08
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183393"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594611"
 ---
 # <a name="retrieve-metadata"></a>Pobieranie metadanych
-W tym przykładzie pokazano, jak zaimplementować klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, z którym do komunikowania się. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana w celu udostępnienia dwóch punktów końcowych — `basicHttpBinding` punktu końcowego przy adresie podstawowym przy użyciu powiązania `wsHttpBinding` i bezpiecznego punktu końcowego w {*baseaddress*}/secure przy użyciu powiązania. Zamiast konfigurowania klienta z adresami punktu końcowego i powiązaniami, klient dynamicznie pobiera <xref:System.ServiceModel.Description.MetadataExchangeClient> metadane dla usługi przy <xref:System.ServiceModel.Description.ServiceEndpointCollection> użyciu <xref:System.ServiceModel.Description.WsdlImporter> klasy, a następnie importuje metadane jako przy użyciu klasy.  
+Ten przykład pokazuje, jak wdrożyć klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, z którym należy się komunikować. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md). Usługa została zmodyfikowana w celu uwidocznienia dwóch punktów końcowych — punktu końcowego na adresie podstawowym przy użyciu `basicHttpBinding` powiązania oraz bezpiecznego punktu końcowego w lokalizacji {*BaseAddress*}/Secure przy użyciu `wsHttpBinding` powiązania. Zamiast konfigurować klienta z adresami punktów końcowych i powiązaniami, klient dynamicznie pobiera metadane dla usługi przy użyciu klasy, <xref:System.ServiceModel.Description.MetadataExchangeClient> a następnie Importuje metadane jako <xref:System.ServiceModel.Description.ServiceEndpointCollection> za pomocą <xref:System.ServiceModel.Description.WsdlImporter> klasy.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Aplikacja kliencka używa <xref:System.ServiceModel.Description.ServiceEndpointCollection> importowanych do tworzenia klientów do komunikowania się z usługą. Aplikacja kliencka iteruje za pośrednictwem każdego pobranego punktu końcowego `ICalculator` i komunikuje się z każdym punktem końcowym, który implementuje kontrakt. Odpowiedni adres i powiązanie są dostarczane z pobranym punktem końcowym, dzięki czemu klient jest skonfigurowany do komunikowania się z każdym punktem końcowym, jak pokazano w poniższym przykładowym kodzie.  
+ Aplikacja kliencka używa zaimportowanego <xref:System.ServiceModel.Description.ServiceEndpointCollection> programu do tworzenia klientów do komunikowania się z usługą. Aplikacja kliencka wykonuje iterację przez każdy pobrany punkt końcowy i komunikuje się z każdym punktem końcowym, który implementuje `ICalculator` kontrakt. Odpowiednie adresy i powiązania są dostarczane ze pobranym punktem końcowym, aby klient został skonfigurowany do komunikacji z każdym punktem końcowym, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 // Create a MetadataExchangeClient for retrieving metadata.  
@@ -50,21 +50,21 @@ foreach (ServiceEndpoint ep in endpoints)
 }  
 ```  
   
- Okno konsoli klienta wyświetla operacje wysyłane do każdego z punktów końcowych, wyświetlając ścieżkę adresu i nazwę powiązania.  
+ W oknie konsoli klienta zostaną wyświetlone operacje wysyłane do każdego z punktów końcowych, w których wyświetlana jest ścieżka adresu i nazwa powiązania.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C#, C++ lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania dla języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\RetrieveMetadata`  

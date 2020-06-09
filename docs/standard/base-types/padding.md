@@ -1,5 +1,6 @@
 ---
 title: Uzupełnianie ciągów w programie .NET
+description: Dowiedz się, jak uzupełniać ciągi w programie .NET. Użyj metod String. PadLeft i String. PadRight, aby dodać znaki wiodące lub końcowe w celu osiągnięcia określonej całkowitej długości.
 ms.date: 03/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 83d4b348c4de537d9a71363d34898a50a6a74cb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594533"
 ---
 # <a name="padding-strings-in-net"></a>Uzupełnianie ciągów w programie .NET
 
@@ -47,6 +48,6 @@ Użyj jednej z następujących <xref:System.String> metod, aby utworzyć nowy ci
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe operacje na ciągach](basic-string-operations.md)

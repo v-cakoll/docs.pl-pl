@@ -2,12 +2,12 @@
 title: Klasy UriTemplate i UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 106ba21b58dabab96afbc8fb6db5cb305386f2fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595079"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
 Deweloperzy sieci Web wymagają możliwości opisania kształtu i układu identyfikatorów URI, na które odpowiada ich usługi. Windows Communication Foundation (WCF) dodał dwie nowe klasy, aby umożliwić deweloperom kontrolę nad ich identyfikatorami URI. <xref:System.UriTemplate>i <xref:System.UriTemplateTable> stanowi podstawę aparatu wysyłania opartego na identyfikatorze URI w programie WCF. Te klasy mogą być również używane samodzielnie, co pozwala deweloperom korzystać z szablonów i mechanizmu mapowania identyfikatorów URI bez implementowania usługi WCF.  
@@ -324,10 +324,10 @@ Gdy zmienna otrzymuje wartość domyślną, istnieją `null` pewne dodatkowe ogr
 > [!NOTE]
 > Znaki i i. są uważane za różne znaki, gdy są wyświetlane jako część ścieżki URI lub <xref:System.UriTemplate> literału segmentu ścieżki (ale znaki a i a są uważane za takie same). Znaki i, są uznawane za te same znaki, gdy pojawiają się jako część <xref:System.UriTemplate> {VariableName} lub ciągu zapytania (a i a są również uznawane za te same znaki).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
-- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
-- [Tabela UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [Dyspozytor tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](wcf-web-http-programming-model-overview.md)
+- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](wcf-web-http-programming-object-model.md)
+- [UriTemplate](../samples/uritemplate-sample.md)
+- [Tabela UriTemplate](../samples/uritemplate-table-sample.md)
+- [Dyspozytor tabeli UriTemplate](../samples/uritemplate-table-dispatcher-sample.md)

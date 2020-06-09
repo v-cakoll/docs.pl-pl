@@ -2,21 +2,21 @@
 title: System.ServiceModel.GetServiceElement
 ms.date: 03/30/2017
 ms.assetid: 80535b67-f196-467b-93aa-ea9de902a2e5
-ms.openlocfilehash: bcc65b82c3504a1c11d5c8e4d94ef411a6f04b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0df9a1af8cb807295fd21a8b6ef3014ebe7cad8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84580726"
 ---
 # <a name="systemservicemodelgetserviceelement"></a>System.ServiceModel.GetServiceElement
 System.ServiceModel.GetServiceElement  
   
 ## <a name="description"></a>Opis  
- Ta śledzenia jest emitowane, podczas tworzenia usługi hosta na poziomie informacji. Zawiera on opis kontraktu usługi i powiązania.  
+ Ten ślad jest emitowany podczas konstruowania hosta usługi na poziomie informacji. Zawiera opis kontraktu i powiązania usługi.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

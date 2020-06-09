@@ -2,20 +2,20 @@
 title: 'Instrukcje: Ustalanie wersji odnajdywania żądania sondowania'
 ms.date: 03/30/2017
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
-ms.openlocfilehash: 8fbc3936278a5c6f403f48b59390c69c64378004
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2b7e42714ae1d16a84bcb6f0fc79cf5b376a7a16
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425268"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595417"
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Instrukcje: Ustalanie wersji odnajdywania żądania sondowania
 
-Serwera proxy odnajdywania może narazić wiele odnajdywania punktów końcowych przy użyciu odnajdywania w różnych wersjach. Gdy multiemisji UDP żądania sondowania dociera do serwera proxy, serwer proxy powinien odpowiedzieć za pomocą komunikatów multiemisji pomijania. Aby to zrobić, jego musi znać wersji odnajdywania żądania.
+Serwer proxy odnajdywania może uwidaczniać wiele punktów końcowych odnajdywania przy użyciu różnych wersji odnajdowania. Po odebraniu żądania sondowania multiemisji UDP na serwerze proxy serwer proxy powinien odpowiedzieć na komunikat o pominięciu multiemisji. W tym celu należy znać wersję odnajdowania żądania.
 
-## <a name="to-determine-the-discovery-version-of-a-probe-request"></a>Można określić wersji odnajdywania żądania sondowania
+## <a name="to-determine-the-discovery-version-of-a-probe-request"></a>Aby określić wersję odnajdywania żądania sondowania
 
-W metodzie, która odpowiada na żądania sondowania (na przykład <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>) używa się statycznej <xref:System.ServiceModel.OperationContext.Current%2A?displayProperty=nameWithType> właściwości, aby wyszukać <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension>, jak pokazano w poniższym kodzie.
+W metodzie, która reaguje na żądanie sondowania (na przykład <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> ), użyj <xref:System.ServiceModel.OperationContext.Current%2A?displayProperty=nameWithType> właściwości statycznej do wyszukania <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension> , jak pokazano w poniższym kodzie.
 
 ```csharp
 DiscoveryOperationContextExtension doce = OperationContext.Current.Extensions.Find<DiscoveryOperationContextExtension>();
@@ -23,7 +23,7 @@ DiscoveryOperationContextExtension doce = OperationContext.Current.Extensions.Fi
 doce.DiscoveryVersion;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion%2A>
-- [Implementowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)
+- [Implementowanie serwera proxy odnajdywania](implementing-a-discovery-proxy.md)

@@ -1,5 +1,6 @@
 ---
 title: Nazwy zestawów i bibliotek DLL
+description: Poznaj wskazówki dotyczące nazewnictwa zestawów i bibliotek dołączanych dynamicznie (dll). Zestaw może obejmować jeden lub więcej plików, ale zwykle mapuje jeden do jednego z biblioteką DLL.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291958"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594481"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nazwy zestawów i bibliotek DLL
 Zestaw jest jednostką wdrożenia i tożsamością dla programów kodu zarządzanego. Chociaż zestawy mogą obejmować jeden lub więcej plików, zazwyczaj zestaw mapuje jeden do jednego z biblioteką DLL. W związku z tym, w tej sekcji opisano tylko konwencje nazewnictwa bibliotek DLL, które następnie można mapować na konwencje nazewnictwa zestawów.
@@ -26,7 +27,7 @@ Zestaw jest jednostką wdrożenia i tożsamością dla programów kodu zarządza
 
  `<Company>.<Component>.dll`
 
- gdzie `<Component>` zawiera jedną lub więcej klauzul rozdzielonych kropkami. Na przykład:
+ gdzie `<Component>` zawiera jedną lub więcej klauzul rozdzielonych kropkami. Przykład:
 
  `Litware.Controls.dll`.
 
@@ -34,7 +35,7 @@ Zestaw jest jednostką wdrożenia i tożsamością dla programów kodu zarządza
 
  *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wskazówki dotyczące projektowania struktury](index.md)
 - [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

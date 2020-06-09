@@ -2,17 +2,17 @@
 title: Procedura wielobieżna ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 613a1ed827173b3915892dda54dd20ebabdf6dcf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67e719afd40b52f37c777cf9791291a16878592f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600091"
 ---
 # <a name="concurrencymode-reentrant"></a>Procedura wielobieżna ConcurrencyMode
-W tym przykładzie pokazano konieczność i implikacje przy użyciu ConcurrencyMode.Reentrant w implementacji usługi. WspółbieżnośćMode.Reentrant oznacza, że usługa (lub wywołanie zwrotne) przetwarza tylko jedną `ConcurencyMode.Single`wiadomość w danym czasie (analogiczne do ). Aby zapewnić bezpieczeństwo wątków, Windows Communication Foundation `InstanceContext` (WCF) blokuje przetwarzanie wiadomości, dzięki czemu nie można przetwarzać żadnych innych wiadomości. W przypadku trybu `InstanceContext` reentrant, jest odblokowany tuż przed usługa wykonuje połączenie wychodzące, umożliwiając w ten sposób kolejne wywołanie (które mogą być ponownie przedstawione, jak pokazano w próbce), aby uzyskać blokadę następnym razem, gdy przychodzi do usługi. Aby zademonstrować zachowanie, w przykładzie pokazano, jak klient i usługa może wysyłać wiadomości między sobą przy użyciu umowy dupleksu.  
+Ten przykład pokazuje konieczność i implikacje użycia ConcurrencyMode. using w implementacji usługi. Concurrency. repodmiotu oznacza, że usługa (lub wywołania zwrotne) przetwarza tylko jeden komunikat w danym momencie (analogicznie do `ConcurencyMode.Single` ). Aby zapewnić bezpieczeństwo wątków, Windows Communication Foundation (WCF) blokuje `InstanceContext` Przetwarzanie komunikatu, aby nie można było przetworzyć innych komunikatów. W przypadku trybu przechodzenia, `InstanceContext` jest odblokowany tuż przed wykonaniem wywołania wychodzącego przez usługę, co pozwala na kolejne wywołanie (które może być w sposób pokazany w przykładzie), aby uzyskać blokadę po następnym przejściu do usługi. Aby zademonstrować zachowanie, przykład pokazuje, jak klient i usługa mogą wysyłać komunikaty między sobą przy użyciu kontraktu dupleksowego.  
   
- Zdefiniowana umowa jest kontraktem `Ping` dupleksowym z metodą implementowana `Pong` przez usługę i metodą wywołania zwrotnego implementowana przez klienta. Klient wywołuje `Ping` metodę serwera z liczbą znaczników, inicjując w ten sposób wywołanie. Usługa sprawdza, czy liczba znaczników nie jest równa 0, `Pong` a następnie wywołuje metodę wywołań zwrotnych podczas zmniejszania liczby znaczników. Odbywa się to za pomocą następującego kodu w przykładzie.  
+ Zdefiniowany kontrakt jest umową dupleksową z `Ping` metodą implementowaną przez usługę i metodę wywołania zwrotnego `Pong` implementowaną przez klienta. Klient wywołuje `Ping` metodę serwera z liczbą cyklów, co spowoduje zainicjowanie wywołania. Usługa sprawdza, czy liczba cykli nie jest równa 0, a następnie wywołuje metodę wywołania zwrotnego `Pong` przy zmniejszeniu liczby taktów. Jest to realizowane przez Poniższy kod w przykładzie.  
   
 ```csharp
 public void Ping(int ticks)  
@@ -26,7 +26,7 @@ public void Ping(int ticks)
 }  
 ```  
   
- Implementacja wywołania `Pong` zwrotnego ma taką `Ping` samą logikę jak implementacja. Oznacza to, że sprawdza, czy liczba znaczników `Ping` nie jest równa zero, a następnie wywołuje metodę na kanale wywołania zwrotnego (w tym przypadku jest to kanał, który został użyty do wysłania oryginalnej `Ping` wiadomości) z liczbą znaczników zmniejszanych o 1. W momencie, gdy liczba znaczników osiągnie 0, metoda zwraca w ten sposób rozpakowywanie wszystkich odpowiedzi z powrotem do pierwszego wywołania wykonanego przez klienta, który zainicjował wywołanie. Jest to pokazane w implementacji wywołania zwrotnego.  
+ Implementacja wywołania zwrotnego `Pong` ma taką samą logikę jak `Ping` implementacja. Oznacza to, że sprawdza, czy liczba cykli nie jest równa zero, a następnie wywołuje `Ping` metodę w kanale wywołania zwrotnego (w tym przypadku jest to kanał, który został użyty do wysłania oryginalnej `Ping` wiadomości) z liczbą cykli równą 1. Moment, w którym licznik taktu osiągnie wartość 0, metoda zwraca w ten sposób odpakowanie wszystkich odpowiedzi z powrotem do pierwszego wywołania wykonanego przez klienta, który zainicjował wywołanie. Jest to pokazane w implementacji wywołania zwrotnego.  
   
 ```csharp
 public void Pong(int ticks)  
@@ -42,18 +42,18 @@ public void Pong(int ticks)
 }  
 ```  
   
- Zarówno `Ping` i `Pong` metody są żądanie/odpowiedź, co oznacza, że pierwsze wywołanie `Ping` nie zwraca, dopóki wywołanie `CallbackChannel<T>.Pong()` zwraca. Na kliencie `Pong` metoda nie może `Ping` powrócić do następnego wywołania, które zostało wykonane zwraca. Ponieważ zarówno wywołania zwrotnego, jak i usługi musi nawiązać wychodzące wywołania żądania/odpowiedzi, zanim będą mogli odpowiedzieć na oczekujące żądanie, obie implementacje muszą być oznaczone zachowaniem ConcurrencyMode.Reentrant.  
+ Obie `Ping` metody i `Pong` są żądaniami/odpowiedzi, co oznacza, że pierwsze wywołanie `Ping` nie zwraca do momentu wywołania `CallbackChannel<T>.Pong()` zwrotnego. Na kliencie `Pong` Metoda nie może zwrócić do momentu następnego `Ping` wywołania, które wykona. Ponieważ zarówno wywołanie zwrotne, jak i usługa muszą wychodzące wywołania żądania/odpowiedzi, zanim będą mogły odpowiedzieć na oczekujące żądanie, obie implementacje muszą być oznaczone jako takie jak zachowanie.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Aby uruchomić przykład, skompiluj projekty klienta i serwera. Następnie otwórz dwa okna poleceń i \<zmień katalogi na przykładowe>\CS\Service\bin\debug i \<próbkowanie katalogów>\CS\Client\bin\debug. Następnie uruchom usługę, `service.exe` wpisując, a następnie wywołaj client.exe z początkową wartością znaczników przekazanych jako argument wejściowy. Pokazano przykładowe dane wyjściowe dla 10 znaczników.  
+ Aby uruchomić przykład, skompiluj projekty klienta i serwera. Następnie otwórz dwa okna poleceń i zmień katalogi na \<sample> katalogi \CS\Service\bin\debug i \<sample> \CS\Client\bin\debug. Następnie uruchom usługę, wpisując `service.exe` , a następnie Wywołaj program Client. exe z początkową wartością taktów przekazaną jako argument wejściowy. Pokazano przykładowe dane wyjściowe dla 10 taktów.  
   
 ```console  
 Prompt>Service.exe  
@@ -74,10 +74,10 @@ Pong: Ticks = 1
 ```  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  

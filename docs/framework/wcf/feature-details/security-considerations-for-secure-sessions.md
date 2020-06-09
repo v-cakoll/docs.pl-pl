@@ -2,26 +2,26 @@
 title: Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 587897cc296523e0bfd5a4d4fa50b1e145cb69fb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601052"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
-Należy rozważyć następujące elementy, które dotyczą zabezpieczeń podczas implementowania bezpiecznej sesji. Aby uzyskać więcej informacji na temat zagadnień dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) i [najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+Podczas implementowania bezpiecznych sesji należy wziąć pod uwagę następujące elementy, które mają wpływ na zabezpieczenia. Aby uzyskać więcej informacji na temat zagadnień związanych z zabezpieczeniami, zobacz [zagadnienia dotyczące zabezpieczeń](security-considerations-in-wcf.md) i [najlepsze rozwiązania w zakresie zabezpieczeń](best-practices-for-security-in-wcf.md).  
   
-## <a name="secure-sessions-and-metadata"></a>Bezpieczne sesje i metadane  
- Po ustanowieniu bezpiecznej sesji i <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> właściwość jest ustawiona na `false`, Windows Communication Foundation (WCF) wysyła `mssp:MustNotSendCancel` potwierdzenie jako część metadane Web Services Description Language (WSDL) dokumentu w celu punkt końcowy usługi. `mssp:MustNotSendCancel` Potwierdzenie informuje klientów, usługa nie odpowiada na żądania anulowania bezpiecznej sesji. Gdy <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> właściwość jest ustawiona na `true`, a następnie WCF nie emituje `mssp:MustNotSendCancel` potwierdzenia w dokumencie WSDL. Klienci powinni wysłać żądanie anulowania do usługi, gdy nie jest już wymagany bezpiecznej sesji. Gdy klient jest generowana z użyciem [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), kod klienta odpowiednio reaguje na obecność lub Brak `mssp:MustNotSendCancel` potwierdzenia.  
+## <a name="secure-sessions-and-metadata"></a>Zabezpieczanie sesji i metadanych  
+ Gdy zostanie ustanowiona bezpieczna sesja i <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> Właściwość jest ustawiona na `false` , Windows Communication Foundation (WCF) wysyła `mssp:MustNotSendCancel` potwierdzenie jako część metadanych w dokumencie Web Services Description Language (WSDL) dla punktu końcowego usługi. `mssp:MustNotSendCancel`Potwierdzenie informuje klientów, że usługa nie odpowiada na żądania anulowania bezpiecznej sesji. Gdy <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> Właściwość jest ustawiona na `true` , funkcja WCF nie emituje `mssp:MustNotSendCancel` potwierdzenia w dokumencie WSDL. Klienci oczekują wysłania żądania anulowania do usługi, gdy nie wymagają już bezpiecznej sesji. Gdy klient zostanie wygenerowany przy użyciu [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md), kod klienta reaguje odpowiednio na obecność lub brak `mssp:MustNotSendCancel` potwierdzenia.  
   
 ## <a name="secure-conversations-and-custom-tokens"></a>Bezpieczne konwersacje i tokeny niestandardowe  
- Występują problemy z mieszanie tokeny niestandardowe i kluczy pochodnych ze względu na sposób, który jest zdefiniowany w specyfikacji WS-SecureConversation. Specyfikacja twierdzi, że `wsse:SecurityTokenReference` jest elementem opcjonalnym, który odwołuje się do pochodny token: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` Ten opcjonalny element jest używany do określenia tokenu kontekstu zabezpieczeń, token zabezpieczający lub udostępnionych kluczy/wpisów tajnych używany do tworzenia elementów pochodnych. Jeśli nie zostanie określony, zakłada się, odbiorcy określić klucz współużytkowany z kontekstu wiadomości. Jeśli nie można ustalić kontekstu, następnie błędów, takich jak `wsc:UnknownDerivationSource` powinien być wywoływany. "  
+ Występują problemy z mieszaniem niestandardowych tokenów i kluczy pochodnych ze względu na sposób, w jaki jest zdefiniowany w specyfikacji WS-SecureConversation. Specyfikacja wskazuje, że `wsse:SecurityTokenReference` jest opcjonalny element, który odwołuje się do tokenu pochodnego: " `/wsc:DerivedKeyToken/wsse:SecurityTokenReference` ten element opcjonalny jest używany do określania tokenu kontekstu zabezpieczeń, tokenu zabezpieczającego lub klucza współużytkowanego/tajnego używanego do wyprowadzania. Jeśli nie zostanie określony, zakłada się, że odbiorca może określić klucz współużytkowany z kontekstu komunikatów. Jeśli nie można określić kontekstu, `wsc:UnknownDerivationSource` powinien zostać wywołany błąd, taki jak.  
   
- Oznacza to, że chcącym niestandardowy token pochodzić powinna opakować typ klauzuli w `SecurityTokenReference` elementu. Istnieje możliwość wyłączyć pochodnym, ale wartość domyślna to do tworzenia kluczy. Jeśli nie opakuj klucz, serializacji pochodny token klucza zakończy się pomyślnie, ale zgłasza wyjątek, próba deserializacji go.  
+ Oznacza to, że jeśli chcesz, aby Token niestandardowy był pochodny, należy otoczyć jego typ klauzuli w `SecurityTokenReference` elemencie. Istnieje możliwość wyłączenia wyprowadzania, ale domyślnie klucze pochodne. Jeśli nie udało się otoczyć klucza, Serializowanie tokenu klucza pochodnego powiedzie się, ale próba jego deserializacji zgłosi wyjątek.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+- [Instrukcje: Wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Zagadnienia dotyczące zabezpieczeń](security-considerations-in-wcf.md)
+- [Najlepsze rozwiązania dotyczące zabezpieczeń](best-practices-for-security-in-wcf.md)

@@ -2,39 +2,39 @@
 title: Przykład współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: ac90a50c6fe06a643881da2889fdea308404508e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c196380951d0da912cd937e3ebc38a03f80489c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584314"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
-Protokół TCP/IP używa numeru 16-bitowego, zwanego portem, do rozróżniania połączeń z wieloma aplikacjami sieciowymi działającymi na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie mogą nasłuchiwają na tym porcie w tym samym czasie.  
+Protokół TCP/IP używa liczby 16-bitowej zwanej portem do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomionymi na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie mogą nasłuchiwać tego portu w tym samym czasie.  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- Wiele protokołów ma standardowy lub domyślny numer portu, którego używają. Na przykład protokół HTTP zazwyczaj używa portu TCP 80. Internetowe usługi informacyjne (IIS) mają odbiornik do udostępniania portu między wieloma aplikacjami HTTP. Usługi IIS nasłuchują bezpośrednio na porcie i przesyłają dalej wiadomości do odpowiedniej aplikacji na podstawie informacji wewnątrz strumienia komunikatów. Dzięki temu wiele aplikacji HTTP używać tego samego numeru portu bez konieczności konkurowania, aby zarezerwować port do odbierania wiadomości.  
+ Wiele protokołów ma standardowy lub domyślny numer portu, którego używają. Na przykład protokół HTTP zwykle używa portu TCP 80. Internet Information Services (IIS) ma odbiornik do udostępniania portu między wieloma aplikacjami HTTP. Usługi IIS nasłuchują na porcie bezpośrednio i przesyłają komunikaty do odpowiedniej aplikacji w oparciu o informacje znajdujące się w strumieniu wiadomości. Pozwala to wielu aplikacjom HTTP korzystać z tego samego numeru portu bez konieczności konkurowania, aby zarezerwować port do odbioru wiadomości.  
   
- Udostępnianie portów NetTcp to funkcja Programu Windows Communication Foundation (WCF), która podobnie umożliwia wielu aplikacjom sieciowym współużytkowanie jednego portu. Usługa udostępniania portów NetTcp akceptuje połączenia przy użyciu protokołu net.tcp i przesyła dalej wiadomości na podstawie ich adresu docelowego.  
+ Udostępnianie portów NetTcp to funkcja programu Windows Communication Foundation (WCF), która w podobny sposób pozwala wielu aplikacjom sieciowym współużytkować jeden port. Usługa udostępniania portów NetTcp akceptuje połączenia za pomocą protokołu net. TCP i przekazuje komunikaty na podstawie ich adresu docelowego.  
   
- Usługa udostępniania portów NetTcp nie jest domyślnie włączona. Przed uruchomieniem tego przykładu należy ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [Jak: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, wyjątek jest zgłaszany po uruchomieniu aplikacji serwera.  
+ Usługa udostępniania portów NetTcp nie jest domyślnie włączona. Przed uruchomieniem tego przykładu należy ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [jak: Włączanie usługi udostępniania portów Net. TCP](../feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, podczas uruchamiania aplikacji serwera zostanie zgłoszony wyjątek.  
   
 ```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Udostępnianie portu jest włączone na serwerze przez <xref:System.ServiceModel.NetTcpBinding> ustawienie <xref:System.ServiceModel.Channels.TcpTransportBindingElement> <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwości powiązania lub elementu wiązania. Klient nie musi wiedzieć, jak udostępnianie portów zostało skonfigurowane do używania go na serwerze.  
+ Udostępnianie portów jest włączone na serwerze przez ustawienie <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwości <xref:System.ServiceModel.NetTcpBinding> powiązania lub <xref:System.ServiceModel.Channels.TcpTransportBindingElement> elementu powiązania. Klient nie musi wiedzieć, jak Udostępnianie portów zostało skonfigurowane do korzystania z niego na serwerze.  
   
 ## <a name="enabling-port-sharing"></a>Włączanie udostępniania portów  
- Poniższy kod demonstruje włączanie udostępniania portów na serwerze. Uruchamia wystąpienie `ICalculator` usługi na stałym porcie z losową ścieżką URI. Mimo że dwie usługi mogą współużytkować ten sam port, ich ogólne adresy punktów końcowych nadal muszą być unikatowe, aby usługa udostępniania portów NetTcp mogła kierować wiadomości do poprawnej aplikacji.  
+ Poniższy kod demonstruje włączenie udostępniania portów na serwerze. Uruchamia wystąpienie `ICalculator` usługi na stałym porcie ze losową ścieżką URI. Mimo że dwie usługi mogą współużytkować ten sam port, ich ogólne adresy punktów końcowych nadal muszą być unikatowe, aby usługa udostępniania portów NetTcp mogła kierować komunikaty do odpowiedniej aplikacji.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -49,14 +49,14 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```
 
- Po włączeniu udostępniania portów można uruchomić usługę wiele razy bez konfliktu o numer portu. Jeśli zmienisz kod, aby wyłączyć udostępnianie portów, uruchomienie dwóch kopii usługi <xref:System.ServiceModel.AddressAlreadyInUseException>spowoduje niepowodzenie drugiej z .  
+ Włączenie udostępniania portów umożliwia uruchomienie usługi wiele razy bez konfliktu przez numer portu. Jeśli zmienisz kod w celu wyłączenia udostępniania portów, uruchomienie dwóch kopii usługi powoduje, że w drugim kończy się niepowodzeniem z <xref:System.ServiceModel.AddressAlreadyInUseException> .  
   
 ```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## <a name="running-the-sample"></a>Uruchamianie próbki  
- Za pomocą klienta testowego można sprawdzić, czy wiadomości są poprawnie kierowane do usług współużytkowania portu.  
+## <a name="running-the-sample"></a>Uruchamianie przykładu  
+ Możesz użyć klienta testowego, aby sprawdzić, czy komunikaty są prawidłowo kierowane do usług udostępniających port.  
 
 ```csharp
 class client  
@@ -102,14 +102,14 @@ class client
 }  
 ```
 
- Każde wystąpienie usługi wypisuje jego unikatowy numer i adres. Na przykład po uruchomieniu pliku service.exe może zostać wyświetlony następujący tekst.  
+ Każde wystąpienie usługi drukuje swój unikatowy numer i adres. Na przykład po uruchomieniu programu Service. exe może zostać wyświetlony następujący tekst.  
   
 ```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
- Wprowadź numer usługi widoczny w tym miejscu podczas uruchamiania pliku client.exe.  
+ Wprowadź numer usługi widoczny w tym miejscu podczas uruchamiania programu Client. exe.  
   
 ```console  
 Enter the service number to test: 4381  
@@ -121,20 +121,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Ten przykład można uruchomić w konfiguracji między komputerami, zmieniając wygenerowany adres, którego używa klient. W Client.cs zmień ciąg formatu adresu punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszelkie odwołania do "localhost" adresem IP komputera serwerowego. Należy ponownie skompiltować próbkę po dokonaniu tej zmiany.  
+ Ten przykład można uruchomić w konfiguracji między maszynami, zmieniając wygenerowany adres wykorzystywany przez klienta. W Client.cs Zmień ciąg formatu adresu punktu końcowego, aby odpowiadał nowemu adresowi usługi. Zastąp wszystkie odwołania do "localhost" adresem IP komputera serwera. Po wprowadzeniu tej zmiany należy ponownie skompilować przykład.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Zainstaluj ASP.NET 4.0 za pomocą następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Włącz usługę udostępniania portów NetTcp, jak opisano wcześniej w sekcji wprowadzającej.  
+3. Włącz usługę udostępniania portów NetTcp, jak opisano wcześniej w sekcji wprowadzenie.  
   
-4. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-5. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md). Szczegółowe informacje dotyczące uruchamiania tego przykładu są zawarte wcześniej w sekcji Uruchamianie przykładu.  
+5. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md). Szczegółowe informacje na temat uruchamiania tego przykładu są zawarte wcześniej w sekcji Uruchamianie przykładu.  

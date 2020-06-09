@@ -2,35 +2,35 @@
 title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 36ec1029c8fed57957eb463808de442e74abdf9c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 5b93f7e05261d9770650335160ddb56404aed94d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585509"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 
-W tym przykładzie pokazano, jak zaimplementować niestandardowe zasady autoryzacji oświadczeń i skojarzonego menedżera autoryzacji usługi niestandardowej. Jest to przydatne, gdy usługa sprawia, że oparte na oświadczenia kontroli dostępu do operacji usługi i przed kontroli dostępu, przyznaje wywołującemu pewne prawa. W tym przykładzie przedstawiono zarówno proces dodawania oświadczeń, jak i proces sprawdzania dostępu względem sfinalizowanego zestawu oświadczeń. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i zaszyfrowane. Domyślnie za `wsHttpBinding` pomocą powiązania nazwa użytkownika i hasło dostarczone przez klienta są używane do logowania do prawidłowego konta systemu Windows NT. W tym przykładzie pokazano, <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> jak korzystać z niestandardowego do uwierzytelniania klienta. Ponadto w tym przykładzie pokazano klienta uwierzytelniającego się w usłudze przy użyciu certyfikatu X.509. W tym przykładzie <xref:System.IdentityModel.Policy.IAuthorizationPolicy> <xref:System.ServiceModel.ServiceAuthorizationManager>przedstawiono implementację i , które między nimi udzielają dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwę użytkownika zabezpieczeń wiadomości,](../../../../docs/framework/wcf/samples/message-security-user-name.md)ale pokazuje, <xref:System.ServiceModel.ServiceAuthorizationManager> jak wykonać transformację oświadczenia przed wywoływane.
+Ten przykład pokazuje, jak zaimplementować niestandardowe zasady autoryzacji i skojarzonego z nim niestandardowego Menedżera autoryzacji usług. Jest to przydatne, gdy usługa przeprowadza kontrolę dostępu opartą na usługach i przed sprawdzenia dostępu, przyznaje wywołującemu pewne prawa. Ten przykład pokazuje proces dodawania oświadczeń oraz proces przeprowadzania sprawdzenia dostępu względem końcowego zestawu oświadczeń. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i szyfrowane. Domyślnie przy użyciu `wsHttpBinding` powiązania nazwa użytkownika i hasło podane przez klienta są używane do logowania do prawidłowego konta systemu Windows NT. Ten przykład pokazuje, jak używać niestandardowych <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> do uwierzytelniania klienta. Dodatkowo ten przykład pokazuje klienta uwierzytelniającego się do usługi przy użyciu certyfikatu X. 509. Ten przykład pokazuje implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i <xref:System.ServiceModel.ServiceAuthorizationManager> , która między nimi udziela dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwie użytkownika zabezpieczeń wiadomości](message-security-user-name.md), ale pokazuje, jak przeprowadzić transformację roszczeń przed <xref:System.ServiceModel.ServiceAuthorizationManager> wywoływaniem.
 
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
  Podsumowując, w tym przykładzie pokazano, jak:
 
-- Klient może być uwierzytelniony przy użyciu nazwy użytkownika-hasła.
+- Klienta można uwierzytelnić przy użyciu nazwy użytkownika i hasła.
 
-- Klient może być uwierzytelniony przy użyciu certyfikatu X.509.
+- Klienta można uwierzytelnić przy użyciu certyfikatu X. 509.
 
-- Serwer sprawdza poprawność poświadczeń klienta względem niestandardowego `UsernamePassword` walidatora.
+- Serwer sprawdza poprawność poświadczeń klienta względem niestandardowego `UsernamePassword` modułu sprawdzania poprawności.
 
-- Serwer jest uwierzytelniony przy użyciu certyfikatu X.509 serwera.
+- Serwer jest uwierzytelniany przy użyciu certyfikatu X. 509 serwera.
 
-- Serwer może <xref:System.ServiceModel.ServiceAuthorizationManager> służyć do kontrolowania dostępu do niektórych metod w usłudze.
+- Serwer może służyć <xref:System.ServiceModel.ServiceAuthorizationManager> do kontrolowania dostępu do określonych metod w usłudze.
 
-- Jak wdrożyć <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Jak zaimplementować <xref:System.IdentityModel.Policy.IAuthorizationPolicy> .
 
-Usługa udostępnia dwa punkty końcowe do komunikowania się z usługą, zdefiniowane przy użyciu pliku konfiguracji App.config. Każdy punkt końcowy składa się z adresu, powiązania i umowy. Jedno powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` powiązania, które używa uwierzytelniania w uchronienia klienta i uwierzytelniania nazwy użytkownika klienta. Inne powiązanie jest skonfigurowane `wsHttpBinding` przy użyciu standardowego powiązania, które używa usługi WS-Security i uwierzytelniania certyfikatu klienta. [ \<Zachowanie>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) określa, że poświadczenia użytkownika mają być używane do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką `SubjectName` samą `findValue` wartość właściwości jak atrybut w [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+Usługa udostępnia dwa punkty końcowe do komunikacji z usługą, zdefiniowane przy użyciu pliku konfiguracji App. config. Każdy punkt końcowy składa się z adresu, powiązania i kontraktu. Jedno powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` powiązania, które korzysta z uwierzytelniania WS-Security i nazwy użytkownika klienta. Inne powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` powiązania, które korzysta z protokołu WS-Security i uwierzytelniania certyfikatu klienta. [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)Określa, że poświadczenia użytkownika mają być używane do uwierzytelniania usługi. Certyfikat serwera musi zawierać tę samą wartość `SubjectName` właściwości, co `findValue` atrybut w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ Usługa udostępnia dwa punkty końcowe do komunikowania się z usługą, zdefin
 </system.serviceModel>
 ```
 
-Każda konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, bezwzględny adres dla punktu końcowego usługi, powiązania i umowy. Powiązanie klienta jest skonfigurowane w odpowiednim trybie zabezpieczeń określonym w `clientCredentialType` tym przypadku w>[ \<zabezpieczeń](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) i jak określono w [ \<komunikacie>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).
+Każda konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednim trybem zabezpieczeń, jak określono w tym przypadku w [\<security>](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) i `clientCredentialType` zgodnie z opisem w [\<message>](../../configure-apps/file-schema/wcf/message-of-wshttpbinding.md) .
 
 ```xml
 <system.serviceModel>
@@ -185,7 +185,7 @@ Każda konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji,
   </system.serviceModel>
 ```
 
-W przypadku punktu końcowego opartego na nazwie użytkownika implementacja klienta ustawia nazwę użytkownika i hasło do użycia.
+W przypadku punktu końcowego opartego na nazwie użytkownika implementacja klienta ustawia nazwę użytkownika i hasło, które mają być używane.
 
 ```csharp
 // Create a client with Username endpoint configuration
@@ -211,7 +211,7 @@ catch (Exception e)
 client1.Close();
 ```
 
-W przypadku punktu końcowego opartego na certyfikatach implementacja klienta ustawia certyfikat klienta do użycia.
+W przypadku punktu końcowego opartego na certyfikatach implementacja klienta ustawia używany certyfikat klienta.
 
 ```csharp
 // Create a client with Certificate endpoint configuration
@@ -236,7 +236,7 @@ catch (Exception e)
 client2.Close();
 ```
 
-W tym przykładzie <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> użyto niestandardowego sprawdzania poprawności nazw użytkowników i haseł. Przykład implementuje, `MyCustomUserNamePasswordValidator`pochodzące <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>z . Więcej informacji <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> można znaleźć w dokumentacji. W celu wykazania integracji z <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, ten przykład niestandardowego <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> walidatora implementuje metodę akceptowania par nazwy użytkownika/hasła, w których nazwa użytkownika jest zgodna z hasłem, jak pokazano w poniższym kodzie.
+Ten przykład używa niestandardowych <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> do sprawdzania poprawności nazw użytkowników i haseł. Przykład implementuje `MyCustomUserNamePasswordValidator` , pochodny od <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> . Zapoznaj się z dokumentacją, <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> Aby uzyskać więcej informacji. W celu demonstrowania integracji z programem <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ten niestandardowy przykład modułu sprawdzania poprawności implementuje <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metodę, aby akceptować pary nazwa użytkownika/hasło, gdzie nazwa użytkownika jest zgodna z hasłem, jak pokazano w poniższym kodzie.
 
 ```csharp
 public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
@@ -261,14 +261,14 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-Po zaimplementowaniu walidatora w kodzie usługi host usługi musi zostać poinformowany o wystąpieniu walidatora do użycia. Odbywa się to przy użyciu następującego kodu:
+Po wdrożeniu modułu sprawdzania poprawności w kodzie usługi Host usługi musi zostać poinformowany o wystąpieniu modułu sprawdzania poprawności, które ma być używane. W tym celu należy użyć następującego kodu:
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();
 ```
 
-Lub można zrobić to samo w konfiguracji:
+Można też wykonać te same czynności w konfiguracji:
 
 ```xml
 <behavior>
@@ -282,9 +282,9 @@ Lub można zrobić to samo w konfiguracji:
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) udostępnia bogaty model oparty na oświadczeniach do przeprowadzania kontroli dostępu. Obiekt <xref:System.ServiceModel.ServiceAuthorizationManager> jest używany do wykonywania kontroli dostępu i określić, czy oświadczenia skojarzone z klientem spełniają wymagania niezbędne do uzyskania dostępu do metody usługi.
+Windows Communication Foundation (WCF) oferuje bogaty model oparty na oświadczeniach służący do przeprowadzania kontroli dostępu. <xref:System.ServiceModel.ServiceAuthorizationManager>Obiekt jest używany do sprawdzania dostępu i ustalania, czy oświadczenia skojarzone z klientem spełniają wymagania niezbędne do uzyskania dostępu do metody usługi.
 
-Na potrzeby demonstracji w tym przykładzie <xref:System.ServiceModel.ServiceAuthorizationManager> przedstawiono implementację, która implementuje <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby umożliwić `http://example.com/claims/allowedoperation` użytkownikowi dostęp do metod opartych na oświadczeniach typu, którego wartością jest identyfikator URI akcji operacji, która może być wywoływana.
+W celach demonstracyjnych ten przykład pokazuje implementację, <xref:System.ServiceModel.ServiceAuthorizationManager> która implementuje <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby zezwolić użytkownikowi na dostęp do metod opartych na oświadczeniach typu, `http://example.com/claims/allowedoperation` którego wartość jest identyfikator URI akcji dla operacji, która może być wywoływana.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -310,7 +310,7 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
 }
 ```
 
-Po zaimplementowaniu niestandardowego <xref:System.ServiceModel.ServiceAuthorizationManager> hosta usługi <xref:System.ServiceModel.ServiceAuthorizationManager> musi być informowany o do użycia. Odbywa się to w sposób pokazany w poniższym kodzie.
+Po <xref:System.ServiceModel.ServiceAuthorizationManager> zaimplementowaniu niestandardowego hosta usługi należy poinformować o tym, aby można było go <xref:System.ServiceModel.ServiceAuthorizationManager> użyć. Jest to wykonywane, jak pokazano w poniższym kodzie.
 
 ```xml
 <behavior>
@@ -321,7 +321,7 @@ Po zaimplementowaniu niestandardowego <xref:System.ServiceModel.ServiceAuthoriza
 </behavior>
 ```
 
-Podstawową <xref:System.IdentityModel.Policy.IAuthorizationPolicy> metodą do <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> zaimplementowania jest metoda.
+Podstawową <xref:System.IdentityModel.Policy.IAuthorizationPolicy> metodą implementacji jest <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> Metoda.
 
 ```csharp
 public class MyAuthorizationPolicy : IAuthorizationPolicy
@@ -377,9 +377,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }
 ```
 
-Poprzedni kod pokazuje, <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> jak metoda sprawdza, czy nie dodano żadnych nowych oświadczeń, które wpływają na przetwarzanie i dodaje określone oświadczenia. Oświadczenia, które są dozwolone są `GetAllowedOpList` uzyskiwane z metody, która jest implementowana do zwracania określonej listy operacji, które użytkownik może wykonać. Zasady autoryzacji dodaje oświadczenia dotyczące dostępu do określonej operacji. Jest to później <xref:System.ServiceModel.ServiceAuthorizationManager> używane przez do wykonywania decyzji dotyczących sprawdzania dostępu.
+Poprzedni kod pokazuje, w jaki sposób <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> Metoda sprawdza, czy nie dodano żadnych nowych oświadczeń, które wpływają na przetwarzanie i dodaje określone oświadczenia. Oświadczenia, które są dozwolone, są uzyskiwane z `GetAllowedOpList` metody, która jest zaimplementowana w celu zwrócenia określonej listy operacji, które użytkownik może wykonywać. Zasady autoryzacji dodają oświadczenia w celu uzyskania dostępu do określonej operacji. Jest to później używane przez <xref:System.ServiceModel.ServiceAuthorizationManager> program do wykonywania decyzji o sprawdzaniu dostępu.
 
-Po zaimplementowaniu niestandardowego <xref:System.IdentityModel.Policy.IAuthorizationPolicy> host usługi musi zostać poinformowany o zasadach autoryzacji do użycia.
+Po <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zaimplementowaniu niestandardowego hosta usługi należy uzyskać informacje o zasadach autoryzacji do użycia.
 
 ```xml
 <serviceAuthorization>
@@ -389,17 +389,17 @@ Po zaimplementowaniu niestandardowego <xref:System.IdentityModel.Policy.IAuthori
 </serviceAuthorization>
 ```
 
-Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient pomyślnie wywołuje Add, Odejmij i wiele metod i pobiera komunikat "Odmowa dostępu" podczas próby wywołania Metody Dzielenia. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.
+Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient pomyślnie wywołuje metody Add, Odejmij i Multiple i pobiera komunikat "odmowa dostępu" podczas próby wywołania metody dzielenia. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-## <a name="setup-batch-file"></a>Plik wsadowy instalatora
+## <a name="setup-batch-file"></a>Plik wsadowy konfiguracji
 
-Plik wsadowy Setup.bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami do uruchamiania aplikacji hostowanej samodzielnie, która wymaga zabezpieczeń opartych na certyfikatach serwera.
+Plik wsadowy Setup. bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej wymagającej zabezpieczeń opartych na certyfikatach serwera.
 
-Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować w celu uruchomienia w odpowiedniej konfiguracji:
+Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować tak, aby były uruchamiane w odpowiedniej konfiguracji:
 
 - Tworzenie certyfikatu serwera.
 
-    Następujące wiersze z pliku wsadowego Setup.bat tworzą certyfikat serwera, który ma być używany. Zmienna %SERVER_NAME% określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartością domyślną jest localhost.
+    Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna% SERVER_NAME% określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna to localhost.
 
     ```bat
     echo ************
@@ -413,7 +413,7 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, d
 
 - Instalowanie certyfikatu serwera w magazynie zaufanych certyfikatów klienta.
 
-    Następujące wiersze w pliku wsadowym Setup.bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty generowane przez plik Makecert.exe nie są niejawnie zaufane przez system kliencki. Jeśli masz już certyfikat zakorzeniony w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten etap wypełniania magazynu certyfikatów klienta certyfikatem serwera nie jest wymagany.
+    Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.
 
     ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
@@ -421,9 +421,9 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, d
 
 - Tworzenie certyfikatu klienta.
 
-    Następujące wiersze z pliku wsadowego Setup.bat tworzą certyfikat klienta, który ma być używany. Zmienna %USER_NAME% określa nazwę serwera. Ta wartość jest ustawiona na "test1", `IAuthorizationPolicy` ponieważ jest to nazwa, która jest wyszukany. Jeśli zmienisz wartość %USER_NAME%, musisz zmienić odpowiednią `IAuthorizationPolicy.Evaluate` wartość w metodzie.
+    Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat klienta, który ma być używany. Zmienna% USER_NAME% określa nazwę serwera. Ta wartość jest ustawiona na "test1", ponieważ jest to nazwa `IAuthorizationPolicy` szukana. W przypadku zmiany wartości% USER_NAME% należy zmienić odpowiadającą jej wartość w `IAuthorizationPolicy.Evaluate` metodzie.
 
-    Certyfikat jest przechowywany w sklepie Mój (osobisty) w lokalizacji sklepu CurrentUser.
+    Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu CurrentUser.
 
     ```bat
     echo ************
@@ -432,79 +432,79 @@ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
-- Instalowanie certyfikatu klienta w magazynie zaufanych certyfikatów serwera.
+- Instalowanie certyfikatu klienta w zaufanym magazynie certyfikatów na serwerze.
 
-    Następujące wiersze w pliku wsadowym Setup.bat kopiują certyfikat klienta do magazynu zaufanych osób. Ten krok jest wymagany, ponieważ certyfikaty generowane przez plik Makecert.exe nie są niejawnie zaufane przez system serwera. Jeśli masz już certyfikat, który jest zakorzeniony w zaufanym certyfikacie głównym — na przykład certyfikatowi wystawionemu przez firmę Microsoft — ten etap wypełniania magazynu certyfikatów serwera certyfikatem klienta nie jest wymagany.
+    Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat klienta do magazynu osób zaufanych. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert. exe nie są niejawnie zaufane przez system serwera. Jeśli masz już certyfikat, który został odblokowany w zaufanym certyfikacie głównym — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów serwera z certyfikatem klienta nie jest wymagany.
 
     ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
-### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i utworzyć próbkę
+### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-2. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, należy użyć następujących instrukcji.
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy wykonać poniższe instrukcje.
 
 > [!NOTE]
-> Jeśli używasz Svcutil.exe do ponownego wygenerowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.
+> Jeśli używasz programu Svcutil. exe w celu ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj, aby zmodyfikować nazwę punktu końcowego w konfiguracji klienta w celu dopasowania go do kodu klienta.
 
-### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić próbkę na tym samym komputerze
+### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1. Otwórz wiersz polecenia dewelopera dla programu Visual Studio z uprawnieniami administratora i uruchom *plik Setup.bat* z przykładowego folderu instalacji. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia próbki.
+1. Otwórz wiersz polecenia dla deweloperów dla programu Visual Studio z uprawnieniami administratora i uruchom *Setup. bat* z przykładowego folderu instalacji. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.
 
     > [!NOTE]
-    > Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z wiersza polecenia dewelopera dla programu Visual Studio. Zmienna środowiskowa PATH ustawiona w wierszu polecenia dewelopera dla programu Visual Studio wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt *Setup.bat.*
+    > Plik wsadowy Setup. bat został zaprojektowany do uruchamiania z wiersz polecenia dla deweloperów dla programu Visual Studio. Zmienna środowiskowa PATH ustawiona w wiersz polecenia dla deweloperów dla programu Visual Studio wskazuje katalog zawierający pliki wykonywalne wymagane przez skrypt *Setup. bat* .
 
-1. Uruchom program Service.exe z *pliku service\bin*.
+1. Uruchom Service. exe z *service\bin*.
 
-1. Uruchom program Client.exe z *pliku \client\bin*. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.
+1. Uruchom plik Client. exe z *\client\bin*. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.
 
-Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
-### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić próbkę na różnych komputerach
+### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach
 
-1. Utwórz katalog na komputerze usługowym.
+1. Utwórz katalog na komputerze usługi.
 
-2. Skopiuj pliki programu serwisowego z *\service\bin* do katalogu na komputerze usługowym. Skopiuj również pliki Setup.bat, Cleanup.bat, GetComputerName.vbs i ImportClientCert.bat do komputera serwisowego.
+2. Skopiuj pliki programu usługi z *\service\bin* do katalogu na komputerze usługi. Skopiuj także pliki Setup. bat, Oczyść. bat, getcomputers. vbs i ImportClientCert. bat do komputera usługi.
 
 3. Utwórz katalog na komputerze klienckim dla plików binarnych klienta.
 
-4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również pliki Setup.bat, Cleanup.bat i ImportServiceCert.bat do klienta.
+4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również do klienta pliki Setup. bat, Oczyść. bat i ImportServiceCert. bat.
 
-5. Na serwerze `setup.bat service` uruchom w wierszu polecenia dewelopera dla programu Visual Studio otwarty z uprawnieniami administratora.
+5. Na serwerze programu uruchom `setup.bat service` program w wiersz polecenia dla deweloperów for Visual Studio otwarty z uprawnieniami administratora.
 
-    Uruchomiony `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie *Service.cer*.
+    Uruchomienie `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie *Service. cer*.
 
-6. Edytuj *service.exe.config,* aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [ \<serviceCertificate>), ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera. Zmień również **nazwę komputera** \<w serwisie>/\<baseAddresses> element z localhost na w pełni kwalifikowaną nazwę komputera usługowego.
+6. Edytuj *plik Service. exe. config* , aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera. Zmień również **ComputerName** w \<service> / \<baseAddresses> elemencie z localhost na w pełni kwalifikowaną nazwę komputera usługi.
 
-7. Skopiuj plik *Service.cer* z katalogu usługi do katalogu klienta na komputerze klienckim.
+7. Skopiuj plik *. cer usługi* z katalogu usługi do katalogu klienta na komputerze klienckim.
 
-8. Na kliencie `setup.bat client` uruchom w wierszu polecenia dewelopera dla programu Visual Studio otwarty z uprawnieniami administratora.
+8. Na kliencie Uruchom program `setup.bat client` w wiersz polecenia dla deweloperów dla programu Visual Studio, który został otwarty z uprawnieniami administratora.
 
-    Uruchamianie `setup.bat` `client` z argumentem tworzy certyfikat klienta o nazwie **test1** i eksportuje certyfikat klienta do pliku o nazwie *Client.cer*.
+    Uruchomienie `setup.bat` z `client` argumentem tworzy certyfikat klienta o nazwie **Test1** i eksportuje certyfikat klienta do pliku o nazwie *Client. cer*.
 
-9. W pliku *Client.exe.config* na komputerze klienckim zmień wartość adresu punktu końcowego, aby dopasować go do nowego adresu usługi. W tym celu można zastąpić **hosta lokalnego** w pełni kwalifikowaną nazwą domeny serwera.
+9. W pliku *Client. exe. config* na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi. Aby to zrobić, Zastąp wartość **localhost** nazwą FQDN serwera.
 
-10. Skopiuj plik Client.cer z katalogu klienta do katalogu usługi na serwerze.
+10. Skopiuj plik. cer programu Client z katalogu Client do katalogu usługi na serwerze programu.
 
-11. Na kliencie uruchom *plik ImportServiceCert.bat* w wierszu polecenia dewelopera dla programu Visual Studio otwarty z uprawnieniami administratora.
+11. Na kliencie Uruchom program *ImportServiceCert. bat* w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora.
 
-    Spowoduje to zaimportować certyfikat usługi z pliku Service.cer do magazynu **CurrentUser — TrustedPeople.**
+    Spowoduje to zaimportowanie certyfikatu usługi z pliku CER usługi do magazynu **CurrentUser-TrustedPeople** .
 
-12. Na serwerze uruchom *plik ImportClientCert.bat* w wierszu polecenia dewelopera dla programu Visual Studio otwarty z uprawnieniami administratora.
+12. Na serwerze uruchom program *ImportClientCert. bat* w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora.
 
-    Spowoduje to zaimportowanie certyfikatu klienta z pliku Client.cer do magazynu **LocalMachine — TrustedPeople.**
+    Spowoduje to zaimportowanie certyfikatu klienta z pliku. cer klienta do magazynu **LocalMachine-TrustedPeople** .
 
-13. Na komputerze serwera uruchom program Service.exe z okna wiersza polecenia.
+13. Na komputerze serwera Uruchom polecenie Service. exe w oknie wiersza polecenia.
 
-14. Na komputerze klienckim uruchom program Client.exe z okna wiersza polecenia.
+14. Na komputerze klienckim uruchom program Client. exe w oknie wiersza polecenia.
 
-    Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
-### <a name="clean-up-after-the-sample"></a>Czyszczenie po próbce
+### <a name="clean-up-after-the-sample"></a>Wyczyść po przykładzie
 
-Aby wyczyścić po próbce, uruchom *Cleanup.bat* w folderze próbek po zakończeniu uruchamiania próbki. Spowoduje to usunięcie certyfikatów serwera i klienta z magazynu certyfikatów.
+Aby wyczyścić po próbie, uruchom polecenie *Oczyść. bat* w folderze Samples po zakończeniu uruchamiania przykładu. Spowoduje to usunięcie certyfikatów serwera i klienta z magazynu certyfikatów.
 
 > [!NOTE]
-> Ten skrypt nie usuwa certyfikatów usługi na kliencie podczas uruchamiania tego przykładu na komputerach. Jeśli zostały uruchomione próbki WCF, które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w currentuser — TrustedPeople magazynu. Aby to zrobić, należy `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` użyć następującego polecenia: Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów WCF, które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .

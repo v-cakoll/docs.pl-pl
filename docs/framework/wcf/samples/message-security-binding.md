@@ -2,25 +2,25 @@
 title: Powiązanie zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-ms.openlocfilehash: 5c8f1cd9135f48d06beb19317910a1c13bac78ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c4b21a8983884cbb4f8ab77568bd4977563b3b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972448"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584834"
 ---
 # <a name="message-security-binding"></a>Powiązanie zabezpieczeń komunikatów
-Ta sekcja zawiera przykłady pokazujące, powiązanie zabezpieczeń komunikatów w usługach Windows w programie WCF.  
+Ta sekcja zawiera przykłady przedstawiające powiązanie zabezpieczeń wiadomości w usługach systemu Windows w programie WCF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zabezpieczenia komunikatów z anonimowością](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- Niniejszy przykład demonstruje sposób implementacji aplikacji Windows Communication Foundation (WCF) korzystającą zabezpieczenia na poziomie komunikatu bez uwierzytelniania klienta, ale, która wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509 serwera.  
+ [Zabezpieczenia komunikatów z anonimowością](message-security-anonymous.md)  
+ Ten przykład pokazuje, jak wdrożyć aplikację Windows Communication Foundation (WCF), która korzysta z zabezpieczeń na poziomie komunikatów bez uwierzytelniania klienta, ale wymaga uwierzytelniania serwera przy użyciu certyfikatu X. 509 serwera.  
   
- [Certyfikat zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
- Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatów X.509 v3 klienta i wymaga uwierzytelnienia serwera za pomocą certyfikat serwera X.509 v3.  
+ [Certyfikat zabezpieczeń komunikatów](message-security-certificate.md)  
+ Ten przykład pokazuje, jak zaimplementować aplikację, która korzysta z protokołu WS-Security z uwierzytelnianiem certyfikatu X. 509 v3 dla klienta i wymaga uwierzytelniania serwera przy użyciu certyfikatu X. 509 v3 serwera.  
   
- [Nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania nazwy użytkownika dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera.  
+ [Nazwa użytkownika zabezpieczeń komunikatów](message-security-user-name.md)  
+ Ten przykład pokazuje, jak zaimplementować aplikację, która korzysta z protokołu WS-Security z uwierzytelnianiem nazwy użytkownika dla klienta i wymaga uwierzytelniania serwera przy użyciu certyfikatu X. 509v3 serwera.  
   
- [Zabezpieczenia komunikatów — Windows](../../../../docs/framework/wcf/samples/message-security-windows.md)  
- W tym przykładzie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSHttpBinding> powiązania do użycia zabezpieczenia na poziomie komunikatu z uwierzytelnianiem Windows.
+ [Zabezpieczenia komunikatów — Windows](message-security-windows.md)  
+ Ten przykład pokazuje, jak skonfigurować <xref:System.ServiceModel.WSHttpBinding> powiązanie do używania zabezpieczeń na poziomie komunikatów z uwierzytelnianiem systemu Windows.

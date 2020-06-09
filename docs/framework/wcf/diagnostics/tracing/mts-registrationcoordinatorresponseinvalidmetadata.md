@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
 ms.date: 03/30/2017
 ms.assetid: a174bbf5-0ffe-4fda-969d-e7fbd1996123
-ms.openlocfilehash: 664fbad52cdb66d3bf7b58ff639c62c8c18b1e56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faa9fc98d5ba029fff5c221e870dd48712e152a3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594286"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorresponseinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
-Usługa protokołu WS-Atomic Transaction odebrał komunikat RegisterResponse z koordynatorem, który zawiera odwołania do punktu końcowego z metadanymi nieprawidłowy lub niezgodny.  
+Usługa protokołu transakcji WS-AT otrzymała komunikat RegisterResponse od jego koordynatora, który zawiera odwołanie do punktu końcowego z nieprawidłowymi lub niezgodnymi metadanymi.  
   
 ## <a name="description"></a>Opis  
- Śledzone, gdy próbuje zarejestrować za pomocą swojego przełożonego Menedżera transakcji Menedżera transakcji w lokalnego nadrzędnym zwraca wiadomości RegisterResponse nieprawidłowy adres.  
+ Śledzenie, gdy lokalny Menedżer transakcji próbuje zarejestrować się w Menedżerze transakcji nadrzędnych, a przełożony zwraca nieprawidłowy adres w komunikacie RegisterResponse.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

@@ -1,5 +1,6 @@
 ---
 title: Implementacja wzorca asynchronicznego opartego na zdarzeniach
+description: Dowiedz się, jak zaimplementować wzorzec asynchroniczny oparty na zdarzeniach (EAP) w programie .NET. Protokół EAP jest standardowym sposobem spakowania klasy, która ma funkcje asynchroniczne.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ffb2e2f426e2d2d97998a89a3e8d306de4f29ca
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289385"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583664"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 
@@ -257,7 +258,7 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>

@@ -2,20 +2,20 @@
 title: Błędy klasy XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: adb14fdb45aa71bbaf4585cbfba55059df7cddf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce5aa6d2c579d4776f9505ae694768203e48eecf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584067"
 ---
 # <a name="xmlserializer-faults"></a>Błędy klasy XmlSerializer
-Przykład <xref:System.Xml.Serialization.XmlSerializer> umowy o błędach pokazuje, jak przekazywać informacje <xref:System.Xml.Serialization.XmlSerializer>o błędzie z usługi do klienta przy użyciu . Przykład jest oparty na [wprowadzenie,](../../../../docs/framework/wcf/samples/getting-started-sample.md)z pewnym dodatkowym kodem dodanym do usługi, aby przekonwertować wewnętrzny wyjątek na błąd. Klient próbuje wykonać podział przez zero, aby wymusić warunek błędu w usłudze.  
+<xref:System.Xml.Serialization.XmlSerializer>Przykładowa umowa dotycząca błędu demonstruje sposób przekazywania informacji o błędach z usługi do klienta przy użyciu programu <xref:System.Xml.Serialization.XmlSerializer> . Przykład jest oparty na [wprowadzenie](getting-started-sample.md), z dodatkowym kodem dodanym do usługi w celu przekonwertowania wewnętrznego wyjątku na błąd. Klient próbuje wykonać dzielenie przez zero w celu wymuszenia błędu w usłudze.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kontrakt kalkulatora został zmodyfikowany w <xref:System.ServiceModel.FaultContractAttribute> celu uwzględnienia, jak pokazano w poniższym przykładowym kodzie. Ponadto <xref:System.ServiceModel.XmlSerializerFormatAttribute> jest używany do włączania <xref:System.Xml.Serialization.XmlSerializer>serializacji za pomocą pliku . Właściwość <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A> jest `true` ustawiona na ten atrybut, który nakazuje <xref:System.Xml.Serialization.XmlSerializer> serializatora do używania błędów odczytu i zapisu.  
+ Kontrakt kalkulatora został zmodyfikowany w taki sposób, aby zawierał element <xref:System.ServiceModel.FaultContractAttribute> , jak pokazano w poniższym przykładowym kodzie. Ponadto, służy <xref:System.ServiceModel.XmlSerializerFormatAttribute> do włączania serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> . <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>Właściwość jest ustawiona na `true` dla tego atrybutu, co powoduje, że serializator używa do <xref:System.Xml.Serialization.XmlSerializer> odczytu i zapisu błędów.  
   
 ```csharp
 [XmlSerializerFormat(SupportFaults=true)]  
@@ -37,22 +37,22 @@ public interface ICalculator
 }  
 ```  
   
- Podczas generowania kodu dla serwera proxy klienta należy zastosować flagę **/UseSerializerForFaults** do [narzędzia narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe).](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ Podczas generowania kodu dla serwera proxy klienta należy zastosować flagę **/UseSerializerForFaults** do [Narzędzia Narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\XmlSerializerFaults`  
   

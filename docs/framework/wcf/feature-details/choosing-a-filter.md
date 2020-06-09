@@ -2,12 +2,12 @@
 title: Wybieranie filtra
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964812"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587498"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu ważne jest, aby wybrać poprawne filtry komunikatów i skonfigurować je w taki sposób, aby umożliwiały dokładne dopasowanie do odbieranych komunikatów. Jeśli wybrane filtry są zbyt szerokie w dopasowaniach lub są nieprawidłowo skonfigurowane, komunikaty są kierowane nieprawidłowo. Jeśli filtry są zbyt restrykcyjne, może nie mieć dostępnych prawidłowych tras dla niektórych komunikatów.
@@ -18,7 +18,7 @@ Podczas wybierania filtrów, które są używane przez usługę routingu, ważne
 
 ### <a name="action"></a>Akcja
 
-Filtr akcji sprawdza Właściwość <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Jeśli zawartość nagłówka akcji w komunikacie jest zgodna z wartością Filtruj dane określoną w konfiguracji filtru, ten filtr zwraca `true`. W poniższym przykładzie zdefiniowano `FilterElement`, która używa filtru akcji do dopasowywania komunikatów z nagłówkiem akcji, który zawiera wartość `http://namespace/contract/operation/`.
+Filtr akcji sprawdza <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> Właściwość. Jeśli zawartość nagłówka akcji w komunikacie jest zgodna z wartością Filtruj dane określoną w konfiguracji filtru, ten filtr zwraca wartość `true` . W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru akcji, aby dopasować komunikaty z nagłówkiem akcji, który zawiera wartość `http://namespace/contract/operation/` .
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ Ten filtr powinien być używany podczas routingu komunikatów, które zawieraj�
 
 ### <a name="endpointaddress"></a>Elemencie
 
-Filtr EndpointAddress sprawdza wartość elementu EndpointAddress, w którym wiadomość została odebrana. Jeśli adres odebrany przez komunikat dokładnie pasuje do adresu filtru określonego w konfiguracji filtru, ten filtr zwraca `true`. W poniższym przykładzie zdefiniowano `FilterElement`, które używają filtru adresów w celu dopasowania wszelkich komunikatów skierowanych do "http://\<hostname >/vdir/s.svc/b".
+Filtr EndpointAddress sprawdza wartość elementu EndpointAddress, w którym wiadomość została odebrana. Jeśli adres odebrany przez komunikat dokładnie pasuje do adresu filtru określonego w konfiguracji filtru, ten filtr zwraca wartość `true` . W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru adresów w celu dopasowania wszelkich komunikatów skierowanych do "http:// \<hostname> /vdir/s.svc/b".
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ Ten filtr powinien być używany, gdy wiadomości przychodzące są rozkierowane
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-Filtr EndpointAddressPrefix jest podobny do filtru EndpointAddress. Filtr EndpointAddressPrefix sprawdza wartość EndpointAddress, w której wiadomość została odebrana. Jednak filtr EndpointAddressPrefix działa jako symbol wieloznaczny przez dopasowanie adresów zaczynających się od wartości określonej w konfiguracji filtru. W poniższym przykładzie zdefiniowano `FilterElement`, które używają filtru EndpointAddressPrefix do dopasowania wszelkich komunikatów skierowanych do `http://<hostname>/vdir*`.
+Filtr EndpointAddressPrefix jest podobny do filtru EndpointAddress. Filtr EndpointAddressPrefix sprawdza wartość EndpointAddress, w której wiadomość została odebrana. Jednak filtr EndpointAddressPrefix działa jako symbol wieloznaczny przez dopasowanie adresów zaczynających się od wartości określonej w konfiguracji filtru. W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru EndpointAddressPrefix do dopasowania wszelkich komunikatów skierowanych do `http://<hostname>/vdir*` .
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -68,7 +68,7 @@ Ten filtr powinien być używany podczas routingu przychodzących komunikatów, 
 
 ### <a name="and"></a>AND
 
-Filtr i nie bezpośrednio filtruje wartości w komunikacie, ale umożliwia łączenie dwóch innych filtrów w celu utworzenia warunku `AND`, w którym oba filtry muszą być zgodne z komunikatem, zanim filtr i zwróci `true`. Dzięki temu można tworzyć złożone filtry, które pasują tylko wtedy, gdy wszystkie filtry podrzędne pasują do siebie. Poniższy przykład definiuje filtr adresów i filtr akcji, a następnie definiuje filtr i, który szacuje komunikat w odniesieniu do filtrów adresu i akcji. Jeśli adres i filtry akcji są zgodne, a następnie filtr zwraca `true`.
+Filtr i nie bezpośrednio filtruje wartość w komunikacie, ale umożliwia połączenie dwóch innych filtrów w celu utworzenia `AND` warunku, w którym oba filtry muszą być zgodne z komunikatem, zanim filtr i zwróci wartość `true` . Dzięki temu można tworzyć złożone filtry, które pasują tylko wtedy, gdy wszystkie filtry podrzędne pasują do siebie. Poniższy przykład definiuje filtr adresów i filtr akcji, a następnie definiuje filtr i, który szacuje komunikat w odniesieniu do filtrów adresu i akcji. Jeśli adres i filtry akcji pasują do siebie, filtr i zwraca wartość `true` .
 
 ```xml
 <filter name="address1" filterType="AddressPrefix" filterData="http://host/vdir"/>
@@ -84,9 +84,9 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 Ten filtr powinien być używany, gdy konieczne jest połączenie logiki z wielu filtrów, aby określić, kiedy należy wykonać dopasowanie. Na przykład jeśli masz wiele miejsc docelowych, które muszą odbierać tylko niektóre kombinacje akcji i komunikatów do określonych adresów, możesz użyć filtru i, aby połączyć wymagane filtry akcji i adresów.
 
-### <a name="custom"></a>Niestandardowe
+### <a name="custom"></a>Niestandardowy
 
-Wybierając typ filtru niestandardowego, należy podać wartość CustomType, która zawiera typ zestawu, który zawiera implementację **MessageFilter** , która ma być używana dla tego filtru. Ponadto danych filtru musi zawierać wszystkie wartości, które mogą być wymagane przez filtr niestandardowy w ocenie komunikatów. W poniższym przykładzie zdefiniowano `FilterElement`, który używa implementacji `CustomAssembly.MyCustomMsgFilter` MessageFilter.
+Wybierając typ filtru niestandardowego, należy podać wartość CustomType, która zawiera typ zestawu, który zawiera implementację **MessageFilter** , która ma być używana dla tego filtru. Ponadto danych filtru musi zawierać wszystkie wartości, które mogą być wymagane przez filtr niestandardowy w ocenie komunikatów. W poniższym przykładzie zdefiniowano `FilterElement` , który używa `CustomAssembly.MyCustomMsgFilter` implementacji MessageFilter.
 
 ```xml
 <filter name="custom1" filterType="Custom" customType="CustomAssembly.MyCustomMsgFilter, CustomAssembly" filterData="Custom Data" />
@@ -96,11 +96,11 @@ Wybierając typ filtru niestandardowego, należy podać wartość CustomType, kt
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-Jeśli musisz wykonać niestandardową logikę dopasowywania względem komunikatu, który nie jest uwzględniony w filtrach dostarczonych z [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], musisz utworzyć filtr niestandardowy, który jest implementacją klasy **MessageFilter** . Na przykład można utworzyć filtr niestandardowy, który porównuje pole w komunikacie przychodzącym z listą znanych wartości przyznanych filtrowi jako konfigurację lub które miesza określony element komunikatu, a następnie sprawdza tę wartość, aby określić, czy filtr powinien zwrócić `true` lub `false`.
+Jeśli musisz wykonać niestandardową logikę dopasowywania względem komunikatu, który nie jest objęty przez filtry dostarczone z [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] , musisz utworzyć filtr niestandardowy, który jest implementacją klasy **MessageFilter** . Na przykład można utworzyć filtr niestandardowy, który porównuje pole w komunikacie przychodzącym z listą znanych wartości przyznanych filtrowi jako konfigurację lub które miesza określony element komunikatu, a następnie sprawdza tę wartość, aby określić, czy filtr powinien zwrócić `true` lub `false` .
 
-### <a name="endpointname"></a>EndpointName
+### <a name="endpointname"></a>Nazwapunktukoncowego
 
-Filtr EndpointName sprawdza nazwę punktu końcowego, który odebrał komunikat. W poniższym przykładzie zdefiniowano `FilterElement`, która używa filtru EndpointName do przesyłania komunikatów odebranych w "SvcEndpoint".
+Filtr EndpointName sprawdza nazwę punktu końcowego, który odebrał komunikat. W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru EndpointName do przesyłania komunikatów odebranych w "SvcEndpoint".
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -112,11 +112,11 @@ EndpointNameMessageFilter name1 = new EndpointNameMessageFilter("SvcEndpoint");
 
 Ten filtr jest przydatny, gdy usługa routingu ujawnia więcej niż jeden nazwany punkt końcowy usługi. Można na przykład uwidocznić dwa punkty końcowe używane przez usługę routingu do odbierania komunikatów. jeden z nich jest używany przez klientów priorytetowych, którzy wymagają przetwarzania komunikatów w czasie rzeczywistym, podczas gdy drugi punkt końcowy otrzymuje komunikaty, które nie są zależne od czasu.
 
-Mimo że w celu określenia punktu końcowego, w którym wiadomość została odebrana, używana jest pełna nazwa punktu końcowego, jest to wygodny skrót, który jest często mniej podatny na błędy, szczególnie w przypadku konfigurowania usługi routingu przy użyciu konfiguracji plik (gdzie nazwy punktów końcowych są wymaganym atrybutem).
+Mimo że w celu określenia punktu końcowego, w którym wiadomość została odebrana, używana jest pełna nazwa punktu końcowego, jest to wygodny skrót, który jest często mniej podatny na błędy, szczególnie w przypadku konfigurowania usługi routingu przy użyciu pliku konfiguracji (w przypadku których nazwy punktów końcowych są wymaganym atrybutem).
 
 ### <a name="matchall"></a>MatchAll
 
-Filtr MatchAll jest zgodny z odebranymi komunikatami. Jest to przydatne, jeśli konieczne jest zawsze kierowanie wszystkich odebranych komunikatów do określonego punktu końcowego, takich jak usługa rejestrowania przechowująca kopię wszystkich odebranych komunikatów. W poniższym przykładzie zdefiniowano `FilterElement`, który używa filtru MatchAll.
+Filtr MatchAll jest zgodny z odebranymi komunikatami. Jest to przydatne, jeśli konieczne jest zawsze kierowanie wszystkich odebranych komunikatów do określonego punktu końcowego, takich jak usługa rejestrowania przechowująca kopię wszystkich odebranych komunikatów. W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru MatchAll.
 
 ```xml
 <filter name="matchAll1" filterType="MatchAll" />
@@ -126,9 +126,9 @@ Filtr MatchAll jest zgodny z odebranymi komunikatami. Jest to przydatne, jeśli 
 MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 ```
 
-### <a name="xpath"></a>{1&gt;XPath&lt;1}
+### <a name="xpath"></a>XPath
 
-Filtr XPath umożliwia określenie zapytania XPath, które jest używane do inspekcji określonego elementu w komunikacie. Filtrowanie XPath to zaawansowana opcja filtrowania, która umożliwia bezpośrednie sprawdzenie dowolnego wpisu z adresami XML w wiadomości. jednak wymaga to konkretnej znajomości struktury otrzymywanych komunikatów. W poniższym przykładzie zdefiniowano `FilterElement`, która używa filtru XPath do sprawdzenia komunikatu dla elementu o nazwie "element" w przestrzeni nazw, do którego odwołuje się prefiks przestrzeni nazw "NS".
+Filtr XPath umożliwia określenie zapytania XPath, które jest używane do inspekcji określonego elementu w komunikacie. Filtrowanie XPath to zaawansowana opcja filtrowania, która umożliwia bezpośrednie sprawdzenie dowolnego wpisu z adresami XML w wiadomości. jednak wymaga to konkretnej znajomości struktury otrzymywanych komunikatów. W poniższym przykładzie zdefiniowano `FilterElement` , który używa filtru XPath do sprawdzenia komunikatu dla elementu o nazwie "element" w przestrzeni nazw, do którego odwołuje się prefiks przestrzeni nazw "NS".
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -138,13 +138,13 @@ Filtr XPath umożliwia określenie zapytania XPath, które jest używane do insp
 XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 ```
 
-Ten filtr jest przydatny, Jeśli wiesz, że odebrane komunikaty zawierają konkretną wartość. Na przykład, Jeśli przechowujesz dwie wersje tej samej usługi i wiesz, że komunikaty rozkierowane do nowszej wersji usługi zawierają unikatową wartość w niestandardowym nagłówku, możesz utworzyć filtr, który używa XPath, aby przejść do tego nagłówka i porównać wartość zaliczkową. w nagłówku do innego podanego w konfiguracji filtru, aby określić, czy filtr jest zgodny.
+Ten filtr jest przydatny, Jeśli wiesz, że odebrane komunikaty zawierają konkretną wartość. Na przykład, Jeśli przechowujesz dwie wersje tej samej usługi i wiesz, że komunikaty kierowane do nowszej wersji usługi zawierają unikatową wartość w niestandardowym nagłówku, możesz utworzyć filtr, który używa XPath, aby przejść do tego nagłówka i porównać wartość znajdującą się w nagłówku z innym podanym w konfiguracji filtru, aby określić, czy filtr jest zgodny.
 
-Ponieważ zapytania XPath często zawierają unikatowe przestrzenie nazw, które często mają długość lub złożone wartości ciągu, filtr XPath umożliwia użycie tabeli przestrzeni nazw w celu zdefiniowania unikatowych prefiksów przestrzeni nazw. Aby uzyskać więcej informacji na temat tabeli przestrzeni nazw, zobacz [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).
+Ponieważ zapytania XPath często zawierają unikatowe przestrzenie nazw, które często mają długość lub złożone wartości ciągu, filtr XPath umożliwia użycie tabeli przestrzeni nazw w celu zdefiniowania unikatowych prefiksów przestrzeni nazw. Aby uzyskać więcej informacji na temat tabeli przestrzeni nazw, zobacz [filtry komunikatów](message-filters.md).
 
 Aby uzyskać więcej informacji na temat projektowania zapytań XPath, zobacz [składnia XPath](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Instrukcje: używanie filtrów](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Filtry komunikatów](message-filters.md)
+- [Instrukcje: używanie filtrów](how-to-use-filters.md)

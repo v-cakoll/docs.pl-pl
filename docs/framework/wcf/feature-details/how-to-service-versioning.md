@@ -2,18 +2,18 @@
 title: 'Instrukcje: Przechowywanie wersji usługi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586939"
 ---
 # <a name="how-to-service-versioning"></a>Instrukcje: Przechowywanie wersji usługi
-W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routingu, która kieruje wiadomości do różnych wersji tej samej usługi. W tym przykładzie wiadomości są kierowane do dwóch `roundingCalc` różnych wersji usługi `regularCalc` kalkulatora (wersja 1) i (wersja 2). Obie implementacje obsługują te same operacje; jednak starsza `roundingCalc`usługa , zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie `regularCalc` wskazać, czy ma być używana nowsza usługa.  
+W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, która kieruje komunikaty do różnych wersji tej samej usługi. W tym przykładzie komunikaty są kierowane do dwóch różnych wersji usługi kalkulatora `roundingCalc` (v1) i `regularCalc` (v2). Obie implementacje obsługują te same operacje; jednak Starsza usługa, `roundingCalc` zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używana nowsza `regularCalc` Usługa.  
   
 > [!WARNING]
-> Aby przekierować wiadomość do określonej wersji usługi, usługa routingu musi mieć możliwość określenia miejsca docelowego wiadomości na podstawie zawartości wiadomości. W metodzie pokazano poniżej, klient określi wersję, wstawiając informacje do nagłówka wiadomości. Istnieją metody przechowywania wersji usługi, które nie wymagają od klientów przekazywania dodatkowych danych. Na przykład wiadomość może być kierowana do najnowszej lub najbardziej zgodnej wersji usługi lub router może użyć części standardowej koperty PROTOKOŁU SOAP.  
+> Aby można było skierować komunikat do określonej wersji usługi, usługa routingu musi być w stanie określić miejsce docelowe wiadomości na podstawie zawartości komunikatu. W poniższej metodzie klient określi wersję, wstawiając informacje do nagłówka komunikatu. Istnieją metody obsługi wersji usługi, które nie wymagają od klientów przekazywania dodatkowych danych. Na przykład komunikat może być kierowany do najnowszej lub najbardziej zgodnej wersji usługi lub router może użyć części standardowej koperty protokołu SOAP.  
   
  Operacje udostępniane przez obie usługi są następujące:  
   
@@ -25,19 +25,19 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routi
   
 - Dzielenie  
   
- Ponieważ obie implementacje usługi obsługują te same operacje i są zasadniczo identyczne inne niż dane, które zwracają, dane podstawowe zawarte w komunikatach wysyłanych z aplikacji klienckich nie jest wystarczająco unikatowy, aby umożliwić określenie sposobu kierowania żądania. Na przykład nie można użyć filtrów akcji, ponieważ akcje domyślne dla obu usług są takie same.  
+ Ponieważ oba implementacje usług obsługują te same operacje i są zasadniczo identyczne jak dane, które zwracają, dane podstawowe zawarte w komunikatach wysyłanych z aplikacji klienckich nie są wystarczająco unikatowe, aby umożliwić określenie sposobu kierowania żądania. Na przykład filtry akcji nie mogą być używane, ponieważ domyślne akcje obu usług są takie same.  
   
- Można to rozwiązać na kilka sposobów, takich jak uwidacznianie określonego punktu końcowego na routerze dla każdej wersji usługi lub dodawanie niestandardowego elementu nagłówka do wiadomości w celu wskazania wersji usługi.  Każde z tych podejść umożliwia unikatowe kierowanie wiadomości przychodzących do określonej wersji usługi, ale korzystanie z unikatowej zawartości wiadomości jest preferowaną metodą rozróżniania żądań dla różnych wersji usługi.  
+ Można to rozwiązać na kilka sposobów, takich jak ujawnienie określonego punktu końcowego na routerze dla każdej wersji usługi lub dodanie niestandardowego elementu nagłówka do komunikatu w celu wskazania wersji usługi.  Każdy z tych metod umożliwia jednoznaczne kierowanie komunikatów przychodzących do określonej wersji usługi, ale używanie unikatowej zawartości komunikatów jest preferowaną metodą rozróżniania między żądaniami dla różnych wersji usługi.  
   
- W tym przykładzie aplikacja kliencka dodaje niestandardowy nagłówek "CalcVer" do komunikatu żądania. Ten nagłówek będzie zawierać wartość, która wskazuje wersję usługi, do których powinna być kierowana wiadomość. Wartość "1" wskazuje, że komunikat musi być przetwarzany przez usługę zaokrąglaniaNak, podczas gdy wartość "2" wskazuje usługę regularCalc. Dzięki temu aplikacja kliencka do bezpośredniego kontrolowania, która wersja usługi będzie przetwarzać komunikat.  Ponieważ nagłówek niestandardowy jest wartością zawartą w wiadomości, można użyć jednego punktu końcowego do odbierania wiadomości przeznaczonych dla obu wersji usługi. W aplikacji klienckiej można użyć następującego kodu, aby dodać ten niestandardowy nagłówek do wiadomości:  
+ W tym przykładzie aplikacja kliencka dodaje niestandardowy nagłówek "CalcVer" do komunikatu żądania. Ten nagłówek będzie zawierać wartość wskazującą wersję usługi, do której ma być kierowany komunikat. Wartość "1" wskazuje, że komunikat musi być przetwarzany przez usługę roundingCalc, podczas gdy wartość "2" wskazuje usługę regularCalc. Dzięki temu aplikacja kliencka może bezpośrednio kontrolować, która wersja usługi będzie przetwarzać komunikat.  Ponieważ nagłówek niestandardowy jest wartością znajdującą się w komunikacie, można użyć jednego punktu końcowego do odbierania komunikatów przeznaczonych dla obu wersji usługi. Poniższy kod może być używany w aplikacji klienckiej w celu dodania tego niestandardowego nagłówka do wiadomości:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### <a name="implement-service-versioning"></a>Implementowanie wersji usługi  
+### <a name="implement-service-versioning"></a>Implementowanie obsługi wersji usługi  
   
-1. Utwórz podstawową konfigurację usługi routingu, określając punkt końcowy usługi udostępniane przez usługę. Poniższy przykład definiuje punkt końcowy pojedynczej usługi, który będzie używany do odbierania wiadomości. Definiuje również punkty końcowe klienta, które będą używane `roundingCalc` do wysyłania wiadomości `regularCalc` do (v1) i (v2) usług.  
+1. Utwórz podstawową konfigurację usługi routingu, określając punkt końcowy usługi uwidoczniony przez usługę. W poniższym przykładzie zdefiniowano pojedynczy punkt końcowy usługi, który będzie używany do odbierania komunikatów. Definiuje również punkty końcowe klienta, które będą używane do wysyłania komunikatów do `roundingCalc` (v1) i `regularCalc` (v2) usług.  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Zdefiniuj filtry używane do kierowania wiadomości do docelowych punktów końcowych.  W tym przykładzie filtr XPath służy do wykrywania wartości niestandardowego nagłówka "CalcVer", aby określić, do której wersji wiadomość powinna być kierowana. Filtr XPath służy również do wykrywania komunikatów, które nie zawierają nagłówka "CalcVer". Poniższy przykład definiuje wymagane filtry i tabelę obszaru nazw.  
+2. Zdefiniuj filtry służące do kierowania komunikatów do docelowych punktów końcowych.  W tym przykładzie filtr XPath służy do wykrywania wartości niestandardowego nagłówka "CalcVer" w celu określenia wersji, do której ma być kierowany komunikat. Filtr XPath służy również do wykrywania komunikatów, które nie zawierają nagłówka "CalcVer". W poniższym przykładzie zdefiniowano wymagane filtry i tabelę przestrzeni nazw.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,11 +94,11 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Prefiks obszaru nazw s12 jest zdefiniowany domyślnie w tabeli obszaru nazw i reprezentuje obszar nazw `http://www.w3.org/2003/05/soap-envelope`.
+    > Prefiks przestrzeni nazw S12 jest definiowany domyślnie w tabeli przestrzeni nazw i reprezentuje przestrzeń nazw `http://www.w3.org/2003/05/soap-envelope` .
   
-3. Zdefiniuj tabelę filtrów, która kojarzy każdy filtr z punktem końcowym klienta. Jeśli wiadomość zawiera nagłówek "CalcVer" o wartości 1, zostanie wysłany do usługi regularCalc. Jeśli nagłówek zawiera wartość 2, zostanie wysłany do usługi zaokrąglaniaKt. Jeśli nie ma nagłówka, wiadomość zostanie przekierowana do regularCalc.  
+3. Zdefiniuj tabelę filtrów, która kojarzy każdy filtr z punktem końcowym klienta. Jeśli komunikat zawiera nagłówek "CalcVer" o wartości 1, zostanie on wysłany do usługi regularCalc. Jeśli nagłówek zawiera wartość 2, zostanie wysłany do usługi roundingCalc. Jeśli nagłówek nie jest obecny, komunikat zostanie rozesłany do regularCalc.  
   
-     Poniżej definiuje tabelę filtrów i dodaje filtry zdefiniowane wcześniej.  
+     Poniższy schemat definiuje tabelę filtrów i dodaje filtry zdefiniowane wcześniej.  
   
     ```xml  
     <filterTables>  
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Aby ocenić przychodzące wiadomości względem filtrów zawartych w tabeli filtrów, należy skojarzyć tabelę filtrów z punktami końcowymi usługi przy użyciu zachowania routingu. Poniższy przykład pokazuje `filterTable1` skojarzenie z punktami końcowymi usługi:  
+4. Aby oszacować komunikaty przychodzące względem filtrów zawartych w tabeli filtrów, należy skojarzyć tabelę filtru z punktami końcowymi usługi przy użyciu zachowania routingu. Poniższy przykład ilustruje kojarzenie `filterTable1` z punktami końcowymi usługi:  
   
     ```xml  
     <behaviors>  
@@ -131,7 +131,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełna lista pliku konfiguracyjnego.  
+ Poniżej znajduje się kompletna lista plików konfiguracyjnych.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -214,7 +214,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełna lista aplikacji klienckiej.  
+ Poniżej znajduje się kompletna lista aplikacji klienckich.  
   
 ```csharp  
 using System;  
@@ -326,4 +326,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Usługi routingu](../samples/routing-services.md)

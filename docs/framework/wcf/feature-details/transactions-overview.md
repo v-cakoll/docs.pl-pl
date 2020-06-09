@@ -6,41 +6,41 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585834"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Omówienie transakcji WCF (Windows Communication Foundation)
-Transakcje zapewniają sposób grupowania zestawu akcji lub operacji w pojedynczą jednostkę niepodzielne wykonywania. Transakcja jest to kolekcja operacji z następującymi właściwościami:  
+Transakcje umożliwiają grupowanie zestawu akcji lub operacji w pojedynczą niepodzielną jednostkę wykonania. Transakcja jest kolekcją operacji o następujących właściwościach:  
   
-- Niepodzielność. Daje to gwarancję, że wszystkie aktualizacje ukończone na podstawie określonej transakcji są zatwierdzone i zapewniana trwałość lub są one wszystkie zostało przerwane i z powrotem obniżyć do poprzedniego stanu.  
+- Niepodzielność. Pozwala to zagwarantować, że wszystkie aktualizacje ukończone w ramach określonej transakcji zostaną zatwierdzone i wykonane w sposób trwały lub wszystkie są przerywane i wycofywane do poprzedniego stanu.  
   
-- Spójność. Gwarantuje to, że zmiany wprowadzone w ramach transakcji reprezentuje przekształcenie z jednego spójnego stanu do drugiego. Na przykład transakcji, która przesyła pieniądze z konta bankowego na rachunek oszczędnościowy nie zmienia kwotę, w ramach ogólnej konta banku.  
+- Zachowania. Gwarantuje to, że zmiany wprowadzone w ramach transakcji reprezentują transformację z jednego stanu spójnego na inny. Na przykład transakcja, która przenosi pieniądze z konta kontroli na konto oszczędnościowe, nie zmienia kwoty pieniędzy w ogólnym koncie bankowym.  
   
-- Izolacja. Zapobiega to transakcja może obserwować niezatwierdzone zmiany należących do innych równoczesnych transakcji. Izolacja zapewnia abstrakcję przy jednoczesnym zapewnieniu jedna transakcja współbieżności nie może mieć nieoczekiwane wpływ na wykonanie innej transakcji.  
+- Izolacja. Zapobiega to obserwowanie niezatwierdzonych zmian należących do innych współbieżnych transakcji. Izolacja zapewnia abstrakcję współbieżności, przy jednoczesnym zapewnieniu, że jedna transakcja nie może mieć nieoczekiwanego wpływu na wykonywanie innej transakcji.  
   
-- Trwałość. Oznacza to, że po zatwierdzeniu aktualizacji do zarządzanych zasobów (na przykład rekordem bazy danych) będą trwałe także w przypadku awarii.  
+- Wytrzymałości. Oznacza to, że po zatwierdzeniu aktualizacje zasobów zarządzanych (takich jak rekord bazy danych) będą trwałe w wyniku awarii.  
   
- Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które umożliwiają tworzenie transakcje rozproszone w aplikacji usługi sieci Web.  
+ Windows Communication Foundation (WCF) oferuje bogaty zestaw funkcji, które umożliwiają tworzenie transakcji rozproszonych w aplikacji usługi sieci Web.  
   
- Usługi WCF implementuje obsługę protokołu WS-AtomicTransaction (WS-AT), który umożliwia aplikacjom WCF przepływ transakcji do aplikacji międzyoperacyjnych, takich jak interoperacyjne usług sieci Web utworzone przy użyciu technologii innych firm. Usługi WCF implementuje również obsługę protokołu transakcji OLE, które mogą być używane w scenariuszach nie wymagających międzyoperacyjny funkcje przepływu transakcji.  
+ Funkcja WCF implementuje obsługę protokołu WS-AtomicTransaction (WS-AT), który umożliwia aplikacjom WCF przepływ transakcji do aplikacji międzyoperacyjnych, takich jak współdziałające usługi sieci Web stworzone przy użyciu technologii innej firmy. Funkcja WCF implementuje również obsługę protokołu transakcji OLE, który może być używany w scenariuszach, w których nie ma potrzeby włączania przepływu transakcji.  
   
- Plik konfiguracji aplikacji umożliwiają skonfigurowanie powiązań, aby włączyć lub wyłączyć przepływ transakcji, a także ustawić protokół żądaną transakcji w powiązaniu. Ponadto można ustawić limity czasu transakcji na poziomie usługi przy użyciu pliku konfiguracji. Aby uzyskać więcej informacji, zobacz [Włączanie przepływu transakcji](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Możesz użyć pliku konfiguracji aplikacji, aby skonfigurować powiązania do włączania lub wyłączania przepływu transakcji, a także ustawić żądany protokół transakcyjny dla powiązania. Ponadto można ustawić limity czasu transakcji na poziomie usługi przy użyciu pliku konfiguracji. Aby uzyskać więcej informacji, zobacz [Włączanie przepływu transakcji](enabling-transaction-flow.md).  
   
- Transakcja atrybutów w <xref:System.ServiceModel> przestrzeni nazw pozwala wykonać następujące czynności:  
+ Atrybuty transakcji w <xref:System.ServiceModel> przestrzeni nazw umożliwiają wykonywanie następujących czynności:  
   
-- Konfigurowanie limitów czasu transakcji i poziom izolacji filtrowanie przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu.  
+- Skonfiguruj limity czasu transakcji i filtrowanie na poziomie izolacji przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu.  
   
-- Włączyć funkcję transakcji i skonfigurować za pomocą zachowania ukończenia transakcji <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu.  
+- Włącz funkcje transakcji i skonfiguruj zachowanie realizacji transakcji przy użyciu <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu.  
   
-- Użyj <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> atrybutów w metodzie umowy, aby wymagać, zezwolenie lub zablokowanie przepływu transakcji.  
+- Użyj <xref:System.ServiceModel.ServiceContractAttribute> atrybutów i <xref:System.ServiceModel.OperationContractAttribute> dla metody Contract, aby wymagać, zezwalać lub odmawiać przepływu transakcji.  
   
- Aby uzyskać więcej informacji, zobacz [atrybuty transakcji elementu ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Aby uzyskać więcej informacji, zobacz [atrybuty transakcji ServiceModel](servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Atrybuty transakcji elementu ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [Włączanie przepływu transakcji](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Atrybuty transakcji elementu ServiceModel](servicemodel-transaction-attributes.md)
+- [Włączanie przepływu transakcji](enabling-transaction-flow.md)

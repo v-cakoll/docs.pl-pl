@@ -2,12 +2,12 @@
 title: Sesje i kolejki
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: ce8cdd08f9bc34d03a014b253024a2b756d4c82a
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 425135b533b898cbc75464f50ce8a5e8f6550755
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728451"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584171"
 ---
 # <a name="sessions-and-queues"></a>Sesje i kolejki
 
@@ -31,7 +31,7 @@ Ten przykład pokazuje, jak wysyłać i odbierać zestaw powiązanych komunikat�
   
  W przykładzie klient wysyła do usługi wiele komunikatów w ramach sesji w ramach jednego z zakresów pojedynczej transakcji.  
   
- Kontrakt usługi to `IOrderTaker`, który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami. <xref:System.ServiceModel.SessionMode> Użycie w umowie pokazanej w następującym przykładowym kodzie wskazuje, że komunikaty są częścią sesji.  
+ Kontrakt usługi to `IOrderTaker` , który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami. <xref:System.ServiceModel.SessionMode>Użycie w umowie pokazanej w następującym przykładowym kodzie wskazuje, że komunikaty są częścią sesji.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
@@ -139,7 +139,7 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- Klient tworzy zakres transakcji. Wszystkie komunikaty w sesji są wysyłane do kolejki w zakresie transakcji, co sprawia, że może być traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzona przez wywołanie <xref:System.Transactions.TransactionScope.Complete%2A>.  
+ Klient tworzy zakres transakcji. Wszystkie komunikaty w sesji są wysyłane do kolejki w zakresie transakcji, co sprawia, że może być traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzona przez wywołanie <xref:System.Transactions.TransactionScope.Complete%2A> .  
 
 ```csharp
 //Create a transaction scope.  
@@ -208,13 +208,13 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, kompilowanie i uruchamianie przykładu  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować wersję rozwiązania dla języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania dla języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
- Domyślnie z opcją <xref:System.ServiceModel.NetMsmqBinding>jest włączona funkcja zabezpieczenia transportu. Istnieją <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dwie istotne właściwości zabezpieczenia transportu usługi MSMQ, a <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` mianowicie tryb uwierzytelniania jest ustawiony na `Windows` , a poziom ochrony jest ustawiony na. `Sign` Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny, a dla usługi MSMQ należy zainstalować opcję Integracja z usługą Active Directory. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, zostanie wyświetlony komunikat o błędzie.  
+ Domyślnie z opcją <xref:System.ServiceModel.NetMsmqBinding> jest włączona funkcja zabezpieczenia transportu. Istnieją dwie istotne właściwości zabezpieczenia transportu usługi MSMQ, a mianowicie <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` tryb uwierzytelniania jest ustawiony na, `Windows` a poziom ochrony jest ustawiony na `Sign` . Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny, a dla usługi MSMQ należy zainstalować opcję Integracja z usługą Active Directory. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, zostanie wyświetlony komunikat o błędzie.  
   
 ### <a name="run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Uruchom przykład na komputerze przyłączonym do grupy roboczej  
   
@@ -268,4 +268,4 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
 2. Przed uruchomieniem przykładu należy zmienić konfigurację na serwerze i kliencie programu.  
   
     > [!NOTE]
-    > Ustawienie trybu zabezpieczeń `None` jest równoważne ustawieniu <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>i `Message` zabezpieczenia z. `None`  
+    > Ustawienie trybu zabezpieczeń `None` jest równoważne ustawieniu <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> i `Message` zabezpieczenia z `None` .  

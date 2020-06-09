@@ -5,25 +5,25 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: dade6d1a53fd99b994fb3c027db4e51392bfdcda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60a5884bb8d1189ab758260bf765c321392e1bfe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584366"
 ---
 # <a name="metadata-publishing-behavior"></a>Zachowanie publikowania metadanych
-Przykład zachowania publikowania metadanych pokazuje, jak kontrolować funkcje publikowania metadanych usługi. Aby zapobiec niezamierzonemu ujawnieniu potencjalnie poufnych metadanych usługi, domyślna konfiguracja usług Windows Communication Foundation (WCF) wyłącza publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale oznacza również, że nie można użyć narzędzia importu metadanych (na przykład Svcutil.exe) do generowania kodu klienta wymaganego do wywołania usługi, chyba że zachowanie publikowania metadanych usługi jest jawnie włączone w konfiguracji.  
+Przykład zachowania publikowania metadanych pokazuje, jak sterować funkcjami publikowania metadanych usługi. Aby zapobiec przypadkowemu ujawnieniu potencjalnie poufnych metadanych usługi, konfiguracja domyślna dla usług Windows Communication Foundation (WCF) wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale oznacza to, że nie można użyć narzędzia do importowania metadanych (takiego jak Svcutil. exe) w celu wygenerowania kodu klienta wymaganego do wywołania usługi, chyba że zachowanie publikowania metadanych usługi jest jawnie włączone w konfiguracji.  
   
 > [!IMPORTANT]
-> Dla jasności w tym przykładzie pokazano, jak utworzyć niezabezpieczony punkt końcowy publikowania metadanych. Takie punkty końcowe są potencjalnie dostępne dla anonimowych nieuwierzytetycznych konsumentów i należy zwrócić uwagę przed wdrożeniem takich punktów końcowych, aby upewnić się, że publiczne ujawnienie metadanych usługi jest właściwe. Zobacz przykład [niestandardowego bezpiecznego punktu końcowego metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) dla przykładu, który zabezpiecza punkt końcowy metadanych.  
+> Dla jasności ten przykład pokazuje, jak utworzyć niezabezpieczony punkt końcowy publikowania metadanych. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy zachować ostrożność przed wdrożeniem takich punktów końcowych, aby upewnić się, że można publicznie odzamknąć metadane usługi. Zapoznaj się z przykładem [niestandardowego bezpiecznego punktu końcowego metadanych](custom-secure-metadata-endpoint.md) dla przykładu, który zabezpiecza punkt końcowy metadanych.  
   
- Próbka jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), `ICalculator` który implementuje umowy serwisowej. W tym przykładzie klient jest aplikacją konsoli (.exe), a usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
+ Przykład jest oparty na [wprowadzenie](getting-started-sample.md), który implementuje `ICalculator` kontrakt usługi. W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Aby usługa uwidaczniała <xref:System.ServiceModel.Description.ServiceMetadataBehavior> metadane, musi być skonfigurowana w usłudze. Gdy to zachowanie jest obecny, można opublikować metadane, <xref:System.ServiceModel.Description.IMetadataExchange> konfigurując punkt końcowy, aby udostępnić kontrakt jako implementację protokołu WS-MetadataExchange (MEX). Dla wygody tego kontraktu nadano skróconą nazwę konfiguracji "IMetadataExchange". W tym przykładzie użyto wiązania standardowego, `mexHttpBinding`który `wsHttpBinding` jest odpowiednikiem `None`z trybem zabezpieczeń ustawionym na . Względny adres "mex" jest używany w punkcie końcowym, który po rozwiązaniu względem adresu `http://localhost/servicemodelsamples/service.svc/mex`podstawowego usług powoduje adres końcowy . Poniżej przedstawiono konfigurację zachowania:  
+ Aby usługa mogła ujawniać metadane, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> należy ją skonfigurować w usłudze. Gdy to zachowanie jest obecne, można opublikować metadane, konfigurując punkt końcowy, aby udostępnić <xref:System.ServiceModel.Description.IMetadataExchange> kontrakt jako implementację protokołu WS-MetadataExchange (Mex). Jako wygoda, ten kontrakt uzyskał skróconą nazwę konfiguracji "kontraktem IMetadataExchange". W tym przykładzie użyto `mexHttpBinding` , który jest wygodnym powiązaniem standardowym, które jest równoważne z `wsHttpBinding` trybem zabezpieczeń ustawionym na `None` . Adres względny "Mex" jest używany w punkcie końcowym, który po rozwiązaniu z adresem podstawowym usług powoduje adres punktu końcowego `http://localhost/servicemodelsamples/service.svc/mex` . Poniżej przedstawiono konfigurację zachowania:  
   
 ```xml  
 <behaviors>  
@@ -55,33 +55,33 @@ Przykład zachowania publikowania metadanych pokazuje, jak kontrolować funkcje 
           contract="IMetadataExchange" />  
 ```  
   
- W tym <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> przykładzie `true`ustawia właściwość, która również udostępnia metadane usługi przy użyciu protokołu HTTP GET. Aby włączyć punkt końcowy metadanych HTTP GET, usługa musi mieć adres podstawowy HTTP. Ciąg `?wsdl` zapytania jest używany na adres podstawowy usługi, aby uzyskać dostęp do metadanych. Na przykład, aby wyświetlić WSDL dla usługi w przeglądarce sieci Web, należy użyć adresu `http://localhost/servicemodelsamples/service.svc?wsdl`. Alternatywnie można użyć tego zachowania, aby udostępnić <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> metadane za pośrednictwem protokołu HTTPS, ustawiając na `true`. Wymaga to adresu podstawowego HTTPS.  
+ Ten przykład ustawia <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> Właściwość na `true` , która udostępnia również metadane usługi przy użyciu protokołu HTTP GET. Aby włączyć punkt końcowy metadanych HTTP GET, usługa musi mieć podstawowy adres HTTP. Ciąg zapytania `?wsdl` jest używany na adresie podstawowym usługi, aby uzyskać dostęp do metadanych. Na przykład, aby wyświetlić WSDL dla usługi w przeglądarce internetowej, należy użyć adresu `http://localhost/servicemodelsamples/service.svc?wsdl` . Alternatywnie można użyć tego zachowania, aby udostępnić metadane za pośrednictwem protokołu HTTPS przez ustawienie opcji <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> na `true` . Wymaga to adresu podstawowego HTTPS.  
   
- Aby uzyskać dostęp do punktu końcowego MEX usługi, użyj [narzędzia narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe).](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ Aby uzyskać dostęp do punktu końcowego MEX usługi, użyj [Narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   
  Spowoduje to wygenerowanie klienta na podstawie metadanych usługi.  
   
- Aby uzyskać dostęp do metadanych usługi za `http://localhost/servicemodelsamples/service.svc?wsdl`pomocą protokołu HTTP GET, wskaż przeglądarkę na .  
+ Aby uzyskać dostęp do metadanych usługi przy użyciu protokołu HTTP GET, wskaż przeglądarkę `http://localhost/servicemodelsamples/service.svc?wsdl` .  
   
- Jeśli usuniesz to zachowanie i spróbuj otworzyć usługę, otrzymasz wyjątek. Ten błąd występuje, ponieważ bez zachowania, punkt `IMetadataExchange` końcowy skonfigurowany z umową nie ma implementacji.  
+ W przypadku usunięcia tego zachowania i próby otworzenia usługi zostanie wyświetlony wyjątek. Ten błąd występuje ze względu na to, że punkt końcowy skonfigurowany dla `IMetadataExchange` kontraktu nie ma implementacji.  
   
- Jeśli ustawisz `HttpGetEnabled` , `false`zostanie wyświetlona strona pomocy CalculatorService zamiast wyświetlania metadanych usługi.  
+ Jeśli ustawisz `HttpGetEnabled` `false` pozycję na, zobaczysz stronę pomocy CalculatorService zamiast wyświetlania metadanych usługi.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Metadata`  

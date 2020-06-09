@@ -1,5 +1,6 @@
 ---
 title: 'Przykład wyrażenia regularnego: wyszukiwanie wartości HREF'
+description: Zobacz przykład wyrażeń regularnych w programie .NET. Przykład wyszukuje ciąg wejściowy i wyświetla wszystkie wartości atrybutów href i ich lokalizacje.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 47364aef49bb0f43b79b805e2adf305c549d7340
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583495"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
 Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie odwołania href = "..." wartości i ich lokalizacje w ciągu.  
@@ -54,6 +55,6 @@ Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie odwołania
   
  Aby rozwiązać te problemy, <xref:System.Text.RegularExpressions.Regex> Klasa obsługuje składnię `(?<name>…)` przechwytywania dopasowania do określonego miejsca (miejsce może być nazwane przy użyciu ciągu lub liczby całkowitej; liczby całkowite można wielokrotnie odwoływać). W rezultacie alternatywne dopasowania dla tego samego ciągu All można skierować do tego samego miejsca. W przypadku konfliktu ostatnie dopasowanie opuszczone w gnieździe to pomyślne dopasowanie. (Jednak kompletna lista wielu dopasowań dla jednego gniazda jest dostępna. Szczegółowe informacje znajdują się w <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyrażenia regularne .NET](regular-expressions.md)

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: 8706eee341dd1a5852efae0aad5195e09f62fec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b5b9ba0cc9a6d867b0478720b6151c7a561da16
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584717"
 ---
 # <a name="message-security-windows"></a>Zabezpieczenia komunikatów — Windows
-W tym przykładzie pokazano, <xref:System.ServiceModel.WSHttpBinding> jak skonfigurować powiązanie do używania zabezpieczeń na poziomie wiadomości z uwierzytelnianiem systemu Windows. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest hostowana w internetowych usługach informacyjnych (IIS), a klient jest aplikacją konsoli (.exe).  
+Ten przykład pokazuje, jak skonfigurować <xref:System.ServiceModel.WSHttpBinding> powiązanie do używania zabezpieczeń na poziomie komunikatów z uwierzytelnianiem systemu Windows. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md). W tym przykładzie usługa jest hostowana w Internet Information Services (IIS), a klient jest aplikacją konsolową (. exe).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Domyślnym [ \<zabezpieczeniem>wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) jest zabezpieczenie wiadomości przy użyciu uwierzytelniania systemu Windows. Pliki konfiguracyjne w tym `mode` przykładzie jawnie ustawiają `Message` atrybut `clientCredentialType` [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) zabezpieczeń `Windows`i atrybut do . Te wartości są wartościami domyślnymi dla tego powiązania, ale zostały jawnie skonfigurowane, jak pokazano w poniższej konfiguracji przykładowej, aby zademonstrować ich użycie.  
+ Domyślne zabezpieczenia [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) wiadomości są zabezpieczane przy użyciu uwierzytelniania systemu Windows. Pliki konfiguracji w tym przykładzie jawnie ustawiają `mode` atrybut [\<security>](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) do `Message` i `clientCredentialType` atrybut na `Windows` . Te wartości są wartościami domyślnymi tego powiązania, ale zostały one jawnie skonfigurowane, jak pokazano w poniższej konfiguracji przykładowej w celu zademonstrowania ich użycia.  
   
 ```xml  
 <bindings>  
@@ -31,7 +31,7 @@ W tym przykładzie pokazano, <xref:System.ServiceModel.WSHttpBinding> jak skonfi
 </bindings>  
 ```  
   
- Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i umowy. Powiązanie klienta jest skonfigurowane `securityMode` `authenticationMode`z odpowiednimi i .  
+ Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednimi `securityMode` i `authenticationMode` .  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ W tym przykładzie pokazano, <xref:System.ServiceModel.WSHttpBinding> jak skonfi
 </system.serviceModel>  
 ```  
   
- Kod źródłowy usługi został zmodyfikowany, <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> aby zademonstrować, jak można uzyskać dostęp do tożsamości obiektu wywołującego.  
+ Kod źródłowy usługi został zmodyfikowany, aby zademonstrować, jak <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> można go użyć w celu uzyskania dostępu do tożsamości obiektu wywołującego.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -70,12 +70,12 @@ public string GetCallerIdentity()
 }  
 ```
 
- Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsza metoda o `GetCallerIdentity` nazwie - - zwraca nazwę tożsamości wywołującego z powrotem do klienta. Naciśnij klawisz ENTER w oknie konsoli, aby wyłączyć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsza wywoływana metoda- `GetCallerIdentity` -zwraca nazwę tożsamości obiektu wywołującego z powrotem do klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta programu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, postępuj zgodnie z instrukcjami w [przypadku uruchamiania przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  

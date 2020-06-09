@@ -2,34 +2,34 @@
 title: Klient
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585288"
 ---
 # <a name="client"></a>Klient
-Ta sekcja zawiera przykłady pokazujące, aplikacje klienckie usługi Windows Communication Foundation (WCF).  
+Ta sekcja zawiera przykłady przedstawiające aplikacje klienckie Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Współdziałanie klienta](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- Pokazuje współdziałania między usług WCF i innych technologii.  
+ [Współdziałanie klienta](client-interoperability.md)  
+ Pokazuje współdziałanie między programem WCF i innymi technologiami.  
   
- [Nagłówki adresów](../../../../docs/framework/wcf/samples/address-headers.md)  
- Pokazuje, jak klienci parametry można przekazać odwołanie do usługi przy użyciu usługi WCF.  
+ [Nagłówki adresów](address-headers.md)  
+ Pokazuje, w jaki sposób klienci mogą przekazywać parametry odwołań do usługi za pomocą programu WCF.  
   
- [Fabryka kanałów](../../../../docs/framework/wcf/samples/channel-factory.md)  
- Pokazuje, jak utworzyć aplikację kliencką kanału o <xref:System.ServiceModel.ChannelFactory> klasy zamiast wygenerowanego klienta.  
+ [Fabryka kanałów](channel-factory.md)  
+ Pokazuje, w jaki sposób aplikacja kliencka może utworzyć kanał z <xref:System.ServiceModel.ChannelFactory> klasą zamiast wygenerowanego klienta.  
   
- [Oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
- Pokazuje, jak przechwytywać wyjątki oczekiwane, korzystając z klient z typowaniem.  
+ [Oczekiwane wyjątki](expected-exceptions.md)  
+ Demonstruje sposób przechwytywania oczekiwanych wyjątków przy użyciu klienta z określonym typem.  
   
- [Pobieranie metadanych](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- Demonstruje sposób implementacji klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, za pomocą którego do komunikowania się.  
+ [Pobieranie metadanych](retrieve-metadata.md)  
+ Pokazuje, jak wdrożyć klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, z którym należy się komunikować.  
   
- [Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
- Pokazuje, jak nie należy używać C# "" instrukcję using do automatycznego czyszczenia zasobów, korzystając z klient z typowaniem.  
+ [Zwalnianie zasobów klienta programu WCF za pomocą poleceń Zamknij i Przerwij](use-close-abort-release-wcf-client-resources.md)  
+ Pokazuje, jak nie należy używać instrukcji "Using" języka C# do automatycznego czyszczenia zasobów przy użyciu klienta z określonym typem.  
   
- [Klient z typowaniem](../../../../docs/framework/wcf/samples/typed-client.md)  
- Pokazuje, jak można uzyskać informacji z klient z typowaniem generowane przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+ [Klient z typowaniem](typed-client.md)  
+ Pokazuje, jak uzyskać informacje od klienta z określonym typem wygenerowanego przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).

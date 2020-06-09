@@ -2,12 +2,12 @@
 title: Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: c31f8a5b4e3771f6c6e8de41e6b098474c34cf77
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585301"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS
 W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu SSL z niezawodnymi sesjami. Niezawodne sesje programu implementują protokół obsługi komunikatów w usłudze WS-niezawodny. Można korzystać z bezpiecznej niezawodnej sesji, tworząc usługę WS-Security przez niezawodne sesje. Czasami jednak zamiast tego można użyć zabezpieczeń transportu HTTP z protokołem SSL.  
@@ -24,7 +24,7 @@ W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu 
 ## <a name="sample-details"></a>Przykładowe szczegóły  
  Protokół SSL gwarantuje, że pakiety są zabezpieczone. Należy pamiętać, że różni się to od zabezpieczania niezawodnej sesji przy użyciu konwersacji WS-Secure.  
   
- Aby korzystać z niezawodnej sesji za pośrednictwem protokołu HTTPS, należy utworzyć niestandardowe powiązanie. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. Niestandardowe powiązanie jest tworzone przy użyciu elementu powiązania niezawodnej sesji i [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) . Następująca konfiguracja jest powiązaniem niestandardowym.  
+ Aby korzystać z niezawodnej sesji za pośrednictwem protokołu HTTPS, należy utworzyć niestandardowe powiązanie. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) , który implementuje usługę kalkulatora. Niestandardowe powiązanie jest tworzone przy użyciu elementu powiązania niezawodnej sesji i [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) . Następująca konfiguracja jest powiązaniem niestandardowym.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu 
 </configuration>  
 ```  
   
- Kod programu w przykładzie jest taki sam jak w przypadku usługi [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) . Przed skompilowaniem i uruchomieniem przykładu należy utworzyć certyfikat i przypisać go przy użyciu kreatora certyfikatu serwera sieci Web. Definicja punktu końcowego i definicja powiązania w ustawieniach pliku konfiguracji umożliwiają korzystanie z niestandardowego powiązania, jak pokazano w poniższej konfiguracji przykładowej dla klienta.  
+ Kod programu w przykładzie jest taki sam jak w przypadku usługi [wprowadzenie](getting-started-sample.md) . Przed skompilowaniem i uruchomieniem przykładu należy utworzyć certyfikat i przypisać go przy użyciu kreatora certyfikatu serwera sieci Web. Definicja punktu końcowego i definicja powiązania w ustawieniach pliku konfiguracji umożliwiają korzystanie z niestandardowego powiązania, jak pokazano w poniższej konfiguracji przykładowej dla klienta.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,10 +128,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](iis-server-certificate-installation-instructions.md).  
   
-4. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-5. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  

@@ -2,12 +2,12 @@
 title: Dostawca tokenów
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 6971a70e633f7768c165ee6171fd83f0eefc4183
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: acdb820206dee83ff44152a5562642a5c685d648
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584080"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
 Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) służy do dostarczania poświadczeń do infrastruktury zabezpieczeń. Dostawca tokenu ogólnie bada cel i wystawia odpowiednie poświadczenia, aby infrastruktura zabezpieczeń mogła zabezpieczyć komunikat. Usługa WCF jest dostarczana z domyślnym dostawcą tokenu Menedżera poświadczeń. Usługa WCF jest również dostarczana z dostawcą tokenu programu CardSpace. Dostawcy tokenów niestandardowych są przydatne w następujących przypadkach:
@@ -26,13 +26,13 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 - Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.
 
-- Sposób, w jaki serwer może sprawdzać poprawność poświadczeń klienta przy użyciu hasła z niestandardowym <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, który sprawdza, czy nazwa użytkownika i hasło są zgodne.
+- Sposób, w jaki serwer może sprawdzać poprawność poświadczeń klienta przy użyciu hasła z niestandardowym <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , które sprawdza, czy nazwa użytkownika i hasło są zgodne.
 
 - Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X. 509 serwera.
 
  Ten przykład pokazuje również, jak tożsamość wywołującego jest dostępna po procesie uwierzytelniania tokenu niestandardowego.
 
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding`, w którym domyślnie są stosowane zabezpieczenia komunikatów. Ten przykład ustawia standardowy `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu zachowania ServiceCredentials. Zachowanie serviceCredentials służy do konfigurowania certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w poniższych instrukcjach dotyczących instalacji.
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji App. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardu `wsHttpBinding` , który domyślnie używa zabezpieczeń komunikatów. Ten przykład ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu zachowania ServiceCredentials. Zachowanie serviceCredentials służy do konfigurowania certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewniania ochrony komunikatów. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowanego podczas konfiguracji przykładowej zgodnie z opisem w poniższych instrukcjach dotyczących instalacji.
 
 ```xml
 <system.serviceModel>
@@ -82,7 +82,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   </system.serviceModel>
 ```
 
- Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednimi `Mode` i `clientCredentialType`komunikatów.
+ Konfiguracja punktu końcowego klienta składa się z nazwy konfiguracji, adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Powiązanie klienta jest skonfigurowane z odpowiednim `Mode` komunikatem i `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -113,7 +113,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
      Przykład implementuje niestandardowego dostawcę tokenów, który uzyskuje nazwę użytkownika i hasło. Hasło musi być zgodne z tą nazwą użytkownika. Ten niestandardowy dostawca tokenów służy tylko do celów demonstracyjnych i nie jest zalecany w przypadku rzeczywistego wdrożenia.
 
-     Aby wykonać to zadanie, dostawca niestandardowego tokenu dziedziczy klasę <xref:System.IdentityModel.Selectors.SecurityTokenProvider> i zastępuje metodę <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>. Ta metoda tworzy i zwraca nowe `UserNameSecurityToken`.
+     Aby wykonać to zadanie, dostawca niestandardowego tokenu dziedziczy <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasę i zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metodę. Ta metoda tworzy i zwraca nowy `UserNameSecurityToken` .
 
     ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
@@ -130,7 +130,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 
 2. Napisz niestandardowego menedżera tokenów zabezpieczających.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, które są do niego przesyłane w metodzie `CreateSecurityTokenProvider`. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale te nie są objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z klasy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> i zastępuje metodę `CreateSecurityTokenProvider` w celu zwrócenia niestandardowego dostawcy tokenów nazw użytkowników, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano dostawcy nazwy użytkownika.
+     Służy <xref:System.IdentityModel.Selectors.SecurityTokenManager> do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla określonych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> , które są przesyłane do niego w `CreateSecurityTokenProvider` metodzie. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale te nie są objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i przesłania `CreateSecurityTokenProvider` metodę w celu zwrócenia niestandardowego dostawcy tokenów username, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano dostawcy nazwy użytkownika.
 
     ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -202,7 +202,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
     }
     ```
 
- Aby wyświetlić informacje dotyczące obiektu wywołującego, użyj <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, jak pokazano w poniższym przykładzie kodu. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> zawiera informacje o oświadczeniach dotyczących bieżącego obiektu wywołującego.
+ Aby wyświetlić informacje o wywołującym w usłudze, użyj, <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> jak pokazano w poniższym przykładzie kodu. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>Zawiera informacje o oświadczeniach dotyczących bieżącego obiektu wywołującego.
 
 ```csharp
 static void DisplayIdentityInformation()
@@ -221,7 +221,7 @@ static void DisplayIdentityInformation()
 
 - Tworzenie certyfikatu serwera.
 
-     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna `%SERVER_NAME%` określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. `%SERVER_NAME%`Zmienna określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Wartość domyślna w tym pliku wsadowym to localhost.
 
     ```console
     echo ************
@@ -246,9 +246,9 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2. Skopiuj pliki programu Service Files do katalogu usługi na komputerze usługi. Skopiuj także pliki Setup. bat i Oczyść. bat do komputera usługi.  
   
-3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik Service. exe. config musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikat serwera, modyfikując plik wsadowy Setup. bat. Należy pamiętać, że plik Setup. bat musi być uruchamiany z wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Należy ustawić zmienną `%SERVER_NAME%` na w pełni kwalifikowaną nazwę hosta komputera, który jest używany do hostowania usługi.  
+3. Musisz mieć certyfikat serwera z nazwą podmiotu zawierającą w pełni kwalifikowaną nazwę domeny komputera. Plik Service. exe. config musi zostać zaktualizowany w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikat serwera, modyfikując plik wsadowy Setup. bat. Należy pamiętać, że plik Setup. bat musi być uruchamiany z wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmienną na w pełni kwalifikowaną nazwę hosta komputera, który jest używany do hostowania usługi.  
   
 4. Skopiuj certyfikat serwera do magazynu CurrentUser-TrustedPeople klienta. Nie trzeba tego robić, gdy certyfikat serwera zostanie wystawiony przez zaufanego wystawcy klienta.  
   
@@ -285,7 +285,7 @@ static void DisplayIdentityInformation()
   
 8. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi.  
   
-9. Na komputerze klienckim uruchom `Client.exe` z okna wiersza polecenia.  
+9. Na komputerze klienckim uruchom `Client.exe` polecenie w oknie wiersza polecenia.  
   
 10. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   

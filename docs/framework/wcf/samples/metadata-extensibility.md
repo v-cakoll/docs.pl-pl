@@ -2,19 +2,19 @@
 title: Rozszerzalność metadanych
 ms.date: 03/30/2017
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-ms.openlocfilehash: d139e169aa9bd45f5a7ef848acc12aaa35043432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8e7f511b38cf3326b9abbca57df769317a26a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584626"
 ---
 # <a name="metadata-extensibility"></a>Rozszerzalność metadanych
-Ta sekcja zawiera przykłady pokazujące, niestandardowych metadanych.  
+Ta sekcja zawiera przykłady demonstrujące niestandardowe metadane.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
- Demonstruje sposób implementacji usługi z punktu końcowego metadanych bezpieczny, który korzysta z jednego powiązania-metadata exchange oraz skonfiguruj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) lub klientów można pobrać metadanych z takie punktu końcowego metadanych.  
+ [Niestandardowy bezpieczny punkt końcowy metadanych](custom-secure-metadata-endpoint.md)  
+ Pokazuje, jak wdrożyć usługę z bezpiecznym punktem końcowym metadanych, który używa jednego z powiązań wymiany niebędących metadanymi i jak skonfigurować narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) lub klientów, aby pobrać metadane z takiego punktu końcowego metadanych.  
   
- [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- Demonstruje sposób implementacji <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> na niestandardowy <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atrybutu, aby wyeksportować właściwości atrybutu jako adnotacje WSDL, wśród innych funkcji.
+ [Niestandardowa publikacja WSDL](custom-wsdl-publication.md)  
+ Pokazuje, jak zaimplementować <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> w atrybucie niestandardowym <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> , aby eksportować właściwości atrybutów jako adnotacje WSDL, między innymi.

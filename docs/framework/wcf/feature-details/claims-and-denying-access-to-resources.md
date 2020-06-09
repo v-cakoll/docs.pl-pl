@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
-ms.openlocfilehash: 4f48c59090579f4b451f615bb792a4dcb73f6df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ecb71b7e0596b1732207b50e1b6087528bba3f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857599"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587043"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Oświadczenia i odmawianie dostępu do zasobów
-Windows Communication Foundation (WCF) obsługuje mechanizm autoryzacji opartej na oświadczeniach. A także zezwalanie na dostęp do zasobów na podstawie obecności oświadczenia, systemy często zezwoli na dostęp do zasobów na podstawie obecności oświadczenia. Należy sprawdzić takich systemów <xref:System.IdentityModel.Policy.AuthorizationContext> oświadczeń, których wynikiem dostępu przed szuka oświadczenia, których wynikiem dostęp jest dozwolony.  
+Windows Communication Foundation (WCF) obsługuje mechanizm autoryzacji oparty na oświadczeniach. Jak również umożliwienie dostępu do zasobów na podstawie obecności oświadczeń, systemy często odmawiają dostępu do zasobów na podstawie obecności oświadczeń. Takie systemy powinny sprawdzać <xref:System.IdentityModel.Policy.AuthorizationContext> oświadczenia, które powodują odmowę dostępu przed wyszukiwaniem oświadczeń, w wyniku których jest dozwolony dostęp.  
   
- Na przykład, system może zezwoli na dostęp do zasobu dla każdego, kto ma oświadczenie z typem elementu `Age`, po prawej stronie <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>i wartości zasobów `Under 21` tylko po tej tożsamości ma również oświadczenie typu `Name`, po prawej stronie <xref:System.IdentityModel.Claims.Rights.Identity%2A>, i wartości zasobów `Mallory`. Innymi słowy, system nie zezwala na dostęp do wszystkich użytkowników w obszarze 21 lat i nieograniczony dostęp, kiedy nazwa jest Mallory. Aby prawidłowo zaimplementować to semantyczne, ważne jest do wyszukania `Age` oświadczeń najpierw i ustalić, czy w obszarze 21 lat wieku. W przeciwnym razie, jeśli Mallory znajduje się w obszarze 21, następnie zasobu może otrzymać dostęp wyłącznie w oparciu o `Name` oświadczenia.  
+ Na przykład system może odmówić dostępu do zasobu wszystkim osobom, które mają wierzytelność z typem, z `Age` prawej strony <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> , i wartością zasobu tylko wtedy, `Under 21` gdy ta tożsamość ma również typ `Name` , po prawej stronie <xref:System.IdentityModel.Claims.Rights.Identity%2A> i wartość zasobu `Mallory` . W inny sposób system odmówi dostępu wszystkim osobom, które są w wieku poniżej 21 lat i udzielą dostępu, gdy nazwa jest Mallory. Aby poprawnie zaimplementować tę semantykę, ważne jest, aby najpierw wyszukać zgłoszenie `Age` i określić, czy wiek jest w wieku poniżej 21 lat. W przeciwnym razie, jeśli Mallory ma wartość 21, do zasobu można udzielić dostępu wyłącznie na podstawie tego `Name` żądania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Oświadczenia i tokeny](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md)
+- [Oświadczenia i tokeny](claims-and-tokens.md)

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95101b8ec4f5a7fc60d0233ab6685b5c6851b44e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424109"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584990"
 ---
 # <a name="message-security-anonymous"></a>Zabezpieczenia komunikatów z anonimowością
-Przykład anonimowych zabezpieczeń komunikatów demonstruje sposób implementacji aplikacji Windows Communication Foundation (WCF), która korzysta z zabezpieczeń na poziomie komunikatów bez uwierzytelniania klienta, ale wymaga uwierzytelniania serwera przy użyciu X. 509 serwera. certyfikatu. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i szyfrowane. Ten przykład jest oparty na przykładzie [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) . Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź.
+Anonimowy przykład zabezpieczeń wiadomości demonstruje sposób implementacji aplikacji Windows Communication Foundation (WCF), która korzysta z zabezpieczeń na poziomie komunikatów bez uwierzytelniania klienta, ale wymaga uwierzytelniania serwera przy użyciu certyfikatu X. 509 serwera. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i szyfrowane. Ten przykład jest oparty na przykładzie [WSHttpBinding](wshttpbinding.md) . Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
- Ten przykład dodaje nową operację do interfejsu kalkulatora, który zwraca `True`, jeśli klient nie został uwierzytelniony.
+ Ten przykład dodaje nową operację do interfejsu kalkulatora, który zwraca, `True` Jeśli klient nie został uwierzytelniony.
 
 ```csharp
 public class CalculatorService : ICalculator
@@ -31,7 +31,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji (Web. config). Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane z powiązaniem `wsHttpBinding`. Domyślny tryb zabezpieczeń dla powiązania `wsHttpBinding` jest `Message`. Atrybut `clientCredentialType` jest ustawiony na `None`.
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, zdefiniowany przy użyciu pliku konfiguracji (Web. config). Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane z `wsHttpBinding` powiązaniem. Domyślny tryb zabezpieczeń dla `wsHttpBinding` powiązania to `Message` . `clientCredentialType`Atrybut jest ustawiony na `None` .
 
 ```xml
 <system.serviceModel>
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- Poświadczenia, które mają być używane na potrzeby uwierzytelniania usługi, są określone w [> zachowanie\<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md). Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jak wartość określona dla atrybutu `findValue`, jak pokazano w poniższym przykładowym kodzie.
+ Poświadczenia, które mają być używane na potrzeby uwierzytelniania usługi, są określone w [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) . Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jak wartość określona dla `findValue` atrybutu, jak pokazano w poniższym przykładowym kodzie.
 
 ```xml
 <behaviors>
@@ -78,7 +78,7 @@ public class CalculatorService : ICalculator
 </behaviors>
 ```
 
- Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Tryb zabezpieczeń klienta dla powiązania `wsHttpBinding` jest `Message`. Atrybut `clientCredentialType` jest ustawiony na `None`.
+ Konfiguracja punktu końcowego klienta składa się z adresu bezwzględnego dla punktu końcowego usługi, powiązania i kontraktu. Tryb zabezpieczeń klienta dla `wsHttpBinding` powiązania to `Message` . `clientCredentialType`Atrybut jest ustawiony na `None` .
 
 ```xml
 <system.serviceModel>
@@ -106,9 +106,9 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- Przykład ustawia <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, aby <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> do uwierzytelniania certyfikatu usługi. Jest to wykonywane w pliku App. config klienta w sekcji `behaviors`. Oznacza to, że jeśli certyfikat znajduje się w magazynie zaufanych osób użytkownika, jest on zaufany bez sprawdzania poprawności łańcucha wystawcy certyfikatu. To ustawienie jest używane w tym miejscu dla wygody, aby można było uruchomić przykład bez certyfikatów wystawionych przez urząd certyfikacji. To ustawienie jest mniej bezpieczne niż domyślne, ChainTrust. Należy uważnie rozważyć implikacje zabezpieczeń tego ustawienia przed użyciem `PeerOrChainTrust` w kodzie produkcyjnym.
+ Przykład ustawia <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> uwierzytelniania certyfikatu usługi. Jest to wykonywane w pliku App. config klienta w `behaviors` sekcji. Oznacza to, że jeśli certyfikat znajduje się w magazynie zaufanych osób użytkownika, jest on zaufany bez sprawdzania poprawności łańcucha wystawcy certyfikatu. To ustawienie jest używane w tym miejscu dla wygody, aby można było uruchomić przykład bez certyfikatów wystawionych przez urząd certyfikacji. To ustawienie jest mniej bezpieczne niż domyślne, ChainTrust. Należy uważnie rozważyć implikacje zabezpieczeń tego ustawienia przed użyciem `PeerOrChainTrust` w kodzie produkcyjnym.
 
- Implementacja klienta dodaje wywołanie do metody `IsCallerAnonymous` i w przeciwnym razie nie różni się od próbki [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) .
+ Implementacja klienta dodaje wywołanie do `IsCallerAnonymous` metody i w przeciwnym razie nie różni się od próbki [WSHttpBinding](wshttpbinding.md) .
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -144,7 +144,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
- Plik wsadowy Setup. bat dołączony do anonimowego przykładu zabezpieczeń wiadomości umożliwia skonfigurowanie serwera z odpowiednim certyfikatem w celu uruchomienia hostowanej aplikacji wymagającej zabezpieczeń opartych na certyfikatach. Plik wsadowy można uruchomić w dwóch trybach. Aby uruchomić plik wsadowy w trybie pojedynczego komputera, wpisz `setup.bat` w wierszu polecenia. Aby uruchomić go w trybie usługi, wpisz `setup.bat service`. Tego trybu należy używać w przypadku uruchamiania przykładu między komputerami. Aby uzyskać szczegółowe informacje, zobacz procedurę instalacji na końcu tego tematu.
+ Plik wsadowy Setup. bat dołączony do anonimowego przykładu zabezpieczeń wiadomości umożliwia skonfigurowanie serwera z odpowiednim certyfikatem w celu uruchomienia hostowanej aplikacji wymagającej zabezpieczeń opartych na certyfikatach. Plik wsadowy można uruchomić w dwóch trybach. Aby uruchomić plik wsadowy w trybie pojedynczego komputera, wpisz `setup.bat` w wierszu polecenia. Aby uruchomić go w trybie usługi, wpisz polecenie `setup.bat service` . Tego trybu należy używać w przypadku uruchamiania przykładu między komputerami. Aby uzyskać szczegółowe informacje, zobacz procedurę instalacji na końcu tego tematu.
 
  Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych:
 
@@ -162,7 +162,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     Zmienna% nazwa_serwera% określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli plik wsadowy instalacji jest uruchamiany z argumentem usługi (np. `setup.bat service`),% nazwa_serwera% zawiera w pełni kwalifikowaną nazwę domeny komputera. W przeciwnym razie wartość domyślna to localhost.
+     Zmienna% SERVER_NAME% określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli plik wsadowy instalacji jest uruchamiany z argumentem usługi (np `setup.bat service` .),% server_name% zawiera w pełni kwalifikowaną nazwę domeny komputera. W przeciwnym razie wartość domyślna to localhost.
 
 - Instalowanie certyfikatu serwera w zaufanym magazynie certyfikatów klienta.
 
@@ -187,13 +187,13 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
-> W przypadku korzystania z systemu Windows w wersji innej niż U. w języku angielskim należy edytować plik Setup. bat i zastąpić nazwę konta `NT AUTHORITY\NETWORK SERVICE` własnym odpowiednikiem regionalnym.
+> Jeśli używasz innej wersji systemu Windows niż w języku angielskim, musisz edytować plik Setup. bat i zamienić `NT AUTHORITY\NETWORK SERVICE` nazwę konta na swój odpowiednik regionalny.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     > Plik wsadowy instalacji został zaprojektowany do uruchamiania z wiersz polecenia dla deweloperów dla programu Visual Studio. Wymaga, aby zmienna środowiskowa Path wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w ramach wiersz polecenia dla deweloperów dla programu Visual Studio.  
   
-3. Aby sprawdzić dostęp do usługi przy użyciu przeglądarki, wprowadź adres `http://localhost/servicemodelsamples/service.svc`.  
+3. Aby sprawdzić dostęp do usługi przy użyciu przeglądarki, wprowadź adres `http://localhost/servicemodelsamples/service.svc` .  
   
 4. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
@@ -220,9 +220,9 @@ Press <ENTER> to terminate client.
   
 4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również do klienta pliki Setup. bat, Oczyść. bat i ImportServiceCert. bat.  
   
-5. Na serwerze uruchom `setup.bat service` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z argumentem `service` tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
+5. Na serwerze programu uruchom polecenie `setup.bat service` w wiersz polecenia dla deweloperów dla programu Visual Studio otwartego z uprawnieniami administratora. Uruchomienie `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
   
-6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w atrybucie `findValue` w [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
+6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
   
 7. Skopiuj plik. cer usługi z katalogu usługi do katalogu klienta na komputerze klienckim.  
   
@@ -237,4 +237,4 @@ Press <ENTER> to terminate client.
 - Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
 > [!NOTE]
-> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

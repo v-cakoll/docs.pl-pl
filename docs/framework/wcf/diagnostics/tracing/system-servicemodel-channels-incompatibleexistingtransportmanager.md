@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.IncompatibleExistingTransportManager
 ms.date: 03/30/2017
 ms.assetid: 5366ec64-e8ef-4a34-a2f6-7251d89f1be9
-ms.openlocfilehash: f2a7c094dc151ef4eff5ef5703f651dc42f29476
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb893f21102bc3b992c7e65697a30858c6ce7613
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602027"
 ---
 # <a name="systemservicemodelchannelsincompatibleexistingtransportmanager"></a>System.ServiceModel.Channels.IncompatibleExistingTransportManager
-Można odnaleźć istniejącego menedżera transportu niezgodne dla określonego identyfikatora URI.  
+Znaleziono istniejący niezgodny Menedżer transportu dla podanego identyfikatora URI.  
   
 ## <a name="description"></a>Opis  
- Informacyjny ślad wskazuje, że pasujące rejestracji został znaleziony dla odbiornika otwieranym jednak istniejącego menedżera transportu jest niezgodny. Odbiornik spróbuje użyć innego menedżera transportu i zgłosić wyjątek, jeśli nie powiedzie się.  
+ Ten ślad informacyjny wskazuje, że znaleziono zgodną rejestrację dla otwartego odbiornika, ale istniejący Menedżer transportu jest niezgodny. Odbiornik spróbuje użyć innego menedżera transportu i zgłosić wyjątek, jeśli nie powiedzie się.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

@@ -2,52 +2,52 @@
 title: 'Instrukcje: Hostowanie usługi WCF w usłudze WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 823c3b8452a3fd1c95758d2d09a9effdf02075c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593116"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: Hostowanie usługi WCF w usłudze WAS
-W tym temacie opisano podstawowe kroki wymagane do utworzenia usługi aktywacji procesów systemu Windows (znanej również jako WAS) hostowanej w usłudze Windows Communication Foundation (WCF). WAS to nowa usługa aktywacji procesu, która jest uogólnienie funkcji internetowych usług informacyjnych (IIS), które działają z protokołami transportu innych niż HTTP. WCF używa interfejsu karty odbiornika do przekazywania żądań aktywacji, które są odbierane za pośrednictwem protokołów innych niż HTTP obsługiwanych przez WCF, takich jak TCP, nazwane potoki i Usługi kolejkowania wiadomości.  
+W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktywacji procesów systemu Windows (znanych także jako usługa Windows Communication Foundation hostowanej usługi WCF). BYŁA to nowa usługa aktywacji procesów, która jest generalizacją funkcji Internet Information Services (IIS), które działają z protokołami transportu innym niż HTTP. Funkcja WCF używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez program WCF, takich jak TCP, nazwane potoki i kolejkowanie komunikatów.  
   
- Ta opcja hostingu wymaga, aby składniki aktywacji WAS były poprawnie zainstalowane i skonfigurowane, ale nie wymaga żadnego kodu hostingu do zapisania jako część aplikacji. Aby uzyskać więcej informacji na temat instalowania i konfigurowania usługi WAS, zobacz [Jak: Instalowanie i konfigurowanie składników aktywacji WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Ta opcja hostingu wymaga, aby składniki aktywacji zostały prawidłowo zainstalowane i skonfigurowane, ale nie wymagają zapisywania kodu hostingu jako części aplikacji. Aby uzyskać więcej informacji na temat instalowania i konfigurowania programu, zobacz [jak: Instalowanie i Konfigurowanie składników aktywacji programu WCF](how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
-> Aktywacja usługi WAS nie jest obsługiwana, jeśli potok przetwarzania żądań serwera sieci web jest ustawiony na tryb klasyczny. Potok przetwarzania żądań serwera sieci web musi być ustawiony na tryb zintegrowany, jeśli ma być używana aktywacja WAS.  
+> Aktywacja nie jest obsługiwana, jeśli potok przetwarzania żądań serwera sieci Web jest ustawiony na tryb klasyczny. Jeśli aktywacja ma być używana, potok przetwarzania żądań serwera sieci Web musi być ustawiony na tryb zintegrowany.  
   
- Gdy usługa WCF jest hostowana wsłudze WAS, standardowe powiązania są używane w zwykły sposób. Jednak podczas korzystania <xref:System.ServiceModel.NetTcpBinding> z <xref:System.ServiceModel.NetNamedPipeBinding> i do konfigurowania usługi hostowane przez USŁUGI, musi być spełnione ograniczenie. Gdy różne punkty końcowe używają tego samego transportu, ustawienia powiązania muszą być zgodne z następującymi siedmioma właściwościami:  
+ Gdy usługa WCF jest hostowana w programie, standardowe powiązania są używane w zwykły sposób. Jednak w przypadku korzystania z <xref:System.ServiceModel.NetTcpBinding> i w <xref:System.ServiceModel.NetNamedPipeBinding> celu skonfigurowania usługi hostowanej należy spełnić ograniczenie. Gdy różne punkty końcowe używają tego samego transportu, ustawienia powiązania muszą być zgodne z następującymi siedem właściwości:  
   
-- Rozmiar bufora połączenia  
+- ConnectionBufferSize  
   
-- Limit czasu na kanały  
+- ChannelInitializationTimeout  
   
-- Maxpendingconnections  
+- MaxPendingConnections  
   
-- MaxOutputDelay (MaxOutputDelay)  
+- MaxOutputDelay  
   
-- Maxpendingaccepts  
+- MaxPendingAccepts  
   
-- ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings. IdleTimeout  
   
-- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings. MaxOutboundConnectionsPerEndpoint  
   
- W przeciwnym razie punkt końcowy, który jest inicjowany najpierw zawsze określa wartości <xref:System.ServiceModel.ServiceActivationException> tych właściwości, a punkty końcowe dodane później zgłosić, jeśli nie pasują do tych ustawień.  
+ W przeciwnym razie punkt końcowy, który jest inicjowany najpierw zawsze określa wartości tych właściwości, i punkty końcowe dodane później throw, <xref:System.ServiceModel.ServiceActivationException> Jeśli nie są zgodne z tymi ustawieniami.  
   
- Aby zapoznać się z kopią źródłową tego przykładu, zobacz [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Aby uzyskać kopię źródła tego przykładu, zobacz [Aktywacja protokołu TCP](../samples/tcp-activation.md).  
   
-### <a name="to-create-a-basic-service-hosted-by-was"></a>Aby utworzyć podstawową usługę obsługiwaną przez usługę WAS  
+### <a name="to-create-a-basic-service-hosted-by-was"></a>Aby utworzyć podstawową usługę hostowaną przez program:  
   
-1. Zdefiniuj umowę serwisową dla typu usługi.  
+1. Zdefiniuj kontrakt usługi dla typu usługi.  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2. Zaimplementuj umowę serwisową w klasie usługi. Należy zauważyć, że adres lub powiązanie informacje nie jest określony wewnątrz implementacji usługi. Ponadto kod nie musi być zapisywany, aby pobrać te informacje z pliku konfiguracji.  
+2. Zaimplementuj kontrakt usługi w klasie usługi. Należy zauważyć, że informacje o adresie lub powiązaniu nie są określone w implementacji usługi. Ponadto kod nie musi być zapisany, aby można było pobrać te informacje z pliku konfiguracyjnego.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. Utwórz plik Web.config, <xref:System.ServiceModel.NetTcpBinding> aby zdefiniować `CalculatorService` powiązanie, które ma być używane przez punkty końcowe.  
+3. Utwórz plik Web. config, aby zdefiniować <xref:System.ServiceModel.NetTcpBinding> powiązanie, które ma być używane przez `CalculatorService` punkty końcowe.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,41 +64,41 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia usługi aktywacji 
     </configuration>  
     ```  
   
-4. Utwórz plik Service.svc zawierający następujący kod.  
+4. Utwórz plik Service. svc zawierający poniższy kod.  
   
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
   
-5. Umieść plik Service.svc w katalogu wirtualnym usług IIS.  
+5. Umieść plik Service. svc w katalogu wirtualnym usług IIS.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Aby utworzyć klienta do korzystania z usługi  
   
-1. Użyj [narzędzia narzędzia metadanych ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod z metadanych usługi.  
+1. Użyj [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
-2. Klient, który jest `ICalculator` generowany zawiera interfejs, który definiuje umowy serwisowej, że implementacja klienta musi spełniać.  
+2. Wygenerowany klient zawiera `ICalculator` interfejs, który definiuje kontrakt usługi, który musi spełniać implementacja klienta.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3. Wygenerowana aplikacja kliencka zawiera `ClientCalculator`również implementację pliku . Należy zauważyć, że adres i informacje o powiązaniach nie jest określony w dowolnym miejscu wewnątrz implementacji usługi. Ponadto kod nie musi być zapisywany, aby pobrać te informacje z pliku konfiguracji.  
+3. Wygenerowana aplikacja kliencka zawiera również implementację programu `ClientCalculator` . Należy zauważyć, że informacje o adresie i powiązaniu nie są określone w dowolnym miejscu w implementacji usługi. Ponadto kod nie musi być zapisany, aby można było pobrać te informacje z pliku konfiguracyjnego.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. Konfiguracja dla klienta, który <xref:System.ServiceModel.NetTcpBinding> używa jest również generowany przez Svcutil.exe. Ten plik powinien być nazwany w pliku App.config podczas korzystania z programu Visual Studio.  
+4. Konfiguracja klienta korzystającego z programu <xref:System.ServiceModel.NetTcpBinding> jest również generowana przez Svcutil. exe. Ten plik powinien mieć nazwę w pliku App. config w przypadku korzystania z programu Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   
-5. Utwórz wystąpienie `ClientCalculator` w aplikacji, a następnie wywołaj operacje usługi.  
+5. Utwórz wystąpienie elementu `ClientCalculator` w aplikacji, a następnie Wywołaj operacje usługi.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6. Skompiluj i uruchom klienta.  
+6. Kompiluj i uruchom klienta.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Aktywacja TCP](../samples/tcp-activation.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,24 +2,24 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForError
 ms.date: 03/30/2017
 ms.assetid: 8ade4722-a6d5-471c-b960-1cfea4ea2aa9
-ms.openlocfilehash: 591e1a1dcb6746d79ff5eceba7e74e890f327354
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bc71d18480fa19be66cbfa1687a7b63eb548309
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601455"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a>System.ServiceModel.TxCompletionStatusCompletedForError
-Określonej transakcji dla określonej operacji zostało zakończone z powodu nieobsłużonego wyjątku.  
+Określona transakcja dla określonej operacji została ukończona z powodu nieobsługiwanego wyjątku wykonania.  
   
 ## <a name="description"></a>Opis  
- Śledzone, gdy wystąpi błąd podczas próby wykonania bieżącej transakcji. To ma miejsce przed odpowiedzi lub błędów jest wysyłany do obiektu wywołującego.  
+ Śledzenie w przypadku wystąpienia błędu podczas próby ukończenia bieżącej transakcji. Dzieje się tak przed wysłaniem odpowiedzi lub błędu do obiektu wywołującego.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Sprawdź, czy komunikat śledzenia dla komunikat o wyjątku oraz wszystkich elementów informacje z możliwością działania.  
+ Zbadaj śledzony komunikat dotyczący komunikatu o wyjątku oraz wszelkich elementów do wykonania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

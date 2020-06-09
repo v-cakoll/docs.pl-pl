@@ -2,34 +2,34 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85b3451b2337d6fe2c9dcc16a1930663b5e6de19
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575800"
 ---
 # <a name="ajax"></a>AJAX
-Ta sekcja zawiera przykłady pokazujące, funkcji asynchronicznych języka JavaScript i XML.  
+Ta sekcja zawiera przykłady demonstrujące asynchroniczne funkcje języka JavaScript i XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [JSONP](../../../../docs/framework/wcf/samples/jsonp.md)  
- Pokazuje sposób obsługi formatu JSON przy użyciu dopełnienie (JSONP) w usługach REST programu WCF.  
+ [JSONP](jsonp.md)  
+ Pokazuje, jak obsługiwać kod JSON z uzupełnieniem (JSONP) w usługach REST WCF.  
   
- [Serializacja JSON](../../../../docs/framework/wcf/samples/json-serialization.md)  
- Pokazuje sposób użycia <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> do serializacji i deserializacji danych w formacie JavaScript Object Notation (JSON).  
+ [Serializacja JSON](json-serialization.md)  
+ Pokazuje, jak używać <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> do serializacji i deserializacji danych w formacie JavaScript Object Notation (JSON).  
   
- [Podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)  
- Pokazuje, jak używać usługi WCF w celu utworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX).  
+ [Podstawowa usługa AJAX](basic-ajax-service.md)  
+ Pokazuje, jak za pomocą programu WCF utworzyć podstawową, ASP.NET asynchroniczne usługi JavaScript i XML (AJAX).  
   
- [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- Pokazuje, jak używać usługi WCF w celu utworzenia usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX), która używa metody POST protokołu HTTP.  
+ [Usługa AJAX używająca żądań POST protokołu HTTP](ajax-service-using-http-post.md)  
+ Pokazuje, jak używać programu WCF do tworzenia asynchronicznej usługi ASP.NET w języku JavaScript i XML (AJAX), która używa POST protokołu HTTP.  
   
- [Usługa AJAX bez konfiguracji](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
- Pokazuje, jak używać usługi WCF w celu utworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX).  
+ [Usługa AJAX bez konfiguracji](ajax-service-without-configuration.md)  
+ Pokazuje, jak za pomocą programu WCF utworzyć podstawową, ASP.NET asynchroniczne usługi JavaScript i XML (AJAX).  
   
- [Usługa AJAX korzystająca z typów złożonych](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  
- Pokazuje, jak tworzenie usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX), który tworzy wystąpienie złożonych typów za pomocą usługi WCF.  
+ [Usługa AJAX korzystająca z typów złożonych](ajax-service-using-complex-types-sample.md)  
+ Pokazuje, jak używać programu WCF do tworzenia asynchronicznej usługi ASP.NET w języku JavaScript i XML (AJAX), która tworzy wystąpienia typów złożonych.  
   
- [Usługa AJAX z formatami JSON i XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)  
- Pokazuje, jak używać usługi WCF w celu utworzenia usługi asynchronicznego języka JavaScript i XML (technologia AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML.
+ [Usługa AJAX z formatami JSON i XML](ajax-service-with-json-and-xml-sample.md)  
+ Pokazuje, jak używać programu WCF do tworzenia asynchronicznej usługi JavaScript i XML (AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML.

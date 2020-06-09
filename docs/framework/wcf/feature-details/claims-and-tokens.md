@@ -4,77 +4,77 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 6d148bca56cfa4e28c2d3e6c0d9fcb564861a7cd
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587030"
 ---
 # <a name="claims-and-tokens"></a>Oświadczenia i tokeny
 
-W tym temacie opisano różne typy oświadczeń, które tworzy Windows Communication Foundation (WCF) na podstawie tokenów domyślne, które obsługuje.
+W tym temacie opisano różne typy zgłoszeń, które program Windows Communication Foundation (WCF) tworzy z domyślnych tokenów, które obsługuje.
 
-Oświadczenia poświadczeń klienta można sprawdzić za pomocą <xref:System.IdentityModel.Claims.ClaimSet> i <xref:System.IdentityModel.Claims.Claim> klasy. `ClaimSet` Zawiera zbiór `Claim` obiektów. Każdy `Claim` ma następujące ważne elementy członkowskie:
+Oświadczenia poświadczeń klienta można przeanalizować przy użyciu <xref:System.IdentityModel.Claims.ClaimSet> <xref:System.IdentityModel.Claims.Claim> klas i. `ClaimSet`Zawiera kolekcję `Claim` obiektów. Każdy `Claim` z nich ma następujące ważne elementy członkowskie:
 
-- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> Właściwość zwraca jednolite zasobów identyfikator (URI) określający typ oświadczenia, które zostaną wprowadzone. Na przykład typ oświadczenia mogą być odcisku palca certyfikatu, w którym to przypadku identyfikatora URI `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.
+- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>Właściwość zwraca Uniform Resource Identifier (URI), który określa typ podejmowanych roszczeń. Na przykład typ zgłoszenia może być odciskiem palca certyfikatu, w tym przypadku identyfikator URI to `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint` .
 
-- <xref:System.IdentityModel.Claims.Claim.Right%2A> Właściwość zwraca identyfikator URI, który określa prawo żądania. Wstępnie zdefiniowane prawa znajdują się w <xref:System.IdentityModel.Claims.Rights> klasy (<xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).
+- <xref:System.IdentityModel.Claims.Claim.Right%2A>Właściwość zwraca identyfikator URI, który określa prawo od żądania. Wstępnie zdefiniowane prawa są dostępne w <xref:System.IdentityModel.Claims.Rights> klasie ( <xref:System.IdentityModel.Claims.Rights.Identity%2A> , <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ).
 
-- <xref:System.IdentityModel.Claims.Claim.Resource%2A> Właściwość zwraca zasób skojarzony z oświadczeniem.
+- <xref:System.IdentityModel.Claims.Claim.Resource%2A>Właściwość zwraca zasób skojarzony z tym powiązaniem.
 
-Każdy <xref:System.IdentityModel.Claims.ClaimSet> ma również <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> właściwość, która reprezentuje <xref:System.IdentityModel.Claims.ClaimSet> z `Issuer`.
+Każdy <xref:System.IdentityModel.Claims.ClaimSet> z nich ma również <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> Właściwość, która reprezentuje <xref:System.IdentityModel.Claims.ClaimSet> `Issuer` .
 
-## <a name="windows-accounts"></a>Kont Windows
+## <a name="windows-accounts"></a>Konta systemu Windows
 
-Gdzie mapuje poświadczeń klienta na konto użytkownika Windows wynikowy <xref:System.IdentityModel.Claims.ClaimSet> następującymi wartościami:
+Gdy poświadczenia klienta są mapowane na konto użytkownika systemu Windows, wynikiem <xref:System.IdentityModel.Claims.ClaimSet> są następujące wartości:
 
-- `Issuer` Jest wartość zwracana przez Windows właściwość statyczna <xref:System.IdentityModel.Claims.ClaimSet> klasy.
+- `Issuer`Jest wartością zwracaną przez statyczną właściwość systemu Windows <xref:System.IdentityModel.Claims.ClaimSet> klasy.
 
-- Oświadczenia w kolekcji są:
+- Oświadczenia w kolekcji są następujące:
 
-  - A <xref:System.IdentityModel.Claims.Claim> z <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> wartość identyfikatora zabezpieczeń (SID) <xref:System.IdentityModel.Claims.Claim.Right%2A> wartość właściwości `Identity`, a <xref:System.IdentityModel.Claims.Claim.Resource%2A> zwracającego rzeczywista wartość identyfikatora SID. Identyfikator SID to unikatowa wartość kontroler domeny wystawia każdemu użytkownikowi. Identyfikator SID jest używany do identyfikowania użytkownika w interakcji z usługą Windows security.
+  - A <xref:System.IdentityModel.Claims.Claim> o <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> wartości identyfikatora zabezpieczeń (SID), <xref:System.IdentityModel.Claims.Claim.Right%2A> wartości właściwości `Identity` i, <xref:System.IdentityModel.Claims.Claim.Resource%2A> która zwraca rzeczywistą wartość identyfikatora SID. Identyfikator SID to unikatowa wartość, którą kontroler domeny wystawia każdemu użytkownikowi. Identyfikator SID służy do identyfikowania użytkownika w interakcje z zabezpieczeniami systemu Windows.
 
-  - A <xref:System.IdentityModel.Claims.Claim> z <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> wartością identyfikatora SID, <xref:System.IdentityModel.Claims.Claim.Right%2A> z `PossessProperty`, a <xref:System.IdentityModel.Claims.Claim.Resource%2A> wartości identyfikatora SID.
+  - A <xref:System.IdentityModel.Claims.Claim> o <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> wartości SID, a <xref:System.IdentityModel.Claims.Claim.Right%2A> `PossessProperty` i a <xref:System.IdentityModel.Claims.Claim.Resource%2A> wartości identyfikatora SID.
 
-  - A <xref:System.IdentityModel.Claims.Claim> z <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> z <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.Claim.Right%2A> z `PossessProperty` i <xref:System.IdentityModel.Claims.Claim.Resource%2A> ciąg zawierający nazwę użytkownika (na przykład "MYMACHINE\Bob").
+  - A z i a z <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> <xref:System.IdentityModel.Claims.Claim.Right%2A> `PossessProperty` i z i z z i a z z i a z, z i a <xref:System.IdentityModel.Claims.Claim.Resource%2A> z o
 
-  - Identyfikator SID dodatkowe oświadczenia za pomocą <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> dla różnych grup należy użytkownik.
+  - Dodatkowe oświadczenia SID <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> dla różnych grup, do których należy użytkownik.
 
 ## <a name="certificates"></a>Certyfikaty
 
-Gdzie poświadczeń klienta jest certyfikat wynikowy <xref:System.IdentityModel.Claims.ClaimSet> następującymi wartościami:
+Gdy poświadczenie klienta jest certyfikatem, wynikiem są <xref:System.IdentityModel.Claims.ClaimSet> następujące wartości:
 
-- W przypadku certyfikatów wystawiony samodzielnie `Issuer` jest <xref:System.IdentityModel.Claims.ClaimSet> sam. <xref:System.IdentityModel.Claims.ClaimSet> Zwraca <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> z <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.Claim.Right%2A> z `Identity`, a <xref:System.IdentityModel.Claims.Claim.Resource%2A> wartość, która jest <xref:System.Byte> tablica zawierająca odcisk palca certyfikatu.
+- W przypadku certyfikatów wystawionych przez siebie `Issuer` jest to <xref:System.IdentityModel.Claims.ClaimSet> sama sama. <xref:System.IdentityModel.Claims.ClaimSet>Zwraca wartość a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> z <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A> <xref:System.IdentityModel.Claims.Claim.Right%2A> `Identity` i <xref:System.IdentityModel.Claims.Claim.Resource%2A> jest <xref:System.Byte> tablicą zawierającą odcisk palca certyfikatu.
 
-- Certyfikat wystawiony przez urząd certyfikacji, wystawca ma `ClaimSet` reprezentujący certyfikatu urzędu certyfikacji.
+- Dla certyfikatu wystawionego przez urząd certyfikacji wystawca `ClaimSet` reprezentuje certyfikat urzędu certyfikacji.
 
-- `Claims` w kolekcji obejmują:
+- `Claims`W kolekcji należą:
 
-  - A `Claim` z `ClaimType` odcisk palca, `Right` z PossessProperty, a `Resource` oznacza to tablica bajtów zawierająca odcisk palca certyfikatu
+  - A z `Claim` `ClaimType` odciskiem palca, a `Right` z PossessProperty i `Resource` jest tablicą bajtową zawierającą odcisk palca certyfikatu
 
-  - Dodatkowe oświadczenia PossessProperty różnych typów, w tym X500DistinguishedName, Dns, nazwę, nazwy Upn i Rsa, reprezentują różne właściwości certyfikatu. Zasób oświadczenia Rsa jest klucza publicznego skojarzonego z certyfikatem. **Uwaga** typu poświadczeń klienta w przypadku certyfikatu, który mapuje usługę Windows konto, 2 `ClaimSet` obiekty są generowane. Pierwszy zawiera wszystkie oświadczenia, które są związane z kontem Windows, a drugi zawiera wszystkie oświadczenia, które są związane z certyfikatem.
+  - Dodatkowe oświadczenia PossessProperty różnych typów, w tym X500DistinguishedName, DNS, Name, UPN i RSA, reprezentują różne właściwości certyfikatu. Zasób dla żądania RSA jest kluczem publicznym skojarzonym z certyfikatem. **Uwaga** W przypadku, gdy typ poświadczeń klienta to certyfikat, który usługa mapuje na konto systemu Windows, `ClaimSet` generowane są dwa obiekty. Pierwszy zawiera wszystkie oświadczenia powiązane z kontem systemu Windows, a drugi zawiera wszystkie oświadczenia powiązane z certyfikatem.
 
 ## <a name="user-namepassword"></a>Nazwa użytkownika/hasło
 
-Gdzie poświadczeń klienta jest nazwa i hasło użytkownika (lub odpowiednik), nie jest mapowany do konta Windows, wynikowy `ClaimSet` wystawiony przez statyczną <xref:System.IdentityModel.Claims.ClaimSet.System%2A> właściwość `ClaimSet` klasy. `ClaimSet` Zawiera `Identity` oświadczenia typu <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> zapewnia którego zasób jest nazwą użytkownika klienta. Odpowiadające oświadczenie ma `Right` z `PossessProperty`.
+Gdzie poświadczenie klienta to nazwa użytkownika/hasło (lub równoważne), które nie jest mapowane na konto systemu Windows, wynikiem `ClaimSet` jest wystawienie przez właściwość statyczną <xref:System.IdentityModel.Claims.ClaimSet.System%2A> `ClaimSet` klasy. `ClaimSet`Zawiera typ, `Identity` <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> którego zasób jest nazwą użytkownika dostarczaną przez klienta. Odpowiadające mu wnioski mają `Right` `PossessProperty` .
 
 ## <a name="rsa-keys"></a>Klucze RSA
 
-W przypadku, gdy jest używany klucz RSA, nie jest skojarzony z certyfikatem, wynikowy `ClaimSet` własnym wystawiony i zawiera `Identity` oświadczenia typu <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> którego zasób jest kluczem RSA. Odpowiadające oświadczenie ma `Right` z `PossessProperty`.
+Jeśli używany jest klucz RSA, który nie jest skojarzony z certyfikatem, zostanie `ClaimSet` wystawiony własny komunikat i zawiera ono zgłoszenie `Identity` typu, <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> którego zasób jest kluczem RSA. Odpowiadające mu wnioski mają `Right` `PossessProperty` .
 
 ## <a name="saml"></a>SAML
 
-Gdy klient uwierzytelnia się za pomocą tokenu potwierdzenia języka SAML (Security Markup), wynikowy `ClaimSet` wystawiony przez jednostki, który podpisał token SAML, często certyfikat usługę tokenu zabezpieczającego (STS), który wystawił SAML token. `ClaimSet` Zawiera różne oświadczenia, tak jak w tokenie języka SAML. Jeśli zawiera SAML token `SamlSubject` przy użyciu innej niż`null` nazwę, a następnie `Identity` oświadczenie z typem <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> i typu zasobu <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> są tworzone.
+W przypadku, gdy klient uwierzytelnia się za pomocą tokenu potwierdzeń zabezpieczeń (SAML), `ClaimSet` wydawane przez jednostkę, która podpisał token SAML, często certyfikat usługi tokenu zabezpieczającego (STS), która wystawiła token języka SAML. `ClaimSet`Zawiera różne oświadczenia, które znajdują się w tokenie SAML. Jeśli token SAML zawiera element `SamlSubject` o wartości innej niż `null` Nazwa, to zostanie utworzone wystąpienie z `Identity` typem <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> i typem zasobu <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> .
 
-## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Tożsamość oświadczeń i ServiceSecurityContext.IsAnonymous
+## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Oświadczenia tożsamości i ServiceSecurityContext. IsAnonymous
 
-Jeśli żadna z `ClaimSet` obiektów wynikające z poświadczeniami klienta zawierają roszczenia z `Right` z `Identity,` , a następnie <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> właściwość zwraca `true`. Jeśli jeden lub więcej takich oświadczenia są obecne, `IsAnonymous` właściwość zwraca `false`.
+Jeśli żaden z `ClaimSet` obiektów wynikających z poświadczeń klienta nie zawiera roszczeń z, a `Right` `Identity,` następnie <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> zwraca wartość właściwości `true` . Jeśli istnieją co najmniej jedno takie oświadczenie, `IsAnonymous` Właściwość zwraca `false` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: a14ee9e5916133be3979650055cf3e57899a4cca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 942ade69d92d8a213f65a3a2e463b6924e2f986e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590218"
 ---
 # <a name="schema-import-and-export"></a>Importowanie i eksportowanie schematu
-Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Tłumaczy obiektów .NET Framework i XML (w obu kierunkach). Oprócz samego elementu serializującego WCF obejmuje import skojarzonego schematu i mechanizmy eksportu schematu. *Schemat* jest posiadanie, dokładne i czytelnym opis kształt XML generuje serializator lub Deserializator mogą uzyskiwać dostęp do. WCF używa języka definicji schematu XML World Wide Web Consortium (W3C) (XSD) jako jego reprezentację schematu i jest szeroko współpracujący z wieloma platformami innych firm.  
+Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:System.Runtime.Serialization.DataContractSerializer> . `DataContractSerializer`Tłumaczy między obiektami .NET Framework i XML (w obu kierunkach). Oprócz programu szeregującego, WCF zawiera skojarzone mechanizmy importowania schematu i eksportowania schematu. *Schemat* to formalny, dokładny i czytelny dla maszyn opis kształtu XML, który tworzy serializator lub który Deserializator może uzyskać dostęp. Funkcja WCF używa organizacja World Wide Web Consortium (W3C) języka definicji schematu XML (XSD) jako reprezentacji schematu, która jest szeroko współdziałana z wieloma platformami innych firm.  
   
- Składnik Importuj schemat <xref:System.Runtime.Serialization.XsdDataContractImporter>, przejście do dokumentu schematu XSD i generuje .NET Framework klas (zwykle klasy kontraktu danych) w taki sposób, że serializacji formularzy odnoszą się do danego schematu.  
+ Składnik importowania schematu, <xref:System.Runtime.Serialization.XsdDataContractImporter> , pobiera dokument schematu XSD i generuje klasy .NET Framework (zazwyczaj klasy kontraktu danych), tak że serializowane formularze odpowiadają danemu schematowi.  
   
- Na przykład poniższy schemat fragment:  
+ Na przykład poniższy fragment schematu:  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -31,38 +31,38 @@ Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xr
  [!code-csharp[c_SchemaImportExport#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#1)]
  [!code-vb[c_SchemaImportExport#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#1)]  
   
- Należy pamiętać, że wygenerowany typ następuje kilka danych kontraktu najlepszych rozwiązań (znalezione w [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
+ Należy zauważyć, że wygenerowany typ jest zgodny z kilkoma najlepszymi rozwiązaniami dotyczącymi kontraktu dotyczącego danych (które są dostępne w [najlepszych rozwiązaniach: wersja kontraktu danych](../best-practices-data-contract-versioning.md)):  
   
-- Typ implementuje <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Typ implementuje <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs. Aby uzyskać więcej informacji, zobacz [Kontrakty danych zgodne z przekazywaniem dalej](forward-compatible-data-contracts.md).  
   
-- Elementy członkowskie danych są implementowane jako właściwości publiczne, które umieszczają w otoce pól prywatnych.  
+- Elementy członkowskie danych są implementowane jako właściwości publiczne, które zawijają pola prywatne.  
   
-- Klasa jest klasą częściowe i dodatków jest możliwe bez konieczności modyfikowania kodu wygenerowanego.  
+- Klasa jest klasą częściową, a dodatki można wprowadzać bez modyfikowania kodu wygenerowanego.  
   
- <xref:System.Runtime.Serialization.XsdDataContractExporter> Umożliwia sytuacja odwrotna — zająć typy, które są możliwe do serializacji z `DataContractSerializer` i generowania dokumentu schematu XSD.  
+ <xref:System.Runtime.Serialization.XsdDataContractExporter>Umożliwia przeprowadzenie odwrócenia — wykonaj typy, które można serializować przy użyciu `DataContractSerializer` i Generuj dokument schematu XSD.  
   
-## <a name="fidelity-is-not-guaranteed"></a>Dokładność nie jest gwarantowana.  
- Nie gwarantuje, że schematu lub typów wykonywać rund, za pomocą całkowita wierności. (A *obiegu* oznacza, że importowanie schematu, aby utworzyć zestaw klas i eksportowanie wyników, aby ponownie utworzyć schemat.) Nie można zwrócić ten sam schemat. Odwrócenie procesu również nie musi zachować wierność. (W tym celu należy wyeksportować typu do generowania jego schematu, a następnie zaimportuj typ ponownie. Jest mało prawdopodobne, zwracany jest ten sam typ).  
+## <a name="fidelity-is-not-guaranteed"></a>Wierność nie jest gwarantowana  
+ Nie gwarantuje to, że schemat lub typy przedają w wyniku rundy całkowitą wierność. (W wyniku *rundy* należy zaimportować schemat, aby utworzyć zestaw klas, i wyeksportować wynik, aby ponownie utworzyć schemat). Nie można zwrócić tego samego schematu. Odwrócenie procesu nie gwarantuje również zachowania dokładności. (Wyeksportuj typ, aby wygenerować jego schemat, a następnie zaimportuj typ z powrotem. Jest mało prawdopodobne, że zwracany jest ten sam typ.)  
   
 ## <a name="supported-types"></a>Obsługiwane typy  
- Model kontraktu danych obsługuje tylko ograniczony podzestaw schematu WC3. Żadnego schematu, który nie jest zgodny z tym podzbiorem spowoduje, że wyjątek w trakcie procesu importowania. Na przykład nie istnieje żaden sposób, aby określić, czy element członkowski danych kontraktu danych powinien zostać Zserializowany jako atrybut XML. W związku z tym schematów, które wymagają używania atrybutów XML nie są obsługiwane i spowoduje, że wyjątki podczas importowania, ponieważ nie jest możliwe do generowania kontraktu danych za pomocą poprawne projekcji XML.  
+ Model kontraktu danych obsługuje tylko ograniczony podzbiór schematu WC3. Każdy schemat, który nie jest zgodny z tym podzbiorem, spowoduje wyjątek podczas procesu importowania. Na przykład nie istnieje sposób, aby określić, że element członkowski danych kontraktu danych powinien być serializowany jako atrybut XML. W związku z tym schematy, które wymagają użycia atrybutów XML, nie są obsługiwane i spowodują wyjątki podczas importowania, ponieważ nie można wygenerować kontraktu danych z poprawnym rzutowaniem XML.  
   
- Na przykład poniższy fragment schematu nie można zaimportować przy użyciu domyślnych ustawień importu.  
+ Na przykład poniższy fragment schematu nie może zostać zaimportowany przy użyciu domyślnych ustawień importu.  
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Jeśli schemat nie jest zgodny z regułami kontraktu danych, za pomocą aparatu różnych serializacji. Na przykład <xref:System.Xml.Serialization.XmlSerializer> używa własny mechanizm Importowanie schematu oddzielne. Ponadto jest tryb import specjalne, w którym jest rozwinięta, zakres obsługiwanych schematu. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą generowania <xref:System.Xml.Serialization.IXmlSerializable> wpisuje [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Aby uzyskać więcej informacji, zobacz informacje o [schemacie kontraktu danych](data-contract-schema-reference.md). Jeśli schemat nie jest zgodny z regułami kontraktu danych, użyj innego aparatu serializacji. Na przykład <xref:System.Xml.Serialization.XmlSerializer> używa własnego mechanizmu importowania schematu. Ponadto istnieje specjalny tryb importu, w którym jest rozwinięty zakres obsługiwanego schematu. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą generowania <xref:System.Xml.Serialization.IXmlSerializable> typów w temacie [Importowanie schematu do generowania klas](importing-schema-to-generate-classes.md).  
   
- `XsdDataContractExporter` Obsługuje wszystkie typy .NET Framework, które może być serializowany z `DataContractSerializer`. Aby uzyskać więcej informacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Należy pamiętać, tym schemacie wygenerowany za pomocą `XsdDataContractExporter` jest zwykle prawidłowe dane, `XsdDataContractImporter` można użyć (chyba że <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> umożliwia dostosowanie schematu).  
+ `XsdDataContractExporter`Obsługuje wszystkie typy .NET Framework, które można serializować przy użyciu `DataContractSerializer` . Aby uzyskać więcej informacji, zobacz [Typy obsługiwane przez serializator kontraktu danych](types-supported-by-the-data-contract-serializer.md). Należy zauważyć, że schemat wygenerowany przy użyciu `XsdDataContractExporter` jest zwykle prawidłowymi danymi, które `XsdDataContractImporter` mogą być używane (chyba że <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> jest używany do dostosowywania schematu).  
   
- Aby uzyskać więcej informacji o korzystaniu z <xref:System.Runtime.Serialization.XsdDataContractImporter>, zobacz [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Aby uzyskać więcej informacji o używaniu programu <xref:System.Runtime.Serialization.XsdDataContractImporter> , zobacz [Importowanie schematu do generowania klas](importing-schema-to-generate-classes.md).  
   
- Aby uzyskać więcej informacji o korzystaniu z <xref:System.Runtime.Serialization.XsdDataContractExporter>, zobacz [eksportowanie schematów z klas](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Aby uzyskać więcej informacji o używaniu programu <xref:System.Runtime.Serialization.XsdDataContractExporter> , zobacz [Eksportowanie schematów z klas](exporting-schemas-from-classes.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [Importowanie schematu w celu generowania klas](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
-- [Eksportowanie schematów z klas](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Importowanie schematu w celu generowania klas](importing-schema-to-generate-classes.md)
+- [Eksportowanie schematów z klas](exporting-schemas-from-classes.md)

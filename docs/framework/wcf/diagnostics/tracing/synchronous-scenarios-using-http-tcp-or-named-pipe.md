@@ -2,63 +2,63 @@
 title: Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 28e612b190f4993e1ce7da0d1083c4e55f827d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 662067fc5564c9421ce24b28b291d06690b129ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784861"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589187"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
-W tym temacie opisano działania i transferów w scenariuszach różnych synchroniczne żądanie/nietypizowana odpowiedź, za pomocą klienta jednowątkowe, przy użyciu protokołu HTTP, TCP lub nazwany potok. Zobacz [scenariusze asynchroniczne z zastosowaniem HTTP lub TCP albo potoku nazwanego](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) więcej informacji na temat żądań wielowątkowych.  
+W tym temacie opisano działania i transfery dla różnych scenariuszy żądań synchronicznych/odpowiedzi z klientem jednowątkowym przy użyciu protokołu HTTP, TCP lub potoku nazwanego. Aby uzyskać więcej informacji na temat żądań wielowątkowych, zobacz [scenariusze asynchroniczne przy użyciu protokołu HTTP, TCP lub nazwanego potoku](asynchronous-scenarios-using-http-tcp-or-named-pipe.md) .  
   
-## <a name="synchronous-requestreply-without-errors"></a>Synchroniczne żądanie/nietypizowana odpowiedź bez błędów  
- W tej sekcji opisano działania i transferu dla scenariusza prawidłowe synchroniczne żądanie/nietypizowana odpowiedź, za pomocą klienta jednowątkowe.  
+## <a name="synchronous-requestreply-without-errors"></a>Synchroniczne żądanie/odpowiedź bez błędów  
+ W tej sekcji opisano działania i transfery dla prawidłowego scenariusza synchronicznego żądania/odpowiedzi z klientem jednowątkowym.  
   
 ### <a name="client"></a>Klient  
   
-#### <a name="establishing-communication-with-service-endpoint"></a>Ustanawianie komunikacji z punktu końcowego usługi  
- Klient jest tworzony i otwarty. Dla każdego z tych kroków otoczenia działania (A) jest przekazywana do "Konstruowania Client" (B) i "Otwarte Klienta" (C) działania odpowiednio. Dla każdego działania, przesyłane do otoczenia działania jest zawieszona do momentu przeniesienia, oznacza to, aż ServiceModel kod jest wykonywany.  
+#### <a name="establishing-communication-with-service-endpoint"></a>Ustanawianie komunikacji z punktem końcowym usługi  
+ Klient został skonstruowany i otwarty. Dla każdego z tych kroków działanie otoczenia (A) jest przesyłane odpowiednio do działania "Konstruuj klienta" (B) i "Otwórz klienta" (C). W przypadku każdego przenoszonego działania do programu działanie otoczenia zostaje zawieszone do momentu przetransferowania, czyli do momentu wykonania kodu ServiceModel.  
   
-#### <a name="making-a-request-to-service-endpoint"></a>Zgłaszającą żądanie do punktu końcowego usługi  
- Działanie otoczenia jest przekazywana do działania "ProcessAction" (D). W ramach tego działania jest wysyłany komunikat żądania, a komunikat odpowiedzi są odbierane. Działanie kończy się, gdy sterowanie powraca do kodu użytkownika. Ponieważ żądań synchronicznych otoczenia działania wstrzymuje, aż formant powraca.  
+#### <a name="making-a-request-to-service-endpoint"></a>Tworzenie żądania do punktu końcowego usługi  
+ Działanie otoczenia jest przenoszone do działania "ProcessAction" (D). W ramach tego działania zostanie wysłany komunikat o żądaniu i zostanie wyświetlony komunikat z odpowiedzią. Działanie zostaje zakończone, gdy sterowanie powraca do kodu użytkownika. Ponieważ jest to żądanie synchroniczne, działanie otoczenia zawiesza się do momentu powracania kontroli.  
   
-#### <a name="closing-communication-with-service-endpoint"></a>Zamykanie komunikacji z punktu końcowego usługi  
- Zamknij działanie klienta, (I) jest tworzony z otoczenia działania. Jest to taka sama jak nowe i open.  
+#### <a name="closing-communication-with-service-endpoint"></a>Zamykanie komunikacji z punktem końcowym usługi  
+ Działanie zamknięcia klienta (I) jest tworzone na podstawie działania otoczenia. Ta nazwa jest taka sama jak w przypadku nowych i otwartych.  
   
 ### <a name="server"></a>Serwer  
   
 #### <a name="setting-up-a-service-host"></a>Konfigurowanie hosta usługi  
- ServiceHost nowych i otwórz działań (N i O) są tworzone na podstawie aktywności otoczenia (M).  
+ Nowe i otwarte działania usługi ServiceHost (N i O) są tworzone na podstawie działania otoczenia (M).  
   
- Działanie odbiornika (P) jest tworzony z otwierania elementu ServiceHost dla każdego odbiornika. Działanie odbiornika oczekuje odbierania i przetwarzania danych.  
+ Działanie odbiornika (P) jest tworzone na podstawie otwierania ServiceHost dla każdego odbiornika. Działanie odbiornika czeka na odebranie i przetworzenie danych.  
   
-#### <a name="receiving-data-on-the-wire"></a>Odbieranie danych na potrzeby przesyłu  
- Po odebraniu danych na potrzeby przesyłu działania "ReceiveBytes" jest tworzony, jeśli go jeszcze nie istnieje (Q) do przetworzenia odebranych danych. To działanie można ponownie wielu komunikatów w ramach połączenia lub kolejki.  
+#### <a name="receiving-data-on-the-wire"></a>Otrzymywanie danych w sieci  
+ Gdy dane docierają do sieci, zostanie utworzone działanie "ReceiveBytes", jeśli jeszcze nie istnieje (Q) w celu przetworzenia odebranych danych. To działanie może być ponownie używane dla wielu komunikatów w ramach połączenia lub kolejki.  
   
- Działanie ReceiveBytes uruchamia czynnością ProcessMessage (R) ma wystarczającej ilości danych w celu utworzenia komunikatu działania protokołu SOAP.  
+ Działanie ReceiveBytes uruchamia działanie ProcessMessage (R), jeśli ma wystarczającą ilość danych do utworzenia komunikatu akcji protokołu SOAP.  
   
- W działaniu R nagłówków wiadomości są przetwarzane, a nagłówek activityID jest weryfikowany. Jeśli tego pliku nagłówkowego jest obecna, Identyfikator działania jest ustawiony na działanie ProcessAction; w przeciwnym razie jest tworzony nowy identyfikator.  
+ W działaniu R nagłówki wiadomości są przetwarzane, a nagłówek activityID zostanie zweryfikowany. Jeśli ten nagłówek jest obecny, identyfikator działania jest ustawiany na działanie ProcessAction. w przeciwnym razie zostanie utworzony nowy identyfikator.  
   
- Działanie ProcessAction (S) jest tworzone i przesyłane do, gdy wywołanie jest przetwarzany. To działanie kończy się po zakończeniu całego procesu przetwarzania związane z przychodzących wiadomości, łącznie z wykonywaniem kodu użytkownika (T) i wysyła komunikat odpowiedzi, jeśli ma to zastosowanie.  
+ Działania ProcessAction są tworzone i przekazywane do, gdy wywołanie jest przetwarzane. To działanie kończy się, gdy zostanie wykonane wszystkie przetwarzanie związane z wiadomością przychodzącą, w tym wykonanie kodu użytkownika (T) i wysłanie komunikatu odpowiedzi, jeśli ma to zastosowanie.  
   
 #### <a name="closing-a-service-host"></a>Zamykanie hosta usługi  
- Zamknij działanie ServiceHost (Z) jest tworzony z otoczenia działania.  
+ Działanie zamknięcia elementu ServiceHost (Z) zostało utworzone na podstawie działania otoczenia.  
   
- ![Diagram przedstawiający scenariusze synchroniczne: HTTP, TCP lub nazwanych potoków.](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
+ ![Diagram przedstawiający scenariusze synchroniczne: HTTP, TCP lub nazwane potoki.](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
   
- W \<A: name >, `A` to symbol skrótu opisujący działanie w poprzedni tekst i w tabeli 3. `Name` jest skróconą nazwę działania.  
+ W \<A: name> programie `A` jest symbolem skrótu opisującym działanie w poprzednim tekście i w tabeli 3. `Name`to Skrócona nazwa działania.  
   
- Jeśli `propagateActivity` = `true`, Proces Akcji klienta i usługi mają ten sam identyfikator działania.  
+ Jeśli `propagateActivity` = `true` operacja przetwarzania na kliencie i w usłudze ma ten sam identyfikator działania.  
   
-## <a name="synchronous-requestreply-with-errors"></a>Synchroniczne żądanie/nietypizowana odpowiedź z błędami  
- Jedyną różnicą w poprzednim scenariuszu jest to, że komunikatu błędu SOAP są zwracane w postaci komunikatu odpowiedzi. Jeśli `propagateActivity` = `true`, Identyfikator działania komunikat żądania zostanie dodany do komunikatu błędu SOAP.  
+## <a name="synchronous-requestreply-with-errors"></a>Synchroniczne żądanie/odpowiedź z błędami  
+ Jedyną różnicą w poprzednim scenariuszu jest zwrócenie komunikatu o błędzie protokołu SOAP jako komunikatu odpowiedzi. Jeśli `propagateActivity` = `true` identyfikator działania komunikatu żądania zostanie dodany do komunikatu o błędzie protokołu SOAP.  
   
-## <a name="synchronous-one-way-without-errors"></a>Synchroniczne jednokierunkowe bez błędów  
- Jedyna różnica z pierwszego scenariusza polega na tym, że żaden komunikat nie jest zwracana do serwera. Oparte na protokole HTTP protokołów stan (nieprawidłowy lub błędu) nadal jest zwracana do klienta. Jest to spowodowane HTTP jest jedynym protokołem z semantyką odpowiedź na żądanie, należącego do stosu protokołu WCF. Ponieważ przetwarzanie TCP jest ukryty dla usługi WCF, potwierdzenie nie są wysyłane do klienta.  
+## <a name="synchronous-one-way-without-errors"></a>Jednokierunkowa synchroniczna bez błędów  
+ Jedyną różnicą w pierwszym scenariuszu jest to, że żaden komunikat nie jest zwracany do serwera. W przypadku protokołów opartych na protokole HTTP stan (prawidłowy lub błąd) jest nadal zwracany do klienta. Wynika to z faktu, że protokół HTTP jest jedynym protokołem z semantyką odpowiedzi na żądanie, która jest częścią stosu protokołu WCF. Ponieważ przetwarzanie protokołu TCP jest ukryte w programie WCF, do klienta nie jest wysyłane potwierdzenie.  
   
-## <a name="synchronous-one-way-with-errors"></a>Synchroniczne jednokierunkowe z Błędami  
- Jeśli wystąpi błąd podczas przetwarzania komunikatu (Q lub nowszych), powiadomienia nie jest zwracana do klienta. Jest to taka sama jak w scenariuszu "One-Way bez błędów synchronicznych". Nie należy używać jednokierunkowe scenariusz, jeśli chcesz otrzymywać komunikat o błędzie.  
+## <a name="synchronous-one-way-with-errors"></a>Synchroniczna synchronizacja z błędami  
+ Jeśli wystąpi błąd podczas przetwarzania komunikatu (Q lub więcej), do klienta nie jest zwracane żadne powiadomienie. Jest to taka sama jak w przypadku scenariusza "synchronicznie jednokierunkowe bez błędów". Nie należy używać jednokierunkowego scenariusza, jeśli chcesz otrzymać komunikat o błędzie.  
   
 ## <a name="duplex"></a>Dupleks  
- Różnica w poprzednich scenariuszach polega na tym, że klient działa jako usługa, w którym tworzy ReceiveBytes ProcessMessage działalności i, podobnie jak scenariusze asynchroniczne.
+ Różnica z poprzednimi scenariuszami polega na tym, że klient działa jako usługa, w której tworzy działania ReceiveBytes i ProcessMessage, podobne do scenariuszy asynchronicznych.

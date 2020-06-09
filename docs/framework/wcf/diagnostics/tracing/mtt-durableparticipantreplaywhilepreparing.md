@@ -2,25 +2,25 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: 93354fbdd0c1726280526ca07a8b3dd1c57c8a25
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 31fb8d466c76c7490aa80dfcab089332af4036a2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589135"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
-Usługa protokołu WS-AT odebrała komunikat powtarzania z trwałego uczestnika nie odpowiedział na przygotowanie. W związku z tym transakcja została przerwana.  
+Usługa protokołu WS-AT otrzymała komunikat powtarzania od trwałego uczestnika, który nie odpowiedział na przygotowanie. W związku z tym transakcja została przerwana.  
   
 ## <a name="description"></a>Opis  
- Śledzone, jeśli powtarzania wiadomość zostaje odebrana, gdy uczestnik trwałe nadal trwa przygotowywanie. Ten komunikat ma charakter niedozwolony dla tego stanu i transakcja zostanie przerwane.  
+ Śledzone w przypadku odebrania komunikatu powtarzania, gdy trwały uczestnik nadal trwa przygotowywanie. Jest to niedozwolony komunikat dla tego stanu i transakcja zostanie przerwana.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Ten komunikat o błędzie może wskazywać, że trwałego uczestnika (w tym TransactionManagers podrzędnego) została odzyskana po awarii; jednak nie ma pewności o wyniku transakcji i jego stan żądania.  
+Otrzymanie tego błędu może wskazywać, że trwały uczestnik (w tym podrzędny TransactionManagers) odzyskał sprawność po awarii; nie należy jednak pamiętać o wyniku transakcji i żądania jego stanu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

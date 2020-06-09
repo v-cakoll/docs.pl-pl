@@ -1,96 +1,96 @@
 ---
-title: 'Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów'
+title: 'Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4991fc9f8a6c45cae3943f1506247c42ed2b30b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597127"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów
-W tym temacie opisano sposób tworzenia prostego przepływu pracy usługi przy użyciu działań dotyczących komunikatów. Ten temat koncentruje się na mechanika Tworzenie usługi przepływu pracy, gdy usługa składa się wyłącznie z działań dotyczących komunikatów. W usłudze rzeczywistych przepływ pracy zawiera wiele innych działań. Usługa implementuje jedną operację o nazwie Echo, która przyjmuje ciąg i zwraca ciąg do obiektu wywołującego. W tym temacie jest pierwszy w serii dwa tematy. Następny temat [How to: Dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) w tym artykule omówiono sposób tworzenia aplikacji przepływu pracy, który można wywołać usługi utworzonej w tym temacie.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów
+W tym temacie opisano sposób tworzenia prostej usługi przepływu pracy przy użyciu działań związanych z wiadomościami. Ten temat koncentruje się na Mechanics tworzenia usługi przepływu pracy, w której usługa składa się wyłącznie z działań związanych z obsługą komunikatów. W przypadku usługi w świecie przepływ pracy zawiera wiele innych działań. Usługa implementuje jedną operację o nazwie echo, która pobiera ciąg i zwraca ciąg do obiektu wywołującego. Ten temat jest pierwszą częścią serii dwóch tematów. Następny temat [: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy](how-to-access-a-service-from-a-workflow-application.md) omawia sposób tworzenia aplikacji przepływu pracy, która może wywołać usługę utworzoną w tym temacie.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Aby utworzyć projekt usługi przepływu pracy  
   
-1. Start Visual Studio 2012.  
+1. Uruchom program Visual Studio 2012.  
   
-2. Kliknij przycisk **pliku** menu, wybierz opcję **New**, a następnie **projektu** do wyświetlenia **okna dialogowego Nowy projekt**. Wybierz **przepływu pracy** na liście zainstalowanych szablonów i **aplikacja usługi przepływu pracy WCF** z listy typów projektów. Nadaj projektowi nazwę `MyWFService` i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.  
+2. Kliknij menu **plik** , wybierz polecenie **Nowy**, a następnie **projekt** , aby wyświetlić **okno dialogowe Nowy projekt**. Z listy typów projektów wybierz pozycję **przepływ pracy** z listy zainstalowanych szablonów i **aplikacji usługi przepływu pracy WCF** . Nazwij projekt `MyWFService` i Użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.  
   
-     Kliknij przycisk **OK** przycisk, aby odrzucić **okna dialogowego Nowy projekt**.  
+     Kliknij przycisk **OK** , aby zamknąć **okno dialogowe Nowy projekt**.  
   
-3. Podczas tworzenia projektu plik Service1.xamlx jest otwarty w projektancie, jak pokazano na poniższej ilustracji.  
+3. Po utworzeniu projektu plik Service1. xamlx zostanie otwarty w projektancie, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu przedstawia Otwórz plik Service1.xamlx w projektancie.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
+     ![Zrzut ekranu pokazuje otwarty plik Service1. xamlx w projektancie.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
   
-     Kliknij prawym przyciskiem myszy działanie etykietą **usługa Sekwencyjna** i wybierz **Usuń**.  
+     Kliknij prawym przyciskiem myszy działanie z etykietą **Usługa sekwencyjna** i wybierz polecenie **Usuń**.  
   
-### <a name="to-implement-the-workflow-service"></a>Aby zaimplementować usługi przepływu pracy  
+### <a name="to-implement-the-workflow-service"></a>Aby zaimplementować usługę przepływu pracy  
   
-1. Wybierz **przybornika** karty po lewej stronie ekranu, aby wyświetlić Przybornika, a następnie kliknij przycisk pinezki, aby nie zamykaj okna. Rozwiń **komunikatów** sekcji przybornika, aby wyświetlić działań dotyczących komunikatów i komunikatów Szablony działań, jak pokazano na poniższej ilustracji.  
+1. Wybierz kartę **Przybornik** po lewej stronie ekranu, aby wyświetlić przybornik, a następnie kliknij pinezkę, aby pozostawić otwarte okno. Rozwiń sekcję **wiadomości** w przyborniku, aby wyświetlić działania obsługi komunikatów i szablony aktywności komunikatów, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący przybornika z sekcją komunikatów rozwinięte.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
+     ![Zrzut ekranu pokazujący Przybornik z rozwiniętą sekcją komunikatów.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
-2. Przeciąganie i upuszczanie **ReceiveAndSendReply** szablon do projektanta przepływów pracy. Spowoduje to utworzenie <xref:System.Activities.Statements.Sequence> działanie przy użyciu **Receive** następuje działanie <xref:System.ServiceModel.Activities.SendReply> działania, jak pokazano na poniższej ilustracji.  
+2. Przeciągnij i upuść szablon **ReceiveAndSendReply** do projektanta przepływu pracy. Spowoduje to utworzenie <xref:System.Activities.Statements.Sequence> działania z działaniem **Receive** , po którym następuje <xref:System.ServiceModel.Activities.SendReply> działanie, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący szablonu ReceiveAndSendReply.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
+     ![Zrzut ekranu przedstawiający szablon ReceiveAndSendReply.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
-     Należy zauważyć, że <xref:System.ServiceModel.Activities.SendReply> działania <xref:System.ServiceModel.Activities.SendReply.Request%2A> właściwość jest ustawiona na `Receive`, nazwa <xref:System.ServiceModel.Activities.Receive> działań, do którego <xref:System.ServiceModel.Activities.SendReply> działania się odwołują.  
+     Zauważ, że <xref:System.ServiceModel.Activities.SendReply> Właściwość działania <xref:System.ServiceModel.Activities.SendReply.Request%2A> jest ustawiona na wartość `Receive` , nazwa <xref:System.ServiceModel.Activities.Receive> działania, z którym <xref:System.ServiceModel.Activities.SendReply> odpowiada działanie.  
   
-3. W <xref:System.ServiceModel.Activities.Receive> typ działania `Echo` w polu tekstowym etykietą **OperationName**. Definiuje nazwy operacji usługi implementuje.  
+3. W <xref:System.ServiceModel.Activities.Receive> typie działania `Echo` do pola tekstowego zatytułowanego nazwa **operacji**. Definiuje nazwę operacji implementującej usługę.  
   
-     ![Zrzut ekranu pokazujący, gdzie można określić nazwy operacji.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
+     ![Zrzut ekranu pokazujący, gdzie należy określić nazwę operacji.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
-4. Za pomocą <xref:System.ServiceModel.Activities.Receive> działania zaznaczone, Otwórz okno właściwości w przeciwnym razie już otworzyć, klikając przycisk **widoku** menu i wybierając polecenie **okno właściwości**. W **okno właściwości** przewiń w dół, aż zobaczysz **CanCreateInstance** i zaznacz pole wyboru, jak pokazano na poniższej ilustracji. To ustawienie włącza hosta usługi przepływu pracy utworzyć nowe wystąpienie usługi (jeśli jest to konieczne), gdy wiadomość zostaje odebrana.  
+4. <xref:System.ServiceModel.Activities.Receive>Po wybraniu działania Otwórz okno właściwości, jeśli nie jest jeszcze otwarte, klikając menu **Widok** i wybierając polecenie **okno właściwości**. W **oknie właściwości** przewiń w dół do momentu wyświetlenia **CanCreateInstance** i kliknięcia pola wyboru, jak pokazano na poniższej ilustracji. To ustawienie włącza hosta usługi przepływu pracy w celu utworzenia nowego wystąpienia usługi (jeśli jest to konieczne) w momencie odebrania komunikatu.  
   
-     ![Zrzut ekranu pokazujący właściwość CanCreateInstance.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
+     ![Zrzut ekranu przedstawiający Właściwość CanCreateInstance.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
-5. Wybierz <xref:System.Activities.Statements.Sequence> działania i kliknij przycisk **zmienne** przycisku w lewym dolnym rogu projektanta. Spowoduje to wyświetlenie edytora zmiennych. Kliknij przycisk **utworzyć zmienną** łącze, aby dodać zmienną do przechowywania ciągu wysyłany do operacji. Nazwa zmiennej `msg` i ustaw jego **zmiennej** typu ciąg, jak pokazano na poniższej ilustracji.  
+5. Wybierz <xref:System.Activities.Statements.Sequence> działanie, a następnie kliknij przycisk **zmienne** w lewym dolnym rogu projektanta. Spowoduje to wyświetlenie edytora zmiennych. Kliknij link **Utwórz zmienną** , aby dodać zmienną do przechowywania ciągu wysyłanego do operacji. Nazwij zmienną `msg` i ustaw jej typ **zmiennej** na ciąg, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący sposób dodawania zmiennej.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
+     ![Zrzut ekranu, który pokazuje, jak dodać zmienną.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
   
-     Kliknij przycisk **zmienne** przycisk ponownie, aby zamknąć Edytor zmiennych.  
+     Kliknij ponownie przycisk **zmienne** , aby zamknąć Edytor zmiennych.  
   
-6. Kliknij przycisk **zdefiniować...** łącze w **zawartości** polu tekstowym <xref:System.ServiceModel.Activities.Receive> działanie, aby wyświetlić **definicji zawartości** okna dialogowego. Wybierz **parametry** przycisk radiowy, kliknij przycisk **dodano nowy parametr** napisz `inMsg` w **nazwa** pola tekstowego, wybierz opcję **ciągu**w **typu** listę rozwijaną pola listy, a typ `msg` w **przypisać do** pola tekstowego, jak pokazano na poniższej ilustracji.  
+6. Kliknij przycisk **Definiuj..** link w polu tekstowym **zawartość** <xref:System.ServiceModel.Activities.Receive> działania, aby wyświetlić okno dialogowe **definicji zawartości** . Wybierz przycisk radiowy **Parametry** , kliknij link **Dodaj nowy parametr** , wpisz `inMsg` w polu tekstowym **Nazwa** , wybierz **ciąg** w polu listy rozwijanej **Typ** , a następnie wpisz `msg` w polu tekstowym **Przypisz do** , jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący, dodając parametry zawartości.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
+     ![Zrzut ekranu pokazujący Dodawanie zawartości parametrów.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
-     Określa, że działania odbierania odbiera parametr ciągu i powiązania danych z `msg` zmiennej. Kliknij przycisk **OK** zamknąć **definicji zawartości** okna dialogowego.  
+     Oznacza to, że działanie Receive odbiera parametr ciągu, a dane są powiązane ze `msg` zmienną. Kliknij przycisk **OK** , aby zamknąć okno dialogowe **definicji zawartości** .  
   
-7. Kliknij przycisk **zdefiniować...**  łącze w **zawartości** pole w <xref:System.ServiceModel.Activities.SendReply> działanie, aby wyświetlić **definicji zawartości** okna dialogowego. Wybierz **parametry** przycisk radiowy, kliknij przycisk **dodano nowy parametr** napisz `outMsg` w **nazwa** pola tekstowego, wybierz opcję **ciągu**w **typu** lista rozwijana i `msg` w **wartość** pola tekstowego, jak pokazano na poniższej ilustracji.  
+7. Kliknij link **Definiuj...** w polu **zawartość** w <xref:System.ServiceModel.Activities.SendReply> działaniu, aby wyświetlić okno dialogowe **definicji zawartości** . Wybierz przycisk radiowy **Parametry** , kliknij link **Dodaj nowy parametr** , wpisz w polu tekstowym `outMsg` **Nazwa** , a następnie wybierz **ciąg** na liście rozwijanej **Typ** , a następnie `msg` w polu tekstowym **wartość** , jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący sposób dodać parametr outMsg.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
+     ![Zrzut ekranu, który pokazuje, jak dodać parametr outMsg.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   
-     Określa, że <xref:System.ServiceModel.Activities.SendReply> działanie wysyła wiadomości lub typ kontraktu komunikatu, a tych danych jest powiązany z `msg` zmiennej. Ponieważ jest to <xref:System.ServiceModel.Activities.SendReply> działania, to oznacza, że dane w `msg` używany do wypełnienia wiadomości działania wysyła z powrotem do klienta. Kliknij przycisk **OK** zamknąć **definicji zawartości** okna dialogowego.  
+     Oznacza to, że <xref:System.ServiceModel.Activities.SendReply> działanie wysyła komunikat lub typ kontraktu komunikatu, a dane są powiązane ze `msg` zmienną. Ponieważ jest to <xref:System.ServiceModel.Activities.SendReply> działanie, oznacza to, że dane w programie `msg` służą do wypełniania komunikatu wysyłanego z powrotem do klienta. Kliknij przycisk **OK** , aby zamknąć okno dialogowe **definicji zawartości** .  
   
-8. Zapisz i Kompiluj rozwiązanie, klikając **kompilacji** menu i wybierając polecenie **Kompiluj rozwiązanie**.  
+8. Zapisz i skompiluj rozwiązanie, klikając menu **kompilacja** i wybierając polecenie **Kompiluj rozwiązanie**.  
   
 ## <a name="configure-the-workflow-service-project"></a>Konfigurowanie projektu usługi przepływu pracy  
- Usługa przepływu pracy zostało ukończone. W tej sekcji opisano sposób konfigurowania rozwiązania usługi przepływu pracy, aby ułatwić hostować i uruchamiać. To rozwiązanie używa ASP.NET Development Server do hostowania usługi.  
+ Usługa przepływu pracy została ukończona. W tej sekcji opisano sposób konfigurowania rozwiązania usługi przepływu pracy w celu ułatwienia hostowania i uruchamiania programu. To rozwiązanie używa serwera deweloperskiego ASP.NET do hostowania usługi.  
   
 #### <a name="to-set-project-start-up-options"></a>Aby ustawić opcje uruchamiania projektu  
   
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MyWFService** i wybierz **właściwości** do wyświetlenia **właściwości projektu** okna dialogowego.  
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **MyWFService** i wybierz pozycję **Właściwości** , aby wyświetlić okno dialogowe **właściwości projektu** .  
   
-2. Wybierz **Web** kartę, a następnie wybierz pozycję **konkretnej strony** w obszarze **Akcja uruchamiania** i typ `Service1.xamlx` w polu tekstowym, jak pokazano na poniższej ilustracji.  
+2. Wybierz kartę **Sieć Web** i wybierz opcję **określona Strona** w obszarze **Rozpocznij akcję** , a następnie wpisz `Service1.xamlx` w polu tekstowym, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący okno dialogowe właściwości projektu.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
+     ![Zrzut ekranu przedstawiający okno dialogowe właściwości projektu.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
   
-     Ta usługa hostuje usługi zdefiniowane w Service1.xamlx w ASP.NET Development Server.  
+     To hostuje usługę zdefiniowaną w Service1. xamlx na serwerze deweloperskim ASP.NET.  
   
-3. Naciśnij klawisze Ctrl + F5, aby uruchomić usługę. Ikona ASP.NET Development Server jest wyświetlana w prawym dolnym pulpitu, jak pokazano na poniższej ilustracji.  
+3. Naciśnij klawisze CTRL + F5, aby uruchomić usługę. Ikona serwera deweloperskiego ASP.NET jest wyświetlana w prawym dolnym rogu pulpitu, jak pokazano na poniższej ilustracji.  
   
-     ![Zrzut ekranu pokazujący ikona Server dla deweloperów platformy ASP.NET.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
+     ![Zrzut ekranu pokazujący ikonę serwera dewelopera ASP.NET.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
   
      Ponadto program Internet Explorer wyświetla stronę pomocy usługi WCF dla usługi.  
   
      ![Zrzut ekranu przedstawiający stronę pomocy usługi WCF.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
   
-4. Przejdź do [jak: Dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) temacie, aby utworzyć klienta przepływu pracy, który wywołuje tę usługę.  
+4. Przejdź do tematu [: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy](how-to-access-a-service-from-a-workflow-application.md) w celu utworzenia klienta przepływu pracy wywołującego tę usługę.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Przegląd hostowania usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [Usługi przepływu pracy](workflow-services.md)
+- [Przegląd hostowania usług przepływu pracy](hosting-workflow-services-overview.md)
+- [Działania dotyczące komunikatów](messaging-activities.md)

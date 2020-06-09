@@ -2,33 +2,33 @@
 title: Zabezpieczenia transportu
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f5b8dcb2e37f31195c9b0845a79a38679027a5f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050730"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598687"
 ---
 # <a name="transport-security"></a>Zabezpieczenia transportu
-Zabezpieczenia transportu w Windows Communication Foundation (WCF) jest zależna od powiązania wybrane. Transport, który implementuje powiązania określa mechanizm rzeczywiste zabezpieczeń. Tematy w tej sekcji opisano mechanizmy, które są implementowane i ich opcji.  
+Zabezpieczenia transportu w Windows Communication Foundation (WCF) zależą od wybranego powiązania. Transport, który implementuje powiązanie, określa rzeczywisty mechanizm zabezpieczeń. W tematach w tej sekcji opisano zaimplementowane mechanizmy i ich opcje.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Objaśnia podstawy zabezpieczeń transportu programu WCF.  
+ [Przegląd zabezpieczeń transportu](transport-security-overview.md)  
+ Wyjaśnia podstawowe informacje o zabezpieczeniach transportu w programie WCF.  
   
- [Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- W tym artykule wyjaśniono, jak WCF implementuje protokołu Secure Sockets Layer (SSL lub HTTPS).  
+ [Zabezpieczenia transportu HTTP](http-transport-security.md)  
+ Wyjaśnia, w jaki sposób WCF implementuje SSL (SSL lub HTTPS).  
   
- [Opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
- W tym artykule opisano schematy uwierzytelniania HTTP, np. Basic, skrót NT LAN Manager (NTLM) i inne.  
+ [Opis uwierzytelniania HTTP](understanding-http-authentication.md)  
+ Opisuje schematy uwierzytelniania HTTP, takie jak Basic, Digest, NT LAN Manager (NTLM) i inne.  
   
- [Korzystanie z personifikacji z zabezpieczeniami transportu](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- W tym artykule wyjaśniono pięć poziomów personifikacji, które można wykonać za pomocą tryb zabezpieczeń transport.  
+ [Korzystanie z personifikacji z zabezpieczeniami transportu](using-impersonation-with-transport-security.md)  
+ Wyjaśnia pięć poziomów personifikacji, które są możliwe w przypadku trybu zabezpieczeń transportu.  
   
- [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- Przedstawiono podstawowe informacje dotyczące konfigurowania portów na komputerze za pomocą certyfikatu X.509 dla zabezpieczeń SSL (transportu).  
+ [Instrukcje: konfigurowanie portu z certyfikatem SSL](how-to-configure-a-port-with-an-ssl-certificate.md)  
+ Instruktaż przedstawia podstawy konfigurowania portu na komputerze z certyfikatem X. 509 na potrzeby zabezpieczeń protokołu SSL (transport).  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -36,8 +36,8 @@ Zabezpieczenia transportu w Windows Communication Foundation (WCF) jest zależna
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Zabezpieczanie usług i klientów](securing-services-and-clients.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Programowanie zabezpieczeń WCF](programming-wcf-security.md)

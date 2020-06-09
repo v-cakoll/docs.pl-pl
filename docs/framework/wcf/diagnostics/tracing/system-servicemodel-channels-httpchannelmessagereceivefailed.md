@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.HttpChannelMessageReceiveFailed
 ms.date: 03/30/2017
 ms.assetid: 9eb311da-fdcc-4dd3-9d85-05b3280dfdda
-ms.openlocfilehash: b848963caff706ff8a886c1e358ad6688e9611c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11b376924ee74e5d0d67da0cac59af41655dc44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594078"
 ---
 # <a name="systemservicemodelchannelshttpchannelmessagereceivefailed"></a>System.ServiceModel.Channels.HttpChannelMessageReceiveFailed
-Nie może odebrać komunikatu za pośrednictwem kanału protokołu HTTP.  
+Nie można odebrać wiadomości kanałem HTTP.  
   
 ## <a name="description"></a>Opis  
- Ślad może być emitowana jako ostrzeżenia lub błędu. W obu przypadkach śledzenia jest emitowane, gdy nie znaleziono niezgodny odbiornik dla przychodzących żądań HTTP i odrzucenia żądania HTTP. Może się to zdarzyć, ponieważ czasownik HTTP żądania nie został rozpoznany przez dowolnego odbiornika protokołu HTTP lub ponieważ brak odbiornika prowadził nasłuchiwanie na adresie żądania był przeznaczony dla. Śledzenia jest emitowane ostrzeżenie w przypadku Self-Hosted, jak i błąd, gdy usługa jest hostowana w usługach IIS.  
+ Ten ślad może być emitowany jako ostrzeżenie lub błąd. W obu przypadkach ślad jest emitowany, gdy nie znaleziono zgodnego odbiornika dla przychodzącego żądania HTTP, a żądanie HTTP zostanie odrzucone. Może się tak zdarzyć, ponieważ czasownik HTTP żądania nie został rozpoznany przez żaden odbiornik HTTP lub żaden odbiornik nie nasłuchuje na adresie, którego dotyczy żądanie. Ślad jest emitowany jako ostrzeżenie w przypadku samodzielnego użycia i jako błąd, gdy usługa jest hostowana w usługach IIS.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

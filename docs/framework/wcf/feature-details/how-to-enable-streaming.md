@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2c22ab699a996f4bc40d0b5f620ddd92ffe8059
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184935"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593233"
 ---
 # <a name="how-to-enable-streaming"></a>Instrukcje: Włączanie przesyłania strumieniowego
-Windows Communication Foundation (WCF) może wysyłać wiadomości przy użyciu buforowanych lub przesyłanych strumieniowo. W domyślnym trybie buforowanego transferu wiadomość musi zostać całkowicie dostarczona, zanim odbiorca będzie mógł ją odczytać. W trybie przesyłania strumieniowego odbiorca może rozpocząć przetwarzanie wiadomości, zanim zostanie całkowicie dostarczona. Tryb przesyłania strumieniowego jest przydatne, gdy informacje, które są przekazywane jest długa i mogą być przetwarzane szeregowo. Tryb przesyłania strumieniowego jest również przydatne, gdy wiadomość jest zbyt duża, aby być całkowicie buforowane.  
+Windows Communication Foundation (WCF) może wysyłać komunikaty przy użyciu buforowanych lub przesyłanych strumieniowo transferów. W domyślnym trybie transferu buforowanego komunikat musi zostać całkowicie dostarczony przed odczytaniem przez odbiorcę. W trybie transferu strumieniowego odbiorca może zacząć przetwarzać komunikat, zanim zostanie on całkowicie dostarczony. Tryb przesyłania strumieniowego jest przydatny, gdy przesyłane informacje są długie i mogą być przetwarzane sekwencyjnie. Tryb przesyłania strumieniowego jest również przydatny, gdy komunikat jest zbyt duży, aby był całkowicie buforowany.  
   
- Aby włączyć przesyłanie `OperationContract` strumieniowe, należy zdefiniować odpowiednio i włączyć przesyłanie strumieniowe na poziomie transportu.  
+ Aby włączyć przesyłanie strumieniowe, zdefiniuj odpowiednie `OperationContract` i Włącz przesyłanie strumieniowe na poziomie transportu.  
   
-### <a name="to-stream-data"></a>Aby przesyłać strumieniowo dane  
+### <a name="to-stream-data"></a>Aby przesłać strumieniowo dane  
   
-1. Aby przesyłać `OperationContract` strumieniowo dane, usługa musi spełniać dwa wymagania:  
+1. Aby przesłać strumieniowo dane, `OperationContract` dla usługi muszą być spełnione dwa wymagania:  
   
-    1. Parametr, który przechowuje dane do przesyłania strumieniowego musi być jedynym parametrem w metodzie. Na przykład jeśli komunikat wejściowy jest ten, który ma być przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie jeśli komunikat wyjściowy ma być przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wyjściowy lub wartość zwracaną.  
+    1. Parametr, który przechowuje dane przeznaczone do przesyłania strumieniowego, musi być jedynym parametrem w metodzie. Na przykład jeśli komunikat wejściowy jest przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie, jeśli wiadomość wyjściowa ma być przesyłana strumieniowo, operacja musi mieć dokładnie jeden parametr wyjściowy lub wartość zwracaną.  
   
-    2. Co najmniej jeden z typów parametru i wartości <xref:System.IO.Stream> <xref:System.ServiceModel.Channels.Message>zwracanej <xref:System.Xml.Serialization.IXmlSerializable>musi być albo , lub .  
+    2. Co najmniej jeden z typów parametru i zwracanej wartości musi być albo <xref:System.IO.Stream> , <xref:System.ServiceModel.Channels.Message> lub <xref:System.Xml.Serialization.IXmlSerializable> .  
   
-     Poniżej przedstawiono przykład kontraktu dla przesyłanych strumieniowo danych.  
+     Poniżej znajduje się przykład kontraktu dla danych przesyłanych strumieniowo.  
   
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     Operacja `GetStream` odbiera niektóre buforowane dane `string`wejściowe jako , który `Stream`jest buforowany i zwraca , który jest przesyłany strumieniowo. Z `UploadStream` drugiej strony `Stream` przyjmuje (przesyłane `bool` strumieniowo) i zwraca (buforowane). `EchoStream`pobiera i `Stream` zwraca i jest przykładem operacji, której komunikaty wejściowe i wyjściowe są przesyłane strumieniowo. Na koniec `GetReversedStream` nie pobiera żadnych `Stream` danych wejściowych i zwraca (przesyłane strumieniowo).  
+     `GetStream`Operacja otrzymuje pewne buforowane dane wejściowe jako `string` , które są buforowane i zwraca obiekt `Stream` , który jest przesyłany strumieniowo. Odwrotnie `UploadStream` przyjmuje `Stream` (przesyłane strumieniowo) i zwraca `bool` (buforowana). `EchoStream`przyjmuje i zwraca `Stream` i jest przykładem operacji, której przesyłanie strumieniowe danych wejściowych i wyjściowych odbywa się jednocześnie. Na koniec `GetReversedStream` nie przyjmuje danych wejściowych i zwraca `Stream` (strumieniowo).  
   
-2. Przesyłanie strumieniowe musi być włączone w powiązaniu. Można ustawić `TransferMode` właściwość, która może przyjmować jedną z następujących wartości:  
+2. W powiązaniu musi być włączone przesyłanie strumieniowe. Ustawiasz `TransferMode` Właściwość, która może przyjmować jedną z następujących wartości:  
   
     1. `Buffered`,  
   
-    2. `Streamed`, który umożliwia przesyłanie strumieniowe w obu kierunkach.  
+    2. `Streamed`, co umożliwia komunikację przesyłania strumieniowego w obu kierunkach.  
   
-    3. `StreamedRequest`, który umożliwia przesyłanie strumieniowe tylko żądania.  
+    3. `StreamedRequest`, co umożliwia przesyłanie strumieniowe tylko żądania.  
   
-    4. `StreamedResponse`, który umożliwia przesyłanie strumieniowe tylko odpowiedzi.  
+    4. `StreamedResponse`, co umożliwia przesyłanie strumieniowe tylko odpowiedzi.  
   
-     Udostępnia `BasicHttpBinding` `TransferMode` właściwość na powiązanie, `NetTcpBinding` podobnie `NetNamedPipeBinding`jak i . Właściwość `TransferMode` można również ustawić na element wiązania transportu i używane w niestandardowe powiązanie.  
+     `BasicHttpBinding`Uwidacznia `TransferMode` Właściwość dla powiązania, tak jak `NetTcpBinding` i `NetNamedPipeBinding` . `TransferMode`Właściwość można również ustawić dla elementu powiązania transportu i użyć w niestandardowym powiązaniu.  
   
-     Poniższe przykłady pokazują, `TransferMode` jak ustawić za pomocą kodu i zmieniając plik konfiguracji. Przykłady również ustawić `maxReceivedMessageSize` właściwość do 64 MB, co umieszcza limit na maksymalny dozwolony rozmiar wiadomości na odbieranie. Wartość `maxReceivedMessageSize` domyślna to 64 KB, która jest zwykle zbyt niska dla scenariuszy przesyłania strumieniowego. Ustaw to ustawienie przydziału jako odpowiednie w zależności od maksymalnego rozmiaru wiadomości, które aplikacja oczekuje od otrzymania. Należy również `maxBufferSize` zauważyć, że kontroluje maksymalny rozmiar, który jest buforowany i ustawić go odpowiednio.  
+     W poniższych przykładach pokazano, jak ustawić `TransferMode` kod i zmienić plik konfiguracji. Te próbki również ustawiają `maxReceivedMessageSize` Właściwość na 64 MB, co powoduje umieszczenie limitu maksymalnego dozwolonego rozmiaru komunikatów podczas odbierania. Wartość domyślna `maxReceivedMessageSize` to 64 KB, która jest zwykle zbyt niska dla scenariuszy przesyłania strumieniowego. Ustaw odpowiednie ustawienie limitu przydziału w zależności od maksymalnego rozmiaru komunikatów, które oczekuje na otrzymywanie przez aplikację. Należy również zauważyć, że `maxBufferSize` steruje maksymalnym rozmiarem buforowanym i odpowiednio go ustawia.  
   
-    1. Poniższy fragment kodu konfiguracji z przykładu `TransferMode` pokazuje ustawienie `basicHttpBinding` właściwości do przesyłania strumieniowego na i niestandardowe powiązanie HTTP.  
+    1. Poniższy fragment konfiguracji z przykładu przedstawia Ustawianie `TransferMode` właściwości na potrzeby przesyłania strumieniowego `basicHttpBinding` i NIESTANDARDOWEGO powiązania HTTP.  
   
          [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
-    2. Poniższy fragment kodu pokazuje ustawienie `TransferMode` właściwości do `basicHttpBinding` przesyłania strumieniowego na i niestandardowe powiązanie HTTP.  
+    2. Poniższy fragment kodu przedstawia Ustawianie `TransferMode` właściwości na potrzeby przesyłania strumieniowego `basicHttpBinding` i NIESTANDARDOWEGO powiązania HTTP.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3. Poniższy fragment kodu pokazuje ustawienie `TransferMode` właściwości do przesyłania strumieniowego na niestandardowe powiązanie TCP.  
+    3. Poniższy fragment kodu przedstawia Ustawianie `TransferMode` właściwości na potrzeby przesyłania strumieniowego na niestandardowe powiązanie TCP.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3. Operacje `GetStream`, `UploadStream`i `EchoStream` wszystkie zajmują się wysyłaniem danych bezpośrednio z pliku lub zapisywania odebranych danych bezpośrednio do pliku. Poniższy kod `GetStream`jest dla .  
+3. Operacje `GetStream` , `UploadStream` i wszystkie związane `EchoStream` z wysyłaniem danych bezpośrednio z pliku lub zapisywanie danych odebranych bezpośrednio do pliku. Poniższy kod dotyczy `GetStream` .  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
-### <a name="writing-a-custom-stream"></a>Zapisywanie strumienia niestandardowego  
+### <a name="writing-a-custom-stream"></a>Pisanie strumienia niestandardowego  
   
-1. Aby wykonać specjalne przetwarzanie na każdym fragmencie strumienia danych, który jest <xref:System.IO.Stream>wysyłany lub odbierany, należy wyprowadzić niestandardową klasę strumienia z pliku . Jako przykład strumienia niestandardowego poniższy `GetReversedStream` kod zawiera `ReverseStream` metodę i klasę.  
+1. Aby wykonać specjalne przetwarzanie każdego fragmentu strumienia danych w trakcie jego wysyłania lub odbierania, Utwórz niestandardową klasę strumienia <xref:System.IO.Stream> . Jako przykład niestandardowego strumienia, poniższy kod zawiera `GetReversedStream` metodę i `ReverseStream` klasę-.  
   
-     `GetReversedStream`tworzy i zwraca nowe `ReverseStream`wystąpienie . Rzeczywiste przetwarzanie odbywa się w `ReverseStream` systemie odczytuje z obiektu. Metoda `ReverseStream.Read` odczytuje fragment bajtów z pliku źródłowego, odwraca je, a następnie zwraca odwrócone bajty. Ta metoda nie odwraca całej zawartości pliku; odwraca jeden fragment bajtów naraz. W tym przykładzie pokazano, jak można wykonać przetwarzanie strumienia, jak zawartość jest odczytywany lub zapisywany ze strumienia.  
+     `GetReversedStream`tworzy i zwraca nowe wystąpienie `ReverseStream` . Rzeczywiste przetwarzanie odbywa się, gdy system odczytuje z `ReverseStream` obiektu. `ReverseStream.Read`Metoda odczytuje fragmenty bajtów z pliku bazowego, odwraca je, a następnie zwraca odwrócone bajty. Ta metoda nie powoduje odwrócenia całej zawartości pliku; powoduje odwrócenie jednego fragmentu bajtów w danym momencie. Ten przykład pokazuje, jak można wykonać przetwarzanie strumienia, ponieważ zawartość jest odczytywana lub zapisywana ze strumienia.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Duże ilości danych i przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Strumień](../../../../docs/framework/wcf/samples/stream.md)
+- [Duże ilości danych i przesyłanie strumieniowe](large-data-and-streaming.md)
+- [Strumień](../samples/stream.md)

@@ -2,34 +2,34 @@
 title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 117be783c2d4a72ff9d1c4509566274b1043a43d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e77e353fba194cb25b466387cf9def6773635e00
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144464"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591764"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
-Przykład dostawcy członkostwa i dostawcy roli pokazuje, jak usługa może używać dostawców członkostwa ASP.NET i ról do uwierzytelniania i autoryzowania klientów.  
+Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać członkostwa ASP.NET i dostawców ról do uwierzytelniania i autoryzowania klientów.  
   
- W tym przykładzie klient jest aplikacją konsoli (.exe), a usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
+ W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
  W przykładzie pokazano, jak:  
   
-- Klient może uwierzytelniać się przy użyciu kombinacji nazwa_użytkownika-hasło.  
+- Klient może uwierzytelniać się przy użyciu kombinacji nazwa użytkownika i hasło.  
   
-- Serwer może sprawdzić poprawność poświadczeń klienta względem dostawcy członkostwa ASP.NET.  
+- Serwer może sprawdzać poprawność poświadczeń klienta względem dostawcy członkostwa ASP.NET.  
   
-- Serwer można uwierzytelnić przy użyciu certyfikatu X.509 serwera.  
+- Serwer można uwierzytelnić przy użyciu certyfikatu X. 509 serwera.  
   
-- Serwer może mapować uwierzytelnionego klienta do roli przy użyciu dostawcy roli ASP.NET.  
+- Serwer programu może mapować uwierzytelnionego klienta na rolę przy użyciu dostawcy roli ASP.NET.  
   
-- Serwer może służyć `PrincipalPermissionAttribute` do kontrolowania dostępu do niektórych metod, które są udostępniane przez usługę.  
+- Serwer może korzystać z programu w `PrincipalPermissionAttribute` celu kontrolowania dostępu do niektórych metod, które są udostępniane przez usługę.  
   
- Dostawcy członkostwa i ról są skonfigurowani do używania magazynu wspieranego przez program SQL Server. W pliku konfiguracji usługi określono parametry połączenia i różne opcje. Dostawcy członkostwa jest nadana nazwa, `SqlMembershipProvider` podczas gdy `SqlRoleProvider`dostawca roli otrzymuje nazwę .  
+ Dostawcy członkostwa i ról są skonfigurowani do używania magazynu obsługiwanego przez SQL Server. W pliku konfiguracji usługi określono parametry połączenia i różne opcje. Dostawca członkostwa ma nazwę, `SqlMembershipProvider` podczas gdy dostawca roli otrzymuje nazwę `SqlRoleProvider` .  
   
 ```xml  
 <!-- Set the connection string for SQL Server -->  
@@ -69,7 +69,7 @@ Przykład dostawcy członkostwa i dostawcy roli pokazuje, jak usługa może uży
 </system.web>  
 ```  
   
- Usługa udostępnia pojedynczy punkt końcowy do komunikowania się z usługą, który jest zdefiniowany przy użyciu pliku konfiguracji Web.config. Punkt końcowy składa się z adresu, powiązania i umowy. Powiązanie jest skonfigurowane `wsHttpBinding`ze standardem , który domyślnie używa uwierzytelniania systemu Windows. W tym przykładzie ustawia się standard `wsHttpBinding` używania uwierzytelniania nazwy użytkownika. Zachowanie określa, że certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką `SubjectName` samą `findValue` wartość jak atrybut w [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element konfiguracji. Ponadto zachowanie określa, że uwierzytelnianie par hasła nazwy użytkownika jest wykonywane przez ASP.NET dostawcy członkostwa i mapowanie ról jest wykonywane przez dostawcę roli ASP.NET, określając nazwy zdefiniowane dla dwóch dostawców.  
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest definiowana przy użyciu pliku konfiguracyjnego Web. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardu `wsHttpBinding` , który domyślnie używa uwierzytelniania systemu Windows. Ten przykład ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika. Zachowanie określa, że certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać tę samą wartość `SubjectName` jako `findValue` atrybut w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemencie Configuration. Dodatkowo zachowanie określa, że uwierzytelnianie par username-Password jest wykonywane przez dostawcę członkostwa ASP.NET, a mapowanie roli jest wykonywane przez dostawcę roli ASP.NET przez określenie nazw zdefiniowanych dla dwóch dostawców.  
   
 ```xml  
 <system.serviceModel>  
@@ -114,71 +114,71 @@ Przykład dostawcy członkostwa i dostawcy roli pokazuje, jak usługa może uży
 </system.serviceModel>  
 ```  
   
- Po uruchomieniu próbki klient wywołuje różne operacje usługi w ramach trzech różnych kont użytkowników: Alicja, Robert i Charlie. Żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Wszystkie cztery wywołania wykonane jako użytkownik "Alicja" powinny zakończyć się pomyślnie. Użytkownik "Bob" powinien uzyskać błąd odmowy dostępu podczas próby wywołania Divide metody. Użytkownik "Charlie" powinien uzyskać błąd odmowy dostępu podczas próby wywołania Multiply metody. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu klient wywołuje różne operacje usługi pod trzema różnymi kontami użytkowników: Alicja, Robert i Charlie. Żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Wszystkie cztery wywołania wykonane jako użytkownik "Alicja" powinny się powieść. Użytkownik "Robert" powinien uzyskać błąd odmowy dostępu podczas próby wywołania metody dzielenia. Użytkownik "Charlie" powinien uzyskać błąd odmowy dostępu podczas próby wywołania metody mnożenia. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Aby utworzyć wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w [części Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
-2. Upewnij się, że skonfigurowano [ASP.NET bazę danych usług aplikacji](https://go.microsoft.com/fwlink/?LinkId=94997).  
-  
-    > [!NOTE]
-    > Jeśli korzystasz z programu SQL Server Express Edition, nazwa serwera to .\SQLEXPRESS. Ten serwer powinien być używany podczas konfigurowania ASP.NET bazy danych usług aplikacji, a także w ciągu połączenia Web.config.  
+2. Upewnij się, że skonfigurowano [bazę danych ASP.NET usługi aplikacji](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    > Konto procesu ASP.NET procesu roboczego musi mieć uprawnienia do bazy danych utworzonej w tym kroku. Użyj narzędzia sqlcmd lub SQL Server Management Studio, aby to zrobić.  
+    > Jeśli używasz wersji SQL Server Express, nazwa serwera to .\SQLEXPRESS. Ten serwer powinien być używany podczas konfigurowania bazy danych ASP.NET Usługi aplikacji, a także parametrów połączenia Web. config.  
   
-3. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, należy użyć następujących instrukcji.  
+    > [!NOTE]
+    > Konto procesu roboczego ASP.NET musi mieć uprawnienia do bazy danych utworzonej w tym kroku. Użyj narzędzia sqlcmd lub SQL Server Management Studio, aby to zrobić.  
   
-### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić próbkę na tym samym komputerze  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, należy wykonać poniższe instrukcje.  
   
-1. Upewnij się, że ścieżka zawiera folder, w którym znajduje się plik Makecert.exe.  
+### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
   
-2. Uruchom plik Setup.bat z przykładowego folderu instalacji w wierszu polecenia dewelopera dla programu Visual Studio z uprawnieniami administratora. Spowoduje to zainstalowanie certyfikatów usługi wymaganych do uruchomienia próbki.  
+1. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert. exe.  
   
-3. Uruchom program Client.exe z pliku \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
+2. Uruchom setup. bat z przykładowego folderu instalacyjnego w wiersz polecenia dla deweloperów dla programu Visual Studio Uruchom z uprawnieniami administratora. Spowoduje to zainstalowanie certyfikatów usługi wymaganych do uruchomienia przykładu.  
   
-4. Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Uruchamianie programu Client. exe z \client\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
-### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić próbkę na różnych komputerach  
+4. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-1. Utwórz katalog na komputerze usługowym. Utwórz aplikację wirtualną o nazwie servicemodelsamples dla tego katalogu za pomocą narzędzia do zarządzania internetowymi usługami informacyjnymi (IIS).  
+### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na wielu komputerach  
   
-2. Skopiuj pliki programu serwisowego z \inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego na komputerze usługi. Upewnij się, że pliki są kopiowane w podkatalogu \bin. Skopiuj również pliki Setup.bat, GetComputerName.vbs i Cleanup.bat na komputer usługi.  
+1. Utwórz katalog na komputerze usługi. Utwórz aplikację wirtualną o nazwie servicemodelsamples dla tego katalogu przy użyciu narzędzia do zarządzania Internet Information Services (IIS).  
+  
+2. Skopiuj pliki programu usługi z \Inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego na komputerze usługi. Upewnij się, że pliki zostały skopiowane do podkatalogu \Bin. Skopiuj także pliki Setup. bat, GetComputerName. vbs i Oczyść. bat do komputera usługi.  
   
 3. Utwórz katalog na komputerze klienckim dla plików binarnych klienta.  
   
-4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również pliki Setup.bat, Cleanup.bat i ImportServiceCert.bat do klienta.  
+4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również do klienta pliki Setup. bat, Oczyść. bat i ImportServiceCert. bat.  
   
-5. Na serwerze otwórz wiersz polecenia dewelopera dla programu `setup.bat service`Visual Studio z uprawnieniami administracyjnymi i uruchom program . Uruchomiony `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
+5. Na serwerze otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi i uruchom polecenie `setup.bat service` . Uruchomienie `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
   
-6. Edytuj web.config, aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), który jest taki sam jak w pełni kwalifikowana nazwa domeny komputera.  
+6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w `findValue` atrybucie w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
   
-7. Skopiuj plik Service.cer z katalogu usługi do katalogu klienta na komputerze klienckim.  
+7. Skopiuj plik. cer usługi z katalogu usługi do katalogu klienta na komputerze klienckim.  
   
-8. W pliku Client.exe.config na komputerze klienckim zmień wartość adresu punktu końcowego, aby dopasować go do nowego adresu usługi.  
+8. W pliku Client. exe. config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby odpowiadała nowemu adresowi usługi.  
   
-9. Na kliencie otwórz wiersz polecenia dewelopera dla programu Visual Studio z uprawnieniami administracyjnymi i uruchom plik ImportServiceCert.bat. Spowoduje to zaimportować certyfikat usługi z pliku Service.cer do magazynu CurrentUser — TrustedPeople.  
+9. Na kliencie Otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi i uruchom ImportServiceCert. bat. Spowoduje to zaimportowanie certyfikatu usługi z pliku CER usługi do magazynu CurrentUser-TrustedPeople.  
   
-10. Na komputerze klienckim uruchom program Client.exe z wiersza polecenia. Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Na komputerze klienckim uruchom program Client. exe z wiersza polecenia. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-### <a name="to-clean-up-after-the-sample"></a>Aby oczyścić po próbce  
+### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-- Uruchom Cleanup.bat w folderze przykłady po zakończeniu uruchamiania próbki.  
+- Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
 > [!NOTE]
-> Ten skrypt nie usuwa certyfikatów usługi na kliencie podczas uruchamiania tego przykładu na komputerach. Jeśli uruchomiono przykłady Programu Windows Communication Foundation (WCF), które używają certyfikatów na różnych komputerach, należy wyczyścić certyfikaty usług, które zostały zainstalowane w magazynie CurrentUser — TrustedPeople. Aby to zrobić, należy `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` użyć następującego polecenia: Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .  
   
-## <a name="the-setup-batch-file"></a>Plik wsadowy instalatora  
- Plik wsadowy Setup.bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami do uruchamiania aplikacji hostowanej samodzielnie, która wymaga zabezpieczeń opartych na certyfikatach serwera. Ten plik wsadowy musi zostać zmodyfikowany, aby działał na różnych komputerach lub działał w przypadku nieobserwowanym.  
+## <a name="the-setup-batch-file"></a>Plik wsadowy konfiguracji  
+ Plik wsadowy Setup. bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej wymagającej zabezpieczeń opartych na certyfikatach serwera. Ten plik wsadowy należy zmodyfikować, aby mógł działać na różnych komputerach lub działać w nieobsługiwanym przypadku.  
   
- Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować w celu uruchomienia w odpowiedniej konfiguracji.  
+ Poniżej przedstawiono krótkie omówienie różnych sekcji plików wsadowych, dzięki czemu można je zmodyfikować tak, aby były uruchamiane w odpowiedniej konfiguracji.  
   
 - Tworzenie certyfikatu serwera.  
   
-     Następujące wiersze z pliku wsadowego Setup.bat tworzą certyfikat serwera, który ma być używany. Zmienna %SERVER_NAME% określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Ten plik wsadowy domyślnie go localhost.  
+     Poniższe wiersze z pliku wsadowego Setup. bat tworzą certyfikat serwera do użycia. Zmienna% SERVER_NAME% określa nazwę serwera. Zmień tę zmienną, aby określić własną nazwę serwera. Ten plik wsadowy jest domyślnie używany jako localhost.  
   
-     Certyfikat jest przechowywany w sklepie My (Personal) w lokalizacji sklepu LocalMachine.  
+     Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu LocalMachine.  
   
     ```console
     echo ************  
@@ -190,9 +190,9 @@ Przykład dostawcy członkostwa i dostawcy roli pokazuje, jak usługa może uży
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-- Instalowanie certyfikatu serwera w magazynie zaufanych certyfikatów klienta.  
+- Instalowanie certyfikatu serwera w zaufanym magazynie certyfikatów klienta.  
   
-     Następujące wiersze w pliku wsadowym Setup.bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty generowane przez plik Makecert.exe nie są niejawnie zaufane przez system kliencki. Jeśli masz już certyfikat zakorzeniony w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten etap wypełniania magazynu certyfikatów klienta certyfikatem serwera nie jest wymagany.  
+     Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.  
   
     ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  

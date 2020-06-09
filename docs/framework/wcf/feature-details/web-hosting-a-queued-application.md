@@ -2,19 +2,19 @@
 title: Sieć Web hostująca aplikację zakolejkowaną
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600143"
 ---
 # <a name="web-hosting-a-queued-application"></a>Sieć Web hostująca aplikację zakolejkowaną
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. MSMQ i MSMQ. formatname, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferuje możliwość hostowania dużej liczby aplikacji na danym komputerze.  
   
  Obejmuje usługę aktywacji usługi kolejkowania komunikatów (MSMQ), która aktywuje aplikację w kolejce, gdy co najmniej jeden komunikat znajduje się w jednej z kolejek używanych przez aplikację. Usługa aktywacji usługi MSMQ to usługa NT, która domyślnie jest uruchamiana automatycznie.  
   
- Aby uzyskać więcej informacji o usłudze WAS i jej korzyściach, zobacz [hosting w usłudze aktywacji procesów systemu Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Aby uzyskać więcej informacji o usłudze WAS i jej korzyściach, zobacz [hosting w usłudze aktywacji procesów systemu Windows](hosting-in-windows-process-activation-service.md). Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [Omówienie kolejek](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>Adresowanie kolejki w zostało  
  Aplikacje mają adresy Uniform Resource Identifier (URI). Adresy aplikacji mają dwie części: podstawowy prefiks identyfikatora URI i specyficzny dla aplikacji adres względny (ścieżka). Te dwie części zapewniają adres zewnętrzny dla aplikacji, gdy jest sprzężony razem. Podstawowy prefiks identyfikatora URI jest konstruowany z powiązania witryny i jest używany dla wszystkich aplikacji w lokacji, na przykład "net. MSMQ://localhost", "MSMQ. formatname://localhost", lub "net. TCP://localhost". Następnie adresy aplikacji są tworzone przez pobranie fragmentów ścieżek specyficznych dla aplikacji (takich jak "/applicationOne") i dołączenie ich do podstawowego prefiksu URI w celu uzyskania pełnego identyfikatora URI aplikacji, na przykład "net. MSMQ://localhost/applicationOne".  
@@ -41,7 +41,7 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem
 ### <a name="subqueue-and-system-queue-caveat"></a>Przeciwkolejka i przeciwsystemowe zastrzeżenie  
  Nie można aktywować aplikacji hostowanej na podstawie komunikatów w kolejce systemowej, takich jak Kolejka utraconych wiadomości w całej systemie, lub podkolejki, takie jak podkolejki trujące. Jest to ograniczenie dla tej wersji produktu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Obsługa komunikatów zanieczyszczonych](poison-message-handling.md)
+- [Punkty końcowe usługi i adresowanie kolejki](service-endpoints-and-queue-addressing.md)

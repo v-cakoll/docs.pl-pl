@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98ec28fc1f91512a61f64a36f7749379e864fea1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15418d1ac3ade6a0fa35ca61a02134e20af1baea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920656"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602979"
 ---
 
-Podczas instalowania pakietu .NET Core może zostać `Failed to fetch ... File has unexpected size ... Mirror sync in progress?`wyświetlony błąd podobny do . Ogólnie rzecz biorąc ten błąd oznacza, że kanał informacyjny pakietu dla .NET Core jest uaktualniany z nowszych wersji pakietu i że należy spróbować ponownie później. Podczas uaktualniania kanał informacyjny pakietu nie powinien być niedostępny dłużej niż 30 minut. Jeśli ten błąd jest stale wyświetlany przez ponad 30 <https://github.com/dotnet/core/issues>minut, zgłoś problem w .
+Podczas instalowania pakietu .NET Core może zostać wyświetlony komunikat o błędzie podobny do `Failed to fetch ... File has unexpected size ... Mirror sync in progress?` . Ten błąd może oznaczać, że kanał informacyjny pakietu dla platformy .NET Core jest uaktualniany z nowszymi wersjami pakietu i należy spróbować ponownie później. Podczas uaktualniania kanał informacyjny pakietu nie powinien być dostępny przez ponad 30 minut. Jeśli ten błąd będzie ciągle wyświetlany przez ponad 30 minut, należy rozwiązać problem o <https://github.com/dotnet/core/issues> .

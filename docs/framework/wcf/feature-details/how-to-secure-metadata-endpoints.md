@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: 2746c608fb47b94446c5d7e10748ba185d555e7f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202331"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592960"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Instrukcje: Bezpieczne punkty końcowe metadanych
 
@@ -22,7 +22,7 @@ W tym temacie przedstawiono procedurę tworzenia punktu końcowego zabezpieczone
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Aby utworzyć bezpieczny punkt końcowy metadanych GET HTTPS w kodzie
 
-1. Skonfiguruj port przy użyciu odpowiedniego certyfikatu X. 509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć zamierzone użycie "Autoryzacja usługi". Aby dołączyć certyfikat do portu, należy użyć narzędzia HttpCfg. exe. Zobacz [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).
+1. Skonfiguruj port przy użyciu odpowiedniego certyfikatu X. 509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć zamierzone użycie "Autoryzacja usługi". Aby dołączyć certyfikat do portu, należy użyć narzędzia HttpCfg. exe. Zobacz [jak: Konfigurowanie portu z certyfikatem SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
     > [!IMPORTANT]
     > Podmiot certyfikatu lub jego system nazw domen (DNS) musi być zgodny z nazwą komputera. Jest to niezbędne, ponieważ jeden z pierwszych kroków wykonywanych przez mechanizm HTTPS polega na sprawdzeniu, czy certyfikat jest wystawiony dla tego samego Uniform Resource Identifier (URI), co adres, na którym jest wywoływany.
@@ -40,21 +40,21 @@ W tym temacie przedstawiono procedurę tworzenia punktu końcowego zabezpieczone
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Aby utworzyć bezpieczny punkt końcowy metadanych GET HTTPS w konfiguracji
 
-1. Dodaj [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element do [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu pliku konfiguracji dla usługi.
+1. Dodaj [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) element do [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) elementu pliku konfiguracji dla usługi.
 
-2. Dodaj [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) element do [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.
+2. Dodaj [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) element do [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elementu.
 
-3. Dodaj [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element do `<serviceBehaviors>` elementu.
+3. Dodaj [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element do `<serviceBehaviors>` elementu.
 
 4. Ustaw `name` atrybut `<behavior>` elementu na odpowiednią wartość. `name` Atrybut jest wymagany. W poniższym przykładzie zastosowano wartość `mySvcBehavior` .
 
-5. Dodaj [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) `<behavior>` element do elementu.
+5. Dodaj [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) `<behavior>` element do elementu.
 
 6. Ustaw atrybut `httpsGetEnabled` elementu `<serviceMetadata>` na `true`.
 
 7. Ustaw `httpsGetUrl` atrybut `<serviceMetadata>` elementu na odpowiednią wartość. Należy pamiętać, że jeśli określisz adres bezwzględny, adres URL musi rozpoczynać się od schematu `https://` . W przypadku określenia adresu względnego należy podać adres podstawowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adres domyślny to "", lub bezpośrednio z adresem podstawowym HTTPS usługi.
 
-8. Aby użyć zachowania z usługą, należy ustawić `behaviorConfiguration` atrybut [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elementu na wartość atrybutu nazwy elementu Behavior. Poniższy kod konfiguracji pokazuje kompletny przykład.
+8. Aby użyć zachowania z usługą, należy ustawić `behaviorConfiguration` atrybut [\<service>](../../configure-apps/file-schema/wcf/service.md) elementu na wartość atrybutu nazwy elementu Behavior. Poniższy kod konfiguracji pokazuje kompletny przykład.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -95,12 +95,12 @@ W przykładzie kodu są stosowane następujące przestrzenie nazw:
 
 - <xref:System.ServiceModel.Description?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Instrukcje: konfigurowanie portu z certyfikatem SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Praca z certyfikatami](working-with-certificates.md)
+- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](security-considerations-with-metadata.md)
+- [Zabezpieczanie usług i klientów](securing-services-and-clients.md)

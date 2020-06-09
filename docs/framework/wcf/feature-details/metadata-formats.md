@@ -2,12 +2,12 @@
 title: Formaty metadanych
 ms.date: 03/30/2017
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
-ms.openlocfilehash: e7208a8d5fd6d100ac2a2c4fb1369a571c63e7fc
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a74a57843beaba09b969678a34cad3ad8bed7050
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598843"
 ---
 # <a name="metadata-formats"></a>Formaty metadanych
 Windows Communication Foundation (WCF) obsługuje formaty metadanych w poniższej tabeli.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) obsługuje formaty metadanych w poniższe
 |Wymiana metadanych WS|[Wymiana metadanych usług sieci Web (WS-MetadataExchange) w wersji 1,1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> Funkcja WCF implementuje usługę WS-MetadataExchange, aby pobrać schemat XML, WSDL i WS-Policy.|  
 |Powiązanie adresów WS dla języka WSDL|[Usługi sieci Web adresowanie 1,0 — Powiązanie WSDL](https://www.w3.org/TR/ws-addr-wsdl/)<br /><br /> Funkcja WCF implementuje powiązanie WS-Addressing dla języka WSDL w celu dołączenia informacji dotyczących adresów w języku WSDL.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
-- [WSDL i zasady](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [WSDL i zasady](wsdl-and-policy.md)

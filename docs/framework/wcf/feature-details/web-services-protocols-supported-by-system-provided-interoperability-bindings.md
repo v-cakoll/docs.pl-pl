@@ -6,66 +6,66 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 25efda74d205a36332a801e91ddc508796f7df5d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0b901be2d90a70b4a44fdafb5005f9dc7fb9d556
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594910"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
-Windows Communication Foundation (WCF) jest zbudowany do współpracy z usługami sieci Web, które obsługują zestaw specyfikacji znanych jako specyfikacje usług sieci Web. Aby uprościć konfigurację usług w celu uzyskania najlepszych praktyk w zakresie interoperacyjności, WCF wprowadza trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. W celu interoperacyjności z organizacją na rzecz rozwoju standardów strukturalnych standardów informacyjnych (OASIS) <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>WCF obejmuje jedno interoperacyjne wiążące dla systemu: . W przypadku publikacji metadanych WCF zawiera dwa interoperacyjne powiązania dostarczone przez system: [ \<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje, które są obsługiwane przez interoperacyjne powiązania dostarczone przez system.  
+Program Windows Communication Foundation (WCF) jest oparty na współpracy z usługami sieci Web, które obsługują zestaw specyfikacji znanych jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi pod kątem najlepszych rozwiązań dotyczących współdziałania, w programie WCF wprowadzono trzy powiązania dostarczone przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> , <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> . W przypadku współdziałania z organizacją dla rozwoju standardów informacji o strukturze (języka Oasis), WCF obejmuje jedno powiązanie dostarczone przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType> . W przypadku publikacji metadanych Funkcja WCF obejmuje dwa powiązania dostarczone przez system: [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md) i [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) . W tym temacie wymieniono specyfikacje obsługiwane przez system powiązań interoperacyjności.  
   
-## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Protokoły usług sieci Web obsługiwane przez podstawowe powiązaniahttpbinding, wsHttpBinding, ws2007HttpBinding i wsDualHttpBinding Bindings  
+## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Protokoły usług sieci Web obsługiwane przez powiązania basicHttpBinding, wsHttpBinding, ws2007HttpBinding i wsDualHttpBinding  
   
-### <a name="all-bindings"></a>Wszystkie wiązania  
- [ \<Podstawowe>httpbinowanie ](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)i [ \<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) powiązania obsługują następujące protokoły.  
+### <a name="all-bindings"></a>Wszystkie powiązania  
+ [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)Powiązania, [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) i [\<ws2007HttpBinding>](../../configure-apps/file-schema/wcf/ws2007httpbinding.md) obsługują następujące protokoły.  
   
 > [!NOTE]
-> Aby uzyskać informacje na temat powiązań używanych do publikowania metadanych, zobacz sekcję "Powiązania metadanych dostarczonych przez system" w dalszej części tego tematu.  
+> Informacje o powiązaniach używanych do publikowania metadanych znajdują się w sekcji "powiązania metadanych dostarczone przez system" w dalszej części tego tematu.  
   
-|Kategoria|Protocol (Protokół)|Specyfikacja i użytkowanie|  
+|Kategoria|Protokół|Specyfikacja i użycie|  
 |--------------|--------------|-----------------------------|  
-|Transport|Protokół HTTP 1.1|[Protokół HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> `BasicHttpBinding``WSHttpBinding`, i `WS2007HttpBinding` użyj transportów HTTP i HTTPS.|  
-|Obsługa komunikatów|Mtom|[Mtom](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding``wsHttpBinding`, i `ws2007HttpBinding` obsługuje mechanizm optymalizacji transmisji wiadomości (MTOM). Nie jest używany domyślnie. Aby użyć MTOM, `messageEncoding` ustaw `"Mtom"`atrybut na .<br /><br /> Przykład:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Metadane|WSDL 1.1|[WSDL 1.1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF używa języka opisu usług sieci Web (WSDL) do opisywania usług.|  
-|Metadane|Zasady WS|[Zasady WS](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF używa specyfikacji zasad WS wraz z potwierdzeń specyficznych dla domeny do opisania wymagań i możliwości usługi.|  
-|Metadane|Zasady WS 1.5|[Zasady WS 1.5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF używa specyfikacji zasad WS wraz z potwierdzeń specyficznych dla domeny do opisania wymagań i możliwości usługi.|  
-|Metadane|WS-ZasadyPrzywiązania|[WS-ZasadyPrzywiązania](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> WCF implementuje WS-PolicyAttachment dołączyć wyrażenia zasad w różnych zakresach w języku opisu usług sieci Web (WSDL).|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF implementuje WS-MetadataExchange do pobierania schematu XML, WSDL i WS-policy.|  
+|Transport|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` i `WS2007HttpBinding` Używaj transportów http i https.|  
+|Obsługa komunikatów|MTOM|[MTOM](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding`, `wsHttpBinding` i `ws2007HttpBinding` obsługują mechanizm optymalizacji transmisji wiadomości (MTOM). Domyślnie nieużywane. Aby użyć mechanizmu MTOM, należy ustawić `messageEncoding` atrybut na `"Mtom"` .<br /><br /> Przykład:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
+|Metadane|WSDL 1,1|[WSDL 1,1](https://www.w3.org/TR/wsdl/)<br /><br /> Program WCF używa Web Services Description Language (WSDL) do opisywania usług.|  
+|Metadane|WS-Policy|[WS-Policy](https://www.w3.org/Submission/WS-Policy/)<br /><br /> Funkcja WCF używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznymi dla domeny, aby opisać wymagania i możliwości usługi.|  
+|Metadane|WS-Policy 1,5|[WS-Policy 1,5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> Funkcja WCF używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznymi dla domeny, aby opisać wymagania i możliwości usługi.|  
+|Metadane|Usługa WS-PolicyAttachment|[Usługa WS-PolicyAttachment](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> Funkcja WCF implementuje usługę WS-PolicyAttachment, aby dołączać wyrażenia zasad w różnych zakresach w Web Services Description Language (WSDL).|  
+|Metadane|Usługa WS-MetadataExchange|[Usługa WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> Funkcja WCF implementuje usługę WS-MetadataExchange, aby pobrać schemat XML, WSDL i WS-Policy.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
-|Kategoria|Protocol (Protokół)|Specyfikacja i użytkowanie|  
+|Kategoria|Protokół|Specyfikacja i użycie|  
 |--------------|--------------|-----------------------------|  
-|Obsługa komunikatów|MYDŁO 1.1|[MYDŁO 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)<br /><br /> Zgodnie z profilem podstawowym 1.1 `basicHttpBinding` element implementuje protokół komunikatu SOAP 1.1.|  
-|Zabezpieczenia|Bezpieczeństwo wiadomości WSS SOAP 1.0|[Bezpieczeństwo wiadomości WSS SOAP 1.0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> Zgodnie z podstawowym profilem zabezpieczeń `basicHttpBinding` element implementuje specyfikację zabezpieczenia WSS (WSS) SOAP Message Security 1.0 dla nazwy użytkownika/hasła i zabezpieczeń opartych na x.509.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
-|Zabezpieczenia|Nazwa użytkownika wiadomości WSS SOAP Nazwa użytkownikaDoken Profil 1.0|[Nazwa użytkownika wiadomości WSS SOAP Nazwa użytkownikaDoken Profil 1.0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
-|Zabezpieczenia|WSS SOAP Message Security X.509 Profil tokenu certyfikatu 1.0|[WSS SOAP Message Security X.509 Profil tokenu certyfikatu 1.0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
+|Obsługa komunikatów|PROTOKÓŁ SOAP 1,1|[PROTOKÓŁ SOAP 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)<br /><br /> Zgodnie z profilem Basic 1,1 `basicHttpBinding` element implementuje protokół komunikatów protokołu SOAP 1,1.|  
+|Zabezpieczenia|Zabezpieczenia komunikatów SOAP programu WSS 1,0|[Zabezpieczenia komunikatów SOAP programu WSS 1,0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> Zgodnie z podstawowym profilem zabezpieczeń, `basicHttpBinding` element zabezpieczenia usług w sieci Web implementuje specyfikację security 1,0 (WSS) protokołu SOAP dotyczącą zabezpieczeń wiadomości dla nazwy użytkownika i hasła oraz zabezpieczeń opartych na X. 509.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
+|Zabezpieczenia|UsernameToken profilu zabezpieczeń komunikatów SOAP usług WSS 1,0|[UsernameToken profilu zabezpieczeń komunikatów SOAP usług WSS 1,0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
+|Zabezpieczenia|Ochrona komunikatów SOAP programu WSS — profil tokenu certyfikatu X. 509 1,0|[Ochrona komunikatów SOAP programu WSS — profil tokenu certyfikatu X. 509 1,0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding i wsDualHttpBinding  
   
-|Kategoria|Protocol (Protokół)|Specyfikacja i użytkowanie|  
+|Kategoria|Protokół|Specyfikacja i użycie|  
 |--------------|--------------|-----------------------------|  
-|Obsługa komunikatów|MYDŁO 1.2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura obsługi wiadomości](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adiunktów (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
-|Obsługa komunikatów|Adresowanie WS 2005/08|[Adresowanie usług internetowych 1.0 - Rdzeń](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Adresowanie usług internetowych 1.0 - MYDŁO](https://www.w3.org/TR/ws-addr-soap/)<br /><br /> , `wsHttpBinding` `ws2007HttpBinding`i `wsDualHttpBinding` zaimplementować world wide web consortium (W3C) WS-Adresowanie zalecenia, aby włączyć asynchroniczne wiadomości, korelacji wiadomości i transportu neutralne mechanizmy adresowania.<br /><br /> WCF nie obsługuje szyfrowania nagłówków adresowania WS, chociaż jest to dozwolone przez specyfikacje WS-*.|  
-|Obsługa komunikatów|Adresowanie WS 1.0 - Metadane|[Metadane adresowania WS 1.0](https://www.w3.org/2007/05/addressing/metadata/) Obsługa tego protokołu jest włączona przez ustawienie wersji zasad w zachowaniu ServiceMetadata — z policyversion ustawioną na 1.2 (domyślnie), Opis wsdl jest zgodny z WS-Addressing wsdl, z policyversion ustawioną na 1.5, opis wsdl jest zgodny z metadanymi adresowania ws.<br /><br /> WCF nie obsługuje szyfrowania nagłówków adresowania WS, chociaż jest to dozwolone przez specyfikacje WS-*.|  
-|Zabezpieczenia|Bezpieczeństwo wiadomości WSS SOAP 1.0|[Bezpieczeństwo wiadomości WSS SOAP 1.0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> Użyj, `securityMode` gdy atrybut jest ustawiony na "wsSecurityOverHttp" (domyślnie), `wsSecurity` a parametry są konfigurowane przy użyciu elementu podrzędnego.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
-|Zabezpieczenia|Nazwa użytkownika wiadomości WSS SOAP Nazwa użytkownikaDoken Profil 1.1|[Nazwa użytkownika wiadomości WSS SOAP Nazwa użytkownikaDoken Profil 1.0](https://www.oasis-open.org/committees/download.php/16782/wss-v1.1-spec-os-UsernameTokenProfile.pdf)<br /><br /> Użyj, `wsSecurity` gdy `authenticationMode` atrybut elementu jest ustawiony na "Nazwa użytkownika".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
-|Zabezpieczenia|WSS SOAP Message Security X.509 Profil tokenu certyfikatu 1.1|[WSS SOAP Message Security X.509 Profil tokenu certyfikatu 1.1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)<br /><br /> Służy do ochrony `wsSecurity` wiadomości, `authenticationMode` gdy atrybut elementu jest ustawiony na "Nazwa użytkownika", "Certyfikat" lub "Brak". Ponadto użyj tego do uwierzytelniania `wsSecurity` klienta, `authenticationMode` gdy atrybut elementu jest ustawiony na "Certyfikat".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Zabezpieczenia|Profil tokenu zabezpieczeń protokołu Kerberos 1.1 w komunikacie WSS SOAP|[Profil tokenu zabezpieczeń protokołu Kerberos 1.1 w komunikacie WSS SOAP](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)<br /><br /> Służy do uwierzytelniania i `wsSecurity` ochrony `authenticationMode` wiadomości, gdy atrybut elementu jest ustawiony na "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Zabezpieczenia|WS-SecureKonwersja|[WS-SecureKonwersja](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Użyj, aby zapewnić bezpieczną sesję, `security/@mode` gdy atrybut jest `message/@establishSecurityContext` ustawiony na "Wiadomość", a atrybut jest ustawiony na "true" (domyślnie).|  
-|Zabezpieczenia|WS-Trust|[WS-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf)<br /><br /> Używane przez WS-SecureConversation (patrz wyżej).|  
-|Niezawodna obsługa komunikatów|WS-ReliableMessaging|[WS-ReliableMessaging](http://specs.xmlsoap.org/ws/2005/02/rm/ws-reliablemessaging.pdf)<br /><br /> Użyj, gdy powiązanie jest `reliableSession`skonfigurowane do używania .<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|Transakcje|WS-AtomicTransakcja|[WS-AtomicTransakcja](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)<br /><br /> Służy do komunikacji między menedżerami transakcji. Klienci i usługi WCF zawsze używają lokalnych menedżerów transakcji.|  
-|Transakcje|Koordynacja WS|[Koordynacja WS](https://docs.microsoft.com/previous-versions/ms951231(v=msdn.10))<br /><br /> Użyj do przepływu kontekstu `flowTransactions` transakcji, gdy atrybut jest ustawiony na "Dozwolone" lub "Wymagane".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Obsługa komunikatów|PROTOKÓŁ SOAP 1,2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura komunikatów](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
+|Obsługa komunikatów|WS-Addressing 2005/08|[Web Services Addressing 1,0-Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding` I `wsDualHttpBinding` zaimplementować zalecenia WS-Addressing organizacja World Wide Web Consortium (W3C) w celu włączenia asynchronicznych komunikatów, korelacji komunikatów oraz mechanizmów adresów neutralnych transportowo.<br /><br /> Funkcja WCF nie obsługuje szyfrowania nagłówków WS-Addressing, chociaż jest to dozwolone w specyfikacjach WS-*.|  
+|Obsługa komunikatów|WS-Addressing 1,0 — metadane|[Metadane usługi WS-addressing 1,0](https://www.w3.org/2007/05/addressing/metadata/) Obsługa tego protokołu jest włączana przez ustawienie wersji zasad w ramach zachowania usługi ServiceMetadata — z opcją PolicyVersion ustawioną na 1,2 (wartość domyślna), opis WSDL jest zgodny z protokołem WSDL WS-Addressing, z PolicyVersion ustawionym na 1,5, opis WSDL jest zgodny z metadanymi WS-Addressing.<br /><br /> Funkcja WCF nie obsługuje szyfrowania nagłówków WS-Addressing, chociaż jest to dozwolone w specyfikacjach WS-*.|  
+|Zabezpieczenia|Zabezpieczenia komunikatów SOAP programu WSS 1,0|[Zabezpieczenia komunikatów SOAP programu WSS 1,0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> Użyj, gdy `securityMode` atrybut jest ustawiony na wartość "wsSecurityOverHttp" (wartość domyślna), a parametry są konfigurowane przy użyciu `wsSecurity` elementu podrzędnego.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
+|Zabezpieczenia|UsernameToken profilu zabezpieczeń komunikatów SOAP usług WSS 1,1|[UsernameToken profilu zabezpieczeń komunikatów SOAP usług WSS 1,0](https://www.oasis-open.org/committees/download.php/16782/wss-v1.1-spec-os-UsernameTokenProfile.pdf)<br /><br /> Użyj, gdy `wsSecurity` atrybut elementu `authenticationMode` jest ustawiony na "username".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
+|Zabezpieczenia|Ochrona komunikatów SOAP programu WSS — profil tokenu certyfikatu X. 509 1,1|[Ochrona komunikatów SOAP programu WSS — profil tokenu certyfikatu X. 509 1,1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)<br /><br /> Użyj do ochrony wiadomości, gdy `wsSecurity` atrybut elementu `authenticationMode` ma wartość "username", "Certificate" lub "none". Ponadto Użyj tej opcji do uwierzytelniania klienta, gdy `wsSecurity` atrybut elementu `authenticationMode` jest ustawiony na "certyfikat".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|Zabezpieczenia|Zabezpieczenia komunikatów SOAP usługi WSS — profil tokenów Kerberos 1,1|[Zabezpieczenia komunikatów SOAP usługi WSS — profil tokenów Kerberos 1,1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)<br /><br /> Użyj do uwierzytelniania i ochrony komunikatów, gdy `wsSecurity` atrybut elementu `authenticationMode` jest ustawiony na "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|Zabezpieczenia|Usługa WS-SecureConversation|[Usługa WS-SecureConversation](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Użyj, aby zapewnić bezpieczną sesję, gdy `security/@mode` atrybut ma wartość "Message", a `message/@establishSecurityContext` atrybut jest ustawiony na wartość "true" (domyślnie).|  
+|Zabezpieczenia|Usługa WS-Trust|[Usługa WS-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf)<br /><br /> Używane przez WS-SecureConversation (Zobacz powyżej).|  
+|Niezawodna obsługa komunikatów|WS-ReliableMessaging|[WS-ReliableMessaging](http://specs.xmlsoap.org/ws/2005/02/rm/ws-reliablemessaging.pdf)<br /><br /> Użyj, gdy powiązanie jest skonfigurowane do użycia `reliableSession` .<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
+|Transakcje|Protokół WS-AtomicTransaction|[Protokół WS-AtomicTransaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)<br /><br /> Używany do komunikacji między menedżerami transakcji. Klienci i usługi WCF zawsze korzystają z lokalnych menedżerów transakcji.|  
+|Transakcje|Usługa WS-koordynacja|[Usługa WS-koordynacja](https://docs.microsoft.com/previous-versions/ms951231(v=msdn.10))<br /><br /> Służy do przepływu kontekstu transakcji, gdy `flowTransactions` atrybut jest ustawiony na wartość "dozwolone" lub "wymagane".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding i ws2007FederationHttpBinding  
- Elementy>[ \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i [ \<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) są wprowadzane w celu zapewnienia obsługi scenariuszy federacyjnych, w których strona trzecia wystawia token używany do uwierzytelniania klienta. Oprócz protokołów używanych `wsHttpBinding`przez `wsFederationHttpBinding` , dźwignie:  
+ [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Elementy i [\<ws2007FederationHttpBinding>](../../configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) są wprowadzane w celu zapewnienia obsługi scenariuszy federacyjnych, w przypadku których firma trzecia wystawia token używany do uwierzytelniania klienta. Oprócz protokołów używanych przez `wsHttpBinding` program `wsFederationHttpBinding` wykorzystuje:  
   
-- `WS-Trust`emisji tokenów.  
+- `WS-Trust`w przypadku wystawiania tokenów.  
   
-- WSS Security Assertions Markup Language (SAML) Token Profile 1.0 i 1.1 dla najczęściej wystawianego formatu tokenu.  
+- W przypadku usługi WSS Security Assertions Language (SAML) — profil tokenów 1,0 i 1,1 dla najczęściej wystawionego formatu tokenu.  
   
  Przykład:  
   
@@ -83,36 +83,36 @@ Windows Communication Foundation (WCF) jest zbudowany do współpracy z usługam
 </wsFederationHttpBinding>  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [Federacja](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ Aby uzyskać więcej informacji, zobacz [Federacja](federation.md) .  
   
-## <a name="system-provided-metadata-bindings"></a>Powiązania metadanych dostarczonych przez system  
- W poniższych tabelach opisano protokoły obsługiwane przez systemowe interoperacyjne <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> powiązania metadanych udostępniane przez klasę.  
+## <a name="system-provided-metadata-bindings"></a>Powiązania metadanych dostarczone przez system  
+ W poniższych tabelach opisano protokoły obsługiwane przez systemowe powiązania metadanych współdziałania udostępniane przez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> klasę.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- Powiązanie>[ \<mexHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) obsługuje następujące protokoły. Aby uzyskać więcej informacji na temat używania tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md)Powiązanie obsługuje następujące protokoły. Aby uzyskać więcej informacji na temat korzystania z tego powiązania, zobacz [Publikowanie metadanych](publishing-metadata.md).  
   
-|Kategoria|Protocol (Protokół)|Specyfikacja i użytkowanie|  
+|Kategoria|Protokół|Specyfikacja i użycie|  
 |--------------|--------------|-----------------------------|  
-|Transport|Protokół HTTP 1.1|[Protokół HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)|  
-|Obsługa komunikatów|MYDŁO 1.2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura obsługi wiadomości](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adiunktów (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
-|Obsługa komunikatów|Adresowanie WS 2005/08|[Adresowanie usług internetowych 1.0 - Rdzeń](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Adresowanie usług internetowych 1.0 - MYDŁO](https://www.w3.org/TR/ws-addr-soap/)|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF implementuje WS-MetadataExchange do pobierania schematu XML, WSDL i WS-policy.|  
+|Transport|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)|  
+|Obsługa komunikatów|PROTOKÓŁ SOAP 1,2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura komunikatów](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
+|Obsługa komunikatów|WS-Addressing 2005/08|[Web Services Addressing 1,0-Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
+|Metadane|Usługa WS-MetadataExchange|[Usługa WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> Funkcja WCF implementuje usługę WS-MetadataExchange, aby pobrać schemat XML, WSDL i WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- mexHttpsBinding>obsługuje następujące protokoły. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) Aby uzyskać więcej informacji na temat używania tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md)obsługuje następujące protokoły. Aby uzyskać więcej informacji na temat korzystania z tego powiązania, zobacz [Publikowanie metadanych](publishing-metadata.md).  
   
-|Kategoria|Protocol (Protokół)|Specyfikacja i użytkowanie|  
+|Kategoria|Protokół|Specyfikacja i użycie|  
 |--------------|--------------|-----------------------------|  
-|Transport|Protokół HTTP 1.1|[Protokół HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> Zabezpieczenia transportu jest włączona.|  
-|Obsługa komunikatów|MYDŁO 1.2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura obsługi wiadomości](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adiunktów (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
-|Obsługa komunikatów|Adresowanie WS 2005/08|[Adresowanie usług internetowych 1.0 - Rdzeń](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Adresowanie usług internetowych 1.0 - MYDŁO](https://www.w3.org/TR/ws-addr-soap/)|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF implementuje WS-MetadataExchange do pobierania schematu XML, WSDL i WS-policy.|  
+|Transport|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> Zabezpieczenia transportu są włączone.|  
+|Obsługa komunikatów|PROTOKÓŁ SOAP 1,2|[Podręcznik](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Struktura komunikatów](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (w tym powiązania HTTP)](https://www.w3.org/TR/soap12-part2/)|  
+|Obsługa komunikatów|WS-Addressing 2005/08|[Web Services Addressing 1,0-Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
+|Metadane|Usługa WS-MetadataExchange|[Usługa WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> Funkcja WCF implementuje usługę WS-MetadataExchange, aby pobrać schemat XML, WSDL i WS-Policy.|  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<podstawowa>httpbinding](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
-- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
-- [\<>wsDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
-- [\<>wiązania mexhttps](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
-- [\<>mexHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+- [Powiązania dostarczane przez system](../system-provided-bindings.md)
+- [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)
+- [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+- [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md)
+- [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md)

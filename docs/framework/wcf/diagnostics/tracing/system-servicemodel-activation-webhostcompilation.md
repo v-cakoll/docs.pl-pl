@@ -2,21 +2,21 @@
 title: System.ServiceModel.Activation.WebHostCompilation
 ms.date: 03/30/2017
 ms.assetid: 33ee56f8-30bb-445a-964d-050294c85ac6
-ms.openlocfilehash: f2ace3d31fa8f44eee641a78aef388f7b469cb07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1d078e4910a8def80c7fce5cced58fffb769e40
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594143"
 ---
 # <a name="systemservicemodelactivationwebhostcompilation"></a>System.ServiceModel.Activation.WebHostCompilation
 System.ServiceModel.Activation.WebHostCompilation  
   
 ## <a name="description"></a>Opis  
- Występuje, gdy usługi Internet Information Service (IIS) lub Windows Process Activation Service (WAS) hostowanej usługi jest kompilowany z wbudowanego kodu, który znajduje się w pliku svc.  
+ Występuje, gdy usługa Internet Information Service (IIS) lub usługa aktywacji procesów systemu Windows (WAS) została skompilowana z kodu wbudowanego, który jest obecny w pliku SVC.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

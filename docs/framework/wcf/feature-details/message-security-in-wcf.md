@@ -2,16 +2,16 @@
 title: Zabezpieczenia komunikatów w architekturze WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212071"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602664"
 ---
 # <a name="message-security-in-wcf"></a>Zabezpieczenia komunikatów w architekturze WCF
 
-Windows Communication Foundation (WCF) ma dwa główne tryby zapewniania bezpieczeństwa (`Transport` i `Message`) oraz trzeci tryb (`TransportWithMessageCredential`) łączący te dwa. W tym temacie omówiono zabezpieczenia komunikatów i przyczyny ich użycia.
+Windows Communication Foundation (WCF) ma dwa główne tryby zapewniania bezpieczeństwa ( `Transport` i `Message` ) oraz trzeci tryb ( `TransportWithMessageCredential` ) łączący te dwa. W tym temacie omówiono zabezpieczenia komunikatów i przyczyny ich użycia.
 
 ## <a name="what-is-message-security"></a>Co to jest zabezpieczenia komunikatów?
 
@@ -25,11 +25,11 @@ W zabezpieczeniach na poziomie komunikatów wszystkie informacje o zabezpieczeni
 
 - Kompleksowe zabezpieczenia. Zabezpieczenia transportu, takie jak SSL (SSL), chronią tylko komunikaty, gdy komunikacja jest punktem-punkt. Jeśli komunikat jest kierowany do co najmniej jednego wystawcy protokołu SOAP (na przykład routera) przed osiągnięciem odbiorcy końcowego, sam komunikat nie jest chroniony po odczytaniu przez niego pośrednika z sieci. Ponadto informacje o uwierzytelnianiu klienta są dostępne tylko dla pierwszej pośrednika i muszą zostać ponownie przesłane do odbiorcy końcowego w sposób, w razie potrzeby. Ma to zastosowanie, nawet jeśli cała trasa używa zabezpieczeń SSL między indywidualnymi przeskokami. Ze względu na to, że zabezpieczenia komunikatów działają bezpośrednio wraz z wiadomością i zabezpieczają w niej kod XML, zabezpieczenia pozostają z komunikatem bez względu na liczbę pośredników, które są wykorzystywane przed docieraniem do ostatecznego odbiorcy. Umożliwia to kompleksowe scenariusze zabezpieczeń.
 
-- Większa elastyczność. Część komunikatu, a nie cały komunikat, może być podpisana lub zaszyfrowana. Oznacza to, że pośrednicy mogą przeglądać części wiadomości, które są przeznaczone dla nich. Jeśli nadawca musi udostępnić część informacji w komunikacie widocznym dla pośredników, ale chce mieć pewność, że nie jest ona naruszona, może po prostu podpisać ją, ale pozostawić ją niezaszyfrowaną. Ponieważ podpis jest częścią komunikatu, odbiorca końcowy może sprawdzić, czy informacje w wiadomości zostały odebrane bez zmian. Jeden scenariusz może mieć usługę pośredniczącą protokołu SOAP, która kieruje komunikat zgodnie z wartością nagłówka akcji. Domyślnie usługa WCF nie szyfruje wartości akcji, ale podpisuje ją, jeśli jest używana funkcja zabezpieczenia komunikatów. W związku z tym te informacje są dostępne dla wszystkich pośredników, ale nikt nie może go zmienić.
+- Zwiększona elastyczność. Część komunikatu, a nie cały komunikat, może być podpisana lub zaszyfrowana. Oznacza to, że pośrednicy mogą przeglądać części wiadomości, które są przeznaczone dla nich. Jeśli nadawca musi udostępnić część informacji w komunikacie widocznym dla pośredników, ale chce mieć pewność, że nie jest ona naruszona, może po prostu podpisać ją, ale pozostawić ją niezaszyfrowaną. Ponieważ podpis jest częścią komunikatu, odbiorca końcowy może sprawdzić, czy informacje w wiadomości zostały odebrane bez zmian. Jeden scenariusz może mieć usługę pośredniczącą protokołu SOAP, która kieruje komunikat zgodnie z wartością nagłówka akcji. Domyślnie usługa WCF nie szyfruje wartości akcji, ale podpisuje ją, jeśli jest używana funkcja zabezpieczenia komunikatów. W związku z tym te informacje są dostępne dla wszystkich pośredników, ale nikt nie może go zmienić.
 
 - Obsługa wielu transportów. Można wysyłać zabezpieczone komunikaty za pośrednictwem wielu różnych transportów, takich jak potoki nazwane i TCP, bez konieczności polegania na protokole zabezpieczeń. W przypadku zabezpieczeń na poziomie transportu wszystkie informacje o zabezpieczeniach są ograniczone do jednego konkretnego połączenia transportowego i nie są dostępne w samej zawartości wiadomości. Zabezpieczenia komunikatów zabezpieczają komunikat niezależnie od tego, jaki transport jest używany do przesyłania wiadomości, a kontekst zabezpieczeń jest bezpośrednio osadzony w komunikacie.
 
-- Obsługa szerokiego zestawu poświadczeń i oświadczeń. Zabezpieczenia komunikatów opierają się na specyfikacji WS-Security, która zapewnia rozszerzalną platformę, która umożliwia przekazywanie dowolnego typu roszczeń wewnątrz komunikatu protokołu SOAP. W przeciwieństwie do zabezpieczeń transportu, zestaw mechanizmów uwierzytelniania lub oświadczeń, których można użyć, nie jest ograniczony przez możliwości transportu. Zabezpieczenia komunikatów WCF obejmują wiele typów uwierzytelniania i transmisji, które mogą być rozszerzane w celu obsługi dodatkowych typów w razie potrzeby. Z tego względu scenariusz poświadczeń federacyjnych nie jest możliwy bez zabezpieczeń wiadomości. Aby uzyskać więcej informacji na temat scenariuszy federacyjnych obsługiwanych przez WCF, zobacz [federacyjne i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
+- Obsługa szerokiego zestawu poświadczeń i oświadczeń. Zabezpieczenia komunikatów opierają się na specyfikacji WS-Security, która zapewnia rozszerzalną platformę, która umożliwia przekazywanie dowolnego typu roszczeń wewnątrz komunikatu protokołu SOAP. W przeciwieństwie do zabezpieczeń transportu, zestaw mechanizmów uwierzytelniania lub oświadczeń, których można użyć, nie jest ograniczony przez możliwości transportu. Zabezpieczenia komunikatów WCF obejmują wiele typów uwierzytelniania i transmisji, które mogą być rozszerzane w celu obsługi dodatkowych typów w razie potrzeby. Z tego względu scenariusz poświadczeń federacyjnych nie jest możliwy bez zabezpieczeń wiadomości. Aby uzyskać więcej informacji na temat scenariuszy federacyjnych obsługiwanych przez WCF, zobacz [federacyjne i wystawione tokeny](federation-and-issued-tokens.md).
 
 ## <a name="how-message-and-transport-security-compare"></a>Jak porównać zabezpieczenia komunikatów i transportu
 
@@ -63,9 +63,9 @@ Zabezpieczenia komunikatów mają następujące wady:
 
 - Wymaga implementacji mechanizmów zabezpieczeń na poziomie XML i obsługi specyfikacji WS-Security. Może to mieć wpływ na współdziałanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Zabezpieczanie usług i klientów](securing-services-and-clients.md)
+- [Zabezpieczenia transportu](transport-security.md)
+- [Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](how-to-use-transport-security-and-message-credentials.md)
 - [Wzorce i praktyki firmy Microsoft, rozdział 3: implementowanie transportu i zabezpieczenia warstwy komunikatów](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

@@ -10,49 +10,49 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597088"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania komunikatu
-Atak powtarzania występuje, gdy osoba atakująca kopiuje strumień wiadomości między dwiema stronami i odtwarza strumień do jednej lub więcej stron. O ile nie zostanie złagodzone, komputery podlegające atakowi będą przetwarzać strumień jako prawidłowe wiadomości, co spowoduje szereg złych konsekwencji, takich jak zbędne zamówienia elementu.  
+Ataku powtarzania występuje, gdy osoba atakująca kopiuje strumień komunikatów między dwiema stronami i odtwarza strumień do co najmniej jednej ze stron. O ile nie zostanie to skorygowane, komputery, które podlegają atakom, przetworzyją strumień jako wiarygodne komunikaty, co skutkuje zakresem nieprawidłowych skutków, takich jak nadmiarowe zamówienia elementu.  
   
- Aby uzyskać więcej informacji na temat wykrywania powtarzania [komunikatów, zobacz Wykrywanie odtwolień komunikatów](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Aby uzyskać więcej informacji na temat wykrywania powtarzania wiadomości, zobacz [wykrywanie powtarzania komunikatów](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- Poniższa procedura pokazuje różne właściwości, których można użyć do kontrolowania wykrywania powtarzania przy użyciu programu Windows Communication Foundation (WCF).  
+ Poniższa procedura przedstawia różne właściwości, których można użyć do kontrolowania wykrywania powtarzania przy użyciu Windows Communication Foundation (WCF).  
   
-### <a name="to-control-replay-detection-on-the-client-using-code"></a>Aby kontrolować wykrywanie powtórzeń na kliencie przy użyciu kodu  
+### <a name="to-control-replay-detection-on-the-client-using-code"></a>Aby kontrolować wykrywanie powtarzania na kliencie przy użyciu kodu  
   
-1. Utwórz <xref:System.ServiceModel.Channels.SecurityBindingElement> a do <xref:System.ServiceModel.Channels.CustomBinding>użycia w pliku . Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). W poniższym przykładzie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> użyto utworzonego <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> z <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
+1. Utwórz element <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding> . Aby uzyskać więcej informacji, zobacz [jak: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md). W poniższym przykładzie zastosowano element <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> utworzony z <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> <xref:System.ServiceModel.Channels.SecurityBindingElement> klasą.  
   
-2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> właściwości, aby zwrócić <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> odwołanie do klasy i ustawić dowolną z następujących właściwości, odpowiednio:  
+2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> właściwości, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> klasy i ustawić dowolne z następujących właściwości, zgodnie z potrzebami:  
   
-    1. `DetectReplay`. Wartość logiczna. Określa, czy klient powinien wykryć powtórki z serwera. Wartość domyślna to `true`.  
+    1. `DetectReplay`. Wartość logiczna. Reguluje to, czy klient powinien wykryć odtwarzanie z serwera. Wartość domyślna to `true`.  
   
-    2. `MaxClockSkew`. Wartość. <xref:System.TimeSpan> Określa, ile czasu pochylić mechanizm powtarzania może tolerować między klientem a serwerem. Mechanizm zabezpieczeń sprawdza sygnaturę czasową wysłano i określa, czy został wysłany zbyt daleko wstecz w przeszłości. Wartość domyślna to 5 minut.  
+    2. `MaxClockSkew`. <xref:System.TimeSpan>Wartość. Decyduje o tym, ile czasu może odchylać mechanizm powtarzania między klientem a serwerem. Mechanizm zabezpieczeń sprawdza, czy sygnatura czasowa jest wysyłana, i określa, czy wysłano ją zbyt długo w przeszłości. Wartość domyślna to 5 minut.  
   
-    3. `ReplayWindow`. Wartość. `TimeSpan` Określa to, jak długo wiadomość może być owakowany w sieci po wysłaniu jej przez serwer (za pośrednictwem pośredników) przed dotarciem do klienta. Klient śledzi podpisy wiadomości wysłanych w `ReplayWindow` ciągu najnowszych do celów wykrywania powtórzeń.  
+    3. `ReplayWindow`. `TimeSpan`Wartość. Reguluje to, jak długo komunikat może być aktywny w sieci po wysłaniu go przez serwer (za pośrednictwem pośredników) przed osiągnięciem klienta. Klient śledzi sygnatury komunikatów wysłanych w ciągu najnowszej wersji `ReplayWindow` na potrzeby wykrywania powtarzania.  
   
-    4. `ReplayCacheSize`. Wartość całkowita. Klient przechowuje podpisy wiadomości w pamięci podręcznej. To ustawienie określa, ile podpisów może przechowywać pamięć podręczna. Jeśli liczba wiadomości wysłanych w ostatnim oknie powtarzania osiągnie limit pamięci podręcznej, nowe wiadomości są odrzucane, dopóki najstarsze buforowane podpisy nie osiągną limitu czasu. Wartość domyślna to 500000.  
+    4. `ReplayCacheSize`. Wartość całkowita. Klient przechowuje podpisy wiadomości w pamięci podręcznej. To ustawienie określa, ile sygnatur może być przechowywanych w pamięci podręcznej. Jeśli liczba komunikatów wysłanych w ramach ostatniego okna powtarzania osiągnie limit pamięci podręcznej, nowe komunikaty są odrzucane do momentu osiągnięcia limitu czasu dla najstarszych podpisów w pamięci podręcznej. Wartość domyślna to 500000.  
   
-### <a name="to-control-replay-detection-on-the-service-using-code"></a>Aby kontrolować wykrywanie powtórzeń w usłudze przy użyciu kodu  
+### <a name="to-control-replay-detection-on-the-service-using-code"></a>Aby kontrolować wykrywanie powtarzania w usłudze przy użyciu kodu  
   
-1. Utwórz <xref:System.ServiceModel.Channels.SecurityBindingElement> a do <xref:System.ServiceModel.Channels.CustomBinding>użycia w pliku .  
+1. Utwórz element <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding> .  
   
-2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> właściwości, aby zwrócić <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> odwołanie do klasy i ustawić właściwości, jak opisano wcześniej.  
+2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> właściwości, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy, i ustaw właściwości zgodnie z opisem wcześniej.  
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Aby kontrolować wykrywanie powtarzania w konfiguracji dla klienta lub usługi  
   
-1. Utwórz [ \<>niestandardowego. ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+1. Utwórz [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) .  
   
 2. Utwórz `<security>` element.  
   
-3. Utwórz [ \<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) lub [ \<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Utwórz [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md) lub [\<localServiceSettings>](../../configure-apps/file-schema/wcf/localservicesettings-element.md) .  
   
-4. Ustaw następujące wartości atrybutów, `detectReplays`odpowiednio: `replayWindow`, `replayCacheSize` `maxClockSkew`, , i . Poniższy przykład ustawia atrybuty `<localServiceSettings>` zarówno `<localClientSettings>` a, jak i elementu:  
+4. W razie potrzeby ustaw następujące wartości atrybutów: `detectReplays` ,, `maxClockSkew` `replayWindow` , i `replayCacheSize` . Poniższy przykład ustawia atrybuty obu `<localServiceSettings>` i `<localClientSettings>` elementów:  
   
     ```xml  
     <customBinding>  
@@ -75,26 +75,26 @@ Atak powtarzania występuje, gdy osoba atakująca kopiuje strumień wiadomości 
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> tworzy <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> przy użyciu metody i ustawia właściwości powtarzania powiązania.  
+ Poniższy przykład tworzy <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> metodę i ustawia właściwości powtarzania powiązania.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>Zakres powtórki: tylko zabezpieczenia wiadomości  
- Należy zauważyć, że poniższe procedury dotyczą tylko trybu zabezpieczeń wiadomości. W przypadku transportu i transportu z trybami poświadczeń wiadomości mechanizmy transportu wykrywają powtórki.  
+## <a name="scope-of-replay-message-security-only"></a>Zakres powtarzania: tylko zabezpieczenia wiadomości  
+ Należy zauważyć, że poniższe procedury dotyczą tylko trybu zabezpieczeń wiadomości. W przypadku transportu i transportu z trybami poświadczeń wiadomości mechanizmy transportu wykrywają odtwarzanie.  
   
-## <a name="secure-conversation-notes"></a>Bezpieczne notatki do konwersacji  
- W przypadku powiązań, które umożliwiają bezpieczne konwersacje, można dostosować te ustawienia zarówno dla kanału aplikacji, jak i dla powiązania boottrap bezpiecznej konwersacji. Na przykład można wyłączyć powtórki dla kanału aplikacji, ale włączyć je dla kanału bootstrap, który ustanawia bezpieczną konwersację.  
+## <a name="secure-conversation-notes"></a>Uwagi dotyczące bezpiecznej konwersacji  
+ W przypadku powiązań umożliwiających bezpieczne konwersacje można dostosować te ustawienia zarówno dla kanału aplikacji, jak i dla powiązania inicjowania bezpiecznego konwersacji. Można na przykład wyłączyć odtwarzanie dla kanału aplikacji, ale włączyć je dla kanału ładowania początkowego, który nawiązuje bezpieczną konwersację.  
   
- Jeśli nie używasz bezpiecznych sesji konwersacji, wykrywanie powtarzania nie gwarantuje wykrywania powtórek w scenariuszach farmy serwerów i po odtwoniu procesu. Dotyczy to następujących powiązań dostarczonych przez system:  
+ Jeśli nie używasz sesji bezpiecznych konwersacji, wykrywanie powtarzania nie gwarantuje wykrywania operacji odtwarzania w scenariuszach farmy serwerów i podczas odtwarzania procesu. Dotyczy to następujących powiązań dostarczonych przez system:  
   
 - <xref:System.ServiceModel.BasicHttpBinding>.  
   
-- <xref:System.ServiceModel.WSHttpBinding>z <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwością `false`ustawioną na .  
+- <xref:System.ServiceModel.WSHttpBinding>z <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwością ustawioną na `false` .  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Następujące obszary nazw są wymagane do skompilowania kodu:  
+- Do skompilowania kodu wymagane są następujące przestrzenie nazw:  
   
 - <xref:System>  
   
@@ -106,6 +106,6 @@ Atak powtarzania występuje, gdy osoba atakująca kopiuje strumień wiadomości 
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Bezpieczne konwersacje i bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Bezpieczne konwersacje i bezpieczne sesje](secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: b1c773fbe90e7a45ea2a2718f9bde0aa9e9b67d6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a898419a9bb1ecbd0b156f0b749da70e1b5b903f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593558"
 ---
 # <a name="data-contract-serializer"></a>Serializator kontraktów danych
-Infrastruktura usług Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization.DataContractSerializer> klasę jako domyślnego elementu serializującego. Tematy w tej sekcji zawierają szczegółowe informacje dotyczące korzystania z niego jako autonomiczny serializatora.  
+Infrastruktura Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization.DataContractSerializer> klasy jako serializator domyślny. Tematy w tej sekcji zawierają więcej szczegółów na temat używania go jako serializator autonomiczny.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Serializacja i deserializacja](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
- Szczegółowe informacje dotyczące używania <xref:System.Runtime.Serialization.DataContractSerializer> klasy do wykresów obiektów serializacji i deserializacji XML dokumenty w obiektach.  
+ [Serializacja i deserializacja](serialization-and-deserialization.md)  
+ Szczegóły dotyczące używania <xref:System.Runtime.Serialization.DataContractSerializer> klasy do serializacji grafów obiektów i deserializacji dokumentów XML do obiektów.  
   
- [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- Wyjaśnia, jak można wygenerować schematu języka (XSD) definicji schematu XML z klasy .NET Framework lub sposób generowania kodu z dokumentu schematu XSD.  
+ [importowanie i eksportowanie schematu](schema-import-and-export.md)  
+ Wyjaśnia, jak generować schemat języka definicji schematu XML (XSD) z klasy .NET Framework lub jak generować kod z dokumentu schematu XSD.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
   
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -33,11 +33,11 @@ Infrastruktura usług Windows Communication Foundation (WCF) używa <xref:System
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Używanie kontraktów danych](using-data-contracts.md)  
   
- [Transfer i serializacja danych](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Transfer i serializacja danych](data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
-- [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Odwołanie do schematu kontraktu danych](data-contract-schema-reference.md)
+- [Określanie transferu danych w kontraktach usług](specifying-data-transfer-in-service-contracts.md)

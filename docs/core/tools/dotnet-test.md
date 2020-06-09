@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie Test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 04/29/2020
-ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594455"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -192,8 +192,8 @@ Gdzie `Microsoft.NET.Test.Sdk` jest hostem testowym, `xunit` jest to Platforma t
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
-  
-  - Uruchom testy w projekcie w bieżącym katalogu i Raportuj testy, które były w toku w przypadku awarii hosta testowego:
+
+- Uruchom testy w projekcie w bieżącym katalogu i Raportuj testy, które były w toku w przypadku awarii hosta testowego:
 
   ```dotnetcli
   dotnet test --blame
@@ -230,14 +230,14 @@ Wyrażenia mogą być dołączane za pomocą operatorów warunkowych:
 
 | Operator            | Funkcja |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | LUB       |
 | `&`                 | AND      |
 
 Wyrażenia można ująć w nawiasy, gdy są używane operatory warunkowe (na przykład `(Name~TestMethod1) | (Name~TestMethod2)` ).
 
 Aby uzyskać więcej informacji i zapoznać się z przykładami dotyczącymi używania selektywnego filtrowania testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Struktury i elementy docelowe](../../standard/frameworks.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

@@ -2,21 +2,21 @@
 title: Niestandardowy bezpieczny punkt końcowy metadanych
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 89f12b4490d556884aaa15dcb102b5ad876707ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e392f396b62ad2a3d3cda6e7d6ff31f186f0964
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592440"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Niestandardowy bezpieczny punkt końcowy metadanych
-W tym przykładzie pokazano, jak zaimplementować usługę z bezpiecznym punktem końcowym metadanych, który używa jednego z powiązań wymiany nie metadanych i jak skonfigurować [Narzędzie narzędzia Metadanych ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) lub klientów do pobierania metadanych z takiego punktu końcowego metadanych. Istnieją dwa powiązania dostarczone przez system do udostępniania punktów końcowych metadanych: mexHttpBinding i mexHttpsBinding. mexHttpBinding jest używany do uwidaczniania punktu końcowego metadanych za pośrednictwem protokołu HTTP w sposób niezabezpieczony. mexHttpsBinding jest używany do uwidaczniania punktu końcowego metadanych za pośrednictwem protokołu HTTPS w bezpieczny sposób. W tym przykładzie pokazano, jak udostępnić <xref:System.ServiceModel.WSHttpBinding>bezpieczny punkt końcowy metadanych przy użyciu . Należy to zrobić, gdy chcesz zmienić ustawienia zabezpieczeń dla powiązania, ale nie chcesz używać protokołu HTTPS. Jeśli używasz mexHttpsBinding punkt końcowy metadanych będzie bezpieczny, ale nie ma możliwości modyfikowania ustawień powiązania.  
+Ten przykład pokazuje, jak wdrożyć usługę z bezpiecznym punktem końcowym metadanych, który używa jednego z powiązań wymiany bez metadanych, oraz jak skonfigurować narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) lub klientów, aby pobrać metadane z takiego punktu końcowego metadanych. Dostępne są dwa powiązania dostarczone przez system na potrzeby uwidaczniania punktów końcowych metadanych: mexHttpBinding i mexHttpsBinding. mexHttpBinding jest używany do uwidocznienia punktu końcowego metadanych za pośrednictwem protokołu HTTP w sposób niebezpieczny. mexHttpsBinding jest używany do udostępniania punktu końcowego metadanych za pośrednictwem protokołu HTTPS w bezpieczny sposób. W tym przykładzie pokazano, jak uwidocznić bezpieczny punkt końcowy metadanych przy użyciu <xref:System.ServiceModel.WSHttpBinding> . Należy to zrobić, jeśli chcesz zmienić ustawienia zabezpieczeń dla powiązania, ale nie chcesz używać protokołu HTTPS. Jeśli używasz mexHttpsBinding, Twój punkt końcowy metadanych będzie zabezpieczony, ale nie ma możliwości modyfikacji ustawień powiązania.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="service"></a>Usługa  
- Usługa w tym przykładzie ma dwa punkty końcowe. Punkt końcowy aplikacji `ICalculator` obsługuje umowy `ReliableSession` na `Message` z włączonych `WSHttpBinding` i zabezpieczeń przy użyciu certyfikatów. Punkt końcowy metadanych `WSHttpBinding`używa również, z tymi `ReliableSession`samymi ustawieniami zabezpieczeń, ale bez . Oto odpowiednia konfiguracja:  
+ Usługa w tym przykładzie ma dwa punkty końcowe. Punkt końcowy aplikacji obsługuje `ICalculator` kontrakt `WSHttpBinding` z `ReliableSession` włączonym i `Message` zabezpieczeniami przy użyciu certyfikatów. Punkt końcowy metadanych używa również z `WSHttpBinding` tymi samymi ustawieniami zabezpieczeń, ale z opcją No `ReliableSession` . Oto odpowiednia konfiguracja:  
   
 ```xml  
 <services>
@@ -50,22 +50,22 @@ W tym przykładzie pokazano, jak zaimplementować usługę z bezpiecznym punktem
  </bindings>  
 ```  
   
- W wielu innych przykładach punkt końcowy metadanych `mexHttpBinding`używa domyślnego , który nie jest bezpieczny. W tym miejscu metadane są zabezpieczone przy użyciu `WSHttpBinding` `Message` zabezpieczeń. Aby klienci metadanych mogli pobrać te metadane, muszą być skonfigurowani przy tym z pasującym powiązaniem. W tym przykładzie przedstawiono dwa takie klientów.  
+ W wielu innych przykładach punkt końcowy metadanych używa domyślnego `mexHttpBinding` , co nie jest bezpieczne. W tym miejscu metadane są zabezpieczone przy użyciu `WSHttpBinding` `Message` zabezpieczeń. Aby klienci metadanych mogli pobrać te metadane, muszą mieć skonfigurowane zgodne powiązania. Ten przykład pokazuje dwóch klientów.  
   
- Pierwszy klient używa programu Svcutil.exe do pobierania metadanych i generowania kodu klienta i konfiguracji w czasie projektowania. Ponieważ usługa używa powiązania nie domyślne dla metadanych, narzędzie Svcutil.exe musi być specjalnie skonfigurowane, aby można było uzyskać metadane z usługi przy użyciu tego powiązania.  
+ Pierwszy klient używa programu Svcutil. exe, aby pobrać metadane i wygenerować kod i konfigurację klienta w czasie projektowania. Ponieważ usługa używa powiązania innego niż domyślne dla metadanych, narzędzie Svcutil. exe musi być skonfigurowane tak, aby można było pobrać metadane z usługi przy użyciu tego powiązania.  
   
- Drugi klient używa `MetadataResolver` do dynamicznego pobierania metadanych dla znanego kontraktu, a następnie wywoływania operacji na dynamicznie generowanym kliencie.  
+ Drugi klient używa programu `MetadataResolver` do dynamicznego pobierania metadanych znanego kontraktu, a następnie wywoływania operacji na dynamicznie generowanym kliencie.  
   
 ## <a name="svcutil-client"></a>Klient Svcutil  
- Podczas korzystania z domyślnego `IMetadataExchange` powiązania do hosta punktu końcowego, można uruchomić Svcutil.exe z adresem tego punktu końcowego:  
+ Korzystając z domyślnego powiązania do hostowania `IMetadataExchange` punktu końcowego, można uruchomić Svcutil. exe z adresem tego punktu końcowego:  
   
 ```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- i to działa. Jednak w tym przykładzie serwer używa nieobekonicznego punktu końcowego do hostowania metadanych. Więc Svcutil.exe musi być poinstruowany, aby użyć prawidłowego wiązania. Można to zrobić za pomocą pliku Svcutil.exe.config.  
+ i działa. Ale w tym przykładzie serwer używa innego niż domyślny punkt końcowy do hostowania metadanych. Dlatego należy wydać Svcutil. exe, aby użyć poprawnego powiązania. Można to zrobić za pomocą pliku Svcutil. exe. config.  
   
- Plik Svcutil.exe.config wygląda jak zwykły plik konfiguracji klienta. Jedynymi nietypowymi aspektami są nazwa punktu końcowego klienta i kontrakt:  
+ Plik Svcutil. exe. config wygląda jak normalny plik konfiguracji klienta. Jedynymi nietypowymi aspektami są Nazwa i kontrakt punktu końcowego klienta:  
   
 ```xml  
 <endpoint name="http"  
@@ -75,26 +75,26 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
           contract="IMetadataExchange" />  
 ```  
   
- Nazwa punktu końcowego musi być nazwą schematu adresu, w którym znajdują się metadane, a kontrakt punktu końcowego musi być `IMetadataExchange`. W związku z tym, gdy program Svcutil.exe jest uruchamiany z wierszem polecenia, takim jak:  
+ Nazwa punktu końcowego musi być nazwą schematu adresu, na którym znajdują się metadane, i musi być kontraktem punktu końcowego `IMetadataExchange` . W związku z tym, gdy program Svcutil. exe jest uruchamiany z wiersza polecenia, takiego jak:  
   
 ```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- szuka punktu końcowego o nazwie "http" i umowy, `IMetadataExchange` aby skonfigurować powiązanie i zachowanie wymiany komunikacji z punktem końcowym metadanych. Reszta pliku Svcutil.exe.config w przykładzie określa konfigurację powiązania i poświadczenia zachowania, aby dopasować konfigurację serwera punktu końcowego metadanych.  
+ szuka punktu końcowego o nazwie "http" i kontraktu, `IMetadataExchange` Aby skonfigurować powiązanie i zachowanie wymiany komunikacji z punktem końcowym metadanych. Pozostała część pliku Svcutil. exe. config w przykładzie określa konfigurację powiązania i poświadczenia zachowania w celu dopasowania konfiguracji serwera punktu końcowego metadanych.  
   
- Aby program Svcutil.exe odebrał konfigurację w pliku Svcutil.exe.config, program Svcutil.exe musi znajdować się w tym samym katalogu co plik konfiguracyjny. W związku z tym należy skopiować plik Svcutil.exe z jego lokalizacji instalacji do katalogu zawierającego plik Svcutil.exe.config. Następnie z tego katalogu uruchom następujące polecenie:  
+ Aby program Svcutil. exe mógł pobrać konfigurację w pliku Svcutil. exe. config, Svcutil. exe musi znajdować się w tym samym katalogu, w którym znajduje się plik konfiguracji. W związku z tym należy skopiować Svcutil. exe z lokalizacji instalacji do katalogu, który zawiera plik Svcutil. exe. config. Następnie z tego katalogu Uruchom następujące polecenie:  
   
 ```console  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Wiodący ". \\" zapewnia, że kopia Svcutil.exe w tym katalogu (ten, który ma odpowiedni Svcutil.exe.config) jest uruchamiany.  
+ Wiodący ". \\ " zapewnia, że jest uruchamiana kopia Svcutil. exe w tym katalogu (która ma odpowiednie Svcutil. exe. config).  
   
-## <a name="metadataresolver-client"></a>MetadataSobraz klienta  
- Jeśli klient zna umowę i jak rozmawiać z metadanymi w czasie projektowania, klient może dynamicznie `MetadataResolver`znaleźć powiązania i adres punktów końcowych aplikacji za pomocą . Ten przykładowy klient pokazuje to, pokazując, jak skonfigurować `MetadataResolver` powiązania i poświadczenia `MetadataExchangeClient`używane przez utworzenie i skonfigurowanie pliku .  
+## <a name="metadataresolver-client"></a>Klient klasy MetadataResolver  
+ Jeśli Klient zna umowę i jak komunikować się z metadanymi w czasie projektowania, klient może dynamicznie sprawdzić powiązania i adres punktów końcowych aplikacji przy użyciu `MetadataResolver` . Ten przykładowy klient pokazuje, jak skonfigurować powiązanie i poświadczenia używane przez `MetadataResolver` Tworzenie i Konfigurowanie `MetadataExchangeClient` .  
   
- Te same informacje o powiązaniach i certyfikatach, które pojawiły się w pliku `MetadataExchangeClient`Svcutil.exe.config, można bezwzględnie określić na stronie:  
+ Te same informacje o powiązaniu i certyfikacie, które pojawiły się w Svcutil. exe. config, można określić w sposób niezależny od `MetadataExchangeClient` :  
   
 ```csharp  
 // Specify the Metadata Exchange binding and its security mode  
@@ -110,7 +110,7 @@ mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLoca
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
- Za `mexClient` pomocą skonfigurowanego możemy wyliczyć interesujące kontrakty, które `MetadataResolver` nas interesują, i użyć do pobrania listy punktów końcowych z tymi umowami:  
+ Dzięki `mexClient` skonfigurowaniu można wyliczyć kontrakty, których interesuje, i użyć `MetadataResolver` do pobrania listy punktów końcowych z tymi umowami:  
   
 ```csharp  
 // The contract we want to fetch metadata for  
@@ -122,66 +122,66 @@ EndpointAddress mexAddress = new EndpointAddress(ConfigurationManager.AppSetting
 ServiceEndpointCollection endpoints = MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
- Na koniec możemy użyć informacji z tych punktów końcowych do zainicjowania powiązania i adresu `ChannelFactory` używanego do tworzenia kanałów do komunikowania się z punktami końcowymi aplikacji.  
+ Wreszcie możemy użyć informacji z tych punktów końcowych w celu zainicjowania powiązania i adresu `ChannelFactory` używanego do tworzenia kanałów w celu komunikowania się z punktami końcowymi aplikacji.  
   
 ```csharp  
 ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
- Kluczowym punktem tego przykładowego klienta jest wykazanie, że jeśli używasz `MetadataResolver`, i należy określić niestandardowe powiązania `MetadataExchangeClient` lub zachowania dla komunikacji wymiany metadanych, można użyć, aby określić te ustawienia niestandardowe.  
+ Najważniejszym punktem tego przykładowego klienta jest zaprezentowanie, że jeśli używasz programu `MetadataResolver` , i musisz określić niestandardowe powiązania lub zachowania dla komunikacji z wymianą metadanych, możesz użyć, `MetadataExchangeClient` Aby określić te ustawienia niestandardowe.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i utworzyć próbkę  
+#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-#### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić próbkę na tym samym komputerze  
+#### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1. Uruchom plik Setup.bat z przykładowego folderu instalacyjnego. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia próbki. Należy zauważyć, że plik Setup.bat używa narzędzia FindPrivateKey.exe, które jest instalowane przez uruchomienie pliku setupCertTool.bat z [procedury jednorazowej instalacji dla przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Uruchom setup. bat z przykładowego folderu instalacyjnego. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu. Należy pamiętać, że plik Setup. bat używa narzędzia FindPrivateKey. exe, które jest instalowane przez uruchomienie setupCertTool. bat z procedury konfiguracji jednokrotnej [dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Uruchom aplikację kliencką z \MetadataResolverClient\bin lub \SvcutilClient\bin. Aktywność klienta jest wyświetlana w aplikacji konsoli klienta.  
   
-3. Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-4. Usuń certyfikaty, uruchamiając Cleanup.bat po zakończeniu z próbką. Inne przykłady zabezpieczeń używają tych samych certyfikatów.  
+4. Usuń certyfikaty, uruchamiając Oczyść. bat po zakończeniu korzystania z przykładu. Inne przykłady zabezpieczeń używają tych samych certyfikatów.  
   
-#### <a name="to-run-the-sample-across-machines"></a>Aby uruchomić próbkę na różnych komputerach  
+#### <a name="to-run-the-sample-across-machines"></a>Aby uruchomić przykład na wielu maszynach  
   
-1. Na serwerze `setup.bat service`uruchom program . Uruchamianie `setup.bat` `service` z argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
+1. Na serwerze uruchom polecenie `setup.bat service` . Uruchomienie `setup.bat` z `service` argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny maszyny i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
   
-2. Na serwerze edytuj plik Web.config, aby odzwierciedlić nową nazwę certyfikatu. Oznacza to, `findValue` że zmień atrybut w [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) element do w pełni kwalifikowanej nazwy domeny komputera.  
+2. Na serwerze programu Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu. Oznacza to, że należy zmienić `findValue` atrybut w [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemencie na w pełni kwalifikowaną nazwę domeny komputera.  
   
-3. Skopiuj plik Service.cer z katalogu usługi do katalogu klienta na komputerze klienckim.  
+3. Skopiuj plik. cer usługi z katalogu usługi do katalogu klienta na komputerze klienckim.  
   
-4. Na kliencie `setup.bat client`uruchom program . Uruchamianie `setup.bat` `client` z argumentem tworzy certyfikat klienta o nazwie Client.com i eksportuje certyfikat klienta do pliku o nazwie Client.cer.  
+4. Na kliencie Uruchom polecenie `setup.bat client` . Uruchomienie `setup.bat` z `client` argumentem tworzy certyfikat klienta o nazwie Client.com i eksportuje certyfikat klienta do pliku o nazwie Client. cer.  
   
-5. W pliku App.config `MetadataResolverClient` na komputerze klienckim zmień wartość adresu punktu końcowego mex, aby dopasować go do nowego adresu usługi. Można to zrobić, zastępując localhost w pełni kwalifikowaną nazwą domeny serwera. Zmień również występowanie "localhost" w pliku metadataResolverClient.cs na nową nazwę certyfikatu usługi (w pełni kwalifikowaną nazwę domeny serwera). Zrób to samo dla App.config projektu SvcutilClient.  
+5. W pliku App. config na `MetadataResolverClient` komputerze klienckim Zmień wartość adresu punktu końcowego MEX, aby odpowiadała nowemu adresowi usługi. Można to zrobić, zastępując localhost nazwą domeny, w której jest w pełni kwalifikowana. Zmień również wystąpienie "localhost" w pliku metadataResolverClient.cs na nazwę nowego certyfikatu usługi (w pełni kwalifikowana nazwa domeny serwera). Wykonaj tę samą czynność dla pliku App. config projektu SvcutilClient.  
   
-6. Skopiuj plik Client.cer z katalogu klienta do katalogu usługi na serwerze.  
+6. Skopiuj plik. cer programu Client z katalogu Client do katalogu usługi na serwerze programu.  
   
-7. Na kliencie `ImportServiceCert.bat`uruchom program . Spowoduje to zaimportować certyfikat usługi z pliku Service.cer do magazynu CurrentUser — TrustedPeople.  
+7. Na kliencie Uruchom polecenie `ImportServiceCert.bat` . Spowoduje to zaimportowanie certyfikatu usługi z pliku CER usługi do magazynu CurrentUser-TrustedPeople.  
   
-8. Na serwerze `ImportClientCert.bat`uruchom program Uruchom program Ta importuje certyfikat klienta z pliku Client.cer do magazynu LocalMachine — TrustedPeople.  
+8. Na serwerze programu uruchom `ImportClientCert.bat` program, który importuje certyfikat klienta z pliku Client. cer do magazynu LocalMachine-TrustedPeople.  
   
-9. Na komputerze usługi skompiluj projekt usługi w programie Visual Studio i wybierz stronę pomocy w przeglądarce sieci Web, aby sprawdzić, czy jest uruchomiona.  
+9. Na maszynie usługi Skompiluj projekt usługi w programie Visual Studio i wybierz stronę pomocy w przeglądarce sieci Web, aby sprawdzić, czy jest uruchomiona.  
   
-10. Na komputerze klienckim uruchom MetadataResolverClient lub SvcutilClient z vs.  
+10. Na komputerze klienckim uruchom MetadataResolverClient lub SvcutilClient z programu VS.  
   
-    1. Jeśli klient i usługa nie mogą się komunikować, zobacz [Porady dotyczące rozwiązywania problemów dla przykładów WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Jeśli klient i usługa nie mogą się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby oczyścić po próbce  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po przykładzie  
   
-- Uruchom Cleanup.bat w folderze przykłady po zakończeniu uruchamiania próbki.  
+- Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
     > [!NOTE]
-    > Ten skrypt nie usuwa certyfikatów usługi na kliencie podczas uruchamiania tego przykładu na komputerach. Jeśli zostały uruchomione windows communication foundation (WCF) przykłady, które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usług, które zostały zainstalowane w CurrentUser — TrustedPeople magazynu. Aby to zrobić, należy `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`użyć następującego polecenia: . Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między maszynami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między maszynami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` . Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  

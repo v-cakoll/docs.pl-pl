@@ -1,39 +1,39 @@
 ---
-title: 'Instrukcje: włączanie usługi współużytkowania portów Net.TCP'
+title: 'Instrukcje: Włączanie usługi współużytkowania portów Net.TCP'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772960"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593155"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: włączanie usługi współużytkowania portów Net.TCP
-Windows Communication Foundation (WCF) używa usługi Windows o nazwie usługi udostępniania portów Net.TCP, ułatwiające Udostępnianie portów TCP wiele procesów. Ta usługa jest instalowana jako część usługi WCF, ale usługa nie jest włączona domyślnie w celu zapewnienia bezpieczeństwa i dlatego musi być włączone ręcznie przed pierwszym użyciu. W tym temacie opisano sposób konfigurowania sieci TCP usługi udostępniania portów za pomocą przystawki programu Microsoft Management Console (MMC).  
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: Włączanie usługi współużytkowania portów Net.TCP
+Windows Communication Foundation (WCF) używa usługi systemu Windows o nazwie Usługa udostępniania portów Net. TCP w celu ułatwienia udostępniania portów TCP w wielu procesach. Ta usługa jest instalowana w ramach programu WCF, ale usługa nie jest domyślnie włączona z zabezpieczeniami i dlatego musi być włączona ręcznie przed pierwszym użyciem. W tym temacie opisano sposób konfigurowania usługi udostępniania portów TCP sieci przy użyciu przystawki programu Microsoft Management Console (MMC).  
   
- Po włączyć usługi udostępniania portów Net.TCP i uruchom ją ręcznie, zobacz [jak: Konfigurowanie usługi WCF na potrzeby współużytkowania portów użyj](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) informacji o sposobie konfigurowania usługi, aby używać tej usługi.  
+ Po włączeniu usługi udostępniania portów Net. TCP i uruchomieniu jej ręcznie zapoznaj się z tematem [jak: Konfigurowanie usługi WCF do używania udostępniania portów](how-to-configure-a-wcf-service-to-use-port-sharing.md) , aby uzyskać informacje o sposobie konfigurowania usługi do korzystania z tej usługi.  
   
- Dla przykładu korzystającego z usługi współużytkowania portów net.tcp://, zobacz [przykładowe udostępniania portów Net.TCP](../../../../docs/framework/wcf/samples/net-tcp-port-sharing-sample.md).  
+ Aby uzyskać przykład, który używa net. TCP://udostępniania portów, zobacz [przykład udostępniania portów Net. TCP](../samples/net-tcp-port-sharing-sample.md).  
   
-### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Aby włączyć usługi udostępniania portów Net.TCP przy użyciu konsoli MMC  
+### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Aby włączyć usługę udostępniania portów Net. TCP przy użyciu programu MMC  
   
-1. Z Start menu, otwórz konsolę zarządzania usługami, albo, otwierając okno wiersza polecenia i wpisując `services.msc` lub przez otwarcie wykonywania i wpisując `services.msc` w polu Otwórz.  
+1. Z menu Start Otwórz konsolę zarządzania usługami, otwierając okno wiersza polecenia i wpisując `services.msc` lub otwierając polecenie Uruchom i wpisując `services.msc` w polu Otwórz.  
   
-2. W **nazwa** kolumny na liście usług, kliknij prawym przyciskiem myszy **usługi udostępniania portów Net.Tcp**i wybierz **właściwości** z menu.  
+2. W kolumnie **Nazwa** listy usług kliknij prawym przyciskiem myszy **usługę udostępniania portów Net. TCP**, a następnie wybierz polecenie **Właściwości** z menu.  
   
-3. Do włączenia ręcznym uruchomieniu usługi, w **właściwości** wybierz okno **ogólne** kartę i w **uruchamiana** wybierz ręcznego, a następnie kliknij przycisk **Zastosuj**.  
+3. Aby włączyć ręczne uruchamianie usługi, w oknie **Właściwości** wybierz kartę **Ogólne** , a następnie w polu **Typ uruchomienia** wybierz pozycję ręcznie, a następnie kliknij pozycję **Zastosuj**.  
   
-4. Aby uruchomić usługę, w obszarze stanu usługi, kliknij przycisk **Start** przycisku. Stan usługi powinien być teraz ustawiony na "Uruchomiono".  
+4. Aby uruchomić usługę, w obszarze Stan usługi kliknij przycisk **Uruchom** . Stan usługi powinien teraz zawierać wartość "uruchomiona".  
   
-5. Aby powrócić do listy usług, kliknij przycisk **OK**i zamknąć okno konsoli MMC.  
+5. Aby powrócić do listy usług, kliknij przycisk **OK**i zamknij konsolę MMC.  
   
 ## <a name="example"></a>Przykład  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Współużytkowanie portów w składniku Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Współużytkowanie portów w składniku Net.TCP](net-tcp-port-sharing.md)
+- [Konfigurowanie usługi współużytkowania portów Net.TCP](configuring-the-net-tcp-port-sharing-service.md)

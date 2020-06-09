@@ -5,48 +5,48 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856560"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593493"
 ---
 # <a name="data-transfer-and-serialization"></a>Transfer i serializacja danych
-W systemie połączonych usług i klientów są zależne od wymiany danych, aby wykonać dowolne zadanie. Jako deweloper usługi lub klienta również należy zrozumieć, jak Windows Communication Foundation (WCF) obsługuje dane i serializacja danych w celu tworzenia aplikacji, które są wydajne i łatwa w obsłudze.  
+W połączonym systemie usługi i klienci zależą od wymiany danych w celu wykonania dowolnego zadania. Jako deweloper usługi lub klienta należy również zrozumieć, w jaki sposób Windows Communication Foundation (WCF) obsługuje dane i serializacji danych w celu tworzenia aplikacji, które są wydajne i łatwe w obsłudze.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- W tym artykule opisano podstawowe pojęcia transferu danych w usługach.  
+ [Określanie transferu danych w kontraktach usług](specifying-data-transfer-in-service-contracts.md)  
+ Zawiera opis podstawowych pojęć związanych z transferem danych w usługach.  
   
- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- W tym artykule opisano, jakie dane zamówień są i jak tworzyć i używać ich.  
+ [Używanie kontraktów danych](using-data-contracts.md)  
+ Zawiera opis umów dotyczących danych i sposobu ich tworzenia i używania.  
   
- [Serializator kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- W tym artykule opisano sposób wykonywania serializacji danych za pomocą <xref:System.Runtime.Serialization.DataContractSerializer> klasy lub dowolnego rozszerzenia <xref:System.Runtime.Serialization.XmlObjectSerializer> klasy.  
+ [Serializator kontraktów danych](data-contract-serializer.md)  
+ Opisuje, w jaki sposób wykonać serializacji danych z <xref:System.Runtime.Serialization.DataContractSerializer> klasą lub dowolnym rozszerzeniem <xref:System.Runtime.Serialization.XmlObjectSerializer> klasy.  
   
- [Używanie klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- Opisuje, jak i dlaczego warto używać <xref:System.Xml.Serialization.XmlSerializer> klasy zamiast <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
+ [Używanie klasy XmlSerializer](using-the-xmlserializer-class.md)  
+ Opisuje, jak i dlaczego należy używać <xref:System.Xml.Serialization.XmlSerializer> klasy, alternatywy dla <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
   
- [Używanie kontraktów komunikatu](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
- W tym artykule opisano, jak kontrakty komunikatów umożliwia szczegółową kontrolę komunikaty protokołu SOAP.  
+ [Używanie kontraktów komunikatu](using-message-contracts.md)  
+ Opisuje sposób, w jaki kontrakty komunikatów umożliwiają kontrolę nad komunikatami protokołu SOAP.  
   
- [Używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
- W tym artykule opisano, jak korzystać z funkcji klasy wiadomości.  
+ [Używanie klasy Message](using-the-message-class.md)  
+ Opisuje sposób korzystania z funkcji klasy komunikatów.  
   
- [Filtrowanie](../../../../docs/framework/wcf/feature-details/filtering.md)  
- W tym artykule opisano, filtrowania, które umożliwia wstępne przetwarzanie komunikatów, na podstawie różnych kryteriów.  
+ [Filtrowanie](filtering.md)  
+ Opisuje filtrowanie, które umożliwia wstępne przetwarzanie wiadomości na podstawie różnych kryteriów.  
   
- [Duże ilości danych i przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- W tym artykule opisano sposób wysyłania dużych bloków danych, takich jak plik binarny.  
+ [Duże ilości danych i przesyłanie strumieniowe](large-data-and-streaming.md)  
+ Opisuje sposób wysyłania dużego bloku danych, takiego jak plik binarny.  
   
- [Zagadnienia związane z zabezpieczeniami danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- W tym artykule opisano elementy, których trzeba pamiętać podczas programowania transfer i serializacja danych.  
+ [Zagadnienia związane z zabezpieczeniami danych](security-considerations-for-data.md)  
+ Opisuje elementy, które mają być świadome podczas programowania transferu i serializacji danych.  
   
- [Omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Opisuje widok ogólnego projektu transferu danych programu WCF.  
+ [Omówienie architektury transferu danych](data-transfer-architectural-overview.md)  
+ Opisuje widok ogólnego projektu transferu danych w programie WCF.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,9 +58,9 @@ W systemie połączonych usług i klientów są zależne od wymiany danych, aby 
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Rozszerzanie koderów i serializatorów](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [Rozszerzanie koderów i serializatorów](../extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Przechowywanie wersji usługi](../../../../docs/framework/wcf/service-versioning.md)
+- [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../best-practices-data-contract-versioning.md)
+- [Przechowywanie wersji usługi](../service-versioning.md)

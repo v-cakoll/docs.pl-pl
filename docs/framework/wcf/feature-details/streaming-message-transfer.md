@@ -2,50 +2,50 @@
 title: Strumieniowy transfer komunikatów
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 6f16ab16235c9fcbe0a151d5c404df96080192c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462144856750a1b8726b574fdc82746da2d72ff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585928"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594793"
 ---
 # <a name="streaming-message-transfer"></a>Strumieniowy transfer komunikatów
-Transportów Windows Communication Foundation (WCF) obsługuje dwa tryby do przesyłania komunikatów:  
+Transporty programu Windows Communication Foundation (WCF) obsługują dwa tryby przesyłania komunikatów:  
   
-- Transfery buforowanego przytrzymaj cały komunikat w buforze pamięci, do czasu ukończenia transferu. Buforowane wiadomości musi być całkowicie dostarczana, zanim odbiorca może go odczytać.  
+- Transfery buforowane przechowują całą wiadomość w buforze pamięci do momentu zakończenia transferu. Komunikat buforowany musi być całkowicie dostarczony przed odczytaniem przez odbiorcę.  
   
-- Transfery przesyłane strumieniowo uwidocznić komunikatu jako strumień. Odbiornik uruchamia przetwarzania komunikatu, aby całkowicie został dostarczony.  
+- Transfery przesyłane strumieniowo uwidaczniają komunikat jako strumień. Odbiorca zacznie przetwarzać komunikat, zanim zostanie on całkowicie dostarczony.  
   
-- Transfery przesyłane strumieniowo można poprawić skalowalność usługi, eliminując potrzebę dużej ilości pamięci, buforów. Czy zmiana trybu transferu zwiększa skalowalność, zależy od rozmiaru wiadomości przesyłane. Rozmiary dużych bloków komunikatów Preferuj przy użyciu transferu przesyłane strumieniowo.  
+- Transfery przesyłane strumieniowo mogą zwiększyć skalowalność usługi, eliminując konieczność stosowania dużych buforów pamięci. Bez względu na to, czy zmiana trybu transferu zwiększa skalowalność, zależy od rozmiaru transferowanych komunikatów. Duże rozmiary komunikatów preferują korzystanie z transferów przesyłanych strumieniowo.  
   
- Domyślnie HTTP, protokół TCP/IP i transportu nazwanego potoku używać buforowanego transferu. W tym dokumencie opisano, jak przełączyć te transportu z buforowanego tryb transferu przesyłane strumieniowo i konsekwencje tej czynności.  
+ Domyślnie transporty HTTP, TCP/IP i nazwanego potoku używają buforowanych transferów. W tym dokumencie opisano sposób przełączania tych transportów z buforowanego do trybu transferu strumieniowego i konsekwencji tego działania.  
   
-## <a name="enabling-streamed-transfers"></a>Włączanie transfery przesyłane strumieniowo  
- Wybieranie między trybami buforowanego i przesyłane strumieniowo transfer odbywa się na element powiązania transportu. Element powiązania ma <xref:System.ServiceModel.TransferMode> właściwość, która może być równa `Buffered`, `Streamed`, `StreamedRequest`, lub `StreamedResponse`. Ustawienie trybu transferu `Streamed` umożliwia przesyłanie strumieniowe komunikacji w obu kierunkach. Ustawienie trybu transferu `StreamedRequest` lub `StreamedResponse` umożliwia przesyłanie strumieniowe komunikacji wskazany tylko w kierunku.  
+## <a name="enabling-streamed-transfers"></a>Włączanie transferu strumieniowego  
+ Wybór między trybami transferu buforowanego i przesyłanym strumieniowo odbywa się na elemencie powiązania transportu. Element Binding ma właściwość, <xref:System.ServiceModel.TransferMode> która może być ustawiona na `Buffered` , `Streamed` , `StreamedRequest` , lub `StreamedResponse` . Ustawienie trybu transferu w taki sposób, aby `Streamed` włączyć komunikację przesyłania strumieniowego w obu kierunkach. Ustawienie trybu transferu na `StreamedRequest` lub `StreamedResponse` umożliwia komunikację przesyłania strumieniowego tylko w określonym kierunku.  
   
- <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding>, I <xref:System.ServiceModel.NetNamedPipeBinding> udostępniają powiązania <xref:System.ServiceModel.TransferMode> właściwości. Dla innych transportu należy utworzyć niestandardowego powiązania, aby ustawić tryb transferu.  
+ <xref:System.ServiceModel.BasicHttpBinding>Powiązania, <xref:System.ServiceModel.NetTcpBinding> , i <xref:System.ServiceModel.NetNamedPipeBinding> uwidaczniają <xref:System.ServiceModel.TransferMode> Właściwość. W przypadku innych transportów należy utworzyć niestandardowe powiązanie, aby ustawić tryb transferu.  
   
- Decyzja dotycząca użycia buforowanego lub przesyłane strumieniowo transferu jest decyzja lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propagować przez połączenie lub na serwerach i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu klasy klienta dla usługi, możesz edytować plik konfiguracji usługi przeznaczone do użycia w przypadku transferów przesyłane strumieniowo można ustawić trybu. Dla protokołu TCP i rodzajów transportu nazwanego potoku tryb transferu jest propagowany jako potwierdzenie zasad.  
+ Decyzja o użyciu buforowanych lub przesyłanych strumieniowo jest lokalną decyzją punktu końcowego. W przypadku transportów HTTP tryb transferu nie jest propagowany przez połączenie lub do serwerów i innych pośredników. Ustawienie trybu transferu nie jest odzwierciedlone w opisie interfejsu usługi. Po wygenerowaniu klasy klienta dla usługi należy edytować plik konfiguracji usług przeznaczonych do użycia z transferem strumieniowym w celu ustawienia trybu. W przypadku transportów TCP i nazwanych potoków tryb transferu jest propagowany jako potwierdzenie zasad.  
   
- Aby uzyskać przykłady kodu, zobacz [jak: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Aby zapoznać się z przykładami kodu, zobacz [How to: Enable Streaming](how-to-enable-streaming.md).  
   
-## <a name="enabling-asynchronous-streaming"></a>Włączanie asynchronicznego przesyłania strumieniowego  
- Aby włączyć, asynchronicznego przesyłania strumieniowego, Dodaj <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> zachowanie punktu końcowego usługi hosta i ustaw jego <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> właściwość `true`.  
+## <a name="enabling-asynchronous-streaming"></a>Włączanie przesyłania strumieniowego asynchronicznego  
+ Aby włączyć asynchroniczne przesyłanie strumieniowe, Dodaj <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> zachowanie punktu końcowego do hosta usługi i ustaw jego <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> Właściwość na `true` .  
   
- Ta wersja programu WCF również adde możliwości true asynchronicznego przesyłania strumieniowego po stronie wysyłania. Poprawia skalowalność usługi w scenariuszach, gdzie jest strumienia komunikatów do wielu klientów, z których niektóre są powolne podczas odczytu; prawdopodobnie z powodu przeciążenia sieci lub są nie do czytania w ogóle. W tych scenariuszach WCF już nie blokuje określonych wątków w usłudze na klienta. Zapewnia to, że usługa jest w stanie do przetworzenia wiele większej liczby klientów, zwiększając w ten sposób skalowalność usługi.  
+ Ta wersja programu WCF ADDE również możliwość wysyłania strumieniowych asynchronicznie na stronie wysyłającej. Poprawia to skalowalność usługi w scenariuszach, w których przesyła strumieniowo komunikaty do wielu klientów, z których niektóre są wolne do odczytu; prawdopodobnie z powodu przeciążenia sieci lub nie są w ogóle odczytywane. W tych scenariuszach usługa WCF nie blokuje już pojedynczych wątków w usłudze na klienta. Dzięki temu usługa może przetwarzać wielu kolejnych klientów w taki sposób, aby zwiększyć skalowalność usługi.  
   
-## <a name="restrictions-on-streamed-transfers"></a>Ograniczenia dotyczące transferu przesyłane strumieniowo  
- Przy użyciu trybu transferu przesyłane strumieniowo powoduje, że czas uruchomienia wymusić dodatkowe ograniczenia.  
+## <a name="restrictions-on-streamed-transfers"></a>Ograniczenia dotyczące transferów przesyłanych strumieniowo  
+ Użycie trybu transferu strumieniowego powoduje wymuszenie dodatkowych ograniczeń przez czas wykonywania.  
   
- Operacje, które występują w strumieniu transportu może mieć kontrakt co najwyżej jeden wejściowych lub wyjściowych parametr. Ten parametr odnosi się do całej treści komunikatu i musi być <xref:System.ServiceModel.Channels.Message>, pochodne typu <xref:System.IO.Stream>, lub <xref:System.Xml.Serialization.IXmlSerializable> implementacji. Wartość zwracana dla operacji jest odpowiednikiem parametru wyjściowego.  
+ Operacje wykonywane w ramach transportowego przesyłania strumieniowego mogą mieć kontrakt z co najwyżej jednym parametrem wejściowym lub wyjściowym. Ten parametr odnosi się do całej treści wiadomości i musi być <xref:System.ServiceModel.Channels.Message> typem pochodnym <xref:System.IO.Stream> lub <xref:System.Xml.Serialization.IXmlSerializable> implementacją. Posiadanie wartości zwracanej dla operacji jest równoważne z parametrem wyjściowym.  
   
- Niektóre funkcje usługi WCF, takie jak niezawodną obsługę komunikatów, transakcje i zabezpieczenia na poziomie komunikatu protokołu SOAP, zależy od tego, buforowanie wiadomości dla transmisji. Za pomocą tych funkcji może być ograniczenie lub wyeliminowanie zalet wydajności przy użyciu przesyłania strumieniowego. Aby zabezpieczyć przesyłane strumieniowo transportu, tylko zabezpieczenia na poziomie transportu lub zabezpieczenia na poziomie transportu, a także zabezpieczeń wiadomości tylko do uwierzytelniania.  
+ Niektóre funkcje WCF, takie jak niezawodne komunikaty, transakcje i zabezpieczenia na poziomie komunikatów protokołu SOAP, polegają na buforowaniu komunikatów przesyłanych. Korzystanie z tych funkcji może zmniejszyć lub wyeliminować korzyści wynikające z wydajności uzyskane przy użyciu przesyłania strumieniowego. Aby zabezpieczyć strumień przesyłanych strumieniowo, należy używać tylko zabezpieczeń na poziomie transportu lub zabezpieczeń na poziomie transportu oraz zabezpieczeń komunikatów opartych na uwierzytelnianiu.  
   
- Nagłówków protokołu SOAP zawsze są buforowane, nawet wtedy, gdy tryb transferu jest ustawiony na przesyłane strumieniowo. Nagłówki komunikatu nie może przekraczać rozmiaru `MaxBufferSize` przydziału transportu. Aby uzyskać więcej informacji na temat tego ustawienia, zobacz [przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Nagłówki protokołu SOAP są zawsze buforowane, nawet gdy tryb transferu jest ustawiony na przesyłanie strumieniowe. Nagłówki wiadomości nie mogą przekraczać rozmiaru `MaxBufferSize` przydziału transportowego. Aby uzyskać więcej informacji na temat tego ustawienia, zobacz [transport Transports](transport-quotas.md).  
   
-## <a name="differences-between-buffered-and-streamed-transfers"></a>Różnice między buforowanego i przesyłane strumieniowo transferu  
- Tryb transferu z buforowanego do strumieniowego również zmiana kształtu natywnych kanału TCP i transportu nazwanego potoku. Buforowanego transferu jest kształtu kanału natywnych <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. W przypadku transferów przesyłane strumieniowo są natywne kanały <xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel>. Zmienianie trybu transferu w istniejącej aplikacji, która wykorzystuje te służy do transportu bezpośrednio (oznacza to, nie za pośrednictwem umowy serwisowej) wymaga zmiany kształtu kanału oczekiwany dla fabryki kanałów i odbiorników.  
+## <a name="differences-between-buffered-and-streamed-transfers"></a>Różnice między buforowanym i przesyłanym strumieniowo transferem  
+ Zmiana trybu transferu z buforowanego na strumień powoduje także zmianę kształtu kanału natywnego transportów TCP i nazwanego potoku. W przypadku transferów buforowanych kształt kanału natywnego to <xref:System.ServiceModel.Channels.IDuplexSessionChannel> . W przypadku transferów przesyłanych strumieniowo kanały natywne to <xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel> . Zmiana trybu transferu w istniejącej aplikacji, która używa tych transportów bezpośrednio (czyli nie przez kontrakt usługi) wymaga zmiany oczekiwanego kształtu kanału dla fabryk i odbiorników kanałów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Instrukcje: włączanie przesyłania strumieniowego](how-to-enable-streaming.md)

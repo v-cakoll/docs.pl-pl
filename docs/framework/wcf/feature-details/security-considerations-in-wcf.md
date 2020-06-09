@@ -6,39 +6,39 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601039"
 ---
 # <a name="security-considerations-in-wcf"></a>Zagadnienia dotyczące zabezpieczeń w programie WCF
-Tematy w tej sekcji listy różne elementy związane z zabezpieczeniami wziąć pod uwagę podczas projektowania aplikacji Windows Communication Foundation (WCF).  
+W tematach w tej sekcji przedstawiono różne elementy związane z zabezpieczeniami, które należy wziąć pod uwagę podczas projektowania aplikacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- W tym artykule omówiono różne sposoby, czy informacje mogą być ujawniane lub ataku i jak rozwiązać ten problem.  
+ [Ujawnianie informacji](information-disclosure.md)  
+ W tym artykule omówiono różne sposoby, w których informacje mogą być ujawnione lub zaatakowane oraz jak można je złagodzić.  
   
- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- W tym artykule omówiono wpływ udzielenia uprawnień autoryzacji osoba atakująca poza tymi, które początkowo przyznane i jak rozwiązać ten problem.  
+ [Podniesienie uprawnień](elevation-of-privilege.md)  
+ W tym artykule omówiono skutki udzielenia uprawnień autoryzacji osoby atakującej poza tymi, które zostały początkowo przyznane i jak można je złagodzić.  
   
- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- W tym artykule omówiono, co się stanie, gdy system jest w stanie odpowiednio przetwarzania komunikatów i sposobu jego wyeliminowania.  
+ [Odmowa usługi](denial-of-service.md)  
+ W tym artykule omówiono, co się dzieje, gdy system nie może prawidłowo przetwarzać komunikatów i jak można je ograniczyć.  
   
- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  
- W tym artykule omówiono zmiany wiadomości lub dostarczania wiadomości i sposobu jego wyeliminowania.  
+ [Manipulowanie](tampering.md)  
+ W tym artykule omówiono zmiany komunikatów lub dostarczania komunikatów oraz sposób ich ograniczania.  
   
- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- W tym artykule omówiono, co się stanie, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do co najmniej jednej strony i jak rozwiązać ten problem.  
+ [Ataki oparte na metodzie powtórzeń](replay-attacks.md)  
+ W tym artykule omówiono, co się dzieje, gdy osoba atakująca skopiuje strumień komunikatów między dwiema stronami i odtwarza strumień do jednej lub kilku stron, a także jak to zrobić.  
   
- [Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
- W tym artykule omówiono następujące elementy, które dotyczą zabezpieczeń podczas implementowania bezpiecznej sesji.  
+ [Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji](security-considerations-for-secure-sessions.md)  
+ W tym artykule omówiono następujące elementy, które mają wpływ na zabezpieczenia podczas implementowania bezpiecznych sesji.  
   
- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- Wyświetla listę różnych scenariuszy, które nie obsługują danego aspekt zabezpieczeń i należy unikać lub uznawane za.  
+ [Nieobsługiwane scenariusze](unsupported-scenarios.md)  
+ Wyświetla listę różnych scenariuszy, które nie obsługują określonego aspektu zabezpieczeń i należy je unikać lub rozważać.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,8 +48,8 @@ Tematy w tej sekcji listy różne elementy związane z zabezpieczeniami wziąć 
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
+- [Bezpieczeństwo](security.md)

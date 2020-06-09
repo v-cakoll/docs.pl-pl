@@ -2,28 +2,28 @@
 title: Scenariusze obejmujące kanał elementu równorzędnego
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4c24a0bafa4f73760d02de6242a9ed438d7d60e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596880"
 ---
 # <a name="peer-channel-scenarios"></a>Scenariusze obejmujące kanał elementu równorzędnego
-Interfejsy API kanał elementu równorzędnego obsługuje następujące scenariusze programowania.  
+Interfejsy API kanału równorzędnego obsługują następujące scenariusze projektowania.  
   
-## <a name="publicationsubscription-messaging"></a>Komunikatów publikowania/subskrypcji  
- Firmy, którzy tworzą aplikacje publikacji/subskrypcji, (na przykład, giełdowych i wydawców nagłówki wiadomości sportowe wyniki, a następnie raportuje o pogodzie) umożliwia kanał elementu równorzędnego przy użyciu aplikacji bez serwera. Na przykład użytkownicy mogą uzyskać najnowsze wyniki sportowe, dołączając do wspólnego siatki (lub grupy klientów) i propagowanie dużą ilość danych gier — aktualne bez zwiększania obciążenia serwera. Dzięki temu dostawcy danych, aby dać wyższej jakości usługi bez zwiększania znaczne inwestycje w technologie oparte na serwerze.  
+## <a name="publicationsubscription-messaging"></a>Obsługa komunikatów publikacji/subskrypcji  
+ Firmy, które kompilują aplikacje publikacji/subskrypcji (na przykład znaczniki giełdowe i wydawcy nagłówków wiadomości, ocen sportowych i raportów o pogodzie), mogą używać kanału równorzędnego z aplikacjami bez serwera. Na przykład użytkownicy mogą uzyskać najnowsze wyniki sportowe, łącząc wspólną siatkę (lub grupę klientów) i propagując dużą ilość aktualnych danych gry bez zwiększania obciążenia serwera. Dzięki temu dostawca danych może zapewnić wyższą jakość usługi bez znacznego zwiększenia inwestycji w technologie oparte na serwerze.  
   
 ## <a name="collaboration"></a>Współpraca  
- Niezależni dostawcy oprogramowania (ISV) tworzyć aplikacje, które umożliwiają użytkownikom tworzenie grup ścisłej uczestnictwa w działaniach peer-to-peer. Na przykład może to obejmować zespołów pracujących nad projektami współpracy, udostępniania obrazów między znajomych, planowanie innej firmy i nie tylko. Tradycyjnie działania te obejmują zawsze serwerów; Kanał elementu równorzędnego zapewnia jednak sposób to zrobić w sposób bardziej efektywny kosztowo sposób po włączeniu scenariusze dostęp w trybie offline, które nie są równie łatwo, zaimplementowane w modelu tradycyjnym klienta z serwera.  
+ Niezależni dostawcy oprogramowania mogą tworzyć aplikacje, które umożliwiają użytkownikom tworzenie ścisłych grup do udziału w działaniach komunikacji równorzędnej. Na przykład może to dotyczyć zespołów pracujących nad projektami współpracy, udostępniania obrazów między przyjaciółmi, działaniami do planowania stron i innych. Tradycyjnie te działania zawsze obejmują serwery; jednak kanał równorzędny zapewnia możliwość wykonania tego działania w bardziej wydajny sposób, włączając scenariusze dostępu w trybie offline, które nie są tak łatwo implementowane w ramach tradycyjnego modelu serwera i klienta.  
   
-## <a name="distributed-processing-and-compute-clusters"></a>Przetwarzania rozproszonego i klastrach obliczeniowych  
- Klastry obliczeniowe i przetwarzania rozproszonego, są zwykle używane do obliczeń na dużą skalę, na przykład financial/pogoda modelowania i dekodowanie DNA ludzi. Zazwyczaj jest to realizowane przez serwerów osobno przypisuje zadania do wszystkich klientów uczestniczących w danym klastrze obliczeniowym. Te serwery mogą także mieć dodatkowe wymagania; Wszystkie zadania może na przykład, należy wykonać w ramach przez określony czas, wymaga więcej niż jedną maszynę dla każdego zadania. Ponadto jeśli dowolnego klienta, uruchamiając zadanie ulegnie awarii, inny klient musi mieć możliwość przejąć zadania i wykonywania pracy na nim. Podobnie więcej niż jeden może być konieczne uruchomienie tego samego zadania, aby zapewnić spójne wyniki. Mimo że serwery można uruchomić tego rodzaju koordynacji klienta, możesz utworzyć rozwiązanie peer-to-peer, gdzie klientom odbieranie zadania niezależnie określić wymagania dotyczące serwera na zadania i użyj siatki obliczeń, aby określić sposób wykonania tego zadania.  
+## <a name="distributed-processing-and-compute-clusters"></a>Rozproszone przetwarzanie i Klastry obliczeniowe  
+ Klastry obliczeniowe i Przetwarzanie rozproszone są zwykle używane w przypadku obliczeń na dużą skalę, takich jak modelowanie finansowe/Pogoda i dekodowanie ludzkich DNA. Zazwyczaj jest to realizowane przez serwery, które indywidualnie przypisują zadania do wszystkich klientów uczestniczących w klastrze obliczeniowym. Te serwery mogą także mieć dodatkowe wymagania; na przykład wszystkie zadania mogą wymagać wykonania w określonym czasie, co wymaga więcej niż jednego komputera dla każdego zadania. Ponadto, jeśli jakikolwiek klient z uruchomionym zadaniem zostanie wyłączony, inny klient musi mieć możliwość przejęcia tego zadania i wykonania na nim pracy. Podobnie więcej niż jeden klient może być konieczne do uruchomienia tego samego zadania w celu zapewnienia spójnych wyników. Chociaż serwery programu mogą uruchamiać ten typ koordynacji klienta, można utworzyć rozwiązanie równorzędne, w którym klienci otrzymujący zadanie niezależnie określają wymagania dotyczące serwera i używają siatki obliczeniowej, aby określić, jak wykonać to zadanie.  
   
 ## <a name="gaming"></a>Gry  
- Za pomocą kanału równorzędnego, deweloperzy aplikacji można tworzyć wersje bez serwera grą, gdzie przesyłane do gier przenosi i synchronizowane z innymi osobami przez mechanizm peer-to-peer, a nie za pomocą serwera centralnego. Dla małych niezależnych dostawców oprogramowania dzięki temu, Usuń kosztów operacyjnych związanych z wdrażania i obsługi centralne serwery oraz obsługi. Gry napisane przy użyciu architektury peer-to-peer mogą być odtwarzane w Internecie lub w sieci przewodowej lub bezprzewodowej sieci lokalnej. Działań dodatkowej gier, takich jak targach i rozmowy w grze mogą być tworzone przy użyciu sieci peer-to-peer.  
+ Korzystając z kanału równorzędnego, deweloperzy aplikacji mogą tworzyć w swoich grach wersje bez serwerów, w których gra jest przenoszona i synchronizowana z innymi graczami przez mechanizm komunikacji równorzędnej, a nie za pośrednictwem serwera centralnego. W przypadku małych niezależnych dostawców oprogramowania pomaga to wyeliminować koszty operacyjne związane z wdrażaniem, konserwacją i obsługą serwerów centralnych. Gry przeznaczone do korzystania z architektury peer-to-peer mogą być odtwarzane przez Internet lub w sieciach lokalnych sieci przewodowych lub bezprzewodowych. Dodatkowe działania dotyczące gier, takie jak lobby i rozmowa w grach, można opracowywać przy użyciu sieci równorzędnej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Pojęcia kanałów równorzędnych](peer-channel-concepts.md)

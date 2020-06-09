@@ -2,37 +2,37 @@
 title: Rozwiązywanie problemów z aplikacją za pomocą śledzenia
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78280a399c3490afb0dd2293c60b58d9d00fc228
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587641"
 ---
-# <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="0c2aa-102">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="0c2aa-102">Using Tracing to Troubleshoot Your Application</span></span>
-<span data-ttu-id="0c2aa-103">Ta sekcja zawiera różne tematy, które opisują, jak umożliwia śledzenie rozwiązywać problemy z aplikacją.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  
+# <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="0c813-102">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="0c813-102">Using Tracing to Troubleshoot Your Application</span></span>
+<span data-ttu-id="0c813-103">Ta sekcja zawiera różne tematy opisujące, jak można użyć śledzenia w celu rozwiązywania problemów z aplikacją.</span><span class="sxs-lookup"><span data-stu-id="0c813-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0c2aa-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="0c2aa-104">In This Section</span></span>  
- [<span data-ttu-id="0c2aa-105">Zalecane ustawienia śledzenia i rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="0c2aa-105">Recommended Settings for Tracing and Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
- <span data-ttu-id="0c2aa-106">W tym artykule opisano sugerowane ustawienia dla środowiska produkcyjnego i debugowania środowiska.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-106">Describes suggested settings for production and debugging environments.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0c813-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="0c813-104">In This Section</span></span>  
+ [<span data-ttu-id="0c813-105">Zalecane ustawienia śledzenia i rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="0c813-105">Recommended Settings for Tracing and Message Logging</span></span>](recommended-settings-for-tracing-and-message-logging.md)  
+ <span data-ttu-id="0c813-106">Opisuje sugerowane ustawienia środowisk produkcyjnych i debugowania.</span><span class="sxs-lookup"><span data-stu-id="0c813-106">Describes suggested settings for production and debugging environments.</span></span>  
   
- [<span data-ttu-id="0c2aa-107">Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów</span><span class="sxs-lookup"><span data-stu-id="0c2aa-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- <span data-ttu-id="0c2aa-108">W tym artykule opisano, jak można użyć narzędzia przeglądarki danych śledzenia usługi do wyświetlania, korelowanie i analizowanie danych śledzenia.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-108">Describes how you can use the Service Trace Viewer tool to view, correlate and analyze trace data.</span></span>  
+ [<span data-ttu-id="0c813-107">Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów</span><span class="sxs-lookup"><span data-stu-id="0c813-107">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ <span data-ttu-id="0c813-108">Opisuje, jak można użyć narzędzia Podgląd śledzenia usług do wyświetlania, skorelowania i analizowania danych śledzenia.</span><span class="sxs-lookup"><span data-stu-id="0c813-108">Describes how you can use the Service Trace Viewer tool to view, correlate and analyze trace data.</span></span>  
   
- [<span data-ttu-id="0c2aa-109">Ważne ślady</span><span class="sxs-lookup"><span data-stu-id="0c2aa-109">Significant Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- <span data-ttu-id="0c2aa-110">Lista głównych danych śledzenia emitowane przez architekturę WCF.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-110">A list of major traces emitted by WCF.</span></span>  
+ [<span data-ttu-id="0c813-109">Ważne ślady</span><span class="sxs-lookup"><span data-stu-id="0c813-109">Significant Traces</span></span>](significant-traces.md)  
+ <span data-ttu-id="0c813-110">Lista głównych śladów emitowanych przez program WCF.</span><span class="sxs-lookup"><span data-stu-id="0c813-110">A list of major traces emitted by WCF.</span></span>  
   
- [<span data-ttu-id="0c2aa-111">Debugowanie na kliencie</span><span class="sxs-lookup"><span data-stu-id="0c2aa-111">Debugging on the Client</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
- <span data-ttu-id="0c2aa-112">Umożliwia klientom w celu debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-112">Enables clients to debug your application.</span></span>  
+ [<span data-ttu-id="0c813-111">Debugowanie na kliencie</span><span class="sxs-lookup"><span data-stu-id="0c813-111">Debugging on the Client</span></span>](debugging-on-the-client.md)  
+ <span data-ttu-id="0c813-112">Umożliwia klientom debugowanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0c813-112">Enables clients to debug your application.</span></span>  
   
- [<span data-ttu-id="0c2aa-113">Scenariusze kompleksowego śledzenia</span><span class="sxs-lookup"><span data-stu-id="0c2aa-113">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- <span data-ttu-id="0c2aa-114">Opisuje ślady używany w scenariuszach E2E WCF, na przykład, żądanie wsHttp synchronicznej odpowiedzi i jednokierunkowe żądań asynchronicznych TCP.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-114">Describes traces used for E2E WCF scenarios, for example, synchronous wsHttp request-replies, and asynchronous TCP one-way requests.</span></span>  
+ [<span data-ttu-id="0c813-113">Scenariusze kompleksowego śledzenia</span><span class="sxs-lookup"><span data-stu-id="0c813-113">End-To-End Tracing Scenarios</span></span>](end-to-end-tracing-scenarios.md)  
+ <span data-ttu-id="0c813-114">Opisuje ślady używane w scenariuszach WCF E2E, na przykład synchroniczne odpowiedzi na żądania wsHttp i asynchroniczne żądania protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="0c813-114">Describes traces used for E2E WCF scenarios, for example, synchronous wsHttp request-replies, and asynchronous TCP one-way requests.</span></span>  
   
- [<span data-ttu-id="0c2aa-115">Emitowanie danych śledzenia elementu User-Code</span><span class="sxs-lookup"><span data-stu-id="0c2aa-115">Emitting User-Code Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
- <span data-ttu-id="0c2aa-116">Opisuje sposób emitowanie danych śledzenia w kodzie użytkownika, tak, aby aktywnie można utworzyć danych instrumentacji do użycia później w celu diagnostyki i w korelacji ze śledzenia WCF.</span><span class="sxs-lookup"><span data-stu-id="0c2aa-116">Describes how to emit traces programmatically in user code, so that you can proactively create instrumentation data to be used later for diagnostic purpose, and in correlation with WCF traces.</span></span>  
+ [<span data-ttu-id="0c813-115">Emitowanie danych śledzenia elementu User-Code</span><span class="sxs-lookup"><span data-stu-id="0c813-115">Emitting User-Code Traces</span></span>](emitting-user-code-traces.md)  
+ <span data-ttu-id="0c813-116">Opisuje sposób programowego emitowania śladów w kodzie użytkownika, dzięki czemu można aktywnie tworzyć dane instrumentacji, które będą używane później do celów diagnostycznych, oraz w korelacji z śladami WCF.</span><span class="sxs-lookup"><span data-stu-id="0c813-116">Describes how to emit traces programmatically in user code, so that you can proactively create instrumentation data to be used later for diagnostic purpose, and in correlation with WCF traces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c2aa-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0c2aa-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c813-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0c813-117">See also</span></span>
 
-- [<span data-ttu-id="0c2aa-118">Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="0c2aa-118">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [<span data-ttu-id="0c2aa-119">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="0c2aa-119">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="0c2aa-120">Kompleksowe śledzenie</span><span class="sxs-lookup"><span data-stu-id="0c2aa-120">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [<span data-ttu-id="0c813-118">Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="0c813-118">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../service-trace-viewer-tool-svctraceviewer-exe.md)
+- [<span data-ttu-id="0c813-119">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="0c813-119">Tracing</span></span>](index.md)
+- [<span data-ttu-id="0c813-120">Kompleksowe śledzenie</span><span class="sxs-lookup"><span data-stu-id="0c813-120">End-to-End Tracing</span></span>](end-to-end-tracing.md)

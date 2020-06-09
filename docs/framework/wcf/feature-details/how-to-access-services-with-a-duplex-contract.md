@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego'
+title: 'Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dupleksowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597218"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dupleksowego
 
-Jedna z funkcji Windows Communication Foundation (WCF) jest możliwość tworzenia to usługa, która używa dwukierunkowego wzorzec przesyłania komunikatów dotyczących. Ten wzorzec umożliwia użycie usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki umożliwiające utworzenie klienta WCF w klasie klienta, który implementuje interfejs wywołania zwrotnego.
+Jedną z funkcji programu Windows Communication Foundation (WCF) jest możliwość tworzenia usługi korzystającej ze wzorca obsługi komunikatów dupleksowych. Ten wzorzec umożliwia usłudze komunikowanie się z klientem za pomocą wywołania zwrotnego. W tym temacie przedstawiono procedurę tworzenia klienta WCF w klasie klienta implementującej interfejs wywołania zwrotnego.
 
-Podwójna powiązania udostępnia adres IP klienta do usługi. Klienta należy użyć zabezpieczeń, aby upewnić się, że nawiąże połączenie tylko z usługami jej relacji zaufania.
+Podwójne powiązanie uwidacznia adres IP klienta w usłudze. Klient powinien używać zabezpieczeń, aby upewnić się, że nawiązuje połączenie tylko z usługami, które ufają.
 
-Aby uzyskać samouczek dotyczący tworzenia podstawowe usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../../docs/framework/wcf/getting-started-tutorial.md).
+Aby zapoznać się z samouczkiem dotyczącym tworzenia podstawowej usługi i klienta WCF, zobacz [samouczek wprowadzenie](../getting-started-tutorial.md).
 
-## <a name="to-access-a-duplex-service"></a>Dostęp do usługi dwukierunkowe
+## <a name="to-access-a-duplex-service"></a>Aby uzyskać dostęp do usługi dupleksowej
 
-1. Utwórz usługę, która zawiera dwa interfejsy. Pierwszy interfejs dla usługi, druga jest przeznaczona dla wywołania zwrotnego. Aby uzyskać więcej informacji na temat tworzenia usługi duplex, zobacz [jak: Tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
+1. Utwórz usługę, która zawiera dwa interfejsy. Pierwszy interfejs dotyczy usługi, a drugi jest dla wywołania zwrotnego. Aby uzyskać więcej informacji na temat tworzenia usługi dupleksowej, zobacz [How to: Create a Duplex kontraktu](how-to-create-a-duplex-contract.md).
 
 2. Uruchom usługę.
 
-3. Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania zamówień (interfejsy) dla klienta. Aby dowiedzieć się, jak to zrobić, zobacz [jak: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+3. Użyj [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania kontraktów (interfejsów) dla klienta. Aby uzyskać informacje o tym, jak to zrobić, zobacz [How to: Create a Client](../how-to-create-a-wcf-client.md).
 
-4. Implementuje interfejs wywołania zwrotnego w klasie klienta, jak pokazano w poniższym przykładzie.
+4. Zaimplementuj interfejs wywołania zwrotnego w klasie Client, jak pokazano w poniższym przykładzie.
 
     ```csharp
     public class CallbackHandler : ICalculatorDuplexCallback
@@ -68,7 +68,7 @@ Aby uzyskać samouczek dotyczący tworzenia podstawowe usługi i klienta WCF, zo
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. Utwórz wystąpienie obiektu klienta WCF, za pomocą konstruktora, który wymaga <xref:System.ServiceModel.InstanceContext> obiektu. Drugi parametr konstruktora jest nazwa punktu końcowego w pliku konfiguracji.
+6. Utwórz wystąpienie klienta WCF przy użyciu konstruktora wymagającego <xref:System.ServiceModel.InstanceContext> obiektu. Drugim parametrem konstruktora jest nazwa punktu końcowego znajdującego się w pliku konfiguracji.
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -78,19 +78,19 @@ Aby uzyskać samouczek dotyczący tworzenia podstawowe usługi i klienta WCF, zo
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. Wywołanie metody klienta WCF, zgodnie z potrzebami.
+7. Wywołaj metody klienta WCF zgodnie z wymaganiami.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, jak utworzyć klasę klienta, który uzyskuje dostęp do kontraktu dwukierunkowego.
+Poniższy przykład kodu demonstruje sposób tworzenia klasy klienta, która uzyskuje dostęp do kontraktu dupleksowego.
 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Instrukcje: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Instrukcje: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Wprowadzenie — samouczek](../getting-started-tutorial.md)
+- [Instrukcje: tworzenie kontraktu dwukierunkowego](how-to-create-a-duplex-contract.md)
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Instrukcje: tworzenie klienta](../how-to-create-a-wcf-client.md)
+- [Instrukcje: używanie elementu ChannelFactory](how-to-use-the-channelfactory.md)

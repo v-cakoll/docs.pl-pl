@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579115"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -26,13 +26,13 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest skoja
 
 Udostępnienie składowej klasy lub struktury sprawia, że jest ona dostępna dla każdego wystąpienia, a nie jako *nieudostępnione*, gdzie każde wystąpienie zachowuje własną kopię. Jest to przydatne, na przykład jeśli wartość zmiennej dotyczy całej aplikacji. Jeśli ta zmienna jest zadeklarowana `Shared` , wszystkie wystąpienia uzyskują dostęp do tej samej lokalizacji magazynu, a jeśli jedno wystąpienie zmieni wartość zmiennej, wszystkie wystąpienia uzyskują dostęp do zaktualizowanej wartości.
 
-Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykład element członkowski klasy może być współużytkowany i prywatny (dostępny tylko w ramach klasy) lub nieudostępniony i publiczny. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykład element członkowski klasy może być współużytkowany i prywatny (dostępny tylko w ramach klasy) lub nieudostępniony i publiczny. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Reguły
 
 - **Kontekst deklaracji.** Można używać `Shared` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji dla `Shared` elementu musi być klasą lub strukturą i nie może być plikiem źródłowym, przestrzenią nazw ani procedurą.
 
-- **Połączone modyfikatory.** Nie można określić `Shared` razem z [zastąpień](../../../visual-basic/language-reference/modifiers/overrides.md), [zastąpienia](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)lub [static](../../../visual-basic/language-reference/modifiers/static.md) w tej samej deklaracji.
+- **Połączone modyfikatory.** Nie można określić `Shared` razem z [zastąpień](overrides.md), [zastąpienia](overridable.md), [NotOverridable](notoverridable.md), [MustOverride](mustoverride.md)lub [static](static.md) w tej samej deklaracji.
 
 - **Korzystając.** Dostęp do elementu udostępnionego można uzyskać, uprawniając do jego nazwy klasy lub struktury, a nie nazwy zmiennej określonego wystąpienia jego klasy lub struktury. Nie trzeba nawet utworzyć wystąpienia klasy lub struktury, aby uzyskać dostęp do jego udostępnionych elementów członkowskich.
 
@@ -42,7 +42,7 @@ Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykł
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **Niejawne udostępnianie.** Nie można użyć `Shared` modyfikatora w [instrukcji const](../../../visual-basic/language-reference/statements/const-statement.md), ale stałe są niejawnie udostępnione. Podobnie nie można zadeklarować elementu członkowskiego modułu lub interfejsu jako `Shared` , ale są one niejawnie udostępnione.
+- **Niejawne udostępnianie.** Nie można użyć `Shared` modyfikatora w [instrukcji const](../statements/const-statement.md), ale stałe są niejawnie udostępnione. Podobnie nie można zadeklarować elementu członkowskiego modułu lub interfejsu jako `Shared` , ale są one niejawnie udostępnione.
 
 ## <a name="behavior"></a>Zachowanie
 

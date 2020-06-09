@@ -2,20 +2,20 @@
 title: Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
-ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07743795effd3da9a241fd778756dd92d99d78f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596789"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web
-Jeśli korzystanie z zabezpieczeń komunikatów WCF zapobiega atakom metodą powtórzeń, tworząc JEDNORAZOWEGO poza komunikatu przychodzącego i sprawdzanie wewnętrzny `InMemoryNonceCache` czy wygenerowany identyfikator JEDNORAZOWY jest obecny. Jeśli tak jest, komunikat zostanie odrzucony jako powtarzania. Po usługi WCF jest hostowana na farmie sieci web ponieważ `InMemoryNonceCache` nie jest udostępniany między węzłami w farmie sieci web, usługa jest narażony na ataki.  Aby uniknąć tego scenariusza WCF 4.5 zapewnia punkt rozszerzalności, która pozwala na implementowanie własnych udostępnionej pamięci podręcznej JEDNORAZOWEGO przez wyprowadzanie klasy z klasy abstrakcyjnej <xref:System.ServiceModel.Security.NonceCache>.  
+W przypadku korzystania z usługi WCF w celu zabezpieczenia komunikatów Zapobiegaj atakom metodą powtórzeń, tworząc identyfikator JEDNORAZOWy komunikatu przychodzącego i sprawdzając, `InMemoryNonceCache` czy wygenerowany identyfikator jednorazowy jest obecny. Jeśli tak jest, komunikat zostanie odrzucony jako odtwarzany. Gdy usługa WCF jest hostowana w kolektywie serwerów sieci Web, ponieważ `InMemoryNonceCache` nie jest ona współdzielona przez węzły w kolektywie serwerów sieci Web, usługa jest narażona na ataki metodą powtórzeń.  Aby wyeliminować ten scenariusz, środowisko WCF 4,5 zapewnia punkt rozszerzalności, który umożliwia zaimplementowanie własnej udostępnionej pamięci podręcznej NONCE przez wyjęcie klasy z klasy abstrakcyjnej <xref:System.ServiceModel.Security.NonceCache> .  
   
 ## <a name="noncecache-implementation"></a>Implementacja NonceCache  
- Aby zaimplementować własną udostępnionej pamięci podręcznej (tymczasowo), należy wyprowadzić klasę z <xref:System.ServiceModel.Security.NonceCache> i zastąpić <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> i <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> metody. <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> sprawdza, czy określony identyfikator JEDNORAZOWY istnieje w pamięci podręcznej. <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> spróbuje dodać identyfikatora JEDNORAZOWEGO do pamięci podręcznej. Po zaimplementowaniu tej klasy można dołączyć go instancji, i przypisz go do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> wykrywania powtarzania dla klienta i <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> wykrywania powtarzania po stronie serwera. Nie ma żadnych poza wbudowanej obsługi konfiguracji dla tej funkcji.  
+ W celu zaimplementowania własnej udostępnionej pamięci podręcznej NONCE należy utworzyć klasę z <xref:System.ServiceModel.Security.NonceCache> i zastąpić <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> metody i. <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A>sprawdzi, czy określony identyfikator JEDNORAZOWy istnieje w pamięci podręcznej. <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>spróbuje dodać identyfikator JEDNORAZOWy do pamięci podręcznej. Po zaimplementowaniu klasy należy ją podłączyć, tworząc wystąpienie wystąpienia i przypisując je do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> wykrywania powtarzania po stronie klienta oraz <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> do wykrywania powtarzania po stronie serwera. Ta funkcja nie zawiera żadnej z dostępnych konfiguracji usługi Box.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)
+- [Zabezpieczenia komunikatów](message-security-in-wcf.md)
+- [SymmetricSecurityBindingElement](../diagnostics/wmi/symmetricsecuritybindingelement.md)

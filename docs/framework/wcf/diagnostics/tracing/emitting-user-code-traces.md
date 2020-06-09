@@ -2,22 +2,22 @@
 title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589295"
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 
-Oprócz włączenia śledzenia w konfiguracji, aby zebrać dane Instrumentacji wygenerowane przez Windows Communication Foundation (WCF), można również wysyłać ślady programowo w kodzie użytkownika. W ten sposób można utworzyć z wyprzedzeniem danych instrumentacji, które można przejrzeć w dalszej części w celu diagnostyki. W tym temacie omówiono, jak to zrobić.
+Oprócz włączania śledzenia w konfiguracji w celu zbierania danych Instrumentacji generowanych przez Windows Communication Foundation (WCF), można również emitować dane śledzenia programowo w kodzie użytkownika. W ten sposób można aktywnie tworzyć dane instrumentacji, które można zapoznania później do celów diagnostycznych. W tym temacie omówiono, jak to zrobić.
 
-Ponadto [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md) przykład obejmuje cały kod, przedstawione w poniższych sekcjach.
+Ponadto [rozszerzanie](../../samples/extending-tracing.md) przykładu śledzenia obejmuje cały kod zademonstrowany w poniższych sekcjach.
 
 ## <a name="creating-a-trace-source"></a>Tworzenie źródła śledzenia
 
-Poniższy kod służy do utworzenia źródła śledzenia użytkowników.
+Możesz użyć poniższego kodu, aby utworzyć źródło śledzenia użytkownika.
 
 ```csharp
 TraceSource ts = new TraceSource("myUserTraceSource");
@@ -25,15 +25,15 @@ TraceSource ts = new TraceSource("myUserTraceSource");
 
 ## <a name="creating-activities"></a>Tworzenie działań
 
-Działania to jednostka logiczna przetwarzania. Możesz utworzyć jedno działanie, dla każdej jednostki główne przetwarzania, w którym chcesz śladów, aby być zgrupowane razem. Na przykład można utworzyć jedno działanie dla każdego żądania do usługi. Aby to zrobić, wykonaj następujące czynności.
+Działania są logiczną jednostką przetwarzania. Można utworzyć jedno działanie dla każdej głównej jednostki przetwarzania, w której mają być zgrupowane dane śledzenia. Na przykład można utworzyć jedno działanie dla każdego żądania do usługi. Aby to zrobić, wykonaj następujące czynności.
 
 1. Zapisz identyfikator działania w zakresie.
 
 2. Utwórz nowy identyfikator działania.
 
-3. Transfer z działania w zakresie na nową, Ustaw nowe działanie w zakresie i emitować Rozpocznij śledzenie dla tego działania.
+3. Przenieś z działania w zakresie do nowego, Ustaw nowe działanie w zakresie i Emituj śledzenie uruchamiania dla tego działania.
 
-Poniższy kod pokazuje, jak to zrobić.
+Poniższy kod demonstruje, jak to zrobić.
 
 ```csharp
 Guid oldID = Trace.CorrelationManager.ActivityId;
@@ -43,9 +43,9 @@ Trace.CorrelationManager.ActivityId = traceID; // Trace is static
 ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ```
 
-## <a name="emitting-traces-within-a-user-activity"></a>Emitowanie danych śledzenia w aktywność użytkownika
+## <a name="emitting-traces-within-a-user-activity"></a>Emitowanie śladów w działaniu użytkownika
 
-Poniższy kod generuje ślady wewnątrz działania użytkownika.
+Poniższy kod emituje ślady w działaniu użytkownika.
 
 ```csharp
 double value1 = 100.00D;
@@ -55,11 +55,11 @@ double result = client.Add(value1, value2);
 ts.TraceInformation("Client receives Add response '" + result + "'");
 ```
 
-## <a name="stopping-the-activities"></a>Zatrzymywanie działania
+## <a name="stopping-the-activities"></a>Zatrzymywanie działań
 
-Aby zatrzymać działania, transfer powrót do starych działań, Zatrzymaj bieżący identyfikator działania i zresetować stary identyfikator działania w zakresie.
+Aby zatrzymać działania, prześlij ponownie do starego działania, Zatrzymaj bieżący identyfikator działania i zresetuj stary identyfikator działania w zakresie.
 
-Poniższy kod pokazuje, jak to zrobić.
+Poniższy kod demonstruje, jak to zrobić.
 
 ```csharp
 ts.TraceTransfer(0, "transfer", oldID);
@@ -67,14 +67,14 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add request");
 Trace.CorrelationManager.ActivityId = oldID;
 ```
 
-## <a name="propagating-the-activity-id-to-a-service"></a>Propagowanie identyfikator działania usługi
+## <a name="propagating-the-activity-id-to-a-service"></a>Propagowanie identyfikatora działania do usługi
 
-Jeśli ustawisz `propagateActivity` atrybutu `true` dla `System.ServiceModel` plików źródła śledzenia w konfiguracji klienta i usługi, usługi przetwarzania dla żądania Dodaj odbywa się w tym samym działaniu, jak ten zdefiniowany w obiekcie klienta. Jeśli usługa definiuje własne działania i transferu danych śledzenia usługi nie są wyświetlane w działaniu propagowane przez klienta. Zamiast tego są wyświetlane w działaniu Skorelowane przez ślady transferu do działania, których identyfikator jest propagowany przez klienta.
+Jeśli ustawisz `propagateActivity` atrybut na `true` dla `System.ServiceModel` źródła śledzenia zarówno w pliku konfiguracji klienta, jak i usługi, przetwarzanie usługi dla żądania Add będzie odbywać się w tym samym działaniu jak w przypadku tego, co zostało zdefiniowane w kliencie. Jeśli usługa definiuje własne działania i transfery, ślady usług nie są wyświetlane w działaniu propagowanym przez klienta. Zamiast tego pojawiają się one w działaniu skorelowanym przez dane śledzenia przeniesienia do działania, którego identyfikator jest propagowany przez klienta.
 
 > [!NOTE]
-> Jeśli `propagateActivity` ma ustawioną wartość atrybutu `true` na klienta i usługi, działania otoczenia w zakresie operacji usługi jest ustawiana przez architekturę WCF.
+> Jeśli `propagateActivity` atrybut jest ustawiony na `true` zarówno dla klienta, jak i usługi, działanie otoczenia w zakresie operacji usługi jest ustawiane przez funkcję WCF.
 
-Poniższy kod służy do sprawdzenia, czy działanie zostało ustawione w zakresie przez architekturę WCF.
+Można użyć poniższego kodu, aby sprawdzić, czy działanie zostało ustawione w zakresie przez WCF.
 
 ```csharp
 // Check if an activity was set in scope by WCF, if it was
@@ -101,54 +101,54 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 
 ## <a name="tracing-exceptions-thrown-in-code"></a>Śledzenie wyjątków zgłoszonych w kodzie
 
-Gdy zgłoszenie wyjątku w kodzie, można również śledzenia wyjątków na poziomie ostrzeżenia lub przy użyciu następującego kodu.
+Gdy zgłaszasz wyjątek w kodzie, możesz również śledzić wyjątek na poziomie ostrzeżenia lub przy użyciu następującego kodu.
 
 ```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");
 ```
 
-## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Wyświetlanie śladów użytkownika w narzędziu Podgląd śledzenia usługi
+## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Wyświetlanie śladów użytkowników w narzędziu Podgląd śledzenia usługi
 
-Ta sekcja zawiera zrzuty ekranu przedstawiające śledzenie wygenerowane przez uruchomienie [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md) przykładowy, gdy wyświetlany w przeglądarce [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).
+Ta sekcja zawiera zrzuty ekranu śledzenia wygenerowane przez uruchomienie przykładowego [śledzenia](../../samples/extending-tracing.md) , gdy jest wyświetlany za pomocą [narzędzia Podgląd śledzenia usług (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-Na poniższym diagramie aktywności "Dodaj żądanie" utworzony wcześniej wybranego na lewym panelu. Jest ona wyświetlana z trzech innych matematycznych operacji działań (dzielenie, odejmowanie, mnożenie) wchodzących w skład programu klienckiego aplikacji. Kod użytkownika został zdefiniowany jeden nowe działanie dla każdej operacji do izolowania potencjalnych wystąpienia błędów w innych żądań.
+Na poniższym diagramie jest zaznaczone działanie "Dodaj żądanie" utworzone wcześniej w panelu po lewej stronie. Jest on wyświetlany na trzy inne działania operacji matematycznych (dzielenie, odejmowanie, mnożenie) stanowiące program klienta aplikacji. Kod użytkownika definiuje jedno nowe działanie dla każdej operacji, aby odizolować potencjalne wystąpienia błędów w różnych żądaniach.
 
-Aby zademonstrować użycie transfery [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md) próbki, działanie Kalkulator, który hermetyzuje żądania operacji cztery tworzona jest również. Dla każdego żądania jest transferu i z powrotem z działania kalkulatora działania żądania (śledzenia jest wyróżniony w górnym prawym panelu na rysunku).
+Aby zademonstrować użycie transferów w przykładzie [Rozszerzanie śledzenia](../../samples/extending-tracing.md) , tworzone jest również działanie kalkulatora, które hermetyzuje cztery żądania operacji. Dla każdego żądania istnieje transfer z powrotem i z działania kalkulatora do działania żądania (Trace jest wyróżniony w prawym górnym panelu na rysunku).
 
-Po wybraniu do działania w lewym panelu, ślady dołączane przez to działanie są wyświetlane w prawym górnym panelu. Jeśli `propagateActivity` jest `true` w każdym punkcie końcowym ścieżki żądania są ślady w działaniu żądania od wszystkich procesów, które uczestniczą w żądaniu. W tym przykładzie widać śladów od klienta i usługi w kolumnie 4. w panelu.
+Po wybraniu działania w lewym panelu ślady zawarte w tym działaniu są wyświetlane w prawym górnym panelu. Jeśli `propagateActivity` jest w `true` każdym punkcie końcowym w ścieżce żądania, ślady w działaniu żądania pochodzą ze wszystkich procesów, które uczestniczą w żądaniu. W tym przykładzie można zobaczyć ślady zarówno klienta, jak i usługi w czwartej kolumnie panelu.
 
-To działanie pokazano w następującej kolejności przetwarzania:
+To działanie pokazuje następującą kolejność przetwarzania:
 
 1. Klient wysyła komunikat do dodania.
 
-2. Usługa odbiera komunikat żądania Dodaj.
+2. Usługa otrzymuje komunikat żądania dodania.
 
-3. Dodaj odpowiedzi wysyłane przez usługę.
+3. Usługa wysyła odpowiedź na dodanie.
 
-4. Klient odbiera odpowiedź Dodaj.
+4. Klient otrzymuje odpowiedź na dodanie.
 
-Ślady te zostały emitowane na poziomie informacji. Klikając śledzenia w prawym górnym rogu panelu zawiera szczegółowe informacje o tym śledzenia w dolnym prawym panelu.
+Wszystkie te ślady zostały emitowane na poziomie informacji. Kliknięcie śladu w prawym górnym okienku powoduje wyświetlenie szczegółów tego śladu w prawym dolnym panelu.
 
-Na poniższym diagramie Widzimy również ślady transferu, od i do działania Kalkulatora, a także dwie pary uruchomienia i zatrzymania śledzenia na działanie żądania: jeden dla klienta, a drugi dla usługi, (po jednym dla każdego źródła śledzenia).
+Na poniższym diagramie przedstawiono również dane śledzenia transferu z i do działania kalkulatora, a także dwie pary uruchamiania i zatrzymywania śledzenia na żądanie, jeden dla klienta i jeden dla usługi (po jednym dla każdego źródła śledzenia).
 
-![Przeglądarki danych śledzenia: Emitowanie użytkownika&#45;kodu ślady](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") listę działań w oparciu o czas utworzenia (panelu po lewej stronie) oraz ich zagnieżdżonych działania (w prawym górnym rogu panelu)
+![Podgląd śledzenia: emitowanie śladów kodu&#45;użytkownika](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") Lista działań według czasu utworzenia (lewy panel) i ich działań zagnieżdżonych (Panel w prawym górnym rogu)
 
-Jeśli kod usługi zgłasza wyjątek, który powoduje, że klient throw również (na przykład, gdy klient nie uzyskano odpowiedź na żądanie), w tym samym działaniu dla bezpośrednia korelacja wystąpić, zarówno usługi i klienta, ostrzeżenie lub komunikaty o błędach. Na poniższej ilustracji usługa zgłasza wyjątek informacją "Usługa odmówi przetworzenia tego żądania, w kodzie użytkownika." Klient również zgłasza wyjątek, informacją "serwer nie może przetworzyć żądania z powodu błędu wewnętrznego."
+Jeśli kod usługi zgłasza wyjątek, który powoduje, że klient może zgłosić się również (na przykład gdy klient nie otrzymał odpowiedzi na żądanie), zarówno ostrzeżenie usługi, jak i komunikaty o błędach są wykonywane w tym samym działaniu dla bezpośredniej korelacji. Na poniższej ilustracji usługa zgłasza wyjątek informujący o tym, że usługa odmówi, aby przetworzyć to żądanie w kodzie użytkownika ". Klient zgłasza również wyjątek informujący o tym, że serwer nie może przetworzyć żądania z powodu błędu wewnętrznego. "
 
-Następujące obrazy pokazuje, czy błędy w obrębie punktów końcowych dla danego żądania są wyświetlane w tym samym działaniu, jeśli identyfikator działania żądania został rozpropagowany:
+Poniższe obrazy pokazują, że błędy między punktami końcowymi danego żądania pojawiają się w tym samym działaniu, jeśli identyfikator działania żądania został rozpropagowany:
 
-![Zrzut ekranu pokazujący błędy w obrębie punktów końcowych dla danego żądania.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![Zrzut ekranu pokazujący błędy w punktach końcowych dla danego żądania.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
-Dwukrotne kliknięcie wielokrotnie działania na lewym panelu pokazuje kolejnym wykresie ślady mnożenia działanie dla każdego procesu, które są zaangażowani. Można zauważyć, że najpierw wystąpiło ostrzeżenie w punkcie usług (wystąpienie wyjątku), który następuje ostrzeżeń i błędów na komputerze klienckim, ponieważ nie można przetworzyć żądania. Dlatego firma Microsoft oznaczać błąd przyczynowego relacji między punktami końcowymi i pochodzić główną przyczynę tego błędu.
+Dwukrotne kliknięcie w lewym panelu działania operacji pomnóż powoduje wyświetlenie poniższego wykresu z śladami działania pomnożenie dla każdego procesu. Zobaczysz ostrzeżenie podczas pierwszego wystąpienia usługi (zgłoszono wyjątek), po którym następuje ostrzeżenia i błędy na kliencie, ponieważ nie można przetworzyć żądania. W związku z tym możemy oznaczać relację błędu przyczynowego między punktami końcowymi i utworzyć główną przyczynę błędu.
 
-Na poniższej ilustracji przedstawiono widok wykresu korelacji błąd:
+Na poniższej ilustracji przedstawiono widok wykresu korelacji błędów:
 
-![Zrzut ekranu pokazujący widoku wykresu korelacji błędu.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![Zrzut ekranu pokazujący widok wykresu korelacji błędów.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-Uzyskanie ślady poprzedniego, ustawiliśmy `ActivityTracing` dla źródła śledzenia użytkowników i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Firma Microsoft nie ustawiła prawidłowo `ActivityTracing` dla `System.ServiceModel` źródła śledzenia, aby włączyć kod użytkownika do propagowania działań kodu użytkownika. (Gdy ServiceModel działania śledzenia jest włączona, identyfikator działania zdefiniowane w obiekcie klienta nie są propagowane do kodu użytkownika usługi; Transfery, jednak skorelować działaniach kodu użytkownika klienta i usługi pośrednie działań usługi WCF.)
+Aby uzyskać poprzednie dane śledzenia, należy ustawić `ActivityTracing` dla źródeł śledzenia użytkownika i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Nie ustawiono `ActivityTracing` `System.ServiceModel` źródła śledzenia, aby umożliwić propagację działania kodu użytkownika na kod użytkownika. (Gdy śledzenie aktywności ServiceModel jest włączone, identyfikator działania zdefiniowany w kliencie nie jest propagowany do kodu użytkownika usługi; Transfery są jednak skorelowane z działaniami kodu użytkownika klienta i usługi do pośrednich działań WCF.
 
-Definiowanie działania zmiany i propagowanie identyfikator działania pozwala nam wykonywać bezpośrednie błąd korelację między punktami końcowymi. Dzięki temu będzie można znaleźć przyczynę błędu szybciej.
+Definiowanie działań i propagowanie identyfikatora działania umożliwia nam wykonywanie bezpośrednich korelacji błędów w punktach końcowych. Dzięki temu możemy szybciej zlokalizować główną przyczynę błędu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [Rozszerzanie śledzenia](../../samples/extending-tracing.md)

@@ -9,38 +9,38 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991162"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590543"
 ---
 # <a name="reliable-sessions"></a>Niezawodne sesje
 
-W tej sekcji opisano, jakie Windows Communication Foundation (WCF) jest niezawodnej sesji, jego przeznaczenie, jak i kiedy Aby użyć jednego, jakie konfiguracje powiązań z jego obsługi, a wskaźników na najlepsze rozwiązania. W poniższej tabeli przedstawiono szczegółowe informacje o podstawowych punktów i Tematy pokrewne w tej sekcji.
+W tej sekcji opisano, co to jest Niezawodna sesja programu Windows Communication Foundation (WCF), co jest używane przez program, jak i kiedy należy z nich korzystać, jakie konfiguracje powiązań obsługują i jakie są wskaźniki najlepszych rozwiązań. Poniższa tabela zawiera podsumowanie szczegółowych informacji o najważniejszych punktach i powiązanych tematach w tej sekcji.
 
-Sesja niezawodna WCF zapewnia funkcje zagwarantowanie, że komunikaty wysyłane między punktami końcowymi są przenoszone między pośredników SOAP lub transportu i są dostarczane tylko raz i, opcjonalnie, w tej samej kolejności, w jakiej zostały wysłane.
+Funkcja WCF dla niezawodnej sesji zapewnia funkcje zapewniające, że komunikaty wysyłane między punktami końcowymi są przesyłane przez wystawcy protokołu SOAP lub transportu i są dostarczane tylko raz i, opcjonalnie, w takiej samej kolejności, w jakiej zostały wysłane.
 
-Niezawodnej sesji za pomocą aplikacji WCF, użyj jednej z powiązań dostarczanych przez system w usłudze WCF, które obsługują niezawodnej sesji, domyślnie lub jako opcja lub utworzyć własne niestandardowe powiązanie, które obsługuje sesji.
+Aby używać niezawodnej sesji z aplikacją WCF, użyj jednego z powiązań dostarczonych przez system w programie WCF, który domyślnie obsługuje niezawodną sesję lub jako opcję, lub Utwórz własne niestandardowe powiązanie, które obsługuje daną sesję.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Omówienie sesji niezawodnych](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md) opisano niezawodne sesje, kiedy należy używać ich różnych powiązań, które obsługuje sesji uwierzytelnianych i sposobie ich działania.
+[Omówienie sesji niezawodnych](reliable-sessions-overview.md) Opisuje niezawodne sesje, gdy ich używać, różne powiązania, które obsługują niezawodne sesje i jak działają.
 
-[Instrukcje: Wymiana komunikatów w ramach niezawodnej sesji](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md) w tym artykule opisano sposób tworzenia niezawodnej sesji za pośrednictwem protokołu HTTP przy użyciu niestandardowego powiązania, określona w konfiguracji.
+[Instrukcje: Wymiana komunikatów w ramach niezawodnej sesji](how-to-exchange-messages-within-a-reliable-session.md) Opisuje sposób tworzenia niezawodnej sesji za pośrednictwem protokołu HTTP przy użyciu niestandardowego powiązania określonego w konfiguracji.
 
-[Instrukcje: Zabezpieczanie komunikatów w sesjach niezawodnych](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md) w tym artykule opisano sposób zabezpieczania niezawodnej sesji.
+[Instrukcje: Zabezpieczanie komunikatów w ramach sesji niezawodnych](how-to-secure-messages-within-reliable-sessions.md) Opisuje sposób zabezpieczania niezawodnej sesji.
 
-[Instrukcje: Tworzenie niestandardowego niezawodnej sesji powiązania przy użyciu protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md) w tym artykule opisano sposób tworzenia niezawodnej sesji za pośrednictwem protokołu HTTPS.
+[Instrukcje: Tworzenie niestandardowego powiązania niezawodnej sesji z protokołem HTTPS](how-to-create-a-custom-reliable-session-binding-with-https.md) Opisuje sposób tworzenia niezawodnej sesji za pośrednictwem protokołu HTTPS.
 
-[Najlepsze rozwiązania dotyczące sesji niezawodnych](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md) opisuje niektóre najlepsze rozwiązania związane z używaniem niezawodnej sesji.
+[Najlepsze rozwiązania dotyczące niezawodnych sesji](best-practices-for-reliable-sessions.md) W tym artykule opisano niektóre najlepsze rozwiązania związane z używaniem niezawodnej sesji.
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 <xref:System.ServiceModel.ReliableSession>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Kolejki i sesje niezawodne](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
-- [Sesje, tworzenie wystąpień i współbieżność](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+- [Kolejki i sesje niezawodne](queues-and-reliable-sessions.md)
+- [Sesje, tworzenie wystąpień i współbieżność](sessions-instancing-and-concurrency.md)

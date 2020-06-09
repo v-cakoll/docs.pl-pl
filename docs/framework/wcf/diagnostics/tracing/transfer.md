@@ -2,63 +2,63 @@
 title: Transfer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185705"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587771"
 ---
 # <a name="transfer"></a>Transfer
-W tym temacie opisano transfer w modelu śledzenia działań programu Windows Communication Foundation (WCF).  
+W tym temacie opisano transfer w modelu śledzenia działań Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definicja transferu  
- Transfery między działaniami reprezentują związek przyczynowy między zdarzeniami w powiązanych działaniach w punktach końcowych. Dwa działania są powiązane z transferów, gdy przepływy kontroli między tymi działaniami, na przykład wywołanie metody przekraczania granic działania. W WCF, gdy bajty są przychodzące w usłudze, Nasłuchaj na działanie jest przenoszone do receive bajtów działania, gdzie obiekt wiadomości jest tworzony. Aby uzyskać listę scenariuszy śledzenia end-to-end oraz ich odpowiednie działanie i projekt śledzenia, zobacz [Scenariusze śledzenia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Transfery między działaniami reprezentują związek przyczyn między zdarzeniami w pokrewnych działaniach w punktach końcowych. Dwie działania są powiązane z transferami, gdy sterowanie przepływem między tymi działaniami, na przykład wywołanie metody przecina granice działania. W programie WCF, gdy w usłudze są przyjmowane bajty, nasłuchiwanie w działaniu jest przesyłane do działania odbierania bajtów, w którym jest tworzony obiekt wiadomości. Aby zapoznać się z listą kompleksowych scenariuszy śledzenia i ich odpowiedniego projektu działań i śledzenia, zobacz [kompleksowe scenariusze śledzenia](end-to-end-tracing-scenarios.md).  
   
- Aby emitować ślady `ActivityTracing` transferu, należy użyć ustawienia na źródle śledzenia, jak pokazano w poniższym kodzie konfiguracji.  
+ Aby emitować ślady transferu, użyj `ActivityTracing` Ustawienia ze źródła śledzenia, jak pokazano w poniższym kodzie konfiguracyjnym.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
-## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Korzystanie z funkcji Transfer do skorelowania działań w punktach końcowych  
- Działania i transfery pozwalają użytkownikowi probabilistycznie zlokalizować główną przyczynę błędu. Na przykład, jeśli przeniesiemy tam iz powrotem między działaniami M i N odpowiednio w składnikach M i N, a awaria dzieje się w N zaraz po przeniesieniu z powrotem do M, możemy wyciągnąć wniosek, że jest to prawdopodobnie spowodowane przekazywaniem danych N z powrotem do M.  
+## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Używanie transferu do skorelowania działań w punktach końcowych  
+ Działania i transfery umożliwiają użytkownikowi probabilistically lokalizowanie głównej przyczyny błędu. Jeśli na przykład przeniesiemy z powrotem i wstecz między działaniami M i N w składnikach M i N, a awaria wystąpi w N prawo po przeniesieniu z powrotem do M, możemy sporządzić wniosek, że najprawdopodobniej jest to spowodowane przekazywaniem danych z powrotem do M.  
   
- Śledzenia transferu jest emitowany z działania M do działania N, gdy istnieje przepływ kontroli między M i N. Na przykład N wykonuje pewną pracę dla M z powodu wywołania metody przekraczania granic działań. N może już istnieć lub został utworzony. N jest zduplikowany przez M, gdy N jest nowe działanie, które wykonuje pewną pracę dla M.  
+ Ślad transferu jest emitowany z działania M do działania N, gdy istnieje przepływ sterowania między M i N. Na przykład N wykonuje część pracy dla M ze względu na to, że wywołanie metody przekracza granice działania. N może już istnieć lub został utworzony. N jest duplikowany przez M, gdy N to nowe działanie, które wykonuje pewną pracę dla M.  
   
- Po przeniesieniu z M do N może nie nastąpić transfer z powrotem z N do M. Dzieje się tak dlatego, że M może odradzać niektóre prace w N i nie śledzić, kiedy N kończy tę pracę. W rzeczywistości M można zakończyć przed N kończy swoje zadanie. Dzieje się tak w "Open ServiceHost" działania (M), który spawns działania odbiornika (N), a następnie kończy. Przeniesienie z powrotem z N do M oznacza, że N zakończył pracę związaną z M.  
+ Po przekazaniu od M do N nie można wykonać transferu z powrotem z N do M. Jest to spowodowane tym, że M może zduplikować część pracy w N i nie śledzić, gdy N kończy pracę. W rzeczywistości M może zakończyć się przed N zakończeniem zadania. Dzieje się tak w przypadku działania "Otwórz ServiceHost" (M), które powoduje zduplikowanie aktywności odbiornika (N), a następnie kończy działanie. Transfer z powrotem z N do M oznacza, że N ukończył pracę związaną z M.  
   
- N można kontynuować wykonywanie innych przetwarzania niezwiązanych z M, na przykład istniejące działanie wystawcy uwierzytelnienia (N), który utrzymuje odbieranie żądań logowania (M) z różnych działań logowania.  
+ N może kontynuować wykonywanie innych operacji przetwarzania niezwiązanych z M, na przykład istniejącej aktywności uwierzytelniania (N), która zachowuje żądania logowania (M) z różnych działań logowania.  
   
- Relacja zagnieżdżania nie musi istnieć między działaniami M i N. Może się to zdarzyć z dwóch powodów. Po pierwsze, gdy działanie M nie monitoruje rzeczywistego przetwarzania wykonywanego w N, chociaż M zainicjował N. Po drugie, gdy N już istnieje.  
+ Relacja zagnieżdżenia nie musi istnieć między działaniami M i N. Może się to zdarzyć z dwóch przyczyn. Po pierwsze, gdy działanie M nie monitoruje rzeczywistego przetwarzania wykonanego w N, chociaż M zainicjowano N. Sekunda, gdy N już istnieje.  
   
-## <a name="example-of-transfers"></a>Przykład transferów  
+## <a name="example-of-transfers"></a>Przykład transferu  
  Poniżej wymieniono dwa przykłady transferu.  
   
-- Podczas tworzenia hosta usługi konstruktor zyskuje kontrolę z kodu wywołującego lub kod wywołujący przenosi do konstruktora. Po zakończeniu wykonywania konstruktora zwraca kontrolę do kodu wywołującego lub konstruktora przenosi z powrotem do kodu wywołującego. Jest to przypadek relacji zagnieżdżonej.  
+- Podczas tworzenia hosta usługi Konstruktor uzyskuje kontrolę nad wywoływanym kodem lub wywoływanie przesyłanych kodu do konstruktora. Gdy Konstruktor zakończył wykonywanie, zwraca sterowanie do kodu wywołującego lub Konstruktor przesyła z powrotem do kodu wywołującego. Jest to przypadek relacji zagnieżdżonej.  
   
-- Gdy odbiornik rozpoczyna przetwarzanie danych transportu, tworzy nowy wątek i ręce do receive bajty działania odpowiedni kontekst do przetwarzania, przekazywania kontroli i danych. Po zakończeniu przetwarzania żądania tego wątku, Receive Bytes działania przekazuje nic z powrotem do odbiornika. W takim przypadku mamy przeniesienie, ale nie przenieść z nowej działalności wątku. Te dwa działania są powiązane, ale nie zagnieżdżone.  
+- Gdy odbiornik zacznie przetwarzać dane transportu, tworzy nowy wątek i ręce do działania odbierania bajtów, który jest odpowiednim kontekstem do przetwarzania, przekazywania kontroli i danych. Gdy ten wątek zakończy przetwarzanie żądania, działanie odbieraj bajty kończy się bez powrotu do odbiornika. W takim przypadku mamy transfer w przypadku, gdy nie przeprowadzono transferu z nowego wątku. Te dwa działania są powiązane, ale nie są zagnieżdżone.  
   
-## <a name="activity-transfer-sequence"></a>Sekwencja transferu aktywności  
- Dobrze sformułowana sekwencja transferu aktywności zawiera następujące kroki.  
+## <a name="activity-transfer-sequence"></a>Sekwencja transferu działań  
+ Poprawnie sformułowana sekwencja transferu działań obejmuje następujące kroki.  
   
-1. Rozpocznij nowe działanie, które polega na wybraniu nowego gAId.  
+1. Rozpocznij nowe działanie, które składa się z wyboru nowego gAId.  
   
-2. Emitowanie śledzenia transferu do tego nowego identyfikatora gAId z bieżącego identyfikatora działania  
+2. Emituj ślad transferu do tego nowego gAId z bieżącego identyfikatora działania  
   
-3. Ustawianie nowego identyfikatora w tls  
+3. Ustaw nowy identyfikator w protokole TLS  
   
-4. Emituj śledzenie początkowe, aby wskazać początek nowego działania przez.  
+4. Emituj początkowy ślad, aby wskazać początek nowej aktywności przez.  
   
-5. Powrót do pierwotnego działania składa się z następujących elementów:  
+5. Powrót do oryginalnego działania składa się z następujących elementów:  
   
-6. Emitowanie śledzenia transferu do oryginalnego gAId  
+6. Emituj ślad transferu do oryginalnego gAId  
   
 7. Emituj śledzenie zatrzymania, aby wskazać koniec nowego działania  
   
-8. Ustaw TLS na stary gAId.  
+8. Ustaw protokół TLS na stary gAId.  
   
- Poniższy przykład kodu pokazuje, jak to zrobić. W tym przykładzie przyjęto założenie, że wywołanie blokowania jest nawiązywany podczas przenoszenia do nowego działania i zawiera śledzenie wstrzymania/wznowienia.  
+ Poniższy przykład kodu demonstruje, jak to zrobić. W tym przykładzie przyjęto założenie, że jest wywoływane wywołanie podczas przenoszenia do nowego działania i zawiera dane śledzenia wstrzymania/wznowienia.  
   
 ```csharp
 // 0. Create a trace source  
@@ -104,7 +104,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Konfigurowanie śledzenia](configuring-tracing.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenariusze kompleksowego śledzenia](end-to-end-tracing-scenarios.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

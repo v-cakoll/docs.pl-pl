@@ -1,14 +1,14 @@
 ---
 title: Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET
 description: Dowiedz się, jak za pomocą narzędzia interfejsu wiersza polecenia ML.NET automatycznie uczenie najlepszego modelu z wiersza poleceń.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212415"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589668"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET
 
@@ -33,24 +33,24 @@ Można generować te zasoby z własnych zestawów danych bez konieczności pisan
 
 Obecnie zadania w ML obsługiwane przez interfejs wiersza polecenia ML.NET są następujące:
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- Przyszłość: inne zadania uczenia maszynowego `recommendation` , takie jak,, `ranking` `anomaly-detection` ,`clustering`
+- Klasyfikacja (dane binarne i wiele klas)
+- ubytk
+- zaleca
+- W przyszłości: inne zadania uczenia maszynowego, takie jak Klasyfikacja obrazu, klasyfikacja, wykrywanie anomalii, klastrowanie
 
-Przykład użycia:
+Przykład użycia (scenariusz klasyfikacji):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![image](media/automate-training-with-cli/cli-model-generation.gif)
+![image (obraz)](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 Można uruchomić je w taki sam sposób w programie *Windows PowerShell*, *macOS/Linux bash*lub *Windows cmd*. Jednak funkcja automatycznego uzupełniania tabelarycznego (sugestie parametryczne) nie będzie działała w programie *Windows cmd*.
 
 ## <a name="output-assets-generated"></a>Wygenerowane zasoby wyjściowe
 
-Polecenie interfejsu wiersza `auto-train` polecenia generuje następujące zasoby w folderze wyjściowym:
+Polecenia l zadania w interfejsie CLI generują następujące zasoby w folderze wyjściowym:
 
 - Serializowany model. zip ("najlepszy model") gotowy do użycia do uruchamiania prognoz.
 - Rozwiązanie C# z:
@@ -68,23 +68,15 @@ Po wygenerowaniu "najlepszego modelu" przy użyciu narzędzia interfejsu wiersza
 
 W tym miejscu są podsumowywane pogrupowane według zadania ML, dzięki czemu można zrozumieć jakość automatycznie generowanego najlepszego modelu.
 
-### <a name="metrics-for-binary-classification-models"></a>Metryki dla binarnych modeli klasyfikacji
+### <a name="metrics-for-classification-models"></a>Metryki dla modeli klasyfikacji
 
-Poniżej przedstawiono listę metryk zadań w klasyfikacji binarnej ML dla pierwszych pięciu modeli znalezionych w interfejsie wiersza polecenia:
+Poniżej przedstawiono listę metryk klasyfikacji dla pięciu pierwszych modeli znalezionych przez interfejs wiersza polecenia:
 
-![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image (obraz)](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Dokładność jest popularną metryką dla problemów klasyfikacji, jednak dokładność nie zawsze jest najlepszą metryką, aby wybrać najlepszy model, z wyjaśnienia w poniższych odwołaniach. Istnieją przypadki, w których należy oszacować jakość modelu z dodatkowymi metrykami.
+ Dokładność jest popularną metryką dla problemów klasyfikacji, jednak dokładność nie zawsze jest najlepszą metryką, aby wybrać najlepszy model, z wyjaśnienia w poniższych odwołaniach. Istnieją przypadki, w których należy oszacować jakość modelu z dodatkowymi metrykami.
 
-Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla klasyfikacji binarnej](resources/metrics.md#evaluation-metrics-for-binary-classification).
-
-### <a name="metrics-for-multi-class-classification-models"></a>Metryki dla modeli klasyfikacji wieloklasowej
-
-Poniżej przedstawiono listę metryk zadań klasyfikacji wieloklasowych dla pierwszych pięciu modeli znalezionych przez interfejs wiersza polecenia:
-
-![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
-
-Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla klasyfikacji wieloklasowej](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny klasyfikacji](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Metryki dla modeli regresji i rekomendacji
 
@@ -92,7 +84,7 @@ Model regresji dopasowuje się do danych, jeśli różnice między obserwowanymi
 
 Zostanie wyświetlona podobna lista metryk dla najlepiej najlepszych pięciu modeli jakości dostępnych w interfejsie wiersza polecenia. W tym konkretnym przypadku związanego z zadaniem regresji ML:
 
-![image](media/automate-training-with-cli/cli-regression-metrics.png)
+![image (obraz)](media/automate-training-with-cli/cli-regression-metrics.png)
 
 Aby eksplorować i zrozumieć metryki, które są danymi wyjściowymi interfejsu wiersza polecenia, zobacz [metryki oceny dla regresji](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 

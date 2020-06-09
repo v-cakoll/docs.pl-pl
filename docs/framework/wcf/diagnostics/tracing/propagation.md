@@ -2,37 +2,37 @@
 title: Propagacja
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578958"
 ---
 # <a name="propagation"></a>Propagacja
-W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows Communication Foundation (WCF).  
+W tym temacie opisano propagację działań w modelu śledzenia Windows Communication Foundation (WCF).  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Korelowanie działania punktów końcowych przy użyciu propagacji  
- Propagacja zapewnia użytkownikowi bezpośrednia korelacja błąd ślady dla tej samej jednostki przetwarzania między punktami końcowymi aplikacji, na przykład żądania. Emitowane na różne punkty końcowe dla tej samej jednostki przetwarzania, błędy są grupowane w tym samym działaniu, nawet w różnych domenach aplikacji. Jest to realizowane za pośrednictwem Propagacja identyfikatora działania w nagłówkach wiadomości. W związku z tym jeśli upłynie limit czasu klienta z powodu wewnętrznego błędu serwera, oba błędy są wyświetlane w tym samym działaniu dla bezpośrednia korelacja.  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Używanie propagacji do skorelowania działań w punktach końcowych  
+ Propagacja udostępnia użytkownikowi bezpośrednią korelację śladów błędów dla tej samej jednostki przetwarzania między punktami końcowymi aplikacji, na przykład żądania. Błędy emitowane w różnych punktach końcowych dla tej samej jednostki przetwarzania są pogrupowane w tym samym działaniu, nawet w różnych domenach aplikacji. Jest to realizowane przez propagację identyfikatora działania w nagłówkach wiadomości. W związku z tym, jeśli klient przeprowadzi limit czasu z powodu błędu wewnętrznego na serwerze, oba błędy pojawiają się w tym samym działaniu dla bezpośredniej korelacji.  
   
- Aby to zrobić, należy użyć `ActivityTracing` ustawienia, jak pokazano w poprzednim przykładzie. Dodatkowo, ustawienia `propagateActivity` atrybutu dla `System.ServiceModel` źródła śledzenia w wszystkie punkty końcowe.  
+ Aby to zrobić, użyj `ActivityTracing` Ustawienia, jak pokazano w poprzednim przykładzie. Ponadto należy ustawić `propagateActivity` atrybut dla `System.ServiceModel` źródła śledzenia we wszystkich punktach końcowych.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Propagacja działania jest konfigurowalnych możliwości, który powoduje, że WCF można dodać nagłówka do wiadomości wychodzących, która zawiera identyfikator działania na TLS. Jeśli dołączysz to na kolejne ślady po stronie serwera, firma Microsoft skorelować działania klienta i serwera.  
+ Propagacja działań to konfigurowalna funkcja, która powoduje, że program WCF dodaje nagłówek do komunikatów wychodzących, który obejmuje identyfikator działania w protokole TLS. W tym celu w przypadku kolejnych śladów po stronie serwera można skorelować działania klientów i serwerów.  
   
-## <a name="propagation-definition"></a>Propagacji definicji  
- GAId M działania jest propagowana do działania N, jeśli wszystkie następujące warunki zastosowania.  
+## <a name="propagation-definition"></a>Definicja propagacji  
+ Podczas działania gAId M jest propagowany do działania N, jeśli spełnione są wszystkie poniższe warunki.  
   
 - N jest tworzony z powodu M  
   
-- Wiadomo gAId firmy M, N  
+- GAId M jest znany jako N  
   
-- GAId firmy N jest równy gAId firmy M.  
+- GAId N jest równe gAId M.  
   
- GAId są propagowane przez identyfikator nagłówka wiadomości, jak pokazano w poniższym schematu XML.  
+ GAId jest propagowany za pomocą nagłówka komunikatu ActivityId, jak pokazano w poniższym schemacie XML.  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -40,7 +40,7 @@ W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows C
 </xsd:element>  
 ```  
   
- Oto przykład nagłówka komunikatu.  
+ Poniżej znajduje się przykład nagłówka komunikatu.  
   
 ```xml  
 <MessageLogTraceRecord>  
@@ -70,15 +70,15 @@ W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows C
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a>Propagacja i granice działania  
- Po identyfikator działania są propagowane w obrębie punktów końcowych, odbiorcom wiadomości emituje jest rozpoczęcie i zatrzymanie ślady za pomocą tego identyfikatora działania (propagowany). Dlatego jest uruchamianie i zatrzymywanie śledzenia przy użyciu tego gAId z każdego źródła śledzenia. Jeśli punkty końcowe są w tym samym procesie, użyj tej samej nazwy źródła śledzenia wielu uruchamianie i zatrzymywanie, o tej samej sekcji (tego samego gAId, tego samego źródła śledzenia, ten sam proces) są tworzone.  
+## <a name="propagation-and-activity-boundaries"></a>Propagowanie i granice działania  
+ Gdy identyfikator działania jest propagowany między punktami końcowymi, odbiorca komunikatów emituje uruchomienie i zatrzymanie śladów z tym (propagowanym) IDENTYFIKATORem działania. W związku z tym istnieje rozpoczęcie i zatrzymanie śledzenia z tym gAId z każdego źródła śledzenia. Jeśli punkty końcowe są w tym samym procesie i używają tej samej nazwy źródła śledzenia, są tworzone wiele operacji uruchamiania i zatrzymywania z tymi samymi (gAId, tym samym źródłem śladów).  
   
 ## <a name="synchronization"></a>Synchronizacja  
- Aby zsynchronizować zdarzenia różnych punktów końcowych, które działają na różnych maszynach, CorrelationId jest dodawany do nagłówka ActivityId, która jest propagowana do wiadomości. Narzędzia można użyć tego Identyfikatora synchronizacji zdarzeń na komputerach z rozbieżność zegara. W szczególności narzędzia przeglądarki danych śledzenia usługi używa tego Identyfikatora do wyświetlania komunikatu przepływów między punktami końcowymi.  
+ Aby synchronizować zdarzenia między punktami końcowymi, które działają na różnych komputerach, identyfikator korelacji jest dodawany do nagłówka ActivityId, który jest propagowany w komunikatach. Narzędzia mogą używać tego identyfikatora do synchronizowania zdarzeń między maszynami z niezgodnością zegara. Narzędzie Podgląd śledzenia usług używa tego identyfikatora do wyświetlania przepływów komunikatów między punktami końcowymi.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Konfigurowanie śledzenia](configuring-tracing.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenariusze kompleksowego śledzenia](end-to-end-tracing-scenarios.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

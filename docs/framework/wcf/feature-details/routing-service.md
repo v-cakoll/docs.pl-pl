@@ -2,122 +2,122 @@
 title: Usługa routingu
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 3119f32d57cff01b81e4a8f4a3f3a571013300ea
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 833c824e17d70a982a2f7bb13fe388b9b2b0dec1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590452"
 ---
 # <a name="routing-service"></a>Usługa routingu
 
-Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego jako router wiadomości. Podstawowe funkcje usług routingu jest możliwość przesyłania wiadomości, na podstawie zawartości wiadomości, co pozwala wiadomości były przekazywane do endpoint klienta, na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.
+Usługa routingu to ogólna pośrednik protokołu SOAP, który działa jako router komunikatów. Podstawowe funkcje usługi routingu umożliwiają kierowanie komunikatów na podstawie zawartości komunikatów, co umożliwia przekazywanie komunikatów do punktu końcowego klienta na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.
 
-<xref:System.ServiceModel.Routing.RoutingService> Jest implementowany jako usługi Windows Communication Foundation (WCF) w <xref:System.ServiceModel.Routing> przestrzeni nazw. Usługa routingu udostępnia jeden lub więcej punktów końcowych usługi, które odbierają wiadomości i następnie trasy każdy komunikat do punktów końcowych klienta na podstawie zawartości komunikatu. Usługa zapewnia następujące funkcje:
+Funkcja <xref:System.ServiceModel.Routing.RoutingService> jest zaimplementowana jako usługa Windows Communication Foundation (WCF) w <xref:System.ServiceModel.Routing> przestrzeni nazw. Usługa routingu udostępnia jeden lub więcej punktów końcowych usługi, które odbierają komunikaty, a następnie kieruje każdy komunikat do co najmniej jednego punktu końcowego klienta na podstawie zawartości komunikatu. Usługa udostępnia następujące funkcje:
 
-- Routing oparty na zawartość
+- Routing oparty na zawartości
 
-  - Usługi agregacji
+  - Agregacja usług
 
   - Przechowywanie wersji usługi
 
-  - Priorytet routingu
+  - Routing oparty na priorytetach
 
-  - Dynamiczna konfiguracja
+  - Konfiguracja dynamiczna
 
-- Mostkowanie protokołu
+- Mostkowanie protokołów
 
-- Przetwarzanie protokołu SOAP
+- Przetwarzanie SOAP
 
 - Zaawansowana obsługa błędów
 
 - Punkty końcowe kopii zapasowej
 
-Jest możliwość tworzenia pośredniczące usługa, która wykonuje co najmniej jedną z tych celów, często takie wdrożenie jest powiązany z konkretnego scenariusza lub rozwiązania i nie można łatwo zastosować nowych aplikacji.
+Chociaż istnieje możliwość utworzenia usługi pośredniczącej, która wykonuje co najmniej jeden z tych celów, często taka implementacja jest związana z konkretnym scenariuszem lub rozwiązaniem i nie można jej łatwo zastosować do nowych aplikacji.
 
-Usługa routingu zapewnia ogólne, dynamiczną konfigurację, podłączanych pośredniczącego protokołu SOAP, jest zgodny z modelami usługi WCF i kanału, który umożliwia przeprowadzanie na podstawie zawartości routingu opartego na protokole SOAP komunikatów.
+Usługa routingu zapewnia ogólne, dynamicznie konfigurowalne, podłączane elementy pośredniczące protokołu SOAP, które są zgodne z modelami usługi WCF i kanałów oraz umożliwiają kierowanie na podstawie zawartości komunikatów opartych na protokole SOAP.
 
 > [!NOTE]
-> Usługa routingu aktualnie nie obsługuje routingu usług REST programu WCF.  Aby przekierować wywołania REST, należy rozważyć użycie <xref:System.Web.Routing> lub [Routing żądań aplikacji](https://go.microsoft.com/fwlink/?LinkId=164589).
+> Usługa routingu nie obsługuje obecnie routingu usług REST WCF.  Aby kierować wywołania REST, należy rozważyć użycie <xref:System.Web.Routing> lub [Routing żądań aplikacji](https://go.microsoft.com/fwlink/?LinkId=164589).
 
-## <a name="content-based-routing"></a>Routing oparty na zawartość
+## <a name="content-based-routing"></a>Routing oparty na zawartości
 
-Routing zawartości oparty na to zdolność do rozsyłania wiadomości, na podstawie co najmniej wartości zawartych w wiadomości. Usługa routingu sprawdza każdy komunikat i tras do docelowego punktu końcowego na podstawie treść wiadomości i logikę routingu, które można utworzyć. Routing zawartości oparty na stanowi podstawę dla agregacji usługi, przechowywanie wersji usługi i priorytet routingu.
+Funkcja routingu opartego na zawartości umożliwia kierowanie komunikatów na podstawie co najmniej jednej wartości zawartej w komunikacie. Usługa routingu sprawdza każdy komunikat i kieruje go do docelowego punktu końcowego w oparciu o zawartość wiadomości i utworzoną logikę routingu. Routing oparty na zawartości stanowi podstawę do agregacji usług, przechowywania wersji usług i routingu priorytetów.
 
-Aby zaimplementować, routingu opartego na zawartości, usługa routingu opiera się na <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacji, które są używane do pasuje do wartości określonej w wiadomościach przesłana. Jeśli **MessageFilter** dopasowania komunikatu, komunikat jest kierowany do docelowego punktu końcowego skojarzone z **MessageFilter**.  Filtry komunikatów są zgrupowane w tabelach filtru (<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>) do utworzenia złożonej logiki routingu. Na przykład filtr tabeli może zawierać pięć filtry wzajemnie się wykluczają komunikatów, które komunikaty można kierować do tylko jeden z pięciu docelowych punktów końcowych.
+W celu zaimplementowania routingu opartego na zawartości Usługa routingu opiera się na <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacjach, które są używane do dopasowywania określonych wartości w wiadomościach do rozesłania. Jeśli **MessageFilter** dopasowuje komunikat, komunikat jest kierowany do docelowego punktu końcowego skojarzonego z **MessageFilter**.  Filtry komunikatów są pogrupowane w tabele filtrów ( <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection> ) w celu skonstruowania złożonej logiki routingu. Na przykład tabela filtrów może zawierać pięć wzajemnie wykluczających się filtrów komunikatów, które powodują kierowanie komunikatów do jednego z pięciu docelowych punktów końcowych.
 
-Usługa routingu umożliwia skonfigurowanie logikę, która jest używana do wykonywania, routingu opartego na zawartości, jak również dynamiczne aktualizowanie logikę routingu w czasie wykonywania.
+Usługa routingu umożliwia skonfigurowanie logiki, która jest używana do przeprowadzania routingu opartego na zawartości, a także dynamiczne aktualizowanie logiki routingu w czasie wykonywania.
 
-Przez grupowanie komunikatów filtry do filtrowania tabel routingu logiki można skonstruować, który umożliwia obsługę wielu scenariuszy routingu, takich jak:
+Za pomocą grupowania filtrów komunikatów w tabelach filtrów można utworzyć logikę routingu, która umożliwia obsługę wielu scenariuszy routingu, takich jak:
 
-- Usługi agregacji
+- Agregacja usług
 
 - Przechowywanie wersji usługi
 
-- Priorytet routingu
+- Routing oparty na priorytetach
 
-- Dynamiczna konfiguracja
+- Konfiguracja dynamiczna
 
-Aby uzyskać więcej informacji na informacje o filtrach wiadomości i tabel filtrów, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md) i [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).
+Aby uzyskać więcej informacji o filtrach komunikatów i tabelach filtrów, zobacz [wprowadzenie routingu](routing-introduction.md) i [filtry komunikatów](message-filters.md).
 
-### <a name="service-aggregation"></a>Usługi agregacji
+### <a name="service-aggregation"></a>Agregacja usług
 
-Przy użyciu routingu opartego na zawartości, należy udostępnić jeden punkt końcowy, który odbiera komunikaty z aplikacji klienckich zewnętrznych, a następnie przekierowuje każdy komunikat do odpowiedniego wewnętrznego punktu końcowego, na podstawie wartości w komunikacie. Jest to przydatne, oferują jednego określonego punktu końcowego dla wielu aplikacji zaplecza, a także prezentować jeden punkt końcowy aplikacji dla klientów podczas wyprowadzenie aplikacji do różnych usług.
+Korzystając z routingu opartego na zawartości, można uwidocznić jeden punkt końcowy, który odbiera wiadomości z zewnętrznych aplikacji klienckich, a następnie kieruje każdy komunikat do odpowiedniego wewnętrznego punktu końcowego na podstawie wartości w komunikacie. Jest to przydatne do oferowania jednego określonego punktu końcowego dla różnych aplikacji zaplecza, a także do prezentowania jednego punktu końcowego aplikacji klientom przy jednoczesnym obsłużeniu aplikacji w różnych usługach.
 
 ### <a name="service-versioning"></a>Przechowywanie wersji usługi
 
-Podczas migracji do nowej wersji rozwiązania, może być konieczne Obsługa starej wersji równolegle do obsługi istniejących klientów. Często wymaga klientów łączących się z nowszej wersji należy użyć innego adresu podczas komunikowania się z rozwiązaniem. Usługa routingu umożliwia udostępnianie jeden punkt końcowy usługi służący obie wersje rozwiązania poprzez wiadomości routingu do odpowiedniego rozwiązania oparte na informacjach specyficznych dla wersji zawartego w wiadomości. Na przykład takich realizacji zobacz [How to: Przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+W przypadku migrowania do nowej wersji rozwiązania może być konieczne zachowanie starszej wersji równolegle, aby zapewnić istniejącym klientom. Często wymaga się, aby klienci łączący się z nowszą wersją muszą używać innego adresu podczas komunikowania się z rozwiązaniem. Usługa routingu umożliwia uwidocznienie jednego punktu końcowego usługi, który obsługuje obie wersje rozwiązania przez kierowanie komunikatów do odpowiedniego rozwiązania na podstawie informacji specyficznych dla wersji zawartych w komunikacie. Przykład takiej implementacji można znaleźć w temacie [How to: Versioning Service](how-to-service-versioning.md).
 
-### <a name="priority-routing"></a>Priorytet routingu
+### <a name="priority-routing"></a>Priorytetowe kierowanie
 
-Podczas tworzenia usługi dla wielu klientów, może być Umowa dotycząca poziomu usług (SLA) z partnerami, niektóre wymagane przez wszystkie dane z tych partnerów, które mają być przetwarzane niezależnie od tego dla innych klientów. Za pomocą filtru, który wyszukuje informacje specyficzne dla klienta, zawarte w komunikacie, łatwo komunikaty można kierować do określonych partnerów do punktu końcowego, który został utworzony w celu spełnienie rządowych wymagań dotyczących umowy SLA.
+W przypadku świadczenia usługi dla wielu klientów może istnieć umowa dotycząca poziomu usług (SLA) z niektórymi partnerami, którzy muszą przetwarzać wszystkie dane od tych partnerów niezależnie od innych klientów. Korzystając z filtru, który wyszukuje informacje specyficzne dla klienta zawarte w komunikacie, można łatwo kierować komunikaty od określonych partnerów do punktu końcowego, który został utworzony w celu spełnienia wymagań umowy SLA.
 
-## <a name="dynamic-configuration"></a>Dynamiczna konfiguracja
+## <a name="dynamic-configuration"></a>Konfiguracja dynamiczna
 
-Do obsługi systemów krytycznych dla działalności, którym wiadomości muszą być przetwarzane bez żadnych przerw w świadczeniu usługi, ważne jest, można zmodyfikować konfigurację składników w systemie w czasie wykonywania. Aby obsługiwać te potrzeby, udostępnia usługi routingu <xref:System.ServiceModel.IExtension%601> implementacji <xref:System.ServiceModel.Routing.RoutingExtension>, co umożliwia dynamiczne aktualizowanie konfiguracji usługa routingu w czasie wykonywania.
+Aby obsługiwać systemy o znaczeniu krytycznym, w przypadku których komunikaty muszą być przetwarzane bez przerw w świadczeniu usług, należy koniecznie zmodyfikować konfigurację składników w systemie w czasie wykonywania. Aby to umożliwić, usługa routingu udostępnia <xref:System.ServiceModel.IExtension%601> implementację, <xref:System.ServiceModel.Routing.RoutingExtension> która umożliwia dynamiczne aktualizowanie konfiguracji usługi routingu w czasie wykonywania.
 
-Aby uzyskać więcej informacji na temat dynamiczną konfigurację usługi Routing zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md).
+Aby uzyskać więcej informacji na temat dynamicznej konfiguracji usługi routingu, zobacz [wprowadzenie do routingu](routing-introduction.md).
 
-## <a name="protocol-bridging"></a>Mostkowanie protokołu
+## <a name="protocol-bridging"></a>Mostkowanie protokołów
 
-Jednym z wyzwań w scenariuszach pośredniczące jest wewnętrznych punktów końcowych może innego transportu lub niż punkt końcowy, który wiadomości są odbierane na, wymagania dotyczące wersji protokołu SOAP. Aby zapewnić obsługę tego scenariusza, usługa routingu może mostkować protokołów, w tym przetwarzanie komunikatu protokołu SOAP do <xref:System.ServiceModel.Channels.MessageVersion> wymagany przez punkty końcowe: docelowy. W ten sposób jeden protokół może służyć do komunikacji wewnętrznej, podczas gdy inny może służyć do komunikacji zewnętrznych.
+Jednym z wyzwań w scenariuszach pośrednich jest to, że wewnętrzne punkty końcowe mogą mieć różne wymagania dotyczące wersji transportu lub protokołu SOAP niż punkt końcowy, w którym są odbierane komunikaty. Aby obsłużyć ten scenariusz, usługa routingu może mostkować protokoły, w tym przetwarzanie komunikatu protokołu SOAP do <xref:System.ServiceModel.Channels.MessageVersion> wymaganych przez docelowe punkty końcowe. W ten sposób jeden protokół może być używany do komunikacji wewnętrznej, podczas gdy inna może być używana do komunikacji zewnętrznej.
 
-Aby obsługiwać routing wiadomości między punktami końcowymi za pomocą innego transportu, usługa routingu używa powiązania dostarczane przez system, które umożliwiają usłudze zestawiania różnych protokołów. Występuje to automatycznie, gdy punkt końcowy usługi udostępniane przez usługę Routing używa protokołu innego niż punktów końcowych klienta, które komunikaty są kierowane do.
+Aby zapewnić obsługę routingu komunikatów między punktami końcowymi z różnymi transportami, usługa routingu używa powiązań dostarczonych przez system, które umożliwiają usłudze łączenie się z niepodobnymi protokołami. Jest to wykonywane automatycznie, gdy punkt końcowy usługi udostępniany przez usługę routingu używa innego protokołu niż punkty końcowe, do których są kierowane komunikaty.
 
-## <a name="soap-processing"></a>Przetwarzanie protokołu SOAP
+## <a name="soap-processing"></a>Przetwarzanie SOAP
 
-Typowym wymogiem routingu jest możliwość przesyłania wiadomości między punktami końcowymi z różnymi wymaganiami protokołu SOAP. W celu spełnienia tego wymagania, udostępnia usługi routingu <xref:System.ServiceModel.Routing.SoapProcessingBehavior> , automatycznie tworzy nową **element MessageVersion** spełnia wymagania docelowego punktu końcowego, zanim komunikat jest kierowany do niego. To zachowanie wzrasta, powstaje nowy **element MessageVersion** dla dowolnego komunikatu odpowiedzi przed zwróceniem jej do żądania aplikacji klienckiej, upewnij się, że **element MessageVersion** odpowiedzi jest zgodny z typem oryginalne żądanie.
+Typowym wymaganiem routingu jest możliwość kierowania komunikatów między punktami końcowymi z różnymi wymaganiami protokołu SOAP. Aby zapewnić obsługę tego wymagania, usługa routingu zapewnia, <xref:System.ServiceModel.Routing.SoapProcessingBehavior> że program automatycznie tworzy nową wartość **MessageVersion** , która spełnia wymagania docelowego punktu końcowego, zanim komunikat zostanie rozesłany do niego. To zachowanie powoduje także utworzenie nowego elementu **MessageVersion** dla dowolnego komunikatu odpowiedzi przed zwróceniem go do żądającej aplikacji klienta, aby upewnić się, że element **MessageVersion** odpowiedzi jest zgodny z oryginalnym żądaniem.
 
-Aby uzyskać więcej informacji na temat przetwarzania protokołu SOAP, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md).
+Aby uzyskać więcej informacji na temat przetwarzania protokołu SOAP, zobacz [wprowadzenie do routingu](routing-introduction.md).
 
 ## <a name="error-handling"></a>Obsługa błędów
 
-W systemie składa się z usług rozproszonych, korzystających z komunikacji sieciowej jest ważne, aby upewnić się, że komunikacja w danym systemie są odporne na błędy przejściowe problemy z siecią.  Usługa routingu implementuje obsługę błędów, która umożliwia obsługę wielu scenariuszy awarii komunikacji, które w przeciwnym razie może to spowodować awarię usług.
+W systemie złożonym z usług rozproszonych, które opierają się na komunikacji sieciowej, należy upewnić się, że komunikacja w systemie jest odporna na awarie sieci.  Usługa routingu implementuje obsługę błędów, która umożliwia obsługę wielu scenariuszy błędów komunikacji, które mogłyby spowodować awarię usługi.
 
-Jeśli usługa routingu napotka <xref:System.ServiceModel.CommunicationException> podczas próby wykonania do wysyłania komunikatów, obsługa błędów będą miały miejsce.  Wyjątki te zwykle sygnalizuje Napotkano problem podczas próby skomunikowania się z punktem końcowym zdefiniowanych klienta, takich jak <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, lub <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Kodu obsługi błędu zostanie też przechwytywać i podjął próbę podczas wysyłania **TimeoutException** problem wystąpi, który jest inny wspólnej wyjątek, który nie pochodzi od **communicationexception —** .
+Jeśli usługa routingu napotyka <xref:System.ServiceModel.CommunicationException> błąd podczas próby wysłania wiadomości, zostanie przeprowadzona obsługa błędów.  Te wyjątki zwykle wskazują, że wystąpił problem podczas próby komunikowania się ze zdefiniowanym punktem końcowym klienta, na przykład <xref:System.ServiceModel.EndpointNotFoundException> , <xref:System.ServiceModel.ServerTooBusyException> lub <xref:System.ServiceModel.CommunicationObjectFaultedException> .  Kod obsługi błędu również przechwytuje i próbuje ponowić próbę wysłania, gdy wystąpi wyjątek **timeout** , który jest innym typowym wyjątkiem, który nie pochodzi od **CommunicationException**.
 
-Aby uzyskać więcej informacji na temat obsługi błędów, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md).
+Aby uzyskać więcej informacji na temat obsługi błędów, zobacz [wprowadzenie routingu](routing-introduction.md).
 
 ## <a name="backup-endpoints"></a>Punkty końcowe kopii zapasowej
 
-Oprócz miejsce docelowe punkty końcowe klienta skojarzonego z definicją filtru, każdy w tabeli filtru możesz również utworzyć listę kopii zapasowych punktów końcowych, które wiadomości będą kierowane do awarii transmisji. Jeśli wystąpi błąd, a listy kopii zapasowych jest zdefiniowany dla filtru zapisu, usługa routingu spróbuje wysłać wiadomość do pierwszego punktu końcowego zdefiniowanym na liście. Jeśli ta transmisji próba zakończy się niepowodzeniem, usługa spróbuj następnego punktu końcowego i kontynuować ten proces, dopóki nie zakończy się pomyślnie próby transmisji, zwróci błąd powiązane innych transmisji lub wszystkie punkty końcowe na liście kopii zapasowych zwróciły błąd transmisji.
+Poza docelowymi punktami końcowymi skojarzonymi z każdą definicją filtru w tabeli filtrów można także utworzyć listę punktów końcowych kopii zapasowych, do których zostanie rozesłany komunikat w przypadku niepowodzenia transmisji. W przypadku wystąpienia błędu i zdefiniowania listy kopii zapasowych dla wpisu filtru usługa routingu podejmie próbę wysłania komunikatu do pierwszego punktu końcowego zdefiniowanego na liście. Jeśli ta próba transmisji nie powiedzie się, usługa podejmie próbę następnego punktu końcowego i kontynuuje ten proces do momentu pomyślnej próby transmisji, zwróci błąd związany z nietransmisjami lub wszystkie punkty końcowe na liście kopii zapasowych zwróciły błąd transmisji.
 
-Aby uzyskać więcej informacji na temat tworzenia kopii zapasowych punktów końcowych, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md) i [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).
+Aby uzyskać więcej informacji na temat punktów końcowych kopii zapasowych, zobacz [wprowadzenie routingu](routing-introduction.md) i [filtry komunikatów](message-filters.md).
 
 ## <a name="streaming"></a>Przesyłanie strumieniowe
 
-Usługa routingu może pomyślnie strumienia komunikatów, jeśli ustawisz powiązania do obsługi przesyłania strumieniowego.  Istnieją jednak niektóre warunki, na jakich komunikatów może być konieczne buforowane:
+Usługa routingu może pomyślnie przesyłać strumieniowo komunikaty w przypadku ustawienia powiązania do obsługi przesyłania strumieniowego.  Istnieją jednak pewne warunki, w których komunikaty mogą być niezbędne do buforowania:
 
-- Multiemisji (bufor do tworzenia kopii dodatkowych komunikatów)
+- Multiemisja (bufor w celu utworzenia dodatkowych kopii komunikatów)
 
-- Tryb failover (buforu w przypadku, gdy wiadomości musi być wysyłana do kopii zapasowej)
+- Tryb failover (bufor w przypadku, gdy wiadomość musi zostać wysłana do kopii zapasowej)
 
-- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly ma wartość false (bufor do przedstawienia MessageFilterTable przy użyciu elementu MessageBuffer tak, aby sprawdzić filtry treści)
+- System. ServiceModel. Routing. zastosowano. RouteOnHeadersOnly ma wartość false (bufor, aby przedstawić obiektem za pomocą Element MessageBuffer, tak aby filtry mogły zbadać treść)
 
-- Dynamiczna konfiguracja
+- Konfiguracja dynamiczna
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
-- [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
-- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [Wprowadzenie do routingu](routing-introduction.md)
+- [Kontrakty routingu](routing-contracts.md)
+- [Filtry komunikatów](message-filters.md)

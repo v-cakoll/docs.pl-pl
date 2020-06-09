@@ -2,30 +2,30 @@
 title: Korelacja
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: 4c5dc97cfe37b7720c8b0769ca9e49b25c3af908
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7ccb58b11003638e15bdbc7b7aa326abbac1b71
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579712"
 ---
 # <a name="correlation"></a>Korelacja
-Gdy aplikacji usługi przepływu pracy komunikują się z innymi usługami, ważne jest, że wiadomości między nimi są wysyłane do wystąpienia przepływu pracy odpowiednie. Korelacja udostępnia mechanizm dla tego. Tematy w tej sekcji omówiono korelacji i jak z niej korzystać w scenariuszach usługi innego przepływu pracy.  
+Gdy aplikacje usługi przepływu pracy komunikują się z innymi usługami, ważne jest, aby komunikaty między nimi były wysyłane do odpowiedniego wystąpienia przepływu pracy. Korelacja zapewnia mechanizm dla tego elementu. Tematy w tej sekcji zawierają omówienie korelacji i korzystania z niej w różnych scenariuszach usługi przepływu pracy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd korelacji](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
- Zawiera przegląd typów korelacji dostępne w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ [Przegląd korelacji](correlation-overview.md)  
+ Zawiera omówienie typów korelacji dostępnych w programie [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
- [Niezawodna komunikacja dwukierunkowa](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
- W tym artykule opisano niezawodna korelacja dwukierunkowa.
+ [Niezawodna komunikacja dwukierunkowa](durable-duplex-correlation.md)  
+ Opisuje korelację z trwałym dupleksem.
   
- [Żądanie i odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
- W tym artykule opisano korelacja żądań i odpowiedzi.  
+ [Żądanie i odpowiedź](request-reply-correlation.md)  
+ Opisuje korelację żądanie-odpowiedź.  
   
- [Korelacja rozwiązywania problemów](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
- Udostępnia metody dla korelacja rozwiązywania problemów.  
+ [Korelacja rozwiązywania problemów](troubleshooting-correlation.md)  
+ Zapewnia metody do rozwiązywania problemów z korelacją.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Activities.CorrelationHandle>
 - <xref:System.ServiceModel.Activities.Send>

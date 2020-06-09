@@ -1,41 +1,41 @@
 ---
-title: 'Instrukcje: tworzenie usługi przy użyciu interfejsu kontraktu'
+title: 'Instrukcje: Tworzenie usługi przy użyciu interfejsu kontraktu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7d4bce174790b97db6b95aa5d15af455f261f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597166"
 ---
-# <a name="how-to-create-a-service-with-a-contract-interface"></a>Instrukcje: tworzenie usługi przy użyciu interfejsu kontraktu
-Jest to preferowany sposób tworzenie kontraktu programu Windows Communication Foundation (WCF) przy użyciu interfejsu. Ten kontrakt Określa, kolekcji i struktury komunikaty wymagane operacje dostępu do oferty usługi. Ten interfejs definiuje typy wejściowe i wyjściowe, stosując <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu i <xref:System.ServiceModel.OperationContractAttribute> klasy do metod, które chcesz udostępnić.  
+# <a name="how-to-create-a-service-with-a-contract-interface"></a>Instrukcje: Tworzenie usługi przy użyciu interfejsu kontraktu
+Preferowanym sposobem utworzenia kontraktu Windows Communication Foundation (WCF) jest użycie interfejsu. Ta umowa określa zbieranie i strukturę komunikatów wymaganych do uzyskania dostępu do operacji oferowanych przez usługę. Ten interfejs definiuje typy wejściowe i wyjściowe przez zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> klasy do interfejsu i <xref:System.ServiceModel.OperationContractAttribute> klasy do metod, które mają zostać ujawnione.  
   
- Aby uzyskać więcej informacji na temat kontraktów usług, zobacz [projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md).  
+ Aby uzyskać więcej informacji na temat umów dotyczących usług, zobacz [Projektowanie kontraktów usług](../designing-service-contracts.md).  
   
-### <a name="creating-a-wcf-contract-with-an-interface"></a>Tworzenie kontraktu usługi WCF za pomocą interfejsu  
+### <a name="creating-a-wcf-contract-with-an-interface"></a>Tworzenie kontraktu WCF z interfejsem  
   
-1. Tworzenie nowego interfejsu w języku Visual Basic C#, lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
+1. Utwórz nowy interfejs przy użyciu Visual Basic, C# lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
   
-2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu.  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasę do interfejsu.  
   
-3. Określ metody w interfejsie.  
+3. Zdefiniuj metody w interfejsie.  
   
-4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej metody, które muszą być widoczne jako część publicznego kontraktu usługi WCF.  
+4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasę do każdej metody, która musi być ujawniona w ramach publicznego kontraktu WCF.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje interfejs, który definiuje kontrakt usługi.  
+ Poniższy przykład kodu przedstawia interfejs, który definiuje kontrakt usługi.  
   
  [!code-csharp[c_HowTo_CreateContractWithInterface#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createcontractwithinterface/cs/source.cs#1)]
  [!code-vb[c_HowTo_CreateContractWithInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_createcontractwithinterface/vb/source.vb#1)]  
   
- Metody, które mają <xref:System.ServiceModel.OperationContractAttribute> klasy stosowane domyślnie używają wzorzec komunikatów typu żądanie odpowiedź. Aby uzyskać więcej informacji na temat tego wzorca wiadomości zobacz [jak: Tworzenie kontraktu "żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Można również tworzyć i używać innych wzorców komunikatu przez ustawienie właściwości atrybutu. Aby uzyskać więcej przykładów, zobacz [jak: Tworzenie kontraktu jednokierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) i [jak: Tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Metody, do których <xref:System.ServiceModel.OperationContractAttribute> zastosowano klasę, domyślnie używają wzorca komunikatów żądanie-odpowiedź. Aby uzyskać więcej informacji na temat tego wzorca wiadomości, zobacz [How to: Create a Request-Reply kontraktu](how-to-create-a-request-reply-contract.md). Można również tworzyć i używać innych wzorców komunikatów przez ustawienie właściwości atrybutu. Aby uzyskać więcej przykładów, zobacz [How to: Create](how-to-create-a-one-way-contract.md) a jednokierunkowe kontraktu i [How to: Create a Duplex kontraktu](how-to-create-a-duplex-contract.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>

@@ -1,19 +1,19 @@
 ---
 title: Funkcje
-description: Dowiedz się więcej F# o funkcjach w programie oraz o sposobie F# obsługi wspólnych konstrukcji programowania funkcjonalnego.
+description: 'Dowiedz się więcej o funkcjach w języku F # oraz sposobie, w jaki język F # obsługuje typowe konstrukcje programowania funkcjonalnego.'
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423953"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596477"
 ---
 # <a name="functions"></a>Funkcje
 
-Funkcje są podstawową jednostką wykonywania programu w dowolnym języku programowania. Podobnie jak w innych językach, F# funkcja ma nazwę, może mieć parametry i przyjmować argumenty i ma treść. F#obsługuje również konstrukcje programowania funkcjonalnego, takie jak traktowanie funkcji jako wartości, za pomocą funkcji nienazwanych w wyrażeniach, skład funkcji do tworzenia nowych funkcji, funkcji rozwinięte i niejawnej definicji funkcji w formie częściowej stosowanie argumentów funkcji.
+Funkcje są podstawową jednostką wykonywania programu w dowolnym języku programowania. Podobnie jak w innych językach, funkcja języka F # ma nazwę, może mieć parametry i przyjmować argumenty i ma treść. Język F # obsługuje również konstrukcje programowania funkcjonalnego, takie jak traktowanie funkcji jako wartości, za pomocą funkcji nienazwanych w wyrażeniach, skład funkcji do tworzenia nowych funkcji, funkcji rozwinięte i niejawnej definicji funkcji w ramach częściowego zastosowania argumentów funkcji.
 
-Można definiować funkcje za pomocą słowa kluczowego `let` lub, jeśli funkcja jest cykliczna, kombinacji słowa kluczowego `let rec`.
+Można definiować funkcje za pomocą `let` słowa kluczowego lub, jeśli funkcja jest cykliczna, `let rec` kombinacja słowa kluczowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,9 +34,9 @@ Prosta definicja funkcji jest podobna do następującej:
 let f x = x + 1
 ```
 
-W poprzednim przykładzie nazwa funkcji jest `f`, argument jest `x`, który ma `int`typu, treść funkcji jest `x + 1`, a zwracana wartość jest typu `int`.
+W poprzednim przykładzie nazwa funkcji to `f` , argument ma `x` Typ, `int` treść funkcji jest `x + 1` , a zwracana wartość jest typu `int` .
 
-Funkcje mogą być oznaczone `inline`. Aby uzyskać informacje na temat `inline`, zobacz [funkcje wbudowane](../functions/inline-functions.md).
+Funkcje mogą być oznaczone `inline` . Aby uzyskać informacje na temat `inline` , zobacz [funkcje wbudowane](inline-functions.md).
 
 ## <a name="scope"></a>Zakres
 
@@ -56,7 +56,7 @@ Nazwy parametrów są wyświetlane po nazwie funkcji. Możesz określić typ dla
 let f (x : int) = x + 1
 ```
 
-Jeśli określisz typ, następuje jego nazwa i jest oddzielona od nazwy średnikami. W przypadku pominięcia typu parametru typ parametru zostanie wywnioskowany przez kompilator. Na przykład w poniższej definicji funkcji argument `x` jest wywnioskowany jako typ `int`, ponieważ 1 jest typu `int`.
+Jeśli określisz typ, następuje jego nazwa i jest oddzielona od nazwy średnikami. W przypadku pominięcia typu parametru typ parametru zostanie wywnioskowany przez kompilator. Na przykład w poniższej definicji funkcji argument `x` jest wywnioskowany jako typ, `int` ponieważ 1 jest typu `int` .
 
 ```fsharp
 let f x = x + 1
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące formatowania kodu
 
 ## <a name="return-values"></a>Wartości zwrócone
 
-Kompilator używa końcowego wyrażenia w treści funkcji, aby określić wartość zwracaną i typ. Kompilator może wywnioskować typ wyrażenia końcowego z poprzednich wyrażeń. W funkcji `cylinderVolume`, pokazanej w poprzedniej sekcji, typ `pi` jest określany na podstawie typu literału, `3.14159` `float`. Kompilator używa typu `pi`, aby określić typ `h * pi * r * r` wyrażenia, które ma być `float`. W związku z tym, cały zwracany typ funkcji jest `float`.
+Kompilator używa końcowego wyrażenia w treści funkcji, aby określić wartość zwracaną i typ. Kompilator może wywnioskować typ wyrażenia końcowego z poprzednich wyrażeń. W funkcji `cylinderVolume` pokazanej w poprzedniej sekcji Typ `pi` jest określany na podstawie typu literału, `3.14159` który ma być `float` . Kompilator używa typu, `pi` Aby określić typ wyrażenia, `h * pi * r * r` które ma być `float` . W związku z tym, całkowity typ zwracany funkcji to `float` .
 
 Aby jawnie określić wartość zwracaną, napisz kod w następujący sposób:
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>Częściowe stosowanie argumentów
 
-Jeśli podasz mniej niż określoną liczbę argumentów, utworzysz nową funkcję, która oczekuje pozostałych argumentów. Ta metoda obsługi argumentów jest nazywana *currying* i jest cechą języków programowania funkcjonalnego, takich jak F#. Załóżmy na przykład, że pracujesz z dwoma rozmiarami potoku: jeden ma promień **2,0** , a drugi ma promień **3,0**. Można utworzyć funkcje, które określają ilość potoku w następujący sposób:
+Jeśli podasz mniej niż określoną liczbę argumentów, utworzysz nową funkcję, która oczekuje pozostałych argumentów. Ta metoda obsługi argumentów jest określana jako *currying* i jest cechą języków programowania funkcjonalnego, takich jak F #. Załóżmy na przykład, że pracujesz z dwoma rozmiarami potoku: jeden ma promień **2,0** , a drugi ma promień **3,0**. Można utworzyć funkcje, które określają ilość potoku w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -112,7 +112,7 @@ Następnie należy podać dodatkowy argument w miarę potrzeby dla różnych dł
 
 ## <a name="recursive-functions"></a>Funkcje rekursywne
 
-*Funkcje cykliczne* to funkcje, które wywołują siebie. Wymagają one określenia słowa kluczowego **Rec** po słowie kluczowym **Let** . Wywołaj funkcję cykliczną z poziomu treści funkcji tak samo jak w przypadku wywołania funkcji. Następująca funkcja cykliczna oblicza n-<sup>ty</sup> numer Fibonacci. Sekwencja numerów Fibonacci była znana od czasu zamknięcia i jest sekwencją, w której każdy kolejny numer jest sumą poprzednich dwóch numerów w sekwencji.
+*Funkcje cykliczne* to funkcje, które wywołują siebie. Wymagają one określenia słowa kluczowego **Rec** po słowie kluczowym **Let** . Wywołaj funkcję cykliczną z poziomu treści funkcji tak samo jak w przypadku wywołania funkcji. Następująca funkcja cykliczna oblicza n- *n*<sup>ty</sup> numer Fibonacci. Sekwencja numerów Fibonacci była znana od czasu zamknięcia i jest sekwencją, w której każdy kolejny numer jest sumą poprzednich dwóch numerów w sekwencji.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -120,17 +120,17 @@ Niektóre funkcje cykliczne mogą przepełniać stosy programu lub działać nie
 
 ## <a name="function-values"></a>Wartości funkcji
 
-W F#programie wszystkie funkcje są uznawane za wartości; w rzeczywistości są one nazywane *wartościami funkcji*. Ponieważ funkcje są wartościami, mogą one być używane jako argumenty do innych funkcji lub w innych kontekstach, w których są używane wartości. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argument:
+W języku F # wszystkie funkcje są uznawane za wartości; w rzeczywistości są one nazywane *wartościami funkcji*. Ponieważ funkcje są wartościami, mogą one być używane jako argumenty do innych funkcji lub w innych kontekstach, w których są używane wartości. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argument:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
-Typ wartości funkcji można określić przy użyciu tokenu `->`. Po lewej stronie tego tokenu jest typem argumentu, a po prawej stronie jest wartością zwracaną. W poprzednim przykładzie `apply1` jest funkcją, która przyjmuje funkcję, `transform` jako argument, gdzie `transform` jest funkcją, która przyjmuje liczbę całkowitą i zwraca kolejną liczbę całkowitą. Poniższy kod ilustruje sposób używania `apply1`:
+Należy określić typ wartości funkcji za pomocą `->` tokenu. Po lewej stronie tego tokenu jest typem argumentu, a po prawej stronie jest wartością zwracaną. W poprzednim przykładzie `apply1` jest funkcją, która przyjmuje funkcję `transform` jako argument, gdzie `transform` jest funkcją, która przyjmuje liczbę całkowitą i zwraca kolejną liczbę całkowitą. Poniższy kod przedstawia sposób użycia `apply1` :
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 Wartość `result` będzie 101 po powyższym kodzie.
 
-Wiele argumentów jest rozdzielonych kolejnymi tokenami `->`, jak pokazano w następującym przykładzie:
+Wiele argumentów jest oddzielonych kolejnymi `->` tokenami, jak pokazano w następującym przykładzie:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
@@ -142,11 +142,11 @@ Wynikiem jest 200.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Wyrażenia lambda można definiować za pomocą słowa kluczowego `fun`. Wyrażenie lambda przypomina definicję funkcji, z tą różnicą, że zamiast tokenu `=`, token `->` służy do rozdzielenia listy argumentów z treści funkcji. Podobnie jak w przypadku definicji funkcji regularnych, typy argumentów można wywnioskować lub określić jawnie, a zwracany typ wyrażenia lambda jest wywnioskowany na podstawie typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md).
+Wyrażenia lambda można definiować za pomocą `fun` słowa kluczowego. Wyrażenie lambda przypomina definicję funkcji, z tą różnicą, że zamiast `=` tokenu token `->` jest używany do rozdzielenia listy argumentów z treści funkcji. Podobnie jak w przypadku definicji funkcji regularnych, typy argumentów można wywnioskować lub określić jawnie, a zwracany typ wyrażenia lambda jest wywnioskowany na podstawie typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda: `fun` słowo kluczowe](lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Kompozycja funkcji i przetwarzanie potokowe
 
-Funkcje w F# programie mogą składać się z innych funkcji. Skład dwóch funkcji **function1** i **function2** jest kolejną funkcją, która reprezentuje aplikację **function1** , a następnie aplikację **function2**:
+Funkcje w języku F # mogą składać się z innych funkcji. Skład dwóch funkcji **function1** i **function2** jest kolejną funkcją, która reprezentuje aplikację **function1** , a następnie aplikację **function2**:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
@@ -202,7 +202,7 @@ let result4 = Pipeline2 2
 
 Można przeciążać metody typu, ale nie Functions. Aby uzyskać więcej informacji, zobacz [metody](../members/methods.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wartości](../values/index.md)
-- [Dokumentacja języka F#](../index.md)
+- [Dokumentacja języka F #](../index.md)

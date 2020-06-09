@@ -2,12 +2,12 @@
 title: Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594663"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych
 Aby uruchomić przykłady, które bezpiecznie komunikują się z Internet Information Services (IIS), należy utworzyć i zainstalować certyfikat serwera.  
@@ -32,11 +32,11 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 4. Kliknij przycisk **certyfikat serwera** . Zostanie uruchomiony Kreator certyfikatu serwera sieci Web.  
   
-5. Ukończ pracę kreatora. Wybierz opcję przypisania certyfikatu. Wybierz certyfikat ServiceModelSamples-HTTPS-Server z listy certyfikatów, które są wyświetlane.  
+5. Wykonaj kroki kreatora. Wybierz opcję przypisania certyfikatu. Wybierz certyfikat ServiceModelSamples-HTTPS-Server z listy certyfikatów, które są wyświetlane.  
   
-     ![Kreator certyfikatów usług IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![Kreator certyfikatów usług IIS](media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. Przetestuj dostęp do usługi w przeglądarce przy użyciu adresu `https://localhost/servicemodelsamples/service.svc`https.  
+6. Przetestuj dostęp do usługi w przeglądarce przy użyciu adresu HTTPS `https://localhost/servicemodelsamples/service.svc` .  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Jeśli protokół SSL został wcześniej skonfigurowany przy użyciu programu HttpCfg. exe  
   
@@ -65,7 +65,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5. Wybierz pozycję **ServiceModelSamples-HTTPS-Server** z listy rozwijanej **certyfikat SSL** i kliknij przycisk **OK**.  
   
-6. Przetestuj dostęp do usługi w przeglądarce przy użyciu adresu `https://localhost/servicemodelsamples/service.svc`https.  
+6. Przetestuj dostęp do usługi w przeglądarce przy użyciu adresu HTTPS `https://localhost/servicemodelsamples/service.svc` .  
   
 > [!NOTE]
 > Ponieważ instalowany certyfikat testowy nie jest zaufanym certyfikatem, podczas przeglądania lokalnych adresów sieci Web zabezpieczonych za pomocą tego certyfikatu mogą wystąpić dodatkowe ostrzeżenia dotyczące zabezpieczeń programu Internet Explorer.  

@@ -3,12 +3,12 @@ title: Narzędzie do odinstalowywania
 description: Omówienie narzędzia do odinstalowywania platformy .NET Core, narzędzia z przewodnikiem, które umożliwia kontrolowane czyszczenie zestawów SDK i środowiska uruchomieniowego platformy .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590802"
 ---
 # <a name="net-core-uninstall-tool"></a>Narzędzie do dezinstalacji platformy .NET Core
 
@@ -27,7 +27,7 @@ Ze względu na te ograniczenia narzędzie może nie być w stanie odinstalować 
 
 ## <a name="install-the-tool"></a>Zainstaluj narzędzie
 
-W [tym miejscu](https://aka.ms/dotnet-core-uninstall-tool) możesz pobrać narzędzie do odinstalowywania platformy .NET Core i znaleźć kod źródłowy w repozytorium GitHub [/CLI-Lab](https://github.com/dotnet/cli-lab) .
+Narzędzie do odinstalowywania platformy .NET Core można pobrać ze [strony wydań narzędzia](https://aka.ms/dotnet-core-uninstall-tool) i znaleźć kod źródłowy w repozytorium GitHub [/CLI-Lab](https://github.com/dotnet/cli-lab) .
 
 > [!NOTE]
 > Narzędzie wymaga podniesienia uprawnień, aby odinstalować zestawy SDK i środowiska uruchomieniowe platformy .NET Core. W związku z tym należy ją zainstalować w katalogu chronionym przed zapisem, takim jak *C:\Program Files* w systemie Windows lub */usr/local/bin* na macOS. Zobacz również [podwyższony poziom dostępu dla poleceń dotnet](../tools/elevated-access.md). Aby uzyskać więcej informacji, zobacz [szczegółowe instrukcje dotyczące instalacji](https://aka.ms/dotnet-core-uninstall-tool).

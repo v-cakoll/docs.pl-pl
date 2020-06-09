@@ -1,5 +1,6 @@
 ---
-title: Gwinty i gwintowanie
+title: Wątki i wątkowość
+description: Informacje o wątkach, takich jak procesy & wątki, kiedy używać wielu wątków, &, jak używać wielowątkowości, aby zwiększyć czas odpowiedzi lub przepływność na platformie .NET.
 ms.date: 11/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,49 +8,49 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: bac2a3ca3278b48b35d0372d52bcb79025ba1148
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583404"
 ---
-# <a name="threads-and-threading"></a>Gwinty i gwintowanie
+# <a name="threads-and-threading"></a>Wątki i wątkowość
 
-Wielowątkowość pozwala zwiększyć czas reakcji aplikacji i, jeśli aplikacja działa na systemie wieloprocesorowym lub wielordzeniowym, zwiększyć jej przepływność.
+Wielowątkowość pozwala zwiększyć czas odpowiedzi aplikacji i, jeśli aplikacja działa w wieloprocesorowym lub wielordzeniowym systemie, zwiększyć przepływność.
 
 ## <a name="processes-and-threads"></a>Procesy i wątki
 
-*Proces* jest programem wykonawczym. System operacyjny używa procesów do oddzielenia aplikacji, które są wykonywane. *Wątek* jest podstawową jednostką, do której system operacyjny przydziela czas procesora. Każdy wątek ma [priorytet planowania](scheduling-threads.md) i utrzymuje zestaw struktur używanych przez system do zapisywania kontekstu wątku, gdy wykonanie wątku jest wstrzymane. Kontekst wątku zawiera wszystkie informacje, które wątek musi bezproblemowo wznowić wykonywanie, w tym zestaw wątku rejestrów procesora CPU i stosu. Wiele wątków można uruchomić w kontekście procesu. Wszystkie wątki procesu współużytkują jego wirtualną przestrzeń adresową. Wątek można wykonać dowolną część kodu programu, w tym części obecnie wykonywane przez inny wątek.
+*Proces* to program wykonujący. System operacyjny używa procesów do rozdzielania wykonywanych aplikacji. *Wątek* jest jednostką podstawową, do której system operacyjny przydziela czas procesora. Każdy wątek ma [priorytet planowania](scheduling-threads.md) i utrzymuje zestaw struktur, których system używa do zapisywania kontekstu wątku, gdy wykonywanie wątku jest wstrzymane. Kontekst wątku zawiera wszystkie informacje niezbędne do bezproblemowego wznowienia wykonywania wątku, w tym zestaw rejestrów i stosów procesora CPU. W kontekście procesu można uruchomić wiele wątków. Wszystkie wątki procesu współdzielą swoją wirtualną przestrzeń adresową. Wątek może wykonać dowolną część kodu programu, w tym części, które są aktualnie wykonywane przez inny wątek.
 
 > [!NOTE]
-> Program .NET Framework umożliwia izolowanie aplikacji w ramach procesu przy użyciu *domen aplikacji*. (Domeny aplikacji nie są dostępne w programie .NET Core). Aby uzyskać więcej informacji, zobacz [domeny aplikacji i wątki](../../framework/app-domains/application-domains.md#application-domains-and-threads) sekcji [domeny aplikacji](../../framework/app-domains/application-domains.md) artykułu.
+> .NET Framework zapewnia sposób izolowania aplikacji w ramach procesu przy użyciu *domen aplikacji*. (Domeny aplikacji nie są dostępne na platformie .NET Core). Aby uzyskać więcej informacji, zobacz sekcję [domeny aplikacji i wątki](../../framework/app-domains/application-domains.md#application-domains-and-threads) w artykule [domeny aplikacji](../../framework/app-domains/application-domains.md) .
 
-Domyślnie program .NET jest uruchamiany z pojedynczym wątkiem, często nazywanym wątkiem *podstawowym.* Jednak można utworzyć dodatkowe wątki do wykonywania kodu równolegle lub jednocześnie z wątku podstawowego. Te wątki są często nazywane wątkami *roboczymi.*
+Domyślnie program .NET jest uruchamiany z pojedynczym wątkiem, często nazywanym wątkiem *podstawowym* . Można jednak utworzyć dodatkowe wątki do wykonywania kodu równolegle lub współbieżnie przy użyciu wątku głównego. Te wątki są często nazywane wątkami *roboczymi* .
 
 ## <a name="when-to-use-multiple-threads"></a>Kiedy używać wielu wątków
 
-Wiele wątków służy do zwiększenia responsywności aplikacji i skorzystać z wieloprocesorowego lub wielordzeniowego systemu w celu zwiększenia przepływności aplikacji.
+Używasz wielu wątków, aby zwiększyć czas odpowiedzi aplikacji i wykorzystać wieloprocesorowy lub wielordzeniowy system w celu zwiększenia przepływności aplikacji.
 
-Należy wziąć pod uwagę aplikacji klasycznej, w którym wątek podstawowy jest odpowiedzialny za elementy interfejsu użytkownika i odpowiada na akcje użytkownika. Użyj wątków roboczych do wykonywania czasochłonnych operacji, które w przeciwnym razie zajęłyby wątek podstawowy i sprawiają, że interfejs użytkownika nie reaguje. Można również użyć dedykowanego wątku do komunikacji sieciowej lub urządzenia, aby lepiej reagować na przychodzące wiadomości lub zdarzenia.
+Rozważ użycie aplikacji klasycznej, w której wątek główny jest odpowiedzialny za elementy interfejsu użytkownika i reaguje na działania użytkownika. Wątki robocze umożliwiają wykonywanie czasochłonnych operacji, które w przeciwnym razie zajmują wątek podstawowy i sprawiają, że interfejs użytkownika nie odpowiada. Można również użyć dedykowanego wątku do komunikacji sieciowej lub urządzenia, aby zwiększyć wydajność przychodzących komunikatów lub zdarzeń.
 
-Jeśli program wykonuje operacje, które mogą być wykonywane równolegle, całkowity czas wykonywania można zmniejszyć, wykonując te operacje w oddzielnych wątkach i uruchamiając program w systemie wieloprocesorowym lub wielordzeniowym. W takim systemie użycie wielowątkowości może zwiększyć przepustowość wraz ze zwiększoną responsywnością.
+Jeśli program wykonuje operacje, które mogą być wykonywane równolegle, łączny czas wykonywania można zmniejszyć, wykonując te operacje w oddzielnych wątkach i uruchamiając program w wieloprocesorowym lub wielordzeniowym systemie. W takim systemie użycie wielowątkowości może zwiększyć przepływność oraz zwiększyć czas odpowiedzi.
 
-## <a name="how-to-use-multithreading-in-net"></a>Jak korzystać z wielowątkowej w .NET
+## <a name="how-to-use-multithreading-in-net"></a>Jak używać wielowątkowości w programie .NET
 
-Począwszy od programu .NET Framework 4, zalecanym sposobem wykorzystania wielowątkowości jest użycie [biblioteki równoległej zadań (TPL)](../parallel-programming/task-parallel-library-tpl.md) i [równoległej LINQ (PLINQ).](../parallel-programming/introduction-to-plinq.md) Aby uzyskać więcej informacji, zobacz [Programowanie równoległe](../parallel-programming/index.md).
+Począwszy od .NET Framework 4, zalecanym sposobem użycia wielowątkowości jest użycie [biblioteki zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md) i [równoległego LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md). Aby uzyskać więcej informacji, zobacz [programowanie równoległe](../parallel-programming/index.md).
 
-Zarówno TPL, jak i <xref:System.Threading.ThreadPool> PLINQ polegają na wątkach. Klasa <xref:System.Threading.ThreadPool?displayProperty=nameWithType> udostępnia aplikację .NET z pulą wątków roboczych. Można również użyć wątków puli wątków. Aby uzyskać więcej informacji, zobacz [Pula zarządzanych wątków](the-managed-thread-pool.md).
+Zarówno TPL, jak i PLINQ są zależne od <xref:System.Threading.ThreadPool> wątków. <xref:System.Threading.ThreadPool?displayProperty=nameWithType>Klasa udostępnia aplikację .NET z pulą wątków roboczych. Można również użyć wątków puli wątków. Aby uzyskać więcej informacji, zobacz [Zarządzana pula wątków](the-managed-thread-pool.md).
 
-W końcu można użyć <xref:System.Threading.Thread?displayProperty=nameWithType> klasy, która reprezentuje wątek zarządzany. Aby uzyskać więcej informacji, zobacz [Korzystanie z wątków i wątków](using-threads-and-threading.md).
+Na koniec można użyć <xref:System.Threading.Thread?displayProperty=nameWithType> klasy, która reprezentuje wątek zarządzany. Aby uzyskać więcej informacji, zobacz [Korzystanie z wątków i wątkowości](using-threads-and-threading.md).
 
-Wiele wątków może być konieczne, aby uzyskać dostęp do zasobu udostępnionego. Aby utrzymać zasób w stanie nieuszkodzonego i uniknąć warunków wyścigu, należy zsynchronizować dostęp do wątku do niego. Można również koordynować interakcję wielu wątków. .NET udostępnia zakres typów, których można użyć do synchronizowania dostępu do zasobu udostępnionego lub koordynowania interakcji wątku. Aby uzyskać więcej informacji, zobacz [Omówienie ujegłędnych synchronizacji](overview-of-synchronization-primitives.md).
+Wiele wątków może potrzebować dostępu do zasobu udostępnionego. Aby zachować zasób w stanie nieuszkodzonym i uniknąć sytuacji wyścigu, należy zsynchronizować z nim dostęp do wątku. Możesz również skoordynować interakcję wielu wątków. Platforma .NET udostępnia szereg typów, których można użyć do synchronizowania dostępu do zasobu udostępnionego lub współdziałania wątku współrzędnych. Aby uzyskać więcej informacji, zobacz [Omówienie elementów pierwotnych synchronizacji](overview-of-synchronization-primitives.md).
 
-Czy obsługiwać wyjątki w wątkach. Nieobsługiwalne wyjątki w wątkach zazwyczaj kończą proces. Aby uzyskać więcej informacji, zobacz [Wyjątki w wątkach zarządzanych](exceptions-in-managed-threads.md).
+Obsługa wyjątków w wątkach. Nieobsłużone wyjątki w wątkach zwykle przerywają proces. Aby uzyskać więcej informacji, zobacz [wyjątki w zarządzanych wątkach](exceptions-in-managed-threads.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Wątkowość obiektów i funkcji](threading-objects-and-features.md)
-- [Najważniejsze wskazówki dotyczące zarządzanych wątków](managed-threading-best-practices.md)
-- [Przetwarzanie równoległe, współbieżność i programowanie asynchroniowe w programie .NET](../parallel-processing-and-concurrency.md)
+- [Zarządzane wątki z najlepszymi rozwiązaniami](managed-threading-best-practices.md)
+- [Równoległe przetwarzanie, współbieżność i programowanie asynchroniczne w programie .NET](../parallel-processing-and-concurrency.md)
 - [Informacje o procesach i wątkach](/windows/desktop/procthread/about-processes-and-threads)

@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.FailedPipeConnect
 ms.date: 03/30/2017
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
-ms.openlocfilehash: 472821d880433cd6a3292838a48bcb0b5bb34c43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 790a15e5401850f2767cb06f5f321ad80c674f2b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582416"
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a>System.ServiceModel.Channels.FailedPipeConnect
-Próba połączenia z punktem końcowym nazwanego potoku nie powiodło się. Podejmowana jest kolejna próba przed upływem określonego limitu czasu.  
+Próba nawiązania połączenia z punktem końcowym nazwanego potoku nie powiodła się. Zostanie podjęta kolejna próba w określonym przedziale czasu.  
   
 ## <a name="description"></a>Opis  
- Informacyjny ślad oznacza błąd nawiązać połączenia z punktem końcowym nazwanego potoku. Może się to zdarzyć, jeśli punkt końcowy nazwany potok nie zostanie znaleziony lub jest zajęty. Dodatkowe prób, każda jest oddzielona przez krótki ilość czasu, aż któraś się powiedzie, lub OpenTimeout wygaśnięcia.  
+ Ten ślad informacyjny wskazuje, że nie można nawiązać połączenia z punktem końcowym nazwanego potoku. Może się tak zdarzyć, jeśli punkt końcowy nazwanego potoku nie został znaleziony lub jest zajęty. Podejmowane są dodatkowe próby, z których każda oddzielona przez krótki czas, aż do momentu jego pomyślnego zakończenia lub OpenTimeout.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

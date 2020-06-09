@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid'
+title: 'Przewodnik: wyświetlanie danych z serwera bazy danych SQL w kontrolce DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: fc8b35c89e76a415529d76db687bc96767384e11
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452126"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591036"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Przewodnik: wyświetlanie danych z SQL Serverj bazy danych w kontrolce DataGrid
 
-W tym instruktażu pobierasz dane z bazy danych SQL Server i wyświetlają te dane w kontrolce <xref:System.Windows.Controls.DataGrid>. Za pomocą Entity Framework ADO.NET można tworzyć klasy jednostek, które reprezentują dane, i używać LINQ do zapisywania zapytania pobierającego określone dane z klasy jednostki.
+W tym instruktażu pobierasz dane z bazy danych SQL Server i wyświetlają te dane w <xref:System.Windows.Controls.DataGrid> kontrolce. Za pomocą Entity Framework ADO.NET można tworzyć klasy jednostek, które reprezentują dane, i używać LINQ do zapisywania zapytania pobierającego określone dane z klasy jednostki.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -29,17 +29,17 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ## <a name="create-entity-classes"></a>Tworzenie klas jednostek
 
-1. Utwórz nowy projekt aplikacji WPF w Visual Basic lub C#, a następnie nadaj mu nazwę `DataGridSQLExample`.
+1. Utwórz nowy projekt aplikacji WPF w Visual Basic lub C#, a następnie nadaj mu nazwę `DataGridSQLExample` .
 
 2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt, wskaż polecenie **Dodaj**, a następnie wybierz pozycję **nowy element**.
 
-     Pojawi się okno dialogowe Dodaj nowy element.
+     Zostanie wyświetlone okno dialogowe Dodawanie nowego elementu.
 
 3. W okienku zainstalowane szablony wybierz pozycję **dane** , a następnie na liście szablony wybierz pozycję **ADO.NET Entity Data Model**.
 
-     ![Szablon elementu Entity Data Model ADO.NET](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
+     ![Szablon elementu Entity Data Model ADO.NET](../../wcf/feature-details/media/ado-net-entity-data-model-item-template.png)
 
-4. Nazwij plik `AdventureWorksModel.edmx` a następnie kliknij przycisk **Dodaj**.
+4. Nazwij plik `AdventureWorksModel.edmx` , a następnie kliknij przycisk **Dodaj**.
 
      Zostanie wyświetlony Kreator modelu Entity Data Model.
 
@@ -55,7 +55,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
      ![Wybierz produkt i ProductCategory z tabel](./media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
 
-8. Kliknij przycisk **Finish** (Zakończ).
+8. Kliknij przycisk **Zakończ**.
 
      Jednostki Product i ProductCategory są wyświetlane w Entity Designer.
 
@@ -65,35 +65,35 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 1. Otwórz plik MainWindow. XAML.
 
-2. Ustaw właściwość <xref:System.Windows.FrameworkElement.Width%2A> na <xref:System.Windows.Window> na 450.
+2. Ustaw <xref:System.Windows.FrameworkElement.Width%2A> Właściwość na <xref:System.Windows.Window> 450.
 
-3. W edytorze XAML Dodaj następujący tag <xref:System.Windows.Controls.DataGrid> między tagami `<Grid>` i `</Grid>`, aby dodać <xref:System.Windows.Controls.DataGrid> o nazwie `dataGrid1`.
+3. W edytorze XAML Dodaj następujący <xref:System.Windows.Controls.DataGrid> tag między `<Grid>` tagami i, `</Grid>` Aby dodać <xref:System.Windows.Controls.DataGrid> nazwę `dataGrid1` .
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
      ![Okno z elementem DataGrid](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4. Wybierz <xref:System.Windows.Window>.
+4. Wybierz pozycję <xref:System.Windows.Window> .
 
-5. Za pomocą okno Właściwości lub edytora XAML Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Window> o nazwie `Window_Loaded` dla zdarzenia <xref:System.Windows.FrameworkElement.Loaded>. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie prostego programu obsługi zdarzeń](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
+5. Za pomocą okno Właściwości lub edytora XAML Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Window> nazwanego `Window_Loaded` <xref:System.Windows.FrameworkElement.Loaded> zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie prostego programu obsługi zdarzeń](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      Poniżej przedstawiono kod XAML dla MainWindow. XAML.
 
     > [!NOTE]
-    > Jeśli używasz Visual Basic, w pierwszym wierszu MainWindow. XAML Zastąp `x:Class="DataGridSQLExample.MainWindow"` elementem `x:Class="MainWindow"`.
+    > Jeśli używasz Visual Basic, w pierwszym wierszu MainWindow. XAML Zastąp ciąg `x:Class="DataGridSQLExample.MainWindow"` opcją `x:Class="MainWindow"` .
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
-6. Otwórz plik związany z kodem (MainWindow. XAML. vb lub MainWindow.xaml.cs) dla <xref:System.Windows.Window>.
+6. Otwórz plik związany z kodem (MainWindow. XAML. vb lub MainWindow.xaml.cs) dla <xref:System.Windows.Window> .
 
-7. Dodaj następujący kod, aby pobrać tylko określone wartości z sprzężonych tabel i ustawić właściwość <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.DataGrid> na wyniki zapytania.
+7. Dodaj następujący kod, aby pobrać tylko określone wartości z sprzężonych tabel i ustawić <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Właściwość <xref:System.Windows.Controls.DataGrid> do wyników zapytania.
 
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
 8. Uruchom przykład.
 
-     Powinna zostać wyświetlona <xref:System.Windows.Controls.DataGrid>, która wyświetla dane.
+     Powinna zostać wyświetlona wartość <xref:System.Windows.Controls.DataGrid> , która wyświetla dane.
 
      ![DataGrid z danymi z bazy danych SQL](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 

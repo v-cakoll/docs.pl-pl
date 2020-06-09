@@ -1,5 +1,6 @@
 ---
 title: Potencjalne pułapki związane z równoległością danych i zadań
+description: Dowiedz się więcej o potencjalnym pułapek danych i równoległości zadań, ponieważ równoległość dodaje złożoność, która nie występuje w kolejnym kodzie.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599766"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczną poprawę wydajności w porównaniu z zwykłymi pętlami sekwencyjnymi. Jednak prace przekształcają pętlą wprowadzają złożoność, która może prowadzić do problemów, które w sekwencyjnym kodzie nie są zgodne lub nie są w ogóle obsługiwane. Ten temat zawiera wskazówki, które należy unikać podczas pisania pętli równoległych.  
@@ -78,7 +79,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie równoległe](index.md)
 - [Potencjalne pułapki związane z PLINQ](potential-pitfalls-with-plinq.md)

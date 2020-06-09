@@ -2,16 +2,16 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4acf2491c242099f6c8b6c9c01dc18e9c99c9934
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589737"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 
-Podwójny przykład http demonstruje sposób konfigurowania powiązania `WSDualHttpBinding`. Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt dupleksowy. Kontrakt jest definiowany przez interfejs `ICalculatorDuplex`, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). W tym przykładzie interfejs `ICalculatorDuplex` pozwala klientowi wykonywać operacje matematyczne, obliczając wynik działania w ramach sesji. Niezależnie usługa zwraca wyniki na interfejsie `ICalculatorDuplexCallback`. Kontrakt dupleksowy wymaga sesji, ponieważ należy ustanowić kontekst w celu skorelowania zestawu komunikatów przesyłanych między klientem i usługą. Powiązanie `WSDualHttpBinding` obsługuje komunikację dupleksową.
+Podwójny przykład http demonstruje sposób konfigurowania `WSDualHttpBinding` powiązania. Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt dupleksowy. Kontrakt jest definiowany przez `ICalculatorDuplex` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). W tym przykładzie `ICalculatorDuplex` interfejs pozwala klientowi wykonywać operacje matematyczne, obliczając wynik działania w ramach sesji. Niezależnie usługa zwraca wyniki na `ICalculatorDuplexCallback` interfejsie. Kontrakt dupleksowy wymaga sesji, ponieważ należy ustanowić kontekst w celu skorelowania zestawu komunikatów przesyłanych między klientem i usługą. `WSDualHttpBinding`Powiązanie obsługuje komunikację dupleksową.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
@@ -21,11 +21,11 @@ Podwójny przykład http demonstruje sposób konfigurowania powiązania `WSDualH
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
-Aby skonfigurować punkt końcowy usługi przy użyciu `WSDualHttpBinding`, określ powiązanie w konfiguracji punktu końcowego, jak pokazano.
+Aby skonfigurować punkt końcowy usługi przy użyciu `WSDualHttpBinding` , określ powiązanie w konfiguracji punktu końcowego, jak pokazano.
 
 ```xml
 <endpoint address=""
@@ -81,14 +81,14 @@ Po uruchomieniu przykładu komunikaty zwrócone do klienta są wyświetlane w in
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
     > [!IMPORTANT]
-    > W przypadku uruchamiania klienta programu w konfiguracji obejmującej wiele komputerów należy zamienić wartość localhost zarówno w atrybucie `address` [\<punktu końcowego > elementu \<klienta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) , a atrybut [`clientBaseAddress` elementu\<](../../configure-apps/file-schema/wcf/bindings.md) >\<elementu > [WSDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) z nazwą odpowiedniego komputera, jak pokazano poniżej:
+    > W przypadku uruchamiania klienta programu w konfiguracji obejmującej wiele komputerów Pamiętaj, aby zastąpić localhost w `address` atrybucie [ \<endpoint> \<client> ](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu i `clientBaseAddress` atrybut [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) elementu elementu [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) nazwą odpowiedniego komputera, jak pokazano poniżej:
 
     ```xml
     <client>

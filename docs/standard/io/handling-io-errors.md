@@ -1,5 +1,6 @@
 ---
 title: Obsługa błędów we/wy w programie .NET
+description: Dowiedz się, jak obsłużyć błędy we/wy w programie .NET. Mapuj kody błędów na wyjątki, obsługuj wyjątki w operacjach we/wy i obsłuż IOException.
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599805"
 ---
 # <a name="handling-io-errors-in-net"></a>Obsługa błędów we/wy w programie .NET
 

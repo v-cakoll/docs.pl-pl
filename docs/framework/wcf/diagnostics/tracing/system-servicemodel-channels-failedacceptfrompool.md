@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.FailedAcceptFromPool
 ms.date: 03/30/2017
 ms.assetid: d535b1b5-ee58-45e8-b400-7d9570f4eb9a
-ms.openlocfilehash: de0bdd9e5ab922b09249bf550fde745042be8e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bfa31d0eaf3b00017512eddc60bfa99eda619e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666758"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582585"
 ---
 # <a name="systemservicemodelchannelsfailedacceptfrompool"></a>System.ServiceModel.Channels.FailedAcceptFromPool
-Próba ponownego użycia połączenia z puli nie powiodło się. Podejmowana jest kolejna próba przed upływem określonego limitu czasu.  
+Próba ponownego użycia połączenia w puli nie powiodła się. Zostanie podjęta kolejna próba w określonym przedziale czasu.  
   
 ## <a name="description"></a>Opis  
- Informacyjny ślad wskazuje wystąpił błąd podczas próby ponownego użycia puli połączeń. Może się to zdarzyć, ponieważ połączenie z puli nie jest zgodne, gotowe lub nadal aktywne. Dodatkowe ponowne użycie innego połączenia puli prób w ciągu danego limitu czasu, a nowe połączenie zostanie utworzona w przypadku, gdy zostaną znalezione żadne można używać połączenia.  
+ Ten ślad informacyjny wskazuje, że wystąpił błąd podczas próby ponownego użycia połączenia w puli. Może się tak zdarzyć, ponieważ połączenie w puli nie jest zgodne, gotowe lub nadal aktywne. Dodatkowe próby ponownego użycia innych połączeń w puli są wykonywane w ramach danego limitu czasu, a nowe połączenie jest tworzone w przypadku braku możliwości użycia połączeń.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

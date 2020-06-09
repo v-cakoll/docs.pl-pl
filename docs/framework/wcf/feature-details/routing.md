@@ -6,31 +6,31 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 801de9865495aec32114f47075397c3445a88fc9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590387"
 ---
 # <a name="routing"></a>Routing
-Tematy w tej sekcji omówiono usługa routingu. Usługa routingu jest ogólny konfigurowalne pośredniczącego protokołu SOAP umożliwia skonfigurowanie routingu opartego na zawartości, skonfiguruj protokół mostkowanie, obsługiwać błędy komunikacji i dynamicznie Aktualizuj logikę routingu w czasie wykonywania.  
+Tematy w tej sekcji dotyczą usługi routingu. Usługa routingu to ogólny, konfigurowalny pośrednik protokołu SOAP, który umożliwia skonfigurowanie routingu opartego na zawartości, skonfigurowanie mostkowania protokołów, obsługę błędów komunikacji i dynamiczne aktualizowanie logiki routingu w czasie wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)  
+ [Usługa routingu](routing-service.md)  
  Zawiera omówienie funkcji usługi routingu.  
   
- [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- W tym artykule opisano funkcje usługi routingu.  
+ [Usługa routingu](routing-service.md)  
+ Opisuje funkcje usługi routingu.  
   
- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- W tym artykule omówiono konfigurację usługi Routing.  
+ [Wprowadzenie do routingu](routing-introduction.md)  
+ Omawia konfigurację usługi routingu.  
   
- [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- W tym artykule opisano wzorców wiadomości, które może przetworzyć usługa routingu.  
+ [Kontrakty routingu](routing-contracts.md)  
+ Opisuje wzorce komunikatów, które usługa routingu może przetworzyć.  
   
- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- W tym artykule omówiono, jak filtry komunikatów są używane do routingu opartego na zawartości.  
+ [Filtry komunikatów](message-filters.md)  
+ W tym artykule omówiono sposób używania filtrów komunikatów na potrzeby routingu opartego na zawartości.  
   
- [Scenariusze routingu](../../../../docs/framework/wcf/feature-details/routing-scenarios.md)  
- W tym artykule opisano typowe scenariusze routingu.
+ [Scenariusze routingu](routing-scenarios.md)  
+ Opisuje typowe scenariusze routingu.

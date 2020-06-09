@@ -8,98 +8,98 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: a9213d8cbbafaaa1fffa3a1db0d6936c2fc6544f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185041"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593545"
 ---
 # <a name="how-to-create-a-federated-client"></a>Instrukcje: Tworzenie klienta federacyjnego
 W programie Windows Communication Foundation (WCF) tworzenie klienta dla *usługi federacyjnej* składa się z trzech głównych kroków:  
   
-1. Konfigurowanie [ \<powiązania niestandardowego wsFederationHttpBinding>lub](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) podobne powiązanie niestandardowe. Aby uzyskać więcej informacji na temat tworzenia odpowiedniego powiązania, zobacz [Jak: Tworzenie powiązania WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Alternatywnie uruchom [Narzędzie narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego metadanych usługi federacyjnej, aby wygenerować plik konfiguracyjny do komunikowania się z usługą federacyjnymi i jedną lub kilkoma usługami tokenu zabezpieczającego.  
+1. Skonfiguruj [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub podobne niestandardowe powiązanie. Aby uzyskać więcej informacji na temat tworzenia odpowiednich powiązań, zobacz [How to: Create a WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Alternatywnie Uruchom narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego metadanych usługi federacyjnej, aby wygenerować plik konfiguracji do komunikacji z usługą federacyjną i co najmniej jedną usługą tokenów zabezpieczających.  
   
-2. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential> właściwości, które kontroluje różne aspekty interakcji klienta z usługą tokenu zabezpieczającego.  
+2. Ustawianie właściwości kontrolujących <xref:System.ServiceModel.Security.IssuedTokenClientCredential> różne aspekty interakcji klienta z usługą tokenu zabezpieczającego.  
   
-3. Ustaw właściwości <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>programu , który umożliwia certyfikaty potrzebne do bezpiecznej komunikacji z określonymi punktami końcowymi, takimi jak usługi tokenów zabezpieczających.  
+3. Ustaw właściwości <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> , które umożliwiają certyfikatom wymaganie bezpiecznego komunikowania się z poszczególnymi punktami końcowymi, takimi jak usługi tokenu zabezpieczającego.  
   
 > [!NOTE]
-> A <xref:System.Security.Cryptography.CryptographicException> może zostać zgłoszony, gdy klient używa <xref:System.ServiceModel.WSFederationHttpBinding> personifikowanych poświadczeń, powiązania lub tokenu wystawionego na zamówienie i kluczy asymetrycznych. Klucze asymetryczne <xref:System.ServiceModel.WSFederationHttpBinding> są używane z tokenami wiązania <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> i niestandardowymi, gdy właściwości <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>i właściwości są ustawione odpowiednio na . Jest <xref:System.Security.Cryptography.CryptographicException> generowany, gdy klient próbuje wysłać wiadomość, a profil użytkownika nie istnieje dla tożsamości, że klient jest personifikacji. Aby rozwiązać ten problem, zaloguj się do `LoadUserProfile` komputera klienckiego lub zadzwoń przed wysłaniem wiadomości.  
+> <xref:System.Security.Cryptography.CryptographicException>Może zostać zgłoszony, gdy klient używa personifikowanych poświadczeń, <xref:System.ServiceModel.WSFederationHttpBinding> powiązania lub tokenu wystawionego niestandardowo oraz kluczy asymetrycznych. Klucze asymetryczne są używane z <xref:System.ServiceModel.WSFederationHttpBinding> tokenami powiązania i wystawiane niestandardowo <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> , gdy właściwości i są odpowiednio ustawione na <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> . <xref:System.Security.Cryptography.CryptographicException>Jest zgłaszany, gdy klient próbuje wysłać komunikat, a profil użytkownika nie istnieje dla tożsamości, która personifikuje klienta. Aby wyeliminować ten problem, zaloguj się na komputerze klienckim lub wywołaj `LoadUserProfile` przed wysłaniem wiadomości.  
   
- Ten temat zawiera szczegółowe informacje na temat tych procedur. Aby uzyskać więcej informacji na temat tworzenia odpowiedniego powiązania, zobacz [Jak: Tworzenie powiązania WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Aby uzyskać więcej informacji o tym, jak działa usługa federacyjnej, zobacz [Federacja](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Ten temat zawiera szczegółowe informacje dotyczące tych procedur. Aby uzyskać więcej informacji na temat tworzenia odpowiednich powiązań, zobacz [How to: Create a WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Aby uzyskać więcej informacji na temat działania usługi federacyjnej, zobacz [Federacja](federation.md).  
   
-### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Aby wygenerować i sprawdzić konfigurację usługi federacyjnej  
+### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Aby wygenerować i przeanalizować konfigurację usługi federacyjnej  
   
-1. Uruchom [narzędzie narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z adresem adresu URL metadanych usługi jako parametru wiersza polecenia.  
+1. Uruchom [Narzędzie metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z adresem URL metadanych usługi jako parametrem wiersza polecenia.  
   
-2. Otwórz wygenerowany plik konfiguracyjny w odpowiednim edytorze.  
+2. Otwórz wygenerowany plik konfiguracji w odpowiednim edytorze.  
   
-3. Sprawdź atrybuty i zawartość wszelkich wygenerowanych [ \<>wystawców](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) i [ \<issuerMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) elementów. Znajdują się one w [ \<elementach zabezpieczeń>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) dla [ \<elementów wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub niestandardowych powiązań. Upewnij się, że adresy zawierają oczekiwane nazwy domen lub inne informacje adresowe. Ważne jest, aby sprawdzić te informacje, ponieważ klient uwierzytelnia się na tych adresach i może ujawnić informacje, takie jak pary nazwy użytkownika/hasła. Jeśli adres nie jest oczekiwanym adresem, może to spowodować ujawnienie informacji niezamierzonemu odbiorcy.  
+3. Badaj atrybuty i zawartość wszelkich wygenerowanych [\<issuer>](../../configure-apps/file-schema/wcf/issuer.md) i [\<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md) elementów. Znajdują się one w obrębie [\<security>](../../configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) elementów dla [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elementów niestandardowych powiązań lub. Upewnij się, że adresy zawierają oczekiwane nazwy domen lub inne informacje o adresie. Ważne jest, aby sprawdzić te informacje, ponieważ klient uwierzytelnia się na tych adresach i może ujawnić takie informacje, jak pary nazwa użytkownika i hasło. Jeśli adres nie jest oczekiwanym adresem, może to spowodować ujawnienie informacji osobie nieprzeznaczonej odbiorcy.  
   
-4. Sprawdź wszelkie dodatkowe `alternativeIssuedTokenParameters` [ \<wydaneTokenParameters>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) elementy wewnątrz skomentowanego <> element. Podczas korzystania z narzędzia Svcutil.exe do generowania konfiguracji dla usługi federacyjnej, jeśli usługa federacyjne lub jakiekolwiek pośrednie usługi tokenu zabezpieczającego nie określają adresu wystawcy, ale raczej określają adres metadanych dla usługi tokenu zabezpieczającego, która udostępnia wiele punktów końcowych, wynikowy plik konfiguracyjny odnosi się do pierwszego punktu końcowego. Dodatkowe punkty końcowe znajdują się w pliku konfiguracyjnym jako skomentowane <`alternativeIssuedTokenParameters`> elementów.  
+4. Zapoznaj [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md) się z dodatkowymi elementami wewnątrz oznaczonego komentarzem <`alternativeIssuedTokenParameters`> elementu. W przypadku korzystania z narzędzia Svcutil. exe do generowania konfiguracji dla usługi federacyjnej, jeśli usługa federacyjna lub wszystkie pośrednie usługi tokenów zabezpieczających nie określają adresu wystawcy, ale zamiast tego określisz adres metadanych dla usługi tokenu zabezpieczającego, która ujawnia wiele punktów końcowych, utworzony plik konfiguracji odwołuje się do pierwszego punktu końcowego. Dodatkowe punkty końcowe znajdują się w pliku konfiguracji jako komentarz <`alternativeIssuedTokenParameters`> elementy.  
   
-     Określ, czy jedna z `issuedTokenParameters` tych <> jest lepsza niż te, które są już obecne w konfiguracji. Na przykład klient może preferować uwierzytelnienie w usłudze tokenu zabezpieczającego przy użyciu tokenu Windows CardSpace, a nie pary nazwa użytkownika/hasło.  
+     Ustal, czy jeden z tych <`issuedTokenParameters`> jest preferowany dla tej, która jest już obecna w konfiguracji. Na przykład klient może preferować uwierzytelnienie w usłudze tokenu zabezpieczającego przy użyciu tokenu Windows CardSpace zamiast pary nazwa użytkownika i hasło.  
   
     > [!NOTE]
-    > W przypadku, gdy wiele usług tokenu zabezpieczającego musi być przenoszone przed komunikowaniem się z usługą, usługa pośredniego tokenu zabezpieczającego może skierować klienta do niepoprawnej usługi tokenu zabezpieczającego. W związku z tym upewnij się, że punkt końcowy dla usługi tokenu zabezpieczającego [ \<w issuedTokenParameters>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) jest oczekiwaną usługą tokenu zabezpieczającego, a nie nieznaną usługą tokenu zabezpieczającego.  
+    > W przypadku, gdy wiele usług tokenów zabezpieczających musi być przepływających przed komunikowaniem się z usługą, istnieje możliwość, że pośrednia usługa tokenu zabezpieczającego kieruje klienta do nieprawidłowej usługi tokenu zabezpieczającego. W związku z tym upewnij się, że punkt końcowy usługi tokenu zabezpieczającego w programie [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md) to oczekiwana usługa tokenu zabezpieczającego, a nie nieznana usługa tokenu zabezpieczającego.  
   
-### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>Aby skonfigurować issuedTokenClientCredential w kodzie  
+### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>Aby skonfigurować IssuedTokenClientCredential w kodzie  
   
-1. Dostęp <xref:System.ServiceModel.Security.IssuedTokenClientCredential> za <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> pośrednictwem właściwości <xref:System.ServiceModel.Description.ClientCredentials> klasy (zwrócone <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> przez <xref:System.ServiceModel.ClientBase%601> właściwość klasy <xref:System.ServiceModel.ChannelFactory> lub za pośrednictwem klasy), jak pokazano w poniższym przykładowym kodzie.  
+1. Uzyskuj dostęp do <xref:System.ServiceModel.Security.IssuedTokenClientCredential> <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwości <xref:System.ServiceModel.Description.ClientCredentials> klasy (zwracanej przez <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwość <xref:System.ServiceModel.ClientBase%601> klasy lub przez <xref:System.ServiceModel.ChannelFactory> klasę), jak pokazano w poniższym przykładzie kodu.  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-2. Jeśli buforowanie tokenów nie jest <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> wymagane, `false`ustaw właściwość na . Właściwość <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> określa, czy takie tokeny z usługi tokenu zabezpieczającego są buforowane. Jeśli ta właściwość `false`jest ustawiona na , klient żąda nowego tokenu z usługi tokenu zabezpieczającego, gdy musi ponownie uwierzytelnić się do usługi federacyjnej, niezależnie od tego, czy poprzedni token jest nadal prawidłowy. Jeśli ta właściwość `true`jest ustawiona na , klient ponownie używa istniejącego tokenu, gdy musi ponownie uwierzytelnić się do usługi federacyjnej (tak długo, jak token nie wygasł). Wartość domyślna to `true`.  
+2. Jeśli buforowanie tokenu nie jest wymagane, ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> Właściwość na `false` . <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A>Właściwość określa, czy takie tokeny z usługi tokenu zabezpieczającego są buforowane. Jeśli ta właściwość jest ustawiona na `false` , klient żąda nowego tokenu z usługi tokenu zabezpieczającego za każdym razem, gdy musi ponownie uwierzytelnić się w usłudze federacyjnej, bez względu na to, czy poprzedni token jest nadal ważny. Jeśli ta właściwość jest ustawiona na `true` , klient ponownie używa istniejącego tokenu przy każdym ponownym uwierzytelnieniu w usłudze federacyjnej (o ile token nie wygasł). Wartość domyślna to `true`.  
   
-3. Jeśli limit czasu jest wymagany dla tokenów <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> buforowanych, <xref:System.TimeSpan> ustaw właściwość na wartość. Właściwość określa, jak długo token może być buforowany. Po upływie określonego przedziału czasu token jest usuwany z pamięci podręcznej klienta. Domyślnie tokeny są buforowane przez czas nieokreślony. W poniższym przykładzie ustawia przedział czasu do 10 minut.  
+3. Jeśli w buforowanych tokenach jest wymagany limit czasu, należy ustawić <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> Właściwość na <xref:System.TimeSpan> wartość. Właściwość określa, jak długo token może być buforowany. Po upływie określonego przedziału czasu token zostanie usunięty z pamięci podręcznej klienta. Domyślnie tokeny są buforowane w nieskończoność. Poniższy przykład ustawia przedział czasu na 10 minut.  
   
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4. Element opcjonalny. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> wartość procentową. Wartość domyślna to 60 (procent). Właściwość określa procent okresu ważności tokenu. Na przykład jeśli wystawiony token jest prawidłowy <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> przez 10 godzin i jest ustawiony na 80, token jest odnawiany po ośmiu godzinach. W poniższym przykładzie ustawia wartość na 80 procent.  
+4. Opcjonalny. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> wartość procentową. Wartość domyślna to 60 (procent). Właściwość określa wartość procentową okresu ważności tokenu. Na przykład jeśli wystawiony token jest ważny przez 10 godzin i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> jest ustawiony na 80, token jest odnawiany po ośmiu godzinach. Poniższy przykład ustawia wartość na 80 procent.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
   
-     Interwał odnawiania określony przez okres `IssuedTokenRenewalThresholdPercentage` ważności tokenu i `MaxIssuedTokenCachingTime` wartość jest zastępowane przez wartość w przypadkach, gdy czas buforowania jest krótszy niż czas progu odnowienia. Na przykład jeśli i `IssuedTokenRenewalThresholdPercentage` czas trwania tokenu wynosi osiem `MaxIssuedTokenCachingTime` godzin, a wartość wynosi 10 minut, klient kontaktuje się z usługą tokenu zabezpieczającego dla zaktualizowanego tokenu co 10 minut.  
+     Interwał odnawiania określony przez okres ważności tokenu i `IssuedTokenRenewalThresholdPercentage` wartość jest zastępowana przez `MaxIssuedTokenCachingTime` wartość w przypadkach, gdy czas buforowania jest krótszy niż czas progu odnawiania. Na przykład jeśli produkt `IssuedTokenRenewalThresholdPercentage` i czas trwania tokenu wynosi osiem godzin, a `MaxIssuedTokenCachingTime` wartość wynosi 10 minut, klient programu kontaktuje się z usługą tokenu zabezpieczającego dla zaktualizowanego tokenu co 10 minut.  
   
-5. Jeśli tryb entropii <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> klucza inny niż jest potrzebny w powiązaniu, które nie używa zabezpieczeń wiadomości lub zabezpieczeń transportu z poświadczeniami wiadomości (na przykład. powiązanie nie ma <xref:System.ServiceModel.Channels.SecurityBindingElement>a <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> ), ustawić właściwość na odpowiednią wartość. Tryb *entropii* określa, czy klucze symetryczne mogą być kontrolowane przy użyciu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> właściwości. Ta wartość <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>domyślna to , gdzie zarówno klient, jak i wystawca tokenu dostarczają dane, które są łączone w celu wytworzenia rzeczywistego klucza. Inne wartości <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>są i , co oznacza, że cały klucz jest określony przez klienta lub serwera, odpowiednio. W poniższym przykładzie ustawia właściwość do używania tylko danych serwera dla klucza.  
+5. Jeśli <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> w powiązaniu, które nie korzysta z zabezpieczeń komunikatów lub zabezpieczeń transportu z poświadczeniami komunikatów, jest wymagany inny tryb entropii klucza niż jest to potrzebne. powiązanie nie ma elementu <xref:System.ServiceModel.Channels.SecurityBindingElement> ), ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> Właściwość na odpowiednią wartość. Tryb *entropii* określa, czy klucze symetryczne można kontrolować za pomocą <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> właściwości. Ta wartość domyślna to <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> , w której zarówno klient, jak i wystawca tokenów dostarczają dane połączone w celu utworzenia rzeczywistego klucza. Inne wartości to <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> i <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> , co oznacza, że cały klucz jest określony przez klienta lub serwer. Poniższy przykład ustawia właściwość, aby używać tylko danych serwera dla klucza.  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
   
     > [!NOTE]
-    > Jeśli <xref:System.ServiceModel.Channels.SecurityBindingElement> a jest obecny w tokenu zabezpieczającym <xref:System.ServiceModel.Security.IssuedTokenClientCredential> usługi lub powiązania <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> usługi, `SecurityBindingElement` <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> zestaw jest zastępowane przez właściwość . .  
+    > Jeśli występuje <xref:System.ServiceModel.Channels.SecurityBindingElement> w usłudze tokenu zabezpieczającego lub w powiązaniu usługi, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> zestaw na <xref:System.ServiceModel.Security.IssuedTokenClientCredential> jest zastępowany przez <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> Właściwość `SecurityBindingElement` .  
   
-6. Skonfiguruj wszelkie zachowania punktu końcowego specyficzne dla <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> wystawcy, dodając je do kolekcji zwróconej przez właściwość.  
+6. Skonfiguruj wszelkie zachowania punktu końcowego specyficzne dla wystawcy, dodając je do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> Właściwość.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
-### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Aby skonfigurować program IssuedTokenClientCredential w konfiguracji  
+### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Aby skonfigurować IssuedTokenClientCredential w konfiguracji  
   
-1. Utwórz [ \<issuedToken>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) element jako element podrzędny [ \<issuedToken>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) element w zachowaniu punktu końcowego.  
+1. Utwórz [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) element jako obiekt podrzędny [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) elementu w zachowaniu punktu końcowego.  
   
-2. Jeśli buforowanie tokenów nie jest `cacheIssuedTokens` wymagane, ustaw atrybut (<`issuedToken`> element) `false`na .  
+2. Jeśli buforowanie tokenu nie jest wymagane, należy ustawić `cacheIssuedTokens` atrybut ( `issuedToken` elementu> <) na `false` .  
   
-3. Jeśli limit czasu jest wymagany dla tokenów `maxIssuedTokenCachingTime` buforowanych, ustaw atrybut `issuedToken` na <> element do odpowiedniej wartości. Przykład:  
+3. Jeśli w buforowanych tokenach jest wymagany limit czasu, należy ustawić `maxIssuedTokenCachingTime` atrybut na <`issuedToken`> elementu na odpowiednią wartość. Przykład:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
-4. Jeśli preferowana jest wartość inna niż `issuedTokenRenewalThresholdPercentage` wartość domyślna, ustaw `issuedToken` atrybut <> element na odpowiednią wartość, na przykład:  
+4. Jeśli preferowana jest wartość inna niż domyślna, należy ustawić `issuedTokenRenewalThresholdPercentage` atrybut w <`issuedToken`> elementu na odpowiednią wartość, na przykład:  
   
     ```xml  
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
     ```  
   
-5. Jeśli tryb entropii `CombinedEntropy` klucza inny niż jest na powiązanie, które nie używa zabezpieczeń wiadomości lub `SecurityBindingElement`zabezpieczeń transportu `defaultKeyEntropyMode` z poświadczeniami wiadomości (na przykład powiązanie nie ma), ustaw atrybut na `<issuedToken>` element albo `ServerEntropy` lub `ClientEntropy` zgodnie z wymaganiami.  
+5. Jeśli tryb entropii klucza inny niż `CombinedEntropy` znajduje się w powiązaniu, które nie korzysta z zabezpieczeń komunikatów lub zabezpieczeń transportu z poświadczeniami wiadomości (na przykład powiązanie nie ma `SecurityBindingElement` ), ustaw `defaultKeyEntropyMode` atrybut w `<issuedToken>` elemencie na albo `ServerEntropy` `ClientEntropy` jako wymagany.  
   
     ```xml  
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6. Element opcjonalny. Skonfiguruj dowolne zachowanie niestandardowego punktu końcowego specyficzne dla wystawcy, tworząc `issuerChannelBehaviors` element `issuedToken` <> jako element podrzędny <> elementu. Dla każdego zachowania utwórz element `add` <> jako element podrzędny elementu `issuerChannelBehaviors`> <. Określ adres wystawcy zachowania, `issuerAddress` ustawiając atrybut w `add` <> element. Określ samo zachowanie, `behaviorConfiguration` ustawiając atrybut na `add` <> element.  
+6. Opcjonalny. Skonfiguruj niestandardowe zachowanie punktu końcowego określonego przez wystawcę, tworząc <`issuerChannelBehaviors`> element jako element podrzędny `issuedToken` elementu <>. Dla każdego zachowania Utwórz <`add` element> jako obiekt podrzędny <`issuerChannelBehaviors`> elementu. Określ adres wystawcy zachowania przez ustawienie `issuerAddress` atrybutu dla `add` elementu <>. Określ samo zachowanie, ustawiając `behaviorConfiguration` atrybut w <`add`> elementu.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -107,28 +107,28 @@ W programie Windows Communication Foundation (WCF) tworzenie klienta dla *usług
     </issuerChannelBehaviors>  
     ```  
   
-### <a name="to-configure-an-x509certificaterecipientclientcredential-in-code"></a>Aby skonfigurować x509CertificateRecipientClientCredential w kodzie  
+### <a name="to-configure-an-x509certificaterecipientclientcredential-in-code"></a>Aby skonfigurować X509CertificateRecipientClientCredential w kodzie  
   
-1. Dostęp <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> do <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A> właściwości <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> klasy lub <xref:System.ServiceModel.ChannelFactory> obiektu można uzyskać za pośrednictwem obiektu.  
+1. Dostęp do <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> Właściwości przez właściwość <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> klasy lub <xref:System.ServiceModel.ChannelFactory> właściwości.  
   
      [!code-csharp[c_CreateSTS#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#18)]
      [!code-vb[c_CreateSTS#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#18)]  
   
-2. Jeśli <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wystąpienie jest dostępne dla certyfikatu dla <xref:System.Collections.Generic.ICollection%601.Add%2A> danego punktu końcowego, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> należy użyć metody kolekcji zwróconej przez właściwość.  
+2. Jeśli <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wystąpienie jest dostępne dla certyfikatu dla danego punktu końcowego, użyj <xref:System.Collections.Generic.ICollection%601.Add%2A> metody kolekcji zwróconej przez <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> Właściwość.  
   
      [!code-csharp[c_CreateSTS#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#19)]
      [!code-vb[c_CreateSTS#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#19)]  
   
-3. Jeśli <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wystąpienie nie jest <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> dostępne, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> należy użyć metody klasy, jak pokazano w poniższym przykładzie.  
+3. Jeśli <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wystąpienie jest niedostępne, użyj <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> metody <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> klasy, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[c_CreateSTS#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#20)]
      [!code-vb[c_CreateSTS#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#20)]  
   
-### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>Aby skonfigurować x509CertificateRecipientClientCredential w konfiguracji  
+### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>Aby skonfigurować X509CertificateRecipientClientCredential w konfiguracji  
   
-1. Tworzenie [ \<scopedCertificates>](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) element jako element podrzędny [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) element, który sam jest elementem podrzędnym [ \<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element w zachowaniu punktu końcowego.  
+1. Utwórz [\<scopedCertificates>](../../configure-apps/file-schema/wcf/scopedcertificates-element.md) element jako obiekt podrzędny [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elementu, który jest elementem podrzędnym [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) elementu w zachowaniu punktu końcowego.  
   
-2. Utwórz `<add>` element jako element `<scopedCertificates>` podrzędny elementu. Określ wartości `storeLocation` `storeName`dla `x509FindType`, `findValue` , i atrybuty, aby odwołać się do odpowiedniego certyfikatu. Ustaw `targetUri` atrybut na wartość, która zawiera adres punktu końcowego, dla którego ma być używany certyfikat, jak pokazano w poniższym przykładzie.  
+2. Utwórz `<add>` element jako obiekt podrzędny `<scopedCertificates>` elementu. Określ wartości `storeLocation` `storeName` atrybutów,, `x509FindType` i, `findValue` Aby odwołać się do odpowiedniego certyfikatu. Ustaw `targetUri` atrybut na wartość, która dostarcza adres punktu końcowego, którego certyfikat ma być używany, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <scopedCertificates>  
@@ -141,31 +141,31 @@ W programie Windows Communication Foundation (WCF) tworzenie klienta dla *usług
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod konfiguruje wystąpienie <xref:System.ServiceModel.Security.IssuedTokenClientCredential> klasy w kodzie.  
+ Poniższy przykład kodu konfiguruje wystąpienie <xref:System.ServiceModel.Security.IssuedTokenClientCredential> klasy w kodzie.  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Aby zapobiec ujawnieniu informacji, klienci, którzy są uruchomione narzędzie Svcutil.exe do przetwarzania metadanych z federowanych punktów końcowych należy upewnić się, że wynikowe adresy usługi tokenu zabezpieczającego są to, czego oczekują. Jest to szczególnie ważne, gdy usługa tokenu zabezpieczającego udostępnia wiele punktów końcowych, ponieważ narzędzie Svcutil.exe generuje wynikowy plik konfiguracyjny do używania pierwszego takiego punktu końcowego, który może nie być tym, którego klient powinien używać.  
+ Aby zapobiec ujawnieniu informacji, Klienci uruchamiający narzędzie Svcutil. exe mogą przetwarzać metadane z federacyjnych punktów końcowych, powinny mieć pewność, że otrzymane adresy usługi tokenu zabezpieczającego są oczekiwane. Jest to szczególnie ważne, gdy usługa tokenów zabezpieczających ujawnia wiele punktów końcowych, ponieważ narzędzie Svcutil. exe generuje plik konfiguracji, aby użyć pierwszego takiego punktu końcowego, który może nie być używany przez klienta.  
   
-## <a name="localissuer-required"></a>Wymagany identyfikator lokalny  
- Jeśli oczekuje się, że klienci zawsze będą używać wystawcy lokalnego, należy zwrócić uwagę na następujące kwestie: domyślne dane wyjściowe programu Svcutil.exe powoduje, że lokalny wystawca nie jest używany, jeśli usługa tokenu zabezpieczającego przedostatniego w łańcuchu określa adres wystawcy lub adres metadanych wystawcy.  
+## <a name="localissuer-required"></a>LocalIssuer wymagane  
+ Jeśli klienci mają zawsze używać wystawcy lokalnego, należy zwrócić uwagę na następujące kwestie: domyślne dane wyjściowe programu Svcutil. exe nie są używane, jeśli w łańcuchu określono adres wystawcy lub adres metadanych wydawcy.  
   
- Aby uzyskać więcej <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>informacji <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>na <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> temat ustawiania , i właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> klasy, zobacz [Jak: Konfigurowanie wystawcy lokalnego](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> ustawiania <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> właściwości,, i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> klasy, zobacz [How to: Configure a Local wystawca](how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certyfikaty o określonym zakresie  
- Jeśli certyfikaty usług muszą być określone do komunikowania się z dowolnej usługi tokenu zabezpieczającego, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> zazwyczaj dlatego, że negocjacja certyfikatu nie jest używany, mogą być określone przy użyciu właściwości <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> klasy. Metoda <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> przyjmuje <xref:System.Uri> a <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> i jako parametry. Określony certyfikat jest używany podczas komunikowania się z punktami końcowymi w określonym identyfikatorze URI. Alternatywnie można użyć <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> metody, aby dodać certyfikat do <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> kolekcji zwróconej przez właściwość.  
+ Jeśli należy określić certyfikaty usługi do komunikacji z dowolnymi usługami tokenów zabezpieczających, zwykle ponieważ negocjowanie certyfikatu nie jest używane, można je określić przy użyciu <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwości <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> klasy. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A>Metoda przyjmuje <xref:System.Uri> <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Parametry i AS. Określony certyfikat jest używany podczas komunikowania się z punktami końcowymi o określonym identyfikatorze URI. Alternatywnie możesz użyć <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> metody, aby dodać certyfikat do kolekcji zwróconej przez <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> Właściwość.  
   
 > [!NOTE]
-> Pomysł klienta certyfikatów, które są ograniczone do danego identyfikatora URI ma zastosowanie tylko do aplikacji, które są wykonywanie wywołań wychodzących do usług, które uwidaczniają punkty końcowe w tych identyfikatorów URI. Nie ma zastosowania do certyfikatów, które są używane do podpisywania wystawionych tokenów, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> takich <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> jak te skonfigurowane na serwerze w kolekcji zwracanej przez klasę. Aby uzyskać więcej informacji, zobacz [Jak: Konfigurowanie poświadczeń w usłudze federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+> Pomysł klienta dotyczący certyfikatów należących do zakresu danego identyfikatora URI dotyczy tylko aplikacji, które powodują wywołania wychodzące do usług, które uwidaczniają punkty końcowe dla tych identyfikatorów URI. Nie dotyczy certyfikatów, które są używane do podpisywania wystawionych tokenów, takich jak te skonfigurowane na serwerze w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasę. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie poświadczeń na usługa federacyjna](how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Instrukcje: Wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Instrukcje: bezpieczne punkty końcowe metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Federacja — przykład](../samples/federation-sample.md)
+- [Instrukcje: Wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Instrukcje: tworzenie elementu WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: Konfigurowanie lokalnego wystawcy](how-to-configure-a-local-issuer.md)
+- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](security-considerations-with-metadata.md)
+- [Instrukcje: bezpieczne punkty końcowe metadanych](how-to-secure-metadata-endpoints.md)

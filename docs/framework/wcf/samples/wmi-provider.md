@@ -2,21 +2,21 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 04fdbb7efcae6fdbb78f467352e6106ac5218799
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a01b4b70d4c497d1efb93bb53a7339f5f7f29ef9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183190"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591049"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
-W tym przykładzie pokazano, jak zbierać dane z usług Windows Communication Foundation (WCF) w czasie wykonywania przy użyciu dostawcy instrumentacji zarządzania windows (WMI), który jest wbudowany w WCF. Ponadto w tym przykładzie pokazano, jak dodać obiekt WMI zdefiniowane przez użytkownika do usługi. Przykład aktywuje dostawcę usługi WMI dla [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, `ICalculator` jak zbierać dane z usługi w czasie wykonywania.  
+Ten przykład pokazuje, jak zbierać dane z usług Windows Communication Foundation (WCF) w środowisku uruchomieniowym przy użyciu dostawcy Instrumentacja zarządzania Windows (WMI) wbudowanego w funkcję WCF. Ponadto w tym przykładzie pokazano, jak dodać obiekt usługi WMI zdefiniowany przez użytkownika do usługi. Przykład aktywuje dostawcę WMI dla [wprowadzenie](getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
   
- WMI jest wdrożenie microsoftu web-based Enterprise Management (WBEM) standard. Aby uzyskać więcej informacji na temat zestawie WMI SDK, zobacz [Instrumentacja zarządzania windowsem](/windows/desktop/WmiSdk/wmi-start-page). WBEM jest standardem branżowym w zakresie sposobu, w jaki aplikacje narażają instrumentację zarządzania na zewnętrzne narzędzia do zarządzania.  
+ Usługa WMI to implementacja standardu opartego na sieci Web (WBEM) firmy Microsoft. Aby uzyskać więcej informacji na temat zestawu WMI SDK, zobacz [Instrumentacja zarządzania Windows](/windows/desktop/WmiSdk/wmi-start-page). WBEM to standardowy branża, w której aplikacje uwidaczniają Instrumentację zarządzania w zewnętrznych narzędziach do zarządzania.  
   
- WCF implementuje dostawcę WMI, składnik, który udostępnia instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego z WBEM. Narzędzia do zarządzania można połączyć się z usługami za pośrednictwem interfejsu w czasie wykonywania. WCF udostępnia atrybuty usług, takich jak adresy, powiązania, zachowania i detektory.  
+ Funkcja WCF implementuje dostawcę WMI, składnik, który udostępnia instrumentację w czasie wykonywania za pomocą interfejsu zgodnego z pakietem WBEM. Narzędzia do zarządzania programu mogą łączyć się z usługami za pomocą interfejsu w czasie wykonywania. Funkcja WCF udostępnia atrybuty usług, takie jak adresy, powiązania, zachowania i odbiorniki.  
   
- Wbudowany dostawca WMI jest aktywowany w pliku konfiguracyjnym aplikacji. Odbywa się to `wmiProviderEnabled` za pomocą atrybutu [ \<diagnostyki>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w sekcji [ \<system.serviceModel>,](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) jak pokazano w poniższej konfiguracji przykładowej:  
+ Wbudowany Dostawca usługi WMI jest aktywowany w pliku konfiguracji aplikacji. Jest to realizowane za pomocą `wmiProviderEnabled` atrybutu [\<diagnostics>](../../configure-apps/file-schema/wcf/diagnostics.md) w [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, jak pokazano w poniższej konfiguracji przykładowej:  
   
 ```xml  
 <system.serviceModel>  
@@ -26,24 +26,24 @@ W tym przykładzie pokazano, jak zbierać dane z usług Windows Communication Fo
 </system.serviceModel>  
 ```  
   
- Ten wpis konfiguracji udostępnia interfejs WMI. Aplikacje do zarządzania mogą teraz łączyć się za pośrednictwem tego interfejsu i uzyskiwać dostęp do instrumentacji zarządzania aplikacji.  
+ Ten wpis konfiguracji uwidacznia interfejs WMI. Aplikacje zarządzania mogą teraz łączyć się za pomocą tego interfejsu i uzyskiwać dostęp do Instrumentacji zarządzania aplikacji.  
   
 ## <a name="custom-wmi-object"></a>Niestandardowy obiekt WMI  
- Dodanie obiektów WMI do usługi umożliwia ujawnienie informacji zdefiniowanych przez użytkownika wraz z wbudowanymi informacjami o dostawcy WMI. Jest to realizowane przez opublikowanie schematu usługi do usługi WMI przy użyciu aplikacji Installutil.exe. Instrukcje, aby to osiągnąć, wraz z więcej szczegółów można znaleźć w instrukcji konfiguracji na końcu tematu.  
+ Dodanie obiektów usługi WMI do usługi umożliwia ujawnienie informacji zdefiniowanych przez użytkownika oraz wbudowanych informacji o dostawcach WMI. Jest to realizowane przez opublikowanie schematu usługi w usłudze WMI przy użyciu aplikacji Installutil. exe. Instrukcje do osiągnięcia tego, a także więcej szczegółów można znaleźć w instrukcjach instalacji na końcu tematu.  
   
-## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji w u obiektu WMI  
+## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji WMI  
 
-Dostęp do danych usługi WMI można uzyskać na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji W++ i programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi WMI](/windows/desktop/wmisdk/using-wmi).
+Dostęp do danych usługi WMI można uzyskać na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji C++ i .NET Framework. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi WMI](/windows/desktop/wmisdk/using-wmi).
   
- W tym przykładzie użyto dwóch skryptów Java: jednego do wyliczenia usług uruchomionych na komputerze wraz z niektórymi ich właściwościami, a drugi do wyświetlania zdefiniowanych przez użytkownika danych WMI. Skrypt otwiera połączenie z dostawcą usługi WMI, analizuje dane i wyświetla zebrane dane.  
+ W tym przykładzie zastosowano dwa skrypty Java: jeden do wyliczania usług działających na komputerze wraz z niektórymi właściwościami, a drugą, aby wyświetlić dane usługi WMI zdefiniowane przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla zebrane dane.  
   
- Uruchom próbkę, aby utworzyć uruchomione wystąpienie usługi WCF. Gdy usługa jest uruchomiona, uruchom każdy skrypt Java przy użyciu następującego polecenia w wierszu polecenia:  
+ Rozpocznij przykład, aby utworzyć uruchomione wystąpienie usługi WCF. Gdy usługa jest uruchomiona, uruchom każdy skrypt Java za pomocą następującego polecenia w wierszu polecenia:  
   
 ```console  
 cscript EnumerateServices.js  
 ```  
   
- Skrypt uzyskuje dostęp do instrumentacji zawartej w usłudze i generuje następujące dane wyjściowe:  
+ Skrypt uzyskuje dostęp do Instrumentacji zawartej w usłudze i tworzy następujące dane wyjściowe:  
   
 ```console  
 Microsoft (R) Windows Script Host Version 5.6  
@@ -101,13 +101,13 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
       |-Type:                       Behavior  
 ```  
   
- Następnie uruchom drugi skrypt Java, aby wyświetlić zdefiniowane przez użytkownika dane WMI:  
+ Następnie Uruchom drugi skrypt języka Java, aby wyświetlić dane zdefiniowane przez użytkownika usługi WMI:  
   
 ```console  
 cscript EnumerateCustomObjects.js  
 ```  
   
- Skrypt uzyskuje dostęp do instrumentacji zdefiniowanej przez użytkownika zawartej w usługach i generuje następujące dane wyjściowe:  
+ Skrypt uzyskuje dostęp do zdefiniowanej przez użytkownika Instrumentacji zawartej w usługach i tworzy następujące dane wyjściowe:  
   
 ```console
 1 WMIObject(s) found.  
@@ -116,34 +116,34 @@ cscript EnumerateCustomObjects.js
 |-WMIInfo:       User Defined WMI Information.  
 ```  
   
- Dane wyjściowe pokazują, że na komputerze jest uruchomiona jedna usługa. Usługa udostępnia jeden punkt końcowy, `ICalculator` który implementuje umowy. Ustawienia zachowania i powiązania, które są implementowane przez punkt końcowy są wymienione jako suma poszczególnych elementów stosu obsługi wiadomości.  
+ Dane wyjściowe pokazują, że na komputerze jest uruchomiona jedna usługa. Usługa ujawnia jeden punkt końcowy, który implementuje `ICalculator` kontrakt. Ustawienia zachowania i powiązania, które są implementowane przez punkt końcowy, są wyświetlane jako suma poszczególnych elementów stosu komunikatów.  
   
- WMI nie ogranicza się do narażania instrumentacji zarządzania infrastruktury WCF. Aplikacja może udostępniać własne elementy danych specyficzne dla domeny za pośrednictwem tego samego mechanizmu. Usługa WMI to ujednolicony mechanizm inspekcji i kontroli usługi sieci Web.  
+ Usługa WMI nie jest ograniczona do uwidaczniania Instrumentacji zarządzania infrastruktury WCF. Aplikacja może uwidaczniać własne specyficzne dla domeny elementy danych za pomocą tego samego mechanizmu. Usługa WMI to ujednolicony mechanizm kontroli i kontroli nad usługą sieci Web.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Opublikuj schemat usług w UMI, uruchamiając plik InstallUtil.exe (domyślne lokalizacje installUtil.exe to "%WINDIR%\Microsoft.NET\Framework\v4.30319") w pliku service.dll w katalogu hostingu. Ten krok musi być wykonywany tylko po wprowadzeniu zmian w pliku service.dll.
+3. Opublikuj schemat usług w usłudze WMI, uruchamiając InstallUtil. exe (domyślne lokalizacje dla InstallUtil. exe to "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") w pliku Service. dll w katalogu hostingu. Ten krok należy wykonać tylko po wprowadzeniu zmian w pliku. dll usługi.
   
-4. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, postępuj zgodnie z instrukcjami w [przypadku uruchamiania przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
     > [!NOTE]
-    > Jeśli po zainstalowaniu WCF po zainstalowaniu ASP.NET, może być konieczne uruchomienie "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x, aby nadać kontu ASPNET uprawnienia do publikowania obiektów WMI.  
+    > W przypadku zainstalowania programu WCF po zainstalowaniu ASP.NET może być konieczne uruchomienie "% WINDIR% \ Microsoft. Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "-r-x", aby nadać kontu ASPNET uprawnienie do publikowania obiektów usługi WMI.  
   
-5. Wyświetlanie danych z próbki na powierzchni za pomocą `cscript EnumerateServices.js` usługi `cscript EnumerateCustomObjects.js`WMI za pomocą poleceń: lub .  
+5. Wyświetl dane z przykładu, korzystając z poleceń: `cscript EnumerateServices.js` lub `cscript EnumerateCustomObjects.js` .  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Próbki monitorowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

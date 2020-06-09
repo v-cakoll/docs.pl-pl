@@ -2,16 +2,16 @@
 title: Komunikacja za pomocą nietrwałych kolejek
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 8ed10262d319664d404e6beb630593cb93748a7d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a9f7e8a96fd293c7f87cc19846a42a42f28de288
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602349"
 ---
 # <a name="volatile-queued-communication"></a>Komunikacja za pomocą nietrwałych kolejek
 
-W tym przykładzie pokazano, jak wykonać nietrwałą komunikację w kolejce za pośrednictwem transportu kolejkowania komunikatów (MSMQ). Ten przykład używa <xref:System.ServiceModel.NetMsmqBinding>. Usługa w tym przypadku jest samoobsługową aplikacją konsolową, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
+W tym przykładzie pokazano, jak wykonać nietrwałą komunikację w kolejce za pośrednictwem transportu kolejkowania komunikatów (MSMQ). Ten przykład używa <xref:System.ServiceModel.NetMsmqBinding> . Usługa w tym przypadku jest samoobsługową aplikacją konsolową, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
@@ -25,7 +25,7 @@ W niektórych scenariuszach możesz chcieć wysłać nietrwały komunikat bez gw
 > [!NOTE]
 > Nie można wysyłać nietrwałych komunikatów bez gwarancji w zakresie transakcji przy użyciu usługi MSMQ. Należy również utworzyć kolejkę nietransakcyjną do wysyłania komunikatów nietransakcyjnych.
 
-Kontrakt usługi w tym przykładzie jest `IStockTicker`, który definiuje jednokierunkowe usługi, które najlepiej pasują do użycia z kolejkami.
+Kontrakt usługi w tym przykładzie `IStockTicker` definiuje usługi jednokierunkowe, które najlepiej nadają się do użycia z kolejkami.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -49,7 +49,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-Usługa jest samodzielna. W przypadku korzystania z transportu usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera kod, aby sprawdzić istnienie kolejki i utworzyć ją, jeśli jest to wymagane. Nazwa kolejki jest odczytywana z pliku konfiguracji. Adres podstawowy jest używany przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania serwera proxy dla usługi.
+Usługa jest samodzielna. W przypadku korzystania z transportu usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera kod, aby sprawdzić istnienie kolejki i utworzyć ją, jeśli jest to wymagane. Nazwa kolejki jest odczytywana z pliku konfiguracji. Adres podstawowy jest używany przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania serwera proxy dla usługi.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,10 +80,10 @@ public static void Main()
 }
 ```
 
-Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System. serviceModel w pliku konfiguracji i określa powiązanie `netMsmqBinding`.
+Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System. serviceModel w pliku konfiguracji i określa `netMsmqBinding` powiązanie.
 
 > [!NOTE]
-> Nazwa kolejki używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych w ścieżce podczas tworzenia kolejki przy użyciu <xref:System.Messaging>. Adres punktu końcowego Windows Communication Foundation (WCF) określa schemat net. MSMQ:, używa "localhost" dla komputera lokalnego i ukośników w swojej ścieżce.
+> Nazwa kolejki używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych w ścieżce podczas tworzenia kolejki przy użyciu <xref:System.Messaging> . Adres punktu końcowego Windows Communication Foundation (WCF) określa schemat net. MSMQ:, używa "localhost" dla komputera lokalnego i ukośników w swojej ścieżce.
 
 Gwarancje i trwałość lub lotność komunikatów są również określone w konfiguracji.
 
@@ -157,17 +157,17 @@ Stock Tick zzz9:43.3
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
-Domyślnie przy <xref:System.ServiceModel.NetMsmqBinding>włączono zabezpieczenia transportu. Istnieją dwie odpowiednie właściwości zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` Domyślnie tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny, a dla usługi MSMQ należy zainstalować opcję Integracja z usługą Active Directory. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, wystąpi błąd.
+Domyślnie z opcją <xref:System.ServiceModel.NetMsmqBinding> jest włączona funkcja zabezpieczenia transportu. Istnieją dwie odpowiednie właściwości zabezpieczenia transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> a <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` tryb uwierzytelniania jest ustawiony na wartość, `Windows` a poziom ochrony jest ustawiony na `Sign` . Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny, a dla usługi MSMQ należy zainstalować opcję Integracja z usługą Active Directory. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, wystąpi błąd.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Aby uruchomić przykład na komputerze przyłączonym do grupy roboczej lub bez integracji z usługą Active Directory
 
-1. Jeśli komputer nie jest częścią domeny lub nie zainstalowano integracji z usługą Active Directory, Wyłącz zabezpieczenia transportu, ustawiając tryb uwierzytelniania i poziom ochrony na `None`, jak pokazano w poniższym przykładowym kodzie konfiguracji:
+1. Jeśli komputer nie jest częścią domeny lub nie zainstalowano integracji z usługą Active Directory, Wyłącz zabezpieczenia transportu, ustawiając tryb uwierzytelniania i poziom ochrony `None` tak, jak pokazano w poniższym przykładowym kodzie konfiguracji:
 
     ```xml
     <system.serviceModel>
@@ -217,13 +217,13 @@ Domyślnie przy <xref:System.ServiceModel.NetMsmqBinding>włączono zabezpieczen
 2. Przed uruchomieniem przykładu należy zmienić konfigurację na serwerze i kliencie programu.
 
     > [!NOTE]
-    > Ustawienie `security mode` `None` jest równoznaczne z ustawieniem <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>i `Message` zabezpieczenia `None`.
+    > Ustawienie `security mode` odpowiada `None` ustawieniu <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> i `Message` zabezpieczenia na `None` .
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`

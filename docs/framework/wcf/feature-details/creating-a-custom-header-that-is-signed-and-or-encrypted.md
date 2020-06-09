@@ -2,12 +2,12 @@
 title: Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: d737647f8c0442a3d6fa0d077a1ffe2c251ea043
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0adb4100bca1add2c23ff2c802ddb5e2cb1c368c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856177"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579661"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 Podczas wywoływania usługi niezwiązanej z usługą WCF przy użyciu klienta WCF czasami konieczne jest użycie niestandardowych nagłówków protokołu SOAP. W programie WCF występuje błąd kanonizacji, który uniemożliwia tworzenie niestandardowych nagłówków podpisanych i szyfrowanych podczas pracy z usługą nieobsługującą usług WCF. Problem jest spowodowany niepoprawnym kanonizacją domyślnych przestrzeni nazw XML. Jest to problematyczne tylko podczas wywoływania usług innych niż usługi WCF z niestandardowymi nagłówkami, które są podpisane i/lub szyfrowane.  Gdy usługa otrzymuje komunikat zawierający podpisany i/lub zaszyfrowany nagłówek niestandardowy, nie można zweryfikować podpisu. To obejście pozwala uniknąć błędu kanonizacji, umożliwia współdziałanie z usługami nieobsługującymi usług WCF, ale nie uniemożliwia współdziałania z usługami WCF.  
@@ -43,7 +43,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- Ten kod deklaruje nowy typ o `msgHeaderElement` nazwie, który zostanie Zserializowany za pomocą serializatora XML. Gdy wystąpienie tego typu jest serializowane, zdefiniuje przestrzeń nazw z prefiksem "h", co spowoduje obejście błędu kanonizacji.  Następnie kontrakt wiadomości zdefiniuje wystąpienie `msgHeaderElement` i oznaczy go <xref:System.ServiceModel.MessageHeaderAttribute> atrybutem, jak pokazano w poniższym przykładzie.  
+ Ten kod deklaruje nowy typ o nazwie `msgHeaderElement` , który zostanie Zserializowany za pomocą serializatora XML. Gdy wystąpienie tego typu jest serializowane, zdefiniuje przestrzeń nazw z prefiksem "h", co spowoduje obejście błędu kanonizacji.  Następnie kontrakt wiadomości zdefiniuje wystąpienie `msgHeaderElement` i oznaczy go <xref:System.ServiceModel.MessageHeaderAttribute> atrybutem, jak pokazano w poniższym przykładzie.  
   
 ```csharp
 [MessageContract]  
@@ -56,8 +56,8 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Domyślny kontrakt komunikatów](../../../../docs/framework/wcf/samples/default-message-contract.md)
-- [Kontrakty komunikatów](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [Używanie kontraktów komunikatu](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Domyślny kontrakt komunikatów](../samples/default-message-contract.md)
+- [Kontrakty komunikatów](../samples/message-contracts.md)
+- [Używanie kontraktów komunikatu](using-message-contracts.md)

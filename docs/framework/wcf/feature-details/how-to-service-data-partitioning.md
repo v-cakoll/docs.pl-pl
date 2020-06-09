@@ -2,12 +2,12 @@
 title: 'Instrukcje: Partycjonowanie danych usługi'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947874"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601195"
 ---
 # <a name="how-to-service-data-partitioning"></a>Instrukcje: Partycjonowanie danych usługi
 W tym temacie przedstawiono podstawowe kroki wymagane do dzielenia komunikatów między wiele wystąpień tej samej usługi docelowej. Partycjonowanie danych usługi jest zwykle używane, gdy konieczne jest skalowanie usługi w celu zapewnienia lepszej jakości usług lub w przypadku konieczności obsługi żądań od różnych klientów w określony sposób. Na przykład komunikaty z klientów o wysokiej wartości lub "Gold" mogą wymagać przetworzenia na wyższym priorytecie niż komunikaty od standardowego klienta.  
@@ -173,6 +173,6 @@ W tym temacie przedstawiono podstawowe kroki wymagane do dzielenia komunikatów 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Usługi routingu](../samples/routing-services.md)

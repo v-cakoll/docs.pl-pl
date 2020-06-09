@@ -2,12 +2,12 @@
 title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 567ca62d48e80993328548b11f8b59c4fcd355fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600597"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 
@@ -49,13 +49,13 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-Te dwie metody wykorzystują `IContextManager` implementacje do zapisu i odczytywania identyfikatora kontekstu do lub z wiadomości. (`IContextManager` jest interfejsem niestandardowym używanym do definiowania kontraktu dla wszystkich menedżerów kontekstu). Kanał może zawierać identyfikator kontekstu w niestandardowym nagłówku protokołu SOAP lub w nagłówku pliku cookie HTTP. Każda implementacja Menedżera kontekstu dziedziczy z `ContextManagerBase` klasy, która zawiera typowe funkcje dla wszystkich menedżerów kontekstu. `GetContextId` Metoda w tej klasie jest używana do pochodzenie identyfikatora kontekstu od klienta. Gdy identyfikator kontekstu pochodzi po raz pierwszy, ta metoda zapisuje je w pliku tekstowym, którego nazwa jest zbudowana przez zdalny adres punktu końcowego (nieprawidłowe znaki nazwy pliku w typowych identyfikatorach URI są zastępowane znakami @).
+Te dwie metody wykorzystują `IContextManager` implementacje do zapisu i odczytywania identyfikatora kontekstu do lub z wiadomości. ( `IContextManager` jest interfejsem niestandardowym używanym do definiowania kontraktu dla wszystkich menedżerów kontekstu). Kanał może zawierać identyfikator kontekstu w niestandardowym nagłówku protokołu SOAP lub w nagłówku pliku cookie HTTP. Każda implementacja Menedżera kontekstu dziedziczy z `ContextManagerBase` klasy, która zawiera typowe funkcje dla wszystkich menedżerów kontekstu. `GetContextId`Metoda w tej klasie jest używana do pochodzenie identyfikatora kontekstu od klienta. Gdy identyfikator kontekstu pochodzi po raz pierwszy, ta metoda zapisuje je w pliku tekstowym, którego nazwa jest zbudowana przez zdalny adres punktu końcowego (nieprawidłowe znaki nazwy pliku w typowych identyfikatorach URI są zastępowane znakami @).
 
 Później, gdy identyfikator kontekstu jest wymagany dla tego samego zdalnego punktu końcowego, sprawdza, czy odpowiedni plik istnieje. W takim przypadku odczytuje identyfikator kontekstu i zwraca. W przeciwnym razie zwraca nowo wygenerowany identyfikator kontekstu i zapisuje go do pliku. W przypadku konfiguracji domyślnej te pliki są umieszczane w katalogu o nazwie ContextStore, który znajduje się w katalogu tymczasowym bieżącego użytkownika. Jednak tę lokalizację można skonfigurować przy użyciu elementu Binding.
 
-Mechanizm służący do transportowania identyfikatora kontekstu można skonfigurować. Może być zapisany w nagłówku pliku cookie HTTP lub do niestandardowego nagłówka SOAP. Podejście niestandardowego nagłówka SOAP umożliwia korzystanie z tego protokołu z protokołami innymi niż HTTP (na przykład TCP lub nazwane potoki). Istnieją dwie klasy, a mianowicie `MessageHeaderContextManager` i `HttpCookieContextManager`, które implementują te dwie opcje.
+Mechanizm służący do transportowania identyfikatora kontekstu można skonfigurować. Może być zapisany w nagłówku pliku cookie HTTP lub do niestandardowego nagłówka SOAP. Podejście niestandardowego nagłówka SOAP umożliwia korzystanie z tego protokołu z protokołami innymi niż HTTP (na przykład TCP lub nazwane potoki). Istnieją dwie klasy, a mianowicie `MessageHeaderContextManager` i `HttpCookieContextManager` , które implementują te dwie opcje.
 
-Oba z nich zapisują odpowiednio identyfikator kontekstu do wiadomości. Na przykład `MessageHeaderContextManager` Klasa zapisuje ją w NAGŁÓWKU protokołu SOAP w `WriteContext` metodzie.
+Oba z nich zapisują odpowiednio identyfikator kontekstu do wiadomości. Na przykład `MessageHeaderContextManager` Klasa zapisuje ją w nagłówku protokołu SOAP w `WriteContext` metodzie.
 
 ```csharp
 public override void WriteContext(Message message)
@@ -72,7 +72,7 @@ public override void WriteContext(Message message)
 }
 ```
 
-Obie metody `ApplyContext` i `ReadContextId` w `DurableInstanceContextChannelBase` klasie wywołują odpowiednio `IContextManager.ReadContext` i. `IContextManager.WriteContext` Jednak te Menedżery kontekstu nie są tworzone bezpośrednio przez `DurableInstanceContextChannelBase` klasę. Zamiast tego używa `ContextManagerFactory` klasy do wykonania tego zadania.
+Obie `ApplyContext` metody i `ReadContextId` w `DurableInstanceContextChannelBase` klasie wywołują `IContextManager.ReadContext` `IContextManager.WriteContext` odpowiednio i. Jednak te Menedżery kontekstu nie są tworzone bezpośrednio przez `DurableInstanceContextChannelBase` klasę. Zamiast tego używa `ContextManagerFactory` klasy do wykonania tego zadania.
 
 ```csharp
 IContextManager contextManager =
@@ -81,7 +81,7 @@ IContextManager contextManager =
                 this.endpointAddress);
 ```
 
-`ApplyContext` Metoda jest wywoływana przez kanały wysyłania. Wprowadza identyfikator kontekstu do wiadomości wychodzących. `ReadContextId` Metoda jest wywoływana przez kanały odbierające. Ta metoda zapewnia, że identyfikator kontekstu jest dostępny w wiadomościach przychodzących i dodaje go do `Properties` kolekcji `Message` klasy. Zgłasza również `CommunicationException` w przypadku awarii odczytywanie identyfikatora kontekstu, a tym samym powoduje przerwanie działania kanału.
+`ApplyContext`Metoda jest wywoływana przez kanały wysyłania. Wprowadza identyfikator kontekstu do wiadomości wychodzących. `ReadContextId`Metoda jest wywoływana przez kanały odbierające. Ta metoda zapewnia, że identyfikator kontekstu jest dostępny w wiadomościach przychodzących i dodaje go do `Properties` kolekcji `Message` klasy. Zgłasza również `CommunicationException` w przypadku awarii odczytywanie identyfikatora kontekstu, a tym samym powoduje przerwanie działania kanału.
 
 ```csharp
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-Te implementacje kanałów są następnie dodawane do środowiska uruchomieniowego kanału WCF `DurableInstanceContextBindingElement` zgodnie z `DurableInstanceContextBindingElementSection` odpowiednio klasą i klasą. Więcej informacji na temat elementów powiązania i elementów powiązania można znaleźć w dokumentacji przykładowej kanału [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) .
+Te implementacje kanałów są następnie dodawane do środowiska uruchomieniowego kanału WCF zgodnie z `DurableInstanceContextBindingElement` odpowiednio klasą i `DurableInstanceContextBindingElementSection` klasą. Więcej informacji na temat elementów powiązania i elementów powiązania można znaleźć w dokumentacji przykładowej kanału [HttpCookieSession](httpcookiesession.md) .
 
 ## <a name="service-model-layer-extensions"></a>Rozszerzenia warstwy modelu usług
 
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-`SqlServerStorageManager` Klasa zawiera implementację domyślną `IStorageManager` . W swojej `SaveInstance` metodzie dany obiekt jest serializowany przy użyciu elementu XmlSerializer i jest zapisywany w bazie danych SQL Server.
+`SqlServerStorageManager`Klasa zawiera `IStorageManager` implementację domyślną. W swojej `SaveInstance` metodzie dany obiekt jest serializowany przy użyciu elementu XmlSerializer i jest zapisywany w bazie danych SQL Server.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -198,7 +198,7 @@ if (data != null)
 }
 ```
 
-Użytkownicy tych menedżerów magazynu nie muszą bezpośrednio tworzyć wystąpień. Używają `StorageManagerFactory` klasy, które są abstrakcyjne ze szczegółowych informacji o tworzeniu Menedżera magazynu. Ta klasa ma jeden statyczny element `GetStorageManager`członkowski, który tworzy wystąpienie danego typu Menedżera magazynu. Jeśli parametr type ma `null`wartość, ta metoda tworzy wystąpienie klasy domyślnej `SqlServerStorageManager` i zwraca ją. Sprawdza również poprawność danego typu, aby upewnić się, że `IStorageManager` implementuje interfejs.
+Użytkownicy tych menedżerów magazynu nie muszą bezpośrednio tworzyć wystąpień. Używają `StorageManagerFactory` klasy, które są abstrakcyjne ze szczegółowych informacji o tworzeniu Menedżera magazynu. Ta klasa ma jeden statyczny element członkowski, `GetStorageManager` który tworzy wystąpienie danego typu Menedżera magazynu. Jeśli parametr type ma wartość `null` , ta metoda tworzy wystąpienie `SqlServerStorageManager` klasy domyślnej i zwraca ją. Sprawdza również poprawność danego typu, aby upewnić się, że implementuje `IStorageManager` interfejs.
 
 ```csharp
 public static IStorageManager GetStorageManager(Type storageManagerType)
@@ -234,13 +234,13 @@ Zaimplementowano niezbędną infrastrukturę do odczytu i zapisu wystąpień z m
 
 Pierwszym krokiem tego procesu jest zapisanie identyfikatora kontekstu, który pochodzi z warstwy kanału do bieżącej klasy InstanceContext. InstanceContext to składnik środowiska uruchomieniowego, który działa jako link między dyspozytorem programu WCF i wystąpieniem usługi. Może służyć do zapewnienia dodatkowego stanu i zachowania do wystąpienia usługi. Jest to niezbędne, ponieważ podczas komunikacji z sesją identyfikator kontekstu jest wysyłany tylko z pierwszą wiadomością.
 
-Usługa WCF pozwala rozszerzyć swój składnik środowiska uruchomieniowego InstanceContext przez dodanie nowego stanu i zachowania przy użyciu jego wzorca rozszerzalnych obiektów. Rozszerzalny wzór obiektu jest używany w programie WCF do rozszerzania istniejących klas środowiska uruchomieniowego o nowe funkcje lub do dodawania nowych funkcji stanu do obiektu. W wzorcu rozszerzalnych obiektów istnieją trzy interfejsy — Interfejs IExtensibleObject\<t>, IExtension\<t> i IExtensionCollection\<t>:
+Usługa WCF pozwala rozszerzyć swój składnik środowiska uruchomieniowego InstanceContext przez dodanie nowego stanu i zachowania przy użyciu jego wzorca rozszerzalnych obiektów. Rozszerzalny wzór obiektu jest używany w programie WCF do rozszerzania istniejących klas środowiska uruchomieniowego o nowe funkcje lub do dodawania nowych funkcji stanu do obiektu. W modelu rozszerzalnych obiektów istnieją trzy interfejsy — Interfejs IExtensibleObject \<T> , IExtension \<T> i IExtensionCollection \<T> :
 
-- Interfejs Interfejs IExtensibleObject\<T> jest implementowany przez obiekty, które umożliwiają dostosowanie ich funkcjonalności.
+- Interfejs Interfejs IExtensibleObject \<T> jest implementowany przez obiekty, które umożliwiają dostosowanie ich funkcjonalności.
 
-- Interfejs IExtension\<T> jest implementowany przez obiekty, które są rozszerzeniami klas typu T.
+- Interfejs IExtension \<T> jest implementowany przez obiekty, które są rozszerzeniami klas typu T.
 
-- Interfejs IExtensionCollection\<T> jest kolekcją IExtensions, która umożliwia pobieranie IExtensions według ich typu.
+- Interfejs IExtensionCollection \<T> jest kolekcją IExtensions, która umożliwia pobieranie IExtensions według ich typu.
 
 W związku z tym należy utworzyć klasę InstanceContextExtension, która implementuje interfejs IExtension i definiuje stan wymagany do zapisania identyfikatora kontekstu. Ta klasa udostępnia również stan przechowywania używanego Menedżera magazynu. Po zapisaniu nowego stanu nie powinno być możliwe jego zmodyfikowanie. W związku z tym stan jest dostarczany i zapisywany w wystąpieniu podczas jego konstruowania, a następnie dostępny tylko przy użyciu właściwości tylko do odczytu.
 
@@ -280,9 +280,9 @@ public void Initialize(InstanceContext instanceContext, Message message)
 }
 ```
 
-Zgodnie z wcześniejszym opisem identyfikator kontekstu jest odczytywany `Properties` z kolekcji `Message` klasy i przekazywać do konstruktora klasy rozszerzenia. Pokazuje to, jak informacje mogą być wymieniane między warstwami w spójny sposób.
+Zgodnie z wcześniejszym opisem identyfikator kontekstu jest odczytywany z `Properties` kolekcji `Message` klasy i przekazywać do konstruktora klasy rozszerzenia. Pokazuje to, jak informacje mogą być wymieniane między warstwami w spójny sposób.
 
-Następnym ważnym krokiem jest zastąpienie procesu tworzenia wystąpienia usługi. Usługa WCF umożliwia wdrażanie niestandardowych zachowań tworzenia wystąpień i przełączanie ich do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowa `InstanceProvider` Klasa została zaimplementowana w celu wykonania tego zadania. Typ usługi oczekiwany przez dostawcę wystąpienia jest akceptowany w konstruktorze. W dalszej części tego służy do tworzenia nowych wystąpień. W `GetInstance` implementacji zostanie utworzone wystąpienie Menedżera magazynu z wyszukiwaniem utrwalonego wystąpienia. W przypadku powrotu `null`zostanie utworzone nowe wystąpienie typu usługi i zwrócone do obiektu wywołującego.
+Następnym ważnym krokiem jest zastąpienie procesu tworzenia wystąpienia usługi. Usługa WCF umożliwia wdrażanie niestandardowych zachowań tworzenia wystąpień i przełączanie ich do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowa `InstanceProvider` Klasa została zaimplementowana w celu wykonania tego zadania. Typ usługi oczekiwany przez dostawcę wystąpienia jest akceptowany w konstruktorze. W dalszej części tego służy do tworzenia nowych wystąpień. W `GetInstance` implementacji zostanie utworzone wystąpienie Menedżera magazynu z wyszukiwaniem utrwalonego wystąpienia. W przypadku powrotu zostanie `null` utworzone nowe wystąpienie typu usługi i zwrócone do obiektu wywołującego.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-Następnym ważnym krokiem jest zainstalowanie klas `InstanceContextExtension`, `InstanceContextInitializer`, i `InstanceProvider` w środowisku uruchomieniowym modelu usług. Atrybut niestandardowy może służyć do oznaczania klas implementacji usługi, aby można było zainstalować zachowanie. `DurableInstanceContextAttribute` Zawiera implementację tego atrybutu i implementuje `IServiceBehavior` interfejs, aby zwiększyć cały czas wykonywania usługi.
+Następnym ważnym krokiem jest zainstalowanie `InstanceContextExtension` `InstanceContextInitializer` klas,, i `InstanceProvider` w środowisku uruchomieniowym modelu usług. Atrybut niestandardowy może służyć do oznaczania klas implementacji usługi, aby można było zainstalować zachowanie. `DurableInstanceContextAttribute`Zawiera implementację tego atrybutu i implementuje `IServiceBehavior` interfejs, aby zwiększyć cały czas wykonywania usługi.
 
 Ta klasa ma właściwość akceptującą typ Menedżera magazynu, który ma być używany. W ten sposób implementacja umożliwia użytkownikom określenie własnych `IStorageManager` implementacji jako parametru tego atrybutu.
 
-W `ApplyDispatchBehavior` implementacji `InstanceContextMode` bieżący `ServiceBehavior` atrybut jest weryfikowany. Jeśli ta właściwość jest ustawiona na wartość singleton, włączenie trwałego wystąpienia nie jest możliwe `InvalidOperationException` i zostanie zgłoszone w celu powiadomienia hosta.
+W `ApplyDispatchBehavior` implementacji `InstanceContextMode` bieżący `ServiceBehavior` atrybut jest weryfikowany. Jeśli ta właściwość jest ustawiona na wartość singleton, włączenie trwałego wystąpienia nie jest możliwe i `InvalidOperationException` zostanie zgłoszone w celu powiadomienia hosta.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ W skrócie do tej pory ten przykład wygenerował kanał, który włączył nies
 
 Po lewej stronie jest sposób zapisania wystąpienia usługi w magazynie trwałym. Jak wspomniano wcześniej, istnieje już wymagana funkcja, która umożliwia zapisanie stanu w `IStorageManager` implementacji. Teraz należy zintegrować ją z środowiskiem uruchomieniowym WCF. Wymagany jest inny atrybut, który ma zastosowanie do metod w klasie implementacji usługi. Ten atrybut powinien zostać zastosowany do metod, które zmieniają stan wystąpienia usługi.
 
-`SaveStateAttribute` Klasa implementuje tę funkcję. Implementuje `IOperationBehavior` także klasę, aby zmodyfikować środowisko uruchomieniowe WCF dla każdej operacji. Gdy metoda jest oznaczona za pomocą tego atrybutu, środowisko uruchomieniowe WCF wywołuje `ApplyBehavior` metodę w trakcie `DispatchOperation` konstruowania. W tej implementacji metody istnieje pojedynczy wiersz kodu:
+`SaveStateAttribute`Klasa implementuje tę funkcję. Implementuje także `IOperationBehavior` klasę, aby zmodyfikować środowisko uruchomieniowe WCF dla każdej operacji. Gdy metoda jest oznaczona za pomocą tego atrybutu, środowisko uruchomieniowe WCF wywołuje `ApplyBehavior` metodę w trakcie `DispatchOperation` konstruowania. W tej implementacji metody istnieje pojedynczy wiersz kodu:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Ta instrukcja tworzy wystąpienie `OperationInvoker` typu i przypisuje je do `Invoker` właściwości, która `DispatchOperation` jest tworzona. `OperationInvoker` Klasa jest otoką dla operacji domyślnej Źródło utworzonej dla elementu `DispatchOperation`. Ta klasa implementuje `IOperationInvoker` interfejs. W implementacji `Invoke` metody rzeczywiste wywołanie metody jest delegowane do wewnętrznej operacji źródło. Jednak przed zwróceniem wyników Menedżer magazynu w programie `InstanceContext` jest używany do zapisania wystąpienia usługi.
+Ta instrukcja tworzy wystąpienie `OperationInvoker` typu i przypisuje je do `Invoker` właściwości, która jest `DispatchOperation` tworzona. `OperationInvoker`Klasa jest otoką dla operacji domyślnej Źródło utworzonej dla elementu `DispatchOperation` . Ta klasa implementuje `IOperationInvoker` interfejs. W `Invoke` implementacji metody rzeczywiste wywołanie metody jest delegowane do wewnętrznej operacji źródło. Jednak przed zwróceniem wyników Menedżer magazynu w programie `InstanceContext` jest używany do zapisania wystąpienia usługi.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -425,7 +425,7 @@ Ten przykład przedstawia sposób tworzenia niestandardowego kanału protokołu 
 
 Rozszerzenie można ulepszyć, umożliwiając użytkownikom określenie `IStorageManager` implementacji przy użyciu sekcji konfiguracji. Dzięki temu można zmodyfikować magazyn zapasowy bez ponownego kompilowania kodu usługi.
 
-Ponadto można spróbować zaimplementować klasę (na przykład `StateBag`), która hermetyzuje stan wystąpienia. Ta klasa jest odpowiedzialna za utrwalanie stanu przy każdej zmianie. W `SaveState` ten sposób można uniknąć użycia atrybutu i bardziej precyzyjnie wykonywać działania utrwalania (na przykład można zachować stan, gdy stan zostanie rzeczywiście zmieniony, zamiast zapisywać go przy każdym wywołaniu metody z `SaveState` atrybutem).
+Ponadto można spróbować zaimplementować klasę (na przykład `StateBag` ), która hermetyzuje stan wystąpienia. Ta klasa jest odpowiedzialna za utrwalanie stanu przy każdej zmianie. W ten sposób można uniknąć użycia `SaveState` atrybutu i bardziej precyzyjnie wykonywać działania utrwalania (na przykład można zachować stan, gdy stan zostanie rzeczywiście zmieniony, zamiast zapisywać go przy każdym wywołaniu metody z `SaveState` atrybutem).
 
 Po uruchomieniu przykładu wyświetlane są następujące dane wyjściowe. Klient dodaje dwa elementy do koszyka zakupów, a następnie pobiera listę elementów w koszyku zakupów z usługi. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.
 
@@ -444,11 +444,11 @@ Press ENTER to shut down client
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
 > [!NOTE]
 > Aby uruchomić ten przykład, musisz mieć uruchomioną SQL Server 2005 lub SQL Express 2005. W przypadku korzystania z SQL Server 2005 należy zmodyfikować konfigurację parametrów połączenia usługi. W przypadku uruchamiania wielu komputerów SQL Server jest wymagana tylko na komputerze serwera.

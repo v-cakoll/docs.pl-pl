@@ -1,22 +1,22 @@
 ---
-title: 'Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie integracji w przyszłości'
+title: 'Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6392194b3124c999031123225dcc28c8de6171e9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650560"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576528"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie integracji w przyszłości
-Jeśli obecnie używają platformy ASP.NET i przewidywać, przy użyciu usługi WCF w przyszłości, w tym temacie przedstawiono wskazówki, aby upewnić się, że nowych usług sieci Web programu ASP.NET będą działać poprawnie wraz z aplikacji WCF.  
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości
+Jeśli używasz usługi ASP.NET już dzisiaj i przewidujesz korzystanie z programu WCF w przyszłości, w tym temacie znajdują się wskazówki pozwalające zapewnić zgodność nowych usług sieci Web ASP.NET ze wszystkimi aplikacjami WCF.  
   
 ## <a name="general-recommendations"></a>Ogólne zalecenia  
- Przyjęcie programu ASP.NET 2.0 dla wszelkie nowe usługi. Ten sposób umożliwi dostęp do usprawnień i ulepszeń, nowych wersji. Jednak także pozwoli to na możliwość wykorzystania składniki programu ASP.NET 2.0 wraz z składniki usługi WCF w tej samej aplikacji.  
+ Przyjmij ASP.NET 2,0 dla nowych usług. Pozwoli to zapewnić dostęp do ulepszeń i ulepszeń nowej wersji. Jednak umożliwi to również możliwość korzystania ze składników ASP.NET 2,0 ze składnikami WCF w tej samej aplikacji.  
   
 ## <a name="protocols"></a>Protokoły  
- Użyj nowych funkcji programu ASP.NET 2.0 dotyczące weryfikacji zgodności WS-I Basic Profile 1.1:  
+ Użyj nowej funkcji ASP.NET 2.0 do sprawdzania zgodności z profilem Basic WS-I 1,1:  
   
 ```csharp  
 [WebService(Namespace = "http://tempuri.org/")]  
@@ -26,23 +26,23 @@ Jeśli obecnie używają platformy ASP.NET i przewidywać, przy użyciu usługi 
 public interface IEcho  
 ```  
   
- Usługi sieci Web platformy ASP.NET, które odpowiadają WS-I Basic Profile 1.1 będzie współdziałać z klientów programu WCF za pomocą usługi WCF wstępnie zdefiniowanych powiązań, <xref:System.ServiceModel.BasicHttpBinding>.  
+ Usługi sieci Web ASP.NET zgodne ze standardem WS-I Basic Profile 1,1 będą współdziałać z klientami WCF przy użyciu wstępnie zdefiniowanych powiązań programu WCF <xref:System.ServiceModel.BasicHttpBinding> .  
   
-## <a name="service-development"></a>Tworzenie usługi  
- Unikaj używania <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> atrybutu powoduje, że wiadomości kierowane do metody oparte na w pełni kwalifikowana nazwa elementu treści komunikatu protokołu SOAP, a nie nagłówek SOAPAction HTTP. Usługi WCF używa nagłówka SOAPAction HTTP służącą do rozesłania wiadomości.  
+## <a name="service-development"></a>Opracowywanie usług  
+ Należy unikać używania <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> atrybutu, aby komunikaty były kierowane do metod opartych na w pełni kwalifikowanej nazwie elementu treści komunikatu protokołu SOAP, a nie w nagłówku HTTP SoapAction. Funkcja WCF używa nagłówka HTTP SOAPAction dla komunikatów routingu.  
   
 ## <a name="data-representation"></a>Reprezentacja danych  
- Plik XML, do którego <xref:System.Xml.Serialization.XmlSerializer> serializuje semantycznie taka sama jak XML, do którego jest typem domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje typem parametru przestrzeni nazw XML jest jawnie zdefiniowany. Podczas definiowania typu danych do użytku z usługami sieci Web platformy ASP.NET w oczekiwaniu przyjmujące WCF w przyszłości, wykonaj następujące czynności:  
+ KOD XML, do którego <xref:System.Xml.Serialization.XmlSerializer> serializowany jest typ domyślnie jest semantycznie identyczny z XML, do którego jest <xref:System.Runtime.Serialization.DataContractSerializer> serializowany typ, pod warunkiem, że przestrzeń nazw dla kodu XML jest jawnie zdefiniowana. Podczas definiowania typu danych do użycia z usługami sieci Web ASP.NET w celu przewidzenia wdrożenia WCF w przyszłości wykonaj następujące czynności:  
   
-1. Definiowanie typu przy użyciu klas .NET Framework, a nie schematu XML.  
+1. Zdefiniuj typ przy użyciu klas .NET Framework, a nie schematu XML.  
   
-2. Dodaj tylko <xref:System.SerializableAttribute> i <xref:System.Xml.Serialization.XmlRootAttribute> do klasy, za pomocą jego jawne definiowanie przestrzeni nazw dla typu. Czy nie dodawać dodatkowe atrybuty z <xref:System.Xml.Serialization> przestrzeń nazw w celu kontrolowania, jak klasy .NET Framework ma być przetłumaczone na XML.  
+2. Dodaj tylko <xref:System.SerializableAttribute> i <xref:System.Xml.Serialization.XmlRootAttribute> do klasy, używając tej ostatniej, aby jawnie zdefiniować przestrzeń nazw dla tego typu. Nie dodawaj dodatkowych atrybutów z <xref:System.Xml.Serialization> przestrzeni nazw, aby kontrolować sposób tłumaczenia klasy .NET Framework na XML.  
   
- Przyjmując takie podejście, powinno być możliwe zapewnienie później klas .NET w kontraktach danych dodając <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez zmiany znacznie XML, do którego klasy są serializowane w celu przesłania go. Typy używane w komunikatach przez usługi sieci Web platformy ASP.NET będzie do przetworzenia jako kontraktów danych przez aplikacje WCF reaguje, oraz inne korzyści, lepszej wydajności w aplikacjach usługi WCF.  
+ Przyjmując takie podejście, powinno być możliwe późniejsze przekazanie klas .NET do kontraktów danych z dodaniem <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez znacząco zmiany kodu XML, do którego klasy są serializowane do transmisji. Typy używane w komunikatach przez usługi sieci Web ASP.NET będą mogły być przetwarzane jako Kontrakty danych przez aplikacje WCF, a wśród innych korzyści, lepsza wydajność aplikacji WCF.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Należy unikać używania opcji uwierzytelniania udostępniane przez Internetowe usługi informacyjne (IIS). Klienci WCF nie obsługują je. Jeśli usługa musi być bezpieczne, użyj opcji dostępnych przez architekturę WCF, ponieważ te opcje są bardziej rozbudowane i bazują na standardowych protokołów.  
+ Należy unikać używania opcji uwierzytelniania zapewnianych przez Internet Information Services (IIS). Klienci WCF nie obsługują tych funkcji. Jeśli usługa musi być zabezpieczona, użyj opcji dostarczonych przez program WCF, ponieważ te opcje są bogatsze i są oparte na protokołach standardowych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości](anticipating-adopting-wcf-migration.md)

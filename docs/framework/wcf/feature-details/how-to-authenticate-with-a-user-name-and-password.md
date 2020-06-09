@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601286"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
-W tym temacie przedstawiono sposób włączania usługi Windows Communication Foundation (WCF) do uwierzytelniania klienta przy użyciu nazwy użytkownika i hasła domeny systemu Windows. Przyjęto założenie, że masz działającą, samoobsługową usługę WCF. Aby zapoznać się z przykładem tworzenia podstawowej samohostowanej usługi WCF, zobacz [samouczek wprowadzenie](../../../../docs/framework/wcf/getting-started-tutorial.md). W tym temacie przyjęto założenie, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć przykład konfigurowania podobnej usługi za pomocą pliku konfiguracji, zobacz [Nazwa użytkownika zabezpieczeń wiadomości](../samples/message-security-user-name.md).
+W tym temacie przedstawiono sposób włączania usługi Windows Communication Foundation (WCF) do uwierzytelniania klienta przy użyciu nazwy użytkownika i hasła domeny systemu Windows. Przyjęto założenie, że masz działającą, samoobsługową usługę WCF. Aby zapoznać się z przykładem tworzenia podstawowej samohostowanej usługi WCF, zobacz [samouczek wprowadzenie](../getting-started-tutorial.md). W tym temacie przyjęto założenie, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć przykład konfigurowania podobnej usługi za pomocą pliku konfiguracji, zobacz [Nazwa użytkownika zabezpieczeń wiadomości](../samples/message-security-user-name.md).
 
-Aby skonfigurować usługę do uwierzytelniania klientów przy użyciu nazwy użytkownika domeny systemu Windows i haseł, użyj <xref:System.ServiceModel.WSHttpBinding> i ustaw jej Właściwość `Security.Mode` na `Message`. Ponadto należy określić certyfikat x509, który będzie używany do szyfrowania nazwy użytkownika i hasła, gdy są one wysyłane z klienta do usługi.
+Aby skonfigurować usługę do uwierzytelniania klientów przy użyciu nazwy użytkownika domeny systemu Windows i haseł, użyj <xref:System.ServiceModel.WSHttpBinding> i ustaw jej `Security.Mode` Właściwość na `Message` . Ponadto należy określić certyfikat x509, który będzie używany do szyfrowania nazwy użytkownika i hasła, gdy są one wysyłane z klienta do usługi.
 
 Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasła oraz określić poświadczenia użytkownika na serwerze proxy klienta WCF.
 
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługę WCF do uwierzytelniania przy użyciu nazwy użytkownika i hasła domeny systemu Windows
 
-1. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding>, ustaw tryb zabezpieczeń powiązania na <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, ustaw `ClientCredentialType` powiązania na <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania z hostem usługi, jak pokazano w poniższym kodzie:
+1. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> , ustaw tryb zabezpieczeń powiązania z <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> , ustaw `ClientCredentialType` powiązanie z <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania z hostem usługi, jak pokazano w poniższym kodzie:
 
     ```csharp
     // ...
@@ -40,7 +40,7 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
     // ...
     ```
 
-    Możesz użyć własnego certyfikatu, po prostu zmodyfikuj kod, aby odwołać się do certyfikatu. Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Upewnij się, że certyfikat znajduje się w magazynie certyfikatów osoby zaufane dla komputera lokalnego. Można to zrobić, uruchamiając program MMC. exe i wybierając **plik**, **Dodaj/Usuń przystawkę...** . W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz **przystawkę Certyfikaty** , a następnie kliknij przycisk **Dodaj**. W oknie dialogowym Przystawka certyfikatów wybierz pozycję **konto komputera**. Domyślnie certyfikat wygenerowany na podstawie przykładowej nazwy użytkownika zabezpieczeń wiadomości zostanie umieszczony w folderze Personal/Certificates.  Będzie on wyświetlany jako "localhost" w kolumnie wystawiony dla w oknie programu MMC. Przeciągnij i upuść certyfikat do folderu **zaufane osoby** . Umożliwi to usłudze WCF traktowanie certyfikatu jako certyfikatu zaufanego podczas przeprowadzania uwierzytelniania.
+    Możesz użyć własnego certyfikatu, po prostu zmodyfikuj kod, aby odwołać się do certyfikatu. Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](working-with-certificates.md). Upewnij się, że certyfikat znajduje się w magazynie certyfikatów osoby zaufane dla komputera lokalnego. Można to zrobić, uruchamiając program MMC. exe i wybierając **plik**, **Dodaj/Usuń przystawkę...** . W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz **przystawkę Certyfikaty** , a następnie kliknij przycisk **Dodaj**. W oknie dialogowym Przystawka certyfikatów wybierz pozycję **konto komputera**. Domyślnie certyfikat wygenerowany na podstawie przykładowej nazwy użytkownika zabezpieczeń wiadomości zostanie umieszczony w folderze Personal/Certificates.  Będzie on wyświetlany jako "localhost" w kolumnie wystawiony dla w oknie programu MMC. Przeciągnij i upuść certyfikat do folderu **zaufane osoby** . Umożliwi to usłudze WCF traktowanie certyfikatu jako certyfikatu zaufanego podczas przeprowadzania uwierzytelniania.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Aby wywołać usługę przekazującą nazwę użytkownika i hasło
 
@@ -81,7 +81,7 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
     // Call the service operation using the proxy
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>

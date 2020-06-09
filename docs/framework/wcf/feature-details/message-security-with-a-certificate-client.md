@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184656"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602638"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Zabezpieczenia komunikatów z klientem dysponującym certyfikatem
-W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication Foundation (WCF) zabezpieczoną przy użyciu trybu zabezpieczeń wiadomości. Zarówno klient, jak i usługa są uwierzytelnione za pomocą certyfikatów. Aby uzyskać więcej informacji, zobacz [Zabezpieczenia aplikacji rozproszonych](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication Foundation (WCF) zabezpieczony przy użyciu trybu zabezpieczeń wiadomości. Zarówno klient, jak i usługa są uwierzytelniani przy użyciu certyfikatów. Aby uzyskać więcej informacji, zobacz [rozproszone zabezpieczenia aplikacji](distributed-application-security.md).
 
- ![Zrzut ekranu przedstawiający klienta z certyfikatem.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Zrzut ekranu pokazujący klienta z certyfikatem.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Aby zapoznać się z przykładową aplikacją, zobacz [Certyfikat zabezpieczeń wiadomości](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Aby zapoznać się z przykładową aplikacją, zobacz [certyfikat zabezpieczeń wiadomości](../samples/message-security-certificate.md).  
 
 |Charakterystyka|Opis|  
 |--------------------|-----------------|  
@@ -31,20 +31,20 @@ W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication 
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Utwórz usługę autonomiczną przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Utwórz usługę przy użyciu dostarczonej konfiguracji, ale nie definiuj żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
-### <a name="code"></a>Code  
- Poniższy kod pokazuje, jak utworzyć punkt końcowy usługi, który używa zabezpieczeń wiadomości w celu ustanowienia bezpiecznego kontekstu.  
+### <a name="code"></a>Kod  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który używa zabezpieczeń komunikatów do ustanowienia bezpiecznego kontekstu.  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
 ### <a name="configuration"></a>Konfigurowanie  
- Zamiast kodu można użyć następującej konfiguracji.  
+ Można użyć poniższej konfiguracji zamiast kodu.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -85,7 +85,7 @@ W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication 
 ```  
   
 ## <a name="client"></a>Klient  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
 - Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
@@ -94,14 +94,14 @@ W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication 
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a>Code  
- Poniższy kod tworzy klienta. Powiązanie jest zabezpieczeń trybu wiadomości, a typ `Certificate`poświadczeń klienta jest ustawiony na .  
+### <a name="code"></a>Kod  
+ Poniższy kod tworzy klienta. Powiązanie jest zabezpieczeniami trybu komunikatów, a typ poświadczeń klienta jest ustawiony na `Certificate` .  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Konfigurowanie  
- Następująca konfiguracja określa certyfikat klienta przy użyciu zachowania punktu końcowego. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Kod używa również <`identity`> element, aby określić system nazw domen (DNS) oczekiwanej tożsamości serwera. Aby uzyskać więcej informacji na temat tożsamości, zobacz [Tożsamość usługi i uwierzytelnianie](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Poniższa konfiguracja określa certyfikat klienta przy użyciu zachowania punktu końcowego. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](working-with-certificates.md). Kod używa również `identity` elementu> <, aby określić system nazw domen (DNS) oczekiwanej tożsamości serwera. Aby uzyskać więcej informacji na temat tożsamości, zobacz [tożsamość usługi i uwierzytelnianie](service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -145,7 +145,7 @@ W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication 
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Przegląd zabezpieczeń](security-overview.md)
+- [Uwierzytelnianie i tożsamość usług](service-identity-and-authentication.md)
+- [Praca z certyfikatami](working-with-certificates.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,24 +2,24 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 ms.date: 03/30/2017
 ms.assetid: f294ee94-be83-426c-b40d-6e8a4e5e987c
-ms.openlocfilehash: 7c5f859deb2d9156b819f1fb92164a4c05437192
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caa98464c76b0f9330419d89407734681c8901bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577295"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
-Uzgadnianie zabezpieczeń nie powiodła się w ramach określonego limitu czasu.  
+Uzgadnianie zabezpieczeń nie powiodło się w określonym limicie czasu.  
   
 ## <a name="description"></a>Opis  
- Ślad występuje podczas próby ustanowienia połączenia sąsiada bezpieczne.  
+ Ten ślad występuje podczas próby nawiązania bezpiecznego połączenia sąsiada.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Upewnij się, że sąsiadów wszystkich poświadczeń zabezpieczeń odpowiednich i odpowiadanie na wszystkie komunikaty w mniej niż 1 minuta.  
+ Upewnij się, że wszystkie sąsiedzi mają odpowiednie poświadczenia zabezpieczeń i odpowiadają na wszystkie komunikaty w mniej niż 1 minutę.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

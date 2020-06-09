@@ -2,29 +2,29 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 8f783dcd4b966ed89c24d724918a3923c5a2d0b1
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: c388a9dc3569e20639de09abc5f4941b73c561ad
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578054"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
-Usługa MSMQ odrzuciła tę wiadomość.  
+Wiadomość została odrzucona przez usługę MSMQ.  
   
 ## <a name="description"></a>Opis  
- Ten ślad wskazuje, że komunikat usługi MSMQ został odrzucony.  
+ Ten ślad wskazuje, że wiadomość usługi MSMQ została odrzucona.  
   
- Komunikaty usługi MSMQ można odrzucić, gdy program Windows Communication Foundation (WCF) (używany z programem NetMsmqBinding lub MsmqIntegrationBinding) nie jest w stanie ich przetworzyć. Takie wiadomości są określane jako wiadomości trucizny. Komunikat poison zostanie odrzucony, `ReceiveErrorHandling` gdy właściwość na NetMsmqBinding lub MsmqIntegrationBinding jest ustawiona na `Reject`. Odrzucona wiadomość zostanie dostarczona z powrotem do [kolejki utraconych wiadomości nadawcy](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures).  
+ Komunikaty usługi MSMQ można odrzucić, gdy Windows Communication Foundation (WCF) (używane z usługą Msmqbinding lub MsmqIntegrationBinding) nie może ich przetworzyć. Takie komunikaty nazywa się skażonymi komunikatami. Trująca wiadomość jest odrzucana, gdy `ReceiveErrorHandling` Właściwość w sieci msmqbinding lub MsmqIntegrationBinding jest ustawiona na `Reject` . Odrzucony komunikat jest dostarczany z powrotem do [kolejki utraconych wiadomości](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures)nadawcy.  
   
- Aby uzyskać więcej informacji o tym, kiedy wiadomości stają się zatrute i jak skonfigurować usługę do ich właściwego obchodzenia się z nimi, zobacz [Obsługa trujących wiadomości](../../feature-details/poison-message-handling.md).  
+ Aby uzyskać więcej informacji na temat sytuacji, w których komunikaty stają się trujące i jak skonfigurować usługę do odpowiednich potrzeb, zobacz [Obsługa komunikatów trujących](../../feature-details/poison-message-handling.md).  
   
- Aby uzyskać więcej informacji na temat tego, co oznacza odrzucona wiadomość w programie MSMQ, zobacz [MQMarkMessageRejed .](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))  
+ Aby uzyskać więcej informacji na temat tego, co oznacza komunikat odrzucony w usłudze MSMQ, zobacz [MQMarkMessageRejected](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85)).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Obsługa zatruć-message](../../feature-details/poison-message-handling.md)
-- [MQMarkMessageZasunięty](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)
+- [Obsługa komunikatów trujących](../../feature-details/poison-message-handling.md)
+- [MQMarkMessageRejected](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))

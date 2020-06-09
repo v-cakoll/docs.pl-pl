@@ -2,24 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 4abe01f0-6398-4fba-b2f3-c054b7f7e971
-ms.openlocfilehash: 3c398aa13a8cd2b87068216d3c07fb29e1a27c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f37bc252e12aef94d77c0745d36b5c8232a169eb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997969"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599740"
 ---
 # <a name="microsofttransactionstransactionbridgecommitmessageretry"></a>Microsoft.Transactions.TransactionBridge.CommitMessageRetry
-Ponowna próba komunikat zatwierdzenia została wysłana do uczestnika, który nie odpowiada.  
+Do uczestnika, który nie odpowiada, wysłano ponowną próbę komunikatu zatwierdzenia.  
   
 ## <a name="description"></a>Opis  
- Śledzone w razie potrzeby lokalny Menedżer transakcji ponownie wysłać wiadomość dotyczącą zatwierdzenia do podrzędnego uczestnika, ponieważ nie otrzymała odpowiedzi w określonym czasie.  
+ Śledzony, jeśli lokalny Menedżer transakcji jest wymagany do ponownego wysłania komunikatu zatwierdzenia do uczestnika podrzędnego, ponieważ nie otrzymał odpowiedzi w danym czasie.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Badania potencjalnych sieci lub problemy z produktu, które uniemożliwiają są dostarczane na czas odpowiedzi.  Jeśli wiele z tych komunikatów są widoczne, może to wskazywać problemy z infrastrukturą lub nieprawidłowo długich czasów odpowiedzi. Zarówno w przypadku problemów znacznie skróci przepływność transakcji w ramach systemu.  
+ Zbadaj potencjalne problemy z siecią lub produktem, które uniemożliwiają dostarczenie odpowiedzi na czas.  Jeśli jest widocznych wiele z tych komunikatów, może to oznaczać problemy z infrastrukturą lub czasy nietypowej odpowiedzi. Oba problemy znacząco zmniejszają przepływność transakcji w ramach systemu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

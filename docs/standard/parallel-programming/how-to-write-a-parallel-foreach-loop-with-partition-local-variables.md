@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: zapisywanie pętli Parallel. ForEach ze zmiennymi lokalnymi partycji'
+description: Zobacz przykład sposobu pisania równoległej pętli ForEach, która używa zmiennych lokalnych partycji w programie .NET.
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f598955fb2d6800f81bce050bdf474fc63bfb554
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599779"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Instrukcje: zapisywanie pętli Parallel. ForEach ze zmiennymi lokalnymi partycji
 
@@ -48,7 +49,7 @@ Poniższy przykład wywołuje Przeciążenie, <xref:System.Threading.Tasks.Paral
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległość danych](data-parallelism-task-parallel-library.md)
 - [Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)

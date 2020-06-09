@@ -1,5 +1,6 @@
 ---
 title: 'Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
+description: Dowiedz się, jak podpisywać dokumenty XML za pomocą podpisów cyfrowych. Użyj klas w przestrzeni nazw System. Security. Cryptography. XML w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97bd23182ed54b899b76dbf43e179fe0c94b011d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277183"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598570"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych
 Możesz użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby podpisać dokument XML lub część dokumentu XML z podpisem cyfrowym.  Podpisy cyfrowe XML (XMLDSIG) pozwalają sprawdzić, czy dane nie zostały zmienione po podpisaniu.  Aby uzyskać więcej informacji na temat standardu XMLDSIG, zobacz [składnia i przetwarzanie w formacie XML](https://www.w3.org/TR/xmldsig-core/)zalecenia dotyczące organizacja World Wide Web Consortium (W3C).  
@@ -116,7 +117,7 @@ Możesz użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, 
   
  Nie osadzaj klucza prywatnego bezpośrednio w kodzie źródłowym.  Klucze osadzone można łatwo odczytywać z zestawu przy użyciu [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) lub otwierając zestaw w edytorze tekstu, takim jak Notatnik.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Security.Cryptography.Xml>
 - [Instrukcje: sprawdzanie podpisów cyfrowych w dokumentach XML](how-to-verify-the-digital-signatures-of-xml-documents.md)

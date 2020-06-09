@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184725"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598882"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Niezabezpieczony klient internetowy i usługa
-Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego klienta i usługi Windows Communication Foundation (WCF):  
+Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego Windows Communication Foundation (WCF) i usługi:  
   
  ![Zrzut ekranu przedstawiający niezabezpieczony scenariusz internetowy](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
@@ -21,21 +21,21 @@ Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Brak|  
 |Transport|HTTP|  
-|Wiązanie|<xref:System.ServiceModel.BasicHttpBinding>w kodzie lub [ \<podstawowy element>httpbinowanie](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) w konfiguracji.|  
-|Współdziałanie|Z istniejącymi klientami i usługami usługi sieci Web|  
+|Wiązanie|<xref:System.ServiceModel.BasicHttpBinding>w kodzie lub w [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemencie konfiguracji.|  
+|Współdziałanie|Z istniejącymi usługami i klientami usług sieci Web|  
 |Authentication|Brak|  
 |Integralność|Brak|  
 |Poufność|Brak|  
   
 ## <a name="service"></a>Usługa  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Utwórz usługę autonomiczną przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Utwórz usługę przy użyciu dostarczonej konfiguracji, ale nie definiuj żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
-### <a name="code"></a>Code  
- Poniższy kod pokazuje, jak utworzyć punkt końcowy bez zabezpieczeń. Domyślnie <xref:System.ServiceModel.BasicHttpBinding> ma ustawiony tryb zabezpieczeń <xref:System.ServiceModel.BasicHttpSecurityMode.None>na .  
+### <a name="code"></a>Kod  
+ Poniższy kod pokazuje, jak utworzyć punkt końcowy bez zabezpieczeń. Domyślnie <xref:System.ServiceModel.BasicHttpBinding> ma tryb zabezpieczeń ustawiony na <xref:System.ServiceModel.BasicHttpSecurityMode.None> .  
   
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
@@ -68,7 +68,7 @@ Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego
 ```  
   
 ## <a name="client"></a>Klient  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
 - Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
@@ -77,7 +77,7 @@ Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Kod  
  Poniższy kod przedstawia podstawowy klient WCF, który uzyskuje dostęp do niezabezpieczonego punktu końcowego.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
@@ -111,6 +111,6 @@ Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczonego
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Typowe scenariusze zabezpieczeń](common-security-scenarios.md)
+- [Przegląd zabezpieczeń](security-overview.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

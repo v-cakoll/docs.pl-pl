@@ -2,14 +2,14 @@
 title: COM+
 ms.date: 03/30/2017
 ms.assetid: 6665a2d3-7e11-4cce-8968-3fcf3426d362
-ms.openlocfilehash: 5248aa8792b2cfd360a6ed39531818ca8c65e912
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7fd2ed43218e4b52926947702160cb7d48494cd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602157"
 ---
 # <a name="com"></a>COM+
-Na poniższej ilustracji przedstawiono, jak można użyć śledzenie działania w aplikacji COM +. Zamiast wykonywanie kodu użytkownika na serwerze, możemy zdefiniować działania modelu COM + dla każdego wywołania metody w modelu obiektów COM +.  
+Na poniższej ilustracji przedstawiono sposób korzystania z funkcji śledzenia aktywności w aplikacji modelu COM+. Zamiast wykonywać kod użytkownika na serwerze, możemy zdefiniować działanie COM+ dla każdego wywołania metody do modelu obiektów modelu COM+.  
   
- ![Synchroniczne wywołania z modelem COM&#43; aplikacji](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "modelu Com + śledzenia")
+ ![Wywołania synchroniczne z aplikacją&#43; COM](media/com-tracing.gif "Model com + śledzenie")

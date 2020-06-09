@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PeerNeighborStateChangeFailed
 ms.date: 03/30/2017
 ms.assetid: 95153aa1-0e04-4857-83d9-9963f5e40b4e
-ms.openlocfilehash: c934b5ac819ebccce4fd3aa0d6528caad34b1f49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b85550183d1d111b405fc75118dc966053f7fbe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950010"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577321"
 ---
 # <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a>System.ServiceModel.Channels.PeerNeighborStateChangeFailed
 Stan sąsiada był uszkodzony.  
   
 ## <a name="description"></a>Opis  
- Ślad występuje po nieudanej próbie zmiany stanu sąsiadów. Oznacza to, nieoczekiwany błąd wewnętrzny lub uszkodzony pamięci.  
+ Ten ślad występuje po nieudanej próbie zmiany stanu sąsiada. Oznacza to, że wystąpił nieoczekiwany błąd wewnętrzny lub uszkodzenie pamięci.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

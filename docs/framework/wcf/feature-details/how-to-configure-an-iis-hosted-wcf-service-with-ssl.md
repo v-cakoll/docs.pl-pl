@@ -2,67 +2,67 @@
 title: 'Instrukcje: konfigurowanie usługi WCF hostowanej przez Internetowe usługi informacyjne za pomocą protokołu SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597231"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="8009d-102">Instrukcje: konfigurowanie usługi WCF hostowanej przez Internetowe usługi informacyjne za pomocą protokołu SSL</span><span class="sxs-lookup"><span data-stu-id="8009d-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
-<span data-ttu-id="8009d-103">W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usługi IIS do używania zabezpieczeń transportu HTTP.</span><span class="sxs-lookup"><span data-stu-id="8009d-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="8009d-104">Zabezpieczenia transportu HTTP wymaga certyfikatu SSL w celu zarejestrowana w programie IIS.</span><span class="sxs-lookup"><span data-stu-id="8009d-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="8009d-105">Jeśli nie masz certyfikat SSL, usługi IIS można użyć do wygenerowania certyfikatu testowego.</span><span class="sxs-lookup"><span data-stu-id="8009d-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="8009d-106">Następnie należy dodać powiązanie protokołu SSL do witryny sieci web i skonfigurować właściwości uwierzytelniania witryny sieci web.</span><span class="sxs-lookup"><span data-stu-id="8009d-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="8009d-107">Na koniec należy skonfigurować usługi WCF do używania protokołu HTTPS.</span><span class="sxs-lookup"><span data-stu-id="8009d-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="ab4ab-102">Instrukcje: konfigurowanie usługi WCF hostowanej przez Internetowe usługi informacyjne za pomocą protokołu SSL</span><span class="sxs-lookup"><span data-stu-id="ab4ab-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="ab4ab-103">W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usługi IIS do korzystania z zabezpieczeń transportu HTTP.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="ab4ab-104">Zabezpieczenia transportu HTTP wymagają zarejestrowania certyfikatu SSL w usługach IIS.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="ab4ab-105">Jeśli nie masz certyfikatu SSL, możesz użyć usług IIS do wygenerowania certyfikatu testowego.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="ab4ab-106">Następnie należy dodać powiązanie SSL do witryny sieci Web i skonfigurować właściwości uwierzytelniania witryny sieci Web.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="ab4ab-107">Na koniec należy skonfigurować usługę WCF do korzystania z protokołu HTTPS.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="8009d-108">Tworzenie certyfikatu z podpisem własnym</span><span class="sxs-lookup"><span data-stu-id="8009d-108">Creating a Self-Signed Certificate</span></span>  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="ab4ab-108">Tworzenie certyfikatu z podpisem własnym</span><span class="sxs-lookup"><span data-stu-id="ab4ab-108">Creating a Self-Signed Certificate</span></span>  
   
-1. <span data-ttu-id="8009d-109">Otwórz Menedżera internetowych usług informacyjnych (inetmgr.exe), a następnie wybierz nazwę komputera w widoku drzewa po lewej stronie.</span><span class="sxs-lookup"><span data-stu-id="8009d-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="8009d-110">Po prawej stronie ekranu wybierz certyfikaty serwera</span><span class="sxs-lookup"><span data-stu-id="8009d-110">On the right-hand side of the screen select Server Certificates</span></span>  
+1. <span data-ttu-id="ab4ab-109">Otwórz program Internet Information Services Manager (inetmgr. exe), a następnie wybierz nazwę komputera w widoku drzewa po lewej stronie.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="ab4ab-110">Po prawej stronie ekranu wybierz pozycję Certyfikaty serwera.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     <span data-ttu-id="8009d-111">![Ekranu głównego menedżera usług IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="8009d-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
+     <span data-ttu-id="ab4ab-111">![Ekran główny Menedżera usług IIS](media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-111">![IIS Manager Home Screen](media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2. <span data-ttu-id="8009d-112">Kliknij w oknie Certyfikaty serwera **Utwórz certyfikat z podpisem własnym...**</span><span class="sxs-lookup"><span data-stu-id="8009d-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="8009d-113">łącze.</span><span class="sxs-lookup"><span data-stu-id="8009d-113">Link.</span></span>  
+2. <span data-ttu-id="ab4ab-112">W oknie Certyfikaty serwera kliknij pozycję Utwórz certyfikat z podpisem **własnym....**</span><span class="sxs-lookup"><span data-stu-id="ab4ab-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="ab4ab-113">Powiązań.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-113">Link.</span></span>  
   
-     <span data-ttu-id="8009d-114">![Tworzenie własnym&#45;podpisany certyfikat z usługami IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="8009d-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
+     <span data-ttu-id="ab4ab-114">![Tworzenie certyfikatu z podpisem własnym&#45;przy użyciu usług IIS](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-114">![Creating a self&#45;signed certificate with IIS](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3. <span data-ttu-id="8009d-115">Wprowadź przyjazną nazwę certyfikatu z podpisem własnym, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="8009d-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
+3. <span data-ttu-id="ab4ab-115">Wprowadź przyjazną nazwę certyfikatu z podpisem własnym, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     <span data-ttu-id="8009d-116">![Utwórz własny&#45;okna dialogowego certyfikatu podpisanego](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="8009d-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
+     <span data-ttu-id="ab4ab-116">![Okno dialogowe Tworzenie certyfikatu z podpisem własnym&#45;](media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-116">![Create Self&#45;Signed Certificate Dialog](media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     <span data-ttu-id="8009d-117">Szczegóły nowo utworzonego certyfikatu z podpisem własnym są teraz wyświetlane w **certyfikaty serwera** okna.</span><span class="sxs-lookup"><span data-stu-id="8009d-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
+     <span data-ttu-id="ab4ab-117">Nowo utworzone szczegóły certyfikatu z podpisem własnym są teraz wyświetlane w oknie **Certyfikaty serwera** .</span><span class="sxs-lookup"><span data-stu-id="ab4ab-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     <span data-ttu-id="8009d-118">![Okno certyfikatu serwera](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="8009d-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
+     <span data-ttu-id="ab4ab-118">![Okno certyfikatu serwera](media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-118">![Server Certificate Window](media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     <span data-ttu-id="8009d-119">Wygenerowany certyfikat został zainstalowany w zaufanych głównych urzędów certyfikacji przechowywane.</span><span class="sxs-lookup"><span data-stu-id="8009d-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
+     <span data-ttu-id="ab4ab-119">Wygenerowany certyfikat jest instalowany w magazynie zaufanych głównych urzędów certyfikacji.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### <a name="add-ssl-binding"></a><span data-ttu-id="8009d-120">Dodaj powiązanie SSL</span><span class="sxs-lookup"><span data-stu-id="8009d-120">Add SSL Binding</span></span>  
+### <a name="add-ssl-binding"></a><span data-ttu-id="ab4ab-120">Dodawanie powiązania SSL</span><span class="sxs-lookup"><span data-stu-id="ab4ab-120">Add SSL Binding</span></span>  
   
-1. <span data-ttu-id="8009d-121">Nadal w Internet Information Services Manager, rozwiń węzeł **witryn** folder i następnie **domyślna witryna sieci Web** folder w widoku drzewa po lewej stronie ekranu.</span><span class="sxs-lookup"><span data-stu-id="8009d-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
+1. <span data-ttu-id="ab4ab-121">W programie Internet Information Services Manager rozwiń folder **Lokacje** , a następnie folder **Domyślna witryna sieci Web** w widoku drzewa po lewej stronie ekranu.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2. <span data-ttu-id="8009d-122">Kliknij przycisk **powiązania...**</span><span class="sxs-lookup"><span data-stu-id="8009d-122">Click the **Bindings….**</span></span> <span data-ttu-id="8009d-123">Łącze w **akcje** sekcji w prawym górnym części okna.</span><span class="sxs-lookup"><span data-stu-id="8009d-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
+2. <span data-ttu-id="ab4ab-122">Kliknij pozycję **powiązania....**</span><span class="sxs-lookup"><span data-stu-id="ab4ab-122">Click the **Bindings….**</span></span> <span data-ttu-id="ab4ab-123">Link w sekcji **działania** w prawej górnej części okna.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     <span data-ttu-id="8009d-124">![Dodanie wiązania SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="8009d-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
+     <span data-ttu-id="ab4ab-124">![Dodawanie powiązania SSL](media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-124">![Adding an SSL binding](media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3. <span data-ttu-id="8009d-125">W oknie powiązania witryny kliknij **Dodaj** przycisku.</span><span class="sxs-lookup"><span data-stu-id="8009d-125">In the Site Bindings window click the **Add** button.</span></span>  
+3. <span data-ttu-id="ab4ab-125">W oknie powiązania witryny kliknij przycisk **Dodaj** .</span><span class="sxs-lookup"><span data-stu-id="ab4ab-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     <span data-ttu-id="8009d-126">![Okno dialogowe powiązania witryny](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="8009d-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
+     <span data-ttu-id="ab4ab-126">![Okno dialogowe powiązań witryny](media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-126">![Site Bindings Dialog](media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4. <span data-ttu-id="8009d-127">W **Dodawanie powiązania witryny** okno dialogowe, wybierz opcję https typu oraz przyjazną nazwę certyfikatu z podpisem własnym został właśnie utworzony.</span><span class="sxs-lookup"><span data-stu-id="8009d-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
+4. <span data-ttu-id="ab4ab-127">W oknie dialogowym **Dodawanie powiązania witryny** wybierz opcję HTTPS dla typu i przyjaznej nazwy certyfikatu z podpisem własnym, który właśnie został utworzony.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     <span data-ttu-id="8009d-128">![Przykład powiązanie witryny](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="8009d-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
+     <span data-ttu-id="ab4ab-128">![Przykład powiązania witryny](media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-128">![Site binding example](media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="8009d-129">Konfiguruj katalog wirtualny dla protokołu SSL</span><span class="sxs-lookup"><span data-stu-id="8009d-129">Configure Virtual Directory for SSL</span></span>  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="ab4ab-129">Skonfiguruj katalog wirtualny dla protokołu SSL</span><span class="sxs-lookup"><span data-stu-id="ab4ab-129">Configure Virtual Directory for SSL</span></span>  
   
-1. <span data-ttu-id="8009d-130">W Menedżerze internetowych usług informacyjnych wybierz katalogu wirtualnego, który zawiera bezpieczne usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="8009d-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
+1. <span data-ttu-id="ab4ab-130">W programie Internet Information Services Manager wybierz katalog wirtualny zawierający bezpieczną usługę WCF.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2. <span data-ttu-id="8009d-131">W środkowym okienku okna, wybierz **ustawienia protokołu SSL** w sekcji usług IIS.</span><span class="sxs-lookup"><span data-stu-id="8009d-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
+2. <span data-ttu-id="ab4ab-131">W środkowym okienku okna wybierz pozycję **Ustawienia protokołu SSL** w sekcji IIS.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     <span data-ttu-id="8009d-132">![Ustawienia protokołu SSL dla katalogu wirtualnego](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="8009d-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
+     <span data-ttu-id="ab4ab-132">![Ustawienia protokołu SSL dla katalogu wirtualnego](media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-132">![SSL Settings for virtual directory](media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3. <span data-ttu-id="8009d-133">W okienku ustawienia protokołu SSL, zaznacz **Wymagaj protokołu SSL** pole wyboru i kliknij przycisk **Zastosuj** łącze w **akcje** sekcji po prawej stronie ekranu.</span><span class="sxs-lookup"><span data-stu-id="8009d-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
+3. <span data-ttu-id="ab4ab-133">W okienku Ustawienia protokołu SSL zaznacz pole wyboru **Wymagaj protokołu SSL** , a następnie kliknij link **Zastosuj** w sekcji **Akcje** po prawej stronie ekranu.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     <span data-ttu-id="8009d-134">![Ustawienia protokołu SSL katalog wirtualny](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="8009d-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
+     <span data-ttu-id="ab4ab-134">![Ustawienia protokołu SSL katalogu wirtualnego](media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="ab4ab-134">![Virtual directory SSL settings](media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="8009d-135">Konfigurowanie usługi WCF do zabezpieczenia transportu HTTP</span><span class="sxs-lookup"><span data-stu-id="8009d-135">Configure WCF Service for HTTP Transport Security</span></span>  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="ab4ab-135">Konfigurowanie usługi WCF na potrzeby zabezpieczeń transportu HTTP</span><span class="sxs-lookup"><span data-stu-id="ab4ab-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1. <span data-ttu-id="8009d-136">W programie WCF web.config usługi skonfigurować powiązania protokołu HTTP w celu użycia zabezpieczeń transportu, jak pokazano w poniższym formacie XML.</span><span class="sxs-lookup"><span data-stu-id="8009d-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
+1. <span data-ttu-id="ab4ab-136">W pliku Web. config usługi WCF Skonfiguruj powiązanie HTTP do korzystania z zabezpieczeń transportu, jak pokazano w poniższym kodzie XML.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ ms.locfileid: "61700039"
     </bindings>  
     ```  
   
-2. <span data-ttu-id="8009d-137">Określ usługi i punktu końcowego usługi, jak pokazano w poniższym formacie XML.</span><span class="sxs-lookup"><span data-stu-id="8009d-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
+2. <span data-ttu-id="ab4ab-137">Określ punkt końcowy usługi i usługi, jak pokazano w poniższym kodzie XML.</span><span class="sxs-lookup"><span data-stu-id="ab4ab-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
     ```xml  
     <services>  
@@ -93,8 +93,8 @@ ms.locfileid: "61700039"
     </services>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="8009d-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="8009d-138">Example</span></span>  
- <span data-ttu-id="8009d-139">Oto kompletny przykładowy plik web.config dla usługi WCF, za pomocą zabezpieczeń transportu HTTP</span><span class="sxs-lookup"><span data-stu-id="8009d-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
+## <a name="example"></a><span data-ttu-id="ab4ab-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="ab4ab-138">Example</span></span>  
+ <span data-ttu-id="ab4ab-139">Poniżej znajduje się kompletny przykład pliku Web. config dla usługi WCF korzystającej z zabezpieczeń transportu HTTP</span><span class="sxs-lookup"><span data-stu-id="ab4ab-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -144,9 +144,9 @@ ms.locfileid: "61700039"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8009d-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8009d-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab4ab-140">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ab4ab-140">See also</span></span>
 
-- [<span data-ttu-id="8009d-141">Hostowanie przez Internetowe usługi informacyjne</span><span class="sxs-lookup"><span data-stu-id="8009d-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [<span data-ttu-id="8009d-142">Instrukcje dotyczące hostowania internetowej usługi informacyjnej</span><span class="sxs-lookup"><span data-stu-id="8009d-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [<span data-ttu-id="8009d-143">Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych</span><span class="sxs-lookup"><span data-stu-id="8009d-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [<span data-ttu-id="8009d-144">Hostowanie usług IIS przy użyciu kodu wbudowanego</span><span class="sxs-lookup"><span data-stu-id="8009d-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+- [<span data-ttu-id="ab4ab-141">Hostowanie przez Internetowe usługi informacyjne</span><span class="sxs-lookup"><span data-stu-id="ab4ab-141">Hosting in Internet Information Services</span></span>](hosting-in-internet-information-services.md)
+- [<span data-ttu-id="ab4ab-142">Instrukcje dotyczące hostowania internetowej usługi informacyjnej</span><span class="sxs-lookup"><span data-stu-id="ab4ab-142">Internet Information Service Hosting Instructions</span></span>](../samples/internet-information-service-hosting-instructions.md)
+- [<span data-ttu-id="ab4ab-143">Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych</span><span class="sxs-lookup"><span data-stu-id="ab4ab-143">Internet Information Services Hosting Best Practices</span></span>](internet-information-services-hosting-best-practices.md)
+- [<span data-ttu-id="ab4ab-144">Hostowanie usług IIS przy użyciu kodu wbudowanego</span><span class="sxs-lookup"><span data-stu-id="ab4ab-144">IIS Hosting Using Inline Code</span></span>](../samples/iis-hosting-using-inline-code.md)

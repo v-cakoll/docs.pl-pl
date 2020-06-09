@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595235"
 ---
 # <a name="message-security-with-a-windows-client"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows
-W tym scenariuszu pokazano klienta i serwera fundacji komunikacji systemu Windows (WCF) zabezpieczonego trybem zabezpieczeń wiadomości. Klient i usługa są uwierzytelniane przy użyciu poświadczeń systemu Windows.  
+W tym scenariuszu przedstawiono klienta i serwer Windows Communication Foundation (WCF) zabezpieczony przez tryb zabezpieczeń wiadomości. Klient i usługa są uwierzytelniani przy użyciu poświadczeń systemu Windows.  
   
- ![Zabezpieczenia wiadomości za pomocą klienta systemu Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Zabezpieczenia komunikatów z klientem systemu Windows](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Charakterystyka|Opis|  
 |--------------------|-----------------|  
@@ -23,26 +23,26 @@ W tym scenariuszu pokazano klienta i serwera fundacji komunikacji systemu Window
 |Współdziałanie|Tylko WCF|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Tak, używanie wspólnego kontekstu zabezpieczeń|  
-|Poufność|Tak, używanie wspólnego kontekstu zabezpieczeń|  
-|Transport|Netto. Tcp|  
+|Integralność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionych|  
+|Poufność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionych|  
+|Transport|Waga. PROTOKOŁ|  
 |Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Utwórz usługę autonomiczną przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Utwórz usługę przy użyciu dostarczonej konfiguracji, ale nie definiuj żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
-### <a name="code"></a>Code  
- Poniższy kod pokazuje, jak utworzyć punkt końcowy usługi, który używa zabezpieczeń wiadomości w celu ustanowienia bezpiecznego kontekstu z komputerem z systemem Windows.  
+### <a name="code"></a>Kod  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z zabezpieczeń komunikatów w celu ustanowienia bezpiecznego kontekstu z komputerem z systemem Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
 ### <a name="configuration"></a>Konfigurowanie  
- Zamiast kodu można użyć następującej konfiguracji do skonfigurowania usługi:  
+ W celu skonfigurowania usługi można użyć następującej konfiguracji zamiast kodu:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -73,7 +73,7 @@ W tym scenariuszu pokazano klienta i serwera fundacji komunikacji systemu Window
 ```  
   
 ## <a name="client"></a>Klient  
- Poniższy kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
 - Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
@@ -82,14 +82,14 @@ W tym scenariuszu pokazano klienta i serwera fundacji komunikacji systemu Window
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a>Code  
- Poniższy kod tworzy klienta. Powiązanie jest zabezpieczeń trybu wiadomości, a typ `Windows`poświadczeń klienta jest ustawiony na .  
+### <a name="code"></a>Kod  
+ Poniższy kod tworzy klienta. Powiązanie jest zabezpieczeniami trybu komunikatów, a typ poświadczeń klienta jest ustawiony na `Windows` .  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
 ### <a name="configuration"></a>Konfigurowanie  
- Następująca konfiguracja jest używana do ustawiania właściwości klienta.  
+ Następująca konfiguracja służy do ustawiania właściwości klienta.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,5 +118,5 @@ W tym scenariuszu pokazano klienta i serwera fundacji komunikacji systemu Window
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Przegląd zabezpieczeń](security-overview.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

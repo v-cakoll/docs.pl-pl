@@ -2,18 +2,18 @@
 title: Integracja buforowania platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716180"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594754"
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
 
 Ten przykład pokazuje, jak korzystać z pamięci podręcznej ASP.NET Output z modelem programowania HTTP sieci WEB w programie WCF. Ten temat koncentruje się na funkcji integracji wyjściowej pamięci podręcznej ASP.NET.
 
-## <a name="demonstrates"></a>Przedstawia
+## <a name="demonstrates"></a>Demonstracje
 
 Integracja z wyjściową pamięcią podręczną ASP.NET
 
@@ -22,17 +22,17 @@ Integracja z wyjściową pamięcią podręczną ASP.NET
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>Dyskusji
 
-W przykładzie użyto <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, aby użyć buforowania danych wyjściowych ASP.NET z usługą Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> jest stosowana do operacji usługi i udostępnia nazwę profilu pamięci podręcznej w pliku konfiguracji, który powinien zostać zastosowany do odpowiedzi z danej operacji.
+W przykładzie użyto programu <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> do wykorzystania ASP.NET wyjściowego buforowanie z usługą Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>Program jest stosowany do operacji usługi i udostępnia nazwę profilu pamięci podręcznej w pliku konfiguracji, który powinien zostać zastosowany do odpowiedzi z danej operacji.
 
-W pliku Service.cs przykładowego projektu usługi zarówno operacje `GetCustomer` i `GetCustomers` są oznaczone <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, który zawiera nazwę profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web. config projektu usługi jest dostępny profil pamięci podręcznej "CacheFor60Seconds" w obszarze <`caching`> elementu <`system.web`>. Dla tego profilu pamięci podręcznej wartość atrybutu `duration` to "60", więc odpowiedzi skojarzone z tym profilem są buforowane w pamięci podręcznej ASP.NET wyjściowej przez 60 sekund. Ponadto dla tego profilu pamięci podręcznej atrybut `varmByParam` ma wartość "format", więc żądania o różnych wartościach dla parametru ciągu zapytania `format` są buforowane osobno. Na koniec atrybut `varyByHeader` profilu pamięci podręcznej jest ustawiony na wartość "Akceptuj", więc żądania o różnych wartościach nagłówka Accept są buforowane osobno.
+W pliku Service.cs przykładowego projektu usługi `GetCustomer` `GetCustomers` operacje i są oznaczone przy użyciu <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , która zawiera nazwę profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web. config projektu usługi profil pamięci podręcznej "CacheFor60Seconds" znajduje się w obszarze < `caching` > elementu < `system.web` >. Dla tego profilu pamięci podręcznej wartość `duration` atrybutu to "60", więc odpowiedzi skojarzone z tym profilem są buforowane w pamięci podręcznej ASP.NET wyjściowe przez 60 sekund. Ponadto dla tego profilu pamięci podręcznej `varmByParam` atrybut ma wartość "format", więc żądania o różnych wartościach dla `format` parametru ciągu zapytania są buforowane osobno. Na koniec atrybut profilu pamięci podręcznej `varyByHeader` jest ustawiony na wartość "Akceptuj", więc żądania o różnych wartościach nagłówka Accept są buforowane osobno.
 
-Program.cs w projekcie klienta pokazuje, jak taki klient może zostać utworzony przy użyciu <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest to tylko jeden sposób na dostęp do usługi WCF. Istnieje również możliwość uzyskiwania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak fabryka kanałów WCF i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (na przykład [podstawowa usługa http](../../../../docs/framework/wcf/samples/basic-http-service.md) ) ilustrują sposób korzystania z tych klas do komunikowania się z usługą WCF.
+Program.cs w projekcie klienta pokazuje, w jaki sposób ten klient może zostać utworzony za pomocą programu <xref:System.Net.HttpWebRequest> . Należy pamiętać, że jest to tylko jeden sposób na dostęp do usługi WCF. Istnieje również możliwość uzyskiwania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak fabryka kanałów WCF i <xref:System.Net.WebClient> . Inne przykłady w zestawie SDK (na przykład [podstawowa usługa http](basic-http-service.md) ) ilustrują sposób korzystania z tych klas do komunikowania się z usługą WCF.
 
 ## <a name="to-run-the-sample"></a>Aby uruchomić przykład
 
@@ -50,7 +50,7 @@ Gdy aplikacja konsoli klienta zostanie uruchomiona, klient wysyła żądania do 
 
 1. Otwórz rozwiązanie dla przykładu integracji pamięci podręcznej ASP.NET.
 
-2. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.
+2. Naciśnij kombinację klawiszy CTRL+SHIFT+B w celu skompilowania rozwiązania.
 
 3. Jeśli okno **Eksplorator rozwiązań** nie jest jeszcze otwarte, naciśnij klawisze Ctrl + W + S.
 

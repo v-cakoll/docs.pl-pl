@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: tworzenie kontraktu dwukierunkowego'
+title: 'Instrukcje: Tworzenie kontraktu dwukierunkowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: c603694bca82cfc5852c875946f18f9782209e48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5b6c7eecce08a23490b6ab1991e4561d9462469
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598986"
 ---
-# <a name="how-to-create-a-duplex-contract"></a>Instrukcje: tworzenie kontraktu dwukierunkowego
-W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu dwukierunkowego (dwukierunkowe). Kontrakt dupleksowy umożliwia klientów i serwerów komunikować się ze sobą niezależnie, aby albo może zainicjować wywołania do drugiego. Kontraktu dwukierunkowego jest jednym z trzech wzorców komunikat dostępne dla usług Windows Communication Foundation (WCF). Komunikat innych dwa wzorce są jednokierunkowe, a "żądanie-odpowiedź". Kontrakt dupleksowy składa się z dwóch jednokierunkowe umów między klientem a serwerem i nie wymaga, aby zostać skorelowane wywołania metody. Należy użyć tego rodzaju kontraktu, podczas usługi musi zapytania klienta, aby uzyskać więcej informacji lub jawnie wywoływać zdarzenia, na komputerze klienckim. Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej kontrakt dupleksowy, zobacz [jak: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Przykładowy pracy [dwukierunkowego](../../../../docs/framework/wcf/samples/duplex.md) próbki.  
+# <a name="how-to-create-a-duplex-contract"></a>Instrukcje: Tworzenie kontraktu dwukierunkowego
+W tym temacie przedstawiono podstawowe kroki tworzenia metod, które korzystają z dwukierunkowego kontraktu. Umowa dupleksowa umożliwia klientom i serwerom komunikowanie się ze sobą niezależnie, aby można było inicjować wywołania do drugiego. Umowa dupleksowa to jeden z trzech wzorców komunikatów dostępnych dla usług Windows Communication Foundation (WCF). Pozostałe dwa wzorce komunikatów to jednokierunkowe i odpowiedzi na żądanie. Umowa dupleksowa składa się z 2 1ych umów między klientem a serwerem i nie wymaga, aby wywołania metod były skorelowane. Tego rodzaju kontraktu należy używać, gdy usługa musi wysyłać zapytania do klienta, aby uzyskać więcej informacji lub jawnie podnieść zdarzenia na kliencie. Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej dla kontraktu dupleksowego, zobacz [jak: dostęp do usług za pomocą kontraktu dupleksowego](how-to-access-services-with-a-duplex-contract.md). Aby uzyskać przykład roboczy, zobacz [dwustronny](../samples/duplex.md) przykład.  
   
-### <a name="to-create-a-duplex-contract"></a>Tworzenie kontraktu dwukierunkowego  
+### <a name="to-create-a-duplex-contract"></a>Aby utworzyć umowę dupleksową  
   
-1. Utwórz interfejs, tworzącą kontraktu dwukierunkowego po stronie serwera.  
+1. Utwórz interfejs, który tworzy stronę po stronie serwera umowy dupleksowej.  
   
-2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu.  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasę do interfejsu.  
   
      [!code-csharp[S_WS_DualHttp#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#3)]
      [!code-vb[S_WS_DualHttp#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#3)]  
   
-3. Zadeklaruj podpisy metod interfejsu.  
+3. Zadeklaruj sygnatury metod w interfejsie.  
   
-4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy, aby każdy podpis metody, który musi być częścią publicznego kontraktu.  
+4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasę do sygnatury każdej metody, która musi być częścią kontraktu publicznego.  
   
-5. Utwórz interfejs wywołania zwrotnego, który definiuje zestaw operacji, które można wywołać usługę na komputerze klienckim.  
+5. Utwórz interfejs wywołania zwrotnego, który definiuje zestaw operacji, które usługa może wywoływać na kliencie.  
   
      [!code-csharp[S_WS_DualHttp#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#4)]
      [!code-vb[S_WS_DualHttp#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#4)]  
   
-6. Zadeklaruj podpisy metod w interfejs wywołania zwrotnego.  
+6. Zadeklaruj sygnatury metod w interfejsie wywołania zwrotnego.  
   
-7. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy, aby każdy podpis metody, który musi być częścią publicznego kontraktu.  
+7. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasę do sygnatury każdej metody, która musi być częścią kontraktu publicznego.  
   
-8. Łączenie dwóch interfejsów w kontrakt dupleksowy, ustawiając <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> właściwość podstawowy interfejs do typu interfejs wywołania zwrotnego.  
+8. Połącz dwa interfejsy z umową dupleksową, ustawiając <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> Właściwość w interfejsie podstawowym na typ interfejsu wywołania zwrotnego.  
   
-### <a name="to-call-methods-on-the-client"></a>Wywoływanie metod na komputerze klienckim  
+### <a name="to-call-methods-on-the-client"></a>Aby wywołać metody na kliencie  
   
-1. W implementacji usługi podstawowego kontraktu należy zadeklarować zmienną interfejs wywołania zwrotnego.  
+1. W implementacji usługi głównej kontraktu Zadeklaruj zmienną dla interfejsu wywołania zwrotnego.  
   
-2. Ustaw zmienną na zwracane przez odwołanie do obiektu <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> metody <xref:System.ServiceModel.OperationContext> klasy.  
+2. Ustaw zmienną na odwołanie do obiektu zwrócone przez <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> metodę <xref:System.ServiceModel.OperationContext> klasy.  
   
      [!code-csharp[S_WS_DualHttp#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#1)]
      [!code-vb[S_WS_DualHttp#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#1)]  
@@ -53,26 +53,26 @@ W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używ
      [!code-csharp[S_WS_DualHttp#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#2)]
      [!code-vb[S_WS_DualHttp#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#2)]  
   
-3. Wywołanie metody zdefiniowane przez interfejs wywołania zwrotnego.  
+3. Wywołaj metody zdefiniowane przez interfejs wywołania zwrotnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje komunikację dupleksową. Kontrakt usługi zawiera operacje usługi do przenoszenia do przodu i do tyłu. Umowy klienta zawiera operacji usługi raportowania położenia.  
+ Poniższy przykład kodu ilustruje komunikację dupleksową. Kontrakt usługi zawiera operacje usługi do przeniesienia do przodu i do tyłu. Kontrakt klienta zawiera operację usługi do raportowania jej pozycji.  
   
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]
  [!code-vb[S_WS_DualHttp#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#5)]  
   
-- Stosowanie <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> atrybuty umożliwia automatyczne generowanie definicje kontraktu usługi w sieci Web Services Description Language (WSDL).  
+- Zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutów i <xref:System.ServiceModel.OperationContractAttribute> umożliwia automatyczne generowanie definicji kontraktu usługi w Web Services Description Language (WSDL).  
   
-- Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do pobrania dokumentu WSDL i (opcjonalnie) kod i konfiguracja dla klientów.  
+- Użyj [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , aby pobrać dokument WSDL i (opcjonalnie) kod i konfigurację dla klienta.  
   
-- Udostępnianie usługi dwukierunkowe punkty końcowe muszą być zabezpieczone. Gdy usługa odbiera komunikat dwukierunkowego, analizuje ReplyTo w tej wiadomości przychodzących, aby określić, gdzie wysyłać odpowiedzi. Jeśli kanał nie jest zabezpieczony, niezaufanego klienta można wysyłanie wiadomości złośliwego z ReplyTo maszynę docelową, co prowadzi do typu "odmowa usługi maszyny docelowej". Przy użyciu komunikatów regularne "żądanie-odpowiedź" to nie jest problemem, ponieważ ReplyTo jest ignorowana, a odpowiedź jest wysyłana na kanale, który oryginalnego komunikatu materiał na.  
+- Punkty końcowe uwidaczniające usługi dupleksowe muszą być zabezpieczone. Gdy usługa otrzymuje komunikat o dupleksie, przegląda replikę replytą w tym komunikacie przychodzącym, aby określić, gdzie należy wysłać odpowiedź. Jeśli kanał nie jest zabezpieczony, klient niezaufanego może wysłać złośliwą wiadomość z replytą maszyny docelowej, co prowadzi do odmowy usługi Maszyny docelowej. W przypadku zwykłych komunikatów z żądaniem odpowiedzi nie jest to problem, ponieważ ReplyTo jest ignorowany, a odpowiedź jest wysyłana w kanale, w którym znajduje się pierwotny komunikat.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)
-- [Projektowanie i implementowanie usług](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Instrukcje: Definiowanie kontraktu usługi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Sesja](../../../../docs/framework/wcf/samples/session.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](how-to-access-services-with-a-duplex-contract.md)
+- [Dupleks](../samples/duplex.md)
+- [Projektowanie i implementowanie usług](../designing-and-implementing-services.md)
+- [Instrukcje: definiowanie kontraktu usługi](../how-to-define-a-wcf-service-contract.md)
+- [Sesja](../samples/session.md)

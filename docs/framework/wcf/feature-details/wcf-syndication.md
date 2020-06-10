@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600649"
 ---
 # <a name="wcf-syndication"></a>Syndykacja programu WCF
-Windows Communication Foundation (WCF) obsługuje łatwo pracować z zespolone kanały informacyjne Atom, RSS lub innych niestandardowych formatów, co pozwala na odczyt i utwórz je, a także narażają je na punkt końcowy usługi. W tematach w tej sekcji opisano ten model programowania do syndykacji szczegółowo.  
+Windows Communication Foundation (WCF) zapewnia pomoc techniczną do łatwego współdziałania ze źródłami danych w języku Atom, RSS lub innym, co pozwala na ich odczytywanie i tworzenie w punkcie końcowym usługi. W tematach w tej sekcji opisano szczegółowo ten model programowania dla zespalania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Omówienie syndykacji pomoc techniczna jest świadczona przez architekturę WCF.  
+ [Omówienie syndykacji WCF](wcf-syndication-overview.md)  
+ Zawiera omówienie wsparcia zespolonego zapewnianego przez program WCF.  
   
- [Architektura syndykacji](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- Opisuje klasy w modelu obiektów i rozszerzalność syndykacji.  
+ [Architektura syndykacji](architecture-of-syndication.md)  
+ Opisuje klasy w modelu obiektów i rozszerzalności zespalania.  
   
- [Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- W tym artykule opisano, jak źródła danych są reprezentowane w modelu obiektu syndykacji programu WCF i jak są one konwertowane na RSS i kanały informacyjne Atom.  
+ [Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS](how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ Opisuje sposób reprezentowania kanałów informacyjnych w modelu obiektów zespolonych WCF i sposobu ich konwersji na źródła danych RSS i Atom.  
   
- [Instrukcje: Tworzenie podstawowego kanału informacyjnego RSS](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Instrukcje: Tworzenie podstawowego kanału informacyjnego RSS](how-to-create-a-basic-rss-feed.md)  
  Pokazuje, jak utworzyć usługę, która udostępnia podstawowe źródło danych RSS.  
   
- [Instrukcje: Tworzenie podstawowego źródła danych Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- Pokazuje, jak utworzyć usługę, która udostępnia podstawowe źródło danych ATOM.  
+ [Instrukcje: tworzenie podstawowego źródła danych Atom](how-to-create-a-basic-atom-feed.md)  
+ Pokazuje, jak utworzyć usługę, która umożliwia dostęp do podstawowego źródła danych ATOM.  
   
- [Instrukcje: Udostępnianie kanału informacyjnego w formatach Atom i RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
- Pokazuje, jak utworzyć usługę, która udostępnia tego samego źródła danych ATOM i RSS.  
+ [Instrukcje: udostępnianie kanału informacyjnego w formatach Atom i RSS](how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ Pokazuje, jak utworzyć usługę, która zapewnia dostęp do tego samego źródła danych ATOM i RSS.  
   
- [Rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
- Opisuje metody dodawania niestandardowych elementów i atrybutów do zespolonego źródła danych.  
+ [Rozszerzalność syndykacji](syndication-extensibility.md)  
+ Opisuje metody dodawania niestandardowych elementów i atrybutów do źródła zespolonego.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Zaufanie częściowe](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Model programowania protokołu HTTP sieci Web w programie WCF](wcf-web-http-programming-model.md)
+- [Zaufanie częściowe](partial-trust.md)

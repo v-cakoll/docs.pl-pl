@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 8898dfedc6ba7deceb5a6e6856b7c7e6ad79d047
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68123ba9a273bf2c1eaa7b3747930ebca386064b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143502"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589698"
 ---
 # <a name="ws-reliable-session"></a>Sesja niezawodna WS
-W tym przykładzie pokazano użycie niezawodnych sesji. Niezawodne sesje zapewniają obsługę niezawodnych wiadomości i sesji. Niezawodne wiadomości ponawia komunikację w przypadku awarii i umożliwia zapewnienie dostarczania, takie jak najaśledzenie wiadomości w kolejności. Sesje utrzymują stan dla klientów między wywołaniami. Przykład implementuje sesje do utrzymania stanu klienta i określa gwarancje dostarczania w kolejności.  
+Ten przykład pokazuje użycie niezawodnych sesji. Niezawodne sesje zapewniają obsługę niezawodnej obsługi komunikatów i sesji. Niezawodna ponowna próba komunikacji przy niepowodzeń i pozwala określić gwarancje dostarczania, takie jak wysyłanie komunikatów. Sesje utrzymują stan dla klientów między wywołaniami. Przykład implementuje sesje do obsługi stanu klienta i określa gwarancje dostarczania w kolejności.  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
- Ten przykład jest oparty na [wprowadzenie,](../../../../docs/framework/wcf/samples/getting-started-sample.md) który implementuje usługę kalkulatora. Niezawodne funkcje sesji są włączone i konfigurowane w plikach konfiguracyjnych aplikacji dla klienta i usługi.  
+ Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) , który implementuje usługę kalkulatora. Funkcje niezawodnej sesji są włączane i konfigurowane w plikach konfiguracji aplikacji dla klienta i usługi.  
   
- W tym przykładzie usługa jest hostowana w internetowych usługach informacyjnych (IIS), a klient jest aplikacją konsoli (.exe).  
+ W tym przykładzie usługa jest hostowana w Internet Information Services (IIS), a klient jest aplikacją konsolową (. exe).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W próbce `wsHttpBinding`użyto pliku . Powiązanie jest określone w plikach konfiguracyjnych dla klienta i usługi. Typ powiązania jest określony w atrybucie elementu punktu końcowego, `binding` jak pokazano w poniższej konfiguracji przykładowej.  
+ Przykład używa `wsHttpBinding` . Powiązanie jest określone w plikach konfiguracji zarówno dla klienta, jak i usługi. Typ powiązania jest określony w atrybucie elementu punktu końcowego `binding` , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <endpoint address=""  
@@ -39,7 +39,7 @@ W tym przykładzie pokazano użycie niezawodnych sesji. Niezawodne sesje zapewni
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Punkt końcowy zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie "Binding1". Konfiguracja wiązania umożliwia niezawodne `enabled` sesje, ustawiając atrybut [ \<reliableSession>](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) do `true`. Gwarancje dostawy dla zamówionych sesji są kontrolowane `true` `false`przez ustawienie zamówionego atrybutu na lub . Wartość domyślna to `true`.  
+ Punkt końcowy zawiera `bindingConfiguration` atrybut odwołujący się do konfiguracji powiązania o nazwie "Binding1". Konfiguracja powiązania umożliwia niezawodne sesje przez ustawienie `enabled` atrybutu [\<reliableSession>](../../configure-apps/file-schema/wcf/reliablesession.md) na `true` . Gwarancje dostarczania dla uporządkowanych sesji są kontrolowane przez ustawienie atrybutu uporządkowane na `true` lub `false` . Wartość domyślna to `true`.  
   
 ```xml  
 <bindings>  
@@ -51,7 +51,7 @@ W tym przykładzie pokazano użycie niezawodnych sesji. Niezawodne sesje zapewni
 </bindings>  
 ```  
   
- Klasa implementacji usługi <xref:System.ServiceModel.InstanceContextMode.PerSession> implementuje instancing do obsługi wystąpienia klasy oddzielne dla każdego klienta, jak pokazano w poniższym przykładowym kodzie.  
+ Klasa implementacji usługi implementuje tworzenie <xref:System.ServiceModel.InstanceContextMode.PerSession> wystąpień dla każdego klienta, jak pokazano w poniższym przykładowym kodzie.  
 
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)] public class CalculatorService : ICalculator  
@@ -60,7 +60,7 @@ W tym przykładzie pokazano użycie niezawodnych sesji. Niezawodne sesje zapewni
 }  
 ```
   
- Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -71,16 +71,16 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Zainstaluj ASP.NET 4.0 za pomocą następującego polecenia.  
+1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-4. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding'
+title: 'Instrukcje: Wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 810c5b127a34fb0a35e8fd2d83ff59e00aca0ba1
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: df057d64feb89d1e43b938b36cb48f2f103b17d0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595391"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Instrukcje: Wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding
 
-Niektóre usługi mogą wymagać poświadczeń federacyjnych, ale nie obsługują bezpiecznych sesji. W takim przypadku należy wyłączyć funkcję bezpiecznej sesji. W przeciwieństwie <xref:System.ServiceModel.WSHttpBinding>do <xref:System.ServiceModel.WSFederationHttpBinding> klasy, Klasa nie pozwala na wyłączenie bezpiecznych sesji podczas komunikacji z usługą. Zamiast tego należy utworzyć niestandardowe powiązanie, które zastępuje ustawienia bezpiecznej sesji przy użyciu Bootstrap.
+Niektóre usługi mogą wymagać poświadczeń federacyjnych, ale nie obsługują bezpiecznych sesji. W takim przypadku należy wyłączyć funkcję bezpiecznej sesji. W przeciwieństwie do <xref:System.ServiceModel.WSHttpBinding> klasy, Klasa nie pozwala <xref:System.ServiceModel.WSFederationHttpBinding> na wyłączenie bezpiecznych sesji podczas komunikacji z usługą. Zamiast tego należy utworzyć niestandardowe powiązanie, które zastępuje ustawienia bezpiecznej sesji przy użyciu Bootstrap.
 
-W tym temacie pokazano, jak modyfikować elementy powiązania zawarte w elemencie <xref:System.ServiceModel.WSFederationHttpBinding> w celu utworzenia niestandardowego powiązania. Wynik jest identyczny <xref:System.ServiceModel.WSFederationHttpBinding> z tą różnicą, że nie używa bezpiecznych sesji.
+W tym temacie pokazano, jak modyfikować elementy powiązania zawarte w elemencie w <xref:System.ServiceModel.WSFederationHttpBinding> celu utworzenia niestandardowego powiązania. Wynik jest identyczny z <xref:System.ServiceModel.WSFederationHttpBinding> tą różnicą, że nie używa bezpiecznych sesji.
 
 ## <a name="to-create-a-custom-federated-binding-without-secure-session"></a>Aby utworzyć niestandardowe powiązanie federacyjne bez bezpiecznej sesji
 
-1. Utwórz wystąpienie <xref:System.ServiceModel.WSFederationHttpBinding> klasy jako bezwzględnie w kodzie lub przez załadowanie jednego z pliku konfiguracji.
+1. Utwórz wystąpienie klasy jako bezwzględnie <xref:System.ServiceModel.WSFederationHttpBinding> w kodzie lub przez załadowanie jednego z pliku konfiguracji.
 
-2. Klonowanie<xref:System.ServiceModel.Channels.CustomBinding>do <xref:System.ServiceModel.WSFederationHttpBinding> .
+2. Klonowanie <xref:System.ServiceModel.WSFederationHttpBinding> do <xref:System.ServiceModel.Channels.CustomBinding> .
 
-3. <xref:System.ServiceModel.Channels.SecurityBindingElement> Znajdź<xref:System.ServiceModel.Channels.CustomBinding>w.
+3. Znajdź <xref:System.ServiceModel.Channels.SecurityBindingElement> w <xref:System.ServiceModel.Channels.CustomBinding> .
 
-4. <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> Znajdź<xref:System.ServiceModel.Channels.SecurityBindingElement>w.
+4. Znajdź <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> w <xref:System.ServiceModel.Channels.SecurityBindingElement> .
 
-5. Zastąp oryginał <xref:System.ServiceModel.Channels.SecurityBindingElement> elementem powiązania zabezpieczeń Bootstrap <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>z.
+5. Zastąp oryginał <xref:System.ServiceModel.Channels.SecurityBindingElement> elementem powiązania zabezpieczeń Bootstrap z <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> .
 
 ## <a name="example"></a>Przykład
 
@@ -44,6 +44,6 @@ Poniższy przykład powoduje utworzenie niestandardowego powiązania federacyjne
 
 - Aby skompilować przykład kodu, Utwórz projekt, który odwołuje się do zestawu System. ServiceModel. dll.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Wiązania i zabezpieczenia](bindings-and-security.md)

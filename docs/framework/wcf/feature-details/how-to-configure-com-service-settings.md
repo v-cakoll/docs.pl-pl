@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597179"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Instrukcje: konfigurowanie ustawień usługi COM+
-Gdy interfejs aplikacji zostanie dodany lub usunięty przy użyciu narzędzia konfiguracji usługi COM+, konfiguracja usługi sieci Web jest aktualizowana w pliku konfiguracyjnym aplikacji. W trybie hostowanym modelu COM+ plik Application. config jest umieszczany w katalogu głównym aplikacji (domyślnie są to\\aplikacje%PROGRAMFILES%\ComPlus {AppID}). W każdym z trybów hostowanych w sieci Web plik Web. config znajduje się w określonym katalogu wirtualnym.  
+Gdy interfejs aplikacji zostanie dodany lub usunięty przy użyciu narzędzia konfiguracji usługi COM+, konfiguracja usługi sieci Web jest aktualizowana w pliku konfiguracyjnym aplikacji. W trybie hostowanym modelu COM+ plik Application. config jest umieszczany w katalogu głównym aplikacji (domyślnie są to aplikacje%PROGRAMFILES%\ComPlus \\ {AppID}). W każdym z trybów hostowanych w sieci Web plik Web. config znajduje się w określonym katalogu wirtualnym.  
   
 > [!NOTE]
 > Podpisywanie komunikatów należy używać do ochrony przed manipulacją komunikatów między klientem a serwerem. Ponadto w celu ochrony przed ujawnieniem informacji z komunikatów między klientem a serwerem należy użyć szyfrowania z warstwy komunikatów lub transportu. Podobnie jak w przypadku usług Windows Communication Foundation (WCF), należy użyć ograniczania przepustowości, aby ograniczyć liczbę współbieżnych wywołań, połączeń, wystąpień i oczekujących operacji. Pozwala to zapobiec nadmiernemu zużyciu zasobów. Zachowanie ograniczania jest określone za poorednictwem ustawień pliku konfiguracji usługi.  
@@ -55,7 +55,7 @@ public interface IFinancesContract : IDisposable
   
 - Zmiana adresu punktu końcowego z domyślnego typu ApplicationName/ComponentName/InterfaceName na bardziej użyteczny formularz.  
   
-- Modyfikowanie przestrzeni nazw usługi z poziomu formularza domyślnego `http://tempuri.org/InterfaceID` na bardziej istotny.  
+- Modyfikowanie przestrzeni nazw usługi z poziomu `http://tempuri.org/InterfaceID` formularza domyślnego na bardziej istotny.  
   
 - Zmiana punktu końcowego w taki sposób, aby używał innego powiązania transportowego.  
   
@@ -96,6 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Integrowanie z aplikacjami COM+](integrating-with-com-plus-applications.md)

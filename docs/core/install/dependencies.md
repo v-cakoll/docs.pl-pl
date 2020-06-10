@@ -3,14 +3,14 @@ title: Zależności zestaw .NET Core SDK i środowiska uruchomieniowego — .NET
 description: Szczegółowe informacje na temat wymagań wstępnych dotyczących architektury procesora i systemu operacyjnego w celu zainstalowania zestaw .NET Core SDK i środowiska uruchomieniowego w systemach Windows, Linux i macOS.
 author: leecow
 ms.author: leecow
-ms.date: 04/30/2020
+ms.date: 06/01/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 81f6ab436428d71f71d9fd0f560bd2b0512a519b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895490"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590763"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Zależności i wymagania dotyczące platformy .NET Core
 
@@ -28,7 +28,7 @@ W tym artykule szczegółowo przedstawiono systemy operacyjne i architekturę pr
 W przypadku programu .NET Core 3,1 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -46,7 +46,7 @@ Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, 
 W przypadku programu .NET Core 3,0 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -57,14 +57,14 @@ W przypadku programu .NET Core 3,0 obsługiwane są następujące wersje systemu
 
 Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 3,0, zobacz [.net core 3,0 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2,2](#tab/netcore22)
 
 *Platforma .NET Core 2,2 jest obecnie nieobsługiwana. Aby uzyskać więcej informacji, zobacz [zasady obsługi .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 W przypadku programu .NET Core 2,2 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, 
 W przypadku programu .NET Core 2,1 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -102,8 +102,8 @@ Jeśli instalujesz zestaw .NET SDK lub środowisko uruchomieniowe w następując
 - Windows 7 z dodatkiem SP1
 - Windows Vista z dodatkiem SP 2
 - Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+- Windows Server 2008 z dodatkiem R2
+- Windows Server 2012 z dodatkiem R2
 
 Zainstaluj następujące elementy:
 
@@ -120,7 +120,7 @@ Powyższe wymagania są również wymagane w przypadku wystąpienia jednego z na
 >
 > \-oraz
 >
-> Znaleziono bibliotekę *hostfxr. dll* , ale ładowanie jej z *dysku C:\\\<path_to_app>\\hostfxr. dll* nie powiodło się.
+> Znaleziono bibliotekę *hostfxr. dll* , ale ładowanie jej z *dysku C: \\ \<path_to_app> \\ hostfxr. dll* nie powiodło się.
 
 ::: zone-end
 
@@ -133,7 +133,7 @@ Program .NET Core 3,1 traktuje system Linux jako pojedynczy systemu operacyjnego
 Platforma .NET Core 3,1 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                             | Wersja               | Architektury    |
 | ------------------------------ | --------------------- | ---------------- |
@@ -164,7 +164,7 @@ Program .NET Core 3,0 traktuje system Linux jako pojedynczy systemu operacyjnego
 Platforma .NET Core 3,0 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                             | Wersja               | Architektury    |
 | ------------------------------ | --------------------- | ---------------- |
@@ -183,7 +183,7 @@ Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, 
 
 Aby uzyskać więcej informacji na temat instalowania programu .NET Core 3,0 w systemie ARM64, zobacz [Instalowanie programu .net core 3,0 w systemie Linux arm64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2,2](#tab/netcore22)
 
 *Platforma .NET Core 2,2 jest obecnie nieobsługiwana. Aby uzyskać więcej informacji, zobacz [zasady obsługi .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
@@ -192,7 +192,7 @@ Program .NET Core 2,2 traktuje system Linux jako pojedynczy systemu operacyjnego
 Platforma .NET Core 2,2 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                             |  Wersja                |  Architektury   |
 | ------------------------------ | ----------------------- | ---------------- |
@@ -216,7 +216,7 @@ Program .NET Core 2,1 traktuje system Linux jako pojedynczy systemu operacyjnego
 Platforma .NET Core 2,1 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | System operacyjny                             |  Wersja                |  Architektury   |
 | ------------------------------ | ----------------------- | ---------------- |
@@ -316,11 +316,11 @@ W przypadku aplikacji .NET Core, które używają zestawu *System. Drawing. Comm
 Platforma .NET Core jest obsługiwana w następujących wersjach macOS:
 
 > [!NOTE]
-> `+` Symbol reprezentuje wersję minimalną.
+> `+`Symbol reprezentuje wersję minimalną.
 
 | Wersja platformy .NET Core | macOS                 | Architektury |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.1               | Wysoka firma Sierra (10.13 +)  | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3,1               | Wysoka firma Sierra (10.13 +)  | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
 | 3.0               | Wysoka firma Sierra (10.13 +)  | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12 +)       | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |

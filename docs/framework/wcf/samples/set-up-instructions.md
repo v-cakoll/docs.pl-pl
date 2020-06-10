@@ -5,40 +5,40 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a5a0558a26e938fb06a19f498e541f4d3611bf3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584158"
 ---
 # <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji
-Ten zbiór tematów w tym artykule opisano sposób konfigurowania usługi, które są wymagane do uruchamiania usługi Windows Communication Foundation (WCF).  
+W tym zestawie tematów opisano, jak skonfigurować usługi wymagane do uruchomienia usługi Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
- Opisano kroki konfigurowania przykłady WCF.  
+ [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md)  
+ Zawiera instrukcje dotyczące konfigurowania przykładów WCF.  
   
- [Instrukcje dotyczące zapory](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
- Omówiono kroki wymagane do skonfigurowania zapory Windows do usług WCF i funkcji.  
+ [Instrukcje dotyczące zapory](firewall-instructions.md)  
+ Zawiera opis czynności wymaganych do skonfigurowania zapory systemu Windows w celu umożliwienia działania usług WCF.  
   
- [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- Omówiono kroki wymagane do skonfigurowania usług IIS.  
+ [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](internet-information-service-hosting-instructions.md)  
+ Zawiera opis czynności wymaganych do skonfigurowania usług IIS.  
   
- [Instrukcje instalacji certyfikatu serwera Internet Information Services](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
- Zawiera opis procesu, aby zainstalować certyfikaty serwera dla usług IIS.  
+ [Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych](iis-server-certificate-installation-instructions.md)  
+ Zawiera opis procesu instalacji certyfikatów serwera dla usług IIS.  
   
- [Instrukcje dotyczące konfigurowania katalogów wirtualnych](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
- Opisano kroki wymagane do tworzenia katalogu wirtualnego.  
+ [Instrukcje dotyczące konfigurowania katalogów wirtualnych](virtual-directory-setup-instructions.md)  
+ Przedstawia kroki wymagane do utworzenia katalogu wirtualnego.  
   
- [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- Artykuł zawiera opis kompilowanie przykładów programu WCF.  
+ [Kompilowanie przykładów programu Windows Communication Foundation](building-the-samples.md)  
+ Przedstawia kroki tworzenia przykładów programu WCF.  
   
- [Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- Artykuł zawiera opis uruchamianie przykładów programu WCF, na tym samym komputerze i na komputerach.  
+ [Uruchamianie przykładów programu Windows Communication Foundation](running-the-samples.md)  
+ Przedstawia kroki uruchamiania przykładów WCF na tym samym komputerze i na różnych maszynach.  
   
- [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- Opisano kroki, aby zainstalować usługę kolejkowania komunikatów.  
+ [Instalowanie usługi kolejkowania komunikatów (MSMQ)](installing-message-queuing-msmq.md)  
+ Zawiera opis kroków instalacji usługi kolejkowania komunikatów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wskazówki dotyczące rozwiązywania problemów, aby uzyskać przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))
+ [Wskazówki dotyczące rozwiązywania problemów z przykładami WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: spójne odwoływanie się do certyfikatów X.509'
+title: 'Instrukcje: Spójne odwoływanie się do certyfikatów X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: 2214517784d311cbd0fe487fd6db2cbf48189955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c13dd5ebb18df62ce64fc74da53f3f5a2e8cadb7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662780"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599090"
 ---
-# <a name="how-to-consistently-reference-x509-certificates"></a>Instrukcje: spójne odwoływanie się do certyfikatów X.509
-Można zidentyfikować certyfikatu na kilka sposobów: przez skrót certyfikatu, przez wystawcę i numer seryjny lub przez identyfikator klucza podmiotu (NARCIARSKIE). NARCIARSKIE zawiera unikatowy identyfikator dla klucz publiczny podmiotu certyfikatu i jest często używana podczas pracy z XML cyfrowego podpisywania. Wartość NARCIARSKIE jest zazwyczaj część certyfikatu X.509 jako *rozszerzenia certyfikatów X.509*. Windows Communication Foundation (WCF) ma wartość domyślną *odwołanie do stylu* , jeżeli wystawcy i numer seryjny rozszerzenia NARCIARSKIE brakuje certyfikatu. Jeśli certyfikat zawiera rozszerzenie NARCIARSKIE, domyślne odwołanie do stylu używa NARCIARSKIE wskaż certyfikat. Środku sposób przez proces tworzenia aplikacji, możesz przejść z korzystania z certyfikatów, które nie korzystają z rozszerzenia NARCIARSKIE certyfikaty, które mają rozszerzenie NARCIARSKIE, zmienia także odwołujący się styl używany w wiadomościach generowanych przez usługi WCF.  
+# <a name="how-to-consistently-reference-x509-certificates"></a>Instrukcje: Spójne odwoływanie się do certyfikatów X.509
+Certyfikat można zidentyfikować na kilka sposobów: przez skrót certyfikatu, wystawcy i numer seryjny lub identyfikator klucza podmiotu (narciarski). NARCIARSKIe informacje zapewniają unikatową identyfikację klucza publicznego podmiotu certyfikatu i często są używane podczas pracy z podpisywaniem cyfrowym XML. Wartość SKI jest zwykle częścią certyfikatu X. 509 jako *rozszerzenia certyfikatu x. 509*. Windows Communication Foundation (WCF) ma domyślny *styl odwoływania* się, który używa wystawcy i numeru seryjnego, jeśli w certyfikacie brakuje rozszerzenia Ski. Jeśli certyfikat zawiera rozszerzenie SKI, domyślny styl odwoływania używa do nadawania certyfikatu certyfikat. W przypadku korzystania z rozwiązania do tworzenia aplikacji można przełączać się za pomocą certyfikatów, które nie używają rozszerzenia NARCIARSKIe w przypadku certyfikatów korzystających z tego rozszerzenia, ale również zmiany stylu odwołania użytego w komunikatach generowanych przez program WCF.  
   
- Jeśli jednolitego stylu odwołujący się jest wymagany niezależnie od obecności rozszerzenia NARCIARSKIE, jest możliwość skonfigurowania żądany styl odwołujący się, jak pokazano w poniższym kodzie.  
+ Jeśli spójny styl odwołania jest wymagany niezależnie od obecności rozszerzenia NARCIARSKIego, możliwe jest skonfigurowanie żądanego stylu odwołania, jak pokazano w poniższym kodzie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy niestandardowe zabezpieczeń element powiązania, który używa pojedynczego jednolitego stylu odwołujący się, nazwy wystawcy i numer seryjny.  
+ Poniższy przykład tworzy niestandardowy element powiązania zabezpieczeń, który używa pojedynczego spójnego stylu odniesienia, nazwy wystawcy i numeru seryjnego.  
   
  [!code-csharp[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_referencingcertificatesconsistently/cs/source.cs#1)]
  [!code-vb[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_referencingcertificatesconsistently/vb/source.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Następujące przestrzenie nazw są wymagane, aby skompilować kod:  
+ Do skompilowania kodu wymagane są następujące przestrzenie nazw:  
   
 - <xref:System>  
   
@@ -36,6 +36,6 @@ Można zidentyfikować certyfikatu na kilka sposobów: przez skrót certyfikatu,
   
 - <xref:System.ServiceModel.Security.Tokens>  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Praca z certyfikatami](working-with-certificates.md)

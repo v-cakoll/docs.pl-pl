@@ -1,5 +1,6 @@
 ---
 title: Tworzenie nowych ciągów w programie .NET
+description: Dowiedz się, jak tworzyć ciągi przy użyciu przypisań, konstruktorów klas lub metod system. String, które łączą kilka ciągów, tablic ciągów lub obiektów w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596451"
 ---
 # <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w programie .NET
 .NET Framework umożliwia tworzenie ciągów przy użyciu prostego przypisywania, a także przeciążenie konstruktora klasy do obsługi tworzenia ciągów przy użyciu wielu różnych parametrów. .NET Framework udostępnia również kilka metod <xref:System.String?displayProperty=nameWithType> klasy, które tworzą nowe obiekty ciągu przez połączenie kilku ciągów, tablic ciągów lub obiektów.  
@@ -78,7 +79,7 @@ ms.locfileid: "84279015"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe operacje na ciągach](basic-string-operations.md)
 - [Formatowanie złożone](composite-formatting.md)

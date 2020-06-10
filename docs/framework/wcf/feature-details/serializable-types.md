@@ -2,46 +2,46 @@
 title: Typy z możliwością serializowania
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586107"
 ---
 # <a name="serializable-types"></a>Typy z możliwością serializowania
-Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje wszystkich typów publicznie widoczne. Wszystkie właściwości publiczne odczytu/zapisu i pola tego typu są serializowane.  
+Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializacji wszystkie publicznie widoczne typy. Wszystkie publiczne właściwości odczytu/zapisu i pola typu są serializowane.  
   
- Można zmienić domyślne zachowanie, stosując <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybuty do typów i członków tej funkcji mogą być przydatne w sytuacjach, w których mają typy, które nie są pod Twoją kontrolą i nie można zmodyfikować, aby dodać atrybuty. <xref:System.Runtime.Serialization.DataContractSerializer> Rozpoznaje typy takie "nieoznaczone".  
+ Zachowanie domyślne można zmienić, stosując <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> atrybuty i do typów i składowych, których ta funkcja może być przydatna w sytuacjach, w których masz typy, które nie znajdują się pod kontrolą i nie można ich modyfikować w celu dodania atrybutów. <xref:System.Runtime.Serialization.DataContractSerializer>Rozpoznaje takie typy "nieoznaczone".  
   
-## <a name="serialization-defaults"></a>Serializacja wartości domyślne  
- Można zastosować <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów, aby jawnie kontrolować lub dostosować serializacji typów i elementów członkowskich. Ponadto te atrybuty można zastosować do pól prywatnych. Jednak nawet typy, które nie są oznaczone przez te atrybuty są serializacji i deserializacji. Obowiązują następujące reguły i wyjątków:  
+## <a name="serialization-defaults"></a>Wartości domyślne serializacji  
+ Można zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybuty i, <xref:System.Runtime.Serialization.DataMemberAttribute> Aby jawnie kontrolować lub dostosowywać serializacji typów i elementów członkowskich. Ponadto te atrybuty można zastosować do pól prywatnych. Jednak typy, które nie są oznaczone tymi atrybutami, są serializowane i deserializowane. Mają zastosowanie następujące reguły i wyjątki:  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje kontraktu danych z typów bez przy użyciu domyślnych właściwości nowo utworzonej typy atrybutów.  
+- <xref:System.Runtime.Serialization.DataContractSerializer>Wnioskuje o umowę danych z typów bez atrybutów przy użyciu domyślnych właściwości nowo utworzonych typów.  
   
-- Wszystkie publiczne pola i właściwości z publicznych `get` i `set` metody są serializowane, o ile nie zostanie zastosowana <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybutu tego elementu członkowskiego.  
+- Wszystkie pola publiczne i właściwości z `get` `set` metodami publicznymi są serializowane, chyba że stosujesz <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybut do tego elementu członkowskiego.  
   
-- Semantyka serializacji jest podobne do występujących dla <xref:System.Xml.Serialization.XmlSerializer>.  
+- Semantyka serializacji jest podobna do właściwości <xref:System.Xml.Serialization.XmlSerializer> .  
   
-- Nieoznaczone typy tylko typy publiczne konstruktory, które nie mają parametrów są serializowane. Wyjątkiem od tej reguły jest <xref:System.Runtime.Serialization.ExtensionDataObject> używane z <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu.  
+- W przypadku typów nieoznaczonych tylko typy publiczne z konstruktorów, które nie mają parametrów są serializowane. Wyjątek od tej reguły jest <xref:System.Runtime.Serialization.ExtensionDataObject> używany z <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsem.  
   
-- Pola tylko do odczytu, właściwości bez `get` lub `set` metody i właściwości za pomocą wewnętrznego lub prywatnego `set` lub `get` metod nie są serializowane. Tych właściwości są ignorowane i jest zgłaszany żaden wyjątek, z wyjątkiem kolekcji tylko do get.  
+- Pola tylko do odczytu, właściwości bez `get` metody lub `set` i właściwości z wewnętrznymi lub prywatnymi `set` `get` metodami nie są serializowane. Takie właściwości są ignorowane i nie jest zgłaszany żaden wyjątek, chyba że w przypadku kolekcji tylko do pobrania.  
   
-- <xref:System.Xml.Serialization.XmlSerializer> atrybuty (takie jak `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`i tak dalej), są ignorowane.  
+- <xref:System.Xml.Serialization.XmlSerializer>atrybuty (takie jak `XmlElement` ,,, `XmlAttribute` `XmlIgnore` `XmlInclude` i tak dalej) są ignorowane.  
   
-- Jeśli nie zastosujesz <xref:System.Runtime.Serialization.DataContractAttribute> atrybut do danego typu serializator ignoruje wszystkich elementów członkowskich tego typu, do którego <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany.  
+- Jeśli nie zastosujesz <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do danego typu, serializator zignoruje dowolny element członkowski w tym typie, do którego <xref:System.Runtime.Serialization.DataMemberAttribute> zastosowano atrybut.  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> Właściwość jest obsługiwana w typach oznaczone nie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu. Obejmuje to obsługę <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu nieoznaczone typy.  
+- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>Właściwość jest obsługiwana w typach, które nie są oznaczone <xref:System.Runtime.Serialization.DataContractAttribute> atrybutem. Obejmuje to obsługę atrybutu dla <xref:System.Runtime.Serialization.KnownTypeAttribute> nieoznaczonych typów.  
   
-- Aby "zrezygnować" nad procesem serializacji dla pola, właściwości lub publiczne elementy członkowskie, zastosuj <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybutu tego elementu członkowskiego.  
+- Aby zrezygnować z procesu serializacji dla publicznych elementów członkowskich, właściwości lub pól, Zastosuj <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybut do tego elementu członkowskiego.  
   
 ## <a name="inheritance"></a>Dziedziczenie  
- Nieoznaczone typy (typy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu) może dziedziczyć z typów, które mają atrybut; Jednakże, odwrotna nie jest dozwolony: typy z atrybutem nie może dziedziczyć z nieoznaczone typy. Ta zasada jest wymuszana głównie w celu zapewnienia zgodności z poprzednimi wersjami przy użyciu kodu napisanego w starszych wersjach programu .NET Framework.  
+ Typy nieoznaczone (typy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu) mogą dziedziczyć po typach, które mają ten atrybut, ale odwrotnie nie jest dozwolone: typy z atrybutem nie mogą dziedziczyć po typach nieoznaczonych. Ta reguła jest wymuszana głównie w celu zapewnienia zgodności z poprzednimi wersjami przy użyciu kodu pisanego we wcześniejszych wersjach .NET Framework.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Typy obsługiwane przez serializator kontraktu danych](types-supported-by-the-data-contract-serializer.md)

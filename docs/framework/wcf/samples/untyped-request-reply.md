@@ -1,28 +1,28 @@
 ---
-title: Bez typu żądanie-odpowiedź
+title: Żądanie nietypu-odpowiedź
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: a526837b9bccf7a6287972e482a189a53ecadaf8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46047d1671fadb18052991451910b9056015edd2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591103"
 ---
 # <a name="untyped-requestreply"></a>Nietypizowane żądanie/nietypizowana odpowiedź
-W tym przykładzie pokazano, jak zdefiniować kontrakty operacji, które używają Message klasy.  
+Ten przykład ilustruje sposób definiowania kontraktów operacji, które używają klasy Message.  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Umowa serwisowa definiuje jedną operację, która przyjmuje typ wiadomości jako argument i zwraca komunikat. Operacja zbiera wszystkie wymagane dane do obliczenia sumy z treści wiadomości, a następnie wysyła sumę jako treść w komunikacie zwrotnym.  
+ Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md). Kontrakt usługi definiuje jedną operację, która przyjmuje typ komunikatu jako argument i zwraca komunikat. Operacja zbiera wszystkie wymagane dane w celu obliczenia sumy z treści wiadomości, a następnie wysyła sumę jako treść w komunikacie zwrotnym.  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- W usłudze operacja pobiera tablicę liczby całkowitych przekazanych w komunikacie wejściowym, a następnie oblicza sumę. Aby wysłać wiadomość odpowiedzi, przykład tworzy nową wiadomość z odpowiednią wersją wiadomości i Action i dodaje obliczoną sumę jako swoją treść. Poniższy przykładowy kod pokazuje to.  
+ W usłudze operacja pobiera tablicę liczb całkowitych przekazaną w komunikacie wejściowym, a następnie oblicza sumę. Aby wysłać komunikat odpowiedzi, przykład tworzy nową wiadomość z odpowiednią wersją i akcją wiadomości i dodaje obliczoną sumę jako treść. Poniższy przykładowy kod demonstruje ten sposób.  
   
 ```csharp
 public Message ComputeSum(Message request)  
@@ -43,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- Klient używa kodu generowanego przez [narzędzie narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia serwera proxy usługi zdalnej. Aby wysłać wiadomość żądania, klient musi mieć wersję wiadomości, która zależy od kanału źródłowego. W związku z <xref:System.ServiceModel.OperationContextScope> tym tworzy nowy zakres do kanału <xref:System.ServiceModel.OperationContext> proxy, który został utworzony, który tworzy z poprawną wersją wiadomości wypełnione w jego `OutgoingMessageHeaders.MessageVersion` właściwości. Klient przekazuje tablicę danych wejściowych jako treść do `ComputeSum` komunikatu żądania, a następnie wywołuje na serwerze proxy. Następnie klient pobiera sumę danych wejściowych, które `GetBody<T>` przeszedł, uzyskując dostęp do metody w wiadomości odpowiedzi. Poniższy przykładowy kod pokazuje to.  
+ Klient korzysta z kodu wygenerowanego przez [Narzędzie do obsługi metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , aby utworzyć serwer proxy w usłudze zdalnej. Aby wysłać komunikat żądania, klient musi mieć wersję wiadomości, która zależy od kanału bazowego. W tym celu tworzy nowy <xref:System.ServiceModel.OperationContextScope> zakres w utworzonym przez siebie kanale serwera proxy, który tworzy <xref:System.ServiceModel.OperationContext> z prawidłową wersją wiadomości wypełnioną w jej `OutgoingMessageHeaders.MessageVersion` właściwości. Klient przekaże tablicę wejściową jako treść komunikatu żądania, a następnie wywoła `ComputeSum` na serwerze proxy. Następnie klient pobiera sumę danych wejściowych, które przekazuje, uzyskując dostęp do `GetBody<T>` metody w komunikacie odpowiedzi. Poniższy przykładowy kod demonstruje ten sposób.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -61,7 +61,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- Ten przykład jest próbką hostowane w sieci Web i dlatego należy uruchomić tylko plik wykonywalny klienta. Poniżej przedstawiono przykładowe dane wyjściowe na kliencie.  
+ Ten przykład jest przykładem hostowanym w sieci Web i dlatego musi być uruchomiony tylko plik wykonywalny klienta. Poniżej przedstawiono przykładowe dane wyjściowe na komputerze klienckim.  
   
 ```console  
 Prompt>Client.exe  
@@ -70,21 +70,21 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- Ten przykład jest próbką hostowane w sieci Web i tak sprawdź łącze podane w kroku 3, aby zobaczyć, jak skompilować i uruchomić przykład.  
+ Ten przykład jest przykładem hostowanym w sieci Web, więc sprawdź link podany w kroku 3, aby zobaczyć, jak skompilować i uruchomić przykład.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
-> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

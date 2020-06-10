@@ -2,40 +2,40 @@
 title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: fe03047dd931d25ec94bbc5e00c479d1b42397bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185277"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597465"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
-Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby operacja usługi stała się częścią transakcji <xref:System.ServiceModel.Activities.Receive> otoczenia, <xref:System.ServiceModel.Activities.TransactedReceiveScope> umieść działanie w działaniu. Wszelkie połączenia wykonane <xref:System.ServiceModel.Activities.Send> przez <xref:System.ServiceModel.Activities.SendReply> lub <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania w ramach będą również dokonywane w ramach transakcji otoczenia. Aplikacja kliencka przepływu pracy można utworzyć <xref:System.Activities.Statements.TransactionScope> transakcję otoczenia przy użyciu operacji działania i wywołania usługi przy użyciu transakcji otoczenia. W tym temacie opracowywanie tworzenia usługi przepływu pracy i klienta przepływu pracy, które uczestniczą w transakcjach.  
+Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby operacja usługi stała się częścią otoczenia transakcji, umieść <xref:System.ServiceModel.Activities.Receive> działanie w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Wszystkie wywołania wykonane przez <xref:System.ServiceModel.Activities.Send> lub <xref:System.ServiceModel.Activities.SendReply> działania w ramach programu <xref:System.ServiceModel.Activities.TransactedReceiveScope> zostaną również wykonane w obrębie transakcji otoczenia. Aplikacja kliencka przepływu pracy może utworzyć otoczenia transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> operacji działania i wywołania usługi przy użyciu transakcji otoczenia. W tym temacie omówiono tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczy w transakcjach.  
   
 > [!WARNING]
-> Jeśli wystąpienie usługi przepływu pracy jest ładowane <xref:System.Activities.Statements.Persist> w ramach transakcji, a przepływ pracy zawiera działanie, wystąpienie przepływu pracy zostanie zablokowane, dopóki nie wydłuży się limit czasu transakcji.  
+> Jeśli wystąpienie usługi przepływu pracy jest załadowane w ramach transakcji, a przepływ pracy zawiera <xref:System.Activities.Statements.Persist> działanie, wystąpienie przepływu pracy zostanie zablokowane do momentu przełączenia transakcji.  
   
 > [!IMPORTANT]
-> Za każdym razem, gdy używasz <xref:System.ServiceModel.Activities.TransactedReceiveScope> zaleca się umieścić <xref:System.ServiceModel.Activities.TransactedReceiveScope> wszystkie odbiera w przepływie pracy w działaniach.  
+> Za każdym razem, gdy jest używany, <xref:System.ServiceModel.Activities.TransactedReceiveScope> zaleca się umieszczenie wszystkich odbiorów w przepływie pracy w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> działań.  
   
 > [!IMPORTANT]
-> Podczas <xref:System.ServiceModel.Activities.TransactedReceiveScope> korzystania i wiadomości przychodzą w niewłaściwej kolejności, przepływ pracy zostanie przerwana podczas próby dostarczenia pierwszego komunikatu poza kolejnością. Należy upewnić się, że przepływ pracy jest zawsze w spójnym punkcie zatrzymania, gdy przepływ pracy jest bezczynny. Umożliwi to ponowne uruchomienie przepływu pracy z poprzedniego punktu trwałości w przypadku przerwania przepływu pracy.  
+> Gdy użycie <xref:System.ServiceModel.Activities.TransactedReceiveScope> i komunikaty docierają w niepoprawnej kolejności, przepływ pracy zostanie przerwany przy próbie dostarczenia pierwszego komunikatu poza kolejnością. Musisz się upewnić, że przepływ pracy zawsze ma spójny punkt zatrzymania, gdy przepływ pracy jest bezczynny. Umożliwi to ponowne uruchomienie przepływu pracy z poprzedniego punktu trwałości, jeśli przepływ pracy zostanie przerwany.  
   
 ### <a name="create-a-shared-library"></a>Tworzenie biblioteki udostępnionej  
   
 1. Utwórz nowe puste rozwiązanie programu Visual Studio.  
   
-2. Dodaj nowy projekt biblioteki klas o nazwie `Common`. Dodaj odwołania do następujących zestawów:  
+2. Dodaj nowy projekt biblioteki klas o nazwie `Common` . Dodaj odwołania do następujących zestawów:  
   
-    - Plik System.Activities.dll  
+    - System. Activities. dll  
   
     - System.ServiceModel.dll  
   
-    - Plik System.ServiceModel.Activities.dll  
+    - System. ServiceModel. Activities. dll  
   
     - System.Transactions.dll  
   
-3. Dodaj nową klasę `PrintTransactionInfo` wywoływaną `Common` do projektu. Ta klasa jest <xref:System.Activities.NativeActivity> pochodną i <xref:System.Activities.NativeActivity.Execute%2A> przeciąża metodę.  
+3. Dodaj nową klasę o nazwie `PrintTransactionInfo` do `Common` projektu. Ta klasa jest pochodną <xref:System.Activities.NativeActivity> i przeciążania <xref:System.Activities.NativeActivity.Execute%2A> metody.  
   
     ```csharp
     using System;  
@@ -72,140 +72,140 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
     }  
     ```  
   
-     Jest to działanie macierzyste, które wyświetla informacje o transakcji otoczenia i jest używany zarówno w przepływach pracy usługi i klienta używane w tym temacie. Skompiluj rozwiązanie, aby udostępnić to działanie w sekcji **Wspólne** **przybornika**.  
+     Jest to działanie natywne, które wyświetla informacje o otaczającej transakcji i jest używane w przepływach pracy usługi i klienta używanych w tym temacie. Skompiluj rozwiązanie, aby to działanie było dostępne w sekcji **wspólne** w **przyborniku**.  
   
 ### <a name="implement-the-workflow-service"></a>Implementowanie usługi przepływu pracy  
   
-1. Dodaj nową usługę przepływu pracy WCF, wywoływaną `WorkflowService` do `Common` projektu. Aby to zrobić, `Common` kliknij prawym przyciskiem myszy projekt, wybierz pozycję **Dodaj**, **Nowy element ...**, Wybierz przepływ **pracy** w obszarze **Zainstalowane szablony** i wybierz pozycję Usługa przepływu pracy **WCF**.  
+1. Dodaj nową usługę przepływu pracy WCF, która jest wywoływana `WorkflowService` do `Common` projektu. Aby to zrobić, kliknij `Common` projekt, wybierz pozycję **Dodaj**, **nowy element...**, wybierz pozycję **przepływ pracy** w obszarze **zainstalowane szablony** i wybierz pozycję **Usługa przepływu pracy WCF**.  
   
      ![Dodawanie usługi przepływu pracy](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
-2. Usuń ustawienia `ReceiveRequest` `SendResponse` domyślne i działania.  
+2. Usuń ustawienia domyślne `ReceiveRequest` i `SendResponse` działania.  
   
-3. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść aktywność do `Sequential Service` działania. Ustaw właściwość `"Workflow Service starting ..."` text, jak pokazano w poniższym przykładzie.  
+3. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie do `Sequential Service` działania. Ustaw właściwość Text na `"Workflow Service starting ..."` tak, jak pokazano w poniższym przykładzie.  
   
-     ! [Dodawanie działania WriteLine do działania Sekwencyjnej usługi(./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
+     ! [Dodawanie działania WriteLine do działania sekwencyjnego usługi (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
   
-4. Przeciągnij i <xref:System.ServiceModel.Activities.TransactedReceiveScope> upuść po <xref:System.Activities.Statements.WriteLine> aktywności. Działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> można znaleźć w sekcji **Wiadomości** w **przyborniku**. Działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> składa się z dwóch sekcji **Żądanie** i **Treść**. Sekcja **Żądanie** zawiera <xref:System.ServiceModel.Activities.Receive> działanie. **Treść** Sekcja zawiera działania do wykonania w ramach transakcji po odebraniu wiadomości.  
+4. Przeciągnij i upuść <xref:System.ServiceModel.Activities.TransactedReceiveScope> po <xref:System.Activities.Statements.WriteLine> działaniu. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Działanie można znaleźć w sekcji **komunikaty** w **przyborniku**. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Działanie składa się z dwóch sekcji **żądania** i **treści**. Sekcja **żądania** zawiera <xref:System.ServiceModel.Activities.Receive> działanie. Sekcja **treść** zawiera działania, które należy wykonać w ramach transakcji po odebraniu komunikatu.  
   
      ![Dodawanie działania TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. Wybierz <xref:System.ServiceModel.Activities.TransactedReceiveScope> działanie i kliknij przycisk **Zmienne.** Dodaj następujące zmienne.  
+5. Wybierz <xref:System.ServiceModel.Activities.TransactedReceiveScope> działanie, a następnie kliknij przycisk **zmienne** . Dodaj następujące zmienne.  
   
-     ![Dodawanie zmiennych do skrytu TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
+     ![Dodawanie zmiennych do TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
-    > Zmienną danych, która jest tam domyślnie. Można również użyć istniejącej zmiennej dojścia.  
+    > Istnieje możliwość usunięcia zmiennej danych, która jest domyślnie dostępna. Możesz również użyć istniejącej zmiennej dojścia.  
   
-6. Przeciągnij i <xref:System.ServiceModel.Activities.Receive> upuść działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> w sekcji **Żądanie** działania. Ustaw następujące właściwości:  
+6. Przeciągnij i upuść <xref:System.ServiceModel.Activities.Receive> działanie w sekcji **żądanie** <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Ustaw następujące właściwości:  
   
     |Właściwość|Wartość|  
     |--------------|-----------|  
-    |Cancreateinstance|Prawda (zaznacz pole wyboru)|  
-    |OperationName|PoczątekPróby|  
-    |Nazwa kontraktu servicecontract|ITransactionPróbuj|  
+    |CanCreateInstance|True (zaznacz pole wyboru)|  
+    |OperationName|StartSample|  
+    |Samych ServiceContractName|ITransactionSample|  
   
      Przepływ pracy powinien wyglądać następująco:  
   
-     ![Dodawanie działania odbierania](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
+     ![Dodawanie działania Receive](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. Kliknij **łącze Definiuj...** w <xref:System.ServiceModel.Activities.Receive> działaniu i wykonuj następujące ustawienia:  
+7. Kliknij link **Definiuj...** w <xref:System.ServiceModel.Activities.Receive> działaniu i wprowadź następujące ustawienia:  
   
-     ![Ustawianie ustawień komunikatu dla działania Odbierania](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
+     ![Ustawianie ustawień komunikatów dla działania Odbierz](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
-8. Przeciągnij i <xref:System.Activities.Statements.Sequence> upuść aktywność <xref:System.ServiceModel.Activities.TransactedReceiveScope>do sekcji Treść . W <xref:System.Activities.Statements.Sequence> ramach działania przeciągnij i upuść dwa <xref:System.Activities.Statements.WriteLine> działania i ustaw <xref:System.Activities.Statements.WriteLine.Text%2A> właściwości, jak pokazano w poniższej tabeli.  
+8. Przeciągnij i upuść <xref:System.Activities.Statements.Sequence> działanie do sekcji treść <xref:System.ServiceModel.Activities.TransactedReceiveScope> . W ramach <xref:System.Activities.Statements.Sequence> działania przeciągnij i upuść dwa <xref:System.Activities.Statements.WriteLine> działania, a następnie ustaw <xref:System.Activities.Statements.WriteLine.Text%2A> właściwości, jak pokazano w poniższej tabeli.  
   
     |Działanie|Wartość|  
     |--------------|-----------|  
-    |1. WriteLine|"Usługa: Odbiór zakończony"|  
-    |2. WriteLine|"Usługa: Odebrane = " + requestMessage|  
+    |1. WriteLine|"Usługa: odbieranie ukończone"|  
+    |Druga WriteLine|"Usługa: Received =" + requestMessage|  
   
      Przepływ pracy powinien teraz wyglądać następująco:  
   
-     ![Sekwencja po dodaniu działań WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
+     ![Sekwencja po dodaniu operacji WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. Przeciągnij i `PrintTransactionInfo` upuść <xref:System.Activities.Statements.WriteLine> aktywność po <xref:System.ServiceModel.Activities.TransactedReceiveScope> drugim działaniu w **treści** w działaniu.  
+9. Przeciągnij i upuść `PrintTransactionInfo` działanie po drugim <xref:System.Activities.Statements.WriteLine> działaniu w **treści** <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania.  
   
      ![Sekwencja po dodaniu PrintTransactionInfo](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
-10. Przeciągnij i <xref:System.Activities.Statements.Assign> upuść działanie po `PrintTransactionInfo` działaniu i ustaw jej właściwości zgodnie z poniższą tabelą.  
+10. Przeciągnij i upuść <xref:System.Activities.Statements.Assign> działanie po `PrintTransactionInfo` działaniu i ustaw jego właściwości zgodnie z poniższą tabelą.  
   
     |Właściwość|Wartość|  
     |--------------|-----------|  
     |Do|replyMessage|  
-    |Wartość|"Usługa: Wysyłanie odpowiedzi".|  
+    |Wartość|"Usługa: wysyłanie odpowiedzi".|  
   
-11. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie po <xref:System.Activities.Statements.Assign> działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość na "Usługa: Rozpocznij odpowiedź".  
+11. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie po <xref:System.Activities.Statements.Assign> działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na wartość "Service: BEGIN Reply".  
   
      Przepływ pracy powinien teraz wyglądać następująco:  
   
-     ![Po dodaniu Przypisz i WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
+     ![Po dodaniu elementu Assign i WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. Kliknij prawym <xref:System.ServiceModel.Activities.Receive> przyciskiem myszy działanie i wybierz polecenie **Utwórz wyślijReply** i wklej je po ostatnim <xref:System.Activities.Statements.WriteLine> działaniu. Kliknij **łącze Definiuj...** w `SendReplyToReceive` działaniu i wykonuj następujące ustawienia.  
+12. Kliknij prawym przyciskiem myszy <xref:System.ServiceModel.Activities.Receive> działanie i wybierz polecenie **Utwórz SendReply** i wklej je po ostatnim <xref:System.Activities.Statements.WriteLine> działaniu. Kliknij link **Definiuj...** w `SendReplyToReceive` działaniu, a następnie wprowadź następujące ustawienia.  
   
-     ![Ustawienia wiadomości odpowiedzi](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
+     ![Ustawienia komunikatu odpowiedzi](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie po `SendReplyToReceive` <xref:System.Activities.Statements.WriteLine.Text%2A> działaniu i ustaw jego właściwość na "Usługa: Odpowiedź wysłana".  
+13. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie po `SendReplyToReceive` działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na wartość "Usługa: odpowiedź wysłana".  
   
-14. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie u dołu <xref:System.Activities.Statements.WriteLine.Text%2A> przepływu pracy i ustaw jego właściwość na "Service: Workflow ends, press ENTER to exit".  
+14. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie u dołu przepływu pracy i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na wartość "Usługa: przepływ pracy Zakończ, naciśnij klawisz ENTER, aby wyjść".  
   
      Ukończony przepływ pracy usługi powinien wyglądać następująco:  
   
-     ![Ukończ przepływ pracy serwisu](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
+     ![Pełny przepływ pracy usługi](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
   
-### <a name="implement-the-workflow-client"></a>Zaimplementowanie klienta przepływu pracy  
+### <a name="implement-the-workflow-client"></a>Implementowanie klienta przepływu pracy  
   
-1. Dodaj nową aplikację przepływu pracy WCF, wywoływaną `WorkflowClient` `Common` do projektu. Aby to zrobić, `Common` kliknij prawym przyciskiem myszy projekt, wybierz pozycję **Dodaj**, **Nowy element ...**, Wybierz przepływ **pracy** w obszarze **Zainstalowane szablony** i wybierz **pozycję Aktywność**.  
+1. Dodaj nową aplikację przepływu pracy WCF, która jest wywoływana `WorkflowClient` do `Common` projektu. Aby to zrobić, kliknij `Common` projekt, wybierz pozycję **Dodaj**, **nowy element...**, wybierz pozycję **przepływ pracy** w obszarze **zainstalowane szablony** i wybierz pozycję **działanie**.  
   
-     ![Dodawanie projektu działania](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
+     ![Dodaj projekt działania](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
-2. Przeciągnij i <xref:System.Activities.Statements.Sequence> upuść aktywność na powierzchnię projektową.  
+2. Przeciągnij i upuść <xref:System.Activities.Statements.Sequence> działanie na powierzchnię projektu.  
   
-3. W <xref:System.Activities.Statements.Sequence> obrębie działania przeciągnij i <xref:System.Activities.Statements.WriteLine> <xref:System.Activities.Statements.WriteLine.Text%2A> upuść działanie i ustaw jego właściwość na `"Client: Workflow starting"`. Przepływ pracy powinien teraz wyglądać następująco:  
+3. W ramach <xref:System.Activities.Statements.Sequence> działania przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na `"Client: Workflow starting"` . Przepływ pracy powinien teraz wyglądać następująco:  
   
      ![Dodawanie działania WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-activity.jpg)  
   
-4. Przeciągnij i <xref:System.Activities.Statements.TransactionScope> upuść aktywność po działaniu. <xref:System.Activities.Statements.WriteLine>  Wybierz <xref:System.Activities.Statements.TransactionScope> działanie, kliknij przycisk Zmienne i dodaj następujące zmienne.  
+4. Przeciągnij i upuść <xref:System.Activities.Statements.TransactionScope> działanie po <xref:System.Activities.Statements.WriteLine> działaniu.  Wybierz <xref:System.Activities.Statements.TransactionScope> działanie, kliknij przycisk zmienne i Dodaj następujące zmienne.  
   
-     ![Dodawanie zmiennych do transactionscope](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
+     ![Dodaj zmienne do elementu TransactionScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
   
-5. Przeciągnij i <xref:System.Activities.Statements.Sequence> upuść działanie <xref:System.Activities.Statements.TransactionScope> do treści działania.  
+5. Przeciągnij i upuść <xref:System.Activities.Statements.Sequence> działanie do treści <xref:System.Activities.Statements.TransactionScope> działania.  
   
-6. Przeciąganie `PrintTransactionInfo` i upuszczanie aktywności w obrębie<xref:System.Activities.Statements.Sequence>  
+6. Przeciągnij i upuść `PrintTransactionInfo` działanie w ramach<xref:System.Activities.Statements.Sequence>  
   
-7. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie po `PrintTransactionInfo` działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość na "Klient: Początek wysyłania". Przepływ pracy powinien teraz wyglądać następująco:  
+7. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie po `PrintTransactionInfo` działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na wartość "klient: Rozpoczynanie wysyłania". Przepływ pracy powinien teraz wyglądać następująco:  
   
-     ![Dodawanie klienta: rozpoczynanie wysyłania działań](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![Dodawanie klienta: Rozpoczynanie wysyłania działań](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
-8. Przeciągnij i <xref:System.ServiceModel.Activities.Send> upuść działanie po <xref:System.Activities.Statements.Assign> działaniu i ustaw następujące właściwości:  
+8. Przeciągnij i upuść <xref:System.ServiceModel.Activities.Send> działanie po <xref:System.Activities.Statements.Assign> działaniu i ustaw następujące właściwości:  
   
     |Właściwość|Wartość|  
     |--------------|-----------|  
-    |Nazwa konfiguracji punktu końcowego|punkt usługi przepływu pracy|  
-    |OperationName|PoczątekPróby|  
-    |Nazwa kontraktu servicecontract|ITransactionPróbuj|  
+    |EndpointConfigurationName|workflowServiceEndpoint|  
+    |OperationName|StartSample|  
+    |Samych ServiceContractName|ITransactionSample|  
   
      Przepływ pracy powinien teraz wyglądać następująco:  
   
-     ![Ustawianie właściwości działania Wyślij](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
+     ![Ustawianie właściwości działania wysyłania](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. Kliknij **łącze Definiuj...** i wykonuj następujące ustawienia:  
+9. Kliknij link **Definiuj...** i wprowadź następujące ustawienia:  
   
-     ![Ustawienia wiadomości o działaniu](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
+     ![Ustawienia wysyłania komunikatu dotyczącego działania](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. Kliknij prawym <xref:System.ServiceModel.Activities.Send> przyciskiem myszy aktywność i wybierz polecenie **Utwórz receivereply**. Działanie <xref:System.ServiceModel.Activities.ReceiveReply> zostanie automatycznie umieszczone po <xref:System.ServiceModel.Activities.Send> zakończeniu działania.  
+10. Kliknij prawym przyciskiem myszy <xref:System.ServiceModel.Activities.Send> działanie i wybierz pozycję **Utwórz ReceiveReply**. <xref:System.ServiceModel.Activities.ReceiveReply>Działanie zostanie automatycznie umieszczone po <xref:System.ServiceModel.Activities.Send> działaniu.  
   
-11. Kliknij przycisk Definiuj... łącze do działania ReceiveReplyForSend i wykonuj następujące ustawienia:  
+11. Kliknij przycisk Definiuj... Połącz się z działaniem ReceiveReplyForSend i wprowadź następujące ustawienia:  
   
      ![Ustawianie ustawień komunikatu ReceiveForSend](./media/flowing-transactions-into-and-out-of-workflow-services/client-reply-message-settings.jpg)  
   
-12. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść <xref:System.ServiceModel.Activities.ReceiveReply> działanie między <xref:System.Activities.Statements.WriteLine.Text%2A> <xref:System.ServiceModel.Activities.Send> i działania i ustawić jego właściwość na "Klient: Wyślij zakończone."  
+12. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie między <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> działaniami i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na wartość "Client: Send Complete".  
   
-13. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie po <xref:System.ServiceModel.Activities.ReceiveReply> działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość na "Strona klienta: Odpowiedź odebrana = " + replyMessage  
+13. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie po <xref:System.ServiceModel.Activities.ReceiveReply> działaniu i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na "po stronie klienta: odebrano odpowiedź =" + ReplyMessage  
   
-14. Przeciągnij i `PrintTransactionInfo` upuść aktywność po działaniu. <xref:System.Activities.Statements.WriteLine>  
+14. Przeciągnij i upuść `PrintTransactionInfo` działanie po <xref:System.Activities.Statements.WriteLine> działaniu.  
   
-15. Przeciągnij i <xref:System.Activities.Statements.WriteLine> upuść działanie na końcu <xref:System.Activities.Statements.WriteLine.Text%2A> przepływu pracy i ustaw jego właściwość na "Kończy się przepływ pracy klienta". Ukończony przepływ pracy klienta powinien wyglądać jak na poniższym diagramie.  
+15. Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie na końcu przepływu pracy i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> Właściwość na "zakończenie przepływu pracy klienta". Ukończony przepływ pracy klienta powinien wyglądać podobnie do poniższego diagramu.  
   
      ![Ukończony przepływ pracy klienta](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
@@ -213,13 +213,13 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 ### <a name="create-the-service-application"></a>Tworzenie aplikacji usługi  
   
-1. Dodaj nowy projekt aplikacji `Service` konsoli wywoływany do rozwiązania. Dodaj odwołania do następujących zestawów:  
+1. Dodaj nowy projekt aplikacji konsoli o nazwie `Service` do rozwiązania. Dodaj odwołania do następujących zestawów:  
   
-    1. Plik System.Activities.dll  
+    1. System. Activities. dll  
   
     2. System.ServiceModel.dll  
   
-    3. Plik System.ServiceModel.Activities.dll  
+    3. System. ServiceModel. Activities. dll  
   
 2. Otwórz wygenerowany plik Program.cs i następujący kod:  
   
@@ -241,7 +241,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
           }  
     ```  
   
-3. Dodaj następujący plik app.config do projektu.  
+3. Dodaj do projektu następujący plik App. config.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -259,9 +259,9 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 ### <a name="create-the-client-application"></a>Tworzenie aplikacji klienckiej  
   
-1. Dodaj nowy projekt aplikacji `Client` konsoli wywoływany do rozwiązania. Dodaj odwołanie do pliku System.Activities.dll.  
+1. Dodaj nowy projekt aplikacji konsoli o nazwie `Client` do rozwiązania. Dodaj odwołanie do elementu System. Activities. dll.  
   
-2. Otwórz plik program.cs i dodaj następujący kod.  
+2. Otwórz plik program.cs i Dodaj następujący kod.  
   
     ```csharp
     class Program  
@@ -313,5 +313,5 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcjach.  Aby oper
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Omówienie transakcji WCF (Windows Communication Foundation)](../../../../docs/framework/wcf/feature-details/transactions-overview.md)
+- [Usługi przepływu pracy](workflow-services.md)
+- [Omówienie transakcji WCF (Windows Communication Foundation)](transactions-overview.md)

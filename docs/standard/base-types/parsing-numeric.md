@@ -1,5 +1,6 @@
 ---
 title: Analizowanie ciągów liczbowych w programie .NET
+description: Dowiedz się więcej na temat analizowania ciągów liczbowych w programie .NET. Dowiedz się, jak analizować przy użyciu dostawców formatów, wyliczenia NumberStyles wartości wyliczenia i cyfry Unicode.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589542"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizowanie ciągów liczbowych w sieci
 Wszystkie typy liczbowe mają dwie metody statycznej analizy `Parse` i `TryParse` , których można użyć do przekonwertowania ciągu reprezentującego liczbę do typu liczbowego. Te metody umożliwiają analizowanie ciągów, które zostały utworzone za pomocą ciągów formatu udokumentowanych w [standardowych ciągach formatu liczbowego](standard-numeric-format-strings.md) i [niestandardowych ciągów formatu liczbowego](custom-numeric-format-strings.md). Domyślnie `Parse` `TryParse` metody i mogą pomyślnie konwertować ciągi, które zawierają cyfry dziesiętne tylko do wartości całkowitych. Mogą pomyślnie konwertować ciągi, które zawierają cyfry całkowite i ułamkowe dziesiętne, separatory grup i separator dziesiętny do wartości zmiennoprzecinkowych. `Parse`Metoda zgłasza wyjątek, jeśli operacja nie powiedzie się, a `TryParse` Metoda zwraca `false` .  
@@ -81,7 +82,7 @@ Wszystkie typy liczbowe mają dwie metody statycznej analizy `Parse` i `TryParse
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Globalization.NumberStyles>
 - [Analiza składniowa ciągów](parsing-strings.md)

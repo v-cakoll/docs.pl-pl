@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku'
+description: Zobacz przykład sposobu pisania równoległej pętli for w programie .NET, która używa zmiennych lokalnych wątków, które przechowują i pobierają stan w poszczególnych zadaniach w pętli.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599792"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku
 Ten przykład pokazuje, jak używać zmiennych lokalnych wątku do przechowywania i pobierania stanu w każdym osobnym zadaniu, które jest tworzone przez <xref:System.Threading.Tasks.Parallel.For%2A> pętlę. Przy użyciu danych z wątków lokalnych można uniknąć obciążenia synchronizacji dużej liczby dostępu do stanu udostępnionego. Zamiast zapisywać do zasobu udostępnionego dla każdej iteracji, obliczenia i przechowywanie wartości będą wykonywane do momentu ukończenia wszystkich iteracji dla zadania. Następnie można napisać ostatni wynik do zasobu udostępnionego lub przekazać go do innej metody.  
@@ -42,7 +43,7 @@ Function() new MyClass()
   
  Aby uzyskać więcej informacji na temat używania wyrażeń lambda, zobacz [lambda Expressions in PLINQ and TPL](lambda-expressions-in-plinq-and-tpl.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległość danych](data-parallelism-task-parallel-library.md)
 - [Programowanie równoległe](index.md)

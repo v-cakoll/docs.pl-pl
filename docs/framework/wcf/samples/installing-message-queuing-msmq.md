@@ -2,12 +2,12 @@
 title: Instalowanie usługi kolejkowania komunikatów (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921103"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592297"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalowanie usługi kolejkowania komunikatów (MSMQ)
 W poniższych procedurach pokazano, jak zainstalować usługę kolejkowania komunikatów 4,0 i kolejkowanie komunikatów 3,0.  
@@ -62,6 +62,6 @@ W poniższych procedurach pokazano, jak zainstalować usługę kolejkowania komu
   
 6. Jeśli zostanie wyświetlony monit o ponowne uruchomienie komputera, kliknij przycisk **OK** , aby zakończyć instalację.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje dotyczące konfiguracji](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Instrukcje dotyczące konfiguracji](set-up-instructions.md)

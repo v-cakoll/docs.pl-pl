@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: fbcc93826ebe2857345823176ddc0054b7e62eea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 66df6a1d7c2df17e79925490644891c0a536b1cd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716104"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585496"
 ---
 # <a name="basic-data-contract"></a>Podstawowy kontrakt danych
 
-Ten przykład ilustruje sposób implementacji kontraktu danych. Kontrakty danych umożliwiają przekazywanie danych strukturalnych do i z usług. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) ale używa liczb złożonych zamiast podstawowych typów liczbowych.
+Ten przykład ilustruje sposób implementacji kontraktu danych. Kontrakty danych umożliwiają przekazywanie danych strukturalnych do i z usług. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) ale używa liczb złożonych zamiast podstawowych typów liczbowych.
 
 W tym przykładzie usługa jest hostowana przez Internet Information Services (IIS), a klient jest aplikacją konsolową (. exe).
 
@@ -38,7 +38,7 @@ public interface ICalculator
 }
 ```
 
- Atrybuty <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> zostały zastosowane do definicji klasy `ComplexNumber`, aby wskazać, które pola klasy mogą być przesyłane przez połączenie między klientem a usługą, jak pokazano w poniższym przykładowym kodzie.
+ <xref:System.Runtime.Serialization.DataContractAttribute>Atrybuty i zostały <xref:System.Runtime.Serialization.DataMemberAttribute> zastosowane do definicji `ComplexNumber` klasy, aby wskazać, które pola klasy mogą być przesyłane przez połączenie między klientem a usługą, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -57,7 +57,7 @@ public class ComplexNumber
 }
 ```
 
-Implementacja usługi oblicza i zwraca odpowiedni wynik, akceptując i zwracając numery typu `ComplexNumber`.
+Implementacja usługi oblicza i zwraca odpowiedni wynik, akceptując i zwracając cyfry `ComplexNumber` typu.
 
 ```csharp
 // This is the service class that implements the service contract.
@@ -96,7 +96,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Implementacja klienta używa również liczb zespolonych. Kontrakt usługi i kontrakt dotyczący danych są zdefiniowane w pliku źródłowym generatedClient.cs, który jest generowany przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi.
+Implementacja klienta używa również liczb zespolonych. Kontrakt usługi i kontrakt dotyczący danych są zdefiniowane w pliku źródłowym generatedClient.cs, który jest generowany przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi.
 
 ```csharp
 // Create a client.
@@ -133,17 +133,17 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`

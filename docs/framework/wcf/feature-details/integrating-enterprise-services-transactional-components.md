@@ -2,27 +2,27 @@
 title: Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596854"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 
-Windows Communication Foundation (WCF) zapewnia automatyczny mechanizm integracji z usługami dla przedsiębiorstw (patrz [Integracja z aplikacjami COM+).](integrating-with-com-plus-applications.md) Jednak można chcieć elastyczności do tworzenia usług, które wewnętrznie używają składników transakcyjnych hostowanych w ramach usług Enterprise Services. Ponieważ funkcja Transakcje WCF jest <xref:System.Transactions> zbudowana na infrastrukturze, proces integracji usług dla przedsiębiorstw z WCF jest identyczny z procesem określania interoperacyjności między usługami <xref:System.Transactions> dla przedsiębiorstw i usługami dla przedsiębiorstw, zgodnie z opisem w obszarze [Interoperacyjność z usługami dla przedsiębiorstw i transakcjami COM+.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))  
+Windows Communication Foundation (WCF) zapewnia automatyczny mechanizm integracji z usługami przedsiębiorstwa (zobacz [Integrowanie z aplikacjami com+](integrating-with-com-plus-applications.md)). Można jednak zapewnić elastyczność w programowaniu usług, które wewnętrznie korzystają ze składników transakcyjnych hostowanych w ramach usług przedsiębiorstwa. Ze względu na to, że funkcja transakcji WCF jest oparta na <xref:System.Transactions> infrastrukturze, proces integrowania usług przedsiębiorstwa z programem WCF jest taki sam jak w przypadku określania współdziałania między <xref:System.Transactions> usługami i usług przedsiębiorstwa, jak opisano w obszarze [współdziałanie z usługami przedsiębiorstwa i transakcjami modelu COM+](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85)).  
   
- Aby zapewnić żądany poziom współdziałania między przychodzącą przebytą transakcją a <xref:System.Transactions.TransactionScope> transakcją kontekstu COM+, implementacja usługi musi utworzyć wystąpienie i użyć odpowiedniej wartości z wyliczenia. <xref:System.Transactions.EnterpriseServicesInteropOption>  
+ Aby zapewnić żądany poziom współdziałania między przychodzącą transakcję i transakcją kontekstu modelu COM+, implementacja usługi musi utworzyć <xref:System.Transactions.TransactionScope> wystąpienie i użyć odpowiedniej wartości z <xref:System.Transactions.EnterpriseServicesInteropOption> wyliczenia.  
   
-## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integracja usług dla przedsiębiorstw z operacją serwisową  
- Poniższy kod demonstruje operację z dozwolonym przepływem <xref:System.Transactions.TransactionScope> <xref:System.Transactions.EnterpriseServicesInteropOption.Full> transakcji, która tworzy z opcją. W tym scenariuszu obowiązują następujące warunki:  
+## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integrowanie usług przedsiębiorstwa z operacją usługi  
+ Poniższy kod ilustruje operację z dozwolonym przepływem transakcji, która tworzy <xref:System.Transactions.TransactionScope> za pomocą <xref:System.Transactions.EnterpriseServicesInteropOption.Full> opcji. W tym scenariuszu mają zastosowanie następujące warunki:  
   
-- Jeśli klient przepływa transakcję, operacja, w tym wywołanie składnika Usługi dla przedsiębiorstw, jest wykonywana w zakresie tej transakcji. Using <xref:System.Transactions.EnterpriseServicesInteropOption.Full> zapewnia, że transakcja jest <xref:System.EnterpriseServices> synchronizowana z kontekstem, <xref:System.Transactions> co <xref:System.EnterpriseServices> oznacza, że transakcja otoczenia dla i jest taka sama.  
+- Jeśli klient przeprowadzi transakcję, operacja, łącznie z wywołaniem składnika usług przedsiębiorstwa, jest wykonywana w zakresie tej transakcji. Użycie <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że transakcja jest synchronizowana z <xref:System.EnterpriseServices> kontekstem, co oznacza, że otoczenia transakcja dla <xref:System.Transactions> i <xref:System.EnterpriseServices> jest taka sama.  
   
-- Jeśli klient nie przepływa transakcji, ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> `true` tworzy nowy zakres transakcji dla operacji. Podobnie przy <xref:System.Transactions.EnterpriseServicesInteropOption.Full> użyciu zapewnia, że operacja transakcji jest taka sama <xref:System.EnterpriseServices> jak transakcja używana w kontekście składnika.  
+- Jeśli klient nie tworzy przepływu transakcji, ustawienie powoduje <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> `true` utworzenie nowego zakresu transakcji dla operacji. Podobnie użycie <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że transakcja operacji jest taka sama jak transakcja używana wewnątrz <xref:System.EnterpriseServices> kontekstu składnika.  
   
- Wszelkie wywołania dodatkowe metody również występują w zakresie transakcji tej samej operacji.  
+ Wszelkie dodatkowe wywołania metod są również wykonywane w ramach transakcji w ramach tej samej operacji.  
   
 ```csharp
 [ServiceContract()]  
@@ -60,10 +60,10 @@ public class CustomerService : ICustomerServiceContract
 }  
 ```  
   
- Jeśli synchronizacja nie jest wymagana między bieżącą transakcją operacji a wywołaniem <xref:System.Transactions.EnterpriseServicesInteropOption.None> transakcyjnych składników <xref:System.Transactions.TransactionScope> usług Enterprise Services, użyj tej opcji podczas tworzenia wystąpienia wystąpienia wystąpienia.  
+ Jeśli nie jest wymagana żadna synchronizacja między bieżącą transakcją operacji i wywołaniami składników transakcyjnych usług przedsiębiorstwa, użyj <xref:System.Transactions.EnterpriseServicesInteropOption.None> opcji podczas tworzenia wystąpienia <xref:System.Transactions.TransactionScope> wystąpienia.  
   
-## <a name="integrating-enterprise-services-with-a-client"></a>Integracja usług dla przedsiębiorstw z klientem  
- Poniższy kod demonstruje <xref:System.Transactions.TransactionScope> kod klienta <xref:System.Transactions.EnterpriseServicesInteropOption.Full> przy użyciu wystąpienia z ustawieniem. W tym scenariuszu wywołania operacji usługi, które obsługują przepływ transakcji występują w zakresie tej samej transakcji, jak wywołania składników usług Dla przedsiębiorstwa.  
+## <a name="integrating-enterprise-services-with-a-client"></a>Integrowanie usług przedsiębiorstwa z klientem  
+ Poniższy kod ilustruje kod klienta przy użyciu <xref:System.Transactions.TransactionScope> wystąpienia z <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ustawieniem. W tym scenariuszu wywołania operacji usługi obsługujące przepływ transakcji są wykonywane w ramach tej samej transakcji co wywołania składników usług przedsiębiorstwa.  
   
 ```csharp
 static void Main()  
@@ -95,5 +95,5 @@ static void Main()
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Integracja z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Współdziałanie z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [Integrowanie z aplikacjami COM+](integrating-with-com-plus-applications.md)
+- [Współdziałanie z aplikacjami COM](integrating-with-com-applications.md)

@@ -6,40 +6,40 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589854"
 ---
 # <a name="wcf-web-http-programming-model"></a>Model programowania protokołu HTTP sieci Web w programie WCF
-Modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF) umożliwia deweloperom ujawnia operacji usługi WCF do punktów końcowych z protokołem SOAP. Tematy w tej sekcji Sprawdź, czy funkcja szczegółowo.  
+Model programowania HTTP sieci Web w programie Windows Communication Foundation (WCF) umożliwia deweloperom udostępnianie operacji usługi WCF dla punktów końcowych innych niż SOAP. Tematy w tej sekcji szczegółowo przeanalizują funkcję.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Omówienie modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF).  
+ [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](wcf-web-http-programming-model-overview.md)  
+ Zawiera omówienie modelu programowania HTTP sieci Web w programie Windows Communication Foundation (WCF).  
   
- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Omówienie modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF) oraz jej działania.  
+ [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](wcf-web-http-programming-object-model.md)  
+ Omawia model programowania HTTP sieci Web w technologii Windows Communication Foundation (WCF) oraz sposób jego działania.  
   
- [Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- Opisuje sposób zapisania podstawowe usługi, która udostępnia punkt końcowy z systemem innym niż SOAP.  
+ [Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF](how-to-create-a-basic-wcf-web-http-service.md)  
+ Opisuje, jak napisać podstawową usługę, która uwidacznia punkt końcowy spoza protokołu SOAP.  
   
- [Instrukcje: ujawnianie kontraktu klientom internetowym i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
- Opisuje sposób zapisania podstawowej usługi, który ujawnia ten sam kontrakt klientów z systemem innym niż SOAP i SOAP.  
+ [Instrukcje: Ujawnianie kontraktu klientom sieci Web i SOAP](how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ Opisuje, jak napisać podstawową usługę, która uwidacznia ten sam kontrakt dla klientów SOAP i innych niż SOAP.  
   
- [Klasy UriTemplate i UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- Zawiera opis sposobu kontrolowania identyfikatory URI, używając <xref:System.UriTemplate> i <xref:System.UriTemplateTable>.  
+ [Klasy UriTemplate i UriTemplateTable](uritemplate-and-uritemplatetable.md)  
+ Opisuje sposób kontrolowania identyfikatorów URI przy użyciu <xref:System.UriTemplate> i <xref:System.UriTemplateTable> .  
   
- [Obsługa buforowania dla opartych na protokole HTTP usług internetowych programu WCF](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- Opisuje sposób określenia zachowanie buforowania dla usługi WCF Web HTTP.  
+ [Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF](caching-support-for-wcf-web-http-services.md)  
+ Opisuje sposób określania zachowania pamięci podręcznej dla usługi HTTP sieci Web w programie WCF.  
   
- [Formatowanie kodu HTTP dla sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- Opisuje sposób określenia format odpowiedzi z usługi WCF Web HTTP.  
+ [Formatowanie kodu HTTP dla sieci Web w programie WCF](wcf-web-http-formatting.md)  
+ Opisuje sposób określania formatu odpowiedzi z usługi HTTP sieci Web w programie WCF.  
   
- [Obsługa błędów protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- Opisuje sposób zwracania błędów klientów sieci Web WCF, w tym dane o błędach zdefiniowane przez użytkownika dodatkowe i kodów stanu HTTP.  
+ [Obsługa błędów protokołu HTTP sieci Web w programie WCF](wcf-web-http-error-handling.md)  
+ Zawiera opis sposobu zwracania błędów do klientów sieci Web WCF, w tym kodów stanu HTTP i dodatkowych danych o błędach zdefiniowanych przez użytkownika.  
   
- [Wywoływanie usługi typu REST z poziomu usługi WCF](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- Zawiera opis sposobu wywoływania usługi typu REST z wewnątrz usługi WCF.
+ [Wywoływanie usługi typu REST z poziomu usługi WCF](calling-a-rest-style-service-from-a-wcf-service.md)  
+ Opisuje sposób wywoływania usługi w stylu REST z poziomu usługi WCF.

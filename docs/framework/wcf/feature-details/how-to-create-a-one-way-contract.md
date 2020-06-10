@@ -1,41 +1,41 @@
 ---
-title: 'Instrukcje: tworzenie kontraktu jednokierunkowego'
+title: 'Instrukcje: Tworzenie kontraktu jednokierunkowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c056c9b56ed1245290cd66833cc6565f517b66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593454"
 ---
-# <a name="how-to-create-a-one-way-contract"></a>Instrukcje: tworzenie kontraktu jednokierunkowego
-W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu jednokierunkowego. Takie metody wywoływanie operacji usługi Windows Communication Foundation (WCF) od klienta, ale nie oczekuje na odpowiedź. Ten typ kontraktu można, na przykład do publikowania liczbę subskrybentów powiadomień. Tworząc kontraktu dwukierunkowego (dwukierunkowej), umożliwiająca klientów i serwerów komunikować się ze sobą niezależnie, aby albo może zainicjować wywołania do innego, mogą używać kontraktów jednokierunkowych. Umożliwia to w szczególności serwera do wykonywania jednokierunkowe wywołań do klienta, który klient można traktować jako zdarzenia. Aby uzyskać szczegółowe informacje na temat określania metody jednokierunkowe zobacz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości i <xref:System.ServiceModel.OperationContractAttribute> klasy.  
+# <a name="how-to-create-a-one-way-contract"></a>Instrukcje: Tworzenie kontraktu jednokierunkowego
+W tym temacie przedstawiono podstawowe kroki tworzenia metod, które korzystają z kontraktu jednokierunkowego. Takie metody wywołują operacje w usłudze Windows Communication Foundation (WCF) z klienta, ale nie oczekują odpowiedzi. Tego typu kontraktu można użyć na przykład w celu opublikowania powiadomień dla wielu subskrybentów. Kontrakty jednokierunkowe można także używać podczas tworzenia dwukierunkowego kontraktu, który umożliwia klientom i serwerom komunikowanie się ze sobą niezależnie, tak aby można było inicjować wywołania do drugiego. Może to umożliwić, w szczególności serwerowi wykonywanie wywołań jednokierunkowych do klienta, które klient może traktować jako zdarzenia. Aby uzyskać szczegółowe informacje na temat określania metod jednokierunkowych, zobacz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Właściwość i <xref:System.ServiceModel.OperationContractAttribute> klasę.  
   
- Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej kontrakt dupleksowy, zobacz [jak: Uzyskiwanie dostępu do usług za pomocą jednokierunkowego i kontraktów "żądanie odpowiedź"](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Przykładowy pracy [jednokierunkowe](../../../../docs/framework/wcf/samples/one-way.md) próbki.  
+ Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej dla kontraktu dupleksowego, zobacz [jak: dostęp do usług za pomocą kontraktów jednokierunkowych i odpowiedzi na żądanie](how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Aby zapoznać się z przykładem roboczym, zobacz przykład [jednokierunkowe](../samples/one-way.md) .  
   
-### <a name="to-create-a-one-way-contract"></a>Tworzenie kontraktu jednokierunkowego  
+### <a name="to-create-a-one-way-contract"></a>Aby utworzyć kontrakt jednokierunkowy  
   
-1. Tworzenie kontraktu usługi, stosując <xref:System.ServiceModel.ServiceContractAttribute> klasy do interfejsu, który definiuje metody jest zaimplementowanie usługi.  
+1. Utwórz kontrakt usługi przez zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> klasy do interfejsu, który definiuje metody do wdrożenia przez usługę.  
   
-2. Wywoływane przez zastosowanie wskazują, które metody w interfejsie klienta można <xref:System.ServiceModel.OperationContractAttribute> klasy do nich.  
+2. Wskaż, które metody interfejsu klient może wywołać, stosując <xref:System.ServiceModel.OperationContractAttribute> do nich klasę.  
   
-3. Wyznaczyć operacje, które musi zawierać żadnych danych wyjściowych (nie zwraca wartości i poza nie lub parametry ref) jak jednokierunkowe, ustawiając <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwość `true`. Należy pamiętać, że operacje, wykonać <xref:System.ServiceModel.OperationContractAttribute> klasy spełnia kontraktu "żądanie-odpowiedź" Domyślnie, ponieważ <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwość `false` domyślnie. Dlatego należy jawnie określić wartość właściwości atrybutu jako `true` chcącym kontraktu jednokierunkowego dla metody.  
+3. Wyznaczanie operacji, które nie mogą zawierać danych wyjściowych (brak wartości zwracanej ani parametrów out lub ref) jako jednokierunkowe przez ustawienie <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości na `true` . Należy zauważyć, że operacje, które przenoszą <xref:System.ServiceModel.OperationContractAttribute> klasę, domyślnie spełniają kontrakt żądanie-odpowiedź, ponieważ <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Właściwość jest `false` domyślnie. Dlatego musisz jawnie określić wartość właściwości Attribute, `true` Jeśli chcesz, aby kontrakt jednokierunkowy dla metody został określony.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod definiuje kontrakt dla usługi, które są dostępne różne metody jednokierunkowe. Wszystkie metody mają jednokierunkowe umowy, z wyjątkiem `Equals`, którego wartość domyślna to "żądanie-odpowiedź" i zwraca wynik.  
+ Poniższy przykład kodu definiuje kontrakt dla usługi, która zawiera kilka jednokierunkowych metod. Wszystkie metody mają jednokierunkowe kontrakty, z wyjątkiem `Equals` , które są domyślne do żądania-odpowiedzi i zwracają wynik.  
   
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Projektowanie i implementowanie usług](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Instrukcje: Definiowanie kontraktu usługi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Sesja](../../../../docs/framework/wcf/samples/session.md)
-- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Projektowanie i implementowanie usług](../designing-and-implementing-services.md)
+- [Instrukcje: definiowanie kontraktu usługi](../how-to-define-a-wcf-service-contract.md)
+- [Sesja](../samples/session.md)
+- [Instrukcje: tworzenie kontraktu dwukierunkowego](how-to-create-a-duplex-contract.md)

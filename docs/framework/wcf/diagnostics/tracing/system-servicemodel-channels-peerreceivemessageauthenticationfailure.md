@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 420e50fd-017c-4e06-bc13-320d4e0dc534
-ms.openlocfilehash: c542cabe49246f8a452f10d95043d363c1c5f3c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dea5130dc802bb237474043b6647337af2315c0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577022"
 ---
 # <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a>System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
-Nie można uwierzytelnić źródło komunikatu  
+Nie można uwierzytelnić źródła komunikatu  
   
 ## <a name="description"></a>Opis  
- Ślad wystąpi podczas próby uwierzytelnienia wiadomości przychodzących i uwierzytelniania wiadomości jest włączona w powiązaniu.  
+ Ten ślad występuje podczas próby uwierzytelnienia komunikatów przychodzących, a uwierzytelnianie komunikatów jest włączone dla powiązania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Śledzenie](index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i Diagnostyka](../index.md)

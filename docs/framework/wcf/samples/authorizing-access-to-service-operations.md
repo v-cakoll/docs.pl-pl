@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: c2ad6977674666ef65df1ea4cfe58cfd4bff8b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3097c86f50a75dec8a649ca4e1edd2511a046ca8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585535"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Autoryzowanie dostępu do operacji usługi
-W tym przykładzie pokazano, jak używać [ \<serviceAuthorization>,](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) aby włączyć korzystanie z atrybutu <xref:System.Security.Permissions.PrincipalPermissionAttribute> do autoryzowania dostępu do operacji serwisowych. Ten przykład jest oparty na próbce [Wprowadzenie.](../../../../docs/framework/wcf/samples/getting-started-sample.md) Usługa i klient są konfigurowane przy użyciu [ \<>wsHttpBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Atrybut `mode` [ \<>zabezpieczeń](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) został ustawiony `Message` na . `clientCredentialType` `Windows` Jest <xref:System.Security.Permissions.PrincipalPermissionAttribute> stosowany do każdej metody usługi i służy do ograniczania dostępu do każdej operacji. Wywołujący musi być administratorem systemu Windows, aby uzyskać dostęp do każdej operacji.  
+W tym przykładzie pokazano, jak użyć, [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) Aby umożliwić użycie <xref:System.Security.Permissions.PrincipalPermissionAttribute> atrybutu w celu autoryzacji dostępu do operacji usługi. Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md) przykładzie. Usługa i klient są konfigurowane przy użyciu [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . `mode`Atrybut [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) został ustawiony na `Message` i `clientCredentialType` został ustawiony na `Windows` . <xref:System.Security.Permissions.PrincipalPermissionAttribute>Stosuje się do każdej metody usługi i służy do ograniczania dostępu do każdej operacji. Obiekt wywołujący musi być administratorem systemu Windows, aby uzyskać dostęp do każdej operacji.  
   
- W tym przykładzie klient jest aplikacją konsoli (.exe), a usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
+ W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
 > [!NOTE]
-> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Plik konfiguracji usługi używa [ \<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) do `principalPermissionMode` ustawienia atrybutu:  
+ Plik konfiguracji usługi używa [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) do ustawienia `principalPermissionMode` atrybutu:  
   
 ```xml  
 <behaviors>  
@@ -37,9 +37,9 @@ W tym przykładzie pokazano, jak używać [ \<serviceAuthorization>,](../../../.
 </behaviors>  
 ```  
   
- `principalPermissionMode` Ustawienie, `UseWindowsGroups` aby włączyć <xref:System.Security.Permissions.PrincipalPermissionAttribute> korzystanie z oparte na nazwach grup systemu Windows.  
+ Ustawienie `principalPermissionMode` do `UseWindowsGroups` umożliwia korzystanie z <xref:System.Security.Permissions.PrincipalPermissionAttribute> nazw grup systemu Windows.  
   
- Jest <xref:System.Security.Permissions.PrincipalPermissionAttribute> stosowany do każdej operacji, aby wymagać, aby wywołujący być częścią grupy administratorów systemu Windows, jak pokazano w poniższym przykładowym kodzie.  
+ <xref:System.Security.Permissions.PrincipalPermissionAttribute>Program jest stosowany do każdej operacji, aby wymagać, aby wywołujący należał do grupy administratorów systemu Windows, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [PrincipalPermission(SecurityAction.Demand,
@@ -51,14 +51,14 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient pomyślnie komunikuje się z każdą operacją, jeśli działa na koncie należącym do grupy Administratorzy; w przeciwnym razie odmowa dostępu. Aby eksperymentować z niepowodzeniem autoryzacji, uruchom klienta na koncie, które nie jest częścią grupy Administratorzy. Naciśnij klawisz ENTER w oknie konsoli, aby wyłączyć klienta.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Klient pomyślnie komunikuje się z każdą operacją, jeśli jest uruchomiona przy użyciu konta należącego do grupy Administratorzy; w przeciwnym razie odmowa dostępu. Aby eksperymentować z błędem autoryzacji, uruchom klienta w ramach konta, które nie jest częścią grupy Administratorzy. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta programu.  
   
- Usługa może zostać powiadomiona o błędach <xref:System.ServiceModel.Dispatcher.IErrorHandler>autoryzacji, implementując plik . Aby uzyskać informacje na temat wdrażania, `IErrorHandler`zobacz [Rozszerzanie kontroli nad obsługą błędów i raportowaniem.](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ Usługa może być powiadamiana o błędach autoryzacji przez implementację <xref:System.ServiceModel.Dispatcher.IErrorHandler> . Zobacz [Rozszerzanie kontroli nad obsługą błędów i raportowanie](extending-control-over-error-handling-and-reporting.md) informacji o wdrażaniu `IErrorHandler` .  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
-1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować wersję rozwiązania w języku C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
-3. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, postępuj zgodnie z instrukcjami w [przypadku uruchamiania przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  

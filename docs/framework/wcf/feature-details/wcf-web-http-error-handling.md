@@ -2,18 +2,18 @@
 title: Obsługa błędów protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1d41bebafa2795d390b120ad84475417389479b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975953"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598648"
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
 Obsługa błędów HTTP sieci Web w programie Windows Communication Foundation (WCF) umożliwia zwracanie błędów z usług HTTP sieci Web w programie WCF, które określają kod stanu HTTP i zwracają szczegóły błędu przy użyciu tego samego formatu co operacja (na przykład XML lub JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF  
- Klasa <xref:System.ServiceModel.Web.WebFaultException> definiuje konstruktora, który umożliwia określenie kodu stanu HTTP. Ten kod stanu jest następnie zwracany do klienta. Ogólna wersja klasy <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> umożliwia zwrócenie typu zdefiniowanego przez użytkownika, który zawiera informacje o błędzie, który wystąpił. Ten obiekt niestandardowy jest serializowany przy użyciu formatu określonego przez operację i zwracany do klienta. Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP.  
+ <xref:System.ServiceModel.Web.WebFaultException>Klasa definiuje konstruktora, który umożliwia określenie kodu stanu HTTP. Ten kod stanu jest następnie zwracany do klienta. Ogólna wersja <xref:System.ServiceModel.Web.WebFaultException> klasy, <xref:System.ServiceModel.Web.WebFaultException%601> umożliwia zwrócenie typu zdefiniowanego przez użytkownika, który zawiera informacje o błędzie, który wystąpił. Ten obiekt niestandardowy jest serializowany przy użyciu formatu określonego przez operację i zwracany do klienta. Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP.  
   
 ```csharp
 public string Operation1()
@@ -24,7 +24,7 @@ public string Operation1()
 }  
 ```  
   
- Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP i dodatkowe informacje w typie zdefiniowanym przez użytkownika. `MyErrorDetail` jest typem zdefiniowanym przez użytkownika, który zawiera dodatkowe informacje o błędzie, który wystąpił.  
+ Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP i dodatkowe informacje w typie zdefiniowanym przez użytkownika. `MyErrorDetail`jest typem zdefiniowanym przez użytkownika, który zawiera dodatkowe informacje o błędzie, który wystąpił.  
   
 ```csharp
 public string Operation2()
@@ -40,22 +40,22 @@ public string Operation2()
 }  
 ```  
   
- Poprzedni kod zwraca odpowiedź HTTP z niedozwolonym kodem stanu i treścią zawierającą wystąpienie obiektu `MyErrorDetails`. Format obiektu `MyErrorDetails` jest określany na podstawie:  
+ Poprzedni kod zwraca odpowiedź HTTP z niedozwolonym kodem stanu i treścią zawierającą wystąpienie `MyErrorDetails` obiektu. Format `MyErrorDetails` obiektu jest określany przez:  
   
-- Wartość parametru `ResponseFormat` atrybutu <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> określonego w operacji usługi.  
+- Wartość `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutu określonego w operacji usługi.  
   
-- Wartość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+- Wartość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> .  
   
-- Wartość właściwości <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> przez uzyskanie dostępu do <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- Wartość <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> Właściwości przez uzyskanie dostępu do elementu <xref:System.ServiceModel.Web.OutgoingWebResponseContext> .  
   
- Aby uzyskać więcej informacji o tym, jak te wartości wpływają na formatowanie operacji, zobacz temat [Formatowanie http sieci Web](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)w programie WCF.  
+ Aby uzyskać więcej informacji o tym, jak te wartości wpływają na formatowanie operacji, zobacz temat [Formatowanie http sieci Web](wcf-web-http-formatting.md)w programie WCF.  
   
- <xref:System.ServiceModel.Web.WebFaultException> jest <xref:System.ServiceModel.FaultException> i dlatego może służyć jako model programowania wyjątków błędów dla usług, które uwidaczniają punkty końcowe protokołu SOAP, a także punkty końcowe HTTP sieci Web.  
+ <xref:System.ServiceModel.Web.WebFaultException>jest <xref:System.ServiceModel.FaultException> i dlatego może służyć jako model programowania wyjątku błędów dla usług, które uwidaczniają punkty końcowe protokołu SOAP, a także punkty końcowe http sieci Web.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Formatowanie kodu HTTP dla sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
-- [Definiowanie i określanie błędów](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
-- [Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
-- [Wysyłanie i odbieranie błędów](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [Model programowania protokołu HTTP sieci Web w programie WCF](wcf-web-http-programming-model.md)
+- [Formatowanie kodu HTTP dla sieci Web w programie WCF](wcf-web-http-formatting.md)
+- [Definiowanie i określanie błędów](../defining-and-specifying-faults.md)
+- [Obsługa wyjątków i błędów](../extending/handling-exceptions-and-faults.md)
+- [Wysyłanie i odbieranie błędów](../sending-and-receiving-faults.md)

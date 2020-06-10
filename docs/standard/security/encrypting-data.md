@@ -1,5 +1,6 @@
 ---
 title: Szyfrowanie danych
+description: Dowiedz się, jak szyfrować dane w programie .NET. Można użyć szyfrowania symetrycznego w strumieniach lub użyć szyfrowania asymetrycznego w niewielkiej liczbie bajtów.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cebdecd461f28f8228ebb8440dbff218dc211db
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288358"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662527"
 ---
 # <a name="encrypting-data"></a>Szyfrowanie danych
 Szyfrowanie symetryczne i szyfrowanie asymetryczne są wykonywane przy użyciu różnych procesów. Szyfrowanie symetryczne jest wykonywane na strumieniach i dlatego jest przydatne do szyfrowania dużych ilości danych. Szyfrowanie asymetryczne jest wykonywane w niewielkiej liczbie bajtów i dlatego jest przydatne tylko w przypadku małych ilości danych.  

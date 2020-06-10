@@ -1,5 +1,6 @@
 ---
 title: Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
+description: Dowiedz się więcej o zadaniach łańcucha przy użyciu zadań kontynuacji w programie .NET. Zadanie kontynuacji to asynchroniczne zadanie, które jest wywoływane przez inne zadanie.
 ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 90317f3db5bcf2371494e14a1ca1dd16d049e0bd
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285615"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662475"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowaniu asynchronicznym, jest wspólne dla jednej operacji asynchronicznej po zakończeniu, aby wywołać drugą operację i przekazać do niej dane. Tradycyjnie, kontynuacje zostały wykonane przy użyciu metod wywołania zwrotnego. W bibliotece zadań równoległych te same funkcje są udostępniane przez *zadania kontynuacji*. Zadanie kontynuacji (znane również jako kontynuacja) to asynchroniczne zadanie, które jest wywoływane przez inne zadanie, znane jako *poprzedzające*, po zakończeniu poprzedzającego.  

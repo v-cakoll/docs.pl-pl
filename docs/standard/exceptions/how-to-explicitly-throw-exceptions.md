@@ -1,5 +1,6 @@
 ---
 title: 'Porady: jawne zgłaszanie wyjątków'
+description: Dowiedz się, jak zgłosić wyjątek jawnie w programie .NET przy użyciu instrukcji throw języka C# lub instrukcji Visual Basic throw.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,22 +13,22 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd939f9edd58ba91ea74df5d6930087849f0560
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708865"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662787"
 ---
-# <a name="how-to-explicitly-throw-exceptions"></a>Jak jawnie zgłaszać wyjątki
+# <a name="how-to-explicitly-throw-exceptions"></a>Jak jawnie zgłosić wyjątki
 
-Jawnie można zgłosić wyjątek przy [`throw`](../../csharp/language-reference/keywords/throw.md) użyciu c# [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) lub Visual Basic instrukcji. Można również zgłosić przechwyconego wyjątku ponownie przy użyciu `throw` instrukcji. Dobrą praktyką kodowania jest dodawanie informacji do wyjątku, który jest ponownie generowany, aby zapewnić więcej informacji podczas debugowania.
+Wyjątek można jawnie zgłosić przy użyciu języka C# [`throw`](../../csharp/language-reference/keywords/throw.md) lub [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) instrukcji Visual Basic. Można również zgłosić przechwycony wyjątek ponownie, używając `throw` instrukcji. Dobrym sposobem kodowania jest dodanie informacji do wyjątku, który został ponownie wygenerowany, aby uzyskać więcej informacji podczas debugowania.
 
-Poniższy przykład kodu `try` / `catch` używa bloku do <xref:System.IO.FileNotFoundException>połowu możliwe . Po `try` bloku jest `catch` blok, <xref:System.IO.FileNotFoundException> który przechwytuje i zapisuje wiadomość do konsoli, jeśli plik danych nie zostanie znaleziony. Następna instrukcja `throw` jest instrukcja, <xref:System.IO.FileNotFoundException> która zgłasza nowy i dodaje informacje tekstowe do wyjątku.
+Poniższy przykład kodu używa bloku, `try` / `catch` Aby przechwycić możliwe <xref:System.IO.FileNotFoundException> . Po `try` bloku jest `catch` blok, który przechwytuje <xref:System.IO.FileNotFoundException> i zapisuje komunikat w konsoli, jeśli plik danych nie zostanie znaleziony. Następna instrukcja to `throw` instrukcja, która zgłasza nowe <xref:System.IO.FileNotFoundException> i dodaje do wyjątku informacje tekstowe.
 
 [!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wyjątki](index.md)

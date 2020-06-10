@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty'
+description: Dowiedz się, jak określić numer porządkowy tygodnia dla określonej daty w programie .NET. Dowiedz się, jak wyświetlić zlokalizowaną nazwę dnia tygodnia dla konkretnej daty.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0eb6c36b88594543d08680af104b5408c295f9
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290477"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662618"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty
 .NET Framework ułatwia określenie dnia tygodnia dla określonej daty i wyświetlanie zlokalizowanej nazwy dnia tygodnia dla konkretnej daty. Wartość wyliczana wskazująca dzień tygodnia odpowiadający określonej dacie jest dostępna z <xref:System.DateTime.DayOfWeek%2A> <xref:System.DateTimeOffset.DayOfWeek%2A> właściwości lub. Z kolei pobieranie nazwy dnia tygodnia jest operacją formatowania, którą można wykonać, wywołując metodę formatowania, taką jak metoda wartości daty i godziny `ToString` lub <xref:System.String.Format%2A?displayProperty=nameWithType> Metoda. W tym temacie przedstawiono sposób wykonywania tych operacji formatowania.  

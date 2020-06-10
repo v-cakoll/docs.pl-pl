@@ -1,5 +1,6 @@
 ---
 title: Opcje wyrażeń regularnych
+description: Dowiedz się, jak używać opcji wyrażenia regularnego w programie .NET, takich jak Dopasowywanie bez uwzględniania wielkości liter, tryb wielowierszowy i tryb od prawej do lewej.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289294"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662878"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 

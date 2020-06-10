@@ -1,16 +1,17 @@
 ---
 title: Programowanie równoległe w .NET
+description: Dowiedz się więcej na temat programowania równoległego w programie .NET. Użyj środowiska uruchomieniowego platformy .NET, typów bibliotek klas i narzędzi diagnostycznych, aby uprościć Programowanie na platformie .NET.
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: 7adc37374876ebe4dd47e30afa06b5199f34dad5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 02087cf58720388c64d8aba5424db0b54828219a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290697"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661968"
 ---
 # <a name="parallel-programming-in-net"></a>Programowanie równoległe w .NET
 

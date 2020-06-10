@@ -1,61 +1,59 @@
 ---
-title: Jak połączyć wiele ciągów (Przewodnik języka C#)
-description: Istnieje wiele sposobów łączenia ciągów w języku C#. Poznaj opcje i powody różnych wyborów.
+title: Jak połączyć wiele ciągów (Przewodnik C#)
+description: Istnieje wiele sposobów łączenia ciągów w języku C#. Zapoznaj się z opcjami i przyczynami związanymi z różnymi opcjami.
 ms.date: 02/20/2018
 helpviewer_keywords:
 - joining strings [C#]
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389536"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663021"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Jak połączyć wiele ciągów (Przewodnik języka C#)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Jak połączyć wiele ciągów (Przewodnik C#)
 
-*Łączenie* jest procesem dołączania jednego ciągu na końcu innego ciągu. Można połączyć ciągi przy `+` użyciu operatora. W przypadku literałów ciągów i stałych ciągów łączenie odbywa się w czasie kompilacji; nie występuje łączenie w czasie wykonywania. W przypadku zmiennych ciągów łączenie odbywa się tylko w czasie wykonywania.
+*Łączenie* jest procesem dołączania jednego ciągu do końca innego ciągu. Parametry są łączone za pomocą `+` operatora. W przypadku literałów ciągów i stałych ciągów łączenie odbywa się w czasie kompilacji; Brak łączenia w czasie wykonywania. W przypadku zmiennych ciągów łączenie odbywa się tylko w czasie wykonywania.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-W poniższym przykładzie użyto łączenia do dzielenia długiego ciągu literał na mniejsze ciągi w celu poprawy czytelności w kodzie źródłowym. Te części są łączone w jeden ciąg w czasie kompilacji. Nie ma żadnych kosztów wydajności w czasie wykonywania, niezależnie od liczby zaangażowanych ciągów.  
-  
- [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
+Poniższy przykład używa łączenia do dzielenia długiego literału ciągu na mniejsze ciągi w celu zwiększenia czytelności w kodzie źródłowym. Te części są łączone w jeden ciąg w czasie kompilacji. Nie ma kosztu wydajności w czasie wykonywania niezależnie od liczby używanych ciągów.
 
-Aby połączyć zmienne ciągu, można `+` `+=` użyć lub operatorów, <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.String.Concat%2A?displayProperty=nameWithType> [interpolacji ciągów](../language-reference/tokens/interpolated.md) lub , lub <xref:System.String.Join%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> metody. Operator `+` jest łatwy w obsłudze i sprawia, że intuicyjny kod. Nawet jeśli używasz kilku `+` operatorów w jednej instrukcji, zawartość ciągu jest kopiowana tylko raz. Poniższy kod przedstawia przykłady `+` `+=` używania operatorów i do łączenia ciągów:
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet1":::
 
-[!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
+Aby połączyć zmienne ciągów, można użyć `+` `+=` operatorów or, [interpolacji ciągów](../language-reference/tokens/interpolated.md) lub <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.String.Concat%2A?displayProperty=nameWithType> <xref:System.String.Join%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> metod. `+`Operator jest łatwy w użyciu i pozwala na intuicyjny kod. Nawet jeśli używasz kilku `+` operatorów w jednej instrukcji, zawartość ciągu jest kopiowana tylko raz. Poniższy kod przedstawia przykłady użycia `+` `+=` operatorów i do łączenia ciągów:
 
-W niektórych wyrażeniach łatwiej jest łączyć ciągi za pomocą interpolacji ciągów, jak pokazano w poniższym kodzie:
-  
-[!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
-  
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet2":::
+
+W niektórych wyrażeniach łatwiej jest łączyć ciągi przy użyciu interpolacji ciągów, jak pokazano w poniższym kodzie:
+
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet3":::
+
 > [!NOTE]
-> W operacjach łączenia ciągów kompilator języka C# traktuje ciąg zerowy tak samo jak pusty ciąg.
+> W operacjach łączenia ciągów kompilator języka C# traktuje ciąg o wartości null tak samo jak pusty ciąg.
 
-Inną metodą łączenia ciągów jest <xref:System.String.Format%2A?displayProperty=nameWithType>. Ta metoda działa dobrze podczas tworzenia ciągu z niewielkiej liczby ciągów składników.
+Inną metodą łączenia ciągów jest <xref:System.String.Format%2A?displayProperty=nameWithType> . Ta metoda dobrze sprawdza się w przypadku kompilowania ciągu z niewielkiej liczby ciągów komponentów.
 
-W innych przypadkach może być łączenie ciągów w pętli, gdzie nie wiesz, ile ciągów źródłowych łączysz, a rzeczywista liczba ciągów źródłowych może być duża. Klasa <xref:System.Text.StringBuilder> została zaprojektowana dla tych scenariuszy. Poniższy kod używa <xref:System.Text.StringBuilder.Append%2A> metody <xref:System.Text.StringBuilder> klasy do łączenia ciągów.  
-  
-[!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
+W innych przypadkach można łączyć ciągi w pętli, w której nie wiadomo, ile łączonych parametrów źródłowych, a rzeczywista liczba ciągów źródłowych może być duża. <xref:System.Text.StringBuilder>Klasa została zaprojektowana dla tych scenariuszy. Poniższy kod używa <xref:System.Text.StringBuilder.Append%2A> metody <xref:System.Text.StringBuilder> klasy do łączenia ciągów.
 
-Możesz przeczytać więcej o [powodach, dla których `StringBuilder` warto wybrać łączenie ciągów lub klasę](xref:System.Text.StringBuilder#StringAndSB).
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
 
-Inną opcją łączenia ciągów z <xref:System.String.Concat%2A?displayProperty=nameWithType> kolekcji jest użycie metody. Użyj <xref:System.String.Join%2A?displayProperty=nameWithType> metody, jeśli ciągi źródłowe powinny być oddzielone ogranicznikiem. Poniższy kod łączy tablicę słów przy użyciu obu metod:
+Więcej informacji na temat [przyczyn wyboru łączenia ciągów lub `StringBuilder` klasy](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types).
 
-[!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
+Kolejną opcją dołączenia ciągów do kolekcji jest użycie <xref:System.String.Concat%2A?displayProperty=nameWithType> metody. Użyj <xref:System.String.Join%2A?displayProperty=nameWithType> metody, jeśli ciągi źródłowe powinny być oddzielone ogranicznikiem. Poniższy kod łączy tablicę wyrazów przy użyciu obu metod:
 
-W końcu można użyć [LINQ](../programming-guide/concepts/linq/index.md) i <xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType> metody do łączenia ciągów z kolekcji. Ta metoda łączy ciągi źródłowe przy użyciu wyrażenia lambda. Wyrażenie lambda wykonuje pracę, aby dodać każdy ciąg do istniejącej akumulacji. Poniższy przykład łączy tablicę słów, dodając spację między każdym wyrazem w tablicy:
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet5":::
 
-[!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
+Na koniec można użyć [LINQ](../programming-guide/concepts/linq/index.md) i <xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType> metody do przyłączania ciągów do kolekcji. Ta metoda łączy parametry źródłowe za pomocą wyrażenia lambda. Wyrażenie lambda wykonuje pracy, aby dodać każdy ciąg do istniejącego akumulacji. Poniższy przykład łączy tablicę wyrazów przez dodanie odstępu między każdym słowem w tablicy:
 
-Możesz wypróbować te przykłady, patrząc na [przykładowy kod](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Możesz też pobrać próbki [jako plik zip](../../../samples/snippets/csharp/how-to/strings.zip).
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet6":::
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
-- [C# Przewodnik programowania](../programming-guide/index.md)
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)
 - [Ciągi](../programming-guide/strings/index.md)

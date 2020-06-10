@@ -1,5 +1,6 @@
 ---
 title: Wybieranie między klasą i strukturą
+description: Dowiedz się, jak zdecydować, czy projektować typ jako klasę, czy też projektować typ jako strukturę. Dowiedz się, jak typy odwołań i typy wartości różnią się w zależności od platformy .NET.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280364"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662605"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybieranie między klasą i strukturą
 Jedną z podstawowych decyzji projektowych każdej twarzy projektanta platformy jest to, czy projekt typu ma być klasą (typem referencyjnym) czy jako struktura (typ wartości). Dobre zrozumienie różnic w zachowaniu typów referencyjnych i typów wartości jest decydujące w przypadku dokonania tego wyboru.

@@ -1,5 +1,6 @@
 ---
 title: Przepływ danych (Biblioteka zadań równoległych)
+description: Dowiedz się, jak używać składników przepływu danych w bibliotece zadań równoległych (TPL), aby zwiększyć niezawodność aplikacji z obsługą współbieżności.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: e1d4dc596f57a4c75c11806f95099ee5593c6c03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285537"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662553"
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
 Biblioteka zadań równoległych (TPL) zawiera składniki przepływu danych, które ułatwiają zwiększenie niezawodności aplikacji korzystających z współbieżności. Te składniki przepływu danych są zbiorczo określane jako *Biblioteka TPL przepływu danych*. Ten model przepływu danych wspiera Programowanie oparte na aktorze, zapewniając w procesie przekazywanie komunikatów w celu uzyskania bardziej szczegółowych zadań przepływu danych i potokowych. Składniki przepływu danych są oparte na typach i infrastrukturze planowania TPL i integrują się z obsługą języków C#, Visual Basic i języka F # na potrzeby programowania asynchronicznego. Te składniki przepływu danych są przydatne, gdy istnieje wiele operacji, które muszą komunikować się ze sobą asynchronicznie, lub gdy chcesz przetwarzać dane, gdy staną się dostępne. Rozważmy na przykład aplikację, która przetwarza dane obrazu z kamery sieci Web. Korzystając z modelu przepływu danych, aplikacja może przetwarzać ramki obrazu w miarę ich udostępniania. Jeśli aplikacja rozszerza ramki obrazu, na przykład przez wykonanie korekcji światła lub zmniejszenie oka, można utworzyć *potok* składników przepływu danych. Każdy etap potoku może korzystać z bardziej precyzyjnych funkcji równoległych, takich jak funkcje dostarczone przez TPL, aby przekształcić obraz.  

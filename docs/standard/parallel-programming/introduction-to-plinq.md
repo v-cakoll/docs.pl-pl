@@ -1,5 +1,6 @@
 ---
 title: Wprowadzenie do PLINQ
+description: Dowiedz się, jak wykonywać zapytania równolegle przy użyciu PLINQ na platformie .NET. PLINQ to oparty na języku Parallel Language-Integrated Query (LINQ).
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290684"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662462"
 ---
 # <a name="introduction-to-plinq"></a>Wprowadzenie do PLINQ
 
@@ -35,7 +36,7 @@ Pozostała część tego artykułu zawiera omówienie głównych klas PLINQ i om
 
 ## <a name="the-parallelenumerable-class"></a>Klasa ParallelEnumerable
 
-<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>Klasa uwidacznia prawie wszystkie funkcje PLINQ. A pozostałe <xref:System.Linq?displayProperty=nameWithType> typy przestrzeni nazw są kompilowane do zestawu System. Core. dll. Domyślne projekty C# i Visual Basic w programie Visual Studio odwołują się do zestawu i importują przestrzeń nazw.
+<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>Klasa uwidacznia prawie wszystkie funkcje PLINQ. I reszta <xref:System.Linq?displayProperty=nameWithType> typów przestrzeni nazw są kompilowane do zestawu System.Core.dll. Domyślne projekty C# i Visual Basic w programie Visual Studio odwołują się do zestawu i importują przestrzeń nazw.
 
 <xref:System.Linq.ParallelEnumerable>zawiera implementacje wszystkich standardowych operatorów zapytań, które są obsługiwane przez LINQ to Objects, chociaż nie podejmuje próby zrównoleglanie każdego z nich. Jeśli nie znasz programu LINQ, zobacz [Introduction to LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) i [Introduction to LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 

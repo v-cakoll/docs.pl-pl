@@ -1,5 +1,6 @@
 ---
 title: Korzystanie z klasy StringBuilder w środowisku .NET
+description: Dowiedz się, jak używać klasy StringBuilder w środowisku .NET. Użyj tej klasy, aby zmodyfikować ciąg bez tworzenia nowego obiektu.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289268"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662943"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Korzystanie z klasy StringBuilder w środowisku .NET
 <xref:System.String>Obiekt jest niezmienny. Za każdym razem, gdy używasz jednej z metod w <xref:System.String?displayProperty=nameWithType> klasie, tworzysz nowy obiekt ciągu w pamięci, co wymaga nowego przydziału miejsca dla nowego obiektu. W sytuacjach, gdy trzeba wykonać powtórzone modyfikacje ciągu, obciążenie związane z tworzeniem nowego <xref:System.String> obiektu może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType>Klasy można użyć, jeśli chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład użycie <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność podczas łączenia wielu ciągów razem w pętli.  

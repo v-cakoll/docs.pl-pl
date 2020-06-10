@@ -1,5 +1,6 @@
 ---
 title: Generowanie kluczy szyfrowania i odszyfrowywania
+description: Informacje na temat tworzenia kluczy symetrycznych i asymetrycznych na potrzeby szyfrowania i odszyfrowywania w programie .NET oraz zarządzania nimi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 992ac30310d138e04b8408497c5e49166a356ab4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f8c3633d18e200037235502487d0d91d42083241
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291542"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661812"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie kluczy i zarządzanie nimi jest ważną częścią procesu kryptograficznego. Algorytmy symetryczne wymagają utworzenia klucza i wektora inicjalizacji (IV). Klucz musi być poufny dla każdego, kto nie powinien odszyfrować danych. IV nie musi być tajny, ale powinien zostać zmieniony dla każdej sesji. Algorytmy asymetryczne wymagają utworzenia klucza publicznego i klucza prywatnego. Klucz publiczny może być publiczny dla każdej osoby, natomiast klucz prywatny musi być znany tylko przez osobę, która będzie odszyfrować dane zaszyfrowane za pomocą klucza publicznego. W tej sekcji opisano, jak generować klucze dla algorytmów symetrycznych i asymetrycznych oraz zarządzać nimi.  

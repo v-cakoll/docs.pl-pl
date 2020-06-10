@@ -1,5 +1,6 @@
 ---
 title: Zarządzana wątkowość — najlepsze rozwiązania
+description: Uzyskaj informacje o zarządzanych wątkach najlepszych rozwiązań w programie .NET. Pracuj z trudnymi sytuacjami, takimi jak koordynowanie wielu wątków lub obsługa wątków blokujących.
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291191"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662826"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzane wątki z najlepszymi rozwiązaniami
 Wielowątkowość wymaga starannego programowania. W przypadku większości zadań można zmniejszyć złożoność przez kolejkowanie żądań na potrzeby wykonywania przez wątki puli wątków. Ten temat dotyczy trudniejszych sytuacji, takich jak koordynacja pracy wielu wątków lub obsługa wątków, które blokują.  

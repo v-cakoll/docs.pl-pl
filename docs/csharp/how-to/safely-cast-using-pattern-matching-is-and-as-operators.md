@@ -1,40 +1,38 @@
 ---
-title: Jak bezpiecznie rzucać za pomocą dopasowywania wzorców i jest i jako operatorzy
-description: Dowiedz się, jak używać technik dopasowywania wzorców, aby bezpiecznie rzutować zmienne na inny typ. Można użyć dopasowywania wzorców, jak również is i operatorów do bezpiecznego konwertowania typów.
+title: Jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów is i AS
+description: Dowiedz się, jak używać technik dopasowywania wzorców, aby bezpiecznie rzutować zmienne na inny typ. Możesz użyć dopasowania wzorca oraz operatorów is i AS, aby bezpiecznie skonwertować typy.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 9f5690e6840098f94360dba89f09fb23b258b782
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f10ce837057cc61b84130f237a13af708849dfc5
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739047"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662969"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Jak bezpiecznie rzucać za pomocą dopasowywania wzorców i jest i jako operatorzy
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów is i AS
 
-Ponieważ obiekty są polimorficzne, zmienna typu klasy podstawowej może zawierać [typ](../programming-guide/types/index.md)pochodny . Aby uzyskać dostęp do elementów członkowskich wystąpienia typu pochodnego, konieczne jest [rzutanie](../programming-guide/types/casting-and-type-conversions.md) wartości z powrotem do typu pochodnego. Jednak obsada stwarza ryzyko rzucania <xref:System.InvalidCastException>. C# zawiera [instrukcje dopasowania wzorca,](../pattern-matching.md) które wykonują rzutowanie warunkowo tylko wtedy, gdy zakończy się pomyślnie. C# zapewnia również [is](../language-reference/operators/type-testing-and-cast.md#is-operator) i [jako](../language-reference/operators/type-testing-and-cast.md#as-operator) operatorów, aby przetestować, jeśli wartość jest pewnego typu.
+Ponieważ obiekty są polimorficzne, istnieje możliwość, aby zmienna typu klasy bazowej była przechowywana [typu](../programming-guide/types/index.md)pochodnego. Aby uzyskać dostęp do elementów członkowskich wystąpienia typu pochodnego, konieczne jest [rzutowanie](../programming-guide/types/casting-and-type-conversions.md) wartości z powrotem na typ pochodny. Jednak rzutowanie tworzy ryzyko wyrzucania <xref:System.InvalidCastException> . Język C# zawiera instrukcje [dopasowania wzorca](../pattern-matching.md) , które wykonują rzutowanie warunkowo tylko wtedy, gdy powiedzie się. Język C# zawiera również operatory [is](../language-reference/operators/type-testing-and-cast.md#is-operator) i [as](../language-reference/operators/type-testing-and-cast.md#as-operator) do sprawdzenia, czy wartość jest określonego typu.
 
-W poniższym przykładzie pokazano, `is` jak używać instrukcji dopasowywania wzorców:
+Poniższy przykład pokazuje, jak używać instrukcji dopasowania do wzorca `is` :
 
-[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs" id="PatternMatchingIs":::
 
-W poprzednim przykładzie przedstawiono kilka funkcji składni dopasowania wzorca. Instrukcja `if (a is Mammal m)` łączy test z przypisaniem inicjowania. Przypisanie występuje tylko wtedy, gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie `if` w osadzonej instrukcji, gdzie została przypisana. Nie można `m` uzyskać dostępu później w tej samej metodzie. W poprzednim przykładzie pokazano również, jak użyć [ `as` operatora](../language-reference/operators/type-testing-and-cast.md#as-operator) do konwersji obiektu na określony typ.
+Powyższy przykład ilustruje kilka cech składni dopasowania do wzorca. `if (a is Mammal m)`Instrukcja łączy test z przypisaniem inicjalizacji. Przypisanie występuje tylko wtedy, gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie w osadzonej instrukcji, w `if` której został przypisany. Nie można uzyskać dostępu `m` dalej w tej samej metodzie. W poprzednim przykładzie pokazano również, jak użyć [ `as` operatora](../language-reference/operators/type-testing-and-cast.md#as-operator) , aby przekonwertować obiekt na określony typ.
 
-Można również użyć tej samej składni do testowania, jeśli [typ wartości nullable](../language-reference/builtin-types/nullable-value-types.md) ma wartość, jak pokazano w poniższym przykładzie:
+Można także użyć tej samej składni do testowania, jeśli [Typ wartości null](../language-reference/builtin-types/nullable-value-types.md) ma wartość, jak pokazano w następującym przykładzie:
 
-[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs" id="PatternMatchingNullable":::
 
-W poprzednim przykładzie przedstawiono inne funkcje dopasowania wzorca do użycia z konwersjami. Można przetestować zmienną dla wzorca null, `null` sprawdzając specjalnie dla wartości. Gdy wartość środowiska uruchomieniowego `null`zmiennej jest , `is` instrukcja `false`sprawdzania typu zawsze zwraca . Instrukcja `is` dopasowywania wzorców nie zezwala na `int?` typ `Nullable<int>`wartości nullable, takich jak lub , ale można przetestować dla dowolnego innego typu wartości. Wzorce `is` z poprzedniego przykładu nie są ograniczone do typów wartości nullable. Można również użyć tych wzorców, aby sprawdzić, czy zmienna typu `null`odwołania ma wartość lub jest .
+Powyższy przykład ilustruje inne funkcje dopasowania do wzorca do użycia z konwersjemi. Można testować zmienną dla wzorca o wartości null, sprawdzając odpowiednie `null` wartości. Gdy wartość środowiska uruchomieniowego zmiennej to `null` , `is` Sprawdzanie instrukcji dla typu zawsze zwraca wartość `false` . Instrukcja dopasowania wzorca `is` nie zezwala na typ wartości null, np `int?` `Nullable<int>` . lub, ale można testować dla dowolnego innego typu wartości. `is`Wzorce z poprzedniego przykładu nie są ograniczone do typów wartości dopuszczających wartość null. Można również użyć tych wzorców do sprawdzenia, czy zmienna typu referencyjnego ma wartość lub `null` .
 
-W poprzednim przykładzie pokazano również, jak `switch` używać wzorca typu w instrukcji, gdzie zmienna może być jednym z wielu różnych typów.
+Powyższy przykład pokazuje również, jak używać wzorca typu w instrukcji, `switch` gdzie zmienna może być jednym z wielu różnych typów.
 
-Jeśli chcesz przetestować, czy zmienna jest danym typem, ale nie przypisać `is` `as` go do nowej zmiennej, można użyć i operatorów dla typów odwołań i nullable typów wartości. Poniższy kod pokazuje, `is` jak `as` używać i instrukcji, które były częścią języka C# przed dopasowaniem wzorca został wprowadzony do testowania, jeśli zmienna jest danego typu:
+Jeśli chcesz sprawdzić, czy zmienna jest danym typem, ale nie jest przypisana do nowej zmiennej, można użyć `is` `as` operatorów i dla typów referencyjnych i wartości null. Poniższy kod pokazuje, jak używać `is` `as` instrukcji i, które były częścią języka C# przed dopasowaniem do wzorca, aby sprawdzić, czy zmienna ma dany typ:
 
-[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs" id="IsAndAs":::
 
-Jak widać, porównując ten kod z kodem dopasowania wzorca, składnia pasująca do wzorca zapewnia bardziej niezawodne funkcje, łącząc test i przypisanie w jednej instrukcji. W miarę możliwości należy używać składni dopasowywania wzorca.
-
-Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast). Możesz też pobrać próbki [jako plik zip](../../../samples/snippets/csharp/how-to/safelycast.zip).
+Jak widać, porównując ten kod z kodem dopasowania wzorca, Składnia dopasowania wzorca zapewnia bardziej niezawodne funkcje, łącząc test i przypisanie w pojedynczej instrukcji. Jeśli to możliwe, użyj składni dopasowania wzorca.

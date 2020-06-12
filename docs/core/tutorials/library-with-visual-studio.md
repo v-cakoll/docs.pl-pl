@@ -1,26 +1,23 @@
 ---
-title: Tworzenie biblioteki klas .NET Standard w programie Visual Studio
+title: Tworzenie biblioteki klas .NET Standard przy użyciu programu Visual Studio
 description: Dowiedz się, jak utworzyć .NET Standard bibliotekę klas przy użyciu programu Visual Studio.
-ms.date: 05/21/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283627"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701568"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>Samouczek: Tworzenie biblioteki .NET Standard w programie Visual Studio
-
-*Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas, która jest przeznaczona dla .NET Standard 2,0 umożliwia wywoływanie biblioteki przez dowolną implementację platformy .NET, która obsługuje tę wersję .NET Standard. Po zakończeniu biblioteki klas możesz zdecydować, czy chcesz ją rozpowszechnić jako składnik innej firmy, czy chcesz ją dołączyć jako składnik pakietu z co najmniej jedną aplikacjami.
-
-> [!NOTE]
-> Listę wersji .NET Standard i obsługiwanych przez nich platform można znaleźć w temacie [.NET Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Samouczek: Tworzenie biblioteki .NET Standard przy użyciu programu Visual Studio
 
 W tym samouczku utworzysz prostą bibliotekę narzędzi, która zawiera pojedynczą metodę obsługi ciągów. Implementuje ją jako [metodę rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md) , aby można było wywołać ją tak, jakby była elementem członkowskim <xref:System.String> klasy.
+
+*Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas, która jest przeznaczona dla .NET Standard 2,0 umożliwia wywoływanie biblioteki przez dowolną implementację platformy .NET, która obsługuje tę wersję .NET Standard. Po zakończeniu biblioteki klas można ją rozpowszechnić jako składnik innej firmy lub jako składnik pakietu z jedną lub wieloma aplikacjami.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -28,13 +25,13 @@ W tym samouczku utworzysz prostą bibliotekę narzędzi, która zawiera pojedync
 
   Aby uzyskać więcej informacji, zobacz sekcję [Install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) w artykule [Instalowanie zestaw .NET Core SDK](../install/sdk.md?pivots=os-windows) .
 
-## <a name="create-a-visual-studio-solution"></a>Tworzenie rozwiązania programu Visual Studio
+## <a name="create-a-solution"></a>Tworzenie rozwiązania
 
 Zacznij od utworzenia pustego rozwiązania, aby umieścić projekt biblioteki klas w. Rozwiązanie programu Visual Studio służy jako kontener dla jednego lub wielu projektów. Dodasz kolejne powiązane projekty do tego samego rozwiązania.
 
 Aby utworzyć puste rozwiązanie:
 
-1. Otwórz program Visual Studio.
+1. Uruchom program Visual Studio.
 
 2. W oknie uruchamiania wybierz pozycję **Utwórz nowy projekt**.
 
@@ -75,7 +72,7 @@ Aby utworzyć puste rozwiązanie:
 
 ## <a name="add-a-console-app-to-the-solution"></a>Dodawanie aplikacji konsolowej do rozwiązania
 
-Użyj biblioteki klas w aplikacji konsolowej, która wyświetla użytkownikowi komunikat, aby wprowadzić ciąg i określić, czy ciąg rozpoczyna się od wielkiej litery.
+Dodaj aplikację konsolową, która używa biblioteki klas. Aplikacja wyświetli monit o wprowadzenie ciągu i zgłoszenie, czy ciąg rozpoczyna się od wielkiej litery.
 
 1. Dodaj nową aplikację konsolową .NET Core do rozwiązania.
 
@@ -87,18 +84,6 @@ Użyj biblioteki klas w aplikacji konsolowej, która wyświetla użytkownikowi k
 
    1. Na stronie **Konfiguruj nowy projekt** wprowadź wartość **Prezentacja** w polu **Nazwa projektu** . Następnie wybierz pozycję **Utwórz**.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **pokazu** i wybierz polecenie **Ustaw jako projekt startowy** w menu kontekstowym.
-
-   ![Menu kontekstowe projektu programu Visual Studio, aby ustawić projekt startowy](media/library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, Utwórz odwołanie do projektu do projektu biblioteki klas. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy `ShowCase` węzeł **zależności** projektu i wybierz polecenie **Dodaj odwołanie do projektu**.
-
-   ![Dodaj menu kontekstowe odwołania w programie Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
-
-1. W oknie dialogowym **Menedżer odwołań** wybierz projekt **StringLibrary** , a następnie wybierz **przycisk OK**.
-
-   ![Okno dialogowe programu Reference Manager z wybraną pozycją StringLibrary](media/library-with-visual-studio/manage-project-references.png)
-
 1. W oknie kodu dla pliku *program.cs* lub *program. vb* Zastąp cały kod następującym kodem.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
@@ -106,19 +91,42 @@ Użyj biblioteki klas w aplikacji konsolowej, która wyświetla użytkownikowi k
 
    Kod używa `row` zmiennej do obsługi liczby wierszy danych zapisywana w oknie konsoli. Za każdym razem, gdy jest większy lub równy 25, kod czyści okno konsoli i wyświetla komunikat dla użytkownika.
 
-   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz ENTER bez wprowadzania ciągu, aplikacja zostanie zakończona, a okno konsoli zostanie zamknięte.
+   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz <kbd>Enter</kbd> bez wprowadzania ciągu, aplikacja zostanie zakończona, a okno konsoli zostanie zamknięte.
 
-1. W razie potrzeby zmień pasek narzędzi w celu skompilowania wersji **debugowania** `ShowCase` projektu. Skompiluj i uruchom program, wybierając zieloną strzałkę na przycisku **Pokaz** .
+## <a name="add-a-project-reference"></a>Dodaj odwołanie do projektu
+
+Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, Utwórz odwołanie do projektu do projektu biblioteki klas.
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy `ShowCase` węzeł **zależności** projektu i wybierz polecenie **Dodaj odwołanie do projektu**.
+
+   ![Dodaj menu kontekstowe odwołania w programie Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. W oknie dialogowym **Menedżer odwołań** wybierz projekt **StringLibrary** , a następnie wybierz **przycisk OK**.
+
+   ![Okno dialogowe programu Reference Manager z wybraną pozycją StringLibrary](media/library-with-visual-studio/manage-project-references.png)
+
+## <a name="run-the-app"></a>Uruchomienie aplikacji
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **pokazu** i wybierz polecenie **Ustaw jako projekt startowy** w menu kontekstowym.
+
+   ![Menu kontekstowe projektu programu Visual Studio, aby ustawić projekt startowy](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. Naciśnij klawisz <kbd>SHIFT</kbd> + <kbd>F5</kbd> , aby skompilować i uruchomić program bez debugowania.
 
    ![Pasek narzędzi projektu programu Visual Studio z widocznym przyciskiem Debuguj](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. Wypróbuj program, wprowadzając ciągi i naciskając klawisz **Enter**, a następnie naciśnij klawisz **Enter** , aby wyjść.
+1. Wypróbuj program, wprowadzając ciągi i naciskając klawisz <kbd>Enter</kbd>, a następnie naciśnij klawisz <kbd>Enter</kbd> , aby wyjść.
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="Okno konsoli z uruchomionym pokazem":::
+
+## <a name="additional-resources"></a>Zasoby dodatkowe
+
+* [Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core](libraries.md)
+* [Wersje .NET Standard i obsługiwane przez nich platformy](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
 W tym samouczku utworzono rozwiązanie, dodano projekt biblioteki i dodano projekt aplikacji konsolowej, który używa biblioteki. W następnym samouczku dodasz projekt testu jednostkowego do rozwiązania.
 
 > [!div class="nextstepaction"]
-> [Testowanie biblioteki .NET Standard przy użyciu platformy .NET Core w programie Visual Studio](testing-library-with-visual-studio.md)
+> [Testowanie biblioteki .NET Standard za pomocą platformy .NET Core przy użyciu programu Visual Studio](testing-library-with-visual-studio.md)

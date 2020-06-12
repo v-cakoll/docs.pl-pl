@@ -2,12 +2,12 @@
 title: Windows Forms istotne zmiany
 description: Wyświetla listę istotnych zmian w Windows Forms dla platformy .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158440"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702471"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Istotne zmiany w Windows Forms
 
@@ -20,8 +20,9 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 | [Usunięto kontrolki paska stanu](#removed-status-bar-controls) | 5.0 |
 | [Metody WinForms teraz generują ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [Metody WinForms teraz generują ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
-| [Usunięte kontrolki](#removed-controls) | 3.1 |
-| [Zdarzenie CellFormatting nie zostało zgłoszone, jeśli jest wyświetlana etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Właściwości WinForms teraz generują wyjątku ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
+| [Usunięte kontrolki](#removed-controls) | 3,1 |
+| [Zdarzenie CellFormatting nie zostało zgłoszone, jeśli jest wyświetlana etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3,1 |
 | [Formant. DefaultFont został zmieniony na Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
 | [Modernizacja FolderBrowserDialog](#modernization-of-the-folderbrowserdialog) | 3.0 |
 | [SerializableAttribute usunięte z niektórych typów Windows Forms](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
@@ -47,6 +48,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
 
 ***
 
@@ -114,6 +119,6 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 
 ***
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Port aplikacji Windows Forms do programu .NET Core](../porting/winforms.md)

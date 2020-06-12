@@ -1,15 +1,15 @@
 ---
-title: Publikowanie aplikacji Hello world .NET Core przy użyciu Visual Studio Code
+title: Publikowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code
 description: Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji .NET Core.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246683"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701453"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core za pomocą Visual Studio Code
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code
 
 W tym samouczku pokazano, jak opublikować aplikację konsolową, tak aby inni użytkownicy mogli ją uruchomić. Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji. Aby wdrożyć pliki, skopiuj je na maszynę docelową.
 
@@ -21,7 +21,7 @@ Interfejs wiersza polecenia platformy .NET Core jest używany do publikowania ap
 
 ## <a name="publish-the-app"></a>Publikowanie aplikacji
 
-1. Otwórz program Visual Studio Code.
+1. Uruchom program Visual Studio Code.
 
 1. Otwórz folder projektu *HelloWorld* , który został utworzony w temacie [Tworzenie aplikacji konsolowej platformy .net Core w Visual Studio Code](with-visual-studio-code.md).
 
@@ -63,15 +63,15 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    W miarę wyświetlania obrazu opublikowane dane wyjściowe zawierają następujące pliki:
 
-   * *HelloWorld. deps. JSON*
+   * *HelloWorld.deps.jsna*
 
       Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-   * *HelloWorld. dll*
+   * *HelloWorld.dll*
 
       Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia. Ta metoda uruchamiania aplikacji działa na dowolnej platformie, na której zainstalowano środowisko uruchomieniowe platformy .NET Core.
 
-   * *HelloWorld. exe* (*HelloWorld* w systemie Linux, nie utworzono w witrynie macOS).
+   * *HelloWorld.exe* (*HelloWorld* w systemie Linux, nie utworzono w witrynie macOS).
 
       Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Plik działa w systemie operacyjnym.
 
@@ -79,13 +79,13 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
       Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
 
-   * *HelloWorld. runtimeconfig. JSON*
+   * *HelloWorld.runtimeconfig.jsna*
 
       To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="run-the-published-app"></a>Uruchom opublikowaną aplikację
 
-1. W **Eksploratorze**kliknij prawym przyciskiem myszy folder *Publikowanie* (lub <kbd>naciśnij klawisz Ctrl</kbd>i kliknij pozycję macOS), a następnie wybierz pozycję **Otwórz w terminalu**.
+1. W **Eksploratorze**kliknij prawym przyciskiem myszy folder *Publikowanie* (<kbd>kliknij</kbd>pozycję macOS), a następnie wybierz pozycję **Otwórz w terminalu**.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="Menu kontekstowe pokazujące otwarty w terminalu":::
 
@@ -103,16 +103,13 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 - [Wdrażanie aplikacji .NET Core](../deploying/index.md)
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku opublikowano aplikację konsolową. Aby dowiedzieć się, jak tworzyć biblioteki, zobacz [tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core](libraries.md).
-
-<!--In the next tutorial, you create a class library.
+W tym samouczku opublikowano aplikację konsolową. W następnym samouczku utworzysz bibliotekę klas.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Utwórz bibliotekę .NET Standard w programie Visual Studio dla komputerów Mac](library-with-visual-studio-mac.md)

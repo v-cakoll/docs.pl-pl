@@ -1,15 +1,15 @@
 ---
-title: Testowanie biblioteki klas .NET Standard przy użyciu platformy .NET Core w programie Visual Studio Code
+title: Testowanie biblioteki klas .NET Standard za pomocą platformy .NET Core przy użyciu Visual Studio Code
 description: Utwórz projekt testu jednostkowego dla biblioteki klas .NET Core. Sprawdź, czy biblioteka klas .NET Core działa prawidłowo z testami jednostkowymi.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292190"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701036"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Samouczek: testowanie biblioteki .NET Standard przy użyciu platformy .NET Core w programie Visual Studio Code
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Samouczek: testowanie biblioteki klas .NET Standard za pomocą platformy .NET Core przy użyciu Visual Studio Code
 
 W tym samouczku pokazano, jak zautomatyzować testy jednostkowe przez dodanie projektu testowego do rozwiązania.
 
@@ -19,7 +19,9 @@ W tym samouczku pokazano, jak zautomatyzować testy jednostkowe przez dodanie pr
 
 ## <a name="create-a-unit-test-project"></a>Tworzenie projektu testu jednostkowego
 
-1. Otwórz program Visual Studio Code.
+Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas opracowywania i publikowania. Platforma testowa używana w tym samouczku to MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) jest jednym z trzech platform testowych, spośród których można dokonać wyboru. Inne to [xUnit](https://xunit.net/) i [nunit](https://nunit.org/).
+
+1. Uruchom program Visual Studio Code.
 
 1. Otwórz `ClassLibraryProjects` rozwiązanie utworzone w temacie [tworzenie biblioteki .NET standard w programie Visual Studio](library-with-visual-studio.md).
 
@@ -55,16 +57,17 @@ W tym samouczku pokazano, jak zautomatyzować testy jednostkowe przez dodanie pr
 
    Każda metoda oznaczona przy użyciu elementu [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) w klasie testowej oznaczona przy użyciu elementu [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) jest wykonywana automatycznie, gdy test jednostkowy jest uruchamiany.
 
-   > [!NOTE]
-   > MSTest jest jednym z trzech platform testowych, spośród których można dokonać wyboru. Inne to xUnit i nUnit.
-
 1. Dodaj projekt testowy do rozwiązania.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Utwórz odwołanie do projektu biblioteki klas, uruchamiając następujące polecenie:
+## <a name="add-a-project-reference"></a>Dodaj odwołanie do projektu
+
+Aby projekt testowy mógł współpracował z `StringLibrary` klasą, Dodaj odwołanie w `StringLibraryTest` projekcie do `StringLibrary` projektu.
+
+1. Uruchom następujące polecenie:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ W testowaniu `StringLibrary.StartsWithUpper` metody, należy podać kilka ciąg�
 
 Ponieważ metoda biblioteki obsługuje ciągi, należy również upewnić się, że pomyślnie obsługuje [pusty ciąg ( `String.Empty` )](xref:System.String.Empty) i a i `null` ciąg. Pusty ciąg jest taki, który nie zawiera znaków i <xref:System.String.Length> ma wartość 0. `null`Ciąg to taki, który nie został zainicjowany. Można wywołać `StartsWithUpper` bezpośrednio jako metodę statyczną i przekazać pojedynczy <xref:System.String> argument. Lub można wywołać `StartsWithUpper` jako metodę rozszerzającą dla `string` zmiennej przypisanej do `null` .
 
-Zdefiniujesz trzy metody, z których każda wywołuje <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> metodę wielokrotnie dla każdego elementu w tablicy ciągów. Ponieważ metoda testowa nie powiedzie się po znalezieniu pierwszego błędu, wywoła Przeciążenie metody, które umożliwia przekazywanie ciągu, który wskazuje wartość ciągu używaną w wywołaniu metody.
+Zdefiniujesz trzy metody, z których każda wywołuje <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> metodę dla każdego elementu w tablicy ciągów. Wywołasz Przeciążenie metody, które pozwala określić komunikat o błędzie, który ma być wyświetlany w przypadku niepowodzenia testu. Komunikat identyfikuje ciąg, który spowodował awarię.
 
 Aby utworzyć metody testowe:
 
@@ -122,7 +125,7 @@ Aby utworzyć metody testowe:
 
 ## <a name="handle-test-failures"></a>Obsługa niepowodzeń testów
 
-Jeśli wykonujesz programowanie sterowane testami (TDD), najpierw napiszesz testy i nie powiodą się po raz pierwszy. Następnie dodasz kod do aplikacji, która pomyślnie testuje. W takim przypadku został utworzony test po zapisaniu kodu aplikacji, który jest weryfikowany, więc niepowodzenie testu nie powiodło się. Aby sprawdzić, czy test zakończy się niepowodzeniem, gdy spodziewasz się niepowodzeniem, Dodaj nieprawidłową wartość do danych wejściowych testu.
+Jeśli wykonujesz programowanie sterowane testami (TDD), najpierw napiszesz testy i nie powiodą się po raz pierwszy. Następnie dodasz kod do aplikacji, która pomyślnie testuje. Na potrzeby tego samouczka utworzono test po zapisaniu kodu aplikacji, który jest weryfikowany, więc niepowodzenie testu nie powiodło się. Aby sprawdzić, czy test zakończy się niepowodzeniem, gdy spodziewasz się niepowodzeniem, Dodaj nieprawidłową wartość do danych wejściowych testu.
 
 1. Zmodyfikuj `words` tablicę w `TestDoesNotStartWithUpper` metodzie, aby uwzględnić ciąg "Error".
 
@@ -137,7 +140,7 @@ Jeśli wykonujesz programowanie sterowane testami (TDD), najpierw napiszesz test
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   Dane wyjściowe terminalu pokazują, że jeden test zakończy się niepowodzeniem i zawiera komunikat o błędzie dla testu zakończonego niepowodzeniem.
+   Dane wyjściowe terminalu pokazują, że jeden test zakończy się niepowodzeniem i zawiera komunikat o błędzie dla testu zakończonego niepowodzeniem: "Assert. IsFalse nie powiodło się. Oczekiwano dla elementu "Error": false; rzeczywista: true ". Z powodu błędu nie przetestowano ciągów w tablicy po "błędzie".
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Jeśli wykonujesz programowanie sterowane testami (TDD), najpierw napiszesz test
    Total time: 1.7825 Seconds
    ```
 
-1. Cofnij modyfikację w kroku 1 i usuń ciąg "Error". Uruchom ponownie test i testy zakończone powodzeniem.
+1. Usuń ciąg "Error", który został dodany w kroku 1. Uruchom ponownie test i testy zakończone powodzeniem.
 
 ## <a name="test-the-release-version-of-the-library"></a>Testowanie wersji wydania biblioteki
 
-Teraz, gdy testy zostały zakończone, gdy uruchamiasz wersję debugową biblioteki, Uruchom testy w dodatkowym czasie względem kompilacji wydania biblioteki. Wiele czynników, w tym Optymalizacja kompilatora, może czasami generować różne zachowanie między kompilacjami w wersji Debug i Release.
+Teraz, gdy testy zostały zakończone przed uruchomieniem kompilacji biblioteki, należy uruchomić testy w dodatkowym czasie względem kompilacji wydania biblioteki. Wiele czynników, w tym Optymalizacja kompilatora, może czasami generować różne zachowanie między kompilacjami w wersji Debug i Release.
 
 1. Uruchom testy z konfiguracją kompilacji wydania:
 
@@ -173,7 +176,7 @@ Teraz, gdy testy zostały zakończone, gdy uruchamiasz wersję debugową bibliot
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- [Testy jednostkowe w .NET Core i .NET Standard](../testing/index.md)
+* [Testy jednostkowe w .NET Core i .NET Standard](../testing/index.md)
 
 ## <a name="next-steps"></a>Następne kroki
 

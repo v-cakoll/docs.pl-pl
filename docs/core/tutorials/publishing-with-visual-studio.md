@@ -1,21 +1,19 @@
 ---
-title: Publikowanie aplikacji Hello world .NET Core przy użyciu programu Visual Studio
+title: Publikowanie aplikacji konsolowej .NET Core przy użyciu programu Visual Studio
 description: Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji .NET Core.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241500"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701287"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core za pomocą programu Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Samouczek: publikowanie aplikacji konsolowej .NET Core przy użyciu programu Visual Studio
 
 W tym samouczku pokazano, jak opublikować aplikację konsolową, tak aby inni użytkownicy mogli ją uruchomić. Publikowanie tworzy zestaw plików, które są konieczne do uruchomienia aplikacji. Aby wdrożyć pliki, skopiuj je na maszynę docelową.
 
@@ -25,7 +23,11 @@ W tym samouczku pokazano, jak opublikować aplikację konsolową, tak aby inni u
 
 ## <a name="publish-the-app"></a>Publikowanie aplikacji
 
-1. Upewnij się, że program Visual Studio kompiluje wydaną wersję aplikacji. W razie potrzeby zmień ustawienie konfiguracji kompilacji na pasku narzędzi z **Debuguj** na **Release**.
+1. Uruchom program Visual Studio.
+
+1. Otwórz projekt *HelloWorld* , który został utworzony w temacie [Tworzenie aplikacji konsolowej platformy .NET Core w programie Visual Studio](with-visual-studio.md).
+
+1. Upewnij się, że program Visual Studio używa konfiguracji kompilacji wydania. W razie potrzeby zmień ustawienie konfiguracji kompilacji na pasku narzędzi z **Debuguj** na **Release**.
 
    ![Program Visual Studio Toolbar z wybraną kompilacją wydania](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ W tym samouczku pokazano, jak opublikować aplikację konsolową, tak aby inni u
 
 ## <a name="inspect-the-files"></a>Inspekcja plików
 
-Proces publikowania tworzy wdrożenie zależne od platformy, które jest typem wdrożenia, w którym jest uruchomiona opublikowana aplikacja na komputerze z zainstalowanym środowiskiem uruchomieniowym .NET Core. Użytkownicy mogą uruchamiać opublikowaną aplikację przez dwukrotne kliknięcie pliku wykonywalnego lub wydawanie `dotnet HelloWorld.dll` polecenia z wiersza polecenia.
+Domyślnie proces publikowania tworzy wdrożenie zależne od platformy, które jest typem wdrożenia, w którym jest uruchomiona opublikowana aplikacja na komputerze z zainstalowanym środowiskiem uruchomieniowym .NET Core. Użytkownicy mogą uruchamiać opublikowaną aplikację przez dwukrotne kliknięcie pliku wykonywalnego lub wydawanie `dotnet HelloWorld.dll` polecenia z wiersza polecenia.
 
 W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikowania.
 
@@ -59,15 +61,15 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    W miarę wyświetlania obrazu opublikowane dane wyjściowe zawierają następujące pliki:
 
-   * *HelloWorld. deps. JSON*
+   * *HelloWorld.deps.jsna*
 
       Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-   * *HelloWorld. dll*
+   * *HelloWorld.dll*
 
       Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia. Ta metoda uruchamiania aplikacji działa na dowolnej platformie, na której zainstalowano środowisko uruchomieniowe platformy .NET Core.
 
-   * *HelloWorld. exe*
+   * *HelloWorld.exe*
 
       Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Aby uruchomić tę opcję, wprowadź `HelloWorld.exe` w wierszu polecenia. Plik działa w systemie operacyjnym.
 
@@ -75,7 +77,7 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
       Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
 
-   * *HelloWorld. runtimeconfig. JSON*
+   * *HelloWorld.runtimeconfig.jsna*
 
       To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
@@ -83,7 +85,7 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy folder *Publikowanie* , a następnie wybierz polecenie **Kopiuj pełną ścieżkę**.
 
-1. Otwórz wiersz polecenia i przejdź do folderu *Publikowanie* . Wprowadź `cd` i wklej pełną ścieżkę. Przykład:
+1. Otwórz wiersz polecenia i przejdź do folderu *Publikowanie* . W tym celu wprowadź, `cd` a następnie wklej pełną ścieżkę. Na przykład:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
@@ -101,7 +103,7 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    1. Wprowadź nazwę w odpowiedzi na monit, a następnie naciśnij dowolny klawisz, aby wyjść.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 - [Wdrażanie aplikacji .NET Core](../deploying/index.md)
 

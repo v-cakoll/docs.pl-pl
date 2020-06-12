@@ -1,13 +1,13 @@
 ---
-title: Debugowanie aplikacji konsolowej .NET Core za pomocą Visual Studio Code
-description: Dowiedz się, jak debugować aplikację konsolową .NET Core za pomocą Visual Studio Code.
+title: Debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code
+description: Dowiedz się, jak debugować aplikację konsolową .NET Core przy użyciu Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241516"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702130"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Samouczek: debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code
 
@@ -19,25 +19,25 @@ W tym samouczku przedstawiono narzędzia debugowania dostępne w Visual Studio C
 
 ## <a name="use-debug-build-configuration"></a>Użyj konfiguracji kompilacji debugowania
 
-*Debugowanie* i *wydanie* są dwoma konfiguracjami kompilacji programu .NET Core. Konfiguracja kompilacji debugowania umożliwia debugowanie i konfigurację wydania dla ostatecznej dystrybucji wersji.
+*Debugowanie* i *wydanie* to wbudowane konfiguracje kompilacji platformy .NET Core. Konfiguracja kompilacji debugowania umożliwia debugowanie i konfigurację wydania dla ostatecznej dystrybucji wersji.
 
 W konfiguracji debugowania program kompiluje z pełnymi symbolicznymi informacjami o debugowaniu i bez optymalizacji. Optymalizacja komplikuje debugowanie, ponieważ relacja między kodem źródłowym i wygenerowanymi instrukcjami jest bardziej skomplikowana. Konfiguracja wydania programu nie ma symbolicznych informacji o debugowaniu i jest w pełni zoptymalizowana.
 
- Domyślnie Visual Studio Code używa konfiguracji kompilacji debugowania, więc nie trzeba jej zmieniać przed debugowaniem.
+Domyślnie ustawienia uruchamiania Visual Studio Code używają konfiguracji kompilacji debugowania, więc nie trzeba jej zmieniać przed debugowaniem.
+
+1. Uruchom program Visual Studio Code.
+
+1. Otwórz folder projektu, który został utworzony w temacie [Tworzenie aplikacji konsolowej platformy .NET Core w Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="set-a-breakpoint"></a>Ustawianie punktu przerwania
 
-Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
-
-1. Otwórz program Visual Studio Code.
-
-1. Otwórz folder projektu *HelloWorld* , który został utworzony w temacie [Tworzenie aplikacji konsolowej platformy .net Core w Visual Studio Code](with-visual-studio-code.md).
+*Punkt przerwania* tymczasowo przerywa wykonywanie aplikacji przed wykonaniem wiersza z punktem przerwania.
 
 1. Otwórz plik *program.cs* .
 
-1. Ustaw *punkt przerwania* w wierszu, który wyświetla nazwę, datę i godzinę, klikając na lewym marginesie okna kod. Lewy margines znajduje się po lewej stronie numerów wierszy. Innym sposobem ustawienia punktu przerwania jest umieszczenie kursora w wierszu kodu, a następnie naciśnięcie klawisza <kbd>F9</kbd>.
+1. Ustaw *punkt przerwania* w wierszu, który wyświetla nazwę, datę i godzinę, klikając na lewym marginesie okna kod. Lewy margines znajduje się po lewej stronie numerów wierszy. Innymi sposobami ustawiania punktu przerwania są naciśnięcie klawisza <kbd>F9</kbd> lub wybranie opcji **Uruchom**  >  **przełączanie punktu przerwania** z menu podczas wybierania wiersza kodu.
 
-   Jak pokazano na poniższej ilustracji, Visual Studio Code wskazuje wiersz, w którym jest ustawiony punkt przerwania, wyświetlając czerwoną kropkę na lewym marginesie.
+   Visual Studio Code wskazuje wiersz, w którym jest ustawiony punkt przerwania, wyświetlając czerwoną kropkę na lewym marginesie.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-set.png" alt-text="Zestaw punktów przerwania":::
 
@@ -45,7 +45,7 @@ Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wi
 
 Punkt przerwania znajduje się po `Console.ReadLine` wywołaniu metody. **Konsola debugowania** nie akceptuje danych wejściowych terminalu dla uruchomionego programu. Aby obsłużyć dane wejściowe terminalu podczas debugowania, można użyć zintegrowanego terminalu (jednego z Visual Studio Code systemu Windows) lub terminalu zewnętrznego. W tym samouczku użyjesz zintegrowanego terminalu.
 
-1. Otwórz plik *. programu vscode/Launch. JSON*.
+1. Otwórz *. programu vscode/launch.jsw systemie*.
 
 1. Zmień `console` ustawienie na `integratedTerminal` .
 
@@ -69,7 +69,7 @@ Punkt przerwania znajduje się po `Console.ReadLine` wywołaniu metody. **Konsol
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Otwórz kartę debugowanie w Visual Studio Code":::
 
-1. Rozpocznij debugowanie, wybierając zieloną strzałkę w górnej części okienka, obok pozycji **.NET Core Launch (konsola)**.  Innym sposobem rozpoczęcia debugowania jest naciśnięcie klawisza <kbd>F5</kbd>.
+1. Wybierz zieloną strzałkę w górnej części okienka, obok pozycji **.NET Core Launch (konsola)**. Innym sposobem uruchomienia programu w trybie debugowania jest wybranie polecenia **Uruchom**  >  **debugowanie** z menu.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Rozpocznij debugowanie":::
 
@@ -83,7 +83,7 @@ Punkt przerwania znajduje się po `Console.ReadLine` wywołaniu metody. **Konsol
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-hit.png" alt-text="Trafienie punktu przerwania, Wyświetlanie ustawień lokalnych":::
 
-## <a name="change-variable-values"></a>Zmień wartości zmiennych
+## <a name="use-the-debug-console"></a>Korzystanie z konsoli debugowania
 
 Okno **konsoli debugowania** umożliwia korzystanie z debugowanej aplikacji. Można zmienić wartość zmiennych, aby zobaczyć, jak ma to wpływ na program.
 
@@ -113,7 +113,7 @@ Okno **konsoli debugowania** umożliwia korzystanie z debugowanej aplikacji. Mo�
 
 Program wyświetla ciąg wprowadzony przez użytkownika. Co się stanie, jeśli użytkownik nie wprowadzi niczego? Można to sprawdzić za pomocą przydatnej funkcji debugowania zwanej *warunkowym punktem przerwania*.
 
-1. Kliknij prawym przyciskiem myszy (<kbd>Ctrl</kbd>+ kliknięcie na macOS) w czerwonej kropki, która reprezentuje punkt przerwania. W menu kontekstowym wybierz pozycję **Edytuj punkt przerwania** , aby otworzyć okno dialogowe, które umożliwia wprowadzenie wyrażenia warunkowego.
+1. Kliknij prawym przyciskiem myszy (<kbd>Ctrl</kbd>-kliknięcie macOS) na czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **Edytuj punkt przerwania** , aby otworzyć okno dialogowe, które umożliwia wprowadzenie wyrażenia warunkowego.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-context-menu.png" alt-text="Menu kontekstowe punktu przerwania":::
 
@@ -127,7 +127,7 @@ Program wyświetla ciąg wprowadzony przez użytkownika. Co się stanie, jeśli 
 
    Za każdym razem, gdy punkt przerwania został trafiony, debuger wywołuje `String.IsNullOrEmpty(name)` metodę i przerywa w tym wierszu tylko wtedy, gdy wywołanie metody zwróci wartość `true` .
 
-   Zamiast wyrażenia warunkowego można określić *liczbę trafień*, która przerywa wykonywanie programu, zanim instrukcja zostanie wykonana określoną liczbę razy lub *warunek filtru*, który przerywa wykonywanie programu w oparciu o takie atrybuty jak identyfikator wątku, nazwa procesu lub nazwa wątku.
+   Zamiast wyrażenia warunkowego można określić *liczbę trafień*, która przerywa wykonywanie programu, zanim instrukcja zostanie wykonana określoną liczbę razy. Innym rozwiązaniem jest określenie *warunku filtru*, który przerywa wykonywanie programu w oparciu o takie atrybuty jak identyfikator wątku, nazwa procesu lub nazwa wątku.
 
 1. Uruchom program z debugowaniem, naciskając klawisz <kbd>F5</kbd>.
 
@@ -149,7 +149,7 @@ Program wyświetla ciąg wprowadzony przez użytkownika. Co się stanie, jeśli 
 
 1. Wybierz kartę **Terminal** i naciśnij dowolny klawisz, aby wyjść z programu i zatrzymać debugowanie.
 
-1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kod. Innym sposobem na wyczyszczenie punktu przerwania jest naciśnięcie klawisza <kbd>F9</kbd> podczas wybierania wiersza kodu.
+1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kod. Innymi sposobami czyszczenia punktu przerwania są naciśnięcie klawisza <kbd>F9</kbd> lub wybranie polecenia **Uruchom > Przełącz punkt przerwania** z menu podczas wybierania wiersza kodu.
 
 1. Jeśli zostanie wyświetlone ostrzeżenie, że warunek punktu przerwania zostanie utracony, wybierz pozycję **Usuń punkt przerwania**.
 
@@ -165,17 +165,17 @@ Visual Studio Code umożliwia również krok po kroku w wierszu przez program i 
 
    W tym momencie okno **zmienne** pokazuje, że `args` Tablica jest pusta i `name` i `date` ma wartości domyślne.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Przycisk "krok po kroku"":::
 
    Visual Studio Code podświetla następny wiersz.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    Visual Studio Code wykonuje `Console.WriteLine` monit o podanie nazwy i wyróżnia następny wiersz wykonania. Następnym wierszem jest `Console.ReadLine` `name` . Okno **zmiennych** jest niezmienione, a na karcie **terminala** zostanie wyświetlona wartość "co to jest Twoja nazwa?" pytać.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    Program Visual Studio podświetla `name` przypisanie zmiennej. Okno **zmienne** pokazuje, że `name` jest nadal `null` .
 
@@ -183,19 +183,19 @@ Visual Studio Code umożliwia również krok po kroku w wierszu przez program i 
 
    Na karcie **terminala** może nie być wyświetlany ciąg wprowadzony podczas jego wprowadzania, ale <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> Metoda przechwytuje dane wejściowe.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    Visual Studio Code podświetla `date` przypisanie zmiennej. Okno **zmienne** pokazuje wartość zwracaną przez wywołanie <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> metody. Na karcie **Terminal** zostanie wyświetlony ciąg wprowadzony w wierszu polecenia.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    Okno **zmienne** zawiera wartość `date` zmiennej po przypisaniu z <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości.
 
-1. Wybierz pozycję **Wkrocz** lub naciśnij klawisz <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **krok do** lub naciśnij klawisz <kbd>F11</kbd>.
 
    Visual Studio Code wywołuje <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> metodę. W oknie konsoli zostanie wyświetlony sformatowany ciąg.
 
-1. Wybierz pozycję **Wyjdź** lub naciśnij klawisz <kbd>SHIFT</kbd> + <kbd>F11</kbd>.
+1. Wybierz pozycję **Uruchom**  >  **Wyjdź** lub naciśnij klawisz <kbd>SHIFT</kbd> + <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="Przycisk krok po kroku":::
 
@@ -205,7 +205,7 @@ Visual Studio Code umożliwia również krok po kroku w wierszu przez program i 
 
 1. Naciśnij dowolny klawisz, aby wyjść z programu.
 
-## <a name="select-release-build-configuration"></a>Wybierz konfigurację kompilacji wydania
+## <a name="use-release-build-configuration"></a>Użyj konfiguracji kompilacji wydania
 
 Po przetestowaniu wersji debugowania aplikacji należy również skompilować i przetestować wersję publikacji. Wersja wydania obejmuje optymalizacje kompilatora, które mogą mieć wpływ na zachowanie aplikacji. Na przykład optymalizacje kompilatora, które mają na celu poprawę wydajności, mogą tworzyć sytuacje wyścigu w aplikacjach wielowątkowych.
 
@@ -215,7 +215,7 @@ Aby skompilować i przetestować wydaną wersję aplikacji konsolowej, Otwórz *
 dotnet run --configuration Release
 ```
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 * [Debugowanie w Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
 

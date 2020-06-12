@@ -1,17 +1,17 @@
 ---
-title: Tworzenie aplikacji konsolowej z platformą .NET Core przy użyciu Visual Studio Code
+title: Tworzenie aplikacji konsolowej platformy .NET Core przy użyciu Visual Studio Code
 description: Dowiedz się, jak utworzyć aplikację konsolową .NET Core przy użyciu Visual Studio Code i interfejs wiersza polecenia platformy .NET Core.
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201703"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717513"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>Samouczek: Tworzenie aplikacji konsolowej z platformą .NET Core przy użyciu Visual Studio Code
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Samouczek: Tworzenie aplikacji konsolowej platformy .NET Core przy użyciu Visual Studio Code
 
-W tym samouczku pokazano, jak utworzyć i uruchomić aplikację konsolową .NET Core przy użyciu Visual Studio Code i interfejs wiersza polecenia platformy .NET Core. Zadania projektu, takie jak tworzenie, kompilowanie i uruchamianie projektu, są wykonywane za pomocą interfejsu wiersza polecenia, więc można wykonać kroki tego samouczka z innym edytorem kodu i uruchamiać polecenia w terminalu, jeśli wolisz.
+W tym samouczku pokazano, jak utworzyć i uruchomić aplikację konsolową .NET Core przy użyciu Visual Studio Code i interfejs wiersza polecenia platformy .NET Core. Zadania projektu, takie jak tworzenie, kompilowanie i uruchamianie projektu, są wykonywane przy użyciu interfejs wiersza polecenia platformy .NET Core. Możesz wykonać czynności opisane w tym samouczku z innym edytorem kodu i uruchamiać polecenia w terminalu, jeśli wolisz.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -20,25 +20,29 @@ W tym samouczku pokazano, jak utworzyć i uruchomić aplikację konsolową .NET 
 
 ## <a name="create-the-app"></a>Tworzymy aplikację.
 
-1. Otwórz program Visual Studio Code.
+Utwórz projekt aplikacji konsolowej .NET Core o nazwie "HelloWorld".
 
-1. Utwórz projekt.
+1. Uruchom program Visual Studio Code.
 
-   1. Wybierz pozycję **plik**  >  **Otwórz folder** / **Otwórz...** z menu głównego, Utwórz folder *HelloWorld* , a następnie kliknij pozycję **Wybierz folder** / **Otwórz**.
+1. Wybierz pozycję **plik**  >  **Otwórz folder** (Otwórz**plik**  >  **...** na macOS) z menu głównego.
 
-      Nazwa folderu domyślnie zmienia nazwę projektu i nazwę przestrzeni nazw. Kod zostanie dodany później w samouczku, który zakłada, że przestrzeń nazw projektu to `HelloWorld` .
+1. W oknie dialogowym **Otwieranie folderu** Utwórz folder *HelloWorld* i kliknij pozycję **Wybierz folder** (**Otwórz** w macOS).
 
-   1. Otwórz **Terminal** w Visual Studio Code, wybierając pozycję **Wyświetl**  >  **Terminal** z menu głównego.
+   Nazwa folderu domyślnie zmienia nazwę projektu i nazwę przestrzeni nazw. Kod zostanie dodany później w samouczku, który zakłada, że przestrzeń nazw projektu to `HelloWorld` .
 
-      Zostanie otwarty **Terminal** z wierszem polecenia w folderze *HelloWorld* .
+1. Otwórz **Terminal** w Visual Studio Code, wybierając pozycję **Wyświetl**  >  **Terminal** z menu głównego.
 
-   1. W **terminalu**wprowadź następujące polecenie:
+   Zostanie otwarty **Terminal** z wierszem polecenia w folderze *HelloWorld* .
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. W **terminalu**wprowadź następujące polecenie:
 
-Szablon aplikacji konsoli dla platformy .NET Core definiuje klasę, `Program` przy użyciu pojedynczej metody, `Main` która pobiera <xref:System.String> tablicę jako argument. Plik *program.cs* ma następujący kod:
+   ```dotnetcli
+   dotnet new console
+   ```
+
+Szablon tworzy prostą aplikację "Hello world". Wywołuje metodę, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> Aby wyświetlić "Hello World!" w oknie konsoli.
+
+Kod szablonu definiuje klasę, `Program` przy użyciu pojedynczej metody, `Main` która przyjmuje <xref:System.String> tablicę jako argument:
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main`jest punktem wejścia aplikacji, metoda, która jest wywoływana automatycznie przez środowisko uruchomieniowe podczas uruchamiania aplikacji. Wszystkie argumenty wiersza polecenia dostarczone podczas uruchamiania aplikacji są dostępne w tablicy *args* .
-
-Szablon tworzy prostą aplikację, która wywołuje <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metodę, aby wyświetlić "Hello World!" w oknie konsoli.
 
 ## <a name="run-the-app"></a>Uruchomienie aplikacji
 
@@ -85,11 +87,11 @@ Podnieś poziom aplikacji, aby monitować użytkownika o jego nazwę i wyświetl
 
    ![Monituj o brakujące zasoby](media/with-visual-studio-code/missing-assets.png)
 
-1. Zastąp zawartość `Main` metody w *program.cs*, która jest obecnie tylko wierszem, który wywołuje `Console.WriteLine` , przy użyciu następującego kodu:
+1. Zastąp zawartość `Main` metody w *program.cs*, która jest wierszem, który wywołuje `Console.WriteLine` , przy użyciu następującego kodu:
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz **Enter** . Ten ciąg jest przechowywany w zmiennej o nazwie `name` . Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `date` . Na koniec wyświetla te wartości w oknie konsoli.
+   Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz <kbd>Enter</kbd> . Ten ciąg jest przechowywany w zmiennej o nazwie `name` . Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `date` . Na koniec wyświetla te wartości w oknie konsoli.
 
    `\n`Reprezentuje znak nowego wiersza.
 
@@ -106,7 +108,7 @@ Podnieś poziom aplikacji, aby monitować użytkownika o jego nazwę i wyświetl
    dotnet run
    ```
 
-1. Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz **Enter** .
+1. Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz <kbd>Enter</kbd> .
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Okno terminalu ze zmodyfikowanym wyjściem programu":::
 
@@ -118,7 +120,7 @@ Podnieś poziom aplikacji, aby monitować użytkownika o jego nazwę i wyświetl
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku utworzono aplikację .NET Core. W następnym samouczku debugujesz aplikację.
+W tym samouczku utworzono aplikację konsolową .NET Core. W następnym samouczku debugujesz aplikację.
 
 > [!div class="nextstepaction"]
 > [Debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio Code](debugging-with-visual-studio-code.md)

@@ -1,22 +1,19 @@
 ---
-title: Tworzenie biblioteki klas .NET Standard w Visual Studio Code
+title: Tworzenie biblioteki klas .NET Standard przy użyciu Visual Studio Code
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard przy użyciu Visual Studio Code.
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446955"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701802"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Samouczek: Tworzenie biblioteki .NET Standard w programie Visual Studio Code
-
-*Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas, która jest przeznaczona dla .NET Standard 2,0 umożliwia wywoływanie biblioteki przez dowolną implementację platformy .NET, która obsługuje tę wersję .NET Standard. Po zakończeniu biblioteki klas można zdecydować, czy chcesz ją rozpowszechnić jako pakiet NuGet, czy dołączyć jako składnik pakietu z co najmniej jedną aplikacjami.
-
-> [!NOTE]
-> Listę wersji .NET Standard i obsługiwanych przez nich platform można znaleźć w temacie [.NET Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Samouczek: Tworzenie biblioteki .NET Standard przy użyciu Visual Studio Code
 
 W tym samouczku utworzysz prostą bibliotekę narzędzi, która zawiera pojedynczą metodę obsługi ciągów. Implementuje ją jako [metodę rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md) , aby można było wywołać ją tak, jakby była elementem członkowskim <xref:System.String> klasy.
+
+*Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas, która jest przeznaczona dla .NET Standard 2,0 umożliwia wywoływanie biblioteki przez dowolną implementację platformy .NET, która obsługuje tę wersję .NET Standard. Po zakończeniu biblioteki klas można ją rozpowszechnić jako składnik innej firmy lub jako składnik pakietu z jedną lub wieloma aplikacjami.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -27,9 +24,11 @@ W tym samouczku utworzysz prostą bibliotekę narzędzi, która zawiera pojedync
 
 Zacznij od utworzenia pustego rozwiązania, aby umieścić projekt biblioteki klas w. Rozwiązanie służy jako kontener dla jednego lub wielu projektów. Dodasz kolejne powiązane projekty do tego samego rozwiązania.
 
-1. Otwórz program Visual Studio Code.
+1. Uruchom program Visual Studio Code.
 
-1. Wybierz pozycję **plik**  >  **Otwórz folder** / **Otwórz...** z menu głównego, Utwórz folder *ClassLibraryProjects* , a następnie kliknij pozycję **Wybierz folder** / **Otwórz**.
+1. Wybierz pozycję **plik**  >  **Otwórz folder** (**Otwórz...** na macOS) z menu głównego
+
+1. W oknie dialogowym **Otwieranie folderu** Utwórz folder *ClassLibraryProjects* , a następnie kliknij pozycję **Wybierz folder** (**Otwórz** w macOS).
 
 1. Otwórz **Terminal** w Visual Studio Code, wybierając pozycję **Wyświetl**  >  **Terminal** z menu głównego.
 
@@ -156,7 +155,21 @@ Dodaj aplikację konsolową, która używa biblioteki klas. Aplikacja wyświetli
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, Utwórz odwołanie do projektu do projektu biblioteki klas, uruchamiając następujące polecenie:
+1. Otwórz *Pokaz/Program. cs* i Zastąp cały kod następującym kodem.
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   Kod używa `row` zmiennej do obsługi liczby wierszy danych zapisywana w oknie konsoli. Za każdym razem, gdy jest większy lub równy 25, kod czyści okno konsoli i wyświetla komunikat dla użytkownika.
+
+   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz <kbd>Enter</kbd> bez wprowadzania ciągu, aplikacja zostanie zakończona, a okno konsoli zostanie zamknięte.
+
+1. Zapisz zmiany.
+
+## <a name="add-a-project-reference"></a>Dodaj odwołanie do projektu
+
+Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas. Aby zezwolić na wywoływanie metod w bibliotece klas, Utwórz odwołanie do projektu do projektu biblioteki klas.
+
+1. Uruchom następujące polecenie:
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ Dodaj aplikację konsolową, która używa biblioteki klas. Aplikacja wyświetli
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. Otwórz *Pokaz/Program. cs* i Zastąp cały kod następującym kodem.
+## <a name="run-the-app"></a>Uruchomienie aplikacji
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   Kod używa `row` zmiennej do obsługi liczby wierszy danych zapisywana w oknie konsoli. Za każdym razem, gdy jest większy lub równy 25, kod czyści okno konsoli i wyświetla komunikat dla użytkownika.
-
-   Program poprosi użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się od wielkiej litery. Jeśli użytkownik naciśnie klawisz ENTER bez wprowadzania ciągu, aplikacja zostanie zakończona, a okno konsoli zostanie zamknięte.
-
-1. Zapisz zmiany.
-
-1. Uruchom program.
+1. Uruchom następujące polecenie w terminalu:
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,10 +208,11 @@ Dodaj aplikację konsolową, która używa biblioteki klas. Aplikacja wyświetli
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
 * [Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core](libraries.md)
+* [Wersje .NET Standard i obsługiwane przez nich platformy](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
 W tym samouczku utworzono rozwiązanie, dodano projekt biblioteki i dodano projekt aplikacji konsolowej, który używa biblioteki. W następnym samouczku dodasz projekt testu jednostkowego do rozwiązania.
 
 > [!div class="nextstepaction"]
-> [Testowanie biblioteki .NET Standard przy użyciu platformy .NET Core w programie Visual Studio Code](testing-library-with-visual-studio-code.md)
+> [Testowanie biblioteki .NET Standard za pomocą platformy .NET Core przy użyciu Visual Studio Code](testing-library-with-visual-studio-code.md)

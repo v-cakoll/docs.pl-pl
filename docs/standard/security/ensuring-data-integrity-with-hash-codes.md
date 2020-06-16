@@ -1,5 +1,6 @@
 ---
 title: Zapewnianie integralności danych za pomocą wartości skrótu
+description: Dowiedz się, jak zapewnić integralność danych przy użyciu kodów skrótu w programie .NET. Wartość skrótu to wartość liczbowa o stałej długości, która jednoznacznie identyfikuje dane.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 4938cd75af32caa4f9da6ed682f18e9f6c73ad5b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ffc5e78228f4e7c56febdc0872a0bc0fc581f162
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288345"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769057"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Zapewnianie integralności danych za pomocą wartości skrótu
 Wartość skrótu to wartość liczbowa o stałej długości, która jednoznacznie identyfikuje dane. Wartości skrótu przedstawiają duże ilości danych jako dużo mniejsze wartości liczbowe, dlatego są używane z podpisami cyfrowymi. Wartość skrótu można podpisywać bardziej wydajnie niż podpisywanie większej wartości. Wartości skrótu są również przydatne do sprawdzania integralności danych wysyłanych za pomocą niezabezpieczonych kanałów. Wartość skrótu odebranych danych może być porównywana z wartością skrótu danych, która została wysłana w celu określenia, czy dane zostały zmienione.  
@@ -58,6 +59,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Usługi kryptograficzne](cryptographic-services.md)

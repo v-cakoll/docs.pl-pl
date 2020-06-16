@@ -1,5 +1,6 @@
 ---
 title: Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
+description: Twórz aplikacje i biblioteki dla wielu platform na platformach firmy Microsoft szybko i łatwo przy użyciu typu projektu Biblioteka klas przenośnych w programie .NET.
 ms.date: 09/17/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-ms.openlocfilehash: 033c9bc6e506d0ae2b9f20fedb72d1b7f29e434b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: be1a49f7da7ce98f9e5e3ff8d927ce5230bfa8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288917"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769148"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform za pomocą przenośnej biblioteki klas
 
@@ -82,7 +83,7 @@ Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu bi
 
 Aby uzyskać więcej informacji na temat wdrażania aplikacji .NET Framework, zobacz [Przewodnik wdrażania dla deweloperów](../../framework/deployment/deployment-guide-for-developers.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Korzystanie z przenośnej biblioteki klas z modelem MVVM](using-portable-class-library-with-model-view-view-model.md)
 - [Zasoby aplikacji dla bibliotek przeznaczonych dla wielu platform](app-resources-for-libraries-that-target-multiple-platforms.md)

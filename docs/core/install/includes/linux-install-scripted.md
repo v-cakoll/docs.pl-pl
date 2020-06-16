@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 0d29407896145bc3b2ed8284c839ae8f2f0521b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fb78e1439a680a8dbb9fc0eb8afdeee3efef7ead
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602951"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768403"
 ---
 
-[Skrypty programu dotnet-Install](../../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i instalacji nienależących do administratora **zestawu SDK**. Skrypt można pobrać z programu <https://dot.net/v1/dotnet-install.sh> .
+[Skrypty dotnet-Install](../../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i nieadministracyjnych instalacji **zestawu SDK** i **środowiska uruchomieniowego**. Skrypt można pobrać z programu <https://dot.net/v1/dotnet-install.sh> .
 
-Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 3,1. Aby zainstalować bieżącą wersję, która nie może być wersją (LTS), użyj `-c Current` parametru.
+Skrypt domyślnie instaluje najnowszą wersję programu [obsługi długoterminowej (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) zestawu SDK, która jest .net Core 3,1. Aby zainstalować bieżącą wersję, która nie może być wersją (LTS), użyj `-c Current` parametru.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -18,7 +18,7 @@ Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platfo
 Aby zainstalować środowisko uruchomieniowe platformy .NET Core zamiast zestawu SDK, użyj `--runtime` parametru.
 
 ```bash
-./dotnet-install.sh -c Current --runtime
+./dotnet-install.sh -c Current --runtime aspnetcore
 ```
 
 Określoną wersję można zainstalować, zmieniając `-c` parametr w celu wskazania określonej wersji. Następujące polecenie instaluje zestaw .NET Core SDK 3,1.

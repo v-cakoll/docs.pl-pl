@@ -1,5 +1,6 @@
 ---
 title: Zabezpieczenia w .NET
+description: Dowiedz się więcej o zabezpieczeniach w programie .NET. Obserwuj linki opisujące podstawowe koncepcje zabezpieczeń, zabezpieczenia oparte na rolach, model kryptograficzny i wytyczne dotyczące bezpiecznego kodowania.
 ms.date: 06/04/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 2e4c289d7049fb587cdc9a4928f98852483fde5f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 21511b580a4f922d2aef04cc79f5d551f0406b45
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705996"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767822"
 ---
 # <a name="security-in-net"></a>Zabezpieczenia w .NET
 
@@ -36,5 +37,5 @@ W tym artykule opisano niektóre najlepsze rozwiązania dotyczące tworzenia nie
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Podręcznik programowania](../../framework/development-guide.md)  
+[Przewodnik programowania](../../framework/development-guide.md)  
 Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.

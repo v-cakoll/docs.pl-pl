@@ -1,6 +1,6 @@
 ---
 title: System typu wspólnego
-description: Dowiedz się więcej o systemie typów w programie .NET.
+description: Eksploruj system typów w programie .NET. Przeczytaj informacje o typach w programie .NET (typy wartości lub typy odwołań), definicji typów, elementach członkowskich typu i charakterystyce typu elementu członkowskiego.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289346"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767835"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 
@@ -304,8 +304,8 @@ Wspólny system typów definiuje, w jaki sposób typy są zadeklarowane, używan
   
 - Typ pochodny może przesłonić dziedziczonej metody wirtualnej. Metoda przesłaniania zapewnia nową definicję metody, która będzie wywoływana na podstawie typu wartości w czasie wykonywania, a nie typu zmiennej znanej w czasie kompilacji. Metoda może przesłonić metodę wirtualną tylko wtedy, gdy metoda wirtualna nie jest oznaczona jako `final` i Nowa metoda jest co najmniej równa dostępności jako metoda wirtualna.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przeglądarka interfejsów API platformy .NET](/dotnet/api)
+- [Przeglądarka interfejsów API na platformie .NET](/dotnet/api)
 - [środowiska uruchomieniowe w trakcie wykonania](../clr.md)
 - [Konwersja typów w programie .NET](type-conversion.md)

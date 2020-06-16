@@ -1,5 +1,6 @@
 ---
 title: 'Przewodnik: Tworzenie potoku przepływu danych'
+description: Utwórz potok przepływu danych, który jest serią składników lub bloków przepływu danych. Blok przepływu danych wykonuje określone zadanie w celu współtworzenia większego celu.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284614"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767874"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Przewodnik: Tworzenie potoku przepływu danych
 Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> metod, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> do odbierania komunikatów z bloków źródłowych, można także połączyć bloki komunikatów, aby utworzyć *potok przepływu danych*. Potok przepływu danych to szereg składników lub *bloków przepływu danych*, z których każdy wykonuje konkretne zadanie, które przyczynia się do większego celu. Każdy blok przepływu danych w potoku przepływu danych wykonuje działanie, gdy odbierze komunikat z innego bloku przepływu danych. Analogicznie do tego jest linia montażowa dla produkcji samochodów. Gdy każdy pojazd przechodzi przez linię zestawu, jedna stacja składa się z ramki, a następna z nich instaluje aparat i tak dalej. Ponieważ linia zestawu umożliwia łączenie wielu pojazdów w tym samym czasie, zapewnia lepszą przepływność niż Montaż kompletnych pojazdów pojedynczo.

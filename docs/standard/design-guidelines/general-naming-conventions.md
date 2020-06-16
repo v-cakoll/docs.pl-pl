@@ -1,5 +1,6 @@
 ---
 title: Ogólne konwencje nazewnictwa
+description: Użyj ogólnych konwencji nazewnictwa dotyczących wyboru wyrazów, wytycznych dotyczących używania skrótów i akronimów oraz wskazówki dotyczące unikania nazw specyficznych dla języka.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290957"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769083"
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
 
@@ -64,16 +65,16 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybo
 |**Bajc**|**Bajc**|**unsigned char**|**Bajc**|
 |**short**|**Wybierak**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Całkowitą**|**int**|**Int32**|
+|**int**|**Liczba całkowita**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**długi**|**Długo**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**__int64 bez znaku**|**UInt64**|
 |**float**|**Single**|**float**|**Single**|
 |**double**|**Double**|**double**|**Double**|
-|**bool**|**Boolean (wartość logiczna)**|**bool**|**Boolean (wartość logiczna)**|
+|**bool**|**Wartość logiczna**|**bool**|**Wartość logiczna**|
 |**char**|**Delikatn**|**wchar_t**|**Delikatn**|
-|**ciąg**|**Ciąg**|**Ciąg**|**Ciąg**|
-|**object**|**Stream**|**Stream**|**Stream**|
+|**parametry**|**Ciąg**|**Ciąg**|**Ciąg**|
+|**Stream**|**Obiekt**|**Obiekt**|**Obiekt**|
 
  ✔️ używać nazwy pospolitej, takiej jak `value` lub `item` , zamiast powtarzania nazwy typu, w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego i typ parametru jest nieważny.
 
@@ -98,7 +99,7 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybo
 
  *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Framework — zalecenia dotyczące projektowania](index.md)
 - [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

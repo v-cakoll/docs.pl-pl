@@ -1,5 +1,6 @@
 ---
 title: Wątki pierwszego planu i tła
+description: Określ lub Zmień, czy wątek jest wątkiem w tle, czy też wątkiem pierwszego planu przy użyciu właściwości Thread. IsBackground w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-ms.openlocfilehash: 5e7ec9e2c2a5ba3de1b4518cea15eb5f512640d3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cb7a92851728e16f4a317d6c24d072acee72a94
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279688"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769044"
 ---
 # <a name="foreground-and-background-threads"></a>Wątki pierwszego planu i tła
 Zarządzany wątek jest wątkiem w tle lub wątkiem pierwszego planu. Wątki w tle są takie same jak wątki pierwszego planu z jednym wyjątkiem: wątek w tle nie utrzymuje uruchomionego środowiska wykonywania zarządzanego. Po zatrzymaniu wszystkich wątków pierwszego planu w procesie zarządzanym (gdzie plik exe jest zestawem zarządzanym) system zatrzymuje wszystkie wątki w tle i zamyka.  
@@ -30,7 +31,7 @@ Zarządzany wątek jest wątkiem w tle lub wątkiem pierwszego planu. Wątki w t
   
  Jeśli użyjesz wątku do monitorowania działania, takiego jak połączenie gniazda, ustaw jego <xref:System.Threading.Thread.IsBackground%2A> Właściwość na `true` tak, aby wątek nie uniemożliwił przerwania procesu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

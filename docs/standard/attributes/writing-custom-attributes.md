@@ -1,5 +1,6 @@
 ---
 title: Wpisywanie atrybutów niestandardowych
+description: Zaprojektuj własne atrybuty niestandardowe na platformie .NET. Atrybuty niestandardowe są zasadniczo klasami pochodnymi bezpośrednio lub pośrednio z klasy System. Attribute.
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276169"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768485"
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych
 Do zaprojektowania własnych atrybutów niestandardowych nie ma potrzeby tworzenia wzorców wielu nowych koncepcji. Jeśli znasz programowanie zorientowane obiektowo i wiesz, jak projektować klasy, masz już większość koniecznych informacji. Atrybuty niestandardowe są zasadniczo tradycyjnymi klasami, które są wyprowadzane bezpośrednio lub pośrednio z <xref:System.Attribute?displayProperty=nameWithType> . Podobnie jak tradycyjne klasy, atrybuty niestandardowe zawierają metody, które przechowują i pobierają dane.  
@@ -146,7 +147,7 @@ Do zaprojektowania własnych atrybutów niestandardowych nie ma potrzeby tworzen
   
  Pierwszy przykład pokazuje atrybut zastosowany z tylko wymaganymi nazwanymi parametrami, podczas gdy drugi przykład pokazuje atrybut zastosowany do parametrów wymaganych i opcjonalnych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144750"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767783"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -19,7 +19,7 @@ Dowiedz się, jak używać wstępnie przeszkolonego modelu ONNX w programie ML.N
 
 Uczenie modelu wykrywania obiektów od podstaw wymaga ustawienia milionów parametrów, dużej ilości danych szkoleniowych i szerokiej ilości zasobów obliczeniowych (setki godzin procesora GPU). Korzystanie z wstępnie nauczonego modelu umożliwia podwyższenie poziomu procesu szkolenia.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
 > - Omówienie problemu
@@ -94,7 +94,7 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
     - Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**.
     - Wybierz przycisk **Instaluj** .
     - Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
-    - Powtórz te kroki dla **Microsoft. ml. ImageAnalytics** i **Microsoft. ml. OnnxTransformer**.
+    - Powtórz te kroki dla **Microsoft. ml. ImageAnalytics**, **Microsoft. ml. OnnxTransformer** i **Microsoft. ml. OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Przygotowywanie danych i wstępnie szkolony model
 
@@ -665,7 +665,7 @@ Po instrukcji try-catch Dodaj dodatkową logikę, aby wskazać, że proces jest 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-Gotowe.
+To wszystko.
 
 ## <a name="results"></a>Wyniki
 

@@ -2,18 +2,18 @@
 title: Parametry
 ms.date: 12/13/2019
 description: Dowiedz się, jak używać parametrów SQL.
-ms.openlocfilehash: 1d2f818ad392a919faedd785394de28a9c6f56c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b24610a5cb65e2b24171452acef9bf55b4995431
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400457"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768953"
 ---
 # <a name="parameters"></a>Parametry
 
 Parametry są używane do ochrony przed atakami polegającymi na iniekcji SQL. Zamiast łączyć dane wejściowe użytkownika z instrukcjami SQL, użyj parametrów, aby upewnić się, że dane wejściowe są kiedykolwiek traktowane jako wartość literału, a nigdy nie wykonane. W przypadku oprogramowania SQLite parametry są zwykle dozwolone wszędzie tam, gdzie literał jest dozwolony w instrukcjach SQL.
 
-Parametry mogą być poprzedzone znakiem `:`, `@`, lub `$`.
+Parametry mogą być poprzedzone znakiem `:` , `@` , lub `$` .
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_Parameter)]
 
@@ -25,12 +25,12 @@ Użyj <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> właściwości, aby obci
 
 ```csharp
 // Truncate name to 30 characters
-command.Parameters.AddWithValue("$name", name).Length = 30;
+command.Parameters.AddWithValue("$name", name).Size = 30;
 ```
 
 ## <a name="alternative-types"></a>Typy alternatywne
 
-Czasami warto użyć alternatywnego typu oprogramowania SQLite. Aby to zrobić, należy <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> ustawić właściwość.
+Czasami warto użyć alternatywnego typu oprogramowania SQLite. Aby to zrobić, należy ustawić <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> Właściwość.
 
 Można użyć następujących mapowań alternatywnego typu. Aby uzyskać domyślne mapowania, zobacz [typy danych](types.md).
 

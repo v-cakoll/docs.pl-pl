@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: kompresowanie i wyodrębnianie plików'
+description: Kompresuj & Wyodrębnianie plików przy użyciu metody System. IO. Compression. Zobacz przykłady użycia ZipFile, ZipArchive, ZipArchiveEntry, DeflateStream, & GZipStream.
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 28f9a0baa73f58b0a5c7f93a4b0b3ece3b87c3a5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288566"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769239"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Instrukcje: kompresowanie i wyodrębnianie plików
 
@@ -30,7 +31,7 @@ ms.locfileid: "84288566"
 W poniższych przykładach przedstawiono niektóre operacje, które można wykonywać przy użyciu skompresowanych plików. Te przykłady wymagają dodania następujących pakietów NuGet do projektu:
 
 - [System. IO. Compression](https://www.nuget.org/packages/System.IO.Compression)
-- [System. IO. Compression. ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+- [PlikSystem.IO.Compression.Zip](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
 
 Jeśli używasz .NET Framework, Dodaj odwołania do tych dwóch bibliotek do projektu:
 
@@ -50,7 +51,7 @@ Aby uruchomić przykład, należy utworzyć folder *startowy* w folderze program
 
 Następny przykład wykonuje iterację zawartości istniejącego pliku *. zip* i wyodrębnia pliki z rozszerzeniem *. txt* . Używa <xref:System.IO.Compression.ZipArchive> klasy w celu uzyskania dostępu do pliku zip oraz <xref:System.IO.Compression.ZipArchiveEntry> klasy do inspekcji poszczególnych wpisów. Metoda rozszerzenia <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> dla <xref:System.IO.Compression.ZipArchiveEntry> obiektu jest dostępna w <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> klasie.
 
-Aby uruchomić przykład, Umieść plik *zip* o nazwie *Result. zip* w folderze programu. Po wyświetleniu monitu podaj nazwę folderu do wyodrębnienia.
+Aby uruchomić przykład, Umieść plik *zip* o nazwie *result.zip* w folderze programu. Po wyświetleniu monitu podaj nazwę folderu do wyodrębnienia.
 
 > [!IMPORTANT]
 > Podczas rozpakowywania plików należy wyszukać złośliwe ścieżki plików, które mogą wyjść z katalogu, w którym się znajdujesz. Jest to tzw. atak przechodzenia do lokalizacji. W poniższym przykładzie pokazano, jak wyszukiwać złośliwe ścieżki plików i zapewniać bezpieczną metodę rozpakowania.
@@ -72,7 +73,7 @@ Można również użyć <xref:System.IO.Compression.GZipStream> <xref:System.IO.
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.Compression.ZipArchive>  
 - <xref:System.IO.Compression.ZipFile>  

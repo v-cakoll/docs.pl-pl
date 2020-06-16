@@ -1,5 +1,6 @@
 ---
 title: Anulowanie zadania
+description: Zrozumienie anulowania zadań, które są obsługiwane w klasach zadań i zadań <TResult> za pomocą tokenów anulowania w programie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 9f17b11699195e5b2186d008ebefce306834ea8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285277"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768667"
 ---
 # <a name="task-cancellation"></a>Anulowanie zadania
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>Klasy i <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> obsługują anulowanie przy użyciu tokenów anulowania w .NET Framework. Aby uzyskać więcej informacji, zobacz [Anulowanie w zarządzanych wątkach](../threading/cancellation-in-managed-threads.md). W klasach Task anulowanie pociąga za sobą współpracę pełnomocnika użytkownika, który reprezentuje możliwości anulowania operacji i kodu, który zażądał anulowania.  Pomyślne anulowanie obejmuje żądanie kodu wywołującego <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metodę, a delegat użytkownika przerywa operację w odpowiednim czasie. Można zakończyć operację przy użyciu jednej z następujących opcji:  
@@ -38,7 +39,7 @@ ms.locfileid: "84285277"
   
  Możliwe jest, że zadanie będzie kontynuować przetwarzanie niektórych elementy po żądania anulowania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Anulowanie w zarządzanych wątkach](../threading/cancellation-in-managed-threads.md)
 - [Instrukcje: Anulowanie zadania i jego elementów podrzędnych](how-to-cancel-a-task-and-its-children.md)

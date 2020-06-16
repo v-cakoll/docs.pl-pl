@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Używanie bloku try/catch do przechwytywania wyjątków'
+description: Użyj bloku try, aby zawierać instrukcje, które mogą zgłosić lub zgłosić wyjątek. Umieszczaj instrukcje w celu obsługi wyjątków w jednym lub większej liczbie bloków catch.
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,32 +12,32 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708469"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768914"
 ---
-# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Jak używać bloku try/catch do wychwytywania wyjątków
+# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Jak przechwytywać wyjątki przy użyciu bloku try/catch
 
-Umieść wszelkie instrukcje kodu, które mogą `try` podnieść lub zgłosić wyjątek w bloku i umieścić instrukcje `catch` używane `try` do obsługi wyjątku lub wyjątków w jednym lub więcej bloków poniżej bloku. Każdy `catch` blok zawiera typ wyjątku i może zawierać dodatkowe instrukcje potrzebne do obsługi tego typu wyjątku.
+Umieść wszystkie instrukcje Code, które mogą podnieść lub zgłosić wyjątek w `try` bloku, oraz umieścić instrukcje używane do obsługi wyjątku lub wyjątków w co najmniej jednym bloku `catch` pod `try` blokiem. Każdy `catch` blok zawiera typ wyjątku i może zawierać dodatkowe instrukcje, które są konieczne do obsłużenia tego typu wyjątku.
 
-W poniższym przykładzie <xref:System.IO.StreamReader> otwiera plik o nazwie *data.txt* i pobiera wiersz z pliku. Ponieważ kod może zgłosić jeden z trzech wyjątków, `try` jest umieszczony w bloku. Trzy `catch` bloki złapać wyjątki i obsługiwać je, wyświetlając wyniki do konsoli.
+W poniższym przykładzie <xref:System.IO.StreamReader> otwiera plik o nazwie *data.txt* i pobiera wiersz z pliku. Ponieważ kod może zgłosić którykolwiek z trzech wyjątków, zostanie umieszczony w `try` bloku. Trzy `catch` bloki przechwytują wyjątki i obsługują je, wyświetlając wyniki w konsoli.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
 [!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
-Common Language Runtime (CLR) przechwytuje wyjątki nie obsługiwane przez `catch` bloki. Jeśli wyjątek zostanie przechwycony przez clr, jeden z następujących wyników może wystąpić w zależności od konfiguracji CLR:
+Aparat plików wykonywalnych języka wspólnego (CLR) przechwytuje wyjątki, które nie są obsługiwane przez `catch` bloki. W przypadku przechwyconego wyjątku przez środowisko CLR może wystąpić jeden z następujących wyników w zależności od konfiguracji środowiska CLR:
 
-- Pojawi się okno dialogowe **Debugowania.**
-- Program zatrzymuje wykonywanie i pojawia się okno dialogowe z informacjami o wyjątku.
-- Błąd jest drukowany do [standardowego strumienia wyjściowego błędu](xref:System.Console.Error).
+- Zostanie wyświetlone okno dialogowe **debugowanie** .
+- Program przerywa wykonywanie i pojawia się okno dialogowe z informacjami o wyjątku.
+- Wystąpił błąd podczas drukowania [strumienia wyjściowego błędu standardowego](xref:System.Console.Error).
 
 > [!NOTE]
-> Większość kodu może zgłosić wyjątek, a <xref:System.OutOfMemoryException>niektóre wyjątki, takie jak , mogą być generowane przez clr się w dowolnym momencie. Chociaż aplikacje nie są wymagane do radzenia sobie z tymi wyjątkami, należy pamiętać o możliwości podczas pisania bibliotek, które mają być używane przez inne osoby. Aby uzyskać sugestie dotyczące ustawiania `try` kodu w bloku, zobacz [Najważniejsze wskazówki dotyczące wyjątków](best-practices-for-exceptions.md).
+> Większość kodu może zgłosić wyjątek, a niektóre wyjątki, takie jak <xref:System.OutOfMemoryException> , mogą być zgłaszane przez samo środowisko CLR w dowolnym momencie. Chociaż aplikacje nie są wymagane do obsługi tych wyjątków, należy pamiętać o możliwości, gdy pisanie bibliotek ma być używane przez inne osoby. Aby uzyskać sugestie dotyczące ustawiania kodu w `try` bloku, zobacz [najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Wyjątki](index.md)
-- [Obsługa błędów we/wy w .NET](../io/handling-io-errors.md)
+- [Obsługa błędów we/wy w programie .NET](../io/handling-io-errors.md)

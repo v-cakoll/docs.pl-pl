@@ -1,5 +1,6 @@
 ---
 title: Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
+description: Zobacz linki do artykułów na temat wzorca asynchronicznego opartego na zdarzeniach (EAP) w programie .NET, takich jak implementacja, najlepsze rozwiązania, implementacja klienta protokołu EAP i wiele innych.
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289437"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768875"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
 
@@ -63,7 +64,7 @@ Istnieje wiele sposobów udostępniania funkcji asynchronicznych kodowi klienta.
  [Wątkowość](../threading/index.md)  
  Opisuje funkcje wielowątkowości w programie .NET.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzana wątkowość — najlepsze rozwiązania](../threading/managed-threading-best-practices.md)
 - [Zdarzenia](../events/index.md)

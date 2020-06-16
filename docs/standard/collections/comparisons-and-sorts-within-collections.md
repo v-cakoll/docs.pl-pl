@@ -1,5 +1,6 @@
 ---
 title: Porównywanie i sortowanie w kolekcjach
+description: Porównuje & sortuje przy użyciu klas System. Collections w programie .NET, które ułatwiają znalezienie elementu do usunięcia lub zwrócenia wartości pary klucz-wartość.
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: cb9dd3e8af570251b8bcd2e450e686ad69ab78c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aa001e8469947a532d77059bd52024c6b47b508e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287981"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769200"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Porównywanie i sortowanie w kolekcjach
 
@@ -61,7 +62,7 @@ Poniższy kod ilustruje implementację <xref:System.IEquatable%601> i <xref:Syst
 [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
 [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.IComparer>
 - <xref:System.IEquatable%601>

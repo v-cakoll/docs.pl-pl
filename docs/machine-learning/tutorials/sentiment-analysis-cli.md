@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 64190546157bc9386314a3080c5364fd854d7704
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602249"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767679"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
@@ -52,7 +52,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 
 2. Skopiuj `yelp_labelled.txt` plik do folderu, który został wcześniej utworzony (na przykład `/cli-test` ).
 
-3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Przykład:
+3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Na przykład:
 
     ```console
     cd /cli-test
@@ -94,8 +94,6 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
     - **przekierowany czas eksploracji/uczenia** dla eksperymentu wynosi **10 sekund**
 
     Zostaną wyświetlone dane wyjściowe z interfejsu wiersza polecenia, podobne do:
-
-    <!-- markdownlint-disable MD023 MD025 -->
 
     ![Klasyfikacja interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/mlnet-classification-powershell.gif)
 

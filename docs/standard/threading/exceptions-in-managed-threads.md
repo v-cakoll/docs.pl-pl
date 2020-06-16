@@ -1,5 +1,6 @@
 ---
 title: Wyjątki w zarządzanych wątkach
+description: Zobacz, jak Nieobsłużone wyjątki są obsługiwane w programie .NET. W przypadku programu .NET w wersji 2,0 większość nieobsłużonych wyjątków wątków jest w naturalny sposób i prowadzić do zakończenia działania aplikacji.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279701"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767887"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka wspólnego pozwala na wykonywanie większości nieobsługiwanych wyjątków w wątkach. W większości przypadków, nieobsłużony wyjątek powoduje przerwanie działania aplikacji.  
@@ -76,6 +77,6 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
 ## <a name="host-override"></a>Zastąpienie hosta  
  W .NET Framework w wersji 2,0 Host niezarządzany może użyć interfejsu [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) w interfejsie API hostingu, aby zastąpić domyślne zasady nieobsłużonego wyjątku środowiska uruchomieniowego języka wspólnego. Funkcja [ICLRPolicyManager:: SetUnhandledExceptionPolicy —](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) służy do ustawiania zasad dla nieobsłużonych wyjątków.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzana wątkowość — podstawy](managed-threading-basics.md)

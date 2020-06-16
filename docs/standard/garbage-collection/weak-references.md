@@ -1,5 +1,6 @@
 ---
 title: Słabe odwołania
+description: Zapoznaj się z słabymi odwołaniami, które umożliwiają modułowi zbierającemu elementy bezużyteczne platformy .NET zbieranie obiektów przy jednoczesnym umożliwieniu aplikacji dostępu do obiektu.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 4b7e7a62b92b2c685ff39baa75f4bc33602b5da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287587"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768186"
 ---
 # <a name="weak-references"></a>Słabe odwołania
 Moduł wyrzucania elementów bezużytecznych nie może zebrać obiektu, który jest używany przez aplikację, gdy kod aplikacji może dotrzeć do tego obiektu. Aplikacja ma silne odwołanie do obiektu.  
@@ -50,6 +51,6 @@ Moduł wyrzucania elementów bezużytecznych nie może zebrać obiektu, który j
   
  Unikaj używania słabych odwołań jako automatyczne rozwiązanie do problemów z zarządzaniem pamięcią. Zamiast tego należy opracować efektywne zasady buforowania do obsługi obiektów aplikacji.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odzyskiwanie pamięci](index.md)

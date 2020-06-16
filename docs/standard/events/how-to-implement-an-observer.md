@@ -1,5 +1,6 @@
 ---
 title: 'Porady: implementowanie obserwatora'
+description: Zaimplementuj obserwatora w programie .NET. Wzorzec projektowy obserwatora wymaga podziału między obserwatorem, który rejestruje powiadomienia i dostawcę.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289723"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768998"
 ---
 # <a name="how-to-implement-an-observer"></a>Porady: implementowanie obserwatora
 Wzorzec projektowy obserwatora wymaga podziału między obserwatorem, który rejestruje powiadomienia i dostawca, który monitoruje dane i wysyła powiadomienia do jednego lub kilku obserwatorów. W tym temacie omówiono sposób tworzenia obserwatora. Pokrewny temat, [jak: implementowanie dostawcy](how-to-implement-a-provider.md), omawia sposób tworzenia dostawcy.  
@@ -47,7 +48,7 @@ Wzorzec projektowy obserwatora wymaga podziału między obserwatorem, który rej
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IObserver%601>
 - [Wzorzec projektowy obserwatora](observer-design-pattern.md)

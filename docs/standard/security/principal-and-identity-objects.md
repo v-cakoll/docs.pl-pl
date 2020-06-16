@@ -1,5 +1,6 @@
 ---
 title: Obiekty główne i obiekty tożsamości
+description: Przeczytaj informacje o obiektach tożsamości, które reprezentują użytkowników w programie .NET. Zapoznaj się również z obiektami podmiotu zabezpieczeń, które hermetyzują zarówno obiekt tożsamości & rolę.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291230"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768849"
 ---
 # <a name="principal-and-identity-objects"></a>Obiekty główne i obiekty tożsamości
 Kod zarządzany może wykryć tożsamość lub rolę podmiotu zabezpieczeń za pomocą <xref:System.Security.Principal.IPrincipal> obiektu, który zawiera odwołanie do <xref:System.Security.Principal.IIdentity> obiektu. Pomocne może być porównanie tożsamości i obiektów głównych z znanymi pojęciami, takimi jak konta użytkowników i grup. W większości środowisk sieciowych konta użytkowników reprezentują osoby lub programy, natomiast konta grup reprezentują pewne kategorie użytkowników i prawa, które posiada. Podobnie obiekty tożsamości .NET Framework reprezentują użytkowników, natomiast role reprezentują członkostwa i konteksty zabezpieczeń. W .NET Framework obiekt Principal hermetyzuje zarówno obiekt tożsamości, jak i rolę. .NET Framework aplikacje przyznają uprawnienia do podmiotu zabezpieczeń na podstawie jego tożsamości lub, częściej, przynależności do roli.  
@@ -40,7 +41,7 @@ Kod zarządzany może wykryć tożsamość lub rolę podmiotu zabezpieczeń za p
   
  Podczas przesyłania obiektu **podmiotu zabezpieczeń** między domenami aplikacji, ale w ramach tego samego procesu (i w związku z tym na tym samym komputerze) infrastruktura zdalna kopiuje odwołanie do obiektu **podmiotu zabezpieczeń** skojarzonego z kontekstem obiektu wywołującego do kontekstu wywoływanego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Instrukcje: tworzenie obiektu WindowsPrincipal](how-to-create-a-windowsprincipal-object.md)
 - [Porady: tworzenie obiektów GenericPrincipal i GenericIdentity](how-to-create-genericprincipal-and-genericidentity-objects.md)

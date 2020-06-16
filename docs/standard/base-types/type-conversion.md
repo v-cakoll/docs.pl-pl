@@ -1,5 +1,6 @@
 ---
 title: Konwersja typów w programie .NET Framework
+description: Przeczytaj informacje na temat konwersji typów w programie .NET, która tworzy wartość w nowym typie, która jest równoważna wartości starego typu, ale nie może zachować oryginalnej tożsamości.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291659"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769226"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Konwersja typów w programie .NET Framework
 Każda wartość ma skojarzony typ, który definiuje atrybuty, takie jak ilość miejsca przydzieloną do wartości, zakres możliwych wartości, które może mieć, oraz członków, które udostępnia. Wiele wartości można wyrazić za pomocą co najmniej dwóch typów. Na przykład wartość 4 może być wyrażona jako liczba całkowita lub wartość zmiennoprzecinkowa. Konwersja typu tworzy wartość nowego typu, która jest równoważna wartości starego typu, ale nie zawsze powoduje zachowanie tożsamości (dokładnej wartości) oryginalnego obiektu.  
@@ -190,7 +191,7 @@ Każda wartość ma skojarzony typ, który definiuje atrybuty, takie jak ilość
   
  Aby uzyskać więcej informacji o używaniu konwerterów typów do wykonywania konwersji, zobacz <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>

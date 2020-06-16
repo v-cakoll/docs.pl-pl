@@ -1,5 +1,6 @@
 ---
 title: Model programowania asynchronicznego (APM)
+description: Dowiedz się więcej o modelu programowania asynchronicznego (APM) w programie .NET. Dowiedz się, jak rozpocząć i zakończyć operację asynchroniczną.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289983"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769187"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Model programowania asynchronicznego (APM)
 Asynchroniczna operacja, która używa <xref:System.IAsyncResult> wzorca projektowego, jest implementowana jako dwie metody o nazwie `BeginOperationName` i `EndOperationName` , która rozpoczyna i kończy odpowiednio *operację* asynchroniczną. Na przykład <xref:System.IO.FileStream> Klasa zawiera <xref:System.IO.FileStream.BeginRead%2A> metody i, <xref:System.IO.FileStream.EndRead%2A> Aby asynchronicznie odczytywać bajty z pliku. Te metody implementują wersję asynchroniczną <xref:System.IO.FileStream.Read%2A> metody.  
@@ -63,7 +64,7 @@ Asynchroniczna operacja, która używa <xref:System.IAsyncResult> wzorca projekt
   
 - Użyj <xref:System.AsyncCallback> delegata, aby określić metodę, która ma być wywoływana po zakończeniu operacji. Aby zapoznać się z przykładem, który ilustruje tę technikę, zobacz [Używanie delegata AsyncCallback do kończenia operacji asynchronicznej](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Wywołanie metod synchronicznych w sposób asynchroniczny](calling-synchronous-methods-asynchronously.md)

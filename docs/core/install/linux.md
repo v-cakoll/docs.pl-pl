@@ -4,12 +4,12 @@ description: Dowiedz się więcej o tym, jakie dystrybucje systemu Linux obsług
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fec3cf9e99c2db5d7312280f676bc2a3344f1ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602895"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768356"
 ---
 # <a name="install-net-core-on-linux"></a>Instalowanie programu .NET Core w systemie Linux
 
@@ -28,6 +28,26 @@ Następujące wersje programu .NET Core nie są ❌ już obsługiwane. Pliki do 
 - 2.0
 
 Te nieobsługiwane wersje nie są szczegółowo opisane w poniższych sekcjach, a przebieg może się różnić w przypadku próby ich zainstalowania.
+
+## <a name="alpine"></a>Alp
+
+Brak instalatorów dla Alpine. Musisz użyć [skryptu instalacji](linux-alpine.md#scripted-install) lub instrukcji [instalacji ręcznej](linux-alpine.md#manual-install) .
+
+Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core i wersje Alpine, w których są obsługiwane. Te wersje pozostają obsługiwane, dopóki wersja [platformy .NET Core osiągnie koniec okresu obsłudze](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) lub wersja [Alp osiągnie koniec cyklu życia](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases).
+
+- ✔️ wskazuje, że wersja Alpine lub .NET Core jest nadal obsługiwana.
+- ❌Wskazuje, że wersja Alpine lub .NET Core nie jest obsługiwana w tej wersji Alpine.
+- Gdy wersja Alpine i wersja platformy .NET Core ma ✔️, obsługiwane są kombinacje systemów operacyjnych i .NET.
+
+| Alp                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) |
+|-----------------------------|---------------|---------------|----------------|
+| ✔️ [3,12](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+| ✔️ [3,11](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+| ✔️ [3,10](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+| ✔️ [3,9](linux-alpine.md)   | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+| ❌[3,8](linux-alpine.md)   | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
+
+Aby uzyskać więcej informacji, zobacz [Instalowanie programu .NET Core w witrynie Alpine](linux-alpine.md).
 
 ## <a name="centos"></a>CentOS
 
@@ -56,7 +76,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
-| ❌[8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
+| ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
 
 ## <a name="fedora"></a>Fedora
 

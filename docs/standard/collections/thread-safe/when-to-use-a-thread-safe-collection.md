@@ -1,16 +1,17 @@
 ---
 title: Kiedy należy używać kolekcji bezpiecznych wątkowo
+description: Dowiedz się, kiedy używać kolekcji bezpiecznej dla wątków w programie .NET. Istnieją 5 typów kolekcji, które są specjalnie przeznaczone do obsługi wielowątkowych Dodaj & operacji usuwania.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288878"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769136"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
 W .NET Framework 4 wprowadzono pięć nowych typów kolekcji, które są specjalnie przeznaczone do obsługi operacji dodawania i usuwania wielowątkowych wątków. Aby zapewnić bezpieczeństwo wątków, te nowe typy wykorzystują różne rodzaje wydajnych mechanizmów synchronizacji i blokowania bez blokady. Synchronizacja dodaje narzuty do operacji. Ilość narzutów zależy od rodzaju używanej synchronizacji, rodzaju wykonywanych operacji oraz innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
@@ -60,7 +61,7 @@ W .NET Framework 4 wprowadzono pięć nowych typów kolekcji, które są specjal
 ## <a name="blockingcollection"></a>BlockingCollection  
  Gdy wymagane są semantyki ograniczania i blokowania, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> prawdopodobnie będą wykonywane szybciej niż Każda implementacja niestandardowa. Obsługuje ona również rozbudowane anulowanie, Wyliczanie i obsługę wyjątków.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Kolekcje bezpieczne dla wątków](index.md)

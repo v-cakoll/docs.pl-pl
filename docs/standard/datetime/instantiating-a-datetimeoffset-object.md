@@ -1,5 +1,6 @@
 ---
 title: Tworzenie wystąpień obiektów DateTimeOffset
+description: Przeczytaj, jak utworzyć wystąpienia (utworzyć wystąpienie) obiektu DateTimeOffset w programie .NET. Dowiedz się więcej na temat & literałów czasowych, konstruktorów, niejawnej konwersji typów, & więcej.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: c290af0c9cef619000a6620ba35209489856c5b8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c2b71a2a98353a4ec9ed249acf18939dd4740e99
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281599"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768901"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Tworzenie wystąpień obiektów DateTimeOffset
 
@@ -92,6 +93,6 @@ Poniższy przykład ilustruje wywołania każdej z tych czterech metod konwersji
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Daty, godziny i strefy czasowe](index.md)

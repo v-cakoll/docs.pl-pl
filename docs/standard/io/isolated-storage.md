@@ -1,5 +1,6 @@
 ---
 title: Izolowany magazyn
+description: Poznaj izolowany magazyn, który jest mechanizmem magazynu danych, który zapewnia izolację & bezpieczeństwa przez definiowanie standardowych metod kojarzenia kodu z zapisanymi danymi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278885"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768940"
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a>W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
@@ -49,7 +50,7 @@ Ten temat zawiera następujące sekcje:
 
 - [Tematy pokrewne](#related_topics)
 
-- [Dokumentacja](#reference)
+- [Tematy pomocy](#reference)
 
 <a name="data_compartments_and_stores"></a>
 

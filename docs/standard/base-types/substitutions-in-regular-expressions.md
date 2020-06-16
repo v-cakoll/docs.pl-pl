@@ -1,5 +1,6 @@
 ---
 title: Podstawienia w wyrażeniach regularnych
+description: Wykonaj zamiany w celu zastąpienia dopasowanego tekstu przy użyciu wyrażeń regularnych w programie .NET. Podstawienia są elementami języka rozpoznawanymi tylko wewnątrz wzorców zamiennych.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288007"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768108"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
 Podstawienia są elementami języka, które są rozpoznawane tylko w obrębie wzorców zamiennych. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zastępujące są dostarczane do przeciążenia <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metody, która ma `replacement` parametr i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metodę. Metody zastępują pasujący wzorzec wzorcem zdefiniowanym przez `replacement` parametr.  
@@ -197,6 +198,6 @@ Podstawienia są elementami języka, które są rozpoznawane tylko w obrębie wz
 |1|3|123|**ABC123DEF456**ABC DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Język wyrażeń regularnych — podręczny wykaz](regular-expression-language-quick-reference.md)

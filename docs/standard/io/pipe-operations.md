@@ -1,5 +1,6 @@
 ---
 title: Operacje potokowe w programie .NET
+description: 'Informacje o operacjach potoku w programie .NET. Potoki zapewniają metodę komunikacji międzyprocesowej. Istnieją dwa rodzaje potoków: anonimowe potoki i nazwane potoki.'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: a634cb87a5f25b520e5fe6fd5b39eae861120a28
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 35a3910bbab1b34f085a55524be0b18b3fa81958
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278691"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768888"
 ---
 # <a name="pipe-operations-in-net"></a>Operacje potokowe w programie .NET
 Potoki zapewniają metodę komunikacji międzyprocesowej. Istnieją dwa typy potoków:  
@@ -34,7 +35,7 @@ Potoki zapewniają metodę komunikacji międzyprocesowej. Istnieją dwa typy pot
   
      Zobacz [jak: używanie nazwanych potoków do komunikacji międzyprocesowej sieci](how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [We/wy plików i strumieni](index.md)
 - [Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

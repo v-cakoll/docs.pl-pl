@@ -1,5 +1,6 @@
 ---
 title: Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
+description: Przegląd asynchronicznych wzorców opartych na zdarzeniach (EAPs) w programie .NET, które udostępniają zalety aplikacji wielowątkowych, ale ukrywają pewne złożoności projektowe.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289424"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768862"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, które jednocześnie wykonują wiele zadań, jeszcze nie reagują na interakcję użytkownika, często wymagają projektu, który używa wielu wątków. <xref:System.Threading>Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do tworzenia aplikacji wielowątkowych o wysokiej wydajności, ale używanie tych narzędzi skutecznie wymaga znaczących doświadczeń z obsługą wielowątkowych oprogramowania. W przypadku stosunkowo prostych aplikacji wielowątkowych składnik ten <xref:System.ComponentModel.BackgroundWorker> oferuje proste rozwiązanie. W przypadku bardziej zaawansowanych aplikacji asynchronicznych Rozważ zaimplementowanie klasy zgodnej ze wzorcem asynchronicznym opartym na zdarzeniach.  
@@ -131,7 +132,7 @@ public class AsyncExample
   
  Niektóre klasy mogą raportować wyniki przyrostowe w miarę wykonywania operacji asynchronicznych. Te wyniki będą przechowywane w klasie, która pochodzi od <xref:System.ComponentModel.ProgressChangedEventArgs> i będą wyświetlane jako właściwości w klasie pochodnej. Dostęp do tych wyników można uzyskać w programie obsługi zdarzeń dla `ProgressChanged` zdarzenia, podobnie jak w przypadku uzyskania dostępu do <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> właściwości. Jeśli oczekuje wiele operacji asynchronicznych, można użyć właściwości, <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> Aby odróżnić, która operacja zgłasza przyrostowe wyniki.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>

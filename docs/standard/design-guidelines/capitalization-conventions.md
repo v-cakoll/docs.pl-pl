@@ -1,5 +1,6 @@
 ---
 title: Konwencje dotyczące wielkości liter
+description: Stosowanie Konwencji kapitalizacji dla identyfikatorów, słów złożonych i typowych warunków. Dowiedz się, jak działa czułość wielkości liter w programie .NET.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280403"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767796"
 ---
 # <a name="capitalization-conventions"></a>Konwencje dotyczące wielkości liter
 Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która jest stosowana spójnie, dzięki czemu identyfikatory typów, elementów członkowskich i parametrów łatwo odczytać.
@@ -103,7 +104,7 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 
  *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wskazówki dotyczące projektowania struktury](index.md)
 - [Wskazówki dotyczące nazewnictwa](naming-guidelines.md)

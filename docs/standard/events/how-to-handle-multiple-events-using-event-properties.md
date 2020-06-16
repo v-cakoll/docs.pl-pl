@@ -1,5 +1,6 @@
 ---
 title: 'Porady: obsługa wielu zdarzeń przy użyciu właściwości zdarzenia'
+description: Dowiedz się, jak obsługiwać wiele zdarzeń przy użyciu właściwości zdarzenia. Zdefiniuj kolekcje delegatów, klucze zdarzeń, & właściwości zdarzenia. Zaimplementuj Dodawanie & usuwanie metod dostępu.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: c5be541c1a40c5d16a0502e76adef24f6a41cc89
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288475"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769018"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Porady: obsługa wielu zdarzeń przy użyciu właściwości zdarzenia
 Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia w klasie, która wywołuje zdarzenia, a następnie ustawić delegatów dla właściwości zdarzenia w klasach, które obsługują zdarzenia. Aby zaimplementować w klasie wiele właściwości zdarzeń, klasa musi wewnętrznie przechowywać i zachowywać zdefiniowanego delegata dla każdego zdarzenia. Typowym podejściem jest implementacja kolekcji delegata, która jest indeksowana przy użyciu klucza zdarzenia.  
@@ -45,7 +46,7 @@ Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Zdarzenia](index.md)

@@ -1,5 +1,6 @@
 ---
 title: Synchronizowanie danych na potrzeby wielowątkowości
+description: Dowiedz się, jak synchronizować dane dla wielowątkowości w programie .NET. Wybierz strategie, takie jak regiony kodu zsynchronizowanego, synchronizacja ręczna lub synchronizowane konteksty.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291100"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769109"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 
@@ -33,7 +34,7 @@ Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wyst�
 |Kategoria|Pola globalne|Pola statyczne|Metody statyczne|Pola wystąpienia|Metody Instance|Określone bloki kodu|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Brak synchronizacji|Nie|Nie|Nie|Nie|Nie|Nie|  
-|Zsynchronizowany kontekst|Nie|Nie|Nie|Tak|Tak|Nie|  
+|Zsynchronizowany kontekst|Nie|Nie|Nie|Yes|Yes|Nie|  
 |Zsynchronizowane regiony kodu|Nie|Nie|Tylko wtedy, gdy oznaczono|Nie|Tylko wtedy, gdy oznaczono|Tylko wtedy, gdy oznaczono|  
 |Synchronizacja ręczna|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|  
   
@@ -67,7 +68,7 @@ Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wyst�
 
 Tylko w aplikacjach .NET Framework i Xamarin, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> na dowolnym, <xref:System.ContextBoundObject> Aby zsynchronizować wszystkie metody wystąpień i pola. Wszystkie obiekty w tej samej domenie kontekstu mają tę samą blokadę. Wiele wątków może uzyskać dostęp do metod i pól, ale tylko jeden wątek jest dozwolony w dowolnym momencie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Wątki i wątkowość](threads-and-threading.md)

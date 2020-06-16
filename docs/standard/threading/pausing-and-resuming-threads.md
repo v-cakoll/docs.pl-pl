@@ -1,5 +1,6 @@
 ---
 title: Wstrzymywanie i przerywanie wątków
+description: Dowiedz się, jak wstrzymywać & wątki przerwań w programie .NET. Dowiedz się, jak używać metod, takich jak Thread. Sleep & Thread. Interrupt, & wyjątkach, takich jak ThreadInterruptedException —.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291165"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769122"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Wstrzymywanie i przerywanie wątków
 
@@ -47,7 +48,7 @@ Najczęstszym sposobem synchronizacji działań wątków jest zablokowanie i wyd
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>wznawia wątek z dowolnego oczekiwania, który może znajdować się w <xref:System.Threading.ThreadAbortException> wątku. Aby uzyskać szczegółowe informacje, zobacz [niszczenie wątków](destroying-threads.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

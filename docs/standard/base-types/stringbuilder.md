@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662943"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803228"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Korzystanie z klasy StringBuilder w środowisku .NET
 <xref:System.String>Obiekt jest niezmienny. Za każdym razem, gdy używasz jednej z metod w <xref:System.String?displayProperty=nameWithType> klasie, tworzysz nowy obiekt ciągu w pamięci, co wymaga nowego przydziału miejsca dla nowego obiektu. W sytuacjach, gdy trzeba wykonać powtórzone modyfikacje ciągu, obciążenie związane z tworzeniem nowego <xref:System.String> obiektu może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType>Klasy można użyć, jeśli chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład użycie <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność podczas łączenia wielu ciągów razem w pętli.  
@@ -67,7 +67,7 @@ ms.locfileid: "84662943"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Zastępuje specyfikator formatu przekazaną w ciągu sformatowanym tekstem.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Wstawia ciąg lub obiekt do określonego indeksu bieżącego elementu **StringBuilder**.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków z bieżącego elementu **StringBuilder**.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Zastępuje określony znak w określonym indeksie.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Zamienia wszystkie wystąpienia określonego znaku lub ciągu w bieżącym elemencie **StringBuilder** na inny określony znak lub ciąg.|  
   
 ### <a name="append"></a>Append  
  Metoda **append** może służyć do dodawania tekstu lub reprezentowania ciągu obiektu na końcu ciągu reprezentowanego przez bieżący element **StringBuilder**. Poniższy przykład Inicjuje element **StringBuilder** do "Hello World", a następnie dołącza jakiś tekst na końcu obiektu. Miejsce jest przypisywany automatycznie, zgodnie z wymaganiami.  
@@ -110,7 +110,7 @@ ms.locfileid: "84662943"
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - [Podstawowe operacje na ciągach](basic-string-operations.md)

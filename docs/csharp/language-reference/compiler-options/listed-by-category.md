@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447046"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811682"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
@@ -49,7 +49,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-keycontainer](keycontainer-compiler-option.md)|Określa nazwę kontenera klucza kryptograficznego.|
 |[-keyfile](keyfile-compiler-option.md)|Określa nazwę pliku zawierającego klucz kryptograficzny.|
 |[-lib](lib-compiler-option.md)|Określa lokalizację zestawów, do których odwołuje się [odwołanie](reference-compiler-option.md).|
-|[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie zaimportował biblioteki standardowej (mscorlib. dll).|
+|[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie zaimportował biblioteki standardowej (mscorlib.dll).|
 |[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustaw bit w zestawie wskazujący, że zestaw jest podpisany.|
 |[-odwołanie](reference-compiler-option.md)|Importuje metadane z pliku, który zawiera zestaw.|
 |-Analizator|Uruchom analizatory z tego zestawu (krótka wersja:/a)|
@@ -63,11 +63,11 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Tworzy plik zawierający informacje, które ułatwiają zgłoszenie błędu.|
 |[-checked](checked-compiler-option.md)|Określa, czy arytmetyczne liczby całkowite, które przepływają granice typu danych, spowodują wyjątek w czasie wykonywania.|
-|[-Debuguj](debug-compiler-option.md)|Nakazuje kompilatorowi emitowanie informacji o debugowaniu.|
+|[-debug](debug-compiler-option.md)|Nakazuje kompilatorowi emitowanie informacji o debugowaniu.|
 |[-errorreport](errorreport-compiler-option.md)|Ustawia zachowanie raportowania błędów.|
 |[-fullpaths](fullpaths-compiler-option.md)|Określa ścieżkę bezwzględną do pliku w danych wyjściowych kompilatora.|
 |[-nowarn](nowarn-compiler-option.md)|Pomija generowanie określonych ostrzeżeń przez kompilator.|
-|[-Nullable](nullable-compiler-option.md)|Określa opcję kontekstową dopuszczania wartości null.|
+|[-nullable](nullable-compiler-option.md)|Określa opcję kontekstową dopuszczania wartości null.|
 |[-warn](warn-compiler-option.md)|Ustawia poziom ostrzeżeń.|
 |[-warnaserror](warnaserror-compiler-option.md)|Podwyższa poziom ostrzeżeń do błędów.|
 |RuleSet\<file>|Określ plik zestawu reguł, który wyłącza określoną diagnostykę.|
@@ -107,7 +107,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa słowa kluczowego [UNSAFE](../keywords/unsafe.md) .|
 |[-utf8output](utf8output-compiler-option.md)|Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.|
 |-Parallel [+&#124;-]|Określa, czy ma być używana współbieżna kompilacja (+).|
-|-checksumalgorithm:\<alg>|Określ algorytm obliczania sumy kontrolnej plików źródłowych przechowywanej w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślnie) lub SHA256.<br>Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256.|
+|-checksumalgorithm:\<alg>|Określ algorytm obliczania sumy kontrolnej plików źródłowych przechowywanej w pliku PDB.  Obsługiwane wartości to: SHA256 (wartość domyślna) lub SHA1.<br>Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256.|
 
 ## <a name="obsolete-options"></a>Przestarzałe opcje
 
@@ -115,7 +115,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |---|---|
 |-przyrostowe|Włącza kompilację przyrostową.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Opcje kompilatora C#](index.md)
 - [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)

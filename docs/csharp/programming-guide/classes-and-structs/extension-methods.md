@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241412"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803189"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 
@@ -54,7 +54,7 @@ Ogólnie rzecz biorąc, prawdopodobnie będą wywoływane metody rozszerzające 
 using System.Linq;
 ```
 
-(Może być również konieczne dodanie odwołania do System. Core. dll). Można zauważyć, że standardowe operatory zapytań są teraz wyświetlane w technologii IntelliSense jako dodatkowe metody dostępne dla większości <xref:System.Collections.Generic.IEnumerable%601> typów.
+(Może być również konieczne dodanie odwołania do System.Core.dll). Można zauważyć, że standardowe operatory zapytań są teraz wyświetlane w technologii IntelliSense jako dodatkowe metody dostępne dla większości <xref:System.Collections.Generic.IEnumerable%601> typów.
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Metody rozszerzające w czasie kompilacji
 
@@ -80,7 +80,7 @@ W przeszłości często utworzono "klasy kolekcji", które implementuje <xref:Sy
 
 W przypadku używania architektury o architekturze ujęć lub innego projektu aplikacji warstwowych często istnieje zestaw jednostek domeny lub Transfer danych obiektów, które mogą być używane do komunikacji między granicami aplikacji. Te obiekty zwykle nie zawierają funkcji ani tylko minimalnej funkcjonalności, która ma zastosowanie do wszystkich warstw aplikacji. Metody rozszerzające mogą służyć do dodawania funkcji, które są specyficzne dla każdej warstwy aplikacji bez ładowania obiektu w dół z niezbędnymi metodami lub w innych warstwach.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

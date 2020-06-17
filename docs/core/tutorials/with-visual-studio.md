@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7ef8e17b8a42defc0858123332976d30c83f20c8
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700435"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811653"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Samouczek: Tworzenie aplikacji konsolowej platformy .NET Core przy użyciu programu Visual Studio
 
@@ -93,8 +93,8 @@ Podnieś poziom aplikacji, aby monitować użytkownika o jego nazwę i wyświetl
 
 1. W programie *program.cs* lub *program. vb*Zastąp zawartość `Main` metody, która jest wierszem, który wywołuje `Console.WriteLine` , przy użyciu następującego kodu:
 
-   [!code-csharp[GettingStarted#1](./snippets/with-visual-studio/csharp/Program.cs#1)]
-   [!code-vb[GettingStarted#1](./snippets/with-visual-studio/vb/Program.vb#1)]
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
+   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
    Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz <kbd>Enter</kbd> . Ten ciąg jest przechowywany w zmiennej o nazwie `name` . Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `date` ( `currentDate` w Visual Basic). Na koniec wyświetla te wartości w oknie konsoli.
 

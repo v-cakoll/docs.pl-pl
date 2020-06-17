@@ -2,12 +2,12 @@
 title: Tworzenie aplikacji konsolowej platformy .NET Core przy użyciu Visual Studio dla komputerów Mac
 description: Dowiedz się, jak utworzyć aplikację konsolową .NET Core przy użyciu Visual Studio dla komputerów Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: 57f16e510270b7256b285493b1f978101fc11804
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717526"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811666"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Samouczek: Tworzenie aplikacji konsolowej platformy .NET Core przy użyciu Visual Studio dla komputerów Mac
 
@@ -84,7 +84,7 @@ Podnieś poziom aplikacji, aby monitować użytkownika o jego nazwę i wyświetl
 
 1. W *program.cs*Zastąp zawartość `Main` metody, która jest wierszem, który wywołuje `Console.WriteLine` , przy użyciu następującego kodu:
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz <kbd>Enter</kbd> . Ten ciąg jest przechowywany w zmiennej o nazwie `name` . Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `date` . Na koniec wyświetla te wartości w oknie konsoli.
 

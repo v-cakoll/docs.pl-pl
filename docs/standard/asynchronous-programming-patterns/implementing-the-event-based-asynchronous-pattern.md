@@ -18,16 +18,16 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 9ffb2e2f426e2d2d97998a89a3e8d306de4f29ca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904380"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 
-W przypadku pisania klasy z niektórymi operacjami, które mogą mieć zauważalne opóźnienia, należy rozważyć udzielenie funkcji asynchronicznych przez implementację [asynchronicznego wzorca opartego na zdarzeniach](event-based-asynchronous-pattern-overview.md).
+W przypadku pisania klasy z niektórymi operacjami, które mogą powodować zauważalne opóźnienia, należy rozważyć nadanie jej funkcji asynchronicznych, implementując [wzorzec asynchroniczny oparty na zdarzeniach](event-based-asynchronous-pattern-overview.md).
 
 Wzorzec asynchroniczny oparty na zdarzeniach zapewnia ustandaryzowany sposób spakowania klasy, która ma funkcje asynchroniczne. Jeśli zaimplementowano klasy pomocnika, takie jak <xref:System.ComponentModel.AsyncOperationManager> , Klasa będzie działała prawidłowo w ramach dowolnego modelu aplikacji, w tym ASP.NET, aplikacji konsolowych i aplikacji Windows Forms.
 

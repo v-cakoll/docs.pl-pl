@@ -2,20 +2,20 @@
 title: Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)
 description: Dowiedz się więcej o identyfikatorze środowiska uruchomieniowego (RID) i sposobie używania identyfikatorów RID w programie .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: b581f46becc6808ca957ac66c0c22e5e5f973bd1
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903288"
 ---
 # <a name="net-core-rid-catalog"></a>Katalog programu .NET Core RID
 
 Identyfikator RID jest krótki dla *identyfikatora środowiska uruchomieniowego*. Wartości identyfikatorów RID służą do identyfikowania platform docelowych, w których jest uruchamiana aplikacja.
-Są one używane przez pakiety .NET do reprezentowania zasobów specyficznych dla platformy w pakietach NuGet. Poniżej przedstawiono przykłady identyfikatorów RID `linux-x64`:, `ubuntu.14.04-x64`, `win7-x64`lub. `osx.10.12-x64`
+Są one używane przez pakiety .NET do reprezentowania zasobów specyficznych dla platformy w pakietach NuGet. Poniżej przedstawiono przykłady identyfikatorów RID: `linux-x64` , `ubuntu.14.04-x64` , `win7-x64` lub `osx.10.12-x64` .
 W przypadku pakietów z natywnymi zależnościami identyfikator RID określa platformy, na których można przywrócić pakiet.
 
-Pojedynczy identyfikator RID można ustawić w `<RuntimeIdentifier>` elemencie pliku projektu. Wiele identyfikatorów RID można zdefiniować jako listę rozdzielaną średnikami w `<RuntimeIdentifiers>` elemencie pliku projektu. Są one również używane przez `--runtime` opcję z następującymi [interfejs wiersza polecenia platformy .NET Core poleceniami](./tools/index.md):
+Pojedynczy identyfikator RID można ustawić w `<RuntimeIdentifier>` elemencie pliku projektu. Wiele identyfikatorów RID można zdefiniować jako listę rozdzielaną średnikami w elemencie pliku projektu `<RuntimeIdentifiers>` . Są one również używane przez `--runtime` opcję z następującymi [interfejs wiersza polecenia platformy .NET Core poleceniami](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -25,21 +25,21 @@ Pojedynczy identyfikator RID można ustawić w `<RuntimeIdentifier>` elemencie p
 - [dotnet run](./tools/dotnet-run.md)
 - [dotnet store](./tools/dotnet-store.md)
 
-Identyfikatory RID reprezentujące konkretne systemy operacyjne zwykle są zgodne z `[os].[version]-[architecture]-[additional qualifiers]` tym wzorcem: gdzie:
+Identyfikatory RID reprezentujące konkretne systemy operacyjne zwykle są zgodne z tym wzorcem: `[os].[version]-[architecture]-[additional qualifiers]` gdzie:
 
 - `[os]`jest monikerem systemu operacyjnego/platformy. Na przykład `ubuntu`.
 
-- `[version]`jest wersją systemu operacyjnego w postaci numeru wersji oddzielonej kropką (`.`). Na przykład `15.10`.
+- `[version]`jest wersją systemu operacyjnego w postaci numeru wersji oddzielonej kropką ( `.` ). Na przykład `15.10`.
 
   - Wersja nie **powinna** być wersją marketingową, ponieważ często reprezentuje wiele dyskretnych wersji systemu operacyjnego z różnymi obszarami powierzchni interfejsu API platformy.
 
-- `[architecture]`jest architekturą procesora. Na przykład: `x86`, `x64`, `arm`lub `arm64`.
+- `[architecture]`jest architekturą procesora. Na przykład: `x86` , `x64` , `arm` lub `arm64` .
 
 - `[additional qualifiers]`dalsze odróżnienie różnych platform. Na przykład: `aot`.
 
 ## <a name="rid-graph"></a>Wykres RID
 
-Wykres RID lub wykres rezerwowy środowiska uruchomieniowego to lista identyfikatorów RID, które są zgodne ze sobą. Identyfikatory RID są zdefiniowane w pakiecie [Microsoft. servicecore. platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) . Listę obsługiwanych identyfikatorów RID i Graf RID można znaleźć w pliku [*Runtime. JSON*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) , który znajduje się w `dotnet/runtime` repozytorium. W tym pliku można zobaczyć, że wszystkie identyfikatory RID, z wyjątkiem podstawowego, zawierają `"#import"` instrukcję. Te instrukcje wskazują zgodne identyfikatory RID.
+Wykres RID lub wykres rezerwowy środowiska uruchomieniowego to lista identyfikatorów RID, które są zgodne ze sobą. Identyfikatory RID są zdefiniowane w pakiecie [Microsoft. servicecore. platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) . Listę obsługiwanych identyfikatorów RID i Graf RID można zobaczyć w [*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) pliku, który znajduje się w `dotnet/runtime` repozytorium. W tym pliku można zobaczyć, że wszystkie identyfikatory RID, z wyjątkiem podstawowego, zawierają `"#import"` instrukcję. Te instrukcje wskazują zgodne identyfikatory RID.
 
 Gdy pakiet NuGet przywraca pakiety, próbuje znaleźć dokładne dopasowanie dla określonego środowiska uruchomieniowego.
 Jeśli dokładne dopasowanie nie zostanie znalezione, pakiet NuGet przeprowadzi ponownie wykres do momentu znalezienia najbliższego zgodnego systemu zgodnie z wykresem RID.
@@ -52,9 +52,9 @@ Poniższy przykład jest rzeczywistym wpisem `osx.10.12-x64` identyfikatora RID:
 }
 ```
 
-Powyższy identyfikator RID określa `osx.10.12-x64` , `osx.10.11-x64`że Importy. W związku z tym, gdy pakiet NuGet przywraca pakiety, próbuje znaleźć dokładne `osx.10.12-x64` dopasowanie dla pakietu. Jeśli NuGet nie może znaleźć określonego środowiska uruchomieniowego, można przywrócić pakiety, `osx.10.11-x64` które określają środowisko uruchomieniowe, na przykład.
+Powyższy identyfikator RID określa, że `osx.10.12-x64` Importy `osx.10.11-x64` . W związku z tym, gdy pakiet NuGet przywraca pakiety, próbuje znaleźć dokładne dopasowanie dla `osx.10.12-x64` pakietu. Jeśli NuGet nie może znaleźć określonego środowiska uruchomieniowego, można przywrócić pakiety, które określają `osx.10.11-x64` środowisko uruchomieniowe, na przykład.
 
-Poniższy przykład pokazuje nieco większego wykresu RID, zdefiniowany również w pliku *Runtime. JSON* :
+Poniższy przykład pokazuje nieco większego wykresu RID, zdefiniowany w *runtime.jsw* pliku:
 
 ```
     win7-x64    win7-x86
@@ -68,7 +68,7 @@ Poniższy przykład pokazuje nieco większego wykresu RID, zdefiniowany równie�
             any
 ```
 
-Wszystkie identyfikatory RID ostatecznie zamapują się `any` z powrotem do głównego identyfikatora RID.
+Wszystkie identyfikatory RID ostatecznie zamapują się z powrotem do głównego `any` identyfikatora RID.
 
 Istnieją pewne kwestie dotyczące identyfikatorów RID, które należy wziąć pod uwagę podczas pracy z nimi:
 
@@ -80,7 +80,7 @@ Istnieją pewne kwestie dotyczące identyfikatorów RID, które należy wziąć 
 ## <a name="using-rids"></a>Korzystanie z identyfikatorów RID
 
 Aby móc korzystać z identyfikatorów RID, musisz wiedzieć, które istniejące identyfikatory RID istnieją. Nowe wartości są regularnie dodawane do platformy.
-Aby uzyskać najnowszą i kompletną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) w `dotnet/runtime` repozytorium.
+Aby uzyskać najnowszą i pełną wersję, zobacz [runtime.jsw](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) pliku w `dotnet/runtime` repozytorium.
 
 Zestaw SDK platformy .NET Core 2,0 wprowadza koncepcję przenośnych identyfikatorów RID. Są to nowe wartości dodawane do grafu identyfikatorów RID, które nie są powiązane z określoną wersją lub dystrybucją systemu operacyjnego i są preferowanym wyborem w przypadku korzystania z platformy .NET Core 2,0 i nowszych. Są one szczególnie przydatne w przypadku korzystania z wielu dystrybucje systemu Linux, ponieważ większość identyfikatorów RID dystrybucji jest mapowanych na przenośne identyfikatory RID.
 
@@ -88,7 +88,7 @@ Na poniższej liście przedstawiono mały podzestaw najbardziej typowych identyf
 
 ## <a name="windows-rids"></a>Identyfikatory RID systemu Windows
 
-Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) w `dotnet/runtime` repozytorium.
+Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zapoznaj się z tematem [runtime.jsw](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) pliku w `dotnet/runtime` repozytorium.
 
 - Przenośne (.NET Core 2,0 lub nowsze wersje)
   - `win-x64`
@@ -112,7 +112,7 @@ Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące pla
 
 ## <a name="linux-rids"></a>Identyfikatory RID systemu Linux
 
-Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i kompletną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) w `dotnet/runtime` repozytorium. Urządzenia korzystające z dystrybucji niewymienionej poniżej mogą działać z jednym z przenośnych identyfikatorów RID. Na przykład urządzenia Raspberry Pi z dystrybucją systemu Linux, których nie ma na liście `linux-arm`, mogą być wskazywane przez.
+Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz [runtime.jsw](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) pliku w `dotnet/runtime` repozytorium. Urządzenia korzystające z dystrybucji niewymienionej poniżej mogą działać z jednym z przenośnych identyfikatorów RID. Na przykład urządzenia Raspberry Pi z dystrybucją systemu Linux, których nie ma na liście, mogą być wskazywane przez `linux-arm` .
 
 - Przenośne (.NET Core 2,0 lub nowsze wersje)
   - `linux-x64`(Większość dystrybucji komputerów, takich jak CentOS, Debian, Fedora, Ubuntu i pochodne)
@@ -131,7 +131,7 @@ Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące pla
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID używają starszej marki "OSX". Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i kompletną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) w `dotnet/runtime` repozytorium.
+macOS RID używają starszej marki "OSX". Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz [runtime.jsw](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) pliku w `dotnet/runtime` repozytorium.
 
 - Przenośne (.NET Core 2,0 lub nowsze wersje)
   - `osx-x64`(Minimalna wersja systemu operacyjnego to macOS 10,12 Sierra)
@@ -148,6 +148,6 @@ macOS RID używają starszej marki "OSX". Wyświetlane są tylko typowe wartośc
 
 Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?pivots=os-macos).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Identyfikatory środowiska uruchomieniowego](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

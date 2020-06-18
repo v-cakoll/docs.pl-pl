@@ -4,12 +4,12 @@ description: Dowiedz się więcej o tym, jakie dystrybucje systemu Linux obsług
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903379"
 ---
 # <a name="install-net-core-on-linux"></a>Instalowanie programu .NET Core w systemie Linux
 
@@ -78,6 +78,8 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
 
+Aby uzyskać więcej informacji, zobacz [Instalowanie programu .NET Core w systemie Debian](linux-debian.md).
+
 ## <a name="fedora"></a>Fedora
 
 Fedora używa DNF jako Menedżera pakietów.
@@ -113,6 +115,8 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 
+Aby uzyskać więcej informacji, zobacz [Instalowanie programu .NET Core w systemie openSUSE](linux-opensuse.md).
+
 ## <a name="red-hat"></a>Red Hat
 
 Red Hat Enterprise Linux (RHEL) używa yum (RHEL 7) i DNF (RHEL 8) jako Menedżera pakietów.
@@ -128,6 +132,8 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 
+Aby uzyskać więcej informacji, zobacz [Instalowanie programu .NET Core w systemie RHEL](linux-rhel.md).
+
 ## <a name="sles"></a>SLES
 
 SLES używa użyciu narzędzia zypper jako Menedżera pakietów.
@@ -142,6 +148,8 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [12 z dodatkiem SP2](linux-sles.md#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+
+Aby uzyskać więcej informacji, zobacz [Instalowanie programu .NET Core w systemie SLES](linux-sles.md).
 
 ## <a name="ubuntu"></a>Ubuntu
 

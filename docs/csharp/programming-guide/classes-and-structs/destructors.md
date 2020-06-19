@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 62fc531a8064a8a5cb144a89aa9975b3199db976
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990115"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (Przewodnik programowania w języku C#)
 Finalizatory (nazywane również **destruktorami**) służą do wykonywania wszelkich niezbędnych ostatecznych oczyszczeniów, gdy wystąpienie klasy jest zbierane przez moduł wyrzucania elementów bezużytecznych.  
@@ -52,24 +52,24 @@ protected override void Finalize()
 }  
 ```  
   
- Oznacza to, że `Finalize` Metoda jest wywoływana cyklicznie dla wszystkich wystąpień w łańcuchu dziedziczenia, od najbardziej pochodnego do najmniej pochodnego.  
+ Ten projekt oznacza, że `Finalize` Metoda jest wywoływana cyklicznie dla wszystkich wystąpień w łańcuchu dziedziczenia, od najbardziej pochodnego do najmniej pochodnego.  
   
 > [!NOTE]
 > Nie należy używać pustych finalizatorów. Gdy Klasa zawiera finalizator, w kolejce zostaje utworzony wpis `Finalize` . Gdy finalizator jest wywoływany, Moduł wyrzucania elementów bezużytecznych jest wywoływany w celu przetworzenia kolejki. Pusty finalizator powoduje jedynie niepotrzebną utratę wydajności.  
   
- Programista nie ma kontroli nad tym, gdy finalizator jest wywoływany, ponieważ jest określany przez moduł wyrzucania elementów bezużytecznych. Moduł wyrzucania elementów bezużytecznych sprawdza obiekty, które nie są już używane przez aplikację. Jeśli uzna, że obiekt kwalifikuje się do finalizacji, wywołuje finalizator (jeśli istnieje) i ponownie przejmuje pamięć używaną do przechowywania obiektu.
+ Programista nie ma kontroli nad tym, kiedy finalizator jest wywoływany; Moduł zbierający elementy bezużyteczne decyduje o tym, kiedy ma być wywoływana. Moduł wyrzucania elementów bezużytecznych sprawdza obiekty, które nie są już używane przez aplikację. Jeśli uzna, że obiekt kwalifikuje się do finalizacji, wywołuje finalizator (jeśli istnieje) i ponownie przejmuje pamięć używaną do przechowywania obiektu.
 
  W aplikacjach .NET Framework (ale nie w aplikacjach .NET Core) finalizatory są również wywoływane po zakończeniu działania programu.
   
- Istnieje możliwość wymuszenia wyrzucania elementów bezużytecznych przez wywoływanie <xref:System.GC.Collect%2A> , ale większość czasu, należy to uniknąć, ponieważ może to spowodować problemy z wydajnością.  
+ Istnieje możliwość wymuszenia wyrzucania elementów bezużytecznych przez wywołanie <xref:System.GC.Collect%2A> , ale większość czasu, należy unikać tego wywołania, ponieważ może to spowodować problemy z wydajnością.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Korzystanie z finalizatorów do zwolnienia zasobów  
- Ogólnie rzecz biorąc, język C# nie wymaga tyle, ile jest potrzebne do zarządzania pamięcią, gdy opracowujesz przy użyciu języka, który nie jest celem środowiska uruchomieniowego z wyrzucaniem elementów bezużytecznych. Dzieje się tak, ponieważ moduł wyrzucania elementów bezużytecznych platformy .NET niejawnie zarządza alokacją i ilością pamięci dla obiektów. Jeśli jednak aplikacja hermetyzuje niezarządzane zasoby, takie jak Windows, pliki i połączenia sieciowe, należy użyć finalizatorów do zwolnienia tych zasobów. Gdy obiekt kwalifikuje się do finalizacji, Moduł wyrzucania elementów bezużytecznych uruchamia `Finalize` metodę obiektu.
+ Ogólnie rzecz biorąc, język C# nie wymaga jak dużo zarządzania pamięcią w ramach dewelopera jako języków, które nie są przeznaczone do środowiska uruchomieniowego z wyrzucaniem elementów bezużytecznych. Dzieje się tak, ponieważ moduł wyrzucania elementów bezużytecznych platformy .NET niejawnie zarządza alokacją i ilością pamięci dla obiektów. Jeśli jednak aplikacja hermetyzuje niezarządzane zasoby, takie jak Windows, pliki i połączenia sieciowe, należy użyć finalizatorów do zwolnienia tych zasobów. Gdy obiekt kwalifikuje się do finalizacji, Moduł wyrzucania elementów bezużytecznych uruchamia `Finalize` metodę obiektu.
   
 ## <a name="explicit-release-of-resources"></a>Jawne wydanie zasobów  
- Jeśli aplikacja korzysta z kosztownych zasobów zewnętrznych, zalecamy również zapewnienie jawnie zwolnienia zasobu, zanim moduł wyrzucania elementów bezużytecznych zwolni obiekt. Można to zrobić przez zaimplementowanie `Dispose` metody z <xref:System.IDisposable> interfejsu, który wykonuje niezbędne czyszczenie dla obiektu. Może to znacząco poprawić wydajność aplikacji. Nawet w przypadku tej jawnej kontroli nad zasobami finalizator jest środkiem do czyszczenia zasobów, jeśli wywołanie `Dispose` metody nie powiodło się.  
+ Jeśli aplikacja korzysta z kosztownych zasobów zewnętrznych, zalecamy również zapewnienie jawnie zwolnienia zasobu, zanim moduł wyrzucania elementów bezużytecznych zwolni obiekt. Aby zwolnić zasób, zaimplementuj `Dispose` metodę z <xref:System.IDisposable> interfejsu, który wykonuje niezbędne czyszczenie dla obiektu. Może to znacząco poprawić wydajność aplikacji. Nawet w przypadku tej jawnej kontroli nad zasobami finalizator jest środkiem do czyszczenia zasobów, jeśli wywołanie `Dispose` metody zakończy się niepowodzeniem.  
   
- Więcej informacji o czyszczeniu zasobów znajduje się w następujących tematach:  
+ Więcej informacji o czyszczeniu zasobów znajduje się w następujących artykułach:  
   
 - [Oczyszczanie zasobów niezarządzanych](../../../standard/garbage-collection/unmanaged.md)  
   

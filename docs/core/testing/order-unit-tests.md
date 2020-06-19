@@ -4,12 +4,12 @@ description: Dowiedz się, jak zamówić testy jednostkowe za pomocą platformy 
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989258"
 ---
 # <a name="order-unit-tests"></a>Zamów testy jednostkowe
 
@@ -84,4 +84,4 @@ Aby jawnie zamówić testy, NUnit udostępnia [`OrderAttribute`](https://github.
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
-> [Najlepsze rozwiązania dotyczące testów jednostkowych](unit-testing-best-practices.md)
+> [Pokrycie kodu testu jednostkowego](unit-testing-code-coverage.md)

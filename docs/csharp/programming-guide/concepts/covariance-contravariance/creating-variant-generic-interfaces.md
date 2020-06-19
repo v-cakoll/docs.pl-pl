@@ -2,12 +2,12 @@
 title: Tworzenie interfejsów ogólnych typu Variant (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990046"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Tworzenie interfejsów ogólnych typu Variant (C#)
 
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Unikanie niejednoznaczności
 
-Podczas implementowania interfejsów ogólnych typu Variant WARIANCJA może czasami prowadzić do niejednoznaczności. Należy to uniknąć.
+Podczas implementowania interfejsów ogólnych typu Variant WARIANCJA może czasami prowadzić do niejednoznaczności. Należy unikać takiej niejednoznaczności.
 
-Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie jest określony, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Może to prowadzić do delikatnych usterek w kodzie. Spójrz na poniższy przykład kodu.
+Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie określa, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Ta niejednoznaczność może prowadzić do delikatnych usterek w kodzie. Spójrz na poniższy przykład kodu.
 
 ```csharp
 // Simple class hierarchy.

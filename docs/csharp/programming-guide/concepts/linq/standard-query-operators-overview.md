@@ -2,17 +2,17 @@
 title: Standardowe operatory zapytań — Omówienie (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 2327ed84734e4f4ad826e02ed4e30b8784a59716
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990006"
 ---
 # <a name="standard-query-operators-overview-c"></a>Standardowe operatory zapytań — Omówienie (C#)
 *Standardowe operatory zapytań* to metody, które tworzą wzorzec LINQ. Większość z tych metod operuje na sekwencjach, gdzie sekwencja jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejs lub <xref:System.Linq.IQueryable%601> interfejs. Standardowe operatory zapytań zapewniają możliwości zapytań, w tym filtrowanie, projekcję, agregację, sortowanie i inne.  
   
- Istnieją dwa zestawy operatorów standardowych zapytań LINQ, które działają na obiektach typu <xref:System.Collections.Generic.IEnumerable%601> i innych, które działają na obiektach typu <xref:System.Linq.IQueryable%601> . Metody, które składają się na każdy zestaw są statycznymi elementami członkowskimi <xref:System.Linq.Enumerable> <xref:System.Linq.Queryable> klas i, odpowiednio. Są one definiowane jako *metody rozszerzające* typ, na którym działają. Metody rozszerzające można wywołać za pomocą składni metody statycznej lub składni metody wystąpienia.  
+ Istnieją dwa zestawy operatorów standardowego zapytania LINQ: jeden, który działa na obiektach typu <xref:System.Collections.Generic.IEnumerable%601> , inny, który działa na obiektach typu <xref:System.Linq.IQueryable%601> . Metody, które składają się na każdy zestaw są statycznymi elementami członkowskimi <xref:System.Linq.Enumerable> <xref:System.Linq.Queryable> klas i, odpowiednio. Są one definiowane jako *metody rozszerzające* typ, na którym działają. Metody rozszerzające można wywołać za pomocą składni metody statycznej lub składni metody wystąpienia.  
   
  Ponadto kilka metod standardowego operatora zapytań działa na typach innych niż te oparte na <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601> . <xref:System.Linq.Enumerable>Typ definiuje dwie takie metody, które działają na obiektach typu <xref:System.Collections.IEnumerable> . Te metody <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> i <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> umożliwiają włączenie kolekcji niesparametryzowanej lub nieogólnej, w której będą wysyłane zapytania we wzorcu LINQ. W tym celu należy utworzyć kolekcję obiektów o jednoznacznie określonym typie. <xref:System.Linq.Queryable>Klasa definiuje dwie podobne metody, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> które działają na obiektach typu <xref:System.Linq.Queryable> .  
   
@@ -20,7 +20,7 @@ ms.locfileid: "84287425"
   
  W przypadku metod, które działają na kolekcjach w pamięci, czyli te metody, które przechodzą <xref:System.Collections.Generic.IEnumerable%601> , zwracany wyliczalny obiekt przechwytuje argumenty, które zostały przekazane do metody. Po wyliczeniu tego obiektu jest stosowana logika operatora zapytania, a wyniki zapytania są zwracane.  
   
- W przeciwieństwie do metod, które zwiększają <xref:System.Linq.IQueryable%601> nie zaimplementować żadnego zachowania zapytania, ale kompiluje drzewo wyrażenia, które reprezentuje zapytanie, które ma zostać wykonane. Przetwarzanie zapytania jest obsługiwane przez <xref:System.Linq.IQueryable%601> obiekt źródłowy.  
+ W przeciwieństwie do metod, które rozszerzy <xref:System.Linq.IQueryable%601> nie implementują żadnego działania związanego z wykonywaniem zapytań. Tworzą one drzewo wyrażenia, które reprezentuje zapytanie, które ma zostać wykonane. Przetwarzanie zapytania jest obsługiwane przez <xref:System.Linq.IQueryable%601> obiekt źródłowy.  
   
  Wywołania metod zapytania można łączyć razem w jednym zapytaniu, co umożliwia zapełnienie zapytań.  
   
@@ -73,7 +73,7 @@ foreach (var obj in query)
  Zestaw standardowych operatorów zapytań można rozszerzyć przez utworzenie metod specyficznych dla domeny, które są odpowiednie dla domeny docelowej lub technologii. Możesz również zastąpić standardowe operatory zapytań własnymi implementacjami, które zapewniają dodatkowe usługi, takie jak Ocena zdalna, tłumaczenie zapytań i optymalizacja. Zobacz <xref:System.Linq.Enumerable.AsEnumerable%2A> , aby zapoznać się z przykładem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Poniższe linki prowadzą do tematów, które dostarczają dodatkowych informacji na temat różnych standardowych operatorów zapytań opartych na funkcjonalności.  
+ Poniższe linki prowadzą do artykułów, które dostarczają dodatkowych informacji na temat różnych standardowych operatorów zapytań opartych na funkcjonalności.  
   
  [Sortowanie danych (C#)](./sorting-data.md)  
   
@@ -103,7 +103,7 @@ foreach (var obj in query)
   
  [Operacje agregacji (C#)](./aggregation-operations.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

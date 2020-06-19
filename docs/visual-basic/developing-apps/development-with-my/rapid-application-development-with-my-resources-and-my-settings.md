@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 6c53d11a3830a5a8a2cb898728bed8694a226686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fd1ec25582e919b84235502f5921edfbc6e1dade
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990203"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "84411671"
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- `My.Resources`Obiekt uwidacznia tylko zasoby globalne. Nie zapewnia dostępu do plików zasobów skojarzonych z formularzami. Musisz uzyskać dostęp do zasobów formularza z formularza.  
+ `My.Resources`Obiekt uwidacznia tylko zasoby globalne. Nie zapewnia dostępu do plików zasobów skojarzonych z formularzami. Uzyskaj dostęp do formularzy zasoby z formularza.  
   
  Podobnie `My.Settings` obiekt zapewnia dostęp do ustawień aplikacji i umożliwia dynamiczne przechowywanie i pobieranie ustawień właściwości oraz innych informacji dotyczących aplikacji. Aby uzyskać więcej informacji, zobacz [Moje obiekty Resources](../../language-reference/objects/my-resources-object.md) i [My. Settings](../../language-reference/objects/my-settings-object.md).  
   

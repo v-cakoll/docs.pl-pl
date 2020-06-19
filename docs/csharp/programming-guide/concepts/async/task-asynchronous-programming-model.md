@@ -2,12 +2,12 @@
 title: Model programowania asynchronicznego zadań (TAP) z Async i Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d575a369a3c9766938e3996c527e27539e3e62e2
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990077"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 
@@ -234,7 +234,7 @@ Asynchroniczne interfejsy API w programowaniu środowisko wykonawcze systemu Win
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>Konwencja nazewnictwa
 
-Zgodnie z Konwencją metody, które zwracają często oczekiwane typy (np.,, `Task` `Task<T>` ), `ValueTask` `ValueTask<T>` powinny mieć nazwy kończące się na "Async". Metody, które uruchamiają operację asynchroniczną, ale nie zwracają typu oczekującego, nie powinny mieć nazw kończących się na "Async", ale mogą zaczynać się od "BEGIN", "Start" lub innego zlecenia, aby zasugerować, że ta metoda nie zwraca lub nie generuje wyniku operacji.
+Zgodnie z Konwencją metody, które zwracają często oczekiwane typy (na przykład,,, `Task` `Task<T>` ), `ValueTask` `ValueTask<T>` powinny mieć nazwy kończące się na "Async". Metody, które uruchamiają operację asynchroniczną, ale nie zwracają typu oczekującego, nie powinny mieć nazw kończących się na "Async", ale mogą zaczynać się od "BEGIN", "Start" lub innego zlecenia, aby zasugerować, że ta metoda nie zwraca lub nie generuje wyniku operacji.
 
 Można zignorować konwencję, gdy zdarzenie, klasa bazowa lub kontrakt interfejsu sugeruje inną nazwę. Na przykład nie należy zmieniać nazw często używanych procedur obsługi zdarzeń, takich jak `Button1_Click` .
 
@@ -245,7 +245,7 @@ Można zignorować konwencję, gdy zdarzenie, klasa bazowa lub kontrakt interfej
 |[Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|Przedstawia, w jaki sposób konwertować synchroniczne rozwiązanie WPF do asynchronicznego rozwiązania WPF. Ta aplikacja pobiera szereg witryn sieci Web.|[Przykład asynchroniczny: uzyskiwanie dostępu do przewodnika dla sieci Web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
 |[Jak rozłożyć Instruktaż asynchroniczny za pomocą metody Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Dodaje <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> do poprzedniego przewodnika. Korzystanie z `WhenAll` uruchamiania wszystkich pobrań w tym samym czasie.||
 |[Jak wykonać równolegle wiele żądań sieci Web za pomocą Async i Await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Ilustruje, jak uruchomić kilka zadań w tym samym czasie.|[Przykład Async: równoległe wykonywanie wielu żądań sieci Web](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[Asynchroniczne typy zwracane (C#)](./async-return-types.md)|Ilustruje typy zwracane przez metody async i wyjaśnia, kiedy poszczególne typy są odpowiednie.||
+|[Asynchroniczne typy zwracane (C#)](./async-return-types.md)|Ilustruje typy, które mogą zwracać metody asynchroniczne, i wyjaśnia, kiedy każdy typ jest odpowiedni.||
 |[Przepływ sterowania w programach asynchronicznych (C#)](./control-flow-in-async-programs.md)|Śledzi szczegółowo przepływ sterowania w serii wyrażeń await w programie asynchronicznym.|[Przykład asynchroniczny: przepływ sterowania w programach asynchronicznych](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[Dostrajanie aplikacji asynchronicznej (C#)](./fine-tuning-your-async-application.md)|Przedstawia, w jaki sposób dodać następujące funkcje do rozwiązania async:<br /><br /> - [Anulowanie zadania asynchronicznego lub listy zadań (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [Anulowanie zadań asynchronicznych po upływie czasu (C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [Anuluj pozostałe zadania asynchroniczne po zakończeniu jednego (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [Uruchamianie wielu zadań asynchronicznych i przetwarzanie ich w miarę ich kończenia (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Próbka asynchroniczna: dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
 |[Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (C#)](./handling-reentrancy-in-async-apps.md)|Pokazuje, jak obsługiwać przypadki, w których aktywna operacja asynchroniczna jest uruchamiana ponownie, gdy jest uruchomiona.||

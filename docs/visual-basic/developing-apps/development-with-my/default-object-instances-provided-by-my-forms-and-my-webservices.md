@@ -7,16 +7,16 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 847724450ee2bc8bc591371f71171e8ba4ed9337
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 141f2f5f98499498d3c6732f7ae8d0abe6259ed9
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990248"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Domyślne wystąpienia obiektu zapewniane przez My.Forms i My.WebServices (Visual Basic)
 
-Obiekty [My. Forms](../../language-reference/objects/my-forms-object.md) i [My. WebServices](../../language-reference/objects/my-webservices-object.md) zapewniają dostęp do formularzy, źródeł danych i usług sieci Web XML używanych przez aplikację. W tym celu należy podać kolekcje *wystąpień domyślnych* każdego z tych obiektów.  
+Obiekty [My. Forms](../../language-reference/objects/my-forms-object.md) i [My. WebServices](../../language-reference/objects/my-webservices-object.md) zapewniają dostęp do formularzy, źródeł danych i usług sieci Web XML używanych przez aplikację. Zapewniają dostęp za poorednictwem kolekcji *wystąpień domyślnych* każdego z tych obiektów.  
   
 ## <a name="default-instances"></a>Wystąpienia domyślne  
 

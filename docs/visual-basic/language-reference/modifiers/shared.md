@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990191"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +24,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest skoja
 
 ## <a name="when-to-use-shared"></a>Kiedy używać udostępnionego
 
-Udostępnienie składowej klasy lub struktury sprawia, że jest ona dostępna dla każdego wystąpienia, a nie jako *nieudostępnione*, gdzie każde wystąpienie zachowuje własną kopię. Jest to przydatne, na przykład jeśli wartość zmiennej dotyczy całej aplikacji. Jeśli ta zmienna jest zadeklarowana `Shared` , wszystkie wystąpienia uzyskują dostęp do tej samej lokalizacji magazynu, a jeśli jedno wystąpienie zmieni wartość zmiennej, wszystkie wystąpienia uzyskują dostęp do zaktualizowanej wartości.
+Udostępnienie składowej klasy lub struktury sprawia, że jest ona dostępna dla każdego wystąpienia, a nie jako *nieudostępnione*, gdzie każde wystąpienie zachowuje własną kopię. Udostępnianie jest przydatne, na przykład jeśli wartość zmiennej dotyczy całej aplikacji. Jeśli ta zmienna jest zadeklarowana `Shared` , wszystkie wystąpienia uzyskują dostęp do tej samej lokalizacji magazynu, a jeśli jedno wystąpienie zmieni wartość zmiennej, wszystkie wystąpienia uzyskują dostęp do zaktualizowanej wartości.
 
 Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykład element członkowski klasy może być współużytkowany i prywatny (dostępny tylko w ramach klasy) lub nieudostępniony i publiczny. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -50,7 +50,7 @@ Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykł
 
 - **Uzyskiwanie dostępu za za poorednictwem zmiennej wystąpienia.** Istnieje możliwość uzyskania dostępu do elementu udostępnionego przez zakwalifikowanie go o nazwę zmiennej, która zawiera określone wystąpienie jego klasy lub struktury. Chociaż zwykle działa to w oczekiwany sposób, kompilator generuje komunikat ostrzegawczy i zapewnia dostęp za pomocą nazwy klasy lub struktury zamiast zmiennej.
 
-- **Uzyskiwanie dostępu za poorednictwem wyrażenia wystąpienia.** Jeśli uzyskujesz dostęp do udostępnionego elementu za pomocą wyrażenia, które zwraca wystąpienie jego klasy lub struktury, kompilator uzyskuje dostęp poprzez nazwę klasy lub struktury zamiast oceniania wyrażenia. Daje to nieoczekiwane wyniki, jeśli zamierzasz wykonać wyrażenie do wykonania innych czynności, a także zwracające wystąpienie. Ilustruje to poniższy przykład.
+- **Uzyskiwanie dostępu za poorednictwem wyrażenia wystąpienia.** Jeśli uzyskujesz dostęp do udostępnionego elementu za pomocą wyrażenia, które zwraca wystąpienie jego klasy lub struktury, kompilator uzyskuje dostęp poprzez nazwę klasy lub struktury zamiast oceniania wyrażenia. Ten dostęp daje nieoczekiwane wyniki, jeśli zamierzasz wykonać wyrażenie do wykonania innych czynności, a także zwracające wystąpienie. Poniższy przykład ilustruje tę sytuację.
   
     ```vb
     Sub Main()
@@ -82,7 +82,7 @@ Udostępnianie nie zmienia poziomu dostępu elementu członkowskiego. Na przykł
     End Class
     ```
 
-     W poprzednim przykładzie kompilator generuje komunikat ostrzegawczy, gdy kod uzyskuje dostęp do właściwości udostępnionej `Total` za pomocą wystąpienia. W każdym przypadku uzyskuje dostęp bezpośrednio za pomocą klasy `ShareTotal` i nie korzysta z żadnego wystąpienia. W przypadku zamierzonego wywołania procedury `ReturnClass` oznacza to, że nie generuje nawet wywołania do `ReturnClass` , więc dodatkowa akcja wyświetlania "Function ReturnClass () wywołana" nie jest wykonywana.
+     W poprzednim przykładzie kompilator generuje komunikat ostrzegawczy, gdy kod uzyskuje dostęp do właściwości udostępnionej `Total` za pomocą wystąpienia. W każdym przypadku uzyskuje dostęp bezpośrednio za pomocą klasy i nie `ShareTotal` korzysta z żadnego wystąpienia. W przypadku zamierzonego wywołania procedury `ReturnClass` oznacza to, że nie generuje nawet wywołania do `ReturnClass` , więc dodatkowa akcja wyświetlania "Function ReturnClass () wywołana" nie jest wykonywana.
 
 `Shared`Modyfikator może być używany w tych kontekstach:
 

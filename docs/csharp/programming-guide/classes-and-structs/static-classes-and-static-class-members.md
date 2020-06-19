@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990096"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 
@@ -54,7 +54,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Tworzenie klasy statycznej jest tak samo samo jak w przypadku tworzenia klasy, która zawiera tylko statyczne elementy członkowskie i Konstruktor prywatny. Konstruktor prywatny uniemożliwia utworzenie wystąpienia klasy. Zaletą używania klasy statycznej jest to, że kompilator może sprawdzić, czy żaden element członkowski wystąpienia nie został przypadkowo dodany. Kompilator gwarantuje, że wystąpienia tej klasy nie mogą zostać utworzone.  
   
- Klasy statyczne są zapieczętowane i w związku z tym nie można ich dziedziczyć. Nie mogą dziedziczyć z żadnej klasy z wyjątkiem <xref:System.Object> . Klasy statyczne nie mogą zawierać konstruktora wystąpień; jednak mogą zawierać statyczny Konstruktor. Klasy niestatyczne powinny także definiować Konstruktor statyczny, jeśli Klasa zawiera statyczne składowe, które wymagają inicjalizacji nieuproszczonej. Aby uzyskać więcej informacji, zobacz [statyczne konstruktory](./static-constructors.md).  
+ Klasy statyczne są zapieczętowane i w związku z tym nie można ich dziedziczyć. Nie mogą dziedziczyć z żadnej klasy z wyjątkiem <xref:System.Object> . Klasy statyczne nie mogą zawierać konstruktora wystąpień. Jednak mogą zawierać statyczny Konstruktor. Klasy niestatyczne powinny także definiować Konstruktor statyczny, jeśli Klasa zawiera statyczne składowe, które wymagają inicjalizacji nieuproszczonej. Aby uzyskać więcej informacji, zobacz [statyczne konstruktory](./static-constructors.md).  
   
 ## <a name="example"></a>Przykład  
  Oto przykład klasy statycznej zawierającej dwie metody, które konwertują temperaturę z Celsjusza na Fahrenheita i od Fahrenheita do c:  
@@ -68,9 +68,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Metody statyczne mogą być przeciążone, ale nie przesłaniane, ponieważ należą do klasy, a nie do żadnego wystąpienia klasy.  
   
- Chociaż nie można zadeklarować pola jako `static const` , pole [const](../../language-reference/keywords/const.md) jest zasadniczo statyczne w zachowaniu. Należy do typu, nie do wystąpienia typu. W związku z tym można uzyskać dostęp do pól const przy użyciu tej samej `ClassName.MemberName` notacji, która jest używana dla pól statycznych. Nie jest wymagane żadne wystąpienie obiektu.  
+ Chociaż nie można zadeklarować pola jako `static const` , pole [const](../../language-reference/keywords/const.md) jest zasadniczo statyczne w zachowaniu. Należy do typu, nie do wystąpienia typu. W związku z tym `const` pola są dostępne za pomocą tej samej `ClassName.MemberName` notacji, która jest używana dla pól statycznych. Nie jest wymagane żadne wystąpienie obiektu.  
   
- Język C# nie obsługuje statycznych zmiennych lokalnych (zmiennych, które są zadeklarowane w zakresie metody).  
+ Język C# nie obsługuje statycznych zmiennych lokalnych (czyli zmiennych, które są zadeklarowane w zakresie metody).  
   
  Elementy członkowskie klasy statycznej deklaruje się za pomocą `static` słowa kluczowego przed typem zwracanym elementu członkowskiego, jak pokazano w następującym przykładzie:  
   

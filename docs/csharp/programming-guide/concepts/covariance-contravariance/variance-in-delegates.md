@@ -2,12 +2,12 @@
 title: Wariancja w delegatach (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: d41c0d3d54df96031fc7989e0fdc78e9f358a40a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990037"
 ---
 # <a name="variance-in-delegates-c"></a>Wariancja w delegatach (C#)
 .NET Framework 3,5 wprowadza obsługę wariancji dla pasujących sygnatur metod z typami delegatów we wszystkich delegatach w języku C#. Oznacza to, że można przypisać do delegatów nie tylko metod, które mają pasujące podpisy, ale również metody, które zwracają więcej typów pochodnych (Kowariancja) lub akceptują parametry, które mają mniej pochodne typy (kontrawariancja) niż określone przez typ delegata. Dotyczy to zarówno delegatów rodzajowych, jak i nieogólnych.  
@@ -158,7 +158,8 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Łączenie delegatów ogólnych typu Variant  
- Nie należy łączyć delegatów wariantów. <xref:System.Delegate.Combine%2A>Metoda nie obsługuje konwersji delegata typu Variant i oczekuje, że Delegaty mają być dokładnie tego samego typu. Może to prowadzić do wyjątku czasu wykonywania podczas łączenia delegatów za pomocą <xref:System.Delegate.Combine%2A> metody lub przy użyciu `+` operatora, jak pokazano w poniższym przykładzie kodu.  
+
+Nie łącz delegatów wariantów. <xref:System.Delegate.Combine%2A>Metoda nie obsługuje konwersji delegata typu Variant i oczekuje, że Delegaty mają być dokładnie tego samego typu. Może to prowadzić do wyjątku czasu wykonywania podczas łączenia delegatów za pomocą <xref:System.Delegate.Combine%2A> metody lub przy użyciu `+` operatora, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  

@@ -4,12 +4,12 @@ description: Dowiedz się, jak korzystać z funkcji pokrycia kodu dla testów je
 author: IEvangelist
 ms.author: dapine
 ms.date: 06/16/2020
-ms.openlocfilehash: 47f10ae367f511d5d02d32bfcb35bf4775a3e946
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990285"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105423"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Użyj pokrycia kodu do testów jednostkowych
 
@@ -266,10 +266,11 @@ Poniżej znajduje się przykładowy plik *coverage.cobertura.xml* .
 > Alternatywnie można użyć pakietu MSBuild, jeśli system kompilacji korzysta już z programu MSBuild. W wierszu polecenia Zmień katalogi na projekt *XUnit. Coverlet. MSBuild* i uruchom `dotnet test` polecenie:
 >
 > ```dotnetcli
-> dotnet test --collect:"XPlat Code Coverage"
+> dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> Wynikowy plik *coverage.cobertura.xml* jest wyjściowy.
+> Wynikowy plik *coverage.cobertura.xml* jest wyjściowy.  
+> W [tym miejscu](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) możesz wykonać instrukcje dotyczące programu MSBuild integraton
 
 ## <a name="generate-reports"></a>Generowanie raportów
 

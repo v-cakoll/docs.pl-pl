@@ -1,5 +1,6 @@
 ---
-title: 'Porady: zwolnienie domeny aplikacji'
+title: 'Instrukcje: Zwolnienie domeny aplikacji'
+description: Przeczytaj, jak zwolnić domenę aplikacji w programie .NET przy użyciu metody AppDomain. Unload, aby bezpiecznie zamknąć określoną domenę aplikacji.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b64a9553f63aa4a8deb57f23a97fa464edd64fee
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119845"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104676"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Porady: zwolnienie domeny aplikacji
+# <a name="how-to-unload-an-application-domain"></a>Instrukcje: Zwolnienie domeny aplikacji
 Po zakończeniu korzystania z domeny aplikacji zwolnij ją przy użyciu <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metody. Metoda **Unload** bezpiecznie zamyka określoną domenę aplikacji. W trakcie procesu zwalniania żadne nowe wątki nie mogą uzyskać dostępu do domeny aplikacji, a wszystkie struktury danych specyficzne dla domeny aplikacji są zwolnione.  
   
- Zestawy ładowane do domeny aplikacji są usuwane i nie są już dostępne. Jeśli zestaw w domenie aplikacji jest niezależny od domeny, dane dla zestawu pozostają w pamięci, dopóki cały proces nie zostanie zamknięty. Nie istnieje mechanizm zwalniania zestawu neutralnego z domeną poza zamknięciem całego procesu. Istnieją sytuacje, w których żądanie zwolnienia domeny aplikacji nie działa i daje w wyniku <xref:System.CannotUnloadAppDomainException>.  
+ Zestawy ładowane do domeny aplikacji są usuwane i nie są już dostępne. Jeśli zestaw w domenie aplikacji jest niezależny od domeny, dane dla zestawu pozostają w pamięci, dopóki cały proces nie zostanie zamknięty. Nie istnieje mechanizm zwalniania zestawu neutralnego z domeną poza zamknięciem całego procesu. Istnieją sytuacje, w których żądanie zwolnienia domeny aplikacji nie działa i daje w wyniku <xref:System.CannotUnloadAppDomainException> .  
   
- Poniższy przykład tworzy nową domenę aplikacji o nazwie `MyDomain`, drukuje pewne informacje w konsoli, a następnie zwalnia domenę aplikacji. Należy zauważyć, że kod próbuje wydrukować przyjazną nazwę nieładowanej domeny aplikacji do konsoli programu. Ta akcja generuje wyjątek, który jest obsługiwany przez instrukcje try/catch na końcu programu.  
+ Poniższy przykład tworzy nową domenę aplikacji o nazwie `MyDomain` , drukuje pewne informacje w konsoli, a następnie zwalnia domenę aplikacji. Należy zauważyć, że kod próbuje wydrukować przyjazną nazwę nieładowanej domeny aplikacji do konsoli programu. Ta akcja generuje wyjątek, który jest obsługiwany przez instrukcje try/catch na końcu programu.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.AppDomain.Load#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source3.cpp#3)]
@@ -32,5 +33,5 @@ Po zakończeniu korzystania z domeny aplikacji zwolnij ją przy użyciu <xref:Sy
 ## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Porady: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)
+- [Instrukcje: Tworzenie domeny aplikacji](how-to-create-an-application-domain.md)
 - [Używanie domeny aplikacji](use.md)

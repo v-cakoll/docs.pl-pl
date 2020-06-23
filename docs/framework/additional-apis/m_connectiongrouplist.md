@@ -1,5 +1,6 @@
 ---
-title: Pole servicepoint.m_ConnectionGroupList
+title: ServicePoint. m_ConnectionGroupList — pole
+description: Zapoznaj się z polem ServicePoint. m_ConnectionGroupList, czyli tabelą skrótów grup połączeń, które każdy z nich utrzymuje połączenie dla identyfikatora URI ServicePoint w programie .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989718"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>Pole Lista\_połączeń servicepoint.m
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. m \_ ConnectionGroupList pole
 
-`ServicePoint.m_ConnectionGroupList`jest <xref:System.Collections.Hashtable> a grup połączeń, z których <xref:System.Net.ServicePoint>każda posiada połączenie dla identyfikatora URI.
+`ServicePoint.m_ConnectionGroupList`jest <xref:System.Collections.Hashtable> grupą połączeń, z których każde utrzymuje połączenie dla <xref:System.Net.ServicePoint> identyfikatora URI.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> To `ServicePoint.m_ConnectionGroupList` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+> `ServicePoint.m_ConnectionGroupList`Pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

@@ -1,6 +1,7 @@
 ---
-title: Wykonywanie połączeń z elementami sterującymi bezpiecznymi wątkami
+title: Ustaw bezpieczne dla wątków wywołania formantów
 ms.date: 02/19/2019
+description: Dowiedz się, jak zaimplementować wielowątkowość w aplikacji przez wywoływanie kontrolek między wątkami w sposób bezpieczny dla wątków.
 dev_langs:
 - csharp
 - vb
@@ -15,22 +16,22 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 365b1acb693b9ff2be603a3e659ed8d846a7696a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f4de7bd3d8d89de98dbe27e2dbf360763670d0
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904185"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Jak: Wykonywanie elementów sterujących formularzy windows bezpiecznych dla wątków
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Instrukcje: wykonywanie bezpiecznych dla wątków wywołań formantów Windows Forms
 
-Wielowątkowość może poprawić wydajność aplikacji Windows Forms, ale dostęp do formantów formularzy systemu Windows nie jest z natury bezpieczny dla wątków. Wielowątkową może uwidocznić kod na bardzo poważne i złożone błędy. Dwa lub więcej wątków manipulowania formantem może wymusić formant w niespójnym stanie i prowadzić do warunków wyścigu, zakleszczenia i zawiesza się lub zawiesza. Jeśli zaimplementujesz wielowątkową w aplikacji, należy wywołać formanty między wątkami w sposób bezpieczny dla wątków. Aby uzyskać więcej informacji, zobacz [Najważniejsze wskazówki dotyczące zarządzanych wątków](../../../standard/threading/managed-threading-best-practices.md).
+Wielowątkowość może zwiększyć wydajność aplikacji Windows Forms, ale dostęp do kontrolek Windows Forms nie jest ze względu bezpieczny wątkowo. Wielowątkowość może uwidaczniać kod do bardzo poważnych i złożonych błędów. Co najmniej dwa wątki manipulowania kontrolką mogą wymusić niespójność kontroli i prowadzić do warunków wyścigu, zakleszczeniów i zawieszania się lub zawieszenia. W przypadku zaimplementowania wielowątkowości w aplikacji należy zadbać o to, aby w sposób bezpieczny wątkowo wywoływać kontrolki międzywątkowe. Aby uzyskać więcej informacji, zobacz temat [zarządzane wątki z najlepszymi rozwiązaniami](../../../standard/threading/managed-threading-best-practices.md).
 
-Istnieją dwa sposoby bezpiecznego wywoływania formantu Windows Forms z wątku, który nie utworzył tego formantu. Można użyć <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> metody wywołać delegata utworzonego w wątku głównym, który z kolei wywołuje formant. Lub można zaimplementować <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>program , który używa modelu opartego na zdarzeniach, aby oddzielić pracę wykonaną w wątku w tle od raportowania wyników.
+Istnieją dwa sposoby bezpiecznego wywołania formantu Windows Forms z wątku, który nie utworzył tego formantu. Można użyć <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> metody do wywołania delegata utworzonego w wątku głównym, który z kolei wywołuje formant. Lub, można zaimplementować a <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> , który używa modelu sterowanego zdarzeniami, do rozdzielenia pracy wykonanej w wątku w tle z raportowaniem wyników.
 
 ## <a name="unsafe-cross-thread-calls"></a>Niebezpieczne wywołania między wątkami
 
-Jest niebezpieczne, aby wywołać formant bezpośrednio z wątku, który go nie utworzył. Poniższy fragment kodu ilustruje niebezpieczne wywołanie formantu. <xref:System.Windows.Forms.TextBox?displayProperty=nameWithType> Program `Button1_Click` obsługi zdarzeń `WriteTextUnsafe` tworzy nowy wątek, <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> który ustawia właściwość głównego wątku bezpośrednio.
+Wywołanie formantu bezpośrednio z wątku, który nie został utworzony, jest niebezpieczne. Poniższy fragment kodu ilustruje niebezpieczne wywołanie do <xref:System.Windows.Forms.TextBox?displayProperty=nameWithType> kontrolki. `Button1_Click`Program obsługi zdarzeń tworzy nowy `WriteTextUnsafe` wątek, który ustawia właściwość wątku głównego <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> bezpośrednio.
 
 ```csharp
 private void Button1_Click(object sender, EventArgs e)
@@ -55,37 +56,37 @@ Private Sub WriteTextUnsafe()
 End Sub
 ```
 
-Debuger programu Visual Studio wykrywa te niebezpieczne <xref:System.InvalidOperationException> wywołania wątku przez wywołanie z komunikatem, **operacja między wątkami nieprawidłowa. Kontrola "" dostęp z wątku innego niż wątek został utworzony na.** Zawsze <xref:System.InvalidOperationException> występuje dla niebezpiecznych wywołań między wątkami podczas debugowania programu Visual Studio i może wystąpić w czasie wykonywania aplikacji. Należy rozwiązać ten problem, ale wyjątek można <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType> wyłączyć, ustawiając właściwość na `false`.
+Debuger programu Visual Studio wykrywa te niebezpieczne wywołania wątku <xref:System.InvalidOperationException> , wywołując komunikat, że **operacja między wątkami jest nieprawidłowa. Kontrolka "", do której uzyskano dostęp z wątku innego niż wątek, w którym został utworzony.** <xref:System.InvalidOperationException>Zawsze występuje dla niebezpiecznych wywołań wielowątkowych podczas debugowania programu Visual Studio i może wystąpić w czasie wykonywania aplikacji. Należy rozwiązać ten problem, ale można wyłączyć wyjątek, ustawiając <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType> Właściwość na `false` .
 
-## <a name="safe-cross-thread-calls"></a>Bezpieczne połączenia między wątkami
+## <a name="safe-cross-thread-calls"></a>Bezpieczne wywołania między wątkami
 
-Poniższe przykłady kodu pokazują dwa sposoby bezpiecznego wywoływania formantu Windows Forms z wątku, który go nie utworzył:
+Poniższe przykłady kodu przedstawiają dwa sposoby bezpiecznego wywołania formantu Windows Forms z wątku, który go nie utworzył:
 
-1. Metoda, <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> która wywołuje delegata z wątku głównego do wywołania formantu.
-2. Składnik, <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> który oferuje model oparty na zdarzeniach.
+1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>Metoda, która wywołuje delegata z wątku głównego, aby wywołać formant.
+2. <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>Składnik, który oferuje model oparty na zdarzeniach.
 
-W obu przykładach wątek w tle uśpia przez jedną sekundę, aby symulować pracę wykonaną w tym wątku.
+W obu przykładach wątek w tle uśpienie dla jednej sekundy w celu symulowania pracy wykonywanej w tym wątku.
 
-Można skompilować i uruchomić te przykłady jako aplikacje .NET Framework z wiersza polecenia C# lub Visual Basic. Aby uzyskać więcej informacji, zobacz [Tworzenie wiersza polecenia za pomocą pliku csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [Kompilacja z wiersza polecenia (Visual Basic).](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+Możesz tworzyć i uruchamiać te przykłady jako .NET Framework aplikacje z poziomu wiersza polecenia C# lub Visual Basic. Aby uzyskać więcej informacji, zobacz [wiersza polecenia kompilowania przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [kompilowania z wiersza polecenia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
-Począwszy od programu .NET Core 3.0, można również tworzyć i uruchamiać przykłady jako aplikacje windows .NET Core z folderu o nazwie folderu .NET Core Windows Forms * \<>.csproj* pliku projektu.
+Począwszy od platformy .NET Core 3,0, można również kompilować i uruchamiać przykłady jako aplikacje platformy Windows .NET Core z folderu, który ma plik projektu programu .NET Core Windows Forms * \<folder name> . csproj* .
 
-## <a name="example-use-the-invoke-method-with-a-delegate"></a>Przykład: Użyj metody Invoke z pełnomocnikiem
+## <a name="example-use-the-invoke-method-with-a-delegate"></a>Przykład: Użyj metody Invoke z delegatem
 
-W poniższym przykładzie pokazano wzorzec dla zapewnienia wywołania bezpieczne dla wątków do formantu Windows Forms. Wysyła kwerendy <xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName> właściwości, która porównuje formant tworzenia identyfikator wątku do identyfikatora wątku wywołującego. Jeśli identyfikatory wątku są takie same, wywołuje formant bezpośrednio. Jeśli identyfikatory wątku są różne, <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType> wywołuje metodę z delegatem z wątku głównego, co sprawia, że rzeczywiste wywołanie formantu.
+Poniższy przykład ilustruje wzorzec w celu zapewnienia bezpiecznego wątkowo wywołań kontrolki Windows Forms. Wysyła zapytanie do <xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName> właściwości, co porównuje identyfikator wątku tworzenia kontrolki z identyfikatorem wątku wywołującego. Jeśli identyfikatory wątku są takie same, wywołuje formant bezpośrednio. Jeśli identyfikatory wątku są różne, wywołuje <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType> metodę z delegatem z głównego wątku, co sprawia, że rzeczywiste wywołanie do kontrolki.
 
-Włącza `SafeCallDelegate` ustawienie <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.TextBox.Text%2A> właściwości formantu. Metoda `WriteTextSafe` wysyła <xref:System.Windows.Forms.Control.InvokeRequired%2A>kwerendy . Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> `true`zwraca `WriteTextSafe` , `SafeCallDelegate` przekazuje <xref:System.Windows.Forms.Control.Invoke%2A> do metody, aby rzeczywiste wywołanie formantu. Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> `false`zwraca `WriteTextSafe` , <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> ustawia bezpośrednio. Program `Button1_Click` obsługi zdarzeń tworzy nowy `WriteTextSafe` wątek i uruchamia metodę.
+`SafeCallDelegate`Włącza ustawienie <xref:System.Windows.Forms.TextBox> właściwości kontrolki <xref:System.Windows.Forms.TextBox.Text%2A> . `WriteTextSafe`Metoda wykonuje zapytania <xref:System.Windows.Forms.Control.InvokeRequired%2A> . Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> zwraca `true` , `WriteTextSafe` przekazuje `SafeCallDelegate` metodę do <xref:System.Windows.Forms.Control.Invoke%2A> metody, aby wykonać rzeczywiste wywołanie do kontrolki. Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> zwraca `false` , `WriteTextSafe` ustawia <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> bezpośrednio. `Button1_Click`Program obsługi zdarzeń tworzy nowy wątek i uruchamia `WriteTextSafe` metodę.
 
  [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
-## <a name="example-use-a-backgroundworker-event-handler"></a>Przykład: Użyj programu obsługi zdarzeń BackgroundWorker
+## <a name="example-use-a-backgroundworker-event-handler"></a>Przykład: Użyj procedury obsługi zdarzeń BackgroundWorker
 
-Łatwym sposobem zaimplementowania wielowątkowego jest <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> składnik, który używa modelu opartego na zdarzeniach. Wątek w <xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType> tle uruchamia zdarzenie, które nie wchodzi w interakcję z wątku głównego. Główny wątek <xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> uruchamia i obsługi zdarzeń, które można wywołać formanty wątku głównego.
+Łatwym sposobem implementacji wielowątkowości jest <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> składnik, który używa modelu opartego na zdarzeniach. Wątek w tle uruchamia <xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType> zdarzenie, które nie współdziała z głównym wątkiem. Wątek główny uruchamia <xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> programy obsługi zdarzeń i, które mogą wywołać kontrolki wątku głównego.
 
-Aby wykonać wywołanie bezpieczne <xref:System.ComponentModel.BackgroundWorker>dla wątków przy użyciu , utwórz metodę w <xref:System.ComponentModel.BackgroundWorker.DoWork> wątku tła, aby wykonać pracę, i powiązać ją ze zdarzeniem. Utwórz inną metodę w wątku głównym, aby zgłosić wyniki <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> pracy w tle i powiązać ją z zdarzeniem lub. Aby uruchomić wątek <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>tła, zadzwoń do pliku .
+Aby wykonać wywołanie bezpieczne dla wątków przy użyciu programu <xref:System.ComponentModel.BackgroundWorker> , należy utworzyć metodę w wątku w tle w celu wykonania pracy i powiązać ją ze <xref:System.ComponentModel.BackgroundWorker.DoWork> zdarzeniem. Utwórz kolejną metodę w wątku głównym, aby zgłosić wyniki pracy w tle i powiązać ją ze <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeniem or. Aby uruchomić wątek w tle, wywołaj polecenie <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType> .
 
-W przykładzie <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> użyto programu <xref:System.Windows.Forms.TextBox> obsługi zdarzeń, aby ustawić <xref:System.Windows.Forms.TextBox.Text%2A> właściwość formantu. Na przykład przy <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> użyciu <xref:System.ComponentModel.BackgroundWorker>zdarzenia, zobacz .
+W przykładzie zastosowano <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> procedurę obsługi zdarzeń, aby ustawić <xref:System.Windows.Forms.TextBox> Właściwość kontrolki <xref:System.Windows.Forms.TextBox.Text%2A> . Przykład użycia <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zdarzenia znajduje się w temacie <xref:System.ComponentModel.BackgroundWorker> .
 
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
@@ -93,6 +94,6 @@ W przykładzie <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Jak: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
-- [Jak: Implementowanie formularza, który używa operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Tworzenie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Instrukcje: uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Tworzenie niestandardowych kontrolek Windows Forms przy użyciu .NET Framework](developing-custom-windows-forms-controls.md)

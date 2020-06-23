@@ -1,19 +1,20 @@
 ---
 title: Odzyskiwanie systemu
+description: Wykonaj odzyskiwanie na platformie .NET. Menedżer zasobów pomaga w rozwiązywaniu trwałych rejestracji transakcji przez ponowne zarejestrowanie uczestnika transakcji po awarii zasobu.
 ms.date: 03/30/2017
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
-ms.openlocfilehash: fe0e096c31b2ef62a1bc50d40c87f2e12c87343f
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bb00d2f574cc2651b733f3308cf2ffc6b430cc31
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205887"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141968"
 ---
 # <a name="performing-recovery"></a>Odzyskiwanie systemu
 Menedżer zasobów ułatwia rozwiązanie trwałych rejestracji w transakcji przez reenlisting uczestnika transakcji po awarii zasobu.  
   
 ## <a name="the-recovery-process"></a>Proces odzyskiwania  
- Aby trwale zarejestrować zasób (opisany przez implementację <xref:System.Transactions.IEnlistmentNotification> interfejsu), który może być później możliwy do odzyskania, należy <xref:System.Transactions.Transaction.EnlistDurable%2A> wywołać metodę. Ponadto należy podać <xref:System.Transactions.Transaction.EnlistDurable%2A> metody z identyfikatorem Menedżera zasobów ( <xref:System.Guid>) używany do stale etykiety uczestnika transakcji w przypadku awarii zasobu. Z <xref:System.Guid> tego powodu, który jest dostarczany do początkowego wywołania rejestracji powinien być taki sam jak parametr *resourceManagerIdentifier* w <xref:System.Transactions.TransactionManager.Reenlist%2A> wywołaniu podczas odzyskiwania. W przeciwnym razie <xref:System.Transactions.TransactionException> zgłaszany. Aby uzyskać więcej informacji na temat trwałych rejestracji, zobacz temat [Rejestrowanie zasobów jako uczestników transakcji](enlisting-resources-as-participants-in-a-transaction.md) .  
+ Aby trwale zarejestrować zasób (opisany przez implementację <xref:System.Transactions.IEnlistmentNotification> interfejsu), który może być później możliwy do odzyskania, należy wywołać <xref:System.Transactions.Transaction.EnlistDurable%2A> metodę. Ponadto należy podać <xref:System.Transactions.Transaction.EnlistDurable%2A> metody z identyfikatorem Menedżera zasobów ( <xref:System.Guid>) używany do stale etykiety uczestnika transakcji w przypadku awarii zasobu. Z tego powodu, <xref:System.Guid> który jest dostarczany do początkowego wywołania rejestracji powinien być taki sam jak parametr *resourceManagerIdentifier* w <xref:System.Transactions.TransactionManager.Reenlist%2A> wywołaniu podczas odzyskiwania. W przeciwnym razie <xref:System.Transactions.TransactionException> zgłaszany. Aby uzyskać więcej informacji na temat trwałych rejestracji, zobacz temat [Rejestrowanie zasobów jako uczestników transakcji](enlisting-resources-as-participants-in-a-transaction.md) .  
   
  W fazie Prepare (faza 1) protokołu 2PC, gdy implementacja trwałego Menedżera zasobów odbierze <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> powiadomienie, powinien rejestrować swój rekord Prepare w tej fazie. Rekord powinien zawierać wszystkie informacje niezbędne do ukończenia transakcji po zatwierdzeniu. Można później uzyskać dostęp do rekordu przygotowania podczas odzyskiwania, pobierając <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> Właściwość wywołania zwrotnego *preparingEnlistment* . Rejestrowanie rekordu nie jest konieczne jest wykonywana w ramach <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> metody jako Menedżera zasobów można to zrobić w wątku roboczego.  
   

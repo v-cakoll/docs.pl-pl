@@ -1,5 +1,6 @@
 ---
 title: <system.serviceModel>
+description: Dowiedz się więcej na temat elementów konfiguracji ServiceModel programu WCF, które umożliwiają konfigurowanie aplikacji usług i klientów platformy WCF.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399446"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243961"
 ---
 # \<system.serviceModel>
 Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji programu Windows Communication Foundation (WCF).  
@@ -68,7 +69,7 @@ Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji programu Windows 
 |[\<bindings>](bindings.md)|Ta sekcja zawiera kolekcję powiązań standardowych i niestandardowych. Każdy wpis jest identyfikowany przez jego unikatowy `name` . Usługi używają powiązań przez łączenie ich przy użyciu `name` .|  
 |[\<client>](client.md)|Ta sekcja zawiera listę punktów końcowych używanych przez klienta do nawiązywania połączenia z usługą.|  
 |[\<comContracts>](comcontracts.md)|Ta sekcja zawiera definicje umów COM włączonych dla usług WCF i współdziałania z modelem COM.|  
-|[\<commonBehaviors>](commonbehaviors.md)|Tę sekcję można zdefiniować tylko w pliku Machine. config. Definiuje dwie kolekcje podrzędne o nazwach `endpointBehaviors` i `serviceBehaviors` .  Każda kolekcja definiuje elementy zachowań używane przez wszystkie punkty końcowe i usługi WCF odpowiednio na maszynie.  Jeśli zachowanie jest zdefiniowane w obu `<commonBehaviors>` `<behaviors>` sekcjach, zachowanie w \<behaviors> sekcji ma pierwszeństwo.|  
+|[\<commonBehaviors>](commonbehaviors.md)|Tę sekcję można zdefiniować tylko w pliku machine.config. Definiuje dwie kolekcje podrzędne o nazwach `endpointBehaviors` i `serviceBehaviors` .  Każda kolekcja definiuje elementy zachowań używane przez wszystkie punkty końcowe i usługi WCF odpowiednio na maszynie.  Jeśli zachowanie jest zdefiniowane w obu `<commonBehaviors>` `<behaviors>` sekcjach, zachowanie w \<behaviors> sekcji ma pierwszeństwo.|  
 |[\<diagnostics>](diagnostics.md)|Ta sekcja zawiera ustawienia funkcji diagnostyki WCF. Użytkownik może włączyć/wyłączyć śledzenie, liczniki wydajności i dostawcę WMI, a także może dodawać niestandardowe filtry komunikatów.|  
 |[\<extensions>](extensions-section.md)|Ta sekcja zawiera kolekcję rozszerzeń, które umożliwiają użytkownikowi tworzenie powiązań zdefiniowanych przez użytkownika, zachowań i innych aspektów rozszerzeń.|  
 |[\<protocolMapping>](protocolmapping.md)|Ta sekcja definiuje zestaw domyślnego mapowania protokołów między schematami protokołu transportowego (np. http, net. TCP, net. pipe itp.) i powiązania WCF.|  
@@ -130,6 +131,6 @@ Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji programu Windows 
 </configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

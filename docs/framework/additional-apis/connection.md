@@ -1,5 +1,6 @@
 ---
 title: Klasa połączenia (System.Net)
+description: Dowiedz się więcej o klasie Connection w programie .NET. Ta klasa analizuje odpowiedzi serwera, żądania kolejki i żądania potoku. Znajduje się w przestrzeni nazw System.NET.
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +12,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb28724ed782fc5395dc74e9c59249ebdea44ddf
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989830"
 ---
 # <a name="connection-class"></a>Connection, klasa
 
-Klasa `Connection` analizuje odpowiedzi serwera, żądania kolejek i żądania potoku.
+`Connection`Klasa analizuje odpowiedzi serwera, żądania kolejki i żądania potoku.
 
 ## <a name="syntax"></a>Składnia
   
@@ -29,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> Klasa `Connection` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> `Connection`Klasa jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnych okolicznościach.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

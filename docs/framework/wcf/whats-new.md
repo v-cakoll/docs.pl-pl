@@ -1,16 +1,17 @@
 ---
 title: Co nowego w wersji 4.5 programu WCF (Windows Communication Foundation)?
+description: W tym artykule opisano funkcje nowe do Windows Communication Foundation (WCF) w wersji 4,5 i linki do dodatkowych zasobów.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449507"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245625"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Co nowego w wersji 4.5 programu WCF (Windows Communication Foundation)?
 
@@ -26,13 +27,13 @@ Domyślnie usługa Dodaj odwołanie do usługi generuje metody asynchroniczne zw
 
 ### <a name="simplified-generated-configuration-files"></a>Uproszczone wygenerowane pliki konfiguracji
 
-Dodanie odwołania do usługi w programie Visual Studio lub użycie narzędzia SvcUtil. exe powoduje wygenerowanie pliku konfiguracji klienta. W poprzednich wersjach programu WCF te pliki konfiguracji zawierały wartość każdej właściwości powiązania, nawet jeśli jej wartość jest wartością domyślną. W programie WCF 4,5 wygenerowane pliki konfiguracji zawierają tylko te właściwości powiązań, które mają ustawioną wartość różną od wartości domyślnej.
+Po dodaniu odwołania do usługi w programie Visual Studio lub użyciu narzędzia SvcUtil.exe zostanie wygenerowany plik konfiguracji klienta. W poprzednich wersjach programu WCF te pliki konfiguracji zawierały wartość każdej właściwości powiązania, nawet jeśli jej wartość jest wartością domyślną. W programie WCF 4,5 wygenerowane pliki konfiguracji zawierają tylko te właściwości powiązań, które mają ustawioną wartość różną od wartości domyślnej.
 
 Aby uzyskać więcej informacji, zobacz [funkcje uproszczenia WCF](wcf-simplification-features.md).
 
 ### <a name="contract-first-development"></a>Kontrakt — pierwsze programowanie
 
-Usługa WCF obsługuje teraz programowanie w pierwszej kolejności. Svcutil. exe ma przełącznik/serviceContract, który umożliwia generowanie kontraktów usługi i danych z dokumentu WSDL.
+Usługa WCF obsługuje teraz programowanie w pierwszej kolejności. svcutil.exe ma przełącznik/serviceContract, który umożliwia generowanie kontraktów usługi i danych z dokumentu WSDL.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Dodaj odwołanie do usługi z projektu podzestawu przenośnego
 
@@ -40,7 +41,7 @@ Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymy
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Domyślne zmiany trybu zgodności ASP.NET
 
-Funkcja WCF oferuje tryb zgodności ASP.NET, który umożliwia deweloperom pełen dostęp do funkcji w potoku HTTP ASP.NET podczas pisania usług WCF. Aby użyć tego trybu, należy ustawić atrybut `aspNetCompatibilityEnabled` na true w sekcji [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) pliku Web. config. Ponadto wszystkie usługi w tej domenie appDomain muszą mieć Właściwość `RequirementsMode` na <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ustawione na <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Domyślnie <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jest teraz ustawiona na <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Aby uzyskać więcej informacji, zobacz [usługi WCF i ASP.NET](./feature-details/wcf-services-and-aspnet.md).
+Funkcja WCF oferuje tryb zgodności ASP.NET, który umożliwia deweloperom pełen dostęp do funkcji w potoku HTTP ASP.NET podczas pisania usług WCF. Aby użyć tego trybu, należy ustawić `aspNetCompatibilityEnabled` dla atrybutu wartość true w [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) sekcji web.config. Ponadto wszystkie usługi w tej domenie appDomain muszą mieć `RequirementsMode` <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ustawioną właściwość na <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> . Domyślnie <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jest ustawiony na <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> . Aby uzyskać więcej informacji, zobacz [usługi WCF i ASP.NET](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Nowe wartości domyślne transportu
 
@@ -48,7 +49,7 @@ W celu uproszczenia konfiguracji zmieniono wiele wartości domyślnych właściw
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas> zawiera konfigurowalne wartości przydziału dla czytników słownika XML, które ograniczają ilość pamięci używaną przez koder podczas tworzenia komunikatu. Podczas konfigurowania tych przydziałów wartości domyślne uległy zmianie, aby zmniejszyć prawdopodobieństwo, że deweloper będzie musiał je jawnie ustawić. Aby uzyskać więcej informacji, zobacz [funkcje uproszczenia WCF](wcf-simplification-features.md).
+<xref:System.Xml.XmlDictionaryReaderQuotas>zawiera konfigurowalne wartości przydziału dla czytników słownika XML, które ograniczają ilość pamięci używaną przez koder podczas tworzenia komunikatu. Podczas konfigurowania tych przydziałów wartości domyślne uległy zmianie, aby zmniejszyć prawdopodobieństwo, że deweloper będzie musiał je jawnie ustawić. Aby uzyskać więcej informacji, zobacz [funkcje uproszczenia WCF](wcf-simplification-features.md).
 
 ### <a name="wcf-configuration-validation"></a>Sprawdzanie poprawności konfiguracji WCF
 
@@ -72,7 +73,7 @@ Niektóre stosy przetwarzania WSDL innych firm nie mogą przetwarzać dokumentó
 
 ## <a name="websocket-support"></a>Obsługa protokołu WebSocket
 
-WebSockets to technologia, która zapewnia prawdziwą komunikację dwukierunkową za pośrednictwem portów 80 i 443 z charakterystykami wydajności podobnymi do protokołu TCP. Dodano dwa nowe powiązania do obsługi komunikacji za pośrednictwem transportu protokołu WebSocket. <xref:System.ServiceModel.NetHttpBinding> i <xref:System.ServiceModel.NetHttpsBinding>. Aby uzyskać więcej informacji, zobacz: [powiązania dostarczone przez system](system-provided-bindings.md).
+WebSockets to technologia, która zapewnia prawdziwą komunikację dwukierunkową za pośrednictwem portów 80 i 443 z charakterystykami wydajności podobnymi do protokołu TCP. Dodano dwa nowe powiązania do obsługi komunikacji za pośrednictwem transportu protokołu WebSocket. <xref:System.ServiceModel.NetHttpBinding>i <xref:System.ServiceModel.NetHttpsBinding> . Aby uzyskać więcej informacji, zobacz: [powiązania dostarczone przez system](system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Nowe wartości domyślne transportu
 
@@ -82,7 +83,7 @@ W poniższej tabeli opisano ustawienia, które zostały zmienione i gdzie można
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 sekund|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * liczba procesorów|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Liczba procesorów do transportu<br /><br /> 4 \* liczba procesorów dla programu SMSvcHost. exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [konfigurowania usługi udostępniania portów Net. TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Liczba procesorów do transportu<br /><br /> 4 \* Liczba procesorów dla SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Konfigurowanie usługi udostępniania portów Net. TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * liczba procesorów|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 sekund|[Konfigurowanie usługi współużytkowania portów Net.TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,13 +93,13 @@ Aby ułatwić nowym i istniejącym deweloperom usług WCF Konfigurowanie swoich 
 
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
 
-Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu. Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samodzielnej obsługi, ale Klasa <xref:System.ServiceModel.ServiceHost> może skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost. Open. Nie ma jednak dostępu do klasy <xref:System.ServiceModel.ServiceHost> w scenariuszach hostowanych w sieci Web. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć `System.ServiceModel.ServiceHostFactory`, które utworzyły <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać dowolną potrzebną konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług WCF w kodzie](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu. Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samoobsługowych, <xref:System.ServiceModel.ServiceHost> Klasa może skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost. Open. Jednak w scenariuszach hostowanych w sieci Web nie masz dostępu do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć utworzoną przez siebie `System.ServiceModel.ServiceHostFactory` <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać dowolną wymaganą konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług WCF w kodzie](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>Buforowanie elementu ChannelFactory
 
-Aplikacje klienckie WCF używają klasy <xref:System.ServiceModel.ChannelFactory%601> do tworzenia kanału komunikacyjnego z usługą WCF. Tworzenie wystąpień <xref:System.ServiceModel.ChannelFactory%601> wiąże się z pewnym obciążeniem, ponieważ obejmuje następujące operacje:
+Aplikacje klienckie programu WCF używają <xref:System.ServiceModel.ChannelFactory%601> klasy do tworzenia kanału komunikacyjnego z usługą WCF. Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień wiąże się z pewnym obciążeniem, ponieważ obejmuje następujące operacje:
 
-1. Konstruowanie drzewa <xref:System.ServiceModel.Description.ContractDescription>
+1. Konstruowanie <xref:System.ServiceModel.Description.ContractDescription> drzewa
 
 2. Odzwierciedlanie wszystkich wymaganych typów CLR
 
@@ -110,7 +111,7 @@ Aby zminimalizować obciążenie, usługa WCF może buforować fabryki kanałów
 
 ## <a name="compression-and-the-binary-encoder"></a>Kompresja i koder binarny
 
-Począwszy od programu WCF 4,5 koder binarny WCF dodaje obsługę kompresji. Typ kompresji jest konfigurowany przy użyciu właściwości <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. Zarówno klient, jak i usługa, muszą skonfigurować właściwość <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. Kompresja będzie działała dla protokołów HTTP, HTTPS i TCP. Jeśli klient określi, aby używać kompresji, ale usługa nie obsługuje tej funkcji, zgłaszany jest wyjątek protokołu wskazujący niezgodność protokołu. Aby uzyskać więcej informacji, zobacz [Wybieranie kodera komunikatów](./feature-details/choosing-a-message-encoder.md).
+Począwszy od programu WCF 4,5 koder binarny WCF dodaje obsługę kompresji. Typ kompresji jest konfigurowany z <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> właściwością. Zarówno klient, jak i usługa, muszą skonfigurować <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> Właściwość. Kompresja będzie działała dla protokołów HTTP, HTTPS i TCP. Jeśli klient określi, aby używać kompresji, ale usługa nie obsługuje tej funkcji, zgłaszany jest wyjątek protokołu wskazujący niezgodność protokołu. Aby uzyskać więcej informacji, zobacz [Wybieranie kodera komunikatów](./feature-details/choosing-a-message-encoder.md).
 
 ## <a name="udp"></a>UDP
 
@@ -124,9 +125,9 @@ Dodano obsługę obsługi wielu trybów uwierzytelniania, które są obsługiwan
 
 Dodano obsługę, która umożliwia obsługę usług WCF przy użyciu międzynarodowych nazw domen. Aby uzyskać więcej informacji [, zobacz WCF i międzynarodowe nazwy domen](./feature-details/wcf-and-internationalized-domain-names.md).
 
-## <a name="httpclient"></a>Klasy HttpClient
+## <a name="httpclient"></a>HttpClient
 
-Dodano nową klasę o nazwie <xref:System.Net.Http.HttpClient>, która znacznie ułatwia pracę z żądaniami HTTP. Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji społecznościowych i połączonych z usługami http](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) oraz [przykładem klienta http](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+Dodano nową klasę o nazwie <xref:System.Net.Http.HttpClient> , która znacznie ułatwia pracę z żądaniami HTTP. Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji społecznościowych i połączonych z usługami http](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) oraz [przykładem klienta http](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>Konfiguracja IntelliSense
 
@@ -152,11 +153,11 @@ W programie Visual Studio 2010 WebServiceHost automatycznie utworzył domyślny 
 
 ## <a name="ihttpcookiecontainermanager"></a>IHttpCookieContainerManager
 
-Ten interfejs, uwidoczniony przez <xref:System.ServiceModel.Channels.IChannelFactory%601>, ułatwia pracę z plikami cookie po stronie klienta. Gdy AllowCookies jest ustawiona na wartość true dla powiązania, można uzyskać dostęp do plików cookie przy użyciu następującego kodu:
+Ten interfejs, uwidoczniony przez <xref:System.ServiceModel.Channels.IChannelFactory%601> , ułatwia pracę z plikami cookie po stronie klienta. Gdy AllowCookies jest ustawiona na wartość true dla powiązania, można uzyskać dostęp do plików cookie przy użyciu następującego kodu:
 
 ```csharp
 IHttpCookieContainerManager cookieManager = factory.GetProperty<IHttpCookieContainerManager>();
 System.Net.CookieContainer container = cookieManager.CookieContainer;
 ```
 
-Następnie można pobrać lub ustawić pliki cookie z <xref:System.Net.CookieContainer>. Gdy AllowCookies jest ustawiona na false, można ręcznie pobrać pliki cookie przy użyciu <xref:System.ServiceModel.OperationContext> i wysłać je w innych żądaniach przy użyciu innego <xref:System.ServiceModel.OperationContext> lub Inspektora komunikatów. Interfejs IHttpCookieContainerManager umożliwia uwierzytelnienie użytkownika za pomocą usługi i używanie pliku cookie uwierzytelniania zwróconego przez tę usługę do uwierzytelniania z innymi usługami.
+Następnie można pobrać lub ustawić pliki cookie z programu <xref:System.Net.CookieContainer> . Gdy AllowCookies jest ustawiona na false, można ręcznie pobrać pliki cookie przy użyciu <xref:System.ServiceModel.OperationContext> i wysłać je w innych żądaniach za pomocą innego <xref:System.ServiceModel.OperationContext> lub Inspektora komunikatów. Interfejs IHttpCookieContainerManager umożliwia uwierzytelnienie użytkownika za pomocą usługi i używanie pliku cookie uwierzytelniania zwróconego przez tę usługę do uwierzytelniania z innymi usługami.

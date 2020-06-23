@@ -1,5 +1,6 @@
 ---
 title: Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
+description: Dowiedz się więcej o najważniejszych pojęciach programistycznych dotyczących modelu tożsamości WCF, modelu opartego na oświadczeniach na potrzeby wykonywania autoryzacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586354"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245131"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 Autoryzacja to proces określania, które jednostki mają uprawnienia do zmiany, wyświetlania lub dostępu do zasobu komputera. Na przykład w firmie tylko kierownicy mogą uzyskać dostęp do plików ich pracowników. Windows Communication Foundation (WCF) obsługuje dwa mechanizmy przetwarzania autoryzacji. Pierwszy mechanizm pozwala kontrolować autoryzację przy użyciu istniejących konstrukcji środowiska uruchomieniowego języka wspólnego (CLR). Drugi jest modelem opartym na oświadczeniach znanym jako *model tożsamości*. Usługa WCF używa modelu tożsamości do tworzenia oświadczeń z komunikatów przychodzących; Klasy modelu tożsamości można rozszerzyć, aby obsługiwać nowe typy roszczeń dla niestandardowych schematów autoryzacji. W tym temacie przedstawiono przegląd najważniejszych koncepcji programistycznych dotyczących modelu tożsamości, a także listę najważniejszych klas używanych przez funkcję.  
@@ -75,7 +76,7 @@ Autoryzacja to proces określania, które jednostki mają uprawnienia do zmiany,
 ## <a name="claims"></a>Oświadczenia  
  Model tożsamości to system oparty na oświadczeniach. Oświadczenia opisują możliwości związane z niektórymi jednostkami w systemie, często użytkownika tego systemu. Zestaw oświadczeń skojarzonych z daną jednostką może być uważany za klucz. Określone oświadczenia definiują kształt tego klucza, podobnie jak klucz fizyczny używany do otwierania blokady w drzwiach. Oświadczenia są używane w celu uzyskania dostępu do zasobów. Dostęp do danego chronionego zasobu jest określany przez porównanie oświadczeń wymaganych do uzyskania dostępu do tego zasobu z oświadczeniami skojarzonymi z jednostką próbującą uzyskać dostęp.  
   
- Element Claim jest wyrażeniem po prawej stronie względem określonej wartości. Prawo może wyglądać podobnie jak "read", "Write" lub "Execute". Wartością może być baza danych, plik, Skrzynka pocztowa lub właściwość. Oświadczenia mają również typ oświadczenia. Kombinacja typu "typ" i "Right" zapewnia mechanizm określania możliwości w odniesieniu do wartości. Na przykład, zgłoszenie typu "plik" z prawej strony "Odczyt" nad wartością "Biografi. doc" wskazuje, że jednostka, z którą jest skojarzone takie zastrzeżenie, ma dostęp do odczytu do pliku Biografi. doc. Zgłoszenie typu "name" z prawej strony "PossessProperty" na wartość "Martin" wskazuje, że jednostka, z którą jest skojarzone takie zgłoszenie, posiada właściwość Name o wartości "Martin".  
+ Element Claim jest wyrażeniem po prawej stronie względem określonej wartości. Prawo może wyglądać podobnie jak "read", "Write" lub "Execute". Wartością może być baza danych, plik, Skrzynka pocztowa lub właściwość. Oświadczenia mają również typ oświadczenia. Kombinacja typu "typ" i "Right" zapewnia mechanizm określania możliwości w odniesieniu do wartości. Na przykład, zgłoszenie typu "plik" z prawej strony "Odczyt" przez wartość "Biography.doc" wskazuje, że jednostka, z którą jest skojarzone takie zastrzeżenie, ma dostęp do odczytu do Biography.doc pliku. Zgłoszenie typu "name" z prawej strony "PossessProperty" na wartość "Martin" wskazuje, że jednostka, z którą jest skojarzone takie zgłoszenie, posiada właściwość Name o wartości "Martin".  
   
  Chociaż różne typy i prawa są zdefiniowane jako część modelu tożsamości, system jest rozszerzalny, co pozwala różnym systemom, które są tworzone w oparciu o infrastrukturę modelu tożsamości, w celu zdefiniowania dodatkowych typów i praw dostępu zgodnie z potrzebami.  
   

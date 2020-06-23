@@ -1,15 +1,16 @@
 ---
 title: Konfigurowanie śledzenia
+description: Dowiedz się, jak włączyć śledzenie, konfigurować źródła śledzenia, ustawiać śledzenie działań i propagację oraz ustawić detektory śledzenia w celu uzyskania dostępu do śladów w programie WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579010"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245352"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł śledzenia w celu emitowania śladów i ustawiania poziomów śledzenia, ustawiania śledzenia aktywności i propagacji w celu obsługi korelacji kompleksowych wyników śledzenia oraz ustawiania detektorów śledzenia dostępu do śladów.  
@@ -32,7 +33,7 @@ W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł �
   
  W przypadku używania punktów rozszerzalności WCF, takich jak niestandardowe wywołania operacji, należy emitować własne dane śledzenia. Wynika to z faktu, że w przypadku zaimplementowania punktu rozszerzalności Funkcja WCF nie będzie już emitować standardowych śladów w ścieżce domyślnej. Jeśli obsługa śledzenia ręcznego nie zostanie wdrożona przez emitowanie śladów, mogą nie być widoczne dane śledzenia.  
   
- Śledzenie można skonfigurować, edytując plik konfiguracyjny aplikacji — Web. config dla aplikacji hostowanych w sieci Web lub nazwa_aplikacji. exe. config dla aplikacji samodzielnych. Poniżej przedstawiono przykład takiej edycji. Aby uzyskać więcej informacji na temat tych ustawień, zobacz sekcję "Konfigurowanie odbiorników śledzenia do korzystania ze śladów".  
+ Śledzenie można skonfigurować, edytując plik konfiguracyjny aplikacji — Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config dla aplikacji samodzielnie hostowanych. Poniżej przedstawiono przykład takiej edycji. Aby uzyskać więcej informacji na temat tych ustawień, zobacz sekcję "Konfigurowanie odbiorników śledzenia do korzystania ze śladów".  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł �
 ```  
   
 > [!NOTE]
-> Aby edytować plik konfiguracji projektu usługi WCF w programie Visual Studio, kliknij prawym przyciskiem myszy plik konfiguracyjny aplikacji — Web. config dla aplikacji hostowanych w sieci Web, lub nazwa_aplikacji. exe. config dla aplikacji samohostowanej w **Eksplorator rozwiązań**. Następnie wybierz pozycję **Edytuj kontekst konfiguracji WCF** . Spowoduje to uruchomienie [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), które pozwala modyfikować ustawienia konfiguracji usług WCF przy użyciu graficznego interfejsu użytkownika.  
+> Aby edytować plik konfiguracji projektu usługi WCF w programie Visual Studio, kliknij prawym przyciskiem myszy plik konfiguracyjny aplikacji — albo Web.config dla aplikacji hostowanych w sieci Web, albo Appname.exe.config dla aplikacji samodzielnie hostowanej w **Eksplorator rozwiązań**. Następnie wybierz pozycję **Edytuj kontekst konfiguracji WCF** . Spowoduje to uruchomienie [Narzędzia Edytora konfiguracji (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), które pozwala modyfikować ustawienia konfiguracji usług WCF przy użyciu graficznego interfejsu użytkownika.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurowanie źródeł śledzenia w celu emitowania śladów  
  Funkcja WCF definiuje Źródło śledzenia dla każdego zestawu. Ślady wygenerowane w zestawie są dostępne dla odbiorników zdefiniowanych dla tego źródła. Zdefiniowane są następujące źródła śledzenia:  
@@ -152,7 +153,7 @@ W tym temacie opisano sposób włączania śledzenia, konfigurowania źródeł �
   
 |Poziom śledzenia|Charakter śledzonych zdarzeń|Zawartość śledzonych zdarzeń|Zdarzenia śledzone|Obiekt docelowy użytkownika|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Wyłączone|Brak|Brak|Brak wyemitowanych śladów.|Brak|  
+|Wyłączone|Nie dotyczy|Nie dotyczy|Brak wyemitowanych śladów.|Nie dotyczy|  
 |Krytyczne|Zdarzenia "negatywne": zdarzenia wskazujące nieoczekiwane przetwarzanie lub warunek błędu.||Zarejestrowano Nieobsłużone wyjątki, w tym następujące:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (środowisko CLR wywołuje wszystkie ThreadAbortExceptionHandler)<br />-StackOverflowException (nie można przechwycić)<br />-ConfigurationErrorsException<br />-SEHException —<br />-Błędy uruchamiania aplikacji<br />-FailFast zdarzenia<br />— Zawiesza się system<br />-Trujące komunikaty: ślady komunikatów, które powodują niepowodzenie aplikacji.|Administratorzy<br /><br /> Deweloperzy aplikacji|  
 |Błąd|Zdarzenia "negatywne": zdarzenia wskazujące nieoczekiwane przetwarzanie lub warunek błędu.|Nastąpiło nieoczekiwane przetwarzanie. Aplikacja nie mogła wykonać zadania zgodnie z oczekiwaniami. Aplikacja jest jednak nadal uruchomiona.|Wszystkie wyjątki są rejestrowane.|Administratorzy<br /><br /> Deweloperzy aplikacji|  
 |Ostrzeżenie|Zdarzenia "negatywne": zdarzenia wskazujące nieoczekiwane przetwarzanie lub warunek błędu.|Wystąpił możliwy problem lub może wystąpić, ale aplikacja nadal działa poprawnie. Może jednak nadal nie funkcjonować prawidłowo.|-Aplikacja otrzymuje więcej żądań niż zezwala na to ustawienia ograniczenia przepustowości.<br />-Kolejka otrzymująca zbliża się do maksymalnej skonfigurowanej pojemności.<br />-Przekroczono limit czasu.<br />-Poświadczenia są odrzucane.|Administratorzy<br /><br /> Deweloperzy aplikacji|  

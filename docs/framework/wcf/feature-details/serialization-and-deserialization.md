@@ -1,16 +1,17 @@
 ---
 title: Serializacja i deserializacja
+description: Dowiedz się więcej o aparacie serializacji WCF, który tłumaczy między obiektami .NET Framework i XML, w obu kierunkach.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 8d62fe1cb646bfa00f3fd2e694f08d9fed297bc2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600428"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244910"
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
 Windows Communication Foundation (WCF) zawiera nowy aparat serializacji, <xref:System.Runtime.Serialization.DataContractSerializer> . <xref:System.Runtime.Serialization.DataContractSerializer>Tłumaczy między obiektami .NET Framework i XML, w obu kierunkach. W tym temacie wyjaśniono, jak działa serializator.  

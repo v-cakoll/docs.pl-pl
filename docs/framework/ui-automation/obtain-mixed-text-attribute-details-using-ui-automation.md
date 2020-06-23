@@ -1,32 +1,33 @@
 ---
 title: Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika
+description: Uzyskiwanie szczegółowych informacji o atrybutach tekstowych przy użyciu zarządzanych klas automatyzacji interfejsu użytkownika w przestrzeni nazw System. Windows. Automation interfejsu API platformy .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 9f2cba1f602cedf3a13bd909b4dc2f1a7b4ab972
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 111d110be9365c4a58f2bd2b033c1ff4e3a6a95d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903860"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie pokazano, jak za pomocą [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] uzyskać szczegóły atrybutów tekstu z zakresu tekstu, który obejmuje wiele wartości atrybutów. Zakres tekstu może odpowiadać bieżącej lokalizacji karetki (lub wygenerowania zaznaczenia) w dokumencie, ciągłym wyborze tekstu, kolekcji rozłączonych opcji tekstowych lub całej zawartości tekstowej dokumentu.  
+ W tym temacie pokazano, jak za pomocą [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] programu uzyskiwać szczegóły atrybutów tekstu z zakresu tekstu, który obejmuje wiele wartości atrybutów. Zakres tekstu może odpowiadać bieżącej lokalizacji karetki (lub wygenerowania zaznaczenia) w dokumencie, ciągłym wyborze tekstu, kolekcji rozłączonych opcji tekstowych lub całej zawartości tekstowej dokumentu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje, jak uzyskać <xref:System.Windows.Automation.TextPattern.FontNameAttribute> z zakresu tekstu, gdzie <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A> zwraca obiekt <xref:System.Windows.Automation.TextPattern.MixedAttributeValue>.  
+ Poniższy przykład kodu demonstruje, jak uzyskać <xref:System.Windows.Automation.TextPattern.FontNameAttribute> od zakresu tekstu, gdzie <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A> zwraca <xref:System.Windows.Automation.TextPattern.MixedAttributeValue> obiekt.  
   
 [!code-csharp[FindText#RetrieveMixedAttributes](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#retrievemixedattributes)]
 [!code-vb[FindText#RetrieveMixedAttributes](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#retrievemixedattributes)]  
   
- <xref:System.Windows.Automation.TextPattern> wzorzec kontrolki, w połączeniu z klasą <xref:System.Windows.Automation.Text.TextPatternRange>, obsługuje podstawowe atrybuty tekstu, właściwości i metody. W przypadku funkcji specyficznych dla kontroli, które nie są obsługiwane przez <xref:System.Windows.Automation.TextPattern> lub <xref:System.Windows.Automation.Text.TextPatternRange>, Klasa <xref:System.Windows.Automation.AutomationElement> udostępnia metody dla klienta automatyzacji interfejsu użytkownika w celu uzyskania dostępu do odpowiedniego modelu obiektów macierzystych.  
+ <xref:System.Windows.Automation.TextPattern>Wzorzec kontrolki, w połączeniu z <xref:System.Windows.Automation.Text.TextPatternRange> klasą, obsługuje podstawowe atrybuty tekstu, właściwości i metody. W przypadku funkcji specyficznych dla kontroli, które nie są obsługiwane przez <xref:System.Windows.Automation.TextPattern> <xref:System.Windows.Automation.Text.TextPatternRange> program lub, <xref:System.Windows.Automation.AutomationElement> Klasa dostarcza metody dla klienta automatyzacji interfejsu użytkownika w celu uzyskania dostępu do odpowiedniego modelu obiektów macierzystych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przegląd automatyzacji interfejsu użytkownika — TextPattern](ui-automation-textpattern-overview.md)
 - [Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika](add-content-to-a-text-box-using-ui-automation.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: odbieranie powiadomień o wyjątkach pierwszej szansy'
+title: 'Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy'
+description: Otrzymuj powiadomienia o wyjątkach pierwszej szansy w programie .NET przy użyciu zdarzenia FirstChanceException klasy AppDomain przed wyszukiwaniem obsługi wyjątków przez środowisko CLR.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119873"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104745"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Porady: odbieranie powiadomień o wyjątkach pierwszej szansy
-<xref:System.AppDomain.FirstChanceException> Zdarzenie <xref:System.AppDomain> klasy pozwala otrzymać powiadomienie, że zgłoszono wyjątek, zanim środowisko uruchomieniowe języka wspólnego zacznie wyszukiwać obsługę wyjątków.
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy
+<xref:System.AppDomain.FirstChanceException>Zdarzenie <xref:System.AppDomain> klasy pozwala otrzymać powiadomienie, że zgłoszono wyjątek, zanim środowisko uruchomieniowe języka wspólnego zacznie wyszukiwać obsługę wyjątków.
 
  Zdarzenie jest zgłaszane na poziomie domeny aplikacji. Wątek wykonywania może przechodzić przez wiele domen aplikacji, więc wyjątek, który jest nieobsługiwany w jednej domenie aplikacji, może być obsługiwany w innej domenie aplikacji. Powiadomienie odbywa się w każdej domenie aplikacji, która dodała procedurę obsługi dla zdarzenia, dopóki domena aplikacji obsłuży wyjątek.
 
@@ -54,26 +55,26 @@ ms.locfileid: "73119873"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Aby otrzymywać powiadomienia o wyjątkach pierwszej szansy w domenie aplikacji, którą tworzysz
 
-1. Zdefiniuj procedurę obsługi zdarzeń dla <xref:System.AppDomain.FirstChanceException> zdarzenia. W tym przykładzie użyto `static` metody (`Shared` Metoda w Visual Basic), która drukuje nazwę domeny aplikacji, w której zostało obsłużone zdarzenie, oraz <xref:System.Exception.Message%2A> Właściwość wyjątku.
+1. Zdefiniuj procedurę obsługi zdarzeń dla <xref:System.AppDomain.FirstChanceException> zdarzenia. W tym przykładzie użyto `static` metody ( `Shared` metoda w Visual Basic), która drukuje nazwę domeny aplikacji, w której zostało obsłużone zdarzenie, oraz <xref:System.Exception.Message%2A> Właściwość wyjątku.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2. Utwórz domenę aplikacji i Dodaj procedurę obsługi zdarzeń do <xref:System.AppDomain.FirstChanceException> zdarzenia dla tej domeny aplikacji. W tym przykładzie domena aplikacji ma nazwę `AD1`.
+2. Utwórz domenę aplikacji i Dodaj procedurę obsługi zdarzeń do <xref:System.AppDomain.FirstChanceException> zdarzenia dla tej domeny aplikacji. W tym przykładzie domena aplikacji ma nazwę `AD1` .
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
 
-     To zdarzenie można obsłużyć w domyślnej domenie aplikacji w taki sam sposób. Użyj właściwości `static` (`Shared` w Visual Basic) <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> w programie `Main()` , aby uzyskać odwołanie do domyślnej domeny aplikacji.
+     To zdarzenie można obsłużyć w domyślnej domenie aplikacji w taki sam sposób. Użyj `static` właściwości ( `Shared` w Visual Basic) <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> w programie, `Main()` Aby uzyskać odwołanie do domyślnej domeny aplikacji.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Aby przedstawić powiadomienia o wyjątkach pierwszej szansy w domenie aplikacji
 
-1. Utwórz `Worker` obiekt w domenie aplikacji, który został utworzony w poprzedniej procedurze. `Worker` Klasa musi być publiczna i musi pochodzić od <xref:System.MarshalByRefObject>, jak pokazano w kompletnym przykładzie na końcu tego artykułu.
+1. Utwórz `Worker` obiekt w domenie aplikacji, który został utworzony w poprzedniej procedurze. `Worker`Klasa musi być publiczna i musi pochodzić od <xref:System.MarshalByRefObject> , jak pokazano w kompletnym przykładzie na końcu tego artykułu.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2. Wywoływanie metody `Worker` obiektu, który zgłasza wyjątek. W tym przykładzie `Thrower` Metoda jest wywoływana dwukrotnie. Po raz pierwszy argument metody ma `true`wartość, która powoduje, że metoda będzie przechwytywać własny wyjątek. Drugi raz, argument jest `false`, a `Main()` Metoda przechwytuje wyjątek w domyślnej domenie aplikacji.
+2. Wywoływanie metody `Worker` obiektu, który zgłasza wyjątek. W tym przykładzie `Thrower` Metoda jest wywoływana dwukrotnie. Po raz pierwszy argument metody ma wartość `true` , która powoduje, że metoda będzie przechwytywać własny wyjątek. Drugi raz, argument jest `false` , a `Main()` Metoda przechwytuje wyjątek w domyślnej domenie aplikacji.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
@@ -84,14 +85,14 @@ ms.locfileid: "73119873"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>Przykład
- Poniższy przykład tworzy domenę aplikacji o nazwie `AD1` i dodaje procedurę obsługi zdarzeń do <xref:System.AppDomain.FirstChanceException> zdarzenia domeny aplikacji. Przykład tworzy wystąpienie `Worker` klasy w domenie aplikacji i wywołuje metodę o nazwie `Thrower` , która zgłasza. <xref:System.ArgumentException> W zależności od wartości argumentu Metoda przechwytuje wyjątek lub nie można jej obsłużyć.
+ Poniższy przykład tworzy domenę aplikacji o nazwie `AD1` i dodaje procedurę obsługi zdarzeń do zdarzenia domeny aplikacji <xref:System.AppDomain.FirstChanceException> . Przykład tworzy wystąpienie `Worker` klasy w domenie aplikacji i wywołuje metodę o nazwie `Thrower` , która zgłasza <xref:System.ArgumentException> . W zależności od wartości argumentu Metoda przechwytuje wyjątek lub nie można jej obsłużyć.
 
- Za każdym razem `Thrower` , gdy metoda zgłasza wyjątek `AD1`w, <xref:System.AppDomain.FirstChanceException> zdarzenie jest zgłaszane w `AD1`, a program obsługi zdarzeń wyświetla komunikat. Środowisko uruchomieniowe następnie szuka programu obsługi wyjątków. W pierwszym przypadku program obsługi wyjątków znajduje się w `AD1`. W drugim przypadku wyjątek jest nieobsługiwany w `AD1`, a zamiast tego jest przechwytywany w domyślnej domenie aplikacji.
+ Za każdym razem, gdy `Thrower` Metoda zgłasza wyjątek w `AD1` , <xref:System.AppDomain.FirstChanceException> zdarzenie jest zgłaszane w `AD1` , a program obsługi zdarzeń wyświetla komunikat. Środowisko uruchomieniowe następnie szuka programu obsługi wyjątków. W pierwszym przypadku program obsługi wyjątków znajduje się w `AD1` . W drugim przypadku wyjątek jest nieobsługiwany w `AD1` , a zamiast tego jest przechwytywany w domyślnej domenie aplikacji.
 
 > [!NOTE]
 > Nazwa domyślnej domeny aplikacji jest taka sama jak nazwa pliku wykonywalnego.
 
- Jeśli dodasz procedurę obsługi dla <xref:System.AppDomain.FirstChanceException> zdarzenia do domyślnej domeny aplikacji, zdarzenie jest zgłaszane i obsługiwane, zanim domyślna domena aplikacji obsłuży wyjątek. Aby to sprawdzić, Dodaj kod `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` C# (w Visual Basic, `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) na początku. `Main()`
+ Jeśli dodasz procedurę obsługi dla <xref:System.AppDomain.FirstChanceException> zdarzenia do domyślnej domeny aplikacji, zdarzenie jest zgłaszane i obsługiwane, zanim domyślna domena aplikacji obsłuży wyjątek. Aby to sprawdzić, Dodaj kod C# `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (w Visual Basic, `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException` ) na początku `Main()` .
 
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]

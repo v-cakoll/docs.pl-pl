@@ -1,17 +1,18 @@
 ---
 title: Co to jest program Windows Communication Foundation
+description: Dowiedz się więcej na temat Windows Communication Foundation, który jest strukturą do tworzenia aplikacji zorientowanych na usługę.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600857"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245612"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to platforma służąca do tworzenia aplikacji zorientowanych na usługę. Korzystając z programu WCF, można wysyłać dane jako komunikaty asynchroniczne z jednego punktu końcowego usługi do innego. Punkt końcowy usługi może być częścią stale dostępnej usługi hostowanej przez usługi IIS lub może być usługą hostowaną w aplikacji. Punktem końcowym może być klient usługi, która żąda danych z punktu końcowego usługi. Komunikaty mogą być proste jako pojedynczy znak lub słowo wysyłane jako XML lub jako strumień danych binarnych. Oto kilka przykładowych scenariuszy:
@@ -78,7 +79,7 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
      REST to przykład rozwijającej się technologii sieci Web 2,0. Funkcję WCF można skonfigurować do przetwarzania "zwykłych" danych XML, które nie są opakowane w kopercie protokołu SOAP. Można również rozszerzyć obsługę określonych formatów XML, takich jak ATOM (popularny Standard RSS), a nawet formatów niexml, takich jak JavaScript Object Notation (JSON).
 
-- **Rozszerzaln**
+- **Rozszerzalność**
 
      Architektura WCF ma wiele punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje kilka punktów wejścia, które umożliwiają dostosowanie zachowania usługi. Aby uzyskać więcej informacji na temat dostępnych punktów rozszerzalności, zobacz [rozszerzanie WCF](./extending/index.md).
 

@@ -1,22 +1,23 @@
 ---
 title: 'Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji'
+description: Dowiedz się, jak hostować usługę WCF w zarządzanej aplikacji przez utworzenie samohostowanej usługi i przetestowanie jej.
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320977"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246171"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji
 
-Aby hostować usługę wewnątrz zarządzanej aplikacji, należy osadzić kod usługi w kodzie zarządzanej aplikacji, zdefiniować punkt końcowy usługi w sposób bezwzględny w kodzie, deklaratywnie za pośrednictwem konfiguracji lub użyć domyślnych punktów końcowych, a następnie utworzyć wystąpienie <xref:System.ServiceModel.ServiceHost>.
+Aby hostować usługę wewnątrz zarządzanej aplikacji, należy osadzić kod usługi w kodzie zarządzanej aplikacji, zdefiniować punkt końcowy usługi w sposób bezwzględny w kodzie, deklaratywnie za pośrednictwem konfiguracji lub użyć domyślnych punktów końcowych, a następnie utworzyć wystąpienie <xref:System.ServiceModel.ServiceHost> .
 
-Aby rozpocząć otrzymywanie komunikatów, wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A> w <xref:System.ServiceModel.ServiceHost>. Spowoduje to utworzenie i otwarcie odbiornika dla usługi. Hosting usługi w ten sposób jest często określany jako "hosting samodzielny", ponieważ zarządzana aplikacja wykonuje działania hostingowe. Aby zamknąć usługę, wywołaj <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> w <xref:System.ServiceModel.ServiceHost>.
+Aby rozpocząć otrzymywanie komunikatów, wywołaj polecenie <xref:System.ServiceModel.ICommunicationObject.Open%2A> <xref:System.ServiceModel.ServiceHost> . Spowoduje to utworzenie i otwarcie odbiornika dla usługi. Hosting usługi w ten sposób jest często określany jako "hosting samodzielny", ponieważ zarządzana aplikacja wykonuje działania hostingowe. Aby zamknąć usługę, wywołaj <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> polecenie <xref:System.ServiceModel.ServiceHost> .
 
 Usługa może być również hostowana w usłudze zarządzanej systemu Windows, w Internet Information Services (IIS) lub w usłudze aktywacji procesów systemu Windows (WAS). Aby uzyskać więcej informacji na temat opcji hostingu dla usługi, zobacz [usługi hostingu](hosting-services.md).
 
@@ -28,9 +29,9 @@ Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w apl
 
 1. Utwórz nową aplikację konsolową:
 
-   1. Otwórz program Visual Studio i wybierz pozycję **Nowy** **projekt**  >  z menu **plik** .
+   1. Otwórz program Visual Studio i wybierz pozycję **Nowy**  >  **projekt** z menu **plik** .
 
-   2. Na liście **zainstalowane szablony** wybierz pozycję **Visual C#**  lub **Visual Basic**, a następnie wybierz pozycję **Windows Desktop**.
+   2. Na liście **zainstalowane szablony** wybierz pozycję **Visual C#** lub **Visual Basic**, a następnie wybierz pozycję **Windows Desktop**.
 
    3. Wybierz szablon **aplikacja konsoli** . Wpisz `SelfHost` w polu **Nazwa** , a następnie wybierz przycisk **OK**.
 
@@ -44,7 +45,7 @@ Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w apl
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
 
-4. Zdefiniuj i zaimplementuj kontrakt usługi. W tym przykładzie zdefiniowano `HelloWorldService`, która zwraca komunikat na podstawie danych wejściowych usługi.
+4. Zdefiniuj i zaimplementuj kontrakt usługi. Ten przykład definiuje `HelloWorldService` , która zwraca komunikat na podstawie danych wejściowych usługi.
 
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
@@ -52,12 +53,12 @@ Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w apl
     > [!NOTE]
     > Aby uzyskać więcej informacji na temat sposobu definiowania i implementowania interfejsu usługi, zobacz [How to: define a Service Contract](how-to-define-a-wcf-service-contract.md) and [How to: Implementuj kontrakt usługi](how-to-implement-a-wcf-contract.md).
 
-5. W górnej części metody `Main` Utwórz wystąpienie klasy <xref:System.Uri> z adresem podstawowym usługi.
+5. W górnej części `Main` metody Utwórz wystąpienie <xref:System.Uri> klasy z adresem podstawowym dla usługi.
 
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]
 
-6. Utwórz wystąpienie klasy <xref:System.ServiceModel.ServiceHost>, przekazując <xref:System.Type> reprezentujące typ usługi i adres podstawowy Uniform Resource Identifier (URI) do <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>. Włącz Publikowanie metadanych, a następnie Wywołaj metodę <xref:System.ServiceModel.ICommunicationObject.Open%2A> na <xref:System.ServiceModel.ServiceHost> w celu zainicjowania usługi i przygotowania jej do odbierania komunikatów.
+6. Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> klasy, przekazując element <xref:System.Type> reprezentujący typ usługi i adres podstawowy Uniform Resource Identifier (URI) do <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29> . Włącz Publikowanie metadanych, a następnie Wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A> metodę w <xref:System.ServiceModel.ServiceHost> celu zainicjowania usługi i przygotuj ją do odbierania komunikatów.
 
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
@@ -65,20 +66,20 @@ Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w apl
     > [!NOTE]
     > W tym przykładzie są stosowane domyślne punkty końcowe i plik konfiguracji nie jest wymagany dla tej usługi. Jeśli nie skonfigurowano żadnych punktów końcowych, środowisko uruchomieniowe tworzy jeden punkt końcowy dla każdego adresu podstawowego dla każdego kontraktu usługi zaimplementowanego przez usługę. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Naciśnij **klawisze Ctrl**+**SHIFT**+**B** , aby skompilować rozwiązanie.
+7. Naciśnij **klawisze CTRL** + **SHIFT** + **B** , aby skompilować rozwiązanie.
 
 ## <a name="test-the-service"></a>Testowanie usługi
 
-1. Naciśnij **klawisze Ctrl**+**F5** , aby uruchomić usługę.
+1. Naciśnij klawisz **Ctrl** + **F5** , aby uruchomić usługę.
 
 2. Otwórz **klienta testowego WCF**.
 
     > [!TIP]
-    > Aby otworzyć **klienta testowego WCF**, Otwórz wiersz polecenia dla deweloperów dla programu Visual Studio i wykonaj **WcfTestClient. exe**.
+    > Aby otworzyć **klienta testowego WCF**, Otwórz wiersz polecenia dla deweloperów dla programu Visual Studio i wykonaj **WcfTestClient.exe**.
 
 3. Wybierz pozycję **Dodaj usługę** z menu **plik** .
 
-4. Wpisz `http://localhost:8080/hello` w polu adres i kliknij przycisk **OK**.
+4. Wpisz tekst `http://localhost:8080/hello` w polu adres i kliknij przycisk **OK**.
 
     > [!TIP]
     > Upewnij się, że usługa jest uruchomiona, lub w przeciwnym razie ten krok nie powiedzie się. Jeśli zmieniono adres podstawowy w kodzie, należy użyć zmodyfikowanego adresu podstawowego w tym kroku.
@@ -89,12 +90,12 @@ Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w apl
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy obiekt <xref:System.ServiceModel.ServiceHost> w celu hostowania usługi typu `HelloWorldService`, a następnie wywołuje metodę <xref:System.ServiceModel.ICommunicationObject.Open%2A> w <xref:System.ServiceModel.ServiceHost>. Adres podstawowy jest podany w kodzie, funkcja publikowania metadanych jest włączona, a domyślne punkty końcowe są używane.
+Poniższy przykład tworzy <xref:System.ServiceModel.ServiceHost> obiekt do hostowania usługi typu `HelloWorldService` , a następnie wywołuje <xref:System.ServiceModel.ICommunicationObject.Open%2A> metodę w <xref:System.ServiceModel.ServiceHost> . Adres podstawowy jest podany w kodzie, funkcja publikowania metadanych jest włączona, a domyślne punkty końcowe są używane.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>

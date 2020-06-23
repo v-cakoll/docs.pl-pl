@@ -1,13 +1,14 @@
 ---
 title: Podstawowe informacje dotyczące transakcji
+description: Przejrzyj podstawy transakcji w programie .NET. Wszystkie transakcje muszą mieć podstawowe właściwości kwasu (niepodzielne, spójne, izolowane i trwałe).
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49292172b07985d379bfa5d520798d7d97af5749
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346216"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141942"
 ---
 # <a name="transaction-fundamentals"></a>Podstawowe informacje dotyczące transakcji
 Transakcje wiążą wiele zadań jednocześnie. Załóżmy na przykład, że aplikacja wykonuje dwa zadania. Najpierw tworzy nową tabelę w bazie danych. Następnie wywołuje obiekt specjalne do zbierania, formatowania i wstawianie danych w nowej tabeli. Te dwa zadania są powiązane i wzajemnie nawet wtedy, w taki sposób, że ma zostać Unikaj tworzenia nowej tabeli, o ile nie można wypełniać danych. Wykonywanie zadania, zarówno w zakresie pojedynczą transakcję wymusza połączenie między nimi. Jeśli drugie zadanie nie powiedzie się, pierwsze zadanie jest przywrócenie punkt przed utworzeniem nowej tabeli.  
@@ -18,12 +19,12 @@ Transakcje wiążą wiele zadań jednocześnie. Załóżmy na przykład, że apl
   
  Transakcje mogą również obejmować wiele zasobów danych. Transakcje rozproszone zapewnić możliwość zawierać kilka różnych operacji występujących na różnych systemów w jednym przebiegu lub niepowodzenie akcji. W tym scenariuszu transakcji są koordynowany przez transakcję Koordynator MSDTC (Microsoft Distributed), który znajduje się w każdym systemie.  
   
- Podczas opracowywania aplikacji transakcyjnej przy użyciu klas udostępnianych przez <xref:System.Transactions>nie trzeba martwić się o Rodzaj transakcji, których potrzebujesz, lub Menedżera transakcji. <xref:System.Transactions> Infrastruktury automatycznie zarządza to dla Ciebie.  
+ Gdy opracowujesz aplikację transakcyjną przy użyciu klas dostarczonych przez <xref:System.Transactions> program, nie musisz martwić się o Rodzaj transakcji, których potrzebujesz, lub Menedżera transakcji. <xref:System.Transactions> Infrastruktury automatycznie zarządza to dla Ciebie.  
   
- Podczas tworzenia transakcji można określić poziom izolacji, który ma zastosowanie do transakcji. Poziom izolacji, zdefiniowany przez Wyliczenie <xref:System.Transactions.IsolationLevel>, określa poziom dostępu innych transakcji do danych, na które wpłynie transakcja.  
+ Podczas tworzenia transakcji można określić poziom izolacji, który ma zastosowanie do transakcji. Poziom izolacji, zdefiniowany przez <xref:System.Transactions.IsolationLevel> Wyliczenie, określa poziom dostępu innych transakcji do danych, na które wpłynie transakcja.  
   
- Transakcje można tworzyć przy użyciu ADO.NET, <xref:System.EnterpriseServices>lub transakcyjnego modelu programowania dostarczonego przez <xref:System.Transactions> przestrzeni nazw. [Funkcje dostępne w temacie system. Transactions](features-provided-by-system-transactions.md) omawiają funkcje, których można użyć do pisania aplikacji transakcyjnej przy użyciu przestrzeni nazw <xref:System.Transactions>.  
+ Transakcje można tworzyć przy użyciu ADO.NET, <xref:System.EnterpriseServices> lub transakcyjnego modelu programowania dostarczonego przez <xref:System.Transactions> przestrzeń nazw. [Funkcje dostępne w temacie system. Transactions](features-provided-by-system-transactions.md) omawiają funkcje, których można użyć do pisania aplikacji transakcyjnej przy użyciu <xref:System.Transactions> przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Funkcje oferowane przez bibliotekę System.Transactions](features-provided-by-system-transactions.md)

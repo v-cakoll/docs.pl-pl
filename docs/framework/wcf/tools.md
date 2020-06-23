@@ -1,16 +1,17 @@
 ---
 title: Narzędzia programu Windows Communication Foundation
+description: Poznaj narzędzia WCF, które zostały zaprojektowane, aby ułatwić tworzenie i wdrażanie aplikacji WCF oraz zarządzanie nimi. Uruchom te narzędzia z wiersza polecenia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: edd54c93207456156ef2520a00ad567cd087d89c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: acc142e8e3108a827b63cf013b818d30b5dcaa52
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321371"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245975"
 ---
 # <a name="windows-communication-foundation-tools"></a>Narzędzia programu Windows Communication Foundation
 Narzędzia Microsoft Windows Communication Foundation (WCF) zostały zaprojektowane w celu ułatwienia tworzenia i wdrażania aplikacji WCF oraz zarządzania nimi. Ta sekcja zawiera szczegółowe informacje o narzędziach. Należy pamiętać, że narzędzia nie są obsługiwane.  
@@ -34,4 +35,4 @@ Narzędzia Microsoft Windows Communication Foundation (WCF) zostały zaprojektow
 |[Testowy klient WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)|Narzędzie graficznego interfejsu użytkownika, które umożliwia wprowadzanie parametrów dowolnego typu, przesyłanie tych danych wejściowych do usługi i wyświetlanie odpowiedzi wysyłanej przez usługę.|  
 |[Narzędzie Contract-First](contract-first-tool.md)|Zadanie kompilacji programu Visual Studio, które tworzy klasy kodu z kontraktów danych XSD.|  
   
- Wszystkie poprzednie narzędzia, z wyjątkiem ServiceModelReg. exe, WsatConfig. exe i ComSvcConfig. exe, są dostarczane z Windows SDK i można je znaleźć w folderze C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.  Konkretne 3 narzędzia można znaleźć w obszarze C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.
+ Wszystkie poprzednie narzędzia, z wyjątkiem ServiceModelReg.exe, WsatConfig.exe i ComSvcConfig.exe dostarczane z Windows SDK i można je znaleźć w folderze C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.  Konkretne 3 narzędzia można znaleźć w obszarze C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.

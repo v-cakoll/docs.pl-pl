@@ -1,5 +1,6 @@
 ---
-title: Pole ServicePointManager.s_ServicePointTable
+title: Pole ServicePointManager. s_ServicePointTable
+description: Przeczytaj o polu ServicePointManager. s_ServicePointTable w programie .NET. To pole tabeli skrótów zawiera aktywne połączenia HTTP (servicepoints) w domenie aplikacji.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-ms.openlocfilehash: 6a56ecd6fc85005f5987c3c2ad0d1680ca63c398
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9462ae10125dd37706f786a1f2cef78e62fbabcc
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989542"
 ---
-# <a name="servicepointmanagers_servicepointtable-field"></a>Pole ServicePointManager.s\_ServicePointTable
+# <a name="servicepointmanagers_servicepointtable-field"></a>Pole ServicePointManager. s \_
 
-`ServicePointManager.s_ServicePointTable`jest <xref:System.Collections.Hashtable> to, która zawiera listę aktywnych połączeń HTTP (s)<xref:System.Net.ServicePoint>w pliku <xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable`<xref:System.Collections.Hashtable>zawiera listę aktywnych połączeń HTTP <xref:System.Net.ServicePoint> w programie <xref:System.AppDomain> .
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> To `ServicePointManager.s_ServicePointTable` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+> `ServicePointManager.s_ServicePointTable`Pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

@@ -1,13 +1,14 @@
 ---
 title: Instrukcje dotyczące zapory
+description: Informacje o sposobie włączania portów lub programów w zaporze dla przykładów WCF. Użyj jednej z tych procedur, w zależności od wymagań i środowiska zabezpieczeń.
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 343fa695039f6767f6ab33daa4e3cc51e8db5e47
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: de55d067960b8f2096c129f6feaf037219e06a96
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899638"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246145"
 ---
 # <a name="firewall-instructions"></a>Instrukcje zapory
 
@@ -28,14 +29,14 @@ Jeśli nie masz pewności, której procedury użyć, wybierz pierwszą opcję. J
 
 1. Skompiluj przykład.
 
-2. Wybierz pozycję **rozpocznij** > **Uruchom**, a następnie wprowadź `firewall.cpl`. Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .
+2. Wybierz **Uruchom**  >  **Uruchom**i wprowadź `firewall.cpl` . Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .
 
     > [!NOTE]
     > Musisz mieć uprawnienia do zmiany ustawień zapory, aby uruchamiać próbki, które wymagają możliwości komunikowania się przez zaporę systemu Windows. Jeśli niektóre ustawienia zapory są niedostępne, a komputer jest połączony z domeną, administrator systemu może kontrolować te ustawienia za pomocą zasady grupy.
 
 3. Wykonaj jedną z następujących czynności związanych z działaniem, aby zezwolić programowi na zaporę systemu Windows:
 
-    - W systemie Windows 7 lub Windows Server 2008 R2 kliknij opcję **Zezwól programowi lub funkcji za pomocą zapory systemu Windows**. Kliknij pozycję **Zmień ustawienia** , > **zezwolić na inny program**.
+    - W systemie Windows 7 lub Windows Server 2008 R2 kliknij opcję **Zezwól programowi lub funkcji za pomocą zapory systemu Windows**. Kliknij pozycję **Zmień ustawienia**  >  **Zezwalaj na inny program**.
 
     - W systemie Windows Vista lub Windows Server 2008 kliknij opcję **Zezwól programowi przez zaporę systemu Windows**.
 
@@ -49,7 +50,7 @@ Jeśli nie masz pewności, której procedury użyć, wybierz pierwszą opcję. J
 
 ## <a name="enable-a-port-range-in-advance"></a>Włącz z wyprzedzeniem zakres portów
 
-1. Wybierz pozycję **rozpocznij** > **Uruchom**, a następnie wprowadź `firewall.cpl`. Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .
+1. Wybierz **Uruchom**  >  **Uruchom**i wprowadź `firewall.cpl` . Spowoduje to otwarcie apletu **Panelu sterowania Zapory systemu Windows** .
 
 2. W systemie Windows 7 lub Windows Server 2008 R2 wykonaj następujące kroki.
 
@@ -69,7 +70,7 @@ Jeśli nie masz pewności, której procedury użyć, wybierz pierwszą opcję. J
 
     8. Wybierz pozycję **domena** i **prywatny**, a następnie kliknij przycisk **dalej**.
 
-    9. Nadaj nazwę tej regule `WCF-WF 4.0 Samples`i kliknij przycisk **Zakończ**.
+    9. Nadaj nazwę regule `WCF-WF 4.0 Samples` i kliknij przycisk **Zakończ**.
 
     10. Kliknij pozycję **reguły ruchu wychodzącego** i powtórz kroki od c do h.
 

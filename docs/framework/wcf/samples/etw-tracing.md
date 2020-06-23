@@ -1,13 +1,14 @@
 ---
 title: Śledzenie za pomocą funkcji ETW
+description: Ten przykład pokazuje, jak zaimplementować śledzenie kompleksowe (E2E) przy użyciu funkcji śledzenia zdarzeń systemu Windows (ETW) i ETWTraceListener.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600566"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244429"
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
 W tym przykładzie pokazano, jak zaimplementować śledzenie kompleksowego (E2E) przy użyciu funkcji śledzenia zdarzeń systemu Windows (ETW) i `ETWTraceListener` dostarczonej z tym przykładem. Przykład jest oparty na [wprowadzenie](getting-started-sample.md) i zawiera śledzenie ETW.  
@@ -47,12 +48,12 @@ W tym przykładzie pokazano, jak zaimplementować śledzenie kompleksowego (E2E)
 </system.diagnostics>  
 ```  
   
- Przed użyciem tego odbiornika należy uruchomić sesję śledzenia ETW. Tę sesję można uruchomić przy użyciu narzędzia Logman. exe lub tracelog. exe. Plik SetupETW. bat jest dołączony do tego przykładu, aby można było skonfigurować sesję śledzenia ETW wraz z plikiem CleanupETW. bat do zamykania sesji i wypełniania pliku dziennika.  
+ Przed użyciem tego odbiornika należy uruchomić sesję śledzenia ETW. Tę sesję można uruchomić przy użyciu Logman.exe lub Tracelog.exe. Ten przykład zawiera plik SetupETW.bat, dzięki czemu można skonfigurować sesję śledzenia ETW wraz z plikiem CleanupETW.bat do zamykania sesji i wykonywania pliku dziennika.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu. Aby uzyskać więcej informacji na temat tych narzędzi, zobacz.<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- W przypadku korzystania z ETWTraceListener, ślady są rejestrowane w binarnych plikach. etl. Śledzenie ServiceModel jest włączone, wszystkie wygenerowane ślady pojawiają się w tym samym pliku. Użyj [narzędzia Podgląd śledzenia usług (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania plików dziennika. ETL i. svclog. Przeglądarka tworzy kompleksowy widok systemu, który umożliwia śledzenie komunikatu z jego źródła do jego lokalizacji docelowej i punktu zużycia.  
+ W przypadku korzystania z ETWTraceListener, ślady są rejestrowane w binarnych plikach. etl. Śledzenie ServiceModel jest włączone, wszystkie wygenerowane ślady pojawiają się w tym samym pliku. Użyj [narzędzia Podgląd śledzenia usługi (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania plików dziennika. ETL i. svclog. Przeglądarka tworzy kompleksowy widok systemu, który umożliwia śledzenie komunikatu z jego źródła do jego lokalizacji docelowej i punktu zużycia.  
   
  Odbiornik śledzenia ETW obsługuje rejestrowanie cykliczne. Aby włączyć tę funkcję, przejdź do **menu Start**, **Uruchom** polecenie i wpisz, `cmd` Aby uruchomić konsolę poleceń. W poniższym poleceniu Zastąp `<logfilename>` parametr nazwą pliku dziennika.  
   
@@ -74,7 +75,7 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- Ten proces generuje binarne dzienniki cykliczne, które można przetwarzać za pomocą wybranego narzędzia, w tym [Narzędzia do przeglądania śledzenia usługi (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) lub tracerpt.  
+ Ten proces generuje binarne dzienniki cykliczne, które można przetwarzać za pomocą wybranego narzędzia, w tym [Narzędzia do przeglądania śledzenia usługi (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) lub tracerpt.  
   
  Możesz również przejrzeć przykład [cyklicznego śledzenia](circular-tracing.md) , aby uzyskać więcej informacji na temat alternatywnego odbiornika do wykonywania rejestrowania cyklicznego.  
   
@@ -85,13 +86,13 @@ logman stop Wcf
 2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).  
   
     > [!NOTE]
-    > Aby użyć poleceń RegisterProvider. bat, SetupETW. bat i CleanupETW. bat, należy uruchomić program przy użyciu konta administratora lokalnego. W przypadku korzystania z systemu Windows Vista lub nowszego należy również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**.  
+    > Aby użyć poleceń RegisterProvider.bat, SetupETW.bat i CleanupETW.bat, należy uruchomić program przy użyciu konta administratora lokalnego. W przypadku korzystania z systemu Windows Vista lub nowszego należy również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**.  
   
-3. Przed uruchomieniem przykładu należy uruchomić program RegisterProvider. bat na kliencie i serwerze. Powoduje to skonfigurowanie wynikowego pliku ETWTracingSampleLog. etl w celu wygenerowania śladów, które mogą być odczytywane przez Podgląd śledzenia usługi. Ten plik znajduje się w folderze C:\LOGS. Jeśli ten folder nie istnieje, należy go utworzyć lub nie są generowane żadne dane śledzenia. Następnie uruchom program SetupETW. bat na komputerach klienckich i serwerach, aby rozpocząć sesję śledzenia ETW. Plik SetupETW. bat można znaleźć w folderze CS\Client.  
+3. Przed uruchomieniem przykładu Uruchom RegisterProvider.bat na kliencie i serwerze. Powoduje to skonfigurowanie wynikowego pliku ETWTracingSampleLog. etl w celu wygenerowania śladów, które mogą być odczytywane przez Podgląd śledzenia usługi. Ten plik znajduje się w folderze C:\LOGS. Jeśli ten folder nie istnieje, należy go utworzyć lub nie są generowane żadne dane śledzenia. Następnie uruchom SetupETW.bat na komputerach klienckich i serwerach, aby rozpocząć sesję śledzenia ETW. Plik SetupETW.bat można znaleźć w folderze CS\Client.  
   
 4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
-5. Po zakończeniu przykładu należy uruchomić CleanupETW. bat, aby zakończyć tworzenie pliku ETWTracingSampleLog. etl.  
+5. Po zakończeniu próbkowania Uruchom CleanupETW.bat, aby zakończyć tworzenie pliku ETWTracingSampleLog. etl.  
   
 6. Otwórz plik ETWTracingSampleLog. etl z poziomu przeglądarki śledzenia usługi. Zostanie wyświetlony monit o zapisanie pliku binarnego w formacie pliku. svclog.  
   

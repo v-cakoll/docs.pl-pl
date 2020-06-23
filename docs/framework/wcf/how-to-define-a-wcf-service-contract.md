@@ -1,5 +1,6 @@
 ---
-title: 'Samouczek: Definiowanie umowy serwisowej programu Windows Communication Foundation'
+title: 'Samouczek: Definiowanie kontraktu usługi Windows Communication Foundation'
+description: Dowiedz się, jak zdefiniować kontrakt usługi w ramach serii artykułów, które ułatwiają rozpoczęcie tworzenia aplikacji WCF.
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,55 +8,55 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 7c1c42c4f22a1a9627c147440e8e198551470b7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5cb371da8c7180b8c4cbf5ac11468fbb8e0e13cc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184094"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246314"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Samouczek: Definiowanie umowy serwisowej programu Windows Communication Foundation
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Samouczek: Definiowanie kontraktu usługi Windows Communication Foundation
 
-W tym samouczku opisano pierwsze z pięciu zadań wymaganych do utworzenia podstawowej aplikacji Programu Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [Samouczek: Wprowadzenie do aplikacji Programu Windows Communication Foundation](getting-started-tutorial.md).
+W tym samouczku opisano pierwsze pięć zadań wymaganych do utworzenia aplikacji podstawowej Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation](getting-started-tutorial.md).
 
-Podczas tworzenia usługi WCF, pierwszym zadaniem jest zdefiniowanie umowy serwisowej. Umowa serwisowa określa, jakie operacje obsługuje usługa. Operację można traktować jako metodę usługi sieci Web. Umowy serwisowe można utworzyć, definiując interfejs języka C# lub Visual Basic. Interfejs ma następujące cechy:
+Podczas tworzenia usługi WCF pierwsze zadanie polega na zdefiniowaniu kontraktu usługi. Kontrakt usługi określa operacje obsługiwane przez usługę. Operację można traktować jako metodę usługi sieci Web. Kontrakty usługi można tworzyć, definiując interfejs C# lub Visual Basic. Interfejs ma następującą charakterystykę:
 
 - Każda metoda w interfejsie odpowiada określonej operacji usługi.
-- Dla każdego interfejsu należy <xref:System.ServiceModel.ServiceContractAttribute> zastosować atrybut.
-- Dla każdej operacji/metody należy <xref:System.ServiceModel.OperationContractAttribute> zastosować atrybut.
+- Dla każdego interfejsu należy zastosować <xref:System.ServiceModel.ServiceContractAttribute> atrybut.
+- Dla każdej operacji/metody należy zastosować <xref:System.ServiceModel.OperationContractAttribute> atrybut.
 
-Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
-> - Utwórz projekt **biblioteki usług WCF.**
-> - Zdefiniuj interfejs umowy serwisowej.
+> - Utwórz projekt **biblioteki usługi WCF** .
+> - Zdefiniuj interfejs kontraktu usługi.
 
-## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Tworzenie projektu biblioteki usług WCF i definiowanie interfejsu umowy serwisowej
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Utwórz projekt biblioteki usługi WCF i zdefiniuj interfejs kontraktu usługi
 
-1. Otwórz program Visual Studio jako administrator. Aby to zrobić, wybierz program Visual Studio w menu **Start,** a następnie wybierz polecenie **Więcej** > **uruchom jako administrator** z menu skrótów.
+1. Otwórz program Visual Studio jako administrator. W tym celu wybierz program Visual Studio w menu **Start** , a następnie wybierz polecenie **więcej**  >  **Uruchom jako administrator** z menu skrótów.
 
-2. Utwórz projekt **biblioteki usług WCF.**
+2. Utwórz projekt **biblioteki usługi WCF** .
 
-   1. Z menu **Plik** wybierz polecenie **Nowy** > **projekt**.
+   1. Z menu **plik** wybierz pozycję **Nowy**  >  **projekt**.
 
-   2. W oknie dialogowym **Nowy projekt** po lewej stronie rozwiń pozycję **Visual C#** lub **Visual Basic**, a następnie wybierz kategorię **WCF.** Visual Studio wyświetla listę szablonów projektów w środkowej sekcji okna. Wybierz **bibliotekę usług WCF**.
-
-      > [!NOTE]
-      > Jeśli nie widzisz kategorii szablonu projektu **WCF,** może być konieczne zainstalowanie składnika **Programu Windows Communication Foundation** programu Visual Studio. W oknie dialogowym **Nowy projekt** wybierz łącze **Otwórz instalatora programu Visual Studio** po lewej stronie. Wybierz kartę **Poszczególne składniki,** a następnie znajdź i wybierz **pozycję Windows Communication Foundation** w kategorii Działania **deweloperów.** Wybierz **pozycję Modyfikuj,** aby rozpocząć instalację składnika.
-
-   3. W dolnej części okna wprowadź *WprowadzenieStartedLib* dla **nazwy** i *GettingStarted* dla **nazwy rozwiązania**.
-
-   4. Kliknij przycisk **OK**.
-
-      Visual Studio tworzy projekt, który ma trzy pliki: *IService1.cs* (lub *IService1.vb* dla projektu języka Visual Basic), *Service1.cs* (lub *Service1.vb* dla projektu Visual Basic) i *App.config*. Program Visual Studio definiuje te pliki w następujący sposób:
-      - Plik *IService1* zawiera domyślną definicję umowy serwisowej.
-      - Plik *Service1* zawiera domyślną implementację umowy serwisowej.
-      - Plik *App.config* zawiera informacje o konfiguracji potrzebne do załadowania domyślnej usługi za pomocą narzędzia Host usługi WCF programu Visual Studio. Aby uzyskać więcej informacji na temat narzędzia Host usług WCF, zobacz [Host usługi WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md).
+   2. W oknie dialogowym **Nowy projekt** po lewej stronie rozwiń pozycję **Visual C#** lub **Visual Basic**, a następnie wybierz kategorię **WCF** . Program Visual Studio Wyświetla listę szablonów projektu w środkowej sekcji okna. Wybierz pozycję **Biblioteka usług WCF**.
 
       > [!NOTE]
-      > Jeśli program Visual Studio został zainstalowany z ustawieniami środowiska dewelopera języka Visual Basic, rozwiązanie może być ukryte. W takim przypadku wybierz **opcję Opcje** z menu **Narzędzia,** a następnie w oknie **Opcje** wybierz pozycję Projekty **i rozwiązania** > **ogólne.** Wybierz **opcję Zawsze pokazuj rozwiązanie**. Sprawdź też, czy **opcja Zapisz nowe projekty po utworzeniu** jest zaznaczona.
+      > Jeśli nie widzisz kategorii szablonu projektu **WCF** , może być konieczne zainstalowanie składnika **Windows Communication Foundation** programu Visual Studio. W oknie dialogowym **Nowy projekt** wybierz łącze **Otwórz Instalator programu Visual Studio** po lewej stronie. Wybierz kartę **poszczególne składniki** , a następnie Znajdź i wybierz **Windows Communication Foundation** w kategorii **działania rozwojowe** . Wybierz pozycję **Modyfikuj** , aby rozpocząć instalowanie składnika.
 
-3. W **Eksploratorze rozwiązań**otwórz **plik IService1.cs** lub **IService1.vb** i zastąp jego kod następującym kodem:
+   3. W dolnej części okna wprowadź *GettingStartedLib* dla **nazwy** i *GettingStarted* **nazwy rozwiązania**.
+
+   4. Wybierz przycisk **OK**.
+
+      Program Visual Studio tworzy projekt, który ma trzy pliki: *IService1.cs* (lub *IService1. vb* dla projektu Visual Basic), *Service1.cs* (lub *Service1. vb* dla projektu Visual Basic) i *App.config*. Program Visual Studio definiuje te pliki w następujący sposób:
+      - Plik *IService1* zawiera definicję domyślną kontraktu usługi.
+      - Plik *Service1* zawiera domyślną implementację kontraktu usługi.
+      - Plik *App.config* zawiera informacje o konfiguracji, które są konieczne do załadowania usługi domyślnej za pomocą narzędzia hosta usługi WCF programu Visual Studio. Aby uzyskać więcej informacji na temat narzędzia hosta usługi WCF, zobacz [host usługi WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md).
+
+      > [!NOTE]
+      > Jeśli zainstalowano program Visual Studio z Visual Basic ustawieniach środowiska deweloperskiego, rozwiązanie może być ukryte. W takim przypadku wybierz pozycję **Opcje** z menu **Narzędzia** , a następnie wybierz pozycję **projekty i rozwiązania**  >  **Ogólne** w oknie **Opcje** . Wybierz pozycję **Zawsze pokazuj rozwiązanie**. Sprawdź również, czy wybrano opcję **Zapisz nowe projekty po utworzeniu** .
+
+3. W **Eksplorator rozwiązań**otwórz plik **IService1.cs** lub **IService1. vb** i Zastąp jego kod następującym kodem:
 
     ```csharp
     using System;
@@ -98,17 +99,17 @@ Niniejszy samouczek zawiera informacje na temat wykonywania następujących czyn
     End Namespace
     ```
 
-     Niniejsza umowa definiuje kalkulator online. Zwróć `ICalculator` uwagę, że <xref:System.ServiceModel.ServiceContractAttribute> interfejs jest oznaczony `ServiceContract`atrybutem (uproszczonym jako ). Ten atrybut definiuje obszar nazw, aby odróżnić nazwę kontraktu. Kod oznacza każdą operację kalkulatora atrybutem <xref:System.ServiceModel.OperationContractAttribute> (uproszczonym jako `OperationContract`).
+     Ten kontrakt definiuje Kalkulator online. Zauważ, że `ICalculator` interfejs jest oznaczony <xref:System.ServiceModel.ServiceContractAttribute> atrybutem (uproszczony jako `ServiceContract` ). Ten atrybut definiuje przestrzeń nazw, aby odróżnić nazwę kontraktu. Kod oznacza każdą operację kalkulatora z <xref:System.ServiceModel.OperationContractAttribute> atrybutem (uproszczony jako `OperationContract` ).
 
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
-> - Utwórz projekt biblioteki usług WCF.
-> - Zdefiniuj interfejs umowy serwisowej.
+> - Utwórz projekt biblioteki usługi WCF.
+> - Zdefiniuj interfejs kontraktu usługi.
 
-Przejdź do następnego samouczka, aby dowiedzieć się, jak zaimplementować umowę serwisową WCF.
+Przejdź do następnego samouczka, aby dowiedzieć się, jak zaimplementować kontrakt usługi WCF.
 
 > [!div class="nextstepaction"]
-> [Samouczek: Zaimplementowanie umowy serwisowej WCF](how-to-implement-a-wcf-contract.md)
+> [Samouczek: Implementowanie kontraktu usługi WCF](how-to-implement-a-wcf-contract.md)

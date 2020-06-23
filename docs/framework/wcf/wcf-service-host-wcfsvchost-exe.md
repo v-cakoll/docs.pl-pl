@@ -1,21 +1,22 @@
 ---
 title: Host usługi WCF (WcfSvcHost.exe)
+description: Host usługi WCF umożliwia Hostowanie i testowanie wdrożonej usługi. Usługę można przetestować przy użyciu klienta testowego WCF lub własnego klienta.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837743"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245729"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 
-Windows Communication Foundation (WCF) Host usługi (WcfSvcHost. exe) umożliwia uruchomienie debugera programu Visual Studio (F5) w celu automatycznego hostowania i testowania wdrożonej usługi. Następnie można przetestować usługę za pomocą klienta testowego WCF (WcfTestClient. exe) lub własnego klienta, aby znaleźć i naprawić wszelkie potencjalne błędy.
+WcfSvcHost.exe Host usługi Windows Communication Foundation (WCF) umożliwia uruchamianie debugera programu Visual Studio (F5) w celu automatycznego hostowania i testowania wdrożonej usługi. Następnie można testować usługę za pomocą klienta testowego WCF (WcfTestClient.exe) lub własnego klienta, aby znaleźć i naprawić wszelkie potencjalne błędy.
 
 ## <a name="wcf-service-host"></a>Host usługi WCF
 
-Host usługi WCF wylicza usługi w projekcie usługi WCF, ładuje tej konfiguracji projektu, a następnie tworzy wystąpienie hosta dla każdej usługi, które znajdzie. Narzędzie jest zintegrowane z programem Visual Studio za pomocą szablonu usługi WCF i jest wywoływane po rozpoczęciu debugowania projektu.
+Host usługi WCF wylicza usługi w projekcie usługi WCF, ładuje konfigurację projektu i tworzy wystąpienie hosta dla każdej znalezionej usługi. Narzędzie jest zintegrowane z programem Visual Studio za pomocą szablonu usługi WCF i jest wywoływane po rozpoczęciu debugowania projektu.
 
 Korzystając z hosta usługi WCF, można hostować usługę WCF (w projekcie biblioteki usługi WCF) bez konieczności pisania dodatkowego kodu lub zatwierdzania do określonego hosta podczas opracowywania.
 
@@ -26,7 +27,7 @@ Korzystając z hosta usługi WCF, można hostować usługę WCF (w projekcie bib
 
 Host usługi WCF może hostować następujące typy projektów biblioteki usług WCF: Biblioteka usług WCF, biblioteka usługi sekwencyjnego przepływu pracy, biblioteka usługi przepływu pracy automatu i Biblioteka usługi zespolonej. Host usługi WCF może również hostować te usługi, które mogą być dodawane do projektu biblioteki usług przy użyciu funkcji **Dodaj element** . Obejmuje to usługi WCF, usługi automatu Stanów WF, usług sekwencyjnej WF, usługi automatu języka XAML i usługi sekwencyjnej języka XAML WF.
 
-Należy jednak pamiętać, że narzędzie nie pomoże Ci skonfigurować hosta. W przypadku tego zadania należy ręcznie edytować plik App. config. Narzędzie nie sprawdza także plików konfiguracji zdefiniowanych przez użytkownika.
+Należy jednak pamiętać, że narzędzie nie pomoże Ci skonfigurować hosta. W przypadku tego zadania należy ręcznie edytować plik App.config. Narzędzie nie sprawdza także plików konfiguracji zdefiniowanych przez użytkownika.
 
 > [!CAUTION]
 > Nie należy używać hosta usługi WCF do hostowania usług w środowisku produkcyjnym, ponieważ nie zostały one zaprojektowane do tego celu.  Host usługi WCF nie obsługuje wymagań dotyczących niezawodności, zabezpieczeń i możliwości zarządzania w tym środowisku. Zamiast tego należy korzystać z usług IIS, ponieważ zapewnia ona doskonałe funkcje niezawodności i monitorowania, a także jest preferowanym rozwiązaniem dla usług hostingu. Po zakończeniu opracowywania usług należy przeprowadzić migrację usług z hosta usługi WCF do programu IIS.
@@ -51,13 +52,13 @@ Aby upewnić się, że klient testowy WCF jest używany, kliknij prawym przycisk
 
 #### <a name="using-a-custom-client"></a>Korzystanie z niestandardowego klienta
 
-Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i edytuj parametr `/client` w oknie dialogowym **argumenty wiersza polecenia** , aby wskazać niestandardowego klienta, jak pokazano w poniższym przykładzie.
+Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i edytuj `/client` parametr w oknie dialogowym **argumenty wiersza polecenia** , aby wskazać niestandardowego klienta, jak pokazano w poniższym przykładzie.
 
 `/client:"path/CustomClient.exe"`
 
 Po naciśnięciu klawisza F5 w celu ponownego uruchomienia usługi Host usługi WCF automatycznie uruchamia niestandardowego klienta po uruchomieniu debugera.
 
-Można również użyć parametru `/clientArg:`, aby określić ciąg jako argument, który jest przesyłany do niestandardowej aplikacji klienckiej, jak pokazano w poniższym przykładzie.
+Można również użyć parametru, `/clientArg:` Aby określić ciąg jako argument, który jest przesyłany do niestandardowej aplikacji klienckiej, jak pokazano w poniższym przykładzie.
 
 `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`
 
@@ -111,16 +112,16 @@ Hosta usługi WCF można zamknąć na następujące cztery sposoby:
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Korzystanie z hosta usługi bez uprawnień administratora
 
-Aby umożliwić użytkownikom bez uprawnień administratora opracowywanie usług WCF, podczas instalacji programu Visual Studio jest tworzona lista kontroli dostępu (Access Control) dla przestrzeni nazw "http://+:8731/Design_Time_Addresses". Lista ACL jest ustawiona na (UI), która obejmuje wszystkich użytkowników interakcyjnych zalogowanych na komputerze. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy kontroli dostępu lub otwierać dodatkowe porty. Ta lista kontroli dostępu umożliwia użytkownikom korzystanie z funkcji Autohost usługi WCF (wcfSvcHost. exe) bez udzielania im uprawnień administratora.
+Aby umożliwić użytkownikom bez uprawnień administratora opracowywanie usług WCF, dla przestrzeni nazw " http://+:8731/Design_Time_Addresses " podczas instalacji programu Visual Studio jest tworzona lista ACL (Access Control List). Lista ACL jest ustawiona na (UI), która obejmuje wszystkich użytkowników interakcyjnych zalogowanych na komputerze. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy kontroli dostępu lub otwierać dodatkowe porty. Ta lista kontroli dostępu umożliwia użytkownikom korzystanie z funkcji Autohost usługi WCF (wcfSvcHost.exe) bez udzielania im uprawnień administratora.
 
-Dostęp można modyfikować za pomocą narzędzia Netsh. exe w systemie Windows Vista w ramach konta administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia narzędzia Netsh. exe.
+Dostęp można modyfikować za pomocą narzędzia netsh.exe w systemie Windows Vista w ramach konta administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Aby uzyskać więcej informacji na temat narzędzia Netsh. exe, zobacz "[jak używać narzędzia Netsh. exe i przełączników wiersza polecenia](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
+Aby uzyskać więcej informacji na temat netsh.exe, zobacz "[jak używać narzędzia Netsh.exe i przełączników wiersza polecenia](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Testowy klient WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

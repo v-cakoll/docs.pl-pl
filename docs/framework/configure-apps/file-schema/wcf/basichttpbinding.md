@@ -1,15 +1,16 @@
 ---
 title: <basicHttpBinding>
+description: Definiuje powiązanie, za pomocą którego usługa WCF może skonfigurować i uwidocznić punkty końcowe w celu komunikowania się z usługami zgodnymi z profilem WS-I Basic 1,1.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: ab8dca7f7065d7c174e38ad3a88ea15e39351bed
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5b2ce1973966468107d7aa4de545a976c67b13ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84202045"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244026"
 ---
 # \<basicHttpBinding>
 Reprezentuje powiązanie, za pomocą którego usługa Windows Communication Foundation (WCF) może skonfigurować i uwidocznić punkty końcowe, które mogą komunikować się z usługami sieci Web opartymi na usłudze ASMX i klientami oraz innymi usługami, które są zgodne ze standardem WS-I Basic Profile 1,1.  
@@ -171,7 +172,7 @@ Reprezentuje powiązanie, za pomocą którego usługa Windows Communication Foun
   
  Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

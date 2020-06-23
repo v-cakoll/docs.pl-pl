@@ -1,5 +1,6 @@
 ---
 title: jitCompilationStart MDA
+description: Użyj zarządzanego asystenta debugowania jitCompilationStart (MDA), który jest uruchamiany w celu raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji platformy .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216261"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904133"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
-Asystent debugowania zarządzanego `jitCompilationStart` (MDA) jest aktywowany w celu raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji.  
+`jitCompilationStart`Asystent debugowania zarządzanego (MDA) jest aktywowany do raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji.  
   
 ## <a name="symptoms"></a>Objawy  
- Rozmiar zestawu roboczego rośnie dla programu, który jest już w formacie obrazu natywnego, ponieważ MSCORJIT. dll jest ładowany do procesu.  
+ Rozmiar zestawu roboczego rośnie dla programu, który jest już w formacie obrazu natywnego, ponieważ mscorjit.dll jest ładowany do procesu.  
   
 ## <a name="cause"></a>Przyczyna  
  Nie wszystkie zestawy, od których zależy program, zostały wygenerowane w formacie natywnym lub te, które nie zostały poprawnie zarejestrowane.  
@@ -37,7 +38,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Konfiguracja  
- Poniższy plik konfiguracji przedstawia różne filtry, które mogą być stosowane do filtrowania metod zgłaszanych podczas pierwszego kompilowania JIT. Możesz określić, że wszystkie metody mają być zgłaszane przez ustawienie wartości atrybutu Name na \*.  
+ Poniższy plik konfiguracji przedstawia różne filtry, które mogą być stosowane do filtrowania metod zgłaszanych podczas pierwszego kompilowania JIT. Możesz określić, że wszystkie metody mają być zgłaszane przez ustawienie wartości atrybutu Name na \* .  
   
 ```xml  
 <mdaConfig>  
@@ -159,4 +160,4 @@ namespace ns2
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

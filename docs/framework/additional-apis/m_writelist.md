@@ -1,5 +1,6 @@
 ---
-title: Pole Connection.m_WriteList
+title: Pole Connection. m_WriteList
+description: Pobierz informacje o polu Connection. m_WriteList w programie .NET. To pole ArrayList ma obiekty HttpWebRequest, które są umieszczane w kolejce do wysłania za pośrednictwem protokołu HTTP.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989590"
 ---
-# <a name="connectionm_writelist-field"></a>Pole Lista\_zapisów Connection.m
+# <a name="connectionm_writelist-field"></a>Connection. m — \_ pole WriteList
 
-`Connection.m_WriteList`jest <xref:System.Collections.ArrayList> obiektem, <xref:System.Net.HttpWebRequest> które są umieszczane w kolejce do wysłania za pośrednictwem protokołu HTTP.
+`Connection.m_WriteList`jest <xref:System.Collections.ArrayList> <xref:System.Net.HttpWebRequest> obiektem umieszczonym w kolejce do wysłania za pośrednictwem protokołu HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> To `Connection.m_WriteList` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+> `Connection.m_WriteList`Pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

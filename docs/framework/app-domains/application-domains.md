@@ -1,5 +1,6 @@
 ---
 title: Domeny aplikacji
+description: Przeczytaj o domenach aplikacji, które zapewniają izolację między aplikacjami pod kątem bezpieczeństwa, niezawodności, obsługi wersji, & zwalniania zestawów w programie .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903483"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -46,7 +47,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
     > [!NOTE]
     > Nie można zwolnić pojedynczych zestawów lub typów. Można zwolnić tylko pełną domenę.  
   
-- Kod uruchomiony w jednej aplikacji nie może bezpośrednio uzyskać dostępu do kodu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza tę izolację, uniemożliwiając bezpośrednie wywołania między obiektami w różnych domenach aplikacji. Obiekty, które przechodzą między domenami, są kopiowane lub dostępne przez serwer proxy. Jeśli obiekt jest kopiowany, wywołanie do obiektu jest lokalne. Oznacza to, że zarówno obiekt wywołujący, jak i obiekt, do którego występuje odwołanie, znajdują się w tej samej domenie aplikacji. Jeśli dostęp do obiektu odbywa się za pomocą serwera proxy, wywołanie do obiektu jest zdalne. W takim przypadku obiekt wywołujący i obiekt, do którego się odwołuje się, znajdują się w różnych domenach aplikacji. Wywołania między domenami używają tej samej infrastruktury wywołania zdalnego, co wywołania między dwoma procesami lub między dwoma maszynami. W związku z tym metadane obiektu, do którego odwołuje się odwołanie, muszą być dostępne dla obu domen aplikacji, aby umożliwić wywołanie metody w prawidłowym skompilowaniu JIT. Jeśli domena wywołująca nie ma dostępu do metadanych dla wywoływanego obiektu, kompilacja może zakończyć się niepowodzeniem z wyjątkiem typu <xref:System.IO.FileNotFoundException>. Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Mechanizm określania sposobu, w jaki obiekty są dostępne między domenami, jest określany przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Kod uruchomiony w jednej aplikacji nie może bezpośrednio uzyskać dostępu do kodu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza tę izolację, uniemożliwiając bezpośrednie wywołania między obiektami w różnych domenach aplikacji. Obiekty, które przechodzą między domenami, są kopiowane lub dostępne przez serwer proxy. Jeśli obiekt jest kopiowany, wywołanie do obiektu jest lokalne. Oznacza to, że zarówno obiekt wywołujący, jak i obiekt, do którego występuje odwołanie, znajdują się w tej samej domenie aplikacji. Jeśli dostęp do obiektu odbywa się za pomocą serwera proxy, wywołanie do obiektu jest zdalne. W takim przypadku obiekt wywołujący i obiekt, do którego się odwołuje się, znajdują się w różnych domenach aplikacji. Wywołania między domenami używają tej samej infrastruktury wywołania zdalnego, co wywołania między dwoma procesami lub między dwoma maszynami. W związku z tym metadane obiektu, do którego odwołuje się odwołanie, muszą być dostępne dla obu domen aplikacji, aby umożliwić wywołanie metody w prawidłowym skompilowaniu JIT. Jeśli domena wywołująca nie ma dostępu do metadanych dla wywoływanego obiektu, kompilacja może zakończyć się niepowodzeniem z wyjątkiem typu <xref:System.IO.FileNotFoundException> . Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Mechanizm określania sposobu, w jaki obiekty są dostępne między domenami, jest określany przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - Zachowanie kodu jest ograniczone przez aplikację, w której jest uruchomiona. Innymi słowy domena aplikacji udostępnia ustawienia konfiguracji, takie jak zasady wersji aplikacji, lokalizacja dowolnych zestawów zdalnych, do których uzyskuje dostęp, oraz informacje o lokalizacji, w których mają znajdować się zestawy, które są ładowane do domeny.  
   
@@ -74,7 +75,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
   
  Kod kompilowany dokładnie na czas nie może być współużytkowany przez zestawy ładowane w kontekście ich źródła pochodzenia za pomocą metody <xref:System.Reflection.Assembly.LoadFrom%2A> klasy <xref:System.Reflection.Assembly> ani ładowane z obrazów przy użyciu przeciążeń metody <xref:System.Reflection.Assembly.Load%2A>, która określa tablice bajtowe.  
   
- Zestawy, które zostały skompilowane do kodu natywnego przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../tools/ngen-exe-native-image-generator.md) , mogą być współużytkowane między domenami aplikacji, jeśli są załadowane jako niezależne od domeny podczas pierwszego ładowania do procesu.  
+ Zestawy, które zostały skompilowane do kodu natywnego za pomocą [Ngen.exe (Generator obrazu natywnego)](../tools/ngen-exe-native-image-generator.md) mogą być współużytkowane między domenami aplikacji, jeśli są załadowane jako neutralne dla domeny podczas pierwszego ładowania do procesu.  
   
  Kod zestawu kompilowany dokładnie na czas, który zawiera punkt wejścia aplikacji, jest udostępniany tylko wtedy, gdy można współużytkować jego wszystkie zależności.  
   
@@ -96,17 +97,17 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
 
 ### <a name="application-domains-and-cultures"></a>Domeny aplikacji i kultury
 
- Kultura, która jest reprezentowana przez <xref:System.Globalization.CultureInfo> obiekt, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem przy <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> użyciu właściwości i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Jeśli kultura skojarzona z wątkiem została jawnie ustawiona przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości, będzie nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> właściwości w domenie aplikacji, w której jest wykonywany wątek:  
+ Kultura, która jest reprezentowana przez <xref:System.Globalization.CultureInfo> obiekt, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem przy użyciu <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Jeśli kultura skojarzona z wątkiem została jawnie ustawiona przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości, będzie nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> właściwości w domenie aplikacji, w której jest wykonywany wątek:  
   
-- Jeśli wartość właściwości nie `null`jest, kultura zwracana przez właściwość jest skojarzona z wątkiem (i w związku z tym zwracany przez właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> ).  
+- Jeśli wartość właściwości nie jest `null` , kultura zwracana przez właściwość jest skojarzona z wątkiem (i w związku z tym zwracany przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości i).  
   
-- Jeśli wartość właściwości to `null`, bieżąca kultura systemu jest skojarzona z wątkiem.  
+- Jeśli wartość właściwości to `null` , bieżąca kultura systemu jest skojarzona z wątkiem.  
   
 ## <a name="programming-with-application-domains"></a>Programowanie przy użyciu domen aplikacji
 
  Zazwyczaj domeny aplikacji tworzy się i wykonuje na nich operacje programowo za pomocą hostów środowiska uruchomieniowego. Czasami jednak z domenami aplikacji chcą pracować programy. Na przykład program może wczytywać składnik aplikacji do domeny, aby umożliwić zwolnienie domeny (i składnika) z pamięci bez konieczności zatrzymywania całej aplikacji.  
   
- <xref:System.AppDomain> Jest to interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. Poniższa tabela zawiera listę często <xref:System.AppDomain> używanych metod.  
+ <xref:System.AppDomain>Jest to interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. Poniższa tabela zawiera listę często używanych <xref:System.AppDomain> metod.  
   
 |Metoda klasy AppDomain|Opis|  
 |----------------------|-----------------|  
@@ -147,7 +148,7 @@ COMPLUS_LoaderOptimization = 1
   
 ### <a name="code-example"></a>Przykładowy kod
 
- Aby wymusić, że wszystkie zestawy nie zostaną załadowane jako neutralne dla domeny dla usługi IISADMIN, można uzyskać `COMPLUS_LoaderOptimization=1` przez dołączenie do wartości wielociągowej środowiska w HKEY_LOCAL_MACHINE kluczu \system\currentcontrolset\services\iisadmin.  
+ Aby wymusić, że wszystkie zestawy nie zostaną załadowane jako neutralne dla domeny dla usługi IISADMIN, można uzyskać przez dołączenie `COMPLUS_LoaderOptimization=1` do wartości Wielociągowej środowiska w HKEY_LOCAL_MACHINE kluczu \system\currentcontrolset\services\iisadmin.  
   
 ```env  
 Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN  

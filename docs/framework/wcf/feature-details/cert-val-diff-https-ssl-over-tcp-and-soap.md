@@ -1,5 +1,6 @@
 ---
 title: Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP
+description: Dowiedz się więcej o certyfikatach z zabezpieczeniami w warstwie komunikatów (SOAP), które są oferowane przez usługi WCF oprócz protokołu HTTPS lub TCP oraz jak usługa WCF weryfikuje takie certyfikaty.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97d51e5b65ebf20e80a69512370b68a51eeb28a7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599337"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245274"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP
 Za pomocą protokołu HTTP (HTTPS) lub TCP (TLS) można używać certyfikatów w programie Windows Communication Foundation (WCF) z zabezpieczeniami warstwy komunikatów (SOAP). W tym temacie opisano różnice w sposobie, w jaki takie certyfikaty zostały zweryfikowane.  

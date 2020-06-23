@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: Reprezentuje bezpieczne, niezawodne i zoptymalizowane powiązanie przeznaczone tylko dla komunikacji między komputerami WCF przy użyciu protokołu TCP. Niezawodna obsługa komunikatów jest domyślnie wyłączona.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139341"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244000"
 ---
 # \<netTcpBinding>
 
@@ -147,7 +148,7 @@ Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powią
 </bindings>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement>

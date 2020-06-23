@@ -12,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: d1c8b69223ab470d505d9f8007bc01b29fdc66b8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502213"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141608"
 ---
 # <a name="proxy-configuration"></a>Konfiguracja serwera proxy
 Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy może zwrócić żądany zasób z jego pamięci podręcznej lub przesłać żądanie do serwera, na którym znajduje się zasób. Serwery proxy mogą zwiększyć wydajność sieci, zmniejszając liczbę żądań wysyłanych do serwerów zdalnych. Serwery proxy mogą być również używane do ograniczania dostępu do zasobów.  
@@ -67,7 +67,7 @@ Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy mo
 <system.net>  
     <defaultProxy>  
         <proxy  proxyaddress="http://proxy.contoso.com:3128"  
-                bypassonlocal="true"  
+                bypassonlocal="True"  
         />  
         <bypasslist>  
             <add address="[a-z]+.blueyonderairlines.com$" />  
@@ -76,7 +76,7 @@ Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy mo
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>

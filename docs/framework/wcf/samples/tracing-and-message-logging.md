@@ -1,18 +1,19 @@
 ---
 title: Śledzenie i rejestrowanie komunikatów
+description: Dowiedz się, jak używać narzędzia Podgląd śledzenia usługi (SvcTraceViewer.exe) do wyświetlania śladów i dzienników komunikatów przy użyciu tego przykładu WFC.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9af50f138a2788fc7af0ce5d07e95df49d6675cb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602651"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246028"
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
-Ten przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowe ślady i dzienniki komunikatów są wyświetlane za pomocą [narzędzia Podgląd śledzenia usług (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md).  
+Ten przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowe ślady i dzienniki komunikatów są wyświetlane za pomocą [narzędzia Podgląd śledzenia usługi (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](getting-started-sample.md).  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -81,7 +82,7 @@ Ten przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. 
   
  Po zarejestrowaniu komunikatu typ śledzenia zależy od tego, czy jest on śledzony na kliencie, czy na serwerze. Na przykład komunikat "Add", który jest wysyłany do klienta, jest śledzony w kategorii "TransportWrite" na kliencie, podczas gdy ten sam komunikat jest śledzony w kategorii "TransportRead" w usłudze.  
   
- Skonfiguruj odbiornik śledzenia, dodając następujący kod do <xref:System.Diagnostics> sekcji pliku App. config klienta lub pliku Web. config usługi:  
+ Skonfiguruj odbiornik śledzenia, dodając następujący kod do <xref:System.Diagnostics> sekcji pliku App.config klienta lub pliku Web.config usługi:  
   
 ```xml  
 <system.diagnostics>  

@@ -1,15 +1,16 @@
 ---
 title: Podstawowy cykl życia programowania
+description: Dowiedz się więcej o zadaniach służących do tworzenia aplikacji WCF. Funkcja WCF umożliwia aplikacjom komunikowanie się na tym samym komputerze, w sieciach lub na różnych platformach aplikacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320826"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245534"
 ---
 # <a name="basic-programming-lifecycle"></a>Podstawowy cykl życia programowania
 Windows Communication Foundation (WCF) umożliwia aplikacjom komunikowanie się, czy znajdują się na tym samym komputerze, za pośrednictwem Internetu czy na różnych platformach aplikacji. Ten temat zawiera opis zadań, które są wymagane do utworzenia aplikacji WCF. Aby uzyskać działającą przykładową aplikację, zobacz [samouczek wprowadzenie](getting-started-tutorial.md).  
@@ -31,6 +32,6 @@ Windows Communication Foundation (WCF) umożliwia aplikacjom komunikowanie się,
   
  Po zapoznaniu się z projektowaniem kontraktów usług można także zapoznać [się z wprowadzeniem do rozszerzalności](introduction-to-extensibility.md). Jeśli masz problemy z usługą, sprawdź rozwiązanie do [rozwiązywania problemów](wcf-troubleshooting-quickstart.md) z programem WCF, aby sprawdzić, czy inne osoby mają takie same lub podobne problemy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Implementowanie kontraktów usług](implementing-service-contracts.md)

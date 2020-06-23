@@ -1,47 +1,48 @@
 ---
 title: Używanie ustawień aplikacji i ustawień użytkownika
 ms.date: 03/30/2017
+description: Dowiedz się, jak używać ustawień aplikacji i ustawień użytkownika do tworzenia i uzyskiwania dostępu do wartości utrwalanych między sesjami wykonywania aplikacji.
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a30fd354986265eca002fce57bccf5b3bb2adc15
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903171"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Używanie ustawień aplikacji i ustawień użytkownika
-Począwszy od programu .NET Framework 2.0, można tworzyć i uzyskać dostęp do wartości, które są zachowywane między sesjami wykonywania aplikacji. Wartości te są nazywane *ustawienia*. Ustawienia mogą być reprezentowane preferencji użytkownika lub cenne informacje aplikacji musi używać. Na przykład może utworzyć szereg ustawień, których są przechowywane preferencje użytkownika dotyczące schemat kolorów aplikacji. Lub można przechowywać parametry połączenia, które określa bazę danych, używanych przez aplikację. Ustawienia Zezwalaj na monit zarówno utrwalić informacje, które mają kluczowe znaczenie dla aplikacji poza kodem i tworzyć profile, które przechowują Preferencje poszczególnych użytkowników.  
+Począwszy od .NET Framework 2,0, można tworzyć i uzyskiwać dostęp do wartości utrwalanych między sesjami wykonywania aplikacji. Te wartości są nazywane *ustawieniami*. Ustawienia mogą reprezentować preferencje użytkownika lub cenne informacje wymagane przez aplikację. Można na przykład utworzyć serię ustawień, które przechowują preferencje użytkownika dla schematu kolorów aplikacji. Lub można przechowywać parametry połączenia określające bazę danych używaną przez aplikację. Ustawienia umożliwiają zarówno utrwalać informacje, które są krytyczne dla aplikacji poza kodem, jak i utworzyć profile, które przechowują preferencje poszczególnych użytkowników.  
   
- Tematy w tej sekcji opisano sposób użycia ustawienia w czasie projektowania i w czasie wykonywania.  
+ W tematach w tej sekcji opisano, jak używać ustawień w czasie projektowania i w czasie wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Utwórz nowe ustawienie w czasie projektowania](how-to-create-a-new-setting-at-design-time.md)  
+ [Instrukcje: tworzenie nowego ustawienia w czasie projektowania](how-to-create-a-new-setting-at-design-time.md)  
   
- Wyjaśnia, jak utworzyć nowe ustawienie aplikacji przy użyciu programu Visual Studio.  
+ Wyjaśnia, jak użyć programu Visual Studio do utworzenia nowego ustawienia dla aplikacji.  
   
- [Instrukcje: Zmiana wartości istniejącego ustawienia w czasie projektowania](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [Porady: zmiana wartości istniejącego ustawienia w czasie projektowania](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
- W tym artykule opisano, jak zmiana wartości istniejącego ustawienia za pomocą programu Visual Studio.  
+ Opisuje sposób użycia programu Visual Studio do zmiany wartości istniejącego ustawienia.  
   
- [Instrukcje: Zmiana wartości ustawienia między sesjami aplikacji](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [Instrukcje: zmiana wartości ustawienia między sesjami aplikacji](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- Szczegółowe informacje, jak zmienić wartość ustawienia w skompilowanej aplikacji między sesjami aplikacji.  
+ Szczegóły dotyczące zmiany wartości ustawienia w skompilowanej aplikacji między sesjami aplikacji.  
   
- [Instrukcje: Odczytaj ustawienia w czasie wykonywania za pomocąC#](how-to-read-settings-at-run-time-with-csharp.md)  
+ [Porady: czytanie ustawień w czasie wykonywania w języku C#](how-to-read-settings-at-run-time-with-csharp.md)  
   
- Opisuje sposób używania kodu do odczytu ustawień za pomocą C#.  
+ Opisuje sposób używania kodu do odczytywania ustawień przy użyciu języka C#.  
   
- [Instrukcje: Pisanie ustawień użytkownika w czasie wykonywania w językuC#](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Instrukcje: pisanie ustawień użytkownika w czasie wykonywania w języku C#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- Wyjaśnia, jak używać kodu do zapisywania i zapisać wartości ustawień użytkownika z C#.  
+ Wyjaśnia, w jaki sposób używać kodu do zapisywania i zapisywania wartości ustawień użytkownika w języku C#.  
   
- [Instrukcje: Dodawanie wielu zestawów ustawień do aplikacji wC#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Instrukcje: dodawanie wielu zestawów ustawień do aplikacji w C#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- Szczegóły sposobu dodawania wielu zestawów ustawień do aplikacji za pomocą C#.  
+ Szczegóły dotyczące dodawania wielu zestawów ustawień do aplikacji przy użyciu języka C#.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Ustawienia aplikacji dla formularzy Windows Forms](application-settings-for-windows-forms.md)

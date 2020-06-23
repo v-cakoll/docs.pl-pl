@@ -1,5 +1,6 @@
 ---
 title: ConnectionGroup, klasa
+description: Przeczytaj o klasie Connection Group, która grupuje połączenia w kontekście ServicePoint i służy do obsługi kontekstu dla zasobów sieciowych w programie .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-ms.openlocfilehash: 8ebc97112d2044efca85520ee942ed0f587529ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7121713b26880f2490b40d59d92d431a567519b3
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989821"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup, klasa
 
-Klasa `ConnectionGroup` grupuje listę połączeń w <xref:System.Net.ServicePoint> kontekście i jest używana do obsługi kontekstu dla zasobów sieciowych (na przykład serwerów proxy i oddzielnych klientów).
+`ConnectionGroup`Klasa grupuje listę połączeń w <xref:System.Net.ServicePoint> kontekście i służy do obsługi kontekstu dla zasobów sieciowych (na przykład proxy i oddzielni klienci).
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> Klasa `ConnectionGroup` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> `ConnectionGroup`Klasa jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnych okolicznościach.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

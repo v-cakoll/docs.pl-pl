@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201938"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245599"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Wytyczne dotyczące użycia struktur Memory\<T> i Span\<T>
 
@@ -121,7 +121,7 @@ Użycie parametru typu <xref:System.Span%601> zamiast typu <xref:System.Memory%6
 
 Czasami musisz użyć <xref:System.Memory%601> parametru zamiast <xref:System.Span%601> parametru, nawet jeśli jest w pełni synchroniczne. Być może interfejs API, który jest zależny, akceptuje tylko <xref:System.Memory%601> argumenty. Jest to dokładne, ale należy pamiętać o kompromisach, które są wykorzystywane w przypadku synchronicznego korzystania z programu <xref:System.Memory%601> .
 
-<a name="rule-2" />
+<a name="rule-2"></a>
 
 **Reguła #2: Użyj ReadOnlySpan \<T> lub ReadOnlyMemory \<T> , jeśli bufor powinien być tylko do odczytu.**
 
@@ -367,7 +367,7 @@ private class MyCompletedCallbackState
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>

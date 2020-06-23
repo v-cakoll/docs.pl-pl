@@ -1,19 +1,20 @@
 ---
 title: Zalecane ustawienia śledzenia i rejestrowania komunikatów
+description: Informacje na temat zalecanych ustawień śledzenia i rejestrowania komunikatów dla różnych środowisk operacyjnych w programie WCF.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578919"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245331"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Zalecane ustawienia śledzenia i rejestrowania komunikatów
 W tym temacie opisano zalecane ustawienia śledzenia i rejestrowania komunikatów dla różnych środowisk operacyjnych.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Zalecane ustawienia dla środowiska produkcyjnego  
- W przypadku środowiska produkcyjnego, jeśli używasz źródeł śledzenia WCF, ustaw opcję `switchValue` na ostrzeżenie. Jeśli używasz `System.ServiceModel` źródła śledzenia WCF, ustaw `switchValue` atrybut na `Warning` i `propagateActivity` atrybut na `true` . Jeśli używasz źródła śledzenia zdefiniowanego przez użytkownika, ustaw `switchValue` atrybut na `Warning, ActivityTracing` . Można to zrobić ręcznie przy użyciu [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Jeśli nie przewidujesz trafienia wydajności, możesz ustawić `switchValue` atrybut na `Information` we wszystkich wymienionych wcześniej przypadkach, co generuje dość dużą ilość danych śledzenia. Poniższy przykład ilustruje te zalecane ustawienia.  
+ W przypadku środowiska produkcyjnego, jeśli używasz źródeł śledzenia WCF, ustaw opcję `switchValue` na ostrzeżenie. Jeśli używasz `System.ServiceModel` źródła śledzenia WCF, ustaw `switchValue` atrybut na `Warning` i `propagateActivity` atrybut na `true` . Jeśli używasz źródła śledzenia zdefiniowanego przez użytkownika, ustaw `switchValue` atrybut na `Warning, ActivityTracing` . Można to zrobić ręcznie przy użyciu [Narzędzia Edytora konfiguracji (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Jeśli nie przewidujesz trafienia wydajności, możesz ustawić `switchValue` atrybut na `Information` we wszystkich wymienionych wcześniej przypadkach, co generuje dość dużą ilość danych śledzenia. Poniższy przykład ilustruje te zalecane ustawienia.  
   
 ```xml  
 <configuration>  

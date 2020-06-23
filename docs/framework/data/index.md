@@ -1,17 +1,18 @@
 ---
 title: Dane i modelowanie — .NET
+description: Wyświetlanie linków do artykułów opisujących modelowanie i sposób uzyskiwania dostępu do danych w programie .NET. Artykuły obejmują Usługi danych programu WCF, ADO.NET i przetwarzanie transakcji.
 ms.date: 09/09/2019
 helpviewer_keywords:
 - .NET Framework, data access
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: ad9e63f74f5a79eba937ef16310926ae9b9f287d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894365"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141839"
 ---
 # <a name="data-and-modeling-in-net"></a>Dane i modelowanie w programie .NET
 
@@ -31,7 +32,7 @@ Ta sekcja zawiera informacje na temat sposobu uzyskiwania dostępu do danych w .
 ## <a name="related-sections"></a>Sekcje pokrewne
 
  [Language Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
- Zawiera łącza do odpowiedniej dokumentacji dotyczącej języka Integrated Language Query (LINQ C#) przy użyciu programu.  
+ Zawiera łącza do odpowiedniej dokumentacji dotyczącej języka Integrated Language Query (LINQ) przy użyciu kodu C#.  
   
  [Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  Zawiera łącza do odpowiedniej dokumentacji dotyczącej języka Integrated Language Query (LINQ) przy użyciu Visual Basic.  

@@ -1,5 +1,6 @@
 ---
-title: Pole ConnectionGroup.m_ConnectionList
+title: Connection. m_ConnectionList — pole
+description: Dowiedz się więcej o polu Connection. m_ConnectionList w programie .NET, który zawiera obiekty połączeń obsługujące ten sam identyfikator URI i wartości udziałów dla innych właściwości.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478b2441c062e8df6f4e718bd66d7af329f20f12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989721"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>Pole ConnectionGroup.m\_ConnectionList
+# <a name="connectiongroupm_connectionlist-field"></a>Connections. m — \_ pole ConnectionList
 
-`ConnectionGroup.m_ConnectionList`jest <xref:System.Collections.ArrayList> obiektem połączenia, który obsługuje ten sam identyfikator URI i współużytkuje te same wartości dla niektórych innych właściwości, takich jak wygaśnięcie i uwierzytelnianie.
+`ConnectionGroup.m_ConnectionList`jest <xref:System.Collections.ArrayList> obiektem połączenia, który służy do tego samego identyfikatora URI i udostępnia te same wartości dla innych właściwości, takich jak wygaśnięcie i uwierzytelnianie.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> To `ConnectionGroup.m_ConnectionList` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+> `ConnectionGroup.m_ConnectionList`Pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

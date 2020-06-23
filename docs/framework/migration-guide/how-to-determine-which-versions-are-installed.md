@@ -1,6 +1,6 @@
 ---
 title: Określanie, które wersje programu .NET Framework są zainstalowane
-description: Użyj kodu, regedit. exe lub PowerShell, aby wykryć, które wersje .NET Framework są zainstalowane na komputerze, badając rejestr systemu Windows.
+description: Użyj kodu, regedit.exe lub programu PowerShell, aby wykryć, które wersje .NET Framework są zainstalowane na komputerze, badając rejestr systemu Windows.
 ms.date: 02/03/2020
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990143"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje .NET Framework są zainstalowane
 
@@ -58,10 +58,10 @@ Wartość REG_DWORD **wydania** w rejestrze reprezentuje wersję zainstalowanej 
 | Program .NET Framework 4.6     | W systemie Windows 10:393295<br />We wszystkich innych systemach operacyjnych Windows: 393297 |
 | .NET Framework 4.6.1   | W systemach aktualizacji systemu Windows 10 listopad: 394254<br />We wszystkich innych systemach operacyjnych Windows (w tym Windows 10): 394271 |
 | .NET Framework 4.6.2   | W rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016:394802<br />Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 394806 |
-| .NET Framework 4,7     | Aktualizacja systemu Windows 10 dla twórców: 460798<br />Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 460805 |
+|  .NET Framework 4.7     | Aktualizacja systemu Windows 10 dla twórców: 460798<br />Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 460805 |
 | .NET Framework 4.7.1   | W przypadku aktualizacji systemu Windows 10 dla twórców i systemu Windows Server w wersji 1709:461308<br/>Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 461310 |
 |  .NET Framework 4.7.2   | W systemie Windows 10 kwiecień 2018 Update i Windows Server w wersji 1803:461808<br/>We wszystkich systemach operacyjnych Windows innych niż Windows 10 kwiecień 2018 Update i Windows Server w wersji 1803:461814 |
-|  .NET Framework 4.8     | W systemie Windows 10 maja 2019 Update i aktualizacja Windows 10 listopad 2019:528040<br/>Aktualizacja systemu Windows 10 maja 2020:528209<br/>Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 528049 |
+|  .NET Framework 4.8     | W systemie Windows 10 maja 2019 Update i aktualizacja Windows 10 listopad 2019:528040<br/>Aktualizacja systemu Windows 10 maja 2020:528372<br/>Wszystkie inne systemy operacyjne Windows (w tym inne systemy operacyjne Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Minimalna wersja
 
@@ -77,7 +77,7 @@ Na przykład, jeśli aplikacja działa w .NET Framework 4,8 lub nowszej wersji, 
 | Program .NET Framework 4.6     | 393295 |
 | .NET Framework 4.6.1   | 394254 |
 | .NET Framework 4.6.2   | 394802 |
-| .NET Framework 4,7     | 460798 |
+|  .NET Framework 4.7     | 460798 |
 | .NET Framework 4.7.1   | 461308 |
 |  .NET Framework 4.7.2   | 461808 |
 |  .NET Framework 4.8     | 528040 |
@@ -173,9 +173,9 @@ Poniższy przykład umożliwia znalezienie zainstalowanych wersji .NET Framework
 
 .NET Framework środowisko CLR zainstalowane z .NET Framework jest używane oddzielnie. Istnieją dwa sposoby wykrywania wersji .NET Framework CLR:
 
-- **Narzędzie Clrver. exe**
+- **Narzędzie Clrver.exe**
 
-  Użyj [Narzędzia wersji środowiska CLR (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md) , aby określić, które wersje środowiska CLR są zainstalowane na komputerze. Otwórz [wiersz polecenia dla deweloperów dla programu Visual Studio](../tools/developer-command-prompt-for-vs.md) i wprowadź `clrver` .
+  Użyj [Narzędzia wersji środowiska CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) , aby określić, które wersje środowiska CLR są zainstalowane na komputerze. Otwórz [wiersz polecenia dla deweloperów dla programu Visual Studio](../tools/developer-command-prompt-for-vs.md) i wprowadź `clrver` .
 
   Przykładowe dane wyjściowe:
 

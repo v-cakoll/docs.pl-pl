@@ -1,27 +1,28 @@
 ---
 title: Konfigurowanie usług WCF w kodzie
+description: Dowiedz się, w jaki sposób można skonfigurować usługi WCF przy użyciu kodu zamiast plików konfiguracji zarówno dla usług hostowanych samodzielnych, jak i internetowych.
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 4ff49b4e17ae179426cc033a955ecf2c71f2a3e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d28115236a4582fe251adf1537b9e8b3e996d611
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174813"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245417"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
-Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracyjne są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych specjalista IT musi tylko zaktualizować plik konfiguracyjny, nie jest wymagana ponowna kompilacja. Pliki konfiguracyjne mogą być jednak złożone i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracyjnych i elementy konfiguracji są odwoływane przez nazwy, które sprawia, że tworzenie plików konfiguracyjnych podatne na błędy i trudne. WCF umożliwia również konfigurowanie usług w kodzie. We wcześniejszych wersjach WCF (4.0 i wcześniejszych) konfigurowanie usług w kodzie <xref:System.ServiceModel.ServiceHost> było łatwe w scenariuszach hostowanych samodzielnie, klasa umożliwia skonfigurowanie punktów końcowych i zachowań przed wywołaniem ServiceHost.Open. W scenariuszach hostowanych w sieci Web nie masz <xref:System.ServiceModel.ServiceHost> jednak bezpośredniego dostępu do klasy. Aby skonfigurować usługę hosta sieci Web, `System.ServiceModel.ServiceHostFactory` konieczne było <xref:System.ServiceModel.Activation.ServiceHostFactory> utworzenie utworzonej i wykonanej dowolnej potrzebnej konfiguracji. Począwszy od platformy .NET 4.5, WCF zapewnia łatwiejszy sposób konfigurowania zarówno hostowanych samodzielnie, jak i hostowanych usług internetowych w kodzie.  
+Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samoobsługowych, <xref:System.ServiceModel.ServiceHost> Klasa może skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost. Open. Jednak w scenariuszach hostowanych w sieci Web nie masz bezpośredniego dostępu do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć utworzoną przez siebie `System.ServiceModel.ServiceHostFactory` <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać dowolną wymaganą konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie.  
   
-## <a name="the-configure-method"></a>Metoda Konfiguruj  
- Wystarczy zdefiniować publiczną `Configure` metodę statyczną wywołaną z następującym podpisem w klasie implementacji usługi:  
+## <a name="the-configure-method"></a>Metoda Configure  
+ Po prostu Zdefiniuj publiczną metodę statyczną o nazwie `Configure` z następującym podpisem w klasie implementacji usługi:  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure Metoda przyjmuje <xref:System.ServiceModel.ServiceConfiguration> wystąpienie, które umożliwia deweloperowi dodawać punkty końcowe i zachowania. Ta metoda jest wywoływana przez WCF przed otwarciem hosta usługi. Po zdefiniowaniu wszystkie ustawienia konfiguracji usługi określone w pliku app.config lub web.config zostaną zignorowane.  
+ Metoda Configure przyjmuje <xref:System.ServiceModel.ServiceConfiguration> wystąpienie umożliwiające deweloperowi Dodawanie punktów końcowych i zachowań. Ta metoda jest wywoływana przez funkcję WCF przed otwarciem hosta usługi. Po zdefiniowaniu ustawienia konfiguracji usługi określone w pliku app.config lub web.config zostaną zignorowane.  
   
- Poniższy fragment kodu ilustruje sposób `Configure` definiowania metody i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
+ Poniższy fragment kodu ilustruje sposób definiowania `Configure` metody i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
   
 ```csharp  
 public class Service1 : IService1  
@@ -56,7 +57,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Aby włączyć protokół, taki jak https dla usługi, można jawnie dodać punkt końcowy, który używa protokołu, lub automatycznie dodać punkty końcowe, wywołując ServiceConfiguration.EnableProtocol(Binding), który dodaje punkt końcowy dla każdego adresu podstawowego zgodne z protokołem i każdą zdefiniowaną umową serwisową. Poniższy kod ilustruje sposób korzystania z ServiceConfiguration.EnableProtocol metody:  
+ Aby włączyć protokół, taki jak https dla usługi, można jawnie dodać punkt końcowy, który używa protokołu, lub automatycznie dodać punkty końcowe, wywołując metodę ServiceConfiguration. EnableProtocol (Binding), która dodaje punkt końcowy dla każdego adresu podstawowego zgodnego z protokołem i dla każdego zdefiniowanego kontraktu usługi. Poniższy kod ilustruje sposób używania metody ServiceConfiguration. EnableProtocol:  
   
 ```csharp  
 public class Service1 : IService1
@@ -77,7 +78,7 @@ public class Service1 : IService1
 }
 ```  
   
- Ustawienia w sekcji <`protocolMappings`> są używane tylko wtedy, gdy żadne punkty końcowe aplikacji nie są dodawane do <xref:System.ServiceModel.ServiceConfiguration> programowo. Opcjonalnie można załadować konfigurację usługi z domyślnego pliku konfiguracji aplikacji, wywołując, <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> a następnie zmienić ustawienia. Klasa <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> umożliwia również ładowanie konfiguracji ze scentralizowanej konfiguracji. Poniższy kod ilustruje sposób zaimplementowania tego:  
+ Ustawienia w `protocolMappings` sekcji> <są używane tylko wtedy, gdy żadne punkty końcowe aplikacji nie są dodawane <xref:System.ServiceModel.ServiceConfiguration> programistycznie. Opcjonalnie możesz załadować konfigurację usługi z domyślnego pliku konfiguracyjnego aplikacji, wywołując <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , a następnie zmieniając ustawienia. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration>Klasa umożliwia również ładowanie konfiguracji z poziomu scentralizowanej konfiguracji. Poniższy kod ilustruje sposób implementacji:  
   
 ```csharp
 public class Service1 : IService1
@@ -91,7 +92,7 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Pamiętaj, <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> że w <`host`>> tagu `system.serviceModel` <`service`> ignor <uje ustawienia>. Koncepcyjnie <`host`> dotyczy konfiguracji hosta, a nie konfiguracji usługi i jest ładowana przed wykonaniem metody Configure.  
+> Należy zauważyć, że <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignoruje <`host`> ustawień w `service` tagu <> <`system.serviceModel`>. W <`host`> jest informacje o konfiguracji hosta, a nie konfiguracji usługi i są ładowane przed wykonaniem metody Configure.  
   
 ## <a name="see-also"></a>Zobacz też
 

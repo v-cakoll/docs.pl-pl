@@ -1,16 +1,17 @@
 ---
 title: Windows Communication Foundation
+description: Dowiedz się, w jaki sposób WCF, model programowania dla aplikacji zorientowanych na usługę, umożliwia tworzenie bezpiecznych, niezawodnych rozwiązań transakcyjnych.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: dc4218e830c34e44536bbb816af9c1b35b4b5b07
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552685"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244299"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>Tworzenie aplikacji zorientowanych na usługę za pomocą programu WCF
 
@@ -33,34 +34,34 @@ Ta sekcja dokumentacji zawiera informacje na temat Windows Communication Foundat
  [Samouczek Wprowadzenie](getting-started-tutorial.md)\
  Samouczek krok po kroku dotyczący tworzenia usługi i klienta WCF
 
- [Podstawowe\ programowania WCF](basic-wcf-programming.md)
+ [Podstawowe programowanie WCF](basic-wcf-programming.md)\
  Opisuje podstawowe informacje na temat tworzenia aplikacji Windows Communication Foundation.
 
  [Szczegóły funkcji WCF](./feature-details/index.md)\
  Przedstawia tematy, które umożliwiają wybranie funkcji lub funkcji WCF, które należy zastosować.
 
- [Rozszerzanie\ WCF](./extending/index.md)
+ [Rozszerzanie WCF](./extending/index.md)\
  Opisuje, jak modyfikować i zwiększać składniki środowiska uruchomieniowego WCF
 
  [Wskazówki i najlepsze rozwiązania](guidelines-and-best-practices.md)\
  Zawiera wytyczne dotyczące tworzenia aplikacji Windows Communication Foundation (WCF).
 
- \ [administracji i diagnostyki](./diagnostics/index.md)
+ [Administracja i Diagnostyka](./diagnostics/index.md)\
  Opisuje funkcje diagnostyczne programu WCF
 
- [Zasoby systemu operacyjnego wymagane przez\ WCF](operating-system-resources-required-by-wcf.md)
+ [Zasoby systemu operacyjnego wymagane przez funkcję WCF](operating-system-resources-required-by-wcf.md)\
  Opisuje zasoby systemu operacyjnego wymagane przez funkcję WCF
 
- [Rozwiązywanie problemów z konfiguracją](troubleshooting-setup-issues.md)\
+ [Rozwiązywanie problemów z instalacją](troubleshooting-setup-issues.md)\
  Zawiera wskazówki dotyczące rozwiązywania problemów z instalacją WCF
 
- [Migrowanie z usług zdalnych platformy .NET do\ WCF](migrating-from-net-remoting-to-wcf.md)
+ [Migrowanie z usług zdalnych platformy .NET do programu WCF](migrating-from-net-remoting-to-wcf.md)\
  Porównuje funkcję komunikacji zdalnej .NET z usługą WCF i udostępnia wskazówki dotyczące migracji dla typowych scenariuszy.
 
  [Korzystanie z narzędzi programistycznych WCF](using-the-wcf-development-tools.md)\
  Opisuje narzędzia deweloperskie programu Visual Studio Windows Communication Foundation, które mogą pomóc Ci w opracowaniu WCFservice.
 
- [Windows Communication Foundation narzędzia](tools.md)\
+ [Narzędzia Windows Communication Foundation](tools.md)\
  Opisuje narzędzia WCF zaprojektowane, aby ułatwić tworzenie i wdrażanie aplikacji WCF oraz zarządzanie nimi
 
  [Przykłady Windows Communication Foundation](./samples/index.md)\

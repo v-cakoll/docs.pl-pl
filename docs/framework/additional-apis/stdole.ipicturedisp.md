@@ -1,5 +1,6 @@
 ---
-title: Interfejs elementu IPictureDisp (stdole)
+title: Interfejs IPictureDisp (stdole)
+description: Znajdź informacje o interfejsie IPictureDisp w programie .NET. Ten interfejs znajduje się w przestrzeni nazw stdole i zestawie stdole (w bibliotece stdole.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,14 +10,14 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: eb5db8598780a18d2bd65b08964f5df84fc9b8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54f2139500bfa62a6c862157283079f05d69215b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706016"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105300"
 ---
-# <a name="ipicturedisp-interface"></a><span data-ttu-id="04c2b-102">IPictureDisp, interfejs</span><span class="sxs-lookup"><span data-stu-id="04c2b-102">IPictureDisp Interface</span></span>
+# <a name="ipicturedisp-interface"></a><span data-ttu-id="b4b76-104">IPictureDisp, interfejs</span><span class="sxs-lookup"><span data-stu-id="b4b76-104">IPictureDisp Interface</span></span>
 
 ```csharp
 [InterfaceTypeAttribute()]
@@ -24,8 +25,8 @@ ms.locfileid: "61706016"
 public interface IPictureDisp
 ```
 
-## <a name="requirements"></a><span data-ttu-id="04c2b-103">Wymagania</span><span class="sxs-lookup"><span data-stu-id="04c2b-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b4b76-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b4b76-105">Requirements</span></span>
 
-<span data-ttu-id="04c2b-104">**Namespace:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="04c2b-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="b4b76-106">**Przestrzeń nazw:**`stdole`</span><span class="sxs-lookup"><span data-stu-id="b4b76-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="04c2b-105">**Zestaw:** stdole (w stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="04c2b-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="b4b76-107">**Zestaw:** stdole (w stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="b4b76-107">**Assembly:** stdole (in stdole.dll)</span></span>

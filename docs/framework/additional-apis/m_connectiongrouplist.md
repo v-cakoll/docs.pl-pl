@@ -1,5 +1,6 @@
 ---
-title: Pole servicepoint.m_ConnectionGroupList
+title: ServicePoint. m_ConnectionGroupList — pole
+description: Zapoznaj się z polem ServicePoint. m_ConnectionGroupList, czyli tabelą skrótów grup połączeń, które każdy z nich utrzymuje połączenie dla identyfikatora URI ServicePoint w programie .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989718"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a><span data-ttu-id="20b68-102">Pole Lista\_połączeń servicepoint.m</span><span class="sxs-lookup"><span data-stu-id="20b68-102">ServicePoint.m\_ConnectionGroupList Field</span></span>
+# <a name="servicepointm_connectiongrouplist-field"></a><span data-ttu-id="4b858-103">ServicePoint. m \_ ConnectionGroupList pole</span><span class="sxs-lookup"><span data-stu-id="4b858-103">ServicePoint.m\_ConnectionGroupList Field</span></span>
 
-<span data-ttu-id="20b68-103">`ServicePoint.m_ConnectionGroupList`jest <xref:System.Collections.Hashtable> a grup połączeń, z których <xref:System.Net.ServicePoint>każda posiada połączenie dla identyfikatora URI.</span><span class="sxs-lookup"><span data-stu-id="20b68-103">`ServicePoint.m_ConnectionGroupList` is a <xref:System.Collections.Hashtable> of connection groups, each holding a connection for the <xref:System.Net.ServicePoint>'s URI.</span></span>
+<span data-ttu-id="4b858-104">`ServicePoint.m_ConnectionGroupList`jest <xref:System.Collections.Hashtable> grupą połączeń, z których każde utrzymuje połączenie dla <xref:System.Net.ServicePoint> identyfikatora URI.</span><span class="sxs-lookup"><span data-stu-id="4b858-104">`ServicePoint.m_ConnectionGroupList` is a <xref:System.Collections.Hashtable> of connection groups, each holding a connection for the <xref:System.Net.ServicePoint>'s URI.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="20b68-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="20b68-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4b858-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4b858-105">Syntax</span></span>
   
 ```csharp  
 private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> <span data-ttu-id="20b68-105">To `ServicePoint.m_ConnectionGroupList` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="20b68-105">The `ServicePoint.m_ConnectionGroupList` field is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="4b858-106">`ServicePoint.m_ConnectionGroupList`Pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="4b858-106">The `ServicePoint.m_ConnectionGroupList` field is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="20b68-106">Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.</span><span class="sxs-lookup"><span data-stu-id="20b68-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="4b858-107">Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.</span><span class="sxs-lookup"><span data-stu-id="4b858-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="20b68-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="20b68-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="4b858-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4b858-108">Requirements</span></span>
 
-<span data-ttu-id="20b68-108">**Obszar nazw:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="20b68-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="4b858-109">**Przestrzeń nazw:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="4b858-109">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="20b68-109">**Montaż:** System (w pliku System.dll)</span><span class="sxs-lookup"><span data-stu-id="20b68-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="4b858-110">**Zestaw:** System (w System.dll)</span><span class="sxs-lookup"><span data-stu-id="4b858-110">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="20b68-110">**Wersje programu .NET Framework:** Dostępne od 2.0.</span><span class="sxs-lookup"><span data-stu-id="20b68-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="4b858-111">**.NET Framework wersje:** Dostępne od 2,0.</span><span class="sxs-lookup"><span data-stu-id="4b858-111">**.NET Framework versions:** Available since 2.0.</span></span>

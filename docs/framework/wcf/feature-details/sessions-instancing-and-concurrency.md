@@ -1,13 +1,14 @@
 ---
 title: Sesje, tworzenie wystąpień i współbieżność
+description: Dowiedz się więcej na temat sesji, tworzenia wystąpień i współbieżności, sposobu ich używania oraz interakcji między nimi w WFC.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600325"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246548"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 *Sesja* jest korelacją wszystkich komunikatów wysyłanych między dwoma punktami końcowymi. Tworzenie *wystąpień* odnosi się do kontrolowania okresu istnienia obiektów usługi zdefiniowanej przez użytkownika i powiązanych z nimi <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* to termin nadawany kontroli nad liczbą wątków wykonywanych w <xref:System.ServiceModel.InstanceContext> tym samym czasie.  
@@ -105,7 +106,7 @@ public class CalculatorService : ICalculatorConcurrency
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |PerCall|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|  
 |PerSession|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla każdego kanału.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego wywołania.|  
-|Single|-Zachowanie przy użyciu kanału sesji: sesji i jednej <xref:System.ServiceModel.InstanceContext> dla wszystkich wywołań.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla pojedynczego elementu określonego lub zdefiniowanego przez użytkownika.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla obiektu utworzonego lub określonego przez użytkownika.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego utworzonego pojedynczego lub dla pojedynczego użytkownika.|  
+|Pojedyncze|-Zachowanie przy użyciu kanału sesji: sesji i jednej <xref:System.ServiceModel.InstanceContext> dla wszystkich wywołań.<br />-Zachowanie przy użyciu kanału bez sesji: Wystąpił wyjątek.|-Zachowanie przy użyciu kanału sesji: sesji i <xref:System.ServiceModel.InstanceContext> dla pojedynczego elementu określonego lub zdefiniowanego przez użytkownika.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla obiektu utworzonego lub określonego przez użytkownika.|-Zachowanie przy użyciu kanału sesji: Wystąpił wyjątek.<br />-Zachowanie przy użyciu kanału bez sesji: <xref:System.ServiceModel.InstanceContext> dla każdego utworzonego pojedynczego lub dla pojedynczego użytkownika.|  
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,5 +1,6 @@
 ---
 title: Ustaw kolejność tabulacji kontrolek
+description: Dowiedz się, jak ustawić kolejność tabulacji kontrolek na Windows Forms. Ustaw kolejność tabulacji przy użyciu programu Visual Studio lub Właściwość TabIndex w okno Właściwości.
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -13,12 +14,12 @@ ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d53e411bda0279271e4f73e1842c52fd6d9b3a9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3d16da1ac73cc030b92bb36c4bfa3a79985339bf
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903365"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Instrukcje: Ustawianie kolejności tabulacji na Windows Forms
 
@@ -28,7 +29,7 @@ Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jed
 
 1. W programie Visual Studio, w menu **Widok** wybierz **kolejność tabulacji**.
 
-   Aktywuje to tryb wyboru kolejności tabulacji w formularzu. Liczba (reprezentująca Właściwość <xref:System.Windows.Forms.Control.TabIndex%2A>) pojawia się w lewym górnym rogu każdej kontrolki.
+   Aktywuje to tryb wyboru kolejności tabulacji w formularzu. Liczba (reprezentująca <xref:System.Windows.Forms.Control.TabIndex%2A> Właściwość) pojawia się w lewym górnym rogu każdej kontrolki.
 
 2. Klikaj kontrolki sekwencyjnie, aby ustalić kolejność tabulacji.
 
@@ -38,25 +39,25 @@ Kolejność tabulacji to kolejność, w której użytkownik przenosi fokus z jed
 3. Po zakończeniu wybierz pozycję **kolejność tabulacji** w menu **Widok** , aby pozostawić tryb kolejności tabulacji.
 
    > [!NOTE]
-   > Kontrolki, które nie mogą uzyskać fokusu, a także wyłączone i niewidoczne kontrolki, nie mają właściwości <xref:System.Windows.Forms.Control.TabIndex%2A> i nie są uwzględnione w kolejności tabulacji. Gdy użytkownik naciśnie klawisz Tab, te kontrolki są pomijane.
+   > Kontrolki, które nie mogą uzyskać fokusu, a także wyłączone i niewidoczne kontrolki, nie mają <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości i nie są uwzględnione w kolejności tabulacji. Gdy użytkownik naciśnie klawisz Tab, te kontrolki są pomijane.
 
-Alternatywnie można ustawić kolejność tabulacji w okno Właściwości przy użyciu właściwości <xref:System.Windows.Forms.Control.TabIndex%2A>. Właściwość <xref:System.Windows.Forms.Control.TabIndex%2A> formantu określa miejsce, w którym jest umieszczane w kolejności tabulacji. Domyślnie pierwszy rysowany formant ma <xref:System.Windows.Forms.Control.TabIndex%2A> wartość 0, a drugi ma <xref:System.Windows.Forms.Control.TabIndex%2A> 1 itd.
+Alternatywnie można ustawić kolejność tabulacji w okno Właściwości przy użyciu <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości. <xref:System.Windows.Forms.Control.TabIndex%2A>Właściwość kontrolki określa miejsce, w którym jest umieszczony w kolejności tabulacji. Domyślnie pierwszy rysowany formant ma <xref:System.Windows.Forms.Control.TabIndex%2A> wartość 0, a druga — <xref:System.Windows.Forms.Control.TabIndex%2A> od 1 itd.
 
-Ponadto domyślnie formant <xref:System.Windows.Forms.GroupBox> ma własną wartość <xref:System.Windows.Forms.Control.TabIndex%2A>, która jest liczbą całkowitą. Sama kontrolka <xref:System.Windows.Forms.GroupBox> nie może mieć fokusu w czasie wykonywania. W tym celu każda kontrolka w <xref:System.Windows.Forms.GroupBox> ma własną wartość dziesiętną <xref:System.Windows.Forms.Control.TabIndex%2A>, zaczynając od. 0. Naturalnie, ponieważ <xref:System.Windows.Forms.Control.TabIndex%2A> kontrolki <xref:System.Windows.Forms.GroupBox> jest zwiększane, zostaną odpowiednio narastane. Jeśli zmieniono wartość <xref:System.Windows.Forms.Control.TabIndex%2A> z przedziału od 5 do 6, wartość <xref:System.Windows.Forms.Control.TabIndex%2A> pierwszej kontrolce w swojej grupie automatycznie zmieni się na 6,0 itd.
+Ponadto domyślnie <xref:System.Windows.Forms.GroupBox> kontrolka ma własną <xref:System.Windows.Forms.Control.TabIndex%2A> wartość, która jest liczbą całkowitą. <xref:System.Windows.Forms.GroupBox>Kontrolka nie może mieć fokusu w czasie wykonywania. W tym celu każda kontrolka w ramach <xref:System.Windows.Forms.GroupBox> ma własną <xref:System.Windows.Forms.Control.TabIndex%2A> wartość dziesiętną, zaczynając od. 0. W naturalny sposób, gdy <xref:System.Windows.Forms.Control.TabIndex%2A> <xref:System.Windows.Forms.GroupBox> kontrolka jest zwiększana, zostaną odpowiednio zwiększone. Jeśli zmieniono <xref:System.Windows.Forms.Control.TabIndex%2A> wartość z przedziału od 5 do 6, <xref:System.Windows.Forms.Control.TabIndex%2A> wartość pierwszej kontrolki w grupie automatycznie zmieni się na 6,0 itd.
 
-Na koniec w kolejności tabulacji można pominąć dowolną kontrolkę wiele w formularzu. Zwykle naciśnięcie klawisza Tab w czasie wykonywania wybiera każdy formant w kolejności tabulacji. Wyłączenie właściwości <xref:System.Windows.Forms.Control.TabStop%2A> umożliwia przekazanie kontrolki w kolejności tabulacji w formularzu.
+Na koniec w kolejności tabulacji można pominąć dowolną kontrolkę wiele w formularzu. Zwykle naciśnięcie klawisza Tab w czasie wykonywania wybiera każdy formant w kolejności tabulacji. Wyłączenie <xref:System.Windows.Forms.Control.TabStop%2A> Właściwości umożliwia przekazanie kontrolki w kolejności tabulacji w formularzu.
 
 ## <a name="to-remove-a-control-from-the-tab-order"></a>Aby usunąć formant z kolejności tabulacji
 
-Ustaw właściwość <xref:System.Windows.Forms.Control.TabStop%2A> kontrolki na **wartość false** w oknie **Właściwości** .
+Ustaw właściwość kontrolki <xref:System.Windows.Forms.Control.TabStop%2A> na **false** w oknie **Właściwości** .
 
-Kontrolka, której Właściwość <xref:System.Windows.Forms.Control.TabStop%2A> została ustawiona na `false` nadal utrzymuje swoją pozycję w kolejności tabulacji, nawet jeśli formant zostanie pominięty podczas przechodzenia przez kontrolki za pomocą klawisza Tab.
+Formant, którego <xref:System.Windows.Forms.Control.TabStop%2A> Właściwość została ustawiona tak, aby `false` nadal utrzymuje swoją pozycję w kolejności tabulacji, nawet jeśli formant zostanie pominięty podczas przechodzenia przez kontrolki za pomocą klawisza Tab.
 
 > [!NOTE]
-> Grupa przycisków radiowych ma jeden tabulator w czasie wykonywania. Wybrany przycisk (czyli przycisk z właściwością <xref:System.Windows.Forms.RadioButton.Checked%2A> ustawioną na `true`) ma właściwość <xref:System.Windows.Forms.Control.TabStop%2A> automatycznie ustawiona na `true`, podczas gdy inne przyciski mają swoją właściwość <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną na `false`. Aby uzyskać więcej informacji na temat grupowania formantów <xref:System.Windows.Forms.RadioButton>, zobacz [grupowanie Windows Forms formantów RadioButton do działania jako zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+> Grupa przycisków radiowych ma jeden tabulator w czasie wykonywania. Wybrany przycisk (czyli przycisk z <xref:System.Windows.Forms.RadioButton.Checked%2A> właściwością ustawioną na `true` ) ma <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną właściwość automatycznie na `true` , a pozostałe przyciski mają <xref:System.Windows.Forms.Control.TabStop%2A> ustawioną właściwość `false` . Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.RadioButton> formantów grupowania, zobacz [grupowanie Windows Forms formantów RadioButton do działania jako zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Kontrolki Windows Forms](index.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
 - [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)

@@ -1,13 +1,14 @@
 ---
 title: Duże ilości danych i przesyłanie strumieniowe
+description: Zapoznaj się z zagadnieniami dotyczącymi komunikacji opartej na języku XML WCF, koderów i danych przesyłanych strumieniowo, w tym transferu danych binarnych.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586328"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246587"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 

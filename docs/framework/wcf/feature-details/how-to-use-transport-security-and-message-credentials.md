@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów'
+description: Dowiedz się, jak zaimplementować zabezpieczenia transportu z poświadczeniami komunikatów, które oferują najlepsze tryby zabezpieczeń transportu i komunikatów w programie WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579387"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246652"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów
 Zabezpieczanie usługi przy użyciu poświadczeń transportowych i komunikatów jest zgodne z najlepszymi trybami zabezpieczeń transportu i komunikatów w programie Windows Communication Foundation (WCF). W obszarze suma zabezpieczenia warstwy transport zapewnia integralność i poufność, natomiast zabezpieczenia warstwy komunikatów zapewniają wiele poświadczeń, które nie są możliwe przy użyciu ścisłych mechanizmów zabezpieczeń transportu. W tym temacie przedstawiono podstawowe kroki wdrażania transportu za pomocą poświadczeń przy użyciu <xref:System.ServiceModel.WSHttpBinding> powiązań i <xref:System.ServiceModel.NetTcpBinding> . Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń, zobacz [How to: Set a Security Mode](../how-to-set-the-security-mode.md).  
@@ -25,7 +26,7 @@ Zabezpieczanie usługi przy użyciu poświadczeń transportowych i komunikatów 
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Aby użyć WSHttpBinding z certyfikatem do zabezpieczenia transportu (w kodzie)  
   
-1. Za pomocą narzędzia HttpCfg. exe Powiąż certyfikat SSL z portem na maszynie. Aby uzyskać więcej informacji, zobacz [How to: Configure a port with a SSL Certificate](how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Użyj narzędzia HttpCfg.exe, aby powiązać certyfikat SSL z portem na maszynie. Aby uzyskać więcej informacji, zobacz [How to: Configure a port with a SSL Certificate](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> Właściwość na <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   

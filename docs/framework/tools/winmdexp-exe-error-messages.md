@@ -1,5 +1,6 @@
 ---
 title: Winmdexp.exe — komunikaty o błędach
+description: Informacje o błędach (narzędzie eksportu metadanych środowiska uruchomieniowego systemu Windows), które są wyświetlane tylko podczas procesu kompilacji, jeśli kompilacja platformy .NET zakończy się pomyślnie. Winmdexp.exe
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,21 +158,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fb5abe84d43df85be557a2bec2245284a74024b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904198"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-Proces kompilacji wywołuje [program Winmdexp.exe (narzędzie do eksportowania metadanych środowiska wykonawczego systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) podczas korzystania z **szablonu składnika środowiska wykonawczego systemu Windows** w programie Visual Studio 2012, więc komunikaty o błędach programu Winmdexp.exe są wyświetlane na liście **błędów**. Winmdexp.exe działa na module, który jest `/target:winmdobj` kompilowany z opcją. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
+Proces kompilacji wywołuje [Winmdexp.exe (narzędzie do eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) w przypadku używania szablonu **składnika Środowisko wykonawcze systemu Windows** w programie Visual Studio 2012, dlatego Winmdexp.exe komunikaty o błędach pojawiają się w **Lista błędów**. Winmdexp.exe działa na module, który jest kompilowany przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
- Komunikaty o błędach są przeznaczone do zawierania wszystkich informacji potrzebnych do rozwiązania warunków błędu, które zgłaszają. Jednak niektóre problemy wymagają więcej informacji niż zmieści się w wiadomości. Dodatkowe informacje można znaleźć w [diagnoscie warunków błędu składnika środowiska wykonawczego systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
+ Komunikaty o błędach zostały zaprojektowane tak, aby zawierały wszystkie informacje potrzebne do rozwiązania warunków błędów zgłaszanych przez użytkownika. Jednak niektóre problemy wymagają więcej informacji niż mieści się w komunikacie. Dodatkowe informacje można znaleźć w temacie [diagnozowanie warunków błędów składników Środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Jeśli błąd nie został omówiony w tym artykule i uważasz, że wiadomość nie zawiera wystarczających informacji, aby rozwiązać problem, użyj linku opinii w tym artykule i dołącz komunikat o błędzie. Możesz też zgłosić błąd w [witrynie społeczności deweloperów](https://developercommunity.visualstudio.com/). Więcej informacji można znaleźć na [forach firmy Microsoft](https://social.msdn.microsoft.com/Forums/).  
+ Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, Użyj linku opinii znajdującego się w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić błąd w [witrynie internetowej społeczności deweloperów](https://developercommunity.visualstudio.com/). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Diagnozowanie warunków błędu składnika Środowiska wykonawczego systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))
+- [Winmdexp.exe (narzędzie do eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Diagnozowanie warunków błędów składników środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

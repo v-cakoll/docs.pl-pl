@@ -1,5 +1,6 @@
 ---
 title: Praca z certyfikatami
+description: Dowiedz się więcej o funkcjach certyfikatów cyfrowych X. 509 i sposobach ich używania w programie WCF. Zasoby w tym artykule mogą dodatkowo wyjaśnić te pojęcia.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600117"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246405"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 
@@ -57,7 +58,7 @@ Wybór lokalizacji przechowywania certyfikatu zależy od tego, jak i kiedy uruch
 
 ### <a name="accessing-stores"></a>Uzyskiwanie dostępu do sklepów
 
-Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internet Information Services (IIS) proces ASP.NET jest uruchamiany w ramach konta ASP.NET. To konto musi mieć dostęp do magazynu zawierającego certyfikaty używane przez usługę. Każdy z głównych magazynów jest chroniony przy użyciu domyślnej listy dostępu, ale listy można modyfikować. Jeśli utworzysz osobną rolę w celu uzyskania dostępu do magazynu, musisz udzielić uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig. exe, zobacz [How to: Create Temporary Certificates for use in Development](how-to-create-temporary-certificates-for-use-during-development.md).
+Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internet Information Services (IIS) proces ASP.NET jest uruchamiany w ramach konta ASP.NET. To konto musi mieć dostęp do magazynu zawierającego certyfikaty używane przez usługę. Każdy z głównych magazynów jest chroniony przy użyciu domyślnej listy dostępu, ale listy można modyfikować. Jeśli utworzysz osobną rolę w celu uzyskania dostępu do magazynu, musisz udzielić uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [How to: Create Temporary Certificates for use in Development](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Zaufanie łańcuchowe i urzędy certyfikacji
 

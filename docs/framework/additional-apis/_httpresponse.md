@@ -1,5 +1,6 @@
 ---
-title: Pole httpWebRequest._HttpResponse
+title: HttpWebRequest. _HttpResponse — pole
+description: Zapoznaj się z polem HttpWebRequest. _HttpResponse w programie .NET. To pole jest typu HttpWebResponse zawierającego szczegóły odpowiedzi HTTP z żądania HTTP.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70058e1183abf5b6bfd172497f65a3ceb2344060
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989964"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_Pole httpResponse
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_ Pole HttpResponse
 
-`HttpWebRequest._HttpResponse`to <xref:System.Net.HttpWebResponse> zawierające szczegóły odpowiedzi HTTP z żądania HTTP. Może to `null` być aż do odebraniu odpowiedzi HTTP.
+`HttpWebRequest._HttpResponse`to <xref:System.Net.HttpWebResponse> zawiera szczegóły odpowiedzi HTTP z żądania HTTP. Może być `null` do momentu otrzymania odpowiedzi HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> To `HttpWebRequest._HttpResponse` pole jest wewnętrzne i nie ma być używane bezpośrednio w kodzie.
+> `HttpWebRequest._HttpResponse`Pole jest wewnętrzne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

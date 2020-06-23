@@ -1,13 +1,14 @@
 ---
 title: Opis uwierzytelniania HTTP
+description: Zapoznaj się z tym wprowadzeniem do uwierzytelniania HTTP w programie WCF, w tym schematu uwierzytelniania HTTP i wybierania schematu uwierzytelniania.
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595092"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246522"
 ---
 # <a name="understanding-http-authentication"></a>Opis uwierzytelniania HTTP
 Uwierzytelnianie to proces identyfikacji, czy klient ma uprawnienia dostępu do zasobu. Protokół HTTP obsługuje uwierzytelnianie jako środek negocjowania dostępu do bezpiecznego zasobu.  

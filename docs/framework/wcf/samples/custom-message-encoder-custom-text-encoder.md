@@ -1,13 +1,14 @@
 ---
 title: 'Niestandardowy koder komunikatów: Niestandardowy koder tekstu'
+description: Użyj tego przykładu, aby zaimplementować niestandardowy koder komunikatów tekstowych przy użyciu programu WCF. Ten koder obsługuje wszystkie kodowanie znaków obsługiwane przez platformę na potrzeby współdziałania.
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: b60fa2a84520ad208d435a0c9284c19b5de8e989
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 88ddc79e6cc1df654aea851cedb0e60c6fbcd017
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600610"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246275"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Niestandardowy koder komunikatów: Niestandardowy koder tekstu
 
@@ -214,14 +215,14 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 Każdy typ pochodzący od <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> jest odpowiedzialny za aktualizowanie wersji powiązania protokołu SOAP w dokumencie WSDL wygenerowanym dla usługi. Jest to realizowane przez implementację `ExportEndpoint` metody w <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsie, a następnie zmodyfikowanie wygenerowanego WSDL. W tym przykładzie `CustomTextMessageBindingElement` używa logiki eksportu WSDL z `TextMessageEncodingBindingElement` .
 
-W tym przykładzie konfiguracja klienta jest konfigurowana ręcznie. Nie można użyć Svcutil. exe do wygenerowania konfiguracji klienta, ponieważ nie `CustomTextMessageBindingElement` eksportuje potwierdzenia zasad, aby opisać jego zachowanie. Należy zwykle zaimplementować <xref:System.ServiceModel.Description.IPolicyExportExtension> interfejs na elemencie powiązania niestandardowego, aby wyeksportować potwierdzenie zasad niestandardowych, który opisuje zachowanie lub możliwość implementowaną przez element powiązania. Aby zapoznać się z przykładem sposobu eksportowania potwierdzenia zasad dla elementu niestandardowego powiązania, zapoznaj się z przykładem [transport: UDP](transport-udp.md) .
+W tym przykładzie konfiguracja klienta jest konfigurowana ręcznie. Nie można użyć Svcutil.exe do wygenerowania konfiguracji klienta, ponieważ nie `CustomTextMessageBindingElement` eksportuje potwierdzenia zasad, aby opisać jego zachowanie. Należy zwykle zaimplementować <xref:System.ServiceModel.Description.IPolicyExportExtension> interfejs na elemencie powiązania niestandardowego, aby wyeksportować potwierdzenie zasad niestandardowych, który opisuje zachowanie lub możliwość implementowaną przez element powiązania. Aby zapoznać się z przykładem sposobu eksportowania potwierdzenia zasad dla elementu niestandardowego powiązania, zapoznaj się z przykładem [transport: UDP](transport-udp.md) .
 
 ## <a name="message-encoding-binding-configuration-handler"></a>Procedura obsługi konfiguracji powiązania kodowania komunikatów
 W poprzedniej sekcji pokazano, jak programowo używać niestandardowego kodera wiadomości tekstowych. `CustomTextMessageEncodingBindingSection`Implementacja programu obsługi konfiguracji, która pozwala określić użycie niestandardowego kodera komunikatów tekstowych w pliku konfiguracji. `CustomTextMessageEncodingBindingSection`Klasa pochodzi od <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. `BindingElementType`Właściwość informuje system konfiguracji typu elementu powiązania, który ma zostać utworzony dla tej sekcji.
 
 Wszystkie ustawienia zdefiniowane przez `CustomTextMessageBindingElement` są udostępniane jako właściwości w `CustomTextMessageEncodingBindingSection` . <xref:System.Configuration.ConfigurationPropertyAttribute>Pomaga w mapowaniu atrybutów elementu konfiguracji do właściwości i ustawiania wartości domyślnych, jeśli atrybut nie jest ustawiony. Po załadowaniu wartości z konfiguracji i zastosowaniu ich do właściwości typu <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> Metoda zostaje wywołana, co spowoduje konwersję właściwości w konkretnym wystąpieniu elementu powiązania.
 
-Ta procedura obsługi konfiguracji mapuje do następującej reprezentacji w pliku App. config lub Web. config dla usługi lub klienta.
+Ta procedura obsługi konfiguracji mapuje do następującej reprezentacji w App.config lub Web.config dla usługi lub klienta.
 
 ```xml
 <customTextMessageEncoding encoding="utf-8" contentType="text/xml" messageVersion="Soap11Addressing1" />

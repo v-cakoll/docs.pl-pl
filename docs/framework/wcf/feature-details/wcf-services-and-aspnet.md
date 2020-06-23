@@ -1,13 +1,14 @@
 ---
 title: Usługi WCF i ASP.NET
+description: Dowiedz się więcej na temat hostingu usług WCF obok ASP.NET i hostowania ich w trybie zgodności ASP.NET.
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 0a64e277d3465b77a2553d6b9c3901f09a6e1a52
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544738"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246418"
 ---
 # <a name="wcf-services-and-aspnet"></a>Usługi WCF i ASP.NET
 
@@ -25,29 +26,29 @@ Wyniki modelu side-by-Side są następujące:
 
 - Usługi ASP.NET i WCF mogą współużytkować stan domeny aplikacji. Ponieważ dwie struktury mogą współistnieć w tej samej domenie aplikacji, usługa WCF może również udostępniać stan AppDomain przy użyciu ASP.NET (w tym zmiennych statycznych, zdarzeń itd.).
 
-- Usługi WCF działają spójnie, niezależnie od środowiska hostingu i transportu. Środowisko uruchomieniowe HTTP ASP.NET jest celowo powiązane ze środowiskiem hostingu usług IIS/ASP. NET i komunikacją protokołu HTTP. Natomiast WCF jest zaprojektowana tak, aby zachować spójność między środowiskami hostingu (WCF zachowuje się zarówno wewnątrz, jak i na zewnątrz usług IIS) i między transportami (usługa hostowana w usługach IIS 7,0 i nowszych ma spójne zachowanie dla wszystkich punktów końcowych, które ujawnia, nawet jeśli Niektóre z tych punktów końcowych używają protokołów innych niż HTTP).
+- Usługi WCF działają spójnie, niezależnie od środowiska hostingu i transportu. Środowisko uruchomieniowe HTTP ASP.NET jest celowo powiązane ze środowiskiem hostingu usług IIS/ASP. NET i komunikacją protokołu HTTP. Z kolei WCF jest zaprojektowana tak, aby zachować spójność między środowiskami hostingu (WCF działa spójnie zarówno wewnątrz programu IIS, jak i poza nimi) i między transportami (usługa hostowana w usługach IIS 7,0 i nowszych ma spójne zachowanie dla wszystkich punktów końcowych, które ujawnia, nawet jeśli niektóre z tych punktów końcowych używają protokołów innych niż HTTP)
 
 - W ramach elementu AppDomain funkcje zaimplementowane przez środowisko uruchomieniowe protokołu HTTP mają zastosowanie do zawartości ASP.NET, ale nie do usługi WCF. Wiele funkcji specyficznych dla protokołu HTTP platformy aplikacji ASP.NET nie ma zastosowania do usług WCF hostowanych w ramach elementu AppDomain, który zawiera zawartość ASP.NET. Poniżej wymieniono następujące funkcje:
 
-  - HttpContext: <xref:System.Web.HttpContext.Current%2A> jest zawsze `null` w przypadku dostępu z poziomu usługi WCF. Zamiast nich należy używać słów kluczowych <xref:System.ServiceModel.Channels.RequestContext>.
+  - Element HttpContext: <xref:System.Web.HttpContext.Current%2A> zawsze jest `null` używany w ramach usługi WCF. Zamiast tego użyj polecenia cmdlet <xref:System.ServiceModel.Channels.RequestContext>.
 
   - Autoryzacja na podstawie plików: model zabezpieczeń WCF nie zezwala na użycie listy kontroli dostępu (ACL) zastosowanej do pliku SVC usługi podczas decydowania, czy żądanie obsługi jest autoryzowane.
 
-  - Autoryzacja adresu URL opartego na konfiguracji: analogicznie model zabezpieczeń WCF nie jest zgodny z żadną regułą autoryzacji opartą na adresie URL określoną w elemencie konfiguracji > autoryzacji w sieci Web \<. Te ustawienia są ignorowane w przypadku żądań programu WCF, jeśli usługa znajduje się w przestrzeni adresów URL zabezpieczonej przez ASP. Reguły autoryzacji adresów URL w sieci.
+  - Autoryzacja adresów URL oparta na konfiguracji: analogicznie model zabezpieczeń WCF nie stosuje się do żadnych reguł autoryzacji opartych na adresie URL określonych w elemencie konfiguracji system. Web \<authorization> . Te ustawienia są ignorowane w przypadku żądań programu WCF, jeśli usługa znajduje się w przestrzeni adresów URL zabezpieczonej przez ASP. Reguły autoryzacji adresów URL w sieci.
 
-  - Rozszerzalność modułu HttpModule: infrastruktura hostingu WCF przechwytuje żądania programu WCF w przypadku zgłoszenia zdarzenia <xref:System.Web.HttpApplication.PostAuthenticateRequest> i nie zwraca przetwarzania do potoku HTTP ASP.NET. Moduły kodowane do przechwytywania żądań na późniejszych etapach potoku nie przechwytuje żądań WCF.
+  - Rozszerzalność modułu HttpModule: infrastruktura hostingu WCF przechwytuje żądania programu WCF <xref:System.Web.HttpApplication.PostAuthenticateRequest> , gdy zdarzenie jest zgłaszane i nie zwraca przetwarzania do potoku HTTP ASP.NET. Moduły kodowane do przechwytywania żądań na późniejszych etapach potoku nie przechwytuje żądań WCF.
 
-  - Personifikacja ASP.NET: Domyślnie żądania WCF są zawsze uruchamiane jako tożsamość procesu usług IIS, nawet jeśli ASP.NET jest ustawiona na włączenie personifikacji przy użyciu opcji system. Web \<Identity Impersonate = "true"/> Configuration.
+  - Personifikacja ASP.NET: Domyślnie żądania WCF są zawsze uruchamiane jako tożsamość procesu usług IIS, nawet jeśli ASP.NET jest ustawiona na włączenie personifikacji przy użyciu opcji konfiguracji system. Web \<identity impersonate="true" /> .
 
 Te ograniczenia dotyczą tylko usług WCF hostowanych w aplikacji usług IIS. Obecność programu WCF nie ma wpływ na zachowanie zawartości ASP.NET.
 
 Aplikacje WCF, które wymagają funkcjonalności tradycyjnie zapewnianej przez potok HTTP, powinny być brane pod uwagę przy użyciu odpowiedników WCF, które są niezależne od hosta i transportu:
 
-- <xref:System.ServiceModel.OperationContext>, a nie <xref:System.Web.HttpContext>.
+- <xref:System.ServiceModel.OperationContext>zamiast <xref:System.Web.HttpContext> .
 
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> zamiast ASP. Autoryzacja plików/adresów URL w sieci.
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>zamiast ASP. Autoryzacja plików/adresów URL w sieci.
 
-- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> lub niestandardowych kanałów warstwowych zamiast modułów HTTP.
+- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>lub niestandardowych kanałów warstwowych zamiast modułów HTTP.
 
 - Personifikacja dla każdej operacji przy użyciu platformy WCF zamiast personifikacji system. Web.
 
@@ -57,19 +58,19 @@ Alternatywnie możesz rozważyć uruchomienie usług w trybie zgodności ASP.NET
 
 Mimo że model WCF został zaprojektowany tak, aby zachować spójność między środowiskami hostingu i transportami, często istnieją sytuacje, w których aplikacja nie wymaga tego stopnia elastyczności. Tryb zgodności ASP.NET WCF jest odpowiedni dla scenariuszy, które nie wymagają możliwości hostowania poza programem IIS ani do komunikowania się za pośrednictwem protokołów innych niż HTTP, ale które korzystają ze wszystkich funkcji platformy aplikacji sieci Web ASP.NET.
 
-W przeciwieństwie do domyślnej konfiguracji równoległej, w której infrastruktura hostingu WCF przechwytuje komunikaty programu WCF i przekierowuje je z potoku HTTP, usługi WCF działające w trybie zgodności ASP.NET uczestniczą w pełni w cyklu ASP.NET żądania HTTP. W trybie zgodności usługi WCF używają potoku HTTP za pośrednictwem implementacji <xref:System.Web.IHttpHandler>, podobnie jak żądania stron ASPX i usług sieci Web ASMX. W związku z tym WCF zachowuje się identycznie z usługą ASMX w odniesieniu do następujących funkcji ASP.NET:
+W przeciwieństwie do domyślnej konfiguracji równoległej, w której infrastruktura hostingu WCF przechwytuje komunikaty programu WCF i przekierowuje je z potoku HTTP, usługi WCF działające w trybie zgodności ASP.NET uczestniczą w pełni w cyklu ASP.NET żądania HTTP. W trybie zgodności usługi WCF używają potoku HTTP przez <xref:System.Web.IHttpHandler> implementację, podobnie jak żądania stron aspx i usług sieci Web ASMX. W związku z tym WCF zachowuje się identycznie z usługą ASMX w odniesieniu do następujących funkcji ASP.NET:
 
-- <xref:System.Web.HttpContext>: usługi WCF działające w trybie zgodności ASP.NET mogą uzyskać dostęp do <xref:System.Web.HttpContext.Current%2A> i skojarzonego z nim stanu.
+- <xref:System.Web.HttpContext>: Usługi WCF działające w trybie zgodności ASP.NET mogą uzyskać dostęp do <xref:System.Web.HttpContext.Current%2A> i skojarzonego z nim stanu.
 
 - Autoryzacja na podstawie plików: usługi WCF działające w trybie zgodności ASP.NET można zabezpieczyć przez dołączenie list kontroli dostępu (ACL) systemu plików do pliku SVC usługi.
 
 - Konfigurowalne Autoryzacja adresów URL: ASP. Reguły autoryzacji adresów URL sieci są wymuszane w przypadku żądań WCF, gdy usługa WCF jest uruchomiona w trybie zgodności ASP.NET.
 
-- <xref:System.Web.HttpModuleCollection> rozszerzalność: ponieważ usługi WCF działające w trybie zgodności ASP.NET uczestniczą w pełni w cyklu życia żądań HTTP ASP.NET, każdy moduł HTTP skonfigurowany w potoku HTTP może działać na żądaniach WCF zarówno przed, jak i po wywołaniu usługi.
+- <xref:System.Web.HttpModuleCollection>rozszerzalność: ponieważ usługi WCF działające w trybie zgodności ASP.NET uczestniczą w pełni w cyklu życia żądania HTTP ASP.NET, każdy moduł HTTP skonfigurowany w potoku HTTP może działać na żądaniach WCF zarówno przed, jak i po wywołaniu usługi.
 
 - Personifikacja ASP.NET: usługi WCF działają przy użyciu bieżącej tożsamości wątku personifikowanego ASP.NET, który może być inny niż tożsamość procesu usług IIS, jeśli włączono personifikację ASP.NET dla aplikacji. Jeśli dla określonej operacji usługi jest włączona personifikacja ASP.NET i personifikacja WCF, implementacja usługi ostatecznie zostanie uruchomiona przy użyciu tożsamości uzyskanej z WCF.
 
-Tryb zgodności ASP.NET WCF jest włączony na poziomie aplikacji za pomocą następującej konfiguracji (znajdującej się w pliku Web. config aplikacji):
+Tryb zgodności ASP.NET WCF jest włączony na poziomie aplikacji za pomocą następującej konfiguracji (znajdującej się w pliku Web.config aplikacji):
 
 ```xml
 <system.serviceModel>
@@ -77,9 +78,9 @@ Tryb zgodności ASP.NET WCF jest włączony na poziomie aplikacji za pomocą nas
 </system.serviceModel>
 ```
 
-Ta wartość jest domyślnie `false`, jeśli nie zostanie określona. Wartość `false` wskazuje, że wszystkie usługi WCF uruchomione w aplikacji nie będą działać w trybie zgodności ASP.NET.
+Ta wartość jest ustawiana domyślnie, `false` Jeśli nie zostanie określona. Wartość `false` wskazuje, że wszystkie usługi WCF uruchomione w aplikacji nie będą działać w trybie zgodności ASP.NET.
 
-Ponieważ tryb zgodności ASP.NET sugeruje semantykę przetwarzania żądań, które różnią się od domyślnych ustawień programu WCF, poszczególne implementacje usług mają możliwość kontrolowania, czy działają w aplikacji, dla której ASP.NET Włączono tryb zgodności. Usługi mogą używać <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>, aby wskazać, czy obsługują tryb zgodności ASP.NET. Wartość domyślna tego atrybutu to <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>.
+Ponieważ tryb zgodności ASP.NET oznacza semantykę przetwarzania żądań, które różnią się od domyślnych ustawień programu WCF, poszczególne implementacje usług mają możliwość kontrolowania, czy działają w aplikacji, dla której włączono tryb zgodności ASP.NET. Usługi mogą użyć, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> Aby wskazać, czy obsługują tryb zgodności ASP.NET. Wartość domyślna tego atrybutu to <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>.
 
 ```csharp
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -91,19 +92,19 @@ W poniższej tabeli przedstawiono sposób, w jaki ustawienia trybu zgodności w 
 
 |Ustawienie trybu zgodności dla całej aplikacji|[AspNetCompatibilityRequirementsMode]<br /><br /> Ustawienie|Obserwowany wynik|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Usługa została aktywowana pomyślnie.|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Usługa została aktywowana pomyślnie.|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Gdy usługa otrzymuje komunikat, występuje błąd aktywacji.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Gdy usługa otrzymuje komunikat, występuje błąd aktywacji.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Usługa została aktywowana pomyślnie.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Usługa została aktywowana pomyślnie.|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Usługa została aktywowana pomyślnie.|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Usługa została aktywowana pomyślnie.|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Gdy usługa otrzymuje komunikat, występuje błąd aktywacji.|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Gdy usługa otrzymuje komunikat, występuje błąd aktywacji.|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Usługa została aktywowana pomyślnie.|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Usługa została aktywowana pomyślnie.|
 
 > [!NOTE]
 > Usługi IIS 7,0 i umożliwiają usługom WCF komunikowanie się za pośrednictwem protokołów innych niż HTTP. Jednak usługi WCF działające w aplikacjach z włączonym trybem zgodności ASP.NET nie mogą uwidaczniać punktów końcowych innych niż HTTP. Taka konfiguracja generuje wyjątek aktywacji, gdy usługa otrzymuje swój pierwszy komunikat.
 
 Aby uzyskać więcej informacji na temat włączania trybu zgodności ASP.NET dla usług WCF, zobacz <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> i przykład [zgodności ASP.NET](../samples/aspnet-compatibility.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

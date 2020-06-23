@@ -8,28 +8,29 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990182"
 ---
 # <a name="application-settings-overview"></a>Przegląd ustawień aplikacji
-W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w imieniu aplikacji i użytkowników.
+
+W tym artykule omówiono sposób tworzenia i przechowywania danych ustawień w imieniu aplikacji i użytkowników.
 
  Funkcja ustawienia aplikacji programu Windows Forms ułatwia tworzenie, przechowywanie i konserwowanie niestandardowych preferencji aplikacji oraz użytkowników na komputerze klienckim. Za pomocą ustawień aplikacji Windows Forms można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak preferencje aplikacji użytkownika. Za pomocą programu Visual Studio lub niestandardowego kodu zarządzanego można utworzyć nowe ustawienia, odczytać je i zapisać na dysku, powiązać je z właściwościami w formularzach i zweryfikować dane ustawień przed załadowaniem i zapisaniem.
 
  Ustawienia aplikacji umożliwiają deweloperom Zapisywanie stanu w aplikacji przy użyciu bardzo małego kodu niestandardowego i zastępowanie właściwości dynamicznych we wcześniejszych wersjach .NET Framework. Ustawienia aplikacji zawierają wiele ulepszeń w porównaniu z właściwościami dynamicznymi, które są tylko do odczytu, z późnym wiązaniem i wymagają większej liczby niestandardowych programów programistycznych. Klasy właściwości dynamicznych zostały zachowane w .NET Framework 2,0, ale tylko klasy powłoki, które znacznie zawijają klasy ustawień aplikacji.
 
 ## <a name="what-are-application-settings"></a>Co to są ustawienia aplikacji?
- Aplikacje Windows Forms będą często wymagały danych, które mają kluczowe znaczenie dla uruchomienia aplikacji, ale które nie mają być uwzględniane bezpośrednio w kodzie aplikacji. Jeśli aplikacja korzysta z usługi sieci Web lub serwera bazy danych, możesz zapisać te informacje w osobnym pliku, aby można było je zmienić w przyszłości bez ponownego kompilowania. Podobnie aplikacje mogą wymagać przechowywania danych specyficznych dla bieżącego użytkownika. Większość aplikacji, na przykład, ma preferencje użytkownika, które dostosowują wygląd i zachowanie aplikacji.
+ Aplikacje Windows Forms będą często wymagały danych, które są niezbędne do uruchomienia aplikacji, ale które nie mają być uwzględniane bezpośrednio w kodzie aplikacji. Jeśli aplikacja korzysta z usługi sieci Web lub serwera bazy danych, można przechowywać te informacje w osobnym pliku, dzięki czemu można je zmienić w przyszłości bez ponownego kompilowania. Podobnie aplikacje mogą wymagać przechowywania danych specyficznych dla bieżącego użytkownika. Większość aplikacji, na przykład, ma preferencje użytkownika, które dostosowują wygląd i zachowanie aplikacji.
 
  Ustawienia aplikacji dotyczą obu potrzeb, zapewniając łatwy sposób przechowywania ustawień z zakresu aplikacji i zakresu użytkownika na komputerze klienckim. Za pomocą programu Visual Studio lub edytora kodu definiuje się ustawienie dla danej właściwości, określając jego nazwę, typ danych i zakres (aplikację lub użytkownika). Możesz nawet umieścić powiązane ustawienia w nazwanych grupach, aby ułatwić ich użycie i czytelność. Po zdefiniowaniu te ustawienia są utrwalane i odczytywane w pamięci automatycznie w czasie wykonywania. Architektura podłączana umożliwia zmianę mechanizmu trwałości, ale domyślnie używany jest lokalny system plików.
 
  Ustawienia aplikacji działają przez utrwalanie danych jako XML do różnych plików konfiguracji (. config), odpowiadających tym, czy ustawienie jest w zakresie aplikacji, czy w zakresie użytkownika. W większości przypadków ustawienia o zakresie aplikacji są tylko do odczytu. ponieważ są one informacjami o programie, zazwyczaj nie trzeba ich zastąpić. Z kolei ustawienia o zakresie użytkownika mogą być odczytywane i bezpiecznie zapisywane w czasie wykonywania, nawet jeśli aplikacja działa w ramach częściowej relacji zaufania. Aby uzyskać więcej informacji o częściowej relacji zaufania, zobacz [zabezpieczenia w Windows Forms Omówienie](../security-in-windows-forms-overview.md).
 
- Ustawienia są przechowywane jako fragmenty XML w plikach konfiguracyjnych. Ustawienia o zakresie aplikacji są reprezentowane przez `<applicationSettings>` element i ogólnie umieszczane w pliku *App*. exe. config, gdzie *App* to nazwa głównego pliku wykonywalnego. Ustawienia o zakresie użytkownika są reprezentowane przez `<userSettings>` element i są umieszczane w pliku *User*. config, gdzie *użytkownik* jest nazwą użytkownika osoby, która aktualnie uruchamia aplikację. Należy wdrożyć plik *App*. exe. config w swojej aplikacji. Architektura ustawień spowoduje utworzenie plików *User*. config na żądanie podczas pierwszego zapisywania ustawień dla tego użytkownika. Można również zdefiniować `<userSettings>` blok w pliku *App*. exe. config, aby zapewnić wartości domyślne dla ustawień o zakresie użytkownika.
+ Ustawienia są przechowywane jako fragmenty XML w plikach konfiguracyjnych. Ustawienia o zakresie aplikacji są reprezentowane przez `<applicationSettings>` element i ogólnie umieszczane w.exe.config *aplikacji* , gdzie *App* to nazwa głównego pliku wykonywalnego. Ustawienia o zakresie użytkownika są reprezentowane przez `<userSettings>` element i są umieszczane w pliku *User*. config, gdzie *użytkownik* jest nazwą użytkownika osoby, która aktualnie uruchamia aplikację. Musisz wdrożyć plik.exe.config *aplikacji* za pomocą swojej aplikacji. Architektura ustawień spowoduje utworzenie plików *User*. config na żądanie podczas pierwszego zapisywania ustawień dla tego użytkownika. Istnieje również możliwość zdefiniowania `<userSettings>` bloku w.exe.config *aplikacji* , aby zapewnić wartości domyślne dla ustawień o zakresie użytkownika.
 
  Formanty niestandardowe mogą również zapisywać własne ustawienia <xref:System.Configuration.IPersistComponentSettings> , implementując interfejs, który uwidacznia <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> metodę. Formant Windows Forms <xref:System.Windows.Forms.ToolStrip> implementuje ten interfejs, aby zapisać położenie pasków narzędzi i elementów paska narzędzi między sesjami aplikacji. Aby uzyskać więcej informacji na temat kontrolek niestandardowych i ustawień aplikacji, zobacz [Ustawienia aplikacji dla formantów niestandardowych](application-settings-for-custom-controls.md).
 

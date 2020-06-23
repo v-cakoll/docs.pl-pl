@@ -1,5 +1,6 @@
 ---
-title: Pole CoreResponseData.m_StatusCode
+title: CoreResponseData. m_StatusCode — pole
+description: Przeczytaj o polu CoreResponseData. m_StatusCode w programie .NET. Pole jest typu HttpStatusCode, który zawiera stan odpowiedzi HTTP.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05950290bde96511432941ce679e663126878663
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989780"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>Pole Kod stanu CoreResponseData.m\_
+# <a name="coreresponsedatam_statuscode-field"></a>Pole StatusCode CoreResponseData. m \_
 
-`CoreResponseData.m_StatusCode`jest <xref:System.Net.HttpStatusCode> zawierającym stan odpowiedzi.
+`CoreResponseData.m_StatusCode`<xref:System.Net.HttpStatusCode>zawiera stan odpowiedzi.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +29,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Ten interfejs API nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć <xref:System.Diagnostics.DiagnosticSource> do hakowania kodu sieciowego. Zobacz [DiagnosticSource Podręcznik użytkownika](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Ten interfejs API nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć, <xref:System.Diagnostics.DiagnosticSource> Aby podłączyć kod sieciowy. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnych okolicznościach.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Net>
+**Przestrzeń nazw:**<xref:System.Net>
 
-**Montaż:** System (w pliku System.dll)
+**Zestaw:** System (w System.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

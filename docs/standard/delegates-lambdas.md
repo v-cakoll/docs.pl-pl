@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280793"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244013"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
@@ -108,7 +108,7 @@ public class Program
 
 Jak widać, treść delegata jest tylko zestawem wyrażeń, jak każdy inny delegat. Ale zamiast tego nie jest to osobna definicja, wprowadziliśmy ją _ad hoc_ w wywołaniu <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> metody.
 
-Jednak nawet w przypadku tego podejścia nadal istnieje dużo kodu, który możemy zgłosić. Jest to miejsce, w którym *wyrażenia lambda* są odtwarzane. Wyrażenia lambda lub same "wyrażenia lambda" są stosowane w języku C# 3,0 jako jeden z podstawowych bloków konstrukcyjnych języka Integrated Query (LINQ). Jest to tylko bardziej wygodna Składnia służąca do używania delegatów. Deklarują sygnaturę i treść metody, ale nie mają formalnej tożsamości własnej, chyba że są przypisane do delegata. W przeciwieństwie do delegatów, można bezpośrednio przypisywać je po lewej stronie rejestracji zdarzeń lub w różnych klauzulach i metodach LINQ.
+Jednak nawet w przypadku tego podejścia nadal istnieje dużo kodu, który możemy zgłosić. Jest to miejsce, w którym *wyrażenia lambda* są odtwarzane. Wyrażenia lambda lub same "wyrażenia lambda" są stosowane w języku C# 3,0 jako jeden z podstawowych bloków konstrukcyjnych języka Integrated Query (LINQ). Jest to tylko bardziej wygodna Składnia służąca do używania delegatów. Deklarują sygnaturę i treść metody, ale nie mają formalnej tożsamości własnej, chyba że są przypisane do delegata. W przeciwieństwie do delegatów, mogą być bezpośrednio przypisane jako prawo do rejestracji zdarzeń lub w różnych klauzulach i metodach LINQ.
 
 Ponieważ wyrażenie lambda jest już innym sposobem określania delegata, powinno być możliwe przepisanie powyższego przykładu, aby użyć wyrażenia lambda zamiast anonimowego delegata.
 

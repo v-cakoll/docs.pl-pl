@@ -1,16 +1,17 @@
 ---
 title: Współużytkowanie portów w składniku Net.TCP
+description: Dowiedz się więcej na temat protokołu opartego na protokole TCP na potrzeby komunikacji o wysokiej wydajności i usługi umożliwiającej współużytkowanie portów przez wiele procesów użytkownika w programie WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598765"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245248"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 Windows Communication Foundation (WCF) udostępnia nowy protokół sieciowy oparty na protokole TCP (NET. TCP://) na potrzeby komunikacji o wysokiej wydajności. W programie WCF wprowadzono również nowy składnik systemu, usługę udostępniania portów Net. TCP, która umożliwia współużytkowanie portów Net. TCP między wieloma procesami użytkownika.  
@@ -20,9 +21,9 @@ Windows Communication Foundation (WCF) udostępnia nowy protokół sieciowy opar
   
  Używanie numerów portów do rozróżniania między aplikacjami ma problemy z zabezpieczeniami. Zapory są zwykle skonfigurowane do blokowania ruchu TCP na wszystkich portach z wyjątkiem kilku dobrze znanych punktów wejścia, dlatego wdrożenie aplikacji używającej niestandardowego portu jest często skomplikowane lub nawet niemożliwe ze względu na obecność firmowych i osobistych zapór. Aplikacje, które mogą komunikować się za pośrednictwem standardowych, dobrze znanych portów, które są już dozwolone, zmniejszają powierzchnię zewnętrznego ataku. Wiele aplikacji sieciowych korzysta z protokołu HTTP, ponieważ większość zapór jest domyślnie skonfigurowanych do zezwalania na ruch na porcie TCP 80.  
   
- Protokół HTTP. Model SYS, w którym ruch dla wielu różnych aplikacji HTTP jest przybierany na jeden port TCP, stał się standardem na platformie systemu Windows. Zapewnia to typowy punkt kontroli administratorów zapory, a jednocześnie pozwala deweloperom aplikacji zminimalizować koszty wdrożenia nowych aplikacji, które mogą korzystać z sieci.  
+ Model HTTP.SYS, w którym ruch dla wielu różnych aplikacji HTTP jest przybierany na jeden port TCP, stał się standardem na platformie systemu Windows. Zapewnia to typowy punkt kontroli administratorów zapory, a jednocześnie pozwala deweloperom aplikacji zminimalizować koszty wdrożenia nowych aplikacji, które mogą korzystać z sieci.  
   
- Możliwość udostępniania portów w wielu aplikacjach HTTP była funkcją Internet Information Services (IIS). Jednak była tylko wprowadzeniem protokołu HTTP. SYS (odbiornik protokołu HTTP trybu jądra) z usługami IIS 6,0, że ta infrastruktura została w pełni uogólniona. W efekcie protokół HTTP. SYS zezwala dowolnym procesom użytkownika na współużytkowanie portów TCP dedykowanych do ruchu HTTP. Ta funkcja pozwala wielu aplikacjom HTTP współistnieć na tym samym komputerze fizycznym w oddzielnych, izolowanych procesach, udostępniając infrastrukturę sieci wymaganą do wysyłania i odbierania ruchu przez port TCP 80. Usługa udostępniania portów Net. TCP włącza ten sam typ udostępniania portów dla aplikacji net. TCP.  
+ Możliwość udostępniania portów w wielu aplikacjach HTTP była funkcją Internet Information Services (IIS). Jednak było to tylko wprowadzenie HTTP.SYS (odbiornik protokołu HTTP trybu jądra) z usługami IIS 6,0, że ta infrastruktura była w pełni uogólniona. W efekcie HTTP.SYS zezwala dowolnym procesom użytkownika na współużytkowanie portów TCP dedykowanych dla ruchu HTTP. Ta funkcja pozwala wielu aplikacjom HTTP współistnieć na tym samym komputerze fizycznym w oddzielnych, izolowanych procesach, udostępniając infrastrukturę sieci wymaganą do wysyłania i odbierania ruchu przez port TCP 80. Usługa udostępniania portów Net. TCP włącza ten sam typ udostępniania portów dla aplikacji net. TCP.  
   
 ## <a name="port-sharing-architecture"></a>Architektura udostępniania portów  
  Architektura udostępniania portów w programie WCF ma trzy główne składniki:  

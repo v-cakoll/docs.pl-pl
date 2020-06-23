@@ -1,18 +1,19 @@
 ---
 title: Testowy klient WCF (WcfTestClient.exe)
+description: Dowiedz się więcej o kliencie testowym WCF, który zapewnia bezproblemowe Testowanie usług w połączeniu z hostem usługi WCF. Przesyłaj wartości testów klienta i wyświetlaj odpowiedzi na usługi.
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f636698c538809f89ee356159839a37b73adb57
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321189"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245664"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
-Windows Communication Foundation (WCF) Test Client (WcfTestClient. exe) to narzędzie graficznego interfejsu użytkownika, które umożliwia użytkownikom wprowadzanie parametrów testowych, przesyłanie tych danych do usługi i wyświetlanie odpowiedzi, którą usługa wysyła z powrotem. Zapewnia bezproblemowe środowisko testowania usług w połączeniu z hostem usługi WCF.
+Windows Communication Foundation (WCF) Test Client (WcfTestClient.exe) to narzędzie graficznego interfejsu użytkownika, które umożliwia użytkownikom wprowadzanie parametrów testowych, przesyłanie tych danych do usługi i wyświetlanie odpowiedzi, którą usługa odsyła z powrotem. Zapewnia bezproblemowe środowisko testowania usług w połączeniu z hostem usługi WCF.
 
-Zazwyczaj można znaleźć klienta testowego WCF (WcfTestClient. exe) w następującej lokalizacji: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` — społeczność może być jednym z "Enterprise", "Professional" lub "Community" w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany.
+Zazwyczaj można znaleźć klienta testowego WCF (WcfTestClient.exe) w następującej lokalizacji: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` — społeczność może być jednym z "Enterprise", "Professional" lub "Community" w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany.
 
 ## <a name="scenarios-for-using-test-client"></a>Scenariusze korzystania z klienta testowego
 
@@ -30,9 +31,9 @@ Można również użyć klienta testowego WCF do ułatwienia debugowania projekt
 
 ### <a name="outside-visual-studio"></a>Poza programem Visual Studio
 
-Możesz również wywołać klienta testowego WCF (WcfTestClient. exe) poza programem Visual Studio, aby przetestować dowolną usługę w Internecie. Aby zlokalizować narzędzie, przejdź do następującej lokalizacji:
+Możesz również wywołać klienta testowego WCF (WcfTestClient.exe) poza programem Visual Studio, aby przetestować dowolną usługę w Internecie. Aby zlokalizować narzędzie, przejdź do następującej lokalizacji:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (gdzie społeczność może być jednym z "przedsiębiorstwa", "Professional" lub "społeczność" w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany na komputerze)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(w przypadku, gdy społeczność może być jednym z "Enterprise", "Professional" lub "Community") w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany na komputerze)
 
 Aby użyć narzędzia, kliknij dwukrotnie nazwę pliku, aby otworzyć ją z tej lokalizacji, lub uruchom ją z wiersza polecenia.
 
@@ -40,7 +41,7 @@ Klient testowy WCF przyjmuje dowolną liczbę identyfikatorów URI jako argument
 
 `wcfTestClient.exe URI1 URI2 …`
 
-Po otwarciu okna klienta testowego WCF kliknij pozycję **plik**->**Dodaj usługę**i wprowadź adres punktu końcowego usługi, którą chcesz otworzyć.
+Po otwarciu okna klienta testowego WCF kliknij pozycję **plik** -> **Dodaj usługę**, a następnie wprowadź adres punktu końcowego usługi, którą chcesz otworzyć.
 
 ## <a name="wcf-test-client-user-interface"></a>Interfejs użytkownika klienta testowego WCF
 
@@ -87,13 +88,13 @@ W lewym okienku kliknij prawym przyciskiem myszy **plik konfiguracyjny** i wybie
 
 Po zapisaniu pliku w Edytorze konfiguracji usługi Klient testowy programu WCF wyświetli komunikat ostrzegawczy informujący o tym, że plik został zmodyfikowany poza programem i pyta, czy chcesz go załadować ponownie.
 
-W przypadku wybrania **opcji tak**zawartość konfiguracji na karcie "Client. dll. config" odzwierciedla zmiany wprowadzone w edytorze.
+W przypadku wybrania opcji **tak**zawartość konfiguracji na karcie "Client.dll.config" odzwierciedla zmiany wprowadzone w edytorze.
 
-W przypadku wybrania opcji **nie**zawartość konfiguracji na karcie "Client. dll. config" pozostaje niezmieniona, a zmodyfikowana zawartość jest automatycznie zapisywana w pliku źródłowym.
+W przypadku wybrania opcji **nie**zawartość konfiguracji na karcie "Client.dll.config" pozostaje niezmieniona, a zmodyfikowana zawartość jest automatycznie zapisywana w pliku źródłowym.
 
 #### <a name="restore-to-default-configuration"></a>Przywróć konfigurację domyślną
 
-Jeśli chcesz anulować wszystkie zmiany i przywrócić domyślną konfigurację klienta, kliknij prawym przyciskiem myszy **plik konfiguracyjny** w okienku po lewej stronie i wybierz menu kontekstowe **Przywróć domyślną konfigurację**. Domyślna wartość konfiguracji została załadowana i zostanie przywrócona zawartość z karty "Client. dll. config".
+Jeśli chcesz anulować wszystkie zmiany i przywrócić domyślną konfigurację klienta, kliknij prawym przyciskiem myszy **plik konfiguracyjny** w okienku po lewej stronie i wybierz menu kontekstowe **Przywróć domyślną konfigurację**. Domyślna wartość konfiguracji jest ładowana i zostanie przywrócona zawartość na karcie "Client.dll.config".
 
 #### <a name="validate-changes"></a>Weryfikuj zmiany
 
@@ -103,24 +104,24 @@ Podczas generowania serwera proxy, kompilowania danych binarnych lub wywoływani
 
 #### <a name="persist-client-configuration"></a>Utrwalanie konfiguracji klienta
 
-Karta **narzędzia**->**Opcje**->**Konfiguracja klienta** zawiera opcję **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** , która jest domyślnie włączona. Ta opcja określa, że za każdym razem, gdy klient testu WCF ładuje usługę, generuje plik konfiguracji na podstawie najnowszego kontraktu usługi i plików App. config.
+Opcja **Narzędzia** -> **Opcje** -> **konfiguracji klienta** zawiera pozycję **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** , która jest domyślnie włączona. Ta opcja określa, że za każdym razem, gdy klient testu WCF ładuje usługę, generuje plik konfiguracji na podstawie najnowszego kontraktu usługi i plików App.config usługi.
 
-Jeśli edytowano konfigurację klienta usługi WCF i chcesz, aby zawsze używała tego zaktualizowanego pliku do debugowania usługi, można usunąć zaznaczenie opcji **Regenerate** . Dzięki temu nawet w przypadku aktualizowania usługi i ponownego otwarcia klienta testowego WCF, plik Client. dll. config jest tym, który wcześniej był aktualizowany, zamiast wygenerowanej ponownie na podstawie zaktualizowanej usługi.
+Jeśli edytowano konfigurację klienta usługi WCF i chcesz, aby zawsze używała tego zaktualizowanego pliku do debugowania usługi, można usunąć zaznaczenie opcji **Regenerate** . W ten sposób nawet w przypadku zaktualizowania usługi i ponownego otwarcia klienta testowego WCF, plik Client.dll.config jest tym, który wcześniej był aktualizowany, zamiast wygenerowanej ponownie na podstawie zaktualizowanej usługi.
 
 Jednak może być konieczne edytowanie pliku konfiguracji, aby był on spójny z ponownie wygenerowanym serwerem proxy. Jeśli ponownie wygenerowany plik proxy i konfiguracyjny są niezgodne ze względu na zaktualizowaną usługę, błędy wystąpią, gdy usługa zostanie wywołana.
 
 > [!CAUTION]
 > Jeśli zmodyfikowano plik konfiguracji klienta i wybierzesz go ponownie w przyszłości, można znaleźć plik w następującej lokalizacji:
 >
-> \Documents and Settings\\[konto użytkownika] \Moje projekty klientów Documents\Test.
+> \Dokumenty i ustawienia \\ [konto użytkownika] \Moje Documents\Test projekty klientów.
 >
 > Wszystkie zaktualizowane informacje o poświadczeniach przechowywanych w pliku konfiguracji klienta są chronione przez listę Access Control (ACL) tego folderu.
 
 ### <a name="adding-removing-and-refreshing-services"></a>Dodawanie, usuwanie i odświeżanie usług
 
-#### <a name="add-service"></a>Dodawanie usługi
+#### <a name="add-service"></a>Dodaj usługę
 
-Kliknij pozycję **plik**->**Dodaj usługę** , aby dodać usługę do klienta testowego WCF. Następnie wymagane jest wpisanie identyfikatora URI (adresu punktu końcowego) usługi, która ma zostać dodana. Adres usługi może być adresem w formacie MEX lub WSDL.
+Kliknij pozycję **plik** -> **Dodaj usługę** , aby dodać usługę do klienta testowego WCF. Następnie wymagane jest wpisanie identyfikatora URI (adresu punktu końcowego) usługi, która ma zostać dodana. Adres usługi może być adresem w formacie MEX lub WSDL.
 
 Możesz również znaleźć listę 10 ostatnio dodanych punktów końcowych usługi w podmenu **ostatnich usług** . W przypadku wybrania jednego z nich określona usługa zostanie dodana do klienta testowego WCF.
 
@@ -144,11 +145,11 @@ Podczas generowania serwera proxy, kompilowania danych binarnych lub wywołania 
 
 Domyślnie klient testowy WCF przechowuje wygenerowany kod klienta i pliki konfiguracji w folderze "%appdata%\Local\temp\Test Client projects". Ten folder jest usuwany po zakończeniu działania klienta testowego WCF. Jeśli plik konfiguracji jest modyfikowany w kliencie testowym WCF i opcja **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** jest wyłączona, zmodyfikowany plik jest kopiowany do folderu "CachedConfig" w obszarze "Moje Documents\Test projekty klienta" przy użyciu mapowania (Metadata-Address-to-File-Name) jako indeksu.
 
-Możesz również uruchomić klienta testowego WCF w wierszu polecenia, użyj przełącznika `/ProjectPath`, aby określić nową ścieżkę do przechowywania wygenerowanych plików, lub Użyj przełącznika `/RestoreProjectPath`, aby przywrócić domyślną lokalizację. Składnia jest następująca:
+Możesz również uruchomić klienta testowego WCF w wierszu polecenia, użyj przełącznika, `/ProjectPath` Aby określić nową ścieżkę do przechowywania wygenerowanych plików, lub Użyj przełącznika, `/RestoreProjectPath` Aby przywrócić domyślną lokalizację. Składnia jest następująca:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
-Uruchomienie tego polecenia nie powoduje otwarcia klienta testowego WCF. Zmieniono tylko lokalizację folderu. Można uruchomić to polecenie niezależnie od tego, czy klient testowy WCF jest uruchomiony. Nowa lokalizacja jest stosowana po ponownym uruchomieniu klienta testowego WCF. Informacje o lokalizacji można zapisać w rejestrze lub w pliku WcfTestClient. exe. Option w folderze "%appdata%\Local\temp\Test Client projects".
+Uruchomienie tego polecenia nie powoduje otwarcia klienta testowego WCF. Zmieniono tylko lokalizację folderu. Można uruchomić to polecenie niezależnie od tego, czy klient testowy WCF jest uruchomiony. Nowa lokalizacja jest stosowana po ponownym uruchomieniu klienta testowego WCF. Informacje o lokalizacji można zapisać w rejestrze lub w pliku WcfTestClient.exe. Option w folderze "%appdata%\Local\temp\Test Client projects".
 
 ## <a name="features-supported-by-wcf-test-client"></a>Funkcje obsługiwane przez klienta testowego WCF
 
@@ -156,7 +157,7 @@ Poniżej znajduje się lista funkcji obsługiwanych przez klienta testowego WCF:
 
 - Wywołanie usługi: żądanie/odpowiedź i komunikat jednokierunkowy.
 
-- Powiązania: wszystkie powiązania obsługiwane przez Svcutil. exe.
+- Powiązania: wszystkie powiązania obsługiwane przez Svcutil.exe.
 
 - Sterowanie sesją.
 
@@ -166,7 +167,7 @@ Poniżej znajduje się lista funkcji obsługiwanych przez klienta testowego WCF:
 
 Poniżej znajduje się lista funkcji nieobsługiwanych przez klienta testowego WCF:
 
-- Typy: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, typy implementujące interfejs <xref:System.Xml.Serialization.IXmlSerializable>, łącznie z powiązanym atrybutem <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> oraz typy <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> oraz typ <xref:System.Data.DataTable> ADO.NET.
+- Typy: <xref:System.IO.Stream> , <xref:System.ServiceModel.Channels.Message> ,,, <xref:System.Xml.XmlElement> <xref:System.Xml.XmlAttribute> <xref:System.Xml.XmlNode> , typy implementujące <xref:System.Xml.Serialization.IXmlSerializable> interfejs, włącznie z atrybutem pokrewnym <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> oraz <xref:System.Xml.Linq.XDocument> typy i <xref:System.Xml.Linq.XElement> i typ ADO.NET <xref:System.Data.DataTable> .
 
 - Kontrakt dupleksowy.
 
@@ -184,6 +185,6 @@ Klienta testowego WCF można zamknąć w następujący sposób:
 
 - Kliknij prawym przyciskiem myszy ikonę **hosta usługi WCF** w obszarze powiadomień, a następnie kliknij przycisk **Zakończ.** Spowoduje to zamknięcie funkcji autohostu usługi WCF i klienta testowego WCF i zatrzymanie procesu debugowania programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Host usługi WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

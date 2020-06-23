@@ -1,5 +1,6 @@
 ---
-title: Właściwość IPictureDisp.Handle (stdole)
+title: IPictureDisp. Handle — właściwość (stdole)
+description: Przeczytaj o właściwości IPictureDisp. Handle w programie .NET. Ta właściwość znajduje się w przestrzeni nazw stdole i zestawie stdole (w bibliotece stdole.dll).
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,12 +11,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634409"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105318"
 ---
 # <a name="ipicturedisphandle-property"></a>IPictureDisp.Handle, właściwość
 
@@ -29,6 +30,6 @@ int Handle { get; }
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** `stdole`
+**Przestrzeń nazw:**`stdole`
 
 **Zestaw:** stdole (w stdole.dll)

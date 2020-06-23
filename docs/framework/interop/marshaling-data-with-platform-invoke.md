@@ -1,5 +1,6 @@
 ---
 title: Organizowanie danych w wywołaniu platformy
+description: Kierowanie danych za pomocą wywołania platformy na platformie .NET. Zobacz listę typów danych używanych w interfejsach API systemu Windows i funkcje w stylu C, a następnie Znajdź odpowiadające im typy zarządzane przez platformę .NET.
 ms.date: 03/20/2019
 dev_langs:
 - cpp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27045790780c1eef9537bdf7e52deb579e2b467c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904107"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Organizowanie danych w wywołaniu platformy
 
@@ -23,7 +24,7 @@ Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzanej, aplikacja .
 
 - Podstawianie typów danych zarządzanych dla niezarządzanych typów danych.
 
-Korzystając z dokumentacji dostarczonej z niezarządzaną funkcją, można utworzyć odpowiedni prototyp zarządzany przez zastosowanie atrybutu z opcjonalnymi polami i podstawianie typów danych zarządzanych dla typów niezarządzanych. Aby uzyskać instrukcje dotyczące sposobu zastosowania, <xref:System.Runtime.InteropServices.DllImportAttribute>zobacz Korzystanie z [niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md).
+Korzystając z dokumentacji dostarczonej z niezarządzaną funkcją, można utworzyć odpowiedni prototyp zarządzany przez zastosowanie atrybutu z opcjonalnymi polami i podstawianie typów danych zarządzanych dla typów niezarządzanych. Aby uzyskać instrukcje dotyczące sposobu zastosowania <xref:System.Runtime.InteropServices.DllImportAttribute> , zobacz Korzystanie z [niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md).
 
 Ta sekcja zawiera przykłady, które pokazują, jak utworzyć prototypy funkcji zarządzanych do przekazywania argumentów do i otrzymywania wartości zwracanych z funkcji wyeksportowanych przez biblioteki niezarządzane. Przykłady pokazują również, kiedy używać <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu i <xref:System.Runtime.InteropServices.Marshal> klasy, aby jawnie zorganizować dane.
 
@@ -57,7 +58,7 @@ Odpowiednie typy w Visual Basic, C# i C++ można znaleźć w temacie [wprowadzen
 
 ## <a name="pinvokelibdll"></a>PinvokeLib.dll
 
-Poniższy kod definiuje funkcje biblioteki udostępniane przez PInvoke. dll. Wiele przykładów opisanych w tej sekcji wywołuje tę bibliotekę.
+Poniższy kod definiuje funkcje biblioteki udostępniane przez Pinvoke.dll. Wiele przykładów opisanych w tej sekcji wywołuje tę bibliotekę.
 
 ### <a name="example"></a>Przykład
 

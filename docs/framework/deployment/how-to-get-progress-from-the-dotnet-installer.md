@@ -1,5 +1,6 @@
 ---
 title: 'Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
+description: Dowiedz się, jak uzyskać postęp z Instalatora programu .NET 4,5. Jeśli tworzysz aplikacje dla tej wersji platformy .NET, możesz dołączyć Instalatora programu .NET 4,5 (łańcucha) do konfiguracji aplikacji.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,61 +8,61 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904263"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 
-.NET Framework 4.5 jest redystrybucyjnym czasem wykonywania. Jeśli programujesz aplikacje dla tej wersji programu .NET Framework, możesz dołączyć (łańcuch) .NET Framework 4.5 konfiguracji jako część wstępną konfiguracji aplikacji. Aby zaprezentować niestandardowe lub ujednolicone środowisko konfiguracji, można po cichu uruchomić konfigurację programu .NET Framework 4.5 i śledzić jej postęp, pokazując jednocześnie postęp konfiguracji aplikacji. Aby włączyć ciche śledzenie, instalator programu .NET Framework 4.5 (który można obserwować) definiuje protokół przy użyciu segmentu MMIO (MMIO) mapowanej pamięcią do komunikowania się z konfiguracją (obserwatorem lub łańcuchem). Ten protokół definiuje sposób, w jaki chainer może uzyskać informacje o postępie, uzyskać szczegółowe wyniki, odpowiedzieć na wiadomości i anulować konfigurację programu .NET Framework 4.5.
+.NET Framework 4,5 to środowisko uruchomieniowe redystrybucyjne. W przypadku tworzenia aplikacji dla tej wersji .NET Framework można uwzględnić konfigurację (łańcuch) .NET Framework 4,5 jako część wymagań wstępnych konfiguracji aplikacji. Aby zaprezentować dostosowane lub ujednolicone środowisko konfiguracji, możesz chcieć dyskretnie uruchomić Instalatora .NET Framework 4,5 i śledzić jego postęp, pokazując postęp instalacji aplikacji. Aby włączyć śledzenie dyskretne, .NET Framework konfigurację 4,5 (którą można obejrzeć) definiuje protokół, używając segmentu we/wy mapowanego na pamięć (MMIO) w celu komunikacji z konfiguracją (obserwatorem lub łańcuchem). Ten protokół definiuje sposób uzyskiwania przez moduł łańcucha informacji o postępie, uzyskiwanie szczegółowych wyników, reagowanie na komunikaty i anulowanie konfiguracji .NET Framework 4,5.
 
-- **Wywołanie**. Aby wywołać konfigurację programu .NET Framework 4.5 i otrzymywać informacje o postępie z sekcji MMIO, program instalacyjny musi wykonać następujące czynności:
+- **Wywołanie**. Aby wywołać konfigurację .NET Framework 4,5 i uzyskać informacje o postępie z sekcji MMIO, program instalacyjny musi wykonać następujące czynności:
 
-    1. Wywołanie programu redystrybucyjnego .NET Framework 4.5:
+    1. Wywołaj program redystrybucyjny .NET Framework 4,5:
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        Gdzie *nazwa sekcji* to dowolna nazwa, której chcesz użyć do zidentyfikowania aplikacji. Instalator programu .NET Framework odczytuje i zapisuje w sekcji MMIO asynchronicznie, więc może okazać się wygodne użycie zdarzeń i wiadomości w tym czasie. W tym przykładzie proces konfiguracji programu .NET Framework jest tworzony przez konstruktora, który przydziela sekcję MMIO (`TheSectionName`) i definiuje zdarzenie (`TheEventName`):
+        *Nazwa sekcji* , która ma być używana do identyfikowania aplikacji. .NET Framework Instalator odczytuje i zapisuje dane w sekcji MMIO asynchronicznie, dzięki czemu może być przydatne użycie zdarzeń i komunikatów w tym czasie. W przykładzie proces instalacji .NET Framework jest tworzony przez konstruktora, który alokuje sekcję MMIO ( `TheSectionName` ) i definiuje zdarzenie ( `TheEventName` ):
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 
-        Należy zastąpić te nazwy nazwami, które są unikatowe dla programu instalacyjnego.
+        Zastąp te nazwy nazwami unikatowymi dla programu instalacyjnego.
 
-    2. Przeczytaj z sekcji MMIO. W programie .NET Framework 4.5 operacje pobierania i instalacji są jednoczesne: jedna część programu .NET Framework może być instalowana podczas pobierania innej części. W rezultacie postęp jest odsyłany (czyli zapisywany) do sekcji`m_downloadSoFar` MMIO jako dwie liczby ( i `m_installSoFar`), które zwiększają się z 0 do 255. Po zapisaniu 255 i zakończy się działanie programu .NET Framework, instalacja została zakończona.
+    2. Zapoznaj się z sekcją MMIO. W .NET Framework 4,5 operacje pobierania i instalacji są jednoczesne: jedna część .NET Framework może być instalowana podczas pobierania innej części. W związku z tym postęp jest wysyłany z powrotem (czyli zapisany) do sekcji MMIO jako dwie liczby ( `m_downloadSoFar` i `m_installSoFar` ), które zwiększają się od 0 do 255. Po zapisaniu 255 i zakończeniu .NET Framework instalacja zostanie zakończona.
 
-- **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania programu redystrybucyjnego .NET Framework 4.5 wskazują, czy instalacja powiodła się, czy nie:
+- **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania programu redystrybucyjnego .NET Framework 4,5 wskazują, czy instalacja zakończyła się powodzeniem, czy niepowodzeniem:
 
-  - 0 - Instalacja została pomyślnie zakończona.
+  - 0 — Instalacja została ukończona pomyślnie.
 
-  - 3010 – Instalacja została pomyślnie zakończona; wymagane jest ponowne uruchomienie systemu.
+  - 3010 — instalacja została ukończona pomyślnie; wymagane jest ponowne uruchomienie systemu.
 
-  - 1602 – Instalator został anulowany.
+  - 1602 — konfiguracja została anulowana.
 
-  - Wszystkie inne kody - Instalator napotkał błędy; sprawdź szczegóły plików dziennika utworzonych w %temp%.
+  - Wszystkie inne kody — Instalator napotkał błędy; Aby uzyskać szczegółowe informacje, Przejrzyj pliki dziennika utworzone w% temp%.
 
-- **Anulowanie konfiguracji**. Konfigurację można anulować w `Abort` dowolnym momencie, używając metody do ustawiania `m_downloadAbort` i `m_ installAbort` flag w sekcji MMIO.
+- **Anulowanie instalacji**. Instalację można anulować w dowolnym momencie przy użyciu metody, `Abort` Aby ustawić `m_downloadAbort` `m_ installAbort` flagi i w sekcji MMIO.
 
-## <a name="chainer-sample"></a>Próbka łańcucha
+## <a name="chainer-sample"></a>Przykład łańcucha
 
-Próbka Chainer dyskretnie uruchamia i śledzi konfigurację programu .NET Framework 4.5, pokazując jednocześnie postęp. Ten przykład jest podobny do próbki Chainer przewidziane dla .NET Framework 4. Jednak ponadto można uniknąć ponownego uruchomienia systemu, przetwarzając okno komunikatu do zamykania aplikacji .NET Framework 4. Aby uzyskać informacje na temat tego okna komunikatu, zobacz [Zmniejszanie liczby ponownych uruchomień systemu podczas instalacji programu .NET Framework 4.5](reducing-system-restarts.md). Tego przykładu można użyć za pomocą instalatora .NET Framework 4; w tym scenariuszu wiadomość po prostu nie jest wysyłana.
+Przykładowy moduł łańcucha uruchamia dyskretnie i śledzi konfigurację .NET Framework 4,5 podczas wyświetlania postępu. Ten przykład jest podobny do przykładu łańcucha dostarczonego dla .NET Framework 4. Ponadto może to uniemożliwić ponowne uruchomienie systemu przez przetworzenie okna komunikatu do zamykania aplikacji .NET Framework 4. Aby uzyskać informacje na temat tego okna komunikatu, zobacz [ograniczanie ponownych uruchomień systemu podczas instalacji .NET Framework 4,5](reducing-system-restarts.md). Tego przykładu można użyć w Instalatorze programu .NET Framework 4. w tym scenariuszu wiadomość jest po prostu niewysłana.
 
 > [!WARNING]
 > Należy uruchomić przykład jako administrator.
 
-Możesz pobrać kompletne rozwiązanie programu Visual Studio dla [próbki .NET Framework 4.5 Chainer](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) z galerii przykładów MSDN.
+Możesz pobrać kompletne rozwiązanie programu Visual Studio dla [przykładu łańcucha .NET Framework 4,5](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) z galerii przykładów MSDN.
 
-W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, ChainingdotNet4.cpp i IProgressObserver.h.
+W poniższych sekcjach opisano znaczące pliki w tym przykładzie: MMIOChainer. h, ChainingdotNet4. cpp i IProgressObserver. h.
 
-#### <a name="mmiochainerh"></a>MMIOChainer.h
+#### <a name="mmiochainerh"></a>MMIOChainer. h
 
-- Plik MMIOChainer.h (zobacz [pełny kod)](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)zawiera definicję struktury danych i klasę podstawową, z której powinna pochodzić klasa chainer. Program .NET Framework 4.5 rozszerza strukturę danych MMIO w celu obsługi danych wymaganych przez instalatora programu .NET Framework 4.5. Zmiany w strukturze MMIO są zgodne z powrotem, więc .NET Framework 4 chainer może pracować z .NET Framework 4.5 konfiguracji bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje funkcji zmniejszania ponownego uruchamiania systemu.
+- Plik MMIOChainer. h (zobacz [kompletny kod](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)) zawiera definicję struktury danych i klasę bazową, z której Klasa łańcucha powinna być pochodna. .NET Framework 4,5 rozszerza strukturę danych MMIO w celu obsługi danych wymaganych przez Instalatora .NET Framework 4,5. Zmiany struktury MMIO są zgodne z poprzednimi wersjami, dzięki czemu moduł .NET Framework 4 może współpracował z instalacją .NET Framework 4,5, bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje funkcji ograniczania ponownych uruchomień systemu.
 
-    Pole wersji umożliwia identyfikację poprawek do struktury i formatu wiadomości. Instalator programu .NET Framework określa wersję interfejsu łańcucha, `VirtualQuery` wywołując funkcję w celu określenia rozmiaru mapowania plików. Jeśli rozmiar jest wystarczająco duży, aby pomieścić pole wersji, instalator programu .NET Framework używa określonej wartości. Jeśli mapowanie pliku jest zbyt małe, aby zawierało pole wersji, co ma miejsce w przypadku programu .NET Framework 4, proces instalacji zakłada wersję 0 (4). Jeśli chainer nie obsługuje wersji wiadomości, którą instalator programu .NET Framework chce wysłać, instalator programu .NET Framework zakłada, że odpowiedź ignoruje.
+    Pole Version zawiera metodę identyfikowania poprawek w formacie struktury i komunikatu. Konfiguracja .NET Framework określa wersję interfejsu łańcucha, wywołując `VirtualQuery` funkcję w celu określenia rozmiaru mapowania pliku. Jeśli rozmiar jest wystarczająco duży, aby zmieścił się w polu wersja, .NET Framework Instalator używa określonej wartości. Jeśli mapowanie pliku jest za małe, aby zawierało pole wersji, czyli w przypadku .NET Framework 4, proces instalacji przyjmuje wersję 0 (4). Jeśli moduł łańcucha nie obsługuje wersji komunikatu, która .NET Framework instalator chce wysłać, .NET Framework instalator zabierze odpowiedź na ignorowanie.
 
     Struktura danych MMIO jest zdefiniowana w następujący sposób:
 
@@ -92,11 +93,11 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
         };
     ```
 
-- Struktura `MmioDataStructure` danych nie powinna być używana bezpośrednio; użyj `MmioChainer` klasy zamiast do zaimplementowania chainer. Wynik z `MmioChainer` klasy do łańcucha .NET Framework 4.5 redystrybucyjne.
+- `MmioDataStructure`Struktury danych nie należy używać bezpośrednio. `MmioChainer` zamiast tego użyj klasy do zaimplementowania łańcucha. Pochodne od `MmioChainer` klasy do łańcucha redystrybucyjnego .NET Framework 4,5.
 
-#### <a name="iprogressobserverh"></a>IProgressObserver.h
+#### <a name="iprogressobserverh"></a>IProgressObserver. h
 
-- Plik IProgressObserver.h implementuje obserwatora postępu[(zobacz pełny kod](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Ten obserwator otrzymuje powiadomienie o postępie pobierania i `char`instalacji (określonym jako niepodpisany , 0-255, wskazujący 1%-100% ukończony). Obserwator jest również powiadamiany, gdy chainee wysyła wiadomość, a obserwator powinien wysłać odpowiedź.
+- Plik IProgressObserver. h implementuje obserwatora postępu ([Zobacz kompletny kod](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Ten obserwator otrzymuje powiadomienie o postępie pobierania i instalacji (określony jako niepodpisany `char` , 0-255, wskazujący na ukończenie 1%-100%). Obserwator zostanie również powiadomiony, gdy chainee wysyła komunikat, a obserwator powinien wysłać odpowiedź.
 
     ```cpp
         class IProgressObserver
@@ -108,9 +109,9 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
         };
     ```
 
-#### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
+#### <a name="chainingdotnet45cpp"></a>ChainingdotNet 4.5. cpp
 
-- [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) plik implementuje `Server` klasy, która pochodzi `MmioChainer` z klasy i zastępuje odpowiednie metody wyświetlania informacji o postępie. MmioChainer tworzy sekcję o określonej nazwie sekcji i inicjuje chainer o określonej nazwie zdarzenia. Nazwa zdarzenia jest zapisywana w zamapowanym strukturze danych. Nazwy sekcji i zdarzeń powinny być unikatowe. Klasa `Server` w poniższym kodzie uruchamia określony program instalacyjny, monitoruje jego postęp i zwraca kod zakończenia.
+- Plik [chainingdotnet 4.5. cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) implementuje `Server` klasę, która dziedziczy z `MmioChainer` klasy i zastępuje odpowiednie metody wyświetlania informacji o postępie. MmioChainer tworzy sekcję z określoną nazwą sekcji i inicjuje łańcuch z określoną nazwą zdarzenia. Nazwa zdarzenia jest zapisywana w mapowanej strukturze danych. Należy zmienić nazwy sekcji i zdarzeń na unikatowe. `Server`Klasa w poniższym kodzie uruchamia określony program instalacyjny, monitoruje postęp i zwraca kod zakończenia.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver
@@ -121,7 +122,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
         {}
     ```
 
-    Instalacja jest uruchamiana w Main metody.
+    Instalacja została uruchomiona w metodzie Main.
 
     ```cpp
     // Main entry point for program
@@ -147,7 +148,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
     }
     ```
 
-- Przed uruchomieniem instalacji, chainer sprawdza, czy .NET Framework 4.5 jest już zainstalowany przez wywołanie: `IsNetFx4Present`
+- Przed uruchomieniem instalacji program łańcucha sprawdza, czy .NET Framework 4,5 jest już zainstalowany przez wywołanie `IsNetFx4Present` :
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -200,7 +201,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
     }
     ```
 
-- Można zmienić ścieżkę pliku wykonywalnego (Setup.exe w przykładzie) w `Launch` metodzie, aby wskazać jego poprawną lokalizację lub dostosować kod, aby określić lokalizację. Klasa `MmioChainer` podstawowa zawiera `Run()` metodę blokowania, która wywołuje klasę pochodną.
+- Można zmienić ścieżkę pliku wykonywalnego (Setup.exe w przykładzie) w `Launch` metodzie, aby wskazywała jego poprawną lokalizację, lub dostosować kod w celu określenia lokalizacji. `MmioChainer`Klasa bazowa zapewnia metodę blokującą `Run()` , która wywołuje klasę pochodną.
 
     ```cpp
     bool Launch(const CString& args)
@@ -228,7 +229,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
     }
     ```
 
-- Metoda `Send` przechwytuje i przetwarza wiadomości. W tej wersji programu .NET Framework jedyną obsługiwana wiadomością jest komunikat bliskiej aplikacji.
+- `Send`Metoda przechwytuje i przetwarza komunikaty. W tej wersji .NET Framework jedynym obsługiwanym komunikatem jest komunikat zamknięcia aplikacji.
 
     ```cpp
             // SendMessage
@@ -282,7 +283,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
     };
     ```
 
-- Dane postępu to niepodpisany `char` od 0 (0%) i 255 (100%).
+- Dane postępu są niepodpisane `char` między 0 (0%) i 255 (100%).
 
     ```cpp
     private: // IProgressObserver
@@ -291,7 +292,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
        }
     ```
 
-- HRESULT jest przekazywana do `Finished` metody.
+- WYNIK HRESULT jest przesyłany do `Finished` metody.
 
     ```cpp
     virtual void Finished(HRESULT hr)
@@ -303,9 +304,9 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, 
     ```
 
     > [!IMPORTANT]
-    > .NET Framework 4.5 redystrybucyjne zazwyczaj zapisuje wiele komunikatów postępu i pojedynczy komunikat, który wskazuje zakończenie (po stronie łańcucha). Odczytuje również asynchronicznie, `Abort` szukając rekordów. Jeśli otrzyma `Abort` rekord, anuluje instalację i zapisuje gotowy rekord z E_ABORT jako jego dane po przerwaniu instalacji i cofnięciu operacji instalacyjnych.
+    > Pakiet redystrybucyjny .NET Framework 4,5 zazwyczaj zapisuje wiele komunikatów o postępie i pojedynczy komunikat wskazujący na zakończenie (po stronie łańcucha). Odczytuje również asynchronicznie, szukając `Abort` rekordów. Jeśli odbierze `Abort` rekord, anuluje instalację i zapisuje zakończony rekord z E_ABORT jako dane po przerwaniu instalacji i wycofaniu operacji instalacji.
 
-Typowy serwer tworzy losową nazwę pliku MMIO, tworzy plik (jak `Server::CreateSection`pokazano w poprzednim przykładzie `CreateProcess` kodu, w ), i `-pipe someFileSectionName` uruchamia redystrybucyjny przy użyciu metody i przekazując nazwę potoku z opcją. Serwer powinien `OnProgress`implementować `Send` `Finished` , i metody z kodu specyficznego dla interfejsu użytkownika aplikacji.
+Typowy serwer tworzy losową nazwę pliku MMIO, tworzy plik (jak pokazano w poprzednim przykładzie kodu, w `Server::CreateSection` ) i uruchamia pakiet redystrybucyjny przy użyciu `CreateProcess` metody i przekazując nazwę potoku przy użyciu `-pipe someFileSectionName` opcji. Serwer powinien implementować `OnProgress` `Send` metody,, i `Finished` z kodem SPECYFICZNYM dla interfejsu użytkownika aplikacji.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768940"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245638"
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a>W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
@@ -105,6 +105,97 @@ Dozwolone użycie określone przez <xref:System.Security.Permissions.IsolatedSto
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Analogicznie jak `AssemblyIsolationByUser` , ale magazyn jest zapisywany w lokalizacji, która będzie przenoszona w przypadku włączenia profilów użytkowników mobilnych, a limity przydziału nie są wymuszane.|Tak samo jak w `AssemblyIsolationByUser` przypadku, ale bez przydziałów, ryzyko ataku typu "odmowa usługi" zwiększa się.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Izolacja według użytkownika. Zazwyczaj tylko narzędzia administracyjne lub narzędzia do debugowania używają tego poziomu uprawnień.|Dostęp z użyciem tego uprawnienia umożliwia kodowi wyświetlanie i usuwanie dowolnych plików lub katalogów użytkownika przechowywanych w wydzielonej pamięci masowej (niezależnie do izolacji zestawu). Zagrożenia to m.in. wycieki informacji i utrata danych.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Izolacja według wszystkich użytkowników, domen i zestawów. Zazwyczaj tylko narzędzia administracyjne lub narzędzia do debugowania używają tego poziomu uprawnień.|To uprawnienie tworzy potencjalną możliwość naruszenia zabezpieczeń wszystkich izolowanych magazynów wszystkich użytkowników.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>Bezpieczeństwo izolowanych składników magazynu w odniesieniu do niezaufanych danych
+
+__Ta sekcja ma zastosowanie do następujących platform:__
+
+- .NET Framework (wszystkie wersje)
+- .NET Core 2.1 +
+- .NET 5.0 +
+
+.NET Framework i .NET Core oferują [izolowany magazyn](/dotnet/standard/io/isolated-storage) jako mechanizm utrwalania danych dla użytkownika, aplikacji lub składnika. Jest to starszy składnik przeznaczony głównie do realizacji przestarzałych scenariuszy zabezpieczeń dostępu do kodu.
+
+Do odczytywania danych między granicami zaufania można używać różnych izolowanych interfejsów API i narzędzi magazynu. Na przykład odczyt danych z zakresu całego komputera może agregować dane z innych, prawdopodobnie mniej zaufanych kont użytkowników na komputerze. Składniki lub aplikacje odczytane z oddzielonych na cały komputer zakresów magazynu powinny mieć świadomość skutków odczytu tych danych.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Zależne od zabezpieczeń interfejsy API, które mogą odczytywać z zakresu całego komputera
+
+Składniki lub aplikacje, które wywołują dowolne z następujących interfejsów API, Odczytaj z zakresu całego komputera:
+
+ * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), przekazywanie zakresu, który zawiera flagę IsolatedStorageScope. Machine
+ * [IsolatedStorageFile.GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+ * [IsolatedStorageFile.GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+ * [IsolatedStorageFile.GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+ * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), przekazywanie zakresu zawierającego flagę IsolatedStorageScope. Machine
+ * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), przekazywanie zakresu zawierającego `IsolatedStorageScope.Machine` flagę
+
+Działanie [Narzędzia izolowanego magazynu](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ma wpływ na to `/machine` , jak pokazano w poniższym kodzie:
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+Narzędzie izolowanego magazynu jest dostępne jako część programu Visual Studio i zestawu SDK .NET Framework.
+
+Jeśli aplikacja nie obejmuje wywołań do poprzednich interfejsów API lub jeśli przepływ pracy nie wymaga wywołania `storeadm.exe` w ten sposób, ten dokument nie ma zastosowania.
+
+### <a name="impact-in-multi-user-environments"></a>Wpływ na środowiska z obsługą wielu użytkowników
+
+Jak wspomniano wcześniej, wpływ na zabezpieczenia z tych interfejsów API wynika z danych zapisanych z jednego środowiska zaufania, które są odczytywane z innego środowiska zaufania. Magazyn izolowany zwykle używa jednej z trzech lokalizacji do odczytu i zapisu danych:
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: Na przykład `C:\Users\<username>\AppData\Local\IsolatedStorage\` , dla `User` zakresu.
+2. `%APPDATA%\IsolatedStorage\`: Na przykład `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` , dla `User|Roaming` zakresu.
+3. `%PROGRAMDATA%\IsolatedStorage\`: Na przykład `C:\ProgramData\IsolatedStorage\` , dla `Machine` zakresu.
+
+Pierwsze dwie lokalizacje są izolowane dla poszczególnych użytkowników. System Windows zapewnia, że różne konta użytkowników na tym samym komputerze nie będą miały dostępu do folderów profilu użytkownika. Dwa różne konta użytkowników, którzy korzystają `User` ze `User|Roaming` sklepów lub nie będą widzieć danych nawzajem i nie mogą zakłócać działania danych.
+
+Trzecia lokalizacja jest udostępniana dla wszystkich kont użytkowników na komputerze. Różne konta mogą odczytywać i zapisywać dane w tej lokalizacji, a następnie mogą zobaczyć, jak się znajdują.
+
+Powyższe ścieżki mogą się różnić w zależności od używanej wersji systemu Windows.
+
+Teraz Rozważmy system z obsługą dwóch użytkowników z dwoma zarejestrowanymi użytkownikami _Mallory_ i _Roberta_. Mallory ma możliwość uzyskiwania dostępu do katalogu profilu użytkownika `C:\Users\Mallory\` i może uzyskać dostęp do udostępnionej lokalizacji magazynu na całym komputerze `C:\ProgramData\IsolatedStorage\` . Nie może uzyskać dostępu do katalogu profilu użytkownika Roberta `C:\Users\Bob\` .
+
+Jeśli Mallory życzy sobie atakującej, może ona zapisywać dane w lokalizacji przechowywania w całej maszynie, a następnie próbować wpływać na odczytanie ze sklepu na całym komputerze. Gdy Robert uruchamia aplikację, która odczytuje z tego magazynu, ta aplikacja będzie działać na Mallory danych umieszczonych w tym miejscu, ale w kontekście konta użytkownika Roberta. W pozostałej części tego dokumentu opisano różne wektory ataków oraz czynności, które można wykonać, aby zminimalizować ryzyko związane z atakami.
+
+__Uwaga:__ Aby atak miał miejsce, Mallory wymaga:
+
+* Konto użytkownika na komputerze.
+* Możliwość umieszczenia pliku w znanej lokalizacji w systemie plików.
+* Wiedza o tym, że Robert będzie w pewnym momencie uruchamiać aplikację, która próbuje odczytać te dane.
+
+Nie są to wektory zagrożeń, które mają zastosowanie w standardowych środowiskach klasycznych jednego użytkownika, takich jak komputery domowe lub stacje robocze przedsiębiorstwa z pojedynczym pracownikiem.
+
+#### <a name="elevation-of-privilege"></a>Podniesienie uprawnień
+
+__Podniesienie poziomu uprawnień__ występuje, gdy aplikacja Roberta odczytuje plik Mallory i automatycznie próbuje wykonać jakąś akcję na podstawie zawartości tego ładunku. Rozważmy aplikację, która odczytuje zawartość skryptu uruchamiania ze sklepu dla całego komputera i przekazuje tę zawartość do programu `Process.Start` . Jeśli Mallory może umieścić złośliwy skrypt w sklepie dla całej maszyny, gdy Robert uruchomi swoją aplikację:
+
+* Aplikacja analizuje i uruchamia złośliwy skrypt Mallory _w kontekście profilu użytkownika Roberta_.
+* Mallory uzyskuje dostęp do konta Roberta na komputerze lokalnym.
+
+#### <a name="denial-of-service"></a>Odmowa usługi
+
+Atak __typu "odmowa usługi"__ występuje, gdy aplikacja Roberta odczytuje plik i awarie Mallory, lub w przeciwnym razie przestaje działać poprawnie. Rozważ ponownie aplikację wspomnianą wcześniej, która próbuje analizować skrypt uruchamiania ze sklepu dla całego komputera. Jeśli Mallory może umieścić plik z nieprawidłowo utworzoną zawartością w sklepie dla całego komputera, może:
+
+* Przed wczesnym wyrzucaniem przez aplikację Roberta wyjątku w ścieżce początkowej.
+* Uniemożliwiaj pomyślne uruchomienie aplikacji z powodu wyjątku.
+
+Następnie odmówił Roberta możliwość uruchomienia aplikacji przy użyciu własnego konta użytkownika.
+
+#### <a name="information-disclosure"></a>Ujawnienie informacji
+
+Atak z __ujawnianiem informacji__ występuje, gdy Mallory może dowiedzieć się, jak wycofać zawartość pliku, do którego Mallory zwykle nie ma dostępu. Należy wziąć pod uwagę, że Robert ma plik tajny *C:\Users\Bob\secret.txt* Mallory. Zna ścieżkę do tego pliku, ale nie może go odczytać, ponieważ system Windows zabrania sobie dostępu do katalogu profilu użytkownika Roberta.
+
+Zamiast tego Mallory umieszcza twarde łącze w sklepie dla całego komputera. Jest to specjalny rodzaj pliku, który nie zawiera żadnej zawartości, a nie wskazuje na inny plik na dysku. Próba odczytania pliku linku twardego spowoduje odczytanie zawartości pliku, którego dotyczy link. Po utworzeniu twardego linku Mallory nadal nie można odczytać zawartości pliku, ponieważ nie ma dostępu do elementu docelowego ( `C:\Users\Bob\secret.txt` ) łącza. Jednak _Robert ma_ dostęp do tego pliku.
+
+Gdy aplikacja Roberta odczytuje dane ze sklepu na całym komputerze, teraz przypadkowo odczytuje zawartość `secret.txt` pliku, podobnie jak w przypadku, gdy sam plik był obecny w sklepie dla całego komputera. Gdy aplikacja Roberta zostanie zakończona, jeśli spróbuje ponownie zapisać plik w sklepie dla całego komputera, spowoduje to zakończenie umieszczania rzeczywistej kopii pliku w katalogu * C:\ProgramData\IsolatedStorage \* . Ponieważ ten katalog jest odczytywany przez dowolnego użytkownika na komputerze, Mallory może teraz odczytać zawartość pliku.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>Najlepsze rozwiązania dotyczące obrony przed atakami
+
+__Ważne:__ Jeśli środowisko ma wielu niezaufanych użytkowników, nie wywołuj interfejsu API ani __nie__ `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` Wywołaj tego narzędzia `storeadm.exe /machine /list` . Oba te założono, że działają na zaufanych danych. Jeśli osoba atakująca może obsłużyć złośliwy ładunek w sklepie dla całego komputera, ten ładunek może prowadzić do podniesienia uprawnień w kontekście użytkownika, który uruchamia te polecenia.
+
+Jeśli działa w środowisku z obsługą kilku użytkowników, należy rozważyć użycie izolowanych funkcji magazynu, które są ukierunkowane na zakres _maszyn_ . Jeśli aplikacja musi odczytywać dane z lokalizacji w całej maszynie, wolisz odczytywać dane z lokalizacji, która jest tylko do zapisu na kontach administratorów. `%PROGRAMFILES%`Katalog i `HKLM` gałąź rejestru to przykłady lokalizacji zapisywalnych przez administratorów i odczytywane przez wszystkich użytkowników. Dane odczytane z tych lokalizacji są uważane za wiarygodne.
+
+Jeśli aplikacja musi używać zakresu _maszyn_ w środowisku wielu użytkowników, zweryfikuj zawartość dowolnego pliku odczytywanego ze sklepu dla całego komputera. Jeśli aplikacja odserializacja grafów obiektów z tych plików, rozważ użycie bezpieczniejszych serializacji, takich jak `XmlSerializer` zamiast niebezpiecznych serializatorów, takich jak `BinaryFormatter` lub `NetDataContractSerializer` . Należy zachować ostrożność przy użyciu głęboko zagnieżdżonych wykresów obiektów lub grafów obiektów, które wykonują alokację zasobów na podstawie zawartości pliku.
 
 <a name="isolated_storage_locations"></a>
 

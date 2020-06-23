@@ -1,15 +1,16 @@
 ---
 title: <wsHttpBinding>
+description: Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie HTTP odpowiednie dla kontraktów usługi non-Duplex, które implementują obsługę protokołu WS-niezawodny i usługi WS-Security.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: a71ad2a2279eabbcf917df58d7bedec0e728f9e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d603f699145622cb1b70ecf99ea542572e841eac
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140394"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243987"
 ---
 # \<wsHttpBinding>
 Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi non-Duplex. Powiązanie implementuje następujące specyfikacje: niezawodna obsługa komunikatów w usłudze WS i zabezpieczeniach WS-Security na potrzeby zabezpieczeń i uwierzytelniania komunikatów. Transport to HTTP, a kodowanie wiadomości to kodowanie Text/XML.  
@@ -137,7 +138,7 @@ Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie odpowiednie dla k
 </configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement>

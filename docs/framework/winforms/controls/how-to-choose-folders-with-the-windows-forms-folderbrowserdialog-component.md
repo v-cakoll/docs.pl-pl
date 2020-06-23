@@ -1,5 +1,6 @@
 ---
 title: Wybieranie folderów ze składnikiem FolderBrowserDialog
+description: Dowiedz się, jak używać składnika FolderBrowserDialog Windows Forms w aplikacjach systemu Windows tworzonych w celu monitowania użytkowników o wybranie folderu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 313388442101f341cfed366143f3c9669fb45cbd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 11d01bbaec3b82bc221960ebab5e33ca1aa302db
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903678"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows
 
@@ -25,13 +26,13 @@ Często w aplikacjach systemu Windows tworzone są monity użytkowników o wybra
 
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Aby wybrać foldery ze składnikiem FolderBrowserDialog
 
-1. W procedurze Sprawdź Właściwość <xref:System.Windows.Forms.Form.DialogResult%2A> składnika <xref:System.Windows.Forms.FolderBrowserDialog>, aby zobaczyć, jak okno dialogowe zostało zamknięte, i Pobierz wartość właściwości <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> składnika <xref:System.Windows.Forms.FolderBrowserDialog>.
+1. W procedurze Sprawdź <xref:System.Windows.Forms.FolderBrowserDialog> Właściwość składnika, <xref:System.Windows.Forms.Form.DialogResult%2A> Aby zobaczyć, jak okno dialogowe zostało zamknięte i pobrać wartość <xref:System.Windows.Forms.FolderBrowserDialog> <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> właściwości składnika.
 
-2. Jeśli musisz ustawić górny folder, który będzie wyświetlany w widoku drzewa okna dialogowego, ustaw właściwość <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, która pobiera element członkowski <xref:System.Environment.SpecialFolder> wyliczenia.
+2. Jeśli musisz ustawić górny folder, który będzie wyświetlany w widoku drzewa okna dialogowego, ustaw <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> Właściwość, która przyjmuje element członkowski <xref:System.Environment.SpecialFolder> wyliczenia.
 
-3. Ponadto można ustawić właściwość <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, która określa ciąg tekstowy, który pojawia się w górnej części widoku drzewa folderów.
+3. Ponadto można ustawić <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Właściwość, która określa ciąg tekstowy, który pojawia się w górnej części widoku drzewa folderów.
 
-    W poniższym przykładzie składnik <xref:System.Windows.Forms.FolderBrowserDialog> jest używany do wybierania folderu, podobnie jak podczas tworzenia projektu w programie Visual Studio i zostanie wyświetlony monit o wybranie folderu w celu zapisania go w programie. W tym przykładzie nazwa folderu jest następnie wyświetlana w kontrolce <xref:System.Windows.Forms.TextBox> w formularzu. Dobrym pomysłem jest umieszczenie lokalizacji w obszarze edytowalnym, takim jak kontrolka <xref:System.Windows.Forms.TextBox>, dzięki czemu użytkownicy mogą edytować wybór w przypadku wystąpienia błędu lub innych problemów. W tym przykładzie założono, że formularz ze składnikiem <xref:System.Windows.Forms.FolderBrowserDialog> i formantem <xref:System.Windows.Forms.TextBox>.
+    W poniższym przykładzie <xref:System.Windows.Forms.FolderBrowserDialog> składnik jest używany do wybrania folderu, podobnie jak podczas tworzenia projektu w programie Visual Studio i zostanie wyświetlony monit o wybranie folderu w celu zapisania go w programie. W tym przykładzie nazwa folderu jest następnie wyświetlana w <xref:System.Windows.Forms.TextBox> kontrolce formularza. Dobrym pomysłem jest umieszczenie lokalizacji w obszarze edytowalnym, takim jak <xref:System.Windows.Forms.TextBox> kontrolka, dzięki czemu użytkownicy mogą edytować wybór w przypadku wystąpienia błędu lub innych problemów. W tym przykładzie przyjęto, że formularz ze <xref:System.Windows.Forms.FolderBrowserDialog> składnikiem i <xref:System.Windows.Forms.TextBox> kontrolką.
 
     ```vb
     Public Sub ChooseFolder()
@@ -63,12 +64,12 @@ Często w aplikacjach systemu Windows tworzone są monity użytkowników o wybra
     ```
 
     > [!IMPORTANT]
-    > Aby użyć tej klasy, zestaw wymaga poziomu uprawnień przyznanych przez właściwość <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>, która jest częścią wyliczenia <xref:System.Security.Permissions.FileIOPermissionAccess>. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
+    > Aby użyć tej klasy, zestaw wymaga poziomu uprawnień przyznanych przez <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> Właściwość, która jest częścią <xref:System.Security.Permissions.FileIOPermissionAccess> wyliczenia. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
 
 Informacje o sposobach zapisywania plików znajdują się w temacie [How to: Save files using the SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog, składnik — omówienie (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog — Informacje o składniku (Formularze systemu Windows)](folderbrowserdialog-component-overview-windows-forms.md)
 - [FolderBrowserDialog, składnik](folderbrowserdialog-component-windows-forms.md)

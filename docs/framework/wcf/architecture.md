@@ -1,26 +1,27 @@
 ---
 title: Architektura WCF (Windows Communication Foundation)
+description: Dowiedz się więcej na temat głównych warstw architektury Windows Communication Foundation, takich jak kontrakty, środowisko uruchomieniowe usług, obsługa komunikatów i aktywacja &.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320838"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245573"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architektura WCF (Windows Communication Foundation)
 Na poniższej ilustracji przedstawiono główne warstwy architektury Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Architektura WCF  
- ![Architektura WCF](./media/wcf-architecture.gif "WCF_Architecture")  
+ ![Architektura programu WCF](./media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Kontrakty i opisy  
- Kontrakty definiują różne aspekty systemu komunikatów. W umowie dotyczącej danych opisano każdy parametr, który obejmuje każdy komunikat, który usługa może utworzyć lub wykorzystać. Parametry wiadomości są definiowane przez dokumenty języka definicji schematu XML (XSD), co umożliwia dowolnemu systemowi zrozumienie kodu XML do przetwarzania dokumentów. Kontrakt wiadomości definiuje konkretne części komunikatów korzystające z protokołów SOAP i umożliwia dokładniejszą kontrolę nad częściami komunikatu, gdy współdziałanie wymaga takiej precyzji. Kontrakt usługi określa rzeczywiste podpisy metody usługi i jest dystrybuowany jako interfejs w jednym z obsługiwanych języków programowania, takich jak Visual Basic lub wizualizacji C#.  
+ Kontrakty definiują różne aspekty systemu komunikatów. W umowie dotyczącej danych opisano każdy parametr, który obejmuje każdy komunikat, który usługa może utworzyć lub wykorzystać. Parametry wiadomości są definiowane przez dokumenty języka definicji schematu XML (XSD), co umożliwia dowolnemu systemowi zrozumienie kodu XML do przetwarzania dokumentów. Kontrakt wiadomości definiuje konkretne części komunikatów korzystające z protokołów SOAP i umożliwia dokładniejszą kontrolę nad częściami komunikatu, gdy współdziałanie wymaga takiej precyzji. Kontrakt usługi określa rzeczywiste podpisy metody usługi i jest dystrybuowany jako interfejs w jednym z obsługiwanych języków programowania, takich jak Visual Basic lub Visual C#.  
   
  Zasady i powiązania określają warunki wymagane do komunikacji z usługą.  Na przykład powiązanie musi (co najmniej) określać używany transport (na przykład HTTP lub TCP) i kodowanie. Zasady obejmują wymagania dotyczące zabezpieczeń i inne warunki, które muszą zostać spełnione, aby komunikować się z usługą.  
   
@@ -45,7 +46,7 @@ Na poniższej ilustracji przedstawiono główne warstwy architektury Windows Com
   
  Usługi mogą być również *hostowane*lub uruchamiane w pliku wykonywalnym zarządzanym przez agenta zewnętrznego, takiego jak usługi IIS lub usługa aktywacji systemu Windows (was). Program umożliwia automatyczne Aktywowanie aplikacji WCF po wdrożeniu na komputerze z systemem. Usługi można również uruchamiać ręcznie jako pliki wykonywalne (. exe). Usługa może być również uruchamiana automatycznie jako usługa systemu Windows. Składniki modelu COM+ mogą być również hostowane jako usługi WCF.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Co to jest program Windows Communication Foundation](whats-wcf.md)
 - [Podstawowe pojęcia programu Windows Communication Foundation](fundamental-concepts.md)

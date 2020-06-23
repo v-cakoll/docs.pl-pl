@@ -1,21 +1,22 @@
 ---
 title: Konfigurowanie protokołów HTTP i HTTPS
+description: Dowiedz się, jak skonfigurować protokół HTTP/HTTPS, aby umożliwić komunikację z usługami i klientami WCF. Skonfiguruj rejestrację adresu URL i wyjątek zapory przy użyciu Netsh.exe.
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fbff78ff8e2c5c4fa73a56a3fdc15163596aa985
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336702"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245144"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 
-Usługi i klienci WCF mogą komunikować się za pośrednictwem protokołów HTTP i HTTPS. Ustawienia protokołu HTTP/HTTPS są konfigurowane przy użyciu Internet Information Services (IIS) lub przy użyciu narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w obszarze Ustawienia HTTP lub HTTPS usługi IIS, można skonfigurować w ramach usług IIS (za pomocą narzędzia inetmgr. exe). Jeśli usługa WCF jest samodzielna, ustawienia protokołu HTTP lub HTTPS są konfigurowane przy użyciu narzędzia wiersza polecenia.
+Usługi i klienci WCF mogą komunikować się za pośrednictwem protokołów HTTP i HTTPS. Ustawienia protokołu HTTP/HTTPS są konfigurowane przy użyciu Internet Information Services (IIS) lub przy użyciu narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w obszarze Ustawienia HTTP lub HTTPS usługi IIS, można skonfigurować w ramach usług IIS (za pomocą narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielna, ustawienia protokołu HTTP lub HTTPS są konfigurowane przy użyciu narzędzia wiersza polecenia.
 
-Aby skonfigurować rejestrację adresów URL i dodać wyjątek zapory dla adresu URL, który będzie używany przez usługę, należy określić co najmniej. Te ustawienia można skonfigurować za pomocą narzędzia Netsh. exe.
+Aby skonfigurować rejestrację adresów URL i dodać wyjątek zapory dla adresu URL, który będzie używany przez usługę, należy określić co najmniej. Te ustawienia można skonfigurować za pomocą narzędzia Netsh.exe.
 
 ## <a name="configuring-namespace-reservations"></a>Konfigurowanie rezerwacji przestrzeni nazw
 
@@ -23,7 +24,7 @@ Rezerwacja przestrzeni nazw przypisuje prawa dla części przestrzeni nazw HTTP 
 
 Działająca aplikacja może utworzyć podobne żądanie, aby dodać rejestracje przestrzeni nazw. Rejestracje i rezerwacje konkurują w przypadku części przestrzeni nazw. Rezerwacja może mieć pierwszeństwo przed rejestracją zgodnie z kolejnością rozwiązywania [między oświadczeniami przestrzeni nazw, które obejmują symbole wieloznaczne](/windows/desktop/Http/routing-incoming-requests). W takim przypadku rezerwacja blokuje uruchomioną aplikację z otrzymywania żądań.
 
-Poniższy przykład używa narzędzia Netsh. exe:
+Poniższy przykład używa narzędzia Netsh.exe:
 
 ```console
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
@@ -55,11 +56,11 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 ## <a name="other-configuration-settings"></a>Inne ustawienia konfiguracji
 
-W przypadku korzystania z <xref:System.ServiceModel.WSDualHttpBinding>połączenie klienta wykorzystuje wartości domyślne, które są zgodne z rezerwacjami przestrzeni nazw i Zaporą systemu Windows. W przypadku wybrania opcji dostosowania adresu podstawowego klienta podwójnego połączenia należy również skonfigurować te ustawienia protokołu HTTP na kliencie, aby odpowiadały nowemu adresowi.
+W przypadku korzystania <xref:System.ServiceModel.WSDualHttpBinding> z programu połączenie z klientem wykorzystuje wartości domyślne, które są zgodne z rezerwacjami przestrzeni nazw i Zaporą systemu Windows. W przypadku wybrania opcji dostosowania adresu podstawowego klienta podwójnego połączenia należy również skonfigurować te ustawienia protokołu HTTP na kliencie, aby odpowiadały nowemu adresowi.
 
-Interfejs API serwera HTTP zawiera niektóre zaawansowane ustawienia konfiguracji, które nie są dostępne za pośrednictwem usługi HttpCfg. Te ustawienia są przechowywane w rejestrze i stosowane do wszystkich aplikacji działających w systemach, które używają interfejsów API serwera HTTP. Aby uzyskać informacje na temat tych ustawień, zobacz [Ustawienia rejestru http. sys dla usług IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). Większość użytkowników nie musi zmieniać tych ustawień.
+Interfejs API serwera HTTP zawiera niektóre zaawansowane ustawienia konfiguracji, które nie są dostępne za pośrednictwem usługi HttpCfg. Te ustawienia są przechowywane w rejestrze i stosowane do wszystkich aplikacji działających w systemach, które używają interfejsów API serwera HTTP. Aby uzyskać informacje na temat tych ustawień, zobacz [Http.sys ustawienia rejestru dla usług IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). Większość użytkowników nie musi zmieniać tych ustawień.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - [Instrukcje: konfigurowanie portu z certyfikatem SSL](how-to-configure-a-port-with-an-ssl-certificate.md)

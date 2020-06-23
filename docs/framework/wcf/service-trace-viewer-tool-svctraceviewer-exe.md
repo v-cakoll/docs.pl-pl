@@ -1,13 +1,14 @@
 ---
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
+description: Funkcja Podgląd śledzenia usług umożliwia scalanie, wyświetlanie i filtrowanie komunikatów śledzenia w dzienniku, co umożliwia diagnozowanie, naprawianie i weryfikowanie problemów z usługą WCF.
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 543b0e714343cdb8078861ceb31e4f8035e20afd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0ad6094965291a965346522688a8334abbd4e6b3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321213"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244572"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 
@@ -17,7 +18,7 @@ Narzędzie Podgląd śledzenia usługi Windows Communication Foundation (WCF) u�
 
 Ślady diagnostyczne zawierają informacje, które pokazują, co dzieje się w całej operacji aplikacji. Jak nazywa się to, można wykonać operacje ze źródła do miejsca docelowego i również za pośrednictwem punktów pośrednich.
 
-Śledzenie można skonfigurować przy użyciu pliku konfiguracji aplikacji — plik Web. config dla aplikacji hostowanych w sieci Web lub pliku *nazwa_aplikacji*. config dla aplikacji samodzielnych. Oto przykład:
+Śledzenie można skonfigurować przy użyciu pliku konfiguracji aplikacji — Web.config dla aplikacji hostowanych w sieci Web lub pliku *nazwa_aplikacji*. config dla aplikacji samodzielnie hostowanych. Poniżej przedstawiono przykład:
 
 ```xml
 <system.diagnostics>
@@ -36,24 +37,24 @@ Narzędzie Podgląd śledzenia usługi Windows Communication Foundation (WCF) u�
 </system.diagnostics>
 ```
 
-W tym przykładzie określono nazwę i typ odbiornika śledzenia. Odbiornik ma nazwę `sdt`, a w polu Typ należy dodać odbiornik śledzenia standardowego .NET Framework (System. Diagnostics. XmlWriterTraceListener). Atrybut `initializeData` służy do ustawiania nazwy pliku dziennika dla tego odbiornika jako `SdrConfigExample.e2e`. W przypadku pliku dziennika można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
+W tym przykładzie określono nazwę i typ odbiornika śledzenia. Odbiornik ma nazwę `sdt` , a Standardowy odbiornik śledzenia .NET Framework (System.Diagnostics.XmlWriterTraceListener) jest dodawany jako typ. Ten `initializeData` atrybut służy do ustawiania nazwy pliku dziennika dla tego odbiornika `SdrConfigExample.e2e` . W przypadku pliku dziennika można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
 
 Przykład tworzy plik w katalogu głównym o nazwie SdrConfigExample. e2e. W przypadku używania podglądu śledzenia do otwierania pliku zgodnie z opisem w sekcji "Otwieranie i przeglądanie plików śledzenia WCF" można zobaczyć wszystkie wysłane komunikaty.
 
-Poziom śledzenia jest kontrolowany przez ustawienie `switchValue`. Dostępne poziomy śledzenia są opisane w poniższej tabeli.
+Poziom śledzenia jest kontrolowany przez `switchValue` ustawienie. Dostępne poziomy śledzenia są opisane w poniższej tabeli.
 
 |Poziom śledzenia|Opis|
 |-----------------|-----------------|
-|Krytyczny|-Rejestruje błędy i wpisy dziennika zdarzeń, a następnie śledzi informacje o korelacji. Poniżej przedstawiono kilka przykładów sytuacji, w których można użyć poziomu krytycznego:<br />-Twoja domena aplikacji powiodła się z powodu nieobsługiwanego wyjątku.<br />-Nie można uruchomić aplikacji.<br />-Komunikat, który spowodował błąd pochodzący z procesu MojaApl. exe.|
+|Krytyczne|-Rejestruje błędy i wpisy dziennika zdarzeń, a następnie śledzi informacje o korelacji. Poniżej przedstawiono kilka przykładów sytuacji, w których można użyć poziomu krytycznego:<br />-Twoja domena aplikacji powiodła się z powodu nieobsługiwanego wyjątku.<br />-Nie można uruchomić aplikacji.<br />-Komunikat, który spowodował błąd pochodzący z procesu MyApp.exe.|
 |Błąd|-Rejestruje wszystkie wyjątki. Poziomu błędu można użyć w następujących sytuacjach:<br />-Twój kod uległ awarii z powodu nieprawidłowego wyjątku rzutowania.<br />-"Nie można utworzyć punktu końcowego" powoduje niepowodzenie aplikacji podczas uruchamiania.|
 |Ostrzeżenie|-Istnieje warunek, który może spowodować błąd lub krytyczny błąd. Tego poziomu można użyć w następujących sytuacjach:<br />-Aplikacja otrzymuje więcej żądań, niż pozwala na to jej ustawienia ograniczania.<br />-Kolejka otrzymująca jest 98 procent skonfigurowanej pojemności.|
 |Informacje|— Komunikaty przydatne do monitorowania i diagnozowania stanu systemu, mierzenia wydajności lub profilowania. Te informacje można wykorzystać do planowania pojemności i zarządzania wydajnością. Tego poziomu można użyć w następujących sytuacjach:<br />-Wystąpił błąd, gdy wiadomość dotarła do domeny AppDomain i została przeprowadzona deserializacji.<br />-Wystąpił błąd podczas tworzenia powiązania HTTP.|
 |Pełny|— Śledzenie na poziomie debugowania zarówno dla kodu użytkownika, jak i obsługi. Ustaw ten poziom w następujący sposób:<br />— Nie masz pewności, która metoda w kodzie została wywołana w przypadku wystąpienia błędu.<br />-Masz skonfigurowany nieprawidłowy punkt końcowy i nie można uruchomić usługi, ponieważ wpis w magazynie rezerwacji jest zablokowany.|
 |ActivityTracing|Przepływ zdarzeń między działaniami przetwarzania i składnikami.<br /><br /> Na tym poziomie Administratorzy i deweloperzy mogą skorelować aplikacje w tej samej domenie aplikacji.<br /><br /> -Ślady dla granic działania: Uruchamianie/zatrzymywanie.<br />— Ślady dla transferów.|
 
- Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W przykładowej konfiguracji odbiornik ma nazwę `sdt` i odbiornik standardowego .NET Framework śledzenia (`System.Diagnostics.XmlWriterTraceListener`) jest dodawany jako typ. Użyj `initializeData`, aby ustawić nazwę pliku dziennika dla tego odbiornika. Ponadto można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
+ Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W przykładowej konfiguracji odbiornik ma nazwę, `sdt` a Standardowy odbiornik śledzenia .NET Framework ( `System.Diagnostics.XmlWriterTraceListener` ) jest dodawany jako typ. Użyj, `initializeData` Aby ustawić nazwę pliku dziennika dla tego odbiornika. Ponadto można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
 
-Począwszy od .NET Framework 4,8, kontrolki ComboBox w niektórych kompozycjach o dużym kontraście są wyświetlane w prawidłowym kolorze. Tę zmianę można wyłączyć, usuwając następujące ustawienie z pliku *svcTraceViewer. exe. config* :
+Począwszy od .NET Framework 4,8, kontrolki ComboBox w niektórych kompozycjach o dużym kontraście są wyświetlane w prawidłowym kolorze. Tę zmianę można wyłączyć, usuwając następujące ustawienie z pliku *svcTraceViewer.exe.config* :
 
 ```xml
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
@@ -75,14 +76,14 @@ Przeglądarka śledzenia usług obsługuje trzy typy plików:
 
 ##### <a name="to-open-a-trace-file"></a>Aby otworzyć plik śledzenia
 
-1. Uruchom podgląd śledzenia usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.
+1. Uruchom podgląd śledzenia usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz polecenie `SvcTraceViewer.exe` .
 
 > [!NOTE]
 > Narzędzie Podgląd śledzenia usług można skojarzyć z dwoma typami plików:. svclog i. stvproj. Aby zarejestrować i wyrejestrować rozszerzenia plików, można użyć dwóch parametrów w wierszu polecenia.
 >
-> /Register: Zarejestruj skojarzenie rozszerzeń plików ". svclog" i ". stvproj" z SvcTraceViewer. exe
+> /Register: Zarejestruj skojarzenie rozszerzeń plików ". svclog" i ". stvproj" z SvcTraceViewer.exe
 >
-> /Unregister: Wyrejestrowywanie skojarzenia rozszerzeń plików ". svclog" i ". stvproj" z plikiem SvcTraceViewer. exe
+> /Unregister: Wyrejestruj skojarzenie rozszerzeń plików ". svclog" i ". stvproj" z SvcTraceViewer.exe
 
 1. Po uruchomieniu podglądu śledzenia usług kliknij pozycję **plik** , a następnie wskaż polecenie **Otwórz**. Przejdź do lokalizacji, w której są przechowywane pliki śledzenia.
 
@@ -291,11 +292,11 @@ Możesz kliknąć istniejący ślad i utworzyć filtr oparty na strukturze śled
 
 2. Kliknij przycisk **Utwórz filtr niestandardowy** znajdujący się w górnej części okienka śledzenia.
 
-3. W wyświetlonym oknie dialogowym wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID`. Możesz również podać opis filtra.
+3. W wyświetlonym oknie dialogowym wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID` . Możesz również podać opis filtra.
 
-4. Widok drzewa po lewej stronie wyświetla strukturę rekordu śledzenia wybranego w kroku 1. Przejdź do elementu, dla którego chcesz utworzyć warunek. W tym przykładzie przejdź do ThreadID, który ma znajdować się w węźle XPath: /E2ETraceEvent/System/Execution/@ThreadID. Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.
+4. Widok drzewa po lewej stronie wyświetla strukturę rekordu śledzenia wybranego w kroku 1. Przejdź do elementu, dla którego chcesz utworzyć warunek. W tym przykładzie przejdź do ThreadID, który ma znajdować się w węźle XPath: /E2ETraceEvent/System/Execution/@ThreadID . Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.
 
-5. Zmień wartość pola Parameter dla warunku ThreadID z none na "{0}". Ten krok umożliwia skonfigurowanie wartości ThreadID podczas stosowania filtru. (Zobacz sekcję jak zastosować filtr) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.
+5. Zmień wartość pola Parameter dla warunku ThreadID z brak na " {0} ". Ten krok umożliwia skonfigurowanie wartości ThreadID podczas stosowania filtru. (Zobacz sekcję jak zastosować filtr) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.
 
 6. Kliknij przycisk **OK** , aby utworzyć filtr.
 
@@ -322,7 +323,7 @@ Po utworzeniu filtru niestandardowego jest on dostępny za pośrednictwem paska 
 
 2. Kliknij pozycję **Filtruj teraz**i obserwuj wynik operacji.
 
-Jeśli filtr używa wielu parametrów, wprowadź je za pomocą znaku ";" jako separatora w polu **Znajdź** . Na przykład następujący ciąg definiuje 3 parametry: ' 1; findValue; text '. Przeglądarka stosuje wartość "1" do parametru {0} filtru. wartości "findValue" i "text" są stosowane odpowiednio do {1} i {2}.
+Jeśli filtr używa wielu parametrów, wprowadź je za pomocą znaku ";" jako separatora w polu **Znajdź** . Na przykład następujący ciąg definiuje 3 parametry: ' 1; findValue; text '. Przeglądarka stosuje wartość "1" do {0} parametru filtru. "findValue" i "text" są stosowane do {1} i {2} odpowiednio.
 
 ###### <a name="sharing-custom-filters"></a>Udostępnianie filtrów niestandardowych
 
@@ -451,53 +452,53 @@ Poniżej znajduje się lista ikon używanych przez narzędzie Podgląd śledzeni
 
 |Ikona|Opis|
 |----------|-----------------|
-|![Ostrzeżenie śledzenia](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Śledzenie ostrzeżeń: ślad, który jest emitowany na poziomie ostrzeżenia|
+|![Śledzenie ostrzeżeń](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Śledzenie ostrzeżeń: ślad, który jest emitowany na poziomie ostrzeżenia|
 |![Śledzenie błędów](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Śledzenie błędów: ślad, który jest emitowany na poziomie błędu.|
 |![Śledzenie rozpoczęcia działania:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Śledzenie rozpoczęcia działania: ślad, który oznacza początek działania. Zawiera nazwę działania. Jako projektant aplikacji lub deweloper, należy zdefiniować jedno śledzenie uruchamiania działań dla każdego procesu lub wątku.<br /><br /> Jeśli identyfikator działania jest propagowany między źródłami śledzenia dla korelacji śledzenia, można zobaczyć wiele uruchomień dla tego samego identyfikatora działania (jeden na źródło śledzenia). Śledzenie uruchamiania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
 |![Śledzenie zatrzymania działania](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Śledzenie zatrzymania działania: ślad, który oznacza koniec działania. . Zawiera nazwę działania. Jako projektant aplikacji lub deweloper należy zdefiniować jeden ślad zatrzymania działania dla każdego identyfikatora działania dla źródła śledzenia. Po zatrzymaniu działania przez to źródło śledzenia nie są wyświetlane żadne ślady z danego źródła śledzenia, z wyjątkiem tego, czy stopień szczegółowości czasu śledzenia nie jest wystarczająco mały. W takim przypadku dwa ślady z tym samym czasem, łącznie z zatrzymaniem, mogą zostać przeplatane po wyświetleniu. Jeśli identyfikator działania jest propagowany między źródłami śledzenia dla korelacji śledzenia, można zobaczyć wiele zatrzymań dla tego samego identyfikatora działania (jeden na źródło śledzenia). Śledzenie zatrzymania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|(./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32") ![śledzenia wstrzymania działania]|Śledzenie wstrzymania działania: ślad, który oznacza czas wstrzymania działania. Żadne ślady nie są emitowane w zawieszonej aktywności do momentu wznowienia działania. Działanie zawieszone oznacza, że żadne przetwarzanie nie odbywa się w tym działaniu w zakresie źródła śledzenia. Śledzenie zawieszania/wznawiania jest przydatne do profilowania. Śledzenie wstrzymania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![Śledzenie wstrzymania działania](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Śledzenie wstrzymania działania: ślad, który oznacza czas wstrzymania działania. Żadne ślady nie są emitowane w zawieszonej aktywności do momentu wznowienia działania. Działanie zawieszone oznacza, że żadne przetwarzanie nie odbywa się w tym działaniu w zakresie źródła śledzenia. Śledzenie zawieszania/wznawiania jest przydatne do profilowania. Śledzenie wstrzymania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
 |![Śledzenie wznowienia działania](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4E0A-9988-cdc2f7030f17")|Śledzenie wznawiania działania: ślad oznaczający czas wznowienia działania po jego wstrzymaniu. Ślady mogą być emitowane ponownie w ramach tego działania. Śledzenie zawieszania/wznawiania jest przydatne do profilowania. Ślad wznawiania jest emitowany, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "B2d9850e-f362-4ae5-bb8d-9f6f3ca036a5") transferu|Transfer: ślad, który jest emitowany, gdy przepływ kontroli logicznej jest transferowany z jednego działania do innego. Działanie, z którego pochodzi transfer, może nadal wykonywać pracę równolegle do działania, do którego przejdzie transfer. Śledzenie transferu jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Transfer z](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Prześlij z: ślad, który definiuje transfer z innego działania do bieżącego działania.|
+|![Transfer](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transfer: ślad, który jest emitowany, gdy przepływ kontroli logicznej jest transferowany z jednego działania do innego. Działanie, z którego pochodzi transfer, może nadal wykonywać pracę równolegle do działania, do którego przejdzie transfer. Śledzenie transferu jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![Przenieś z](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Prześlij z: ślad, który definiuje transfer z innego działania do bieżącego działania.|
 |![Przenieś do](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Prześlij do: ślad, który definiuje transfer przepływu sterowania logicznego z bieżącego działania do innego działania.|
 
 ### <a name="wcf-traces"></a>Ślady WCF
 
 |Ikona|Opis|
 |----------|-----------------|
-|(./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197") ![śledzenia dziennika komunikatów]|Śledzenie dziennika komunikatów: ślad, który jest emitowany, gdy komunikat WCF jest rejestrowany przez funkcję rejestrowania komunikatów, gdy włączone jest źródło śledzenia `System.ServiceModel.MessageLogging`. Kliknięcie tego śladu wyświetla komunikat. Istnieją cztery konfigurowalne punkty rejestrowania dla wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, które mogą być również określane przez atrybut `messageSource` w śladie dziennika komunikatów.|
-|![Komunikat](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c") śledzenia|Komunikat otrzymany ślad: ślad, który jest emitowany po odebraniu komunikatu WCF, jeśli źródło śledzenia `System.ServiceModel` jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
-|![Wysłany komunikat](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4C12-9405-677e995ac387") śledzenia|Komunikat wysłany do śledzenia: ślad, który jest emitowany, gdy zostanie wysłany komunikat WCF, jeśli źródło śledzenia `System.ServiceModel` jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
+|![Śledzenie dziennika komunikatów](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Śledzenie dziennika komunikatów: ślad, który jest emitowany, gdy komunikat WCF jest rejestrowany przez funkcję rejestrowania komunikatów, gdy `System.ServiceModel.MessageLogging` Źródło śledzenia jest włączone. Kliknięcie tego śladu wyświetla komunikat. Istnieją cztery konfigurowalne punkty rejestrowania dla wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, które mogą być również określone przez `messageSource` atrybut w wyniku śledzenia dziennika komunikatów.|
+|![Śledzenie odebrało komunikat](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Komunikat otrzymany ślad: ślad, który jest emitowany po odebraniu komunikatu WCF, jeśli `System.ServiceModel` Źródło śledzenia jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
+|![Komunikat wysłany do śledzenia](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Komunikat wysłany do śledzenia: ślad, który jest emitowany podczas wysyłania komunikatu WCF, gdy `System.ServiceModel` Źródło śledzenia jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
 
-### <a name="activities"></a>Kategoria Activities
+### <a name="activities"></a>Działania
 
 |Ikona|Opis|
 |----------|-----------------|
-|![](./media/wcfc-defaultactivityc.gif "Wcfc_defaultActivityc") działania|Działanie: wskazuje, że bieżące działanie jest działaniem ogólnym.|
-|(./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9") ![działania głównego]|Działanie główne: wskazuje działanie główne procesu.|
+|![Działanie](./media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: wskazuje, że bieżące działanie jest działaniem ogólnym.|
+|![Działanie główne](./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Działanie główne: wskazuje działanie główne procesu.|
 
 ### <a name="wcf-activities"></a>Działania WCF
 
 |Ikona|Opis|
 |----------|-----------------|
-|(./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1") ![działania środowiska]|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka hosta lub klienta WCF. W tym działaniu pojawią się błędy, które wystąpiły w trakcie tych faz.|
-|(./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "D7b135f6-ec7d-45d7-9913-037ab30e4c26") ![aktywności nasłuchiwania]|Działanie nasłuchiwania: działanie, które rejestruje ślady związane z odbiornikiem. Wewnątrz tego działania możemy wyświetlać informacje o odbiorniku i żądania połączeń.|
-|(./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e") ![aktywności odbierania bajtów]|Aktywność odbierania bajtów: działanie grupujące wszystkie ślady związane z odbieraniem przychodzących bajtów w ramach połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do skorelowania z działaniami transportowymi, które propagują ich identyfikator działania, takich jak http. sys. W tym działaniu będą wyświetlane błędy połączeń, takie jak przerwania.|
+|![Działanie środowiska](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka hosta lub klienta WCF. W tym działaniu pojawią się błędy, które wystąpiły w trakcie tych faz.|
+|![Działanie nasłuchiwania](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Działanie nasłuchiwania: działanie, które rejestruje ślady związane z odbiornikiem. Wewnątrz tego działania możemy wyświetlać informacje o odbiorniku i żądania połączeń.|
+|![Aktywność odbierania bajtów](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Aktywność odbierania bajtów: działanie grupujące wszystkie ślady związane z odbieraniem przychodzących bajtów w ramach połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do skorelowania z działaniami transportu, które propagują ich identyfikator działania, np. http.sys. W tym działaniu będą wyświetlane błędy połączeń, takie jak przerwania.|
 |![Proces działania komunikatu](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Działanie przetwarzania komunikatu: działanie grupujące dane śledzenia związane z tworzeniem komunikatów WCF. Błędy spowodowane złą kopertą lub źle sformułowany komunikat pojawi się w tym działaniu. Wewnątrz tego działania możemy sprawdzić nagłówki wiadomości, aby sprawdzić, czy identyfikator działania został rozpropagowany z obiektu wywołującego. Jeśli ta wartość jest równa true, w przypadku przechodzenia do działania dotyczącego akcji (kolejnej ikony) można także przypisać do tego działania propagowany identyfikator działania dla korelacji między ślady wywołujące i wywoływane.|
-|(./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197") ![śledzenia dziennika komunikatów]|Działanie działania procesu: działanie grupujące wszystkie ślady związane z żądaniem programu WCF w dwóch punktach końcowych. Jeśli `propagateActivity` jest ustawiona na `true` dla obu punktów końcowych w konfiguracji, wszystkie ślady z obu punktów końcowych zostaną scalone w jedno działanie dla bezpośredniej korelacji. Takie działanie będzie zawierać błędy spowodowane transportem lub przetwarzaniem zabezpieczeń, rozszerzając do granicy kodu użytkownika i z powrotem (Jeśli odpowiedź istnieje).|
+|![Śledzenie dziennika komunikatów](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Działanie działania procesu: działanie grupujące wszystkie ślady związane z żądaniem programu WCF w dwóch punktach końcowych. Jeśli `propagateActivity` jest ustawiona na `true` oba punkty końcowe w konfiguracji, wszystkie ślady z obu punktów końcowych są scalane w jedno działanie dla bezpośredniej korelacji. Takie działanie będzie zawierać błędy spowodowane transportem lub przetwarzaniem zabezpieczeń, rozszerzając do granicy kodu użytkownika i z powrotem (Jeśli odpowiedź istnieje).|
 |![Proces działania komunikatu](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Działanie wykonywania kodu użytkownika: działanie grupujące dane śledzenia kodu użytkownika na potrzeby przetwarzania żądania.|
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Jeśli użytkownik nie ma uprawnień do zapisu w rejestrze, zostanie wyświetlony następujący komunikat o błędzie "w przypadku użycia polecenia" `svctraceviewer /register` "Podgląd śledzenia usługi firmy Microsoft nie został zarejestrowany w systemie, gdy do zarejestrowania tego narzędzia jest używane polecenie" {0} ". W takim przypadku należy zalogować się przy użyciu konta, które ma dostęp do zapisu w rejestrze.
+Jeśli nie masz uprawnień do zapisu w rejestrze, zostanie wyświetlony następujący komunikat o błędzie "Usługa Microsoft Service Trace Viewer nie została zarejestrowana w systemie" w przypadku użycia `svctraceviewer /register` polecenia "" w celu zarejestrowania narzędzia. W takim przypadku należy zalogować się przy użyciu konta, które ma dostęp do zapisu w rejestrze.
 
-Ponadto narzędzie Podgląd śledzenia usług zapisuje niektóre ustawienia (na przykład filtry niestandardowe i opcje filtru) do pliku SvcTraceViewer. exe. Settings w folderze zestawu. Jeśli nie masz uprawnienia do odczytu pliku, możesz nadal uruchamiać narzędzie, ale nie można załadować ustawień.
+Ponadto narzędzie Podgląd śledzenia usług zapisuje niektóre ustawienia (na przykład filtry niestandardowe i opcje filtru) do pliku SvcTraceViewer.exe. Settings w folderze zestawu. Jeśli nie masz uprawnienia do odczytu pliku, możesz nadal uruchamiać narzędzie, ale nie można załadować ustawień.
 
 Jeśli zostanie wyświetlony komunikat o błędzie "Wystąpił nieznany błąd podczas przetwarzania co najmniej jednego śladu" podczas otwierania pliku. etl, oznacza to, że format pliku ETL jest nieprawidłowy.
 
 Jeśli otworzysz dziennik śledzenia utworzony przy użyciu arabskiej systemu operacyjnego, możesz zauważyć, że filtr czasu nie działa. Na przykład rok 2005 odpowiada roku 1427 w kalendarzu arabskim. Jednak zakres czasu obsługiwany przez filtr narzędzia Podgląd śledzenia usług nie obsługuje daty wcześniejszej niż 1752. Może to oznaczać, że nie można wybrać prawidłowej daty w filtrze. Aby rozwiązać ten problem, można utworzyć filtr niestandardowy (**Widok/filtry niestandardowe**) przy użyciu wyrażenia XPath, aby uwzględnić określony zakres czasu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Konfigurowanie śledzenia](./diagnostics/tracing/configuring-tracing.md)

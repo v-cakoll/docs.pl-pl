@@ -1,5 +1,6 @@
 ---
 title: Określanie adresu punktu końcowego
+description: Dowiedz się więcej o adresie punktu końcowego, jednej części elementu ServiceEndpoint w programie WCF. Cała komunikacja z usługą WCF odbywa się za pomocą punktów końcowych.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441022"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245988"
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 
@@ -42,13 +43,13 @@ W przypadku hostowania za pomocą usług IIS nie można <xref:System.ServiceMode
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definiowanie adresów punktów końcowych w konfiguracji
 
-Aby zdefiniować punkt końcowy w pliku konfiguracji, użyj elementu [ \<>punktu końcowego](../configure-apps/file-schema/wcf/endpoint-element.md) .
+Aby zdefiniować punkt końcowy w pliku konfiguracji, użyj [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) elementu.
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-Gdy <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> wywoływana jest metoda (to oznacza, że gdy aplikacja hostingu próbuje uruchomić usługę), system szuka elementu [ \<>usługi](../configure-apps/file-schema/wcf/service.md) z atrybutem nazwy określającym wartość "UE. Przykłady. HelloService ". W przypadku znalezienia elementu [ \<>usługi](../configure-apps/file-schema/wcf/service.md) system ładuje określoną klasę i tworzy punkty końcowe przy użyciu definicji punktów końcowych dostępnych w pliku konfiguracji. Ten mechanizm pozwala ładować i uruchamiać usługę z dwoma wierszami kodu przy zachowaniu powiązania i adresowania informacji z kodu. Zaletą tego podejścia jest to, że te zmiany mogą być wykonywane bez konieczności ponownego kompilowania lub wdrażania aplikacji.
+Gdy <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> wywoływana jest metoda (to jest, gdy aplikacja hostingu próbuje uruchomić usługę), system szuka [\<service>](../configure-apps/file-schema/wcf/service.md) elementu z atrybutem nazwy określającym wartość "UE. Przykłady. HelloService ". Jeśli [\<service>](../configure-apps/file-schema/wcf/service.md) element zostanie znaleziony, system ładuje określoną klasę i tworzy punkty końcowe przy użyciu definicji punktów końcowych dostępnych w pliku konfiguracji. Ten mechanizm pozwala ładować i uruchamiać usługę z dwoma wierszami kodu przy zachowaniu powiązania i adresowania informacji z kodu. Zaletą tego podejścia jest to, że te zmiany mogą być wykonywane bez konieczności ponownego kompilowania lub wdrażania aplikacji.
 
-Opcjonalne nagłówki są deklarowane w [ \< nagłówkach>](../configure-apps/file-schema/wcf/headers-element.md). Poniżej przedstawiono przykładowe elementy służące do określania punktów końcowych dla usługi w pliku konfiguracji, który odróżnia dwa nagłówki: klienci "Gold" od `http://tempuri1.org/` i "standardowe" klientów programu `http://tempuri2.org/` . Klient wywołujący tę usługę musi mieć odpowiednie [ \< nagłówki>](../configure-apps/file-schema/wcf/headers-element.md) w pliku konfiguracji.
+Opcjonalne nagłówki są deklarowane w [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) . Poniżej przedstawiono przykładowe elementy służące do określania punktów końcowych dla usługi w pliku konfiguracji, który odróżnia dwa nagłówki: klienci "Gold" od `http://tempuri1.org/` i "standardowe" klientów programu `http://tempuri2.org/` . Klient wywołujący tę usługę musi mieć odpowiednie [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) w jego pliku konfiguracji.
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
@@ -86,7 +87,7 @@ Jeśli w kodzie lub w konfiguracji nie określono żadnych punktów końcowych, 
 
 Jeśli punkty końcowe są podane jawnie, można nadal dodawać domyślne punkty końcowe, wywołując <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> dla <xref:System.ServiceModel.ServiceHost> przed wywołaniem metody <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> . Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [Uwierzytelnianie i tożsamość usług](./feature-details/service-identity-and-authentication.md)

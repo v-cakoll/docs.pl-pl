@@ -1,5 +1,6 @@
 ---
 title: Typy kolekcji w kontraktach danych
+description: Dowiedz się, jak model kontraktu danych traktuje kolekcje w .NET Framework oraz jak WCF obsługuje serializację danych dla typów kolekcji.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579752"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245183"
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 
@@ -255,7 +256,7 @@ Aby wybrać typy kolekcji do wygenerowania, należy przekazać listę typów kol
 Gdy istnieją odwołania do typów ogólnych, muszą one być w pełni otwarte ogólne lub w pełni zamknięte typy ogólne.
 
 > [!NOTE]
-> W przypadku korzystania z narzędzia Svcutil. exe to odwołanie można wykonać za pomocą przełącznika wiersza polecenia **/CollectionType** (krótka wersja: **/CT**). Należy pamiętać, że należy również określić zestaw dla typów kolekcji, do których istnieją odwołania, przy użyciu przełącznika **/Reference** (krótka wersja: **/r**). Jeśli typ jest rodzajowy, musi następować cudzysłów tylny oraz liczbę parametrów ogólnych. Cudzysłowu wstecznego ( \` ) nie należy mylić z pojedynczym znakiem cudzysłowu ('). Można określić wiele typów kolekcji, do których istnieją odwołania, za pomocą przełącznika **/CollectionType** więcej niż jeden raz.
+> Korzystając z narzędzia Svcutil.exe, to odwołanie można wykonać za pomocą przełącznika wiersza polecenia **/CollectionType** (krótka wersja: **/CT**). Należy pamiętać, że należy również określić zestaw dla typów kolekcji, do których istnieją odwołania, przy użyciu przełącznika **/Reference** (krótka wersja: **/r**). Jeśli typ jest rodzajowy, musi następować cudzysłów tylny oraz liczbę parametrów ogólnych. Cudzysłowu wstecznego ( \` ) nie należy mylić z pojedynczym znakiem cudzysłowu ('). Można określić wiele typów kolekcji, do których istnieją odwołania, za pomocą przełącznika **/CollectionType** więcej niż jeden raz.
 
 Na przykład, aby spowodować, że wszystkie listy zostaną zaimportowane jako ogólne <xref:System.Collections.Generic.List%601> .
 

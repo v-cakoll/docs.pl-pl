@@ -1,5 +1,6 @@
 ---
 title: Organizowanie domyślne dotyczące ciągów
+description: Zapoznaj się z domyślnym zachowaniem organizowania ciągów w interfejsach, wywołaniu platformy, strukturach, & buforów ciągów o stałej długości w programie .NET.
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904120"
 ---
 # <a name="default-marshaling-for-strings"></a>Organizowanie domyślne dotyczące ciągów
 
-Obie klasy <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> mają podobne zachowanie organizowania.
+Obie <xref:System.String?displayProperty=nameWithType> klasy i <xref:System.Text.StringBuilder?displayProperty=nameWithType> mają podobne zachowanie organizowania.
 
-Ciągi są organizowane jako typ stylu `BSTR` com lub jako ciąg zakończony znakiem null (tablica znaków, która kończy się znakiem null). Znaki w ciągu mogą być organizowane jako Unicode (domyślnie w systemach Windows) lub ANSI.
+Ciągi są organizowane jako typ stylu COM `BSTR` lub jako ciąg zakończony znakiem null (tablica znaków, która kończy się znakiem null). Znaki w ciągu mogą być organizowane jako Unicode (domyślnie w systemach Windows) lub ANSI.
 
 ## <a name="strings-used-in-interfaces"></a>Ciągi używane w interfejsach
 
@@ -27,11 +28,11 @@ W poniższej tabeli przedstawiono opcje kierowania dla typu danych ciągu, któr
 
 |Typ wyliczenia|Opis niezarządzanego formatu|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr`wartooć|Styl `BSTR` com o stałej długości i znakach Unicode.|
+|`UnmanagedType.BStr`wartooć|Styl COM `BSTR` o stałej długości i znakach Unicode.|
 |`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zakończonych znakiem null.|
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonych wartością null.|
 
-Ta tabela ma zastosowanie <xref:System.String>do. W <xref:System.Text.StringBuilder>przypadku opcji Jedynymi dozwolonymi `UnmanagedType.LPStr` opcjami są i `UnmanagedType.LPWStr`.
+Ta tabela ma zastosowanie do <xref:System.String> . W przypadku <xref:System.Text.StringBuilder> opcji Jedynymi dozwolonymi opcjami są `UnmanagedType.LPStr` i `UnmanagedType.LPWStr` .
 
 Poniższy przykład przedstawia ciągi zadeklarowane w `IStringWorker` interfejsie.
 
@@ -86,18 +87,18 @@ W poniższej tabeli wymieniono opcje kierowania dla ciągów, które są organiz
 
 |Typ wyliczenia|Opis niezarządzanego formatu|
 |----------------------|-------------------------------------|
-|`UnmanagedType.AnsiBStr`|Styl `BSTR` com z prefiksem o stałej długości i znaków ANSI.|
-|`UnmanagedType.BStr`|Styl `BSTR` com o stałej długości i znakach Unicode.|
+|`UnmanagedType.AnsiBStr`|Styl COM `BSTR` z prefiksem o stałej długości i znaków ANSI.|
+|`UnmanagedType.BStr`|Styl COM `BSTR` o stałej długości i znakach Unicode.|
 |`UnmanagedType.LPStr`wartooć|Wskaźnik do tablicy znaków ANSI zakończonych znakiem null.|
 |`UnmanagedType.LPTStr`|Wskaźnik do tablicy zakończonych znakiem NULL znaków zależnych od platformy.|
 |`UnmanagedType.LPUTF8Str`|Wskaźnik do tablicy kodowanej za pomocą wartości NULL znaków zakodowanych w formacie UTF-8.|
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonych wartością null.|
-|`UnmanagedType.TBStr`|Styl `BSTR` com ze wstępnie ustaloną długością i znakami zależnymi od platformy.|
+|`UnmanagedType.TBStr`|Styl COM ze wstępnie `BSTR` ustaloną długością i znakami zależnymi od platformy.|
 |`VBByRefStr`|Wartość, która umożliwia Visual Basic .NET, aby zmienić ciąg w kodzie niezarządzanym i mieć wyniki odzwierciedlone w kodzie zarządzanym. Ta wartość jest obsługiwana tylko w przypadku wywołania platformy. Jest to wartość domyślna w Visual Basic dla `ByVal` ciągów.|
 
-Ta tabela ma zastosowanie <xref:System.String>do. W <xref:System.Text.StringBuilder>przypadku opcji Jedynymi dozwolonymi `LPStr`opcjami `LPTStr`są `LPWStr`,, i.
+Ta tabela ma zastosowanie do <xref:System.String> . W przypadku <xref:System.Text.StringBuilder> opcji Jedynymi dozwolonymi opcjami są `LPStr` , `LPTStr` , i `LPWStr` .
 
-W poniższej definicji typu przedstawiono poprawne użycie `MarshalAsAttribute` wywołań wywołania wywołania platformy.
+W poniższej definicji typu przedstawiono poprawne użycie wywołań wywołania `MarshalAsAttribute` wywołania platformy.
 
 ```csharp
 class StringLibAPI
@@ -140,20 +141,20 @@ End Class
 
 ## <a name="strings-used-in-structures"></a>Ciągi używane w strukturach
 
-Ciągi są prawidłowymi elementami członkowskimi struktur; jednak <xref:System.Text.StringBuilder> bufory są nieprawidłowe w strukturach. W poniższej tabeli przedstawiono opcje kierowania dla typu <xref:System.String> danych, gdy typ jest zorganizowany jako pole. Ten <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut zawiera kilka <xref:System.Runtime.InteropServices.UnmanagedType> wartości wyliczenia, które umożliwiają kierowanie ciągów do pola.
+Ciągi są prawidłowymi elementami członkowskimi struktur; jednak <xref:System.Text.StringBuilder> bufory są nieprawidłowe w strukturach. W poniższej tabeli przedstawiono opcje kierowania dla <xref:System.String> typu danych, gdy typ jest zorganizowany jako pole. Ten <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut zawiera kilka <xref:System.Runtime.InteropServices.UnmanagedType> wartości wyliczenia, które umożliwiają kierowanie ciągów do pola.
 
 |Typ wyliczenia|Opis niezarządzanego formatu|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr`|Styl `BSTR` com o stałej długości i znakach Unicode.|
+|`UnmanagedType.BStr`|Styl COM `BSTR` o stałej długości i znakach Unicode.|
 |`UnmanagedType.LPStr`wartooć|Wskaźnik do tablicy znaków ANSI zakończonych znakiem null.|
 |`UnmanagedType.LPTStr`|Wskaźnik do tablicy zakończonych znakiem NULL znaków zależnych od platformy.|
 |`UnmanagedType.LPUTF8Str`|Wskaźnik do tablicy kodowanej za pomocą wartości NULL znaków zakodowanych w formacie UTF-8.|
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonych wartością null.|
 |`UnmanagedType.ByValTStr`|Tablica znaków o stałej długości; typ tablicy jest określany przez zestaw znaków struktury zawierającej.|
 
-`ByValTStr` Typ jest używany w przypadku wbudowanych tablic znaków o stałej długości, które pojawiają się w obrębie struktury. Inne typy są stosowane do odwołań do ciągów zawartych w strukturach, które zawierają wskaźniki do ciągów.
+`ByValTStr`Typ jest używany w przypadku wbudowanych tablic znaków o stałej długości, które pojawiają się w obrębie struktury. Inne typy są stosowane do odwołań do ciągów zawartych w strukturach, które zawierają wskaźniki do ciągów.
 
-`CharSet` Argument <xref:System.Runtime.InteropServices.StructLayoutAttribute> , który jest stosowany do struktury zawierającej, określa format znaków ciągów w strukturach. Następujące przykładowe struktury zawierają odwołania do ciągów i ciągi śródwierszowe oraz znaki ANSI, Unicode i. Reprezentacja tych struktur w bibliotece typów jest pokazana w następującym kodzie języka C++:
+`CharSet`Argument <xref:System.Runtime.InteropServices.StructLayoutAttribute> , który jest stosowany do struktury zawierającej, określa format znaków ciągów w strukturach. Następujące przykładowe struktury zawierają odwołania do ciągów i ciągi śródwierszowe oraz znaki ANSI, Unicode i. Reprezentacja tych struktur w bibliotece typów jest pokazana w następującym kodzie języka C++:
 
 ```cpp
 struct StringInfoA
@@ -230,9 +231,9 @@ End Structure
 
 W pewnych okolicznościach bufor znaków o stałej długości musi być przekazywać do kodu niezarządzanego w celu manipulowania. Po prostu przekazanie ciągu nie działa w tym przypadku, ponieważ element wywoływany nie może modyfikować zawartości przekazywanego buforu. Nawet jeśli ciąg jest przekazywane przez odwołanie, nie ma możliwości zainicjowania buforu do danego rozmiaru.
 
-Rozwiązaniem jest przekazanie <xref:System.Text.StringBuilder> buforu jako argumentu zamiast <xref:System.String>. `StringBuilder` Można wycofać odwołanie i zmodyfikować go przez wywoływany, pod warunkiem, że nie przekracza on pojemności `StringBuilder`. Można go również zainicjować na stałą długość. Na przykład, jeśli zainicjujesz `StringBuilder` bufor do pojemności `N`, organizator udostępnia bufor o rozmiarze (`N`+ 1). Konta + 1 dla faktu, że niezarządzany ciąg ma terminator o wartości `StringBuilder` null, a nie.
+Rozwiązaniem jest przekazanie <xref:System.Text.StringBuilder> buforu jako argumentu zamiast <xref:System.String> . `StringBuilder`Można wycofać odwołanie i zmodyfikować go przez wywoływany, pod warunkiem, że nie przekracza on pojemności `StringBuilder` . Można go również zainicjować na stałą długość. Na przykład, jeśli zainicjujesz `StringBuilder` bufor do pojemności `N` , organizator udostępnia bufor o rozmiarze ( `N` + 1). Konta + 1 dla faktu, że niezarządzany ciąg ma terminator o wartości null, a nie `StringBuilder` .
 
-Na przykład funkcja Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API (zdefiniowana w *Winuser. h*) wymaga, aby obiekt wywołujący przeszedł bufor znaków o stałej długości, do którego funkcja zapisuje tekst okna. `LpString`wskazuje bufor rozmiaru `nMaxCount`przydzieloną przez wywołującego. Obiekt wywołujący oczekuje na przydzielenie buforu i ustawienie `nMaxCount` argumentu na rozmiar przydzielonego buforu. W poniższym przykładzie pokazano deklarację `GetWindowText` funkcji, zgodnie z definicją w *Winuser. h*.
+Na przykład [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) Funkcja Windows API (zdefiniowana w *Winuser. h*) wymaga, aby obiekt wywołujący przeszedł bufor znaków o stałej długości, do którego funkcja zapisuje tekst okna. `LpString`wskazuje bufor rozmiaru przydzieloną przez wywołującego `nMaxCount` . Obiekt wywołujący oczekuje na przydzielenie buforu i ustawienie `nMaxCount` argumentu na rozmiar przydzielonego buforu. W poniższym przykładzie pokazano `GetWindowText` deklarację funkcji, zgodnie z definicją w *Winuser. h*.
 
 ```cpp
 int GetWindowText(
@@ -242,7 +243,7 @@ int GetWindowText(
 );
 ```
 
-`StringBuilder` Można wycofać odwołanie i zmodyfikować go przez wywoływany, pod warunkiem, że nie przekracza on pojemności `StringBuilder`. Poniższy przykład kodu demonstruje, jak `StringBuilder` można zainicjować o stałej długości.
+`StringBuilder`Można wycofać odwołanie i zmodyfikować go przez wywoływany, pod warunkiem, że nie przekracza on pojemności `StringBuilder` . Poniższy przykład kodu demonstruje, jak `StringBuilder` można zainicjować o stałej długości.
 
 ```csharp
 using System;

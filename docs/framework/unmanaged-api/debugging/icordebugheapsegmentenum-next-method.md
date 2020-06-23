@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904276"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [COR_HEAPOBJECT](cor-heapobject-structure.md) zawierających informacje o regionach pamięci zarządzanej sterty.  
+Pobiera określoną liczbę wystąpień [COR_SEGMENT](cor-segment-structure.md) zawierających informacje o regionach pamięci zarządzanej sterty.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  podczas Liczba segmentów, które mają zostać pobrane.  
   
  segmenty  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_HEAPOBJECT](cor-heapobject-structure.md) , który zawiera informacje o regionie pamięci w zarządzanym stosie.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_SEGMENT](cor-segment-structure.md) , który zawiera informacje o regionie pamięci w zarządzanym stosie.  
   
  pceltFetched  
- określoną Wskaźnik do liczby obiektów [COR_HEAPOBJECT](cor-heapobject-structure.md) faktycznie zwróconych w `segments` . Ta wartość może być równa `null` `celt` 1.  
+ określoną Wskaźnik do liczby obiektów [COR_SEGMENT](cor-segment-structure.md) faktycznie zwróconych w `segments` . Ta wartość może być równa `null` `celt` 1.  
   
 ## <a name="remarks"></a>Uwagi  
   

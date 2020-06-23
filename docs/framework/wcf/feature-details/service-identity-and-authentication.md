@@ -1,5 +1,6 @@
 ---
 title: Uwierzytelnianie i tożsamość usług
+description: Dowiedz się więcej o tożsamości punktu końcowego usługi, wartości wygenerowanej na podstawie WSDL usługi, która jest wykorzystywana przez program WCF do uwierzytelniania usługi.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600377"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246574"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 *Tożsamość punktu końcowego* usługi jest wartością wygenerowaną na podstawie Web Services Description Language usługi (WSDL). Ta wartość propagowana do dowolnego klienta jest używana do uwierzytelniania usługi. Po zainicjowaniu przez klienta komunikacji z punktem końcowym, gdy usługa uwierzytelnia się na kliencie, klient porównuje wartość tożsamości punktu końcowego z rzeczywistą wartością zwróconą przez proces uwierzytelniania punktu końcowego. Jeśli są one zgodne, klient ma pewność, że skontaktował się z oczekiwanym punktem końcowym usługi. Ta funkcja działa jako ochrona przed *phishingiem* , uniemożliwiając przekierowywanie klienta do punktu końcowego hostowanego przez złośliwą usługę.  
@@ -32,7 +33,7 @@ ms.locfileid: "84600377"
   
  Przetwarzanie tożsamości na kliencie jest analogiczne do uwierzytelniania klienta w usłudze. Usługa zabezpieczona nie wykonuje kodu do momentu uwierzytelnienia poświadczeń klienta. Podobnie klient nie wysyła komunikatów do usługi, dopóki poświadczenia usługi nie zostały uwierzytelnione na podstawie tego, co jest znane z góry metadanych usługi.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>Właściwość <xref:System.ServiceModel.EndpointAddress> klasy reprezentuje tożsamość usługi wywołana przez klienta. Usługa publikuje <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Gdy deweloper klienta uruchamia [Narzędzie metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi, wygenerowana konfiguracja zawiera wartość <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości usługi. Infrastruktura WCF (jeśli została skonfigurowana z zabezpieczeniami) sprawdza, czy usługa posiada określoną tożsamość.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>Właściwość <xref:System.ServiceModel.EndpointAddress> klasy reprezentuje tożsamość usługi wywołana przez klienta. Usługa publikuje <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Gdy deweloper klienta uruchamia [Narzędzie metadanych ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi, wygenerowana konfiguracja zawiera wartość <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości usługi. Infrastruktura WCF (jeśli została skonfigurowana z zabezpieczeniami) sprawdza, czy usługa posiada określoną tożsamość.  
   
 > [!IMPORTANT]
 > Metadane zawierają oczekiwaną tożsamość usługi, dlatego zaleca się uwidocznienie metadanych usługi za pośrednictwem bezpiecznych metod, na przykład przez utworzenie punktu końcowego HTTPS dla usługi. Aby uzyskać więcej informacji, zobacz [jak: Zabezpieczanie punktów końcowych metadanych](how-to-secure-metadata-endpoints.md).  
@@ -47,7 +48,7 @@ ms.locfileid: "84600377"
 |Odwołanie do certyfikatu|Taka sama jak w przypadku opcji certyfikatu opisanej wcześniej. Jednak ten element pozwala określić nazwę certyfikatu i lokalizację magazynu, z którego ma zostać pobrany certyfikat.|Analogicznie jak scenariusz certyfikatu opisany wcześniej.<br /><br /> Korzyścią jest możliwość zmiany lokalizacji magazynu certyfikatów.|  
 |RSA|Ten element określa wartość klucza RSA do porównania z klientem. Jest to podobne do opcji certyfikatu, ale nie przy użyciu odcisku palca certyfikatu, zamiast tego jest używany klucz RSA certyfikatu.|Sprawdzanie RSA umożliwia ograniczenie uwierzytelniania do pojedynczego certyfikatu na podstawie jego klucza RSA. Umożliwia to bardziej rygorystyczne uwierzytelnianie określonego klucza RSA kosztem usługi, która nie działa już z istniejącymi klientami, jeśli wartość klucza RSA ulegnie zmianie.|  
 |Główna nazwa użytkownika (UPN). Wartość domyślna, gdy `ClientCredentialType` jest ustawiona na system Windows, a proces usługi nie jest uruchomiony na jednym z kont systemu.|Ten element określa nazwę UPN, w ramach której działa usługa. Zapoznaj się z sekcją protokołu i tożsamości protokołu Kerberos w celu [przesłaniania tożsamości usługi na potrzeby uwierzytelniania](../extending/overriding-the-identity-of-a-service-for-authentication.md).|Dzięki temu usługa jest uruchomiona w ramach określonego konta użytkownika systemu Windows. Konto użytkownika może być kontem bieżącego zalogowanego użytkownika lub usługi działającej w ramach określonego konta użytkownika.<br /><br /> To ustawienie wykorzystuje zabezpieczenia protokołu Kerberos systemu Windows, jeśli usługa jest uruchomiona w ramach konta domeny w środowisku Active Directoryu.|  
-|Główna nazwa usługi (SPN). Wartość domyślna, gdy `ClientCredentialType` jest ustawiona na system Windows, a proces usługi jest uruchomiony w ramach jednego z kont systemu — LocalService, LocalSystem lub NetworkService.|Ten element określa nazwę SPN skojarzoną z kontem usługi. Zapoznaj się z sekcją protokołu i tożsamości protokołu Kerberos w celu [przesłaniania tożsamości usługi na potrzeby uwierzytelniania](../extending/overriding-the-identity-of-a-service-for-authentication.md).|Gwarantuje to, że nazwa SPN i określone konto systemu Windows skojarzone z nazwą SPN zidentyfikuje usługę.<br /><br /> Za pomocą narzędzia Setspn. exe można skojarzyć konto komputera z kontem użytkownika usługi.<br /><br /> To ustawienie wykorzystuje zabezpieczenia protokołu Kerberos systemu Windows, jeśli usługa jest uruchomiona w ramach jednego z kont systemu lub konta domeny, które ma skojarzoną z nim nazwę SPN, a komputer jest członkiem domeny w środowisku Active Directoryowym.|  
+|Główna nazwa usługi (SPN). Wartość domyślna, gdy `ClientCredentialType` jest ustawiona na system Windows, a proces usługi jest uruchomiony w ramach jednego z kont systemu — LocalService, LocalSystem lub NetworkService.|Ten element określa nazwę SPN skojarzoną z kontem usługi. Zapoznaj się z sekcją protokołu i tożsamości protokołu Kerberos w celu [przesłaniania tożsamości usługi na potrzeby uwierzytelniania](../extending/overriding-the-identity-of-a-service-for-authentication.md).|Gwarantuje to, że nazwa SPN i określone konto systemu Windows skojarzone z nazwą SPN zidentyfikuje usługę.<br /><br /> Za pomocą narzędzia Setspn.exe można skojarzyć konto komputera z kontem użytkownika usługi.<br /><br /> To ustawienie wykorzystuje zabezpieczenia protokołu Kerberos systemu Windows, jeśli usługa jest uruchomiona w ramach jednego z kont systemu lub konta domeny, które ma skojarzoną z nim nazwę SPN, a komputer jest członkiem domeny w środowisku Active Directoryowym.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Określanie tożsamości w usłudze  
  Zazwyczaj nie trzeba ustawiać tożsamości w usłudze, ponieważ wybór typu poświadczeń klienta określa typ tożsamości uwidocznionej w metadanych usługi. Aby uzyskać więcej informacji na temat przesłonięcia lub określenia tożsamości usługi, zobacz [Przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../extending/overriding-the-identity-of-a-service-for-authentication.md).  
@@ -64,7 +65,7 @@ ms.locfileid: "84600377"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Określanie tożsamości na kliencie  
- W czasie projektowania deweloper klienta zwykle używa [Narzędzia do przesyłania metadanych programu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania konfiguracji klienta. Wygenerowany plik konfiguracji (przeznaczony do użycia przez klienta) zawiera tożsamość serwera. Na przykład poniższy kod jest generowany na podstawie usługi, która określa tożsamość DNS, jak pokazano w powyższym przykładzie. Zwróć uwagę, że wartość tożsamości punktu końcowego klienta jest zgodna z wartością usługi. W takim przypadku, gdy klient otrzymuje poświadczenia systemu Windows (Kerberos) dla usługi, oczekuje wartości `contoso.com` .  
+ W czasie projektowania deweloper klienta zwykle używa [Narzędzia do przesyłania metadanych programu ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania konfiguracji klienta. Wygenerowany plik konfiguracji (przeznaczony do użycia przez klienta) zawiera tożsamość serwera. Na przykład poniższy kod jest generowany na podstawie usługi, która określa tożsamość DNS, jak pokazano w powyższym przykładzie. Zwróć uwagę, że wartość tożsamości punktu końcowego klienta jest zgodna z wartością usługi. W takim przypadku, gdy klient otrzymuje poświadczenia systemu Windows (Kerberos) dla usługi, oczekuje wartości `contoso.com` .  
 
  Jeśli zamiast systemu Windows, usługa określa certyfikat jako typ poświadczeń klienta, oczekiwana jest wartość właściwości DNS certyfikatu `contoso.com` . (Lub jeśli właściwość DNS ma wartość `null` , nazwa podmiotu certyfikatu musi być `contoso.com` .)  
   

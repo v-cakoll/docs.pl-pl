@@ -1,5 +1,6 @@
 ---
 title: Pobieranie informacji o instalacji z domeny aplikacji
+description: Pobierz informacje o instalacji z domeny aplikacji w programie .NET przy użyciu klasy System. AppDomain lub obiektu AppDomainSetup.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06bf6b5901736b87852492f48a9d8972490b8304
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903470"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Pobieranie informacji o instalacji z domeny aplikacji
 Każde wystąpienie domeny aplikacji składa się z właściwości i <xref:System.AppDomainSetup> informacji. Informacje o instalacji z domeny aplikacji można pobrać przy użyciu <xref:System.AppDomain?displayProperty=nameWithType> klasy. Ta klasa udostępnia kilku członkom, którzy pobierają informacje o konfiguracji domeny aplikacji.  
@@ -28,7 +29,7 @@ Każde wystąpienie domeny aplikacji składa się z właściwości i <xref:Syste
  [!code-csharp[AppDomain_Setup#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source2.cs#2)]
  [!code-vb[AppDomain_Setup#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source2.vb#2)]  
   
- Poniższy przykład ustawia, a następnie pobiera informacje o konfiguracji dla domeny aplikacji. Należy pamiętać `AppDomain.SetupInformation.ApplicationBase` , że pobiera informacje o konfiguracji.  
+ Poniższy przykład ustawia, a następnie pobiera informacje o konfiguracji dla domeny aplikacji. Należy pamiętać, że `AppDomain.SetupInformation.ApplicationBase` Pobiera informacje o konfiguracji.  
   
  [!code-cpp[AppDomain_Setup#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source3.cpp#3)]
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]

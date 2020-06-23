@@ -1,5 +1,6 @@
 ---
 title: Używanie obsługiwanych składników z globalną pamięcią podręczną zestawów
+description: Korzystaj z serwisowanych składników (składników kodu modelu COM+) z globalną pamięcią podręczną zestawów w programie .NET. Sprawdź, czy usługi CLR i COM+ mogą obsługiwać składniki nie korzystające z pamięci podręcznej.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -7,17 +8,17 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b7371865b7b1cedda0ee03b2cc28c74b5c3da0b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119768"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104477"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Używanie obsługiwanych składników z globalną pamięcią podręczną zestawów
 Składniki obsługiwane (zarządzane kod modelu COM+) należy umieścić w globalnej pamięci podręcznej zestawów. W niektórych scenariuszach środowisko uruchomieniowe języka wspólnego i usługi modelu COM+ mogą obsługiwać składniki obsługiwane przez program, które nie znajdują się w globalnej pamięci podręcznej zestawów; w innych scenariuszach nie mogą. Poniższe scenariusze ilustrują:  
   
-- W przypadku składników usługi w aplikacji serwera COM+ zestaw zawierający składniki musi znajdować się w globalnej pamięci podręcznej zestawów, ponieważ program dllhost. exe nie działa w tym samym katalogu, w którym znajdują się składniki obsługiwane przez usługę.  
+- W przypadku składników usługi w aplikacji serwera COM+ zestaw zawierający składniki musi znajdować się w globalnej pamięci podręcznej zestawów, ponieważ Dllhost.exe nie działa w tym samym katalogu, w którym znajdują się składniki obsługiwane przez usługę.  
   
 - W przypadku składników usługi w aplikacji biblioteki modelu COM+ środowisko uruchomieniowe i usługi COM+ mogą rozpoznać odwołanie do zestawu zawierającego składniki, wyszukując w bieżącym katalogu. W takim przypadku zestaw nie musi znajdować się w globalnej pamięci podręcznej zestawów.  
   
@@ -26,4 +27,4 @@ Składniki obsługiwane (zarządzane kod modelu COM+) należy umieścić w globa
 ## <a name="see-also"></a>Zobacz też
 
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)
-- [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md)

@@ -1,20 +1,21 @@
 ---
 title: 'Instrukcje: konfigurowanie usługi WCF hostowanej przez Internetowe usługi informacyjne za pomocą protokołu SSL'
+description: Dowiedz się, jak skonfigurować usługi WCF hostowanej przez usługi IIS do korzystania z zabezpieczeń transportu HTTP, które wymagają certyfikatu zarejestrowanego w usługach IIS.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597231"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245261"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Instrukcje: konfigurowanie usługi WCF hostowanej przez Internetowe usługi informacyjne za pomocą protokołu SSL
 W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usługi IIS do korzystania z zabezpieczeń transportu HTTP. Zabezpieczenia transportu HTTP wymagają zarejestrowania certyfikatu SSL w usługach IIS. Jeśli nie masz certyfikatu SSL, możesz użyć usług IIS do wygenerowania certyfikatu testowego. Następnie należy dodać powiązanie SSL do witryny sieci Web i skonfigurować właściwości uwierzytelniania witryny sieci Web. Na koniec należy skonfigurować usługę WCF do korzystania z protokołu HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Tworzenie certyfikatu z podpisem własnym  
   
-1. Otwórz program Internet Information Services Manager (inetmgr. exe), a następnie wybierz nazwę komputera w widoku drzewa po lewej stronie. Po prawej stronie ekranu wybierz pozycję Certyfikaty serwera.  
+1. Otwórz Menedżera Internet Information Services (inetmgr.exe) i wybierz nazwę komputera w widoku drzewa po lewej stronie. Po prawej stronie ekranu wybierz pozycję Certyfikaty serwera.  
   
      ![Ekran główny Menedżera usług IIS](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
@@ -62,7 +63,7 @@ W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usług
   
 ### <a name="configure-wcf-service-for-http-transport-security"></a>Konfigurowanie usługi WCF na potrzeby zabezpieczeń transportu HTTP  
   
-1. W pliku Web. config usługi WCF Skonfiguruj powiązanie HTTP do korzystania z zabezpieczeń transportu, jak pokazano w poniższym kodzie XML.  
+1. W web.config usługi WCF Skonfiguruj powiązanie HTTP do korzystania z zabezpieczeń transportu, jak pokazano w poniższym kodzie XML.  
   
     ```xml  
     <bindings>  
@@ -94,7 +95,7 @@ W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usług
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się kompletny przykład pliku Web. config dla usługi WCF korzystającej z zabezpieczeń transportu HTTP  
+ Poniżej znajduje się kompletny przykład pliku web.config dla usługi WCF korzystającej z zabezpieczeń transportu HTTP  
   
 ```xml  
 <?xml version="1.0"?>  

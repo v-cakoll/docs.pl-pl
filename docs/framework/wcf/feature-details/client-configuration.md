@@ -1,13 +1,14 @@
 ---
 title: Konfiguracja klienta
+description: Dowiedz się, jak za pomocą konfiguracji klienta WCF określić adres, powiązanie, zachowanie i kontrakt dla punktu końcowego, który jest używany do nawiązywania połączenia z usługą.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593662"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245378"
 ---
 # <a name="client-configuration"></a>Konfiguracja klienta
 Za pomocą konfiguracji klienta Windows Communication Foundation (WCF) można określić adres, powiązanie, zachowanie i kontrakt, czyli właściwości "ABC" punktu końcowego klienta używanego przez klientów do łączenia się z punktami końcowymi usługi. [\<client>](../../configure-apps/file-schema/wcf/client.md)Element ma element, [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) którego atrybuty są używane do konfigurowania punktu końcowego ABCs. Te atrybuty zostały omówione w sekcji [Konfigurowanie punktów końcowych](#configuring-endpoints) .  
@@ -15,7 +16,7 @@ Za pomocą konfiguracji klienta Windows Communication Foundation (WCF) można ok
  [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md)Element zawiera również [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) element, który jest używany do określania ustawień importowania i eksportowania metadanych, [\<headers>](../../configure-apps/file-schema/wcf/headers.md) element, który zawiera kolekcję niestandardowych nagłówków adresów i [\<identity>](../../configure-apps/file-schema/wcf/identity.md) element, który umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe wymieniające z nim wiadomości. [\<headers>](../../configure-apps/file-schema/wcf/headers.md)Elementy i są [\<identity>](../../configure-apps/file-schema/wcf/identity.md) częścią <xref:System.ServiceModel.EndpointAddress> i zostały omówione w artykule dotyczącej [adresów](endpoint-addresses.md) . Linki do tematów, które wyjaśniają korzystanie z rozszerzeń metadanych, znajdują się w sekcji [Konfigurowanie metadanych](#configuring-metadata) .  
   
 ## <a name="configuring-endpoints"></a>Konfigurowanie punktów końcowych  
- Konfiguracja klienta została zaprojektowana tak, aby umożliwić klientowi określenie co najmniej jednego punktu końcowego, z każdą nazwą, adresem i umową, przy czym każdy odwołuje się do [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elementów i w konfiguracji klienta, aby można było użyć ich do skonfigurowania tego punktu końcowego. Plik konfiguracji klienta powinien mieć nazwę "App. config", ponieważ jest to nazwa, której oczekuje środowisko uruchomieniowe WCF. Poniższy przykład przedstawia plik konfiguracji klienta.  
+ Konfiguracja klienta została zaprojektowana tak, aby umożliwić klientowi określenie co najmniej jednego punktu końcowego, z każdą nazwą, adresem i umową, przy czym każdy odwołuje się do [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elementów i w konfiguracji klienta, aby można było użyć ich do skonfigurowania tego punktu końcowego. Plik konfiguracji klienta powinien mieć nazwę "App.config", ponieważ jest to nazwa, której oczekuje środowisko uruchomieniowe WCF. Poniższy przykład przedstawia plik konfiguracji klienta.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

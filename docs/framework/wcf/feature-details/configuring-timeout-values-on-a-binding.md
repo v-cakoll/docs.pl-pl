@@ -1,27 +1,28 @@
 ---
 title: Konfigurowanie wartości limitów czasu w wiązaniu
+description: Dowiedz się, jak zarządzać ustawieniami limitu czasu dla powiązań programu WCF w celu zwiększenia wydajności, użyteczności i zabezpieczeń usługi.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 968e80bbd4b50d72d089a325f8e3fe498de2eac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185288"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245118"
 ---
-# <a name="configuring-timeout-values-on-a-binding"></a><span data-ttu-id="26c3e-102">Konfigurowanie wartości limitów czasu w wiązaniu</span><span class="sxs-lookup"><span data-stu-id="26c3e-102">Configuring Timeout Values on a Binding</span></span>
-<span data-ttu-id="26c3e-103">Istnieje wiele ustawień limitu czasu dostępnych w WCF powiązania.</span><span class="sxs-lookup"><span data-stu-id="26c3e-103">There are a number of timeout settings available in WCF bindings.</span></span> <span data-ttu-id="26c3e-104">Prawidłowe ustawienie tych ustawień limitu czasu może poprawić nie tylko wydajność usługi, ale także odgrywać rolę w użyteczności i bezpieczeństwie usługi.</span><span class="sxs-lookup"><span data-stu-id="26c3e-104">Setting these timeout settings correctly can improve not only your service’s performance but also play a role in the usability and security of your service.</span></span> <span data-ttu-id="26c3e-105">Następujące limity czasu są dostępne w powiązaniach WCF:</span><span class="sxs-lookup"><span data-stu-id="26c3e-105">The following timeouts are available on WCF bindings:</span></span>  
+# <a name="configuring-timeout-values-on-a-binding"></a><span data-ttu-id="40918-103">Konfigurowanie wartości limitów czasu w wiązaniu</span><span class="sxs-lookup"><span data-stu-id="40918-103">Configuring Timeout Values on a Binding</span></span>
+<span data-ttu-id="40918-104">W powiązaniach WCF dostępne są wiele ustawień limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="40918-104">There are a number of timeout settings available in WCF bindings.</span></span> <span data-ttu-id="40918-105">Poprawne ustawienie tych ustawień limitu czasu może poprawić nie tylko wydajność usługi, ale również odgrywać rolę w zakresie użyteczności i bezpieczeństwa usługi.</span><span class="sxs-lookup"><span data-stu-id="40918-105">Setting these timeout settings correctly can improve not only your service’s performance but also play a role in the usability and security of your service.</span></span> <span data-ttu-id="40918-106">W powiązaniach WCF są dostępne następujące limity czasu:</span><span class="sxs-lookup"><span data-stu-id="40918-106">The following timeouts are available on WCF bindings:</span></span>  
   
-1. <span data-ttu-id="26c3e-106">Czas otwarcia</span><span class="sxs-lookup"><span data-stu-id="26c3e-106">OpenTimeout</span></span>  
+1. <span data-ttu-id="40918-107">OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="40918-107">OpenTimeout</span></span>  
   
-2. <span data-ttu-id="26c3e-107">Limit czasu zamknięcia</span><span class="sxs-lookup"><span data-stu-id="26c3e-107">CloseTimeout</span></span>  
+2. <span data-ttu-id="40918-108">CloseTimeout</span><span class="sxs-lookup"><span data-stu-id="40918-108">CloseTimeout</span></span>  
   
-3. <span data-ttu-id="26c3e-108">Limit czasu wysyłania</span><span class="sxs-lookup"><span data-stu-id="26c3e-108">SendTimeout</span></span>  
+3. <span data-ttu-id="40918-109">Właściwości SendTimeout</span><span class="sxs-lookup"><span data-stu-id="40918-109">SendTimeout</span></span>  
   
-4. <span data-ttu-id="26c3e-109">Receivetimeout</span><span class="sxs-lookup"><span data-stu-id="26c3e-109">ReceiveTimeout</span></span>  
+4. <span data-ttu-id="40918-110">ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="40918-110">ReceiveTimeout</span></span>  
   
-## <a name="wcf-binding-timeouts"></a><span data-ttu-id="26c3e-110">Limity czasu wiązania WCF</span><span class="sxs-lookup"><span data-stu-id="26c3e-110">WCF Binding Timeouts</span></span>  
- <span data-ttu-id="26c3e-111">Każde z ustawień omówionych w tym temacie są dokonywane na samo powiązanie, w kodzie lub konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="26c3e-111">Each of the settings discussed in this topic are made on the binding itself, either in code or configuration.</span></span> <span data-ttu-id="26c3e-112">Poniższy kod pokazuje, jak programowo ustawić limity czasu na WCF powiązania w kontekście usługi hostowane samodzielnie.</span><span class="sxs-lookup"><span data-stu-id="26c3e-112">The following code shows how to programmatically set timeouts on a WCF binding in the context of a self-hosted service.</span></span>  
+## <a name="wcf-binding-timeouts"></a><span data-ttu-id="40918-111">Limity czasu powiązania WCF</span><span class="sxs-lookup"><span data-stu-id="40918-111">WCF Binding Timeouts</span></span>  
+ <span data-ttu-id="40918-112">Wszystkie ustawienia omówione w tym temacie są wykonywane w ramach powiązania w kodzie lub konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="40918-112">Each of the settings discussed in this topic are made on the binding itself, either in code or configuration.</span></span> <span data-ttu-id="40918-113">Poniższy kod pokazuje, jak programowo ustawiać limity czasu dla powiązania WCF w kontekście usługi samodzielnej.</span><span class="sxs-lookup"><span data-stu-id="40918-113">The following code shows how to programmatically set timeouts on a WCF binding in the context of a self-hosted service.</span></span>  
   
 ```csharp  
 public static void Main()
@@ -54,7 +55,7 @@ public static void Main()
 }
 ```  
   
- <span data-ttu-id="26c3e-113">W poniższym przykładzie pokazano, jak skonfigurować limity czasu na powiązanie w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="26c3e-113">The following example shows how to configure timeouts on a binding in a configuration file.</span></span>  
+ <span data-ttu-id="40918-114">Poniższy przykład pokazuje, jak skonfigurować limity czasu dla powiązania w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="40918-114">The following example shows how to configure timeouts on a binding in a configuration file.</span></span>  
   
 ```xml  
 <configuration>
@@ -72,22 +73,22 @@ public static void Main()
 </configuration>
 ```  
   
- <span data-ttu-id="26c3e-114">Więcej informacji na temat tych ustawień można <xref:System.ServiceModel.Channels.Binding> znaleźć w dokumentacji dla klasy.</span><span class="sxs-lookup"><span data-stu-id="26c3e-114">More information about these settings can be found in the documentation for the <xref:System.ServiceModel.Channels.Binding> class.</span></span>  
+ <span data-ttu-id="40918-115">Więcej informacji o tych ustawieniach można znaleźć w dokumentacji <xref:System.ServiceModel.Channels.Binding> klasy.</span><span class="sxs-lookup"><span data-stu-id="40918-115">More information about these settings can be found in the documentation for the <xref:System.ServiceModel.Channels.Binding> class.</span></span>  
   
-### <a name="client-side-timeouts"></a><span data-ttu-id="26c3e-115">Limity czasu po stronie klienta</span><span class="sxs-lookup"><span data-stu-id="26c3e-115">Client-side Timeouts</span></span>  
- <span data-ttu-id="26c3e-116">Po stronie klienta:</span><span class="sxs-lookup"><span data-stu-id="26c3e-116">On the client side:</span></span>  
+### <a name="client-side-timeouts"></a><span data-ttu-id="40918-116">Limity czasu po stronie klienta</span><span class="sxs-lookup"><span data-stu-id="40918-116">Client-side Timeouts</span></span>  
+ <span data-ttu-id="40918-117">Po stronie klienta:</span><span class="sxs-lookup"><span data-stu-id="40918-117">On the client side:</span></span>  
   
-1. <span data-ttu-id="26c3e-117">SendTimeout — służy do inicjowania OperationTimeout, który reguluje cały proces wysyłania wiadomości, w tym odbieranie wiadomości odpowiedzi dla operacji usługi żądania/odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="26c3e-117">SendTimeout – used to initialize the OperationTimeout, which governs the whole process of sending a message, including receiving a reply message for a request/reply service operation.</span></span> <span data-ttu-id="26c3e-118">Ten limit czasu ma również zastosowanie podczas wysyłania wiadomości odpowiedzi z metody umowy wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="26c3e-118">This timeout also applies when sending reply messages from a callback contract method.</span></span>  
+1. <span data-ttu-id="40918-118">Właściwości SendTimeout — służy do inicjowania OperationTimeout, który reguluje cały proces wysyłania komunikatu, w tym otrzymywanie komunikatu odpowiedzi dla operacji usługi żądania/odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="40918-118">SendTimeout – used to initialize the OperationTimeout, which governs the whole process of sending a message, including receiving a reply message for a request/reply service operation.</span></span> <span data-ttu-id="40918-119">Ten limit czasu obowiązuje również podczas wysyłania komunikatów odpowiedzi z metody kontraktu wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="40918-119">This timeout also applies when sending reply messages from a callback contract method.</span></span>  
   
-2. <span data-ttu-id="26c3e-119">OpenTimeout — używany podczas otwierania kanałów, gdy nie określono jawnego limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="26c3e-119">OpenTimeout – used when opening channels when no explicit timeout value is specified.</span></span>  
+2. <span data-ttu-id="40918-120">OpenTimeout — używane podczas otwierania kanałów, gdy nie określono jawnej wartości limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="40918-120">OpenTimeout – used when opening channels when no explicit timeout value is specified.</span></span>  
   
-3. <span data-ttu-id="26c3e-120">CloseTimeout — używane podczas zamykania kanałów, gdy nie określono jawnego limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="26c3e-120">CloseTimeout – used when closing channels when no explicit timeout value is specified.</span></span>  
+3. <span data-ttu-id="40918-121">CloseTimeout — używany podczas zamykania kanałów, gdy nie określono jawnej wartości limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="40918-121">CloseTimeout – used when closing channels when no explicit timeout value is specified.</span></span>  
   
-4. <span data-ttu-id="26c3e-121">ReceiveTimeout – nie jest używany.</span><span class="sxs-lookup"><span data-stu-id="26c3e-121">ReceiveTimeout – is not used.</span></span>  
+4. <span data-ttu-id="40918-122">ReceiveTimeout — nie jest używany.</span><span class="sxs-lookup"><span data-stu-id="40918-122">ReceiveTimeout – is not used.</span></span>  
   
-### <a name="service-side-timeouts"></a><span data-ttu-id="26c3e-122">Limity czasu po stronie usługi</span><span class="sxs-lookup"><span data-stu-id="26c3e-122">Service-side Timeouts</span></span>  
- <span data-ttu-id="26c3e-123">Po stronie serwisowej:</span><span class="sxs-lookup"><span data-stu-id="26c3e-123">On the service side:</span></span>  
+### <a name="service-side-timeouts"></a><span data-ttu-id="40918-123">Limity czasu po stronie usługi</span><span class="sxs-lookup"><span data-stu-id="40918-123">Service-side Timeouts</span></span>  
+ <span data-ttu-id="40918-124">Po stronie usługi:</span><span class="sxs-lookup"><span data-stu-id="40918-124">On the service side:</span></span>  
   
-1. <span data-ttu-id="26c3e-124">SendTimeout, OpenTimeout, CloseTimeout są takie same jak na kliencie.</span><span class="sxs-lookup"><span data-stu-id="26c3e-124">SendTimeout, OpenTimeout, CloseTimeout are the same as on the client.</span></span>  
+1. <span data-ttu-id="40918-125">Właściwości SendTimeout, OpenTimeout, CloseTimeout są takie same jak na kliencie.</span><span class="sxs-lookup"><span data-stu-id="40918-125">SendTimeout, OpenTimeout, CloseTimeout are the same as on the client.</span></span>  
   
-2. <span data-ttu-id="26c3e-125">ReceiveTimeout — używane przez warstwę Service Framework do inicjowania limitu czasu bezczynności sesji, który kontroluje, jak długo sesja może być bezczynny przed limit czasu.</span><span class="sxs-lookup"><span data-stu-id="26c3e-125">ReceiveTimeout – used by the Service Framework Layer to initialize the session-idle timeout which controls how long a session can be idle before timing out.</span></span>
+2. <span data-ttu-id="40918-126">ReceiveTimeout — używana przez warstwę struktury usługi do inicjowania limitu czasu bezczynności sesji, która określa, jak długo sesja może być bezczynna przed upływem limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="40918-126">ReceiveTimeout – used by the Service Framework Layer to initialize the session-idle timeout which controls how long a session can be idle before timing out.</span></span>

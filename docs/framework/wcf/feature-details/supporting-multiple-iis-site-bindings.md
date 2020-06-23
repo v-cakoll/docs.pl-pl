@@ -1,22 +1,23 @@
 ---
 title: Obsługa wielu wiązań witryny usług IIS
+description: Dowiedz się, w jaki sposób udostępnić wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji podczas hostowania usługi WCF w usługach IIS.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743445"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244871"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu wiązań witryny usług IIS
-W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internet Information Services (IIS) 7,0 możesz chcieć podać wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji. Dzięki temu ta sama usługa może odpowiadać na wiele różnych identyfikatorów URI. Jest to przydatne, gdy chcesz hostować usługę, która nasłuchuje na `http://www.contoso.com` i `http://contoso.com`. Warto również utworzyć usługę mającą adres podstawowy dla użytkowników wewnętrznych oraz oddzielny adres podstawowy dla użytkowników zewnętrznych. Przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
+W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internet Information Services (IIS) 7,0 możesz chcieć podać wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji. Dzięki temu ta sama usługa może odpowiadać na wiele różnych identyfikatorów URI. Jest to przydatne, gdy chcesz hostować usługę, która nasłuchuje w systemach `http://www.contoso.com` i `http://contoso.com` . Warto również utworzyć usługę mającą adres podstawowy dla użytkowników wewnętrznych oraz oddzielny adres podstawowy dla użytkowników zewnętrznych. Przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
   
 > [!NOTE]
 > Ta funkcja jest dostępna tylko przy użyciu protokołu HTTP.  
   
 ## <a name="multiple-base-addresses"></a>Wiele adresów podstawowych  
- Ta funkcja jest dostępna tylko dla usług WCF hostowanych w ramach usług IIS. Ta funkcja nie jest domyślnie włączona. Aby włączyć tę opcję, należy dodać atrybut `multipleSiteBindingsEnabled` do elementu <`serviceHostingEnvironment`> w pliku Web. config i ustawić go na `true`, jak pokazano w poniższym przykładzie.  
+ Ta funkcja jest dostępna tylko dla usług WCF hostowanych w ramach usług IIS. Ta funkcja nie jest domyślnie włączona. Aby włączyć tę opcję, należy dodać `multipleSiteBindingsEnabled` atrybut do <`serviceHostingEnvironment`> elementu w pliku Web.config i ustawić go na `true` , jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

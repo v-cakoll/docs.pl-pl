@@ -1,16 +1,17 @@
 ---
 title: Włączanie lub wyłączanie przekierowań automatycznie generowanych powiązań
+description: Przeczytaj, jak włączyć lub wyłączyć automatyczne przekierowywanie powiązań. Ta funkcja dotyczy aplikacji klasycznych i aplikacji sieci Web przeznaczonych dla platformy .NET 4.5.1 lub nowszej.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913034"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105395"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań
 
@@ -18,7 +19,7 @@ W przypadku kompilowania aplikacji w programie Visual Studio, które są przezna
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Wyłączanie automatycznego przekierowywania powiązań w aplikacjach klasycznych
 
-Automatyczne przekierowania powiązań są domyślnie włączone dla aplikacji klasycznych systemu Windows, które są przeznaczone dla .NET Framework 4.5.1 i nowszych wersji. Przekierowania powiązań są dodawane do pliku konfiguracji danych wyjściowych (**App. config**), gdy aplikacja jest kompilowana i przesłania nieujednolicenie zestawu, który może być w innym przypadku. Plik źródłowy **App. config** nie jest modyfikowany. Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji lub zaznaczając zaznaczenie pola wyboru we właściwościach projektu w programie Visual Studio.
+Automatyczne przekierowania powiązań są domyślnie włączone dla aplikacji klasycznych systemu Windows, które są przeznaczone dla .NET Framework 4.5.1 i nowszych wersji. Przekierowania powiązań są dodawane do pliku konfiguracji wyjściowej (**app.config**) podczas kompilowania aplikacji i zastępowania dezjednoczenia zestawu, który może być w innym przypadku. Plik źródłowy **app.config** nie jest modyfikowany. Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji lub zaznaczając zaznaczenie pola wyboru we właściwościach projektu w programie Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Wyłącz za poorednictwem właściwości projektu
 
@@ -85,9 +86,9 @@ Automatyczne przekierowania powiązań można włączyć w istniejących aplikac
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Włączanie automatycznego przekierowywania powiązań w aplikacjach sieci Web
 
-Automatyczne przekierowania powiązań są w przypadku aplikacji internetowych implementowane w inny sposób. Ponieważ plik konfiguracji źródłowej (**Web. config**) musi zostać zmodyfikowany dla aplikacji sieci Web, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji. Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty. Ponieważ zawsze jest wyświetlany monit o dodanie przekierowań powiązań, nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci Web.
+Automatyczne przekierowania powiązań są w przypadku aplikacji internetowych implementowane w inny sposób. Ponieważ plik konfiguracji źródłowej (**web.config**) musi zostać zmodyfikowany dla aplikacji sieci Web, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji. Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty. Ponieważ zawsze jest wyświetlany monit o dodanie przekierowań powiązań, nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci Web.
 
-Aby dodać przekierowania powiązań do pliku **Web. config** :
+Aby dodać przekierowania powiązań do pliku **web.config** :
 
 1. W programie Visual Studio skompiluj aplikację i sprawdź, czy występują ostrzeżenia kompilacji.
 
@@ -95,11 +96,11 @@ Aby dodać przekierowania powiązań do pliku **Web. config** :
 
 2. Jeśli występują konflikty powiązań zestawów, zostanie wyświetlone ostrzeżenie. Kliknij dwukrotnie ostrzeżenie lub wybierz ostrzeżenie i naciśnij klawisz **Enter**.
 
-   Zostanie wyświetlone okno dialogowe, które umożliwia automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku **Web. config** .
+   Zostanie wyświetlone okno dialogowe, które umożliwia automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku **web.config** .
 
    ![Okno dialogowe uprawnień przekierowywania powiązań](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [\<bindingRedirect>Postaci](./file-schema/runtime/bindingredirect-element.md)
 - [Przekierowywanie wersji zestawu](redirect-assembly-versions.md)

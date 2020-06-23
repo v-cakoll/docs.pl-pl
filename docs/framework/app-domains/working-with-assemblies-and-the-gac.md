@@ -1,5 +1,6 @@
 ---
 title: Praca z zestawami i globalną pamięcią podręczną zestawów
+description: Pracuj z zestawami i globalną pamięcią podręczną zestawów (GAC) w środowisku .NET. Przejrzyj przyczyny, dla których warto zainstalować zestaw w pamięci podręcznej GAC.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645416"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105162"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Praca z zestawami i globalną pamięcią podręczną zestawów
 
@@ -45,14 +46,14 @@ Istnieje kilka powodów, dla których instalowanie zestawu w globalnej pamięci 
  Istnieją też scenariusze, w których nie należy jawnie instalować zestawów w globalnej pamięci podręcznej zestawów. Umieszczenie w tej pamięci jednego z zestawów tworzących aplikację sprawi, że nie będzie już można zreplikować ani zainstalować aplikacji przy użyciu polecenia XCOPY kopiującego katalog aplikacji. W takim przypadku należy również przenieść zestaw do globalnej pamięci podręcznej zestawów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
-[Porady: instalowanie zestawu w globalnej pamięci podręcznej zestawów](install-assembly-into-gac.md)  
+[Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](install-assembly-into-gac.md)  
 Opis sposobów instalowania zestawu w globalnej pamięci podręcznej zestawów.  
   
-[Porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](how-to-view-the-contents-of-the-gac.md)  
-Wyjaśnia, jak używać programu [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej zestawów.  
+[Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](how-to-view-the-contents-of-the-gac.md)  
+Wyjaśnia, w jaki sposób używać [Gacutil.exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej zestawów.  
   
-[Porady: usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)  
-Wyjaśnia, jak używać programu [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) do usuwania zestawu z globalnej pamięci podręcznej zestawów.  
+[Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)  
+Wyjaśnia, w jaki sposób używać [Gacutil.exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) do usuwania zestawu z globalnej pamięci podręcznej zestawów.  
   
 [Używanie obsługiwanych składników z globalną pamięcią podręczną zestawów](use-serviced-components-with-the-gac.md)  
 Wyjaśnienie, dlaczego obsługiwane składniki (zarządzanie składniki modelu COM+) należy umieszczać w globalnej pamięci podręcznej zestawów.  
@@ -66,7 +67,7 @@ Omówienie procesu tworzenia zestawów.
 Opis globalnej pamięci podręcznej zestawów.  
   
 [Porady: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)  
-Wyjaśnia, jak używać programu [Ildasm. exe (Il dezasembler)](../tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w zestawie.  
+Wyjaśnia, w jaki sposób używać [Ildasm.exe (Il dezasembler)](../tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w zestawie.  
   
 [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)  
 Wyjaśnienie, jak środowisko uruchomieniowe języka wspólnego lokalizuje i ładuje zestawy składające się na aplikację.  

@@ -1,15 +1,16 @@
 ---
 title: Hosting w Usłudze aktywacji procesów systemu Windows
+description: Dowiedz się, jak zarządzać aktywacją i okresem istnienia procesów roboczych zawierających aplikacje obsługujące usługi WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597309"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247263"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. TCP, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferują możliwość hostowania dużej liczby aplikacji na danym komputerze.  
@@ -46,7 +47,7 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>Środowisko uruchomieniowe zostało uruchomione  
- Aplikacje są zorganizowane w lokacjach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również pogrupowane w pule aplikacji. Pula aplikacji może mieć wiele różnych aplikacji z wielu różnych lokacji programu. Wszystkie aplikacje wewnątrz puli aplikacji korzystają ze wspólnego zestawu właściwości czasu wykonywania. Na przykład wszystkie są uruchamiane w tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR) i wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odpowiada wystąpieniu procesu roboczego (w3wp. exe). Każda aplikacja zarządzana działająca w ramach udostępnionej puli aplikacji jest odizolowana od innych aplikacji za pomocą elementu AppDomain środowiska CLR.  
+ Aplikacje są zorganizowane w lokacjach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również pogrupowane w pule aplikacji. Pula aplikacji może mieć wiele różnych aplikacji z wielu różnych lokacji programu. Wszystkie aplikacje wewnątrz puli aplikacji korzystają ze wspólnego zestawu właściwości czasu wykonywania. Na przykład wszystkie są uruchamiane w tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR) i wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odpowiada wystąpieniu procesu roboczego (w3wp.exe). Każda aplikacja zarządzana działająca w ramach udostępnionej puli aplikacji jest odizolowana od innych aplikacji za pomocą elementu AppDomain środowiska CLR.  
   
 ## <a name="see-also"></a>Zobacz też
 

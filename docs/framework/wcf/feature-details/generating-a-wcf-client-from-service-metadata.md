@@ -1,18 +1,19 @@
 ---
 title: Generowanie klienta programu WCF na podstawie metadanych usługi
+description: Odkryj różne przełączniki w Svcutil.exe używane do generowania klientów WFC z dokumentów metadanych usługi opartych na języku WSDL lub pliku zasad z usługi.
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: ebf124b75e7c2b0feabfffb8c7e790b44749edb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597374"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247276"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generowanie klienta programu WCF na podstawie metadanych usługi
-W tym temacie opisano, jak używać różnych przełączników w programie Svcutil. exe do generowania klientów z dokumentów metadanych.  
+W tym temacie opisano, jak używać różnych przełączników w Svcutil.exe do generowania klientów z dokumentów metadanych.  
   
- Dokumenty metadanych mogą znajdować się w magazynie trwałym lub być pobierane w trybie online. Pobieranie online następuje przy użyciu protokołu WS-MetadataExchange lub protokołu Microsoft Discovery (DISCO). Svcutil. exe wystawia następujące żądania metadanych jednocześnie w celu pobrania metadanych:  
+ Dokumenty metadanych mogą znajdować się w magazynie trwałym lub być pobierane w trybie online. Pobieranie online następuje przy użyciu protokołu WS-MetadataExchange lub protokołu Microsoft Discovery (DISCO). W celu pobierania metadanych Svcutil.exe wystawić następujące żądania metadanych jednocześnie:  
   
 - Żądanie WS-MetadataExchange (MEX) do podanego adresu.  
   
@@ -20,7 +21,7 @@ W tym temacie opisano, jak używać różnych przełączników w programie Svcut
   
 - Żądanie DISCO (przy użyciu <xref:System.Web.Services.Discovery.DiscoveryClientProtocol> usług sieci Web z ASP.NET) do podanego adresu.  
   
- Svcutil. exe generuje klienta na podstawie Web Services Description Language (WSDL) lub pliku zasad otrzymanego z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z " \@ ", a następnie dodanie w pełni kwalifikowanej nazwy domeny (FQDN). Jednak w przypadku użytkowników, którzy zarejestrowali się w Active Directory, ten format jest nieprawidłowy, a nazwa UPN wygenerowanego przez narzędzie powoduje błąd uwierzytelniania Kerberos z następującym komunikatem o błędzie: **próba logowania nie powiodła się.** Aby rozwiązać ten problem, należy ręcznie naprawić plik klienta wygenerowany przez narzędzie.  
+ Svcutil.exe generuje klienta na podstawie Web Services Description Language (WSDL) lub pliku zasad otrzymanego z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z " \@ ", a następnie dodanie w pełni kwalifikowanej nazwy domeny (FQDN). Jednak w przypadku użytkowników, którzy zarejestrowali się w Active Directory, ten format jest nieprawidłowy, a nazwa UPN wygenerowanego przez narzędzie powoduje błąd uwierzytelniania Kerberos z następującym komunikatem o błędzie: **próba logowania nie powiodła się.** Aby rozwiązać ten problem, należy ręcznie naprawić plik klienta wygenerowany przez narzędzie.  
   
 ```console
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -47,7 +48,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/Language\<language>**|Określa język programowania, który ma być używany do generowania kodu. Podaj nazwę języka zarejestrowana w pliku Machine. config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy z <xref:System.CodeDom.Compiler.CodeDomProvider> .<br /><br /> Wartości: c#, CS, CSharp, VB, vbs, VisualBasic, VBScript, JavaScript, c++, MC, CPP<br /><br /> Wartość domyślna: CSharp<br /><br /> Krótka forma:`/l`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.CodeDom.Compiler.CodeDomProvider> Klasa.|  
+|**/Language\<language>**|Określa język programowania, który ma być używany do generowania kodu. Podaj nazwę języka zarejestrowana w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy z <xref:System.CodeDom.Compiler.CodeDomProvider> .<br /><br /> Wartości: c#, CS, CSharp, VB, vbs, VisualBasic, VBScript, JavaScript, c++, MC, CPP<br /><br /> Wartość domyślna: CSharp<br /><br /> Krótka forma:`/l`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.CodeDom.Compiler.CodeDomProvider> Klasa.|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Wybieranie przestrzeni nazw dla klienta  
   
@@ -65,7 +66,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/config\<configFile>**|Określa nazwę pliku dla wygenerowanego pliku konfiguracji.<br /><br /> Domyślnie: output. config|  
+|**/config\<configFile>**|Określa nazwę pliku dla wygenerowanego pliku konfiguracji.<br /><br /> Wartość domyślna: output.config|  
 |**/mergeConfig**|Scala wygenerowaną konfigurację w istniejący plik, zamiast zastąpić istniejący plik.|  
 |**/noConfig**|Nie Generuj plików konfiguracyjnych.|  
   

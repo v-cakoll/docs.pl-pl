@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: kompilowanie zestawu .NET Framework jednego pliku'
+description: Zapoznaj się z tematem kompilowania zestawu jednoplikowego w programie .NET. Zestaw pojedynczego pliku może być biblioteką (. dll), która jest przeznaczona dla platformy .NET, lub może być plikiem wykonywalnym (. exe).
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644301"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104923"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>Instrukcje: kompilowanie zestawu .NET Framework jednego pliku
 
@@ -33,11 +34,11 @@ W poniższych procedurach pokazano, jak utworzyć zestawy Jednoplikowe za pomoc�
 
 W wierszu polecenia wpisz następujące polecenie:
 
-\<*compiler command*> \<*Nazwa modułu* poleceń kompilatora>
+\<*compiler command*> \<*module name*>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu.
 
-Poniższy przykład tworzy zestaw o nazwie mój *Code. exe* z modułu kodu o nazwie `myCode`.
+Poniższy przykład tworzy zestaw o nazwie *myCode.exe* z modułu kodu o nazwie `myCode` .
 
 ```csharp
 csc myCode.cs
@@ -51,11 +52,11 @@ vbc myCode.vb
 
 W wierszu polecenia wpisz następujące polecenie:
 
-\<*polecenie*> **kompilatora/out:**\<nazwa*pliku*> \<*Nazwa modułu*>
+\<*compiler command*>**/out:** \<*file name*>\<*module name*>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, *Nazwa pliku* jest nazwą pliku wyjściowego, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu.
 
-Poniższy przykład tworzy zestaw o nazwie mój *Assembly. exe* z modułu kodu o nazwie `myCode`.
+Poniższy przykład tworzy zestaw o nazwie *myAssembly.exe* z modułu kodu o nazwie `myCode` .
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -70,11 +71,11 @@ vbc -out:myAssembly.exe myCode.vb
 
 Aby utworzyć zestaw biblioteki, w wierszu polecenia wpisz następujące polecenie:
 
-\<*polecenie*> kompilatora **—** \< *Nazwa modułu* t:Library>
+\<*compiler command*>**-t:Library**\<*module name*>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu. Można również użyć innych opcji kompilatora, takich jak opcja **-out:** .
 
-Poniższy przykład tworzy zestaw biblioteki o nazwie *myCodeAssembly. dll* z modułu kodu o nazwie `myCode`.
+Poniższy przykład tworzy zestaw biblioteki o nazwie *myCodeAssembly.dll* z modułu kodu o nazwie `myCode` .
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs
@@ -88,5 +89,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Tworzenie zestawów](../../standard/assembly/create.md)
 - [Zestawy wieloplikowe](multifile-assemblies.md)
-- [Instrukcje: kompilowanie zestawu wieloplikowego](build-multifile-assembly.md)
+- [Instrukcje: tworzenie zestawów wieloplikowych](build-multifile-assembly.md)
 - [Programowanie przy użyciu zestawów](../../standard/assembly/index.md)

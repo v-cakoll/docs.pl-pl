@@ -9,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504605"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141634"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy>, element (ustawienia sieci)
 Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).  
@@ -27,8 +27,8 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
   
 ```xml  
 <defaultProxy  
-  enabled="true|false"  
-  useDefaultCredentials="true|false">  
+  enabled="True|False"  
+  useDefaultCredentials="True|False">  
     <bypasslist>...</bypasslist>  
     <proxy>...</proxy>  
     <module>...</module>  
@@ -42,8 +42,8 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
   
 |**Postaci**|**Opis**|  
 |-----------------|---------------------|  
-|`enabled`|Określa, czy używany jest serwer proxy sieci Web. Wartość domyślna to `true`.|  
-|`useDefaultCredentials`|Określa, czy domyślne poświadczenia dla tego hosta są używane w celu uzyskania dostępu do serwera proxy sieci Web. Wartość domyślna to `false`.|  
+|`enabled`|Określa, czy używany jest serwer proxy sieci Web. Wartość domyślna to `True`.|  
+|`useDefaultCredentials`|Określa, czy domyślne poświadczenia dla tego hosta są używane w celu uzyskania dostępu do serwera proxy sieci Web. Wartość domyślna to `False`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -65,7 +65,7 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
  Wyjątek jest zgłaszany, jeśli element [module](module-element-network-settings.md) określa typ niepubliczny, typ nie jest wyprowadzany z <xref:System.Net.IWebProxy> klasy, wystąpił wyjątek z konstruktora bez parametrów tego obiektu lub wystąpił wyjątek podczas pobierania domyślnego serwera proxy określonego przez system. <xref:System.Exception.InnerException%2A>Właściwość wyjątku powinna zawierać więcej informacji o głównej przyczynie błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie używane są wartości domyślne z serwera proxy programu Internet Explorer, określa adres serwera proxy i pomija serwer proxy na potrzeby lokalnego dostępu i contoso.com.  
@@ -75,9 +75,9 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
       <bypasslist>  
         <add address="[a-z]+\.contoso\.com$" />  
@@ -87,7 +87,7 @@ Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](index.md)

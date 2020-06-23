@@ -1,5 +1,6 @@
 ---
-title: Zdarzenie xpsDocumentWriter._WritingCompleted (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingCompleted — zdarzenie (System. Windows. XPS)
+description: Zrozumienie zdarzenia XpsDocumentWriter. _WritingCompleted, które występuje, gdy operacja zapisu dla dokumentu XML Paper Specification (XPS) zakończy się w programie .NET.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,14 +12,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3926630cafa2fea4e499e86d7c8b8eb707b8fd95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155625"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105198"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a>Xpsdocumentwriter. \_Zdarzenie WritingCompleted
+# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_ Zdarzenie WritingCompleted
 
 Występuje po zakończeniu operacji zapisu.
 
@@ -30,8 +31,8 @@ internal event WritingCompletedEventHandler _WritingCompleted
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Windows.Xps>
+**Przestrzeń nazw:**<xref:System.Windows.Xps>
 
-**Montaż:** System.Drukowanie (w pliku system.printing.dll)
+**Zestaw:** System. Printing (w system.printing.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 3.0
+**.NET Framework wersje:** Dostępne od 3,0

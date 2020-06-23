@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury'
+description: Postępuj zgodnie z tym przykładem, aby dowiedzieć się, jak utworzyć kontrakt danych przy użyciu klasy lub struktury w programie WCF przy użyciu atrybutu DataContractAttribute.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 0fd7bbea4d6e8d315566aa798ed89a0fd2657f58
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a45fde58795947c3e46fa45750ae1a3faddd8849
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599038"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247172"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury
 W tym temacie przedstawiono podstawowe kroki tworzenia kontraktu danych przy użyciu klasy lub struktury. Aby uzyskać więcej informacji na temat kontraktów danych i sposobu ich użycia, zobacz [Używanie kontraktów danych](using-data-contracts.md).  

@@ -1,15 +1,16 @@
 ---
 title: Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
+description: Dowiedz się, jak WFC używa certyfikatów do uwierzytelniania serwera i klienta w przypadku korzystania z zabezpieczeń transportu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576021"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244781"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
 
@@ -32,7 +33,7 @@ W tym artykule omówiono użycie certyfikatów X. 509 na potrzeby uwierzytelnian
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Konfigurowanie usługi  
- Ponieważ usługa w tym scenariuszu jest hostowana w usługach IIS, jest konfigurowana za pomocą pliku Web. config. Poniższy plik Web. config pokazuje, jak skonfigurować <xref:System.ServiceModel.WSHttpBinding> program do korzystania z poświadczeń klienta transportowego i X. 509.  
+ Ponieważ usługa w tym scenariuszu jest hostowana w usługach IIS, jest ona konfigurowana przy użyciu pliku web.config. Poniższy web.config przedstawia sposób konfigurowania programu pod kątem <xref:System.ServiceModel.WSHttpBinding> używania poświadczeń klienta transportowego i X. 509.  
   
 ```xml  
 <configuration>  
@@ -63,7 +64,7 @@ W tym artykule omówiono użycie certyfikatów X. 509 na potrzeby uwierzytelnian
 ```  
   
 ## <a name="configure-the-client"></a>Konfigurowanie klienta programu  
- Klienta można skonfigurować w kodzie lub w pliku App. config. Poniższy przykład pokazuje, jak skonfigurować klienta w kodzie.  
+ Klienta można skonfigurować w kodzie lub w pliku app.config. Poniższy przykład pokazuje, jak skonfigurować klienta w kodzie.  
   
 ```csharp
 // Create the binding.  
@@ -97,7 +98,7 @@ Console.WriteLine(cc.Add(100, 1111));
 cc.Close();  
 ```  
   
- Alternatywnie można skonfigurować klienta w pliku App. config, jak pokazano w następującym przykładzie:  
+ Alternatywnie możesz skonfigurować klienta w pliku App.config, jak pokazano w następującym przykładzie:  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF'
+description: Dowiedz się, jak udostępnić certyfikat X. 509 dla programu WCF. Kod aplikacji musi określać nazwę i lokalizację magazynu certyfikatów. Mogą istnieć inne wymagania.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: e4f1aae021c4be49847b3b6dcd14b5a0a237c899
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597049"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246873"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), kod aplikacji musi określać nazwę i lokalizację magazynu certyfikatów. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X. 509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X. 509 w magazynie certyfikatów, WCF musi mieć odpowiednie uprawnienia. Domyślnie tylko właściciel i konto systemowe mogą uzyskać dostęp do klucza prywatnego certyfikatu.  
@@ -60,9 +61,9 @@ Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), k
         |Klient (Aplikacja konsolowa lub WinForms).|Aktualnie zalogowany użytkownik.|  
         |Usługa, która jest samodzielna.|Aktualnie zalogowany użytkownik.|  
         |Usługa hostowana w usługach IIS 6,0 (Windows Server 2003) lub IIS 7,0 (Windows Vista).|USŁUGA SIECIOWA|  
-        |Usługa hostowana w usługach IIS 5. X (Windows XP).|Kontrolowane przez `<processModel>` element w pliku Machine. config. Domyślne konto to ASPNET.|  
+        |Usługa hostowana w usługach IIS 5. X (Windows XP).|Kontrolowane przez `<processModel>` element w pliku Machine.config. Domyślne konto to ASPNET.|  
   
-    5. Przyznaj uprawnienia do odczytu pliku, który zawiera klucz prywatny do konta, w ramach którego działa usługa WCF, przy użyciu narzędzia, takiego jak icacls. exe.  
+    5. Przyznaj uprawnienia do odczytu pliku, który zawiera klucz prywatny do konta, w ramach którego działa usługa WCF, przy użyciu narzędzia takiego jak icacls.exe.  
   
          Poniższy przykład kodu umożliwia edycję poufnej listy kontroli dostępu (DACL) dla określonego pliku, aby przyznać kontu usługi sieciowej odczytywanie (: R) dostępu do pliku.  
   

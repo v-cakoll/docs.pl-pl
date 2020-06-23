@@ -1,16 +1,17 @@
 ---
 title: 'Instrukcje: Asynchroniczne wywoływanie operacji usługi WCF'
+description: Dowiedz się, jak utworzyć klienta WCF, który może uzyskiwać dostęp do operacji usługi asynchronicznej przy użyciu opartego na zdarzeniach asynchronicznego modelu wywoływania.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 400ed8e5ee8b236e9d0f843f27b7c2112ec28861
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aa31f64473111800f4cd01907a0446c94f368456
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601260"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247237"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Instrukcje: Asynchroniczne wywoływanie operacji usługi WCF
 
@@ -23,7 +24,7 @@ W tym artykule opisano, jak klient może asynchronicznie uzyskać dostęp do ope
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Aby asynchronicznie wywoływać operacje usługi WCF  
   
-1. Uruchom narzędzie do [przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) za pomocą obu `/async` `/tcv:Version35` opcji poleceń i, jak pokazano w poniższym poleceniu.  
+1. Uruchom narzędzie do [przesyłania metadanych modelu ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) za pomocą obu `/async` `/tcv:Version35` opcji polecenia i, jak pokazano w poniższym poleceniu.  
   
     ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  

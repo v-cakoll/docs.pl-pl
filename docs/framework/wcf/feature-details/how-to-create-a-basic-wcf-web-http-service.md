@@ -1,18 +1,19 @@
 ---
-title: 'Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF'
+title: 'Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF'
+description: Dowiedz się, jak utworzyć usługę, która uwidacznia punkt końcowy sieci Web w programie WCF. Punkty końcowe sieci Web wysyłają dane przy użyciu kodu XML lub JSON. Brak koperty protokołu SOAP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895177"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247107"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF
 
 Windows Communication Foundation (WCF) umożliwia tworzenie usługi, która uwidacznia punkt końcowy sieci Web. Punkty końcowe sieci Web wysyłają dane w formacie XML lub JSON, ale nie ma koperty protokołu SOAP. W tym temacie pokazano, jak uwidocznić taki punkt końcowy.
 
@@ -21,7 +22,7 @@ Windows Communication Foundation (WCF) umożliwia tworzenie usługi, która uwid
 
 ## <a name="to-create-a-web-endpoint"></a>Aby utworzyć punkt końcowy sieci Web
 
-1. Zdefiniuj kontrakt usługi przy użyciu interfejsu oznaczonego za <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> pomocą i <xref:System.ServiceModel.Web.WebGetAttribute> atrybutów.
+1. Zdefiniuj kontrakt usługi przy użyciu interfejsu oznaczonego za pomocą <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> i <xref:System.ServiceModel.Web.WebGetAttribute> atrybutów.
 
      [!code-csharp[htBasicService#0](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]
@@ -36,12 +37,12 @@ Windows Communication Foundation (WCF) umożliwia tworzenie usługi, która uwid
 
 ## <a name="to-host-the-service"></a>Aby hostować usługę
 
-1. Tworzy obiekt <xref:System.ServiceModel.Web.WebServiceHost>.
+1. Utwórz <xref:System.ServiceModel.Web.WebServiceHost> obiekt.
 
      [!code-csharp[htBasicService#2](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]
 
-2. <xref:System.ServiceModel.Description.ServiceEndpoint> Dodaj przy użyciu. <xref:System.ServiceModel.Description.WebHttpBehavior>
+2. Dodaj <xref:System.ServiceModel.Description.ServiceEndpoint> przy użyciu <xref:System.ServiceModel.Description.WebHttpBehavior> .
 
      [!code-csharp[htBasicService#3](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#3)]
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
@@ -77,16 +78,16 @@ Windows Communication Foundation (WCF) umożliwia tworzenie usługi, która uwid
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Aby wywołać operacje usługi mapowane do pobrania w programie Internet Explorer
 
-1. Otwórz program Internet Explorer i wpisz`http://localhost:8000/EchoWithGet?s=Hello, world!`"" i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi (`http://localhost:8000/`), adres względny punktu końcowego (""), operację usługi do wywołania ("EchoWithGet") i znak zapytania oraz listę nazwanych parametrów oddzielonych znakiem handlowego "i" (&).
+1. Otwórz program Internet Explorer i wpisz " `http://localhost:8000/EchoWithGet?s=Hello, world!` " i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi ( `http://localhost:8000/` ), adres względny punktu końcowego (""), operację usługi do wywołania ("EchoWithGet") i znak zapytania oraz listę nazwanych parametrów oddzielonych znakiem handlowego "i" (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Aby wywołać operacje usługi w kodzie
 
-1. Utwórz wystąpienie <xref:System.ServiceModel.ChannelFactory%601> `using` w bloku.
+1. Utwórz wystąpienie <xref:System.ServiceModel.ChannelFactory%601> w `using` bloku.
 
      [!code-csharp[htBasicService#6](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]
 
-2. Dodaj <xref:System.ServiceModel.Description.WebHttpBehavior> do<xref:System.ServiceModel.ChannelFactory%601> punktu końcowego wywołań.
+2. Dodaj <xref:System.ServiceModel.Description.WebHttpBehavior> do punktu końcowego <xref:System.ServiceModel.ChannelFactory%601> wywołań.
 
      [!code-csharp[htBasicService#7](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]
@@ -96,7 +97,7 @@ Windows Communication Foundation (WCF) umożliwia tworzenie usługi, która uwid
      [!code-csharp[htBasicService#8](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#8)]
      [!code-vb[htBasicService#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#8)]
 
-4. Zamknij okno <xref:System.ServiceModel.Web.WebServiceHost>.
+4. Zamknij okno <xref:System.ServiceModel.Web.WebServiceHost> .
 
      [!code-csharp[htBasicService#9](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]
@@ -110,9 +111,9 @@ Poniżej znajduje się pełna lista kodów dla tego przykładu.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Podczas kompilowania Service.cs odniesienia system. ServiceModel. dll i system. ServiceModel. Web. dll.
+Podczas kompilowania System.ServiceModel.dll odwołania do Service.cs i System.ServiceModel.Web.dll.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

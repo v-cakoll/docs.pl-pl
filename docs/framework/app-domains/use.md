@@ -1,17 +1,18 @@
 ---
 title: Używanie domeny aplikacji
+description: Użyj domen aplikacji, które zapewniają jednostkę izolacji dla środowiska uruchomieniowego języka wspólnego (CLR). Domeny aplikacji są tworzone i uruchamiane w ramach procesu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645429"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105183"
 ---
 # <a name="using-application-domains"></a>Używanie domeny aplikacji
 
@@ -21,19 +22,19 @@ W przypadku większości aplikacji nie trzeba tworzyć własnej domeny aplikacji
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
-[Porady: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
+[Instrukcje: Tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
 Opisuje sposób programowego tworzenia domeny aplikacji.  
   
-[Porady: zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)  
+[Instrukcje: Zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)  
 Opisuje sposób programowego zwalniania domeny aplikacji.  
   
-[Porady: konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
+[Instrukcje: Konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
 Zawiera wprowadzenie do konfigurowania domeny aplikacji.  
   
 [Pobieranie informacji o instalacji z domeny aplikacji](retrieve-setup-information.md)  
 Opisuje sposób pobierania informacji o instalacji z domeny aplikacji.  
   
-[Instrukcje: ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
+[Instrukcje: Ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
 Opisuje sposób ładowania zestawu do domeny aplikacji.  
   
 [Porady: uzyskiwanie informacji dotyczących typów i członków z zestawu](../reflection-and-codedom/get-type-member-information.md)  
@@ -42,7 +43,7 @@ Opisuje sposób pobierania informacji o zestawie.
 [Kopiowanie zestawów w tle](shadow-copy-assemblies.md)  
 Opisuje, w jaki sposób kopiowanie w tle umożliwia aktualizowanie zestawów, gdy są używane, oraz sposób konfigurowania kopiowania w tle.  
   
-[Instrukcje: odbieranie powiadomień o wyjątkach pierwszej szansy](how-to-receive-first-chance-exception-notifications.md)  
+[Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy](how-to-receive-first-chance-exception-notifications.md)  
 Wyjaśnia, jak można odebrać powiadomienie zgłoszone przez wyjątek, zanim środowisko uruchomieniowe języka wspólnego rozpoczęło wyszukiwanie obsługi wyjątków.  
   
 [Rozwiązywanie załadowań zestawów](../../standard/assembly/resolve-loads.md)  

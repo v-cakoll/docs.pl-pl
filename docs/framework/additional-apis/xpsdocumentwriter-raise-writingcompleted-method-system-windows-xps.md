@@ -1,5 +1,6 @@
 ---
-title: Metoda xpsDocumentWriter.raise__WritingCompleted (System.Windows.Xps)
+title: XpsDocumentWriter. raise__WritingCompleted — Metoda (System. Windows. XPS)
+description: Zrozumienie metody XpsDocumentWriter. raise__WritingCompleted, która wywołuje zdarzenie WritingCompleted dla dokumentu XML Paper Specification (XPS) w programie .NET.
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287fa2286c7acd5061672453c5be11c3ff34ca80
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155677"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105233"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_WritingCompleted Metoda
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter. \_ \_ WritingCompleted — Metoda
 
-Wywołuje <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> zdarzenie.
+Podnosi <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> zdarzenie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,8 +39,8 @@ public void raise__WritingCompleted (object value0,
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Windows.Xps>
+**Przestrzeń nazw:**<xref:System.Windows.Xps>
 
-**Montaż:** System.Drukowanie (w pliku system.printing.dll)
+**Zestaw:** System. Printing (w system.printing.dll)
 
-**Wersje programu .NET Framework:** 3.0
+**.NET Framework wersje:** 3,0

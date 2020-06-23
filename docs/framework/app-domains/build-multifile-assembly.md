@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: kompilowanie zestawu wieloplikowego'
+title: 'Instrukcje: tworzenie zestawów wieloplikowych'
+description: Dowiedz się, jak skompilować (utworzyć) zestaw wieloplikowy w programie .NET przy użyciu przykładowego kodu, aby zilustrować każdy krok w procedurze.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429568"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104944"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: kompilowanie zestawu wieloplikowego
+# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: tworzenie zestawów wieloplikowych
 
 W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, który ilustruje każdy krok w procedurze.
 
@@ -35,7 +36,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
 1. Kompiluj wszystkie pliki, które zawierają przestrzenie nazw, do których odwołują się inne moduły w zestawie, do modułów kodu. Domyślnym rozszerzeniem modułów kodu jest *. module*.
 
-   Załóżmy na przykład, że `Stringer` plik ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie. `Stringer` `Stringer` Klasa zawiera metodę o nazwie `StringerMethod` , która zapisuje jeden wiersz w konsoli.
+   Załóżmy na przykład, że `Stringer` plik ma przestrzeń nazw o nazwie `myStringer` , która zawiera klasę o nazwie `Stringer` . `Stringer`Klasa zawiera metodę o nazwie `StringerMethod` , która zapisuje jeden wiersz w konsoli.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -99,7 +100,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
 3. Kompiluj wszystkie inne moduły przy użyciu niezbędnych opcji kompilatora, aby wskazać inne moduły, do których istnieją odwołania w kodzie. W tym kroku jest stosowana opcja kompilatora **/addmodule** .
 
-   W poniższym przykładzie moduł kodu o nazwie *Client* ma metodę punktu `Main` wejścia, która odwołuje się do metody w module *Stringer. dll* utworzonym w kroku 1.
+   W poniższym przykładzie moduł kodu o nazwie *Client* ma metodę punktu wejścia `Main` , która odwołuje się do metody w module *Stringer.dll* utworzonym w kroku 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -205,21 +206,21 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    >   vbc /out:Client.exe Client.vb /out:Stringer.netmodule Stringer.vb
    >   ```
 
-5. Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć plik wyjściowy, który zawiera manifest zestawu. Ten plik zawiera informacje referencyjne dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
+5. Użyj [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć plik wyjściowy, który zawiera manifest zestawu. Ten plik zawiera informacje referencyjne dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
 
     W wierszu polecenia wpisz następujące polecenie:
 
-    Nazwa*modułu* **Al** \< *module name*> \<>... **/Main:**\<*Nazwa*> metody **/out:**\<*Nazwa*> pliku **/target:**\<*Typ pliku zestawu*>
+    **Al** \<*module name*> \<*module name*>... **/Main:** \<*method name*> **/out:** \<*file name*> **/target:**\<*assembly file type*>
 
     W tym poleceniu argumenty *nazwy modułu* określają nazwę każdego modułu, który ma zostać uwzględniony w zestawie. **/Main:** opcja określa nazwę metody, która jest punktem wejścia zestawu. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw to plik wykonywalny aplikacji konsoli (*exe*), plik wykonywalny systemu Windows (*. win*) lub plik biblioteki (*. lib*).
 
-    W poniższym przykładzie *Al. exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie mój *Assembly. exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *. exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest `Main` metodą w klasie `MainClientApp`, która znajduje się w *pliku Client. dll*.
+    W poniższym przykładzie *Al.exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie *myAssembly.exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *myAssembly.exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest `Main` metodą w klasie `MainClientApp` , która znajduje się w *Client.dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem, można użyć [Dezasembler MSIL (Ildasm. exe)](../tools/ildasm-exe-il-disassembler.md) .
+    Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem, można użyć [Dezasembler MSIL (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) .
 
 ## <a name="see-also"></a>Zobacz też
 

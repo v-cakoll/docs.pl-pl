@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Tworzenie zasad wydawcy'
+description: Dowiedz się, jak dostawcy zestawu mogą utworzyć plik zasad wydawcy z uaktualnionym zestawem w programie .NET, aby określić, że aplikacje mają korzystać z nowszej wersji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646059"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105398"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
 
@@ -49,7 +50,7 @@ Aby dowiedzieć się, jak określić bazę kodu, zobacz [Określanie lokalizacji
 
 ## <a name="creating-the-publisher-policy-assembly"></a>Tworzenie zestawu zasad wydawcy
 
-Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć zestaw zasad wydawcy.
+Użyj [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć zestaw zasad wydawcy.
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>Aby utworzyć zestaw zasad wydawcy
 
@@ -65,7 +66,7 @@ W tym poleceniu:
 
 - `publisherPolicyAssemblyFile`Argument jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:
 
-  "Policy. majorNumber. minorNumber. mainAssemblyName. dll"
+  "policy.majorNumber.minorNumber.mainAssemblyName.dll"
 
 - `keyPairFile`Argument jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.
 
@@ -88,7 +89,7 @@ Inna konsekwencja polega na tym, że konsolidator w wersji 2,0 nie może zostać
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Dodawanie zestawu zasad wydawcy do globalnej pamięci podręcznej zestawów
 
-Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) , aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów.
+Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) , aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów.
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej zestawów
 
@@ -107,7 +108,7 @@ gacutil /i policy.1.0.myAssembly.dll
 > [!IMPORTANT]
 > Zestawu zasad wydawcy nie można dodać do globalnej pamięci podręcznej zestawów, chyba że oryginalny plik zasad wydawcy określony w argumencie znajduje się `/link` w tym samym katalogu, w którym znajduje się zestaw.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie za pomocą zestawów](../../standard/assembly/index.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../deployment/how-the-runtime-locates-assemblies.md)

@@ -1,5 +1,6 @@
 ---
 title: Exception. PrepForRemoting — Metoda (system)
+description: Przejrzyj metodę Exception. PrepForRemoting w programie .NET. Metoda dodaje ślad stosu po stronie serwera do komunikatu przed ponownym zgłoszeniem wyjątku na kliencie.
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9ceb73499ae3bb308975e6db5b961bfe40165ba3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214898"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105262"
 ---
 # <a name="exceptionprepforremoting-method"></a>Metoda Exception.PrepForRemoting
 
@@ -27,19 +28,19 @@ internal Exception PrepForRemoting();
 ## <a name="returns"></a>Zwraca
 
 <xref:System.Exception>  
-To wystąpienie <xref:System.Exception>.
+To <xref:System.Exception> wystąpienie.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> Metoda `Exception.PrepForRemoting` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> `Exception.PrepForRemoting`Metoda jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
 > Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Przestrzeń nazw:** <xref:System>
+**Przestrzeń nazw:**<xref:System>
 
-**Zestaw:** mscorlib. dll (w bibliotece Mscorlib. dll)
+**Zestaw:** mscorlib.dll (w mscorlib.dll)
 
 **.NET Framework wersje:** Dostępne od 1,0.

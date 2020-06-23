@@ -1,5 +1,6 @@
 ---
-title: Zdarzenie xpsDocumentWriter._WritingProgressChanged (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingProgressChanged — zdarzenie (System. Windows. XPS)
+description: Przejrzyj zdarzenie XpsDocumentWriter. _WritingProgressChanged, które występuje, gdy moduł zapisywania dokumentów XML (XPS Paper Specification) aktualizuje postęp w programie .NET.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +12,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a54f1fbc04d7f1ada6bf893f2e8bfb9d98d372df
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155586"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105041"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>Xpsdocumentwriter. \_Zdarzenie WritingProgressChanged
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>XpsDocumentWriter. \_ Zdarzenie WritingProgressChanged
 
-Występuje, <xref:System.Windows.Xps.XpsDocumentWriter> gdy aktualizuje jego postęp.
+Występuje po <xref:System.Windows.Xps.XpsDocumentWriter> aktualizacji postępu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,8 +31,8 @@ internal event WritingProgressChangedEventHandler _WritingProgressChanged
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**<xref:System.Windows.Xps>
+**Przestrzeń nazw:**<xref:System.Windows.Xps>
 
-**Montaż:** System.Drukowanie (w pliku system.printing.dll)
+**Zestaw:** System. Printing (w system.printing.dll)
 
-**Wersje programu .NET Framework:** Dostępne od 3.0
+**.NET Framework wersje:** Dostępne od 3,0

@@ -1,5 +1,6 @@
 ---
 title: Global Assembly Cache
+description: Zapoznaj się z globalną pamięcią podręczną zestawów, która jest pamięcią podręczną kodu całego komputera, w której jest zainstalowany środowisko uruchomieniowe języka wspólnego dla platformy .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119917"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104913"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe języka wspólnego, ma pamięć podręczną kodu całego komputera o nazwie globalna pamięć podręczna zestawów. Globalna pamięć podręczna zestawów przechowuje zestawy specjalnie wyznaczonych do współużytkowania przez kilka aplikacji na komputerze.  
@@ -29,7 +30,7 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
   
 - Użyj Instalatora zaprojektowanego do pracy z globalną pamięcią podręczną zestawów. Jest to preferowana opcja instalowania zestawów w globalnej pamięci podręcznej zestawów.  
   
-- Użyj narzędzia deweloperskiego o nazwie [globalne narzędzie pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md)dostarczonego przez Windows SDK.  
+- Użyj narzędzia deweloperskiego o nazwie [globalne narzędzie pamięci podręcznej zestawów (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md), dostarczone przez Windows SDK.  
   
     > [!NOTE]
     > W scenariuszach wdrażania należy użyć Instalator Windows, aby zainstalować zestawy w globalnej pamięci podręcznej zestawów. Narzędzia globalnej pamięci podręcznej zestawów można używać tylko w scenariuszach deweloperskich, ponieważ nie zapewnia to zliczania odwołań do zestawów i innych funkcji dostępnych podczas korzystania z Instalator Windows.  

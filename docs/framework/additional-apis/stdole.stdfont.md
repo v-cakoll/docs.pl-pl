@@ -1,5 +1,6 @@
 ---
-title: Interfejs StdFonta (stdol)
+title: Interfejs StdFont (stdole)
+description: Zobacz informacje referencyjne dotyczące interfejsu StdFont w programie .NET. Ten interfejs znajduje się w przestrzeni nazw stdole i zestawie stdole (w bibliotece stdole.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 703a8dd6134ad6045fc46d4d0a9c652feb204ff5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 974d3a3b0ea6dc762f27f812a609eeec4376bc24
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155817"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105278"
 ---
 # <a name="stdfont-interface"></a>StdFont, interfejs
 
@@ -26,6 +27,6 @@ public interface StdFont : Font,
 
 ## <a name="requirements"></a>Wymagania
 
-**Obszar nazw:**`stdole`
+**Przestrzeń nazw:**`stdole`
 
-**Montaż:** stdol (w stdole.dll)
+**Zestaw:** stdole (w stdole.dll)

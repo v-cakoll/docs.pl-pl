@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802720"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141246"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -94,9 +94,9 @@ Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobie
 
   Służy jako ciąg zapytania do dołączenia do kanału informacyjnego platformy Azure. Umożliwia on zmianę adresu URL w celu korzystania z niepublicznych kont magazynu obiektów BLOB.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Drukuje pomoc dla skryptu.
+  Drukuje pomoc dla skryptu. Dotyczy tylko skryptu bash. W przypadku programu PowerShell należy użyć polecenia `Get-Help ./dotnet-install.ps1` .
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -104,7 +104,7 @@ Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobie
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Określa ścieżkę do pliku [Global. JSON](global-json.md) , który zostanie użyty do określenia wersji zestawu SDK. Plik *Global. JSON* musi mieć wartość `sdk:version` .
+  Określa ścieżkę do [global.jsw](global-json.md) pliku, która zostanie użyta do określenia wersji zestawu SDK. *global.jsw* pliku musi mieć wartość dla `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
@@ -143,7 +143,7 @@ Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobie
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  Pomija Instalowanie plików nienależących do wersji, takich jak *dotnet. exe*, jeśli już istnieją.
+  Pomija Instalowanie plików nienależących do wersji, takich jak *dotnet.exe*, jeśli już istnieją.
 
 - **`-UncachedFeed|--uncached-feed`**
 

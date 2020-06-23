@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować funkcje zdefiniowane przez użyt
 ms.date: 06/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 96597c7e2d45dfdf8406b0d3e80daad270996b97
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105602"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85142020"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Tworzenie funkcji zdefiniowanych przez użytkownika (UDF) w programie .NET dla Apache Spark
 
@@ -61,7 +61,7 @@ Aby lepiej zrozumieć, jak wdrożyć UDF, przejrzyj [funkcje pomocnika UDF](http
 
 ## <a name="udf-serialization"></a>Serializacja UDF
 
-Ponieważ UDF są funkcjami, które muszą być wykonywane na procesach roboczych, muszą być serializowane i wysyłane do procesów roboczych w ramach ładunku ze sterownika. [Delegat](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), który jest odwołaniem do metody, musi być serializowany, a jego [obiektem docelowym](https://docs.microsoft.com/en-us/dotnet/api/system.delegate.target?view=netframework-4.8) jest wystąpienie klasy, dla którego bieżący delegat wywołuje metodę wystąpienia. Zapoznaj się z tym [przykładem kodu w usłudze GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) , aby lepiej zrozumieć sposób wykonywania serializacji UDF.
+Ponieważ UDF są funkcjami, które muszą być wykonywane na procesach roboczych, muszą być serializowane i wysyłane do procesów roboczych w ramach ładunku ze sterownika. [Delegat](../../csharp/programming-guide/delegates/index.md), który jest odwołaniem do metody, musi być serializowany oraz jego [obiekt docelowy](xref:System.Delegate.Target%2A), który jest wystąpieniem klasy, na którym bieżący delegat wywołuje metodę wystąpienia. Zapoznaj się z tym [przykładem kodu w usłudze GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) , aby lepiej zrozumieć sposób wykonywania serializacji UDF.
 
 Platforma .NET dla Apache Spark używa platformy .NET Core, która nie obsługuje serializacji delegatów. Zamiast tego odbicie jest używane do serializacji obiektu docelowego, gdzie jest zdefiniowany delegat. Gdy wiele delegatów jest zdefiniowanych w wspólnym zakresie, mają one miejsce do użycia, które stają się celem odbicia w celu serializacji.
 

@@ -1,5 +1,6 @@
 ---
 title: Znane typy kontraktów danych
+description: Dowiedz się, w jaki sposób model kontraktu danych używa klasy KnownTypeattribute do określania typów do uwzględnienia podczas deserializacji w programie WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597452"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247484"
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
 <xref:System.Runtime.Serialization.KnownTypeAttribute>Klasa pozwala określić z wyprzedzeniem typy, które powinny być brane pod uwagę podczas deserializacji. Aby zapoznać się z przykładem roboczym, zobacz przykład [znanych typów](../samples/known-types.md) .  
@@ -77,7 +78,7 @@ ms.locfileid: "84597452"
  W poniższym przykładzie kontrakt danych przechowuje liczbę i operację do wykonania na numerze. `Numbers`Składowa danych może być liczbą całkowitą, tablicą liczb całkowitych lub zawierającą <xref:System.Collections.Generic.List%601> liczby całkowite.  
   
 > [!CAUTION]
-> Ta wartość będzie działała tylko po stronie klienta, jeśli SVCUTIL. Plik EXE jest używany do generowania serwera proxy WCF. Svcutil. EXE pobiera metadane z usługi, w tym wszystkie znane typy. Bez tych informacji klient nie będzie mógł deserializować typów.  
+> Ta funkcja będzie działała tylko po stronie klienta, jeśli SVCUTIL.EXE zostanie użyta do wygenerowania serwera proxy WCF. SVCUTIL.EXE pobiera metadane z usługi, w tym wszystkie znane typy. Bez tych informacji klient nie będzie mógł deserializować typów.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

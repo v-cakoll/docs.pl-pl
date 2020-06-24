@@ -1,5 +1,6 @@
 ---
 title: Domyślne wartości elementów członkowskich danych
+description: Dowiedz się, jak pominąć element członkowski danych z serializowanych danych, gdy ma .NET Framework wartość domyślną. Funkcja WCF może zwiększyć wydajność, ponieważ nie jest serializowana wartość domyślna.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593485"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247380"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W .NET Framework typy mają koncepcję *wartości domyślnych*. Na przykład dla dowolnego typu odwołania wartość domyślna to `null` , a dla typu Integer jest równa zero. Czasami pożądane jest pominięcie elementu członkowskiego danych z serializowanych danych, gdy jest ustawiony na jego wartość domyślną. Ponieważ element członkowski ma wartość domyślną, nie trzeba serializować wartości rzeczywistej; jest to zalety wydajności.  

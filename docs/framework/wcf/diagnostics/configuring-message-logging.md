@@ -1,25 +1,26 @@
 ---
 title: Konfigurowanie rejestrowania komunikatów
+description: Dowiedz się, jak skonfigurować rejestrowanie komunikatów, w tym informacje na temat włączania rejestrowania, poziomów rejestrowania, filtrów komunikatów i konfigurowania odbiornika niestandardowego w programie WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 283f43239d6cf5aea5ea668397a52313ff526e2a
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5203f19a18e5fa6b0ed7f68e1d1de0447da41abd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345184"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247665"
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 
-W tym temacie opisano, jak można skonfigurować rejestrowanie wiadomości dla różnych scenariuszy.
+W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla różnych scenariuszy.
 
-## <a name="enabling-message-logging"></a>Włączanie rejestrowania wiadomości
+## <a name="enabling-message-logging"></a>Włączanie rejestrowania komunikatów
 
-Windows Communication Foundation (WCF) domyślnie nie rejestruje komunikatów. Aby aktywować rejestrowanie wiadomości, należy dodać `System.ServiceModel.MessageLogging` odbiornik śledzenia do źródła `<messagelogging>` śledzenia i ustawić atrybuty elementu w pliku konfiguracyjnym.
+Windows Communication Foundation (WCF) nie rejestruje komunikatów domyślnie. Aby uaktywnić rejestrowanie komunikatów, należy dodać odbiornik śledzenia do `System.ServiceModel.MessageLogging` źródła śledzenia i ustawić atrybuty dla `<messagelogging>` elementu w pliku konfiguracji.
 
-W poniższym przykładzie pokazano, jak włączyć rejestrowanie i określić dodatkowe opcje.
+Poniższy przykład pokazuje, jak włączyć rejestrowanie i określić dodatkowe opcje.
 
 ```xml
 <system.diagnostics>
@@ -47,90 +48,90 @@ W poniższym przykładzie pokazano, jak włączyć rejestrowanie i określić do
 </system.serviceModel>
 ```
 
-Aby uzyskać więcej informacji na temat ustawień rejestrowania wiadomości, zobacz [Zalecane ustawienia śledzenia i rejestrowania wiadomości](./tracing/recommended-settings-for-tracing-and-message-logging.md).
+Aby uzyskać więcej informacji na temat ustawień rejestrowania komunikatów, zobacz [zalecane ustawienia śledzenia i rejestrowania komunikatów](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
-Można użyć `add` do określenia nazwy i typu odbiornika, którego chcesz użyć. W przykładowej konfiguracji odbiornik nosi nazwę "wiadomości" i dodaje standardowy`System.Diagnostics.XmlWriterTraceListener`odbiornik śledzenia programu .NET Framework ( ) jako typ do użycia. W przypadku `System.Diagnostics.XmlWriterTraceListener`użycia należy określić lokalizację i nazwę pliku wyjściowego w pliku konfiguracyjnym. Odbywa się to `initializeData` przez ustawienie nazwy pliku dziennika. W przeciwnym razie system zgłasza wyjątek. Można również zaimplementować niestandardowy odbiornik, który emituje dzienniki do pliku domyślnego.
+Możesz użyć, `add` Aby określić nazwę i typ odbiornika, którego chcesz użyć. W przykładowej konfiguracji odbiornik ma nazwę "Messages" i dodaje odbiornik standardowego .NET Framework śledzenia ( `System.Diagnostics.XmlWriterTraceListener` ) jako typ do użycia. Jeśli używasz `System.Diagnostics.XmlWriterTraceListener` , musisz określić lokalizację i nazwę pliku wyjściowego w pliku konfiguracji. Można to zrobić, ustawiając `initializeData` nazwę pliku dziennika. W przeciwnym razie system zgłasza wyjątek. Możesz również zaimplementować niestandardowy odbiornik, który emituje dzienniki do pliku domyślnego.
 
 > [!NOTE]
-> Ponieważ rejestrowanie wiadomości uzyskuje dostęp do miejsca na dysku, należy ograniczyć liczbę wiadomości, które są zapisywane na dysku dla określonej usługi. Po osiągnięciu limitu wiadomości jest produkowany śledzenia na poziomie informacji i wszystkie działania rejestrowania wiadomości zatrzymać.
+> Ponieważ rejestrowanie komunikatów uzyskuje dostęp do miejsca na dysku, należy ograniczyć liczbę wiadomości, które są zapisywane na dysku dla określonej usługi. Po osiągnięciu limitu komunikatów zostaje wygenerowany ślad na poziomie informacji i wszystkie działania związane z rejestrowaniem komunikatów zostaną zatrzymane.
 
-Poziom rejestrowania, a także dodatkowe opcje, są omówione w logging level i opcje sekcji.
+Poziom rejestrowania, a także opcje dodatkowe są omówione w sekcji poziom rejestrowania i opcje.
 
-Atrybut `switchValue` a jest `source` prawidłowy tylko dla śledzenia. Jeśli określisz `switchValue` atrybut dla `System.ServiceModel.MessageLogging` źródła śledzenia w następujący sposób, nie ma wpływu.
+`switchValue`Atrybut elementu `source` jest prawidłowy tylko dla śledzenia. Jeśli określisz `switchValue` atrybut dla `System.ServiceModel.MessageLogging` źródła śledzenia w następujący sposób, nie ma to żadnego efektu.
 
 ```xml
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 </source>
 ```
 
-Jeśli chcesz wyłączyć źródło śledzenia, należy `logMessagesAtServiceLevel`użyć `logMalformedMessages`, `logMessagesAtTransportLevel` i `messageLogging` atrybuty elementu zamiast. Wszystkie te atrybuty `false`należy ustawić na . Można to zrobić za pomocą pliku konfiguracji w poprzednim przykładzie kodu, za pośrednictwem interfejsu użytkownika Edytora konfiguracji lub przy użyciu usługi WMI. Aby uzyskać więcej informacji na temat narzędzia Edytor konfiguracji, zobacz [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Aby uzyskać więcej informacji na temat usługi WMI, zobacz [Korzystanie z instrumentacji zarządzania windowsem dla diagnostyki](./wmi/index.md).
+Jeśli chcesz wyłączyć źródło śledzenia, `logMessagesAtServiceLevel` zamiast tego należy użyć `logMalformedMessages` atrybutów, i `logMessagesAtTransportLevel` `messageLogging` . Należy ustawić wszystkie te atrybuty na `false` . Można to zrobić za pomocą pliku konfiguracji w poprzednim przykładzie kodu, za pomocą interfejsu użytkownika edytora konfiguracji lub przy użyciu usługi WMI. Aby uzyskać więcej informacji o narzędziu Edytor konfiguracji, zobacz [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Aby uzyskać więcej informacji na temat usługi WMI, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](./wmi/index.md).
 
-## <a name="logging-levels-and-options"></a>Poziomy i opcje rejestrowania
+## <a name="logging-levels-and-options"></a>Poziomy rejestrowania i opcje
 
-W przypadku wiadomości przychodzących rejestrowanie odbywa się natychmiast po utworzeniu wiadomości, bezpośrednio przed wiadomości dostaje się do kodu użytkownika na poziomie usługi i po wykryciu nieprawidłowo sformułowanych wiadomości.
+W przypadku wiadomości przychodzących rejestrowanie odbywa się natychmiast po utworzeniu komunikatu, bezpośrednio przed wprowadzeniem komunikatu do kodu użytkownika na poziomie usługi i po wykryciu źle sformułowanych komunikatów.
 
-W przypadku wiadomości wychodzących rejestrowanie odbywa się natychmiast po opuszczeniu kodu użytkownika i bezpośrednio przed przesłaniem wiadomości.
+W przypadku wiadomości wychodzących rejestrowanie odbywa się natychmiast po opuszczeniu przez komunikat kodu użytkownika i natychmiast przed wysłaniem komunikatu do sieci.
 
-WCF rejestruje komunikaty na dwóch różnych poziomach, usługi i transportu. Nieprawidłowo sformułowane wiadomości są również rejestrowane. Trzy kategorie są niezależne od siebie i mogą być aktywowane oddzielnie w konfiguracji.
+Usługa WCF rejestruje komunikaty na dwóch różnych poziomach, usługach i transportach. Rejestrowane są również źle sformułowane komunikaty. Trzy kategorie są niezależne od siebie i można je aktywować osobno w konfiguracji.
 
-Poziom rejestrowania można kontrolować, `logMessagesAtServiceLevel`ustawiając `logMalformedMessages` `logMessagesAtTransportLevel` atrybuty `messageLogging` elementu i atrybuty elementu.
+Poziom rejestrowania można kontrolować przez ustawienie `logMessagesAtServiceLevel` `logMalformedMessages` atrybutów elementu,, i `logMessagesAtTransportLevel` `messageLogging` .
 
 ### <a name="service-level"></a>Poziom usług
 
-Wiadomości rejestrowane w tej warstwie mają zamiar wprowadzić (po otrzymaniu) lub pozostawić (przy wysyłaniu) kod użytkownika. Jeśli filtry zostały zdefiniowane, rejestrowane są tylko komunikaty pasujące do filtrów. W przeciwnym razie wszystkie komunikaty na poziomie usługi są rejestrowane. Komunikaty infrastruktury (transakcje, kanał równorzędny i zabezpieczenia) są również rejestrowane na tym poziomie, z wyjątkiem komunikatów niezawodnej obsługi wiadomości. W wiadomościach przesyłanych strumieniowo rejestrowane są tylko nagłówki. Ponadto bezpieczne wiadomości są rejestrowane odszyfrowywane na tym poziomie.
+Komunikaty zarejestrowane w tej warstwie mają na celu wprowadzenie (przy odbiorze) lub pozostawienie (przy wysyłaniu) kodu użytkownika. Jeśli filtry zostały zdefiniowane, rejestrowane są tylko komunikaty zgodne z filtrami. W przeciwnym razie zostaną zarejestrowane wszystkie komunikaty na poziomie usługi. Komunikaty infrastruktury (transakcje, kanał równorzędny i zabezpieczenia) są również rejestrowane na tym poziomie, z wyjątkiem komunikatów o niezawodnej komunikacji. W przypadku komunikatów przesyłanych strumieniowo rejestrowane są tylko nagłówki. Ponadto na tym poziomie są zaszyfrowane bezpieczne komunikaty.
 
 ### <a name="transport-level"></a>Poziom transportu
 
-Wiadomości rejestrowane w tej warstwie są gotowe do zakodowania lub dekodowania dla lub po transporcie w sieci. Jeśli filtry zostały zdefiniowane, rejestrowane są tylko komunikaty pasujące do filtrów. W przeciwnym razie wszystkie komunikaty w warstwie transportu są rejestrowane. Wszystkie komunikaty infrastruktury są rejestrowane w tej warstwie, w tym wiadomości niezawodne wiadomości. W wiadomościach przesyłanych strumieniowo rejestrowane są tylko nagłówki. Ponadto bezpieczne wiadomości są rejestrowane jako zaszyfrowane na tym poziomie, z wyjątkiem, jeśli używany jest bezpieczny transport, taki jak HTTPS.
+Komunikaty zarejestrowane w tej warstwie są gotowe do zakodowania lub dekodowania dla lub po transporcie w sieci. Jeśli filtry zostały zdefiniowane, rejestrowane są tylko komunikaty zgodne z filtrami. W przeciwnym razie wszystkie komunikaty w warstwie transportowej są rejestrowane. Wszystkie komunikaty infrastruktury są rejestrowane w tej warstwie, w tym komunikaty niezawodnej obsługi komunikatów. W przypadku komunikatów przesyłanych strumieniowo rejestrowane są tylko nagłówki. Ponadto bezpieczne wiadomości są rejestrowane jako zaszyfrowane na tym poziomie, z wyjątkiem tego, czy jest używany bezpieczny transport, taki jak HTTPS.
 
-### <a name="malformed-level"></a>Nieprawidłowo uformowany poziom
+### <a name="malformed-level"></a>Źle skonstruowany poziom
 
-Nieprawidłowo sformułowane wiadomości są wiadomości, które są odrzucane przez stos WCF na dowolnym etapie przetwarzania. Nieprawidłowo sformułowane wiadomości są rejestrowane jako — jest: szyfrowane, jeśli tak jest, z nienaskładanym kodem XML i tak dalej. `maxSizeOfMessageToLog`zdefiniował rozmiar wiadomości, która ma być zarejestrowana jako CDATA. Domyślnie `maxSizeOfMessageToLog` jest równa 256K. Aby uzyskać więcej informacji na temat tego atrybutu, zobacz sekcję Inne opcje.
+Źle sformułowane komunikaty to komunikaty odrzucone przez stos WCF na dowolnym etapie przetwarzania. Źle sformułowane komunikaty są rejestrowane jako: zaszyfrowane, jeśli tak, z nieprawidłowym kodem XML i tak dalej. `maxSizeOfMessageToLog`zdefiniowano rozmiar wiadomości, która ma zostać zarejestrowana jako CDATA. Domyślnie `maxSizeOfMessageToLog` jest równa 256 k. Więcej informacji o tym atrybucie zawiera sekcja inne opcje.
 
 ### <a name="other-options"></a>Inne opcje
 
 Oprócz poziomów rejestrowania użytkownik może określić następujące opcje:
 
-- Log Entire`logEntireMessage` Message (atrybut): Ta wartość określa, czy cała wiadomość (nagłówek wiadomości i treść) jest rejestrowana. Wartością domyślną jest `false`, co oznacza, że tylko nagłówek jest rejestrowany. To ustawienie ma wpływ na poziomy rejestrowania komunikatów usługi i transportu..
+- Rejestruj cały komunikat ( `logEntireMessage` atrybut): Ta wartość określa, czy cały komunikat (nagłówek i treść wiadomości) jest rejestrowany. Wartość domyślna to `false` , co oznacza, że tylko nagłówek jest rejestrowany. To ustawienie ma wpływ na poziomy rejestrowania komunikatów usługi i transportu..
 
-- Maksymalna liczba`maxMessagesToLog` komunikatów do zarejestrowania (atrybut): Ta wartość określa maksymalną liczbę wiadomości do zarejestrowania. Wszystkie wiadomości (usługa, transport i nieprawidłowo sformułowane wiadomości) są wliczane do tego przydziału. Po osiągnięciu przydziału jest emitowany śledzenia i nie jest rejestrowany żaden dodatkowy komunikat. Wartość domyślna to 10000.
+- Maksymalna liczba komunikatów do zarejestrowania ( `maxMessagesToLog` atrybut): Ta wartość określa maksymalną liczbę komunikatów do zarejestrowania. Wszystkie komunikaty (usługa, transport i źle sformułowane komunikaty) są zliczane do tego przydziału. Po osiągnięciu limitu przydziału ślad jest emitowany i nie jest rejestrowany żaden dodatkowy komunikat. Wartość domyślna to 10000.
 
-- Maksymalny rozmiar wiadomości`maxSizeOfMessageToLog` do dziennika (atrybut): Ta wartość określa maksymalny rozmiar wiadomości do logowania bajtów. Komunikaty, które przekraczają limit rozmiaru nie są rejestrowane i nie jest wykonywane żadne inne działanie dla tej wiadomości. To ustawienie ma wpływ na wszystkie poziomy śledzenia. Jeśli śledzenie ServiceModel jest włączone, śledzenie poziomu ostrzeżenia jest emitowane w pierwszym punkcie rejestrowania (ServiceModelSend* lub TransportReceive), aby powiadomić użytkownika. Domyślną wartością komunikatów poziomu usługi i poziomu transportu jest 256K, podczas gdy domyślną wartością dla nieprawidłowo sformułowanych komunikatów jest 4K.
+- Maksymalny rozmiar komunikatu do zarejestrowania ( `maxSizeOfMessageToLog` atrybut): Ta wartość określa maksymalny rozmiar komunikatów, które mają być rejestrowane w bajtach. Komunikaty przekraczające limit rozmiaru nie są rejestrowane i żadne inne działanie nie jest wykonywane dla tego komunikatu. To ustawienie ma wpływ na wszystkie poziomy śledzenia. Jeśli śledzenie ServiceModel jest włączone, ślad poziomu ostrzeżeń jest emitowany w pierwszym punkcie rejestrowania (ServiceModelSend * lub TransportReceive) w celu powiadomienia użytkownika. Wartość domyślna dla komunikatów poziomu usługi i na poziomie transportu to 256 K, podczas gdy wartość domyślna dla źle sformułowanych komunikatów to 4K.
 
   > [!CAUTION]
-  > Rozmiar wiadomości, który jest obliczany do porównania z `maxSizeOfMessageToLog` jest rozmiar wiadomości w pamięci przed serializacji. Ten rozmiar może się różnić od rzeczywistej długości ciągu wiadomości, który jest rejestrowany, a w wielu przypadkach jest większy niż rzeczywisty rozmiar. W rezultacie wiadomości mogą nie być rejestrowane. Można uwzględnić ten fakt, `maxSizeOfMessageToLog` określając atrybut jest o 10% większy niż oczekiwany rozmiar wiadomości. Ponadto w przypadku rejestrowania nieprawidłowo sformułowanych komunikatów rzeczywiste miejsce na dysku wykorzystywane przez dzienniki komunikatów może `maxSizeOfMessageToLog`być nawet 5 razy większe od rozmiaru wartości określonej przez program .
+  > Rozmiar komunikatu, który jest obliczany do porównania, `maxSizeOfMessageToLog` jest rozmiarem komunikatu w pamięci przed serializacji. Ten rozmiar może różnić się od rzeczywistej długości rejestrowanego ciągu komunikatu, a w wielu przypadkach jest większy niż rzeczywisty rozmiar. W związku z tym komunikaty mogą nie być rejestrowane. Możesz obsłużyć ten fakt, określając `maxSizeOfMessageToLog` atrybut, który ma być 10% większy niż oczekiwany rozmiar wiadomości. Ponadto w przypadku zarejestrowania źle sformułowanych komunikatów rzeczywista ilość miejsca na dysku wykorzystana przez dzienniki komunikatów może być maksymalnie 5 razy większa niż wartość określona przez `maxSizeOfMessageToLog` .
 
-Jeśli w pliku konfiguracyjnym nie zdefiniowano żadnego odbiornika śledzenia, nie jest generowane żadne dane wyjściowe rejestrowania niezależnie od określonego poziomu rejestrowania.
+Jeśli żaden odbiornik śledzenia nie jest zdefiniowany w pliku konfiguracji, żadne dane wyjściowe rejestrowania nie są generowane niezależnie od określonego poziomu rejestrowania.
 
-Opcje rejestrowania komunikatów, takie jak atrybuty opisane w tej sekcji, można zmienić w czasie wykonywania przy użyciu instrumentacji zarządzania windowsem (WMI). Można to zrobić, uzyskując dostęp do [wystąpienia AppDomainInfo,](./wmi/appdomaininfo.md) które `LogMessagesAtServiceLevel` `LogMessagesAtTransportLevel`udostępnia `LogMalformedMessages`te właściwości logiczne: , i . W związku z tym jeśli skonfigurujesz odbiornik śledzenia do `false` rejestrowania wiadomości, ale ustaw `true` te opcje w konfiguracji, można później zmienić je na gdy aplikacja jest uruchomiona. To skutecznie umożliwia rejestrowanie wiadomości w czasie wykonywania. Podobnie po włączeniu rejestrowania wiadomości w pliku konfiguracji, można go wyłączyć w czasie wykonywania przy użyciu usługi WMI. Aby uzyskać więcej informacji, zobacz [Korzystanie z instrumentacji zarządzania windowsem dla diagnostyki](./wmi/index.md).
+Opcje rejestrowania komunikatów, takie jak atrybuty opisane w tej sekcji, można zmienić w czasie wykonywania przy użyciu Instrumentacja zarządzania Windows (WMI). Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](./wmi/appdomaininfo.md) , które uwidacznia następujące właściwości logiczne: `LogMessagesAtServiceLevel` , `LogMessagesAtTransportLevel` , i `LogMalformedMessages` . W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje `false` w konfiguracji, możesz później zmienić je na, `true` gdy aplikacja jest uruchomiona. Pozwala to efektywnie rejestrować komunikaty w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI. Aby uzyskać więcej informacji, zobacz [używanie Instrumentacja zarządzania Windows do diagnostyki](./wmi/index.md).
 
-Pole `source` w dzienniku wiadomości określa, w którym kontekście wiadomość jest rejestrowana: podczas wysyłania/odbierania wiadomości żądania, dla żądania odpowiedzi lub żądania 1-drogowego, w modelu usługi lub warstwy transportu lub w przypadku nieprawidłowo sformułowanej wiadomości.
+`source`Pole w dzienniku komunikatów określa, w którym kontekście komunikat jest rejestrowany: podczas wysyłania/otrzymywania komunikatu żądania, dla żądania żądanie-odpowiedź lub 1-kierunkowego, w modelu usług lub warstwie transportowej lub w przypadku nieprawidłowo sformułowanego komunikatu.
 
-W przypadku nieprawidłowo `source` sformułowanych `Malformed`wiadomości jest równa . W przeciwnym razie źródło ma następujące wartości na podstawie kontekstu.
+W przypadku źle sformułowanych komunikatów `source` jest równa `Malformed` . W przeciwnym razie źródło ma następujące wartości na podstawie kontekstu.
 
-Na wniosek/odpowiedź
+Dla żądania/odpowiedzi
 
-||Wyślij żądanie|Otrzymaj żądanie|Wyślij odpowiedź|Odbierz odpowiedź|
+||Wyślij żądanie|Żądanie odebrania|Wyślij odpowiedź|Odbierz odpowiedź|
 |-|------------------|---------------------|----------------|-------------------|
-|Warstwa modelu usługi|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Odpowiedz|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odpowiedz|
-|Warstwa transportowa|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|
+|Warstwa modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Odpowiedz|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odpowiedz|
+|Warstwa transportu|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|
 
 Dla żądania jednokierunkowego
 
-||Wyślij żądanie|Otrzymaj żądanie|
+||Wyślij żądanie|Żądanie odebrania|
 |-|------------------|---------------------|
-|Warstwa modelu usługi|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Datagram|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Datagram|
-|Warstwa transportowa|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|
+|Warstwa modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wysyłanie<br /><br /> Odebran|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odebran|
+|Warstwa transportu|Transport<br /><br /> Wysyłanie|Transport<br /><br /> Odbieranie|
 
 ## <a name="message-filters"></a>Filtry komunikatów
 
-Filtry komunikatów są `messageLogging` definiowane `diagnostics` w elemencie konfiguracji sekcji konfiguracji. Są one stosowane na poziomie usług i transportu. Gdy zdefiniowano jeden lub więcej filtrów, rejestrowane są tylko komunikaty, które pasują do co najmniej jednego z filtrów. Jeśli żaden filtr nie jest zdefiniowany, wszystkie komunikaty przechodzą przez.
+Filtry komunikatów są zdefiniowane w `messageLogging` elemencie Configuration `diagnostics` sekcji konfiguracji. Są one stosowane na poziomie usługi i transportu. Jeśli zdefiniowano co najmniej jeden filtr, rejestrowane są tylko komunikaty zgodne z co najmniej jednym filtrem. Jeśli żaden filtr nie jest zdefiniowany, wszystkie komunikaty są przekazywane.
 
-Filtry obsługują pełną składnię XPath i są stosowane w kolejności, w jakiej pojawiają się w pliku konfiguracyjnym. Niepoprawny syntaktycznie filtr powoduje wyjątek konfiguracji.
+Filtry obsługują pełną składnię XPath i są stosowane w kolejności, w której pojawiają się w pliku konfiguracji. Składnia nieprawidłowego filtru powoduje wyjątek w konfiguracji.
 
-Filtry zapewniają również funkcję `nodeQuota` bezpieczeństwa przy użyciu atrybutu, który ogranicza maksymalną liczbę węzłów w XPath DOM, które mogą być badane w celu dopasowania filtru.
+Filtry zapewniają również funkcję bezpieczeństwa przy użyciu `nodeQuota` atrybutu, który ogranicza maksymalną liczbę węzłów w Dom XPath, które można sprawdzić w celu dopasowania do filtru.
 
-W poniższym przykładzie pokazano, jak skonfigurować filtr, który rejestruje tylko wiadomości, które mają sekcję nagłówka PROTOKOŁU SOAP.
+Poniższy przykład pokazuje, jak skonfigurować filtr, który rejestruje tylko wiadomości, które mają sekcję nagłówka SOAP.
 
 ```xml
 <messageLogging logEntireMessage="true"
@@ -146,7 +147,7 @@ W poniższym przykładzie pokazano, jak skonfigurować filtr, który rejestruje 
 </messageLogging>
 ```
 
-Filtrów nie można zastosować do treści wiadomości. Filtry, które próbują manipulować treścią wiadomości, są usuwane z listy filtrów. Emitowane jest również zdarzenie, które wskazuje to. Na przykład następujący filtr zostanie usunięty z tabeli filtrów.
+Nie można zastosować filtrów do treści komunikatu. Filtry, które próbują manipulować treścią wiadomości, są usuwane z listy filtrów. Jest również emitowane zdarzenie wskazujące na to. Na przykład następujący filtr zostałby usunięty z tabeli filtrów.
 
 ```xml
 <add xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">/s:Envelope/s:Body[contains(text(), "Hello")]</add>
@@ -154,7 +155,7 @@ Filtrów nie można zastosować do treści wiadomości. Filtry, które próbują
 
 ## <a name="configuring-a-custom-listener"></a>Konfigurowanie odbiornika niestandardowego
 
-Można również skonfigurować odbiornik niestandardowy z dodatkowymi opcjami. Niestandardowy odbiornik może być przydatne w filtrowaniu elementów pii specyficzne dla aplikacji z wiadomości przed rejestrowaniem. W poniższym przykładzie przedstawiono niestandardową konfigurację odbiornika.
+Możesz również skonfigurować odbiornik niestandardowy z dodatkowymi opcjami. Odbiornik niestandardowy może być przydatny do filtrowania elementów samodzielnych specyficznych dla aplikacji z komunikatów przed zarejestrowaniem. Poniższy przykład demonstruje konfigurację odbiorników niestandardowych.
 
 ```xml
 <system.diagnostics>
@@ -171,10 +172,10 @@ Można również skonfigurować odbiornik niestandardowy z dodatkowymi opcjami. 
 </system.diagnostics>
 ```
 
-Należy pamiętać, że `type` atrybut powinien być ustawiony na nazwę zestawu kwalifikowanego typu.
+Należy pamiętać, że `type` atrybut powinien być ustawiony na kwalifikowaną nazwę zestawu typu.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [\<>rejestrowania wiadomości](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
 - [Rejestrowanie komunikatów](message-logging.md)
 - [Zalecane ustawienia śledzenia i rejestrowania komunikatów](./tracing/recommended-settings-for-tracing-and-message-logging.md)

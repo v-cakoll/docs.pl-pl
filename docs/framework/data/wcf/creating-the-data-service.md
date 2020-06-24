@@ -1,16 +1,17 @@
 ---
 title: Tworzenie usługi danych programu WCF w programie Visual Studio
+description: Dowiedz się, jak utworzyć przykładową usługę danych, która używa Usługi danych programu WCF, aby udostępnić strumieniowe dane OData na podstawie przykładowej bazy danych.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802266"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247794"
 ---
 # <a name="create-the-data-service"></a>Utworzenie usługi danych
 
@@ -26,9 +27,9 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
 
 ## <a name="create-the-aspnet-web-app"></a>Tworzenie aplikacji sieci Web ASP.NET
 
-1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy** **projekt** > .
+1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy**  >  **projekt**.
 
-1. W oknie dialogowym **Nowy projekt** w obszarze Visual Basic lub C# wizualizacji wybierz kategorię **sieci Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET**.
+1. W oknie dialogowym **Nowy projekt** w obszarze Visual Basic lub Visual C# wybierz kategorię **sieci Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET**.
 
 1. Wprowadź `NorthwindService` jako nazwę projektu, a następnie wybierz przycisk **OK**.
 
@@ -38,15 +39,15 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
 
     1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt ASP.NET, który właśnie został utworzony, a następnie wybierz polecenie **Właściwości**.
 
-    2. Wybierz kartę **Sieć Web** , a następnie ustaw wartość pola tekstowego **określony port** na `12345`.
+    2. Wybierz kartę **Sieć Web** , a następnie ustaw wartość pola tekstowego **określony port** na `12345` .
 
 ## <a name="define-the-data-model"></a>Zdefiniowanie modelu danych
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu ASP.NET, a następnie kliknij pozycję **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu ASP.NET, a następnie kliknij pozycję **Dodaj**  >  **nowy element**.
 
 2. W oknie dialogowym **Dodaj nowy element** wybierz kategorię **dane** , a następnie wybierz pozycję **ADO.NET Entity Data Model**.
 
-3. W polu Nazwa modelu danych wprowadź `Northwind.edmx`.
+3. W polu Nazwa modelu danych wprowadź `Northwind.edmx` .
 
 4. W **kreatorze Entity Data Model**wybierz pozycję **Dr Designer z bazy danych**, a następnie kliknij przycisk **dalej**.
 
@@ -54,7 +55,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
 
     - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
 
-         \- lub —
+         \-oraz
 
     - Jeśli masz już połączenie z bazą danych do łączenia się z bazą danych Northwind, wybierz to połączenie z listy połączeń.
 
@@ -64,7 +65,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
 
 ## <a name="create-the-wcf-data-service"></a>Tworzenie usługi danych programu WCF
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt ASP.NET, a następnie wybierz polecenie **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt ASP.NET, a następnie wybierz polecenie **Dodaj**  >  **nowy element**.
 
 2. W oknie dialogowym **Dodaj nowy element** wybierz szablon elementu **usługi danych programu WCF** z kategorii **sieci Web** .
 
@@ -73,18 +74,18 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
    > [!NOTE]
    > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017 lub nowszym.
 
-3. W polu Nazwa usługi wpisz `Northwind`.
+3. W polu Nazwa usługi wpisz `Northwind` .
 
      Program Visual Studio tworzy znaczniki XML i pliki kodu dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu. W **Eksplorator rozwiązań**usługa ma nazwę Northwind z rozszerzeniem *. svc.cs* lub *. svc. vb*.
 
-4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, które w tym przypadku jest `NorthwindEntities`. Definicja klasy powinna wyglądać następująco:
+4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, w tym przypadku `NorthwindEntities` . Definicja klasy powinna wyglądać następująco:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="enable-access-to-data-service-resources"></a>Zapewnianie dostępu do zasobów usługi danych
 
-1. W kodzie usługi danych Zastąp symbol zastępczy w funkcji `InitializeService` następującym:
+1. W kodzie usługi danych Zastąp symbol zastępczy w `InitializeService` funkcji następującymi elementami:
 
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]
@@ -101,6 +102,6 @@ Pomyślnie utworzono nową usługę danych, która udostępnia strumieniowe dane
 > [!div class="nextstepaction"]
 > [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

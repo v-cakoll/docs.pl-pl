@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: Tworzenie kontraktu dwukierunkowego'
+description: Dowiedz się, jak utworzyć umowę dupleksową, która umożliwia klientom i serwerom programu WCF wzajemne komunikowanie się ze sobą. Można inicjować wywołania do drugiego.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: e5b6c7eecce08a23490b6ab1991e4561d9462469
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9320e5b36b8faba3602fbe1df1b95c05dcc7fa7e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598986"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247094"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Instrukcje: Tworzenie kontraktu dwukierunkowego
 W tym temacie przedstawiono podstawowe kroki tworzenia metod, które korzystają z dwukierunkowego kontraktu. Umowa dupleksowa umożliwia klientom i serwerom komunikowanie się ze sobą niezależnie, aby można było inicjować wywołania do drugiego. Umowa dupleksowa to jeden z trzech wzorców komunikatów dostępnych dla usług Windows Communication Foundation (WCF). Pozostałe dwa wzorce komunikatów to jednokierunkowe i odpowiedzi na żądanie. Umowa dupleksowa składa się z 2 1ych umów między klientem a serwerem i nie wymaga, aby wywołania metod były skorelowane. Tego rodzaju kontraktu należy używać, gdy usługa musi wysyłać zapytania do klienta, aby uzyskać więcej informacji lub jawnie podnieść zdarzenia na kliencie. Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej dla kontraktu dupleksowego, zobacz [jak: dostęp do usług za pomocą kontraktu dupleksowego](how-to-access-services-with-a-duplex-contract.md). Aby uzyskać przykład roboczy, zobacz [dwustronny](../samples/duplex.md) przykład.  
@@ -63,7 +64,7 @@ W tym temacie przedstawiono podstawowe kroki tworzenia metod, które korzystają
   
 - Zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutów i <xref:System.ServiceModel.OperationContractAttribute> umożliwia automatyczne generowanie definicji kontraktu usługi w Web Services Description Language (WSDL).  
   
-- Użyj [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , aby pobrać dokument WSDL i (opcjonalnie) kod i konfigurację dla klienta.  
+- Użyj [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , aby pobrać dokument WSDL i (opcjonalnie) kod i konfigurację dla klienta.  
   
 - Punkty końcowe uwidaczniające usługi dupleksowe muszą być zabezpieczone. Gdy usługa otrzymuje komunikat o dupleksie, przegląda replikę replytą w tym komunikacie przychodzącym, aby określić, gdzie należy wysłać odpowiedź. Jeśli kanał nie jest zabezpieczony, klient niezaufanego może wysłać złośliwą wiadomość z replytą maszyny docelowej, co prowadzi do odmowy usługi Maszyny docelowej. W przypadku zwykłych komunikatów z żądaniem odpowiedzi nie jest to problem, ponieważ ReplyTo jest ignorowany, a odpowiedź jest wysyłana w kanale, w którym znajduje się pierwotny komunikat.  
   

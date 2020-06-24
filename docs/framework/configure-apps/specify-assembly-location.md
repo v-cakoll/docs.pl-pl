@@ -1,17 +1,18 @@
 ---
 title: Określanie lokalizacji zestawu
+description: Zapoznaj się z tematem jak określić lokalizację zestawu w programie .NET przy użyciu elementu codeBase lub elementu do sondowania w pliku konfiguracyjnym XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646029"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141707"
 ---
 # <a name="specifying-an-assemblys-location"></a>Określanie lokalizacji zestawu
 Istnieją dwa sposoby określania lokalizacji zestawu:  
@@ -65,7 +66,7 @@ Istnieją dwa sposoby określania lokalizacji zestawu:
   
  Atrybut **PrivatePath** zawiera katalogi, w których środowisko uruchomieniowe ma wyszukiwać zestawy. Jeśli aplikacja znajduje się w katalogu C:\Program Files\MyApp, środowisko uruchomieniowe będzie szukać zestawów, które nie określają bazy kodu w folderze C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin i C:\Program Files\MyApp\Bin3. Katalogi określone w **PrivatePath** muszą być podkatalogami katalogu podstawowego aplikacji.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy w środowisku .NET](../../standard/assembly/index.md)
 - [Programowanie za pomocą zestawów](../../standard/assembly/index.md)

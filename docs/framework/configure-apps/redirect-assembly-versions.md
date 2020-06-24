@@ -1,5 +1,6 @@
 ---
 title: Przekierowywanie wersji zestawu
+description: Przekieruj odwołania w czasie kompilacji do różnych wersji zestawów .NET, zestawów stron trzecich lub zestawów własnych aplikacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assembly binding, redirection
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 0d55171e37ec056b3470d238a60bc32f2feb04fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cfd4336fb9999c996bea28eb86f1143932d4c51
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646042"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141737"
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 
@@ -23,7 +24,7 @@ Odwołania do powiązań w czasie kompilacji można przekierować do zestawów .
 ## <a name="assembly-unification-and-default-binding"></a>Ujednolicenie zestawu i powiązanie domyślne
  Powiązania z zestawami .NET Framework czasami są przekierowane przez proces nazywany *dezjednoczeniem zestawu*. .NET Framework składa się z wersji środowiska uruchomieniowego języka wspólnego oraz o dwóch dziesiątych zestawach .NET Framework tworzących bibliotekę typów. Te zestawy .NET Framework są traktowane przez środowisko uruchomieniowe jako pojedynczą jednostkę. Domyślnie po uruchomieniu aplikacji wszystkie odwołania do typów w kodzie wykonywane przez środowisko uruchomieniowe są kierowane do zestawów .NET Framework, które mają ten sam numer wersji, co środowisko uruchomieniowe, które jest ładowane w procesie. Przekierowania, które występują w tym modelu, są domyślnym zachowaniem środowiska uruchomieniowego.
 
- Na przykład jeśli aplikacja odwołuje się do typów w przestrzeni nazw System. XML i została skompilowana przy użyciu .NET Framework 4,5, zawiera statyczne odwołania do zestawu System. XML, który jest dostarczany ze środowiskiem uruchomieniowym w wersji 4,5. Jeśli chcesz przekierować odwołanie do powiązania, aby wskazywało zestaw system. XML dostarczany z .NET Framework 4, możesz umieścić informacje o przekierowaniu w pliku konfiguracji aplikacji. Przekierowanie powiązania w pliku konfiguracyjnym dla ujednoliconego zestawu .NET Framework anuluje ujednolicenie tego zestawu.
+ Na przykład jeśli aplikacja odwołuje się do typów w przestrzeni nazw System.XML i została skompilowana przy użyciu .NET Framework 4,5, zawiera statyczne odwołania do zestawu System.XML, który jest dostarczany ze środowiskiem uruchomieniowym w wersji 4,5. Jeśli chcesz przekierować odwołanie do powiązania, aby wskazywało zestaw System.XML, który jest dostarczany z .NET Framework 4, możesz umieścić informacje o przekierowaniu w pliku konfiguracyjnym aplikacji. Przekierowanie powiązania w pliku konfiguracyjnym dla ujednoliconego zestawu .NET Framework anuluje ujednolicenie tego zestawu.
 
  Ponadto możesz chcieć ręcznie przekierować powiązanie zestawu dla zestawów innych firm, jeśli jest dostępnych wiele wersji.
 
@@ -55,17 +56,17 @@ Odwołania do powiązań w czasie kompilacji można przekierować do zestawów .
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Poleganie na automatycznym przekierowaniu powiązań
 
-Po utworzeniu aplikacji klasycznej w programie Visual Studio, która jest przeznaczona dla .NET Framework 4.5.1 lub nowszej wersji, aplikacja używa automatycznego przekierowywania powiązań. Oznacza to, że jeśli dwa składniki odwołują się do różnych wersji tego samego zestawu o silnej nazwie, środowisko uruchomieniowe automatycznie dodaje przekierowanie powiązania do nowszej wersji zestawu w pliku konfiguracji aplikacji wyjściowej (App. config). To przekierowanie zastępuje Montaż zestawu, który może być w innym przypadku. Źródłowy plik app.config nie jest modyfikowany. Załóżmy na przykład, że aplikacja bezpośrednio odwołuje się do składnika .NET Framework poza pasmem, ale używa biblioteki innej firmy, która jest przeznaczona dla starszej wersji tego samego składnika. Podczas kompilowania aplikacji plik konfiguracji aplikacji wyjściowej jest modyfikowany tak, aby zawierał przekierowanie powiązania do nowszej wersji składnika. W przypadku tworzenia aplikacji sieci Web zostanie wyświetlone ostrzeżenie dotyczące kompilacji dotyczące konfliktu powiązania, co z kolei umożliwia dodanie niezbędnego przekierowania powiązania do źródłowego pliku konfiguracji sieci Web.
+Po utworzeniu aplikacji klasycznej w programie Visual Studio, która jest przeznaczona dla .NET Framework 4.5.1 lub nowszej wersji, aplikacja używa automatycznego przekierowywania powiązań. Oznacza to, że jeśli dwa składniki odwołują się do różnych wersji tego samego zestawu o silnej nazwie, środowisko uruchomieniowe automatycznie dodaje przekierowanie powiązania do nowszej wersji zestawu w pliku konfiguracji aplikacji wyjściowej (app.config). To przekierowanie zastępuje Montaż zestawu, który może być w innym przypadku. Źródłowy plik app.config nie jest modyfikowany. Załóżmy na przykład, że aplikacja bezpośrednio odwołuje się do składnika .NET Framework poza pasmem, ale używa biblioteki innej firmy, która jest przeznaczona dla starszej wersji tego samego składnika. Podczas kompilowania aplikacji plik konfiguracji aplikacji wyjściowej jest modyfikowany tak, aby zawierał przekierowanie powiązania do nowszej wersji składnika. W przypadku tworzenia aplikacji sieci Web zostanie wyświetlone ostrzeżenie dotyczące kompilacji dotyczące konfliktu powiązania, co z kolei umożliwia dodanie niezbędnego przekierowania powiązania do źródłowego pliku konfiguracji sieci Web.
 
-Jeśli ręcznie dodasz przekierowania powiązań do pliku źródłowego App. config, w czasie kompilacji program Visual Studio podejmie próbę ujednolicenia zestawów na podstawie dodanych przekierowań powiązań. Załóżmy na przykład, że wstawisz następujące przekierowanie powiązania dla zestawu:
+W przypadku ręcznego dodawania przekierowań powiązań do pliku źródłowego app.config w czasie kompilacji program Visual Studio próbuje ujednolicić zestawy na podstawie dodanych przekierowań powiązań. Załóżmy na przykład, że wstawisz następujące przekierowanie powiązania dla zestawu:
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 
-Jeśli inny projekt w aplikacji odwołuje się do wersji 1.0.0.0 tego samego zestawu, automatyczne przekierowanie powiązań dodaje następujący wpis do pliku Output App. config, aby aplikacja była ujednolicona w wersji 2.0.0.0 tego zestawu:
+Jeśli inny projekt w aplikacji odwołuje się do wersji 1.0.0.0 tego samego zestawu, automatyczne przekierowanie powiązań dodaje następujący wpis do pliku wyjściowego app.config, aby aplikacja była ujednolicona w wersji 2.0.0.0 tego zestawu:
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jest przeznaczona dla starszych wersji .NET Framework. To zachowanie domyślne można przesłonić, dostarczając informacje o przekierowaniu powiązań w pliku App. config dla dowolnego zestawu lub wyłączając funkcję przekierowywania powiązań. Aby uzyskać informacje na temat włączania lub wyłączania tej funkcji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md).
+Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jest przeznaczona dla starszych wersji .NET Framework. To zachowanie domyślne można przesłonić, dostarczając informacje o przekierowaniu powiązań w pliku app.config dla dowolnego zestawu lub wyłączając funkcję przekierowywania powiązań. Aby uzyskać informacje na temat włączania lub wyłączania tej funkcji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Pomijanie zasad wydawcy
@@ -152,7 +153,7 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect>Postaci](./file-schema/runtime/bindingredirect-element.md)

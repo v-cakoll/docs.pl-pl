@@ -1,20 +1,21 @@
 ---
 title: Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów
+description: Informacje o poziomach zaufania zabezpieczeń w przypadku uzyskiwania dostępu do zasobów w programie .NET. Istnieją trzy główne poziomy zaufania dla elementu System. Transactions.
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205872"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141955"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów
 W tym temacie opisano, jak dostęp jest ograniczony do typów zasobów, które <xref:System.Transactions> przedstawia.  
   
  Istnieją trzy główne poziomy zaufania <xref:System.Transactions>. Poziomy zaufania są definiowane w oparciu o typy zasobów który <xref:System.Transactions> ujawnia i poziom zaufania, który powinien uzyskać dostęp do tych zasobów. Zasoby który <xref:System.Transactions> zapewnia dostęp do pamięci systemowej, zasoby całego procesu współużytkowanego i międzynarodowe zasoby systemowe. Dostępne są następujące poziomy:  
   
-- **AllowPartiallyTrustedCallers** (APTCA) dla aplikacji korzystających z jednej domeny aplikacji.  
+- **AllowPartiallyTrustedCallers** (APTCA) dla aplikacji korzystających z transakcji w ramach jednej domeny aplikacji.  
   
 - **DistributedTransactionPermission** (DTP) dla aplikacji korzystających z transakcji rozproszonych.  
   
@@ -26,7 +27,7 @@ W tym temacie opisano, jak dostęp jest ograniczony do typów zasobów, które <
 ## <a name="trust-levels"></a>Poziomy zaufania  
   
 ### <a name="aptca-partial-trust"></a>APTCA (częściowej relacji zaufania)  
- Zestaw może być wywoływany przez częściowo zaufany kod, ponieważ został oznaczony przy użyciu atrybutu AllowPartiallyTrustedCallers (APTCA). <xref:System.Transactions> Ten atrybut zasadniczo usuwa niejawny <xref:System.Security.Permissions.SecurityAction.LinkDemand> dla zestawu uprawnień **FullTrust** , który jest w inny sposób automatycznie umieszczany w każdej publicznie dostępnej metodzie w każdym typie. Niektóre typy i elementy członkowskie nadal wymaga jednak lepsze gwarancje uprawnień.  
+ <xref:System.Transactions>Zestaw może być wywoływany przez częściowo zaufany kod, ponieważ został oznaczony przy użyciu atrybutu **ALLOWPARTIALLYTRUSTEDCALLERS** (APTCA). Ten atrybut zasadniczo usuwa niejawny <xref:System.Security.Permissions.SecurityAction.LinkDemand> dla zestawu uprawnień **FullTrust** , który jest w inny sposób automatycznie umieszczany w każdej publicznie dostępnej metodzie w każdym typie. Niektóre typy i elementy członkowskie nadal wymaga jednak lepsze gwarancje uprawnień.  
   
  Atrybut APTCA umożliwia aplikacjom używanie transakcji w częściowej relacji zaufania w ramach jednej domeny aplikacji. Umożliwia to-eskalowany transakcji i nietrwałe, które mogą być używane do obsługi błędów. Przykładem jest tabela skrótów transakcyjnych i aplikacja, która go używa. Dane mogą być dodawane do lub usunięte z tabeli skrótu w pojedynczą transakcję. Jeśli transakcja jest później wycofana, wszystkie zmiany wprowadzone w tabeli wyznaczania wartości skrótu, w tym transakcji można cofnąć.  
   

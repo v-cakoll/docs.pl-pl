@@ -1,15 +1,16 @@
 ---
 title: 'Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła'
+description: Dowiedz się, jak włączyć usługę WCF do uwierzytelniania klienta przy użyciu nazwy użytkownika i hasła domeny systemu Windows z przykładowym kodem.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601286"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247250"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
@@ -32,7 +33,7 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
     // ...
     ```
 
-2. Określ certyfikat serwera służący do szyfrowania informacji o nazwie użytkownika i hasła przesyłanej przez sieć. Ten kod powinien natychmiast następować po powyższym kodzie. Poniższy przykład używa certyfikatu utworzonego przez plik Setup. bat z przykładowej [nazwy użytkownika zabezpieczeń wiadomości](../samples/message-security-user-name.md) :
+2. Określ certyfikat serwera służący do szyfrowania informacji o nazwie użytkownika i hasła przesyłanej przez sieć. Ten kod powinien natychmiast następować po powyższym kodzie. Poniższy przykład używa certyfikatu utworzonego przez plik setup.bat z przykładowej [nazwy użytkownika zabezpieczeń wiadomości](../samples/message-security-user-name.md) :
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
     // ...
     ```
 
-    Możesz użyć własnego certyfikatu, po prostu zmodyfikuj kod, aby odwołać się do certyfikatu. Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](working-with-certificates.md). Upewnij się, że certyfikat znajduje się w magazynie certyfikatów osoby zaufane dla komputera lokalnego. Można to zrobić, uruchamiając program MMC. exe i wybierając **plik**, **Dodaj/Usuń przystawkę...** . W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz **przystawkę Certyfikaty** , a następnie kliknij przycisk **Dodaj**. W oknie dialogowym Przystawka certyfikatów wybierz pozycję **konto komputera**. Domyślnie certyfikat wygenerowany na podstawie przykładowej nazwy użytkownika zabezpieczeń wiadomości zostanie umieszczony w folderze Personal/Certificates.  Będzie on wyświetlany jako "localhost" w kolumnie wystawiony dla w oknie programu MMC. Przeciągnij i upuść certyfikat do folderu **zaufane osoby** . Umożliwi to usłudze WCF traktowanie certyfikatu jako certyfikatu zaufanego podczas przeprowadzania uwierzytelniania.
+    Możesz użyć własnego certyfikatu, po prostu zmodyfikuj kod, aby odwołać się do certyfikatu. Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](working-with-certificates.md). Upewnij się, że certyfikat znajduje się w magazynie certyfikatów osoby zaufane dla komputera lokalnego. Można to zrobić, uruchamiając mmc.exe i wybierając **plik**, **Dodaj/Usuń przystawkę...** . W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz **przystawkę Certyfikaty** , a następnie kliknij przycisk **Dodaj**. W oknie dialogowym Przystawka certyfikatów wybierz pozycję **konto komputera**. Domyślnie certyfikat wygenerowany na podstawie przykładowej nazwy użytkownika zabezpieczeń wiadomości zostanie umieszczony w folderze Personal/Certificates.  Będzie on wyświetlany jako "localhost" w kolumnie wystawiony dla w oknie programu MMC. Przeciągnij i upuść certyfikat do folderu **zaufane osoby** . Umożliwi to usłudze WCF traktowanie certyfikatu jako certyfikatu zaufanego podczas przeprowadzania uwierzytelniania.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Aby wywołać usługę przekazującą nazwę użytkownika i hasło
 

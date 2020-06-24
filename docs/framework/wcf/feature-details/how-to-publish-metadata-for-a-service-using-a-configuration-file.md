@@ -1,13 +1,14 @@
 ---
 title: 'Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji'
+description: Dowiedz się, jak publikować metadane dla usługi WCF przy użyciu pliku konfiguracji. Publikowanie umożliwia klientom pobieranie tych metadanych przy użyciu żądania GET lub HTTP/GET.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 976e1e0bb2c6479f7599165a1c6fe83bae4e17c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596984"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246821"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji
 Jest to jeden z dwóch tematów, które przedstawiają Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, w jaki sposób usługa powinna publikować metadane przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób publikowania metadanych dla usługi za pomocą pliku konfiguracji.  
@@ -92,7 +93,7 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Aby opublikować metadane usługi WCF przy użyciu pliku konfiguracji aplikacji  
   
-1. W pliku App. config po elemencie zamykającym `</services>` Utwórz `<behaviors>` element.  
+1. W pliku App.config po elemencie zamykającym `</services>` Utwórz `<behaviors>` element.  
 
 2. W `<behaviors>` elemencie Dodaj `<serviceBehaviors>` element.  
 

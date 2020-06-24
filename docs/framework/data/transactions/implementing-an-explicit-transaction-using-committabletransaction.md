@@ -1,19 +1,20 @@
 ---
 title: Implementowanie transakcji jawnej przy użyciu CommitableTransaction
+description: Zaimplementuj jawną transakcję przy użyciu klasy CommittableTransaction w programie .NET. Ta klasa zapewniała jawny sposób używania transakcji przez aplikacje.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174410"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141994"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementowanie transakcji jawnej przy użyciu CommitableTransaction
-Klasa <xref:System.Transactions.CommittableTransaction> zapewnia jawny sposób dla aplikacji do użycia transakcji, <xref:System.Transactions.TransactionScope> w przeciwieństwie do korzystania z klasy niejawnie. Jest to przydatne dla aplikacji, które chcą używać tej samej transakcji w wielu wywołań funkcji lub wywołania wielu wątków. W <xref:System.Transactions.TransactionScope> przeciwieństwie do klasy moduł zapisujący <xref:System.Transactions.CommittableTransaction.Commit%2A> aplikacje musi w szczególności wywołać i <xref:System.Transactions.Transaction.Rollback%2A> metody w celu zatwierdzenia lub przerwania transakcji.  
+<xref:System.Transactions.CommittableTransaction>Klasa zapewnia jawny sposób używania transakcji przez aplikacje, w przeciwieństwie do <xref:System.Transactions.TransactionScope> niejawnie używanej klasy. Jest to przydatne w przypadku aplikacji, które chcą używać tej samej transakcji w wielu wywołaniach funkcji lub wielu wywołaniach wątków. W przeciwieństwie do <xref:System.Transactions.TransactionScope> klasy, moduł zapisujący aplikacji musi wywoływać <xref:System.Transactions.CommittableTransaction.Commit%2A> <xref:System.Transactions.Transaction.Rollback%2A> metody i w celu zatwierdzenia lub przerwania transakcji.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>Przegląd klasy CommittableTransaction  
  <xref:System.Transactions.CommittableTransaction> Klasa pochodzi z <xref:System.Transactions.Transaction> klasy, dlatego dostarczanie wszystkich funkcji drugiego. Jest szczególnie przydatna <xref:System.Transactions.Transaction.Rollback%2A> metody w <xref:System.Transactions.Transaction> klasa, która umożliwia także wycofać <xref:System.Transactions.CommittableTransaction> obiektu.  
@@ -27,25 +28,25 @@ Klasa <xref:System.Transactions.CommittableTransaction> zapewnia jawny sposób d
 - Element <xref:System.Transactions.CommittableTransaction> obiektu nie może być używany ponownie. Po <xref:System.Transactions.CommittableTransaction> obiektu została przekazana lub wycofana, nie może być używana ponownie w transakcji. Oznacza to, że nie można ustawić jako bieżący kontekst transakcji otoczenia.  
   
 ## <a name="creating-a-committabletransaction"></a>Tworzenie CommittableTransaction  
- Poniższy przykład tworzy <xref:System.Transactions.CommittableTransaction> nowy i zatwierdza go.  
+ Poniższy przykład tworzy nowy <xref:System.Transactions.CommittableTransaction> i zatwierdza go.  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
  [!code-vb[Tx_CommittableTx#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/tx_committabletx/vb/committabletxwithsql.vb#1)]  
   
- Utworzenie wystąpienia <xref:System.Transactions.CommittableTransaction> automatycznie nie ustawiono kontekstu otoczenia transakcji. Dlatego żadnych operacji na Menedżera zasobów nie jest częścią tej transakcji. Właściwość <xref:System.Transactions.Transaction.Current%2A> statyczna obiektu <xref:System.Transactions.Transaction> globalnego służy do ustawiania lub pobierania transakcji otoczenia, a aplikacja musi ręcznie ustawić ją, aby zapewnić, że menedżerowie zasobów mogą uczestniczyć w transakcji. Istnieje również dobrze jest zapisać stary transakcji otoczenia i go przywrócić po zakończeniu za pomocą <xref:System.Transactions.CommittableTransaction> obiektu.  
+ Utworzenie wystąpienia <xref:System.Transactions.CommittableTransaction> automatycznie nie ustawiono kontekstu otoczenia transakcji. Dlatego żadnych operacji na Menedżera zasobów nie jest częścią tej transakcji. Właściwość statyczna <xref:System.Transactions.Transaction.Current%2A> <xref:System.Transactions.Transaction> obiektu globalnego służy do ustawiania lub pobierania otoczenia transakcji, a aplikacja musi ręcznie ustawić ją w celu zapewnienia, że Menedżerowie zasobów mogą uczestniczyć w transakcji. Istnieje również dobrze jest zapisać stary transakcji otoczenia i go przywrócić po zakończeniu za pomocą <xref:System.Transactions.CommittableTransaction> obiektu.  
   
  Aby zatwierdzić transakcję, należy jawnie wywołać <xref:System.Transactions.CommittableTransaction.Commit%2A> metodę. Dla wycofywania transakcji, należy wywołać <xref:System.Transactions.Transaction.Rollback%2A> metody. Należy zauważyć, że do <xref:System.Transactions.CommittableTransaction> została przekazana lub wycofana, wszystkie zasoby zaangażowane w tej transakcji nadal jest zablokowany.  
   
- Element <xref:System.Transactions.CommittableTransaction> obiektu można stosować w przypadku wywołania funkcji i wątków. Jednak to do dewelopera aplikacji do obsługi wyjątków <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> i w szczególności wywołać metodę w przypadku awarii.  
+ Element <xref:System.Transactions.CommittableTransaction> obiektu można stosować w przypadku wywołania funkcji i wątków. Jednak do deweloperów aplikacji można obsługiwać wyjątki i <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> w przypadku awarii wywołać metodę.  
   
 ## <a name="asynchronous-commit"></a>Zatwierdzanie asynchroniczne  
- <xref:System.Transactions.CommittableTransaction> Klasa zawiera także mechanizm asynchronicznie Zatwierdzanie transakcji. Zatwierdzenie transakcji może zająć dużo czasu, ponieważ może to obejmować dostęp do wielu baz danych i możliwe opóźnienie sieci. Aby uniknąć zakleszczenia w aplikacjach o wysokiej przepływności, można użyć zatwierdzenia asynchronicznego, aby zakończyć pracę transakcyjną tak szybko, jak to możliwe, i uruchomić operację zatwierdzania jako zadanie w tle. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> i <xref:System.Transactions.CommittableTransaction.EndCommit%2A> metody <xref:System.Transactions.CommittableTransaction> klasy pozwalają w tym celu.  
+ <xref:System.Transactions.CommittableTransaction> Klasa zawiera także mechanizm asynchronicznie Zatwierdzanie transakcji. Zatwierdzenie transakcji może trwać bardzo długo, ponieważ może to wymagać wielu dostępu do bazy danych i możliwego opóźnienia sieci. Aby uniknąć zakleszczenii w aplikacjach o wysokiej przepływności, można użyć zatwierdzania asynchronicznego, aby zakończyć pracę transakcyjną najszybciej, jak to możliwe, i uruchomić operację zatwierdzania jako zadanie w tle. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> i <xref:System.Transactions.CommittableTransaction.EndCommit%2A> metody <xref:System.Transactions.CommittableTransaction> klasy pozwalają w tym celu.  
   
  Można wywołać metodę <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> wysłania Napad zatwierdzania do wątków z puli wątków. Można również wywołać <xref:System.Transactions.CommittableTransaction.EndCommit%2A> do określenia, czy transakcja faktycznie została zatwierdzona. Jeśli nie można przekazać z jakiegokolwiek powodu, transakcji <xref:System.Transactions.CommittableTransaction.EndCommit%2A> zgłasza wyjątek transakcji. Jeśli transakcja nie jest jeszcze przekazano do czasu <xref:System.Transactions.CommittableTransaction.EndCommit%2A> jest wywoływana, obiekt wywołujący zostało zablokowane do chwili transakcji nie zostanie przekazana lub zostało przerwane.  
   
- Najprostszym sposobem czy asynchroniczne zatwierdzania jest dostarczając metodę wywołania zwrotnego wywoływana, gdy zatwierdzania zostało zakończone. Jednakże, należy wywołać <xref:System.Transactions.CommittableTransaction.EndCommit%2A> metody w oryginalnym <xref:System.Transactions.CommittableTransaction> obiekt używany do wywoływania połączenie. Aby uzyskać ten obiekt, można downcast *IAsyncResult* parametr metody <xref:System.Transactions.CommittableTransaction> wywołania <xref:System.IAsyncResult> zwrotnego, ponieważ klasa implementuje klasy.  
+ Najprostszym sposobem czy asynchroniczne zatwierdzania jest dostarczając metodę wywołania zwrotnego wywoływana, gdy zatwierdzania zostało zakończone. Jednakże, należy wywołać <xref:System.Transactions.CommittableTransaction.EndCommit%2A> metody w oryginalnym <xref:System.Transactions.CommittableTransaction> obiekt używany do wywoływania połączenie. Aby uzyskać ten obiekt, można downcast parametr *IAsyncResult* metody wywołania zwrotnego, ponieważ <xref:System.Transactions.CommittableTransaction> Klasa implementuje <xref:System.IAsyncResult> klasę.  
   
- W poniższym przykładzie pokazano, jak można wykonać zatwierdzenie asynchroniczne.  
+ Poniższy przykład pokazuje, jak można wykonać asynchroniczne zatwierdzanie.  
   
 ```csharp  
 public void DoTransactionalWork()  

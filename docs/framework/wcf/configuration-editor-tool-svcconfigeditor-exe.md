@@ -1,5 +1,6 @@
 ---
 title: Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
+description: Dowiedz się, jak zarządzać ustawieniami powiązań, zachowań, usług i diagnostyki programu WCF przy użyciu edytora konfiguracji usługi WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration files, creating
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 258437ff616b969d40feabbfff364ad2cc6b25bc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320702"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247652"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
 
-Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEditor. exe) umożliwia administratorom i deweloperom tworzenie i modyfikowanie ustawień konfiguracji usług WCF przy użyciu graficznego interfejsu użytkownika. Za pomocą tego narzędzia można zarządzać ustawieniami powiązań programu WCF, zachowań, usług i diagnostyki bez konieczności bezpośredniego edytowania plików konfiguracji XML.
+SvcConfigEditor.exe Edytor konfiguracji usługi Windows Communication Foundation (WCF) umożliwia administratorom i deweloperom tworzenie i modyfikowanie ustawień konfiguracji usług WCF przy użyciu graficznego interfejsu użytkownika. Za pomocą tego narzędzia można zarządzać ustawieniami powiązań programu WCF, zachowań, usług i diagnostyki bez konieczności bezpośredniego edytowania plików konfiguracji XML.
 
 Edytor konfiguracji usługi można znaleźć w folderze C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.
 
@@ -24,9 +25,9 @@ Edytor konfiguracji usługi można znaleźć w folderze C:\Program Files\Microso
 
 Edytor konfiguracji usługi zawiera kreatora, który przeprowadzi Cię przez wszystkie kroki opisane w temacie Konfigurowanie usługi lub klienta WCF. Zdecydowanie zaleca się użycie Kreatora zamiast edytora bezpośrednio.
 
-Jeśli masz już pewne pliki konfiguracji zgodne ze standardowym schematem system. Configuration, możesz zarządzać określonymi ustawieniami powiązań, zachowań, usług i diagnostyki przy użyciu interfejsu użytkownika. Edytor konfiguracji usługi umożliwia zarządzanie ustawieniami istniejących plików konfiguracji WCF oraz plikami wykonywalnymi, usługami COM+ i usługami hostowanymi w sieci Web. Podczas otwierania usługi hostowanej w sieci Web za pomocą edytora konfiguracji usługi, są wyświetlane sekcje konfiguracja i dziedziczone konfiguracje usługi.
+Jeśli masz już pewne pliki konfiguracji zgodne ze standardowym schematem System.Configwersja, możesz zarządzać określonymi ustawieniami powiązań, zachowań, usług i diagnostyki przy użyciu interfejsu użytkownika. Edytor konfiguracji usługi umożliwia zarządzanie ustawieniami istniejących plików konfiguracji WCF oraz plikami wykonywalnymi, usługami COM+ i usługami hostowanymi w sieci Web. Podczas otwierania usługi hostowanej w sieci Web za pomocą edytora konfiguracji usługi, są wyświetlane sekcje konfiguracja i dziedziczone konfiguracje usługi.
 
-Ponieważ ustawienia konfiguracji programu WCF znajdują się w sekcji `<system.serviceModel>` pliku konfiguracyjnego, Edytor działa wyłącznie na zawartości tego elementu i nie uzyskuje dostępu do innych elementów w tym samym pliku. Możesz przejść do istniejących plików konfiguracji bezpośrednio lub wybrać zestaw, który zawiera usługę, katalog wirtualny lub usługę COM+. Edytor ładuje plik konfiguracyjny dla danej usługi i zezwala użytkownikowi na dodawanie nowych elementów lub edytowanie istniejących elementów zagnieżdżonych w sekcji `<system.serviceModel>` pliku konfiguracyjnego.
+Ponieważ ustawienia konfiguracji programu WCF znajdują się w `<system.serviceModel>` sekcji pliku konfiguracji, Edytor działa wyłącznie na zawartości tego elementu i nie uzyskuje dostępu do innych elementów w tym samym pliku. Możesz przejść do istniejących plików konfiguracji bezpośrednio lub wybrać zestaw, który zawiera usługę, katalog wirtualny lub usługę COM+. Edytor ładuje plik konfiguracyjny dla danej usługi i zezwala użytkownikowi na dodawanie nowych elementów lub edytowanie istniejących elementów zagnieżdżonych w `<system.serviceModel>` sekcji pliku konfiguracji.
 
 Edytor obsługuje funkcję IntelliSense i wymusza zgodność schematu. Wynikowe dane wyjściowe są gwarantowane w celu zachowania zgodności ze schematem pliku konfiguracji i zawierają składniowo prawidłowe wartości danych. Jednak Edytor nie gwarantuje, że plik konfiguracji jest semantycznie prawidłowy. Innymi słowy, Edytor nie gwarantuje, że plik konfiguracji może współdziałać z usługą, którą konfiguruje.
 
@@ -35,13 +36,13 @@ Edytor obsługuje funkcję IntelliSense i wymusza zgodność schematu. Wynikowe 
 >
 > `<endpoint binding="basicHttpBinding" name="somename" />`
 >
-> Jeśli podjęto próbę usunięcia nazwy przez ustawienie jej jako pustego ciągu i zapisania pliku, plik konfiguracji nadal zawiera atrybut `name`, jak pokazano w poniższym przykładzie.
+> Jeśli podjęto próbę usunięcia nazwy przez ustawienie jej jako pustego ciągu i zapisania pliku, plik konfiguracji nadal zawiera `name` atrybut, jak pokazano w poniższym przykładzie.
 >
 > `<endpoint binding="basicHttpBinding" name="" />`
 >
 > Aby przeczyścić atrybut, należy ręcznie edytować element przy użyciu innego edytora tekstu.
 >
-> Należy zachować szczególną ostrożność przy tym problemie, jeśli używasz elementu `issueToken` zachowania punktu końcowego `clientCredential`. W przeciwnym razie atrybut `address` elementu podrzędnego `localIssuer` nie może być pustym ciągiem. Jeśli atrybut `address` został zmodyfikowany przy użyciu edytora konfiguracji i chcesz go całkowicie usunąć, należy to zrobić przy użyciu narzędzia innego niż Edytor. W przeciwnym razie atrybut zawiera pusty ciąg, a aplikacja zgłasza wyjątek.
+> W przypadku używania `issueToken` elementu zachowania punktu końcowego należy zachować szczególną ostrożność w przypadku tego problemu `clientCredential` . W przypadku `address` atrybutu jego `localIssuer` podelement nie może być pustym ciągiem. Jeśli atrybut został zmodyfikowany `address` przy użyciu edytora konfiguracji i chcesz go całkowicie usunąć, należy to zrobić przy użyciu narzędzia innego niż Edytor. W przeciwnym razie atrybut zawiera pusty ciąg, a aplikacja zgłasza wyjątek.
 
 ## <a name="using-the-configuration-editor"></a>Korzystanie z edytora konfiguracji
 
@@ -61,20 +62,20 @@ Interfejs użytkownika edytora konfiguracji usługi jest podzielony na następuj
 
 ### <a name="opening-a-configuration-file"></a>Otwieranie pliku konfiguracji
 
-1. Uruchom Edytor konfiguracji usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF, a następnie wpisz `SvcConfigEditor.exe`.
+1. Uruchom Edytor konfiguracji usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF, a następnie wpisz polecenie `SvcConfigEditor.exe` .
 
 2. Z menu **plik** wybierz polecenie **Otwórz** , a następnie kliknij typ pliku, którym chcesz zarządzać.
 
 3. W oknie dialogowym **otwieranie** przejdź do określonego pliku, który chcesz zarządzać, a następnie kliknij go dwukrotnie.
 
-Przeglądarka automatycznie postępuje zgodnie ze ścieżką scalania konfiguracji i tworzy widok Scalonej konfiguracji. Na przykład rzeczywista konfiguracja usługi niehostowanej jest kombinacją Machine. config i App. config. Wszystkie zmiany są stosowane do aktywnego pliku w SvcConfigEditor. Jeśli chcesz edytować konkretny plik w ścieżce scalania konfiguracji, należy otworzyć go bezpośrednio.
+Przeglądarka automatycznie postępuje zgodnie ze ścieżką scalania konfiguracji i tworzy widok Scalonej konfiguracji. Na przykład rzeczywista konfiguracja usługi niehostowanej to kombinacja Machine.config i App.config. Wszystkie zmiany są stosowane do aktywnego pliku w SvcConfigEditor. Jeśli chcesz edytować konkretny plik w ścieżce scalania konfiguracji, należy otworzyć go bezpośrednio.
 
 > [!NOTE]
 > Edytor konfiguracji ponownie ładuje aktualnie otwarty plik konfiguracji, gdy ten ostatni został zmodyfikowany poza edytorem. W takim przypadku wszystkie zmiany, które nie zostały trwale zapisane w edytorze, zostaną utracone. Jeśli ponowne ładowanie odbywa się konsekwentnie, najbardziej prawdopodobną przyczyną jest usługa, która stale uzyskuje dostęp do pliku konfiguracji, na przykład oprogramowania antywirusowego działającego w tle. Aby rozwiązać ten problem, upewnij się, że Edytor konfiguracji jest jedynym procesem, który ma dostęp do pliku po jego otwarciu.
 
 ### <a name="services"></a>Usługi
 
-W węźle **usługi** są wyświetlane wszystkie usługi aktualnie przypisane w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do elementu podrzędnego < `services` > elementu w pliku konfiguracji.
+W węźle **usługi** są wyświetlane wszystkie usługi aktualnie przypisane w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do podrzędnego elementu <`services`> elementu w pliku konfiguracji.
 
 Po kliknięciu węzła **usługi** można wyświetlić lub wykonać zadania na stronie Podsumowanie usługi w okienku **szczegółów** .
 
@@ -117,11 +118,11 @@ Nową konfigurację punktu końcowego usługi można utworzyć w następujący s
 4. Kliknij przycisk **OK**.
 
 > [!NOTE]
-> Nie można edytować wartości [\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) wewnątrz tego narzędzia. Aby dodać lub zmodyfikować ten element, należy użyć edytora tekstu lub programu Visual Studio.
+> Nie można edytować wartości [\<baseAddressPrefixFilters>](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) wewnątrz tego narzędzia. Aby dodać lub zmodyfikować ten element, należy użyć edytora tekstu lub programu Visual Studio.
 
 ### <a name="client"></a>Klient
 
-W węźle **klienta** są wyświetlane wszystkie punkty końcowe klienta w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do elementu podrzędnego < `client` > elementu w pliku konfiguracji.
+W węźle **klienta** są wyświetlane wszystkie punkty końcowe klienta w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do podrzędnego elementu <`client`> elementu w pliku konfiguracji.
 
 Po kliknięciu węzła **klienta** można wyświetlić lub wykonać zadania na **stronie Podsumowanie** klienta w **okienku szczegółów**.
 
@@ -143,7 +144,7 @@ Nową konfigurację punktu końcowego klienta można utworzyć w następujący s
 
 Standardowe punkty końcowe to wyspecjalizowane punkty końcowe, które mają co najmniej jeden aspekt adresu, kontraktu i powiązania ustawione na wartości domyślne.
 
-Takie ustawienia konfiguracji są przechowywane w **standardowym węźle punktu końcowego** . **Standardowy węzeł punktu końcowego** wyświetla wszystkie standardowe ustawienia punktu końcowego w pliku konfiguracji. Każdy podwęzeł w drzewie odpowiada elementowi podrzędnemu w elemencie `<standardEndpoints>` w pliku konfiguracji.
+Takie ustawienia konfiguracji są przechowywane w **standardowym węźle punktu końcowego** . **Standardowy węzeł punktu końcowego** wyświetla wszystkie standardowe ustawienia punktu końcowego w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do elementu podrzędnego w `<standardEndpoints>` elemencie w pliku konfiguracji.
 
 Po kliknięciu węzła **standardowego punktu końcowego** można wyświetlić lub wykonać zadania na **stronie Podsumowanie** standardowego punktu końcowego w **okienku szczegółów**.
 
@@ -181,7 +182,7 @@ Jeśli standardowy punkt końcowy jest używany, podczas próby usunięcia zosta
 
 Konfiguracje powiązań są używane do konfigurowania powiązań dla punktów końcowych. Takie ustawienia konfiguracji są przechowywane w węźle **powiązania** . Odniesienia do konfiguracji powiązań odwołań według nazwy i wielu punktów końcowych mogą odwoływać się do konfiguracji pojedynczego powiązania.
 
-W węźle **powiązania** są wyświetlane wszystkie ustawienia powiązań w pliku konfiguracji. Każdy podwęzeł w drzewie odpowiada elementowi podrzędnemu w < `bindings` > w pliku konfiguracyjnym.
+W węźle **powiązania** są wyświetlane wszystkie ustawienia powiązań w pliku konfiguracji. Każdy podwęzeł w drzewie odnosi się do elementu podrzędnego w <`bindings`> elementu w pliku konfiguracji.
 
 Po kliknięciu węzła **powiązania** można wyświetlić lub wykonać zadania na **stronie Podsumowanie** powiązań w **okienku szczegółów**.
 
@@ -199,11 +200,11 @@ Nową konfigurację powiązania można utworzyć w następujący sposób.
 
 1. Wybierz powiązanie, do którego chcesz dodać element rozszerzenia.
 
-2. Kliknij przycisk **Dodaj**.
+2. Kliknij pozycję **Dodaj**.
 
 3. Z listy dostępnych rozszerzeń wybierz rozszerzenie elementu powiązania, które chcesz dodać. Aby zaznaczyć wiele elementów, naciśnij jednocześnie klawisz CTRL.
 
-4. Kliknij przycisk **Dodaj**.
+4. Kliknij pozycję **Dodaj**.
 
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>Dopasowanie położenia rozszerzenia w niestandardowym powiązaniu
 
@@ -225,7 +226,7 @@ Niestandardowe powiązanie to kolekcja elementów powiązania, które tworzą st
 
 ### <a name="diagnostics"></a>Diagnostyka
 
-W węźle **Diagnostyka** są wyświetlane wszystkie ustawienia diagnostyczne w pliku konfiguracji. Umożliwia włączenie lub wyłączenie liczników wydajności, włączenie lub wyłączenie Instrumentacja zarządzania Windows (WMI), skonfigurowanie śledzenia WCF i skonfigurowanie rejestrowania komunikatów WCF. Ustawienia w węźle **Diagnostyka** odpowiadają sekcji < `system.diagnostics` > i `<diagnostics>` w `<system.serviceModel>` w pliku konfiguracyjnym.
+W węźle **Diagnostyka** są wyświetlane wszystkie ustawienia diagnostyczne w pliku konfiguracji. Umożliwia włączenie lub wyłączenie liczników wydajności, włączenie lub wyłączenie Instrumentacja zarządzania Windows (WMI), skonfigurowanie śledzenia WCF i skonfigurowanie rejestrowania komunikatów WCF. Ustawienia w węźle **Diagnostyka** odpowiadają `system.diagnostics` sekcji <> i `<diagnostics>` sekcji w `<system.serviceModel>` pliku konfiguracji.
 
 Po kliknięciu węzła **Diagnostyka** można wyświetlić lub wykonać zadania na **stronie podsumowania** diagnostyki w **okienku szczegółów**.
 
@@ -284,7 +285,7 @@ Można utworzyć plik śledzenia WCF ze standardowymi właściwościami lub skon
 
 6. Aby edytować ustawienia rejestrowania komunikatów, kliknij węzeł **Rejestrowanie komunikatów** . Ustawienia można edytować w siatce właściwości.
 
-### <a name="advanced"></a>Zaawansowane
+### <a name="advanced"></a>Zaawansowany
 
 #### <a name="behaviors"></a>Zachowania
 
@@ -308,11 +309,11 @@ Nową konfigurację zachowania można utworzyć na dwa sposoby.
 
 2. Wybierz zachowanie, które chcesz edytować.
 
-3. Kliknij przycisk **Dodaj**.
+3. Kliknij pozycję **Dodaj**.
 
 4. Z listy dostępnych rozszerzeń wybierz rozszerzenie elementu zachowania, które chcesz dodać.
 
-5. Kliknij przycisk **Dodaj**.
+5. Kliknij pozycję **Dodaj**.
 
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>Dopasowanie położenia rozszerzenia w ramach zachowania
 
@@ -338,7 +339,7 @@ Zachowania są kolekcjami elementów tworzących stos. Każdy element na stosie 
 
 Ta sekcja umożliwia ustawienie domyślnych typów powiązań dla różnych protokołów, takich jak http, TCP, MSMQ lub net. pipe przez zdefiniowane mapowanie między schematami adresów protokołu a możliwymi powiązaniami. Możesz również dodać nowe mapowania do innych protokołów.
 
-#### <a name="extensions"></a>rozszerzenia
+#### <a name="extensions"></a>Rozszerzenia
 
 Nowe rozszerzenia powiązań, rozszerzenia elementów powiązania, standardowe rozszerzenia punktów końcowych i rozszerzenia zachowań mogą być zarejestrowane do użycia w konfiguracji WCF. Rozszerzeniami są pary nazwa/typ. Nazwa definiuje nazwę rozszerzenia w konfiguracji, podczas gdy typ implementuje rozszerzenie. Istnieją cztery typy rozszerzeń:
 
@@ -374,7 +375,7 @@ Jednym ze sposobów tworzenia nowego pliku konfiguracji jest użycie Kreatora no
 
 #### <a name="creating-a-configuration-file"></a>Tworzenie pliku konfiguracji
 
-1. Uruchom Edytor konfiguracji usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF, a następnie wpisz `SvcConfigEditor.exe`.
+1. Uruchom Edytor konfiguracji usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF, a następnie wpisz polecenie `SvcConfigEditor.exe` .
 
 2. W menu **plik** wybierz pozycję **Otwórz** , a następnie kliknij pozycję plik **wykonywalny**, **Usługa com+** lub **Usługa webhosted**, w zależności od typu pliku konfiguracji, który chcesz utworzyć.
 
@@ -385,17 +386,17 @@ Jednym ze sposobów tworzenia nowego pliku konfiguracji jest użycie Kreatora no
 5. Postępuj zgodnie z instrukcjami w kreatorze, aby utworzyć nową usługę.
 
 > [!NOTE]
-> Jeśli chcesz użyć NetPeerTcpBinding z pliku konfiguracyjnego wygenerowanego przez kreatora, musisz ręcznie dodać element konfiguracji powiązania i zmodyfikować atrybut `mode` elementu `security` na wartość "none" (brak).
+> Jeśli chcesz użyć NetPeerTcpBinding z pliku konfiguracji wygenerowanego przez kreatora, musisz ręcznie dodać element konfiguracji powiązania i zmodyfikować `mode` atrybut jego `security` elementu na wartość "none".
 
 ## <a name="configuring-com"></a>Konfigurowanie modelu COM+
 
-Edytor konfiguracji usługi umożliwia utworzenie nowego pliku konfiguracji dla istniejącej aplikacji modelu COM+ lub edytowanie istniejącej konfiguracji modelu COM+. Węzeł **kontraktu com** jest widoczny tylko wtedy, gdy sekcja < `comContract` > istnieje w pliku konfiguracji.
+Edytor konfiguracji usługi umożliwia utworzenie nowego pliku konfiguracji dla istniejącej aplikacji modelu COM+ lub edytowanie istniejącej konfiguracji modelu COM+. Węzeł **kontraktu com** jest widoczny tylko wtedy, gdy `comContract` sekcja> <istnieje w pliku konfiguracji.
 
 ### <a name="creating-a-new-com-configuration"></a>Tworzenie nowej konfiguracji modelu COM+
 
 Przed utworzeniem nowej konfiguracji modelu COM+ upewnij się, że aplikacja modelu COM+ jest zainstalowana w usługach składników i zarejestrowana w globalnej pamięci podręcznej zestawów (GAC).
 
-1. Wybierz menu **plik** > **zintegruj** **aplikację com+**  -> . Ta operacja zamyka bieżący otwarty plik. Jeśli w bieżącym pliku znajdują się niezapisane dane, zostanie wyświetlone okno dialogowe Zapisz. Następnie zostanie uruchomiony **Kreator integracji modelu COM+** .
+1. Wybierz menu **plik** — > **Zintegruj**  ->  **aplikację com+.** Ta operacja zamyka bieżący otwarty plik. Jeśli w bieżącym pliku znajdują się niezapisane dane, zostanie wyświetlone okno dialogowe Zapisz. Następnie zostanie uruchomiony **Kreator integracji modelu COM+** .
 
 2. Na pierwszej stronie wybierz aplikację COM+ z drzewa. Jeśli nie możesz znaleźć aplikacji modelu COM+ w drzewie, sprawdź, czy jest ona zainstalowana w usługach składników i zarejestrowana w globalnej pamięci podręcznej zestawów (GAC).
 
@@ -405,11 +406,11 @@ Przed utworzeniem nowej konfiguracji modelu COM+ upewnij się, że aplikacja mod
 
 5. Skonfiguruj inne ustawienia zgodnie z przewodnikami w kreatorze.
 
-6. Edytor konfiguracji usługi używa programu ComSvcConfig. exe w tle do generowania pliku konfiguracji. Po zakończeniu tej operacji można wyświetlić podsumowanie i zakończyć pracę kreatora. Wygenerowany plik konfiguracji zostanie otwarty, aby można go było edytować bezpośrednio.
+6. Edytor konfiguracji usługi używa ComSvcConfig.exe w tle do generowania pliku konfiguracji. Po zakończeniu tej operacji można wyświetlić podsumowanie i zakończyć pracę kreatora. Wygenerowany plik konfiguracji zostanie otwarty, aby można go było edytować bezpośrednio.
 
 ### <a name="editing-an-existing-com-configuration"></a>Edytowanie istniejącej konfiguracji modelu COM+
 
-1. Wybierz menu **plik** > **Otwórz** -> **usługi com+** ...
+1. Wybierz menu **plik** > **Otwórz**  ->  **usługę com+**...
 
 2. Wybierz z listy usługę COM+, którą chcesz edytować.
 

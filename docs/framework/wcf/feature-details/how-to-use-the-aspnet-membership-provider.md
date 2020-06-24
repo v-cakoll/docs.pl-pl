@@ -1,17 +1,18 @@
 ---
 title: 'Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET'
+description: Dowiedz się, w jaki sposób dostawca członkostwa ASP.NET obsługuje witryny sieci Web, które umożliwiają użytkownikom tworzenie nazwy użytkownika i hasła w celu uzyskania dostępu bez konta domeny systemu Windows.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595326"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246730"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET
 
@@ -28,7 +29,7 @@ Deweloperzy Windows Communication Foundation (WCF) mogą korzystać z tych funkc
 
 ### <a name="to-configure-the-membership-provider"></a>Aby skonfigurować dostawcę członkostwa
 
-1. W pliku Web. config w `system.web` elemencie < > Utwórz `membership` element > <.
+1. W pliku Web.config w obszarze <`system.web`> Utwórz `membership` element <>.
 
 2. W obszarze `<membership>` elementu Utwórz `<providers>` element.
 

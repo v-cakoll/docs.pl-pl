@@ -1,17 +1,18 @@
 ---
 title: 'Punkty końcowe: Adresy, powiązania i kontrakty'
+description: Dowiedz się, jak cała komunikacja z usługą WCF odbywa się za pomocą punktów końcowych usługi, które zapewniają klientom dostęp do funkcji oferowanych przez usługę.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593519"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247315"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Punkty końcowe: Adresy, powiązania i kontrakty
 
@@ -88,8 +89,8 @@ Opisuje sposób tworzenia punktu końcowego usługi w konfiguracji.
 [Instrukcje: Tworzenie punktu końcowego usługi w kodzie](how-to-create-a-service-endpoint-in-code.md)\
 Opisuje sposób tworzenia punktu końcowego usługi w kodzie.
 
-[Instrukcje: użycie programu Svcutil. exe do zweryfikowania skompilowanego kodu usługi](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-Opisuje sposób wykrywania błędów w implementacjach i konfiguracjach usług bez udostępniania usługi przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+[Instrukcje: użycie Svcutil.exe do zweryfikowania skompilowanego kodu usługi](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+Opisuje, jak wykrywać błędy w implementacjach i konfiguracjach usług bez obsługi usługi przy użyciu [Narzędzia do przesyłania metadanych modelu ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 ## <a name="see-also"></a>Zobacz też
 

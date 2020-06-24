@@ -1,16 +1,17 @@
 ---
 title: 'Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows'
+description: Dowiedz się, jak utworzyć usługę WCF hostowaną przez usługę systemu Windows. Ta opcja hostingu jest dostępna we wszystkich wersjach systemu Windows.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593181"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246939"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows
 
@@ -18,7 +19,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
 
 Usługami systemu Windows można zarządzać za pomocą przystawki Microsoft. ManagementConsole. SnapIn w programie Microsoft Management Console (MMC) i można ją skonfigurować do automatycznego uruchamiania podczas uruchamiania systemu. Ta opcja hostingu polega na zarejestrowaniu domeny aplikacji (AppDomain), która hostuje usługę WCF jako usługę zarządzaną systemu Windows, dzięki czemu okres istnienia usługi jest kontrolowany przez menedżera kontroli usług (SCM) dla usług systemu Windows.
 
-Kod usługi zawiera implementację usługi kontraktu usługi, klasy usługi systemu Windows i klasy Instalatora. Klasa implementacji usługi, `CalculatorService` , jest usługą WCF. `CalculatorWindowsService`Jest to usługa systemu Windows. Aby można było zakwalifikować jako usługę systemu Windows, Klasa dziedziczy z `ServiceBase` i `OnStart` implementuje `OnStop` metody i. W programie `OnStart` <xref:System.ServiceModel.ServiceHost> jest tworzony dla `CalculatorService` typu i otwarty. W programie `OnStop` Usługa zostanie zatrzymana i usunięta. Host jest również odpowiedzialny za podanie adresu podstawowego dla hosta usługi, który został skonfigurowany w ustawieniach aplikacji. Klasa Instalatora, która dziedziczy po <xref:System.Configuration.Install.Installer> , umożliwia programowi zainstalowanie programu jako usługi systemu Windows za pomocą narzędzia Installutil. exe.
+Kod usługi zawiera implementację usługi kontraktu usługi, klasy usługi systemu Windows i klasy Instalatora. Klasa implementacji usługi, `CalculatorService` , jest usługą WCF. `CalculatorWindowsService`Jest to usługa systemu Windows. Aby można było zakwalifikować jako usługę systemu Windows, Klasa dziedziczy z `ServiceBase` i `OnStart` implementuje `OnStop` metody i. W programie `OnStart` <xref:System.ServiceModel.ServiceHost> jest tworzony dla `CalculatorService` typu i otwarty. W programie `OnStop` Usługa zostanie zatrzymana i usunięta. Host jest również odpowiedzialny za podanie adresu podstawowego dla hosta usługi, który został skonfigurowany w ustawieniach aplikacji. Klasa Instalatora, która dziedziczy po <xref:System.Configuration.Install.Installer> , umożliwia programowi zainstalowanie jako usługę systemu Windows za pomocą narzędzia Installutil.exe.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Konstruowanie usługi i dostarczanie kodu hostingu
 
@@ -32,7 +33,7 @@ Kod usługi zawiera implementację usługi kontraktu usługi, klasy usługi syst
 
     - System.ServiceModel.dll
 
-    - System. ServiceProcess. dll
+    - System.ServiceProcess.dll
 
     - System.Configuration.Install.dll
 
@@ -66,7 +67,7 @@ Kod usługi zawiera implementację usługi kontraktu usługi, klasy usługi syst
      [!code-csharp[c_HowTo_HostInNTService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#5)]
      [!code-vb[c_HowTo_HostInNTService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#5)]
 
-11. Utwórz nową klasę o nazwie `ProjectInstaller` , która dziedziczy z <xref:System.Configuration.Install.Installer> i która jest oznaczona z <xref:System.ComponentModel.RunInstallerAttribute> ustawioną na `true` . Dzięki temu można zainstalować usługę systemu Windows za pomocą narzędzia Installutil. exe.
+11. Utwórz nową klasę o nazwie `ProjectInstaller` , która dziedziczy z <xref:System.Configuration.Install.Installer> i która jest oznaczona z <xref:System.ComponentModel.RunInstallerAttribute> ustawioną na `true` . Umożliwia to zainstalowanie usługi systemu Windows za pomocą narzędzia Installutil.exe.
 
      [!code-csharp[c_HowTo_HostInNTService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#6)]
      [!code-vb[c_HowTo_HostInNTService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#6)]
@@ -110,7 +111,7 @@ Kod usługi zawiera implementację usługi kontraktu usługi, klasy usługi syst
     </configuration>
     ```
 
-     Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. W obszarze **Kopiuj do katalogu wyjściowego** wybierz opcję **Kopiuj, jeśli nowszy**.
+     Kliknij prawym przyciskiem myszy plik App.config w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. W obszarze **Kopiuj do katalogu wyjściowego** wybierz opcję **Kopiuj, jeśli nowszy**.
 
      Ten przykład jawnie określa punkty końcowe w pliku konfiguracji. Jeśli nie dodasz żadnych punktów końcowych do usługi, środowisko uruchomieniowe doda domyślne punkty końcowe. W tym przykładzie, ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ustawiony na `true` , usługa ma także włączone metadane publikacji. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](../simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../samples/simplified-configuration-for-wcf-services.md).
 

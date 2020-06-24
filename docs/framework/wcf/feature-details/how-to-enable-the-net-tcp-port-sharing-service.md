@@ -1,16 +1,17 @@
 ---
 title: 'Instrukcje: Włączanie usługi współużytkowania portów Net.TCP'
+description: Dowiedz się, jak skonfigurować usługę net. TCP do udostępniania portów TCP, która jest domyślnie wyłączona.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593155"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247003"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: Włączanie usługi współużytkowania portów Net.TCP
 Windows Communication Foundation (WCF) używa usługi systemu Windows o nazwie Usługa udostępniania portów Net. TCP w celu ułatwienia udostępniania portów TCP w wielu procesach. Ta usługa jest instalowana w ramach programu WCF, ale usługa nie jest domyślnie włączona z zabezpieczeniami i dlatego musi być włączona ręcznie przed pierwszym użyciem. W tym temacie opisano sposób konfigurowania usługi udostępniania portów TCP sieci przy użyciu przystawki programu Microsoft Management Console (MMC).  

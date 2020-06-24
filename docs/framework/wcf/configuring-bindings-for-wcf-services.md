@@ -1,24 +1,25 @@
 ---
 title: Konfigurowanie wiązań dla usług WCF (Windows Communication Foundation)
+description: Dowiedz się więcej o konfigurowaniu powiązań w czasie wdrażania dla aplikacji WCF przez edytowanie elementów w ramach systemu. Element ServiceModel.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: e7ee1a8ce358c77e46db39af67bd9dc20114fb3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2bb396e65722726e54cd315e931eea933386659
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174826"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247631"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie wiązań dla usług WCF (Windows Communication Foundation)
-Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora po wdrożeniu aplikacji. Na przykład często nie ma możliwości poznania z wyprzedzeniem, jaki będzie adres usługi lub jednolity identyfikator zasobu (URI). Zamiast twardego kodowania adresu, zaleca się, aby zezwolić administratorowi to zrobić po utworzeniu usługi. Ta elastyczność jest osiągana poprzez konfigurację.  
+Podczas tworzenia aplikacji często chcesz odroczyć decyzje administratora po wdrożeniu aplikacji. Na przykład często nie ma możliwości znajomości informacji o adresie usługi lub Uniform Resource Identifier (URI). Zamiast kodowania adresu, preferowane jest umożliwienie administratorowi wykonania tej czynności po utworzeniu usługi. Ta elastyczność jest realizowana przy użyciu konfiguracji.  
   
 > [!NOTE]
-> Użyj [narzędzia Narzędzia do metadanych ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) z przełącznikiem, `/config` aby szybko utworzyć pliki konfiguracyjne.  
+> Użyj [Narzędzia do przesyłania metadanych ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) z `/config` przełącznikiem, aby szybko utworzyć pliki konfiguracyjne.  
   
 ## <a name="major-sections"></a>Sekcje główne  
- Schemat konfiguracji Windows Communication Foundation (WCF) obejmuje następujące`serviceModel` `bindings`trzy `services`główne sekcje ( , , , i):  
+ Schemat konfiguracji programu Windows Communication Foundation (WCF) zawiera następujące trzy główne sekcje ( `serviceModel` , `bindings` i `services` ):  
   
 ```xml  
 <configuration>  
@@ -34,18 +35,18 @@ Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora p
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementy ServiceModel  
- Można użyć sekcji ograniczonej `system.ServiceModel` przez element, aby skonfigurować typ usługi z co najmniej jednym punktem końcowym, a także ustawienia dla usługi. Każdy punkt końcowy można następnie skonfigurować z adresem, umową i powiązaniem. Aby uzyskać więcej informacji na temat punktów końcowych, zobacz [Omówienie tworzenia punktów końcowych](endpoint-creation-overview.md). Jeśli nie określono żadnych punktów końcowych, środowisko wykonawcze dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [uproszczona konfiguracja usług WCF](./samples/simplified-configuration-for-wcf-services.md).  
+ Możesz użyć sekcji powiązanej przez `system.ServiceModel` element, aby skonfigurować typ usługi z co najmniej jednym punktem końcowym, a także ustawieniami usługi. Każdy punkt końcowy można następnie skonfigurować przy użyciu adresu, kontraktu i powiązania. Aby uzyskać więcej informacji na temat punktów końcowych, zobacz [Omówienie tworzenia punktów końcowych](endpoint-creation-overview.md). Jeśli nie określono żadnych punktów końcowych, środowisko uruchomieniowe dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](./samples/simplified-configuration-for-wcf-services.md).  
   
- Powiązanie określa transporty (HTTP, TCP, potoki, Usługi kolejkowania wiadomości) i protokoły (Zabezpieczenia, Niezawodność, Przepływy transakcji) i składa się z elementów wiązania, z których każdy określa aspekt komunikacji punktu końcowego ze światem.  
+ Powiązanie określa transporty (HTTP, TCP, potoki, kolejkowanie komunikatów) i protokoły (zabezpieczenia, niezawodność, przepływy transakcji) i składa się z elementów powiązania, z których każdy określa aspekt komunikacji punktu końcowego z światem.  
   
- Na przykład określenie [ \<podstawowego elementu>httpbinding](../configure-apps/file-schema/wcf/basichttpbinding.md) wskazuje, aby używać protokołu HTTP jako transportu dla punktu końcowego. Służy do przewodów punktu końcowego w czasie wykonywania, gdy usługa przy użyciu tego punktu końcowego jest otwarty.  
+ Na przykład określenie [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) elementu wskazuje na użycie protokołu HTTP jako transportu dla punktu końcowego. Jest on używany do naprowadzenia łączności punktu końcowego w czasie wykonywania, gdy zostanie otwarta usługa korzystająca z tego punktu końcowego.  
   
- Istnieją dwa rodzaje powiązań: wstępnie zdefiniowane i niestandardowe. Wstępnie zdefiniowane powiązania zawierają przydatne kombinacje elementów, które są używane w typowych scenariuszach. Aby uzyskać listę wstępnie zdefiniowanych typów powiązań, które zapewnia WCF, zobacz [Powiązania dostarczone przez system](system-provided-bindings.md). Jeśli żadna wstępnie zdefiniowana kolekcja powiązań ma poprawną kombinację funkcji, których potrzebuje aplikacja usługi, można utworzyć niestandardowe powiązania, aby spełnić wymagania aplikacji. Aby uzyskać więcej informacji na temat powiązań niestandardowych, zobacz [ \<customBinding>](../configure-apps/file-schema/wcf/custombinding.md).  
+ Istnieją dwa rodzaje powiązań: wstępnie zdefiniowane i niestandardowe. Wstępnie zdefiniowane powiązania zawierają przydatne kombinacje elementów, które są używane w typowych scenariuszach. Aby zapoznać się z listą wstępnie zdefiniowanych typów powiązań udostępnianych przez funkcję WCF, zobacz [powiązania dostarczone przez system](system-provided-bindings.md). Jeśli żadna wstępnie zdefiniowana kolekcja powiązań nie ma poprawnej kombinacji funkcji wymaganych przez aplikację usługi, można skonstruować niestandardowe powiązania w celu spełnienia wymagań aplikacji. Aby uzyskać więcej informacji na temat powiązań niestandardowych, zobacz [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) .  
   
- Poniższe cztery przykłady ilustrują najbardziej typowe konfiguracje powiązania używane do konfigurowania usługi WCF.  
+ Poniższe cztery przykłady ilustrują najczęstsze konfiguracje powiązań używane do konfigurowania usługi WCF.  
   
-#### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Określanie punktu końcowego do użycia typu powiązania  
- Pierwszy przykład ilustruje sposób określania punktu końcowego skonfigurowanego z adresem, umową i powiązaniem.  
+#### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Określanie punktu końcowego w celu użycia typu powiązania  
+ Pierwszy przykład ilustruje sposób określania punktu końcowego skonfigurowanego za pomocą adresu, kontraktu i powiązania.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -58,21 +59,21 @@ Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora p
 </service>  
 ```  
   
- W tym przykładzie `name` atrybut wskazuje, jaki typ usługi jest dla konfiguracji. Podczas tworzenia usługi w kodzie `HelloWorld` z umową, jest inicjowany ze wszystkimi punktami końcowymi zdefiniowanymi w przykładowej konfiguracji. Jeśli zestaw implementuje tylko jeden `name` kontrakt serwisowy, atrybut można pominąć, ponieważ usługa używa tylko dostępny typ. Atrybut przyjmuje ciąg, który musi być w formacie`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ W tym przykładzie `name` atrybut wskazuje typ usługi, dla której jest konfiguracja. Podczas tworzenia usługi w kodzie przy użyciu `HelloWorld` kontraktu zostanie on zainicjowany ze wszystkimi punktami końcowymi zdefiniowanymi w przykładowej konfiguracji. Jeśli zestaw implementuje tylko jeden kontrakt usługi, `name` atrybut może zostać pominięty, ponieważ usługa używa jedynego dostępnego typu. Atrybut przyjmuje ciąg, który musi mieć format`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
- Atrybut `address` określa identyfikator URI, który inne punkty końcowe używają do komunikowania się z usługą. Identyfikator URI może być ścieżką bezwzględną lub względną. Jeśli podany jest adres względny, oczekuje się, że host poda adres podstawowy, który jest odpowiedni dla schematu transportu używanego w powiązaniu. Jeśli adres nie jest skonfigurowany, przyjmuje się, że adres podstawowy jest adresem dla tego punktu końcowego.  
+ Ten `address` atrybut określa identyfikator URI używany przez inne punkty końcowe do komunikowania się z usługą. Identyfikator URI może być ścieżką bezwzględną lub względną. Jeśli zostanie podany adres względny, host powinien podać adres podstawowy, który jest odpowiedni dla schematu transportu używanego w powiązaniu. Jeśli adres nie jest skonfigurowany, zakłada się, że adres podstawowy jest adresem dla tego punktu końcowego.  
   
- Atrybut `contract` określa kontrakt, który ujawnia ten punkt końcowy. Typ implementacji usługi musi implementować typ kontraktu. Jeśli implementacja usługi implementuje jeden typ kontraktu, można pominąć tę właściwość.  
+ Ten `contract` atrybut określa kontrakt ujawniany przez ten punkt końcowy. Typ implementacji usługi musi implementować typ kontraktu. Jeśli implementacja usługi implementuje pojedynczy typ kontraktu, ta właściwość może zostać pominięta.  
   
- Atrybut `binding` wybiera wstępnie zdefiniowane lub niestandardowe powiązanie do użycia dla tego określonego punktu końcowego. Punkt końcowy, który jawnie nie wybiera powiązania, używa domyślnego zaznaczenia powiązania, którym jest `BasicHttpBinding`.  
+ Ten `binding` atrybut wybiera wstępnie zdefiniowane lub niestandardowe powiązanie do użycia dla tego określonego punktu końcowego. Punkt końcowy, który nie wybiera jawnie powiązania, używa domyślnego wyboru powiązania `BasicHttpBinding` .  
   
 #### <a name="modifying-a-predefined-binding"></a>Modyfikowanie wstępnie zdefiniowanego powiązania  
- W poniższym przykładzie wstępnie zdefiniowane powiązanie jest modyfikowany. Następnie można użyć do skonfigurowania dowolnego punktu końcowego w usłudze. Powiązanie jest modyfikowany <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> przez ustawienie wartości na 1 sekundę. Należy zauważyć, że <xref:System.TimeSpan> właściwość zwraca obiekt.  
+ W poniższym przykładzie modyfikowane jest wstępnie zdefiniowane powiązanie. Można go następnie użyć do skonfigurowania dowolnego punktu końcowego w usłudze. Powiązanie jest modyfikowane przez ustawienie <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> wartości na 1 sekundę. Należy zauważyć, że właściwość zwraca <xref:System.TimeSpan> obiekt.  
   
- To zmienione powiązanie znajduje się w sekcji powiązania. To zmienione powiązanie może być teraz używane podczas `binding` tworzenia dowolnego `endpoint` punktu końcowego przez ustawienie atrybutu w elemencie.  
+ To zmienione powiązanie można znaleźć w sekcji powiązań. To zmienione powiązanie może być teraz używane podczas tworzenia dowolnego punktu końcowego przez ustawienie `binding` atrybutu w `endpoint` elemencie.  
   
 > [!NOTE]
-> Jeśli nadasz określoną nazwę do `bindingConfiguration` powiązania, określony w punkcie końcowym usługi musi być zgodny z nim.  
+> W przypadku nadania określonej nazwy powiązaniem `bindingConfiguration` określone w punkcie końcowym usługi muszą być zgodne z tym elementem.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -89,10 +90,10 @@ Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora p
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Konfigurowanie zachowania do zastosowania do usługi  
- W poniższym przykładzie określone zachowanie jest skonfigurowane dla typu usługi. Element `ServiceMetadataBehavior` ten jest używany do włączania [Narzędzia narzędzia Do metadanych ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wykonywania zapytań do usługi i generowania dokumentów języka WSDL (Web Services Description Language) z metadanych.  
+ W poniższym przykładzie określone zachowanie jest skonfigurowane dla typu usługi. `ServiceMetadataBehavior`Element jest używany do włączania narzędzia do obsługi [metadanych modelu ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) do wysyłania zapytań do usługi i generowania dokumentów Web Services Description Language (WSDL) z metadanych.  
   
 > [!NOTE]
-> Jeśli nadasz określoną nazwę do `behaviorConfiguration` zachowania, określone w sekcji usługi lub punktu końcowego musi być zgodna z nim.  
+> W przypadku nadania określonej nazwy zachowaniem `behaviorConfiguration` określone w sekcji Service lub Endpoint muszą być zgodne.  
   
 ```xml  
 <behaviors>  
@@ -111,12 +112,12 @@ Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora p
 </services>  
 ```  
   
- Poprzednia konfiguracja umożliwia klientowi wywołanie i uzyskanie metadanych usługi wpisanej przez "HelloWorld".  
+ Poprzednia konfiguracja pozwala klientowi na wywołanie i Pobieranie metadanych usługi typu "HelloWorld".  
   
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
-## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Określanie usługi z dwoma punktami końcowymi przy użyciu różnych wartości wiązania  
- W tym ostatnim przykładzie dwa punkty końcowe są skonfigurowane dla typu `HelloWorld` usługi. Każdy punkt końcowy używa innego `bindingConfiguration` atrybutu dostosowanego tego samego typu `basicHttpBinding`powiązania (każdy modyfikuje ).  
+## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Określanie usługi z dwoma punktami końcowymi przy użyciu różnych wartości powiązania  
+ W tym ostatnim przykładzie skonfigurowano dwa punkty końcowe dla `HelloWorld` typu usługi. Każdy punkt końcowy używa innego niestandardowego `bindingConfiguration` atrybutu tego samego typu powiązania (każda modyfikuje `basicHttpBinding` ).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -143,7 +144,7 @@ Podczas tworzenia aplikacji często chcesz odroczyć decyzje do administratora p
 </bindings>  
 ```  
   
- Takie samo zachowanie można uzyskać przy użyciu `protocolMapping` konfiguracji domyślnej, dodając sekcję i konfigurując powiązania, jak pokazano w poniższym przykładzie.  
+ Takie samo zachowanie można uzyskać, korzystając z konfiguracji domyślnej, dodając `protocolMapping` sekcję i konfigurując powiązania, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <protocolMapping>  

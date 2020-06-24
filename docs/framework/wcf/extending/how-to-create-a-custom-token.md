@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: tworzenie tokenu niestandardowego'
+title: 'Instrukcje: Tworzenie tokenu niestandardowego'
+description: Dowiedz się, jak utworzyć niestandardowy token zabezpieczający w programie WCF przy użyciu klasy SecurityToken oraz jak zintegrować go z dostawcą tokenów zabezpieczających i wystawcą uwierzytelnienia.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +11,34 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 3bd44d197a655b67253ff363ef15937d4c021e08
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797043"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247536"
 ---
-# <a name="how-to-create-a-custom-token"></a>Instrukcje: tworzenie tokenu niestandardowego
+# <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
 W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy oraz jak zintegrować go z niestandardowym dostawcą tokenu zabezpieczeń i wystawcą uwierzytelnienia. Aby zapoznać się z kompletnym przykładem kodu, zapoznaj się z przykładem [niestandardowego tokenu](../samples/custom-token.md) .  
   
- *Token zabezpieczający* jest zasadniczo elementem XML, który jest używany przez strukturę zabezpieczeń Windows Communication Foundation (WCF) do reprezentowania oświadczeń dotyczących nadawcy w komunikacie protokołu SOAP. Zabezpieczenia WCF udostępniają różne tokeny dla trybów uwierzytelniania dostępnych w systemie. Przykłady obejmują token zabezpieczający certyfikat X. 509 reprezentowany przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasę lub token zabezpieczający nazwy użytkownika reprezentowany <xref:System.IdentityModel.Tokens.UserNameSecurityToken> przez klasę.  
+ *Token zabezpieczający* jest zasadniczo elementem XML, który jest używany przez strukturę zabezpieczeń Windows Communication Foundation (WCF) do reprezentowania oświadczeń dotyczących nadawcy w komunikacie protokołu SOAP. Zabezpieczenia WCF udostępniają różne tokeny dla trybów uwierzytelniania dostępnych w systemie. Przykłady obejmują token zabezpieczający certyfikat X. 509 reprezentowany przez klasę <xref:System.IdentityModel.Tokens.X509SecurityToken> lub token zabezpieczający nazwy użytkownika reprezentowany przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasę.  
   
  Czasami tryb uwierzytelniania lub poświadczenia nie są obsługiwane przez udostępniane typy. W takim przypadku konieczne jest utworzenie niestandardowego tokenu zabezpieczającego, aby zapewnić reprezentację w formacie XML niestandardowego poświadczenia w komunikacie protokołu SOAP.  
   
  W poniższych procedurach pokazano, jak utworzyć niestandardowy token zabezpieczający i jak zintegrować go z infrastrukturą zabezpieczeń WCF. W tym temacie opisano Tworzenie tokenu karty kredytowej, który służy do przekazywania informacji o karcie kredytowej klienta na serwer.  
   
- Aby uzyskać więcej informacji na temat poświadczeń niestandardowych i Menedżera tokenów [zabezpieczających, zobacz Przewodnik: Tworzenie niestandardowych poświadczeń](walkthrough-creating-custom-client-and-service-credentials.md)klienta i usługi.  
+ Aby uzyskać więcej informacji na temat poświadczeń niestandardowych i Menedżera tokenów zabezpieczających, zobacz [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md).  
   
- Zapoznaj <xref:System.IdentityModel.Tokens> się z przestrzenią nazw, aby poznać więcej klas, które reprezentują tokeny zabezpieczające.  
+ Zapoznaj się z <xref:System.IdentityModel.Tokens> przestrzenią nazw, aby poznać więcej klas, które reprezentują tokeny zabezpieczające.  
   
 ## <a name="procedures"></a>Procedury  
  Aplikacja kliencka musi być dostępna ze sposobem, aby określić informacje dotyczące karty kredytowej dla infrastruktury zabezpieczeń. Te informacje są udostępniane aplikacji przez niestandardową klasę poświadczeń klienta. Pierwszym krokiem jest utworzenie klasy do reprezentowania informacji o karcie kredytowej dla niestandardowych poświadczeń klienta.  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>Aby utworzyć klasę reprezentującą informacje o karcie kredytowej w poświadczeniach klienta  
   
-1. Zdefiniuj nową klasę, która reprezentuje informacje o karcie kredytowej dla aplikacji. Poniższy przykład nazywa nazwę klasy `CreditCardInfo`.  
+1. Zdefiniuj nową klasę, która reprezentuje informacje o karcie kredytowej dla aplikacji. Poniższy przykład nazywa nazwę klasy `CreditCardInfo` .  
   
-2. Dodaj odpowiednie właściwości do klasy, aby zezwolić aplikacji na zestaw niezbędnych informacji wymaganych przez Token niestandardowy. W tym przykładzie Klasa ma trzy właściwości: `CardNumber`, `CardIssuer`, i `ExpirationDate`.  
+2. Dodaj odpowiednie właściwości do klasy, aby zezwolić aplikacji na zestaw niezbędnych informacji wymaganych przez Token niestandardowy. W tym przykładzie Klasa ma trzy właściwości: `CardNumber` , `CardIssuer` , i `ExpirationDate` .  
   
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
@@ -46,13 +47,13 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 #### <a name="to-create-a-custom-security-token-class"></a>Aby utworzyć niestandardową klasę tokenów zabezpieczających  
   
-1. Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Tokens.SecurityToken> klasy. Ten przykład tworzy klasę o nazwie `CreditCardToken`.  
+1. Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Tokens.SecurityToken> klasy. Ten przykład tworzy klasę o nazwie `CreditCardToken` .  
   
-2. Zastąp <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> właściwość. Ta właściwość służy do uzyskiwania identyfikatora lokalnego tokenu zabezpieczającego, który służy do wskazywania reprezentacji XML tokenu zabezpieczającego z innych elementów w komunikacie protokołu SOAP. W tym przykładzie Identyfikator tokenu może być przesłany do niego jako parametr konstruktora lub nowy losowo jeden jest generowany za każdym razem, gdy tworzone jest wystąpienie tokenu zabezpieczeń.  
+2. Zastąp <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> Właściwość. Ta właściwość służy do uzyskiwania identyfikatora lokalnego tokenu zabezpieczającego, który służy do wskazywania reprezentacji XML tokenu zabezpieczającego z innych elementów w komunikacie protokołu SOAP. W tym przykładzie Identyfikator tokenu może być przesłany do niego jako parametr konstruktora lub nowy losowo jeden jest generowany za każdym razem, gdy tworzone jest wystąpienie tokenu zabezpieczeń.  
   
-3. Zaimplementuj <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> właściwość. Ta właściwość zwraca kolekcję kluczy zabezpieczeń, które reprezentuje wystąpienie tokenu zabezpieczającego. Takie klucze mogą być używane przez funkcję WCF do podpisywania lub szyfrowania części wiadomości protokołu SOAP. W tym przykładzie token zabezpieczający karty kredytowej nie może zawierać żadnych kluczy zabezpieczeń; w związku z tym implementacja zawsze zwraca pustą kolekcję.  
+3. Zaimplementuj <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> Właściwość. Ta właściwość zwraca kolekcję kluczy zabezpieczeń, które reprezentuje wystąpienie tokenu zabezpieczającego. Takie klucze mogą być używane przez funkcję WCF do podpisywania lub szyfrowania części wiadomości protokołu SOAP. W tym przykładzie token zabezpieczający karty kredytowej nie może zawierać żadnych kluczy zabezpieczeń; w związku z tym implementacja zawsze zwraca pustą kolekcję.  
   
-4. Zastąp właściwości <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>i. <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> Te właściwości są używane przez program WCF do określania ważności wystąpienia tokenu zabezpieczającego. W tym przykładzie token zabezpieczający karty kredytowej ma tylko datę wygaśnięcia, więc `ValidFrom` Właściwość <xref:System.DateTime> zwraca wartość reprezentującą datę i godzinę tworzenia wystąpienia.  
+4. Zastąp <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> właściwości i. Te właściwości są używane przez program WCF do określania ważności wystąpienia tokenu zabezpieczającego. W tym przykładzie token zabezpieczający karty kredytowej ma tylko datę wygaśnięcia, więc `ValidFrom` Właściwość zwraca wartość <xref:System.DateTime> reprezentującą datę i godzinę tworzenia wystąpienia.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
@@ -65,13 +66,13 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 2. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> metodę. Skopiuj wszystkie pola wewnętrzne zdefiniowane w klasie, jeśli istnieją. W tym przykładzie nie są zdefiniowane żadne dodatkowe pola.  
   
-3. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> właściwość tylko do odczytu. Ta właściwość zwraca `true` wartość, jeśli typ tokenu zabezpieczającego reprezentowany przez tę klasę może służyć do uwierzytelniania klienta w usłudze. W tym przykładzie token zabezpieczający karty kredytowej może służyć do uwierzytelniania klienta w usłudze.  
+3. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> Właściwość tylko do odczytu. Ta właściwość zwraca wartość `true` , jeśli typ tokenu zabezpieczającego reprezentowany przez tę klasę może służyć do uwierzytelniania klienta w usłudze. W tym przykładzie token zabezpieczający karty kredytowej może służyć do uwierzytelniania klienta w usłudze.  
   
-4. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> właściwość tylko do odczytu. Ta właściwość zwraca `true` wartość, jeśli typ tokenu zabezpieczającego reprezentowany przez tę klasę może być używany do uwierzytelniania usługi dla klienta. W tym przykładzie token zabezpieczający karty kredytowej nie może zostać użyty do uwierzytelnienia usługi dla klienta.  
+4. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> Właściwość tylko do odczytu. Ta właściwość zwraca wartość `true` , jeśli typ tokenu zabezpieczającego reprezentowany przez tę klasę może być używany do uwierzytelniania usługi dla klienta. W tym przykładzie token zabezpieczający karty kredytowej nie może zostać użyty do uwierzytelnienia usługi dla klienta.  
   
-5. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> właściwość tylko do odczytu. Ta właściwość zwraca `true` wartość, jeśli typ tokenu zabezpieczającego reprezentowanego przez tę klasę można zamapować na konto systemu Windows. W takim przypadku wynik uwierzytelniania jest reprezentowany przez <xref:System.Security.Principal.WindowsIdentity> wystąpienie klasy. W tym przykładzie nie można zamapować tokenu na konto systemu Windows.  
+5. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> Właściwość tylko do odczytu. Ta właściwość zwraca wartość `true` , jeśli typ tokenu zabezpieczającego reprezentowanego przez tę klasę można zamapować na konto systemu Windows. W takim przypadku wynik uwierzytelniania jest reprezentowany przez <xref:System.Security.Principal.WindowsIdentity> wystąpienie klasy. W tym przykładzie nie można zamapować tokenu na konto systemu Windows.  
   
-6. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> metodę. Ta metoda jest wywoływana przez strukturę zabezpieczeń WCF, gdy wymaga odwołania do wystąpienia tokenu zabezpieczającego reprezentowanego przez tę klasę parametrów tokenu zabezpieczającego. Zarówno rzeczywiste wystąpienie tokenu zabezpieczającego, <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> jak i typ żądanego odwołania są przekazane do tej metody jako argumenty. W tym przykładzie tylko odwołania wewnętrzne są obsługiwane przez token zabezpieczający karty kredytowej. <xref:System.IdentityModel.Tokens.SecurityToken> Klasa ma funkcje do tworzenia odwołań wewnętrznych; w związku z tym implementacja nie wymaga dodatkowego kodu.  
+6. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> metodę. Ta metoda jest wywoływana przez strukturę zabezpieczeń WCF, gdy wymaga odwołania do wystąpienia tokenu zabezpieczającego reprezentowanego przez tę klasę parametrów tokenu zabezpieczającego. Zarówno rzeczywiste wystąpienie tokenu zabezpieczającego, jak i <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> typ żądanego odwołania są przekazane do tej metody jako argumenty. W tym przykładzie tylko odwołania wewnętrzne są obsługiwane przez token zabezpieczający karty kredytowej. <xref:System.IdentityModel.Tokens.SecurityToken>Klasa ma funkcje do tworzenia odwołań wewnętrznych; w związku z tym implementacja nie wymaga dodatkowego kodu.  
   
 7. Zaimplementuj <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metodę. Ta metoda jest wywoływana przez funkcję WCF w celu konwertowania wystąpienia klasy parametrów tokenu zabezpieczającego na wystąpienie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> klasy. Ten wynik jest używany przez dostawców tokenów zabezpieczających do utworzenia odpowiedniego wystąpienia tokenu zabezpieczającego.  
   
@@ -81,19 +82,19 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
  Tokeny zabezpieczające są przesyłane wewnątrz komunikatów protokołu SOAP, co wymaga mechanizmu tłumaczenia między reprezentacją tokenu zabezpieczającego w pamięci a reprezentacją w sieci. Aby wykonać to zadanie, WCF używa serializatora tokenów zabezpieczających. Każdy token niestandardowy musi być dołączony do niestandardowego serializatora tokenu zabezpieczającego, który może serializować i zdeserializować niestandardowego tokenu zabezpieczającego z komunikatu protokołu SOAP.  
   
 > [!NOTE]
-> Klucze pochodne są domyślnie włączone. Jeśli utworzysz niestandardowy token zabezpieczający i użyjesz go jako tokenu podstawowego, WCF poniesie klucz od tego. Podczas wykonywania tej operacji wywołuje serializator niestandardowego tokenu zabezpieczeń, aby napisać <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> dla niestandardowego tokenu zabezpieczającego podczas serializacji `DerivedKeyToken` do sieci. W przypadku zakończenia deserializacji tokenu `DerivedKeyToken` z sieci na końcu, serializator oczekuje `SecurityTokenReference` elementu jako element podrzędny najwyższego poziomu w sobie. Jeśli serializator niestandardowego tokenu zabezpieczającego nie dodał `SecurityTokenReference` elementu podczas serializowania jego typu klauzuli, zgłaszany jest wyjątek.  
+> Klucze pochodne są domyślnie włączone. Jeśli utworzysz niestandardowy token zabezpieczający i użyjesz go jako tokenu podstawowego, WCF poniesie klucz od tego. Podczas wykonywania tej operacji wywołuje serializator niestandardowego tokenu zabezpieczeń, aby napisać <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> dla niestandardowego tokenu zabezpieczającego podczas serializacji `DerivedKeyToken` do sieci. W przypadku zakończenia deserializacji tokenu z sieci na końcu, `DerivedKeyToken` serializator oczekuje `SecurityTokenReference` elementu jako element podrzędny najwyższego poziomu w sobie. Jeśli serializator niestandardowego tokenu zabezpieczającego nie dodał `SecurityTokenReference` elementu podczas serializowania jego typu klauzuli, zgłaszany jest wyjątek.  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>Aby utworzyć serializator niestandardowego tokenu zabezpieczającego  
   
 1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> klasy.  
   
-2. <xref:System.Xml.XmlReader> Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> metodę, która polega na odczytaniu strumienia XML. Metoda zwraca `true` , jeśli implementacja serializatora może deserializować token zabezpieczający na podstawie podaną w jego bieżącym elemencie. W tym przykładzie metoda sprawdza, czy bieżący element XML czytnika XML ma poprawną nazwę elementu i przestrzeń nazw. Jeśli tak nie jest, wywołuje implementację klasy bazowej tej metody do obsługi elementu XML.  
+2. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> metodę, która polega na <xref:System.Xml.XmlReader> odczytaniu strumienia XML. Metoda zwraca, `true` jeśli implementacja serializatora może deserializować token zabezpieczający na podstawie podaną w jego bieżącym elemencie. W tym przykładzie metoda sprawdza, czy bieżący element XML czytnika XML ma poprawną nazwę elementu i przestrzeń nazw. Jeśli tak nie jest, wywołuje implementację klasy bazowej tej metody do obsługi elementu XML.  
   
-3. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> metody. Ta metoda odczytuje zawartość XML tokenu zabezpieczającego i konstruuje odpowiednią reprezentację w pamięci. Jeśli nie rozpoznaje elementu XML, w którym znajduje się przekazanego czytnika XML, wywołuje implementację klasy podstawowej w celu przetworzenia typów tokenów dostarczonych przez system.  
+3. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> metodę. Ta metoda odczytuje zawartość XML tokenu zabezpieczającego i konstruuje odpowiednią reprezentację w pamięci. Jeśli nie rozpoznaje elementu XML, w którym znajduje się przekazanego czytnika XML, wywołuje implementację klasy podstawowej w celu przetworzenia typów tokenów dostarczonych przez system.  
   
-4. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> metody. Ta metoda zwraca `true` czy można skonwertować reprezentację tokenu w pamięci (przekazaną jako argument) na reprezentację w formacie XML. Jeśli nie można skonwertować, wywoła implementację klasy bazowej.  
+4. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> metodę. Ta metoda zwraca `true` czy można skonwertować reprezentację tokenu w pamięci (przekazaną jako argument) na reprezentację w formacie XML. Jeśli nie można skonwertować, wywoła implementację klasy bazowej.  
   
-5. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> metody. Ta metoda konwertuje reprezentację tokenu zabezpieczeń w pamięci na reprezentację w formacie XML. Jeśli metoda nie może konwertować, wywołuje implementację klasy bazowej.  
+5. Zastąp <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> metodę. Ta metoda konwertuje reprezentację tokenu zabezpieczeń w pamięci na reprezentację w formacie XML. Jeśli metoda nie może konwertować, wywołuje implementację klasy bazowej.  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
@@ -102,14 +103,14 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Aby zintegrować niestandardowy token zabezpieczeń z dostawcą tokenów zabezpieczających  
   
-1. Dostawca tokenów zabezpieczających tworzy, modyfikuje (w razie potrzeby) i zwraca wystąpienie tokenu. Aby utworzyć niestandardowego dostawcę dla niestandardowego tokenu zabezpieczeń, Utwórz klasę, która dziedziczy z <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metodę zwracającą wystąpienie `CreditCardToken`elementu. Aby uzyskać więcej informacji o dostawcach niestandardowych tokenów [zabezpieczających, zobacz How to: Utwórz niestandardowego dostawcę](how-to-create-a-custom-security-token-provider.md)tokenów zabezpieczających.  
+1. Dostawca tokenów zabezpieczających tworzy, modyfikuje (w razie potrzeby) i zwraca wystąpienie tokenu. Aby utworzyć niestandardowego dostawcę dla niestandardowego tokenu zabezpieczeń, Utwórz klasę, która dziedziczy z <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metodę zwracającą wystąpienie elementu `CreditCardToken` . Aby uzyskać więcej informacji o dostawcach niestandardowych tokenów zabezpieczających, zobacz [How to: Create a Custom Security Token Provider](how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Aby zintegrować niestandardowy token zabezpieczeń z wystawcą uwierzytelnienia tokenu zabezpieczającego  
   
-1. Wystawca uwierzytelnienia tokenów zabezpieczających weryfikuje zawartość tokenu zabezpieczającego, gdy zostanie wyodrębniony z wiadomości. Aby utworzyć niestandardową wystawcę uwierzytelniania dla niestandardowego tokenu zabezpieczeń, Utwórz klasę, która dziedziczy <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> z klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> metodę. Aby uzyskać więcej informacji na temat wystawców niestandardowych tokenów [zabezpieczających, zobacz How to: Tworzenie niestandardowego wystawcy uwierzytelnienia](how-to-create-a-custom-security-token-authenticator.md)tokenu zabezpieczeń.  
+1. Wystawca uwierzytelnienia tokenów zabezpieczających weryfikuje zawartość tokenu zabezpieczającego, gdy zostanie wyodrębniony z wiadomości. Aby utworzyć niestandardową wystawcę uwierzytelniania dla niestandardowego tokenu zabezpieczeń, Utwórz klasę, która dziedziczy z <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> metodę. Aby uzyskać więcej informacji na temat wystawców uwierzytelniania niestandardowych tokenów zabezpieczających, zobacz [How to: Create a Custom Security Token Authenticator](how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +120,7 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Aby zintegrować niestandardowy token zabezpieczeń z menedżerem tokenów zabezpieczających  
   
-1. Menedżer tokenów zabezpieczających tworzy odpowiedniego dostawcę tokenu, wystawcę uwierzytelnienia zabezpieczeń i wystąpienia serializatorów tokenów. Aby utworzyć niestandardowego menedżera tokenów, Utwórz klasę, która dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy. Podstawowe metody klasy wykorzystują <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> do tworzenia odpowiednich poświadczeń dostawcy i klienta lub usługi. Aby uzyskać więcej informacji na temat niestandardowych menedżerów tokenów zabezpieczających, zobacz [Przewodnik: Tworzenie niestandardowych poświadczeń](walkthrough-creating-custom-client-and-service-credentials.md)klienta i usługi.  
+1. Menedżer tokenów zabezpieczających tworzy odpowiedniego dostawcę tokenu, wystawcę uwierzytelnienia zabezpieczeń i wystąpienia serializatorów tokenów. Aby utworzyć niestandardowego menedżera tokenów, Utwórz klasę, która dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy. Podstawowe metody klasy wykorzystują <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> do tworzenia odpowiednich poświadczeń dostawcy i klienta lub usługi. Aby uzyskać więcej informacji na temat niestandardowych menedżerów tokenów zabezpieczających, zobacz [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +130,7 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Aby zintegrować niestandardowy token zabezpieczający z niestandardowym klientem i poświadczeniami usługi  
   
-1. Niestandardowe poświadczenia klienta i usługi należy dodać, aby udostępnić interfejs API dla aplikacji, aby umożliwić określenie niestandardowych informacji o tokenach, które są używane przez infrastrukturę niestandardowego tokenu zabezpieczeń, która została wcześniej utworzona w celu zapewnienia i uwierzytelniania zabezpieczeń niestandardowych. zawartość tokenu. W poniższych przykładach pokazano, jak to zrobić. Aby uzyskać więcej informacji na temat niestandardowych poświadczeń klienta i usługi [, zobacz Przewodnik: Tworzenie niestandardowych poświadczeń](walkthrough-creating-custom-client-and-service-credentials.md)klienta i usługi.  
+1. Niestandardowe poświadczenia klienta i usługi należy dodać, aby udostępnić interfejs API dla aplikacji, aby umożliwić określenie niestandardowych informacji o tokenach, które są używane przez infrastrukturę niestandardowego tokenu zabezpieczeń, która została wcześniej utworzona w celu udostępnienia i uwierzytelnienia niestandardowej zawartości niestandardowego tokenu zabezpieczeń. W poniższych przykładach pokazano, jak to zrobić. Aby uzyskać więcej informacji na temat niestandardowych poświadczeń klienta i usługi, zobacz [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -141,14 +142,14 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>Aby zintegrować niestandardowy token zabezpieczający z powiązaniem  
   
-1. Klasa parametrów niestandardowego tokenu zabezpieczającego musi być określona w jednej z kolekcji parametrów tokenu, które są uwidocznione w <xref:System.ServiceModel.Channels.SecurityBindingElement> klasie. Poniższy przykład używa kolekcji zwróconej przez `SignedEncrypted`. Kod dodaje niestandardowy token karty kredytowej do każdej wiadomości wysyłanej z klienta do usługi z zawartością, która została automatycznie podpisana i zaszyfrowana.  
+1. Klasa parametrów niestandardowego tokenu zabezpieczającego musi być określona w jednej z kolekcji parametrów tokenu, które są uwidocznione w <xref:System.ServiceModel.Channels.SecurityBindingElement> klasie. Poniższy przykład używa kolekcji zwróconej przez `SignedEncrypted` . Kod dodaje niestandardowy token karty kredytowej do każdej wiadomości wysyłanej z klienta do usługi z zawartością, która została automatycznie podpisana i zaszyfrowana.  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
  W tym temacie przedstawiono różne fragmenty kodu niezbędne do zaimplementowania i użycia niestandardowego tokenu. Aby zobaczyć kompletny przykład dopasowania wszystkich tych fragmentów kodu, zobacz [Token niestandardowy](../samples/custom-token.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
@@ -161,6 +162,6 @@ W tym temacie pokazano, jak utworzyć niestandardowy token zabezpieczający przy
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Przewodnik: Tworzenie niestandardowych poświadczeń klienta i usługi](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi](walkthrough-creating-custom-client-and-service-credentials.md)
 - [Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](how-to-create-a-custom-security-token-authenticator.md)
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)

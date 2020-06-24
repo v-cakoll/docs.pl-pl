@@ -28,7 +28,7 @@ Ten temat zawiera podsumowanie informacji o systemie obsługi komunikatów Windo
  [Architektura Windows Communication Foundation](architecture.md)\
  Graficzna reprezentacja architektury WCF.
 
-## <a name="reference"></a>Dokumentacja
+## <a name="reference"></a>Tematy pomocy
 
 <xref:System.ServiceModel>
 

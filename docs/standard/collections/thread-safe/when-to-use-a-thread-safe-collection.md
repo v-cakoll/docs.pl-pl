@@ -6,30 +6,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769136"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326043"
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
-W .NET Framework 4 wprowadzono pięć nowych typów kolekcji, które są specjalnie przeznaczone do obsługi operacji dodawania i usuwania wielowątkowych wątków. Aby zapewnić bezpieczeństwo wątków, te nowe typy wykorzystują różne rodzaje wydajnych mechanizmów synchronizacji i blokowania bez blokady. Synchronizacja dodaje narzuty do operacji. Ilość narzutów zależy od rodzaju używanej synchronizacji, rodzaju wykonywanych operacji oraz innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
+# <a name="when-to-use-a-thread-safe-collection"></a>Kiedy używać kolekcji bezpiecznej dla wątków
+
+.NET Framework 4 wprowadził pięć typów kolekcji, które są specjalnie przeznaczone do obsługi operacji dodawania i usuwania wielowątkowych. Aby zapewnić bezpieczeństwo wątków, te typy wykorzystują różne rodzaje wydajnych mechanizmów synchronizacji i blokowania bez blokady. Synchronizacja dodaje narzuty do operacji. Ilość narzutów zależy od rodzaju używanej synchronizacji, rodzaju wykonywanych operacji oraz innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
   
  W niektórych scenariuszach narzuty związane z synchronizacją są nieznaczne i umożliwiają znacznie szybszy i bardziej skalowalne skalowanie, w porównaniu z niebezpiecznym wątkem, w przypadku ochrony przez zewnętrzną blokadę. W innych scenariuszach narzuty mogą spowodować, że typ bezpieczny wątkowo będzie wykonywany i skalowalny na tym samym lub nawet wolniej niż zablokowana zewnętrznie, niezabezpieczona przed wątkiem wersja typu.  
   
  W poniższych sekcjach znajdują się ogólne wskazówki dotyczące sytuacji, w których należy używać kolekcji bezpiecznej dla wątków, a jej bezwzględnie niebezpieczny wątek, która ma blokadę dostarczoną przez użytkownika wokół operacji odczytu i zapisu. Ze względu na to, że wydajność może się różnić w zależności od wielu czynników, wskazówki nie są specyficzne i nie zawsze są ważne we wszystkich okolicznościach. Jeśli wydajność jest bardzo ważna, najlepszym sposobem określenia typu kolekcji, który ma być używany, jest pomiar wydajności na podstawie konfiguracji i obciążeń na reprezentatywnym komputerze. W tym dokumencie są stosowane następujące warunki:  
   
- *Czysty scenariusz dla producentów*  
+ *Czysty scenariusz dla producentów*\
  Każdy dany wątek dodaje lub usuwa elementy, ale nie oba.  
   
- *Mieszany scenariusz dla klientów*  
+ *Mieszany scenariusz dla klientów*\
  Każdy dany wątek jednocześnie dodaje i usuwa elementy.  
   
- *Przyspieszenie*  
+ *Przyspieszenie*\
  Szybsza wydajność algorytmu względem innego typu w tym samym scenariuszu.  
   
- *Skalowalność*  
+ *Względem*\
  Zwiększenie wydajności, która jest proporcjonalna do liczby rdzeni na komputerze. Algorytm, który skaluje się szybciej na osiem rdzeni niż w przypadku dwóch rdzeni.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) a kolejka (T)  

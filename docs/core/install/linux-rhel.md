@@ -1,15 +1,15 @@
 ---
 title: Instalowanie programu .NET Core w systemie RHEL — .NET Core
 description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środowiska uruchomieniowego .NET Core w systemie RHEL.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 7ae55f881cd0c877cf1db24be7a4ee23320e21a8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603042"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324708"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie RHEL
 

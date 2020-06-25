@@ -1,15 +1,15 @@
 ---
 title: Definiowanie zasobów XAML
 description: Dowiedz się więcej o zasobach XAML w WPF dla platformy .NET Core. Informacje o typach zasobów XAML i sposobach definiowania zasobów XAML.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: b278bb92afc308578d60e347871e0150b26a95db
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f8eaf3fd931aa6804b0b9a9c19c6bcc042678ebf
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "82071284"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325714"
 ---
 # <a name="overview-of-xaml-resources"></a>Przegląd zasobów XAML
 
@@ -24,11 +24,11 @@ Zasób jest obiektem, którego można użyć w różnych miejscach w aplikacji. 
 
 ## <a name="using-resources-in-xaml"></a>Używanie zasobów w języku XAML
 
-Poniższy przykład definiuje <xref:System.Windows.Media.SolidColorBrush> jako zasób elementu głównego strony. Przykład odwołuje się do zasobu i używa go do ustawiania właściwości kilku elementów podrzędnych, takich jak <xref:System.Windows.Shapes.Ellipse>, a <xref:System.Windows.Controls.TextBlock>i a. <xref:System.Windows.Controls.Button>
+Poniższy przykład definiuje <xref:System.Windows.Media.SolidColorBrush> jako zasób elementu głównego strony. Przykład odwołuje się do zasobu i używa go do ustawiania właściwości kilku elementów podrzędnych, takich jak <xref:System.Windows.Shapes.Ellipse> , a <xref:System.Windows.Controls.TextBlock> i a <xref:System.Windows.Controls.Button> .
 
 [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]
 
-Każdy element poziomu platformy<xref:System.Windows.FrameworkElement> (lub <xref:System.Windows.FrameworkContentElement>) ma <xref:System.Windows.FrameworkElement.Resources%2A> właściwość, która jest <xref:System.Windows.ResourceDictionary> typem zawierającym zdefiniowane zasoby. Można zdefiniować zasoby dla dowolnego elementu, na przykład <xref:System.Windows.Controls.Button>. Jednak zasoby są najczęściej definiowane w elemencie głównym, który jest <xref:System.Windows.Controls.Page> w przykładzie.
+Każdy element poziomu platformy ( <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> ) ma <xref:System.Windows.FrameworkElement.Resources%2A> Właściwość, która jest <xref:System.Windows.ResourceDictionary> typem zawierającym zdefiniowane zasoby. Można zdefiniować zasoby dla dowolnego elementu, na przykład <xref:System.Windows.Controls.Button> . Jednak zasoby są najczęściej definiowane w elemencie głównym, który jest <xref:System.Windows.Controls.Page> w przykładzie.
 
 Każdy zasób w słowniku zasobów musi mieć unikatowy klucz. Podczas definiowania zasobów w znacznikach, należy przypisać unikatowy klucz za pomocą [dyrektywy x:Key](../xaml-services/xkey-directive.md). Zazwyczaj klucz jest ciągiem; można jednak również ustawić inne typy obiektów przy użyciu odpowiednich rozszerzeń znaczników. Klucze niebędące ciągami dla zasobów są używane przez niektóre obszary funkcji w WPF, szczególnie w przypadku stylów, zasobów składników i stylów danych.
 
@@ -36,7 +36,7 @@ Zdefiniowanego zasobu można użyć ze składnią rozszerzenia znacznika zasobu,
 
 [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]
 
-W poprzednim przykładzie, gdy moduł ładujący `{StaticResource MyBrush}` XAML przetwarza wartość <xref:System.Windows.Controls.Control.Background%2A> właściwości na <xref:System.Windows.Controls.Button>, funkcja logiki wyszukiwania zasobów najpierw sprawdza słownik zasobów dla <xref:System.Windows.Controls.Button> elementu. Jeśli <xref:System.Windows.Controls.Button> nie ma definicji klucza `MyBrush` zasobu (w tym przykładzie nie jest to możliwe; kolekcja zasobów jest pusta), wyszukiwanie dalej sprawdza element nadrzędny <xref:System.Windows.Controls.Button>, czyli. <xref:System.Windows.Controls.Page> W przypadku zdefiniowania zasobu w elemencie <xref:System.Windows.Controls.Page> głównym wszystkie elementy w drzewie logicznym <xref:System.Windows.Controls.Page> mogą uzyskać do niego dostęp. Można też ponownie użyć tego samego zasobu do ustawiania wartości właściwości, która akceptuje ten sam typ, który reprezentuje zasób. W poprzednim przykładzie `MyBrush` ten sam zasób ustawia dwie różne właściwości: <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button>a i. <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>
+W poprzednim przykładzie, gdy moduł ładujący XAML przetwarza wartość `{StaticResource MyBrush}` <xref:System.Windows.Controls.Control.Background%2A> właściwości na <xref:System.Windows.Controls.Button> , funkcja logiki wyszukiwania zasobów najpierw sprawdza słownik zasobów dla <xref:System.Windows.Controls.Button> elementu. Jeśli <xref:System.Windows.Controls.Button> nie ma definicji klucza zasobu `MyBrush` (w tym przykładzie nie jest to możliwe; kolekcja zasobów jest pusta), wyszukiwanie dalej sprawdza element nadrzędny <xref:System.Windows.Controls.Button> , czyli <xref:System.Windows.Controls.Page> . W przypadku zdefiniowania zasobu w <xref:System.Windows.Controls.Page> elemencie głównym wszystkie elementy w drzewie logicznym <xref:System.Windows.Controls.Page> mogą uzyskać do niego dostęp. Można też ponownie użyć tego samego zasobu do ustawiania wartości właściwości, która akceptuje ten sam typ, który reprezentuje zasób. W poprzednim przykładzie ten sam `MyBrush` zasób ustawia dwie różne właściwości: a <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> i <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle> .
 
 ## <a name="static-and-dynamic-resources"></a>Zasoby statyczne i dynamiczne
 
@@ -58,7 +58,7 @@ Odwołania do zasobów statycznych działają najlepiej w następujących okolic
 
 - Projekt aplikacji koncentruje się na większości zasobów do słowników zasobów na poziomie strony lub aplikacji. Odwołania do zasobów statycznych nie są ponownie oceniane na podstawie zachowań środowiska uruchomieniowego, takich jak ponowne ładowanie strony. W związku z tym może mieć pewne korzyści wynikające z wydajności, aby uniknąć dużej liczby dynamicznych odwołań do zasobów, gdy nie są one potrzebne w oparciu o projekt i aplikację.
 
-- Ustawiasz wartość właściwości, która nie należy do <xref:System.Windows.DependencyObject> ani. <xref:System.Windows.Freezable>
+- Ustawiasz wartość właściwości, która nie należy do <xref:System.Windows.DependencyObject> ani <xref:System.Windows.Freezable> .
 
 - Tworzysz słownik zasobów, który zostanie skompilowany do biblioteki DLL i spakowany jako część aplikacji lub udostępnione przez aplikacje.
 
@@ -88,11 +88,11 @@ Zachowanie wyjątku w przypadku, gdy odwołanie do zasobu statycznego nie zostan
 
 Zasoby dynamiczne działają najlepiej, gdy:
 
-- Wartość zasobu, w tym zasoby systemowe lub zasoby, które są w przeciwnym razie użytkownik settable, zależy od warunków, które nie są znane do czasu wykonania. Na przykład można utworzyć wartości ustawiające odwołujące się do właściwości systemu, które <xref:System.Windows.SystemColors>są <xref:System.Windows.SystemFonts>udostępniane przez <xref:System.Windows.SystemParameters>, lub. Te wartości są naprawdę dynamiczne, ponieważ ostatecznie pochodzą ze środowiska uruchomieniowego użytkownika i systemu operacyjnego. Możesz również mieć motywy na poziomie aplikacji, które mogą ulec zmianie, w przypadku których dostęp do zasobów na poziomie strony musi również zostać przechwycony.
+- Wartość zasobu, w tym zasoby systemowe lub zasoby, które są w przeciwnym razie użytkownik settable, zależy od warunków, które nie są znane do czasu wykonania. Na przykład można utworzyć wartości ustawiające odwołujące się do właściwości systemu, które są udostępniane przez <xref:System.Windows.SystemColors> , <xref:System.Windows.SystemFonts> lub <xref:System.Windows.SystemParameters> . Te wartości są naprawdę dynamiczne, ponieważ ostatecznie pochodzą ze środowiska uruchomieniowego użytkownika i systemu operacyjnego. Możesz również mieć motywy na poziomie aplikacji, które mogą ulec zmianie, w przypadku których dostęp do zasobów na poziomie strony musi również zostać przechwycony.
 
 - Tworzysz lub przywołująsz style motywu dla kontrolki niestandardowej.
 
-- W trakcie okresu istnienia aplikacji zamierzasz <xref:System.Windows.ResourceDictionary> dostosować zawartość elementu.
+- W <xref:System.Windows.ResourceDictionary> trakcie okresu istnienia aplikacji zamierzasz dostosować zawartość elementu.
 
 - Masz skomplikowaną strukturę zasobów, która ma wzajemne zależności, gdzie może być wymagane odwołanie do przodu. Odwołania do zasobów statycznych nie obsługują odwołań do przekazywania, ale dynamiczne odwołania do zasobów obsługują je, ponieważ nie trzeba oceniać zasobu do czasu wykonania, a odwołania do przodu nie są odpowiednim pojęciem.
 
@@ -104,17 +104,17 @@ Zasoby dynamiczne działają najlepiej, gdy:
 
 ### <a name="dynamic-resource-lookup-behavior"></a>Dynamiczne zachowanie wyszukiwania zasobów
 
-Zachowanie wyszukiwania zasobów dla odwołania do zasobu dynamicznego polega na równoległym zachowaniu wyszukiwania w kodzie w przypadku <xref:System.Windows.FrameworkElement.FindResource%2A> wywołania <xref:System.Windows.FrameworkElement.SetResourceReference%2A>lub:
+Zachowanie wyszukiwania zasobów dla odwołania do zasobu dynamicznego polega na równoległym zachowaniu wyszukiwania w kodzie w przypadku wywołania <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.SetResourceReference%2A> :
 
 01. Wyszukiwanie wyszukuje żądany klucz w słowniku zasobów zdefiniowanym przez element, który ustawia właściwość:
 
-    - Jeśli element definiuje <xref:System.Windows.FrameworkElement.Style%2A> właściwość, <xref:System.Windows.FrameworkElement.Style?displayProperty=fullName> element ma zaznaczone jego <xref:System.Windows.Style.Resources> słownik.
+    - Jeśli element definiuje <xref:System.Windows.FrameworkElement.Style%2A> Właściwość, <xref:System.Windows.FrameworkElement.Style?displayProperty=fullName> element ma <xref:System.Windows.Style.Resources> zaznaczone jego słownik.
 
-    - Jeśli element definiuje <xref:System.Windows.Controls.Control.Template%2A> właściwość, <xref:System.Windows.FrameworkTemplate.Resources?displayProperty=fullName> słownik elementu jest sprawdzany.
+    - Jeśli element definiuje <xref:System.Windows.Controls.Control.Template%2A> Właściwość, <xref:System.Windows.FrameworkTemplate.Resources?displayProperty=fullName> słownik elementu jest sprawdzany.
 
 01. Wyszukiwanie przechodzi przez Drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany do momentu osiągnięcia elementu głównego.
 
-01. Zasoby aplikacji są sprawdzane. Zasoby aplikacji to zasoby znajdujące się w słowniku zasobów, które są <xref:System.Windows.Application> zdefiniowane przez obiekt dla aplikacji WPF.
+01. Zasoby aplikacji są sprawdzane. Zasoby aplikacji to zasoby znajdujące się w słowniku zasobów, które są zdefiniowane przez <xref:System.Windows.Application> obiekt dla aplikacji WPF.
 
 01. Słownik zasobów motywu jest sprawdzany dla aktualnie aktywnego motywu. Jeśli kompozycja ulegnie zmianie w czasie wykonywania, wartość zostanie przeszacowana.
 
@@ -124,7 +124,7 @@ Zachowanie wyjątków (jeśli istnieje) jest różne:
 
 - Jeśli zasób zażądał <xref:System.Windows.FrameworkElement.FindResource%2A> wywołania i nie został odnaleziony, zgłaszany jest wyjątek.
 
-- Jeśli zasób zażądał <xref:System.Windows.FrameworkElement.TryFindResource%2A> wywołania i nie został znaleziony, żaden wyjątek nie jest zgłaszany, a zwrócona wartość to `null`. Jeśli ustawiona właściwość nie akceptuje `null`, nadal jest możliwe, że zostanie wygenerowany dokładniejszy wyjątek, w zależności od ustawionej właściwości indywidualnej.
+- Jeśli zasób zażądał <xref:System.Windows.FrameworkElement.TryFindResource%2A> wywołania i nie został znaleziony, żaden wyjątek nie jest zgłaszany, a zwrócona wartość to `null` . Jeśli ustawiona właściwość nie akceptuje `null` , nadal jest możliwe, że zostanie wygenerowany dokładniejszy wyjątek, w zależności od ustawionej właściwości indywidualnej.
 
 - Jeśli zasób otrzymał żądanie odwołania do zasobu dynamicznego w języku XAML i nie został znaleziony, zachowanie zależy od ogólnego systemu właściwości. Ogólnym zachowaniem jest to, że nie ma żadnej operacji ustawienia właściwości na poziomie, na którym znajduje się zasób. Na przykład, jeśli spróbujesz ustawić tło dla pojedynczego elementu Button przy użyciu zasobu, którego nie można oszacować, wówczas żadne wyniki nie zostaną ustawione, ale wartość efektywna nadal może pochodzić od innych uczestników w systemie właściwości i w pierwszeństwie wartości. Na przykład wartość tła może nadal pochodzić ze zdefiniowanego lokalnie stylu przycisku lub z stylu motywu. Dla właściwości, które nie są zdefiniowane przez style motywu, wartość efektywna po nieudanej ocenie zasobu może pochodzić z wartości domyślnej w metadanych właściwości.
 
@@ -132,31 +132,31 @@ Zachowanie wyjątków (jeśli istnieje) jest różne:
 
 Odwołania do zasobów dynamicznych mają pewne istotne ograniczenia. Musi być spełniony co najmniej jeden z następujących warunków:
 
-- Ustawiona właściwość musi być właściwością w <xref:System.Windows.FrameworkElement> lub. <xref:System.Windows.FrameworkContentElement> Ta właściwość musi być obsługiwana przez <xref:System.Windows.DependencyProperty>.
+- Ustawiona właściwość musi być właściwością w <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> . Ta właściwość musi być obsługiwana przez <xref:System.Windows.DependencyProperty> .
 
-- Odwołanie dotyczy wartości w `StyleSetter`.
+- Odwołanie dotyczy wartości w `StyleSetter` .
 
-- Ustawiana właściwość musi być <xref:System.Windows.Freezable> właściwością, która jest podana jako wartość właściwości <xref:System.Windows.FrameworkElement> lub lub <xref:System.Windows.FrameworkContentElement> <xref:System.Windows.Setter> wartość.
+- Ustawiana właściwość musi być właściwością <xref:System.Windows.Freezable> , która jest podana jako wartość <xref:System.Windows.FrameworkElement> właściwości lub lub <xref:System.Windows.FrameworkContentElement> <xref:System.Windows.Setter> wartość.
 
-Ponieważ właściwość ustawiana musi być właściwością <xref:System.Windows.DependencyProperty> lub <xref:System.Windows.Freezable> , większość zmian właściwości można propagować do interfejsu użytkownika, ponieważ zmiana właściwości (zmieniona dynamiczna wartość zasobu) jest potwierdzana przez system właściwości. Większość formantów obejmuje logikę, która wymusić inny układ kontrolki <xref:System.Windows.DependencyProperty> , jeśli zmiany i właściwości mogą mieć wpływ na układ. Jednak nie wszystkie właściwości, które mają [rozszerzenie znacznika DynamicResource —](../../framework/wpf/advanced/dynamicresource-markup-extension.md) jako ich wartość, są gwarantowane w celu zapewnienia aktualizacji w czasie rzeczywistym w interfejsie użytkownika. Ta funkcja nadal może różnić się w zależności od właściwości, a także w zależności od typu będącego właścicielem właściwości, a nawet logicznej struktury aplikacji.
+Ponieważ właściwość ustawiana musi być <xref:System.Windows.DependencyProperty> <xref:System.Windows.Freezable> właściwością lub, większość zmian właściwości można propagować do interfejsu użytkownika, ponieważ zmiana właściwości (zmieniona dynamiczna wartość zasobu) jest potwierdzana przez system właściwości. Większość formantów obejmuje logikę, która wymusić inny układ kontrolki, jeśli <xref:System.Windows.DependencyProperty> zmiany i właściwości mogą mieć wpływ na układ. Jednak nie wszystkie właściwości, które mają [rozszerzenie znacznika DynamicResource —](../../framework/wpf/advanced/dynamicresource-markup-extension.md) jako ich wartość, są gwarantowane w celu zapewnienia aktualizacji w czasie rzeczywistym w interfejsie użytkownika. Ta funkcja nadal może różnić się w zależności od właściwości, a także w zależności od typu będącego właścicielem właściwości, a nawet logicznej struktury aplikacji.
 
 ## <a name="styles-datatemplates-and-implicit-keys"></a>Style, datatemplates i klucze niejawne
 
-Mimo że wszystkie elementy w <xref:System.Windows.ResourceDictionary> a muszą mieć klucz, który nie oznacza, że wszystkie zasoby muszą mieć jawnie `x:Key`. Kilka typów obiektów obsługuje klucz niejawny, gdy jest zdefiniowany jako zasób, gdzie wartość klucza jest związana z wartością innej właściwości. Ten typ klucza jest znany jako klucz niejawny, natomiast `x:Key` atrybut jest kluczem jawnym. Można zastąpić klucz niejawny, określając klucz jawny.
+Mimo że wszystkie elementy w a <xref:System.Windows.ResourceDictionary> muszą mieć klucz, który nie oznacza, że wszystkie zasoby muszą mieć jawnie `x:Key` . Kilka typów obiektów obsługuje klucz niejawny, gdy jest zdefiniowany jako zasób, gdzie wartość klucza jest związana z wartością innej właściwości. Ten typ klucza jest znany jako klucz niejawny, natomiast `x:Key` atrybut jest kluczem jawnym. Można zastąpić klucz niejawny, określając klucz jawny.
 
-Jednym z <xref:System.Windows.Style>ważnych scenariuszy dotyczących zasobów jest zdefiniowanie. W rzeczywistości <xref:System.Windows.Style> jest prawie zawsze zdefiniowane jako wpis w słowniku zasobów, ponieważ style są z założenia przeznaczone do ponownego użycia. Aby uzyskać więcej informacji na temat stylów, zobacz [Style i tworzenia szablonów](styles-templates-overview.md).
+Jednym z ważnych scenariuszy dotyczących zasobów jest zdefiniowanie <xref:System.Windows.Style> . W rzeczywistości <xref:System.Windows.Style> jest prawie zawsze zdefiniowane jako wpis w słowniku zasobów, ponieważ style są z założenia przeznaczone do ponownego użycia. Aby uzyskać więcej informacji na temat stylów, zobacz [Style i tworzenia szablonów](styles-templates-overview.md).
 
-Style formantów mogą być tworzone razem z niejawnym kluczem i z odwołaniem. Style motywu definiujące domyślny wygląd formantu polegają na tym niejawnym kluczu. Z punktu widzenia żądania, klucz niejawny jest <xref:System.Type> samego formantu. Z punktu widzenia definiowania zasobów klucz niejawny jest <xref:System.Windows.Style.TargetType%2A> stylem. W związku z tym, jeśli tworzysz motywy dla kontrolek niestandardowych lub tworzysz style, które współdziałają z istniejącymi stylami motywu, nie musisz określać [dyrektywy x:Key](../xaml-services/xkey-directive.md) dla tego <xref:System.Windows.Style>elementu. A jeśli chcesz użyć stylów z motywem, nie musisz określać żadnego stylu. Na przykład następująca definicja stylu działa, mimo że <xref:System.Windows.Style> zasób nie ma klucza:
+Style formantów mogą być tworzone razem z niejawnym kluczem i z odwołaniem. Style motywu definiujące domyślny wygląd formantu polegają na tym niejawnym kluczu. Z punktu widzenia żądania, klucz niejawny jest <xref:System.Type> samego formantu. Z punktu widzenia definiowania zasobów klucz niejawny jest <xref:System.Windows.Style.TargetType%2A> stylem. W związku z tym, jeśli tworzysz motywy dla kontrolek niestandardowych lub tworzysz style, które współdziałają z istniejącymi stylami motywu, nie musisz określać [dyrektywy x:Key](../xaml-services/xkey-directive.md) dla tego elementu <xref:System.Windows.Style> . A jeśli chcesz użyć stylów z motywem, nie musisz określać żadnego stylu. Na przykład następująca definicja stylu działa, mimo że <xref:System.Windows.Style> zasób nie ma klucza:
 
 [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]
 
-Ten styl naprawdę ma klucz: klucz `typeof(System.Windows.Controls.Button)`niejawny. W znaczniku można określić <xref:System.Windows.Style.TargetType%2A> bezpośrednio jako nazwę typu (lub opcjonalnie użyć [{x:Type...}](../xaml-services/xtype-markup-extension.md) do zwrócenia <xref:System.Type>.
+Ten styl naprawdę ma klucz: klucz niejawny `typeof(System.Windows.Controls.Button)` . W znaczniku można określić <xref:System.Windows.Style.TargetType%2A> bezpośrednio jako nazwę typu (lub opcjonalnie użyć [{x:Type...}](../xaml-services/xtype-markup-extension.md) do zwrócenia <xref:System.Type> .
 
 Za pomocą domyślnych mechanizmów stylu motywu używanych przez WPF, ten styl jest stosowany jako styl środowiska uruchomieniowego <xref:System.Windows.Controls.Button> na stronie, nawet jeśli <xref:System.Windows.Controls.Button> sam nie próbuje określić jego <xref:System.Windows.FrameworkElement.Style%2A> właściwości lub określonego odwołania do zasobu w stylu. Styl zdefiniowany na stronie znajduje się wcześniej w sekwencji wyszukiwania niż styl słownika motywu, przy użyciu tego samego klucza, który ma styl słownika motywu. Można tylko określić `<Button>Hello</Button>` dowolne miejsce na stronie, a styl zdefiniowany za pomocą <xref:System.Windows.Style.TargetType%2A> elementu `Button` zostałby zastosowany do tego przycisku. Jeśli chcesz, możesz nadal jawnie utworzyć klucz stylu z taką samą wartością typu jak <xref:System.Windows.Style.TargetType%2A> dla jasności w znaczniku, ale jest to opcjonalne.
 
-Niejawne klucze dla stylów nie mają zastosowania w <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> kontrolce `true`if is. (Należy również zauważyć <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> , że może być ustawiony jako część zachowania natywnego dla klasy kontrolki, zamiast jawnie na wystąpieniu kontrolki). Ponadto, aby zapewnić obsługę kluczy niejawnych dla scenariuszy klas pochodnych, formant musi przesłonić <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (wszystkie istniejące kontrolki dostarczane jako część WPF obejmują to zastąpienie). Aby uzyskać więcej informacji na temat stylów, motywów i projektu kontrolki, zobacz [wytyczne dotyczące projektowania formantów określonych stylach](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md).
+Niejawne klucze dla stylów nie mają zastosowania w kontrolce if <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> is `true` . (Należy również zauważyć, że <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> może być ustawiony jako część zachowania natywnego dla klasy kontrolki, zamiast jawnie na wystąpieniu kontrolki). Ponadto, aby zapewnić obsługę kluczy niejawnych dla scenariuszy klas pochodnych, formant musi przesłonić <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (wszystkie istniejące kontrolki dostarczane jako część WPF obejmują to zastąpienie). Aby uzyskać więcej informacji na temat stylów, motywów i projektu kontrolki, zobacz [wytyczne dotyczące projektowania formantów określonych stylach](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md).
 
-<xref:System.Windows.DataTemplate>ma także klucz niejawny. Klucz niejawny elementu <xref:System.Windows.DataTemplate> a jest <xref:System.Windows.DataTemplate.DataType%2A> wartością właściwości. <xref:System.Windows.DataTemplate.DataType%2A>można również określić jako nazwę typu, zamiast jawnie używać [{x:Type...}](../xaml-services/xtype-markup-extension.md). Aby uzyskać szczegółowe informacje, zobacz [tworzenia szablonów danych — omówienie](../../framework/wpf/data/data-templating-overview.md).
+<xref:System.Windows.DataTemplate>ma także klucz niejawny. Klucz niejawny elementu a <xref:System.Windows.DataTemplate> jest <xref:System.Windows.DataTemplate.DataType%2A> wartością właściwości. <xref:System.Windows.DataTemplate.DataType%2A>można również określić jako nazwę typu, zamiast jawnie używać [{x:Type...}](../xaml-services/xtype-markup-extension.md). Aby uzyskać szczegółowe informacje, zobacz [tworzenia szablonów danych — omówienie](../../framework/wpf/data/data-templating-overview.md).
 
 ## <a name="see-also"></a>Zobacz też
 

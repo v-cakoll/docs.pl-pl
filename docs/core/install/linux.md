@@ -1,15 +1,15 @@
 ---
 title: Instalowanie dystrybucji .NET Core i Linux
 description: Dowiedz się więcej o tym, jakie dystrybucje systemu Linux obsługują instalowanie programu .NET Core w systemie Linux.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 22c07c5a8263dd6059f415cb4d9e2915811351b0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903379"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324634"
 ---
 # <a name="install-net-core-on-linux"></a>Instalowanie programu .NET Core w systemie Linux
 
@@ -29,7 +29,7 @@ Następujące wersje programu .NET Core nie są ❌ już obsługiwane. Pliki do 
 
 Te nieobsługiwane wersje nie są szczegółowo opisane w poniższych sekcjach, a przebieg może się różnić w przypadku próby ich zainstalowania.
 
-## <a name="alpine"></a>Alp
+## <a name="alpine"></a>Alpine
 
 Brak instalatorów dla Alpine. Musisz użyć [skryptu instalacji](linux-alpine.md#scripted-install) lub instrukcji [instalacji ręcznej](linux-alpine.md#manual-install) .
 
@@ -39,7 +39,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 - ❌Wskazuje, że wersja Alpine lub .NET Core nie jest obsługiwana w tej wersji Alpine.
 - Gdy wersja Alpine i wersja platformy .NET Core ma ✔️, obsługiwane są kombinacje systemów operacyjnych i .NET.
 
-| Alp                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) |
+| Alpine                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ [3,12](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [3,11](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |

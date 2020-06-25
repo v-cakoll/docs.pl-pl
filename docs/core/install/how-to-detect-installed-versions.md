@@ -1,35 +1,35 @@
 ---
-title: Sprawdź zainstalowane wersje .NET Core w systemach Windows, Linux i macOS - .NET Core
-description: Dowiedz się, jak wyświetlić listę wersji programu .NET Core zainstalowanych na komputerze. Obejmuje to środowisko uruchomieniowe .NET Core i zestaw SDK.
-author: thraka
+title: Sprawdzanie zainstalowanych wersji programu .NET Core w systemach Windows, Linux i macOS — .NET Core
+description: Dowiedz się, jak wyświetlić listę wersji platformy .NET Core zainstalowanych na komputerze. Obejmuje to środowisko uruchomieniowe platformy .NET Core i zestaw SDK.
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645335"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324813"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Jak sprawdzić, czy program .NET Core jest już zainstalowany
 
-W tym artykule opisano, jak sprawdzić, które wersje środowiska uruchomieniowego .NET Core i SDK są zainstalowane na komputerze. .NET core może już zostały zainstalowane, jeśli masz zintegrowane środowisko programistyczne, takie jak Visual Studio lub Visual Studio dla komputerów Mac.
+W tym artykule przedstawiono sposób sprawdzania, które wersje środowiska uruchomieniowego .NET Core i zestawu SDK są zainstalowane na komputerze. Program .NET Core mógł już być zainstalowany, jeśli masz zintegrowane środowisko programistyczne, takie jak Visual Studio lub Visual Studio dla komputerów Mac.
 
-Zainstalowanie zestawu SDK instaluje odpowiednie środowisko wykonawcze.
+Zainstalowanie zestawu SDK instaluje odpowiednie środowisko uruchomieniowe.
 
-Jeśli dowolne polecenie w tym artykule nie powiedzie się, nie masz zainstalowanego środowiska wykonawczego lub SDK. Aby uzyskać więcej informacji, zobacz [Pobieranie i instalowanie programu .NET Core](index.md).
+Jeśli którykolwiek z poleceń w tym artykule nie powiedzie się, nie masz zainstalowanego środowiska uruchomieniowego lub zestawu SDK. Aby uzyskać więcej informacji, zobacz [pobieranie i Instalowanie programu .NET Core](index.md).
 
-## <a name="check-sdk-versions"></a>Sprawdź wersje SDK
+## <a name="check-sdk-versions"></a>Sprawdź wersje zestawu SDK
 
-Możesz zobaczyć, które wersje .NET Core SDK są obecnie zainstalowane z terminalem. Otwórz terminal i uruchom następujące polecenie.
+Możesz sprawdzić, które wersje zestaw .NET Core SDK są obecnie zainstalowane z terminalem. Otwórz Terminal i uruchom następujące polecenie.
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-Otrzymujesz dane wyjściowe podobne do następujących.
+Dane wyjściowe są podobne do poniższych.
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ Otrzymujesz dane wyjściowe podobne do następujących.
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Sprawdzanie wersji środowiska wykonawczego
+## <a name="check-runtime-versions"></a>Sprawdź wersje środowiska uruchomieniowego
 
-Można zobaczyć, które wersje środowiska uruchomieniowego .NET Core są obecnie zainstalowane za pomocą następującego polecenia.
+Możesz sprawdzić, które wersje środowiska uruchomieniowego .NET Core są obecnie zainstalowane przy użyciu następującego polecenia.
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Otrzymujesz dane wyjściowe podobne do następujących.
+Dane wyjściowe są podobne do poniższych.
 
 ::: zone pivot="os-windows"
 
@@ -166,34 +166,34 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="check-for-install-folders"></a>Sprawdzanie folderów instalacyjnych
+## <a name="check-for-install-folders"></a>Sprawdź foldery instalacji
 
-Możliwe, że program .NET Core jest zainstalowany, ale nie został dodany do zmiennej `PATH` dla systemu operacyjnego lub profilu użytkownika. Uruchamianie poleceń z poprzednich sekcji może nie działać. Alternatywnie można sprawdzić, czy istnieją foldery instalacyjne .NET Core.
+Jest możliwe, że platforma .NET Core jest zainstalowana, ale nie została dodana do `PATH` zmiennej dla systemu operacyjnego lub profilu użytkownika. Uruchamianie poleceń z poprzednich sekcji może nie działać. Alternatywnie można sprawdzić, czy istnieją foldery instalacji programu .NET Core.
 
-Po zainstalowaniu programu .NET Core z instalatora lub skryptu jest on instalowany w folderze standardowym. Przez większość czasu instalator lub skrypt używany do instalowania programu .NET Core umożliwia zainstalowanie w innym folderze. Jeśli zdecydujesz się zainstalować do innego folderu, dostosuj początek ścieżki folderu.
+W przypadku instalowania programu .NET Core z Instalatora lub skryptu jest on instalowany w folderze Standard. Większość czasu Instalator lub skrypt używany do instalowania programu .NET Core zapewnia opcję instalacji do innego folderu. Jeśli zdecydujesz się zainstalować w innym folderze, Dostosuj początek ścieżki folderu.
 
 ::: zone pivot="os-windows"
 
 - **plik wykonywalny dotnet**\
-_C:\\pliki\\programu\\dotnet dotnet.exe_
+_C: \\ program files \\ \\dotnet.exedotnet_
 
-- **Plik SDK .NET**\
-_C:\\pliki\\programu\\dotnet\\sdk {version}\\_
+- **ZESTAW SDK PLATFORMY .NET**\
+_C: \\ Program Files \\ \\ zestaw dotnet SDK \\ {Version}\\_
 
-- **Środowisko wykonawcze platformy .NET**\
-_C:\\pliki\\programu\\dotnet udostępnione\\{runtime-type}\\{version}\\_
+- **Środowisko uruchomieniowe platformy .NET**\
+_C: \\ Program Files \\ \\ Shared dotnet \\ {Runtime-Type} \\ {Version}\\_
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
 - **plik wykonywalny dotnet**\
-_/strona główna/użytkownik/udział/dotnet/dotnet_
+_/home/user/share/dotnet/dotnet_
 
-- **Plik SDK .NET**\
-_/strona główna/użytkownik/udział/dotnet/sdk/{wersja}/_
+- **ZESTAW SDK PLATFORMY .NET**\
+_/home/user/share/dotnet/sdk/{version}/_
 
-- **Środowisko wykonawcze platformy .NET**\
+- **Środowisko uruchomieniowe platformy .NET**\
 _/home/user/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
@@ -203,19 +203,19 @@ _/home/user/share/dotnet/shared/{runtime-type}/{version}/_
 - **plik wykonywalny dotnet**\
 _/usr/local/share/dotnet/dotnet_
 
-- **Plik SDK .NET**\
+- **ZESTAW SDK PLATFORMY .NET**\
 _/usr/local/share/dotnet/sdk/{version}/_
 
-- **Środowisko wykonawcze platformy .NET**\
+- **Środowisko uruchomieniowe platformy .NET**\
 _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
 ## <a name="more-information"></a>Więcej informacji
 
-Za pomocą polecenia `dotnet --info`można zobaczyć zarówno wersje SDK, jak i wersje środowiska wykonawczego. Otrzymasz również inne informacje związane ze środowiskiem, takie jak wersja systemu operacyjnego i identyfikator środowiska uruchomieniowego (RID).
+Można wyświetlić zarówno wersje zestawu SDK, jak i wersje środowiska uruchomieniowego za pomocą polecenia `dotnet --info` . Uzyskasz również inne informacje dotyczące środowiska, takie jak wersja systemu operacyjnego i identyfikator środowiska uruchomieniowego (RID).
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Zainstaluj program .NET Core Runtime](runtime.md).
-- [Zainstaluj pakiet .NET Core SDK](sdk.md).
+- [Zainstaluj środowisko uruchomieniowe programu .NET Core](runtime.md).
+- [Zainstaluj zestaw .NET Core SDK](sdk.md).

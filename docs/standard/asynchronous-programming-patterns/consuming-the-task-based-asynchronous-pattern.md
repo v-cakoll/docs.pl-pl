@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 960d328e156d66b0bdc7baf4d4e0f151fd4d543c
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: f1a5070c106055b268d43751300d84269fed6a36
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717500"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326003"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 
@@ -109,7 +109,7 @@ var cts = new CancellationTokenSource();
 - Kod korzystający z interfejsu API może selektywnie określić wywołania asynchroniczne, do których będą propagowane żądania anulowania.
 
 ## <a name="monitoring-progress"></a>Postęp monitorowania
- Niektóre metody asynchroniczne uwidaczniają postęp przez interfejs postępu przesłany do metody asynchronicznej.  Rozważmy na przykład funkcję, która asynchronicznie Pobiera ciąg tekstowy, i w sposób podnosi aktualizacje postępu, które obejmują procent pobierania, który został dotąd zakończony.  Taka metoda może być używana w aplikacji Windows Presentation Foundation (WPF) w następujący sposób:
+ Niektóre metody asynchroniczne uwidaczniają postęp przez interfejs postępu przesłany do metody asynchronicznej.  Rozważmy na przykład funkcję, która asynchronicznie Pobiera ciąg tekstowy, i w sposób wzbudza aktualizacje postępu, które obejmują procent pobierania, który został dotąd zakończony.  Taka metoda może być używana w aplikacji Windows Presentation Foundation (WPF) w następujący sposób:
 
 ```csharp
 private async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -341,7 +341,7 @@ if (await recommendation) BuyStock(symbol);
 ```
 
 #### <a name="interleaving"></a>Przeplatanie
- Rozważ przypadek, w którym pobierasz obrazy z sieci Web i przetwarzasz każdy obraz (na przykład dodając obraz do kontrolki interfejsu użytkownika).  Należy wykonać przetwarzanie sekwencyjne w wątku interfejsu użytkownika, ale chcesz pobrać obrazy jako współbieżnie, jak to możliwe. Ponadto nie chcesz, aby do interfejsu użytkownika były dodawane obrazy, dopóki nie zostaną pobrane — chcesz je dodać po ich zakończeniu:
+ Rozważ przypadek, w którym pobierasz obrazy z sieci Web i przetwarzasz każdy obraz (na przykład dodając obraz do kontrolki interfejsu użytkownika). Możesz przetwarzać obrazy sekwencyjnie w wątku interfejsu użytkownika, ale chcesz pobrać obrazy jako współbieżnie, jak to możliwe. Ponadto nie chcesz, aby do interfejsu użytkownika były dodawane obrazy, dopóki nie zostaną pobrane. Zamiast tego należy dodać je w miarę ich ukończenia.
 
 ```csharp
 List<Task<Bitmap>> imageTasks =
@@ -453,7 +453,7 @@ private static async Task UntilCompletionOrCancellation(
 }
 ```
 
- Ta implementacja umożliwia ponowne włączenie interfejsu użytkownika natychmiast po podjęciu decyzji o rezygnacji, ale nie anulowania podstawowych operacji asynchronicznych.  Kolejną alternatywą jest anulowanie operacji oczekujących w przypadku podjęcia decyzji o rezygnacji, ale nie ponowne nawiązanie interfejsu użytkownika do momentu zakończenia operacji, prawdopodobnie z powodu wcześniejszego zakończenia z powodu żądania anulowania:
+ Ta implementacja umożliwia ponowne włączenie interfejsu użytkownika natychmiast po podjęciu decyzji o rezygnacji, ale nie anulowania podstawowych operacji asynchronicznych. Kolejną alternatywą jest anulowanie operacji oczekujących w przypadku podjęcia decyzji o rezygnacji, ale nie ponowne nawiązanie interfejsu użytkownika do momentu zakończenia operacji, prawdopodobnie z powodu wcześniejszego zakończenia działania z powodu żądania anulowania:
 
 ```csharp
 private CancellationTokenSource m_cts;
@@ -632,7 +632,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operacje z przeplotem
- Istnieje potencjalny problem z wydajnością przy użyciu <xref:System.Threading.Tasks.Task.WhenAny%2A> metody do obsługi scenariusza pochodzącego podczas pracy z bardzo dużymi zestawami zadań. Każde wywołanie powoduje <xref:System.Threading.Tasks.Task.WhenAny%2A> , że kontynuacja jest rejestrowana przy każdym zadaniu. W przypadku N liczba zadań w wyniku operacji z przeplotem zostanie (N<sup>2</sup>) kontynuowane. Jeśli pracujesz z dużym zestawem zadań, możesz użyć Combinator ( `Interleaved` w poniższym przykładzie), aby rozwiązać problem z wydajnością:
+ Istnieje potencjalny problem z wydajnością przy użyciu <xref:System.Threading.Tasks.Task.WhenAny%2A> metody do obsługi scenariusza pochodzącego podczas pracy z dużymi zestawami zadań. Każde wywołanie powoduje <xref:System.Threading.Tasks.Task.WhenAny%2A> , że kontynuacja jest rejestrowana przy każdym zadaniu. W przypadku N liczba zadań w wyniku operacji z przeplotem zostanie (N<sup>2</sup>) kontynuowane. Jeśli pracujesz z dużym zestawem zadań, możesz użyć Combinator ( `Interleaved` w poniższym przykładzie), aby rozwiązać problem z wydajnością:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -696,7 +696,7 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```
 
 ## <a name="building-task-based-data-structures"></a>Tworzenie struktur danych opartych na zadaniach
- Oprócz możliwości tworzenia niestandardowych kombinatorów opartych na zadaniach, mających strukturę danych w <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> , która reprezentuje zarówno wyniki operacji asynchronicznej, jak i konieczna synchronizacja do dołączenia, sprawia, że jest to bardzo wydajny typ, na którym można tworzyć niestandardowe struktury danych, które mają być używane w scenariuszach asynchronicznych.
+ Oprócz możliwości tworzenia niestandardowych kombinatorów opartych na zadaniach, mających strukturę danych w <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> , która reprezentuje zarówno wyniki operacji asynchronicznej, jak i konieczna synchronizacja do dołączenia, sprawia, że jest to zaawansowany typ tworzenia niestandardowych struktur danych, które mają być używane w scenariuszach asynchronicznych.
 
 ### <a name="asynccache"></a>AsyncCache
  Jednym z ważnych aspektów zadania jest to, że może on zostać przekazany do wielu odbiorców, wszyscy z nich mogą go oczekiwać, zarejestrować kontynuację, uzyskać wynik lub wyjątki (w przypadku <xref:System.Threading.Tasks.Task%601> ) i tak dalej.  Zapewnia to <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> idealnie nadaje się do użycia w asynchronicznej infrastrukturze buforowania.  Oto przykład małej, ale zaawansowanej asynchronicznej pamięci podręcznej utworzonej w oparciu o <xref:System.Threading.Tasks.Task%601> :
@@ -752,7 +752,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection
  Można również użyć zadań do kompilowania struktur danych do koordynowania działań asynchronicznych.  Rozważmy jeden z klasycznych wzorców projektów równoległych: producent/konsument.  W tym wzorcu producenci generują dane, które są używane przez konsumentów, a producenci i konsumenci mogą działać równolegle. Na przykład Odbiorca przetwarza element 1, który został wcześniej wygenerowany przez producenta, który teraz produkuje element 2.  W przypadku wzorca producent/odbiorca niezmiennie potrzeba pewnej struktury danych do przechowywania pracy utworzonej przez producentów, aby konsumenci mogli otrzymywać powiadomienia o nowych danych i znajdować je, jeśli są dostępne.
 
- Oto prosta struktura danych oparta na zadaniach, które umożliwiają stosowanie metod asynchronicznych jako producentów i konsumentów:
+ Poniżej przedstawiono prostą strukturę danych utworzoną na podstawie zadań, która umożliwia korzystanie z metod asynchronicznych jako producentów i konsumentów:
 
 ```csharp
 public class AsyncProducerConsumerCollection<T>
@@ -834,7 +834,7 @@ private static void Produce(int data)
 > [!NOTE]
 > <xref:System.Threading.Tasks.Dataflow>Przestrzeń nazw jest dostępna w .NET Framework 4,5 za pomocą narzędzia **NuGet**. Aby zainstalować zestaw, który zawiera <xref:System.Threading.Tasks.Dataflow> przestrzeń nazw, Otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu Projekt i Wyszukaj w trybie online pakiet Microsoft. TPL. przepływu danych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wzorzec asynchroniczny oparty na zadaniach (TAP)](task-based-asynchronous-pattern-tap.md)
 - [Implementacja wzorca asynchronicznego opartego na zadaniach](implementing-the-task-based-asynchronous-pattern.md)

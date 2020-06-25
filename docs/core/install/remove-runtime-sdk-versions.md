@@ -1,16 +1,16 @@
 ---
 title: Usuwanie środowiska uruchomieniowego .NET Core i zestawu SDK
 description: W tym artykule opisano sposób ustalania, które wersje środowiska uruchomieniowego i zestawu SDK platformy .NET Core są obecnie zainstalowane, a następnie sposobu ich usuwania w systemach Windows, Mac i Linux.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/28/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f1482c243ba22fa81c69ede847a0f6b36a9cb83c
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 1e4a846cf5e3d0209f5ade873520ef64abc12e7c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595784"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324652"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Jak usunąć środowisko uruchomieniowe programu .NET Core i zestaw SDK
 
@@ -20,11 +20,11 @@ Wraz z upływem czasu podczas instalowania zaktualizowanych wersji środowiska u
 
 Zachowania [wyboru wersji .NET Core](../versions/selection.md) i zgodność środowiska uruchomieniowego programu .NET Core między aktualizacjami umożliwiają bezpieczne usuwanie poprzednich wersji. Aktualizacje środowiska uruchomieniowego programu .NET Core są zgodne z wersją główną "Band", taką jak 1. x i 2. x. Ponadto nowsze wersje zestaw .NET Core SDK zwykle utrzymują możliwość tworzenia aplikacji przeznaczonych dla wcześniejszych wersji środowiska uruchomieniowego w sposób zgodny.
 
-Ogólnie rzecz biorąc potrzebny jest tylko najnowszy zestaw SDK i Najnowsza wersja poprawki środowiska uruchomieniowego, które są wymagane dla danej aplikacji. Wystąpienia, w których warto zachować starsze wersje zestawu SDK lub środowiska uruchomieniowego, obejmują obsługę aplikacji opartych na *programie Project. JSON*. Jeśli aplikacja nie ma określonych powodów dla wcześniejszych zestawów SDK lub środowisk uruchomieniowych, możesz bezpiecznie usunąć starsze wersje.
+Ogólnie rzecz biorąc potrzebny jest tylko najnowszy zestaw SDK i Najnowsza wersja poprawki środowiska uruchomieniowego, które są wymagane dla danej aplikacji. Wystąpienia, w których można przechowywać starsze wersje zestawu SDK lub środowiska uruchomieniowego, obejmują obsługęproject.jsaplikacji opartych *na systemie*. Jeśli aplikacja nie ma określonych powodów dla wcześniejszych zestawów SDK lub środowisk uruchomieniowych, możesz bezpiecznie usunąć starsze wersje.
 
 ## <a name="determine-what-is-installed"></a>Określ, co jest zainstalowane
 
-Począwszy od platformy .NET Core 2,1, interfejs wiersza polecenia platformy .NET zawiera opcje, których można użyć do wyświetlenia listy wersji zestawu SDK i środowiska uruchomieniowego, które są zainstalowane na komputerze.  Użyj [`dotnet --list-sdks`](../tools/dotnet.md#options) , aby wyświetlić listę zestawów SDK zainstalowanych na komputerze. Użyj [`dotnet --list-runtimes`](../tools/dotnet.md#options) , aby wyświetlić listę środowisk uruchomieniowych zainstalowanych na maszynie. Aby uzyskać więcej informacji, zobacz [Jak sprawdzić, czy program .NET Core jest już zainstalowany](how-to-detect-installed-versions.md).
+Począwszy od platformy .NET Core 2,1, interfejs wiersza polecenia platformy .NET zawiera opcje, których można użyć do wyświetlenia listy wersji zestawu SDK i środowiska uruchomieniowego, które są zainstalowane na komputerze.  Użyj, [`dotnet --list-sdks`](../tools/dotnet.md#options) Aby wyświetlić listę zestawów SDK zainstalowanych na komputerze. Użyj, [`dotnet --list-runtimes`](../tools/dotnet.md#options) Aby wyświetlić listę środowisk uruchomieniowych zainstalowanych na maszynie. Aby uzyskać więcej informacji, zobacz [Jak sprawdzić, czy program .NET Core jest już zainstalowany](how-to-detect-installed-versions.md).
 
 ## <a name="uninstall-net-core"></a>Odinstalowywanie programu .NET Core
 
@@ -45,7 +45,7 @@ Istnieje więcej opcji odinstalowywania platformy .NET Core (zestawu SDK lub śr
 > [!IMPORTANT]
 > Aby uzyskać informacje na temat instalowania i odinstalowywania programu .NET Core, należy zapoznać się z [przewodnikiem](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/gs_install_dotnet#install_register_rehel) w witrynie red Hat wprowadzenie.
 
-Począwszy od platformy .NET Core 2,1, nie ma potrzeby odinstalowywania zestaw .NET Core SDK podczas uaktualniania go przy użyciu Menedżera pakietów. Menedżer `update` pakietów lub `refresh` polecenia automatycznie usuwają starszą wersję po pomyślnej instalacji nowszej wersji.
+Począwszy od platformy .NET Core 2,1, nie ma potrzeby odinstalowywania zestaw .NET Core SDK podczas uaktualniania go przy użyciu Menedżera pakietów. Menedżer pakietów `update` lub `refresh` polecenia automatycznie usuwają starszą wersję po pomyślnej instalacji nowszej wersji.
 
 Jeśli zainstalowano program .NET Core przy użyciu Menedżera pakietów, należy użyć tego samego Menedżera pakietów do odinstalowania zestawu .NET SDK lub środowiska uruchomieniowego. Instalacje .NET Core obsługują najpopularniejszych menedżerów pakietów. Zapoznaj się z dokumentacją Menedżera pakietów dystrybucji, aby uzyskać dokładną składnię w Twoim środowisku:
 
@@ -54,19 +54,19 @@ Jeśli zainstalowano program .NET Core przy użyciu Menedżera pakietów, należ
 - [użyciu narzędzia zypper (8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) jest używany w systemach OPENSUSE i SUSE Linux Enterprise System (SLES).
 - [DNF (8)](https://dnf.readthedocs.io/en/latest/command_ref.html) jest używany w Fedora.
 
-Niemal we wszystkich przypadkach polecenie usunięcia pakietu ma `remove`wartość.
+Niemal we wszystkich przypadkach polecenie usunięcia pakietu ma wartość `remove` .
 
-Nazwa pakietu zestaw .NET Core SDK instalacji dla większości menedżerów pakietów ma `dotnet-sdk`numer wersji. Począwszy od wersji 2.1.300 zestaw .NET Core SDK i wersji `2.1` środowiska uruchomieniowego, wymagane są tylko główne i pomocnicze numery wersji: na przykład zestaw .NET Core SDK wersja 2.1.300 może być przywoływana jako pakiet. `dotnet-sdk-2.1` Wcześniejsze wersje wymagają, aby cały ciąg wersji był wymagany, `dotnet-sdk-2.1.200` na przykład w przypadku wersji 2.1.200 zestaw .NET Core SDK.
+Nazwa pakietu zestaw .NET Core SDK instalacji dla większości menedżerów pakietów ma `dotnet-sdk` numer wersji. Począwszy od wersji 2.1.300 zestaw .NET Core SDK i wersji `2.1` środowiska uruchomieniowego, wymagane są tylko główne i pomocnicze numery wersji: na przykład zestaw .NET Core SDK wersja 2.1.300 może być przywoływana jako pakiet `dotnet-sdk-2.1` . Wcześniejsze wersje wymagają, aby cały ciąg wersji był wymagany, na przykład w `dotnet-sdk-2.1.200` przypadku wersji 2.1.200 zestaw .NET Core SDK.
 
-W przypadku maszyn, na których zainstalowano tylko środowisko uruchomieniowe, a nie zestawu SDK `dotnet-runtime-<version>` , nazwa pakietu jest dla środowiska uruchomieniowego .NET Core oraz `aspnetcore-runtime-<version>` dla całego stosu środowiska uruchomieniowego.
+W przypadku maszyn, na których zainstalowano tylko środowisko uruchomieniowe, a nie zestawu SDK, nazwa pakietu jest `dotnet-runtime-<version>` dla środowiska uruchomieniowego .NET Core oraz `aspnetcore-runtime-<version>` dla całego stosu środowiska uruchomieniowego.
 
-Instalacje .NET Core starsze niż 2,0 nie odinstalowały aplikacji hosta podczas odinstalowywania zestawu SDK przy użyciu Menedżera pakietów. Za `apt-get`pomocą polecenia jest:
+Instalacje .NET Core starsze niż 2,0 nie odinstalowały aplikacji hosta podczas odinstalowywania zestawu SDK przy użyciu Menedżera pakietów. Za pomocą `apt-get` polecenia jest:
 
 ```bash
 apt-get remove dotnet-host
 ```
 
-Zwróć uwagę, że nie ma żadnej wersji `dotnet-host`dołączonej do programu.
+Zwróć uwagę, że nie ma żadnej wersji dołączonej do programu `dotnet-host` .
 
 Jeśli zainstalowano program przy użyciu plik tar, należy usunąć platformę .NET Core przy użyciu metody ręcznej.
 
@@ -81,7 +81,7 @@ sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
 sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
 ```
 
-Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych `dotnet --list-sdks` wyjściowych `dotnet --list-runtimes` polecenia i, jak pokazano w wcześniejszej tabeli.
+Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych wyjściowych `dotnet --list-sdks` `dotnet --list-runtimes` polecenia i, jak pokazano w wcześniejszej tabeli.
 
 ::: zone-end
 
@@ -98,13 +98,13 @@ sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
 sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
 ```
 
-Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych `dotnet --list-sdks` wyjściowych `dotnet --list-runtimes` polecenia i, jak pokazano w wcześniejszej tabeli.
+Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych wyjściowych `dotnet --list-sdks` `dotnet --list-runtimes` polecenia i, jak pokazano w wcześniejszej tabeli.
 
 ::: zone-end
 
 ## <a name="net-core-uninstall-tool"></a>Narzędzie do dezinstalacji platformy .NET Core
 
-[Narzędzie do dezinstalacji programu .NET Core](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) umożliwia usuwanie zestawów SDK i środowisk uruchomieniowych platformy .NET Core z systemu. Dostępna jest kolekcja opcji, aby określić, które wersje mają być odinstalowane.
+[Narzędzie do dezinstalacji programu .NET Core](../additional-tools/uninstall-tool.md) ( `dotnet-core-uninstall` ) umożliwia usuwanie zestawów SDK i środowisk uruchomieniowych platformy .NET Core z systemu. Dostępna jest kolekcja opcji, aby określić, które wersje mają być odinstalowane.
 
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Zależność programu Visual Studio od wersji zestaw .NET Core SDK
 
@@ -122,7 +122,7 @@ Począwszy od programu Visual Studio 2019 w wersji 16,3, program Visual Studio j
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Usuń folder rezerwowy NuGet
 
-Przed zestawem SDK platformy .NET Core 3,0, Instalatory zestaw .NET Core SDK używały folderu o nazwie *NuGetFallbackFolder* do przechowywania pamięci podręcznej pakietów NuGet. Ta pamięć podręczna została użyta podczas `dotnet restore` operacji `dotnet build /t:Restore`takich jak lub. *NuGetFallbackFolder* znajduje się w *katalogu C:\Program Files\dotnet\sdk* w systemie Windows i na */usr/local/share/dotnet/SDK* na macOS.
+Przed zestawem SDK platformy .NET Core 3,0, Instalatory zestaw .NET Core SDK używały folderu o nazwie *NuGetFallbackFolder* do przechowywania pamięci podręcznej pakietów NuGet. Ta pamięć podręczna została użyta podczas operacji takich jak `dotnet restore` lub `dotnet build /t:Restore` . *NuGetFallbackFolder* znajduje się w *katalogu C:\Program Files\dotnet\sdk* w systemie Windows i na */usr/local/share/dotnet/SDK* na macOS.
 
 Możesz chcieć usunąć ten folder, jeśli:
 

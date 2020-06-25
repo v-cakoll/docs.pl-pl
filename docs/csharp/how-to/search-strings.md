@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662956"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324129"
 ---
 # <a name="how-to-search-strings"></a>Jak wyszukiwać ciągi
 
@@ -23,11 +23,11 @@ Typ [ciągu](../language-reference/builtin-types/reference-types.md#the-string-t
 
 ## <a name="does-a-string-contain-text"></a>Czy ciąg zawiera tekst?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType> <xref:System.String.StartsWith%2A?displayProperty=nameWithType> <xref:System.String.EndsWith%2A?displayProperty=nameWithType> Metody i przeszukują ciąg w poszukiwaniu określonego tekstu. Poniższy przykład pokazuje każdą z tych metod i odmianę, która używa wyszukiwania bez uwzględniania wielkości liter:
+<xref:System.String.Contains%2A?displayProperty=nameWithType>Metody, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> , i <xref:System.String.EndsWith%2A?displayProperty=nameWithType> przeszukują ciąg dla określonego tekstu. Poniższy przykład pokazuje każdą z tych metod i odmianę, która używa wyszukiwania bez uwzględniania wielkości liter:
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-W powyższym przykładzie przedstawiono ważny punkt korzystania z tych metod. W wyszukiwaniu jest domyślnie **rozróżniana wielkość** liter. <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>Wartość wyliczenia jest używana do określenia wyszukiwania bez uwzględniania wielkości liter.
+W powyższym przykładzie przedstawiono ważny punkt korzystania z tych metod. W wyszukiwaniu jest domyślnie **rozróżniana wielkość** liter. Użyj <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> wartości wyliczenia, aby określić wyszukiwanie bez uwzględniania wielkości liter.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>Gdzie poszukiwany tekst występuje w ciągu?
 
@@ -41,7 +41,7 @@ W powyższym przykładzie przedstawiono ważny punkt korzystania z tych metod. W
 
 Poniższy przykład kodu wyszukuje wyraz "" "lub" swój "w zdaniu, ignorując wielkość liter. Metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> wykonuje wyszukiwanie. Należy podać ciąg do wyszukania i wzorzec wyszukiwania. W tym przypadku trzeci argument określa wyszukiwanie bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-Wzorzec wyszukiwania opisuje szukany tekst. W poniższej tabeli opisano każdy element wzorca wyszukiwania. (W poniższej tabeli jest używany pojedynczy, `\` który musi zostać zmieniony jako `\\` ciąg w języku C#).
+Wzorzec wyszukiwania opisuje szukany tekst. W poniższej tabeli opisano każdy element wzorca wyszukiwania. (W poniższej tabeli jest używany pojedynczy `\` element, który musi zostać zmieniony jako `\\` ciąg w języku C#).
 
 | Wzorce  | Znaczenie                          |
 |----------|----------------------------------|
@@ -72,7 +72,7 @@ Poniższy kod używa wyrażeń regularnych do sprawdzania poprawności formatu k
 
 Ten pojedynczy wzorzec wyszukiwania jest zgodny z wieloma prawidłowymi ciągami. Wyrażenia regularne służą lepiej do wyszukiwania lub weryfikowania wzorca, a nie pojedynczego ciągu tekstowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../programming-guide/index.md)
 - [Ciągi](../programming-guide/strings/index.md)

@@ -4,12 +4,12 @@ description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi pisania tes
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989372"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324481"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania dotyczące testów jednostkowych przy użyciu platformy .NET Core i .NET Standard
 
@@ -24,7 +24,7 @@ W tym przewodniku przedstawiono niektóre najlepsze rozwiązania podczas pisania
 ### <a name="less-time-performing-functional-tests"></a>Krótszy czas wykonywania testów funkcjonalnych
 Testy funkcjonalne są kosztowne. Zwykle wymagają otwarcia aplikacji i wykonania serii czynności, które należy wykonać (lub kogoś innego), aby sprawdzić oczekiwane zachowanie. Te kroki mogą być nieznane dla testera, co oznacza, że będą musieli skontaktować się z inną osobą w obszarze w celu przeprowadzenia testu. Testowanie może potrwać kilka sekund lub kilka minut w przypadku większych zmian. Na koniec należy powtórzyć ten proces dla każdej zmiany wprowadzonej w systemie.
 
-Testy jednostkowe, z drugiej strony, pozostaną w milisekundach, mogą być uruchamiane przy naciśnięciu przycisku i nie muszą wymagać żadnej znajomości systemu w dużym stopniu. Niezależnie od tego, czy test lub czy nie działa, jest do modułu uruchamiającego testy, a nie do osoby.
+Testy jednostkowe, z drugiej strony, pozostaną w milisekundach, mogą być uruchamiane przy naciśnięciu przycisku i niekoniecznie wymagają żadnej wiedzy o systemie. Niezależnie od tego, czy test lub czy nie działa, jest do modułu uruchamiającego testy, a nie do osoby.
 
 ### <a name="protection-against-regression"></a>Ochrona przed regresją
 Wady regresji to wady wprowadzane po wprowadzeniu zmian w aplikacji. Jest ona wspólna dla testerów, aby nie tylko testować swoją nową funkcję, ale również funkcje, które wcześniej istniały w celu sprawdzenia, czy poprzednio zaimplementowane funkcje nadal działają zgodnie z oczekiwaniami.
@@ -53,14 +53,14 @@ Pisanie testów dla kodu spowoduje naturalnie oddzielenie kodu, ponieważ byłob
 
 Wysoka wartość procentowa pokrycia kodu jest często skojarzona z wyższą jakością kodu. Jednak sama pomiar *nie może* ustalić jakości kodu. Ustawienie nadwyżkowej wartości procentowej pokrycia kodu ambitne podejście może być counterproductive. Wyobraź sobie złożony projekt z tysiącami gałęzi warunkowych i Wyobraź sobie, że ustawisz cel pokrycia kodu o 95%. Obecnie projekt zachowuje pokrycie kodu w 90%. Czas potrzebny na uwzględnienie wszystkich przypadków brzegowych w pozostałej części 5% może być ogromnym przedsięwzięciem, a jej wartość jest szybko zmniejszana.
 
-Wysoki procent pokrycia kodu nie jest wskaźnikiem sukcesu ani nie ma wysokiej jakości kodu. Jusst IT reprezentuje ilość kodu, który jest objęty testami jednostkowymi. Aby uzyskać więcej informacji, zobacz temat [pokrycie kodu testu jednostkowego](unit-testing-code-coverage.md).
+Wysoki procent pokrycia kodu nie jest wskaźnikiem sukcesu ani nie ma wysokiej jakości kodu. Reprezentuje ona jedynie ilość kodu, która jest objęta testami jednostkowymi. Aby uzyskać więcej informacji, zobacz temat [pokrycie kodu testu jednostkowego](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Zacznijmy od tego samego języka
-W trakcie rozmowy o testowaniu *termin jest* niezbyt często używany. Poniżej definiuje najpopularniejsze *typy elementów* sztucznych podczas pisania testów jednostkowych:
+W przypadku korzystania z testów *często występuje* niedziałający sposób. Następujące punkty definiują najpopularniejsze *typy elementów* sztucznych podczas pisania testów jednostkowych:
 
-*Sfałszowane* — jest to termin ogólny, który może służyć do opisywania obiektu zastępczego lub makiety. Bez względu na to, czy jest to element zastępczy, czy makieta zależy od kontekstu, w którym jest używana. Inaczej mówiąc, może to być szczątk lub makieta.
+*Sfałszowane* — jest to ogólny termin, który może służyć do opisywania obiektu zastępczego lub makiety. Bez względu na to, czy jest to element zastępczy, czy makieta zależy od kontekstu, w którym jest używana. Inaczej mówiąc, może to być szczątk lub makieta.
 
-*Makieta* — obiekt obiektu jest obiektem nieprawidłowym w systemie, który decyduje o tym, czy test jednostkowy zakończył się powodzeniem, czy nie. Makieta jest uruchamiana jako fałszywe, dopóki nie zostanie potwierdzona.
+*Makieta* — obiekt obiektu jest obiektem nieprawidłowym w systemie, który decyduje o tym, czy test jednostkowy zakończył się powodzeniem, czy nie. Makieta jest uruchamiana jako fałszywa, dopóki nie zostanie potwierdzona.
 
 *Szczątkowy* — zastępczy to przeprowadzona zmiana dla istniejącej zależności (lub współpracownika) w systemie. Za pomocą klasy zastępczej można testować kod bez bezpośredniej kontroli nad zależnością. Domyślnie, fałszywe jest uruchamiany jako element zastępczy.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Może to być przykład klasy zastępczej, która jest nazywana makietą. W tym przypadku jest to element zastępczy. Nastąpi przekazanie w kolejności jako środek, aby można było utworzyć wystąpienie `Purchase` (system testowy). Nazwa `MockOrder` jest również bardzo myląca, ponieważ nie jest to makieta.
+Może to być przykład klasy zastępczej, która jest nazywana makietą. W tym przypadku jest to element zastępczy. Nastąpi przekazanie w kolejności jako środek, aby można było utworzyć wystąpienie `Purchase` (system testowy). Nazwa `MockOrder` jest również myląca, ponieważ nie jest to makieta.
 
 Lepszym rozwiązaniem będzie
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Zmieniając nazwę klasy na, została `FakeOrder` utworzona bardziej generyczna Klasa, Klasa może być używana jako imitacja lub element zastępczy. W zależności od tego do przypadku testowego. W powyższym przykładzie `FakeOrder` jest używany jako zastępczy. Nie używasz `FakeOrder` w żadnym kształcie ani formularzu podczas potwierdzeń. `FakeOrder`został po prostu przesłany do `Purchase` klasy w celu spełnienia wymagań konstruktora.
+Zmieniając nazwę klasy na, została `FakeOrder` utworzona bardziej generyczna Klasa, Klasa może być używana jako imitacja lub element zastępczy. W zależności od tego do przypadku testowego. W powyższym przykładzie `FakeOrder` jest używany jako zastępczy. Nie używasz `FakeOrder` w żadnym kształcie ani formularzu podczas potwierdzeń. `FakeOrder`został przesłany do `Purchase` klasy w celu spełnienia wymagań konstruktora.
 
 Aby użyć go jako makiety, możesz zrobić coś podobnego do tego
 
@@ -157,7 +157,7 @@ Dane wejściowe do użycia w teście jednostkowym powinny być najprostszym moż
 - Testy stają się bardziej odporne na przyszłe zmiany w bazie kodu.
 - Bliżej działania testowania nad implementacją.
 
-Testy, które zawierają więcej informacji, niż jest to wymagane do przekazania testu, mają większą szansę na wprowadzenie błędów do testu i mogą sprawić, że zamiar testu jest mniej oczywisty. Podczas pisania testów, które chcesz skupić na zachowaniu. Ustawienie dodatkowych właściwości dla modeli lub użycie niezerowych wartości, gdy nie jest to wymagane, powoduje tylko rozciąganie z tego, co próbujesz udowodnić.
+Testy, które zawierają więcej informacji, niż jest to wymagane do przekazania testu, mają większą szansę na wprowadzenie błędów do testu i mogą sprawić, że zamiar testu jest mniej oczywisty. Podczas pisania testów należy skoncentrować się na zachowaniu. Ustawienie dodatkowych właściwości dla modeli lub użycie niezerowych wartości, gdy nie jest to wymagane, powoduje tylko rozciąganie z tego, co próbujesz udowodnić.
 
 #### <a name="bad"></a>Źle:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
@@ -210,7 +210,7 @@ Jeśli potrzebujesz podobnego obiektu lub stanu dla testów, Preferuj metodę po
 
 - Mniej pomyłek podczas odczytywania testów, ponieważ cały kod jest widoczny w ramach każdego testu.
 - Mniejsza szansa, że zbyt wiele lub zbyt mała dla danego testu.
-- Mniejsza szansa stanu udostępniania między testami, które tworzą niepożądane zależności między nimi.
+- Mniejsza szansa stanu udostępniania między testami, która tworzy niepożądane zależności między nimi.
 
 W strukturach testów jednostkowych `Setup` jest wywoływana przed każdym testem jednostkowym w ramach zestawu testów. Niektóre mogą być widoczne jako przydatne narzędzia, zazwyczaj kończą się wiodącym bloated i trudnym do odczytania testów. Każdy test ma zwykle różne wymagania, aby można było je uruchomić. Niestety, `Setup` wymusza użycie dokładnie tych samych wymagań dla każdego testu.
 
@@ -294,7 +294,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Jeśli w tym obszarze widać, że jest wyświetlana Metoda prywatna, Znajdź metodę publiczną i napisz testy dla tej metody. Tylko dlatego, że Metoda prywatna zwraca oczekiwany wynik, nie oznacza, że system, który ostatecznie wywołuje metodę prywatną, użyje poprawnego wyniku.
 
 ### <a name="stub-static-references"></a>Zastępcze odwołania statyczne
-Jedną z zasad testów jednostkowych jest to, że musi ona mieć pełną kontrolę nad testowanym systemem. Może to być problematyczne, gdy kod produkcyjny zawiera wywołania do odwołań statycznych (np. `DateTime.Now` ). Rozważmy następujący kod
+Jedną z zasad testów jednostkowych jest to, że musi ona mieć pełną kontrolę nad testowanym systemem. Może to być problematyczne, gdy kod produkcyjny zawiera wywołania do odwołań statycznych (na przykład `DateTime.Now` ). Rozważmy następujący kod
 
 ```csharp
 public int GetDiscountedPrice(int price)

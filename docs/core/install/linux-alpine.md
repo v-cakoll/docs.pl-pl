@@ -1,15 +1,15 @@
 ---
 title: Instalowanie platformy .NET Core na platformie Alpine-.NET Core
 description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środowiska uruchomieniowego .NET Core na platformie Alpine.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: bbaf4ee9020dcd33c894b5376bf04ad65db8d378
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771504"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324826"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core na platformie Alpine
 
@@ -27,7 +27,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 - ❌Wskazuje, że wersja Alpine lub .NET Core nie jest obsługiwana w tej wersji Alpine.
 - Gdy wersja Alpine i wersja platformy .NET Core ma ✔️, obsługiwane są kombinacje systemów operacyjnych i .NET.
 
-| Alp                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) |
+| Alpine                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ 3,12  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ 3,11  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |

@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: ustawienie elementu ToolTips dla kontrolek w formularzu systemu Windows w czasie projektowania'
+title: 'Porady: ustawienie elementu ToolTips dla formantów w formularzu systemu Windows w czasie projektowania'
+description: Dowiedz się, jak ustawić etykietki narzędzi dla formantów programowo lub w Projektant formularzy systemu Windows w programie Visual Studio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 0d6725fc1a00826870e6400bffce63a1788e802c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211684"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325972"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Instrukcje: Ustawienie elementu ToolTips dla formantów w formularzu Windows w czasie projektowania
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Porady: Ustawianie etykietek narzędzi dla kontrolek w formularzu systemu Windows w czasie projektowania
 
-Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w programie Windows Forms Designer w programie Visual Studio. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.ToolTip> składników, zobacz [— informacje o składniku ToolTip](tooltip-component-overview-windows-forms.md).
+Można ustawić <xref:System.Windows.Forms.ToolTip> ciąg w kodzie lub w Projektant formularzy systemu Windows w programie Visual Studio. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.ToolTip> składnika, zobacz [Omówienie składnika etykietki narzędzia](tooltip-component-overview-windows-forms.md).
 
-## <a name="set-a-tooltip-programmatically"></a>Programowe Ustawianie etykietki narzędzia
+## <a name="set-a-tooltip-programmatically"></a>Programistyczne Ustawianie etykietki narzędzia
 
-1. Dodaj kontrolkę która będzie wyświetlana etykietka narzędzia.
+1. Dodaj kontrolkę, która będzie wyświetlać etykietkę narzędzia.
 
 2. Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.
 
@@ -41,15 +42,15 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
     toolTip1->SetToolTip(button1, "Save changes");
     ```
 
-## <a name="set-a-tooltip-in-the-designer"></a>Ustawić etykietkę narzędzi w Projektancie
+## <a name="set-a-tooltip-in-the-designer"></a>Ustawianie etykietki narzędzia w projektancie
 
-1. W programie Visual Studio, należy dodać <xref:System.Windows.Forms.ToolTip> składnika do formularza.
+1. W programie Visual Studio Dodaj <xref:System.Windows.Forms.ToolTip> składnik do formularza.
 
-2. Wybierz kontrolkę która będzie wyświetlić wskazówkę, albo dodaj go do formularza.
+2. Wybierz kontrolkę, która będzie wyświetlać etykietkę narzędzia, lub Dodaj ją do formularza.
 
-3. W **właściwości** oknie **etykietki narzędzia w ToolTip1** wartość na odpowiedni ciąg tekstowy.
+3. W oknie **Właściwości** Ustaw **etykietkę narzędzia dla wartości ToolTip1** na odpowiedni ciąg tekstowy.
 
-### <a name="to-remove-a-tooltip-programmatically"></a>Aby usunąć etykietka narzędzia programistyczne
+### <a name="to-remove-a-tooltip-programmatically"></a>Aby programowo usunąć etykietkę narzędzia
 
 1. Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.
 
@@ -68,14 +69,14 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
     toolTip1->SetToolTip(button1, NULL);
     ```
 
-## <a name="remove-a-tooltip-in-the-designer"></a>Usuń etykietkę narzędzia w Projektancie
+## <a name="remove-a-tooltip-in-the-designer"></a>Usuwanie etykietki narzędzia w projektancie
 
-1. W programie Visual Studio wybierz kontrolkę która jest wyświetlana etykietka narzędzia.
+1. W programie Visual Studio Wybierz kontrolkę wyświetlającą etykietkę narzędzia.
 
-2. W **właściwości** oknie Usuwanie tekstu z **etykietki narzędzia w ToolTip1**.
+2. W oknie **Właściwości** Usuń tekst w **etykietce narzędzia ToolTip1**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ToolTip, składnik — omówienie](tooltip-component-overview-windows-forms.md)
-- [Instrukcje: Zmienianie opóźnienia składnika ToolTip formularzy Windows](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [ToolTip — Informacje o składniku](tooltip-component-overview-windows-forms.md)
+- [Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip, składnik](tooltip-component-windows-forms.md)

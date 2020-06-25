@@ -1,5 +1,6 @@
 ---
 title: Przegląd ustawień aplikacji
+description: Dowiedz się więcej na temat funkcji ustawień aplikacji Windows Forms, na przykład tworzenia i przechowywania danych ustawień w imieniu aplikacji i użytkowników.
 ms.date: 03/30/2017
 f1_keywords:
 - ApplicationsSettingsOverview
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 864cab72b26ff7989c570347fb88b4009e7d705a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990182"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324223"
 ---
 # <a name="application-settings-overview"></a>Przegląd ustawień aplikacji
 

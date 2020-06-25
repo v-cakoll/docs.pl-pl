@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767679"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326023"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
@@ -52,7 +52,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 
 2. Skopiuj `yelp_labelled.txt` plik do folderu, który został wcześniej utworzony (na przykład `/cli-test` ).
 
-3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Na przykład:
+3. Otwórz preferowany wiersz polecenia i przejdź do folderu, do którego skopiowano plik zestawu danych. Przykład:
 
     ```console
     cd /cli-test
@@ -175,7 +175,7 @@ Te wyliczane zasoby zostały wyjaśnione w poniższych krokach samouczka.
         ```
 
     - Następny wiersz kodu używa `ConsumeModel.Predict()` metody dla określonych danych wejściowych, aby utworzyć prognozę i zwrócić wyniki (na podstawie schematu ModelOutput.cs).
-    - Ostatni wiersz kodu drukuje proprties danych przykładowych (w tym przypadku komentarz), a także prognozowanie tonacji i odpowiadające im wyniki dla pozytywnych tonacji (1) i negatywnych tonacji (2).
+    - Ostatni wiersz kodu drukuje właściwości przykładowych danych (w tym przypadku komentarz), a także prognozowanie tonacji i odpowiadające im wyniki dla pozytywnych tonacji (1) i ujemna tonacji (2).
 
 1. Uruchom projekt, używając oryginalnych danych przykładowych załadowanych z pierwszego wiersza zestawu danych lub dostarczając własne, zakodowane Przykładowo dane. Należy uzyskać prognozę, która jest porównywalna z:
 

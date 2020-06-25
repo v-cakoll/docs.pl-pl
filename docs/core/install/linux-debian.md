@@ -1,15 +1,15 @@
 ---
 title: Instalowanie programu .NET Core w systemie Debian — .NET Core
 description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środowiska uruchomieniowego .NET Core w systemie Debian.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c66d8e1daad4e59a766781b7117600352879b724
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603056"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324916"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie Debian
 
@@ -31,7 +31,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [9](#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
-| ❌[8](#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
+| ❌ [8](#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
 
 Następujące wersje programu .NET Core nie są już obsługiwane. Pliki do pobrania dla tych nadal są publikowane:
 

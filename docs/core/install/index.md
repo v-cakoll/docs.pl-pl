@@ -1,27 +1,27 @@
 ---
-title: Instalowanie programu .NET Core w systemach Windows, Linux i macOS — .NET Core
-description: Dowiedz się, gdzie i co zainstalować dla programu .NET Core w wersjach systemów Windows, Linux i macOS. Odnajdowanie zależności wymaganych do tworzenia, wdrażania i uruchamiania aplikacji .NET Core.
-author: thraka
+title: Instalowanie platformy .NET Core w systemach Windows, Linux i macOS — .NET Core
+description: Dowiedz się, gdzie i co instalować na platformie .NET Core w wersjach systemu Windows, Linux i macOS. Odkryj zależności wymagane do tworzenia, wdrażania i uruchamiania aplikacji platformy .NET Core.
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6dde0f76e23c106397ce6f6767f6edfbdc93152
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74836995"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324806"
 ---
-# <a name="download-and-install-net-core"></a>Pobieranie i instalowanie programu .NET Core
+# <a name="download-and-install-net-core"></a>Pobierz i zainstaluj program .NET Core
 
-Ten artykuł zawiera informacje dotyczące pobierania i instalowania programu .NET Core. Istnieją dwie części .NET Core, **czas wykonywania,** który jest używany do uruchamiania aplikacji i **zestaw SDK,** który jest używany do tworzenia aplikacji. Zestaw SDK zawiera czas wykonywania.
+Ten artykuł zawiera informacje na temat pobierania i instalowania programu .NET Core. Istnieją dwie części programu .NET Core, **środowisko uruchomieniowe** służące do uruchamiania aplikacji oraz **zestaw SDK** używany do tworzenia aplikacji. Zestaw SDK zawiera środowisko uruchomieniowe.
 
-- Jeśli jesteś użytkownikiem, który potrzebuje programu .NET Core do uruchamiania aplikacji, zobacz [Instalowanie środowiska uruchomieniowego .NET Core .](runtime.md)
+- Jeśli jesteś użytkownikiem, który potrzebuje platformy .NET Core do uruchamiania aplikacji, zobacz [Instalowanie środowiska uruchomieniowego platformy .NET Core](runtime.md).
 
-- Jeśli jesteś deweloperem, który potrzebuje programu .NET Core do tworzenia aplikacji, zobacz [Instalowanie sdk .NET Core .](sdk.md)
+- Jeśli jesteś deweloperem, który potrzebuje platformy .NET Core do tworzenia aplikacji, zobacz [instalowanie zestaw .NET Core SDK](sdk.md).
 
 > [!NOTE]
-> Zestaw SDK .NET Core zawiera program runtime.
+> Zestaw .NET Core SDK obejmuje środowisko uruchomieniowe.
 
 ## <a name="dependencies"></a>Zależności
 
-Program .NET Core jest obsługiwany w systemach Windows, Linux i macOS. Aby uzyskać pełną listę wymagań, zobacz [Obsługiwane systemy operacyjne](dependencies.md).
+Platforma .NET Core jest obsługiwana w systemach Windows, Linux i macOS. Aby zapoznać się z pełną listą wymagań, zobacz [obsługiwane systemy operacyjne](dependencies.md).

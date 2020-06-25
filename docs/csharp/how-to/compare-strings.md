@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662917"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324184"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Jak porównać ciągi w języku C\#
 
@@ -41,7 +41,7 @@ Wykonaj porównanie porządkowe z uwzględnieniem wielkości liter i, jeśli to 
 
 Domyślne porównanie porządkowe nie uwzględnia reguł lingwistycznych podczas porównywania ciągów. Porównuje wartość binarną każdego <xref:System.Char> obiektu w dwóch ciągach. W związku z tym domyślne porównanie porządkowe uwzględnia wielkość liter.
 
-Należy zauważyć, że test równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i `==` Operatory and `!=` różni się od porównania ciągów przy użyciu <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> metod i. Chociaż testy pod kątem równości wykonują porównanie porządkowe z uwzględnieniem wielkości liter, metody porównania wykonują porównanie z uwzględnieniem wielkości liter, z których korzysta bieżąca kultura. Ponieważ domyślne metody porównywania często wykonują różne typy porównań, zalecamy, aby zawsze upewnić się, że zamierzenia kodu jest jasne, wywołując Przeciążenie, które jawnie określa typ porównania do wykonania.
+Test równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i `==` Operatory and różni się `!=` od porównania ciągów przy użyciu <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> metod i. Chociaż testy pod kątem równości wykonują porównanie porządkowe z uwzględnieniem wielkości liter, metody porównania wykonują porównanie z uwzględnieniem wielkości liter, z których korzysta bieżąca kultura. Ponieważ domyślne metody porównywania często wykonują różne typy porównań, zalecamy, aby zawsze upewnić się, że zamierzenia kodu jest jasne, wywołując Przeciążenie, które jawnie określa typ porównania do wykonania.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Porównanie porządkowe bez uwzględniania wielkości liter
 
@@ -55,11 +55,11 @@ W przypadku porównywania liczb porządkowych bez uwzględniania wielkości lite
 ## <a name="linguistic-comparisons"></a>Porównania lingwistyczne
 
 Ciągi mogą być również uporządkowane przy użyciu reguł lingwistycznych dla bieżącej kultury.
-Jest to czasami nazywane "kolejnością sortowania wyrazów". W przypadku przeprowadzania porównania w języku niektóre znaki niealfanumeryczne Unicode mogą mieć przypisane specjalne wagi. Na przykład łącznik "-" może mieć przypisaną bardzo małą wagę, tak aby "współ" i "coop" były widoczne obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być równoważne sekwencji <xref:System.Char> wystąpień. Poniższy przykład używa frazy "odpowiedzialna w ulicy". w języku niemieckim z "SS" (U + 0073 U + 0073) w jednym ciągu i "ß" (U + 00DF) w innej. Językowo (w systemie Windows) "SS" jest równa niemieckiej Esszet: "ß" w przypadku kultur "en-US" i "de-DE".
+Jest to czasami nazywane "kolejnością sortowania wyrazów". W przypadku przeprowadzania porównania w języku niektóre znaki niealfanumeryczne Unicode mogą mieć przypisane specjalne wagi. Na przykład łącznik "-" może mieć niewielką wagę przypisaną do niego, aby "współ" i "coop" były widoczne obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być równoważne sekwencji <xref:System.Char> wystąpień. Poniższy przykład używa frazy "odpowiedzialna w ulicy". w języku niemieckim z "SS" (U + 0073 U + 0073) w jednym ciągu i "ß" (U + 00DF) w innej. Językowo (w systemie Windows) "SS" jest równa niemieckiej Esszet: "ß" w przypadku kultur "en-US" i "de-DE".
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
-W tym przykładzie przedstawiono charakter porównania językowe zależne od systemu operacyjnego. Host dla okna interaktywnego jest hostem systemu Linux. Porównania lingwistyczne i porządkowe dają te same wyniki. Jeśli ten sam przykład został uruchomiony na hoście z systemem Windows, zobaczysz następujące dane wyjściowe:
+W tym przykładzie przedstawiono charakter porównania językowe zależne od systemu operacyjnego. Host dla okna interaktywnego jest hostem systemu Linux. Porównania lingwistyczne i porządkowe dają te same wyniki. Jeśli ten sam przykład zostanie uruchomiony na hoście z systemem Windows, zobaczysz następujące dane wyjściowe:
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -92,7 +92,7 @@ Porównania wrażliwe na kulturę są zwykle używane do porównywania i sortowa
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Porównania językowe są zależne od bieżącej kultury i są zależne od systemu operacyjnego. Należy wziąć pod uwagę podczas pracy z porównaniami ciągów.
+Porównania językowe są zależne od bieżącej kultury i są zależne od systemu operacyjnego. Weź pod uwagę podczas pracy z porównaniami ciągów.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Sortowanie lingwistyczne i wyszukiwanie ciągów w tablicach
 
@@ -102,7 +102,7 @@ Ten przykład pokazuje, jak sortować tablicę ciągów przy użyciu bieżącej 
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet5":::
 
-Po posortowaniu tablicy można wyszukać wpisy przy użyciu wyszukiwania binarnego. Wyszukiwanie binarne zaczyna się w środku kolekcji, aby określić, która połowa kolekcji będzie zawierać szukany ciąg. Każde kolejne porównanie dzieli pozostałą część kolekcji na pół.  Tablica jest sortowana przy użyciu <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType> . Funkcja lokalna `ShowWhere` wyświetla informacje o miejscu, w którym znaleziono ciąg. Jeśli ciąg nie został odnaleziony, zwrócona wartość wskazuje, gdzie zostanie znaleziona.
+Po posortowaniu tablicy można wyszukać wpisy przy użyciu wyszukiwania binarnego. Wyszukiwanie binarne zaczyna się w środku kolekcji, aby określić, która połowa kolekcji będzie zawierać szukany ciąg. Każde kolejne porównanie dzieli pozostałą część kolekcji na pół.  Tablica jest sortowana przy użyciu <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType> . Funkcja lokalna `ShowWhere` wyświetla informacje o miejscu, w którym znaleziono ciąg. Jeśli nie odnaleziono ciągu, zwrócona wartość wskazuje, gdzie zostanie znaleziona.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet6":::
 
@@ -122,7 +122,7 @@ Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nam
 
 ## <a name="reference-equality-and-string-interning"></a>Równość odwołania i ciąg InterNIC
 
-Żaden z próbek nie został użyty <xref:System.Object.ReferenceEquals%2A> . Ta metoda określa, czy dwa ciągi są tego samego obiektu. Może to prowadzić do niespójnych wyników w porównaniach ciągów. Poniższy przykład demonstruje funkcję *interniing* w języku C#. Gdy program deklaruje co najmniej dwie identyczne zmienne ciągów, kompilator przechowuje je wszystkie w tej samej lokalizacji. Wywołując <xref:System.Object.ReferenceEquals%2A> metodę, można zobaczyć, że dwa ciągi rzeczywiście odwołują się do tego samego obiektu w pamięci. <xref:System.String.Copy%2A?displayProperty=nameWithType>Aby uniknąć InterNIC, użyj metody. Po wykonaniu kopii te dwa ciągi mają różne lokalizacje przechowywania, nawet jeśli mają tę samą wartość. Uruchom Poniższy przykład, aby wyświetlić te ciągi i o tym, że mają `a` `b` one udział w tym samym magazynie. *interned* Ciągi `a` i `c` nie są.
+Żaden z próbek nie został użyty <xref:System.Object.ReferenceEquals%2A> . Ta metoda określa, czy dwa ciągi są tego samego obiektu, co może prowadzić do niespójnych wyników w porównaniach ciągów. Poniższy przykład demonstruje funkcję *interniing* w języku C#. Gdy program deklaruje co najmniej dwie identyczne zmienne ciągów, kompilator przechowuje je wszystkie w tej samej lokalizacji. Wywołując <xref:System.Object.ReferenceEquals%2A> metodę, można zobaczyć, że dwa ciągi rzeczywiście odwołują się do tego samego obiektu w pamięci. <xref:System.String.Copy%2A?displayProperty=nameWithType>Aby uniknąć InterNIC, użyj metody. Po wykonaniu kopii te dwa ciągi mają różne lokalizacje przechowywania, nawet jeśli mają tę samą wartość. Uruchom Poniższy przykład, aby wyświetlić te ciągi i o tym, że mają `a` `b` one udział w tym samym magazynie. *interned* Ciągi `a` i `c` nie są.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 
@@ -131,7 +131,7 @@ Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nam
 
 Można skontaktować się z ciągiem lub pobrać odwołanie do istniejącego ciągu InterNIC, wywołując <xref:System.String.Intern%2A?displayProperty=nameWithType> metodę. Aby określić, czy ciąg jest InterNIC, wywołaj <xref:System.String.IsInterned%2A?displayProperty=nameWithType> metodę.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

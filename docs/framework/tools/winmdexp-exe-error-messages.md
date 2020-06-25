@@ -158,19 +158,20 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: 5fb5abe84d43df85be557a2bec2245284a74024b
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 1b44273bd5a8868ba426d9ac0eabbefcb725e70f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904198"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325612"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
+
 Proces kompilacji wywołuje [Winmdexp.exe (narzędzie do eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) w przypadku używania szablonu **składnika Środowisko wykonawcze systemu Windows** w programie Visual Studio 2012, dlatego Winmdexp.exe komunikaty o błędach pojawiają się w **Lista błędów**. Winmdexp.exe działa na module, który jest kompilowany przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
  Komunikaty o błędach zostały zaprojektowane tak, aby zawierały wszystkie informacje potrzebne do rozwiązania warunków błędów zgłaszanych przez użytkownika. Jednak niektóre problemy wymagają więcej informacji niż mieści się w komunikacie. Dodatkowe informacje można znaleźć w temacie [diagnozowanie warunków błędów składników Środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, Użyj linku opinii znajdującego się w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić błąd w [witrynie internetowej społeczności deweloperów](https://developercommunity.visualstudio.com/). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://social.msdn.microsoft.com/Forums/).  
+ Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać problem, Użyj linku opinii w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić błąd w [witrynie internetowej społeczności deweloperów](https://developercommunity.visualstudio.com/). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,15 +1,15 @@
 ---
 title: Instalowanie programu .NET Core w systemie Ubuntu — .NET Core
 description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środowiska uruchomieniowego .NET Core w systemie Ubuntu.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 7045d4d1c3585ba6d26c55ded4653775c9413841
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602958"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324737"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie Ubuntu
 

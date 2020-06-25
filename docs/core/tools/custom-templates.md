@@ -1,14 +1,14 @@
 ---
 title: Szablony niestandardowe dla nowego dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu lub plików platformy .NET.
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005322"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324510"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowego dotnet
 
@@ -31,12 +31,12 @@ Po zainstalowaniu [zestaw .NET Core SDK](https://dotnet.microsoft.com/download)o
 dotnet new --list
 ```
 
-## <a name="configuration"></a>Konfigurowanie
+## <a name="configuration"></a>Konfiguracja
 
 Szablon składa się z następujących części:
 
 - Pliki źródłowe i foldery.
-- Plik konfiguracji (*Template. JSON*).
+- Plik konfiguracji (*template.json*).
 
 ### <a name="source-files-and-folders"></a>Pliki źródłowe i foldery
 
@@ -45,30 +45,30 @@ Pliki i foldery źródłowe zawierają wszelkie pliki i foldery, które mają by
 - Aparat szablonów nie wymaga dodawania specjalnych tokenów do kodu źródłowego projektu.
 - Pliki kodu nie są plikami specjalnymi ani modyfikowane w sposób umożliwiający współdziałanie z aparatem szablonu. Dlatego narzędzia zwykle używane podczas pracy z projektami również pracują z zawartością szablonu.
 - Możesz tworzyć, uruchamiać i debugować projekty szablonów tak samo jak w przypadku innych projektów.
-- Możesz szybko utworzyć szablon na podstawie istniejącego projektu tylko przez dodanie pliku konfiguracji *./.Template.config/Template.JSON* do projektu.
+- Możesz szybko utworzyć szablon na podstawie istniejącego projektu, dodając plik *./.template.config/template.jsw* pliku konfiguracji do projektu.
 
 Pliki i foldery przechowywane w szablonie nie są ograniczone do formalnych typów projektów .NET. Pliki źródłowe i foldery mogą zawierać dowolną zawartość, którą chcesz utworzyć, gdy szablon jest używany, nawet jeśli aparat szablonu tworzy tylko jeden plik jako dane wyjściowe.
 
-Pliki generowane przez szablon można modyfikować w oparciu o logikę i ustawienia podane w pliku konfiguracji *Template. JSON* . Użytkownik może przesłonić te ustawienia przez przekazanie opcji do `dotnet new <TEMPLATE>` polecenia. Typowym przykładem logiki niestandardowej jest podanie nazwy klasy lub zmiennej w pliku kodu, który jest wdrażany przez szablon.
+Pliki generowane przez szablon można modyfikować na podstawie logiki i ustawień, które zostały podane w *template.jsw* pliku konfiguracyjnym. Użytkownik może przesłonić te ustawienia przez przekazanie opcji do `dotnet new <TEMPLATE>` polecenia. Typowym przykładem logiki niestandardowej jest podanie nazwy klasy lub zmiennej w pliku kodu, który jest wdrażany przez szablon.
 
-### <a name="templatejson"></a>Template. JSON
+### <a name="templatejson"></a>template.jsna
 
-Plik *Template. JSON* zostanie umieszczony w folderze *Template. config* w katalogu głównym szablonu. Plik zawiera informacje o konfiguracji do aparatu szablonu. Minimalna konfiguracja wymaga od członków pokazanych w poniższej tabeli, co jest wystarczające do utworzenia szablonu funkcjonalnego.
+*template.jsw* pliku zostanie umieszczony w folderze *.template.config* w katalogu głównym szablonu. Plik zawiera informacje o konfiguracji do aparatu szablonu. Minimalna konfiguracja wymaga od członków pokazanych w poniższej tabeli, co jest wystarczające do utworzenia szablonu funkcjonalnego.
 
 | Członek            | Typ          | Opis |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | Identyfikator URI           | Schemat JSON dla pliku *Template. JSON* . Edytory obsługujące schematy JSON umożliwiają korzystanie z funkcji edytowania JSON, gdy schemat jest określony. Na przykład [Visual Studio Code](https://code.visualstudio.com/) wymaga tego elementu członkowskiego, aby włączyć funkcję IntelliSense. Użyj wartości `http://json.schemastore.org/template` . |
+| `$schema`         | Identyfikator URI           | Schemat JSON dla *template.js* pliku. Edytory obsługujące schematy JSON umożliwiają korzystanie z funkcji edytowania JSON, gdy schemat jest określony. Na przykład [Visual Studio Code](https://code.visualstudio.com/) wymaga tego elementu członkowskiego, aby włączyć funkcję IntelliSense. Użyj wartości `http://json.schemastore.org/template` . |
 | `author`          | ciąg        | Autor szablonu. |
 | `classifications` | Array (ciąg) | Zero lub więcej charakterystyki szablonu, którego użytkownik może użyć, aby znaleźć szablon podczas jego wyszukania. Klasyfikacje są również wyświetlane w kolumnie *Tagi* , gdy pojawiają się na liście szablonów utworzonych przy użyciu `dotnet new -l|--list` polecenia. |
 | `identity`        | ciąg        | Unikatowa nazwa tego szablonu. |
 | `name`            | ciąg        | Nazwa szablonu, który użytkownicy powinni zobaczyć. |
 | `shortName`       | ciąg        | Domyślna nazwa skrótu służąca do wybierania szablonu, który ma zastosowanie do środowisk, w których nazwa szablonu jest określona przez użytkownika, a nie wybierana za pośrednictwem graficznego interfejsu użytkownika. Na przykład krótka nazwa jest przydatna w przypadku korzystania z szablonów z wiersza polecenia z poleceniami CLI. |
 
-Pełny Schemat pliku *Template. JSON* znajduje się w [magazynie schematów JSON](http://json.schemastore.org/template). Aby uzyskać więcej informacji na temat pliku *Template. JSON* , zobacz stronę [typu tworzenia szablonów programu dotnet](https://github.com/dotnet/templating/wiki).
+Pełny schemat *template.jsw* pliku znajduje się w [magazynie schematów JSON](http://json.schemastore.org/template). Aby uzyskać więcej informacji na temat *template.jsw* pliku, zobacz stronę [typu "dotnet tworzenia szablonów wiki](https://github.com/dotnet/templating/wiki)".
 
 #### <a name="example"></a>Przykład
 
-Na przykład poniżej znajduje się folder Template zawierający dwa pliki zawartości: *Console.cs* i *README. txt*. Zwróć uwagę, że istnieje wymagany folder o nazwie *. Template. config* zawierający plik *Template. JSON* .
+Na przykład poniżej znajduje się folder Template zawierający dwa pliki zawartości: *Console.cs* i *readme.txt*. Zwróć uwagę, że istnieje wymagany folder o nazwie *.template.config* , który zawiera *template.jsna* pliku.
 
 ```text
 └───mytemplate
@@ -79,7 +79,7 @@ Na przykład poniżej znajduje się folder Template zawierający dwa pliki zawar
             template.json
 ```
 
-Plik *Template. JSON* wygląda następująco:
+*template.jsw* pliku wygląda następująco:
 
 ```json
 {
@@ -144,7 +144,7 @@ Poniżej znajduje się przykładowy plik *csproj* , który jest zgodny ze wszyst
 </Project>
 ```
 
-W poniższym przykładzie przedstawiono strukturę plików i folderów programu przy użyciu pliku *. csproj* , aby utworzyć pakiet szablonów. Folder plików i *szablonów* *MyDotnetTemplates. csproj* znajduje się w katalogu głównym katalogu o nazwie *project_folder*. Folder *szablonów* zawiera dwa szablony, *mytemplate1* i *mytemplate2*. Każdy szablon zawiera pliki zawartości i folder *. Template. config* z plikiem konfiguracji *Template. JSON* .
+W poniższym przykładzie przedstawiono strukturę plików i folderów programu przy użyciu pliku *. csproj* , aby utworzyć pakiet szablonów. Folder plików i *szablonów* *MyDotnetTemplates. csproj* znajduje się w katalogu głównym katalogu o nazwie *project_folder*. Folder *szablonów* zawiera dwa szablony, *mytemplate1* i *mytemplate2*. Każdy szablon zawiera pliki zawartości i folder *.template.config* z *template.js* pliku konfiguracyjnego.
 
 ```text
 project_folder
@@ -187,7 +187,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 ### <a name="to-install-a-template-from-a-file-system-directory"></a>Aby zainstalować szablon z katalogu systemu plików
 
-Szablony można instalować z folderu szablonów, takiego jak folder *mytemplate1* , z powyższego przykładu. Określ ścieżkę folderu folderu *Template. config* . Ścieżka do katalogu szablonów nie musi być bezwzględna. Jednak do odinstalowania szablonu, który jest instalowany z folderu, wymagana jest ścieżka bezwzględna.
+Szablony można instalować z folderu szablonów, takiego jak folder *mytemplate1* , z powyższego przykładu. Określ ścieżkę folderu *.template.config* . Ścieżka do katalogu szablonów nie musi być bezwzględna. Jednak do odinstalowania szablonu, który jest instalowany z folderu, wymagana jest ścieżka bezwzględna.
 
 ```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
@@ -225,7 +225,7 @@ Currently installed items:
 ...
 ```
 
-Pierwszy poziom elementów po `Currently installed items:` są identyfikatorami używanymi podczas odinstalowywania szablonu. I w powyższym przykładzie `Microsoft.DotNet.Common.ItemTemplates` `Microsoft.DotNet.Common.ProjectTemplates.3.0` . Jeśli szablon został zainstalowany przy użyciu ścieżki systemu plików, ten identyfikator będzie ścieżką folderu folderu *. Template. config* .
+Pierwszy poziom elementów po `Currently installed items:` są identyfikatorami używanymi podczas odinstalowywania szablonu. I w powyższym przykładzie `Microsoft.DotNet.Common.ItemTemplates` `Microsoft.DotNet.Common.ProjectTemplates.3.0` . Jeśli szablon został zainstalowany przy użyciu ścieżki systemu plików, ten identyfikator będzie ścieżką folderu *.template.config* .
 
 ## <a name="uninstalling-a-template"></a>Odinstalowywanie szablonu
 
@@ -237,7 +237,7 @@ Jeśli pakiet został zainstalowany bezpośrednio przez źródło danych NuGet l
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-Jeśli pakiet został zainstalowany przez określenie ścieżki do folderu *. Template. config* , Użyj tej ścieżki **bezwzględnej** w celu odinstalowania pakietu. Ścieżkę bezwzględną szablonu można zobaczyć w danych wyjściowych dostarczonych przez `dotnet new -u` polecenie. Aby uzyskać więcej informacji, zobacz sekcję [Pobieranie listy zainstalowanych szablonów](#get-a-list-of-installed-templates) powyżej.
+Jeśli pakiet został zainstalowany przez określenie ścieżki do folderu *.template.config* , Użyj tej ścieżki **bezwzględnej** , aby odinstalować pakiet. Ścieżkę bezwzględną szablonu można zobaczyć w danych wyjściowych dostarczonych przez `dotnet new -u` polecenie. Aby uzyskać więcej informacji, zobacz sekcję [Pobieranie listy zainstalowanych szablonów](#get-a-list-of-installed-templates) powyżej.
 
 ```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
@@ -257,4 +257,4 @@ dotnet new <TEMPLATE>
 - [Witryna typu wiki repozytorium usługi GitHub/tworzenia szablonów](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-Template-przykłady repozytorium GitHub](https://github.com/dotnet/dotnet-template-samples)
 - [Jak utworzyć własne szablony dla nowego dotnet](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
-- [*szablon Template. JSON* w magazynie schematów JSON](http://json.schemastore.org/template)
+- [*template.jsw* schemacie w magazynie schematów JSON](http://json.schemastore.org/template)

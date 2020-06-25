@@ -1,5 +1,6 @@
 ---
 title: Obsługa wysokiej rozdzielczości DPI
+description: Dowiedz się więcej na temat pomocy technicznej w Windows Forms na potrzeby typowych scenariuszy o wysokiej rozdzielczości DPI i rozdzielczości DPI. Dowiedz się również, jak skonfigurować aplikacje Windows Forms na potrzeby obsługi wysokiej rozdzielczości DPI.
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a9e0766307095da447c772de5a3065c18b7b7154
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741898"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325647"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Obsługa wysokiej rozdzielczości DPI w Windows Forms
 
 Począwszy od .NET Framework 4,7, Windows Forms zawiera usprawnienia dla typowych scenariuszy o wysokiej rozdzielczości DPI i rozdzielczości DPI. Należą do nich następujące elementy:
 
-- Ulepszenia skalowania i układu wielu kontrolek Windows Forms, takich jak kontrolka <xref:System.Windows.Forms.MonthCalendar> i kontrolka <xref:System.Windows.Forms.CheckedListBox>.
+- Ulepszenia skalowania i układu wielu kontrolek Windows Forms, takich jak <xref:System.Windows.Forms.MonthCalendar> kontrolka i <xref:System.Windows.Forms.CheckedListBox> kontrolka.
 
 - Skalowanie pojedynczej karty.  W .NET Framework 4,6 i wcześniejszych wersjach skalowanie było wykonywane przez wiele przebiegów, co spowodowało, że niektóre kontrolki są skalowane więcej niż jest to konieczne.
 
@@ -45,9 +46,9 @@ Ponadto w celu skonfigurowania obsługi wysokiej rozdzielczości DPI w aplikacji
   </compatibility>
   ```
 
-- Włącz obsługę rozdzielczości DPI na poziomie monitora w pliku *App. config* .
+- Włącz świadomość rozdzielczości DPI dla monitora w pliku *app.config* .
 
-  Windows Forms wprowadza nowy element [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) do obsługi nowych funkcji i dostosowanych dostosowań, rozpoczynając od .NET Framework 4,7. Aby skorzystać z nowych funkcji, które obsługują wysoką wartość DPI, Dodaj następujące elementy do pliku konfiguracji aplikacji.
+  Windows Forms wprowadza nowy [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) element do obsługi nowych funkcji i dostosowanych dostosowań, zaczynając od .NET Framework 4,7. Aby skorzystać z nowych funkcji, które obsługują wysoką wartość DPI, Dodaj następujące elementy do pliku konfiguracji aplikacji.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -56,11 +57,11 @@ Ponadto w celu skonfigurowania obsługi wysokiej rozdzielczości DPI w aplikacji
   ```
 
   > [!IMPORTANT]
-  > W poprzednich wersjach .NET Framework użyto manifestu w celu dodania obsługi wysokiej rozdzielczości DPI. Takie podejście nie jest już zalecane, ponieważ zastępuje ustawienia zdefiniowane w pliku App. config.
+  > W poprzednich wersjach .NET Framework użyto manifestu w celu dodania obsługi wysokiej rozdzielczości DPI. Takie podejście nie jest już zalecane, ponieważ zastępuje ustawienia zdefiniowane w pliku app.config.
 
-- Wywołaj metodę static <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
+- Wywołaj metodę statyczną <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> .
 
-  Powinno to być pierwsze wywołanie metody w punkcie wejścia aplikacji. Na przykład:
+  Powinno to być pierwsze wywołanie metody w punkcie wejścia aplikacji. Przykład:
 
   ```csharp
   static void Main()
@@ -73,7 +74,7 @@ Ponadto w celu skonfigurowania obsługi wysokiej rozdzielczości DPI w aplikacji
 
 ## <a name="opting-out-of-individual-high-dpi-features"></a>Rezygnacja z pojedynczych funkcji wysokiej rozdzielczości DPI
 
-Ustawienie wartości `DpiAwareness` na `PerMonitorV2` włącza wszystkie funkcje rozpoznawania o wysokiej rozdzielczości DPI obsługiwane przez .NET Framework wersje zaczynające się od .NET Framework 4,7. Zwykle jest to odpowiednie dla większości aplikacji Windows Forms. Można jednak zrezygnować z jednej lub kilku poszczególnych funkcji. Najważniejszym powodem tego jest to, że istniejący kod aplikacji już obsługuje tę funkcję.  Na przykład jeśli aplikacja obsługuje automatyczne skalowanie, można wyłączyć funkcję automatycznego zmieniania rozmiarów w następujący sposób:
+Ustawienie `DpiAwareness` wartości, aby `PerMonitorV2` włączyć wszystkie funkcje rozpoznawania o wysokiej rozdzielczości DPI obsługiwane przez .NET Framework wersje, począwszy od .NET Framework 4,7. Zwykle jest to odpowiednie dla większości aplikacji Windows Forms. Można jednak zrezygnować z jednej lub kilku poszczególnych funkcji. Najważniejszym powodem tego jest to, że istniejący kod aplikacji już obsługuje tę funkcję.  Na przykład jeśli aplikacja obsługuje automatyczne skalowanie, można wyłączyć funkcję automatycznego zmieniania rozmiarów w następujący sposób:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -89,7 +90,7 @@ Aby uzyskać listę poszczególnych kluczy i ich wartości, zobacz [Windows Form
 Począwszy od .NET Framework 4,7, trzy nowe zdarzenia pozwalają programowo obsługiwać dynamiczne zmiany DPI:
 
 - <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, który jest uruchamiany, gdy ustawienie DPI dla kontrolki jest zmieniane programowo po wystąpieniu zdarzenia zmiany DPI dla jego formantu nadrzędnego lub formularza.
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, który jest uruchamiany, gdy ustawienie DPI dla kontrolki jest zmieniane programowo przed wystąpieniem zdarzenia zmiany DPI dla jego formantu nadrzędnego lub formularza.
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, który jest uruchamiany, gdy ustawienie DPI dla kontrolki jest zmieniane programowo przed wystąpieniem zdarzenia zmiany DPI dla jego kontrolki nadrzędnej lub formularza.
 - <xref:System.Windows.Forms.Form.DpiChanged>, który jest uruchamiany, gdy ustawienie DPI zostanie zmienione na urządzeniu wyświetlającym, w którym formularz jest aktualnie wyświetlany.
 
 ## <a name="new-helper-methods-and-properties"></a>Nowe metody i właściwości pomocnika
@@ -98,7 +99,7 @@ Począwszy od .NET Framework 4,7, trzy nowe zdarzenia pozwalają programowo obs�
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, która konwertuje wartość z logicznego na piksele urządzenia.
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, która skaluje obraz mapy bitowej do logicznej rozdzielczości DPI urządzenia.
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, które skaluje obraz mapy bitowej do logicznej rozdzielczości DPI urządzenia.
 
 - <xref:System.Windows.Forms.Control.DeviceDpi%2A>, która zwraca wartość DPI dla bieżącego urządzenia.
 
@@ -128,7 +129,7 @@ Możesz również sprawdzić wersję .NET Framework, z którą została skompilo
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Windows Forms dodać elementu konfiguracji](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Dostosowywanie rozmiaru i skali formularzy Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

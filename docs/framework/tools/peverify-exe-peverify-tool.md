@@ -11,19 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: d7962bc91d89d3bd183697011aed1afca0fb0fc1
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904211"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325621"
 ---
-# <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
-Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
+# <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Narzędzie PEVerify)
+
+Narzędzie PEVerify pomaga deweloperom, którzy generują język pośredni (MSIL) firmy Microsoft (na przykład autorzy kompilatora i deweloperzy aparatów skryptów), aby określić, czy ich kod MSIL i powiązane metadane spełniają wymagania bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli używasz takiego kompilatora, możesz sprawdzić, czy nie naruszono bezpieczeństwa typu kodu. Aby sprawdzić MSIL i metadane, można uruchomić narzędzie PEVerify na plikach.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
-  
- W wierszu polecenia wpisz następujące polecenie:  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,7 +45,7 @@ peverify filename [options]
 |**/Ignore =** *szesnastkowy. kod* [, *szesnastkowy. Code*]|Ignoruje wymienione kody błędów.|  
 |**/Ignore = @** *responseFile*|Ignoruje kody błędów wymienione w określonym pliku odpowiedzi.|  
 |**/Il**|Wykonuje weryfikację bezpieczeństwa typu MSIL dla metod zaimplementowanych w zestawie określonym przez *filename*. Narzędzie zwraca szczegółowe opisy dla każdego wykrytego problemu, chyba że zostanie określona opcja **/quiet** .|  
-|**/MD**|Wykonuje sprawdzanie poprawności metadanych na zestawie określonym przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
+|**/MD**|Wykonuje sprawdzanie poprawności metadanych na zestawie określonym przez *filename*. Ta opcja przeprowadzi pełną strukturę metadanych w pliku i zgłosi wszystkie problemy z walidacją.|  
 |**/nologo**|Pomija wyświetlanie informacji o wersji i prawach autorskich produktu.|  
 |**/nosymbols**|W wersji 2.0 .NET Framework wyłącza numery wierszy w celu zapewnienia zgodności z poprzednimi wersjami.|  
 |**spowoduje**|Określa tryb cichy. Wyłącza raportowanie problemów weryfikacji. Peverify.exe w dalszym ciągu raportuje, czy plik jest bezpiecznych pod względem typów, ale nie raportuje problemów uniemożliwiających weryfikację bezpieczeństwa typów.|  
@@ -62,7 +61,7 @@ peverify filename [options]
   
  Peverify.exe wykonuje kompleksową weryfikację MSIL na podstawie analizy przepływu danych oraz listy kilkuset reguł poprawności metadanych. Aby uzyskać szczegółowe informacje na temat sprawdzanych Peverify.exe, zobacz "Specyfikacja walidacji metadanych" i "Specyfikacja zestawu instrukcji MSIL" w folderze przewodnika deweloperów narzędzi w Windows SDK.  
   
- Należy zauważyć, że .NET Framework w wersji 2,0 lub nowszej obsługuje sprawdzone `byref` zwroty określone przy użyciu następujących instrukcji MSIL: `dup` , `ldsflda` ,, `ldflda` `ldelema` `call` i `unbox` .  
+.NET Framework w wersji 2,0 lub nowszej obsługuje sprawdzone `byref` zwroty określone przy użyciu następujących instrukcji MSIL: `dup` ,,,, `ldsflda` `ldflda` `ldelema` `call` i `unbox` .  
   
 ## <a name="examples"></a>Przykłady  
  Następujące polecenie wykonuje sprawdzanie poprawności metadanych i weryfikację bezpieczeństwa typów MSIL dla metod zaimplementowanych w zestawie `myAssembly.exe` .  

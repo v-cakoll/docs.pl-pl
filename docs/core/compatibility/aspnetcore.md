@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 06/11/2020
+ms.date: 06/23/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803273"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325459"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -45,15 +45,18 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [HTTP: zmiany infrastruktury treści odpowiedzi](#http-response-body-infrastructure-changes)
 - [HTTP: zmieniono domyślne wartości SameSite w pliku cookie](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: synchroniczne operacje we/wy są wyłączone domyślnie](#http-synchronous-io-disabled-in-all-servers)
+- [HttpSys: ponowne negocjowanie certyfikatu klienta jest wyłączone domyślnie](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [Tożsamość: Usunięto Przeciążenie metody AddDefaultUI](#identity-adddefaultui-method-overload-removed)
 - [Tożsamość: zmiana wersji ładowania początkowego interfejsu użytkownika](#identity-default-bootstrap-version-of-ui-changed)
 - [Tożsamość: SignInAsync zgłasza wyjątek dla nieuwierzytelnionej tożsamości](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Tożsamość: Konstruktor SignInManager akceptuje nowy parametr](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Tożsamość: interfejs użytkownika używa funkcji statyczne zasoby sieci Web](#identity-ui-uses-static-web-assets-feature)
+- [IIS: UrlRewrite ciągi zapytania oprogramowania pośredniczącego są zachowywane](#iis-urlrewrite-middleware-query-strings-are-preserved)
 - [Kestrel: domyślnie wykryto zmiany konfiguracji w czasie wykonywania](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: Usunięto karty połączeń](#kestrel-connection-adapters-removed)
 - [Kestrel: zmieniono domyślne wersje protokołu TLS](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: Usunięto pusty zestaw HTTPS](#kestrel-empty-https-assembly-removed)
+- [Kestrel: protokół HTTP/2 został wyłączony przy użyciu protokołu TLS dla niezgodnych wersji systemu Windows](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
 - [Kestrel: przeniesiono nagłówki przyczepki do nowej kolekcji](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: transportowe zmiany warstwy abstrakcji](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalizacja: interfejsy API oznaczone jako przestarzałe](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -100,10 +103,22 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
 [!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
 
 ***
 [!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
 
 ***
 

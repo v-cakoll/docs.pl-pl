@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie i usuwanie elementów ConcurrentDictionary'
+title: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie
 description: Zapoznaj się z przykładem dodawania, pobierania, aktualizowania i usuwania elementów z klasy ConcurrentDictionary<TKey, TValue> kolekcji w programie .NET.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
@@ -9,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 827eb9db984289929c591046a4713419c9587312
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662865"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325964"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Jak dodawać i usuwać elementy z ConcurrentDictionary
 
 Ten przykład pokazuje, jak dodawać, pobierać, aktualizować i usuwać elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> . Ta klasa kolekcji jest bezpieczną implementacją wątku. Zalecamy używanie go zawsze, gdy wiele wątków może próbować uzyskać dostęp do elementów współbieżnie.
 
@@ -37,9 +37,9 @@ W poniższym przykładzie użyto dwóch <xref:System.Threading.Tasks.Task> wyst�
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>jest przeznaczony do scenariuszy wielowątkowych. Nie trzeba używać blokad w kodzie, aby dodawać lub usuwać elementy z kolekcji. Jest jednak zawsze możliwe, aby jeden wątek pobierał wartość, a drugi wątek natychmiast zaktualizować kolekcję, dając ten sam klucz nowej wartości.
 
-Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są bezpieczne wątkowo, nie wszystkie metody są niepodzielne, w odróżnieniu od siebie <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> . Delegat użytkownika, który jest przesyłany do tych metod, jest wywoływany poza wewnętrzną blokadą słownika (dzieje się tak, aby zapobiec blokowaniu wszystkich wątków w nieznanym kodzie). W związku z tym, istnieje możliwość, że ta sekwencja zdarzeń ma być wykonywana:
+Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są bezpieczne wątkowo, nie wszystkie metody są niepodzielne, w odróżnieniu od siebie <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> . Aby zapobiec zablokowaniu wszystkich wątków przez nieznany kod, delegat użytkownika, który został przesłany do tych metod, jest wywoływany poza wewnętrzną blokadą słownika. W związku z tym, istnieje możliwość, że ta sekwencja zdarzeń ma być wykonywana:
 
-1. wywołania _Thread_ <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> a, nie wyszukują żadnych elementów i nie tworzy nowego elementu do dodania przez wywołanie `valueFactory` delegata.
+1. wywołania _Thread_ <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> a, nie wyszukują żadnych elementów i tworzą nowy element do dodania przez wywołanie `valueFactory` delegata.
 
 1. _threadB_ wywołania threadB <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> współbieżnie, jego `valueFactory` delegat jest wywoływany i dociera do blokady wewnętrznej przed _wątkiem_, a więc nowa para klucz-wartość jest dodawana do słownika.
 
@@ -49,7 +49,7 @@ Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.Concurrent
 
 W związku z tym nie ma gwarancji, że dane zwracane przez <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> są tymi samymi danymi, które zostały utworzone przez wątek `valueFactory` . Podobna sekwencja zdarzeń może wystąpić, gdy <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> jest wywoływana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Kolekcje bezpieczne dla wątków](index.md)

@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 04/30/2020
-ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141246"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324425"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+Skrypt bash odczytuje również przełączniki programu PowerShell, dzięki czemu można użyć przełączników programu PowerShell z skryptem w systemach Linux/macOS.
+
 ## <a name="description"></a>Opis
 
-`dotnet-install`Skrypty są używane do przeprowadzania instalacji nieadministratora zestaw .NET Core SDK, w tym interfejs wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
+`dotnet-install`Skrypty przeprowadzili instalację niebędącą administratorem zestaw .NET Core SDK, która obejmuje interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe. Istnieją dwa skrypty:
+
+* Skrypt programu PowerShell, który działa w systemie Windows.
+* Skrypt bash, który działa w systemie Linux/macOS.
+
+### <a name="purpose"></a>Przeznaczenie
+
+ Zamierzone użycie skryptów dotyczy scenariuszy ciągłej integracji (CI), gdzie:
+
+* Zestaw SDK należy zainstalować bez udziału użytkownika i bez uprawnień administratora.
+* Instalacja zestawu SDK nie wymaga utrwalania wielu przebiegów elementów konfiguracji.
+
+  Typowa sekwencja zdarzeń:
+  * Wyzwalanie elementu konfiguracji.
+  * Element CI instaluje zestaw SDK przy użyciu jednego z tych skryptów.
+  * Element CI kończy pracę i czyści dane tymczasowe, w tym instalację zestawu SDK.
+
+Aby skonfigurować środowisko programistyczne lub uruchamiać aplikacje, należy użyć instalatorów zamiast skryptów.
+
+### <a name="recommended-version"></a>Zalecana wersja
 
 Zalecamy użycie stabilnej wersji skryptów:
 
 - Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
-Główna użyteczność tych skryptów jest w scenariuszach automatyzacji i instalacjach nienależących do administratora. Istnieją dwa skrypty: jeden to skrypt programu PowerShell, który działa w systemie Windows, a drugi to skrypt bash, który działa w systemie Linux/macOS. Oba skrypty mają takie samo zachowanie. Skrypt bash odczytuje również przełączniki programu PowerShell, dzięki czemu można użyć przełączników programu PowerShell z skryptem w systemach Linux/macOS.
+### <a name="script-behavior"></a>Zachowanie skryptu
 
-Skrypty instalacyjne pobierają plik ZIP/plik tar z kompilacji interfejsu wiersza polecenia, a następnie instalują go w lokalizacji domyślnej lub w lokalizacji określonej przez `-InstallDir|--install-dir` . Domyślnie skrypty instalacyjne pobierają zestaw SDK i instalują go. Jeśli chcesz uzyskać tylko udostępnione środowisko uruchomieniowe, określ `-Runtime|--runtime` argument.
+Oba skrypty mają takie samo zachowanie. Pobierają one plik ZIP/plik tar z kompilacji interfejsu wiersza polecenia, a następnie instalują go w lokalizacji domyślnej lub w lokalizacji określonej przez `-InstallDir|--install-dir` .
 
-Domyślnie skrypt dodaje lokalizację instalacji do $PATH bieżącej sesji. Zastąp to zachowanie domyślne, określając `-NoPath|--no-path` argument.
+Domyślnie skrypty instalacyjne pobierają zestaw SDK i instalują go. Jeśli chcesz uzyskać tylko udostępnione środowisko uruchomieniowe, określ `-Runtime|--runtime` argument.
+
+Domyślnie skrypt dodaje lokalizację instalacji do $PATH bieżącej sesji. Zastąp to zachowanie domyślne, określając `-NoPath|--no-path` argument. Skrypt nie ustawi `DOTNET_ROOT` zmiennej środowiskowej.
 
 Przed uruchomieniem skryptu Zainstaluj wymagane [zależności](../install/dependencies.md).
 
-Można zainstalować określoną wersję przy użyciu `-Version|--version` argumentu. Wersja musi być określona jako wersja z trzema częściami (na przykład `2.1.0` ). Jeśli nie zostanie podany, zostanie użyta `latest` wersja.
+Można zainstalować określoną wersję przy użyciu `-Version|--version` argumentu. Wersja musi być określona jako numer wersji trzech części, np `2.1.0` .. Jeśli wersja nie jest określona, skrypt instaluje `latest` wersję.
 
 Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobieramy spakowane pliki binarne i skopiują je do folderu. Jeśli chcesz, aby wartości klucza rejestru były aktualizowane, użyj instalatorów platformy .NET Core.
 

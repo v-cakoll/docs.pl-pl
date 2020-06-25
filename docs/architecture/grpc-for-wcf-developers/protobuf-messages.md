@@ -1,23 +1,23 @@
 ---
-title: Wiadomości Protobuf - gRPC dla programistów WCF
-description: Dowiedz się, jak wiadomości Protobuf są zdefiniowane w IDL i generowane w języku C#.
+title: Protobuf messages — gRPC dla deweloperów WCF
+description: Dowiedz się, w jaki sposób komunikaty protobuf są zdefiniowane w IDL i generowane w języku C#.
 ms.date: 09/09/2019
-ms.openlocfilehash: 5b3d4383de39a3785ef804fec21939a740f54669
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147987"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325034"
 ---
 # <a name="protobuf-messages"></a>Komunikaty Protobuf
 
-W tej sekcji opisano sposób deklarowania komunikatów `.proto` buforu protokołu (Protobuf) w plikach. Wyjaśnia podstawowe pojęcia numerów pól i typów i patrzy na kod `protoc` C#, który generuje kompilator.
+W tej sekcji opisano sposób deklarowania komunikatów buforu protokołu (protobuf) w `.proto` plikach. Objaśniono podstawowe pojęcia dotyczące numerów pól i typów oraz sprawdza kod C# `protoc` generowany przez kompilator.
 
-Reszta rozdziału będzie bardziej szczegółowo patrzeć na to, jak różne rodzaje danych są reprezentowane w Protobuf.
+Pozostała część rozdziału zawiera bardziej szczegółowe informacje na temat sposobu reprezentowania różnych typów danych w protobuf.
 
-## <a name="declaring-a-message"></a>Deklarowanie wiadomości
+## <a name="declaring-a-message"></a>Deklarowanie komunikatu
 
-W programie Windows Communication Foundation `Stock` (WCF) klasa dla aplikacji obrotu giełdowego może być zdefiniowana w następujący sposób w poniższym przykładzie:
+W Windows Communication Foundation (WCF) `Stock` Klasa dla aplikacji do handlu rynkowego może być zdefiniowana jak w poniższym przykładzie:
 
 ```csharp
 namespace TraderSys
@@ -37,10 +37,10 @@ namespace TraderSys
 }
 ```
 
-Aby zaimplementować równoważną klasę w Protobuf, należy zadeklarować ją w `.proto` pliku. Kompilator `protoc` wygeneruje klasę .NET jako część procesu kompilacji.
+Aby zaimplementować równoważną klasę w protobuf, należy zadeklarować ją w `.proto` pliku. `protoc`Kompilator będzie generować klasę .NET jako część procesu kompilacji.
 
 ```protobuf
-syntax "proto3";
+syntax = "proto3";
 
 option csharp_namespace = "TraderSys";
 
@@ -54,28 +54,28 @@ message Stock {
 }  
 ```
 
-Pierwszy wiersz deklaruje używaną wersję składni. Wersja 3 języka została wydana w 2016 roku. Jest to wersja, którą polecamy dla usług gRPC.
+Pierwszy wiersz deklaruje używaną wersję składni. Wersja 3 języka została wydana w 2016. Jest to wersja, którą zalecamy dla usług gRPC Services.
 
-Wiersz `option csharp_namespace` określa obszar nazw, który ma być używany dla wygenerowanych typów C#. Ta opcja zostanie zignorowana, `.proto` gdy plik zostanie skompilowany dla innych języków. Pliki Protobuf często zawierają opcje specyficzne dla języka dla kilku języków.
+`option csharp_namespace`Wiersz określa przestrzeń nazw, która ma być używana dla wygenerowanych typów języka C#. Ta opcja zostanie zignorowana, gdy `.proto` plik zostanie skompilowany dla innych języków. Pliki protobuf często zawierają opcje specyficzne dla języka dla kilku języków.
 
-Definicja `Stock` wiadomości określa cztery pola. Każdy z nich ma typ, nazwę i numer pola.
+`Stock`Definicja komunikatu określa cztery pola. Każdy z nich ma typ, nazwę i numer pola.
 
 ## <a name="field-numbers"></a>Numery pól
 
-Numery pól są ważną częścią Protobuf. Są one używane do identyfikowania pól w binarnych zakodowanych danych, co oznacza, że nie można zmienić z wersji na wersję usługi. Zaletą jest to, że zgodność z poprzednimi wersjami i kompatybilność do przodu są możliwe. Klienci i usługi po prostu zignorują numery pól, o których nie wiedzą, o ile jest obsługiwana możliwość brakujących wartości.
+Numery pól są ważną częścią protobuf. Są one używane do identyfikowania pól w szyfrowanych danych binarnych, co oznacza, że nie mogą ulec zmianie z wersji na wersję usługi. Zalety tej usługi to zgodność z poprzednimi wersjami i zgodność. Klienci i usługi będą po prostu ignorować numery pól, o których nie znają, tak długo, jak można obsługiwać brakujące wartości.
 
-W formacie binarnym numer pola jest łączony z identyfikatorem typu. Numery pól od 1 do 15 mogą być kodowane z ich typem jako pojedynczy bajt. Liczby od 16 do 2047 wziąć 2 bajty. Możesz iść wyżej, jeśli potrzebujesz więcej niż 2047 pól w wiadomości z jakiegokolwiek powodu. Identyfikatory pojedynczego bajtu dla numerów pól od 1 do 15 oferują lepszą wydajność, dlatego należy ich używać w najbardziej podstawowych, często używanych polach.
+W formacie binarnym numer pola jest połączony z identyfikatorem typu. Numery pól od 1 do 15 można zakodować ich typem jako pojedynczy bajt. Liczby z 16 do 2 047 mają 2 bajty. Jeśli potrzebujesz więcej niż 2 047 pól w komunikacie z dowolnego powodu, możesz przejść do wyższego poziomu. Identyfikatory pojedynczych bajtów dla numerów pól od 1 do 15 oferują lepszą wydajność, dlatego należy używać ich w przypadku najbardziej podstawowych, często używanych pól.
 
 ## <a name="types"></a>Typy
 
-Deklaracje typów są przy użyciu natywnych typów danych skalarnych Protobuf, które zostały omówione bardziej szczegółowo w [następnej sekcji](protobuf-data-types.md). Pozostała część tego rozdziału obejmie wbudowane typy Protobuf i pokaże, jak odnoszą się one do typowych typów .NET.
+Deklaracje typu korzystają z natywnych typów danych skalarnych protobuf, które zostały omówione bardziej szczegółowo w [następnej sekcji](protobuf-data-types.md). Pozostała część tego rozdziału obejmuje wbudowane typy protobuf i pokazuje, w jaki sposób odnoszą się do wspólnych typów .NET.
 
 > [!NOTE]
-> Protobuf nie obsługuje natywnie `decimal` `double` typu, więc jest używany zamiast tego. W przypadku aplikacji, które wymagają pełnej dokładności dziesiętnej, należy zapoznać się z [sekcją dotyczącą miejsc dziesiętnych](protobuf-data-types.md#decimals) w następnej części tego rozdziału.
+> Protobuf nie obsługuje natywnie `decimal` typu, dlatego `double` jest używany w zamian. W przypadku aplikacji wymagających pełnej precyzji dziesiętnej zapoznaj się z [sekcją miejsc dziesiętnych](protobuf-data-types.md#decimals) w następnej części tego rozdziału.
 
 ## <a name="the-generated-code"></a>Wygenerowany kod
 
-Podczas tworzenia aplikacji Protobuf tworzy klasy dla każdego z komunikatów, mapowanie jego typów natywnych do typów C#. Wygenerowany `Stock` typ będzie miał następujący podpis:
+Podczas kompilowania aplikacji protobuf tworzy klasy dla poszczególnych komunikatów, mapując ich typy natywne na typy C#. Wygenerowany `Stock` Typ będzie miał następujący podpis:
 
 ```csharp
 public class Stock
@@ -87,12 +87,12 @@ public class Stock
 }
 ```
 
-Rzeczywisty kod, który jest generowany jest znacznie bardziej skomplikowane niż to. Powodem jest to, że każda klasa zawiera cały kod niezbędny do serializacji i deserializacji się do formatu przewodu binarnego.
+Rzeczywisty wygenerowany kod jest znacznie bardziej skomplikowany niż ten. Przyczyną jest to, że każda klasa zawiera cały kod, który jest niezbędny do serializacji i deserializacji samego formatu sieci binarnej.
 
 ### <a name="property-names"></a>Nazwy właściwości
 
-Należy zauważyć, że kompilator `PascalCase` Protobuf stosowane `snake_case` do `.proto` nazw właściwości, mimo że były one w pliku. [Protobuf styl przewodnik](https://developers.google.com/protocol-buffers/docs/style) zaleca `snake_case` użycie w definicjach wiadomości, tak aby generowanie kodu dla innych platform produkuje oczekiwane go dla ich konwencji.
+Należy zauważyć, że kompilator protobuf zastosowany `PascalCase` do nazw właściwości, chociaż znajdowały się `snake_case` w `.proto` pliku. [Przewodnik stylu protobuf](https://developers.google.com/protocol-buffers/docs/style) zaleca użycie `snake_case` w definicjach komunikatów, dzięki czemu generowanie kodu dla innych platform daje oczekiwany przypadek dla ich Konwencji.
 
 >[!div class="step-by-step"]
->[Poprzedni](protocol-buffers.md)
->[następny](protobuf-data-types.md)
+>[Poprzedni](protocol-buffers.md) 
+> [Dalej](protobuf-data-types.md)

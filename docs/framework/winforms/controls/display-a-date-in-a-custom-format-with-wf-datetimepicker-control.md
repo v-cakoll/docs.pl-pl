@@ -1,5 +1,6 @@
 ---
 title: Wyświetlanie daty w formacie niestandardowym z kontrolką DateTimePicker
+description: Dowiedz się, jak używać kontrolki DateTimePicker Windows Forms do formatowania wyświetlania dat i godzin w formancie.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +11,21 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: a27dbe737b81af86c0ac50b791bcd87bafe05b4f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 773070136e4fd43ab1bf510ebcaf6b0aa6a7ba8a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745935"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325829"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Porady: wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy systemu Windows
-Formant Windows Forms <xref:System.Windows.Forms.DateTimePicker> zapewnia elastyczność formatowania wyświetlania dat i godzin w formancie. Właściwość <xref:System.Windows.Forms.DateTimePicker.Format%2A> umożliwia wybranie ze wstępnie zdefiniowanych formatów, które znajdują się w <xref:System.Windows.Forms.DateTimePickerFormat>. Jeśli żadna z tych elementów nie jest odpowiednia do celów, możesz utworzyć własny styl formatu, używając znaków formatu wymienionych w <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
+Formant Windows Forms <xref:System.Windows.Forms.DateTimePicker> zapewnia elastyczność formatowania wyświetlania dat i godzin w formancie. <xref:System.Windows.Forms.DateTimePicker.Format%2A>Właściwość umożliwia wybranie ze wstępnie zdefiniowanych formatów wymienionych w temacie <xref:System.Windows.Forms.DateTimePickerFormat> . Jeśli żadna z tych elementów nie jest odpowiednia do celów, możesz utworzyć własny styl formatu, używając znaków formatowania wymienionych w <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> .  
   
 ### <a name="to-display-a-custom-format"></a>Aby wyświetlić niestandardowy format  
   
-1. Ustaw właściwość <xref:System.Windows.Forms.DateTimePicker.Format%2A> na `DateTimePickerFormat.Custom`.  
+1. Ustaw <xref:System.Windows.Forms.DateTimePicker.Format%2A> Właściwość na wartość `DateTimePickerFormat.Custom` .  
   
-2. Ustaw właściwość <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> na ciąg formatu.  
+2. Ustaw <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> Właściwość na ciąg formatu.  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
@@ -63,7 +64,7 @@ Formant Windows Forms <xref:System.Windows.Forms.DateTimePicker> zapewnia elasty
   
      W zależności od ustawienia kultury wszystkie znaki, które nie są ujęte w znaki pojedynczego cudzysłowu, mogą zostać zmienione. Na przykład ciąg formatu powyżej wyświetla bieżącą datę z formatem "dzisiaj jest: 05:30:31 w piątek marca 02, 2012" w kulturze angielskiej (Stany Zjednoczone). Należy zauważyć, że pierwszy dwukropek jest ujęty w znaki pojedynczego cudzysłowu, ponieważ nie jest przeznaczony do ograniczania znaku, ponieważ jest w formacie "gg: mm: SS". W innej kulturze format może wyglądać tak, jakby "dzisiaj jest: 05.30.31 piątek marca 02, 2012".  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [DateTimePicker, kontrolka](datetimepicker-control-windows-forms.md)
 - [Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

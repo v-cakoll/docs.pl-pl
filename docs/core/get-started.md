@@ -1,28 +1,28 @@
 ---
-title: Wprowadzenie do programu .NET Core
+title: Wprowadzenie do platformy .NET Core
 description: Znajdź zasoby, aby dowiedzieć się, jak tworzyć aplikacje .NET Core w systemach Windows, Linux i macOS.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714393"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325008"
 ---
-# <a name="get-started-with-net-core"></a>Wprowadzenie do programu .NET Core
+# <a name="get-started-with-net-core"></a>Wprowadzenie do platformy .NET Core
 
-Ten artykuł zawiera informacje dotyczące rozpoczynania pracy z platformą .NET Core. Program .NET Core można zainstalować w systemach Windows, Linux i macOS. Możesz kodować w swoim ulubionym edytorze tekstu i tworzyć biblioteki i aplikacje międzyplatformowe.
+Ten artykuł zawiera informacje na temat rozpoczynania pracy z platformą .NET Core. Program .NET Core można zainstalować w systemach Windows, Linux i macOS. Możesz zakodować w ulubionym edytorze tekstów i tworzyć Międzyplatformowe biblioteki i aplikacje.
 
-Jeśli nie masz pewności, co to jest program .NET Core lub jak odnosi się do innych technologii .NET, rozpocznij od omówienie Co to [jest .NET.](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) Mówiąc prościej, .NET Core jest implementacją platformy .NET typu open source na wielu platformach.
+Jeśli nie masz pewności, co to jest platforma .NET Core, lub jak odnosi się do innych technologii .NET, Zacznij od omówienia [programu .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) . Po prostu, .NET Core to wieloplatformowa implementacja platformy .NET.
 
 ## <a name="create-an-application"></a>Tworzenie aplikacji
 
-Najpierw pobierz i zainstaluj zestaw [SDK .NET Core](https://dotnet.microsoft.com/download) na komputerze.
+Najpierw pobierz i zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download) na komputerze.
 
-Następnie otwórz terminal, taki jak **PowerShell,** **Wiersz polecenia**lub **bash**. Wpisz `dotnet` następujące polecenia, aby utworzyć i uruchomić aplikację C#:
+Następnie otwórz Terminal, taki jak **PowerShell**, **wiersza polecenia**lub **bash**. Wpisz następujące `dotnet` polecenia, aby utworzyć i uruchomić aplikację w języku C#:
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -35,52 +35,52 @@ Powinny zostać wyświetlone następujące dane wyjściowe:
 Hello World!
 ```
 
-Gratulacje! Utworzono prostą aplikację .NET Core. Można również użyć [kodu programu Visual Studio](./tutorials/with-visual-studio-code.md), Visual [Studio](./tutorials/with-visual-studio.md) (tylko windows) lub Visual Studio dla [komputerów Mac](./tutorials/using-on-mac-vs.md) (tylko macOS), aby utworzyć aplikację .NET Core.
+Gratulacje! Utworzono prostą aplikację platformy .NET Core. Można również użyć [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio](./tutorials/with-visual-studio.md) (tylko Windows) lub [Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs.md) (tylko macOS), aby utworzyć aplikację platformy .NET Core.
 
 ## <a name="tutorials"></a>Samouczki
 
-Wprowadzenie do tworzenia aplikacji .NET Core, wykonując następujące samouczki krok po kroku:
+Zacznij opracowywać aplikacje platformy .NET Core, wykonując następujące Samouczki krok po kroku:
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-- [Tworzenie pierwszej aplikacji konsoli .NET Core w programie Visual Studio 2019](./tutorials/with-visual-studio.md)
-- [Tworzenie biblioteki klas za pomocą programu .NET Standard w programie Visual Studio](./tutorials/library-with-visual-studio.md)
-- [Wprowadzenie do programu .NET Core przy użyciu procesora CLI .NET Core](./tutorials/cli-create-console-app.md)
+- [Tworzenie pierwszej aplikacji konsolowej .NET Core w programie Visual Studio 2019](./tutorials/with-visual-studio.md)
+- [Kompilowanie biblioteki klas przy użyciu .NET Standard w programie Visual Studio](./tutorials/library-with-visual-studio.md)
+- [Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core](./tutorials/cli-create-console-app.md)
 
 |   |   |
 |---|---|
-| ![ikona kamery filmowych dla wideo](./media/video-icon.png "Obejrzyj film") | Zobacz, [jak zainstalować i używać programu Visual Studio Code i wideo .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) w kanale 9. |
-| ![ikona kamery filmowych dla wideo](./media/video-icon.png "Obejrzyj film") | Obejrzyj filmy [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) w YouTube. |
+| ![ikona aparatu filmu wideo](./media/video-icon.png "Obejrzyj film") | Obejrzyj, [jak zainstalować i używać Visual Studio Code i środowiska .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) wideo w witrynie Channel 9. |
+| ![ikona aparatu filmu wideo](./media/video-icon.png "Obejrzyj film") | Obejrzyj wideo z programem [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) w serwisie YouTube. |
 
-Zobacz [.NET Core zależności i wymagania](install/dependencies.md?pivots=os-windows) artykułu dla listy obsługiwanych wersji systemu Windows.
+Listę obsługiwanych wersji systemu Windows zawiera artykuł [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?pivots=os-windows) .
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
-Wprowadzenie do tworzenia aplikacji .NET Core, wykonując następujące samouczki krok po kroku:
+Zacznij opracowywać aplikacje platformy .NET Core, wykonując następujące Samouczki krok po kroku:
 
-- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia](./tutorials/cli-create-console-app.md)
+- [Rozpoczynanie pracy z platformą .NET Core przy użyciu wiersza polecenia](./tutorials/cli-create-console-app.md)
 
 |   |   |
 |---|---|
-| ![ikona kamery filmowych dla wideo](./media/video-icon.png "Obejrzyj film") | Obejrzyj klip wideo przedstawiający [wprowadzenie do programu Visual Studio Code przy użyciu wersji C# i .NET Core w programie Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). |
+| ![ikona aparatu filmu wideo](./media/video-icon.png "Obejrzyj film") | Obejrzyj film wideo [z wprowadzeniem do Visual Studio Code przy użyciu języków C# i .NET Core w systemie Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). |
 
-Zobacz [.NET Core zależności i wymagania](install/dependencies.md?pivots=os-linux) artykułu dla listy obsługiwanych dystrybucji systemu Linux i wersji.
+Listę obsługiwanych dystrybucje i wersji systemu Linux znajduje się w artykule [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?pivots=os-linux) .
 
-# <a name="macos"></a>[Macos](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
-Wprowadzenie do tworzenia aplikacji .NET Core, wykonując następujące samouczki krok po kroku:
+Zacznij opracowywać aplikacje platformy .NET Core, wykonując następujące Samouczki krok po kroku:
 
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio Code](./tutorials/using-on-macos.md)
-- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia](./tutorials/cli-create-console-app.md)
+- [Rozpoczynanie pracy z platformą .NET Core przy użyciu wiersza polecenia](./tutorials/cli-create-console-app.md)
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs.md)
-- [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs-full-solution.md)
+- [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs-full-solution.md)
 
 |   |   |
 |---|---|
-| ![ikona kamery filmowych dla wideo](media/video-icon.png "Obejrzyj film") | Obejrzyj klip wideo przedstawiający [wprowadzenie do programu Visual Studio Code przy użyciu języka C# i programu .NET Core w systemie macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). |
+| ![ikona aparatu filmu wideo](media/video-icon.png "Obejrzyj film") | Obejrzyj film wideo [z wprowadzeniem do Visual Studio Code przy użyciu języków C# i .NET Core w systemie macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). |
 
-Zobacz [.NET Core zależności i wymagania](install/dependencies.md?pivots=os-macos) artykułu dla listy obsługiwanych wersji systemu OS X / macOS.
+Listę obsługiwanych wersji systemu OS X/macOS można znaleźć w artykule [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?pivots=os-macos) .
 
 ---

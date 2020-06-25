@@ -3,16 +3,16 @@ title: Jak zmodyfikować zawartość ciągu — przewodnik w języku C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663008"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324167"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Jak zmodyfikować zawartość ciągu w języku C\#
 
-W tym artykule przedstawiono kilka technik, które należy utworzyć `string` , modyfikując istniejące `string` . Wszystkie techniki pokazują wynik modyfikacji jako nowy `string` obiekt. Aby jasno zademonstrować ten element, wszystkie przykłady zapisują wynik w nowej zmiennej. Następnie można przeanalizować zarówno oryginał `string` , jak i `string` wyniki modyfikacji podczas uruchamiania każdego przykładu.
+W tym artykule przedstawiono kilka technik, które należy utworzyć `string` , modyfikując istniejące `string` . Wszystkie techniki pokazują wynik modyfikacji jako nowy `string` obiekt. Aby wykazać, że oryginalne i zmodyfikowane ciągi są wystąpieniami DISTINCT, przykłady przechowują wynik w nowej zmiennej. Po uruchomieniu każdego przykładu można przeanalizować pierwotną `string` i nową, zmodyfikowaną wartość `string` .
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,9 +68,9 @@ Ponieważ ciągi są niezmienne, poprzednie przykłady tworzą tymczasowe ciągi
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-Można zmodyfikować ciąg w stałym bloku z niebezpiecznym kodem, ale **zdecydowanie** odradza się modyfikowanie zawartości ciągu po utworzeniu ciągu. Wykonanie tej czynności spowoduje uszkodzenie elementów na nieprzewidywalny sposób. Na przykład, jeśli ktoś internił ciąg o tej samej zawartości, otrzyma kopię i nie będzie oczekiwać, że w ogóle modyfikujesz ciąg.
+Można zmodyfikować ciąg w stałym bloku z niebezpiecznym kodem, ale **zdecydowanie** odradza się modyfikowanie zawartości ciągu po utworzeniu ciągu. Wykonanie tej czynności spowoduje uszkodzenie elementów na nieprzewidywalny sposób. Na przykład jeśli ktoś internił ciąg o tej samej zawartości co ty, otrzyma kopię i nie będzie oczekiwać, że modyfikujesz ciąg.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [.NET Framework wyrażeń regularnych](../../standard/base-types/regular-expressions.md)
 - [Język wyrażeń regularnych — Krótki przewodnik](../../standard/base-types/regular-expression-language-quick-reference.md)

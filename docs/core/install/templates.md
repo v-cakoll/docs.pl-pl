@@ -1,19 +1,19 @@
 ---
 title: Instalowanie szablonów zestawu SDK i zarządzanie nimi — .NET Core
 description: Dowiedz się, jak instalować szablony .NET Core w systemach Windows, Linux i macOS.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200616"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324491"
 ---
 # <a name="manage-net-project-and-item-templates"></a>Zarządzanie szablonami projektów i elementów programu .NET
 
@@ -23,13 +23,13 @@ Aby uzyskać więcej informacji na temat tworzenia szablonów, zobacz [Samouczek
 
 ## <a name="install-template"></a>Zainstaluj szablon
 
-Szablony są instalowane za pomocą [nowego](../tools/dotnet-new.md) zestawu SDK dotnet polecenia z `-i` parametrem. Możesz podać identyfikator pakietu NuGet szablonu lub folder zawierający pliki szablonów.
+Szablony są instalowane za pomocą [dotnet new](../tools/dotnet-new.md) polecenia zestawu SDK z `-i` parametrem. Możesz podać identyfikator pakietu NuGet szablonu lub folder zawierający pliki szablonów.
 
 ### <a name="nuget-hosted-package"></a>Pakiet hostowany przez narzędzie NuGet
 
 Szablony interfejsu wiersza polecenia platformy .NET są przekazywane do programu [NuGet](https://www.nuget.org/) w celu zapewnienia szerokiej dystrybucji. Szablony mogą być również instalowane z prywatnego źródła danych. Zamiast przekazywania szablonu do źródła danych NuGet, pliki szablonów *NUPKG* można rozpowszechniać i instalować ręcznie zgodnie z opisem w sekcji [lokalny pakiet NuGet](#local-nuget-package) .
 
-Aby uzyskać więcej informacji o konfigurowaniu kanałów informacyjnych NuGet, zobacz [Dodawanie źródła przez program dotnet NuGet](../tools/dotnet-nuget-add-source.md).
+Więcej informacji o konfigurowaniu źródeł danych NuGet znajduje się w temacie [dotnet nuget add source](../tools/dotnet-nuget-add-source.md) .
 
 Aby zainstalować pakiet szablonów z domyślnego źródła danych NuGet, użyj `dotnet new -i {package-id}` polecenia:
 
@@ -83,7 +83,7 @@ dotnet new -i ~/code/nuget-packages/some-folder/
 
 ::: zone-end
 
-`{folder-path}` Określone w poleceniu staną się identyfikatorem pakietu szablonów dla wszystkich znalezionych szablonów. Jak określono w sekcji [szablony list](#list-templates) , można uzyskać listę szablonów zainstalowanych za pomocą `dotnet new -u` polecenia. W tym przykładzie identyfikator pakietu szablonów jest pokazywany jako folder używany do instalacji:
+`{folder-path}`Określone w poleceniu staną się identyfikatorem pakietu szablonów dla wszystkich znalezionych szablonów. Jak określono w sekcji [szablony list](#list-templates) , można uzyskać listę szablonów zainstalowanych za pomocą `dotnet new -u` polecenia. W tym przykładzie identyfikator pakietu szablonów jest pokazywany jako folder używany do instalacji:
 
 ::: zone pivot="os-windows"
 
@@ -127,7 +127,7 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>Odinstaluj szablon
 
-Szablony są odinstalowywane za pomocą nowego zestawu SDK [dotnet](../tools/dotnet-new.md) polecenia `-u` z parametrem. Możesz podać identyfikator pakietu NuGet szablonu lub folder zawierający pliki szablonów.
+Szablony są odinstalowywane za pomocą [dotnet new](../tools/dotnet-new.md) polecenia zestawu SDK z `-u` parametrem. Możesz podać identyfikator pakietu NuGet szablonu lub folder zawierający pliki szablonów.
 
 ### <a name="nuget-package"></a>Pakiet NuGet
 
@@ -230,7 +230,7 @@ Na przykład zestaw .NET Core SDK zawiera szablony dla aplikacji konsoli przezna
     >
     > Przywracanie powiodło się.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Samouczek: Tworzenie szablonu elementu](../tutorials/cli-templates-create-item-template.md)
 - [dotnet new](../tools/dotnet-new.md)

@@ -3,15 +3,15 @@ title: Co nowego w programie .NET Core 3.0
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 3,0.
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378824"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324413"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -102,7 +102,7 @@ Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` 
 </PropertyGroup>
 ```
 
-— lub —
+-lub-
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -257,14 +257,14 @@ Narzędzia lokalne są zależne od nazwy pliku manifestu `dotnet-tools.json` w b
 
 W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2,1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
-### <a name="new-globaljson-options"></a>Nowe opcje globalne. JSON
+### <a name="new-globaljson-options"></a>Nowe global.jsw opcjach
 
-Plik *Global. JSON* zawiera nowe opcje, które zapewniają większą elastyczność podczas próby zdefiniowania używanej wersji zestaw .NET Core SDK. Nowe opcje są następujące:
+*global.jsw* pliku ma nowe opcje, które zapewniają większą elastyczność podczas próby zdefiniowania używanej wersji zestaw .NET Core SDK. Nowe opcje są następujące:
 
 - `allowPrerelease`: Wskazuje, czy program rozpoznawania SDK powinien wziąć pod uwagę wersje wstępne podczas wybierania wersji zestawu SDK do użycia.
 - `rollForward`: Wskazuje zasady wycofywania, które mają być używane podczas wybierania wersji zestawu SDK, jako rezerwy w przypadku braku określonej wersji zestawu SDK lub jako dyrektywy do korzystania z wyższej wersji.
 
-Aby uzyskać więcej informacji na temat zmian, w tym wartości domyślnych, obsługiwanych wartości i nowych reguł dopasowania, zobacz [Global. JSON — Omówienie](../tools/global-json.md).
+Aby uzyskać więcej informacji na temat zmian, w tym wartości domyślnych, obsługiwanych wartości i nowych reguł dopasowywania, zobacz [global.json Overview](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Mniejsze rozmiary sterty wyrzucania elementów bezużytecznych
 
@@ -319,7 +319,7 @@ Aby uzyskać więcej informacji na temat trybów wysokiej rozdzielczości DPI, z
 
 W systemie Windows można teraz tworzyć zarządzane składniki COM. Ta funkcja ma kluczowe znaczenie dla korzystania z platformy .NET Core z modelami dodatków COM, a także do zapewnienia parzystości .NET Framework.
 
-W przeciwieństwie do .NET Framework, w którym *Biblioteka mscoree. dll* była używana jako serwer com, podczas kompilowania składnika com program .NET Core doda natywną bibliotekę DLL uruchamiania do katalogu *bin* .
+W przeciwieństwie do .NET Framework, w którym *mscoree.dll* był używany jako serwer com, podczas kompilowania składnika modelu com program .NET Core doda natywną bibliotekę DLL uruchamiania do katalogu *bin* .
 
 Przykład sposobu tworzenia składnika modelu COM i korzystania z niego można znaleźć w [demonstracji modelu COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
 
@@ -539,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Szybka Wbudowana obsługa JSON
 
-Użytkownicy platformy .NET w dużym stopniu opierają się na [Newtonsoft. JSON](https://www.newtonsoft.com/json) i innych popularnych bibliotekach JSON, które nadal są dobrym wybórem. `Newtonsoft.Json`używa ciągów .NET jako podstawowego elementu DataType, który jest UTF-16 pod okapem.
+Użytkownicy platformy .NET mogą w dużym stopniu opierać się na [Newtonsoft.Js](https://www.newtonsoft.com/json) i innych popularnych bibliotekach JSON, które nadal są dobrym wyborami. `Newtonsoft.Json`używa ciągów .NET jako podstawowego elementu DataType, który jest UTF-16 pod okapem.
 
 Nowa Wbudowana obsługa JSON to wysoka wydajność, niska alokacja i współpracuje z tekstem JSON zakodowanym w formacie UTF-8. Aby uzyskać więcej informacji na temat <xref:System.Text.Json> przestrzeni nazw i typów, zobacz następujące artykuły:
 
 * [Serializacja kodu JSON w programie .NET — Omówienie](../../standard/serialization/system-text-json-overview.md)
 * [Jak serializować i deserializować kod JSON w programie .NET](../../standard/serialization/system-text-json-how-to.md).
-* [Jak przeprowadzić migrację z Newtonsoft. JSON do System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Jak przeprowadzić migrację z Newtonsoft.Jsna System.Text.Jsna](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Obsługa protokołu HTTP/2
 

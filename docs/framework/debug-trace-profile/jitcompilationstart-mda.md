@@ -1,6 +1,6 @@
 ---
-title: jitCompilationStart MDA
-description: Użyj zarządzanego asystenta debugowania jitCompilationStart (MDA), który jest uruchamiany w celu raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji platformy .NET.
+title: Asystent debugowania zarządzanego jitCompilationStart (MDA)
+description: Raporty Asystent debugowania zarządzanego jitCompilationStart (MDA), gdy kompilator just in Time (JIT) rozpoczyna Kompilowanie funkcji platformy .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -8,27 +8,28 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904133"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325530"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
+
 `jitCompilationStart`Asystent debugowania zarządzanego (MDA) jest aktywowany do raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji.  
   
 ## <a name="symptoms"></a>Objawy  
  Rozmiar zestawu roboczego rośnie dla programu, który jest już w formacie obrazu natywnego, ponieważ mscorjit.dll jest ładowany do procesu.  
   
 ## <a name="cause"></a>Przyczyna  
- Nie wszystkie zestawy, od których zależy program, zostały wygenerowane w formacie natywnym lub te, które nie zostały poprawnie zarejestrowane.  
-  
+Nie wszystkie zestawy, od których zależy program, zostały wygenerowane w formacie natywnym lub zestaw nie został poprawnie zarejestrowany.  
+
 ## <a name="resolution"></a>Rozwiązanie  
- Włączenie tego MDA pozwala określić, która funkcja jest skompilowana w trybie JIT. Ustal, czy zestaw, który zawiera funkcję, jest generowany w formacie natywnym i poprawnie zarejestrowany.  
+ Włączenie tego MDA umożliwia zidentyfikowanie, która funkcja jest skompilowana w trybie JIT. Upewnij się, że zestaw, który zawiera funkcję, jest generowany w formacie natywnym i poprawnie zarejestrowany.
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie jest rejestrowane tuż przed użyciem metody z kompilacją JIT, dlatego włączenie tego elementu MDA ma znaczny wpływ na wydajność. Należy pamiętać, że jeśli metoda jest wbudowana, to MDA nie będzie generować osobnego komunikatu.  
+ To zdarzenie jest rejestrowane tuż przed użyciem metody z kompilacją JIT, dlatego włączenie tego elementu MDA ma znaczny wpływ na wydajność. Jeśli metoda jest wbudowana, to MDA nie będzie generować osobnego komunikatu.  
   
 ## <a name="output"></a>Dane wyjściowe  
  Poniższy przykład kodu pokazuje przykładowe dane wyjściowe. W takim przypadku dane wyjściowe pokazują, że w teście zestawu Metoda "m" w klasie "ns2.CO" została skompilowana JIT.  

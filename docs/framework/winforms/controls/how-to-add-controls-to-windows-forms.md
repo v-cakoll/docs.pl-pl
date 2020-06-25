@@ -1,5 +1,6 @@
 ---
 title: Dodawanie kontrolek
+description: Dowiedz się, jak narysować kontrolkę w formularzu systemu Windows. Kontrolka jest składnikiem formularza, którego można użyć do wyświetlania informacji lub akceptowania danych wejściowych użytkownika.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743957"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325887"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Porady: dodawanie formantów do formularzy systemu Windows
 
@@ -44,14 +45,14 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
     > [!NOTE]
     > Możesz dwukrotnie kliknąć kontrolkę w **przyborniku** , aby dodać ją do lewego górnego rogu formularza w domyślnym rozmiarze.
 
-    Kontrolki można także dynamicznie dodawać do formularza w czasie wykonywania. W poniższym przykładzie kodu formant <xref:System.Windows.Forms.TextBox> zostanie dodany do formularza po kliknięciu kontrolki <xref:System.Windows.Forms.Button>.
+    Kontrolki można także dynamicznie dodawać do formularza w czasie wykonywania. W poniższym przykładzie kodu <xref:System.Windows.Forms.TextBox> formant zostanie dodany do formularza, gdy zostanie <xref:System.Windows.Forms.Button> kliknięty formant.
 
     > [!NOTE]
-    > Poniższa procedura wymaga istnienia formularza z kontrolką **przycisku** , `Button1`już umieszczona na nim.
+    > Poniższa procedura wymaga istnienia formularza z kontrolką **przycisku** , która jest `Button1` już umieszczona w nim.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Aby programowo dodać formant do formularza
 
-1. W metodzie, która obsługuje zdarzenie `Click` przycisku w klasie formularza, Wstaw kod podobny do poniższego, aby dodać odwołanie do zmiennej kontroli, ustaw `Location`kontrolki i Dodaj kontrolkę.
+1. W metodzie, która obsługuje zdarzenie przycisku `Click` w klasie formularza, Wstaw kod podobny do poniższego, aby dodać odwołanie do zmiennej kontroli, ustaw kontrolkę `Location` i Dodaj kontrolkę.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +86,11 @@ Większość formularzy służy do dodawania kontrolek do powierzchni formularza
     > Możesz również dodać kod, aby zainicjować inne właściwości formantu.
 
     > [!IMPORTANT]
-    > Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do złośliwego `UserControl`. Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
+    > Komputer lokalny może być narażony na zagrożenia bezpieczeństwa przez sieć, odwołując się do złośliwej `UserControl` . Może to stanowić problem tylko w przypadku złośliwej osoby, która tworzy szkodliwą kontrolkę niestandardową, a następnie nie dodawaj jej do projektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: zmienianie rozmiaru kontrolek na formularzach Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Kontrolki Windows Forms](index.md)
+- [Porady: zmienianie rozmiaru formantów na formularzach systemu Windows](how-to-resize-controls-on-windows-forms.md)
+- [Porady: ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

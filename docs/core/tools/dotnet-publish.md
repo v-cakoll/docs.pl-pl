@@ -2,12 +2,12 @@
 title: polecenie dotnet publish
 description: Dotnet publish polecenie publikuje projekt .NET Core lub rozwiązanie w katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: 697746291a8b34a856433049fe7264ad0ea4af7a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761905"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365586"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -37,8 +37,8 @@ dotnet publish -h|--help
 `dotnet publish`kompiluje aplikację, odczytuje ją z zależności określonych w pliku projektu i publikuje zestaw plików w katalogu. Dane wyjściowe obejmują następujące zasoby:
 
 - Kod języka pośredniego (IL) w zestawie z rozszerzeniem *dll* .
-- Plik *. deps. JSON* , który zawiera wszystkie zależności projektu.
-- Plik *. runtimeconfig. JSON* , który określa udostępnione środowisko uruchomieniowe oczekiwane przez aplikację, a także inne opcje konfiguracji środowiska uruchomieniowego (na przykład typ wyrzucania elementów bezużytecznych).
+- *.deps.jsw* pliku, który zawiera wszystkie zależności projektu.
+- *.runtimeconfig.jsw* pliku, który określa udostępnione środowisko uruchomieniowe oczekiwane przez aplikację, a także inne opcje konfiguracji środowiska uruchomieniowego (na przykład typ wyrzucania elementów bezużytecznych).
 - Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet do folderu danych wyjściowych.
 
 `dotnet publish`Dane wyjściowe polecenia są gotowe do wdrożenia w systemie hostingu (na przykład na serwerze, komputerze, Mac, laptopie) do wykonania. Jest to jedyna oficjalnie obsługiwana metoda przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który jest określany przez projekt, system hostingu może lub nie ma zainstalowanego udostępnionego środowiska uruchomieniowego platformy .NET Core. Aby uzyskać więcej informacji, zobacz [publikowanie aplikacji .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](../deploying/deploy-with-cli.md).
@@ -49,7 +49,7 @@ dotnet publish -h|--help
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet publish`Polecenie wywołuje program MSBuild, który wywołuje `Publish` element docelowy. Wszystkie parametry przesłane do `dotnet publish` są przesyłane do programu MSBuild. `-c`Parametry i są `-o` mapowane odpowiednio do programu MSBuild `Configuration` i `OutputPath` właściwości.
+`dotnet publish`Polecenie wywołuje program MSBuild, który wywołuje `Publish` element docelowy. Wszystkie parametry przesłane do `dotnet publish` są przesyłane do programu MSBuild. `-c`Parametry i są `-o` mapowane odpowiednio do programu MSBuild `Configuration` i `PublishDir` właściwości.
 
 `dotnet publish`Polecenie akceptuje Opcje programu MSBuild, takie jak `-p` Ustawienia właściwości i `-l` definiowania rejestratora. Na przykład można ustawić właściwość programu MSBuild przy użyciu formatu: `-p:<NAME>=<VALUE>` . Można również ustawić właściwości związane z publikowaniem, odwołując się do pliku *. pubxml* , na przykład:
 
@@ -85,7 +85,7 @@ Więcej informacji zawierają następujące zasoby:
 
 - **`--force`**
 
-  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie *project.assets.jsw* pliku.
 
 - **`-h|--help`**
 

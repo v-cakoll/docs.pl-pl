@@ -1,5 +1,6 @@
 ---
 title: 'Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
+description: Dowiedz się, jak dodać kontrolki do i usunąć kontrolki z dowolnego formantu kontenera w formularzach, takie jak panel lub kontrolka grupy, a nawet sam formularz.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +13,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c3f2d1f42b130de4d808871265b50510cfb8f47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182290"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325875"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="d77b6-102">Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="d77b6-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="d77b6-103">Typowe zadania w tworzeniu aplikacji są dodawanie formantów i usuwanie formantów z dowolnego formantu kontenera w formularzach (takich jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> formantu, a nawet sam formularz).</span><span class="sxs-lookup"><span data-stu-id="d77b6-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="d77b6-104">W czasie projektowania formanty mogą być przeciągane bezpośrednio na pole panelu lub grupy.</span><span class="sxs-lookup"><span data-stu-id="d77b6-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="d77b6-105">W czasie wykonywania te `Controls` formanty obsługi kolekcji, która śledzi, jakie formanty są umieszczane na nich.</span><span class="sxs-lookup"><span data-stu-id="d77b6-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="5c994-103">Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="5c994-103">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="5c994-104">Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuwanie kontrolek z dowolnych kontrolek kontenera w formularzach (takich jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> kontrolka, a nawet do samego formularza).</span><span class="sxs-lookup"><span data-stu-id="5c994-104">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="5c994-105">W czasie projektowania formanty mogą być przeciągane bezpośrednio do panelu lub pola grupy.</span><span class="sxs-lookup"><span data-stu-id="5c994-105">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="5c994-106">W czasie wykonywania te kontrolki utrzymują `Controls` kolekcję, która śledzi umieszczanie na nich formantów.</span><span class="sxs-lookup"><span data-stu-id="5c994-106">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="d77b6-106">Poniższy przykład kodu ma zastosowanie do dowolnego formantu, który utrzymuje kolekcję formantów w nim.</span><span class="sxs-lookup"><span data-stu-id="d77b6-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+> <span data-ttu-id="5c994-107">Poniższy przykład kodu ma zastosowanie do każdej kontrolki, która zachowuje kolekcję kontrolek.</span><span class="sxs-lookup"><span data-stu-id="5c994-107">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="d77b6-107">Aby programowo dodać formant do kolekcji</span><span class="sxs-lookup"><span data-stu-id="d77b6-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="5c994-108">Aby programowo dodać kontrolkę do kolekcji</span><span class="sxs-lookup"><span data-stu-id="5c994-108">To add a control to a collection programmatically</span></span>  
   
-1. <span data-ttu-id="d77b6-108">Utwórz wystąpienie formantu, które ma zostać dodane.</span><span class="sxs-lookup"><span data-stu-id="d77b6-108">Create an instance of the control to be added.</span></span>  
+1. <span data-ttu-id="5c994-109">Utwórz wystąpienie kontrolki, która ma zostać dodana.</span><span class="sxs-lookup"><span data-stu-id="5c994-109">Create an instance of the control to be added.</span></span>  
   
-2. <span data-ttu-id="d77b6-109">Ustaw właściwości nowego formantu.</span><span class="sxs-lookup"><span data-stu-id="d77b6-109">Set properties of the new control.</span></span>  
+2. <span data-ttu-id="5c994-110">Ustaw właściwości nowej kontrolki.</span><span class="sxs-lookup"><span data-stu-id="5c994-110">Set properties of the new control.</span></span>  
   
-3. <span data-ttu-id="d77b6-110">Dodaj formant `Controls` do kolekcji formantu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="d77b6-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3. <span data-ttu-id="5c994-111">Dodaj kontrolkę do `Controls` kolekcji kontrolki nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="5c994-111">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="d77b6-111">Poniższy przykład kodu pokazuje, jak <xref:System.Windows.Forms.Button> utworzyć wystąpienie formantu.</span><span class="sxs-lookup"><span data-stu-id="d77b6-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="d77b6-112">Wymaga formularza z <xref:System.Windows.Forms.Panel> formantem i że metoda obsługi zdarzeń `NewPanelButton_Click`dla tworzonego przycisku , już istnieje.</span><span class="sxs-lookup"><span data-stu-id="d77b6-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="5c994-112">Poniższy przykład kodu pokazuje, jak utworzyć wystąpienie <xref:System.Windows.Forms.Button> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="5c994-112">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="5c994-113">Wymaga formularza z <xref:System.Windows.Forms.Panel> kontrolką i że metoda obsługi zdarzeń dla tworzonego przycisku `NewPanelButton_Click` już istnieje.</span><span class="sxs-lookup"><span data-stu-id="5c994-113">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +65,13 @@ ms.locfileid: "79182290"
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="d77b6-113">Aby programowo usunąć formanty z kolekcji</span><span class="sxs-lookup"><span data-stu-id="d77b6-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="5c994-114">Aby programowo usunąć kontrolki z kolekcji</span><span class="sxs-lookup"><span data-stu-id="5c994-114">To remove controls from a collection programmatically</span></span>  
   
-1. <span data-ttu-id="d77b6-114">Usuń program obsługi zdarzeń ze zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="d77b6-114">Remove the event handler from the event.</span></span> <span data-ttu-id="d77b6-115">W języku Visual Basic użyj słowa kluczowego [RemoveHandler Statement;](../../../visual-basic/language-reference/statements/removehandler-statement.md) w języku C#, użyj [operatora -=](../../../csharp/language-reference/operators/subtraction-operator.md).</span><span class="sxs-lookup"><span data-stu-id="d77b6-115">In Visual Basic, use the [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) keyword; in C#, use the [-= operator](../../../csharp/language-reference/operators/subtraction-operator.md).</span></span>  
+1. <span data-ttu-id="5c994-115">Usuń procedurę obsługi zdarzeń ze zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="5c994-115">Remove the event handler from the event.</span></span> <span data-ttu-id="5c994-116">W Visual Basic, użyj słowa kluczowego [RemoveHandler instrukcji](../../../visual-basic/language-reference/statements/removehandler-statement.md) ; w języku C# Użyj [operatora-=](../../../csharp/language-reference/operators/subtraction-operator.md).</span><span class="sxs-lookup"><span data-stu-id="5c994-116">In Visual Basic, use the [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) keyword; in C#, use the [-= operator](../../../csharp/language-reference/operators/subtraction-operator.md).</span></span>  
   
-2. <span data-ttu-id="d77b6-116">Użyj `Remove` metody, aby usunąć żądany formant z kolekcji `Controls` panelu.</span><span class="sxs-lookup"><span data-stu-id="d77b6-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2. <span data-ttu-id="5c994-117">Użyj `Remove` metody, aby usunąć żądany formant z `Controls` kolekcji panelu.</span><span class="sxs-lookup"><span data-stu-id="5c994-117">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3. <span data-ttu-id="d77b6-117">Wywołanie <xref:System.Windows.Forms.Control.Dispose%2A> metody, aby zwolnić wszystkie zasoby używane przez formant.</span><span class="sxs-lookup"><span data-stu-id="d77b6-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3. <span data-ttu-id="5c994-118">Wywołaj <xref:System.Windows.Forms.Control.Dispose%2A> metodę, aby zwolnić wszystkie zasoby używane przez formant.</span><span class="sxs-lookup"><span data-stu-id="5c994-118">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,7 +101,7 @@ ms.locfileid: "79182290"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d77b6-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d77b6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c994-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5c994-119">See also</span></span>
 
 - <xref:System.Windows.Forms.Panel>
-- [<span data-ttu-id="d77b6-119">Panel — Formant</span><span class="sxs-lookup"><span data-stu-id="d77b6-119">Panel Control</span></span>](panel-control-windows-forms.md)
+- [<span data-ttu-id="5c994-120">Panel — Formant</span><span class="sxs-lookup"><span data-stu-id="5c994-120">Panel Control</span></span>](panel-control-windows-forms.md)

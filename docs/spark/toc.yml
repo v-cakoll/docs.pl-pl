@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Przewodniki z instrukcjami
   items:
+    - name: Przewodnik po emisji
+      href: how-to-guides/broadcast-guide.md
+    - name: Przewodnik po funkcjach zdefiniowanych przez użytkownika
+      href: how-to-guides/udf-guide.md
     - name: Debugowanie aplikacji
       href: how-to-guides/debug.md
     - name: Przesyłanie zadań do usługi HDInsight

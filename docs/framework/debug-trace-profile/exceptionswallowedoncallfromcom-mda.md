@@ -1,5 +1,6 @@
 ---
 title: exceptionSwallowedOnCallFromCom MDA
+description: Zapoznaj się z asystentem debugowania zarządzanego przez exceptionSwallowedOnCallFromCOM w programie .NET. To zdarzenie MDA występuje, jeśli wystąpił wyjątek, ale nie istnieje dobry sposób na zgłoszenie go.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - messages, informational
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 434f06cf953147d5c245e625db997bed6dbef700
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217525"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415956"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
-Asystent debugowania zarządzanego `exceptionSwallowedOnCallFromCOM` (MDA) jest uaktywniany, gdy wyjątek jest zgłaszany z kodu środowiska uruchomieniowego języka wspólnego (CLR) wywoływanego z modelu COM za pomocą metody, która nie ma niezarządzanego typu zwracanego HRESULT.  
+`exceptionSwallowedOnCallFromCOM`Asystent debugowania zarządzanego (MDA) jest uaktywniany, gdy wyjątek jest zgłaszany z kodu środowiska uruchomieniowego języka wspólnego (CLR) wywoływanego z modelu COM za pomocą metody, która nie ma niezarządzanego zwracanego typu HRESULT.  
   
 ## <a name="symptoms"></a>Objawy  
  Wywołanie zarządzanego składnika z modelu COM zwraca wartość FALSE lub 0. Alternatywnie, jeśli metoda ma typ zwracany void, może nie być wskazywać, że wyjątek został zgłoszony podczas wykonywania metody. W takim przypadku wyjątek zostanie przechwycony w trybie dyskretnym, a wykonywanie zwróci do obiektu wywołującego COM.  
@@ -48,4 +49,4 @@ Asystent debugowania zarządzanego `exceptionSwallowedOnCallFromCOM` (MDA) jest 
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

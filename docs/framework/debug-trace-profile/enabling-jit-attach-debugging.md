@@ -1,16 +1,17 @@
 ---
 title: Włączanie debugowania dołączania JIT
+description: Włącz debugowanie w czasie just-in Time (JIT), aby dołączyć debuger do procesu w przypadku wystąpienia błędów. Może być wyzwalane przez niektóre metody lub funkcje.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d1190c51a9cc6b5322ec832e0d35bc01dc855b12
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217533"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416047"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Włączanie debugowania dołączania JIT
 Debugowanie z dołączaniem JIT jest frazą używaną do opisywania dołączania debugera do procesu w przypadku wystąpienia błędów lub może być wyzwalane przez określone metody lub funkcje.  
@@ -19,15 +20,15 @@ Debugowanie z dołączaniem JIT jest frazą używaną do opisywania dołączania
   
 - Nieobsłużone wyjątki (zarówno w kodzie macierzystym, jak i zarządzanym).  
   
-- Metoda <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> lub funkcja [RaiseFailFastException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raisefailfastexception) (rodzina systemu Windows 7).  
+- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType>Metoda lub funkcja [RaiseFailFastException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raisefailfastexception) (rodzina systemu Windows 7).  
   
 - Błędy krytyczne środowiska uruchomieniowego.  
   
  Debugowanie dołączania JIT jest również wyzwalane przez wywołania następujących metod i funkcji:  
   
-- Metoda <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
+- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>Method.  
   
-- Metoda <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
+- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>Method.  
   
 - Funkcja [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) (Win32).  
   

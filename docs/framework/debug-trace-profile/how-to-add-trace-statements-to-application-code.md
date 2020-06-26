@@ -1,5 +1,6 @@
 ---
 title: 'Porady: dodawanie instrukcji śledzenia do kodu aplikacji'
+description: Dowiedz się, jak dodać instrukcje śledzenia do kodu aplikacji w programie .NET. Metody używane najczęściej do śledzenia są metodami zapisywania danych wyjściowych dla odbiorników.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +14,23 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174748"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415891"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Porady: dodawanie instrukcji śledzenia do kodu aplikacji
-Metody stosowane najczęściej do śledzenia są metody pisania danych wyjściowych do odbiorników: **Write**, **WriteIf**, **WriteLine**, WriteLine , **WriteLine ,** **Assert**, i **Fail**. Metody te można podzielić na dwie kategorie: **Write**, Write , **WriteLine**i **Fail** wszystkie emitują dane wyjściowe bezwarunkowo, natomiast **WriteIf**, **WriteLineIf**i **Assert** testować warunek logiczny i zapisywać lub nie zapisywać na podstawie wartości warunku. **WriteIf** i **WriteLineIf** emitują `true`dane wyjściowe, jeśli warunek `false`jest , i **Assert** emituje dane wyjściowe, jeśli warunek jest .  
+Metody używane najczęściej do śledzenia to metody zapisywania danych wyjściowych dla odbiorników: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**i **niepowodzenia**. Te metody można podzielić na dwie kategorie: **zapis**, **WriteLine**i **Niepowodzenie** wszystkie dane wyjściowe Emituj bezwarunkowo, natomiast **WriteIf**, **WriteLineIf**i **Assert** testuje warunek logiczny, a następnie zapisują lub nie zapisu na podstawie wartości warunku. **WriteIf** i **WriteLineIf** Emituj dane wyjściowe, jeśli warunek jest `true` , i **Assert** emituje dane wyjściowe, jeśli warunek to `false` .  
   
- Podczas projektowania strategii śledzenia i debugowania, należy pomyśleć o tym, jak mają wyglądać dane wyjściowe. Wiele **instrukcji Write** wypełnione niepowiązanych informacji utworzy dziennik, który jest trudny do odczytania. Z drugiej strony za pomocą **WriteLine** umieścić powiązane instrukcje w oddzielnych wierszach może utrudnić rozróżnienie, jakie informacje należą do siebie. Ogólnie rzecz biorąc, należy użyć wielu **Write** instrukcji, gdy chcesz połączyć informacje z wielu źródeł, aby utworzyć jedną wiadomość informacyjną i użyj **WriteLine** instrukcji, gdy chcesz utworzyć pojedynczą, pełną wiadomość.  
+ Podczas projektowania strategii śledzenia i debugowania należy zastanowić się, jak ma wyglądać dane wyjściowe. W przypadku wielu instrukcji **zapisu** zapełnione niepowiązane informacje spowodują utworzenie dziennika, który jest trudny do odczytania. Z drugiej strony, używanie funkcji **WriteLine** do umieszczania powiązanych instrukcji w osobnych wierszach może utrudnić odróżnienie informacji, jakie należą do siebie. Ogólnie rzecz biorąc, Użyj wielu instrukcji **Write** , jeśli chcesz połączyć informacje z wielu źródeł, aby utworzyć pojedynczy komunikat informacyjny, a następnie użyć instrukcji **WriteLine** , gdy chcesz utworzyć pojedynczy, kompletny komunikat.  
   
-### <a name="to-write-a-complete-line"></a>Aby napisać pełny wiersz  
+### <a name="to-write-a-complete-line"></a>Aby napisać kompletny wiersz  
   
 1. Wywołanie <xref:System.Diagnostics.Trace.WriteLine%2A> lub <xref:System.Diagnostics.Trace.WriteLineIf%2A> metody.  
   
-     Powrót karetki jest dołączany na końcu wiadomości zwraca tej metody, tak aby następna wiadomość zwrócona przez **Write**, **WriteIf**, **WriteLine**lub **WriteLineIf** rozpocznie się w następującym wierszu:  
+     Znak powrotu karetki jest dołączany na końcu wiadomości zwracanej przez tę metodę, dzięki czemu następny komunikat zwrócony przez **zapis**, **WriteIf**, **WriteLine**lub **WriteLineIf** rozpocznie się w następującym wierszu:  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -44,11 +45,11 @@ Metody stosowane najczęściej do śledzenia są metody pisania danych wyjściow
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a>Aby napisać wiersz częściowy  
+### <a name="to-write-a-partial-line"></a>Aby napisać linię częściową  
   
 1. Wywołanie <xref:System.Diagnostics.Trace.Write%2A> lub <xref:System.Diagnostics.Trace.WriteIf%2A> metody.  
   
-     Następna wiadomość wystawiona przez **Write**, **WriteIf**, **WriteLine**lub **WriteLineIf** rozpocznie się w tym samym wierszu, co wiadomość wystawiona przez **Write** lub **WriteIf** instrukcji:  
+     Następny komunikat umieszczony przez **zapis**, **WriteIf**, **WriteLine**lub **WriteLineIf** rozpocznie się w tym samym wierszu co komunikat umieszczony przez instrukcję **Write** lub **WriteIf** :  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -65,9 +66,9 @@ Metody stosowane najczęściej do śledzenia są metody pisania danych wyjściow
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Aby sprawdzić, czy istnieją określone warunki przed lub po wykonaniu metody  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Aby sprawdzić, czy określone warunki istnieją przed lub po wykonaniu metody  
   
-1. Wywołanie <xref:System.Diagnostics.Trace.Assert%2A> metody.  
+1. Wywołaj <xref:System.Diagnostics.Trace.Assert%2A> metodę.  
   
     ```vb  
     Dim i As Integer = 4  
@@ -80,7 +81,7 @@ Metody stosowane najczęściej do śledzenia są metody pisania danych wyjściow
     ```  
   
     > [!NOTE]
-    > Można użyć **Assert** zarówno śledzenia i debugowania. W tym przykładzie wyprowadza stos wywołań do dowolnego odbiornika w **kolekcji odbiorników.** Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>potwierdzenia w [kodzie zarządzanym](/visualstudio/debugger/assertions-in-managed-code) i .  
+    > Można użyć metody **Assert** zarówno do śledzenia, jak i debugowania. Ten przykład wyprowadza stos wywołań do dowolnego odbiornika w kolekcji **odbiorników** . Aby uzyskać więcej informacji, zobacz [potwierdzenia w kodzie zarządzanym](/visualstudio/debugger/assertions-in-managed-code) i <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Zobacz też
 

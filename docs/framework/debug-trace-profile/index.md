@@ -1,5 +1,6 @@
 ---
 title: Debugowanie, śledzenie i profilowanie
+description: Przeczytaj informacje o debugowaniu, śledzeniu i profilowania w programie .NET. Zobacz artykuły dotyczące debugowania (just-in-Time), śledzenia i Instrumentacji aplikacji oraz nie tylko.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415982"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debugowanie, śledzenie i profilowanie
-Aby debugować aplikację .NET Framework, środowisko kompilatora i środowiska uruchomieniowego musi być skonfigurowane tak, aby umożliwić debugerowi dołączenie do aplikacji i tworzenie zarówno symboli, jak i map wierszy, jeśli jest to możliwe, dla aplikacji i jej odpowiadającego pośredniego firmy Microsoft język (MSIL). Po debugowaniu aplikacji zarządzanej można ją profilować w celu zwiększenia wydajności. Profilowanie szacuje i opisuje wiersze kodu źródłowego, które generują najczęściej wykonywany kod, oraz czas ich wykonania.  
+Aby debugować aplikację .NET Framework, środowisko kompilatora i środowiska uruchomieniowego musi być skonfigurowane tak, aby umożliwić debugerowi dołączenie do aplikacji i tworzenie zarówno symboli, jak i map wierszy, jeśli to możliwe, dla aplikacji i odpowiedniego języka pośredniego firmy Microsoft (MSIL). Po debugowaniu aplikacji zarządzanej można ją profilować w celu zwiększenia wydajności. Profilowanie szacuje i opisuje wiersze kodu źródłowego, które generują najczęściej wykonywany kod, oraz czas ich wykonania.  
   
- Aplikacje .NET Framework są łatwo debugowane przy użyciu programu Visual Studio, który obsługuje wiele szczegółów konfiguracji. Jeśli program Visual Studio nie jest zainstalowany, można przeanalizować i poprawić wydajność aplikacji .NET Framework przy użyciu klas debugowania w przestrzeni nazw .NET Framework <xref:System.Diagnostics>. Ta przestrzeń nazw zawiera klasy <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>i <xref:System.Diagnostics.TraceSource> dla przepływu wykonywania śledzenia, a także klasy <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>i <xref:System.Diagnostics.PerformanceCounter> na potrzeby profilowania kodu.  
+ Aplikacje .NET Framework są łatwo debugowane przy użyciu programu Visual Studio, który obsługuje wiele szczegółów konfiguracji. Jeśli program Visual Studio nie jest zainstalowany, można przeanalizować i poprawić wydajność aplikacji .NET Framework przy użyciu klas debugowania w <xref:System.Diagnostics> przestrzeni nazw .NET Framework. Ta przestrzeń nazw zawiera <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.Debug> klasy,, i <xref:System.Diagnostics.TraceSource> dla przepływu wykonywania śledzenia oraz <xref:System.Diagnostics.Process> klasy, <xref:System.Diagnostics.EventLog> i <xref:System.Diagnostics.PerformanceCounter> dla profilowania kodu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Włączanie debugowania dołączania JIT](enabling-jit-attach-debugging.md)  
@@ -45,8 +46,8 @@ Aby debugować aplikację .NET Framework, środowisko kompilatora i środowiska 
  Opisuje liczniki, których można użyć do śledzenia wydajności aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Debuguj ASP.NET lub ASP.NET Core aplikacje w programie Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
+ [Debugowanie aplikacji platformy ASP.NET lub ASP.NET Core w programie Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Zawiera wymagania wstępne i instrukcje dotyczące debugowania aplikacji ASP.NET podczas tworzenia lub po wdrożeniu.  
   
- [Podręcznik programowania](../development-guide.md)  
+ [Przewodnik programowania](../development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.

@@ -1,5 +1,6 @@
 ---
 title: fatalExecutionEngineError MDA
+description: Zapoznaj się z asystentem debugowania zarządzanego fatalExecutionEngineError (MDA) w programie .NET, który może zostać aktywowany z powodu nieoczekiwanego zakończenia procesu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corrupted CLR
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217490"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415930"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-Asystent debugowania zarządzanego `fatalExecutionEngineError` (MDA) jest uaktywniany w przypadku wykrycia błędu krytycznego w środowisku uruchomieniowym języka wspólnego (CLR). Proces zostanie zakończony.  
+`fatalExecutionEngineError`Asystent debugowania zarządzanego (MDA) jest uaktywniany w przypadku wykrycia błędu krytycznego w środowisku uruchomieniowym języka wspólnego (CLR). Proces zostanie zakończony.  
   
 ## <a name="symptoms"></a>Objawy  
  Nieoczekiwane zakończenie procesu. Nie można ustalić innych objawów, ponieważ awaria środowiska CLR może wystąpić z różnych powodów.  

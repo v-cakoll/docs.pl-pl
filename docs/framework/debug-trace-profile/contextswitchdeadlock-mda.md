@@ -1,5 +1,6 @@
 ---
 title: contextSwitchDeadlock MDA
+description: Przeczytaj o contextSwitchDeadlock Managed Debug Assistant (MDA) w programie .NET, który jest uaktywniany w przypadku wykrycia zakleszczenia podczas przejścia kontekstu COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 52db4f2c88bac4e8cac621cca989fa10acb43f94
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217556"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416021"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
-Asystent debugowania zarządzanego `contextSwitchDeadlock` (MDA) jest uaktywniany w przypadku wykrycia zakleszczenia podczas próby przejścia kontekstu COM.
+`contextSwitchDeadlock`Asystent debugowania zarządzanego (MDA) jest uaktywniany w przypadku wykrycia zakleszczenia podczas próby przejścia kontekstu com.
 
 ## <a name="symptoms"></a>Objawy
 
@@ -31,9 +32,9 @@ Najbardziej typowym objawem jest to, że wywołanie niezarządzanego składnika 
 
 Najbardziej prawdopodobną przyczyną jest to, że wątek jednowątkowego apartamentu (STA) nie pompuje komunikatów. Wątek STA jest czekał bez pompowania komunikatów lub wykonuje długotrwałe operacje i nie zezwala na pompę kolejki komunikatów.
 
-Zwiększenie użycia pamięci w czasie jest spowodowane przez wątek finalizatora próbujący wywołać `Release` na niezarządzanym składniku COM i ten składnik nie zwraca.  Zapobiega to odzyskiwaniu innych obiektów przez finalizatora.
+Zwiększenie użycia pamięci w czasie jest spowodowane przez wątek finalizatora próbujący wywołać `Release` na niezarządzanym składniku com i ten składnik nie zwraca.  Zapobiega to odzyskiwaniu innych obiektów przez finalizatora.
 
-Domyślnie model wątkowości głównego wątku Visual Basic aplikacji konsolowych to STA. To zdarzenie MDA jest uaktywniane, jeśli wątek STA używa współdziałania COM bezpośrednio lub pośrednio za pośrednictwem środowiska uruchomieniowego języka wspólnego lub formantu innej firmy.  Aby uniknąć aktywowania tego MDA w Visual Basic aplikacji konsolowej, należy zastosować atrybut <xref:System.MTAThreadAttribute> do metody Main lub zmodyfikować aplikację na komunikaty pompy.
+Domyślnie model wątkowości głównego wątku Visual Basic aplikacji konsolowych to STA. To zdarzenie MDA jest uaktywniane, jeśli wątek STA używa współdziałania COM bezpośrednio lub pośrednio za pośrednictwem środowiska uruchomieniowego języka wspólnego lub formantu innej firmy.  Aby uniknąć aktywowania tego MDA w Visual Basic aplikacji konsolowej, Zastosuj <xref:System.MTAThreadAttribute> atrybut do metody Main lub zmodyfikuj aplikację w celu wypróbowania komunikatów.
 
 W przypadku spełnienia wszystkich następujących warunków zdarzenie MDA może być nieaktywne.
 
@@ -74,4 +75,4 @@ Komunikat opisujący bieżący kontekst i kontekst docelowy.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

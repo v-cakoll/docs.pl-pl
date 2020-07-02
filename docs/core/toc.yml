@@ -8,22 +8,12 @@ items:
   - name: Zainstaluj
     items:
       - name: Omówienie
-        href: install/index.md
-      - name: Instalowanie zestawu SDK
-        href: install/sdk.md
-      - name: Instalowanie środowiska uruchomieniowego
-        href: install/runtime.md
-      - name: Obsługiwany system operacyjny i zależności
-        href: install/dependencies.md
-      - name: Usuwanie nieaktualnych środowisk uruchomieniowych i zestawów SDK
-        href: install/remove-runtime-sdk-versions.md
-      - name: Zarządzanie szablonami platformy .NET
-        href: install/templates.md
-      - name: Problemy z poświadczaniem w systemie macOS
-        href: install/macos-notarization-issues.md
-      - name: Jak sprawdzić wersję programu .NET Core
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Instalowanie w systemie Windows
+        href: install/windows.md
+      - name: Instalowanie w systemie macOS
+        href: install/macos.md
+      - name: Instalowanie w systemie Linux
         items:
           - name: Omówienie
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: Usuwanie nieaktualnych środowisk uruchomieniowych i zestawów SDK
+        href: install/remove-runtime-sdk-versions.md
+      - name: Zarządzanie szablonami platformy .NET
+        href: install/templates.md
+      - name: Problemy z poświadczaniem w systemie macOS
+        href: install/macos-notarization-issues.md
+      - name: Jak sprawdzić wersję programu .NET Core
+        href: install/how-to-detect-installed-versions.md
       - name: Instalowanie zlokalizowanej technologii IntelliSense
         href: install/localized-intellisense.md
   - name: Wprowadzenie

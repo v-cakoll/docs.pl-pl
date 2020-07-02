@@ -1,5 +1,6 @@
 ---
 title: Ustawianie tekstu wyświetlanego przez kontrolkę
+description: Dowiedz się, jak ustawić tekst wyświetlany przez kontrolkę Windows Forms. Ustaw lub Zwróć tekst przy użyciu właściwości text lub zmień czcionkę przy użyciu właściwości font.
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,26 +22,26 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 35bae5830bfee8ab91f7b6c7b9dcc6d6b8db00ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622851"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms
 
-Kontrolki Windows Forms zwykle wyświetlają tekst, który jest powiązany z podstawową funkcją formantu. Na przykład kontrolka <xref:System.Windows.Forms.Button> zwykle wyświetla napis wskazujący, jaka akcja zostanie wykonana po kliknięciu przycisku. Dla wszystkich kontrolek można ustawić lub zwrócić tekst przy użyciu właściwości <xref:System.Windows.Forms.Control.Text%2A>. Można zmienić czcionkę przy użyciu właściwości <xref:System.Windows.Forms.Control.Font%2A>.
+Kontrolki Windows Forms zwykle wyświetlają tekst, który jest powiązany z podstawową funkcją formantu. Na przykład <xref:System.Windows.Forms.Button> kontrolka zazwyczaj wyświetla podpis wskazujący, jaka akcja zostanie wykonana po kliknięciu przycisku. Dla wszystkich kontrolek można ustawić lub zwrócić tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Można zmienić czcionkę przy użyciu <xref:System.Windows.Forms.Control.Font%2A> właściwości.
 
 Możesz również ustawić tekst za pomocą [projektanta](#designer).
 
 ## <a name="programmatic"></a>Programowa
 
-1. Ustaw właściwość <xref:System.Windows.Forms.Control.Text%2A> na ciąg.
+1. Ustaw <xref:System.Windows.Forms.Control.Text%2A> Właściwość na ciąg.
 
    Aby utworzyć podkreślony klucz dostępu, program zawiera znak handlowego "i" (&) przed literą, która będzie kluczem dostępu.
 
-2. Ustaw właściwość <xref:System.Windows.Forms.Control.Font%2A> na obiekt typu <xref:System.Drawing.Font>.
+2. Ustaw <xref:System.Windows.Forms.Control.Font%2A> Właściwość na obiekt typu <xref:System.Drawing.Font> .
 
     ```vb
     Button1.Text = "Click here to save changes"
@@ -78,7 +79,7 @@ Możesz również ustawić tekst za pomocą [projektanta](#designer).
 
    Aby utworzyć podkreślony klawisz skrótu, program zawiera znak handlowego "i" (&) przed literą, która będzie klawiszem skrótu.
 
-2. W oknie **Właściwości** wybierz przycisk wielokropka (![przycisk wielokropka (...) w okno właściwości programu Visual Studio](./media/visual-studio-ellipsis-button.png)) obok właściwości **Font** .
+2. W oknie **Właściwości** wybierz przycisk wielokropka ( ![ przycisk wielokropka (...) w okno właściwości programu Visual Studio ](./media/visual-studio-ellipsis-button.png) ) obok właściwości **Font** .
 
    W oknie dialogowym Czcionka standardowa wybierz czcionkę, styl czcionki, rozmiar, efekty (na przykład przekreślenie lub podkreślenie) i skrypt, którego chcesz użyć.
 

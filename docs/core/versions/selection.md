@@ -4,12 +4,12 @@ description: Dowiedz się, jak platforma .NET Core automatycznie wyszukuje i wyb
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803121"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
 
@@ -80,13 +80,13 @@ Platformy docelowe .NET Standard są również ograniczone do docelowej struktur
 
 Gdy uruchamiasz aplikację ze źródła z [`dotnet run`](../tools/dotnet-run.md) , z [**wdrożenia zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z [`dotnet myapp.dll`](../tools/dotnet.md#description) , lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z `myapp.exe` , `dotnet` plik wykonywalny jest **hostem** aplikacji.
 
-Na hoście wybierana jest Najnowsza wersja poprawki zainstalowana na maszynie. Na przykład, jeśli określono `netcoreapp3.0` w pliku projektu i `3.0.4` jest Najnowsza wersja środowiska uruchomieniowego platformy .NET, `3.0.4` jest używane środowisko uruchomieniowe.
+Na hoście wybierana jest Najnowsza wersja poprawki zainstalowana na maszynie. Na przykład, jeśli określono `netcoreapp3.0` w pliku projektu i `3.0.2` jest Najnowsza wersja środowiska uruchomieniowego platformy .NET, `3.0.2` jest używane środowisko uruchomieniowe.
 
 Jeśli nie `3.0.*` zostanie znaleziona akceptowalna wersja, `3.*` zostanie użyta Nowa wersja. Jeśli na przykład zostanie określona `netcoreapp3.0` i `3.1.0` zostanie zainstalowana tylko, aplikacja zostanie uruchomiona przy użyciu `3.1.0` środowiska uruchomieniowego. Takie zachowanie jest określane jako "wersja pomocnicza do przełączenia do przodu". Małe wersje nie będą również brane pod uwagę. Gdy nie zainstalowano akceptowalnego środowiska uruchomieniowego, aplikacja nie zostanie uruchomiona.
 
 Kilka przykładów użycia przedstawia zachowanie, jeśli celem jest 3,0:
 
-- określono ✔️ 3,0. 3.0.5 to najwyższa zainstalowana wersja poprawki. 3.0.5.
+- określono ✔️ 3,0. 3.0.3 to najwyższa zainstalowana wersja poprawki. 3.0.3.
 - ❌3,0 został określony. Nie zainstalowano żadnych wersji 3,0. *. 2.1.1 to najwyższy zainstalowany środowisko uruchomieniowe. Zostanie wyświetlony komunikat o błędzie.
 - określono ✔️ 3,0. Nie zainstalowano żadnych wersji 3,0. *. 3.1.0 to najwyższa zainstalowana wersja środowiska uruchomieniowego. 3.1.0.
 - ❌2,0 został określony. Nie ma zainstalowanych wersji 2. x. 3.0.0 to najwyższe zainstalowane środowisko uruchomieniowe. Zostanie wyświetlony komunikat o błędzie.
@@ -95,27 +95,27 @@ Wersja pomocnicza — do przodu ma jeden efekt uboczny, który może mieć wpły
 
 1. Aplikacja określa, że 3,0 jest wymagana.
 2. Gdy jest uruchomiona, wersja 3,0. * nie jest zainstalowana, jednak 3.1.0 jest. Zostanie użyta wersja 3.1.0.
-3. Później użytkownik zainstaluje 3.0.5 i uruchomi aplikację ponownie, 3.0.5 będzie teraz używany.
+3. Później użytkownik zainstaluje 3.0.3 i uruchomi aplikację ponownie, 3.0.3 będzie teraz używany.
 
-Możliwe jest, że 3.0.5 i 3.1.0 działają inaczej, szczególnie w przypadku scenariuszy, takich jak Serializowanie danych binarnych.
+Możliwe jest, że 3.0.3 i 3.1.0 działają inaczej, szczególnie w przypadku scenariuszy, takich jak Serializowanie danych binarnych.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Wdrożenia z własnym uwzględnieniem obejmują wybrane środowisko uruchomieniowe
 
 Aplikację można opublikować jako samodzielną [**dystrybucję**](../deploying/index.md#publish-self-contained). To podejście służy do łączenia środowiska uruchomieniowego i bibliotek platformy .NET Core z aplikacją. Wdrożenia samodzielne nie mają zależności w środowiskach środowiska uruchomieniowego. Wybór wersji środowiska uruchomieniowego występuje w czasie publikowania, a nie w czasie wykonywania.
 
-Proces publikowania wybiera najnowszą wersję poprawki danej rodziny środowiska uruchomieniowego. Na przykład `dotnet publish` Wybierz pozycję .NET Core 3.0.4, jeśli jest to Najnowsza wersja poprawki w rodzinie środowiska uruchomieniowego programu .NET Core 3,0. Platforma docelowa (łącznie z najnowszymi zainstalowanymi poprawkami zabezpieczeń) jest spakowana z aplikacją.
+Proces publikowania wybiera najnowszą wersję poprawki danej rodziny środowiska uruchomieniowego. Na przykład `dotnet publish` Wybierz pozycję .NET Core 3.0.3, jeśli jest to Najnowsza wersja poprawki w rodzinie środowiska uruchomieniowego programu .NET Core 3,0. Platforma docelowa (łącznie z najnowszymi zainstalowanymi poprawkami zabezpieczeń) jest spakowana z aplikacją.
 
 Jeśli minimalna wersja określona dla aplikacji nie jest spełniona, występuje błąd. `dotnet publish`tworzy powiązanie z najnowszą wersją poprawki środowiska uruchomieniowego (w ramach danej głównej rodziny wersji). `dotnet publish`nie obsługuje semantyki z przekazaniem do przodu `dotnet run` . Aby uzyskać więcej informacji na temat poprawek i wdrożeń samodzielnych, zapoznaj się z artykułem dotyczącym [wyboru poprawek w środowisku uruchomieniowym](../deploying/runtime-patch-selection.md) w temacie Wdrażanie aplikacji .NET Core.
 
 Wdrożenia samodzielne mogą wymagać określonej wersji poprawki. Można zastąpić minimalną wersję poprawki środowiska uruchomieniowego (do nowszej lub niższej wersji) w pliku projektu, jak pokazano w następującym przykładzie:
 
 ``` xml
-<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.3</RuntimeFrameworkVersion>
 ```
 
 `RuntimeFrameworkVersion`Element zastępuje domyślne zasady wersji. W przypadku wdrożeń samodzielnych `RuntimeFrameworkVersion` określa *dokładną* wersję struktury środowiska uruchomieniowego. W przypadku aplikacji zależnych od platformy `RuntimeFrameworkVersion` określa *minimalną* wymaganą wersję środowiska uruchomieniowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Pobierz i zainstaluj program .NET Core](../install/index.md).
+- [Pobierz i zainstaluj program .NET Core](../install/index.yml).
 - [Jak usunąć środowisko uruchomieniowe programu .NET Core i zestaw SDK](../install/remove-runtime-sdk-versions.md).

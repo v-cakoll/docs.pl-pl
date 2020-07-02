@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621590"
 ---
 # <a name="parameter-design"></a>Projekt parametrów
 
@@ -40,7 +40,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
 
  To lepiej komunikuje się relacją między metodami.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Wybór między parametrami enum i Boolean
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Wybór między parametrami enum i Boolean  
  ✔️ Użyj typów wyliczeniowych, jeśli element członkowski mógłby w inny sposób mieć co najmniej dwa parametry logiczne.
 
  ❌NIE używaj wartości logicznych, chyba że masz absolutną pewność, że nie będzie potrzebna więcej niż dwie wartości.
@@ -49,7 +49,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
 
  ✔️ ROZWAŻYĆ użycie wartości logicznych dla parametrów konstruktora, które są w prawdziwie wartościami dwustanowymi i są po prostu używane do inicjowania właściwości logicznych.
 
-### <a name="validate-arguments"></a>Weryfikuj argumenty
+### <a name="validating-arguments"></a>Sprawdzanie poprawności argumentów
  ✔️ weryfikują argumenty przekazane do publicznych, chronionych lub jawnie zaimplementowanych elementów członkowskich. Throw <xref:System.ArgumentException?displayProperty=nameWithType> lub jednej z jej podklas, jeśli sprawdzanie poprawności zakończy się niepowodzeniem.
 
  Należy zauważyć, że rzeczywista weryfikacja nie musi występować w publicznej lub chronionej składowej. Może się to zdarzyć na niższym poziomie w pewnej prywatnej lub wewnętrznej procedurze. Głównym punktem jest to, że cały obszar powierzchni, który jest widoczny dla użytkowników końcowych, sprawdza argumenty.
@@ -66,10 +66,10 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
 
  Jeśli składowa jest wrażliwa na zabezpieczenia, zachęca się do tworzenia kopii, a następnie weryfikacji i przetwarzania argumentu.
 
-### <a name="pass-parameters"></a>Przekazywanie parametrów
+### <a name="parameter-passing"></a>Przekazywanie parametru
  Z perspektywy projektanta struktury istnieją trzy główne grupy parametrów: według wartości parametrów, `ref` parametrów i `out` parametrów.
 
- Gdy argument jest przenoszona przez parametr przez wartość, element członkowski otrzymuje kopię rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, kopia argumentu jest umieszczana na stosie. Jeśli argument jest typem referencyjnym, kopia odwołania jest umieszczana na stosie. Najpopularniejsze języki CLR, takie jak C#, Visual Basic i C++, domyślnie przechodzą parametry według wartości.
+ Gdy argument jest przenoszona przez parametr przez wartość, element członkowski otrzymuje kopię rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, kopia argumentu jest umieszczana na stosie. Jeśli argument jest typem referencyjnym, kopia odwołania jest umieszczana na stosie. Najpopularniejsze języki CLR, takie jak C#, VB.NET i C++, domyślnie przechodzą parametry według wartości.
 
  Gdy argument jest przenoszona przez `ref` parametr, element członkowski otrzymuje odwołanie do rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, odwołanie do argumentu jest umieszczane na stosie. Jeśli argument jest typem referencyjnym, odwołanie do odwołania jest umieszczane na stosie. `Ref`parametrów można użyć, aby zezwolić elementowi członkowskiemu na modyfikowanie argumentów przekazane przez wywołującego.
 
@@ -151,7 +151,7 @@ public class String {
 
  Na przykład nie ma potrzeby przekazywania indeksu początkowego, ponieważ można użyć prostej arytmetycznej wskaźnika, aby osiągnąć ten sam wynik.
 
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+ *Fragmenty &copy; 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
  *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 

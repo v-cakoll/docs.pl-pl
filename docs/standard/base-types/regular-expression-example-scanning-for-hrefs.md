@@ -1,7 +1,7 @@
 ---
 title: 'Przykład wyrażenia regularnego: wyszukiwanie wartości HREF'
 description: Zobacz przykład wyrażeń regularnych w programie .NET. Przykład wyszukuje ciąg wejściowy i wyświetla wszystkie wartości atrybutów href i ich lokalizacje.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802858"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
 Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie odwołania href = "..." wartości i ich lokalizacje w ciągu.  
-  
-## <a name="the-regex-object"></a>Obiekt Regex  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>Obiekt Regex
  Ponieważ `DumpHRefs` Metoda może być wywoływana wiele razy z kodu użytkownika, używa `static` `Shared` metody (w Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> . Dzięki temu aparat wyrażeń regularnych może buforować wyrażenie regularne i pozwala uniknąć obciążenia wystąpienia nowego <xref:System.Text.RegularExpressions.Regex> obiektu za każdym razem, gdy wywoływana jest metoda. <xref:System.Text.RegularExpressions.Match>Obiekt jest następnie używany do iteracji we wszystkich dopasowaniach w ciągu.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -55,6 +57,6 @@ Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie odwołania
   
  Aby rozwiązać te problemy, <xref:System.Text.RegularExpressions.Regex> Klasa obsługuje składnię `(?<name>…)` przechwytywania dopasowania do określonego miejsca (miejsce może być nazwane przy użyciu ciągu lub liczby całkowitej; liczby całkowite można wielokrotnie odwoływać). W rezultacie alternatywne dopasowania dla tego samego ciągu All można skierować do tego samego miejsca. W przypadku konfliktu ostatnie dopasowanie opuszczone w gnieździe to pomyślne dopasowanie. (Jednak kompletna lista wielu dopasowań dla jednego gniazda jest dostępna. Szczegółowe informacje znajdują się w <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wyrażenia regularne .NET](regular-expressions.md)

@@ -1,5 +1,6 @@
 ---
 title: releaseHandleFailed MDA
+description: Zapoznaj się z programem releaseHandleFailed Managed Debug Assistant (MDA), który może być aktywowany z powodu przecieków zasobów lub pamięci w programie .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,48 +11,48 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803641"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
-Asystent `releaseHandleFailed` debugowania zarządzanego (MDA) jest aktywowany <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> jest powiadamianie deweloperów, gdy metoda klasy pochodzące z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> zwraca `false`.  
+`releaseHandleFailed`Asystent debugowania zarządzanego (MDA) jest aktywowany, aby informować deweloperów, gdy <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda klasy pochodnej <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> zwraca `false` .  
   
 ## <a name="symptoms"></a>Objawy  
- Wycieki zasobów lub pamięci.  Jeśli <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda klasy pochodzące <xref:System.Runtime.InteropServices.SafeHandle> z <xref:System.Runtime.InteropServices.CriticalHandle> lub nie powiedzie się, a następnie zasób hermetyzowany przez klasę może nie zostały zwolnione lub oczyszczone.  
+ Przecieki zasobów lub pamięci.  Jeśli <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda klasy wyprowadza z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> zakończy się niepowodzeniem, zasób hermetyzowany przez klasę może nie zostać wystawiony lub oczyszczony.  
   
 ## <a name="cause"></a>Przyczyna  
- Użytkownicy muszą zapewnić <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementację metody, jeśli tworzą <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle>klasy, które wynikają z lub ; okoliczności te są specyficzne dla poszczególnych zasobów. Jednakże wymagania są następujące:  
+ Użytkownicy muszą podać implementację <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metody, jeśli tworzą klasy, które pochodzą z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> ; w takim przypadku okoliczności są specyficzne dla poszczególnych zasobów. Wymagania są jednak następujące:  
   
-- <xref:System.Runtime.InteropServices.SafeHandle>i <xref:System.Runtime.InteropServices.CriticalHandle> typy reprezentują otoki wokół ważnych zasobów procesu. Przeciek pamięci sprawi, że proces będzie bezużyteczny w czasie.  
+- <xref:System.Runtime.InteropServices.SafeHandle>i <xref:System.Runtime.InteropServices.CriticalHandle> typy reprezentują otoki wokół ważnych zasobów procesów. Przeciek pamięci mógłby uniemożliwić korzystanie z tego procesu z upływem czasu.  
   
-- Metoda <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> nie może nie spełniać swojej funkcji. Gdy proces nabywa taki zasób, jest jedynym sposobem, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> aby go zwolnić. W związku z tym błąd oznacza przecieki zasobów.  
+- <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>Wykonanie funkcji przez metodę nie powiodło się. Gdy proces uzyska taki zasób, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> jest jedynym sposobem jego zwolnienia. W związku z tym niepowodzenie oznacza przecieki zasobów.  
   
-- Każdy błąd, który występuje <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>podczas wykonywania , utrudniając uwolnienie zasobu, jest błędem w implementacji samej <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metody. Jest odpowiedzialny za programistę, aby upewnić się, że umowa jest spełniona, nawet jeśli ten kod wywołuje kod autorstwa innej osoby do wykonywania jego funkcji.  
+- Wszelkie błędy, które wystąpią w trakcie wykonywania <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> , utrudniają wydanie zasobu, są usterką w implementacji <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> samej metody. Jest odpowiedzialny programista, aby upewnić się, że kontrakt jest spełniony, nawet jeśli ten kod wywołuje kod utworzony przez kogoś innego do wykonywania swojej funkcji.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Kod, który używa <xref:System.Runtime.InteropServices.SafeHandle> określonego <xref:System.Runtime.InteropServices.CriticalHandle>(lub) typu, który wywołał powiadomienie MDA powinny zostać poddane przeglądowi, <xref:System.Runtime.InteropServices.SafeHandle> szukając miejsc, w których wartość nieprzetworzonego dojścia jest wyodrębniany z i kopiowane w innym miejscu. Jest to zwykle przyczyną błędów w obrębie <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> implementacji, ponieważ użycie wartości uchwytu nieprzetworzonego jest następnie nie jest już śledzone przez środowisko wykonawcze. Jeśli kopia nieprzetworzonego dojścia <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> jest następnie zamykana, może to spowodować niepowodzenie późniejszego wywołania, ponieważ próbuje się zamknąć na tym samym dojściu, który jest teraz nieprawidłowy.  
+ Kod używający określonego <xref:System.Runtime.InteropServices.SafeHandle> typu (lub <xref:System.Runtime.InteropServices.CriticalHandle> ), który wywołał powiadomienie MDA, powinien zostać sprawdzony, szukając miejsc, w których wartość pierwotnego dojścia jest wyodrębniana z <xref:System.Runtime.InteropServices.SafeHandle> i kopiowana w innym miejscu. Jest to typowa przyczyna błędów w ramach <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> implementacji, ponieważ użycie nieprzetworzonej wartości nie jest już śledzone przez środowisko uruchomieniowe. Jeśli kopia nieprzetworzonego dojścia zostanie ZAMKNIĘTA, może to spowodować, że późniejsze <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> wywołanie zakończyło się niepowodzeniem, ponieważ próba zamknięcia w tym samym dojściem jest nieprawidłowa.  
   
- Istnieje kilka sposobów, w których może wystąpić nieprawidłowe duplikacja uchwytu:  
+ Istnieje kilka sposobów, w których może wystąpić nieprawidłowe duplikowanie obsługi:  
   
-- Poszukaj <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> wywołań metody. Wywołania tej metody powinny być niezwykle rzadkie, a wszelkie, które <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> można <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> znaleźć powinny być otoczone wywołaniem i metod. Te te ostatnie metody określają region kodu, w którym wartość nieprzetworzonego dojścia może być bezpiecznie używana. Poza tym regionem lub jeśli liczba odwołań nigdy nie jest zwiększana w pierwszej kolejności, wartość <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> dojścia może zostać unieważniona w dowolnym momencie przez wywołanie lub <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> w innym wątku. Po wszystkich zastosowań <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> zostały wytropione, należy podążać ścieżką nieprzetworzonego uchwytu, aby upewnić `CloseHandle` się, że nie jest przekazywana do niektórych składników, które ostatecznie wywołać lub innej metody macierzystej niskiego poziomu, który zwolni dojście.  
+- Wyszukaj wywołania <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> metody. Wywołania tej metody powinny być przewyższane sporadycznie, a wszystkie znalezione należy ująć w wywołania <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> metod i. Te ostatnie metody określają region kodu, w którym wartość nieprzetworzonego dojścia może być bezpiecznie używana. Poza tym regionem lub jeśli liczba odwołań nigdy nie rośnie w pierwszym miejscu, wartość dojścia może być unieważniona w dowolnym momencie przez wywołanie do <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> lub <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> w innym wątku. Gdy wszystkie zastosowania <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> zostały śledzone w dół, należy postępować zgodnie z ścieżką, aby zapewnić, że nie zostanie ona przekazana do jakiegoś składnika, który ostatecznie wywoła `CloseHandle` lub inną metodę natywną niskiego poziomu, która zwolni uchwyt.  
   
-- Upewnij się, że kod, który <xref:System.Runtime.InteropServices.SafeHandle> jest używany do inicjowania z prawidłową wartość nieprzetworzonego dojścia jest właścicielem dojścia. Jeśli tworzysz <xref:System.Runtime.InteropServices.SafeHandle> wokół dojścia kodu nie `ownsHandle` jest `false` właścicielem bez ustawiania parametru w konstruktorze podstawowym, a następnie <xref:System.Runtime.InteropServices.SafeHandle> właściciel <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> dojścia i rzeczywistego można spróbować zamknąć dojście, co prowadzi do błędu w przypadku <xref:System.Runtime.InteropServices.SafeHandle> utraty wyścigu.  
+- Upewnij się, że kod, który jest używany do inicjowania <xref:System.Runtime.InteropServices.SafeHandle> z prawidłową wartością nieprzetworzonego dojścia, jest właścicielem dojścia. Jeśli zostanie <xref:System.Runtime.InteropServices.SafeHandle> utworzona wokół uchwytu, kod nie jest właścicielem bez ustawienia `ownsHandle` parametru do `false` w konstruktorze podstawowym, a zarówno, <xref:System.Runtime.InteropServices.SafeHandle> jak i właściciel rzeczywistego uchwytu, może próbować zamknąć dojście, prowadząc do błędu w <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> przypadku <xref:System.Runtime.InteropServices.SafeHandle> utraty wyścigu.  
   
-- Gdy <xref:System.Runtime.InteropServices.SafeHandle> jest organizowane między domenami <xref:System.Runtime.InteropServices.SafeHandle> aplikacji, upewnij się, że używane wyprowadzanie zostało oznaczone jako serializable. W rzadkich przypadkach, gdy <xref:System.Runtime.InteropServices.SafeHandle> klasa pochodząca z została wykonana <xref:System.Runtime.Serialization.ISerializable> serializable, należy zaimplementować interfejs lub użyć jednej z innych technik do kontrolowania procesu serializacji i deserializacji ręcznie. Jest to wymagane, ponieważ domyślną akcję serializacji jest utworzenie bitowego klonu zamkniętej <xref:System.Runtime.InteropServices.SafeHandle> wartości nieprzetworzonego dojścia, co powoduje, że dwa wystąpienia myślą, że są właścicielami tego samego dojścia. Obie będą próbowały wywołać <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> ten sam uchwyt w pewnym momencie. Drugi <xref:System.Runtime.InteropServices.SafeHandle> to zrobić nie powiedzie się. Prawidłowy kurs akcji podczas <xref:System.Runtime.InteropServices.SafeHandle> serializacji a `DuplicateHandle` jest wywołanie funkcji lub podobnej funkcji dla typu dojścia macierzystego, aby dokonać różnych kopii uchwyt prawny. Jeśli typ dojścia nie <xref:System.Runtime.InteropServices.SafeHandle> obsługuje tego następnie zawijania typu nie można dokonać serializable.  
+- Gdy <xref:System.Runtime.InteropServices.SafeHandle> jest zorganizowany między domenami aplikacji, upewnij się, że <xref:System.Runtime.InteropServices.SafeHandle> wyprowadzenie wyprowadzania zostało oznaczone jako możliwe do serializacji. W rzadkich przypadkach, gdy Klasa pochodna <xref:System.Runtime.InteropServices.SafeHandle> została przeprowadzona do serializacji, należy zaimplementować <xref:System.Runtime.Serialization.ISerializable> interfejs lub użyć jednej z innych technik do ręcznego sterowania procesem serializacji i deserializacji. Jest to wymagane, ponieważ domyślna akcja serializacji polega na utworzeniu bitowego klonu załączonej nieprzetworzonej wartości, co spowoduje, że dwa <xref:System.Runtime.InteropServices.SafeHandle> wystąpienia zauważają, że są właścicielami tego samego uchwytu. Oba będą podejmować próby wywołania <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> w ramach tego samego uchwytu w pewnym momencie. Druga <xref:System.Runtime.InteropServices.SafeHandle> w tym celu zakończy się niepowodzeniem. Prawidłowym sposobem działania podczas serializowania <xref:System.Runtime.InteropServices.SafeHandle> jest wywołanie `DuplicateHandle` funkcji lub podobnej funkcji dla typu uchwytu natywnego w celu dokonania odrębnej kopii dojścia prawnego. Jeśli typ uchwytu nie obsługuje tego typu, <xref:System.Runtime.InteropServices.SafeHandle> nie można go serializować.  
   
-- Może być możliwe śledzenie, gdzie dojście jest zamykany <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> wcześnie, co prowadzi do awarii, gdy metoda jest ostatecznie wywoływana, umieszczając punkt `CloseHandle` przerwania debugera na natywnej procedury używane do zwalniania dojścia, na przykład funkcji. Może to nie być możliwe w przypadku scenariuszy warunków skrajnych, a nawet średnich testów funkcjonalnych ze względu na duży ruch, z czym często mają do czynienia takie procedury. Może to pomóc instrument kodu, który wywołuje metodę wydania macierzystego, w celu przechwycenia tożsamości wywołującego lub ewentualnie śledzenia pełnego stosu i wartość dojścia zwalnianego.  Wartość dojścia można porównać z wartością zgłoszoną przez to NARZĘDZIE MDA.  
+- Może być możliwe śledzenie, gdzie dojście jest wczesnie zamykane, co prowadzi do błędu, gdy <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> Metoda jest ostatecznie wywoływana, przez umieszczenie punktu przerwania debugera w procedurze natywnej używanej do zwolnienia dojścia, na przykład `CloseHandle` funkcji. Może to nie być możliwe w przypadku scenariuszy obciążeniowych, a nawet średnich testów funkcjonalnych spowodowanych dużym ruchem, które często omawiają te procedury. Może ona ułatwić instrumentację kodu, który wywołuje natywną metodę wydania, aby przechwycić tożsamość obiektu wywołującego lub być może pełny ślad stosu i wartość zwalnianego dojścia.  Wartość dojścia można porównać z wartością raportowaną przez to zdarzenie MDA.  
   
-- Należy zauważyć, że niektóre typy uchwytów natywnych, takich `CloseHandle` jak wszystkie uchwyty Win32, które mogą być zwolnione za pośrednictwem funkcji, współużytkują ten sam obszar nazw uchwytu. Błędne zwolnienie jednego typu uchwytu może powodować problemy z innym. Na przykład przypadkowe zamknięcie uchwytu zdarzenia Win32 dwukrotnie może prowadzić do pozornie niepowiązanego dojścia pliku jest zamykany przedwcześnie. Dzieje się tak, gdy dojście jest zwalniany i wartość dojścia staje się dostępna do użycia do śledzenia innego zasobu, potencjalnie innego typu. Jeśli tak się stanie, a następuje błędne drugie wydanie, dojście niepowiązanych wątku może zostać unieważniony.  
+- Należy zauważyć, że niektóre typy uchwytów natywnych, takie jak wszystkie uchwyty Win32, które mogą być uwalniane za pośrednictwem `CloseHandle` funkcji, współdzielą tę samą przestrzeń nazw uchwytu. Błędne wydanie jednego typu dojścia może spowodować problemy z innym. Na przykład przypadkowe zamknięcie dojścia zdarzenia Win32 dwa razy może prowadzić do przedwczesnego zamknięcia niepowiązanego dojścia do pliku. Dzieje się tak, gdy dojście zostanie wydane, a wartość uchwytu będzie dostępna do śledzenia innego zasobu, a potencjalnie innego typu. W takim przypadku i następuje błędne drugie wydanie, dojście niepowiązanego wątku może być unieważnione.  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
- To MDA nie ma wpływu na CLR.  
+## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat wskazujący, <xref:System.Runtime.InteropServices.SafeHandle> że <xref:System.Runtime.InteropServices.CriticalHandle> lub nie udało się poprawnie zwolnić dojście. Przykład:  
+ Komunikat informujący o tym, że <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> nie powiodło się prawidłowe wydanie dojścia. Przykład:  
   
 ```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
@@ -72,7 +73,7 @@ and closing it directly or building another SafeHandle around it."
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono przykład kodu, `releaseHandleFailed` który można aktywować MDA.  
+ Poniżej znajduje się przykładowy kod, który umożliwia aktywowanie `releaseHandleFailed` MDA.  
   
 ```csharp
 bool ReleaseHandle()  
@@ -88,7 +89,7 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,6 @@
 ---
 title: Importowanie biblioteki typów jako zestawu
+description: Zaimportuj bibliotekę typów, która zawiera definicje typów COM jako zestaw. Dowiedz się, jak utworzyć metadane z biblioteki typów, co spowoduje powstanie zestawu międzyoperacyjnego.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622721"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importowanie biblioteki typów jako zestawu
 
@@ -46,13 +47,13 @@ Po znalezieniu biblioteki typów, która zawiera implementację docelowego typu 
 
   Program Visual Studio automatycznie konwertuje typy COM w bibliotece typów na metadane w zestawie. Aby uzyskać instrukcje, zobacz [How to: Add References to Library Type](how-to-add-references-to-type-libraries.md)librarys.
 
-- [Importer biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md)
+- [Importer biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
   Importer biblioteki typów zawiera opcje wiersza polecenia służące do dostosowywania metadanych w wyniku pliku międzyoperacyjnego, importuje typy z istniejącej biblioteki typów i generuje zestaw międzyoperacyjny i przestrzeń nazw. Aby uzyskać instrukcje, zobacz [How to: Generate zestawy międzyoperacyjności z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - Klasa <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
-  Ta klasa dostarcza metody do konwertowania klas i interfejsów w bibliotece typów na metadane w ramach zestawu. Generuje te same dane wyjściowe metadanych, co Tlbimp. exe. Jednak, w przeciwieństwie do Tlbimp. exe <xref:System.Runtime.InteropServices.TypeLibConverter> , Klasa może skonwertować bibliotekę typów w pamięci na metadane.
+  Ta klasa dostarcza metody do konwertowania klas i interfejsów w bibliotece typów na metadane w ramach zestawu. Generuje te same dane wyjściowe metadanych co Tlbimp.exe. Jednak, w przeciwieństwie do Tlbimp.exe, <xref:System.Runtime.InteropServices.TypeLibConverter> Klasa może skonwertować bibliotekę typów w pamięci na metadane.
 
 - Otoki niestandardowe
 
@@ -70,15 +71,15 @@ Po znalezieniu biblioteki typów, która zawiera implementację docelowego typu 
 
  Aby uzyskać więcej informacji na temat procesu importowania międzyoperacyjności modelu COM, zobacz [Podsumowanie konwersji typu Biblioteka na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Podsumowanie dotyczące konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
 - [Dostosowywanie otok standardowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md)
 - [Wdrażanie aplikacji międzyoperacyjnych](deploying-an-interop-application.md)
-- [Porady: dodawanie odwołań do bibliotek typów](how-to-add-references-to-type-libraries.md)
-- [Porada: generowanie zestawów międzyoperacyjnych z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Instrukcje: Dodawanie odwołań do bibliotek typów](how-to-add-references-to-type-libraries.md)
+- [Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md)

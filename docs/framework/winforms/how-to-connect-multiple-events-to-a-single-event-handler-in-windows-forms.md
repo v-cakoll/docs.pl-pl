@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: łączenie wielu zdarzeń z pojedynczym programem obsługi zdarzeń'
+description: Dowiedz się, jak połączyć wiele zdarzeń z jednym programem obsługi zdarzeń w Windows Forms przy użyciu widoku zdarzeń okno Właściwości w języku C#.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca85c223b46d9a82dbc3e34e3377fb83c075959
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621889"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Porady: łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach systemu Windows
-W projekcie aplikacji może być konieczne użycie jednego programu obsługi zdarzeń dla wielu zdarzeń lub wykonanie tej samej procedury przez wiele zdarzeń. Na przykład często zaawansowaną funkcją oszczędzania czasu jest to, że polecenie menu podnosi takie samo zdarzenie jak przycisk w formularzu, jeśli uwidacznia te same funkcje. Można to zrobić za pomocą widoku zdarzeń okno Właściwości w C# lub przy użyciu słowa kluczowego `Handles` i pola listy rozwijanej **Nazwa klasy** i **Metoda** w edytorze kodu Visual Basic.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Instrukcje: Łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach Windows Forms
+W projekcie aplikacji może być konieczne użycie jednego programu obsługi zdarzeń dla wielu zdarzeń lub wykonanie tej samej procedury przez wiele zdarzeń. Na przykład często zaawansowaną funkcją oszczędzania czasu jest to, że polecenie menu podnosi takie samo zdarzenie jak przycisk w formularzu, jeśli uwidacznia te same funkcje. Można to zrobić za pomocą widoku zdarzeń okno Właściwości w języku C# lub przy użyciu `Handles` słowa kluczowego oraz pól rozwijanych **Nazwa klasy** i **metoda** w edytorze kodu Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Aby połączyć wiele zdarzeń z jednym programem obsługi zdarzeń w Visual Basic  
   
@@ -28,7 +29,7 @@ W projekcie aplikacji może być konieczne użycie jednego programu obsługi zda
   
 3. W polu listy rozwijanej **Nazwa metody** wybierz jedno z zdarzeń, które ma być obsługiwane przez program obsługi zdarzeń.  
   
-4. Edytor kodu wstawia odpowiednią procedurę obsługi zdarzeń i ustawia punkt wstawiania w ramach metody. W poniższym przykładzie jest to zdarzenie <xref:System.Windows.Forms.Control.Click> dla kontrolki <xref:System.Windows.Forms.Button>.  
+4. Edytor kodu wstawia odpowiednią procedurę obsługi zdarzeń i ustawia punkt wstawiania w ramach metody. W poniższym przykładzie jest to <xref:System.Windows.Forms.Control.Click> zdarzenie dla <xref:System.Windows.Forms.Button> kontrolki.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +37,7 @@ W projekcie aplikacji może być konieczne użycie jednego programu obsługi zda
     End Sub  
     ```  
   
-5. Dołącz inne zdarzenia, które mają być obsługiwane w klauzuli `Handles`.  
+5. Dołącz inne zdarzenia, które chcesz obsłużyć do `Handles` klauzuli.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -62,5 +63,5 @@ W projekcie aplikacji może być konieczne użycie jednego programu obsługi zda
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md)
-- [Przegląd procedur obsługi zdarzeń](event-handlers-overview-windows-forms.md)
+- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](creating-event-handlers-in-windows-forms.md)
+- [Przegląd programów obsługi zdarzeń](event-handlers-overview-windows-forms.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803030"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
 
@@ -71,7 +71,7 @@ Wdrożenie wdrożenia zależnego od platformy z co najmniej jedną zależności�
 
 1. Użyj **Menedżera pakietów NuGet** , aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć Menedżera pakietów, wybierz kolejno pozycje **Narzędzia**  >  **Menedżer pakietów NuGet**zarządzanie pakietami  >  **NuGet dla rozwiązania**.
 
-1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json` ) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma go na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft. JSON". Wybierz `Newtonsoft.Json` i, w okienku po prawej stronie, wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
+1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json` ) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma go na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft.Json". Wybierz `Newtonsoft.Json` i, w okienku po prawej stronie, wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
 
 1. Jeśli program `Newtonsoft.Json` jest już zainstalowany w systemie, Dodaj go do projektu, wybierając projekt w prawym okienku na karcie **Zarządzaj pakietami dla rozwiązania** .
 
@@ -98,7 +98,7 @@ Wdrożenie samodzielnego wdrożenia bez zależności innych firm polega na tworz
 
    Aby włączyć tryb niezmienny, kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksplorator rozwiązań**i wybierz polecenie **Edytuj SCD. csproj** lub **Edytuj SCD. vbproj**. Następnie Dodaj następujące wyróżnione wiersze do pliku:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Utwórz kompilację debugowania aplikacji.
 
@@ -192,9 +192,9 @@ Dla każdej platformy, która jest przeznaczona dla aplikacji, wykonaj następuj
 
 1. Wybierz lokalizację, w której program Visual Studio opublikuje aplikację.
 
-   W przypadku publikowania tylko na jednej platformie można zaakceptować wartość domyślną w polu tekstowym **Wybierz folder** . spowoduje to opublikowanie wdrożenia aplikacji zależnej od platformy w katalogu * \< projektu> \bin\release\netcoreapp2.1\publish* .
+   W przypadku publikowania tylko na jednej platformie można zaakceptować wartość domyślną w polu tekstowym **Wybierz folder** . spowoduje to opublikowanie wdrożenia aplikacji zależnej od platformy w katalogu * \<project-directory> \bin\Release\netcoreapp2.1\publish* .
 
-   Jeśli publikujesz na więcej niż jednej platformie, dołącz ciąg, który identyfikuje platformę docelową. Na przykład, jeśli dołączysz ciąg "Linux" do ścieżki pliku, program Visual Studio opublikuje wdrożenie aplikacji zależnej od platformy do katalogu * \< projektu> \bin\release\netcoreapp2.1\publish\linux* .
+   Jeśli publikujesz na więcej niż jednej platformie, dołącz ciąg, który identyfikuje platformę docelową. Na przykład jeśli dołączysz ciąg "Linux" do ścieżki pliku, program Visual Studio opublikuje wdrożenie aplikacji zależnej od platformy w katalogu * \<project-directory> \bin\Release\netcoreapp2.1\publish\linux* .
 
 1. Utwórz profil, wybierając ikonę listy rozwijanej obok przycisku **Publikuj** i wybierając pozycję **Utwórz profil**. Następnie wybierz przycisk **Utwórz profil** , aby utworzyć profil.
 
@@ -268,7 +268,7 @@ Wdrożenie samodzielnego wdrożenia z co najmniej jedną zależnością innych f
 
 1. Użyj **Menedżera pakietów NuGet** , aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć Menedżera pakietów, wybierz kolejno pozycje **Narzędzia**  >  **Menedżer pakietów NuGet**zarządzanie pakietami  >  **NuGet dla rozwiązania**.
 
-1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json` ) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma go na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft. JSON". Wybierz `Newtonsoft.Json` i, w okienku po prawej stronie, wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
+1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json` ) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma go na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft.Json". Wybierz `Newtonsoft.Json` i, w okienku po prawej stronie, wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
 
 1. Jeśli program `Newtonsoft.Json` jest już zainstalowany w systemie, Dodaj go do projektu, wybierając projekt w prawym okienku na karcie **Zarządzaj pakietami dla rozwiązania** .
 
@@ -309,7 +309,7 @@ Podczas wdrażania aplikacji wszystkie zależności innych firm używane w aplik
 
 Można wdrożyć tylko własne wdrożenie z biblioteką innej firmy na platformach obsługiwanych przez tę bibliotekę. Jest to podobne do występowania zależności innych firm z natywnymi zależnościami w ramach wdrożenia zależnego od platformy, w przypadku których natywne zależności nie będą istniały na platformie docelowej, chyba że zostały wcześniej zainstalowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wdrażanie aplikacji .NET Core](index.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

@@ -1,37 +1,39 @@
 ---
-title: Tworzenie aplikacji .NET dla platformy Spark apache na Ubuntu
-description: Dowiedz się, jak zbudować aplikację .NET dla Platformy Spark na Ubuntu
-ms.date: 01/29/2020
+title: Tworzenie aplikacji platformy .NET dla Apache Spark w systemie Ubuntu
+description: Dowiedz się, jak utworzyć platformę .NET dla aplikacji Apache Spark w systemie Ubuntu
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 078d080f4ce293875d8fea8c3e804736b28a2eaf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620940"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Dowiedz się, jak zbudować aplikację .NET dla Platformy Spark na Ubuntu
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Dowiedz się, jak utworzyć platformę .NET dla aplikacji Apache Spark w systemie Ubuntu
 
-W tym artykule dowiesz się, jak utworzyć aplikacje platformy .NET dla platformy Spark w ubuntu.
+W tym artykule przedstawiono sposób kompilowania aplikacji platformy .NET dla Apache Spark w programie Ubuntu.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Jeśli masz już wszystkie poniższe wymagania wstępne, przejdź do kroków [kompilacji.](#build)
+Jeśli masz już wszystkie poniższe wymagania wstępne, przejdź do kroków [kompilacji](#build) .
 
-1. Pobierz i zainstaluj **[zestaw SDK .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)** lub **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** — zainstalowanie zestawu SDK dodaje pasek `dotnet` narzędzi do ścieżki.  Obsługiwane są platformy .NET Core 2.1, 2.2 i 3.1.
+1. Pobieranie i instalowanie **[zestawu .net core 2,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** lub **[zestawu .NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** — zainstalowanie zestawu SDK dodaje `dotnet` łańcucha narzędzi do ścieżki.  Obsługiwane są programy .NET Core 2,1, 2,2 i 3,1.
 
-2. Zainstaluj **[OpenJDK 8](https://openjdk.java.net/install/)**.
+2. Zainstaluj program **[OpenJDK 8](https://openjdk.java.net/install/)**.
 
-   - Można użyć następującego polecenia:
+   - Możesz użyć następującego polecenia:
 
    ```bash
    sudo apt install openjdk-8-jdk
    ```
 
-   * Sprawdź, czy można `java` uruchomić z wiersza polecenia.
+   * Sprawdź, czy możesz uruchamiać `java` z poziomu wiersza polecenia.
 
-      Przykładowe dane wyjściowe wersji java:
+      Przykładowy kod Java — wersja wyjściowa:
 
       ```bash
       openjdk version "1.8.0_191"
@@ -45,7 +47,7 @@ Jeśli masz już wszystkie poniższe wymagania wstępne, przejdź do kroków [ko
       sudo update-alternatives --config java
       ```
 
-3. Zainstaluj **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.
+3. Zainstaluj program **[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)**.
 
    * Uruchom następujące polecenie:
 
@@ -60,11 +62,11 @@ Jeśli masz już wszystkie poniższe wymagania wstępne, przejdź do kroków [ko
       source ~/.bashrc
       ```
 
-       Należy pamiętać, że te zmienne środowiskowe zostaną utracone po zamknięciu terminala. Jeśli zmiany mają być trwałe, `export` dodaj wiersze do `~/.bashrc` pliku.
+       Należy pamiętać, że te zmienne środowiskowe zostaną utracone po zamknięciu terminalu. Jeśli chcesz, aby zmiany były trwałe, Dodaj `export` wiersze do `~/.bashrc` pliku.
 
-   * Sprawdź, czy można `mvn` uruchomić z wiersza polecenia
+   * Sprawdź, czy można uruchomić `mvn` z poziomu wiersza polecenia
 
-       Przykładowe wyjście mvn -version:
+       Przykład MVN — wersja wyjściowa:
 
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
@@ -74,14 +76,14 @@ Jeśli masz już wszystkie poniższe wymagania wstępne, przejdź do kroków [ko
        OS name: "linux", version: "4.4.0-17763-microsoft", arch: "amd64", family: "unix"
        ```
 
-4. Zainstaluj **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.
-Pobierz [apache Spark 2.3+](https://spark.apache.org/downloads.html) i wyodrębnij go do `~/bin/spark-2.3.2-bin-hadoop2.7`lokalnego folderu (np. ). (Obsługiwane wersje iskry to 2.3.*, 2.4.0, 2.4.1, 2.4.3 i 2.4.4)
+4. Zainstaluj **[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**.
+Pobierz [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) i wyodrębnij go do folderu lokalnego (np. `~/bin/spark-2.3.2-bin-hadoop2.7` ). (Obsługiwane wersje platformy Spark to 2,3. *, 2.4.0, 2.4.1, 2.4.3 i 2.4.4)
 
    ```bash
    tar -xvzf /path/to/spark-2.3.2-bin-hadoop2.7.tgz -C ~/bin/spark-2.3.2-bin-hadoop2.7
    ```
 
-   * Dodać niezbędne [zmienne środowiskowe](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` `~/bin/spark-2.3.2-bin-hadoop2.7/`(np.) `PATH` i (np. `$SPARK_HOME/bin:$PATH`)
+   * Dodawanie niezbędnych [zmiennych środowiskowych](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (np. `~/bin/spark-2.3.2-bin-hadoop2.7/` ) i `PATH` (np. `$SPARK_HOME/bin:$PATH` )
 
       ```bash
       export SPARK_HOME=~/bin/spark-2.3.2-hadoop2.7
@@ -89,11 +91,11 @@ Pobierz [apache Spark 2.3+](https://spark.apache.org/downloads.html) i wyodrębn
       source ~/.bashrc
       ```
 
-      Należy pamiętać, że te zmienne środowiskowe zostaną utracone po zamknięciu terminala. Jeśli zmiany mają być trwałe, `export` dodaj wiersze do `~/.bashrc` pliku.
+      Należy pamiętać, że te zmienne środowiskowe zostaną utracone po zamknięciu terminalu. Jeśli chcesz, aby zmiany były trwałe, Dodaj `export` wiersze do `~/.bashrc` pliku.
 
-   * Sprawdź, czy można `spark-shell` uruchomić z wiersza polecenia.
+   * Sprawdź, czy możesz uruchamiać `spark-shell` z poziomu wiersza polecenia.
 
-      Przykładowe wyjście konsoli:
+      Przykładowe dane wyjściowe konsoli:
 
       ```
       Welcome to
@@ -111,44 +113,44 @@ Pobierz [apache Spark 2.3+](https://spark.apache.org/downloads.html) i wyodrębn
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
       ```
 
-Przed przejściem do `dotnet`następnej sekcji upewnij się, że można uruchomić program , `java`, `mvn` `spark-shell` z wiersza polecenia. Czujesz, że jest lepszy sposób? Proszę [otworzyć problem](https://github.com/dotnet/spark/issues) i nie krępuj się przyczynić.
+`dotnet` `java` `mvn` Przed przejściem do następnej sekcji upewnij się, że masz możliwość uruchomienia,,, `spark-shell` z wiersza polecenia. Czy istnieje lepszy sposób? [Otwórz problem](https://github.com/dotnet/spark/issues) i śmiało, aby współtworzyć.
 
 ## <a name="build"></a>Kompilacja
 
-Pozostała część tego przewodnika musi być sklonowana do komputera repozytorium .NET for Apache `~/dotnet.spark/`Spark np.
+W pozostałej części tego przewodnika konieczne będzie sklonowanie repozytorium .NET for Apache Spark na `~/dotnet.spark/` komputerze, na przykład.
 
 ```bash
 git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 ```
 
-### <a name="build-net-for-spark-scala-extensions-layer"></a>Tworzenie warstwy rozszerzeń .NET dla platformy Spark Scala
+### <a name="build-net-for-spark-scala-extensions-layer"></a>Warstwa kompilacji platformy .NET dla platformy Spark Scala
 
-Po przesłaniu aplikacji .NET.NET for Apache Spark ma niezbędną logikę zapisaną w Scali, która informuje Apache Spark, jak obsługiwać żądania (np. żądanie utworzenia nowej sesji Platformy Spark, żądanie przeniesienia danych ze strony .NET do strony JVM itp.). Tę logikę można znaleźć w [.NET dla Kodu Źródłowego Apache Spark Scala](https://github.com/dotnet/spark/tree/master/src/scala).
+Gdy przesyłasz aplikację .NET, platforma .NET dla Apache Spark ma niezbędną logikę zapisaną w Scala, która informuje Apache Spark, jak obsługiwać żądania (np. żądanie utworzenia nowej sesji platformy Spark, żądanie przeniesienia danych z platformy .NET do strony JVM itp.). Tę logikę można znaleźć w programie [.net for Apache Spark Scala kod źródłowy](https://github.com/dotnet/spark/tree/master/src/scala).
 
-Następnym krokiem jest zbudowanie warstwy rozszerzenia .NET for Apache Spark Scala:
+Następnym krokiem jest skompilowanie warstwy rozszerzenia programu .NET for Apache Spark Scala:
 
 ```bash
 cd src/scala
 mvn clean package
 ```
 
-Powinny być widoczne jars utworzone dla obsługiwanych wersji platformy Spark:
+Powinna zostać wyświetlona JARs utworzona dla obsługiwanych wersji platformy Spark:
 
 * `microsoft-spark-2.3.x/target/microsoft-spark-2.3.x-<version>.jar`
 * `microsoft-spark-2.4.x/target/microsoft-spark-2.4.x-<version>.jar`
 
-### <a name="build-net-sample-applications-using-net-core-cli"></a>Tworzenie przykładowych aplikacji platformy .NET przy użyciu interfejsu wiersza polecenia rdzenia .NET
+### <a name="build-net-sample-applications-using-net-core-cli"></a>Tworzenie przykładowych aplikacji platformy .NET przy użyciu interfejs wiersza polecenia platformy .NET Core
 
-W tej sekcji wyjaśniono, jak utworzyć [przykładowe aplikacje](https://github.com/dotnet/spark/tree/master/examples) dla platformy .NET for Apache Spark. Te kroki pomogą w zrozumieniu ogólnego procesu tworzenia dla dowolnej aplikacji platformy .NET for Spark.
+W tej sekcji opisano sposób tworzenia [przykładowych aplikacji](https://github.com/dotnet/spark/tree/master/examples) dla platformy .net dla Apache Spark. Te kroki ułatwią zrozumienie ogólnego procesu tworzenia aplikacji platformy .NET dla platformy Spark.
 
-1. Zbuduj pracownika:
+1. Kompiluj proces roboczy:
 
    ```dotnetcli
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
 
-   Przykładowe wyjście konsoli:
+   Przykładowe dane wyjściowe konsoli:
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
@@ -162,14 +164,14 @@ W tej sekcji wyjaśniono, jak utworzyć [przykładowe aplikacje](https://github.
       Microsoft.Spark.Worker -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish/
    ```
 
-2. Tworzenie próbek:
+2. Kompiluj przykłady:
 
    ```dotnetcli
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
 
-   Przykładowe wyjście konsoli:
+   Przykładowe dane wyjściowe konsoli:
 
    ```bash
    user@machine:/home/user/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
@@ -183,23 +185,23 @@ W tej sekcji wyjaśniono, jak utworzyć [przykładowe aplikacje](https://github.
       Microsoft.Spark.CSharp.Examples -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish/
    ```  
 
-## <a name="run-the-net-for-spark-sample-applications"></a>Uruchamianie przykładowych aplikacji platformy .NET for Spark
+## <a name="run-the-net-for-spark-sample-applications"></a>Uruchamianie przykładowych aplikacji platformy .NET dla platformy Spark
 
-Po utworzeniu przykładów można `spark-submit` użyć do przesłania aplikacji .NET Core. Upewnij się, że masz następujące [wymagania wstępne](#prerequisites) sekcji i zainstalowane Apache Spark.
+Po skompilowaniu przykładów można użyć `spark-submit` do przesyłania aplikacji platformy .NET Core. Upewnij się, że wykonano sekcję [wymagania wstępne](#prerequisites) i zainstalowano Apache Spark.
 
-1. Ustaw `DOTNET_WORKER_DIR` zmienną środowiskową lub `PATH` zmienną środowiskową tak, aby `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`uwzględniała ścieżkę, w `Microsoft.Spark.Worker` której został wygenerowany plik binarny (np. ).
+1. Ustaw `DOTNET_WORKER_DIR` `PATH` zmienną środowiskową lub w celu uwzględnienia ścieżki, w której `Microsoft.Spark.Worker` Wygenerowano plik binarny (np. `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` ).
 
    ```bash
    export DOTNET_WORKER_DIR=~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
    ```
 
-2. Otwórz terminal i przejdź do katalogu, w którym został wygenerowany `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`plik binarny aplikacji (np. ).
+2. Otwórz Terminal i przejdź do katalogu, w którym Wygenerowano plik binarny aplikacji (np. `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` ).
 
    ```bash
    cd ~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
    ```
 
-3. Uruchamianie aplikacji jest zgodne z podstawową strukturą:
+3. Uruchamianie aplikacji jest zgodne ze strukturą podstawową:
 
    ```bash
    spark-submit \
@@ -212,7 +214,7 @@ Po utworzeniu przykładów można `spark-submit` użyć do przesłania aplikacji
 
    Oto kilka przykładów, które można uruchomić:
 
-   * **[Program Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Batch. Prosty](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
       ```bash
       spark-submit \
@@ -222,7 +224,7 @@ Po utworzeniu przykładów można `spark-submit` użyć do przesłania aplikacji
       Microsoft.Spark.CSharp.Examples Sql.Batch.Basic $SPARK_HOME/examples/src/main/resources/people.json
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+   * **[Microsoft. Spark. przykłady. SQL. Streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -232,7 +234,7 @@ Po utworzeniu przykładów można `spark-submit` użyć do przesłania aplikacji
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredNetworkWordCount localhost 9999
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven dostępne)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft. Spark. przykłady. SQL. Streaming. StructuredKafkaWordCount (Maven dostępny)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -243,7 +245,7 @@ Po utworzeniu przykładów można `spark-submit` użyć do przesłania aplikacji
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (słoiki dostarczone)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft. Spark. przykłady. SQL. Streaming. StructuredKafkaWordCount (podano Jars)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \

@@ -1,5 +1,6 @@
 ---
 title: Wywołanie funkcji DLL
+description: Przejrzyj problemy dotyczące wywoływania funkcji DLL, która może wydawać się myląca. Proces wywoływania funkcji różni się w zależności od tego, czy typem zwracanym jest danych kopiowalnych.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90f8f47148e652a9942a35be1564bed94c155216
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620901"
 ---
 # <a name="calling-a-dll-function"></a>Wywołanie funkcji DLL
 Chociaż wywoływanie niezarządzanych funkcji DLL jest niemal identyczne z wywoływaniem innego kodu zarządzanego, istnieją różnice, które mogą sprawiać, że funkcje DLL pozornie pomyleją się w pierwszej kolejności. W tej sekcji przedstawiono tematy opisujące niektóre nietypowe problemy związane z wywoływaniem.  
@@ -28,7 +29,7 @@ Chociaż wywoływanie niezarządzanych funkcji DLL jest niemal identyczne z wywo
  [Funkcje wywołania zwrotnego](callback-functions.md)  
  Zawiera podstawowe informacje na temat funkcji wywołania zwrotnego.  
   
- [Porady: implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)  
+ [Instrukcje: Implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)  
  Opisuje sposób implementowania funkcji wywołania zwrotnego w kodzie zarządzanym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

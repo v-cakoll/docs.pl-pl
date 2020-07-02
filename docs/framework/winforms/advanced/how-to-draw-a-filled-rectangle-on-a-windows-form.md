@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Rysowanie wypełnionego prostokąta w formularzu systemu Windows'
+title: 'Porady: rysowanie wypełnionego prostokąta w formularzu systemu Windows'
+description: Dowiedz się, jak programowo rysować wypełniony prostokąt w formularzu systemu Windows. Poznaj również informacje na temat kompilowania kodu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad8ec97000e29b2194a9eda713aa43d5557b44c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621642"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Instrukcje: Rysowanie wypełnionego prostokąta w formularzu systemu Windows
-W tym przykładzie Rysuje wypełniony prostokąt w formularzu.  
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Porady: rysowanie wypełnionego prostokąta w formularzu systemu Windows
+Ten przykład rysuje wypełniony prostokąt w formularzu.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Drawing.ConceptualHowTos#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
@@ -28,10 +29,10 @@ W tym przykładzie Rysuje wypełniony prostokąt w formularzu.
  [!code-vb[System.Drawing.ConceptualHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Nie można wywołać tej metody w <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń. Rysowane zawartość nie zostanie narysowany ponownie, gdy formularz jest zmiany rozmiaru lub zostanie przesłonięty przez inny formularz. Aby automatycznie odświeżenia zawartości, należy zastąpić <xref:System.Windows.Forms.Control.OnPaint%2A> metody.  
+ Nie można wywołać tej metody w <xref:System.Windows.Forms.Form.Load> obsłudze zdarzeń. Narysowana zawartość nie zostanie ponownie narysowana, jeśli rozmiar formularza zostanie zmieniony lub zasłonięty przez inny formularz. Aby zawartość była odświeżana automatycznie, należy zastąpić <xref:System.Windows.Forms.Control.OnPaint%2A> metodę.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Zawsze powinna wywołać <xref:System.IDisposable.Dispose%2A> na wszystkie obiekty, których wartość użycia zasobów systemowych, takich jak <xref:System.Drawing.Brush> i <xref:System.Drawing.Graphics> obiektów.  
+ Należy zawsze wywoływać <xref:System.IDisposable.Dispose%2A> wszystkie obiekty, które zużywają zasoby systemowe, takie <xref:System.Drawing.Brush> jak <xref:System.Drawing.Graphics> obiekty i.  
   
 ## <a name="see-also"></a>Zobacz także
 

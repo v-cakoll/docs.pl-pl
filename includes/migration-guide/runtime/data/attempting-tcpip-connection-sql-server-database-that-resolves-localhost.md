@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: e36dac19beb6251debef100656670a6623344eea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87cb2570d3d47a2acb85b5557141c0fef885516a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68237837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621821"
 ---
-### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>Próba połączenia TCP/IP z bazą danych programu `localhost` SQL Server, która jest rozpoznawana pod w rozpoznawaniu awarii
+### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>Próba połączenia TCP/IP z SQL Server bazą danych, która jest rozpoznawana jako `localhost` Niepowodzenie
 
-|   |   |
-|---|---|
-|Szczegóły|W programie .NET Framework 4.6 i 4.6.1 podczas próby połączenia TCP/IP <code>localhost</code> z bazą &quot;danych programu SQL Server, która rozwiązuje problem z błędem, wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z programem SQL Server. Serwer nie został znaleziony lub był niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy program SQL Server jest skonfigurowany do zezwalania na połączenia zdalne. (dostawca: interfejsy sieciowe SQL, błąd: 26 - Określono błąd lokalizowania serwera/wystąpienia)&quot;|
-|Sugestia|Ten problem został rozwiązany i poprzednie zachowanie przywrócone w .NET Framework 4.6.2. Aby połączyć się z databsae <code>localhost</code>programu SQL Server, który jest rozpoznawany do , uaktualnienie do programu .NET Framework 4.6.2.|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4,6 i 4.6.1 próbuje nawiązać połączenie TCP/IP z bazą danych SQL Server, która jest rozpoznawana jako <code>localhost</code> błąd, &quot; Wystąpił błąd związany z siecią lub wystąpieniem podczas nawiązywania połączenia z SQL Server. Serwer nie został znaleziony lub był niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy SQL Server jest skonfigurowany do zezwalania na połączenia zdalne. (Dostawca: interfejsy sieciowe SQL, błąd: 26 — błąd lokalizowania określonego serwera/wystąpienia)&quot;
+
+#### <a name="suggestion"></a>Sugestia
+
+Ten problem został rozwiązany i poprzednie zachowanie zostało przywrócone w .NET Framework 4.6.2. Aby nawiązać połączenie z bazą danych SQL Server, która jest rozpoznawana jako <code>localhost</code> , należy przeprowadzić uaktualnienie do .NET Framework 4.6.2.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|

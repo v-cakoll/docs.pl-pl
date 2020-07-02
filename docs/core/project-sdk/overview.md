@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Dowiedz się więcej o zestawach SDK projektu .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803044"
 ---
 # <a name="net-core-project-sdks"></a>Zestawy SDK projektu .NET Core
 
@@ -19,7 +19,7 @@ Projekty .NET Core są skojarzone z zestawem SDK (Software Development Kit). Ka�
 
 Dostępne są następujące zestawy SDK dla platformy .NET Core:
 
-| ID | Opis | Repo|
+| ID | Opis | Repozytorium|
 | - | - | - |
 | `Microsoft.NET.Sdk` | Zestaw .NET Core SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | [Zestaw SDK sieci Web](/aspnet/core/razor-pages/web-sdk) platformy .NET Core | <https://github.com/aspnet/websdk> |
@@ -41,7 +41,7 @@ Projekty .NET Core są oparte na formacie programu [MSBuild](/visualstudio/msbui
 </Project>
 ```
 
-Aby określić zestaw SDK pochodzący z programu NuGet, należy dołączyć wersję na końcu nazwy lub określić nazwę i wersję w pliku *Global. JSON* .
+Aby określić zestaw SDK pochodzący z programu NuGet, należy dołączyć wersję na końcu nazwy lub określić nazwę i wersję w *global.js* pliku.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -176,6 +176,6 @@ Można skonfigurować sposób używania niestandardowego obiektu docelowego. Pon
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instalowanie programu .NET Core](../install/index.md)
+- [Instalowanie programu .NET Core](../install/index.yml)
 - [Jak używać zestawów SDK projektu MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
 - [Pakowanie niestandardowych elementów docelowych programu MSBuild i ich właściwości przy użyciu narzędzia NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

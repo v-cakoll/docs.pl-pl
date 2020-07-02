@@ -1,78 +1,79 @@
 ---
 title: .NET Framework — podręcznik programowania
+description: Poznaj Przewodnik programowania w programie .NET, który wyjaśnia, jak tworzyć, konfigurować, debugować, zabezpieczać i wdrażać aplikacje platformy .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622578"
 ---
-# <a name="net-framework-development-guide"></a>Przewodnik po programach .NET Framework
+# <a name="net-framework-development-guide"></a>Przewodnik programowania .NET Framework
 
-W tej sekcji wyjaśniono, jak tworzyć, konfigurować, debugować, zabezpieczać i wdrażać aplikacje .NET Framework. Sekcja zawiera również informacje na temat obszarów technologicznych, takich jak dynamiczne programowanie, interoperacyjność, rozszerzalność, zarządzanie pamięcią i wątki.  
+W tej sekcji opisano sposób tworzenia, konfigurowania, debugowania, zabezpieczania i wdrażania aplikacji .NET Framework. Sekcja zawiera również informacje o obszarach technologii, takich jak programowanie dynamiczne, współdziałanie, rozszerzalność, zarządzanie pamięcią i wątki.  
   
 ## <a name="in-this-section"></a>W tej sekcji
   
  [Dane i modelowanie](./data/index.md)  
- Zawiera informacje dotyczące uzyskiwania dostępu do danych przy użyciu ADO.NET, zintegrowanej kwerendy językowej (LINQ), usług danych WCF i pliku XML.  
+ Zawiera informacje o sposobach uzyskiwania dostępu do danych za pomocą ADO.NET, języka Integrated Query (LINQ), Usługi danych programu WCF i XML.  
   
  [Aplikacje klienckie](develop-client-apps.md)  
- W tym artykule wyjaśniono, jak tworzyć aplikacje oparte na systemie Windows przy użyciu programu Windows Presentation Foundation (WPF) lub Windows Forms.  
+ Wyjaśnia, jak tworzyć aplikacje oparte na systemie Windows za pomocą Windows Presentation Foundation (WPF) lub Windows Forms.  
   
  [Aplikacje internetowe wykorzystujące technologie ASP.NET](develop-web-apps-with-aspnet.md)  
- Zawiera łącza do informacji dotyczących używania ASP.NET do tworzenia aplikacji sieci web klasy korporacyjnej z minimalnym kodowaniem.  
+ Zawiera łącza do informacji o korzystaniu z programu ASP.NET do tworzenia aplikacji sieci Web klasy korporacyjnej z minimalnym kodowaniem.  
   
  [Zorientowane na usługę aplikacje z usługą WCF](./wcf/index.md)  
- W tym artykule opisano, jak używać programu Windows Communication Foundation (WCF) do tworzenia aplikacji zorientowanych na usługi, które są bezpieczne i niezawodne.  
+ Opisuje sposób używania Windows Communication Foundation (WCF) do kompilowania aplikacji zorientowanych na usługę, które są bezpieczne i niezawodne.  
   
- [Tworzenie przepływów pracy za pomocą programu Windows Workflow Foundation](windows-workflow-foundation/index.md) Zawiera informacje o modelu programowania, przykładach i narzędziach do korzystania z programu Windows Workflow Foundation (WF).  
+ [Kompilowanie przepływów pracy za pomocą Windows Workflow Foundation](windows-workflow-foundation/index.md) Zawiera informacje o modelu programowania, przykładach i narzędziach do używania Windows Workflow Foundation (WF).  
 
  [Aplikacje usług systemu Windows](./windows-services/index.md)  
- W tym artykule wyjaśniono, jak można użyć programu Visual Studio i programu .NET Framework do utworzenia aplikacji zainstalowanej jako usługa i uruchamiania, zatrzymywania i kontrolowania jej zachowania.  
+ Wyjaśnia, jak można użyć programu Visual Studio i .NET Framework, aby utworzyć aplikację, która jest zainstalowana jako usługa, i uruchamiać, zatrzymywać i w inny sposób kontrolować jej zachowanie.  
   
- [Przetwarzanie równoległe, współbieżność i programowanie asynchroniowe w programie .NET](../standard/parallel-processing-and-concurrency.md)  
- Zawiera informacje o zarządzanych wątków, programowania równoległego i wzorców projektowania programowania asynchronii.  
+ [Równoległe przetwarzanie, współbieżność i programowanie asynchroniczne w programie .NET](../standard/parallel-processing-and-concurrency.md)  
+ Zawiera informacje o zarządzanym wątkach, programowaniu równoległym i wzorcach projektów programowania asynchronicznego.  
   
  [Programowanie dla sieci w programie .NET Framework](./network-programming/index.md)  
- W tym artykule opisano warstwowe, rozszerzalne i zarządzane implementacji usług internetowych, które można szybko i łatwo zintegrować z aplikacjami.  
+ Opisuje warstwową, rozszerzalną i zarządzaną implementację usług internetowych, którą można szybko i łatwo zintegrować z aplikacjami.  
   
- [Konfigurowanie aplikacji programu .NET Framework](configure-apps/index.md) W tym artykule wyjaśniono, jak można używać plików konfiguracyjnych do zmiany ustawień bez konieczności ponownego kompilowaniu aplikacji .NET Framework.  
+ [Konfigurowanie aplikacji .NET Framework](configure-apps/index.md) Wyjaśnia, jak można używać plików konfiguracji do zmiany ustawień bez konieczności ponownego kompilowania aplikacji .NET Framework.  
   
  [Kompilowanie aplikacji z architekturą .NET Native](./net-native/index.md)  
- W tym artykule wyjaśniono, jak można używać technologii wstępnej kompilacji natywnej platformy .NET do tworzenia i wdrażania aplikacji ze Sklepu Windows. Program .NET Native kompiluje aplikacje zapisane w kodzie zarządzanym (C#) i przeznaczone dla programu .NET Framework na kod macierzysty.  
+ Wyjaśnia, jak używać technologii prekompilowania .NET Native do kompilowania i wdrażania aplikacji ze sklepu Windows. .NET Native kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#), który jest przeznaczony dla .NET Framework do kodu natywnego.  
   
- [Zabezpieczenia](../standard/security/index.md)  
- Zawiera informacje o klasach i usługach w .NET Framework, które ułatwiają tworzenie bezpiecznych aplikacji.  
+ [Bezpieczeństwo](../standard/security/index.md)  
+ Zawiera informacje dotyczące klas i usług w .NET Framework, które ułatwiają tworzenie bezpiecznych aplikacji.  
   
  [Debugowanie, śledzenie i profilowanie](./debug-trace-profile/index.md)  
- W tym artykule wyjaśniono, jak testować, optymalizować i profilować aplikacje .NET Framework i środowisko aplikacji. Ta sekcja zawiera informacje zarówno dla administratorów, jak i deweloperów.  
+ Wyjaśnia, jak testować, optymalizować i profilować .NET Framework aplikacje oraz środowisko aplikacji. Ta sekcja zawiera informacje dla administratorów i deweloperów.  
   
  [Tworzenie aplikacji dla wielu platform](../standard/cross-platform/index.md)  
- Zawiera informacje o tym, jak można używać programu .NET Framework do tworzenia zestawów, które mogą być współużytkowane na wielu platformach i wielu urządzeniach, takich jak telefony, komputery stacjonarne i sieci Web.  
+ Zawiera informacje o sposobach używania .NET Framework do kompilowania zestawów, które mogą być współużytkowane przez wiele platform i na wielu urządzeniach, takich jak telefony, komputery stacjonarne i sieci Web.  
   
  [Wdrożenie](./deployment/index.md)  
- W tym artykule wyjaśniono, jak spakować i rozpowszechniać aplikację .NET Framework oraz uwzględnić przewodniki wdrażania dla deweloperów i administratorów.  
+ W tym artykule wyjaśniono, jak spakować i dystrybuować aplikację .NET Framework, a także wskazówki dotyczące wdrażania dla deweloperów i administratorów.  
   
  [Wydajność](./performance/index.md)  
- Zawiera informacje o buforowaniu, inicjowaniu z opóźnieniem, niezawodności i zdarzeniach ETW.  
+ Zawiera informacje na temat buforowania, inicjowania z opóźnieniem, niezawodności i zdarzeń ETW.  
 
 ## <a name="reference"></a>Dokumentacja  
- [Biblioteka klas programu .NET Framework](/dotnet/api/?view=netframework-4.7)  
- Dostarcza składnię, przykłady kodu i informacje o użyciu dla każdej klasy, która znajduje się w obszarach nazw programu .NET Framework.  
+ [Biblioteka klas .NET Framework](/dotnet/api/?view=netframework-4.7)  
+ Dostarcza składnię, przykłady kodu i informacje o użyciu dla każdej klasy, która jest zawarta w przestrzeni nazw .NET Framework.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Wprowadzenie](./get-started/index.md)  
  Wyczerpujące omówienie programu .NET Framework i łącza do dodatkowych zasobów.  
   
  [Co nowego](./whats-new/index.md)  
- W tym artykule opisano najważniejsze nowe funkcje i zmiany w najnowszej wersji programu .NET Framework. Zawiera listy nowych i przestarzałych typów i członków oraz zawiera przewodnik dotyczący migracji aplikacji z poprzedniej wersji programu .NET Framework.  
+ Opisuje najważniejsze nowe funkcje i zmiany w najnowszej wersji .NET Framework. Zawiera listy nowych i przestarzałych typów oraz członków, a także Przewodnik migracji aplikacji ze starszej wersji .NET Framework.  
   
- [narzędzia](./tools/index.md)  
- W tym artykule opisano narzędzia ułatwiające tworzenie, konfigurowanie i wdrażanie aplikacji przy użyciu technologii .NET Framework.  
+ [Narzędzia](./tools/index.md)  
+ Zawiera opis narzędzi, które pomagają tworzyć, konfigurować i wdrażać aplikacje przy użyciu technologii .NET Framework.  
   
- [Przykłady i samouczki platformy .NET](../samples-and-tutorials/index.md)  
- Zawiera łącza do przykładów i samouczków, które ułatwią zapoznanie się z programem .NET.
+ [Przykłady i samouczki dotyczące platformy .NET](../samples-and-tutorials/index.md)  
+ Zawiera łącza do przykładów i samouczków, które ułatwiają zapoznanie się z platformą .NET.

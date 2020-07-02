@@ -1,7 +1,7 @@
 ---
 title: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 description: Zapoznaj się z przykładem, jak wyrażenie regularne sprawdza, czy ciągi są w prawidłowym formacie poczty e-mail w programie .NET.
-ms.date: 12/10/2018
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 47ef4dedd20a2b885abaabf72c26de5f3312c66f
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: d303c13dead6b4ba29cb7476c2a9b382a9395aff
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803199"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 
 Poniższy przykład używa wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie poczty e-mail.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="example"></a>Przykład
 
@@ -92,6 +94,6 @@ Jeśli są używane w bibliotece wyrażeń regularnych, można je wywoływać pr
 [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
 [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [.NET Framework — Wyrażenia regularne](regular-expressions.md)

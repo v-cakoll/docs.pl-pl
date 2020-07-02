@@ -1,5 +1,6 @@
 ---
 title: Zaznaczanie tekstu w kontrolce TextBox
+description: Dowiedz się, jak programowo zaznaczyć tekst w kontrolce TextBox Windows Forms. Dowiedz się również, jak wizualnie ostrzec czytelnika znalezionej pozycji ciągu.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +11,29 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 8a32e40f14ddae6f8ddcaa6d62337329df6fde26
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b8fdaff76461c4d6766dfc6afaef5e814d982834
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621564"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Porady: zaznaczanie tekstu w formancie TextBox formularzy systemu Windows
-Możesz zaznaczyć tekst programowo w kontrolce <xref:System.Windows.Forms.TextBox> Windows Forms. Na przykład, jeśli utworzysz funkcję, która przeszukuje tekst dla określonego ciągu, możesz wybrać tekst, aby wizualnie ostrzec czytnik znalezionych pozycji w ciągu.  
+Możesz zaznaczyć tekst programowo w <xref:System.Windows.Forms.TextBox> kontrolce Windows Forms. Na przykład, jeśli utworzysz funkcję, która przeszukuje tekst dla określonego ciągu, możesz wybrać tekst, aby wizualnie ostrzec czytnik znalezionych pozycji w ciągu.  
   
 ### <a name="to-select-text-programmatically"></a>Aby programowo zaznaczyć tekst  
   
-1. Ustaw właściwość <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> na początek tekstu, który chcesz wybrać.  
+1. Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Właściwość na początek tekstu, który chcesz wybrać.  
   
-     Właściwość <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> jest liczbą, która wskazuje punkt wstawiania w ciągu tekstu, z 0 to pozycja z lewej strony. Jeśli właściwość <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> jest ustawiona na wartość równą lub większą od liczby znaków w polu tekstowym, punkt wstawiania zostanie umieszczony po ostatnim znaku.  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>Właściwość jest liczbą, która wskazuje punkt wstawiania w ciągu tekstu, z 0 jest pozycją z lewej strony. Jeśli <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Właściwość jest ustawiona na wartość równą lub większą od liczby znaków w polu tekstowym, punkt wstawiania zostanie umieszczony po ostatnim znaku.  
   
-2. Ustaw właściwość <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> na długość tekstu, który chcesz wybrać.  
+2. Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Właściwość na długość tekstu, który chcesz wybrać.  
   
-     Właściwość <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> jest wartością liczbową, która ustawia szerokość punktu wstawiania. Ustawienie <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> na liczbę większą niż 0 powoduje, że liczba znaków do wybrania, rozpoczynając od bieżącego punktu wstawiania.  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>Właściwość jest wartością liczbową, która ustawia szerokość punktu wstawiania. Ustawienie <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> na wartość większą niż 0 powoduje, że liczba znaków do wybrania, rozpoczynając od bieżącego punktu wstawiania.  
   
-3. Obowiązkowe Dostęp do zaznaczonego tekstu za pomocą właściwości <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>.  
+3. Obowiązkowe Dostęp do zaznaczonego tekstu przez <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Właściwość.  
   
-     Poniższy kod wybiera zawartość pola tekstowego, gdy wystąpi zdarzenie <xref:System.Windows.Forms.Control.Enter> formantu. Ten przykład sprawdza, czy pole tekstowe ma wartość właściwości <xref:System.Windows.Forms.TextBox.Text%2A>, która nie jest `null` lub ciągiem pustym. Gdy pole tekstowe odbierze fokus, bieżący tekst w polu tekstowym jest zaznaczony. Procedura obsługi zdarzeń `TextBox1_Enter` musi być powiązana z kontrolką; Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń w czasie wykonywania dla Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Poniższy kod wybiera zawartość pola tekstowego, gdy <xref:System.Windows.Forms.Control.Enter> wystąpi zdarzenie kontrolki. Ten przykład sprawdza, czy pole tekstowe ma wartość <xref:System.Windows.Forms.TextBox.Text%2A> właściwości, która nie jest `null` lub ciągiem pustym. Gdy pole tekstowe odbierze fokus, bieżący tekst w polu tekstowym jest zaznaczony. `TextBox1_Enter`Program obsługi zdarzeń musi być powiązany z kontrolką. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń w czasie wykonywania dla Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Aby przetestować ten przykład, naciśnij klawisz Tab, dopóki pole tekstowe ma fokus. Po kliknięciu pola tekstowego tekst nie jest zaznaczony.  
   
@@ -76,4 +77,4 @@ Możesz zaznaczyć tekst programowo w kontrolce <xref:System.Windows.Forms.TextB
 - [Instrukcje: tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Instrukcje: umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox, kontrolka](textbox-control-windows-forms.md)
+- [TextBox — Formant](textbox-control-windows-forms.md)

@@ -1,5 +1,6 @@
 ---
 title: Wprowadzenie do programowania grafiki
+description: Rozpocznij korzystanie z interfejsu GDI+ w aplikacji Windows Forms. Dowiedz się, jak wykonać kilka zadań GDI+, takich jak rysowanie i wypełnianie kształtów i tekstu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms], getting started
@@ -7,59 +8,59 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: a61c56b7db40203bbb5102c7f1703c9ab6578c18
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622695"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Wprowadzenie do programowania grafiki
-W tej sekcji pokazano, jak rozpocząć korzystanie z GDI + w aplikacji Windows Forms. Poniższe tematy przedstawiają sposób wykonania kilku GDI + zadań, takich jak rysowanie i napełniania kształty i tekst.  
+W tej sekcji pokazano, jak rozpocząć korzystanie z interfejsu GDI+ w aplikacji Windows Forms. W poniższych tematach pokazano, jak wykonać kilka zadań GDI+, takich jak rysowanie i wypełnianie kształtów i tekstu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)  
- Pokazuje, jak utworzyć <xref:System.Drawing.Graphics> obiektu do rysowania.  
+ [Instrukcje: tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)  
+ Pokazuje, jak utworzyć <xref:System.Drawing.Graphics> obiekt do rysowania.  
   
- [Instrukcje: Tworzenie pióra](how-to-create-a-pen.md)  
- Pokazuje, jak utworzyć pióra.  
+ [Porady: tworzenie pióra](how-to-create-a-pen.md)  
+ Pokazuje, jak utworzyć pióro.  
   
- [Instrukcje: Ustawianie koloru pióra](how-to-set-the-color-of-a-pen.md)  
+ [Porady: ustawianie koloru pióra](how-to-set-the-color-of-a-pen.md)  
  Pokazuje, jak ustawić kolor pióra.  
   
- [Instrukcje: Utwórz pełny obiekt Brush](how-to-create-a-solid-brush.md)  
- Opisuje sposób Tworzenie pędzla.  
+ [Instrukcje: tworzenie pędzla pełnego koloru](how-to-create-a-solid-brush.md)  
+ Opisuje sposób tworzenia pełnego pędzla.  
   
- [Instrukcje: Rysuj linię w formularzu Windows](how-to-draw-a-line-on-a-windows-form.md)  
+ [Instrukcje: rysowanie linii w formularzu systemu Windows](how-to-draw-a-line-on-a-windows-form.md)  
  Pokazuje, jak narysować linię.  
   
- [Instrukcje: Rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)  
- W tym artykule opisano, jak narysować kształt.  
+ [Porady: rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)  
+ Opisuje sposób rysowania kształtu.  
   
- [Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [Instrukcje: rysowanie wypełnionego prostokąta w formularzu systemu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
  Wyjaśnia, jak narysować prostokąt.  
   
- [Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Pokazuje, jak rysowanie wypełnionej elipsy.  
+ [Porady: rysowanie wypełnionej elipsy w formularzu systemu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ Pokazuje, jak narysować wypełnioną elipsę.  
   
- [Instrukcje: Rysowanie tekstu w formularzu Windows](how-to-draw-text-on-a-windows-form.md)  
- W tym artykule opisano sposób rysowania tekstu.  
+ [Porady: rysowanie tekstu w formularzu systemu Windows](how-to-draw-text-on-a-windows-form.md)  
+ Opisuje sposób rysowania tekstu.  
   
- [Instrukcje: Rysowanie pionowego tekstu w formularzu Windows](how-to-draw-vertical-text-on-a-windows-form.md)  
- Pokazuje, jak rysowanie pionowego tekstu.  
+ [Instrukcje: rysowanie pionowego tekstu w formularzu systemu Windows](how-to-draw-vertical-text-on-a-windows-form.md)  
+ Pokazuje, jak rysować tekst pionowy.  
   
- [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)  
- Pokazuje, jak narysować obrazów.  
+ [Instrukcje: renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)  
+ Demonstruje sposób rysowania obrazów.  
   
- [Instrukcje: Tworzenie formularza Windows o określonych kształtach](how-to-create-a-shaped-windows-form.md)  
+ [Instrukcje: tworzenie formularzy systemu Windows o określonych kształtach](how-to-create-a-shaped-windows-form.md)  
  Wyjaśnia, jak zmienić kształt formularza.  
   
- [Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Wyjaśnia, jak kopiowanie pikseli z jednego do drugiego.  
+ [Instrukcje: kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ Wyjaśnia sposób kopiowania pikseli z jednego obszaru do drugiego.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Drawing>  
- W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.  
+ Opisuje tę przestrzeń nazw i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms>  
- W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.
+ Opisuje tę przestrzeń nazw i zawiera linki do wszystkich jej elementów członkowskich.

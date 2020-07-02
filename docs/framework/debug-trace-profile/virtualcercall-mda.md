@@ -1,5 +1,6 @@
 ---
 title: virtualCERCall MDA
+description: Przejrzyj virtualCERCall Managed Debug Assistant (MDA), który jest wywoływany, jeśli program CER zawiera wywołanie metody wirtualnej, której nie można przygotować automatycznie.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -9,27 +10,27 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: a2112baed863b1035cbee4e956c1b6e271ff6e3c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fab0686b1c7d2fbb1485f6e4b82d008495a553cd
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803563"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
-Zarządzany `virtualCERCall` asystent debugowania (MDA) jest aktywowany jako ostrzeżenie wskazujące, że lokacja wywołania w ramach wykresu wywołania regionu ograniczonego wykonywania (CER) odnosi się do wirtualnego obiektu docelowego, czyli wirtualnego wywołania niekonfekcyjnej metody wirtualnej lub wywołania przy użyciu interfejsu. Środowisko wykonawcze języka wspólnego (CLR) nie można przewidzieć metody docelowej tych wywołań z pośredniego języka i analizy metadanych sam. W rezultacie drzewa wywołań nie można przygotować jako część wykresu CER i przerywanie wątku w tym poddrzewie nie może być automatycznie blokowane. Ten obiekt MDA ostrzega o przypadkach, w których cer może <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> wymagać rozszerzenia przy użyciu jawnych wywołań metody, gdy dodatkowe informacje wymagane do obliczenia obiektu docelowego wywołania są znane w czasie wykonywania.  
+`virtualCERCall`Asystent debugowania zarządzanego (MDA) jest uaktywniany jako ostrzeżenie wskazujące, że lokacja wywołania w ramach wykresu wywołania ograniczonego wykonania (CER) odwołuje się do wirtualnego elementu docelowego, czyli wywołania wirtualnego do niekońcowej metody wirtualnej lub wywołania przy użyciu interfejsu. Środowisko uruchomieniowe języka wspólnego (CLR) nie może przewidzieć metody docelowej tych wywołań z poziomu języka pośredniego i analizy metadanych. W związku z tym drzewo wywołań nie może zostać przygotowane jako część wykresu CER, a przerwania wątku w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie powoduje ostrzeganie o przypadkach, w których może być konieczne rozszerzenie CER, za pomocą jawnych wywołań <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metody, gdy dodatkowe informacje wymagane do obliczenia obiektu docelowego wywołania są znane w czasie wykonywania.  
   
 ## <a name="symptoms"></a>Objawy  
- CeRs, które nie są uruchamiane, gdy wątek zostanie przerwany lub domena aplikacji zostanie zwolniona.  
+ CERs, które nie są uruchamiane, gdy wątek zostanie przerwany lub domena aplikacji jest zwolniona.  
   
 ## <a name="cause"></a>Przyczyna  
- Cer zawiera wywołanie metody wirtualnej, która nie może być przygotowana automatycznie.  
+ CER zawiera wywołanie metody wirtualnej, która nie może zostać przygotowana automatycznie.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Zadzwoń <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> do metody wirtualnej.  
+ Wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metody wirtualnej.  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
- To MDA nie ma wpływu na CLR.  
+## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
   
@@ -94,7 +95,7 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

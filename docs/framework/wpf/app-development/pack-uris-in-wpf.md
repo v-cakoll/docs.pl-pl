@@ -1,5 +1,6 @@
 ---
 title: Identyfikatory URI pakietów
+description: Zapoznaj się z wieloma sposobami korzystania z identyfikatorów URI (Uniform Resource Identifier) w celu identyfikowania i ładowania plików w Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1d19dec0d846659f8de6ed518a7f98d224354a82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621694"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
 W Windows Presentation Foundation (WPF) identyfikatory Uniform Resource Identifier (URI) służą do identyfikowania i ładowania plików na wiele sposobów, w tym:
 
-- Określanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], który ma być wyświetlany podczas pierwszego uruchomienia aplikacji.
+- Określenie elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do wyświetlenia podczas pierwszego uruchomienia aplikacji.
 
 - Ładowanie obrazów.
 
@@ -52,7 +53,7 @@ Aby zidentyfikować części, Specyfikacja OPC korzysta z rozszerzalności RFC 2
 
 Schemat, który jest określony za pomocą identyfikatora URI, jest definiowany za pomocą jego prefiksu; protokoły HTTP, FTP i File są dobrze znane przykłady. Schemat URI pakietu używa pakietu "Pack" jako schematu i zawiera dwa składniki: Authority i Path. Poniżej przedstawiono format identyfikatora URI pakietu.
 
-*ścieżka*/*urzędu* Pack://
+ścieżka*urzędu* / *path* Pack://
 
 *Urząd* określa typ pakietu, w którym znajduje się część, a *ścieżka* określa lokalizację części w ramach pakietu.
 
@@ -85,7 +86,7 @@ W poniższych sekcjach opisano sposób tworzenia identyfikatorów URI pakietów 
 
 ## <a name="resource-file-pack-uris"></a>Identyfikatory URI pakietu plików zasobów
 
-Pliki zasobów są konfigurowane jako elementy `Resource` MSBuild i są kompilowane do zestawów. WPF obsługuje konstruowanie identyfikatorów URI pakietów, których można użyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub kompilowane do zestawu, do którego odwołuje się zestaw lokalny.
+Pliki zasobów są konfigurowane jako elementy programu MSBuild `Resource` i są kompilowane do zestawów. WPF obsługuje konstruowanie identyfikatorów URI pakietów, których można użyć do identyfikowania plików zasobów, które są kompilowane do zestawu lokalnego lub kompilowane do zestawu, do którego odwołuje się zestaw lokalny.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -97,11 +98,11 @@ Identyfikator URI pakietu dla pliku zasobu, który jest kompilowany do zestawu l
 
 - **Path**: nazwa pliku zasobów, łącznie z jego ścieżką, względem katalogu głównego projektu zestawu lokalnego.
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla pliku zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], który znajduje się w folderze głównym folderu projektu zestawu lokalnego.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w folderze głównym folderu projektu zestawu lokalnego.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla pliku zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], który znajduje się w podfolderze folderu projektu zestawu lokalnego.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w podfolderze folderu projektu zestawu lokalnego.
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
@@ -115,7 +116,7 @@ Identyfikator URI pakietu dla pliku zasobu, który jest kompilowany do zestawu, 
 
 - **Ścieżka**: nazwa pliku zasobów, który jest kompilowany do zestawu, do którego się odwołuje. Ścieżka musi być zgodna z następującym formatem:
 
-  *AssemblyShortName*{ *; Wersja*] { *; PublicKey*]; składnik/*ścieżka*
+  *AssemblyShortName*{*; Wersja*] {*; PublicKey*]; składnik/*ścieżka*
 
   - **AssemblyShortName**: krótka nazwa przywoływanego zestawu.
 
@@ -127,15 +128,15 @@ Identyfikator URI pakietu dla pliku zasobu, który jest kompilowany do zestawu, 
 
   - **/Path**: nazwa pliku zasobów, łącznie z jego ścieżką, względem katalogu głównego folderu projektu zestawu, do którego się odwołuje.
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobów, który znajduje się w katalogu głównym folderu projektu zestawu, do którego się odwołuje.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w katalogu głównym folderu projektu zestawu, do którego się odwołuje.
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobów, który znajduje się w podfolderze folderu projektu zestawu, do którego się odwołuje.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w podfolderze folderu projektu zestawu, do którego się odwołuje.
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-W poniższym przykładzie przedstawiono identyfikator URI pakietu dla pliku zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], który znajduje się w folderze głównym, do którego odwołuje się folder projektu zestawu o określonej wersji.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w folderze głównym odwołania do folderu projektu zestawu specyficznego dla wersji.
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
@@ -153,11 +154,11 @@ Identyfikator URI pakietu dla pliku zawartości używa następującego urzędu i
 
 - **Path**: nazwa pliku zawartości, włącznie z ścieżką względną do lokalizacji systemu plików głównego zestawu plików wykonywalnych aplikacji.
 
-W poniższym przykładzie przedstawiono identyfikator URI pakietu dla pliku zawartości [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znajdującego się w tym samym folderze, w którym znajduje się zestaw wykonywalny.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zawartości znajdującego się w tym samym folderze, w którym znajduje się zestaw wykonywalny.
 
 `pack://application:,,,/ContentFile.xaml`
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla pliku zawartości [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znajdującego się w podfolderze odnoszącym się do zestawu wykonywalnego aplikacji.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zawartości znajdującego się w podfolderze odnoszącym się do zestawu wykonywalnego aplikacji.
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
@@ -174,11 +175,11 @@ Identyfikator URI pakietu dla witryny pliku pochodzenia używa następującego u
 
 - **Path**: Nazwa lokacji pliku pierwotnego, łącznie z ścieżką względną do lokalizacji, z której został uruchomiony zestaw wykonywalny.
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lokacji pliku pierwotnego, przechowywane w lokalizacji, z której jest uruchamiany zestaw wykonywalny.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lokacji pliku pierwotnego, przechowywany w lokalizacji, z której jest uruchamiany zestaw wykonywalny.
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lokacji pliku pierwotnego, przechowywane w podfolderze, który jest względny do lokalizacji, z której jest uruchamiany zestaw wykonywalny aplikacji.
+Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] witryny pliku pierwotnego, przechowywane w podfolderze, który jest względny do lokalizacji, z której jest uruchamiany zestaw wykonywalny aplikacji.
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
@@ -186,9 +187,9 @@ Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xa
 
 ## <a name="page-files"></a>Pliki stronicowania
 
-Pliki XAML, które są skonfigurowane jako elementy `Page` MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym elementy `Page` MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
+Pliki XAML, które są skonfigurowane jako `Page` elementy programu MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym `Page` elementy MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
 
-Typy plików [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], które są powszechnie skonfigurowane jako elementy programu MSBuild`Page`, mają jeden z następujących elementów jako ich element główny:
+Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików, które są powszechnie skonfigurowane jako elementy programu MSBuild, `Page` mają jeden z następujących elementów jako ich element główny:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -206,7 +207,7 @@ Typy plików [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.
 
 ## <a name="absolute-vs-relative-pack-uris"></a>Bezwzględne a względne identyfikatory URI pakietu
 
-W pełni kwalifikowany identyfikator URI pakietu obejmuje schemat, Urząd i ścieżkę, a także jest traktowany jako bezwzględny identyfikator URI pakietu. Jako uproszczenie dla deweloperów, elementy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zwykle umożliwiają ustawienie odpowiednich atrybutów z względnym identyfikatorem URI, który zawiera tylko ścieżkę.
+W pełni kwalifikowany identyfikator URI pakietu obejmuje schemat, Urząd i ścieżkę, a także jest traktowany jako bezwzględny identyfikator URI pakietu. Jako uproszczenie dla deweloperów, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementy zwykle umożliwiają ustawienie odpowiednich atrybutów z względnym identyfikatorem URI, który zawiera tylko ścieżkę.
 
 Rozważmy na przykład następujący bezwzględny identyfikator URI pakietu dla pliku zasobu w zestawie lokalnym.
 
@@ -255,9 +256,9 @@ Aby określić typ pliku, do którego odwołuje się identyfikator URI pakietu, 
 
 1. Sondowanie metadanych zestawu dla <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybutu, który jest zgodny z identyfikatorem URI pakietu.
 
-2. Jeśli zostanie znaleziony atrybut <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>, ścieżka identyfikatora URI pakietu odwołuje się do pliku zawartości.
+2. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut zostanie znaleziony, ścieżka identyfikatora URI pakietu odwołuje się do pliku zawartości.
 
-3. Jeśli atrybut <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> nie zostanie znaleziony, sonduje pliki zasobów zestawu, które są kompilowane do zestawu lokalnego.
+3. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut nie zostanie znaleziony, sonduje pliki zasobów zestawu, które są kompilowane do zestawu lokalnego.
 
 4. Jeśli zostanie znaleziony plik zasobów zgodny ze ścieżką identyfikatora URI pakietu, ścieżka identyfikatora URI pakietu odwołuje się do pliku zasobów.
 
@@ -267,7 +268,7 @@ Rozpoznawanie identyfikatorów URI nie ma zastosowania w przypadku identyfikator
 
 - Pliki zawartości w przywoływanych zestawach: te typy plików nie są obsługiwane przez WPF.
 
-- Osadzone pliki w przywoływanych zestawach: identyfikatory URI, które identyfikują je są unikatowe, ponieważ zawierają zarówno nazwę przywoływanego zestawu, jak i sufiks `;component`.
+- Osadzone pliki w przywoływanych zestawach: identyfikatory URI, które identyfikują je są unikatowe, ponieważ zawierają zarówno nazwę przywoływanego zestawu, jak i `;component` sufiks.
 
 - Lokacja plików pochodzenia: identyfikatory URI, które identyfikują są unikatowe, ponieważ są jedynymi plikami, które mogą być identyfikowane przez identyfikatory URI pakietów, które zawierają siteoforigin:///Urząd.
 
@@ -297,7 +298,7 @@ Te właściwości można ustawić zarówno przy użyciu znacznika, jak i kodu. W
 
 ### <a name="using-pack-uris-in-markup"></a>Używanie identyfikatorów URI pakietów w znacznikach
 
-Identyfikator URI pakietu jest określony w znaczniku przez ustawienie elementu atrybutu z identyfikatorem URI pakietu. Na przykład:
+Identyfikator URI pakietu jest określony w znaczniku przez ustawienie elementu atrybutu z identyfikatorem URI pakietu. Przykład:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -334,19 +335,19 @@ Tabela 2: względne identyfikatory URI pakietu w znaczniku
 
 ### <a name="using-pack-uris-in-code"></a>Używanie identyfikatorów URI pakietów w kodzie
 
-Należy określić identyfikator URI pakietu w kodzie, tworząc wystąpienie klasy <xref:System.Uri> i przekazując identyfikator URI pakietu jako parametr do konstruktora. Jest to zaprezentowane w poniższym przykładzie.
+Należy określić identyfikator URI pakietu w kodzie, tworząc wystąpienie <xref:System.Uri> klasy i przekazując identyfikator URI pakietu jako parametr do konstruktora. Jest to zaprezentowane w poniższym przykładzie.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-Domyślnie Klasa <xref:System.Uri> traktuje identyfikatory URI pakietu jako bezwzględne. W związku z tym wyjątek jest zgłaszany, gdy wystąpienie klasy <xref:System.Uri> jest tworzone z względnym identyfikatorem URI.
+Domyślnie <xref:System.Uri> Klasa traktuje identyfikatory URI jako bezwzględne. W związku z tym wyjątek jest zgłaszany, gdy wystąpienie <xref:System.Uri> klasy jest tworzone z względnym identyfikatorem URI.
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-Na szczęście <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> przeciążenie konstruktora klasy <xref:System.Uri> akceptuje parametr typu <xref:System.UriKind>, aby określić, czy identyfikator URI pakietu jest bezwzględny, czy względny.
+Na szczęście <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> Przeciążenie <xref:System.Uri> konstruktora klasy akceptuje parametr typu <xref:System.UriKind> , aby można było określić, czy identyfikator URI pakietu jest bezwzględny, czy względny.
 
 ```csharp
 // Absolute URI (default)
@@ -356,7 +357,7 @@ Uri relativeUri = new Uri("/File.xaml",
                         UriKind.Relative);
 ```
 
-Należy określić tylko <xref:System.UriKind.Absolute> lub <xref:System.UriKind.Relative>, gdy masz pewność, że podany identyfikator URI pakietu to jeden lub drugi. Jeśli nie znasz typu używanego identyfikatora URI, na przykład gdy użytkownik wprowadzi identyfikator URI pakietu w czasie wykonywania, zamiast tego użyj <xref:System.UriKind.RelativeOrAbsolute>.
+Należy określić tylko <xref:System.UriKind.Absolute> lub <xref:System.UriKind.Relative> wtedy, gdy masz pewność, że podany identyfikator URI pakietu to jeden lub drugi. Jeśli nie znasz typu używanego identyfikatora URI, na przykład gdy użytkownik wprowadzi identyfikator URI pakietu w czasie wykonywania, użyj <xref:System.UriKind.RelativeOrAbsolute> zamiast tego.
 
 ```csharp
 // Relative or Absolute URI provided by user via a text box
@@ -364,7 +365,7 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-Tabela 3 ilustruje różne względne identyfikatory URI pakietów, które można określić w kodzie przy użyciu <xref:System.Uri?displayProperty=nameWithType>.
+Tabela 3 ilustruje różne względne identyfikatory URI pakietów, które można określić w kodzie przy użyciu <xref:System.Uri?displayProperty=nameWithType> .
 
 Tabela 3: bezwzględne identyfikatory URI pakietu w kodzie
 
@@ -380,7 +381,7 @@ Tabela 3: bezwzględne identyfikatory URI pakietu w kodzie
 |Lokacja pliku źródłowego|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
 |Lokacja pliku źródłowego w podfolderze|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-W tabeli 4 przedstawiono różne względne identyfikatory URI pakietów, które można określić w kodzie przy użyciu <xref:System.Uri?displayProperty=nameWithType>.
+W tabeli 4 przedstawiono różne względne identyfikatory URI pakietów, które można określić w kodzie przy użyciu <xref:System.Uri?displayProperty=nameWithType> .
 
 Tabela 4: względne identyfikatory URI pakietu w kodzie
 
@@ -403,7 +404,7 @@ W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietó
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Określanie interfejsu użytkownika do wyświetlania podczas uruchamiania aplikacji
 
-<xref:System.Windows.Application.StartupUri%2A> określa pierwszy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], który ma być wyświetlany podczas uruchamiania aplikacji WPF. W przypadku aplikacji autonomicznych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może być oknem, jak pokazano w poniższym przykładzie.
+<xref:System.Windows.Application.StartupUri%2A>Określa pierwszy, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] który ma być wyświetlany podczas uruchamiania aplikacji WPF. W przypadku aplikacji autonomicznych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może to być okno, jak pokazano w poniższym przykładzie.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +412,7 @@ Aplikacje autonomiczne i aplikacje przeglądarki XAML (XBAP) mogą również okr
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>, WPF otwiera <xref:System.Windows.Navigation.NavigationWindow> do hostowania strony. W przypadku aplikacji XBAP strona jest wyświetlana w przeglądarce hosta.
+Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą programu <xref:System.Windows.Application.StartupUri%2A> , WPF otwiera <xref:System.Windows.Navigation.NavigationWindow> stronę w celu hostowania strony. W przypadku aplikacji XBAP strona jest wyświetlana w przeglądarce hosta.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -453,12 +454,12 @@ Aby uzyskać więcej informacji na temat pracy z zawartością multimedialną, z
 
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Ładowanie słownika zasobów z lokacji źródłowej
 
-Słowniki zasobów (<xref:System.Windows.ResourceDictionary>) mogą służyć do obsługi motywów aplikacji. Jednym ze sposobów tworzenia motywów i zarządzania nimi jest utworzenie wielu motywów jako słowników zasobów, które znajdują się w lokacji źródłowej aplikacji. Dzięki temu można dodawać i aktualizować motywy bez ponownego kompilowania i wdrażania aplikacji. Te słowniki zasobów można identyfikować i ładować przy użyciu identyfikatorów URI pakietów, które przedstawiono w poniższym przykładzie.
+Słowniki zasobów ( <xref:System.Windows.ResourceDictionary> ) mogą służyć do obsługi motywów aplikacji. Jednym ze sposobów tworzenia motywów i zarządzania nimi jest utworzenie wielu motywów jako słowników zasobów, które znajdują się w lokacji źródłowej aplikacji. Dzięki temu można dodawać i aktualizować motywy bez ponownego kompilowania i wdrażania aplikacji. Te słowniki zasobów można identyfikować i ładować przy użyciu identyfikatorów URI pakietów, które przedstawiono w poniższym przykładzie.
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
 Aby zapoznać się z omówieniem motywów w WPF, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)

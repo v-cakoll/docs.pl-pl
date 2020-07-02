@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02a15f6b9c02002b60c568b9e1d871af49744092
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622146"
 ---
-### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T >. TryPeek może zwrócić poproszenie o wartości null za pośrednictwem jego parametru ze specyfikatorem out
+### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue &lt; T &gt; . TryPeek może zwrócić błędną wartość null za pośrednictwem jego parametru out
 
-|   |   |
-|---|---|
-|Szczegóły|W niektórych przypadkach wielowątkowych <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> może zwrócić wartość true, ale wypełnić parametr out o wartości null (a nie wartość poprawny, podejrzeć).|
-|Sugestia|Ten problem został rozwiązany w .NET Framework 4.5.1. Uaktualnienie do tej struktury rozwiąże problem.|
-|Zakres|Duży|
+#### <a name="details"></a>Szczegóły
+
+W niektórych scenariuszach wielowątkowych <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=fullName> można zwrócić wartość true, ale wypełnić parametr out wartością null (zamiast poprawnej wartości z możliwością wglądu).
+
+#### <a name="suggestion"></a>Sugestia
+
+Ten problem został rozwiązany w .NET Framework 4.5.1. Uaktualnienie do tego środowiska spowoduje rozwiązanie tego problemu.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Duży|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

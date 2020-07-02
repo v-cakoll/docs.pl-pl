@@ -1,5 +1,6 @@
 ---
 title: Kompilowanie projektu międzyoperacyjnego
+description: Zapoznaj się z tematem kompilowania projektu międzyoperacyjnego modelu COM, który jest kompilowany jak projekty zarządzane, jeśli odwołują się do jednego lub większej liczby zestawów zawierających importowane typy COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperation with unmanaged code, compiling
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-ms.openlocfilehash: 32102910ae674a97e941e1346a1898585f503527
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a8dfbeb88d0057eb3c9047b4435f021750ed86d2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620862"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
 
@@ -37,7 +38,7 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 
  Aby skompilować aplikację, która zawiera podstawowy zestaw międzyoperacyjny podczas jego wdrażania, użyj przełącznika kompilatora **/Reference** i określ nazwę zestawu międzyoperacyjnego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)

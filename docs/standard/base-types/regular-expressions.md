@@ -1,7 +1,7 @@
 ---
-title: .NET Framework — Wyrażenia regularne
+title: Wyrażenia regularne .NET
 description: Używaj wyrażeń regularnych do znajdowania określonych wzorców znaków, walidacji tekstu, pracy z podciągami tekstu, & dodawać wyodrębnione ciągi do kolekcji w programie .NET.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802900"
 ---
 # <a name="net-regular-expressions"></a>Wyrażenia regularne .NET
 
@@ -67,6 +67,8 @@ Aby uzyskać więcej informacji na temat języka wyrażeń regularnych, zobacz t
 ## <a name="regular-expression-examples"></a>Przykłady wyrażeń regularnych
 
 <xref:System.String>Klasa zawiera szereg metod wyszukiwania i zamiany ciągów, których można użyć, gdy chcesz zlokalizować ciągi literału w większym ciągu. Wyrażenia regularne są najbardziej przydatne, gdy chcesz zlokalizować jeden z kilku podciągów w większym ciągu lub Kiedy chcesz identyfikować wzorce w ciągu, jak pokazano w poniższych przykładach.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > <xref:System.Web.RegularExpressions>Przestrzeń nazw zawiera wiele obiektów wyrażeń regularnych, które implementują wstępnie zdefiniowane wzorce wyrażeń regularnych na potrzeby analizowania ciągów z dokumentów HTML, XML i ASP.NET. Na przykład <xref:System.Web.RegularExpressions.TagRegex> Klasa identyfikuje początkowe Tagi w ciągu, a <xref:System.Web.RegularExpressions.CommentRegex> Klasa identyfikuje Komentarze ASP.NET w ciągu.

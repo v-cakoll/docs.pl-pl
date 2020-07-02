@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3ba42868577ac20ea2e082f90fc4973a1bfe108
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622376"
 ---
-### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>Tło ribbongroup jest ustawione na przezroczyste w zlokalizowanych kompilacjach
+### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>Tło zestawu wstążki jest ustawione jako przezroczyste w zlokalizowanych kompilacjach
 
-|   |   |
-|---|---|
-|Szczegóły|<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>tło na zlokalizowanych kompilacjach było zawsze malowane za pomocą przezroczystego pędzla, co spowodowało słabe wrażenia z interfejsu użytkownika. Jest to ustalone w .NET Framework 4.7 WPF <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>naprawić przez aktualizację zlokalizowanych zasobów dla , co z kolei zapewnia, że wybrany jest poprawny pędzel.|
-|Sugestia|Uaktualnienie do programu .NET Framework 4.7|
-|Zakres|Brzeg|
+#### <a name="details"></a>Szczegóły
+
+<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=fullName>w tle dla zlokalizowanych kompilacji zawsze jest malowany przezroczysty Pędzel, co spowodowało słabą obsługę interfejsu użytkownika. Ten problem został rozwiązany w .NET Framework 4,7 WPF, aktualizując zlokalizowane zasoby dla <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=fullName> , które z kolei zapewniają, że wybrany jest prawidłowy pędzel.
+
+#### <a name="suggestion"></a>Sugestia
+
+Uaktualnij do .NET Framework 4,7
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|

@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Rysowanie linii w formularzu systemu Windows'
+title: 'Porady: rysowanie linii w formularzu systemu Windows'
+description: Dowiedz się, jak narysować linię w formularzu przez obsługę zdarzenia Paint, a następnie wykonać rysowanie przy użyciu właściwości Graphics PaintEventArgs.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +13,25 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e92dc265c63413275561d0e2e3aa820eaec724
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621629"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a>Instrukcje: Rysowanie linii w formularzu systemu Windows
-W tym przykładzie rysuje linię w formularzu. Zwykle, kiedy rysujesz w formularzu można obsłużyć formularza <xref:System.Windows.Forms.Control.Paint> zdarzenia i wykonywać Rysowanie za pomocą <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> właściwość <xref:System.Windows.Forms.PaintEventArgs>, jak pokazano w poniższym przykładzie  
+# <a name="how-to-draw-a-line-on-a-windows-form"></a>Porady: rysowanie linii w formularzu systemu Windows
+Ten przykład rysuje linię w formularzu. Zwykle podczas rysowania na formularzu jest obsługiwane <xref:System.Windows.Forms.Control.Paint> zdarzenie formularza i wykonywanie rysunku przy użyciu <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> właściwości <xref:System.Windows.Forms.PaintEventArgs> , jak pokazano w tym przykładzie.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Drawing.UsingAPen#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+ Poprzedni przykład jest przeznaczony do użycia z Windows Forms i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e` , który jest parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Zawsze powinna wywołać <xref:System.IDisposable.Dispose%2A> na wszystkie obiekty, których wartość użycia zasobów systemowych, takich jak <xref:System.Drawing.Pen> obiektów.  
+ Należy zawsze wywoływać <xref:System.IDisposable.Dispose%2A> wszystkie obiekty, które zużywają zasoby systemowe, takie jak <xref:System.Drawing.Pen> obiekty.  
   
 ## <a name="see-also"></a>Zobacz także
 

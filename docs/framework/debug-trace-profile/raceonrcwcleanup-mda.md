@@ -1,5 +1,6 @@
 ---
 title: raceOnRCWCleanup MDA
+description: Zapoznaj się z asystentem debugowania zarządzanego raceOnRCWCleanup (MDA), który jest uaktywniany, gdy Otoka RCW jest używana w innym wątku lub na wolnym stosie wątków w programie .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RCW
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e86ef96bebb648c7927ae5fec8b68fc4429b268b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803654"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-Asystent debugowania zarządzanego programu `raceOnRCWCleanup` (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) wykryje, że w [czasie wykonywania wywołania](../../standard/native-interop/runtime-callable-wrapper.md) do wydawania jest używane polecenie, takie jak <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> metody.  
+`raceOnRCWCleanup`Asystent debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) wykryje, że w [środowisku uruchomieniowym](../../standard/native-interop/runtime-callable-wrapper.md) (otoka), gdy wywołanie do wydania jest używane, za pomocą polecenia, takiego jak <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> Metoda.  
   
 ## <a name="symptoms"></a>Objawy  
- Naruszenia zasad dostępu lub uszkodzenia pamięci w trakcie lub po zwolnieniu otoki RCW przy użyciu <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> lub podobnej metody.  
+ Naruszenia zasad dostępu lub uszkodzenia pamięci w trakcie lub po zwolnieniu otoki RCW przy użyciu <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> metody lub podobnej.  
   
 ## <a name="cause"></a>Przyczyna  
  Otoka RCW jest używana w innym wątku lub na stosie wolnego wątku.  Nie można zwolnić otoki RCW, która jest używana.  
@@ -34,7 +35,7 @@ Asystent debugowania zarządzanego programu `raceOnRCWCleanup` (MDA) jest uaktyw
 ## <a name="output"></a>Dane wyjściowe  
  Komunikat z opisem błędu.  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -44,8 +45,8 @@ Asystent debugowania zarządzanego programu `raceOnRCWCleanup` (MDA) jest uaktyw
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

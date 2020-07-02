@@ -3,15 +3,15 @@ title: 'Samouczek: wykrywanie obiektów przy użyciu modelu uczenia głębokiego
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu uczenia głębokiego ONNX w ML.NET do wykrywania obiektów w obrazach.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803407"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -19,7 +19,7 @@ Dowiedz się, jak używać wstępnie przeszkolonego modelu ONNX w programie ML.N
 
 Uczenie modelu wykrywania obiektów od podstaw wymaga ustawienia milionów parametrów, dużej ilości danych szkoleniowych i szerokiej ilości zasobów obliczeniowych (setki godzin procesora GPU). Korzystanie z wstępnie nauczonego modelu umożliwia podwyższenie poziomu procesu szkolenia.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Omówienie problemu
@@ -89,6 +89,8 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
 1. Utwórz **aplikację konsolową .NET Core** o nazwie "ObjectDetection".
 
 1. Zainstaluj **pakiet NuGet Microsoft.ml**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     - W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     - Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**.
@@ -665,7 +667,7 @@ Po instrukcji try-catch Dodaj dodatkową logikę, aby wskazać, że proces jest 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-To wszystko.
+Gotowe.
 
 ## <a name="results"></a>Wyniki
 

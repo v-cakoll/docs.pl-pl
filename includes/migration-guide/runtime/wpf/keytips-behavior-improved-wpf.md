@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 946096cb9510ca12bbd2cecd00099142308b072a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9659068304eb208fd6a0a753273453bc669fbc56
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67856940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621274"
 ---
-### <a name="keytips-behavior-improved-in-wpf"></a>Poprawiono zachowanie etykietek klawiszowych w WPF
+### <a name="keytips-behavior-improved-in-wpf"></a>Ulepszone zachowanie podpowiedzi w WPF
 
-|   |   |
-|---|---|
-|Szczegóły|Zachowanie etykietek klawiszy zostało zmodyfikowane, aby zapewnić parzystość z zachowaniem w programach Microsoft Word i Eksploratorze Windows. Sprawdzając, czy stan keytip jest włączona, <xref:System.Windows.Input.KeyEventArgs.SystemKey> czy nie <xref:System.Windows.Input.Key> w <xref:System.Windows.Input.Key.F11>przypadku (w szczególności lub ) jest wciśnięty, WPF WPF obsługuje klawisze klawiatury odpowiednio. Etykietki klawiszy teraz odrzucić menu, nawet gdy jest otwarty za pomocą myszy.|
-|Sugestia|Nie dotyczy|
-|Zakres|Brzeg|
+#### <a name="details"></a>Szczegóły
+
+W celu zachowania zgodności z zachowaniem programu Microsoft Word i Eksploratora Windows należy zmodyfikować zachowanie podpowiedzi. Sprawdzając, czy stan poradę dotyczącą klawiszy jest włączony lub nie jest w przypadku <xref:System.Windows.Input.KeyEventArgs.SystemKey> naciśnięcia (w szczególności <xref:System.Windows.Input.Key> lub <xref:System.Windows.Input.Key.F11> ), WPF odpowiednio obsługuje klucze poradę dotyczącą klawiszy. Porady dotyczące klawisza umożliwiają teraz odrzucanie menu nawet wtedy, gdy jest ono otwierane za pomocą myszy.
+
+#### <a name="suggestion"></a>Sugestia
+
+Nie dotyczy
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.7.2|
 |Typ|Środowisko uruchomieniowe|

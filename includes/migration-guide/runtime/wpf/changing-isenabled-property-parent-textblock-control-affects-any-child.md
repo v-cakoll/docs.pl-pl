@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 735278848cb7399e414a128afc650a0a1f882337
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 395463225e3c1f1d168dd019ea75966ad54e5a8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621262"
 ---
-### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>Zmiana właściwości IsEnabled nadrzędnego formantu TextBlock wpływa na wszystkie formanty podrzędne
+### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>Zmiana właściwości IsEnabled elementu nadrzędnego formantu TextBlock ma wpływ na wszystkie kontrolki podrzędne
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od .NET Framework 4.6.2, zmiana <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> właściwości <xref:System.Windows.Controls.TextBlock?displayProperty=name> nadrzędnego formantu wpływa na wszelkie formanty <xref:System.Windows.Controls.TextBlock?displayProperty=name> podrzędne (takie jak hiperłącza i przyciski) formantu. W .NET Framework 4.6.1 i wcześniejszych <xref:System.Windows.Controls.TextBlock?displayProperty=name> wersjach formanty wewnątrz <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> nie <xref:System.Windows.Controls.TextBlock?displayProperty=name> zawsze odzwierciedla stan właściwości nadrzędnego.|
-|Sugestia|Brak. Ta zmiana jest zgodna z oczekiwanym <xref:System.Windows.Controls.TextBlock?displayProperty=name> zachowaniem formanty wewnątrz formantu.|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4.6.2, zmiana <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> właściwości elementu nadrzędnego <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> formantu ma wpływ na wszystkie kontrolki podrzędne (takie jak hiperłącza i przyciski) <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> formantu. W .NET Framework 4.6.1 i starszych wersji, formanty wewnątrz <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> nie zawsze odzwierciedlają stan <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> właściwości <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> elementu nadrzędnego.
+
+#### <a name="suggestion"></a>Sugestia
+
+Brak. Ta zmiana jest zgodna z oczekiwanym zachowaniem formantów wewnątrz <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> kontrolki.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|

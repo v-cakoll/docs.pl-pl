@@ -1,5 +1,6 @@
 ---
 title: Organizowanie domyślne dotyczące tablic
+description: Zrozumienie domyślnego kierowania dla tablic. Zapoznaj się z tablicami zarządzanymi, niezarządzanymi tablicami, przekazywaniem parametrów tablicy do kodu .NET i przekazywaniem tablic do modelu COM.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622565"
 ---
 # <a name="default-marshaling-for-arrays"></a>Organizowanie domyślne dotyczące tablic
 W aplikacji składającej się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablicy jako parametry wejściowe/out. W przeciwieństwie do organizatora międzyoperacyjności domyślnie przekazuje tablicę w postaci parametrów.  
@@ -43,13 +44,13 @@ W aplikacji składającej się wyłącznie z kodu zarządzanego środowisko uruc
   
 |Typ niezarządzany|Typ zaimportowany|  
 |--------------------|-------------------|  
-|**SAFEARRAY (** *Typ* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *przekonwertowany***>**<br /><br /> Ranga = 1, Dolna granica = 0. Rozmiar jest znany tylko wtedy, gdy jest podany w podpisie zarządzanym. Tablic bezpiecznych, które nie mają rangi = 1 lub dolnego powiązania = 0, nie mogą być organizowane jako **SZARRAY**.|  
-|*Typ*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *przekonwertowany***>**<br /><br /> Ranga = 1, Dolna granica = 0. Rozmiar jest znany tylko wtedy, gdy jest podany w podpisie zarządzanym.|  
+|**SAFEARRAY (** *Typ* **)**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> Ranga = 1, Dolna granica = 0. Rozmiar jest znany tylko wtedy, gdy jest podany w podpisie zarządzanym. Tablic bezpiecznych, które nie mają rangi = 1 lub dolnego powiązania = 0, nie mogą być organizowane jako **SZARRAY**.|  
+|*Typ*  **[]**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> Ranga = 1, Dolna granica = 0. Rozmiar jest znany tylko wtedy, gdy jest podany w podpisie zarządzanym.|  
   
 ### <a name="safe-arrays"></a>Bezpieczne tablice  
  Gdy bezpieczna tablica jest importowana z biblioteki typów do zestawu .NET, tablica jest konwertowana na tablicę jednowymiarową znanego typu (na przykład **int**). Te same reguły konwersji typów, które mają zastosowanie do parametrów, mają zastosowanie także do elementów tablicy. Na przykład bezpieczna tablica typów **BSTR** jest zarządzaną tablicą ciągów, a bezpieczna tablica wariantów jest zarządzaną tablicą obiektów. Typ elementu **SAFEARRAY** jest przechwytywany z biblioteki typów i zapisywany w wartości **SAFEARRAY** <xref:System.Runtime.InteropServices.UnmanagedType> wyliczenia.  
   
- Ponieważ ranga i granice tablicy bezpiecznej nie można ustalić na podstawie biblioteki typów, przyjmuje się, że ranga jest równa 1, a dolna granica jest przyjmowana jako równa 0. Ranga i granice muszą być zdefiniowane w zarządzanym podpisie wygenerowanym przez [importera biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md). Jeśli ranga przeniesiona do metody w czasie wykonywania różni się od <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> , jest generowany. Jeśli typ tablicy przeszedł w czasie wykonywania różni się, <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> zostanie zgłoszony. W poniższym przykładzie przedstawiono bezpieczne tablice w kodzie zarządzanym i niezarządzanym.  
+ Ponieważ ranga i granice tablicy bezpiecznej nie można ustalić na podstawie biblioteki typów, przyjmuje się, że ranga jest równa 1, a dolna granica jest przyjmowana jako równa 0. Ranga i granice muszą być zdefiniowane w zarządzanym podpisie wygenerowanym przez [importera biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). Jeśli ranga przeniesiona do metody w czasie wykonywania różni się od, <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> jest generowany. Jeśli typ tablicy przeszedł w czasie wykonywania różni się, <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> zostanie zgłoszony. W poniższym przykładzie przedstawiono bezpieczne tablice w kodzie zarządzanym i niezarządzanym.  
   
  **Niezarządzany podpis**  
   
@@ -78,16 +79,16 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Wielowymiarowe lub niezerowe powiązane tablice mogą być organizowane w kodzie zarządzanym, jeśli sygnatura metody utworzona przez Tlbimp. exe została zmodyfikowana w celu wskazania typu elementu **ELEMENT_TYPE_ARRAY** , a nie **ELEMENT_TYPE_SZARRAY**. Alternatywnie można użyć przełącznika **/sysarray** z Tlbimp. exe, aby zaimportować wszystkie tablice jako <xref:System.Array?displayProperty=nameWithType> obiekty. W przypadku, gdy przenoszona tablica jest nazywana wielowymiarową, można edytować kod języka pośredniego firmy Microsoft (MSIL) utworzony przez Tlbimp. exe, a następnie ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat modyfikowania kodu MSIL, zobacz Dostosowywanie wywoływanych [otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
+ Wielowymiarowe lub niezerowe powiązane tablice mogą być organizowane w kodzie zarządzanym, jeśli sygnatura metody utworzona przez Tlbimp.exe jest modyfikowana w celu wskazania typu elementu **ELEMENT_TYPE_ARRAY** zamiast **ELEMENT_TYPE_SZARRAY**. Alternatywnie można użyć przełącznika **/sysarray** z Tlbimp.exe, aby zaimportować wszystkie tablice jako <xref:System.Array?displayProperty=nameWithType> obiekty. W przypadku, gdy przenoszona tablica jest nazywana wielowymiarową, można edytować kod języka pośredniego firmy Microsoft (MSIL) utworzony przez Tlbimp.exe i ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat modyfikowania kodu MSIL, zobacz Dostosowywanie wywoływanych [otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>Tablice w stylu języka C  
  Gdy tablica w stylu C jest importowana z biblioteki typów do zestawu .NET, tablica jest konwertowana na **ELEMENT_TYPE_SZARRAY**.  
   
- Typ elementu tablicy jest określany na podstawie biblioteki typów i zachowywany podczas importowania. Te same reguły konwersji, które mają zastosowanie do parametrów, mają zastosowanie także do elementów tablicy. Na przykład Tablica typów **LPSTR** jest tablicą typów **ciągów** . Tlbimp. exe przechwytuje typ elementu tablicy i stosuje <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut do parametru.  
+ Typ elementu tablicy jest określany na podstawie biblioteki typów i zachowywany podczas importowania. Te same reguły konwersji, które mają zastosowanie do parametrów, mają zastosowanie także do elementów tablicy. Na przykład Tablica typów **LPSTR** jest tablicą typów **ciągów** . Tlbimp.exe przechwytuje typ elementu tablicy i stosuje <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut do parametru.  
   
  Przyjmuje się, że ranga tablicy jest równa 1. Jeśli ranga jest większa niż 1, tablica jest organizowana jako tablica Jednowymiarowa w kolejności kolumny — główna. Dolna granica zawsze jest równa 0.  
   
- Biblioteki typów mogą zawierać tablice o stałej lub zmiennej długości. Tlbimp. exe może importować tylko tablice o stałej długości z bibliotek typów, ponieważ biblioteki typów nie zawierają informacji wymaganych do organizowania tablic o zmiennej długości. W przypadku tablic o stałej długości rozmiar jest zaimportowany z biblioteki typów i przechwytywany w elemencie **MarshalAsAttribute** , który jest stosowany do parametru.  
+ Biblioteki typów mogą zawierać tablice o stałej lub zmiennej długości. Tlbimp.exe może importować tylko tablice o stałej długości z bibliotek typów, ponieważ biblioteki typów nie zawierają informacji wymaganych do organizowania tablic o zmiennej długości. W przypadku tablic o stałej długości rozmiar jest zaimportowany z biblioteki typów i przechwytywany w elemencie **MarshalAsAttribute** , który jest stosowany do parametru.  
   
  Należy ręcznie zdefiniować biblioteki typów zawierające tablice o zmiennej długości, jak pokazano w poniższym przykładzie.  
   
@@ -142,7 +143,7 @@ void New2(ref double ar);
 void New3(ref String ar);
 ```  
   
- Można przekazać Organizatorowi rozmiar tablicy, edytując kod języka pośredniego firmy Microsoft (MSIL) utworzony przez Tlbimp. exe, a następnie ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat modyfikowania kodu MSIL, zobacz Dostosowywanie wywoływanych [otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Aby wskazać liczbę elementów w tablicy, Zastosuj <xref:System.Runtime.InteropServices.MarshalAsAttribute> typ do parametru array definicji metody zarządzanej w jeden z następujących sposobów:  
+ Można przekazać Organizatorowi rozmiar tablicy, edytując kod języka pośredniego firmy Microsoft (MSIL) utworzony przez Tlbimp.exe, a następnie ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat modyfikowania kodu MSIL, zobacz Dostosowywanie wywoływanych [otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Aby wskazać liczbę elementów w tablicy, Zastosuj <xref:System.Runtime.InteropServices.MarshalAsAttribute> Typ do parametru array definicji metody zarządzanej w jeden z następujących sposobów:  
   
 - Zidentyfikuj inny parametr zawierający liczbę elementów w tablicy. Parametry są identyfikowane według pozycji, rozpoczynając od pierwszego parametru jako numer 0.
   
@@ -182,8 +183,8 @@ void New3(ref String ar);
   
 |Typ tablicy zarządzanej|Wyeksportowany jako|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *Typ* ELEMENT_TYPE_SZARRAY**>**|<xref:System.Runtime.InteropServices.UnmanagedType>**. SafeArray (** *Typ* **)**<br /><br /> **UnmanagedType. LPArray**<br /><br /> Typ jest podany w podpisie. Ranga jest zawsze 1, Dolna granica jest zawsze równa 0. Rozmiar jest zawsze znany w czasie wykonywania.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *Typ* **>** **>** *bounds* *rank* ELEMENT_TYPE_ARRAY rangi**\<** [Bounds] **>** **\<**|**UnmanagedType. SAFEARRAY (** *Typ* **)**<br /><br /> **UnmanagedType. LPArray**<br /><br /> Typ, ranga, granice są podane w podpisie. Rozmiar jest zawsze znany w czasie wykonywania.|  
+|**ELEMENT_TYPE_SZARRAY****\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType>**. SafeArray (** *Typ* **)**<br /><br /> **UnmanagedType. LPArray**<br /><br /> Typ jest podany w podpisie. Ranga jest zawsze 1, Dolna granica jest zawsze równa 0. Rozmiar jest zawsze znany w czasie wykonywania.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType. SAFEARRAY (** *Typ* **)**<br /><br /> **UnmanagedType. LPArray**<br /><br /> Typ, ranga, granice są podane w podpisie. Rozmiar jest zawsze znany w czasie wykonywania.|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType. SAFEARRAY (** *Typ* **)**<br /><br /> Typ, ranga, granice i rozmiar są zawsze znane w czasie wykonywania.|  
   
  Istnieje ograniczenie dotyczące automatyzacji OLE odnoszące się do tablic struktur, które zawierają LPSTR lub LPWSTR.  W związku z tym pola **String** muszą być organizowane jako **UnmanagedType. BSTR**. W przeciwnym razie zostanie zgłoszony wyjątek.  
@@ -297,7 +298,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- Nie można zorganizować tablic zagnieżdżonych. Na przykład następujący podpis generuje błąd podczas eksportowania z [eksporterem biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md).  
+ Nie można zorganizować tablic zagnieżdżonych. Na przykład następujący podpis generuje błąd podczas eksportowania z [eksporterem biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 #### <a name="managed-signature"></a>Sygnatura zarządzana  
   
@@ -309,7 +310,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<system. Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS\<System.Array>  
  Gdy metoda zawierająca <xref:System.Array?displayProperty=nameWithType> parametr zostanie wyeksportowana z zestawu .NET do biblioteki typów, parametr array jest konwertowany na interfejs **_Array** . Zawartość tablicy zarządzanej jest dostępna tylko za pomocą metod i właściwości interfejsu **_Array** . Element **System. Array** może być również zorganizowany jako **SAFEARRAY** przy użyciu <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu. Gdy jest zorganizowany jako bezpieczna tablica, elementy tablicy są organizowane jako warianty. Przykład:  
   
 #### <a name="managed-signature"></a>Sygnatura zarządzana  
@@ -342,7 +343,7 @@ struct MyStruct {
 }  
 ```  
   
- Tablice mogą być organizowane jako <xref:System.Runtime.InteropServices.UnmanagedType>, co wymaga ustawienia <xref:System.Runtime.InteropServices.MarshalAsAttribute> pola. Rozmiar można ustawić tylko jako stała. Poniższy kod pokazuje odpowiadającą zarządzane definicje `MyStruct`.  
+ Tablice mogą być organizowane jako <xref:System.Runtime.InteropServices.UnmanagedType> , co wymaga ustawienia <xref:System.Runtime.InteropServices.MarshalAsAttribute> pola. Rozmiar można ustawić tylko jako stała. Poniższy kod pokazuje odpowiadającą zarządzane definicje `MyStruct` .  
   
 ```vb  
 Public Structure <StructLayout(LayoutKind.Sequential)> MyStruct  
@@ -358,7 +359,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)

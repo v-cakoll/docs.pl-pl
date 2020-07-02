@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: efa0efaf40e2e432d477f1659d7bde3abc98241d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a20fad5f9c95e59c14ffd91f4921cf8bfab443cd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621190"
 ---
-### <a name="unicode-standard-version-80-categories-now-supported"></a>Obsługiwane są teraz standardowe kategorie Unicode w wersji 8.0
+### <a name="unicode-standard-version-80-categories-now-supported"></a>Kategorie Unicode w wersji Standard 8,0 są teraz obsługiwane
 
-|   |   |
-|---|---|
-|Szczegóły|W .NET Framework 4.6.2 dane Unicode zostały uaktualnione z standardu Unicode w wersji 6.3 do wersji 8.0.  Żądając kategorii znaków Unicode w .NET Framework 4.6.2, niektóre wyniki mogą nie odpowiadać wynikom w poprzednich wersjach programu .NET Framework.  Ta zmiana dotyczy głównie sylaby Cherokee i nowych samogłosek Tai Lue znaków i znaków tonu.|
-|Sugestia|Przejrzyj kod i usuń/zmień logikę, która zależy od zakodowanych na stałe kategorii znaków Unicode.|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4.6.2 dane Unicode zostały uaktualnione z wersji standard Unicode 6,3 do wersji 8,0.  Podczas żądania kategorii znaków Unicode w .NET Framework 4.6.2 niektóre wyniki mogą być niezgodne z wynikami w poprzednich .NET Framework wersjach.  Ta zmiana głównie ma wpływ na sylaby czirokeski i nowe znaki samogłosek artość oraz znaki tonu.
+
+#### <a name="suggestion"></a>Sugestia
+
+Przejrzyj kod i Usuń lub Zmień logikę, która zależy od zakodowanych kategorii znaków Unicode.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|

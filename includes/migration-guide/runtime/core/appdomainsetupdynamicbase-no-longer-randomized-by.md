@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 3f553f95941eaf36cf335e9765a670a05bd157f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08ad6fd4ccb6d5ddbbb4fa7ef1b325ce30689748
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621289"
 ---
-### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup.DynamicBase nie jest już randomizowane przez UseRandomizedStringHashAlgorithm
+### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup. DynamicBase nie jest już losowo określana przez UseRandomizedStringHashAlgorithm
 
-|   |   |
-|---|---|
-|Szczegóły|Przed .NET Framework 4.6 wartość <xref:System.AppDomainSetup.DynamicBase> będzie randomizowana między domenami aplikacji lub między procesami, jeśli UseRandomizedStringHashAlgorithm została włączona w pliku konfiguracyjnym aplikacji. Począwszy od programu .NET Framework <xref:System.AppDomainSetup.DynamicBase> 4.6, zwróci stabilny wynik między różnymi wystąpieniami uruchomionej aplikacji i między różnymi domenami aplikacji. Bazy dynamiczne będą nadal się różnić w przypadku różnych aplikacji; ta zmiana usuwa tylko losowy element nazewnictwa dla różnych wystąpień tej samej aplikacji.|
-|Sugestia|Należy pamiętać, <code>UseRandomizedStringHashAlgorithm</code> że włączenie <xref:System.AppDomainSetup.DynamicBase> nie spowoduje losowania. Jeśli wymagana jest losowa baza, musi być wyprodukowana w kodzie aplikacji, a nie za pośrednictwem tego interfejsu API.|
-|Zakres|Brzeg|
+#### <a name="details"></a>Szczegóły
+
+Przed .NET Framework 4,6 wartość zostanie przetworzona <xref:System.AppDomainSetup.DynamicBase> losowo między domenami aplikacji lub między procesami, jeśli UseRandomizedStringHashAlgorithm został włączony w pliku konfiguracji aplikacji. Począwszy od .NET Framework 4,6, <xref:System.AppDomainSetup.DynamicBase> zwróci stabilny wynik między różnymi wystąpieniami aplikacji i między różnymi domenami aplikacji. Dynamiczne bazy nadal różnią się w zależności od różnych aplikacji; Ta zmiana powoduje jedynie usunięcie losowego elementu nazewnictwa dla różnych wystąpień tej samej aplikacji.
+
+#### <a name="suggestion"></a>Sugestia
+
+Należy pamiętać, że włączenie <code>UseRandomizedStringHashAlgorithm</code> nie spowoduje <xref:System.AppDomainSetup.DynamicBase> losowego uruchamiania. Jeśli jest wymagana Losowa baza, należy ją utworzyć w kodzie aplikacji, a nie za pośrednictwem tego interfejsu API.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|

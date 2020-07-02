@@ -1,5 +1,6 @@
 ---
 title: Współdziałanie z kodem niezarządzanym
+description: Przegląd międzyoperacyjności z niezarządzanym kodem. Środowisko CLR jest ukryte od klientów i serwerów, w których modele obiektów składników .NET i niezarządzanego kodu różnią się.
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cebd75907fd202715cb337593186d248107bdbb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621876"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym
 
@@ -37,19 +38,19 @@ Opisuje sposób wywoływania niezarządzanych funkcji DLL przy użyciu wywołani
 [Organizowanie międzyoperacyjne](interop-marshaling.md)  
 Opisuje kierowanie dla międzyoperacyjności modelu COM i wywołania platformy.
 
-[Porady: mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)  
+[Instrukcje: Mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)  
 Opisuje mapowanie między wyjątkami i WYNIKami HRESULT.
 
 [Równoważność typów i osadzone typy międzyoperacyjne](type-equivalence-and-embedded-interop-types.md)  
 Opisuje, jak informacje o typie dla typów COM są osadzone w zestawach oraz jak środowisko uruchomieniowe języka wspólnego określa równoważność osadzonych typów COM.
 
 [Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Opisuje sposób tworzenia podstawowych zestawów międzyoperacyjnych za pomocą *Tlbimp. exe* (Importer biblioteki typów).
+Opisuje sposób tworzenia podstawowych zestawów międzyoperacyjnych przy użyciu *Tlbimp.exe* (Importer biblioteki typów).
 
 [Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych](how-to-register-primary-interop-assemblies.md)  
 W tym artykule opisano sposób rejestrowania podstawowych zestawów międzyoperacyjnych, zanim będzie można odwołać się do nich w projektach.
 
-[Współdziałanie z COM bez rejestrowania](registration-free-com-interop.md)  
+[Współdziałanie z modelem COM bez rejestrowania](registration-free-com-interop.md)  
 Opisuje sposób, w jaki współdziałanie modelu COM może aktywować składniki bez używania rejestru systemu Windows.
 
 [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)  

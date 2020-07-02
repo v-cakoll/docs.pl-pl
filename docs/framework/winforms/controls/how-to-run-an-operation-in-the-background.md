@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: uruchamianie operacji w tle'
+title: 'Porady: uruchamianie operacji w tle'
+description: Dowiedz się, jak używać klasy BackgroundWorker do uruchamiania czasochłonnej operacji Windows Forms w tle.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +14,21 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 77f75a7eb1d7cc536df7110ef55727fbdf789f23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6b2a97f5acf1e906dfe141aee62e99a4e50dca9f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621577"
 ---
-# <a name="how-to-run-an-operation-in-the-background"></a>Instrukcje: uruchamianie operacji w tle
-Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
+# <a name="how-to-run-an-operation-in-the-background"></a>Porady: uruchamianie operacji w tle
+Jeśli masz dużo czasu na ukończenie operacji, która nie ma być przyczyną opóźnień w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy do uruchomienia operacji w innym wątku.  
   
- Poniższy przykład kodu pokazuje sposób uruchamiania czasochłonna operacja w tle. Formularz zawiera **Start** i **anulować** przycisków. Kliknij przycisk **Start** przycisk, aby uruchomić operację asynchroniczną. Kliknij przycisk **anulować** przycisk, aby zatrzymać operację pracę asynchroniczną. Wynikiem operacji jest wyświetlana w <xref:System.Windows.Forms.MessageBox>.  
+ Poniższy przykład kodu pokazuje, jak uruchomić czasochłonną operację w tle. Formularz zawiera przyciski **Start** i **Cancel** . Kliknij przycisk **Uruchom** , aby uruchomić operację asynchroniczną. Kliknij przycisk **Anuluj** , aby zatrzymać uruchomioną operację asynchroniczną. Wyniki każdej operacji są wyświetlane w <xref:System.Windows.Forms.MessageBox> .  
   
- Brak zaawansowaną obsługę dla tego zadania w programie Visual Studio.  
+ W programie Visual Studio jest dostępna szeroka pomoc techniczna dla tego zadania.  
   
- Zobacz też [instruktażu: Przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md).  
+ Zobacz również [Przewodnik: uruchamianie operacji w tle](walkthrough-running-an-operation-in-the-background.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
@@ -36,11 +37,11 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [BackgroundWorker, składnik](backgroundworker-component.md)

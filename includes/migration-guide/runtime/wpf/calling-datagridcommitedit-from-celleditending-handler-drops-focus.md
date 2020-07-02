@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: e2d63d85adce64db6e00b62ec17f55ae71ce3052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3c3ed44cf53625c246dfe0408bb861750ecf336
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622126"
 ---
-### <a name="calling-datagridcommitedit-from-a-celleditending-handler-drops-focus"></a>Wywołanie DataGrid.CommitEdit z programu obsługi CellEditEnding spada fokus
+### <a name="calling-datagridcommitedit-from-a-celleditending-handler-drops-focus"></a>Wywołanie elementu DataGrid. CommitEdit z obsługi CellEditEnding powoduje odrzucenie fokusu
 
-|   |   |
-|---|---|
-|Szczegóły|<xref:System.Windows.Controls.DataGrid.CommitEdit> Wywołanie z <xref:System.Windows.Controls.DataGrid?displayProperty=name>jednego <xref:System.Windows.Controls.DataGrid.CellEditEnding?displayProperty=name> z programów <xref:System.Windows.Controls.DataGrid?displayProperty=name> obsługi zdarzeń powoduje utratę fokusu.|
-|Sugestia|Ten błąd został naprawiony w .NET Framework 4.5.2, dzięki czemu można go uniknąć, uaktualniając program .NET Framework. Alternatywnie można tego uniknąć, wyraźnie wybierając <xref:System.Windows.Controls.DataGrid?displayProperty=name> ponownie po <xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=name>wywołaniu .|
-|Zakres|Brzeg|
+#### <a name="details"></a>Szczegóły
+
+Wywołanie <xref:System.Windows.Controls.DataGrid.CommitEdit> z jednego z <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> <xref:System.Windows.Controls.DataGrid.CellEditEnding?displayProperty=fullName> programów obsługi zdarzeń powoduje <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> utratę fokusu.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ta usterka została rozwiązana w .NET Framework 4.5.2, dlatego można ją uniknąć, uaktualniając .NET Framework. Alternatywnie można to uniknąć przez jawne ponowne wybranie polecenia <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> po wywołaniu <xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=fullName> .
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.CommitEdit(System.Windows.Controls.DataGridEditingUnit,System.Boolean)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Windows.Controls.DataGrid.CommitEdit?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.CommitEdit(System.Windows.Controls.DataGridEditingUnit,System.Boolean)?displayProperty=nameWithType></li></ul>|

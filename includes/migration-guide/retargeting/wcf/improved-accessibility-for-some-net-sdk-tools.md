@@ -1,16 +1,25 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f78d15338aa49de5b729aca12964924a0df00ec6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614833"
 ---
-### <a name="improved-accessibility-for-some-net-sdk-tools"></a><span data-ttu-id="f9fd3-101">Ulepszona dostępność niektórych narzędzi zestawu SDK platformy .NET</span><span class="sxs-lookup"><span data-stu-id="f9fd3-101">Improved accessibility for some .NET SDK tools</span></span>
+### <a name="improved-accessibility-for-some-net-sdk-tools"></a><span data-ttu-id="0861b-101">Ulepszony dostęp do niektórych narzędzi zestawu SDK platformy .NET</span><span class="sxs-lookup"><span data-stu-id="0861b-101">Improved accessibility for some .NET SDK tools</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="f9fd3-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="f9fd3-102">Details</span></span>|<span data-ttu-id="f9fd3-103">W .NET Framework SDK 4.7.1 narzędzia SvcConfigEditor.exe i SvcTraceViewer.exe zostały ulepszone przez naprawienie różnych problemów z dostępnością.</span><span class="sxs-lookup"><span data-stu-id="f9fd3-103">In the .NET Framework SDK 4.7.1, the SvcConfigEditor.exe and SvcTraceViewer.exe tools have been improved by fixing varied accessibility issues.</span></span> <span data-ttu-id="f9fd3-104">Większość z nich były małe problemy, takie jak nazwa nie jest zdefiniowana lub niektórych wzorców automatyzacji interfejsu użytkownika nie są implementowane poprawnie.</span><span class="sxs-lookup"><span data-stu-id="f9fd3-104">Most of these were small issues like a name not being defined or certain UI automation patterns not being implemented correctly.</span></span> <span data-ttu-id="f9fd3-105">Podczas gdy wielu użytkowników nie będzie świadomy tych niepoprawnych wartości, klienci, którzy korzystają z technologii ułatwień dostępu, takich jak czytniki ekranu, znajdą te narzędzia zestawu SDK bardziej dostępne.</span><span class="sxs-lookup"><span data-stu-id="f9fd3-105">While many users wouldn’t be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.</span></span> <span data-ttu-id="f9fd3-106">Z pewnością te poprawki zmieniają niektóre poprzednie zachowania, takie jak kolejność ustawiania ostrości klawiatury. Aby uzyskać wszystkie poprawki ułatwień dostępu w tych narzędziach, można wykonać następujące pliki do pliku app.config:</span><span class="sxs-lookup"><span data-stu-id="f9fd3-106">Certainly, these fixes change some previous behaviors, like keyboard focus order.In order to get all the accessibility fixes in these tools, you can the following to your app.config file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="f9fd3-107">Zakres</span><span class="sxs-lookup"><span data-stu-id="f9fd3-107">Scope</span></span>|<span data-ttu-id="f9fd3-108">Brzeg</span><span class="sxs-lookup"><span data-stu-id="f9fd3-108">Edge</span></span>|
-|<span data-ttu-id="f9fd3-109">Wersja</span><span class="sxs-lookup"><span data-stu-id="f9fd3-109">Version</span></span>|<span data-ttu-id="f9fd3-110">4.7.1</span><span class="sxs-lookup"><span data-stu-id="f9fd3-110">4.7.1</span></span>|
-|<span data-ttu-id="f9fd3-111">Typ</span><span class="sxs-lookup"><span data-stu-id="f9fd3-111">Type</span></span>|<span data-ttu-id="f9fd3-112">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="f9fd3-112">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="0861b-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="0861b-102">Details</span></span>
+
+<span data-ttu-id="0861b-103">W 4.7.1 SDK .NET Framework narzędzia SvcConfigEditor.exe i SvcTraceViewer.exe zostały ulepszone, rozwiązując różne problemy z dostępnością.</span><span class="sxs-lookup"><span data-stu-id="0861b-103">In the .NET Framework SDK 4.7.1, the SvcConfigEditor.exe and SvcTraceViewer.exe tools have been improved by fixing varied accessibility issues.</span></span> <span data-ttu-id="0861b-104">Większość z nich dotyczyła małych problemów, takich jak nazwa, które nie są zdefiniowane lub niektóre wzorce automatyzacji interfejsu użytkownika nie są poprawnie zaimplementowane.</span><span class="sxs-lookup"><span data-stu-id="0861b-104">Most of these were small issues like a name not being defined or certain UI automation patterns not being implemented correctly.</span></span> <span data-ttu-id="0861b-105">Chociaż wielu użytkowników nie wie o tych nieprawidłowych wartościach, klienci korzystający z technologii pomocniczych, takich jak czytniki zawartości ekranu, zobaczą więcej dostępnych narzędzi zestawu SDK.</span><span class="sxs-lookup"><span data-stu-id="0861b-105">While many users wouldn't be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.</span></span> <span data-ttu-id="0861b-106">Z tego powodu te poprawki zmieniają pewne poprzednie zachowania, na przykład kolejność fokusu klawiatury. Aby uzyskać wszystkie poprawki ułatwień dostępu w tych narzędziach, można wykonać następujące czynności w pliku app.config:</span><span class="sxs-lookup"><span data-stu-id="0861b-106">Certainly, these fixes change some previous behaviors, like keyboard focus order.In order to get all the accessibility fixes in these tools, you can the following to your app.config file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false"/>
+</runtime>
+```
+
+| <span data-ttu-id="0861b-107">Nazwa</span><span class="sxs-lookup"><span data-stu-id="0861b-107">Name</span></span>    | <span data-ttu-id="0861b-108">Wartość</span><span class="sxs-lookup"><span data-stu-id="0861b-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="0861b-109">Zakres</span><span class="sxs-lookup"><span data-stu-id="0861b-109">Scope</span></span>   | <span data-ttu-id="0861b-110">Brzeg</span><span class="sxs-lookup"><span data-stu-id="0861b-110">Edge</span></span>        |
+| <span data-ttu-id="0861b-111">Wersja</span><span class="sxs-lookup"><span data-stu-id="0861b-111">Version</span></span> | <span data-ttu-id="0861b-112">4.7.1</span><span class="sxs-lookup"><span data-stu-id="0861b-112">4.7.1</span></span>       |
+| <span data-ttu-id="0861b-113">Typ</span><span class="sxs-lookup"><span data-stu-id="0861b-113">Type</span></span>    | <span data-ttu-id="0861b-114">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="0861b-114">Retargeting</span></span> |

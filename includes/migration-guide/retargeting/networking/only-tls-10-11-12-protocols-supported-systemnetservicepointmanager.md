@@ -1,18 +1,37 @@
 ---
-ms.openlocfilehash: 5b531dc23feb311a797823dfa2a4d853859f9e18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87dc93ece10eaedbfbabddb5f857d0bcd12e05c4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615697"
 ---
-### <a name="only-tls-10-11-and-12-protocols-supported-in-systemnetservicepointmanager-and-systemnetsecuritysslstream"></a><span data-ttu-id="c126e-101">Tylko protokoły Tls 1.0, 1.1 i 1.2 obsługiwane w system.net.ServicePointManager i System.Net.Security.SslStream</span><span class="sxs-lookup"><span data-stu-id="c126e-101">Only Tls 1.0, 1.1 and 1.2 protocols supported in System.Net.ServicePointManager and System.Net.Security.SslStream</span></span>
+### <a name="only-tls-10-11-and-12-protocols-supported-in-systemnetservicepointmanager-and-systemnetsecuritysslstream"></a><span data-ttu-id="0398c-101">Tylko protokoły TLS 1,0, 1,1 i 1,2 obsługiwane w systemie .NET. ServicePointManager i system .NET. Security. SslStream</span><span class="sxs-lookup"><span data-stu-id="0398c-101">Only Tls 1.0, 1.1 and 1.2 protocols supported in System.Net.ServicePointManager and System.Net.Security.SslStream</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="c126e-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="c126e-102">Details</span></span>|<span data-ttu-id="c126e-103">Począwszy od .NET Framework 4.6 <xref:System.Net.ServicePointManager> i <xref:System.Net.Security.SslStream> klasy mogą używać tylko jeden z następujących trzech protokołów: Tls1.0, Tls1.1 lub Tls1.2.</span><span class="sxs-lookup"><span data-stu-id="c126e-103">Starting with the .NET Framework 4.6, the <xref:System.Net.ServicePointManager> and <xref:System.Net.Security.SslStream> classes are only allowed to use one of the following three protocols: Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="c126e-104">Protokół SSL3.0 i szyfr RC4 nie są obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="c126e-104">The SSL3.0 protocol and RC4 cipher are not supported.</span></span>|
-|<span data-ttu-id="c126e-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="c126e-105">Suggestion</span></span>|<span data-ttu-id="c126e-106">Zalecane ograniczenie jest uaktualnienie aplikacji po stronie sever do Tls1.0, Tls1.1 lub Tls1.2.</span><span class="sxs-lookup"><span data-stu-id="c126e-106">The recommended mitigation is to upgrade the sever-side app to Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="c126e-107">Jeśli nie jest to możliwe lub jeśli aplikacje klienckie są uszkodzone, <xref:System.AppContext?displayProperty=name> klasa może służyć do rezygnacji z tej funkcji na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="c126e-107">If this is not feasible, or if client apps are broken, the <xref:System.AppContext?displayProperty=name> class can be used to opt out of this feature in either of two ways:</span></span><ol><li><span data-ttu-id="c126e-108">Poprzez programowe ustawienie przełączników compat na <xref:System.AppContext?displayProperty=name>, jak wyjaśniono [tutaj](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span><span class="sxs-lookup"><span data-stu-id="c126e-108">By programmatically setting compat switches on the <xref:System.AppContext?displayProperty=name>, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span></li><li><span data-ttu-id="c126e-109">Dodając następujący wiersz do <code>&lt;runtime&gt;</code> sekcji pliku app.config:</span><span class="sxs-lookup"><span data-stu-id="c126e-109">By adding the following line to the <code>&lt;runtime&gt;</code> section of the app.config file:</span></span></li></ol><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableSchUseStrongCrypto=true&quot;/&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="c126e-110">Zakres</span><span class="sxs-lookup"><span data-stu-id="c126e-110">Scope</span></span>|<span data-ttu-id="c126e-111">Mały</span><span class="sxs-lookup"><span data-stu-id="c126e-111">Minor</span></span>|
-|<span data-ttu-id="c126e-112">Wersja</span><span class="sxs-lookup"><span data-stu-id="c126e-112">Version</span></span>|<span data-ttu-id="c126e-113">4.6</span><span class="sxs-lookup"><span data-stu-id="c126e-113">4.6</span></span>|
-|<span data-ttu-id="c126e-114">Typ</span><span class="sxs-lookup"><span data-stu-id="c126e-114">Type</span></span>|<span data-ttu-id="c126e-115">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="c126e-115">Retargeting</span></span>|
-|<span data-ttu-id="c126e-116">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="c126e-116">Affected APIs</span></span>|<ul><li><xref:System.Net.SecurityProtocolType.Ssl3?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.Ssl2?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.Ssl3?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="0398c-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="0398c-102">Details</span></span>
+
+<span data-ttu-id="0398c-103">Począwszy od .NET Framework 4,6, <xref:System.Net.ServicePointManager> klasy i mogą <xref:System.Net.Security.SslStream> korzystać tylko z jednego z następujących trzech protokołów: TLS 1.0, TLS 1.1 lub TLS 1.2.</span><span class="sxs-lookup"><span data-stu-id="0398c-103">Starting with the .NET Framework 4.6, the <xref:System.Net.ServicePointManager> and <xref:System.Net.Security.SslStream> classes are only allowed to use one of the following three protocols: Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="0398c-104">Protokół SSL 3.0 i szyfr RC4 nie są obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="0398c-104">The SSL3.0 protocol and RC4 cipher are not supported.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="0398c-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="0398c-105">Suggestion</span></span>
+
+<span data-ttu-id="0398c-106">Zalecane jest, aby uaktualnić aplikację po stronie serwera do protokołu TLS 1.0, TLS 1.1 lub TLS 1.2.</span><span class="sxs-lookup"><span data-stu-id="0398c-106">The recommended mitigation is to upgrade the sever-side app to Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="0398c-107">Jeśli nie jest to możliwe, lub jeśli aplikacje klienckie są uszkodzone, <xref:System.AppContext?displayProperty=fullName> można użyć klasy, aby zrezygnować z tej funkcji na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="0398c-107">If this is not feasible, or if client apps are broken, the <xref:System.AppContext?displayProperty=fullName> class can be used to opt out of this feature in either of two ways:</span></span>
+
+- <span data-ttu-id="0398c-108">Przez programowe ustawianie przełączników zgodności w programie <xref:System.AppContext?displayProperty=fullName> , jak wyjaśniono [tutaj](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span><span class="sxs-lookup"><span data-stu-id="0398c-108">By programmatically setting compat switches on the <xref:System.AppContext?displayProperty=fullName>, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span>
+- <span data-ttu-id="0398c-109">Dodając następujący wiersz do `<runtime>` sekcji pliku app.config:</span><span class="sxs-lookup"><span data-stu-id="0398c-109">By adding the following line to the `<runtime>` section of the app.config file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>
+```
+
+| <span data-ttu-id="0398c-110">Nazwa</span><span class="sxs-lookup"><span data-stu-id="0398c-110">Name</span></span>    | <span data-ttu-id="0398c-111">Wartość</span><span class="sxs-lookup"><span data-stu-id="0398c-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="0398c-112">Zakres</span><span class="sxs-lookup"><span data-stu-id="0398c-112">Scope</span></span>   | <span data-ttu-id="0398c-113">Mały</span><span class="sxs-lookup"><span data-stu-id="0398c-113">Minor</span></span>       |
+| <span data-ttu-id="0398c-114">Wersja</span><span class="sxs-lookup"><span data-stu-id="0398c-114">Version</span></span> | <span data-ttu-id="0398c-115">4.6</span><span class="sxs-lookup"><span data-stu-id="0398c-115">4.6</span></span>         |
+| <span data-ttu-id="0398c-116">Typ</span><span class="sxs-lookup"><span data-stu-id="0398c-116">Type</span></span>    | <span data-ttu-id="0398c-117">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="0398c-117">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="0398c-118">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="0398c-118">Affected APIs</span></span>
+
+- <xref:System.Net.SecurityProtocolType.Ssl3?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.Ssl2?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.Ssl3?displayProperty=nameWithType>

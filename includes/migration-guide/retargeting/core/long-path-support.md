@@ -1,17 +1,41 @@
 ---
-ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67e3ff5000ebd38064ed8a57e4fe561afa31f8d8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614711"
 ---
-### <a name="long-path-support"></a><span data-ttu-id="544f3-101">Obsługa długich ścieżek</span><span class="sxs-lookup"><span data-stu-id="544f3-101">Long path support</span></span>
+### <a name="long-path-support"></a><span data-ttu-id="f0276-101">Obsługa długich ścieżek</span><span class="sxs-lookup"><span data-stu-id="f0276-101">Long path support</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="544f3-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="544f3-102">Details</span></span>|<span data-ttu-id="544f3-103">Począwszy od aplikacji docelowych .NET Framework 4.6.2, obsługiwane są długie ścieżki (maksymalnie 32K znaków), a <code>MAX_PATH</code>260-znakowe (lub) ograniczenie długości ścieżki zostało usunięte. W przypadku aplikacji, które są ponownie kompilowane do celu .NET Framework 4.6.2, ścieżki kodu, który wcześniej <xref:System.IO.PathTooLongException?displayProperty=name> <xref:System.IO.PathTooLongException?displayProperty=name> rzucił, ponieważ ścieżka przekroczona 260 znaków będzie teraz zgłosić tylko w następujących warunkach:</span><span class="sxs-lookup"><span data-stu-id="544f3-103">Starting with apps that target the .NET Framework 4.6.2, long paths (of up to 32K characters) are supported, and the 260-character (or <code>MAX_PATH</code>) limitation on path lengths has been removed.For apps that are recompiled to target the .NET Framework 4.6.2, code paths that previously threw a <xref:System.IO.PathTooLongException?displayProperty=name> because a path exceeded 260 characters will now throw a <xref:System.IO.PathTooLongException?displayProperty=name> only under the following conditions:</span></span><ul><li><span data-ttu-id="544f3-104">Długość ścieżki jest większa <xref:System.Int16.MaxValue> niż (32 767) znaków.</span><span class="sxs-lookup"><span data-stu-id="544f3-104">The length of the path is greater than <xref:System.Int16.MaxValue> (32,767) characters.</span></span></li><li><span data-ttu-id="544f3-105">System operacyjny <code>COR_E_PATHTOOLONG</code> zwraca lub jego odpowiednik.</span><span class="sxs-lookup"><span data-stu-id="544f3-105">The operating system returns <code>COR_E_PATHTOOLONG</code> or its equivalent.</span></span></li></ul><span data-ttu-id="544f3-106">W przypadku aplikacji przeznaczonych dla platformy .NET Framework 4.6.1 i <xref:System.IO.PathTooLongException?displayProperty=name> wcześniejszych wersji środowisko wykonawcze automatycznie zgłasza, gdy ścieżka przekracza 260 znaków.</span><span class="sxs-lookup"><span data-stu-id="544f3-106">For apps that target the .NET Framework 4.6.1 and earlier versions, the runtime automatically throws a <xref:System.IO.PathTooLongException?displayProperty=name> whenever a path exceeds 260 characters.</span></span>|
-|<span data-ttu-id="544f3-107">Sugestia</span><span class="sxs-lookup"><span data-stu-id="544f3-107">Suggestion</span></span>|<span data-ttu-id="544f3-108">W przypadku aplikacji przeznaczonych dla programu .NET Framework 4.6.2 można zrezygnować z obsługi długiej <code>&lt;runtime&gt;</code> ścieżki, <code>app.config</code> jeśli nie jest to pożądane, dodając do sekcji pliku następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="544f3-108">For apps that target the .NET Framework 4.6.2, you can opt out of long path support if it is not desirable by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="544f3-109">W przypadku aplikacji przeznaczonych dla starszych wersji programu .NET Framework, ale uruchamianych w programie .NET Framework 4.6.2 lub nowszym, można zdecydować się na obsługę długiej ścieżki, dodając do <code>&lt;runtime&gt;</code> sekcji <code>app.config</code> pliku następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="544f3-109">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.6.2 or later, you can opt in to long path support by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="544f3-110">Zakres</span><span class="sxs-lookup"><span data-stu-id="544f3-110">Scope</span></span>|<span data-ttu-id="544f3-111">Mały</span><span class="sxs-lookup"><span data-stu-id="544f3-111">Minor</span></span>|
-|<span data-ttu-id="544f3-112">Wersja</span><span class="sxs-lookup"><span data-stu-id="544f3-112">Version</span></span>|<span data-ttu-id="544f3-113">4.6.2</span><span class="sxs-lookup"><span data-stu-id="544f3-113">4.6.2</span></span>|
-|<span data-ttu-id="544f3-114">Typ</span><span class="sxs-lookup"><span data-stu-id="544f3-114">Type</span></span>|<span data-ttu-id="544f3-115">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="544f3-115">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="f0276-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="f0276-102">Details</span></span>
+
+<span data-ttu-id="f0276-103">Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.2, obsługiwane są długie ścieżki (od do 32 znaków), a 260-znak (lub `MAX_PATH` ) ograniczenie długości ścieżki zostało usunięte. W przypadku aplikacji, które są ponownie kompilowane do .NET Framework 4.6.2, ścieżki kodu, które wcześniej wywołały, <xref:System.IO.PathTooLongException?displayProperty=fullName> ponieważ ścieżka przekroczyła 260 znaków, zostanie teraz zgłoszony <xref:System.IO.PathTooLongException?displayProperty=fullName> tylko w następujących warunkach:</span><span class="sxs-lookup"><span data-stu-id="f0276-103">Starting with apps that target the .NET Framework 4.6.2, long paths (of up to 32K characters) are supported, and the 260-character (or `MAX_PATH`) limitation on path lengths has been removed.For apps that are recompiled to target the .NET Framework 4.6.2, code paths that previously threw a <xref:System.IO.PathTooLongException?displayProperty=fullName> because a path exceeded 260 characters will now throw a <xref:System.IO.PathTooLongException?displayProperty=fullName> only under the following conditions:</span></span>
+
+- <span data-ttu-id="f0276-104">Długość ścieżki przekracza <xref:System.Int16.MaxValue> (32 767) znaków.</span><span class="sxs-lookup"><span data-stu-id="f0276-104">The length of the path is greater than <xref:System.Int16.MaxValue> (32,767) characters.</span></span>
+- <span data-ttu-id="f0276-105">System operacyjny zwraca `COR_E_PATHTOOLONG` lub jego odpowiednik.</span><span class="sxs-lookup"><span data-stu-id="f0276-105">The operating system returns `COR_E_PATHTOOLONG` or its equivalent.</span></span>
+<span data-ttu-id="f0276-106">W przypadku aplikacji, które są przeznaczone dla .NET Framework 4.6.1 i wcześniejszych wersji, środowisko uruchomieniowe automatycznie zgłasza, <xref:System.IO.PathTooLongException?displayProperty=fullName> gdy ścieżka przekracza 260 znaków.</span><span class="sxs-lookup"><span data-stu-id="f0276-106">For apps that target the .NET Framework 4.6.1 and earlier versions, the runtime automatically throws a <xref:System.IO.PathTooLongException?displayProperty=fullName> whenever a path exceeds 260 characters.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="f0276-107">Sugestia</span><span class="sxs-lookup"><span data-stu-id="f0276-107">Suggestion</span></span>
+
+<span data-ttu-id="f0276-108">W przypadku aplikacji przeznaczonych dla .NET Framework 4.6.2 możesz zrezygnować z obsługi długiej ścieżki, jeśli nie jest to pożądane, dodając następujący element do `<runtime>` sekcji `app.config` pliku:</span><span class="sxs-lookup"><span data-stu-id="f0276-108">For apps that target the .NET Framework 4.6.2, you can opt out of long path support if it is not desirable by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=true" />
+</runtime>
+```
+
+<span data-ttu-id="f0276-109">W przypadku aplikacji, które są przeznaczone dla wcześniejszych wersji .NET Framework ale działają na .NET Framework 4.6.2 lub nowszych, możesz zrezygnować z obsługi ścieżek długich, dodając następujące elementy do `<runtime>` sekcji `app.config` pliku:</span><span class="sxs-lookup"><span data-stu-id="f0276-109">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.6.2 or later, you can opt in to long path support by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=false" />
+</runtime>
+```
+
+| <span data-ttu-id="f0276-110">Nazwa</span><span class="sxs-lookup"><span data-stu-id="f0276-110">Name</span></span>    | <span data-ttu-id="f0276-111">Wartość</span><span class="sxs-lookup"><span data-stu-id="f0276-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="f0276-112">Zakres</span><span class="sxs-lookup"><span data-stu-id="f0276-112">Scope</span></span>   | <span data-ttu-id="f0276-113">Mały</span><span class="sxs-lookup"><span data-stu-id="f0276-113">Minor</span></span>       |
+| <span data-ttu-id="f0276-114">Wersja</span><span class="sxs-lookup"><span data-stu-id="f0276-114">Version</span></span> | <span data-ttu-id="f0276-115">4.6.2</span><span class="sxs-lookup"><span data-stu-id="f0276-115">4.6.2</span></span>       |
+| <span data-ttu-id="f0276-116">Typ</span><span class="sxs-lookup"><span data-stu-id="f0276-116">Type</span></span>    | <span data-ttu-id="f0276-117">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="f0276-117">Retargeting</span></span> |

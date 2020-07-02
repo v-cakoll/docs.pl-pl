@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e66a5c2a33a4ab5cf35013c1843936ffd01f90a2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614747"
 ---
-### <a name="serialport-background-thread-exceptions"></a><span data-ttu-id="dc1f2-101">Wyjątki wątku w tle SerialPort</span><span class="sxs-lookup"><span data-stu-id="dc1f2-101">SerialPort background thread exceptions</span></span>
+### <a name="serialport-background-thread-exceptions"></a><span data-ttu-id="6c8e8-101">Wyjątki wątku w tle klasy SerialPort</span><span class="sxs-lookup"><span data-stu-id="6c8e8-101">SerialPort background thread exceptions</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="dc1f2-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="dc1f2-102">Details</span></span>|<span data-ttu-id="dc1f2-103">Wątki w <xref:System.IO.Ports.SerialPort> tle utworzone za pomocą strumieni nie kończą już procesu po wyświetleniu wyjątków systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="dc1f2-103">Background threads created with <xref:System.IO.Ports.SerialPort> streams no longer terminate the process when OS exceptions are thrown.</span></span> <br/><span data-ttu-id="dc1f2-104">W aplikacjach, które są przeznaczone dla .NET Framework 4.7 i wcześniejszych wersji, proces jest <xref:System.IO.Ports.SerialPort> zakończony, gdy wyjątek systemu operacyjnego jest zgłaszany w wątku w tle utworzone za pomocą strumienia.</span><span class="sxs-lookup"><span data-stu-id="dc1f2-104">In applications that target the .NET Framework 4.7 and earlier versions, a process is terminated when an operating system exception is thrown on a background thread created with a <xref:System.IO.Ports.SerialPort> stream.</span></span> <br/><span data-ttu-id="dc1f2-105">W aplikacjach przeznaczonych dla platformy .NET Framework 4.7.1 lub nowszej wersji wątki w tle czekają na zdarzenia systemu operacyjnego związane z aktywnym portem szeregowym i mogą ulec awarii w niektórych przypadkach, na przykład nagłe usunięcie portu szeregowego.</span><span class="sxs-lookup"><span data-stu-id="dc1f2-105">In applications that target the .NET Framework 4.7.1 or a later version, background threads wait for OS events related to the active serial port and could crash in some cases, such as sudden removal of the serial port.</span></span>|
-|<span data-ttu-id="dc1f2-106">Sugestia</span><span class="sxs-lookup"><span data-stu-id="dc1f2-106">Suggestion</span></span>|<span data-ttu-id="dc1f2-107">W przypadku aplikacji przeznaczonych dla programu .NET Framework 4.7.1 można zrezygnować z obsługi wyjątków, jeśli nie jest to pożądane, dodając do <code>&lt;runtime&gt;</code> sekcji <code>app.config</code> pliku następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="dc1f2-107">For apps that target the .NET Framework 4.7.1, you can opt out of the exception handling if it is not desirable by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="dc1f2-108">W przypadku aplikacji przeznaczonych dla starszych wersji programu .NET Framework, ale uruchamianych w programie .NET Framework 4.7.1 lub nowszym, można zdecydować się na obsługę wyjątków, dodając następujące <code>&lt;runtime&gt;</code> elementy do sekcji <code>app.config</code> pliku:</span><span class="sxs-lookup"><span data-stu-id="dc1f2-108">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.7.1 or later, you can opt in to the exception handling by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="dc1f2-109">Zakres</span><span class="sxs-lookup"><span data-stu-id="dc1f2-109">Scope</span></span>|<span data-ttu-id="dc1f2-110">Mały</span><span class="sxs-lookup"><span data-stu-id="dc1f2-110">Minor</span></span>|
-|<span data-ttu-id="dc1f2-111">Wersja</span><span class="sxs-lookup"><span data-stu-id="dc1f2-111">Version</span></span>|<span data-ttu-id="dc1f2-112">4.7.1</span><span class="sxs-lookup"><span data-stu-id="dc1f2-112">4.7.1</span></span>|
-|<span data-ttu-id="dc1f2-113">Typ</span><span class="sxs-lookup"><span data-stu-id="dc1f2-113">Type</span></span>|<span data-ttu-id="dc1f2-114">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="dc1f2-114">Retargeting</span></span>|
-|<span data-ttu-id="dc1f2-115">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="dc1f2-115">Affected APIs</span></span>|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="6c8e8-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="6c8e8-102">Details</span></span>
+
+<span data-ttu-id="6c8e8-103">Wątki w tle utworzone za pomocą <xref:System.IO.Ports.SerialPort> strumieni nie przerywają procesu, gdy są zgłaszane wyjątki systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="6c8e8-103">Background threads created with <xref:System.IO.Ports.SerialPort> streams no longer terminate the process when OS exceptions are thrown.</span></span> <br/><span data-ttu-id="6c8e8-104">W aplikacjach, które są przeznaczone dla .NET Framework 4,7 i wcześniejszych wersji, proces zostaje zakończony, gdy w wątku w tle utworzonym za pomocą strumienia zostanie zgłoszony wyjątek systemu operacyjnego <xref:System.IO.Ports.SerialPort> .</span><span class="sxs-lookup"><span data-stu-id="6c8e8-104">In applications that target the .NET Framework 4.7 and earlier versions, a process is terminated when an operating system exception is thrown on a background thread created with a <xref:System.IO.Ports.SerialPort> stream.</span></span> <br/><span data-ttu-id="6c8e8-105">W aplikacjach przeznaczonych dla .NET Framework 4.7.1 lub nowszej wersji wątki w tle czekają na zdarzenia systemu operacyjnego związane z aktywnym portem szeregowym i mogą ulec awarii w niektórych przypadkach, takich jak nagłe usunięcie portu szeregowego.</span><span class="sxs-lookup"><span data-stu-id="6c8e8-105">In applications that target the .NET Framework 4.7.1 or a later version, background threads wait for OS events related to the active serial port and could crash in some cases, such as sudden removal of the serial port.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="6c8e8-106">Sugestia</span><span class="sxs-lookup"><span data-stu-id="6c8e8-106">Suggestion</span></span>
+
+<span data-ttu-id="6c8e8-107">W przypadku aplikacji przeznaczonych dla .NET Framework 4.7.1 można zrezygnować z obsługi wyjątków, jeśli nie jest to pożądane, dodając następujący element do `<runtime>` sekcji `app.config` pliku:</span><span class="sxs-lookup"><span data-stu-id="6c8e8-107">For apps that target the .NET Framework 4.7.1, you can opt out of the exception handling if it is not desirable by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true" />
+</runtime>
+```
+
+<span data-ttu-id="6c8e8-108">W przypadku aplikacji przeznaczonych dla wcześniejszych wersji .NET Framework ale uruchamianych na .NET Framework 4.7.1 lub nowszych można zrezygnować z obsługi wyjątków, dodając następujący element do `<runtime>` sekcji `app.config` pliku:</span><span class="sxs-lookup"><span data-stu-id="6c8e8-108">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.7.1 or later, you can opt in to the exception handling by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false" />
+</runtime>
+```
+
+| <span data-ttu-id="6c8e8-109">Nazwa</span><span class="sxs-lookup"><span data-stu-id="6c8e8-109">Name</span></span>    | <span data-ttu-id="6c8e8-110">Wartość</span><span class="sxs-lookup"><span data-stu-id="6c8e8-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="6c8e8-111">Zakres</span><span class="sxs-lookup"><span data-stu-id="6c8e8-111">Scope</span></span>   | <span data-ttu-id="6c8e8-112">Mały</span><span class="sxs-lookup"><span data-stu-id="6c8e8-112">Minor</span></span>       |
+| <span data-ttu-id="6c8e8-113">Wersja</span><span class="sxs-lookup"><span data-stu-id="6c8e8-113">Version</span></span> | <span data-ttu-id="6c8e8-114">4.7.1</span><span class="sxs-lookup"><span data-stu-id="6c8e8-114">4.7.1</span></span>       |
+| <span data-ttu-id="6c8e8-115">Typ</span><span class="sxs-lookup"><span data-stu-id="6c8e8-115">Type</span></span>    | <span data-ttu-id="6c8e8-116">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="6c8e8-116">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="6c8e8-117">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="6c8e8-117">Affected APIs</span></span>
+
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 6cdd410cc818c2c0a993a364e550f5f92ed6a821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f980c8029375074889505a8eb7e8a65aaa8d74e4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614771"
 ---
-### <a name="resgen-refuses-to-load-content-from-the-web"></a><span data-ttu-id="7411d-101">ResGen odmawia do załadowania zawartości z sieci web</span><span class="sxs-lookup"><span data-stu-id="7411d-101">Resgen refuses to load content from the web</span></span>
+### <a name="resgen-refuses-to-load-content-from-the-web"></a><span data-ttu-id="20912-101">Resgen odmawia załadowania zawartości z sieci Web</span><span class="sxs-lookup"><span data-stu-id="20912-101">Resgen refuses to load content from the web</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="7411d-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="7411d-102">Details</span></span>|<span data-ttu-id="7411d-103">pliki resx mogą zawierać binarne sformatowane dane wejściowe.</span><span class="sxs-lookup"><span data-stu-id="7411d-103">.resx files may contain binary formatted input.</span></span> <span data-ttu-id="7411d-104">Jeśli spróbujesz użyć resgen można załadować pliku, który został pobrany z lokalizacji niezaufanych, zakończy się niepowodzeniem do ładowania danych wejściowych domyślnie.</span><span class="sxs-lookup"><span data-stu-id="7411d-104">If you attempt to use resgen to load a file that was downloaded from an untrusted location, it will fail to load the input by default.</span></span>|
-|<span data-ttu-id="7411d-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="7411d-105">Suggestion</span></span>|<span data-ttu-id="7411d-106">ResGen użytkowników, którzy potrzebują ładowanie binarne sformatowane dane wejściowe z niezaufanych lokalizacji można usunąć znacznik sieci Web z pliku wejściowego lub niedoskonałość rezygnacji z zastosowania. Dodaj następujące ustawienie rejestru, aby zastosować niedoskonałość szeroki rezygnacji maszyny: [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\SDK] &quot;AllowProcessOfUntrustedResourceFiles&quot;=&quot;true&quot;</span><span class="sxs-lookup"><span data-stu-id="7411d-106">Resgen users who require loading binary formatted input from untrusted locations can either remove the mark of the web from the input file or apply the opt-out quirk.Add the following registry setting to apply the machine wide opt-out quirk: [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\SDK] &quot;AllowProcessOfUntrustedResourceFiles&quot;=&quot;true&quot;</span></span>|
-|<span data-ttu-id="7411d-107">Zakres</span><span class="sxs-lookup"><span data-stu-id="7411d-107">Scope</span></span>|<span data-ttu-id="7411d-108">Krawędź</span><span class="sxs-lookup"><span data-stu-id="7411d-108">Edge</span></span>|
-|<span data-ttu-id="7411d-109">Wersja</span><span class="sxs-lookup"><span data-stu-id="7411d-109">Version</span></span>|<span data-ttu-id="7411d-110">4.7.2</span><span class="sxs-lookup"><span data-stu-id="7411d-110">4.7.2</span></span>|
-|<span data-ttu-id="7411d-111">Typ</span><span class="sxs-lookup"><span data-stu-id="7411d-111">Type</span></span>|<span data-ttu-id="7411d-112">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="7411d-112">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="20912-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="20912-102">Details</span></span>
+
+<span data-ttu-id="20912-103">Pliki resx mogą zawierać dane wejściowe w formacie binarnym.</span><span class="sxs-lookup"><span data-stu-id="20912-103">.resx files may contain binary formatted input.</span></span> <span data-ttu-id="20912-104">Jeśli spróbujesz użyć Resgen do załadowania pliku pobranego z niezaufanej lokalizacji, domyślnie nie będzie można załadować danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="20912-104">If you attempt to use resgen to load a file that was downloaded from an untrusted location, it will fail to load the input by default.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="20912-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="20912-105">Suggestion</span></span>
+
+<span data-ttu-id="20912-106">Resgen użytkownicy wymagający ładowania binarnych danych wejściowych z niezaufanych lokalizacji mogą usunąć oznaczenie sieci Web z pliku wejściowego lub zastosować opcję rezygnacji z Quirk. Dodaj następujące ustawienie rejestru, aby zastosować opcję rezygnacji z Quirk: [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft.netframework\sdk] &quot; AllowProcessOfUntrustedResourceFiles &quot; = &quot; true&quot;</span><span class="sxs-lookup"><span data-stu-id="20912-106">Resgen users who require loading binary formatted input from untrusted locations can either remove the mark of the web from the input file or apply the opt-out quirk.Add the following registry setting to apply the machine wide opt-out quirk: [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\SDK] &quot;AllowProcessOfUntrustedResourceFiles&quot;=&quot;true&quot;</span></span>
+
+| <span data-ttu-id="20912-107">Nazwa</span><span class="sxs-lookup"><span data-stu-id="20912-107">Name</span></span>    | <span data-ttu-id="20912-108">Wartość</span><span class="sxs-lookup"><span data-stu-id="20912-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="20912-109">Zakres</span><span class="sxs-lookup"><span data-stu-id="20912-109">Scope</span></span>   | <span data-ttu-id="20912-110">Brzeg</span><span class="sxs-lookup"><span data-stu-id="20912-110">Edge</span></span>        |
+| <span data-ttu-id="20912-111">Wersja</span><span class="sxs-lookup"><span data-stu-id="20912-111">Version</span></span> | <span data-ttu-id="20912-112">4.7.2</span><span class="sxs-lookup"><span data-stu-id="20912-112">4.7.2</span></span>       |
+| <span data-ttu-id="20912-113">Typ</span><span class="sxs-lookup"><span data-stu-id="20912-113">Type</span></span>    | <span data-ttu-id="20912-114">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="20912-114">Retargeting</span></span> |

@@ -1,18 +1,38 @@
 ---
-ms.openlocfilehash: f1a1eab471d46f018a8e0d0cf787d487cf67c11e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97299ddb9bee89c792ddb3d2b9c37516180996f7
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614880"
 ---
-### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>Właściwość ContextMenuStrip.SourceControl zawiera nieprawidłowy kontroli w przypadku zagnieżdżonych kontrolki ToolStripMenuItems
+### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>Właściwość ContextMenuStrip. SourceControl zawiera prawidłową kontrolkę w przypadku zagnieżdżonych kontrolki ToolStripMenuItems
 
-|   |   |
-|---|---|
-|Szczegóły|.NET Framework 4.7.1 i poprzednich wersjach <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> właściwość niepoprawnie zwraca wartość null, gdy użytkownik otwiera menu w zagnieżdżonych <xref:System.Windows.Forms.ToolStripMenuItem> kontrolki. W programie .NET Framework 4.7.2 i nowszych <xref:System.Windows.Forms.ContextMenuStrip.SourceControl> właściwość ma zawsze wartość do kontroli rzeczywiste źródło.|
-|Sugestia|<strong>Sposób korzystania z opcji na lub poza te zmiany</strong>w kolejności dla aplikacji, aby korzystać z tych zmian, należy uruchomić w środowisku .NET Framework 4.7.2 lub nowszej. Aplikacji mogą korzystać z tych zmian w jednej z następujących sposobów:<ul><li>Jest ono przeznaczone dla .NET Framework 4.7.2. Ta zmiana jest włączona domyślnie w aplikacji Windows Forms, przeznaczonych dla środowiska .NET Framework 4.7.2 lub nowszej.</li><li>Jest przeznaczony dla platformy .NET Framework 4.7.1 lub starszej wersji, a zdecyduje poza zachowania starszych ułatwień dostępu przez dodanie poniższego [przełącznika AppContext](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do <code>&lt;runtime&gt;</code> sekcji w pliku app.config i ustawieniem dla niego <code>false</code>, jak pokazano w poniższym przykładzie.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Aplikacji przeznaczonych dla środowiska .NET Framework 4.7.2 lub nowszy i chcesz zachować starsze zachowanie zgodzić się na wartości kontroli źródła w starszej wersji przez jawne ustawienie tego parametru AppContext <code>true</code>.|
-|Zakres|Krawędź|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4.7.1 i poprzednich wersjach <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> Właściwość nieprawidłowo zwraca wartość null, jeśli użytkownik otworzy menu z formantów zagnieżdżonych <xref:System.Windows.Forms.ToolStripMenuItem> . W .NET Framework 4.7.2 i nowszych <xref:System.Windows.Forms.ContextMenuStrip.SourceControl> Właściwość jest zawsze ustawiana na rzeczywistą kontrolę źródła.
+
+#### <a name="suggestion"></a>Sugestia
+
+**Jak wybrać lub wycofać te zmiany** Aby aplikacja mogła korzystać z tych zmian, musi ona działać na .NET Framework 4.7.2 lub nowszym. Aplikacja może korzystać z tych zmian w jeden z następujących sposobów:
+
+- Jest ona przeznaczona dla .NET Framework 4.7.2. Ta zmiana jest domyślnie włączona w Windows Forms aplikacjach przeznaczonych dla .NET Framework 4.7.2 lub nowszych.
+- Jest ona przeznaczona dla .NET Framework 4.7.1 lub wcześniejszej wersji i [wyłączają](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) się ze starszych zachowań ułatwień dostępu, dodając następujący `<runtime>` przykład AppContext do sekcji pliku app.config i ustawiając go na `false` , jak pokazano w poniższym przykładzie.
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue=false"/>
+</runtime>
+```
+
+Aplikacje ukierunkowane na .NET Framework 4.7.2 lub nowsze i chcą zachować starsze zachowanie mogą zrezygnować z używania wartości kontroli źródła starszej przez jawne ustawienie tego przełącznika AppContext na `true` .
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>

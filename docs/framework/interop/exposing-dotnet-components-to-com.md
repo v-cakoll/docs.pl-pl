@@ -1,17 +1,18 @@
 ---
 title: Udostępnianie składników .NET do modelu COM
+description: Uwidocznij składniki platformy .NET w modelu COM. Kwalifikowanie typów .NET do międzyoperacyjności. Zastosuj atrybuty międzyoperacyjności. Pakowanie zestawu dla modelu COM. Korzystaj z typu zarządzanego z modelu COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617461"
 ---
 # <a name="exposing-net-components-to-com"></a>Udostępnianie składników .NET do modelu COM
 
@@ -35,7 +36,7 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
 1. [Zarejestruj zestawy przy użyciu modelu COM](registering-assemblies-with-com.md).
 
-     Typy w zestawie (i biblioteki typów) muszą być zarejestrowane w czasie projektowania. Jeśli Instalator nie rejestruje zestawu, poinstruuj deweloperów COM, aby korzystali z Regasm. exe.
+     Typy w zestawie (i biblioteki typów) muszą być zarejestrowane w czasie projektowania. Jeśli Instalator nie rejestruje zestawu, poinstruuj deweloperów COM, aby korzystali z Regasm.exe.
 
 2. [Odwołuj się do typów .NET z modelu COM](how-to-reference-net-types-from-com.md).
 
@@ -49,7 +50,7 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
      Zestaw o silnej nazwie można zainstalować w globalnej pamięci podręcznej zestawów i wymaga podpisu od jego wydawcy. Zestawy, które nie mają silnej nazwy, muszą być zainstalowane w katalogu aplikacji klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Współdziałanie z kodem niezarządzanym](index.md)
-- [Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET](com-interop-sample-com-client-and-net-server.md)
+- [Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET](com-interop-sample-com-client-and-net-server.md)

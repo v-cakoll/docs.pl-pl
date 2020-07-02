@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53d74db1a77e62cc64250658281fd3e4706fe494
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614634"
 ---
-### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Zezwalaj na znaki kontrolne Unicode dwukierunkowe na identyfikatory URI
+### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Zezwalaj na znaki kontrolne dwukierunkowej Unicode w identyfikatorach URI
 
-|   |   |
-|---|---|
-|Szczegóły|Unicode określa kilka specjalnych znaków sterujących używany do określenia orientacji tekstu. W poprzednich wersjach programu .NET Framework te znaki zostały nieprawidłowo usunięte z wszystkie identyfikatory URI, nawet jeśli były obecne w postaci zakodowane w formacie procent. Aby lepiej wykonaj [RFC 3987](https://tools.ietf.org/html/rfc3987), umożliwiamy teraz te znaki w identyfikatorach URI. Gdy znaleziono Niezakodowane: w identyfikatorze URI, są one zakodowane w formacie procent. Jeśli został wykryty procent, kodowane są pozostawiane jako-to.|
-|Sugestia|W przypadku aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od 4.7.2 Obsługa Unicode znaki dwukierunkowego jest domyślnie włączona. Jeśli ta zmiana jest niepożądany, można ją wyłączyć, dodając następujące [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) przełączyć się do <code>&lt;runtime&gt;</code> sekcję pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>W przypadku aplikacji docelowych z wcześniejszych wersji programu .NET Framework, które działają w wersjach, począwszy od .NET Framework 4.7.2 Obsługa Unicode znaki dwukierunkowego jest domyślnie wyłączona. Możesz je włączyć przez dodanie poniższego [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) przełączyć się do <code>&lt;runtime&gt;</code> części pliku konfiguracyjnego aplikacji::<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Unicode określa kilka specjalnych znaków sterujących używanych do określania orientacji tekstu. W poprzednich wersjach .NET Framework te znaki zostały nieprawidłowo usunięte ze wszystkich identyfikatorów URI, nawet jeśli były obecne w postaci kodowanej według wartości procentowej. W celu lepszego przestrzegania [specyfikacji RFC 3987](https://tools.ietf.org/html/rfc3987)zezwalamy teraz na te znaki w identyfikatorach URI. W przypadku znalezienia niezaszyfrowanego identyfikatora URI są one kodowane według wartości procentowej. W przypadku znalezienia zakodowanej procentowo są one pozostawione jako-is.
+
+#### <a name="suggestion"></a>Sugestia
+
+W przypadku aplikacji przeznaczonych dla wersji .NET Framework począwszy od 4.7.2, obsługa znaków dwukierunkowych Unicode jest domyślnie włączona. Jeśli ta zmiana jest niepożądana, można ją wyłączyć, dodając następujący przełącznik [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true" />
+</runtime>
+```
+
+W przypadku aplikacji przeznaczonych dla wcześniejszych wersji .NET Framework, które są uruchamiane w ramach wersji zaczynających się od .NET Framework 4.7.2, obsługa znaków dwukierunkowych Unicode jest domyślnie wyłączona. Można ją włączyć, dodając następujący przełącznik [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Uri?displayProperty=nameWithType>

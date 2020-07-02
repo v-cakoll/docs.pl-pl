@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 4e81087431091dfa4d5432d5ea5e2b665be2b130
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3300a74b81fc9eeba670ee0ceb2c2615fd3925bd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62091703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617286"
 ---
-### <a name="listtforeach-can-throw-exception-when-modifying-list-item"></a>Lista\<T >. ForEach może zgłosić wyjątek podczas modyfikowania elementu listy
+### <a name="listlttgtforeach-can-throw-exception-when-modifying-list-item"></a>List&lt;T&gt;.ForEach może zgłosić wyjątek podczas modyfikowania elementu listy
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, moduł wyliczający <xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})> zgłosi wyjątek <xref:System.InvalidOperationException?displayProperty=name>, jeśli element kolekcji wywołującej zostanie zmodyfikowany. Wcześniej nie zgłaszał wyjątku, ale mogło to prowadzić do sytuacji wyścigu.|
-|Sugestia|Najlepiej nie poprawiać kodu, aby nie modyfikować list podczas wyliczania ich elementów, ponieważ to nigdy nie jest bezpieczna operacja. Aby przywrócić poprzednie zachowanie, można określić platformę docelową aplikacji jako program .NET Framework 4.0.|
-|Zakres|Krawędź|
-|Wersja|4.5|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od programu .NET Framework 4.5, moduł wyliczający <xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})> zgłosi wyjątek <xref:System.InvalidOperationException?displayProperty=fullName>, jeśli element kolekcji wywołującej zostanie zmodyfikowany. Wcześniej nie zgłaszał wyjątku, ale mogło to prowadzić do sytuacji wyścigu.
+
+#### <a name="suggestion"></a>Sugestia
+
+Najlepiej nie poprawiać kodu, aby nie modyfikować list podczas wyliczania ich elementów, ponieważ to nigdy nie jest bezpieczna operacja. Aby przywrócić poprzednie zachowanie, można określić platformę docelową aplikacji jako program .NET Framework 4.0.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.5         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})?displayProperty=nameWithType>

@@ -1,18 +1,48 @@
 ---
-ms.openlocfilehash: 2f960942bda54505690cbac3151ef74ec0ab5ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd7d3e445772e4b5ec148576ccd1374d56e251bd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614783"
 ---
-### <a name="deadlock-may-result-when-using-reentrant-services"></a>Zakleszczenie może spowodować korzystanie z usług reentrant
+### <a name="deadlock-may-result-when-using-reentrant-services"></a>Zakleszczenie może wynikać z używania usług współużytkowanych
 
-|   |   |
-|---|---|
-|Szczegóły|Zakleszczenie może spowodować ponowne enturant usługi, która ogranicza wystąpienia usługi do jednego wątku wykonywania w czasie. Usługi podatne na ten problem będą <xref:System.ServiceModel.ServiceBehaviorAttribute> miały następujące elementy w kodzie:<pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]&#13;&#10;</code></pre>|
-|Sugestia|Aby rozwiązać ten problem, można wykonać następujące czynności:<ul><li>Ustaw tryb współbieżności usługi <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> na &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;. Przykład:</li></ul><pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single)]&#13;&#10;</code></pre><ul><li>Zainstaluj najnowszą aktualizację do programu .NET Framework 4.6.2 lub uaktualnij do nowszej wersji programu .NET Framework. Spowoduje to wyłączenie przepływu <xref:System.Threading.ExecutionContext> <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>w . To zachowanie jest konfigurowalne; jest to równoznaczne z dodaniem do pliku konfiguracji następujących ustawień aplikacji:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Wartość nigdy <code>Switch.System.ServiceModel.DisableOperationContextAsyncFlow</code> nie powinna <code>false</code> być ustawiona na usługi Rentrant.|
-|Zakres|Mały|
-|Wersja|4.6.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Zakleszczenie może skutkować usługą współużytkowaną, która ogranicza wystąpienia usługi do jednego wątku wykonywania w danym momencie. Usługi podatne na wystąpienie tego problemu będą miały następujące <xref:System.ServiceModel.ServiceBehaviorAttribute> kody:
+
+```csharp
+[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
+```
+
+#### <a name="suggestion"></a>Sugestia
+
+Aby rozwiązać ten problem, można wykonać następujące czynności:
+
+- Ustaw tryb współbieżności usługi do <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> lub &lt; System. ServiceModel. concurrency. Multiple? DisplayProperty = nameWithType &gt; . Przykład:
+
+```csharp
+[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
+```
+
+- Zainstaluj najnowszą aktualizację do .NET Framework 4.6.2 lub Uaktualnij do nowszej wersji .NET Framework. Spowoduje to wyłączenie przepływu <xref:System.Threading.ExecutionContext> w programie <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> . To zachowanie można skonfigurować. jest to równoznaczne z dodaniem do pliku konfiguracji następującego ustawienia aplikacji:
+
+```xml
+<appSettings>
+  <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="true" />
+</appSettings>
+```
+
+Wartość `Switch.System.ServiceModel.DisableOperationContextAsyncFlow` nie powinna być nigdy ustawiona na `false` dla usług współużytkowanych.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.6.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType>

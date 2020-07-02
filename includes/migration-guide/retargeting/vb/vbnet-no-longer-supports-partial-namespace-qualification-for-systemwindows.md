@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cef8096c971da8ae245ff974697022f350cb9195
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616074"
 ---
-### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET nie obsługuje już częściowej kwalifikacji obszaru nazw dla interfejsów API systemu.Windows
+### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET nie obsługuje już częściowego kwalifikowania przestrzeni nazw dla interfejsów API System. Windows
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5.2 VB.NET projektów nie może określić interfejsów API systemu System.Windows z częściowo kwalifikowanymi obszarami nazw. Na przykład odwoływanie <code>Windows.Forms.DialogResult</code> się do zakończy się niepowodzeniem. Zamiast tego kod musi odwoływać się<xref:System.Windows.Forms.DialogResult>do w pełni kwalifikowanej nazwy <xref:System.Windows.Forms.DialogResult?displayProperty=name>( ) lub importować określony obszar nazw i odnosić się po prostu do .|
-|Sugestia|Kod powinien być aktualizowany w celu odwoływania się do <code>System.Windows</code> interfejsów API za pomocą prostych nazw (i importowania odpowiedniego obszaru nazw) lub z w pełni kwalifikowanymi nazwami.|
-|Zakres|Mały|
-|Wersja|4.5.2|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4.5.2, projekty VB.NET nie mogą określać interfejsów API System. Windows z częściowo kwalifikowanymi przestrzeniami nazw. Na przykład odwołanie do `Windows.Forms.DialogResult` nie powiedzie się. Zamiast tego, kod musi odwoływać się do w pełni kwalifikowanej nazwy ( <xref:System.Windows.Forms.DialogResult> ) lub zaimportować określoną przestrzeń nazw i zajrzeć się po prostu do <xref:System.Windows.Forms.DialogResult?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Sugestia
+
+Kod powinien zostać zaktualizowany w celu odwoływania się do `System.Windows` interfejsów API przy użyciu prostych nazw (i importowania odpowiedniej przestrzeni nazw) lub z w pełni kwalifikowanymi nazwami.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.5.2       |
+| Typ    | Przekierowanie |

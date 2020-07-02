@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 3bde64b80e5dcfe98bbf598700b6d7004e3c3c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a82b720fd4e771481ea1142a88a095443afa0d5b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614945"
 ---
-### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Fokus klawiatury porusza się teraz prawidłowo między wieloma warstwami obsługi WinForms/WPF
+### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Fokus klawiatury jest teraz przenoszony prawidłowo między wieloma warstwami WinForms/hostingu WPF
 
-|   |   |
-|---|---|
-|Szczegóły|Należy wziąć pod uwagę aplikacji WPF hostingu formant programu WinForms, który z kolei hostuje kontrolek WPF. Użytkownicy mogą nie mieć możliwość karcie poza warstwy WinForms, jeśli pierwszy lub ostatni kontroli w tej warstwie jest WPF <code>System.Windows.Forms.Integration.ElementHost</code>. Ta zmiana rozwiązuje ten problem, a użytkownicy mogą teraz kartę z warstwy WinForms. Zautomatyzowane aplikacje, które zależą od fokus nigdy nie anulowania zapewnianego element warstwy WinForms może przestać działać zgodnie z oczekiwaniami.|
-|Sugestia|Dla deweloperów, który chce korzystać z tej zmiany podczas określania wartości docelowej framework w wersji starszej niż .NET 4.7.2 można ustawić następujący zestaw flag AppContext na wartość false, aby zmiana zaczęła być włączone.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Aplikacje WPF musi zgadzaj się na wszystkie wcześniejsze ulepszenia ułatwień dostępu, aby uzyskać nowsze ulepszenia. Innymi słowy, zarówno <code>Switch.UseLegacyAccessibilityFeatures</code> i <code>Switch.UseLegacyAccessibilityFeatures.2</code> przełączniki muszą być Deweloper setA, który wymaga poprzedniej funkcji podczas określania wartości docelowej platformy .NET 4.7.2 lub większą może ustawić następujące flagi AppContext na wartość true, aby zmiana zaczęła być wyłączone.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Zakres|Krawędź|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Rozważmy aplikację WPF hostującym kontrolkę WinForms, która z kolei umożliwia hostowanie formantów WPF. Użytkownicy mogą nie być w stanie wystawić karty z warstwy WinForms, jeśli pierwszy lub ostatni formant w tej warstwie jest WPF `System.Windows.Forms.Integration.ElementHost` . Ta zmiana rozwiązuje ten problem, a użytkownicy mogą teraz wystawić kartę z warstwy WinForms. Zautomatyzowane aplikacje, które opierają się na koncentracji, nigdy nie ucieczką warstwy WinForms, mogą przestać działać zgodnie z oczekiwaniami.
+
+#### <a name="suggestion"></a>Sugestia
+
+Deweloperzy, którzy chcą korzystać z tej zmiany podczas określania wersji platformy pod kątem platformy .NET 4.7.2, mogą ustawić dla następujących zestawów flag AppContext wartość false, aby zmiana została włączona.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+Aplikacje WPF muszą wyrazić zgodę na wszystkie ulepszenia wczesnego dostępu, aby uzyskać dalsze ulepszenia. Innymi słowy, zarówno, `Switch.UseLegacyAccessibilityFeatures` jak i `Switch.UseLegacyAccessibilityFeatures.2` przełączników musi być setA Deweloper, który wymaga powyższej funkcjonalności, podczas gdy przeznaczony dla programu .NET 4.7.2 lub nowszego można ustawić dla następującej flagi AppContext wartość true, aby zmiana została wyłączona.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |

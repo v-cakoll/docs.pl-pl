@@ -6,20 +6,19 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617564"
 ---
 # <a name="attributes"></a>Atrybuty
-
 <xref:System.Attribute?displayProperty=nameWithType>jest klasą bazową służącą do definiowania atrybutów niestandardowych.
 
- Atrybuty są adnotacjami, które mogą być dodawane do elementów programistycznych, takich jak zestawy, typy, elementy członkowskie i parametry. Są one przechowywane w metadanych zestawu i można do nich uzyskać dostęp w czasie wykonywania przy użyciu interfejsów API odbicia. Na przykład, program .NET definiuje <xref:System.ObsoleteAttribute> atrybut, który można zastosować do typu lub elementu członkowskiego, aby wskazać, że typ lub element członkowski jest przestarzały.
+ Atrybuty są adnotacjami, które mogą być dodawane do elementów programistycznych, takich jak zestawy, typy, elementy członkowskie i parametry. Są one przechowywane w metadanych zestawu i dostępne w czasie wykonywania przy użyciu interfejsów API odbicia. Na przykład struktura definiuje <xref:System.ObsoleteAttribute> , który można zastosować do typu lub elementu członkowskiego, aby wskazać, że typ lub element członkowski jest przestarzały.
 
- Atrybuty mogą zawierać jedną lub więcej właściwości, które zawierają dodatkowe dane związane z atrybutem. Na przykład `ObsoleteAttribute` może zawierać dodatkowe informacje o wersji, w której typ lub element członkowski został uznany za przestarzały, a także opis nowego interfejsu API, który zastępuje przestarzały interfejs API.
+ Atrybuty mogą zawierać jedną lub więcej właściwości, które zawierają dodatkowe dane związane z atrybutem. Na przykład `ObsoleteAttribute` może zawierać dodatkowe informacje o wersji, w której typ lub element członkowski został uznany za przestarzały, a także opis nowych interfejsów API zastępujących przestarzały interfejs API.
 
  Podczas stosowania atrybutu należy określić pewne właściwości atrybutu. Są one określane jako wymagane właściwości lub wymagane argumenty, ponieważ są reprezentowane jako parametry konstruktora pozycyjnyego. Na przykład <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> Właściwość <xref:System.Diagnostics.ConditionalAttribute> jest właściwością wymaganą.
 

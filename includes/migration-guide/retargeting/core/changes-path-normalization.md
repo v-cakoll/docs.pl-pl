@@ -1,17 +1,49 @@
 ---
-ms.openlocfilehash: 994876457f9745de99be30e567f400f69a0192fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70259805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614687"
 ---
-### <a name="changes-in-path-normalization"></a>Zmiany w normalizacji ścieżki
+### <a name="changes-in-path-normalization"></a>Zmiany normalizacji ścieżki
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od aplikacji, które są przeznaczone dla programu .NET Framework 4.6.2, zmienił się sposób, w jaki środowisko wykonawcze normalizuje ścieżki. Normalizacja ścieżki polega na zmodyfikowaniu ciągu identyfikującego ścieżkę lub plik, tak aby był zgodny z prawidłową ścieżką w docelowym systemie operacyjnym. Normalizacja zazwyczaj obejmuje:<ul><li>Kanonizacja separatorów komponentów i katalogów.</li><li>Stosowanie bieżącego katalogu do ścieżki względnej.</li><li>Ocena katalogu względnego (.) lub katalogu nadrzędnego (..) w ścieżce.</li><li>Przycinanie określonych znaków.</li></ul>Począwszy od aplikacji docelowych programu .NET Framework 4.6.2, następujące zmiany w normalizacji ścieżki są domyślnie włączone:<ul><li>Środowisko wykonawcze defers do systemu operacyjnego [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) funkcji do normalizacji ścieżek.</li><li>Normalizacja nie obejmuje już przycinania końca segmentów katalogów (na przykład spacji na końcu nazwy katalogu).</li><li>Obsługa składni ścieżki urządzenia w pełnym `\\.\` zaufaniu, w tym i dla interfejsów API we/wy pliku w pliku mscorlib.dll, `\\?\`.</li><li>Środowisko wykonawcze nie sprawdza poprawności ścieżek składni urządzenia.</li><li>Obsługiwane jest użycie składni urządzenia w celu uzyskania dostępu do alternatywnych strumieni danych.</li></ul>Te zmiany zwiększają wydajność, umożliwiając jednocześnie metody dostępu wcześniej niedostępne ścieżki. Aplikacje przeznaczone dla programu .NET Framework 4.6.1 i wcześniejszych wersji, ale są uruchomione w ramach .NET Framework 4.6.2 lub nowszej, nie mają wpływu na tę zmianę.|
-|Sugestia|Aplikacje przeznaczone dla programu .NET Framework 4.6.2 lub nowszego mogą zrezygnować z <code>&lt;runtime&gt;</code> tej zmiany i używać normalizacji starszych, dodając następujące elementy do sekcji pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.UseLegacyPathHandling=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Aplikacje przeznaczone dla programu .NET Framework 4.6.1 lub starsze, ale działające w programie .NET Framework 4.6.2 <code>&lt;runtime&gt;</code> lub nowszym, mogą włączyć zmiany w normalizacji ścieżki, dodając następujący wiersz do sekcji pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.UseLegacyPathHandling=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.6.2|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od aplikacji przeznaczonych dla .NET Framework 4.6.2, sposób, w jaki środowisko uruchomieniowe normalizuje ścieżki, zostało zmienione. Normalizowanie ścieżki polega na zmodyfikowaniu ciągu, który identyfikuje ścieżkę lub plik, tak aby był zgodny z prawidłową ścieżką w docelowym systemie operacyjnym. Normalizacja zazwyczaj obejmuje:
+
+- Separatory składników formę kanoniczną działa i katalogów.
+- Zastosowanie bieżącego katalogu do ścieżki względnej.
+- Ocenianie katalogu względnego (.) lub katalogu nadrzędnego (..) w ścieżce.
+- Przycinanie określonych znaków.
+Począwszy od aplikacji przeznaczonych dla .NET Framework 4.6.2, następujące zmiany normalizacji ścieżki są domyślnie włączone:
+  - Środowisko uruchomieniowe odkłada do funkcji [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) systemu operacyjnego, aby znormalizować ścieżki.
+- Normalizacja nie obejmuje już przecinania końców segmentów katalogów (takich jak spacja na końcu nazwy katalogu).
+- Obsługa składni ścieżki urządzenia w pełnym zaufaniu, w tym `\\.\` i dla interfejsów API we/wy plików w mscorlib.dll, `\\?\` .
+- Środowisko uruchomieniowe nie sprawdza poprawności ścieżek składni urządzeń.
+- Obsługiwane jest użycie składni urządzenia w celu uzyskania dostępu do alternatywnych strumieni danych.
+Te zmiany zwiększają wydajność, a jednocześnie umożliwiają uzyskanie dostępu do wcześniej niedostępnych ścieżek. Ta zmiana nie wpłynie na aplikacje, które są przeznaczone dla .NET Framework 4.6.1 i wcześniejszych wersji, ale działają na .NET Framework 4.6.2 lub nowszych.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aplikacje przeznaczone dla .NET Framework 4.6.2 lub nowszych mogą zrezygnować z tej zmiany i użyć starszej normalizacji, dodając następujący element do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
+</runtime>
+```
+
+Aplikacje, które są przeznaczone dla .NET Framework 4.6.1 lub wcześniejszych, ale działają na .NET Framework 4.6.2 lub później, mogą umożliwić zmianę normalizacji ścieżki, dodając następujący wiersz do `<runtime>` sekcji pliku Application. Configuration:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.6.2       |
+| Typ    | Przekierowanie |

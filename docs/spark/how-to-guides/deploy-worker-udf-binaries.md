@@ -1,19 +1,21 @@
 ---
 title: Wdróż platformę .NET dla Apache Spark procesów roboczych i plików binarnych funkcji zdefiniowanych przez użytkownika
 description: Dowiedz się, jak wdrożyć platformę .NET dla Apache Spark procesów roboczych i plików binarnych funkcji zdefiniowanych przez użytkownika.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617720"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Wdróż platformę .NET dla Apache Spark procesów roboczych i plików binarnych funkcji zdefiniowanych przez użytkownika
 
 Ten opis zawiera ogólne instrukcje dotyczące wdrażania programu .NET dla Apache Spark procesów roboczych i plików binarnych funkcji zdefiniowanych przez użytkownika. Dowiesz się, które zmienne środowiskowe mają być skonfigurowane, a także kilka często używanych parametrów do uruchamiania aplikacji za pomocą programu `spark-submit` .
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Konfiguracje
 Konfiguracje zawierają ogólne ustawienia zmiennych środowiskowych i parametrów w celu wdrożenia platformy .NET dla Apache Spark procesów roboczych i plików binarnych funkcji zdefiniowanych przez użytkownika.
@@ -46,12 +48,12 @@ Po dodaniu aplikacji platformy [bundled](https://spark.apache.org/docs/latest/su
 
 ## <a name="frequently-asked-questions"></a>Często zadawane pytania
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>Gdy uruchamiam aplikację Spark przy użyciu programu UDF, otrzymuję błąd "FileNotFoundException". Co mam zrobić?
-> **Błąd:** [błąd] [TaskRunner] [0] ProcessStream () nie powiodło się. wyjątek: System. IO. FileNotFoundException: zestaw ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' nie znaleziono pliku: ' mySparkApp. dll '
+> **Błąd:** [błąd] [TaskRunner] [0] ProcessStream () nie powiodło się. wyjątek: System. IO. FileNotFoundException: zestaw ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' nie znaleziono pliku: ' mySparkApp.dll '
 
 **Odpowiedź:** Sprawdź, czy `DOTNET_ASSEMBLY_SEARCH_PATHS` zmienna środowiskowa jest ustawiona poprawnie. Powinna to być ścieżka, która zawiera `mySparkApp.dll` .
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>Dlaczego po uaktualnieniu wersji platformy .NET dla Apache Spark i zresetowaniu `DOTNET_WORKER_DIR` zmiennej środowiskowej nadal pojawia się następujący `IOException` błąd?
-> **Błąd:** Utracono zadanie 0,0 w fazie 11,0 (TID 24, localhost, sterownik wykonujący): Java. IO. IOException: nie można uruchomić programu "Microsoft. Spark. Worker. exe": błąd CreateProcess = 2, system nie może odnaleźć określonego pliku.
+> **Błąd:** Utracono zadanie 0,0 w fazie 11,0 (TID 24, localhost, sterownik wykonujący): Java. IO. IOException: nie można uruchomić programu "Microsoft.Spark.Worker.exe": CreateProcess Error = 2, system nie może odnaleźć określonego pliku.
 
 **Odpowiedź:** Spróbuj ponownie uruchomić okno programu PowerShell (lub inne okna poleceń), aby można było pobrać najnowsze wartości zmiennych środowiskowych. Następnie uruchom program.
 

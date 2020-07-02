@@ -1,18 +1,33 @@
 ---
-ms.openlocfilehash: e73fe48467ede501bae0ddd9362d9d55b3ca998b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f75a652f15be6b0d184db20dc5cd8aafd80539fe
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614908"
 ---
-### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>Akcje upbutton i downbutton domeny firmy WinForm są teraz zsynchronizowane
+### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>Akcje na przycisku i DownButton domeny WinForm są teraz zsynchronizowane
 
-|   |   |
-|---|---|
-|Szczegóły|.NET Framework 4.7.1 i poprzednich wersjach <xref:System.Windows.Forms.DomainUpDown> kontrolki <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji jest ignorowana, gdy tekst kontrolki jest obecny i dewelopera jest wymagana do używania <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> działanie sterowania przed użyciem <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji. Począwszy od programu .NET Framework 4.7.2 zarówno <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> i <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcje działać niezależnie, w tym scenariuszu i pozostają zsynchronizowane.|
-|Sugestia|Aby dla aplikacji do korzystania z tych zmian, należy uruchomić w środowisku .NET Framework 4.7.2 lub nowszej. Aplikacji mogą korzystać z tych zmian w jednej z następujących sposobów:<ul><li>Jest ponownie kompilowana pod kątem programu .NET Framework 4.7.2. Ta zmiana jest włączona domyślnie w aplikacji Windows Forms, przeznaczonych dla środowiska .NET Framework 4.7.2 lub nowszej.</li><li>Jego oznacza brak zgody na starszej wersji przewijanie zachowanie przez dodanie poniższego [przełącznika AppContext](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do <code>&lt;runtime&gt;</code> części pliku konfiguracyjnego aplikacji i ustawieniem dla niego <code>false</code>, jak pokazano w poniższym przykładzie.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Krawędź|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4.7.1 i poprzednich wersjach <xref:System.Windows.Forms.DomainUpDown> Akcja kontrolki <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> jest ignorowana, gdy jest obecny tekst kontrolki, a deweloper jest zobowiązany do używania <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcji na formancie przed użyciem <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji. Począwszy od .NET Framework 4.7.2 obie <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcje i działają niezależnie w tym scenariuszu i pozostają zsynchronizowane.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aby aplikacja mogła korzystać z tych zmian, musi ona działać na .NET Framework 4.7.2 lub nowszym. Aplikacja może korzystać z tych zmian w jeden z następujących sposobów:
+
+- Zostanie ponownie skompilowana w celu przekierowania .NET Framework 4.7.2. Ta zmiana jest domyślnie włączona w Windows Forms aplikacjach przeznaczonych dla .NET Framework 4.7.2 lub nowszych.
+- Powoduje to wypróbowanie starszego zachowania przewijania przez dodanie następującego [przełącznika AppContext](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) do `<runtime>` sekcji pliku konfiguracyjnego aplikacji i ustawienie go na `false` , jak pokazano w poniższym przykładzie.
+
+<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType>

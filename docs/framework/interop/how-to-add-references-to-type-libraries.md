@@ -1,5 +1,6 @@
 ---
-title: 'Porady: dodawanie odwołań do bibliotek typów'
+title: 'Instrukcje: Dodawanie odwołań do bibliotek typów'
+description: Zapoznaj się z tematem Dodawanie odwołań do bibliotek typów w programie Visual Studio lub dla kompilacji wiersza polecenia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3c24385c9cc7debe95aa10369b050897415bc46
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617434"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Porady: dodawanie odwołań do bibliotek typów
+# <a name="how-to-add-references-to-type-libraries"></a>Instrukcje: Dodawanie odwołań do bibliotek typów
 Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane podczas dodawania odwołania do biblioteki typów. Jeśli jest dostępny podstawowy zestaw międzyoperacyjny, program Visual Studio używa istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Aby dodać odwołanie do biblioteki typów w programie Visual Studio  
   
-1. Zainstaluj plik DLL COM lub EXE na komputerze, chyba że plik Instalator systemu Windows. exe przeprowadzi instalację.  
+1. Zainstaluj plik DLL COM lub EXE na komputerze, chyba że plik Setup.exe systemu Windows przeprowadzi instalację.  
   
 2. Wybierz **projekt**, **Dodaj odwołanie**.  
   
@@ -27,7 +28,7 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane po
   
 4. Wybierz bibliotekę typów z listy lub Wyszukaj plik. tlb.  
   
-5. Wybierz pozycję **OK**.  
+5. Wybierz przycisk **OK**.  
   
 6. W Eksplorator rozwiązań otwórz menu skrótów dla właśnie dodanego odwołania, a następnie wybierz polecenie **Właściwości**.  
   
@@ -42,7 +43,7 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane po
   
 2. Użyj opcji [-link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) z nazwą zestawu międzyoperacyjnego, aby osadzić informacje o typie dla typów com w plikach wykonywalnych.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
 - [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)

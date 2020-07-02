@@ -1,18 +1,58 @@
 ---
-ms.openlocfilehash: 136ffc9305de79679ac9d254c026ecb0debc7c52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0024b2a53444319788b8cdd312d537f994070b5e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614759"
 ---
-### <a name="sslstream-supports-tls-alerts"></a>Protokół SslStream obsługuje alerty TLS
+### <a name="sslstream-supports-tls-alerts"></a>SslStream obsługuje alerty protokołu TLS
 
-|   |   |
-|---|---|
-|Szczegóły|Po nie powiodło się uzgadnianie TLS, <xref:System.IO.IOException?displayProperty=name> z <xref:System.ComponentModel.Win32Exception?displayProperty=name> wewnętrznym wyjątkiem zostaną odrzucone przez pierwszą operację odczytu/zapisu we/wy. Kod <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=name> <xref:System.ComponentModel.Win32Exception?displayProperty=name> dla może być mapowany do alertu TLS od strony zdalnej przy użyciu [kodów błędów Schannel dla alertów TLS i SSL](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts). Aby uzyskać więcej informacji, zobacz [RFC 2246: Sekcja 7.2.2 Alerty o błędach](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>Zachowanie w .NET Framework 4.6.2 i wcześniej jest to, że kanał transportu (zwykle połączenie TCP) będzie limit czasu podczas zapisu lub odczytu, jeśli druga strona nie powiódł uzgadniania i natychmiast potem odrzucił połączenie.|
-|Sugestia|Aplikacje wywołujące sieciowe interfejsy <xref:System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)> / <xref:System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)> API <xref:System.IO.IOException> we/wy, takie jak powinny obsługiwać lub <xref:System.TimeoutException?displayProperty=name>.<br/>Funkcja Alerty TLS jest domyślnie włączona, zaczynając od programu .NET Framework 4.7. Aplikacje przeznaczone dla wersji programu .NET Framework od 4.0 do 4.6.2 uruchomionych w systemie .NET Framework 4.7 lub nowszym będą miały funkcję wyłączona w celu zachowania zgodności. <br/>Dostępny jest następujący interfejs API konfiguracji umożliwiający włączenie lub wyłączenie tej funkcji dla aplikacji .NET Framework 4.6 i nowszych uruchomionych w programie .NET Framework 4.7 lub nowszym.<ul><li>Programowo:</li></ul>Musi być pierwszą rzeczą, jaką robi aplikacja, ponieważ ServicePointManager zaiwówkuje tylko raz:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;TestSwitch.LocalAppContext.DisableCaching&quot;, true);&#13;&#10;AppContext.SetSwitch(&quot;Switch.System.Net.DontEnableTlsAlerts&quot;, true); // Set to &#39;false&#39; to enable the feature in .NET Framework 4.6 - 4.6.2.&#13;&#10;</code></pre><ul><li>AppConfig:</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableTlsAlerts=true&quot;/&gt;&#13;&#10;&lt;!-- Set to &#39;false&#39; to enable the feature in .NET Framework 4.6 - 4.6.2. --&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><ul><li>Klucz rejestru (komputer globalny):</li></ul>Ustaw wartość, <code>false</code> aby włączyć funkcję w .NET Framework 4.6 - 4.6.2.<ul><li>Klucz: HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\AppContext\Switch.System.Net.DontEnableTlsAlerts</li><li>Typ: ciąg</li><li>Wartość: &quot;true&quot;</li></ul>|
-|Zakres|Brzeg|
-|Wersja|4.7|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Net.Security.SslStream?displayProperty=nameWithType></li><li><xref:System.Net.WebRequest?displayProperty=nameWithType></li><li><xref:System.Net.HttpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.FtpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType></li><li><xref:System.Net.Http?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Po niepomyślnym uzgadnianiu protokołu TLS <xref:System.IO.IOException?displayProperty=fullName> <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> zostanie wygenerowany wyjątek wewnętrzny z wyjątkiem operacji odczytu/zapisu w pierwszej kolejności. <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName>Kod dla programu <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> można zamapować na alert protokołu TLS ze strony zdalnej przy użyciu [kodów błędów Schannel dla alertów protokołu TLS i SSL](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts). Aby uzyskać więcej informacji, zobacz artykuł [RFC 2246: sekcja 7.2.2 alerty błędów](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>Zachowanie w .NET Framework 4.6.2 i wcześniejszym polega na tym, że kanał transportu (zazwyczaj połączenie TCP) będzie przekroczyć limit czasu podczas zapisu lub odczytu, jeśli druga strona nie powiodła się, a następnie natychmiast odrzuci połączenie.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aplikacje wywołujące interfejsy API we/wy sieci, takie jak <xref:System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)> / <xref:System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)> powinny obsługiwać <xref:System.IO.IOException> lub <xref:System.TimeoutException?displayProperty=fullName> .<br/>Funkcja alertów protokołu TLS jest domyślnie włączona począwszy od .NET Framework 4,7. Aplikacje ukierunkowane na wersje .NET Framework od 4,0 do 4.6.2 uruchomione w systemie .NET Framework 4,7 lub nowszym będą mieć tę funkcję, aby zachować zgodność. <br/>Następujący interfejs API konfiguracji jest dostępny do włączenia lub wyłączenia funkcji dla .NET Framework 4,6 i nowszych aplikacji uruchomionych na .NET Framework 4,7 lub nowszym.
+
+- Programowe: musi być pierwszym zadaniem aplikacji, ponieważ ServicePointManager zostanie zainicjowana tylko raz:
+
+    ```csharp
+    AppContext.SetSwitch("TestSwitch.LocalAppContext.DisableCaching", true);
+
+    // Set to 'false' to enable the feature in .NET Framework 4.6 - 4.6.2.
+    AppContext.SetSwitch("Switch.System.Net.DontEnableTlsAlerts", true);
+    ```
+
+- AppConfig
+
+    ```xml
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Net.DontEnableTlsAlerts=true"/>
+      <!-- Set to 'false' to enable the feature in .NET Framework 4.6 - 4.6.2. -->
+    </runtime>
+    ```
+
+- Klucz rejestru (globalna maszyna): Ustaw wartość, aby `false` włączyć funkcję w .NET Framework 4,6-4.6.2.
+
+    ```ini
+    Key: HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\AppContext\Switch.System.Net.DontEnableTlsAlerts
+    - Type: String
+    - Value: "true"
+    ```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4,7         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Net.Security.SslStream?displayProperty=nameWithType>
+- <xref:System.Net.WebRequest?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>
+- <xref:System.Net.FtpWebRequest?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Http?displayProperty=nameWithType>

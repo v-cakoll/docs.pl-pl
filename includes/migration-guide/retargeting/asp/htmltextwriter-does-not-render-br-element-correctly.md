@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f03e5166e7f1f598e9bba7fb8c550809f287b82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615646"
 ---
-### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter nie `<br/>` renderuje elementu poprawnie
+### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter nie renderuje `<br/>` poprawnie elementu
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.6, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> wywołanie i <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> <code>&lt;BR /&gt;</code> element poprawnie wstawić tylko jeden <code>&lt;BR /&gt;</code> (zamiast dwóch)|
-|Sugestia|Jeśli aplikacja zależała od <code>&lt;BR /&gt;</code> dodatkowego tagu, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> powinna zostać wywołana po raz drugi. Należy zauważyć, że ta zmiana zachowania dotyczy tylko aplikacji, które są przeznaczone dla programu .NET Framework 4.6 lub nowszego, więc inną opcją jest kierowanie poprzedniej wersji programu .NET Framework w celu uzyskania starego zachowania.|
-|Zakres|Brzeg|
-|Wersja|4.6|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,6, wywołanie <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> i <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> z `<BR />` elementem spowoduje poprawne wstawienie tylko jednego `<BR />` (zamiast dwóch)
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli aplikacja zależała od dodatkowych `<BR />` tagów, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> należy wywołać ją drugi raz. Należy zauważyć, że to zachowanie ma wpływ tylko na aplikacje, które są przeznaczone dla .NET Framework 4,6 lub nowszej, więc kolejną opcją jest docelowa Poprzednia wersja .NET Framework w celu uzyskania starego zachowania.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.6         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType>

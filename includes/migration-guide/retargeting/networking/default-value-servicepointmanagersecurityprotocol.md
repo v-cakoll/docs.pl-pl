@@ -1,18 +1,33 @@
 ---
-ms.openlocfilehash: 122a5ab3e2def7c19d3d523881fcb15df4dbca26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c86be598ab6196ecf4da05451c7f22d2be52c12
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614699"
 ---
-### <a name="default-value-of-servicepointmanagersecurityprotocol-is-securityprotocoltypesystemdefault"></a>Domyślną wartością programu ServicePointManager.SecurityProtocol jest SecurityProtocolType.System.Default
+### <a name="default-value-of-servicepointmanagersecurityprotocol-is-securityprotocoltypesystemdefault"></a>Wartość domyślna elementu ServicePointManager. to elementu SecurityProtocol to SecurityProtocolType.System. Wartooć
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od aplikacji docelowych .NET Framework 4.7, domyślną wartością <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> właściwości jest <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>. Ta zmiana umożliwia interfejsom API sieci .NET Framework opartym na strumieniu SslStream (takim jak FTP, HTTPS i SMTP) dziedziczenie domyślnych protokołów zabezpieczeń z systemu operacyjnego zamiast wartości zakodowanych na podstawie wartości zakodowanych zdefiniowanych przez program .NET Framework. Wartość domyślna zależy od systemu operacyjnego i dowolnej konfiguracji niestandardowej wykonywanej przez administratora systemu. Aby uzyskać informacje na temat domyślnego protokołu SChannel w każdej wersji systemu operacyjnego Windows, zobacz [Protokoły w protokołach TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).</p>W przypadku aplikacji przeznaczonych dla starszej wersji programu <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> .NET Framework wartość domyślna właściwości zależy od wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [sekcję Sieć retargetingu zmiany migracji z programu .NET Framework 4.5.2 do 4.6.](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking)|
-|Sugestia|Ta zmiana dotyczy aplikacji docelowych w wersji .NET Framework 4.7 lub nowszej. <br>Jeśli wolisz używać zdefiniowanego protokołu, a nie polegać na domyślnym systemie, możesz jawnie ustawić wartość <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> właściwości.<br>Jeśli ta zmiana jest niepożądana, można zrezygnować z niej, dodając ustawienie konfiguracji do sekcji [ \<>środowiska wykonawczego](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracji aplikacji. Poniższy przykład przedstawia <code>&lt;runtime&gt;</code> zarówno <code>Switch.System.Net.DontEnableSystemDefaultTlsVersions</code> sekcję, jak i przełącznik rezygnacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableSystemDefaultTlsVersions=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.7|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od aplikacji przeznaczonych dla .NET Framework 4,7, wartość domyślna <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> Właściwości to <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> . Ta zmiana umożliwia .NET Framework interfejsów API sieci opartych na SslStream (na przykład FTP, HTTPS i SMTP) do dziedziczenia domyślnych protokołów zabezpieczeń z systemu operacyjnego zamiast przy użyciu zakodowanych wartości zdefiniowanych przez .NET Framework. Wartość domyślna zmienia się w zależności od systemu operacyjnego i dowolnej konfiguracji niestandardowej wykonywanej przez administratora systemu. Aby uzyskać informacje dotyczące domyślnego protokołu SChannel w każdej wersji systemu operacyjnego Windows, zobacz [Protokoły protokołu TLS/SSL (Dostawca SSP Schannel)](https://docs.microsoft.com/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).</p>W przypadku aplikacji przeznaczonych dla starszej wersji .NET Framework wartość domyślna <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> właściwości zależy od wersji .NET Framework docelowej. Aby uzyskać więcej informacji, zobacz [sekcję dotyczącą sieci przekierowywania zmian dotyczących migracji z .NET Framework 4.5.2 do 4,6](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking) .
+
+#### <a name="suggestion"></a>Sugestia
+
+Ta zmiana ma wpływ na aplikacje, które są przeznaczone dla .NET Framework 4,7 lub nowszych. Jeśli wolisz używać zdefiniowanego protokołu zamiast polegania na domyślnym systemie, można jawnie ustawić wartość <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> właściwości. Jeśli ta zmiana jest niepożądana, można zrezygnować z jej przez dodanie ustawienia konfiguracji do [\<runtime>](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji pliku konfiguracji aplikacji. Poniższy przykład pokazuje `<runtime>` sekcję i `Switch.System.Net.DontEnableSystemDefaultTlsVersions` przełącznik rezygnacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSystemDefaultTlsVersions=true" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4,7         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>

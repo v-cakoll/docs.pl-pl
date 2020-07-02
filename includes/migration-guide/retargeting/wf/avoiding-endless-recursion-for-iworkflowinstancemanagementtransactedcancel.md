@@ -1,17 +1,27 @@
 ---
-ms.openlocfilehash: f78f31f4328a45b5ef3f25cdf6eddac1b17fb6e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daf09748e69e70ad982bcee14461b66579f3bb87
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614861"
 ---
-### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>Unikanie nieskończoną rekursję IWorkflowInstanceManagement.TransactedCancel i IWorkflowInstanceManagement.TransactedTerminate
+### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>Unikanie rekursji nieskończoności dla IWorkflowInstanceManagement. TransactedCancel i IWorkflowInstanceManagement. TransactedTerminate
 
-|   |   |
-|---|---|
-|Szczegóły|W pewnych okolicznościach, w przypadku korzystania z <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate%2A?displayProperty=nameWithType> interfejsy API w celu anulowania lub zakończenia przepływu pracy usługi wystąpienie, wystąpienie przepływu pracy, może wystąpić przepełnienie stosu, z powodu nieskończonej rekursji podczas <code>Workflow</code> runtime próbuje zachować wystąpienie usługi w ramach przetwarzania żądania. Ten problem występuje, jeśli wystąpienie przepływu pracy jest w stanie, w której oczekuje na niektórych innych oczekujące WCF żądanie do innej usługi zakończyć. <code>TransactedCancel</code> i <code>TransactedTerminate</code> operacje tworzenia elementów roboczych, które są umieszczane w kolejce dla wystąpienia usługi przepływu pracy. Pracy, te elementy nie są wykonywane w ramach przetwarzania <code>TransactedCancel/TransactedTerminate</code> żądania. Ponieważ wystąpienia usługi przepływu pracy jest zajęty, oczekiwanie na inne oczekujące żądanie WCF zakończyć, pracy utworzony element pozostaje w kolejce. <code>TransactedCancel/TransactedTerminate</code> Kończy działanie i kontrolka jest zwracana do klienta. Gdy transakcja jest skojarzony z <code>TransactedCancel/TransactedTerminate</code> operacji próbuje zatwierdzić, musi ona utrwalanie stanu wystąpienia przepływu pracy usługi. Ale ponieważ istnieje oczekujące <code>WCF</code> żądania dla tego wystąpienia środowiska wykonawczego przepływów pracy nie można utrwalić wystąpienia usługi przepływu pracy i pętlę nieskończoną rekursję prowadzą do przepełnienia stosu. Ponieważ <code>TransactedCancel</code> i <code>TransactedTerminate</code> tylko utworzyć element roboczy w pamięci, fakt, że istnieje transakcja nie ma żadnego skutku. Wycofywanie transakcji nie odrzuca elementu roboczego. Aby rozwiązać ten problem, począwszy od .NET Framework 4.7.2, firma Microsoft wprowadza <code>AppSetting</code> mogą być dodawane do <code>web.config/app.config</code> usługi przepływu pracy, która informuje, aby zignorować transakcji dla <code>TransactedCancel</code> i <code>TransactedTerminate</code>. Dzięki temu zatwierdzenie bez oczekiwania na wystąpienie przepływu pracy utrwalić transakcji. Ustawienie dla tej funkcji ma nazwę <code>microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate</code>. Wartość <code>true</code> wskazuje, że transakcja mają być ignorowane, unikając w ten sposób witryna stack overflow. Wartość domyślna to ustawienie jest <code>false</code>, więc nie wpływają na istniejących wystąpień usługi przepływu pracy.|
-|Sugestia|Jeśli używasz rozwiązania AppFabric lub innym <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> klienta i czy wystąpią przepełnienia stosu w wystąpieniu usługi przepływu pracy, podczas próby anulowania lub zakończenia wystąpienia przepływu pracy, można dodać następujące polecenie, aby <code>&lt;appSettings&gt;</code> sekcji web.config/ Plik App.config dla usługi przepływu pracy:<pre><code class="lang-xml">&lt;add key=&quot;microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate&quot; value=&quot;true&quot;/&gt;&#13;&#10;</code></pre>Jeśli nie napotkasz ten problem, nie musisz to zrobić.|
-|Zakres|Krawędź|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+W pewnych okolicznościach przy użyciu <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate%2A?displayProperty=nameWithType> interfejsów API do anulowania lub kończenia wystąpienia usługi worklow wystąpienie przepływu pracy może napotkać przepełnienie stosu z powodu nieskończonej rekursji, gdy `Workflow` środowisko uruchomieniowe próbuje utrzymać wystąpienie usługi w ramach przetwarzania żądania. Ten problem występuje, gdy wystąpienie przepływu pracy jest w stanie, w którym oczekuje na ukończenie innego oczekującego żądania WCF do innej usługi. `TransactedCancel`Operacje i `TransactedTerminate` tworzą elementy robocze, które są umieszczane w kolejce dla wystąpienia usługi przepływu pracy. Te elementy robocze nie są wykonywane w ramach przetwarzania `TransactedCancel/TransactedTerminate` żądania. Ponieważ wystąpienie usługi przepływu pracy jest zajęte, czekając na zakończenie innych oczekujących żądań WCF, element roboczy został utworzony w kolejce. `TransactedCancel/TransactedTerminate`Operacja zostanie ukończona i kontrola zostanie zwrócona z powrotem do klienta. Gdy transakcja skojarzona z `TransactedCancel/TransactedTerminate` operacją próbuje się zatwierdzić, musi zachować stan wystąpienia Service przepływu pracy. Ale ponieważ istnieje oczekujące `WCF` żądanie wystąpienia, środowisko uruchomieniowe przepływu pracy nie może utrwalać wystąpienia usługi przepływu pracy, a pętla rekursji nieskończonej prowadzi do przepełnienia stosu. Ponieważ `TransactedCancel` i `TransactedTerminate` Utwórz tylko element roboczy w pamięci, fakt, że transakcja istnieje, nie ma żadnego efektu. Wycofanie transakcji nie odrzuci elementu pracy. Aby rozwiązać ten problem, w .NET Framework 4.7.2 został wprowadzony, `AppSetting` który można dodać do `web.config/app.config` usługi przepływu pracy, która informuje go o ignorowaniu transakcji dla `TransactedCancel` i `TransactedTerminate` . Pozwala to na zatwierdzenie transakcji bez oczekiwania na utrwalenie wystąpienia przepływu pracy. Element appSetting dla tej funkcji ma nazwę `microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate` . Wartość wskazuje, `true` że transakcja powinna być ignorowana, co pozwala uniknąć przepełnienia stosu. Wartość domyślna tego element appSetting to `false` , więc nie ma to żadnego oddziaływać na istniejące wystąpienia usługi przepływu pracy.
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli używasz programu AppFabric lub innego <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> klienta i napotykasz przepełnienie stosu w wystąpieniu przepływu pracy Service podczas próby anulowania lub zakończenia wystąpienia przepływu pracy, możesz dodać następujący element do `<appSettings>` sekcji pliku web.config/app.config dla usługi przepływu pracy:
+
+<pre><code class="lang-xml">&lt;add key=&quot;microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate&quot; value=&quot;true&quot;/&gt;&#13;&#10;</code></pre>
+
+Jeśli problem nie wystąpi, nie musisz tego robić.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |

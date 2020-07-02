@@ -1,18 +1,48 @@
 ---
-ms.openlocfilehash: f1f37e61917e8331b06d91e6abebfe4ce3288e7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b62eff8d70873293aafa539f40bf032672df57a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69564402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616289"
 ---
-### <a name="managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode"></a>Zarządzane klasy kryptografii nie zgłaszają kryptografiiWyjęcie w trybie FIPS
+### <a name="managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode"></a>Zarządzane klasy kryptograficzne nie zgłaszają wyjątku kryptografii w trybie FIPS
 
-|   |   |
-|---|---|
-|Szczegóły|W .NET Framework 4.7.2 i wcześniejszych wersjach, <xref:System.Security.Cryptography.SHA256Managed> zarządzane <xref:System.Security.Cryptography.CryptographicException> klasy dostawców kryptograficznych, takie jak throw a, gdy biblioteki kryptograficzne systemu są skonfigurowane w trybie FIPS. Wyjątki te są zgłaszane, ponieważ wersje zarządzane nie zostały poddane certyfikacji FIPS (Federal Information Processing Standards) 140-2, a także do blokowania algorytmów kryptograficznych, które nie zostały uznane za zatwierdzone na podstawie reguł FIPS.  Ponieważ niewielu deweloperów ma swoje maszyny programistyczne w trybie FIPS, wyjątki te są często generowane tylko w systemach produkcyjnych. Aplikacje przeznaczone dla platformy .NET Framework 4.8 i nowsze wersje <xref:System.Security.Cryptography.CryptographicException> automatycznie przełączają się na nowsze, zrelaksowane zasady, dzięki czemu a nie jest już domyślnie generowany. Zamiast tego zarządzane klasy kryptografii przekierowują operacje kryptograficzne do biblioteki kryptografii systemowej. Ta zmiana zasad skutecznie usuwa potencjalnie mylące różnice między środowiskami deweloperskimi a środowiskami produkcyjnymi i sprawia, że składniki macierzyste i składniki zarządzane działają zgodnie z tymi samymi zasadami kryptograficznymi.|
-|Sugestia|Jeśli to zachowanie jest niepożądane, można zrezygnować z niego i <xref:System.Security.Cryptography.CryptographicException> przywrócić poprzednie zachowanie, tak aby jest wyrzucany w trybie FIPS, dodając następujące ustawienie konfiguracji [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do sekcji [ \<>środowiska wykonawczego](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.UseLegacyFipsThrow=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Jeśli aplikacja jest przeznaczona dla platformy .NET Framework 4.7.2 lub wcześniejszej, można również wyrazić zgodę na tę zmianę, dodając następujące ustawienie konfiguracji [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do sekcji [ \<>środowiska wykonawczego](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.UseLegacyFipsThrow=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Brzeg|
-|Wersja|4.8|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.AesManaged?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.MD5Cng?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.MD5CryptoServiceProvider?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RC2CryptoServiceProvider?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RijndaelManaged?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RIPEMD160Managed?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.SHA1Managed?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.SHA256Managed?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4.7.2 i starszych wersjach zarządzane klasy dostawcy usług kryptograficznych, takie jak <xref:System.Security.Cryptography.SHA256Managed> throw, <xref:System.Security.Cryptography.CryptographicException> gdy systemowe biblioteki kryptograficzne są skonfigurowane w trybie FIPS. Te wyjątki są zgłaszane, ponieważ zarządzane wersje nie zostały poddane FIPS (Federal Information Processing Standards) 140-2 certyfikacji, a także do blokowania algorytmów kryptograficznych, które nie zostały uznane za zatwierdzone na podstawie reguł FIPS.  Ponieważ kilku deweloperów ma swoje komputery deweloperskie w trybie FIPS, te wyjątki są często zgłaszane tylko w systemach produkcyjnych. Aplikacje przeznaczone dla .NET Framework 4,8 i nowszych wersji automatycznie przełączają się do nowszej, swobodnej zasady, tak aby <xref:System.Security.Cryptography.CryptographicException> nie było już zgłaszane domyślnie w takich przypadkach. Zamiast tego zarządzane klasy kryptograficzne przekierowują operacje kryptograficzne do biblioteki kryptografii systemu. Ta zmiana zasad skutecznie usuwa potencjalne różnice między środowiskami deweloperskimi i środowiskami produkcyjnymi, dzięki czemu składniki macierzyste i zarządzane składniki działają w ramach tych samych zasad kryptograficznych.
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli takie zachowanie jest niepożądane, można zrezygnować z niego i przywrócić poprzednie zachowanie, tak aby <xref:System.Security.Cryptography.CryptographicException> w trybie FIPS było zgłaszane, dodając następujące ustawienie konfiguracji [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do [\<runtime>](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Security.Cryptography.UseLegacyFipsThrow=true" />
+</runtime>
+```
+
+Jeśli aplikacja jest przeznaczona .NET Framework 4.7.2 lub wcześniejsza, możesz również przystąpić do tej zmiany, dodając następujące ustawienia konfiguracji [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do [\<runtime>](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Security.Cryptography.UseLegacyFipsThrow=false" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4,8         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Security.Cryptography.AesManaged?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.MD5Cng?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RijndaelManaged?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RIPEMD160Managed?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.SHA1Managed?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.SHA256Managed?displayProperty=nameWithType>

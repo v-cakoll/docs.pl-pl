@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: f814703e187726d3988787fac52e5049988fd4d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 946e71f2f466664c8f9fcf4811288ce693a872eb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616294"
 ---
 ### <a name="workflow-xaml-checksums-for-symbols-changed-from-sha1-to-sha256"></a>Sumy kontrolne XAML przepływu pracy dla symboli zmienionych z SHA1 na SHA256
 
-|   |   |
-|---|---|
-|Szczegóły|Aby obsługiwać debugowanie za pomocą programu Visual Studio, środowisko wykonawcze przepływu pracy generuje sumę kontrolną dla pliku XAML przepływu pracy przy użyciu algorytmu mieszania. W .NET Framework 4.6.2 i wcześniejszych wersjach mieszanie sumy kontrolnej przepływu pracy używało algorytmu MD5, który powodował problemy w systemach obsługujących FIPS. Począwszy od programu .NET Framework 4.7, domyślny algorytm został zmieniony na SHA1. Począwszy od programu .NET Framework 4.8, domyślny algorytm został zmieniony na SHA256.|
-|Sugestia|Jeśli kod nie może załadować wystąpień przepływu pracy lub znaleźć odpowiednie symbole <code>AppContext</code> z &quot;powodu błędu sumy kontrolnej, spróbuj zmienić switch.System.Activities.UseSHA1HashForDebuggerSymbols&quot; na true. W kodzie:<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseSHA1HashForDebuggerSymbols&quot;, true);&#13;&#10;</code></pre>Lub w konfiguracji:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseSHA1HashForDebuggerSymbols=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.8|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Aby można było obsługiwać debugowanie za pomocą programu Visual Studio, środowisko uruchomieniowe przepływu pracy generuje sumę kontrolną dla pliku XAML przepływu pracy przy użyciu algorytmu wyznaczania wartości skrótu. W .NET Framework 4.6.2 i starszych wersjach funkcja tworzenia skrótów sum kontrolnych przepływu pracy użyła algorytmu MD5, który spowodował problemy z systemami z obsługą FIPS. Począwszy od .NET Framework 4,7, domyślny algorytm został zmieniony na SHA1. Począwszy od .NET Framework 4,8, domyślny algorytm został zmieniony na SHA256.
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli kod nie może załadować wystąpień przepływu pracy lub znaleźć odpowiednich symboli ze względu na błąd sumy kontrolnej, spróbuj ustawić `AppContext` przełącznik "Switch.System. Activities. UseSHA1HashForDebuggerSymbols "do `true` . W kodzie:
+
+```csharp
+System.AppContext.SetSwitch("Switch.System.Activities.UseSHA1HashForDebuggerSymbols", true);
+```
+
+Lub w konfiguracji:
+
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.Activities.UseSHA1HashForDebuggerSymbols=true" />
+  </runtime>
+</configuration>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4,8         |
+| Typ    | Przekierowanie |

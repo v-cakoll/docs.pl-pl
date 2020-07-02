@@ -1,18 +1,43 @@
 ---
-ms.openlocfilehash: e4860113f45d3b3466e01e5db61d355a8ea745df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 148312743dd274728b178951548889dc3a680528
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614694"
 ---
-### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>Zmiana znaku separatora ścieżki we właściwości FullName obiektów ZipArchiveEntry
+### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>Zmień znak separatora ścieżki w właściwości FullName obiektów klasy ZipArchiveEntry
 
-|   |   |
-|---|---|
-|Szczegóły|W przypadku aplikacji przeznaczonych dla platformy .NET Framework 4.6.1 i nowszych&quot;\&wersji znak separatora ścieżki został zmieniony z ukośnika odwrotnego (quot;) do ukośnika do przodu (&quot;/&quot;) <xref:System.IO.Compression.ZipArchiveEntry.FullName> we właściwości obiektów utworzonych <xref:System.IO.Compression.ZipArchiveEntry> przez przeciążenia <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A> metody. Zmiana wprowadza implementację platformy .NET w zgodność z sekcją 4.4.17.1 . [ Zip File Format Specification](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) i pozwala . Zip archiwów do dekompresji w systemach innych niż Windows.<br />Dekompresji pliku zip utworzonego przez aplikację, która jest przeznaczona dla poprzedniej wersji programu .NET Framework w systemach operacyjnych innych niż Windows, takich jak Macintosh, nie można zachować struktury katalogów. Na przykład na komputerze Macintosh tworzy zestaw plików, których nazwa pliku łączy ścieżkę katalogu, wraz&quot;&quot;z dowolnymi znakami ukośnika odwrotnego () i nazwa pliku. W rezultacie struktura katalogów zdekompresowanych plików nie jest zachowywana.|
-|Sugestia|Wpływ tej zmiany na . Pliki ZIP, które są dekompresowane w systemie operacyjnym <xref:System.IO?displayProperty=nameWithType> Windows przez interfejsy API w obszarze nazw .NET Framework&quot;/&quot;powinny być minimalne,&quot;ponieważ te interfejsy API mogą bezproblemowo obsługiwać ukośnik do przodu ( ) lub ukośnik odwrotny (quot;)\& jako znak separatora ścieżki.<br />Jeśli ta zmiana jest niepożądana, można zrezygnować z niej, [<](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) dodając ustawienie konfiguracji do sekcji pliku konfiguracji aplikacji. Poniższy przykład przedstawia <code>&lt;runtime&gt;</code> zarówno <code>Switch.System.IO.Compression.ZipFile.UseBackslash</code> sekcję, jak i przełącznik rezygnacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Compression.ZipFile.UseBackslash=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Ponadto aplikacje przeznaczone dla poprzednich wersji programu .NET Framework, ale są uruchomione w programie .NET Framework 4.6.1 [<](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) i nowszych wersjach, mogą zdecydować się na to zachowanie, dodając ustawienie konfiguracji do sekcji pliku konfiguracji aplikacji. Poniżej przedstawiono <code>&lt;runtime&gt;</code> zarówno <code>Switch.System.IO.Compression.ZipFile.UseBackslash</code> sekcję, jak i przełącznik opt-in.<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Compression.ZipFile.UseBackslash=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Brzeg|
-|Wersja|4.6.1|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+W przypadku aplikacji, które są przeznaczone dla .NET Framework 4.6.1 i nowszych wersji, znak separatora ścieżki został zmieniony z ukośnika odwrotnego (" \" ) na ukośnik ("/") we <xref:System.IO.Compression.ZipArchiveEntry.FullName> właściwości <xref:System.IO.Compression.ZipArchiveEntry> obiektów utworzonych przez przeciążenia <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A> metody. Zmiana powoduje, że implementacja platformy .NET jest zgodna z sekcją 4.4.17.1 [. Specyfikacja formatu pliku ZIP](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) i zezwala na to. Archiwa ZIP do skompresowania w systemach innych niż Windows.<br />Dekompresowanie pliku zip utworzonego przez aplikację, która jest przeznaczona dla starszej wersji .NET Framework w systemach operacyjnych innych niż Windows, takich jak Macintosh, nie można zachować struktury katalogów. Na przykład w systemie Macintosh tworzy zestaw plików, których nazwa pliku łączy ścieżkę katalogu, wraz z dowolnym znakiem ukośnika odwrotnego ("") i nazwą pliku. W związku z tym struktura katalogów nieskompresowanych plików nie jest zachowywana.
+
+#### <a name="suggestion"></a>Sugestia
+
+Wpływ tej zmiany na. Pliki ZIP, które są dekompresowane w systemie operacyjnym Windows przez interfejsy API w <xref:System.IO?displayProperty=nameWithType> przestrzeni nazw .NET Framework powinny być minimalne, ponieważ te interfejsy API mogą bezproblemowo obsługiwać ukośnik ("/") lub ukośnik odwrotny (" \" ) jako znak separatora ścieżki.<br />Jeśli ta zmiana jest niepożądana, można zrezygnować z jej przez dodanie ustawienia konfiguracji do [<](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji pliku konfiguracji aplikacji. Poniższy przykład pokazuje `<runtime>` sekcję i `Switch.System.IO.Compression.ZipFile.UseBackslash` przełącznik rezygnacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=true" />
+</runtime>
+```
+
+Ponadto aplikacje, które są przeznaczone dla poprzednich wersji .NET Framework ale działają w .NET Framework 4.6.1 i nowszych wersjach, mogą zrezygnować z tego zachowania przez dodanie ustawienia konfiguracji do [<](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji pliku konfiguracyjnego aplikacji. Poniżej przedstawiono zarówno `<runtime>` sekcję, jak i `Switch.System.IO.Compression.ZipFile.UseBackslash` przełącznik zgody.
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=false" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.6.1       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String)?displayProperty=nameWithType>
+- <xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean)?displayProperty=nameWithType>
+- <xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding)?displayProperty=nameWithType>

@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 734041f5921571cd11225a359e794526cbd8d0e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7dcf9c4c3dc7ea536ddc847769a1a30f1298bb2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62091706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617281"
 ---
-### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>Metoda System.Uri.IsWellFormedUriString zwraca wartość false dla względne identyfikatory URI przy użyciu znaku dwukropek w pierwszy segment
+### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>Metoda System. URI. IsWellFormedUriString zwraca wartość false dla względnych identyfikatorów URI z dwukropkiem w pierwszym segmencie
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5 <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)> traktują względne identyfikatory URI z <code>:</code> w ich pierwszy segment, ponieważ niepoprawnie sformułowany. To różni się od <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=name> zachowania w programie .NET Framework 4.0 do RFC3986 została wprowadzona w celu.|
-|Sugestia|Ta zmiana (na przykład wiele innych zmian URI) mają wpływ tylko na aplikacje zgodne z .NET Framework 4.5 (lub nowszy). Aby nadal używać starego zachowania, aplikacja jest przeznaczona dla .NET Framework 4.0. Alternatywnie skanowania identyfikatory URI przed wywołaniem <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=name> szukasz <code>:</code> znaki, które warto usunąć do celów sprawdzania poprawności, jeśli pożądane jest stare zachowanie.|
-|Zakres|Mały|
-|Wersja|4.5|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)> traktuje względne identyfikatory URI z `:` w pierwszym segmencie jako niewłaściwie sformułowane. Jest to zmiana z <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=fullName> zachowania w .NET Framework 4,0, która była zgodna z RFC3986.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ta zmiana (taka jak wiele innych zmian identyfikatorów URI) będzie mieć wpływ tylko na aplikacje ukierunkowane na .NET Framework 4,5 (lub nowsze). Aby nadal korzystać z starego zachowania, wybierz aplikację jako docelową do .NET Framework 4,0. Alternatywnie możesz skanować identyfikator URI przed wywołaniem <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=fullName> wyszukiwania `:` znaków, które można usunąć w celu weryfikacji, jeśli jest to wymagane.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.5         |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=nameWithType>

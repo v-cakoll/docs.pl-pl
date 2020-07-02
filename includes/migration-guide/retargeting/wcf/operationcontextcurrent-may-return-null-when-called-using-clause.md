@@ -1,18 +1,69 @@
 ---
-ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25c14f93da5fe8acf06269554fed30ddc6bc95d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614754"
 ---
-### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current może zwracać wartość null po wywołaniu w using klauzuli
+### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>Element OperationContext. Current może zwracać wartość null, gdy jest wywoływana w klauzuli using
 
-|   |   |
-|---|---|
-|Szczegóły|<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>może <code>null</code> powrócić <xref:System.NullReferenceException> i może spowodować, jeśli wszystkie z następujących warunków są spełnione:<ul><li>Można pobrać wartość <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> właściwości w metodzie, <xref:System.Threading.Tasks.Task> która <xref:System.Threading.Tasks.Task%601>zwraca lub .</li><li>Tworzenie wystąpienia <xref:System.ServiceModel.OperationContextScope> obiektu w <code>using</code> klauzuli.</li><li>Można pobrać wartość <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> właściwości w <code>using statement</code>. Przykład:</li></ul><pre><code class="lang-csharp">using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext context = OperationContext.Current;      // OperationContext.Current is null.&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre>|
-|Sugestia|Aby rozwiązać ten problem, można wykonać następujące czynności:<ul><li>Zmodyfikuj kod w następujący<code>null</code> <xref:System.ServiceModel.OperationContext.Current%2A> sposób, aby utworzyć wystąpienie nowego obiektu niebędącego obiektem:</li></ul><pre><code class="lang-csharp">OperationContext ocx = OperationContext.Current;&#13;&#10;using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext.Current = new OperationContext(ocx.Channel);&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre><ul><li>Zainstaluj najnowszą aktualizację do programu .NET Framework 4.6.2 lub uaktualnij do nowszej wersji programu .NET Framework. Spowoduje to wyłączenie przepływu <xref:System.Threading.ExecutionContext> <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> w i przywraca zachowanie aplikacji WCF w .NET Framework 4.6.1 i wcześniejszych wersjach. To zachowanie jest konfigurowalne; jest to równoznaczne z dodaniem do pliku konfiguracji następujących ustawień aplikacji:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Jeśli ta zmiana jest niepożądana, a aplikacja zależy od kontekstu wykonania przepływającego między kontekstami operacji, można włączyć jej przepływ w następujący sposób:<pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;false&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
-|Zakres|Brzeg|
-|Wersja|4.6.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>może zwracać `null` i <xref:System.NullReferenceException> może wynikać, jeśli spełnione są wszystkie z następujących warunków:
+
+- Pobierasz wartość <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> właściwości w metodzie, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> .
+- Tworzysz wystąpienie <xref:System.ServiceModel.OperationContextScope> obiektu w `using` klauzuli.
+- Pobierasz wartość <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> właściwości w `using statement` . Przykład:
+
+```csharp
+using (new OperationContextScope(OperationContext.Current))
+{
+    // OperationContext.Current is null.
+    OperationContext context = OperationContext.Current;
+
+    // ...
+}
+```
+
+#### <a name="suggestion"></a>Sugestia
+
+Aby rozwiązać ten problem, można wykonać następujące czynności:
+
+- Zmodyfikuj swój kod w następujący sposób, aby utworzyć wystąpienie nowego obiektu niebędącego `null` <xref:System.ServiceModel.OperationContext.Current%2A> :
+
+    ```csharp
+    OperationContext ocx = OperationContext.Current;
+    using (new OperationContextScope(OperationContext.Current))
+    {
+        OperationContext.Current = new OperationContext(ocx.Channel);
+
+        // ...
+    }
+    ```
+
+- Zainstaluj najnowszą aktualizację do .NET Framework 4.6.2 lub Uaktualnij do nowszej wersji .NET Framework. Spowoduje to wyłączenie przepływu <xref:System.Threading.ExecutionContext> w programie <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> i przywrócenie zachowania aplikacji WCF w .NET Framework 4.6.1 i wcześniejszych wersjach. To zachowanie można skonfigurować. jest to równoznaczne z dodaniem do pliku konfiguracji następującego ustawienia aplikacji:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="true" />
+    </appSettings>
+    ```
+
+    Jeśli ta zmiana jest niepożądana, a aplikacja zależy od kontekstu wykonywania przepływających między kontekstami operacji, można włączyć jej przepływ w następujący sposób:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="false" />
+    </appSettings>
+    ```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4.6.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>

@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb89cbc72d8b09fd1aa5bc775a6c539eb208fa70
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614894"
 ---
-### <a name="wpf-pointer-based-touch-stack"></a>Stos dotykowy oparty na wskaźniku WPF
+### <a name="wpf-pointer-based-touch-stack"></a>Stos dotykowy oparty na wskaźnikach WPF
 
-|   |   |
-|---|---|
-|Szczegóły|Ta zmiana dodaje możliwość włączenia opcjonalnego WM_POINTER oparty na WPF touch/pisaka stosu.  Deweloperzy, którzy nie jawnie włączyć to powinno zobaczyć żadnych zmian w WPF touch/pisak zachowanie. Bieżące znane problemy z opcjonalnym WM_POINTER stosem dotykowym/rysikowym:<ul><li>Brak obsługi pisma oduniającego w czasie rzeczywistym.</li><li>Podczas odkowania i stylusPlugins będzie nadal działać, będą one przetwarzane w wątku interfejsu użytkownika, co może prowadzić do niskiej wydajności.</li><li>Zmiany w zachowaniu spowodowane zmianami w promocji ze zdarzeń dotykowych/pisaka na zdarzenia myszy</li><li>Manipulacja może zachowywać się inaczej</li><li>Przeciąganie/upuszczanie nie będzie wyświetlane odpowiednie informacje zwrotne dla wprowadzania dotykowego</li><li>Nie ma to wpływu na wprowadzanie rysika</li><li>Przeciągania/Upuszczania nie można już inicjować podczas zdarzeń dotykowych/pisaka</li><li>Może to potencjalnie zawiesić aplikację do momentu wykrycia danych wejściowych myszy.</li><li>Zamiast tego deweloperzy powinni zainicjować przeciąganie i upuszczanie ze zdarzeń myszy.</li></ul>|
-|Sugestia|Deweloperzy, którzy chcą włączyć ten stos, mogą dodawać/scalać następujące elementy do pliku App.config aplikacji:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Usunięcie tej wartości lub ustawienie wartości false spowoduje wyłączenie tego opcjonalnego stosu. Należy pamiętać, że ten stos jest dostępny tylko w systemie Windows 10 Creators Update i powyżej.|
-|Zakres|Brzeg|
-|Wersja|4.7|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Ta zmiana umożliwia dodanie opcjonalnego stosu dotykowego i pióra WPF WM_POINTER.  Deweloperzy, którzy nie włączą jawnie tego, powinni zobaczyć, że nie zmienią się zachowania dotykowego i pióra WPF. Bieżące znane problemy z opcjonalnym stosem WM_POINTER i dotykiem piórem:
+
+- Brak obsługi pisma odręcznego w czasie rzeczywistym.
+- Podczas gdy narzędzia króla i StylusPlugIns — będą nadal działać, zostaną one przetworzone w wątku interfejsu użytkownika, co może prowadzić do słabej wydajności.
+- Zmiany behawioralne spowodowane zmianami w trakcie podwyższania poziomu zdarzeń dotknięcia/piórem do zdarzeń myszy
+- Manipulowanie może zachowywać się inaczej
+- Operacja przeciągania/upuszczania nie pokazuje odpowiedniej opinii na temat wprowadzania dotykowego
+- Nie ma to wpływu na wprowadzanie piórem
+- Nie można już inicjować przeciągania/upuszczania w przypadku zdarzeń dotykowych/pióra
+- Może to potencjalnie zawiesić aplikację, dopóki nie zostanie wykryta myszą.
+- Zamiast tego deweloperzy powinni inicjować przeciąganie i upuszczanie ze zdarzeń myszy.
+
+#### <a name="suggestion"></a>Sugestia
+
+Deweloperzy, którzy chcą włączyć ten stos, mogą dodawać i scalać następujące elementy w pliku App.config aplikacji:
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+Usunięcie tego lub ustawienie wartości false spowoduje wyłączenie tego opcjonalnego stosu. Należy zauważyć, że ten stos jest dostępny tylko w Update i nowszych wersjach systemu Windows 10.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4,7         |
+| Typ    | Przekierowanie |

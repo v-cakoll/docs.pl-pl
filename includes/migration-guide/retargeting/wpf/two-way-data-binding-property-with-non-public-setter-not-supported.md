@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f1a8af37a305ab0904801002dd99e17e8eca62e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62091698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616125"
 ---
-### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Dwukierunkowe powiązanie danych z właściwością setter niepublicznych nie jest obsługiwane.
+### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Dwukierunkowe powiązanie danych z właściwością niepubliczną metodą ustawiającą nie jest obsługiwane
 
-|   |   |
-|---|---|
-|Szczegóły|Podjęto próbę powiązanie danych z właściwością bez publicznej metody ustawiającej nigdy nie było to obsługiwany scenariusz. Począwszy od programu .NET Framework 4.5.1, w tym scenariuszu będzie zgłaszać wyjątek <xref:System.InvalidOperationException?displayProperty=name>. Należy pamiętać, że ten nowy wyjątek zostanie zgłoszony tylko dla aplikacji, które są specjalnie przeznaczone dla .NET Framework 4.5.1. Jeśli aplikacja jest przeznaczony dla .NET Framework 4.5, będą miały wywołania. Jeśli aplikacja nie wskazuje elementu docelowego konkretnej wersji .NET Framework, powiązanie będzie traktowane jak jednokierunkowe.|
-|Sugestia|Aplikacja powinien zostać zaktualizowany do Użyj powiązania jednokierunkowe lub publicznie ujawniać metoda ustawiająca właściwości. Alternatywnie przeznaczone dla .NET Framework 4.5 spowoduje, że aplikacja stare zachowują się.|
-|Zakres|Mały|
-|Wersja|4.5.1|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Próba utworzenia powiązania danych z właściwością bez publicznej metody ustawiającej nigdy nie była obsługiwanego scenariusza. Począwszy od .NET Framework 4.5.1, ten scenariusz spowoduje zgłoszenie <xref:System.InvalidOperationException?displayProperty=fullName> . Należy zauważyć, że ten nowy wyjątek zostanie wygenerowany tylko dla aplikacji, które mają specjalne miejsce dla .NET Framework 4.5.1. Jeśli aplikacja jest przeznaczona dla .NET Framework 4,5, wywołanie będzie dozwolone. Jeśli aplikacja nie jest ukierunkowana na określoną wersję .NET Framework, powiązanie będzie traktowane jako jednokierunkowe.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aplikacja powinna zostać zaktualizowana w taki sposób, aby korzystała z powiązania jednokierunkowego, albo uwidocznić metodę ustawiającą właściwości publicznie. Alternatywnie, celem .NET Framework 4,5 spowoduje, że aplikacja będzie mieć stare zachowanie.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.5.1       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>

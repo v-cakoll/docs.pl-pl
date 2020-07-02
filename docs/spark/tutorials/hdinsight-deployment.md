@@ -1,15 +1,15 @@
 ---
 title: Wdrażanie aplikacji platformy .NET dla Apache Spark w usłudze Azure HDInsight
 description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Spark w usłudze HDInsight.
-ms.date: 01/23/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617642"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w usłudze Azure HDInsight
 
@@ -25,12 +25,14 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > * Utwórz i uruchom akcję skryptu usługi HDInsight.
 > * Uruchom aplikację .NET dla Apache Spark w klastrze usługi HDInsight.
 
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Przed rozpoczęciem wykonaj następujące zadania:
 
 * Jeśli nie masz subskrypcji platformy Azure, Utwórz [bezpłatne konto](https://azure.microsoft.com/free/dotnet/).
-* Zaloguj się w witrynie [Azure Portal](https://portal.azure.com/).
+* Zaloguj się do [portalu Azure](https://portal.azure.com/).
 * Zainstaluj Eksplorator usługi Azure Storage na komputerze z [systemem Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)lub [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) .
 * Ukończ [platformę .NET dla Apache Spark — Rozpocznij pracę w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku.
 
@@ -60,7 +62,7 @@ Przed rozpoczęciem wykonaj następujące zadania:
     |Właściwość  |Opis  |
     |---------|---------|
     |Subskrypcja  | Z listy rozwijanej wybierz jedną z aktywnych subskrypcji platformy Azure. |
-    |Grupa zasobów | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej grupy. Grupa zasobów to kontener, który zawiera powiązane zasoby dla rozwiązania platformy Azure. |
+    |Grupa zasobów | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej grupy. Grupa zasobów to kontener zawierający powiązane zasoby dla rozwiązania platformy Azure. |
     |Nazwa klastra | Podaj nazwę klastra Spark w usłudze HDInsight.|
     |Lokalizacja   | Wybierz lokalizację dla grupy zasobów. Szablon używa tej lokalizacji do tworzenia klastra oraz na potrzeby domyślnego magazynu klastra. |
     |Typ klastra| Wybierz pozycję **Spark** jako typ klastra.|
@@ -104,7 +106,7 @@ Następnie opublikujesz *mySparkApp* utworzone w programie [.NET dla Apache Spar
 
    **W systemie Windows:**
 
-   Przejdź do *mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)**. Nadaj nowemu folderowi nazwę **Publish. zip**.
+   Przejdź do *mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)**. Nadaj nazwę nowemu folderowi **publish.zip**.
 
    **W systemie Linux Uruchom następujące polecenie:**
 
@@ -118,9 +120,9 @@ Następnie użyj Eksplorator usługi Azure Storage do przekazania następującyc
 
 * Microsoft. Spark. Worker
 * install-worker.sh
-* plik Publish. zip
+* publish.zip
 * Microsoft-Spark-2.3. x-0.3.0. jar
-* Input. txt.
+* input.txt.
 
 1. Otwórz Eksplorator usługi Azure Storage i przejdź do swojego konta magazynu z menu po lewej stronie. Przejdź do szczegółów kontenera obiektów BLOB klastra w kontenerach **obiektów BLOB** na koncie magazynu.
 
@@ -132,13 +134,13 @@ Następnie użyj Eksplorator usługi Azure Storage do przekazania następującyc
 
    Utwórz nowy plik o nazwie **Install-Worker.sh** komputera lokalnego i wklej [zawartość Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) znajdującą się w witrynie GitHub. Następnie Przekaż *Install-Worker.sh* do kontenera obiektów BLOB.
 
-4. Klaster wymaga pliku Publish. zip zawierającego pliki opublikowane przez aplikację. Przejdź do opublikowanego folderu, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**i Znajdź plik **Publish. zip**. Następnie Przekaż plik *Publish. zip* do kontenera obiektów BLOB.
+4. Klaster wymaga pliku publish.zip, który zawiera pliki opublikowane przez aplikację. Przejdź do opublikowanego folderu, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**i Znajdź **publish.zip**. Następnie Przekaż *publish.zip* do kontenera obiektów BLOB.
 
 5. Klaster wymaga kodu aplikacji spakowanego w pliku JAR. Przejdź do opublikowanego folderu, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**i Znajdź **Microsoft-Spark-2.3. x-0.3.0. jar**. Następnie Przekaż plik jar do kontenera obiektów BLOB.
 
    Może istnieć wiele plików jar (dla wersji 2.3. x i 2.4. x z platformy Spark). Musisz wybrać plik JAR, który jest zgodny z wersją platformy Spark wybraną podczas tworzenia klastra. Na przykład wybierz *Microsoft-Spark-2.3. x-0.3.0. jar* , jeśli podczas tworzenia klastra wybrano platformę Spark.
 
-6. Klaster wymaga danych wejściowych do aplikacji. Przejdź do katalogu **mySparkApp** i Zlokalizuj **Input. txt**. Przekaż plik wejściowy do katalogu **User/sshuser** w kontenerze obiektów BLOB. Nastąpi połączenie z klastrem za pośrednictwem protokołu SSH, a ten folder wskazuje, że Twój klaster szuka jego danych wejściowych. Plik *Input. txt* jest jedynym plikiem przekazywanym do określonego katalogu.
+6. Klaster wymaga danych wejściowych do aplikacji. Przejdź do katalogu **mySparkApp** i Znajdź **input.txt**. Przekaż plik wejściowy do katalogu **User/sshuser** w kontenerze obiektów BLOB. Nastąpi połączenie z klastrem za pośrednictwem protokołu SSH, a ten folder wskazuje, że Twój klaster szuka jego danych wejściowych. Plik *input.txt* to jedyny plik przekazany do określonego katalogu.
 
 ## <a name="run-the-hdinsight-script-action"></a>Uruchamianie akcji skryptu HDInsight
 

@@ -1,18 +1,44 @@
 ---
-ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21921156295d89aad04f3197fef9fa322f3c8c87
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614663"
 ---
-### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Upewnij się, że System.Uri używa zestawu znaków zarezerwowanych spójne
+### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Upewnij się, że system. URI używa spójnego zestawu znaków zarezerwowanych
 
-|   |   |
-|---|---|
-|Szczegóły|W <xref:System.Uri?displayProperty=fullName>, niektóre teraz stale lewej kodowania znaków zakodowane w formacie procent, które zostały czasami zdekodowane. Dzieje się we właściwości i metod, uzyskujących dostęp do składników ścieżki, query, fragment lub informacje o użytkowniku identyfikatora URI. Spowoduje to zmianę działania tylko wtedy, gdy obie następujące czynności są spełnione:<ul><li>Identyfikator URI zawiera formie zakodowanej w dowolnej z następujących znaków zarezerwowanych: <code>:</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>!</code> lub <code>*</code>.</li><li>Identyfikator URI zawiera Unicode lub zakodowane niezarezerwowanych znaków. Jeśli powyższe są spełnione oba, zakodowanych znaków zastrzeżonych lewej są zakodowane. W poprzednich wersjach programu .NET Framework są odczytany.</li></ul>|
-|Sugestia|W przypadku aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od 4.7.2 nowe zachowanie dekodowania jest domyślnie włączona. Jeśli ta zmiana jest niepożądany, można ją wyłączyć, dodając następujące [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) przełączyć się do <code>&lt;runtime&gt;</code> sekcję pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>W przypadku aplikacji docelowych z wcześniejszych wersji programu .NET Framework, które działają w wersjach, począwszy od .NET Framework 4.7.2 nowe zachowanie dekodowania jest domyślnie wyłączona. Możesz je włączyć przez dodanie poniższego [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) przełączyć się do <code>&lt;runtime&gt;</code> części pliku konfiguracyjnego aplikacji::<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+W programie <xref:System.Uri?displayProperty=fullName> niektóre znaki zakodowane w procentach, które były czasami zdekodowane, są teraz spójne z kodowaniem. Dzieje się tak we właściwościach i metodach, które uzyskują dostęp do składników Path, Query, fragment lub UserInfo identyfikatora URI. Zachowanie zmieni się tylko wtedy, gdy oba poniższe warunki są spełnione:
+
+- Identyfikator URI zawiera zakodowaną postać dowolnego z następujących znaków zarezerwowanych: `:` , `'` ,, `(` `)` `!` lub `*` .
+- Identyfikator URI zawiera znak Unicode lub zakodowany zastrzeżony. Jeśli obie powyższe wartości mają wartość true, zakodowane zarezerwowane znaki są zaszyfrowane. W poprzednich wersjach .NET Framework są one zdekodowane.
+
+#### <a name="suggestion"></a>Sugestia
+
+W przypadku aplikacji przeznaczonych dla wersji .NET Framework zaczynających się od 4.7.2 nowe zachowanie dekodowania jest domyślnie włączone. Jeśli ta zmiana jest niepożądana, można ją wyłączyć, dodając następujący przełącznik [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true" />
+</runtime>
+```
+
+W przypadku aplikacji przeznaczonych dla wcześniejszych wersji .NET Framework, które są uruchamiane w ramach wersji zaczynających się od .NET Framework 4.7.2, nowe zachowanie dekodowania jest domyślnie wyłączone. Można ją włączyć, dodając następujący przełącznik [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false" />
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Uri?displayProperty=nameWithType>

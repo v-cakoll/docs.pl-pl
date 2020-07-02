@@ -1,20 +1,21 @@
 ---
-title: 'Porady: tworzenie otok COM'
+title: 'Instrukcje: Tworzenie otok COM'
+description: Tworzenie otok Component Object Model (COM) przy użyciu programu Visual Studio lub narzędzi .NET (Tlbimp.exe i Regasm.exe). Obie metody generują dwa typy otok COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 286526c710287e6efa3e49a7f7c55e3687076e29
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617395"
 ---
-# <a name="how-to-create-com-wrappers"></a>Porady: tworzenie otok COM
+# <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
-Otoki Component Object Model (COM) można tworzyć za pomocą funkcji programu Visual Studio 2005 lub narzędzi .NET Framework Tools Tlbimp. exe i Regasm. exe. Obie metody generują dwa typy otok COM:
+Otoki Component Object Model (COM) można tworzyć za pomocą funkcji programu Visual Studio 2005 lub narzędzi .NET Framework Tlbimp.exe i Regasm.exe. Obie metody generują dwa typy otok COM:
 
 - Wywoływanie [otoki środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md) z biblioteki typów w celu uruchomienia obiektu com w kodzie zarządzanym.
 
@@ -43,7 +44,7 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpoczą
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć oddzielną otokę środowiska uruchomieniowego przy użyciu narzędzi .NET Framework  
   
-- Uruchom narzędzie [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md) .  
+- Uruchom narzędzie [Tlbimp.exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md) .  
   
  To narzędzie tworzy zestaw zawierający metadane czasu wykonywania dla typów zdefiniowanych w oryginalnej bibliotece typów.  
   
@@ -65,13 +66,13 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpoczą
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć zawywoływaną przez COM otokę przy użyciu narzędzi .NET Framework  
   
-Uruchom narzędzie [Regasm. exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) .  
+Uruchom narzędzie [Regasm.exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) .  
   
 To narzędzie odczytuje metadane zestawu i dodaje niezbędne wpisy do rejestru. W związku z tym klienci modelu COM mogą w niewidoczny sposób tworzyć klasy .NET Framework. Zestawu można użyć tak, jakby był natywną klasą COM.  
   
-Program Regasm. exe można uruchomić na zestawie znajdującym się w dowolnym katalogu, a następnie uruchomić [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) , aby przenieść go do globalnej pamięci podręcznej zestawów. Przeniesienie zestawu nie unieważnia wpisów rejestru lokalizacji, ponieważ globalna pamięć podręczna zestawów jest zawsze sprawdzana, jeśli zestaw nie został znaleziony w innym miejscu.  
+Można uruchomić Regasm.exe w zestawie znajdującym się w dowolnym katalogu, a następnie uruchomić [Gacutil.exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md) , aby przenieść go do globalnej pamięci podręcznej zestawów. Przeniesienie zestawu nie unieważnia wpisów rejestru lokalizacji, ponieważ globalna pamięć podręczna zestawów jest zawsze sprawdzana, jeśli zestaw nie został znaleziony w innym miejscu.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wywoływana otoka środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md)
 - [Wywoływana otoka COM](../../standard/native-interop/com-callable-wrapper.md)

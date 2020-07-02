@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 9c3eedb7f7d4cd030a12c141b8630876c1ffdb4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b521f4163bf5bf4a369d0eec12dae503703a976e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614646"
 ---
-### <a name="throttle-concurrent-requests-per-session"></a>Ograniczanie równoczesnych żądań na sesję
+### <a name="throttle-concurrent-requests-per-session"></a>Ogranicz współbieżne żądania na sesję
 
-|   |   |
-|---|---|
-|Szczegóły|W .NET Framework 4.6.2 i wcześniejszych ASP.NET wykonuje żądania z tym samym Sessionid sekwencyjnie i ASP.NET zawsze wystawia Sessionid za pośrednictwem plików cookie domyślnie. Jeśli strona zajmuje dużo czasu, aby odpowiedzieć, znacznie obniży wydajność serwera tylko naciskając klawisz F5 w przeglądarce. W poprawce dodaliśmy licznik do śledzenia żądań w kolejce i zakończenia żądań, gdy przekraczają określony limit. Wartość domyślna to 50. Jeśli limit zostanie osiągnięty, ostrzeżenie zostanie zarejestrowane w dzienniku zdarzeń, a odpowiedź HTTP 500 może zostać zarejestrowana w dzienniku usługi IIS.|
-|Sugestia|Aby przywrócić stare zachowanie, można dodać następujące ustawienie do pliku web.config, aby zrezygnować z nowego zachowania.<pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;aspnet:RequestQueueLimitPerSession&quot; value=&quot;2147483647&quot;/&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
-|Zakres|Brzeg|
-|Wersja|4.7|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4.6.2 i starszych ASP.NET wykonuje żądania z tym samym identyfikatorem sesji sekwencyjnie, a ASP.NET zawsze domyślnie wystawia identyfikator sesji za pomocą plików cookie. Jeśli odpowiedź strony zajmuje dużo czasu, znacznie obniży wydajność serwera, naciskając klawisz <kbd>F5</kbd> w przeglądarce. W ramach poprawki dodaliśmy licznik do śledzenia żądań umieszczonych w kolejce i kończy żądania po przekroczeniu określonego limitu. Wartość domyślna to 50. Jeśli limit zostanie osiągnięty, w dzienniku zdarzeń zostanie zarejestrowane ostrzeżenie, a odpowiedź HTTP 500 może zostać zarejestrowana w dzienniku usług IIS.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aby przywrócić stare zachowanie, można dodać następujące ustawienie do pliku web.config, aby zrezygnować z nowego zachowania.
+
+```xml
+<appSettings>
+    <add key="aspnet:RequestQueueLimitPerSession" value="2147483647"/>
+</appSettings>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Brzeg        |
+| Wersja | 4,7         |
+| Typ    | Przekierowanie |

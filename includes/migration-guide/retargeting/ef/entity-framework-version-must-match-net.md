@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 4c6a89f9753989a5ad061e847dff70d2af0b3cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 863e7035827537e0f943af05c2f0232029b99db8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62091705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617196"
 ---
-### <a name="entity-framework-version-must-match-the-net-framework-version"></a>Entity Framework w wersji musi odpowiadać wersji programu .NET Framework
+### <a name="entity-framework-version-must-match-the-net-framework-version"></a>Wersja Entity Framework musi być zgodna z wersją .NET Framework
 
-|   |   |
-|---|---|
-|Szczegóły|Programu entity framework w wersji powinny zostać dopasowane do wersji programu .NET framework. Entity Framework 5 jest zalecane dla platformy .NET Framework 4.5. Istnieje kilka znanych problemów z programem EF 4.x w projekcie programu .NET Framework 4.5 wokół <xref:System.ComponentModel.DataAnnotations>. W .NET 4.5 te zostały przeniesione do innego zestawu, dzięki czemu nie występują problemy, określająca, które adnotacje do użycia.|
-|Sugestia|Uaktualnianie do programu Entity Framework 5 dla programu .NET Framework 4.5|
-|Zakres|Duży|
-|Wersja|4.5|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Wersja Entity Framework (EF) powinna być zgodna z wersją .NET Framework. Entity Framework 5 jest zalecana dla .NET Framework 4,5. Istnieją znane problemy z programem EF 4. x w projekcie .NET Framework 4,5 <xref:System.ComponentModel.DataAnnotations> . W .NET Framework 4,5 te zostały przeniesione do innego zestawu, dlatego występują problemy z ustaleniem adnotacji do użycia.
+
+#### <a name="suggestion"></a>Sugestia
+
+Uaktualnij do wersji Entity Framework 5 dla .NET Framework 4,5
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Duży       |
+| Wersja | 4.5         |
+| Typ    | Przekierowanie |

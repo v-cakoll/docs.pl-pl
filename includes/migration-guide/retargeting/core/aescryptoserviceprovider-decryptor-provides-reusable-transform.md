@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: c008809606372c84b05a2facd1cac1293382aed4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36a9db601f7637185bf48dfcbe2233b4489fcdcf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614658"
 ---
-### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a>Deszyfrator AesCryptoServiceProvider zapewnia transformację wielokrotnego
+### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a>Deszyfrowanie AesCryptoServiceProvider zapewnia przekształcenie wielokrotnego użytku
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od aplikacji, które są przeznaczone dla programu .NET Framework 4.6.2, <xref:System.Security.Cryptography.AesCryptoServiceProvider> deszyfrator zapewnia transformację wielokrotnego pożytu. Po wywołaniu <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name>, transformacja jest ponownie initialized i może być ponownie. W przypadku aplikacji przeznaczonych dla wcześniejszych wersji programu .NET Framework próba <xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=name> ponownego użycia <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name> deszyfratora przez wywołanie po wywołaniu, aby zgłosić <xref:System.Security.Cryptography.CryptographicException> lub produkuje uszkodzone dane.|
-|Sugestia|Wpływ tej zmiany powinien być minimalny, ponieważ jest to oczekiwane zachowanie. Aplikacje, które zależą od poprzedniego zachowania, mogą zrezygnować z niego, używając go, dodając następujące ustawienie konfiguracji do <code>&lt;runtime&gt;</code> sekcji pliku konfiguracyjnego aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Ponadto aplikacje przeznaczone dla poprzedniej wersji programu .NET Framework, ale działające w wersji programu .NET Framework, zaczynając od programu .NET Framework 4.6.2, mogą wyrazić zgodę, dodając następujące ustawienie konfiguracji do <code>&lt;runtime&gt;</code> sekcji pliku konfiguracyjnego aplikacji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Zakres|Mały|
-|Wersja|4.6.2|
-|Typ|Przekierowanie|
-|Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.2, <xref:System.Security.Cryptography.AesCryptoServiceProvider> deszyfrowanie zapewnia przekształcenie wielokrotnego użytku. Po wywołaniu <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName> , transformacja zostanie zainicjowana i może być ponownie użyta. W przypadku aplikacji, które są przeznaczone dla wcześniejszych wersji .NET Framework, próba ponownego użycia deszyfrującego przez wywołanie metody wyrzucania <xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=fullName> <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName> <xref:System.Security.Cryptography.CryptographicException> lub powoduje uszkodzenie danych.
+
+#### <a name="suggestion"></a>Sugestia
+
+Wpływ tej zmiany powinien być minimalny, ponieważ jest to oczekiwane zachowanie. Aplikacje, które są zależne od poprzedniego zachowania, mogą zrezygnować z korzystania z niego, dodając następujące ustawienia konfiguracji do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=true"/>
+</runtime>
+```
+
+Ponadto aplikacje przeznaczone dla wcześniejszej wersji .NET Framework ale działają w ramach wersji .NET Framework, zaczynając od .NET Framework 4.6.2, dodając następujące ustawienia konfiguracji do `<runtime>` sekcji pliku konfiguracyjnego aplikacji:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=false"/>
+</runtime>
+```
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.6.2       |
+| Typ    | Przekierowanie |
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+- <xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType>

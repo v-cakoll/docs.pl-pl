@@ -1,17 +1,44 @@
 ---
-ms.openlocfilehash: f18b96eaeec8a6427ffb7776327517989d0225d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 418bcdca1e9a325894891d7b0e080ce035e2d1b4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614682"
 ---
-### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>ASP.NET ulepszenia ułatwień dostępu w programie .NET Framework 4.7.1
+### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>Udoskonalenia ułatwień dostępu ASP.NET w programie .NET Framework 4.7.1
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.7.1, ASP.NET poprawiła sposób pracy ASP.NET formantów sieci Web z technologią ułatwień dostępu w programie Visual Studio w celu lepszej obsługi klientów ASP.NET.  Należą do nich następujące zmiany:<ul><li>Zmiany implementujące brakujące wzorce ułatwień dostępu interfejsu użytkownika w formantych, takie jak okno dialogowe Dodawanie pola w kreatorze widoku szczegółów lub okno dialogowe Konfigurowanie widoku listy kreatora ListView.</li><li>Zmiany w celu poprawy wyświetlania w trybie wysokiego kontrastu, takie jak Edytor pól pagera danych.</li><li>Zmiany ułatwiające nawigację za pomocą klawiatury dla kontrolek, takie jak okno dialogowe Pola w kreatorze Edytowanie pól pagera formantu DataPager, okno dialogowe Konfigurowanie obiektu ObjectContext lub Okno dialogowe Konfigurowanie selction danych kreatora Konfigurowanie źródła danych.</li></ul>|
-|Sugestia|**Jak zgłosić się lub zrezygnować z tych zmian**<br>Aby projektant programu Visual Studio korzystać z tych zmian, należy uruchomić w programie .NET Framework 4.7.1 lub nowszych. Aplikacja internetowa może korzystać z tych zmian w jeden z następujących sposobów:<ul><li>Zainstaluj program Visual Studio 2017 15.3 lub nowszy, który domyślnie obsługuje nowe funkcje ułatwień dostępu z następującym przełącznikiem AppContext.</li><li>Zrezygnuj ze starszych <code>Switch.UseLegacyAccessibilityFeatures</code> zachowań ułatwień <code>&lt;runtime&gt;</code> dostępu, dodając przełącznik AppContext do sekcji w <code>false</code>pliku devenv.exe.config i ustawiając go na , jak pokazano w poniższym przykładzie.</li></ul><pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;...&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false&#39;  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;...&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Aplikacje przeznaczone dla programu .NET Framework 4.7.1 lub nowszego i chcą zachować starsze zachowanie ułatwień dostępu, <code>true</code>mogą zdecydować się na korzystanie ze starszych funkcji ułatwień dostępu, wyraźnie ustawiając przełącznik AppContext .|
-|Zakres|Mały|
-|Wersja|4.7.1|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4.7.1, ASP.NET ulepszono sposób, w jaki formanty sieci Web ASP.NET współpracują z technologią ułatwień dostępu w programie Visual Studio, aby lepiej obsługiwać klientów ASP.NET.  Należą do nich następujące zmiany:
+
+- Zmiany w celu zaimplementowania brakujących wzorców dostępności interfejsu użytkownika w kontrolkach, takich jak okno dialogowe Dodawanie pola w Kreatorze widoku szczegółów lub okno dialogowe Konfiguruj widok ListView kreatora ListView.
+- Zmiany w celu usprawnienia wyświetlania w trybie duży kontrast, takie jak edytor pól modułu stronicowania danych.
+- Zmiany w celu ulepszenia środowiska nawigacji klawiatury dla kontrolek, takich jak okno dialogowe pola w Kreatorze Edytuj pola modułu stronicowania kontrolki formantu DataPager, okno dialogowe Konfigurowanie obiektu ObjectContext lub okno dialogowe Konfigurowanie wyboru danych Kreatora konfiguracji źródła danych.
+
+#### <a name="suggestion"></a>Sugestia
+
+**Jak wybrać lub wycofać te zmiany** Aby projektant programu Visual Studio mógł korzystać z tych zmian, musi on działać na .NET Framework 4.7.1 lub nowszym. Aplikacja sieci Web może korzystać z tych zmian w jeden z następujących sposobów:
+
+- Zainstaluj program Visual Studio 2017 15,3 lub nowszy, który obsługuje nowe funkcje ułatwień dostępu domyślnie z następującym przełącznikiem AppContext.
+- Zrezygnuj ze starszych zachowań ułatwień dostępu, dodając `Switch.UseLegacyAccessibilityFeatures` przełącznik AppContext do `<runtime>` sekcji w pliku devenv.exe.config i ustawiając go na `false` , jak pokazano w poniższym przykładzie.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+<runtime>
+...
+<!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true/false;key2=true/false'  -->
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false" />
+...
+</runtime>
+</configuration>
+```
+
+Aplikacje, które są przeznaczone dla .NET Framework 4.7.1 lub nowszych i chcą zachować starsze zachowanie ułatwień dostępu, mogą zrezygnować z używania starszych funkcji ułatwień dostępu przez jawne ustawienie tego przełącznika AppContext na `true` .
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Mały       |
+| Wersja | 4.7.1       |
+| Typ    | Przekierowanie |

@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 14b8930044381d1d86ec7984d36a5c3588eebd81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4303b177ffe01328965c909a5a3809414fcead91
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614931"
 ---
-### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>Domyślny algorytm skrótu dla WPF przez kompilator znaczników jest teraz SHA256
+### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>Domyślny algorytm wyznaczania wartości skrótu dla kompilatora znaczników języka WPF jest teraz SHA256
 
-|   |   |
-|---|---|
-|Szczegóły|WPF MarkupCompiler udostępnia usługi kompilacji dla plików znaczników XAML.  W .NET Framework 4.7.1 i wcześniejszych wersjach domyślny algorytm skrótu używany dla sum kontrolnych było SHA1. Ze względu na ostatnie obawy związane z bezpieczeństwem z SHA1, to ustawienie domyślne zostało zmienione na SHA256 począwszy od programu .NET Framework 4.7.2.  Ta zmiana ma wpływ na wszystkie generowanie sum kontrolnych dla plików znaczników podczas kompilacji.|
-|Sugestia|Deweloper, który jest przeznaczony dla .NET Framework 4.7.2 lub nowszej oraz profesjonalistą przywrócić zachowanie wyznaczania wartości skrótu SHA1, należy ustawić następujące flagi AppContext.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Dla deweloperów, który chce korzystać z SHA256 wyznaczania wartości skrótu, podczas określania wartości docelowej framework w wersji starszej niż .NET 4.7.2 należy ustawić poniżej AppContext flagi.  Należy pamiętać, że zainstalowana wersja programu .NET Framework, musi być 4.7.2 lub nowszej.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=false&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Zakres|Przezroczyste|
-|Wersja|4.7.2|
-|Typ|Przekierowanie|
+#### <a name="details"></a>Szczegóły
+
+Program WPF MarkupCompiler udostępnia usługi kompilacji dla plików znaczników XAML.  W .NET Framework 4.7.1 i starszych wersjach domyślny algorytm wyznaczania wartości skrótu używany dla sum kontrolnych to SHA1. Z powodu niedawnych problemów z zabezpieczeniami algorytmem SHA1 ta wartość domyślna została zmieniona na SHA256, począwszy od .NET Framework 4.7.2.  Ta zmiana ma wpływ na wszystkie generowanie sum kontrolnych dla plików znaczników podczas kompilacji.
+
+#### <a name="suggestion"></a>Sugestia
+
+Deweloper, który jest ukierunkowany na .NET Framework 4.7.2 lub nowszy i chce powrócić do zachowania skrótu SHA1, musi ustawić następującą flagę AppContext.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+Deweloper, który chce wykorzystać mieszanie SHA256 podczas określania wersji platformy pod kątem platformy .NET 4.7.2, musi ustawić poniżej flagę AppContext.  Należy pamiętać, że zainstalowana wersja .NET Framework musi być 4.7.2 lub nowsza.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=false&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   | Przezroczyste |
+| Wersja | 4.7.2       |
+| Typ    | Przekierowanie |

@@ -3,14 +3,14 @@ title: Przetwarzanie wsadowe za pomocą platformy .NET dla Apache Spark — samo
 description: Dowiedz się, jak przeprowadzić przetwarzanie wsadowe przy użyciu platformy .NET dla Apache Spark.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/13/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618288"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Samouczek: wykonywanie przetwarzania wsadowego za pomocą platformy .NET dla Apache Spark
 
@@ -25,6 +25,8 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > * Utwórz i Uruchom platformę .NET dla aplikacji Apache Spark
 > * Odczytywanie danych do ramki Dataframe i przygotowywanie jej do analizy
 > * Przetwarzanie danych przy użyciu platformy Spark SQL
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

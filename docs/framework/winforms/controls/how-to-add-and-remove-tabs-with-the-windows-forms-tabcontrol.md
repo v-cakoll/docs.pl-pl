@@ -1,5 +1,6 @@
 ---
 title: Dodawanie i usuwanie kart za pomocą kontrolki TabControl
+description: Dowiedz się, jak dodawać i usuwać karty z Windows Forms kontrolką TabControl, która zawiera dwie kontrolki TabPage. Uzyskaj dostęp do tych kart za pomocą właściwości TabPages.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618080"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Porady: dodawanie i usuwanie kart za pomocą formantu TabControl formularzy systemu Windows
-Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki <xref:System.Windows.Forms.TabPage>. Dostęp do tych kart można uzyskać za pomocą właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+Domyślnie <xref:System.Windows.Forms.TabControl> kontrolka zawiera dwie <xref:System.Windows.Forms.TabPage> kontrolki. Dostęp do tych kart można uzyskać za pomocą <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Aby programowo dodać kartę  
   
-- Użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Użyj <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> metody <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +48,11 @@ Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki
   
 ### <a name="to-remove-a-tab-programmatically"></a>Aby programowo usunąć kartę  
   
-- Aby usunąć wybrane karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Aby usunąć wybrane karty, użyj <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> metody <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości.  
   
-     —lub—  
+     -lub-  
   
-- Aby usunąć wszystkie karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Aby usunąć wszystkie karty, użyj <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> metody <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -76,7 +77,7 @@ Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)
+- [TabControl — Informacje o formancie](tabcontrol-control-overview-windows-forms.md)
 - [Instrukcje: dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
-- [Instrukcje: wyłączanie kart](how-to-disable-tab-pages.md)
-- [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Porady: wyłączanie kart](how-to-disable-tab-pages.md)
+- [Porady: zmienianie wyglądu składnika TabControl formularzy systemu Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

@@ -1,5 +1,6 @@
 ---
 title: Przekazywanie struktur
+description: Dowiedz się, jak przekazywać struktury i klasy do funkcji niezarządzanych. Dowiedz się więcej o atrybucie StructLayoutAttribute, który służy do definiowania sformatowanych typów.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620823"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
 Wiele niezarządzanych funkcji oczekuje, że jako parametr funkcji, elementy członkowskie struktur (typy zdefiniowane przez użytkownika w Visual Basic) lub elementy członkowskie klas, które są zdefiniowane w kodzie zarządzanym. Podczas przekazywania struktur lub klas do niezarządzanego kodu przy użyciu funkcji Invoke platformy należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównanie. W tym temacie wprowadzono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, którego można użyć do zdefiniowania sformatowanych typów. Dla zarządzanych struktur i klas można wybrać spośród kilku przewidzianych zachowań układu **LayoutKind** .  
@@ -34,7 +35,7 @@ Wiele niezarządzanych funkcji oczekuje, że jako parametr funkcji, elementy cz�
 - Użyj klasy przekazaną przez odwołanie, gdy niezarządzana funkcja wymaga dwóch poziomów pośrednika.  
   
 ## <a name="declaring-and-passing-structures"></a>Deklarowanie i przekazywanie struktur  
- Poniższy przykład pokazuje, `Point` jak zdefiniować struktury i `Rect` w kodzie zarządzanym i przekazać typy jako parametr do funkcji **PtInRect** w pliku User32. dll. **PtInRect** ma następujący niezarządzany podpis:  
+ Poniższy przykład pokazuje, jak zdefiniować `Point` `Rect` struktury i w kodzie zarządzanym i przekazać typy jako parametr do funkcji **PtInRect** w pliku User32.dll. **PtInRect** ma następujący niezarządzany podpis:  
   
 ```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -88,7 +89,7 @@ internal static class NativeMethods
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>Deklarowanie i przekazywanie klas  
- Elementy członkowskie klasy można przekazać do niezarządzanej funkcji DLL, o ile Klasa ma stały układ elementu członkowskiego. Poniższy przykład ilustruje sposób przekazywania elementów członkowskich `MySystemTime` klasy, które są zdefiniowane w kolejności sekwencyjnej, do **GetSystemTime** w pliku User32. dll. **GetSystemTime** ma następujący niezarządzany podpis:  
+ Elementy członkowskie klasy można przekazać do niezarządzanej funkcji DLL, o ile Klasa ma stały układ elementu członkowskiego. Poniższy przykład ilustruje sposób przekazywania elementów członkowskich `MySystemTime` klasy, które są zdefiniowane w kolejności sekwencyjnej, do **GetSystemTime** w pliku User32.dll. **GetSystemTime** ma następujący niezarządzany podpis:  
   
 ```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
@@ -173,7 +174,7 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wywołanie funkcji DLL](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>

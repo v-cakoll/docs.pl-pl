@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 02a3c1b5a9693535feeab56d9b0f7c9d360749ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 39d609c955596354d1af28b4ed19d367dab0462b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620158"
 ---
-### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>Zdarzenie Page.LoadComplete nie powoduje już kontroli System.Web.UI.WebControls.EntityDataSource wywołania wiązania danych
+### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>Zdarzenie Page. LoadComplete nie powoduje już wystąpienia elementu System. Web. UI. WebControls. kontrolka EntityDataSource do wywołania powiązania danych
 
-|   |   |
-|---|---|
-|Szczegóły|<xref:System.Web.UI.Page.LoadComplete> Zdarzeń nie powoduje już <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=name> kontroli wywołania wiązania danych w celu utworzenia/zaktualizowania/usunięcia parametrów. Tej zmiany eliminuje do bazy danych, zapobiega resetowaniu wartości formantów oraz tworzy zachowanie zgodne z innymi formantami danych, takich jak <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=name> i <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=name>. Ta zmiana powoduje różne zachowanie w mało prawdopodobnym przypadku, w którym aplikacje polegają na wywoływaniu powiązań danych w <xref:System.Web.UI.Page.LoadComplete> zdarzeń.|
-|Sugestia|W przypadku potrzeby wiązania danych ręcznie wywołać powiązań danych w starszej w tle po zdarzeniu.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+<xref:System.Web.UI.Page.LoadComplete>Zdarzenie nie powoduje już <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=fullName> wywołania powiązania danych dla zmian w celu tworzenia/aktualizowania/usuwania parametrów. Ta zmiana eliminuje niezależną podróż do bazy danych, zapobiega resetowaniu wartości formantów oraz tworzy zachowanie zgodne z innymi kontrolkami danych, takimi jak <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=fullName> i <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=fullName> . Ta zmiana powoduje inne zachowanie w przypadku, gdy aplikacje są zależne od wywołującego powiązania danych w <xref:System.Web.UI.Page.LoadComplete> zdarzeniu.
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli istnieje potrzeba wiązania z danymi, ręcznie Wywołaj wywołanie metody wywołania zwrotnego w zdarzeniu, które jest wcześniej wykonywane po zakończeniu.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

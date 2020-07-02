@@ -1,5 +1,6 @@
 ---
 title: Pakowanie zestawu .NET Framework dla modelu COM
+description: Pakowanie zestawu .NET dla modelu COM. Zbierz listę typów, których mogą używać aplikacje COM, instrukcje dotyczące obsługi wersji i wdrażania oraz bibliotekę typów.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620836"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Pakowanie zestawu .NET Framework dla modelu COM
 
@@ -65,29 +66,29 @@ Aby uzyskać instrukcje, zobacz [How to: embed Library Type librarys as Win32 Re
 
 ## <a name="type-library-exporter"></a>Eksporter biblioteki typów
 
-[Eksporter biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md) jest narzędziem wiersza polecenia, które konwertuje klasy i interfejsy zawarte w zestawie do biblioteki typów com. Po udostępnieniu informacji o typie klasy klienci COM mogą utworzyć wystąpienie klasy .NET i wywoływać metody tego wystąpienia, tak jakby był to obiekt COM. Tlbexp. exe konwertuje cały zestaw jednocześnie. Nie można użyć Tlbexp.exe do generowania informacji o typie dla podzbioru typów zdefiniowanych w zestawie.
+[Eksporter biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) to narzędzie wiersza polecenia, które konwertuje klasy i interfejsy zawarte w zestawie do biblioteki typów com. Po udostępnieniu informacji o typie klasy klienci COM mogą utworzyć wystąpienie klasy .NET i wywoływać metody tego wystąpienia, tak jakby był to obiekt COM. Tlbexp.exe konwertuje cały zestaw jednocześnie. Nie można użyć Tlbexp.exe do generowania informacji o typie dla podzbioru typów zdefiniowanych w zestawie.
 
 <a name="cpconpackagingassemblyforcomanchor2"></a>
 
 ## <a name="typelibconverter-class"></a>Klasa TypeLibConverter
 
-<xref:System.Runtime.InteropServices.TypeLibConverter> Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
+<xref:System.Runtime.InteropServices.TypeLibConverter>Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
 
-**Klasa TypeLibConverter** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter>.
+**Klasa TypeLibConverter** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter> .
 
 <a name="cpconpackagingassemblyforcomanchor3"></a>
 
 ## <a name="assembly-registration-tool"></a>Narzędzie rejestracji zestawów
 
-[Narzędzie do rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) może generować i rejestrować biblioteki typów podczas stosowania opcji **/tlb:** . Klienci COM wymagają, aby biblioteki typów były zainstalowane w rejestrze systemu Windows. Bez tej opcji Regasm. exe rejestruje typy w zestawie, a nie w bibliotece typów. Rejestrowanie typów w zestawie i rejestrowanie biblioteki typów to odrębne działania.
+[Narzędzie do rejestracji zestawu (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) może generować i rejestrować biblioteki typów w przypadku zastosowania opcji **/tlb:** . Klienci COM wymagają, aby biblioteki typów były zainstalowane w rejestrze systemu Windows. Bez tej opcji Regasm.exe rejestruje typy w zestawie, a nie w bibliotece typów. Rejestrowanie typów w zestawie i rejestrowanie biblioteki typów to odrębne działania.
 
 <a name="cpconpackagingassemblyforcomanchor4"></a>
 
 ## <a name="net-services-installation-tool"></a>Narzędzie instalacji usług .NET
 
-[Narzędzie instalacji usług .NET (Regsvcs. exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klasy zarządzane do usług składowych systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i rejestrowania zestawu, Regsvcs. exe może generować, rejestrować i instalować bibliotekę typów w istniejącej aplikacji COM+ 1,0.
+[Narzędzie instalacji usług .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klasy zarządzane do usług składników systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i rejestrowania zestawu, Regsvcs.exe mogą generować, rejestrować i instalować bibliotekę typów w istniejącej aplikacji COM+ 1,0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
@@ -95,6 +96,6 @@ Aby uzyskać instrukcje, zobacz [How to: embed Library Type librarys as Win32 Re
 - [Kwalifikowanie typów .NET do międzyoperacyjności](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../../standard/assembly/security-considerations.md)
-- [Tlbexp. exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
 - [Instrukcje: osadzanie bibliotek typów jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

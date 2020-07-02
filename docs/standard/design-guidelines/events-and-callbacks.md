@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619536"
 ---
 # <a name="events-and-callbacks"></a>Zdarzenia i wywołania zwrotne
 Wywołania zwrotne to punkty rozszerzalności, które umożliwiają platformie wywołanie z powrotem do kodu użytkownika przez delegata. Te Delegaty są zwykle przesyłane do struktury za pomocą parametru metody.
@@ -38,7 +38,7 @@ Wywołania zwrotne to punkty rozszerzalności, które umożliwiają platformie w
 
  ✔️ zrozumieć, że wywołując delegata, wykonujesz dowolny kod, który może mieć wpływ na bezpieczeństwo, prawidłowość i zgodność.
 
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+ *Fragmenty &copy; 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
  *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 

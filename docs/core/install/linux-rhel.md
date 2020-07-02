@@ -4,12 +4,12 @@ description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środ
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619454"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie RHEL
 
@@ -100,7 +100,7 @@ Jako alternatywę dla środowiska uruchomieniowego ASP.NET Core można zainstalo
 
 ## <a name="dependencies"></a>Zależności
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>Instalacja z skryptami
 

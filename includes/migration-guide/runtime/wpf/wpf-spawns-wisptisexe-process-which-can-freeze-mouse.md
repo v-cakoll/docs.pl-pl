@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: cbd599f7467c3b360bbe1c76a65abfdb840a1530
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e0f72d19a884087b1f0f6ebd1b6baea75bc37af4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620489"
 ---
-### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF spawns proces wisptis.exe, który może zamrozić myszy
+### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF duplikuje proces wisptis.exe, który może zablokować mysz
 
-|   |   |
-|---|---|
-|Szczegóły|W 4.5.2 wprowadzono problem, <code>wisptis.exe</code> który powoduje, że można zamrozić dane wejściowe myszy.|
-|Sugestia|Poprawka dotycząca tego problemu jest dostępna w wersji obsługi programu .NET Framework 4.5.2 (zestawienie poprawek 3026376) lub przez uaktualnienie do programu .NET Framework 4.6|
-|Zakres|Duży|
+#### <a name="details"></a>Szczegóły
+
+W ppkt 4.5.2 wprowadzono problem, który powoduje, <code>wisptis.exe</code> że można zablokować dane wejściowe myszy.
+
+#### <a name="suggestion"></a>Sugestia
+
+Rozwiązanie tego problemu jest dostępne w wydaniu obsługi .NET Framework 4.5.2 (pakiet zbiorczy poprawek 3026376) lub przez uaktualnienie do .NET Framework 4,6
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Duży|
 |Wersja|4.5.2|
 |Typ|Środowisko uruchomieniowe|

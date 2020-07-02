@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 958a89015420ce5632d596688963d576c40b4cb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0fe07ac21effacffc56d37ccb46a121f443acd20
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620173"
 ---
-### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>Udostępnianie stanu sesji Asp.Net StateServer wymaga wszystkie serwery w farmie sieci web, aby użyć tej samej wersji .NET Framework
+### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>Udostępnianie stanu sesji przy użyciu Asp.Net StateServer wymaga, aby wszystkie serwery w kolektywie serwerów sieci Web używały tej samej wersji .NET Framework
 
-|   |   |
-|---|---|
-|Szczegóły|Podczas włączania <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> stanu sesji, wszystkie serwery w farmie internetowej danego musi być tę samą wersję programu .NET Framework w kolejności stanu zostać prawidłowo udostępnione.|
-|Sugestia|Pamiętaj uaktualnić wersje programu .NET Framework na serwerach sieci web, które udostępnianie stanu w tym samym czasie.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Podczas włączania <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=fullName> stanu sesji wszystkie serwery w danej farmie sieci Web muszą używać tej samej wersji .NET Framework, aby zapewnić prawidłowe udostępnianie stanu.
+
+#### <a name="suggestion"></a>Sugestia
+
+Pamiętaj, aby uaktualnić .NET Framework wersje na serwerach sieci Web, które udostępniają stan w tym samym czasie.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|

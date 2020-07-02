@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620337"
 ---
-### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult > zawsze zwraca buforowane wystąpienie
+### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Wyliczalne. Empty &lt; TResult &gt; zawsze zwraca buforowane wystąpienie
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzne <xref:System.Collections.Generic.IEnumerable%601>. Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> będzie buforować pustą <xref:System.Collections.Generic.IEnumerable%601> w czasie, interfejs API został wywołany, co oznacza, że w niektórych sytuacjach, w którym <xref:System.Linq.Enumerable.Empty%60%601> wywołano szybko i jednocześnie, różne wystąpienia tego typu mogą być zwracane dla różnych wywołań INTERFEJS API.|
-|Sugestia|Ponieważ poprzednie zachowanie jest deterministyczna, kod jest mało prawdopodobne, zależą od niej. Jednak w mało prawdopodobnym przypadku enumerables puste są porównywane i powinny być czasem nierównej, jawnych tablic pusty należy utworzyć (<code>new T[0]</code>) zamiast <xref:System.Linq.Enumerable.Empty%60%601>.|
-|Scope|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzne <xref:System.Collections.Generic.IEnumerable%601> . Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> pamięć podręczna powinna <xref:System.Collections.Generic.IEnumerable%601> być pusta w momencie wywołania interfejsu API, co oznacza, że w niektórych przypadkach, w których <xref:System.Linq.Enumerable.Empty%60%601> została wywołana szybko i współbieżnie, różne wystąpienia typu mogą zostać zwrócone dla różnych wywołań interfejsu API.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ze względu na to, że poprzednie zachowanie dotyczyło niedeterministyczności, kod prawdopodobnie nie zależy od niego. Jednak w nieprawdopodobnym przypadku, gdy puste wartości wyliczalne są porównywane i oczekiwano, że czasami nie są równe, należy utworzyć jawne puste tablice ( <code>new T[0]</code> ) zamiast używać <xref:System.Linq.Enumerable.Empty%60%601> .
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|

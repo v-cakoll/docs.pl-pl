@@ -1,6 +1,6 @@
 ---
 title: Ukryj kolumny w formancie DataGridView
-description: Dowiedz się, jak ukryć kolumny programowo w kontrolce DataGridView Windows Forms, ustawiając właściwość DataGridViewColumn. Visible na wartość false.
+description: Dowiedz się, jak programowo ukryć kolumny w kontrolce DataGridView Windows Forms, ustawiając właściwość DataGridViewColumn. Visible na wartość false.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 27e9f331151acd68d76233bc7dbb09c2d870afde
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618054"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Porady: ukrywanie kolumn w formancie DataGridView formularzy systemu Windows
 Czasami chcesz wyświetlić tylko niektóre kolumny, które są dostępne w <xref:System.Windows.Forms.DataGridView> kontrolce Windows Forms. Na przykład możesz chcieć wyświetlić kolumnę wynagrodzenia pracownika dla użytkowników z poświadczeniami zarządzania, jednocześnie ukrywając ją od innych użytkowników. Alternatywnie możesz chcieć powiązać formant ze źródłem danych zawierającym wiele kolumn, tylko niektóre, które chcesz wyświetlić. W takim przypadku zwykle usuniesz kolumny, które nie są wyświetlane, zamiast ich ukrywania.  
@@ -38,7 +38,7 @@ Czasami chcesz wyświetlić tylko niektóre kolumny, które są dostępne w <xre
   
 - Odwołania do <xref:System?displayProperty=nameWithType> zestawów i <xref:System.Windows.Forms?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>

@@ -1,24 +1,25 @@
 ---
-title: 'Porady: ręczne tworzenie otok'
+title: 'Instrukcje: Ręczne tworzenie otok'
+description: Twórz ręcznie otoki typów COM. Użyj istniejącego pliku IDL lub biblioteki typów lub Utwórz deklaracje zarządzane i wyeksportuj zestaw do biblioteki typów.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619588"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Porady: ręczne tworzenie otok
+# <a name="how-to-create-wrappers-manually"></a>Instrukcje: Ręczne tworzenie otok
 Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym kodzie źródłowym, najlepszym miejscem do rozpoczęcia jest istniejący plik Języka definicji interfejsu (IDL) lub biblioteka typów. Jeśli nie posiadasz pliku IDL ani nie możesz wygenerować pliku biblioteki typów, możesz zasymulować typy modelu COM przez utworzenie deklaracji zarządzanych i wyeksportowanie zestawu wynikowego do biblioteki typów.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Aby zasymulować typy modelu COM ze źródła zarządzanego  
   
 1. Zadeklaruj typy w języku, który jest zgodny z Common Language Specification (CLS) i skompiluj plik.  
   
-2. Wyeksportuj zestaw zawierający typy z [eksporterem biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md).  
+2. Wyeksportuj zestaw zawierający typy z [eksporterem biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 3. Użyj wyeksportowanej biblioteki typów modelu COM jako podstawy do deklaracji typów zarządzanych zorientowanych na model COM.  
   
@@ -26,7 +27,7 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
   
 1. Zakładając, że posiadasz plik IDL lub plik biblioteki typów, musisz zdecydować, które klasy i interfejsy mają zostać dołączone do niestandardowej RCW. Możesz wykluczyć wszelkie typy, których nie zamierzasz używać w aplikacji bezpośrednio ani pośrednio.  
   
-2. Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Aby uzyskać pełny opis procesu konwersji importu, zobacz [Podsumowanie konwersji typu Biblioteka na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) . Efektywnie, podczas tworzenia niestandardowej OTOKi, ręcznie wykonujesz działanie konwersji typu dostarczone przez [importera biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
+2. Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Aby uzyskać pełny opis procesu konwersji importu, zobacz [Podsumowanie konwersji typu Biblioteka na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) . Efektywnie, podczas tworzenia niestandardowej OTOKi, ręcznie wykonujesz działanie konwersji typu dostarczone przez [importera biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
   
 3. Gdy deklaracje będą kompletne, skompiluj plik, tak jak kompilujesz dowolny plik z zarządzanym kodem źródłowym.  
   
@@ -97,11 +98,11 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Instrukcje: edytowanie zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Podsumowanie dotyczące konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp. exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)

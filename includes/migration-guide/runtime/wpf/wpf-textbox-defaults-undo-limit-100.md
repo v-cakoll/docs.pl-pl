@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: de79182e326082786c1e0691f8888e30cd410f5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13d3799aeede86b01aa81ce1cd69b3c4c22311ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620478"
 ---
-### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>Domyślnie pole tekstowe WPF Cofnij granicę równą 100
+### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>Wartość pola tekstowego WPF jest domyślna dla limitu cofania 100
 
-|   |   |
-|---|---|
-|Szczegóły|W programie .NET Framework 4.5 domyślny limit cofania WPF textbox wynosi 100 (w przeciwieństwie do zwrócenia w .NET Framework 4.0)|
-|Sugestia|Jeśli limit 100 cofania jest zbyt niska, limit można jawnie ustawić za pomocą <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+W .NET Framework 4,5 domyślny limit cofania dla pola tekstowego WPF to 100 (w przeciwieństwie do nieograniczonego w .NET Framework 4,0)
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli limit cofania wynoszący 100 jest zbyt niski, limit może być jawnie ustawiony z<xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|

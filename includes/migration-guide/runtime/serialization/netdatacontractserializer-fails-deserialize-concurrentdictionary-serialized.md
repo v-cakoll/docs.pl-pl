@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 380f662349a8dcd04e5bf445e1479d0a32d5861f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef5633ec8566f6d5216b7dca4387766cacb600d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620387"
 ---
-### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>NetDataContractSerializer zakończy się niepowodzeniem do deserializacji ConcurrentDictionary serializowany z innej wersji platformy .NET
+### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>NetDataContractSerializer nie może zdeserializować serializacji ConcurrentDictionary z inną wersją platformy .NET
 
-|   |   |
-|---|---|
-|Szczegóły|Zgodnie z projektem <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> mogą służyć tylko wtedy, gdy zarówno serializacji i deserializacji kończy się udostępniać te same typy CLR. W związku z tym nie ma żadnej gwarancji, obiekt, który serializowany z jednej wersji programu .NET Framework może być zdeserializowany przy użyciu innej wersji.<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> to typ, który jest znany nie można deserializować poprawnie, jeśli serializacji przy użyciu programu .NET Framework 4.5 lub starszej, a następnie deserializowany za pomocą programu .NET Framework 4.5.1 lub nowszej.|
-|Sugestia|Istnieje kilka możliwych obejścia tego problemu:<ul><li>Uaktualnienie serializacji do użycia programu .NET Framework 4.5.1, jak również.</li><li>Użyj <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> zamiast <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> jako nie oczekuje dokładnie te same typy CLR zarówno na poziomie serializacji i deserializacji kończy się.</li><li>Użyj <xref:System.Collections.Generic.Dictionary%602?displayProperty=name> zamiast <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> , ponieważ nie jest zauważalna podczas tego konkretnego 4.5 -&gt;Przerwij 4.5.1.</li></ul>|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+Zgodnie z projektem, <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> może być używany tylko wtedy, gdy obie operacje serializacji i deserializacji współużytkują te same typy CLR. W związku z tym nie jest gwarantowane, że serializacja obiektu za pomocą jednej wersji .NET Framework może zostać odszeregowana przez inną wersję.<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> to typ, który jest znany jako nie do poprawnego deserializacji, jeśli jest serializowany z .NET Framework 4,5 lub wcześniejszym i deserializowany z .NET Framework 4.5.1 lub nowszym.
+
+#### <a name="suggestion"></a>Sugestia
+
+Istnieje wiele możliwych obejścia tego problemu:<ul><li>Uaktualnij komputer serializowany, aby używał również .NET Framework 4.5.1.</li><li>Użyj <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> zamiast <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> tego, ponieważ nie oczekuje to dokładnie tych samych typów CLR zarówno w serializacji, jak i deserializacji zakończenia.</li><li>Użyj <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> zamiast <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> tego, ponieważ nie wykazuje tego konkretnego podziału 4,5- &gt; 4.5.1.</li></ul>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|

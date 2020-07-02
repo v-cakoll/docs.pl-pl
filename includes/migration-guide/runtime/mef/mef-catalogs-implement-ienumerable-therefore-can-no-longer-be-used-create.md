@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 4cc91e7c6054fdb8e96cecf7120df5b9f25de56c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 598df2121b480d411dac9c5571772a4a8d22b5ff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620338"
 ---
-### <a name="mef-catalogs-implement-ienumerable-and-therefore-can-no-longer-be-used-to-create-a-serializer"></a>Katalogi MEF implementować interfejs IEnumerable i w związku z tym może już służyć do tworzenia serializatora
+### <a name="mef-catalogs-implement-ienumerable-and-therefore-can-no-longer-be-used-to-create-a-serializer"></a>Wykazy MEF implementują interfejs IEnumerable i w związku z tym nie mogą być już używane do tworzenia serializatora
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, implementować interfejs IEnumerable katalogach MEF i dlatego nie będzie można utworzyć programu szeregującego (<xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> obiektu). Próba serializowania katalogu MEF powoduje zgłoszenie wyjątku.|
-|Sugestia|Nie można korzystać MEF do tworzenia serializatora|
-|Zakres|Duży|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, wykazy MEF implementują interfejs IEnumerable i w związku z tym nie można już używać do tworzenia serializatora ( <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> obiektu). Próba serializowania katalogu MEF powoduje zgłoszenie wyjątku.
+
+#### <a name="suggestion"></a>Sugestia
+
+Nie można już używać MEF do tworzenia serializatora
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Duży|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

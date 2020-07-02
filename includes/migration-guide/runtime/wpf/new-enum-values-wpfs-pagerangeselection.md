@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: edd194fef27d97976f1ff45daec1cd56382bbb55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: bae6d7c0f8843211c721c68ce6f16000b35b4401
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620454"
 ---
-### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>Nowe wartości wyliczenia w PageRangeSelection w WPF
+### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>Nowe wartości wyliczeniowe w PageRangeSelection WPF
 
-|   |   |
-|---|---|
-|Szczegóły|Dwa nowe elementy członkowskie (<xref:System.Windows.Controls.PageRangeSelection.CurrentPage?displayProperty=name> i <xref:System.Windows.Controls.PageRangeSelection.SelectedPages?displayProperty=name>) zostały dodane do <xref:System.Windows.Controls.PageRangeSelection?displayProperty=name> wyliczenia.|
-|Sugestia|W większości przypadków te zmiany nie wpłyną kod użytkownika. Kod, który jest zależny od określoną liczbę elementów znajdujących się <xref:System.Enum.GetNames(System.Type)> lub <xref:System.Enum.GetValues(System.Type)> wzywa <xref:System.Windows.Controls.PageRangeSelection?displayProperty=name> typ powinien być modyfikowany, mimo że.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Dodano dwóch nowych członków ( <xref:System.Windows.Controls.PageRangeSelection.CurrentPage?displayProperty=fullName> i <xref:System.Windows.Controls.PageRangeSelection.SelectedPages?displayProperty=fullName> ) do <xref:System.Windows.Controls.PageRangeSelection?displayProperty=fullName> wyliczenia.
+
+#### <a name="suggestion"></a>Sugestia
+
+W większości przypadków te zmiany nie wpłyną na kod użytkownika. Kod, który zależy od określonej liczby elementów istniejących w <xref:System.Enum.GetNames(System.Type)> lub <xref:System.Enum.GetValues(System.Type)> wywołania <xref:System.Windows.Controls.PageRangeSelection?displayProperty=fullName> typu należy zmodyfikować, chociaż.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|

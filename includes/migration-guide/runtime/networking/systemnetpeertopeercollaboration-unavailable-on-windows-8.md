@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: edcd6cb6e0d3c3229304f29d3b569800da0a3a01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 311adfdc98c766adf1e88ee9bc7e601d2cd13ba5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620348"
 ---
-### <a name="systemnetpeertopeercollaboration-unavailable-on-windows-8"></a>System.Net.PeerToPeer.Collaboration unavailable on Windows 8
+### <a name="systemnetpeertopeercollaboration-unavailable-on-windows-8"></a>System .NET. PeerToPeer. Współpraca jest niedostępna w systemie Windows 8
 
-|   |   |
-|---|---|
-|Szczegóły|Przestrzeń nazw System.NET.peertopeer.Collaboration — informacje jest niedostępna w systemie Windows 8 lub nowszym.|
-|Sugestia|Aplikacje, które obsługuje systemu Windows 8 lub nowszym należy zaktualizować, aby nie są zależne od tej przestrzeni nazw lub jego składowych.|
-|Zakres|Duży|
+#### <a name="details"></a>Szczegóły
+
+Przestrzeń nazw System .NET. PeerToPeer. Collaboration jest niedostępna w systemie Windows 8 lub nowszym.
+
+#### <a name="suggestion"></a>Sugestia
+
+Aplikacje, które obsługują system Windows 8 lub nowszy, muszą zostać zaktualizowane, aby nie zależały od tej przestrzeni nazw lub jej elementów członkowskich.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Duży|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|

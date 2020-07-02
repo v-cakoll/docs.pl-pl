@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 84f570cbbd97be79426e117d4c97ec182a397fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af10716fe5f4c07091e8605cdf620e4a499fb1e8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620182"
 ---
-### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>IPad nie należy używać w pliku niestandardowego możliwości, ponieważ jest on obecnie możliwości przeglądarki
+### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>Tabletu IPad nie należy używać w pliku możliwości niestandardowych, ponieważ jest teraz funkcją przeglądarki
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, iPad jest identyfikatora w pliku możliwości uzyskiwania informacji na temat przeglądarki ASP.NET domyślne z więc nie powinien on używany w pliku niestandardowego możliwości|
-|Sugestia|Jeżeli wymagane są funkcje właściwe dla tabletu iPad, należy zmodyfikować zachowanie dla urządzenia iPad, ustawiając możliwości na refID wstępnie zdefiniowanych bram &quot;IPad&quot; zamiast, generując nowy &quot;IPad&quot; identyfikator według agenta użytkownika dopasowanie.|
-|Scope|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, iPad jest identyfikatorem w domyślnym pliku możliwości przeglądarki ASP.NET, dlatego nie należy go używać w pliku możliwości niestandardowych
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli są wymagane możliwości specyficzne dla tabletu iPad, należy zmodyfikować zachowanie urządzenia iPad przez ustawienie funkcji na wstępnie zdefiniowanej bramie iPad refID, &quot; &quot; zamiast wygenerowania nowego &quot; identyfikatora iPad &quot; przez dopasowanie agenta użytkownika.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

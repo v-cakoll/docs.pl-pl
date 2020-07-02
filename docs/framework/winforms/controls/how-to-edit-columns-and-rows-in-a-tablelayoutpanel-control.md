@@ -1,5 +1,6 @@
 ---
 title: 'Porady: edytowanie rzędów i kolumn w formancie TableLayoutPanel'
+description: Dowiedz się, w jaki sposób używać okna dialogowego kolumny i stylów wierszy do edytowania wierszy i kolumn kontrolek Windows Forms.
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,27 +9,27 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 4473b20eea57088104a51eb1b6c080219223d214
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: cfd2ca4be5d5a2658a9a129d911f1dba9670ccfd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619354"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Porady: edytowanie rzędów i kolumn w formancie TableLayoutPanel
 
-Aby edytować wiersze i kolumny kontrolek, można użyć edytora kolekcji w kontrolce <xref:System.Windows.Forms.TableLayoutPanel>, nazywanej **kolumną i stylem wierszy** .
+<xref:System.Windows.Forms.TableLayoutPanel>Aby edytować wiersze i kolumny kontrolek, można użyć edytora kolekcji, zwanego oknem dialogowym **kolumny i style wierszy** .
 
 > [!NOTE]
-> Jeśli chcesz, aby kontrolka obejmowała wiele wierszy lub kolumn, ustaw `RowSpan` i `ColumnSpan` właściwości formantu. Aby uzyskać więcej informacji, zobacz [Przewodnik: rozmieszczanie formantów na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Jeśli chcesz, aby kontrolka obejmowała wiele wierszy lub kolumn, ustaw `RowSpan` `ColumnSpan` właściwości i dla kontrolki. Aby uzyskać więcej informacji, zobacz [Przewodnik: rozmieszczanie formantów na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 >
-> Jeśli chcesz wyrównać formant w komórce lub chcesz, aby formant rozciągał się w komórce, użyj właściwości <xref:System.Windows.Forms.Control.Anchor%2A> kontrolki. Aby uzyskać więcej informacji, zobacz [Przewodnik: rozmieszczanie formantów na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Jeśli chcesz wyrównać formant w komórce lub chcesz, aby formant rozciągał się w komórce, użyj właściwości kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> . Aby uzyskać więcej informacji, zobacz [Przewodnik: rozmieszczanie formantów na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 ## <a name="to-edit-rows-and-columns"></a>Aby edytować wiersze i kolumny
 
-1. Przeciągnij kontrolkę <xref:System.Windows.Forms.TableLayoutPanel> z **przybornika** na formularz.
+1. Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> kontrolkę z **przybornika** do formularza.
 
-2. Kliknij symbol akcji projektanta <xref:System.Windows.Forms.TableLayoutPanel> kontrolki (![małą czarną strzałkę](./media/designer-actions-glyph.gif)) i wybierz opcję **Edytuj wiersze i kolumny** , aby otworzyć okno dialogowe **Style kolumn i wierszy** . Możesz również kliknąć prawym przyciskiem myszy formant <xref:System.Windows.Forms.TableLayoutPanel> i wybrać polecenie **Edytuj wiersze i kolumny** z menu skrótów.
+2. Kliknij <xref:System.Windows.Forms.TableLayoutPanel> symbol akcji projektanta kontrolki ( ![ Mała czarna strzałka ](./media/designer-actions-glyph.gif) ) i wybierz opcję **Edytuj wiersze i kolumny** , aby otworzyć okno dialogowe **Style kolumn i wierszy** . Możesz również kliknąć prawym przyciskiem myszy <xref:System.Windows.Forms.TableLayoutPanel> formant i wybrać polecenie **Edytuj wiersze i kolumny** z menu skrótów.
 
 3. Aby dodać lub usunąć kolumny, wybierz pozycję **kolumny** w polu listy rozwijanej **Typ elementu członkowskiego** .
 
@@ -42,7 +43,7 @@ Aby edytować wiersze i kolumny kontrolek, można użyć edytora kolekcji w kont
 
 8. Aby usunąć wiersz lub kolumnę, kliknij przycisk **Usuń** , aby usunąć aktualnie wybrany element z listy **elementów członkowskich** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.SizeType>
-- [TableLayoutPanel, kontrolka](tablelayoutpanel-control-windows-forms.md)
+- [TableLayoutPanel — formant](tablelayoutpanel-control-windows-forms.md)

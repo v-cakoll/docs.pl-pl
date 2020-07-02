@@ -1,15 +1,15 @@
 ---
 title: Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Spark w usłudze datakostki.
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618340"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w kostkach
 
@@ -24,12 +24,14 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > - Utwórz zadanie platformy Spark i klaster Spark.
 > - Uruchom aplikację w klastrze Spark.
 
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Przed rozpoczęciem wykonaj następujące zadania:
 
 * Jeśli nie masz konta platformy Azure, Utwórz [bezpłatne konto](https://azure.microsoft.com/free/dotnet/).
-* Zaloguj się w witrynie [Azure Portal](https://portal.azure.com/).
+* Zaloguj się do [portalu Azure](https://portal.azure.com/).
 * Ukończ [platformę .NET dla Apache Spark — Rozpocznij pracę w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku.
 
 ## <a name="create-an-azure-databricks-workspace"></a>Tworzenie obszaru roboczego usługi Azure Databricks
@@ -50,12 +52,12 @@ W tej sekcji utworzysz obszar roboczy usługi Azure Databricks przy użyciu witr
     |---------|---------|
     |**Nazwa obszaru roboczego**     | Podaj nazwę obszaru roboczego usługi Databricks.        |
     |**Subskrypcja**     | Z listy rozwijanej wybierz subskrypcję platformy Azure.        |
-    |**Grupa zasobów**     | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej grupy. Grupa zasobów to kontener, który zawiera powiązane zasoby dla rozwiązania platformy Azure. Aby uzyskać więcej informacji, zobacz [Omówienie usługi Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
+    |**Grupa zasobów**     | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej grupy. Grupa zasobów to kontener zawierający powiązane zasoby dla rozwiązania platformy Azure. Aby uzyskać więcej informacji, zobacz [Omówienie usługi Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Lokalizacja**     | Wybierz preferowany region. Aby uzyskać informacje na temat dostępnych regionów, zobacz [usługi platformy Azure dostępne według regionów](https://azure.microsoft.com/regions/services/).        |
     |**Warstwa cenowa**     |  Wybierz warstwę **standardowa**, **Premium**lub **wersja próbna**. Aby uzyskać więcej informacji o tych warstwach, zobacz [stronę usługi Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Virtual Network**     |   Nie       |
 
-3. Wybierz pozycję **Utwórz**. Tworzenie obszaru roboczego trwa kilka minut. Podczas tworzenia obszaru roboczego można wyświetlić stan wdrożenia w obszarze **powiadomienia**.
+3. Wybierz przycisk **Utwórz**. Tworzenie obszaru roboczego trwa kilka minut. Podczas tworzenia obszaru roboczego można wyświetlić stan wdrożenia w obszarze **powiadomienia**.
 
 ## <a name="install-azure-databricks-tools"></a>Zainstaluj narzędzia Azure Databricks
 
@@ -135,7 +137,7 @@ Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spa
 
    **W systemie Windows:**
 
-   Przejdź do mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)**. Nadaj nowemu folderowi nazwę **Publish. zip**.
+   Przejdź do mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)**. Nadaj nazwę nowemu folderowi **publish.zip**.
 
    **W systemie Linux Uruchom następujące polecenie:**
 
@@ -155,7 +157,7 @@ W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego
    databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, do których klaster będzie musiał uruchomić aplikację: spakowanego folderu publikowania, *Input. txt*i *Microsoft-Spark-2.4. x-0.3.1. jar*.
+2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, do których klaster będzie musiał uruchomić aplikację: spakowanego folderu publikowania, *input.txt*i *Microsoft-Spark-2.4. x-0.3.1. jar*.
 
    ```console
    cd mySparkApp
@@ -208,7 +210,7 @@ Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiające
 
    Gratulacje, uruchomiono pierwszą aplikację platformy .NET dla Apache Spark w chmurze!
 
-## <a name="clean-up-resources"></a>Oczyszczanie zasobów
+## <a name="clean-up-resources"></a>Czyszczenie zasobów
 
 Jeśli obszar roboczy datakostki nie jest już potrzebny, możesz usunąć zasób Azure Databricks w Azure Portal. Dodatkowo możesz wybrać nazwę grupy zasobów, aby otworzyć stronę grupy zasobów, a następnie wybrać pozycję **Usuń grupę zasobów**.
 

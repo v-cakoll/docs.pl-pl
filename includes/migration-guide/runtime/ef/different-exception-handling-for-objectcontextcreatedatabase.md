@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 33ad1c044001e0a8d09708cc7a1f06e05cb307de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 687118157020ede200f97a0125c4740a06bf4b5e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620307"
 ---
-### <a name="different-exception-handling-for-objectcontextcreatedatabase-and-dbproviderservicescreatedatabase-methods"></a>Obsługa dla metod ObjectContext.CreateDatabase i DbProviderServices.CreateDatabase różnych wyjątków
+### <a name="different-exception-handling-for-objectcontextcreatedatabase-and-dbproviderservicescreatedatabase-methods"></a>Inna obsługa wyjątków dla metod ObjectContext. isdatabase i DbProviderServices. isdatabase
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, w przypadku niepowodzenia tworzenia bazy danych <code>CreateDatabase</code> metod będzie próbował usunąć pustej bazy danych. Jeśli ta operacja zakończy się powodzeniem, oryginalnym <xref:System.Data.SqlClient.SqlException?displayProperty=name> będą propagowane (zamiast <xref:System.InvalidOperationException?displayProperty=name> , zawsze został zgłoszony w .NET Framework 4.0)|
-|Sugestia|Gdy przechwytywanie <xref:System.InvalidOperationException?displayProperty=name> podczas wykonywania <xref:System.Data.Objects.ObjectContext.CreateDatabase> lub <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, SQLExceptions powinien teraz również zostać przechwycony.|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, jeśli Tworzenie bazy danych nie powiedzie się, <code>CreateDatabase</code> metody będą próbować usunąć pustą bazę danych. Jeśli ta operacja zakończy się pomyślnie, oryginalny <xref:System.Data.SqlClient.SqlException?displayProperty=fullName> zostanie rozpropagowany (zamiast elementu <xref:System.InvalidOperationException?displayProperty=fullName> , który został zawsze wygenerowany w .NET Framework 4,0)
+
+#### <a name="suggestion"></a>Sugestia
+
+Podczas przechwytywania <xref:System.InvalidOperationException?displayProperty=fullName> podczas wykonywania lub należy <xref:System.Data.Objects.ObjectContext.CreateDatabase> <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)> również przechwycić wyjątek SqlExceptions.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)?displayProperty=nameWithType></li></ul>|

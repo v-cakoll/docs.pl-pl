@@ -1,5 +1,6 @@
 ---
 title: Kopiowanie i przypinanie
+description: Przejrzyj, w jaki sposób Organizator międzyoperacyjny może skopiować lub przypiąć dane, które są organizowane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji w innej lokalizacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618782"
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 
@@ -24,7 +25,7 @@ Argumenty metody przekazywane przez wartość są organizowane w kodzie niezarz�
 
 ![Diagram przedstawiający typy odwołań, które są przesyłane przez wartość i przez odwołanie.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
 
-Przypinanie tymczasowo powoduje tymczasowe zablokowanie danych w bieżącej lokalizacji pamięci, dzięki czemu nie należy ich przełączać przez moduł wyrzucania elementów bezużytecznych środowiska uruchomieniowego języka wspólnego. Organizator przypina dane, aby zmniejszyć koszty kopiowania i zwiększania wydajności. Typ danych określa, czy jest on kopiowany, czy przypięty podczas procesu organizowania.  Przypinanie jest wykonywane automatycznie podczas organizowania obiektów, takich jak <xref:System.String>, można również ręcznie przypiąć pamięć przy użyciu <xref:System.Runtime.InteropServices.GCHandle> klasy.
+Przypinanie tymczasowo powoduje tymczasowe zablokowanie danych w bieżącej lokalizacji pamięci, dzięki czemu nie należy ich przełączać przez moduł wyrzucania elementów bezużytecznych środowiska uruchomieniowego języka wspólnego. Organizator przypina dane, aby zmniejszyć koszty kopiowania i zwiększania wydajności. Typ danych określa, czy jest on kopiowany, czy przypięty podczas procesu organizowania.  Przypinanie jest wykonywane automatycznie podczas organizowania obiektów, takich jak <xref:System.String> , można również ręcznie przypiąć pamięć przy użyciu <xref:System.Runtime.InteropServices.GCHandle> klasy.
 
 ## <a name="formatted-blittable-classes"></a>Sformatowane klasy danych kopiowalnych
 
@@ -78,7 +79,7 @@ Gdy <xref:System.String?displayProperty=nameWithType> jest przekazywany przez od
 
 Gdy <xref:System.Text.StringBuilder?displayProperty=nameWithType> jest przekazywany przez wartość, organizator przekazuje odwołanie do wewnętrznego buforu **StringBuilder** bezpośrednio do obiektu wywołującego. Obiekt wywołujący i wywoływany muszą zgadzać się z rozmiarem buforu. Obiekt wywołujący jest odpowiedzialny za utworzenie elementu **StringBuilder** o odpowiedniej długości. Obiekt wywoływany musi wykonać odpowiednie środki ostrożności, aby upewnić się, że bufor nie zostanie przepełniony. **StringBuilder** jest wyjątkiem od reguły, której typy odwołań przesłane przez wartość są domyślnie przesyłane jako parametry w parametrach. Jest on zawsze przenoszona jako wynikowy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: implementowanie funkcji wywołania zwrotnego'
+title: 'Instrukcje: Implementowanie funkcji wywołania zwrotnego'
+description: Zobacz, jak zaimplementować funkcje wywołania zwrotnego. W tym przykładzie zarządzana aplikacja używa wywołania platformy, drukuje wartość dojścia dla każdego okna na komputerze.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619120"
 ---
-# <a name="how-to-implement-callback-functions"></a>Porady: implementowanie funkcji wywołania zwrotnego
+# <a name="how-to-implement-callback-functions"></a>Instrukcje: Implementowanie funkcji wywołania zwrotnego
 Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarządzana używająca funkcji wywołania platformy może drukować wartość dojścia dla każdego okna na komputerze lokalnym. W ramach procedury i przykładu Użyj funkcji **EnumWindows** , aby przejść przez listę systemu Windows i zarządzaną funkcję wywołania zwrotnego (nazwanego wywołania zwrotnego) w celu wydrukowania wartości uchwytu okna.  
   
 ### <a name="to-implement-a-callback-function"></a>Aby zaimplementować funkcję wywołania zwrotnego  
@@ -28,7 +29,7 @@ Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarząd
   
      Jedną z wskazówek, że ta funkcja wymaga wywołania zwrotnego, jest obecność argumentu **lpEnumFunc** . Często widzisz prefiks **LP** (długi wskaźnik) połączony z sufiksem **Func** w nazwie argumentów, które przyjmują wskaźnik do funkcji wywołania zwrotnego. Aby uzyskać dokumentację dotyczącą funkcji Win32, zobacz zestaw SDK platformy Microsoft.  
   
-2. Utwórz zarządzaną funkcję wywołania zwrotnego. Przykład deklaruje typ delegata o nazwie `CallBack`, który przyjmuje dwa argumenty (**HWND** i **lParam**). Pierwszy argument jest dojściem do okna; drugi argument jest zdefiniowany przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
+2. Utwórz zarządzaną funkcję wywołania zwrotnego. Przykład deklaruje typ delegata o nazwie `CallBack` , który przyjmuje dwa argumenty (**HWND** i **lParam**). Pierwszy argument jest dojściem do okna; drugi argument jest zdefiniowany przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
   
      Funkcje wywołania zwrotnego zwykle zwracają wartości niezerowe, aby wskazać sukces i zero, aby wskazać błąd. Ten przykład jawnie ustawia wartość zwracaną na **true** , aby kontynuować wyliczanie.  
   
@@ -127,7 +128,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Funkcje wywołania zwrotnego](callback-functions.md)
 - [Wywołanie funkcji DLL](calling-a-dll-function.md)

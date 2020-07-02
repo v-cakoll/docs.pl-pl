@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: e7a5a95a5d13f3396d396ad0d74a19a0efa3a967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620288"
 ---
-### <a name="sqlvariant-data-uses-sqlvariant-collation-rather-than-database-collation"></a>Dane typu Sql_variant używa sortowania sql_variant, a nie sortowania bazy danych
+### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Sql_variant dane używają sortowania sql_variant zamiast sortowania bazy danych
 
-|   |   |
-|---|---|
-|Szczegóły|<code>sql_variant</code> danych używa <code>sql_variant</code> sortowania zamiast sortowania bazy danych.|
-|Sugestia|Ta zmiana dotyczy możliwego uszkodzenia danych, jeśli sortowanie bazy danych różni się od <code>sql_variant</code> sortowania. W aplikacjach korzystających z uszkodzonych danych może wystąpić błąd.|
-|Zakres|Przezroczyste|
+#### <a name="details"></a>Szczegóły
+
+<code>sql_variant</code>dane korzystają z <code>sql_variant</code> sortowania zamiast sortowania bazy danych.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ta zmiana dotyczy możliwego uszkodzenia danych, jeśli sortowanie bazy danych różni się od <code>sql_variant</code> sortowania. W aplikacjach korzystających z uszkodzonych danych może wystąpić błąd.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Przezroczyste|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

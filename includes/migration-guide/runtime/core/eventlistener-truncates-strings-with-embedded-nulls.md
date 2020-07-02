@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 9084c135769f595491d645e49d24cf507f5f6070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f5c1ecead4e2f74e621354058aab70bfa1cccb6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61842041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620227"
 ---
-### <a name="eventlistener-truncates-strings-with-embedded-nulls"></a>EventListener obcina ciągi z osadzonego na wartości null
+### <a name="eventlistener-truncates-strings-with-embedded-nulls"></a>Odbiornika obcina ciągi z osadzonymi wartościami null
 
-|   |   |
-|---|---|
-|Szczegóły|<xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> obcina ciągi z osadzonego na wartości null. Znaki Null nie są obsługiwane przez <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> klasy. Zmiana dotyczy tylko aplikacji, które używają <xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> odczytać <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> danych w procesie oraz czy należy użyć znaków o wartości null jako ogranicznika.|
-|Sugestia|<xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> dane powinny zostać uaktualnione, jeśli jest to możliwe, aby nie używać osadzone znaki o wartości null.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+<xref:System.Diagnostics.Tracing.EventListener?displayProperty=fullName>obcina ciągi z osadzonymi wartościami null. Klasa nie obsługuje znaków o wartości null <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> . Zmiana ta dotyczy tylko aplikacji, które używają <xref:System.Diagnostics.Tracing.EventListener?displayProperty=fullName> do odczytu <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> danych w procesie i używania znaków null jako ograniczników.
+
+#### <a name="suggestion"></a>Sugestia
+
+<xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName>dane powinny być aktualizowane, jeśli jest to możliwe, nie mogą być używane w osadzonych znakach null.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Diagnostics.Tracing.EventListener.%23ctor?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Collections.Generic.IDictionary{System.String,System.String})?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Diagnostics.Tracing.EventListener.%23ctor></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Collections.Generic.IDictionary{System.String,System.String})?displayProperty=nameWithType></li></ul>|

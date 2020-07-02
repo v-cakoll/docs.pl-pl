@@ -1,5 +1,6 @@
 ---
 title: Domyślny marshaling dla obiektów
+description: Zrozumienie domyślnego kierowania dla obiektów. Przejrzyj opcje organizowania. Kierowanie obiektów do interfejsów lub wariantów, wariantów do obiektów i wariantów typu ByRef.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618457"
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 
@@ -36,7 +37,7 @@ W poniższej tabeli przedstawiono opcje organizowania dla typu danych **obiekt**
 |**UnmanagedType. IUnknown**<br /><br /> (domyślnie dla pól)|Interfejs **IUnknown** .|
 |**UnmanagedType. IDispatch**|Interfejs **IDispatch** .|
 
-W poniższym przykładzie przedstawiono definicję interfejsu zarządzanego dla programu `MarshalObject`.
+W poniższym przykładzie przedstawiono definicję interfejsu zarządzanego dla programu `MarshalObject` .
 
 ```vb
 Interface MarshalObject
@@ -116,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Kierowanie obiektu do interfejsu
 
-Gdy obiekt jest uwidaczniany w modelu COM jako interfejs, ten interfejs jest interfejsem klasy dla zarządzanego typu <xref:System.Object> ( **_object** interfejs). Ten interfejs jest wpisywany jako **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) lub **IUnknown** (**UnmanagedType. IUnknown**) w bibliotece typów będących wynikiem. Klienci modelu COM mogą dynamicznie wywoływać elementy członkowskie zarządzanej klasy lub wszelkich członków wdrożonych przez klasy pochodne za pomocą interfejsu **_object** . Klient może również wywołać metodę **QueryInterface** , aby uzyskać inny interfejs jawnie zaimplementowany przez typ zarządzany.
+Gdy obiekt jest uwidaczniany w modelu COM jako interfejs, ten interfejs jest interfejsem klasy dla zarządzanego typu <xref:System.Object> ( **_object** interfejs). Ten interfejs jest wpisywany jako **IDispatch** ( <xref:System.Runtime.InteropServices.UnmanagedType> ) lub **IUnknown** (**UnmanagedType. IUnknown**) w bibliotece typów będących wynikiem. Klienci modelu COM mogą dynamicznie wywoływać elementy członkowskie zarządzanej klasy lub wszelkich członków wdrożonych przez klasy pochodne za pomocą interfejsu **_object** . Klient może również wywołać metodę **QueryInterface** , aby uzyskać inny interfejs jawnie zaimplementowany przez typ zarządzany.
 
 ## <a name="marshaling-object-to-variant"></a>Kierowanie obiektu do wariantu
 
@@ -130,7 +131,7 @@ Gdy obiekt jest zorganizowany do wariantu, wewnętrzny typ Variant jest określa
 
 ### <a name="marshaling-system-types-to-variant"></a>Kierowanie typów systemu do wariantu
 
-W poniższej tabeli przedstawiono typy obiektów zarządzanych i odpowiadające im typy wariantów COM. Te typy są konwertowane tylko wtedy, gdy podpis wywoływanej metody jest typu <xref:System.Object?displayProperty=nameWithType>.
+W poniższej tabeli przedstawiono typy obiektów zarządzanych i odpowiadające im typy wariantów COM. Te typy są konwertowane tylko wtedy, gdy podpis wywoływanej metody jest typu <xref:System.Object?displayProperty=nameWithType> .
 
 |Typ obiektu|Typ Variant COM|
 |-----------------|----------------------|
@@ -181,7 +182,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.
 ```
 
-Typy com, które nie mają odpowiednich typów zarządzanych, mogą być organizowane przy użyciu klas otoki <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>takich <xref:System.Runtime.InteropServices.UnknownWrapper>jak, <xref:System.Runtime.InteropServices.CurrencyWrapper>, i. Poniższy przykład kodu demonstruje, jak używać tych otok do przekazywania różnych typów wariantów do serwera COM.
+Typy com, które nie mają odpowiednich typów zarządzanych, mogą być organizowane przy użyciu klas otoki <xref:System.Runtime.InteropServices.ErrorWrapper> , takich jak,, <xref:System.Runtime.InteropServices.DispatchWrapper> <xref:System.Runtime.InteropServices.UnknownWrapper> i <xref:System.Runtime.InteropServices.CurrencyWrapper> . Poniższy przykład kodu demonstruje, jak używać tych otok do przekazywania różnych typów wariantów do serwera COM.
 
 ```vb
 Imports System.Runtime.InteropServices
@@ -235,12 +236,12 @@ W poniższej tabeli przedstawiono możliwe wartości wyliczenia elementu **TypeC
 |**TypeCode. Decimal**|**VT_DECIMAL**|
 |**TypeCode. DateTime**|**VT_DATE**|
 |**TypeCode. String**|**VT_BSTR**|
-|Bez pomocy technicznej.|**VT_INT**|
-|Bez pomocy technicznej.|**VT_UINT**|
-|Bez pomocy technicznej.|**VT_ARRAY**|
-|Bez pomocy technicznej.|**VT_RECORD**|
-|Bez pomocy technicznej.|**VT_CY**|
-|Bez pomocy technicznej.|**VT_VARIANT**|
+|Nieobsługiwane.|**VT_INT**|
+|Nieobsługiwane.|**VT_UINT**|
+|Nieobsługiwane.|**VT_ARRAY**|
+|Nieobsługiwane.|**VT_RECORD**|
+|Nieobsługiwane.|**VT_CY**|
+|Nieobsługiwane.|**VT_VARIANT**|
 
 Wartość wariantu COM jest określana przez wywołanie interfejsu typu **IConvertible.to** *Type* , gdzie **do** *typu* jest procedura konwersji odpowiadająca typowi zwróconemu z **obiektem IConvertible. GetTypeCode**. Na przykład obiekt, który zwraca element **TypeCode. Double** z **obiektem IConvertible. GetTypeCode** jest zorganizowany jako wariant modelu COM typu **VT_R8**. Można uzyskać wartość wariantu (przechowywaną w polu **dblVal** wariantu com) przez rzutowanie do interfejsu **obiektem IConvertible** i wywołanie <xref:System.IConvertible.ToDouble%2A> metody.
 
@@ -274,9 +275,9 @@ Podczas organizowania elementu Variant z obiektem, typu i czasami wartość, z k
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Odpowiedni opakowany typ wartości.|
-|**VT_VARIANT**|Bez pomocy technicznej.|
+|**VT_VARIANT**|Nieobsługiwane.|
 
-Typy wariantów przesyłane z modelu COM do kodu zarządzanego, a następnie z powrotem do modelu COM mogą nie zachować tego samego typu wariantu dla czasu trwania wywołania. Należy wziąć pod uwagę to, co się stanie, gdy wariant typu **VT_DISPATCH** jest przenoszona z modelu COM do .NET Framework. Podczas organizowania wariant jest konwertowany na <xref:System.Object?displayProperty=nameWithType>. Jeśli **obiekt** jest następnie przekazywany z powrotem do modelu COM, jest on zorganizowany z powrotem do wariantu typu **VT_UNKNOWN**. Nie ma gwarancji, że wariant utworzony, gdy obiekt jest zorganizowany z kodu zarządzanego do modelu COM, będzie tego samego typu co wariant użyty początkowo do utworzenia obiektu.
+Typy wariantów przesyłane z modelu COM do kodu zarządzanego, a następnie z powrotem do modelu COM mogą nie zachować tego samego typu wariantu dla czasu trwania wywołania. Należy wziąć pod uwagę to, co się stanie, gdy wariant typu **VT_DISPATCH** jest przenoszona z modelu COM do .NET Framework. Podczas organizowania wariant jest konwertowany na <xref:System.Object?displayProperty=nameWithType> . Jeśli **obiekt** jest następnie przekazywany z powrotem do modelu COM, jest on zorganizowany z powrotem do wariantu typu **VT_UNKNOWN**. Nie ma gwarancji, że wariant utworzony, gdy obiekt jest zorganizowany z kodu zarządzanego do modelu COM, będzie tego samego typu co wariant użyty początkowo do utworzenia obiektu.
 
 ## <a name="marshaling-byref-variants"></a>Kierowanie wariantów ByRef
 
@@ -314,12 +315,12 @@ Poniższa tabela podsumowuje reguły propagacji dla wariantów i obiektów.
 |----------|--------|-----------------------------|
 |**Wariant**  *v*|**Obiekt**  *o*|Nigdy|
 |**Obiekt**  *o*|**Wariant**  *v*|Nigdy|
-|**Wariant wariantów*****\*****pv*     |**Obiekt ref**  *o*|Zawsze|
-|**Obiekt ref**  *o*|**Wariant wariantów*****\*****pv*     |Zawsze|
-|**Wariant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Obiekt**  *o*|Nigdy|
+|**Typ Variant** ***\**** Funkcja *PV*     |**Obiekt ref**  *o*|Zawsze|
+|**Obiekt ref**  *o*|**Typ Variant** ***\**** Funkcja *PV*     |Zawsze|
+|**Wariant**  *v* **(VT_BYREF** *&#124;* **VT_ \* )**|**Obiekt**  *o*|Nigdy|
 |**Wariant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Obiekt ref**  *o*|Tylko wtedy, gdy typ nie został zmieniony.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)

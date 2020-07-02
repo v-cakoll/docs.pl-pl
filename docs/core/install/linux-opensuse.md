@@ -4,12 +4,12 @@ description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środ
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619471"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie openSUSE
 
@@ -69,7 +69,22 @@ Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podcz
 
 ## <a name="dependencies"></a>Zależności
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Po zainstalowaniu programu przy użyciu Menedżera pakietów te biblioteki są instalowane dla Ciebie. Jeśli jednak ręcznie zainstalujesz platformę .NET Core lub opublikujesz aplikację, musisz upewnić się, że te biblioteki są zainstalowane:
+
+- krb5
+- libicu
+- libopenssl1_0_0
+
+Jeśli docelowa wersja OpenSSL środowiska uruchomieniowego to 1,1 lub nowsza, należy zainstalować polecenie **COMPAT-openssl10**.
+
+Aby uzyskać więcej informacji o zależnościach, zobacz [samodzielne aplikacje systemu Linux](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+W przypadku aplikacji .NET Core, które używają zestawu *System. Drawing. Common* , konieczne będzie również użycie następujących zależności:
+
+- [libgdiplus (wersja 6.0.1 lub nowsza)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > Aby zainstalować najnowszą wersję programu *libgdiplus* , można dodać do systemu repozytorium mono. Aby uzyskać więcej informacji, zobacz <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Instalacja z skryptami
 

@@ -1,5 +1,6 @@
 ---
-title: Ustawianie wartości wyświetlanej przez formant paska postępu
+title: Ustaw wartość wyświetlaną przez formant ProgressBar
+description: Dowiedz się, jak ustawić wartość wyświetlaną przez formant ProgressBar Windows Forms. Istnieje wiele metod, których można użyć.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +9,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: d295079a96ca19a4e4c98e113a3f3051c6403182
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 75fe1b416636471d797a39134f45a05c972c9d39
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618106"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Porady: ustawianie wartości wyświetlanej przez formant ProgressBar formularzy systemu Windows
 > [!IMPORTANT]
-> Formant <xref:System.Windows.Forms.ToolStripProgressBar> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.ProgressBar> do formantu; jednak <xref:System.Windows.Forms.ProgressBar> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz.  
+> <xref:System.Windows.Forms.ToolStripProgressBar>Formant zastępuje i dodaje funkcję do <xref:System.Windows.Forms.ProgressBar> kontrolki; jednak <xref:System.Windows.Forms.ProgressBar> kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję.  
   
- .NET Framework oferuje kilka różnych sposobów wyświetlania <xref:System.Windows.Forms.ProgressBar> danej wartości w formancie. To, które podejście wybierzesz, będzie zależało od wykonywanego zadania lub rozwiązania problemu. W poniższej tabeli przedstawiono podejścia, które można wybrać.  
+ .NET Framework oferuje kilka różnych sposobów wyświetlania danej wartości w <xref:System.Windows.Forms.ProgressBar> formancie. Wybrana metoda będzie zależeć od zadania w ręku lub podczas rozwiązywania problemu. W poniższej tabeli przedstawiono podejścia, które można wybrać.  
   
 |Podejście|Opis|  
 |--------------|-----------------|  
-|Ustaw wartość <xref:System.Windows.Forms.ProgressBar> formantu bezpośrednio.|Takie podejście jest przydatne w przypadku zadań, w których znasz sumę mierzonego elementu, który będzie zaangażowany, na przykład odczytywanie rekordów ze źródła danych. Ponadto jeśli wystarczy ustawić wartość raz lub dwa razy, jest to łatwy sposób, aby to zrobić. Na koniec użyj tego procesu, jeśli chcesz zmniejszyć wartość wyświetlaną przez pasek postępu.|  
-|Zwiększ <xref:System.Windows.Forms.ProgressBar> wyświetlanie o stałą wartość.|Takie podejście jest przydatne podczas wyświetlania prostej liczby między minimalną i maksymalną, taką jak czas, który upłynął lub liczba plików, które zostały przetworzone ze znanej sumy.|  
-|Zwiększ <xref:System.Windows.Forms.ProgressBar> wyświetlanie o wartość, która się zmienia.|Takie podejście jest przydatne, gdy trzeba zmienić wyświetlaną wartość kilka razy w różnych kwotach. Przykładem może być pokazanie ilości miejsca na dysku twardym zużywanego podczas zapisywania serii plików na dysku.|  
+|Ustaw wartość <xref:System.Windows.Forms.ProgressBar> formantu bezpośrednio.|Takie podejście jest przydatne w przypadku zadań, w których wiadomo, ile elementów jest mierzonych, takich jak odczytywanie rekordów ze źródła danych. Ponadto, jeśli trzeba ustawić wartość tylko raz lub dwa razy, jest to prosty sposób. Na koniec Użyj tego procesu, jeśli chcesz zmniejszyć wartość wyświetlaną na pasku postępu.|  
+|Zwiększ poziom <xref:System.Windows.Forms.ProgressBar> wyświetlania o ustalonej wartości.|Takie podejście jest przydatne, gdy wyświetlasz prostą liczbę z przedziału od minimum do maksimum, na przykład czas, który upłynął, lub liczbę plików, które zostały przetworzone z znanego podsumowania.|  
+|Zwiększenie <xref:System.Windows.Forms.ProgressBar> wyświetlania przez wartość, która różni się.|Takie podejście jest przydatne, gdy trzeba zmienić wyświetlaną wartość na liczbę razy w różnych kwotach. Przykład pokazuje ilość miejsca na dysku twardym zużywanego podczas zapisywania serii plików na dysku.|  
   
- Najbardziej bezpośrednim sposobem ustawienia wartości wyświetlanej przez pasek postępu <xref:System.Windows.Forms.ProgressBar.Value%2A> jest ustawienie właściwości. Można to zrobić w czasie projektowania lub w czasie wykonywania.  
+ Najbardziej bezpośrednim sposobem ustawienia wartości wyświetlanej przez pasek postępu jest ustawienie <xref:System.Windows.Forms.ProgressBar.Value%2A> właściwości. Można to zrobić w czasie projektowania lub w czasie wykonywania.  
   
-### <a name="to-set-the-progressbar-value-directly"></a>Aby bezpośrednio ustawić wartość ProgressBar  
+### <a name="to-set-the-progressbar-value-directly"></a>Aby ustawić wartość ProgressBar bezpośrednio  
   
-1. Ustaw <xref:System.Windows.Forms.ProgressBar> formant <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
+1. Ustaw <xref:System.Windows.Forms.ProgressBar> kontrolkę <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
   
-2. W kodzie ustaw <xref:System.Windows.Forms.ProgressBar.Value%2A> właściwość formantu na wartość całkowitą między wartościami minimalnymi i maksymalnymi, które zostały ustalone.  
+2. W kodzie, należy ustawić właściwość kontrolki <xref:System.Windows.Forms.ProgressBar.Value%2A> na wartość całkowitą z zakresu od ustalonej wartości minimalnej i maksymalnej.  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.ProgressBar.Value%2A> Jeśli ustawisz właściwość poza granicami <xref:System.Windows.Forms.ProgressBar.Minimum%2A> <xref:System.Windows.Forms.ProgressBar.Maximum%2A> ustanowionymi przez i właściwości, formant zgłasza wyjątek. <xref:System.ArgumentException>  
+    > Jeśli właściwość zostanie ustawiona <xref:System.Windows.Forms.ProgressBar.Value%2A> poza granicami ustanowionymi przez <xref:System.Windows.Forms.ProgressBar.Minimum%2A> właściwości i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> , formant zgłosi <xref:System.ArgumentException> wyjątek.  
   
-     Poniższy przykład kodu ilustruje <xref:System.Windows.Forms.ProgressBar> sposób bezpośredniego ustawiania wartości. Kod odczytuje rekordy ze źródła danych i aktualizuje pasek postępu i etykietę za każdym razem, gdy rekord danych jest odczytywany. W tym przykładzie wymaga, że formularz ma <xref:System.Windows.Forms.Label> formant, <xref:System.Windows.Forms.ProgressBar> formant i tabelę danych z wierszem wywoływanym `CustomerRow` z `FirstName` i `LastName` polami.  
+     Poniższy przykład kodu ilustruje sposób <xref:System.Windows.Forms.ProgressBar> bezpośredniego ustawiania wartości. Kod odczytuje rekordy ze źródła danych i aktualizuje pasek postępu oraz etykietę za każdym razem, gdy rekord danych zostanie odczytany. Ten przykład wymaga, aby formularz miał <xref:System.Windows.Forms.Label> kontrolkę, <xref:System.Windows.Forms.ProgressBar> kontrolkę i tabelę danych z wierszem o nazwie `CustomerRow` z `FirstName` i `LastName` polami.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +84,19 @@ ms.locfileid: "79141814"
     }  
     ```  
   
-     Jeśli są wyświetlane postępu, który przebiega przez stały interwał, można ustawić wartość, a następnie wywołać metodę, która zwiększa wartość <xref:System.Windows.Forms.ProgressBar> formantu przez ten interwał. Jest to przydatne w przypadku czasomierzy i innych scenariuszy, w których nie mierzysz postępu jako procentu całości.  
+     Jeśli jest wyświetlany postęp, który przechodzi przez stały interwał, można ustawić wartość, a następnie wywołać metodę, która zwiększa <xref:System.Windows.Forms.ProgressBar> wartość kontrolki według tego interwału. Jest to przydatne w przypadku czasomierzy i innych scenariuszy, w których postępy nie są mierzone jako procent całości.  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Aby zwiększyć pasek postępu o stałą wartość  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Aby zwiększyć pasek postępu o ustalonej wartości  
   
-1. Ustaw <xref:System.Windows.Forms.ProgressBar> formant <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
+1. Ustaw <xref:System.Windows.Forms.ProgressBar> kontrolkę <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
   
-2. Ustaw <xref:System.Windows.Forms.ProgressBar.Step%2A> właściwość formantu na liczbę całkowitą reprezentującą kwotę, aby zwiększyć wyświetlaną wartość paska postępu.  
+2. Ustaw właściwość kontrolki <xref:System.Windows.Forms.ProgressBar.Step%2A> na liczbę całkowitą reprezentującą kwotę, aby zwiększyć wartość wyświetlaną na pasku postępu.  
   
-3. Wywołanie <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metody, aby zmienić wartość wyświetlaną <xref:System.Windows.Forms.ProgressBar.Step%2A> przez kwotę ustawioną we właściwości.  
+3. Wywołaj <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metodę, aby zmienić wartość wyświetlaną przez kwotę ustawioną we <xref:System.Windows.Forms.ProgressBar.Step%2A> właściwości.  
   
-     Poniższy przykład kodu ilustruje, jak pasek postępu może obsługiwać liczbę plików w operacji kopiowania.  
+     Poniższy przykład kodu ilustruje, jak pasek postępu może zachować liczbę plików w operacji kopiowania.  
   
-     W poniższym przykładzie, jak każdy plik jest odczytywany do pamięci, pasek postępu i etykieta są aktualizowane w celu odzwierciedlenia całkowitej liczby odczytanych plików. W tym przykładzie wymaga, aby formularz miał <xref:System.Windows.Forms.Label> formant i formant. <xref:System.Windows.Forms.ProgressBar>  
+     W poniższym przykładzie, ponieważ każdy plik jest odczytywany do pamięci, pasek postępu i etykieta są aktualizowane w celu odzwierciedlenia łącznej liczby odczytywanych plików. Ten przykład wymaga, aby formularz miał <xref:System.Windows.Forms.Label> formant i <xref:System.Windows.Forms.ProgressBar> formant.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,17 +150,17 @@ ms.locfileid: "79141814"
     }  
     ```  
   
-     Na koniec można zwiększyć wartość wyświetlaną przez pasek postępu, tak aby każdy wzrost był kwotą unikatową. Jest to przydatne, gdy śledzisz serię unikatowych operacji, takich jak zapisywanie plików o różnych rozmiarach na dysku twardym lub mierzenie postępu jako procent całości.  
+     Na koniec można zwiększyć wartość wyświetlaną przez pasek postępu, aby każdy wzrost był unikatowy. Jest to przydatne, gdy śledzisz szereg unikatowych operacji, takich jak zapisywanie plików o różnych rozmiarach na dysku twardym, lub pomiar postępu jako procent całości.  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Aby zwiększyć pasek postępu o wartość dynamiczną  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Aby zwiększyć pasek postępu przez wartość dynamiczną  
   
-1. Ustaw <xref:System.Windows.Forms.ProgressBar> formant <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
+1. Ustaw <xref:System.Windows.Forms.ProgressBar> kontrolkę <xref:System.Windows.Forms.ProgressBar.Minimum%2A> i <xref:System.Windows.Forms.ProgressBar.Maximum%2A> wartości.  
   
-2. Wywołanie <xref:System.Windows.Forms.ProgressBar.Increment%2A> metody, aby zmienić wartość wyświetlaną przez określoną ć całkowitą.  
+2. Wywołaj <xref:System.Windows.Forms.ProgressBar.Increment%2A> metodę, aby zmienić wartość wyświetlaną przez określoną liczbę całkowitą.  
   
-     Poniższy przykład kodu ilustruje, jak pasek postępu można obliczyć, ile miejsca na dysku zostało użyte podczas operacji kopiowania.  
+     Poniższy przykład kodu ilustruje, jak pasek postępu może obliczyć ilość miejsca na dysku, która została użyta podczas operacji kopiowania.  
   
-     W poniższym przykładzie, gdy każdy plik jest zapisywany na dysku twardym, pasek postępu i etykieta są aktualizowane w celu odzwierciedlenia ilości dostępnego miejsca na dysku twardym. W tym przykładzie wymaga, aby formularz miał <xref:System.Windows.Forms.Label> formant i formant. <xref:System.Windows.Forms.ProgressBar>  
+     W poniższym przykładzie, ponieważ każdy plik jest zapisywana na dysku twardym, pasek postępu i etykieta są aktualizowane w celu odzwierciedlenia ilości dostępnego miejsca na dysku twardym. Ten przykład wymaga, aby formularz miał <xref:System.Windows.Forms.Label> formant i <xref:System.Windows.Forms.ProgressBar> formant.  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -224,7 +225,7 @@ ms.locfileid: "79141814"
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

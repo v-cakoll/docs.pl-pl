@@ -4,12 +4,12 @@ description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środ
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619523"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core na platformie Alpine
 
@@ -47,12 +47,11 @@ Platforma .NET Core w systemie Alpine Linux wymaga zainstalowanych następujący
 
 - ICU — libs
 - krb5 — libs
+- libgcc
 - libintl
 - libssl 1.1 (Alpine v lub nowszy)
-- libssl 1.0 (Alpine v 3.8)
+- libssl 1.0 (Alpine v 3.8 lub Lower)
 - libstdc + +
-- LTTng — zespół sklepu uniwersalnego
-- numactl (opcjonalnie)
 - zlib
 
 ## <a name="scripted-install"></a>Instalacja z skryptami

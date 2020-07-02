@@ -1,5 +1,6 @@
 ---
 title: Grafika i rysowanie
+description: Zapoznaj się z obiektami graficznymi, piórem, pędzlem i kolorami oraz sposobem wykonywania takich zadań, jak rysowanie kształtów, rysowanie tekstu lub wyświetlanie obrazów w Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,17 +8,17 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618405"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Grafika i rysowanie w formularzach systemu Windows
 Środowisko uruchomieniowe języka wspólnego używa zaawansowanej implementacji interfejsu GDI+ systemu Windows GDI (GDI). Za pomocą interfejsu GDI+ można tworzyć grafiki, rysować tekst i manipulować obrazami graficznymi jako obiektami. Interfejs GDI+ został zaprojektowany w celu zapewnienia wydajności i prostoty użycia. Można użyć GDI+ do renderowania graficznych obrazów na Windows Forms i kontrolek. Chociaż nie można używać interfejsu GDI+ bezpośrednio w formularzach sieci Web, można wyświetlać obrazy graficzne za pomocą kontrolki serwer sieci Web obrazu.  
   
- W tej sekcji znajdziesz tematy, które wprowadzają Podstawy programowania GDI+. Chociaż nie jest to wyczerpujące odwołanie, ta sekcja zawiera informacje dotyczące <xref:System.Drawing.Graphics>, <xref:System.Drawing.Pen>, <xref:System.Drawing.Brush>i <xref:System.Drawing.Color> obiektów oraz wyjaśnia sposób wykonywania takich zadań jak rysowanie kształtów, rysowanie tekstu lub wyświetlanie obrazów. Aby uzyskać więcej informacji, zobacz [Informacje o interfejsie GDI+](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
+ W tej sekcji znajdziesz tematy, które wprowadzają Podstawy programowania GDI+. Chociaż nie jest to wyczerpujące odwołanie, ta sekcja zawiera informacje o <xref:System.Drawing.Graphics> <xref:System.Drawing.Pen> obiektach,, <xref:System.Drawing.Brush> i i <xref:System.Drawing.Color> wyjaśnia, jak wykonywać takie zadania jako kształty rysowania, rysowania tekstu lub wyświetlania obrazów. Aby uzyskać więcej informacji, zobacz [Informacje o interfejsie GDI+](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
   
  Jeśli chcesz od razu rozpocząć pracę, zobacz [wprowadzenie z programowaniem grafiki](getting-started-with-graphics-programming.md). Zawiera ona tematy dotyczące sposobu używania kodu do rysowania linii, kształtów, tekstu i innych informacji w formularzach systemu Windows.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "76746404"
  [Używanie zarządzanych klas grafiki](using-managed-graphics-classes.md)  
  Pokazuje, jak wykonać różne zadania przy użyciu klas zarządzanych GDI+.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Drawing>  
  Zapewnia dostęp do podstawowych funkcji graficznych interfejsu GDI+.  
   

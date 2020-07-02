@@ -1,5 +1,6 @@
 ---
 title: Jak utworzyć i powiązać z ObservableCollection
+description: Dowiedz się, jak utworzyć i powiązać z kolekcją pochodzącą z klasy ObservableCollection w Windows Presentation Foundation.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617872"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Jak utworzyć i powiązać z ObservableCollection
-Ten przykład pokazuje, jak utworzyć i powiązać z kolekcją, która dziedziczy z klasy <xref:System.Collections.ObjectModel.ObservableCollection%601>, która jest klasą kolekcji, która udostępnia powiadomienia, gdy elementy zostaną dodane lub usunięte.  
+Ten przykład pokazuje, jak utworzyć i powiązać z kolekcją, która dziedziczy z <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest klasą kolekcji, która dostarcza powiadomienia, gdy elementy zostaną dodane lub usunięte.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono implementację kolekcji `NameList`:  
+ W poniższym przykładzie przedstawiono implementację `NameList` kolekcji:  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +105,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Kolekcję można udostępnić w taki sam sposób, jak w przypadku innych obiektów środowiska uruchomieniowego języka wspólnego (CLR), zgodnie z opisem w temacie [udostępnianie danych do powiązania w języku XAML](how-to-make-data-available-for-binding-in-xaml.md). Można na przykład utworzyć wystąpienie kolekcji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i określić kolekcję jako zasób, jak pokazano poniżej:  
+ Kolekcję można udostępnić w taki sam sposób, jak w przypadku innych obiektów środowiska uruchomieniowego języka wspólnego (CLR), zgodnie z opisem w temacie [udostępnianie danych do powiązania w języku XAML](how-to-make-data-available-for-binding-in-xaml.md). Na przykład można utworzyć wystąpienie kolekcji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i określić kolekcję jako zasób, jak pokazano poniżej:  
   
 ```xaml  
 <Window  
@@ -136,7 +137,7 @@ End Class
  Definicja `NameItemTemplate` nie jest wyświetlana w tym miejscu.  
   
 > [!NOTE]
-> Obiekty w kolekcji muszą spełniać wymagania opisane w [Przegląd źródeł powiązań](binding-sources-overview.md). W szczególności, jeśli używasz <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> (na przykład chcesz, aby [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aktualizować, gdy właściwości źródłowe ulegną zmianie dynamicznie), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianie właściwości, taki jak interfejs <xref:System.ComponentModel.INotifyPropertyChanged>.  
+> Obiekty w kolekcji muszą spełniać wymagania opisane w [Przegląd źródeł powiązań](binding-sources-overview.md). W szczególności, jeśli używasz programu <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> (na przykład chcesz, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Aby aktualizacja właściwości źródła była możliwa dynamicznie), należy zaimplementować odpowiedni mechanizm powiadamiania o zmianach właściwości, taki jak <xref:System.ComponentModel.INotifyPropertyChanged> interfejs.  
   
  Aby uzyskać więcej informacji, zobacz sekcję Powiązywanie z kolekcjami w temacie [powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md).  
   
@@ -144,6 +145,6 @@ End Class
 
 - [Sortowanie danych w widoku](how-to-sort-data-in-a-view.md)
 - [Filtrowanie danych w widoku](how-to-filter-data-in-a-view.md)
-- [Sortowanie i grupowanie danych przy użyciu widoku w XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Sortowanie i grupowanie danych przy użyciu widoku w języku XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Przegląd powiązań danych](../../../desktop-wpf/data/data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

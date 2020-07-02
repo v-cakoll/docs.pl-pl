@@ -1,5 +1,6 @@
 ---
 title: Omówienie aplikacji przeglądarki XAML
+description: Dowiedz się, w jaki sposób aplikacje przeglądarki XAML łączą funkcje aplikacji sieci Web i rozbudowanych aplikacji klienckich w Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 3395445dd5639e25f62aeef09d070e326704ed40
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617915"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>Aplikacje przeglądarki XAML (XBAP) łączą funkcje aplikacji sieci Web i aplikacji z rozbudowanymi aplikacjami klienckimi. Na przykład aplikacje sieci Web XBAP mogą być wdrażane na serwerze sieci Web i uruchamiane z przeglądarki Internet Explorer lub Firefox. Podobnie jak w przypadku aplikacji z rozbudowanymi aplikacjami klienckimi, aplikacje XBAP mogą korzystać z możliwości platformy WPF. Tworzenie aplikacji XBAP jest również podobne do rozbudowanych wdrożeń klientów. Ten temat zawiera proste, górne wprowadzenie do programowania aplikacji XBAP i opisuje, gdzie Programowanie aplikacji XBAP różni się od standardowego rozbudowanego środowiska programistycznego.
@@ -87,21 +88,21 @@ ms.locfileid: "77124211"
  Mage.exe -cc
  ```
 
- To polecenie gwarantuje, że została uruchomiona Najnowsza wersja aplikacji XBAP. Podczas debugowania aplikacji w programie Visual Studio należy uruchomić najnowszą wersję programu XBAP. Ogólnie rzecz biorąc należy zaktualizować numer wersji wdrożenia przy każdej kompilacji. Aby uzyskać więcej informacji na temat programu Mage, zobacz [plik Mage. exe (narzędzie tworzenia i edycji manifestów)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).
+ To polecenie gwarantuje, że została uruchomiona Najnowsza wersja aplikacji XBAP. Podczas debugowania aplikacji w programie Visual Studio należy uruchomić najnowszą wersję programu XBAP. Ogólnie rzecz biorąc należy zaktualizować numer wersji wdrożenia przy każdej kompilacji. Aby uzyskać więcej informacji na temat programu Mage, zobacz [Mage.exe (narzędzie tworzenia i edycji manifestów)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Komunikacja ze stroną sieci Web hosta
- Gdy aplikacja jest hostowana w ramce HTML, można komunikować się ze stroną sieci Web, która zawiera aplikację XBAP. Można to zrobić przez pobranie właściwości <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper>. Ta właściwość zwraca obiekt skryptu, który reprezentuje okno HTML. Następnie można uzyskać dostęp do właściwości, metod i zdarzeń w [obiekcie Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) przy użyciu zwykłej składni z kropką. Możesz również uzyskać dostęp do metod skryptu i zmiennych globalnych. Poniższy przykład pokazuje, jak pobrać obiekt skryptu i zamknąć przeglądarkę.
+ Gdy aplikacja jest hostowana w ramce HTML, można komunikować się ze stroną sieci Web, która zawiera aplikację XBAP. Można to zrobić przez pobranie <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> właściwości <xref:System.Windows.Interop.BrowserInteropHelper> . Ta właściwość zwraca obiekt skryptu, który reprezentuje okno HTML. Następnie można uzyskać dostęp do właściwości, metod i zdarzeń w [obiekcie Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) przy użyciu zwykłej składni z kropką. Możesz również uzyskać dostęp do metod skryptu i zmiennych globalnych. Poniższy przykład pokazuje, jak pobrać obiekt skryptu i zamknąć przeglądarkę.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
 
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Debugowanie aplikacji XBAP korzystających z HostScript
- Jeśli aplikacja XBAP używa obiektu <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> do komunikowania się z oknem HTML, istnieją dwa ustawienia, które należy określić do uruchomienia i debugowania aplikacji w programie Visual Studio. Aplikacja musi mieć dostęp do swojej witryny pochodzenia i należy uruchomić aplikację ze stroną HTML zawierającą aplikację XBAP. W poniższych krokach opisano, jak sprawdzić te dwa ustawienia:
+ Jeśli aplikacja XBAP używa <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> obiektu do komunikowania się z oknem HTML, istnieją dwa ustawienia, które należy określić do uruchomienia i debugowania aplikacji w programie Visual Studio. Aplikacja musi mieć dostęp do swojej witryny pochodzenia i należy uruchomić aplikację ze stroną HTML zawierającą aplikację XBAP. W poniższych krokach opisano, jak sprawdzić te dwa ustawienia:
 
 1. W programie Visual Studio Otwórz właściwości projektu.
 
-2. Na karcie **Zabezpieczenia** kliknij pozycję **Zaawansowane**.
+2. Na **zabezpieczeń** kliknij pozycję **Zaawansowane**.
 
      Zostanie wyświetlone okno dialogowe Zaawansowane ustawienia zabezpieczeń.
 
@@ -128,19 +129,19 @@ ms.locfileid: "77124211"
 ## <a name="xbap-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XBAP
  Aplikacje XBAP są zwykle wykonywane w piaskownicy zabezpieczeń częściowej relacji zaufania, które są ograniczone do zestawu uprawnień strefy internetowej. W związku z tym implementacja musi obsługiwać podzestaw elementów WPF, które są obsługiwane przez strefę internetową, lub należy podwyższyć poziom uprawnień aplikacji. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](../security-wpf.md).
 
- Gdy używasz kontrolki <xref:System.Windows.Controls.WebBrowser> w aplikacji, WPF wewnętrznie tworzy wystąpienie natywnej kontrolki ActiveX WebBrowser. Gdy aplikacja jest częścią zaufania XBAP działającą w programie Internet Explorer, formant ActiveX jest uruchamiany w dedykowanym wątku procesu programu Internet Explorer. W związku z tym obowiązują następujące ograniczenia:
+ Gdy używasz <xref:System.Windows.Controls.WebBrowser> kontrolki w aplikacji, WPF wewnętrznie tworzy wystąpienie natywnej kontrolki ActiveX WebBrowser. Gdy aplikacja jest częścią zaufania XBAP działającą w programie Internet Explorer, formant ActiveX jest uruchamiany w dedykowanym wątku procesu programu Internet Explorer. W związku z tym obowiązują następujące ograniczenia:
 
-- Kontrolka <xref:System.Windows.Controls.WebBrowser> powinna zapewniać zachowanie podobne do przeglądarki hosta, w tym ograniczeń zabezpieczeń. Niektóre z tych ograniczeń zabezpieczeń można kontrolować za pomocą ustawień zabezpieczeń programu Internet Explorer. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](../security-wpf.md).
+- <xref:System.Windows.Controls.WebBrowser>Formant powinien zapewniać zachowanie podobne do przeglądarki hosta, w tym ograniczeń zabezpieczeń. Niektóre z tych ograniczeń zabezpieczeń można kontrolować za pomocą ustawień zabezpieczeń programu Internet Explorer. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](../security-wpf.md).
 
 - Wyjątek jest zgłaszany, gdy aplikacje XBAP są ładowane na stronie HTML.
 
-- Dane wejściowe są w osobnym wątku z programu WPF <xref:System.Windows.Controls.WebBrowser>, więc nie można przechwycić wejścia z klawiatury, a stan IME nie jest udostępniony.
+- Dane wejściowe są w osobnym wątku z platformy WPF <xref:System.Windows.Controls.WebBrowser> , więc nie można przechwycić wejścia z klawiatury, a stan IME nie jest udostępniony.
 
 - Czas lub kolejność nawigowania mogą być różne ze względu na kontrolkę ActiveX uruchomioną w innym wątku. Na przykład przechodzenie do strony nie zawsze jest anulowane przez uruchomienie innego żądania nawigacji.
 
 - Niestandardowa Kontrolka ActiveX może mieć problemy z komunikacją, ponieważ aplikacja WPF działa w osobnym wątku.
 
-- <xref:System.Windows.Interop.HwndHost.MessageHook> nie zostanie zgłoszony, ponieważ <xref:System.Windows.Interop.HwndHost> nie można podtworzyć podklasy okna uruchomionego w innym wątku lub procesie.
+- <xref:System.Windows.Interop.HwndHost.MessageHook>nie zostanie zgłoszone, ponieważ nie można podtworzyć <xref:System.Windows.Interop.HwndHost> podklasy okna uruchomionego w innym wątku lub procesie.
 
 ### <a name="creating-a-full-trust-xbap"></a>Tworzenie pełnego zaufania XBAP
  Jeśli Twoje aplikacje XBAP wymagają pełnego zaufania, możesz zmienić projekt, aby włączyć to uprawnienie. W poniższych krokach opisano sposób włączania pełnego zaufania:
@@ -151,9 +152,9 @@ ms.locfileid: "77124211"
 
  To ustawienie wprowadza następujące zmiany:
 
-- W pliku projektu wartość elementu `<TargetZone>` jest zmieniana na `Custom`.
+- W pliku projektu `<TargetZone>` wartość elementu jest zmieniana na `Custom` .
 
-- W manifeście aplikacji (App. manifest) do elementu "<xref:System.Security.PermissionSet> jest dodawany atrybut `Unrestricted="true"`.
+- W manifeście aplikacji (App. manifest) `Unrestricted="true"` atrybut jest dodawany do <xref:System.Security.PermissionSet> elementu.
 
     ```xml
     <PermissionSet class="System.Security.PermissionSet"
@@ -168,7 +169,7 @@ ms.locfileid: "77124211"
 
 |Strefa zabezpieczeń|Zachowanie|Pobieranie pełnego zaufania|
 |-------------------|--------------|------------------------|
-|Komputer lokalny|Automatyczne pełne zaufanie|Nie trzeba wykonywać żadnych czynności.|
+|Komputer lokalny|Automatyczne pełne zaufanie|Nie jest wymagana żadna akcja.|
 |Intranet i Zaufane witryny|Monituj o pełne zaufanie|Podpisz element XBAP przy użyciu certyfikatu, aby użytkownik widział źródło w monicie.|
 |Internet|Niepowodzenie z "zaufaniem nieudzielonym"|Podpisz element XBAP przy użyciu certyfikatu.|
 
@@ -185,7 +186,7 @@ ms.locfileid: "77124211"
 
  Ponadto ulepszone współbieżność sekwencji pobierania ClickOnce skraca czas rozpoczęcia do dziesięciu procent. Gdy ClickOnce pobiera i sprawdza poprawność manifestów, rozpocznie się pobieranie aplikacji, a pasek postępu zostanie zaktualizowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Konfiguruj Visual Studio, aby debugować aplikację przeglądarki XAML i wywołać usługę sieci Web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)

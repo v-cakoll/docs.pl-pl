@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Ustawianie poziomu dekompresji JPEG'
+title: 'Porady: ustawianie poziomu dekompresji JPEG'
+description: Dowiedz się, jak dostosować jakość obrazu JPEG, modyfikując jego poziom kompresji na Windows Forms.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618717"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Instrukcje: Ustawianie poziomu dekompresji JPEG
-Można zmodyfikować parametry obrazu podczas zapisywania obrazu na dysku, aby zminimalizować rozmiar pliku lub poprawiać jego jakość. Jakość obrazu JPEG można dostosować, modyfikując jego poziom kompresji. Aby określić poziom kompresji przy zapisywaniu obrazu JPEG, należy utworzyć <xref:System.Drawing.Imaging.EncoderParameters> obiektu i przekazać ją do <xref:System.Drawing.Image.Save%2A> metody <xref:System.Drawing.Image> klasy. Inicjowanie <xref:System.Drawing.Imaging.EncoderParameters> obiektu, tak aby zawiera tablicę, która składa się z jednego <xref:System.Drawing.Imaging.EncoderParameter>. Po utworzeniu <xref:System.Drawing.Imaging.EncoderParameter>, określ <xref:System.Drawing.Imaging.Encoder.Quality> encoder i poziom kompresji żądaną.  
+# <a name="how-to-set-jpeg-compression-level"></a>Porady: ustawianie poziomu dekompresji JPEG
+Możesz chcieć zmodyfikować parametry obrazu, gdy zapisujesz obraz na dysku w celu zminimalizowania rozmiaru pliku lub poprawy jego jakości. Jakość obrazu JPEG można dostosować, modyfikując jego poziom kompresji. Aby określić poziom kompresji podczas zapisywania obrazu JPEG, należy utworzyć <xref:System.Drawing.Imaging.EncoderParameters> obiekt i przekazać go do <xref:System.Drawing.Image.Save%2A> metody <xref:System.Drawing.Image> klasy. Zainicjuj <xref:System.Drawing.Imaging.EncoderParameters> obiekt, aby miał tablicę składającą się z jednego <xref:System.Drawing.Imaging.EncoderParameter> . Podczas tworzenia <xref:System.Drawing.Imaging.EncoderParameter> , określ <xref:System.Drawing.Imaging.Encoder.Quality> koder i żądany poziom kompresji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy <xref:System.Drawing.Imaging.EncoderParameter> obiektu i zapisuje trzy obrazy JPEG. Każdy obraz JPEG zostaje zapisana wraz z poziomu różnych jakości, modyfikując `long` wartość przekazana do <xref:System.Drawing.Imaging.EncoderParameter> konstruktora. Poziom jakości 0 odnosi się do największej kompresji i poziomu jakości 100 odnosi się do co najmniej kompresji.  
+ Poniższy przykładowy kod tworzy <xref:System.Drawing.Imaging.EncoderParameter> obiekt i zapisuje trzy obrazy JPEG. Każdy obraz JPEG jest zapisywany z innym poziomem jakości przez zmodyfikowanie `long` wartości przesłanej do <xref:System.Drawing.Imaging.EncoderParameter> konstruktora. Poziom jakości równy 0 odpowiada najwyższej kompresji, a poziom jakości 100 odpowiada najmniej kompresji.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -125,12 +126,12 @@ End Function
   
 - Aplikacja Windows Forms.  
   
-- A <xref:System.Windows.Forms.PaintEventArgs>, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+- A <xref:System.Windows.Forms.PaintEventArgs> , który jest parametrem <xref:System.Windows.Forms.PaintEventHandler> .  
   
-- Plik obrazu, który nosi nazwę `TestPhoto.jpg` i znajduje się w **c:\\**.  
+- Plik obrazu o nazwie `TestPhoto.jpg` i zlokalizowany w **c \\ :**.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Określanie parametrów obsługiwanych przez koder](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Porady: określanie parametrów obsługiwanych przez koder](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Typy map bitowych](types-of-bitmaps.md)
 - [Używanie kodeków obrazu w zarządzanym GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: mapowanie wyników HRESULT i wyjątków'
+title: 'Instrukcje: Mapowanie wyników HRESULT i wyjątków'
+description: Zapoznaj się z tematem jak mapować wartości HRESULT zwracane z metod COM na wyjątki zgłoszone przez metody .NET. Środowisko uruchomieniowe obsługuje przejście między modelami COM i .NET.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,25 +12,25 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619107"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Porady: mapowanie wyników HRESULT i wyjątków
+# <a name="how-to-map-hresults-and-exceptions"></a>Instrukcje: Mapowanie wyników HRESULT i wyjątków
 Metody COM zgłaszają błędy, zwracając wartości HRESULT; metody .NET raportują je przez wyrzucanie wyjątków. Środowisko uruchomieniowe obsługuje przejście między nimi. Każda Klasa wyjątków w .NET Framework jest mapowana na wartość HRESULT.  
   
  Klasy wyjątków zdefiniowane przez użytkownika mogą określać wszelkie wartości HRESULT są odpowiednie. Te klasy wyjątków mogą dynamicznie zmieniać wynik HRESULT, który ma zostać zwrócony, gdy wyjątek jest generowany przez ustawienie pola **HRESULT** dla obiektu Exception. Dodatkowe informacje o wyjątku są udostępniane klientowi za pomocą interfejsu **IErrorInfo** , który jest implementowany w obiekcie .NET w procesie niezarządzanym.  
   
  W przypadku utworzenia klasy rozszerzającej **System. Exception**należy ustawić pole HRESULT podczas konstruowania. W przeciwnym razie Klasa bazowa przypisuje wartość HRESULT. Można mapować nowe klasy wyjątków do istniejącego HRESULT, dostarczając wartość w konstruktorze wyjątku.  
   
- Należy pamiętać, że środowisko uruchomieniowe czasami `HRESULT` zignoruje w przypadkach, gdy `IErrorInfo` istnieje w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
+ Należy pamiętać, że środowisko uruchomieniowe czasami zignoruje `HRESULT` w przypadkach, gdy istnieje `IErrorInfo` w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Aby utworzyć nową klasę wyjątku i zamapować ją na HRESULT  
   
-1. Użyj poniższego kodu, aby utworzyć nową klasę wyjątku o `NoAccessException` nazwie i zamapować ją na `E_ACCESSDENIED`wartość HRESULT.  
+1. Użyj poniższego kodu, aby utworzyć nową klasę wyjątku o nazwie `NoAccessException` i zamapować ją na wartość HRESULT `E_ACCESSDENIED` .  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -126,21 +127,21 @@ CMyClass::MethodThatThrows
   
  Jeśli obiekt COM nie obsługuje **IErrorInfo**, środowisko uruchomieniowe inicjuje obiekt wyjątku z wartościami domyślnymi. Poniższa tabela zawiera listę wszystkich pól skojarzonych z obiektem wyjątku i identyfikuje źródło informacji domyślnych, gdy obiekt COM obsługuje **IErrorInfo**.  
   
- Należy pamiętać, że środowisko uruchomieniowe czasami `HRESULT` zignoruje w przypadkach, gdy `IErrorInfo` istnieje w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
+ Należy pamiętać, że środowisko uruchomieniowe czasami zignoruje `HRESULT` w przypadkach, gdy istnieje `IErrorInfo` w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
   
 |Pole wyjątku|Źródło informacji z modelu COM|  
 |---------------------|------------------------------------|  
-|**Kodzie**|WYNIK HRESULT został zwrócony z wywołania.|  
+|**ErrorCode**|WYNIK HRESULT został zwrócony z wywołania.|  
 |**HelpLink**|Jeśli **IErrorInfo->atrybut HelpContext** jest różna od zera, ciąg jest tworzony przez złączenie **IErrorInfo->GetHelpFile** i "#" oraz **IErrorInfo->GetHelpContext**. W przeciwnym razie ciąg jest zwracany z **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|Zawsze ma odwołanie o wartości null (**Nothing** w Visual Basic).|  
-|**Komunikat**|Ciąg zwrócony z **IErrorInfo->GetDescription**.|  
+|**Wiadomość**|Ciąg zwrócony z **IErrorInfo->GetDescription**.|  
 |**Element źródłowy**|Ciąg zwrócony z **IErrorInfo->GetSource**.|  
 |**Ślad stosu**|Ślad stosu.|  
 |**TargetSite**|Nazwa metody, która zwróciła błąd HRESULT.|  
   
  Pola wyjątków, takie jak **Message**, **Source**i **ślad stosu** , nie są dostępne dla **StackOverflowException**.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Wyjątki](../../standard/exceptions/index.md)

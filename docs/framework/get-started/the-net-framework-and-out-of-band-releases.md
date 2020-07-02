@@ -1,39 +1,40 @@
 ---
-title: Wersje .NET Framework i Out-of-Band
+title: .NET Framework i wersje poza pasmem
+description: Dowiedz się więcej o wersjach platformy .NET i oprogramowania poza pasmem. Nowe funkcje są wydane poza pasmem (OOB), aby ulepszyć Programowanie dla wielu platform lub wprowadzić nowe funkcje.
 ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-ms.openlocfilehash: 058bc1a5180060d3c3c6ba4ead1f074a14336b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9653696f46279e0c23418f92030d64839cc20518
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618769"
 ---
-# <a name="net-framework-and-out-of-band-releases"></a>.NET Framework i wydania poza pasmem
+# <a name="net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 
-Program .NET Framework ewoluował, aby pomieścić różne platformy, takie jak aplikacje platformy uniwersalnej systemu Windows i tradycyjne aplikacje klasyczne i internetowe, a także zmaksymalizować ponowne użycie kodu. Oprócz regularnych wydań .NET Framework, nowe funkcje są wydawane poza pasmem (OOB), aby poprawić tworzenie między platformami lub wprowadzić nowe funkcje.
+.NET Framework został rozwijający się w celu uwzględnienia różnych platform, takich jak aplikacje platformy UWP oraz tradycyjne aplikacje klasyczne i sieci Web, a także do zmaksymalizowania ponownego użycia kodu. Oprócz zwykłych wersji .NET Framework nowe funkcje są zwalniane poza pasmem (OOB), co pozwala ulepszyć Programowanie na wielu platformach lub wprowadzać nowe funkcje.
 
 ## <a name="advantages-of-oob-releases"></a>Zalety wersji OOB
 
-Wysyłanie nowych składników lub aktualizacji do składników poza pasmem umożliwia firmie Microsoft częstsze aktualizowanie programu .NET Framework. Umożliwia to także szybsze zbieranie opinii klientów i reagowanie na nie.
+Wysyłka nowych składników lub aktualizacji składników poza pasmem umożliwia firmie Microsoft dostarczanie bardziej częstych aktualizacji do .NET Framework. Umożliwia to także szybsze zbieranie opinii klientów i reagowanie na nie.
 
-Korzystając z funkcji OOB w aplikacji, użytkownicy nie trzeba instalować najnowszą wersję programu .NET Framework do uruchamiania aplikacji, ponieważ zestawy OOB wdrożyć z pakietem aplikacji.
+Jeśli używasz funkcji OOB w aplikacji, użytkownicy nie muszą instalować najnowszej wersji .NET Framework, aby uruchomić aplikację, ponieważ zestawy OOB są wdrażane z pakietem aplikacji.
 
 ## <a name="how-oob-packages-are-distributed"></a>Dystrybucja pakietów OOB
 
-Wersje OOB dla podstawowych składników środowiska wykonawczego języka wspólnego (CLR) są dostarczane za pośrednictwem [NuGet](https://www.nuget.org/), który jest menedżerem pakietów dla .NET. NuGet umożliwia przeglądanie i dodawanie bibliotek do projektów platformy .NET Framework łatwo z poziomu programu Visual Studio. Menedżer pakietów NuGet jest dołączony do wszystkich wersji programu Visual Studio, począwszy od programu Visual Studio 2012. Szukaj **Menedżera pakietów NuGet** w menu **Narzędzia** w programie Visual Studio. Jeśli nie jest zainstalowany, postępuj zgodnie z instrukcjami [dotyczącymi instalowania programu NuGet](/nuget/install-nuget-client-tools). Aby uzyskać więcej informacji na temat NuGet, zobacz [dokumenty NuGet](/nuget).
+Wersje OOB dla podstawowych składników środowiska uruchomieniowego języka wspólnego (CLR) są dostarczane za pomocą programu [NuGet](https://www.nuget.org/), który jest menedżerem pakietów dla platformy .NET. Pakiet NuGet umożliwia łatwe przeglądanie i Dodawanie bibliotek do .NET Frameworkych projektów z poziomu programu Visual Studio. Menedżer pakietów NuGet jest dostępny we wszystkich wersjach programu Visual Studio, począwszy od programu Visual Studio 2012. Poszukaj **Menedżera pakietów NuGet** w menu **Narzędzia** w programie Visual Studio. Jeśli nie jest zainstalowana, postępuj zgodnie z instrukcjami dotyczącymi [instalowania programu NuGet](/nuget/install-nuget-client-tools). Aby uzyskać więcej informacji na temat narzędzia NuGet, zobacz [dokumenty NuGet](/nuget).
 
 ## <a name="use-a-nuget-oob-package"></a>Używanie pakietu NuGet OOB
 
-Jeśli nuget Package Manager jest zainstalowany, można przeglądać i dodawać odwołania do pakietów NuGet przy użyciu Eksploratora rozwiązań w programie Visual Studio:
+Jeśli zainstalowano Menedżera pakietów NuGet, można przeglądać i dodawać odwołania do pakietów NuGet przy użyciu Eksplorator rozwiązań w programie Visual Studio:
 
-1. Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz pozycję **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna w menu **Projekt).**
+1. Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz polecenie **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna w menu **projekt** ).
 
-2. W lewym okienku wybierz pozycję **Online**.
+2. W lewym okienku wybierz pozycję **online**.
 
-3. Jeśli chcesz używać pakietów wersji wstępnej, w polu listy rozwijanej w środkowym okienku wybierz pozycję **Uwzględnij wydanie wstępne** zamiast **stabilnej tylko**.
+3. Jeśli chcesz używać pakietów wstępnych, w polu listy rozwijanej w środkowym okienku wybierz opcję **Uwzględnij wersje wstępne** zamiast **tylko stabilne**.
 
-4. W prawym okienku użyj pola **Wyszukiwania,** aby zlokalizować pakiet, którego chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
+4. W okienku po prawej stronie użyj pola **wyszukiwania** , aby zlokalizować pakiet, którego chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
 
 ![Menedżer pakietów NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
@@ -41,10 +42,10 @@ Jak wspomniano wcześniej, podczas wdrażania aplikacji używającej pakietu OOB
 
 ## <a name="types-of-oob-releases"></a>Typy wersji OOB
 
-Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, która towarzyszy wersji wstępnej zazwyczaj nie zezwala na redystrybucję, ale umożliwia wypróbowanie pakietu i przekazanie opinii. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Stabilne pakiety są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia pomoc techniczną intellisense, a także inne typy dokumentacji, takie jak wpisy na blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny z niektórymi, ale nie wszystkimi pakietami. W przypadku ogłoszeń dotyczących nowych i zaktualizowanych pakietów można subskrybować [blog programu .NET Framework .](https://devblogs.microsoft.com/dotnet/)
+Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, która towarzyszy wersji wstępnej, zazwyczaj nie zezwala na ponowną dystrybucję, ale umożliwia wypróbowanie pakietu i przesłanie opinii. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Pakiety stabilne są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia pomoc techniczną IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w przypadku niektórych, ale nie wszystkich pakietów. Anonse dotyczące nowych i zaktualizowanych pakietów można subskrybować [blogu .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
-Aby znaleźć zarówno pakiety wstępne, jak i **stabilne,** wybierz pozycję Uwzględnij wstępne wydanie w Menedżerze pakietów NuGet.
+Aby znaleźć zarówno wstępne, jak i stabilne pakiety, wybierz opcję **Uwzględnij wersję wstępną** w Menedżerze pakietów NuGet.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie](index.md)

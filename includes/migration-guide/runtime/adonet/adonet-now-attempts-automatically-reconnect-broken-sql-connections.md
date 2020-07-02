@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 4c65cd62b2d84ef2b852d10a04e5f6ce0cc82d3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23ba6064a283b47312a66f3636c2834a7d58106e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620185"
 ---
-### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET teraz próbuje nawiązać automatycznie przerwane połączenia SQL
+### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET teraz próbuje automatycznie ponownie nawiązać połączenie z przerwanymi połączeniami SQL
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5.1, .NET Framework spróbuje automatycznie ponownie przerwane połączenia SQL. Chociaż zwykle dzięki temu aplikacje bardziej niezawodne, istnieją przypadki brzegowe, w których aplikacja musi poinformować, że połączenie zostało utracone, tak, aby można podjąć akcję na ponowne nawiązanie połączenia.|
-|Sugestia|Jeśli ta funkcja jest niepożądany, ze względu na problemy ze zgodnością, można je wyłączyć, ustawiając <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount?displayProperty=name> właściwość parametrów połączenia (lub <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=name>) na wartość 0.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4.5.1 .NET Framework spróbuje automatycznie ponownie nawiązać połączenie z przerwanymi połączeniami SQL. Chociaż zwykle aplikacje są bardziej niezawodne, istnieją przypadki brzegowe, w których aplikacja musi wiedzieć, że połączenie zostało utracone, dzięki czemu może podejmować pewne działania po ponownej nawiązaniu połączenia.
+
+#### <a name="suggestion"></a>Sugestia
+
+Jeśli ta funkcja jest niepożądana z powodu problemów ze zgodnością, można ją wyłączyć, ustawiając <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount?displayProperty=fullName> Właściwość parametrów połączenia (lub <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=fullName> ) na 0.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)></li></ul>|

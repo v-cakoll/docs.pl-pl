@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: e0846ebde07d1932c8344f2b1cce1ea398440ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620206"
 ---
-### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>Obsługa kompilatora do przekazywania, gdy typ mscorlib wielowersyjność kodu
+### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>Obsługa kompilatora dla przesyłania dalej typów w przypadku biblioteki mscorlib z obsługą wiele elementów docelowych
 
-|   |   |
-|---|---|
-|Szczegóły|Nowa funkcja CodeDOM umożliwia kompilatorowi kompilowanie wobec docelowej wersji biblioteki mscorlib.dll zamiast wersji .NET Framework 4.5 biblioteki mscorlib.dll.|
-|Zakres|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Nowa funkcja CodeDOM umożliwia kompilatorowi Kompilowanie do wersji dostosowanej mscorlib.dll zamiast .NET Framework 4,5 wersji mscorlib.dll.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

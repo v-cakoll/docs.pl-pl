@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 69b91bdb285e93e68374ed26903891f0c55a7838
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 6d804dd335cb18d5febc2ca5f794af92963bece1
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620490"
 ---
-### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Kliknięcie prawym przyciskiem myszy nagłówka wiersza WPF DataGrid zmienia wybór DataGrid
+### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Kliknięcie prawym przyciskiem myszy nagłówka wiersza DataGrid WPF zmienia zaznaczenie elementu DataGrid
 
-|   |   |
-|---|---|
-|Szczegóły|Kliknięcie prawym przyciskiem myszy zaznaczonego <xref:System.Windows.Controls.DataGrid?displayProperty=name> nagłówka wiersza, gdy zaznaczono wiele wierszy, <xref:System.Windows.Controls.DataGrid?displayProperty=name>powoduje zmianę zaznaczenia na tylko ten wiersz.|
-|Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i może zostać rozwiązany przez uaktualnienie do tej wersji programu .NET Framework.|
-|Zakres|Brzeg|
+#### <a name="details"></a>Szczegóły
+
+Kliknięcie prawym przyciskiem myszy wybranego <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> nagłówka wiersza, gdy wybrano wiele wierszy, spowoduje <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> zmianę zaznaczenia tylko na ten wiersz.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ten problem został rozwiązany w .NET Framework 4,6 i może zostać rozwiązany przez uaktualnienie do tej wersji .NET Framework.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Windows.Controls.DataGrid.%23ctor></li></ul>|

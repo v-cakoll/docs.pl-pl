@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: f9fbda5cc4517db40c4b5b543eb7e8c6c71292d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee12ccdfb95cc576cd35815b895c6041c08a0353
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620318"
 ---
-### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6.0 jest bardzo wolno ładowane w aplikacje uruchomione w programie Visual Studio
+### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6,0 jest bardzo wolno w aplikacjach uruchomionych z programu Visual Studio
 
-|   |   |
-|---|---|
-|Szczegóły|Uruchamianie aplikacji z programu Visual Studio 2013, która używa EntityFramework 6.0 może być bardzo wolno.|
-|Sugestia|Ten problem został rozwiązany w 6.0.2 platformy EntityFramework. Zaktualizuj platformy EntityFramework, aby uniknąć problemów z wydajnością.|
-|Scope|Krawędź|
+#### <a name="details"></a>Szczegóły
+
+Uruchomienie aplikacji z Visual Studio 2013, która używa EntityFramework 6,0, może być bardzo niska.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ten problem został rozwiązany w EntityFramework 6.0.2. Zaktualizuj EntityFramework, aby uniknąć problemów z wydajnością.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

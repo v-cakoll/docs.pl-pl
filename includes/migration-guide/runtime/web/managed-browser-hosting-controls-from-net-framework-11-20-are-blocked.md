@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 38c35f3f6f2262d06409690d2326d9b982e1ec86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 83d3f24680531d1e447f047151a28c98ce0da04b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620398"
 ---
-### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>Kontrolki hostingu programu Managed browser z .NET Framework 1.1 i 2.0 są zablokowane.
+### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>Kontrolki hostingu zarządzanej przeglądarki z .NET Framework 1,1 i 2,0 są blokowane
 
-|   |   |
-|---|---|
-|Szczegóły|Obsługa tych formantów jest zablokowana w programie Internet Explorer.|
-|Sugestia|Program Internet Explorer nie będzie mógł uruchomić aplikacji, która używa formantów zarządzanego hostingu w przeglądarce. Poprzednie zachowanie można przywrócić, ustawiając wartość EnableIEHosting podklucza rejestru <code>HKLM/SOFTWARE/MICROSOFT/.NETFramework</code> do <code>1</code> dla x86 systemów i procesów 32-bitowych w x64 systemów i ustawiając <code>EnableIEHosting</code> wartość podklucza rejestru <code>HKLM/SOFTWARE/Wow6432Node/Microsoft/.NETFramework</code>do <code>1</code> dla procesów 64-bitowego na x64 systemów.|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+Obsługa tych formantów jest zablokowana w programie Internet Explorer.
+
+#### <a name="suggestion"></a>Sugestia
+
+Program Internet Explorer nie będzie mógł uruchomić aplikacji, która używa formantów zarządzanego hostingu w przeglądarce. Poprzednie zachowanie można przywrócić, ustawiając wartość EnableIEHosting podklucza rejestru dla <code>HKLM/SOFTWARE/MICROSOFT/.NETFramework</code> <code>1</code> systemów x86 i dla procesów 32-bitowych w systemach x64 oraz ustawiając <code>EnableIEHosting</code> wartość podklucza rejestru dla <code>HKLM/SOFTWARE/Wow6432Node/Microsoft/.NETFramework</code> <code>1</code> procesów 64-bitowych w systemach x64.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

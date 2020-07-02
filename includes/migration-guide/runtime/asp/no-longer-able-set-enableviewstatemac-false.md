@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cecb7b2abd4f57fdaacb0ea373cc19dc3cd9b24a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620170"
 ---
-### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>Nie można już ustawić opcji EnableViewStateMac na false
+### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>Nie można już ustawić EnableViewStateMac na FAŁSZ
 
-|   |   |
-|---|---|
-|Szczegóły|ASP.NET nie pozwala już deweloperom na określenie <code>&lt;pages enableViewStateMac=&quot;false&quot;/&gt;</code> lub <code>&lt;@Page EnableViewStateMac=&quot;false&quot; %&gt;</code>. Kod uwierzytelniania wiadomości o stanie widoku (MAC) jest teraz wymuszany dla wszystkich żądań ze stanem widoku osadzonego. Dotyczy to tylko aplikacji, które jawnie <code>false</code> ustawić EnableViewStateMac właściwość dotyczy.|
-|Sugestia|EnableViewStateMac należy przyjąć, że jest true, a wszelkie wynikające błędy MAC muszą być rozwiązane (jak wyjaśniono w [niniejszych wytycznych,](https://support.microsoft.com/kb/2915218)który zawiera wiele rozdzielczości w zależności od specyfiki tego, co jest przyczyną błędów MAC).|
-|Zakres|Duży|
+#### <a name="details"></a>Szczegóły
+
+ASP.NET nie pozwala już deweloperom na określanie <code>&lt;pages enableViewStateMac=&quot;false&quot;/&gt;</code> lub <code>&lt;@Page EnableViewStateMac=&quot;false&quot; %&gt;</code> . Kod uwierzytelniania komunikatów o stanie (MAC) jest teraz wymuszany dla wszystkich żądań z osadzonym stanem widoku. Dotyczy to tylko aplikacji, które jawnie ustawili Właściwość EnableViewStateMac <code>false</code> .
+
+#### <a name="suggestion"></a>Sugestia
+
+Należy przyjąć, że EnableViewStateMac należy mieć wartość true, a wszystkie wynikowe błędy w systemie MAC muszą zostać rozwiązane (jak wyjaśniono w [niniejszych wskazówkach](https://support.microsoft.com/kb/2915218), które zawierają wiele rozwiązań w zależności od tego, co powoduje błędy w przypadku komputerów Mac).
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Duży|
 |Wersja|4.5.2|
 |Typ|Środowisko uruchomieniowe|

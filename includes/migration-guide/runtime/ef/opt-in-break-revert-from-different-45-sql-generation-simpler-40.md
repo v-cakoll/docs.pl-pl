@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: e5d81d791e1a2f1a2dbdafc787dec1227423883d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22b5abbe769733e8d5ca3e78dd9e6e13b2363737
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620308"
 ---
-### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Zrezygnuj z przerwy, aby powrócić z różnych generacji SQL 4.5 do prostszego generowania SQL 4.0
+### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Cofnięcie zgody na przywrócenie z różnych 4,5 generacji SQL do 4,0 prostszej generacji SQL
 
-|   |   |
-|---|---|
-|Szczegóły|Kwerendy, które produkują join instrukcji i zawierają wywołanie operacji ograniczania bez uprzedniego użycia OrderBy teraz produkować prostsze SQL. Po uaktualnieniu do programu .NET Framework 4.5 te zapytania wywołały bardziej skomplikowany sql niż poprzednie wersje.|
-|Sugestia|Ta funkcja jest domyślnie wyłączona. Jeśli entity framework generuje dodatkowe instrukcje JOIN, które powodują obniżenie wydajności, można <code>&lt;appSettings&gt;</code> włączyć tę funkcję, dodając następujący wpis do sekcji pliku konfiguracji aplikacji (app.config):<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
-|Zakres|Przezroczyste|
+#### <a name="details"></a>Szczegóły
+
+Zapytania, które tworzą instrukcje JOIN i zawierają wywołanie operacji ograniczającej bez wcześniejszego użycia polecenia OrderBy teraz generują prostsze SQL. Po uaktualnieniu do .NET Framework 4,5 te zapytania wygenerowały bardziej skomplikowane SQL niż poprzednie wersje.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ta funkcja jest domyślnie wyłączona. Jeśli Entity Framework generuje dodatkowe instrukcje JOIN, które powodują spadek wydajności, możesz włączyć tę funkcję, dodając następujący wpis do <code>&lt;appSettings&gt;</code> sekcji pliku konfiguracji aplikacji (app.config):<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Przezroczyste|
 |Wersja|4.5.2|
 |Typ|Środowisko uruchomieniowe|

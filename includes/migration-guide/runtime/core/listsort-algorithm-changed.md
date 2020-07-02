@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: d4859629fe3922b71cc90664e1e3304cdb312bae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9dada93c3330331064b7a944d97d61edb4dea299
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620248"
 ---
-### <a name="listsort-algorithm-changed"></a>Algorytm List.Sort zmienione
+### <a name="listsort-algorithm-changed"></a>Zmieniono algorytm list. Sort
 
-|   |   |
-|---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.5, <xref:System.Collections.Generic.List%601?displayProperty=name>firmy algorytmu sortowania został zmieniony (jako sortowania zamiast sortowania szybkie). <xref:System.Collections.Generic.List%601?displayProperty=name>firmy nigdy nie było stabilne sortowanie, ale ta zmiana może spowodować, że różne scenariusze sortowania w sposób niestabilny. To po prostu oznacza, że elementy równoważne mogą sortować w różnych zleceniach w kolejnych wywołaniach interfejsu API.|
-|Sugestia|Ponieważ starego algorytmu sortowania została również niestabilne (chociaż są w nieco inny sposób), powinna to być żaden kod, który zależy od elementów równoważnych zawsze sortowanie w określonej kolejności. W przypadku wystąpienia elementu kodu, zależności i być się przy użyciu starego zachowania tego kod powinien zostać zaktualizowany w taki sposób, aby użyć modułu porównującego, który będzie sposób deterministyczny sortowanie elementów w odpowiedni sposób.|
-|Zakres|Przezroczyste|
+#### <a name="details"></a>Szczegóły
+
+Począwszy od .NET Framework 4,5, <xref:System.Collections.Generic.List%601?displayProperty=fullName> algorytm sortowania został zmieniony (algorytmu sortowanie zamiast szybkiego sortowania). <xref:System.Collections.Generic.List%601?displayProperty=fullName>sortowanie nigdy nie było stabilne, ale ta zmiana może spowodować, że inne scenariusze będą sortowane w niestabilny sposób. Oznacza to po prostu, że równoważne elementy mogą sortować w różnych zamówieniach w kolejnych wywołaniach interfejsu API.
+
+#### <a name="suggestion"></a>Sugestia
+
+Ponieważ stary algorytm sortowania był również niestabilny (choć nieco inaczej), nie powinien być kod, który zależy od elementów równoważnych zawsze sortowanych w określonej kolejności. Jeśli istnieją wystąpienia kodu, w zależności od tego i są cieszymy ze starym zachowaniem, kod ten należy zaktualizować, aby użyć funkcji porównującej, która będzie w sposób jednoznaczny sortować elementy w żądanej kolejności.
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Przezroczyste|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Comparison{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Comparison{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li></ul>|

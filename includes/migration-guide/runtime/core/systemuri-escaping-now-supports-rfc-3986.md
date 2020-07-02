@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 1654d58651bf14b0e7c21de2afa827634b7db858
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1d7dc808d5b514acc582675d6ccdbd5778314624
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620267"
 ---
-### <a name="systemuri-escaping-now-supports-rfc-3986"></a>Anulowanie System.Uri obsługuje teraz ze standardem RFC 3986
+### <a name="systemuri-escaping-now-supports-rfc-3986"></a>Ucieczka system. URI obsługuje teraz RFC 3986
 
-|   |   |
-|---|---|
-|Szczegóły|Identyfikator URI anulowania zapewnianego element został zmieniony w .NET Framework 4.5 do obsługi [ze standardem RFC 3986](https://tools.ietf.org/html/rfc3986). Określone zmiany obejmują:<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=name> Wyprowadza zastrzeżone znaki oparte na dokumencie RFC 3986.</li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=name> nie wyprowadza zastrzeżonych znaków.</li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=name> nie zgłasza wyjątku, jeśli napotka nieprawidłową sekwencję ucieczki.</li><li>Niezastrzeżone znaki ucieczki przestają być znakami ucieczki.</li></ul>|
-|Sugestia|<ul><li>Aktualizowanie aplikacji, aby nie zależą od <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=name> do zgłoszenia w przypadku nieprawidłową sekwencję ucieczki. Takie sekwencji muszą zostać wykryte bezpośrednio teraz.</li><li>Podobnie można oczekiwać, że ciągi Escaped i identyfikatora URI o niezmienionym znaczeniu i danych mogą się różnić od programu .NET Framework 4.0 i .NET Framework 4.5 i nie powinny być porównywane w wersjach .NET bezpośrednio. Zamiast tego powinien być analizowane i znormalizowane w jednej wersji .NET, zanim wszystkie porównania są wykonywane.</li></ul>|
-|Zakres|Mały|
+#### <a name="details"></a>Szczegóły
+
+Ucieczka identyfikatorów URI została zmieniona w .NET Framework 4,5 w celu obsługi [specyfikacji RFC 3986](https://tools.ietf.org/html/rfc3986). Określone zmiany obejmują:<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=fullName>wyprowadza znaki zastrzeżone na podstawie RFC 3986.</li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=fullName>nie ma znaków zarezerwowanych.</li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=fullName>nie zgłasza wyjątku, jeśli napotka nieprawidłową sekwencję ucieczki.</li><li>Niezastrzeżone znaki ucieczki przestają być znakami ucieczki.</li></ul>
+
+#### <a name="suggestion"></a>Sugestia
+
+<ul><li>Zaktualizuj aplikacje, aby nie polegać na zgłaszaniu <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=fullName> w przypadku nieprawidłowej sekwencji ucieczki. Takie sekwencje muszą być wykrywane bezpośrednio.</li><li>Podobnie, należy oczekiwać, że identyfikatory URI i niezmienionych ciągów i danych mogą się różnić od .NET Framework 4,0 i .NET Framework 4,5 i nie powinny być porównywane bezpośrednio między wersjami programu .NET. Zamiast tego należy je analizować i znormalizować w jednej wersji platformy .NET przed dokonaniem jakichkolwiek porównań.</li></ul>
+
+| Nazwa    | Wartość       |
+|:--------|:------------|
+| Zakres   |Mały|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
-|Dotyczy interfejsów API|<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|
+|Typ|Środowisko uruchomieniowe
+
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
+
+-<xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|

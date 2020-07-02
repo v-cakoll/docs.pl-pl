@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Sterowanie elementem MediaElement z użyciem scenorysu'
+title: Jak kontrolować MediaElement z użyciem scenorysu
+description: Sterowanie odtwarzaniem multimediów przy użyciu scenorysu w programie Windows Presentation Foundation (WPF). Rozważmy ten przykład tworzenia prostego odtwarzacza multimedialnego.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,38 +12,38 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a5e41b9a28211495fd3374c1a51a655dd867bca
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853728"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Instrukcje: Sterowanie elementem MediaElement z użyciem scenorysu
-W tym przykładzie pokazano, jak kontrolować <xref:System.Windows.Controls.MediaElement> przy użyciu <xref:System.Windows.Media.MediaTimeline> w <xref:System.Windows.Media.Animation.Storyboard>.  
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Jak kontrolować MediaElement z użyciem scenorysu
+Ten przykład pokazuje, jak sterować przy <xref:System.Windows.Controls.MediaElement> użyciu a <xref:System.Windows.Media.MediaTimeline> <xref:System.Windows.Media.Animation.Storyboard> .  
   
 ## <a name="example"></a>Przykład  
- Kiedy używasz <xref:System.Windows.Media.MediaTimeline> w <xref:System.Windows.Media.Animation.Storyboard> kontrolować czas <xref:System.Windows.Controls.MediaElement>, funkcjonalność jest taka sama jak inne funkcje <xref:System.Windows.Media.Animation.Timeline> obiekty, takie jak animacji. Na przykład <xref:System.Windows.Media.MediaTimeline> używa <xref:System.Windows.Media.Animation.Timeline> właściwości, takie jak <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> właściwości w celu określenia, kiedy rozpoczyna <xref:System.Windows.Controls.MediaElement> (rozpoczęcia odtwarzania multimediów). Korzysta również <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości, aby określić, jak długo <xref:System.Windows.Controls.MediaElement> jest aktywna (czas trwania odtwarzania multimediów). Aby uzyskać więcej informacji o korzystaniu z <xref:System.Windows.Media.Animation.Timeline> obiekty z <xref:System.Windows.Media.Animation.Storyboard>, zobacz [Przegląd Scenorysy](storyboards-overview.md).  
+ W przypadku korzystania z programu <xref:System.Windows.Media.MediaTimeline> w <xref:System.Windows.Media.Animation.Storyboard> celu kontrolowania chronometrażu elementu <xref:System.Windows.Controls.MediaElement> Funkcja jest taka sama jak w przypadku innych <xref:System.Windows.Media.Animation.Timeline> obiektów, takich jak animacje. Na przykład <xref:System.Windows.Media.MediaTimeline> stosuje właściwości, <xref:System.Windows.Media.Animation.Timeline> takie jak <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Właściwość, aby określić, kiedy należy rozpocząć <xref:System.Windows.Controls.MediaElement> (Rozpocznij odtwarzanie nośnika). Używa również właściwości, <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Aby określić, jak długo <xref:System.Windows.Controls.MediaElement> jest aktywny (czas trwania odtwarzania multimediów). Aby uzyskać więcej informacji o używaniu <xref:System.Windows.Media.Animation.Timeline> obiektów z <xref:System.Windows.Media.Animation.Storyboard> , zobacz [scenoryss — Omówienie](storyboards-overview.md).  
   
- W tym przykładzie pokazano, jak utworzyć odtwarzacz multimediów prostego, który używa <xref:System.Windows.Media.MediaTimeline> Aby sterować odtwarzaniem. Usługa media player obejmuje sklepu play, wstrzymywanie, wznawianie i zatrzymywanie przycisków. Ma również odtwarzacz <xref:System.Windows.Controls.Slider> formant, który działa jako pasek postępu.  
+ Ten przykład przedstawia sposób tworzenia prostego odtwarzacza multimedialnego, który używa <xref:System.Windows.Media.MediaTimeline> do sterowania odtwarzaniem. Odtwarzacz multimedialny zawiera przyciski Odtwórz, Wstrzymaj, Wznów i Zatrzymaj. Gracz ma również <xref:System.Windows.Controls.Slider> kontrolkę, która działa jako pasek postępu.  
   
- Poniższy przykład tworzy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] programu media player.  
+ Poniższy przykład tworzy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dla odtwarzacza multimedialnego.  
   
  [!code-xaml[MediaGallery_snip#MediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml#mediatimelineexamplewholepage)]  
   
- Poniższy przykład tworzy funkcje pasek postępu.  
+ Poniższy przykład tworzy funkcję paska postępu.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaTimelineExample.xaml.cs#codebehindmediatimelineexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Tematy z instrukcjami](audio-and-video-how-to-topics.md)
+- [Przegląd Scenorysy](storyboards-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [— Tematy porad](audio-and-video-how-to-topics.md)
 - [Grafika i multimedia](index.md)

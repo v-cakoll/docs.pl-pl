@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620337"
 ---
-### <a name="enumerableemptytresult-always-returns-cached-instance"></a><span data-ttu-id="6ec60-101">Enumerable.Empty\<TResult > zawsze zwraca buforowane wystąpienie</span><span class="sxs-lookup"><span data-stu-id="6ec60-101">Enumerable.Empty\<TResult> always returns cached instance</span></span>
+### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a><span data-ttu-id="00f21-101">Wyliczalne. Empty &lt; TResult &gt; zawsze zwraca buforowane wystąpienie</span><span class="sxs-lookup"><span data-stu-id="00f21-101">Enumerable.Empty&lt;TResult&gt; always returns cached instance</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="6ec60-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="6ec60-102">Details</span></span>|<span data-ttu-id="6ec60-103">Począwszy od programu .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzne <xref:System.Collections.Generic.IEnumerable%601>. Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> będzie buforować pustą <xref:System.Collections.Generic.IEnumerable%601> w czasie, interfejs API został wywołany, co oznacza, że w niektórych sytuacjach, w którym <xref:System.Linq.Enumerable.Empty%60%601> wywołano szybko i jednocześnie, różne wystąpienia tego typu mogą być zwracane dla różnych wywołań INTERFEJS API.</span><span class="sxs-lookup"><span data-stu-id="6ec60-103">Beginning in .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> always returns a cached internal instance <xref:System.Collections.Generic.IEnumerable%601>.Previously, <xref:System.Linq.Enumerable.Empty%60%601> would cache an empty <xref:System.Collections.Generic.IEnumerable%601> at the time the API was called, meaning that in some conditions in which <xref:System.Linq.Enumerable.Empty%60%601> was called rapidly and concurrently, different instances of the type could be returned for different calls to the API.</span></span>|
-|<span data-ttu-id="6ec60-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="6ec60-104">Suggestion</span></span>|<span data-ttu-id="6ec60-105">Ponieważ poprzednie zachowanie jest deterministyczna, kod jest mało prawdopodobne, zależą od niej.</span><span class="sxs-lookup"><span data-stu-id="6ec60-105">Because the previous behavior was non-deterministic, code is unlikely to depend on it.</span></span> <span data-ttu-id="6ec60-106">Jednak w mało prawdopodobnym przypadku enumerables puste są porównywane i powinny być czasem nierównej, jawnych tablic pusty należy utworzyć (<code>new T[0]</code>) zamiast <xref:System.Linq.Enumerable.Empty%60%601>.</span><span class="sxs-lookup"><span data-stu-id="6ec60-106">However, in the unlikely case that empty enumerables are being compared and expected to sometimes be unequal, explicit empty arrays should be created (<code>new T[0]</code>) instead of using <xref:System.Linq.Enumerable.Empty%60%601>.</span></span>|
-|<span data-ttu-id="6ec60-107">Scope</span><span class="sxs-lookup"><span data-stu-id="6ec60-107">Scope</span></span>|<span data-ttu-id="6ec60-108">Krawędź</span><span class="sxs-lookup"><span data-stu-id="6ec60-108">Edge</span></span>|
-|<span data-ttu-id="6ec60-109">Wersja</span><span class="sxs-lookup"><span data-stu-id="6ec60-109">Version</span></span>|<span data-ttu-id="6ec60-110">4.5</span><span class="sxs-lookup"><span data-stu-id="6ec60-110">4.5</span></span>|
-|<span data-ttu-id="6ec60-111">Typ</span><span class="sxs-lookup"><span data-stu-id="6ec60-111">Type</span></span>|<span data-ttu-id="6ec60-112">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="6ec60-112">Runtime</span></span>|
-|<span data-ttu-id="6ec60-113">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="6ec60-113">Affected APIs</span></span>|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="00f21-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="00f21-102">Details</span></span>
+
+<span data-ttu-id="00f21-103">Począwszy od .NET Framework 4,5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzne <xref:System.Collections.Generic.IEnumerable%601> . Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> pamięć podręczna powinna <xref:System.Collections.Generic.IEnumerable%601> być pusta w momencie wywołania interfejsu API, co oznacza, że w niektórych przypadkach, w których <xref:System.Linq.Enumerable.Empty%60%601> została wywołana szybko i współbieżnie, różne wystąpienia typu mogą zostać zwrócone dla różnych wywołań interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="00f21-103">Beginning in .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> always returns a cached internal instance <xref:System.Collections.Generic.IEnumerable%601>.Previously, <xref:System.Linq.Enumerable.Empty%60%601> would cache an empty <xref:System.Collections.Generic.IEnumerable%601> at the time the API was called, meaning that in some conditions in which <xref:System.Linq.Enumerable.Empty%60%601> was called rapidly and concurrently, different instances of the type could be returned for different calls to the API.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="00f21-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="00f21-104">Suggestion</span></span>
+
+<span data-ttu-id="00f21-105">Ze względu na to, że poprzednie zachowanie dotyczyło niedeterministyczności, kod prawdopodobnie nie zależy od niego.</span><span class="sxs-lookup"><span data-stu-id="00f21-105">Because the previous behavior was non-deterministic, code is unlikely to depend on it.</span></span> <span data-ttu-id="00f21-106">Jednak w nieprawdopodobnym przypadku, gdy puste wartości wyliczalne są porównywane i oczekiwano, że czasami nie są równe, należy utworzyć jawne puste tablice ( <code>new T[0]</code> ) zamiast używać <xref:System.Linq.Enumerable.Empty%60%601> .</span><span class="sxs-lookup"><span data-stu-id="00f21-106">However, in the unlikely case that empty enumerables are being compared and expected to sometimes be unequal, explicit empty arrays should be created (<code>new T[0]</code>) instead of using <xref:System.Linq.Enumerable.Empty%60%601>.</span></span>
+
+| <span data-ttu-id="00f21-107">Nazwa</span><span class="sxs-lookup"><span data-stu-id="00f21-107">Name</span></span>    | <span data-ttu-id="00f21-108">Wartość</span><span class="sxs-lookup"><span data-stu-id="00f21-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="00f21-109">Zakres</span><span class="sxs-lookup"><span data-stu-id="00f21-109">Scope</span></span>   |<span data-ttu-id="00f21-110">Brzeg</span><span class="sxs-lookup"><span data-stu-id="00f21-110">Edge</span></span>|
+|<span data-ttu-id="00f21-111">Wersja</span><span class="sxs-lookup"><span data-stu-id="00f21-111">Version</span></span>|<span data-ttu-id="00f21-112">4.5</span><span class="sxs-lookup"><span data-stu-id="00f21-112">4.5</span></span>|
+|<span data-ttu-id="00f21-113">Typ</span><span class="sxs-lookup"><span data-stu-id="00f21-113">Type</span></span>|<span data-ttu-id="00f21-114">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="00f21-114">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="00f21-115">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="00f21-115">Affected APIs</span></span>
+
+-<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|

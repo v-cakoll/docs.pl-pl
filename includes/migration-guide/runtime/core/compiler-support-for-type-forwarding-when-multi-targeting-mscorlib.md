@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: e0846ebde07d1932c8344f2b1cce1ea398440ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620206"
 ---
-### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a><span data-ttu-id="3b81b-101">Obsługa kompilatora do przekazywania, gdy typ mscorlib wielowersyjność kodu</span><span class="sxs-lookup"><span data-stu-id="3b81b-101">Compiler support for type forwarding when multi-targeting mscorlib</span></span>
+### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a><span data-ttu-id="de575-101">Obsługa kompilatora dla przesyłania dalej typów w przypadku biblioteki mscorlib z obsługą wiele elementów docelowych</span><span class="sxs-lookup"><span data-stu-id="de575-101">Compiler support for type forwarding when multi-targeting mscorlib</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="3b81b-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="3b81b-102">Details</span></span>|<span data-ttu-id="3b81b-103">Nowa funkcja CodeDOM umożliwia kompilatorowi kompilowanie wobec docelowej wersji biblioteki mscorlib.dll zamiast wersji .NET Framework 4.5 biblioteki mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="3b81b-103">A new CodeDOM feature allows a compiler to compile against the targeted version of mscorlib.dll instead of the .NET Framework 4.5 version of mscorlib.dll.</span></span>|
-|<span data-ttu-id="3b81b-104">Zakres</span><span class="sxs-lookup"><span data-stu-id="3b81b-104">Scope</span></span>|<span data-ttu-id="3b81b-105">Krawędź</span><span class="sxs-lookup"><span data-stu-id="3b81b-105">Edge</span></span>|
-|<span data-ttu-id="3b81b-106">Wersja</span><span class="sxs-lookup"><span data-stu-id="3b81b-106">Version</span></span>|<span data-ttu-id="3b81b-107">4.5</span><span class="sxs-lookup"><span data-stu-id="3b81b-107">4.5</span></span>|
-|<span data-ttu-id="3b81b-108">Typ</span><span class="sxs-lookup"><span data-stu-id="3b81b-108">Type</span></span>|<span data-ttu-id="3b81b-109">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="3b81b-109">Runtime</span></span>|
+#### <a name="details"></a><span data-ttu-id="de575-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="de575-102">Details</span></span>
+
+<span data-ttu-id="de575-103">Nowa funkcja CodeDOM umożliwia kompilatorowi Kompilowanie do wersji dostosowanej mscorlib.dll zamiast .NET Framework 4,5 wersji mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="de575-103">A new CodeDOM feature allows a compiler to compile against the targeted version of mscorlib.dll instead of the .NET Framework 4.5 version of mscorlib.dll.</span></span>
+
+| <span data-ttu-id="de575-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="de575-104">Name</span></span>    | <span data-ttu-id="de575-105">Wartość</span><span class="sxs-lookup"><span data-stu-id="de575-105">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="de575-106">Zakres</span><span class="sxs-lookup"><span data-stu-id="de575-106">Scope</span></span>   |<span data-ttu-id="de575-107">Brzeg</span><span class="sxs-lookup"><span data-stu-id="de575-107">Edge</span></span>|
+|<span data-ttu-id="de575-108">Wersja</span><span class="sxs-lookup"><span data-stu-id="de575-108">Version</span></span>|<span data-ttu-id="de575-109">4.5</span><span class="sxs-lookup"><span data-stu-id="de575-109">4.5</span></span>|
+|<span data-ttu-id="de575-110">Typ</span><span class="sxs-lookup"><span data-stu-id="de575-110">Type</span></span>|<span data-ttu-id="de575-111">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="de575-111">Runtime</span></span>|

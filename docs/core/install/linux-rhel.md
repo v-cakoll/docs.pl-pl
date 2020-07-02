@@ -4,65 +4,65 @@ description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środ
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619454"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a><span data-ttu-id="7602c-103">Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie RHEL</span><span class="sxs-lookup"><span data-stu-id="7602c-103">Install .NET Core SDK or .NET Core Runtime on RHEL</span></span>
+# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a><span data-ttu-id="031f1-103">Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie RHEL</span><span class="sxs-lookup"><span data-stu-id="031f1-103">Install .NET Core SDK or .NET Core Runtime on RHEL</span></span>
 
-<span data-ttu-id="7602c-104">Platforma .NET Core jest obsługiwana w systemie RHEL.</span><span class="sxs-lookup"><span data-stu-id="7602c-104">.NET Core is supported on RHEL.</span></span> <span data-ttu-id="7602c-105">W tym artykule opisano sposób instalowania programu .NET Core w systemie RHEL.</span><span class="sxs-lookup"><span data-stu-id="7602c-105">This article describes how to install .NET Core on RHEL.</span></span>
+<span data-ttu-id="031f1-104">Platforma .NET Core jest obsługiwana w systemie RHEL.</span><span class="sxs-lookup"><span data-stu-id="031f1-104">.NET Core is supported on RHEL.</span></span> <span data-ttu-id="031f1-105">W tym artykule opisano sposób instalowania programu .NET Core w systemie RHEL.</span><span class="sxs-lookup"><span data-stu-id="031f1-105">This article describes how to install .NET Core on RHEL.</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-## <a name="register-your-red-hat-subscription"></a><span data-ttu-id="7602c-106">Zarejestruj swoją subskrypcję Red Hat</span><span class="sxs-lookup"><span data-stu-id="7602c-106">Register your Red Hat subscription</span></span>
+## <a name="register-your-red-hat-subscription"></a><span data-ttu-id="031f1-106">Zarejestruj swoją subskrypcję Red Hat</span><span class="sxs-lookup"><span data-stu-id="031f1-106">Register your Red Hat subscription</span></span>
 
-<span data-ttu-id="7602c-107">Aby zainstalować platformę .NET Core z Red Hat na RHEL, należy najpierw zarejestrować się przy użyciu Menedżera subskrypcji Red Hat.</span><span class="sxs-lookup"><span data-stu-id="7602c-107">To install .NET Core from Red Hat on RHEL, you first need to register using the Red Hat Subscription Manager.</span></span> <span data-ttu-id="7602c-108">Jeśli nie zostało to zrobione w systemie lub jeśli nie masz pewności, zapoznaj się z [dokumentacją produktu Red Hat dla platformy .NET Core](https://access.redhat.com/documentation/net_core/).</span><span class="sxs-lookup"><span data-stu-id="7602c-108">If this hasn't been done on your system, or if you're unsure, see the [Red Hat Product Documentation for .NET Core](https://access.redhat.com/documentation/net_core/).</span></span>
+<span data-ttu-id="031f1-107">Aby zainstalować platformę .NET Core z Red Hat na RHEL, należy najpierw zarejestrować się przy użyciu Menedżera subskrypcji Red Hat.</span><span class="sxs-lookup"><span data-stu-id="031f1-107">To install .NET Core from Red Hat on RHEL, you first need to register using the Red Hat Subscription Manager.</span></span> <span data-ttu-id="031f1-108">Jeśli nie zostało to zrobione w systemie lub jeśli nie masz pewności, zapoznaj się z [dokumentacją produktu Red Hat dla platformy .NET Core](https://access.redhat.com/documentation/net_core/).</span><span class="sxs-lookup"><span data-stu-id="031f1-108">If this hasn't been done on your system, or if you're unsure, see the [Red Hat Product Documentation for .NET Core](https://access.redhat.com/documentation/net_core/).</span></span>
 
-## <a name="supported-distributions"></a><span data-ttu-id="7602c-109">Obsługiwane dystrybucje</span><span class="sxs-lookup"><span data-stu-id="7602c-109">Supported distributions</span></span>
+## <a name="supported-distributions"></a><span data-ttu-id="031f1-109">Obsługiwane dystrybucje</span><span class="sxs-lookup"><span data-stu-id="031f1-109">Supported distributions</span></span>
 
-<span data-ttu-id="7602c-110">Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core w systemach RHEL 7 i RHEL 8.</span><span class="sxs-lookup"><span data-stu-id="7602c-110">The following table is a list of currently supported .NET Core releases on both RHEL 7 and RHEL 8.</span></span> <span data-ttu-id="7602c-111">Te wersje pozostają obsługiwane, dopóki wersja [platformy .NET Core osiągnie koniec obsługi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) lub wersja programu RHEL nie jest już obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="7602c-111">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of RHEL is no longer supported.</span></span>
+<span data-ttu-id="031f1-110">Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core w systemach RHEL 7 i RHEL 8.</span><span class="sxs-lookup"><span data-stu-id="031f1-110">The following table is a list of currently supported .NET Core releases on both RHEL 7 and RHEL 8.</span></span> <span data-ttu-id="031f1-111">Te wersje pozostają obsługiwane, dopóki wersja [platformy .NET Core osiągnie koniec obsługi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) lub wersja programu RHEL nie jest już obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="031f1-111">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of RHEL is no longer supported.</span></span>
 
-- <span data-ttu-id="7602c-112">✔️ wskazuje, że wersja programu RHEL lub .NET Core jest nadal obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="7602c-112">A ✔️ indicates that the version of RHEL or .NET Core is still supported.</span></span>
-- <span data-ttu-id="7602c-113">❌Wskazuje, że wersja RHEL lub .NET Core nie jest obsługiwana w tej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="7602c-113">A ❌ indicates that the version of RHEL or .NET Core isn't supported on that RHEL release.</span></span>
-- <span data-ttu-id="7602c-114">Gdy wersja RHEL i wersja platformy .NET Core mają ✔️, obsługiwane są kombinacje systemów operacyjnych i .NET.</span><span class="sxs-lookup"><span data-stu-id="7602c-114">When both a version of RHEL and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
+- <span data-ttu-id="031f1-112">✔️ wskazuje, że wersja programu RHEL lub .NET Core jest nadal obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="031f1-112">A ✔️ indicates that the version of RHEL or .NET Core is still supported.</span></span>
+- <span data-ttu-id="031f1-113">❌Wskazuje, że wersja RHEL lub .NET Core nie jest obsługiwana w tej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="031f1-113">A ❌ indicates that the version of RHEL or .NET Core isn't supported on that RHEL release.</span></span>
+- <span data-ttu-id="031f1-114">Gdy wersja RHEL i wersja platformy .NET Core mają ✔️, obsługiwane są kombinacje systemów operacyjnych i .NET.</span><span class="sxs-lookup"><span data-stu-id="031f1-114">When both a version of RHEL and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
 
-| <span data-ttu-id="7602c-115">RHEL</span><span class="sxs-lookup"><span data-stu-id="7602c-115">RHEL</span></span>                   | <span data-ttu-id="7602c-116">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="7602c-116">.NET Core 2.1</span></span> | <span data-ttu-id="7602c-117">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="7602c-117">.NET Core 3.1</span></span> | <span data-ttu-id="7602c-118">.NET 5 (wersja zapoznawcza) (tylko instalacja ręczna)</span><span class="sxs-lookup"><span data-stu-id="7602c-118">.NET 5 Preview (manual install only)</span></span> |
+| <span data-ttu-id="031f1-115">RHEL</span><span class="sxs-lookup"><span data-stu-id="031f1-115">RHEL</span></span>                   | <span data-ttu-id="031f1-116">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="031f1-116">.NET Core 2.1</span></span> | <span data-ttu-id="031f1-117">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="031f1-117">.NET Core 3.1</span></span> | <span data-ttu-id="031f1-118">.NET 5 (wersja zapoznawcza) (tylko instalacja ręczna)</span><span class="sxs-lookup"><span data-stu-id="031f1-118">.NET 5 Preview (manual install only)</span></span> |
 |--------------------------|---------------|---------------|----------------|
-| <span data-ttu-id="7602c-119">✔️ [8](#rhel-8-)</span><span class="sxs-lookup"><span data-stu-id="7602c-119">✔️ [8](#rhel-8-)</span></span> | <span data-ttu-id="7602c-120">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="7602c-120">✔️ 2.1</span></span>        | <span data-ttu-id="7602c-121">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="7602c-121">✔️ 3.1</span></span>        | <span data-ttu-id="7602c-122">✔️ 5,0 — wersja zapoznawcza</span><span class="sxs-lookup"><span data-stu-id="7602c-122">✔️ 5.0 Preview</span></span> |
-| <span data-ttu-id="7602c-123">✔️ [7](#rhel-7-)</span><span class="sxs-lookup"><span data-stu-id="7602c-123">✔️ [7](#rhel-7-)</span></span> | <span data-ttu-id="7602c-124">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="7602c-124">✔️ 2.1</span></span>        | <span data-ttu-id="7602c-125">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="7602c-125">✔️ 3.1</span></span>        | <span data-ttu-id="7602c-126">✔️ 5,0 — wersja zapoznawcza</span><span class="sxs-lookup"><span data-stu-id="7602c-126">✔️ 5.0 Preview</span></span> |
+| <span data-ttu-id="031f1-119">✔️ [8](#rhel-8-)</span><span class="sxs-lookup"><span data-stu-id="031f1-119">✔️ [8](#rhel-8-)</span></span> | <span data-ttu-id="031f1-120">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="031f1-120">✔️ 2.1</span></span>        | <span data-ttu-id="031f1-121">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="031f1-121">✔️ 3.1</span></span>        | <span data-ttu-id="031f1-122">✔️ 5,0 — wersja zapoznawcza</span><span class="sxs-lookup"><span data-stu-id="031f1-122">✔️ 5.0 Preview</span></span> |
+| <span data-ttu-id="031f1-123">✔️ [7](#rhel-7-)</span><span class="sxs-lookup"><span data-stu-id="031f1-123">✔️ [7](#rhel-7-)</span></span> | <span data-ttu-id="031f1-124">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="031f1-124">✔️ 2.1</span></span>        | <span data-ttu-id="031f1-125">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="031f1-125">✔️ 3.1</span></span>        | <span data-ttu-id="031f1-126">✔️ 5,0 — wersja zapoznawcza</span><span class="sxs-lookup"><span data-stu-id="031f1-126">✔️ 5.0 Preview</span></span> |
 
-<span data-ttu-id="7602c-127">Następujące wersje programu .NET Core nie są już obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="7602c-127">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="7602c-128">Pliki do pobrania dla tych nadal są publikowane:</span><span class="sxs-lookup"><span data-stu-id="7602c-128">The downloads for these still remain published:</span></span>
+<span data-ttu-id="031f1-127">Następujące wersje programu .NET Core nie są już obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="031f1-127">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="031f1-128">Pliki do pobrania dla tych nadal są publikowane:</span><span class="sxs-lookup"><span data-stu-id="031f1-128">The downloads for these still remain published:</span></span>
 
-- <span data-ttu-id="7602c-129">3.0</span><span class="sxs-lookup"><span data-stu-id="7602c-129">3.0</span></span>
-- <span data-ttu-id="7602c-130">2.2</span><span class="sxs-lookup"><span data-stu-id="7602c-130">2.2</span></span>
-- <span data-ttu-id="7602c-131">2.0</span><span class="sxs-lookup"><span data-stu-id="7602c-131">2.0</span></span>
+- <span data-ttu-id="031f1-129">3.0</span><span class="sxs-lookup"><span data-stu-id="031f1-129">3.0</span></span>
+- <span data-ttu-id="031f1-130">2.2</span><span class="sxs-lookup"><span data-stu-id="031f1-130">2.2</span></span>
+- <span data-ttu-id="031f1-131">2.0</span><span class="sxs-lookup"><span data-stu-id="031f1-131">2.0</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="7602c-132">Jak zainstalować inne wersje</span><span class="sxs-lookup"><span data-stu-id="7602c-132">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="031f1-132">Jak zainstalować inne wersje</span><span class="sxs-lookup"><span data-stu-id="031f1-132">How to install other versions</span></span>
 
-<span data-ttu-id="7602c-133">Zapoznaj się z [dokumentacją firmy Red Hat dla platformy .NET Core w przypadku](https://access.redhat.com/documentation/net_core/) czynności wymaganych do zainstalowania innych wersji platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="7602c-133">Consult the [Red Hat documentation for .NET Core](https://access.redhat.com/documentation/net_core/) on the steps required to install other releases of .NET Core.</span></span>
+<span data-ttu-id="031f1-133">Zapoznaj się z [dokumentacją firmy Red Hat dla platformy .NET Core w przypadku](https://access.redhat.com/documentation/net_core/) czynności wymaganych do zainstalowania innych wersji platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="031f1-133">Consult the [Red Hat documentation for .NET Core](https://access.redhat.com/documentation/net_core/) on the steps required to install other releases of .NET Core.</span></span>
 
-## <a name="rhel-8-"></a><span data-ttu-id="7602c-134">RHEL 8 ✔️</span><span class="sxs-lookup"><span data-stu-id="7602c-134">RHEL 8 ✔️</span></span>
+## <a name="rhel-8-"></a><span data-ttu-id="031f1-134">RHEL 8 ✔️</span><span class="sxs-lookup"><span data-stu-id="031f1-134">RHEL 8 ✔️</span></span>
 
-<span data-ttu-id="7602c-135">Platforma .NET Core jest dołączona do repozytoriów AppStream dla RHEL 8.</span><span class="sxs-lookup"><span data-stu-id="7602c-135">.NET Core is included in the AppStream repositories for RHEL 8.</span></span>
+<span data-ttu-id="031f1-135">Platforma .NET Core jest dołączona do repozytoriów AppStream dla RHEL 8.</span><span class="sxs-lookup"><span data-stu-id="031f1-135">.NET Core is included in the AppStream repositories for RHEL 8.</span></span>
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="rhel-7-"></a><span data-ttu-id="7602c-136">RHEL ✔️ 7</span><span class="sxs-lookup"><span data-stu-id="7602c-136">RHEL 7 ✔️</span></span>
+## <a name="rhel-7-"></a><span data-ttu-id="031f1-136">RHEL ✔️ 7</span><span class="sxs-lookup"><span data-stu-id="031f1-136">RHEL 7 ✔️</span></span>
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
-<span data-ttu-id="7602c-137">Następujące polecenie instaluje `scl-utils` pakiet:</span><span class="sxs-lookup"><span data-stu-id="7602c-137">The following command installs the `scl-utils` package:</span></span>
+<span data-ttu-id="031f1-137">Następujące polecenie instaluje `scl-utils` pakiet:</span><span class="sxs-lookup"><span data-stu-id="031f1-137">The following command installs the `scl-utils` package:</span></span>
 
 ```bash
 sudo yum install scl-utils
 ```
 
-### <a name="install-the-sdk"></a><span data-ttu-id="7602c-138">Instalacja zestawu SDK</span><span class="sxs-lookup"><span data-stu-id="7602c-138">Install the SDK</span></span>
+### <a name="install-the-sdk"></a><span data-ttu-id="031f1-138">Instalacja zestawu SDK</span><span class="sxs-lookup"><span data-stu-id="031f1-138">Install the SDK</span></span>
 
-<span data-ttu-id="7602c-139">Zestaw .NET Core SDK umożliwia tworzenie aplikacji przy użyciu platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="7602c-139">.NET Core SDK allows you to develop apps with .NET Core.</span></span> <span data-ttu-id="7602c-140">W przypadku zainstalowania zestaw .NET Core SDK nie trzeba instalować odpowiedniego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="7602c-140">If you install .NET Core SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="7602c-141">Aby zainstalować zestaw .NET Core SDK, uruchom następujące polecenia:</span><span class="sxs-lookup"><span data-stu-id="7602c-141">To install .NET Core SDK, run the following commands:</span></span>
+<span data-ttu-id="031f1-139">Zestaw .NET Core SDK umożliwia tworzenie aplikacji przy użyciu platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="031f1-139">.NET Core SDK allows you to develop apps with .NET Core.</span></span> <span data-ttu-id="031f1-140">W przypadku zainstalowania zestaw .NET Core SDK nie trzeba instalować odpowiedniego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="031f1-140">If you install .NET Core SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="031f1-141">Aby zainstalować zestaw .NET Core SDK, uruchom następujące polecenia:</span><span class="sxs-lookup"><span data-stu-id="031f1-141">To install .NET Core SDK, run the following commands:</span></span>
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -70,15 +70,15 @@ yum install rh-dotnet31 -y
 scl enable rh-dotnet31 bash
 ```
 
-<span data-ttu-id="7602c-142">Red Hat nie zaleca trwałego włączania `rh-dotnet31` , ponieważ może to mieć wpływ na inne programy.</span><span class="sxs-lookup"><span data-stu-id="7602c-142">Red Hat does not recommend permanently enabling `rh-dotnet31` because it may affect other programs.</span></span> <span data-ttu-id="7602c-143">Program zawiera na przykład `rh-dotnet31` wersję `libcurl` , która różni się od bazowej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="7602c-143">For example, `rh-dotnet31` includes a version of `libcurl` that differs from the base RHEL version.</span></span> <span data-ttu-id="7602c-144">Może to prowadzić do problemów z programami, które nie oczekują innej wersji programu `libcurl` .</span><span class="sxs-lookup"><span data-stu-id="7602c-144">This may lead to issues in programs that do not expect a different version of `libcurl`.</span></span> <span data-ttu-id="7602c-145">Jeśli chcesz `rh-dotnet` trwale włączyć, Dodaj następujący wiersz do pliku _~/.bashrc._ .</span><span class="sxs-lookup"><span data-stu-id="7602c-145">If you want to enable `rh-dotnet` permanently, add the following line to your _~/.bashrc_ file.</span></span>
+<span data-ttu-id="031f1-142">Red Hat nie zaleca trwałego włączania `rh-dotnet31` , ponieważ może to mieć wpływ na inne programy.</span><span class="sxs-lookup"><span data-stu-id="031f1-142">Red Hat does not recommend permanently enabling `rh-dotnet31` because it may affect other programs.</span></span> <span data-ttu-id="031f1-143">Program zawiera na przykład `rh-dotnet31` wersję `libcurl` , która różni się od bazowej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="031f1-143">For example, `rh-dotnet31` includes a version of `libcurl` that differs from the base RHEL version.</span></span> <span data-ttu-id="031f1-144">Może to prowadzić do problemów z programami, które nie oczekują innej wersji programu `libcurl` .</span><span class="sxs-lookup"><span data-stu-id="031f1-144">This may lead to issues in programs that do not expect a different version of `libcurl`.</span></span> <span data-ttu-id="031f1-145">Jeśli chcesz `rh-dotnet` trwale włączyć, Dodaj następujący wiersz do pliku _~/.bashrc._ .</span><span class="sxs-lookup"><span data-stu-id="031f1-145">If you want to enable `rh-dotnet` permanently, add the following line to your _~/.bashrc_ file.</span></span>
 
 ```bash
 source scl_source enable rh-dotnet31
 ```
 
-### <a name="install-the-runtime"></a><span data-ttu-id="7602c-146">Instalowanie środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="7602c-146">Install the runtime</span></span>
+### <a name="install-the-runtime"></a><span data-ttu-id="031f1-146">Instalowanie środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="031f1-146">Install the runtime</span></span>
 
-<span data-ttu-id="7602c-147">Środowisko uruchomieniowe programu .NET Core umożliwia uruchamianie aplikacji, które zostały wykonane przy użyciu platformy .NET Core, które nie zawierały środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="7602c-147">The .NET Core Runtime allows you to run apps that were made with .NET Core that didn't include the runtime.</span></span> <span data-ttu-id="7602c-148">Poniższe polecenia instalują środowisko uruchomieniowe ASP.NET Core, które jest najbardziej zgodnym środowiskiem uruchomieniowym dla platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="7602c-148">The commands below install the ASP.NET Core Runtime, which is the most compatible runtime for .NET Core.</span></span> <span data-ttu-id="7602c-149">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="7602c-149">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="031f1-147">Środowisko uruchomieniowe programu .NET Core umożliwia uruchamianie aplikacji, które zostały wykonane przy użyciu platformy .NET Core, które nie zawierały środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="031f1-147">The .NET Core Runtime allows you to run apps that were made with .NET Core that didn't include the runtime.</span></span> <span data-ttu-id="031f1-148">Poniższe polecenia instalują środowisko uruchomieniowe ASP.NET Core, które jest najbardziej zgodnym środowiskiem uruchomieniowym dla platformy .NET Core.</span><span class="sxs-lookup"><span data-stu-id="031f1-148">The commands below install the ASP.NET Core Runtime, which is the most compatible runtime for .NET Core.</span></span> <span data-ttu-id="031f1-149">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="031f1-149">In your terminal, run the following commands.</span></span>
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -86,30 +86,30 @@ yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
 scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
 ```
 
-<span data-ttu-id="7602c-150">Red Hat nie zaleca trwałego włączania `rh-dotnet31-aspnetcore-runtime-3.1` , ponieważ może to mieć wpływ na inne programy.</span><span class="sxs-lookup"><span data-stu-id="7602c-150">Red Hat does not recommend permanently enabling `rh-dotnet31-aspnetcore-runtime-3.1` because it may affect other programs.</span></span> <span data-ttu-id="7602c-151">Program zawiera na przykład `rh-dotnet31-aspnetcore-runtime-3.1` wersję `libcurl` , która różni się od bazowej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="7602c-151">For example, `rh-dotnet31-aspnetcore-runtime-3.1` includes a version of `libcurl` that differs from the base RHEL version.</span></span> <span data-ttu-id="7602c-152">Może to prowadzić do problemów z programami, które nie oczekują innej wersji programu `libcurl` .</span><span class="sxs-lookup"><span data-stu-id="7602c-152">This may lead to issues in programs that do not expect a different version of `libcurl`.</span></span> <span data-ttu-id="7602c-153">Jeśli chcesz `rh-dotnet31-aspnetcore-runtime-3.1` trwale włączyć, Dodaj następujący wiersz do pliku _~/.bashrc._ .</span><span class="sxs-lookup"><span data-stu-id="7602c-153">If you want to enable `rh-dotnet31-aspnetcore-runtime-3.1` permanently, add the following line to your _~/.bashrc_ file.</span></span>
+<span data-ttu-id="031f1-150">Red Hat nie zaleca trwałego włączania `rh-dotnet31-aspnetcore-runtime-3.1` , ponieważ może to mieć wpływ na inne programy.</span><span class="sxs-lookup"><span data-stu-id="031f1-150">Red Hat does not recommend permanently enabling `rh-dotnet31-aspnetcore-runtime-3.1` because it may affect other programs.</span></span> <span data-ttu-id="031f1-151">Program zawiera na przykład `rh-dotnet31-aspnetcore-runtime-3.1` wersję `libcurl` , która różni się od bazowej wersji RHEL.</span><span class="sxs-lookup"><span data-stu-id="031f1-151">For example, `rh-dotnet31-aspnetcore-runtime-3.1` includes a version of `libcurl` that differs from the base RHEL version.</span></span> <span data-ttu-id="031f1-152">Może to prowadzić do problemów z programami, które nie oczekują innej wersji programu `libcurl` .</span><span class="sxs-lookup"><span data-stu-id="031f1-152">This may lead to issues in programs that do not expect a different version of `libcurl`.</span></span> <span data-ttu-id="031f1-153">Jeśli chcesz `rh-dotnet31-aspnetcore-runtime-3.1` trwale włączyć, Dodaj następujący wiersz do pliku _~/.bashrc._ .</span><span class="sxs-lookup"><span data-stu-id="031f1-153">If you want to enable `rh-dotnet31-aspnetcore-runtime-3.1` permanently, add the following line to your _~/.bashrc_ file.</span></span>
 
 ```bash
 source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
 ```
 
-<span data-ttu-id="7602c-154">Jako alternatywę dla środowiska uruchomieniowego ASP.NET Core można zainstalować środowisko uruchomieniowe programu .NET Core, które nie obejmuje ASP.NET Core Support: Zastąp `rh-dotnet31-aspnetcore-runtime-3.1` w poleceniach powyżej `rh-dotnet31-dotnet-runtime-3.1` .</span><span class="sxs-lookup"><span data-stu-id="7602c-154">As an alternative to the ASP.NET Core Runtime, you can install the .NET Core Runtime that doesn't include ASP.NET Core support: replace `rh-dotnet31-aspnetcore-runtime-3.1` in the commands above with `rh-dotnet31-dotnet-runtime-3.1`.</span></span>
+<span data-ttu-id="031f1-154">Jako alternatywę dla środowiska uruchomieniowego ASP.NET Core można zainstalować środowisko uruchomieniowe programu .NET Core, które nie obejmuje ASP.NET Core Support: Zastąp `rh-dotnet31-aspnetcore-runtime-3.1` w poleceniach powyżej `rh-dotnet31-dotnet-runtime-3.1` .</span><span class="sxs-lookup"><span data-stu-id="031f1-154">As an alternative to the ASP.NET Core Runtime, you can install the .NET Core Runtime that doesn't include ASP.NET Core support: replace `rh-dotnet31-aspnetcore-runtime-3.1` in the commands above with `rh-dotnet31-dotnet-runtime-3.1`.</span></span>
 
-## <a name="snap"></a><span data-ttu-id="7602c-155">Przystawki</span><span class="sxs-lookup"><span data-stu-id="7602c-155">Snap</span></span>
+## <a name="snap"></a><span data-ttu-id="031f1-155">Przystawki</span><span class="sxs-lookup"><span data-stu-id="031f1-155">Snap</span></span>
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a><span data-ttu-id="7602c-156">Zależności</span><span class="sxs-lookup"><span data-stu-id="7602c-156">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="031f1-156">Zależności</span><span class="sxs-lookup"><span data-stu-id="031f1-156">Dependencies</span></span>
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a><span data-ttu-id="7602c-157">Instalacja z skryptami</span><span class="sxs-lookup"><span data-stu-id="7602c-157">Scripted install</span></span>
+## <a name="scripted-install"></a><span data-ttu-id="031f1-157">Instalacja z skryptami</span><span class="sxs-lookup"><span data-stu-id="031f1-157">Scripted install</span></span>
 
 [!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
 
-## <a name="manual-install"></a><span data-ttu-id="7602c-158">Instalacja ręczna</span><span class="sxs-lookup"><span data-stu-id="7602c-158">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="031f1-158">Instalacja ręczna</span><span class="sxs-lookup"><span data-stu-id="031f1-158">Manual install</span></span>
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a><span data-ttu-id="7602c-159">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="7602c-159">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="031f1-159">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="031f1-159">Next steps</span></span>
 
-- [<span data-ttu-id="7602c-160">Samouczek: Tworzenie aplikacji konsolowej z zestaw .NET Core SDK przy użyciu Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="7602c-160">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="031f1-160">Samouczek: Tworzenie aplikacji konsolowej z zestaw .NET Core SDK przy użyciu Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="031f1-160">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)

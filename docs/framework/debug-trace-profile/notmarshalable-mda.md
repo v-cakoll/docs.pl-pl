@@ -1,5 +1,6 @@
 ---
 title: notMarshalable MDA
+description: Zapoznaj się z asystentem debugowania zarządzanego notMarshalable, który może uaktywnić, jeśli wywołania nie są obsługiwane lub występują w nieprawidłowym kontekście wskaźników interfejsu COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), interface pointer not marshalable
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b464d914a8d83504daaf4cb276914da7798262dc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803797"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-Asystent debugowania zarządzanego `notMarshalable` (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka wskaźnik interfejsu COM bez prawidłowego zarejestrowanego serwera proxy/zastępczego lub nieprawidłowej implementacji interfejsu `IMarshal` podczas próby zorganizowania interfejsu w wielu kontekstach.  
+`notMarshalable`Asystent debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka wskaźnik interfejsu COM bez prawidłowego zarejestrowanego serwera proxy/zastępczego lub nieprawidłowej `IMarshal` implementacji interfejsu podczas próby zorganizowania interfejsu w wielu kontekstach.  
   
 ## <a name="symptoms"></a>Objawy  
  Wywołania nie są obsługiwane lub wywołania występują w nieprawidłowym kontekście wskaźników interfejsu COM.  
   
 ## <a name="cause"></a>Przyczyna  
- Brak prawidłowego zarejestrowanego serwera proxy/zastępczego lub nieprawidłowej `IMarshal` podczas próby zorganizowania interfejsu w wielu kontekstach.  
+ Brak prawidłowego zarejestrowanego serwera proxy/zastępczego lub nieprawidłowej `IMarshal` próby zorganizowania interfejsu w wielu kontekstach.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że zarejestrowano procedurę pośredniczącą serwera proxy i że implementacja `IMarshal` jest prawidłowa.  
+ Upewnij się, że zarejestrowano procedurę pośredniczącą serwera proxy i że `IMarshal` implementacja jest prawidłowa.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko uruchomieniowe.  
@@ -36,7 +37,7 @@ Asystent debugowania zarządzanego `notMarshalable` (MDA) jest uaktywniany, gdy 
 ## <a name="output"></a>Dane wyjściowe  
  Komunikat z opisem problemu.  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -46,8 +47,8 @@ Asystent debugowania zarządzanego `notMarshalable` (MDA) jest uaktywniany, gdy 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

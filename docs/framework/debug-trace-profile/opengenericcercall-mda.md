@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall MDA
+description: Zobacz Asystent debugowania zarządzanego openGenericCERCall, który może aktywować, jeśli kod CER nie zostanie uruchomiony, gdy wątek zostanie przerwany lub gdy domena aplikacji zostanie zwolniona.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803940"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
-Zarządzany `openGenericCERCall` asystent debugowania jest aktywowany, aby ostrzec, że wykres regionu ograniczonego wykonywania (CER) z ogólnymi zmiennymi typu w metodzie głównej jest przetwarzany w czasie generowania kompilacji JIT lub obrazu natywnego, a co najmniej jedna ze zmiennych typu ogólnego jest typem odwołania do obiektu.
+`openGenericCERCall`Asystent debugowania zarządzanego został aktywowany, aby ostrzec, że wykres ograniczonego regionu wykonania (CER) z zmiennymi typu ogólnego w metodzie głównej jest przetwarzany podczas kompilacji JIT lub czasu generowania obrazu natywnego, a co najmniej jedna z zmiennych typu ogólnego jest typem odwołania do obiektu.
 
 ## <a name="symptoms"></a>Objawy
 
@@ -27,25 +28,25 @@ Kod CER nie jest uruchamiany, gdy wątek zostanie przerwany lub gdy domena aplik
 
 ## <a name="cause"></a>Przyczyna
 
-W czasie kompilacji JIT wystąpienia zawierającego typ odwołania do obiektu jest tylko reprezentatywne, ponieważ wynikowy kod jest współużytkowany, a każda ze zmiennych typu odwołania do obiektu może być dowolnym typem odwołania do obiektu. Może to uniemożliwić przygotowanie niektórych zasobów w czasie wykonywania z wyprzedzeniem.
+W czasie kompilacji JIT proces tworzenia wystąpienia zawierającego typ odwołania do obiektu jest tylko reprezentatywny, ponieważ wynikowy kod jest współużytkowany, a Każda zmienna typu odwołania do obiektu może być dowolnym typem odwołania do obiektu. Może to uniemożliwić przygotowanie niektórych zasobów czasu wykonywania przed czasem.
 
-W szczególności metody ze zmiennymi typu ogólnego można leniwie przydzielać zasoby w tle. Są one określane jako ogólne wpisy słownika. Na przykład dla `List<T> list = new List<T>();` instrukcji, gdzie `T` jest zmienną typu ogólnego środowisko wykonawcze musi wyszukać i `List<Object>, List<String>`ewentualnie utworzyć dokładne wystąpienie w czasie wykonywania, na przykład i tak dalej. To może zakończyć się niepowodzeniem z różnych powodów poza kontrolą dewelopera, takich jak wyczerpanie pamięci.
+W szczególności metody z zmiennymi typów ogólnych mogą opóźnieniem przydzielać zasoby w tle. Są one określane mianem zwykłych wpisów słownika. Na przykład dla instrukcji `List<T> list = new List<T>();` Where `T` jest zmienną typu ogólnego środowisko uruchomieniowe musi wyszukać i ewentualnie utworzyć dokładne wystąpienie w czasie wykonywania, na przykład, `List<Object>, List<String>` i tak dalej. Może to się nie powieść z różnych powodów wykraczających poza kontrolę dewelopera, na przykład za mało pamięci.
 
-To MDA powinny być aktywowane tylko w czasie kompilacji JIT, a nie wtedy, gdy istnieje dokładne wystąpienie.
+To zdarzenie MDA powinno być aktywowane tylko w czasie kompilacji JIT, a nie w przypadku wystąpienia dokładnego.
 
-Po aktywacji tego MDA, prawdopodobne objawy są, że CEPTR nie są funkcjonalne dla złych wystąpień. W rzeczywistości środowisko wykonawcze nie próbował zaimplementować CER w okolicznościach, które spowodowały MDA do aktywacji. Więc jeśli deweloper używa udostępnionego wystąpienia CER, a następnie błędy kompilacji JIT, błędy ładowania typu generics lub przerywanie wątku w regionie zamierzonego CER nie są przechwytywane.
+Po aktywowaniu tego elementu MDA prawdopodobnie CERs nie działają w przypadku nieprawidłowych wystąpień. W rzeczywistości środowisko uruchomieniowe nie podjęło próby wdrożenia CER w warunkach, które spowodowały aktywowanie MDA. Tak więc jeśli deweloper korzysta z udostępnionego wystąpienia programu CER, błędy kompilacji JIT, błędy ładowania typów lub przerwania wątku w regionie zamierzonego CER nie są przechwytywane.
 
 ## <a name="resolution"></a>Rozwiązanie
 
-Nie należy używać zmiennych typu ogólnego, które są typu odwołania do obiektu dla metod, które mogą zawierać CER.
+Nie używaj typów ogólnych zmiennych, które są typu odwołania do obiektu dla metod, które mogą zawierać CER.
 
-## <a name="effect-on-the-runtime"></a>Wpływ na czas działania
+## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe
 
-To MDA nie ma wpływu na CLR.
+To zdarzenie MDA nie ma wpływu na środowisko CLR.
 
 ## <a name="output"></a>Dane wyjściowe
 
-Poniżej przedstawiono przykład danych wyjściowych z tego MDA:
+Poniżej znajduje się przykład danych wyjściowych z tego MDA:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
@@ -110,7 +111,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

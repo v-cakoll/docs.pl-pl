@@ -3,15 +3,15 @@ title: 'Samouczek: automatyczna Inspekcja wizualizacji przy użyciu uczenia prze
 description: W tym samouczku pokazano, jak używać uczenia przeniesienia do uczenia modelu uczenia głębokiego TensorFlow w ML.NET przy użyciu interfejsu API wykrywania obrazów do klasyfikowania obrazów konkretnych powierzchni jako pękniętych lub niepękniętych.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803745"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Samouczek: automatyczne Inspekcja wizualizacji przy użyciu uczenia transferowego za pomocą interfejsu API klasyfikacji obrazów ML.NET
 
@@ -81,7 +81,10 @@ Wstępnie przemieszczony model używany w tym samouczku to 101-warstwowy model s
 Teraz, gdy znasz już ogólną wiedzę o uczeniu przenoszenia i interfejsie API klasyfikacji obrazów, jest to czas na skompilowanie aplikacji.
 
 1. Utwórz **aplikację konsolową w języku C# .NET Core** o nazwie "DeepLearning_ImageClassification_Binary".
-1. Zainstaluj pakiet NuGet **Microsoft.ml** w wersji **1.4.0** :
+1. Zainstaluj pakiet NuGet **Microsoft.ml** :
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     1. Wybierz pozycję "nuget.org" jako źródło pakietu.
     1. Wybierz kartę **Przeglądaj**.
@@ -89,7 +92,7 @@ Teraz, gdy znasz już ogólną wiedzę o uczeniu przenoszenia i interfejsie API 
     1. Wyszukaj **Microsoft.ml**.
     1. Wybierz przycisk **Instaluj** .
     1. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
-    1. Powtórz te kroki dla **Microsoft. ml. Vision** wersja **1.4.0**, **SciSharp. TensorFlow. Redist** wersja **1.15.0**oraz **Microsoft. ml. ImageAnalytics** wersja **1.4.0** pakiety NuGet.
+    1. Powtórz te kroki dla pakietów NuGet **Microsoft. ml. Vision**, **SciSharp. TensorFlow. Redist**i **Microsoft. ml. ImageAnalytics** .
 
 ### <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
@@ -378,7 +381,7 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-Po Przeprowadź inspekcję obrazu *-220. jpg* można zobaczyć, że w rzeczywistości nie jest to pęknięcie.
+Po inspekcji *7001-220.jpg* obrazu można zobaczyć, że w rzeczywistości nie jest to pęknięte.
 
 ![Obraz zestawu danych SDNET2018 służący do przewidywania](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 

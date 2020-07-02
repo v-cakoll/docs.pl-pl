@@ -1,15 +1,15 @@
 ---
 title: 'Samouczek: model klasyfikacji obrazów ML.NET z TensorFlow'
 description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET. Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysięcy kategorii. Model ML.NET wykorzystuje uczenie transferu do klasyfikowania obrazów do mniejszej liczby szerszej kategorii.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804005"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow
 
@@ -66,9 +66,9 @@ Klasyfikacja obrazu to typowe zadanie Machine Learning, które pozwala nam na au
 >[!Note]
 > Powyższe obrazy należą do Wikimedia Commons Attribution i są przypisywane w następujący sposób:
 >
-> * Domena publiczna "220px-Pepperoni_pizza. jpg" <https://commons.wikimedia.org/w/index.php?curid=79505> ,
-> * "119px-Nalle_-_a_small_brown_teddy_bear. jpg" przez [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) -własne grafy, CC przez-sa 2,0, <https://commons.wikimedia.org/w/index.php?curid=48166> .
-> * "193px-Broodrooster. jpg" według [M. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) — zadania własne, CC według-sa 3,0,<https://commons.wikimedia.org/w/index.php?curid=27403>
+> * Domena publiczna "220px-Pepperoni_pizza.jpg", <https://commons.wikimedia.org/w/index.php?curid=79505> ,
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" przez [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) -własne grafy, CC według-sa 2,0, <https://commons.wikimedia.org/w/index.php?curid=48166> .
+> * "193px-Broodrooster.jpg" według [Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) pracy, CC według-sa 3,0,<https://commons.wikimedia.org/w/index.php?curid=27403>
 
 `Inception model`Program jest szkolony do klasyfikowania obrazów do tysięcy kategorii, ale w tym samouczku należy sklasyfikować obrazy w mniejszym zestawie kategorii i tylko te kategorie. Wprowadź `transfer` część elementu `transfer learning` . Można przenieść `Inception model` możliwość rozpoznawania i klasyfikowania obrazów do nowych, ograniczonej kategorii klasyfikatora niestandardowego obrazu.
 
@@ -122,12 +122,14 @@ Obrazy szkoleniowe i testowe znajdują się w folderach zasobów, które zostan�
 
 1. Zainstaluj **pakiet NuGet Microsoft.ml**:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     * Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.ml**.
-    * Kliknij listę rozwijaną **wersja** , wybierz pakiet **1.4.0** z listy, a następnie wybierz przycisk **Instaluj** .
+    * Wybierz przycisk **Instaluj** .
     * Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** .
     * Jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów, **Wybierz przycisk Akceptuję w oknie** dialogowym **akceptacji licencji** .
-    * Powtórz te kroki dla **Microsoft. ml. ImageAnalytics v 1.4.0**, **SciSharp. TensorFlow. Redist v 1.15.0** i **Microsoft. ml. TensorFlow v 1.4.0**.
+    * Powtórz te kroki dla **Microsoft. ml. ImageAnalytics**, **SciSharp. TensorFlow. Redist** i **Microsoft. ml. TensorFlow**.
 
 ### <a name="download-assets"></a>Pobierz zasoby
 

@@ -1,5 +1,6 @@
 ---
 title: 'Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM'
+description: Przeczytaj przykładowy kod, który pokazuje, w jaki sposób klient .NET uzyskuje dostęp do serwera COM, aby utworzyć wystąpienie klasy coclass modelu COM i wywoływać składowe klasy w celu wykonywania obliczeń hipotecznych.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620875"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="7ff1d-102">Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM</span><span class="sxs-lookup"><span data-stu-id="7ff1d-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="7ff1d-103">Ten przykład pokazuje, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), który został utworzony w celu uzyskania dostępu do [serwera com](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass modelu COM i wywołuje elementy członkowskie klasy do wykonywania obliczeń hipotecznych.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="a2179-103">Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM</span><span class="sxs-lookup"><span data-stu-id="a2179-103">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="a2179-104">Ten przykład pokazuje, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), który został utworzony w celu uzyskania dostępu do [serwera com](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass modelu COM i wywołuje elementy członkowskie klasy do wykonywania obliczeń hipotecznych.</span><span class="sxs-lookup"><span data-stu-id="a2179-104">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="7ff1d-104">W tym przykładzie klient tworzy i wywołuje wystąpienie klasy coclass **pożyczki** , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="7ff1d-105">Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="a2179-105">W tym przykładzie klient tworzy i wywołuje wystąpienie klasy coclass **pożyczki** , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia.</span><span class="sxs-lookup"><span data-stu-id="a2179-105">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="a2179-106">Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="a2179-106">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
-## <a name="net-client"></a><span data-ttu-id="7ff1d-106">Klient platformy .NET</span><span class="sxs-lookup"><span data-stu-id="7ff1d-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="a2179-107">Klient platformy .NET</span><span class="sxs-lookup"><span data-stu-id="a2179-107">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -152,7 +153,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
-## <a name="com-server"></a><span data-ttu-id="7ff1d-107">Serwer COM</span><span class="sxs-lookup"><span data-stu-id="7ff1d-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="a2179-108">Serwer COM</span><span class="sxs-lookup"><span data-stu-id="a2179-108">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -297,6 +298,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7ff1d-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7ff1d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2179-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a2179-109">See also</span></span>
 
-- [<span data-ttu-id="7ff1d-109">Udostępnianie składników COM programowi.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ff1d-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
+- [<span data-ttu-id="a2179-110">Udostępnianie składników COM programowi.NET Framework</span><span class="sxs-lookup"><span data-stu-id="a2179-110">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)

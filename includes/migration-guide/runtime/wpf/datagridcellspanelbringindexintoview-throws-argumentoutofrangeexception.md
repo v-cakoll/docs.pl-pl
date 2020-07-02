@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 1a1fc91ea2bb81e0f94b64323085ccf99072a1f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d78d083b16ac034c6c393dbc0f6094ee4c6c63c0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622377"
 ---
-### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a><span data-ttu-id="01139-101">DataGridCellsPanel.BringIndexIntoView rzuca ArgumentOutOfRangeException</span><span class="sxs-lookup"><span data-stu-id="01139-101">DataGridCellsPanel.BringIndexIntoView throws ArgumentOutOfRangeException</span></span>
+### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a><span data-ttu-id="bc3a6-101">DataGridCellsPanel. BringIndexIntoView zgłasza wyjątku ArgumentOutOfRangeException</span><span class="sxs-lookup"><span data-stu-id="bc3a6-101">DataGridCellsPanel.BringIndexIntoView throws ArgumentOutOfRangeException</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="01139-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="01139-102">Details</span></span>|<span data-ttu-id="01139-103"><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)>będzie działać asynchronicznie, gdy wirtualizacja kolumn jest włączona, ale szerokości kolumn nie zostały jeszcze określone.</span><span class="sxs-lookup"><span data-stu-id="01139-103"><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> will work asynchronously when column virtualization is enabled but the column widths have not yet been determined.</span></span>  <span data-ttu-id="01139-104">Jeśli kolumny są usuwane przed wykonaniem pracy <xref:System.ArgumentOutOfRangeException?displayProperty=name> asynchronicznej, może wystąpić wystąpienie.</span><span class="sxs-lookup"><span data-stu-id="01139-104">If columns are removed before the asynchronous work happens, an <xref:System.ArgumentOutOfRangeException?displayProperty=name> can occur.</span></span>|
-|<span data-ttu-id="01139-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="01139-105">Suggestion</span></span>|<span data-ttu-id="01139-106">Dowolna z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="01139-106">Any one of the following:</span></span><ol><li><span data-ttu-id="01139-107">Uaktualnienie do programu .NET Framework 4.7.</span><span class="sxs-lookup"><span data-stu-id="01139-107">Upgrade to .NET Framework 4.7.</span></span></li><li><span data-ttu-id="01139-108">Zainstaluj najnowszą poprawkę obsługi dla platformy .NET Framework 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="01139-108">Install the latest servicing patch for .NET Framework 4.6.2.</span></span></li><li><span data-ttu-id="01139-109">Należy unikać usuwania kolumn, dopóki odpowiedź <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> asynchroniza do została zakończona.</span><span class="sxs-lookup"><span data-stu-id="01139-109">Avoid removing columns until the asynchronous response to <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> has completed.</span></span></li></ol>|
-|<span data-ttu-id="01139-110">Zakres</span><span class="sxs-lookup"><span data-stu-id="01139-110">Scope</span></span>|<span data-ttu-id="01139-111">Brzeg</span><span class="sxs-lookup"><span data-stu-id="01139-111">Edge</span></span>|
-|<span data-ttu-id="01139-112">Wersja</span><span class="sxs-lookup"><span data-stu-id="01139-112">Version</span></span>|<span data-ttu-id="01139-113">4.6.2</span><span class="sxs-lookup"><span data-stu-id="01139-113">4.6.2</span></span>|
-|<span data-ttu-id="01139-114">Typ</span><span class="sxs-lookup"><span data-stu-id="01139-114">Type</span></span>|<span data-ttu-id="01139-115">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="01139-115">Runtime</span></span>|
-|<span data-ttu-id="01139-116">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="01139-116">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="bc3a6-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="bc3a6-102">Details</span></span>
+
+<span data-ttu-id="bc3a6-103"><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)>działa asynchronicznie, gdy Wirtualizacja kolumny jest włączona, ale szerokość kolumn nie została jeszcze ustalona.</span><span class="sxs-lookup"><span data-stu-id="bc3a6-103"><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> will work asynchronously when column virtualization is enabled but the column widths have not yet been determined.</span></span>  <span data-ttu-id="bc3a6-104">Jeśli kolumny zostaną usunięte przed wykonaniem asynchronicznej pracy, <xref:System.ArgumentOutOfRangeException?displayProperty=fullName> może wystąpić.</span><span class="sxs-lookup"><span data-stu-id="bc3a6-104">If columns are removed before the asynchronous work happens, an <xref:System.ArgumentOutOfRangeException?displayProperty=fullName> can occur.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="bc3a6-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="bc3a6-105">Suggestion</span></span>
+
+<span data-ttu-id="bc3a6-106">Jeden z następujących elementów:</span><span class="sxs-lookup"><span data-stu-id="bc3a6-106">Any one of the following:</span></span><ol><li><span data-ttu-id="bc3a6-107">Uaktualnij do .NET Framework 4,7.</span><span class="sxs-lookup"><span data-stu-id="bc3a6-107">Upgrade to .NET Framework 4.7.</span></span></li><li><span data-ttu-id="bc3a6-108">Zainstaluj najnowszą poprawkę obsługi dla .NET Framework 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="bc3a6-108">Install the latest servicing patch for .NET Framework 4.6.2.</span></span></li><li><span data-ttu-id="bc3a6-109">Należy unikać usuwania kolumn do momentu ukończenia asynchronicznej odpowiedzi <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> .</span><span class="sxs-lookup"><span data-stu-id="bc3a6-109">Avoid removing columns until the asynchronous response to <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> has completed.</span></span></li></ol>
+
+| <span data-ttu-id="bc3a6-110">Nazwa</span><span class="sxs-lookup"><span data-stu-id="bc3a6-110">Name</span></span>    | <span data-ttu-id="bc3a6-111">Wartość</span><span class="sxs-lookup"><span data-stu-id="bc3a6-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="bc3a6-112">Zakres</span><span class="sxs-lookup"><span data-stu-id="bc3a6-112">Scope</span></span>   |<span data-ttu-id="bc3a6-113">Brzeg</span><span class="sxs-lookup"><span data-stu-id="bc3a6-113">Edge</span></span>|
+|<span data-ttu-id="bc3a6-114">Wersja</span><span class="sxs-lookup"><span data-stu-id="bc3a6-114">Version</span></span>|<span data-ttu-id="bc3a6-115">4.6.2</span><span class="sxs-lookup"><span data-stu-id="bc3a6-115">4.6.2</span></span>|
+|<span data-ttu-id="bc3a6-116">Typ</span><span class="sxs-lookup"><span data-stu-id="bc3a6-116">Type</span></span>|<span data-ttu-id="bc3a6-117">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="bc3a6-117">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="bc3a6-118">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="bc3a6-118">Affected APIs</span></span>
+
+-<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|

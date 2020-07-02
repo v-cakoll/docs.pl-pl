@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 53fc2a51a7995e9b6ad43e28429313d2aea9abf1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1be68c2968d0eaa9024007bcf37abf9e44c36f1c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622149"
 ---
-### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-result-in-an-unresponsive-application"></a><span data-ttu-id="543a8-101">Przewijanie w widoku drzewa w WPF lub ListBox zgrupowane w VirtualizingStackPanel może doprowadzić do aplikacji nie odpowiada</span><span class="sxs-lookup"><span data-stu-id="543a8-101">Scrolling a WPF TreeView or grouped ListBox in a VirtualizingStackPanel can result in an unresponsive application</span></span>
+### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a><span data-ttu-id="d5e21-101">Przewijanie drzewa WPF lub zgrupowane pole listy w VirtualizingStackPanel może spowodować zawieszenie</span><span class="sxs-lookup"><span data-stu-id="d5e21-101">Scrolling a WPF TreeView or grouped ListBox in a VirtualizingStackPanel can cause a hang</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="543a8-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="543a8-102">Details</span></span>|<span data-ttu-id="543a8-103">Przewijanie WPF w programie .NET Framework 4.5 <xref:System.Windows.Controls.TreeView?displayProperty=name> w zwirtualizowanych stack panel może spowodować aplikacja przestanie odpowiadać, jeśli istnieją marginesy w okienku ekranu (między elementami w <xref:System.Windows.Controls.TreeView?displayProperty=name>, na przykład, lub w elemencie ItemsPresenter).</span><span class="sxs-lookup"><span data-stu-id="543a8-103">In .NET Framework 4.5, scrolling a WPF <xref:System.Windows.Controls.TreeView?displayProperty=name> in a virtualized stack panel can cause an application to become unresponsive if there are margins in the viewport (between the items in the <xref:System.Windows.Controls.TreeView?displayProperty=name>, for example, or on an ItemsPresenter element).</span></span> <span data-ttu-id="543a8-104">Ponadto w niektórych przypadkach różnych wielkości elementów w widoku może spowodować niestabilność, nawet jeśli nie mają żadnych marginesy.</span><span class="sxs-lookup"><span data-stu-id="543a8-104">Additionally, in some cases, different sized items in the view can cause instability even if there are no margins.</span></span>|
-|<span data-ttu-id="543a8-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="543a8-105">Suggestion</span></span>|<span data-ttu-id="543a8-106">Po uaktualnieniu do programu .NET Framework 4.5.1 można uniknąć tego błędu.</span><span class="sxs-lookup"><span data-stu-id="543a8-106">This bug can be avoided by upgrading to .NET Framework 4.5.1.</span></span> <span data-ttu-id="543a8-107">Alternatywnie marginesy można usunąć z kolekcji widoku (takich jak <xref:System.Windows.Controls.TreeView?displayProperty=name>s) w ramach zwirtualizowanych stosu paneli, jeśli wszystkie zawarte elementy mają taki sam rozmiar.</span><span class="sxs-lookup"><span data-stu-id="543a8-107">Alternatively, margins can be removed from view collections (like <xref:System.Windows.Controls.TreeView?displayProperty=name>s) within virtualized stack panels if all contained items are the same size.</span></span>|
-|<span data-ttu-id="543a8-108">Scope</span><span class="sxs-lookup"><span data-stu-id="543a8-108">Scope</span></span>|<span data-ttu-id="543a8-109">Duży</span><span class="sxs-lookup"><span data-stu-id="543a8-109">Major</span></span>|
-|<span data-ttu-id="543a8-110">Wersja</span><span class="sxs-lookup"><span data-stu-id="543a8-110">Version</span></span>|<span data-ttu-id="543a8-111">4.5</span><span class="sxs-lookup"><span data-stu-id="543a8-111">4.5</span></span>|
-|<span data-ttu-id="543a8-112">Typ</span><span class="sxs-lookup"><span data-stu-id="543a8-112">Type</span></span>|<span data-ttu-id="543a8-113">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="543a8-113">Runtime</span></span>|
-|<span data-ttu-id="543a8-114">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="543a8-114">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="d5e21-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="d5e21-102">Details</span></span>
+
+<span data-ttu-id="d5e21-103">W .NET Framework v 4.5, przewinięcie WPF <xref:System.Windows.Controls.TreeView?displayProperty=fullName> w zwirtualizowanym panelu stosu może spowodować zawieszenie, jeśli w okienku ekranu pojawią się marginesy (między elementami na <xref:System.Windows.Controls.TreeView?displayProperty=fullName> przykład lub w elemencie ItemsPresenter).</span><span class="sxs-lookup"><span data-stu-id="d5e21-103">In the .NET Framework v4.5, scrolling a WPF <xref:System.Windows.Controls.TreeView?displayProperty=fullName> in a virtualized stack panel can cause hangs if there are margins in the viewport (between the items in the <xref:System.Windows.Controls.TreeView?displayProperty=fullName>, for example, or on an ItemsPresenter element).</span></span> <span data-ttu-id="d5e21-104">Ponadto w niektórych przypadkach różne elementy w widoku mogą spowodować niestabilność nawet wtedy, gdy nie ma marginesów.</span><span class="sxs-lookup"><span data-stu-id="d5e21-104">Additionally, in some cases, different sized items in the view can cause instability even if there are no margins.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="d5e21-105">Sugestia</span><span class="sxs-lookup"><span data-stu-id="d5e21-105">Suggestion</span></span>
+
+<span data-ttu-id="d5e21-106">Tę usterkę można uniknąć przez uaktualnienie do .NET Framework 4.5.1.</span><span class="sxs-lookup"><span data-stu-id="d5e21-106">This bug can be avoided by upgrading to .NET Framework 4.5.1.</span></span> <span data-ttu-id="d5e21-107">Alternatywnie marginesy mogą być usuwane z kolekcji widoku (na przykład <xref:System.Windows.Controls.TreeView?displayProperty=fullName> s) w zwirtualizowanych panelach stosu, jeśli wszystkie zawarte elementy mają ten sam rozmiar.</span><span class="sxs-lookup"><span data-stu-id="d5e21-107">Alternatively, margins can be removed from view collections (like <xref:System.Windows.Controls.TreeView?displayProperty=fullName>s) within virtualized stack panels if all contained items are the same size.</span></span>
+
+| <span data-ttu-id="d5e21-108">Nazwa</span><span class="sxs-lookup"><span data-stu-id="d5e21-108">Name</span></span>    | <span data-ttu-id="d5e21-109">Wartość</span><span class="sxs-lookup"><span data-stu-id="d5e21-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="d5e21-110">Zakres</span><span class="sxs-lookup"><span data-stu-id="d5e21-110">Scope</span></span>   |<span data-ttu-id="d5e21-111">Duży</span><span class="sxs-lookup"><span data-stu-id="d5e21-111">Major</span></span>|
+|<span data-ttu-id="d5e21-112">Wersja</span><span class="sxs-lookup"><span data-stu-id="d5e21-112">Version</span></span>|<span data-ttu-id="d5e21-113">4.5</span><span class="sxs-lookup"><span data-stu-id="d5e21-113">4.5</span></span>|
+|<span data-ttu-id="d5e21-114">Typ</span><span class="sxs-lookup"><span data-stu-id="d5e21-114">Type</span></span>|<span data-ttu-id="d5e21-115">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="d5e21-115">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="d5e21-116">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="d5e21-116">Affected APIs</span></span>
+
+-<xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|

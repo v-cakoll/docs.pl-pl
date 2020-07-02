@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: 8b21a85ae4e745a3d71261414e79dafbf3384131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d5423d18091545ad9d50325900f5a9a4fff6dd9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622116"
 ---
-### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a><span data-ttu-id="4c7f8-101">Naprawiono zawieszenie, gdy ListBox zawiera zduplikowane typy wartości</span><span class="sxs-lookup"><span data-stu-id="4c7f8-101">Fixed a hang when ListBox contains duplicate value-types</span></span>
+### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a><span data-ttu-id="74a4a-101">Naprawiono zawieszenie, gdy pole listy zawiera zduplikowane typy wartości</span><span class="sxs-lookup"><span data-stu-id="74a4a-101">Fixed a hang when ListBox contains duplicate value-types</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="4c7f8-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="4c7f8-102">Details</span></span>|<span data-ttu-id="4c7f8-103">Rozwiązano problem polegający<xref:System.Windows.Controls.ItemsControl> na tym, że wirtualizacja mogła zawiesić się podczas przewijania, gdy jego kolekcja Items zawiera zduplikowane obiekty wpisane wartością.</span><span class="sxs-lookup"><span data-stu-id="4c7f8-103">Fixed a problem where a virtualizing<xref:System.Windows.Controls.ItemsControl> can hang during scrolling when its Items collection contains duplicate value-typed objects.</span></span>|
-|<span data-ttu-id="4c7f8-104">Zakres</span><span class="sxs-lookup"><span data-stu-id="4c7f8-104">Scope</span></span>|<span data-ttu-id="4c7f8-105">Duży</span><span class="sxs-lookup"><span data-stu-id="4c7f8-105">Major</span></span>|
-|<span data-ttu-id="4c7f8-106">Wersja</span><span class="sxs-lookup"><span data-stu-id="4c7f8-106">Version</span></span>|<span data-ttu-id="4c7f8-107">4.8</span><span class="sxs-lookup"><span data-stu-id="4c7f8-107">4.8</span></span>|
-|<span data-ttu-id="4c7f8-108">Typ</span><span class="sxs-lookup"><span data-stu-id="4c7f8-108">Type</span></span>|<span data-ttu-id="4c7f8-109">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="4c7f8-109">Runtime</span></span>|
+#### <a name="details"></a><span data-ttu-id="74a4a-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="74a4a-102">Details</span></span>
+
+<span data-ttu-id="74a4a-103">Rozwiązano problem polegający na tym, że wirtualizacja <xref:System.Windows.Controls.ItemsControl> może się zawiesić podczas przewijania, gdy kolekcja elementów zawiera zduplikowane obiekty z typem wartości.</span><span class="sxs-lookup"><span data-stu-id="74a4a-103">Fixed a problem where a virtualizing<xref:System.Windows.Controls.ItemsControl> can hang during scrolling when its Items collection contains duplicate value-typed objects.</span></span>
+
+| <span data-ttu-id="74a4a-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="74a4a-104">Name</span></span>    | <span data-ttu-id="74a4a-105">Wartość</span><span class="sxs-lookup"><span data-stu-id="74a4a-105">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="74a4a-106">Zakres</span><span class="sxs-lookup"><span data-stu-id="74a4a-106">Scope</span></span>   |<span data-ttu-id="74a4a-107">Duży</span><span class="sxs-lookup"><span data-stu-id="74a4a-107">Major</span></span>|
+|<span data-ttu-id="74a4a-108">Wersja</span><span class="sxs-lookup"><span data-stu-id="74a4a-108">Version</span></span>|<span data-ttu-id="74a4a-109">4,8</span><span class="sxs-lookup"><span data-stu-id="74a4a-109">4.8</span></span>|
+|<span data-ttu-id="74a4a-110">Typ</span><span class="sxs-lookup"><span data-stu-id="74a4a-110">Type</span></span>|<span data-ttu-id="74a4a-111">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="74a4a-111">Runtime</span></span>|

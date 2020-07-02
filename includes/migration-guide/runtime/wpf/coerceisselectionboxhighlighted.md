@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: d9e1cd8d346a48fafc89367bddf923167a620889
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c8e597310ec0b02edbf993709f931a6093b6285
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621822"
 ---
-### <a name="coerceisselectionboxhighlighted"></a><span data-ttu-id="69f9c-101">CoerceIsSelectionBoxWyświetlony</span><span class="sxs-lookup"><span data-stu-id="69f9c-101">CoerceIsSelectionBoxHighlighted</span></span>
+### <a name="coerceisselectionboxhighlighted"></a><span data-ttu-id="e08ef-101">CoerceIsSelectionBoxHighlighted</span><span class="sxs-lookup"><span data-stu-id="e08ef-101">CoerceIsSelectionBoxHighlighted</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="69f9c-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="69f9c-102">Details</span></span>|<span data-ttu-id="69f9c-103">Niektóre sekwencje akcji z <xref:System.Windows.Controls.ComboBox?displayProperty=name> udziałem i jego <xref:System.NullReferenceException?displayProperty=name>źródła danych może spowodować .</span><span class="sxs-lookup"><span data-stu-id="69f9c-103">Certain sequences of actions involving a <xref:System.Windows.Controls.ComboBox?displayProperty=name> and its data source can result in a <xref:System.NullReferenceException?displayProperty=name>.</span></span>|
-|<span data-ttu-id="69f9c-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="69f9c-104">Suggestion</span></span>|<span data-ttu-id="69f9c-105">Jeśli to możliwe, uaktualnij do programu .NET Framework 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="69f9c-105">If possible, upgrade to .NET Framework 4.6.2.</span></span>|
-|<span data-ttu-id="69f9c-106">Zakres</span><span class="sxs-lookup"><span data-stu-id="69f9c-106">Scope</span></span>|<span data-ttu-id="69f9c-107">Mały</span><span class="sxs-lookup"><span data-stu-id="69f9c-107">Minor</span></span>|
-|<span data-ttu-id="69f9c-108">Wersja</span><span class="sxs-lookup"><span data-stu-id="69f9c-108">Version</span></span>|<span data-ttu-id="69f9c-109">4.6</span><span class="sxs-lookup"><span data-stu-id="69f9c-109">4.6</span></span>|
-|<span data-ttu-id="69f9c-110">Typ</span><span class="sxs-lookup"><span data-stu-id="69f9c-110">Type</span></span>|<span data-ttu-id="69f9c-111">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="69f9c-111">Runtime</span></span>|
-|<span data-ttu-id="69f9c-112">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="69f9c-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="e08ef-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="e08ef-102">Details</span></span>
+
+<span data-ttu-id="e08ef-103">Niektóre sekwencje akcji związanych z <xref:System.Windows.Controls.ComboBox?displayProperty=fullName> i jej źródłem danych mogą skutkować <xref:System.NullReferenceException?displayProperty=fullName> .</span><span class="sxs-lookup"><span data-stu-id="e08ef-103">Certain sequences of actions involving a <xref:System.Windows.Controls.ComboBox?displayProperty=fullName> and its data source can result in a <xref:System.NullReferenceException?displayProperty=fullName>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="e08ef-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="e08ef-104">Suggestion</span></span>
+
+<span data-ttu-id="e08ef-105">Jeśli to możliwe, należy przeprowadzić uaktualnienie do .NET Framework 4.6.2.</span><span class="sxs-lookup"><span data-stu-id="e08ef-105">If possible, upgrade to .NET Framework 4.6.2.</span></span>
+
+| <span data-ttu-id="e08ef-106">Nazwa</span><span class="sxs-lookup"><span data-stu-id="e08ef-106">Name</span></span>    | <span data-ttu-id="e08ef-107">Wartość</span><span class="sxs-lookup"><span data-stu-id="e08ef-107">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="e08ef-108">Zakres</span><span class="sxs-lookup"><span data-stu-id="e08ef-108">Scope</span></span>   |<span data-ttu-id="e08ef-109">Mały</span><span class="sxs-lookup"><span data-stu-id="e08ef-109">Minor</span></span>|
+|<span data-ttu-id="e08ef-110">Wersja</span><span class="sxs-lookup"><span data-stu-id="e08ef-110">Version</span></span>|<span data-ttu-id="e08ef-111">4.6</span><span class="sxs-lookup"><span data-stu-id="e08ef-111">4.6</span></span>|
+|<span data-ttu-id="e08ef-112">Typ</span><span class="sxs-lookup"><span data-stu-id="e08ef-112">Type</span></span>|<span data-ttu-id="e08ef-113">Środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="e08ef-113">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="e08ef-114">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="e08ef-114">Affected APIs</span></span>
+
+-<xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|

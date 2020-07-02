@@ -1,0 +1,63 @@
+### YamlMime:Landing
+title: Instalowanie platformy .NET Core w systemach Windows, Linux i macOS
+summary: Dowiedz się więcej na temat instalowania platformy .NET w wersjach systemu Windows, Linux i macOS. Odkryj zależności wymagane do tworzenia, wdrażania i uruchamiania aplikacji platformy .NET Core.
+metadata:
+  title: Instalowanie platformy .NET Core w systemach Windows, Linux i macOS
+  description: Dowiedz się, gdzie pobrać i zainstalować platformę .NET Core w wersjach systemów Windows, Linux i macOS. Odkryj zależności wymagane do tworzenia, wdrażania i uruchamiania aplikacji platformy .NET Core.
+  ms.topic: landing-page
+  ms.date: 06/29/2020
+  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
+  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85804501"
+landingContent:
+- title: Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Instalowanie w systemie Windows
+      url: windows.md
+    - text: Obsługiwane wersje systemu Windows
+      url: windows.md#supported-releases
+    - text: Zależności
+      url: windows.md#dependencies
+    - text: Instalowanie za pomocą programu Visual Studio
+      url: windows.md#install-with-visual-studio
+    - text: Zainstaluj obok Visual Studio Code
+      url: windows.md#install-alongside-visual-studio-code
+- title: macOS
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Instalowanie w systemie macOS
+      url: macos.md
+    - text: Obsługiwane wersje macOS
+      url: macos.md#supported-releases
+    - text: Zależności
+      url: macos.md#dependencies
+    - text: Zainstaluj obok Visual Studio Code
+      url: macos.md#install-alongside-visual-studio-code
+- title: Linux
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Omówienie systemu Linux
+      url: linux.md
+    - text: Alpine
+      url: linux-alpine.md
+    - text: CentOS
+      url: linux-centos.md
+    - text: Debian
+      url: linux-debian.md
+    - text: Fedora
+      url: linux-fedora.md
+    - text: openSUSE
+      url: linux-opensuse.md
+    - text: Red Hat Enterprise Linux
+      url: linux-rhel.md
+    - text: SUSE Linux Enterprise Server
+      url: linux-sles.md
+    - text: Ubuntu
+      url: linux-ubuntu.md

@@ -639,6 +639,8 @@
       items:
         - name: Wybieranie między klasą i strukturą
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Wybór między typami anonimowymi i krotkami
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Projekt klasy abstrakcyjnej
           href: design-guidelines/abstract-class.md
         - name: Projekt klasy statycznej

@@ -46,6 +46,8 @@
           href: base-types/type-conversion.md
         - name: Tabele konwersji typów
           href: base-types/conversion-tables.md
+        - name: Wybór między typami anonimowymi i krotkami
+          href: base-types/choosing-between-anonymous-and-tuple.md
         - name: 'Formatowanie liczb, dat i innych typów'
           items:
             - name: Omówienie
@@ -639,8 +641,6 @@
       items:
         - name: Wybieranie między klasą i strukturą
           href: design-guidelines/choosing-between-class-and-struct.md
-        - name: Wybór między typami anonimowymi i krotkami
-          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Projekt klasy abstrakcyjnej
           href: design-guidelines/abstract-class.md
         - name: Projekt klasy statycznej

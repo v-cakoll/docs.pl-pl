@@ -3,13 +3,13 @@ title: Użyj pokrycia kodu do testów jednostkowych
 description: Dowiedz się, jak korzystać z funkcji pokrycia kodu dla testów jednostkowych .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853896"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Użyj pokrycia kodu do testów jednostkowych
 
@@ -18,6 +18,8 @@ Testy jednostkowe pomagają zapewnić funkcjonalność i zapewnić metodę weryf
 W tym artykule omówiono użycie pokrycia kodu dla testów jednostkowych z Coverlet i generowanie raportu przy użyciu ReportGenerator. Chociaż ten artykuł koncentruje się na języku C# i xUnit jako środowisku testowym, zarówno MSTest, jak i NUnit również działają. Coverlet to [projekt typu open source w usłudze GitHub](https://github.com/coverlet-coverage/coverlet) , który zapewnia międzyplatformową strukturę pokrycia kodu dla języka C#. [Coverlet](https://dotnetfoundation.org/projects/coverlet) jest częścią .NET Foundation. Coverlet zbiera dane przebiegu testu pokrycia Cobertura, które są używane na potrzeby generowania raportów.
 
 Ponadto w tym artykule szczegółowo przedstawiono sposób użycia informacji o pokryciu kodu zebranych z przebiegu testu Coverlet w celu wygenerowania raportu. Generowanie raportu jest możliwe przy użyciu innego [projektu Open Source w witrynie GitHub-ReportGenerator](https://github.com/danielpalme/ReportGenerator). ReportGenerator konwertuje raporty pokrycia wygenerowane przez Cobertura między wiele innych, w raportach ludzkich do odczytu w różnych formatach.
+
+Ten artykuł jest oparty na [projekcie przykładowego kodu źródłowego](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs), dostępnym w przeglądarce przykładów.
 
 ## <a name="system-under-test"></a>System w trakcie testu
 
@@ -270,7 +272,7 @@ Poniżej znajduje się przykładowy plik *coverage.cobertura.xml* .
 > ```
 >
 > Wynikowy plik *coverage.cobertura.xml* jest wyjściowy.  
-> W [tym miejscu](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) możesz wykonać instrukcje dotyczące programu MSBuild integraton
+> Przewodnik integracji MSBuild można obserwować [tutaj](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)
 
 ## <a name="generate-reports"></a>Generowanie raportów
 
@@ -300,6 +302,7 @@ Po uruchomieniu tego polecenia plik HTML reprezentuje wygenerowany raport.
 - [Repozytorium GitHub — ReportGenerator](https://github.com/danielpalme/ReportGenerator)
 - [Witryna projektu ReportGenerator](https://danielpalme.github.io/ReportGenerator)
 - [Interfejs wiersza polecenia platformy .NET Core polecenie testowe](../tools/dotnet-test.md)
+- [Przykładowy kod źródłowy](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Następne kroki
 

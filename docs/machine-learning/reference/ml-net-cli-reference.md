@@ -3,12 +3,12 @@ title: Dokumentacja poleceń interfejsu wiersza polecenia ML.NET
 description: Przegląd, przykłady i dokumentacja polecenia autouczenie w narzędziu CLI ML.NET.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594546"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946944"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Dokumentacja poleceń interfejsu wiersza polecenia ML.NET
 
@@ -309,7 +309,7 @@ Plik modelu ML.NET (. Plik ZIP) będzie mieć taką samą nazwę, jak również.
 
 ## <a name="output-path"></a>Ścieżka wyjściowa
 
-`--output-path | -o`parametry
+`--output | -o`parametry
 
 Główna lokalizacja/folder, w którym mają zostać umieszczone wygenerowane dane wyjściowe. Ustawieniem domyślnym jest bieżący katalog.
 
@@ -333,7 +333,7 @@ Domyślnie narzędzie interfejsu wiersza polecenia powinno pokazać pewną minim
 
 Drukuje pomoc dla polecenia z opisem dla każdego parametru polecenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Jak zainstalować narzędzie interfejsu wiersza polecenia ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Przegląd interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)

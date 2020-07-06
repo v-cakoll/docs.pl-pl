@@ -10,22 +10,25 @@
       items:
         - name: Obiekty główne i obiekty tożsamości
           href: principal-and-identity-objects.md
-        - name: 'Porady: tworzenie obiektu WindowsPrincipal'
+        - name: 'Instrukcje: Tworzenie obiektu WindowsPrincipal'
           href: how-to-create-a-windowsprincipal-object.md
-        - name: 'Porady: tworzenie obiektów GenericPrincipal i GenericIdentity'
+        - name: 'Instrukcje: Tworzenie obiektów GenericPrincipal i GenericIdentity'
           href: how-to-create-genericprincipal-and-genericidentity-objects.md
         - name: Zastępowanie obiektu głównego
           href: replacing-a-principal-object.md
         - name: Personifikacja i przywracanie
           href: impersonating-and-reverting.md
     - name: Model kryptografii
-      href: cryptography-model.md
       items:
+        - name: Omówienie
+          href: cryptography-model.md
+        - name: Kryptografia międzyplatformowa
+          href: cross-platform-cryptography.md
         - name: Usługi kryptograficzne
           href: cryptographic-services.md
         - name: Generowanie kluczy szyfrowania i odszyfrowywania
           href: generating-keys-for-encryption-and-decryption.md
-        - name: 'Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy'
+        - name: 'Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy'
           href: how-to-store-asymmetric-keys-in-a-key-container.md
         - name: Szyfrowanie danych
           href: encrypting-data.md
@@ -37,27 +40,27 @@
           href: ensuring-data-integrity-with-hash-codes.md
         - name: Tworzenie schematu kryptograficznego
           href: creating-a-cryptographic-scheme.md
-        - name: 'Porady: szyfrowanie elementów XML przy użyciu kluczy symetrycznych'
+        - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych'
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-        - name: 'Porady: odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
           href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-        - name: 'Porady: szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
+        - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
           href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-        - name: 'Porady: odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych'
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych'
           href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-        - name: 'Porady: szyfrowanie elementów XML za pomocą certyfikatów X.509'
+        - name: 'Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509'
           href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-        - name: 'Porady: odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
           href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-        - name: 'Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
+        - name: 'Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
           href: how-to-sign-xml-documents-with-digital-signatures.md
-        - name: 'Porady: sprawdzanie podpisów cyfrowych w dokumentach XML'
+        - name: 'Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML'
           href: how-to-verify-the-digital-signatures-of-xml-documents.md
-        - name: 'Porady: stosowanie ochrony danych'
+        - name: 'Instrukcje: Stosowanie ochrony danych'
           href: how-to-use-data-protection.md
-        - name: 'Porady: dostęp do sprzętowych urządzeń szyfrujących'
+        - name: 'Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących'
           href: how-to-access-hardware-encryption-devices.md
-        - name: 'Wskazówki: tworzenie aplikacji kryptograficznej'
+        - name: 'Przewodnik: Tworzenie aplikacji kryptograficznej'
           href: walkthrough-creating-a-cryptographic-application.md
     - name: Wytyczne dotyczące bezpiecznego programowania
       href: secure-coding-guidelines.md

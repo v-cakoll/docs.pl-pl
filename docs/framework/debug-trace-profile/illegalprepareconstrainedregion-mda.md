@@ -1,5 +1,6 @@
 ---
 title: illegalPrepareConstrainedRegion MDA
+description: Zapoznaj się z asystentem debugowania zarządzanego przez illegalPrepareConstrainedRegion, który jest wywoływany, gdy wywołanie PrepareConstrainedRegions nie poprzedza instrukcji try.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrepareConstrainedRegions method
@@ -8,32 +9,31 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: d6a0d1d95840ebd735806c5547730ae9e0b2aace
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216461"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051288"
 ---
-# <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="ae3dc-102">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="ae3dc-102">illegalPrepareConstrainedRegion MDA</span></span>
-<span data-ttu-id="ae3dc-103">Asystent debugowania zarządzanego `illegalPrepareConstrainedRegion` (MDA) jest uaktywniany, gdy wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> nie poprzedza bezpośrednio instrukcji `try` programu obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-103">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="ae3dc-104">To ograniczenie jest na poziomie MSIL, dlatego można mieć źródło, które nie umożliwia generowania kodu między wywołaniem i `try`, takie jak komentarze.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-104">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  
+# <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="e8a35-103">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="e8a35-103">illegalPrepareConstrainedRegion MDA</span></span>
+<span data-ttu-id="e8a35-104">`illegalPrepareConstrainedRegion`Asystent debugowania zarządzanego (MDA) jest uaktywniany, gdy <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> wywołanie metody nie poprzedza bezpośrednio instrukcji programu `try` obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="e8a35-104">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="e8a35-105">To ograniczenie jest na poziomie MSIL, dlatego można mieć źródło, które nie umożliwia generowania kodu między wywołaniem i `try` , takimi jak komentarze.</span><span class="sxs-lookup"><span data-stu-id="e8a35-105">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="ae3dc-105">Objawy</span><span class="sxs-lookup"><span data-stu-id="ae3dc-105">Symptoms</span></span>  
- <span data-ttu-id="ae3dc-106">Ograniczony region wykonywania (CER), który nigdy nie jest traktowany jak taki, ale jako prosty blok obsługi wyjątków (`finally` lub `catch`).</span><span class="sxs-lookup"><span data-stu-id="ae3dc-106">A constrained execution region (CER) that is never treated as such, but as a simple exception handling block (`finally` or `catch`).</span></span> <span data-ttu-id="ae3dc-107">W związku z tym region nie jest uruchamiany w przypadku warunku braku pamięci lub przerwania wątku.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-107">As a consequence, the region does not run in the event of an out-of-memory condition or a thread abort.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="e8a35-106">Objawy</span><span class="sxs-lookup"><span data-stu-id="e8a35-106">Symptoms</span></span>  
+ <span data-ttu-id="e8a35-107">Ograniczony region wykonywania (CER), który nigdy nie jest traktowany jak taki, ale jako prosty blok obsługi wyjątków ( `finally` lub `catch` ).</span><span class="sxs-lookup"><span data-stu-id="e8a35-107">A constrained execution region (CER) that is never treated as such, but as a simple exception handling block (`finally` or `catch`).</span></span> <span data-ttu-id="e8a35-108">W związku z tym region nie jest uruchamiany w przypadku warunku braku pamięci lub przerwania wątku.</span><span class="sxs-lookup"><span data-stu-id="e8a35-108">As a consequence, the region does not run in the event of an out-of-memory condition or a thread abort.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="ae3dc-108">Przyczyna</span><span class="sxs-lookup"><span data-stu-id="ae3dc-108">Cause</span></span>  
- <span data-ttu-id="ae3dc-109">Wzorzec przygotowania dla programu CER nie działa poprawnie.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-109">The preparation pattern for a CER is not followed correctly.</span></span>  <span data-ttu-id="ae3dc-110">Jest to zdarzenie błędu.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-110">This is an error event.</span></span> <span data-ttu-id="ae3dc-111">Wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> używane do oznaczania procedur obsługi wyjątków jako przedstawiające CER w ich `catch`/`finally`/`fault`/`filter` bloków należy używać bezpośrednio przed instrukcją `try`.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-111">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call used to mark exception handlers as introducing a CER in their `catch`/`finally`/`fault`/`filter` blocks must be used immediately before the `try` statement.</span></span>  
+## <a name="cause"></a><span data-ttu-id="e8a35-109">Przyczyna</span><span class="sxs-lookup"><span data-stu-id="e8a35-109">Cause</span></span>  
+ <span data-ttu-id="e8a35-110">Wzorzec przygotowania dla programu CER nie działa poprawnie.</span><span class="sxs-lookup"><span data-stu-id="e8a35-110">The preparation pattern for a CER is not followed correctly.</span></span>  <span data-ttu-id="e8a35-111">Jest to zdarzenie błędu.</span><span class="sxs-lookup"><span data-stu-id="e8a35-111">This is an error event.</span></span> <span data-ttu-id="e8a35-112"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>Wywołanie metody używane do oznaczania procedur obsługi wyjątków, które wprowadza CER w swoich `catch` / `finally` / `fault` / `filter` blokach, musi być używane bezpośrednio przed `try` instrukcją.</span><span class="sxs-lookup"><span data-stu-id="e8a35-112">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call used to mark exception handlers as introducing a CER in their `catch`/`finally`/`fault`/`filter` blocks must be used immediately before the `try` statement.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="ae3dc-112">Rozwiązanie</span><span class="sxs-lookup"><span data-stu-id="ae3dc-112">Resolution</span></span>  
- <span data-ttu-id="ae3dc-113">Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> następuje bezpośrednio przed instrukcją `try`.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-113">Ensure that the call to <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> happens immediately before the `try` statement.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="e8a35-113">Rozwiązanie</span><span class="sxs-lookup"><span data-stu-id="e8a35-113">Resolution</span></span>  
+ <span data-ttu-id="e8a35-114">Upewnij się, że wywołanie jest <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> wykonywane bezpośrednio przed `try` instrukcją.</span><span class="sxs-lookup"><span data-stu-id="e8a35-114">Ensure that the call to <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> happens immediately before the `try` statement.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="ae3dc-114">Wpływ na środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="ae3dc-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="ae3dc-115">To zdarzenie MDA nie ma wpływu na środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-115">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="e8a35-115">Wpływ na środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="e8a35-115">Effect on the Runtime</span></span>  
+ <span data-ttu-id="e8a35-116">To zdarzenie MDA nie ma wpływu na środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="e8a35-116">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="ae3dc-116">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="ae3dc-116">Output</span></span>  
- <span data-ttu-id="ae3dc-117">MDA Wyświetla nazwę metody wywołującej metodę <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, przesunięcie MSIL i komunikat wskazujący, że wywołanie nie następuje bezpośrednio przed początkiem bloku try.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-117">The MDA displays the name of the method calling the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method, the MSIL offset, and a message indicating the call does not immediately precede the beginning of the try block.</span></span>  
+## <a name="output"></a><span data-ttu-id="e8a35-117">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="e8a35-117">Output</span></span>  
+ <span data-ttu-id="e8a35-118">MDA Wyświetla nazwę metody wywołującej <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metodę, przesunięcie MSIL i komunikat wskazujący, że wywołanie nie następuje bezpośrednio przed początkiem bloku try.</span><span class="sxs-lookup"><span data-stu-id="e8a35-118">The MDA displays the name of the method calling the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method, the MSIL offset, and a message indicating the call does not immediately precede the beginning of the try block.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="ae3dc-118">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="ae3dc-118">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="e8a35-119">Konfigurowanie</span><span class="sxs-lookup"><span data-stu-id="e8a35-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -43,8 +43,8 @@ ms.locfileid: "77216461"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ae3dc-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="ae3dc-119">Example</span></span>  
- <span data-ttu-id="ae3dc-120">Poniższy przykład kodu demonstruje wzorzec, który powoduje aktywowanie tego MDA.</span><span class="sxs-lookup"><span data-stu-id="ae3dc-120">The following code example demonstrates the pattern that causes this MDA to be activated.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8a35-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="e8a35-120">Example</span></span>  
+ <span data-ttu-id="e8a35-121">Poniższy przykład kodu demonstruje wzorzec, który powoduje aktywowanie tego MDA.</span><span class="sxs-lookup"><span data-stu-id="e8a35-121">The following code example demonstrates the pattern that causes this MDA to be activated.</span></span>  
   
 ```csharp
 void MethodWithInvalidPCR()  
@@ -62,9 +62,9 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae3dc-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ae3dc-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8a35-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e8a35-122">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
-- [<span data-ttu-id="ae3dc-122">Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania</span><span class="sxs-lookup"><span data-stu-id="ae3dc-122">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="ae3dc-123">Marshaling międzyoperacyjny</span><span class="sxs-lookup"><span data-stu-id="ae3dc-123">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="e8a35-123">Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania</span><span class="sxs-lookup"><span data-stu-id="e8a35-123">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="e8a35-124">Organizowanie międzyoperacyjne</span><span class="sxs-lookup"><span data-stu-id="e8a35-124">Interop Marshaling</span></span>](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
+description: Użyj klasy TraceSource i filtrów z odbiornikami śledzenia w programie .NET. TraceSource zastępuje metody statyczne starszych klas śledzenia i debugowania.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,21 +15,20 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181815"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051262"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia
-Jedną z nowych funkcji w .NET Framework w wersji 2.0 jest ulepszony system śledzenia. Podstawowe założenie pozostaje niezmienione: komunikaty śledzenia są wysyłane za pośrednictwem przełączników do odbiorników, które zgłaszają dane do skojarzonego nośnika wyjściowego. Podstawową różnicą dla wersji 2.0 jest to, że <xref:System.Diagnostics.TraceSource> ślady mogą być inicjowane za pośrednictwem wystąpień klasy. <xref:System.Diagnostics.TraceSource>jest przeznaczony do działania jako ulepszony system śledzenia i może być stosowany <xref:System.Diagnostics.Trace> zamiast <xref:System.Diagnostics.Debug> metod statycznych starszych i klas śledzenia. Znane <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy nadal istnieją, ale zalecaną <xref:System.Diagnostics.TraceSource> praktyką jest użycie klasy do śledzenia.  
+Jedną z nowych funkcji w .NET Framework wersja 2,0 to udoskonalony system śledzenia. Podstawowa lokalna jest niezmieniona: komunikaty śledzenia są wysyłane przez przełączniki do odbiorników, które raportują dane na skojarzonym nośniku wyjściowym. Podstawową różnicą w wersji 2,0 jest to, że ślady mogą być inicjowane za pomocą wystąpień <xref:System.Diagnostics.TraceSource> klasy. <xref:System.Diagnostics.TraceSource>jest przeznaczony do działania jako udoskonalony system śledzenia i może być używany zamiast metod statycznych starszych <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> śledzenia klas. Znane <xref:System.Diagnostics.Trace> i podobne <xref:System.Diagnostics.Debug> klasy nadal istnieją, ale zalecane jest użycie <xref:System.Diagnostics.TraceSource> klasy do śledzenia.  
   
- W tym temacie opisano <xref:System.Diagnostics.TraceSource> użycie pliku konfiguracji aplikacji w połączeniu z plikiem.  Jest możliwe, choć nie zalecane, <xref:System.Diagnostics.TraceSource> do śledzenia przy użyciu bez użycia pliku konfiguracyjnego. Aby uzyskać informacje na temat śledzenia bez pliku konfiguracyjnego, zobacz [Jak: Tworzenie i inicjowanie źródeł śledzenia](how-to-create-and-initialize-trace-sources.md).  
+ W tym temacie opisano sposób użycia programu w <xref:System.Diagnostics.TraceSource> połączeniu z plikiem konfiguracji aplikacji.  Jest to możliwe, chociaż nie jest to zalecane, do śledzenia przy użyciu a <xref:System.Diagnostics.TraceSource> bez użycia pliku konfiguracji. Informacje dotyczące śledzenia bez pliku konfiguracji znajdują się w temacie [How to: Create and Initialize Source TRACES](how-to-create-and-initialize-trace-sources.md).  
   
-### <a name="to-create-and-initialize-your-trace-source"></a>Aby utworzyć i zainicjować źródło śledzenia  
+### <a name="to-create-and-initialize-your-trace-source"></a>Aby utworzyć i zainicjować Źródło śledzenia  
   
-1. Pierwszym krokiem do instrumentowania aplikacji z śledzenia jest utworzenie źródła śledzenia. W dużych projektach z różnymi składnikami można utworzyć oddzielne źródło śledzenia dla każdego składnika. Zalecaną praktyką jest użycie nazwy aplikacji dla nazwy źródła śledzenia. Ułatwi to oddzielanie różnych śladów. Poniższy kod tworzy nowe`mySource)` źródło śledzenia (`Activity1`i wywołuje metodę ( ), która śledzi zdarzenia.  Komunikaty śledzenia są zapisywane przez domyślny odbiornik śledzenia.  
+1. Pierwszym krokiem do Instrumentacji aplikacji przy użyciu funkcji śledzenia jest utworzenie źródła śledzenia. W dużych projektach z różnymi składnikami można utworzyć oddzielne źródło śledzenia dla każdego składnika. Zalecanym sposobem jest użycie nazwy aplikacji dla nazwy źródła śledzenia. Ułatwi to zachowanie różnych śladów. Poniższy kod tworzy nowe źródło śledzenia ( `mySource)` i wywołuje metodę ( `Activity1` ), która śledzi zdarzenia.  Komunikaty śledzenia są zapisywane przez domyślny odbiornik śledzenia.  
   
     ```csharp
     using System;  
@@ -58,9 +58,9 @@ Jedną z nowych funkcji w .NET Framework w wersji 2.0 jest ulepszony system śle
     }  
     ```  
   
-### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Aby utworzyć i zainicjować detektory śledzenia i filtry  
+### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Aby tworzyć i inicjować detektory i filtry śledzenia  
   
-1. Kod w pierwszej procedurze nie programowo zidentyfikować żadnych detektorów śledzenia lub filtrów. Sam kod powoduje, że komunikaty śledzenia są zapisywane do domyślnego odbiornika śledzenia. Aby skonfigurować określone detektory śledzenia i skojarzone z nimi filtry, należy edytować plik konfiguracyjny odpowiadający nazwie aplikacji. W tym pliku można dodać lub usunąć odbiornika, ustawić właściwości i filtr dla odbiornika lub usunąć odbiorniki. W poniższym przykładzie pliku konfiguracji pokazano, jak zainicjować odbiornik śledzenia konsoli i odbiornik śledzenia modułu zapisującego tekst dla źródła śledzenia, który jest tworzony w poprzedniej procedurze. Oprócz konfigurowania odbiorników śledzenia plik konfiguracyjny tworzy filtry dla obu odbiorników i tworzy przełącznik źródłowy dla źródła śledzenia. Dwie techniki są wyświetlane do dodawania detektorów śledzenia: dodawanie odbiornika bezpośrednio do źródła śledzenia i dodawanie odbiornika do kolekcji odbiorników udostępnionych, a następnie dodanie go według nazwy do źródła śledzenia. Filtry zidentyfikowane dla dwóch odbiorników są inicjowane z różnych poziomów źródła. Powoduje to, że niektóre wiadomości są zapisywane przez tylko jednego z dwóch odbiorników.  
+1. Kod w pierwszej procedurze nie identyfikuje programowo żadnych detektorów ani filtrów śledzenia. Sam kod skutkuje zapisaniem komunikatów śledzenia w domyślnym odbiorniku śledzenia. Aby skonfigurować określone detektory śledzenia i powiązane z nimi filtry, należy edytować plik konfiguracji, który odnosi się do nazwy aplikacji. W tym pliku można dodać lub usunąć odbiornik, ustawić właściwości i filtr dla odbiornika lub usunąć detektory. Poniższy przykład pliku konfiguracji pokazuje, jak zainicjować odbiornik śledzenia konsoli i odbiornik śledzenia tekstu składnika zapisywania dla źródła śledzenia, które zostało utworzone w poprzedniej procedurze. Oprócz konfigurowania detektorów śledzenia, plik konfiguracji tworzy filtry dla obu odbiorników i tworzy przełącznik źródła dla źródła śledzenia. Dwie techniki są pokazane w przypadku dodawania detektorów śledzenia: dodanie odbiornika bezpośrednio do źródła śledzenia i dodanie odbiornika do kolekcji udostępnionych odbiorników, a następnie dodanie go według nazwy do źródła śledzenia. Filtry zidentyfikowane dla dwóch odbiorników są inicjowane z różnymi poziomami źródła. Powoduje to, że niektóre komunikaty są zapisywane tylko przez jeden z dwóch odbiorników.  
   
     ```xml  
     <configuration>  
@@ -97,7 +97,7 @@ Jedną z nowych funkcji w .NET Framework w wersji 2.0 jest ulepszony system śle
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Aby zmienić poziom, na którym odbiornik zapisuje komunikat śledzenia  
   
-1. Plik konfiguracyjny inicjuje ustawienia źródła śledzenia w momencie zainicjowania aplikacji. Aby zmienić te ustawienia, należy zmienić plik konfiguracyjny i <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu tej metody. Aplikacja może dynamicznie zmieniać właściwości ustawione przez plik konfiguracyjny, aby zastąpić wszystkie ustawienia określone przez użytkownika.  Na przykład można zapewnić, że wiadomości krytyczne są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji.  
+1. Plik konfiguracji inicjuje ustawienia dla źródła śledzenia w momencie zainicjowania aplikacji. Aby zmienić te ustawienia, należy zmienić plik konfiguracji i ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> metody. Aplikacja może dynamicznie zmieniać właściwości ustawiane przez plik konfiguracji w celu zastąpienia wszelkich ustawień określonych przez użytkownika.  Na przykład możesz chcieć zapewnić, że komunikaty krytyczne są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji.  
   
     ```csharp
     using System;  
@@ -161,7 +161,7 @@ Jedną z nowych funkcji w .NET Framework w wersji 2.0 jest ulepszony system śle
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

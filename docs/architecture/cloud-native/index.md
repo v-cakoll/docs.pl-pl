@@ -3,12 +3,11 @@ title: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy A
 description: Przewodnik tworzenia aplikacji natywnych w chmurze wykorzystujących kontenery, mikrousługi i funkcje bezserwerowe platformy Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: MT
+ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144386"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051509"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure
 
@@ -81,10 +80,10 @@ Ten przewodnik rozpoczyna się od zdefiniowania natywnej chmury i wprowadzenia a
 - Skalowanie i skalowalność
 - Odporność aplikacji
 - Monitorowanie i kondycja
-- Tożsamość i zabezpieczenia
+- Obsługa tożsamości i zabezpieczeń
 - DevOps
 
-Ten przewodnik jest dostępny zarówno w formacie PDF, jak i w trybie online. Możesz przesłać dalej ten dokument lub linki do swojej wersji online swojego zespołu, aby pomóc w zapewnieniu powszechnego poznania się z tymi tematami. Większość z tych tematów korzysta ze spójnych zasad i wzorców, a także tych, których dotyczą decyzje związane z tymi tematami. Naszym celem tego dokumentu jest wyposażenie zespołów i ich liderów z informacjami potrzebnymi do podejmowania świadomych decyzji o architekturze, programowaniu i hostingu aplikacji.
+Ten przewodnik jest dostępny zarówno w formacie [PDF](https://dotnet.microsoft.com/download/e-book/cloud-native-azure/pdf) , jak i w trybie online. Możesz przesłać dalej ten dokument lub linki do swojej wersji online swojego zespołu, aby pomóc w zapewnieniu powszechnego poznania się z tymi tematami. Większość z tych tematów korzysta ze spójnych zasad i wzorców, a także tych, których dotyczą decyzje związane z tymi tematami. Naszym celem tego dokumentu jest wyposażenie zespołów i ich liderów z informacjami potrzebnymi do podejmowania świadomych decyzji o architekturze, programowaniu i hostingu aplikacji.
 
 ## <a name="send-your-feedback"></a>Wyślij opinię
 

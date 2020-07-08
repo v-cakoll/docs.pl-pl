@@ -4,12 +4,11 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378318"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051455"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -88,7 +87,7 @@ Poniższa tabela zawiera podsumowanie różnych dyrektyw Razor używanych w Blaz
 |`@namespace` |Ustawia przestrzeń nazw dla składnika|`@namespace MyNamespace`|Brak|
 |`@page`      |Określa trasę dla składnika|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Określa parametr typu ogólnego dla składnika|`@typeparam TItem`|Użyj kodu|
-|`@using`     |Określa przestrzeń nazw do dołączenia do zakresu|`@using MyComponentNamespace`|Dodaj przestrzeń nazw w *pliku Web. config*|
+|`@using`     |Określa przestrzeń nazw do dołączenia do zakresu|`@using MyComponentNamespace`|Dodaj przestrzeń nazw w *web.config*|
 
 Składniki Razor również dzielą użycie *atrybutów dyrektywy* dla elementów w celu kontrolowania różnych aspektów kompilowania składników (obsługa zdarzeń, powiązanie danych, składnik & odwołań elementów itp.). Atrybuty dyrektywy All są zgodne ze wspólną składnią ogólną, w której wartości w nawiasach są opcjonalne:
 
@@ -110,7 +109,7 @@ Różne atrybuty dyrektywy używane przez Blazor ( `@onclick` , `@bind` ,, `@ref
 
 Wiele składni używanych w plikach *. aspx* i *. ascx* ma składnie równoległe w Razor. Poniżej znajduje się proste porównanie składni dla ASP.NET Web Forms i Razor.
 
-|Funkcja                      |Formularze sieci Web           |Składnia               |Razor         |Składnia |
+|Cecha                      |Formularze sieci Web           |Składnia               |Razor         |Składnia |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Dyrektyw                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Bloki kodu                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Oprócz normalnego HTML składniki mogą również używać innych składników 
 W przeciwieństwie do ASP.NET formularzy sieci Web, składników w Blazor:
 
 - Nie używaj prefiksu elementu (na przykład `asp:` ).
-- Nie wymagaj rejestracji na stronie lub w *pliku Web. config*.
+- Nie wymagaj rejestracji na stronie ani w *web.config*.
 
 Należy wziąć pod uwagę składniki Razor, takie jak typy .NET, ponieważ dokładnie te elementy są. Jeśli zestaw zawierający składnik jest przywoływany, składnik jest dostępny do użycia. Aby przenieść przestrzeń nazw składnika do zakresu, Zastosuj `@using` dyrektywę:
 
@@ -602,8 +601,8 @@ Dane wyjściowe tego składnika wyglądają następująco:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 
@@ -639,7 +638,7 @@ public class CounterBase : ComponentBase
 
 Widoczność elementów członkowskich składnika w klasie bazowej musi być `protected` lub `public` widoczna dla klasy składnika.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
 Powyższe nie jest wyczerpujące dla wszystkich aspektów składników Blazor. Aby uzyskać więcej informacji na temat [tworzenia i używania ASP.NET Core składników Razor](/aspnet/core/blazor/components), zapoznaj się z dokumentacją Blazor.
 

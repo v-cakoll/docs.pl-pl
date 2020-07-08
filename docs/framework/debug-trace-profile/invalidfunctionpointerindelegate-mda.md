@@ -1,5 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate MDA
+description: Przejrzyj invalidFunctionPointerInDelegate Managed Debug Assistant (MDA), który jest wywoływany w przypadku przekazania nieprawidłowego wskaźnika funkcji do obiektu delegowanego.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217379"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051743"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-Asystent debugowania zarządzanego `invalidFunctionPointerInDelegate` (MDA) jest uaktywniany po przekazaniu nieprawidłowego wskaźnika funkcji do konstruowania delegata przez wskaźnik funkcji natywnej.  
+`invalidFunctionPointerInDelegate`Asystent debugowania zarządzanego (MDA) jest uaktywniany po przekazaniu nieprawidłowego wskaźnika funkcji do konstruowania delegata przez wskaźnik funkcji natywnej.  
   
 ## <a name="symptoms"></a>Objawy  
  Naruszenia zasad dostępu lub nieoczekiwane uszkodzenie pamięci podczas używania delegata na wskaźniku funkcji.  
@@ -36,7 +36,7 @@ Asystent debugowania zarządzanego `invalidFunctionPointerInDelegate` (MDA) jest
 ## <a name="output"></a>Dane wyjściowe  
  Nieprawidłowy wskaźnik funkcji.  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -46,8 +46,8 @@ Asystent debugowania zarządzanego `invalidFunctionPointerInDelegate` (MDA) jest
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

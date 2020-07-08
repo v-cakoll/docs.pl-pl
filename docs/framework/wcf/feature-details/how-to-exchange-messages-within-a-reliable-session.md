@@ -2,12 +2,11 @@
 title: 'Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579479"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052042"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
 
@@ -27,13 +26,13 @@ Aby uzyskać kopię źródła tego przykładu, zobacz temat [Niezawodna sesja WS
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Utwórz plik *Web. config* , aby skonfigurować punkt końcowy dla programu `CalculatorService` , który korzysta z <xref:System.ServiceModel.WSHttpBinding> włączonej niezawodnej sesji z włączoną obsługą i uporządkowane dostarczanie komunikatów.
+1. Utwórz plik *Web.config* , aby skonfigurować punkt końcowy dla programu `CalculatorService` , który korzysta z <xref:System.ServiceModel.WSHttpBinding> włączonego niezawodnej sesji i zamówionego dostarczania komunikatów.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. Utwórz plik *usługi SVC* , który zawiera wiersz:
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ Aby uzyskać kopię źródła tego przykładu, zobacz temat [Niezawodna sesja WS
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie klienta z WSHttpBinding do korzystania z niezawodnej sesji
 
-1. Użyj [Narzędzia metadanych ServiceModel (*Svcutil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi:
+1. Użyj [Narzędzia metadanych ServiceModel (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ Aby uzyskać kopię źródła tego przykładu, zobacz temat [Niezawodna sesja WS
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil. exe* generuje również konfigurację dla klienta, który używa <xref:System.ServiceModel.WSHttpBinding> klasy. Nazwij plik konfiguracji *App. config* podczas korzystania z programu Visual Studio.
+1. *Svcutil.exe* również generuje konfigurację dla klienta, który używa <xref:System.ServiceModel.WSHttpBinding> klasy. Nazwij plik konfiguracji *App.config* podczas korzystania z programu Visual Studio.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -67,7 +66,7 @@ Aby uzyskać kopię źródła tego przykładu, zobacz temat [Niezawodna sesja WS
 
 ## <a name="example"></a>Przykład
 
-Niektóre powiązania dostarczone przez system domyślnie obsługują niezawodne sesje. Należą do nich następujące elementy:
+Niektóre powiązania dostarczone przez system domyślnie obsługują niezawodne sesje. Są to moduły:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -77,6 +76,6 @@ Niektóre powiązania dostarczone przez system domyślnie obsługują niezawodne
 
 Aby zapoznać się z przykładem tworzenia niestandardowego powiązania, które obsługuje niezawodne sesje, zobacz [How to: Create an Custom niezawodnej sesji powiązania z protokołem HTTPS](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Niezawodne sesje](reliable-sessions.md)

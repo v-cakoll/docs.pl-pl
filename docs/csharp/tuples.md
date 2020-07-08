@@ -4,12 +4,11 @@ description: 'Dowiedz się więcej o nazwach i nazwanych typach krotek w C #'
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 0fb6f043857a9932b7a86f773cce812e0fd49dcb
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374619"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051860"
 ---
 # <a name="c-tuple-types"></a>Typy krotek języka C#
 
@@ -46,7 +45,7 @@ Te nazwy są jedynymi nazwami, których można używać w przypadku *krotek nien
 Krotka w poprzednim przykładzie została zainicjowana przy użyciu stałych literałów i nie ma nazw elementów utworzonych przy użyciu *projekcji nazw pól krotki* w języku C# 7,1.
 
 Jednak po zainicjowaniu krotki można użyć nowych funkcji języka, które zapewniają lepsze nazwy dla każdego pola. Spowoduje to utworzenie *nazwanej krotki*.
-Nazwane krotki nadal mają elementy o nazwie `Item1` , `Item2` `Item3` i tak dalej.
+Nazwane krotki nadal mają elementy o nazwie `Item1` , `Item2` , `Item3` i tak dalej.
 Ale mają także synonimy dla dowolnego z tych elementów, które mają nazwę.
 Tworzysz nazwaną krotek przez określenie nazw dla każdego elementu. Jednym ze sposobów jest określenie nazw jako części inicjowania krotki:
 
@@ -54,7 +53,7 @@ Tworzysz nazwaną krotek przez określenie nazw dla każdego elementu. Jednym ze
 
 Te synonimy są obsługiwane przez kompilator i język, dzięki czemu można efektywnie używać nazwanych krotek. Środowisk IDE i redaktorzy mogą odczytywać te nazwy semantyczne przy użyciu interfejsów API Roslyn. Można odwoływać się do elementów nazwanych krotek według tych nazw semantycznych w dowolnym miejscu w tym samym zestawie. Kompilator zastępuje nazwy zdefiniowane przy użyciu `Item*` odpowiedników podczas generowania skompilowanych danych wyjściowych. Skompilowany język pośredni firmy Microsoft (MSIL) nie zawiera nazw, które zostały podane przez Ciebie.
 
-Począwszy od języka C# 7,1, nazwy pól dla krotki mogą być dostarczone ze zmiennych używanych do inicjowania krotki. Jest to nazywane **[inicjatorami projekcji krotki](#tuple-projection-initializers)**. Poniższy kod tworzy krotkę o nazwie `accumulation` z elementami `count` (liczbą całkowitą) i `sum` (podwójną).
+Począwszy od języka C# 7,1, nazwy pól dla krotki mogą być dostarczone ze zmiennych używanych do inicjowania krotki. Dostarczanie nazw pól do krotek jest określane mianem **[inicjatorów projekcji krotki](#tuple-projection-initializers)**. Poniższy kod tworzy krotkę o nazwie `accumulation` z elementami `count` (liczbą całkowitą) i `sum` (podwójną).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -114,7 +113,7 @@ Jest to błąd czasu kompilacji służący do porównywania dwóch krotek w celu
 
 ## <a name="assignment-and-tuples"></a>Przypisanie i krotki
 
-Język obsługuje przypisanie między typami krotek, które mają taką samą liczbę elementów, gdzie każdy element po prawej stronie może być niejawnie konwertowany do odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są brane pod uwagę w przypisaniach. Jest to błąd czasu kompilacji, aby przypisać jedną krotkę do innej, gdy mają różne kształty. Kompilator nie będzie podejmować próby odbudowy krotek zagnieżdżonych, aby je przypisać.
+Język obsługuje przypisanie między typami krotek, które mają taką samą liczbę elementów, gdzie każdy element po prawej stronie może być niejawnie konwertowany do odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są brane pod uwagę w przypisaniach. Jest to błąd czasu kompilacji, który umożliwia przypisanie jednej krotki do innej, gdy mają różne kształty. Kompilator nie będzie podejmować próby odbudowy krotek zagnieżdżonych, aby je przypisać.
 Przyjrzyjmy się typom przypisań, które są dozwolone między typami krotek.
 
 Należy wziąć pod uwagę te zmienne, które są używane w następujących przykładach:
@@ -147,7 +146,7 @@ Jednym z najpopularniejszych zastosowania krotek jest jako wartość zwracana pr
 
 > [!NOTE]
 > Te przykłady obliczają Niepoprawione odchylenie standardowe próbki.
-> Skorygowana formuła przykładowego odchylenia standardowego podzieli sumę kwadratowych różnic od średniej przez (N-1), a nie N, jako `Average` metodę rozszerzenia. Zapoznaj się z tekstem statystyk, aby uzyskać szczegółowe informacje o różnicach między tymi formułami dotyczącymi odchylenia standardowego.
+> Skorygowana formuła przykładowego odchylenia standardowego podzieli sumę kwadratowych różnic od średniej przez (N-1), a nie N, jako `Average` metodę rozszerzenia.
 
 Poprzedni kod jest zgodny z formułą Textbook dla odchylenia standardowego. Tworzy poprawną odpowiedź, ale jest nieefektywną implementacją. Ta metoda wylicza dwa razy sekwencję: raz, aby utworzyć średnią, i raz, aby utworzyć średnią kwadratu różnicy średniej.
 (Należy pamiętać, że zapytania LINQ są oceniane opóźnieniem, więc obliczenie różnic między średnią i średnią z tych różnic powoduje tylko jedno Wyliczenie).

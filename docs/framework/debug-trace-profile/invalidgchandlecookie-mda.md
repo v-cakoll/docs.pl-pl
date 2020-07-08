@@ -1,5 +1,6 @@
 ---
 title: invalidGCHandleCookie MDA
+description: Przejrzyj invalidGCHandleCookie Managed Debug Assistant (MDA), który jest uaktywniany w przypadku próby konwersji z nieprawidłowego pliku cookie IntPtr na GCHandle.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid cookies
@@ -8,32 +9,31 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 1063b7be902d3063717b6639564d819ef3292c0e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216304"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051301"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
-Asystent debugowania zarządzanego `invalidGCHandleCookie` (MDA) jest aktywowany, gdy zostanie podjęta próba konwersji z nieprawidłowego <xref:System.IntPtr> pliku cookie na <xref:System.Runtime.InteropServices.GCHandle>.  
+`invalidGCHandleCookie`Asystent debugowania zarządzanego (MDA) jest aktywowany, gdy <xref:System.IntPtr> <xref:System.Runtime.InteropServices.GCHandle> zostanie podjęta próba konwersji z nieprawidłowego pliku cookie na plik.  
   
 ## <a name="symptoms"></a>Objawy  
- Niezdefiniowane zachowanie, takie jak naruszenia zasad dostępu i uszkodzenie pamięci podczas próby użycia lub pobrania <xref:System.Runtime.InteropServices.GCHandle> z <xref:System.IntPtr>.  
+ Niezdefiniowane zachowanie, takie jak naruszenia zasad dostępu i uszkodzenie pamięci podczas próby użycia lub pobrania <xref:System.Runtime.InteropServices.GCHandle> z <xref:System.IntPtr> .  
   
 ## <a name="cause"></a>Przyczyna  
- Plik cookie prawdopodobnie jest nieprawidłowy, ponieważ nie został pierwotnie utworzony na podstawie <xref:System.Runtime.InteropServices.GCHandle>, reprezentuje <xref:System.Runtime.InteropServices.GCHandle>, który został już zwolniony, jest plikiem cookie w <xref:System.Runtime.InteropServices.GCHandle> w innej domenie aplikacji lub został zorganizowany do kodu natywnego jako <xref:System.Runtime.InteropServices.GCHandle>, ale został przekierowany z powrotem do środowiska CLR jako <xref:System.IntPtr>, gdzie nastąpiło próba rzutowania.  
+ Plik cookie prawdopodobnie jest nieprawidłowy, ponieważ nie został pierwotnie utworzony z programu <xref:System.Runtime.InteropServices.GCHandle> , oznacza, <xref:System.Runtime.InteropServices.GCHandle> że został już zwolniony, jest plikiem cookie <xref:System.Runtime.InteropServices.GCHandle> w innej domenie aplikacji lub został zorganizowany do kodu natywnego jako a, ale został przekierowany z <xref:System.Runtime.InteropServices.GCHandle> powrotem do środowiska CLR jako <xref:System.IntPtr> , gdzie podjęto próbę wykonania rzutowania.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Określ prawidłowy plik cookie <xref:System.IntPtr> dla <xref:System.Runtime.InteropServices.GCHandle>.  
+ Określ prawidłowy <xref:System.IntPtr> plik cookie dla <xref:System.Runtime.InteropServices.GCHandle> .  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  Po włączeniu tego MDA debuger nie będzie już mógł śledzić katalogów głównych z powrotem do swoich obiektów, ponieważ wartości plików cookie przenoszone z powrotem różnią się od tych, które są zwracane, gdy MDA nie jest włączone.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Zgłoszono nieprawidłową wartość pliku cookie <xref:System.IntPtr>.  
+ <xref:System.IntPtr>Zgłoszono nieprawidłową wartość pliku cookie.  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +43,7 @@ Asystent debugowania zarządzanego `invalidGCHandleCookie` (MDA) jest aktywowany
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>

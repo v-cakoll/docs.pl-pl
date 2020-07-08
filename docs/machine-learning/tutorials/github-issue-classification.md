@@ -4,12 +4,11 @@ description: Dowiedz się, jak używać ML.NET w scenariuszu klasyfikacji wielok
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 5233924dab063fd1ba0232672613f9701f637385
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
-ms.translationtype: MT
+ms.openlocfilehash: d4ab7f0fcc6b582e74f54d3f0e60032696277249
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803732"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051548"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Samouczek: kategoryzowanie problemów pomocy technicznej przy użyciu klasyfikacji wieloklasowej z ML.NET
 

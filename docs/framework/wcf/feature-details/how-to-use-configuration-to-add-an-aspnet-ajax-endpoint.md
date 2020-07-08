@@ -2,12 +2,11 @@
 title: 'Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 0aa59ce04e09d700d853f213c6fc9d3a25cdb43b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601156"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051665"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji
 Windows Communication Foundation (WCF) umożliwia utworzenie usługi, która udostępnia punkt końcowy z obsługą technologii AJAX ASP.NET, który może być wywoływany z JavaScript w klienckiej witrynie sieci Web. Aby utworzyć taki punkt końcowy, możesz użyć pliku konfiguracji, tak jak w przypadku wszystkich innych punktów końcowych programu Windows Communication Foundation (WCF), lub użyć metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono podejście konfiguracyjne.  
@@ -90,7 +89,7 @@ Windows Communication Foundation (WCF) umożliwia utworzenie usługi, która udo
   
 1. Aby hostować usługę w usługach IIS, Utwórz nowy plik o nazwie usługa z rozszerzeniem SVC w aplikacji. Edytuj ten plik, dodając odpowiednie informacje o dyrektywie [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) dla usługi. Na przykład zawartość pliku usługi dla `CalculatorService` przykładu zawiera poniższe informacje.  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
     language=c#
     Debug="true"
@@ -104,7 +103,7 @@ Windows Communication Foundation (WCF) umożliwia utworzenie usługi, która udo
   
 1. Punkt końcowy jest skonfigurowany pod pustym adresem względem pliku SVC, więc usługa jest teraz dostępna i może być wywoływana przez wysyłanie żądań do usługi Service. svc/ \<operation> -na przykład Service. svc/Add dla `Add` operacji. Można go użyć, wprowadzając adres URL punktu końcowego do kolekcji skryptów kontrolki Menedżera skryptów AJAX ASP.NET. Aby zapoznać się z przykładem, zobacz [usługi AJAX przy użyciu protokołu HTTP Post](../samples/ajax-service-using-http-post.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie usług WCF w technologii AJAX na platformie ASP.NET](creating-wcf-services-for-aspnet-ajax.md)
 - [Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

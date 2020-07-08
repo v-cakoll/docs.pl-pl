@@ -2,12 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787803"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051366"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -15,7 +14,7 @@ Kojarzy fabrykę używaną do tworzenia hosta usługi z usługą, która ma być
 
 ## <a name="syntax"></a>Składnia
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -63,7 +62,7 @@ W miarę możliwości Zachowaj implementacje fabryk. Jeśli masz wiele logiki ni
 
 Na przykład, aby włączyć punkt końcowy z obsługą technologii AJAX dla programu `MyService` , należy określić jako <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> wartość `Factory` atrybutu zamiast domyślnego <xref:System.ServiceModel.Activation.ServiceHostFactory> , w `@ServiceHost` dyrektywie, jak pokazano w następującym przykładzie:
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"

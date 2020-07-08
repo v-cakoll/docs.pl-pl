@@ -8,17 +8,16 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396743"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051483"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Wskazówki: tworzenie obiektów COM z Visual Basic
 Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy .NET Framework. Jednak Visual Basic ułatwiają również uwidocznienie składnika .NET Framework w modelu COM. Pozwala to udostępnić nowe składniki dla wcześniejszych zestawów aplikacji, które wymagają składników COM. W tym instruktażu pokazano, jak za pomocą Visual Basic uwidocznić obiekty .NET Framework jako obiekty COM, zarówno z szablonem klasy COM, jak i bez niego.  
   
- Najprostszym sposobem uwidocznienia obiektów COM jest użycie szablonu klasy COM. Szablon klasy COM tworzy nową klasę, a następnie konfiguruje projekt w celu wygenerowania warstwy i współdziałania jako obiektu COM i zarejestrowania go w systemie operacyjnym.  
+ Najprostszym sposobem uwidocznienia obiektów COM jest użycie szablonu klasy COM. Ten szablon umożliwia utworzenie nowej klasy, a następnie skonfigurowanie projektu w celu wygenerowania klasy z warstwą współdziałania jako obiekt COM i zarejestrowanie go w systemie operacyjnym.  
   
 > [!NOTE]
 > Chociaż można również uwidocznić klasę utworzoną w Visual Basic jako obiekt COM dla niezarządzanego kodu do użycia, nie jest to prawdziwy obiekt COM i nie może być używany przez Visual Basic. Aby uzyskać więcej informacji, zobacz [współdziałanie com w aplikacjach .NET Framework](com-interoperability-in-net-framework-applications.md).  
@@ -90,7 +89,7 @@ Podczas tworzenia nowych aplikacji lub składników najlepiej utworzyć zestawy 
     > [!NOTE]
     > Obiekty COM generowane za pomocą Visual Basic nie mogą być używane przez inne aplikacje Visual Basic, ponieważ nie są one prawdziwymi obiektami COM. Próby dodania odwołań do takich obiektów COM spowodują wystąpienie błędu. Aby uzyskać szczegółowe informacje, zobacz [współdziałanie com w aplikacjach .NET Framework](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [Międzyoperacyjność modelu COM](index.md)

@@ -2,12 +2,11 @@
 title: 'Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5aade8e3fb2049521ed06f5f1a148be2e4636e36
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597114"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051938"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets
 Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikacji za pośrednictwem obiektów WebSockets.  Usługa WebSockets zostanie użyta, gdy <xref:System.ServiceModel.NetHttpBinding> określi kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi WCF i klienta, który używa programu <xref:System.ServiceModel.NetHttpBinding> do komunikacji za pośrednictwem usług WebSockets.  
@@ -257,7 +256,7 @@ namespace Server
 </configuration>  
 ```  
   
-```
+```aspx-csharp
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  
@@ -318,7 +317,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Operacje synchroniczne i asynchroniczne](../synchronous-and-asynchronous-operations.md)
 - [Używanie elementu NetHttpBinding](using-the-nethttpbinding.md)

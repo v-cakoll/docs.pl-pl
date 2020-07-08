@@ -2,12 +2,11 @@
 title: 'Instrukcje: Hostowanie usługi WCF w usłudze WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593116"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051990"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: Hostowanie usługi WCF w usłudze WAS
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktywacji procesów systemu Windows (znanych także jako usługa Windows Communication Foundation hostowanej usługi WCF). BYŁA to nowa usługa aktywacji procesów, która jest generalizacją funkcji Internet Information Services (IIS), które działają z protokołami transportu innym niż HTTP. Funkcja WCF używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez program WCF, takich jak TCP, nazwane potoki i kolejkowanie komunikatów.  
@@ -47,7 +46,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktyw
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. Utwórz plik Web. config, aby zdefiniować <xref:System.ServiceModel.NetTcpBinding> powiązanie, które ma być używane przez `CalculatorService` punkty końcowe.  
+3. Utwórz plik Web.config, aby zdefiniować <xref:System.ServiceModel.NetTcpBinding> powiązanie, które ma być używane przez `CalculatorService` punkty końcowe.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,7 +65,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktyw
   
 4. Utwórz plik Service. svc zawierający poniższy kod.  
   
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
   
@@ -74,7 +73,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktyw
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Aby utworzyć klienta do korzystania z usługi  
   
-1. Użyj [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi.  
+1. Użyj [Narzędzia Narzędzia metadanych ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) z wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -88,7 +87,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktyw
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. Konfiguracja klienta korzystającego z programu <xref:System.ServiceModel.NetTcpBinding> jest również generowana przez Svcutil. exe. Ten plik powinien mieć nazwę w pliku App. config w przypadku korzystania z programu Visual Studio.  
+4. Konfiguracja klienta korzystającego z programu <xref:System.ServiceModel.NetTcpBinding> jest również generowana przez Svcutil.exe. Ten plik powinien być nazwany w pliku App.config podczas korzystania z programu Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   
@@ -98,7 +97,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usług aktyw
   
 6. Kompiluj i uruchom klienta.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Aktywacja TCP](../samples/tcp-activation.md)
 - [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

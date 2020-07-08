@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 63549b85f7bcdd4f246005401694db8827248038
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
-ms.translationtype: MT
+ms.openlocfilehash: 2ba0ae7adedc3bf0e0ca0cb92b4205edc968a5d8
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246912"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052016"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Instrukcje: Hostowanie usługi WCF w programie IIS
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Windows Communication Foundation (WCF), która jest hostowana w usłudze Internet Information Services (IIS). W tym temacie założono, że znasz usługi IIS i wiesz, jak używać narzędzia do zarządzania usługami IIS do tworzenia aplikacji usług IIS i zarządzania nimi. Aby uzyskać więcej informacji na temat usług IIS, zobacz [Internet Information Services](https://www.iis.net/). Usługa WCF działająca w środowisku usług IIS pełni funkcję usług IIS, taką jak odtwarzanie procesów, zamykanie bezczynności, monitorowanie kondycji procesu i Aktywacja oparta na komunikatach. Ta opcja hostingu wymaga poprawnego skonfigurowania usług IIS, ale nie wymaga, aby żaden kod hostingu był zapisywana jako część aplikacji. Hostingu usług IIS można używać tylko z transportem HTTP.  
@@ -28,7 +27,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
   
 3. Utwórz nowy plik o nazwie "Service. svc" w katalogu aplikacji. Edytuj ten plik, dodając następujący @ServiceHost element.  
   
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
    ```  
   
@@ -76,7 +75,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)]
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Hostowanie przez Internetowe usługi informacyjne](hosting-in-internet-information-services.md)
 - [Usługi hostingowe](../hosting-services.md)

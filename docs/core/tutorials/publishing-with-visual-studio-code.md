@@ -4,6 +4,7 @@ description: Publikowanie tworzy zestaw plików, które są konieczne do uruchom
 ms.date: 07/04/2020
 ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051886"

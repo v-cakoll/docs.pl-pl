@@ -8,6 +8,7 @@ dev_langs:
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: 2ba0ae7adedc3bf0e0ca0cb92b4205edc968a5d8
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052016"
@@ -75,7 +76,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)]
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Hostowanie przez Internetowe usługi informacyjne](hosting-in-internet-information-services.md)
 - [Usługi hostingowe](../hosting-services.md)

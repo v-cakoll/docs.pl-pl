@@ -1,13 +1,16 @@
 ---
 title: Wybór między typami anonimowymi a kolekcjami
 description: Dowiedz się, kiedy należy wybrać typy anonimowe i typ krotki.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052081"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100967"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Wybór między typami anonimowymi a kolekcjami
 
@@ -120,7 +123,7 @@ Wydajność między tymi typami zależy od scenariusza. Istotny wpływ obejmuje 
 
 Jako deweloper wybierający między krotki a typami anonimowymi, istnieje kilka czynników, które należy wziąć pod uwagę. Ogólnie mówiąc, jeśli nie pracujesz z [drzewami wyrażeń](../../csharp/expression-trees.md)i masz doświadczenie ze składnią krotek, wybierz <xref:System.ValueTuple> jako wartość typ wartości z elastycznością do nazwy właściwości. Jeśli pracujesz z drzewami wyrażeń i wolisz nazwać właściwości, wybierz typy anonimowe. W przeciwnym razie użyj <xref:System.Tuple> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Typy anonimowe](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Drzewa wyrażeń](../../csharp/expression-trees.md)

@@ -10,6 +10,7 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051652"
@@ -40,7 +41,7 @@ ms.locfileid: "86051652"
 ## <a name="output"></a>Dane wyjściowe  
  Raport MDA, że zestaw został załadowany do `LoadFrom` kontekstu. Określa prostą nazwę zestawu i ścieżkę. Sugeruje również środki zaradcze, aby uniknąć korzystania z `LoadFrom` kontekstu.  
   
-## <a name="configuration"></a>Konfigurowanie  
+## <a name="configuration"></a>Konfiguracja  
   
 ```xml  
 <mdaConfig>  
@@ -70,6 +71,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

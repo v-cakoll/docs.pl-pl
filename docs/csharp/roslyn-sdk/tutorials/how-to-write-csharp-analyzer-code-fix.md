@@ -3,12 +3,12 @@ title: 'Samouczek: Napisz pierwszy Analizator i poprawkę kodu'
 description: Ten samouczek zawiera instrukcje krok po kroku dotyczące kompilowania analizatora i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396280"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100941"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Napisz pierwszy Analizator i poprawkę kodu
 
@@ -17,6 +17,25 @@ Zestaw SDK .NET Compiler Platform zawiera narzędzia potrzebne do tworzenia nies
 W tym samouczku przedstawiono tworzenie **analizatora** i dołączoną **poprawkę kodu** przy użyciu interfejsów API Roslyn. Analizator jest sposobem przeprowadzenia analizy kodu źródłowego i zgłoszenia problemu do użytkownika. Opcjonalnie Analizator może również dostarczyć poprawkę kodu, która reprezentuje modyfikację kodu źródłowego użytkownika. Ten samouczek tworzy Analizator, który wyszukuje deklaracje zmiennych lokalnych, które mogą być deklarowane przy użyciu `const` modyfikatora, ale nie są. Poprawka kodu towarzyszącego modyfikuje te deklaracje w celu dodania `const` modyfikatora.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
+
+> [!NOTE]
+> Bieżąca wersja programu Visual Studio **Analyzer z szablonem poprawki kodu (.NET standard)** zawiera znaną usterkę w nim i powinna zostać naprawiona w programie Visual Studio 2019 w wersji 16,7. Projekty w szablonie nie zostaną skompilowane, chyba że zostaną wykonane następujące zmiany:
+>
+> 1. Wybieranie **narzędzi**  >  **Opcje**narzędzia  >  **Menedżer pakietów NuGet**  >  **źródła pakietów**
+>    - Wybierz przycisk Plus, aby dodać nowe źródło:
+>    - Ustaw **Źródło** na `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` i wybierz pozycję **Aktualizuj**
+> 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **MakeConst. vsix** i wybierz polecenie **Edytuj plik projektu**
+>    - Zaktualizuj `<AssemblyName>` węzeł, aby dodać `.Visx` sufiks:
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - `<ProjectReference>`Aby zmienić wartość, zaktualizuj węzeł w wierszu 41 `TargetFramework` :
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. Zaktualizuj plik *MakeConstUnitTests.cs* w projekcie *MakeConst. test* :
+>    - Zmień wiersz 9 na następujący, Zauważ zmianę przestrzeni nazw:
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - Zmień wiersz 24 na następującą metodę:
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - Zmień wiersz 62 na następującą metodę:
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Analiza umożliwiająca ustalenie, czy zmienna może być stałą, jest uwzględ
 - W obszarze **rozszerzalność > Visual C#** wybierz opcję **Analizator z poprawkami kodu (.NET standard)**.
 - Nadaj projektowi nazwę "**MakeConst**" i kliknij przycisk OK.
 
-Analizator z szablonem poprawki kodu tworzy trzy projekty: jeden zawiera Analizator i poprawkę kodu, drugi jest projektem testu jednostkowego, a trzeci jest projektem VSIX. Domyślny projekt startowy jest projektem VSIX. Naciśnij klawisz **F5** , aby uruchomić projekt VSIX. Spowoduje to uruchomienie drugiego wystąpienia programu Visual Studio, które załadowało nowy Analizator.
+Analizator z szablonem poprawki kodu tworzy trzy projekty: jeden zawiera Analizator i poprawkę kodu, drugi jest projektem testu jednostkowego, a trzeci jest projektem VSIX. Domyślny projekt startowy jest projektem VSIX. Naciśnij klawisz <kbd>F5</kbd> , aby uruchomić projekt VSIX. Spowoduje to uruchomienie drugiego wystąpienia programu Visual Studio, które załadowało nowy Analizator.
 
 > [!TIP]
 > Po uruchomieniu analizatora zostanie rozpoczęta druga kopia programu Visual Studio. Druga kopia używa innej gałęzi rejestru do przechowywania ustawień. Pozwala to na odróżnienie ustawień wizualizacji w dwóch kopiach programu Visual Studio. Możesz wybrać inny motyw dla eksperymentalnego przebiegu programu Visual Studio. Ponadto nie należy przeroamingować ustawień ani zalogować się do konta programu Visual Studio przy użyciu eksperymentalnego przebiegu programu Visual Studio. Te ustawienia są inne.
@@ -170,7 +189,7 @@ Właśnie dodany kod gwarantuje, że zmienna nie jest modyfikowana i w związku 
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-Możesz sprawdzić postęp, naciskając klawisz **F5** , aby uruchomić Analizator. Możesz załadować utworzoną wcześniej aplikację konsolową, a następnie dodać następujący kod testu:
+Możesz sprawdzić postęp, naciskając klawisz <kbd>F5</kbd> , aby uruchomić Analizator. Możesz załadować utworzoną wcześniej aplikację konsolową, a następnie dodać następujący kod testu:
 
 ```csharp
 int x = 0;
@@ -251,7 +270,7 @@ Dodaj następujący kod na końcu `MakeConstAsync` metody:
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-Poprawka kodu jest gotowa do wypróbowania.  Naciśnij klawisz F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio. W drugim wystąpieniu programu Visual Studio Utwórz nowy projekt aplikacji konsolowej C# i Dodaj kilka lokalnych deklaracji zmiennych, które zostały zainicjowane z użyciem wartości stałych do metody Main. Zobaczysz, że są one raportowane jako ostrzeżenia poniżej.
+Poprawka kodu jest gotowa do wypróbowania.  Naciśnij klawisz <kbd>F5</kbd> , aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio. W drugim wystąpieniu programu Visual Studio Utwórz nowy projekt aplikacji konsolowej C# i Dodaj kilka lokalnych deklaracji zmiennych, które zostały zainicjowane z użyciem wartości stałych do metody Main. Zobaczysz, że są one raportowane jako ostrzeżenia poniżej.
 
 ![Może wprowadzać ostrzeżenia const](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ Poprzedni kod również wprowadził kilka zmian w kodzie, który kompiluje oczek
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Uruchom te dwa testy, aby upewnić się, że są one przekazywane. W programie Visual Studio Otwórz **Eksploratora testów** , wybierając kolejno pozycje **Testuj**  >  Eksplorator testów**systemu Windows**  >  **Test Explorer**.  Naciśnij link **Uruchom wszystko** .
+Uruchom te dwa testy, aby upewnić się, że są one przekazywane. W programie Visual Studio Otwórz **Eksploratora testów** , wybierając kolejno pozycje **Testuj**  >  Eksplorator testów**systemu Windows**  >  **Test Explorer**. Następnie wybierz łącze **Uruchom wszystko** .
 
 ## <a name="create-tests-for-valid-declarations"></a>Utwórz testy dla prawidłowych deklaracji
 
@@ -503,12 +522,12 @@ Musisz dodać jedną `using` dyrektywę, aby użyć <xref:Microsoft.CodeAnalysis
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Uruchom testy i wszystkie powinny być przekazywane. Congratulate siebie, uruchamiając gotowy Analizator. Naciśnij kombinację klawiszy CTRL + F5, aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio z załadowanym rozszerzeniem Roslyn Preview.
+Uruchom testy i wszystkie powinny być przekazywane. Congratulate siebie, uruchamiając gotowy Analizator. Naciśnij <kbd>kombinację klawiszy CTRL + F5</kbd> , aby uruchomić projekt analizatora w drugim wystąpieniu programu Visual Studio z załadowanym rozszerzeniem Roslyn Preview.
 
 - W drugim wystąpieniu programu Visual Studio Utwórz nowy projekt aplikacji konsolowej C# i Dodaj `int x = "abc";` go do metody Main. Z powodu pierwszej poprawki błędów nie należy podawać ostrzeżenia dla tej deklaracji zmiennej lokalnej (chociaż występuje błąd kompilatora w oczekiwany sposób).
 - Następnie Dodaj `object s = "abc";` do metody Main. Ze względu na drugą poprawkę błędu nie należy podawać ostrzeżenia.
 - Na koniec Dodaj kolejną zmienną lokalną, która używa `var` słowa kluczowego. Zobaczysz, że zostało zgłoszone ostrzeżenie i pojawi się sugestia poniżej lewej strony.
-- Przenieś karetkę edytora na falistej podkreślenie i naciśnij klawisze CTRL +. Aby wyświetlić sugerowaną poprawkę kodu. Po wybraniu poprawki kodu należy zauważyć, że słowo kluczowe var jest teraz prawidłowo obsługiwane.
+- Przenieś karetkę edytora na falistej podkreślenie i naciśnij <kbd>klawisze CTRL +</kbd>. Aby wyświetlić sugerowaną poprawkę kodu. Po wybraniu poprawki kodu należy zauważyć, że słowo kluczowe var jest teraz prawidłowo obsługiwane.
 
 Na koniec Dodaj następujący kod:
 

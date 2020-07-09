@@ -1,31 +1,31 @@
 ---
 title: Korzystanie z baz danych NoSQL jako infrastruktury trwałości
-description: Zrozumienie korzystania z baz danych NoSql w ogóle, a azure cosmos DB w szczególności jako opcja do zaimplementowania trwałości.
+description: Informacje ogólne na temat używania baz danych NoSql, a w szczególności Azure Cosmos DB jako opcji implementacji trwałości.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988443"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100811"
 ---
-# <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Używanie baz danych NoSQL jako infrastruktury trwałości
+# <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Korzystanie z baz danych NoSQL jako infrastruktury trwałości
 
-Korzystając z baz danych NoSQL dla warstwy danych infrastruktury, zazwyczaj nie należy używać ORM jak Entity Framework Core. Zamiast tego należy użyć interfejsu API dostarczonego przez aparat NoSQL, takich jak Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB lub Tabele usługi Azure Storage.
+W przypadku korzystania z baz danych NoSQL dla warstwy dane infrastruktury zazwyczaj nie używasz ORM, takiego jak Entity Framework Core. Zamiast tego należy użyć interfejsu API dostarczonego przez aparat NoSQL, takiego jak Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB lub tabel usługi Azure Storage.
 
-Jednak podczas korzystania z bazy danych NoSQL, zwłaszcza bazy danych zorientowanych na dokumenty, takich jak Azure Cosmos DB, CouchDB lub RavenDB, sposób projektowania modelu za pomocą agregacji DDD jest częściowo podobny do jak można to zrobić w EF Core, w odniesieniu do identyfikacji zagregowanych korzeni, klas jednostek podrzędnych i klas obiektów wartości. Ale ostatecznie wybór bazy danych będzie miał wpływ na projekt.
+Jednak w przypadku korzystania z bazy danych NoSQL Database, szczególnie zorientowanej na dokumenty bazy danych, takiej jak Azure Cosmos DB, CouchDB lub RavenDB, sposób projektowania modelu za pomocą wartości zagregowanych są częściowo podobne do tego, jak można to zrobić w EF Core, w odniesieniu do identyfikacji zagregowanych elementów głównych, klas jednostek podrzędnych i klas obiektów wartości. Ostatecznie wybór bazy danych będzie miał wpływ na projekt.
 
-Korzystając z bazy danych zorientowanej na dokument, należy zaimplementować agregację jako pojedynczy dokument, serializowany w formacie JSON lub innym formacie. Jednak użycie bazy danych jest przezroczyste z punktu widzenia kodu modelu domeny. Podczas korzystania z bazy danych NoSQL, nadal używasz klas jednostek i zagregowanych klas głównych, ale z większą elastycznością niż podczas korzystania z EF Core, ponieważ trwałość nie jest relacyjne.
+W przypadku korzystania z bazy danych zorientowanej na dokumenty należy zaimplementować agregację jako pojedynczy dokument, zserializowaną w formacie JSON lub inny format. Jednak użycie bazy danych jest niewidoczne z punktu widzenia kodu modelu domeny. W przypadku korzystania z bazy danych NoSQL nadal używasz klas jednostek i agregacji klas głównych, ale z większą elastycznością niż w przypadku używania EF Core, ponieważ trwałość nie jest relacyjna.
 
-Różnica polega na tym, jak utrwalić tego modelu. Jeśli zaimplementowano model domeny na podstawie klas jednostek POCO, niezależny od trwałości infrastruktury, może wyglądać, że można przenieść do innej infrastruktury trwałości, nawet z relacyjne do NoSQL. Jednak to nie powinno być twoim celem. Zawsze istnieją ograniczenia i kompromisy w różnych technologii bazy danych, więc nie będzie można mieć tego samego modelu dla relacyjnych lub NoSQL baz danych. Zmiana modeli trwałości nie jest trywialnym zadaniem, ponieważ operacje transakcji i trwałości będą bardzo różne.
+Różnica polega na tym, jak utrzymywać ten model. Jeśli model domeny został zaimplementowany na podstawie klas jednostek POCO, niezależny od do trwałości infrastruktury, może to wyglądać podobnie do innej infrastruktury trwałości, nawet od relacyjnej do NoSQL. Jednak nie powinno to być cel. Istnieją zawsze ograniczenia i wady dotyczące różnych technologii baz danych, dzięki czemu nie będzie można korzystać z tego samego modelu dla baz danych relacyjnych lub NoSQL. Zmiana modeli trwałości nie jest zadaniem prostym, ponieważ transakcje i operacje trwałości będą bardzo różne.
 
-Na przykład w bazie danych zorientowanej na dokument jest w porządku dla agregacji katalogu głównego mieć wiele właściwości kolekcji podrzędnej. W relacyjnej bazie danych wykonywanie zapytań o wiele właściwości kolekcji podrzędnej nie jest łatwo zoptymalizowane, ponieważ otrzymasz instrukcję UNION ALL SQL z ef. Posiadanie tego samego modelu domeny dla relacyjnych baz danych lub baz danych NoSQL nie jest proste i nie należy próbować tego robić. Naprawdę trzeba zaprojektować model ze zrozumieniem, jak dane będą używane w każdej konkretnej bazie danych.
+Na przykład w bazie danych zorientowanej na dokument nie jest możliwe, aby zagregowany element główny miał wiele właściwości kolekcji podrzędnych. W relacyjnej bazie danych zapytania z wieloma podrzędnymi właściwościami kolekcji nie są łatwo zoptymalizowane, ponieważ z powrotem uzyskuje się instrukcję UNION ALL języka SQL od EF. Posiadanie tego samego modelu domeny dla relacyjnych baz danych lub baz danych NoSQL nie jest proste i nie należy go podejmować. Naprawdę musisz zaprojektować model, aby zrozumieć, w jaki sposób dane będą używane w każdej konkretnej bazie danych.
 
-Zaletą podczas korzystania z baz danych NoSQL jest to, że jednostki są bardziej zdenormalizowane, więc nie należy ustawiać mapowania tabeli. Model domeny może być bardziej elastyczny niż przy użyciu relacyjnej bazy danych.
+Zaletą korzystania z baz danych NoSQL jest to, że jednostki są bardziej znormalizowane, dlatego nie należy ustawiać mapowania tabeli. Model domeny może być bardziej elastyczny niż w przypadku korzystania z relacyjnej bazy danych.
 
-Podczas projektowania modelu domeny na podstawie agregatów przejście do bazy danych zorientowanych na dokument może być jeszcze łatwiejsze niż przy użyciu relacyjnej bazy danych, ponieważ agregaty, które projektujesz, są podobne do dokumentów szeregowanych w bazie danych zorientowanej na dokument. Następnie można uwzględnić w tych "workach" wszystkie informacje, które mogą być potrzebne do tego agregacji.
+Podczas projektowania modelu domeny opartego na agregacjach, przeniesienie do NoSQL i baz danych zorientowane na dokumenty może być jeszcze łatwiejsze niż używanie relacyjnej bazy danych, ponieważ zagregowane wartości są podobne do serializowanych dokumentów w bazie danych zorientowanej na dokument. Następnie można dołączyć do tych "toreb" wszystkie informacje, które mogą być potrzebne dla tego agregacji.
 
-Na przykład następujący kod JSON jest przykładową implementacją agregacji zamówień podczas korzystania z bazy danych zorientowanej na dokument. Jest podobny do agregacji zamówień zaimplementowaliśmy w przykładzie eShopOnContainers, ale bez użycia EF Core pod spodem.
+Na przykład poniższy kod JSON to Przykładowa implementacja agregacji zamówienia przy użyciu bazy danych zorientowanej na dokument. Jest to podobne do kolejności agregowania wdrożonej w przykładzie eShopOnContainers, ale bez użycia EF Core poniżej.
 
 ```json
 {
@@ -50,15 +50,15 @@ Na przykład następujący kod JSON jest przykładową implementacją agregacji 
 }
 ```
 
-## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Wprowadzenie do usługi Azure Cosmos DB i macierzystego interfejsu API usługi Cosmos DB
+## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Wprowadzenie do Azure Cosmos DB i natywnego interfejsu API Cosmos DB
 
-[Usługa Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) to globalnie rozproszona usługa bazy danych firmy Microsoft dla aplikacji o znaczeniu krytycznym. Usługa Azure Cosmos DB zapewnia [kompleksową globalną dystrybucję](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [elastyczne skalowanie przepływności i pamięci](https://docs.microsoft.com/azure/cosmos-db/partition-data) w skali globalnej, milisekundowe opóźnienia w 99. percentylu, [pięć odpowiednio zdefiniowanych poziomów spójności](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) oraz gwarantowaną wysoką dostępność, wspierane przez [wiodące w branży umowy SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Usługa Azure Cosmos DB [automatycznie indeksuje dane](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) bez konieczności zarządzania schematami i indeksami. To usługa wielomodelowa, obsługująca modele oparte na dokumentach, parach klucz-wartość, grafach i kolumnach.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) to usługa dystrybuowana globalnie bazy danych firmy Microsoft dla aplikacji o znaczeniu strategicznym. Usługa Azure Cosmos DB zapewnia [kompleksową globalną dystrybucję](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [elastyczne skalowanie przepływności i pamięci](https://docs.microsoft.com/azure/cosmos-db/partition-data) w skali globalnej, milisekundowe opóźnienia w 99. percentylu, [pięć odpowiednio zdefiniowanych poziomów spójności](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) oraz gwarantowaną wysoką dostępność, wspierane przez [wiodące w branży umowy SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Usługa Azure Cosmos DB [automatycznie indeksuje dane](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) bez konieczności zarządzania schematami i indeksami. To usługa wielomodelowa, obsługująca modele oparte na dokumentach, parach klucz-wartość, grafach i kolumnach.
 
-![Diagram przedstawiający globalną dystrybucję usługi Azure Cosmos DB.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
+![Diagram przedstawiający dystrybucję globalną Azure Cosmos DB.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
 **Rysunek 7-19**. Globalna dystrybucja usługi Azure Cosmos DB
 
-Korzystając z modelu\# C do zaimplementowania agregacji, która ma być używana przez\# interfejs API usługi Azure Cosmos DB, agregacja może być podobna do klas POCO C używanych z EF Core. Różnica polega na sposobie korzystania z nich z warstw aplikacji i infrastruktury, jak w poniższym kodzie:
+W przypadku używania modelu języka C \# do implementowania agregacji, która ma być używana przez interfejs API Azure Cosmos DB, agregacja może być podobna do \# klas C poco używanych z EF Core. Różnica polega na sposobie korzystania z nich z warstw aplikacji i infrastruktury, jak w poniższym kodzie:
 
 ```csharp
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
@@ -112,69 +112,69 @@ Order2 newOrder = GetOrderV2Sample("IdForSalesOrder2");
 await client.CreateDocumentAsync(collectionUri, newOrder);
 ```
 
-Widać, że sposób pracy z modelem domeny może być podobny do sposobu, w jaki używasz go w warstwie modelu domeny, gdy infrastruktura jest EF. Nadal używasz tych samych metod głównego agregacji, aby zapewnić spójność, invariants i sprawdzania poprawności w ramach agregacji.
+Możesz zobaczyć, że sposób pracy z modelem domeny może być podobny do sposobu korzystania z niego w warstwie modelu domeny, gdy infrastruktura jest Dr. Nadal używasz tych samych agregacji metod głównych w celu zapewnienia spójności, nieodmian i walidacji w ramach agregacji.
 
-Jednak po utrwaleniu modelu w bazie danych NoSQL, kod i interfejs API zmieniają się dramatycznie w porównaniu do kodu EF Core lub innego kodu związanego z relacyjnych baz danych.
+Jednak w przypadku utrwalania modelu w bazie danych NoSQL zmiana kodu i interfejsu API znacznie porównana z kodem EF Core lub innym kodem związanym z relacyjnymi bazami danych.
 
-## <a name="implement-net-code-targeting-mongodb-and-azure-cosmos-db"></a>Implementowanie kodu platformy NET kierowanego na usługi MongoDB i usługę Azure Cosmos DB
+## <a name="implement-net-code-targeting-mongodb-and-azure-cosmos-db"></a>Implementowanie kodu platformy .NET dla MongoDB i Azure Cosmos DB
 
-### <a name="use-azure-cosmos-db-from-net-containers"></a>Korzystanie z bazy danych usługi Azure Cosmos DB z kontenerów platformy .NET
+### <a name="use-azure-cosmos-db-from-net-containers"></a>Używanie Azure Cosmos DB z kontenerów platformy .NET
 
-Dostęp do baz danych usługi Azure Cosmos DB można uzyskać z kodu platformy .NET uruchomionego w kontenerach, na przykład z dowolnej innej aplikacji platformy .NET. Na przykład lokalizacje.API i marketing.API mikrousług w eShopOnContainers są implementowane, dzięki czemu mogą korzystać z baz danych usługi Azure Cosmos DB.
+Dostęp do Azure Cosmos DB baz danych można uzyskać z kodu platformy .NET działającego w kontenerach, podobnie jak w przypadku dowolnej innej aplikacji platformy .NET. Na przykład w programie eShopOnContainers są implementowane mikrousługi lokalizacji. API i marketingu. API, dzięki czemu mogą korzystać z Azure Cosmos DB baz danych.
 
-Jednak istnieje ograniczenie w usłudze Azure Cosmos DB z punktu widzenia środowiska deweloperskiego platformy Docker. Mimo że istnieje lokalna [azure cosmos db emulator,](https://docs.microsoft.com/azure/cosmos-db/local-emulator) który można uruchomić na komputerze deweloperskim lokalnym, obsługuje tylko system Windows. Linux i macOS nie są obsługiwane.
+Istnieje jednak ograniczenie Azure Cosmos DB z punktu widzenia środowiska projektowania platformy Docker. Mimo że istnieje [Azure Cosmos DB emulatora](https://docs.microsoft.com/azure/cosmos-db/local-emulator) lokalnego, który można uruchomić na lokalnym komputerze deweloperskim, obsługuje tylko system Windows. Linux i macOS nie są obsługiwane.
 
-Istnieje również możliwość uruchomienia tego emulatora na platformy Docker, ale tylko na kontenerach systemu Windows, a nie z kontenerami systemu Linux. Jest to początkowy handicap dla środowiska programistycznego, jeśli aplikacja jest wdrażana jako kontenery systemu Linux, ponieważ obecnie nie można wdrożyć kontenerów systemu Linux i Windows w programie Docker dla systemu Windows w tym samym czasie. Albo wszystkie kontenery są wdrażane muszą być dla Systemu Linux lub dla systemu Windows.
+Istnieje również możliwość uruchomienia tego emulatora na platformie Docker, ale tylko w kontenerach systemu Windows, a nie w przypadku kontenerów z systemem Linux. Jest to wstępna ochrona środowiska programistycznego, jeśli aplikacja jest wdrażana jako kontenery systemu Linux, ponieważ obecnie nie można wdrażać kontenerów systemów Linux i Windows na Docker for Windows w tym samym czasie. Wszystkie wdrażane kontenery muszą być przeznaczone dla systemu Linux lub Windows.
 
-Idealnym i prostszym wdrożeniem dla rozwiązania deweloperskiego/testowego jest możliwość wdrażania systemów bazy danych jako kontenerów wraz z kontenerami niestandardowymi, dzięki czemu środowiska deweloperów/testów są zawsze spójne.
+Idealnym i bardziej prostym wdrożeniem rozwiązania deweloperskiego/testowego jest możliwość wdrażania systemów baz danych jako kontenerów wraz z niestandardowymi kontenerami, dzięki czemu środowiska deweloperskie/testowe są zawsze spójne.
 
-### <a name="use-mongodb-api-for-local-devtest-linuxwindows-containers-plus-azure-cosmos-db"></a>Użyj interfejsu API MongoDB dla lokalnych kontenerów deweloperskich/testowych systemu Linux/Windows oraz usługi Azure Cosmos DB
+### <a name="use-mongodb-api-for-local-devtest-linuxwindows-containers-plus-azure-cosmos-db"></a>Korzystanie z interfejsu API MongoDB na potrzeby lokalnego tworzenia i testowania kontenerów systemu Linux/Windows oraz Azure Cosmos DB
 
-Bazy danych Usługi Cosmos DB obsługują interfejs API MongoDB dla platformy .NET oraz macierzysty protokół przewodowy MongoDB. Oznacza to, że przy użyciu istniejących sterowników, aplikacja napisana dla MongoDB może teraz komunikować się z usługą Cosmos DB i używać baz danych usługi Cosmos DB zamiast baz danych MongoDB, jak pokazano na rysunku 7-20.
+Bazy danych Cosmos DB obsługują interfejs API MongoDB dla platformy .NET oraz natywny protokół MongoDB. Oznacza to, że korzystając z istniejących sterowników, aplikacja zapisywana dla MongoDB może teraz komunikować się z Cosmos DB i używać Cosmos DB baz danych zamiast baz danych MongoDB, jak pokazano na rysunku 7-20.
 
-![Diagram pokazujący, że usługa Cosmos DB obsługuje protokół przewodowy .NET i MongoDB.](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
+![Diagram przedstawiający, że Cosmos DB obsługuje protokoły sieciowe .NET i MongoDB.](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
-**Rysunek 7-20**. Korzystanie z interfejsu API i protokołu MongoDB w celu uzyskania dostępu do usługi Azure Cosmos DB
+**Rysunek 7-20**. Używanie interfejsu API MongoDB i protokołu do uzyskiwania dostępu Azure Cosmos DB
 
-Jest to bardzo wygodne podejście do weryfikacji pojęć w środowiskach platformy Docker z kontenerami systemu Linux, ponieważ [obraz platformy Docker MongoDB](https://hub.docker.com/r/_/mongo/) jest obrazem wielokołowym, który obsługuje kontenery Systemu Docker Linux i kontenery systemu Windows platformy Docker.
+Jest to bardzo wygodne podejście do weryfikacji koncepcji w środowiskach platformy Docker z kontenerami systemu Linux, ponieważ [obraz platformy](https://hub.docker.com/r/_/mongo/) Docker MongoDB jest obrazem wielodostępnym, który obsługuje kontenery platformy Docker Linux i kontenery platformy Docker.
 
-Jak pokazano na poniższej ilustracji, za pomocą interfejsu API MongoDB, eShopOnContainers obsługuje kontenery MongoDB Linux i Windows dla lokalnego środowiska programistycznego, ale następnie można przejść do skalowalnego rozwiązania chmury PaaS jako usługi Azure Cosmos DB, po prostu [zmieniając ciąg połączenia MongoDB, aby wskazać usługę Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
+Jak pokazano na poniższej ilustracji, za pomocą interfejsu API MongoDB, eShopOnContainers obsługuje kontenery systemu Linux i Windows dla lokalnego środowiska programistycznego, ale można przenieść do skalowalnego rozwiązania w chmurze PaaS jako Azure Cosmos DB przez [zmianę parametrów połączenia MongoDB w taki sposób, aby wskazywały Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-![Diagram pokazujący, że mikrousługa lokalizacji w eShopOnContainers można użyć usługi Cosmos DB lub Mongo DB.](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
+![Diagram przedstawiający, że mikrousługa lokalizacji w eShopOnContainers może używać Cosmos DB lub Mongo DB.](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
-**Rysunek 7-21**. EShopOnContainers przy użyciu kontenerów MongoDB dla dev-env lub Azure Cosmos DB dla produkcji
+**Rysunek 7-21**. eShopOnContainers przy użyciu kontenerów MongoDB do celów deweloperskich lub Azure Cosmos DB produkcyjnych
 
-Produkcyjna usługa Azure Cosmos DB będzie działać w chmurze platformy Azure jako usługa PaaS i skalowalna.
+Azure Cosmos DB produkcyjne będzie działać w chmurze platformy Azure jako usługa PaaS i skalowalna.
 
-Niestandardowe kontenery .NET Core można uruchomić na lokalnym hoście platformy Docker rozwoju (który używa platformy Docker dla systemu Windows na komputerze z systemem Windows 10) lub zostać wdrożone w środowisku produkcyjnym, takich jak Kubernetes w usłudze Azure AKS lub azure service service fabric. W tym drugim środowisku można wdrożyć tylko kontenery niestandardowe .NET Core, ale nie kontener MongoDB, ponieważ można używać usługi Azure Cosmos DB w chmurze do obsługi danych w środowisku produkcyjnym.
+Niestandardowe kontenery programu .NET Core można uruchamiać na lokalnym hoście platformy Docker (używanym Docker for Windows na komputerze z systemem Windows 10) lub wdrożyć w środowisku produkcyjnym, takim jak Kubernetes na platformie Azure AKS lub platformie Azure Service Fabric. W tym drugim środowisku wdrożono tylko kontenery niestandardowe platformy .NET Core, ale nie kontener MongoDB, ponieważ do obsługi danych w środowisku produkcyjnym jest używany Azure Cosmos DB w chmurze.
 
-Wyraźną zaletą korzystania z interfejsu API mongodb jest, że rozwiązanie może działać w obu aparatach bazy danych, MongoDB lub Azure Cosmos DB, więc migracje do różnych środowisk powinny być łatwe. Jednak czasami warto użyć natywnego interfejsu API (czyli natywnego interfejsu API usługi Cosmos DB), aby w pełni wykorzystać możliwości określonego aparatu bazy danych.
+Oczywistą zaletą korzystania z interfejsu API MongoDB jest to, że rozwiązanie może działać zarówno w aparatach baz danych, MongoDB, jak i Azure Cosmos DB, dzięki czemu migracja do różnych środowisk powinna być łatwa. Jednak czasami jest wartościowa użycie natywnego interfejsu API (jest to natywny interfejs API Cosmos DB) w celu pełnego wykorzystania możliwości określonego aparatu bazy danych.
 
-Aby uzyskać dalsze porównanie po prostu przy użyciu MongoDB i Cosmos DB w chmurze, zobacz [korzyści z używania usługi Azure Cosmos DB na tej stronie](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction).
+Aby uzyskać dalsze porównanie między zwykłym użyciem MongoDB a Cosmos DB w chmurze, zobacz [zalety korzystania z Azure Cosmos DB na tej stronie](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction).
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie podejścia pod kątem aplikacji produkcyjnych: interfejs API mongodb vs. Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie podejścia do aplikacji produkcyjnych: MongoDB API a interfejs API Cosmos DB
 
-W eShopOnContainers używamy interfejsu API MongoDB, ponieważ naszym priorytetem było zasadniczo mieć spójne środowisko deweloper/test przy użyciu bazy danych NoSQL, która może również współpracować z usługą Azure Cosmos DB.
+W eShopOnContainers korzystamy z interfejsu API MongoDB, ponieważ naszym priorytetem było podstawowe środowisko deweloperskie/testowe przy użyciu bazy danych NoSQL, która może również współejść z Azure Cosmos DB.
 
-Jednak jeśli planujesz używać interfejsu API mongodb do uzyskiwania dostępu do usługi Azure Cosmos DB na platformie Azure dla aplikacji produkcyjnych, należy przeanalizować różnice w możliwościach i wydajności podczas korzystania z interfejsu API mongodb, aby uzyskać dostęp do baz danych usługi Azure Cosmos DB w porównaniu z przy użyciu natywnego interfejsu API usługi Azure Cosmos DB. Jeśli jest podobny, możesz użyć interfejsu API MongoDB i uzyskać korzyści z obsługi dwóch aparatów bazy danych NoSQL w tym samym czasie.
+Jeśli jednak planujesz używać interfejsu API MongoDB, aby uzyskać dostęp do Azure Cosmos DB na platformie Azure dla aplikacji produkcyjnych, należy przeanalizować różnice w zakresie możliwości i wydajności podczas korzystania z interfejsu API MongoDB w celu uzyskania dostępu do Azure Cosmos DB baz danych w porównaniu z użyciem natywnego interfejsu API Azure Cosmos DB. Jeśli jest podobna, można użyć interfejsu API MongoDB i uzyskać korzyści z obsługi dwóch aparatów bazy danych NoSQL w tym samym czasie.
 
-Klastry MongoDB można również użyć jako produkcyjnej bazy danych w chmurze platformy Azure, również z [usługą MongoDB Azure Service.](https://www.mongodb.com/scale/mongodb-azure-service) Ale to nie jest usługa PaaS świadczona przez firmę Microsoft. W takim przypadku platforma Azure jest po prostu hosting tego rozwiązania pochodzących z MongoDB.
+Klastry MongoDB można również używać jako produkcyjnej bazy danych w chmurze platformy Azure, za pomocą [usługi MongoDB platformy Azure](https://www.mongodb.com/scale/mongodb-azure-service). Ale nie jest to usługa PaaS świadczona przez firmę Microsoft. W takim przypadku platforma Azure obsługuje tylko to rozwiązanie pochodzące z MongoDB.
 
-Zasadniczo jest to tylko zastrzeżenie stwierdzające, że nie zawsze należy używać interfejsu API MongoDB przeciwko usłudze Azure Cosmos DB, tak jak to miało miejsce w eShopOnContainers, ponieważ był to wygodny wybór dla kontenerów systemu Linux. Decyzja powinna być oparta na konkretnych potrzebach i testach, które należy wykonać dla aplikacji produkcyjnej.
+Zasadniczo jest to tylko oświadczenie stwierdzające, że nie należy zawsze używać interfejsu API MongoDB w odniesieniu do Azure Cosmos DB, tak jak w eShopOnContainers, ponieważ było to wygodne rozwiązanie dla kontenerów systemu Linux. Decyzja powinna być oparta na określonych wymaganiach i testach, które należy wykonać w przypadku aplikacji produkcyjnej.
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Kod: Użyj interfejsu API MongoDB w aplikacjach .NET Core
 
-Interfejs API mongodb dla platformy .NET jest oparty na pakietach NuGet, które należy dodać do projektów, na przykład w projekcie Locations.API pokazanym na poniższym rysunku.
+Interfejs API MongoDB dla platformy .NET jest oparty na pakietach NuGet, które należy dodać do projektów, takich jak w projekcie Locations. API pokazane na poniższej ilustracji.
 
-![Zrzut ekranu przedstawiający zależności w pakietach MongoDB NuGet.](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
+![Zrzut ekranu zależności w pakietach NuGet MongoDB.](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
-**Rysunek 7-22**. Odwołania do pakietów NuGet interfejsu API mongodb w projekcie .NET Core
+**Rysunek 7-22**. Pakiety NuGet interfejsu API MongoDB w projekcie .NET Core
 
-Zbadajmy kod w poniższych sekcjach.
+Zbadamy kod w poniższych sekcjach.
 
 #### <a name="a-model-used-by-mongodb-api"></a>Model używany przez interfejs API MongoDB
 
-Najpierw należy zdefiniować model, który będzie przechowywać dane pochodzące z bazy danych w pamięci aplikacji. Oto przykład modelu używanego dla lokalizacji w eShopOnContainers.
+Najpierw należy zdefiniować model, który będzie przechowywać dane pochodzące z bazy danych w przestrzeni pamięci aplikacji. Poniżej przedstawiono przykładowy model używany do lokalizacji w eShopOnContainers.
 
 ```csharp
 using MongoDB.Bson;
@@ -220,13 +220,13 @@ public class Locations
 }
 ```
 
-Widać, że istnieje kilka atrybutów i typów pochodzących z pakietów MongoDB NuGet.
+Można zobaczyć kilka atrybutów i typów pochodzących z pakietów NuGet MongoDB.
 
-Bazy danych NoSQL są zwykle bardzo dobrze przystosowane do pracy z nierelacyjnymi danymi hierarchicznymi. W tym przykładzie używamy typów MongoDB specjalnie dla `GeoJson2DGeographicCoordinates`lokalizacji geograficznych, takich jak .
+Bazy danych NoSQL są zwykle bardzo dobrze dopasowane do pracy z nierelacyjnymi danymi hierarchicznymi. W tym przykładzie używamy typów MongoDB, szczególnie dla lokalizacji geograficznych, takich jak `GeoJson2DGeographicCoordinates` .
 
 #### <a name="retrieve-the-database-and-the-collection"></a>Pobieranie bazy danych i kolekcji
 
-W eShopOnContainers utworzyliśmy niestandardowy kontekst bazy danych, w którym implementujemy kod do pobierania bazy danych i MongoCollections, jak w poniższym kodzie.
+W eShopOnContainers został utworzony niestandardowy kontekst bazy danych, w którym implementujemy kod w celu pobrania bazy danych i MongoCollections, jak w poniższym kodzie.
 
 ```csharp
 public class LocationsContext
@@ -252,7 +252,7 @@ public class LocationsContext
 
 #### <a name="retrieve-the-data"></a>Pobieranie danych
 
-W kodzie języka C#, takich jak kontrolery interfejsu API sieci Web lub implementacji repozytoriów niestandardowych, można napisać podobny kod do następujących podczas wykonywania zapytań za pośrednictwem interfejsu API mongodb. Należy zauważyć, że `_context` obiekt jest `LocationsContext` wystąpieniem poprzedniej klasy.
+W kodzie C#, takich jak kontrolery internetowego interfejsu API lub wdrożenie niestandardowych repozytoriów, można napisać podobny kod do poniższego podczas wykonywania zapytań za pomocą interfejsu API MongoDB. Należy zauważyć, że `_context` obiekt jest wystąpieniem poprzedniej `LocationsContext` klasy.
 
 ```csharp
 public async Task<Locations> GetAsync(int locationId)
@@ -264,9 +264,9 @@ public async Task<Locations> GetAsync(int locationId)
 }
 ```
 
-#### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Użyj env-var w pliku docker-compose.override.yml dla ciągu połączenia mongodb
+#### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Użyj funkcji ENV-var w pliku Docker-Compose. override. yml dla parametrów połączenia MongoDB
 
-Podczas tworzenia obiektu MongoClient, potrzebuje parametru fundamentalnego, `ConnectionString` który jest dokładnie parametr wskazujący na właściwą bazę danych. W przypadku eShopOnContainers parametry połączenia można wskazać lokalnego kontenera platformy Docker MongoDB lub do "produkcyjnej" bazy danych usługi Azure Cosmos DB.  Ten ciąg połączenia pochodzi ze zmiennych `docker-compose.override.yml` środowiskowych zdefiniowanych w plikach używanych podczas wdrażania za pomocą docker-compose lub Visual Studio, jak w poniższym kodzie yml.
+Podczas tworzenia obiektu MongoClient musi on mieć podstawowy parametr, który jest precyzyjnym `ConnectionString` parametrem wskazującym odpowiednią bazę danych. W przypadku eShopOnContainers parametry połączenia mogą wskazywać lokalny kontener platformy Docker MongoDB lub do bazy danych Azure Cosmos DB produkcyjnych.  Te parametry połączenia pochodzą ze zmiennych środowiskowych zdefiniowanych w `docker-compose.override.yml` plikach używanych podczas wdrażania przy użyciu platformy Docker-redagowanie lub programu Visual Studio, jak w poniższym kodzie YML.
 
 ```yml
 # docker-compose.override.yml
@@ -280,9 +280,9 @@ services:
 
 ```
 
-Zmienna środowiskowa jest rozpoznawana `ESHOP_AZURE_COSMOSDB` w ten sposób: `.env` Jeśli zmienna globalna `ConnectionString` jest zdefiniowana w pliku z ciągiem połączenia usługi Azure Cosmos DB, użyje jej do uzyskania dostępu do bazy danych usługi Azure Cosmos DB w chmurze. Jeśli nie jest zdefiniowany, zajmie `mongodb://nosqldata` wartość i użyje deweloperskiego kontenera MongoDB.
+`ConnectionString`Zmienna środowiskowa jest rozpoznawana w następujący sposób: Jeśli `ESHOP_AZURE_COSMOSDB` zmienna globalna jest zdefiniowana w `.env` pliku z Azure Cosmos DB parametrami połączenia, użyje go w celu uzyskania dostępu do bazy danych Azure Cosmos DB w chmurze. Jeśli ta wartość nie jest zdefiniowana, zostanie ona przestosowana `mongodb://nosqldata` i będzie używać kontenera MongoDB Development.
 
-Poniższy kod `.env` przedstawia plik z globalną zmienną środowiska parametry połączenia usługi Azure Cosmos DB, zgodnie z implementacji w eShopOnContainers:
+Poniższy kod przedstawia `.env` plik Azure Cosmos DB z eShopOnContainersą globalną zmienną środowiskową parametrów połączenia, zgodnie z zaimplementowaną w programie:
 
 ```yml
 # .env file, in eShopOnContainers root folder
@@ -299,9 +299,9 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-Odkomentuj wiersz ESHOP_AZURE_COSMOSDB i zaktualizuj ją za pomocą ciągu połączenia usługi Azure Cosmos DB uzyskanego z portalu Azure, jak wyjaśniono w [temacie Połącz aplikację MongoDB z usługą Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
+Usuń komentarz z wiersza ESHOP_AZURE_COSMOSDB i zaktualizuj go przy użyciu parametrów połączenia Azure Cosmos DB uzyskanych z Azure Portal, jak wyjaśniono w temacie [łączenie aplikacji MongoDB z Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-Jeśli `ESHOP_AZURE_COSMOSDB` zmienna globalna jest pusta, co `.env` oznacza, że jest komentowana w pliku, kontener używa domyślnego ciągu połączenia MongoDB. Ten ciąg połączenia wskazuje na lokalny kontener MongoDB wdrożony w `nosqldata` eShopOnContainers, który jest nazwany i został zdefiniowany w pliku docker-compose, jak pokazano w następującym kodzie .yml:
+Jeśli `ESHOP_AZURE_COSMOSDB` zmienna globalna jest pusta, co oznacza, że jest oznaczona jako komentarz do `.env` pliku, kontener używa domyślnych parametrów połączenia MongoDB. Te parametry połączenia wskazują lokalny kontener MongoDB wdrożony w eShopOnContainers o nazwie `nosqldata` i został zdefiniowany w pliku Docker-Zredaguj, jak pokazano w poniższym kodzie. yml:
 
 ``` yml
 # docker-compose.yml
@@ -317,30 +317,30 @@ services:
 - **Modelowanie danych dokumentu dla baz danych NoSQL** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
-- **Vaughn Vernon. Idealny sklep z agregatami projektów opartych na domenie?** \
+- **Vaughn Vernon. Idealny magazyn agregacji projektu opartego na domenie?** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
-- **Wprowadzenie do usługi Azure Cosmos DB: INTERFEJS API dla mongodb**  \
+- **Wprowadzenie do Azure Cosmos DB: interfejs API dla MongoDB**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
-- **Usługa Azure Cosmos DB: Tworzenie aplikacji sieci Web interfejsu API witryny MongoDB za pomocą platformy .NET i portalu Azure**  \
+- **Azure Cosmos DB: Tworzenie aplikacji internetowej interfejsu API MongoDB za pomocą platformy .NET i Azure Portal**  \
   <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
-- **Użyj emulatora usługi Azure Cosmos DB do lokalnego rozwoju i testowania**  \
+- **Korzystanie z emulatora Azure Cosmos DB na potrzeby lokalnego tworzenia i testowania**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>
 
 - **Łączenie aplikacji MongoDB z usługą Azure Cosmos DB**  \
   <https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account>
 
-- **Obraz platformy Dokatora emulatora bazy danych usługi Cosmos (kontener systemu Windows)**  \
+- **Obraz Cosmos DB Docker emulatora (kontener systemu Windows)**  \
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
-- **Obraz platformy MongoDB Docker (Linux i Windows Container)**  \
+- **Obraz platformy Docker MongoDB (kontener Linux i Windows)**  \
   <https://hub.docker.com/_/mongo/>
 
-- **Korzystanie z usługi MongoChef (Studio 3T) z usługą Azure Cosmos DB: API dla konta MongoDB**  \
+- **Korzystanie z programu korzystanie programu mongochef (Studio 3T) z Azure Cosmos DB: interfejs API dla konta MongoDB**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[Poprzedni](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
->[następny](microservice-application-layer-web-api-design.md)
+>[Poprzedni](infrastructure-persistence-layer-implementation-entity-framework-core.md) 
+> [Dalej](microservice-application-layer-web-api-design.md)

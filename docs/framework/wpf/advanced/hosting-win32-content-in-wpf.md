@@ -8,6 +8,7 @@ helpviewer_keywords:
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
 ms.openlocfilehash: c0c62f1999feaf591c512314515f01e83fa12591
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052094"
@@ -368,6 +369,6 @@ Dzięki temu:
 
 ![Zrzut ekranu z uruchomioną aplikacją WPF.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)

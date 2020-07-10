@@ -1,13 +1,16 @@
 ---
 title: polecenie dotnet New
 description: Polecenie dotnet New umożliwia tworzenie nowych projektów platformy .NET Core na podstawie określonego szablonu.
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 04/10/2020
-ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283978"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173123"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -55,7 +58,7 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 
   W poniższej tabeli przedstawiono szablony, które są wstępnie zainstalowane wraz z zestaw .NET Core SDK. Język domyślny dla szablonu jest pokazywany w nawiasach. Kliknij link krótkiej nazwy, aby wyświetlić opcje konkretnego szablonu.
 
-| Szablony                                    | Krótka nazwa                      | Język     | Tagi                                  | Wraca |
+| Szablony                                    | Krótka nazwa                      | Language     | Tagi                                  | Wraca |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplikacja konsoli                          | [konsoli](#console)             | [C#], F #, VB | Wspólna/konsola                        | 1.0        |
 | Biblioteka klas                                | [określono](#classlib)           | [C#], F #, VB | Wspólna/Biblioteka                        | 1.0        |
@@ -74,19 +77,19 @@ Polecenie wywołuje [aparat szablonu](https://github.com/dotnet/templating) , ab
 | Strona Razor                                   | [stronic](#page)                   | Znajd         | Web/ASP. NET                           | 2.0        |
 | ViewImports MVC                              | [viewimports](#namespace)       | Znajd         | Web/ASP. NET                           | 2.0        |
 | ViewStart MVC                                | `viewstart`                     | Znajd         | Web/ASP. NET                           | 2.0        |
-| Aplikacja serwera Blazor                            | [blazorserver](#blazorserver)   | Znajd         | Sieć Web/Blazor                            | 3.0        |
-| Aplikacja webassembly Blazor                       | `blazorwasm`                    | Znajd         | Sieć Web/Blazor/webassembly                            | 3.1.300    |
+| BlazorAplikacja serwera                            | [blazorserver](#blazorserver)   | Znajd         | WitrynęBlazor                            | 3.0        |
+| BlazorWebAssemblyAplikacja                       | `blazorwasm`                    | Znajd         | WitrynęBlazor/WebAssembly                            | 3.1.300    |
 | ASP.NET Core puste                           | [witrynę](#web)                     | [C#], F #     | Sieć Web/pusta                             | 1.0        |
 | Aplikacja sieci Web ASP.NET Core (Model-View-Controller) | [Standard](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
 | Aplikacja sieci Web ASP.NET Core                         | [webapp, Razor](#web-options)   | Znajd         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
 | ASP.NET Core ze Skośnością                    | [kątow](#spa)                 | Znajd         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core z usługą reaguj. js                   | [biern](#spa)                   | Znajd         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core z reakcjęmi. js i Redux         | [reactredux](#reactredux)       | Znajd         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core z React.js                   | [biern](#spa)                   | Znajd         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core z React.js i Redux         | [reactredux](#reactredux)       | Znajd         | Web/MVC/SPA                           | 2.0        |
 | Biblioteka klas Razor                          | [razorclasslib](#razorclasslib) | Znajd         | Biblioteka klas sieci Web/Razor/Biblioteka/Razor | 2.1        |
 | Internetowy interfejs API platformy ASP.NET Core                         | [WebApi](#webapi)               | [C#], F #     | Sieć Web/WebAPI                            | 1.0        |
 | ASP.NET Core usługi gRPC                    | [grpc](#web-others)             | Znajd         | Sieć Web/gRPC                              | 3.0        |
 | plik GITIGNORE dotnet                        | `gitignore`                     |              | Config                                | 3.0        |
-| plik Global. JSON                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
+| global.jspliku                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | Konfiguracja narzędzia NuGet                                 | `nugetconfig`                   |              | Config                                | 1.0        |
 | Plik manifestu narzędzia lokalnego dotnet              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Konfiguracja sieci Web                                   | `webconfig`                     |              | Config                                | 1.0        |
@@ -247,7 +250,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`--no-restore`**
 
@@ -378,7 +381,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`--no-https`**
 
@@ -398,7 +401,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -477,7 +480,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`--no-https`**
 
@@ -525,7 +528,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`--no-restore`**
 
@@ -557,7 +560,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -634,7 +637,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
+  Wyklucza *launchSettings.js* z wygenerowanego szablonu.
 
 - **`--no-https`**
 
@@ -666,7 +669,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  Określa wersję zestaw .NET Core SDK, która ma być używana w pliku *Global. JSON* .
+  Określa wersję zestaw .NET Core SDK, która ma być używana w *global.js* pliku.
 
 ***
 
@@ -732,13 +735,13 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
   dotnet new -u
   ```
 
-- Utwórz plik *Global. JSON* w bieżącym katalogu, ustawiając wersję zestawu SDK na 3.1.101:
+- Utwórz *global.js* w bieżącym katalogu, ustawiając wersję zestawu SDK na 3.1.101:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Szablony niestandardowe dla nowego dotnet](custom-templates.md)
 - [Tworzenie szablonu niestandardowego dla polecenia dotnet new](../tutorials/cli-templates-create-item-template.md)

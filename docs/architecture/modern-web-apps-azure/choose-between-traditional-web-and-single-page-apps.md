@@ -3,13 +3,16 @@ title: Wybieranie między tradycyjnymi aplikacjami internetowymi i aplikacjami j
 description: Dowiedz się, jak wybierać między tradycyjnymi aplikacjami sieci Web i aplikacjami jednostronicowymi (aplikacji jednostronicowych) podczas kompilowania aplikacji sieci Web.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662709"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174370"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybór między tradycyjnymi Web Apps i aplikacjami jednostronicowymi (aplikacji jednostronicowych)
 
@@ -38,21 +41,21 @@ Ponadto struktury SPA wymagają większej wiedzy o architekturze i zabezpieczeni
 
 Udoskonalenia środowiska użytkownika wykonywanego przez podejście SPA muszą zostać odważone względem tych zagadnień.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-ASP.NET Core 3,0 wprowadza nowy model umożliwiający tworzenie rozbudowanego, interaktywnego i składającego się interfejsu użytkownika o nazwie Blazor. Po stronie serwera Blazor umożliwiają deweloperom tworzenie interfejsu użytkownika przy użyciu języka C# i Razor na serwerze oraz interfejs użytkownika, który będzie interaktywnie połączony z przeglądarką w czasie rzeczywistym przy użyciu stałego połączenia sygnalizującego.
+ASP.NET Core 3,0 wprowadza nowy model do tworzenia rozbudowanego, interaktywnego i składającego się interfejsu użytkownika o nazwie Blazor . Blazorpo stronie serwera umożliwiają deweloperom tworzenie interfejsu użytkownika przy użyciu języka C# i Razor na serwerze oraz interfejs użytkownika, który ma być interaktywnie połączony z przeglądarką w czasie rzeczywistym za pomocą połączenia trwałego.
 
-Blazor webassembly wprowadza kolejną opcję dla aplikacji Blazor, umożliwiając ich uruchamianie w przeglądarce przy użyciu zestawu webassembly. Ponieważ jest to rzeczywista platforma .NET działająca w zestawie webassembly, można użyć kodu i bibliotek z części aplikacji po stronie serwera.
+BlazorWebAssemblywprowadza kolejną opcję dla Blazor aplikacji, umożliwiając ich uruchamianie w przeglądarce przy użyciu programu WebAssembly . Ponieważ jest to rzeczywista platforma .NET działająca w systemie WebAssembly , można użyć kodu i bibliotek z części aplikacji po stronie serwera.
 
-Blazor udostępnia nową, trzecią opcję, którą należy wziąć pod uwagę podczas oceniania, czy należy utworzyć czysto wyrenderowaną przez serwer aplikację sieci Web lub SPA. Możesz tworzyć rozbudowane, takie jak zachowania po stronie klienta, podobne do Blazor, bez konieczności znaczącego programowania w języku JavaScript. Aplikacje Blazor umożliwiają wywoływanie interfejsów API w celu żądania danych lub wykonywania operacji po stronie serwera.
+BlazorProgram udostępnia nową, trzecią opcję, którą należy wziąć pod uwagę podczas oceniania, czy należy utworzyć czysto wyrenderowaną przez serwer aplikację sieci Web lub SPA. Możesz tworzyć rozbudowane, takie jak zachowania po stronie klienta, podobne Blazor do działania, bez konieczności znaczącego programowania w języku JavaScript. Blazoraplikacje mogą wywoływać interfejsy API w celu żądania danych lub wykonywania operacji po stronie serwera.
 
-Rozważ skompilowanie aplikacji sieci Web za pomocą Blazor, gdy:
+Rozważ skompilowanie aplikacji sieci Web przy użyciu programu Blazor :
 
 - Aplikacja musi uwidaczniać rozbudowany interfejs użytkownika
 
 - Twój zespół jest bardziej wygodny dla projektowania platformy .NET niż programowanie w języku JavaScript lub TypeScript
 
-Aby uzyskać więcej informacji na temat Blazor, zobacz [Rozpoczynanie pracy z Blazor](https://blazor.net/docs/get-started.html).
+Aby uzyskać więcej informacji na temat Blazor , zobacz [wprowadzenie Blazor do ](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Kiedy należy wybrać tradycyjne aplikacje sieci Web
 
@@ -97,26 +100,26 @@ Pisanie aplikacji jednostronicowych wymaga znajomości języka JavaScript i/lub 
 
 Jeśli obsługujesz już internetowy interfejs API do użytku przez innych klientów, może być konieczne mniejsze nakłady pracy w celu utworzenia implementacji SPA, która wykorzystuje te interfejsy API zamiast odtwarzania logiki w formularzu po stronie serwera. Aplikacji jednostronicowych wykonywać wiele interfejsów API sieci Web, aby wysyłać zapytania i aktualizować dane, gdy użytkownicy współpracują z aplikacją.
 
-## <a name="when-to-choose-blazor"></a>Kiedy należy wybrać Blazor
+## <a name="when-to-choose-blazor"></a>Kiedy należy wybraćBlazor
 
-Poniżej znajduje się bardziej szczegółowy opis sytuacji, w których należy wybrać Blazor dla aplikacji sieci Web.
+Poniżej znajduje się bardziej szczegółowy opis sytuacji, w których należy wybrać Blazor aplikację sieci Web.
 
 **Aplikacja musi uwidaczniać rozbudowany interfejs użytkownika**
 
-Podobnie jak w przypadku aplikacji jednostronicowych opartego na języku JavaScript, aplikacje Blazor mogą obsługiwać rozbudowane zachowanie klienta bez konieczności ponownego ładowania stron. Aplikacje te są coraz bardziej odpowiadać użytkownikom, pobierając tylko dane (lub HTML) wymagane do odpowiedzi na daną interakcję użytkownika. Poprawnie zaprojektowane aplikacje Blazor po stronie serwera można skonfigurować tak, aby działały jako aplikacje Blazor po stronie klienta z minimalnymi zmianami, gdy ta funkcja jest obsługiwana.
+Podobnie jak w przypadku aplikacji jednostronicowych opartych na języku JavaScript, Blazor aplikacje mogą obsługiwać rozbudowane zachowanie klienta bez konieczności ponownego ładowania stron. Aplikacje te są coraz bardziej odpowiadać użytkownikom, pobierając tylko dane (lub HTML) wymagane do odpowiedzi na daną interakcję użytkownika. Poprawnie zaprojektowane aplikacje po stronie serwera Blazor można skonfigurować tak, aby działały jako aplikacje po stronie klienta Blazor z minimalnymi zmianami, gdy ta funkcja jest obsługiwana.
 
 **Twój zespół jest bardziej wygodny dla projektowania platformy .NET niż programowanie w języku JavaScript lub TypeScript**
 
-Wielu deweloperów jest wydajniejsza przy użyciu platformy .NET i Razor niż w przypadku języków po stronie klienta, takich jak JavaScript czy TypeScript. Ze względu na to, że po stronie serwera aplikacja jest już opracowywana przy użyciu platformy .NET, korzystanie z Blazor gwarantuje, że każdy deweloper platformy .NET w zespole może zrozumieć i potencjalnie stworzyć zachowanie frontonu aplikacji.
+Wielu deweloperów jest wydajniejsza przy użyciu platformy .NET i Razor niż w przypadku języków po stronie klienta, takich jak JavaScript czy TypeScript. Ze względu na to, że po stronie serwera aplikacja jest już opracowywana przy użyciu platformy .NET, korzystanie z usługi gwarantuje, że Blazor każdy deweloper platformy .NET w zespole może zrozumieć i potencjalnie stworzyć zachowanie frontonu aplikacji.
 
 ## <a name="decision-table"></a>Tabela decyzji
 
-Poniższa tabela decyzji podsumowuje niektóre podstawowe czynniki, które należy wziąć pod uwagę podczas wybierania między tradycyjną aplikacją sieci Web, SPA lub aplikacją Blazor.
+W poniższej tabeli decyzji przedstawiono podstawowe czynniki, które należy wziąć pod uwagę podczas wybierania między tradycyjną aplikacją sieci Web, SPA lub Blazor aplikacją.
 
-| **1U**                                           | **Tradycyjna aplikacja internetowa** | **Aplikacja jednostronicowa** | **Aplikacja Blazor**  |
+| **Czynnik**                                           | **Tradycyjna aplikacja internetowa** | **Aplikacja jednostronicowa** | **BlazorAplikacje**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
 | Wymagana znajomość zespołu w języku JavaScript/TypeScript | **Minimalny**             | **Wymagane**                | **Minimalny**     |
-| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwał**           | **Nieobsługiwane**           | **Obsługiwał**   |
+| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwane**           | **Nieobsługiwane**           | **Obsługiwane**   |
 | Minimalne zachowanie aplikacji po stronie klienta             | **Dobrze dopasowane**         | **Zbyt obszerne**                | **Żywe**      |
 | Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Ograniczone**             | **Dobrze dopasowane**             | **Dobrze dopasowane** |
 

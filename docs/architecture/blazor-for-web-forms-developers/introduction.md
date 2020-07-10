@@ -1,17 +1,20 @@
 ---
-title: Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET
-description: Wprowadzenie do Blazor i pisania aplikacji sieci Web na całym stosie przy użyciu platformy .NET
+title: Wprowadzenie do usługi Blazor ASP.NET Web Forms Developers
+description: Wprowadzenie do Blazor i pisanie aplikacji sieci Web w pełnym stosie przy użyciu platformy .NET
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087926"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173136"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Wprowadzenie do usługi Blazor ASP.NET Web Forms Developers
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -50,17 +53,17 @@ Jednak przeglądarki stają się uniwersalną platformą. Implementują one cora
 
 Mostkowanie obejmuje dwie różne platformy i ekosystemy (.NET i JavaScript). Wiedza jest wymagana w dwóch równoległych światach z różnymi językami, strukturami i narzędziami. Kod i logika nie mogą być łatwo udostępniane między klientem i serwerem, co skutkuje duplikowaniem i pracą inżynieryjną. Może być również trudne do utrzymania w ekosystemie JavaScript, który ma historię rozwoju na szybkości breakneck. Narzędzia platformy frontonu i preferencji narzędzi do kompilacji szybko zmieniają się. Branża zaobserwowano postęp od grunt do Gulp z pakietem WebPack i tak dalej. Te same Restless zmiany wystąpiły z platformami frontonu, takimi jak jQuery, odcinanie, kątowe, reagowanie i Vue. Jednak podano nieznaczny monopol przeglądarki JavaScript. Oznacza to, że do momentu, aż społeczność internetowa się nie *pomiraclea* .
 
-## <a name="webassembly-fulfills-a-need"></a>Zestaw webassembly spełnia potrzeby
+## <a name="webassembly-fulfills-a-need"></a>WebAssemblyspełnia potrzeby
 
-W 2015, głównym dostawcom przeglądarki przyłączono siły w grupie społeczność W3C, aby utworzyć nowy otwarty standard sieci Web o nazwie webassembly. Webassembly to bajtowy kod dla sieci Web. Jeśli można skompilować swój kod do zestawu webassembly, można go uruchomić w dowolnej przeglądarce na dowolnej platformie w niemal natywnej szybkości. Początkowe wysiłki skupiające się naC++języku C/. Wynikiem jest znaczną prezentację uruchamiania natywnych aparatów graficznych 3W bezpośrednio w przeglądarce bez wtyczek. Zestaw webassembly został znormalizowany i zaimplementowany przez wszystkie główne przeglądarki.
+W 2015, głównym dostawcom przeglądarki przyłączono siły w grupie społeczność W3C, aby utworzyć nowy otwarty standard sieci Web o nazwie WebAssembly . WebAssemblyjest kodem bajtowym dla sieci Web. Jeśli możesz skompilować swój kod do WebAssembly programu, można go uruchomić w dowolnej przeglądarce na dowolnej platformie, w niemal większej szybkości. Początkowe wysiłki skupiające się na C/C++. Wynikiem jest znaczną prezentację uruchamiania natywnych aparatów graficznych 3W bezpośrednio w przeglądarce bez wtyczek. WebAssemblyczy zostały ustandaryzowane i zaimplementowane przez wszystkie główne przeglądarki.
 
-Działanie na uruchomionym platformie .NET w zestawie webassembly zostało ogłoszone w późnej 2017 i oczekuje się, że wyśle się w 2020, włącznie z wsparciem z platformy .NET 5. Możliwość uruchamiania kodu platformy .NET bezpośrednio w przeglądarce umożliwia tworzenie aplikacji sieci Web na całym stosie przy użyciu platformy .NET.
+Działanie na uruchomionej platformie .NET WebAssembly zostało ogłoszone w późnej 2017 i oczekuje się, że jest on dostarczany w 2020, włącznie z wsparciem z platformy .NET 5. Możliwość uruchamiania kodu platformy .NET bezpośrednio w przeglądarce umożliwia tworzenie aplikacji sieci Web na całym stosie przy użyciu platformy .NET.
 
 ## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: Programowanie aplikacji sieci Web w pełnym stosie przy użyciu platformy .NET
 
-Ponadto możliwość uruchamiania kodu platformy .NET w przeglądarce nie zapewnia kompleksowego środowiska tworzenia aplikacji sieci Web po stronie klienta. Jest to miejsce, w którym znajduje się Blazor. Blazor to struktura interfejsu użytkownika sieci Web po stronie klienta oparta C# na zamiast języka JavaScript. Blazor można uruchomić bezpośrednio w przeglądarce za pośrednictwem webassembly. Nie są wymagane żadne wtyczki przeglądarki. Alternatywnie aplikacje Blazor mogą uruchamiać serwer na platformie .NET Core i obsługiwać wszystkie interakcje użytkowników w czasie rzeczywistym z przeglądarką.
+Ponadto możliwość uruchamiania kodu platformy .NET w przeglądarce nie zapewnia kompleksowego środowiska tworzenia aplikacji sieci Web po stronie klienta. Jest to miejsce, w którym się Blazor znajduje. Blazorto struktura interfejsu użytkownika sieci Web po stronie klienta oparta na języku C# zamiast języka JavaScript. Blazormożna uruchamiać bezpośrednio w przeglądarce za pośrednictwem programu WebAssembly . Nie są wymagane żadne wtyczki przeglądarki. Alternatywnie Blazor aplikacje mogą uruchamiać serwer w środowisku .NET Core i obsługiwać wszystkie interakcje użytkowników w czasie rzeczywistym z przeglądarką.
 
-Blazor ma wspaniałe narzędzia obsługiwane w programie Visual Studio i Visual Studio Code. Struktura zawiera również pełny model składników interfejsu użytkownika i oferuje wbudowane funkcje programu:
+Blazorma wspaniałe narzędzia obsługiwane w programie Visual Studio i Visual Studio Code. Struktura zawiera również pełny model składników interfejsu użytkownika i oferuje wbudowane funkcje programu:
 
 - Formularze i walidacja
 - Wstrzykiwanie zależności
@@ -69,19 +72,19 @@ Blazor ma wspaniałe narzędzia obsługiwane w programie Visual Studio i Visual 
 - Debugowanie w przeglądarce
 - Międzyoperacyjność w języku JavaScript
 
-Blazor ma wiele wspólnych metod ASP.NET Web Forms. Obie te platformy oferują modele programowania opartego na składnikach, sterowanych zdarzeniami. Główną różnicą architektury jest to, że ASP.NET Web Forms działa tylko na serwerze. Blazor można uruchomić na kliencie w przeglądarce. Ale jeśli korzystasz z tła ASP.NET formularzy sieci Web, istnieje wiele Blazor, które będą znane. Blazor to naturalne rozwiązanie dla deweloperów formularzy sieci Web ASP.NET, które chcą korzystać z funkcji tworzenia aplikacji po stronie klienta i środowiska typu open-source na platformie .NET.
+Blazorma dużą wspólną postać ASP.NET Web Forms. Obie te platformy oferują modele programowania opartego na składnikach, sterowanych zdarzeniami. Główną różnicą architektury jest to, że ASP.NET Web Forms działa tylko na serwerze. Blazormożna uruchomić na kliencie programu w przeglądarce. Ale jeśli korzystasz z tła ASP.NET formularzy sieci Web, istnieje wiele, Blazor co będzie znane. Blazorto rozwiązanie naturalne przeznaczone dla deweloperów ASP.NET Web Forms, który umożliwia korzystanie z funkcji tworzenia po stronie klienta i środowiska typu open-source w przyszłości dla platformy .NET.
 
-Ta książka zawiera wprowadzenie do Blazor, które są przeznaczone dla deweloperów ASP.NET Web Forms. Poszczególne koncepcje Blazor są prezentowane w kontekście analogicznych funkcji i praktyk formularzy sieci Web ASP.NET. Na koniec tej książki znajdziesz następujące informacje:
+Ta książka zawiera wprowadzenie do programu Blazor , który jest przeznaczony dla deweloperów ASP.NET Web Forms. Każde Blazor pojęcie koncepcji jest prezentowane w kontekście analogicznych funkcji i praktyk formularzy sieci Web ASP.NET. Na koniec tej książki znajdziesz następujące informacje:
 
-- Jak kompilować aplikacje Blazor.
-- Jak działa Blazor.
-- Jak Blazor odnosi się do programu .NET Core.
-- Odpowiednie strategie migrowania istniejących aplikacji ASP.NET Web Forms do Blazor, tam gdzie to możliwe.
+- Jak tworzyć Blazor aplikacje.
+- Jak Blazor działa.
+- BlazorOdnosi się do programu .NET Core.
+- Rozsądne strategie migracji istniejących aplikacji ASP.NET Web Forms do Blazor odpowiednich potrzeb.
 
-## <a name="get-started-with-blazor"></a>Wprowadzenie do Blazor
+## <a name="get-started-with-blazor"></a>Wprowadzenie doBlazor
 
-Rozpoczynanie pracy z usługą Blazor jest łatwe. Przejdź do <https://blazor.net> i postępuj zgodnie z linkami, aby zainstalować odpowiednie szablony projektów zestaw .NET Core SDK i Blazor. Znajdziesz również instrukcje dotyczące konfigurowania narzędzi Blazor w programie Visual Studio lub Visual Studio Code.
+Wprowadzenie do programu Blazor jest proste. Przejdź do <https://blazor.net> i postępuj zgodnie z linkami, aby zainstalować odpowiednie zestaw .NET Core SDK i Blazor Szablony projektów. Znajdziesz również instrukcje dotyczące konfigurowania Blazor narzędzi w programie Visual Studio lub Visual Studio Code.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)
->[Następny](architecture-comparison.md)
+>[Poprzedni](index.md) 
+> [Dalej](architecture-comparison.md)

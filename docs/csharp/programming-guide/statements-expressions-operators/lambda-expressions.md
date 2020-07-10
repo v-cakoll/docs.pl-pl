@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761840"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174156"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
 
@@ -141,7 +141,7 @@ Aby uzyskać więcej informacji na temat tworzenia i używania metod asynchronic
 
 ## <a name="lambda-expressions-and-tuples"></a>Wyrażenia lambda i krotki
 
-Począwszy od języka C# 7,0, język C# zapewnia wbudowaną obsługę [krotek](../../tuples.md). Można podać krotkę jako argument wyrażenia lambda, a wyrażenie lambda może również zwracać krotkę. W niektórych przypadkach kompilator języka C# używa wnioskowania o typie, aby określić typy składników spójnych kolekcji.
+Począwszy od języka C# 7,0, język C# zapewnia wbudowaną obsługę [krotek](../../language-reference/builtin-types/value-tuples.md). Można podać krotkę jako argument wyrażenia lambda, a wyrażenie lambda może również zwracać krotkę. W niektórych przypadkach kompilator języka C# używa wnioskowania o typie, aby określić typy składników spójnych kolekcji.
 
 Można zdefiniować krotkę, umieszczając w nawiasach rozdzielaną przecinkami listę składników. Poniższy przykład używa krotki z trzema składnikami, aby przekazać sekwencję liczb do wyrażenia lambda, które podwaja każdą wartość i zwraca spójną kolekcję z trzema składnikami, które zawierają wynik mnożenia.
 
@@ -151,7 +151,7 @@ Zwykle pola krotki mają nazwę `Item1` , `Item2` itp. Można jednak zdefiniowa�
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-Aby uzyskać więcej informacji na temat krotek języka C#, zobacz [typy krotek języka c#](../../tuples.md).
+Aby uzyskać więcej informacji na temat krotek języka C#, zobacz [typy krotek](../../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Wyrażenia lambda ze standardowymi operatorami zapytań
 

@@ -3,21 +3,23 @@ title: Moduły, programy obsługi i oprogramowanie pośredniczące
 description: Dowiedz się więcej na temat obsługi żądań HTTP za pomocą modułów, programów obsługi i oprogramowania pośredniczącego.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337475"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173188"
 ---
 # <a name="modules-handlers-and-middleware"></a>Moduły, programy obsługi i oprogramowanie pośredniczące
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Aplikacja ASP.NET Core jest oparta na serii *oprogramowania pośredniczącego*. Oprogramowanie pośredniczące to programy obsługi, które są rozmieszczone w potoku, aby obsługiwać żądania i odpowiedzi. W aplikacji formularzy sieci Web programy obsługi HTTP i moduły rozwiązują podobne problemy. W ASP.NET Core, moduły, programy obsługi, *Global.asax.cs*i cykl życia aplikacji są zastępowane przez oprogramowanie pośredniczące. W tym rozdziale dowiesz się, co to jest oprogramowanie pośredniczące w kontekście aplikacji Blazor.
+Aplikacja ASP.NET Core jest oparta na serii *oprogramowania pośredniczącego*. Oprogramowanie pośredniczące to programy obsługi, które są rozmieszczone w potoku, aby obsługiwać żądania i odpowiedzi. W aplikacji formularzy sieci Web programy obsługi HTTP i moduły rozwiązują podobne problemy. W ASP.NET Core, moduły, programy obsługi, *Global.asax.cs*i cykl życia aplikacji są zastępowane przez oprogramowanie pośredniczące. W tym rozdziale opisano, co to jest oprogramowanie pośredniczące w kontekście Blazor aplikacji.
 
-## <a name="overview"></a>Omówienie
+## <a name="overview"></a>Przegląd
 
 Potok żądania ASP.NET Core składa się z sekwencji delegatów żądań o nazwie jeden po drugim. Na poniższym diagramie przedstawiono koncepcję. Wątek wykonywania jest zgodny z czarnym strzałką.
 
@@ -35,7 +37,7 @@ ASP.NET 4. x zawiera wiele modułów. W podobny sposób ASP.NET Core ma równie�
 
 W poniższej tabeli wymieniono zamienne oprogramowanie i składniki programu w ASP.NET Core.
 
-|Module                 |ASP.NET 4. x — moduł           |Opcja ASP.NET Core|
+|Moduł                 |ASP.NET 4. x — moduł           |Opcja ASP.NET Core|
 |-----------------------|-----------------------------|-------------------|
 |Błędy HTTP            |`CustomErrorModule`          |[Oprogramowanie pośredniczące stron kodu stanu](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Dokument domyślny       |`DefaultDocumentModule`      |[Pliki domyślne oprogramowania pośredniczącego](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -46,13 +48,13 @@ W poniższej tabeli wymieniono zamienne oprogramowanie i składniki programu w A
 |Buforowanie HTTP           |`HttpCacheModule`            |[Oprogramowanie pośredniczące buforowania odpowiedzi](/aspnet/core/performance/caching/middleware)|
 |Rejestrowanie HTTP           |`HttpLoggingModule`          |[Rejestrowanie ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
 |Przekierowywanie HTTP       |`HttpRedirectionModule`      |[Oprogramowanie pośredniczące ponownego zapisywania adresów URL](/aspnet/core/fundamentals/url-rewriting)|
-|ISAPI — Filtry          |`IsapiFilterModule`          |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
-|ISAPI                  |`IsapiModule`                |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
+|Filtry ISAPI          |`IsapiFilterModule`          |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
+|INTERCEPTOR                  |`IsapiModule`                |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
 |Filtrowanie żądań      |`RequestFilteringModule`     |[Ponowne zapisywanie adresów URL IRule oprogramowania pośredniczącego](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
 |Ponowne zapisywanie adresów URL&#8224;   |`RewriteModule`              |[Oprogramowanie pośredniczące ponownego zapisywania adresów URL](/aspnet/core/fundamentals/url-rewriting)|
 |Kompresja statyczna     |`StaticCompressionModule`    |[Oprogramowanie pośredniczące kompresji odpowiedzi](/aspnet/core/performance/response-compression)|
 |Zawartość statyczna         |`StaticFileModule`           |[Oprogramowanie pośredniczące plików statycznych](/aspnet/core/fundamentals/static-files)|
-|Autoryzacja adresów URL      |`UrlAuthorizationModule`     |[ASP.NET Core Identity](/aspnet/core/security/authentication/identity)|
+|Autoryzacja adresów URL      |`UrlAuthorizationModule`     |[ASP.NET Core tożsamość](/aspnet/core/security/authentication/identity)|
 
 Ta lista nie jest wyczerpująca, ale powinna zawierać pomysł dotyczący tego, jakie mapowanie istnieje między tymi dwoma strukturami. Aby uzyskać bardziej szczegółową listę, zobacz [moduły usług IIS z ASP.NET Core](/aspnet/core/host-and-deploy/iis/modules).
 
@@ -88,8 +90,8 @@ public class Startup
 }
 ```
 
-Oprogramowanie pośredniczące może być również zdefiniowane jako Klasa przez implementację interfejsu `IMiddleware` lub przez Konwencję pośredniczącą. Aby uzyskać więcej informacji, zobacz [Zapisywanie niestandardowych ASP.NET Core oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/write).
+Oprogramowanie pośredniczące może być również zdefiniowane jako Klasa przez implementację `IMiddleware` interfejsu lub przez następującą konwencję pośredniczącą. Aby uzyskać więcej informacji, zobacz [Zapisywanie niestandardowych ASP.NET Core oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/write).
 
 >[!div class="step-by-step"]
->[Poprzedni](data.md)
->[Następny](config.md)
+>[Poprzedni](data.md) 
+> [Dalej](config.md)

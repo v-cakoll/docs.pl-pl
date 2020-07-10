@@ -1,85 +1,88 @@
 ---
-title: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
-description: Dowiedz się, jak tworzyć aplikacje sieci Web z pełnym stosem za pomocą platformy .NET przy użyciu funkcji Blazor i .NET Core w prosty i znajomy sposób.
+title: Blazordla deweloperów ASP.NET Web Forms
+description: Dowiedz się, jak tworzyć aplikacje sieci Web w pełnym stosie przy użyciu platformy .NET Blazor i platformy .NET Core w prosty i znany sposób.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73088130"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173253"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
+# <a name="blazor-for-aspnet-web-forms-developers"></a>Blazordla deweloperów ASP.NET Web Forms
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Zrzut ekranu przedstawiający okładkę e-booków aplikacji bez serwerów.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Zrzut ekranu przedstawiający centrum poczty elektronicznej aplikacji bezserwerowych.](./media/index/blazor-for-web-forms-developers-cover.png)
 
-> POBIERZ dostępny pod adresem:<https://aka.ms/blazor-ebook>
+> Pobieranie dostępne o:<https://aka.ms/blazor-ebook>
 
 OPUBLIKOWANA PRZEZ
 
-Zespoły produktów Microsoft Developer Division, .NET i Visual Studio
+Zespoły deweloperów firmy Microsoft, .NET i Visual Studio
 
-Oddział Firmy Microsoft Corporation
+Dział firmy Microsoft Corporation
 
 One Microsoft Way
 
-Redmond (Waszyngton) 98052-6399
+Redmond, Waszyngton 98052-6399
 
-Prawa autorskie © 2019 przez Microsoft Corporation
+Prawa autorskie © 2019 przez firmę Microsoft Corporation
 
-Wszelkie prawa zastrzeżone. Żadna część treści tej książki nie może być powielana lub przekazywana w jakiejkolwiek formie lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
+Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
-Ta książka jest "tak jak jest" i wyraża poglądy i opinie autora. Poglądy, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odniesienia do stron internetowych, mogą ulec zmianie bez powiadomienia.
+Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
 
 Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Microsoft i znaki towarowe <https://www.microsoft.com> wymienione na stronie internetowej "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione na <https://www.microsoft.com> stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Mac i macOS są znakami towarowymi firmy Apple Inc.
+Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Wszystkie inne znaki i logo są własnością ich właścicieli.
+Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
-Autorów:
+Autorów
 
-> **[Daniel Roth](https://github.com/danroth27)**, Główny Menedżer Programu, Microsoft Corp.
+> **[Daniel Roth](https://github.com/danroth27)**, główny Menedżer programu, Microsoft Corp.
 
-> **[Jeff Fritz](https://github.com/csharpfritz)**, Starszy Menedżer Programu, Microsoft Corp.
+> **[Jan Fritz](https://github.com/csharpfritz)**, starszy kierownik ds. programów, Microsoft Corp.
 
-> **[Taylor Southwick](https://github.com/twsouthwick)**, Starszy Inżynier Oprogramowania, Microsoft Corp.
+> **[Southwick Taylor](https://github.com/twsouthwick)**, starszy inżynier ds. oprogramowania, Microsoft Corp.
 
-> **[Scott Addie](https://github.com/scottaddie)**, Starszy programista treści, Microsoft Corp.
+> **[Scott Addie](https://github.com/scottaddie)**, Starszy programista ds. zawartości, Microsoft Corp.
 
 ## <a name="introduction"></a>Wprowadzenie
 
-.NET od dawna obsługuje tworzenie aplikacji sieci web za pośrednictwem ASP.NET, kompleksowy zestaw struktur i narzędzi do tworzenia wszelkiego rodzaju aplikacji sieci web. ASP.NET ma swój własny potomek struktur internetowych i technologii, począwszy od klasycznych stron Active Server Pages (ASP). Struktury, takie jak ASP.NET formularzy sieci Web, ASP.NET MVC, ASP.NET stron sieci Web, a ostatnio ASP.NET Core, zapewniają produktywny i wydajny sposób tworzenia aplikacji sieci Web *renderowanych przez serwer,* w których zawartość interfejsu użytkownika jest dynamicznie generowana na serwerze w odpowiedzi na żądania HTTP. Każda struktura ASP.NET zaspokaja inną grupę odbiorców i filozofię budowania aplikacji. ASP.NET formularze sieci Web dostarczane z oryginalnej wersji .NET Framework i włączone tworzenie sieci web przy użyciu wielu wzorców znanych deweloperom pulpitu, takich jak formanty interfejsu użytkownika wielokrotnego użytku z prostą obsługą zdarzeń. Jednak żadna z ofert ASP.NET nie umożliwiają uruchamiania kodu wykonywanego w przeglądarce użytkownika. Aby to zrobić, wymaga pisania JavaScript i korzystania z wielu platform JavaScript i narzędzi, które stopniowo i obecnie popularność na przestrzeni lat: jQuery, Knockout, Angular, React, i tak dalej.
+Platforma .NET ma długotrwałe Programowanie aplikacji sieci Web za pomocą ASP.NET, kompleksowego zestawu Platform i narzędzi do tworzenia dowolnego rodzaju aplikacji sieci Web. ASP.NET ma własne elementy platformy sieci Web i technologii, które zaczynają cały sposób z klasycznymi Active Server stronami (ASP). Struktury, takie jak ASP.NET Web Forms, ASP.NET MVC, ASP.NET Web Pages i ostatnio ASP.NET Core, zapewniają wydajny i wydajny sposób kompilowania aplikacji sieci Web *renderowanych na serwerze* , w przypadku których zawartość interfejsu użytkownika jest generowana dynamicznie na serwerze w odpowiedzi na żądania HTTP. Każdy ASP.NET Framework jest przeznaczony dla różnych grup odbiorców i tworzenia aplikacji. ASP.NET formularze sieci Web dostarczane z oryginalną wersją .NET Framework i obsługują programowanie w sieci Web przy użyciu wielu wzorców, które są znane dla deweloperów komputerów, takich jak kontrolki interfejsu użytkownika wielokrotnego użytku z prostą obsługą zdarzeń. Żadna z ofert ASP.NET nie umożliwia jednak uruchamiania kodu, który jest wykonywany w przeglądarce użytkownika. Aby to zrobić, należy napisać kod JavaScript i korzystać z dowolnej z wielu platform i narzędzi języka JavaScript, które są stopniowane i niepopularne w latach: jQuery, odcinania, kątowy, reagowanie i tak dalej.
 
-[Blazor](https://blazor.net) to nowa struktura sieci web, która zmienia to, co jest możliwe podczas tworzenia aplikacji sieci web za pomocą .NET. Blazor jest platformą interfejsu użytkownika sieci web po stronie klienta na podstawie języka C# zamiast języka JavaScript. Za pomocą blazora można napisać logikę po stronie klienta i składniki interfejsu użytkownika w języku C#, skompilować je do normalnych zestawów .NET, a następnie uruchomić je bezpośrednio w przeglądarce przy użyciu nowego otwartego standardu sieci web o nazwie WebAssembly. Lub alternatywnie Blazor może uruchamiać składniki interfejsu użytkownika .NET na serwerze i obsługiwać wszystkie interakcje interfejsu użytkownika płynnie za pomocą połączenia w czasie rzeczywistym z przeglądarką. Po sparowaniu z platformą .NET działającą na serwerze blazor umożliwia tworzenie sieci web w trybie pełnego stosu za pomocą platformy .NET. Podczas gdy Blazor współużytkuje wiele podobieństw z ASP.NET web forms, takich jak model składników wielokrotnego użytku i prosty sposób obsługi zdarzeń użytkownika, opiera się również na podstawach .NET Core, aby zapewnić nowoczesne i wysokiej wydajności środowiska tworzenia sieci web.
+[Blazor](https://blazor.net)to nowa platforma sieci Web, która zmienia możliwości podczas kompilowania aplikacji sieci Web za pomocą platformy .NET. Blazorto struktura interfejsu użytkownika sieci Web po stronie klienta oparta na języku C# zamiast języka JavaScript. Za pomocą Blazor programu można napisać składniki logiki i interfejsu użytkownika po stronie klienta w języku C#, skompilować je do normalnych zestawów .NET, a następnie uruchomić je bezpośrednio w przeglądarce przy użyciu nowego otwartego standardu sieci Web o nazwie WebAssembly . Program może również Blazor uruchamiać składniki interfejsu użytkownika platformy .NET na serwerze i obsługiwać wszystkie interakcje interfejsu użytkownika w czasie rzeczywistym za pośrednictwem przeglądarki. W przypadku sparowania z platformą .NET działającą na serwerze program Blazor umożliwia tworzenie aplikacji sieci Web na całym stosie przy użyciu platformy .NET. BlazorUdziały wielu commonalities z formularzami ASP.NET sieci Web, takimi jak posiadanie modelu składników wielokrotnego użytku, i prosty sposób obsługi zdarzeń użytkowników, również kompilują się z podstaw platformy .NET Core, aby zapewnić nowoczesne i wysoce wydajne środowisko programistyczne dla sieci Web.
 
-Ta książka wprowadza ASP.NET twórców formularzy internetowych do Blazorw sposób, który jest znany i wygodny. Wprowadza koncepcje Blazora równolegle z analogicznymi pojęciami w ASP.NET Web Forms, a jednocześnie wyjaśnia nowe koncepcje, które mogą być mniej znane. Obejmuje szeroki zakres tematów i problemów, w tym tworzenie składników, routing, układ, konfigurację i zabezpieczenia. I chociaż zawartość tej książki jest przede wszystkim do umożliwienia nowego rozwoju, obejmuje również wytyczne i strategie migracji istniejących ASP.NET formularzy internetowych do Blazor, gdy chcesz zmodernizować istniejącą aplikację.
+W tej książce wprowadzono ASP.NET deweloperów formularzy sieci Web Blazor w sposób, który jest znany i wygodny. Wprowadzają one Blazor koncepcje równolegle z podobnymi koncepcjami w formularzach sieci Web ASP.NET, a także objaśniają nowe koncepcje, które mogą być mniej znane. Obejmuje szeroki zakres tematów i problemów, w tym Tworzenie składników, kierowanie, układ, konfigurację i zabezpieczenia. Natomiast zawartość tej książki jest przede wszystkim przeznaczona do włączenia nowego opracowywania, a także zawiera wytyczne i strategie dotyczące migrowania istniejących formularzy sieci Web ASP.NET do Blazor programu, gdy użytkownik chce przeprowadzić modernizację istniejącej aplikacji.
 
 ## <a name="who-should-use-the-book"></a>Kto powinien korzystać z książki
 
-Ta książka jest dla ASP.NET web forms deweloperzy szukają wprowadzenia do Blazor, który odnosi się do ich istniejącej wiedzy i umiejętności. Ta książka może pomóc w szybkim rozpoczęciu nowego projektu opartego na Blazorze lub pomóc w nakreśleniu planu modernizacji istniejącej aplikacji ASP.NET Web Forms.
+Ta książka jest przeznaczony dla deweloperów ASP.NET Web Forms poszukujących wprowadzenia do usługi Blazor , która odnosi się do istniejącej wiedzy i umiejętności. Ta książka może pomóc szybko rozpocząć pracę nad nowym projektem lub pomóc w założeniu planu Blazor modernizacji istniejącej aplikacji ASP.NET Web Forms.
 
 ## <a name="how-to-use-the-book"></a>Jak korzystać z książki
 
-Pierwsza część tej książki obejmuje to, czym jest Blazor i porównuje go do tworzenia aplikacji internetowych z ASP.NET formularzami internetowymi. Książka następnie obejmuje różne tematy Blazor, rozdział po rozdziale, i odnosi się do każdej koncepcji Blazor do odpowiedniej koncepcji w ASP.NET Web Forms, lub wyjaśnia w pełni wszelkie zupełnie nowe pojęcia. Książka odnosi się również regularnie do pełnej przykładowej aplikacji zaimplementowanej zarówno w ASP.NET Web Forms, jak i Blazor, aby zademonstrować funkcje Blazora i zapewnić studium przypadku migracji z ASP.NET formularzy internetowych do Blazora. Obie implementacje przykładowej aplikacji (ASP.NET formularzy sieci Web i wersji Blazor) można znaleźć w [usteercie GitHub.](https://github.com/dotnet-architecture/eshoponblazor)
+Pierwsza część tej książki obejmuje co Blazor to jest i porównuje ją z programowaniem aplikacji sieci Web za pomocą formularzy sieci web ASP.NET. Książka obejmuje Blazor również różne tematy, rozdział według rozdziałów i wiąże poszczególne Blazor koncepcje z odpowiednim koncepcją w postaci ASP.NET Web Forms lub wyjaśnia wszystkie zupełnie nowe koncepcje. Książka często odwołuje się również do kompletnej przykładowej aplikacji zaimplementowanej zarówno w ASP.NET Web Forms, jak i Blazor demonstrującej Blazor funkcje oraz w celu zapewnienia analizy przypadku migracji z formularzy sieci Web ASP.NET do programu Blazor . Obie implementacje przykładowej aplikacji (ASP.NET Web Forms i Blazor wersje) można znaleźć w witrynie [GitHub](https://github.com/dotnet-architecture/eshoponblazor).
 
-## <a name="what-this-book-doesnt-cover"></a>Czego ta książka nie obejmuje
+## <a name="what-this-book-doesnt-cover"></a>Czym nie obejmuje ta książka
 
-Ta książka jest wprowadzeniem do Blazora, a nie kompleksowym przewodnikiem po migracji. Chociaż zawiera wskazówki dotyczące podejścia do migracji projektu z ASP.NET Web Forms do Blazor, nie próbuje objąć wszystkich niuansów i szczegółów. Bardziej ogólne wskazówki dotyczące migracji z ASP.NET do ASP.NET Core można znaleźć [w wskazówki dotyczące migracji](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/) w dokumentacji ASP.NET Core.
+Ta książka stanowi wprowadzenie do Blazor , a nie kompleksowego przewodnika migracji. Chociaż zawiera ona wskazówki dotyczące sposobu podejścia do migracji projektu z formularzy sieci Web ASP.NET do programu Blazor , nie jest podejmowana próba pozyskania wszystkich Nuance i szczegółów. Aby uzyskać bardziej ogólne wskazówki dotyczące migracji z programu ASP.NET do ASP.NET Core, zapoznaj się ze [wskazówkami](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/) dotyczącymi migracji w dokumentacji ASP.NET Core.
 
-### <a name="additional-resources"></a>Zasoby dodatkowe
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Oficjalną stronę główną blazora i <https://blazor.net>dokumentację można znaleźć na stronie głównej.
+Oficjalną Blazor stronę główną i dokumentację można znaleźć pod adresem <https://blazor.net> .
 
-## <a name="send-your-feedback"></a>Wyślij swoją opinię
+## <a name="send-your-feedback"></a>Wyślij opinię
 
-Ta książka i powiązane próbki stale ewoluują, więc Twoja opinia jest mile widziana! Jeśli masz komentarze dotyczące sposobu ulepszenia tej książki, skorzystaj z sekcji opinii u dołu dowolnej strony zbudowanej na [problemach z githubem](https://github.com/dotnet/docs/issues).
+Ta książka i powiązane przykłady są ciągle zmieniane, dzięki czemu Twoje opinie są gotowe! Jeśli masz komentarze dotyczące sposobu, w jaki można ulepszyć tę książkę, Skorzystaj z sekcji opinia w dolnej części strony utworzonej w witrynie [GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
 >[Dalej](introduction.md)

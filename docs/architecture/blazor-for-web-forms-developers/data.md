@@ -1,15 +1,17 @@
 ---
 title: Dostęp do danych i zarządzanie nimi
-description: Dowiedz się, jak uzyskiwać dostęp do danych i obsługiwać je w ASP.NET Web Forms i Blazor.
+description: Dowiedz się, jak uzyskiwać dostęp do danych i obsługiwać je w ASP.NET Web Forms i Blazor .
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446482"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173307"
 ---
 # <a name="work-with-data"></a>Praca z danymi
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-Poprzedni kod będzie łączyć się z bazą danych SQL Server przy użyciu określonych parametrów połączenia. Parametry połączenia można umieścić w pliku *appSettings. JSON* , zmiennych środowiskowych lub w innych lokalizacjach magazynu konfiguracji i odpowiednio zastąpić ten osadzony ciąg.
+Poprzedni kod będzie łączyć się z bazą danych SQL Server przy użyciu określonych parametrów połączenia. Parametry połączenia można umieścić w *appsettings.jsw* pliku, zmiennych środowiskowych lub w innych lokalizacjach magazynu konfiguracji i odpowiednio zastąpić ten osadzony ciąg.
 
 Następnie można wygenerować tabelę bazy danych odpowiednią dla tej klasy przy użyciu następujących poleceń:
 
@@ -102,7 +104,7 @@ Więcej informacji na temat [EF Core](/ef/core/) można znaleźć w witrynie Mic
 
 ## <a name="interact-with-web-services"></a>Korzystanie z usług sieci Web
 
-Po pierwszym wydaniu ASP.NET usługi SOAP były preferowanym sposobem wymiany danych przez serwery i klientów sieci Web. Znacznie zmienił się od tego czasu, a preferowane interakcje z usługami zostały przesunięte w celu bezpośredniego interakcji z klientami HTTP. Za pomocą ASP.NET Core i Blazor można zarejestrować konfigurację `HttpClient` w `Startup` `ConfigureServices` metodzie klasy. Tej konfiguracji należy użyć, gdy trzeba korzystać z punktu końcowego HTTP. Rozważmy następujący kod konfiguracyjny:
+Po pierwszym wydaniu ASP.NET usługi SOAP były preferowanym sposobem wymiany danych przez serwery i klientów sieci Web. Znacznie zmienił się od tego czasu, a preferowane interakcje z usługami zostały przesunięte w celu bezpośredniego interakcji z klientami HTTP. Za pomocą ASP.NET Core i można Blazor zarejestrować konfigurację `HttpClient` w `Startup` `ConfigureServices` metodzie klasy. Tej konfiguracji należy użyć, gdy trzeba korzystać z punktu końcowego HTTP. Rozważmy następujący kod konfiguracyjny:
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-Za każdym razem, gdy potrzebujesz dostępu do danych z usługi GitHub, Utwórz klienta o nazwie `github` . Klient jest skonfigurowany przy użyciu adresu podstawowego, a nagłówki żądań są odpowiednio ustawiane. Wstrzyknąć `IHttpClientFactory` do składników Blazor za pomocą `@inject` dyrektywy lub `[Inject]` atrybutu właściwości. Utwórz użytkownika o nazwie i pracuj z usługami przy użyciu następującej składni:
+Za każdym razem, gdy potrzebujesz dostępu do danych z usługi GitHub, Utwórz klienta o nazwie `github` . Klient jest skonfigurowany przy użyciu adresu podstawowego, a nagłówki żądań są odpowiednio ustawiane. Wstrzyknąć `IHttpClientFactory` do Blazor składników za pomocą `@inject` dyrektywy lub `[Inject]` atrybutu właściwości. Utwórz użytkownika o nazwie i pracuj z usługami przy użyciu następującej składni:
 
 ```razor
 @inject IHttpClientFactory factory

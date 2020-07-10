@@ -1,15 +1,17 @@
 ---
 title: Zarządzanie stanem
-description: Poznaj różne podejścia do zarządzania stanami w ASP.NET Web Forms i Blazor.
+description: Poznaj różne podejścia do zarządzania stanem w formularzach sieci Web ASP.NET i Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 7d2ac0e0f08723896b3b9b325ae545813d191400
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183785"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173097"
 ---
 # <a name="state-management"></a>Zarządzanie stanem
 
@@ -25,5 +27,5 @@ ms.locfileid: "71183785"
 -->
 
 >[!div class="step-by-step"]
->[Poprzedni](pages-routing-layouts.md)
->[Następny](forms-validation.md)
+>[Poprzedni](pages-routing-layouts.md) 
+> [Dalej](forms-validation.md)

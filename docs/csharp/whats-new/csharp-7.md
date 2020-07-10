@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7,0 — przewodnik w języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7,0 języka C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392252"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174747"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -88,7 +88,7 @@ Poszczególne pola można wyodrębnić, przypisując `Point` do krotki:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Więcej informacji na temat spójnych krotek można znaleźć w [artykule krotkis](../tuples.md).
+Aby uzyskać więcej informacji, zobacz [typy krotek](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="discards"></a>Odrzucenia
 

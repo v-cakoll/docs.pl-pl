@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803222"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174409"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Samouczek: prognozowanie popytu na usługę najmu roweru za pomocą analiz szeregów czasowych i ML.NET
 
@@ -33,7 +33,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 ## <a name="time-series-forecasting-sample-overview"></a>Omówienie przykładu prognozowania szeregów czasowych
 
-Ten przykład jest **aplikacją konsolową języka C# .NET Core** , która prognozuje zapotrzebowanie na czynsze rowerów przy użyciu univariate algorytmu analizy szeregów czasowych znanej jako analiza pojedynczego spektrum. Kod dla tego przykładu można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) w witrynie GitHub.
+Ten przykład jest **aplikacją konsolową języka C# .NET Core** , która prognozuje zapotrzebowanie na czynsze rowerów przy użyciu univariate algorytmu analizy szeregów czasowych znanej jako pojedynczej analizy spektrum. Kod dla tego przykładu można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) w witrynie GitHub.
 
 ## <a name="understand-the-problem"></a>Omówienie problemu
 
@@ -41,7 +41,7 @@ Aby można było uruchomić wydajną operację, zarządzanie zapasami odgrywa kl
 
 Techniką analizowania danych używanych w tym samouczku jest univariate analiza szeregów czasowych. Univariate analiza szeregów czasowych Przyjrzyj się pojedynczej liczbie obserwacji w danym okresie w określonych odstępach czasu, takich jak sprzedaż miesięczna.
 
-Algorytm używany w tym samouczku jest [analizą pojedynczego spektrum (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). Działanie SSA działa przez złożenie szeregów czasowych w zestawie składników głównych. Te składniki mogą być interpretowane jako części sygnału, które odpowiadają trendom, zakłóceniom, sezonowości i wielu innym czynnikom. Następnie te składniki są ponownie skonstruowane i używane do prognozowania wartości nieco czasu w przyszłości.
+Algorytm używany w tym samouczku to Wielozakresowa [analiza spektrum (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). Działanie SSA działa przez złożenie szeregów czasowych w zestawie składników głównych. Te składniki mogą być interpretowane jako części sygnału, które odpowiadają trendom, zakłóceniom, sezonowości i wielu innym czynnikom. Następnie te składniki są ponownie skonstruowane i używane do prognozowania wartości nieco czasu w przyszłości.
 
 ## <a name="create-console-application"></a>Tworzenie aplikacji konsolowej
 
@@ -83,7 +83,7 @@ CREATE TABLE [Rentals] (
 
 Poniżej przedstawiono przykład danych:
 
-| RentalDate | Rok | TotalRentals |
+| RentalDate | Year (Rok) | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -287,7 +287,7 @@ Gratulacje! Pomyślnie skompilowano model uczenia maszynowego w szeregach czasow
 
 Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) .
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 - [Zadania uczenia maszynowego w ML.NET](../resources/tasks.md)
 - [Zwiększanie dokładności modelu](../resources/improve-machine-learning-model-ml-net.md)

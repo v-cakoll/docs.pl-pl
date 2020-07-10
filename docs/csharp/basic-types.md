@@ -4,12 +4,12 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202210"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174182"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -74,7 +74,7 @@ Jak wspomniano wcześniej, można niejawnie wpisać zmienną lokalną (ale nie s
   
 W niektórych przypadkach nie jest wygodne tworzenie nazwanego typu dla prostych zestawów powiązanych wartości, które nie mają być przechowywane ani przekazywane poza granicami metod. W tym celu można utworzyć *Typy anonimowe* . Aby uzyskać więcej informacji, zobacz [Typy anonimowe](programming-guide/classes-and-structs/anonymous-types.md).
 
-Często należy zwrócić więcej niż jedną wartość z metody. Można tworzyć *typy krotek* , które zwracają wiele wartości w jednym wywołaniu metody. Aby uzyskać więcej informacji, zobacz [krotki](tuples.md).
+Często należy zwrócić więcej niż jedną wartość z metody. Można tworzyć *typy krotek* , które zwracają wiele wartości w jednym wywołaniu metody. Aby uzyskać więcej informacji, zobacz [typy krotek](language-reference/builtin-types/value-tuples.md).
 
 ## <a name="the-common-type-system"></a>Wspólny system typów
 
@@ -84,7 +84,7 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Frame
   
 - Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy, które definiujesz za pomocą `struct` `enum` słowa kluczowego or, są typami wartości. Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](language-reference/builtin-types/value-types.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Typy struktur](language-reference/builtin-types/struct.md)
 - [Typów wyliczeniowych](language-reference/builtin-types/enum.md)

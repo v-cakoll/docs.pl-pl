@@ -1,22 +1,24 @@
 ---
-title: 'Zabezpieczenia: uwierzytelnianie i autoryzacja w ASP.NET Web Forms i Blazor'
-description: Dowiedz się, jak obsługiwać uwierzytelnianie i autoryzację w ASP.NET Web Forms i Blazor.
+title: 'Zabezpieczenia: uwierzytelnianie i autoryzacja w ASP.NET Web Forms iBlazor'
+description: Dowiedz się, jak obsługiwać uwierzytelnianie i autoryzację w ASP.NET Web Forms i Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: c524d8ee76d67654236cf71537bfd5c9f33daef7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cacd6df15c7eb18c136491d0667f69b9c2036d66
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183862"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173032"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>Zabezpieczenia: uwierzytelnianie i autoryzacja w ASP.NET Web Forms i Blazor
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>Zabezpieczenia: uwierzytelnianie i autoryzacja w ASP.NET Web Forms iBlazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 *Ta zawartość zostanie wkrótce udostępniona.*
 
 >[!div class="step-by-step"]
->[Poprzedni](config.md)
->[Następny](migration.md)
+>[Poprzedni](config.md) 
+> [Dalej](migration.md)

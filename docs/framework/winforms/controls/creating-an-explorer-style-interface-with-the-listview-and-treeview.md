@@ -1,5 +1,6 @@
 ---
-title: 'Przewodnik: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant'
+title: 'Wskazówki: tworzenie interfejsu w stylu Eksploratora Windows z formantami ListView i TreeView za pomocą narzędzia Projektant'
+description: Dowiedz się, jak utworzyć interfejs stylu Eksploratora z kontrolkami Windows Forms ListView i TreeView przy użyciu narzędzia Projektant.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 44d4db1ef3da85dbf411498f486882b86a05c140
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69658570"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174630"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Przewodnik: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Wskazówki: tworzenie interfejsu w stylu Eksploratora Windows z formantami ListView i TreeView za pomocą narzędzia Projektant
 
 Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnych aplikacji Windows Forms w krótkim czasie. Typowy scenariusz polega na tworzeniu interfejsu użytkownika z <xref:System.Windows.Forms.ListView> i <xref:System.Windows.Forms.TreeView> kontrolkami, które przypominają funkcję Eksploratora Windows w systemach operacyjnych Windows. Eksplorator Windows wyświetla hierarchiczną strukturę plików i folderów na komputerze użytkownika.
 
@@ -30,31 +31,31 @@ Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnyc
 
 2. W oknie dialogowym **Nowy projekt** wykonaj następujące czynności:
 
-    1. W kategorii wybierz opcję **Visual Basic** lub **wizualizacji C#** .
+    1. W kategorii wybierz pozycję **Visual Basic** lub **Visual C#**.
 
     2. Z listy szablonów wybierz **Windows Forms aplikacji**.
 
 3. Kliknij przycisk **OK**. Tworzony jest nowy projekt Windows Forms.
 
-4. Dodaj kontrolkę do formularza i ustaw jej <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość na <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.SplitContainer>
+4. Dodaj <xref:System.Windows.Forms.SplitContainer> kontrolkę do formularza i ustaw jej <xref:System.Windows.Forms.SplitContainer.Dock%2A> Właściwość na <xref:System.Windows.Forms.DockStyle.Fill> .
 
-5. <xref:System.Windows.Forms.ImageList> Dodaj nazwę `imageList1` do formularza i użyj okno właściwości, aby dodać dwa obrazy: obraz folderu i obraz dokumentu w tej kolejności.
+5. Dodaj <xref:System.Windows.Forms.ImageList> nazwę `imageList1` do formularza i użyj okno właściwości, aby dodać dwa obrazy: obraz folderu i obraz dokumentu w tej kolejności.
 
-6. Dodaj kontrolkę o `treeview1` nazwie do formularza i umieść ją po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontrolki. <xref:System.Windows.Forms.TreeView> W okno właściwości `treeView1` wykonaj następujące czynności:
+6. Dodaj <xref:System.Windows.Forms.TreeView> kontrolkę o nazwie `treeview1` do formularza i umieść ją po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontrolki. W okno Właściwości `treeView1` wykonaj następujące czynności:
 
-    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
+    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> Właściwość na wartość <xref:System.Windows.Forms.DockStyle.Fill> .
 
-    2. <xref:System.Windows.Forms.TreeView.ImageList%2A> Ustaw właściwość na`imagelist1.`
+    2. Ustaw <xref:System.Windows.Forms.TreeView.ImageList%2A> Właściwość na`imagelist1.`
 
-7. Dodaj kontrolkę o `listView1` nazwie do formularza i umieść ją po prawej stronie <xref:System.Windows.Forms.SplitContainer> kontrolki. <xref:System.Windows.Forms.ListView> W okno właściwości `listview1` wykonaj następujące czynności:
+7. Dodaj <xref:System.Windows.Forms.ListView> kontrolkę o nazwie `listView1` do formularza i umieść ją po prawej stronie <xref:System.Windows.Forms.SplitContainer> kontrolki. W okno Właściwości `listview1` wykonaj następujące czynności:
 
-    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
+    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> Właściwość na wartość <xref:System.Windows.Forms.DockStyle.Fill> .
 
-    2. Ustaw <xref:System.Windows.Forms.ListView.View%2A> właściwość <xref:System.Windows.Forms.View.Details>.
+    2. Ustaw <xref:System.Windows.Forms.ListView.View%2A> Właściwość na wartość <xref:System.Windows.Forms.View.Details> .
 
-    3. Otwórz Edytor kolekcji ColumnHeader,![klikając wielokropek (przycisk wielokropka (...) w okno właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) we <xref:System.Windows.Forms.ListView.Columns%2A> właściwości **.** Dodaj trzy kolumny i ustaw ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> właściwość na `Name`, `Type`, i `Last Modified`, odpowiednio. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.
+    3. Otwórz Edytor kolekcji ColumnHeader, klikając ![ wielokropek (przycisk wielokropka (...) w okno właściwości programu Visual Studio. ](./media/visual-studio-ellipsis-button.png) ) we <xref:System.Windows.Forms.ListView.Columns%2A> właściwości **.** Dodaj trzy kolumny i ustaw ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> Właściwość na `Name` , `Type` , i `Last Modified` , odpowiednio. Kliknij przycisk **OK**, aby zamknąć okno dialogowe.
 
-    4. <xref:System.Windows.Forms.ListView.SmallImageList%2A> Ustaw właściwość na`imageList1.`
+    4. Ustaw <xref:System.Windows.Forms.ListView.SmallImageList%2A> Właściwość na`imageList1.`
 
 8. Zaimplementuj kod, aby wypełnić <xref:System.Windows.Forms.TreeView> węzły węzłami i podrzędnymi. Dodaj ten kod do `Form1` klasy.
 
@@ -71,12 +72,12 @@ Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnyc
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. Obsłuż `treeview1`zdarzeniedlai zaimplementuj kod, aby wypełnić `listview1` zawartość węzła po kliknięciu węzła. <xref:System.Windows.Forms.TreeView.NodeMouseClick> Dodaj ten kod do `Form1` klasy.
+11. Obsłuż <xref:System.Windows.Forms.TreeView.NodeMouseClick> zdarzenie dla `treeview1` i zaimplementuj kod **,** aby wypełnić `listview1` zawartość węzła po kliknięciu węzła. Dodaj ten kod do `Form1` klasy.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]
 
-     Jeśli używasz C#programu, upewnij się, że masz <xref:System.Windows.Forms.TreeView.NodeMouseClick> zdarzenie skojarzone z jego metodą obsługi zdarzeń. Dodaj ten kod do konstruktora formularzy.
+     Jeśli używasz języka C#, upewnij się, że masz <xref:System.Windows.Forms.TreeView.NodeMouseClick> zdarzenie skojarzone z jego metodą obsługi zdarzeń. Dodaj ten kod do konstruktora formularzy.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]
 
@@ -88,23 +89,23 @@ Teraz można testować formularz, aby upewnić się, że działa zgodnie z oczek
 
 - Naciśnij klawisz F5, aby uruchomić aplikację.
 
-     Zobaczysz formularz podzielony zawierający <xref:System.Windows.Forms.TreeView> kontrolkę wyświetlającą katalog projektu po lewej stronie <xref:System.Windows.Forms.ListView> i kontrolkę po prawej stronie z trzema kolumnami. Możesz przejść <xref:System.Windows.Forms.TreeView> przez wybranie węzłów katalogów, <xref:System.Windows.Forms.ListView> a zostanie wypełniony zawartość wybranego katalogu.
+     Zobaczysz formularz podzielony zawierający <xref:System.Windows.Forms.TreeView> kontrolkę wyświetlającą katalog projektu po lewej stronie i <xref:System.Windows.Forms.ListView> kontrolkę po prawej stronie z trzema kolumnami. Możesz przejść <xref:System.Windows.Forms.TreeView> przez wybranie węzłów katalogów, a <xref:System.Windows.Forms.ListView> zostanie wypełniony zawartość wybranego katalogu.
 
 ## <a name="next-steps"></a>Następne kroki
 
 Ta aplikacja stanowi przykład sposobu użycia <xref:System.Windows.Forms.TreeView> i <xref:System.Windows.Forms.ListView> kontroli razem. Aby uzyskać więcej informacji na temat tych kontrolek, zobacz następujące tematy:
 
-- [Instrukcje: Dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Porady: dodawanie niestandardowych informacji do formantu TreeView lub ListView (Formularze systemu Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 
-- [Instrukcje: Dodawanie funkcji wyszukiwania do formantu ListView](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Instrukcje: dodawanie funkcji wyszukiwania do kontrolki ListView](how-to-add-search-capabilities-to-a-listview-control.md)
 
-- [Instrukcje: Dołącz menu skrótów do węzła TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
+- [Instrukcje: dołączanie menu ShortCut do węzła TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
-- [Kontrolka ListView](listview-control-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie węzłów za pomocą kontrolki TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Instrukcje: Dodawanie i usuwanie elementów za pomocą kontrolki ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie kolumn do kontrolki ListView Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [ListView — Formant](listview-control-windows-forms.md)
+- [Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie kolumn do kontrolki ListView formularzy Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

@@ -1,5 +1,6 @@
 ---
 title: Typy map bitowych
+description: Poznaj typy map bitowych i obsługiwane formaty plików graficznych interfejsu GDI+, w tym BMP, JPG, GIF, PNG i TIFF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - jpeg files
@@ -20,26 +21,26 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09b74ef476467b0bba5aac1f58db278b3898ef17
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914827"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174682"
 ---
 # <a name="types-of-bitmaps"></a>Typy map bitowych
 Mapa bitowa jest tablicą bitów, która określa kolor każdego piksela w prostokątnym tablicy pikseli. Liczba bitów przeznaczonych dla poszczególnych pikseli określa liczbę kolorów, które można przypisać do tego piksela. Na przykład, jeśli każdy piksel jest reprezentowany przez 4 bity, wówczas dany piksel można przypisać jeden z 16 różnych kolorów (2 ^ 4 = 16). W poniższej tabeli przedstawiono kilka przykładów liczby kolorów, które można przypisać do piksela reprezentowanego przez daną liczbę bitów.  
   
 |Bity na piksel|Liczba kolorów, które można przypisać do piksela|  
 |--------------------|------------------------------------------------------|  
-|1|2^1 = 2|  
-|2|2^2 = 4|  
-|4|2^4 = 16|  
-|8|2^8 = 256|  
-|16|2^16 = 65,536|  
-|24|2^24 = 16,777,216|  
+|1|2 ^ 1 = 2|  
+|2|2 ^ 2 = 4|  
+|4|2 ^ 4 = 16|  
+|8|2 ^ 8 = 256|  
+|16|2 ^ 16 = 65 536|  
+|24|2 ^ 24 = 16 777 216|  
   
- Pliki dysku, które przechowują mapy bitowe, zwykle zawierają jeden lub więcej bloków informacji, które przechowują informacje, takie jak liczba bitów na piksel, liczba pikseli w każdym wierszu i liczba wierszy w tablicy. Taki plik może również zawierać tabelę kolorów (czasami nazywaną paletą kolorów). Tabela kolorów mapuje liczby w mapie bitowej na określone kolory. Na poniższej ilustracji przedstawiono powiększony obraz wraz z jego mapą bitową i tabelą kolorów. Każdy piksel jest reprezentowany przez 4-bitową liczbę, więc w tabeli kolorów istnieją 2 ^ 4 = 16 kolorów. Każdy kolor w tabeli jest reprezentowany przez 24-bitową liczbę: 8 bitów na czerwony, 8 bitów dla zielono i 8 bitów dla niebieskiego. Liczby są wyświetlane w formacie szesnastkowym (Base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ Pliki dysku, które przechowują mapy bitowe, zwykle zawierają jeden lub więcej bloków informacji, które przechowują informacje, takie jak liczba bitów na piksel, liczba pikseli w każdym wierszu i liczba wierszy w tablicy. Taki plik może również zawierać tabelę kolorów (czasami nazywaną paletą kolorów). Tabela kolorów mapuje liczby w mapie bitowej na określone kolory. Na poniższej ilustracji przedstawiono powiększony obraz wraz z jego mapą bitową i tabelą kolorów. Każdy piksel jest reprezentowany przez 4-bitową liczbę, więc w tabeli kolorów istnieją 2 ^ 4 = 16 kolorów. Każdy kolor w tabeli jest reprezentowany przez 24-bitową liczbę: 8 bitów na czerwony, 8 bitów dla zieleni i 8 bitów dla niebieskiego. Liczby są wyświetlane w formacie szesnastkowym (Base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
  ![Mapa bitowa — przykład](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
@@ -85,7 +86,7 @@ Mapa bitowa jest tablicą bitów, która określa kolor każdego piksela w prost
 ### <a name="tag-image-file-format-tiff"></a>Tag Image File Format (TIFF)  
  TIFF to elastyczny i rozszerzalny format obsługiwany przez szeroką gamę platform i aplikacji do przetwarzania obrazów. Pliki TIFF mogą przechowywać obrazy z dowolną liczbą bitów na piksel i mogą wykorzystywać różne algorytmy kompresji. Kilka obrazów może być przechowywanych w jednym, wielostronicowym pliku TIFF. Informacje powiązane z obrazem (marka, komputer-host, typ kompresji, Orientacja, przykłady na piksel i tak dalej) mogą być przechowywane w pliku i uporządkowane przy użyciu tagów. Format TIFF można rozszerzyć odpowiednio do wymagań zatwierdzania i dodawania nowych tagów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>

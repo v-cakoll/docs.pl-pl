@@ -1,19 +1,20 @@
 ---
-title: TextBox, kontrolka
+title: TextBox — Formant
+description: Dowiedz się więcej na temat różnych aspektów kontrolki TextBox Windows Forms, takich jak używanie jej do edytowalnego tekstu i udostępnianie go tylko do odczytu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-ms.openlocfilehash: 7bdca52e62b6e7b014d28478b291a1157486527b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 026f6d2653e41dabd3db7490660b6ce19846d397
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742788"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174448"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox — Formant (Formularze systemu Windows)
-Windows Forms pola tekstowe są używane do pobierania danych wejściowych od użytkownika lub do wyświetlania tekstu. Formant `TextBox` jest zazwyczaj używany do edycji tekstu, chociaż może być również tylko do odczytu. Pola tekstowe mogą wyświetlać wiele wierszy, zawijać tekst do rozmiaru kontrolki i dodawać podstawowe formatowanie. Kontrolka `TextBox` zezwala na pojedynczy format dla tekstu wyświetlanego lub wprowadzonego w kontrolce.  
+Windows Forms pola tekstowe są używane do pobierania danych wejściowych od użytkownika lub do wyświetlania tekstu. `TextBox`Kontrolka jest zwykle używana do edytowalnego tekstu, chociaż może być również tylko do odczytu. Pola tekstowe mogą wyświetlać wiele wierszy, zawijać tekst do rozmiaru kontrolki i dodawać podstawowe formatowanie. `TextBox`Kontrolka zezwala na pojedynczy format dla tekstu wyświetlanego lub wprowadzanego w formancie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)  
@@ -31,16 +32,16 @@ Windows Forms pola tekstowe są używane do pobierania danych wejściowych od u�
  [Instrukcje: umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)  
  Wyjaśnia, jak dodać cudzysłowy do ciągu w polu tekstowym.  
   
- [Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Porady: zaznaczanie tekstu w formancie TextBox formularzy systemu Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)  
  Wyjaśnia, jak wyróżnić tekst w polu tekstowym.  
   
  [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  Opisuje sposób przewijania pola tekstowego.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  Klasa <xref:System.Windows.Forms.TextBox>  
  Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)  
  Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

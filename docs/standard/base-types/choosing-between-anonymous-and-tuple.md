@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100967"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174221"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Wybór między typami anonimowymi a kolekcjami
 
@@ -90,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-Język C# zapewnia obsługę spójnych kolekcji z <xref:System.ValueTuple> typem i semantyką dla:
-
-- [Przypisanie krotki](../../csharp/tuples.md#assignment-and-tuples)
-- [Dekonstrukcja krotki](../../csharp/deconstruct.md) (nieograniczona do krotek)
-- [Sprawdzanie równości spójnej kolekcji](../../csharp/tuples.md#equality-and-tuples)
-- [Inicjatory projekcji krotki](../../csharp/tuples.md#tuple-projection-initializers)
+Aby uzyskać więcej informacji na temat krotek, zobacz [typy krotek (odwołanie w C#)](../../csharp/language-reference/builtin-types/value-tuples.md) lub [krotki (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md).
 
 Poprzednie przykłady to wszystkie funkcje równoważne, ale istnieją niewielkie różnice w ich użyteczności i ich podstawowych wdrożeniach.
 
@@ -127,5 +122,6 @@ Jako deweloper wybierający między krotki a typami anonimowymi, istnieje kilka 
 
 - [Typy anonimowe](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Drzewa wyrażeń](../../csharp/expression-trees.md)
-- [Typy krotek](../../csharp/tuples.md)
+- [Typy krotek (odwołanie w C#)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [Krotki (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [Typy — zalecenia dotyczące projektowania](../design-guidelines/type.md)

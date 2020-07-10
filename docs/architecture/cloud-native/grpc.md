@@ -2,13 +2,16 @@
 title: gRPC
 description: Dowiedz się więcej na temat gRPC, jego roli w aplikacjach natywnych w chmurze i różnice między komunikacją HTTP RESTful.
 author: robvet
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201331"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173162"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -81,7 +84,7 @@ Preferuj gRPC w następujących scenariuszach:
 - Komunikacja między punktami w czasie rzeczywistym — gRPC może wypychanie wiadomości w czasie rzeczywistym bez sondowania i zapewnia doskonałą obsługę transmisji dwukierunkowej.
 - Środowiska ograniczone do sieci — binarne komunikaty gRPC są zawsze mniejsze niż odpowiedni tekst tekstowy w formacie JSON.
 
-W tej chwili ten zapis gRPC jest używany głównie z usługami zaplecza. Większość nowoczesnych przeglądarek nie może zapewnić poziomu kontroli protokołu HTTP/2 wymaganego do obsługi klienta frontonu gRPC. W ten sposób istnieje [wczesna inicjatywa](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , która umożliwia gRPC komunikację z aplikacjami opartymi na przeglądarce skompilowanymi przy użyciu technologii JavaScript lub Blazor. [GRPC-Web for .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) ASP.NET Core umożliwia aplikacji gRPC do obsługi funkcji gRPC w aplikacjach przeglądarki:
+W tej chwili ten zapis gRPC jest używany głównie z usługami zaplecza. Większość nowoczesnych przeglądarek nie może zapewnić poziomu kontroli protokołu HTTP/2 wymaganego do obsługi klienta frontonu gRPC. W ten sposób istnieje [wczesna inicjatywa](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , która umożliwia gRPC komunikację z aplikacjami opartymi na przeglądarce skompilowanymi przy użyciu języka JavaScript lub Blazor WebAssembly technologii. [GRPC-Web for .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) ASP.NET Core umożliwia aplikacji gRPC do obsługi funkcji gRPC w aplikacjach przeglądarki:
 
 - Jednoznacznie wpisane, generowane przez kod klientów
 - Kompaktowe komunikaty protobuf

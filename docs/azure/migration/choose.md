@@ -4,12 +4,12 @@ description: Dowiedz się, która ścieżka migracji platformy Azure jest odpowi
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "82072110"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174299"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>Wybierz odpowiednią opcję hostingu platformy Azure
 
@@ -46,7 +46,7 @@ Podczas migrowania relacyjnych baz danych do platformy Azure można wybrać wiel
 
 ## <a name="networking-and-security-considerations"></a>Zagadnienia dotyczące sieci i zabezpieczeń
 
-Podczas wdrażania aplikacji w chmurze publicznej, takiej jak Microsoft Azure, można wyizolować i zabezpieczyć niektóre sieci, [tworząc stref DMZ sieci](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/), [na przykład strefę DMZ między platformą Azure i lokalną](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) lub [strefą DMZ między platformą Azure i Internetem](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Stref DMZ można zaimplementować przy użyciu [usługi Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+Podczas wdrażania aplikacji w chmurze publicznej, takiej jak Microsoft Azure, można wyizolować i zabezpieczyć niektóre sieci, [tworząc stref DMZ sieci](/azure/architecture/reference-architectures/dmz/), [na przykład strefę DMZ między platformą Azure i lokalną](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) lub [strefą DMZ między platformą Azure i Internetem](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Stref DMZ można zaimplementować przy użyciu [usługi Azure Virtual Network](/azure/virtual-network/virtual-networks-overview).
 
 Usługa Azure Virtual Networks umożliwia:
 
@@ -57,15 +57,15 @@ Usługa Azure Virtual Networks umożliwia:
 - Tworzenie zaawansowanych topologii sieci przy użyciu urządzeń wirtualnych
 - Uzyskaj izolowane i wysoce bezpieczne środowisko dla aplikacji
 
-Aby rozpocząć tworzenie własnej sieci wirtualnej, zapoznaj się z [dokumentacją usługi Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/).
+Aby rozpocząć tworzenie własnej sieci wirtualnej, zapoznaj się z [dokumentacją usługi Azure Virtual Network](/azure/virtual-network/).
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Zagadnienia dotyczące uwierzytelniania i autoryzacji podczas migracji na platformę Azure
 
 Najważniejszym problemem w przypadku każdej organizacji przenoszonej do chmury jest bezpieczeństwo. Większość firm zainwestował znaczną ilość czasu, pieniędzy i inżynierii na projektowanie i opracowywanie modelu zabezpieczeń, a ważne jest, aby korzystać z istniejących inwestycji, takich jak magazyny tożsamości i rozwiązania do rejestracji jednokrotnej.
 
-Wiele istniejących aplikacji B2E platformy .NET działających Active Directory lokalnie na potrzeby uwierzytelniania i zarządzania tożsamościami. Azure AD Connect umożliwia integrację katalogów lokalnych z Azure Active Directory. Aby rozpocząć, zobacz [integrowanie katalogów lokalnych z Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Wiele istniejących aplikacji B2E platformy .NET działających Active Directory lokalnie na potrzeby uwierzytelniania i zarządzania tożsamościami. Azure AD Connect umożliwia integrację katalogów lokalnych z Azure Active Directory. Aby rozpocząć, zobacz [integrowanie katalogów lokalnych z Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 
-Zapoznaj się z wymaganiami dotyczącymi [tożsamości hybrydowego rozwiązania](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) do tworzenia tożsamości, aby kontynuować planowanie dotyczące Azure Active Directory.
+Zapoznaj się z wymaganiami dotyczącymi [tożsamości hybrydowego rozwiązania](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) do tworzenia tożsamości, aby kontynuować planowanie dotyczące Azure Active Directory.
 
 Inne opcje protokołu uwierzytelniania to [OAuth](https://en.wikipedia.org/wiki/OAuth) i [OpenID Connect](https://en.wikipedia.org/wiki/OpenID), które są wspólne w aplikacjach przeznaczonych dla klientów. W przypadku korzystania z autonomicznych baz danych tożsamości, takich jak ASP.NET Identity baza danych SQL opakowana przy użyciu protokołu OAuth, nie jest zwykle wymagane połączenie z lokalnymi bazami danych lub katalogami.
 

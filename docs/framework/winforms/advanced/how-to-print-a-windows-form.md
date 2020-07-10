@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Drukowanie formularza systemu Windows'
+title: 'Porady: drukowanie formularza systemu Windows'
+description: Dowiedz się, jak programowo wydrukować kopię bieżącego formularza systemu Windows przy użyciu metody CopyFromScreen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: cd10e0a43ff37b921dc8e024d7a6a51fafbb0400
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b59ea4b5347903b36a166c4f8ac0d8d7db18635e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591855"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174695"
 ---
-# <a name="how-to-print-a-windows-form"></a>Instrukcje: Drukowanie formularza systemu Windows
-Jako część procesu projektowania zazwyczaj można wydrukować formularza Windows. Poniższy przykład kodu pokazuje jak drukować kopię bieżącego formularza za pomocą <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody.  
+# <a name="how-to-print-a-windows-form"></a>Porady: drukowanie formularza systemu Windows
+W ramach procesu tworzenia zwykle warto wydrukować kopię formularza systemu Windows. Poniższy przykład kodu pokazuje, jak wydrukować kopię bieżącego formularza przy użyciu <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
@@ -29,13 +30,13 @@ Jako część procesu projektowania zazwyczaj można wydrukować formularza Wind
   
 - Nie masz uprawnień dostępu do drukarki.  
   
-- Brak Brak zainstalowanej drukarki.  
+- Nie ma zainstalowanej drukarki.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Aby można było uruchomić ten przykład kodu, musi mieć uprawnienia dostępu do drukarki, używanej do komputera.  
+ Aby można było uruchomić ten przykład kodu, musisz mieć uprawnienia dostępu do drukarki używanej na komputerze.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)
-- [Instrukcje: Drukowanie grafiki w formularzach Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Instrukcje: renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)
+- [Instrukcje: drukowanie grafiki w formularzach Windows Forms](how-to-print-graphics-in-windows-forms.md)

@@ -2,17 +2,18 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241893"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226637"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
-Język C# zapewnia pełną obsługę programowania zorientowanego obiektowo, w tym hermetyzację, dziedziczenie i polimorfizm.
+Język C# zapewnia pełną obsługę programowania zorientowanego obiektowo, w tym abstrakcję, hermetyzację, dziedziczenie i polimorfizm.
 
+- *Abstrakcja* oznacza ukrycie niepotrzebnych informacji od odbiorców typu.
 - *Hermetyzacja* oznacza, że grupa powiązanych właściwości, metod i innych elementów członkowskich jest traktowana jako pojedyncza jednostka lub obiekt.
 - *Dziedziczenie* opisuje możliwość tworzenia nowych klas na podstawie istniejącej klasy.
 - *Polimorfizm* oznacza, że można mieć wiele klas, które mogą być używane zamiennie, nawet jeśli każda klasa implementuje te same właściwości lub metody na różne sposoby.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-Język C# udostępnia również typy nazywane *strukturami* , które są przydatne, gdy nie potrzebujesz obsługi dziedziczenia lub polimorfizmu.
+Język C# udostępnia również typy nazywane *strukturami* , które są przydatne, gdy nie potrzebujesz obsługi dziedziczenia lub polimorfizmu. Aby uzyskać więcej informacji, zobacz [Wybieranie między klasą i strukturą](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 Aby zdefiniować strukturę:
 
@@ -91,7 +92,7 @@ Większość właściwości ma metody lub procedury ustawiające i pobierające 
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [get](../../language-reference/keywords/get.md)
+- [Pobierz](../../language-reference/keywords/get.md)
 - [zbiór](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Metody
@@ -187,7 +188,7 @@ Dostępne są następujące Modyfikatory dostępu:
 | Modyfikator języka C# | Definicja |
 |--|--|
 | [public](../../language-reference/keywords/public.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego innego kodu w tym samym zestawie lub innym zestawie, który odwołuje się do niego. |
-| [private](../../language-reference/keywords/private.md) | Do typu lub elementu członkowskiego można uzyskać dostęp tylko w kodzie w tej samej klasie. |
+| [użytek](../../language-reference/keywords/private.md) | Do typu lub elementu członkowskiego można uzyskać dostęp tylko w kodzie w tej samej klasie. |
 | [protected](../../language-reference/keywords/protected.md) | Do typu lub elementu członkowskiego można uzyskać dostęp tylko za pomocą kodu w tej samej klasie lub w klasie pochodnej. |
 | [internal](../../language-reference/keywords/internal.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie, ale nie z innego zestawu. |
 | [protected internal](../../language-reference/keywords/protected-internal.md) | Do typu lub elementu członkowskiego można uzyskać dostęp za pomocą dowolnego kodu w tym samym zestawie lub przez dowolną klasę pochodną w innym zestawie. |
@@ -308,7 +309,7 @@ Poniższe Modyfikatory służą do kontrolowania sposobu przesłania właściwo�
 
 | Modyfikator języka C# | Definicja |
 |--|--|
-| [virtual](../../language-reference/keywords/virtual.md) | Zezwala na przesłanianie składowej klasy w klasie pochodnej. |
+| [wirtualnej](../../language-reference/keywords/virtual.md) | Zezwala na przesłanianie składowej klasy w klasie pochodnej. |
 | [override](../../language-reference/keywords/override.md) | Przesłania element członkowski wirtualny (zastępujący) zdefiniowany w klasie bazowej. |
 | [streszczeń](../../language-reference/keywords/abstract.md) | Wymaga, aby element członkowski klasy był zastępowany w klasie pochodnej. |
 | [new, modyfikator](../../language-reference/keywords/new-modifier.md) | Ukrywa składową dziedziczoną z klasy bazowej |
@@ -400,6 +401,6 @@ class SampleClass
 
 Aby uzyskać więcej informacji, zobacz artykuł Przewodnik programowania dotyczący [delegatów](../delegates/index.md) i artykuł referencyjny języka w słowie kluczowym [delegata](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)

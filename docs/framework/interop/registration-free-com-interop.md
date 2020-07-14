@@ -1,5 +1,6 @@
 ---
 title: Współdziałanie z modelem COM bez rejestrowania
+description: Aby uaktywnić składnik bez używania rejestru systemu Windows do przechowywania informacji o zestawie, należy użyć międzyoperacyjności w przypadku rejestracji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124963"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281605"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik bez używania rejestru systemu Windows do przechowywania informacji o zestawie. Zamiast rejestrować składnik na komputerze podczas wdrażania, można tworzyć pliki manifestu w stylu Win32 w czasie projektowania, które zawierają informacje o powiązaniu i aktywacji. Te pliki manifestu, a nie klucze rejestru, kierują aktywację obiektu.  
@@ -52,6 +53,6 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
     > [!NOTE]
     > Wykonywanie równoczesne jest funkcją .NET Framework, która umożliwia obsługę wielu wersji środowiska uruchomieniowego oraz wielu wersji aplikacji i składników, które używają wersji środowiska uruchomieniowego, do uruchamiania na tym samym komputerze w tym samym czasie. Wykonywanie równoczesne i zestawy równoległe są różnymi mechanizmami zapewniania funkcji równoległych.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)

@@ -72,7 +72,7 @@ Gdy wnioskowanie o nazwie pola nie powiedzie się, Visual Basic nie generuje bł
 
 ## <a name="tuples-versus-structures"></a>Krotki i struktury
 
-Krotka Visual Basic jest typem wartości, który jest wystąpieniem jednego z typów ogólnych **System. ValueTuple** . Na przykład `holiday` krotka zdefiniowana w poprzednim przykładzie jest wystąpieniem <xref:System.ValueTuple%603> struktury. Jest on przeznaczony do uproszczonego kontenera dla danych. Ponieważ krotka ma ułatwić tworzenie obiektu z wieloma elementami danych, nie ma niektórych funkcji, które mogą mieć niestandardową strukturę. Należą do nich:
+Krotka Visual Basic jest typem wartości, który jest wystąpieniem jednego z typów ogólnych **System. ValueTuple** . Na przykład `holiday` krotka zdefiniowana w poprzednim przykładzie jest wystąpieniem <xref:System.ValueTuple%603> struktury. Jest on przeznaczony do uproszczonego kontenera dla danych. Ponieważ krotka ma ułatwić tworzenie obiektu z wieloma elementami danych, nie ma niektórych funkcji, które mogą mieć niestandardową strukturę. Są to moduły:
 
 - Niestandardowe elementy członkowskie. Nie można definiować własnych właściwości, metod lub zdarzeń dla krotki.
 

@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w bibliotece klas podstawowych
 description: Wyświetla istotne zmiany w podstawowych bibliotekach programu .NET.
 ms.date: 09/20/2019
-ms.openlocfilehash: 1c56358e69d0dd6e8572a41229c1b9edbcdad795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365622"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281313"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Podstawowe zmiany w bibliotekach .NET
 
@@ -17,6 +17,8 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 
 | Zmiana podziału | Wprowadzona wersja |
 | - | :-: |
+| [ActivityIdFormat domyślny to W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Zmiana zachowania dla Vector2. Lerp i Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [Metody SSE i SSE2 CompareGreaterThan prawidłowo obsługują dane wejściowe NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [Element CounterSet. CreateCounterSetInstance teraz zgłasza InvalidOperationException, jeśli wystąpienie już istnieje](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [Usunięto pakiet Microsoft. DotNet. PlatformAbstractions](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
@@ -43,6 +45,14 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 | [Proces. element StartInfo zgłasza InvalidOperationException dla procesów, które nie zostały uruchomione](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
+
+***
+
+[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
+
+***
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
 

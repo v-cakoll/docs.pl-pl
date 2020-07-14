@@ -4,12 +4,12 @@ description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi pisania tes
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324481"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281111"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania dotyczące testów jednostkowych przy użyciu platformy .NET Core i .NET Standard
 
@@ -22,21 +22,25 @@ W tym przewodniku przedstawiono niektóre najlepsze rozwiązania podczas pisania
 ## <a name="why-unit-test"></a>Dlaczego test jednostkowy?
 
 ### <a name="less-time-performing-functional-tests"></a>Krótszy czas wykonywania testów funkcjonalnych
+
 Testy funkcjonalne są kosztowne. Zwykle wymagają otwarcia aplikacji i wykonania serii czynności, które należy wykonać (lub kogoś innego), aby sprawdzić oczekiwane zachowanie. Te kroki mogą być nieznane dla testera, co oznacza, że będą musieli skontaktować się z inną osobą w obszarze w celu przeprowadzenia testu. Testowanie może potrwać kilka sekund lub kilka minut w przypadku większych zmian. Na koniec należy powtórzyć ten proces dla każdej zmiany wprowadzonej w systemie.
 
 Testy jednostkowe, z drugiej strony, pozostaną w milisekundach, mogą być uruchamiane przy naciśnięciu przycisku i niekoniecznie wymagają żadnej wiedzy o systemie. Niezależnie od tego, czy test lub czy nie działa, jest do modułu uruchamiającego testy, a nie do osoby.
 
 ### <a name="protection-against-regression"></a>Ochrona przed regresją
+
 Wady regresji to wady wprowadzane po wprowadzeniu zmian w aplikacji. Jest ona wspólna dla testerów, aby nie tylko testować swoją nową funkcję, ale również funkcje, które wcześniej istniały w celu sprawdzenia, czy poprzednio zaimplementowane funkcje nadal działają zgodnie z oczekiwaniami.
 
 W przypadku testów jednostkowych możliwe jest ponowne uruchomienie całego pakietu testów po każdej kompilacji lub nawet po zmianie wiersza kodu. Zapewnianie pewności, że nowy kod nie przerywa istniejących funkcji.
 
 ### <a name="executable-documentation"></a>Dokumentacja pliku wykonywalnego
+
 Może to nie zawsze być oczywisty sposób działania określonej metody lub jej zachowania. Użytkownik może zadawać sobie: jak działa ta metoda, jeśli przekażę pusty ciąg? Null?
 
 Jeśli masz zestaw dobrze wymienionych testów jednostkowych, każdy test powinien być w stanie jasno wyjaśnić oczekiwane dane wyjściowe dla danego danych wejściowych. Ponadto powinno być możliwe zweryfikowanie, czy faktycznie działa.
 
 ### <a name="less-coupled-code"></a>Mniej połączony kod
+
 Gdy kod jest ściśle sprzężony, może być trudne do testowania jednostkowego. Bez tworzenia testów jednostkowych dla kodu, który piszesz, Sprzęg może być mniej widoczny.
 
 Pisanie testów dla kodu spowoduje naturalnie oddzielenie kodu, ponieważ byłoby trudniejsze do przetestowania w przeciwnym razie.
@@ -56,6 +60,7 @@ Wysoka wartość procentowa pokrycia kodu jest często skojarzona z wyższą jak
 Wysoki procent pokrycia kodu nie jest wskaźnikiem sukcesu ani nie ma wysokiej jakości kodu. Reprezentuje ona jedynie ilość kodu, która jest objęta testami jednostkowymi. Aby uzyskać więcej informacji, zobacz temat [pokrycie kodu testu jednostkowego](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Zacznijmy od tego samego języka
+
 W przypadku korzystania z testów *często występuje* niedziałający sposób. Następujące punkty definiują najpopularniejsze *typy elementów* sztucznych podczas pisania testów jednostkowych:
 
 *Sfałszowane* — jest to ogólny termin, który może służyć do opisywania obiektu zastępczego lub makiety. Bez względu na to, czy jest to element zastępczy, czy makieta zależy od kontekstu, w którym jest używana. Inaczej mówiąc, może to być szczątk lub makieta.
@@ -111,6 +116,7 @@ Głównym elementem, który należy pamiętać o makietach i fragmentów, jest t
 ## <a name="best-practices"></a>Najlepsze rozwiązania
 
 ### <a name="naming-your-tests"></a>Nazywanie testów
+
 Nazwa testu powinna składać się z trzech części:
 
 - Nazwa testowanej metody.
@@ -124,12 +130,15 @@ Nazwa testu powinna składać się z trzech części:
 Testy są większe niż tylko w celu upewnienia się, że kod działa, ale również zawiera dokumentację. Wystarczy, że szukasz zestawu testów jednostkowych, można wywnioskować zachowanie kodu bez konieczności przeglądania kodu. Ponadto, gdy testy zakończą się niepowodzeniem, można zobaczyć, które scenariusze nie spełniają oczekiwań.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Rozmieszczanie testów
+
 **Rozmieść, Act, Assert** jest typowym wzorcem podczas testowania jednostkowego. Jak nazwa oznacza, składa się z trzech głównych akcji:
 
 - *Rozmieszczanie* obiektów, tworzenie i konfigurowanie ich w razie potrzeby.
@@ -144,12 +153,15 @@ Testy są większe niż tylko w celu upewnienia się, że kod działa, ale równ
 Czytelność to jeden z najważniejszych aspektów związanych z pisaniem testu. Oddzielenie każdej z tych akcji w ramach testu wyraźnie podkreśla zależności wymagane do wywołania kodu, sposobu wywoływania kodu i tego, co próbujesz przedstawić. Chociaż może być możliwe połączenie niektórych kroków i zmniejszenie rozmiaru testu, głównym celem jest przeprowadzenie testu jako możliwego do odczytania.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Zapisz minimalnie przekazanie testów
+
 Dane wejściowe do użycia w teście jednostkowym powinny być najprostszym możliwym do zweryfikowania zachowania, które jest obecnie testowane.
 
 #### <a name="why"></a>Dlaczego?
@@ -160,12 +172,15 @@ Dane wejściowe do użycia w teście jednostkowym powinny być najprostszym moż
 Testy, które zawierają więcej informacji, niż jest to wymagane do przekazania testu, mają większą szansę na wprowadzenie błędów do testu i mogą sprawić, że zamiar testu jest mniej oczywisty. Podczas pisania testów należy skoncentrować się na zachowaniu. Ustawienie dodatkowych właściwości dla modeli lub użycie niezerowych wartości, gdy nie jest to wymagane, powoduje tylko rozciąganie z tego, co próbujesz udowodnić.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Unikaj ciągów Magic
+
 Zmienne nazewnictwa w testach jednostkowych są ważne, jeśli nie są ważniejsze niż zmienne nazw w kodzie produkcyjnym. Testy jednostkowe nie powinny zawierać ciągów Magic.
 
 #### <a name="why"></a>Dlaczego?
@@ -179,12 +194,15 @@ Ciągi Magic mogą spowodować pomyłkę dla czytnika testów. Jeśli ciąg wyr�
 > Podczas pisania testów należy zamierzyć możliwie jak najwięcej założeń. W przypadku ciągów magicznych dobrym rozwiązaniem jest przypisanie tych wartości do stałych.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Unikanie logiki w testach
+
 Podczas pisania testów jednostkowych należy unikać ręcznego łączenia ciągów i warunków logicznych, takich jak,,, `if` `while` `for` `switch` itd.
 
 #### <a name="why"></a>Dlaczego?
@@ -198,12 +216,15 @@ Gdy wprowadzasz logikę do zestawu testów, szansa na ich zwiększenie znacznie 
 > Jeśli logika w teście wydaje się nienieunikniona, rozważ podzielenie testu na dwa lub więcej różnych testów.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Preferuj metody pomocnika do instalacji i usuwania
+
 Jeśli potrzebujesz podobnego obiektu lub stanu dla testów, Preferuj metodę pomocnika, korzystając z atrybutów Setup i usuwania, jeśli istnieją.
 
 #### <a name="why"></a>Dlaczego?
@@ -218,6 +239,7 @@ W strukturach testów jednostkowych `Setup` jest wywoływana przed każdym teste
 > xUnit usunął zarówno Instalatora, jak i usuwania w wersji 2. x
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -227,6 +249,7 @@ W strukturach testów jednostkowych `Setup` jest wywoływana przed każdym teste
 [!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
@@ -236,6 +259,7 @@ W strukturach testów jednostkowych `Setup` jest wywoływana przed każdym teste
 [!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Unikaj wielu potwierdzeń
+
 Podczas pisania testów, spróbuj uwzględnić tylko jedno potwierdzenie na test. Typowe podejścia do korzystania tylko z jednego potwierdzenia obejmują:
 
 - Utwórz oddzielny test dla każdego potwierdzenia.
@@ -253,12 +277,15 @@ W przypadku wprowadzenia wielu potwierdzeń do przypadku testowego nie ma gwaran
 > Typowym wyjątkiem od tej reguły jest potwierdzenie obiektu. W takim przypadku ogólnie akceptowalne jest posiadanie wielu potwierdzeń dla każdej właściwości, aby upewnić się, że obiekt znajduje się w stanie, w którym oczekujesz.
 
 #### <a name="bad"></a>Źle:
+
 [!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Bardziej
+
 [!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Weryfikowanie metod prywatnych według metod publicznych testów jednostkowych
+
 W większości przypadków nie powinno być konieczne przetestowanie metody prywatnej. Metody prywatne są szczegółami implementacji. Można to traktować w ten sposób: metody prywatne nigdy nie istnieją w izolacji. W pewnym momencie istnieje metoda publiczna, która wywołuje metodę prywatną w ramach jej implementacji. Informacje o tym, co należy wiedzieć, to wynik metody publicznej, która wywołuje do prywatnego.
 
 Rozważmy następujący przypadek
@@ -281,7 +308,7 @@ Pierwszą odpowiedzią może być rozpoczęcie pisania testu dla `TrimInput` , p
 Rzeczywisty test powinien być wykonywany w oparciu o publiczną metodę dodaną `ParseLogLine` , ponieważ to to, co powinno być ostatecznie ważne.
 
 ```csharp
-public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
+public void ParseLogLine_StartsAndEndsWithSpace_ReturnsTrimmedResult()
 {
     var parser = new Parser();
 
@@ -294,12 +321,13 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Jeśli w tym obszarze widać, że jest wyświetlana Metoda prywatna, Znajdź metodę publiczną i napisz testy dla tej metody. Tylko dlatego, że Metoda prywatna zwraca oczekiwany wynik, nie oznacza, że system, który ostatecznie wywołuje metodę prywatną, użyje poprawnego wyniku.
 
 ### <a name="stub-static-references"></a>Zastępcze odwołania statyczne
+
 Jedną z zasad testów jednostkowych jest to, że musi ona mieć pełną kontrolę nad testowanym systemem. Może to być problematyczne, gdy kod produkcyjny zawiera wywołania do odwołań statycznych (na przykład `DateTime.Now` ). Rozważmy następujący kod
 
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+    if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -313,7 +341,7 @@ public int GetDiscountedPrice(int price)
 Jak ten kod może być testowany jednostkowo? Możesz wypróbować takie podejście jak
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
 
@@ -347,7 +375,7 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
+    if (dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -361,7 +389,7 @@ public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 Zestaw testów zostanie teraz
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
     var dateTimeProviderStub = new Mock<IDateTimeProvider>();

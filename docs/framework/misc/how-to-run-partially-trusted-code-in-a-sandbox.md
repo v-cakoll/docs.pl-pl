@@ -1,5 +1,6 @@
 ---
 title: 'Porady: uruchamianie częściowo zaufanego kodu w bibliotece'
+description: Odkryj, jak uruchomić częściowo zaufany kod w piaskownicy w programie .NET. Klasa AppDomain jest efektywnym sposobem aplikacji zarządzanych w trybie piaskownicy.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181178"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282037"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Porady: uruchamianie częściowo zaufanego kodu w bibliotece
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Piaskownica jest praktyką uruchamiania kodu w ograniczonym środowisku zabezpieczeń, co ogranicza uprawnienia dostępu przyznane do kodu. Na przykład jeśli masz bibliotekę zarządzaną ze źródła, któremu nie ufasz całkowicie, nie należy jej uruchamiać jako w pełni zaufanej. Zamiast tego należy umieścić kod w obszarze izolowanym, który ogranicza jego uprawnienia do <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> tych, które oczekują, że będzie potrzebne (na przykład uprawnienia).  
+ Tryb piaskownicy jest praktycznym sposobem uruchamiania kodu w ograniczonym środowisku zabezpieczeń, który ogranicza uprawnienia dostępu przyznane do kodu. Na przykład, jeśli masz bibliotekę zarządzaną z źródła, które nie jest całkowicie zaufane, nie należy uruchamiać go jako w pełni zaufany. Zamiast tego należy umieścić kod w piaskownicy, który ogranicza jego uprawnienia do tych, których oczekujesz (na przykład <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> uprawnienia).  
   
- Można również użyć piaskownicy do testowania kodu, który będzie dystrybuowany, który będzie uruchamiany w częściowo zaufanych środowiskach.  
+ Możesz również użyć piaskownicy do testowania kodu, który będzie wykonywany w środowiskach częściowo zaufanych.  
   
- An <xref:System.AppDomain> jest skutecznym sposobem zapewnienia piaskownicy dla aplikacji zarządzanych. Domeny aplikacji, które są używane do uruchamiania częściowo zaufanego kodu mają uprawnienia, <xref:System.AppDomain>które definiują chronione zasoby, które są dostępne podczas uruchamiania w tym . Kod, który <xref:System.AppDomain> działa wewnątrz jest związany uprawnieniami <xref:System.AppDomain> skojarzonymi z i może uzyskać dostęp tylko do określonych zasobów. Zawiera <xref:System.AppDomain> również <xref:System.Security.Policy.StrongName> tablicę, która jest używana do identyfikowania zestawów, które mają być ładowane jako w pełni zaufane. Dzięki temu twórca, <xref:System.AppDomain> aby rozpocząć nową domenę w trybie piaskownicy, która umożliwia określone zestawy pomocnika być w pełni zaufany. Inną opcją ładowania zestawów jako w pełni zaufanych jest umieszczenie ich w globalnej pamięci podręcznej zestawów; jednak, że będzie załadować zestawy jako w pełni zaufane we wszystkich domenach aplikacji utworzonych na tym komputerze. Lista silnych nazwisk popiera<xref:System.AppDomain> decyzję per- która zapewnia bardziej restrykcyjną determinację.  
+ <xref:System.AppDomain>Jest skutecznym sposobem zapewnienia piaskownicy dla aplikacji zarządzanych. Domeny aplikacji używane do uruchamiania częściowo zaufanego kodu mają uprawnienia, które definiują chronione zasoby, które są dostępne podczas działania w ramach tego programu <xref:System.AppDomain> . Kod, który jest uruchamiany w ramach programu, <xref:System.AppDomain> jest powiązany z uprawnieniami skojarzonymi z <xref:System.AppDomain> i ma zezwolenie na dostęp tylko do określonych zasobów. <xref:System.AppDomain>Zawiera również <xref:System.Security.Policy.StrongName> tablicę, która jest używana do identyfikowania zestawów, które mają zostać załadowane jako w pełni zaufane. Dzięki temu Twórca programu <xref:System.AppDomain> może rozpocząć nową domenę w trybie piaskownicy, która pozwala na pełne ufanie określonym zestawom pomocnika. Kolejną opcją ładowania zestawów jako w pełni zaufanej jest umieszczenie ich w globalnej pamięci podręcznej zestawów; Jednak program będzie ładować zestawy jako w pełni zaufane we wszystkich domenach aplikacji utworzonych na tym komputerze. Lista silnych nazw obsługuje <xref:System.AppDomain> podjęcie decyzji, która zapewnia bardziej restrykcyjne Określanie.  
   
- Przeciążenie <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> metody służy do określenia zestawu uprawnień dla aplikacji, które są uruchamiane w obszarze izolowanym. To przeciążenie umożliwia określenie dokładnego poziomu zabezpieczeń dostępu do kodu, które chcesz. Zestawy, które są <xref:System.AppDomain> ładowane do za pomocą tego przeciążenia może mieć tylko określony zestaw dotacji lub mogą być w pełni zaufane. Zestaw otrzymuje pełne zaufanie, jeśli znajduje się w globalnej `fullTrustAssemblies` pamięci <xref:System.Security.Policy.StrongName>podręcznej zestawów lub jest wymieniony w () parametr tablicy. Do listy należy dodać tylko zestawy, `fullTrustAssemblies` o których wiadomo, że są w pełni zaufane.  
+ Można użyć <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody, aby określić zestaw uprawnień dla aplikacji, które działają w piaskownicy. To przeciążenie umożliwia określenie dokładnego poziomu zabezpieczeń dostępu kodu. Zestawy, które są ładowane do programu <xref:System.AppDomain> przy użyciu tego przeciążenia, mogą mieć określony zestaw dotacji lub mogą być w pełni zaufane. Zestaw uzyskuje pełne zaufanie, jeśli znajduje się w globalnej pamięci podręcznej zestawów lub znajduje się w `fullTrustAssemblies` <xref:System.Security.Policy.StrongName> parametrze tablicy (). Do listy należy dodać tylko zestawy znane jako w pełni zaufane `fullTrustAssemblies` .  
   
  Przeciążenie ma następujący podpis:  
   
@@ -36,24 +37,24 @@ AppDomain.CreateDomain( string friendlyName,
                         params StrongName[] fullTrustAssemblies);  
 ```  
   
- <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> Parametry przeciążenia metody określają nazwę <xref:System.AppDomain>, dowód dla <xref:System.AppDomain>obiektu, który identyfikuje bazę <xref:System.AppDomainSetup> aplikacji dla piaskownicy, ustawione uprawnienia do użycia i silne nazwy w pełni zaufanych zestawów.  
+ Parametry <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> przeciążenia metody określają nazwę <xref:System.AppDomain> , dowód dla <xref:System.AppDomain> <xref:System.AppDomainSetup> obiektu, który identyfikuje bazę aplikacji dla piaskownicy, zestaw uprawnień do użycia i silne nazwy dla w pełni zaufanych zestawów.  
   
- Ze względów bezpieczeństwa baza `info` aplikacji określona w parametrze nie powinna być podstawą aplikacji hostingowej.  
+ Ze względów bezpieczeństwa baza aplikacji określona w `info` parametrze nie powinna być bazą aplikacji dla aplikacji hostingowych.  
   
- Dla `grantSet` parametru można określić zestaw uprawnień, który został jawnie utworzony, <xref:System.Security.SecurityManager.GetStandardSandbox%2A> lub standardowy zestaw uprawnień utworzony przez metodę.  
+ Dla `grantSet` parametru można określić zestaw uprawnień, który został utworzony jawnie, lub standardowy zestaw uprawnień utworzony przez <xref:System.Security.SecurityManager.GetStandardSandbox%2A> metodę.  
   
- W <xref:System.AppDomain> przeciwieństwie do większości obciążeń <xref:System.AppDomain> dowody dla (który jest dostarczany przez `securityInfo` parametr) nie jest używany do określenia zestawu dotacji dla częściowo zaufanych zestawów. Zamiast tego jest niezależnie określony `grantSet` przez parametr. Jednak dowody mogą być używane do innych celów, takich jak określenie zakresu izolowanego magazynu.  
+ W przeciwieństwie do większości <xref:System.AppDomain> obciążeń, dowód dla <xref:System.AppDomain> (który jest dostarczany przez `securityInfo` parametr) nie jest używany do określenia zestawu dotacji dla częściowo zaufanych zestawów. Zamiast tego jest on niezależnie określony przez `grantSet` parametr. Jednakże dowody mogą być używane do innych celów, takich jak określenie zakresu izolowanego magazynu.  
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Aby uruchomić aplikację w piaskownicy  
   
-1. Utwórz zestaw uprawnień, które mają zostać przyznane niezaufanej aplikacji. Minimalne uprawnienie, które <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> można udzielić, to uprawnienie. Można również udzielić dodatkowych uprawnień, które uważasz za bezpieczne dla niezaufanego kodu; na przykład <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Poniższy kod tworzy nowy zestaw <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> uprawnień tylko z uprawnieniami.  
+1. Utwórz zestaw uprawnień, który ma zostać udzielony dla niezaufanej aplikacji. Uprawnieniem minimalnym, które można udzielić <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> . Możesz również udzielić dodatkowych uprawnień, które mogą być bezpieczne dla niezaufanego kodu; na przykład <xref:System.Security.Permissions.IsolatedStorageFilePermission> . Poniższy kod tworzy nowy zestaw uprawnień z <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> uprawnieniami.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
   
-     Alternatywnie można użyć istniejącego nazwanego zestawu uprawnień, takiego jak Internet.  
+     Alternatywnie możesz użyć istniejącego zestawu uprawnień o nazwie, takiego jak Internet.  
   
     ```csharp
     Evidence ev = new Evidence();  
@@ -61,26 +62,26 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     Metoda <xref:System.Security.SecurityManager.GetStandardSandbox%2A> zwraca zestaw `Internet` uprawnień lub `LocalIntranet` zestaw uprawnień w zależności od strefy w dowodach. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>również konstruuje uprawnienia tożsamości dla niektórych obiektów dowodów przekazanych jako odwołania.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Metoda zwraca `Internet` zestaw uprawnień lub `LocalIntranet` zestaw uprawnień w zależności od strefy w dowodu. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Ponadto konstruuje uprawnienia tożsamości dla niektórych obiektów dowodu, które przechodzą jako odwołania.  
   
-2. Podpisz zestaw, który zawiera `Sandboxer` klasę hostingu (o nazwie w tym przykładzie), która wywołuje niezaufany kod. Dodaj <xref:System.Security.Policy.StrongName> używane do podpisania zestawu <xref:System.Security.Policy.StrongName> do `fullTrustAssemblies` tablicy <xref:System.AppDomain.CreateDomain%2A> parametru wywołania. Klasa hostingu musi działać jako w pełni zaufany, aby umożliwić wykonanie kodu częściowego zaufania lub oferować usługi aplikacji częściowego zaufania. W ten sposób <xref:System.Security.Policy.StrongName> można odczytać zestawu:  
+2. Podpisz zestaw zawierający klasę hostingu (o nazwie `Sandboxer` w tym przykładzie), która wywołuje niezaufany kod. Dodaj <xref:System.Security.Policy.StrongName> użyty do podpisania zestawu do <xref:System.Security.Policy.StrongName> tablicy `fullTrustAssemblies` parametru <xref:System.AppDomain.CreateDomain%2A> wywołania. Klasa hostingu musi działać jako w pełni zaufana, aby umożliwić wykonywanie kodu częściowego zaufania lub oferowanie usług dla aplikacji częściowo zaufanej. Jest to sposób odczytywania <xref:System.Security.Policy.StrongName> zestawu:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
-     Zestawy .NET Framework, takie jak mscorlib i System.dll, nie muszą być dodawane do listy pełnego zaufania, ponieważ są ładowane jako w pełni zaufane z globalnej pamięci podręcznej zestawów.  
+     Zestawy .NET Framework, takie jak mscorlib i System.dll, nie muszą być dodawane do listy całkowicie zaufanych, ponieważ są załadowane jako w pełni zaufane z globalnej pamięci podręcznej zestawów.  
   
-3. Zainicjować <xref:System.AppDomainSetup> parametr <xref:System.AppDomain.CreateDomain%2A> metody. Za pomocą tego parametru można kontrolować wiele <xref:System.AppDomain>ustawień nowego . Właściwość <xref:System.AppDomainSetup.ApplicationBase%2A> jest ważnym ustawieniem i powinna <xref:System.AppDomainSetup.ApplicationBase%2A> się <xref:System.AppDomain> różnić od właściwości aplikacji hostingowej. Jeśli <xref:System.AppDomainSetup.ApplicationBase%2A> ustawienia są takie same, aplikacja częściowego zaufania można uzyskać aplikacji hostingu, aby załadować (jako w pełni zaufany) wyjątek, który definiuje, wykorzystując go. Jest to kolejny powód, dla którego catch (wyjątek) nie jest zalecane. Ustawienie bazy aplikacji hosta inaczej niż baza aplikacji w trybie piaskownicy zmniejsza ryzyko exploitów.  
+3. Zainicjuj <xref:System.AppDomainSetup> parametr <xref:System.AppDomain.CreateDomain%2A> metody. Za pomocą tego parametru można kontrolować wiele ustawień nowego <xref:System.AppDomain> . <xref:System.AppDomainSetup.ApplicationBase%2A>Właściwość jest ważnym ustawieniem i powinna być inna niż <xref:System.AppDomainSetup.ApplicationBase%2A> Właściwość <xref:System.AppDomain> aplikacji hostingowej. Jeśli <xref:System.AppDomainSetup.ApplicationBase%2A> Ustawienia są takie same, aplikacja częściowej relacji zaufania może pobrać aplikację hostingu (jako w pełni zaufana), którą definiuje wyjątek, a tym samym ją wykorzystuje. Jest to kolejny powód, dla którego nie zaleca się przechwytywania (wyjątek). Ustawienie bazy aplikacji hosta różni się od bazy aplikacji w aplikacji w trybie piaskownicy, co zmniejsza ryzyko ataków wykorzystujących luki w zabezpieczeniach.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4. Wywołanie <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> przeciążenia metody, aby utworzyć domenę aplikacji przy użyciu parametrów, które określiliśmy.  
+4. Wywołaj <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> Przeciążenie metody, aby utworzyć domenę aplikacji przy użyciu określonych parametrów.  
   
-     Podpis dla tej metody jest:  
+     Sygnaturą tej metody jest:  
   
     ```csharp
     public static AppDomain CreateDomain(string friendlyName,
@@ -90,31 +91,31 @@ AppDomain.CreateDomain( string friendlyName,
   
      Informacje dodatkowe:  
   
-    - Jest to tylko przeciążenie <xref:System.AppDomain.CreateDomain%2A> metody, <xref:System.Security.PermissionSet> która przyjmuje jako parametr, a tym samym tylko przeciążenie, które pozwala załadować aplikację w ustawieniach częściowego zaufania.  
+    - Jest to jedyne Przeciążenie metody, <xref:System.AppDomain.CreateDomain%2A> która przyjmuje <xref:System.Security.PermissionSet> jako parametr, i w ten sposób jedynym przeciążeniem, które umożliwia załadowanie aplikacji w ustawieniu częściowej relacji zaufania.  
   
-    - Parametr `evidence` nie jest używany do obliczania zestawu uprawnień; służy do identyfikacji przez inne funkcje programu .NET Framework.  
+    - `evidence`Parametr nie jest używany do obliczania zestawu uprawnień; służy do identyfikacji przez inne funkcje .NET Framework.  
   
-    - Ustawienie <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości parametru `info` jest obowiązkowe dla tego przeciążenia.  
+    - Ustawianie <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości `info` parametru jest obowiązkowe dla tego przeciążenia.  
   
-    - Parametr `fullTrustAssemblies` zawiera `params` słowo kluczowe, co oznacza, że <xref:System.Security.Policy.StrongName> nie jest konieczne tworzenie tablicy. Przekazywanie 0, 1 lub więcej silnych nazw jako parametry jest dozwolone.  
+    - `fullTrustAssemblies`Parametr ma `params` słowo kluczowe, co oznacza, że nie jest konieczne tworzenie <xref:System.Security.Policy.StrongName> tablicy. Przekazanie wartości 0, 1 lub większej liczby silnych nazw jako parametrów jest dozwolone.  
   
-    - Kod do utworzenia domeny aplikacji jest:  
+    - Kod do utworzenia domeny aplikacji:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Załaduj kod <xref:System.AppDomain> do utworzonego piaskownicy. Można to zrobić na dwa sposoby:  
+5. Załaduj kod w utworzonym obszarze piaskownicy <xref:System.AppDomain> . Można to zrobić na dwa sposoby:  
   
-    - Wywołanie <xref:System.AppDomain.ExecuteAssembly%2A> metody dla zestawu.  
+    - Wywołaj <xref:System.AppDomain.ExecuteAssembly%2A> metodę dla zestawu.  
   
-    - Użyj <xref:System.Activator.CreateInstanceFrom%2A> metody, aby utworzyć wystąpienie klasy <xref:System.MarshalByRefObject> pochodnej <xref:System.AppDomain>w nowym .  
+    - Użyj <xref:System.Activator.CreateInstanceFrom%2A> metody, aby utworzyć wystąpienie klasy pochodnej z <xref:System.MarshalByRefObject> w nowym <xref:System.AppDomain> .  
   
-     Druga metoda jest preferowana, ponieważ ułatwia przekazywanie parametrów <xref:System.AppDomain> do nowego wystąpienia. Metoda <xref:System.Activator.CreateInstanceFrom%2A> ta zapewnia dwie ważne cechy:  
+     Druga metoda jest preferowana, ponieważ ułatwia przekazywanie parametrów do nowego <xref:System.AppDomain> wystąpienia. <xref:System.Activator.CreateInstanceFrom%2A>Metoda oferuje dwie ważne funkcje:  
   
-    - Można użyć bazy kodu, który wskazuje lokalizację, która nie zawiera zestawu.  
+    - Możesz użyć bazy kodu, która wskazuje lokalizację, która nie zawiera Twojego zestawu.  
   
-    - Tworzenie można wykonać w <xref:System.Security.CodeAccessPermission.Assert%2A> ramach for<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>full-trust ( ), który umożliwia utworzenie wystąpienia klasy krytycznej. (Dzieje się tak, gdy zespół nie ma oznaczeń przezroczystości i jest ładowany jako w pełni zaufany). W związku z tym należy uważać, aby utworzyć tylko kod, który można ufać z tej funkcji i zaleca się tworzenie tylko wystąpienia w pełni zaufanych klas w nowej domenie aplikacji.  
+    - Tworzenie można wykonać w obszarze <xref:System.Security.CodeAccessPermission.Assert%2A> dla pełnego zaufania ( <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType> ), co umożliwia utworzenie wystąpienia klasy krytycznej. (Dzieje się tak, gdy zestaw nie ma znaczników przezroczystości i jest ładowany jako w pełni zaufany). W związku z tym należy zachować ostrożność, aby utworzyć tylko kod, który ufasz tej funkcji, i zalecamy utworzenie tylko wystąpień w pełni zaufanych klas w nowej domenie aplikacji.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -122,19 +123,19 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     Należy zauważyć, że aby utworzyć wystąpienie klasy w nowej domenie, klasa musi rozszerzyć <xref:System.MarshalByRefObject> klasę  
+     Należy pamiętać, że w celu utworzenia wystąpienia klasy w nowej domenie Klasa musi zwiększyć <xref:System.MarshalByRefObject> klasę  
   
     ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6. Odrapuj nowe wystąpienie domeny na odwołanie w tej domenie. To odwołanie jest używane do wykonywania niezaufanego kodu.  
+6. Odpakuj nowe wystąpienie domeny do odwołania w tej domenie. To odwołanie służy do wykonywania niezaufanego kodu.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. Wywołanie `ExecuteUntrustedCode` metody w wystąpieniu klasy, `Sandboxer` która właśnie została utworzona.  
+7. Wywołaj `ExecuteUntrustedCode` metodę w wystąpieniu `Sandboxer` klasy, która właśnie została utworzona.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -165,18 +166,18 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection>służy do uzyskania dojścia metody w zestawie częściowo zaufanych. Dojście może służyć do wykonywania kodu w bezpieczny sposób z minimalnymi uprawnieniami.  
+     <xref:System.Reflection>służy do pobierania dojścia metody z częściowo zaufanego zestawu. Uchwyt może służyć do wykonywania kodu w bezpieczny sposób z minimalnymi uprawnieniami.  
   
-     W poprzednim kodzie <xref:System.Security.PermissionSet.Assert%2A> zanotuj uprawnienie pełnego <xref:System.Security.SecurityException>zaufania przed wydrukowaniem pliku .  
+     Przed przystąpieniem do drukowania w poprzednim kodzie należy zwrócić uwagę <xref:System.Security.PermissionSet.Assert%2A> na uprawnienia pełnego zaufania <xref:System.Security.SecurityException> .  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     Potwierdzenie pełnego zaufania służy do uzyskiwania rozszerzonych informacji z pliku <xref:System.Security.SecurityException>. Bez <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.SecurityException.ToString%2A> metoda <xref:System.Security.SecurityException> odkryje, że istnieje częściowo zaufany kod na stosie i ograniczy zwracane informacje. Może to spowodować problemy z zabezpieczeniami, jeśli kod częściowego zaufania może odczytać <xref:System.Security.Permissions.UIPermission>te informacje, ale ryzyko jest ograniczone przez nieudzielenie . Potwierdzenie pełnego zaufania powinny być używane oszczędnie i tylko wtedy, gdy masz pewność, że nie zezwalasz na częściowe zaufanie kodu podnieść do pełnego zaufania. Z reguły nie należy wywoływać kodu, którego nie ufasz w tej samej funkcji i po wywołaniu potwierdzenia dla pełnego zaufania. Jest dobrą praktyką, aby zawsze przywrócić potwierdzenia po zakończeniu korzystania z niego.  
+     Potwierdzenie pełnego zaufania służy do uzyskiwania rozszerzonych informacji z <xref:System.Security.SecurityException> . Bez <xref:System.Security.PermissionSet.Assert%2A> , <xref:System.Security.SecurityException.ToString%2A> Metoda <xref:System.Security.SecurityException> wykryje, że na stosie znajduje się częściowo zaufany kod i ograniczy zwrócone informacje. Może to spowodować problemy z bezpieczeństwem, jeśli kod częściowego zaufania może odczytać te informacje, ale ryzyko to nie jest udzielane <xref:System.Security.Permissions.UIPermission> . Potwierdzenie pełnego zaufania powinno być używane oszczędnie i tylko wtedy, gdy masz pewność, że nie zezwolisz na podniesienie poziomu kodu zaufania do pełnego zaufania. Zgodnie z regułą nie należy wywoływać kodu, który nie jest zaufany w tej samej funkcji, i po wywołaniu potwierdzenia pełnego zaufania. Dobrym sposobem jest zawsze przywrócenie potwierdzenia po zakończeniu korzystania z niego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład implementuje procedurę w poprzedniej sekcji. W przykładzie projekt `Sandboxer` o nazwie w rozwiązaniu programu `UntrustedCode`Visual Studio zawiera `UntrustedClass`również projekt o nazwie , który implementuje klasę . W tym scenariuszu założono, że pobrano zestaw biblioteki `true` zawierający metodę, która ma zwrócić lub `false` wskazać, czy podana liczba jest numerem Fibonacciego. Zamiast tego metoda próbuje odczytać plik z komputera. W poniższym przykładzie pokazano niezaufany kod.  
+ Poniższy przykład implementuje procedurę opisaną w poprzedniej sekcji. W przykładzie projekt o nazwie `Sandboxer` w rozwiązaniu programu Visual Studio zawiera również projekt o nazwie `UntrustedCode` , który implementuje klasę `UntrustedClass` . W tym scenariuszu przyjęto założenie, że pobrano zestaw biblioteczny zawierający metodę, która powinna zostać zwrócona, `true` lub `false` Aby wskazać, czy podany numer jest numerem Fibonacci. Zamiast tego Metoda próbuje odczytać plik z komputera. Poniższy przykład pokazuje kod niezaufany.  
   
 ```csharp
 using System;  
@@ -196,7 +197,7 @@ namespace UntrustedCode
 }  
 ```  
   
- W poniższym `Sandboxer` przykładzie pokazano kod aplikacji, który wykonuje niezaufany kod.  
+ Poniższy przykład pokazuje `Sandboxer` kod aplikacji, który wykonuje kod niezaufany.  
   
 ```csharp
 using System;  
@@ -271,6 +272,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

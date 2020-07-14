@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolon
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9c1e45f183bd5edc488e4f37bea648566d124c65
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 9a2e7f72d59e31cfd7db5b89bfad55bccb063cea
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803264"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281410"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Samouczek: analizowanie tonacji przeglądów filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow w ML.NET
 
@@ -17,7 +17,7 @@ W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu Te
 
 Model TensorFlow używany w tym samouczku został przeszkolony przy użyciu recenzji filmów z bazy danych IMDB. Po zakończeniu opracowywania aplikacji będzie można dostarczyć tekst z recenzji filmu, a aplikacja poinformuje użytkownika o tym, czy przegląd ma pozytywne czy negatywne tonacji.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
 > * Załaduj wstępnie szkolony model TensorFlow
@@ -66,11 +66,11 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 1. Dodaj następujące dodatkowe `using` instrukcje na początku pliku *program.cs* :
 
-   [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#AddUsings "Add necessary usings")]
+   [!code-csharp[AddUsings](./snippets/text-classification-tf/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 1. Utwórz dwie zmienne globalne bezpośrednio powyżej `Main` metody przechowywania zapisanej ścieżki pliku modelu i długość wektora funkcji.
 
-   [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+   [!code-csharp[DeclareGlobalVariables](./snippets/text-classification-tf/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
     * `_modelPath`jest ścieżką do pliku nauczonego modelu.
     * `FeatureLength`jest długością tablicy funkcji całkowitej, której oczekuje model.
@@ -96,13 +96,13 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Utwórz klasę danych wejściowych po `Main` metodzie:
 
-    [!code-csharp[MovieReviewClass](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MovieReviewClass "Declare movie review type")]
+    [!code-csharp[MovieReviewClass](./snippets/text-classification-tf/csharp/Program.cs#MovieReviewClass "Declare movie review type")]
 
     Klasa danych wejściowych, `MovieReview` , ma `string` dla komentarzy użytkownika ( `ReviewText` ).
 
 1. Utwórz klasę dla funkcji o zmiennej długości, po `Main` metodzie:
 
-    [!code-csharp[VariableLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#VariableLengthFeatures "Declare variable length features type")]
+    [!code-csharp[VariableLengthFeatures](./snippets/text-classification-tf/csharp/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
     `VariableLengthFeatures`Właściwość ma atrybut [vectortype](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) służący do wyznaczania go jako wektor.  Wszystkie elementy wektorowe muszą być tego samego typu. W przypadku zestawów danych z dużą liczbą kolumn ładowanie wielu kolumn jako jednego wektora zmniejsza liczbę danych przekazywanych w przypadku zastosowania transformacji danych.
 
@@ -110,7 +110,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Utwórz klasę dla funkcji o stałej długości, po zastosowaniu `Main` metody:
 
-    [!code-csharp[FixedLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#FixedLengthFeatures)]
+    [!code-csharp[FixedLengthFeatures](./snippets/text-classification-tf/csharp/Program.cs#FixedLengthFeatures)]
 
     Ta klasa jest używana w `ResizeFeatures` akcji. Nazwy jego właściwości (w tym przypadku tylko jeden) są używane do wskazania kolumn w widoku danych, które mogą być używane jako _dane wyjściowe_ niestandardowej akcji mapowania.
 
@@ -118,7 +118,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Utwórz klasę dla przewidywania po `Main` metodzie:
 
-    [!code-csharp[Prediction](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Prediction "Declare prediction class")]
+    [!code-csharp[Prediction](./snippets/text-classification-tf/csharp/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`jest klasą predykcyjną używaną po przekształceniu modelu. `MovieReviewSentimentPrediction`ma jedną `float` tablicę ( `Prediction` ) i `VectorType` atrybut.
 
@@ -128,11 +128,11 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Zastąp `Console.WriteLine("Hello World!")` wiersz w `Main` metodzie poniższym kodem, aby zadeklarować i zainicjować zmienną mlContext:
 
-   [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+   [!code-csharp[CreateMLContext](./snippets/text-classification-tf/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
 1. Utwórz słownik do kodowania wyrazów jako liczby całkowite przy użyciu [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) metody ładowania danych mapowania z pliku, jak pokazano w poniższej tabeli:
 
-    |Word     |Indeks    |
+    |Wyraz     |Indeks    |
     |---------|---------|
     |bezpiecznego     |  362    |
     |Możesz     |  181    |
@@ -142,21 +142,21 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
     Dodaj poniższy kod, aby utworzyć mapę wyszukiwania:
 
-    [!code-csharp[CreateLookupMap](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateLookupMap)]
+    [!code-csharp[CreateLookupMap](./snippets/text-classification-tf/csharp/Program.cs#CreateLookupMap)]
 
 1. Dodaj `Action` , aby zmienić rozmiar tablicy tablica liczb całkowitych wyrazów o zmiennej długości do tablicy o stałym rozmiarze, z następnymi wierszami kodu:
 
-   [!code-csharp[ResizeFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ResizeFeatures)]
+   [!code-csharp[ResizeFeatures](./snippets/text-classification-tf/csharp/Program.cs#ResizeFeatures)]
 
 ## <a name="load-the-pre-trained-tensorflow-model"></a>Załaduj wstępnie szkolony model TensorFlow
 
 1. Dodaj kod, aby załadować model TensorFlow:
 
-    [!code-csharp[LoadTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#LoadTensorFlowModel)]
+    [!code-csharp[LoadTensorFlowModel](./snippets/text-classification-tf/csharp/Program.cs#LoadTensorFlowModel)]
 
     Po załadowaniu modelu można wyodrębnić jego schemat wejściowy i wyjściowy. Schematy są wyświetlane tylko dla zainteresowania i tylko do celów szkoleniowych. Ten kod nie jest potrzebny do działania końcowej aplikacji:
 
-    [!code-csharp[GetModelSchema](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#GetModelSchema)]
+    [!code-csharp[GetModelSchema](./snippets/text-classification-tf/csharp/Program.cs#GetModelSchema)]
 
     Schemat wejściowy jest tablicą o stałej długości w postaci słów szyfrowanych liczbą całkowitą. Schemat danych wyjściowych jest tablicą zmiennoprzecinkową prawdopodobieństwa wskazującą, czy tonacji przeglądu jest ujemna, czy dodatnia. Te wartości są sumowane do 1, ponieważ prawdopodobieństwo wystąpienia pozytywnego jest uzupełnieniem prawdopodobieństwa, że tonacji jest ujemna.
 
@@ -164,27 +164,27 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Utwórz potok i Podziel tekst wejściowy na słowa przy użyciu transformacji [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) , aby podzielić tekst na wyrazy jako następny wiersz kodu:
 
-   [!code-csharp[TokenizeIntoWords](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#TokenizeIntoWords)]
+   [!code-csharp[TokenizeIntoWords](./snippets/text-classification-tf/csharp/Program.cs#TokenizeIntoWords)]
 
    Transformacja [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) używa spacji do analizowania tekstu/ciągu w słowach. Tworzy nową kolumnę i dzieli każdy ciąg wejściowy na wektor podciągów w oparciu o separator zdefiniowany przez użytkownika.
 
 1. Mapuj słowa na ich kodowanie całkowite przy użyciu tabeli odnośników zadeklarowanej powyżej:
 
-    [!code-csharp[MapValue](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MapValue)]
+    [!code-csharp[MapValue](./snippets/text-classification-tf/csharp/Program.cs#MapValue)]
 
 1. Zmień rozmiar kodowania Integer o zmiennej długości na stałą długość określoną przez model:
 
-    [!code-csharp[CustomMapping](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CustomMapping)]
+    [!code-csharp[CustomMapping](./snippets/text-classification-tf/csharp/Program.cs#CustomMapping)]
 
 1. Klasyfikuj dane wejściowe za pomocą załadowanego modelu TensorFlow:
 
-    [!code-csharp[ScoreTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](./snippets/text-classification-tf/csharp/Program.cs#ScoreTensorFlowModel)]
 
     Zostanie wywołana wartość wyjściowa modelu TensorFlow `Prediction/Softmax` . Należy zauważyć, że nazwa `Prediction/Softmax` jest określana przez model TensorFlow. Nie można zmienić tej nazwy.
 
 1. Utwórz nową kolumnę przewidywania danych wyjściowych:
 
-    [!code-csharp[SnippetCopyColumns](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCopyColumns)]
+    [!code-csharp[SnippetCopyColumns](./snippets/text-classification-tf/csharp/Program.cs#SnippetCopyColumns)]
 
     Należy skopiować `Prediction/Softmax` kolumnę na jedną z nazwą, która może być używana jako właściwość w klasie C#: `Prediction` . `/`Znak jest niedozwolony w nazwie właściwości C#.
 
@@ -192,7 +192,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Dodaj kod, aby utworzyć model z potoku:
 
-    [!code-csharp[SnippetCreateModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCreateModel)]
+    [!code-csharp[SnippetCreateModel](./snippets/text-classification-tf/csharp/Program.cs#SnippetCreateModel)]
 
     Model ML.NET jest tworzony na podstawie łańcucha szacowania w potoku przez wywołanie `Fit` metody. W takim przypadku nie dopasowujemy żadnych danych w celu utworzenia modelu, ponieważ model TensorFlow został już wcześniej przeszkolony. Dostarczamy pusty obiekt widoku danych w celu spełnienia wymagań `Fit` metody.
 
@@ -209,7 +209,7 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Dodaj następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz w `PredictSentiment()` metodzie:
 
-    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreatePredictionEngine)]
+    [!code-csharp[CreatePredictionEngine](./snippets/text-classification-tf/csharp/Program.cs#CreatePredictionEngine)]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, należy użyć `PredictionEnginePool` usługi, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiekty do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania `PredictionEnginePool` z programu w ASP.NET Core INTERNETowym interfejsie API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
@@ -218,25 +218,25 @@ Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długoś
 
 1. Dodaj komentarz, aby przetestować prognozę przeszkolonego modelu w `Predict()` metodzie, tworząc wystąpienie `MovieReview` :
 
-    [!code-csharp[CreateTestData](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateTestData)]
+    [!code-csharp[CreateTestData](./snippets/text-classification-tf/csharp/Program.cs#CreateTestData)]
 
 1. Przekaż dane komentarza testowego do obiektu `Prediction Engine` przez dodanie następnych wierszy kodu w `PredictSentiment()` metodzie:
 
-    [!code-csharp[Predict](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Predict)]
+    [!code-csharp[Predict](./snippets/text-classification-tf/csharp/Program.cs#Predict)]
 
 1. Funkcja [przewidywania ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) wykonuje prognozowanie w jednym wierszu danych:
 
     |Właściwość| Wartość|Typ|
     |-------------|-----------------------|------|
-    |Prediction (Prognoza)|[0,5459937, 0,454006255]|float []|
+    |Przewidywanie|[0,5459937, 0,454006255]|float []|
 
 1. Wyświetl prognozowanie tonacji przy użyciu następującego kodu:
 
-    [!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](./snippets/text-classification-tf/csharp/Program.cs#DisplayPredictions)]
 
 1. Dodaj wywołanie do `PredictSentiment` końca `Main` metody:
 
-    [!code-csharp[CallPredictSentiment](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CallPredictSentiment)]
+    [!code-csharp[CallPredictSentiment](./snippets/text-classification-tf/csharp/Program.cs#CallPredictSentiment)]
 
 ## <a name="results"></a>Wyniki
 

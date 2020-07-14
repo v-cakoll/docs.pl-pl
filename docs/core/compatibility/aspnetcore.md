@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 07/08/2020
+ms.date: 07/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 1a3c8b04bc574822f1576ca0720ed7a01c303880
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174396"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281683"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -62,6 +62,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [Kestrel: transportowe zmiany warstwy abstrakcji](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalizacja: interfejsy API oznaczone jako przestarzałe](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
 - [Lokalizacja: Usunięto interfejsy API "Pubternal"](#localization-pubternal-apis-removed)
+- [Lokalizacja: przestarzały Konstruktor został usunięty z oprogramowania pośredniczącego w lokalizacji żądania](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Lokalizacja: Usunięto klasę ResourceManagerWithCultureStringLocalizer i element członkowski interfejsu WithCulture](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Rejestrowanie: Klasa DebugLogger wykonana wewnętrznie](#logging-debuglogger-class-made-internal)
 - [MVC: Usunięto sufiks asynchroniczny akcji kontrolera](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -128,6 +129,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+
+***
+
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
 
 ***
 

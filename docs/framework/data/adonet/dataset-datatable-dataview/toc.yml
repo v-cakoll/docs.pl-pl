@@ -1,6 +1,8 @@
 - name: 'Elementy DataSet, DataTable i DataView'
   href: index.md
   items:
+    - name: Wskazówki dotyczące bezpieczeństwa
+      href: security-guidance.md
     - name: Tworzenie elementu DataSet
       href: creating-a-dataset.md
     - name: Dodawanie elementu DataTable do elementu DataSet

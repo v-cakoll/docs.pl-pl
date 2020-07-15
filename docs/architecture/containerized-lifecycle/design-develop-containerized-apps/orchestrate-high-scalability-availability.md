@@ -1,17 +1,17 @@
 ---
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
-description: Rzeczywiste aplikacje produkcyjne muszą być wdrażane i zarządzane za pomocą koordynatorów, które obsługują kondycję, obciążenie pracą i cykle życia wszystkich kontenerów.
+description: Rzeczywiste aplikacje produkcyjne muszą być wdrażane i zarządzane przy użyciu programu Orchestrator, które obsługują kondycję, obciążenie i cykle życia wszystkich kontenerów.
 ms.date: 02/15/2019
-ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989002"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374484"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
-Za pomocą orchestrators dla aplikacji gotowych do produkcji jest niezbędne, jeśli aplikacja jest oparta na mikrousług lub podzielone na wiele kontenerów. Zgodnie z wcześniejszym wprowadzeniem w podejściu opartym na mikrousługach każda mikrousługa jest właścicielem swojego modelu i danych, dzięki czemu będzie autonomiczna z punktu widzenia rozwoju i wdrażania. Ale nawet jeśli masz bardziej tradycyjną aplikację, która składa się z wielu usług (takich jak SOA), będziesz mieć również wiele kontenerów lub usług składających się z jednej aplikacji biznesowej, które muszą zostać wdrożone jako system rozproszony. Tego rodzaju systemy są złożone do skalowania w poziomie i zarządzania; w związku z tym absolutnie potrzebujesz koordynatora, jeśli chcesz mieć gotową do produkcji i skalowalną aplikację wielokontensjalną.
+Korzystanie z koordynatorów dla aplikacji gotowych do produkcji jest niezbędne, jeśli aplikacja jest oparta na mikrousługach lub dzielona w wielu kontenerach. Jak zostało to zrobione wcześniej, w podejściu opartym na mikrousługach każda mikrousługa jest właścicielem modelu i danych, dzięki czemu będzie autonomiczna z punktu widzenia projektowania i wdrożenia. Jednak nawet jeśli masz bardziej tradycyjną aplikację składającą się z wielu usług (na przykład SOA), będziesz mieć również wiele kontenerów lub usług składających się z jednej aplikacji biznesowej, która musi zostać wdrożona jako system rozproszony. Te rodzaje systemów są skomplikowane do skalowania w poziomie i zarządzania nimi. w związku z tym, jeśli chcesz korzystać z gotowej do produkcji i skalowalnej aplikacji z obsługą kontenerów, musisz mieć absolutną wartość Orchestrator.
 
 Rysunek 4-6 ilustruje wdrożenie w klastrze aplikacji składającej się z wielu mikrousług (kontenerów).
 
@@ -19,206 +19,206 @@ Rysunek 4-6 ilustruje wdrożenie w klastrze aplikacji składającej się z wielu
 
 **Rysunek 4-6**. Klaster kontenerów
 
-Wygląda to na logiczne podejście. Ale jak obsługiwać równoważenie obciążenia, routing i organizowanie tych złożonych aplikacji?
+Wygląda podobnie do podejścia logicznego. Ale w jaki sposób obsługujesz Równoważenie obciążenia, Routing i organizowanie tych aplikacji złożonych?
 
-Zestaw wiersza polecenia platformy Docker spełnia potrzeby zarządzania jednym kontenerem na jednym hoście, ale nie jest dostępny, jeśli chodzi o zarządzanie wieloma kontenerami wdrożonymi na wielu hostach dla bardziej złożonych aplikacji rozproszonych. W większości przypadków potrzebna jest platforma zarządzania, która automatycznie uruchamia kontenery, skaluje kontenery w poziomie z wieloma wystąpieniami na obraz, zawiesza je lub zamyka je w razie potrzeby, a najlepiej kontroluje sposób uzyskiwania dostępu do zasobów, takich jak sieć i magazyn danych.
+Interfejs wiersza polecenia platformy Docker spełnia wymagania zarządzania jednym kontenerem na jednym hoście, ale jest on krótki, gdy przyjdzie do zarządzania wieloma kontenerami wdrożonymi na wielu hostach w celu uzyskania bardziej złożonych aplikacji rozproszonych. W większości przypadków potrzebna jest platforma zarządzania, która będzie automatycznie uruchamiać kontenery, skalować kontenery z wieloma wystąpieniami na obraz, wstrzymywać je lub wyłączać je w razie potrzeby i najlepiej kontrolować sposób uzyskiwania dostępu do zasobów, takich jak sieć i magazyn danych.
 
-Aby wyjść poza zarządzanie poszczególnych kontenerów lub prostych składa aplikacji i przejść do większych aplikacji korporacyjnych z mikrousług, należy zwrócić się do platform aranżacji i klastrowania.
+Aby przekroczyć możliwości zarządzania indywidualnymi kontenerami lub prostymi aplikacjami złożonymi i przenieść się do większej liczby aplikacji przedsiębiorstwa przy użyciu mikrousług, musisz włączyć aranżację i klastrowanie platform.
 
-Z punktu widzenia architektury i rozwoju, jeśli budujesz dużych, przedsiębiorstw, opartych na mikrousługach, aplikacje, ważne jest, aby zrozumieć następujące platformy i produkty, które obsługują zaawansowane scenariusze:
+Jeśli tworzysz duże, korporacyjne i wielousługowe aplikacje oparte na architekturze i punkcie projektowania, ważne jest, aby zrozumieć następujące platformy i produkty, które obsługują zaawansowane scenariusze:
 
-- **Klastry i koordynatorzy.** Gdy trzeba skalować w poziomie aplikacji w wielu hostach platformy Docker, takich jak za pomocą dużych aplikacji opartych na mikrousługach, jest bardzo ważne, aby móc zarządzać wszystkimi tymi hostami jako pojedynczy klaster, abstrakcji złożoności platformy podstawowej. To, co zapewniają klastry kontenerów i orchestrators. Przykładami koordynatorów są usługa Azure Service Fabric i Kubernetes. Usługa Kubernetes jest dostępna na platformie Azure za pośrednictwem usługi Azure Kubernetes.
+- **Klastry i usługi Orchestrator.** Gdy konieczne jest skalowanie aplikacji w poziomie na wielu hostach platformy Docker, takich jak w przypadku dużych aplikacji opartych na mikrousługach, krytyczne jest, aby zarządzać wszystkimi tymi hostami jako pojedynczym klastrem przez abstrakcję złożoności podstawowej platformy. To właśnie zapewnia klaster kontenerów i koordynatorów. Przykłady koordynatorów to Azure Service Fabric i Kubernetes. Usługa Kubernetes jest dostępna na platformie Azure za pomocą usługi Azure Kubernetes Service.
 
-- **Pracownikom.** *Planowanie* oznacza, że administrator może uruchamiać kontenery w klastrze, więc harmonogramy zapewniają również interfejs użytkownika w tym celu. Harmonogram klastra ma kilka obowiązków: aby efektywnie korzystać z zasobów klastra, ustawić ograniczenia dostarczone przez użytkownika, skutecznie równoważyć obciążenia kontenerów między węzłami lub hostami i być niezawodne przed błędami, zapewniając jednocześnie wysoką dostępność.
+- **Planiści.** *Planowanie* oznacza możliwość, aby administrator mógł uruchamiać kontenery w klastrze, dlatego program Schedulers udostępnia również interfejs użytkownika. Harmonogram klastrów ma kilka obowiązków: aby wydajnie korzystać z zasobów klastra, ustaw ograniczenia udostępniane przez użytkownika w celu wydajnego równoważenia obciążenia kontenerów w węzłach lub hostach, a w celu zapewnienia wysokiej dostępności.
 
-Pojęcia klastra i harmonogramu są ściśle powiązane, więc produkty dostarczane przez różnych dostawców często zapewniają oba zestawy możliwości. W poniższej sekcji przedstawiono najważniejsze opcje platformy i oprogramowania dla klastrów i harmonogramów. Te orchestrators są szeroko oferowane w chmurach publicznych, takich jak Azure.
+Koncepcje klastra i harmonogramu są ściśle powiązane, dlatego produkty udostępniane przez różnych dostawców często udostępniają oba zestawy funkcji. W poniższej sekcji przedstawiono najważniejsze opcje platformy i oprogramowania dla klastrów i harmonogramów. Te Koordynatory są szeroko oferowane w chmurach publicznych, takich jak platforma Azure.
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Platformy oprogramowania do klastrowania kontenerów, aranżacji i planowania
 
 | Platforma | Komentarze |
 |:---:|:---|
-| **Kubernetes** <br/> ![Obraz logo Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) to produkt typu open source, który zapewnia funkcje, które waha się od infrastruktury klastra i planowania kontenerów do możliwości aranżacji. Umożliwia automatyzację wdrażania, skalowania i operacji kontenerów aplikacji w klastrach hostów. <br/> <br/> *Kubernetes* zapewnia kontenerozajęzykową, która grupuje kontenery aplikacji w jednostki logiczne w celu łatwego zarządzania i odnajdywania. <br/> <br/> *Kubernetes* jest dojrzały w Linuksie, mniej dojrzały w systemie Windows. |
-| **Azure Kubernetes Service (AKS)** <br/> ![Obraz logo usługi Azure Kubernetes.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Usługa Kubernetes azure (AKS)](https://azure.microsoft.com/services/kubernetes-service/) to zarządzana usługa aranżacji kontenerów Kubernetes na platformie Azure, która upraszcza zarządzanie, wdrażanie i operacje klastra Kubernetes. |
-| **Azure Service Fabric** <br/> ![Obraz logo sieci szkieletowej usług Azure.](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Sieci szkieletowej usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) jest platformą mikrousług firmy Microsoft do tworzenia aplikacji. Jest [koordynatorem](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) usług i tworzy klastry maszyn. Sieci szkieletowej usług można wdrożyć usługi jako kontenery lub jako zwykłych procesów. Może nawet mieszać usługi w procesach z usługami w kontenerach w ramach tej samej aplikacji i klastra. <br/> <br/> *Klastry sieci szkieletowej usług* można wdrożyć na platformie Azure, lokalnie lub w dowolnej chmurze. Jednak wdrażanie na platformie Azure jest uproszczone dzięki podejściu zarządzanemu. <br/> <br/> *Usługa Sieci szkieletowej* zapewnia dodatkowe i opcjonalne modele [programowania sieci szkieletowej usług nakazowych,](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) takie jak [usługi stanowe](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) i [niezawodne aktorzy.](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/) <br/> <br/> *Usługa Fabric* jest dojrzała w systemie Windows (lata ewoluujące w systemie Windows), mniej dojrzała w systemie Linux. <br/> <br/> Kontenery Linux i Windows są obsługiwane w sieci szkieletowej usług od 2017 roku. |
-| **Azure Service Fabric Mesh** <br/> ![Obraz logo sieci szkieletowej usługi Azure.](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Usługa Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) oferuje taką samą niezawodność, wydajność o znaczeniu krytycznym i skalę jak sieć szkieletowa usług, ale oferuje również w pełni zarządzaną i bezserwerową platformę. Nie trzeba zarządzać klastrem, maszynami wirtualnymi, magazynem ani konfiguracją sieci. Wystarczy skupić się na rozwoju aplikacji. <br/> <br/> *Usługa Mesh sieci szkieletowej* obsługuje kontenery systemu Windows i Linux, co pozwala na tworzenie z dowolnego języka programowania i struktury do wyboru.
+| **Kubernetes** <br/> ![Obraz logo Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) to produkt "open source", który oferuje funkcje, które są przeznaczone dla zakresu od infrastruktury klastra i planowania kontenera do organizowania możliwości. Umożliwia automatyzację wdrażania, skalowania i operacji kontenerów aplikacji między klastrami hostów. <br/> <br/> *Kubernetes* zapewnia infrastrukturę skoncentrowaną na kontenerach, która grupuje kontenery aplikacji w jednostki logiczne do łatwego zarządzania i odnajdywania. <br/> <br/> *Kubernetes* jest w systemie Linux, mniej dojrzały w systemach Windows. |
+| **Azure Kubernetes Service (AKS)** <br/> ![Obraz logo usługi Azure Kubernetes.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) to zarządzana usługa aranżacji kontenerów Kubernetes na platformie Azure, która upraszcza zarządzanie, wdrażanie i operacje klastra Kubernetes. |
+| **Azure Service Fabric** <br/> ![Obraz logo Service Fabric platformy Azure.](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do kompilowania aplikacji. Jest to [koordynator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) usług i tworzy klastry maszyn. Service Fabric mogą wdrażać usługi jako kontenery lub jako zwykłe procesy. Może nawet mieszać usługi w procesach z usługami w kontenerach w ramach tej samej aplikacji i klastra. <br/> <br/> Klastry *Service Fabric* można wdrożyć na platformie Azure, lokalnie lub w dowolnej chmurze. Wdrożenie na platformie Azure jest jednak uproszczone dzięki zarządzanemu podejściu. <br/> <br/> *Service Fabric* zapewnia dodatkowe i opcjonalne, [Service Fabric modele programowania](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) , takie jak [usługi stanowe](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) i [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/). <br/> <br/> *Service Fabric* jest dojrzała w systemie Windows (lata, w których trwa rozwój w systemie Windows), mniej wcześnie w systemach Linux. <br/> <br/> Kontenery systemu Linux i Windows są obsługiwane w Service Fabric od 2017. |
+| **Azure Service Fabric Mesh** <br/> ![Obraz logo usługi Azure Service Fabric siatki.](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Siatka Service Fabric platformy Azure*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) oferuje taką samą niezawodność, wydajność krytyczną i skalowalność jak Service Fabric, ale również oferuje w pełni zarządzaną i bezserwerową platformę. Nie jest konieczne Zarządzanie klastrem, maszynami wirtualnymi, magazynem lub konfiguracją sieci. Wystarczy skupić się na tworzeniu aplikacji. <br/> <br/> *Siatka Service Fabric* obsługuje zarówno kontenery systemu Windows, jak i Linux, co pozwala na programowanie przy użyciu dowolnego języka programowania i wybranej platformy.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Korzystanie z koordynatorów opartych na kontenerach na platformie Azure
 
-Kilku dostawców chmury oferuje obsługę kontenerów platformy Docker oraz klastry platformy Docker i obsługę aranżacji, w tym platformę Azure, usługę kontenerów Amazon EC2 i usługę kontenerów Google. Platforma Azure zapewnia obsługę klastra i koordynatora platformy Docker za pośrednictwem usługi Azure Kubernetes Service (AKS), sieci szkieletowej azure service fabric i usługi Azure Service Fabric Mesh.
+Kilku dostawców chmury oferuje obsługę kontenerów platformy Docker oraz klastry Docker i wsparcie w zakresie aranżacji, w tym Azure, Amazon EC2 Container Service i aparat usługi Google Container Engine. Platforma Azure zapewnia obsługę klastrów platformy Docker i programu Orchestrator za pomocą usługi Azure Kubernetes Service (AKS), platformy Azure Service Fabric i siatki Service Fabric platformy Azure.
 
-## <a name="using-azure-kubernetes-service"></a>Korzystanie z usługi Azure Kubernetes
+## <a name="using-azure-kubernetes-service"></a>Korzystanie z usługi Azure Kubernetes Service
 
-Klaster usługi Kubernetes buforuje kilka hostów platformy Docker i udostępnia je jako pojedynczy wirtualny host platformy Docker, dzięki czemu można wdrożyć wiele kontenerów w klastrze i skalować w poziomie z dowolną liczbą wystąpień kontenerów. Klaster będzie obsługiwać wszystkie złożone instalacji wodno-kanalizacyjne zarządzania, takich jak skalowalność, kondycja i tak dalej.
+Klastry Kubernetes są pulami kilku hostów platformy Docker i uwidaczniają je jako jeden wirtualny Host platformy Docker, dzięki czemu można wdrożyć wiele kontenerów w klastrze i skalować je z dowolną liczbą wystąpień kontenerów. Klaster będzie obsługiwał wszystkie złożone instalacje administracyjne, takie jak skalowalność, kondycja i tak dalej.
 
-Usługa AKS umożliwia uproszczenie tworzenia, konfigurowania i zarządzania klastrem maszyn wirtualnych na platformie Azure, które są wstępnie skonfigurowane do uruchamiania aplikacji konteneryzowanych. Korzystając ze zoptymalizowanej konfiguracji popularnych narzędzi do planowania i aranżacji typu open source, usługa AKS umożliwia korzystanie z istniejących umiejętności lub korzystanie z dużej i rosnącej wiedzy specjalistycznej społeczności w celu wdrażania aplikacji opartych na kontenerach i zarządzania nimi na platformie Microsoft Azure.
+AKS umożliwia uproszczenie tworzenia, konfigurowania i zarządzania klastrem maszyn wirtualnych na platformie Azure, które są wstępnie skonfigurowane do uruchamiania aplikacji kontenerowych. Dzięki zoptymalizowanej konfiguracji popularnych narzędzi do planowania i aranżacji typu "open source" AKS umożliwia korzystanie z istniejących umiejętności lub narysowanie dużej i rosnącej treści wiedzy społecznościowej w celu wdrażania i zarządzania aplikacjami opartymi na kontenerach w Microsoft Azure.
 
-Usługa Azure Kubernetes optymalizuje konfigurację popularnych narzędzi i technologii typu open source klastrowania platformy Docker specjalnie dla platformy Azure. Otrzymujesz otwarte rozwiązanie, które oferuje przenośność zarówno dla kontenerów, jak i konfiguracji aplikacji. Wybierz rozmiar, liczbę hostów i narzędzia aranżatora, a AKS obsługuje wszystko inne.
+Usługa Azure Kubernetes optymalizuje konfigurację popularnych narzędzi typu "open source" i technologii platformy Docker przeznaczonych dla platformy Azure. Uzyskasz otwarte rozwiązanie, które oferuje przenośność zarówno dla kontenerów, jak i konfiguracji aplikacji. Wybierasz rozmiar, liczbę hostów i narzędzia programu Orchestrator, a AKS obsługuje wszystkie inne.
 
 ![Diagram przedstawiający strukturę klastra Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-cluster-simplified-structure.png)
 
 **Rysunek 4-7**. Uproszczona struktura i topologia klastra Kubernetes
 
-Rysunek 4-7 przedstawia strukturę klastra Kubernetes, gdzie węzeł główny (VM) kontroluje większość koordynacji klastra i można wdrożyć kontenery do pozostałych węzłów, które są zarządzane jako pojedyncza pula z punktu widzenia aplikacji. Dzięki temu można skalować do tysięcy, a nawet dziesiątki tysięcy kontenerów.
+Rysunek 4-7 przedstawia strukturę klastra Kubernetes, w którym węzeł główny (VM) kontroluje większość koordynacji klastra, i można wdrożyć kontenery do pozostałych węzłów zarządzanych jako jedna pula z punktu widzenia aplikacji. Dzięki temu można skalować do tysięcy lub nawet dziesiątki tysięcy kontenerów.
 
-## <a name="development-environment-for-kubernetes"></a>Środowisko programistyczne dla kubernetes
+## <a name="development-environment-for-kubernetes"></a>Środowisko programistyczne dla Kubernetes
 
-W środowisku programistycznym, które [firma Docker ogłosiła w lipcu 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)r., kubernetes może również działać na jednym komputerze deweloperskim (Windows 10 lub macOS), instalując program [Docker Desktop.](https://www.docker.com/community-edition) Później można wdrożyć w chmurze (AKS) do dalszych testów integracji, jak pokazano na rysunku 4-8.
+W środowisku programistycznym [ogłoszonym przez platformę Docker w lipcu 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)Kubernetes można również uruchomić na jednym komputerze deweloperskim (Windows 10 lub macOS), instalując program [Docker Desktop](https://www.docker.com/community-edition). Później można wykonać wdrożenie w chmurze (AKS) w celu przeprowadzenia dalszych testów integracji, jak pokazano na rysunku 4-8.
 
-![Diagram przedstawiający kubernetes na komputerze deweloperskim, a następnie wdrożony w u usługi AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
+![Diagram przedstawiający Kubernetes na komputerze deweloperskim wdrożony w AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
-**Rysunek 4-8**. Uruchamianie kubernetes na komputerze deweloperskim i chmurze
+**Rysunek 4-8**. Uruchamianie Kubernetes na komputerze deweloperskim i w chmurze
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>Wprowadzenie do usługi Azure Kubernetes Service (AKS)
 
-Aby rozpocząć korzystanie z usługi AKS, należy wdrożyć klaster AKS z witryny Azure portal lub przy użyciu interfejsu wiersza polecenia. Aby uzyskać więcej informacji na temat wdrażania klastra Kubernetes na platformie Azure, zobacz [Wdrażanie klastra usługi Azure Kubernetes (AKS).](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+Aby rozpocząć korzystanie z AKS, należy wdrożyć klaster AKS z poziomu Azure Portal lub przy użyciu interfejsu wiersza polecenia. Aby uzyskać więcej informacji na temat wdrażania klastra Kubernetes na platformie Azure, zobacz [wdrażanie klastra usługi Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Nie ma żadnych opłat za oprogramowanie zainstalowane domyślnie w ramach usługi AKS. Wszystkie opcje domyślne są implementowane z oprogramowaniem open source. Usługa AKS jest dostępna dla wielu maszyn wirtualnych na platformie Azure. Opłaty są naliczane tylko za wybraną instancję obliczeniową, a także za inne używane zasoby infrastruktury, takie jak magazynowanie i sieć. Nie ma żadnych opłat przyrostowych dla samego AKS.
+Nie są naliczane opłaty za żadne oprogramowanie instalowane domyślnie w ramach usługi AKS. Wszystkie opcje domyślne są implementowane za pomocą oprogramowania open source. AKS jest dostępny dla wielu maszyn wirtualnych na platformie Azure. Opłata jest naliczana tylko za wybrane wystąpienia obliczeniowe, a także dla innych użytych zasobów infrastruktury, takich jak magazyn i sieć. Nie są naliczane opłaty przyrostowe za AKS.
 
-Aby uzyskać dalsze informacje na temat implementacji w usłudze Kubernetes na `kubectl` podstawie i oryginalnych `.yaml` plików, zobacz post w sprawie [Ustawianie eShopOnContainers w AKS (Usługa Azure Kubernetes)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
+Aby uzyskać więcej informacji na temat wdrażania Kubernetes na podstawie `kubectl` oryginalnych `.yaml` plików, zobacz [wdrażanie w usłudze Azure KUBERNETES Service (AKS)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)).
 
-## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Wdrażanie z wykresami helm w klastrach Kubernetes
+## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Wdrażanie z użyciem wykresów Helm do klastrów Kubernetes
 
-Podczas wdrażania aplikacji w klastrze Kubernetes można `kubectl.exe` użyć oryginalnego narzędzia interfejsu wiersza`.yaml` polecenia przy użyciu plików wdrażania opartych na formacie macierzystym (plikach), jak już wspomniano w poprzedniej sekcji. Jednak w przypadku bardziej złożonych aplikacji kubernetes, takich jak podczas wdrażania złożonych aplikacji opartych na mikrousługach, zaleca się użycie [helm.](https://helm.sh/)
+Podczas wdrażania aplikacji w klastrze Kubernetes można użyć oryginalnego `kubectl.exe` Narzędzia interfejsu wiersza polecenia przy użyciu plików wdrożenia na podstawie formatu natywnego ( `.yaml` pliki), jak już wspomniano w poprzedniej sekcji. Jednak w przypadku bardziej złożonych aplikacji Kubernetes, takich jak podczas wdrażania złożonych aplikacji opartych na mikrousługach, zaleca się korzystanie z [Helm](https://helm.sh/).
 
-Wykresy helm ułatwia definiowanie, wersja, instalowanie, udostępnianie, uaktualnianie lub wycofywanie nawet najbardziej złożonej aplikacji Kubernetes.
+Wykresy Helm ułatwiają Definiowanie, wersję, instalowanie, udostępnianie, Uaktualnianie lub wycofywanie nawet najbardziej złożonej aplikacji Kubernetes.
 
-Idąc dalej, użycie helmu jest również zalecane, ponieważ dodatkowe środowiska kubernetes na platformie Azure, takie jak [usługi Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) są również oparte na wykresach helm.
+Ponadto zaleca się użycie Helm, ponieważ dodatkowe środowiska Kubernetes na platformie Azure, takie jak [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) są również oparte na wykresach Helm.
 
-Helm jest utrzymywany przez [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) we współpracy z Microsoft, Google, Bitnami i społecznością współpracowników Helm.
+Helm jest obsługiwany przez firmę [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) we współpracy z firmą Microsoft, Google, Bitnami i społecznością współautora Helm.
 
-Aby uzyskać więcej informacji na temat implementacji wykresów Helm i Kubernetes, zobacz post na [korzystanie z wykresów helm do wdrażania eShopOnContainers do AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts).
+Aby uzyskać więcej informacji o implementacji na wykresach Helm i Kubernetes, zobacz sekcję o nazwie [Install eShopOnContainersing using Helm](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#install-eshoponcontainers-using-helm).
 
-## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>Korzystanie z usługi Azure Dev Spaces w cyklu życia aplikacji Kubernetes
+## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>Użyj Azure Dev Spaces dla cyklu życia aplikacji Kubernetes
 
-[Usługa Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) zapewnia szybkie, iteracyjne środowisko programistyczne Kubernetes dla zespołów. W przypadku minimalnej konfiguracji maszyny deweloperskiej możesz iteracyjnie uruchamiać i debugować kontenery bezpośrednio w usłudze Azure Kubernetes Service (AKS). Można tworzyć na windows, Mac lub Linux przy użyciu znanych narzędzi, takich jak Visual Studio, Visual Studio Code lub wiersza polecenia.
+[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) zapewnia szybkie i iteracyjne środowisko programistyczne Kubernetes dla zespołów. W przypadku minimalnej konfiguracji maszyny deweloperskiej możesz iteracyjnie uruchamiać i debugować kontenery bezpośrednio w usłudze Azure Kubernetes Service (AKS). Program można opracowywać w systemie Windows, Mac lub Linux przy użyciu znanych narzędzi, takich jak Visual Studio, Visual Studio Code lub wiersz polecenia.
 
-Jak wspomniano, usługa Azure Dev Spaces używa wykresów Helm podczas wdrażania aplikacji opartych na kontenerach.
+Jak wspomniano, Azure Dev Spaces używa wykresów Helm podczas wdrażania aplikacji opartych na kontenerach.
 
-Usługa Azure Dev Spaces pomaga zespołom deweloperskim zwiększyć produktywność w witrynie Kubernetes, ponieważ umożliwia szybkie iterację i debugowanie kodu bezpośrednio w globalnym klastrze kubernetes na platformie Azure, używając tylko programu Visual Studio 2017 lub kodu programu Visual Studio. Ten klaster Kubernetes na platformie Azure jest udostępnionym klastrem kubernetes zarządzanym, dzięki czemu zespół może współpracować ze sobą. Można opracować kod w izolacji, a następnie wdrożyć w klastrze globalnym i zrobić end-to-end testowania z innymi składnikami bez replikowania lub mocking się zależności.
+Azure Dev Spaces ułatwia zespołom programistycznym wydajniejszą pracę w Kubernetes, ponieważ umożliwia szybkie iteracyjne i debugowanie kodu bezpośrednio w globalnym klastrze Kubernetes na platformie Azure za pomocą programu Visual Studio 2017 lub Visual Studio Code. Ten klaster Kubernetes na platformie Azure jest udostępnionym zarządzanym klastrem Kubernetes, dzięki czemu zespół może wspólnie współpracować. Możesz opracować swój kod w izolacji, a następnie wdrożyć go w klastrze globalnym i przeprowadzić kompleksowe testowanie z innymi składnikami bez replikowania lub makietowania zależności.
 
-Jak pokazano na rysunku 4-9, najbardziej wyróżniającą się funkcją w usłudze Azure Dev Spaces jest możliwość tworzenia "przestrzeni", które można uruchomić zintegrowane z resztą globalnego wdrożenia w klastrze:
+Jak pokazano na rysunku 4-9, najbardziej odróżniający się funkcja w Azure Dev Spaces jest możliwością tworzenia "spacji", które można uruchomić zintegrowane z resztą globalnego wdrożenia w klastrze:
 
-![Diagram przedstawiający użycie wielu spacji w przestrzeniach deweloperów platformy Azure.](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
+![Diagram przedstawiający użycie wielu spacji w Azure Dev Spaces.](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
 
-**Rysunek 4-9**. Korzystanie z wielu spacji w przestrzeniach deweloperskich platformy Azure
+**Rysunek 4-9**. Używanie wielu spacji w Azure Dev Spaces
 
-Usługa Azure Dev Spaces można w sposób przejrzysty mieszać i dopasować mikrousług produkcyjnych z wystąpieniem kontenera deweloperów, aby ułatwić testowanie nowych wersji. Zasadniczo można skonfigurować udostępnionego obszaru deweloperów na platformie Azure. Każdy deweloper może skupić się tylko na swojej części aplikacji i może iteratively rozwijać "wstępnie zatwierdzone" kod w przestrzeni deweloperów, który zawiera już wszystkie inne usługi i zasoby w chmurze, które ich scenariusze zależą od. Zależności są zawsze aktualne, a deweloperzy pracują w sposób odzwierciedlający środowisko produkcyjne.
+Azure Dev Spaces mogą w przejrzysty sposób mieszać i dopasowywać mikrousługi produkcyjne przy użyciu wystąpienia kontenera programowania, aby ułatwić testowanie nowych wersji. W zasadzie można skonfigurować udostępnione miejsce deweloperskie na platformie Azure. Każdy deweloper może skupić się na części aplikacji i może w sposób iteracyjny opracowywać "wstępnie przydzielony" kod w obszarze deweloperskim, który zawiera już wszystkie inne usługi i zasoby w chmurze, od których zależą te scenariusze. Zależności są zawsze aktualne, a deweloperzy pracują w sposób odzwierciedlający środowisko produkcyjne.
 
-Usługa Azure Dev Spaces udostępnia koncepcję miejsca, która umożliwia pracę w izolacji i bez obawy przed złamaniem członków zespołu. Ta funkcja jest oparta na prefiksach adresów URL; Jeśli używasz prefiksu miejsca dev w adresie URL dla żądania kontenera, usługa Azure Dev Spaces uruchamia specjalną wersję kontenera, który został wdrożony dla tego miejsca, jeśli istnieje. W przeciwnym razie uruchomi wersję globalną/skonsolidowaną.
+Azure Dev Spaces oferuje koncepcję obszaru, która pozwala na współpracę w izolacji i bez obaw o rozdzielenie członków zespołu. Ta funkcja jest oparta na prefiksach adresów URL; Jeśli używasz prefiksu obszaru dev w adresie URL żądania kontenera, Azure Dev Spaces uruchamia specjalną wersję kontenera, który został wdrożony dla tego miejsca, jeśli taki istnieje. W przeciwnym razie zostanie uruchomiona wersja globalna/skonsolidowana.
 
-Możesz zobaczyć [stronę wiki eShopOnContainers w usłudze Azure Dev Spaces,](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) aby uzyskać praktyczny widok na konkretnym przykładzie.
+Konkretny przykład można znaleźć na [stronie eShopOnContainers wiki na Azure dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces).
 
-Aby uzyskać więcej informacji, zobacz artykuł na [temat rozwoju zespołu za pomocą usługi Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
+Aby uzyskać więcej informacji, zobacz [programowanie zespołów w Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wprowadzenie do usługi Azure Kubernetes Service (AKS)** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
-- **Miejsca deweloperów platformy Azure** \
+- **Azure Dev Spaces** \
   <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
-- **Kubernetes.** Oficjalna strona. \
+- **Kubernetes.** Oficjalna lokacja. \
   <https://kubernetes.io/>
 
 ## <a name="using-azure-service-fabric"></a>Korzystanie z usługi Azure Service Fabric
 
-Usługa Azure Service Fabric powstała z przejścia firmy Microsoft z dostarczania produktów "box", które były zazwyczaj monolityczne w stylu, do dostarczania usług. Środowisko tworzenia i obsługi dużych usług na dużą skalę, takich jak Azure SQL Database, Azure Cosmos DB, Azure Service Bus lub Cortana's Backend, ukształtowane sieci szkieletowej usług. Platforma ewoluowała z czasem, gdy coraz więcej usług ją przyjmowało. Co ważne, sieci szkieletowej usług musiał działać nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
+Usługa Azure Service Fabric powstała w wyniku przechodzenia firmy Microsoft w celu dostarczania produktów "Box", które zazwyczaj były wbudowane w stylu, aby dostarczać usługi. Środowisko tworzenia i obsługi dużych usług na dużą skalę, takie jak Azure SQL Database, Azure Cosmos DB, Azure Service Bus lub zaplecze Cortany, w Service Fabric. Platforma rozwijająca się wraz z upływem czasu, gdy coraz więcej usług je zastosowało. Ważne, Service Fabric musiały działać nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
 
-Celem sieci szkieletowej usług jest rozwiązanie trudnych problemów związanych z tworzeniem i uruchamianiem usługi oraz efektywnym wykorzystaniem zasobów infrastruktury, dzięki czemu zespoły mogą rozwiązywać problemy biznesowe przy użyciu podejścia mikrousług.
+Celem Service Fabric jest rozwiązanie problemów twardych kompilowania i uruchamiania usługi oraz wydajne wykorzystanie zasobów infrastruktury, dzięki czemu zespoły mogą rozwiązywać problemy biznesowe przy użyciu podejścia mikrousług.
 
-Sieci szkieletowej usług zawiera dwa szerokie obszary, które ułatwią tworzenie aplikacji, które używają podejścia mikrousług:
+Service Fabric oferuje dwa szerokie obszary, które ułatwiają tworzenie aplikacji korzystających z rozwiązań mikrousług:
 
-- Platforma, która zapewnia usługi systemowe do wdrażania, skalowania, uaktualniania, wykrywania i ponownego uruchamiania usług, odnajdowania lokalizacji usługi, zarządzania stanem i monitorowania kondycji. Te usługi systemowe w efekcie włączyć wiele cech mikrousług opisanych wcześniej.
+- Platforma udostępniająca usługi systemowe do wdrażania, skalowania, uaktualniania, wykrywania i ponownego uruchamiania usług zakończonych niepowodzeniem, odnajdywania lokalizacji usługi, zarządzania stanem i monitorowania kondycji. Te usługi systemowe w systemie umożliwiają włączenie wielu opisanych wcześniej cech mikrousług.
 
-- Programowanie interfejsów API lub struktur, aby ułatwić tworzenie aplikacji jako mikrousług: [niezawodne podmioty i niezawodne usługi.](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) Można wybrać dowolny kod do tworzenia mikrousług, ale te interfejsy API sprawiają, że zadanie bardziej proste i integrują się z platformą na głębszym poziomie. W ten sposób można uzyskać informacje o kondycji i diagnostyki lub można skorzystać z niezawodnego zarządzania stanem.
+- Programowanie interfejsów API lub platform, które ułatwiają tworzenie aplikacji jako mikrousług: [niezawodne aktory i niezawodne usługi](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Można wybrać dowolny kod w celu utworzenia mikrousługi, ale te interfejsy API sprawiają, że zadanie jest bardziej proste i integruje się z platformą na wyższym poziomie. W ten sposób można uzyskać informacje dotyczące kondycji i diagnostyki lub można wykorzystać niezawodne zarządzanie stanami.
 
-Sieci szkieletowej usług jest niezależny w odniesieniu do sposobu tworzenia usługi i można użyć dowolnej technologii. Jednak zapewnia wbudowane programowanie interfejsów API, które ułatwiają tworzenie mikrousług.
+Service Fabric jest niezależny od w odniesieniu do sposobu tworzenia usługi i można użyć dowolnej technologii. Zapewnia ona jednak wbudowane interfejsy API programowania, które ułatwiają tworzenie mikrousług.
 
-Jak pokazano na rysunku 4-10, można tworzyć i uruchamiać mikrousług w sieci szkieletowej usług jako proste procesy lub jako kontenery platformy Docker. Istnieje również możliwość mieszania mikrousług opartych na kontenerach z mikrousług opartych na procesach w ramach tego samego klastra sieci szkieletowej usług.
+Jak pokazano na rysunku 4-10, można tworzyć i uruchamiać mikrousługi w Service Fabric jako proste procesy lub jako kontenery platformy Docker. Istnieje również możliwość mieszania mikrousług opartych na kontenerach z mikrousługami opartymi na procesach w ramach tego samego klastra Service Fabric.
 
-![Diagram przedstawiający porównanie klastrów sieci szkieletowej usług Azure.](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
+![Diagram przedstawiający porównanie klastrów Service Fabric platformy Azure.](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
 
-**Rysunek 4-10**. Wdrażanie mikrousług jako procesów lub kontenerów w sieci szkieletowej usług Azure
+**Rysunek 4-10**. Wdrażanie mikrousług jako procesów lub kontenerów na platformie Azure Service Fabric
 
-Na pierwszym obrazie zobaczysz mikrousług jako procesy, gdzie każdy węzeł uruchamia jeden proces dla każdej mikrousługi. Na drugim obrazie widać mikrousług jako kontenery, gdzie każdy węzeł uruchamia docker z kilku kontenerów, jeden kontener na mikrousługi. Klastry sieci szkieletowej usług oparte na hostach systemu Linux i Windows mogą uruchamiać kontenery Systemu Windows i kontenery systemu Windows.
+Na pierwszym obrazie są wyświetlane mikrousługi jako procesy, w których każdy węzeł uruchamia jeden proces dla każdej mikrousługi. W drugim obrazie są wyświetlane mikrousługi jako kontenery, w których każdy węzeł uruchamia platformę Docker z kilkoma kontenerami, jednego kontenera na mikrousługi. Klastry Service Fabric oparte na hostach z systemem Linux i Windows mogą uruchamiać odpowiednio kontenery platformy Docker Linux i kontenery systemu Windows.
 
-Aby uzyskać aktualne informacje na temat obsługi kontenerów w sieci szkieletowej usług Azure, zobacz [Sieci szkieletowej usług i kontenerów.](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)
+Aby uzyskać aktualne informacje o obsłudze kontenerów w usłudze Azure Service Fabric, zobacz [Service Fabric i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-Sieci szkieletowej usług jest dobrym przykładem platformy, gdzie można zdefiniować inną architekturę logiczną (mikrousług biznesowych lub ograniczone konteksty) niż implementacji fizycznej. Na przykład jeśli implementujesz [stateful niezawodne usługi](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) w [sieci szkieletowej usług Azure](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), które są wprowadzane w następnej sekcji "[Bezstanowe versus stanowe mikrousługi](#stateless-versus-stateful-microservices)", masz koncepcji mikrousług biznesowych z wieloma usługami fizycznymi.
+Service Fabric jest dobrym przykładem platformy, w której można zdefiniować inną architekturę logiczną (mikrousługi biznesowe lub konteksty ograniczone) niż implementacja fizyczna. Na przykład w przypadku zaimplementowania [stanowych Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) na [platformie Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), które zostały wprowadzone w następnej sekcji "mikrousługi bezstanowe i[mikrousług](#stateless-versus-stateful-microservices)," istnieje koncepcja mikrousługi biznesowa z wieloma usługami fizycznymi.
 
-Jak pokazano na rysunku 4-10 i myślenia z punktu widzenia mikrousług logicznych/biznesowych, podczas implementowania usługi stateful niezawodnej usługi sieci szkieletowej usługi zwykle trzeba będzie zaimplementować dwie warstwy usług. Pierwszym z nich jest zaplecza stanowej niezawodnej usługi, która obsługuje wiele partycji (każda partycja jest usługą stanową). Drugi to usługa frontonu lub usługa bramy, odpowiedzialna za routing i agregację danych między wieloma partycjami lub wystąpieniami usługi stanowej. Ta usługa bramy obsługuje również komunikację po stronie klienta z pętlami ponawiania prób uzyskujących dostęp do usługi zaplecza. Jest to usługa bramy, jeśli zaimplementujesz usługę niestandardową lub alternatywnie można również użyć out-of-the-box Service Fabric [reverse proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Jak pokazano na rysunku 4-10, i zastanawiasz się, że w przypadku implementowania Service Fabric stanowej usługi niezawodnej, zazwyczaj konieczne będzie wdrożenie dwóch warstw usług. Pierwsza to niezawodna usługa bezstanowa zaplecza, która obsługuje wiele partycji (każda partycja jest usługą stanową). Druga to usługa frontonu lub Usługa bramy, która jest odpowiedzialna za Routing i agregację danych w wielu partycjach lub wystąpieniach usługi stanowej. Ta usługa bramy obsługuje również komunikację po stronie klienta z pętlami ponawiania próby dostępu do usługi zaplecza. Jest on nazywany usługą bramy w przypadku zaimplementowania niestandardowej usługi lub Alternatywnie można również użyć wbudowanej Service Fabric [zwrotnego serwera proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
 
 ![Diagram przedstawiający kilka usług stanowych w kontenerach.](./media/orchestrate-high-scalability-availability/service-fabric-stateful-business-microservice.png)
 
-**Rysunek 4-11**. Mikrousługa biznesowa z kilkoma wystąpieniami usługi stanowej i frontołową bramą niestandardową
+**Rysunek 4-11**. Mikrousługa biznesowa z kilkoma wystąpieniami usługi stanowej i frontonem bramy niestandardowej
 
-W każdym przypadku podczas korzystania z usługi Service Fabric Stateful Niezawodne usługi, masz również mikrousługi logiczne lub biznesowe (ograniczony kontekst), który składa się z wielu usług fizycznych. Każdy z nich, usługa bramy i usługa partycji mogą być implementowane jako ASP.NET usług interfejsu API sieci Web, jak pokazano na rysunku 4-11. Usługa Sieci szkieletowej ma receptę do obsługi kilku stanowych niezawodnych usług w kontenerach.
+W każdym przypadku, gdy używane są Service Fabric stanowe Reliable Services, istnieje również usługa logiczna lub mikrousługowa, która składa się z wielu usług fizycznych. Każdy z nich, Usługa bramy i usługa partycji można zaimplementować jako ASP.NET Web API Services, jak pokazano na rysunku 4-11. Service Fabric ma receptę do obsługi kilku niezawodnych usług stanowych w kontenerach.
 
-W sieci szkieletowej usług można grupować i wdrażać grupy usług jako [aplikację sieci szkieletowej usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), która jest jednostką pakowania i wdrażania dla koordynatora lub klastra. W związku z tym aplikacja sieci szkieletowej usług może być mapowane do tej autonomicznej biznesowej i logicznej granicy mikrousług lub ograniczonego kontekstu, więc można wdrożyć te usługi autonomicznie.
+W Service Fabric można grupować i wdrażać grupy usług jako [aplikację Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), która jest jednostką pakowania i wdrożenia dla programu Orchestrator lub klaster. W związku z tym aplikacja Service Fabric może zostać zmapowana na tę autonomiczną granicę biznesową i logiczną mikrousług lub ograniczony kontekst, również dlatego można wdrożyć te usługi autonomicznie.
 
-### <a name="service-fabric-and-containers"></a>Tkanina serwisowa i kontenery
+### <a name="service-fabric-and-containers"></a>Service Fabric i kontenery
 
-W odniesieniu do kontenerów w sieci szkieletowej usług, można również wdrożyć usługi w obrazach kontenerów w klastrze sieci szkieletowej usług. Jak pokazano na rysunku 4-12, przez większość czasu będzie tylko jeden kontener na usługę.
+W odniesieniu do kontenerów w Service Fabric można również wdrażać usługi w obrazach kontenera w klastrze Service Fabric. Jak pokazano na rysunku 4-12, większość czasu będzie zawierać tylko jeden kontener dla każdej usługi.
 
-![Diagram przedstawiający jeden kontener na usługę podawanie do bazy danych.](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
+![Diagram przedstawiający przeżywienie jednego kontenera na usługę do bazy danych.](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
 
-**Rysunek 4-12**. Mikrousługa biznesowa z kilkoma usługami (kontenerami) w sieci szkieletowej usług
+**Rysunek 4-12**. Mikrousługa biznesowa z wieloma usługami (kontenery) w Service Fabric
 
-Aplikacja sieci szkieletowej usług można uruchomić kilka kontenerów dostępu do zewnętrznej bazy danych i cały zestaw będzie logiczną granicą mikrousługi biznesowej. Jednak tak zwane kontenery "sidecar" (dwa kontenery, które muszą być wdrożone razem jako część usługi logicznej) są również możliwe w sieci szkieletowej usług. Ważną rzeczą jest to, że mikrousługa biznesowa jest logiczną granicą wokół kilku spójnych elementów. W wielu przypadkach może to być pojedyncza usługa z pojedynczym modelem danych, ale w niektórych innych przypadkach może mieć kilka usług fizycznych, jak również.
+Aplikacja Service Fabric może uruchamiać kilka kontenerów uzyskujących dostęp do zewnętrznej bazy danych, a cały zestaw będzie logiczną granicą mikrousługi biznesowej. Jednak w Service Fabric są również dostępne kontenery "przyczepki" (dwa kontenery, które muszą zostać wdrożone razem w ramach usługi logicznej). Ważne jest, aby mikrousługa biznesowa była granicą logiczną wokół kilku spójnych elementów. W wielu przypadkach może to być jedna usługa z pojedynczym modelem danych, ale w niektórych innych przypadkach może istnieć również kilka usług fizycznych.
 
-Należy zauważyć, że można mieszać usługi w procesach i usług w kontenerach, w tej samej aplikacji sieci szkieletowej usług, jak pokazano na rysunku 4-13.
+Należy zauważyć, że można mieszać usługi w procesach i usługi w kontenerach w tej samej aplikacji Service Fabric, jak pokazano na rysunku 4-13.
 
 ![Diagram przedstawiający usługi w procesach i w kontenerach w tej samej aplikacji.](./media/orchestrate-high-scalability-availability/business-microservice-mapped-to-service-fabric-application.png)
 
-**Rysunek 4-13**. Mikrousługa biznesowa zamapowana na aplikację sieci szkieletowej usług z kontenerami i usługami stanowymi
+**Rysunek 4-13**. Mikrousługa biznesowa zamapowana na Service Fabric aplikacji z kontenerami i usługami stanowymi
 
-Aby uzyskać więcej informacji na temat obsługi kontenerów w sieci szkieletowej usług Azure, zobacz [Sieci szkieletowej usług i kontenerów.](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)
+Aby uzyskać więcej informacji na temat obsługi kontenerów w usłudze Azure Service Fabric, zobacz [Service Fabric i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-## <a name="stateless-versus-stateful-microservices"></a>Bezstanowe i stanowe mikrousługi
+## <a name="stateless-versus-stateful-microservices"></a>Mikrousługi bezstanowe a stanowe
 
-Jak wspomniano wcześniej, każda mikrousługa (logiczny ograniczony kontekst) musi posiadać swój model domeny (dane i logika). W przypadku mikrousług bezstanowych bazy danych będą zewnętrzne, wykorzystując opcje relacyjne, takie jak SQL Server lub opcje NoSQL, takie jak Usługa Azure Cosmos DB lub MongoDB.
+Jak wspomniano wcześniej, każda mikrousługa (związany z logicznym kontekstem) musi być własnym modelem domeny (dane i logika). W przypadku mikrousług bezstanowych baza danych będzie zewnętrzna, przy użyciu opcji relacyjnych, takich jak SQL Server, lub opcji NoSQL, takich jak Azure Cosmos DB lub MongoDB.
 
-Ale same usługi mogą być również stanowe w sieci szkieletowej usług, co oznacza, że dane znajdują się w mikrousługi. Te dane mogą istnieć nie tylko na tym samym serwerze, ale w ramach procesu mikrousług, w pamięci i utrwalone na dyskach twardych i replikowane do innych węzłów. Rysunek 4-14 przedstawia różne podejścia.
+Jednak same usługi mogą być również stanowe Service Fabric, co oznacza, że dane znajdują się w mikrousłudze. Te dane mogą znajdować się nie tylko na tym samym serwerze, ale w ramach procesu mikrousług, w pamięci i utrwalane na dyskach twardych i replikowane do innych węzłów. Rysunek 4-14 pokazuje różne podejścia.
 
-![Diagram przedstawiający porównanie usługi bezstanowej i stanowej.](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
+![Diagram przedstawiający porównanie bezstanowej i stanowej usługi.](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
 
-**Rysunek 4-14**. Bezstanowe i stanowe mikrousługi
+**Rysunek 4-14**. Mikrousługi bezstanowe a stanowe
 
-W usługach bezstanowych stan (trwałość, baza danych) jest przechowywany z mikrousługi. W usługi stanowe stan jest przechowywany wewnątrz mikrousługi. Podejście bezstanowe jest całkowicie prawidłowe i jest łatwiejsze do zaimplementowania niż mikrousług stanowych, ponieważ podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Ale bezstanowe mikrousługi nakładają opóźnienia między procesem a źródłami danych. Obejmują one również więcej ruchomych elementów, gdy próbujesz poprawić wydajność dzięki dodatkowej pamięci podręcznej i kolejek. W rezultacie można skończyć ze złożonymi architekturami, które mają zbyt wiele warstw.
+W przypadku usług bezstanowych stan (trwałość, baza danych) jest zachowywany z mikrousługi. W przypadku usług stanowych stan jest przechowywany wewnątrz mikrousługi. Podejście bezstanowe jest doskonale ważne i jest łatwiejsze do wdrożenia niż mikrousługi stanowe, ponieważ podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Ale bezstanowe mikrousługi nakładają opóźnienia między procesem i źródłami danych. Obejmują one również więcej elementów, które należy wykonać, gdy próbujesz poprawić wydajność za pomocą dodatkowej pamięci podręcznej i kolejek. W efekcie można zakończyć z użyciem złożonych architektur, które mają zbyt wiele warstw.
 
-Z drugiej strony [mikrousług stanowych](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) można excel w zaawansowanych scenariuszach, ponieważ nie ma opóźnienia między logiką domeny i danych. Przetwarzanie danych o dużym obciążeniu, zaplecze gier, bazy danych jako usługa i inne scenariusze o małych opóźnieniach korzystają z usług stanowych, które umożliwiają stan lokalny w celu szybszego dostępu.
+Z kolei [mikrousługi stanowe](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) mogą programu Excel w zaawansowanych scenariuszach, ponieważ nie ma opóźnienia między logiką domeny a danymi. Duże przetwarzanie danych, zaplecze gier, bazy danych jako usługa i inne scenariusze o niskich opóźnieniach korzystają z usług stanowych, które pozwalają na szybszy dostęp do stanu lokalnego.
 
-Usługi bezstanowe i stanowe uzupełniają się. Na przykład, jak widać na prawym diagramie na rysunku 4-14, usługi stanowej można podzielić na wiele partycji. Aby uzyskać dostęp do tych partycji, może być konieczne usługi bezstanowej działającej jako usługa bramy, która wie, jak rozwiązać każdą partycję na podstawie kluczy partycji.
+Bezstanowe i bezstanowe usługi są uzupełniane. Na przykład, jak widać na rysunku z właściwym diagramem 4-14, usługa stanowa może zostać podzielona na wiele partycji. Aby uzyskać dostęp do tych partycji, może być potrzebna usługa bezstanowa działająca jako Usługa bramy, która wie, jak rozwiązać każdą partycję na podstawie kluczy partycji.
 
-Usługi stanowe mają wady. Nakładają one wysoki poziom złożoności, które mają być skalowane w poziomie. Funkcje, które zwykle są implementowane przez systemy zewnętrznej bazy danych, muszą być rozwiązane dla zadań, takich jak replikacja danych w ramach mikrousług stanowych i partycjonowanie danych. Jest to jednak jeden z obszarów, w których koordynator, taki jak [usługa Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) z jej [stanowymi niezawodnymi usługami,](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) może najbardziej pomóc — upraszczając rozwój i cykl życia mikrousług stanowych przy użyciu [interfejsu API niezawodnych usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) i [wiarygodnych aktorów.](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)
+Usługi stanowe mają wady. Umożliwiają skalowanie w poziomie wysokiego poziomu złożoności. Funkcje, które zwykle są implementowane przez zewnętrzne systemy baz danych, muszą być objęte zadaniami, takimi jak replikacja danych na mikrousługi stanowe i partycjonowanie danych. Jednak jest to jeden z obszarów, w których usługa Orchestrator, taka jak [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) z [niezawodnymi usługami stanowymi](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) , może pomóc w większości — upraszczając rozwój i cykl życia MIKROUSŁUG za pomocą [interfejsu API Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) i [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Inne struktury mikrousług, które umożliwiają usługi stanowe, obsługują wzorzec aktora i poprawiają odporność na uszkodzenia i opóźnienia między logiką biznesową a danymi, to Microsoft [Orleans](https://github.com/dotnet/orleans), z microsoft research i [Akka.NET](https://getakka.net/). Obie struktury są obecnie poprawy ich obsługi platformy Docker.
+Inne platformy mikrousług, które zezwalają na usługi stanowe, obsługują wzorzec aktora i zwiększają odporność na uszkodzenia i opóźnienia między logiką biznesową a danymi to Microsoft [Orleans](https://github.com/dotnet/orleans), Microsoft Research i [Akka.NET](https://getakka.net/). Obie platformy obecnie ulepszają obsługę platformy Docker.
 
-Należy pamiętać, że kontenery platformy Docker same są bezstanowe. Jeśli chcesz zaimplementować usługi stanowej, potrzebujesz jednego z dodatkowych ram nakazowych i wyższego poziomu, o których wspomniano wcześniej.
+Pamiętaj, że kontenery platformy Docker nie są bezstanowe. Jeśli chcesz zaimplementować usługę stanową, musisz mieć jedną z dodatkowych, opisanych wcześniej platform i wyższego poziomu.
 
-## <a name="using-azure-service-fabric-mesh"></a>Korzystanie z siatki sieci szkieletowej usług Azure
+## <a name="using-azure-service-fabric-mesh"></a>Korzystanie z usługi Azure Service Fabric siatka
 
-Usługa Azure Service Fabric Mesh to w pełni zarządzana usługa, która umożliwia deweloperom tworzenie i wdrażanie aplikacji o znaczeniu krytycznym bez zarządzania infrastrukturą. Usługa Service Fabric Mesh pozwala tworzyć i uruchamiać bezpieczne rozproszone aplikacje mikrousług, które można skalować na żądanie.
+Siatka Service Fabric platformy Azure to w pełni zarządzana usługa, która umożliwia deweloperom tworzenie i wdrażanie aplikacji o znaczeniu strategicznym bez konieczności zarządzania infrastrukturą. Usługa Service Fabric Mesh pozwala tworzyć i uruchamiać bezpieczne rozproszone aplikacje mikrousług, które można skalować na żądanie.
 
-Jak pokazano na rysunku 4-15, aplikacje hostowane w sieci szkieletowej usługi działają i skalują się bez martwienia się o infrastrukturę, która ją zasila.
+Jak pokazano na rysunku 4-15, aplikacje hostowane na Service Fabric siatki są uruchamiane i skalowane bez narażania się na infrastrukturę IT.
 
-![Diagram przedstawiający wdrożenie z lokalnego repozytorium do sieci szkieletowej usług.](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
+![Diagram przedstawiający wdrażanie z repozytorium lokalnego do Service Fabric siatki.](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
 
-**Rysunek 4-15**. Wdrażanie aplikacji mikrousług/kontenerów w sieci szkieletowej usługi
+**Rysunek 4-15**. Wdrażanie aplikacji mikrousług/kontenerów do Service Fabric siatki
 
-W ramach pokrywy usługi Sieci szkieletowej mesh składa się z klastrów tysięcy maszyn. Wszystkie operacje klastrów są ukryte przed deweloperem. Wystarczy przekazać kontenery i określić zasoby, których potrzebujesz, wymagania dotyczące dostępności i limity zasobów. Usługa Service Fabric Mesh automatycznie alokuje infrastrukturę żądaną przez wdrożenie aplikacji i obsługuje także błędy infrastruktury, zapewniając wysoką dostępność aplikacji. Musisz zadbać jedynie o kondycję i szybkość reakcji aplikacji, nie martwiąc się o infrastrukturę.
+W obszarze okładek Service Fabric siatka składa się z klastrów tysięcy maszyn. Wszystkie operacje klastrów są ukryte przed deweloperem. Wystarczy przekazać kontenery i określić potrzebne zasoby, wymagania dotyczące dostępności i limity zasobów. Usługa Service Fabric Mesh automatycznie alokuje infrastrukturę żądaną przez wdrożenie aplikacji i obsługuje także błędy infrastruktury, zapewniając wysoką dostępność aplikacji. Musisz zadbać jedynie o kondycję i szybkość reakcji aplikacji, nie martwiąc się o infrastrukturę.
 
-Aby uzyskać więcej informacji, zobacz [dokumentację siatki sieci szkieletowej usług](https://docs.microsoft.com/azure/service-fabric-mesh/).
+Aby uzyskać więcej informacji, zobacz [dokumentację siatki Service Fabric](https://docs.microsoft.com/azure/service-fabric-mesh/).
 
 ## <a name="choosing-orchestrators-in-azure"></a>Wybieranie koordynatorów na platformie Azure
 
-W poniższej tabeli przedstawiono wskazówki dotyczące tego, jakiego programu orchestrator użyć w zależności od obciążeń i fokusu systemu operacyjnego.
+Poniższa tabela zawiera wskazówki dotyczące programu Orchestrator, który ma być używany w zależności od obciążeń i fokus systemu operacyjnego.
 
-![Obraz tabeli, która porównuje kubernetes i sieci szkieletowej usług.](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
+![Obraz tabeli porównującej Kubernetes i Service Fabric.](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
 
-**Rysunek 4-16**. Wybór koordynatora w wskazówki dotyczące platformy Azure
+**Rysunek 4-16**. Wybór programu Orchestrator w wskazówki dotyczące platformy Azure
 
 >[!div class="step-by-step"]
->[Poprzedni](soa-applications.md)
->[następny](deploy-azure-kubernetes-service.md)
+>[Poprzedni](soa-applications.md) 
+> [Dalej](deploy-azure-kubernetes-service.md)

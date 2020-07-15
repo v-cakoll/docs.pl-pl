@@ -1,14 +1,14 @@
 ---
 title: Koncepcje i model obiektów .NET Compiler Platform SDK
 description: To omówienie zapewnia efektywność pracy z zestawem SDK kompilatora platformy .NET. Poznasz warstwy interfejsu API, typy główne i ogólny model obiektów.
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975943"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374471"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Poznaj model zestawu SDK .NET Compiler Platform
 
@@ -30,21 +30,19 @@ Dla każdego z tych faz zestaw SDK .NET Compiler Platform uwidacznia model obiek
 
 Każdy kompilator łączy te składniki razem z pojedynczym kompleksem.
 
-Te interfejsy API są takie same, jak w programie Visual Studio. Na przykład funkcje tworzenia konspektu kodu i formatowania używają drzew składni, a funkcje Przeglądarka obiektów i nawigacji używają tabeli symboli, refaktoryzacji i przechodzenia do definicji używają modelu semantycznego, a Edycja i kontynuowanie korzysta ze wszystkich tych elementów, w tym interfejsu API emisji.
+Te interfejsy API są takie same, jak w programie Visual Studio. Na przykład funkcje tworzenia konspektu kodu i formatowania używają drzew składni, **Przeglądarka obiektów**i funkcji nawigacji, Użyj tabeli symboli, refaktoryzacji i **Przejdź do definicji** Użyj modelu semantycznego, a następnie **Edytuj i Kontynuuj** używa wszystkich tych elementów, w tym interfejsu API emisji.
 
 ## <a name="api-layers"></a>Warstwy interfejsu API
 
-Zestaw SDK kompilatora .NET składa się z dwóch głównych warstw interfejsów API: interfejsów API kompilatora i interfejsów API obszarów roboczych.
-
-![warstwy interfejsu API reprezentowane przez interfejsy API potoku kompilatora](media/compiler-api-model/api-layers.png)
+Zestaw SDK kompilatora .NET składa się z kilku warstw interfejsów API: interfejsów API kompilatora, interfejsów API diagnostyki, interfejsów API tworzenia skryptów i interfejsów API obszarów roboczych.
 
 ### <a name="compiler-apis"></a>Interfejsy API kompilatora
 
-Warstwa kompilatora zawiera modele obiektów, które odnoszą się do informacji uwidocznionych w każdej fazie potoku kompilatora, składni i semantyki. Warstwa kompilatora zawiera również niemodyfikowalną migawkę pojedynczego wywołania kompilatora, w tym odwołania do zestawów, opcje kompilatora i pliki kodu źródłowego. Istnieją dwa różne interfejsy API, które reprezentują język C# i język Visual Basic. Te dwa interfejsy API są podobne do kształtu, ale są dostosowane do poszczególnych języków. Ta warstwa nie ma żadnych zależności w składnikach programu Visual Studio.
+Warstwa kompilatora zawiera modele obiektów, które odnoszą się do informacji uwidocznionych w każdej fazie potoku kompilatora, składni i semantyki. Warstwa kompilatora zawiera również niemodyfikowalną migawkę pojedynczego wywołania kompilatora, w tym odwołania do zestawów, opcje kompilatora i pliki kodu źródłowego. Istnieją dwa różne interfejsy API, które reprezentują język C# i język Visual Basic. Dwa interfejsy API są podobne do kształtu, ale są dostosowane do poszczególnych języków. Ta warstwa nie ma żadnych zależności w składnikach programu Visual Studio.
 
 ### <a name="diagnostic-apis"></a>Diagnostyczne interfejsy API
 
-W ramach analizy kompilator może utworzyć zestaw danych diagnostycznych obejmujących wszystkie elementy składni, semantyki i błędy przypisania do różnych ostrzeżeń i diagnostyki informacyjnej. Warstwa interfejsu API kompilatora udostępnia diagnostykę za pomocą rozszerzalnego interfejsu API, który umożliwia przełączenie analizatorów zdefiniowanych przez użytkownika do procesu kompilacji. Umożliwia ona wytwarzanie przez użytkownika diagnostyki, takich jak te, które są tworzone przez narzędzia takie jak StyleCop lub FxCop, do wygenerowania w ramach diagnostyki zdefiniowanej przez kompilator. Zapewnianie diagnostyki w ten sposób pozwala na integrację naturalnie z narzędziami, takimi jak MSBuild i Visual Studio, które są zależne od diagnostyki dla takich środowisk, jak zatrzymanie kompilowania na podstawie zasad i wyświetlanie w edytorze i sugerowanie poprawek w kodzie.
+W ramach analizy kompilator może utworzyć zestaw danych diagnostycznych obejmujących wszystkie elementy składni, semantyki i błędy przypisania do różnych ostrzeżeń i diagnostyki informacyjnej. Warstwa interfejsu API kompilatora udostępnia diagnostykę za pomocą rozszerzalnego interfejsu API, który umożliwia przełączenie analizatorów zdefiniowanych przez użytkownika do procesu kompilacji. Umożliwia ona wytwarzanie przez użytkownika diagnostyki, takich jak te, które są tworzone przez narzędzia takie jak StyleCop lub FxCop, do wygenerowania w ramach diagnostyki zdefiniowanej przez kompilator. Zapewnianie diagnostyki w ten sposób pozwala na integrację naturalnie z narzędziami, takimi jak MSBuild i Visual Studio, które są zależne od diagnostyki dla środowisk, takich jak zatrzymywanie kompilacji na podstawie zasad i wyświetlanie zygzaków na żywo w edytorze i sugerowanie poprawek w kodzie.
 
 ### <a name="scripting-apis"></a>Interfejsy API obsługi skryptów
 

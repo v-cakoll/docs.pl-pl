@@ -10,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 31c4cc9136862551e02fae030e38ebd6c2916a38
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 91ace1932e8bb751e8e1d85e00b3e239a01aa9ea
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100928"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309823"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementacja metody DisposeAsync
 
@@ -64,11 +64,11 @@ Wszystkie niezapieczętowane klasy należy traktować jako potencjalną klasę b
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
-W poprzednim przykładzie użyto <xref:System.Text.Json.Utf8JsonWriter> , aby uzyskać więcej informacji na temat `System.Text.Json` , zobacz [migrowanie z Newtonsoft.JsSystem.Text.Jsna](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md).
+Poprzedni przykład używa <xref:System.Text.Json.Utf8JsonWriter> . Aby uzyskać więcej informacji o `System.Text.Json` programie, zobacz [Jak przeprowadzić migrację z Newtonsoft.Js, aby System.Text.Js](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md).
 
 ## <a name="using-async-disposable"></a>Korzystanie z asynchronicznej operacji jednorazowej
 
-Aby prawidłowo korzystać z obiektu, który implementuje <xref:System.IAsyncDisposable> interfejs, należy użyć słów kluczowych [await](../../csharp/language-reference/operators/await.md)i [using](../../csharp/language-reference/keywords/using.md) . Rozważmy poniższy przykład, w którym `ExampleAsyncDisposable` tworzona jest instancja klasy, a następnie zawinięte w `await using` instrukcji.
+Aby prawidłowo korzystać z obiektu, który implementuje <xref:System.IAsyncDisposable> interfejs, należy użyć słów kluczowych [await](../../csharp/language-reference/operators/await.md)i [using](../../csharp/language-reference/keywords/using-statement.md) . Rozważmy następujący przykład, w którym `ExampleAsyncDisposable` tworzona jest instancja klasy, a następnie zawinięte w `await using` instrukcji.
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

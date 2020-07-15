@@ -2,12 +2,12 @@
 title: Tworzenie biblioteki klas .NET Standard przy użyciu Visual Studio Code
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard przy użyciu Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701802"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308887"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Samouczek: Tworzenie biblioteki .NET Standard przy użyciu Visual Studio Code
 
@@ -172,7 +172,7 @@ Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas
 1. Uruchom następujące polecenie:
 
    ```dotnetcli
-   dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
+   dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
    Dane wyjściowe terminalu wyglądają podobnie jak w poniższym przykładzie:
@@ -181,7 +181,7 @@ Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-## <a name="run-the-app"></a>Uruchomienie aplikacji
+## <a name="run-the-app"></a>Uruchamianie aplikacji
 
 1. Uruchom następujące polecenie w terminalu:
 
@@ -205,7 +205,7 @@ Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas
    Begins with uppercase? : Yes
    ```
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 * [Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core](libraries.md)
 * [Wersje .NET Standard i obsługiwane przez nich platformy](../../standard/net-standard.md).

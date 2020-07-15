@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 8,0 — przewodnik w języku C#
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w języku C# 8,0.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174734"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309407"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w języku C# 8,0
 
@@ -398,7 +398,7 @@ Możesz samodzielnie wypróbować strumienie asynchroniczne w naszym samouczku d
 
 ## <a name="asynchronous-disposable"></a>Asynchroniczne jednorazowe
 
-Począwszy od języka C# 8,0, język obsługuje asynchroniczne typy jednorazowe, które implementują <xref:System.IAsyncDisposable?displayProperty=nameWithType> interfejs. Operand `using` wyrażenia może implementować jedną <xref:System.IDisposable> lub <xref:System.IAsyncDisposable> . W przypadku `IAsyncDisposable` , kompilator generuje kod do `await` <xref:System.Threading.Tasks.Task> zwróconych z <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> . Aby uzyskać więcej informacji, zobacz [ `using` instrukcję](../language-reference/keywords/using-statement.md).
+Począwszy od języka C# 8,0, język obsługuje asynchroniczne typy jednorazowe, które implementują <xref:System.IAsyncDisposable?displayProperty=nameWithType> interfejs. Używasz `await using` instrukcji do pracy z asynchronicznym obiektem jednorazowym. Aby uzyskać więcej informacji, zobacz artykuł [Implementuj metodę DisposeAsync](../../standard/garbage-collection/implementing-disposeasync.md) .
 
 ## <a name="indices-and-ranges"></a>Indeksy i zakresy
 

@@ -1,16 +1,17 @@
 ---
 title: Wydajność środowiska .NET Framework
+description: Projektuj i planuj wydajność w aplikacjach .NET. Korzystaj z narzędzi dostarczonych przez firmę Microsoft, aby mierzyć wydajność aplikacji i wprowadzać ulepszenia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504091"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309758"
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektować i zaplanować wydajność tak samo jak w przypadku projektowania dowolnej innej funkcji aplikacji. Za pomocą narzędzi dostarczonych przez firmę Microsoft można mierzyć wydajność aplikacji oraz, w razie potrzeby, wprowadzać ulepszenia w zakresie użycia pamięci, przepływności kodu i czas odpowiedzi. W tym temacie wymieniono narzędzia analizy wydajności zapewniane przez firmę Microsoft oraz linki do innych tematów, które obejmują wydajność poszczególnych obszarów tworzenia aplikacji.  
@@ -43,8 +44,8 @@ Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektowa
   
 |Typ aplikacji|Zobacz|  
 |--------------|---------|  
-|.NET Framework aplikacje dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](performance-tips.md)|  
-|Aplikacje ze sklepu Windows 8. x zapisane C++w C#, i Visual Basic|[Najlepsze rozwiązania w zakresie wydajności dla aplikacji ze C++sklepu C#Windows przy użyciu systemów, i Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|.NET Framework aplikacje dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../standard/garbage-collection/performance.md)<br /><br /> [Porady dotyczące wydajności](performance-tips.md)|  
+|Aplikacje ze sklepu Windows 8. x zapisane w językach C++, C# i Visual Basic|[Najlepsze rozwiązania w zakresie wydajności dla aplikacji ze sklepu Windows przy użyciu języków C++, C# i Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Przegląd wydajności ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
@@ -53,6 +54,6 @@ Jeśli chcesz tworzyć aplikacje o doskonałej wydajności, należy zaprojektowa
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Buforowanie w aplikacjach .NET Framework](caching-in-net-framework-applications.md)|Opisuje techniki buforowania danych w celu zwiększenia wydajności aplikacji.|  
-|[Inicjowanie z opóźnieniem](lazy-initialization.md)|Opisuje sposób inicjowania obiektów w miarę potrzeby w celu zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
+|[Inicjalizacja z opóźnieniem](lazy-initialization.md)|Opisuje sposób inicjowania obiektów w miarę potrzeby w celu zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
 |[Niezawodność](reliability.md)|Zawiera informacje na temat zapobiegania asynchronicznym wyjątkom w środowisku serwera.|  
-|[Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework](writing-large-responsive-apps.md)|Zawiera porady dotyczące wydajności zebrane z przepisywania kompilatorów C# i Visual Basic w kodzie zarządzanym i zawiera kilka rzeczywistych przykładów z C# kompilatora.|
+|[Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework](writing-large-responsive-apps.md)|Zawiera porady dotyczące wydajności zebrane z przepisywania kompilatorów C# i Visual Basic w kodzie zarządzanym i zawiera kilka rzeczywistych przykładów z kompilatora języka C#.|

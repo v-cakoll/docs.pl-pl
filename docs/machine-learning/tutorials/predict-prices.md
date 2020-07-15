@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób tworzenia modelu regresji prz
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281774"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309719"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: prognozowanie cen przy użyciu regresji z ML.NET
 
@@ -35,7 +35,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 1. Utwórz katalog o nazwie *dane* w projekcie do przechowywania zestawu danych i plików modeli.
 
-1. Zainstaluj pakiet NuGet **Microsoft.ml** :
+1. Zainstaluj pakiet NuGet **Microsoft.ml** i **Microsoft. ml. FastTree** :
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 

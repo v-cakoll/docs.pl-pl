@@ -11,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282128"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309797"
 ---
-# <a name="specifying-a-character-set"></a>Określanie zestawu znaków
+# <a name="specify-a-character-set"></a>Określanie zestawu znaków
+
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Pole steruje kierowaniem ciągów i określa, w jaki sposób metoda Invoke odnajduje nazwy funkcji w bibliotece DLL. W tym temacie opisano oba zachowania.  
   
  Niektóre interfejsy API eksportują dwie wersje funkcji przyjmujących argumenty ciągów: wąski (ANSI) i szeroki (Unicode). Interfejs API systemu Windows, na przykład, zawiera następujące nazwy punktów wejścia dla funkcji **MessageBox** :  
@@ -62,11 +63,12 @@ ms.locfileid: "86282128"
   
 - Wywołanie platformy wybiera między formatami ANSI i Unicode w czasie wykonywania, na podstawie platformy docelowej.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Określanie zestawu znaków w Visual Basic  
- Poniższy przykład deklaruje funkcję **MessageBox** trzykrotnie, za każdym razem z innym zachowaniem zestawu znaków. Możesz określić zachowanie zestawu znaków w Visual Basic, dodając słowo kluczowe **ANSI**, **Unicode**lub słowa **Auto** kluczowego do instrukcji deklaracji.  
-  
- W przypadku pominięcia słowa kluczowego zestawu znaków, jak zostało to zrobione w pierwszej instrukcji deklaracji, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest domyślnie ustawione na zestaw znaków ANSI. Drugie i trzecie instrukcje w przykładzie jawnie określają zestaw znaków za pomocą słowa kluczowego.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Określ zestaw znaków w Visual Basic
+
+Możesz określić zachowanie zestawu znaków w Visual Basic, dodając `Ansi` `Unicode` słowo kluczowe,, lub `Auto` do instrukcji deklaracji. W przypadku pominięcia słowa kluczowego zestawu znaków <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> wartością domyślną pola jest zestaw znaków ANSI.
+
+Poniższy przykład deklaruje funkcję **MessageBox** trzykrotnie, za każdym razem z innym zachowaniem zestawu znaków. Pierwsza instrukcja pomija słowo kluczowe zestawu znaków, dlatego zestaw znaków jest domyślnie ANSI. Drugie i trzecie instrukcje jawnie określają zestaw znaków za pomocą słowa kluczowego.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -89,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Określanie zestawu znaków w językach C# i C++  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Pole Identyfikuje podstawowy zestaw znaków jako ANSI lub Unicode. Zestaw znaków kontroluje sposób organizowania argumentów ciągów dla metody. Aby wskazać zestaw znaków, użyj jednej z następujących form:  
+## <a name="specify-a-character-set-in-c-and-c"></a>Określanie zestawu znaków w językach C# i C++
+
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Pole Identyfikuje podstawowy zestaw znaków jako ANSI lub Unicode. Zestaw znaków kontroluje sposób organizowania argumentów ciągów dla metody. Aby wskazać zestaw znaków, użyj jednej z następujących form:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]
@@ -145,7 +148,7 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)

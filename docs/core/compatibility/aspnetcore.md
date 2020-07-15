@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1a3c8b04bc574822f1576ca0720ed7a01c303880
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 75f33e7d6d76206ebe46b1a229ccb152d79ddc61
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281683"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309563"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -71,6 +71,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [MVC: zmieniono typy na wewnętrzne](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Usunięto podkładkę zgodności z interfejsem API sieci Web](#mvc-web-api-compatibility-shim-removed)
 - [Razor: Kompilacja środowiska uruchomieniowego została przeniesiona do pakietu](#razor-runtime-compilation-moved-to-a-package)
+- [Bezpieczeństwo: Zaktualizowano wersje pakietów NuGet IdentityModel](#security-identitymodel-nuget-package-versions-updated)
 - [Stan sesji: Usunięto przestarzałe interfejsy API](#session-state-obsolete-apis-removed)
 - [Współdzielona struktura: usuwanie zestawu z Microsoft. AspNetCore. App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [Współdzielona struktura: Microsoft. AspNetCore. All usunięte](#shared-framework-removed-microsoftaspnetcoreall)
@@ -137,6 +138,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
 
 ***
 

@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat wersji programu macOS, na których mo
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804505"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308926"
 ---
 # <a name="install-net-core-on-macos"></a>Zainstaluj platformę .NET Core w systemie macOS
 
@@ -23,7 +23,8 @@ W tym artykule dowiesz się, jak zainstalować platformę .NET Core w systemie m
 
 Najnowsza wersja platformy .NET Core to 3,1.
 
-[Pobierz program .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz program .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Obsługiwane wersje
 
@@ -59,13 +60,15 @@ Uruchamia ASP.NET Core aplikacje. Zawiera środowisko uruchomieniowe platformy .
 *Środowisko uruchomieniowe platformy .NET Core*\
 To środowisko uruchomieniowe jest najprostszym środowiskiem uruchomieniowym i nie zawiera żadnego innego środowiska uruchomieniowego. Zdecydowanie zaleca się zainstalowanie *ASP.NET Core środowiska uruchomieniowego* w celu uzyskania najlepszej zgodności z aplikacjami .NET Core.
 
-[Pobierz środowisko uruchomieniowe programu .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz środowisko uruchomieniowe platformy .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informacje o zestawie SDK
 
 Zestaw SDK służy do kompilowania i publikowania aplikacji i bibliotek platformy .NET Core. Instalowanie zestawu SDK obejmuje zarówno [środowisko uruchomieniowe](#runtime-information): ASP.NET Core, jak i .NET Core.
 
-[Pobierz zestaw .NET Core SDK.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Zależności
 
@@ -142,7 +145,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Powyższe `export` polecenia sprawiają, że polecenia interfejs wiersza polecenia platformy .NET Core są dostępne tylko dla sesji terminalu, w której została uruchomiona.
 >
-> Możesz edytować profil powłoki, aby trwale dodać polecenia. Istnieje wiele różnych powłok dostępnych dla systemu Linux, a każdy z nich ma inny profil. Przykład:
+> Możesz edytować profil powłoki, aby trwale dodać polecenia. Istnieje wiele różnych powłok dostępnych dla systemu Linux, a każdy z nich ma inny profil. Na przykład:
 >
 > - **Bash Shell**: *~/. bash_profile*, *~/.bashrc.*
 > - **Powłoka Korn**: *~/.KSHRC* lub *. profile*

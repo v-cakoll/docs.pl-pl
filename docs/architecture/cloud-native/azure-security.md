@@ -2,12 +2,12 @@
 title: Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Zabezpieczenia platformy Azure dla natywnych aplikacji w chmurze
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614256"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374497"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Zabezpieczenia platformy Azure dla aplikacji natywnych w chmurze
 
@@ -66,7 +66,7 @@ Jest to idealny przykład pozornie niewielką wartość docelowej wartości, kt�
 
 .NET Framework jest już dość bezpieczną strukturą. Pozwala to uniknąć niektórych pułapek kodu niezarządzanego, takich jak wychodzenie z końca tablic. Prace są aktywnie gotowe do naprawienia luk w zabezpieczeniach podczas ich odnajdywania. Istnieje nawet [program Bounty usterki](https://www.microsoft.com/msrc/bounty) , który płaci badaczom, aby znaleźć problemy w strukturze i zgłosić je zamiast korzystać z nich.
 
-Istnieje wiele sposobów zabezpieczania kodu platformy .NET. Poniższe wskazówki, takie jak [wskazówki dotyczące bezpiecznego kodowania dla programu .NET](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) , to rozsądny krok do zagwarantowania, że kod jest bezpieczny od podstaw. [OWASP 10 najważniejszych](https://owasp.org/www-project-top-ten/) jest innym niecennym przewodnikiem do tworzenia bezpiecznego kodu.
+Istnieje wiele sposobów zabezpieczania kodu platformy .NET. Poniższe wskazówki, takie jak [wskazówki dotyczące bezpiecznego kodowania dla programu .NET](../../standard/security/secure-coding-guidelines.md) , to rozsądny krok do zagwarantowania, że kod jest bezpieczny od podstaw. [OWASP 10 najważniejszych](https://owasp.org/www-project-top-ten/) jest innym niecennym przewodnikiem do tworzenia bezpiecznego kodu.
 
 Proces kompilacji jest dobrym miejscem do umieszczania narzędzi do skanowania w celu wykrywania problemów w kodzie źródłowym przed wprowadzeniem ich do środowiska produkcyjnego. Większość każdego projektu ma zależności od innych pakietów. Narzędzie, które może skanować w poszukiwaniu przestarzałych pakietów, będzie przechwytywać problemy w porze nocnej kompilacji. Nawet podczas kompilowania obrazów platformy Docker warto sprawdzić i upewnić się, że podstawowy obraz nie ma znanych luk w zabezpieczeniach. Innym zadaniem do sprawdzenia jest to, że nikt nie został przypadkowo zaewidencjonowany poświadczenia.
 

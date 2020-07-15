@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281449"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309381"
 ---
 # <a name="securing-wrapper-code"></a>Zabezpieczanie kodu otoki
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -22,7 +22,7 @@ ms.locfileid: "86281449"
   
  Nigdy nie należy włączać elementu przez otokę, której obiekt wywołujący nie może sam wykonać. Jest to specjalne zagrożenie podczas wykonywania czynności obejmujących ograniczone sprawdzanie zabezpieczeń, w przeciwieństwie do żądania pełnego przechodzenia stosu. Gdy są wykorzystywane kontrole na jednym poziomie, zaproponowanie kodu otoki między rzeczywistym obiektem wywołującym i elementem interfejsu API w danej sytuacji może być w stanie łatwo spowodować pomyślne sprawdzenie zabezpieczeń, gdy nie będzie to miało wpływu na zabezpieczenia.  
   
-## <a name="delegates"></a>Delegaty  
+## <a name="delegates"></a>Delegaci  
  Delegowanie zabezpieczeń różni się między wersjami .NET Framework.  W tej sekcji opisano różne zachowania delegata i powiązane zagadnienia dotyczące zabezpieczeń.  
   
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>W wersji 1,0 i 1,1 .NET Framework  
@@ -51,7 +51,7 @@ ms.locfileid: "86281449"
  Aby zapobiec występowaniu takich luk w zabezpieczeniach, środowisko uruchomieniowe języka wspólnego rozszerza kontrolę na pełne zapotrzebowanie na stosy dla każdego pośredniego wywołania metody, konstruktora, właściwości lub zdarzenia chronionego przez **LinkDemand**. Ta ochrona wiąże się z pewnymi kosztami wydajności i zmienia semantykę kontroli zabezpieczeń; pełne żądanie przechodzenia stosu może zakończyć się niepowodzeniem w przypadku szybszego sprawdzenia na jednym poziomie.  
   
 ## <a name="assembly-loading-wrappers"></a>Otoki ładowania zestawu  
- Kilka metod służących do ładowania kodu zarządzanego, w tym <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> , ładowania zestawów z dowodem wywołującym. W przypadku oblewania którejkolwiek z tych metod system zabezpieczeń może użyć przydzielenia uprawnień kodu zamiast uprawnień obiektu wywołującego do otoki, aby załadować zestawy. Nie należy zezwalać na ładowanie kodu, który ma wyższy poziom uprawnień niż w przypadku obiektu wywołującego do otoki.  
+ Kilka metod służących do ładowania kodu zarządzanego, w tym <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> , ładowania zestawów z dowodem wywołującym. W przypadku oblewania którejkolwiek z tych metod system zabezpieczeń może użyć przydzielenia uprawnień kodu zamiast uprawnień obiektu wywołującego do otoki, aby załadować zestawy. Nie Zezwalaj na ładowanie kodu o wyższym poziomie uprawnień niż w kodzie niezaufanym do otoki.  
   
  Każdy kod z pełnym zaufaniem lub znacznie wyższym zaufaniem niż potencjalny obiekt wywołujący (w tym obiekt wywołujący na poziomie uprawnień internetowych) może osłabić zabezpieczenia w ten sposób. Jeśli kod ma metodę publiczną, która pobiera tablicę bajtową i przekazuje ją do **zestawu. Load**, tworząc zestaw w imieniu obiektu wywołującego, może przerwać zabezpieczenia.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281449"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Kontrola na żądanie a kontrola typu LinkDemand  
- Zabezpieczenia deklaracyjne oferują dwa rodzaje kontroli zabezpieczeń, które są podobne, ale wykonują bardzo różne sprawdzenia. Należy zrozumieć obie formy, ponieważ niewłaściwy wybór może spowodować słabe zabezpieczenia lub utratę wydajności.  
+ Zabezpieczenia deklaracyjne oferują dwa rodzaje kontroli zabezpieczeń, które są podobne, ale przeprowadzają różne sprawdzenia. Dobrym rozwiązaniem jest zrozumienie obu formularzy, ponieważ niewłaściwy wybór może spowodować słabe zabezpieczenia lub utratę wydajności.  
   
  Zabezpieczenia deklaracyjne oferują następujące sprawdzenia zabezpieczeń:  
   
@@ -100,6 +100,6 @@ ms.locfileid: "86281449"
   
 - Typy i interfejsy, które implementują. Należy spójnie stosować wymagania dotyczące linków.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

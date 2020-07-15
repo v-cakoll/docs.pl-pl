@@ -2,12 +2,12 @@
 title: polecenie aktualizacji narzędzia dotnet
 description: Polecenie aktualizacji narzędzia dotnet umożliwia zaktualizowanie określonego narzędzia .NET Core na komputerze.
 ms.date: 07/08/2020
-ms.openlocfilehash: 7c4bde44ac9964828074baeb1a697ba64ed17887
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226624"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308874"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -21,20 +21,20 @@ ms.locfileid: "86226624"
 
 ```dotnetcli
 dotnet tool update <PACKAGE_ID> -g|--global
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update <PACKAGE_ID> --tool-path <PATH>
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update <PACKAGE_ID> --local
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [--tool-manifest <PATH>]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
@@ -86,7 +86,7 @@ dotnet tool update -h|--help
 
 - **`--local`**
 
-  Aktualizowanie narzędzia i manifestu narzędzia lokalnego. Nie można łączyć z `--global` opcją.
+  Aktualizowanie narzędzia i manifestu narzędzia lokalnego. Nie można łączyć z `--global` opcją lub `--tool-path` opcją.
 
 - **`--no-cache`**
 
@@ -142,7 +142,7 @@ dotnet tool update -h|--help
 
   Aktualizuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) do najniższej wersji w określonym zakresie `(> 2.0.0 && < 2.1.4)` , wersja zostanie `2.1.0` zainstalowana. Aby uzyskać więcej informacji na temat zakresów wersji semantycznej, zobacz [zakres wersji pakietów NuGet](/nuget/concepts/package-versioning#version-ranges).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
 - [Wersja semantyczna](https://semver.org)

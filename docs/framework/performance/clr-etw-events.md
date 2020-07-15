@@ -1,17 +1,18 @@
 ---
 title: Zdarzenia ETW CLR
+description: 'Zobacz artykuły o zdarzeniach śledzenia zdarzeń środowiska uruchomieniowego języka wspólnego (CLR) dla systemu Windows (ETW). Istnieją dwa dostawcy zdarzeń: dostawca środowiska uruchomieniowego i dostawca uwalniania.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504125"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309836"
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
 W tematach w tej sekcji opisano zdarzenia śledzenia zdarzeń systemu Windows (ETW). Każde zdarzenie ma skojarzone słowo kluczowe i poziom, które są opisane w temacie [słowa kluczowe ETW środowiska CLR i poziomy](clr-etw-keywords-and-levels.md) . Środowisko CLR ma dwóch dostawców dla zdarzeń:  

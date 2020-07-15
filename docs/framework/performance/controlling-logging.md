@@ -1,15 +1,16 @@
 ---
 title: Kontrolowanie logowania w programie .NET Framework
+description: Funkcja śledzenie zdarzeń systemu Windows (ETW) umożliwia kontrolowanie rejestrowania .NET i rejestrowanie zdarzeń środowiska uruchomieniowego języka wspólnego (CLR). Użyj narzędzi, takich jak logman, tracerpt i Xperf.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504099"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309589"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Jeśli dostawcy CLR nie ma na liście, można go zainstalować w systemie Windows Vista i nowszych systemach operacyjnych przy użyciu narzędzia wiersza polecenia [wevtutil](/windows-server/administration/windows-commands/wevtutil) systemu Windows. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitów na folder .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET Version > \). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:
+Jeśli dostawcy CLR nie ma na liście, można go zainstalować w systemie Windows Vista i nowszych systemach operacyjnych przy użyciu narzędzia wiersza polecenia [wevtutil](/windows-server/administration/windows-commands/wevtutil) systemu Windows. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitów na folder .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version> \ ). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:
 
 `wevtutil im CLR-ETW.man`
 
@@ -51,15 +52,15 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
      gdzie:
 
-    - `-p` parametr identyfikuje identyfikator GUID dostawcy.
+    - `-p`Parametr identyfikuje identyfikator GUID dostawcy.
 
-    - `0x1CCBD` określa kategorie zdarzeń, które zostaną zgłoszone.
+    - `0x1CCBD`określa kategorie zdarzeń, które zostaną zgłoszone.
 
-    - `0x5` ustawia poziom rejestrowania (w tym przypadku, verbose (5)).
+    - `0x5`Ustawia poziom rejestrowania (w tym przypadku, verbose (5)).
 
-    - Parametr `-ets` nakazuje programowi logman Wysyłanie poleceń do sesji śledzenia zdarzeń.
+    - `-ets`Parametr nakazuje programowi logman Wysyłanie poleceń do sesji śledzenia zdarzeń.
 
-    - `-ct perf` parametr określa, że funkcja `QueryPerformanceCounter` zostanie użyta do rejestrowania sygnatury czasowej dla każdego zdarzenia.
+    - `-ct perf`Parametr określa, że `QueryPerformanceCounter` funkcja będzie służyć do rejestrowania sygnatury czasowej dla każdego zdarzenia.
 
 2. Aby zatrzymać rejestrowanie zdarzeń, wpisz polecenie:
 
@@ -73,7 +74,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
-     gdzie GUID jest identyfikatorem GUID dostawcy ETW CLR, a `0x1CCBD:5` śledzi wszystko na poziomie i poniżej poziomu 5 (pełne).
+     gdzie GUID jest identyfikatorem GUID dostawcy ETW CLR i `0x1CCBD:5` śledzi wszystko na poziomie i poniżej poziomu 5 (pełne).
 
 2. Aby zatrzymać śledzenie, wpisz polecenie:
 

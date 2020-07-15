@@ -2,16 +2,16 @@
 title: Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389701"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309199"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze sklepu Windows do .NET Native
 
-.NET Native zapewnia statyczną kompilację aplikacji w Sklepie Windows lub na komputerze dewelopera. Różni się to od kompilacji dynamicznej wykonywanej dla aplikacji ze sklepu Windows przez kompilator just-in-Time (JIT) lub [natywny Generator obrazu (Ngen. exe)](../tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic, .NET Native próbuje zachować zgodność z [platformą .NET dla aplikacji ze sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). W większości przypadków elementy, które działają na platformie .NET dla aplikacji ze sklepu Windows, działają również z .NET Native.  Jednak w niektórych przypadkach mogą wystąpić zmiany behawioralne. W tym dokumencie omówiono różnice między standardową platformą .NET dla aplikacji ze sklepu Windows i .NET Native w następujących obszarach:
+.NET Native zapewnia statyczną kompilację aplikacji w Sklepie Windows lub na komputerze dewelopera. Różni się to od kompilacji dynamicznej wykonywanej dla aplikacji ze sklepu Windows przez kompilator just-in-Time (JIT) lub [natywny Generator obrazu (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic, .NET Native próbuje zachować zgodność z [platformą .NET dla aplikacji ze sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). W większości przypadków elementy, które działają na platformie .NET dla aplikacji ze sklepu Windows, działają również z .NET Native.  Jednak w niektórych przypadkach mogą wystąpić zmiany behawioralne. W tym dokumencie omówiono różnice między standardową platformą .NET dla aplikacji ze sklepu Windows i .NET Native w następujących obszarach:
 
 - [Ogólne różnice w środowisku uruchomieniowym](#Runtime)
 
@@ -58,14 +58,14 @@ Kompilator .NET Native może również obsługiwać powszechnie używane typy og
 > [!NOTE]
 > Należy dokładnie przetestować wszystkie dynamiczne ścieżki kodu podczas przenoszenia aplikacji do .NET Native.
 
-Domyślna konfiguracja .NET Native jest wystarczająca dla większości deweloperów, ale niektórzy deweloperzy mogą chcieć dostosować konfiguracje przy użyciu pliku dyrektywy środowiska uruchomieniowego (. Rd. xml). Ponadto w niektórych przypadkach kompilator .NET Native nie jest w stanie określić, które metadane muszą być dostępne do odbicia, i opierają się na wskazówkach, szczególnie w następujących przypadkach:
+Domyślna konfiguracja .NET Native jest wystarczająca dla większości deweloperów, ale niektórzy deweloperzy mogą chcieć dostosować konfiguracje przy użyciu pliku dyrektywy środowiska uruchomieniowego (.rd.xml). Ponadto w niektórych przypadkach kompilator .NET Native nie jest w stanie określić, które metadane muszą być dostępne do odbicia, i opierają się na wskazówkach, szczególnie w następujących przypadkach:
 
 - Niektóre konstrukcje takie jak <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> i <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> nie mogą być określane statycznie.
 
 - Ponieważ kompilator nie może określić wystąpień, typ ogólny, który ma być uwzględniany, musi być określony przez dyrektywy środowiska uruchomieniowego. To nie tylko dlatego, że cały kod musi być uwzględniony, ale odbicie na typach ogólnych może tworzyć nieskończony cykl (na przykład gdy metoda ogólna jest wywoływana w typie ogólnym).
 
 > [!NOTE]
-> Dyrektywy środowiska uruchomieniowego są zdefiniowane w pliku dyrektywy środowiska uruchomieniowego (. Rd. xml). Aby uzyskać ogólne informacje na temat korzystania z tego pliku, zobacz [wprowadzenie](getting-started-with-net-native.md). Aby uzyskać informacje o dyrektywach środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md).
+> Dyrektywy środowiska uruchomieniowego są zdefiniowane w pliku dyrektywy środowiska uruchomieniowego (.rd.xml). Aby uzyskać ogólne informacje na temat korzystania z tego pliku, zobacz [wprowadzenie](getting-started-with-net-native.md). Aby uzyskać informacje na temat dyrektyw środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native również zawiera narzędzia profilowania, które ułatwiają deweloperom określenie, które typy poza domyślnym zestawem powinny obsługiwać odbicie.
 
@@ -187,7 +187,7 @@ Niektóre dodatkowe różnice w zachowaniu zostały omówione w poniższych pods
 
 Platforma .NET dla aplikacji do sklepu Windows umożliwia ustawienie <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> właściwości na <xref:System.Net.DecompressionMethods.Deflate> , <xref:System.Net.DecompressionMethods.GZip> , zarówno, <xref:System.Net.DecompressionMethods.Deflate> jak i <xref:System.Net.DecompressionMethods.GZip> <xref:System.Net.DecompressionMethods.None> .  .NET Native obsługuje tylko <xref:System.Net.DecompressionMethods.Deflate> razem z <xref:System.Net.DecompressionMethods.GZip> , lub <xref:System.Net.DecompressionMethods.None> .  Podjęto próbę ustawienia <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> właściwości w <xref:System.Net.DecompressionMethods.Deflate> <xref:System.Net.DecompressionMethods.GZip> trybie dyskretnym lub autonomicznie ustawia ją jednocześnie na <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip> .
 
-**Plik cookie**
+**Cookie**
 
 Obsługa plików cookie jest wykonywana jednocześnie przez program <xref:System.Net.Http.HttpClient> i WinInet.  Pliki cookie z programu <xref:System.Net.CookieContainer> są łączone z plikami cookie w pamięci podręcznej plików cookie WinInet.  Usunięcie pliku cookie z <xref:System.Net.CookieContainer> uniemożliwia <xref:System.Net.Http.HttpClient> wysyłanie plików cookie, ale jeśli plik cookie był już widziany przez program WinInet, a pliki cookie nie zostały usunięte przez użytkownika, program WinInet wysyła go.  Nie można programowo usunąć pliku cookie z usługi WinINet przy użyciu <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClientHandler> <xref:System.Net.CookieContainer> interfejsu API, lub.  Ustawienie <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> właściwości na `false` przyczyny powoduje <xref:System.Net.Http.HttpClient> zatrzymanie wysyłania plików cookie; Usługa WinINet może nadal zawierać swoje pliki cookie w żądaniu.
 
@@ -661,7 +661,7 @@ Użyj narzędzi kompilacji x86, które są używane domyślnie przez program Vis
 
 Włączanie .NET Native w bibliotece testów jednostkowych dla projektu aplikacji ze sklepu Windows nie jest obsługiwane i powoduje, że kompilacja nie powiedzie się.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie](getting-started-with-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

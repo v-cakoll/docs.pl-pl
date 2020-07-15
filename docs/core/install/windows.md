@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat wersji systemu Windows, na których m
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804508"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308952"
 ---
 # <a name="install-net-core-on-windows"></a>Zainstaluj platformę .NET Core w systemie Windows
 
@@ -23,7 +23,8 @@ W tym artykule dowiesz się, jak zainstalować platformę .NET Core w systemie W
 
 Najnowsza wersja platformy .NET Core to 3,1.
 
-[Pobierz program .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz program .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Obsługiwane wersje
 
@@ -54,7 +55,7 @@ Następujące wersje programu .NET Core nie są ❌ już obsługiwane. Pliki do 
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
 
 ## <a name="runtime-information"></a>Informacje o środowisku uruchomieniowym
 
@@ -71,13 +72,15 @@ Uruchamia platformy .NET Core WPF i .NET Core Windows Forms aplikacje klasyczne 
 *Środowisko uruchomieniowe platformy .NET Core*\
 To środowisko uruchomieniowe jest najprostszym środowiskiem uruchomieniowym i nie zawiera żadnego innego środowiska uruchomieniowego. Zdecydowanie zaleca się zainstalowanie środowiska *uruchomieniowego ASP.NET Core* i środowiska *uruchomieniowego Desktop* w celu uzyskania najlepszej zgodności z aplikacjami .NET Core.
 
-[Pobierz środowisko uruchomieniowe programu .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz środowisko uruchomieniowe platformy .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informacje o zestawie SDK
 
 Zestaw SDK służy do kompilowania i publikowania aplikacji i bibliotek platformy .NET Core. Instalowanie zestawu SDK obejmuje wszystkie trzy [środowiska uruchomieniowe](#runtime-information): ASP.NET Core, Desktop i .NET Core.
 
-[Pobierz zestaw .NET Core SDK.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Pobierz zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Zależności
 
@@ -218,7 +221,8 @@ Jeśli masz już zainstalowany program Visual Studio, możesz sprawdzić swoją 
 
 Program Visual Studio może zainstalować najnowsze zestaw .NET Core SDK i środowisko uruchomieniowe.
 
-- [Pobierz program Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Pobierz program Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Wybierz obciążenie
 

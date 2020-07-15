@@ -1,18 +1,18 @@
 ---
 title: Dostosowywanie organizowania struktury — .NET
-description: Dowiedz się, jak dostosować platformę .NET do organizowania struktur w natywną reprezentację.
+description: Dowiedz się, jak dostosować strukturę organizacyjną platformy .NET do natywnej reprezentacji.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003896"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374536"
 ---
-# <a name="customizing-structure-marshaling"></a>Dostosowywanie marshalingu struktur
+# <a name="customize-structure-marshaling"></a>Dostosowywanie marshalingu struktur
 
 Czasami domyślne reguły organizowania dla struktur nie są dokładnie tym, czego potrzebujesz. Środowiska uruchomieniowe platformy .NET udostępniają kilka punktów rozszerzenia, które umożliwiają dostosowanie układu struktury i sposobu organizowania pól.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-W przypadku korzystania z interfejsu API opartego na WinRT może być konieczne zorganizowanie ciągu jako `HSTRING` .  Korzystając z <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> wartości, można zorganizować ciąg jako `HSTRING` .
+W przypadku korzystania z interfejsu API opartego na WinRT może być konieczne zorganizowanie ciągu jako `HSTRING` . Korzystając z <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> wartości, można zorganizować ciąg jako `HSTRING` .
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Dostosowywanie organizowania pól dziesiętnych
 
-Jeśli pracujesz w systemie Windows, możesz napotkać niektóre interfejsy API, które używają natywnego [ `CY` lub `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) struktury. Domyślnie `decimal` Typ .net ma kierowanie do struktury natywnej [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) . Można jednak użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> wartości z wartością, aby nakazać Organizatorowi przekonwertowanie `decimal` wartości na wartość natywną `CY` .
+Jeśli pracujesz w systemie Windows, możesz napotkać niektóre interfejsy API, które używają natywnego [ `CY` lub `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy-r1) struktury. Domyślnie `decimal` Typ .net ma kierowanie do struktury natywnej [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) . Można jednak użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> wartości z wartością, aby nakazać Organizatorowi przekonwertowanie `decimal` wartości na wartość natywną `CY` .
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Kierowanie `System.Object` s
+## <a name="marshal-systemobject"></a>Przeprowadzanie marshalingu`System.Object`
 
 W systemie Windows można skierować `object` pola do kodu natywnego. Można kierować te pola do jednego z trzech typów:
 

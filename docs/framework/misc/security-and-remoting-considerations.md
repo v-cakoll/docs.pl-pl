@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281397"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309368"
 ---
 # <a name="security-and-remoting-considerations"></a>Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu
 Komunikacja zdalna umożliwia skonfigurowanie przezroczystego wywoływania między domenami aplikacji, procesami lub komputerami. Jednak przechodzenie przez stos zabezpieczeń dostępu kodu nie może przekroczyć procesu ani granic maszyn (stosuje się między domenami aplikacji tego samego procesu).  
@@ -34,8 +34,8 @@ Komunikacja zdalna umożliwia skonfigurowanie przezroczystego wywoływania międ
   
  Domena aplikacji może zmusić inną domenę aplikacji do załadowania zestawu i uruchomienia kodu zawartego w nim przez wywołanie serwera proxy do obiektu hostowanego w innej domenie aplikacji. Aby uzyskać serwer proxy domeny między aplikacjami, domena aplikacji hostującym obiekt musi być dystrybuowana przez parametr wywołania metody lub wartość zwracaną. Lub, jeśli domena aplikacji została właśnie utworzona, twórca ma domyślnie serwer proxy do <xref:System.AppDomain> obiektu. W ten sposób, aby uniknąć przerywania izolacji kodu, domena aplikacji o wyższym poziomie zaufania nie powinna rozpowszechniać odwołań do obiektów zorganizowanych przez odwołanie (wystąpień klas pochodnych od <xref:System.MarshalByRefObject> ) w domenie do domen aplikacji o niższych poziomach zaufania.  
   
- Zwykle domyślna domena aplikacji tworzy podrzędne domeny aplikacji z obiektem kontrolnym w każdym z nich. Obiekt Control zarządza nową domeną aplikacji i okresowo przyjmuje zamówienia z domyślnej domeny aplikacji, ale nie może fizycznie skontaktować się bezpośrednio z domeną. Czasami domyślna domena aplikacji wywołuje swój serwer proxy do obiektu Control. Mogą jednak wystąpić sytuacje, w których obiekt sterowania może wywoływać z powrotem do domyślnej domeny aplikacji. W takich przypadkach domyślna domena aplikacji przekazuje obiekt wywołania zwrotnego marshal-by-reference do konstruktora obiektu Control. Jest odpowiedzialny za obiekt sterowania do ochrony tego serwera proxy. Jeśli obiekt sterowania miał umieścić serwer proxy w publicznym polu statycznym klasy publicznej lub w inny sposób ujawnia serwer proxy, spowoduje to otwarcie niebezpiecznego mechanizmu dla innego kodu w celu wywołania z powrotem do domyślnej domeny aplikacji. Z tego powodu obiekty sterujące są zawsze niejawnie zaufane, aby zachować prywatny serwer proxy.  
+ Zwykle domyślna domena aplikacji tworzy podrzędne domeny aplikacji z obiektem kontrolnym w każdym z nich. Obiekt Control zarządza nową domeną aplikacji i okresowo przyjmuje zamówienia z domyślnej domeny aplikacji, ale nie może fizycznie skontaktować się bezpośrednio z domeną. Czasami domyślna domena aplikacji wywołuje swój serwer proxy do obiektu Control. Mogą jednak wystąpić sytuacje, w których obiekt sterowania może wywoływać z powrotem do domyślnej domeny aplikacji. W takich przypadkach domyślna domena aplikacji przekazuje obiekt wywołania zwrotnego marshal-by-reference do konstruktora obiektu Control. Jest odpowiedzialny za obiekt sterowania do ochrony tego serwera proxy. Jeśli obiekt sterowania umieści serwer proxy w publicznym polu statycznym klasy publicznej lub w inny sposób publicznie ujawniony serwer proxy, zostanie otwarty niebezpieczny mechanizm dla innego kodu, który będzie mógł wywoływać z powrotem do domyślnej domeny aplikacji. Z tego powodu obiekty sterujące są zawsze niejawnie zaufane, aby zachować prywatny serwer proxy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

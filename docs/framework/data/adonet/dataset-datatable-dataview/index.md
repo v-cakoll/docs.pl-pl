@@ -3,17 +3,18 @@ title: Elementy DataSet, DataTable i DataView
 description: Zapoznaj się z kilkoma sposobami pracy z zestawem danych ADO.NET, czyli reprezentacją pamięci, która zapewnia spójny relacyjny model programowania.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286898"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374510"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
+
 ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w pamięci, która zapewnia spójny relacyjny model programowania niezależnie od źródła danych, które zawiera. <xref:System.Data.DataSet>Reprezentuje kompletny zestaw danych, w tym tabele, które zawierają, porządkują i ograniczają dane, a także relacje między tabelami.  
   
- Istnieje kilka sposobów pracy z <xref:System.Data.DataSet> , które mogą być stosowane niezależnie lub w połączeniu. Dostępne możliwości:  
+Istnieje kilka sposobów pracy z <xref:System.Data.DataSet> , które mogą być stosowane niezależnie lub w połączeniu. Możesz:  
   
 - <xref:System.Data.DataTable>Programowe tworzenie, <xref:System.Data.DataRelation> , i <xref:System.Data.Constraint> wewnątrz <xref:System.Data.DataSet> i wypełnianie tabel danymi.  
   
@@ -21,9 +22,13 @@ ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w 
   
 - Ładowanie i utrwalanie <xref:System.Data.DataSet> zawartości przy użyciu XML. Aby uzyskać więcej informacji, zobacz [Używanie języka XML w zestawie danych](using-xml-in-a-dataset.md).  
   
- Silnie wpisaną <xref:System.Data.DataSet> można również transportować za pomocą usługi sieci Web XML. Projekt <xref:System.Data.DataSet> ułatwia transportowanie danych przy użyciu usług sieci Web XML. Aby zapoznać się z omówieniem usług sieci Web XML, zobacz [Omówienie usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Przykład korzystania z <xref:System.Data.DataSet> usługi sieci Web XML można znaleźć w temacie wykorzystywanie [zestawu danych z usługi sieci Web XML](consuming-a-dataset-from-an-xml-web-service.md).  
+Silnie wpisaną <xref:System.Data.DataSet> można również transportować za pomocą usługi sieci Web XML. Projekt <xref:System.Data.DataSet> ułatwia transportowanie danych przy użyciu usług sieci Web XML. Aby zapoznać się z omówieniem usług sieci Web XML, zobacz [Omówienie usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Przykład korzystania z <xref:System.Data.DataSet> usługi sieci Web XML można znaleźć w temacie wykorzystywanie [zestawu danych z usługi sieci Web XML](consuming-a-dataset-from-an-xml-web-service.md).  
   
-## <a name="in-this-section"></a>W tej sekcji  
+## <a name="in-this-section"></a>W tej sekcji
+
+ [Wskazówki dotyczące bezpieczeństwa](security-guidance.md)  
+ Zapewnia wskazówki dotyczące zabezpieczeń dla <xref:System.Data.DataSet> i <xref:System.Data.DataTable> .
+
  [Tworzenie elementu DataSet](creating-a-dataset.md)  
  Opisuje składnię tworzenia wystąpienia obiektu <xref:System.Data.DataSet> .  
   
@@ -63,7 +68,8 @@ ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w 
  [Korzystanie z elementu DataSet w usłudze internetowej XML](consuming-a-dataset-from-an-xml-web-service.md)  
  Zawiera opis sposobu tworzenia usługi sieci Web XML, która używa <xref:System.Data.DataSet> do przesyłania danych.  
   
-## <a name="related-sections"></a>Sekcje pokrewne  
+## <a name="related-sections"></a>Sekcje pokrewne
+
  [Nowości w programie ADO.NET](../whats-new.md)  
  Wprowadza funkcje, które są nowe w ADO.NET.  
   
@@ -79,7 +85,7 @@ ADO.NET <xref:System.Data.DataSet> to reprezentacja danych znajdujących się w 
  [Dodawanie istniejących ograniczeń do zestawu danych](../adding-existing-constraints-to-a-dataset.md)  
  Opisuje sposób wypełniania **zestawu danych** z informacjami o kluczu podstawowym ze źródła danych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ADO.NET](../index.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)
